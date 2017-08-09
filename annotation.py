@@ -63,7 +63,7 @@ def annotating(note):
         # temp***REMOVED***2***REMOVED***: index, temp***REMOVED***0***REMOVED***:word, temp***REMOVED***1***REMOVED***:phi-category
         ***REMOVED***print("({}){}***REMOVED***{}***REMOVED***".format(temp***REMOVED***2***REMOVED***, temp***REMOVED***0***REMOVED***, temp***REMOVED***1***REMOVED***), end=' ') for temp in sent_list***REMOVED***
         print('\n')
-        print('Category to use: 0:Non-phi, 1:Name, 2:Address, 3:DOB,'
+        print('Category to use: 0:Non-phi, 1:Name, 2:Address, 3:Date, '
              '4:Phone, 5:FAX, 6:Email, 7:SSN, 8:MRN, 9:Health Insurance'
              ' Beneficiary Numbers, 10:Account Number, 11:Certificate Number,'
              ' 12:Vehicle Number, 13:Device Number,'
@@ -151,7 +151,7 @@ def annotating(note):
                     # display the sentence with the index of each word and the current category assigned to each word
                     # temp***REMOVED***2***REMOVED***: index, temp***REMOVED***0***REMOVED***:word, temp***REMOVED***1***REMOVED***:phi-category
                     ***REMOVED***print("({}){}***REMOVED***{}***REMOVED***".format(temp***REMOVED***2***REMOVED***, temp***REMOVED***0***REMOVED***, temp***REMOVED***1***REMOVED***), end=' ') for temp in sent_list***REMOVED***
-                    print('\n\nCategory to use: 0:Non-phi, 1:Name, 2:Address, 3:DOB,'
+                    print('\n\nCategory to use: 0:Non-phi, 1:Name, 2:Address, 3:date, '
                          '4:Phone, 5:FAX, 6:Email, 7:SSN, 8:MRN, 9:Health Insurance'
                          ' Beneficiary Numbers, 10:Account Number, 11:Certificate Number,'
                          ' 12:Vehicle Number, 13:Device Number,'
