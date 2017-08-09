@@ -82,15 +82,19 @@ pattern_word = re.compile(r"[^\w+]")
 # Find numbers like SSN/PHONE/FAX
 # 3 patterns: 1. 6 or more digits will be filtered 2. digit followed by - followed by digit. 3. Ignore case of characters
 pattern_number = re.compile(r"""\b(
-\d{6}\d*
-|(\d[\(\)-.\']?\s?){7}\d+   # SSN/PHONE/FAX XXX-XX-XXXX, XXX-XXX-XXXX, XXX-XXXXXXXX, etc.
-)\b""", re.X | re.I)
+\d{6}[A-Z0-9]*  # devid/mrn/benid
+|(\d[\(\)\-\']?\s?){7}\d+   # SSN/PHONE/FAX XXX-XX-XXXX, XXX-XXX-XXXX, XXX-XXXXXXXX, etc.
+|(\d[\(\)\-.\']?){7}\d+
+)\b""", re.X)
 
+pattern_devid = re.compile(r"""\b(
+[A-Z0-9]{6}[A-Z0-9]*
+)\b""", re.X)
 # postal code
 # 5 digits or, 5 digits followed dash and 4 digits
 pattern_postal = re.compile(r"""\b(
 \d{5}(-\d{4})?             # postal code XXXXX, XXXXX-XXXX
-)\b""", re.X | re.I)
+)\b""", re.X)
 
 # match DOB
 pattern_dob = re.compile(r"""\b(
@@ -107,12 +111,14 @@ pattern_email = re.compile(r"""\b(
 )\b""", re.X | re.I)
 
 # match date, similar to DOB but does not include any words
+month_name = "Jan(uary)?|Feb(ruary)?|Mar(ch)?|Apr(il)?|May|Jun(e)?|Jul(y)?|Aug(ust)?|Sep(tember)?|Oct(ober)?|Nov(ember)?|Dec(ember)?"
 pattern_date = re.compile(r"""\b(
-\d{1,2}[-./\s]\d{1,2}[-./\s]\d{2}   # one or digits/anything/one or two digits/anything/2 digits
-|\d{1,2}[-./\s]\d{1,2}[-./\s]\d{4}  # one or digits/anything/one or two digits/anything/4 digits
-|\d{2}[-./\s]\d{1,2}[-./\s]\d{1,2}
-|\d{4}[-./\s]\d{1,2}[-./\s]\d{1,2}
+(0?[1-9]|1[0-2]|"""+month_name+r""")[-./\s]([1-2][0-9]|3[0-1]|0?[1-9])[-./\s]\d{2}   # one or digits/anything/one or two digits/anything/2 digits
+|(0?[1-9]|1[0-2]|"""+month_name+r""")[-./\s]([1-2][0-9]|3[0-1]|0?[1-9])[-./\s]\d{4}  # one or digits/anything/one or two digits/anything/4 digits
+|([1-2][0-9]|3[0-1]|0?[1-9])[-./\s](0?[1-9]|1[0-2]|"""+month_name+r""")[-./\s]\d{1,2}
+|\d{4}[-./\s](0?[1-9]|1[0-2]|"""+month_name+r""")[-./\s]([1-2][0-9]|3[0-1]|0?[1-9])
 )\b""", re.X | re.I)
+pattern_mname = re.compile(r'\b(' + month_name + r')\b')
 
 # match names, A'Bsfs, Absssfs, A-Bsfsfs
 pattern_name = re.compile(r"""^[A-Z]\'?[-a-zA-Z]+$""")
@@ -131,6 +137,9 @@ pattern_salutation = re.compile(r"""
 # match middle initial
 # if single char or Jr is surround by 2 phi words, filter. 
 pattern_middle = re.compile(r"""\*\*PHI\*\* ([A-Z]r? ?\.?) \*\*PHI\*\*""")
+
+# match url
+pattern_url = re.compile(r'\b((http[s]?://)?(([a-zA-Z]|[0-9]|[$-_@.&+:]|[!*\(\),])*(\.|\/)([a-zA-Z]|[0-9]|[$-_@.&+:]|[!*\(\),])*))\b', re.I)
 
 # check if the folder exists
 def is_valid_file(parser, arg):
@@ -218,10 +227,26 @@ def filter_task(f, whitelist_dict, foutpath, key_name):
                 safe = False
                 for item in pattern_number.findall(sent):
                     # print(item)
-                    if pattern_date.match(item[0]) is None:
-                        sent = sent.replace(item[0], '**PHI**')
-                        screened_words.append(item[0])
+                    #if pattern_date.match(item[0]) is None:
+                    #sent = sent.replace(item[0], '**PHI**')
+                    screened_words.append(item[0])
+                    #print(item[0])
+            sent = str(pattern_number.sub('**PHI**', sent))
 
+            if pattern_date.findall(sent) != []:
+                safe = False
+                for item in pattern_date.findall(sent):
+                    if len(set(re.findall(r'[^\w]',item[0]))) == 1:
+                        screened_words.append(item[0])
+                        sent = sent.replace(item[0], '**PHI**')
+            #sent = str(pattern_date.sub('**PHI**', sent))
+
+            if pattern_devid.findall(sent) != []:
+                safe = False
+                for item in pattern_devid.findall(sent):
+                    if re.search(r'\d', item) is not None:
+                        screened_words.append(item)
+                        sent = sent.replace(item, '**PHI**')
             # email check
             if pattern_email.findall(sent) != []:
                 safe = False
@@ -229,6 +254,17 @@ def filter_task(f, whitelist_dict, foutpath, key_name):
                     screened_words.append(item)
             sent = str(pattern_email.sub('**PHI**', sent))
 
+            # url check
+            if pattern_url.findall(sent) != []:
+                safe = False
+                for item in pattern_url.findall(sent):
+                    if (re.search(r'[a-z]', item[0]) is not None and
+                        re.search(r'[A-Z]', item[0]) is None and
+                        len(item[0])>10):
+                        screened_words.append(item[0])
+                        sent = sent.replace(item[0], '**PHI**')
+                        print(item[0])
+            #sent = str(pattern_url.sub('**PHI**', sent))
             # dob check
             re_list = pattern_dob.findall(sent)
             i = 0
@@ -320,7 +356,6 @@ def filter_task(f, whitelist_dict, foutpath, key_name):
                 #print(ent.text)
                     # if word is person, recheck that spacy still thinks word is person at the word level
                     spcy_chunk_output = nlp(ent.text)
-                    
                     if spcy_chunk_output.ents != () and spcy_chunk_output.ents[0].label_ == 'PERSON':
                         # Now check to see what labels NLTK provides for the word
                         name_tag = word_tokenize(ent.text)
@@ -352,6 +387,7 @@ def filter_task(f, whitelist_dict, foutpath, key_name):
                         # remove the speical chars
                     try:
                         # word[1] is the pos tag of the word
+
                         if ((word[1] == 'NN' or word[1] == 'NNP') or
                                 ((word[1] == 'NNS' or word[1] == 'NNPS') and word_check.istitle())):
                             if word_check.lower() not in whitelist_dict:
@@ -363,6 +399,25 @@ def filter_task(f, whitelist_dict, foutpath, key_name):
                                 if (word_output.istitle() or word_output.isupper()) and pattern_name.findall(word_output) != []:
                                     word_output, name_set, screened_words, safe = namecheck(word_output, name_set, screened_words, safe)
 
+                        # check day/year according to the month name
+                        elif word[1] == 'CD':
+                            if i > 2:
+                                context_before = sent_tag[0][i-3:i]
+                            else:
+                                context_before = sent_tag[0][0:i]
+                            if i <= len(sent_tag[0]) - 4:
+                                context_after = sent_tag[0][i+1:i+4]
+                            else:
+                                context_after = sent_tag[0][i+1:]
+                            #print(word_output, context_before+context_after)
+                            for j in (context_before + context_after):
+                                if pattern_mname.search(j[0]) is not None:
+                                    screened_words.append(word_output)
+                                    #print(word_output)
+                                    word_output = "**PHI**"
+                                    safe = False
+                                    break
+
                     except:
                         print(word_output, sys.exc_info())
 
@@ -373,8 +428,13 @@ def filter_task(f, whitelist_dict, foutpath, key_name):
                         phi_reduced = phi_reduced + word_output
                     else:
                         phi_reduced = phi_reduced + ' ' + word_output
-            
-            # Begin Step 8: check middle initial
+
+            # Begin Step 8: check middle initial and month name
+            if pattern_mname.findall(phi_reduced) != []:
+                for item in pattern_mname.findall(phi_reduced):
+                    screened_words.append(item[0])
+            phi_reduced = pattern_mname.sub('**PHI**', phi_reduced)
+
             if pattern_middle.findall(phi_reduced) != []:
                 for item in pattern_middle.findall(phi_reduced):
                     screened_words.append(item)
@@ -393,7 +453,9 @@ def filter_task(f, whitelist_dict, foutpath, key_name):
         #screened_words = list(filter(lambda a: a!= '**PHI**', screened_words))
         filepath = os.path.join(foutpath,'filter_summary.txt')
         #print(filepath)
-        screened_words = list(filter(lambda a: a != '**PHIPostal**', screened_words))
+        screened_words = list(filter(lambda a: '**PHI' not in a, screened_words))
+        #screened_words = list(filter(lambda a: a != '**PHI**', screened_words))
+        #print(screened_words)
         with open(filepath, 'a') as fout:
             fout.write('.'.join(tail.split('.')[:-1])+' ' + str(len(screened_words)) +
                 ' ' + ' '.join(screened_words)+'\n')
