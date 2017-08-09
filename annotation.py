@@ -63,7 +63,7 @@ def annotating(note):
         # temp[2]: index, temp[0]:word, temp[1]:phi-category
         [print("({}){}[{}]".format(temp[2], temp[0], temp[1]), end=' ') for temp in sent_list]
         print('\n')
-        print('Category to use: 0:Non-phi, 1:Name, 2:Address, 3:DOB,'
+        print('Category to use: 0:Non-phi, 1:Name, 2:Address, 3:Date, '
              '4:Phone, 5:FAX, 6:Email, 7:SSN, 8:MRN, 9:Health Insurance'
              ' Beneficiary Numbers, 10:Account Number, 11:Certificate Number,'
              ' 12:Vehicle Number, 13:Device Number,'
@@ -151,7 +151,7 @@ def annotating(note):
                     # display the sentence with the index of each word and the current category assigned to each word
                     # temp[2]: index, temp[0]:word, temp[1]:phi-category
                     [print("({}){}[{}]".format(temp[2], temp[0], temp[1]), end=' ') for temp in sent_list]
-                    print('\n\nCategory to use: 0:Non-phi, 1:Name, 2:Address, 3:DOB,'
+                    print('\n\nCategory to use: 0:Non-phi, 1:Name, 2:Address, 3:date, '
                          '4:Phone, 5:FAX, 6:Email, 7:SSN, 8:MRN, 9:Health Insurance'
                          ' Beneficiary Numbers, 10:Account Number, 11:Certificate Number,'
                          ' 12:Vehicle Number, 13:Device Number,'
