@@ -82,7 +82,7 @@ pattern_word = re.compile(r"[^\w+]")
 # Find numbers like SSN/PHONE/FAX
 # 3 patterns: 1. 6 or more digits will be filtered 2. digit followed by - followed by digit. 3. Ignore case of characters
 pattern_number = re.compile(r"""\b(
-\d{6}[A-Z0-9]*  # devid/mrn/benid
+\d{4}[A-Z0-9]*  # devid/mrn/benid
 |(\d[\(\)\-\']?\s?){7}\d+   # SSN/PHONE/FAX XXX-XX-XXXX, XXX-XXX-XXXX, XXX-XXXXXXXX, etc.
 |(\d[\(\)\-.\']?){7}\d+
 )\b""", re.X)
@@ -119,6 +119,7 @@ pattern_date = re.compile(r"""\b(
 |\d{4}[-./\s](0?[1-9]|1[0-2]|"""+month_name+r""")[-./\s]([1-2][0-9]|3[0-1]|0?[1-9])
 |\d{4}[-./\s](0?[1-9]|1[0-2]|"""+month_name+r""")  # XXXX/XX
 |(0?[1-9]|1[0-2]|"""+month_name+r""")[-./\s]\d{4}  # XX/XXXX
+|(0?[1-9]|1[0-2]|"""+month_name+r""")[-./\s]\d{2}  # MM/YY
 |(0?[1-9]|1[0-2]|"""+month_name+r""")[-./\s]([1-2][0-9]|3[0-1]|0?[1-9])  #mm/dd
 |([1-2][0-9]|3[0-1]|0?[1-9])[-./\s](0?[1-9]|1[0-2]|"""+month_name+r""")  #dd/mm
 )\b""", re.X | re.I)
@@ -135,15 +136,12 @@ age|year[s-]?\s?old|y.o[.]?
 # match salutation
 pattern_salutation = re.compile(r"""
 (Dr\.|Mr\.|Mrs\.|Ms\.|Miss|Sir|Madam)\s
-(([A-Z]\'?[A-Z]?[-a-z ]+)*
+(([A-Z]\'?[A-Z]?[\-a-z]+(\s[A-Z]\'?[A-Z]?[\-a-z]+)*)
 )""", re.X)
 
 # match middle initial
 # if single char or Jr is surround by 2 phi words, filter. 
-pattern_middle = re.compile(r"""
-\*\*PHI\*\* ([A-Z]r?\.?)
-|([A-Z]r?\.?) \*\*PHI\*\*
-""", re.X)
+pattern_middle = re.compile(r"""\*\*PHI\*\* ([A-Z]r?\.?) | ([A-Z]r?\.?) \*\*PHI\*\*""")
 
 # match url
 pattern_url = re.compile(r'\b((http[s]?://)?(([a-zA-Z]|[0-9]|[$-_@.&+:]|[!*\(\),])*(\.|\/)([a-zA-Z]|[0-9]|[$-_@.&+:]|[!*\(\),])*))\b', re.I)
@@ -209,7 +207,8 @@ def filter_task(f, whitelist_dict, foutpath, key_name):
         phi_reduced = ''
         address_indictor = ['street', 'avenue', 'road', 'boulevard',
                             'drive', 'trail', 'way', 'lane', 'ave',
-                            'blvd', 'st', 'rd', 'trl', 'wy', 'ln']
+                            'blvd', 'st', 'rd', 'trl', 'wy', 'ln',
+                            'court', 'ct', 'place', 'plc']
 
         note = fin.read()
         # Begin Step 1: saluation check
@@ -396,15 +395,17 @@ def filter_task(f, whitelist_dict, foutpath, key_name):
                     try:
                         # word[1] is the pos tag of the word
 
-                        if ((word[1] == 'NN' or word[1] == 'NNP') or
-                                ((word[1] == 'NNS' or word[1] == 'NNPS') and word_check.istitle())):
+                        if (((word[1] == 'NN' or word[1] == 'NNP') or
+                            ((word[1] == 'NNS' or word[1] == 'NNPS') and word_check.istitle()))
+                            and word_check.title() not in ['Dr', 'Mr', 'Mrs', 'Ms']):
                             if word_check.lower() not in whitelist_dict:
                                 screened_words.append(word_output)
                                 word_output = "**PHI**"
                                 safe = False
                             else:
                                 # For words that are in whitelist, check to make sure that we have not identified them as names
-                                if (word_output.istitle() or word_output.isupper()) and pattern_name.findall(word_output) != []:
+                                if ((word_output.istitle() or word_output.isupper()) and
+                                    pattern_name.findall(word_output) != []):
                                     word_output, name_set, screened_words, safe = namecheck(word_output, name_set, screened_words, safe)
 
                         # check day/year according to the month name
@@ -429,14 +430,17 @@ def filter_task(f, whitelist_dict, foutpath, key_name):
                     except:
                         print(word_output, sys.exc_info())
                     if word_output == '\'s':
-                        phi_reduced = phi_reduced + word_output
-                        print(word_output)
+                        if phi_reduced[-7:] != '**PHI**':
+                            phi_reduced = phi_reduced + word_output
+                        #print(word_output)
                     else:
                         phi_reduced = phi_reduced + ' ' + word_output
                 # Format output for later use by eval.py
                 else:
                     if (i > 0 and sent_tag[0][i-1][0][-1] in string.punctuation and
                         sent_tag[0][i-1][0][-1] != '*'):
+                        phi_reduced = phi_reduced + word_output
+                    elif word_output == '.' and sent_tag[0][i-1][0] in ['Dr', 'Mr', 'Mrs', 'Ms']:
                         phi_reduced = phi_reduced + word_output
                     else:
                         phi_reduced = phi_reduced + ' ' + word_output
@@ -447,9 +451,9 @@ def filter_task(f, whitelist_dict, foutpath, key_name):
                     screened_words.append(item[0])
             phi_reduced = pattern_mname.sub('**PHI**', phi_reduced)
 
-            if pattern_middle.findall(phi_reduced) != []:
-                for item in pattern_middle.findall(phi_reduced):
-                    screened_words.append(item)
+            #if pattern_middle.findall(phi_reduced) != []:
+                #for item in pattern_middle.findall(phi_reduced):
+                #    screened_words.append(item)
             phi_reduced = pattern_middle.sub('**PHI** **PHI**', phi_reduced)
 
         if not safe:
