@@ -59,9 +59,9 @@ def comparison(filename, file1path, file2path):
     # Begin Step 1
     annot_list = [word[0] for word in annotation_note if word[1] == '0' and word[0] != '']
     # Begin Step 2
-    phi_r_list = [word for word in phi_reduced_list if '**PHI**' not in word]
+    phi_r_list = [word for word in phi_reduced_list if '**PHI' not in word]
     # Begin Step 3
-    filtered_count = [word for word in phi_reduced_list if '**PHI**' in word]
+    filtered_count = [word for word in phi_reduced_list if '**PHI' in word]
 
     filtered_count = len(filtered_count)
     summary_dict['false_positive'] = []
