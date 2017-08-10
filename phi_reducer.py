@@ -88,7 +88,7 @@ pattern_number = re.compile(r"""\b(
 )\b""", re.X)
 
 pattern_devid = re.compile(r"""\b(
-[A-Z0-9]{6}[A-Z0-9]*
+[A-Z0-9\-]{6}[A-Z0-9\-]*
 )\b""", re.X)
 # postal code
 # 5 digits or, 5 digits followed dash and 4 digits
@@ -222,6 +222,13 @@ def filter_task(f, whitelist_dict, foutpath, key_name):
                     screened_words.append(item[0])
             sent = str(pattern_postal.sub('**PHIPostal**', sent))
 
+            if pattern_devid.findall(sent) != []:
+                safe = False
+                for item in pattern_devid.findall(sent):
+                    if (re.search(r'\d', item) is not None and
+                        re.search(r'[A-Z]',item) is not None):
+                        screened_words.append(item)
+                        sent = sent.replace(item, '**PHI**')
             # number check
             if pattern_number.findall(sent) != []:
                 safe = False
@@ -241,12 +248,6 @@ def filter_task(f, whitelist_dict, foutpath, key_name):
                         sent = sent.replace(item[0], '**PHI**')
             #sent = str(pattern_date.sub('**PHI**', sent))
 
-            if pattern_devid.findall(sent) != []:
-                safe = False
-                for item in pattern_devid.findall(sent):
-                    if re.search(r'\d', item) is not None:
-                        screened_words.append(item)
-                        sent = sent.replace(item, '**PHI**')
             # email check
             if pattern_email.findall(sent) != []:
                 safe = False
@@ -263,7 +264,7 @@ def filter_task(f, whitelist_dict, foutpath, key_name):
                         len(item[0])>10):
                         screened_words.append(item[0])
                         sent = sent.replace(item[0], '**PHI**')
-                        print(item[0])
+                        #print(item[0])
             #sent = str(pattern_url.sub('**PHI**', sent))
             # dob check
             re_list = pattern_dob.findall(sent)
@@ -348,7 +349,7 @@ def filter_task(f, whitelist_dict, foutpath, key_name):
 
             # Begin Step 6: NLTK POS tagging
             sent_tag = nltk.pos_tag_sents(sent)
-            # Begin Step 7: Use both NLTK and Spacy to check if the word is a name based on sentence level NER label for the word. 
+            # Begin Step 7: Use both NLTK and Spacy to check if the word is a name based on sentence level NER label for the word.
             for ent in spcy_sent_output.ents:  # spcy_sent_output contains a dict with each word in the sentence and its NLP labels
                 #spcy_sent_ouput.ents is a list of dictionaries containing chunks of words (phrases) that spacy believes are Named Entities
                 # Each ent has 2 properties: text which is the raw word, and label_ which is the NER category for the word
@@ -424,7 +425,8 @@ def filter_task(f, whitelist_dict, foutpath, key_name):
                     phi_reduced = phi_reduced + ' ' + word_output
                 # Format output for later use by eval.py
                 else:
-                    if i > 0 and sent_tag[0][i-1][0][-1] in string.punctuation and sent_tag[0][i-1][0][-1] != '*':
+                    if ((i > 0 and sent_tag[0][i-1][0][-1] in string.punctuation and
+                        sent_tag[0][i-1][0][-1] != '*') or word_output = '\'s'):
                         phi_reduced = phi_reduced + word_output
                     else:
                         phi_reduced = phi_reduced + ' ' + word_output
