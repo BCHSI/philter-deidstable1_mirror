@@ -88,7 +88,7 @@ pattern_number = re.compile(r"""\b(
 )\b""", re.X)
 
 pattern_devid = re.compile(r"""\b(
-***REMOVED***A-Z0-9***REMOVED***{6}***REMOVED***A-Z0-9***REMOVED****
+***REMOVED***A-Z0-9\-***REMOVED***{6}***REMOVED***A-Z0-9\-***REMOVED****
 )\b""", re.X)
 # postal code
 # 5 digits or, 5 digits followed dash and 4 digits
@@ -222,6 +222,13 @@ def filter_task(f, whitelist_dict, foutpath, key_name):
                     screened_words.append(item***REMOVED***0***REMOVED***)
             sent = str(pattern_postal.sub('**PHIPostal**', sent))
 
+            if pattern_devid.findall(sent) != ***REMOVED******REMOVED***:
+                safe = False
+                for item in pattern_devid.findall(sent):
+                    if (re.search(r'\d', item) is not None and
+                        re.search(r'***REMOVED***A-Z***REMOVED***',item) is not None):
+                        screened_words.append(item)
+                        sent = sent.replace(item, '**PHI**')
             # number check
             if pattern_number.findall(sent) != ***REMOVED******REMOVED***:
                 safe = False
@@ -241,12 +248,6 @@ def filter_task(f, whitelist_dict, foutpath, key_name):
                         sent = sent.replace(item***REMOVED***0***REMOVED***, '**PHI**')
             #sent = str(pattern_date.sub('**PHI**', sent))
 
-            if pattern_devid.findall(sent) != ***REMOVED******REMOVED***:
-                safe = False
-                for item in pattern_devid.findall(sent):
-                    if re.search(r'\d', item) is not None:
-                        screened_words.append(item)
-                        sent = sent.replace(item, '**PHI**')
             # email check
             if pattern_email.findall(sent) != ***REMOVED******REMOVED***:
                 safe = False
@@ -263,7 +264,7 @@ def filter_task(f, whitelist_dict, foutpath, key_name):
                         len(item***REMOVED***0***REMOVED***)>10):
                         screened_words.append(item***REMOVED***0***REMOVED***)
                         sent = sent.replace(item***REMOVED***0***REMOVED***, '**PHI**')
-                        print(item***REMOVED***0***REMOVED***)
+                        #print(item***REMOVED***0***REMOVED***)
             #sent = str(pattern_url.sub('**PHI**', sent))
             # dob check
             re_list = pattern_dob.findall(sent)
@@ -348,7 +349,7 @@ def filter_task(f, whitelist_dict, foutpath, key_name):
 
             # Begin Step 6: NLTK POS tagging
             sent_tag = nltk.pos_tag_sents(sent)
-            # Begin Step 7: Use both NLTK and Spacy to check if the word is a name based on sentence level NER label for the word. 
+            # Begin Step 7: Use both NLTK and Spacy to check if the word is a name based on sentence level NER label for the word.
             for ent in spcy_sent_output.ents:  # spcy_sent_output contains a dict with each word in the sentence and its NLP labels
                 #spcy_sent_ouput.ents is a list of dictionaries containing chunks of words (phrases) that spacy believes are Named Entities
                 # Each ent has 2 properties: text which is the raw word, and label_ which is the NER category for the word
@@ -424,7 +425,8 @@ def filter_task(f, whitelist_dict, foutpath, key_name):
                     phi_reduced = phi_reduced + ' ' + word_output
                 # Format output for later use by eval.py
                 else:
-                    if i > 0 and sent_tag***REMOVED***0***REMOVED******REMOVED***i-1***REMOVED******REMOVED***0***REMOVED******REMOVED***-1***REMOVED*** in string.punctuation and sent_tag***REMOVED***0***REMOVED******REMOVED***i-1***REMOVED******REMOVED***0***REMOVED******REMOVED***-1***REMOVED*** != '*':
+                    if ((i > 0 and sent_tag***REMOVED***0***REMOVED******REMOVED***i-1***REMOVED******REMOVED***0***REMOVED******REMOVED***-1***REMOVED*** in string.punctuation and
+                        sent_tag***REMOVED***0***REMOVED******REMOVED***i-1***REMOVED******REMOVED***0***REMOVED******REMOVED***-1***REMOVED*** != '*') or word_output = '\'s'):
                         phi_reduced = phi_reduced + word_output
                     else:
                         phi_reduced = phi_reduced + ' ' + word_output
