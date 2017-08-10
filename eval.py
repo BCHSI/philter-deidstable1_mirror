@@ -59,9 +59,9 @@ def comparison(filename, file1path, file2path):
     # Begin Step 1
     annot_list = ***REMOVED***word***REMOVED***0***REMOVED*** for word in annotation_note if word***REMOVED***1***REMOVED*** == '0' and word***REMOVED***0***REMOVED*** != ''***REMOVED***
     # Begin Step 2
-    phi_r_list = ***REMOVED***word for word in phi_reduced_list if '**PHI**' not in word***REMOVED***
+    phi_r_list = ***REMOVED***word for word in phi_reduced_list if '**PHI' not in word***REMOVED***
     # Begin Step 3
-    filtered_count = ***REMOVED***word for word in phi_reduced_list if '**PHI**' in word***REMOVED***
+    filtered_count = ***REMOVED***word for word in phi_reduced_list if '**PHI' in word***REMOVED***
 
     filtered_count = len(filtered_count)
     summary_dict***REMOVED***'false_positive'***REMOVED*** = ***REMOVED******REMOVED***
