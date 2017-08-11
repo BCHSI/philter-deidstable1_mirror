@@ -23,7 +23,7 @@ from nltk import pos_tag_sents
 from nltk import ne_chunk
 import spacy
 from pkg_resources import resource_filename
-
+from nltk.tag.perceptron import AveragedPerceptron
 """
 Replace PHI words with a safe filtered word: '**PHI**'
 
@@ -72,7 +72,7 @@ dealing with I/O and multiprocessing
 
 
 nlp = spacy.load('en')  # load spacy english library
-
+pretrain = AveragedPerceptron()
 
 
 # configure the regex patterns
@@ -122,9 +122,9 @@ pattern_date = re.compile(r"""\b(
 |\d{4}[-./\s](0?[1-9]|1[0-2]|"""+month_name+r""")[-./\s]([1-2][0-9]|3[0-1]|0?[1-9])
 |\d{4}[-/](0?[1-9]|1[0-2]|"""+month_name+r""")(\-\d{4}[-/](0?[1-9]|1[0-2]|"""+month_name+r"""))?  # XXXX/XX
 |(0?[1-9]|1[0-2]|"""+month_name+r""")[-/]\d{4}(\-(0?[1-9]|1[0-2]|"""+month_name+r""")[-/]\d{4})?  # XX/XXXX
-|(0?[1-9]|1[0-2]|"""+month_name+r""")[-/]\d{2}(\-(0?[1-9]|1[0-2]|"""+month_name+r""")[-/]\d{2})?  # MM/YY
-|(0?[1-9]|1[0-2]|"""+month_name+r""")[-/]([1-2][0-9]|3[0-1]|0?[1-9])(\-(0?[1-9]|1[0-2]|"""+month_name+r""")[-/]([1-2][0-9]|3[0-1]|0?[1-9]))?  #mm/dd
-|([1-2][0-9]|3[0-1]|0?[1-9])[-/](0?[1-9]|1[0-2]|"""+month_name+r""")(\-([1-2][0-9]|3[0-1]|0?[1-9])[-/](0?[1-9]|1[0-2]|"""+month_name+r"""))?  #dd/mm
+|(0?[1-9]|1[0-2]|"""+month_name+r""")/\d{2}(\-(0?[1-9]|1[0-2]|"""+month_name+r""")/\d{2})?  # MM/YY
+|(0?[1-9]|1[0-2]|"""+month_name+r""")/([1-2][0-9]|3[0-1]|0?[1-9])(\-(0?[1-9]|1[0-2]|"""+month_name+r""")/([1-2][0-9]|3[0-1]|0?[1-9]))?  #mm/dd
+|([1-2][0-9]|3[0-1]|0?[1-9])/(0?[1-9]|1[0-2]|"""+month_name+r""")(\-([1-2][0-9]|3[0-1]|0?[1-9])/(0?[1-9]|1[0-2]|"""+month_name+r"""))?  #dd/mm
 )\b""", re.X | re.I)
 pattern_mname = re.compile(r'\b(' + month_name + r')\b')
 
@@ -255,7 +255,7 @@ def filter_task(f, whitelist_dict, foutpath, key_name):
                 for item in pattern_date.findall(sent):
                     if len(set(re.findall(r'[^\w]',item[0]))) == 1:
                         screened_words.append(item[0])
-                        sent = sent.replace(item[0], '**PHI**')
+                        sent = sent.replace(item[0], '**PHIDate**')
             #sent = str(pattern_date.sub('**PHI**', sent))
             if pattern_4digits.findall(sent) != []:
                 safe = False
@@ -281,6 +281,7 @@ def filter_task(f, whitelist_dict, foutpath, key_name):
                         #print(item[0])
             #sent = str(pattern_url.sub('**PHI**', sent))
             # dob check
+            '''
             re_list = pattern_dob.findall(sent)
             i = 0
             while True:
@@ -293,6 +294,7 @@ def filter_task(f, whitelist_dict, foutpath, key_name):
                         sent = sent.replace(re_list[i][1], '**PHI**')
                         screened_words.append(re_list[i][1])
                     i += 2
+            '''
 
             # Begin Step 4
             # substitute spaces for special characters 
@@ -301,6 +303,8 @@ def filter_task(f, whitelist_dict, foutpath, key_name):
             spcy_sent_output = nlp(sent)
             # split sentences into words
             sent = [word_tokenize(sent)]
+            #sent = [pretrain.tag(sent)]
+            #print(sent)
             # Begin Step 5: context level pattern matching with regex 
             for position in range(0, len(sent[0])):
                 word = sent[0][position]
@@ -362,7 +366,8 @@ def filter_task(f, whitelist_dict, foutpath, key_name):
                             safe = False
 
             # Begin Step 6: NLTK POS tagging
-            sent_tag = nltk.pos_tag_sents(sent)
+            #sent_tag = nltk.pos_tag_sents(sent)
+            sent_tag = [pretrain.tag(sent[0])]
             # Begin Step 7: Use both NLTK and Spacy to check if the word is a name based on sentence level NER label for the word.
             for ent in spcy_sent_output.ents:  # spcy_sent_output contains a dict with each word in the sentence and its NLP labels
                 #spcy_sent_ouput.ents is a list of dictionaries containing chunks of words (phrases) that spacy believes are Named Entities
@@ -374,8 +379,11 @@ def filter_task(f, whitelist_dict, foutpath, key_name):
                     if spcy_chunk_output.ents != () and spcy_chunk_output.ents[0].label_ == 'PERSON':
                         # Now check to see what labels NLTK provides for the word
                         name_tag = word_tokenize(ent.text)
-                        name_tag = pos_tag_sents([name_tag])
-                        chunked = ne_chunk(name_tag[0])
+                        # preceptron
+                        name_tag = pretrain.tag(name_tag)
+                        chunked = ne_chunk(name_tag)
+                        #name_tag = pos_tag_sents([name_tag])
+                        #chunked = ne_chunk(name_tag[0])
                         for i in chunked:
                             if type(i) == Tree: # if ne_chunck thinks chunk is NER, creates a tree structure were leaves are the words in the chunk (and their POS labels) and the trunk is the single NER label for the chunk
                                 if i.label() == 'PERSON':
@@ -414,7 +422,8 @@ def filter_task(f, whitelist_dict, foutpath, key_name):
                             else:
                                 # For words that are in whitelist, check to make sure that we have not identified them as names
                                 if ((word_output.istitle() or word_output.isupper()) and
-                                    pattern_name.findall(word_output) != []):
+                                    pattern_name.findall(word_output) != [] and
+                                    re.search(r'\b([A-Z])\b', word_check) is None):
                                     word_output, name_set, screened_words, safe = namecheck(word_output, name_set, screened_words, safe)
 
                         # check day/year according to the month name
@@ -435,10 +444,13 @@ def filter_task(f, whitelist_dict, foutpath, key_name):
                                     word_output = "**PHI**"
                                     safe = False
                                     break
+                        else:
+                            word_output, name_set, screened_words, safe = namecheck(word_output, name_set, screened_words, safe)
+
 
                     except:
                         print(word_output, sys.exc_info())
-                    if word_output.lower() == '\'s':
+                    if word_output.lower()[0] == '\'':
                         if phi_reduced[-7:] != '**PHI**':
                             phi_reduced = phi_reduced + word_output
                         #print(word_output)
@@ -460,9 +472,10 @@ def filter_task(f, whitelist_dict, foutpath, key_name):
                     screened_words.append(item[0])
             phi_reduced = pattern_mname.sub('**PHI**', phi_reduced)
 
-            #if pattern_middle.findall(phi_reduced) != []:
-                #for item in pattern_middle.findall(phi_reduced):
-                #    screened_words.append(item)
+            if pattern_middle.findall(phi_reduced) != []:
+                for item in pattern_middle.findall(phi_reduced):
+                #    print(item[0])
+                    screened_words.append(item[0])
             phi_reduced = pattern_middle.sub('**PHI** **PHI** ', phi_reduced)
 
         if not safe:
