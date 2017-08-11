@@ -82,9 +82,12 @@ pattern_word = re.compile(r"***REMOVED***^\w+***REMOVED***")
 # Find numbers like SSN/PHONE/FAX
 # 3 patterns: 1. 6 or more digits will be filtered 2. digit followed by - followed by digit. 3. Ignore case of characters
 pattern_number = re.compile(r"""\b(
+(\d***REMOVED***\(\)\-\'***REMOVED***?\s?){6}(***REMOVED***\(\)\-\'***REMOVED***?\d)+   # SSN/PHONE/FAX XXX-XX-XXXX, XXX-XXX-XXXX, XXX-XXXXXXXX, etc.
+|(\d***REMOVED***\(\)\-.\'***REMOVED***?){7}(***REMOVED***\(\)\-.\'***REMOVED***?\d)+  # test
+)\b""", re.X)
+
+pattern_4digits = re.compile(r"""\b(
 \d{4}***REMOVED***A-Z0-9***REMOVED****  # devid/mrn/benid
-|(\d***REMOVED***\(\)\-\'***REMOVED***?\s?){7}\d+   # SSN/PHONE/FAX XXX-XX-XXXX, XXX-XXX-XXXX, XXX-XXXXXXXX, etc.
-|(\d***REMOVED***\(\)\-.\'***REMOVED***?){7}\d+
 )\b""", re.X)
 
 pattern_devid = re.compile(r"""\b(
@@ -117,11 +120,11 @@ pattern_date = re.compile(r"""\b(
 |(0?***REMOVED***1-9***REMOVED***|1***REMOVED***0-2***REMOVED***|"""+month_name+r""")***REMOVED***-./\s***REMOVED***(***REMOVED***1-2***REMOVED******REMOVED***0-9***REMOVED***|3***REMOVED***0-1***REMOVED***|0?***REMOVED***1-9***REMOVED***)***REMOVED***-./\s***REMOVED***\d{4}  # one or digits/anything/one or two digits/anything/4 digits
 |(***REMOVED***1-2***REMOVED******REMOVED***0-9***REMOVED***|3***REMOVED***0-1***REMOVED***|0?***REMOVED***1-9***REMOVED***)***REMOVED***-./\s***REMOVED***(0?***REMOVED***1-9***REMOVED***|1***REMOVED***0-2***REMOVED***|"""+month_name+r""")***REMOVED***-./\s***REMOVED***\d{1,2}
 |\d{4}***REMOVED***-./\s***REMOVED***(0?***REMOVED***1-9***REMOVED***|1***REMOVED***0-2***REMOVED***|"""+month_name+r""")***REMOVED***-./\s***REMOVED***(***REMOVED***1-2***REMOVED******REMOVED***0-9***REMOVED***|3***REMOVED***0-1***REMOVED***|0?***REMOVED***1-9***REMOVED***)
-|\d{4}***REMOVED***-./\s***REMOVED***(0?***REMOVED***1-9***REMOVED***|1***REMOVED***0-2***REMOVED***|"""+month_name+r""")  # XXXX/XX
-|(0?***REMOVED***1-9***REMOVED***|1***REMOVED***0-2***REMOVED***|"""+month_name+r""")***REMOVED***-./\s***REMOVED***\d{4}  # XX/XXXX
-|(0?***REMOVED***1-9***REMOVED***|1***REMOVED***0-2***REMOVED***|"""+month_name+r""")***REMOVED***-./\s***REMOVED***\d{2}  # MM/YY
-|(0?***REMOVED***1-9***REMOVED***|1***REMOVED***0-2***REMOVED***|"""+month_name+r""")***REMOVED***-./\s***REMOVED***(***REMOVED***1-2***REMOVED******REMOVED***0-9***REMOVED***|3***REMOVED***0-1***REMOVED***|0?***REMOVED***1-9***REMOVED***)  #mm/dd
-|(***REMOVED***1-2***REMOVED******REMOVED***0-9***REMOVED***|3***REMOVED***0-1***REMOVED***|0?***REMOVED***1-9***REMOVED***)***REMOVED***-./\s***REMOVED***(0?***REMOVED***1-9***REMOVED***|1***REMOVED***0-2***REMOVED***|"""+month_name+r""")  #dd/mm
+|\d{4}***REMOVED***-/***REMOVED***(0?***REMOVED***1-9***REMOVED***|1***REMOVED***0-2***REMOVED***|"""+month_name+r""")(\-\d{4}***REMOVED***-/***REMOVED***(0?***REMOVED***1-9***REMOVED***|1***REMOVED***0-2***REMOVED***|"""+month_name+r"""))?  # XXXX/XX
+|(0?***REMOVED***1-9***REMOVED***|1***REMOVED***0-2***REMOVED***|"""+month_name+r""")***REMOVED***-/***REMOVED***\d{4}(\-(0?***REMOVED***1-9***REMOVED***|1***REMOVED***0-2***REMOVED***|"""+month_name+r""")***REMOVED***-/***REMOVED***\d{4})?  # XX/XXXX
+|(0?***REMOVED***1-9***REMOVED***|1***REMOVED***0-2***REMOVED***|"""+month_name+r""")***REMOVED***-/***REMOVED***\d{2}(\-(0?***REMOVED***1-9***REMOVED***|1***REMOVED***0-2***REMOVED***|"""+month_name+r""")***REMOVED***-/***REMOVED***\d{2})?  # MM/YY
+|(0?***REMOVED***1-9***REMOVED***|1***REMOVED***0-2***REMOVED***|"""+month_name+r""")***REMOVED***-/***REMOVED***(***REMOVED***1-2***REMOVED******REMOVED***0-9***REMOVED***|3***REMOVED***0-1***REMOVED***|0?***REMOVED***1-9***REMOVED***)(\-(0?***REMOVED***1-9***REMOVED***|1***REMOVED***0-2***REMOVED***|"""+month_name+r""")***REMOVED***-/***REMOVED***(***REMOVED***1-2***REMOVED******REMOVED***0-9***REMOVED***|3***REMOVED***0-1***REMOVED***|0?***REMOVED***1-9***REMOVED***))?  #mm/dd
+|(***REMOVED***1-2***REMOVED******REMOVED***0-9***REMOVED***|3***REMOVED***0-1***REMOVED***|0?***REMOVED***1-9***REMOVED***)***REMOVED***-/***REMOVED***(0?***REMOVED***1-9***REMOVED***|1***REMOVED***0-2***REMOVED***|"""+month_name+r""")(\-(***REMOVED***1-2***REMOVED******REMOVED***0-9***REMOVED***|3***REMOVED***0-1***REMOVED***|0?***REMOVED***1-9***REMOVED***)***REMOVED***-/***REMOVED***(0?***REMOVED***1-9***REMOVED***|1***REMOVED***0-2***REMOVED***|"""+month_name+r"""))?  #dd/mm
 )\b""", re.X | re.I)
 pattern_mname = re.compile(r'\b(' + month_name + r')\b')
 
@@ -141,7 +144,8 @@ pattern_salutation = re.compile(r"""
 
 # match middle initial
 # if single char or Jr is surround by 2 phi words, filter. 
-pattern_middle = re.compile(r"""\*\*PHI\*\* (***REMOVED***A-Z***REMOVED***r?\.?) | (***REMOVED***A-Z***REMOVED***r?\.?) \*\*PHI\*\*""")
+pattern_middle = re.compile(r"""\*\*PHI\*\*,? ((***REMOVED***A-CE-LN-Z***REMOVED******REMOVED***Rr***REMOVED***?|***REMOVED***DM***REMOVED***)\.?) | ((***REMOVED***A-CE-LN-Z***REMOVED******REMOVED***Rr***REMOVED***?|***REMOVED***DM***REMOVED***)\.?),? \*\*PHI\*\*""")
+
 
 # match url
 pattern_url = re.compile(r'\b((http***REMOVED***s***REMOVED***?://)?((***REMOVED***a-zA-Z***REMOVED***|***REMOVED***0-9***REMOVED***|***REMOVED***$-_@.&+:***REMOVED***|***REMOVED***!*\(\),***REMOVED***)*(\.|\/)(***REMOVED***a-zA-Z***REMOVED***|***REMOVED***0-9***REMOVED***|***REMOVED***$-_@.&+:***REMOVED***|***REMOVED***!*\(\),***REMOVED***)*))\b', re.I)
@@ -241,10 +245,10 @@ def filter_task(f, whitelist_dict, foutpath, key_name):
                 for item in pattern_number.findall(sent):
                     # print(item)
                     #if pattern_date.match(item***REMOVED***0***REMOVED***) is None:
-                    #sent = sent.replace(item***REMOVED***0***REMOVED***, '**PHI**')
+                    sent = sent.replace(item***REMOVED***0***REMOVED***, '**PHI**')
                     screened_words.append(item***REMOVED***0***REMOVED***)
                     #print(item***REMOVED***0***REMOVED***)
-            sent = str(pattern_number.sub('**PHI**', sent))
+            #sent = str(pattern_number.sub('**PHI**', sent))
 
             if pattern_date.findall(sent) != ***REMOVED******REMOVED***:
                 safe = False
@@ -253,7 +257,11 @@ def filter_task(f, whitelist_dict, foutpath, key_name):
                         screened_words.append(item***REMOVED***0***REMOVED***)
                         sent = sent.replace(item***REMOVED***0***REMOVED***, '**PHI**')
             #sent = str(pattern_date.sub('**PHI**', sent))
-
+            if pattern_4digits.findall(sent) != ***REMOVED******REMOVED***:
+                safe = False
+                for item in pattern_4digits.findall(sent):
+                    screened_words.append(item)
+            sent = str(pattern_4digits.sub('**PHI**', sent))
             # email check
             if pattern_email.findall(sent) != ***REMOVED******REMOVED***:
                 safe = False
@@ -391,13 +399,14 @@ def filter_task(f, whitelist_dict, foutpath, key_name):
                 word_output = word***REMOVED***0***REMOVED***
                 if word_output not in string.punctuation:
                     word_check = str(pattern_word.sub('', word_output))
+                    #if word_check.title() in ***REMOVED***'Dr', 'Mr', 'Mrs', 'Ms'***REMOVED***:
+                        #print(word_check)
                         # remove the speical chars
                     try:
                         # word***REMOVED***1***REMOVED*** is the pos tag of the word
 
                         if (((word***REMOVED***1***REMOVED*** == 'NN' or word***REMOVED***1***REMOVED*** == 'NNP') or
-                            ((word***REMOVED***1***REMOVED*** == 'NNS' or word***REMOVED***1***REMOVED*** == 'NNPS') and word_check.istitle()))
-                            and word_check.title() not in ***REMOVED***'Dr', 'Mr', 'Mrs', 'Ms'***REMOVED***):
+                            ((word***REMOVED***1***REMOVED*** == 'NNS' or word***REMOVED***1***REMOVED*** == 'NNPS') and word_check.istitle()))):
                             if word_check.lower() not in whitelist_dict:
                                 screened_words.append(word_output)
                                 word_output = "**PHI**"
@@ -429,7 +438,7 @@ def filter_task(f, whitelist_dict, foutpath, key_name):
 
                     except:
                         print(word_output, sys.exc_info())
-                    if word_output == '\'s':
+                    if word_output.lower() == '\'s':
                         if phi_reduced***REMOVED***-7:***REMOVED*** != '**PHI**':
                             phi_reduced = phi_reduced + word_output
                         #print(word_output)
@@ -454,7 +463,7 @@ def filter_task(f, whitelist_dict, foutpath, key_name):
             #if pattern_middle.findall(phi_reduced) != ***REMOVED******REMOVED***:
                 #for item in pattern_middle.findall(phi_reduced):
                 #    screened_words.append(item)
-            phi_reduced = pattern_middle.sub('**PHI** **PHI**', phi_reduced)
+            phi_reduced = pattern_middle.sub('**PHI** **PHI** ', phi_reduced)
 
         if not safe:
             phi_containing_records = 1
