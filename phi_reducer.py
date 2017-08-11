@@ -235,17 +235,17 @@ def filter_task(f, whitelist_dict, foutpath, key_name):
                 for item in pattern_number.findall(sent):
                     # print(item)
                     #if pattern_date.match(item***REMOVED***0***REMOVED***) is None:
-                    #sent = sent.replace(item***REMOVED***0***REMOVED***, '**PHI**')
+                    sent = sent.replace(item***REMOVED***0***REMOVED***, '**PHI**')
                     screened_words.append(item***REMOVED***0***REMOVED***)
                     #print(item***REMOVED***0***REMOVED***)
-            sent = str(pattern_number.sub('**PHI**', sent))
+            #sent = str(pattern_number.sub('**PHI**', sent))
 
             if pattern_date.findall(sent) != ***REMOVED******REMOVED***:
                 safe = False
                 for item in pattern_date.findall(sent):
                     if len(set(re.findall(r'***REMOVED***^\w***REMOVED***',item***REMOVED***0***REMOVED***))) == 1:
                         screened_words.append(item***REMOVED***0***REMOVED***)
-                        sent = sent.replace(item***REMOVED***0***REMOVED***, '**PHI**')
+                        sent = sent.replace(item***REMOVED***0***REMOVED***, '**PHIDate**')
             #sent = str(pattern_date.sub('**PHI**', sent))
 
             # email check
@@ -426,7 +426,7 @@ def filter_task(f, whitelist_dict, foutpath, key_name):
                 # Format output for later use by eval.py
                 else:
                     if ((i > 0 and sent_tag***REMOVED***0***REMOVED******REMOVED***i-1***REMOVED******REMOVED***0***REMOVED******REMOVED***-1***REMOVED*** in string.punctuation and
-                        sent_tag***REMOVED***0***REMOVED******REMOVED***i-1***REMOVED******REMOVED***0***REMOVED******REMOVED***-1***REMOVED*** != '*') or word_output = '\'s'):
+                        sent_tag***REMOVED***0***REMOVED******REMOVED***i-1***REMOVED******REMOVED***0***REMOVED******REMOVED***-1***REMOVED*** != '*') or word_output == '\'s'):
                         phi_reduced = phi_reduced + word_output
                     else:
                         phi_reduced = phi_reduced + ' ' + word_output
