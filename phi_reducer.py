@@ -235,17 +235,17 @@ def filter_task(f, whitelist_dict, foutpath, key_name):
                 for item in pattern_number.findall(sent):
                     # print(item)
                     #if pattern_date.match(item[0]) is None:
-                    #sent = sent.replace(item[0], '**PHI**')
+                    sent = sent.replace(item[0], '**PHI**')
                     screened_words.append(item[0])
                     #print(item[0])
-            sent = str(pattern_number.sub('**PHI**', sent))
+            #sent = str(pattern_number.sub('**PHI**', sent))
 
             if pattern_date.findall(sent) != []:
                 safe = False
                 for item in pattern_date.findall(sent):
                     if len(set(re.findall(r'[^\w]',item[0]))) == 1:
                         screened_words.append(item[0])
-                        sent = sent.replace(item[0], '**PHI**')
+                        sent = sent.replace(item[0], '**PHIDate**')
             #sent = str(pattern_date.sub('**PHI**', sent))
 
             # email check
@@ -426,7 +426,7 @@ def filter_task(f, whitelist_dict, foutpath, key_name):
                 # Format output for later use by eval.py
                 else:
                     if ((i > 0 and sent_tag[0][i-1][0][-1] in string.punctuation and
-                        sent_tag[0][i-1][0][-1] != '*') or word_output = '\'s'):
+                        sent_tag[0][i-1][0][-1] != '*') or word_output == '\'s'):
                         phi_reduced = phi_reduced + word_output
                     else:
                         phi_reduced = phi_reduced + ' ' + word_output
