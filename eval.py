@@ -61,7 +61,7 @@ def comparison(filename, file1path, file2path):
     # Begin Step 2
     phi_r_list = ***REMOVED***word for word in phi_reduced_list if '**PHI' not in word***REMOVED***
     # Begin Step 3
-    filtered_count = ***REMOVED***word for word in phi_reduced_list if '**PHI' in word***REMOVED***
+    filtered_count = ***REMOVED***word***REMOVED***0***REMOVED*** for word in annotation_note if word***REMOVED***1***REMOVED*** != '0' and word***REMOVED***0***REMOVED*** != ''***REMOVED***
 
     filtered_count = len(filtered_count)
     summary_dict***REMOVED***'false_positive'***REMOVED*** = ***REMOVED******REMOVED***
@@ -79,7 +79,7 @@ def comparison(filename, file1path, file2path):
         elif marker_and_word***REMOVED***0***REMOVED*** == '-' and re.findall(r'\w+', marker_and_word***REMOVED***2:***REMOVED***) != ***REMOVED******REMOVED***:
             summary_dict***REMOVED***'false_negative'***REMOVED***.append(marker_and_word***REMOVED***2:***REMOVED***)
 
-    true_positive = filtered_count-len(summary_dict***REMOVED***'false_positive'***REMOVED***)+len(summary_dict***REMOVED***'false_negative'***REMOVED***)
+    true_positive = filtered_count-len(summary_dict***REMOVED***'false_negative'***REMOVED***)
     summary_dict***REMOVED***'true_positive'***REMOVED*** = true_positive
 
     output = 'Note: ' + filename + '\n'
