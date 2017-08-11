@@ -82,9 +82,12 @@ pattern_word = re.compile(r"[^\w+]")
 # Find numbers like SSN/PHONE/FAX
 # 3 patterns: 1. 6 or more digits will be filtered 2. digit followed by - followed by digit. 3. Ignore case of characters
 pattern_number = re.compile(r"""\b(
+(\d[\(\)\-\']?\s?){6}([\(\)\-\']?\d)+   # SSN/PHONE/FAX XXX-XX-XXXX, XXX-XXX-XXXX, XXX-XXXXXXXX, etc.
+|(\d[\(\)\-.\']?){7}([\(\)\-.\']?\d)+  # test
+)\b""", re.X)
+
+pattern_4digits = re.compile(r"""\b(
 \d{4}[A-Z0-9]*  # devid/mrn/benid
-|(\d[\(\)\-\']?\s?){7}\d+   # SSN/PHONE/FAX XXX-XX-XXXX, XXX-XXX-XXXX, XXX-XXXXXXXX, etc.
-|(\d[\(\)\-.\']?){7}\d+
 )\b""", re.X)
 
 pattern_devid = re.compile(r"""\b(
@@ -117,11 +120,11 @@ pattern_date = re.compile(r"""\b(
 |(0?[1-9]|1[0-2]|"""+month_name+r""")[-./\s]([1-2][0-9]|3[0-1]|0?[1-9])[-./\s]\d{4}  # one or digits/anything/one or two digits/anything/4 digits
 |([1-2][0-9]|3[0-1]|0?[1-9])[-./\s](0?[1-9]|1[0-2]|"""+month_name+r""")[-./\s]\d{1,2}
 |\d{4}[-./\s](0?[1-9]|1[0-2]|"""+month_name+r""")[-./\s]([1-2][0-9]|3[0-1]|0?[1-9])
-|\d{4}[-./\s](0?[1-9]|1[0-2]|"""+month_name+r""")  # XXXX/XX
-|(0?[1-9]|1[0-2]|"""+month_name+r""")[-./\s]\d{4}  # XX/XXXX
-|(0?[1-9]|1[0-2]|"""+month_name+r""")[-./\s]\d{2}  # MM/YY
-|(0?[1-9]|1[0-2]|"""+month_name+r""")[-./\s]([1-2][0-9]|3[0-1]|0?[1-9])  #mm/dd
-|([1-2][0-9]|3[0-1]|0?[1-9])[-./\s](0?[1-9]|1[0-2]|"""+month_name+r""")  #dd/mm
+|\d{4}[-/](0?[1-9]|1[0-2]|"""+month_name+r""")(\-\d{4}[-/](0?[1-9]|1[0-2]|"""+month_name+r"""))?  # XXXX/XX
+|(0?[1-9]|1[0-2]|"""+month_name+r""")[-/]\d{4}(\-(0?[1-9]|1[0-2]|"""+month_name+r""")[-/]\d{4})?  # XX/XXXX
+|(0?[1-9]|1[0-2]|"""+month_name+r""")[-/]\d{2}(\-(0?[1-9]|1[0-2]|"""+month_name+r""")[-/]\d{2})?  # MM/YY
+|(0?[1-9]|1[0-2]|"""+month_name+r""")[-/]([1-2][0-9]|3[0-1]|0?[1-9])(\-(0?[1-9]|1[0-2]|"""+month_name+r""")[-/]([1-2][0-9]|3[0-1]|0?[1-9]))?  #mm/dd
+|([1-2][0-9]|3[0-1]|0?[1-9])[-/](0?[1-9]|1[0-2]|"""+month_name+r""")(\-([1-2][0-9]|3[0-1]|0?[1-9])[-/](0?[1-9]|1[0-2]|"""+month_name+r"""))?  #dd/mm
 )\b""", re.X | re.I)
 pattern_mname = re.compile(r'\b(' + month_name + r')\b')
 
@@ -141,7 +144,8 @@ pattern_salutation = re.compile(r"""
 
 # match middle initial
 # if single char or Jr is surround by 2 phi words, filter. 
-pattern_middle = re.compile(r"""\*\*PHI\*\* ([A-Z]r?\.?) | ([A-Z]r?\.?) \*\*PHI\*\*""")
+pattern_middle = re.compile(r"""\*\*PHI\*\*,? (([A-CE-LN-Z][Rr]?|[DM])\.?) | (([A-CE-LN-Z][Rr]?|[DM])\.?),? \*\*PHI\*\*""")
+
 
 # match url
 pattern_url = re.compile(r'\b((http[s]?://)?(([a-zA-Z]|[0-9]|[$-_@.&+:]|[!*\(\),])*(\.|\/)([a-zA-Z]|[0-9]|[$-_@.&+:]|[!*\(\),])*))\b', re.I)
@@ -241,10 +245,10 @@ def filter_task(f, whitelist_dict, foutpath, key_name):
                 for item in pattern_number.findall(sent):
                     # print(item)
                     #if pattern_date.match(item[0]) is None:
-                    #sent = sent.replace(item[0], '**PHI**')
+                    sent = sent.replace(item[0], '**PHI**')
                     screened_words.append(item[0])
                     #print(item[0])
-            sent = str(pattern_number.sub('**PHI**', sent))
+            #sent = str(pattern_number.sub('**PHI**', sent))
 
             if pattern_date.findall(sent) != []:
                 safe = False
@@ -253,7 +257,11 @@ def filter_task(f, whitelist_dict, foutpath, key_name):
                         screened_words.append(item[0])
                         sent = sent.replace(item[0], '**PHI**')
             #sent = str(pattern_date.sub('**PHI**', sent))
-
+            if pattern_4digits.findall(sent) != []:
+                safe = False
+                for item in pattern_4digits.findall(sent):
+                    screened_words.append(item)
+            sent = str(pattern_4digits.sub('**PHI**', sent))
             # email check
             if pattern_email.findall(sent) != []:
                 safe = False
@@ -391,13 +399,14 @@ def filter_task(f, whitelist_dict, foutpath, key_name):
                 word_output = word[0]
                 if word_output not in string.punctuation:
                     word_check = str(pattern_word.sub('', word_output))
+                    #if word_check.title() in ['Dr', 'Mr', 'Mrs', 'Ms']:
+                        #print(word_check)
                         # remove the speical chars
                     try:
                         # word[1] is the pos tag of the word
 
                         if (((word[1] == 'NN' or word[1] == 'NNP') or
-                            ((word[1] == 'NNS' or word[1] == 'NNPS') and word_check.istitle()))
-                            and word_check.title() not in ['Dr', 'Mr', 'Mrs', 'Ms']):
+                            ((word[1] == 'NNS' or word[1] == 'NNPS') and word_check.istitle()))):
                             if word_check.lower() not in whitelist_dict:
                                 screened_words.append(word_output)
                                 word_output = "**PHI**"
@@ -429,7 +438,7 @@ def filter_task(f, whitelist_dict, foutpath, key_name):
 
                     except:
                         print(word_output, sys.exc_info())
-                    if word_output == '\'s':
+                    if word_output.lower() == '\'s':
                         if phi_reduced[-7:] != '**PHI**':
                             phi_reduced = phi_reduced + word_output
                         #print(word_output)
@@ -454,7 +463,7 @@ def filter_task(f, whitelist_dict, foutpath, key_name):
             #if pattern_middle.findall(phi_reduced) != []:
                 #for item in pattern_middle.findall(phi_reduced):
                 #    screened_words.append(item)
-            phi_reduced = pattern_middle.sub('**PHI** **PHI**', phi_reduced)
+            phi_reduced = pattern_middle.sub('**PHI** **PHI** ', phi_reduced)
 
         if not safe:
             phi_containing_records = 1
