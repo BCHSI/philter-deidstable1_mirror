@@ -190,7 +190,7 @@ def main():
                         FP_all += len(v['false_positive'])
                         FN_all += len(v['false_negative'])
 
-                    output = "{} notes have been evaulated.\n".format(processed_count-len(miss_file))
+                    output = "{} notes have been evaluated.\n".format(processed_count-len(miss_file))
                     output += "True Positive in all notes: " + str(TP_all) + '\n'
                     output += "False Positive in all notes: " + str(FP_all) + '\n'
                     output += "False Negative in all notes: " + str(FN_all) + '\n'
