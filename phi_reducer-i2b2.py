@@ -366,8 +366,8 @@ def filter_task(f, whitelist_dict, foutpath, key_name):
                             safe = False
 
             # Begin Step 6: NLTK POS tagging
-            #sent_tag = nltk.pos_tag_sents(sent)
-            sent_tag = ***REMOVED***pretrain.tag(sent***REMOVED***0***REMOVED***)***REMOVED***
+            sent_tag = nltk.pos_tag_sents(sent)
+            #sent_tag = ***REMOVED***pretrain.tag(sent***REMOVED***0***REMOVED***)***REMOVED***
             # Begin Step 7: Use both NLTK and Spacy to check if the word is a name based on sentence level NER label for the word.
             for ent in spcy_sent_output.ents:  # spcy_sent_output contains a dict with each word in the sentence and its NLP labels
                 #spcy_sent_ouput.ents is a list of dictionaries containing chunks of words (phrases) that spacy believes are Named Entities
@@ -380,10 +380,10 @@ def filter_task(f, whitelist_dict, foutpath, key_name):
                         # Now check to see what labels NLTK provides for the word
                         name_tag = word_tokenize(ent.text)
                         # preceptron
-                        name_tag = pretrain.tag(name_tag)
-                        chunked = ne_chunk(name_tag)
-                        #name_tag = pos_tag_sents(***REMOVED***name_tag***REMOVED***)
-                        #chunked = ne_chunk(name_tag***REMOVED***0***REMOVED***)
+                        #name_tag = pretrain.tag(name_tag)
+                        #chunked = ne_chunk(name_tag)
+                        name_tag = pos_tag_sents(***REMOVED***name_tag***REMOVED***)
+                        chunked = ne_chunk(name_tag***REMOVED***0***REMOVED***)
                         for i in chunked:
                             if type(i) == Tree: # if ne_chunck thinks chunk is NER, creates a tree structure were leaves are the words in the chunk (and their POS labels) and the trunk is the single NER label for the chunk
                                 if i.label() == 'PERSON':
@@ -450,7 +450,7 @@ def filter_task(f, whitelist_dict, foutpath, key_name):
 
                     except:
                         print(word_output, sys.exc_info())
-                    if word_output.lower()***REMOVED***0***REMOVED*** == '\'':
+                    if word_output.lower()***REMOVED***0***REMOVED*** == '\'s':
                         if phi_reduced***REMOVED***-7:***REMOVED*** != '**PHI**':
                             phi_reduced = phi_reduced + word_output
                         #print(word_output)
