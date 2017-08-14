@@ -58,8 +58,16 @@ def comparison(filename, file1path, file2path):
 
     # Begin Step 1
     annot_list = [word[0] for word in annotation_note if word[1] == '0' and word[0] != '']
+    for i in range(len(annot_list)):
+        if annot_list[i][-1] in punctuation:
+            annot_list[i] = annot_list[i][:-1]
+    #print(annot_list)
     # Begin Step 2
     phi_r_list = [word for word in phi_reduced_list if '**PHI' not in word]
+    for i in range(len(phi_r_list)):
+        if phi_r_list[i][-1] in punctuation:
+            phi_r_list[i] = phi_r_list[i][:-1]
+    #print(phi_r_list)
     # Begin Step 3
     filtered_count = [word[0] for word in annotation_note if word[1] != '0' and word[0] != '']
 
