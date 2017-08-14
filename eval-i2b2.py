@@ -95,7 +95,7 @@ def comparison(filename, file1path, file2path, allpositive_dict):
     temp_list = list(filter(lambda a: a.lower() not in check_set, temp_list))
     summary_dict['false_negative'] = temp_list
     #true_positive = filtered_count-len(summary_dict['false_positive'])+len(summary_dict['false_negative'])
-    true_positive = allpositive_dict[filename] - len('false_negative')
+    true_positive = allpositive_dict[filename] - len(summary_dict['false_negative'])
     summary_dict['true_positive'] = true_positive
 
     output = 'Note: ' + filename + '\n'
