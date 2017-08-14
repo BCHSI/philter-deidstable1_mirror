@@ -24,6 +24,7 @@ from nltk import ne_chunk
 import spacy
 from pkg_resources import resource_filename
 from nltk.tag.perceptron import AveragedPerceptron
+from nltk.tag import SennaTagger
 """
 Replace PHI words with a safe filtered word: '**PHI**'
 
@@ -72,8 +73,8 @@ dealing with I/O and multiprocessing
 
 
 nlp = spacy.load('en')  # load spacy english library
-pretrain = AveragedPerceptron()
-
+# pretrain = AveragedPerceptron()
+pretrain = SennaTagger('senna')
 
 # configure the regex patterns
 # we're going to want to remove all special characters
@@ -303,7 +304,6 @@ def filter_task(f, whitelist_dict, foutpath, key_name):
             spcy_sent_output = nlp(sent)
             # split sentences into words
             sent = [word_tokenize(sent)]
-            #sent = [pretrain.tag(sent)]
             #print(sent)
             # Begin Step 5: context level pattern matching with regex 
             for position in range(0, len(sent[0])):
