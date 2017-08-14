@@ -23,7 +23,7 @@ from nltk import pos_tag_sents
 from nltk import ne_chunk
 import spacy
 from pkg_resources import resource_filename
-
+from nltk.tag.perceptron import AveragedPerceptron
 """
 Replace PHI words with a safe filtered word: '**PHI**'
 
@@ -72,7 +72,7 @@ dealing with I/O and multiprocessing
 
 
 nlp = spacy.load('en')  # load spacy english library
-
+pretrain = AveragedPerceptron()
 
 
 # configure the regex patterns
@@ -82,9 +82,12 @@ pattern_word = re.compile(r"***REMOVED***^\w+***REMOVED***")
 # Find numbers like SSN/PHONE/FAX
 # 3 patterns: 1. 6 or more digits will be filtered 2. digit followed by - followed by digit. 3. Ignore case of characters
 pattern_number = re.compile(r"""\b(
-\d{6}***REMOVED***A-Z0-9***REMOVED****  # devid/mrn/benid
-|(\d***REMOVED***\(\)\-\'***REMOVED***?\s?){7}\d+   # SSN/PHONE/FAX XXX-XX-XXXX, XXX-XXX-XXXX, XXX-XXXXXXXX, etc.
-|(\d***REMOVED***\(\)\-.\'***REMOVED***?){7}\d+
+(\d***REMOVED***\(\)\-\'***REMOVED***?\s?){6}(***REMOVED***\(\)\-\'***REMOVED***?\d)+   # SSN/PHONE/FAX XXX-XX-XXXX, XXX-XXX-XXXX, XXX-XXXXXXXX, etc.
+|(\d***REMOVED***\(\)\-.\'***REMOVED***?){7}(***REMOVED***\(\)\-.\'***REMOVED***?\d)+  # test
+)\b""", re.X)
+
+pattern_5digits = re.compile(r"""\b(
+\d{5}***REMOVED***A-Z0-9***REMOVED****  # devid/mrn/benid
 )\b""", re.X)
 
 pattern_devid = re.compile(r"""\b(
@@ -117,6 +120,11 @@ pattern_date = re.compile(r"""\b(
 |(0?***REMOVED***1-9***REMOVED***|1***REMOVED***0-2***REMOVED***|"""+month_name+r""")***REMOVED***-./\s***REMOVED***(***REMOVED***1-2***REMOVED******REMOVED***0-9***REMOVED***|3***REMOVED***0-1***REMOVED***|0?***REMOVED***1-9***REMOVED***)***REMOVED***-./\s***REMOVED***\d{4}  # one or digits/anything/one or two digits/anything/4 digits
 |(***REMOVED***1-2***REMOVED******REMOVED***0-9***REMOVED***|3***REMOVED***0-1***REMOVED***|0?***REMOVED***1-9***REMOVED***)***REMOVED***-./\s***REMOVED***(0?***REMOVED***1-9***REMOVED***|1***REMOVED***0-2***REMOVED***|"""+month_name+r""")***REMOVED***-./\s***REMOVED***\d{1,2}
 |\d{4}***REMOVED***-./\s***REMOVED***(0?***REMOVED***1-9***REMOVED***|1***REMOVED***0-2***REMOVED***|"""+month_name+r""")***REMOVED***-./\s***REMOVED***(***REMOVED***1-2***REMOVED******REMOVED***0-9***REMOVED***|3***REMOVED***0-1***REMOVED***|0?***REMOVED***1-9***REMOVED***)
+|\d{4}***REMOVED***-/***REMOVED***(0?***REMOVED***1-9***REMOVED***|1***REMOVED***0-2***REMOVED***|"""+month_name+r""")(\-\d{4}***REMOVED***-/***REMOVED***(0?***REMOVED***1-9***REMOVED***|1***REMOVED***0-2***REMOVED***|"""+month_name+r"""))?  # XXXX/XX
+|(0?***REMOVED***1-9***REMOVED***|1***REMOVED***0-2***REMOVED***|"""+month_name+r""")***REMOVED***-/***REMOVED***\d{4}(\-(0?***REMOVED***1-9***REMOVED***|1***REMOVED***0-2***REMOVED***|"""+month_name+r""")***REMOVED***-/***REMOVED***\d{4})?  # XX/XXXX
+|(0?***REMOVED***1-9***REMOVED***|1***REMOVED***0-2***REMOVED***|"""+month_name+r""")/\d{2}(\-(0?***REMOVED***1-9***REMOVED***|1***REMOVED***0-2***REMOVED***|"""+month_name+r""")/\d{2})?  # MM/YY
+|(0?***REMOVED***1-9***REMOVED***|1***REMOVED***0-2***REMOVED***|"""+month_name+r""")/(***REMOVED***1-2***REMOVED******REMOVED***0-9***REMOVED***|3***REMOVED***0-1***REMOVED***|0?***REMOVED***1-9***REMOVED***)(\-(0?***REMOVED***1-9***REMOVED***|1***REMOVED***0-2***REMOVED***|"""+month_name+r""")/(***REMOVED***1-2***REMOVED******REMOVED***0-9***REMOVED***|3***REMOVED***0-1***REMOVED***|0?***REMOVED***1-9***REMOVED***))?  #mm/dd
+|(***REMOVED***1-2***REMOVED******REMOVED***0-9***REMOVED***|3***REMOVED***0-1***REMOVED***|0?***REMOVED***1-9***REMOVED***)/(0?***REMOVED***1-9***REMOVED***|1***REMOVED***0-2***REMOVED***|"""+month_name+r""")(\-(***REMOVED***1-2***REMOVED******REMOVED***0-9***REMOVED***|3***REMOVED***0-1***REMOVED***|0?***REMOVED***1-9***REMOVED***)/(0?***REMOVED***1-9***REMOVED***|1***REMOVED***0-2***REMOVED***|"""+month_name+r"""))?  #dd/mm
 )\b""", re.X | re.I)
 pattern_mname = re.compile(r'\b(' + month_name + r')\b')
 
@@ -131,12 +139,13 @@ age|year***REMOVED***s-***REMOVED***?\s?old|y.o***REMOVED***.***REMOVED***?
 # match salutation
 pattern_salutation = re.compile(r"""
 (Dr\.|Mr\.|Mrs\.|Ms\.|Miss|Sir|Madam)\s
-((***REMOVED***A-Z***REMOVED***\'?***REMOVED***A-Z***REMOVED***?***REMOVED***-a-z ***REMOVED***+)*
+((***REMOVED***A-Z***REMOVED***\'?***REMOVED***A-Z***REMOVED***?***REMOVED***\-a-z***REMOVED***+(\s***REMOVED***A-Z***REMOVED***\'?***REMOVED***A-Z***REMOVED***?***REMOVED***\-a-z***REMOVED***+)*)
 )""", re.X)
 
 # match middle initial
 # if single char or Jr is surround by 2 phi words, filter. 
-pattern_middle = re.compile(r"""\*\*PHI\*\* (***REMOVED***A-Z***REMOVED***r? ?\.?) \*\*PHI\*\*""")
+pattern_middle = re.compile(r"""\*\*PHI\*\*,? ((***REMOVED***A-CE-LN-Z***REMOVED******REMOVED***Rr***REMOVED***?|***REMOVED***DM***REMOVED***)\.?) | ((***REMOVED***A-CE-LN-Z***REMOVED******REMOVED***Rr***REMOVED***?|***REMOVED***DM***REMOVED***)\.?),? \*\*PHI\*\*""")
+
 
 # match url
 pattern_url = re.compile(r'\b((http***REMOVED***s***REMOVED***?://)?((***REMOVED***a-zA-Z***REMOVED***|***REMOVED***0-9***REMOVED***|***REMOVED***$-_@.&+:***REMOVED***|***REMOVED***!*\(\),***REMOVED***)*(\.|\/)(***REMOVED***a-zA-Z***REMOVED***|***REMOVED***0-9***REMOVED***|***REMOVED***$-_@.&+:***REMOVED***|***REMOVED***!*\(\),***REMOVED***)*))\b', re.I)
@@ -202,7 +211,8 @@ def filter_task(f, whitelist_dict, foutpath, key_name):
         phi_reduced = ''
         address_indictor = ***REMOVED***'street', 'avenue', 'road', 'boulevard',
                             'drive', 'trail', 'way', 'lane', 'ave',
-                            'blvd', 'st', 'rd', 'trl', 'wy', 'ln'***REMOVED***
+                            'blvd', 'st', 'rd', 'trl', 'wy', 'ln',
+                            'court', 'ct', 'place', 'plc'***REMOVED***
 
         note = fin.read()
         # Begin Step 1: saluation check
@@ -216,6 +226,7 @@ def filter_task(f, whitelist_dict, foutpath, key_name):
 
         for sent in note: # Begin Step 3: Pattern checking
             # postal code check
+            sentence_reduced = ''
             if pattern_postal.findall(sent) != ***REMOVED******REMOVED***:
                 safe = False
                 for item in pattern_postal.findall(sent):
@@ -247,7 +258,11 @@ def filter_task(f, whitelist_dict, foutpath, key_name):
                         screened_words.append(item***REMOVED***0***REMOVED***)
                         sent = sent.replace(item***REMOVED***0***REMOVED***, '**PHIDate**')
             #sent = str(pattern_date.sub('**PHI**', sent))
-
+            if pattern_5digits.findall(sent) != ***REMOVED******REMOVED***:
+                safe = False
+                for item in pattern_5digits.findall(sent):
+                    screened_words.append(item)
+            sent = str(pattern_5digits.sub('**PHI**', sent))
             # email check
             if pattern_email.findall(sent) != ***REMOVED******REMOVED***:
                 safe = False
@@ -267,6 +282,7 @@ def filter_task(f, whitelist_dict, foutpath, key_name):
                         #print(item***REMOVED***0***REMOVED***)
             #sent = str(pattern_url.sub('**PHI**', sent))
             # dob check
+            '''
             re_list = pattern_dob.findall(sent)
             i = 0
             while True:
@@ -279,6 +295,7 @@ def filter_task(f, whitelist_dict, foutpath, key_name):
                         sent = sent.replace(re_list***REMOVED***i***REMOVED******REMOVED***1***REMOVED***, '**PHI**')
                         screened_words.append(re_list***REMOVED***i***REMOVED******REMOVED***1***REMOVED***)
                     i += 2
+            '''
 
             # Begin Step 4
             # substitute spaces for special characters 
@@ -287,6 +304,8 @@ def filter_task(f, whitelist_dict, foutpath, key_name):
             spcy_sent_output = nlp(sent)
             # split sentences into words
             sent = ***REMOVED***word_tokenize(sent)***REMOVED***
+            #sent = ***REMOVED***pretrain.tag(sent)***REMOVED***
+            #print(sent)
             # Begin Step 5: context level pattern matching with regex 
             for position in range(0, len(sent***REMOVED***0***REMOVED***)):
                 word = sent***REMOVED***0***REMOVED******REMOVED***position***REMOVED***
@@ -349,6 +368,7 @@ def filter_task(f, whitelist_dict, foutpath, key_name):
 
             # Begin Step 6: NLTK POS tagging
             sent_tag = nltk.pos_tag_sents(sent)
+            #sent_tag = ***REMOVED***pretrain.tag(sent***REMOVED***0***REMOVED***)***REMOVED***
             # Begin Step 7: Use both NLTK and Spacy to check if the word is a name based on sentence level NER label for the word.
             for ent in spcy_sent_output.ents:  # spcy_sent_output contains a dict with each word in the sentence and its NLP labels
                 #spcy_sent_ouput.ents is a list of dictionaries containing chunks of words (phrases) that spacy believes are Named Entities
@@ -360,6 +380,9 @@ def filter_task(f, whitelist_dict, foutpath, key_name):
                     if spcy_chunk_output.ents != () and spcy_chunk_output.ents***REMOVED***0***REMOVED***.label_ == 'PERSON':
                         # Now check to see what labels NLTK provides for the word
                         name_tag = word_tokenize(ent.text)
+                        # preceptron
+                        #name_tag = pretrain.tag(name_tag)
+                        #chunked = ne_chunk(name_tag)
                         name_tag = pos_tag_sents(***REMOVED***name_tag***REMOVED***)
                         chunked = ne_chunk(name_tag***REMOVED***0***REMOVED***)
                         for i in chunked:
@@ -385,19 +408,23 @@ def filter_task(f, whitelist_dict, foutpath, key_name):
                 word_output = word***REMOVED***0***REMOVED***
                 if word_output not in string.punctuation:
                     word_check = str(pattern_word.sub('', word_output))
+                    #if word_check.title() in ***REMOVED***'Dr', 'Mr', 'Mrs', 'Ms'***REMOVED***:
+                        #print(word_check)
                         # remove the speical chars
                     try:
                         # word***REMOVED***1***REMOVED*** is the pos tag of the word
 
-                        if ((word***REMOVED***1***REMOVED*** == 'NN' or word***REMOVED***1***REMOVED*** == 'NNP') or
-                                ((word***REMOVED***1***REMOVED*** == 'NNS' or word***REMOVED***1***REMOVED*** == 'NNPS') and word_check.istitle())):
+                        if (((word***REMOVED***1***REMOVED*** == 'NN' or word***REMOVED***1***REMOVED*** == 'NNP') or
+                            ((word***REMOVED***1***REMOVED*** == 'NNS' or word***REMOVED***1***REMOVED*** == 'NNPS') and word_check.istitle()))):
                             if word_check.lower() not in whitelist_dict:
                                 screened_words.append(word_output)
                                 word_output = "**PHI**"
                                 safe = False
                             else:
                                 # For words that are in whitelist, check to make sure that we have not identified them as names
-                                if (word_output.istitle() or word_output.isupper()) and pattern_name.findall(word_output) != ***REMOVED******REMOVED***:
+                                if ((word_output.istitle() or word_output.isupper()) and
+                                    pattern_name.findall(word_output) != ***REMOVED******REMOVED*** and
+                                    re.search(r'\b(***REMOVED***A-Z***REMOVED***)\b', word_check) is None):
                                     word_output, name_set, screened_words, safe = namecheck(word_output, name_set, screened_words, safe)
 
                         # check day/year according to the month name
@@ -415,32 +442,48 @@ def filter_task(f, whitelist_dict, foutpath, key_name):
                                 if pattern_mname.search(j***REMOVED***0***REMOVED***) is not None:
                                     screened_words.append(word_output)
                                     #print(word_output)
-                                    word_output = "**PHI**"
+                                    word_output = "**PHIMonth**"
                                     safe = False
                                     break
+                        else:
+                            word_output, name_set, screened_words, safe = namecheck(word_output, name_set, screened_words, safe)
+
 
                     except:
                         print(word_output, sys.exc_info())
-
-                    phi_reduced = phi_reduced + ' ' + word_output
+                    if word_output.lower()***REMOVED***0***REMOVED*** == '\'s':
+                        if sentence_reduced***REMOVED***-7:***REMOVED*** != '**PHI**':
+                            sentence_reduced = sentence_reduced + word_output
+                        #print(word_output)
+                    else:
+                        sentence_reduced = sentence_reduced + ' ' + word_output
                 # Format output for later use by eval.py
                 else:
-                    if ((i > 0 and sent_tag***REMOVED***0***REMOVED******REMOVED***i-1***REMOVED******REMOVED***0***REMOVED******REMOVED***-1***REMOVED*** in string.punctuation and
-                        sent_tag***REMOVED***0***REMOVED******REMOVED***i-1***REMOVED******REMOVED***0***REMOVED******REMOVED***-1***REMOVED*** != '*') or word_output == '\'s'):
-                        phi_reduced = phi_reduced + word_output
+                    if (i > 0 and sent_tag***REMOVED***0***REMOVED******REMOVED***i-1***REMOVED******REMOVED***0***REMOVED******REMOVED***-1***REMOVED*** in string.punctuation and
+                        sent_tag***REMOVED***0***REMOVED******REMOVED***i-1***REMOVED******REMOVED***0***REMOVED******REMOVED***-1***REMOVED*** != '*'):
+                        sentence_reduced = sentence_reduced + word_output
+                    elif word_output == '.' and sent_tag***REMOVED***0***REMOVED******REMOVED***i-1***REMOVED******REMOVED***0***REMOVED*** in ***REMOVED***'Dr', 'Mr', 'Mrs', 'Ms'***REMOVED***:
+                        sentence_reduced = sentence_reduced + word_output
                     else:
-                        phi_reduced = phi_reduced + ' ' + word_output
+                        sentence_reduced = sentence_reduced + ' ' + word_output
+
+                if pattern_mname.findall(sentence_reduced) != ***REMOVED******REMOVED*** and re.search(r'\*\*PHIMonth\*\*', sentence_reduced) is not None:
+                    for item in pattern_mname.findall(phi_reduced):
+                        screened_words.append(item***REMOVED***0***REMOVED***)
+                    sentence_reduced = pattern_mname.sub('**PHI**', sentence_reduced)
 
             # Begin Step 8: check middle initial and month name
-            if pattern_mname.findall(phi_reduced) != ***REMOVED******REMOVED***:
-                for item in pattern_mname.findall(phi_reduced):
-                    screened_words.append(item***REMOVED***0***REMOVED***)
-            phi_reduced = pattern_mname.sub('**PHI**', phi_reduced)
+            phi_reduced = phi_reduced + sentence_reduced + ' '
+            #if pattern_mname.findall(phi_reduced) != ***REMOVED******REMOVED***:
+                #for item in pattern_mname.findall(phi_reduced):
+                    #screened_words.append(item***REMOVED***0***REMOVED***)
+            #phi_reduced = pattern_mname.sub('**PHI**', phi_reduced)
 
             if pattern_middle.findall(phi_reduced) != ***REMOVED******REMOVED***:
                 for item in pattern_middle.findall(phi_reduced):
-                    screened_words.append(item)
-            phi_reduced = pattern_middle.sub('**PHI** **PHI** **PHI**', phi_reduced)
+                #    print(item***REMOVED***0***REMOVED***)
+                    screened_words.append(item***REMOVED***0***REMOVED***)
+            phi_reduced = pattern_middle.sub('**PHI** **PHI** ', phi_reduced)
 
         if not safe:
             phi_containing_records = 1
