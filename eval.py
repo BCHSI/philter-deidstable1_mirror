@@ -58,8 +58,16 @@ def comparison(filename, file1path, file2path):
 
     # Begin Step 1
     annot_list = ***REMOVED***word***REMOVED***0***REMOVED*** for word in annotation_note if word***REMOVED***1***REMOVED*** == '0' and word***REMOVED***0***REMOVED*** != ''***REMOVED***
+    for i in range(len(annot_list)):
+        if annot_list***REMOVED***i***REMOVED******REMOVED***-1***REMOVED*** in punctuation:
+            annot_list***REMOVED***i***REMOVED*** = annot_list***REMOVED***i***REMOVED******REMOVED***:-1***REMOVED***
+    #print(annot_list)
     # Begin Step 2
     phi_r_list = ***REMOVED***word for word in phi_reduced_list if '**PHI' not in word***REMOVED***
+    for i in range(len(phi_r_list)):
+        if phi_r_list***REMOVED***i***REMOVED******REMOVED***-1***REMOVED*** in punctuation:
+            phi_r_list***REMOVED***i***REMOVED*** = phi_r_list***REMOVED***i***REMOVED******REMOVED***:-1***REMOVED***
+    #print(phi_r_list)
     # Begin Step 3
     filtered_count = ***REMOVED***word***REMOVED***0***REMOVED*** for word in annotation_note if word***REMOVED***1***REMOVED*** != '0' and word***REMOVED***0***REMOVED*** != ''***REMOVED***
 
