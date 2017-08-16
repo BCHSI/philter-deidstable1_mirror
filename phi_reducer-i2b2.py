@@ -74,7 +74,6 @@ dealing with I/O and multiprocessing
 
 
 nlp = spacy.load('en')  # load spacy english library
-# pretrain = AveragedPerceptron()
 # pretrain = SennaTagger('senna')
 
 # configure the regex patterns
@@ -193,7 +192,8 @@ def namecheck(word_output, name_set, screened_words, safe):
 
 def filter_task(f, whitelist_dict, foutpath, key_name):
 
-    pretrain = HunposTagger('hunpos.model', 'hunpos-1.0-linux/hunpos-tag')
+    # pretrain = HunposTagger('hunpos.model', 'hunpos-1.0-linux/hunpos-tag')
+    pretrain = SennaTagger('senna')
 
     """
     Uses: namecheck() to check if word that has been tagged as name by either nltk or spacy. namecheck() first searches
@@ -371,12 +371,17 @@ def filter_task(f, whitelist_dict, foutpath, key_name):
             # Begin Step 6: NLTK POS tagging
             #sent_tag = nltk.pos_tag_sents(sent)
             try:
-                sent_tag = [pretrain.tag(sent[0])]
+                # senna cannot handle long sentence.
+                sent_tag = [[]]
+                length_100 = len(sent[0])//100
+                for j in range(0, length_100+1):
+                    [sent_tag[0].append(j) for j in pretrain.tag(sent[0][100*j:100*(j+1)])]
                 # hunpos needs to change the type from bytes to string
                 #print(sent_tag[0])
-                for j in range(len(sent_tag[0])):
-                    sent_tag[0][j] = list(sent_tag[0][j])
-                    sent_tag[0][j][1] = sent_tag[0][j][1].decode('utf-8')
+                #sent_tag = [pretrain.tag(sent[0])]
+                #for j in range(len(sent_tag[0])):
+                    #sent_tag[0][j] = list(sent_tag[0][j])
+                    #sent_tag[0][j][1] = sent_tag[0][j][1].decode('utf-8')
             except:
                 print('POS error:', tail, sent[0])
                 sent_tag = nltk.pos_tag_sents(sent)
@@ -394,9 +399,9 @@ def filter_task(f, whitelist_dict, foutpath, key_name):
                         # senna
                         name_tag = pretrain.tag(name_tag)
                         # hunpos needs to change the type from bytes to string
-                        for j in range(len(name_tag)):
-                            name_tag[j] = list(name_tag[j])
-                            name_tag[j][1] = name_tag[j][1].decode('utf-8')
+                        #for j in range(len(name_tag)):
+                            #name_tag[j] = list(name_tag[j])
+                            #name_tag[j][1] = name_tag[j][1].decode('utf-8')
                         chunked = ne_chunk(name_tag)
                         # default
                         #name_tag = pos_tag_sents([name_tag])
@@ -517,7 +522,8 @@ def filter_task(f, whitelist_dict, foutpath, key_name):
             # fout.write(' '.join(screened_words))
 
         print(total_records, f, "--- %s seconds ---" % (time.time() - start_time_single))
-        pretrain.close()
+        # hunpos needs to close session
+        #pretrain.close()
         return total_records, phi_containing_records
 
 
