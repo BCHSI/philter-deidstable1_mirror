@@ -25,6 +25,7 @@ import spacy
 from pkg_resources import resource_filename
 from nltk.tag.perceptron import AveragedPerceptron
 from nltk.tag import SennaTagger
+from nltk.tag import HunposTagger
 """
 Replace PHI words with a safe filtered word: '**PHI**'
 
@@ -74,7 +75,7 @@ dealing with I/O and multiprocessing
 
 nlp = spacy.load('en')  # load spacy english library
 # pretrain = AveragedPerceptron()
-pretrain = SennaTagger('senna')
+# pretrain = SennaTagger('senna')
 
 # configure the regex patterns
 # we're going to want to remove all special characters
@@ -191,6 +192,8 @@ def namecheck(word_output, name_set, screened_words, safe):
 
 
 def filter_task(f, whitelist_dict, foutpath, key_name):
+
+    pretrain = HunposTagger('hunpos.model', 'hunpos-1.0-linux/hunpos-tag')
 
     """
     Uses: namecheck() to check if word that has been tagged as name by either nltk or spacy. namecheck() first searches
@@ -366,8 +369,17 @@ def filter_task(f, whitelist_dict, foutpath, key_name):
                             safe = False
 
             # Begin Step 6: NLTK POS tagging
-            sent_tag = nltk.pos_tag_sents(sent)
-            #sent_tag = ***REMOVED***pretrain.tag(sent***REMOVED***0***REMOVED***)***REMOVED***
+            #sent_tag = nltk.pos_tag_sents(sent)
+            try:
+                sent_tag = ***REMOVED***pretrain.tag(sent***REMOVED***0***REMOVED***)***REMOVED***
+                # hunpos needs to change the type from bytes to string
+                #print(sent_tag***REMOVED***0***REMOVED***)
+                for j in range(len(sent_tag***REMOVED***0***REMOVED***)):
+                    sent_tag***REMOVED***0***REMOVED******REMOVED***j***REMOVED*** = list(sent_tag***REMOVED***0***REMOVED******REMOVED***j***REMOVED***)
+                    sent_tag***REMOVED***0***REMOVED******REMOVED***j***REMOVED******REMOVED***1***REMOVED*** = sent_tag***REMOVED***0***REMOVED******REMOVED***j***REMOVED******REMOVED***1***REMOVED***.decode('utf-8')
+            except:
+                print('POS error:', tail, sent***REMOVED***0***REMOVED***)
+                sent_tag = nltk.pos_tag_sents(sent)
             # Begin Step 7: Use both NLTK and Spacy to check if the word is a name based on sentence level NER label for the word.
             for ent in spcy_sent_output.ents:  # spcy_sent_output contains a dict with each word in the sentence and its NLP labels
                 #spcy_sent_ouput.ents is a list of dictionaries containing chunks of words (phrases) that spacy believes are Named Entities
@@ -379,11 +391,16 @@ def filter_task(f, whitelist_dict, foutpath, key_name):
                     if spcy_chunk_output.ents != () and spcy_chunk_output.ents***REMOVED***0***REMOVED***.label_ == 'PERSON':
                         # Now check to see what labels NLTK provides for the word
                         name_tag = word_tokenize(ent.text)
-                        # preceptron
-                        #name_tag = pretrain.tag(name_tag)
-                        #chunked = ne_chunk(name_tag)
-                        name_tag = pos_tag_sents(***REMOVED***name_tag***REMOVED***)
-                        chunked = ne_chunk(name_tag***REMOVED***0***REMOVED***)
+                        # senna
+                        name_tag = pretrain.tag(name_tag)
+                        # hunpos needs to change the type from bytes to string
+                        for j in range(len(name_tag)):
+                            name_tag***REMOVED***j***REMOVED*** = list(name_tag***REMOVED***j***REMOVED***)
+                            name_tag***REMOVED***j***REMOVED******REMOVED***1***REMOVED*** = name_tag***REMOVED***j***REMOVED******REMOVED***1***REMOVED***.decode('utf-8')
+                        chunked = ne_chunk(name_tag)
+                        # default
+                        #name_tag = pos_tag_sents(***REMOVED***name_tag***REMOVED***)
+                        #chunked = ne_chunk(name_tag***REMOVED***0***REMOVED***)
                         for i in chunked:
                             if type(i) == Tree: # if ne_chunck thinks chunk is NER, creates a tree structure were leaves are the words in the chunk (and their POS labels) and the trunk is the single NER label for the chunk
                                 if i.label() == 'PERSON':
@@ -500,7 +517,7 @@ def filter_task(f, whitelist_dict, foutpath, key_name):
             # fout.write(' '.join(screened_words))
 
         print(total_records, f, "--- %s seconds ---" % (time.time() - start_time_single))
-
+        pretrain.close()
         return total_records, phi_containing_records
 
 
@@ -584,8 +601,10 @@ def main():
         print("No txt file in the input folder.")
         pass
 
-        pool.close()
-        pool.join()
+    pool.close()
+    pool.join()
+
+
     # close multiprocess
 
 
