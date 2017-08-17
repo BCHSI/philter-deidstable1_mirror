@@ -117,12 +117,12 @@ pattern_email = re.compile(r"""\b(
 # match date, similar to DOB but does not include any words
 month_name = "Jan(uary)?|Feb(ruary)?|Mar(ch)?|Apr(il)?|May|Jun(e)?|Jul(y)?|Aug(ust)?|Sep(tember)?|Oct(ober)?|Nov(ember)?|Dec(ember)?"
 pattern_date = re.compile(r"""\b(
-(0?[1-9]|1[0-2]|"""+month_name+r""")[-./\s]([1-2][0-9]|3[0-1]|0?[1-9])[-./\s]\d{2}   # one or digits/anything/one or two digits/anything/2 digits
-|(0?[1-9]|1[0-2]|"""+month_name+r""")[-./\s]([1-2][0-9]|3[0-1]|0?[1-9])[-./\s]\d{4}  # one or digits/anything/one or two digits/anything/4 digits
-|([1-2][0-9]|3[0-1]|0?[1-9])[-./\s](0?[1-9]|1[0-2]|"""+month_name+r""")[-./\s]\d{1,2}
-|\d{4}[-./\s](0?[1-9]|1[0-2]|"""+month_name+r""")[-./\s]([1-2][0-9]|3[0-1]|0?[1-9])
-|\d{4}[-/](0?[1-9]|1[0-2]|"""+month_name+r""")(\-\d{4}[-/](0?[1-9]|1[0-2]|"""+month_name+r"""))?  # XXXX/XX
-|(0?[1-9]|1[0-2]|"""+month_name+r""")[-/]\d{4}(\-(0?[1-9]|1[0-2]|"""+month_name+r""")[-/]\d{4})?  # XX/XXXX
+(0?[1-9]|1[0-2]|"""+month_name+r""")[\-\./\s]([1-2][0-9]|3[0-1]|0?[1-9])[\-\./\s]\d{2}   # one or digits/anything/one or two digits/anything/2 digits
+|(0?[1-9]|1[0-2]|"""+month_name+r""")[\-\./\s]([1-2][0-9]|3[0-1]|0?[1-9])[\-\./\s]\d{4}  # one or digits/anything/one or two digits/anything/4 digits
+|([1-2][0-9]|3[0-1]|0?[1-9])[\-\./\s](0?[1-9]|1[0-2]|"""+month_name+r""")[\-\./\s]\d{1,2}
+|\d{4}[\-./\s](0?[1-9]|1[0-2]|"""+month_name+r""")[\-\./\s]([1-2][0-9]|3[0-1]|0?[1-9])
+|\d{4}[\-/](0?[1-9]|1[0-2]|"""+month_name+r""")(\-\d{4}[\-/](0?[1-9]|1[0-2]|"""+month_name+r"""))?  # XXXX/XX
+|(0?[1-9]|1[0-2]|"""+month_name+r""")[\-/]\d{4}(\-(0?[1-9]|1[0-2]|"""+month_name+r""")[\-/]\d{4})?  # XX/XXXX
 |(0?[1-9]|1[0-2]|"""+month_name+r""")/\d{2}(\-(0?[1-9]|1[0-2]|"""+month_name+r""")/\d{2})?  # MM/YY
 |(0?[1-9]|1[0-2]|"""+month_name+r""")/([1-2][0-9]|3[0-1]|0?[1-9])(\-(0?[1-9]|1[0-2]|"""+month_name+r""")/([1-2][0-9]|3[0-1]|0?[1-9]))?  #mm/dd
 |([1-2][0-9]|3[0-1]|0?[1-9])/(0?[1-9]|1[0-2]|"""+month_name+r""")(\-([1-2][0-9]|3[0-1]|0?[1-9])/(0?[1-9]|1[0-2]|"""+month_name+r"""))?  #dd/mm
@@ -369,7 +369,7 @@ def filter_task(f, whitelist_dict, foutpath, key_name):
                             safe = False
 
             # Begin Step 6: NLTK POS tagging
-            #sent_tag = nltk.pos_tag_sents(sent)
+            # sent_tag = nltk.pos_tag_sents(sent)
             try:
                 # senna cannot handle long sentence.
                 sent_tag = [[]]
@@ -396,7 +396,7 @@ def filter_task(f, whitelist_dict, foutpath, key_name):
                     if spcy_chunk_output.ents != () and spcy_chunk_output.ents[0].label_ == 'PERSON':
                         # Now check to see what labels NLTK provides for the word
                         name_tag = word_tokenize(ent.text)
-                        # senna
+                        # senna & hunpos
                         name_tag = pretrain.tag(name_tag)
                         # hunpos needs to change the type from bytes to string
                         #for j in range(len(name_tag)):
@@ -578,7 +578,9 @@ def main():
         print("No whitelist is found. The script will stop.")
         os._exit(0)
 
-
+    filepath = os.path.join(foutpath,'filter_summary.txt')
+    with open(filepath, 'w') as fout:
+        fout.write("")
     # start multiprocess
     pool = Pool(processes=process_number)
 
