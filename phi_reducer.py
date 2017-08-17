@@ -116,12 +116,12 @@ pattern_email = re.compile(r"""\b(
 # match date, similar to DOB but does not include any words
 month_name = "Jan(uary)?|Feb(ruary)?|Mar(ch)?|Apr(il)?|May|Jun(e)?|Jul(y)?|Aug(ust)?|Sep(tember)?|Oct(ober)?|Nov(ember)?|Dec(ember)?"
 pattern_date = re.compile(r"""\b(
-(0?***REMOVED***1-9***REMOVED***|1***REMOVED***0-2***REMOVED***|"""+month_name+r""")***REMOVED***-./\s***REMOVED***(***REMOVED***1-2***REMOVED******REMOVED***0-9***REMOVED***|3***REMOVED***0-1***REMOVED***|0?***REMOVED***1-9***REMOVED***)***REMOVED***-./\s***REMOVED***\d{2}   # one or digits/anything/one or two digits/anything/2 digits
-|(0?***REMOVED***1-9***REMOVED***|1***REMOVED***0-2***REMOVED***|"""+month_name+r""")***REMOVED***-./\s***REMOVED***(***REMOVED***1-2***REMOVED******REMOVED***0-9***REMOVED***|3***REMOVED***0-1***REMOVED***|0?***REMOVED***1-9***REMOVED***)***REMOVED***-./\s***REMOVED***\d{4}  # one or digits/anything/one or two digits/anything/4 digits
-|(***REMOVED***1-2***REMOVED******REMOVED***0-9***REMOVED***|3***REMOVED***0-1***REMOVED***|0?***REMOVED***1-9***REMOVED***)***REMOVED***-./\s***REMOVED***(0?***REMOVED***1-9***REMOVED***|1***REMOVED***0-2***REMOVED***|"""+month_name+r""")***REMOVED***-./\s***REMOVED***\d{1,2}
-|\d{4}***REMOVED***-./\s***REMOVED***(0?***REMOVED***1-9***REMOVED***|1***REMOVED***0-2***REMOVED***|"""+month_name+r""")***REMOVED***-./\s***REMOVED***(***REMOVED***1-2***REMOVED******REMOVED***0-9***REMOVED***|3***REMOVED***0-1***REMOVED***|0?***REMOVED***1-9***REMOVED***)
-|\d{4}***REMOVED***-/***REMOVED***(0?***REMOVED***1-9***REMOVED***|1***REMOVED***0-2***REMOVED***|"""+month_name+r""")(\-\d{4}***REMOVED***-/***REMOVED***(0?***REMOVED***1-9***REMOVED***|1***REMOVED***0-2***REMOVED***|"""+month_name+r"""))?  # XXXX/XX
-|(0?***REMOVED***1-9***REMOVED***|1***REMOVED***0-2***REMOVED***|"""+month_name+r""")***REMOVED***-/***REMOVED***\d{4}(\-(0?***REMOVED***1-9***REMOVED***|1***REMOVED***0-2***REMOVED***|"""+month_name+r""")***REMOVED***-/***REMOVED***\d{4})?  # XX/XXXX
+(0?***REMOVED***1-9***REMOVED***|1***REMOVED***0-2***REMOVED***|"""+month_name+r""")***REMOVED***\-\./\s***REMOVED***(***REMOVED***1-2***REMOVED******REMOVED***0-9***REMOVED***|3***REMOVED***0-1***REMOVED***|0?***REMOVED***1-9***REMOVED***)***REMOVED***\-\./\s***REMOVED***\d{2}   # one or digits/anything/one or two digits/anything/2 digits
+|(0?***REMOVED***1-9***REMOVED***|1***REMOVED***0-2***REMOVED***|"""+month_name+r""")***REMOVED***\-\./\s***REMOVED***(***REMOVED***1-2***REMOVED******REMOVED***0-9***REMOVED***|3***REMOVED***0-1***REMOVED***|0?***REMOVED***1-9***REMOVED***)***REMOVED***\-\./\s***REMOVED***\d{4}  # one or digits/anything/one or two digits/anything/4 digits
+|(***REMOVED***1-2***REMOVED******REMOVED***0-9***REMOVED***|3***REMOVED***0-1***REMOVED***|0?***REMOVED***1-9***REMOVED***)***REMOVED***\-\./\s***REMOVED***(0?***REMOVED***1-9***REMOVED***|1***REMOVED***0-2***REMOVED***|"""+month_name+r""")***REMOVED***\-\./\s***REMOVED***\d{1,2}
+|\d{4}***REMOVED***\-./\s***REMOVED***(0?***REMOVED***1-9***REMOVED***|1***REMOVED***0-2***REMOVED***|"""+month_name+r""")***REMOVED***\-\./\s***REMOVED***(***REMOVED***1-2***REMOVED******REMOVED***0-9***REMOVED***|3***REMOVED***0-1***REMOVED***|0?***REMOVED***1-9***REMOVED***)
+|\d{4}***REMOVED***\-/***REMOVED***(0?***REMOVED***1-9***REMOVED***|1***REMOVED***0-2***REMOVED***|"""+month_name+r""")(\-\d{4}***REMOVED***\-/***REMOVED***(0?***REMOVED***1-9***REMOVED***|1***REMOVED***0-2***REMOVED***|"""+month_name+r"""))?  # XXXX/XX
+|(0?***REMOVED***1-9***REMOVED***|1***REMOVED***0-2***REMOVED***|"""+month_name+r""")***REMOVED***\-/***REMOVED***\d{4}(\-(0?***REMOVED***1-9***REMOVED***|1***REMOVED***0-2***REMOVED***|"""+month_name+r""")***REMOVED***\-/***REMOVED***\d{4})?  # XX/XXXX
 |(0?***REMOVED***1-9***REMOVED***|1***REMOVED***0-2***REMOVED***|"""+month_name+r""")/\d{2}(\-(0?***REMOVED***1-9***REMOVED***|1***REMOVED***0-2***REMOVED***|"""+month_name+r""")/\d{2})?  # MM/YY
 |(0?***REMOVED***1-9***REMOVED***|1***REMOVED***0-2***REMOVED***|"""+month_name+r""")/(***REMOVED***1-2***REMOVED******REMOVED***0-9***REMOVED***|3***REMOVED***0-1***REMOVED***|0?***REMOVED***1-9***REMOVED***)(\-(0?***REMOVED***1-9***REMOVED***|1***REMOVED***0-2***REMOVED***|"""+month_name+r""")/(***REMOVED***1-2***REMOVED******REMOVED***0-9***REMOVED***|3***REMOVED***0-1***REMOVED***|0?***REMOVED***1-9***REMOVED***))?  #mm/dd
 |(***REMOVED***1-2***REMOVED******REMOVED***0-9***REMOVED***|3***REMOVED***0-1***REMOVED***|0?***REMOVED***1-9***REMOVED***)/(0?***REMOVED***1-9***REMOVED***|1***REMOVED***0-2***REMOVED***|"""+month_name+r""")(\-(***REMOVED***1-2***REMOVED******REMOVED***0-9***REMOVED***|3***REMOVED***0-1***REMOVED***|0?***REMOVED***1-9***REMOVED***)/(0?***REMOVED***1-9***REMOVED***|1***REMOVED***0-2***REMOVED***|"""+month_name+r"""))?  #dd/mm
@@ -563,6 +563,9 @@ def main():
         os._exit(0)
 
 
+    filepath = os.path.join(foutpath,'filter_summary.txt')
+    with open(filepath, 'w') as fout:
+        fout.write("")
     # start multiprocess
     pool = Pool(processes=process_number)
 
