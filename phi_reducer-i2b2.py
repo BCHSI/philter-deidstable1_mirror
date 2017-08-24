@@ -20,6 +20,7 @@ from nltk import sent_tokenize
 from nltk import word_tokenize
 from nltk.tree import Tree
 from nltk import pos_tag_sents
+from nltk import pos_tag
 from nltk import ne_chunk
 import spacy
 from pkg_resources import resource_filename
@@ -92,7 +93,7 @@ pattern_4digits = re.compile(r"""\b(
 )\b""", re.X)
 
 pattern_devid = re.compile(r"""\b(
-[A-Z0-9\-]{6}[A-Z0-9\-]*
+[A-Z0-9\-/]{5}[A-Z0-9\-/]*
 )\b""", re.X)
 # postal code
 # 5 digits or, 5 digits followed dash and 4 digits
@@ -117,15 +118,24 @@ pattern_email = re.compile(r"""\b(
 # match date, similar to DOB but does not include any words
 month_name = "Jan(uary)?|Feb(ruary)?|Mar(ch)?|Apr(il)?|May|Jun(e)?|Jul(y)?|Aug(ust)?|Sep(tember)?|Oct(ober)?|Nov(ember)?|Dec(ember)?"
 pattern_date = re.compile(r"""\b(
-(0?[1-9]|1[0-2]|"""+month_name+r""")[\-\./\s]([1-2][0-9]|3[0-1]|0?[1-9])[\-\./\s]\d{2}   # one or digits/anything/one or two digits/anything/2 digits
-|(0?[1-9]|1[0-2]|"""+month_name+r""")[\-\./\s]([1-2][0-9]|3[0-1]|0?[1-9])[\-\./\s]\d{4}  # one or digits/anything/one or two digits/anything/4 digits
-|([1-2][0-9]|3[0-1]|0?[1-9])[\-\./\s](0?[1-9]|1[0-2]|"""+month_name+r""")[\-\./\s]\d{1,2}
-|\d{4}[\-./\s](0?[1-9]|1[0-2]|"""+month_name+r""")[\-\./\s]([1-2][0-9]|3[0-1]|0?[1-9])
-|\d{4}[\-/](0?[1-9]|1[0-2]|"""+month_name+r""")(\-\d{4}[\-/](0?[1-9]|1[0-2]|"""+month_name+r"""))?  # XXXX/XX
-|(0?[1-9]|1[0-2]|"""+month_name+r""")[\-/]\d{4}(\-(0?[1-9]|1[0-2]|"""+month_name+r""")[\-/]\d{4})?  # XX/XXXX
-|(0?[1-9]|1[0-2]|"""+month_name+r""")/\d{2}(\-(0?[1-9]|1[0-2]|"""+month_name+r""")/\d{2})?  # MM/YY
-|(0?[1-9]|1[0-2]|"""+month_name+r""")/([1-2][0-9]|3[0-1]|0?[1-9])(\-(0?[1-9]|1[0-2]|"""+month_name+r""")/([1-2][0-9]|3[0-1]|0?[1-9]))?  #mm/dd
-|([1-2][0-9]|3[0-1]|0?[1-9])/(0?[1-9]|1[0-2]|"""+month_name+r""")(\-([1-2][0-9]|3[0-1]|0?[1-9])/(0?[1-9]|1[0-2]|"""+month_name+r"""))?  #dd/mm
+\d{4}[\-/](0?[1-9]|1[0-2]|"""+month_name+r""")\-\d{4}[\-/](0?[1-9]|1[0-2]|"""+month_name+r""")  # YYYY/MM-YYYY/MM
+|(0?[1-9]|1[0-2]|"""+month_name+r""")[\-/]\d{4}\-(0?[1-9]|1[0-2]|"""+month_name+r""")[\-/]\d{4}  # MM/YYYY-MM/YYYY
+|(0?[1-9]|1[0-2]|"""+month_name+r""")/\d{2}\-(0?[1-9]|1[0-2]|"""+month_name+r""")/\d{2}  # MM/YY-MM/YY
+|(0?[1-9]|1[0-2]|"""+month_name+r""")/\d{2}\-(0?[1-9]|1[0-2]|"""+month_name+r""")/\d{4}  # MM/YYYY-MM/YYYY
+|(0?[1-9]|1[0-2]|"""+month_name+r""")/([1-2][0-9]|3[0-1]|0?[1-9])\-(0?[1-9]|1[0-2]|"""+month_name+r""")/([1-2][0-9]|3[0-1]|0?[1-9])  #MM/DD-MM/DD
+|([1-2][0-9]|3[0-1]|0?[1-9])/(0?[1-9]|1[0-2]|"""+month_name+r""")\-([1-2][0-9]|3[0-1]|0?[1-9])/(0?[1-9]|1[0-2]|"""+month_name+r""")  #DD/MM-DD/MM
+|(0?[1-9]|1[0-2]|"""+month_name+r""")[\-\./\s]([1-2][0-9]|3[0-1]|0?[1-9])[\-\./\s]\d{2}  # MM/DD/YY
+|(0?[1-9]|1[0-2]|"""+month_name+r""")[\-\./\s]([1-2][0-9]|3[0-1]|0?[1-9])[\-\./\s]\d{4}  # MM/DD/YYYY
+|([1-2][0-9]|3[0-1]|0?[1-9])[\-\./\s](0?[1-9]|1[0-2]|"""+month_name+r""")[\-\./\s]\d{2}  # DD/MM/YY
+|([1-2][0-9]|3[0-1]|0?[1-9])[\-\./\s](0?[1-9]|1[0-2]|"""+month_name+r""")[\-\./\s]\d{4}  # DD/MM/YYYY
+|\d{2}[\-./\s](0?[1-9]|1[0-2]|"""+month_name+r""")[\-\./\s]([1-2][0-9]|3[0-1]|0?[1-9])   # YY/MM/DD
+|\d{4}[\-./\s](0?[1-9]|1[0-2]|"""+month_name+r""")[\-\./\s]([1-2][0-9]|3[0-1]|0?[1-9])   # YYYY/MM/DD
+|\d{4}[\-/](0?[1-9]|1[0-2]|"""+month_name+r""")  # YYYY/MM
+|(0?[1-9]|1[0-2]|"""+month_name+r""")[\-/]\d{4}  # MM/YYYY
+|(0?[1-9]|1[0-2]|"""+month_name+r""")/\d{2}  # MM/YY
+|(0?[1-9]|1[0-2]|"""+month_name+r""")/\d{2}  # MM/YYYY
+|(0?[1-9]|1[0-2]|"""+month_name+r""")/([1-2][0-9]|3[0-1]|0?[1-9])  #MM/DD
+|([1-2][0-9]|3[0-1]|0?[1-9])/(0?[1-9]|1[0-2]|"""+month_name+r""")  #DD/MM
 )\b""", re.X | re.I)
 pattern_mname = re.compile(r'\b(' + month_name + r')\b')
 
@@ -216,7 +226,7 @@ def filter_task(f, whitelist_dict, foutpath, key_name):
         address_indictor = ['street', 'avenue', 'road', 'boulevard',
                             'drive', 'trail', 'way', 'lane', 'ave',
                             'blvd', 'st', 'rd', 'trl', 'wy', 'ln',
-                            'court', 'ct', 'place', 'plc']
+                            'court', 'ct', 'place', 'plc', 'terrace', 'ter']
 
         note = fin.read()
         # Begin Step 1: saluation check
@@ -243,6 +253,7 @@ def filter_task(f, whitelist_dict, foutpath, key_name):
                         re.search(r'[A-Z]',item) is not None):
                         screened_words.append(item)
                         sent = sent.replace(item, '**PHI**')
+
             # number check
             if pattern_number.findall(sent) != []:
                 safe = False
@@ -253,12 +264,12 @@ def filter_task(f, whitelist_dict, foutpath, key_name):
                     screened_words.append(item[0])
                     #print(item[0])
             #sent = str(pattern_number.sub('**PHI**', sent))
-
             if pattern_date.findall(sent) != []:
                 safe = False
                 for item in pattern_date.findall(sent):
-                    if len(set(re.findall(r'[^\w]',item[0]))) == 1:
+                    if len(set(re.findall(r'[^\w\-]',item[0]))) <= 1:
                         screened_words.append(item[0])
+                        print(item[0])
                         sent = sent.replace(item[0], '**PHIDate**')
             #sent = str(pattern_date.sub('**PHI**', sent))
             if pattern_4digits.findall(sent) != []:
@@ -327,6 +338,36 @@ def filter_task(f, whitelist_dict, foutpath, key_name):
                         screened_words.append(sent[0][position])
                         sent[0][position] = '**PHI**'
                         safe = False
+                # check if the context around comma is name
+                elif (word == ',' and 0<position<len(sent[0]) and
+                    (sent[0][position-1].isupper()) and
+                    (sent[0][position+1].isupper())):
+                        # title version check
+                        comma_text = sent[0][position-1].title()+','+sent[0][position+1].title()
+                        comma_spacy = nlp(comma_text)
+                        if comma_spacy.ents != ():
+                            for ent in comma_spacy.ents:
+                                #if ent.label_ == 'PERSON':
+                                #print(ent.text)
+                                    #print(ent.text.split(','))
+                                comma_set = set(ent.text.split(',')) - set(['M.D', 'M.D.'])
+                                for j in comma_set:
+                                    if re.search(r'[aeiou]', j, re.I) is not None and nltk.pos_tag([j])[0][1] == 'NN':
+                                        print(j)
+                                        name_set.add(j.title())
+                        # upper version check
+                        comma_text = sent[0][position-1].upper()+','+sent[0][position+1].upper()
+                        comma_spacy = nlp(comma_text)
+                        if comma_spacy.ents != ():
+                            for ent in comma_spacy.ents:
+                                #if ent.label_ == 'PERSON':
+                                #print(ent.text)
+                                    #print(ent.text.split(','))
+                                comma_set = set(ent.text.split(',')) - set(['M.D', 'M.D.'])
+                                for j in comma_set:
+                                    if re.search(r'[aeiou]', j, re.I) is not None and nltk.pos_tag([j])[0][1] == 'NN':
+                                        print(j)
+                                        name_set.add(j.title())
 
                 # address check
                 elif (position >= 1 and position < len(sent[0])-1 and
@@ -369,22 +410,22 @@ def filter_task(f, whitelist_dict, foutpath, key_name):
                             safe = False
 
             # Begin Step 6: NLTK POS tagging
-            # sent_tag = nltk.pos_tag_sents(sent)
-            try:
+            sent_tag = nltk.pos_tag_sents(sent)
+            #try:
                 # senna cannot handle long sentence.
-                sent_tag = [[]]
-                length_100 = len(sent[0])//100
-                for j in range(0, length_100+1):
-                    [sent_tag[0].append(j) for j in pretrain.tag(sent[0][100*j:100*(j+1)])]
+                #sent_tag = [[]]
+                #length_100 = len(sent[0])//100
+                #for j in range(0, length_100+1):
+                    #[sent_tag[0].append(j) for j in pretrain.tag(sent[0][100*j:100*(j+1)])]
                 # hunpos needs to change the type from bytes to string
                 #print(sent_tag[0])
                 #sent_tag = [pretrain.tag(sent[0])]
                 #for j in range(len(sent_tag[0])):
                     #sent_tag[0][j] = list(sent_tag[0][j])
                     #sent_tag[0][j][1] = sent_tag[0][j][1].decode('utf-8')
-            except:
-                print('POS error:', tail, sent[0])
-                sent_tag = nltk.pos_tag_sents(sent)
+            #except:
+                #print('POS error:', tail, sent[0])
+                #sent_tag = nltk.pos_tag_sents(sent)
             # Begin Step 7: Use both NLTK and Spacy to check if the word is a name based on sentence level NER label for the word.
             for ent in spcy_sent_output.ents:  # spcy_sent_output contains a dict with each word in the sentence and its NLP labels
                 #spcy_sent_ouput.ents is a list of dictionaries containing chunks of words (phrases) that spacy believes are Named Entities
@@ -397,15 +438,15 @@ def filter_task(f, whitelist_dict, foutpath, key_name):
                         # Now check to see what labels NLTK provides for the word
                         name_tag = word_tokenize(ent.text)
                         # senna & hunpos
-                        name_tag = pretrain.tag(name_tag)
+                        #name_tag = pretrain.tag(name_tag)
                         # hunpos needs to change the type from bytes to string
                         #for j in range(len(name_tag)):
                             #name_tag[j] = list(name_tag[j])
                             #name_tag[j][1] = name_tag[j][1].decode('utf-8')
-                        chunked = ne_chunk(name_tag)
+                        #chunked = ne_chunk(name_tag)
                         # default
-                        #name_tag = pos_tag_sents([name_tag])
-                        #chunked = ne_chunk(name_tag[0])
+                        name_tag = pos_tag_sents([name_tag])
+                        chunked = ne_chunk(name_tag[0])
                         for i in chunked:
                             if type(i) == Tree: # if ne_chunck thinks chunk is NER, creates a tree structure were leaves are the words in the chunk (and their POS labels) and the trunk is the single NER label for the chunk
                                 if i.label() == 'PERSON':
@@ -420,13 +461,14 @@ def filter_task(f, whitelist_dict, foutpath, key_name):
                                             name_set.add(token)
 
             # BEGIN STEP 8: whitelist check
-            # sent_tag is the nltk POS tagging for each word at the sentence level. 
+            # sent_tag is the nltk POS tagging for each word at the sentence level.
             for i in range(len(sent_tag[0])):
                 # word contains the i-th word and it's POS tag
                 word = sent_tag[0][i]
                 # print(word)
                 # word_output is just the raw word itself
                 word_output = word[0]
+
                 if word_output not in string.punctuation:
                     word_check = str(pattern_word.sub('', word_output))
                     #if word_check.title() in ['Dr', 'Mr', 'Mrs', 'Ms']:
