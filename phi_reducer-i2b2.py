@@ -93,7 +93,7 @@ pattern_4digits = re.compile(r"""\b(
 )\b""", re.X)
 
 pattern_devid = re.compile(r"""\b(
-***REMOVED***A-Z0-9\-/***REMOVED***{5}***REMOVED***A-Z0-9\-/***REMOVED****
+***REMOVED***A-Z0-9\-/***REMOVED***{6}***REMOVED***A-Z0-9\-/***REMOVED****
 )\b""", re.X)
 # postal code
 # 5 digits or, 5 digits followed dash and 4 digits
@@ -159,7 +159,7 @@ pattern_middle = re.compile(r"""\*\*PHI\*\*,? ((***REMOVED***A-CE-LN-Z***REMOVED
 
 
 # match url
-pattern_url = re.compile(r'\b((http***REMOVED***s***REMOVED***?://)?((***REMOVED***a-zA-Z***REMOVED***|***REMOVED***0-9***REMOVED***|***REMOVED***$-_@.&+:***REMOVED***|***REMOVED***!*\(\),***REMOVED***)*(\.|\/)(***REMOVED***a-zA-Z***REMOVED***|***REMOVED***0-9***REMOVED***|***REMOVED***$-_@.&+:***REMOVED***|***REMOVED***!*\(\),***REMOVED***)*))\b', re.I)
+pattern_url = re.compile(r'\b((http***REMOVED***s***REMOVED***?://)?(***REMOVED***a-zA-Z0-9$-_@.&+:!\*\(\),***REMOVED***)****REMOVED***\.\/***REMOVED***(***REMOVED***a-zA-Z0-9$-_@.&+:\!\*\(\),***REMOVED***)*)\b', re.I)
 
 # check if the folder exists
 def is_valid_file(parser, arg):
@@ -240,6 +240,7 @@ def filter_task(f, whitelist_dict, foutpath, key_name):
 
         for sent in note: # Begin Step 3: Pattern checking
             # postal code check
+            # print(sent)
             if pattern_postal.findall(sent) != ***REMOVED******REMOVED***:
                 safe = False
                 for item in pattern_postal.findall(sent):
@@ -267,11 +268,19 @@ def filter_task(f, whitelist_dict, foutpath, key_name):
             if pattern_date.findall(sent) != ***REMOVED******REMOVED***:
                 safe = False
                 for item in pattern_date.findall(sent):
-                    if len(set(re.findall(r'***REMOVED***^\w\-***REMOVED***',item***REMOVED***0***REMOVED***))) <= 1:
-                        screened_words.append(item***REMOVED***0***REMOVED***)
-                        print(item***REMOVED***0***REMOVED***)
-                        sent = sent.replace(item***REMOVED***0***REMOVED***, '**PHIDate**')
+                    if '-' in item***REMOVED***0***REMOVED***:
+                        if (len(set(re.findall(r'***REMOVED***^\w\-***REMOVED***',item***REMOVED***0***REMOVED***))) <= 1):
+                            screened_words.append(item***REMOVED***0***REMOVED***)
+                            #print(item***REMOVED***0***REMOVED***)
+                            sent = sent.replace(item***REMOVED***0***REMOVED***, '**PHIDate**')
+                    else:
+                        if len(set(re.findall(r'***REMOVED***^\w***REMOVED***',item***REMOVED***0***REMOVED***))) == 1:
+                            screened_words.append(item***REMOVED***0***REMOVED***)
+                            #print(item***REMOVED***0***REMOVED***)
+                            sent = sent.replace(item***REMOVED***0***REMOVED***, '**PHIDate**')
+
             #sent = str(pattern_date.sub('**PHI**', sent))
+            #print(sent)
             if pattern_4digits.findall(sent) != ***REMOVED******REMOVED***:
                 safe = False
                 for item in pattern_4digits.findall(sent):
@@ -283,14 +292,16 @@ def filter_task(f, whitelist_dict, foutpath, key_name):
                 for item in pattern_email.findall(sent):
                     screened_words.append(item)
             sent = str(pattern_email.sub('**PHI**', sent))
-
             # url check
             if pattern_url.findall(sent) != ***REMOVED******REMOVED***:
                 safe = False
                 for item in pattern_url.findall(sent):
+                    #print(item***REMOVED***0***REMOVED***)
                     if (re.search(r'***REMOVED***a-z***REMOVED***', item***REMOVED***0***REMOVED***) is not None and
+                        '.' in item***REMOVED***0***REMOVED*** and
                         re.search(r'***REMOVED***A-Z***REMOVED***', item***REMOVED***0***REMOVED***) is None and
                         len(item***REMOVED***0***REMOVED***)>10):
+                        print(item***REMOVED***0***REMOVED***)
                         screened_words.append(item***REMOVED***0***REMOVED***)
                         sent = sent.replace(item***REMOVED***0***REMOVED***, '**PHI**')
                         #print(item***REMOVED***0***REMOVED***)
@@ -342,20 +353,7 @@ def filter_task(f, whitelist_dict, foutpath, key_name):
                 elif (word == ',' and 0<position<len(sent***REMOVED***0***REMOVED***) and
                     (sent***REMOVED***0***REMOVED******REMOVED***position-1***REMOVED***.isupper()) and
                     (sent***REMOVED***0***REMOVED******REMOVED***position+1***REMOVED***.isupper())):
-                        # title version check
-                        comma_text = sent***REMOVED***0***REMOVED******REMOVED***position-1***REMOVED***.title()+','+sent***REMOVED***0***REMOVED******REMOVED***position+1***REMOVED***.title()
-                        comma_spacy = nlp(comma_text)
-                        if comma_spacy.ents != ():
-                            for ent in comma_spacy.ents:
-                                #if ent.label_ == 'PERSON':
-                                #print(ent.text)
-                                    #print(ent.text.split(','))
-                                comma_set = set(ent.text.split(',')) - set(***REMOVED***'M.D', 'M.D.'***REMOVED***)
-                                for j in comma_set:
-                                    if re.search(r'***REMOVED***aeiou***REMOVED***', j, re.I) is not None and nltk.pos_tag(***REMOVED***j***REMOVED***)***REMOVED***0***REMOVED******REMOVED***1***REMOVED*** == 'NN':
-                                        print(j)
-                                        name_set.add(j.title())
-                        # upper version check
+                    # upper version check
                         comma_text = sent***REMOVED***0***REMOVED******REMOVED***position-1***REMOVED***.upper()+','+sent***REMOVED***0***REMOVED******REMOVED***position+1***REMOVED***.upper()
                         comma_spacy = nlp(comma_text)
                         if comma_spacy.ents != ():
@@ -366,7 +364,20 @@ def filter_task(f, whitelist_dict, foutpath, key_name):
                                 comma_set = set(ent.text.split(',')) - set(***REMOVED***'M.D', 'M.D.'***REMOVED***)
                                 for j in comma_set:
                                     if re.search(r'***REMOVED***aeiou***REMOVED***', j, re.I) is not None and nltk.pos_tag(***REMOVED***j***REMOVED***)***REMOVED***0***REMOVED******REMOVED***1***REMOVED*** == 'NN':
-                                        print(j)
+                                        #print(j)
+                                        name_set.add(j.title())
+                    # title version check
+                        comma_text = sent***REMOVED***0***REMOVED******REMOVED***position-1***REMOVED***.title()+','+sent***REMOVED***0***REMOVED******REMOVED***position+1***REMOVED***.title()
+                        comma_spacy = nlp(comma_text)
+                        if comma_spacy.ents != ():
+                            for ent in comma_spacy.ents:
+                                #if ent.label_ == 'PERSON':
+                                #print(ent.text)
+                                    #print(ent.text.split(','))
+                                comma_set = set(ent.text.split(',')) - set(***REMOVED***'M.D', 'M.D.'***REMOVED***)
+                                for j in comma_set:
+                                    if re.search(r'***REMOVED***aeiou***REMOVED***', j, re.I) is not None and nltk.pos_tag(***REMOVED***j***REMOVED***)***REMOVED***0***REMOVED******REMOVED***1***REMOVED*** == 'NN':
+                                        #print(j)
                                         name_set.add(j.title())
 
                 # address check
@@ -529,6 +540,7 @@ def filter_task(f, whitelist_dict, foutpath, key_name):
                         phi_reduced = phi_reduced + word_output
                     else:
                         phi_reduced = phi_reduced + ' ' + word_output
+            #print(phi_reduced)
 
             # Begin Step 8: check middle initial and month name
             if pattern_mname.findall(phi_reduced) != ***REMOVED******REMOVED***:
@@ -541,6 +553,7 @@ def filter_task(f, whitelist_dict, foutpath, key_name):
                 #    print(item***REMOVED***0***REMOVED***)
                     screened_words.append(item***REMOVED***0***REMOVED***)
             phi_reduced = pattern_middle.sub('**PHI** **PHI** ', phi_reduced)
+        # print(phi_reduced)
 
         if not safe:
             phi_containing_records = 1
