@@ -97,8 +97,14 @@ def comparison(filename, file1path, file2path):
     output += "FP number: " + str(len(summary_dict***REMOVED***'false_positive'***REMOVED***)) + '\n'
     output += "False Negative: " + ' '.join(summary_dict***REMOVED***'false_negative'***REMOVED***) + '\n'
     output += "FN number: " + str(len(summary_dict***REMOVED***'false_negative'***REMOVED***)) + '\n'
-    output += "Recall: {:.2%}".format(true_positive/(true_positive+len(summary_dict***REMOVED***'false_negative'***REMOVED***))) + '\n'
-    output += "Precision: {:.2%}".format(true_positive/(true_positive+len(summary_dict***REMOVED***'false_positive'***REMOVED***))) + '\n'
+    if true_positive == 0 and len(summary_dict***REMOVED***'false_negative'***REMOVED***) == 0:
+        output += "Recall: N/A\n"
+    else:
+        output += "Recall: {:.2%}".format(true_positive/(true_positive+len(summary_dict***REMOVED***'false_negative'***REMOVED***))) + '\n'
+    if true_positive == 0 and len(summary_dict***REMOVED***'false_positive'***REMOVED***) == 0:
+        output += "Precision: N/A\n"
+    else:
+        output += "Precision: {:.2%}".format(true_positive/(true_positive+len(summary_dict***REMOVED***'false_positive'***REMOVED***))) + '\n'
     output += '\n'
     #print(summary_dict)
     return summary_dict, output
@@ -202,8 +208,14 @@ def main():
                     output += "True Positive in all notes: " + str(TP_all) + '\n'
                     output += "False Positive in all notes: " + str(FP_all) + '\n'
                     output += "False Negative in all notes: " + str(FN_all) + '\n'
-                    output += "Recall: {:.2%}".format(TP_all/(TP_all+FN_all)) + '\n'
-                    output += "Precision: {:.2%}".format(TP_all/(TP_all+FP_all)) + '\n'
+                    if TP_all == 0 and FN_all == 0:
+                        output += "Recall: N/A\n"
+                    else:
+                        output += "Recall: {:.2%}".format(TP_all/(TP_all+FN_all)) + '\n'
+                    if TP_all == 0 and FP_all == 0:
+                        output += "Precision: N/A\n"
+                    else:
+                        output += "Precision: {:.2%}".format(TP_all/(TP_all+FP_all)) + '\n'
                     summary_text += output
             else:
                 print("Please re-run the script after all the files are ok.")
