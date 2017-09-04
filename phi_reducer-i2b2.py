@@ -89,7 +89,7 @@ pattern_number = re.compile(r"""\b(
 )\b""", re.X)
 
 pattern_4digits = re.compile(r"""\b(
-\d{4}***REMOVED***A-Z0-9***REMOVED****  # devid/mrn/benid
+\d{5}***REMOVED***A-Z0-9***REMOVED****
 )\b""", re.X)
 
 pattern_devid = re.compile(r"""\b(
@@ -227,6 +227,21 @@ def filter_task(f, whitelist_dict, foutpath, key_name):
                             'drive', 'trail', 'way', 'lane', 'ave',
                             'blvd', 'st', 'rd', 'trl', 'wy', 'ln',
                             'court', 'ct', 'place', 'plc', 'terrace', 'ter'***REMOVED***
+        '''
+        address_indictor = ***REMOVED***'street', 'avenue', 'road', 'boulevard',
+                            'drive', 'trail', 'way', 'lane', 'ave',
+                            'blvd', 'st', 'rd', 'trl', 'wy', 'ln',
+                            'court', 'ct', 'place', 'plc', 'terrace', 'ter',
+                            'highway', 'freeway', 'autoroute', 'autobahn', 'expressway',
+                            'autostrasse', 'autostrada', 'byway', 'auto-estrada', 'motorway',
+                            'avenue', 'boulevard', 'road', 'street', 'alley', 'bay', 'drive',
+                            'gardens', 'gate', 'grove', 'heights', 'highlands', 'lane', 'mews',
+                            'pathway', 'terrace', 'trail', 'vale', 'view', 'walk', 'way', 'close',
+                            'court', 'place', 'cove', 'circle', 'crescent', 'square', 'loop', 'hill',
+                            'causeway', 'canyon', 'parkway', 'esplanade', 'approach', 'parade', 'park',
+                            'plaza', 'promenade', 'quay', 'bypass'***REMOVED***
+                            '''
+
 
         note = fin.read()
         # Begin Step 1: saluation check
@@ -265,6 +280,7 @@ def filter_task(f, whitelist_dict, foutpath, key_name):
                     screened_words.append(item***REMOVED***0***REMOVED***)
                     #print(item***REMOVED***0***REMOVED***)
             #sent = str(pattern_number.sub('**PHI**', sent))
+            '''
             if pattern_date.findall(sent) != ***REMOVED******REMOVED***:
                 safe = False
                 for item in pattern_date.findall(sent):
@@ -278,6 +294,26 @@ def filter_task(f, whitelist_dict, foutpath, key_name):
                             screened_words.append(item***REMOVED***0***REMOVED***)
                             #print(item***REMOVED***0***REMOVED***)
                             sent = sent.replace(item***REMOVED***0***REMOVED***, '**PHIDate**')
+            '''
+            data_list = ***REMOVED******REMOVED***
+            if pattern_date.findall(sent) != ***REMOVED******REMOVED***:
+                safe = False
+                for item in pattern_date.findall(sent):
+                    if '-' in item***REMOVED***0***REMOVED***:
+                        if (len(set(re.findall(r'***REMOVED***^\w\-***REMOVED***',item***REMOVED***0***REMOVED***))) <= 1):
+                            #screened_words.append(item***REMOVED***0***REMOVED***)
+                            #print(item***REMOVED***0***REMOVED***)
+                            data_list.append(item***REMOVED***0***REMOVED***)
+                            #sent = sent.replace(item***REMOVED***0***REMOVED***, '**PHIDate**')
+                    else:
+                        if len(set(re.findall(r'***REMOVED***^\w***REMOVED***',item***REMOVED***0***REMOVED***))) == 1:
+                            #screened_words.append(item***REMOVED***0***REMOVED***)
+                            #print(item***REMOVED***0***REMOVED***)
+                            data_list.append(item***REMOVED***0***REMOVED***)
+                            #sent = sent.replace(item***REMOVED***0***REMOVED***, '**PHIDate**')
+            data_list.sort(key=len, reverse=True) 
+            for item in data_list:
+                sent = sent.replace(item, '**PHIDate**')
 
             #sent = str(pattern_date.sub('**PHI**', sent))
             #print(sent)
