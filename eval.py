@@ -90,6 +90,7 @@ def comparison(filename, file1path, file2path):
     true_positive = filtered_count-len(summary_dict***REMOVED***'false_negative'***REMOVED***)
     summary_dict***REMOVED***'true_positive'***REMOVED*** = true_positive
 
+    '''
     output = 'Note: ' + filename + '\n'
     output += "Script filtered: " + str(filtered_count) + '\n'
     output += "True positive: " + str(true_positive) + '\n'
@@ -106,8 +107,9 @@ def comparison(filename, file1path, file2path):
     else:
         output += "Precision: {:.2%}".format(true_positive/(true_positive+len(summary_dict***REMOVED***'false_positive'***REMOVED***))) + '\n'
     output += '\n'
+    '''
     #print(summary_dict)
-    return summary_dict, output
+    return summary_dict
 
 
 def main():
@@ -188,7 +190,7 @@ def main():
 
                 for i in phi_reduced_dict.keys():
                     if i in annotation_dict.keys():
-                        summary_dict, output = comparison(i, phi_reduced_dict***REMOVED***i***REMOVED***, annotation_dict***REMOVED***i***REMOVED***)
+                        summary_dict = comparison(i, phi_reduced_dict***REMOVED***i***REMOVED***, annotation_dict***REMOVED***i***REMOVED***)
                         summary_dict_all***REMOVED***i***REMOVED*** = summary_dict
                         summary_text += output
                         if_update = True
@@ -199,24 +201,42 @@ def main():
                 print('{} files have not found corresponding annotation as below.'.format(len(miss_file)))
                 print('\n'.join(miss_file)+'\n')
                 if processed_count != 0:
-                    for k,v in summary_dict_all.items():
-                        TP_all += v***REMOVED***'true_positive'***REMOVED***
-                        FP_all += len(v***REMOVED***'false_positive'***REMOVED***)
-                        FN_all += len(v***REMOVED***'false_negative'***REMOVED***)
+                    for k,v in sorted(summary_dict_all.items()):
+                            print(v***REMOVED***'true_positive'***REMOVED***)
+                            output += 'Note: ' + k + '\n'
+                            #output += "Script filtered: " + str(filtered_count) + '\n'
+                            output += "True positive: " + str(v***REMOVED***'true_positive'***REMOVED***) + '\n'
+                            output += "False Positive: " + ' '.join(v***REMOVED***'false_positive'***REMOVED***) + '\n'
+                            output += "FP number: " + str(len(v***REMOVED***'false_positive'***REMOVED***)) + '\n'
+                            output += "False Negative: " + ' '.join(v***REMOVED***'false_negative'***REMOVED***) + '\n'
+                            output += "FN number: " + str(len(v***REMOVED***'false_negative'***REMOVED***)) + '\n'
+                            if v***REMOVED***'true_positive'***REMOVED*** == 0 and len(v***REMOVED***'false_negative'***REMOVED***) == 0:
+                                output += "Recall: N/A\n"
+                            else:
+                                output += "Recall: {:.2%}".format(v***REMOVED***'true_positive'***REMOVED***/(v***REMOVED***'true_positive'***REMOVED***+len(v***REMOVED***'false_negative'***REMOVED***))) + '\n'
+                            if v***REMOVED***'true_positive'***REMOVED*** == 0 and len(v***REMOVED***'false_positive'***REMOVED***) == 0:
+                                output += "Precision: N/A\n"
+                            else:
+                                output += "Precision: {:.2%}".format(v***REMOVED***'true_positive'***REMOVED***/(v***REMOVED***'true_positive'***REMOVED***+len(v***REMOVED***'false_positive'***REMOVED***))) + '\n'
+                            output += '\n'
+                            TP_all += v***REMOVED***'true_positive'***REMOVED***
+                            FP_all += len(v***REMOVED***'false_positive'***REMOVED***)
+                            FN_all += len(v***REMOVED***'false_negative'***REMOVED***)
 
-                    output = "{} notes have been evaluated.\n".format(processed_count-len(miss_file))
-                    output += "True Positive in all notes: " + str(TP_all) + '\n'
-                    output += "False Positive in all notes: " + str(FP_all) + '\n'
-                    output += "False Negative in all notes: " + str(FN_all) + '\n'
+                    summary_text = "{} notes have been evaulated.\n".format(processed_count-len(miss_file))
+                    summary_text += "True Positive in all notes: " + str(TP_all) + '\n'
+                    summary_text += "False Positive in all notes: " + str(FP_all) + '\n'
+                    summary_text += "False Negative in all notes: " + str(FN_all) + '\n'
                     if TP_all == 0 and FN_all == 0:
-                        output += "Recall: N/A\n"
+                        summary_text += "Recall: N/A\n"
                     else:
-                        output += "Recall: {:.2%}".format(TP_all/(TP_all+FN_all)) + '\n'
+                        summary_text += "Recall: {:.2%}".format(TP_all/(TP_all+FN_all)) + '\n'
                     if TP_all == 0 and FP_all == 0:
-                        output += "Precision: N/A\n"
+                        summary_text += "Precision: N/A\n"
                     else:
-                        output += "Precision: {:.2%}".format(TP_all/(TP_all+FP_all)) + '\n'
-                    summary_text += output
+                        summary_text += "Precision: {:.2%}".format(TP_all/(TP_all+FP_all)) + '\n'
+                    print(summary_text)
+                    summary_text = output + summary_text
             else:
                 print("Please re-run the script after all the files are ok.")
 
