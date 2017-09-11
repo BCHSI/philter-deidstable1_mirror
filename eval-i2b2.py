@@ -97,26 +97,8 @@ def comparison(filename, file1path, file2path, allpositive_dict):
     #true_positive = filtered_count-len(summary_dict['false_positive'])+len(summary_dict['false_negative'])
     true_positive = allpositive_dict[filename] - len(summary_dict['false_negative'])
     summary_dict['true_positive'] = true_positive
-
-    output = 'Note: ' + filename + '\n'
-    output += "Script filtered: " + str(filtered_count) + '\n'
-    output += "True positive: " + str(true_positive) + '\n'
-    output += "False Positive: " + ' '.join(summary_dict['false_positive']) + '\n'
-    output += "FP number: " + str(len(summary_dict['false_positive'])) + '\n'
-    output += "False Negative: " + ' '.join(summary_dict['false_negative']) + '\n'
-    output += "FN number: " + str(len(summary_dict['false_negative'])) + '\n'
-    if true_positive == 0 and len(summary_dict['false_negative']) == 0:
-        output += "Recall: N/A\n"
-    else:
-        output += "Recall: {:.2%}".format(true_positive/(true_positive+len(summary_dict['false_negative']))) + '\n'
-    if true_positive == 0 and len(summary_dict['false_positive']) == 0:
-        output += "Precision: N/A\n"
-    else:
-        output += "Precision: {:.2%}".format(true_positive/(true_positive+len(summary_dict['false_positive']))) + '\n'
-
-    output += '\n'
     #print(summary_dict)
-    return summary_dict, output
+    return summary_dict
 
 
 def main():
@@ -199,10 +181,12 @@ def main():
                         annotation_dict[filename] = f
 
                 for i in phi_reduced_dict.keys():
+                    #print(i)
                     if i in annotation_dict.keys():
-                        summary_dict, output = comparison(i, phi_reduced_dict[i], annotation_dict[i], allpositive_dict)
+                        summary_dict = comparison(i, phi_reduced_dict[i], annotation_dict[i], allpositive_dict)
                         summary_dict_all[i] = summary_dict
-                        summary_text += output
+                        #print(summary_dict)
+                        #summary_text += output
                         if_update = True
                     else:
                         miss_file.append(phi_reduced_dict[i])
@@ -211,28 +195,44 @@ def main():
                 print('{} files have not found corresponding annotation as below.'.format(len(miss_file)))
                 print('\n'.join(miss_file)+'\n')
                 if processed_count != 0:
-                    for k,v in summary_dict_all.items():
-                        TP_all += v['true_positive']
-                        FP_all += len(v['false_positive'])
-                        FN_all += len(v['false_negative'])
+                    for k,v in sorted(summary_dict_all.items()):
+                            output += 'Note: ' + k + '\n'
+                            #output += "Script filtered: " + str(filtered_count) + '\n'
+                            output += "True positive: " + str(v['true_positive']) + '\n'
+                            output += "False Positive: " + ' '.join(v['false_positive']) + '\n'
+                            output += "FP number: " + str(len(v['false_positive'])) + '\n'
+                            output += "False Negative: " + ' '.join(v['false_negative']) + '\n'
+                            output += "FN number: " + str(len(v['false_negative'])) + '\n'
+                            if v['true_positive'] == 0 and len(v['false_negative']) == 0:
+                                output += "Recall: N/A\n"
+                            else:
+                                output += "Recall: {:.2%}".format(v['true_positive']/(v['true_positive']+len(v['false_negative']))) + '\n'
+                            if v['true_positive'] == 0 and len(v['false_positive']) == 0:
+                                output += "Precision: N/A\n"
+                            else:
+                                output += "Precision: {:.2%}".format(v['true_positive']/(v['true_positive']+len(v['false_positive']))) + '\n'
+                            output += '\n'
+                            TP_all += v['true_positive']
+                            FP_all += len(v['false_positive'])
+                            FN_all += len(v['false_negative'])
 
-                    output = "{} notes have been evaulated.\n".format(processed_count-len(miss_file))
-                    output += "True Positive in all notes: " + str(TP_all) + '\n'
-                    output += "False Positive in all notes: " + str(FP_all) + '\n'
-                    output += "False Negative in all notes: " + str(FN_all) + '\n'
+                    summary_text = "{} notes have been evaulated.\n".format(processed_count-len(miss_file))
+                    summary_text += "True Positive in all notes: " + str(TP_all) + '\n'
+                    summary_text += "False Positive in all notes: " + str(FP_all) + '\n'
+                    summary_text += "False Negative in all notes: " + str(FN_all) + '\n'
                     if TP_all == 0 and FN_all == 0:
-                        output += "Recall: N/A\n"
+                        summary_text += "Recall: N/A\n"
                     else:
-                        output += "Recall: {:.2%}".format(TP_all/(TP_all+FN_all)) + '\n'
+                        summary_text += "Recall: {:.2%}".format(TP_all/(TP_all+FN_all)) + '\n'
                     if TP_all == 0 and FP_all == 0:
-                        output += "Precision: N/A\n"
+                        summary_text += "Precision: N/A\n"
                     else:
-                        output += "Precision: {:.2%}".format(TP_all/(TP_all+FP_all)) + '\n'
-                    summary_text += output
+                        summary_text += "Precision: {:.2%}".format(TP_all/(TP_all+FP_all)) + '\n'
+                    print(summary_text)
+                    summary_text = output + summary_text
             else:
                 print("Please re-run the script after all the files are ok.")
 
-        print(output)
         if if_update:
             with open(foutpath + "/summary_dict.pkl", 'wb') as fout:
                 pickle.dump(summary_dict_all, fout)
