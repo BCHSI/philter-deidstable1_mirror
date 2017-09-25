@@ -49,6 +49,7 @@ def annotating(note):
                         '9', '10', '11', '12', '13', '14', '15', '16',
                         '17', '18')
     allowed_command = ('exit', 'all', 'range', 'select', 'show', 'done', 'help')
+    category_print = 'Category to use: 0:Non-phi, 1:Contact, 2:Date, 3:ID, 4:Location, 5:Name, 6:Age\n'
     for sent in note:
         # sent_list: list of words that have not yet been divided by special characters
         sent_list = ***REMOVED******REMOVED***
@@ -63,11 +64,7 @@ def annotating(note):
         # temp***REMOVED***2***REMOVED***: index, temp***REMOVED***0***REMOVED***:word, temp***REMOVED***1***REMOVED***:phi-category
         ***REMOVED***print("({}){}***REMOVED***{}***REMOVED***".format(temp***REMOVED***2***REMOVED***, temp***REMOVED***0***REMOVED***, temp***REMOVED***1***REMOVED***), end=' ') for temp in sent_list***REMOVED***
         print('\n')
-        print('Category to use: 0:Non-phi, 1:Name, 2:Address, 3:Date, '
-             '4:Phone, 5:FAX, 6:Email, 7:SSN, 8:MRN, 9:Health Insurance'
-             ' Beneficiary Numbers, 10:Account Number, 11:Certificate Number,'
-             ' 12:Vehicle Number, 13:Device Number,'
-             ' 14:URLs, 15:IP, 16:Biometric Identifiers, 17:Images, 18:Others\n')
+        print(category_print)
 
         while True:
             user_input = input('Please input command (enter \'help\' for more info): ')
@@ -145,17 +142,22 @@ def annotating(note):
                         print('Wrong category. Will go back to the word you were editing.')
 
                 elif user_input == 'show':
+                    safe_list = ***REMOVED******REMOVED***
+                    phi_list = ***REMOVED******REMOVED***
+                    for temp in sent_list:
+                        if temp***REMOVED***1***REMOVED*** != '0':
+                            phi_list.append(temp***REMOVED***0***REMOVED***)
+                        else:
+                            safe_list.append(temp***REMOVED***0***REMOVED***)
                     print('***********************************************************************')
                     print(sent)
                     print('')
+                    print('phi:', (" ").join(phi_list))
+                    print('safe:', (" ").join(safe_list))
                     # display the sentence with the index of each word and the current category assigned to each word
                     # temp***REMOVED***2***REMOVED***: index, temp***REMOVED***0***REMOVED***:word, temp***REMOVED***1***REMOVED***:phi-category
-                    ***REMOVED***print("({}){}***REMOVED***{}***REMOVED***".format(temp***REMOVED***2***REMOVED***, temp***REMOVED***0***REMOVED***, temp***REMOVED***1***REMOVED***), end=' ') for temp in sent_list***REMOVED***
-                    print('\n\nCategory to use: 0:Non-phi, 1:Name, 2:Address, 3:date, '
-                         '4:Phone, 5:FAX, 6:Email, 7:SSN, 8:MRN, 9:Health Insurance'
-                         ' Beneficiary Numbers, 10:Account Number, 11:Certificate Number,'
-                         ' 12:Vehicle Number, 13:Device Number,'
-                         ' 14:URLs, 15:IP, 16:Biometric Identifiers, 17:Images, 18:Others\n')
+                    #***REMOVED***print("({}){}***REMOVED***{}***REMOVED***".format(temp***REMOVED***2***REMOVED***, temp***REMOVED***0***REMOVED***, temp***REMOVED***1***REMOVED***), end=' ') for temp in sent_list***REMOVED***
+                    #print('\n\n', category_print)
                     #print('\n')
 
                 elif user_input == 'done':
@@ -257,13 +259,24 @@ Each sublist contains 2 elements: ***REMOVED***word_from_original_text, phi_labe
             os._exit(0)
     with open(finpath, encoding='utf-8', errors='ignore') as fin:
         note = fin.read()
-    annotation_list = annotating(note)
-    file_name = '.'.join(tail.split('.')***REMOVED***:-1***REMOVED***) + "_"+ key_word + ".ano"
-    file_path = os.path.join(foutpath, file_name)
-    if annotation_list != ***REMOVED******REMOVED***:
-        print(annotation_list)
-        with open(file_path, 'wb') as fout:
-            pickle.dump(annotation_list, fout)
+    done_name = '.'.join(tail.split('.')***REMOVED***:-1***REMOVED***) + ".txt.done"
+    done_path = os.path.join(head, done_name)
+    done_check = 'y'
+    if os.path.isfile(done_path):
+        done_check = input("This input file is already annotated. Do you want to continue? press y to continue, others to quit > ")
+    if done_check == 'y':
+        annotation_list = annotating(note)
+        file_name = '.'.join(tail.split('.')***REMOVED***:-1***REMOVED***) + "_"+ key_word + ".ano"
+        done_name = '.'.join(tail.split('.')***REMOVED***:-1***REMOVED***) + ".txt.done"
+        file_path = os.path.join(foutpath, file_name)
+        if annotation_list != ***REMOVED******REMOVED***:
+            print(annotation_list)
+            with open(file_path, 'wb') as fout:
+                pickle.dump(annotation_list, fout)
+            with open(done_path, 'w') as fout:
+                fout.write('')
+    else:
+        os._exit(0)
 
 
 if __name__ == "__main__":
