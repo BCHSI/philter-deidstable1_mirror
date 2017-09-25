@@ -128,8 +128,9 @@ def main():
     processed_count = 0
     output = ''
     if_update = False
-
-    with open('i2b2_anno_remove/anno.dict', 'rb') as fin:
+    head2, tail2 = os.path.split(file2path)
+    anno_path = os.path.join(head2, 'anno.dict')
+    with open(anno_path, 'rb') as fin:
         allpositive_dict = pickle.load(fin)
 
     if os.path.isfile(file1path) != os.path.isfile(file2path):
@@ -140,6 +141,7 @@ def main():
             head2, tail2 = os.path.split(file2path)
             file1name = '.'.join(tail1.split('.')[:-1])
             file2name = '.'.join(tail2.split('.')[:-1])
+
             if file1name != file2name:
                 print('Please make sure the filenames are the same in both file.')
             else:
@@ -196,25 +198,26 @@ def main():
                 print('\n'.join(miss_file)+'\n')
                 if processed_count != 0:
                     for k,v in sorted(summary_dict_all.items()):
-                            output += 'Note: ' + k + '\n'
-                            #output += "Script filtered: " + str(filtered_count) + '\n'
-                            output += "True positive: " + str(v['true_positive']) + '\n'
-                            output += "False Positive: " + ' '.join(v['false_positive']) + '\n'
-                            output += "FP number: " + str(len(v['false_positive'])) + '\n'
-                            output += "False Negative: " + ' '.join(v['false_negative']) + '\n'
-                            output += "FN number: " + str(len(v['false_negative'])) + '\n'
-                            if v['true_positive'] == 0 and len(v['false_negative']) == 0:
-                                output += "Recall: N/A\n"
-                            else:
-                                output += "Recall: {:.2%}".format(v['true_positive']/(v['true_positive']+len(v['false_negative']))) + '\n'
-                            if v['true_positive'] == 0 and len(v['false_positive']) == 0:
-                                output += "Precision: N/A\n"
-                            else:
-                                output += "Precision: {:.2%}".format(v['true_positive']/(v['true_positive']+len(v['false_positive']))) + '\n'
-                            output += '\n'
-                            TP_all += v['true_positive']
-                            FP_all += len(v['false_positive'])
-                            FN_all += len(v['false_negative'])
+                        output += 'Note: ' + k + '\n'
+                        #output += "Script filtered: " + str(filtered_count) + '\n'
+                        output += "True positive: " + str(v['true_positive']) + '\n'
+                        output += "False Positive: " + ' '.join(v['false_positive']) + '\n'
+                        output += "FP number: " + str(len(v['false_positive'])) + '\n'
+                        output += "False Negative: " + ' '.join(v['false_negative']) + '\n'
+                        output += "FN number: " + str(len(v['false_negative'])) + '\n'
+                        if v['true_positive'] == 0 and len(v['false_negative']) == 0:
+                            output += "Recall: N/A\n"
+                        else:
+                            output += "Recall: {:.2%}".format(v['true_positive']/(v['true_positive']+len(v['false_negative']))) + '\n'
+                        if v['true_positive'] == 0 and len(v['false_positive']) == 0:
+                            output += "Precision: N/A\n"
+                        else:
+                            output += "Precision: {:.2%}".format(v['true_positive']/(v['true_positive']+len(v['false_positive']))) + '\n'
+                        output += '\n'
+                        TP_all += v['true_positive']
+                        FP_all += len(v['false_positive'])
+                        FN_all += len(v['false_negative'])
+
 
                     summary_text = "{} notes have been evaulated.\n".format(processed_count-len(miss_file))
                     summary_text += "True Positive in all notes: " + str(TP_all) + '\n'
@@ -230,6 +233,7 @@ def main():
                         summary_text += "Precision: {:.2%}".format(TP_all/(TP_all+FP_all)) + '\n'
                     print(summary_text)
                     summary_text = output + summary_text
+
             else:
                 print("Please re-run the script after all the files are ok.")
 
