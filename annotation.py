@@ -5,6 +5,8 @@ from string import punctuation
 import pickle
 import os
 import re
+import glob
+import random
 
 """
 Annotate each word in a text file as either being PHI (if so, annotate the type of PHI)
@@ -45,9 +47,7 @@ def annotating(note):
     """
     annotation_list = []
     note = sent_tokenize(note)
-    allowed_category = ('0', '1', '2', '3', '4', '5', '6', '7', '8',
-                        '9', '10', '11', '12', '13', '14', '15', '16',
-                        '17', '18')
+    allowed_category = ('0', '1', '2', '3', '4', '5', '6')
     allowed_command = ('exit', 'all', 'range', 'select', 'show', 'done', 'help')
     category_print = 'Category to use: 0:Non-phi, 1:Contact, 2:Date, 3:ID, 4:Location, 5:Name, 6:Age\n'
     for sent in note:
@@ -232,42 +232,105 @@ Each sublist contains 2 elements: [word_from_original_text, phi_label]
     """
 
     ap = argparse.ArgumentParser()
-    ap.add_argument("-i", "--inputfile", required=True,
-                    help="Path to the file you would like to annotate.")
+    ap.add_argument("-i", "--input", required=True,
+                    help="Path to the file or the folder you would like to annotate.")
     ap.add_argument("-o", "--output", required=True,
                     help="Path to the directory where the annotated note will be saved.")
     ap.add_argument("-n", "--name", default="phi_reduced",
                    help="The key word of the annotated file, the default is *_phi_reduced.ano.")
+    ap.add_argument("-r", "--random", action='store_true',
+                   help="In random mode, the script will randomly choose a file in the input folder to annotate")
 
     args = ap.parse_args()
+    #print(args.random)
     key_word = args.name
-
-    finpath = args.inputfile
-    if os.path.isfile(finpath):
-        head, tail = os.path.split(finpath)
-    else:
-        print("Input file does not exist.")
-        os._exit(0)
+    finpath = args.input
+    anno_mode = args.random
     foutpath = args.output
-    if not os.path.isdir(foutpath):
-        user_input = input("Output folder:{} does not exist, would you like to create it?: press y to create: ".format(foutpath))
-        if user_input == 'y':
-            print("Creating {}".format(foutpath))
-            os.mkdir(foutpath)
+
+    if anno_mode == False:
+        if os.path.isfile(finpath):
+            head, tail = os.path.split(finpath)
         else:
-            print("Quitting")
+            print("Input file does not exist.")
             os._exit(0)
-    with open(finpath, encoding='utf-8', errors='ignore') as fin:
-        note = fin.read()
-    done_name = '.'.join(tail.split('.')[:-1]) + ".txt.done"
-    done_path = os.path.join(head, done_name)
-    done_check = 'y'
-    if os.path.isfile(done_path):
-        done_check = input("This input file is already annotated. Do you want to continue? press y to continue, others to quit > ")
-    if done_check == 'y':
-        annotation_list = annotating(note)
-        file_name = '.'.join(tail.split('.')[:-1]) + "_"+ key_word + ".ano"
+        if not os.path.isdir(foutpath):
+            user_input = input("Output folder:{} does not exist, would you like to create it?: press y to create: ".format(foutpath))
+            if user_input == 'y':
+                print("Creating {}".format(foutpath))
+                os.mkdir(foutpath)
+            else:
+                print("Quitting")
+                os._exit(0)
+        with open(finpath, encoding='utf-8', errors='ignore') as fin:
+            note = fin.read()
+        doing_name = '.'.join(tail.split('.')[:-1]) + ".txt.doing"
+        doing_path = os.path.join(head, done_name)
+        doing_check = 'y'
         done_name = '.'.join(tail.split('.')[:-1]) + ".txt.done"
+        done_path = os.path.join(head, done_name)
+        done_check = 'y'
+        if os.path.isfile(done_path):
+            done_check = input("This input file is already annotated. Do you want to continue? press y to continue, others to quit > ")
+        elif os.path.isfile(doing_path):
+            doing_check = input("This input file is being annotated. Do you want to continue? press y to continue, others to quit > ")
+        if done_check == 'y' and doing_check == 'y':
+            with open(doing_path, 'w') as fout: # create doing file to show this file is being annoated
+                fout.write('')
+            annotation_list = annotating(note)
+            try:  # rmove doing file
+                os.remove(doing_path)
+            except OSError:
+                pass
+            file_name = '.'.join(tail.split('.')[:-1]) + "_"+ key_word + ".ano"
+            file_path = os.path.join(foutpath, file_name)
+            if annotation_list != []:
+                print(annotation_list)
+                with open(file_path, 'wb') as fout:
+                    pickle.dump(annotation_list, fout)
+                with open(done_path, 'w') as fout:
+                    fout.write('')
+        else:
+            os._exit(0)
+    else:  # random mode
+        if not os.path.isdir(finpath):
+            print("Input folder does not exist.")
+            os._exit(0)
+        if not os.path.isdir(foutpath):
+            user_input = input("Output folder:{} does not exist, would you like to create it?: press y to create: ".format(foutpath))
+            if user_input == 'y':
+                print("Creating {}".format(foutpath))
+                os.mkdir(foutpath)
+            else:
+                print("Quitting")
+                os._exit(0)
+        annotation_set = set(glob.glob(os.path.join(finpath, '*.txt')))
+        done_set = set()
+        for f in glob.glob(os.path.join(finpath, '*.txt.done')):
+            done_set.add(''.join(f.split('.done')[:-1]))
+        doing_set = set()
+        for f in glob.glob(os.path.join(finpath, '*.txt.doing')):
+            doing_set.add(''.join(f.split('.doing')[:-1]))
+        if len(annotation_set-done_set-doing_set) > 0:
+            to_do = ''.join(random.sample(annotation_set-done_set-doing_set, 1))
+        else:
+            print('All files in that folder are annotated or being annotataged.')
+            os._exit(0)
+        print("You will annotate:", to_do)
+        with open(to_do, encoding='utf-8', errors='ignore') as fin:
+            note = fin.read()
+        doing_path = to_do + '.doing'
+        done_path = to_do + '.done'
+        with open(doing_path, 'w') as fout: # create doing file to show this file is being annoated
+            fout.write('')
+        annotation_list = annotating(note)
+        # remove doing file
+        try:
+            os.remove(doing_path)
+        except OSError:
+            pass
+        head, tail = os.path.split(to_do)
+        file_name = '.'.join(tail.split('.')[:-1]) + "_"+ key_word + ".ano"
         file_path = os.path.join(foutpath, file_name)
         if annotation_list != []:
             print(annotation_list)
@@ -275,8 +338,6 @@ Each sublist contains 2 elements: [word_from_original_text, phi_label]
                 pickle.dump(annotation_list, fout)
             with open(done_path, 'w') as fout:
                 fout.write('')
-    else:
-        os._exit(0)
 
 
 if __name__ == "__main__":
