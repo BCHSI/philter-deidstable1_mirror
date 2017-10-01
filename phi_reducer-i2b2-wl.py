@@ -244,6 +244,7 @@ def filter_task(f, whitelist_dict, foutpath, key_name):
 
 
         note = fin.read()
+        note = re.sub(r'=', ' = ', note)
         # Begin Step 1: saluation check
         re_list = pattern_salutation.findall(note)
         for i in re_list:
