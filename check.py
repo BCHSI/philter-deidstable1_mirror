@@ -71,15 +71,19 @@ def annotating(note, phifile):
         words = word_tokenize(sent)
         word = ***REMOVED***word for word in words if word not in punctuation***REMOVED***
         print('***********************************************************************')
-        print(sent)
-        print('')
+        #print(sent)
+        #print('')
+        temp_sent = ''
         for j in range(len(word)):
             if word***REMOVED***j***REMOVED*** in philter_phi:
                 sent_list.append(***REMOVED***word***REMOVED***j***REMOVED***, '1', j + 1***REMOVED***)
+                temp_sent += '**PHI-'+word***REMOVED***j***REMOVED***+'** '
             else:
                 sent_list.append(***REMOVED***word***REMOVED***j***REMOVED***, '0', j + 1***REMOVED***)
+                temp_sent += word***REMOVED***j***REMOVED***+' '
         # display the sentence with the index of each word and the current category assigned to each word
         # temp***REMOVED***2***REMOVED***: index, temp***REMOVED***0***REMOVED***:word, temp***REMOVED***1***REMOVED***:phi-category
+        print(temp_sent)
         ***REMOVED***print("({}){}***REMOVED***{}***REMOVED***".format(temp***REMOVED***2***REMOVED***, temp***REMOVED***0***REMOVED***, temp***REMOVED***1***REMOVED***), end=' ') for temp in sent_list***REMOVED***
         print('\n')
         print(category_print)
