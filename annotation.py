@@ -265,7 +265,7 @@ Each sublist contains 2 elements: [word_from_original_text, phi_label]
         with open(finpath, encoding='utf-8', errors='ignore') as fin:
             note = fin.read()
         doing_name = '.'.join(tail.split('.')[:-1]) + ".txt.doing"
-        doing_path = os.path.join(head, done_name)
+        doing_path = os.path.join(head, doing_name)
         doing_check = 'y'
         done_name = '.'.join(tail.split('.')[:-1]) + ".txt.done"
         done_path = os.path.join(head, done_name)
