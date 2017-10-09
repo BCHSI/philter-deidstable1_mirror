@@ -265,7 +265,7 @@ Each sublist contains 2 elements: ***REMOVED***word_from_original_text, phi_labe
         with open(finpath, encoding='utf-8', errors='ignore') as fin:
             note = fin.read()
         doing_name = '.'.join(tail.split('.')***REMOVED***:-1***REMOVED***) + ".txt.doing"
-        doing_path = os.path.join(head, done_name)
+        doing_path = os.path.join(head, doing_name)
         doing_check = 'y'
         done_name = '.'.join(tail.split('.')***REMOVED***:-1***REMOVED***) + ".txt.done"
         done_path = os.path.join(head, done_name)
