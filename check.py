@@ -175,8 +175,10 @@ def annotating(note, phifile):
                         else:
                             phi_list.append(temp[0])
                     print('***********************************************************************')
-                    print(sent)
-                    print('')
+                    print(temp_sent)
+                    [print("({}){}[{}]".format(temp[2], temp[0], temp[1]), end=' ') for temp in sent_list]
+                    print('\n')
+                    print(category_print)
                     print('phi:', (" ").join(phi_list))
                     print('safe:', (" ").join(safe_list))
                     print('false positive:', (" ").join(fp_list))
