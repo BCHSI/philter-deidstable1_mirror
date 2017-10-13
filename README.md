@@ -1,7 +1,7 @@
 # README
 
 
-### What is PHI-REDUCER? 
+### What is PHIlter? 
 The package and associated scripts provide an end-to-end pipeline for removing Protected Health Information from clinical notes (or other sensitive text documents) in a completely secure environment (a machine with no external connections or exposed ports). We use a combination of regular expressions, Part Of Speech (POS) and Entity Recognition (NER) tagging, and filtering through a whitelist to achieve nearly perfect Recall and generate clean, readable notes. Everything is written in straight python and the package will process any text file, regardless of structure. You can install with PIP (see below) and run with a single command-line argument. Parallelization of processesing can be infinitly divided across cores or machines. 
 
 - Please note: we don't make any claims that running this software on your data will instantly produce HIPAA compliance. 
@@ -10,13 +10,13 @@ There are 3 core functions in the pipeline. We've also included 2 bonus, or conv
 
 1. **annotation:** Annotate each word in a text file as either being PHI (if so, annotate the type of PHI) or not. This is useful to generate a ground-truth corpus for evaluation of phi-reduction software on your own files. 
 
-2. **phi-reducer:** Pull in each note from a directory (nested directories are supported), maintain clean words and replace PHI words with a safe filtered word: **\*\*PHI\*\***, then write the 'phi-reduced' output to a new file with the original file name appended by '\_phi\_reduced'. Conveniently generates additional output files containing meta data from the run: 
+2. **philter:** Pull in each note from a directory (nested directories are supported), maintain clean words and replace PHI words with a safe filtered word: **\*\*PHI\*\***, then write the 'phi-reduced' output to a new file with the original file name appended by '\_phi\_reduced'. Conveniently generates additional output files containing meta data from the run: 
 	- number of files processed
 	- number of instances of PHI that were filtered
 	- list of filtered words
 	- etc.
 
-3. **eval:** Compares the outputs of **annotation.py** and **phi-reducer.py** to evaluate phi-reduction performance. Provides the True and False Positive words found, True and False Negative words found, Precision and Recall scores, etc. 
+3. **eval:** Compares the outputs of **annotation.py** and **philter.py** to evaluate phi-reduction performance. Provides the True and False Positive words found, True and False Negative words found, Precision and Recall scores, etc. 
 4. **infoextract (bonus script):** Extracts entity:value pairs (eg: alcohol\_use:rare or blood_pressure:130/90) from phi-reduced clinical notes and writes them to table. 
 5. **randompick (bonus script):** Randomly select n-notes from a directory (can be nested).Useful to generate subsets of notes to annotate, evaluate performance, and identify terms that may be common only at your institution. 
 
@@ -28,9 +28,9 @@ There are 3 core functions in the pipeline. We've also included 2 bonus, or conv
 
 # Installation
 
-**Install phi-reducer**
+**Install philter**
 
-```pip3 install phi-reducer```
+```pip3 install philter```
 
 ### Dependencies
 spacy package en: A pretrained model of the english language.
@@ -47,15 +47,16 @@ Note for Windows Users: This command must be run with admin previleges because i
 # Run
 
 **annotation**
-```phi-annotation -i ~/some_dir/note_I_want_to_annotate.txt -o ~/dir_to_save_annotated_pickled_file_to/```
+```phi-annotation -i ~/some_dir/note_I_want_to_annotate.txt -o ~/dir_to_save_annotated_pickled_file_to/ -r```
 
 Arguments:
 
 - ("-i", "--inputfile") = Path to the file you would like to annotate.
 - ("-o", "--output")= Path to the directory where the annotated note will be saved.
+- ("-r", "--random") = Have philter pick a random file from the input directory that has not already been annotated. Recommend. 
 
-**phi-reducer**
-``` phi-reducer -i ./raw_notes_dir -r -o dir_to_write_to -p 124```
+**philter**
+``` philter -i ./raw_notes_dir -r -o dir_to_write_to -p 124```
 
 Arguments:
 
@@ -106,7 +107,7 @@ Command Options
 - done: to finish annotating the current sentence and start the next one.
 - exit: exit the script without saving
 
-**phi-reducer**
+**philter**
 
 ![Alt text](https://github.com/beaunorgeot/images_for_presentations/blob/master/Whitelist_V2.png?raw=true "phi-reduction process")
 
