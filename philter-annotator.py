@@ -79,7 +79,7 @@ def annotating(note, phifile):
     #print(question_mark)
     allowed_category = ('0', '1', '2', '3', '4', '5', '6', '7', '8', '9')
     allowed_command = ('exit', 'all', 'range', 'select', 'show', 'done', 'help')
-    category_print = 'Category to use: 0:Philter safe, 1:Philter phi, 2:False Positive, 3: Name, 4: Address, 5: Postal code, 6: Phone/FAX, 7. SSN, 8. DOB, 9. Others\n'
+    category_print = 'Category to use: 0:Philter safe, 1:Philter phi, 2:False Positive, 3: Name, 4: Location, 5: Date, 6: Contact, 7. ID, 8. Age(>90), 9. Others\n'
 
     note = sent_tokenize(note)
 
