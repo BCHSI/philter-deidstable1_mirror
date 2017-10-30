@@ -77,184 +77,194 @@ def annotating(note, phifile):
 
     #print(philter_phi)
     #print(question_mark)
-    allowed_category = ('0', '1', '2', '3', '4', '5', '6', '7', '8', '9')
-    allowed_command = ('exit', 'all', 'range', 'select', 'show', 'done', 'help')
-    category_print = 'Category to use: 0:Philter safe, 1:Philter phi, 2:False Positive, 3:Name, 4:Location, 5:Date, 6:Contact, 7:ID, 8:Age(>90), 9:Others\n'
+    allowed_category = ('n', 'l', 'd', 'c', 'i', 'a', 'o')
+    allowed_command = ('exit', 'h', 's', 'd', 'p', 'n')
+    category_fn = 'Category of False Negative: 0:Philter safe, n:Name, l:Location, d:Date, c:Contact, i:ID, a:Age(>90), o:Others'
 
     note = sent_tokenize(note)
+    sent_list = []
 
-    for sent in note:
+    for i in range(len(note)):
         # sent_list: list of words that have not yet been divided by special characters
         #print(sent)
-        sent_list = []
-        print(sent)
+        #print(sent)
+        sent = note[i]
         words = word_tokenize(sent)
         word = [word for word in words if word not in punctuation]
-        print('***********************************************************************')
+        default_length = len(sent_list)
+        #print('***********************************************************************')
         #print(sent)
         #print('')
         for j in range(len(word)):
             if '**PHI' in word[j]:
                 try:
                     phi_word = re.findall(r'\*\*PHI\-(.*)\*\*', word[j])[0]
-                    sent_list.append([phi_word, '1', j + 1])
+                    sent_list.append([phi_word, '1', default_length+j + 1])
                 except IndexError:
                     phi_word = re.findall(r'\*\*PHI\-(.*)', word[j])[0]
-                    sent_list.append([phi_word, '1', j + 1])
+                    sent_list.append([phi_word, '1', default_length+j + 1])
             else:
-                sent_list.append([word[j], '0', j + 1])
+                sent_list.append([word[j], '0', default_length+j + 1])
         # display the sentence with the index of each word and the current category assigned to each word
         # temp[2]: index, temp[0]:word, temp[1]:phi-category
-        print(sent)
-        [print("({}){}[{}]".format(temp[2], temp[0], temp[1]), end=' ') for temp in sent_list]
-        print('\n')
-        print(category_print)
+        #print(sent)
+        #[print("({}){}[{}]".format(temp[2], temp[0], temp[1]), end=' ') for temp in sent_list]
+        #print('\n')
+        #print(category_print)
 
-        while True:
-            user_input = input('Please input command (enter \'help\' for more info): ')
+        if len(sent_list) < 100 and i != len(note) - 1:
+            sent_list.append(['.', 'punc', len(sent_list)])
+            continue
+        else:
+            print('\n')
+            temp_sent = ''
+            for temp in sent_list:
+                if temp[1] == '0':
+                    #safe_list.append(temp[0])
+                    temp_sent += temp[0]+' '
+                elif temp[1] == '2':
+                    #fp_list.append(temp[0])
+                    temp_sent += temp[0]+' '
+                elif temp[1] == 'punc':
+                    temp_sent += temp[0]+ ' '
+                else:
+                    #phi_list.append(temp[0])
+                    temp_sent += '**PHI-'+temp[0]+'** '
+            print('***********************************************************************')
+            #print(sent_list)
+            #print(len(sent_list))
+            print(temp_sent)
+            print('\n')
+            while True:
+                user_input = input('Please input command (enter \'h\' for more info): ')
 
-            if user_input not in allowed_command:
-                print("Command is not right, please re-input.")
+                if user_input not in allowed_command:
+                    print("Command is not right, please re-input.")
 
-            else:
-                if user_input == 'exit':
-                    return []
+                else:
+                    if user_input == 'exit':
+                        return []
 
-                elif user_input == 'all':
-                    user_input = input('which phi-category do you want to assign to all words? > ')
-                    if user_input in allowed_category:
-                        for j in range(0, len(word)):
-                            sent_list[j][1] = user_input
-                        user_input = input('Press Enter to finish the'
-                                     ' editing of this sentence, or others'
-                                     ' to go back to the commend type. > ')
-                        if user_input == '':
-                            break
-                    else:
-                        print('Wrong category. Will go back to the commend type.')
-
-                elif user_input == 'range':
-                    start_word = input('From which word to edit at the same time: ')
-                    if start_word.isdigit() and 0 < int(start_word) <= len(word):
-                        end_word = input('To which word to edit at the same time: ')
-                        if end_word.isdigit() and int(start_word) < int(end_word) <= len(word):
-                            category = input('which phi-category do you want to assign to these words? > ')
-                            if category in allowed_category:
-                                for j in range(int(start_word)-1, int(end_word)):
-                                    sent_list[j][1] = category
+                    elif user_input == 'p':
+                        allowed_position = []
+                        for temp in sent_list:
+                            if temp[1] == '1' or temp[1] in allowed_category:
+                                print("({}){}[{}]\n".format(temp[2], temp[0], temp[1]))
+                                allowed_position.append(temp[2])
+                        if len(allowed_position) != 0:
+                            user_input = input('which words do you want to assign to non-phi? seperated by space, press enter to quit: > ')
+                            if user_input == '':
+                                continue
                             else:
-                                print('Wrong category. Will go back to the commend type.')
-                        else:
-                            print('Wrong word. Will go back to the commend type.')
-                    else:
-                        print('Wrong word. Will go back to the commend type.')
-
-                elif user_input == 'select':
-                    user_input = input('which words are you going to edit, seperated by space: ')
-                    pick_list = user_input.split(' ')
-                    user_input = input('which phi-category do you want to assign to these words? > ')
-                    if user_input in allowed_category:
-                        input_category = user_input
-                        for j in pick_list:
-                            if j.isdigit() and 0 < int(j) <= len(word):
-                                # check if the word contain special character and will be splitted later
-                                # if so, check if different categories would be assigned.
-                                if re.findall(r'[\/\-\:\~\_]', sent_list[int(j) - 1][0]) != []:
-                                    user_input = input('{} contains multiple elements. Do you want to annotate them seperately? press y to assign seperately, others to assign the same.'.format(sent_list[int(j) - 1][0]))
-                                    split_category = []
-                                    if user_input == 'y':
-                                        temp = re.sub(r'[\/\-\:\~\_]', ' ', sent_list[int(j) - 1][0])
-                                        temp = temp.split(' ')
-                                        temp = list(filter(None, temp))
-                                        for k in temp:
-                                            split_input = input('the phi-category of {} is:'.format(k))
-                                            if split_input in allowed_category:
-                                                split_category.append(split_input)
-                                            else:
-                                                print('Input is not correct. Will assign non-phi to {}'.format(k))
-                                                split_category.append('0')
-                                        sent_list[int(j) - 1][1] = split_category
+                                user_input = user_input.split(' ')
+                                for position in user_input:
+                                    if position.isdigit() and int(position) in allowed_position:
+                                        sent_list[int(position)-1][1] = '2'
                                     else:
-                                        #split_category.append(input_category)
-                                        sent_list[int(j) - 1][1] = input_category
-                                else:
-                                    sent_list[int(j) - 1][1] = input_category
-                                print('{} is changed.'.format(sent_list[int(j) - 1][0]))
-                            else:
-                                print('{} is not a right sequence'.format(j))
-                    else:
-                        print('Wrong category. Will go back to the word you were editing.')
-
-                elif user_input == 'show':
-                    safe_list = []
-                    phi_list = []
-                    fp_list = []
-                    temp_sent = ''
-                    for temp in sent_list:
-                        if temp[1] == '0':
-                            safe_list.append(temp[0])
-                            temp_sent += temp[0]+' '
-                        elif temp[1] == '2':
-                            fp_list.append(temp[0])
-                            temp_sent += temp[0]+' '
+                                        print('{} is not a right position.'.format(position))
                         else:
-                            phi_list.append(temp[0])
-                            temp_sent += '**PHI-'+temp[0]+'** '
-                    print('***********************************************************************')
-                    print(temp_sent)
-                    [print("({}){}[{}]".format(temp[2], temp[0], temp[1]), end=' ') for temp in sent_list]
-                    print('\n')
-                    print(category_print)
-                    print('phi:', (" ").join(phi_list))
-                    print('safe:', (" ").join(safe_list))
-                    print('false positive:', (" ").join(fp_list))
-                    # display the sentence with the index of each word and the current category assigned to each word
-                    # temp[2]: index, temp[0]:word, temp[1]:phi-category
-                    #[print("({}){}[{}]".format(temp[2], temp[0], temp[1]), end=' ') for temp in sent_list]
-                    #print('\n\n', category_print)
-                    #print('\n')
+                            print('No philtered word in this sentence.')
 
-                elif user_input == 'done':
-                    break
 
-                elif user_input == 'help':
-                    print('(X)WORD[Y]: X is the sequence number of the word,'
-                        ' Y is the current phi-category of the word. All words'
-                        ' will be set to 0, non-phi, as default.')
-                    print('Command:')
-                    print('all: enter \'all\' to change the phi-category of all'
-                         ' words in the document at the same time.')
-                    print('range: enter \'range\' to select a range of word indices'
-                         ' and then assign the same phi-category to all words in'
-                         ' that range. Enter the index of the first word and hit'
-                         ' RETURN.Enter the index of the last word and hit RETURN. ')
-                    print('select: enter \'select\' to select a list of word indices'
-                         ' and then assign the same phi-category to all words in that'
-                         ' list.Enter the index of each word, using spaces to separate'
-                         ' each word index, hit RETURN when you have listed all desired word indices.')
-                    print('show: enter \'show\' to show the current phi-category of all words')
-                    print('done: enter \'done\' to finish annotating the current'
-                        ' sentence and start the next one.')
-                    print('exit: enter \'exit\' to exit the script without saving. \n')
+                    elif user_input == 'n':
+                        [print("({}){}[{}]".format(temp[2], temp[0], temp[1]), end=' ') for temp in sent_list]
+                        print('\n')
+                        print(category_fn)
+                        user_input = input('which words are you going to edit, seperated by space, press enter to quit: ')
+                        if user_input == '':
+                            continue
+                        else:
+                            pick_list = user_input.split(' ')
+                            user_input = input('which phi-category do you want to assign to these words? > ')
+                            if user_input in allowed_category:
+                                input_category = user_input
+                                for j in pick_list:
+                                    if j.isdigit() and 0 < int(j) <= len(sent_list):
+                                        # check if the word contain special character and will be splitted later
+                                        # if so, check if different categories would be assigned.
+                                        if re.findall(r'[\/\-\:\~\_]', sent_list[int(j) - 1][0]) != []:
+                                            response_split = input('{} contains multiple elements. Do you want to annotate them seperately? press y to assign       seperately, others to assign the same.'.format(sent_list[int(j) - 1][0]))
+                                            split_category = []
+                                            if response_split == 'y':
+                                                temp = re.sub(r'[\/\-\:\~\_]', ' ', sent_list[int(j) - 1][0])
+                                                temp = temp.split(' ')
+                                                temp = list(filter(None, temp))
+                                                for k in temp:
+                                                    split_input = input('the phi-category of {} is:'.format(k))
+                                                    if split_input in allowed_category:
+                                                        split_category.append(split_input)
+                                                    else:
+                                                        print('Input is not correct. Will assign non-phi to {}'.format(k))
+                                                        split_category.append('0')
+                                                sent_list[int(j) - 1][1] = split_category
+                                            else:
+                                                #split_category.append(input_category)
+                                                sent_list[int(j) - 1][1] = input_category
+                                        else:
+                                            sent_list[int(j) - 1][1] = input_category
+                                        print('{} is changed.'.format(sent_list[int(j) - 1][0]))
+                                    else:
+                                        print('{} is not a right sequence'.format(j))
+                            else:
+                                print('Wrong category. Will go back to the word you were editing.')
+
+                    elif user_input == 's':
+
+                        temp_sent = ''
+                        for temp in sent_list:
+                            if temp[1] == '0':
+                                temp_sent += temp[0]+' '
+                            elif temp[1] == '2':
+                                temp_sent += temp[0]+' '
+                            elif temp[1] == 'punc':
+                                temp_sent += temp[0]+' '
+                            else:
+                                temp_sent += '**PHI-'+temp[0]+'** '
+                        print('***********************************************************************')
+                        print(temp_sent)
+                        print('\n')
+                        # display the sentence with the index of each word and the current category assigned to each word
+                        # temp[2]: index, temp[0]:word, temp[1]:phi-category
+                        #[print("({}){}[{}]".format(temp[2], temp[0], temp[1]), end=' ') for temp in sent_list]
+                        #print('\n\n', category_print)
+                        #print('\n')
+                    elif user_input == 'd':
+                        for result in sent_list:
+                            # divide words by special characters, replace special chars with space: ' '
+                            if result[1] == 'punc':
+                                continue
+                            elif re.findall(r'[\/\-\:\~\_]', result[0]) != []:
+                                temp = re.sub(r'[\/\-\:\~\_]', ' ', result[0])
+                            # take each new 'sub-word'
+                                temp = temp.split(' ')
+                                temp = list(filter(None, temp))
+                            # sub-word inherits the parent-word's phi-category
+                                if type(result[1]) == list:
+                                    for j in range(len(temp)):
+                                        annotation_list.append([temp[j], result[1][j]])
+                                else:
+                                    for j in range(len(temp)):
+                                        annotation_list.append([temp[j], result[1]])
+                            else:
+                                annotation_list.append([result[0], result[1]])
+                        print("\n")
+                        sent_list = []
+                        break
+
+                    elif user_input == 'h':
+                        print('(X)WORD[Y]: X is the sequence number of the word,'
+                            ' Y is the current phi-category of the word. All words'
+                            ' will be set to 0, non-phi, as default.')
+                        print('Command:')
+                        print('p: enter \'s\' to show all the phi words and choose to assigne as non-phi')
+                        print('n: enter \'n\' to show all the words and choose words to assign')
+                        print('s: enter \'s\' to show the current phi-category of all words')
+                        print('d: enter \'d\' to finish annotating the current'
+                            ' sentence and start the next one.')
+                        print('exit: enter \'exit\' to exit the script without saving. \n')
         # each word in sent_list has a phi-category assigned to it
         # result is a list [word, phi-category]
-        for result in sent_list:
-            # divide words by special characters, replace special chars with space: ' '
-            if re.findall(r'[\/\-\:\~\_]', result[0]) != []:
-                temp = re.sub(r'[\/\-\:\~\_]', ' ', result[0])
-            # take each new 'sub-word'
-                temp = temp.split(' ')
-                temp = list(filter(None, temp))
-            # sub-word inherits the parent-word's phi-category
-                if type(result[1]) == list:
-                    for j in range(len(temp)):
-                        annotation_list.append([temp[j], result[1][j]])
-                else:
-                    for j in range(len(temp)):
-                        annotation_list.append([temp[j], result[1]])
-            else:
-                annotation_list.append([result[0], result[1]])
-        print("\n")
+
 
     return annotation_list
 
@@ -353,7 +363,7 @@ Each sublist contains 2 elements: [word_from_original_text, phi_label]
             file_name = '.'.join(tail.split('.')[:-1]) + "_"+ key_word + ".ano"
             file_path = os.path.join(foutpath, file_name)
             if annotation_list != []:
-                print(annotation_list)
+                print(len(annotation_list))
                 with open(file_path, 'wb') as fout:
                     pickle.dump(annotation_list, fout)
                 with open(done_path, 'w') as fout:
@@ -419,7 +429,8 @@ Each sublist contains 2 elements: [word_from_original_text, phi_label]
         file_name = '.'.join(tail.split('.')[:-1]) + "_"+ key_word + ".ano"
         file_path = os.path.join(foutpath, file_name)
         if annotation_list != []:
-            print(annotation_list)
+            print(len(annotation_list[0]))
+            #print(annotation_list)
             with open(file_path, 'wb') as fout:
                 pickle.dump(annotation_list, fout)
             with open(done_path, 'w') as fout:
