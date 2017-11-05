@@ -78,9 +78,9 @@ def annotating(note, phifile):
     #print(philter_phi)
     #print(question_mark)
     allowed_category = ('n', 'l', 'd', 'c', 'i', 'a', 'o')
-    allowed_command = ('exit', 'h', 's', 'd', 'p', 'n')
+    allowed_command = ('exit', 'h', 'c', 'd', 'p', 's')
     category_fn = 'Category of False Negative: 0:Philter safe, n:Name, l:Location, d:Date, c:Contact, i:ID, a:Age(>90), o:Others'
-
+    category_dict = {'0':'safe', '1':'philtered', '2':'False positive', 'n':'Name', 'l':'Location', 'd':'Date', 'c':'Contact', 'i':'ID', 'a':'Age(>90)', 'o':'Others', 'punc':'Punctuation'}
     note = sent_tokenize(note)
     sent_list = ***REMOVED******REMOVED***
 
@@ -143,6 +143,7 @@ def annotating(note, phifile):
 
                 else:
                     if user_input == 'exit':
+                        print('Quitting without saving...')
                         return ***REMOVED******REMOVED***
 
                     elif user_input == 'p':
@@ -166,8 +167,16 @@ def annotating(note, phifile):
                             print('No philtered word in this sentence.')
 
 
-                    elif user_input == 'n':
-                        ***REMOVED***print("({}){}***REMOVED***{}***REMOVED***".format(temp***REMOVED***2***REMOVED***, temp***REMOVED***0***REMOVED***, temp***REMOVED***1***REMOVED***), end=' ') for temp in sent_list***REMOVED***
+                    elif user_input == 'c':
+                        for temp in sent_list:
+                            if temp***REMOVED***1***REMOVED*** != list:
+                                print("({}){}***REMOVED***{}***REMOVED***".format(temp***REMOVED***2***REMOVED***, temp***REMOVED***0***REMOVED***, category_dict***REMOVED***temp***REMOVED***1***REMOVED******REMOVED***), end=' ')
+                            else:
+                                multiple_anno = ***REMOVED******REMOVED***
+                                for j in temp***REMOVED***1***REMOVED***:
+                                    multiple_anno.append(category_dict***REMOVED***j***REMOVED***)
+                                print("({}){}***REMOVED***{}***REMOVED***".format(temp***REMOVED***2***REMOVED***, temp***REMOVED***0***REMOVED***, multiple_anno), end=' ')
+                        #***REMOVED***print("({}){}***REMOVED***{}***REMOVED***".format(temp***REMOVED***2***REMOVED***, temp***REMOVED***0***REMOVED***, temp***REMOVED***1***REMOVED***), end=' ') for temp in sent_list***REMOVED***
                         print('\n')
                         print(category_fn)
                         user_input = input('which words are you going to edit, seperated by space, press enter to quit: ')
