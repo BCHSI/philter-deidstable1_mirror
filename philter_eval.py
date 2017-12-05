@@ -87,8 +87,11 @@ def comparison(filename, file1path, file2path):
             #print(marker_and_word[2:])
         elif marker_and_word[0] == '-' and re.findall(r'\w+', marker_and_word[2:]) != []:
             summary_dict['false_negative'].append(marker_and_word[2:])
+    if filtered_count == 0:
+        true_positive = 0
+    else:
+        true_positive = filtered_count-len(summary_dict['false_negative'])
 
-    true_positive = filtered_count-len(summary_dict['false_negative'])
     summary_dict['true_positive'] = true_positive
 
     '''
@@ -216,10 +219,14 @@ def main():
                 output += "FN number: " + str(len(v['false_negative'])) + '\n'
                 if v['true_positive'] == 0 and len(v['false_negative']) == 0:
                     output += "Recall: N/A\n"
+                elif v['true_positive'] + len(v['false_negative']) == 0:
+                    output += "Need to further check true_positive & false_negative.\n"
                 else:
                     output += "Recall: {:.2%}".format(v['true_positive']/(v['true_positive']+len(v['false_negative']))) + '\n'
                 if v['true_positive'] == 0 and len(v['false_positive']) == 0:
                     output += "Precision: N/A\n"
+                elif v['true_positive'] + len(v['false_positive']) == 0:
+                    output +=  "Need to further check true_positive & false_negative.\n"
                 else:
                     #print(v['true_positive'], len(v['false_positive']))
                     output += "Precision: {:.2%}".format(v['true_positive']/(v['true_positive']+len(v['false_positive']))) + '\n'
