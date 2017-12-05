@@ -87,8 +87,11 @@ def comparison(filename, file1path, file2path):
             #print(marker_and_word***REMOVED***2:***REMOVED***)
         elif marker_and_word***REMOVED***0***REMOVED*** == '-' and re.findall(r'\w+', marker_and_word***REMOVED***2:***REMOVED***) != ***REMOVED******REMOVED***:
             summary_dict***REMOVED***'false_negative'***REMOVED***.append(marker_and_word***REMOVED***2:***REMOVED***)
+    if filtered_count == 0:
+        true_positive = 0
+    else:
+        true_positive = filtered_count-len(summary_dict***REMOVED***'false_negative'***REMOVED***)
 
-    true_positive = filtered_count-len(summary_dict***REMOVED***'false_negative'***REMOVED***)
     summary_dict***REMOVED***'true_positive'***REMOVED*** = true_positive
 
     '''
@@ -216,10 +219,14 @@ def main():
                 output += "FN number: " + str(len(v***REMOVED***'false_negative'***REMOVED***)) + '\n'
                 if v***REMOVED***'true_positive'***REMOVED*** == 0 and len(v***REMOVED***'false_negative'***REMOVED***) == 0:
                     output += "Recall: N/A\n"
+                elif v***REMOVED***'true_positive'***REMOVED*** + len(v***REMOVED***'false_negative'***REMOVED***) == 0:
+                    output += "Need to further check true_positive & false_negative.\n"
                 else:
                     output += "Recall: {:.2%}".format(v***REMOVED***'true_positive'***REMOVED***/(v***REMOVED***'true_positive'***REMOVED***+len(v***REMOVED***'false_negative'***REMOVED***))) + '\n'
                 if v***REMOVED***'true_positive'***REMOVED*** == 0 and len(v***REMOVED***'false_positive'***REMOVED***) == 0:
                     output += "Precision: N/A\n"
+                elif v***REMOVED***'true_positive'***REMOVED*** + len(v***REMOVED***'false_positive'***REMOVED***) == 0:
+                    output +=  "Need to further check true_positive & false_negative.\n"
                 else:
                     #print(v***REMOVED***'true_positive'***REMOVED***, len(v***REMOVED***'false_positive'***REMOVED***))
                     output += "Precision: {:.2%}".format(v***REMOVED***'true_positive'***REMOVED***/(v***REMOVED***'true_positive'***REMOVED***+len(v***REMOVED***'false_positive'***REMOVED***))) + '\n'
