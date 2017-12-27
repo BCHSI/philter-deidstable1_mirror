@@ -93,6 +93,10 @@ def comparison(filename, file1path, file2path):
         true_positive = filtered_count-len(summary_dict['false_negative'])
 
     summary_dict['true_positive'] = true_positive
+    if true_positive < 0:
+        summary_dict['false_positive'] = []
+        summary_dict['false_negative'] = []
+        summary_dict['true_positive'] = 'Need to check'
 
     '''
     output = 'Note: ' + filename + '\n'
@@ -217,13 +221,18 @@ def main():
                 output += "FP number: " + str(len(v['false_positive'])) + '\n'
                 output += "False Negative: " + ' '.join(v['false_negative']) + '\n'
                 output += "FN number: " + str(len(v['false_negative'])) + '\n'
-                if v['true_positive'] == 0 and len(v['false_negative']) == 0:
+                if v['true_positive'] == 'Need to check':
+                    output += 'Need to further check'
+                elif v['true_positive'] == 0 and len(v['false_negative']) == 0:
                     output += "Recall: N/A\n"
                 elif v['true_positive'] + len(v['false_negative']) == 0:
                     output += "Need to further check true_positive & false_negative.\n"
                 else:
                     output += "Recall: {:.2%}".format(v['true_positive']/(v['true_positive']+len(v['false_negative']))) + '\n'
-                if v['true_positive'] == 0 and len(v['false_positive']) == 0:
+
+                if v['true_positive'] == 'Need to check':
+                    output += 'Need to further check'
+                elif v['true_positive'] == 0 and len(v['false_positive']) == 0:
                     output += "Precision: N/A\n"
                 elif v['true_positive'] + len(v['false_positive']) == 0:
                     output +=  "Need to further check true_positive & false_negative.\n"
@@ -231,7 +240,8 @@ def main():
                     #print(v['true_positive'], len(v['false_positive']))
                     output += "Precision: {:.2%}".format(v['true_positive']/(v['true_positive']+len(v['false_positive']))) + '\n'
                 output += '\n'
-                TP_all += v['true_positive']
+                if v['true_positive'] != 'Need to check':
+                    TP_all += v['true_positive']
                 FP_all += len(v['false_positive'])
                 FN_all += len(v['false_negative'])
             summary_text = "{} notes have been evaulated.\n".format(processed_count-len(miss_file))
