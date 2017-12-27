@@ -93,6 +93,10 @@ def comparison(filename, file1path, file2path):
         true_positive = filtered_count-len(summary_dict***REMOVED***'false_negative'***REMOVED***)
 
     summary_dict***REMOVED***'true_positive'***REMOVED*** = true_positive
+    if true_positive < 0:
+        summary_dict***REMOVED***'false_positive'***REMOVED*** = ***REMOVED******REMOVED***
+        summary_dict***REMOVED***'false_negative'***REMOVED*** = ***REMOVED******REMOVED***
+        summary_dict***REMOVED***'true_positive'***REMOVED*** = 'Need to check'
 
     '''
     output = 'Note: ' + filename + '\n'
@@ -217,13 +221,18 @@ def main():
                 output += "FP number: " + str(len(v***REMOVED***'false_positive'***REMOVED***)) + '\n'
                 output += "False Negative: " + ' '.join(v***REMOVED***'false_negative'***REMOVED***) + '\n'
                 output += "FN number: " + str(len(v***REMOVED***'false_negative'***REMOVED***)) + '\n'
-                if v***REMOVED***'true_positive'***REMOVED*** == 0 and len(v***REMOVED***'false_negative'***REMOVED***) == 0:
+                if v***REMOVED***'true_positive'***REMOVED*** == 'Need to check':
+                    output += 'Need to further check'
+                elif v***REMOVED***'true_positive'***REMOVED*** == 0 and len(v***REMOVED***'false_negative'***REMOVED***) == 0:
                     output += "Recall: N/A\n"
                 elif v***REMOVED***'true_positive'***REMOVED*** + len(v***REMOVED***'false_negative'***REMOVED***) == 0:
                     output += "Need to further check true_positive & false_negative.\n"
                 else:
                     output += "Recall: {:.2%}".format(v***REMOVED***'true_positive'***REMOVED***/(v***REMOVED***'true_positive'***REMOVED***+len(v***REMOVED***'false_negative'***REMOVED***))) + '\n'
-                if v***REMOVED***'true_positive'***REMOVED*** == 0 and len(v***REMOVED***'false_positive'***REMOVED***) == 0:
+
+                if v***REMOVED***'true_positive'***REMOVED*** == 'Need to check':
+                    output += 'Need to further check'
+                elif v***REMOVED***'true_positive'***REMOVED*** == 0 and len(v***REMOVED***'false_positive'***REMOVED***) == 0:
                     output += "Precision: N/A\n"
                 elif v***REMOVED***'true_positive'***REMOVED*** + len(v***REMOVED***'false_positive'***REMOVED***) == 0:
                     output +=  "Need to further check true_positive & false_negative.\n"
@@ -231,7 +240,8 @@ def main():
                     #print(v***REMOVED***'true_positive'***REMOVED***, len(v***REMOVED***'false_positive'***REMOVED***))
                     output += "Precision: {:.2%}".format(v***REMOVED***'true_positive'***REMOVED***/(v***REMOVED***'true_positive'***REMOVED***+len(v***REMOVED***'false_positive'***REMOVED***))) + '\n'
                 output += '\n'
-                TP_all += v***REMOVED***'true_positive'***REMOVED***
+                if v***REMOVED***'true_positive'***REMOVED*** != 'Need to check':
+                    TP_all += v***REMOVED***'true_positive'***REMOVED***
                 FP_all += len(v***REMOVED***'false_positive'***REMOVED***)
                 FN_all += len(v***REMOVED***'false_negative'***REMOVED***)
             summary_text = "{} notes have been evaulated.\n".format(processed_count-len(miss_file))
