@@ -45,7 +45,7 @@ def comparison(filename, file1path, file2path):
     summary_dict = {}
     output = ''
 
-    with open(file1path, 'r') as fin:
+    with open(file1path, 'r', errors = 'ignore') as fin:
         phi_reduced_note = fin.read()
     with open(file2path, 'rb') as fin:
         annotation_note = pickle.load(fin)
