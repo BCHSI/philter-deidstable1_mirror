@@ -49,24 +49,43 @@ def comparison(filename, file1path, file2path):
         phi_reduced_note = fin.read()
     with open(file2path, 'rb') as fin:
         annotation_note = pickle.load(fin)
+
+
+    # Begin Step 1
+    annot_list = [word[0] for word in annotation_note if (word[1] == '0' or word[1] == '2')and word[0] != '']
+    anno_text = ' '.join(annot_list)
+    anno_text = re.sub(r'[\/\-\:\~\_\=\*]', ' ', anno_text)
+    annot_list = anno_text.split(' ')
+    annot_list = [word for word in annot_list if word != '']
+    for i in range(len(annot_list)):
+        if annot_list[i][-1] in punctuation:
+            annot_list[i] = annot_list[i][:-1]
+            # for j in range(len(annot_list[i])-2, 0 ,-1):
+               # if annot_list[i][j] not in punctuation:
+                   # annot_list[i] = annot_list[i][:j+1]
+                   # break
+
+    #print(annot_list)
+    # Begin Step 2
     # get a list of sentences within the note , returns a list of lists  [[sent1],[sent2]] 
     phi_reduced_sentences = sent_tokenize(phi_reduced_note)
     # get a list of words within each sentence, returns a list of lists [[sent1_word1, sent1_word2, etc],[sent2_word1, sent2_word2, etc] ]
     phi_reduced_words = [word_tokenize(sent) for sent in phi_reduced_sentences]
     # a list of all words from the phi_reduced note: [word1, word2, etc]
     phi_reduced_list = [word for sent in phi_reduced_words for word in sent if word not in punctuation]
-
-    # Begin Step 1
-    annot_list = [word[0] for word in annotation_note if (word[1] == '0' or word[1] == '2')and word[0] != '']
-    for i in range(len(annot_list)):
-        if annot_list[i][-1] in punctuation:
-            annot_list[i] = annot_list[i][:-1]
-    #print(annot_list)
-    # Begin Step 2
     phi_r_list = [word for word in phi_reduced_list if '**PHI' not in word]
+    phi_reduced_text = ' '.join(phi_r_list)
+    phi_reduced_text = re.sub(r'[\/\-\:\~\_\=\*]', ' ', phi_reduced_text)
+    phi_r_list = phi_reduced_text.split(' ')
+    phi_r_list = [word for word in phi_r_list if word != '']
     for i in range(len(phi_r_list)):
         if phi_r_list[i][-1] in punctuation:
-            phi_r_list[i] = phi_r_list[i][:-1]
+             phi_r_list[i] = phi_r_list[i][:-1]
+               # for j in range(len(phi_r_list[i])-2, 0 ,-1):
+               # if phi_r_list[i][j] not in punctuation:
+                  # phi_r_list[i] = phi_r_list[i][:j+1]
+                   # break
+
     #print(phi_r_list)
     # Begin Step 3
     filtered_count = [word[0] for word in annotation_note if word[1] != '0' and word[1] != '2' and word[0] != '']

@@ -161,6 +161,18 @@ pattern_middle = re.compile(r"""\*\*PHI\*\*,? (([A-CE-LN-Z][Rr]?|[DM])\.?) | (([
 # match url
 pattern_url = re.compile(r'\b((http[s]?://)?([a-zA-Z0-9$-_@.&+:!\*\(\),])*[\.\/]([a-zA-Z0-9$-_@.&+:\!\*\(\),])*)\b', re.I)
 
+keyword_before = {'pressure', 'blood', 'bp', 'na', 'sodium', 'k', 'potassiumn', 'cl',
+                  'chloride', 'ck', 'creatine', 'kinase', 'co2', 'bicarbonate', 'bicarb',
+                  'bicarbonate', 'ca', 'calcium', 'bun', 'cre', 'creatinine', 'glu',
+                  'sugar', 'glucose', 'wbc', 'count', 'rbc', 'hgb', 'hemoglobin', 'hct',
+                  'hematocrit', 'mcv', 'mch', 'mchc', 'plt', 'platelet', 'rdw', 'pt',
+                  'pt-inr', 'ptt', 'tni', '“troponin', 'hdl', 'ldl', 'lipa', 'lipase',
+                  'triglycerides', 'respirations', 'resp', 'oxygen', 'saturation', 'sat',
+                  'o2sat', 'temperature', 'temp', 't','pulse', 'pain', 'from'}
+
+keyword_after = {'f', 'degree', 'bpm', 'beats', 'up', 'down', 'pounds', 'lbs', '%', 'mg',
+                 'mv', 'v', 'msec', 'ms', 'ohms', 'minutes', 'seconds', 'hours'}
+
 # check if the folder exists
 def is_valid_file(parser, arg):
     if not os.path.exists(arg):
@@ -522,13 +534,25 @@ def filter_task(f, whitelist_dict, blacklist, foutpath, key_name):
                             else:
                                 context_after = sent_tag[0][i+1:]
                             #print(word_output, context_before+context_after)
-                            for j in (context_before + context_after):
-                                if pattern_mname.search(j[0]) is not None:
-                                    screened_words.append(word_output)
+                            # first check if the context contain keywords,
+                            # if so, check day/year
+                            # if not, it should be phi info
+                            if ((len(set(context_before)&keyword_before) !=0) or
+                                (len(set(context_after)&keyword_after) !=0)):
+                                for j in (context_before + context_after):
+                                    if pattern_mname.search(j[0]) is not None:
+                                        screened_words.append(word_output)
+                                        #print(word_output)
+                                        word_output = "**PHI**"
+                                        safe = False
+                                        break
+                            else:
+                                screened_words.append(word_output)
                                     #print(word_output)
-                                    word_output = "**PHI**"
-                                    safe = False
-                                    break
+                                word_output = "**PHI**"
+                                safe = False
+
+
                         else:
                             word_output, name_set, screened_words, safe = namecheck(word_output, name_set, screened_words, safe)
 
@@ -639,8 +663,12 @@ def main():
     print('Using blacklist:', blacklist_file)
 
     try:
-        with open(whitelist_file, "rb") as fin:
-            whitelist = pickle.load(fin)
+        try:
+            with open(whitelist_file, "rb") as fin:
+                whitelist = pickle.load(fin)
+        except UnicodeDecodeError:
+            with open(whitelist_file, "rb") as fin:
+                whitelist = pickle.load(fin, encoding = 'latin1')
         print('length of whitelist: {}'.format(len(whitelist)))
     except FileNotFoundError:
         print("No whitelist is found. The script will stop.")
