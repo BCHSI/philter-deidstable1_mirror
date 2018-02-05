@@ -49,24 +49,43 @@ def comparison(filename, file1path, file2path):
         phi_reduced_note = fin.read()
     with open(file2path, 'rb') as fin:
         annotation_note = pickle.load(fin)
+
+
+    # Begin Step 1
+    annot_list = ***REMOVED***word***REMOVED***0***REMOVED*** for word in annotation_note if (word***REMOVED***1***REMOVED*** == '0' or word***REMOVED***1***REMOVED*** == '2')and word***REMOVED***0***REMOVED*** != ''***REMOVED***
+    anno_text = ' '.join(annot_list)
+    anno_text = re.sub(r'***REMOVED***\/\-\:\~\_\=\****REMOVED***', ' ', anno_text)
+    annot_list = anno_text.split(' ')
+    annot_list = ***REMOVED***word for word in annot_list if word != ''***REMOVED***
+    for i in range(len(annot_list)):
+        if annot_list***REMOVED***i***REMOVED******REMOVED***-1***REMOVED*** in punctuation:
+            annot_list***REMOVED***i***REMOVED*** = annot_list***REMOVED***i***REMOVED******REMOVED***:-1***REMOVED***
+            # for j in range(len(annot_list***REMOVED***i***REMOVED***)-2, 0 ,-1):
+               # if annot_list***REMOVED***i***REMOVED******REMOVED***j***REMOVED*** not in punctuation:
+                   # annot_list***REMOVED***i***REMOVED*** = annot_list***REMOVED***i***REMOVED******REMOVED***:j+1***REMOVED***
+                   # break
+
+    #print(annot_list)
+    # Begin Step 2
     # get a list of sentences within the note , returns a list of lists  ***REMOVED******REMOVED***sent1***REMOVED***,***REMOVED***sent2***REMOVED******REMOVED*** 
     phi_reduced_sentences = sent_tokenize(phi_reduced_note)
     # get a list of words within each sentence, returns a list of lists ***REMOVED******REMOVED***sent1_word1, sent1_word2, etc***REMOVED***,***REMOVED***sent2_word1, sent2_word2, etc***REMOVED*** ***REMOVED***
     phi_reduced_words = ***REMOVED***word_tokenize(sent) for sent in phi_reduced_sentences***REMOVED***
     # a list of all words from the phi_reduced note: ***REMOVED***word1, word2, etc***REMOVED***
     phi_reduced_list = ***REMOVED***word for sent in phi_reduced_words for word in sent if word not in punctuation***REMOVED***
-
-    # Begin Step 1
-    annot_list = ***REMOVED***word***REMOVED***0***REMOVED*** for word in annotation_note if (word***REMOVED***1***REMOVED*** == '0' or word***REMOVED***1***REMOVED*** == '2')and word***REMOVED***0***REMOVED*** != ''***REMOVED***
-    for i in range(len(annot_list)):
-        if annot_list***REMOVED***i***REMOVED******REMOVED***-1***REMOVED*** in punctuation:
-            annot_list***REMOVED***i***REMOVED*** = annot_list***REMOVED***i***REMOVED******REMOVED***:-1***REMOVED***
-    #print(annot_list)
-    # Begin Step 2
     phi_r_list = ***REMOVED***word for word in phi_reduced_list if '**PHI' not in word***REMOVED***
+    phi_reduced_text = ' '.join(phi_r_list)
+    phi_reduced_text = re.sub(r'***REMOVED***\/\-\:\~\_\=\****REMOVED***', ' ', phi_reduced_text)
+    phi_r_list = phi_reduced_text.split(' ')
+    phi_r_list = ***REMOVED***word for word in phi_r_list if word != ''***REMOVED***
     for i in range(len(phi_r_list)):
         if phi_r_list***REMOVED***i***REMOVED******REMOVED***-1***REMOVED*** in punctuation:
-            phi_r_list***REMOVED***i***REMOVED*** = phi_r_list***REMOVED***i***REMOVED******REMOVED***:-1***REMOVED***
+             phi_r_list***REMOVED***i***REMOVED*** = phi_r_list***REMOVED***i***REMOVED******REMOVED***:-1***REMOVED***
+               # for j in range(len(phi_r_list***REMOVED***i***REMOVED***)-2, 0 ,-1):
+               # if phi_r_list***REMOVED***i***REMOVED******REMOVED***j***REMOVED*** not in punctuation:
+                  # phi_r_list***REMOVED***i***REMOVED*** = phi_r_list***REMOVED***i***REMOVED******REMOVED***:j+1***REMOVED***
+                   # break
+
     #print(phi_r_list)
     # Begin Step 3
     filtered_count = ***REMOVED***word***REMOVED***0***REMOVED*** for word in annotation_note if word***REMOVED***1***REMOVED*** != '0' and word***REMOVED***1***REMOVED*** != '2' and word***REMOVED***0***REMOVED*** != ''***REMOVED***
