@@ -58,8 +58,8 @@ A json list of regex's are maintained, these will be annotated and updated as th
 			(123) 456-7890
 			123 456 7890
 			123.456.7890
-			+91 (123) 456-7890"
-			123456789
+			+91 (123) 456-7890
+			123456789"
 	}, 
 ***REMOVED***
 
