@@ -46,18 +46,21 @@ Any unique identifying number, characteristic or code
 
 ### Regex Schema
 
+A json list of regex's are maintained, these will be annotated and updated as they are improved
+
 ```
 [
 	{
-		"title":"Phone number regex", 
-		"regex":"^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}$",
+		"title":"Phone number regex 001", 
+		"regex":"^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$",
 		"notes":"This matches the following: 
 			123-456-7890
 			(123) 456-7890
 			123 456 7890
 			123.456.7890
 			+91 (123) 456-7890"
-	}...
+			123456789
+	}, 
 ]
 
 ```
