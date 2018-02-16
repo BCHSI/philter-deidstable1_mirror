@@ -42,3 +42,22 @@ Any unique identifying number, characteristic or code
 2. filter.py: this contains a class for useful text manipulation and actions
 
 3. main.py: main entry point to run the program with flags and other parameters
+
+
+### Regex Schema
+
+```
+***REMOVED***
+	{
+		"title":"Phone number regex", 
+		"regex":"^(\+\d{1,2}\s)?\(?\d{3}\)?***REMOVED***\s.-***REMOVED***\d{3}***REMOVED***\s.-***REMOVED***\d{4}$",
+		"notes":"This matches the following: 
+			123-456-7890
+			(123) 456-7890
+			123 456 7890
+			123.456.7890
+			+91 (123) 456-7890"
+	}...
+***REMOVED***
+
+```
