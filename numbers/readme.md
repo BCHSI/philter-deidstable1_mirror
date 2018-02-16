@@ -44,7 +44,7 @@ Any unique identifying number, characteristic or code
 3. main.py: main entry point to run the program with flags and other parameters
 
 
-### Regex Schema
+### Regex.json Schema
 
 A json list of regex's are maintained, these will be annotated and updated as they are improved
 
