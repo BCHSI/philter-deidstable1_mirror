@@ -1,0 +1,27 @@
+{
+	"patterns":***REMOVED***
+		{
+			"title":"Phone number regex 001",
+			"type":"filter", 
+			"regex":"patterns/phone001.txt",
+			"notes":"This matches the following: 123-456-7890(123) 456-7890123 456 7890123.456.7890+91 (123) 456-7890 123456789 https://stackoverflow.com/a/16699507/1404663"
+		},
+		{
+			"title":"Date regex 001", 
+			"type":"filter",
+			"regex":"patterns/date001.txt",
+			"notes":" Reg ex that matches all valid dates including leap years. Formats accepted mm/dd/yyyy or mm-dd-yyyy or mm.dd.yyyy https://stackoverflow.com/a/8768241/1404663"
+		},
+		{
+			"title":"Floating Point Regex 001", 
+			"type":"extract",
+			"regex":"patterns/fp001.txt",
+			"notes":"Matches 1.2, -1.2, +1.2 By Blake Allen"
+		}
+		
+	***REMOVED***,
+	"groups": {
+			
+		}
+}
+
