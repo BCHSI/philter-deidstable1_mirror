@@ -3,7 +3,7 @@ import re
 import json
 import os
 import chardet
-
+from tqdm import tqdm
 from chardet.universaldetector import UniversalDetector
 from coordinate_map import CoordinateMap
 
@@ -66,7 +66,7 @@ class NPhilter:
         if not os.path.exists(self.foutpath):
             os.makedirs(self.foutpath)
 
-        for root, dirs, files in os.walk(self.finpath):
+        for root, dirs, files in tqdm(os.walk(self.finpath)):
             for f in files:
                 filename = root+f
                 encoding = self.detect_encoding(root+f)
@@ -77,7 +77,7 @@ class NPhilter:
                     #print(m.start(), m.group())
                     self.coord_maps[task].add(f, m.start(), m.group())
 
-    def transform(self, coord_map=self.coord_map['extract'], replacement="**PHI{}**"):
+    def transform(self, coord_map_name="extract", replacement="**PHI{}**"):
         """ transform
             turns input files into output files 
             protected health information reduced to the replacement character
@@ -85,13 +85,19 @@ class NPhilter:
            
             replacement: the replacement string
         """
-        for fn in coord_map.keys():
+
+        coord_map = self.coord_maps[coord_map_name]
+
+        for filename in tqdm(coord_map.keys()):
             with open(self.foutpath+filename, "w") as f:     
                 contents = []
                 for coord,val in coord_map.filecoords(filename):
                     contents.append(val)
-                #inverse, we save only the coordinates
-                f.write("**PHI**".join(contents))
+                if len(contents) == 0:
+                    f.write("**PHI**")
+                else:
+                    #inverse, we save only the items within coordinates
+                    f.write("**PHI**".join(contents))
 
     def detect_encoding(self, fp):
         detector = UniversalDetector()
