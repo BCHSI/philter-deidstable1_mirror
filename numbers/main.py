@@ -25,8 +25,8 @@ def main():
     }
 
     filterer = NPhilter(config)
-    filterer.run("extract")
-    filterer.analyze()
+    filterer.mapcoords("extract")
+    filterer.transform()
 
 if __name__ == "__main__":
     main()
