@@ -5,6 +5,7 @@ import os
 import chardet
 
 from chardet.universaldetector import UniversalDetector
+from coordinate_map import CoordinateMap
 
 class NPhilter:
     """ 
@@ -18,9 +19,15 @@ class NPhilter:
 
         #regex
         self.regexpatternfile = config["regex"]
-        self.patterns = {"extract":[]} # filtration, extraction and other patterns
+        self.patterns = {"extract":[], "filter":[]} # filtration, extraction and other patterns
         self.compiled_patterns = {} #maps keyword to actual re compiled pattern object
         self.precompile()
+
+        #data structures
+        self.coord_maps = {
+            'extract':CoordinateMap(),
+            'filter':CoordinateMap(),
+        }
 
     def precompile(self):
         """ precompiles our regex to speed up pattern matching"""
@@ -49,9 +56,11 @@ class NPhilter:
                 self.compiled_patterns[pat_type] = re.compile(regex_string)
 
             print(pat_type, self.compiled_patterns[pat_type])
-        
-    def run(self, task):
-        """ Runs the set of regex on the input data """
+
+    def mapcoords(self, task):
+        """ Runs the set of regex on the input data 
+            generating a coordinate map of hits given (dry run doesn't transform)
+        """
         regex = self.compiled_patterns[task]
 
         if not os.path.exists(self.foutpath):
@@ -59,16 +68,30 @@ class NPhilter:
 
         for root, dirs, files in os.walk(self.finpath):
             for f in files:
+                filename = root+f
                 encoding = self.detect_encoding(root+f)
-                txt = open(root+f,"r", encoding=encoding['encoding']).read()
+                txt = open(filename,"r", encoding=encoding['encoding']).read()
                 
                 #output_txt = re.sub(regex, ".", txt)
                 for m in regex.finditer(txt):
-                    print(m.start(), m.group())
-                break
+                    #print(m.start(), m.group())
+                    self.coord_maps[task].add(f, m.start(), m.group())
 
-                # with open(self.foutpath+f, "w") as f:
-                #   f.write(output_txt)
+    def transform(self, coord_map=self.coord_map['extract'], replacement="**PHI{}**"):
+        """ transform
+            turns input files into output files 
+            protected health information reduced to the replacement character
+
+           
+            replacement: the replacement string
+        """
+        for fn in coord_map.keys():
+            with open(self.foutpath+filename, "w") as f:     
+                contents = []
+                for coord,val in coord_map.filecoords(filename):
+                    contents.append(val)
+                #inverse, we save only the coordinates
+                f.write("**PHI**".join(contents))
 
     def detect_encoding(self, fp):
         detector = UniversalDetector()
@@ -81,6 +104,6 @@ class NPhilter:
         return detector.result
 
     def analyze(self):
-        """ calculates the effectiveness of the philtering"""
+        """ calculates the effectiveness of the philtering / extraction"""
         pass
 
