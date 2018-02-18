@@ -58,8 +58,7 @@ class CoordinateMap:
 		""" generator does an inorder scan of the coordinates for this file"""
 		if filename not in self.map:
 			raise Exception('Filename not found', filename)
-		coords = self.map[fn].keys()
-		coords.sort()
+		coords = sorted(self.map[filename].keys())
 		for coord in coords:
-			yield coord,self.map[fn][coord]
+			yield coord,self.map[filename][coord]
 
