@@ -279,8 +279,7 @@ class NPhilter:
 
                 print(len(summary***REMOVED***"true_positives"***REMOVED***), len(summary***REMOVED***"false_positives"***REMOVED***), len(summary***REMOVED***"true_negatives"***REMOVED***), len(summary***REMOVED***"false_negatives"***REMOVED***) )
 
-                break
-
+              
                 #print("MISSED: ",len(false_negatives), false_negatives)
         #calc stats
         summary***REMOVED***"total_true_negatives"***REMOVED*** = len(summary***REMOVED***"true_negatives"***REMOVED***)
