@@ -55,10 +55,13 @@ class CoordinateMap:
 			yield fn
 
 	def filecoords(self, filename):
-		""" generator does an inorder scan of the coordinates for this file"""
+		""" 
+			generator does an inorder scan of the coordinates for this file
+		"""
 		if filename not in self.map:
 			raise Exception('Filename not found', filename)
 		coords = sorted(self.map***REMOVED***filename***REMOVED***.keys())
 		for coord in coords:
 			yield coord,self.map***REMOVED***filename***REMOVED******REMOVED***coord***REMOVED***
+
 
