@@ -49,9 +49,12 @@ def comparison(filename, file1path, file2path):
         phi_reduced_note = fin.read()
     with open(file2path, 'rb') as fin:
         annotation_note = pickle.load(fin)
+    #print(file1path)
 
 
     # Begin Step 1
+    #annot_list = [word[0] if (word[1] == '0' or word[1] == '2')and word[0] != ''
+                  #else "PHIinfo" for word in annotation_note ]
     annot_list = [word[0] for word in annotation_note if (word[1] == '0' or word[1] == '2')and word[0] != '']
     anno_text = ' '.join(annot_list)
     anno_text = re.sub(r'[\/\-\:\~\_\=\*]', ' ', anno_text)
@@ -65,6 +68,7 @@ def comparison(filename, file1path, file2path):
                    # annot_list[i] = annot_list[i][:j+1]
                    # break
 
+
     #print(annot_list)
     # Begin Step 2
     # get a list of sentences within the note , returns a list of lists  [[sent1],[sent2]] 
@@ -72,8 +76,21 @@ def comparison(filename, file1path, file2path):
     # get a list of words within each sentence, returns a list of lists [[sent1_word1, sent1_word2, etc],[sent2_word1, sent2_word2, etc] ]
     phi_reduced_words = [word_tokenize(sent) for sent in phi_reduced_sentences]
     # a list of all words from the phi_reduced note: [word1, word2, etc]
+
     phi_reduced_list = [word for sent in phi_reduced_words for word in sent if word not in punctuation]
     phi_r_list = [word for word in phi_reduced_list if '**PHI' not in word]
+    #temp = [word for word in phi_reduced_list if '**PHI' in word]
+    phi_dict = {}
+    j = 0
+    for i in range(len(phi_reduced_list)):
+        if '**PHI' not in phi_reduced_list[i]:
+            phi_dict[j] = i
+            j += 1
+    #print(len(phi_reduced_list))
+    #print(len(phi_r_list))
+    #print(len(temp))
+    #print(j)
+    #phi_r_list = [word if '**PHI' not in word else "PHIinfo" for word in phi_reduced_list ]
     phi_reduced_text = ' '.join(phi_r_list)
     phi_reduced_text = re.sub(r'[\/\-\:\~\_\=\*]', ' ', phi_reduced_text)
     phi_r_list = phi_reduced_text.split(' ')
@@ -85,10 +102,11 @@ def comparison(filename, file1path, file2path):
                # if phi_r_list[i][j] not in punctuation:
                   # phi_r_list[i] = phi_r_list[i][:j+1]
                    # break
-
     #print(phi_r_list)
     # Begin Step 3
+    #filtered_count = [word[0] for word in annotation_note if word[1] != '0' and word[1] != '2' and word[0] != '']
     filtered_count = [word[0] for word in annotation_note if word[1] != '0' and word[1] != '2' and word[0] != '']
+
 
     filtered_count = len(filtered_count)
     summary_dict['false_positive'] = []
@@ -100,12 +118,31 @@ def comparison(filename, file1path, file2path):
     # + means that the word appears in the first list but not in the second list
     # - means that the word appears in the second list but not in the first list
     # marker_and_word[2] is the first character of the word. 
+    #new_text = ''
+    j = 0
+    fn_list = []
     for word_index, marker_and_word in enumerate(ndiff(phi_r_list, annot_list)):
-        if marker_and_word[0] == '+' and re.findall(r'\w+', marker_and_word[2:]) != []:
-            summary_dict['false_positive'].append(marker_and_word[2:])
+        #if marker_and_word[0] == '+' and re.findall(r'\w+', marker_and_word[2:]) != []:
+            #summary_dict['false_positive'].append(marker_and_word[2:])
             #print(marker_and_word[2:])
-        elif marker_and_word[0] == '-' and re.findall(r'\w+', marker_and_word[2:]) != []:
+        #print(word_index, marker_and_word)
+        # print(j)
+        if marker_and_word[0] == '-' and re.findall(r'\w+', marker_and_word[2:]) != []:
             summary_dict['false_negative'].append(marker_and_word[2:])
+            fn_list.append(j)
+            j += 1
+            #print(j)
+            #new_text += marker_and_word[2:]+'_FN '
+        elif marker_and_word[0] == '+':
+            if re.findall(r'\w+', marker_and_word[2:]) != []:
+                summary_dict['false_positive'].append(marker_and_word[2:])
+            else:
+                continue
+            #new_text += 'PHIinfo '
+        else:
+            #new_text += marker_and_word[2:] + ' '
+            j += 1
+
     if filtered_count == 0:
         true_positive = 0
     else:
@@ -116,6 +153,29 @@ def comparison(filename, file1path, file2path):
         summary_dict['false_positive'] = []
         summary_dict['false_negative'] = []
         summary_dict['true_positive'] = 'Need to check'
+
+    # new_text_sentences = sent_tokenize(new_text)
+    # new_text_words = [word_tokenize(sent) for sent in new_text_sentences]
+    # new_text_list = [word for sent in new_text_words for word in sent]
+
+    words_list = []
+    for index in fn_list:
+        true_index = phi_dict[index]
+        if true_index < 3:
+            index_before = 0
+        else:
+            index_before = true_index-3
+        if true_index > len(phi_reduced_list) - 4:
+            index_after = len(phi_reduced_list) -1
+        else:
+            index_after = true_index + 4
+        words_sentence = ' '.join(phi_reduced_list[index_before:index_after])
+
+        words_list.append(phi_reduced_list[true_index]+':'+words_sentence)
+    #print(words_list)
+    summary_dict['3words_fn'] = words_list
+
+    # get a list of words within each sentence, returns a list of lists [[sent1_word1, sent1_word2, etc],[sent2_word1, sent2_word2, etc] ]
 
     '''
     output = 'Note: ' + filename + '\n'
@@ -136,6 +196,7 @@ def comparison(filename, file1path, file2path):
     output += '\n'
     '''
     #print(summary_dict)
+
     return summary_dict
 
 
@@ -240,6 +301,9 @@ def main():
                 output += "FP number: " + str(len(v['false_positive'])) + '\n'
                 output += "False Negative: " + ' '.join(v['false_negative']) + '\n'
                 output += "FN number: " + str(len(v['false_negative'])) + '\n'
+                output += '3words around FN:\n'
+                output += '\n'.join(v['3words_fn'])
+                output += '\n'
                 if v['true_positive'] == 'Need to check':
                     output += 'Need to further check'
                 elif v['true_positive'] == 0 and len(v['false_negative']) == 0:
