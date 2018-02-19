@@ -4,10 +4,10 @@ from nphilter import NPhilter
 def main():
     # get input/output/filename
     ap = argparse.ArgumentParser()
-    ap.add_argument("-i", "--input", default="./data/i2b2_notes_nopunc/",
+    ap.add_argument("-i", "--input", default="./data/i2b2_notes/",
                     help="Path to the directory or the file that contains the PHI note, the default is ./data/i2b2_notes/",
                     type=str)
-    ap.add_argument("-a", "--anno", default="./data/i2b2_anno_nophi/",
+    ap.add_argument("-a", "--anno", default="./data/i2b2_anno/",
                     help="Path to the directory or the file that contains the PHI note, the default is ./data/i2b2_notes/",
                     type=str)
     ap.add_argument("-o", "--output", default="./data/i2b2_results/",
