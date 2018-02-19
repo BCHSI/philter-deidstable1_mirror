@@ -628,8 +628,12 @@ def main():
     print('output folder:', foutpath)
     print('Using whitelist:', whitelist_file)
     try:
-        with open(whitelist_file, "rb") as fin:
-            whitelist = pickle.load(fin)
+        try:
+            with open(whitelist_file, "rb") as fin:
+                whitelist = pickle.load(fin)
+        except UnicodeDecodeError:
+            with open(whitelist_file, "rb") as fin:
+                whitelist = pickle.load(fin, encoding = 'latin1')
         print('length of whitelist: {}'.format(len(whitelist)))
         if if_dir:
             print('phi_reduced file\'s name would be:', "*_"+key_name+".txt")

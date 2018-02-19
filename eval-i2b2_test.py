@@ -20,7 +20,7 @@ annotation.py returns a list of lists containing all words in the clinical note 
 
 phi-reducer.py returns a txt file (phi-reduced.txt) in which words that are phi have 'hopefully' been replaced with the safe word: **PHI**
 
-eval.py
+eval.py 
 1. extracts all words from the annotation.py list for which the phi-category is 0 (not-phi) and adds them to a list (annot_list)
     - annot_list contains the True Negatives
 2. extracts all non-**PHI** words from phi-reduced.txt and adds them to a list (phi_r_list)
@@ -49,12 +49,9 @@ def comparison(filename, file1path, file2path, allpositive_dict):
         phi_reduced_note = fin.read()
     with open(file2path, 'r') as fin:
         annotation_note = fin.read()
-        #annotation_note = pickle.load(fin)
-    #annotation_note = re.sub(r'***REMOVED***\/\-\:\~\_***REMOVED***', ' ', annotation_note)
+    annotation_note = re.sub(r'***REMOVED***\/\-\:\~\_***REMOVED***', ' ', annotation_note)
 
     # get a list of sentences within the note , returns a list of lists  ***REMOVED******REMOVED***sent1***REMOVED***,***REMOVED***sent2***REMOVED******REMOVED*** 
-    phi_reduced_note = re.sub(r'(\***REMOVED***\*\*.*?\*\*\***REMOVED***)','', phi_reduced_note)
-    phi_reduced_note = re.sub(r'***REMOVED***\/\-\:\~\_***REMOVED***', ' ', phi_reduced_note)
     phi_reduced_sentences = sent_tokenize(phi_reduced_note)
     # get a list of words within each sentence, returns a list of lists ***REMOVED******REMOVED***sent1_word1, sent1_word2, etc***REMOVED***,***REMOVED***sent2_word1, sent2_word2, etc***REMOVED*** ***REMOVED***
     phi_reduced_words = ***REMOVED***word_tokenize(sent) for sent in phi_reduced_sentences***REMOVED***
@@ -70,11 +67,6 @@ def comparison(filename, file1path, file2path, allpositive_dict):
     for i in range(len(annot_list)):
         if annot_list***REMOVED***i***REMOVED******REMOVED***-1***REMOVED*** in punctuation:
             annot_list***REMOVED***i***REMOVED*** = annot_list***REMOVED***i***REMOVED******REMOVED***:-1***REMOVED***
-
-    #annot_list = ***REMOVED***word***REMOVED***0***REMOVED*** for word in annotation_note if (word***REMOVED***1***REMOVED*** == '0' or word***REMOVED***1***REMOVED*** == '2')and word***REMOVED***0***REMOVED*** != ''***REMOVED***
-    #for i in range(len(annot_list)):
-        #if annot_list***REMOVED***i***REMOVED******REMOVED***-1***REMOVED*** in punctuation:
-            #annot_list***REMOVED***i***REMOVED*** = annot_list***REMOVED***i***REMOVED******REMOVED***:-1***REMOVED***
     check_set = {'of', 'any', 'for', 'spring', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday'}
     # Begin Step 2
     phi_r_list = ***REMOVED***word for word in phi_reduced_list if '**PHI' not in word***REMOVED***
@@ -82,9 +74,9 @@ def comparison(filename, file1path, file2path, allpositive_dict):
         if phi_r_list***REMOVED***i***REMOVED******REMOVED***-1***REMOVED*** in punctuation:
             phi_r_list***REMOVED***i***REMOVED*** = phi_r_list***REMOVED***i***REMOVED******REMOVED***:-1***REMOVED***
     # Begin Step 3
-    #filtered_count = ***REMOVED***word for word in phi_reduced_list if '**PHI' in word***REMOVED***
+    filtered_count = ***REMOVED***word for word in phi_reduced_list if '**PHI' in word***REMOVED***
 
-    #filtered_count = len(filtered_count)
+    filtered_count = len(filtered_count)
     summary_dict***REMOVED***'false_positive'***REMOVED*** = ***REMOVED******REMOVED***
     summary_dict***REMOVED***'false_negative'***REMOVED*** = ***REMOVED******REMOVED***
     #print(filtered_count)
@@ -104,31 +96,9 @@ def comparison(filename, file1path, file2path, allpositive_dict):
     summary_dict***REMOVED***'false_negative'***REMOVED*** = temp_list
     #true_positive = filtered_count-len(summary_dict***REMOVED***'false_positive'***REMOVED***)+len(summary_dict***REMOVED***'false_negative'***REMOVED***)
     true_positive = allpositive_dict***REMOVED***filename***REMOVED*** - len(summary_dict***REMOVED***'false_negative'***REMOVED***)
-    #filtered_count = ***REMOVED***word***REMOVED***0***REMOVED*** for word in annotation_note if word***REMOVED***1***REMOVED*** != '0' and word***REMOVED***1***REMOVED*** != '2' and word***REMOVED***0***REMOVED*** != ''***REMOVED***
-
-    #filtered_count = len(filtered_count)
-    #true_positive = filtered_count-len(summary_dict***REMOVED***'false_positive'***REMOVED***)
     summary_dict***REMOVED***'true_positive'***REMOVED*** = true_positive
-
-    output = 'Note: ' + filename + '\n'
-    #output += "Script filtered: " + str(filtered_count) + '\n'
-    output += "True positive: " + str(true_positive) + '\n'
-    output += "False Positive: " + ' '.join(summary_dict***REMOVED***'false_positive'***REMOVED***) + '\n'
-    output += "FP number: " + str(len(summary_dict***REMOVED***'false_positive'***REMOVED***)) + '\n'
-    output += "False Negative: " + ' '.join(summary_dict***REMOVED***'false_negative'***REMOVED***) + '\n'
-    output += "FN number: " + str(len(summary_dict***REMOVED***'false_negative'***REMOVED***)) + '\n'
-    if true_positive == 0 and len(summary_dict***REMOVED***'false_negative'***REMOVED***) == 0:
-        output += "Recall: N/A\n"
-    else:
-        output += "Recall: {:.2%}".format(true_positive/(true_positive+len(summary_dict***REMOVED***'false_negative'***REMOVED***))) + '\n'
-    if true_positive == 0 and len(summary_dict***REMOVED***'false_positive'***REMOVED***) == 0:
-        output += "Precision: N/A\n"
-    else:
-        output += "Precision: {:.2%}".format(true_positive/(true_positive+len(summary_dict***REMOVED***'false_positive'***REMOVED***))) + '\n'
-
-    output += '\n'
     #print(summary_dict)
-    return summary_dict, output
+    return summary_dict
 
 
 def main():
@@ -158,8 +128,9 @@ def main():
     processed_count = 0
     output = ''
     if_update = False
-
-    with open('i2b2_anno/anno.dict', 'rb') as fin:
+    head2, tail2 = os.path.split(file2path)
+    anno_path = os.path.join(head2, 'anno.dict')
+    with open(anno_path, 'rb') as fin:
         allpositive_dict = pickle.load(fin)
 
     if os.path.isfile(file1path) != os.path.isfile(file2path):
@@ -170,6 +141,7 @@ def main():
             head2, tail2 = os.path.split(file2path)
             file1name = '.'.join(tail1.split('.')***REMOVED***:-1***REMOVED***)
             file2name = '.'.join(tail2.split('.')***REMOVED***:-1***REMOVED***)
+
             if file1name != file2name:
                 print('Please make sure the filenames are the same in both file.')
             else:
@@ -211,42 +183,60 @@ def main():
                         annotation_dict***REMOVED***filename***REMOVED*** = f
 
                 for i in phi_reduced_dict.keys():
+                    #print(i)
                     if i in annotation_dict.keys():
-                        #print(phi_reduced_dict***REMOVED***i***REMOVED***)
-                        #print(annotation_dict***REMOVED***i***REMOVED***)
-                        summary_dict, output = comparison(i, phi_reduced_dict***REMOVED***i***REMOVED***, annotation_dict***REMOVED***i***REMOVED***, allpositive_dict)
+                        summary_dict = comparison(i, phi_reduced_dict***REMOVED***i***REMOVED***, annotation_dict***REMOVED***i***REMOVED***, allpositive_dict)
                         summary_dict_all***REMOVED***i***REMOVED*** = summary_dict
-                        summary_text += output
+                        #print(summary_dict)
+                        #summary_text += output
                         if_update = True
                     else:
                         miss_file.append(phi_reduced_dict***REMOVED***i***REMOVED***)
 
                 print('{:d} out of {:d} phi reduced notes have been compared.'.format(processed_count-len(miss_file), processed_count))
                 print('{} files have not found corresponding annotation as below.'.format(len(miss_file)))
-                #print('\n'.join(miss_file)+'\n')
+                print('\n'.join(miss_file)+'\n')
                 if processed_count != 0:
-                    for k,v in summary_dict_all.items():
+                    for k,v in sorted(summary_dict_all.items()):
+                        output += 'Note: ' + k + '\n'
+                        #output += "Script filtered: " + str(filtered_count) + '\n'
+                        output += "True positive: " + str(v***REMOVED***'true_positive'***REMOVED***) + '\n'
+                        output += "False Positive: " + ' '.join(v***REMOVED***'false_positive'***REMOVED***) + '\n'
+                        output += "FP number: " + str(len(v***REMOVED***'false_positive'***REMOVED***)) + '\n'
+                        output += "False Negative: " + ' '.join(v***REMOVED***'false_negative'***REMOVED***) + '\n'
+                        output += "FN number: " + str(len(v***REMOVED***'false_negative'***REMOVED***)) + '\n'
+                        if v***REMOVED***'true_positive'***REMOVED*** == 0 and len(v***REMOVED***'false_negative'***REMOVED***) == 0:
+                            output += "Recall: N/A\n"
+                        else:
+                            output += "Recall: {:.2%}".format(v***REMOVED***'true_positive'***REMOVED***/(v***REMOVED***'true_positive'***REMOVED***+len(v***REMOVED***'false_negative'***REMOVED***))) + '\n'
+                        if v***REMOVED***'true_positive'***REMOVED*** == 0 and len(v***REMOVED***'false_positive'***REMOVED***) == 0:
+                            output += "Precision: N/A\n"
+                        else:
+                            output += "Precision: {:.2%}".format(v***REMOVED***'true_positive'***REMOVED***/(v***REMOVED***'true_positive'***REMOVED***+len(v***REMOVED***'false_positive'***REMOVED***))) + '\n'
+                        output += '\n'
                         TP_all += v***REMOVED***'true_positive'***REMOVED***
                         FP_all += len(v***REMOVED***'false_positive'***REMOVED***)
                         FN_all += len(v***REMOVED***'false_negative'***REMOVED***)
 
-                    output = "{} notes have been evaulated.\n".format(processed_count-len(miss_file))
-                    output += "True Positive in all notes: " + str(TP_all) + '\n'
-                    output += "False Positive in all notes: " + str(FP_all) + '\n'
-                    output += "False Negative in all notes: " + str(FN_all) + '\n'
+
+                    summary_text = "{} notes have been evaulated.\n".format(processed_count-len(miss_file))
+                    summary_text += "True Positive in all notes: " + str(TP_all) + '\n'
+                    summary_text += "False Positive in all notes: " + str(FP_all) + '\n'
+                    summary_text += "False Negative in all notes: " + str(FN_all) + '\n'
                     if TP_all == 0 and FN_all == 0:
-                        output += "Recall: N/A\n"
+                        summary_text += "Recall: N/A\n"
                     else:
-                        output += "Recall: {:.2%}".format(TP_all/(TP_all+FN_all)) + '\n'
+                        summary_text += "Recall: {:.2%}".format(TP_all/(TP_all+FN_all)) + '\n'
                     if TP_all == 0 and FP_all == 0:
-                        output += "Precision: N/A\n"
+                        summary_text += "Precision: N/A\n"
                     else:
-                        output += "Precision: {:.2%}".format(TP_all/(TP_all+FP_all)) + '\n'
-                    summary_text += output
+                        summary_text += "Precision: {:.2%}".format(TP_all/(TP_all+FP_all)) + '\n'
+                    print(summary_text)
+                    summary_text = output + summary_text
+
             else:
                 print("Please re-run the script after all the files are ok.")
 
-        print(output)
         if if_update:
             with open(foutpath + "/summary_dict.pkl", 'wb') as fout:
                 pickle.dump(summary_dict_all, fout)

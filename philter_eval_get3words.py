@@ -49,9 +49,12 @@ def comparison(filename, file1path, file2path):
         phi_reduced_note = fin.read()
     with open(file2path, 'rb') as fin:
         annotation_note = pickle.load(fin)
+    #print(file1path)
 
 
     # Begin Step 1
+    #annot_list = ***REMOVED***word***REMOVED***0***REMOVED*** if (word***REMOVED***1***REMOVED*** == '0' or word***REMOVED***1***REMOVED*** == '2')and word***REMOVED***0***REMOVED*** != ''
+                  #else "PHIinfo" for word in annotation_note ***REMOVED***
     annot_list = ***REMOVED***word***REMOVED***0***REMOVED*** for word in annotation_note if (word***REMOVED***1***REMOVED*** == '0' or word***REMOVED***1***REMOVED*** == '2')and word***REMOVED***0***REMOVED*** != ''***REMOVED***
     anno_text = ' '.join(annot_list)
     anno_text = re.sub(r'***REMOVED***\/\-\:\~\_\=\****REMOVED***', ' ', anno_text)
@@ -65,6 +68,7 @@ def comparison(filename, file1path, file2path):
                    # annot_list***REMOVED***i***REMOVED*** = annot_list***REMOVED***i***REMOVED******REMOVED***:j+1***REMOVED***
                    # break
 
+
     #print(annot_list)
     # Begin Step 2
     # get a list of sentences within the note , returns a list of lists  ***REMOVED******REMOVED***sent1***REMOVED***,***REMOVED***sent2***REMOVED******REMOVED*** 
@@ -72,8 +76,21 @@ def comparison(filename, file1path, file2path):
     # get a list of words within each sentence, returns a list of lists ***REMOVED******REMOVED***sent1_word1, sent1_word2, etc***REMOVED***,***REMOVED***sent2_word1, sent2_word2, etc***REMOVED*** ***REMOVED***
     phi_reduced_words = ***REMOVED***word_tokenize(sent) for sent in phi_reduced_sentences***REMOVED***
     # a list of all words from the phi_reduced note: ***REMOVED***word1, word2, etc***REMOVED***
+
     phi_reduced_list = ***REMOVED***word for sent in phi_reduced_words for word in sent if word not in punctuation***REMOVED***
     phi_r_list = ***REMOVED***word for word in phi_reduced_list if '**PHI' not in word***REMOVED***
+    #temp = ***REMOVED***word for word in phi_reduced_list if '**PHI' in word***REMOVED***
+    phi_dict = {}
+    j = 0
+    for i in range(len(phi_reduced_list)):
+        if '**PHI' not in phi_reduced_list***REMOVED***i***REMOVED***:
+            phi_dict***REMOVED***j***REMOVED*** = i
+            j += 1
+    #print(len(phi_reduced_list))
+    #print(len(phi_r_list))
+    #print(len(temp))
+    #print(j)
+    #phi_r_list = ***REMOVED***word if '**PHI' not in word else "PHIinfo" for word in phi_reduced_list ***REMOVED***
     phi_reduced_text = ' '.join(phi_r_list)
     phi_reduced_text = re.sub(r'***REMOVED***\/\-\:\~\_\=\****REMOVED***', ' ', phi_reduced_text)
     phi_r_list = phi_reduced_text.split(' ')
@@ -85,10 +102,11 @@ def comparison(filename, file1path, file2path):
                # if phi_r_list***REMOVED***i***REMOVED******REMOVED***j***REMOVED*** not in punctuation:
                   # phi_r_list***REMOVED***i***REMOVED*** = phi_r_list***REMOVED***i***REMOVED******REMOVED***:j+1***REMOVED***
                    # break
-
     #print(phi_r_list)
     # Begin Step 3
+    #filtered_count = ***REMOVED***word***REMOVED***0***REMOVED*** for word in annotation_note if word***REMOVED***1***REMOVED*** != '0' and word***REMOVED***1***REMOVED*** != '2' and word***REMOVED***0***REMOVED*** != ''***REMOVED***
     filtered_count = ***REMOVED***word***REMOVED***0***REMOVED*** for word in annotation_note if word***REMOVED***1***REMOVED*** != '0' and word***REMOVED***1***REMOVED*** != '2' and word***REMOVED***0***REMOVED*** != ''***REMOVED***
+
 
     filtered_count = len(filtered_count)
     summary_dict***REMOVED***'false_positive'***REMOVED*** = ***REMOVED******REMOVED***
@@ -100,12 +118,31 @@ def comparison(filename, file1path, file2path):
     # + means that the word appears in the first list but not in the second list
     # - means that the word appears in the second list but not in the first list
     # marker_and_word***REMOVED***2***REMOVED*** is the first character of the word. 
+    #new_text = ''
+    j = 0
+    fn_list = ***REMOVED******REMOVED***
     for word_index, marker_and_word in enumerate(ndiff(phi_r_list, annot_list)):
-        if marker_and_word***REMOVED***0***REMOVED*** == '+' and re.findall(r'\w+', marker_and_word***REMOVED***2:***REMOVED***) != ***REMOVED******REMOVED***:
-            summary_dict***REMOVED***'false_positive'***REMOVED***.append(marker_and_word***REMOVED***2:***REMOVED***)
+        #if marker_and_word***REMOVED***0***REMOVED*** == '+' and re.findall(r'\w+', marker_and_word***REMOVED***2:***REMOVED***) != ***REMOVED******REMOVED***:
+            #summary_dict***REMOVED***'false_positive'***REMOVED***.append(marker_and_word***REMOVED***2:***REMOVED***)
             #print(marker_and_word***REMOVED***2:***REMOVED***)
-        elif marker_and_word***REMOVED***0***REMOVED*** == '-' and re.findall(r'\w+', marker_and_word***REMOVED***2:***REMOVED***) != ***REMOVED******REMOVED***:
+        #print(word_index, marker_and_word)
+        # print(j)
+        if marker_and_word***REMOVED***0***REMOVED*** == '-' and re.findall(r'\w+', marker_and_word***REMOVED***2:***REMOVED***) != ***REMOVED******REMOVED***:
             summary_dict***REMOVED***'false_negative'***REMOVED***.append(marker_and_word***REMOVED***2:***REMOVED***)
+            fn_list.append(j)
+            j += 1
+            #print(j)
+            #new_text += marker_and_word***REMOVED***2:***REMOVED***+'_FN '
+        elif marker_and_word***REMOVED***0***REMOVED*** == '+':
+            if re.findall(r'\w+', marker_and_word***REMOVED***2:***REMOVED***) != ***REMOVED******REMOVED***:
+                summary_dict***REMOVED***'false_positive'***REMOVED***.append(marker_and_word***REMOVED***2:***REMOVED***)
+            else:
+                continue
+            #new_text += 'PHIinfo '
+        else:
+            #new_text += marker_and_word***REMOVED***2:***REMOVED*** + ' '
+            j += 1
+
     if filtered_count == 0:
         true_positive = 0
     else:
@@ -116,6 +153,29 @@ def comparison(filename, file1path, file2path):
         summary_dict***REMOVED***'false_positive'***REMOVED*** = ***REMOVED******REMOVED***
         summary_dict***REMOVED***'false_negative'***REMOVED*** = ***REMOVED******REMOVED***
         summary_dict***REMOVED***'true_positive'***REMOVED*** = 'Need to check'
+
+    # new_text_sentences = sent_tokenize(new_text)
+    # new_text_words = ***REMOVED***word_tokenize(sent) for sent in new_text_sentences***REMOVED***
+    # new_text_list = ***REMOVED***word for sent in new_text_words for word in sent***REMOVED***
+
+    words_list = ***REMOVED******REMOVED***
+    for index in fn_list:
+        true_index = phi_dict***REMOVED***index***REMOVED***
+        if true_index < 3:
+            index_before = 0
+        else:
+            index_before = true_index-3
+        if true_index > len(phi_reduced_list) - 4:
+            index_after = len(phi_reduced_list) -1
+        else:
+            index_after = true_index + 4
+        words_sentence = ' '.join(phi_reduced_list***REMOVED***index_before:index_after***REMOVED***)
+
+        words_list.append(phi_reduced_list***REMOVED***true_index***REMOVED***+':'+words_sentence)
+    #print(words_list)
+    summary_dict***REMOVED***'3words_fn'***REMOVED*** = words_list
+
+    # get a list of words within each sentence, returns a list of lists ***REMOVED******REMOVED***sent1_word1, sent1_word2, etc***REMOVED***,***REMOVED***sent2_word1, sent2_word2, etc***REMOVED*** ***REMOVED***
 
     '''
     output = 'Note: ' + filename + '\n'
@@ -136,6 +196,7 @@ def comparison(filename, file1path, file2path):
     output += '\n'
     '''
     #print(summary_dict)
+
     return summary_dict
 
 
@@ -240,6 +301,9 @@ def main():
                 output += "FP number: " + str(len(v***REMOVED***'false_positive'***REMOVED***)) + '\n'
                 output += "False Negative: " + ' '.join(v***REMOVED***'false_negative'***REMOVED***) + '\n'
                 output += "FN number: " + str(len(v***REMOVED***'false_negative'***REMOVED***)) + '\n'
+                output += '3words around FN:\n'
+                output += '\n'.join(v***REMOVED***'3words_fn'***REMOVED***)
+                output += '\n'
                 if v***REMOVED***'true_positive'***REMOVED*** == 'Need to check':
                     output += 'Need to further check'
                 elif v***REMOVED***'true_positive'***REMOVED*** == 0 and len(v***REMOVED***'false_negative'***REMOVED***) == 0:
