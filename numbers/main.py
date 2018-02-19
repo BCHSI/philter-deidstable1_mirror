@@ -25,8 +25,20 @@ def main():
     }
 
     filterer = NPhilter(config)
-    filterer.mapcoords("extract")
-    filterer.transform()
+    filterer.precompile() #precompile any patterns we've added
+    filterer.mapcoords(regex_map_name="filter", coord_map_name="filter")
+    filterer.transform(coord_map_name="filter")
+
+    # filterer.getphi()
+    # filterer.mapphi(phi_path="data/phi/phi_counts.json", out_path="data/phi/phi_map.json")
+    # filterer.mapphi(phi_path="data/phi/phi_number_counts.json", out_path="data/phi/phi_number_map.json")
+    # filterer.mapphi(phi_path="data/phi/phi_string_counts.json", out_path="data/phi/phi_string_map.json")
+
+    # filterer.gen_regex(regex_map_name="genfilter", source_map="data/phi/phi_number_map.json")
+    # filterer.mapcoords(regex_map_name="genfilter", coord_map_name="genfilter")
+    # filterer.transform(coord_map_name="genfilter")
+    filterer.eval(only_digits=True)
+
 
 if __name__ == "__main__":
     main()

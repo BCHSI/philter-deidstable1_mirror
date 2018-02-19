@@ -2,26 +2,39 @@
 	"patterns":[
 		{
 			"title":"Phone number regex 001",
-			"type":"filter", 
+			"group":"filter", 
 			"regex":"patterns/phone001.txt",
 			"notes":"This matches the following: 123-456-7890(123) 456-7890123 456 7890123.456.7890+91 (123) 456-7890 123456789 https://stackoverflow.com/a/16699507/1404663"
 		},
 		{
 			"title":"Date regex 001", 
-			"type":"filter",
+			"group":"filter",
 			"regex":"patterns/date001.txt",
 			"notes":" Reg ex that matches all valid dates including leap years. Formats accepted mm/dd/yyyy or mm-dd-yyyy or mm.dd.yyyy https://stackoverflow.com/a/8768241/1404663"
 		},
 		{
+			"title":"date regex 002",
+			"group":"filter",
+			"regex":"patterns/date002.txt",
+			"notes":"this should match gregorian calendar dates such as xxxx-xx-xx, where separators '-' can be any character (.) by Blake Allen"
+		},
+		{
 			"title":"Floating Point Regex 001", 
-			"type":"extract",
+			"group":"extract",
 			"regex":"patterns/fp001.txt",
 			"notes":"Matches 1.2, -1.2, +1.2 By Blake Allen"
+		},
+		{
+			"title":"Date of birth 001",
+			"group":"filter",
+			"regex":"patterns/date003.txt",
+			"notes":"Matches X/X/XX XX/XX/XXXX xx/xx/xx xxxx/xx/xx By Kathleen"
 		}
 		
 	],
 	"groups": {
-			
+			"filter":"known regex's to use to filter data",
+			"extract":"known data types used to extract data"
 		}
 }
 
