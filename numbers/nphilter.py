@@ -10,12 +10,14 @@ from coordinate_map import CoordinateMap
 class NPhilter:
     """ 
         General filtering class with a focus on numbers
+
     """
     def __init__(self, config):
         self.debug = config["debug"]
         self.finpath = config["finpath"]
         self.foutpath = config["foutpath"]
         self.debug = config["debug"]
+        self.anno_folder = config["anno_folder"]
 
         #regex
         self.regexpatternfile = config["regex"]
@@ -96,7 +98,8 @@ class NPhilter:
 
     def transform(self, 
             coord_map_name="genfilter", 
-            replacement="**PHI{}**",
+            replacement=" ",
+            #replacement="**PHI{}**",
             inverse=False,
             out_path="",
             in_path=""):
@@ -114,6 +117,9 @@ class NPhilter:
             out_path, location to save transformed data, if this is len == 0
             then config is used, if config is 0, raise error
         """
+
+        if self.debug:
+            print("transform")
 
         #get input path
         finpath = in_path
@@ -145,10 +151,10 @@ class NPhilter:
                     for coord,val in coord_map.filecoords(filename):
                         contents.append(val)
                     if len(contents) == 0:
-                        f.write("**PHI**")
+                        f.write(replacement)
                     else:
                         #inverse, we save only the items within coordinates
-                        f.write("**PHI**".join(contents))
+                        f.write(replacement.join(contents))
                 else:
                     #filters out matches, leaving rest of text
                     contents = []
@@ -165,7 +171,7 @@ class NPhilter:
                     if last_marker < len(txt):
                         contents.append(txt[last_marker:len(txt)])
 
-                    f.write("**PHI**".join(contents))
+                    f.write(replacement.join(contents))
 
     def detect_encoding(self, fp):
         detector = UniversalDetector()
@@ -187,16 +193,22 @@ class NPhilter:
             only_digits = <boolean> will constrain evaluation on philtering of only digit types
         """
 
+        if self.debug:
+            print("eval")
+
+        #use config to eval
+        if self.anno_folder != None:
+            anno_folder = self.anno_folder
         
         summary = {
             "total_false_positives":0,
             "total_false_negatives":0,
-            "total_true_positives":0,
-            "total_true_negatives":0,
+            "total_true_positives": 0,
+            "total_true_negatives": 0,
             "false_positives":[], #non-phi words we think are phi
-            "true_positives":[], #phi words we correctly identify
+            "true_positives": [], #phi words we correctly identify
             "false_negatives":[], #phi words we think are non-phi
-            "true_negatives":[], #non-phi words we correctly identify
+            "true_negatives": [], #non-phi words we correctly identify
         }
 
         for root, dirs, files in os.walk(philtered_folder):
@@ -210,6 +222,7 @@ class NPhilter:
 
                 if not os.path.exists(root+f):
                     raise Exception("FILE DOESNT EXIST", root+f)
+                
                 if not os.path.exists(anno_folder+f.split(".")[0]+anno_suffix):
                     print("FILE DOESNT EXIST", anno_folder+f.split(".")[0]+anno_suffix)
                     continue
@@ -227,15 +240,13 @@ class NPhilter:
                 anno_dict = {}
                 philtered_dict = {}
 
-                
-                
-
+            
                 for w in philtered_words:
                     philtered_dict[w] = 1                
 
                 for w in anno_words:
                     anno_dict[w] = 1
-                print("DICTS", len(anno_dict), len(philtered_dict))
+                #print("DICTS", len(anno_dict), len(philtered_dict))
 
                 for i,w in enumerate(philtered_dict):
 
@@ -277,7 +288,7 @@ class NPhilter:
                 summary["true_positives"] = summary["true_positives"] + true_positives
                 summary["true_negatives"] = summary["true_negatives"] + true_negatives
 
-                print(len(summary["true_positives"]), len(summary["false_positives"]), len(summary["true_negatives"]), len(summary["false_negatives"]) )
+                #print(len(summary["true_positives"]), len(summary["false_positives"]), len(summary["true_negatives"]), len(summary["false_negatives"]) )
 
               
                 #print("MISSED: ",len(false_negatives), false_negatives)
@@ -295,19 +306,19 @@ class NPhilter:
         if summary["total_true_positives"]+summary["total_false_positives"] > 0:
             print("Precision: {:.2%}".format(summary["total_true_positives"]/(summary["total_true_positives"]+summary["total_false_positives"])))
 
+        #save the phi we missed
+        json.dump(summary["false_negatives"], open("data/phi/phi_fn.json", "w"), indent=4)
+        json.dump(summary["false_positives"], open("data/phi/phi_fp.json", "w"), indent=4)
+
 
     def getphi(self, 
             anno_folder="data/i2b2_anno/", 
             anno_suffix="_phi_reduced.ano", 
             data_folder="data/i2b2_notes/", 
             output_folder="i2b2_phi", 
-            filter_regex=None,
-            replace=["/"]):
+            filter_regex=None):
         """ get's phi from existing data to build up a data model
-            
-        """
-
-        """ data structure to hold our phi and classify phi we find
+        data structure to hold our phi and classify phi we find
             {
                 "foo.txt":[
                     {
@@ -318,6 +329,14 @@ class NPhilter:
                 ],...
             }
         """
+        if self.debug:
+            print("getphi")
+
+
+        #use config if exists
+        if self.anno_folder != None:
+            anno_folder = self.anno_folder
+
         phi = {}
         word_counts = {}
         not_phi = {}
@@ -333,13 +352,9 @@ class NPhilter:
                     print("FILE DOESNT EXIST", anno_folder+f.split(".")[0]+anno_suffix)
                     continue
 
-
                 orig_filename = root+f
                 encoding1 = self.detect_encoding(orig_filename)
                 orig = open(orig_filename,"r", encoding=encoding1['encoding']).read()
-
-                #replace specific punc chars
-                orig.replace("/", " ")
 
                 orig_words = re.split("\s+", orig)
 
@@ -456,6 +471,9 @@ class NPhilter:
             string_char = this is what strings are replaced by
             any_char = this is what any random characters are replaced with
         """
+        if self.debug:
+            print("mapphi")
+
         d = json.load(open(phi_path, "r"))
 
         phi_map = {}
@@ -493,6 +511,9 @@ class NPhilter:
             pattern = this is where the regex's generated from this operation are stored
 
         """
+
+        if self.debug:
+            print("gen_regex")
 
         d = json.load(open(source_map, "r"))
         context = "" #digit, string, any
@@ -544,6 +565,7 @@ class NPhilter:
             context_switch = <boolean> tells us if the context just switched
             
         """
+
         prev_context = ""
         current_context = ""
         context_switch = False
