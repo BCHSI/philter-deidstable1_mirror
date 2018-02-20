@@ -25,10 +25,10 @@
 			"notes":"this should match gregorian calendar dates such as xxxx-xx-xx, where separators '-' can be any character (.) by Blake Allen"
 		},
 		{
-			"title":"Date of birth 001",
+			"title":"General Date regex",
 			"group":"filter",
 			"regex":"patterns/date003.txt",
-			"notes":"Matches X/X/XX XX/XX/XXXX xx/xx/xx xxxx/xx/xx By Kathleen"
+			"notes":"Matches XXXX-XX-XX XXXX/XX/XX XX/XX/XXXX where any character is allowed for separator"
 		},
 		{
 			"title":"Day month",
@@ -47,6 +47,30 @@
 			"group":"filter_2",
 			"regex":"patterns/digit001.txt",
 			"notes":"matches d{1,4}"
+		},
+		{
+			"title":"year | yo useful for finding words with year, or year old, case insentitve",
+			"group":"filter_2",
+			"regex":"patterns/date006.txt",
+			"notes":"matches 78-year-old 78-YO 78yearOLD"
+		},
+		{
+			"title":"X year, week, month, day old",
+			"group":"filter_2",
+			"regex":"patterns/date007.txt",
+			"notes":"matches 20 year old accounting for the single space"
+		},
+		{
+			"title":"Specific customer number",
+			"group":"filter",
+			"regex":"patterns/mixed001.txt",
+			"notes":"matches **###/####, 2 letters with numbers and a separator"
+		},
+		{
+			"title":"2 letter code followed by numbers",
+			"group":"filter",
+			"regex":"patterns/mixed002.txt",
+			"notes":"matches **# 2 letters and N digits in that order"
 		}
 		
 	***REMOVED***,
