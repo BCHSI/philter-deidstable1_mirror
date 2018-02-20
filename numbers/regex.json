@@ -7,6 +7,12 @@
 			"notes":"This matches the following: 123-456-7890(123) 456-7890123 456 7890123.456.7890+91 (123) 456-7890 123456789 https://stackoverflow.com/a/16699507/1404663"
 		},
 		{
+			"title":"Floating Point Regex 001", 
+			"group":"extract",
+			"regex":"patterns/fp001.txt",
+			"notes":"Matches 1.2, -1.2, +1.2 By Blake Allen"
+		},
+		{
 			"title":"Date regex 001", 
 			"group":"filter",
 			"regex":"patterns/date001.txt",
@@ -19,16 +25,28 @@
 			"notes":"this should match gregorian calendar dates such as xxxx-xx-xx, where separators '-' can be any character (.) by Blake Allen"
 		},
 		{
-			"title":"Floating Point Regex 001", 
-			"group":"extract",
-			"regex":"patterns/fp001.txt",
-			"notes":"Matches 1.2, -1.2, +1.2 By Blake Allen"
-		},
-		{
 			"title":"Date of birth 001",
 			"group":"filter",
 			"regex":"patterns/date003.txt",
 			"notes":"Matches X/X/XX XX/XX/XXXX xx/xx/xx xxxx/xx/xx By Kathleen"
+		},
+		{
+			"title":"Day month",
+			"group":"filter",
+			"regex":"patterns/date004.txt",
+			"notes":"Matches X/XX by Blake"
+		},
+		{
+			"title":"almost date",
+			"group":"filter",
+			"regex":"patterns/date005.txt",
+			"notes":"matches XX/XX/"
+		},
+		{
+			"title":"1-4 digits no context",
+			"group":"filter_2",
+			"regex":"patterns/digit001.txt",
+			"notes":"matches d{1,4}"
 		}
 		
 	***REMOVED***,
