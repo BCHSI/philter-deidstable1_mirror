@@ -18,6 +18,7 @@ class NPhilter:
         self.foutpath = config["foutpath"]
         self.debug = config["debug"]
         self.anno_folder = config["anno_folder"]
+        self.anno_suffix = config["anno_suffix"]
 
         #regex
         self.regexpatternfile = config["regex"]
@@ -82,12 +83,23 @@ class NPhilter:
                 filename = root+f
                 encoding = self.detect_encoding(root+f)
                 txt = open(filename,"r", encoding=encoding['encoding']).read()
+
+                #search each word for a match
+                # words = txt.split()
+                # cursor = 0 #where we are in the text document
+                # for i,w in enumerate(words):
+                #     cursor += len(w)
+                #     if regex.match(w):
+                        
+                #         self.coord_maps[coord_map_name].add(f, m.start(), w)
+                #     cursor += 1 #add in our space offset
                 
+                #find iterations:
                 #print(txt)
                 #print(regex.finditer(txt))
                 #output_txt = re.sub(regex, ".", txt)
-                matches = regex.finditer(txt)
                 
+                matches = regex.finditer(txt)
                 matched = 0
                 for m in matches:
                     matched += 1
@@ -187,6 +199,8 @@ class NPhilter:
         anno_folder="data/i2b2_anno/",
         anno_suffix="_phi_reduced.ano", 
         philtered_folder="data/i2b2_results/",
+        fp_output="data/phi/phi_fp/",
+        fn_output="data/phi/phi_fn/",
         only_digits=True):
         """ calculates the effectiveness of the philtering / extraction
 
@@ -199,6 +213,9 @@ class NPhilter:
         #use config to eval
         if self.anno_folder != None:
             anno_folder = self.anno_folder
+
+        if self.anno_suffix != "":
+            anno_suffix = self.anno_suffix
         
         summary = {
             "total_false_positives":0,
@@ -307,8 +324,8 @@ class NPhilter:
             print("Precision: {:.2%}".format(summary["total_true_positives"]/(summary["total_true_positives"]+summary["total_false_positives"])))
 
         #save the phi we missed
-        json.dump(summary["false_negatives"], open("data/phi/phi_fn.json", "w"), indent=4)
-        json.dump(summary["false_positives"], open("data/phi/phi_fp.json", "w"), indent=4)
+        json.dump(summary["false_negatives"], open(fn_output, "w"), indent=4)
+        json.dump(summary["false_positives"], open(fp_output, "w"), indent=4)
 
 
     def getphi(self, 
@@ -336,6 +353,9 @@ class NPhilter:
         #use config if exists
         if self.anno_folder != None:
             anno_folder = self.anno_folder
+
+        if self.anno_suffix != "":
+            anno_suffix = self.anno_suffix
 
         phi = {}
         word_counts = {}
@@ -462,9 +482,8 @@ class NPhilter:
     def mapphi(self, 
             phi_path="data/phi/phi_counts.json", 
             out_path="data/phi/phi_map.json",  
-            digit_char="#", 
-            string_char="*", 
-            any_char="."):
+            digit_char="`", 
+            string_char="?"):
         """ given all examples of the phi, creates a general representation 
             
             digit_char = this is what digits are replaced by
@@ -486,11 +505,13 @@ class NPhilter:
                 elif re.match("[a-zA-Z]+", c):
                     wordlst.append(string_char)
                 else:
-                    wordlst.append(any_char)
+                    wordlst.append(c)
             word = "".join(wordlst)
             if word not in phi_map:
-                phi_map[word] = 0
-            phi_map[word] += 1
+                phi_map[word] = {'examples':{}}
+            if w not in phi_map[word]['examples']:
+                phi_map[word]['examples'][w] = []
+            phi_map[word]['examples'][w].append('foo.txt') 
 
         #save all representations
         json.dump(phi_map, open(out_path, "w"), indent=4)
@@ -501,9 +522,8 @@ class NPhilter:
             regex_map_name="filter",
             output_file="data/phi/phi_regex.json",
             output_folder="data/phi/phi_regex/",
-            digit_char="#", 
-            string_char="*", 
-            any_char="."):
+            digit_char="`", 
+            string_char="?"):
         """ 
             given a map of phi general types, will create basic regex's to match these types 
 
@@ -528,8 +548,10 @@ class NPhilter:
                         regexlst.append("\d{%s}" % prev_count)
                     elif prev_context == "string":
                         regexlst.append("[a-zA-Z]{%s}" % prev_count)
-                    elif prev_context == "any":
-                        regexlst.append(".{%s}" % prev_count)
+                    else:
+                        #print(c,prev_count,prev_context,context_switch)
+                        regexlst.append("\\"+c+"{%s}" % prev_count)
+
                     
 
             regex_map[pattern] = "".join(regexlst)
@@ -537,21 +559,32 @@ class NPhilter:
             # print(pattern)
             # print("".join(regex))
             # print("#"*30)
+        
+        
+        
+
+        #save patterns locally
+        regex_string = "|".join(regex_map.values())
+        #print(regex_string)
+        self.compiled_patterns[regex_map_name] = re.compile(regex_string)
+
+        #save patterns to disk
         for i,pattern in enumerate(regex_map):
             with open(output_folder+str(i)+".txt", "w") as f:
                 f.write(regex_map[pattern])
         
-        json.dump(regex_map, open(output_file, "w"), indent=4)
+        #save the master pattern
+        with open(output_folder+"001_master.txt", "w") as f:
+                f.write(regex_string)
 
-        #save patterns locally
-        regex_string = "|".join(regex_map.values())
-        self.compiled_patterns[regex_map_name] = re.compile(regex_string)
+
+        json.dump(regex_map, open(output_file, "w"), indent=4)
 
 
 
     def iterate_pattern(self, pattern, 
-            digit_char="#", 
-            string_char="*", 
+            digit_char="`", 
+            string_char="?", 
             any_char="."):
         """ 
             Helper method for gen_regex,
@@ -570,9 +603,11 @@ class NPhilter:
         current_context = ""
         context_switch = False
         count = 0
+        c = ""
 
-        for i,c in enumerate(pattern):
-            
+        for i,char in enumerate(pattern):
+            c = char
+
             if c == digit_char:
                 current_context = "number"
                 if prev_context != current_context:
@@ -581,8 +616,8 @@ class NPhilter:
                 current_context = "string"
                 if prev_context != current_context:
                     context_switch = True
-            elif c == any_char:
-                current_context = "any"
+            else:
+                current_context = c
                 if prev_context != current_context:
                     context_switch = True
                     
