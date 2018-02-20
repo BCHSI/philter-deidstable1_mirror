@@ -195,6 +195,20 @@ class NPhilter:
             detector.close()
         return detector.result
 
+    def phi_context(self, filename, word, word_index, words, context_window=10):
+        """ helper function, creates our phi data type with source file, and context window"""
+
+        left_index = word_index - context_window
+        if left_index < 0:
+            left_index = 0
+
+        right_index = word_index + context_window
+        if right_index >= len(words):
+            right_index = len(words) - 1
+        window = words[left_index:right_index]
+
+        return {"filename":filename, "phi":word, "context":window}
+
     def eval(self,
         anno_folder="data/i2b2_anno/",
         anno_suffix="_phi_reduced.ano", 
@@ -237,19 +251,22 @@ class NPhilter:
                 false_negatives = [] #phi we think are non-phi
                 true_negatives  = [] #non-phi we correctly identify
 
-                if not os.path.exists(root+f):
-                    raise Exception("FILE DOESNT EXIST", root+f)
+                philtered_filename = root+f
+                anno_filename = anno_folder+f.split(".")[0]+anno_suffix
+
+                if not os.path.exists(philtered_filename):
+                    raise Exception("FILE DOESNT EXIST", philtered_filename)
                 
-                if not os.path.exists(anno_folder+f.split(".")[0]+anno_suffix):
-                    print("FILE DOESNT EXIST", anno_folder+f.split(".")[0]+anno_suffix)
+                if not os.path.exists(anno_filename):
+                    print("FILE DOESNT EXIST", anno_filename)
                     continue
 
-                philtered_filename = root+f
+                
                 encoding1 = self.detect_encoding(philtered_filename)
                 philtered = open(philtered_filename,"r", encoding=encoding1['encoding']).read()
                 philtered_words = re.split("\s+", philtered)
 
-                anno_filename = anno_folder+f.split(".")[0]+anno_suffix
+                
                 encoding2 = self.detect_encoding(anno_filename)
                 anno = open(anno_filename,"r", encoding=encoding2['encoding']).read()
                 anno_words = re.split("\s+", anno)
@@ -265,7 +282,8 @@ class NPhilter:
                     anno_dict[w] = 1
                 #print("DICTS", len(anno_dict), len(philtered_dict))
 
-                for i,w in enumerate(philtered_dict):
+                #check what we hit
+                for i,w in enumerate(philtered_words):
 
                     if only_digits:
                         if not re.search("\d+", w):
@@ -277,13 +295,15 @@ class NPhilter:
                     #check if this word is phi
                     if w not in anno_dict:
                         #this is phi we missed
-                        false_negatives.append(w)
+                        phi = self.phi_context(philtered_filename, w, i, philtered_words)
+                        false_negatives.append(phi)
                     else:
-                        #this isn't phi
-                        true_negatives.append(w)
+                        #this isn't phi, and we correctly identified it
+                        phi_tn = self.phi_context(philtered_filename, w, i, philtered_words)
+                        true_negatives.append(phi_tn)
 
-                #check what we miss / hit
-                for i,w in enumerate(anno_dict):
+                #check what we missed
+                for i,w in enumerate(anno_words):
 
                     if only_digits:
                         if not re.search("\d+", w):
@@ -295,10 +315,13 @@ class NPhilter:
                     #check if this word is phi
                     if w not in philtered_dict:
                         #we got something that wasn't phi
-                        false_positives.append(w)
+                        phi_fp = self.phi_context(anno_filename, w, i, anno_words)
+                        false_positives.append(phi_fp)
                     else:
                         #we correctly identified non-phi
-                        true_positives.append(w)
+                        phi_tp = self.phi_context(anno_filename, w, i, anno_words)
+                        true_positives.append(phi_tp)
+                
                 #update summary
                 summary["false_positives"] = summary["false_positives"] + false_positives
                 summary["false_negatives"] = summary["false_negatives"] + false_negatives
@@ -497,9 +520,10 @@ class NPhilter:
 
         phi_map = {}
 
-        for w in d:
+        for phi in d:
             wordlst = []
-            for c in w:
+            phi_word = phi["phi"]
+            for c in phi_word:
                 if re.match("\d+", c):
                     wordlst.append(digit_char)
                 elif re.match("[a-zA-Z]+", c):
@@ -509,9 +533,9 @@ class NPhilter:
             word = "".join(wordlst)
             if word not in phi_map:
                 phi_map[word] = {'examples':{}}
-            if w not in phi_map[word]['examples']:
-                phi_map[word]['examples'][w] = []
-            phi_map[word]['examples'][w].append('foo.txt') 
+            if word not in phi_map[word]['examples']:
+                phi_map[word]['examples'][phi_word] = []
+            phi_map[word]['examples'][phi_word].append(phi["filename"]) 
 
         #save all representations
         json.dump(phi_map, open(out_path, "w"), indent=4)
