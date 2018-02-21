@@ -106,7 +106,7 @@ class NPhilter:
                     matched = 0
                     for m in matches:
                         matched += 1
-                        self.coord_maps***REMOVED***coord_map_name***REMOVED***.add(f, m.start(), m.group(), overlap=True)
+                        self.coord_maps***REMOVED***coord_map_name***REMOVED***.add_extend(f, m.start(), m.start()+len(m.group()))
 
 
 
@@ -179,18 +179,18 @@ class NPhilter:
                         constraint_map.add(filename, m.start(), m.group())
                     
                     last_marker = 0
-                    for coord,val in constraint_map.filecoords(filename):
+                    for start,stop in constraint_map.filecoords(filename):
                         #check if this is in our coord_map
-                        if coord_map.does_overlap(filename, coord, coord+len(val)):
+                        if coord_map.does_overlap(filename, start, stop):
                             #keep this 
-                            contents.append(txt***REMOVED***last_marker:coord+len(val)***REMOVED***)
+                            contents.append(txt***REMOVED***last_marker:stop***REMOVED***)
                         else:
                             #add up to this point
-                            contents.append(txt***REMOVED***last_marker:coord***REMOVED***)
+                            contents.append(txt***REMOVED***last_marker:start***REMOVED***)
                             #remove this item
                             contents.append(replacement)
                         #move our marker forward
-                        last_marker = coord+len(val)
+                        last_marker = stop
 
                     #wrap it up by adding on the remaining values if we haven't hit eof
                     if last_marker < len(txt):
@@ -206,9 +206,9 @@ class NPhilter:
                     txt = open(orig_f,"r", encoding=encoding***REMOVED***'encoding'***REMOVED***).read()
                     
                     last_marker = 0
-                    for coord,val in coord_map.filecoords(filename):
-                        contents.append(txt***REMOVED***last_marker:coord***REMOVED***)
-                        last_marker = coord + len(val)
+                    for start,stop in coord_map.filecoords(filename):
+                        contents.append(txt***REMOVED***last_marker:start***REMOVED***)
+                        last_marker = stop
 
                     #wrap it up by adding on the remaining values if we haven't hit eof
                     if last_marker < len(txt):
@@ -299,16 +299,13 @@ class NPhilter:
 
                     #FIRST PASS
                     #add all of our known phi
-                    for coord,val in FILTER_MAP.filecoords(filename):
-                        INTERSECTION.add(filename, coord, val)
+                    for start,stop in FILTER_MAP.filecoords(filename):
+                        INTERSECTION.add(filename, start, stop)
 
                     #SECOND PASS
                     #use extract map to add new coordinates that don't overlap
                     #anything that doesn't overlap we'll just add anyways
-                    for coord,val in BASELINE_MAP.filecoords(filename):
-
-                        start = coord
-                        stop  = coord+len(val)
+                    for start,stop in BASELINE_MAP.filecoords(filename):
 
                         #check if we overlap with intersection
                         overlap1 = INTERSECTION.does_overlap(filename, start, stop)
@@ -323,7 +320,7 @@ class NPhilter:
 
                         #print(overlap1, overlap2)
                         #we got here, it's not in our filter or extract maps, so let's add it
-                        INTERSECTION.add(filename, coord, val)
+                        INTERSECTION.add(filename, start, stop)
 
                     #Transform step
                     #filters out matches, leaving rest of text
@@ -333,9 +330,9 @@ class NPhilter:
                     txt = open(orig_f,"r", encoding=encoding***REMOVED***'encoding'***REMOVED***).read()
                     
                     last_marker = 0
-                    for coord,val in INTERSECTION.filecoords(filename):
-                        contents.append(txt***REMOVED***last_marker:coord***REMOVED***)
-                        last_marker = coord + len(val)
+                    for start,stop in INTERSECTION.filecoords(filename):
+                        contents.append(txt***REMOVED***last_marker:start***REMOVED***)
+                        last_marker = stop
 
                     #wrap it up by adding on the remaining values if we haven't hit eof
                     if last_marker < len(txt):

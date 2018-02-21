@@ -15,7 +15,7 @@ class CoordinateMap:
 		"""
 		self.map = {}
 
-	def add(self, fn, coord, value, overlap=False):
+	def add(self, fn, start, stop, overlap=False):
 		"""  adds a new coordinate to the coordinate map
 			if overlap is false, this will reject any overlapping hits (usually from multiple regex scan runs)
 		"""
@@ -23,24 +23,42 @@ class CoordinateMap:
 			self.map***REMOVED***fn***REMOVED*** = {}
 
 		if not overlap:
-			if coord in self.map***REMOVED***fn***REMOVED***:
-				raise Exception('adding coordinate multiple times Exception', coord)
+			if start in self.map***REMOVED***fn***REMOVED***:
+				raise Exception('adding coordinate multiple times Exception', start)
 
-			for i in range(coord, coord+len(value)):
+			for i in range(start, stop):
 				if i in self.map***REMOVED***fn***REMOVED***:
-					raise Exception('Overlapping coordinates found', coord, value)
+					raise Exception('Overlapping coordinates found', start, i, fn)
 
-		self.map***REMOVED***fn***REMOVED******REMOVED***coord***REMOVED*** = value
+		self.map***REMOVED***fn***REMOVED******REMOVED***start***REMOVED*** = stop
 		return True, None
 
-	def add_extend(self, fn, coord, value):
+	def add_extend(self, filename, start, stop):
 		"""  adds a new coordinate to the coordinate map
 			if overlaps with another, will extend to the larger size
 		"""
-		if fn not in self.map:
-			self.map***REMOVED***fn***REMOVED*** = {}
+		if filename not in self.map:
+			self.map***REMOVED***filename***REMOVED*** = {}
+		overlaps = self.max_overlap(filename, start, stop)
 
-		self.max_overlap(fn, coord, coord+len(value), value)
+		def clear_overlaps(filename, lst):
+			for o in lst:
+				del self.map***REMOVED***filename***REMOVED******REMOVED***o***REMOVED***"orig"***REMOVED******REMOVED***
+
+		if len(overlaps) == 0:
+			#no overlap, just save these coordinates
+			self.map***REMOVED***filename***REMOVED******REMOVED***start***REMOVED*** = stop
+		elif len(overlaps) == 1:
+			clear_overlaps(filename, overlaps)
+			#1 overlap, save this value
+			o = overlaps***REMOVED***0***REMOVED***
+			self.map***REMOVED***filename***REMOVED******REMOVED***o***REMOVED***"start"***REMOVED******REMOVED*** = o***REMOVED***"stop"***REMOVED***
+		else:
+			clear_overlaps(filename, overlaps)
+			#greater than 1 overlap, by default this is sorted because of scan order
+			o1 = overlaps***REMOVED***0***REMOVED***
+			o2 = overlaps***REMOVED***-1***REMOVED***
+			self.map***REMOVED***filename***REMOVED******REMOVED***o1***REMOVED***"start"***REMOVED******REMOVED*** = o2***REMOVED***"stop"***REMOVED***
 		return True, None
 
 	def remove(self, fn, coord, value):
@@ -109,7 +127,7 @@ class CoordinateMap:
 					overlaps.append({"start":start, "stop":e})
 		return overlaps
 
-	def max_overlap(self, filename, start, stop, val):
+	def max_overlap(self, filename, start, stop):
 		""" given a set of coordinates, will calculate max of all overlaps 
 			perf: stop after we know we won't hit any more
 			perf: use binary search approach
@@ -130,19 +148,6 @@ class CoordinateMap:
 					overlaps.append({"orig":s, "start":start, "stop":e})
 				else:
 					overlaps.append({"orig":s, "start":s, "stop":e})
-
-		if len(overlaps) == 0:
-			self.map***REMOVED***fn***REMOVED******REMOVED***coord***REMOVED*** = value
-		if len(overlaps) == 1:
-			return overlaps***REMOVED***0***REMOVED******REMOVED***"orig"***REMOVED***, overlaps***REMOVED***0***REMOVED******REMOVED***"start"***REMOVED***, overlaps***REMOVED***0***REMOVED******REMOVED***"stop"***REMOVED*** 
-
-		#now we combine our overlaps for a max overlap
-		if len(overlaps) > 1:
-			start = 999
-			stop = 0
-			for o in overlaps:
-
-
 				
 		return overlaps
 
