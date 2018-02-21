@@ -52,10 +52,10 @@ class NPhilter:
 
         #now compile these patterns
         for pat_group in self.patterns:
-            regex_string = "|".join(self.patterns[pat_group])
-            
-            #check if this group type exists
-            self.compiled_patterns[pat_group] = re.compile(regex_string)
+            if pat_group not in self.compiled_patterns:
+                    self.compiled_patterns[pat_group] = []
+            for regex in self.patterns[pat_group]:
+                self.compiled_patterns[pat_group].append(re.compile(regex))
 
             #print(pat_type, self.compiled_patterns[pat_type])
 
@@ -66,10 +66,10 @@ class NPhilter:
         if self.debug:
             print("mapcoords: ", regex_map_name)
 
-        regex = self.compiled_patterns[regex_map_name]
+        regexlst = self.compiled_patterns[regex_map_name]
 
         if self.debug:
-            print(regex)
+            print(regexlst)
         
 
         if not os.path.exists(self.foutpath):
@@ -100,12 +100,13 @@ class NPhilter:
                 #print(txt)
                 #print(regex.finditer(txt))
                 #output_txt = re.sub(regex, ".", txt)
-                
-                matches = regex.finditer(txt)
-                matched = 0
-                for m in matches:
-                    matched += 1
-                    self.coord_maps[coord_map_name].add(f, m.start(), m.group())
+
+                for regex in regexlst:
+                    matches = regex.finditer(txt)
+                    matched = 0
+                    for m in matches:
+                        matched += 1
+                        self.coord_maps[coord_map_name].add(f, m.start(), m.group(), overlap=True)
 
 
 
