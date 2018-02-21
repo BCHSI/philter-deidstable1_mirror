@@ -33,6 +33,16 @@ class CoordinateMap:
 		self.map***REMOVED***fn***REMOVED******REMOVED***coord***REMOVED*** = value
 		return True, None
 
+	def add_extend(self, fn, coord, value):
+		"""  adds a new coordinate to the coordinate map
+			if overlaps with another, will extend to the larger size
+		"""
+		if fn not in self.map:
+			self.map***REMOVED***fn***REMOVED*** = {}
+
+		self.max_overlap(fn, coord, coord+len(value), value)
+		return True, None
+
 	def remove(self, fn, coord, value):
 		""" """
 		if fn not in self.map:
@@ -99,8 +109,42 @@ class CoordinateMap:
 					overlaps.append({"start":start, "stop":e})
 		return overlaps
 
+	def max_overlap(self, filename, start, stop, val):
+		""" given a set of coordinates, will calculate max of all overlaps 
+			perf: stop after we know we won't hit any more
+			perf: use binary search approach
+		"""
+		
+		overlaps = ***REMOVED******REMOVED***
+		for s in self.map***REMOVED***filename***REMOVED***:
+			e = self.map***REMOVED***filename***REMOVED******REMOVED***s***REMOVED***
+			if start >= s and start <= e:
+				#We found an overlap
+				if stop >= e:
+					overlaps.append({"orig":s, "start":s, "stop":stop})
+				else:
+					overlaps.append({"orig":s, "start":s, "stop":e})
+				
+			elif stop >= s and stop <= e:
+				if start <= s:
+					overlaps.append({"orig":s, "start":start, "stop":e})
+				else:
+					overlaps.append({"orig":s, "start":s, "stop":e})
+
+		if len(overlaps) == 0:
+			self.map***REMOVED***fn***REMOVED******REMOVED***coord***REMOVED*** = value
+		if len(overlaps) == 1:
+			return overlaps***REMOVED***0***REMOVED******REMOVED***"orig"***REMOVED***, overlaps***REMOVED***0***REMOVED******REMOVED***"start"***REMOVED***, overlaps***REMOVED***0***REMOVED******REMOVED***"stop"***REMOVED*** 
+
+		#now we combine our overlaps for a max overlap
+		if len(overlaps) > 1:
+			start = 999
+			stop = 0
+			for o in overlaps:
 
 
+				
+		return overlaps
 
 
 	def add_file(self, filename):

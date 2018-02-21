@@ -52,10 +52,10 @@ class NPhilter:
 
         #now compile these patterns
         for pat_group in self.patterns:
-            regex_string = "|".join(self.patterns***REMOVED***pat_group***REMOVED***)
-            
-            #check if this group type exists
-            self.compiled_patterns***REMOVED***pat_group***REMOVED*** = re.compile(regex_string)
+            if pat_group not in self.compiled_patterns:
+                    self.compiled_patterns***REMOVED***pat_group***REMOVED*** = ***REMOVED******REMOVED***
+            for regex in self.patterns***REMOVED***pat_group***REMOVED***:
+                self.compiled_patterns***REMOVED***pat_group***REMOVED***.append(re.compile(regex))
 
             #print(pat_type, self.compiled_patterns***REMOVED***pat_type***REMOVED***)
 
@@ -66,10 +66,10 @@ class NPhilter:
         if self.debug:
             print("mapcoords: ", regex_map_name)
 
-        regex = self.compiled_patterns***REMOVED***regex_map_name***REMOVED***
+        regexlst = self.compiled_patterns***REMOVED***regex_map_name***REMOVED***
 
         if self.debug:
-            print(regex)
+            print(regexlst)
         
 
         if not os.path.exists(self.foutpath):
@@ -100,12 +100,13 @@ class NPhilter:
                 #print(txt)
                 #print(regex.finditer(txt))
                 #output_txt = re.sub(regex, ".", txt)
-                
-                matches = regex.finditer(txt)
-                matched = 0
-                for m in matches:
-                    matched += 1
-                    self.coord_maps***REMOVED***coord_map_name***REMOVED***.add(f, m.start(), m.group())
+
+                for regex in regexlst:
+                    matches = regex.finditer(txt)
+                    matched = 0
+                    for m in matches:
+                        matched += 1
+                        self.coord_maps***REMOVED***coord_map_name***REMOVED***.add(f, m.start(), m.group(), overlap=True)
 
 
 
