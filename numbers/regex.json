@@ -65,7 +65,7 @@
 		{
 			"id":7,
 			"title":"Phone number regex 001",
-			"group":"filter_2", 
+			"group":"filter", 
 			"regex":"patterns/phone001.txt",
 			"notes":"This matches the following: 123-456-7890(123) 456-7890123 456 7890123.456.7890+91 (123) 456-7890 123456789 https://stackoverflow.com/a/16699507/1404663"
 		},
