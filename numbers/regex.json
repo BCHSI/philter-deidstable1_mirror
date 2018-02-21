@@ -126,7 +126,7 @@
 			"title":"almost date",
 			"group":"filter",
 			"regex":"patterns/date005.txt",
-			"notes":"matches X/XX "
+			"notes":"matches [1-12]/XX "
 		},
 		{
 			"id":13,
