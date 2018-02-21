@@ -64,4 +64,50 @@ class CoordinateMap:
 		for coord in coords:
 			yield coord,self.map***REMOVED***filename***REMOVED******REMOVED***coord***REMOVED***
 
+	def does_exist(self, filename, index):
+		""" Simple check to see if this index is a hit (start of coordinates)"""
+		if i in self.map***REMOVED***filename***REMOVED***:
+			return True
+		return False
+
+	def does_overlap(self, filename, start, stop):
+		""" Check if this coordinate overlaps with any existing range"""
+		for i in range(start, stop):
+			if i in self.map***REMOVED***filename***REMOVED***:
+				return True
+		return False
+
+	def calc_overlap(self, filename, start, stop):
+		""" given a set of coordinates, will calculate all overlaps 
+			perf: stop after we know we won't hit any more
+			perf: use binary search approach
+		"""
+		
+		overlaps = ***REMOVED******REMOVED***
+		for s in self.map***REMOVED***filename***REMOVED***:
+			e = self.map***REMOVED***filename***REMOVED******REMOVED***s***REMOVED***
+			if s >= start or s <= stop:
+				#We found an overlap
+				if e <= stop:
+					overlaps.append({"start":s, "stop":e})
+				else:
+					overlaps.append({"start":s, "stop":stop})
+			elif e >= start or e <= stop:
+				if s >= start:
+					overlaps.append({"start":s, "stop":e})
+				else:
+					overlaps.append({"start":start, "stop":e})
+		return overlaps
+
+
+
+
+
+	def add_file(self, filename):
+		""" add our fileto map, may not have any coordinates"""
+		self.map***REMOVED***filename***REMOVED*** = {}
+
+
+
+
 

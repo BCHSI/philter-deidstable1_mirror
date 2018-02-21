@@ -1,76 +1,130 @@
 {
 	"patterns":***REMOVED***
 		{
-			"title":"Phone number regex 001",
-			"group":"filter", 
-			"regex":"patterns/phone001.txt",
-			"notes":"This matches the following: 123-456-7890(123) 456-7890123 456 7890123.456.7890+91 (123) 456-7890 123456789 https://stackoverflow.com/a/16699507/1404663"
+			"id":1,
+			"title":"All digits",
+			"group":"all-digits",
+			"regex":"patterns/alldigits.txt",
+			"notes":"this should match all words with 1 or more digits in them by Blake Allen"
 		},
 		{
+			"id":2,
+			"title":"Floating Point Regex 001", 
+			"group":"extract_test",
+			"regex":"patterns/nothing.txt",
+			"notes":"This shouldn't match anything, useful for testing By Blake Allen"
+		},
+		{
+			"id":3,
 			"title":"Floating Point Regex 001", 
 			"group":"extract",
 			"regex":"patterns/fp001.txt",
 			"notes":"Matches 1.2, -1.2, +1.2 By Blake Allen"
 		},
 		{
+			"id":4,
+			"title":"Medicine dosage matcher", 
+			"group":"extract",
+			"regex":"patterns/extract001.txt",
+			"notes":"Matches 10Mg 180MG 10 MG 1G 1G 1G ... By Blake Allen"
+		},
+		{
+			"id":5,
+			"title":"Vitamin B shortcode matcher", 
+			"group":"extract",
+			"regex":"patterns/extract002.txt",
+			"notes":"Matches known vitamin short codes B1 B12 B6 etc. By Blake Allen"
+		},
+		{
+			"id":6,
+			"title":"Medicine Tablet matcher",
+			"group":"extract",
+			"regex":"patterns/extract003.txt",
+			"notes":"Matches numbers that come before the word tablet(s)"
+		},
+		{
+			"id":7,
+			"title":"Phone number regex 001",
+			"group":"filter", 
+			"regex":"patterns/phone001.txt",
+			"notes":"This matches the following: 123-456-7890(123) 456-7890123 456 7890123.456.7890+91 (123) 456-7890 123456789 https://stackoverflow.com/a/16699507/1404663"
+		},
+		{
+			"id":8,
 			"title":"Date regex 001", 
 			"group":"filter",
 			"regex":"patterns/date001.txt",
 			"notes":" Reg ex that matches all valid dates including leap years. Formats accepted mm/dd/yyyy or mm-dd-yyyy or mm.dd.yyyy https://stackoverflow.com/a/8768241/1404663"
 		},
 		{
+			"id":9,
 			"title":"date regex 002",
 			"group":"filter",
 			"regex":"patterns/date002.txt",
 			"notes":"this should match gregorian calendar dates such as xxxx-xx-xx, where separators '-' can be any character (.) by Blake Allen"
 		},
 		{
+			"id":10,
 			"title":"General Date regex",
 			"group":"filter",
 			"regex":"patterns/date003.txt",
 			"notes":"Matches XXXX-XX-XX XXXX/XX/XX XX/XX/XXXX where any character is allowed for separator"
 		},
 		{
+			"id":11,
 			"title":"Day month",
 			"group":"filter",
 			"regex":"patterns/date004.txt",
 			"notes":"Matches X/XX by Blake"
 		},
 		{
+			"id":12,
 			"title":"almost date",
 			"group":"filter",
 			"regex":"patterns/date005.txt",
 			"notes":"matches XX/XX/"
 		},
 		{
+			"id":13,
 			"title":"1-4 digits no context",
 			"group":"filter_2",
 			"regex":"patterns/digit001.txt",
 			"notes":"matches d{1,4}"
 		},
 		{
+			"id":14,
 			"title":"year | yo useful for finding words with year, or year old, case insentitve",
 			"group":"filter_2",
 			"regex":"patterns/date006.txt",
 			"notes":"matches 78-year-old 78-YO 78yearOLD"
 		},
 		{
+			"id":15,
 			"title":"X year, week, month, day old",
 			"group":"filter_2",
 			"regex":"patterns/date007.txt",
 			"notes":"matches 20 year old accounting for the single space"
 		},
 		{
+			"id":16,
 			"title":"Specific customer number",
 			"group":"filter",
 			"regex":"patterns/mixed001.txt",
 			"notes":"matches **###/####, 2 letters with numbers and a separator"
 		},
 		{
+			"id":17,
 			"title":"2 letter code followed by numbers",
 			"group":"filter",
 			"regex":"patterns/mixed002.txt",
 			"notes":"matches **# 2 letters and N digits in that order"
+		},
+		{
+			"id":18,
+			"title":"Customer ident",
+			"group":"filter",
+			"regex":"patterns/mixed003.txt",
+			"notes":"matches a string of 4 or more digits with 3 or more letters"
 		}
 		
 	***REMOVED***,

@@ -159,7 +159,7 @@ def main():
     output = ''
     if_update = False
 
-    with open('i2b2_anno/anno.dict', 'rb') as fin:
+    with open(args.annotation+'anno.dict', 'rb') as fin:
         allpositive_dict = pickle.load(fin)
 
     if os.path.isfile(file1path) != os.path.isfile(file2path):
