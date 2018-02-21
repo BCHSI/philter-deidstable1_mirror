@@ -721,7 +721,7 @@ class NPhilter:
         #save an ordered list of representations so we can prioritize regex building
         items = ***REMOVED******REMOVED***
         for k in phi_map:
-            items.append({"pattern":k, "exmaples":phi_map***REMOVED***k***REMOVED******REMOVED***"examples"***REMOVED***, "count":len(phi_map***REMOVED***k***REMOVED******REMOVED***"examples"***REMOVED***.keys())})
+            items.append({"pattern":k, "examples":phi_map***REMOVED***k***REMOVED******REMOVED***"examples"***REMOVED***, "count":len(phi_map***REMOVED***k***REMOVED******REMOVED***"examples"***REMOVED***.keys())})
 
         items.sort(key=lambda x: x***REMOVED***"count"***REMOVED***, reverse=True)
         json.dump(items, open(sorted_path, "w"), indent=4)
