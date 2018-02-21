@@ -64,7 +64,7 @@ class NPhilter:
             generating a coordinate map of hits given (dry run doesn't transform)
         """
         if self.debug:
-            print("mapcoords")
+            print("mapcoords: ", regex_map_name)
 
         regex = self.compiled_patterns[regex_map_name]
 
@@ -289,6 +289,7 @@ class NPhilter:
 
                     #this is the map of the final coordinates we'll not be keeping
                     INTERSECTION = CoordinateMap() 
+                    INTERSECTION.add_file(filename)
 
                     contents = []
                     orig_f = self.finpath+filename
