@@ -721,7 +721,7 @@ class NPhilter:
         #save an ordered list of representations so we can prioritize regex building
         items = []
         for k in phi_map:
-            items.append({"pattern":k, "exmaples":phi_map[k]["examples"], "count":len(phi_map[k]["examples"].keys())})
+            items.append({"pattern":k, "examples":phi_map[k]["examples"], "count":len(phi_map[k]["examples"].keys())})
 
         items.sort(key=lambda x: x["count"], reverse=True)
         json.dump(items, open(sorted_path, "w"), indent=4)
