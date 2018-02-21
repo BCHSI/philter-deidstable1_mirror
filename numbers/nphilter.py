@@ -80,6 +80,8 @@ class NPhilter:
 
         for root, dirs, files in tqdm(os.walk(self.finpath)):
             for f in files:
+                self.coord_maps[coord_map_name].add_file(f)
+
                 filename = root+f
                 encoding = self.detect_encoding(root+f)
                 txt = open(filename,"r", encoding=encoding['encoding']).read()
@@ -110,9 +112,10 @@ class NPhilter:
 
     def transform(self, 
             coord_map_name="genfilter", 
-            replacement=" ",
+            replacement=" **PHI** ",
             #replacement="**PHI{}**",
             inverse=False,
+            constraint=re.compile(r"\S*\d+\S*"),
             out_path="",
             in_path=""):
         """ transform
@@ -120,8 +123,8 @@ class NPhilter:
             protected health information reduced to the replacement character
 
             replacement: the replacement string
-            inverse: if true, will replace everything but the matches
-            if false, will replace the matches
+            inverse: if true, will replace everything but the matches provided it matches the constrain param
+            if false, will replace any matches
 
             in_path, location to read unfiltered data, if this is len == 0
             then config is used, if config is 0, raise error
@@ -156,17 +159,44 @@ class NPhilter:
 
         for filename in tqdm(coord_map.keys()):
             with open(foutpath+filename, "w") as f:
-
+                #print(foutpath+filename)
                 if inverse:
-                    #saves only matches
+                    #print("transforming inverse, constraint: ", constraint)
+                    #filter out anything in our constraint map NOT in our coord_map
+
                     contents = []
-                    for coord,val in coord_map.filecoords(filename):
-                        contents.append(val)
-                    if len(contents) == 0:
-                        f.write(replacement)
-                    else:
-                        #inverse, we save only the items within coordinates
-                        f.write(replacement.join(contents))
+                    orig_f = self.finpath+filename
+                    encoding = self.detect_encoding(orig_f)
+                    txt = open(orig_f,"r", encoding=encoding['encoding']).read()
+
+                    #create our constraint map,
+                    #anything in this map, not in our coord_map will be hidden
+                    #usually this is a greedy map with alot of hits
+                    constraint_map = CoordinateMap()
+                    matches = constraint.finditer(txt)
+                    for m in matches:
+                        constraint_map.add(filename, m.start(), m.group())
+                    
+                    last_marker = 0
+                    for coord,val in constraint_map.filecoords(filename):
+                        #check if this is in our coord_map
+                        if coord_map.does_overlap(filename, coord, coord+len(val)):
+                            #keep this 
+                            contents.append(txt[last_marker:coord+len(val)])
+                        else:
+                            #add up to this point
+                            contents.append(txt[last_marker:coord])
+                            #remove this item
+                            contents.append(replacement)
+                        #move our marker forward
+                        last_marker = coord+len(val)
+
+                    #wrap it up by adding on the remaining values if we haven't hit eof
+                    if last_marker < len(txt):
+                        contents.append(txt[last_marker:len(txt)])
+
+                    f.write("".join(contents))
+
                 else:
                     #filters out matches, leaving rest of text
                     contents = []
@@ -184,6 +214,134 @@ class NPhilter:
                         contents.append(txt[last_marker:len(txt)])
 
                     f.write(replacement.join(contents))
+
+    def multi_transform(self, 
+            coord_maps=[
+                {'title':'filter'},
+                {'title':'extract'},
+                {'title':'all-digits'}], 
+            replacement=" **PHI** ",
+            out_path="",
+            in_path=""):
+        """ transforms using multiple maps as input, anything with a higher preference has priority
+
+            turns input files into output files 
+            protected health information reduced to the replacement character
+
+            replacement: the replacement string
+            keep: if true, will keep matches
+            if false, will replace any matches
+
+            in_path, location to read unfiltered data, if this is len == 0
+            then config is used, if config is 0, raise error
+
+            out_path, location to save transformed data, if this is len == 0
+            then config is used, if config is 0, raise error
+
+            perf: move this to a multi-map step, instead of doing heavy lifting ina multi-transform step
+        """
+
+        if self.debug:
+            print("mutli-regex-transform")
+
+        #get input path
+        finpath = in_path
+        if len(finpath) == 0:
+            finpath = self.finpath
+        if len(finpath) == 0:
+            raise Exception("File input path is undefined", finpath)
+        if not os.path.exists(finpath):
+            raise Exception("File input path does not exist", finpath)
+
+        #get output path
+        foutpath = out_path
+        if len(foutpath) == 0:
+            foutpath = self.foutpath
+        if len(foutpath) == 0:
+            raise Exception("File input path is undefined", foutpath)
+        if not os.path.exists(foutpath):
+            raise Exception("File input path does not exist", foutpath)
+
+        #NOTE: this has hardcoded ordering... so priority and order don't make sense here
+        #sort by priority, with highest priority first
+        #coord_maps.sort(key=lambda x: x["priority"], reverse=True)
+
+        #get coordinates for all maps
+        maps = []
+        for m in coord_maps:
+            maps.append(self.coord_maps[m['title']])
+
+        if len(maps) != 3:
+            raise Exception("Multi map mode only works for 3 maps, got", len(maps))
+
+        FILTER_MAP = maps[0]
+        EXTRACT_MAP = maps[1]
+        BASELINE_MAP = maps[2]
+
+        for root, dirs, files in tqdm(os.walk(self.finpath)):
+            for filename in files:
+
+                if filename.split(".")[-1] != "txt":
+                    print("SKIPPING", filename)
+                    continue
+
+                with open(foutpath+filename, "w") as f:
+
+                    #this is the map of the final coordinates we'll not be keeping
+                    INTERSECTION = CoordinateMap() 
+
+                    contents = []
+                    orig_f = self.finpath+filename
+                    encoding = self.detect_encoding(orig_f)
+                    txt = open(orig_f,"r", encoding=encoding['encoding']).read()
+
+                    #FIRST PASS
+                    #add all of our known phi
+                    for coord,val in FILTER_MAP.filecoords(filename):
+                        INTERSECTION.add(filename, coord, val)
+
+                    #SECOND PASS
+                    #use extract map to add new coordinates that don't overlap
+                    #anything that doesn't overlap we'll just add anyways
+                    for coord,val in BASELINE_MAP.filecoords(filename):
+
+                        start = coord
+                        stop  = coord+len(val)
+
+                        #check if we overlap with intersection
+                        overlap1 = INTERSECTION.does_overlap(filename, start, stop)
+                        if overlap1:
+                            #we just ignore this since we assume it's phi and already exists
+                            continue
+
+                        overlap2 = EXTRACT_MAP.does_overlap(filename, start, stop)
+                        if overlap2:
+                            #we won't add this because it's in our extract map
+                            continue
+
+                        #print(overlap1, overlap2)
+                        #we got here, it's not in our filter or extract maps, so let's add it
+                        INTERSECTION.add(filename, coord, val)
+
+                    #Transform step
+                    #filters out matches, leaving rest of text
+                    contents = []
+                    orig_f = self.finpath+filename
+                    encoding = self.detect_encoding(orig_f)
+                    txt = open(orig_f,"r", encoding=encoding['encoding']).read()
+                    
+                    last_marker = 0
+                    for coord,val in INTERSECTION.filecoords(filename):
+                        contents.append(txt[last_marker:coord])
+                        last_marker = coord + len(val)
+
+                    #wrap it up by adding on the remaining values if we haven't hit eof
+                    if last_marker < len(txt):
+                        contents.append(txt[last_marker:len(txt)])
+
+                    f.write(replacement.join(contents))
+
+
 
     def detect_encoding(self, fp):
         detector = UniversalDetector()
@@ -215,6 +373,7 @@ class NPhilter:
         philtered_folder="data/i2b2_results/",
         fp_output="data/phi/phi_fp/",
         fn_output="data/phi/phi_fn/",
+        phi_matcher=re.compile("\s\*\*PHI\*\*\s"),
         only_digits=True):
         """ calculates the effectiveness of the philtering / extraction
 
@@ -285,9 +444,15 @@ class NPhilter:
                 #check what we hit
                 for i,w in enumerate(philtered_words):
 
+                    if phi_matcher.match(w):
+                        continue
+
                     if only_digits:
-                        if not re.search("\d+", w):
+                        if not re.search("\S*\d+\S*", w):
                             #skip non-digit evals
+                            #assume we found a non-phi word
+                            #phi = self.phi_context(philtered_filename, w, i, philtered_words)
+                            #true_negatives.append(phi)
                             continue
 
                     #print(w, w in anno_dict, w in philtered_dict)
@@ -300,14 +465,20 @@ class NPhilter:
                     else:
                         #this isn't phi, and we correctly identified it
                         phi_tn = self.phi_context(philtered_filename, w, i, philtered_words)
-                        true_negatives.append(phi_tn)
+                        true_positives.append(phi_tn)
 
                 #check what we missed
                 for i,w in enumerate(anno_words):
 
+                    if phi_matcher.match(w):
+                        continue
+
                     if only_digits:
-                        if not re.search("\d+", w):
+                        if not re.search("\S*\d+\S*", w):
                             #skip non-digit evals
+                            #assume we got a non-phi word
+                            #phi = self.phi_context(anno_filename, w, i, anno_words)
+                            #true_positives.append(phi)
                             continue
 
                     #print(w, w in anno_dict, w in philtered_dict)
@@ -319,8 +490,9 @@ class NPhilter:
                         false_positives.append(phi_fp)
                     else:
                         #we correctly identified non-phi
-                        phi_tp = self.phi_context(anno_filename, w, i, anno_words)
-                        true_positives.append(phi_tp)
+                        #don't add twice
+                        pass
+                        
                 
                 #update summary
                 summary["false_positives"] = summary["false_positives"] + false_positives
@@ -342,7 +514,9 @@ class NPhilter:
 
         if summary["total_true_positives"]+summary["total_false_negatives"] > 0:
             print("Recall: {:.2%}".format(summary["total_true_positives"]/(summary["total_true_positives"]+summary["total_false_negatives"])))
-                
+        elif summary["total_false_negatives"] == 0:
+            print("Recall: 100%")
+
         if summary["total_true_positives"]+summary["total_false_positives"] > 0:
             print("Precision: {:.2%}".format(summary["total_true_positives"]/(summary["total_true_positives"]+summary["total_false_positives"])))
 
@@ -504,7 +678,8 @@ class NPhilter:
 
     def mapphi(self, 
             phi_path="data/phi/phi_counts.json", 
-            out_path="data/phi/phi_map.json",  
+            out_path="data/phi/phi_map.json",
+            sorted_path="data/phi/phi_sorted.json",  
             digit_char="`", 
             string_char="?"):
         """ given all examples of the phi, creates a general representation 
@@ -535,10 +710,23 @@ class NPhilter:
                 phi_map[word] = {'examples':{}}
             if word not in phi_map[word]['examples']:
                 phi_map[word]['examples'][phi_word] = []
-            phi_map[word]['examples'][phi_word].append(phi["filename"]) 
+            phi_map[word]['examples'][phi_word].append(phi) 
+
+        #save the count of all representations
+        for k in phi_map:
+            phi_map[k]["count"] = len(phi_map[k]["examples"].keys())
 
         #save all representations
         json.dump(phi_map, open(out_path, "w"), indent=4)
+
+        #save an ordered list of representations so we can prioritize regex building
+        items = []
+        for k in phi_map:
+            items.append({"pattern":k, "exmaples":phi_map[k]["examples"], "count":len(phi_map[k]["examples"].keys())})
+
+        items.sort(key=lambda x: x["count"], reverse=True)
+        json.dump(items, open(sorted_path, "w"), indent=4)
+
 
 
     def gen_regex(self, 
