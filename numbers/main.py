@@ -7,7 +7,7 @@ def main():
     ap.add_argument("-i", "--input", default="./data/i2b2_notes/",
                     help="Path to the directory or the file that contains the PHI note, the default is ./data/i2b2_notes/",
                     type=str)
-    ap.add_argument("-a", "--anno", default="./data/i2b2_annotations_with_symbols/",
+    ap.add_argument("-a", "--anno", default="./data/i2b2_anno/",
                     help="Path to the directory or the file that contains the PHI note, the default is ./data/i2b2_notes/",
                     type=str)
     ap.add_argument("-o", "--output", default="./data/i2b2_results/",
@@ -29,7 +29,7 @@ def main():
         "foutpath":args.output,
         "anno_folder":args.anno,
         "regex":args.regex,
-        "anno_suffix":"_all_characters_phi_reduced.ano" #_phi_reduced.ano
+        "anno_suffix":"_phi_reduced.ano" #_phi_reduced.ano | _all_characters_phi_reduced.ano
     }
 
    

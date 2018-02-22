@@ -310,7 +310,8 @@ class NPhilter:
                         #check if we overlap with intersection
                         overlap1 = INTERSECTION.does_overlap(filename, start, stop)
                         if overlap1:
-                            #we just ignore this since we assume it's phi and already exists
+                            #Add and extend
+                            INTERSECTION.add_extend(filename, start, stop)
                             continue
 
                         overlap2 = EXTRACT_MAP.does_overlap(filename, start, stop)
@@ -320,7 +321,7 @@ class NPhilter:
 
                         #print(overlap1, overlap2)
                         #we got here, it's not in our filter or extract maps, so let's add it
-                        INTERSECTION.add(filename, start, stop)
+                        INTERSECTION.add_extend(filename, start, stop)
 
                     #Transform step
                     #filters out matches, leaving rest of text
@@ -364,6 +365,10 @@ class NPhilter:
             right_index = len(words) - 1
         window = words***REMOVED***left_index:right_index***REMOVED***
 
+        #get which patterns matched this word
+        num_spaces = len(words***REMOVED***:word_index***REMOVED***)
+        
+
         return {"filename":filename, "phi":word, "context":window}
 
     def eval(self,
@@ -373,6 +378,7 @@ class NPhilter:
         fp_output="data/phi/phi_fp/",
         fn_output="data/phi/phi_fn/",
         phi_matcher=re.compile("\s\*\*PHI\*\*\s"),
+        pre_process=r":|\-|\/|_|~", #characters we're going to strip from our notes to analyze against anno
         only_digits=True):
         """ calculates the effectiveness of the philtering / extraction
 
@@ -422,6 +428,9 @@ class NPhilter:
                 
                 encoding1 = self.detect_encoding(philtered_filename)
                 philtered = open(philtered_filename,"r", encoding=encoding1***REMOVED***'encoding'***REMOVED***).read()
+                #pre-process notes for comparison with anno punctuation stripped files
+                if len(pre_process) > 0:
+                    philtered = re.sub(pre_process, " ", philtered)
                 philtered_words = re.split("\s+", philtered)
 
                 
