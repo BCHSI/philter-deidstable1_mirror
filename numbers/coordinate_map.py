@@ -14,8 +14,9 @@ class CoordinateMap:
 
 		"""
 		self.map = {}
+		self.coord2pattern = {} #keeps reference of the patterns that matched this coorinate (can be multiple patterns)
 
-	def add(self, fn, start, stop, overlap=False):
+	def add(self, fn, start, stop, overlap=False, pattern=""):
 		"""  adds a new coordinate to the coordinate map
 			if overlap is false, this will reject any overlapping hits (usually from multiple regex scan runs)
 		"""
@@ -31,9 +32,18 @@ class CoordinateMap:
 					raise Exception('Overlapping coordinates found', start, i, fn)
 
 		self.map[fn][start] = stop
+		self.add_pattern(fn,start,stop,pattern)
 		return True, None
 
-	def add_extend(self, filename, start, stop):
+	def add_pattern(self, filename, start, stop, pattern):
+		""" adds this pattern to this start coord """
+		if filename not in self.coord2pattern:
+			self.coord2pattern[filename] = {}
+		if start not in self.coord2pattern[filename]:
+			self.coord2pattern[filename][start] = []
+		self.coord2pattern[filename][start].append(pattern)
+
+	def add_extend(self, filename, start, stop, pattern=""):
 		"""  adds a new coordinate to the coordinate map
 			if overlaps with another, will extend to the larger size
 		"""
@@ -48,17 +58,21 @@ class CoordinateMap:
 		if len(overlaps) == 0:
 			#no overlap, just save these coordinates
 			self.map[filename][start] = stop
+			self.add_pattern(filename,start,stop,pattern)
 		elif len(overlaps) == 1:
 			clear_overlaps(filename, overlaps)
 			#1 overlap, save this value
 			o = overlaps[0]
 			self.map[filename][o["start"]] = o["stop"]
+			self.add_pattern(filename,start,stop,pattern)
 		else:
 			clear_overlaps(filename, overlaps)
 			#greater than 1 overlap, by default this is sorted because of scan order
 			o1 = overlaps[0]
 			o2 = overlaps[-1]
 			self.map[filename][o1["start"]] = o2["stop"]
+			self.add_pattern(filename,start,stop,pattern)
+
 		return True, None
 
 	def remove(self, fn, coord, value):
