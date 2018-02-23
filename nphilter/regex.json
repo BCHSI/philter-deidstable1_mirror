@@ -3,13 +3,13 @@
 		{
 			"id":1,
 			"title":"All digits",
-			"group":"all-digits",
+			"group":"all-digits_2",
 			"regex":"patterns/alldigits.txt",
 			"notes":"this should match all words with 1 or more digits in them by Blake Allen"
 		},
 		{
 			"title":"Match nothing", 
-			"group":"all-digits_2",
+			"group":"all-digits",
 			"regex":"patterns/nothing.txt",
 			"notes":"This shouldn't match anything, useful for testing By Blake Allen"
 		},
