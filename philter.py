@@ -1,5 +1,6 @@
 # De-id script
 # import modules
+
 from __future__ import print_function
 import os
 import sys
@@ -27,6 +28,9 @@ from pkg_resources import resource_filename
 from nltk.tag.perceptron import AveragedPerceptron
 from nltk.tag import SennaTagger
 from nltk.tag import HunposTagger
+
+from nphilter.nphilter import NPhilter
+
 """
 Replace PHI words with a safe filtered word: '**PHI**'
 
@@ -200,7 +204,7 @@ def namecheck(word_output, name_set, screened_words, safe):
     return word_output, name_set, screened_words, safe
 
 
-def filter_task(f, whitelist_dict, foutpath, key_name):
+def filter_task(f, whitelist_dict, foutpath, key_name, NumPhilter):
 
     # pretrain = HunposTagger('hunpos.model', 'hunpos-1.0-linux/hunpos-tag')
     pretrain = SennaTagger('senna')
@@ -244,6 +248,11 @@ def filter_task(f, whitelist_dict, foutpath, key_name):
 
 
         note = fin.read()
+
+        #optional NumPhilter class runs a pre-scan filter here
+        if NumPhilter != None:
+            note = NumPhilter.multi_maptransform(f, note)
+
         note = re.sub(r'=', ' = ', note)
         # Begin Step 1: saluation check
         re_list = pattern_salutation.findall(note)
@@ -587,6 +596,8 @@ def filter_task(f, whitelist_dict, foutpath, key_name):
         # hunpos needs to close session
         #pretrain.close()
         return total_records, phi_containing_records
+        
+        
 
 
 def main():
@@ -608,6 +619,8 @@ def main():
                     help="The key word of the output file name, the default is *_phi_reduced.txt.")
     ap.add_argument("-p", "--process", default=1, type=int,
                     help="The number of processes to run simultaneously, the default is 1.")
+    ap.add_argument("-m", "--multi", default=True,
+                    help="Whether to run in multi-threaded mode or not, default is true. Note this often breaks on OS-X sytems")
     args = ap.parse_args()
 
     finpath = args.input
@@ -647,22 +660,36 @@ def main():
     filepath = os.path.join(foutpath,'filter_summary.txt')
     with open(filepath, 'w') as fout:
         fout.write("")
+    
+    #instantiate a number philterer
+    NumPhilter = NPhilter({"debug":True, "regex":"nphilter/regex.json"})
+    NumPhilter.precompile(path="nphilter/") #precompile any patterns we've added
+
     # start multiprocess
     pool = Pool(processes=process_number)
-
     results_list = ***REMOVED******REMOVED***
     filter_time = time.time()
-
-    # apply_async() allows a worker to begin a new task before other works have completed their current task
-    if os.path.isdir(finpath):
-        if args.recursive:
-            results = ***REMOVED***pool.apply_async(filter_task, (f,)+(whitelist, foutpath, key_name)) for f in glob.glob   (finpath+"/**/*.txt", recursive=True)***REMOVED***
+    if args.multi == True:
+        print("Multithreaded mode ON")
+        # apply_async() allows a worker to begin a new task before other works have completed their current task
+        if os.path.isdir(finpath):
+            if args.recursive:
+                results = ***REMOVED***pool.apply_async(filter_task, (f,)+(whitelist, foutpath, key_name, NumPhilter)) for f in glob.glob   (finpath+"/**/*.txt", recursive=True)***REMOVED***
+            else:
+                results = ***REMOVED***pool.apply_async(filter_task, (f,)+(whitelist, foutpath, key_name, NumPhilter)) for f in glob.glob   (finpath+"/*.txt")***REMOVED***
         else:
-            results = ***REMOVED***pool.apply_async(filter_task, (f,)+(whitelist, foutpath, key_name)) for f in glob.glob   (finpath+"/*.txt")***REMOVED***
+            results = ***REMOVED***pool.apply_async(filter_task, (f,)+(whitelist, foutpath, key_name, NumPhilter)) for f in glob.glob(  finpath)***REMOVED***
     else:
-        results = ***REMOVED***pool.apply_async(filter_task, (f,)+(whitelist, foutpath, key_name)) for f in glob.glob(  finpath)***REMOVED***
+        print("Multithreaded mode OFF")
+        #async create our processes to be run
+        for root, dirs, files in os.walk(finpath):
+            for f in files:
+                #processes.append(multiprocessing.Process(target=filter_task, args=(root+"/"+f, whitelist, foutpath, key_name, output)))
+                results_list.append(filter_task(root+"/"+f, whitelist, foutpath, key_name, NumPhilter))
+
     try:
-        results_list = ***REMOVED***r.get() for r in results***REMOVED***
+        if args.multi:
+            results_list = ***REMOVED***r.get() for r in results***REMOVED***
         total_records, phi_containing_records = zip(*results_list)
         total_records = sum(total_records)
         phi_containing_records = sum(phi_containing_records)
@@ -675,8 +702,8 @@ def main():
         print("No txt file in the input folder.")
         pass
 
-    pool.close()
-    pool.join()
+    # pool.close()
+    # pool.join()
 
 
     # close multiprocess

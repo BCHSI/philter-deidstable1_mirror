@@ -13,26 +13,29 @@ class NPhilter:
 
     """
     def __init__(self, config):
-        self.debug = config***REMOVED***"debug"***REMOVED***
-        self.finpath = config***REMOVED***"finpath"***REMOVED***
-        self.foutpath = config***REMOVED***"foutpath"***REMOVED***
-        self.debug = config***REMOVED***"debug"***REMOVED***
-        self.anno_folder = config***REMOVED***"anno_folder"***REMOVED***
-        self.anno_suffix = config***REMOVED***"anno_suffix"***REMOVED***
-
+        if "debug" in config:
+            self.debug = config***REMOVED***"debug"***REMOVED***
+        if "finpath" in config:
+            self.finpath = config***REMOVED***"finpath"***REMOVED***
+        if "foutpath" in config:
+            self.foutpath = config***REMOVED***"foutpath"***REMOVED***
+        if "anno_folder" in config:
+            self.anno_folder = config***REMOVED***"anno_folder"***REMOVED***
+        if "anno_suffix" in config:
+            self.anno_suffix = config***REMOVED***"anno_suffix"***REMOVED***
         #regex
-        self.regexpatternfile = config***REMOVED***"regex"***REMOVED***
-        self.patterns = {"extract":***REMOVED******REMOVED***, "filter":***REMOVED******REMOVED***} # filtration, extraction and other patterns
-        self.compiled_patterns = {} #maps keyword to actual re compiled pattern object
-        
+        if "regex" in config:
+            self.regexpatternfile = config***REMOVED***"regex"***REMOVED***
+            self.patterns = {"extract":***REMOVED******REMOVED***, "filter":***REMOVED******REMOVED***} # filtration, extraction and other patterns
+            self.compiled_patterns = {} #maps keyword to actual re compiled pattern object
 
-        #data structures
+        #default data structures
         self.coord_maps = {
             'extract':CoordinateMap(),
             'filter':CoordinateMap(),
         }
 
-    def precompile(self):
+    def precompile(self, path=""):
         """ precompiles our regex to speed up pattern matching"""
 
         if self.debug:
@@ -42,7 +45,7 @@ class NPhilter:
         rpf = json.load(open(self.regexpatternfile, "r"))
         for r in rpf***REMOVED***"patterns"***REMOVED***:
 
-            regex = open(r***REMOVED***"regex"***REMOVED***,"r").read().strip()
+            regex = open(path+r***REMOVED***"regex"***REMOVED***,"r").read().strip()
             if r***REMOVED***"group"***REMOVED*** not in self.patterns:
                 self.patterns***REMOVED***r***REMOVED***"group"***REMOVED******REMOVED*** = ***REMOVED***regex***REMOVED***
             else:
@@ -58,6 +61,126 @@ class NPhilter:
                 self.compiled_patterns***REMOVED***pat_group***REMOVED***.append(re.compile(regex))
 
             #print(pat_type, self.compiled_patterns***REMOVED***pat_type***REMOVED***)
+
+    def maptransform(self, 
+            filename, 
+            txt,
+            regex_map_name="extract", 
+            replacement="**PHI**"):
+        """ similar to mapcoords and transform in one,
+        this can take text as input and generate a **phi** outputfile """
+        
+        #get our list of regex's
+        regexlst = self.compiled_patterns***REMOVED***regex_map_name***REMOVED***
+        coord_map = CoordinateMap()
+        coord_map.add_file(filename)
+        #scan our text for hits
+        for regex in regexlst:
+            matches = regex.finditer(txt)
+            matched = 0
+            for m in matches:
+                matched += 1
+                coord_map.add_extend(filename, m.start(), m.start()+len(m.group()))
+
+        #now we transform
+        #filters out matches, leaving rest of text
+        contents = ***REMOVED******REMOVED***
+        last_marker = 0
+        for start,stop in coord_map.filecoords(filename):
+            contents.append(txt***REMOVED***last_marker:start***REMOVED***)
+            last_marker = stop
+        #wrap it up by adding on the remaining values if we haven't hit eof
+        if last_marker < len(txt):
+            contents.append(txt***REMOVED***last_marker:len(txt)***REMOVED***)
+        return replacement.join(contents)
+
+    def multi_maptransform(self, 
+            filename, 
+            txt,
+            coord_maps=***REMOVED***
+                {'title':'filter'},
+                {'title':'extract'},
+                {'title':'all-digits'}***REMOVED***,
+            replacement="**PHI**"):
+        """ similar to mapcoords and transform in one,
+        this can take text as input and generate a **phi** outputfile """
+        
+        #get our list of regex's
+        #get coordinates for all maps
+        maps = ***REMOVED******REMOVED***
+        for m in coord_maps:
+            regexlst = self.compiled_patterns***REMOVED***m***REMOVED***'title'***REMOVED******REMOVED***
+            coord_map = CoordinateMap()
+            #scan our text for hits
+            for regex in regexlst:
+                matches = regex.finditer(txt)
+                matched = 0
+                for m in matches:
+                    matched += 1
+                    coord_map.add_extend(filename, m.start(), m.start()+len(m.group()))
+            maps.append(coord_map )
+
+        if len(maps) != 3:
+            raise Exception("Multi map mode only works for 3 maps, got", len(maps))
+
+        FILTER_MAP = maps***REMOVED***0***REMOVED***
+        EXTRACT_MAP = maps***REMOVED***1***REMOVED***
+        BASELINE_MAP = maps***REMOVED***2***REMOVED***
+
+        #todo: factor this out into the class methods
+        FILTER_MAP.add_file(filename)
+        EXTRACT_MAP.add_file(filename)
+        BASELINE_MAP.add_file(filename)
+
+        if filename.split(".")***REMOVED***-1***REMOVED*** != "txt":
+            raise Exception("File must be .txt file, got:", filename)
+        
+        #this is the map of the final coordinates we'll not be keeping
+        INTERSECTION = CoordinateMap() 
+        INTERSECTION.add_file(filename)
+
+        contents = ***REMOVED******REMOVED***
+        #FIRST PASS
+        #add all of our known phi
+        for start,stop in FILTER_MAP.filecoords(filename):
+            INTERSECTION.add(filename, start, stop)
+
+        #SECOND PASS
+        #use extract map to add new coordinates that don't overlap
+        #anything that doesn't overlap we'll just add anyways
+        for start,stop in BASELINE_MAP.filecoords(filename):
+
+            #check if we overlap with intersection
+            overlap1 = INTERSECTION.does_overlap(filename, start, stop)
+            if overlap1:
+                #Add and extend
+                INTERSECTION.add_extend(filename, start, stop)
+                continue
+
+            overlap2 = EXTRACT_MAP.does_overlap(filename, start, stop)
+            if overlap2:
+                #we won't add this because it's in our extract map
+                continue
+
+            #print(overlap1, overlap2)
+            #we got here, it's not in our filter or extract maps, so let's add it
+            INTERSECTION.add_extend(filename, start, stop)
+
+        #Transform step
+        #filters out matches, leaving rest of text
+        contents = ***REMOVED******REMOVED***
+        
+        last_marker = 0
+        for start,stop in INTERSECTION.filecoords(filename):
+            contents.append(txt***REMOVED***last_marker:start***REMOVED***)
+            last_marker = stop
+
+        #wrap it up by adding on the remaining values if we haven't hit eof
+        if last_marker < len(txt):
+            contents.append(txt***REMOVED***last_marker:len(txt)***REMOVED***)
+
+        return replacement.join(contents)
+
 
     def mapcoords(self, regex_map_name="extract", coord_map_name="extract"):
         """ Runs the set of regex on the input data 
@@ -107,9 +230,6 @@ class NPhilter:
                     for m in matches:
                         matched += 1
                         self.coord_maps***REMOVED***coord_map_name***REMOVED***.add_extend(f, m.start(), m.start()+len(m.group()))
-
-
-
 
     def transform(self, 
             coord_map_name="genfilter", 
@@ -734,8 +854,6 @@ class NPhilter:
 
         items.sort(key=lambda x: x***REMOVED***"count"***REMOVED***, reverse=True)
         json.dump(items, open(sorted_path, "w"), indent=4)
-
-
 
     def gen_regex(self, 
             source_map="data/phi/phi_map.json", 
