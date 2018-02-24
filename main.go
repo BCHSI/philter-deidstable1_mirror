@@ -56,7 +56,7 @@ func main() {
       case f := <- finish_chan:
       	finished += 1
       	log.Println(f, finished, num_files)
-      	if finished >= len(fileList[finished]) {
+      	if finished >= len(fileList) {
       		log.Println("finished", finished)
       		return
       	} else {
