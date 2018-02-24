@@ -172,13 +172,19 @@ pattern_url = re.compile(r'\b((http***REMOVED***s***REMOVED***?://)?(***REMOVED*
 
 # Salutation pattern edits
 pattern_salutation = re.compile(r"""
-(Dr\.|DR\.|Mr\.|MR\.|Mrs\.|MRS\.|Ms\.|MS\.|Miss|MISS|Sir|SIR|Madam|MADAM)\s
+(Dr.?|DR.?|Mr.?|MR.?|Mrs.?|MRS.?|Ms.?|MS.?|Miss|MISS|Sir|SIR|Madam|MADAM)\s
 ((***REMOVED***A-Z***REMOVED***\'?***REMOVED***A-Z***REMOVED***?***REMOVED***\-aA-zZ***REMOVED***+(\s***REMOVED***A-Z***REMOVED***\'?***REMOVED***A-Z***REMOVED***?***REMOVED***\-aA-zZ***REMOVED***+)*)
 )""", re.X)
 
 # MD regex
 pattern_MD = re.compile(r"(***REMOVED***A-Z***REMOVED***\'?***REMOVED***A-Z***REMOVED***?***REMOVED***\-aA-zZ***REMOVED***+(\s***REMOVED***A-Z***REMOVED***\'?***REMOVED***A-Z***REMOVED***?***REMOVED***\-aA-zZ***REMOVED***+)*)(\s|\,\s)(M|m)(\.)?(D|d)(\.)?\b")
 
+
+# Adjacent name, no caps
+pattern_adjacent_names = re.compile(r"((***REMOVED***A-Z***REMOVED***\'?***REMOVED***A-Z***REMOVED***?***REMOVED***\-a-z***REMOVED***+)(\s|\s\,\s)\*\*PHIName\*\*|\*\*PHIName\*\*(\s|\s\,\s)(***REMOVED***A-Z***REMOVED***\'?***REMOVED***A-Z***REMOVED***?***REMOVED***\-a-z***REMOVED***+))")
+
+# Adjacent name, caps (stricter, must be separated by comma)
+pattern_adjacent_names_caps = re.compile(r"((***REMOVED***A-Z***REMOVED***\'?***REMOVED***A-Z***REMOVED***?***REMOVED***\-A-Z***REMOVED***+)(\s\,\s)\*\*PHIName\*\*|\*\*PHIName\*\*(\s\,\s)(***REMOVED***A-Z***REMOVED***\'?***REMOVED***A-Z***REMOVED***?***REMOVED***\-A-Z***REMOVED***+))")
 
 
 # Next to Name PHI pattern
@@ -535,9 +541,14 @@ def filter_task(f, whitelist_dict, blacklist_dict, foutpath, key_name):
                         if (((word***REMOVED***1***REMOVED*** == 'NN' or word***REMOVED***1***REMOVED*** == 'NNP') or
                             ((word***REMOVED***1***REMOVED*** == 'NNS' or word***REMOVED***1***REMOVED*** == 'NNPS') and word_check.istitle()))):
                             if word_check.lower() not in whitelist_dict:
-                                screened_words.append(word_output)
-                                word_output = "**PHI**"
-                                safe = False
+                                if word***REMOVED***0***REMOVED***.lower() in blacklist_dict:
+                                    screened_words.append(word***REMOVED***0***REMOVED***)
+                                    word_output = "**PHIName**"
+                                    safe = False
+                                else:
+                                    screened_words.append(word_output)
+                                    word_output = "**PHI**"
+                                    safe = False
                             else:
                                 # For words that are in whitelist, check to make sure that we have not identified them as names
                                 if ((word_output.istitle() or word_output.isupper()) and
@@ -578,7 +589,7 @@ def filter_task(f, whitelist_dict, blacklist_dict, foutpath, key_name):
                         ##### Kathleen Edit 2/22 #####
                         if word***REMOVED***0***REMOVED***.lower() in blacklist_dict:
                             screened_words.append(word***REMOVED***0***REMOVED***)
-                            word_output = "**PHI**"
+                            word_output = "**PHIName**"
                             safe = False
                         phi_reduced = phi_reduced + ' ' + word_output
                 # Format output for later use by eval.py
@@ -586,7 +597,7 @@ def filter_task(f, whitelist_dict, blacklist_dict, foutpath, key_name):
                     ##### Kathleen Edit 2/22 #####
                     if word***REMOVED***0***REMOVED***.lower() in blacklist_dict:
                         screened_words.append(word***REMOVED***0***REMOVED***)
-                        word_output = "**PHI**"
+                        word_output = "**PHIName**"
                         safe = False
                     if (i > 0 and sent_tag***REMOVED***0***REMOVED******REMOVED***i-1***REMOVED******REMOVED***0***REMOVED******REMOVED***-1***REMOVED*** in string.punctuation and
                         sent_tag***REMOVED***0***REMOVED******REMOVED***i-1***REMOVED******REMOVED***0***REMOVED******REMOVED***-1***REMOVED*** != '*'):
@@ -607,8 +618,21 @@ def filter_task(f, whitelist_dict, blacklist_dict, foutpath, key_name):
                 for item in pattern_middle.findall(phi_reduced):
                 #    print(item***REMOVED***0***REMOVED***)
                     screened_words.append(item***REMOVED***0***REMOVED***)
-            phi_reduced = pattern_middle.sub('**PHI** **PHI**', phi_reduced)
+            phi_reduced = pattern_middle.sub('**PHIName** **PHIName**', phi_reduced)
             
+            ##### Kathleen Edit 2/23 #####
+            if pattern_adjacent_names.findall(phi_reduced) != ***REMOVED******REMOVED***:
+                for item in pattern_adjacent_names.findall(phi_reduced):
+                #    print(item***REMOVED***0***REMOVED***)
+                    screened_words.append(item***REMOVED***1***REMOVED***)
+            phi_reduced = pattern_adjacent_names.sub('**PHIName** **PHIName**', phi_reduced)
+
+            if pattern_adjacent_names_caps.findall(phi_reduced) != ***REMOVED******REMOVED***:
+                for item in pattern_adjacent_names_caps.findall(phi_reduced):
+                #    print(item***REMOVED***0***REMOVED***)
+                    screened_words.append(item***REMOVED***1***REMOVED***)
+            phi_reduced = pattern_adjacent_names_caps.sub('**PHIName** **PHIName**', phi_reduced)
+
             # if pattern_adjacent_names.findall(phi_reduced) != ***REMOVED******REMOVED***:
             #     for item in pattern_middle.findall(phi_reduced):
             #     #    print(item***REMOVED***0***REMOVED***)
@@ -671,7 +695,7 @@ def main():
     ##### Kathleen Edit 2/22 #####
     ap.add_argument("-b", "--blacklist",
                     #default=os.path.join(os.path.dirname(__file__), 'whitelist.pkl'),
-                    default=resource_filename(__name__, 'names_blacklist.pkl'),
+                    default=resource_filename(__name__, 'names_blacklist_top_500.pkl'),
                     help="Path to the names blacklist, the default is phireducer/names_blacklist.pkl")
     ap.add_argument("-n", "--name", default="phi_reduced",
                     help="The key word of the output file name, the default is *_phi_reduced.txt.")
