@@ -503,9 +503,9 @@ def filter_task(f, whitelist_dict, foutpath, key_name, NumPhilter):
                         # remove the speical chars
                     try:
                         # word***REMOVED***1***REMOVED*** is the pos tag of the word
-
-                        if (((word***REMOVED***1***REMOVED*** == 'NN' or word***REMOVED***1***REMOVED*** == 'NNP') or
-                            ((word***REMOVED***1***REMOVED*** == 'NNS' or word***REMOVED***1***REMOVED*** == 'NNPS') and word_check.istitle()))):
+                        #skip anything that's a verb, adjective, adverb or similar: https://stackoverflow.com/a/38264311/1404663
+                        ignore_set = set(***REMOVED***"CC", "CD", "DT", "EX", "IN", "JJ", "JJR", "JJS", "LS", "MD", "PDT", "POS", "RB", "RBR", "RBS", "RP", "TO", "UH", "VB", "VBD", "VBG", "VBN", "VBP", "VBZ", "WDT", "WP", "WRB"***REMOVED***)
+                        if word***REMOVED***1***REMOVED*** not in ignore_set:
                             if word_check.lower() not in whitelist_dict:
                                 screened_words.append(word_output)
                                 word_output = "**PHI**"
