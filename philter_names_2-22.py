@@ -162,7 +162,7 @@ age|year***REMOVED***s-***REMOVED***?\s?old|y.o***REMOVED***.***REMOVED***?
 
 # match middle initial
 # if single char or Jr is surround by 2 phi words, filter. 
-pattern_middle = re.compile(r"""\*\*PHI\*\*,? ((***REMOVED***A-CE-LN-Z***REMOVED******REMOVED***Rr***REMOVED***?|***REMOVED***DM***REMOVED***)\.?) | ((***REMOVED***A-CE-LN-Z***REMOVED******REMOVED***Rr***REMOVED***?|***REMOVED***DM***REMOVED***)\.?),? \*\*PHI\*\*""")
+pattern_middle = re.compile(r"""(\*\*PHI\*\*|\*\*PHIName\*\*),? ((***REMOVED***A-CE-LN-Z***REMOVED******REMOVED***Rr***REMOVED***?|***REMOVED***DM***REMOVED***)\.?) | ((***REMOVED***A-CE-LN-Z***REMOVED******REMOVED***Rr***REMOVED***?|***REMOVED***DM***REMOVED***)\.?),? (\*\*PHI\*\*|\*\*PHIName\*\*)""")
 
 
 # match url
@@ -185,10 +185,6 @@ pattern_adjacent_names = re.compile(r"((***REMOVED***A-Z***REMOVED***\'?***REMOV
 
 # Adjacent name, caps (stricter, must be separated by comma)
 pattern_adjacent_names_caps = re.compile(r"((***REMOVED***A-Z***REMOVED***\'?***REMOVED***A-Z***REMOVED***?***REMOVED***\-A-Z***REMOVED***+)(\s\,\s)\*\*PHIName\*\*|\*\*PHIName\*\*(\s\,\s)(***REMOVED***A-Z***REMOVED***\'?***REMOVED***A-Z***REMOVED***?***REMOVED***\-A-Z***REMOVED***+))")
-
-
-# Next to Name PHI pattern
-#pattern_adjacent_names = re.compile(r"((***REMOVED***A-Z***REMOVED***\'?***REMOVED***A-Z***REMOVED***?***REMOVED***\-aA-zZ***REMOVED***+)(\s|\s\,\s)\*\*PHIName\*\*|\*\*PHIName\*\*(\s|\s\,\s)(***REMOVED***A-Z***REMOVED***\'?***REMOVED***A-Z***REMOVED***?***REMOVED***\-aA-zZ***REMOVED***+))")
 
 # check if the folder exists
 def is_valid_file(parser, arg):
@@ -633,12 +629,6 @@ def filter_task(f, whitelist_dict, blacklist_dict, foutpath, key_name):
                     screened_words.append(item***REMOVED***1***REMOVED***)
             phi_reduced = pattern_adjacent_names_caps.sub('**PHIName** **PHIName**', phi_reduced)
 
-            # if pattern_adjacent_names.findall(phi_reduced) != ***REMOVED******REMOVED***:
-            #     for item in pattern_middle.findall(phi_reduced):
-            #     #    print(item***REMOVED***0***REMOVED***)
-            #         screened_words.append(item***REMOVED***1***REMOVED***)
-            # phi_reduced = pattern_adjacent_names.sub('**PHI** **PHI**', phi_reduced)
-
             ######## Last regex checks ########
             
             # # Run all words words through the names blacklist
@@ -695,7 +685,7 @@ def main():
     ##### Kathleen Edit 2/22 #####
     ap.add_argument("-b", "--blacklist",
                     #default=os.path.join(os.path.dirname(__file__), 'whitelist.pkl'),
-                    default=resource_filename(__name__, 'names_blacklist_top_500.pkl'),
+                    default=resource_filename(__name__, 'names_blacklist.pkl'),
                     help="Path to the names blacklist, the default is phireducer/names_blacklist.pkl")
     ap.add_argument("-n", "--name", default="phi_reduced",
                     help="The key word of the output file name, the default is *_phi_reduced.txt.")
@@ -799,3 +789,6 @@ def main():
 if __name__ == "__main__":
     multiprocessing.freeze_support()  # must run for windows
     main()
+
+
+    
