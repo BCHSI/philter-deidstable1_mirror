@@ -227,7 +227,6 @@ def namecheck(word_output, name_set, screened_words, safe):
 
     return word_output, name_set, screened_words, safe
 
-##### Kathleen Edit 2/22 #####
 def filter_task(f, whitelist_dict, blacklist_dict, foutpath, key_name, NumPhilter):
 
     # pretrain = HunposTagger('hunpos.model', 'hunpos-1.0-linux/hunpos-tag')
@@ -284,7 +283,6 @@ def filter_task(f, whitelist_dict, blacklist_dict, foutpath, key_name, NumPhilte
             name_set = name_set | set(i***REMOVED***1***REMOVED***.split(' '))
             name_set_copy = name_set_copy | set(i***REMOVED***1***REMOVED***.split(' '))
         
-        ##### Kathleen Edit 2/22 #####
         re_list2 = pattern_MD.findall(note)
         for i in re_list2:
             name_set = name_set | set(i***REMOVED***0***REMOVED***.split(' '))

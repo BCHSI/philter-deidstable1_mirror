@@ -19,9 +19,14 @@ def main():
     ap.add_argument("-m", "--mode", default="extract",
                     help="Specific mode we're running, can be filter, extract, multi or generated",
                     type=str)
+    ap.add_argument("-w", "--whitelist",
+                    #default=os.path.join(os.path.dirname(__file__), 'whitelist.pkl'),
+                    default=resource_filename(__name__, '../whitelist.pkl'),
+                    help="Path to the whitelist, the default is phireducer/whitelist.pkl")
 
     args = ap.parse_args()
 
+    whitelist = pickle.load(open(args.whitelist, "rb"))
 
     config = {
         "debug":True,
@@ -29,9 +34,9 @@ def main():
         "foutpath":args.output,
         "anno_folder":args.anno,
         "regex":args.regex,
+        "whitelist":whitelist,
         "anno_suffix":"_phi_reduced.ano" #_phi_reduced.ano | _all_characters_phi_reduced.ano
-    }
-
+    }    
    
     filterer = NPhilter(config)
     filterer.precompile() #precompile any patterns we've added
@@ -50,6 +55,7 @@ def main():
         filterer.mapcoords(regex_map_name="extract", coord_map_name="extract")
         filterer.mapcoords(regex_map_name="filter", coord_map_name="filter")
         filterer.mapcoords(regex_map_name="all-digits", coord_map_name="all-digits")
+        filterer.mapcoords_set(whitelist=whitelist, coord_map_name="whitelist")
         filterer.multi_transform( coord_maps=***REMOVED*** 
                 {'title':'filter'},
                 {'title':'extract'},
@@ -68,7 +74,7 @@ def main():
          raise Exception("MODE DOESN'T EXIST",  args.mode)
 
 
-    filterer.eval(only_digits=True, 
+    filterer.eval(only_digits=False, 
         fp_output="data/phi/phi_fp/phi_fp.json",
         fn_output="data/phi/phi_fn/phi_fn.json")
     #now map the phi we're missing

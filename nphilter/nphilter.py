@@ -461,6 +461,30 @@ class NPhilter:
 
                     f.write(replacement.join(contents))
 
+    def mapcoords_set(self, 
+                    whitelist={}, 
+                    exclude=False, 
+                    pre_process=r":|\-|\/|_|~|\."):
+        """ Creates a coordinate mapping of whitelisted words """
+        for root, dirs, files in tqdm(os.walk(self.finpath)):
+            for filename in files:
+
+                if filename.split(".")***REMOVED***-1***REMOVED*** != "txt":
+                    print("SKIPPING", filename)
+                    continue
+
+                orig_f = self.finpath+filename
+                encoding = self.detect_encoding(orig_f)
+                txt = open(orig_f,"r", encoding=encoding***REMOVED***'encoding'***REMOVED***).read()
+
+                words = txt.split()
+                for w in words:
+                    bare_word = re.sub(pre_process, " ", w)
+                    bare_word = bare_word.lower()
+
+
+
+
 
 
     def detect_encoding(self, fp):
