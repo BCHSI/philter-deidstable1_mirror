@@ -1,6 +1,5 @@
 # De-id script
 # import modules
-
 from __future__ import print_function
 import os
 import sys
@@ -78,12 +77,15 @@ dealing with I/O and multiprocessing
 """
 
 
-nlp = spacy.load('en')  # load spacy english library
+nlp = spacy.load('en_core_web_sm')  # load spacy english library
 # pretrain = SennaTagger('senna')
 
 # configure the regex patterns
 # we're going to want to remove all special characters
 pattern_word = re.compile(r"***REMOVED***^\w+***REMOVED***")
+
+# This regex finds all words in a sentence
+#pattern_any_word = re.compile(r"\b\w+\b")
 
 # Find numbers like SSN/PHONE/FAX
 # 3 patterns: 1. 6 or more digits will be filtered 2. digit followed by - followed by digit. 3. Ignore case of characters
@@ -152,18 +154,40 @@ age|year***REMOVED***s-***REMOVED***?\s?old|y.o***REMOVED***.***REMOVED***?
 )\b""", re.X | re.I)
 
 # match salutation
-pattern_salutation = re.compile(r"""
-(Dr\.|Mr\.|Mrs\.|Ms\.|Miss|Sir|Madam)\s
-((***REMOVED***A-Z***REMOVED***\'?***REMOVED***A-Z***REMOVED***?***REMOVED***\-a-z***REMOVED***+(\s***REMOVED***A-Z***REMOVED***\'?***REMOVED***A-Z***REMOVED***?***REMOVED***\-a-z***REMOVED***+)*)
-)""", re.X)
+# pattern_salutation = re.compile(r"""
+# (Dr\.|DR\.|Mr\.|MR\.|Mrs\.|MRS\.|Ms\.|MS\.|Miss|MISS|Sir|SIR|Madam|MADAM)\s
+# ((***REMOVED***A-Z***REMOVED***\'?***REMOVED***A-Z***REMOVED***?***REMOVED***\-aA-zZ***REMOVED***+(\s***REMOVED***A-Z***REMOVED***\'?***REMOVED***A-Z***REMOVED***?***REMOVED***\-aA-zZ***REMOVED***+)*)
+# )""", re.X)
+
+# Salutation correction
+# Include capitalized names/titles
+#pattern_salutation = re.compile(r"(D(R|r)\.|M(R|r)\.|Mrs\.|MRS\.|M(S|s)\.|Miss|MISS|Sir|SIR|Madam|MADAM)\s((***REMOVED***A-Z***REMOVED***\'?***REMOVED***A-Z***REMOVED***?***REMOVED***\-aA-zZ***REMOVED***+(\s***REMOVED***A-Z***REMOVED***\'?***REMOVED***A-Z***REMOVED***?***REMOVED***\-aA-zZ***REMOVED***+)*))", re.X)
 
 # match middle initial
 # if single char or Jr is surround by 2 phi words, filter. 
-pattern_middle = re.compile(r"""\*\*PHI\*\*,? ((***REMOVED***A-CE-LN-Z***REMOVED******REMOVED***Rr***REMOVED***?|***REMOVED***DM***REMOVED***)\.?) | ((***REMOVED***A-CE-LN-Z***REMOVED******REMOVED***Rr***REMOVED***?|***REMOVED***DM***REMOVED***)\.?),? \*\*PHI\*\*""")
+pattern_middle = re.compile(r"""(\*\*PHI\*\*|\*\*PHIName\*\*),? ((***REMOVED***A-CE-LN-Z***REMOVED******REMOVED***Rr***REMOVED***?|***REMOVED***DM***REMOVED***)\.?) | ((***REMOVED***A-CE-LN-Z***REMOVED******REMOVED***Rr***REMOVED***?|***REMOVED***DM***REMOVED***)\.?),? (\*\*PHI\*\*|\*\*PHIName\*\*)""")
 
 
 # match url
 pattern_url = re.compile(r'\b((http***REMOVED***s***REMOVED***?://)?(***REMOVED***a-zA-Z0-9$-_@.&+:!\*\(\),***REMOVED***)****REMOVED***\.\/***REMOVED***(***REMOVED***a-zA-Z0-9$-_@.&+:\!\*\(\),***REMOVED***)*)\b', re.I)
+
+####### Kathleen Edits 2/22 ######
+
+# Salutation pattern edits
+pattern_salutation = re.compile(r"""
+(Dr.?|DR.?|Mr.?|MR.?|Mrs.?|MRS.?|Ms.?|MS.?|Miss|MISS|Sir|SIR|Madam|MADAM)\s
+((***REMOVED***A-Z***REMOVED***\'?***REMOVED***A-Z***REMOVED***?***REMOVED***\-aA-zZ***REMOVED***+(\s***REMOVED***A-Z***REMOVED***\'?***REMOVED***A-Z***REMOVED***?***REMOVED***\-aA-zZ***REMOVED***+)*)
+)""", re.X)
+
+# MD regex
+pattern_MD = re.compile(r"(***REMOVED***A-Z***REMOVED***\'?***REMOVED***A-Z***REMOVED***?***REMOVED***\-aA-zZ***REMOVED***+(\s***REMOVED***A-Z***REMOVED***\'?***REMOVED***A-Z***REMOVED***?***REMOVED***\-aA-zZ***REMOVED***+)*)(\s|\,\s)(M|m)(\.)?(D|d)(\.)?\b")
+
+
+# Adjacent name, no caps
+pattern_adjacent_names = re.compile(r"((***REMOVED***A-Z***REMOVED***\'?***REMOVED***A-Z***REMOVED***?***REMOVED***\-a-z***REMOVED***+)(\s|\s\,\s)\*\*PHIName\*\*|\*\*PHIName\*\*(\s|\s\,\s)(***REMOVED***A-Z***REMOVED***\'?***REMOVED***A-Z***REMOVED***?***REMOVED***\-a-z***REMOVED***+))")
+
+# Adjacent name, caps (stricter, must be separated by comma)
+pattern_adjacent_names_caps = re.compile(r"((***REMOVED***A-Z***REMOVED***\'?***REMOVED***A-Z***REMOVED***?***REMOVED***\-A-Z***REMOVED***+)(\s\,\s)\*\*PHIName\*\*|\*\*PHIName\*\*(\s\,\s)(***REMOVED***A-Z***REMOVED***\'?***REMOVED***A-Z***REMOVED***?***REMOVED***\-A-Z***REMOVED***+))")
 
 # check if the folder exists
 def is_valid_file(parser, arg):
@@ -180,7 +204,7 @@ def namecheck(word_output, name_set, screened_words, safe):
            # fout.write(word_output + '\n')
         # print('Name:', word_output)
         screened_words.append(word_output)
-        word_output = "**PHI**"
+        word_output = "**PHIName**"
         safe = False
 
     else:
@@ -198,13 +222,13 @@ def namecheck(word_output, name_set, screened_words, safe):
             # print('Name:', word_output)
             screened_words.append(word_output)
             name_set.add(word_output.title())
-            word_output = "**PHI**"
+            word_output = "**PHIName**"
             safe = False
 
     return word_output, name_set, screened_words, safe
 
-
-def filter_task(f, whitelist_dict, foutpath, key_name, NumPhilter):
+##### Kathleen Edit 2/22 #####
+def filter_task(f, whitelist_dict, blacklist_dict, foutpath, key_name, NumPhilter):
 
     # pretrain = HunposTagger('hunpos.model', 'hunpos-1.0-linux/hunpos-tag')
     pretrain = SennaTagger('senna')
@@ -226,6 +250,7 @@ def filter_task(f, whitelist_dict, foutpath, key_name, NumPhilter):
         safe = True
         screened_words = ***REMOVED******REMOVED***
         name_set = set()
+        name_set_copy = set()
         phi_reduced = ''
         '''
         address_indictor = ***REMOVED***'street', 'avenue', 'road', 'boulevard',
@@ -248,7 +273,6 @@ def filter_task(f, whitelist_dict, foutpath, key_name, NumPhilter):
 
 
         note = fin.read()
-
         #optional NumPhilter class runs a pre-scan filter here
         if NumPhilter != None:
             note = NumPhilter.multi_maptransform(f, note)
@@ -258,12 +282,25 @@ def filter_task(f, whitelist_dict, foutpath, key_name, NumPhilter):
         re_list = pattern_salutation.findall(note)
         for i in re_list:
             name_set = name_set | set(i***REMOVED***1***REMOVED***.split(' '))
+            name_set_copy = name_set_copy | set(i***REMOVED***1***REMOVED***.split(' '))
+        
+        ##### Kathleen Edit 2/22 #####
+        re_list2 = pattern_MD.findall(note)
+        for i in re_list2:
+            name_set = name_set | set(i***REMOVED***0***REMOVED***.split(' '))
+            name_set_copy = name_set_copy | set(i***REMOVED***0***REMOVED***.split(' '))
+        
+        name_set_copy = set(***REMOVED***i.lower() for i in name_set_copy***REMOVED***)
 
+        # Add names to blacklist_dict
+        blacklist_dict = blacklist_dict | name_set_copy
+        
         # note_length = len(word_tokenize(note))
         # Begin step 2: split document into sentences
         note = sent_tokenize(note)
 
         for sent in note: # Begin Step 3: Pattern checking
+            
             # postal code check
             # print(sent)
             if pattern_postal.findall(sent) != ***REMOVED******REMOVED***:
@@ -503,13 +540,19 @@ def filter_task(f, whitelist_dict, foutpath, key_name, NumPhilter):
                         # remove the speical chars
                     try:
                         # word***REMOVED***1***REMOVED*** is the pos tag of the word
+
                         #skip anything that's a verb, adjective, adverb or similar: https://stackoverflow.com/a/38264311/1404663
                         ignore_set = set(***REMOVED***"CC", "CD", "DT", "EX", "IN", "JJ", "JJR", "JJS", "LS", "MD", "PDT", "POS", "RB", "RBR", "RBS", "RP", "TO", "UH", "VB", "VBD", "VBG", "VBN", "VBP", "VBZ", "WDT", "WP", "WRB"***REMOVED***)
                         if word***REMOVED***1***REMOVED*** not in ignore_set:
                             if word_check.lower() not in whitelist_dict:
-                                screened_words.append(word_output)
-                                word_output = "**PHI**"
-                                safe = False
+                                if word***REMOVED***0***REMOVED***.lower() in blacklist_dict:
+                                    screened_words.append(word***REMOVED***0***REMOVED***)
+                                    word_output = "**PHIName**"
+                                    safe = False
+                                else:
+                                    screened_words.append(word_output)
+                                    word_output = "**PHI**"
+                                    safe = False
                             else:
                                 # For words that are in whitelist, check to make sure that we have not identified them as names
                                 if ((word_output.istitle() or word_output.isupper()) and
@@ -535,6 +578,7 @@ def filter_task(f, whitelist_dict, foutpath, key_name, NumPhilter):
                                     word_output = "**PHI**"
                                     safe = False
                                     break
+
                         else:
                             word_output, name_set, screened_words, safe = namecheck(word_output, name_set, screened_words, safe)
 
@@ -546,9 +590,19 @@ def filter_task(f, whitelist_dict, foutpath, key_name, NumPhilter):
                             phi_reduced = phi_reduced + word_output
                         #print(word_output)
                     else:
+                        ##### Kathleen Edit 2/22 #####
+                        if word***REMOVED***0***REMOVED***.lower() in blacklist_dict:
+                            screened_words.append(word***REMOVED***0***REMOVED***)
+                            word_output = "**PHIName**"
+                            safe = False
                         phi_reduced = phi_reduced + ' ' + word_output
                 # Format output for later use by eval.py
                 else:
+                    ##### Kathleen Edit 2/22 #####
+                    if word***REMOVED***0***REMOVED***.lower() in blacklist_dict:
+                        screened_words.append(word***REMOVED***0***REMOVED***)
+                        word_output = "**PHIName**"
+                        safe = False
                     if (i > 0 and sent_tag***REMOVED***0***REMOVED******REMOVED***i-1***REMOVED******REMOVED***0***REMOVED******REMOVED***-1***REMOVED*** in string.punctuation and
                         sent_tag***REMOVED***0***REMOVED******REMOVED***i-1***REMOVED******REMOVED***0***REMOVED******REMOVED***-1***REMOVED*** != '*'):
                         phi_reduced = phi_reduced + word_output
@@ -558,7 +612,7 @@ def filter_task(f, whitelist_dict, foutpath, key_name, NumPhilter):
                         phi_reduced = phi_reduced + ' ' + word_output
             #print(phi_reduced)
 
-            # Begin Step 8: check middle initial and month name
+            # Begin Step 8: check middle initial, month name, adjacent names
             if pattern_mname.findall(phi_reduced) != ***REMOVED******REMOVED***:
                 for item in pattern_mname.findall(phi_reduced):
                     screened_words.append(item***REMOVED***0***REMOVED***)
@@ -568,7 +622,30 @@ def filter_task(f, whitelist_dict, foutpath, key_name, NumPhilter):
                 for item in pattern_middle.findall(phi_reduced):
                 #    print(item***REMOVED***0***REMOVED***)
                     screened_words.append(item***REMOVED***0***REMOVED***)
-            phi_reduced = pattern_middle.sub('**PHI** **PHI** ', phi_reduced)
+            phi_reduced = pattern_middle.sub('**PHIName** **PHIName**', phi_reduced)
+            
+            ##### Kathleen Edit 2/23 #####
+            if pattern_adjacent_names.findall(phi_reduced) != ***REMOVED******REMOVED***:
+                for item in pattern_adjacent_names.findall(phi_reduced):
+                #    print(item***REMOVED***0***REMOVED***)
+                    screened_words.append(item***REMOVED***1***REMOVED***)
+            phi_reduced = pattern_adjacent_names.sub('**PHIName** **PHIName**', phi_reduced)
+
+            if pattern_adjacent_names_caps.findall(phi_reduced) != ***REMOVED******REMOVED***:
+                for item in pattern_adjacent_names_caps.findall(phi_reduced):
+                #    print(item***REMOVED***0***REMOVED***)
+                    screened_words.append(item***REMOVED***1***REMOVED***)
+            phi_reduced = pattern_adjacent_names_caps.sub('**PHIName** **PHIName**', phi_reduced)
+
+            ######## Last regex checks ########
+            
+            # # Run all words words through the names blacklist
+            # if pattern_any_word.findall(phi_reduced) != ***REMOVED******REMOVED***:
+            #     for item in pattern_any_word.findall(phi_reduced):
+            #         if item.lower() in blacklist_dict:
+            #             screened_words.append(item)
+            #             phi_reduced = phi_reduced.replace(item, "**PHIName**")
+
         # print(phi_reduced)
 
         if not safe:
@@ -596,8 +673,6 @@ def filter_task(f, whitelist_dict, foutpath, key_name, NumPhilter):
         # hunpos needs to close session
         #pretrain.close()
         return total_records, phi_containing_records
-        
-        
 
 
 def main():
@@ -615,6 +690,11 @@ def main():
                     #default=os.path.join(os.path.dirname(__file__), 'whitelist.pkl'),
                     default=resource_filename(__name__, 'whitelist.pkl'),
                     help="Path to the whitelist, the default is phireducer/whitelist.pkl")
+    ##### Kathleen Edit 2/22 #####
+    ap.add_argument("-b", "--blacklist",
+                    #default=os.path.join(os.path.dirname(__file__), 'whitelist.pkl'),
+                    default=resource_filename(__name__, 'names_blacklist_common.pkl'),
+                    help="Path to the names blacklist, the default is phireducer/names_blacklist.pkl")
     ap.add_argument("-n", "--name", default="phi_reduced",
                     help="The key word of the output file name, the default is *_phi_reduced.txt.")
     ap.add_argument("-p", "--process", default=1, type=int,
@@ -627,6 +707,7 @@ def main():
     foutpath = args.output
     key_name = args.name
     whitelist_file = args.whitelist
+    blacklist_file = args.blacklist
     process_number = args.process
     if_dir = os.path.isdir(finpath)
 
@@ -640,6 +721,7 @@ def main():
         # f_name = re.findall(r'***REMOVED***\w\d***REMOVED***+', tail)***REMOVED***0***REMOVED***
     print('output folder:', foutpath)
     print('Using whitelist:', whitelist_file)
+    print('Using blacklist:', blacklist_file)
     try:
         try:
             with open(whitelist_file, "rb") as fin:
@@ -656,11 +738,28 @@ def main():
     except FileNotFoundError:
         print("No whitelist is found. The script will stop.")
         os._exit(0)
+    ##### Kathleen Edit 2/22 #####
+    try:
+        try:
+            with open(blacklist_file, "rb") as f:
+                blacklist = pickle.load(f)
+        except UnicodeDecodeError:
+            with open(blacklist_file, "rb") as f:
+                blacklist = pickle.load(f, encoding = 'latin1')
+        print('length of blacklist: {}'.format(len(blacklist)))
+        if if_dir:
+            print('phi_reduced file\'s name would be:', "*_"+key_name+".txt")
+        else:
+            print('phi_reduced file\'s name would be:', '.'.join(tail.split('.')***REMOVED***:-1***REMOVED***)+"_"+key_name+".txt")
+        print('run in {} process(es)'.format(process_number))
+    except FileNotFoundError:
+        print("No black,ist is found. The script will stop.")
+        os._exit(0)
 
     filepath = os.path.join(foutpath,'filter_summary.txt')
     with open(filepath, 'w') as fout:
         fout.write("")
-    
+
     #instantiate a number philterer
     NumPhilter = NPhilter({"debug":True, "regex":"nphilter/regex.json"})
     NumPhilter.precompile(path="nphilter/") #precompile any patterns we've added
@@ -674,18 +773,18 @@ def main():
         # apply_async() allows a worker to begin a new task before other works have completed their current task
         if os.path.isdir(finpath):
             if args.recursive:
-                results = ***REMOVED***pool.apply_async(filter_task, (f,)+(whitelist, foutpath, key_name, NumPhilter)) for f in glob.glob   (finpath+"/**/*.txt", recursive=True)***REMOVED***
+                results = ***REMOVED***pool.apply_async(filter_task, (f,)+(whitelist, blacklist, foutpath, key_name, NumPhilter)) for f in glob.glob   (finpath+"/**/*.txt", recursive=True)***REMOVED***
             else:
-                results = ***REMOVED***pool.apply_async(filter_task, (f,)+(whitelist, foutpath, key_name, NumPhilter)) for f in glob.glob   (finpath+"/*.txt")***REMOVED***
+                results = ***REMOVED***pool.apply_async(filter_task, (f,)+(whitelist, blacklist, foutpath, key_name, NumPhilter)) for f in glob.glob   (finpath+"/*.txt")***REMOVED***
         else:
-            results = ***REMOVED***pool.apply_async(filter_task, (f,)+(whitelist, foutpath, key_name, NumPhilter)) for f in glob.glob(  finpath)***REMOVED***
+            results = ***REMOVED***pool.apply_async(filter_task, (f,)+(whitelist, blacklist, foutpath, key_name, NumPhilter)) for f in glob.glob(  finpath)***REMOVED***
     else:
         print("Multithreaded mode OFF")
         #async create our processes to be run
         for root, dirs, files in os.walk(finpath):
             for f in files:
                 #processes.append(multiprocessing.Process(target=filter_task, args=(root+"/"+f, whitelist, foutpath, key_name, output)))
-                results_list.append(filter_task(root+"/"+f, whitelist, foutpath, key_name, NumPhilter))
+                results_list.append(filter_task(root+"/"+f, whitelist, blacklist, foutpath, key_name, NumPhilter))
 
     try:
         if args.multi:
@@ -702,8 +801,8 @@ def main():
         print("No txt file in the input folder.")
         pass
 
-    # pool.close()
-    # pool.join()
+    pool.close()
+    pool.join()
 
 
     # close multiprocess
@@ -712,3 +811,6 @@ def main():
 if __name__ == "__main__":
     multiprocessing.freeze_support()  # must run for windows
     main()
+
+
+    
