@@ -336,13 +336,12 @@ class NPhilter:
                     map_set_name="", 
                     inverse=False,
                     pre_process=r":|\-|\/|_|~",
+                    replacement=" **PHI** ",
                     ignore_set=set([])):
         """ Creates a coordinate mapping of white/black listed words and transforms the text based on that set"""
         coord_map = CoordinateMap()
         filename = "temp"
         coord_map.add_file(filename)
-        encoding = self.detect_encoding(filename)
-        txt = open(orig_f,"r", encoding=encoding['encoding']).read()
 
         if len(map_set_name) > 0:
             map_set = self.sets[map_set_name]
@@ -352,7 +351,7 @@ class NPhilter:
         start_cursor = 0
         end_cursor = 0
 
-        words = re.split(r"(\s+)", txt)
+        words = re.split(r"(\s+)", text)
         cursor = 0 #keeps track of the location of the start of the word in the text
         for i,w in enumerate(words):
 
@@ -396,13 +395,13 @@ class NPhilter:
         contents = []
         
         last_marker = 0
-        for start,stop in INTERSECTION.filecoords(filename):
-            contents.append(txt[last_marker:start])
+        for start,stop in coord_map.filecoords(filename):
+            contents.append(text[last_marker:start])
             last_marker = stop
 
         #wrap it up by adding on the remaining values if we haven't hit eof
-        if last_marker < len(txt):
-            contents.append(txt[last_marker:len(txt)])
+        if last_marker < len(text):
+            contents.append(text[last_marker:len(text)])
 
         return replacement.join(contents)
 
