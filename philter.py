@@ -690,7 +690,6 @@ def main():
                     #default=os.path.join(os.path.dirname(__file__), 'whitelist.pkl'),
                     default=resource_filename(__name__, 'whitelist.pkl'),
                     help="Path to the whitelist, the default is phireducer/whitelist.pkl")
-    ##### Kathleen Edit 2/22 #####
     ap.add_argument("-b", "--blacklist",
                     #default=os.path.join(os.path.dirname(__file__), 'whitelist.pkl'),
                     default=resource_filename(__name__, 'names_blacklist_common.pkl'),
@@ -710,6 +709,8 @@ def main():
     blacklist_file = args.blacklist
     process_number = args.process
     if_dir = os.path.isdir(finpath)
+
+
 
     start_time_all = time.time()
     if if_dir:
@@ -763,6 +764,8 @@ def main():
     #instantiate a number philterer
     NumPhilter = NPhilter({"debug":True, "regex":"nphilter/regex.json"})
     NumPhilter.precompile(path="nphilter/") #precompile any patterns we've added
+    learned_blacklist = json.loads("./false_negatives.json")
+    
 
     # start multiprocess
     pool = Pool(processes=process_number)
