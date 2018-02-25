@@ -343,7 +343,7 @@ class NPhilter:
                     text="",
                     map_set=None,
                     map_set_name="", 
-                    inverse=False,
+                    inverse=False, #when false, we save what's in the set (union)
                     pre_process=r":|\-|\/|_|~",
                     replacement=" **PHI** ",
                     ignore_set=set([])):
@@ -408,15 +408,28 @@ class NPhilter:
         #Transform step
         #filters out matches, leaving rest of text
         contents = []
-        
-        last_marker = 0
-        for start,stop in coord_map.filecoords(filename):
-            contents.append(text[last_marker:start])
-            last_marker = stop
 
-        #wrap it up by adding on the remaining values if we haven't hit eof
-        if last_marker < len(text):
-            contents.append(text[last_marker:len(text)])
+        if inverse:
+
+            last_marker = 0
+            for start,stop in coord_map.filecoords(filename):
+                contents.append(text[last_marker:start])
+                last_marker = stop
+
+            #wrap it up by adding on the remaining values if we haven't hit eof
+            if last_marker < len(text):
+                contents.append(text[last_marker:len(text)])
+
+        else:
+        
+            last_marker = 0
+            for start,stop in coord_map.filecoords(filename):
+                contents.append(text[start:stop])
+                last_marker = stop
+
+            #wrap it up by adding on the remaining values if we haven't hit eof
+            if last_marker < len(text):
+                contents.append(text[last_marker:len(text)])
 
         return replacement.join(contents)
 
