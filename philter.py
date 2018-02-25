@@ -275,6 +275,8 @@ def filter_task(f, whitelist_dict, blacklist_dict, foutpath, key_name, NumPhilte
         #optional NumPhilter class runs a pre-scan filter here
         if NumPhilter != None:
             note = NumPhilter.multi_maptransform(f, note)
+            note = NumPhilter.set_transform(text=note, map_set_name="learned_blacklist")
+
 
         note = re.sub(r'=', ' = ', note)
         # Begin Step 1: saluation check
@@ -649,6 +651,7 @@ def filter_task(f, whitelist_dict, blacklist_dict, foutpath, key_name, NumPhilte
         if not safe:
             phi_containing_records = 1
 
+
         # save phi_reduced file
         filename = '.'.join(tail.split('.')[:-1])+"_" + key_name + ".txt"
         filepath = os.path.join(foutpath, filename)
@@ -763,6 +766,7 @@ def main():
     NumPhilter = NPhilter({"debug":True, "regex":"nphilter/regex.json"})
     NumPhilter.precompile(path="nphilter/") #precompile any patterns we've added
     learned_blacklist = json.loads("./false_negatives.json")
+    NumPhilter.add_set("learned_blacklist", learned_blacklist)
     
 
     # start multiprocess

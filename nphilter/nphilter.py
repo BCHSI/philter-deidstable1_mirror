@@ -35,6 +35,7 @@ class NPhilter:
 
         self.sets = {}
 
+
         #default data structures
         self.coord_maps = {
             'extract':CoordinateMap(),
@@ -327,6 +328,85 @@ class NPhilter:
                     start_cursor = end_cursor
 
         return coord_map
+
+
+    def set_transform(self, 
+                    text="",
+                    map_set=None,
+                    map_set_name="", 
+                    inverse=False,
+                    pre_process=r":|\-|\/|_|~",
+                    ignore_set=set([])):
+        """ Creates a coordinate mapping of white/black listed words and transforms the text based on that set"""
+        coord_map = CoordinateMap()
+        filename = "temp"
+        coord_map.add_file(filename)
+        encoding = self.detect_encoding(filename)
+        txt = open(orig_f,"r", encoding=encoding['encoding']).read()
+
+        if len(map_set_name) > 0:
+            map_set = self.sets[map_set_name]
+
+        keep = []
+        exclude = []
+        start_cursor = 0
+        end_cursor = 0
+
+        words = re.split(r"(\s+)", txt)
+        cursor = 0 #keeps track of the location of the start of the word in the text
+        for i,w in enumerate(words):
+
+            if w in ignore_set:
+                continue
+
+            end_cursor = start_cursor + len(w)
+
+            #remove any punctuation and lowercase
+            clean = re.sub(pre_process, " ", w)
+            clean = clean.lower()
+
+            # Lemmatize the word - first try assuming that the
+            # word is a noun
+            lemm_noun = self.lmtzr.lemmatize(clean, 'n')
+
+            # Then try assuming that the word is a verb
+            lemm_verb = self.lmtzr.lemmatize(clean, 'v')
+
+            # Choose whichever word has the greatest change
+            lemm = lemm_verb if len(lemm_verb) < len(lemm_noun) else lemm_noun
+
+            # Double check - If the cleaned word has less than 3 characters,
+            # then the rule didn't work.  Stick with the noun version
+            if len(lemm) < 3:
+                lemm = lemm_noun
+
+            if lemm in ignore_set:
+                continue
+
+            if inverse == True and lemm not in map_set:
+                #keep things not in set
+                coord_map.add_extend(filename, start_cursor, end_cursor)
+            elif inverse == False and lemm in map_set:
+                coord_map.add_extend(filename, start_cursor, end_cursor)
+
+            start_cursor = end_cursor
+
+        #Transform step
+        #filters out matches, leaving rest of text
+        contents = []
+        
+        last_marker = 0
+        for start,stop in INTERSECTION.filecoords(filename):
+            contents.append(txt[last_marker:start])
+            last_marker = stop
+
+        #wrap it up by adding on the remaining values if we haven't hit eof
+        if last_marker < len(txt):
+            contents.append(txt[last_marker:len(txt)])
+
+        return replacement.join(contents)
+
+        
 
 
     def transform(self, 
