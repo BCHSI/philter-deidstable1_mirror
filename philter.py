@@ -766,7 +766,7 @@ def main():
     #instantiate a number philterer
     NumPhilter = NPhilter({"debug":True, "regex":"nphilter/regex.json"})
     NumPhilter.precompile(path="nphilter/") #precompile any patterns we've added
-    learned_blacklist = json.loads("./false_negatives.json")
+    learned_blacklist = json.load(open("./false_negatives.json", "r"))
     NumPhilter.add_set("learned_blacklist", learned_blacklist)
     
 
