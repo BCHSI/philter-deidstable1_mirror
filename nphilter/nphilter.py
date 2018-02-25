@@ -5,6 +5,7 @@ import os
 import chardet
 from tqdm import tqdm
 from chardet.universaldetector import UniversalDetector
+from nltk.stem.wordnet import WordNetLemmatizer
 from coordinate_map import CoordinateMap
 
 class NPhilter:
@@ -28,6 +29,8 @@ class NPhilter:
             self.regexpatternfile = config["regex"]
             self.patterns = {"extract":[], "filter":[]} # filtration, extraction and other patterns
             self.compiled_patterns = {} #maps keyword to actual re compiled pattern object
+
+        self.lmtzr = WordNetLemmatizer()
 
         #default data structures
         self.coord_maps = {
@@ -230,6 +233,94 @@ class NPhilter:
                     for m in matches:
                         matched += 1
                         self.coord_maps[coord_map_name].add_extend(f, m.start(), m.start()+len(m.group()))
+
+    def map_regex(self, in_path="", regex=None):
+        """ Creates a coordinate map from the pattern on this data
+            generating a coordinate map of hits given (dry run doesn't transform)
+        """
+        coord_map = CoordinateMap()
+        for root, dirs, files in tqdm(os.walk(in_path)):
+            for f in files:
+                coord_map.add_file(f)
+
+                orig_f = in_path+f
+                encoding = self.detect_encoding(orig_f)
+                txt = open(orig_f,"r", encoding=encoding['encoding']).read()
+
+                matches = regex.finditer(txt)
+                matched = 0
+                for m in matches:
+                    matched += 1
+                    coord_map.add_extend(f, m.start(), m.start()+len(m.group()))
+        return coord_map
+
+    def map_set(self, 
+                    in_path="",
+                    map_set={}, 
+                    inverse=False,
+                    pre_process=r":|\-|\/|_|~",
+                    ignore_set=set([])):
+        """ Creates a coordinate mapping of whitelisted words and transforms the text"""
+        coord_map = CoordinateMap()
+
+        for root, dirs, files in tqdm(os.walk(in_path)):
+
+            for filename in files:
+
+                if filename.split(".")[-1] != "txt":
+                    print("SKIPPING", filename)
+                    continue
+
+                orig_f = self.finpath+filename
+                encoding = self.detect_encoding(orig_f)
+                txt = open(orig_f,"r", encoding=encoding['encoding']).read()
+
+                keep = []
+                exclude = []
+                start_cursor = 0
+                end_cursor = 0
+
+                words = re.split(r"(\s+)", txt)
+                cursor = 0 #keeps track of the location of the start of the word in the text
+                for i,w in enumerate(words):
+
+                    if w in ignore_set:
+                        continue
+
+                    end_cursor = start_cursor + len(w)
+
+                    #remove any punctuation and lowercase
+                    clean = re.sub(pre_process, " ", w)
+                    clean = clean.lower()
+
+                    # Lemmatize the word - first try assuming that the
+                    # word is a noun
+                    lemm_noun = self.lmtzr.lemmatize(clean, 'n')
+
+                    # Then try assuming that the word is a verb
+                    lemm_verb = self.lmtzr.lemmatize(clean, 'v')
+
+                    # Choose whichever word has the greatest change
+                    lemm = lemm_verb if len(lemm_verb) < len(lemm_noun) else lemm_noun
+
+                    # Double check - If the cleaned word has less than 3 characters,
+                    # then the rule didn't work.  Stick with the noun version
+                    if len(lemm) < 3:
+                        lemm = lemm_noun
+
+                    if lemm in ignore_set:
+                        continue
+
+                    if inverse == True and lemm not in map_set:
+                        #keep things not in set
+                        coord_map.add_extend(filename, start_cursor, end_cursor)
+                    elif inverse == False and lemm in map_set:
+                        coord_map.add_extend(filename, start_cursor, end_cursor)
+
+                    start_cursor = end_cursor
+
+        return coord_map
+
 
     def transform(self, 
             coord_map_name="genfilter", 
@@ -461,29 +552,90 @@ class NPhilter:
 
                     f.write(replacement.join(contents))
 
-    def mapcoords_set(self, 
-                    whitelist={}, 
-                    exclude=False, 
-                    pre_process=r":|\-|\/|_|~|\."):
-        """ Creates a coordinate mapping of whitelisted words """
-        for root, dirs, files in tqdm(os.walk(self.finpath)):
+    def multi_map_transform(self, 
+            in_path="",
+            out_path="",
+            filter_pass=[],
+            extract_pass=[],
+            final_pass=[],
+            file_suffix="_phi_reduced.txt",
+            replacement=" **PHI** "):
+        """ given a set of maps, will transform text
+            filter pass is any blacklisted words, these are marked as PHI
+            extract pass is any words to extract
+            final pass will ignore anything in the extract map, otherwise will mark as PHI
+        """
+
+        for root, dirs, files in tqdm(os.walk(in_path)):
             for filename in files:
 
                 if filename.split(".")[-1] != "txt":
                     print("SKIPPING", filename)
                     continue
 
-                orig_f = self.finpath+filename
+                orig_f = in_path+filename
                 encoding = self.detect_encoding(orig_f)
                 txt = open(orig_f,"r", encoding=encoding['encoding']).read()
 
-                words = txt.split()
-                for w in words:
-                    bare_word = re.sub(pre_process, " ", w)
-                    bare_word = bare_word.lower()
+                with open(out_path+''.join(filename.split(".")[:-1])+file_suffix, "w") as f:
+                    #this is the map of the final coordinates we'll not be keeping
+                    INTERSECTION = CoordinateMap() 
+                    INTERSECTION.add_file(filename)
+                    EXTRACT_MAP = CoordinateMap()
+                    EXTRACT_MAP.add_file(filename)
 
+                    contents = []
 
+                    #FIRST PASS
+                    #add all of our known phi from our filter maps
+                    for m in filter_pass:
+                        for start,stop in m.filecoords(filename):
+                            INTERSECTION.add_extend(filename, start, stop)
 
+                    #SECOND PASS 
+                    #Create our extraction map
+                    for m in extract_pass:
+                        for start,stop in m.filecoords(filename):
+                            EXTRACT_MAP.add_extend(filename, start, stop)
+
+                    #THIRD PASS
+                    #use baseline map to grab rest of non-phi
+                    #anything that overlaps with extraction we ignore
+                    for m in final_pass:
+                        for start,stop in m.filecoords(filename):
+
+                            #check if we overlap with intersection
+                            overlap1 = INTERSECTION.does_overlap(filename, start, stop)
+                            if overlap1:
+                                #add and extend
+                                INTERSECTION.add_extend(filename, start, stop)
+                                continue
+
+                            overlap2 = EXTRACT_MAP.does_overlap(filename, start, stop)
+                            if overlap2:
+                                #we won't add this because it's in our extract map
+                                continue
+
+                            #print(overlap1, overlap2)
+                            #we got here, it's not in our filter or extract maps, so let's add it
+                            INTERSECTION.add_extend(filename, start, stop)
+
+                    #Transform step
+                    #filters out matches, leaving rest of text
+                    contents = []
+                    
+                    last_marker = 0
+                    for start,stop in INTERSECTION.filecoords(filename):
+                        contents.append(txt[last_marker:start])
+                        last_marker = stop
+
+                    #wrap it up by adding on the remaining values if we haven't hit eof
+                    if last_marker < len(txt):
+                        contents.append(txt[last_marker:len(txt)])
+
+                    f.write(replacement.join(contents))
+
+    
 
 
 
@@ -523,7 +675,7 @@ class NPhilter:
         fn_output="data/phi/phi_fn/",
         phi_matcher=re.compile("\s\*\*PHI\*\*\s"),
         pre_process=r":|\-|\/|_|~", #characters we're going to strip from our notes to analyze against anno
-        only_digits=True):
+        only_digits=False):
         """ calculates the effectiveness of the philtering / extraction
 
             only_digits = <boolean> will constrain evaluation on philtering of only digit types
@@ -536,8 +688,8 @@ class NPhilter:
         if self.anno_folder != None:
             anno_folder = self.anno_folder
 
-        if self.anno_suffix != "":
-            anno_suffix = self.anno_suffix
+        # if self.anno_suffix != "":
+        #     anno_suffix = self.anno_suffix
         
         summary = {
             "total_false_positives":0,
@@ -551,7 +703,10 @@ class NPhilter:
         }
 
         for root, dirs, files in os.walk(philtered_folder):
+
             for f in files:
+
+                
 
                 #local values per file
                 false_positives = [] #non-phi we think are phi
@@ -560,7 +715,10 @@ class NPhilter:
                 true_negatives  = [] #non-phi we correctly identify
 
                 philtered_filename = root+f
-                anno_filename = anno_folder+f.split(".")[0]+anno_suffix
+                anno_filename = anno_folder+''.join(f.split(".")[0])+anno_suffix
+
+                # if len(anno_suffix) > 0:
+                #     anno_filename = anno_folder+f.split(".")[0]+anno_suffix
 
                 if not os.path.exists(philtered_filename):
                     raise Exception("FILE DOESNT EXIST", philtered_filename)
@@ -717,9 +875,15 @@ class NPhilter:
                
                 if not os.path.exists(root+f):
                     raise Exception("FILE DOESNT EXIST", root+f)
-                if not os.path.exists(anno_folder+f.split(".")[0]+anno_suffix):
-                    print("FILE DOESNT EXIST", anno_folder+f.split(".")[0]+anno_suffix)
-                    continue
+
+                if len(anno_suffix) > 0:
+                    if not os.path.exists(anno_folder+f.split(".")[0]+anno_suffix):
+                        print("FILE DOESNT EXIST", anno_folder+f.split(".")[0]+anno_suffix)
+                        continue
+                else:
+                    if not os.path.exists(anno_folder+f):
+                        print("FILE DOESNT EXIST", anno_folder+f)
+                        continue
 
                 orig_filename = root+f
                 encoding1 = self.detect_encoding(orig_filename)
@@ -860,7 +1024,7 @@ class NPhilter:
             word = "".join(wordlst)
             if word not in phi_map:
                 phi_map[word] = {'examples':{}}
-            if word not in phi_map[word]['examples']:
+            if phi_word not in phi_map[word]['examples']:
                 phi_map[word]['examples'][phi_word] = []
             phi_map[word]['examples'][phi_word].append(phi) 
 
