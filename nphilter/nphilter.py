@@ -29,6 +29,8 @@ class NPhilter:
             self.patterns = {"extract":***REMOVED******REMOVED***, "filter":***REMOVED******REMOVED***} # filtration, extraction and other patterns
             self.compiled_patterns = {} #maps keyword to actual re compiled pattern object
 
+        self.sets = {}
+
         #default data structures
         self.coord_maps = {
             'extract':CoordinateMap(),
@@ -61,6 +63,10 @@ class NPhilter:
                 self.compiled_patterns***REMOVED***pat_group***REMOVED***.append(re.compile(regex))
 
             #print(pat_type, self.compiled_patterns***REMOVED***pat_type***REMOVED***)
+
+    def add_set(self, set_name, m):
+        """ add a set of words, can be whitelist or blacklist"""
+        self.sets***REMOVED***set_name***REMOVED*** = m
 
     def maptransform(self, 
             filename, 
