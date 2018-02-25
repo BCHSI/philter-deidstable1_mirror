@@ -30,7 +30,10 @@ class NPhilter:
             self.patterns = {"extract":[], "filter":[]} # filtration, extraction and other patterns
             self.compiled_patterns = {} #maps keyword to actual re compiled pattern object
 
+
         self.lmtzr = WordNetLemmatizer()
+
+        self.sets = {}
 
         #default data structures
         self.coord_maps = {
@@ -64,6 +67,10 @@ class NPhilter:
                 self.compiled_patterns[pat_group].append(re.compile(regex))
 
             #print(pat_type, self.compiled_patterns[pat_type])
+
+    def add_set(self, set_name, m):
+        """ add a set of words, can be whitelist or blacklist"""
+        self.sets[set_name] = m
 
     def maptransform(self, 
             filename, 
