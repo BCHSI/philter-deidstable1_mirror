@@ -295,6 +295,8 @@ class NPhilter:
                     if w in ignore_set:
                         continue
 
+                    end_cursor = start_cursor + len(w)
+
                     #check if the basic word is in the set first,
                     if inverse == False and w in map_set:
                         coord_map.add_extend(filename, start_cursor, end_cursor)
@@ -302,7 +304,7 @@ class NPhilter:
                         continue
 
 
-                    end_cursor = start_cursor + len(w)
+                    
 
                     #remove any punctuation and lowercase
                     clean = re.sub(pre_process, " ", w)
@@ -366,6 +368,12 @@ class NPhilter:
                 continue
 
             end_cursor = start_cursor + len(w)
+
+             #check if the basic word is in the set first,
+            if inverse == False and w in map_set:
+                coord_map.add_extend(filename, start_cursor, end_cursor)
+                start_cursor = end_cursor
+                continue
 
             #remove any punctuation and lowercase
             clean = re.sub(pre_process, " ", w)
