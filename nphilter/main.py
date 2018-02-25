@@ -1,4 +1,6 @@
-import argparse, re
+import argparse
+import re 
+import pickle
 from nphilter import NPhilter
 
 def main():
@@ -16,17 +18,19 @@ def main():
     ap.add_argument("-re", "--regex", default="./regex.json",
                     help="Path to the file where our regex patterns live",
                     type=str)
-    ap.add_argument("-m", "--mode", default="extract",
+    ap.add_argument("-m", "--mode", default="total_recall",
                     help="Specific mode we're running, can be filter, extract, multi or generated",
                     type=str)
     ap.add_argument("-w", "--whitelist",
                     #default=os.path.join(os.path.dirname(__file__), 'whitelist.pkl'),
-                    default=resource_filename(__name__, '../whitelist.pkl'),
+                    default='../whitelist.pkl',
                     help="Path to the whitelist, the default is phireducer/whitelist.pkl")
 
     args = ap.parse_args()
 
     whitelist = pickle.load(open(args.whitelist, "rb"))
+
+
 
     config = {
         "debug":True,
@@ -70,6 +74,33 @@ def main():
         filterer.gen_regex(regex_map_name="genfilter", source_map="data/phi/phi_number_map.json")
         filterer.mapcoords(regex_map_name="genfilter", coord_map_name="genfilter")
         filterer.transform(coord_map_name="genfilter")
+    elif args.mode == "total_recall":
+        
+        filter_maps = []
+        extract_maps = []
+        baseline_maps = []
+
+        # for k in whitelist:
+        #     print(k)
+
+        whitelist_map = filterer.map_set(in_path=args.input,
+                    map_set=whitelist, 
+                    inverse=False,
+                    ignore_set=set([]))
+        extract_maps.append(whitelist_map)
+
+        #block_everything 
+        baseline_maps.append(filterer.map_regex(in_path=args.input,
+                    regex=re.compile("\w+")))
+
+        filterer.multi_map_transform(
+            in_path=args.input,
+            out_path=args.output,
+            filter_pass=filter_maps,
+            extract_pass=extract_maps,
+            final_pass=baseline_maps,
+            replacement=" **PHI** ")
+
     else:
          raise Exception("MODE DOESN'T EXIST",  args.mode)
 
