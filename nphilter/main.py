@@ -3,6 +3,7 @@ import re
 import pickle
 from nphilter import NPhilter
 import gzip
+import json
 
 def main():
     # get input/output/filename
@@ -24,7 +25,7 @@ def main():
                     type=str)
     ap.add_argument("-w", "--whitelist",
                     #default=os.path.join(os.path.dirname(__file__), 'whitelist.pkl'),
-                    default='../whitelist.pkl',
+                    default='../whitelist_v_91.pkl',
                     help="Path to the whitelist, the default is phireducer/whitelist.pkl")
 
     args = ap.parse_args()
@@ -34,11 +35,13 @@ def main():
 
     whitelist = {}
 
-    try:
-        whitelist = pickle.load(open(args.whitelist, "rb"))
-    except:
-         with open(args.whitelist, "rb") as fin:
-            whitelist = pickle.load(fin, encoding = 'latin1')
+    whitelist = pickle.load(open(args.whitelist, "rb"))
+
+    # try:
+    #     whitelist = pickle.load(open(args.whitelist, "rb"))
+    # except:
+    #      with open(args.whitelist, "rb") as fin:
+    #         whitelist = pickle.load(fin, encoding = 'latin1')
 
 
     config = {
@@ -92,11 +95,12 @@ def main():
         # for k in whitelist:
         #     print(k)
 
+        #whitelist1 = json.loads(open("data/i2b2_anno_word_whitelist.json", "r").read())
 
         filterer.map_transform_pos(in_path=args.input,
                     foutpath=args.output,
                     pre_process=r":|\-|\/|_|~",
-                    whitelist=whitelist,
+                    whitelists=[whitelist],
                     phi_word="**PHI**",
                     string_set=set(["NNP", "NN"]),
                     num_set=set(["CD"]))
