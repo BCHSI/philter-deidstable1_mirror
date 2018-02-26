@@ -361,19 +361,19 @@ class NPhilter:
                 contents = ***REMOVED******REMOVED***
                 for pos in pos_list:
                     
-                    if pos***REMOVED***1***REMOVED*** in string_set:
+                    
+                    if re.search("\d+", pos***REMOVED***0***REMOVED***):
+
+                        #todo: use regex's to keep some numeric data
+                        contents.append(phi_word)
+                    else:
+                        
                         word = re.sub(pre_process, "", pos***REMOVED***0***REMOVED***.lower().strip())
                         for whitelist in whitelists:
                             if word in whitelist:
                                 contents.append(pos***REMOVED***0***REMOVED***)
                                 continue
                         contents.append(phi_word)
-                    elif pos***REMOVED***1***REMOVED*** in num_set or re.search("\d+", pos***REMOVED***0***REMOVED***):
-
-                        #todo: use regex's to keep some data
-                        contents.append(phi_word)
-                    else:
-                        contents.append(pos***REMOVED***0***REMOVED***)
 
                 with open(foutpath+filename.split(".")***REMOVED***0***REMOVED***+"_phi_reduced.txt", "w") as f:
                     f.write(" ".join(contents))
