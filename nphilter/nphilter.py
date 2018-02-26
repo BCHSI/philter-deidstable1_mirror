@@ -302,9 +302,6 @@ class NPhilter:
                         start_cursor = end_cursor
                         continue
 
-
-                    
-
                     #remove any punctuation and lowercase
                     clean = re.sub(pre_process, " ", w)
                     clean = clean.lower()
@@ -339,8 +336,8 @@ class NPhilter:
 
     def map_transform_pos(self, in_path="",
                     foutpath="",
-                    pre_process=r":|\-|\/|_|~",
-                    whitelist={},
+                    pre_process=r":***REMOVED***^a-zA-Z0-9***REMOVED***",
+                    whitelists=***REMOVED***{}***REMOVED***,
                     phi_word="**PHI**",
                     string_set=set(***REMOVED***"NNP", "NN"***REMOVED***),
                     num_set=set(***REMOVED***"CD"***REMOVED***)):
@@ -357,22 +354,28 @@ class NPhilter:
                 orig_f = self.finpath+filename
                 encoding = self.detect_encoding(orig_f)
                 txt = open(orig_f,"r", encoding=encoding***REMOVED***'encoding'***REMOVED***).read()
-                pre_process = re.compile(r":|\-|\/|_|~")
-                txt = re.sub(pre_process, " ",txt)
+                
+                #txt = re.sub(pre_process, " ",txt)
                 pos_list = nltk.pos_tag(nltk.word_tokenize(txt))
 
                 contents = ***REMOVED******REMOVED***
                 for pos in pos_list:
+                    
                     if pos***REMOVED***1***REMOVED*** in string_set:
-                        if pos not in whitelist:
-                            contents.append(phi_word)
-                        else:
-                            contents.append(pos***REMOVED***0***REMOVED***)
-                    elif pos***REMOVED***1***REMOVED*** in num_set:
+                        word = re.sub(pre_process, "", pos***REMOVED***0***REMOVED***.lower().strip())
+                        for whitelist in whitelists:
+                            if word in whitelist:
+                                contents.append(pos***REMOVED***0***REMOVED***)
+                                continue
+                        contents.append(phi_word)
+                    elif pos***REMOVED***1***REMOVED*** in num_set or re.search("\d+", pos***REMOVED***0***REMOVED***):
+
                         #todo: use regex's to keep some data
                         contents.append(phi_word)
+                    else:
+                        contents.append(pos***REMOVED***0***REMOVED***)
 
-                with open(foutpath+filename, "w") as f:
+                with open(foutpath+filename.split(".")***REMOVED***0***REMOVED***+"_phi_reduced.txt", "w") as f:
                     f.write(" ".join(contents))
 
 
@@ -820,7 +823,7 @@ class NPhilter:
 
     def eval(self,
         anno_folder="data/i2b2_anno/",
-        anno_suffix="_phi_reduced.ano", 
+        anno_suffix=".ano", 
         philtered_folder="data/i2b2_results/",
         fp_output="data/phi/phi_fp/",
         fn_output="data/phi/phi_fn/",
