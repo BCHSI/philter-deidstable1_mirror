@@ -302,9 +302,6 @@ class NPhilter:
                         start_cursor = end_cursor
                         continue
 
-
-                    
-
                     #remove any punctuation and lowercase
                     clean = re.sub(pre_process, " ", w)
                     clean = clean.lower()
@@ -339,8 +336,8 @@ class NPhilter:
 
     def map_transform_pos(self, in_path="",
                     foutpath="",
-                    pre_process=r":|\-|\/|_|~",
-                    whitelist={},
+                    pre_process=r":[^a-zA-Z0-9]",
+                    whitelists=[{}],
                     phi_word="**PHI**",
                     string_set=set(["NNP", "NN"]),
                     num_set=set(["CD"])):
@@ -357,22 +354,28 @@ class NPhilter:
                 orig_f = self.finpath+filename
                 encoding = self.detect_encoding(orig_f)
                 txt = open(orig_f,"r", encoding=encoding['encoding']).read()
-                pre_process = re.compile(r":|\-|\/|_|~")
-                txt = re.sub(pre_process, " ",txt)
+                
+                #txt = re.sub(pre_process, " ",txt)
                 pos_list = nltk.pos_tag(nltk.word_tokenize(txt))
 
                 contents = []
                 for pos in pos_list:
+                    
                     if pos[1] in string_set:
-                        if pos not in whitelist:
-                            contents.append(phi_word)
-                        else:
-                            contents.append(pos[0])
-                    elif pos[1] in num_set:
+                        word = re.sub(pre_process, "", pos[0].lower().strip())
+                        for whitelist in whitelists:
+                            if word in whitelist:
+                                contents.append(pos[0])
+                                continue
+                        contents.append(phi_word)
+                    elif pos[1] in num_set or re.search("\d+", pos[0]):
+
                         #todo: use regex's to keep some data
                         contents.append(phi_word)
+                    else:
+                        contents.append(pos[0])
 
-                with open(foutpath+filename, "w") as f:
+                with open(foutpath+filename.split(".")[0]+"_phi_reduced.txt", "w") as f:
                     f.write(" ".join(contents))
 
 
@@ -820,7 +823,7 @@ class NPhilter:
 
     def eval(self,
         anno_folder="data/i2b2_anno/",
-        anno_suffix="_phi_reduced.ano", 
+        anno_suffix=".ano", 
         philtered_folder="data/i2b2_results/",
         fp_output="data/phi/phi_fp/",
         fn_output="data/phi/phi_fn/",
