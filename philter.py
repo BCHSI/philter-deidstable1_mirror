@@ -693,7 +693,7 @@ def main():
     ##### Kathleen Edit 2/22 #####
     ap.add_argument("-b", "--blacklist",
                     #default=os.path.join(os.path.dirname(__file__), 'whitelist.pkl'),
-                    default=resource_filename(__name__, 'names_blacklist_common.pkl'),
+                    default=resource_filename(__name__, 'names_blacklist_top_500.pkl'),
                     help="Path to the names blacklist, the default is phireducer/names_blacklist.pkl")
     ap.add_argument("-n", "--name", default="phi_reduced",
                     help="The key word of the output file name, the default is *_phi_reduced.txt.")
