@@ -361,19 +361,19 @@ class NPhilter:
                 contents = []
                 for pos in pos_list:
                     
-                    if pos[1] in string_set:
+                    
+                    if re.search("\d+", pos[0]):
+
+                        #todo: use regex's to keep some numeric data
+                        contents.append(phi_word)
+                    else:
+                        
                         word = re.sub(pre_process, "", pos[0].lower().strip())
                         for whitelist in whitelists:
                             if word in whitelist:
                                 contents.append(pos[0])
                                 continue
                         contents.append(phi_word)
-                    elif pos[1] in num_set or re.search("\d+", pos[0]):
-
-                        #todo: use regex's to keep some data
-                        contents.append(phi_word)
-                    else:
-                        contents.append(pos[0])
 
                 with open(foutpath+filename.split(".")[0]+"_phi_reduced.txt", "w") as f:
                     f.write(" ".join(contents))

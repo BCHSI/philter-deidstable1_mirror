@@ -25,7 +25,7 @@ def main():
                     type=str)
     ap.add_argument("-w", "--whitelist",
                     #default=os.path.join(os.path.dirname(__file__), 'whitelist.pkl'),
-                    default='../whitelist_v_91.pkl',
+                    default='../whitelist.pkl',
                     help="Path to the whitelist, the default is phireducer/whitelist.pkl")
 
     args = ap.parse_args()
