@@ -2,6 +2,7 @@
 import re
 import json
 import os
+import nltk
 import chardet
 from tqdm import tqdm
 from chardet.universaldetector import UniversalDetector
@@ -32,9 +33,7 @@ class NPhilter:
 
 
         self.lmtzr = WordNetLemmatizer()
-
         self.sets = {}
-
 
         #default data structures
         self.coord_maps = {
@@ -337,6 +336,44 @@ class NPhilter:
                     start_cursor = end_cursor
 
         return coord_map
+
+    def map_transform_pos(self, in_path="",
+                    foutpath="",
+                    pre_process=r":|\-|\/|_|~",
+                    whitelist={},
+                    phi_word="**PHI**",
+                    string_set=set(***REMOVED***"NNP", "NN"***REMOVED***),
+                    num_set=set(***REMOVED***"CD"***REMOVED***)):
+        coord_map = CoordinateMap()
+
+        for root, dirs, files in tqdm(os.walk(in_path)):
+
+            for filename in files:
+
+                if filename.split(".")***REMOVED***-1***REMOVED*** != "txt":
+                    print("SKIPPING", filename)
+                    continue
+
+                orig_f = self.finpath+filename
+                encoding = self.detect_encoding(orig_f)
+                txt = open(orig_f,"r", encoding=encoding***REMOVED***'encoding'***REMOVED***).read()
+                pre_process = re.compile(r":|\-|\/|_|~")
+                txt = re.sub(pre_process, " ",txt)
+                pos_list = nltk.pos_tag(nltk.word_tokenize(txt))
+
+                contents = ***REMOVED******REMOVED***
+                for pos in pos_list:
+                    if pos***REMOVED***1***REMOVED*** in string_set:
+                        if pos not in whitelist:
+                            contents.append(phi_word)
+                        else:
+                            contents.append(pos***REMOVED***0***REMOVED***)
+                    elif pos***REMOVED***1***REMOVED*** in num_set:
+                        #todo: use regex's to keep some data
+                        contents.append(phi_word)
+
+                with open(foutpath+filename, "w") as f:
+                    f.write(" ".join(contents))
 
 
     def set_transform(self, 
@@ -820,7 +857,6 @@ class NPhilter:
 
             for f in files:
 
-                
 
                 #local values per file
                 false_positives = ***REMOVED******REMOVED*** #non-phi we think are phi
