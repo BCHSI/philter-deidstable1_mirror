@@ -1,822 +1,1211 @@
-# De-id script
-# import modules
-from __future__ import print_function
-import os
-import sys
-import pickle
-import glob
-import string
+
 import re
-import time
-import argparse
 import json
-
-# import multiprocess
-import multiprocessing
-from multiprocessing import Pool
-
-# import NLP packages
+import os
 import nltk
-from nltk import sent_tokenize
-from nltk import word_tokenize
-from nltk.tree import Tree
-from nltk import pos_tag_sents
-from nltk import pos_tag
-from nltk import ne_chunk
-import spacy
-from pkg_resources import resource_filename
-from nltk.tag.perceptron import AveragedPerceptron
-from nltk.tag import SennaTagger
-from nltk.tag import HunposTagger
+import chardet
+from tqdm import tqdm
+from chardet.universaldetector import UniversalDetector
+from nltk.stem.wordnet import WordNetLemmatizer
+from coordinate_map import CoordinateMap
 
-from nphilter.nphilter import NPhilter
-
-"""
-Replace PHI words with a safe filtered word: '**PHI**'
-
-Does:
-1. regex to search for salutations (must be done prior to splitting into sentences b/c of '.' present in most salutations)
-2. split document into sentences.
-3.Run regex patterns to identify PHI considering only 1 word at a time:emails, phone numbers, DOB, SSN, Postal codes, or any word containing 5 or more consecutive digits or
-    8 or more characters that begins and ends with digits.
-
-4. Split sentences into words
-
-5. Run regex patterns to identify PHI looking at the context for each word. For example DOB checks the preceding words for 'age' or 'years' etc. 
-addresses which include [streets, rooms, states, etc],age over 90. 
-
-6. Use nltk to label POS. 
-
-7. Identify names: We run 2 separate methods to check if a word is a name based on it's context at the chunk/phrase level. To do this:
-First: Spacy nlp() is run on the sentence level and outputs NER labels at the chunk/phrase level. 
-Second: For chunks/phrases that spacy thinks are 'person', get a second opinion by running nltk ne_chunck which uses nltk POS 
-to assign an NER label to the chunk/phrases. 
-*If both spacy and nltk provide a 'person' NER label for a chunk/phrase: check the in the chunk 1-by-1 with nltk to determine if
- the word's POS tag is a proper noun.
-    - sometimes the label 'person' may be applied to more than 1 word, and occassionally 1 of those words is just a normal noun, not a name.
-    - If word is a proper noun, flag the word and add it to name_set
-*If spacy labels word as person but nltk does not label person but labels word as another category of NER, use spacy on the all UPPERCASE version words
-in the chunk 1-by-1 to see if spacy still believes that the uppercase word is NER of any category
-    - If it is, add word to name_set; 
-    - If spacy thinks the uppercase version of the word no longer has an NER label, then treat word as any other noun and send to be filtered through the whitelist. 
-
-8. If word is noun, send it on to check it against the whitelist. If word is not noun,
-consider it safe and pass it on to output.For nouns, if word is in whitelist,
-                                    check if word is in name_set, if so -> filter.
-                                        If not in name_set,
-                                            use spacy to check if word is a name based on the single word's meaning and format.
-                                            Spacy does a per-word look up and assigns most frequent use of that word as a flag
-                                            (eg'HUNT':-organization, 'Hunt'-name, 'hunt':verb).
-                                            If the flags is name -> filter
-                                            If flag is not name pass word through as safe
-                                if word not in whitelist -> filter
-9. Search for middle initials by checking if single Uppercase letter is between PHI infos, if so, consider the letter as a middle initial and filter it. e.g. Ane H Berry.
-
-NOTE: All of the above numbered steps happen in filter_task(). Other functions either support filter task or simply involve
-dealing with I/O and multiprocessing
-
-"""
-
-
-nlp = spacy.load('en_core_web_sm')  # load spacy english library
-# pretrain = SennaTagger('senna')
-
-# configure the regex patterns
-# we're going to want to remove all special characters
-pattern_word = re.compile(r"[^\w+]")
-
-# This regex finds all words in a sentence
-#pattern_any_word = re.compile(r"\b\w+\b")
-
-# Find numbers like SSN/PHONE/FAX
-# 3 patterns: 1. 6 or more digits will be filtered 2. digit followed by - followed by digit. 3. Ignore case of characters
-pattern_number = re.compile(r"""\b(
-(\d[\(\)\-\']?\s?){6}([\(\)\-\']?\d)+   # SSN/PHONE/FAX XXX-XX-XXXX, XXX-XXX-XXXX, XXX-XXXXXXXX, etc.
-|(\d[\(\)\-.\']?){7}([\(\)\-.\']?\d)+  # test
-)\b""", re.X)
-
-pattern_4digits = re.compile(r"""\b(
-\d{5}[A-Z0-9]*
-)\b""", re.X)
-
-pattern_devid = re.compile(r"""\b(
-[A-Z0-9\-/]{6}[A-Z0-9\-/]*
-)\b""", re.X)
-# postal code
-# 5 digits or, 5 digits followed dash and 4 digits
-pattern_postal = re.compile(r"""\b(
-\d{5}(-\d{4})?             # postal code XXXXX, XXXXX-XXXX
-)\b""", re.X)
-
-# match DOB
-pattern_dob = re.compile(r"""\b(
-.*?(?=\b(\d{1,2}[-./\s]\d{1,2}[-./\s]\d{2}  # X/X/XX
-|\d{1,2}[-./\s]\d{1,2}[-./\s]\d{4}          # XX/XX/XXXX
-|\d{2}[-./\s]\d{1,2}[-./\s]\d{1,2}          # xx/xx/xx
-|\d{4}[-./\s]\d{1,2}[-./\s]\d{1,2}          # xxxx/xx/xx
-)\b)
-)\b""", re.X | re.I)
-
-# match emails
-pattern_email = re.compile(r"""\b(
-[a-zA-Z0-9_.+-@\"]+@[a-zA-Z0-9-\:\]\[]+[a-zA-Z0-9-.]*
-)\b""", re.X | re.I)
-
-# match date, similar to DOB but does not include any words
-month_name = "Jan(uary)?|Feb(ruary)?|Mar(ch)?|Apr(il)?|May|Jun(e)?|Jul(y)?|Aug(ust)?|Sep(tember)?|Oct(ober)?|Nov(ember)?|Dec(ember)?"
-pattern_date = re.compile(r"""\b(
-\d{4}[\-/](0?[1-9]|1[0-2]|"""+month_name+r""")\-\d{4}[\-/](0?[1-9]|1[0-2]|"""+month_name+r""")  # YYYY/MM-YYYY/MM
-|(0?[1-9]|1[0-2]|"""+month_name+r""")[\-/]\d{4}\-(0?[1-9]|1[0-2]|"""+month_name+r""")[\-/]\d{4}  # MM/YYYY-MM/YYYY
-|(0?[1-9]|1[0-2]|"""+month_name+r""")/\d{2}\-(0?[1-9]|1[0-2]|"""+month_name+r""")/\d{2}  # MM/YY-MM/YY
-|(0?[1-9]|1[0-2]|"""+month_name+r""")/\d{2}\-(0?[1-9]|1[0-2]|"""+month_name+r""")/\d{4}  # MM/YYYY-MM/YYYY
-|(0?[1-9]|1[0-2]|"""+month_name+r""")/([1-2][0-9]|3[0-1]|0?[1-9])\-(0?[1-9]|1[0-2]|"""+month_name+r""")/([1-2][0-9]|3[0-1]|0?[1-9])  #MM/DD-MM/DD
-|([1-2][0-9]|3[0-1]|0?[1-9])/(0?[1-9]|1[0-2]|"""+month_name+r""")\-([1-2][0-9]|3[0-1]|0?[1-9])/(0?[1-9]|1[0-2]|"""+month_name+r""")  #DD/MM-DD/MM
-|(0?[1-9]|1[0-2]|"""+month_name+r""")[\-/\s]([1-2][0-9]|3[0-1]|0?[1-9])[\-/\s]\d{2}  # MM/DD/YY
-|(0?[1-9]|1[0-2]|"""+month_name+r""")[\-/\s]([1-2][0-9]|3[0-1]|0?[1-9])[\-/\s]\d{4}  # MM/DD/YYYY
-|([1-2][0-9]|3[0-1]|0?[1-9])[\-/\s](0?[1-9]|1[0-2]|"""+month_name+r""")[\-/\s]\d{2}  # DD/MM/YY
-|([1-2][0-9]|3[0-1]|0?[1-9])[\-/\s](0?[1-9]|1[0-2]|"""+month_name+r""")[\-/\s]\d{4}  # DD/MM/YYYY
-|\d{2}[\-./\s](0?[1-9]|1[0-2]|"""+month_name+r""")[\-\./\s]([1-2][0-9]|3[0-1]|0?[1-9])   # YY/MM/DD
-|\d{4}[\-./\s](0?[1-9]|1[0-2]|"""+month_name+r""")[\-\./\s]([1-2][0-9]|3[0-1]|0?[1-9])   # YYYY/MM/DD
-|\d{4}[\-/](0?[1-9]|1[0-2]|"""+month_name+r""")  # YYYY/MM
-|(0?[1-9]|1[0-2]|"""+month_name+r""")[\-/]\d{4}  # MM/YYYY
-|(0?[1-9]|1[0-2]|"""+month_name+r""")/\d{2}  # MM/YY
-|(0?[1-9]|1[0-2]|"""+month_name+r""")/\d{2}  # MM/YYYY
-|(0?[1-9]|1[0-2]|"""+month_name+r""")/([1-2][0-9]|3[0-1]|0?[1-9])  #MM/DD
-|([1-2][0-9]|3[0-1]|0?[1-9])/(0?[1-9]|1[0-2]|"""+month_name+r""")  #DD/MM
-)\b""", re.X | re.I)
-pattern_mname = re.compile(r'\b(' + month_name + r')\b')
-
-# match names, A'Bsfs, Absssfs, A-Bsfsfs
-pattern_name = re.compile(r"""^[A-Z]\'?[-a-zA-Z]+$""")
-
-# match age
-pattern_age = re.compile(r"""\b(
-age|year[s-]?\s?old|y.o[.]?
-)\b""", re.X | re.I)
-
-# match salutation
-# pattern_salutation = re.compile(r"""
-# (Dr\.|DR\.|Mr\.|MR\.|Mrs\.|MRS\.|Ms\.|MS\.|Miss|MISS|Sir|SIR|Madam|MADAM)\s
-# (([A-Z]\'?[A-Z]?[\-aA-zZ]+(\s[A-Z]\'?[A-Z]?[\-aA-zZ]+)*)
-# )""", re.X)
-
-# Salutation correction
-# Include capitalized names/titles
-#pattern_salutation = re.compile(r"(D(R|r)\.|M(R|r)\.|Mrs\.|MRS\.|M(S|s)\.|Miss|MISS|Sir|SIR|Madam|MADAM)\s(([A-Z]\'?[A-Z]?[\-aA-zZ]+(\s[A-Z]\'?[A-Z]?[\-aA-zZ]+)*))", re.X)
-
-# match middle initial
-# if single char or Jr is surround by 2 phi words, filter. 
-pattern_middle = re.compile(r"""(\*\*PHI\*\*|\*\*PHIName\*\*),? (([A-CE-LN-Z][Rr]?|[DM])\.?) | (([A-CE-LN-Z][Rr]?|[DM])\.?),? (\*\*PHI\*\*|\*\*PHIName\*\*)""")
-
-
-# match url
-pattern_url = re.compile(r'\b((http[s]?://)?([a-zA-Z0-9$-_@.&+:!\*\(\),])*[\.\/]([a-zA-Z0-9$-_@.&+:\!\*\(\),])*)\b', re.I)
-
-####### Kathleen Edits 2/22 ######
-
-# Salutation pattern edits
-pattern_salutation = re.compile(r"""
-(Dr.?|DR.?|Mr.?|MR.?|Mrs.?|MRS.?|Ms.?|MS.?|Miss|MISS|Sir|SIR|Madam|MADAM)\s
-(([A-Z]\'?[A-Z]?[\-aA-zZ]+(\s[A-Z]\'?[A-Z]?[\-aA-zZ]+)*)
-)""", re.X)
-
-# MD regex
-pattern_MD = re.compile(r"([A-Z]\'?[A-Z]?[\-aA-zZ]+(\s[A-Z]\'?[A-Z]?[\-aA-zZ]+)*)(\s|\,\s)(M|m)(\.)?(D|d)(\.)?\b")
-
-
-# Adjacent name, no caps
-pattern_adjacent_names = re.compile(r"(([A-Z]\'?[A-Z]?[\-a-z]+)(\s|\s\,\s)\*\*PHIName\*\*|\*\*PHIName\*\*(\s|\s\,\s)([A-Z]\'?[A-Z]?[\-a-z]+))")
-
-# Adjacent name, caps (stricter, must be separated by comma)
-pattern_adjacent_names_caps = re.compile(r"(([A-Z]\'?[A-Z]?[\-A-Z]+)(\s\,\s)\*\*PHIName\*\*|\*\*PHIName\*\*(\s\,\s)([A-Z]\'?[A-Z]?[\-A-Z]+))")
-
-# check if the folder exists
-def is_valid_file(parser, arg):
-    if not os.path.exists(arg):
-        parser.error("The folder %s does not exist. Please input a new folder or create one." % arg)
-    else:
-        return arg
-
-# check if word is in name_set, if not, check the word by single word level
-def namecheck(word_output, name_set, screened_words, safe):
-    # check if the word is in the name list
-    if word_output.title() in name_set:
-        # with open("name.txt", 'a') as fout:
-           # fout.write(word_output + '\n')
-        # print('Name:', word_output)
-        screened_words.append(word_output)
-        word_output = "**PHIName**"
-        safe = False
-
-    else:
-    # check spacy, and add the word to the name list if it is a name
-    # check the word's title version and its uppercase version
-        word_title = nlp(word_output.title())
-        # search Title or UPPER version of word in the english dictionary: nlp()
-        # nlp() returns the most likely NER tag (word.ents) for the word 
-        # If word_title has NER = person AND word_upper has ANY NER tag, filter
-        word_upper = nlp(word_output.upper())
-        if (word_title.ents != () and word_title.ents[0].label_ == 'PERSON' and
-                word_upper.ents != () and word_upper.ents[0].label_ is not None):
-            # with open("name.txt", 'a') as fout:
-               # fout.write(word_output + '\n')
-            # print('Name:', word_output)
-            screened_words.append(word_output)
-            name_set.add(word_output.title())
-            word_output = "**PHIName**"
-            safe = False
-
-    return word_output, name_set, screened_words, safe
-
-def filter_task(f, whitelist_dict, blacklist_dict, foutpath, key_name, NumPhilter):
-
-    # pretrain = HunposTagger('hunpos.model', 'hunpos-1.0-linux/hunpos-tag')
-    pretrain = SennaTagger('senna')
-
+class Philter:
+    """ 
+        General text filtering class,
+        can filter using whitelists, blacklists, regex's and POS
     """
-    Uses: namecheck() to check if word that has been tagged as name by either nltk or spacy. namecheck() first searches
-    nameset which is generated by checking words at the sentence level and tagging names. If word is not in nameset,
-    namecheck() uses spacy.nlp() to check if word is likely to be a name at the word level. 
+    def __init__(self, config):
+        if "debug" in config:
+            self.debug = config["debug"]
+        if "finpath" in config:
+            self.finpath = config["finpath"]
+        if "foutpath" in config:
+            self.foutpath = config["foutpath"]
+        if "anno_folder" in config:
+            self.anno_folder = config["anno_folder"]
+        if "configpath" in config:
+            self.config = json.load(open(config["configpath"], "r").read())
 
-    """
-    with open(f, encoding='utf-8', errors='ignore') as fin:
-        # define intial variables
-        head, tail = os.path.split(f)
-        #f_name = re.findall(r'[\w\d]+', tail)[0]  # get the file number
-        print(tail)
-        start_time_single = time.time()
-        total_records = 1
-        phi_containing_records = 0
-        safe = True
-        screened_words = []
-        name_set = set()
-        name_set_copy = set()
-        phi_reduced = ''
-        '''
-        address_indictor = ['street', 'avenue', 'road', 'boulevard',
-                            'drive', 'trail', 'way', 'lane', 'ave',
-                            'blvd', 'st', 'rd', 'trl', 'wy', 'ln',
-                            'court', 'ct', 'place', 'plc', 'terrace', 'ter']
-                            '''
-        address_indictor = ['street', 'avenue', 'road', 'boulevard',
-                            'drive', 'trail', 'way', 'lane', 'ave',
-                            'blvd', 'st', 'rd', 'trl', 'wy', 'ln',
-                            'court', 'ct', 'place', 'plc', 'terrace', 'ter',
-                            'highway', 'freeway', 'autoroute', 'autobahn', 'expressway',
-                            'autostrasse', 'autostrada', 'byway', 'auto-estrada', 'motorway',
-                            'avenue', 'boulevard', 'road', 'street', 'alley', 'bay', 'drive',
-                            'gardens', 'gate', 'grove', 'heights', 'highlands', 'lane', 'mews',
-                            'pathway', 'terrace', 'trail', 'vale', 'view', 'walk', 'way', 'close',
-                            'court', 'place', 'cove', 'circle', 'crescent', 'square', 'loop', 'hill',
-                            'causeway', 'canyon', 'parkway', 'esplanade', 'approach', 'parade', 'park',
-                            'plaza', 'promenade', 'quay', 'bypass']
-
-
-        note = fin.read()
-        #optional NumPhilter class runs a pre-scan filter here
-        if NumPhilter != None:
-            note = NumPhilter.multi_maptransform(f, note)
-            note = NumPhilter.set_transform(text=note, map_set_name="learned_blacklist")
-
-
-        note = re.sub(r'=', ' = ', note)
-        # Begin Step 1: saluation check
-        re_list = pattern_salutation.findall(note)
-        for i in re_list:
-            name_set = name_set | set(i[1].split(' '))
-            name_set_copy = name_set_copy | set(i[1].split(' '))
+        self.coordinate_maps = {} #location of all coordinate maps stored here
         
-        re_list2 = pattern_MD.findall(note)
-        for i in re_list2:
-            name_set = name_set | set(i[0].split(' '))
-            name_set_copy = name_set_copy | set(i[0].split(' '))
+        #compile any regex in our config
+        self.compiled_patterns = {}
+        if "regex" in self.config:
+            self.compiled_patterns = self.precompile(self.config["regex"])
         
-        name_set_copy = set([i.lower() for i in name_set_copy])
-
-        # Add names to blacklist_dict
-        blacklist_dict = blacklist_dict | name_set_copy
+        #load any blacklists
+        self.blacklists = {}
+        if "blacklists" in self.config:
+            self.blacklists = self.init_set(config["blacklists"])
         
-        # note_length = len(word_tokenize(note))
-        # Begin step 2: split document into sentences
-        note = sent_tokenize(note)
+        #load any whitelists:
+        self.whitelists = {}
+        if "whitelists" in self.config:
+            self.whitelists = self.init_set(config["whitelists"])
+        
 
-        for sent in note: # Begin Step 3: Pattern checking
-            
-            # postal code check
-            # print(sent)
-            if pattern_postal.findall(sent) != []:
-                safe = False
-                for item in pattern_postal.findall(sent):
-                    screened_words.append(item[0])
-            sent = str(pattern_postal.sub('**PHIPostal**', sent))
+    def precompile(self, config, defaults={"filter":[], "extract":[], "filter_2":[]}):
+        """ precompiles our regex to speed up pattern matching"""
 
-            if pattern_devid.findall(sent) != []:
-                safe = False
-                for item in pattern_devid.findall(sent):
-                    if (re.search(r'\d', item) is not None and
-                        re.search(r'[A-Z]',item) is not None):
-                        screened_words.append(item)
-                        sent = sent.replace(item, '**PHI**')
+        compiled_patterns = {} #maps keyword to re compiled pattern object lists
+        if self.debug:
+            print("precompiling regex")
 
-            # number check
-            if pattern_number.findall(sent) != []:
-                safe = False
-                for item in pattern_number.findall(sent):
-                    # print(item)
-                    #if pattern_date.match(item[0]) is None:
-                    sent = sent.replace(item[0], '**PHI**')
-                    screened_words.append(item[0])
-                    #print(item[0])
-            #sent = str(pattern_number.sub('**PHI**', sent))
-            '''
-            if pattern_date.findall(sent) != []:
-                safe = False
-                for item in pattern_date.findall(sent):
-                    if '-' in item[0]:
-                        if (len(set(re.findall(r'[^\w\-]',item[0]))) <= 1):
-                            screened_words.append(item[0])
-                            #print(item[0])
-                            sent = sent.replace(item[0], '**PHIDate**')
-                    else:
-                        if len(set(re.findall(r'[^\w]',item[0]))) == 1:
-                            screened_words.append(item[0])
-                            #print(item[0])
-                            sent = sent.replace(item[0], '**PHIDate**')
-            '''
-            data_list = []
-            if pattern_date.findall(sent) != []:
-                safe = False
-                for item in pattern_date.findall(sent):
-                    if '-' in item[0]:
-                        if (len(set(re.findall(r'[^\w\-]',item[0]))) <= 1):
-                            #screened_words.append(item[0])
-                            #print(item[0])
-                            data_list.append(item[0])
-                            #sent = sent.replace(item[0], '**PHIDate**')
-                    else:
-                        if len(set(re.findall(r'[^\w]',item[0]))) == 1:
-                            #screened_words.append(item[0])
-                            #print(item[0])
-                            data_list.append(item[0])
-                            #sent = sent.replace(item[0], '**PHIDate**')
-            data_list.sort(key=len, reverse=True) 
-            for item in data_list:
-                sent = sent.replace(item, '**PHIDate**')
+        regexfiles = defaults #default group names
+        for regex_item in config["regex"]:    
+            self.regexfiles[regex_item["group"]].append(regex_item["filepath"])
+        
+        for pat_group in regexfiles:
+            for f in regexfiles[group]:
+                regex = open(path+r["filepath"],"r").read().strip()
+                if pat_group not in compiled_patterns:
+                    compiled_patterns[pat_group] = []
+                compiled_patterns[pat_group].append(re.compile(regex))
+        return compiled_patterns
+               
+    def init_sets(self, config):
+        """ loads a set of words, can be whitelist or blacklist, returns result"""
+        sets = {}
+        for b in config:
+            if b["filepath"].endswith(".pkl"):
+                with open(b["filepath"], "rb") as pickle_file:
+                    sets[b["title"]] = pickle.load(pickle_file)
+            elif b["filepath"].endswith(".json"):
+                sets[b["title"]] = json.load(open(b["filepath"], "r").read())
+        return sets
 
-            #sent = str(pattern_date.sub('**PHI**', sent))
-            #print(sent)
-            if pattern_4digits.findall(sent) != []:
-                safe = False
-                for item in pattern_4digits.findall(sent):
-                    screened_words.append(item)
-            sent = str(pattern_4digits.sub('**PHI**', sent))
-            # email check
-            if pattern_email.findall(sent) != []:
-                safe = False
-                for item in pattern_email.findall(sent):
-                    screened_words.append(item)
-            sent = str(pattern_email.sub('**PHI**', sent))
-            # url check
-            if pattern_url.findall(sent) != []:
-                safe = False
-                for item in pattern_url.findall(sent):
-                    #print(item[0])
-                    if (re.search(r'[a-z]', item[0]) is not None and
-                        '.' in item[0] and
-                        re.search(r'[A-Z]', item[0]) is None and
-                        len(item[0])>10):
-                        print(item[0])
-                        screened_words.append(item[0])
-                        sent = sent.replace(item[0], '**PHI**')
-                        #print(item[0])
-            #sent = str(pattern_url.sub('**PHI**', sent))
-            # dob check
-            '''
-            re_list = pattern_dob.findall(sent)
-            i = 0
-            while True:
-                if i >= len(re_list):
-                    break
-                else:
-                    text = ' '.join(re_list[i][0].split(' ')[-6:])
-                    if re.findall(r'\b(birth|dob)\b', text, re.I) != []:
-                        safe = False
-                        sent = sent.replace(re_list[i][1], '**PHI**')
-                        screened_words.append(re_list[i][1])
-                    i += 2
-            '''
+    def maptransform(self, 
+            filename, 
+            txt,
+            regex_map_name="extract", 
+            replacement="**PHI**"):
+        """ similar to mapcoords and transform in one,
+        this can take text as input and generate a **phi** outputfile """
+        
+        #get our list of regex's
+        regexlst = self.compiled_patterns[regex_map_name]
+        coord_map = CoordinateMap()
+        coord_map.add_file(filename)
+        #scan our text for hits
+        for regex in regexlst:
+            matches = regex.finditer(txt)
+            matched = 0
+            for m in matches:
+                matched += 1
+                coord_map.add_extend(filename, m.start(), m.start()+len(m.group()))
 
-            # Begin Step 4
-            # substitute spaces for special characters 
-            sent = re.sub(r'[\/\-\:\~\_]', ' ', sent)
-            # label all words for NER using the sentence level context. 
-            spcy_sent_output = nlp(sent)
-            # split sentences into words
-            sent = [word_tokenize(sent)]
-            #print(sent)
-            # Begin Step 5: context level pattern matching with regex 
-            for position in range(0, len(sent[0])):
-                word = sent[0][position]
-                # age check
-                if word.isdigit() and int(word) > 90:
-                    if position <= 2:  # check the words before age
-                        word_previous = ' '.join(sent[0][:position])
-                    else:
-                        word_previous = ' '.join(sent[0][position - 2:position])
-                    if position >= len(sent[0]) - 2:  # check the words after age
-                        word_after = ' '.join(sent[0][position+1:])
-                    else:
-                        word_after = ' '.join(sent[0][position+1:position +3])
+        #now we transform
+        #filters out matches, leaving rest of text
+        contents = []
+        last_marker = 0
+        for start,stop in coord_map.filecoords(filename):
+            contents.append(txt[last_marker:start])
+            last_marker = stop
+        #wrap it up by adding on the remaining values if we haven't hit eof
+        if last_marker < len(txt):
+            contents.append(txt[last_marker:len(txt)])
+        return replacement.join(contents)
 
-                    age_string = str(word_previous) + str(word_after)
-                    if pattern_age.findall(age_string) != []:
-                        screened_words.append(sent[0][position])
-                        sent[0][position] = '**PHI**'
-                        safe = False
+    def multi_maptransform(self, 
+            filename, 
+            txt,
+            coord_maps=[
+                {'title':'filter'},
+                {'title':'extract'},
+                {'title':'all-digits'}],
+            replacement="**PHI**"):
+        """ similar to mapcoords and transform in one,
+        this can take text as input and generate a **phi** outputfile """
+        
+        #get our list of regex's
+        #get coordinates for all maps
+        maps = []
+        for m in coord_maps:
+            regexlst = self.compiled_patterns[m['title']]
+            coord_map = CoordinateMap()
+            #scan our text for hits
+            for regex in regexlst:
+                matches = regex.finditer(txt)
+                matched = 0
+                for m in matches:
+                    matched += 1
+                    coord_map.add_extend(filename, m.start(), m.start()+len(m.group()))
+            maps.append(coord_map )
 
-                # address check
-                elif (position >= 1 and position < len(sent[0])-1 and
-                      (word.lower() in address_indictor or
-                       (word.lower() == 'dr' and sent[0][position+1] != '.')) and
-                      (word.istitle() or word.isupper())):
+        if len(maps) != 3:
+            raise Exception("Multi map mode only works for 3 maps, got", len(maps))
 
-                    if sent[0][position - 1].istitle() or sent[0][position-1].isupper():
-                        screened_words.append(sent[0][position - 1])
-                        sent[0][position - 1] = '**PHI**'
-                        i = position - 1
-                        # find the closet number, should be the number of street
-                        while True:
-                            if re.findall(r'^[\d-]+$', sent[0][i]) != []:
-                                begin_position = i
-                                break
-                            elif i == 0 or position - i > 5:
-                                begin_position = position
-                                break
-                            else:
-                                i -= 1
-                        i = position + 1
-                        # block the info of city, state, apt number, etc.
-                        while True:
-                            if '**PHIPostal**' in sent[0][i]:
-                                end_position = i
-                                break
-                            elif i == len(sent[0]) - 1:
-                                end_position = position
-                                break
-                            else:
-                                i += 1
-                        if end_position <= position:
-                            end_position = position
+        FILTER_MAP = maps[0]
+        EXTRACT_MAP = maps[1]
+        BASELINE_MAP = maps[2]
 
-                        for i in range(begin_position, end_position):
-                            #if sent[0][i] != '**PHIPostal**':
-                            screened_words.append(sent[0][i])
-                            sent[0][i] = '**PHI**'
-                            safe = False
+        #todo: factor this out into the class methods
+        FILTER_MAP.add_file(filename)
+        EXTRACT_MAP.add_file(filename)
+        BASELINE_MAP.add_file(filename)
 
-            # Begin Step 6: NLTK POS tagging
-            sent_tag = nltk.pos_tag_sents(sent)
-            #try:
-                # senna cannot handle long sentence.
-                #sent_tag = [[]]
-                #length_100 = len(sent[0])//100
-                #for j in range(0, length_100+1):
-                    #[sent_tag[0].append(j) for j in pretrain.tag(sent[0][100*j:100*(j+1)])]
-                # hunpos needs to change the type from bytes to string
-                #print(sent_tag[0])
-                #sent_tag = [pretrain.tag(sent[0])]
-                #for j in range(len(sent_tag[0])):
-                    #sent_tag[0][j] = list(sent_tag[0][j])
-                    #sent_tag[0][j][1] = sent_tag[0][j][1].decode('utf-8')
-            #except:
-                #print('POS error:', tail, sent[0])
-                #sent_tag = nltk.pos_tag_sents(sent)
-            # Begin Step 7: Use both NLTK and Spacy to check if the word is a name based on sentence level NER label for the word.
-            for ent in spcy_sent_output.ents:  # spcy_sent_output contains a dict with each word in the sentence and its NLP labels
-                #spcy_sent_ouput.ents is a list of dictionaries containing chunks of words (phrases) that spacy believes are Named Entities
-                # Each ent has 2 properties: text which is the raw word, and label_ which is the NER category for the word
-                if ent.label_ == 'PERSON':
-                #print(ent.text)
-                    # if word is person, recheck that spacy still thinks word is person at the word level
-                    spcy_chunk_output = nlp(ent.text)
-                    if spcy_chunk_output.ents != () and spcy_chunk_output.ents[0].label_ == 'PERSON':
-                        # Now check to see what labels NLTK provides for the word
-                        name_tag = word_tokenize(ent.text)
-                        # senna & hunpos
-                        #name_tag = pretrain.tag(name_tag)
-                        # hunpos needs to change the type from bytes to string
-                        #for j in range(len(name_tag)):
-                            #name_tag[j] = list(name_tag[j])
-                            #name_tag[j][1] = name_tag[j][1].decode('utf-8')
-                        #chunked = ne_chunk(name_tag)
-                        # default
-                        name_tag = pos_tag_sents([name_tag])
-                        chunked = ne_chunk(name_tag[0])
-                        for i in chunked:
-                            if type(i) == Tree: # if ne_chunck thinks chunk is NER, creates a tree structure were leaves are the words in the chunk (and their POS labels) and the trunk is the single NER label for the chunk
-                                if i.label() == 'PERSON':
-                                    for token, pos in i.leaves():
-                                        if pos == 'NNP':
-                                            name_set.add(token)
+        if filename.split(".")[-1] != "txt":
+            raise Exception("File must be .txt file, got:", filename)
+        
+        #this is the map of the final coordinates we'll not be keeping
+        INTERSECTION = CoordinateMap() 
+        INTERSECTION.add_file(filename)
 
-                                else:
-                                    for token, pos in i.leaves():
-                                        spcy_upper_output = nlp(token.upper())
-                                        if spcy_upper_output.ents != ():
-                                            name_set.add(token)
+        contents = []
+        #FIRST PASS
+        #add all of our known phi
+        for start,stop in FILTER_MAP.filecoords(filename):
+            INTERSECTION.add(filename, start, stop)
 
-            # BEGIN STEP 8: whitelist check
-            # sent_tag is the nltk POS tagging for each word at the sentence level.
-            for i in range(len(sent_tag[0])):
-                # word contains the i-th word and it's POS tag
-                word = sent_tag[0][i]
-                # print(word)
-                # word_output is just the raw word itself
-                word_output = word[0]
+        #SECOND PASS
+        #use extract map to add new coordinates that don't overlap
+        #anything that doesn't overlap we'll just add anyways
+        for start,stop in BASELINE_MAP.filecoords(filename):
 
-                if word_output not in string.punctuation:
-                    word_check = str(pattern_word.sub('', word_output))
-                    #if word_check.title() in ['Dr', 'Mr', 'Mrs', 'Ms']:
-                        #print(word_check)
-                        # remove the speical chars
-                    try:
-                        # word[1] is the pos tag of the word
+            #check if we overlap with intersection
+            overlap1 = INTERSECTION.does_overlap(filename, start, stop)
+            if overlap1:
+                #Add and extend
+                INTERSECTION.add_extend(filename, start, stop)
+                continue
 
-                        #skip anything that's a verb, adjective, adverb or similar: https://stackoverflow.com/a/38264311/1404663
-                        ignore_set = set(["CC", "CD", "DT", "EX", "IN", "JJ", "JJR", "JJS", "LS", "MD", "PDT", "POS", "RB", "RBR", "RBS", "RP", "TO", "UH", "VB", "VBD", "VBG", "VBN", "VBP", "VBZ", "WDT", "WP", "WRB"])
-                        if word[1] not in ignore_set:
-                            if word_check.lower() not in whitelist_dict:
-                                if word[0].lower() in blacklist_dict:
-                                    screened_words.append(word[0])
-                                    word_output = "**PHIName**"
-                                    safe = False
-                                else:
-                                    screened_words.append(word_output)
-                                    word_output = "**PHI**"
-                                    safe = False
-                            else:
-                                # For words that are in whitelist, check to make sure that we have not identified them as names
-                                if ((word_output.istitle() or word_output.isupper()) and
-                                    pattern_name.findall(word_output) != [] and
-                                    re.search(r'\b([A-Z])\b', word_check) is None):
-                                    word_output, name_set, screened_words, safe = namecheck(word_output, name_set, screened_words, safe)
+            overlap2 = EXTRACT_MAP.does_overlap(filename, start, stop)
+            if overlap2:
+                #we won't add this because it's in our extract map
+                continue
 
-                        # check day/year according to the month name
-                        elif word[1] == 'CD':
-                            if i > 2:
-                                context_before = sent_tag[0][i-3:i]
-                            else:
-                                context_before = sent_tag[0][0:i]
-                            if i <= len(sent_tag[0]) - 4:
-                                context_after = sent_tag[0][i+1:i+4]
-                            else:
-                                context_after = sent_tag[0][i+1:]
-                            #print(word_output, context_before+context_after)
-                            for j in (context_before + context_after):
-                                if pattern_mname.search(j[0]) is not None:
-                                    screened_words.append(word_output)
-                                    #print(word_output)
-                                    word_output = "**PHI**"
-                                    safe = False
-                                    break
+            #print(overlap1, overlap2)
+            #we got here, it's not in our filter or extract maps, so let's add it
+            INTERSECTION.add_extend(filename, start, stop)
 
-                        else:
-                            word_output, name_set, screened_words, safe = namecheck(word_output, name_set, screened_words, safe)
+        #Transform step
+        #filters out matches, leaving rest of text
+        contents = []
+        
+        last_marker = 0
+        for start,stop in INTERSECTION.filecoords(filename):
+            contents.append(txt[last_marker:start])
+            last_marker = stop
+
+        #wrap it up by adding on the remaining values if we haven't hit eof
+        if last_marker < len(txt):
+            contents.append(txt[last_marker:len(txt)])
+
+        return replacement.join(contents)
 
 
-                    except:
-                        print(word_output, sys.exc_info())
-                    if word_output.lower()[0] == '\'s':
-                        if phi_reduced[-7:] != '**PHI**':
-                            phi_reduced = phi_reduced + word_output
-                        #print(word_output)
-                    else:
-                        ##### Kathleen Edit 2/22 #####
-                        if word[0].lower() in blacklist_dict:
-                            screened_words.append(word[0])
-                            word_output = "**PHIName**"
-                            safe = False
-                        phi_reduced = phi_reduced + ' ' + word_output
-                # Format output for later use by eval.py
-                else:
-                    ##### Kathleen Edit 2/22 #####
-                    if word[0].lower() in blacklist_dict:
-                        screened_words.append(word[0])
-                        word_output = "**PHIName**"
-                        safe = False
-                    if (i > 0 and sent_tag[0][i-1][0][-1] in string.punctuation and
-                        sent_tag[0][i-1][0][-1] != '*'):
-                        phi_reduced = phi_reduced + word_output
-                    elif word_output == '.' and sent_tag[0][i-1][0] in ['Dr', 'Mr', 'Mrs', 'Ms']:
-                        phi_reduced = phi_reduced + word_output
-                    else:
-                        phi_reduced = phi_reduced + ' ' + word_output
-            #print(phi_reduced)
+    def mapcoords(self, regex_map_name="extract", coord_map_name="extract"):
+        """ Runs the set of regex on the input data 
+            generating a coordinate map of hits given (dry run doesn't transform)
+        """
+        if self.debug:
+            print("mapcoords: ", regex_map_name)
 
-            # Begin Step 8: check middle initial, month name, adjacent names
-            if pattern_mname.findall(phi_reduced) != []:
-                for item in pattern_mname.findall(phi_reduced):
-                    screened_words.append(item[0])
-            phi_reduced = pattern_mname.sub('**PHI**', phi_reduced)
+        regexlst = self.compiled_patterns[regex_map_name]
 
-            if pattern_middle.findall(phi_reduced) != []:
-                for item in pattern_middle.findall(phi_reduced):
-                #    print(item[0])
-                    screened_words.append(item[0])
-            phi_reduced = pattern_middle.sub('**PHIName** **PHIName**', phi_reduced)
-            
-            ##### Kathleen Edit 2/23 #####
-            if pattern_adjacent_names.findall(phi_reduced) != []:
-                for item in pattern_adjacent_names.findall(phi_reduced):
-                #    print(item[0])
-                    screened_words.append(item[1])
-            phi_reduced = pattern_adjacent_names.sub('**PHIName** **PHIName**', phi_reduced)
+        if self.debug:
+            print(regexlst)
+        
 
-            if pattern_adjacent_names_caps.findall(phi_reduced) != []:
-                for item in pattern_adjacent_names_caps.findall(phi_reduced):
-                #    print(item[0])
-                    screened_words.append(item[1])
-            phi_reduced = pattern_adjacent_names_caps.sub('**PHIName** **PHIName**', phi_reduced)
+        if not os.path.exists(self.foutpath):
+            os.makedirs(self.foutpath)
 
-            ######## Last regex checks ########
-            
-            # # Run all words words through the names blacklist
-            # if pattern_any_word.findall(phi_reduced) != []:
-            #     for item in pattern_any_word.findall(phi_reduced):
-            #         if item.lower() in blacklist_dict:
-            #             screened_words.append(item)
-            #             phi_reduced = phi_reduced.replace(item, "**PHIName**")
+        if coord_map_name not in self.coord_maps:
+            self.coord_maps[coord_map_name] = CoordinateMap()
 
-        # print(phi_reduced)
-
-        if not safe:
-            phi_containing_records = 1
-
-
-        # save phi_reduced file
-        filename = '.'.join(tail.split('.')[:-1])+"_" + key_name + ".txt"
-        filepath = os.path.join(foutpath, filename)
-        with open(filepath, "w") as phi_reduced_note:
-            phi_reduced_note.write(phi_reduced)
-
-        # save filtered words
-        #screened_words = list(filter(lambda a: a!= '**PHI**', screened_words))
-        filepath = os.path.join(foutpath,'filter_summary.txt')
-        #print(filepath)
-        screened_words = list(filter(lambda a: '**PHI' not in a, screened_words))
-        #screened_words = list(filter(lambda a: a != '**PHI**', screened_words))
-        #print(screened_words)
-        with open(filepath, 'a') as fout:
-            fout.write('.'.join(tail.split('.')[:-1])+' ' + str(len(screened_words)) +
-                ' ' + ' '.join(screened_words)+'\n')
-            # fout.write(' '.join(screened_words))
-
-        print(total_records, f, "--- %s seconds ---" % (time.time() - start_time_single))
-        # hunpos needs to close session
-        #pretrain.close()
-        return total_records, phi_containing_records
-
-
-def main():
-    # get input/output/filename
-    ap = argparse.ArgumentParser()
-    ap.add_argument("-i", "--input", default="input_test/",
-                    help="Path to the directory or the file that contains the PHI note, the default is ./input_test/.",
-                    type=lambda x: is_valid_file(ap, x))
-    ap.add_argument("-r", "--recursive", action = 'store_true', default = False,
-                    help="whether to read files in the input folder recursively.")
-    ap.add_argument("-o", "--output", default="output_test/",
-                    help="Path to the directory to save the PHI-reduced notes in, the default is ./output_test/.",
-                    type=lambda x: is_valid_file(ap, x))
-    ap.add_argument("-w", "--whitelist",
-                    #default=os.path.join(os.path.dirname(__file__), 'whitelist.pkl'),
-                    default=resource_filename(__name__, 'whitelist.pkl'),
-                    help="Path to the whitelist, the default is phireducer/whitelist.pkl")
-    ap.add_argument("-b", "--blacklist",
-                    #default=os.path.join(os.path.dirname(__file__), 'whitelist.pkl'),
-                    default=resource_filename(__name__, 'names_blacklist_common.pkl'),
-                    help="Path to the names blacklist, the default is phireducer/names_blacklist.pkl")
-    ap.add_argument("-n", "--name", default="phi_reduced",
-                    help="The key word of the output file name, the default is *_phi_reduced.txt.")
-    ap.add_argument("-p", "--process", default=1, type=int,
-                    help="The number of processes to run simultaneously, the default is 1.")
-    ap.add_argument("-m", "--multi", default=True,
-                    help="Whether to run in multi-threaded mode or not, default is true. Note this often breaks on OS-X sytems")
-    args = ap.parse_args()
-
-    finpath = args.input
-    foutpath = args.output
-    key_name = args.name
-    whitelist_file = args.whitelist
-    blacklist_file = args.blacklist
-    process_number = args.process
-    if_dir = os.path.isdir(finpath)
-
-
-
-    start_time_all = time.time()
-    if if_dir:
-        print('input folder:', finpath)
-        print('recursive?:', args.recursive)
-    else:
-        print('input file:', finpath)
-        head, tail = os.path.split(finpath)
-        # f_name = re.findall(r'[\w\d]+', tail)[0]
-    print('output folder:', foutpath)
-    print('Using whitelist:', whitelist_file)
-    print('Using blacklist:', blacklist_file)
-    try:
-        try:
-            with open(whitelist_file, "rb") as fin:
-                whitelist = pickle.load(fin)
-        except UnicodeDecodeError:
-            with open(whitelist_file, "rb") as fin:
-                whitelist = pickle.load(fin, encoding = 'latin1')
-        print('length of whitelist: {}'.format(len(whitelist)))
-        if if_dir:
-            print('phi_reduced file\'s name would be:', "*_"+key_name+".txt")
-        else:
-            print('phi_reduced file\'s name would be:', '.'.join(tail.split('.')[:-1])+"_"+key_name+".txt")
-        print('run in {} process(es)'.format(process_number))
-    except FileNotFoundError:
-        print("No whitelist is found. The script will stop.")
-        os._exit(0)
-    ##### Kathleen Edit 2/22 #####
-    try:
-        try:
-            with open(blacklist_file, "rb") as f:
-                blacklist = pickle.load(f)
-        except UnicodeDecodeError:
-            with open(blacklist_file, "rb") as f:
-                blacklist = pickle.load(f, encoding = 'latin1')
-        print('length of blacklist: {}'.format(len(blacklist)))
-        if if_dir:
-            print('phi_reduced file\'s name would be:', "*_"+key_name+".txt")
-        else:
-            print('phi_reduced file\'s name would be:', '.'.join(tail.split('.')[:-1])+"_"+key_name+".txt")
-        print('run in {} process(es)'.format(process_number))
-    except FileNotFoundError:
-        print("No black,ist is found. The script will stop.")
-        os._exit(0)
-
-    filepath = os.path.join(foutpath,'filter_summary.txt')
-    with open(filepath, 'w') as fout:
-        fout.write("")
-
-    #instantiate a number philterer
-    NumPhilter = NPhilter({"debug":True, "regex":"nphilter/regex.json"})
-    NumPhilter.precompile(path="nphilter/") #precompile any patterns we've added
-    learned_blacklist = json.load(open("./false_negatives.json", "r"))
-    NumPhilter.add_set("learned_blacklist", learned_blacklist)
-    
-
-    # start multiprocess
-    pool = Pool(processes=process_number)
-    results_list = []
-    filter_time = time.time()
-    if args.multi == True:
-        print("Multithreaded mode ON")
-        # apply_async() allows a worker to begin a new task before other works have completed their current task
-        if os.path.isdir(finpath):
-            if args.recursive:
-                results = [pool.apply_async(filter_task, (f,)+(whitelist, blacklist, foutpath, key_name, NumPhilter)) for f in glob.glob   (finpath+"/**/*.txt", recursive=True)]
-            else:
-                results = [pool.apply_async(filter_task, (f,)+(whitelist, blacklist, foutpath, key_name, NumPhilter)) for f in glob.glob   (finpath+"/*.txt")]
-        else:
-            results = [pool.apply_async(filter_task, (f,)+(whitelist, blacklist, foutpath, key_name, NumPhilter)) for f in glob.glob(  finpath)]
-    else:
-        print("Multithreaded mode OFF")
-        #async create our processes to be run
-        for root, dirs, files in os.walk(finpath):
+        for root, dirs, files in tqdm(os.walk(self.finpath)):
             for f in files:
-                #processes.append(multiprocessing.Process(target=filter_task, args=(root+"/"+f, whitelist, foutpath, key_name, output)))
-                results_list.append(filter_task(root+"/"+f, whitelist, blacklist, foutpath, key_name, NumPhilter))
+                self.coord_maps[coord_map_name].add_file(f)
 
-    try:
-        if args.multi:
-            results_list = [r.get() for r in results]
-        total_records, phi_containing_records = zip(*results_list)
-        total_records = sum(total_records)
-        phi_containing_records = sum(phi_containing_records)
+                filename = root+f
+                encoding = self.detect_encoding(root+f)
+                txt = open(filename,"r", encoding=encoding['encoding']).read()
 
-        print("total records:", total_records, "--- %s seconds ---" % (time.time() - start_time_all))
-        print('filter_time', "--- %s seconds ---" % (time.time() - filter_time))
-        print('total records processed: {}'.format(total_records))
-        print('num records with phi: {}'.format(phi_containing_records))
-    except ValueError:
-        print("No txt file in the input folder.")
-        pass
+                for regex in regexlst:
+                    matches = regex.finditer(txt)
+                    matched = 0
+                    for m in matches:
+                        matched += 1
+                        self.coord_maps[coord_map_name].add_extend(f, m.start(), m.start()+len(m.group()))
 
-    pool.close()
-    pool.join()
+    def map_regex(self, in_path="", regex=None):
+        """ Creates a coordinate map from the pattern on this data
+            generating a coordinate map of hits given (dry run doesn't transform)
+        """
+        coord_map = CoordinateMap()
+        for root, dirs, files in tqdm(os.walk(in_path)):
+            for f in files:
+                coord_map.add_file(f)
+
+                orig_f = in_path+f
+                encoding = self.detect_encoding(orig_f)
+                txt = open(orig_f,"r", encoding=encoding['encoding']).read()
+
+                matches = regex.finditer(txt)
+                matched = 0
+                for m in matches:
+                    matched += 1
+                    coord_map.add_extend(f, m.start(), m.start()+len(m.group()))
+        return coord_map
+
+    def map_set(self, 
+                    in_path="",
+                    map_set={}, 
+                    inverse=False,
+                    pre_process=r":|\-|\/|_|~",
+                    ignore_set=set([])):
+        """ Creates a coordinate mapping of whitelisted words and transforms the text"""
+        coord_map = CoordinateMap()
+
+        for root, dirs, files in tqdm(os.walk(in_path)):
+
+            for filename in files:
+
+                if filename.split(".")[-1] != "txt":
+                    print("SKIPPING", filename)
+                    continue
+
+                orig_f = self.finpath+filename
+                encoding = self.detect_encoding(orig_f)
+                txt = open(orig_f,"r", encoding=encoding['encoding']).read()
+
+                keep = []
+                exclude = []
+                start_cursor = 0
+                end_cursor = 0
+
+                words = re.split(r"(\s+)", txt)
+                cursor = 0 #keeps track of the location of the start of the word in the text
+                for i,w in enumerate(words):
+
+                    if w in ignore_set:
+                        continue
+
+                    end_cursor = start_cursor + len(w)
+
+                    #check if the basic word is in the set first,
+                    if inverse == False and w in map_set:
+                        coord_map.add_extend(filename, start_cursor, end_cursor)
+                        start_cursor = end_cursor
+                        continue
+
+                    #remove any punctuation and lowercase
+                    clean = re.sub(pre_process, " ", w)
+                    clean = clean.lower()
+
+                    # Lemmatize the word - first try assuming that the
+                    # word is a noun
+                    lemm_noun = self.lmtzr.lemmatize(clean, 'n')
+
+                    # Then try assuming that the word is a verb
+                    lemm_verb = self.lmtzr.lemmatize(clean, 'v')
+
+                    # Choose whichever word has the greatest change
+                    lemm = lemm_verb if len(lemm_verb) < len(lemm_noun) else lemm_noun
+
+                    # Double check - If the cleaned word has less than 3 characters,
+                    # then the rule didn't work.  Stick with the noun version
+                    if len(lemm) < 3:
+                        lemm = lemm_noun
+
+                    if lemm in ignore_set:
+                        continue
+
+                    if inverse == True and lemm not in map_set:
+                        #keep things not in set
+                        coord_map.add_extend(filename, start_cursor, end_cursor)
+                    elif inverse == False and lemm in map_set:
+                        coord_map.add_extend(filename, start_cursor, end_cursor)
+
+                    start_cursor = end_cursor
+
+        return coord_map
+
+    def map_transform_pos(self, in_path="",
+                    foutpath="",
+                    pre_process=r":[^a-zA-Z0-9]",
+                    whitelists=[{}],
+                    phi_word="**PHI**",
+                    string_set=set(["NNP", "NN"]),
+                    num_set=set(["CD"])):
+        coord_map = CoordinateMap()
+
+        for root, dirs, files in tqdm(os.walk(in_path)):
+
+            for filename in files:
+
+                if filename.split(".")[-1] != "txt":
+                    print("SKIPPING", filename)
+                    continue
+
+                orig_f = self.finpath+filename
+                encoding = self.detect_encoding(orig_f)
+                txt = open(orig_f,"r", encoding=encoding['encoding']).read()
+                
+                #txt = re.sub(pre_process, " ",txt)
+                pos_list = nltk.pos_tag(nltk.word_tokenize(txt))
+
+                contents = []
+                for pos in pos_list:
+                    
+                    
+                    if re.search("\d+", pos[0]):
+
+                        #todo: use regex's to keep some numeric data
+                        contents.append(phi_word)
+                    else:
+                        
+                        word = re.sub(pre_process, "", pos[0].lower().strip())
+                        for whitelist in whitelists:
+                            if word in whitelist:
+                                contents.append(pos[0])
+                                continue
+                        contents.append(phi_word)
+
+                with open(foutpath+filename.split(".")[0]+"_phi_reduced.txt", "w") as f:
+                    f.write(" ".join(contents))
 
 
-    # close multiprocess
+    def set_transform(self, 
+                    text="",
+                    map_set=None,
+                    map_set_name="", 
+                    inverse=False, #when false, we save what's in the set (union)
+                    pre_process=r":|\-|\/|_|~",
+                    replacement=" **PHI** ",
+                    ignore_set=set([])):
+        """ Creates a coordinate mapping of white/black listed words and transforms the text based on that set"""
+        coord_map = CoordinateMap()
+        filename = "temp"
+        coord_map.add_file(filename)
+
+        if len(map_set_name) > 0:
+            map_set = self.sets[map_set_name]
+
+        keep = []
+        exclude = []
+        start_cursor = 0
+        end_cursor = 0
+
+        words = re.split(r"(\s+)", text)
+        cursor = 0 #keeps track of the location of the start of the word in the text
+        for i,w in enumerate(words):
+
+            if w in ignore_set:
+                continue
+
+            end_cursor = start_cursor + len(w)
+
+             #check if the basic word is in the set first,
+            if inverse == False and w in map_set:
+                coord_map.add_extend(filename, start_cursor, end_cursor)
+                start_cursor = end_cursor
+                continue
+
+            #remove any punctuation and lowercase
+            clean = re.sub(pre_process, " ", w)
+            clean = clean.lower()
+
+            # Lemmatize the word - first try assuming that the
+            # word is a noun
+            lemm_noun = self.lmtzr.lemmatize(clean, 'n')
+
+            # Then try assuming that the word is a verb
+            lemm_verb = self.lmtzr.lemmatize(clean, 'v')
+
+            # Choose whichever word has the greatest change
+            lemm = lemm_verb if len(lemm_verb) < len(lemm_noun) else lemm_noun
+
+            # Double check - If the cleaned word has less than 3 characters,
+            # then the rule didn't work.  Stick with the noun version
+            if len(lemm) < 3:
+                lemm = lemm_noun
+
+            if lemm in ignore_set:
+                continue
+
+            if inverse == True and lemm not in map_set:
+                #keep things not in set
+                coord_map.add_extend(filename, start_cursor, end_cursor)
+            elif inverse == False and lemm in map_set:
+                coord_map.add_extend(filename, start_cursor, end_cursor)
+
+            start_cursor = end_cursor
+
+        #Transform step
+        #filters out matches, leaving rest of text
+        contents = []
+
+        if inverse:
+
+            last_marker = 0
+            for start,stop in coord_map.filecoords(filename):
+                contents.append(text[last_marker:start])
+                last_marker = stop
+
+            #wrap it up by adding on the remaining values if we haven't hit eof
+            if last_marker < len(text):
+                contents.append(text[last_marker:len(text)])
+
+        else:
+        
+            last_marker = 0
+            for start,stop in coord_map.filecoords(filename):
+                contents.append(text[start:stop])
+                last_marker = stop
+
+            #wrap it up by adding on the remaining values if we haven't hit eof
+            if last_marker < len(text):
+                contents.append(text[last_marker:len(text)])
+
+        return replacement.join(contents)
+
+        
 
 
-if __name__ == "__main__":
-    multiprocessing.freeze_support()  # must run for windows
-    main()
+    def transform(self, 
+            coord_map_name="genfilter", 
+            replacement=" **PHI** ",
+            #replacement="**PHI{}**",
+            inverse=False,
+            constraint=re.compile(r"\S*\d+\S*"),
+            out_path="",
+            in_path=""):
+        """ transform
+            turns input files into output files 
+            protected health information reduced to the replacement character
 
+            replacement: the replacement string
+            inverse: if true, will replace everything but the matches provided it matches the constrain param
+            if false, will replace any matches
+
+            in_path, location to read unfiltered data, if this is len == 0
+            then config is used, if config is 0, raise error
+
+            out_path, location to save transformed data, if this is len == 0
+            then config is used, if config is 0, raise error
+        """
+
+        if self.debug:
+            print("transform")
+
+        #get input path
+        finpath = in_path
+        if len(finpath) == 0:
+            finpath = self.finpath
+        if len(finpath) == 0:
+            raise Exception("File input path is undefined", finpath)
+        if not os.path.exists(finpath):
+            raise Exception("File input path does not exist", finpath)
+
+        #get output path
+        foutpath = out_path
+        if len(foutpath) == 0:
+            foutpath = self.foutpath
+        if len(foutpath) == 0:
+            raise Exception("File input path is undefined", foutpath)
+        if not os.path.exists(foutpath):
+            raise Exception("File input path does not exist", foutpath)
+
+        #get coordinates
+        coord_map = self.coord_maps[coord_map_name]
+
+        for filename in tqdm(coord_map.keys()):
+            with open(foutpath+filename, "w") as f:
+                #print(foutpath+filename)
+                if inverse:
+                    #print("transforming inverse, constraint: ", constraint)
+                    #filter out anything in our constraint map NOT in our coord_map
+
+                    contents = []
+                    orig_f = self.finpath+filename
+                    encoding = self.detect_encoding(orig_f)
+                    txt = open(orig_f,"r", encoding=encoding['encoding']).read()
+
+                    #create our constraint map,
+                    #anything in this map, not in our coord_map will be hidden
+                    #usually this is a greedy map with alot of hits
+                    constraint_map = CoordinateMap()
+                    matches = constraint.finditer(txt)
+                    for m in matches:
+                        constraint_map.add(filename, m.start(), m.group())
+                    
+                    last_marker = 0
+                    for start,stop in constraint_map.filecoords(filename):
+                        #check if this is in our coord_map
+                        if coord_map.does_overlap(filename, start, stop):
+                            #keep this 
+                            contents.append(txt[last_marker:stop])
+                        else:
+                            #add up to this point
+                            contents.append(txt[last_marker:start])
+                            #remove this item
+                            contents.append(replacement)
+                        #move our marker forward
+                        last_marker = stop
+
+                    #wrap it up by adding on the remaining values if we haven't hit eof
+                    if last_marker < len(txt):
+                        contents.append(txt[last_marker:len(txt)])
+
+                    f.write("".join(contents))
+
+                else:
+                    #filters out matches, leaving rest of text
+                    contents = []
+                    orig_f = self.finpath+filename
+                    encoding = self.detect_encoding(orig_f)
+                    txt = open(orig_f,"r", encoding=encoding['encoding']).read()
+                    
+                    last_marker = 0
+                    for start,stop in coord_map.filecoords(filename):
+                        contents.append(txt[last_marker:start])
+                        last_marker = stop
+
+                    #wrap it up by adding on the remaining values if we haven't hit eof
+                    if last_marker < len(txt):
+                        contents.append(txt[last_marker:len(txt)])
+
+                    f.write(replacement.join(contents))
+
+    def multi_transform(self, 
+            coord_maps=[
+                {'title':'filter'},
+                {'title':'extract'},
+                {'title':'all-digits'}], 
+            replacement=" **PHI** ",
+            out_path="",
+            in_path=""):
+        """ transforms using multiple maps as input, anything with a higher preference has priority
+
+            turns input files into output files 
+            protected health information reduced to the replacement character
+
+            replacement: the replacement string
+            keep: if true, will keep matches
+            if false, will replace any matches
+
+            in_path, location to read unfiltered data, if this is len == 0
+            then config is used, if config is 0, raise error
+
+            out_path, location to save transformed data, if this is len == 0
+            then config is used, if config is 0, raise error
+
+            perf: move this to a multi-map step, instead of doing heavy lifting ina multi-transform step
+        """
+
+        if self.debug:
+            print("mutli-regex-transform")
+
+        #get input path
+        finpath = in_path
+        if len(finpath) == 0:
+            finpath = self.finpath
+        if len(finpath) == 0:
+            raise Exception("File input path is undefined", finpath)
+        if not os.path.exists(finpath):
+            raise Exception("File input path does not exist", finpath)
+
+        #get output path
+        foutpath = out_path
+        if len(foutpath) == 0:
+            foutpath = self.foutpath
+        if len(foutpath) == 0:
+            raise Exception("File input path is undefined", foutpath)
+        if not os.path.exists(foutpath):
+            raise Exception("File input path does not exist", foutpath)
+
+        #NOTE: this has hardcoded ordering... so priority and order don't make sense here
+        #sort by priority, with highest priority first
+        #coord_maps.sort(key=lambda x: x["priority"], reverse=True)
+
+        #get coordinates for all maps
+        maps = []
+        for m in coord_maps:
+            maps.append(self.coord_maps[m['title']])
+
+        if len(maps) != 3:
+            raise Exception("Multi map mode only works for 3 maps, got", len(maps))
+
+        FILTER_MAP = maps[0]
+        EXTRACT_MAP = maps[1]
+        BASELINE_MAP = maps[2]
+
+        for root, dirs, files in tqdm(os.walk(self.finpath)):
+            for filename in files:
+
+                if filename.split(".")[-1] != "txt":
+                    print("SKIPPING", filename)
+                    continue
+
+                with open(foutpath+filename, "w") as f:
+
+                    #this is the map of the final coordinates we'll not be keeping
+                    INTERSECTION = CoordinateMap() 
+                    INTERSECTION.add_file(filename)
+
+                    contents = []
+                    orig_f = self.finpath+filename
+                    encoding = self.detect_encoding(orig_f)
+                    txt = open(orig_f,"r", encoding=encoding['encoding']).read()
+
+                    #FIRST PASS
+                    #add all of our known phi
+                    for start,stop in FILTER_MAP.filecoords(filename):
+                        INTERSECTION.add(filename, start, stop)
+
+                    #SECOND PASS
+                    #use extract map to add new coordinates that don't overlap
+                    #anything that doesn't overlap we'll just add anyways
+                    for start,stop in BASELINE_MAP.filecoords(filename):
+
+                        #check if we overlap with intersection
+                        overlap1 = INTERSECTION.does_overlap(filename, start, stop)
+                        if overlap1:
+                            #Add and extend
+                            INTERSECTION.add_extend(filename, start, stop)
+                            continue
+
+                        overlap2 = EXTRACT_MAP.does_overlap(filename, start, stop)
+                        if overlap2:
+                            #we won't add this because it's in our extract map
+                            continue
+
+                        #print(overlap1, overlap2)
+                        #we got here, it's not in our filter or extract maps, so let's add it
+                        INTERSECTION.add_extend(filename, start, stop)
+
+                    #Transform step
+                    #filters out matches, leaving rest of text
+                    contents = []
+                    orig_f = self.finpath+filename
+                    encoding = self.detect_encoding(orig_f)
+                    txt = open(orig_f,"r", encoding=encoding['encoding']).read()
+                    
+                    last_marker = 0
+                    for start,stop in INTERSECTION.filecoords(filename):
+                        contents.append(txt[last_marker:start])
+                        last_marker = stop
+
+                    #wrap it up by adding on the remaining values if we haven't hit eof
+                    if last_marker < len(txt):
+                        contents.append(txt[last_marker:len(txt)])
+
+                    f.write(replacement.join(contents))
+
+    def multi_map_transform(self, 
+            in_path="",
+            out_path="",
+            filter_pass=[],
+            extract_pass=[],
+            final_pass=[],
+            file_suffix="_phi_reduced.txt",
+            replacement=" **PHI** "):
+        """ given a set of maps, will transform text
+            filter pass is any blacklisted words, these are marked as PHI
+            extract pass is any words to extract
+            final pass will ignore anything in the extract map, otherwise will mark as PHI
+        """
+
+        for root, dirs, files in tqdm(os.walk(in_path)):
+            for filename in files:
+
+                if filename.split(".")[-1] != "txt":
+                    print("SKIPPING", filename)
+                    continue
+
+                orig_f = in_path+filename
+                encoding = self.detect_encoding(orig_f)
+                txt = open(orig_f,"r", encoding=encoding['encoding']).read()
+
+                with open(out_path+''.join(filename.split(".")[:-1])+file_suffix, "w") as f:
+                    #this is the map of the final coordinates we'll not be keeping
+                    INTERSECTION = CoordinateMap() 
+                    INTERSECTION.add_file(filename)
+                    EXTRACT_MAP = CoordinateMap()
+                    EXTRACT_MAP.add_file(filename)
+
+                    contents = []
+
+                    #FIRST PASS
+                    #add all of our known phi from our filter maps
+                    for m in filter_pass:
+                        for start,stop in m.filecoords(filename):
+                            INTERSECTION.add_extend(filename, start, stop)
+
+                    #SECOND PASS 
+                    #Create our extraction map
+                    for m in extract_pass:
+                        for start,stop in m.filecoords(filename):
+                            EXTRACT_MAP.add_extend(filename, start, stop)
+
+                    #THIRD PASS
+                    #use baseline map to grab rest of non-phi
+                    #anything that overlaps with extraction we ignore
+                    for m in final_pass:
+                        for start,stop in m.filecoords(filename):
+
+                            #check if we overlap with intersection
+                            overlap1 = INTERSECTION.does_overlap(filename, start, stop)
+                            if overlap1:
+                                #add and extend
+                                INTERSECTION.add_extend(filename, start, stop)
+                                continue
+
+                            overlap2 = EXTRACT_MAP.does_overlap(filename, start, stop)
+                            if overlap2:
+                                #we won't add this because it's in our extract map
+                                continue
+
+                            #print(overlap1, overlap2)
+                            #we got here, it's not in our filter or extract maps, so let's add it
+                            INTERSECTION.add_extend(filename, start, stop)
+
+                    #Transform step
+                    #filters out matches, leaving rest of text
+                    contents = []
+                    
+                    last_marker = 0
+                    for start,stop in INTERSECTION.filecoords(filename):
+                        contents.append(txt[last_marker:start])
+                        last_marker = stop
+
+                    #wrap it up by adding on the remaining values if we haven't hit eof
+                    if last_marker < len(txt):
+                        contents.append(txt[last_marker:len(txt)])
+
+                    f.write(replacement.join(contents))
 
     
+
+
+
+    def detect_encoding(self, fp):
+        detector = UniversalDetector()
+        with open(fp, "rb") as f:
+            for line in f:
+                detector.feed(line)
+                if detector.done: 
+                    break
+            detector.close()
+        return detector.result
+
+    def phi_context(self, filename, word, word_index, words, context_window=10):
+        """ helper function, creates our phi data type with source file, and context window"""
+
+        left_index = word_index - context_window
+        if left_index < 0:
+            left_index = 0
+
+        right_index = word_index + context_window
+        if right_index >= len(words):
+            right_index = len(words) - 1
+        window = words[left_index:right_index]
+
+        #get which patterns matched this word
+        num_spaces = len(words[:word_index])
+        
+
+        return {"filename":filename, "phi":word, "context":window}
+
+    def eval(self,
+        anno_folder="data/i2b2_anno/",
+        anno_suffix=".ano", 
+        philtered_folder="data/i2b2_results/",
+        fp_output="data/phi/phi_fp/",
+        fn_output="data/phi/phi_fn/",
+        phi_matcher=re.compile("\s\*\*PHI\*\*\s"),
+        pre_process=r":|\-|\/|_|~", #characters we're going to strip from our notes to analyze against anno
+        only_digits=False):
+        """ calculates the effectiveness of the philtering / extraction
+
+            only_digits = <boolean> will constrain evaluation on philtering of only digit types
+        """
+
+        if self.debug:
+            print("eval")
+
+        #use config to eval
+        if self.anno_folder != None:
+            anno_folder = self.anno_folder
+
+        # if self.anno_suffix != "":
+        #     anno_suffix = self.anno_suffix
+        
+        summary = {
+            "total_false_positives":0,
+            "total_false_negatives":0,
+            "total_true_positives": 0,
+            "total_true_negatives": 0,
+            "false_positives":[], #non-phi words we think are phi
+            "true_positives": [], #phi words we correctly identify
+            "false_negatives":[], #phi words we think are non-phi
+            "true_negatives": [], #non-phi words we correctly identify
+        }
+
+        for root, dirs, files in os.walk(philtered_folder):
+
+            for f in files:
+
+
+                #local values per file
+                false_positives = [] #non-phi we think are phi
+                true_positives  = [] #phi we correctly identify
+                false_negatives = [] #phi we think are non-phi
+                true_negatives  = [] #non-phi we correctly identify
+
+                philtered_filename = root+f
+                anno_filename = anno_folder+''.join(f.split(".")[0])+anno_suffix
+
+                # if len(anno_suffix) > 0:
+                #     anno_filename = anno_folder+f.split(".")[0]+anno_suffix
+
+                if not os.path.exists(philtered_filename):
+                    raise Exception("FILE DOESNT EXIST", philtered_filename)
+                
+                if not os.path.exists(anno_filename):
+                    print("FILE DOESNT EXIST", anno_filename)
+                    continue
+
+                
+                encoding1 = self.detect_encoding(philtered_filename)
+                philtered = open(philtered_filename,"r", encoding=encoding1['encoding']).read()
+                #pre-process notes for comparison with anno punctuation stripped files
+                if len(pre_process) > 0:
+                    philtered = re.sub(pre_process, " ", philtered)
+                philtered_words = re.split("\s+", philtered)
+
+                
+                encoding2 = self.detect_encoding(anno_filename)
+                anno = open(anno_filename,"r", encoding=encoding2['encoding']).read()
+                anno_words = re.split("\s+", anno)
+
+                anno_dict = {}
+                philtered_dict = {}
+
+            
+                for w in philtered_words:
+                    philtered_dict[w] = 1                
+
+                for w in anno_words:
+                    anno_dict[w] = 1
+                #print("DICTS", len(anno_dict), len(philtered_dict))
+
+                #check what we hit
+                for i,w in enumerate(philtered_words):
+
+                    if phi_matcher.match(w):
+                        continue
+
+                    if only_digits:
+                        if not re.search("\S*\d+\S*", w):
+                            #skip non-digit evals
+                            #assume we found a non-phi word
+                            #phi = self.phi_context(philtered_filename, w, i, philtered_words)
+                            #true_negatives.append(phi)
+                            continue
+
+                    #print(w, w in anno_dict, w in philtered_dict)
+
+                    #check if this word is phi
+                    if w not in anno_dict:
+                        #this is phi we missed
+                        phi = self.phi_context(philtered_filename, w, i, philtered_words)
+                        false_negatives.append(phi)
+                    else:
+                        #this isn't phi, and we correctly identified it
+                        phi_tn = self.phi_context(philtered_filename, w, i, philtered_words)
+                        true_positives.append(phi_tn)
+
+                #check what we missed
+                for i,w in enumerate(anno_words):
+
+                    if phi_matcher.match(w):
+                        continue
+
+                    if only_digits:
+                        if not re.search("\S*\d+\S*", w):
+                            #skip non-digit evals
+                            #assume we got a non-phi word
+                            #phi = self.phi_context(anno_filename, w, i, anno_words)
+                            #true_positives.append(phi)
+                            continue
+
+                    #print(w, w in anno_dict, w in philtered_dict)
+
+                    #check if this word is phi
+                    if w not in philtered_dict:
+                        #we got something that wasn't phi
+                        phi_fp = self.phi_context(anno_filename, w, i, anno_words)
+                        false_positives.append(phi_fp)
+                    else:
+                        #we correctly identified non-phi
+                        #don't add twice
+                        pass
+                        
+                
+                #update summary
+                summary["false_positives"] = summary["false_positives"] + false_positives
+                summary["false_negatives"] = summary["false_negatives"] + false_negatives
+                summary["true_positives"] = summary["true_positives"] + true_positives
+                summary["true_negatives"] = summary["true_negatives"] + true_negatives
+
+                #print(len(summary["true_positives"]), len(summary["false_positives"]), len(summary["true_negatives"]), len(summary["false_negatives"]) )
+
+              
+                #print("MISSED: ",len(false_negatives), false_negatives)
+        #calc stats
+        summary["total_true_negatives"] = len(summary["true_negatives"])
+        summary["total_true_positives"] = len(summary["true_positives"])
+        summary["total_false_negatives"] = len(summary["false_negatives"])
+        summary["total_false_positives"] = len(summary["false_positives"])
+
+        print("true_negatives", summary["total_true_negatives"],"true_positives", summary["total_true_positives"], "false_negatives", summary["total_false_negatives"], "false_positives", summary["total_false_positives"])
+
+        if summary["total_true_positives"]+summary["total_false_negatives"] > 0:
+            print("Recall: {:.2%}".format(summary["total_true_positives"]/(summary["total_true_positives"]+summary["total_false_negatives"])))
+        elif summary["total_false_negatives"] == 0:
+            print("Recall: 100%")
+
+        if summary["total_true_positives"]+summary["total_false_positives"] > 0:
+            print("Precision: {:.2%}".format(summary["total_true_positives"]/(summary["total_true_positives"]+summary["total_false_positives"])))
+
+        #save the phi we missed
+        json.dump(summary["false_negatives"], open(fn_output, "w"), indent=4)
+        json.dump(summary["false_positives"], open(fp_output, "w"), indent=4)
+
+
+    def getphi(self, 
+            anno_folder="data/i2b2_anno/", 
+            anno_suffix="_phi_reduced.ano", 
+            data_folder="data/i2b2_notes/", 
+            output_folder="i2b2_phi", 
+            filter_regex=None):
+        """ get's phi from existing data to build up a data model
+        data structure to hold our phi and classify phi we find
+            {
+                "foo.txt":[
+                    {
+                        "phi":"1/1/2019",
+                        "context":"The data was 1/1/2019 and the patient was happy",
+                        "class":"numer" //number, string ... 
+                    },...
+                ],...
+            }
+        """
+        if self.debug:
+            print("getphi")
+
+
+        #use config if exists
+        if self.anno_folder != None:
+            anno_folder = self.anno_folder
+
+        if self.anno_suffix != "":
+            anno_suffix = self.anno_suffix
+
+        phi = {}
+        word_counts = {}
+        not_phi = {}
+        window_size = 10 #amount of words surrounding word to grab
+
+        for root, dirs, files in os.walk(data_folder):
+           
+            for f in files:
+               
+                if not os.path.exists(root+f):
+                    raise Exception("FILE DOESNT EXIST", root+f)
+
+                if len(anno_suffix) > 0:
+                    if not os.path.exists(anno_folder+f.split(".")[0]+anno_suffix):
+                        print("FILE DOESNT EXIST", anno_folder+f.split(".")[0]+anno_suffix)
+                        continue
+                else:
+                    if not os.path.exists(anno_folder+f):
+                        print("FILE DOESNT EXIST", anno_folder+f)
+                        continue
+
+                orig_filename = root+f
+                encoding1 = self.detect_encoding(orig_filename)
+                orig = open(orig_filename,"r", encoding=encoding1['encoding']).read()
+
+                orig_words = re.split("\s+", orig)
+
+                anno_filename = anno_folder+f.split(".")[0]+anno_suffix
+                encoding2 = self.detect_encoding(anno_filename)
+                anno = open(anno_filename,"r", encoding=encoding2['encoding']).read()
+                anno_words = re.split("\s+", anno)
+
+                anno_dict = {}
+                orig_dict = {}
+
+                for w in anno_words:
+                    anno_dict[w] = 1
+
+                for i,w in enumerate(orig_words):
+
+                    #check for edge cases that should not be "words"
+                    x = w.replace("_","").strip()
+                    if len(x) == 0:
+                        continue
+
+                    #add all words to our counts
+                    if w not in word_counts:
+                        word_counts[w] = 0
+                    word_counts[w] += 1
+
+                    #check if this word is phi
+                    if w not in anno_dict:
+
+                        left_index = i - 10
+                        if left_index < 0:
+                            left_index = 0
+
+                        right_index = i + 10
+                        if right_index >= len(orig_words):
+                            right_index = len(orig_words) - 1
+                        window = orig_words[left_index:right_index]
+                        if f not in phi:
+                            phi[f] = []
+
+                        c = "string"
+                        if re.search("\d+", w):
+                            c = "number"
+
+                        phi[f].append({"phi":w,"context":window,"class":c})
+                    else:
+                        #add all words to our counts
+                        if w not in not_phi:
+                            not_phi[w] = 0
+                        not_phi[w] += 1
+
+        #save our phi with context
+        json.dump(phi, open("data/phi/phi_context.json", "w"), indent=4)
+
+        #save all phi word counts
+        counts = {}
+        num_phi = {}
+        string_phi = {}
+        
+        for f in phi:
+            for d in phi[f]:
+                if d["phi"] not in counts:
+                    counts[d["phi"]] = 0
+                counts[d["phi"]] += 1
+                if d["class"] == "number":
+                    if d["phi"] not in num_phi:
+                        num_phi[d["phi"]] = 0
+                    num_phi[d["phi"]] += 1
+                else:
+                    if d["phi"] not in string_phi:
+                        string_phi[d["phi"]] = 0
+                    string_phi[d["phi"]] += 1
+
+        #save all phi counts
+        json.dump(counts, open("data/phi/phi_counts.json", "w"), indent=4)
+        #save phi number counts
+        json.dump(num_phi, open("data/phi/phi_number_counts.json", "w"), indent=4)
+        #save phi string counts
+        json.dump(string_phi, open("data/phi/phi_string_counts.json", "w"), indent=4)
+        #save our total word counts
+        json.dump(word_counts, open("data/phi/word_counts.json", "w"), indent=4)
+        #save our total non_phi counts
+        json.dump(not_phi, open("data/phi/non_phi_counts.json", "w"), indent=4)
+        
+        #get all non_phi counts by number or string
+        non_phi_number = {}
+        non_phi_string = {}
+        for w in word_counts:
+            if re.search("\d+", w):
+                if w not in non_phi_number:
+                    non_phi_number[w] = 0
+                non_phi_number[w] += 1
+            else:
+                if w not in non_phi_string:
+                    non_phi_string[w] = 0
+                non_phi_string[w] += 1
+
+        #save all phi string counts
+        json.dump(non_phi_number, open("data/phi/non_phi_number_counts.json", "w"), indent=4)
+
+        #save all phi number counts
+        json.dump(non_phi_string, open("data/phi/non_phi_string_counts.json", "w"), indent=4)
+
+
+    def mapphi(self, 
+            phi_path="data/phi/phi_counts.json", 
+            out_path="data/phi/phi_map.json",
+            sorted_path="data/phi/phi_sorted.json",  
+            digit_char="`", 
+            string_char="?"):
+        """ given all examples of the phi, creates a general representation 
+            
+            digit_char = this is what digits are replaced by
+            string_char = this is what strings are replaced by
+            any_char = this is what any random characters are replaced with
+        """
+        if self.debug:
+            print("mapphi")
+
+        d = json.load(open(phi_path, "r"))
+
+        phi_map = {}
+
+        for phi in d:
+            wordlst = []
+            phi_word = phi["phi"]
+            for c in phi_word:
+                if re.match("\d+", c):
+                    wordlst.append(digit_char)
+                elif re.match("[a-zA-Z]+", c):
+                    wordlst.append(string_char)
+                else:
+                    wordlst.append(c)
+            word = "".join(wordlst)
+            if word not in phi_map:
+                phi_map[word] = {'examples':{}}
+            if phi_word not in phi_map[word]['examples']:
+                phi_map[word]['examples'][phi_word] = []
+            phi_map[word]['examples'][phi_word].append(phi) 
+
+        #save the count of all representations
+        for k in phi_map:
+            phi_map[k]["count"] = len(phi_map[k]["examples"].keys())
+
+        #save all representations
+        json.dump(phi_map, open(out_path, "w"), indent=4)
+
+        #save an ordered list of representations so we can prioritize regex building
+        items = []
+        for k in phi_map:
+            items.append({"pattern":k, "examples":phi_map[k]["examples"], "count":len(phi_map[k]["examples"].keys())})
+
+        items.sort(key=lambda x: x["count"], reverse=True)
+        json.dump(items, open(sorted_path, "w"), indent=4)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

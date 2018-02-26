@@ -13,8 +13,8 @@ w_e = {"word":"bear", "pos":"NN", "pos_full":"Noun", "count":20}
 phi = {}
 non_phi = {}
 
-anno_folder = "data/i2b2_anno/"
-NOTES_folder = "data/i2b2_results/"
+anno_folder = "i2b2_anno/"
+NOTES_folder = "i2b2_nochange/"
 
 def detect_encoding(fp):
     detector = UniversalDetector()
@@ -49,9 +49,6 @@ def find_diff(s1, s2, phi_matcher):
         elif line.startswith("-"):
             #this is in our notes file, not in our anno file
             w = line[1:]
-            if phi_matcher.match(w):
-                #ignore phi characters in anno
-                continue
             yield("FN", w)
             #summary["false_negatives"].append(w)
         else:
@@ -89,7 +86,7 @@ for root, dirs, files in os.walk(NOTES_folder):
         true_negatives  = [] #non-phi we correctly identify
 
         philtered_filename = root+f
-        anno_filename = anno_folder+f.split(".")[0]+"_phi_reduced.ano"
+        anno_filename = anno_folder+f.split(".")[0]+".ano"
         # if len(anno_suffix) > 0:
         #     anno_filename = anno_folder+f.split(".")[0]+anno_suffix
 
@@ -134,26 +131,13 @@ for root, dirs, files in os.walk(NOTES_folder):
                 raise Exception("Unknown type", tup)
 
         for w in false_negatives:
-            print("FN", w)
             if w in pos_dict:
                 fn_with_pos[w] = pos_dict[w]
 
-        #update summary
-        summary["false_positives"] = summary["false_positives"] + false_positives
-        summary["false_negatives"] = summary["false_negatives"] + false_negatives
-        summary["true_positives"] = summary["true_positives"] + true_positives
-        summary["true_negatives"] = summary["true_negatives"] + true_negatives
-
-
-#calc stats
-summary["total_true_negatives"] = len(summary["true_negatives"])
-summary["total_true_positives"] = len(summary["true_positives"])
-summary["total_false_negatives"] = len(summary["false_negatives"])
-summary["total_false_positives"] = len(summary["false_positives"])
-print("true_negatives", summary["total_true_negatives"],"true_positives", summary["total_true_positives"], "false_negatives", summary["total_false_negatives"], "false_positives", summary["total_false_positives"])
 
 
 pos_summary = {}
+
 
 for k in fn_with_pos:
     for pos in fn_with_pos[k]:
@@ -163,7 +147,7 @@ for k in fn_with_pos:
 
 with open("pos.csv", "w") as f:
     pos_list = pos_summary.keys()
-    f.write(",".join(pos_list)+"\n")
+    f.write(",".join(pos_list))
 
     #total results
     results = []
@@ -173,5 +157,11 @@ with open("pos.csv", "w") as f:
     f.write(",".join(results))
 
 
-
+d = nltk.help.upenn_tagset()
+pos_list = pos_summary.keys()
+for pos in pos_list:
+    if pos in d:
+        print(d[pos])
+    else:
+        print("not available")
 
