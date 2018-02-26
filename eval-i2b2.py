@@ -121,7 +121,8 @@ def comparison(filename, file1path, file2path, allpositive_dict):
         output += "Recall: N/A\n"
     else:
         output += "Recall: {:.2%}".format(true_positive/(true_positive+len(summary_dict['false_negative']))) + '\n'
-    if true_positive == 0 and len(summary_dict['false_positive']) == 0:
+    
+    if (true_positive == 0 and len(summary_dict['false_positive']) == 0) or true_positive+len(summary_dict['false_positive']) == 0:
         output += "Precision: N/A\n"
     else:
         output += "Precision: {:.2%}".format(true_positive/(true_positive+len(summary_dict['false_positive']))) + '\n'
@@ -178,8 +179,9 @@ def main():
                 summary_text += output
                 if_update = True
         else:
-            reply = input('Please make sure all files are ready.'
-                        'Press Enter to process or others to quit.> ')
+            #skipping this
+            reply = ""
+            #reply = input('Please make sure all files are ready.' 'Press Enter to process or others to quit.> ')
             if reply == '':
                 if if_recursive:
                     for f in glob.glob(file1path + "/**/*.txt", recursive=True):

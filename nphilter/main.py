@@ -2,6 +2,7 @@ import argparse
 import re 
 import pickle
 from nphilter import NPhilter
+import gzip
 
 def main():
     # get input/output/filename
@@ -28,8 +29,16 @@ def main():
 
     args = ap.parse_args()
 
-    whitelist = pickle.load(open(args.whitelist, "rb"))
 
+   
+
+    whitelist = {}
+
+    try:
+        whitelist = pickle.load(open(args.whitelist, "rb"))
+    except:
+         with open(args.whitelist, "rb") as fin:
+            whitelist = pickle.load(fin, encoding = 'latin1')
 
 
     config = {
@@ -83,23 +92,14 @@ def main():
         # for k in whitelist:
         #     print(k)
 
-        whitelist_map = filterer.map_set(in_path=args.input,
-                    map_set=whitelist, 
-                    inverse=False,
-                    ignore_set=set([]))
-        extract_maps.append(whitelist_map)
 
-        #block_everything 
-        baseline_maps.append(filterer.map_regex(in_path=args.input,
-                    regex=re.compile("\w+")))
-
-        filterer.multi_map_transform(
-            in_path=args.input,
-            out_path=args.output,
-            filter_pass=filter_maps,
-            extract_pass=extract_maps,
-            final_pass=baseline_maps,
-            replacement=" **PHI** ")
+        filterer.map_transform_pos(in_path=args.input,
+                    foutpath=args.output,
+                    pre_process=r":|\-|\/|_|~",
+                    whitelist=whitelist,
+                    phi_word="**PHI**",
+                    string_set=set(["NNP", "NN"]),
+                    num_set=set(["CD"]))
 
     else:
          raise Exception("MODE DOESN'T EXIST",  args.mode)
