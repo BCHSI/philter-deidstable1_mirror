@@ -13,8 +13,8 @@ w_e = {"word":"bear", "pos":"NN", "pos_full":"Noun", "count":20}
 phi = {}
 non_phi = {}
 
-anno_folder = "data/i2b2_anno/"
-NOTES_folder = "data/i2b2_results/"
+anno_folder = "i2b2_anno/"
+NOTES_folder = "i2b2_nochange/"
 
 def detect_encoding(fp):
     detector = UniversalDetector()
@@ -49,9 +49,6 @@ def find_diff(s1, s2, phi_matcher):
         elif line.startswith("-"):
             #this is in our notes file, not in our anno file
             w = line***REMOVED***1:***REMOVED***
-            if phi_matcher.match(w):
-                #ignore phi characters in anno
-                continue
             yield("FN", w)
             #summary***REMOVED***"false_negatives"***REMOVED***.append(w)
         else:
@@ -89,7 +86,7 @@ for root, dirs, files in os.walk(NOTES_folder):
         true_negatives  = ***REMOVED******REMOVED*** #non-phi we correctly identify
 
         philtered_filename = root+f
-        anno_filename = anno_folder+f.split(".")***REMOVED***0***REMOVED***+"_phi_reduced.ano"
+        anno_filename = anno_folder+f.split(".")***REMOVED***0***REMOVED***+".ano"
         # if len(anno_suffix) > 0:
         #     anno_filename = anno_folder+f.split(".")***REMOVED***0***REMOVED***+anno_suffix
 
@@ -134,26 +131,13 @@ for root, dirs, files in os.walk(NOTES_folder):
                 raise Exception("Unknown type", tup)
 
         for w in false_negatives:
-            print("FN", w)
             if w in pos_dict:
                 fn_with_pos***REMOVED***w***REMOVED*** = pos_dict***REMOVED***w***REMOVED***
 
-        #update summary
-        summary***REMOVED***"false_positives"***REMOVED*** = summary***REMOVED***"false_positives"***REMOVED*** + false_positives
-        summary***REMOVED***"false_negatives"***REMOVED*** = summary***REMOVED***"false_negatives"***REMOVED*** + false_negatives
-        summary***REMOVED***"true_positives"***REMOVED*** = summary***REMOVED***"true_positives"***REMOVED*** + true_positives
-        summary***REMOVED***"true_negatives"***REMOVED*** = summary***REMOVED***"true_negatives"***REMOVED*** + true_negatives
-
-
-#calc stats
-summary***REMOVED***"total_true_negatives"***REMOVED*** = len(summary***REMOVED***"true_negatives"***REMOVED***)
-summary***REMOVED***"total_true_positives"***REMOVED*** = len(summary***REMOVED***"true_positives"***REMOVED***)
-summary***REMOVED***"total_false_negatives"***REMOVED*** = len(summary***REMOVED***"false_negatives"***REMOVED***)
-summary***REMOVED***"total_false_positives"***REMOVED*** = len(summary***REMOVED***"false_positives"***REMOVED***)
-print("true_negatives", summary***REMOVED***"total_true_negatives"***REMOVED***,"true_positives", summary***REMOVED***"total_true_positives"***REMOVED***, "false_negatives", summary***REMOVED***"total_false_negatives"***REMOVED***, "false_positives", summary***REMOVED***"total_false_positives"***REMOVED***)
 
 
 pos_summary = {}
+
 
 for k in fn_with_pos:
     for pos in fn_with_pos***REMOVED***k***REMOVED***:
@@ -163,7 +147,7 @@ for k in fn_with_pos:
 
 with open("pos.csv", "w") as f:
     pos_list = pos_summary.keys()
-    f.write(",".join(pos_list)+"\n")
+    f.write(",".join(pos_list))
 
     #total results
     results = ***REMOVED******REMOVED***
@@ -173,5 +157,11 @@ with open("pos.csv", "w") as f:
     f.write(",".join(results))
 
 
-
+d = nltk.help.upenn_tagset()
+pos_list = pos_summary.keys()
+for pos in pos_list:
+    if pos in d:
+        print(d***REMOVED***pos***REMOVED***)
+    else:
+        print("not available")
 

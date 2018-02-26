@@ -1,7 +1,0 @@
-***REMOVED***
-	{
-		"title":"extract",
-		"prepend":"^((?!",
-		"append":").)*$"
-	}
-***REMOVED***
