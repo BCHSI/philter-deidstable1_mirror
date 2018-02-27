@@ -38,6 +38,7 @@ def main():
     
     #map any sets, pos and regex groups we have in our config
     filterer.map_coordinates(in_path=args.input)
+    
 
     #transform the data 
     #Priority order is maintained in the pattern list
