@@ -4,7 +4,6 @@ import json
 import os
 import nltk
 import chardet
-from tqdm import tqdm
 from chardet.universaldetector import UniversalDetector
 from nltk.stem.wordnet import WordNetLemmatizer
 from coordinate_map import CoordinateMap
@@ -23,371 +22,119 @@ class Philter:
             self.foutpath = config***REMOVED***"foutpath"***REMOVED***
         if "anno_folder" in config:
             self.anno_folder = config***REMOVED***"anno_folder"***REMOVED***
-        if "configpath" in config:
-            self.config = json.load(open(config***REMOVED***"configpath"***REMOVED***, "r").read())
+        if "patterns" in config:
+            self.patterns = json.load(open(config***REMOVED***"patterns"***REMOVED***, "r").read())
 
-        self.coordinate_maps = {} #location of all coordinate maps stored here
-        
-        #compile any regex in our config
-        self.compiled_patterns = {}
-        if "regex" in self.config:
-            self.compiled_patterns = self.precompile(self.config***REMOVED***"regex"***REMOVED***)
-        
-        #load any blacklists
-        self.blacklists = {}
-        if "blacklists" in self.config:
-            self.blacklists = self.init_set(config***REMOVED***"blacklists"***REMOVED***)
-        
-        #load any whitelists:
-        self.whitelists = {}
-        if "whitelists" in self.config:
-            self.whitelists = self.init_set(config***REMOVED***"whitelists"***REMOVED***)
-        
+        #All coordinate maps stored here
+        self.coordinate_maps = ***REMOVED******REMOVED***
 
-    def precompile(self, config, defaults={"filter":***REMOVED******REMOVED***, "extract":***REMOVED******REMOVED***, "filter_2":***REMOVED******REMOVED***}):
+        #initialize our patterns
+        self.init_patterns()
+
+
+    def init_patterns(self):
+        """ given our input pattern config will load our sets and pre-compile our regex"""
+
+        known_pattern_types = set(***REMOVED***"regex", "set", "NER_tagging"***REMOVED***)
+        set_filetypes = set(***REMOVED***"pkl", "json"***REMOVED***)
+        regex_filetypes = set(***REMOVED***"txt"***REMOVED***)
+        reserved_list = set(***REMOVED***"data", "coordinate_map"***REMOVED***)
+
+        #first check that data is formatted, can be loaded etc. 
+        for pattern in self.patterns:
+            if not os.path.exists(pattern***REMOVED***"filepath"***REMOVED***):
+                raise Exception("Filepath does not exist", pattern***REMOVED***"filepath"***REMOVED***)
+            for k in reserved_list:
+                if k in pattern:
+                    raise Exception("Error, Keyword is reserved", k, pattern)
+            if pattern***REMOVED***"type"***REMOVED*** not in known_pattern_types:
+                raise Exception("Pattern type is unknown", pattern***REMOVED***"type"***REMOVED***)
+
+            if pattern***REMOVED***"type"***REMOVED*** == "set":
+                if pattern***REMOVED***"filepath"***REMOVED***.split(".")***REMOVED***-1***REMOVED*** not in set_filetypes:
+                    raise Exception("Invalid filteype", pattern***REMOVED***"filepath"***REMOVED***, "must be of", set_filetypes)
+                self.patterns***REMOVED***pattern***REMOVED******REMOVED***"data"***REMOVED*** = self.init_set(pattern***REMOVED***"filepath"***REMOVED***)  
+            elif pattern***REMOVED***"type"***REMOVED*** == "regex":
+                if pattern***REMOVED***"filepath"***REMOVED***.split(".")***REMOVED***-1***REMOVED*** not in set_filetypes:
+                    raise Exception("Invalid filteype", pattern***REMOVED***"filepath"***REMOVED***, "must be of", regex_filetypes)
+                self.patterns***REMOVED***pattern***REMOVED******REMOVED***"data"***REMOVED*** = self.precompile(pattern***REMOVED***"filepath"***REMOVED***)
+        
+    def precompile(self, filepath):
         """ precompiles our regex to speed up pattern matching"""
-
-        compiled_patterns = {} #maps keyword to re compiled pattern object lists
-        if self.debug:
-            print("precompiling regex")
-
-        regexfiles = defaults #default group names
-        for regex_item in config***REMOVED***"regex"***REMOVED***:    
-            self.regexfiles***REMOVED***regex_item***REMOVED***"group"***REMOVED******REMOVED***.append(regex_item***REMOVED***"filepath"***REMOVED***)
-        
-        for pat_group in regexfiles:
-            for f in regexfiles***REMOVED***group***REMOVED***:
-                regex = open(path+r***REMOVED***"filepath"***REMOVED***,"r").read().strip()
-                if pat_group not in compiled_patterns:
-                    compiled_patterns***REMOVED***pat_group***REMOVED*** = ***REMOVED******REMOVED***
-                compiled_patterns***REMOVED***pat_group***REMOVED***.append(re.compile(regex))
-        return compiled_patterns
+        regex = open(path+r***REMOVED***"filepath"***REMOVED***,"r").read().strip()
+        return re.compile(regex)
                
-    def init_sets(self, config):
-        """ loads a set of words, can be whitelist or blacklist, returns result"""
-        sets = {}
-        for b in config:
-            if b***REMOVED***"filepath"***REMOVED***.endswith(".pkl"):
-                with open(b***REMOVED***"filepath"***REMOVED***, "rb") as pickle_file:
-                    sets***REMOVED***b***REMOVED***"title"***REMOVED******REMOVED*** = pickle.load(pickle_file)
-            elif b***REMOVED***"filepath"***REMOVED***.endswith(".json"):
-                sets***REMOVED***b***REMOVED***"title"***REMOVED******REMOVED*** = json.load(open(b***REMOVED***"filepath"***REMOVED***, "r").read())
-        return sets
+    def init_set(self, filepath):
+        """ loads a set of words, (must be a dictionary or set shape) returns result"""
+        map_set = {}
+        if filepath.endswith(".pkl"):
+            with open(filepath, "rb") as pickle_file:
+                map_set = pickle.load(pickle_file)
+        elif b***REMOVED***"filepath"***REMOVED***.endswith(".json"):
+            map_set = json.load(open(filepath, "r").read())
+        else:
+            raise Exception("Invalid filteype",b***REMOVED***"filepath"***REMOVED***)
+        return map_set
 
-    def maptransform(self, 
-            filename, 
-            txt,
-            regex_map_name="extract", 
-            replacement="**PHI**"):
-        """ similar to mapcoords and transform in one,
-        this can take text as input and generate a **phi** outputfile """
-        
-        #get our list of regex's
-        regexlst = self.compiled_patterns***REMOVED***regex_map_name***REMOVED***
-        coord_map = CoordinateMap()
-        coord_map.add_file(filename)
-        #scan our text for hits
-        for regex in regexlst:
-            matches = regex.finditer(txt)
-            matched = 0
-            for m in matches:
-                matched += 1
-                coord_map.add_extend(filename, m.start(), m.start()+len(m.group()))
-
-        #now we transform
-        #filters out matches, leaving rest of text
-        contents = ***REMOVED******REMOVED***
-        last_marker = 0
-        for start,stop in coord_map.filecoords(filename):
-            contents.append(txt***REMOVED***last_marker:start***REMOVED***)
-            last_marker = stop
-        #wrap it up by adding on the remaining values if we haven't hit eof
-        if last_marker < len(txt):
-            contents.append(txt***REMOVED***last_marker:len(txt)***REMOVED***)
-        return replacement.join(contents)
-
-    def multi_maptransform(self, 
-            filename, 
-            txt,
-            coord_maps=***REMOVED***
-                {'title':'filter'},
-                {'title':'extract'},
-                {'title':'all-digits'}***REMOVED***,
-            replacement="**PHI**"):
-        """ similar to mapcoords and transform in one,
-        this can take text as input and generate a **phi** outputfile """
-        
-        #get our list of regex's
-        #get coordinates for all maps
-        maps = ***REMOVED******REMOVED***
-        for m in coord_maps:
-            regexlst = self.compiled_patterns***REMOVED***m***REMOVED***'title'***REMOVED******REMOVED***
-            coord_map = CoordinateMap()
-            #scan our text for hits
-            for regex in regexlst:
-                matches = regex.finditer(txt)
-                matched = 0
-                for m in matches:
-                    matched += 1
-                    coord_map.add_extend(filename, m.start(), m.start()+len(m.group()))
-            maps.append(coord_map )
-
-        if len(maps) != 3:
-            raise Exception("Multi map mode only works for 3 maps, got", len(maps))
-
-        FILTER_MAP = maps***REMOVED***0***REMOVED***
-        EXTRACT_MAP = maps***REMOVED***1***REMOVED***
-        BASELINE_MAP = maps***REMOVED***2***REMOVED***
-
-        #todo: factor this out into the class methods
-        FILTER_MAP.add_file(filename)
-        EXTRACT_MAP.add_file(filename)
-        BASELINE_MAP.add_file(filename)
-
-        if filename.split(".")***REMOVED***-1***REMOVED*** != "txt":
-            raise Exception("File must be .txt file, got:", filename)
-        
-        #this is the map of the final coordinates we'll not be keeping
-        INTERSECTION = CoordinateMap() 
-        INTERSECTION.add_file(filename)
-
-        contents = ***REMOVED******REMOVED***
-        #FIRST PASS
-        #add all of our known phi
-        for start,stop in FILTER_MAP.filecoords(filename):
-            INTERSECTION.add(filename, start, stop)
-
-        #SECOND PASS
-        #use extract map to add new coordinates that don't overlap
-        #anything that doesn't overlap we'll just add anyways
-        for start,stop in BASELINE_MAP.filecoords(filename):
-
-            #check if we overlap with intersection
-            overlap1 = INTERSECTION.does_overlap(filename, start, stop)
-            if overlap1:
-                #Add and extend
-                INTERSECTION.add_extend(filename, start, stop)
-                continue
-
-            overlap2 = EXTRACT_MAP.does_overlap(filename, start, stop)
-            if overlap2:
-                #we won't add this because it's in our extract map
-                continue
-
-            #print(overlap1, overlap2)
-            #we got here, it's not in our filter or extract maps, so let's add it
-            INTERSECTION.add_extend(filename, start, stop)
-
-        #Transform step
-        #filters out matches, leaving rest of text
-        contents = ***REMOVED******REMOVED***
-        
-        last_marker = 0
-        for start,stop in INTERSECTION.filecoords(filename):
-            contents.append(txt***REMOVED***last_marker:start***REMOVED***)
-            last_marker = stop
-
-        #wrap it up by adding on the remaining values if we haven't hit eof
-        if last_marker < len(txt):
-            contents.append(txt***REMOVED***last_marker:len(txt)***REMOVED***)
-
-        return replacement.join(contents)
-
-
-    def mapcoords(self, regex_map_name="extract", coord_map_name="extract"):
-        """ Runs the set of regex on the input data 
-            generating a coordinate map of hits given (dry run doesn't transform)
+    def map_coordinates(self, in_path="", allowed_filetypes=set(***REMOVED***"txt", "ano"***REMOVED***)):
+        """ Runs the set, or regex on the input data 
+            generating a coordinate map of hits given 
+            (this performs a dry run on the data and doesn't transform)
         """
-        if self.debug:
-            print("mapcoords: ", regex_map_name)
-
-        regexlst = self.compiled_patterns***REMOVED***regex_map_name***REMOVED***
-
-        if self.debug:
-            print(regexlst)
         
+        #create coordinate maps for each pattern
+        for pat in self.patterns:
+            self.patterns***REMOVED***pat***REMOVED******REMOVED***"coordinate_map"***REMOVED*** = CoordinateMap()
 
-        if not os.path.exists(self.foutpath):
-            os.makedirs(self.foutpath)
-
-        if coord_map_name not in self.coord_maps:
-            self.coord_maps***REMOVED***coord_map_name***REMOVED*** = CoordinateMap()
-
-        for root, dirs, files in tqdm(os.walk(self.finpath)):
+        for root, dirs, files in in_path:
             for f in files:
-                self.coord_maps***REMOVED***coord_map_name***REMOVED***.add_file(f)
 
                 filename = root+f
+                if filename.split(".")***REMOVED***-1***REMOVED*** not in allowed_filetypes:
+                    if self.debug:
+                        print("Skipping: ", filename)
+                    continue
+
                 encoding = self.detect_encoding(root+f)
                 txt = open(filename,"r", encoding=encoding***REMOVED***'encoding'***REMOVED***).read()
 
-                for regex in regexlst:
-                    matches = regex.finditer(txt)
-                    matched = 0
-                    for m in matches:
-                        matched += 1
-                        self.coord_maps***REMOVED***coord_map_name***REMOVED***.add_extend(f, m.start(), m.start()+len(m.group()))
+                for i,pat in enumerate(self.patterns):
+                    if pat***REMOVED***"type"***REMOVED*** == "regex":
+                        self.map_regex(filename=filename, text=txt, pattern_index=i)
+                    elif pat***REMOVED***"type"***REMOVED*** == "set":
+                        self.map_set(filename=filename, text=txt, pattern_index=i)
+                    elif pat***REMOVED***"type"***REMOVED*** == "NER_tagging":
+                        self.map_ner(filename=filename, text=txt, pattern_index=i)
+                    else:
+                        raise Exception("Error, pattern type not supported: ", pat***REMOVED***"type"***REMOVED***)
 
-    def map_regex(self, in_path="", regex=None):
+                
+    def map_regex(self, filename="", text="", pattern_index=-1):
         """ Creates a coordinate map from the pattern on this data
             generating a coordinate map of hits given (dry run doesn't transform)
         """
-        coord_map = CoordinateMap()
-        for root, dirs, files in tqdm(os.walk(in_path)):
-            for f in files:
-                coord_map.add_file(f)
+        if pattern_index < 0 or pattern_index >= len(self.patterns):
+            raise Exception("Invalid pattern index: ", pattern_index, "pattern length", len(patterns))
+        coord_map = self.patterns***REMOVED***i***REMOVED******REMOVED***"coordinate_map"***REMOVED***
+        matches = regex.finditer(txt)
+        for m in matches:
+           coord_map.add_extend(f, m.start(), m.start()+len(m.group()))
+        self.patterns***REMOVED***i***REMOVED******REMOVED***"coordinate_map"***REMOVED*** = coord_map
 
-                orig_f = in_path+f
-                encoding = self.detect_encoding(orig_f)
-                txt = open(orig_f,"r", encoding=encoding***REMOVED***'encoding'***REMOVED***).read()
 
-                matches = regex.finditer(txt)
-                matched = 0
-                for m in matches:
-                    matched += 1
-                    coord_map.add_extend(f, m.start(), m.start()+len(m.group()))
-        return coord_map
-
-    def map_set(self, 
-                    in_path="",
-                    map_set={}, 
-                    inverse=False,
-                    pre_process=r":|\-|\/|_|~",
-                    ignore_set=set(***REMOVED******REMOVED***)):
+    def map_set(self, filename="", text="", pattern_index=-1):
         """ Creates a coordinate mapping of whitelisted words and transforms the text"""
-        coord_map = CoordinateMap()
+        if pattern_index < 0 or pattern_index >= len(self.patterns):
+            raise Exception("Invalid pattern index: ", pattern_index, "pattern length", len(patterns))
 
-        for root, dirs, files in tqdm(os.walk(in_path)):
-
-            for filename in files:
-
-                if filename.split(".")***REMOVED***-1***REMOVED*** != "txt":
-                    print("SKIPPING", filename)
-                    continue
-
-                orig_f = self.finpath+filename
-                encoding = self.detect_encoding(orig_f)
-                txt = open(orig_f,"r", encoding=encoding***REMOVED***'encoding'***REMOVED***).read()
-
-                keep = ***REMOVED******REMOVED***
-                exclude = ***REMOVED******REMOVED***
-                start_cursor = 0
-                end_cursor = 0
-
-                words = re.split(r"(\s+)", txt)
-                cursor = 0 #keeps track of the location of the start of the word in the text
-                for i,w in enumerate(words):
-
-                    if w in ignore_set:
-                        continue
-
-                    end_cursor = start_cursor + len(w)
-
-                    #check if the basic word is in the set first,
-                    if inverse == False and w in map_set:
-                        coord_map.add_extend(filename, start_cursor, end_cursor)
-                        start_cursor = end_cursor
-                        continue
-
-                    #remove any punctuation and lowercase
-                    clean = re.sub(pre_process, " ", w)
-                    clean = clean.lower()
-
-                    # Lemmatize the word - first try assuming that the
-                    # word is a noun
-                    lemm_noun = self.lmtzr.lemmatize(clean, 'n')
-
-                    # Then try assuming that the word is a verb
-                    lemm_verb = self.lmtzr.lemmatize(clean, 'v')
-
-                    # Choose whichever word has the greatest change
-                    lemm = lemm_verb if len(lemm_verb) < len(lemm_noun) else lemm_noun
-
-                    # Double check - If the cleaned word has less than 3 characters,
-                    # then the rule didn't work.  Stick with the noun version
-                    if len(lemm) < 3:
-                        lemm = lemm_noun
-
-                    if lemm in ignore_set:
-                        continue
-
-                    if inverse == True and lemm not in map_set:
-                        #keep things not in set
-                        coord_map.add_extend(filename, start_cursor, end_cursor)
-                    elif inverse == False and lemm in map_set:
-                        coord_map.add_extend(filename, start_cursor, end_cursor)
-
-                    start_cursor = end_cursor
-
-        return coord_map
-
-    def map_transform_pos(self, in_path="",
-                    foutpath="",
-                    pre_process=r":***REMOVED***^a-zA-Z0-9***REMOVED***",
-                    whitelists=***REMOVED***{}***REMOVED***,
-                    phi_word="**PHI**",
-                    string_set=set(***REMOVED***"NNP", "NN"***REMOVED***),
-                    num_set=set(***REMOVED***"CD"***REMOVED***)):
-        coord_map = CoordinateMap()
-
-        for root, dirs, files in tqdm(os.walk(in_path)):
-
-            for filename in files:
-
-                if filename.split(".")***REMOVED***-1***REMOVED*** != "txt":
-                    print("SKIPPING", filename)
-                    continue
-
-                orig_f = self.finpath+filename
-                encoding = self.detect_encoding(orig_f)
-                txt = open(orig_f,"r", encoding=encoding***REMOVED***'encoding'***REMOVED***).read()
-                
-                #txt = re.sub(pre_process, " ",txt)
-                pos_list = nltk.pos_tag(nltk.word_tokenize(txt))
-
-                contents = ***REMOVED******REMOVED***
-                for pos in pos_list:
-                    
-                    
-                    if re.search("\d+", pos***REMOVED***0***REMOVED***):
-
-                        #todo: use regex's to keep some numeric data
-                        contents.append(phi_word)
-                    else:
-                        
-                        word = re.sub(pre_process, "", pos***REMOVED***0***REMOVED***.lower().strip())
-                        for whitelist in whitelists:
-                            if word in whitelist:
-                                contents.append(pos***REMOVED***0***REMOVED***)
-                                continue
-                        contents.append(phi_word)
-
-                with open(foutpath+filename.split(".")***REMOVED***0***REMOVED***+"_phi_reduced.txt", "w") as f:
-                    f.write(" ".join(contents))
-
-
-    def set_transform(self, 
-                    text="",
-                    map_set=None,
-                    map_set_name="", 
-                    inverse=False, #when false, we save what's in the set (union)
-                    pre_process=r":|\-|\/|_|~",
-                    replacement=" **PHI** ",
-                    ignore_set=set(***REMOVED******REMOVED***)):
-        """ Creates a coordinate mapping of white/black listed words and transforms the text based on that set"""
-        coord_map = CoordinateMap()
-        filename = "temp"
-        coord_map.add_file(filename)
-
-        if len(map_set_name) > 0:
-            map_set = self.sets***REMOVED***map_set_name***REMOVED***
+        coord_map = self.patterns***REMOVED***i***REMOVED******REMOVED***"coordinate_map"***REMOVED***
 
         keep = ***REMOVED******REMOVED***
         exclude = ***REMOVED******REMOVED***
         start_cursor = 0
         end_cursor = 0
 
-        words = re.split(r"(\s+)", text)
+        words = re.split(r"(\s+)", txt)
         cursor = 0 #keeps track of the location of the start of the word in the text
         for i,w in enumerate(words):
 
@@ -396,7 +143,7 @@ class Philter:
 
             end_cursor = start_cursor + len(w)
 
-             #check if the basic word is in the set first,
+            #check if the basic word is in the set first,
             if inverse == False and w in map_set:
                 coord_map.add_extend(filename, start_cursor, end_cursor)
                 start_cursor = end_cursor
@@ -432,85 +179,75 @@ class Philter:
 
             start_cursor = end_cursor
 
-        #Transform step
-        #filters out matches, leaving rest of text
-        contents = ***REMOVED******REMOVED***
+        return coord_map
 
-        if inverse:
 
-            last_marker = 0
-            for start,stop in coord_map.filecoords(filename):
-                contents.append(text***REMOVED***last_marker:start***REMOVED***)
-                last_marker = stop
+    def folder_walk(self, folder):
+        """ utility func will make a generator to walk a folder
+            returns root_directory,filename
 
-            #wrap it up by adding on the remaining values if we haven't hit eof
-            if last_marker < len(text):
-                contents.append(text***REMOVED***last_marker:len(text)***REMOVED***)
+            for example: 
+            foo/, bar001.txt
+            foo/, bar002.txt
 
-        else:
-        
-            last_marker = 0
-            for start,stop in coord_map.filecoords(filename):
-                contents.append(text***REMOVED***start:stop***REMOVED***)
-                last_marker = stop
-
-            #wrap it up by adding on the remaining values if we haven't hit eof
-            if last_marker < len(text):
-                contents.append(text***REMOVED***last_marker:len(text)***REMOVED***)
-
-        return replacement.join(contents)
-
-        
-
+        """
+        for root, dirs, files in os.walk(folder):
+            for filename in files:
+                yield root,filename
 
     def transform(self, 
-            coord_map_name="genfilter", 
             replacement=" **PHI** ",
-            #replacement="**PHI{}**",
-            inverse=False,
-            constraint=re.compile(r"\S*\d+\S*"),
             out_path="",
             in_path=""):
         """ transform
-            turns input files into output files 
-            protected health information reduced to the replacement character
+            turns input files into output PHI files 
+            protected health information will be replaced by the replacement character
 
-            replacement: the replacement string
-            inverse: if true, will replace everything but the matches provided it matches the constrain param
-            if false, will replace any matches
-
-            in_path, location to read unfiltered data, if this is len == 0
-            then config is used, if config is 0, raise error
-
-            out_path, location to save transformed data, if this is len == 0
-            then config is used, if config is 0, raise error
+            transform the data 
+            ORDER: blacklists supercede everything, whitelists are second priority
+            Next are regex which support 3 default groups
+            # filter regex runs as a first pass, blocks anything in group (ideally very precise)
+            # extract regex runs as a second pass, keep anything in this group NOT in filter (ideally very precise)
+            # filter_2 regex runs as a third pass, blocks anything in group, (generally a catch-all, general approach)
+            
+            **Anything not caught in these passes will be assumed to be PHI
         """
 
         if self.debug:
             print("transform")
 
-        #get input path
-        finpath = in_path
-        if len(finpath) == 0:
-            finpath = self.finpath
-        if len(finpath) == 0:
-            raise Exception("File input path is undefined", finpath)
-        if not os.path.exists(finpath):
-            raise Exception("File input path does not exist", finpath)
+        if not os.path.exists(in_path):
+            raise Exception("File input path does not exist", in_path)
+        
+        if not os.path.exists(out_path):
+            raise Exception("File output path does not exist", out_path)
 
-        #get output path
-        foutpath = out_path
-        if len(foutpath) == 0:
-            foutpath = self.foutpath
-        if len(foutpath) == 0:
-            raise Exception("File input path is undefined", foutpath)
-        if not os.path.exists(foutpath):
-            raise Exception("File input path does not exist", foutpath)
 
-        #get coordinates
-        coord_map = self.coord_maps***REMOVED***coord_map_name***REMOVED***
+        for root,filename in self.folder_walk(in_path):
 
-        for filename in tqdm(coord_map.keys()):
+            #create an intersection map of all coordinates we'll be removing
+            exclude = CoordinateMap()
+            exclude.add_file(filename)
+
+            #create an interestion map of all coordinates we'll be keeping
+            include = CoordinateMap()
+            include.add_file(filename)
+
+            #iterate any blacklists
+            for blacklist in self.blacklists:
+                for start,stop in blacklist.filecoords(filename):
+                    exclude.add_extend(filename, start, stop)
+
+            #iterate any whitelists
+            for whitelist in self.whitelists:
+                for start,stop in whitelist.filecoords(filename):
+                    include.add_extend(filename, start, stop)
+
+            #iterate our regex's 
+            for 
+
+
+
             with open(foutpath+filename, "w") as f:
                 #print(foutpath+filename)
                 if inverse:
@@ -567,216 +304,6 @@ class Philter:
                         contents.append(txt***REMOVED***last_marker:len(txt)***REMOVED***)
 
                     f.write(replacement.join(contents))
-
-    def multi_transform(self, 
-            coord_maps=***REMOVED***
-                {'title':'filter'},
-                {'title':'extract'},
-                {'title':'all-digits'}***REMOVED***, 
-            replacement=" **PHI** ",
-            out_path="",
-            in_path=""):
-        """ transforms using multiple maps as input, anything with a higher preference has priority
-
-            turns input files into output files 
-            protected health information reduced to the replacement character
-
-            replacement: the replacement string
-            keep: if true, will keep matches
-            if false, will replace any matches
-
-            in_path, location to read unfiltered data, if this is len == 0
-            then config is used, if config is 0, raise error
-
-            out_path, location to save transformed data, if this is len == 0
-            then config is used, if config is 0, raise error
-
-            perf: move this to a multi-map step, instead of doing heavy lifting ina multi-transform step
-        """
-
-        if self.debug:
-            print("mutli-regex-transform")
-
-        #get input path
-        finpath = in_path
-        if len(finpath) == 0:
-            finpath = self.finpath
-        if len(finpath) == 0:
-            raise Exception("File input path is undefined", finpath)
-        if not os.path.exists(finpath):
-            raise Exception("File input path does not exist", finpath)
-
-        #get output path
-        foutpath = out_path
-        if len(foutpath) == 0:
-            foutpath = self.foutpath
-        if len(foutpath) == 0:
-            raise Exception("File input path is undefined", foutpath)
-        if not os.path.exists(foutpath):
-            raise Exception("File input path does not exist", foutpath)
-
-        #NOTE: this has hardcoded ordering... so priority and order don't make sense here
-        #sort by priority, with highest priority first
-        #coord_maps.sort(key=lambda x: x***REMOVED***"priority"***REMOVED***, reverse=True)
-
-        #get coordinates for all maps
-        maps = ***REMOVED******REMOVED***
-        for m in coord_maps:
-            maps.append(self.coord_maps***REMOVED***m***REMOVED***'title'***REMOVED******REMOVED***)
-
-        if len(maps) != 3:
-            raise Exception("Multi map mode only works for 3 maps, got", len(maps))
-
-        FILTER_MAP = maps***REMOVED***0***REMOVED***
-        EXTRACT_MAP = maps***REMOVED***1***REMOVED***
-        BASELINE_MAP = maps***REMOVED***2***REMOVED***
-
-        for root, dirs, files in tqdm(os.walk(self.finpath)):
-            for filename in files:
-
-                if filename.split(".")***REMOVED***-1***REMOVED*** != "txt":
-                    print("SKIPPING", filename)
-                    continue
-
-                with open(foutpath+filename, "w") as f:
-
-                    #this is the map of the final coordinates we'll not be keeping
-                    INTERSECTION = CoordinateMap() 
-                    INTERSECTION.add_file(filename)
-
-                    contents = ***REMOVED******REMOVED***
-                    orig_f = self.finpath+filename
-                    encoding = self.detect_encoding(orig_f)
-                    txt = open(orig_f,"r", encoding=encoding***REMOVED***'encoding'***REMOVED***).read()
-
-                    #FIRST PASS
-                    #add all of our known phi
-                    for start,stop in FILTER_MAP.filecoords(filename):
-                        INTERSECTION.add(filename, start, stop)
-
-                    #SECOND PASS
-                    #use extract map to add new coordinates that don't overlap
-                    #anything that doesn't overlap we'll just add anyways
-                    for start,stop in BASELINE_MAP.filecoords(filename):
-
-                        #check if we overlap with intersection
-                        overlap1 = INTERSECTION.does_overlap(filename, start, stop)
-                        if overlap1:
-                            #Add and extend
-                            INTERSECTION.add_extend(filename, start, stop)
-                            continue
-
-                        overlap2 = EXTRACT_MAP.does_overlap(filename, start, stop)
-                        if overlap2:
-                            #we won't add this because it's in our extract map
-                            continue
-
-                        #print(overlap1, overlap2)
-                        #we got here, it's not in our filter or extract maps, so let's add it
-                        INTERSECTION.add_extend(filename, start, stop)
-
-                    #Transform step
-                    #filters out matches, leaving rest of text
-                    contents = ***REMOVED******REMOVED***
-                    orig_f = self.finpath+filename
-                    encoding = self.detect_encoding(orig_f)
-                    txt = open(orig_f,"r", encoding=encoding***REMOVED***'encoding'***REMOVED***).read()
-                    
-                    last_marker = 0
-                    for start,stop in INTERSECTION.filecoords(filename):
-                        contents.append(txt***REMOVED***last_marker:start***REMOVED***)
-                        last_marker = stop
-
-                    #wrap it up by adding on the remaining values if we haven't hit eof
-                    if last_marker < len(txt):
-                        contents.append(txt***REMOVED***last_marker:len(txt)***REMOVED***)
-
-                    f.write(replacement.join(contents))
-
-    def multi_map_transform(self, 
-            in_path="",
-            out_path="",
-            filter_pass=***REMOVED******REMOVED***,
-            extract_pass=***REMOVED******REMOVED***,
-            final_pass=***REMOVED******REMOVED***,
-            file_suffix="_phi_reduced.txt",
-            replacement=" **PHI** "):
-        """ given a set of maps, will transform text
-            filter pass is any blacklisted words, these are marked as PHI
-            extract pass is any words to extract
-            final pass will ignore anything in the extract map, otherwise will mark as PHI
-        """
-
-        for root, dirs, files in tqdm(os.walk(in_path)):
-            for filename in files:
-
-                if filename.split(".")***REMOVED***-1***REMOVED*** != "txt":
-                    print("SKIPPING", filename)
-                    continue
-
-                orig_f = in_path+filename
-                encoding = self.detect_encoding(orig_f)
-                txt = open(orig_f,"r", encoding=encoding***REMOVED***'encoding'***REMOVED***).read()
-
-                with open(out_path+''.join(filename.split(".")***REMOVED***:-1***REMOVED***)+file_suffix, "w") as f:
-                    #this is the map of the final coordinates we'll not be keeping
-                    INTERSECTION = CoordinateMap() 
-                    INTERSECTION.add_file(filename)
-                    EXTRACT_MAP = CoordinateMap()
-                    EXTRACT_MAP.add_file(filename)
-
-                    contents = ***REMOVED******REMOVED***
-
-                    #FIRST PASS
-                    #add all of our known phi from our filter maps
-                    for m in filter_pass:
-                        for start,stop in m.filecoords(filename):
-                            INTERSECTION.add_extend(filename, start, stop)
-
-                    #SECOND PASS 
-                    #Create our extraction map
-                    for m in extract_pass:
-                        for start,stop in m.filecoords(filename):
-                            EXTRACT_MAP.add_extend(filename, start, stop)
-
-                    #THIRD PASS
-                    #use baseline map to grab rest of non-phi
-                    #anything that overlaps with extraction we ignore
-                    for m in final_pass:
-                        for start,stop in m.filecoords(filename):
-
-                            #check if we overlap with intersection
-                            overlap1 = INTERSECTION.does_overlap(filename, start, stop)
-                            if overlap1:
-                                #add and extend
-                                INTERSECTION.add_extend(filename, start, stop)
-                                continue
-
-                            overlap2 = EXTRACT_MAP.does_overlap(filename, start, stop)
-                            if overlap2:
-                                #we won't add this because it's in our extract map
-                                continue
-
-                            #print(overlap1, overlap2)
-                            #we got here, it's not in our filter or extract maps, so let's add it
-                            INTERSECTION.add_extend(filename, start, stop)
-
-                    #Transform step
-                    #filters out matches, leaving rest of text
-                    contents = ***REMOVED******REMOVED***
-                    
-                    last_marker = 0
-                    for start,stop in INTERSECTION.filecoords(filename):
-                        contents.append(txt***REMOVED***last_marker:start***REMOVED***)
-                        last_marker = stop
-
-                    #wrap it up by adding on the remaining values if we haven't hit eof
-                    if last_marker < len(txt):
-                        contents.append(txt***REMOVED***last_marker:len(txt)***REMOVED***)
-
-                    f.write(replacement.join(contents))
-
-    
 
 
 

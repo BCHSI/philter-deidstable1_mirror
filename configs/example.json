@@ -1,172 +1,63 @@
-{
-	"whitelists":***REMOVED***
-		{
-			"title":"General Whitelist",
-			"group":"",
-			"filepath":"",
-			"pos":***REMOVED******REMOVED***,
-			"notes":""
-		}
-	***REMOVED***,
-	"blacklists":***REMOVED***
-		{
-			"title":"Names Blacklist",
-			"group":"",
-			"filepath":"",
-			"pos":***REMOVED******REMOVED***,
-			"notes":""
-		}
-	***REMOVED***,
-	"NER_tagging":***REMOVED***
-		{
-			"title":"Remove PERSON",
-			"tags":***REMOVED***"PERSON"***REMOVED***,
-			"exclude":true,
-			"This will use the NER tagging and remove any words it thinks are PERSON"
-		}
-	***REMOVED***,
-	"regex":***REMOVED***
-		{
-			"title":"Mg dosage matcher", 
-			"group":"extract",
-			"filepath":"patterns/extract001.txt",
-			"notes":"Matches 10Mg 180MG 10 MG ... By Blake Allen"
-		},
-		{
-			"title":"Vitamin B shortcode matcher", 
-			"group":"extract",
-			"filepath":"patterns/extract002.txt",
-			"notes":"Matches known vitamin short codes B1 B12 B6 etc. By Blake Allen"
-		},
-		{
-			"title":"Medicine Tablet matcher",
-			"group":"extract",
-			"filepath":"patterns/extract003.txt",
-			"notes":"Matches numbers that come before the word tablet(s)"
-		},
-		{
-			"title":"Floating Point filepath 001", 
-			"group":"extract",
-			"filepath":"patterns/fp001.txt",
-			"notes":"Matches 1.2, -1.2, +1.2 By Blake Allen"
-		},
-		{
-			"title":"Digits less than 4",
-			"group":"filter_2",
-			"filepath":"patterns/extract004.txt",
-			"notes":"Matches numbers where the length is less than 4 digits"
-
-		},
-		{
-			"title":"#.###/##/####",
-			"group":"filter",
-			"filepath":"patterns/extract005.txt",
-			"notes":"Matches floating point numbers with extra slashes"
-
-		},
-		{
-			"title":"Phone number",
-			"group":"filter", 
-			"filepath":"patterns/phone001.txt",
-			"notes":"This matches the following: 123-456-7890(123) 456-7890123 456 7890123.456.7890+91 (123) 456-7890 123456789 https://stackoverflow.com/a/16699507/1404663"
-		},
-		{
-			"title":"Date", 
-			"group":"filter",
-			"filepath":"patterns/date001.txt",
-			"notes":" Reg ex that matches all valid dates including leap years. Formats accepted mm/dd/yyyy or mm-dd-yyyy or mm.dd.yyyy https://stackoverflow.com/a/8768241/1404663"
-		},
-		{
-			"title":"date",
-			"group":"filter",
-			"filepath":"patterns/date002.txt",
-			"notes":"this should match gregorian calendar dates such as xxxx-xx-xx, where separators '-' can be any character (.) by Blake Allen"
-		},
-		{
-			"title":"General Date filepath",
-			"group":"filter",
-			"filepath":"patterns/date003.txt",
-			"notes":"Matches XXXX-XX-XX XXXX/XX/XX XX/XX/XXXX where any character is allowed for separator"
-		},
-		{
-			"title":"age catch",
-			"group":"filter",
-			"filepath":"patterns/age001.txt",
-			"notes":"Matches age(d) with some digits before or after "
-		},
-		{
-			"title":"months",
-			"group":"filter",
-			"filepath":"patterns/month001.txt",
-			"notes":"Matches anything with any gregorian month, with digits before or after TODO: 12 may 2027"
-		},
-		{
-			"title":"document",
-			"group":"filter",
-			"filepath":"patterns/document001.txt",
-			"notes":"Matches document:5-4132381"
-		},
-		{
-			"title":"address",
-			"group":"filter",
-			"filepath":"patterns/addr001.txt",
-			"notes":"NOTE: this one is SLOOOWWWW... Matches anything with lane, st, road etc and digits see: https://stackoverflow.com/a/43599988/1404663"
-		},
-		{
-			"title":"Day month",
-			"group":"filter",
-			"filepath":"patterns/date004.txt",
-			"notes":"Matches X/XX by Blake"
-		},
-		{
-			"title":"almost date",
-			"group":"filter",
-			"filepath":"patterns/date005.txt",
-			"notes":"matches ***REMOVED***1-12***REMOVED***/XX "
-		},
-		{
-			"title":"Kinda timelike, D:01/22/74",
-			"group":"filter",
-			"filepath":"patterns/time001.txt",
-			"notes":"matches D:01/22/74 "
-		},
-		{
-			"title":"year | yo useful for finding words with year, or year old, case insentitve",
-			"group":"filter",
-			"filepath":"patterns/age002.txt",
-			"notes":"matches 78-year-old 78-YO 78yearOLD 78 year old"
-		},
-		{
-			"title":"year | useful for finding words with year, case insentitve",
-			"group":"filter",
-			"filepath":"patterns/age003.txt",
-			"notes":"matches 78-year"
-		},
-		{
-			"title":"X year, week, month, day old",
-			"group":"filter",
-			"filepath":"patterns/date007.txt",
-			"notes":"matches 20 year old accounting for the single space"
-		},
-		{
-			"title":"Specific customer number",
-			"group":"filter",
-			"filepath":"patterns/mixed001.txt",
-			"notes":"matches **###/####, 2 letters with numbers and a separator"
-		},
-		{
-			"title":"2 letter code followed by numbers",
-			"group":"filter",
-			"filepath":"patterns/mixed002.txt",
-			"notes":"matches **# 2 letters and N digits in that order"
-		},
-		{
-			"title":"Customer ident",
-			"group":"filter",
-			"filepath":"patterns/mixed003.txt",
-			"notes":"matches a string of 4 or more digits with 3 or more letters"
-		}
+***REMOVED***
+	{
+		"title":"Names Blacklist",
+		"type":"set",
+		"exclude":true,
+		"filepath":"",
+		"pos":***REMOVED******REMOVED***,
+		"notes":""
+	},
+	{
+		"title":"General Whitelist",
+		"type":"set",
+		"exclude":false,
+		"filepath":"",
+		"pos":***REMOVED******REMOVED***,
+		"notes":"These are words we beleive are safe"
+	},
+	{
+		"title":"Remove PERSON",
+		"type":"NER_tagging",
+		"tags":***REMOVED***"PERSON"***REMOVED***,
+		"exclude":true,
+		"This will use the NER tagging and remove any words it thinks are PERSON"
+	},
+	{
+		"title":"Mg dosage matcher", 
+		"type":"regex",
+		"exclude":false,
+		"filepath":"patterns/extract001.txt",
+		"notes":"Matches 10Mg 180MG 10 MG ... By Blake Allen"
+	},
+	{
+		"title":"Vitamin B shortcode matcher", 
+		"type":"regex",
+		"exclude":false,
+		"filepath":"patterns/extract002.txt",
+		"notes":"Matches known vitamin short codes B1 B12 B6 etc. By Blake Allen"
+	},
+	{
+		"title":"Medicine Tablet matcher",
+		"type":"regex",
+		"exclude":false,
+		"filepath":"patterns/extract003.txt",
+		"notes":"Matches numbers that come before the word tablet(s)"
+	},
+	{
+		"title":"Floating Point Regex", 
+		"type":"regex",
+		"exclude":false,
+		"filepath":"patterns/fp001.txt",
+		"notes":"Matches 1.2, -1.2, +1.2 By Blake Allen"
+	},
+	{
+		"title":"All Digits", 
+		"type":"regex",
+		"exclude":true,
+		"filepath":"patterns/alldigits.txt",
+		"notes":"Greedy catches anything with digits in it"
+	}
 		
-	***REMOVED***
-}
+***REMOVED***
+
 
