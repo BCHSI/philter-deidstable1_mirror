@@ -344,9 +344,9 @@ class Philter:
         return {"filename":filename, "phi":word, "context":window}
 
     def eval(self,
-        anno_folder="data/i2b2_anno/",
-        anno_suffix=".ano", 
-        philtered_folder="data/i2b2_results/",
+        anno_path="data/i2b2_anno/",
+        anno_suffix="_phi_reduced.ano", 
+        in_path="data/i2b2_results/",
         fp_output="data/phi/phi_fp/",
         fn_output="data/phi/phi_fn/",
         phi_matcher=re.compile("\s\*\*PHI\*\*\s"),
@@ -360,12 +360,6 @@ class Philter:
         if self.debug:
             print("eval")
 
-        #use config to eval
-        if self.anno_folder != None:
-            anno_folder = self.anno_folder
-
-        # if self.anno_suffix != "":
-        #     anno_suffix = self.anno_suffix
         
         summary = {
             "total_false_positives":0,
@@ -378,7 +372,9 @@ class Philter:
             "true_negatives": [], #non-phi words we correctly identify
         }
 
-        for root, dirs, files in os.walk(philtered_folder):
+        punctuation_matcher = re.compile(r"[^a-zA-Z0-9]")
+
+        for root, dirs, files in os.walk(in_path):
 
             for f in files:
 
@@ -390,7 +386,7 @@ class Philter:
                 true_negatives  = [] #non-phi we correctly identify
 
                 philtered_filename = root+f
-                anno_filename = anno_folder+''.join(f.split(".")[0])+anno_suffix
+                anno_filename = anno_path+''.join(f.split(".")[0])+anno_suffix
 
                 # if len(anno_suffix) > 0:
                 #     anno_filename = anno_folder+f.split(".")[0]+anno_suffix
@@ -430,6 +426,11 @@ class Philter:
                 for i,w in enumerate(philtered_words):
 
                     if phi_matcher.match(w):
+                        #skip anything that's a phi word
+                        continue
+
+                    if punctuation_matcher.match(w):
+                        #skip anything thats just pure punctuation
                         continue
 
                     if only_digits:
