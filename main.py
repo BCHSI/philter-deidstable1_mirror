@@ -8,7 +8,7 @@ import json
 def main():
     # get input/output/filename
     ap = argparse.ArgumentParser()
-    ap.add_argument("-i", "--input", default="./data/i2b2_notes_test/",
+    ap.add_argument("-i", "--input", default="./data/i2b2_notes/",
                     help="Path to the directory or the file that contains the PHI note, the default is ./data/i2b2_notes/",
                     type=str)
     ap.add_argument("-a", "--anno", default="./data/i2b2_anno/",
@@ -46,9 +46,11 @@ def main():
                        replacement=" **PHI** ")
     
     #evaluate the effectiveness
-    # filterer.eval(only_digits=False, 
-    #     fp_output="data/phi/phi_fp/phi_fp.json",
-    #     fn_output="data/phi/phi_fn/phi_fn.json")
+    filterer.eval(only_digits=False, 
+        in_path="data/i2b2_results/",
+        anno_path="data/i2b2_anno/",
+        fp_output="data/phi/phi_fp.json",
+        fn_output="data/phi/phi_fn.json")
         
         
 if __name__ == "__main__":
