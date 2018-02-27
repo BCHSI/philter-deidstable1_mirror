@@ -4,10 +4,10 @@
 class CoordinateMap:
 	""" 
 		Hits are stored in a coordinate map data structure
-		This class abstracts out alot of the maintainence needed for a map
+		This class stores start coordinates for any matches found for this pattern
 
 	"""
-	def __init__(self):
+	def __init__(self, pattern={"title":"untitled"}, debug=False):
 		""" internal data structure maps fielpaths to a map of int:string (coordinate start --> value)
 
 		{ "data/foo.txt": {123:"bar", 124:"baz"} }
@@ -15,6 +15,8 @@ class CoordinateMap:
 		"""
 		self.map = {}
 		self.coord2pattern = {} #keeps reference of the patterns that matched this coorinate (can be multiple patterns)
+		self.pattern = pattern
+		self.debug = debug
 
 	def add(self, fn, start, stop, overlap=False, pattern=""):
 		"""  adds a new coordinate to the coordinate map
@@ -47,13 +49,18 @@ class CoordinateMap:
 		"""  adds a new coordinate to the coordinate map
 			if overlaps with another, will extend to the larger size
 		"""
+
+		if self.debug:
+			print("add_extend", start, stop)
+
 		if filename not in self.map:
 			self.map[filename] = {}
 		overlaps = self.max_overlap(filename, start, stop)
 
+	
 		def clear_overlaps(filename, lst):
 			for o in lst:
-				del self.map[filename][o["orig"]]
+				del self.map[filename][o["orig_start"]]
 
 		if len(overlaps) == 0:
 			#no overlap, just save these coordinates
@@ -63,14 +70,14 @@ class CoordinateMap:
 			clear_overlaps(filename, overlaps)
 			#1 overlap, save this value
 			o = overlaps[0]
-			self.map[filename][o["start"]] = o["stop"]
+			self.map[filename][o["new_start"]] = o["new_stop"]
 			self.add_pattern(filename,start,stop,pattern)
 		else:
 			clear_overlaps(filename, overlaps)
 			#greater than 1 overlap, by default this is sorted because of scan order
 			o1 = overlaps[0]
 			o2 = overlaps[-1]
-			self.map[filename][o1["start"]] = o2["stop"]
+			self.map[filename][o2["new_start"]] = o1["new_stop"]
 			self.add_pattern(filename,start,stop,pattern)
 
 		return True, None
@@ -101,7 +108,8 @@ class CoordinateMap:
 			generator does an inorder scan of the coordinates for this file
 		"""
 		if filename not in self.map:
-			raise Exception('Filename not found', filename)
+			return
+			#raise Exception('Filename not found', filename)
 		coords = sorted(self.map[filename].keys())
 		for coord in coords:
 			yield coord,self.map[filename][coord]
@@ -153,15 +161,15 @@ class CoordinateMap:
 			if start >= s and start <= e:
 				#We found an overlap
 				if stop >= e:
-					overlaps.append({"orig":s, "start":s, "stop":stop})
+					overlaps.append({"orig_start":s, "orig_end":e, "new_start":s, "new_stop":stop})
 				else:
-					overlaps.append({"orig":s, "start":s, "stop":e})
+					overlaps.append({"orig_start":s, "orig_end":e, "new_start":s, "new_stop":e})
 				
 			elif stop >= s and stop <= e:
 				if start <= s:
-					overlaps.append({"orig":s, "start":start, "stop":e})
+					overlaps.append({"orig_start":s, "orig_end":e, "new_start":start, "new_stop":e})
 				else:
-					overlaps.append({"orig":s, "start":s, "stop":e})
+					overlaps.append({"orig_start":s, "orig_end":e, "new_start":s, "new_stop":e})
 				
 		return overlaps
 

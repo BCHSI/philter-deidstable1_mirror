@@ -1,0 +1,13 @@
+[
+	
+	{
+		"title":"Test Whitelist",
+		"type":"set",
+		"exclude":false,
+		"filepath":"filters/z_test/whitelist.json",
+		"pos":[],
+		"notes":"These are words we beleive are safe"
+	}
+]
+
+

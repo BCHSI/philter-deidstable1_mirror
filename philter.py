@@ -3,7 +3,9 @@ import re
 import json
 import os
 import nltk
+import itertools
 import chardet
+import pickle
 from chardet.universaldetector import UniversalDetector
 from nltk.stem.wordnet import WordNetLemmatizer
 from coordinate_map import CoordinateMap
@@ -22,8 +24,8 @@ class Philter:
             self.foutpath = config["foutpath"]
         if "anno_folder" in config:
             self.anno_folder = config["anno_folder"]
-        if "patterns" in config:
-            self.patterns = json.load(open(config["patterns"], "r").read())
+        if "filters" in config:
+            self.patterns = json.loads(open(config["filters"], "r").read())
 
         #All coordinate maps stored here
         self.coordinate_maps = []
@@ -36,44 +38,49 @@ class Philter:
         """ given our input pattern config will load our sets and pre-compile our regex"""
 
         known_pattern_types = set(["regex", "set", "NER_tagging"])
+        require_files = set(["regex", "set"])
         set_filetypes = set(["pkl", "json"])
         regex_filetypes = set(["txt"])
         reserved_list = set(["data", "coordinate_map"])
 
         #first check that data is formatted, can be loaded etc. 
-        for pattern in self.patterns:
-            if not os.path.exists(pattern["filepath"]):
+        for i,pattern in enumerate(self.patterns):
+
+            if pattern["type"] in require_files and not os.path.exists(pattern["filepath"]):
                 raise Exception("Filepath does not exist", pattern["filepath"])
             for k in reserved_list:
                 if k in pattern:
                     raise Exception("Error, Keyword is reserved", k, pattern)
             if pattern["type"] not in known_pattern_types:
                 raise Exception("Pattern type is unknown", pattern["type"])
-
             if pattern["type"] == "set":
                 if pattern["filepath"].split(".")[-1] not in set_filetypes:
                     raise Exception("Invalid filteype", pattern["filepath"], "must be of", set_filetypes)
-                self.patterns[pattern]["data"] = self.init_set(pattern["filepath"])  
+                self.patterns[i]["data"] = self.init_set(pattern["filepath"])  
             elif pattern["type"] == "regex":
-                if pattern["filepath"].split(".")[-1] not in set_filetypes:
+                if pattern["filepath"].split(".")[-1] not in regex_filetypes:
                     raise Exception("Invalid filteype", pattern["filepath"], "must be of", regex_filetypes)
-                self.patterns[pattern]["data"] = self.precompile(pattern["filepath"])
+                self.patterns[i]["data"] = self.precompile(pattern["filepath"])
         
     def precompile(self, filepath):
         """ precompiles our regex to speed up pattern matching"""
-        regex = open(path+r["filepath"],"r").read().strip()
+        regex = open(filepath,"r").read().strip()
         return re.compile(regex)
                
     def init_set(self, filepath):
         """ loads a set of words, (must be a dictionary or set shape) returns result"""
         map_set = {}
         if filepath.endswith(".pkl"):
-            with open(filepath, "rb") as pickle_file:
-                map_set = pickle.load(pickle_file)
-        elif b["filepath"].endswith(".json"):
-            map_set = json.load(open(filepath, "r").read())
+            try:
+                with open(filepath, "rb") as pickle_file:
+                    map_set = pickle.load(pickle_file)
+            except UnicodeDecodeError:
+                with open(filepath, "rb") as pickle_file:
+                    map_set = pickle.load(pickle_file, encoding = 'latin1')
+        elif filepath.endswith(".json"):
+            map_set = json.loads(open(filepath, "r").read())
         else:
-            raise Exception("Invalid filteype",b["filepath"])
+            raise Exception("Invalid filteype",filepath)
         return map_set
 
     def map_coordinates(self, in_path="", allowed_filetypes=set(["txt", "ano"])):
@@ -83,20 +90,23 @@ class Philter:
         """
         
         #create coordinate maps for each pattern
-        for pat in self.patterns:
-            self.patterns[pat]["coordinate_map"] = CoordinateMap()
+        for i,pat in enumerate(self.patterns):
+            self.patterns[i]["coordinate_map"] = CoordinateMap()
 
-        for root, dirs, files in in_path:
+        for root, dirs, files in os.walk(in_path):
             for f in files:
 
                 filename = root+f
+
                 if filename.split(".")[-1] not in allowed_filetypes:
                     if self.debug:
                         print("Skipping: ", filename)
-                    continue
+                    continue                
+                #self.patterns[i]["coordinate_map"].add_file(filename)
 
-                encoding = self.detect_encoding(root+f)
+                encoding = self.detect_encoding(filename)
                 txt = open(filename,"r", encoding=encoding['encoding']).read()
+
 
                 for i,pat in enumerate(self.patterns):
                     if pat["type"] == "regex":
@@ -108,6 +118,10 @@ class Philter:
                     else:
                         raise Exception("Error, pattern type not supported: ", pat["type"])
 
+        #clear out any data to save ram
+        for i,pat in enumerate(self.patterns):
+            del self.patterns[i]["data"]
+
                 
     def map_regex(self, filename="", text="", pattern_index=-1):
         """ Creates a coordinate map from the pattern on this data
@@ -115,71 +129,79 @@ class Philter:
         """
         if pattern_index < 0 or pattern_index >= len(self.patterns):
             raise Exception("Invalid pattern index: ", pattern_index, "pattern length", len(patterns))
-        coord_map = self.patterns[i]["coordinate_map"]
-        matches = regex.finditer(txt)
+        coord_map = self.patterns[pattern_index]["coordinate_map"]
+        regex = self.patterns[pattern_index]["data"]
+        matches = regex.finditer(text)
         for m in matches:
-           coord_map.add_extend(f, m.start(), m.start()+len(m.group()))
-        self.patterns[i]["coordinate_map"] = coord_map
+            coord_map.add_extend(filename, m.start(), m.start()+len(m.group()))
+        self.patterns[pattern_index]["coordinate_map"] = coord_map
 
 
     def map_set(self, filename="", text="", pattern_index=-1):
-        """ Creates a coordinate mapping of whitelisted words and transforms the text"""
+        """ Creates a coordinate mapping of words any words in this set"""
         if pattern_index < 0 or pattern_index >= len(self.patterns):
             raise Exception("Invalid pattern index: ", pattern_index, "pattern length", len(patterns))
 
-        coord_map = self.patterns[i]["coordinate_map"]
+        map_set = self.patterns[pattern_index]["data"]
+        coord_map = self.patterns[pattern_index]["coordinate_map"]
+        
+        #get part of speech we will be sending through this set
+        #note, if this is empty we will put all parts of speech through the set
+        check_pos = False
+        pos_set = set([])
+        if "pos" in self.patterns[pattern_index]:
+            pos_set = set(self.patterns[pattern_index]["pos"])
+        if len(pos_set) > 0:
+            check_pos = True
 
-        keep = []
-        exclude = []
         start_cursor = 0
-        end_cursor = 0
+        pre_process= r"[^a-zA-Z0-9]+"
 
-        words = re.split(r"(\s+)", txt)
-        cursor = 0 #keeps track of the location of the start of the word in the text
-        for i,w in enumerate(words):
+        #preserve spaces while getting POS. 
+        lst = re.split("(\W)", text)
+        cleaned = []
+        for item in lst:
+            if len(item) > 0:
+                cleaned.append(item)
+        pos_list = nltk.pos_tag(cleaned)
 
-            if w in ignore_set:
+        
+        start_coordinate = 0
+        for tup in pos_list:
+
+            word = tup[0]
+            pos  = tup[1]
+
+            start = start_coordinate
+            stop = start_coordinate + len(word)
+
+            word_clean = re.sub(pre_process, "", word.lower().strip())
+
+            if len(word_clean) == 0:
+                #got a blank space or something without any characters or digits, move forward
+                start_coordinate += len(word)
                 continue
 
-            end_cursor = start_cursor + len(w)
+            if check_pos == False or (check_pos == True and pos in pos_set):
+                if word_clean in map_set or word in map_set:
+                    coord_map.add_extend(filename, start, stop)
+                    #print("FOUND: ",word, "COORD: ",  text[start:stop])
+                else:
+                    #print("not in set: ",word, "COORD: ",  text[start:stop])
+                    pass
+                    
+            #advance our start coordinate
+            start_coordinate += len(word)
 
-            #check if the basic word is in the set first,
-            if inverse == False and w in map_set:
-                coord_map.add_extend(filename, start_cursor, end_cursor)
-                start_cursor = end_cursor
-                continue
+        self.patterns[pattern_index]["coordinate_map"] = coord_map
 
-            #remove any punctuation and lowercase
-            clean = re.sub(pre_process, " ", w)
-            clean = clean.lower()
+    def map_ner(self, filename="", text="", pattern_index=-1):
+        """ map NER tagging"""
+        #todo
+        if pattern_index < 0 or pattern_index >= len(self.patterns):
+            raise Exception("Invalid pattern index: ", pattern_index, "pattern length", len(patterns))
 
-            # Lemmatize the word - first try assuming that the
-            # word is a noun
-            lemm_noun = self.lmtzr.lemmatize(clean, 'n')
-
-            # Then try assuming that the word is a verb
-            lemm_verb = self.lmtzr.lemmatize(clean, 'v')
-
-            # Choose whichever word has the greatest change
-            lemm = lemm_verb if len(lemm_verb) < len(lemm_noun) else lemm_noun
-
-            # Double check - If the cleaned word has less than 3 characters,
-            # then the rule didn't work.  Stick with the noun version
-            if len(lemm) < 3:
-                lemm = lemm_noun
-
-            if lemm in ignore_set:
-                continue
-
-            if inverse == True and lemm not in map_set:
-                #keep things not in set
-                coord_map.add_extend(filename, start_cursor, end_cursor)
-            elif inverse == False and lemm in map_set:
-                coord_map.add_extend(filename, start_cursor, end_cursor)
-
-            start_cursor = end_cursor
-
-        return coord_map
+        self.patterns[pattern_index]["coordinate_map"] = CoordinateMap()
 
 
     def folder_walk(self, folder):
@@ -204,17 +226,14 @@ class Philter:
             protected health information will be replaced by the replacement character
 
             transform the data 
-            ORDER: blacklists supercede everything, whitelists are second priority
-            Next are regex which support 3 default groups
-            # filter regex runs as a first pass, blocks anything in group (ideally very precise)
-            # extract regex runs as a second pass, keep anything in this group NOT in filter (ideally very precise)
-            # filter_2 regex runs as a third pass, blocks anything in group, (generally a catch-all, general approach)
-            
+            ORDER: Order is preserved prioritiy, 
+            patterns at spot 0 will have priority over patterns at index 2 
+
             **Anything not caught in these passes will be assumed to be PHI
         """
 
         if self.debug:
-            print("transform")
+            print("running transform")
 
         if not os.path.exists(in_path):
             raise Exception("File input path does not exist", in_path)
@@ -222,90 +241,79 @@ class Philter:
         if not os.path.exists(out_path):
             raise Exception("File output path does not exist", out_path)
 
+        #keeps a record of all phi coordinates and text
+        data = {}
 
-        for root,filename in self.folder_walk(in_path):
+        #create our final exclude and include maps, priority order
+        for root,f in self.folder_walk(in_path):
+
+            filename = root+f
+
+            encoding = self.detect_encoding(filename)
+            txt = open(filename,"r", encoding=encoding['encoding']).read()
+            #record we use to evaluate our effectiveness
+            data[filename] = {"text":txt, "phi":[],"non-phi":[]}
 
             #create an intersection map of all coordinates we'll be removing
-            exclude = CoordinateMap()
-            exclude.add_file(filename)
+            exclude_map = CoordinateMap()
+            exclude_map.add_file(filename)
 
             #create an interestion map of all coordinates we'll be keeping
-            include = CoordinateMap()
-            include.add_file(filename)
+            include_map = CoordinateMap()
+            include_map.add_file(filename)
 
-            #iterate any blacklists
-            for blacklist in self.blacklists:
-                for start,stop in blacklist.filecoords(filename):
-                    exclude.add_extend(filename, start, stop)
+            for i,pattern in enumerate(self.patterns):
+                coord_map = pattern["coordinate_map"]
+                exclude = pattern["exclude"]
 
-            #iterate any whitelists
-            for whitelist in self.whitelists:
-                for start,stop in whitelist.filecoords(filename):
-                    include.add_extend(filename, start, stop)
-
-            #iterate our regex's 
-            for 
-
-
-
-            with open(foutpath+filename, "w") as f:
-                #print(foutpath+filename)
-                if inverse:
-                    #print("transforming inverse, constraint: ", constraint)
-                    #filter out anything in our constraint map NOT in our coord_map
-
-                    contents = []
-                    orig_f = self.finpath+filename
-                    encoding = self.detect_encoding(orig_f)
-                    txt = open(orig_f,"r", encoding=encoding['encoding']).read()
-
-                    #create our constraint map,
-                    #anything in this map, not in our coord_map will be hidden
-                    #usually this is a greedy map with alot of hits
-                    constraint_map = CoordinateMap()
-                    matches = constraint.finditer(txt)
-                    for m in matches:
-                        constraint_map.add(filename, m.start(), m.group())
-                    
-                    last_marker = 0
-                    for start,stop in constraint_map.filecoords(filename):
-                        #check if this is in our coord_map
-                        if coord_map.does_overlap(filename, start, stop):
-                            #keep this 
-                            contents.append(txt[last_marker:stop])
+                for start,stop in coord_map.filecoords(filename):
+                    if exclude:
+                        if not include_map.does_overlap(filename, start, stop):
+                            exclude_map.add_extend(filename, start, stop)
+                            data[filename]["phi"].append({"start":start, "stop":stop, "word":txt[start:stop]})
+                    else:
+                        if not exclude_map.does_overlap(filename, start, stop):
+                            #print("include", start, stop, txt[start:stop])
+                            include_map.add_extend(filename, start, stop)
+                            data[filename]["non-phi"].append({"start":start, "stop":stop, "word":txt[start:stop]})
                         else:
-                            #add up to this point
-                            contents.append(txt[last_marker:start])
-                            #remove this item
-                            contents.append(replacement)
-                        #move our marker forward
-                        last_marker = stop
+                            pass
+                            #print("include overlapped", start, stop, txt[start:stop])
 
-                    #wrap it up by adding on the remaining values if we haven't hit eof
-                    if last_marker < len(txt):
-                        contents.append(txt[last_marker:len(txt)])
+            #now we transform the text
+            with open(out_path+f, "w") as f:
+                
+                #keep any matches in our include map
+                contents = []
+                
 
-                    f.write("".join(contents))
+                data[filename]["text"] = txt
+                
+                last_marker = 0
+                current_chunk = []
+                for start,stop in include_map.filecoords(filename):
+                    if last_marker == start:
+                        current_chunk.append(txt[start:stop])
+                    else:
+                        #add and reset our chunk 
+                        contents.append("".join(current_chunk))
+                        current_chunk = []
+                        contents.append(txt[start:stop])
+                    last_marker = stop
 
-                else:
-                    #filters out matches, leaving rest of text
-                    contents = []
-                    orig_f = self.finpath+filename
-                    encoding = self.detect_encoding(orig_f)
-                    txt = open(orig_f,"r", encoding=encoding['encoding']).read()
-                    
-                    last_marker = 0
-                    for start,stop in coord_map.filecoords(filename):
-                        contents.append(txt[last_marker:start])
-                        last_marker = stop
+                #add any remaining chunks
+                if len(current_chunk) > 0:
+                    contents.append(" ".join(current_chunk))
+                    current_chunk = []
 
-                    #wrap it up by adding on the remaining values if we haven't hit eof
-                    if last_marker < len(txt):
-                        contents.append(txt[last_marker:len(txt)])
+                #wrap it up by adding on the remaining values if we haven't hit eof
+                if last_marker < len(txt):
+                    contents.append(txt[last_marker:len(txt)])
 
-                    f.write(replacement.join(contents))
+                f.write(replacement.join(contents))
 
-
+        #output our data for eval
+        json.dump(data, open("./data/coordinates.json", "w"), indent=4)
 
     def detect_encoding(self, fp):
         detector = UniversalDetector()

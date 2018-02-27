@@ -3,7 +3,7 @@
 		"title":"Names Blacklist",
 		"type":"set",
 		"exclude":true,
-		"filepath":"",
+		"filepath":"filters/blacklists/names_blacklist_common.pkl",
 		"pos":[],
 		"notes":""
 	},
@@ -11,7 +11,7 @@
 		"title":"General Whitelist",
 		"type":"set",
 		"exclude":false,
-		"filepath":"",
+		"filepath":"filters/whitelists/whitelist.pkl",
 		"pos":[],
 		"notes":"These are words we beleive are safe"
 	},
@@ -20,41 +20,41 @@
 		"type":"NER_tagging",
 		"tags":["PERSON"],
 		"exclude":true,
-		"This will use the NER tagging and remove any words it thinks are PERSON"
+		"notes":"This will use the NER tagging and remove any words it thinks are PERSON"
 	},
 	{
 		"title":"Mg dosage matcher", 
 		"type":"regex",
 		"exclude":false,
-		"filepath":"patterns/extract001.txt",
+		"filepath":"filters/regex/extract001.txt",
 		"notes":"Matches 10Mg 180MG 10 MG ... By Blake Allen"
 	},
 	{
 		"title":"Vitamin B shortcode matcher", 
 		"type":"regex",
 		"exclude":false,
-		"filepath":"patterns/extract002.txt",
+		"filepath":"filters/regex/extract002.txt",
 		"notes":"Matches known vitamin short codes B1 B12 B6 etc. By Blake Allen"
 	},
 	{
 		"title":"Medicine Tablet matcher",
 		"type":"regex",
 		"exclude":false,
-		"filepath":"patterns/extract003.txt",
+		"filepath":"filters/regex/extract003.txt",
 		"notes":"Matches numbers that come before the word tablet(s)"
 	},
 	{
 		"title":"Floating Point Regex", 
 		"type":"regex",
 		"exclude":false,
-		"filepath":"patterns/fp001.txt",
+		"filepath":"filters/regex/fp001.txt",
 		"notes":"Matches 1.2, -1.2, +1.2 By Blake Allen"
 	},
 	{
 		"title":"All Digits", 
 		"type":"regex",
 		"exclude":true,
-		"filepath":"patterns/alldigits.txt",
+		"filepath":"filters/regex/alldigits.txt",
 		"notes":"Greedy catches anything with digits in it"
 	}
 		
