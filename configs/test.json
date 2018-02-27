@@ -1,0 +1,20 @@
+***REMOVED***
+	
+	{
+		"title":"Test Whitelist",
+		"type":"set",
+		"exclude":false,
+		"filepath":"filters/z_test/whitelist.json",
+		"pos":***REMOVED******REMOVED***,
+		"notes":"These are words we beleive are safe"
+	},
+	{
+		"title":"punctuation",
+		"type":"regex",
+		"exclude":false,
+		"filepath":"filters/regex/no_text.txt",
+		"notes":"This should keep any punctuation"
+	}
+***REMOVED***
+
+
