@@ -6,8 +6,8 @@ import os
 from chardet.universaldetector import UniversalDetector
 #makes a "fake" set of blacklists / whitelists for us to test the sets
 
-input_anno = "../../data/i2b2_anno_sample/"
-input_notes = "../../data/i2b2_notes_sample/"
+input_anno = "../../data/i2b2_anno/"
+input_notes = "../../data/i2b2_notes/"
 
 whitelist_dict = {}
 blacklist_dict = {}
@@ -42,7 +42,7 @@ for root,dirs,files in os.walk(input_anno):
 
         for w in anno_words:
 
-            if re.search(r"\s*\*\*phi", w):
+            if re.search(r"\*+", w):
                 continue
 
             temp = re.sub(pre_process, "",w.lower().strip())
@@ -67,20 +67,14 @@ for root,dirs,files in os.walk(input_anno):
         for w in note_filename:
 
             temp = re.sub(pre_process, "",w.lower().strip())
-
-            
-
             
             if re.search(r"\d+", temp):
                 #skip anything with digits
                 continue
-            
-
 
             if len(temp) == 0:
                 continue
-
-
+                
             if temp not in whitelist_dict:
                 if temp not in blacklist_dict:
                     blacklist_dict[temp] = 0

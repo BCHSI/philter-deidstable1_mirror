@@ -39,20 +39,40 @@ def main():
     #map any sets, pos and regex groups we have in our config
     filterer.map_coordinates(in_path=args.input)
     
-    #transform the data 
-    #Priority order is maintained in the pattern list
+    # #transform the data 
+    # #Priority order is maintained in the pattern list
     filterer.transform(in_path=args.input,
                        out_path=args.output,
                        replacement="*")
 
     #evaluate the effectiveness
-    filterer.eval(only_digits=False, 
+    filterer.eval(
         in_path="data/i2b2_results/",
         anno_path="data/i2b2_anno/",
         anno_suffix=".txt",
-        fp_output="data/phi/phi_fp.json",
-        fn_output="data/phi/phi_fn.json")
+        summary_output="data/phi/summary.json")
 
+    # filterer.eval(
+    #     in_path="data/i2b2_notes_test_results/",
+    #     anno_path="data/i2b2_anno/",
+    #     anno_suffix=".txt",
+    #     summary_output="data/phi/summary.json")
+
+    # filterer.eval(
+    #     in_path="data/i2b2_anno_nochange/",
+    #     anno_path="data/i2b2_anno/",
+    #     anno_suffix=".txt",
+    #     fp_output="data/phi/phi_fp.json",
+    #     fn_output="data/phi/phi_fn.json")
+
+    # filterer.eval(
+    #     in_path="data/i2b2_notes/",
+    #     anno_path="data/i2b2_anno/",
+    #     anno_suffix=".txt",
+    #     fp_output="data/phi/phi_fp.json",
+    #     fn_output="data/phi/phi_fn.json")
+
+    
         
         
 if __name__ == "__main__":
