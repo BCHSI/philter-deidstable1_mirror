@@ -121,7 +121,8 @@ class Philter:
 
         #clear out any data to save ram
         for i,pat in enumerate(self.patterns):
-            del self.patterns***REMOVED***i***REMOVED******REMOVED***"data"***REMOVED***
+            if "data" in pat:
+                del self.patterns***REMOVED***i***REMOVED******REMOVED***"data"***REMOVED***
 
                 
     def map_regex(self, filename="", text="", pattern_index=-1):
@@ -132,9 +133,24 @@ class Philter:
             raise Exception("Invalid pattern index: ", pattern_index, "pattern length", len(patterns))
         coord_map = self.patterns***REMOVED***pattern_index***REMOVED******REMOVED***"coordinate_map"***REMOVED***
         regex = self.patterns***REMOVED***pattern_index***REMOVED******REMOVED***"data"***REMOVED***
-        matches = regex.finditer(text)
-        for m in matches:
-            coord_map.add_extend(filename, m.start(), m.start()+len(m.group()))
+
+        start_coordinate = 0
+        pre_process= re.compile(r"***REMOVED***^a-zA-Z0-9***REMOVED***")
+
+        for w in re.split("(\s+)", text):
+            stop = start_coordinate+len(w)
+            if len(pre_process.sub("", w.lower().strip())) == 0:
+                #got a blank space or something without any characters or digits, move forward
+                start_coordinate = stop
+                continue
+
+            if regex.match(w):
+                coord_map.add_extend(filename,start_coordinate, stop)
+            start_coordinate = stop
+
+        # matches = regex.finditer(text)
+        # for m in matches:
+        #     coord_map.add_extend(filename, m.start(), m.start()+len(m.group()))
         self.patterns***REMOVED***pattern_index***REMOVED******REMOVED***"coordinate_map"***REMOVED*** = coord_map
 
 
@@ -159,7 +175,7 @@ class Philter:
         pre_process= r"***REMOVED***^a-zA-Z0-9***REMOVED***+"
 
         #preserve spaces while getting POS. 
-        lst = re.split("(\W)", text)
+        lst = re.split("(\s+)", text)
         cleaned = ***REMOVED******REMOVED***
         for item in lst:
             if len(item) > 0:
@@ -310,26 +326,6 @@ class Philter:
                     else:
                         contents.append("*")
 
-
-                # for start,stop in include_map.filecoords(filename):
-                #     if last_marker == start:
-                #         current_chunk.append(txt***REMOVED***start:stop***REMOVED***)
-                #     else:
-                #         #add and reset our chunk 
-                #         contents.append("".join(current_chunk))
-                #         current_chunk = ***REMOVED******REMOVED***
-                #         contents.append(txt***REMOVED***start:stop***REMOVED***)
-                #     last_marker = stop
-
-                # #add any remaining chunks
-                # if len(current_chunk) > 0:
-                #     contents.append(" ".join(current_chunk))
-                #     current_chunk = ***REMOVED******REMOVED***
-
-                # #wrap it up by adding on the remaining values if we haven't hit eof
-                # if last_marker < len(txt):
-                    #contents.append(txt***REMOVED***last_marker:len(txt)***REMOVED***)
-
                 f.write("".join(contents))
 
         #output our data for eval
@@ -370,7 +366,7 @@ class Philter:
             punctuation_matcher=re.compile(r"***REMOVED***^a-zA-Z0-9****REMOVED***"), 
             phi_matcher=re.compile(r"\*+")):
         """ 
-            Compares two sequences row by row, 
+            Compares two sequences item by item, 
             returns generator which yields: 
             classifcation, word
 
@@ -382,19 +378,32 @@ class Philter:
 
             if punctuation_matcher.match(line***REMOVED***1:***REMOVED***.strip()):
                 #skip lines with only punctuation
+                #print("PUNC", line)
                 continue
 
             if line.startswith(" "):
                 #match
                 if phi_matcher.search(line***REMOVED***1:***REMOVED***):
+                    #print("TP", line)
                     yield "TP", line***REMOVED***1:***REMOVED***
                 else:
+                    #print("TN", line)
                     yield "TN", line***REMOVED***1:***REMOVED***
 
             elif line.startswith("-"):
+
+                if phi_matcher.search(line***REMOVED***1:***REMOVED***):
+                    #skip doubles
+                    continue
+
                 #false negative
                 yield "FN",line***REMOVED***1:***REMOVED***
             elif line.startswith("+"):
+
+                if phi_matcher.search(line***REMOVED***1:***REMOVED***):
+                    #skip doubles
+                    continue
+
                 #false positive
                 yield "FP",line***REMOVED***1:***REMOVED***
             else:
@@ -406,8 +415,7 @@ class Philter:
         anno_path="data/i2b2_anno/",
         anno_suffix="_phi_reduced.ano", 
         in_path="data/i2b2_results/",
-        fp_output="data/phi/phi_fp/",
-        fn_output="data/phi/phi_fn/",
+        summary_output="data/phi/summary.json",
         phi_matcher=re.compile("\*+"),
         pre_process=r":|\-|\/|_|~", #characters we're going to strip from our notes to analyze against anno
         only_digits=False):
@@ -438,7 +446,6 @@ class Philter:
 
             for f in files:
 
-
                 #local values per file
                 false_positives = ***REMOVED******REMOVED*** #non-phi we think are phi
                 true_positives  = ***REMOVED******REMOVED*** #phi we correctly identify
@@ -458,11 +465,9 @@ class Philter:
                     print("FILE DOESNT EXIST", anno_filename)
                     continue
 
-                
                 encoding1 = self.detect_encoding(philtered_filename)
                 philtered = open(philtered_filename,"r", encoding=encoding1***REMOVED***'encoding'***REMOVED***).read()
                 philtered_words = re.split("\s+", philtered)
-
                 
                 encoding2 = self.detect_encoding(anno_filename)
                 anno = open(anno_filename,"r", encoding=encoding2***REMOVED***'encoding'***REMOVED***).read()
@@ -470,22 +475,22 @@ class Philter:
 
 
                 for c,w in self.seq_eval(philtered_words, anno_words):
+                   
                     if c == "FP":
                         false_positives.append(w)
                     elif c == "FN":
-                        false_positives.append(w)
+                        #todo get context: phi = self.phi_context(philtered_filename, w, i, philtered_words)
+                        #phi = {"file":philtered_filename, "word":w}
+                        false_negatives.append(w)
                     elif c == "TP":
                         true_positives.append(w)
                     elif c == "TN":
-                        #todo get context: phi = self.phi_context(philtered_filename, w, i, philtered_words)
                         true_negatives.append(w)
 
-                
-                
                 #print("TOTAL WORDS: ",total_words,"true_positives: ", true_positives,"false_positives: ", len(false_positives),"false_negatives: ", len(false_negatives),"true_negatives: ", len(true_negatives))
-                
+                #print(false_negatives, false_positives)
                 #update summary
-                summary***REMOVED***"summary_by_file"***REMOVED******REMOVED***philtered_filename***REMOVED*** = {"true_positives":true_positives, "false_positives":false_positives, "true_negatives":true_negatives, "false_negatives":false_negatives}
+                summary***REMOVED***"summary_by_file"***REMOVED******REMOVED***philtered_filename***REMOVED*** = {"false_positives":false_positives,"false_negatives":false_negatives}
                 summary***REMOVED***"total_true_positives"***REMOVED*** = summary***REMOVED***"total_true_positives"***REMOVED*** + len(true_positives)
                 summary***REMOVED***"total_false_positives"***REMOVED*** = summary***REMOVED***"total_false_positives"***REMOVED*** + len(false_positives)
                 summary***REMOVED***"total_false_negatives"***REMOVED*** = summary***REMOVED***"total_false_negatives"***REMOVED*** + len(false_negatives)
@@ -493,9 +498,7 @@ class Philter:
 
                 #print(len(summary***REMOVED***"true_positives"***REMOVED***), len(summary***REMOVED***"false_positives"***REMOVED***), len(summary***REMOVED***"true_negatives"***REMOVED***), len(summary***REMOVED***"false_negatives"***REMOVED***) )
 
-              
-       
-
+        
         print("true_negatives", summary***REMOVED***"total_true_negatives"***REMOVED***,"true_positives", summary***REMOVED***"total_true_positives"***REMOVED***, "false_negatives", summary***REMOVED***"total_false_negatives"***REMOVED***, "false_positives", summary***REMOVED***"total_false_positives"***REMOVED***)
 
         if summary***REMOVED***"total_true_positives"***REMOVED***+summary***REMOVED***"total_false_negatives"***REMOVED*** > 0:
@@ -509,8 +512,7 @@ class Philter:
             print("Precision: 0.00%")
 
         #save the phi we missed
-        json.dump(summary***REMOVED***"false_negatives"***REMOVED***, open(fn_output, "w"), indent=4)
-        json.dump(summary***REMOVED***"false_positives"***REMOVED***, open(fp_output, "w"), indent=4)
+        json.dump(summary, open(summary_output, "w"), indent=4)
 
 
     def getphi(self, 

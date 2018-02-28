@@ -9,12 +9,13 @@
 		"notes":"These are words we beleive are safe"
 	},
 	{
-		"title":"punctuation",
+		"title":"all digits",
 		"type":"regex",
-		"exclude":false,
-		"filepath":"filters/regex/no_text.txt",
-		"notes":"This should keep any punctuation"
+		"exclude":true,
+		"filepath":"filters/regex/alldigits.txt",
+		"notes":"This should remove anything with digits"
 	}
+	
 ***REMOVED***
 
 
