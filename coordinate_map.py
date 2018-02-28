@@ -103,6 +103,10 @@ class CoordinateMap:
 		for fn in self.map:
 			yield fn
 
+	def get_coords(self, filename, start):
+		stop = self.map[filename][start]
+		return start,stop
+
 	def filecoords(self, filename):
 		""" 
 			generator does an inorder scan of the coordinates for this file
@@ -116,7 +120,7 @@ class CoordinateMap:
 
 	def does_exist(self, filename, index):
 		""" Simple check to see if this index is a hit (start of coordinates)"""
-		if i in self.map[filename]:
+		if index in self.map[filename]:
 			return True
 		return False
 
