@@ -8,9 +8,21 @@ from chardet.universaldetector import UniversalDetector
 
 input_anno = "../../data/i2b2_anno/"
 input_notes = "../../data/i2b2_notes/"
+phi_data = json.loads(open("../../data/phi_notes.json", "r").read())
+
+phi_matcher = re.compile(r"\s*\*\*PHI")
+pre_process = re.compile(r":***REMOVED***^a-zA-Z0-9***REMOVED***")
 
 whitelist_dict = {}
 blacklist_dict = {}
+
+#build our blacklist
+for fn in phi_data:
+    for phi in phi_data***REMOVED***fn***REMOVED******REMOVED***"phi"***REMOVED***:
+        for w in re.split("\s+", phi***REMOVED***"text"***REMOVED***):
+            temp = re.sub(pre_process, "",w.lower().strip())
+            blacklist_dict***REMOVED***temp***REMOVED*** = 1
+
 
 def detect_encoding(fp):
     detector = UniversalDetector()
@@ -23,8 +35,7 @@ def detect_encoding(fp):
     return detector.result
 
 
-phi_matcher = re.compile(r"\s*\*\*PHI")
-pre_process = re.compile(r":***REMOVED***^a-zA-Z0-9***REMOVED***")
+
 
 for root,dirs,files in os.walk(input_anno):
     for f in files:
@@ -53,32 +64,11 @@ for root,dirs,files in os.walk(input_anno):
             
             if len(temp) == 0:
                 continue
-            if temp not in whitelist_dict:
-                whitelist_dict***REMOVED***temp***REMOVED*** = 0
-            whitelist_dict***REMOVED***temp***REMOVED*** += 1
+            if temp not in blacklist_dict:
+                if temp not in whitelist_dict:
+                    whitelist_dict***REMOVED***temp***REMOVED*** = 0
+                whitelist_dict***REMOVED***temp***REMOVED*** += 1
 
-        note_filename = input_notes + f
-
-        encoding = detect_encoding(note_filename)
-        note = open(note_filename,"r", encoding=encoding2***REMOVED***'encoding'***REMOVED***).read()
-        note_words = re.split("\s+", note)
-
-        #get all phi words:
-        for w in note_filename:
-
-            temp = re.sub(pre_process, "",w.lower().strip())
-            
-            if re.search(r"\d+", temp):
-                #skip anything with digits
-                continue
-
-            if len(temp) == 0:
-                continue
-                
-            if temp not in whitelist_dict:
-                if temp not in blacklist_dict:
-                    blacklist_dict***REMOVED***temp***REMOVED*** = 0
-                blacklist_dict***REMOVED***temp***REMOVED*** += 1
 
 json.dump(whitelist_dict, open("whitelist.json", "w"), indent=4)
 json.dump(blacklist_dict, open("blacklist.json", "w"), indent=4)

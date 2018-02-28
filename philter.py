@@ -376,36 +376,36 @@ class Philter:
         d = difflib.Differ()
         for line in list(d.compare(note_lst, anno_lst)):
 
-            if punctuation_matcher.match(line***REMOVED***1:***REMOVED***.strip()):
+            if punctuation_matcher.match(line***REMOVED***2:***REMOVED***.strip()):
                 #skip lines with only punctuation
                 #print("PUNC", line)
                 continue
 
             if line.startswith(" "):
                 #match
-                if phi_matcher.search(line***REMOVED***1:***REMOVED***):
+                if phi_matcher.search(line***REMOVED***2:***REMOVED***):
                     #print("TP", line)
-                    yield "TP", line***REMOVED***1:***REMOVED***
+                    yield "TP", line***REMOVED***2:***REMOVED***
                 else:
                     #print("TN", line)
-                    yield "TN", line***REMOVED***1:***REMOVED***
+                    yield "TN", line***REMOVED***2:***REMOVED***
 
             elif line.startswith("-"):
 
-                if phi_matcher.search(line***REMOVED***1:***REMOVED***):
+                if phi_matcher.search(line***REMOVED***2:***REMOVED***):
                     #skip doubles
                     continue
 
                 #false negative
-                yield "FN",line***REMOVED***1:***REMOVED***
+                yield "FN",line***REMOVED***2:***REMOVED***
             elif line.startswith("+"):
 
-                if phi_matcher.search(line***REMOVED***1:***REMOVED***):
+                if phi_matcher.search(line***REMOVED***2:***REMOVED***):
                     #skip doubles
                     continue
 
                 #false positive
-                yield "FP",line***REMOVED***1:***REMOVED***
+                yield "FP",line***REMOVED***2:***REMOVED***
             else:
                 #shoudn't be possible, but for now fail loudly
                 raise Exception("Found erronous characters", line)
@@ -418,7 +418,9 @@ class Philter:
         summary_output="data/phi/summary.json",
         phi_matcher=re.compile("\*+"),
         pre_process=r":|\-|\/|_|~", #characters we're going to strip from our notes to analyze against anno
-        only_digits=False):
+        only_digits=False,
+        fn_output="data/phi/fn.json",
+        fp_output="data/phi/fp.json"):
         """ calculates the effectiveness of the philtering / extraction
 
             only_digits = <boolean> will constrain evaluation on philtering of only digit types
@@ -441,6 +443,8 @@ class Philter:
         }
 
         punctuation_matcher = re.compile(r"***REMOVED***^a-zA-Z0-9***REMOVED***")
+        all_fn = ***REMOVED******REMOVED***
+        all_fp = ***REMOVED******REMOVED***
 
         for root, dirs, files in os.walk(in_path):
 
@@ -490,15 +494,16 @@ class Philter:
                 #print("TOTAL WORDS: ",total_words,"true_positives: ", true_positives,"false_positives: ", len(false_positives),"false_negatives: ", len(false_negatives),"true_negatives: ", len(true_negatives))
                 #print(false_negatives, false_positives)
                 #update summary
-                summary***REMOVED***"summary_by_file"***REMOVED******REMOVED***philtered_filename***REMOVED*** = {"false_positives":false_positives,"false_negatives":false_negatives}
+                summary***REMOVED***"summary_by_file"***REMOVED******REMOVED***philtered_filename***REMOVED*** = {"false_positives":false_positives,"false_negatives":false_negatives, "num_false_negatives":len(false_negatives)}
                 summary***REMOVED***"total_true_positives"***REMOVED*** = summary***REMOVED***"total_true_positives"***REMOVED*** + len(true_positives)
                 summary***REMOVED***"total_false_positives"***REMOVED*** = summary***REMOVED***"total_false_positives"***REMOVED*** + len(false_positives)
                 summary***REMOVED***"total_false_negatives"***REMOVED*** = summary***REMOVED***"total_false_negatives"***REMOVED*** + len(false_negatives)
                 summary***REMOVED***"total_true_negatives"***REMOVED*** = summary***REMOVED***"total_true_negatives"***REMOVED*** + len(true_negatives)
+                all_fp = all_fp + false_positives
+                all_fn = all_fn + false_negatives
 
                 #print(len(summary***REMOVED***"true_positives"***REMOVED***), len(summary***REMOVED***"false_positives"***REMOVED***), len(summary***REMOVED***"true_negatives"***REMOVED***), len(summary***REMOVED***"false_negatives"***REMOVED***) )
 
-        
         print("true_negatives", summary***REMOVED***"total_true_negatives"***REMOVED***,"true_positives", summary***REMOVED***"total_true_positives"***REMOVED***, "false_negatives", summary***REMOVED***"total_false_negatives"***REMOVED***, "false_positives", summary***REMOVED***"total_false_positives"***REMOVED***)
 
         if summary***REMOVED***"total_true_positives"***REMOVED***+summary***REMOVED***"total_false_negatives"***REMOVED*** > 0:
@@ -513,6 +518,8 @@ class Philter:
 
         #save the phi we missed
         json.dump(summary, open(summary_output, "w"), indent=4)
+        json.dump(all_fn, open(fn_output, "w"), indent=4)
+        json.dump(all_fp, open(fp_output, "w"), indent=4)
 
 
     def getphi(self, 
