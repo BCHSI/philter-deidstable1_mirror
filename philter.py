@@ -6,6 +6,7 @@ import nltk
 import itertools
 import chardet
 import pickle
+import difflib
 from chardet.universaldetector import UniversalDetector
 from nltk.stem.wordnet import WordNetLemmatizer
 from coordinate_map import CoordinateMap
@@ -232,6 +233,8 @@ class Philter:
             **Anything not caught in these passes will be assumed to be PHI
         """
 
+        punctuation_matcher = re.compile(r"***REMOVED***^a-zA-Z0-9****REMOVED***")
+
         if self.debug:
             print("running transform")
 
@@ -284,33 +287,50 @@ class Philter:
             with open(out_path+f, "w") as f:
                 
                 #keep any matches in our include map
-                contents = ***REMOVED******REMOVED***
                 
-
                 data***REMOVED***filename***REMOVED******REMOVED***"text"***REMOVED*** = txt
                 
                 last_marker = 0
                 current_chunk = ***REMOVED******REMOVED***
-                for start,stop in include_map.filecoords(filename):
-                    if last_marker == start:
-                        current_chunk.append(txt***REMOVED***start:stop***REMOVED***)
-                    else:
-                        #add and reset our chunk 
-                        contents.append("".join(current_chunk))
-                        current_chunk = ***REMOVED******REMOVED***
+
+                #read the text by character, any non-punc non-overlaps will be replaced
+                contents = ***REMOVED******REMOVED***
+                for i in range(0, len(txt)):
+
+                    if i < last_marker:
+                        continue
+
+                    if include_map.does_exist(filename, i):
+                        #add our preserved text
+                        start,stop = include_map.get_coords(filename, i)
                         contents.append(txt***REMOVED***start:stop***REMOVED***)
-                    last_marker = stop
+                        last_marker = stop
+                    elif punctuation_matcher.match(txt***REMOVED***i***REMOVED***):
+                        contents.append(txt***REMOVED***i***REMOVED***)
+                    else:
+                        contents.append("*")
 
-                #add any remaining chunks
-                if len(current_chunk) > 0:
-                    contents.append(" ".join(current_chunk))
-                    current_chunk = ***REMOVED******REMOVED***
 
-                #wrap it up by adding on the remaining values if we haven't hit eof
-                if last_marker < len(txt):
-                    contents.append(txt***REMOVED***last_marker:len(txt)***REMOVED***)
+                # for start,stop in include_map.filecoords(filename):
+                #     if last_marker == start:
+                #         current_chunk.append(txt***REMOVED***start:stop***REMOVED***)
+                #     else:
+                #         #add and reset our chunk 
+                #         contents.append("".join(current_chunk))
+                #         current_chunk = ***REMOVED******REMOVED***
+                #         contents.append(txt***REMOVED***start:stop***REMOVED***)
+                #     last_marker = stop
 
-                f.write(replacement.join(contents))
+                # #add any remaining chunks
+                # if len(current_chunk) > 0:
+                #     contents.append(" ".join(current_chunk))
+                #     current_chunk = ***REMOVED******REMOVED***
+
+                # #wrap it up by adding on the remaining values if we haven't hit eof
+                # if last_marker < len(txt):
+                    #contents.append(txt***REMOVED***last_marker:len(txt)***REMOVED***)
+
+                f.write("".join(contents))
 
         #output our data for eval
         json.dump(data, open("./data/coordinates.json", "w"), indent=4)
@@ -343,13 +363,52 @@ class Philter:
 
         return {"filename":filename, "phi":word, "context":window}
 
+
+    def seq_eval(self,
+            note_lst, 
+            anno_lst, 
+            punctuation_matcher=re.compile(r"***REMOVED***^a-zA-Z0-9****REMOVED***"), 
+            phi_matcher=re.compile(r"\*+")):
+        """ 
+            Compares two sequences row by row, 
+            returns generator which yields: 
+            classifcation, word
+
+            classifications can be TP, FP, FN, TN 
+            corresponding to True Positive, False Positive, False Negative and True Negative
+        """
+        d = difflib.Differ()
+        for line in list(d.compare(note_lst, anno_lst)):
+
+            if punctuation_matcher.match(line***REMOVED***1:***REMOVED***.strip()):
+                #skip lines with only punctuation
+                continue
+
+            if line.startswith(" "):
+                #match
+                if phi_matcher.search(line***REMOVED***1:***REMOVED***):
+                    yield "TP", line***REMOVED***1:***REMOVED***
+                else:
+                    yield "TN", line***REMOVED***1:***REMOVED***
+
+            elif line.startswith("-"):
+                #false negative
+                yield "FN",line***REMOVED***1:***REMOVED***
+            elif line.startswith("+"):
+                #false positive
+                yield "FP",line***REMOVED***1:***REMOVED***
+            else:
+                #shoudn't be possible, but for now fail loudly
+                raise Exception("Found erronous characters", line)
+
+
     def eval(self,
         anno_path="data/i2b2_anno/",
         anno_suffix="_phi_reduced.ano", 
         in_path="data/i2b2_results/",
         fp_output="data/phi/phi_fp/",
         fn_output="data/phi/phi_fn/",
-        phi_matcher=re.compile("\s\*\*PHI\*\*\s"),
+        phi_matcher=re.compile("\*+"),
         pre_process=r":|\-|\/|_|~", #characters we're going to strip from our notes to analyze against anno
         only_digits=False):
         """ calculates the effectiveness of the philtering / extraction
@@ -370,6 +429,7 @@ class Philter:
             "true_positives": ***REMOVED******REMOVED***, #phi words we correctly identify
             "false_negatives":***REMOVED******REMOVED***, #phi words we think are non-phi
             "true_negatives": ***REMOVED******REMOVED***, #non-phi words we correctly identify
+            "summary_by_file":{}
         }
 
         punctuation_matcher = re.compile(r"***REMOVED***^a-zA-Z0-9***REMOVED***")
@@ -401,9 +461,6 @@ class Philter:
                 
                 encoding1 = self.detect_encoding(philtered_filename)
                 philtered = open(philtered_filename,"r", encoding=encoding1***REMOVED***'encoding'***REMOVED***).read()
-                #pre-process notes for comparison with anno punctuation stripped files
-                if len(pre_process) > 0:
-                    philtered = re.sub(pre_process, " ", philtered)
                 philtered_words = re.split("\s+", philtered)
 
                 
@@ -411,90 +468,33 @@ class Philter:
                 anno = open(anno_filename,"r", encoding=encoding2***REMOVED***'encoding'***REMOVED***).read()
                 anno_words = re.split("\s+", anno)
 
-                anno_dict = {}
-                philtered_dict = {}
 
-            
-                for w in philtered_words:
-                    philtered_dict***REMOVED***w***REMOVED*** = 1                
+                for c,w in self.seq_eval(philtered_words, anno_words):
+                    if c == "FP":
+                        false_positives.append(w)
+                    elif c == "FN":
+                        false_positives.append(w)
+                    elif c == "TP":
+                        true_positives.append(w)
+                    elif c == "TN":
+                        #todo get context: phi = self.phi_context(philtered_filename, w, i, philtered_words)
+                        true_negatives.append(w)
 
-                for w in anno_words:
-                    anno_dict***REMOVED***w***REMOVED*** = 1
-                #print("DICTS", len(anno_dict), len(philtered_dict))
-
-                #check what we hit
-                for i,w in enumerate(philtered_words):
-
-                    if phi_matcher.match(w):
-                        #skip anything that's a phi word
-                        continue
-
-                    if punctuation_matcher.match(w):
-                        #skip anything thats just pure punctuation
-                        continue
-
-                    if only_digits:
-                        if not re.search("\S*\d+\S*", w):
-                            #skip non-digit evals
-                            #assume we found a non-phi word
-                            #phi = self.phi_context(philtered_filename, w, i, philtered_words)
-                            #true_negatives.append(phi)
-                            continue
-
-                    #print(w, w in anno_dict, w in philtered_dict)
-
-                    #check if this word is phi
-                    if w not in anno_dict:
-                        #this is phi we missed
-                        phi = self.phi_context(philtered_filename, w, i, philtered_words)
-                        false_negatives.append(phi)
-                    else:
-                        #this isn't phi, and we correctly identified it
-                        phi_tn = self.phi_context(philtered_filename, w, i, philtered_words)
-                        true_positives.append(phi_tn)
-
-                #check what we missed
-                for i,w in enumerate(anno_words):
-
-                    if phi_matcher.match(w):
-                        continue
-
-                    if only_digits:
-                        if not re.search("\S*\d+\S*", w):
-                            #skip non-digit evals
-                            #assume we got a non-phi word
-                            #phi = self.phi_context(anno_filename, w, i, anno_words)
-                            #true_positives.append(phi)
-                            continue
-
-                    #print(w, w in anno_dict, w in philtered_dict)
-
-                    #check if this word is phi
-                    if w not in philtered_dict:
-                        #we got something that wasn't phi
-                        phi_fp = self.phi_context(anno_filename, w, i, anno_words)
-                        false_positives.append(phi_fp)
-                    else:
-                        #we correctly identified non-phi
-                        #don't add twice
-                        pass
-                        
+                
+                
+                #print("TOTAL WORDS: ",total_words,"true_positives: ", true_positives,"false_positives: ", len(false_positives),"false_negatives: ", len(false_negatives),"true_negatives: ", len(true_negatives))
                 
                 #update summary
-                summary***REMOVED***"false_positives"***REMOVED*** = summary***REMOVED***"false_positives"***REMOVED*** + false_positives
-                summary***REMOVED***"false_negatives"***REMOVED*** = summary***REMOVED***"false_negatives"***REMOVED*** + false_negatives
-                summary***REMOVED***"true_positives"***REMOVED*** = summary***REMOVED***"true_positives"***REMOVED*** + true_positives
-                summary***REMOVED***"true_negatives"***REMOVED*** = summary***REMOVED***"true_negatives"***REMOVED*** + true_negatives
+                summary***REMOVED***"summary_by_file"***REMOVED******REMOVED***philtered_filename***REMOVED*** = {"true_positives":true_positives, "false_positives":false_positives, "true_negatives":true_negatives, "false_negatives":false_negatives}
+                summary***REMOVED***"total_true_positives"***REMOVED*** = summary***REMOVED***"total_true_positives"***REMOVED*** + len(true_positives)
+                summary***REMOVED***"total_false_positives"***REMOVED*** = summary***REMOVED***"total_false_positives"***REMOVED*** + len(false_positives)
+                summary***REMOVED***"total_false_negatives"***REMOVED*** = summary***REMOVED***"total_false_negatives"***REMOVED*** + len(false_negatives)
+                summary***REMOVED***"total_true_negatives"***REMOVED*** = summary***REMOVED***"total_true_negatives"***REMOVED*** + len(true_negatives)
 
                 #print(len(summary***REMOVED***"true_positives"***REMOVED***), len(summary***REMOVED***"false_positives"***REMOVED***), len(summary***REMOVED***"true_negatives"***REMOVED***), len(summary***REMOVED***"false_negatives"***REMOVED***) )
 
               
-                #print("MISSED: ",len(false_negatives), false_negatives)
-        #calc stats
-        summary***REMOVED***"total_true_negatives"***REMOVED*** = len(summary***REMOVED***"true_negatives"***REMOVED***)
-        summary***REMOVED***"total_true_positives"***REMOVED*** = len(summary***REMOVED***"true_positives"***REMOVED***)
-        summary***REMOVED***"total_false_negatives"***REMOVED*** = len(summary***REMOVED***"false_negatives"***REMOVED***)
-        summary***REMOVED***"total_false_positives"***REMOVED*** = len(summary***REMOVED***"false_positives"***REMOVED***)
+       
 
         print("true_negatives", summary***REMOVED***"total_true_negatives"***REMOVED***,"true_positives", summary***REMOVED***"total_true_positives"***REMOVED***, "false_negatives", summary***REMOVED***"total_false_negatives"***REMOVED***, "false_positives", summary***REMOVED***"total_false_positives"***REMOVED***)
 
@@ -505,6 +505,8 @@ class Philter:
 
         if summary***REMOVED***"total_true_positives"***REMOVED***+summary***REMOVED***"total_false_positives"***REMOVED*** > 0:
             print("Precision: {:.2%}".format(summary***REMOVED***"total_true_positives"***REMOVED***/(summary***REMOVED***"total_true_positives"***REMOVED***+summary***REMOVED***"total_false_positives"***REMOVED***)))
+        elif summary***REMOVED***"total_true_positives"***REMOVED*** == 0:
+            print("Precision: 0.00%")
 
         #save the phi we missed
         json.dump(summary***REMOVED***"false_negatives"***REMOVED***, open(fn_output, "w"), indent=4)

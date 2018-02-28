@@ -35,23 +35,24 @@ def main():
     }    
    
     filterer = Philter(philter_config)
-    
+
     #map any sets, pos and regex groups we have in our config
     filterer.map_coordinates(in_path=args.input)
     
-
     #transform the data 
     #Priority order is maintained in the pattern list
     filterer.transform(in_path=args.input,
                        out_path=args.output,
-                       replacement=" **PHI** ")
-    
+                       replacement="*")
+
     #evaluate the effectiveness
     filterer.eval(only_digits=False, 
         in_path="data/i2b2_results/",
         anno_path="data/i2b2_anno/",
+        anno_suffix=".txt",
         fp_output="data/phi/phi_fp.json",
         fn_output="data/phi/phi_fn.json")
+
         
         
 if __name__ == "__main__":
