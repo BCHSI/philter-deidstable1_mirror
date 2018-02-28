@@ -376,36 +376,36 @@ class Philter:
         d = difflib.Differ()
         for line in list(d.compare(note_lst, anno_lst)):
 
-            if punctuation_matcher.match(line[1:].strip()):
+            if punctuation_matcher.match(line[2:].strip()):
                 #skip lines with only punctuation
                 #print("PUNC", line)
                 continue
 
             if line.startswith(" "):
                 #match
-                if phi_matcher.search(line[1:]):
+                if phi_matcher.search(line[2:]):
                     #print("TP", line)
-                    yield "TP", line[1:]
+                    yield "TP", line[2:]
                 else:
                     #print("TN", line)
-                    yield "TN", line[1:]
+                    yield "TN", line[2:]
 
             elif line.startswith("-"):
 
-                if phi_matcher.search(line[1:]):
+                if phi_matcher.search(line[2:]):
                     #skip doubles
                     continue
 
                 #false negative
-                yield "FN",line[1:]
+                yield "FN",line[2:]
             elif line.startswith("+"):
 
-                if phi_matcher.search(line[1:]):
+                if phi_matcher.search(line[2:]):
                     #skip doubles
                     continue
 
                 #false positive
-                yield "FP",line[1:]
+                yield "FP",line[2:]
             else:
                 #shoudn't be possible, but for now fail loudly
                 raise Exception("Found erronous characters", line)
@@ -418,7 +418,9 @@ class Philter:
         summary_output="data/phi/summary.json",
         phi_matcher=re.compile("\*+"),
         pre_process=r":|\-|\/|_|~", #characters we're going to strip from our notes to analyze against anno
-        only_digits=False):
+        only_digits=False,
+        fn_output="data/phi/fn.json",
+        fp_output="data/phi/fp.json"):
         """ calculates the effectiveness of the philtering / extraction
 
             only_digits = <boolean> will constrain evaluation on philtering of only digit types
@@ -441,6 +443,8 @@ class Philter:
         }
 
         punctuation_matcher = re.compile(r"[^a-zA-Z0-9]")
+        all_fn = []
+        all_fp = []
 
         for root, dirs, files in os.walk(in_path):
 
@@ -490,15 +494,16 @@ class Philter:
                 #print("TOTAL WORDS: ",total_words,"true_positives: ", true_positives,"false_positives: ", len(false_positives),"false_negatives: ", len(false_negatives),"true_negatives: ", len(true_negatives))
                 #print(false_negatives, false_positives)
                 #update summary
-                summary["summary_by_file"][philtered_filename] = {"false_positives":false_positives,"false_negatives":false_negatives}
+                summary["summary_by_file"][philtered_filename] = {"false_positives":false_positives,"false_negatives":false_negatives, "num_false_negatives":len(false_negatives)}
                 summary["total_true_positives"] = summary["total_true_positives"] + len(true_positives)
                 summary["total_false_positives"] = summary["total_false_positives"] + len(false_positives)
                 summary["total_false_negatives"] = summary["total_false_negatives"] + len(false_negatives)
                 summary["total_true_negatives"] = summary["total_true_negatives"] + len(true_negatives)
+                all_fp = all_fp + false_positives
+                all_fn = all_fn + false_negatives
 
                 #print(len(summary["true_positives"]), len(summary["false_positives"]), len(summary["true_negatives"]), len(summary["false_negatives"]) )
 
-        
         print("true_negatives", summary["total_true_negatives"],"true_positives", summary["total_true_positives"], "false_negatives", summary["total_false_negatives"], "false_positives", summary["total_false_positives"])
 
         if summary["total_true_positives"]+summary["total_false_negatives"] > 0:
@@ -513,6 +518,8 @@ class Philter:
 
         #save the phi we missed
         json.dump(summary, open(summary_output, "w"), indent=4)
+        json.dump(all_fn, open(fn_output, "w"), indent=4)
+        json.dump(all_fp, open(fp_output, "w"), indent=4)
 
 
     def getphi(self, 
