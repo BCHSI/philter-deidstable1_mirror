@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2078-09-06
+
+
+Vascular Surgery H&P
+Date 09/06/78
+
+Name:  Richard, Ulysses
+Medical Record: 8913196
+Attending:  Snyder
+
+History of Present Illness:  Mr Ulysses is an 85 yom with h/p PVD s/p multiple bilateral lower extremity revascularizations and a non-healing wound on the RLE.  Most recently, he had undergone Rle necrotic ulcer debridement (07/78),R CFA to distal anterior tibial BPG on 05/78.  The wound was overlying the BPG.  He was made NWB on R, with VAC dressing applied to the wound to be changed twice weekly.  He has been followed in clinic.  Though he was noted to have good granulation tissue during his hospitalization one month ago, recently his wound has been concerning for non-healing.  In clinic, his RLE is ischemic, and there is a concern for wound infection.
+The patient reports that the proximal aspect of his wound had pregressive breakdown over the past 2-3 weeks, with associated increase in pain, especially with VAC changes.  He says that he could no longer feel a palpable graft pulse as he could just after the surgery.  His foot became increasingly discolored, and his toe became necrotic after some minor trauma without response to silvadene.
+No fevers, chills, nausea, vomiting.
+
+Past Medical History:
+CAD, Htn, CRI (Cr 1.8 at baseline), DM, PVD, Carotid Stenosis s/p R CEA 3/73, CHF, AF, Nephrolithiasis, Spinal Stenosis
+
+Past Surgical History: 
+RLE wound debridement 2078
+R CFA to distal anterior tibial in-situ saphenous BPG 2078
+L fem/pop/peroneal BPG redo 2074
+L fem/pop BPG 2073
+R CEA
+
+Allergies:
+ASA   GI intolerance
+
+Medications:  
+Lasix 40 po qd
+Ipatropium inh
+Norvasc 10 bid
+KCL 20 QD
+Zocor 20 mg po qhs
+Fentanyl patch
+Doxazosin 2mg po qhs
+Nitroglycerine patch 0.2mg/h
+Lopressor 12.5 po bid
+Nexium 40 mg po qd
+Lexapro 10 mg po qd
+ASA 325 mg po qd
+Glyburide 5mg po qd
+Percocet prn
+Ativan 0.5 mg po bid prn
+
+Social history:  Denies tobacco use in past or currently.  Alcohol 1 glass wine every few weeks.
+
+		 
+Physical Exam: 
+T= 97.9 P=101 BP= 131/70 RR=  16 96% RA
+CV: reg
+Pulm: clear
+Pulses: 		
+Femoral	L: 1+	R: 1+					Pop	L: 1+	R: 1+
+DP: 	L: np	R: np
+PT 	L: np  	R: np
+RLE cool ~15cm below knee, wound of medial leg, with erythema and breakdown
+healed medial saphenous harvest wound
+foot dusky, poor cap refill, necrotic 1st toe
+LLE warm, healed medial saphenous harvest wound, OK cap refill
+
+Recent studies:
+Labs: Pending
+
+
+CXR: pending
+
+Impression/Plan: Ischemic RLE
+Admit to Vascular Service, Dr. Matthew Snyder attending
+Send wound culture, start vancomycin empirically
+Plan for R BKA on 09/08
+This has been discussed with Dr. Jackson Roth, Vascular Surgery Fellow
+
+
+_________________________________________
+Julia Jorgenson, MD, Vascular surgery , Junior Resident
+Pager # 04873
+
+
+
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2078-09-06" TYPE="DATE" comment="" />
+<DATE id="P1" start="55" end="63" text="09/06/78" TYPE="DATE" comment="" />
+<NAME id="P2" start="72" end="88" text="Richard, Ulysses" TYPE="PATIENT" comment="" />
+<ID id="P3" start="105" end="112" text="8913196" TYPE="MEDICALRECORD" comment="" />
+<NAME id="P4" start="125" end="131" text="Snyder" TYPE="DOCTOR" comment="" />
+<NAME id="P5" start="165" end="172" text="Ulysses" TYPE="PATIENT" comment="" />
+<AGE id="P6" start="179" end="181" text="85" TYPE="AGE" comment="" />
+<DATE id="P7" start="358" end="363" text="07/78" TYPE="DATE" comment="" />
+<DATE id="P8" start="404" end="409" text="05/78" TYPE="DATE" comment="" />
+<DATE id="P9" start="1322" end="1326" text="3/73" TYPE="DATE" comment="" />
+<DATE id="P10" start="1417" end="1421" text="2078" TYPE="DATE" comment="" />
+<DATE id="P11" start="1476" end="1480" text="2078" TYPE="DATE" comment="" />
+<DATE id="P12" start="1509" end="1513" text="2074" TYPE="DATE" comment="" />
+<DATE id="P13" start="1528" end="1532" text="2073" TYPE="DATE" comment="" />
+<NAME id="P14" start="2459" end="2473" text="Matthew Snyder" TYPE="DOCTOR" comment="" />
+<DATE id="P15" start="2551" end="2556" text="09/08" TYPE="DATE" comment="" />
+<NAME id="P16" start="2590" end="2602" text="Jackson Roth" TYPE="DOCTOR" comment="" />
+<NAME id="P17" start="2672" end="2687" text="Julia Jorgenson" TYPE="DOCTOR" comment="" />
+<CONTACT id="P18" start="2736" end="2741" text="04873" TYPE="PHONE" comment="" />
+</TAGS>
+</deIdi2b2>

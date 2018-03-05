@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2064-07-26
+
+July 26, 2064
+
+
+
+
+
+Harry R. Lynn, M.D.
+
+Doraville County Health Center
+
+897 Cider Street
+
+Platteville, HI 79812 
+
+
+
+RE:  		Isabelle Y. Quick
+
+ATCH: 		655-75-45
+
+
+
+Dear Harry and Yair:
+
+
+
+My thanks for your kind referral of the above noted patient with respect to her disabling claudication and of course she is not in a very happy circumstance.  As you know, she is just 52 years of age.  Her cardiovascular risk factors include type 2 diabetes treated with metformin and Glyburide, hypertension, hyperlipidemia and she is a former cigarette smoker but she has not smoked in a year.  She spends a lot of time caring for her partially disabled husband.  She has known and impressive history of peripheral vascular disease.  She has undergone bilateral leg revascularizations.  On the left side initially an iliac stent was tried but in January of 2063 she had a left iliofemoral endarterectomy with angioplasty and in situ above knee left fem-pop bypass graft.  This reconstruction is functioning well, as evidenced by pulse examination and she certainly does not have any major symptoms in the left side.  In April of 2063 she had a right common femoral and external iliac endarterectomy with a right fem-pop bypass graft to the above-knee popliteal artery using transposed greater saphenous veins.  There had previously been a right iliac PTA and stent.  She states that the procedure in the right leg was only transiently of benefit.  By last spring, i.e. a year ago she again had rather limiting claudication.  She says this is now worse over the past several months and she quantifies this as severe calf pain after just a couple of blocks.  Importantly she does not have ischemic rest pain and she has never had tissue loss.  Recently resting ABIs were recorded at 0.46 on the right and 0.8 on the left.  Her continued complaints led to a repeat arteriogram last October documenting a superficial femoral artery occlusion (??? length thereof - she did not bring the films themselves) and a patent albeit small reconstituted above-knee popliteal artery with decent runoff.  Understandably Dr. Adcock was reluctant about recommending further revascularizations.  She has sought an opinion here in this regard.  She has no known coronary artery disease and her general system review is notable for a prior hospitalization in 2061 for severe pancreatitis requiring laparotomy.  On physical examination blood pressure was 140/80.  Pulse was 70 and regular.  Carotid upstroke was normal and there were no major carotid bruits.  She has femoral pulses on both sides and the left fem-pop bypass graft in situ is palpable, as is the left popliteal pulse.  There is no right popliteal nor right foot pulse.  She does have dependent rubor on that right side although there is no tissue breakdown.
+
+
+
+This is of course a very unhappy situation.  Further attempts at surgical revascularization in the setting of having both greater saphenous veins harvested and so forth is really not justified for claudication alone since the result can be anticipated to be not very good.  However I am not absolutely ruling this out.  I would suggest the following.  Her risk factor control is decent and she should certainly stay on the Lipitor, aspirin and Plavix.  Since her problem is claudication I would like Yair to institute Pletal at full dosages and give this at least a couple of months before we can say that she has had an adequate trial with question benefit.  She will get the actual arteriogram from the October study to me.  If it seems reasonable and the right superficial femoral artery block is not too long an attempt at percutaneous recanalization could be considered.  I will get back to you after review of the films themselves.  My thanks once again.  With every best wish.
+
+
+
+Sincerely,
+
+
+
+
+
+Daniel W. Iniguez, M.D.
+
+
+
+cc:	Yair K. Bennett, M.D., 208 Pheasant Lane, Platteville, HI 79812
+
+
+
+DWI/yim
+
+
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2064-07-26" TYPE="DATE" comment="" />
+<DATE id="P1" start="28" end="41" text="July 26, 2064" TYPE="DATE" comment="" />
+<NAME id="P2" start="47" end="60" text="Harry R. Lynn" TYPE="DOCTOR" comment="" />
+<LOCATION id="P3" start="68" end="98" text="Doraville County Health Center" TYPE="HOSPITAL" comment="" />
+<LOCATION id="P4" start="100" end="116" text="897 Cider Street" TYPE="STREET" comment="" />
+<LOCATION id="P5" start="118" end="129" text="Platteville" TYPE="CITY" comment="" />
+<LOCATION id="P6" start="131" end="133" text="HI" TYPE="STATE" comment="" />
+<LOCATION id="P7" start="134" end="139" text="79812" TYPE="ZIP" comment="" />
+<NAME id="P8" start="151" end="168" text="Isabelle Y. Quick" TYPE="PATIENT" comment="" />
+<LOCATION id="P9" start="170" end="174" text="ATCH" TYPE="HOSPITAL" comment="" />
+<ID id="P10" start="178" end="187" text="655-75-45" TYPE="MEDICALRECORD" comment="" />
+<NAME id="P11" start="196" end="201" text="Harry" TYPE="DOCTOR" comment="" />
+<NAME id="P12" start="206" end="210" text="Yair" TYPE="DOCTOR" comment="" />
+<AGE id="P13" start="399" end="401" text="52" TYPE="AGE" comment="" />
+<DATE id="P14" start="863" end="878" text="January of 2063" TYPE="DATE" comment="" />
+<DATE id="P15" start="1137" end="1150" text="April of 2063" TYPE="DATE" comment="" />
+<DATE id="P16" start="1473" end="1479" text="spring" TYPE="DATE" comment="" />
+<DATE id="P17" start="1896" end="1903" text="October" TYPE="DATE" comment="" />
+<NAME id="P18" start="2125" end="2131" text="Adcock" TYPE="DOCTOR" comment="" />
+<DATE id="P19" start="2355" end="2359" text="2061" TYPE="DATE" comment="" />
+<NAME id="P20" start="3322" end="3326" text="Yair" TYPE="DOCTOR" comment="" />
+<DATE id="P21" start="3527" end="3534" text="October" TYPE="DATE" comment="" />
+<NAME id="P22" start="3825" end="3842" text="Daniel W. Iniguez" TYPE="DOCTOR" comment="" />
+<NAME id="P23" start="3856" end="3871" text="Yair K. Bennett" TYPE="DOCTOR" comment="" />
+<LOCATION id="P24" start="3879" end="3896" text="208 Pheasant Lane" TYPE="STREET" comment="" />
+<LOCATION id="P25" start="3898" end="3909" text="Platteville" TYPE="CITY" comment="" />
+<LOCATION id="P26" start="3911" end="3913" text="HI" TYPE="STATE" comment="" />
+<LOCATION id="P27" start="3914" end="3919" text="79812" TYPE="ZIP" comment="" />
+<NAME id="P28" start="3923" end="3926" text="DWI" TYPE="DOCTOR" comment="" />
+<NAME id="P29" start="3927" end="3930" text="yim" TYPE="DOCTOR" comment="" />
+</TAGS>
+</deIdi2b2>

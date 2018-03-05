@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2082-01-10
+
+                     AH EMERGENCY DEPT VISIT
+ 
+BRANCH,EARNEST   530-23-69-1                      VISIT DATE: 01/10/82
+The patient was seen by me in the emergency department with Dr. 
+Whittaker.  The resident's note was reviewed and the patient was 
+interviewed and examined by me. 
+HISTORY OF PRESENTING COMPLAINT:  The patient is a very pleasant, 
+50 year-old gentleman who presents with gross hematemesis and 
+coffee-ground emesis.  He had it during the night and then this 
+morning developed coffee-grounds turned to red blood emesis.  He 
+denies any light-headedness, chest pain or abdominal pain.  He has 
+had some diarrhea over the last seven months, of unclear etiology. 
+No melena. 
+PAST MEDICAL HISTORY:  Chronic renal failure, myocardial 
+infarction, insulin dependent diabetes. 
+PHYSICAL EXAMINATION:  GENERAL:  The patient was hemodynamically 
+stable, well-appearing, nontoxic.  LUNGS:  Clear.  HEART:  Regular 
+rate and rhythm.  ABDOMEN:  Soft with tenderness to palpation in 
+the bilateral lower quadrants.  NG tube lavage showed 200 cc of 
+pink tinged fluid, cleared after 50 cc. 
+LABORATORY EVALUATION:  Hematocrit was 46, white count 11, 
+potassium 6.6, moderately hemolyzed.  BUN was 62, creatinine 6.9. 
+THERAPY RENDERED/COURSE IN ED:  The patient will be seen by the 
+renal service and admitted to the medical service.  The patient 
+will need dialysis and endoscopy tomorrow.  See resident's note for 
+details. 
+FINAL DIAGNOSIS:  Upper GI bleed. 
+DISPOSITION (including condition upon discharge):  The patient was 
+admitted in satisfactory condition. 
+___________________________________                    ED832/1818 
+CHRISTOPHER LEMUS, M.D.       CL58                         D:01/10/82 
+                                                       T:01/11/82 
+Dictated by:  CHRISTOPHER LEMUS, M.D.       CL58 
+ ******** Not reviewed by Attending Physician ********
+
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2082-01-10" TYPE="DATE" comment="" />
+<LOCATION id="P1" start="49" end="51" text="AH" TYPE="HOSPITAL" comment="" />
+<NAME id="P2" start="75" end="89" text="BRANCH,EARNEST" TYPE="PATIENT" comment="" />
+<ID id="P3" start="92" end="103" text="530-23-69-1" TYPE="MEDICALRECORD" comment="" />
+<DATE id="P4" start="137" end="145" text="01/10/82" TYPE="DATE" comment="" />
+<NAME id="P5" start="211" end="220" text="Whittaker" TYPE="DOCTOR" comment="" />
+<AGE id="P6" start="377" end="379" text="50" TYPE="AGE" comment="" />
+<ID id="P7" start="1655" end="1665" text="ED832/1818" TYPE="IDNUM" comment="" />
+<NAME id="P8" start="1667" end="1684" text="CHRISTOPHER LEMUS" TYPE="DOCTOR" comment="" />
+<NAME id="P9" start="1697" end="1701" text="CL58" TYPE="USERNAME" comment="" />
+<DATE id="P10" start="1728" end="1736" text="01/10/82" TYPE="DATE" comment="" />
+<DATE id="P11" start="1795" end="1803" text="01/11/82" TYPE="DATE" comment="" />
+<NAME id="P12" start="1819" end="1836" text="CHRISTOPHER LEMUS" TYPE="DOCTOR" comment="" />
+<NAME id="P13" start="1849" end="1853" text="CL58" TYPE="USERNAME" comment="" />
+</TAGS>
+</deIdi2b2>

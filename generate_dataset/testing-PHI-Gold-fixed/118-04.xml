@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2118-01-08
+
+
+
+
+
+Garner Medical Clinic Internal Medicine 
+Attending: Dr Mariusz Soto, MD
+Senior:  Gregory Xing, MD 
+Intern: Frances Justus, MD
+Medical Students: Robert Joshi, Sylvia Cordova.
+
+
+
+
+Patient Name: Usrey, Anthony
+MR#: 6444877
+Date: 01/08/2118
+--
+CC: scheduled for surgery on 1/13/18 
+
+
+HPI: 
+Patient is a 54 y.o. male with h/o aortic valve replacement, CHF, and HTN who presented to PNC as a transfer from Montebello Convalescent Hospital with a diagnosis of post-ERCP pancreatitis. The patient was admitted to Montebello Convalescent with a history of RUQ pain that began on July 3rd. He was found to have choledochal stones and underwent an ERCP with sphincterotomy on July 07. Subsequent to this he developed a bout of generalized abdominal pain two days later and he was noted to have a marked and new increase in his amylase and lipase levels (3191 and 2171, respectively), diagnosed as acute post ERCP pancreatitis and transferred to PNC for further management.
+Dr Gregory Xing explained to him via an interpreter and with images of his CT scan that he has gallstones and pancreatic pseudocysts that have persisted as compared to his last CT in July 2117.
+The procedure of open cholecystectomy with Roux en Y drainage of pancreatic psudocyst was explained to him and he was consented. 
+
+
+He will be an inpatient 3 days prior to surgery for transition from Coumadin to heparin / lovenox therapy.
+He is presently doing well, with no fevers or abd pain. He is eating well and has returned to his normal life.
+
+
+PMH: S/p mechanical aortic valve replacement, CHF, HTN, hyperlipidemia
+--
+PSH: CABG, AVR
+--
+Meds: Lisinopril 40 MG QD
+Coumadin 5 MG QHS
+Lipitor 40 mg QD.
+
+
+Allergies: NKDA
+--
+Physical Exam: 
+
+
+CV: RRR (+) S1/S2, 2+ radial pulses, audible mechanical valve click
+Pulm: CTAB
+Abdomen: Abdomen soft. He is completely nontender.
+Ext: No e/c/c.
+--
+Imaging:
+1. CXR: Bilateral pleural effusions, no free air under the diaphragm seen.
+2. CT scan from OSH of abdomen: reveals phlegmon in the lesser sac and gas in both the biliary tree as well as the portal vein.
+3. CT scan from 10/10/17 at PNC: Overall decrease in abdominal phlegmonous change, with interval development of a 13 x 5.4 x 4.8 cm well defined collection anterior to the pancreas.
+4. CT from 1/02/18: No significant change in hypodense lesions anterior    to the pancreatic body/tail and tail most consistent with pseudocysts.
+     Cholelithiasis.
+     Diverticulosis without diverticulitis.
+
+
+Assessment/Plan: 54 y.o. male with post-ERCP pancreatitis which is not responding to conservative management
+
+
+-Cardiology consult.
+-Anesthesia pre-op clearance
+-Home meds.
+-d/c Coumadin
+-Start heparin drip after stat labs (check PTT, INR)
+-Regular diet.
+
+
+
+
+Patient has been seen by Gregory Xing, senior resident SOPH Internal Medicine
+
+
+
+
+
+
+Frances Justus, MD
+PNC Surgery
+
+
+
+
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2118-01-08" TYPE="DATE" comment="" />
+<LOCATION id="P1" start="32" end="53" text="Garner Medical Clinic" TYPE="HOSPITAL" comment="" />
+<NAME id="P3" start="87" end="99" text="Mariusz Soto" TYPE="DOCTOR" comment="" />
+<NAME id="P4" start="113" end="125" text="Gregory Xing" TYPE="DOCTOR" comment="" />
+<NAME id="P5" start="139" end="153" text="Frances Justus" TYPE="DOCTOR" comment="" />
+<NAME id="P6" start="176" end="188" text="Robert Joshi" TYPE="DOCTOR" comment="" />
+<NAME id="P7" start="190" end="204" text="Sylvia Cordova" TYPE="DOCTOR" comment="" />
+<NAME id="P8" start="224" end="238" text="Usrey, Anthony" TYPE="PATIENT" comment="" />
+<ID id="P9" start="244" end="251" text="6444877" TYPE="MEDICALRECORD" comment="" />
+<DATE id="P10" start="258" end="268" text="01/08/2118" TYPE="DATE" comment="" />
+<DATE id="P11" start="301" end="308" text="1/13/18" TYPE="DATE" comment="" />
+<AGE id="P12" start="331" end="333" text="54" TYPE="AGE" comment="" />
+<LOCATION id="P13" start="409" end="412" text="PNC" TYPE="HOSPITAL" comment="" />
+<LOCATION id="P14" start="432" end="464" text="Montebello Convalescent Hospital" TYPE="HOSPITAL" comment="" />
+<LOCATION id="P15" start="537" end="560" text="Montebello Convalescent" TYPE="HOSPITAL" comment="" />
+<DATE id="P16" start="602" end="610" text="July 3rd" TYPE="DATE" comment="" />
+<DATE id="P17" start="697" end="704" text="July 07" TYPE="DATE" comment="" />
+<LOCATION id="P18" start="966" end="969" text="PNC" TYPE="HOSPITAL" comment="" />
+<NAME id="P19" start="997" end="1009" text="Gregory Xing" TYPE="DOCTOR" comment="" />
+<DATE id="P20" start="1177" end="1186" text="July 2117" TYPE="DATE" comment="" />
+<DATE id="P21" start="2109" end="2117" text="10/10/17" TYPE="DATE" comment="" />
+<LOCATION id="P22" start="2121" end="2124" text="PNC" TYPE="HOSPITAL" comment="" />
+<DATE id="P23" start="2286" end="2293" text="1/02/18" TYPE="DATE" comment="" />
+<AGE id="P24" start="2505" end="2507" text="54" TYPE="AGE" comment="" />
+<NAME id="P25" start="2772" end="2784" text="Gregory Xing" TYPE="DOCTOR" comment="" />
+<LOCATION id="P26" start="2802" end="2806" text="SOPH" TYPE="HOSPITAL" comment="" />
+<NAME id="P28" start="2831" end="2845" text="Frances Justus" TYPE="DOCTOR" comment="" />
+<LOCATION id="P29" start="2850" end="2853" text="PNC" TYPE="HOSPITAL" comment="" />
+</TAGS>
+</deIdi2b2>

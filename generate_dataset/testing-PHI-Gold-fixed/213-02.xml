@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2065-09-29
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+September 29, 2065
+
+ 
+
+ 
+
+ 
+
+Cecilia Delong, M.D.
+
+Green Oaks Hospital
+
+72 John Street
+
+San Luis Obispo, MD  53925
+
+ 
+
+RE:  Wagner, Lonnie
+
+     MR #097-87-37-2
+
+ 
+
+Dear Cecilia;
+
+ 
+
+I had the pleasure of seeing Lonnie in the Clinic today.  As you
+
+know, he is a 72-year-old gentleman recently diagnosed with
+
+myelodysplastic/myeloproliferative syndrome.  He has required
+
+blood cell transfusions for this.  He is currently receiving
+
+Hydrea for this.  He also has coronary disease, for which he had
+
+stents placed in his LAD and OM in 07/65.  This has been stable. 
+
+He also had some congestive heart failure, for which he has no
+
+further symptoms at this time.  His weight is only up 1-2 pounds
+
+but has remained stable with an increased appetite.  
+
+ 
+
+Medications: Include atenolol 25 mg p.o. q.d., aspirin 325 mg
+
+q.d., vitamin B12 injections q. monthly, metformin 850 mg t.i.d.,
+
+lisinopril 10 mg p.o. q.d., Lasix 40 mg p.o. q.d. 
+
+ 
+
+Physical Examination: Blood pressure: 102/60.  Heart rate: 60
+
+beats/min.  Neck examination reveals no jugular venous distention 
+
+Chest examination is clear to auscultation bilaterally.  Cardiac
+
+examination reveals normal S1, physiologically split S2, no
+
+evidence of a murmurs, rubs or gallops at this time.  He has no
+
+peripheral edema or clubbing.  
+
+ 
+
+EKG: Normal sinus rhythm, nonspecific ST or T wave abnormalities. 
+
+Compared to his prior EKG, T wave changes in the anterior leads
+
+are improved.  
+
+Wagner, Lonnie
+
+MR #097-87-37-2               -2-                 September 29, 2065 
+
+ 
+
+Impression: Mr. Wagner is doing very well from an ischemic and
+
+heart failure perspective.  He remains on a good regimen of
+
+afterload reduction and anti-ischemic agents.  At this time, I do
+
+not recommend any changes in his cardiac medications.  
+
+ 
+
+The patient was seen in consultation with Dr. Jacqueline Lam. 
+
+ 
+
+Sincerely, 
+
+ 
+
+ 
+
+ 
+
+ 
+
+David F. Irick, M.D.
+
+ 
+
+\tolbert
+
+ 
+
+cc:
+
+Tristan Hanson, M.D.
+
+Leake County Memorial Hospital
+
+50 Indian Rock Road
+
+San Luis Obispo, MD  53925 
+
+ 
+
+Larry            , M.D.
+
+Leake County Memorial Hospital
+
+65 Indian Rock Road
+
+San Luis Obispo, MD  53925 
+
+ 
+
+ ******** Not reviewed by Attending Physician ********
+
+
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2065-09-29" TYPE="DATE" comment="" />
+<DATE id="P1" start="55" end="73" text="September 29, 2065" TYPE="DATE" comment="" />
+<NAME id="P2" start="84" end="98" text="Cecilia Delong" TYPE="DOCTOR" comment="" />
+<LOCATION id="P3" start="106" end="125" text="Green Oaks Hospital" TYPE="HOSPITAL" comment="" />
+<LOCATION id="P4" start="127" end="141" text="72 John Street" TYPE="STREET" comment="" />
+<LOCATION id="P5" start="143" end="158" text="San Luis Obispo" TYPE="CITY" comment="" />
+<LOCATION id="P6" start="160" end="162" text="MD" TYPE="STATE" comment="" />
+<LOCATION id="P7" start="164" end="169" text="53925" TYPE="ZIP" comment="" />
+<NAME id="P8" start="179" end="193" text="Wagner, Lonnie" TYPE="PATIENT" comment="" />
+<ID id="P9" start="204" end="215" text="097-87-37-2" TYPE="MEDICALRECORD" comment="" />
+<NAME id="P10" start="225" end="232" text="Cecilia" TYPE="DOCTOR" comment="" />
+<NAME id="P11" start="267" end="273" text="Lonnie" TYPE="PATIENT" comment="" />
+<AGE id="P12" start="318" end="320" text="72" TYPE="AGE" comment="" />
+<DATE id="P13" start="591" end="596" text="07/65" TYPE="DATE" comment="" />
+<NAME id="P14" start="1505" end="1519" text="Wagner, Lonnie" TYPE="PATIENT" comment="" />
+<ID id="P15" start="1525" end="1536" text="097-87-37-2" TYPE="MEDICALRECORD" comment="" />
+<DATE id="P16" start="1571" end="1589" text="September 29, 2065" TYPE="DATE" comment="" />
+<NAME id="P17" start="1611" end="1617" text="Wagner" TYPE="PATIENT" comment="" />
+<NAME id="P18" start="1893" end="1907" text="Jacqueline Lam" TYPE="DOCTOR" comment="" />
+<NAME id="P19" start="1939" end="1953" text="David F. Irick" TYPE="DOCTOR" comment="" />
+<NAME id="P20" start="1965" end="1972" text="tolbert" TYPE="DOCTOR" comment="" />
+<NAME id="P21" start="1982" end="1996" text="Tristan Hanson" TYPE="DOCTOR" comment="" />
+<LOCATION id="P22" start="2004" end="2034" text="Leake County Memorial Hospital" TYPE="HOSPITAL" comment="" />
+<LOCATION id="P23" start="2036" end="2055" text="50 Indian Rock Road" TYPE="STREET" comment="" />
+<LOCATION id="P24" start="2057" end="2072" text="San Luis Obispo" TYPE="CITY" comment="" />
+<LOCATION id="P25" start="2074" end="2076" text="MD" TYPE="STATE" comment="" />
+<LOCATION id="P26" start="2078" end="2083" text="53925" TYPE="ZIP" comment="" />
+<NAME id="P27" start="2089" end="2094" text="Larry" TYPE="DOCTOR" comment="" />
+<LOCATION id="P28" start="2114" end="2144" text="Leake County Memorial Hospital" TYPE="HOSPITAL" comment="" />
+<LOCATION id="P29" start="2146" end="2165" text="65 Indian Rock Road" TYPE="STREET" comment="" />
+<LOCATION id="P30" start="2167" end="2182" text="San Luis Obispo" TYPE="CITY" comment="" />
+<LOCATION id="P31" start="2184" end="2186" text="MD" TYPE="STATE" comment="" />
+<LOCATION id="P32" start="2188" end="2193" text="53925" TYPE="ZIP" comment="" />
+</TAGS>
+</deIdi2b2>

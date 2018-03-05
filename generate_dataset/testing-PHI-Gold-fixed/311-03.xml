@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2087-08-15
+
+EDVISIT^43294739^FINNEY, INDIANA^08/15/87^NARANJO, KENNETH
+
+The patient was seen and examined in the Emergency Department on
+
+08/15/2087.  The patient was seen by Dr. Kaminski.  I have discussed
+
+the management with her.  I have also seen the patient personally
+
+and reviewed the medical record.  This is an addendum to the
+
+medical record.
+
+HISTORY OF PRESENT ILLNESS:  This is a 50-year-old female who is
+
+sent in by her primary doctor after having had EKG changes today.
+
+ Her history, which I personally obtained and in review of the
+
+record, she has a history of sarcoidosis, recently has had
+
+increased cough and some shortness of breath, given albuterol
+
+with symptomatic improvement yesterday and returned today with
+
+some persistent pain, which she says is generally related to
+
+cough.  She has had no fevers, chills, or shortness of breath.
+
+REVIEW OF SYSTEMS:  As indicated and otherwise negative.  She is
+
+asymptomatic at this time.  She has had no recent travel.
+
+PAST MEDICAL HISTORY:  Diabetes.
+
+SOCIAL HISTORY:  She is a nonsmoker.
+
+PHYSICAL EXAMINATION:  The patient is very well appearing,
+
+pleasant and in no acute distress.  Her vital signs are stable. 
+
+She is normocephalic, atraumatic.  Pharynx and ENT is normal. 
+
+Neck is supple and nontender.  Chest is clear.  Heart is regular
+
+with normal pulses.  Abdomen is soft and nontender without masses
+
+that are appreciated.  Skin is warm and dry.  She has no CVA
+
+tenderness, no back tenderness.  She is awake, alert, and
+
+oriented.  Sensory and motor exam are normal.
+
+ASSESSMENT AND PLAN:  This is a woman who complains of having had
+
+some chest discomfort.  She has a history of sarcoid and has EKG,
+
+which I reviewed, which shows lateral T-wave changes as suggested
+
+by her referring doctor.  She is pain free.  Initial lab results
+
+show hematocrit of 40, INR of 1, and a troponin which was
+
+negative.
+
+Plan at this time is for hospital admission to rule out MI given
+
+her EKG change.  She looks clinically stable.
+
+______________________________
+
+NARANJO, KENNETH M.D.
+
+D: 08/15/87
+
+T: 08/15/87
+
+Dictated By: NARANJO, KENNETH
+
+eScription document:3-7918390 BFFocus
+
+******** Not reviewed by Attending Physician ********
+
+
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2087-08-15" TYPE="DATE" comment="" />
+<ID id="P1" start="36" end="44" text="43294739" TYPE="MEDICALRECORD" comment="" />
+<NAME id="P2" start="45" end="60" text="FINNEY, INDIANA" TYPE="PATIENT" comment="" />
+<DATE id="P3" start="61" end="69" text="08/15/87" TYPE="DATE" comment="" />
+<NAME id="P4" start="70" end="86" text="NARANJO, KENNETH" TYPE="DOCTOR" comment="" />
+<DATE id="P5" start="154" end="164" text="08/15/2087" TYPE="DATE" comment="" />
+<NAME id="P6" start="195" end="203" text="Kaminski" TYPE="DOCTOR" comment="" />
+<AGE id="P7" start="409" end="411" text="50" TYPE="AGE" comment="" />
+<NAME id="P8" start="2050" end="2066" text="NARANJO, KENNETH" TYPE="DOCTOR" comment="" />
+<DATE id="P9" start="2076" end="2084" text="08/15/87" TYPE="DATE" comment="" />
+<DATE id="P10" start="2089" end="2097" text="08/15/87" TYPE="DATE" comment="" />
+<NAME id="P11" start="2112" end="2128" text="NARANJO, KENNETH" TYPE="DOCTOR" comment="" />
+<ID id="P12" start="2150" end="2159" text="3-7918390" TYPE="IDNUM" comment="" />
+</TAGS>
+</deIdi2b2>

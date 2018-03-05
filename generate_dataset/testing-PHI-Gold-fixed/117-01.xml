@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2065-09-20
+
+Melissa Cummings
+
+HGH Unit No: 265-01-73
+
+
+
+SAINT VINCENT HOSPITAL
+
+
+
+ADULT MEDICINE
+
+
+
+
+
+Date: September 20, 2065
+
+
+
+Weight: 125.
+
+
+
+The patient returns from Paraguay.  States while there, had problems with her stomach. Was treated by MD there with what sounds like GERD but was ? attempted to be treated for H. pylori.  Brings in medicines, all of which she took for one week.  They are Flagyl 500 mg b.i.d., Metoclopramide 10 mg q.i.d. PC, Patoprazol 40 mg q.d.  All have been completed.  
+
+
+
+CURRENT MEDICATIONS: Lipitor 20 mg b.i.d., atenolol 25 mg b.i.d., Zestril 20 mg q.d., Glyburide 25 mg tablets 2 tabs b.i.d. (Patient occasionally does not take pills at supper as she is still fearful of hypoglycemia), clonazepam 1 mg b.i.d., NTG p.r.n., Bayer aspirin and eye drops.  
+
+
+
+(1)	Abdominal pain: Off medicine.  Symptoms have resolved.  Currently on no treatment for GI symptoms.
+
+
+
+(2)	Diabetes mellitus: FBS  126, 137, 149, 120, 139, 135, 116.  10:00 p.m. 226, 8:00 p.m. 201, 8:00 p.m. 151.  The patient does not check prior to supper.  States she is fearful she will die during night if sugar gets too low, therefore, occasionally does not take pills before supper and gets higher readings at night in the 240's to 260's.  Generally avoids sweets in diet. Takes evening pills with dinner at approximately 4:00 or 5:00.  
+
+
+
+(3)	RHCM: Was scheduled Dr. Yelverton for a sigmoidoscopy 9/16.  Apparently is office called and cancelled it and patient is waiting to be rescheduled.
+
+
+
+(4)	HTN: No chest pain, shortness of breath or palpations.  
+
+
+
+PE:	Blood pressure, right arm: 142/80.  Chest is clear. Cardiac regular rhythm at 66, no murmur or gallop.  Extremities: No edema. Labs from 7/27: Hemoglobin A1C 8.5 (197), BUN 13, creatinine 0.6, lytes normal, SGOT normal.  CBC normal.  
+
+ Melissa Cummings
+
+HGH Unit No: 265-01-73
+
+
+
+SAINT VINCENT HOSPITAL
+
+
+
+ADULT MEDICINE
+
+
+
+
+
+Date: September 20, 2065
+
+
+
+Page 2
+
+
+
+
+
+
+
+A/P:	(1)	Diabetes mellitus: Irregular control secondary to patient s self-adjustment of medicine.  Have asked patient to check blood sugar pre-breakfast/pre-dinner.  If sugar below 100 pre-dinner, may decrease Glyburide evening dose.  If sugar 100 or greater, continue the 10 mg dose with supper.  
+
+
+
+(2)	HTN: Reasonable control.  Continue current treatment.
+
+
+
+(3)	Epigastric pain: Currently stable, monitor.
+
+
+
+(4)	Routine health maintenance: UTD.  Mammogram normal.  
+
+
+
+(5)	Return to clinic in three months to Dr. Eng.
+
+
+
+
+
+Kimberly I Kidd, RNC, ANP
+
+
+
+KI/espinoza/nolen
+
+
+
+
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2065-09-20" TYPE="DATE" comment="" />
+<NAME id="P1" start="28" end="44" text="Melissa Cummings" TYPE="PATIENT" comment="" />
+<LOCATION id="P2" start="46" end="49" text="HGH" TYPE="HOSPITAL" comment="" />
+<ID id="P3" start="59" end="68" text="265-01-73" TYPE="MEDICALRECORD" comment="" />
+<LOCATION id="P4" start="72" end="94" text="SAINT VINCENT HOSPITAL" TYPE="HOSPITAL" comment="" />
+<DATE id="P5" start="124" end="142" text="September 20, 2065" TYPE="DATE" comment="" />
+<LOCATION id="P6" start="187" end="195" text="Paraguay" TYPE="COUNTRY" comment="" />
+<NAME id="P7" start="1390" end="1399" text="Yelverton" TYPE="DOCTOR" comment="" />
+<DATE id="P8" start="1420" end="1424" text="9/16" TYPE="DATE" comment="" />
+<DATE id="P9" start="1722" end="1726" text="7/27" TYPE="DATE" comment="" />
+<NAME id="P10" start="1822" end="1838" text="Melissa Cummings" TYPE="PATIENT" comment="" />
+<LOCATION id="P11" start="1840" end="1843" text="HGH" TYPE="HOSPITAL" comment="" />
+<ID id="P12" start="1853" end="1862" text="265-01-73" TYPE="MEDICALRECORD" comment="" />
+<LOCATION id="P13" start="1866" end="1888" text="SAINT VINCENT HOSPITAL" TYPE="HOSPITAL" comment="" />
+<DATE id="P14" start="1918" end="1936" text="September 20, 2065" TYPE="DATE" comment="" />
+<NAME id="P15" start="2473" end="2476" text="Eng" TYPE="DOCTOR" comment="" />
+<NAME id="P16" start="2483" end="2498" text="Kimberly I Kidd" TYPE="DOCTOR" comment="" />
+<NAME id="P17" start="2512" end="2514" text="KI" TYPE="DOCTOR" comment="" />
+<NAME id="P18" start="2515" end="2523" text="espinoza" TYPE="DOCTOR" comment="" />
+<NAME id="P19" start="2524" end="2529" text="nolen" TYPE="DOCTOR" comment="" />
+</TAGS>
+</deIdi2b2>

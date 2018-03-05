@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2074-08-02
+
+
+Notre Dame Nursing Home
+1992 Madera Circle                                      Potts, William
+Hyannis, NV 21113                                      10916758
+(391) 643-6925                                           08/02/74
+
+
+HISTORY OF PRESENT ILLNESS:  Mr. Potts is a 60 year old
+male who comes for follow up of hypertension, hyperlipidemia
+and other medical problems.
+1.  Hypertension.  Continues on medications without chest
+pain, shortness of breath, or pedal edema.
+2.  Hyperlipidemia. Continues on medication. No myalgias..
+3.  Erectile disorder.  He has run out of Viagra, which
+continues to work well at 50 mg dose.  Would like more.
+4.  Low HDL.  He has not been taking Lopid for the past 2
+months because his prescription ran out and has had
+difficulty getting in here to have it renewed.
+5.  Anxiety.  He has not had any further unpredictable
+attacks of anxiety.  He did recently use some lorazepam when
+he had to fly, but not at any other times.
+
+6.  Seasonal allergies. Episodic rhinitis and pruritus. Needs more Claritan
+MEDICATIONS:  Viagra, lorazepam 0.5 mg t.i.d. p.r.n.,
+atenolol 50 mg q.d., Lipitor 20 mg q.d., aspirin q.d.,
+diltiazem extended release 180 mg q.d., and Claritin-D
+24-Hour 1 p.o. q.d. p.r.n.
+
+REVIEW OF SYSTEMS:  As above and no nausea, vomiting,
+dysuria, or leg pain.
+
+PHYSICAL EXAMINATION:  The patient appears well.  Blood
+pressure 126/76, weight 224 pounds, heart rate 72 and
+regular.  Chest:  Clear to percussion and auscultation. 
+Cardiovascular exam:  Notable for 1/6 holosystolic murmur at
+the lower left sternal border to the apex.  Abdominal exam:
+No masses, tenderness, or organomegaly.  Extremities:  No
+edema.
+
+ASSESSMENT AND PLAN:
+1.  Hypertension.  Good control, no change in therapy.
+2.  Hyperlipidemia.  He did not return for fasting lipid
+analysis.  Will continue medication at present level and
+again ask him to return for fasting exam.
+3.  Erectile disorder.  Viagra refilled.
+4.  Low HDL.  I will try Niaspan sustained release 1500 mg
+p.o. q.d.  I discussed flushing sensation.  I asked him to
+take it at bedtime.  If the flushing sensation gets to be a
+problem, I encouraged him to take it in the morning about
+half an hour after he takes his aspirin.
+5.  Anxiety.  Improved.
+6.  Seasonal allergies.  Renewed Claritin prescription.
+
+In addition to above prescriptions, renewed all other
+chronic prescriptions as well.
+
+
+______________________________
+Matthew H. Wyatt, M.D.
+
+
+eScription document:8-959314 AFFocus
+
+DD: 08/02/74
+DT: 08/03/74
+DV: 08/02/74
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2074-08-02" TYPE="DATE" comment="" />
+<LOCATION id="P1" start="29" end="52" text="Notre Dame Nursing Home" TYPE="HOSPITAL" comment="" />
+<LOCATION id="P2" start="53" end="71" text="1992 Madera Circle" TYPE="STREET" comment="" />
+<NAME id="P3" start="109" end="123" text="Potts, William" TYPE="PATIENT" comment="" />
+<LOCATION id="P4" start="124" end="131" text="Hyannis" TYPE="CITY" comment="" />
+<LOCATION id="P5" start="133" end="135" text="NV" TYPE="STATE" comment="" />
+<LOCATION id="P6" start="136" end="141" text="21113" TYPE="ZIP" comment="" />
+<ID id="P7" start="179" end="187" text="10916758" TYPE="MEDICALRECORD" comment="" />
+<CONTACT id="P8" start="188" end="202" text="(391) 643-6925" TYPE="PHONE" comment="" />
+<DATE id="P9" start="245" end="253" text="08/02/74" TYPE="DATE" comment="" />
+<NAME id="P10" start="289" end="294" text="Potts" TYPE="PATIENT" comment="" />
+<AGE id="P11" start="300" end="302" text="60" TYPE="AGE" comment="" />
+<NAME id="P12" start="2438" end="2454" text="Matthew H. Wyatt" TYPE="DOCTOR" comment="" />
+<ID id="P13" start="2483" end="2491" text="8-959314" TYPE="IDNUM" comment="" />
+<DATE id="P14" start="2505" end="2513" text="08/02/74" TYPE="DATE" comment="" />
+<DATE id="P15" start="2518" end="2526" text="08/03/74" TYPE="DATE" comment="" />
+<DATE id="P16" start="2531" end="2539" text="08/02/74" TYPE="DATE" comment="" />
+</TAGS>
+</deIdi2b2>

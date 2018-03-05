@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2076-03-05
+
+
+
+
+
+
+Shelby Dental Care Center
+4040 Oldham Lane              PRESTON, FRANCES
+Cozad, OK  53952                    05850080
+(060) 107-3378                     03/05/2076
+
+
+
+
+HISTORY OF PRESENT ILLNESS:  The patient is a 51-year-old woman who comes to SDCC to initiate longitudinal care and for follow up of medical problems.
+
+
+PROBLEMS:  Hypertension.  She has a long history of hypertension.  She has not seen a doctor in a year.  She is currently taking:
+1.  Amlodipine 10 mg p.o. daily.
+2.  Lisinopril 20 mg daily.
+3.  Hydrochlorothiazide 25 mg p.o. daily.
+
+
+MEDICATIONS:  As noted above.
+
+
+ALLERGIES:  No known allergies to any medications.
+
+
+SOCIAL HISTORY:  She moved here one year ago from Big Pine Key.  Has not had medical care here.
+
+
+REVIEW OF SYMPTOMS:  Notable for chest pain, episodic left-sided anterior, for many months. No significant weight change, febrile signs or symptoms, headache, blurred vision, tinnitus, cough, shortness of breath, nausea, abdominal pain, nightsweats, diarrhea, dysuria, polyuria, skin rash, bruising, joint pain, or focal weakness.  
+
+
+PHYSICAL EXAMINATION:  The patient is in no acute distress.  Blood pressure by nurse 160/90, by me 150/100, weight 222 pounds, height 63.5 inches, BMI 38.8.  Skin exam:  No rash.  Head and neck:  Normal.  Chest:  Clear to percussion and auscultation.  There is focal tenderness over two left-sided mid costochondral junctions which reproduced chief complaint.  Cardiovascular exam:  No extra sounds or murmurs.  Abdominal exam:  No masses, tenderness, or organomegaly.  Musculoskeletal exam:  Full range or motion without tenderness all joints in both upper extremities and lower extremities, no pedal edema.
+
+
+ASSESSMENT AND PLAN:
+1.  Hypertension.  Currently, she is not in good control despite three medications.  She reports taking medications today, but about an hour ago.  Will make no changes today, but follow up in one week.  She uses alot of salt which I adviced her not to do
+2.  Costochondritis.  No intervention necessary.
+3.  Obesity.  This will be the subject of future discussions.
+4.  Adult health maintenance.  The patient will return for fasting lipids and other blood work.  I will see her in one week for a comprehensive exam.
+
+
+
+
+______________________________
+Louis P Barron, M.D., M.Sc.
+
+
+
+
+
+
+
+
+
+
+eScription document:9-6873721 MEeScription
+
+
+
+
+
+
+DD: 03/05/76
+DT: 03/06/76
+DV: 03/05/76
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2076-03-05" TYPE="DATE" comment="" />
+<LOCATION id="P1" start="33" end="58" text="Shelby Dental Care Center" TYPE="HOSPITAL" comment="" />
+<LOCATION id="P2" start="59" end="75" text="4040 Oldham Lane" TYPE="STREET" comment="" />
+<NAME id="P3" start="89" end="105" text="PRESTON, FRANCES" TYPE="PATIENT" comment="" />
+<LOCATION id="P4" start="106" end="111" text="Cozad" TYPE="CITY" comment="" />
+<LOCATION id="P5" start="113" end="115" text="OK" TYPE="STATE" comment="" />
+<LOCATION id="P6" start="117" end="122" text="53952" TYPE="ZIP" comment="" />
+<ID id="P7" start="142" end="150" text="05850080" TYPE="MEDICALRECORD" comment="" />
+<CONTACT id="P8" start="151" end="165" text="(060) 107-3378" TYPE="PHONE" comment="" />
+<DATE id="P9" start="186" end="196" text="03/05/2076" TYPE="DATE" comment="" />
+<AGE id="P10" start="247" end="249" text="51" TYPE="AGE" comment="" />
+<LOCATION id="P11" start="278" end="282" text="SDCC" TYPE="HOSPITAL" comment="" />
+<LOCATION id="P12" start="724" end="736" text="Big Pine Key" TYPE="CITY" comment="" />
+<NAME id="P13" start="2290" end="2304" text="Louis P Barron" TYPE="DOCTOR" comment="" />
+<ID id="P14" start="2348" end="2357" text="9-6873721" TYPE="IDNUM" comment="" />
+<DATE id="P15" start="2381" end="2389" text="03/05/76" TYPE="DATE" comment="" />
+<DATE id="P16" start="2394" end="2402" text="03/06/76" TYPE="DATE" comment="" />
+<DATE id="P17" start="2407" end="2415" text="03/05/76" TYPE="DATE" comment="" />
+</TAGS>
+</deIdi2b2>

@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2093-01-13
+
+EDVISIT^32612454^Barr, Nicky^01/13/93^IP, CARRIE
+
+I saw this patient in conjunction with Dr. Xue.  I confirm
+
+that I have interviewed and examined the patient, reviewed the
+
+resident's documentation on the patient's chart, and discussed
+
+the evaluation, plan of care, and disposition with the patient.
+
+CHIEF COMPLAINT:  A 57-year-old with back pain.
+
+HISTORY OF PRESENT ILLNESS:  The patient is a young woman with a
+
+complicated past medical history, presents with a chronic history
+
+of low back pain, worse over the last week.  She states that 3
+
+years ago, she had a motor vehicle accident.  Since that time,
+
+has had chronic low back pain.  She has been able to ambulate at
+
+home.  Denies any fevers, rashes, history of urinary
+
+incontinence, weakness, or numbness.  She went to EDUCARE-FARGO earlier
+
+this week and was prescribed Percocet, comes here now because the
+
+patient's family and the patient would like to change her care to
+
+Lansing Dover Clinic.  Denies any numbness or weakness. 
+
+States that she is no longer taking her pills at home.  Denies
+
+any suicidal or homicidal ideation, has a flat affect.  Denies
+
+any depression.  Her son, however, with whom she lives disagrees
+
+and is very concerned that she may be depressed.  He is also very
+
+concerned that she is not taking her medicines and that she is
+
+not caring for herself well at home.
+
+PAST MEDICAL HISTORY:  Remarkable for hypertension, diabetes, and
+
+a prior stroke.
+
+PAST SURGICAL HISTORY:  She has also had knee surgery.
+
+SOCIAL HISTORY, FAMILY HISTORY, AND REVIEW OF SYSTEMS:  As per
+
+the written note.  The patient was counseled regarding smoking
+
+cessation.
+
+MEDICATIONS:  Hydrochlorothiazide and Coumadin.
+
+ALLERGIES:  None.
+
+PHYSICAL EXAMINATION:  The patient is awake and alert in no acute
+
+distress.  Vital signs are within normal limits as documented. 
+
+For full physical exam findings, please see the resident's
+
+written note.  Specifically, HEENT, neck, respiratory, cardiac,
+
+rectal, and abdominal exam are within normal limits as
+
+documented.  Skin exam is remarkable for erythematous changes in
+
+the groin where the patient has significant skin fold due to
+
+obesity.  Musculoskeletal exam is otherwise unremarkable.  Range
+
+of motion is full.  Strength and tone is normal.  The patient
+
+does have a positive straight leg raise on the left, reproducing
+
+her back pain.  Neurologically, the patient has a flat affect but
+
+is oriented with intact cranial nerves and no focal neurologic
+
+deficit in either motor or sensory distribution.  She does,
+
+however, walk with a limp, which is chronic for her.
+
+LABORATORY DATA:  White blood count is slightly elevated at 11.3.
+
+ BUN and creatinine is also significantly elevated at 26 and 1.1,
+
+respectively.  Potassium is also quite low at 2.9.  Urinalysis is
+
+positive with 35-40 white blood cells, 15-20 red blood cells, and
+
+2+ bacteria.
+
+EMERGENCY DEPARTMENT COURSE:  My chief concern for this patient
+
+is her inability to care for self at home.  It is apparent that
+
+her son is interested in helping her and do so, but the patient
+
+on physical exam has some obvious lack of hygiene and I am
+
+concerned that potentially the patient has either an underlying
+
+neurologic or psychiatric issue that is preventing her from
+
+thriving at home.  Psychiatry initially was consulted.  Their
+
+impression was that the patient may have neuro behavior problem
+
+that needs further outpatient workup, and she was referred to a
+
+specific providers within the next 2 weeks.  The patient was
+
+treated with potassium chloride for her hypokalemia.  Care
+
+coordinator and social services were consulted.  The patient will
+
+have a home safety evaluation and will be referred for primary
+
+care services, was discharged with a cane for ambulation, and
+
+will likely also receive VNA Services to help her with medication
+
+compliance and other ADLs.
+
+ ******** Not reviewed by Attending Physician ********
+
+DIAGNOSES:
+
+1.  Chronic low back pain.
+
+2.  Hypokalemia.
+
+3.  Urinary tract infection.
+
+4.  Failure to thrive.
+
+DISPOSITION:  Discharged.
+
+CONDITION ON DISCHARGE:  Satisfactory.
+
+______________________________
+
+IP, CARRIE MD
+
+D: 01/13/93
+
+T: 01/13/93
+
+Dictated By: IP, CARRIE
+
+eScription document:1-1843613 BFFocus
+
+
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2093-01-13" TYPE="DATE" comment="" />
+<ID id="P1" start="36" end="44" text="32612454" TYPE="MEDICALRECORD" comment="" />
+<NAME id="P2" start="45" end="56" text="Barr, Nicky" TYPE="PATIENT" comment="" />
+<DATE id="P3" start="57" end="65" text="01/13/93" TYPE="DATE" comment="" />
+<NAME id="P4" start="66" end="76" text="IP, CARRIE" TYPE="DOCTOR" comment="" />
+<NAME id="P5" start="121" end="124" text="Xue" TYPE="DOCTOR" comment="" />
+<AGE id="P6" start="351" end="353" text="57" TYPE="AGE" comment="" />
+<LOCATION id="P7" start="811" end="824" text="EDUCARE-FARGO" TYPE="HOSPITAL" comment="" />
+<LOCATION id="P8" start="968" end="988" text="Lansing Dover Clinic" TYPE="HOSPITAL" comment="" />
+<NAME id="P9" start="4153" end="4163" text="IP, CARRIE" TYPE="DOCTOR" comment="" />
+<DATE id="P10" start="4171" end="4179" text="01/13/93" TYPE="DATE" comment="" />
+<DATE id="P11" start="4184" end="4192" text="01/13/93" TYPE="DATE" comment="" />
+<NAME id="P12" start="4207" end="4217" text="IP, CARRIE" TYPE="DOCTOR" comment="" />
+<ID id="P13" start="4239" end="4248" text="1-1843613" TYPE="IDNUM" comment="" />
+</TAGS>
+</deIdi2b2>

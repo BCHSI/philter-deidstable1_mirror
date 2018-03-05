@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2136-09-09
+
+
+	CARDIOLOGY
+	
+
+	PERDUE MEDICAL CENTER
+	
+
+
+	Reason for visit:
+   Cardiology Admit Note
+
+
+	Interval History:
+   Primary cardiologist: Jan Ivory (Kevin Mcdaniel)
+
+61 y/o M with h/o CAD admitted for CP.
+
+Cardiovascular history notable for:
+- Nov 34 - acute IMI; cath (11/08/34) LM, LAD and large Ramus with minimal disease, LCx with tandem 70% and 50% stenosis in non-dominant vessel, distal RCA with 90% stenosis and mid and distal PLV with tandem 80% lesions; Rx: Vision 2.5 x 15 to distal RCA, Minivision x 2 (2.5 x 15 each) to mid and distal PLV
+- echo (11/08/34) EF 54%, overall unremarkable
+- last ETT-MIBI (2/23/35) 7:10, 9 METs, 80% mphr, pkdp 19k, developed chest pain (different from presenting) at 7 mins, ECG negative to HR attained, images without ischemia or infarction, EF 68%
+
+He has done quite well from a cardiac perspective since the MI.  He has occasional fleeting chest pain but never sustained and nothing in the past 1-2 months.
+
+He awoke this AM with dull left chest pain which has persisted throughout the day.  Pain was 6/10 at worst, unchanged with exertion and similar in quality (albeit less intense) to pain during STEMI.  No associated SOB, nausea, diaphoresis or radiation.  Given the CP persistance, he presented to the ER.  Initial ECGs showed sinus brady with a relatively normal tracing; no acute ischemic changes and no significant change from prior.  After a combination of 4 SL nitro, IV nitro, IV heparin and morphine (2mg IV x 2), the CP eventually subsided.  
+
+Currently, he is CP free and resting comfortably.  At baseline, he doesn't exercise formally but he has 3 flights of stairs at home and he's able to climb them without exertional symptoms.  Also, he was previously on therapy for GERD but stopped taking prilosec several months ago.    
+
+
+	Past medical history:
+   - CAD - as above
+- HTN
+- hyperlipidemia
+- DM2 - no known microvascular disease; last A1c 7.3 (June 36)
+- Ankylosing spondylitis
+- h/o thrombophlebitis (vs DVT) of left leg
+- hemorrhoids s/p banding
+
+Home meds: ASA 81, lipitor 20, metformin 500, zestril 10, toprol 25
+
+	
+
+	Changes to Allergies
+	
+NKA: No Known Allergies - reaction: [reviewed]
+
+
+	Social history:
+   Lives with wife in Avra Valley, KS.  Retired social policy program officer
+Tob - former 1ppd, quit at time of STEMI in 2134
+EtOH - rare
+Drugs - none
+
+
+	Review of systems:
+   otherwise negative in detail
+
+Physical examination:
+	
+-Pulse: 50s  regular
+-General:   NAD
+-Neck:   JVP&lt;6cm, carotids 2+, no bruits
+-Chest:   CTA B
+-Cardiac:   distant, RRR, no M/R/G
+-Abdomen:   soft, NT, pos BS
+-Extremities:   femorals 1+, no bruits; LLE with 2+ edema and chronic stasis changes; DPs/PTs 2+ bilaterally
+-BP: 125/70  right arm
+
+
+	EKG:
+   sinus brady (51), minor NSSTTWA, no significant change from 4/05/36
+
+Selected recent labs:
+
+	 Date     NA       K        CL       CO2      BUN      CRE      GLU      CA       PHOS     MG       
+09/09/36 138      3.9      103      25.1     15       1.04     112      9.7      3.4      2.0      
+
+Date     CK-MB    TROP-I   
+09/09/36 NEGATIVE NEGATIVE 
+
+Date     ALB      TP       ALKP     DBILI    TBILI    ALT/SGPT AST/SGOT AMY      LIPS     
+09/09/36 4.2      8.1      84       0.1      0.5      27       25       85       42       
+
+Date     HCT      WBC      PLT      
+09/09/36 45.4     14.2     395      
+
+Date     PT       PT-INR   PTT      
+09/09/36 12.0     1.0      29.2     
+
+Date     MCV      %LYMPH   %NEUT    
+09/09/36 87       31       57       
+	
+
+
+	Other Data:
+   PA/lat CXR - LLL opacity 
+
+
+	Assessment and plan:
+   61 y/o M with h/o CAD p/w CP.  Some features are concerning for angina (similar to prior symptoms, some improvement with nitro...), whereas other aspects are less concerning (prolonged CP without ECG changes or biomarker leak).  Overall, doubt ACS.
+
+In terms of subtle LLL opacity on CXR, doubt PNA given lack of cough, sputum or  fever...He has mild leukocytosis (normal differential) of unclear etiology.
+
+Plan:
+- cycle troponins
+- continue IV heparin overnight
+- if biomarkers negative and no recurrent CP, would favor ETT-MIBI in AM for further risk stratification
+- continue home meds
+- hold metformin, in case cath required
+- repeat CBC with diff in AM, check U/A
+
+FULL CODE      
+
+	
+Brennen May, MD
+
+	
+Signed electronically by  Brennen May, MD
+Document Status: Final
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2136-09-09" TYPE="DATE" comment="" />
+<LOCATION id="P1" start="45" end="66" text="PERDUE MEDICAL CENTER" TYPE="HOSPITAL" comment="" />
+<NAME id="P3" start="161" end="170" text="Jan Ivory" TYPE="DOCTOR" comment="" />
+<NAME id="P4" start="172" end="186" text="Kevin Mcdaniel" TYPE="DOCTOR" comment="" />
+<AGE id="P5" start="189" end="191" text="61" TYPE="AGE" comment="" />
+<DATE id="P6" start="267" end="273" text="Nov 34" TYPE="DATE" comment="" />
+<DATE id="P7" start="293" end="301" text="11/08/34" TYPE="DATE" comment="" />
+<DATE id="P8" start="583" end="591" text="11/08/34" TYPE="DATE" comment="" />
+<DATE id="P9" start="639" end="646" text="2/23/35" TYPE="DATE" comment="" />
+<DATE id="P10" start="1936" end="1943" text="June 36" TYPE="DATE" comment="" />
+<LOCATION id="P11" start="2225" end="2236" text="Avra Valley" TYPE="CITY" comment="" />
+<LOCATION id="P12" start="2238" end="2240" text="KS" TYPE="STATE" comment="" />
+<PROFESSION id="P13" start="2251" end="2280" text="social policy program officer" TYPE="PROFESSION" comment="" />
+<DATE id="P14" start="2325" end="2329" text="2134" TYPE="DATE" comment="" />
+<DATE id="P15" start="2798" end="2805" text="4/05/36" TYPE="DATE" comment="" />
+<DATE id="P16" start="2932" end="2940" text="09/09/36" TYPE="DATE" comment="" />
+<DATE id="P17" start="3061" end="3069" text="09/09/36" TYPE="DATE" comment="" />
+<DATE id="P18" start="3181" end="3189" text="09/09/36" TYPE="DATE" comment="" />
+<DATE id="P19" start="3310" end="3318" text="09/09/36" TYPE="DATE" comment="" />
+<DATE id="P20" start="3385" end="3393" text="09/09/36" TYPE="DATE" comment="" />
+<DATE id="P21" start="3460" end="3468" text="09/09/36" TYPE="DATE" comment="" />
+<AGE id="P22" start="3570" end="3572" text="61" TYPE="AGE" comment="" />
+<NAME id="P23" start="4260" end="4271" text="Brennen May" TYPE="DOCTOR" comment="" />
+<NAME id="P24" start="4305" end="4316" text="Brennen May" TYPE="DOCTOR" comment="" />
+</TAGS>
+</deIdi2b2>

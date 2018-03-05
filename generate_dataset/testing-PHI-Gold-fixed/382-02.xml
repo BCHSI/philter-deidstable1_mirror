@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2082-09-29
+
+I have personally reviewed the history, examined the patient, and reviewed and edited the note and I agree with the assessment and plan developed under my personal supervision as documented by previosu PA note from Ursula Bowers, PA-C. Please see additional comments below.
+
+Vicente Aguilar is a 49 y/o male with cystic fibrosis, moderate to severe lung disease, colonized with mucoid-type Pseudomonas aeruginosa pancreatic insufficiency, CF related DM, HTN, renal insufficiency with proteinuria, recent h/o CVA, gout, cataracts who is currently experiencing a subacute exacerbation of his pulmonary disease requiring hospitalization to initiate IV antibiotics. His symptoms include long-standing fatigue, increased cough and sputum production, some SOB with mild chest tightness and wheezing. His FEV1 significantly decreased during recent clicni visit. He also reports some sinus headaches, but denies sinus pain or tenderness.  He denies hemoptysis, fever/chills, nausea, vomiting, diarrhea or constipation.  Please see details regarding recent MRI/MRA results on PA note above, as well as medications, and other pertinent historical data reviewed independently. 
+
+VSS: afebrile, oxygen saturation 
+Gen: alert, NAD
+HEENT: sclera clear, persistent visual defects right upper quadrant visual field, neck supple
+CV: regular
+Lungs: essentially clear with good aeration, no wheezes wuth few scattered ronchi. 
+Abdomen: soft, NT, ND, no masses
+Ext: warm, clubbing
+Neuro: normal gait, oriented x 3.
+
+Assessment/Plan: Vicente Aguilar is a 49 y/o male with cystic fibrosism noderate to severe lung disease with past medical history as noted above who is currently experiencing a subacute exacerbation of his pulmonary disease requiring hospitalization to initiate IV antibiotics
+
+1. PULM/ID: We will start treatment with tobramycin 700 mg IV q am, as well as  Ceftazidime 2 g IV q 8 hours based on culture results. We will continue maintenance pulmonary medications including bronchodilators, mucolytics and steroids. We will discuss hypertonic saline therapy and trial its use if agreeable. We will send a new sputum sample for culture. Chest x-ray after PICC placement. Will review routine admission labs.
+
+2. CVS: monitor blood pressure assess need for other protective medications. Will continue antihypertensives, ACEi and ARB if creatinine stable. We will review findings from recent MRI/MRA. Check lipid profile if not done, on Zocor. 
+
+3. FEN/GI: High calorie, high protein CF diet. 
+
+4. Renal: check electrolytes, as well as UA with random protein and creatinine. His creatinine was elevated to 1.6, now 1.5 and was 1.1-1.4 at baseline. He described an incident last week with nausea and vomiting that likely led to above result while taking colchicine, celebrex, and other meds. This is probabyl on its way to improvement. We did not hold ACEi and ARB at this time, but will repeat Cr tonight. He will drink fluids during the day priro to PICC by IR. He does not have a nephrologist adn will need to find him one. He did have a renal biopsy in teh late 60s adn thus will look for results, but renal disease likely multigfactorial. We will tobra levels bvery close adn started at low dose for his size. Will likely check renal US while here.
+
+5. Endo: continue insulin regimen. He will check blood sugars more frequently and folow HgA1c. He did state that he occasionally gets blood sugars in the 40s when he wakes up, but usually nto when he is sedentary, ie. admitted to hospital. IF BS normal here, he will check them very closely at home as well and make adjustments as necesary. We will also need toset him up with Endocrinologist. 
+
+6. Access: PICC line to be placed in IR
+
+7. Dispo: 14 day of inpatient IV antibiotics
+
+8. Neuro: He was last seen by Neurologist on 8/30 and was discharged from routine follow-up. He will continue anti-hypertensive meds and ASA. He contineu sot have visual deficit in R upper quadrant.
+
+
+
+
+_____________________________________________
+Quinton Israel,D.O.
+
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2082-09-29" TYPE="DATE" comment="" />
+<NAME id="P1" start="243" end="256" text="Ursula Bowers" TYPE="DOCTOR" comment="" />
+<NAME id="P2" start="303" end="318" text="Vicente Aguilar" TYPE="PATIENT" comment="" />
+<AGE id="P3" start="324" end="326" text="49" TYPE="AGE" comment="" />
+<NAME id="P4" start="1541" end="1556" text="Vicente Aguilar" TYPE="PATIENT" comment="" />
+<AGE id="P5" start="1562" end="1564" text="49" TYPE="AGE" comment="" />
+<DATE id="P6" start="3085" end="3088" text="60s" TYPE="DATE" comment="" />
+<DATE id="P7" start="3802" end="3806" text="8/30" TYPE="DATE" comment="" />
+<NAME id="P8" start="4006" end="4020" text="Quinton Israel" TYPE="DOCTOR" comment="" />
+</TAGS>
+</deIdi2b2>

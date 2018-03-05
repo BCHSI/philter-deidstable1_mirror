@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2094-04-03
+
+
+
+
+NAME:    Yager, Becky 
+MRN:     0887181
+
+Becky returns for follow-up of painful neuropathy.  A lot has happened since she
+was seen.  She was terminated at her job working as a Credit Manager in December 2093.  She
+therefore has been having financial problems.  She does not have enough money to
+buy her medications.  She has a history of hypertension and hypercholesterolemia. 
+She has not taken these medications for months.  She states she has been taking her
+nortriptyline, dilantin and Percocet as previously prescribed.  When I called her from
+the waiting room today, she walked towards me, she veered, and I caught her before
+she fell.  We then got the wheelchair and wheeled her into the room and history was
+taken.  She reports being off balance for about the past month.  She has been feeling
+more unsteady on her feet.  She states she has not actually fallen but has come close
+to falling.  She denies any true vertigo, ringing in her ears, headaches, change in
+mentation, numbness, weakness or change in gait.  On review of other systems, she
+reports a 20 lb. weight gain over the past few months which she attributes to not
+working and being at home and eating more than usual.  She also notes that she has
+begun urinating at night which she previously did not do.  She complains of excessive
+dry mouth.  She reports being more thirsty than usual.  
+
+PHYSICAL EXAM:  On exam, she was her usual pleasant self.  She is alert and
+oriented X 3.  Speech fluent without aphasia.  BP sitting 145/70.  Pulse 80.  Standing
+BP unchanged at 145/70.  Pulse 80.  Cranial nerve exam notable for prominent
+bilateral nystagmus.  Otherwise intact.  On motor exam, no tremor or involuntary
+movements.  No drift.  Good power throughout.  Fine finger movements intact. 
+Vibratory loss to the ankles.  Babinski flexor bilaterally.  
+
+When she got up to stand at the end of the evaluation to leave and telling me she
+was fine, she veered to the right and I again caught her.  
+
+IMPRESSION:  Imbalance with history of recently running out of many of her
+medications though taking her chronic pain medications as previously prescribed. 
+Also notable in the history is new nocturia, increased thirst and dry mouth.  Her
+exam is notable for prominent end-gaze nystagmus.  Therefore I suspect toxic
+metabolic cause.  As she will need STAT lytes, blood sugar, dilantin level and tox
+screen as well as cardiac evaluation, the patient was referred to PROMPTCARE ER.  I will be
+in touch with the physicians after they see her.
+
+Rowena Xanders, M.D.
+
+RX/mcbride/tucker
+
+cc:  Georgia Xing, M.D.
+
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2094-04-03" TYPE="DATE" comment="" />
+<NAME id="P1" start="40" end="52" text="Yager, Becky" TYPE="PATIENT" comment="" />
+<ID id="P2" start="63" end="70" text="0887181" TYPE="MEDICALRECORD" comment="" />
+<NAME id="P3" start="72" end="77" text="Becky" TYPE="PATIENT" comment="" />
+<PROFESSION id="P4" start="207" end="221" text="Credit Manager" TYPE="PROFESSION" comment="" />
+<DATE id="P5" start="225" end="238" text="December 2093" TYPE="DATE" comment="" />
+<LOCATION id="P6" start="2464" end="2474" text="PROMPTCARE" TYPE="HOSPITAL" comment="" />
+<NAME id="P7" start="2540" end="2554" text="Rowena Xanders" TYPE="DOCTOR" comment="" />
+<NAME id="P8" start="2562" end="2564" text="RX" TYPE="DOCTOR" comment="" />
+<NAME id="P9" start="2565" end="2572" text="mcbride" TYPE="DOCTOR" comment="" />
+<NAME id="P10" start="2573" end="2579" text="tucker" TYPE="DOCTOR" comment="" />
+<NAME id="P11" start="2586" end="2598" text="Georgia Xing" TYPE="DOCTOR" comment="" />
+</TAGS>
+</deIdi2b2>

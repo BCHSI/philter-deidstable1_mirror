@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2076-12-15
+
+
+
+
+
+
+
+PRESTON, FRANCES
+05850080
+12/15/2076
+
+
+
+
+Louis Barron, M.D.
+Shelby Dental Care Center
+9842 Edwards Street
+Cozad, OK  53952
+
+
+Dear Dr. Barron:
+
+
+I would like to give you followup on our mutual patient Frances Preston.  As you know, I referred her to the cardiac catheterization laboratory because of progressive worsening angina and a stress test suggesting anterior ischemia.  We performed a catheterization on 12/14/2076.  We utilized the right radial artery for access.  We found that she developed a significant in-stent restenosis lesion within the previously placed Cypher drug-eluting stent.  This is undoubtedly the cause of her symptoms.  We were able to treat this lesion with balloon angioplasty and ultimately stented with a 3.5 x 24 Taxus drug-eluting stent.  The stent was postdilated with a 4 mm noncompliant balloon to high pressure.  The final angiographic result was excellent.
+
+
+The following morning she was doing quite well and we discharged her later in the day.  She will remain on her usual medications and I have stressed the importance of remaining on aspirin once a day for the remainder of her life and Plavix for a minimum of a year after this procedure, though I will likely favor indefinite therapy.
+
+
+I plan on seeing her again on 01/24/2077 in followup.  If you have any further questions regarding her care, please do not hesitate to contact me.
+
+
+Sincerely,
+
+
+
+
+______________________________
+Corrie Q Newland, MD
+
+
+
+
+
+
+
+
+
+
+eScription document:0-3743412 IFFocus
+
+
+
+
+
+
+DD: 12/15/76
+DT: 12/15/76
+DV: 12/15/76
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2076-12-15" TYPE="DATE" comment="" />
+<NAME id="P1" start="34" end="50" text="PRESTON, FRANCES" TYPE="PATIENT" comment="" />
+<ID id="P2" start="51" end="59" text="05850080" TYPE="MEDICALRECORD" comment="" />
+<DATE id="P3" start="60" end="70" text="12/15/2076" TYPE="DATE" comment="" />
+<NAME id="P4" start="75" end="87" text="Louis Barron" TYPE="DOCTOR" comment="" />
+<LOCATION id="P5" start="94" end="119" text="Shelby Dental Care Center" TYPE="HOSPITAL" comment="" />
+<LOCATION id="P6" start="120" end="139" text="9842 Edwards Street" TYPE="STREET" comment="" />
+<LOCATION id="P7" start="140" end="145" text="Cozad" TYPE="CITY" comment="" />
+<LOCATION id="P8" start="147" end="149" text="OK" TYPE="STATE" comment="" />
+<LOCATION id="P9" start="151" end="156" text="53952" TYPE="ZIP" comment="" />
+<NAME id="P10" start="168" end="174" text="Barron" TYPE="DOCTOR" comment="" />
+<NAME id="P11" start="234" end="249" text="Frances Preston" TYPE="PATIENT" comment="" />
+<DATE id="P12" start="445" end="455" text="12/14/2076" TYPE="DATE" comment="" />
+<DATE id="P13" start="1296" end="1306" text="01/24/2077" TYPE="DATE" comment="" />
+<NAME id="P14" start="1461" end="1477" text="Corrie Q Newland" TYPE="DOCTOR" comment="" />
+<ID id="P15" start="1512" end="1521" text="0-3743412" TYPE="IDNUM" comment="" />
+<DATE id="P16" start="1540" end="1548" text="12/15/76" TYPE="DATE" comment="" />
+<DATE id="P17" start="1553" end="1561" text="12/15/76" TYPE="DATE" comment="" />
+<DATE id="P18" start="1566" end="1574" text="12/15/76" TYPE="DATE" comment="" />
+</TAGS>
+</deIdi2b2>

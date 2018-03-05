@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2064-04-20
+
+                             OFFICE NOTE
+ 
+Uher, Olga
+258-16-49-2
+04/20/64
+ 
+She returns to clinic for follow up. Unfortunately she missed her
+entire appointment and did not bring her blood glucose log with
+her. She reports that at 4 a.m. last Thursday she woke up and felt
+disoriented with sweats. She checked her blood glucose, it was 50,
+and she treated herself by eating. This led to resolution of her
+symptoms, although she said that she overshoots. She has developed
+a foot infection, has been seen by a podiatrist and started on
+antibiotics. She has also been taking a thyroid hormone but she
+still feels that it is making her tired. She just in general has
+not been feeling as well as she had been previously.
+ 
+Past Medical History:
+ 
+1.   IDDM.
+ 
+Medications: See previous notes.
+ 
+Allergies:  Same.
+ 
+Physical Examination:  Not performed. The patient had a  special
+orthopedic shoe on, her foot was wrapped.
+ 
+Impression:  Patient with IDDM with usual blood glucoses in the
+200's and an elevated A1C. Discussed the need for consistent meals
+and exercise and need for more control. Will increase day time
+insulin to 17 units of Lente and evening will stay at 10. She will
+follow up in one month. Will check a TSH today.
+ 
+ 
+ 
+Phyllis Jacobson, M.D.
+ 
+/lott
+ 
+DD: 04/20/64
+DT: 04/22/64
+DV: 04/20/64
+ 
+ 
+ ******** Approved but not reviewed by Attending Provider ********
+
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2064-04-20" TYPE="DATE" comment="" />
+<NAME id="P1" start="71" end="81" text="Uher, Olga" TYPE="PATIENT" comment="" />
+<ID id="P2" start="82" end="93" text="258-16-49-2" TYPE="MEDICALRECORD" comment="" />
+<DATE id="P3" start="94" end="102" text="04/20/64" TYPE="DATE" comment="" />
+<DATE id="P4" start="272" end="280" text="Thursday" TYPE="DATE" comment="" />
+<NAME id="P5" start="1264" end="1280" text="Phyllis Jacobson" TYPE="DOCTOR" comment="" />
+<NAME id="P6" start="1290" end="1294" text="lott" TYPE="DOCTOR" comment="" />
+<DATE id="P7" start="1301" end="1309" text="04/20/64" TYPE="DATE" comment="" />
+<DATE id="P8" start="1314" end="1322" text="04/22/64" TYPE="DATE" comment="" />
+<DATE id="P9" start="1327" end="1335" text="04/20/64" TYPE="DATE" comment="" />
+</TAGS>
+</deIdi2b2>

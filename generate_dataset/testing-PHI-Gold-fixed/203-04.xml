@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2092-06-10
+
+
+
+                          OFFICE NOTE
+George, Rickey
+MRN: 1131414
+06/10/92
+
+REASON FOR VISIT:  Scheduled follow up of multiple medical problems.
+
+PROBLEMS:
+1.   Status post removal of infected AICD and pacer.  Admitted to Massillon Community 12/91 with infection of his AICD and permanent pacer.  He was managed by multiple
+services including EP, Cardiology, and ID.  His OR cultures grew candida and he was treated
+with a prolonged course of fluconazole.  Although he had runs of NSVT, he was managed
+effectively with carvedilol.  Notably his digoxin was stopped because of bradycardia during the
+hospitalization. He never had any sustained VT or VF.  He was subsequently discharged home
+with a Life vest defibrillator.
+
+He has done well with no recurrent evidence of infection.  He currently has no AICD or
+pacemaker but saw Dr. Cook yesterday and apparently he is being evaluated for new hardware
+for his arrhythmia issues.  He has a history of both VF arrest and sick sinus syndrome.  Currently
+his heart rate is slightly irregular but a reasonable rate and he will continue on his current
+regimen as prescribed by Dr. Cook with close follow up.  
+
+2.   CHF.  Immediately after his discharge from CCGH after his hospitalization, he went
+directly to West Virginia where his wife was able to care for him. He had one episode of CHF, which
+was managed as an outpatient, and he is now on slightly doses of Lasix than previously.  At the
+present time, he has no active symptoms of CHF, he continues to sleep on two large pillows at
+night without symptoms of orthopnea and has minimal to no peripheral edema.  He does
+continue on an ACE inhibitor and potassium along with his Lasix. 
+
+3.   Coronary artery disease.  Despite all of his active issues, he has no current symptoms of
+angina and has tolerated his multiple recent procedures well.
+
+4.   Status post infected (staph) left knee arthroplasty.  His left TKR also required removal
+due to infection and he had replacement of new hardware by Dr. Judd 10/91.  He has had no
+recurrent infection, but his rehabilitation has been more limited because of his other medical
+issues.  He does report that he was swimming in the pool and doing things on his own while
+down in West Virginia, but we will make a formal rehab referral now that he is back in the Mexico area.
+
+5.   Diabetes mellitus.  Throughout his numerous medical problems over the past six to
+twelve months, he has had a significant weight loss and not surprisingly, his diabetes regimen
+has been gradually decreased.  He is now on Glyburide 5 mg b.i.d. and he reports that his fasting
+sugars which he is checking about three times a week are running quite good in the 100 to 120
+range.  He has no complaints of hypoglycemia or blood sugars greater than 200.  We will check
+his HbA1c today and continue his current regimen.
+George, Rickey
+MRN: 1131414
+06/10/92
+Page 2
+
+6.   Hyperlipidemia.  He continues on Lipitor.  We'll recheck his fasting lipids, LFTs and
+CPK.
+
+7.   Diabetic nephropathy.  He remains on ACE inhibitor and will check renal function today
+to re-establish baseline.
+
+8.   Status post CVA.  Known moderate right carotid stenosis.  Minimal residual dysarthria
+and right-sided weakness. Has had no recent neurologic symptoms and remains on Coumadin.
+
+PHYSICAL EXAM:  Blood pressure by palpation 130.  Was unable to get sufficient blood
+pressure by cuff.  Pulse 60, mostly irregular. General, thin, but no distress.  Lungs, clear to
+auscultation and percussion.  Cor, distant heart sounds.  No S3 appreciated. Old pacer/AICD site. 
+No evidence of erythema or fluctuance.  Extremities, trace edema bilaterally.
+
+DISPOSITION:  Close ongoing follow up.
+
+ADDENDUM:  In reviewing patient's medical records after he left today, I found mention of
+both hematuria and guaiac positive stool during his recent hospitalizations.  At this time, he was
+quite debilitated and I do not think it would be a good time for colonoscopy.  He did deny
+abdominal symptoms as part of my review of systems today.  
+
+At this point, my plan will be to send him some stool guaiac cards which he can do at home and
+send in to me by mail.  I have also sent off a CBC today.  I will plan to repeat urinalysis at his
+next visit.  If he has persistent hematuria or guaiac positive stool, then we will need to discuss
+more aggressive work-up, but given his overall health condition, I do not feel the need to be
+aggressive at this time and would like to see him get some strength back first. 
+
+
+
+____________________________________
+Opal C. Fierro, M.D.
+Dictated/Not read
+kurtz
+
+cc:
+Keith Cook, M.D.
+Massillon Community Hospital
+22 Monterey Avenue, Cardiology Service
+Mexico, CT 33383-9795
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2092-06-10" TYPE="DATE" comment="" />
+<NAME id="P1" start="68" end="82" text="George, Rickey" TYPE="PATIENT" comment="" />
+<ID id="P2" start="88" end="95" text="1131414" TYPE="MEDICALRECORD" comment="" />
+<DATE id="P3" start="96" end="104" text="06/10/92" TYPE="DATE" comment="" />
+<LOCATION id="P4" start="252" end="271" text="Massillon Community" TYPE="HOSPITAL" comment="" />
+<DATE id="P5" start="272" end="277" text="12/91" TYPE="DATE" comment="" />
+<NAME id="P6" start="861" end="865" text="Cook" TYPE="DOCTOR" comment="" />
+<NAME id="P7" start="1153" end="1157" text="Cook" TYPE="DOCTOR" comment="" />
+<LOCATION id="P8" start="1231" end="1235" text="CCGH" TYPE="HOSPITAL" comment="" />
+<LOCATION id="P9" start="1283" end="1296" text="West Virginia" TYPE="STATE" comment="" />
+<NAME id="P10" start="2028" end="2032" text="Judd" TYPE="DOCTOR" comment="" />
+<DATE id="P11" start="2033" end="2038" text="10/91" TYPE="DATE" comment="" />
+<LOCATION id="P12" start="2249" end="2262" text="West Virginia" TYPE="STATE" comment="" />
+<LOCATION id="P13" start="2332" end="2338" text="Mexico" TYPE="CITY" comment="" />
+<NAME id="P14" start="2864" end="2878" text="George, Rickey" TYPE="PATIENT" comment="" />
+<ID id="P15" start="2884" end="2891" text="1131414" TYPE="MEDICALRECORD" comment="" />
+<DATE id="P16" start="2892" end="2900" text="06/10/92" TYPE="DATE" comment="" />
+<NAME id="P17" start="4554" end="4568" text="Opal C. Fierro" TYPE="DOCTOR" comment="" />
+<NAME id="P18" start="4593" end="4598" text="kurtz" TYPE="DOCTOR" comment="" />
+<NAME id="P19" start="4604" end="4614" text="Keith Cook" TYPE="DOCTOR" comment="" />
+<LOCATION id="P20" start="4621" end="4649" text="Massillon Community Hospital" TYPE="HOSPITAL" comment="" />
+<LOCATION id="P21" start="4650" end="4668" text="22 Monterey Avenue" TYPE="STREET" comment="" />
+<LOCATION id="P23" start="4689" end="4695" text="Mexico" TYPE="CITY" comment="" />
+<LOCATION id="P24" start="4697" end="4699" text="CT" TYPE="STATE" comment="" />
+<LOCATION id="P25" start="4700" end="4710" text="33383-9795" TYPE="ZIP" comment="" />
+</TAGS>
+</deIdi2b2>

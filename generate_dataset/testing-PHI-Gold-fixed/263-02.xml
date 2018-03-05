@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2079-09-28
+
+                     DOUGLAS EMERGENCY DEPT VISIT
+
+ 
+
+DODD,STEVEN   350-93-05-3                      VISIT DATE: 09/28/79
+
+The patient was interviewed and examined by me as well as by the 
+
+resident.
+
+HISTORY OF PRESENTING COMPLAINT:  In brief, this is a 64-year-old 
+
+gentleman with morbid obesity.  He is on CPAP.  He has CHF, 
+
+hypertension, chronic renal insufficiency, triple bypass, and 
+
+diabetes.  He had three episodes of chest pain which woke him up 
+
+from CPAP last last night.  Each episode reminded him of his 
+
+typical angina, but the last time he had it was in May.  Those 
+
+three episodes were resolved with one sublingual nitroglycerin.  He 
+
+woke up today and thought he needed to be evaluated.  He is also 
+
+complaining of low grade temperature.  He has recently been 
+
+receiving VNA services as a result of a left foot ulcer as a result 
+
+of an oxygen tank burn.  His VNA came to visit him today and found 
+
+that he had some crackles in his lungs with a temperature and was 
+
+concerned about a pneumonia.  Please see the resident's note for 
+
+details. 
+
+REVIEW OF SYSTEMS:  He denies chest pain now.  No shortness of 
+
+breath now.  He states that his foot appears to be getting better.
+
+MEDICATIONS:  Atenolol, aspirin, isosorbide, Lasix, Glyburide, 
+
+Lipitor, and Lorazepam.
+
+ALLERGIES:  No known drug allergies. 
+
+PHYSICAL EXAMINATION:  GENERAL APPEARANCE:  The patient is a 
+
+morbidly obese gentleman.  VITAL SIGNS:  Temperature 100.2, pulse 
+
+62, respiratory rate 18, blood pressure 173/74.  O2 saturation is 
+
+99%.  LUNGS:  He has rales at the right base.  Unable to assess 
+
+JVD.  ABDOMEN:  He is obese with active bowel sounds.  EXTREMITIES: 
+
+Distal left foot lateral ulcer is dry, necrotic, without 
+
+surrounding edema or tenderness.
+
+LABORATORY EVALUATION:  His white count here is 14.  His BUN and 
+
+creatinine are 25 and 2.4, which is his baseline.  CK is 28, 
+
+troponin pending.  INR is 1.2.  EKG shows no changes from prior.  
+
+Chest x-ray shows right pleural effusion with question right 
+
+paratracheal mass.
+
+CONSULTATIONS (including PCP):  His care was discussed with the 
+
+Christus Spohn cardiology.
+
+FINAL DIAGNOSIS:  Unstable angina pectoris.
+
+DISPOSITION (including condition upon discharge):  He is going to 
+
+be treated with antibiotics, aspirin, Lopressor, and admitted to 
+
+the hospital for a rule out.  Condition on admission is stable.  He 
+
+will be presumptively treated for a pneumonia on the right side.
+
+___________________________________                    QQ632/54034 
+
+FREDA F. PELLETIER, M.D.     FP00                      D:09/28/79 
+
+                                                       T:09/28/79 
+
+Dictated by:  FREDA F. PELLETIER, M.D.     FP00 
+
+ ******** Not reviewed by Attending Physician ********
+
+
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2079-09-28" TYPE="DATE" comment="" />
+<LOCATION id="P1" start="49" end="56" text="DOUGLAS" TYPE="HOSPITAL" comment="" />
+<NAME id="P2" start="82" end="93" text="DODD,STEVEN" TYPE="PATIENT" comment="" />
+<ID id="P3" start="96" end="107" text="350-93-05-3" TYPE="MEDICALRECORD" comment="" />
+<DATE id="P4" start="141" end="149" text="09/28/79" TYPE="DATE" comment="" />
+<AGE id="P5" start="283" end="285" text="64" TYPE="AGE" comment="" />
+<DATE id="P6" start="604" end="607" text="May" TYPE="DATE" comment="" />
+<LOCATION id="P7" start="2139" end="2153" text="Christus Spohn" TYPE="HOSPITAL" comment="" />
+<ID id="P8" start="2538" end="2549" text="QQ632/54034" TYPE="IDNUM" comment="" />
+<NAME id="P9" start="2552" end="2570" text="FREDA F. PELLETIER" TYPE="DOCTOR" comment="" />
+<NAME id="P10" start="2581" end="2585" text="FP00" TYPE="USERNAME" comment="" />
+<DATE id="P11" start="2609" end="2617" text="09/28/79" TYPE="DATE" comment="" />
+<DATE id="P12" start="2677" end="2685" text="09/28/79" TYPE="DATE" comment="" />
+<NAME id="P13" start="2702" end="2720" text="FREDA F. PELLETIER" TYPE="DOCTOR" comment="" />
+<NAME id="P14" start="2731" end="2735" text="FP00" TYPE="USERNAME" comment="" />
+</TAGS>
+</deIdi2b2>

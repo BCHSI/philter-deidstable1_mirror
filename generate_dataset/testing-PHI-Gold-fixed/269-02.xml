@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2114-01-10
+
+
+  
+                      OFFICE NOTE
+  Quinten Dawson
+  MR#4692758
+  January 10, 2114
+  
+  Return visit.  Reason for visit: 73 year old male for evaluation/management multiple
+  issues.  
+  
+  Diabetes: he is on maximal dose of glipizide and Glucophage and A1C has been going up
+  steadily now to 8.0.  His sugars vary greatly in the morning from 100 to 174.  He hasn't
+  been checking pre dinner.  We discussed insulin and he really is quite against it.  We will
+  continue discussion open.  Asked him to check pre dinner sugars.  
+  
+  Coronary disease: patient had a mild posterior ischemia in 2112 on a screening stress test. 
+  He is actually having some progressive dyspnea on exertion and a sense of chest
+  tightness with one block.  He is a bit of a denier.  He hasn't tried nitroglycerin, which I
+  have given him.  I suggested he do that.  He will have a follow up stress test and we will
+  arrange a cardiology consult.  
+  
+  UTI: patient had an E coli UTI 9/13.  He doesn't really have much in terms of other
+  prostate symptoms and no nocturia.  He has however, developed urinary urgency again in
+  the last week or two.  Will check another culture.  May need urology referral.  
+  
+  Knee pain: patient with longstanding DJD of the knees.  Will have a consult at Christiana Hospital considering replacement.  
+  
+  Family history: unchanged.   
+  
+  Review of systems: status post an embolic stroke in 2111 and took warfarin for 2 years
+  and followed by Dr. Dillon.  He is still on Celexa for depression.  He is having hearing
+  loss with equivocal audiograms.  Suggested otology consult at Naples Community Hospital.  He has
+  a mild hypoproliferative anemia that is stable.  Sleep apnea.  All other systems negative. 
+  
+  Physical exam: his weight is 196 pounds.  Most recent 195.  BP was 140/70.  Pulse 60. 
+  Skin normal.  Nodes: none.  Chest clear lungs.  Cardiac: S1, S2 normal.  Grade II/VI
+  systolic murmur of mitral regurgitation (confirmed by echo).  Abdomen no mass or
+  organomegaly.  Extremities: mild venous stasis.  Trace edema.  DP pulses are 1+.
+  
+  Assessment: management of multiple medical problems as above.  Lab work up to date.  
+  
+  Disposition: every 4 months.  Comprehensive 5/14.    
+  
+  
+  Gerald Everhart, M.D.
+  Dictated/Not Read
+  
+  
+  Quinten Dawson
+  MR#4692758
+  January 10, 2114
+  Page 2
+  
+  /talbot
+  
+  cc.
+  Cardiology consult
+  
+  
+  
+  
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2114-01-10" TYPE="DATE" comment="" />
+<NAME id="P1" start="68" end="82" text="Quinten Dawson" TYPE="PATIENT" comment="" />
+<ID id="P2" start="88" end="95" text="4692758" TYPE="MEDICALRECORD" comment="" />
+<DATE id="P3" start="98" end="114" text="January 10, 2114" TYPE="DATE" comment="" />
+<AGE id="P4" start="153" end="155" text="73" TYPE="AGE" comment="" />
+<DATE id="P5" start="626" end="630" text="2112" TYPE="DATE" comment="" />
+<DATE id="P6" start="999" end="1003" text="9/13" TYPE="DATE" comment="" />
+<LOCATION id="P7" start="1308" end="1327" text="Christiana Hospital" TYPE="HOSPITAL" comment="" />
+<DATE id="P8" start="1447" end="1451" text="2111" TYPE="DATE" comment="" />
+<NAME id="P9" start="1504" end="1510" text="Dillon" TYPE="DOCTOR" comment="" />
+<LOCATION id="P10" start="1637" end="1662" text="Naples Community Hospital" TYPE="HOSPITAL" comment="" />
+<DATE id="P11" start="2251" end="2255" text="5/14" TYPE="DATE" comment="" />
+<NAME id="P12" start="2269" end="2284" text="Gerald Everhart" TYPE="DOCTOR" comment="" />
+<NAME id="P13" start="2319" end="2333" text="Quinten Dawson" TYPE="PATIENT" comment="" />
+<ID id="P14" start="2339" end="2346" text="4692758" TYPE="MEDICALRECORD" comment="" />
+<DATE id="P15" start="2349" end="2365" text="January 10, 2114" TYPE="DATE" comment="" />
+<NAME id="P16" start="2381" end="2387" text="talbot" TYPE="DOCTOR" comment="" />
+</TAGS>
+</deIdi2b2>

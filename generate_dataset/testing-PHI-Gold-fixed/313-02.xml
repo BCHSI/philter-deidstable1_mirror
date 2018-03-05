@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2066-10-08
+
+                                                       Patient Name: RUTLEDGE,EVA [ MRN: 37947241ZGJ ]
+
+                                                         Date of Visit: 10/08/2066
+
+
+                                      PROMPTCAREIMA Clinic Note
+
+
+
+Mrs. Rutledge is a former patient of Dr. Xia's who comes in today to establish a new PCP and for follow-up of her hypertension, diabetes, chronic renal insufficiency (baseline creatinine 2.2), and GERD.  She is currently on procardia xl, losartan, and atenolol for her hypertension.  She takes a baby aspirin qd for cardiac protection.  Her diabetes is controlled by diet alone, and her GERD by zantac 150 qd or bid prn.  Her last HbA1C was 6.9, with a malb/cr ratio of 222.2 and trace protein on U/A.  She has had a prior cardiac work-up for atypical chest pain with a negative ETT/SPECT in 2062 and a negative ETT in 2064.  An echo in 2062 showed an EF of 65% with no valvular abnormalities.
+
+
+
+She is currently well with no complaints.  She is being followed in opthalmology for possible glaucoma.  She does not check her blood sugars at home, although she has a glucometer.  When asked if her sugars are ever low, she states that she has the same symptoms with hypoglycemia that she does with hyperglycemia: dizziness and hot flashes.  She's not had this recently.  She also does not check her BP at home.  She denies any numbness or tingling in her fingers, or any chest pain.  She did pull a muscle in her shoulder last night and still feels tender in that area.  She follows a diabetic diet (avoids sweets), gets no regular exercise, but works in Electrical and Avionics Mechanics so does have physical activity during the day.
+
+
+
+PSHx: none
+
+PGynHx: G7 P4 SAB1 TAB2, still menstruating q month, no hot flashes, heavy periods but no clots; LMP 10/01/66
+
+Allergies: NKAD
+
+Habits: never smoked, very rare EtOH, no illicit drugs
+
+
+
+Medications:
+
+ASA  81MG PO QD
+
+ATENOLOL  100MG PO QD  (she has run out of this and did not take it today)
+
+PROCARDIA XL  30MG PO QD
+
+RANITIDINE HCL   150MG PO QD
+
+LOSARTAN  50MG PO 2 qd
+
+
+
+Physical Exam	
+
+================ Vital signs ================
+
+ Blood Pressure:  --  136/76
+
+ Pulse:  --  76
+
+Weight:  --  139  [Pounds]
+
+General:  no acute distress
+
+HEENT:   PERLA, anicteric, O/P clear
+
+Neck:      no thyromegaly or LAN; no carotid bruits
+
+Chest:     lungs are clear to auscultation bilaterally with no crackles 
+
+Heart:      regular rate and rhythm, S1 and S2 normal, no m/g/r  
+
+Abd:        soft, NT/ND.  +BS.  No HSM or masses
+
+Pelvic:     Pap done, with normal vaginal mucosa and cervix
+
+Ext:  no edema, peripheral pulses present and feet without lesions.
+
+
+
+Assessment:  51 yo woman with diabetes, hypertension, CRI from hypertension/diabetic nephropathy likely. 
+
+
+
+Current Plan:
+
+1.  Diabetes.  Checking A1C off medication.  Would like to have patient check FS when she's feeling ill or if A1C is elevated.  Will refer to NP for review glucometer use, diabetic diet.  She has been tried on glucotrol XL in the past and was hypoglycemia.  This is also probably not a good choice due to her renal insufficiency.  May try glyburide if A1C elevated.  Being followed by opthalmology with upcoming appt.  Podiatry referral deferred.  Consider repeat referral to nutrition.  Lipids very good (LDL 82) last check off medication.
+
+2.  Hypertension.  BP borderline elevated today, but off atenolol.  HR also up.  Refilled all meds; will ask NP to check her pressure at next visit.  Will continue qd ASA for CAD/stroke prevention.
+
+3.  GERD.  Continue zantac bid as needed.  Also recommended that patient start using Tums for calcium supplementation and relief of intermittent dyspepsia.  She will try this and get back to me about the effect.
+
+4.  Chronic renal insufficiency.  Will get 24-hour urine to assess creatinine clearance and urine protein.  Checking chem 7 today for K and Creatinine.
+
+5.  Health maintenance.  Patient due to dT shot, requested today.  Normal mammogram in 5/66.  Stool guaiac and flex sig can be done at next appt; will follow-up Pap.  
+
+
+______________________________                              
+
+
+
+Xena Danielle Elmore, M.D.
+
+
+
+========================== Preceptor's Note ==========================
+
+
+
+51 yo Puerto Rican woman with dm, htn, cri.  Cre last checked 2.2.  On procadia, losartan, atenolol.  Ran out of atenolol.   Does not check blood sugars.  No neuropathy.  She is active through her job (Electrical and Avionics Mechanics Technician ).  ETT was negative 10/64. 
+
+
+
+136/76 pulse 76
+
+
+
+Plan:  currently, on diet control.  Last A1c 6.9%.
+
+Refilled Meds.
+
+Pap done.  
+
+
+
+______________________________                              
+
+
+
+Xen Chris Emmons, M.D.
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2066-10-08" TYPE="DATE" comment="" />
+<NAME id="P1" start="97" end="109" text="RUTLEDGE,EVA" TYPE="PATIENT" comment="" />
+<ID id="P2" start="117" end="128" text="37947241ZGJ" TYPE="MEDICALRECORD" comment="" />
+<DATE id="P3" start="204" end="214" text="10/08/2066" TYPE="DATE" comment="" />
+<LOCATION id="P4" start="255" end="265" text="PROMPTCARE" TYPE="HOSPITAL" comment="" />
+<NAME id="P5" start="289" end="297" text="Rutledge" TYPE="PATIENT" comment="" />
+<NAME id="P6" start="325" end="328" text="Xia" TYPE="DOCTOR" comment="" />
+<DATE id="P7" start="876" end="880" text="2062" TYPE="DATE" comment="" />
+<DATE id="P8" start="903" end="907" text="2064" TYPE="DATE" comment="" />
+<DATE id="P9" start="921" end="925" text="2062" TYPE="DATE" comment="" />
+<PROFESSION id="P10" start="1638" end="1671" text="Electrical and Avionics Mechanics" TYPE="PROFESSION" comment="" />
+<DATE id="P11" start="1835" end="1843" text="10/01/66" TYPE="DATE" comment="" />
+<AGE id="P12" start="2703" end="2705" text="51" TYPE="AGE" comment="" />
+<DATE id="P13" start="4008" end="4012" text="5/66" TYPE="DATE" comment="" />
+<NAME id="P14" start="4155" end="4175" text="Xena Danielle Elmore" TYPE="DOCTOR" comment="" />
+<AGE id="P15" start="4259" end="4261" text="51" TYPE="AGE" comment="" />
+<LOCATION id="P16" start="4265" end="4277" text="Puerto Rican" TYPE="COUNTRY" comment="" />
+<PROFESSION id="P17" start="4461" end="4506" text="Electrical and Avionics Mechanics Technician " TYPE="PROFESSION" comment="" />
+<DATE id="P18" start="4527" end="4532" text="10/64" TYPE="DATE" comment="" />
+<NAME id="P19" start="4704" end="4720" text="Xen Chris Emmons" TYPE="DOCTOR" comment="" />
+</TAGS>
+</deIdi2b2>

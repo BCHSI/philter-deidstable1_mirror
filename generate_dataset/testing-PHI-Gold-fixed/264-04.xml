@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2091-10-14
+
+EDVISIT^24152563^Pierre, Eden^10/14/91^PITTMAN, THOMAS
+
+CHIEF COMPLAINT:  Shortness of breath.
+
+HISTORY OF PRESENT ILLNESS:  The patient is a 67-year-old female
+
+with end-stage cardiac disease with ischemic cardiomyopathy, who
+
+I see together with the resident.  The resident's history was
+
+reviewed.  The patient was interviewed and examined by me.  In
+
+brief, apparently the EMS was summoned to the scene inadvertently
+
+this morning.  She is end-stage, she is on hospice and comfort
+
+measures only, and she apparently was quite poorly feeling this
+
+morning and was transported.  Her son has called several times
+
+and wants to transport her back in a discussion with her.  She is
+
+quite weak and understands her circumstances, wishes to be
+
+transported back as well.
+
+PAST MEDICAL HISTORY, REVIEW OF SYSTEMS, SOCIAL HISTORY,
+
+MEDICATIONS, AND ALLERGIES:  All per the chart.
+
+PHYSICAL EXAMINATION:  She is alert.  She certainly appears
+
+end-stage.  She has a JVP at 14-16 cm.  She has lungs with
+
+decreased breath sounds throughout her heart.  There is a 3/6
+
+holosystolic murmur heard very weakly.  Her abdomen is soft and
+
+nontender without organomegaly.
+
+EMERGENCY DEPARTMENT COURSE:  She has electrocardiogram, which is
+
+remarkable for sinus rhythm with nonspecific intraventricular
+
+conduction delay and ugly appearing.  Electrocardiogram is rather
+
+wide complexed.  She has a first-degree AV block and a leftward
+
+axis.  The case was discussed with her cardiologist, social
+
+worker, case manager, and family and she is discharged home.
+
+IMPRESSION:  End-stage ischemic cardiomyopathy.
+
+DISPOSITION AND PLAN:  She is discharged home to continue with
+
+hospice and expectant care.
+
+______________________________
+
+PITTMAN, THOMAS M.D.
+
+D: 10/14/91
+
+T: 10/14/91
+
+Dictated By: PITTMAN, THOMAS
+
+eScription document:1-6434630 BFFocus
+
+******** Not reviewed by Attending Physician ********
+
+
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2091-10-14" TYPE="DATE" comment="" />
+<ID id="P1" start="36" end="44" text="24152563" TYPE="MEDICALRECORD" comment="" />
+<NAME id="P2" start="45" end="57" text="Pierre, Eden" TYPE="PATIENT" comment="" />
+<DATE id="P3" start="58" end="66" text="10/14/91" TYPE="DATE" comment="" />
+<NAME id="P4" start="67" end="82" text="PITTMAN, THOMAS" TYPE="DOCTOR" comment="" />
+<AGE id="P5" start="170" end="172" text="67" TYPE="AGE" comment="" />
+<NAME id="P6" start="1745" end="1760" text="PITTMAN, THOMAS" TYPE="DOCTOR" comment="" />
+<DATE id="P7" start="1770" end="1778" text="10/14/91" TYPE="DATE" comment="" />
+<DATE id="P8" start="1783" end="1791" text="10/14/91" TYPE="DATE" comment="" />
+<NAME id="P9" start="1806" end="1821" text="PITTMAN, THOMAS" TYPE="DOCTOR" comment="" />
+<ID id="P10" start="1843" end="1852" text="1-6434630" TYPE="IDNUM" comment="" />
+</TAGS>
+</deIdi2b2>

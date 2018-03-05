@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2083-09-10
+
+Woodstock E Intern Admit Note
+
+
+
+Patient: Jimenez, Youssef 
+
+LCH Unit Number: 055 47 33
+
+Date of Admission:  09 September 2083
+
+Attending Physician: Nathan Yearwood, MD
+
+Room: Woodstock 5599 U
+
+Code Status: Full
+
+PCP: Charles Eggers, MD of Seminole
+
+Oncologist: Ernest Byers, MD
+
+
+
+Source: Patient
+
+
+
+Chief Complaint: DOE
+
+
+
+History of The Present Illness: Patient is a 74 year-old man with Stage IIIB Hodgkins disease s/p ABVD, HTN, DM, s/p CVA who presents with 2-3 weeks of DOE, orthopnea, and PND.  Pt denies CP, dyspnea at rest, palpitations, syncope, lightheadedness.  The patient also denies F/C, night sweats, weight changes, cough, N/V, abd pain, diarrhea, constipation, dysuria.
+
+
+
+Past Medical/Surgical History: 
+
+Stage IIIB lyphocyte depleted, diffuse fibrosis type Hodgkins lymphoma diagnosed 10/80 s/P 6 cycles of ABVD (last 4/81)
+
+Thyroid nodule (left lower pole) s/p FNA  no malignant cells
+
+Diabetes mellitus
+
+Hyperplastic colonic polyp and internal hemorrhoids
+
+Lacunar CVA in 3/78 for which he is maintained on coumadin, no residuals
+
+50-70% occlusion of R ICA
+
+HTN
+
+ECHO 10/2080: trace MR, trace AI, EF 67%, trace TR, RVSP 31 mmHg
+
+Hypercholesterolemia (10/80 Chol 49, Trig 148, HDL 3, LDL 16)
+
+
+
+
+
+Allergies: No Known Drug Allergies
+
+
+
+Medications: 
+
+Coumadin 8.5 mg QD
+
+Folate 1 mg QD
+
+Zantac 150 mg BID
+
+Glyburide BID
+
+
+
+Social History:
+
+Occupation - retired network operator
+
+Tobacco - quit 20 years ago, 10 pack-yr history
+
+Alcohol - rare
+
+Illicit/IV Drugs -denies
+
+Lives next to wife (separated) and down the street from daughter
+
+
+
+Family History: Non-Contributory
+
+
+
+Review of Systems:
+
+Please see pertinent positives and negatives in HPI.
+
+
+
+Physical Examination:
+
+97.9  98  180/60  22  96% on 2L
+
+General - well appearing, well nourished patient in NAD, appropriate
+
+HEENT - normocephalic, atraumatic, PERRLA, anicteric, moist mucous membranes, no JVD
+
+Pulmonary - decrease BS at R base, no crackles
+
+Cardiac - regular rate and rhythm, S1 and S2 normal, no murmurs
+
+Abdomen - soft, non-tender, non-distended, active bowel sounds
+
+Extremity - no cyanosis, clubbing, or edema, 2+ and equal distal pulses
+
+Neurology - AAOx3
+
+Skin - no worrisome rashes or lesions
+
+
+
+Data: 
+
+   Chemistries:
+
+ Na 138  K 3.6  Cl 106  HCO3 26.9  BUN 13 Cr 0.9  Glucose 163
+
+Ca 8.8    Phos 2.8  Mg 1.7
+
+ALT 27  AST 24  AlkP 81  Tbili 0.5  Dbili 0.1  Alb 3.5
+
+Amylase 25, Lipase 3.7  
+
+   Blood Counts:
+
+WBC  8.8 HCT 38.2  Plts 264
+
+PT 19 INR 2.4
+
+   Microbiology:
+
+U/A: nitrite (-), 0-2 WBC, no bacteria
+
+   Radiology:
+
+CXR: Enlarged cardiac silhouette likely technically related, b/l pleural fluid collections R>L with bibasilar atelectasis
+
+   Cardiogram:
+
+Atrial fibrillation @ 115 BPM, nl interval, nl axis, 0.5 mm ST segment depressions in V5-V6
+
+
+
+Assessment: Patient is a 74 year-old man with Stage IIIB Hodgkins disease s/p ABVD, HTN, DM, s/p CVA who presents with 2-3 weeks of DOE, orthopnea, and PND with new onset A-fib with RVR and b/l pleural effusions.  
+
+
+
+Plan:
+
+
+
+1.	DOE: Concern is new cardiomyopathy with failure secondary to adriamycin toxicity, nl ECHO in 2080
+
+-check TTE tomorrow (also access for thrombus although pt already anticoagulated)
+
+-currently clincially euvolemic, no diuresis for now
+
+2.	New onset AVR with RVR: Possible etiologies:
+
+ -new ischemia (cardiac enzymes neg x 3, no EKG changes)
+
+-CHF (see above discussion)
+
+-pulm disease (CXR w/ b/l small pleural effusions ), could be pulm tox secondary to chemo
+
+-thyrotoxicosis (history of benign thyroid nodules but could be active now) check TSH
+
+-rate controlled with diltiazem and lopressor, d/c dig
+
+-already on coumadin s/p CVA with goal INR 2-3
+
+3.	s/p CVA
+
+-continue coumadin, check INR
+
+4.	Prophylaxis
+
+-nexium, coumadin
+
+5.	Dispo
+
+- to home when stable
+
+
+
+
+
+                                                							___________________________
+
+Shaquel Whitfield, MD
+
+Intern in Internal Medicine
+
+Pager # 77136
+
+
+
+      
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2083-09-10" TYPE="DATE" comment="" />
+<LOCATION id="P1" start="28" end="37" text="Woodstock" TYPE="HOSPITAL" comment="" />
+<NAME id="P2" start="70" end="86" text="Jimenez, Youssef" TYPE="PATIENT" comment="" />
+<LOCATION id="P3" start="89" end="92" text="LCH" TYPE="HOSPITAL" comment="" />
+<ID id="P4" start="106" end="115" text="055 47 33" TYPE="MEDICALRECORD" comment="" />
+<DATE id="P5" start="137" end="154" text="09 September 2083" TYPE="DATE" comment="" />
+<NAME id="P6" start="177" end="192" text="Nathan Yearwood" TYPE="DOCTOR" comment="" />
+<LOCATION id="P7" start="204" end="213" text="Woodstock" TYPE="HOSPITAL" comment="" />
+<NAME id="P9" start="246" end="260" text="Charles Eggers" TYPE="DOCTOR" comment="" />
+<LOCATION id="P10" start="268" end="276" text="Seminole" TYPE="CITY" comment="" />
+<NAME id="P11" start="290" end="302" text="Ernest Byers" TYPE="DOCTOR" comment="" />
+<AGE id="P12" start="398" end="400" text="74" TYPE="AGE" comment="" />
+<DATE id="P13" start="834" end="839" text="10/80" TYPE="DATE" comment="" />
+<DATE id="P14" start="867" end="871" text="4/81" TYPE="DATE" comment="" />
+<DATE id="P15" start="1023" end="1027" text="3/78" TYPE="DATE" comment="" />
+<DATE id="P16" start="1119" end="1126" text="10/2080" TYPE="DATE" comment="" />
+<DATE id="P17" start="1202" end="1207" text="10/80" TYPE="DATE" comment="" />
+<PROFESSION id="P18" start="1410" end="1426" text="network operator" TYPE="PROFESSION" comment="" />
+<AGE id="P19" start="2813" end="2815" text="74" TYPE="AGE" comment="" />
+<DATE id="P20" start="3111" end="3115" text="2080" TYPE="DATE" comment="" />
+<NAME id="P21" start="3871" end="3888" text="Shaquel Whitfield" TYPE="DOCTOR" comment="" />
+<CONTACT id="P22" start="3931" end="3936" text="77136" TYPE="PHONE" comment="" />
+</TAGS>
+</deIdi2b2>

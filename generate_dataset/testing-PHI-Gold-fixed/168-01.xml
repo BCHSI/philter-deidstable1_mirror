@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2070-04-23
+
+Stephens Memorial Hospital
+
+Anesthesiology
+
+Preanesthetic Assessment
+
+
+
+Traci Y. Mills, M.D.
+
+Associate Medical Director
+
+
+
+
+
+
+
+April 23, 2070
+
+
+
+Medical Record Number:  0189233 Victor Lujan
+
+
+
+Procedure:  The patient is a 51 year old male scheduled for AV fistula left forearm.  Surgery is scheduled on 4/30/70.
+
+
+
+Chief Complaint & Present Illness:  chronic renal failure secondary to diabetes-4/19 creatinine 2.9, BUN 69, potassium 3.5.  Patient has been troubled recently by increasing fatigue and shortness of breath-no PND, but has peripheral edema.
+
+
+
+Past Surgical History:  Prior surgery includes:  right shoulder arthroscopy-?  General anesthesia without any known problems; bilateral carpal tunnel release-local; surgery OS for bleeding-local [no old record available but requested]
+
+
+
+Family History:  There is no family history of adverse reactions to general anesthesia.
+
+
+
+Medications:  Epogen, bupropion 100 mg,  Zaroxylin 1.25 mg, Demodex 100 mg, Norvasc 10 mg, Neurontin 200 mg b.i.d., ranitidine 150 mg, insulin NPH 20 units in the a.m. 17 units in the p.m. plus humalog on a sliding scale
+
+
+
+Allergies:  iodine causes convulsions
+
+
+
+Social History:
+
+	Smoking:  none
+
+	Alcohol use:  none
+
+	Substance Abuse:  none
+
+	Allergen Exposure within 3 Months(blood products/pregnancy): none
+
+
+
+Review of Systems:  
+
+
+
+HEENT:  status post recent surgery OS
+
+Cardiovascular:  hypertension; peripheral vascular disease; syncopal episode secondary to antihypertensive medication [Zestril]; atypical chest pain prompted stress test 3/69: Mets equal 11, negative for ischemia, myocardial scan is normal.  Echo 3/66: EF 68 percent, RV and LV okay, trace MR, TI, PI. Carotid ultrasounds 3/70-normal.
+
+ Respiratory: patient has noted onset 4/21 of cough and chest congestion 
+
+Renal:  present problem 
+
+Hepatobiliary: negative 
+
+Neurological: peripheral neuropathy from knees down to feet bilaterally plus edema; bilateral carpal tunnel 
+
+Gastrointestinal: positive reflux 
+
+Hematological:   anemia-hematocrit 31.7, WBC 11.5,platelets 549,000  4/23/70
+
+Endocrine/metabolic: diabetes for the past 37 years-always on insulin-blood sugar 141 this a.m.[120-> 200] 
+
+Musculoskeletal/Skin: weakness of hands
+
+Psychiatric: depression-no suicide
+
+Obstetrical:  negative
+
+
+
+Vital Signs:
+
+
+
+	BP:  167/75 mm Hg
+
+	P:  97 bpm
+
+	Resp:  16 rpm
+
+	SaO2:  95%
+
+	Temp:  98.6 degrees F
+
+	Ht:  67 inches
+
+	Wt:  186.4 pounds
+
+
+
+Exam:
+
+
+
+HEEN&T:  good range of motion, no bruits
+
+Airway:  Mallampatti Class II
+
+Teeth:  none
+
+Lungs:  end expiratory squeaks and wheezes left lung fields 
+
+Heart:  regular rhythm, no murmurs
+
+
+
+Assessment:  
+
+ASA Physical Status III-patients will see Dr. Elliott's nurse today for treatment for bronchitis -please check chest film.  Please check old anesthesia record for any problems. 
+
+
+
+Plan:
+
+
+
+	Proposed Anesthetic: MAC/general anesthesia
+
+	Monitors:  standard
+
+	Pain Management:  PO
+
+	Autologous blood:  none
+
+	Premedication:  none
+
+	Usual Medications:  in a.m. of surgery
+
+	Medications to be held on day of surgery:  no regular insulin
+
+	Diabetic medications:  NPH 10 units-no regular
+
+	NSAIDS:  none
+
+	Aspirin:  none
+
+	NPO: after midnight
+
+
+
+Ancillary Studies:  EKG-normal sinus rhythm, LAE.  Chest film pending
+
+
+
+
+
+
+
+________________________________________   
+
+Traci Mills, M.D.
+
+
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2070-04-23" TYPE="DATE" comment="" />
+<LOCATION id="P1" start="28" end="54" text="Stephens Memorial Hospital" TYPE="HOSPITAL" comment="" />
+<NAME id="P3" start="100" end="114" text="Traci Y. Mills" TYPE="DOCTOR" comment="" />
+<DATE id="P4" start="156" end="170" text="April 23, 2070" TYPE="DATE" comment="" />
+<ID id="P5" start="198" end="205" text="0189233" TYPE="MEDICALRECORD" comment="" />
+<NAME id="P6" start="206" end="218" text="Victor Lujan" TYPE="PATIENT" comment="" />
+<AGE id="P7" start="251" end="253" text="51" TYPE="AGE" comment="" />
+<DATE id="P8" start="332" end="339" text="4/30/70" TYPE="DATE" comment="" />
+<DATE id="P9" start="424" end="428" text="4/19" TYPE="DATE" comment="" />
+<DATE id="P10" start="1564" end="1568" text="3/69" TYPE="DATE" comment="" />
+<DATE id="P11" start="1641" end="1645" text="3/66" TYPE="DATE" comment="" />
+<DATE id="P12" start="1716" end="1720" text="3/70" TYPE="DATE" comment="" />
+<DATE id="P13" start="1768" end="1772" text="4/21" TYPE="DATE" comment="" />
+<DATE id="P14" start="2072" end="2079" text="4/23/70" TYPE="DATE" comment="" />
+<NAME id="P15" start="2691" end="2698" text="Elliott" TYPE="DOCTOR" comment="" />
+<NAME id="P16" start="3308" end="3319" text="Traci Mills" TYPE="DOCTOR" comment="" />
+</TAGS>
+</deIdi2b2>

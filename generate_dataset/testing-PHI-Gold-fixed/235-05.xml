@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2089-04-05
+
+
+	CARDIOLOGY
+	
+
+	SAINT VINCENT HOSPITAL
+	
+
+
+	Interval History:
+   Ursula is seen in the Cardiology office for a followup visit.  Since last seen, she notes a number of somewhat concerning symptoms.  First of all, she is noting some mid sternal chest discomfort with exertion.  She associates this with back pain related to a remote back injury, but nonetheless with exertions she develops some degree of mid sternal chest discomfort, non radiating, associated may be with some shortness of breath.  She has not used any nitroglycerin for it.  It gets better when she rests.  She denies palpitations, PND, or orthopnea.  Her sugars are out of control.  Her weight is down, nonetheless.
+
+Physical examination:
+	
+-Pulse:   80
+-BP: 130/85  
+-weight:   206 lbs.
+-General:   Overweight.  Well appearing.
+-Skin:   No rashes.  Anicteric.
+-Heent:   Unremarkable.
+-Neck:   JVP less than 5, possible venous hums bilaterally.  Carotids without bruits.
+-Chest:   Clear to auscultation and percussion.
+-Cardiac:   Apical impulse nondisplaced and discrete.  Regular rate and rhythm.  Normal S1 and split S2.  Soft S4 gallop.
+-Abdomen:   Obese, soft, nontender, and nondistended without hepatosplenomegaly, bruits, dilated aorta.
+-Extremities:   No clubbing, cyanosis, or edema.
+
+Procedures:
+	
+Electrocardiogram  normal sinus rhythm IVCD, old IMI.  In addition, she has nonspecific ST and T-wave changes.  Compared there is no important change.
+
+
+	Impression:
+   1.  Coronary artery disease status post multiple PCIs.  Ursula has the return of chest symptoms which are suggestive for angina.  I will refer her for an exercise tolerance test to better evaluate this.  I will continue on the current medication program.
+2.  Hypertension.  Her blood pressure is a bit elevated.  Given her diabetes, I think it is prudent to add an ACE inhibitor.  Accordingly, lisinopril 2.5 mg QD was added to her program.
+3.  Lipids will be checked.  I strongly suspect that her LDL is not well suppressed.  Our goal LDL in this case is less than 70 mg/dL.
+
+	
+Umberto Uzzell, MD
+
+	
+Signed electronically by  Umberto Uzzell, MD
+Document Status: Final
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2089-04-05" TYPE="DATE" comment="" />
+<LOCATION id="P1" start="45" end="67" text="SAINT VINCENT HOSPITAL" TYPE="HOSPITAL" comment="" />
+<NAME id="P2" start="94" end="100" text="Ursula" TYPE="PATIENT" comment="" />
+<NAME id="P4" start="1531" end="1537" text="Ursula" TYPE="PATIENT" comment="" />
+<NAME id="P5" start="2054" end="2068" text="Umberto Uzzell" TYPE="DOCTOR" comment="" />
+<NAME id="P6" start="2102" end="2116" text="Umberto Uzzell" TYPE="DOCTOR" comment="" />
+</TAGS>
+</deIdi2b2>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2087-09-15
+
+
+
+	CARDIOLOGY
+
+	
+
+	SAINT VINCENT HOSPITAL
+
+	
+
+
+
+	Interval History:
+
+   Since last seen, Ursula notes that her weight continues to rise, and with this, her angina is clearly worse.  She has stable symptoms, nothing to suggest an ACS, but she's dyspneic with exertion and takes nitro occasionally.
+
+
+
+Medications:  Atenolol 100 mg qd, Aspirin 81 mg. qd, Imdur 30 mg., Lipitor 20 mg qd, glucophage
+
+
+
+Physical examination:  Reveals her to be obese weighing 231 lbs.  Her BP is 120/ palp in her left arm and her heart rate is 80. Her lungs are clear throughout.  Her apical impulse is non-displaced with a regular rate and rhythm, a normal S1 and S2, but no S3 or S4.  There is a grade 1 MR murmur noted.  There is no jugular venous distention and carotid pulses are 2+ bilaterally with soft bilateral bruits.  Her abdomen is morbidly obese.  Her extremities are notable for trace lower extremity edema.
+
+
+
+EKG:  NSR with an old IPMI.  She also has non specific STT wave abnormalities.  When compared to a previous tracing there is no change. 
+
+
+
+Impression:
+
+
+
+1.CAD, s/p cath and stenting:  her angina is clearly related to her weight going up again; I worry about this, and wonder if she should have another weight loss surgery.  For the meantime, I will increase Imdur to 60 mg qd, and consider an increase in atenolol.
+
+	
+
+Umberto M. Uzzell, MD pager #12472
+
+	
+
+Signed electronically by  Umberto M. Uzzell, MD
+
+Document Status: Final
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2087-09-15" TYPE="DATE" comment="" />
+<LOCATION id="P1" start="47" end="69" text="SAINT VINCENT HOSPITAL" TYPE="HOSPITAL" comment="" />
+<NAME id="P2" start="116" end="122" text="Ursula" TYPE="PATIENT" comment="" />
+<NAME id="P3" start="1352" end="1369" text="Umberto M. Uzzell" TYPE="DOCTOR" comment="" />
+<CONTACT id="P4" start="1381" end="1386" text="12472" TYPE="PHONE" comment="" />
+<NAME id="P5" start="1417" end="1434" text="Umberto M. Uzzell" TYPE="DOCTOR" comment="" />
+</TAGS>
+</deIdi2b2>

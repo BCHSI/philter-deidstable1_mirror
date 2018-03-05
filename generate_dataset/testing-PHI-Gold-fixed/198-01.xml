@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2076-07-01
+
+EW Neurology Resident Consult Note
+
+
+
+Patient Name:	Yusuf, Russell			MRN: 1423602
+
+Date:	7/01/76					  
+
+Consult question: evaluate for stroke/TIA
+
+HPI: 61 RHM was sitting on the couch watching TV.  At 6p he decided to walk to the store.  When he got outside, he had dizziness (lightheadedness, not spinning), and staggering gait.  He went home and sat back down.  When he got up again, he was again unsteady and lightheaded.  When he shuts his eyes, he says he has "spinning" sensation.  He took meclizine which did not help.  He has meclizine b/c he has had peripheral vertigo in the past.  He says that the dizziness he had today was different from that.  He had nausea but no vomiting.  He also had ringing in his ears and "blurry" vision and a "tingling" in the back of his head with face flushing during this episode.
+
+
+
+2d ago, he was watching TV and noted blurry vision.  He closed his R eye, and the vision was clear in his L eye.  He closed his L eye, and the vision out of his R eye was blurry.
+
+
+
+
+
+ROS: Signif for 2-3 mos of hallucinations upon waking up from sleep.  He had some chest pain the past few mos and was diagnosed with musculoskeletal pain.  He used to have some episodes of L leg giving out 6-7 yrs ago, had unremarkable emg and muscle bx at Wolfe Clinic, stopped falling 3-4 yrs ago and developed bilateral leg pains now tx'd with amitrypiline.  Otherwise negative in detail including headache, change in weight, energy, appetite, palpitations, SOB, DOE, F/N/V/D/cough/chills, rash, BRBPR, melena, abdominal pain, change in bowel or bladder habits (i.e incontinence).  No change in vision, hearing, vertigo, weakness, numbness, difficulty speaking or with language, swallowing, eating.
+
+
+
+
+
+PMH:
+
+Htn
+
+DM
+
+High cholesterol
+
+Leg pain as above
+
+Anxiety/depression
+
+
+
+MED:
+
+ASA 325
+
+Meclizine 25 prn
+
+Protonix 40
+
+Toprol 50
+
+Klonopin 6 mg qd (being weaned down)
+
+Amitryptiline 75 qhs
+
+Prozac 20 (being weaned down)
+
+Effexor 75 (being titrated up)
+
+
+
+ALL: codeine and percocet
+
+
+
+SH:	on disability d/t anx/depression.  Tobacco    ppd, remote heavy ETOH, none now, denies drugs
+
+
+
+FH: no stroke.  Dtr had vertebral dissection this past year
+
+
+
+VS:  T 98.2 HR 99 BP 158/89   RR 18 Sat  95% on RA 
+
+
+
+PE:Genl 	WD WN WM NAD
+
+HEENT 	AT/NC, MMM no lesions
+
+Neck 	Supple, no LAN, no bruits
+
+Chest 	CTA B
+
+CVS 	RRR w/o MGR
+
+ABD 	soft, NTND, + BS
+
+EXT 	no C/C/E, distal pulses full, no rashes or petechiae
+
+
+
+Neuro
+
+MS:	AA&Ox3, appropriately interactive, normal affect 
+
+Attention: intact for interview	 
+
+Speech: fluent w/o paraphasic error 
+
+Memory: not tested
+
+Calculations: not tested
+
+No finger agnosia
+
+L/R confusion: No L/R confusion
+
+Praxis: not tested
+
+Spatial: not tested
+
+No obvious perseveration.
+
+CN: 	I--not tested; II,III--PERRLA, VFF by confrontation, optic discs sharp; III,IV,VI-EOMI w/o nystagmus, no ptosis; V--sensation intact to LT/PP, masseters strong symmetrically; VII--face symmetric without weakness; VIII--hears finger rub bilaterally; IX,X--voice normal, palate elevates symmetrically; XI--SCM/trapezii 5/5; XII--tongue protrudes midline
+
+Motor:	normal bulk and tone, no tremor, rigidity or bradykinesia, no pronator drift. Arm rolling:symmetric. Strength:
+
+              
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2076-07-01" TYPE="DATE" comment="" />
+<NAME id="P1" start="80" end="94" text="Yusuf, Russell" TYPE="PATIENT" comment="" />
+<ID id="P2" start="102" end="109" text="1423602" TYPE="MEDICALRECORD" comment="" />
+<DATE id="P3" start="117" end="124" text="7/01/76" TYPE="DATE" comment="" />
+<AGE id="P4" start="181" end="183" text="61" TYPE="AGE" comment="" />
+<LOCATION id="P5" start="1296" end="1308" text="Wolfe Clinic" TYPE="HOSPITAL" comment="" />
+</TAGS>
+</deIdi2b2>

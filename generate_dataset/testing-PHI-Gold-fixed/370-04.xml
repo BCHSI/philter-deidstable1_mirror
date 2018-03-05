@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2077-12-04
+
+EDVISIT^12423229^UMALI, DANA^12/04/77^DUFFY, FELICIA
+
+CHIEF COMPLAINT:  Foot pain.
+
+HISTORY OF PRESENT ILLNESS:  Ms. Umali is a 73-year-old woman with
+
+a history of diabetes, peripheral vascular disease who presents
+
+to the Emergency Department complaining of several days of
+
+increasing right great toe pain.  The patient denies fever,
+
+chills, or drainage from the foot.  Please see the written record
+
+for further details.
+
+PAST MEDICAL HISTORY:  Hypertension, diabetes, CVA, peripheral
+
+vascular disease, and hyperlipidemia.
+
+PAST SURGICAL HISTORY:  Left great toe amputation and left lower
+
+extremity arterial revascularization.
+
+MEDICATIONS:  Please see the LMR.
+
+ALLERGIES:  No known drug allergies.
+
+PHYSICAL EXAMINATION:  I have examined the patient and agree with
+
+the physical as documented.  Of note, the patient is awake,
+
+alert, and in no distress.  Vitals:  Heart rate 88, respiratory
+
+rate 20, blood pressure 135/63, temperature 97, and oxygen
+
+saturation 98% on room air.  Lungs:  Clear bilaterally with no
+
+rales, rhonchi, or wheezing.  Cardiovascular exam:  Regular rate
+
+and rhythm.  Normal S1 and S2.  Abdomen:  Soft.  No tenderness,
+
+guarding, or rebound.  Extremity exam:  The patient's right lower
+
+extremity is warm with less than 2 second capillary refills.  The
+
+patient has no palpable or Doppler to dorsalis pedis or posterior
+
+tibial pulses.  The patient's right great toe is tender,
+
+erythematous, and mildly swollen.
+
+MEDICAL DECISION MAKING AND EMERGENCY DEPARTMENT COURSE:  Ms. Umali
+
+is a 73-year-old woman with diabetes, peripheral vascular disease
+
+who presents to the Emergency Department with right foot
+
+cellulitis.  The patient's labs are available on the LMR.  Of
+
+note, the patient's white count is 11.7.  The patient was
+
+evaluated by the Vascular Surgery Service.  The plan is to obtain
+
+an x-ray of the foot and admit the patient to the Vascular
+
+Surgery Service for further management.
+
+PRIMARY DIAGNOSIS:  Right foot cellulitis.
+
+SECONDARY DIAGNOSIS:  Diabetes with poor control.
+
+THIRD DIAGNOSIS:  Peripheral vascular disease.
+
+DISPOSITION:  Admission.
+
+CONDITION UPON ADMISSION:  Good.
+
+______________________________
+
+DUFFY, FELICIA M.D.
+
+D: 12/04/77
+
+T: 12/04/77
+
+Dictated By: DUFFY, FELICIA
+
+eScription document:6-60827686 BFFocus
+
+ ******** Not reviewed by Attending Physician ********
+
+
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2077-12-04" TYPE="DATE" comment="" />
+<ID id="P1" start="36" end="44" text="12423229" TYPE="MEDICALRECORD" comment="" />
+<NAME id="P2" start="45" end="56" text="UMALI, DANA" TYPE="PATIENT" comment="" />
+<DATE id="P3" start="57" end="65" text="12/04/77" TYPE="DATE" comment="" />
+<NAME id="P4" start="66" end="80" text="DUFFY, FELICIA" TYPE="DOCTOR" comment="" />
+<NAME id="P5" start="145" end="150" text="Umali" TYPE="PATIENT" comment="" />
+<AGE id="P6" start="156" end="158" text="73" TYPE="AGE" comment="" />
+<NAME id="P7" start="1540" end="1545" text="Umali" TYPE="PATIENT" comment="" />
+<AGE id="P8" start="1552" end="1554" text="73" TYPE="AGE" comment="" />
+<NAME id="P9" start="2197" end="2211" text="DUFFY, FELICIA" TYPE="DOCTOR" comment="" />
+<DATE id="P10" start="2221" end="2229" text="12/04/77" TYPE="DATE" comment="" />
+<DATE id="P11" start="2234" end="2242" text="12/04/77" TYPE="DATE" comment="" />
+<NAME id="P12" start="2257" end="2271" text="DUFFY, FELICIA" TYPE="DOCTOR" comment="" />
+<ID id="P13" start="2293" end="2303" text="6-60827686" TYPE="IDNUM" comment="" />
+</TAGS>
+</deIdi2b2>

@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2071-08-08
+
+Reason for Visit	
+
+Mr. Whitehead is here for follow-up of multiple issues.
+
+
+
+Problems	  
+
+LOW BACK PAIN	      
+
+he had prolonged discogenic back pain in 1/2070 and could not get appt with NAMG orthopedic/back surgeon and went to Montreal Medical Center.  He underwent L4/5 lamenictomy in 2/2070.  He has persistent right-lower back pain and has seen Dr. Conley.  A myleogram done on 8/5/71 showed degenerative disc disease with moderate spinal stenosis at L4/5.  He will be seeing Dr. Sheehan.  Mr. Whitehead is contemplating surgery as he cannot walk without pain.
+
+Elevated blood sugar	      
+
+BS was 191 in 11/1/69 and was in similar range during his hospitalization in Montreal Medical.  He has been on meds for NIDDM.  He could not tolerate high dose of glucophage and is now seeing endocrine.  His HBA1c was 7.5 in 6/71 on glyburide 5 mg bid and glucophage 500 mg qd.  He has regular optho exam and is on zestoretic.  Little rationale to check for microalbuminuria as he is already on ace-inh.  His lipids are controlled with diet and lipitor.
+
+To see endocrine in 9/71.
+
+
+
+hyperlipidemia	      
+
+now on lipitor 40 mg qhs.  He has NIDDM and HTN.  His lipid profile from 4/71 showed a LDL of 103.  LFT were normal.  COntinue med.
+
+HYPERTENSION	      
+
+Now on zestoretic 20/25 qd + atenolol 50 mg qd.  He has significant white coat component.  It is again high at 170/80 in left arm.  His BP reading in hospital for myelogram this week was 130/80.  No change.
+
+
+
+h/o PROSTATITIS	      
+
+had recurring prostatitis sx's and saw Dr. Dotson.  Cystoscopy in 1/2070 was normal.  He is on flomax 0.4 mg qd and doing better.  His PSA was 2.9 in 8/69 and 3.2 in 8/70.  To see Dr. Dotson soon.
+
+
+
+Neurological symptoms	      
+
+he reports having intolerance to bright lights, tingling in his mid anterior abdomen and chest as well as numbness in his left middle three digits with some neck discomfort.  His MRI of his LS spine done at Montreal Medical in early 2070 evidently showed (by his report) no cord abnormalities.  His sx's sound like left-sided cervical radiculopathy but his visual and abdominal sx's makes me concerned about  systemic demyelinating conditions.  Will check TSH, B12 and have him see Dr. Conley. [08/28/70]
+
+
+
+TSH and B12 levels were normal.  His sx's in his eyes and abdomen have essentially resolved.  He still has some cervical radiculopathy syptoms.  He will see Dr. Conley (yet to do so). [01/21/71]
+
+
+
+still did not see Dr. Conley.  He now has right neck pain.  His left sided numbness has resolved.  Again referred him to Dr. Conley.  He likely has cervical radiculopathy. [04/09/71]
+
+
+
+c-spine MRI ordered by Dr. Conley showed mutliple levels of spondylothis.  
+
+
+
+
+
+Vital Signs	    
+
+Blood Pressure:	 170/70   
+
+Weight:	 187   Pounds
+
+
+
+Physical Exam	  
+
+Chest	
+
+clear
+
+Cor/Cardiac	
+
+s1s2 s4 with s4
+
+Neurological	
+
+He has normal motor strength in his limbs. Normal straight leg raise bilaterally.
+
+
+
+Medications	  
+
+MICRONASE (GLYBURIDE)	 5MG 1 Tablet(s) PO BID Start Date: 8/8/71
+
+ATENOLOL	 50MG 1 Tablet(s) PO QD
+
+ZESTORETIC 20-25 (LISINOPRIL/HYDROCLOROTH...	 20/25 PO QD
+
+Prilosec SA	 20MG PO BIw
+
+LIPITOR (ATORVASTATIN)	 40MG PO QHS
+
+GLUCOPHAGE (METFORMIN)	 500MG PO QD  Start Date: 2/19/71
+
+FLOMAX (TAMSULOSIN)	 0.4MG PO QD
+
+ASPIRIN (ACETYLSALICYLIC ACID)	 81MG PO QD
+
+MVI (MULTIVITAMINS)	 1CAPSULE PO QD
+
+
+
+Disposition and Plans	
+
+Follow-up in 12/71.
+
+
+
+cc: Dr. Conley
+
+
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2071-08-08" TYPE="DATE" comment="" />
+<NAME id="P1" start="51" end="60" text="Whitehead" TYPE="PATIENT" comment="" />
+<DATE id="P2" start="182" end="188" text="1/2070" TYPE="DATE" comment="" />
+<LOCATION id="P3" start="217" end="221" text="NAMG" TYPE="HOSPITAL" comment="" />
+<LOCATION id="P4" start="258" end="281" text="Montreal Medical Center" TYPE="HOSPITAL" comment="" />
+<DATE id="P5" start="317" end="323" text="2/2070" TYPE="DATE" comment="" />
+<NAME id="P6" start="383" end="389" text="Conley" TYPE="DOCTOR" comment="" />
+<DATE id="P7" start="412" end="418" text="8/5/71" TYPE="DATE" comment="" />
+<NAME id="P8" start="514" end="521" text="Sheehan" TYPE="DOCTOR" comment="" />
+<NAME id="P9" start="528" end="537" text="Whitehead" TYPE="PATIENT" comment="" />
+<DATE id="P10" start="639" end="646" text="11/1/69" TYPE="DATE" comment="" />
+<LOCATION id="P11" start="702" end="718" text="Montreal Medical" TYPE="HOSPITAL" comment="" />
+<DATE id="P12" start="850" end="854" text="6/71" TYPE="DATE" comment="" />
+<DATE id="P13" start="1100" end="1104" text="9/71" TYPE="DATE" comment="" />
+<DATE id="P14" start="1205" end="1209" text="4/71" TYPE="DATE" comment="" />
+<NAME id="P15" start="1563" end="1569" text="Dotson" TYPE="DOCTOR" comment="" />
+<DATE id="P16" start="1586" end="1592" text="1/2070" TYPE="DATE" comment="" />
+<DATE id="P17" start="1670" end="1674" text="8/69" TYPE="DATE" comment="" />
+<DATE id="P18" start="1686" end="1690" text="8/70" TYPE="DATE" comment="" />
+<NAME id="P19" start="1704" end="1710" text="Dotson" TYPE="DOCTOR" comment="" />
+<LOCATION id="P20" start="1957" end="1973" text="Montreal Medical" TYPE="HOSPITAL" comment="" />
+<DATE id="P21" start="1983" end="1987" text="2070" TYPE="DATE" comment="" />
+<NAME id="P22" start="2236" end="2242" text="Conley" TYPE="DOCTOR" comment="" />
+<DATE id="P23" start="2245" end="2253" text="08/28/70" TYPE="DATE" comment="" />
+<NAME id="P24" start="2419" end="2425" text="Conley" TYPE="DOCTOR" comment="" />
+<DATE id="P25" start="2443" end="2451" text="01/21/71" TYPE="DATE" comment="" />
+<NAME id="P26" start="2478" end="2484" text="Conley" TYPE="DOCTOR" comment="" />
+<NAME id="P27" start="2581" end="2587" text="Conley" TYPE="DOCTOR" comment="" />
+<DATE id="P28" start="2629" end="2637" text="04/09/71" TYPE="DATE" comment="" />
+<NAME id="P29" start="2669" end="2675" text="Conley" TYPE="DOCTOR" comment="" />
+<DATE id="P30" start="3032" end="3038" text="8/8/71" TYPE="DATE" comment="" />
+<DATE id="P31" start="3245" end="3252" text="2/19/71" TYPE="DATE" comment="" />
+<DATE id="P32" start="3408" end="3413" text="12/71" TYPE="DATE" comment="" />
+<NAME id="P33" start="3426" end="3432" text="Conley" TYPE="DOCTOR" comment="" />
+</TAGS>
+</deIdi2b2>

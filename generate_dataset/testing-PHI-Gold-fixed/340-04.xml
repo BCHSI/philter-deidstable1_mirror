@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2078-06-22
+
+                                                       Patient Name: XIA,JEAN  [ 58269151(PROMPTCARE) ] 
+
+                                                         Date of Visit: 06/22/2078
+
+
+
+
+
+Reason for Visit
+
+pt was cleaning ear, now has pain mainly in left. worse over past three days.
+
+ 
+
+reports now taking atenolol (50 mg which she just took half an hour ago) and losartan,  Reports stopped amilodipine and hctz.  she had leg cramps, but is not clear which of these caused that.  reports feels bp is high because she forgot to take med.
+
+
+
+
+
+Review of Systems
+
+Constitutional: No fever, chills, fatigue, nightsweats, insomnia, change in weight
+
+ENT/Mouth: No rhinitis, epistaxis, sinus pain, change in hearing, tinnitus, discharge from ears,  oral lesions, problems chewing, dental pain, sore throat
+
+Cardiovascular: no chest pain, pressure, palpitation, PND, orthopnea, dyspnea on exertion, pedal edema, nocturia, claudication, 
+
+Respiratory: no cough, sputum, dyspnea, pleuritic pain, wheeze, loud snoring, hemoptysis
+
+
+
+
+
+Allergies
+
+      CLONIDINE    - Sleepiness, 
+
+      Codeine    - Rash, 
+
+      LISINOPRIL    - cough, 
+
+      Ibuprofen    - cramps, 
+
+      AMLODIPINE    - cramps, 
+
+
+
+Problems
+
+      Diabetes
+
+      HX kidney stones
+
+      Perimenopausal sx
+
+      Hypertension
+
+      Colonic adenoma 11/11/76
+
+
+
+Medications
+
+      Lipitor (ATORVASTATIN)   20 MG (20MG TABLET take 1) PO QD , please cancel previous script for 10 mg of lipitor thanks you, dr osburn
+
+      Glucotrol Xl (GLIPIZIDE Xl)   5 MG     take qd Tablet(s) PO QD 
+
+      PIROXICAM   20 MG (20MG CAPSULE take 1) PO QD 
+
+      Glucophage (METFORMIN)   1000 MG    take bid bid PO BID 
+
+      Cozaar (LOSARTAN)   100 MG PO QD 
+
+      ATENOLOL   100 MG (100MG TABLET take 1) PO QD 
+
+      Cortisporin Otic Suspension   4 DROP AS QID 
+
+
+
+Vital Signs
+
+      BLOOD PRESSURE   210/118 
+
+      PULSE   80 
+
+      TEMPERATURE   97.3 F
+
+      WEIGHT   160 lb
+
+
+
+Physical Exam
+
+
+
+Gen: Well appearing in NAD, WD, WN 
+
+ENT-Sclera were white, fundi disc sharp, conjunctiva clear, tympanic membranes normal, ear canal AS somewhat red. The oropharynx was pink without exudate. The neck was supple with out adenopathy. 
+
+LUNG- clear bilaterally, without rhonci, wheeze or rales, Normal excursion was noted. 
+
+Cor- heart rate was normal, rhythm was regular. No murmurs, gallops or rubs were detected 
+
+Extremities: no clubbing cyanosis or edema. 
+
+Skin- no abnormal lesions noted.
+
+
+
+
+
+
+
+Impression
+
+Ear- benign exam but symptomatic - try cortisporun otic
+
+ 
+
+HTN- very high, no sign of end organ injury at this moment- will increase atenolol to 100, and have her rtc for recheck.  It would be helpful to know whether cramps came from hctz or amilodipine.
+
+
+
+______________________________
+
+Charles Craig Max Zavaleta, M.D.
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2078-06-22" TYPE="DATE" comment="" />
+<NAME id="P1" start="97" end="105" text="XIA,JEAN" TYPE="PATIENT" comment="" />
+<ID id="P2" start="109" end="117" text="58269151" TYPE="MEDICALRECORD" comment="" />
+<LOCATION id="P3" start="118" end="128" text="PROMPTCARE" TYPE="HOSPITAL" comment="" />
+<DATE id="P4" start="206" end="216" text="06/22/2078" TYPE="DATE" comment="" />
+<DATE id="P5" start="1346" end="1354" text="11/11/76" TYPE="DATE" comment="" />
+<NAME id="P6" start="1503" end="1509" text="osburn" TYPE="DOCTOR" comment="" />
+<NAME id="P7" start="2788" end="2814" text="Charles Craig Max Zavaleta" TYPE="DOCTOR" comment="" />
+</TAGS>
+</deIdi2b2>

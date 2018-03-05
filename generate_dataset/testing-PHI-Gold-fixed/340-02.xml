@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2076-04-23
+
+
+
+Carolyn Huntington Bailey Health Center
+
+592 Kristina Street                                        XIA, JEAN
+
+North East, AL 81699                            58269151
+
+(375) 512-0897                                            04/23/76
+
+
+SUBJECTIVE:  The patient comes in today for followup of various problems.  She has hypertension.  She reports she ran out of medication she received yesterday for refills but has not gotten them yet.  She brings in her medication bottles.  Apparently, for her blood pressure, she is taking Norvasc and Cozaar, for her diabetes she is taking Glucotrol and Glucophage.
+
+
+
+Regarding her diabetes, she says her fasting sugar are somewhere around 90.  Her last hemoglobin A1c was in 11/2075 and was 6.4%.  Her hypertension, she has been out of medication for three or four day, but she generally reports is well controlled.  She does not know why she was on atenolol, but has been taking it.  She has no complaints.
+
+
+
+She does complain of lower back pain.  She says she has had this for many many years.  She underwent physical therapy last year which was at Schroder Hospital.  She says she has no trauma.  She has pain across the lower back.  She rates it 8/10.  She has it everyday and radiates down to her right leg.  It has been worse recently.  She takes Aleve with minimal relief.  She says that she wants a speciality referral.
+
+
+
+REVIEW OF SYSTEMS:  She has no chest pain or pressure, palpitations, pedal edema.  She has no shortness of breath, cough, or wheezing.  She has no urinary frequency or urgency.  She has no nausea or vomiting, no diarrhea, heartburn or abdominal pain.
+
+
+
+Medications
+
+Cozaar (LOSARTAN) 100 MG PO QD , NEEDS TO MAKE AN APPOINTMENT
+
+Glucophage (METFORMIN) 1000 MG take bid bid PO BID 
+
+Norvasc (AMLODIPINE) 10 MG take 1 Tablet(s) PO QD 
+
+Glucotrol XL (GLIPIZIDE XL) 5 MG take qd Tablet(s) PO QD 
+
+Ultram (TRAMADOL) 50 MG (50MG TABLET take 1) PO Q6H PRN pain 
+
+Skelaxin (METAXALONE) 800 MG (800MG TABLET take 1) PO TID PRN muscle pain 
+
+
+
+
+
+Problems
+
+Diabetes 
+
+HX kidney stones 
+
+Perimenopausal sx 
+
+Hypertension 
+
+
+
+
+
+Allergies
+
+Clonidine Hcl - Sleepiness, 
+
+Codeine - Rash, 
+
+
+
+
+
+Vital signs
+
+BP 174/100, P 72, Wt 163 lb 
+
+
+
+
+
+Gen: Well appearing in NAD
+
+ENT-Sclera were white, conjuctiva clear. The oropharynx was pink without exudate.  The neck was supple with out adenopathy.  
+
+LUNG- clear bilaterally, without rhonci, wheeze or rales, Normal excursion was noted.
+
+Cor- heart rate was normal, rhythm was regular.  No murmurs, gallops or rubs were detected
+
+ABD- soft, nontender, with bowel sounds present. No organomegaly was detected.
+
+Extremities:  no clubbing cyanosis or edema. No swelling or erythema was noted on joint examOn examination, there is pain on palpation of the lower lumbar region including over the sacroiliac area.  She has positive straight leg raise on the right.
+
+Skin- no abnormal lesions noted.
+
+
+
+ 
+
+MMP
+
+ASSESSMENT:
+
+1.  Hypertension, poorly controlled at this time.  We will have her start the Norvasc and Cozaar, have her return in two weeks for followup of blood pressure.
+
+2.  Diabetes.  I will check a hemoglobin A1c.  It is due, it has been six months.  I will have her continue Glucophage at this point.
+
+3.  Lower back pain.  I will obtain x-ray of the lower back.  We will have her see Orthopedics for evaluation of her back pain.
+
+
+
+
+
+______________________________
+
+Charles Moran, M.D.
+
+Dictated By: Charles Moran
+
+eScription document:0-0545950 SFFocus
+
+DD: 04/23/76
+
+DT: 04/24/76
+
+DV: 04/23/76
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2076-04-23" TYPE="DATE" comment="" />
+<LOCATION id="P1" start="30" end="69" text="Carolyn Huntington Bailey Health Center" TYPE="HOSPITAL" comment="" />
+<LOCATION id="P2" start="71" end="90" text="592 Kristina Street" TYPE="STREET" comment="" />
+<NAME id="P3" start="130" end="139" text="XIA, JEAN" TYPE="PATIENT" comment="" />
+<LOCATION id="P4" start="141" end="151" text="North East" TYPE="CITY" comment="" />
+<LOCATION id="P5" start="153" end="155" text="AL" TYPE="STATE" comment="" />
+<LOCATION id="P6" start="156" end="161" text="81699" TYPE="ZIP" comment="" />
+<ID id="P7" start="189" end="197" text="58269151" TYPE="MEDICALRECORD" comment="" />
+<CONTACT id="P8" start="199" end="213" text="(375) 512-0897" TYPE="PHONE" comment="" />
+<DATE id="P9" start="257" end="265" text="04/23/76" TYPE="DATE" comment="" />
+<DATE id="P10" start="746" end="753" text="11/2075" TYPE="DATE" comment="" />
+<LOCATION id="P11" start="1123" end="1140" text="Schroder Hospital" TYPE="HOSPITAL" comment="" />
+<NAME id="P12" start="3410" end="3423" text="Charles Moran" TYPE="DOCTOR" comment="" />
+<NAME id="P13" start="3444" end="3457" text="Charles Moran" TYPE="DOCTOR" comment="" />
+<ID id="P14" start="3479" end="3488" text="0-0545950" TYPE="IDNUM" comment="" />
+<DATE id="P15" start="3502" end="3510" text="04/23/76" TYPE="DATE" comment="" />
+<DATE id="P16" start="3516" end="3524" text="04/24/76" TYPE="DATE" comment="" />
+<DATE id="P17" start="3530" end="3538" text="04/23/76" TYPE="DATE" comment="" />
+</TAGS>
+</deIdi2b2>

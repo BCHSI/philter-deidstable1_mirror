@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2097-11-30
+
+
+Cookson Memorial Home
+Internal Medicine Room 960
+50 Wellesley Rd                                        DARLING, BETTY
+Seattle, SC 84126                                      78567873
+(121) 537-3484                                           11/30/97
+
+
+CHIEF COMPLAINT:  Hypertension, proteinuria, status post fall,
+reevaluate Coumadin.
+
+HISTORY OF PRESENT ILLNESS:  Urgent care visit for this
+77-year-old woman with the history of diabetes, multiple strokes,
+hypertension, hyperlipidemia, and multiple other issues.  Last
+week she was at Saint Joseph Memorial Hospital for an eye evaluation.
+ It was a very very windy day.  Afterwards she was outside and a
+huge gust of wind knocked her over.  Her daughter Fitzpatrick was with
+her and Fitzpatrick herself actually had to hold on to something when
+the wind blew.  There is no chest pain or presyncope, and no loss
+of consciousness either before, during, or after the episode. 
+She struck her left trochanteric area, left deltoid area, and
+left eyebrow.  She was taken to EFH where she had a normal head
+CT.  A single stitch was placed in the laceration along the
+lateral edge of her left eyebrow.  She had films of her wrist and
+hips both of which were fine.  She has bruising in these areas. 
+Other than some pain where the bruising is she feels entirely
+back to normal.
+
+She had marked hypertension up to 250.  She was treated with
+hydralazine in the ER, and was noted to have proteinuria with
+some hematuria.  Her blood pressure at home since then has been
+180 and 210 systolic on her usual 40 mg daily of lisinopril.  She
+is not on a beta-blocker currently.  She has not had any episodes
+of chest pain.  She does feel slightly more woozy than usual.
+
+MEDICATIONS:  Metformin 500 mg p.o. b.i.d., Prevacid 30 mg p.o.
+q.d., atorvastatin 10 mg q.d., sertraline 50 mg q.d., warfarin,
+lisinopril 40 mg q.d., Ambien 10 mg q.h.s. p.r.n., levothyroxine
+100 mg p.o. q.d., aspirin, eyedrops, Colace, and Dulcolax.
+
+SOCIAL HISTORY:  She is looking forward to a good Christmas. 
+She is here today with her daughter Fitzpatrick.
+
+PHYSICAL EXAMINATION:  Temperature 97.2, pulse 74, BP 208/66,
+weight 148 pounds.
+GENERAL: Well appearing woman.
+HEENT: PERRL.  Single stitch along the lateral aspect of her left
+eyebrow is easily removed.  No evidence of any infection.  Her
+left deltoid area is fine and she has good range of motion in the
+shoulder.  Her left ribcage is slightly tender but without any
+bony step-offs.  She walks well with no pain in her left hip. 
+There is a hand sized deep purple bruise over the trochanteric
+bursa.
+
+ASSESSMENT AND PLAN:  Mechanical fall with laceration and
+bruising but no more serious complications.  Fortunately she did
+not have intracranial bleeding.  I am not sure why her blood
+pressure is up, whether this is related to the stress of the
+falls verses independent causes.  Given that the high blood
+pressure has persisted, I will add atenolol 12.5 mg p.o. q.d.,
+and discuss via phone or E-mail with her daughter next week to
+see how well this is working.  Goal BP 140-160 systolic.  Her
+urine was checked today.  Hematuria has resolved.  She has 2+
+proteinuria.  I will recheck this in a week or two after we treat
+her hypertension.
+
+We spent over half of today's 45-minute visit discussing risks
+and benefits of Coumadin therapy.  Although she is at risk for
+falls, she feels quite clearly that she prefers to be on the
+Coumadin due to her fear of having a repeated thrombotic stroke. 
+She feels that she has not had any bleeding complications, and
+that she really would not like to suffer through another stroke. 
+I explained that there was some risk with falls of intracranial
+hemorrhage and its consequences.  I spoke with Dr. Dewitt last
+month about her Coumadin, and we both feel that it seems to be
+working well in terms of stroke prevention, but that she is at
+increased risk for falls.  It seems to me that she is in a gray
+area with no clear right answer in terms of risk benefit analysis
+for Coumadin for her.  She feels very strongly that she wishes to
+continue.  This was discussed in detail with her and her
+daughter, and this probably is a reasonable decision.  I
+encouraged her to restart physical therapy to work on her
+strength and hopefully diminish her risk of a subsequent fall. 
+More than half of today's 45-minute visit spent in patient
+counseling and education.
+
+
+
+
+
+______________________________
+Julia Yale, M.D.
+
+
+Dictated By: Julia Yale
+
+
+eScription document:3-5285833 EMSSten Tel
+
+
+
+DD: 11/30/97
+DT: 11/30/97
+DV: 11/30/97
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2097-11-30" TYPE="DATE" comment="" />
+<LOCATION id="P1" start="29" end="50" text="Cookson Memorial Home" TYPE="HOSPITAL" comment="" />
+<LOCATION id="P4" start="78" end="93" text="50 Wellesley Rd" TYPE="STREET" comment="" />
+<NAME id="P5" start="133" end="147" text="DARLING, BETTY" TYPE="PATIENT" comment="" />
+<LOCATION id="P6" start="148" end="155" text="Seattle" TYPE="CITY" comment="" />
+<LOCATION id="P7" start="157" end="159" text="SC" TYPE="STATE" comment="" />
+<LOCATION id="P8" start="160" end="165" text="84126" TYPE="ZIP" comment="" />
+<ID id="P9" start="203" end="211" text="78567873" TYPE="MEDICALRECORD" comment="" />
+<CONTACT id="P10" start="212" end="226" text="(121) 537-3484" TYPE="PHONE" comment="" />
+<DATE id="P11" start="269" end="277" text="11/30/97" TYPE="DATE" comment="" />
+<AGE id="P12" start="421" end="423" text="77" TYPE="AGE" comment="" />
+<LOCATION id="P13" start="566" end="596" text="Saint Joseph Memorial Hospital" TYPE="HOSPITAL" comment="" />
+<NAME id="P14" start="735" end="746" text="Fitzpatrick" TYPE="PATIENT" comment="" />
+<NAME id="P15" start="764" end="775" text="Fitzpatrick" TYPE="PATIENT" comment="" />
+<LOCATION id="P16" start="1049" end="1052" text="EFH" TYPE="HOSPITAL" comment="" />
+<DATE id="P17" start="2036" end="2045" text="Christmas" TYPE="DATE" comment="" />
+<NAME id="P18" start="2084" end="2095" text="Fitzpatrick" TYPE="PATIENT" comment="" />
+<NAME id="P19" start="3739" end="3745" text="Dewitt" TYPE="DOCTOR" comment="" />
+<NAME id="P20" start="4430" end="4440" text="Julia Yale" TYPE="DOCTOR" comment="" />
+<NAME id="P21" start="4462" end="4472" text="Julia Yale" TYPE="DOCTOR" comment="" />
+<ID id="P22" start="4495" end="4504" text="3-5285833" TYPE="IDNUM" comment="" />
+<DATE id="P23" start="4524" end="4532" text="11/30/97" TYPE="DATE" comment="" />
+<DATE id="P24" start="4537" end="4545" text="11/30/97" TYPE="DATE" comment="" />
+<DATE id="P25" start="4550" end="4558" text="11/30/97" TYPE="DATE" comment="" />
+</TAGS>
+</deIdi2b2>

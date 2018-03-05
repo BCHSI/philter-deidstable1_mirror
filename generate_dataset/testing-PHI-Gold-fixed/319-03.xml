@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2088-03-03
+
+                                                       Patient Name: WILKERSON,EDWARD [ MRN: 37199514MEDIQUIK ]
+
+                                                         Date of Visit: 3/3/2088
+
+
+
+
+
+MIMA PCP VISIT
+
+
+
+Health problems discussed:
+
+1. DM type 2. Fingerstick in the office today 130. At home, these have been mostly in the 84 -130s, but rarely up to the 180-190s. Last HbA1c was 5.8.
+
+--given outlier hyperglycemia and no hypoglycemia, increase metformin to 1000 bid from 1000 qAM/500 qPM
+
+--recheck A1c today
+
+--increase lisinopril to 20 daily given BP 142/66 today
+
+
+
+2. Lipids. Last dLDL 108. Denies any muscle cramps or weakness.
+
+--increase atorvastatin to 40 daily, check transaminases
+
+
+
+3. Weight. Has lost 11 pounds intentionally since September by doing more walking, eating fewer potatoes, red meat, rice.  BMI now 26.  Patient congratulated, encouraged to continue with his current diet and increase exercise as tolerated. Cautioned on caffeine given h/o SVT.
+
+
+
+4. SVT. To see Dr. Pate from cardiology in 2 days to f/u his SVT. No known further episodes since starting verapamil.
+
+
+
+5. Health maintenance.
+
+--due for colonoscopy: referred, given Rx for Golytely
+
+
+
+PE:
+
+Blood Pressure:   142/66   [Left Arm, Sitting]
+
+Pulse:   74   [Regular, Brachial]
+
+Weight:   191   [Pounds]
+
+NAD, does not appear to be responding to internal stimuli
+
+JVP 7
+
+CTA bilat
+
+RRR no mrg, no heave
+
+Abd soft, nt/nd, nabs, no mass
+
+No foot lesions
+
+Trace bilat ankle pitting
+
+2+ DP and PTs bilat
+
+
+
+______________________________                              
+
+
+
+Floyd Bobby Ventura, M.D.
+
+
+
+========================== Preceptor's Note ==========================
+
+
+
+Pt discussed with Dr. Ventura; I agree with his evaluation and plan.
+
+
+
+
+
+______________________________                              
+
+
+
+Nancy Elizabeth Roman, M.D.
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2088-03-03" TYPE="DATE" comment="" />
+<NAME id="P1" start="97" end="113" text="WILKERSON,EDWARD" TYPE="PATIENT" comment="" />
+<ID id="P2" start="121" end="129" text="37199514" TYPE="MEDICALRECORD" comment="" />
+<LOCATION id="P3" start="129" end="137" text="MEDIQUIK" TYPE="HOSPITAL" comment="" />
+<DATE id="P4" start="213" end="221" text="3/3/2088" TYPE="DATE" comment="" />
+<LOCATION id="P5" start="227" end="228" text="M" TYPE="HOSPITAL" comment="" />
+<DATE id="P6" start="785" end="794" text="September" TYPE="DATE" comment="" />
+<NAME id="P7" start="1034" end="1038" text="Pate" TYPE="DOCTOR" comment="" />
+<NAME id="P8" start="1594" end="1613" text="Floyd Bobby Ventura" TYPE="DOCTOR" comment="" />
+<NAME id="P9" start="1719" end="1726" text="Ventura" TYPE="DOCTOR" comment="" />
+<NAME id="P10" start="1835" end="1856" text="Nancy Elizabeth Roman" TYPE="DOCTOR" comment="" />
+</TAGS>
+</deIdi2b2>

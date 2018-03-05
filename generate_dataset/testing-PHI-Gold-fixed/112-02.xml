@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2060-02-26
+
+
+BCH Cardiovascular Division
+CVD R12
+86 Cote Avenue                                      HESS, CLARENCE
+Pinehurst, OH 19792                                           64365595
+(680) 317-3494                                           02/26/60
+
+
+Yariel Law, M.D.
+Wheatland Memorial Nursing Home/Bangdung Office
+870 Newburgh Street
+Pinehurst, OH  35594
+
+Dear Dr. Law:
+
+I had the pleasure of seeing Mr. Hess in followup in Cardiology today.  As you know, he is a 53-year-old gentleman who underwent implantation of a permanent pacemaker on 02/11/60 for presyncope and pauses on Holter monitoring.  His past medical history is significant for hyperlipidemia, gastroesophageal reflux disease, and asthma.  Prior to his pacemaker placement, an exercise stress test was performed because of his history of exertional chest pain.  He was able to exercise for 8 minutes and 4 seconds.  The test was terminated for 7/10 substernal chest pain, but no hypotension and no overt EKG changes were noted, so we proceeded with the pacemaker implant.  Since the implant Mr. Hess describes that his intermittent symptoms of lightheadedness and shortness of breath have vanished, however, he has noticed that he is sleeping less well and occasionally has nocturnal palpitations, which potentially could represent pacing from his pacemaker.
+
+Interrogation today of his Medtronic Kappa QQ 626 pacemaker reveals that his underlying rhythm is sinus tachycardia with intact AV conduction.  His estimated battery longevity is 89 months.  The atrial impedance is 569 ohms, the ventricular impedance is 529 ohms.  The P-wave is 5.6 mV.  The R-wave is 31.3 mV.  The threshold in the atrium is 0.75 V at 0.4 mV, and the threshold in the ventricle is 0.75 V at 0.4 msec.
+
+In summary, Mr. Hess is doing extremely well after his pacemaker placement.  His pacemaker incision is extremely well healed.  There is no sign of erythema or hematoma.  However, his sinus tachycardia is mildly perplexing.  Looking at his heart rate histogram, it appears that this sinus rates have varied from 80-120 beats per minute for the most part aside from some low heart rate that potentially are nocturnal.  I have performed some pacing maneuvers today in clinic to attempt to determine whether the mechanism of his current tachycardia is sinus and it appears that this is sinus tachycardia.  For this reason, I have performed a TSH today, which is normal, however, I suggest to you that potentially a cursory endocrine workup and potentially a repeat echocardiogram at your facility might be indicated.  I am available to discuss these findings with you at any time.  I plan to see Mr. Hess in followup in three months' time, and if any issues arise in the interim, please do not hesitate to contact me.
+
+Sincerely,
+
+
+
+
+
+______________________________
+Una Trujillo, MD
+
+
+Dictated By: Una Trujillo
+
+
+eScription document:9-1748355 UFFocus
+
+
+CC: Robert Yousif Gordon MD
+803 FAIRHAVEN ROAD
+OLNEY, OH 23751
+
+DD: 02/27/60
+DT: 02/27/60
+DV: 02/26/60
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2060-02-26" TYPE="DATE" comment="" />
+<LOCATION id="P1" start="29" end="32" text="BCH" TYPE="HOSPITAL" comment="" />
+<LOCATION id="P3" start="65" end="79" text="86 Cote Avenue" TYPE="STREET" comment="" />
+<NAME id="P4" start="117" end="131" text="HESS, CLARENCE" TYPE="PATIENT" comment="" />
+<LOCATION id="P5" start="132" end="141" text="Pinehurst" TYPE="CITY" comment="" />
+<LOCATION id="P6" start="143" end="145" text="OH" TYPE="STATE" comment="" />
+<LOCATION id="P7" start="146" end="151" text="19792" TYPE="ZIP" comment="" />
+<ID id="P8" start="194" end="202" text="64365595" TYPE="MEDICALRECORD" comment="" />
+<CONTACT id="P9" start="203" end="217" text="(680) 317-3494" TYPE="PHONE" comment="" />
+<DATE id="P10" start="260" end="268" text="02/26/60" TYPE="DATE" comment="" />
+<NAME id="P11" start="271" end="281" text="Yariel Law" TYPE="DOCTOR" comment="" />
+<LOCATION id="P12" start="288" end="319" text="Wheatland Memorial Nursing Home" TYPE="HOSPITAL" comment="" />
+<LOCATION id="P13" start="320" end="328" text="Bangdung" TYPE="CITY" comment="" />
+<LOCATION id="P14" start="336" end="355" text="870 Newburgh Street" TYPE="STREET" comment="" />
+<LOCATION id="P15" start="356" end="365" text="Pinehurst" TYPE="CITY" comment="" />
+<LOCATION id="P16" start="367" end="369" text="OH" TYPE="STATE" comment="" />
+<LOCATION id="P17" start="371" end="376" text="35594" TYPE="ZIP" comment="" />
+<NAME id="P18" start="387" end="390" text="Law" TYPE="DOCTOR" comment="" />
+<NAME id="P19" start="426" end="430" text="Hess" TYPE="PATIENT" comment="" />
+<AGE id="P21" start="486" end="488" text="53" TYPE="AGE" comment="" />
+<DATE id="P22" start="563" end="571" text="02/11/60" TYPE="DATE" comment="" />
+<NAME id="P23" start="1082" end="1086" text="Hess" TYPE="PATIENT" comment="" />
+<ID id="P24" start="1390" end="1396" text="QQ 626" TYPE="DEVICE" comment="" />
+<NAME id="P25" start="1783" end="1787" text="Hess" TYPE="PATIENT" comment="" />
+<NAME id="P26" start="2663" end="2667" text="Hess" TYPE="PATIENT" comment="" />
+<NAME id="P27" start="2829" end="2841" text="Una Trujillo" TYPE="DOCTOR" comment="" />
+<NAME id="P28" start="2861" end="2873" text="Una Trujillo" TYPE="DOCTOR" comment="" />
+<ID id="P29" start="2896" end="2905" text="9-1748355" TYPE="IDNUM" comment="" />
+<NAME id="P30" start="2920" end="2940" text="Robert Yousif Gordon" TYPE="DOCTOR" comment="" />
+<LOCATION id="P31" start="2944" end="2962" text="803 FAIRHAVEN ROAD" TYPE="STREET" comment="" />
+<LOCATION id="P32" start="2963" end="2968" text="OLNEY" TYPE="CITY" comment="" />
+<LOCATION id="P33" start="2970" end="2972" text="OH" TYPE="STATE" comment="" />
+<LOCATION id="P34" start="2973" end="2978" text="23751" TYPE="ZIP" comment="" />
+<DATE id="P35" start="2984" end="2992" text="02/27/60" TYPE="DATE" comment="" />
+<DATE id="P36" start="2997" end="3005" text="02/27/60" TYPE="DATE" comment="" />
+<DATE id="P37" start="3010" end="3018" text="02/26/60" TYPE="DATE" comment="" />
+</TAGS>
+</deIdi2b2>

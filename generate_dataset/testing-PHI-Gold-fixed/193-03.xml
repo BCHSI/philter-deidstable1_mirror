@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2095-01-31
+
+EDVISIT^50294530^FOUST, FAY^01/31/95^SULLIVAN, MILTON
+
+The patient, Foust, was seen in the Emergency Department on
+
+01/31/2095.  The patient was seen by Dr. Ferrer.  I have
+
+discussed the management with him.  I have also seen the patient
+
+personally and reviewed the ED record.  This is an addendum to
+
+the record.
+
+HISTORY OF PRESENT ILLNESS:  This is a 64-year-old woman who said
+
+this morning she went to the bathroom, was sitting on the
+
+commode, felt chest tightness, and then had a syncopal episode. 
+
+She has never had this chest tightness before.  She is unsure
+
+whether she hit her head.  No shortness of breath and no
+
+exertional symptoms in the past.
+
+REVIEW OF SYSTEMS:  As indicated and otherwise negative.
+
+PAST MEDICAL HISTORY:  Hypertension.
+
+SOCIAL HISTORY:  She is a nonsmoker.
+
+PHYSICAL EXAMINATION:  The patient is well appearing in no acute
+
+distress.  She has no chest pain or discomfort within the chest
+
+in the Emergency Department  Initial blood pressure systolic 218
+
+was reduced to 190 range with beta blockade with initial pulse of
+
+62.  She is normocephalic and atraumatic.  Neck has no midline
+
+tenderness.  She has full range of motion without pain.  Chest is
+
+bilaterally equal and clear.  Heart is regular.  Abdomen is soft
+
+and nontender.  Extremities are nontender.
+
+LABORATORY DATA:  Hematocrit of 40.2.  Initial CK and troponin
+
+were negative.  EKG shows lateral ST depression, most prominent
+
+in lead V4 through V6.  There is no old available for comparison
+
+at this time.  She also has T-wave flattening in I and aVL.  On
+
+repeated questioning, the patient has no symptoms.
+
+ASSESSMENT AND PLAN:  This is a woman who had a syncopal episode.
+
+ She had chest tightness prior and has an abnormal EKG.  After
+
+clearance of the head CT, which shows no bleed, the patient
+
+received aspirin.  I have discussed admission with Dr. Melton who
+
+is admitting for the Cardiology team and the patient has been
+
+accepted.
+
+DISPOSITION:  The patient is admitted.
+
+CONDITION:  Stable.
+
+______________________________
+
+SULLIVAN, MILTON M.D.
+
+D: 01/31/95
+
+T: 01/31/95
+
+Dictated By: SULLIVAN, MILTON
+
+eScription document:9-8829102 BFFocus
+
+ ******** Not reviewed by Attending Physician ********
+
+
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2095-01-31" TYPE="DATE" comment="" />
+<ID id="P1" start="36" end="44" text="50294530" TYPE="MEDICALRECORD" comment="" />
+<NAME id="P2" start="45" end="55" text="FOUST, FAY" TYPE="PATIENT" comment="" />
+<DATE id="P3" start="56" end="64" text="01/31/95" TYPE="DATE" comment="" />
+<NAME id="P4" start="65" end="81" text="SULLIVAN, MILTON" TYPE="DOCTOR" comment="" />
+<NAME id="P5" start="96" end="101" text="Foust" TYPE="PATIENT" comment="" />
+<DATE id="P6" start="144" end="154" text="01/31/2095" TYPE="DATE" comment="" />
+<NAME id="P7" start="185" end="191" text="Ferrer" TYPE="DOCTOR" comment="" />
+<AGE id="P8" start="384" end="386" text="64" TYPE="AGE" comment="" />
+<NAME id="P9" start="1890" end="1896" text="Melton" TYPE="DOCTOR" comment="" />
+<NAME id="P10" start="2069" end="2085" text="SULLIVAN, MILTON" TYPE="DOCTOR" comment="" />
+<DATE id="P11" start="2095" end="2103" text="01/31/95" TYPE="DATE" comment="" />
+<DATE id="P12" start="2108" end="2116" text="01/31/95" TYPE="DATE" comment="" />
+<NAME id="P13" start="2131" end="2147" text="SULLIVAN, MILTON" TYPE="DOCTOR" comment="" />
+<ID id="P14" start="2169" end="2178" text="9-8829102" TYPE="IDNUM" comment="" />
+</TAGS>
+</deIdi2b2>

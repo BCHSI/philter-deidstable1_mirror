@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2093-04-11
+
+MEDIQUIK Neurology Consultation 
+
+Edward Wilkerson
+MRN: 37199514
+Please refer to Student Doctor Nicky Li for HPI, ROS and past medical history. 
+
+
+
+
+Briefly, 68 yr old male w a h/o HTN, HL, DMII, peripheral neuropathy, schizoaffective disorder, Borderline Personality Disorder s/p SVT ablation on 4/10 who post-operatively has been confused with gait disturbance. Neurology was consulted for an evaluation of gait disturbance and encephalopathy. On exam patient is normotensive and afebrile with cognition remarkable for inattention, disorientation, perseveration and preservation of speech and visual spatial processing. His physical exam is further remarkable for asterixis and bilateral upper extremity tremulousness. His cranial nerves are intact. His has four limb give way weakness without focality. Reflexes are 3+ and symmetric in the upper extremities and 2+ and symmetric in the lower extremities. Toes are down. Finger to nose is preserved. He is unable to stand without assistance. Differential includes toxic metabolic disturbance (i.e. hyper ammonia in the setting of depakote use vs. drugs of abuse, vs. alcohol withdrawal vs. additional superimposed toxic metabolic disturbance)
+
+
+
+
+Recommendations:
+
+-please check Liver function panel
+
+-check ammonia
+
+-Check B12, folate, RPR, TSH
+
+-please start multivitamin and thiamine 100mg daily
+-please check carbamazepine and valproic acid levels; please verify carbamazepine dosing as prior records suggest 400mg QD and patient is on BID dosing
+
+-serum and urine toxicology screen
+
+-obtain collateral history regarding possible alcohol abuse and monitor for alcohol withdrawal
+
+-would hold amitriptyline given anticholinergic properties
+
+-if above workup negative and unrevealing would consider NCHCT but defer imaging at this time
+
+Please page 73703 with questions
+
+
+
+
+Charles Wallace MDp73703
+
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2093-04-11" TYPE="DATE" comment="" />
+<LOCATION id="P1" start="28" end="36" text="MEDIQUIK" TYPE="HOSPITAL" comment="" />
+<NAME id="P2" start="62" end="78" text="Edward Wilkerson" TYPE="PATIENT" comment="" />
+<ID id="P3" start="84" end="92" text="37199514" TYPE="MEDICALRECORD" comment="" />
+<NAME id="P4" start="124" end="132" text="Nicky Li" TYPE="DOCTOR" comment="" />
+<AGE id="P5" start="186" end="188" text="68" TYPE="AGE" comment="" />
+<DATE id="P6" start="325" end="329" text="4/10" TYPE="DATE" comment="" />
+<CONTACT id="P7" start="1831" end="1836" text="73703" TYPE="PHONE" comment="" />
+<NAME id="P8" start="1856" end="1871" text="Charles Wallace" TYPE="DOCTOR" comment="" />
+<CONTACT id="P9" start="1875" end="1880" text="73703" TYPE="PHONE" comment="" />
+</TAGS>
+</deIdi2b2>

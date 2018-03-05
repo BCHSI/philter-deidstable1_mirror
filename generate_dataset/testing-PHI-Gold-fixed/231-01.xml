@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2094-08-11
+
+CARDIOLOGY
+
+COQUILLE VALLEY HOSPITAL
+
+
+
+Reason for visit:
+
+   Evaluation for cardiac catheterization with Dr. Irvin Vitale. 
+
+
+
+Interval History:
+
+   Multiple risk factors for CAD including DM, HTN, CRI. Now with complaints of exertional dyspnea and fatigue. Progressed and she was evaluated by Bonnie Eaves. 
+
+
+
+8/25 Bruce protocol was postive at 9 minutes, 64% PMHR. Complaints of dyspnea. EKG with borderline changes. Nuclear images with moderate sized defect of anteroapical zone with partial reperfusion. Some scar. Mild LV dysfunction with EF 45-50% and apical dyskinesis. 
+
+
+
+Arranged for elective cardiac catheterization with Dr Vitale. 
+
+
+
+Past medical history:
+
+   CVA of left PCA territory 2093. No residual. Rx with ASA, folate, niaspan
+
+IDDM diagnosed 30 yrs ago
+
+CRI with creat baseline 3.7 (followed by Orlando Ernst) and recent eval by Dr Ratliff for transplant. +proteinuria with nephrotic syndrome. Donor kidney lined up.
+
+HTN
+
+High cholesterol
+
+Diabetic retinopathy
+
+Anemia
+
+
+
+Medications: Toprol 25 QD
+
+Diovan 160 QD
+
+Norvasc 10 QD
+
+Lasix 80 QD
+
+Plavix 75 QD
+
+ASA 81 QD
+
+MVI
+
+Insulin pump
+
+Vytorin QD
+
+
+
+Family history:
+
+   Mom A&W in her 60's with HTN. Dad A&W. 
+
+
+
+Social history:
+
+   Works as Patternmaker at IMN. 
+
+volunteer firefighter. Single and lives with her parents. 
+
+Never smoked. No ETOH. 
+
+
+
+Review of systems:
+
+   no peripheral edema currently (but had it in the past). No fever, chills, sweating. Problems with gastroparesis and is planning to have a gastric pacemaker inserted (has been having delayed spikes in insulin). 
+
+
+
+Physical examination:
+
+-BP: 150/100  L  154-90 R
+
+-Pulse: 70  
+
+-resp. rate: 16  
+
+-weight: 153  
+
+-BMI:   
+
+-General appearance:   No acute distress.
+
+-Skin:   No rashes, anicteric.
+
+-Heent:   Unremarkable
+
+-Neck:   Carotids 2+ without bruits. JVP no jugular venous distention
+
+-Chest:   Clear to auscultation and percussion.
+
+-Cardiac:   Left ventricular impulse discrete and nondisplaced. Regular rate and rhythm, normal S1 and S2, with no S3 or S4. There were no murmurs, clicks or rubs.
+
+-Abdomen:   Normal bowel sounds, soft and nontender, with no hepatosplenomegaly or masses appreciated.
+
+-Extremities:   No cyanosis, clubbing or edema. 2+ femoral pulses without bruits. 2+ pedal pulses.
+
+-Neuro:   A&O x3, CN 2-12 grossly intact. Reflexes 2+ and symmetric x 4 extremities. Toes B downgoing.
+
+
+
+EKG:
+
+
+
+			
+
+
+
+Selected recent labs:
+
+ 8/4/94: 
+
+WBC 7.1, Crit 35.2, Plts 274. 
+
+INR 0.9. Na 139, K 4.3, Creat 3.4. 
+
+AST/ALT 39-30. 
+
+
+
+Assessment and plan:
+
+   40 y.o. with multiple risk factors for CAD. HTN, high chol, IDDM. Now with progressive angina and a positive ETT. Plan for cath. She will probably end up on dialysis given severe renal failure. Pretreated with musomyst. 
+
+
+
+Give bicarb in holding room. 
+
+
+
+Impression:
+
+   Further plan per Dr Vitale and Dr Rollins. 
+
+Follow up with Dr Bonnie Eaves. 
+
+
+
+
+
+Frances Travis Potts NP
+
+23119
+
+
+
+Signed electronically by   Frances T Potts NP  on  Aug 11, 2094     
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2094-08-11" TYPE="DATE" comment="" />
+<LOCATION id="P1" start="40" end="64" text="COQUILLE VALLEY HOSPITAL" TYPE="HOSPITAL" comment="" />
+<NAME id="P2" start="138" end="150" text="Irvin Vitale" TYPE="DOCTOR" comment="" />
+<NAME id="P3" start="323" end="335" text="Bonnie Eaves" TYPE="DOCTOR" comment="" />
+<DATE id="P4" start="341" end="345" text="8/25" TYPE="DATE" comment="" />
+<NAME id="P5" start="665" end="671" text="Vitale" TYPE="DOCTOR" comment="" />
+<DATE id="P6" start="729" end="733" text="2093" TYPE="DATE" comment="" />
+<NAME id="P7" start="846" end="859" text="Orlando Ernst" TYPE="DOCTOR" comment="" />
+<NAME id="P8" start="883" end="890" text="Ratliff" TYPE="DOCTOR" comment="" />
+<AGE id="P9" start="1187" end="1191" text="60's" TYPE="AGE" comment="" />
+<PROFESSION id="P10" start="1244" end="1256" text="Patternmaker" TYPE="PROFESSION" comment="" />
+<LOCATION id="P11" start="1260" end="1263" text="IMN" TYPE="ORGANIZATION" comment="" />
+<PROFESSION id="P12" start="1267" end="1288" text="volunteer firefighter" TYPE="PROFESSION" comment="" />
+<DATE id="P13" start="2433" end="2439" text="8/4/94" TYPE="DATE" comment="" />
+<AGE id="P14" start="2556" end="2558" text="40" TYPE="AGE" comment="" />
+<NAME id="P15" start="2849" end="2855" text="Vitale" TYPE="DOCTOR" comment="" />
+<NAME id="P16" start="2863" end="2870" text="Rollins" TYPE="DOCTOR" comment="" />
+<NAME id="P17" start="2892" end="2904" text="Bonnie Eaves" TYPE="DOCTOR" comment="" />
+<NAME id="P18" start="2912" end="2932" text="Frances Travis Potts" TYPE="DOCTOR" comment="" />
+<CONTACT id="P19" start="2937" end="2942" text="23119" TYPE="PHONE" comment="" />
+<NAME id="P20" start="2973" end="2988" text="Frances T Potts" TYPE="DOCTOR" comment="" />
+<DATE id="P21" start="2997" end="3009" text="Aug 11, 2094" TYPE="DATE" comment="" />
+</TAGS>
+</deIdi2b2>

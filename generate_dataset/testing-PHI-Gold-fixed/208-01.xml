@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2065-06-28
+
+Chief Complaint	
+
+The patient presents for ongoing care of her diabetes and leg pain.
+
+
+
+History of Present Illness	
+
+Ms Barrera is an 85 yo woman accompanied by her daughter, Uhura. She has a h/o DM, HTN, GERD, LBP and CAD. She was formerly followed by Dr. Laura Link and is transferring her care. She has not had any CP or SOB -- her ETT MIBI in 2062 revealed mild ischemia in the inferior wall and EF of 63%. She has had not diabetic complications. Her last A1C was 5.9 in February. She reports significant R>L LE pain that limits her mobilitiy. This has been ongoing for some time but is getting worse. No pain at rest; only with walking. She rarely takes anything for the pain. She wonders if she needs to monitor her glucose. 
+
+
+
+PMH as above.
+
+Habits: no exercise. No tobacco or EtOH
+
+FH non contributory
+
+SH: lives alone in an apartment in a senior home. Daughter involved in her care.
+
+
+
+
+
+Medications	  
+
+ECASA	 325MG PO QD
+
+ATENOLOL	 100MG PO QD
+
+GLYBURIDE	 2.5MG PO QD
+
+HCTZ	 50MG PO QD
+
+LISINOPRIL	 20MG PO QD
+
+ZOCOR	 20MG PO QHS
+
+KCL IMMEDIATE REL.	 10MEQ 2 Capsule(s) PO QD
+
+NORVASC (AMLODIPINE)	 5MG 1 Tablet(s) PO QD
+
+OSCAL+D (CALCIUM CARBONATE + VIT D(1TABLE...	  PO BID
+
+TYLENOL (ACETAMINOPHEN)	 500MG 1 Capsule(s) PO Q4H
+
+
+
+Physical Exam	
+
+WDWN F, NAD
+
+153# R 160/70 L154/70 P64 R12
+
+Chest: CTA/P
+
+Cor: RRR, S1, S2, No MRG
+
+Abd: Soft, NT. +BS. No HSM
+
+Ext: No C/C/E; no focal tenderness; B/L lateral thigh pain with internal rotation of hips.
+
+
+
+Assessment	
+
+1. DM - well-controlled. check A1C. On ace-i. up to date with optho and podiatry; no indication for home BS monitoring at this time.
+
+2. HTN - will increase lisinopril from 10 to 20 mg qd; check lytes
+
+3. Hip pain - likely OA. will obtain hip films and prescribe tylenol 500mg q6hrs prn.
+
+4. constipation - using senekot and metamucil with good results.
+
+5. Lipids - LDL 59, HDL 37 in February. Continue zocor.
+
+6. HCM-UTD.
+
+
+
+The patient will f/u with me in 12-16 weeks, or sooner prn.
+
+
+
+
+
+______________________________                              
+
+
+
+Xenakis, Tracy T., M.D.
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2065-06-28" TYPE="DATE" comment="" />
+<NAME id="P1" start="149" end="156" text="Barrera" TYPE="PATIENT" comment="" />
+<AGE id="P2" start="163" end="165" text="85" TYPE="AGE" comment="" />
+<NAME id="P3" start="204" end="209" text="Uhura" TYPE="PATIENT" comment="" />
+<NAME id="P4" start="286" end="296" text="Laura Link" TYPE="DOCTOR" comment="" />
+<DATE id="P5" start="376" end="380" text="2062" TYPE="DATE" comment="" />
+<DATE id="P6" start="504" end="512" text="February" TYPE="DATE" comment="" />
+<DATE id="P7" start="1892" end="1900" text="February" TYPE="DATE" comment="" />
+<NAME id="P8" start="2063" end="2080" text="Xenakis, Tracy T." TYPE="DOCTOR" comment="" />
+</TAGS>
+</deIdi2b2>

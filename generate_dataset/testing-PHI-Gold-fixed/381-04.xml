@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2094-03-19
+
+
+
+ 
+Infectious Disease Consult Note 
+
+
+Pt: Rose Mack
+MR#: 06129040
+
+Consult Date: 3/19/94
+
+
+
+CC/RFC: 
+Pt is a 52 year old w/ chronic R heel wound, now w/ wound infection. Consultation was requested by Dr. Katz for recommendations regarding antibiotic management.
+
+
+
+HPI:  Pt has longstanding DM and PVD complicated by severe R foot ulceration. She underwent R femoral to posterior tibial bypass graft in 5/92 and skin grafting in 7/92. R heel wound subsequently improved but pt developed L plantar ulceration requiring debridement 10/92. Cultures grew MSSA. Pt was subsequently treated w/ extended course of doxycycline, rifampin through 2/93. She subsequently did well until developing R heel ulcer while undergoing psychiatric hospitalization in mid 2/94. She was initially hospitalized at Altadena Hospital, where she underwent debridement of wound and treatment w/ extended course of penicillin VK and probenicid. Wound failed to improve. Pt was rehospitalized on 3/18 at GCCfor further management. She underwent incision and debridement on 3/18. Intraoperative evaluation revealed ulcer wound tracking to bone. Intraoperative gram stain revealed GPCs in pairs. Intraoperative cultures are pending. Pt was subsequently treated w/ vancomycin, levofloxacin and metronidazole. 
+
+
+
+
+On interview, pt reports feeling generally well. No F/C/NS. Appetite normal. Had  previously noted creeping erythema up R leg, now resolved.
+
+
+
+PMH (from EMR)
+
+DM type 1: c/b PVD, neuropathy, nephropathy
+
+PVD: s/p right mid superficial femoral artery to mid posterior tibial bypass graft with reversed ipsilateral greater saphenous vein
+
+CKD
+
+Hx femoral neck fracture: in situ screw fixation
+
+Anemia 
+
+Anxiety/Depression 
+
+Deep venous thrombosis 
+
+Hypothyroidism: s/p subtotal thyroidectomy 74
+
+S/p R carpal tunnel surgery
+
+
+
+Meds on Consultation
+
+ 
+Plavix
+
+Lopressor
+
+Simvastatin
+
+Lantus
+
+Levoxyl
+
+Abilify
+
+Cogentin
+
+Nortriptyline
+
+Trazadone
+
+Probenecid
+
+Neurontin
+
+
+
+All
+
+Erythromycins cause rash  
+
+Sulfa causes rash
+
+Aspirin causes rash
+
+
+
+SHx
+
+Pt lives at home w/ her parents
+
+
+
+FHx 
+NC
+
+
+
+ROS
+
+Ten point review of systems negative except as noted in HPI. 
+
+
+
+Exam
+Pt is a tired appearing middle aged woman, lying comfortably in bed
+
+VS: 
+T- 96.4, HR- 84, BP- 153/72, RR- 18, Sat- 100% on 2L     
+
+HEENT: 
+MMM, w/o exudates
+
+Chest: 
+CTAB; no crackles, no wheezes
+
+CV: 
+RRR; normal S1S2, no m/r/g appreciated
+
+Abd:  NABS; soft, non-tender, non-distended; no organomegaly
+
+Extr:  R heel w/ 2 x 2cm wound vac dressing in place, no surrounding erythema; L foot without erythem or ulceration
+
+Neuro:  MS nl, motor and sensory normal
+
+Skin:  scattered patchy erythematous rash across trunk and upper extremities
+
+
+
+Labs
+Chemistry:                                                          
+
+BUN:   19
+
+Cr:    1.3
+
+
+
+Tbili: 0.2
+
+ALT:   20
+
+AST:   22
+
+AP:    290
+
+
+
+Heme:    
+
+WBC:  
+4.7              
+
+HCT:  
+33.2
+
+Plt:   290
+
+
+
+Impression
+52F w/ DM, PVD and hx of R heel ulceration s/p skin grafting in 5/92 and L midfoot MSSA infection in 9/92, now w/ relapse of R heel ulceration. Intraoperative cultures show involvement of bone. Clinical picture is concerning for osteomyelitis. Possible culprit organisms include drug resistant Staphylococcus aureus, which should be treated empirically while awaiting cultures. Pt will likely require an extended course of IV therapy for treatment of osteomyelitis.
+
+
+
+Recommendations
+
+ 
+
+
+
+Follow up intraoperative cultures
+
+Continue vancomycin 1g IV Q24H; check trough prior to fourth dose.
+
+Discontinue levofloxacin, metronidazole.
+
+
+
+
+
+
+
+
+
+_______________________________
+
+Victor Reid, M.D.   (pager # 81625)
+
+
+
+Case discussed with infectious disease attending, Dr. Amber Akins.
+
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2094-03-19" TYPE="DATE" comment="" />
+<NAME id="P2" start="71" end="80" text="Rose Mack" TYPE="PATIENT" comment="" />
+<ID id="P3" start="86" end="94" text="06129040" TYPE="MEDICALRECORD" comment="" />
+<DATE id="P4" start="110" end="117" text="3/19/94" TYPE="DATE" comment="" />
+<AGE id="P5" start="138" end="140" text="52" TYPE="AGE" comment="" />
+<NAME id="P6" start="233" end="237" text="Katz" TYPE="DOCTOR" comment="" />
+<DATE id="P7" start="432" end="436" text="5/92" TYPE="DATE" comment="" />
+<DATE id="P8" start="458" end="462" text="7/92" TYPE="DATE" comment="" />
+<DATE id="P9" start="559" end="564" text="10/92" TYPE="DATE" comment="" />
+<DATE id="P10" start="666" end="670" text="2/93" TYPE="DATE" comment="" />
+<DATE id="P11" start="780" end="784" text="2/94" TYPE="DATE" comment="" />
+<LOCATION id="P12" start="820" end="837" text="Altadena Hospital" TYPE="HOSPITAL" comment="" />
+<DATE id="P13" start="996" end="1000" text="3/18" TYPE="DATE" comment="" />
+<LOCATION id="P14" start="1004" end="1007" text="GCC" TYPE="HOSPITAL" comment="" />
+<DATE id="P15" start="1073" end="1077" text="3/18" TYPE="DATE" comment="" />
+<DATE id="P16" start="1802" end="1804" text="74" TYPE="DATE" comment="" />
+<AGE id="P17" start="2948" end="2950" text="52" TYPE="AGE" comment="" />
+<DATE id="P18" start="3012" end="3016" text="5/92" TYPE="DATE" comment="" />
+<DATE id="P19" start="3049" end="3053" text="9/92" TYPE="DATE" comment="" />
+<NAME id="P20" start="3625" end="3636" text="Victor Reid" TYPE="DOCTOR" comment="" />
+<CONTACT id="P21" start="3654" end="3659" text="81625" TYPE="PHONE" comment="" />
+<NAME id="P22" start="3718" end="3729" text="Amber Akins" TYPE="DOCTOR" comment="" />
+</TAGS>
+</deIdi2b2>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2102-12-01
+ID: The patient is a 74 yr old woman with multiple medical problems, who comes in after recent 5 month hospitalization for followup and to review recent course of events.
+
+
+
+HPI:  I had last seen her in 5/02 at which time her DM was being treated with Lantus 10 units, and Glucotrol XL 10 mg bid.  Her Lipitor had been held as had her Actos due to elevated LFT's, and her Depakote had been discontinued by her neurologist.  Her LFT's had come down from her hospitalization in March but were still elevated at AST 87 and ALT 124.  Liver biopsy was being considered by Dr. Yamasaki, her gastroenterologist.  She also had been recently hospitalized at San Rafael for syncope with history of partial seizure disorder vs TIA with history of transient episodes of right arm numbness and weakness dating to 2098 but with no seizures in 3 yrs.
+
+
+
+In July O2 she had several episodes of syncope, one of which occured in her neurologist's office.    She was apparently hypotensive and initially refused to go to the ED, but later her family brought her to the ED at San Rafael.  She was found to be bacteremic with MRSA and was treated with IV vancomycin.   Endovascular sources were found to be negative as source, as was a knee tap, and no source was ever identified.  She was transferred to GCH in August.   She had severe back pain and two bone biopsies were negative for osteomyelitis in the spine.  She was also found to have a 50% compression fracture of T4 and this was treated at GCH with a T4 vertebroplasty in September 10.  She also was worked up for mets to spine but only benign hemangiomas were found.
+
+
+
+She was discharged to rehab in mid September.  She required at least two more admissions from rehab to San Rafael over the next two months.  She apparently had severe gastroparesis and was unable to eat, requiring portacath for TPN around October 10.  She had then gone back to rehab again but was readmitted with DVT of the left Subclavian vein around the site of the Portacath.  She was started on Coumadin and was back in rehab for another few weeks.  The arm swelling quickly resolved. There was also reportedly a TIA which occured after an MRI scan with right facial droop and slurred speech at SRH.  She was finally discharged to home on November 21st.
+
+
+
+MEDS:  Coumadin 7.5 mg qd,  Norvasc 10 mg qd, Isordil 20 mg tid, Neurontin 300 mg po bid, Plavix 75 mg po qd, Prilosec 20 mg qd, Folic aid 1 mg qd, Synthroid 50 mcg qd, Labetolol 200 mg bid, Glipizide 2.5 mg po qd, Albuterol inhaler prn, erytab 250 bid, Ultram 50 mg q 6hrs prn, MVI, Vitamin B12 1000. Rhinocort Aqua, Nitrostat prn,  Was d'cd from Reglan, taking Donperdon?
+
+
+
+PE:  WDWN BF NAD  Wt 135 lbs  BP 100/64
+
+
+
+Heent:  throat clear,  EOMI. Perrl.
+
+Neck:  supple without adenopathy or thyromegaly.
+
+Cor:  RRR, no m's.
+
+Lungs; clear.
+
+Abdomen;  soft, nontender no HSM.
+
+Extr;  no edema.
+
+
+
+A/P:  74 yr old woman with multiple medical problems, s/p 5 month hospitalization.
+
+
+
+1)  Diabetes.  Throughout her hospitalization she lost a lot of weight down from 160's to 170's last spring to current level of 135 lbs.  Insulin was stopped and just recently Glipizide 2.5 mg added on.  Recent Hg A1C obtained after this visit on 12/04/02 was 6.0.  Bun /Cr was 11/0.9.  glucose 196.  Cholesterol 225/68/135.  LFT's were not done and need to be done, will be ordered next lab draw.  If normalized then will add back Lipitor.  History of gastroparesis, on new med has replaced Reglan, doing better.
+
+
+
+2)  Hypertension.  Doing well on Norvasc 10, Labetolol 200 bid and Isordil 20 tid.
+
+
+
+3)  S/p recent upper extremity DVT, on coumadin.  Per Dr. Herbert Paris's note of 12/02, she needs 3 months of anticoag, and then 1mg/day until the portacath discontinued.  With history 2 prior DVT's will need to discuss whether she should be on long term therapy.  She is now getting FS INR's thru the VNA, but will be transitioned to Internal Medicine, with access thru the portacath, or continued FS's.  INR has been in good range with 7.5 mg coumadin.
+
+
+
+4)  S/P  compression fracture of T4, s/p vertebroplasty with successful resolution of the pain.  Has other compression fractures but not interested in further procedures at this time.
+
+
+
+5)  History of hypothyroidism.  Had recent labs at SRH on  12/04/02 with TSH of 1.3 and Free T4 of  0.9.  
+
+
+
+6)  History of anemia, requiring Procrit and ? transfusions during her hospitalizations, with normal hct of 41.1 on  12/04/02.
+
+
+
+7)  Neuro;  History of partial seizures, TIA's.  Followed by Dr. Gary Keyes.    History of silent cerebellar brain infarction on MRI.    History of moderate intracranial carotid stenosis, with recent ? TIA left hemisphere, ? repeat carotid noninvasives per Dr. Keyes vs CT angiogram.  On Plavix and coumadin.  Per Dr. Keyes coumadin alone would be enough for stroke prophylaxis, and he would defer to Dr. Barry as to whether to continue Plavix.
+
+
+
+8)  History of elevated LFT's.  May have been medication related, due to Lipitor, Actos, Depakote.  Now off all meds, need redo as above, and consideration if normal of retrial of  statin.
+
+
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2102-12-01" TYPE="DATE" comment="" />
+<AGE id="P1" start="48" end="50" text="74" TYPE="AGE" comment="" />
+<DATE id="P2" start="230" end="234" text="5/02" TYPE="DATE" comment="" />
+<DATE id="P3" start="503" end="508" text="March" TYPE="DATE" comment="" />
+<NAME id="P4" start="598" end="606" text="Yamasaki" TYPE="DOCTOR" comment="" />
+<LOCATION id="P5" start="676" end="686" text="San Rafael" TYPE="HOSPITAL" comment="" />
+<DATE id="P6" start="827" end="831" text="2098" TYPE="DATE" comment="" />
+<DATE id="P7" start="869" end="876" text="July O2" TYPE="DATE" comment="" />
+<LOCATION id="P8" start="1083" end="1093" text="San Rafael" TYPE="HOSPITAL" comment="" />
+<LOCATION id="P9" start="1311" end="1314" text="GCH" TYPE="HOSPITAL" comment="" />
+<DATE id="P10" start="1318" end="1324" text="August" TYPE="DATE" comment="" />
+<LOCATION id="P11" start="1506" end="1509" text="GCH" TYPE="HOSPITAL" comment="" />
+<DATE id="P12" start="1538" end="1550" text="September 10" TYPE="DATE" comment="" />
+<DATE id="P13" start="1672" end="1681" text="September" TYPE="DATE" comment="" />
+<LOCATION id="P14" start="1740" end="1750" text="San Rafael" TYPE="HOSPITAL" comment="" />
+<DATE id="P15" start="1876" end="1886" text="October 10" TYPE="DATE" comment="" />
+<LOCATION id="P16" start="2237" end="2240" text="SRH" TYPE="HOSPITAL" comment="" />
+<DATE id="P17" start="2281" end="2294" text="November 21st" TYPE="DATE" comment="" />
+<AGE id="P18" start="2902" end="2904" text="74" TYPE="AGE" comment="" />
+<DATE id="P19" start="3083" end="3089" text="spring" TYPE="DATE" comment="" />
+<DATE id="P20" start="3229" end="3237" text="12/04/02" TYPE="DATE" comment="" />
+<NAME id="P21" start="3643" end="3656" text="Herbert Paris" TYPE="DOCTOR" comment="" />
+<DATE id="P22" start="3667" end="3672" text="12/02" TYPE="DATE" comment="" />
+<LOCATION id="P24" start="4282" end="4285" text="SRH" TYPE="HOSPITAL" comment="" />
+<DATE id="P25" start="4290" end="4298" text="12/04/02" TYPE="DATE" comment="" />
+<DATE id="P26" start="4458" end="4466" text="12/04/02" TYPE="DATE" comment="" />
+<NAME id="P27" start="4536" end="4546" text="Gary Keyes" TYPE="DOCTOR" comment="" />
+<NAME id="P28" start="4732" end="4737" text="Keyes" TYPE="DOCTOR" comment="" />
+<NAME id="P29" start="4789" end="4794" text="Keyes" TYPE="DOCTOR" comment="" />
+<NAME id="P30" start="4876" end="4881" text="Barry" TYPE="DOCTOR" comment="" />
+</TAGS>
+</deIdi2b2>

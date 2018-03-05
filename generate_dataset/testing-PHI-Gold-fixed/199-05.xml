@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2094-09-07
+
+
+
+
+
+
+
+Forest Hospital / Mary
+
+2827 Hutchinson Street
+
+Cardiology, Suite 780              LARA, URIAH
+
+Pleasant Valley, GA  59835                    62115644
+
+(466) 428-4414                     09/07/2094
+
+
+
+
+
+Kenneth Bruce, M.D. 
+
+23 Essex Street
+
+East Stroudsburg, GA  97162
+
+
+
+Dear Kenneth: 
+
+
+
+Mr. Lara returned today after a 1-year hiatus because of coronary disease, status post percutaneous intervention.  He states that his general health has been stable over the past year but over the past several months he has noted, particularly in the hot weather, a sense of dyspnea after walking about 170 feet to his mailbox, or across a large parking lot, such as Grand Union.  At the end of activity he tends to note a sense of regular fluttering in his chest that persists for a minute or two, and he has also noted the latter almost every night when first lying in bed.  He has not had any recurrent orthostatic symptoms since his Toprol dose was reduced last year.  He has not had any exertionally related chest discomfort or symptoms similar to those prior to his percutaneous interventions.
+
+
+
+MEDICATIONS:
+
+1.  Aspirin 325 mg daily.
+
+2.  Clopidogrel 75 mg daily.
+
+3.  Atorvastatin 40 mg daily.
+
+4.  Lopid 600 mg b.i.d.
+
+5.  Toprol XL 12.5 mg daily.
+
+6.  Xanax, Benadryl at bedtime, multivitamin.
+
+
+
+INTOLERANCE TO MEDICATIONS:
+
+1.  Higher-dose beta blocker - orthostasis.
+
+2.  Lisinopril - questionable contribution to orthostasis.
+
+
+
+On examination, he is comfortable at rest.  The blood pressure is 170/100 checked twice, supine, standing it is 160/96, heart rate 82 and regular, weight 204 pounds, oxygen saturation 98%.  The jugular venous pressure is 5.  The carotid upstrokes are symmetric and not delayed.  The chest is clear.  Cardiac exam shows a grade II/VI holosystolic murmur localized to the apex.  The abdominal exam shows no organomegaly, pulsatile masses or bruits.  There is no peripheral pitting edema.
+
+
+
+The electrocardiogram shows sinus rhythm with left atrial abnormality and no new ST-T wave abnormalities compared to October 30, 2093.
+
+
+
+In summary, Mr. Lara has:
+
+1.  History of CAD, status placement of a drug-eluting stent in the LAD, 7/92, without recurrent angina or signs of left ventricular dysfunction.  Repeat cardiac catheterization, 12/92, because of chest discomfort showed no evidence of restenosis.
+
+2.  Hypertension, not controlled.  His elevated blood pressure may well be contributing to his sense of exertional dyspnea.  We spoke about the options.  As he had developed orthostatic symptoms previously on higher-dose beta blocker and possibly lisinopril, will use smaller doses of alternate agents in an attempt to lower his pressure.  He will add hydrochlorothiazide 25 mg daily plus amlodipine 2.5 mg daily starting today and already has a follow up appointment with you next week.  To investigate potential contributions to the elevated pressure and sense of tachycardia, blood studies today will include electrolytes, plasma metanephrine level and TSH.  A Holter monitor will also be placed in an attempt to determine what he is experiencing with the sense of "fluttering" which occurs at least nightly.  Once his blood pressure is controlled, an exercise test will follow.  [Addendum: Holter shows single VPBs/bigeminy at time of his symptoms. Blood studies show normal plasma metanephrines. He reports feeling better with systolic BP in the 120's on September 18, no further palpitations.  He will continue to monitor BP and will call in to schedule ETT]
+
+3.  Dyslipidemia, on combined statin plus gemfibrozil therapy.  When it is time to renew his Lopid, it would be reasonable to switch to TriCor to reduce the potential interaction with statins with respect to myopathy.  A serum CK will be included in today's blood studies.  
+
+4.  Mild mitral regurgitation.
+
+
+
+It was a pleasure to see Mr. Lara today and I will report back to you following his Holter.  
+
+
+
+With kind regards, sincerely yours,
+
+
+
+
+
+______________________________
+
+Collin L Cardenas, MD
+
+
+
+
+
+
+
+
+
+
+
+eScription document:1-3282447 MEeScription
+
+
+
+CC: Copy to File
+
+
+
+
+
+DD: 09/07/94
+
+DT: 09/10/94
+
+DV: 09/07/94
+
+
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2094-09-07" TYPE="DATE" comment="" />
+<LOCATION id="P1" start="34" end="49" text="Forest Hospital" TYPE="HOSPITAL" comment="" />
+<LOCATION id="P2" start="52" end="56" text="Mary" TYPE="HOSPITAL" comment="" />
+<LOCATION id="P3" start="58" end="80" text="2827 Hutchinson Street" TYPE="STREET" comment="" />
+<NAME id="P5" start="117" end="128" text="LARA, URIAH" TYPE="PATIENT" comment="" />
+<LOCATION id="P6" start="130" end="145" text="Pleasant Valley" TYPE="CITY" comment="" />
+<LOCATION id="P7" start="147" end="149" text="GA" TYPE="STATE" comment="" />
+<LOCATION id="P8" start="151" end="156" text="59835" TYPE="ZIP" comment="" />
+<ID id="P9" start="176" end="184" text="62115644" TYPE="MEDICALRECORD" comment="" />
+<CONTACT id="P10" start="186" end="200" text="(466) 428-4414" TYPE="PHONE" comment="" />
+<DATE id="P11" start="221" end="231" text="09/07/2094" TYPE="DATE" comment="" />
+<NAME id="P12" start="237" end="250" text="Kenneth Bruce" TYPE="DOCTOR" comment="" />
+<LOCATION id="P13" start="259" end="274" text="23 Essex Street" TYPE="STREET" comment="" />
+<LOCATION id="P14" start="276" end="292" text="East Stroudsburg" TYPE="CITY" comment="" />
+<LOCATION id="P15" start="294" end="296" text="GA" TYPE="STATE" comment="" />
+<LOCATION id="P16" start="298" end="303" text="97162" TYPE="ZIP" comment="" />
+<NAME id="P17" start="312" end="319" text="Kenneth" TYPE="DOCTOR" comment="" />
+<NAME id="P18" start="329" end="333" text="Lara" TYPE="PATIENT" comment="" />
+<LOCATION id="P19" start="692" end="703" text="Grand Union" TYPE="ORGANIZATION" comment="" />
+<DATE id="P20" start="2076" end="2092" text="October 30, 2093" TYPE="DATE" comment="" />
+<NAME id="P21" start="2113" end="2117" text="Lara" TYPE="PATIENT" comment="" />
+<DATE id="P22" start="2197" end="2201" text="7/92" TYPE="DATE" comment="" />
+<DATE id="P23" start="2303" end="2308" text="12/92" TYPE="DATE" comment="" />
+<DATE id="P24" start="3433" end="3445" text="September 18" TYPE="DATE" comment="" />
+<NAME id="P25" start="3878" end="3882" text="Lara" TYPE="PATIENT" comment="" />
+<NAME id="P26" start="4019" end="4036" text="Collin L Cardenas" TYPE="DOCTOR" comment="" />
+<ID id="P27" start="4072" end="4081" text="1-3282447" TYPE="IDNUM" comment="" />
+<DATE id="P28" start="4124" end="4132" text="09/07/94" TYPE="DATE" comment="" />
+<DATE id="P29" start="4138" end="4146" text="09/10/94" TYPE="DATE" comment="" />
+<DATE id="P30" start="4152" end="4160" text="09/07/94" TYPE="DATE" comment="" />
+</TAGS>
+</deIdi2b2>

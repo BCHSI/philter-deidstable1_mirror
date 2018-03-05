@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2076-03-23
+
+
+
+
+
+                                      Lakeview Clinic Note
+
+
+
+Patient comes in today for follow-up of recent hospitalization for L1 fracture following a fall. She was in her usual state of health until 2 months ago when she suffered a mechanical fall while visiting family in South Korea. She sustained an L1 fracture without surgical intervention, and returned to canada where she presented to the ED on 3/9/76 wiht back pain, L1 planar fracture with evidence of minimal cord compressionl She was admitted and seen by neurosurgery who felt that there was no acute indication for surgery. Since then, she has had continued pain in her back with occasional burning in her feet but no numbness or tingling. She would like to undergo surgery at this point because her pain is intolerable. She is in contact with a neurosurgeon at this time regarding when to proceed with surgery.
+
+
+
+She is otherwise doing well. ROS positive for chest tightness with walking one block with some feeling of being "winded." She does not have this feeling at rest, and states it has been ongoing for the past year. She describes some peripheral edema, as well as PND.
+
+
+
+Also c/o left eye tearing and R ear itching. no eye pain or change in her vision.
+
+
+
+
+
+Problems
+
+Hypertension 
+
+Elevated cholesterol 
+
+Cervical polyp 
+
+endometrial polyp 
+
+osteoarthritis 
+
+Sleep apnea 
+
+
+
+
+
+Current Medications:
+
+DIOVAN 80 mg PO QD
+
+Nexium (ESOMEPRAZOLE) 20 MG PO QD x 30 day(s)
+
+HYDROCHLOROTHIAZIDE 25MG, 1 Tablet(s) PO QD
+
+Celebrex (CELECOXIB) 100MG, 1 Capsule(s) PO bid
+
+Levothyroxine Sodium 125MCG, 1 Tablet(s) PO QD x 30 day(s)
+
+Caltrate And D 2 TABS PO qd x 30 day(s)
+
+Percocet (OXYCODONE+APAP) 325-5, 1 Tablet(s) PO Q6H x 20 day(s)
+
+Lopid (GEMFIBROZIL) 600MG, 1 Tablet(s) PO QPM x 30 day(s)
+
+Lopressor (METOPROLOL Tartrate) 12.5MG, 1 Tablet(s) PO BID x 30 day(s)
+
+fosomax 70 PO qwk x 30 day(s) 
+
+
+
+Physical Exam	
+
+
+
+VSS:       BP144/76 , wt 209 lbs     
+
+HEENT:   no mouth lesions
+
+Thyroid:   no thyromegaly
+
+Chest:     scant crackles at bilateral bases
+
+Heart:      regular rate and rhythm, S1 and S2 normal, no gallops, no murmurs  
+
+Abd:        soft, NT/ND
+
+Extr:        1-2+ ankle edema, brisk capillary refill
+
+
+
+
+
+Recent Relevant Data:
+
+random glucose 148
+
+Hemoglobin A1c: 6.8
+
+CBC, chem 7, tash, cholesterol all WNL in march 2076. iPTH 41, alk phos hi at 129, nl LFTs, ESR 34
+
+SPEP negative, bone scan with osteopenia, mammogram negative
+
+CXR with ? of confluence of shadows vs nodule at 2nd rib space, favor shadows, ecg with T wave abnormalities and low qrs voltages
+
+ETT 2074 10 min 82% predicted negative for ischmia
+
+Echo 2074 EF 60%
+
+Assessment and Current Plan:
+
+67 yo F with recent L1 planar fracture and multiple medical problems including HTN and new DM
+
+1.  Neurosurg for possible surgery later this month, percocet for pain control
+
+
+
+       - will need PFTs pre-op given some c/o DOE
+
+2.  CV:  will also need nuclear study of heart given anginal sx's and new T wave abnormalities on ECG. Cannot do ETT given resting ECG abnormalities, and will need pharmocologic stress given she cannot walk from back pain.
+
+- will start her on lasix both for BP and for diuresis as she appears volume overloaded.
+
+- will rpt echo if dobutamine MIBI not informative
+
+       
+
+3.optho referral per pt request for eye tearing
+
+
+
+        
+
+4.elevated gluc and A1c concerning for new DM. However, given only 1 high b.s documented and A1C borderline elevated, I have advised her that we can probably control this with diet, exercise, and wt loss.She will see nutrition to help her avoid high carb foods and to lose wt . If this fails to control her DM we will start her on Metformin. She will need optho eval for this reason as well.
+
+
+
+        5. Pt with strong fhx of uterine ca, wishes to see GYN regarding screening for this. She denies sx's of      vaginal bleeding at this pt.
+
+
+
+         6.consider rpt CXR given ?of shadow vs nodule.
+
+
+
+         7. will review HM at next visit
+
+
+
+Patient will return for a follow-up visit in clinic in 1 wk for chem 7 and 1 month to see me re bp and volume status .
+
+
+
+
+
+========================== Preceptor's Note ==========================
+
+
+
+67 yr old woman with recent L1 fracture, with minimal cord compression, has had persistent pain and is in contact with a neurosurgeon for consideration of surgery.  Also has had some exertional chest pain in last yr, and has baseline EKG T wave changes, and is unable to do treadmill due to back pain. Will get dobutamine MIBI study.  Repeat CXR as above in resident's note.
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2076-03-23" TYPE="DATE" comment="" />
+<LOCATION id="P1" start="70" end="85" text="Lakeview Clinic" TYPE="HOSPITAL" comment="" />
+<LOCATION id="P2" start="308" end="319" text="South Korea" TYPE="COUNTRY" comment="" />
+<LOCATION id="P3" start="397" end="403" text="canada" TYPE="COUNTRY" comment="" />
+<DATE id="P4" start="437" end="443" text="3/9/76" TYPE="DATE" comment="" />
+<DATE id="P5" start="2329" end="2339" text="march 2076" TYPE="DATE" comment="" />
+<DATE id="P6" start="2584" end="2588" text="2074" TYPE="DATE" comment="" />
+<DATE id="P7" start="2637" end="2641" text="2074" TYPE="DATE" comment="" />
+<AGE id="P8" start="2680" end="2682" text="67" TYPE="AGE" comment="" />
+<AGE id="P9" start="4189" end="4191" text="67" TYPE="AGE" comment="" />
+</TAGS>
+</deIdi2b2>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2145-12-19
+
+
+
+Olga comes in accomapnied by her daughter after undergoing L TKR by Dr. Walter on 10/15/45. She was transferred to Leprosarium rehab when after 5 days, her INR increased to 16 prompting readmission to MEDIQUIK. While there,  R leg weakness was noted. MRI LS spine showed DJD and some spinal stenosis. She was transferred to Parsons Hospital on 11/05 where she stayed till 12/10/45. She has been staying with her daughter since then.
+She is receiving VNA, PT. She continues to have R quadriceps weakness, cannot lift leg. It is in a brace with knee immobilized. She is unable to walk independently. 
+SHe notes her L lower leg is swollen. SHe is taking percoset for pain in leg. Also has pain in low back.
+Her breathing has been stable.
+She has lost more weight. She was on a strict ADA diet while at rehab.
+
+
+Problems
+Hypertension 
+Diabetes mellitus type 2 
+Hyperlipidemia 
+Chronic obstructive pulmonary disease 
+Polycythemia 
+Depression 
+Degenerative joint disease : s/p R TKR 11/44 
+Total hip replacement 
+Diverticulosis 
+Obesity 
+Transient ischemic attack 
+Smoking 
+Insomnia 
+
+
+
+Allergies 
+NKA 
+
+
+
+Medications 
+Advair Diskus 500/50 (FLUTICASONE Propionate/salmeterol 500/50) 1 PUFF INH BID 
+ALPRAZOLAM 0.25 MG (0.25MG TABLET take 1) PO QD 
+HYDROCHLOROTHIAZIDE 25 MG (25MG TABLET take 1) PO QD 
+LISINOPRIL 40 MG (40MG TABLET take 1) PO QD 
+Lopressor (METOPROLOL Tartrate) 50 MG (50MG TABLET take 1) PO BID x 30 days 
+METFORMIN 1000 MG (1000MG TABLET take 1) PO BID 
+NAPROXEN 500 MG (500MG TABLET take 1) PO BID x 30 days 
+OMEPRAZOLE 20 MG (20MG CAPSULE DR take 1) PO QD 
+Plavix (CLOPIDOGREL) 75 MG (75MG TABLET take 1) PO QD 
+SIMVASTATIN 20 MG (20MG TABLET take 1) PO QHS 
+TRAZODONE 125 MG (100MG TABLET take 1) PO QHS 
+Verapamil Sustained Release 120 MG (120MG TABLET SA take 1) PO QD x 30 days 
+
+
+PE:
+Vital Signs
+WEIGHT 196 lb (-15lbs/2.5mos) 
+134/70 P60 T97 
+Walker in room, unable to get on table 
+Pt alert and oriented, thinner 
+NEck - no nodes or bruits 
+Chest - clear 
+Cor -RRR, nlS1S2 
+Abd - soft, NT 
+Ext - L knee scar well healed; LLL bigger than right with trace pitting edema, no tenderness over calf, no redness or warmth 
+Neuro - R leg in brace; 3/5 strenght, CN's grossly intact 
+  
+A/P: 
+1. R leg weakness - Obtain MRI brain. Refer neurology. EMG was discussed, per PT recommendation. 
+2. Requests back brace - PT to order. 
+3. Pain back - Vicodin 5/500mg prn. 
+4. Resume Neurontin. 
+5. HTN - stable. 
+6. DM - check HGA1C. 
+7. Weight loss - follow. 
+8/ f/u 3 months. 
+  
+Janet Orellana MD 
+
+
+
+
+
+
+
+
+
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2145-12-19" TYPE="DATE" comment="" />
+<NAME id="P1" start="30" end="34" text="Olga" TYPE="PATIENT" comment="" />
+<NAME id="P2" start="102" end="108" text="Walter" TYPE="DOCTOR" comment="" />
+<DATE id="P3" start="112" end="120" text="10/15/45" TYPE="DATE" comment="" />
+<LOCATION id="P4" start="145" end="156" text="Leprosarium" TYPE="HOSPITAL" comment="" />
+<LOCATION id="P5" start="231" end="239" text="MEDIQUIK" TYPE="HOSPITAL" comment="" />
+<LOCATION id="P6" start="354" end="370" text="Parsons Hospital" TYPE="HOSPITAL" comment="" />
+<DATE id="P7" start="374" end="379" text="11/05" TYPE="DATE" comment="" />
+<DATE id="P8" start="402" end="410" text="12/10/45" TYPE="DATE" comment="" />
+<DATE id="P9" start="1007" end="1012" text="11/44" TYPE="DATE" comment="" />
+<NAME id="P10" start="2518" end="2532" text="Janet Orellana" TYPE="DOCTOR" comment="" />
+</TAGS>
+</deIdi2b2>
