@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2078-11-22
+
+PONTIAC INTERNAL MEDICINE ASSOCIATES          Sherman, Andrew
+ 
+ 
+ 
+History of Present Illness:  The patient returns one week after being 
+seen here initially in Internal Medicine clinic.  On the last visit he was having 
+chest pain and was therefore sent to the Emergency Room for a further 
+evaluation.  At that time he had EKGs which did not demonstrate any 
+ischemia during his chest pain and a chest x-ray which was unremarkable.  
+The Emergency Room physicians contacted his doctors at Humbert Hospital and obtained a history that the patient had a cardiomyopathy in 
+the past with a decreased LV function.  However repeat echo within the 
+past months demonstrated good LV function and they were in the process 
+of performing further cardiac testing when the patient left the 
+Humbert Hospital against medical advice.  After being evaluated in the 
+Emergency Room at Pontiac State, he now returns to be tied in with 
+the Internal Medicine clinic.  
+ 
+Medications:  His medications since his Emergency Room visit include 
+Carafate 1 gm. PO q.i.d., Prinivil 10 mg. PO q.d., Tenormin 50 mg. PO 
+q.d., Motrin 600 mg. t.i.d. p.r.n. and Nitrostat tablets p.r.n.  His 
+insulin dosing consists of 40 units of NPH q.a.m. and 18 units q.p.m. 
+and regular insulin 20 units q.a.m.  
+ 
+On return to my office today, he states that the frequency of his chest 
+pain is much diminished but that he has gained some weight since 
+discontinuing his Lasix per order of the Emergency Room physicians.
+ 
+Physical Exam:  On exam, his blood pressure is 160/100 with a heart rate 
+of 76.  He is not in any acute distress.  His chest is clear to 
+auscultation.  His cardiac exam demonstrates S4 gallop and distant heart 
+sounds.  His abdominal exam is benign except for massive obesity.  His 
+rectal exam is guaiac negative.  His extremities exam demonstrates 1+ 
+pitting edema to the shins and his neurologic exam is unremarkable.  
+ 
+Assessment and Plan:  
+ 
+1.   Cardiac.  The patient will be scheduled for an ETT thallium study 
+     to rule out ischemia.
+ 
+2.   Hypertension.  His Prinivil will be increased to 20 mg. q.d.
+ 
+3.   Diabetes.  His sugars have been running 130 to 160 by fingerstick 
+     checks at home and he will continue his present regimen.
+ 
+4.   The patient will be referred to ophthalmology for the evaluation of 
+     his eyes given his history of hypertension and diabetes.
+ 
+5.   General.  The patient will see me shortly after completion of an 
+     ETT thallium study for further discussion of his cardiac status.
+ 
+_________________________
+Michael Holman, M.D.
+ 
+rin:KZ:9636:DD:11-24-78:DT:11-25-78:DV:11-22-78
+
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2078-11-22" TYPE="DATE" comment="" />
+<LOCATION id="P1" start="28" end="35" text="PONTIAC" TYPE="HOSPITAL" comment="" />
+<NAME id="P2" start="74" end="89" text="Sherman, Andrew" TYPE="PATIENT" comment="" />
+<LOCATION id="P4" start="520" end="536" text="Humbert Hospital" TYPE="HOSPITAL" comment="" />
+<LOCATION id="P5" start="811" end="827" text="Humbert Hospital" TYPE="HOSPITAL" comment="" />
+<LOCATION id="P6" start="901" end="914" text="Pontiac State" TYPE="HOSPITAL" comment="" />
+<NAME id="P8" start="2581" end="2595" text="Michael Holman" TYPE="DOCTOR" comment="" />
+<ID id="P9" start="2604" end="2615" text="rin:KZ:9636" TYPE="IDNUM" comment="" />
+<DATE id="P10" start="2619" end="2627" text="11-24-78" TYPE="DATE" comment="" />
+<DATE id="P11" start="2631" end="2639" text="11-25-78" TYPE="DATE" comment="" />
+<DATE id="P12" start="2643" end="2651" text="11-22-78" TYPE="DATE" comment="" />
+</TAGS>
+</deIdi2b2>

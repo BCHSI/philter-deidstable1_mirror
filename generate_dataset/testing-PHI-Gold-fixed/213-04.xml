@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2065-11-03
+
+                     GREEN EMERGENCY DEPT VISIT
+
+ 
+
+WAGNER,LONNIE   097-87-37-2                  VISIT DATE: 11/03/65
+
+The resident's history, physical examination and evaluation were 
+
+reviewed by me and I concur.  In addition, I personally interviewed 
+
+and examined this patient and spoke with his wife who presents with 
+
+him.  Please see the resident's note for the remainder of the 
+
+details of the patient's history.  Please see the note for further 
+
+details.  
+
+HISTORY OF PRESENTING COMPLAINT:  This is a 72-year-old male with a 
+
+history of myeloproliferative disorder who is followed by 
+
+hematology/oncology after diagnosis in July of 2065.  He now 
+
+presents with several episodes of bleeding.  He has been having 
+
+epistaxis for approximately one month.  He had one episode of 
+
+hematemesis this morning with red blood with clots.  He has also 
+
+noted some red blood around his stool when he moves his bowels over 
+
+the last two days.  His bowel movements have not been black but 
+
+there has been red blood that fills the toilet water.  He denies 
+
+any light-headedness although his wife states that he has been 
+
+complaining of feeling dizzy at home.  He denies any headache or 
+
+visual change, denies any shortness of breath or chest pain.  
+
+PHYSICAL EXAMINATION:  VITAL SIGNS:  Temperature 96.6, pulse 91, 
+
+respirations 18, blood pressure 120/58.  The O2 saturation is 96%. 
+
+GENERAL:  The patient is tired by awake, middle-aged male, 
+
+reclining on his right side.  HEENT:  Normocephalic and atraumatic. 
+
+His pupils are equal at approximately 2 mm.  His sclera are 
+
+anicteric.  His conjunctiva are very pale.  He is edentulous with 
+
+moist mucous membranes.  He has petechiae of the pallet and the 
+
+buccal mucosa.  NECK:  Supple, nontender with no meningismus.  
+
+LUNGS:  Clear except for crackles at the bases bilaterally with 
+
+fairly good air movement.  CARDIAC:  Regular, rate and rhythm, 
+
+somewhat distant.  ABDOMEN:  Nondistended, soft and nontender with 
+
+no guarding and no peritoneal signs.  RECTAL:  Examination 
+
+performed by the resident showed heme positive stool.  SKIN:  
+
+Intact, warm, somewhat pale and dry.  EXTREMITIES:  Trace ankle 
+
+edema.  His calves are soft and nontender.  He has full range of 
+
+motion.  
+
+LABORATORY EVALUATION:  His white blood cell count is 156,000.  
+
+Hematocrit is 27.5, platelets 25,000.  His differential shows 4%  
+
+blasts.  His electrolytes are within normal limits.  BUN is 36, 
+
+creatinine 1.5 and glucose 96.  His transaminases are flat, amylase 
+
+is 52 and lipase is 31.  His INR is 1.3.  The patient had an 
+
+electrocardiogram performed showing a normal sinus rhythm with 
+
+nonspecific ST changes.  Chest x-ray showed minimal vascular 
+
+engorgement but no edema and no infiltrate.  
+
+THERAPY RENDERED/COURSE IN ED:  The patient had IV access 
+
+initiated.  Laboratory studies were sent.  
+
+FINAL DIAGNOSES:  Gastrointestinal bleeding, anemia and 
+
+thrombocytopenia secondary to myeloproliferative disorder.
+
+DISPOSITION (including condition upon discharge):  The patient was 
+
+seen in the emergency department by Dr. Hanson from oncology.  
+
+The patient is known to be transfusion dependent.  She has most 
+
+recently been transfused packed red blood cells but has not 
+
+required a platelet transfusion for several weeks.  He is being 
+
+admitted to the oncology service.  The patient remains 
+
+hemodynamically stable here, awaiting transfusion and admission.  
+
+The patient is currently in stable condition.
+
+___________________________________                    DV105/64892 
+
+KATHERN OLMSTEAD, M.D.  KO19                              D:11/03/65 
+
+                                                       T:11/03/65 
+
+Dictated by:  KATHERN OLMSTEAD, M.D.  KO19 
+
+ ******** Not reviewed by Attending Physician ********
+
+
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2065-11-03" TYPE="DATE" comment="" />
+<LOCATION id="P1" start="49" end="54" text="GREEN" TYPE="HOSPITAL" comment="" />
+<NAME id="P2" start="80" end="93" text="WAGNER,LONNIE" TYPE="PATIENT" comment="" />
+<ID id="P3" start="96" end="107" text="097-87-37-2" TYPE="MEDICALRECORD" comment="" />
+<DATE id="P4" start="137" end="145" text="11/03/65" TYPE="DATE" comment="" />
+<AGE id="P5" start="543" end="545" text="72" TYPE="AGE" comment="" />
+<DATE id="P6" start="668" end="680" text="July of 2065" TYPE="DATE" comment="" />
+<NAME id="P7" start="3125" end="3131" text="Hanson" TYPE="DOCTOR" comment="" />
+<ID id="P8" start="3571" end="3582" text="DV105/64892" TYPE="IDNUM" comment="" />
+<NAME id="P9" start="3585" end="3601" text="KATHERN OLMSTEAD" TYPE="DOCTOR" comment="" />
+<NAME id="P10" start="3609" end="3613" text="KO19" TYPE="USERNAME" comment="" />
+<DATE id="P11" start="3645" end="3653" text="11/03/65" TYPE="DATE" comment="" />
+<DATE id="P12" start="3713" end="3721" text="11/03/65" TYPE="DATE" comment="" />
+<NAME id="P13" start="3738" end="3754" text="KATHERN OLMSTEAD" TYPE="DOCTOR" comment="" />
+<NAME id="P14" start="3762" end="3766" text="KO19" TYPE="USERNAME" comment="" />
+</TAGS>
+</deIdi2b2>

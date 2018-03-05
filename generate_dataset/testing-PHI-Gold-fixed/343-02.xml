@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2095-04-03
+
+                     LEPROSARIUM EMERGENCY DEPT VISIT
+
+ 
+
+KIM,DOUGLAS JR   201-63-51-2                VISIT DATE: 04/03/95
+
+The patient was seen primarily by me. 
+
+PRESENTING COMPLAINT:  Fall, right knee injury.
+
+HISTORY OF PRESENTING COMPLAINT:  Mr. Killian is a very pleasant 
+
+54-year-old gentleman, with a history of diabetes, who had a fall 
+
+on December 18, 2094.  At the time, he sustained an injury to his 
+
+right knee which healed and then began to break down, and he 
+
+developed a large wound which began draining and had foul odor.  
+
+The patient had continued difficulty ambulating and presented to 
+
+the emergency department for evaluation.  The patient denies having 
+
+any hardware in his knee.  No history of osteomyelitis.  No 
+
+hardware.  No history of peripheral neuropathy.  
+
+REVIEW OF SYSTEMS:  Patient denies any fevers or chills.  No nausea 
+
+or vomiting.  No abdominal pain.  No chest pain or shortness of 
+
+breath.  Patient is only complaining of difficulty ambulating 
+
+secondary to the pain.   
+
+PAST MEDICAL HISTORY:  Two patellar tendon repairs at EDUCARE-PULLMAN in 2083, 
+
+repair of a patellar fracture.  Recent diagnosis of diabetes, 
+
+atrial fibrillation.  Hypertension, high cholesterol, and positive 
+
+PPD.  
+
+MEDICATIONS:  Please see nurses note for list of medications. 
+
+ALLERGIES:  PENICILLIN (rash). 
+
+SOCIAL HISTORY AND FAMILY HISTORY:  The patient is a smoker.  He 
+
+does not drink alcohol.  He works in engineering, and lives alone. 
+
+Family history is noncontributory. 
+
+PHYSICAL EXAMINATION:  GENERAL:  Patient is awake, alert, talking 
+
+in full sentences, in mild distress secondary to pain.  VITAL 
+
+SIGNS:  Afebrile, temperature 99.3, respiratory rate 20, blood 
+
+pressure 161/96, pulse 95.  HEAD:  Atraumatic.  NECK:  Supple.  
+
+LUNGS:  Clear to auscultation.  No wheezes, rales or rhonchi.  
+
+HEART:  Regular rate.  No murmurs, gallops or rubs.  ABDOMEN:  
+
+Soft, nontender.  SKIN:  A large ulcer to the right knee, right 
+
+over the patella, with significant amount of break-down necrotic 
+
+tissue and purulent discharge with a foul odor.  The depth of the 
+
+wound is difficult to assess.  Intact motor function and sensation. 
+
+Full flexion and extension of the knee, and evidence of well-healed 
+
+midline scar above the ulcer.  NEURO:  Intact with good pulses 
+
+palpable throughout.  
+
+LABORATORY EVALUATION:  Plain film of the right knee, CT of the 
+
+right knee, and laboratory values done.  Laboratory values 
+
+demonstrated a white count of 14, ESR of 13, ESRP of 2.1.  Rest of 
+
+the labs were normal except for an elevated glucose to 226.  Film 
+
+of the knee shows patellofemoral arthritis with no evidence of 
+
+osteomyelitis, no hardware seen.  CT of the knee showed a 
+
+superficial ulcer to the depth of the patellar tendon but the 
+
+patellar tendon itself was intact.  
+
+THERAPY RENDERED/COURSE IN ED:  The patient was initially seen by 
+
+orthopedic who felt that the ulcer was over the patellar tendon, at 
+
+the site of prior surgeries, with no effusion or joint pain, and 
+
+normal range of motion with joint involvement unlikely.  We are all 
+
+very hesitant to tap this knee and it will not be done at this time 
+
+for fear of introducing infection into the joint.  The patient is 
+
+awaiting consultation by general surgery for probable admission and 
+
+debridement in the operating room.  The plan at this time was to 
+
+hold off on antibiotics.  Blood cultures were sent.  The patient is 
+
+receiving IV fluids. 
+
+CONSULTATIONS (including PCP):  Orthopedics, general surgery.
+
+FINAL DIAGNOSIS:  Knee ulcer.
+
+DISPOSITION (including condition upon discharge):  The patient was 
+
+admitted and transitioned to ED Obs, awaiting evaluation by the 
+
+surgical service for probable admission.  The patient is currently 
+
+in stable and satisfactory condition, in Obs awaiting surgery 
+
+evaluation.
+
+___________________________________                    VN983/2356
+
+SHERRY PERKINS, M.D.  SP79                          D:04/03/95 
+
+                                                       T:04/04/95 
+
+Dictated by:  SHERRY PERKINS, M.D.  SP79 
+
+ ******** Not reviewed by Attending Physician ********
+
+
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2095-04-03" TYPE="DATE" comment="" />
+<LOCATION id="P1" start="49" end="60" text="LEPROSARIUM" TYPE="HOSPITAL" comment="" />
+<NAME id="P2" start="86" end="100" text="KIM,DOUGLAS JR" TYPE="PATIENT" comment="" />
+<ID id="P3" start="103" end="114" text="201-63-51-2" TYPE="MEDICALRECORD" comment="" />
+<DATE id="P4" start="142" end="150" text="04/03/95" TYPE="DATE" comment="" />
+<NAME id="P5" start="279" end="286" text="Killian" TYPE="PATIENT" comment="" />
+<AGE id="P6" start="308" end="310" text="54" TYPE="AGE" comment="" />
+<DATE id="P7" start="379" end="396" text="December 18, 2094" TYPE="DATE" comment="" />
+<LOCATION id="P8" start="1105" end="1120" text="EDUCARE-PULLMAN" TYPE="HOSPITAL" comment="" />
+<DATE id="P9" start="1124" end="1128" text="2083" TYPE="DATE" comment="" />
+<PROFESSION id="P10" start="1474" end="1485" text="engineering" TYPE="PROFESSION" comment="" />
+<NAME id="P11" start="3930" end="3932" text="VN" TYPE="DOCTOR" comment="" />
+<ID id="P12" start="3932" end="3940" text="983/2356" TYPE="IDNUM" comment="" />
+<NAME id="P13" start="3942" end="3956" text="SHERRY PERKINS" TYPE="DOCTOR" comment="" />
+<NAME id="P14" start="3964" end="3968" text="SP79" TYPE="USERNAME" comment="" />
+<DATE id="P15" start="3996" end="4004" text="04/03/95" TYPE="DATE" comment="" />
+<DATE id="P16" start="4064" end="4072" text="04/04/95" TYPE="DATE" comment="" />
+<NAME id="P17" start="4089" end="4103" text="SHERRY PERKINS" TYPE="DOCTOR" comment="" />
+<NAME id="P18" start="4111" end="4115" text="SP79" TYPE="USERNAME" comment="" />
+</TAGS>
+</deIdi2b2>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2096-11-18
+
+
+
+
+
+Spanish
+71 Dan Chan                                        OSWALDO AUSTIN, HENRY
+Angels City, NH 31731                                      64415974
+(729) 481-3539                                           11/18/96
+
+
+
+
+HISTORY OF PRESENT ILLNESS: 
+
+
+Mr. Austin is a 78 year old Ecuadorian gentleman with known Diabetes and history of cerebellar CVA who returns to the practice three months after undergoing CABG for multiple vessel disease. His recovery was been uneventful, he has had no further angin and inspite rather severe anemia he has noted marked improvement in exercise tolerance. Appetite is better. No PND orthopnea or ankle edema. There is mild chest soreness on the right side.  There was aignificant decline in Hct in spite of the fact that he received 2 transfusions in the hospital and he is on iron.  Mr. Oswaldo has appointmernt with Dr. Jean in the near future. 
+  
+Mr. Oswaldo has  Type II diabetes well controlled on oral hypoglycemics HGBHA1C on 8/17 = 6.4.
+h/o CVA in 2090 which resulted in right hemiparesis (now fully resolved) .  
+
+
+Medications
+Aspirin ENTERIC COATED 325 MG PO QD 
+Ferrous SULFATE 325 MG (325(65)MG TABLET Take 1) PO as directed , Un dia si y un dia no #30 Tablet(s)
+Metformin 1000 MG (1000MG TABLET Take 1) PO BID #180 Tablet(s)
+Metoprolol SUCCINATE EXTENDED RELEASE 100 MG (100MG TAB.SR 24H Take 1) PO QD #30 TAB.SR
+Nitroglycerin 1/200 (0.3 MG) 1 TAB (0.3MG TAB SUBL ) SL Q2H PRN #30 Tablet(s)
+Zocor (SIMVASTATIN) 40 MG (40MG TABLET Take 1) PO QPM #30 Tablet(s)
+
+
+Vital Signs
+BP 121/63, P 80, Wt 137 lb
+
+
+
+
+GEN: well-appearing but pale and thin elderly gentleman. Fragile but not in pain
+HEENT:  PERRLA
+CARD: Healed CABG scar. Tender to pressure nl S1, S2. No m/r/g.  Lungs clear to auscultation. 
+EXT: WWP. Healed  incisions on medialaspect of RLE where veins were harvested. THere is an echymoses about 2 cm in diameter on the shaft of the pennis. No other bleeding, possibly result of trauma when pulling up his pants.  Pedal pulses 2+ bilaterally. No evidence of foot ulcers or calluses
+, multiple varicose veins. Hommans negative
+
+
+
+
+ASSESSMENT AND PLAN:  
+A 78-year-old gentleman with a history of adult-onset diabetes and CVA  post CABG. Remarkable recovery ; weight has not increased but anemia has improved. Prior to surgery he had mild anemia which was macrocytic. Will check Fe, B12,  FA ,CBC and HGBA1C before next visit in 1 month. Encouraged gentle ambulation. He will see Dr.Jean in 3 weeks.  Encouraged to call if any new symptoms or echymosis and told him to eat what he likes for time being except sugar and sweets. Return in one month or prn
+
+
+
+______________________________
+Harry Bernard-Moyer, M.D.
+
+
+
+
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2096-11-18" TYPE="DATE" comment="" />
+<LOCATION id="P1" start="40" end="51" text="71 Dan Chan" TYPE="STREET" comment="" />
+<NAME id="P2" start="91" end="112" text="OSWALDO AUSTIN, HENRY" TYPE="PATIENT" comment="" />
+<LOCATION id="P3" start="113" end="124" text="Angels City" TYPE="CITY" comment="" />
+<LOCATION id="P4" start="126" end="128" text="NH" TYPE="STATE" comment="" />
+<LOCATION id="P5" start="129" end="134" text="31731" TYPE="ZIP" comment="" />
+<ID id="P6" start="172" end="180" text="64415974" TYPE="MEDICALRECORD" comment="" />
+<CONTACT id="P7" start="181" end="195" text="(729) 481-3539" TYPE="PHONE" comment="" />
+<DATE id="P8" start="238" end="246" text="11/18/96" TYPE="DATE" comment="" />
+<NAME id="P9" start="286" end="292" text="Austin" TYPE="PATIENT" comment="" />
+<AGE id="P10" start="298" end="300" text="78" TYPE="AGE" comment="" />
+<LOCATION id="P11" start="310" end="320" text="Ecuadorian" TYPE="COUNTRY" comment="" />
+<NAME id="P12" start="855" end="862" text="Oswaldo" TYPE="PATIENT" comment="" />
+<NAME id="P13" start="889" end="893" text="Jean" TYPE="DOCTOR" comment="" />
+<NAME id="P14" start="922" end="929" text="Oswaldo" TYPE="PATIENT" comment="" />
+<DATE id="P15" start="1001" end="1005" text="8/17" TYPE="DATE" comment="" />
+<DATE id="P16" start="1024" end="1028" text="2090" TYPE="DATE" comment="" />
+<AGE id="P17" start="2142" end="2144" text="78" TYPE="AGE" comment="" />
+<NAME id="P18" start="2468" end="2472" text="Jean" TYPE="DOCTOR" comment="" />
+<NAME id="P19" start="2673" end="2692" text="Harry Bernard-Moyer" TYPE="DOCTOR" comment="" />
+</TAGS>
+</deIdi2b2>

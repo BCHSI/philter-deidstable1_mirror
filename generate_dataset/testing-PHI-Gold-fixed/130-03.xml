@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2087-03-06
+
+ 
+
+
+Ravenna Medical Clinic RMC
+7785 Marlowe Street              PAUL, MAE
+Barnesville, TN  13351                    83288425
+(665) 578-7821                     03/06/2087
+
+
+CHIEF COMPLAINT:  The patient is a 75-year-old woman, new patient who comes in to establish primary care and for followup of multiple medical problems including end-stage renal disease, hypertension, peripheral vascular disease, history of foot drop, etc.
+
+PAST MEDICAL HISTORY:
+1.  End-stage renal disease.  Because of her original end-stage renal disease was reportedly FSGS, she had a preemptive transplant in 2068, which was complicated by rejection and ultimate loss of the graft.  She resumed dialysis in 2072.  She had a second transplant in 2075, which was also complicated and ultimately rejected.  She resumed hemodialysis in 2082.  She does have a match with her only daughter, but apparently the Transplant Service feels that she would not be a good candidate and I think she would be reluctant to go through two surgeries, which would be required, one to remove the old graft and one for the new transplant.  She currently is dialyzed at the Overbrook Hospital.  Her dialysis physician is Dr. Lemus.
+2.  Hypertension.
+3.  Peripheral vascular disease.  She had an angiogram in 2083 at LMC and an MRA in 2085, which showed bilateral iliac and femoral artery stenoses.  She apparently does not have claudication despite this.
+4.  History of right foot-drop.  She had a severe episode of shingles in 2077 with associated sciatica and foot-drop.
+5.  History of hemorrhoids for at least six years with occasional bleeding and with anal protrusion.
+6.  History of CMV colitis in 08/2081.
+7.  Secondary hyperparathyroidism.  She is on Sensipar and has been on this since early 2085.
+
+PAST SURGICAL HISTORY:  She had a supracervical hysterectomy for benign disease in 2061 and a left salpingo-oophorectomy for a serous cyst in 04/2082.  She is status post appendectomy.  She is status post bilateral cataract surgery.
+
+MEDICATIONS:  Norvasc 10 mg per day, lisinopril 20 mg per day, metoprolol 50 mg b.i.d., Lipitor 40 mg per day, aspirin 81 mg per day, Nephrocaps 1 mg per day, Restoril 15 mg nightly, Hectorol 4 mcg per 2 mL three times per week, B6 200 mg per day, vitamin E 400 mg per day, flaxseed oil 1000 mg per day and B12 4000 mcg per day.
+
+FAMILY HISTORY:  Significant for diabetes in her father and grandfather, negative for cancer.
+
+SOCIAL HISTORY:  She is a widow.  She is a lifetime nonsmoker.  She does not drink alcohol or use drugs.  She is a retired mathematician at Vassar.  She came from Turlock 10 years ago to Pecos to be with her daughter who is a surgeon in the area.  She never has felt the Pecos as home and is home sick for Turlock.
+
+ALLERGIES:  No known drug allergies.
+
+REVIEW OF SYSTEMS:  She has had some problems with left shoulder pain and immobility.  She generally seems to be somewhat overwhelmed and a little bit sad.  She seems never to have adjusted to life in Pecos.  She has had the loss of two the kidney transplants and then the foot-drop, which has made walking difficult.  She did have a brace at one time, which helped her to walk, but it was irritating.  She had seen Dr. Yim to get another one, but that never worked out.  She did not complain of any chest pain or shortness of breath, no constipation.  She does have hemorrhoids that are active as above.
+
+PHYSICAL EXAMINATION:  She is a well-developed, well-nourished, very pleasant, but somewhat sad-appearing white female.  Her blood pressure is 140/60.  HEENT, pupils equal, round and reactive to light.  Extraocular movements are intact.  Throat is clear.  Neck, supple, no adenopathy or thyromegaly.  Heart, regular rate and rhythm.  Lungs, clear.  Abdomen, soft, nontender, no organomegaly.  Extremities, no edema.  Neuro, absent reflex in the right patella and 2+ in the left patella.
+
+ASSESSMENT AND PLAN:
+1.  End-stage renal disease on dialysis, not considered to be a transplant candidate at this time as she has had two rejections.
+2.  Hypertension, well controlled on medications.
+3.  Hyperlipidemia, on Lipitor.  Last cholesterol was checked in 10/2086 with normal ALT and AST, but elevated alkaline phosphatase.
+4.  Peripheral vascular disease, currently asymptomatic.
+5.  Right foot-drop.  We may look into getting her another brace perhaps another consult with Dr. Yim.
+6.  Left shoulder pain.  It did mention in her physical, but she can only abduct her left shoulder to about 90 degrees without pain.  We may look into this further and perhaps get some physical therapy for possible rotator cuff tendinitis.
+7.  Hemorrhoids.
+8.  Secondary hyperparathyroidism on Sensipar.
+9.  Health maintenance.  Mammogram was done in 06/2086.  Pap smear was done in 04/2083.  Colonoscopy was done in 08/2081.
+10.  ? Depression.  She seemed a little sad.  Has had a tough time with her medical problems and never adjusted that well to Pecos.  Will have her come back and discuss further.
+
+
+______________________________
+Qiana Solomon, MD
+
+
+
+
+
+eScription document:9-2784353 KUQlhv Egq
+
+
+
+DD: 03/06/87
+DT: 03/07/87
+DV: 03/06/87
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2087-03-06" TYPE="DATE" comment="" />
+<LOCATION id="P1" start="32" end="54" text="Ravenna Medical Clinic" TYPE="HOSPITAL" comment="" />
+<LOCATION id="P2" start="55" end="58" text="RMC" TYPE="HOSPITAL" comment="" />
+<LOCATION id="P3" start="59" end="78" text="7785 Marlowe Street" TYPE="STREET" comment="" />
+<NAME id="P4" start="92" end="101" text="PAUL, MAE" TYPE="PATIENT" comment="" />
+<LOCATION id="P5" start="102" end="113" text="Barnesville" TYPE="CITY" comment="" />
+<LOCATION id="P6" start="115" end="117" text="TN" TYPE="STATE" comment="" />
+<LOCATION id="P7" start="119" end="124" text="13351" TYPE="ZIP" comment="" />
+<ID id="P8" start="144" end="152" text="83288425" TYPE="MEDICALRECORD" comment="" />
+<CONTACT id="P9" start="153" end="167" text="(665) 578-7821" TYPE="PHONE" comment="" />
+<DATE id="P10" start="188" end="198" text="03/06/2087" TYPE="DATE" comment="" />
+<AGE id="P11" start="236" end="238" text="75" TYPE="AGE" comment="" />
+<DATE id="P12" start="614" end="618" text="2068" TYPE="DATE" comment="" />
+<DATE id="P13" start="712" end="716" text="2072" TYPE="DATE" comment="" />
+<DATE id="P14" start="750" end="754" text="2075" TYPE="DATE" comment="" />
+<DATE id="P15" start="837" end="841" text="2082" TYPE="DATE" comment="" />
+<LOCATION id="P16" start="1156" end="1174" text="Overbrook Hospital" TYPE="HOSPITAL" comment="" />
+<NAME id="P17" start="1207" end="1212" text="Lemus" TYPE="DOCTOR" comment="" />
+<DATE id="P18" start="1290" end="1294" text="2083" TYPE="DATE" comment="" />
+<LOCATION id="P19" start="1298" end="1301" text="LMC" TYPE="HOSPITAL" comment="" />
+<DATE id="P20" start="1316" end="1320" text="2085" TYPE="DATE" comment="" />
+<DATE id="P21" start="1510" end="1514" text="2077" TYPE="DATE" comment="" />
+<DATE id="P22" start="1686" end="1693" text="08/2081" TYPE="DATE" comment="" />
+<DATE id="P23" start="1783" end="1787" text="2085" TYPE="DATE" comment="" />
+<DATE id="P24" start="1873" end="1877" text="2061" TYPE="DATE" comment="" />
+<DATE id="P25" start="1932" end="1939" text="04/2082" TYPE="DATE" comment="" />
+<PROFESSION id="P26" start="2572" end="2585" text="mathematician" TYPE="PROFESSION" comment="" />
+<LOCATION id="P27" start="2589" end="2595" text="Vassar" TYPE="ORGANIZATION" comment="" />
+<LOCATION id="P28" start="2612" end="2619" text="Turlock" TYPE="CITY" comment="" />
+<LOCATION id="P29" start="2636" end="2641" text="Pecos" TYPE="CITY" comment="" />
+<PROFESSION id="P30" start="2675" end="2682" text="surgeon" TYPE="PROFESSION" comment="" />
+<LOCATION id="P31" start="2720" end="2725" text="Pecos" TYPE="CITY" comment="" />
+<LOCATION id="P32" start="2755" end="2762" text="Turlock" TYPE="CITY" comment="" />
+<LOCATION id="P33" start="3004" end="3009" text="Pecos" TYPE="CITY" comment="" />
+<NAME id="P34" start="3223" end="3226" text="Yim" TYPE="DOCTOR" comment="" />
+<DATE id="P35" start="4162" end="4169" text="10/2086" TYPE="DATE" comment="" />
+<NAME id="P36" start="4385" end="4388" text="Yim" TYPE="DOCTOR" comment="" />
+<DATE id="P37" start="4741" end="4748" text="06/2086" TYPE="DATE" comment="" />
+<DATE id="P38" start="4773" end="4780" text="04/2083" TYPE="DATE" comment="" />
+<DATE id="P39" start="4807" end="4814" text="08/2081" TYPE="DATE" comment="" />
+<LOCATION id="P40" start="4941" end="4946" text="Pecos" TYPE="CITY" comment="" />
+<NAME id="P41" start="5027" end="5040" text="Qiana Solomon" TYPE="DOCTOR" comment="" />
+<ID id="P42" start="5070" end="5090" text="9-2784353 KUQlhv Egq" TYPE="IDNUM" comment="" />
+<DATE id="P43" start="5098" end="5106" text="03/06/87" TYPE="DATE" comment="" />
+<DATE id="P44" start="5111" end="5119" text="03/07/87" TYPE="DATE" comment="" />
+<DATE id="P45" start="5124" end="5132" text="03/06/87" TYPE="DATE" comment="" />
+</TAGS>
+</deIdi2b2>

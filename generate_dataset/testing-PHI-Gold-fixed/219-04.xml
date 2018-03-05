@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2077-03-31
+
+
+
+
+
+
+
+Notre Dame Nursing Home
+
+1410 Madera Circle              POTTS, WILLIAM
+
+Hyannis, NV  21113                    10916758
+
+(391) 643-6925                     03/31/2077
+
+
+
+
+
+HISTORY OF PRESENT ILLNESS:  Mr. Potts is a 60-year-old male who comes for annual review and follow up of medical problems.
+
+1.  Hypertension.  No chest pain, shortness of breath, or pedal edema.
+
+2.  Hypercholesterolemia.  Recent fasting lipid analysis shows total cholesterol of 118, triglycerides of 121, LDL 61, HDL 33.
+
+3.  Coronary artery disease status post CABG 2070.  He has a stable pattern of dyspnea with exercise.  No significant chest pain.
+
+4.  Prostate CA.  He has begun prostatic brachytherapy four months ago.
+
+5.  Depression.  He needs to arrange follow up with our counseling department.
+
+6.  Benign prostatic hypertrophy and bladdre outlet obstruction.  He is going to undergo further evaluation.  He has responded well to medical therapy.
+
+MEDICATIONS:  Aspirin 81 mg daily, atenolol 50 mg daily, diltiazem 180 mg daily, fluoxetine 20 mg daily, folic acid 1 mg daily, Lipitor 20 mg daily, Naprosyn 500 mg b.i.d. p.r.n., terazosin 5 mg b.i.d., nitroglycerin p.r.n.
+
+ALLERGIES:  Sulfa medications.
+
+HABITS:  He denies tobacco or drug use and drinks rarely.
+
+FAMILY HISTORY:  Unchanged.
+
+SOCIAL HISTORY:  Unchanged.
+
+REVIEW OF SYMPTOMS:  Notable for slightly worsening back pain, which he has had for all his life since trauma as a youth.  The pain is most noticeable after standing for a long period of time.  No nocturnal back pain. No significant weight change, febrile signs or symptoms, headache, blurred vision, tinnitus, chest pain, cough, shortness of breath, nausea, abdominal pain, nightsweats, diarrhea, dysuria, skin rash, bruising, joint pain, or focal weakness.  
+
+
+
+PHYSICAL EXAMINATION:  The patient is in no acute distress.  Blood pressure 108/60, weight 224 pounds, height 69 inches.  BMI 33.1.  Skin exam:  No rash.  Head and neck normal.  Chest:  Clear to percussion and auscultation.
+
+Cardiovascular exam:  S4.  No extra sounds or murmurs.  Pedal pulses 1+ bilaterally.
+
+Abdominal exam:  No masses, tenderness, or organomegaly.  Stool guaiac negative.
+
+GU exam:  Both testes are without masses or tenderness.  Prostate not significantly palpable.  Lymph exam: No axillary or cervical lymphadenopathy.  Musculoskeletal exam grossly intact.  Bilateral pes planus.  Neuro exam grossly intact.
+
+ASSESSMENT AND PLAN:
+
+1.  Hypertension.  Stable.
+
+2.  Hypercholesterolemia.  Adequate LDL treatment.
+
+3.  Coronary artery disease.  Symptomatically stable though I wish he had better exercise tolerance.  Will follow.
+
+4.  Prostate CA.  Under treatment.
+
+5.  Depression.  I encouraged him to follow up with our counseling department.
+
+6.  Prostatic hypertrophy and outlet obstruction.  He has follow up arranged with Dr. Uren.
+
+7.  Low HDL.  I will initiate treatment with Tricor.  Previous trials with niacin failed.
+
+8.  Pes planus.  Not symptomatically a problem.
+
+9.  Low back pain.  The pattern has been stable.  Will not further intervene.
+
+10.  Obesity.  I discussed with him the need to reduce weight but it has been stable for some time.
+
+11.  Adult health maintenance.  Tetanus up-to-date.  He has had endoscopy.  Guaiac cards given.  Screening blood work up-to-date.
+
+
+
+
+
+______________________________
+
+Matthew H Wyatt, M.D.
+
+
+
+
+
+
+
+
+
+
+
+eScription document:2-4489673 EMS
+
+
+
+
+
+
+
+DD: 03/31/77
+
+DT: 03/31/77
+
+DV: 03/31/77
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2077-03-31" TYPE="DATE" comment="" />
+<LOCATION id="P1" start="34" end="57" text="Notre Dame Nursing Home" TYPE="HOSPITAL" comment="" />
+<LOCATION id="P2" start="59" end="77" text="1410 Madera Circle" TYPE="STREET" comment="" />
+<NAME id="P3" start="91" end="105" text="POTTS, WILLIAM" TYPE="PATIENT" comment="" />
+<LOCATION id="P4" start="107" end="114" text="Hyannis" TYPE="CITY" comment="" />
+<LOCATION id="P5" start="116" end="118" text="NV" TYPE="STATE" comment="" />
+<LOCATION id="P6" start="120" end="125" text="21113" TYPE="ZIP" comment="" />
+<ID id="P7" start="145" end="153" text="10916758" TYPE="MEDICALRECORD" comment="" />
+<CONTACT id="P8" start="155" end="169" text="(391) 643-6925" TYPE="PHONE" comment="" />
+<DATE id="P9" start="190" end="200" text="03/31/2077" TYPE="DATE" comment="" />
+<NAME id="P10" start="239" end="244" text="Potts" TYPE="PATIENT" comment="" />
+<AGE id="P11" start="250" end="252" text="60" TYPE="AGE" comment="" />
+<DATE id="P12" start="576" end="580" text="2070" TYPE="DATE" comment="" />
+<NAME id="P15" start="2857" end="2861" text="Uren" TYPE="DOCTOR" comment="" />
+<NAME id="P16" start="3351" end="3366" text="Matthew H Wyatt" TYPE="DOCTOR" comment="" />
+<ID id="P17" start="3404" end="3413" text="2-4489673" TYPE="IDNUM" comment="" />
+<DATE id="P18" start="3429" end="3437" text="03/31/77" TYPE="DATE" comment="" />
+<DATE id="P19" start="3443" end="3451" text="03/31/77" TYPE="DATE" comment="" />
+<DATE id="P20" start="3457" end="3465" text="03/31/77" TYPE="DATE" comment="" />
+</TAGS>
+</deIdi2b2>

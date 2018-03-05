@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2120-07-12
+
+EDVISIT^57274347^Werner, Nancy^07/12/20^WILLIAMSON, PAUL
+
+I saw this patient with the resident.  Resident's history
+
+reviewed.  Patient interviewed and examined by me.
+
+HISTORY OF PRESENT ILLNESS:  This 78-year-old woman comes in with
+
+shortness of breath, midabdominal pain, and left hip pain for 2
+
+weeks.
+
+REVIEW OF SYSTEMS:  Includes some constipation and decreased
+
+appetite.  She has had some trauma about 10 days ago.
+
+She was seen at the Ihle Central Clinic earlier today.  The
+
+Emergency Department was overcrowded, and she was in the waiting
+
+room for almost 6 hours.
+
+PHYSICAL EXAMINATION:  She is obese with some minimal tenderness
+
+around the umbilicus.  No bony tenderness.  Several lesions on
+
+the legs.  Rales at bases. See the written notes for details.  
+
+DISPOSITION:  Admitted to hospital.
+
+CONDITION:  Satisfactory.
+
+DIAGNOSIS:  Congestive heart failure, Abdominal pain, Diabetes,
+
+Contusions from falls.
+
+______________________________
+
+WILLIAMSON, PAUL M.D.
+
+D: 07/12/20
+
+T: 07/13/20
+
+Dictated By: WILLIAMSON, PAUL
+
+eScription document:2-0605694 BFFocus
+
+
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2120-07-12" TYPE="DATE" comment="" />
+<ID id="P1" start="36" end="44" text="57274347" TYPE="MEDICALRECORD" comment="" />
+<NAME id="P2" start="45" end="58" text="Werner, Nancy" TYPE="PATIENT" comment="" />
+<DATE id="P3" start="59" end="67" text="07/12/20" TYPE="DATE" comment="" />
+<NAME id="P4" start="68" end="84" text="WILLIAMSON, PAUL" TYPE="DOCTOR" comment="" />
+<AGE id="P5" start="231" end="233" text="78" TYPE="AGE" comment="" />
+<LOCATION id="P6" start="474" end="493" text="Ihle Central Clinic" TYPE="HOSPITAL" comment="" />
+<NAME id="P7" start="987" end="1003" text="WILLIAMSON, PAUL" TYPE="DOCTOR" comment="" />
+<DATE id="P8" start="1013" end="1021" text="07/12/20" TYPE="DATE" comment="" />
+<DATE id="P9" start="1026" end="1034" text="07/13/20" TYPE="DATE" comment="" />
+<NAME id="P10" start="1049" end="1065" text="WILLIAMSON, PAUL" TYPE="DOCTOR" comment="" />
+<ID id="P11" start="1087" end="1096" text="2-0605694" TYPE="IDNUM" comment="" />
+</TAGS>
+</deIdi2b2>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2069-06-27
+
+EDVISIT^12953473^PICKETT, SHILPA^06/27/69^RICO, WILLARD
+
+The patient was seen with Dr. Mueller.  I confirmed her history and
+
+physical.  I also interviewed and examined the patient.  Please
+
+see her note for more details.
+
+HISTORY OF PRESENT ILLNESS:  This is a 77-year-old female with a
+
+several-week history of nausea, vomiting, abdominal pain, which
+
+has worsened over the past 3 days, per the patient and her son. 
+
+These episodes are "gassy feeling" in the epigastrium associated
+
+with nausea and vomiting and lightheadedness.  No chest pain, no
+
+shortness of breath.  Of note, the patient has a history of
+
+coronary artery disease with atypical symptoms.  She has also had
+
+a history of pancreatitis.
+
+PHYSICAL EXAMINATION:  She is awake and alert, in no distress at
+
+this time.  Afebrile with a pulse of 62, blood pressure 140/60,
+
+and O2 sat 100% on room air.  Neck is supple with no signs of
+
+meningismus.  Head is atraumatic.  Moist mucous membranes.  Lungs
+
+are clear to auscultation bilaterally.  Heart has regular rate
+
+and rhythm.  Abdomen is soft with mild epigastric tenderness to
+
+palpation.  No guarding or rebound on my exam.  Extremities are
+
+warm and well perfused.
+
+EMERGENCY DEPARTMENT COURSE:  The patient's IV access was
+
+established.  Labs were drawn revealing white count of 8,
+
+hematocrit of 39.  BUN and creatinine of 36 and 1.5, which is
+
+normal for the patient.  LFTs are normal.  Lipase is slightly
+
+elevated at 67.  Troponin less than assay.  Urinalysis 25-30
+
+white cells.  The patient's EKG was left bundle-branch block,
+
+which is unchanged.  KUB shows no air fluid levels.  This patient
+
+has a possible mild pancreatitis as well as a mild urinary tract
+
+infection.  In addition, she has multiple cardiac risk factors
+
+and an EKG, which will not allow for conventional cardiac stress
+
+testing.
+
+She will be admitted the hospital for enzymatic rule out MI with
+
+a possible necessity to have a stress MIBI as well as to give IV
+
+antibiotics for urinary tract infection and hydration and serial
+
+exams for her probable pancreatitis.  The patient was admitted to
+
+the floor in stable condition.
+
+ ******** Not reviewed by Attending Physician ********
+
+______________________________
+
+RICO, WILLARD MD
+
+D: 06/28/69
+
+T: 06/28/69
+
+Dictated By: RICO, WILLARD
+
+eScription document:3-4025432 BF
+
+
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2069-06-27" TYPE="DATE" comment="" />
+<ID id="P1" start="36" end="44" text="12953473" TYPE="MEDICALRECORD" comment="" />
+<NAME id="P2" start="45" end="60" text="PICKETT, SHILPA" TYPE="PATIENT" comment="" />
+<DATE id="P3" start="61" end="69" text="06/27/69" TYPE="DATE" comment="" />
+<NAME id="P4" start="70" end="83" text="RICO, WILLARD" TYPE="DOCTOR" comment="" />
+<NAME id="P5" start="115" end="122" text="Mueller" TYPE="DOCTOR" comment="" />
+<AGE id="P6" start="290" end="292" text="77" TYPE="AGE" comment="" />
+<NAME id="P7" start="2243" end="2256" text="RICO, WILLARD" TYPE="DOCTOR" comment="" />
+<DATE id="P8" start="2264" end="2272" text="06/28/69" TYPE="DATE" comment="" />
+<DATE id="P9" start="2277" end="2285" text="06/28/69" TYPE="DATE" comment="" />
+<NAME id="P10" start="2300" end="2313" text="RICO, WILLARD" TYPE="DOCTOR" comment="" />
+<ID id="P11" start="2335" end="2344" text="3-4025432" TYPE="IDNUM" comment="" />
+</TAGS>
+</deIdi2b2>

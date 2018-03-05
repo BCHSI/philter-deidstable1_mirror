@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2075-01-15
+
+                     AASC EMERGENCY DEPT VISIT
+ 
+QUIJANO,BAYLEE   853-62-51-4                    VISIT DATE: 01/15/75
+The patient was worked up in the emergency department by myself and 
+the resident, and I concur with her work up and evaluation in the 
+emergency department. 
+PRESENTING COMPLAINT:    Chest pain, shortness of breath, 
+productive cough. 
+HISTORY OF PRESENTING COMPLAINT:  This patient is a 60-year-old 
+female that presents to the emergency department at Associated Arthritis with complaints of chest pain, shortness of breath 
+and a cough productive of white sputum.  The patient denies fever 
+or chills.  She denies any other acute complaints. 
+PAST MEDICAL HISTORY:  Morbid obesity, congestive heart failure, 
+hypertension, rheumatoid arthritis. 
+MEDICATIONS:  Zestril, a water pill most likely Lasix, Motrin and 
+Tylenol. 
+ALLERGIES:  No known allergies. 
+PHYSICAL EXAMINATION:  VITAL SIGNS:  Temperature 99, pulse 85, 
+respiratory rate 16, blood pressure 214/117.  Oxygen saturation 92% 
+on two liters.  HEENT:  Normocephalic, atraumatic.  Pupils equal, 
+round, reactive.  Positive AV nicking.  NECK:  Positive for jugular 
+venous distension.  CHEST:  Rales audible bilaterally.  HEART: 
+Normal S1/S2.  No S3/S4.  No murmur.  ABDOMEN:  Soft, nontender. 
+EXTREMITIES:  Positive for 2-3+ pitting edema.  NEURO:  She was 
+awake, alert, and able to follow commands. 
+LABORATORY EVALUATION:  CK 84.  White count 10, hemoglobin 12, 
+hematocrit 42, platelet count 329.  Urinalysis noted 1+ blood in 
+her urine, however, overall, her urinalysis was negative.  Chest 
+x-ray which noted cardiomegaly with findings consistent with 
+congestive heart failure.  EKG noted no acute changes. 
+THERAPY RENDERED/COURSE IN ED:  The patient was given 40 mg of 
+Lasix IV initially.  For her chest pain, she was given sublingual 
+nitroglycerin.  She was also given one aspirin.  She had a 
+nitroglycerin patch placed in the emergency department. 
+FINAL DIAGNOSIS: 
+1. Congestive failure. 
+2. Chest pain, no evidence of an acute myocardial infarction. 
+DISPOSITION (including condition upon discharge):  The patient will 
+be admitted to the medicine service for further work up and 
+evaluation.  The patient is in stable condition. 
+___________________________________                    CY313/62627 
+O. DE OTIS, M.D.       DO36                       D:01/18/75 
+                                                       T:01/18/75 
+Dictated by:  O. DE OTIS, M.D.       DO36 
+ ******** Not reviewed by Attending Physician ********
+
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2075-01-15" TYPE="DATE" comment="" />
+<LOCATION id="P1" start="49" end="53" text="AASC" TYPE="HOSPITAL" comment="" />
+<NAME id="P2" start="77" end="91" text="QUIJANO,BAYLEE" TYPE="PATIENT" comment="" />
+<ID id="P3" start="94" end="105" text="853-62-51-4" TYPE="MEDICALRECORD" comment="" />
+<DATE id="P4" start="137" end="145" text="01/15/75" TYPE="DATE" comment="" />
+<AGE id="P5" start="435" end="437" text="60" TYPE="AGE" comment="" />
+<LOCATION id="P6" start="500" end="520" text="Associated Arthritis" TYPE="HOSPITAL" comment="" />
+<ID id="P7" start="2315" end="2326" text="CY313/62627" TYPE="IDNUM" comment="" />
+<NAME id="P8" start="2328" end="2338" text="O. DE OTIS" TYPE="DOCTOR" comment="" />
+<NAME id="P9" start="2351" end="2355" text="DO36" TYPE="USERNAME" comment="" />
+<DATE id="P10" start="2380" end="2388" text="01/18/75" TYPE="DATE" comment="" />
+<DATE id="P11" start="2447" end="2455" text="01/18/75" TYPE="DATE" comment="" />
+<NAME id="P12" start="2471" end="2481" text="O. DE OTIS" TYPE="DOCTOR" comment="" />
+<NAME id="P13" start="2494" end="2498" text="DO36" TYPE="USERNAME" comment="" />
+</TAGS>
+</deIdi2b2>

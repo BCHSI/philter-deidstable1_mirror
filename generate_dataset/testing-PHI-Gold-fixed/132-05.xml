@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2078-05-29
+
+EDVISIT^47190847^JORGENSON, VIVIANLEE^05/29/78^XUEREB, VESTER
+
+I saw this patient with Dr. Wendy Wu, resident.
+
+CHIEF COMPLAINT:  Chief complaint on the chart is ataxia, when I
+
+speak with the patient chief complaint is weakness.
+
+HISTORY OF PRESENT ILLNESS:  This 71-year-old female with a
+
+history of atrial fibrillation on Coumadin.  She presents with
+
+episodes of gait instability, diffuse weakness, multiple falls. 
+
+She was brought in by her family for further evaluation.  She
+
+also had dark stools over the past few weeks.  She denies any
+
+associated chest pain, shortness of breath, lightheadedness, any
+
+syncope, any nausea or vomiting.  She does have a bruise on her
+
+chin.  She denies any focal weakness, numbness, or tingling.  No
+
+hematuria, no epistaxis or gum bleeding.
+
+PAST MEDICAL HISTORY:  Congestive heart failure, atrial
+
+fibrillation, hypertension, coronary artery disease,
+
+hypercholesterolemia, and thyroid disease.
+
+SOCIAL HISTORY:  She lives with family.
+
+REVIEW OF SYSTEMS:  As noted in the written chart and the HPI,
+
+otherwise negative.
+
+MEDICATIONS:  Include ranitidine, baby aspirin, Coumadin, Lasix,
+
+and digoxin.
+
+ALLERGIES:  None.
+
+PHYSICAL EXAMINATION:  Temperature 96.5, pulse 60, respiratory
+
+rate 20, blood pressure 136/60, and oxygen 95% on room air. 
+
+General:  This is a pleasant female, elderly; she has got a 3-cm
+
+ecchymosis over her mid left chin as well as over her left
+
+shoulder.  Her pupils are reactive.  Neck is supple. 
+
+Respiratory:  Clear to auscultation.  Cardiovascular:  Regular
+
+rate.  Abdomen is soft.  Rectal is heme-positive, heme-positive
+
+melena per the resident.  Skin is otherwise with bruises over the
+
+left arm as well as a bruise over the right thumb that appears
+
+healing.  Extremities are with good range of motion.  No focal
+
+tenderness.  She is oriented x3.  Mood and affect are normal. 
+
+She is moving all extremities equally.
+
+LABORATORY DATA:  Chest x-ray shows no acute cardiomediastinal
+
+process and head CT preliminary shows no intracranial
+
+abnormalities.  Laboratory studies are remarkable for hematocrit
+
+of 16, creatinine of 1.5, BUN of 95, troponin less than 0.04, and
+
+platelets of 358.  INR of 2.  Urinalysis with 2+ ketones, no
+
+blood.
+
+INITIAL IMPRESSION AND PLAN:  This 71-year-old female presents
+
+with generalized weakness and gait instability and frequent
+
+falls, concerning for either an evolving intracranial process
+
+such as a subdural or stroke.  This has been going on for several
+
+weeks, however, but also presents with melena over the past
+
+several weeks and profound anemia for which she required
+
+transfusion in the Emergency Department.  We did order a CT of
+
+the brain to evaluate for intracranial injury or abnormality both
+
+given the frequent falls and as the cause of the falls.  This
+
+does not show any large subdural or mass lesion.  She is quite
+
+anemic has melanotic heme-positive stool.  I suspect this is the
+
+etiology, but it seems like it has been a slow progression, and
+
+concerned given her cardiac history also the weakness and could
+
+represent coronary insufficiency.  She does not have an elevated
+
+troponin at present.  She will need to be further monitored.  She
+
+was transfused here in the Emergency Department given her
+
+profoundly low hematocrit after consent was obtained. 
+
+Clinically, feels better.  I discussed with the patient's family
+
+because of the bleeding he will need to be evaluated as ____
+
+further cardiac biomarkers and further monitoring as well as
+
+physical therapy evaluation once the patient's acute medical
+
+issues have been addressed.  She will be admitted to the medical
+
+service with diagnosis of symptomatic anemia, gastrointestinal
+
+bleeding, congestive heart failure, and atrial fibrillation in
+
+stable condition.
+
+______________________________
+
+XUEREB, VESTER M.D.
+
+D: 05/29/78
+
+T: 05/30/78
+
+Dictated By: XUEREB, VESTER
+
+eScription document:9-7189367 BFFocus
+
+ ******** Not reviewed by Attending Physician ********
+
+
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2078-05-29" TYPE="DATE" comment="" />
+<ID id="P1" start="36" end="44" text="47190847" TYPE="MEDICALRECORD" comment="" />
+<NAME id="P2" start="45" end="65" text="JORGENSON, VIVIANLEE" TYPE="PATIENT" comment="" />
+<DATE id="P3" start="66" end="74" text="05/29/78" TYPE="DATE" comment="" />
+<NAME id="P4" start="75" end="89" text="XUEREB, VESTER" TYPE="DOCTOR" comment="" />
+<NAME id="P5" start="119" end="127" text="Wendy Wu" TYPE="DOCTOR" comment="" />
+<AGE id="P6" start="293" end="295" text="71" TYPE="AGE" comment="" />
+<AGE id="P7" start="2287" end="2289" text="71" TYPE="AGE" comment="" />
+<NAME id="P8" start="3825" end="3839" text="XUEREB, VESTER" TYPE="DOCTOR" comment="" />
+<DATE id="P9" start="3849" end="3857" text="05/29/78" TYPE="DATE" comment="" />
+<DATE id="P10" start="3862" end="3870" text="05/30/78" TYPE="DATE" comment="" />
+<NAME id="P11" start="3885" end="3899" text="XUEREB, VESTER" TYPE="DOCTOR" comment="" />
+<ID id="P12" start="3921" end="3930" text="9-7189367" TYPE="IDNUM" comment="" />
+</TAGS>
+</deIdi2b2>

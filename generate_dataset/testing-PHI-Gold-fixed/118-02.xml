@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2117-07-12
+
+
+
+  Date of Consult:   7/16/17                                    
+
+  Anthony Usrey  MRN: 644-48-77                                                                                                      
+
+Admit date:  7/12/17   Heather O. Shelton, N.P.                                                                		
+
+
+
+INDICATIONS FOR TPN:  Pancreatitis                                
+
+CLASSIFICATION OF MALNUTRITION: NSPCM  
+
+
+
+HPI:	Patient is a 54- year old male w/pancreatitis, NPO, was on TPN @ OSH. Transferred to PNC for further management. TPN off for 2 days (7/14-7/15), noPO's for about 15 days per pt. Anticipate NPO > 1wk. 
+
+
+
+PMH:	CHF, HTN, hyperlipidemia.
+
+PSH:   Aortic valve replacement 3/17, ERCP with sphincterotomy (7/07),
+
+           CABG.
+
+
+
+ROS:	CV:  Stable
+
+PULM:  On RA, O2 sats 96% on nebs.
+
+GI:    abdominal pain,    pancreatitis,    flatus, no BM, no N/V.
+
+	
+
+MEDICATIONS:  Rantidine, Abx, Heparin, Sliding scale.
+
+ALLERGIES:    NKDA 
+
+
+
+PERTINENT LAB DATA: Na: 138  K: 3.3   CL: 102   HC03: 26.3  BUN: 12  CREAT: 0.8  Glucose: 121  Ca: 7.8 PHOS: 2.6  MG: 1.5   Alb: 2.3  Amy/Lips 162/34.9   Check Trigs.  Last 157 @ 7/14.  
+
+
+
+ANTHROPMETRICS	HT: 5' 11"	WT: 215 lbs. /98 Kg	
+
+IBW: 172lbs. / 78 Kg       126 % IBW     ABW:  183 lbs ./ 83 Kg
+
+Wt. Change stable   Body Mass Index (BMI)   30   (30-34.9 obese)
+
+Estimated Nutritional Requirements:  Maintenance 		
+
+FLUID:   25-30cc/Kg = 2075-2490cc/day   Kcal/Kg Range:  25Kcal/Kg = 
+
+2075 Kcal     
+
+
+
+Protein Requirements: (1- 1.5 gms/Kg/day) = 83 - 125 gms/day.
+
+
+
+PHYSICAL EXAM: General:  Large male lying in bed in mild distress.
+
+
+
+HR: 89  BP: 130/62   RR 18   T 98?  CV: RRR  Resp: (B) expiratory
+
+wheezes.        
+
+
+
+GI/GU: Abdomen distended, firm,    tenderness,    BS.   Skin:  Warm,
+
+dry, no rashes. 
+
+
+
+ASSESSMENT & PLAN	Patient will be started on  70/100/25  per liter  at 50 cc/hr.  This will provide the patient with 84 gms of protein and 1044 Kcals/day.  Adjust to goal.
+
+
+
+TPN Goal:   2075 Kcal (=25 Kcal/Kg) / protein 125 gm (= 1.5 gm/kg)                                
+
+				
+
+VENOUS ACCESS (x) PICC LINE   (   ) HICKMAN   (   ) PA LINE   (   ) TLC   
+
+ (  )  PORTCATH            Triple lumen PICC confirmed in PNC.
+
+
+
+
+
+Charles Zylstra, RPH, BCNSP/NSU
+
+Iman Anders, (65985)
+
+___________________
+
+Signature of Examiner
+
+
+
+
+
+
+
+______________________________________________
+
+Gianna Irish, M.D.
+
+
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2117-07-12" TYPE="DATE" comment="" />
+<DATE id="P1" start="51" end="58" text="7/16/17" TYPE="DATE" comment="" />
+<NAME id="P2" start="98" end="111" text="Anthony Usrey" TYPE="PATIENT" comment="" />
+<ID id="P3" start="118" end="127" text="644-48-77" TYPE="MEDICALRECORD" comment="" />
+<DATE id="P4" start="244" end="251" text="7/12/17" TYPE="DATE" comment="" />
+<NAME id="P5" start="254" end="272" text="Heather O. Shelton" TYPE="DOCTOR" comment="" />
+<AGE id="P6" start="477" end="479" text="54" TYPE="AGE" comment="" />
+<LOCATION id="P7" start="549" end="552" text="PNC" TYPE="HOSPITAL" comment="" />
+<DATE id="P8" start="597" end="601" text="7/14" TYPE="DATE" comment="" />
+<DATE id="P9" start="602" end="606" text="7/15" TYPE="DATE" comment="" />
+<DATE id="P10" start="732" end="736" text="3/17" TYPE="DATE" comment="" />
+<DATE id="P11" start="764" end="768" text="7/07" TYPE="DATE" comment="" />
+<DATE id="P12" start="1173" end="1177" text="7/14" TYPE="DATE" comment="" />
+<LOCATION id="P13" start="2231" end="2234" text="PNC" TYPE="HOSPITAL" comment="" />
+<NAME id="P14" start="2241" end="2256" text="Charles Zylstra" TYPE="DOCTOR" comment="" />
+<NAME id="P15" start="2274" end="2285" text="Iman Anders" TYPE="DOCTOR" comment="" />
+<CONTACT id="P16" start="2288" end="2293" text="65985" TYPE="PHONE" comment="" />
+<NAME id="P17" start="2394" end="2406" text="Gianna Irish" TYPE="DOCTOR" comment="" />
+</TAGS>
+</deIdi2b2>

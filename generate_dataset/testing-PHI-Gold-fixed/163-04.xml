@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2083-11-01
+
+
+
+Westwing Place Nursing Home
+
+144 Chablis Court                                    GERALD, MARION
+
+Doha, KY 63216                            48967301
+
+(638) 074-1457                                           11/01/83
+
+(449) 515-0294
+
+
+
+REASON FOR VISIT:  Follow up coronary disease and diabetes.
+
+
+
+HISTORY OF PRESENT ILLNESS:
+
+1.  The patient underwent an angioplasty on 10/07/83 and comes in
+
+today having just had a stress test.  Stress test showed that she
+
+was able to do a standard Bruce protocol for 7 minutes 34 seconds
+
+achieving maximal heart rate of 116, peak blood pressure 122/60,
+
+stopped for fatigue.  Immediately after exercise, she did have
+
+some substernal chest pain, resolved 3 minutes into recovery. 
+
+There were no EKG changes.  The patient reports that she has been
+
+walking and has resumed her normal pre-hospitalization exercise
+
+level and does not have any chest discomfort with walk, which had
+
+precipitated the hospitalization initially.  She is looking into
+
+cardiac rehab program but is not sure that she needs to do this. 
+
+She feels very comfortable with her current exercise regimen. 
+
+She has been careful with her eating and feels she is living a
+
+healthy lifestyle.  She has returned to work.  She has follow up
+
+scheduled with Dr. Schaefer in two days' time.
+
+2.  Diabetes:  At last visit, I had added glyburide 5 mg to her
+
+Glucophage 2000 mg a day.  She monitors blood sugars but only in
+
+the morning.  Evening blood sugars are mostly in 90s to low 100s.
+
+ However, at times during the day, she feels hypoglycemically
+
+sweating and abdominal discomfort.  She has never actually
+
+checked her blood sugar during these episodes as they tend to
+
+occur at work.  She has not had any fainting or dizziness.
+
+3.  Elevated cholesterol, is tolerating Zetia.
+
+4.  Hypertension.  At last visit, we decreased her Avapro dose
+
+because her blood pressure was quite low at 100/64, and
+
+currently, she feels somewhat less fatigued.
+
+
+
+CURRENT MEDICATIONS:  Glyburide 5 mg q.d., Plavix 75 mg q.d.,
+
+atenolol 50 mg q.d., Zetia 10 mg q.d., levoxyl 50 mcg q.d.,
+
+Prilosec 20 mg q.d., Flexeril 10 mg q.d., Bumex 2 mg q.d.,
+
+Pravachol 20 mg two tablets q.h.s., Avapro 75 mg q.d., Glucophage
+
+500 mg two tablets b.i.d., and enteric-coated aspirin.
+
+
+
+DRUG ALLERGIES:  None.
+
+
+
+REVIEW OF SYSTEMS:  She denies chest pain, palpitation, shortness
+
+of breath, abdominal pain, or joint pain.
+
+
+
+PHYSICAL EXAMINATION:  She appears in excellent health and in
+
+good spirits.  Weight is 145, blood pressure 120/68, and pulse is
+
+70 and regular.  Conjunctivae are clear.  Sclerae are anicteric. 
+
+Neck is supple.  No neck vein distention.  Chest is clear to
+
+percussion and auscultation.  Heart: Regular rhythm.  S1 and S2. 
+
+No murmur, rub, thrill, or gallop.  Extremities are without
+
+clubbing, cyanosis, or edema.
+
+
+
+IMPRESSION AND PLAN:
+
+1.  Coronary disease, doing well, status post recent angioplasty
+
+with stenting.  Maintaining current medications of Dr. Schaefer. 
+
+At this point, I am not sure that she actually does need cardiac
+
+rehab, and we will defer that decision to him.
+
+2.  Diabetes, seems as though her control is 
+
+impressive, perhaps with recent change in her diet.  We will
+
+discontinue the glyburide and follow up in 4 weeks.
+
+3.  Elevated cholesterol.  We will check on lipid status in four
+
+weeks' time.  On current medications with target of LDL less than
+
+100.
+
+4.  Hypertension.  Blood pressure acceptable on current medical
+
+regimen.
+
+
+
+
+
+
+
+
+
+
+
+______________________________
+
+E Xochil Higgins, M.D.
+
+
+
+
+
+Dictated By: E Xochil Higgins
+
+
+
+
+
+eScription document:4-4587137 EMSSten Tel
+
+
+
+
+
+
+
+DD: 11/01/83
+
+DT: 11/01/83
+
+DV: 11/01/83
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2083-11-01" TYPE="DATE" comment="" />
+<LOCATION id="P1" start="30" end="57" text="Westwing Place Nursing Home" TYPE="HOSPITAL" comment="" />
+<LOCATION id="P2" start="59" end="76" text="144 Chablis Court" TYPE="STREET" comment="" />
+<NAME id="P3" start="112" end="126" text="GERALD, MARION" TYPE="PATIENT" comment="" />
+<LOCATION id="P4" start="128" end="132" text="Doha" TYPE="CITY" comment="" />
+<LOCATION id="P5" start="134" end="136" text="KY" TYPE="STATE" comment="" />
+<LOCATION id="P6" start="137" end="142" text="63216" TYPE="ZIP" comment="" />
+<ID id="P7" start="170" end="178" text="48967301" TYPE="MEDICALRECORD" comment="" />
+<CONTACT id="P8" start="180" end="194" text="(638) 074-1457" TYPE="PHONE" comment="" />
+<DATE id="P9" start="237" end="245" text="11/01/83" TYPE="DATE" comment="" />
+<CONTACT id="P10" start="247" end="261" text="(449) 515-0294" TYPE="PHONE" comment="" />
+<DATE id="P11" start="401" end="409" text="10/07/83" TYPE="DATE" comment="" />
+<NAME id="P12" start="1297" end="1305" text="Schaefer" TYPE="DOCTOR" comment="" />
+<NAME id="P13" start="2997" end="3005" text="Schaefer" TYPE="DOCTOR" comment="" />
+<NAME id="P14" start="3541" end="3557" text="E Xochil Higgins" TYPE="DOCTOR" comment="" />
+<NAME id="P15" start="3582" end="3598" text="E Xochil Higgins" TYPE="DOCTOR" comment="" />
+<ID id="P16" start="3624" end="3633" text="4-4587137" TYPE="IDNUM" comment="" />
+<DATE id="P17" start="3657" end="3665" text="11/01/83" TYPE="DATE" comment="" />
+<DATE id="P18" start="3671" end="3679" text="11/01/83" TYPE="DATE" comment="" />
+<DATE id="P19" start="3685" end="3693" text="11/01/83" TYPE="DATE" comment="" />
+</TAGS>
+</deIdi2b2>

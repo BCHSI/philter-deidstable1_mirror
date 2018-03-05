@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2074-10-20
+
+
+
+
+NAME:     Fonsea, Lydia
+MRN:      7090253
+
+The patient is a 58-year-old white female, who presents in follow up of type 2
+diabetes mellitus.  
+
+REVIEW OF SYSTEMS: Review of systems is positive for mild nocturia and
+negative for chest pain, dyspnea, bleeding, heat or cold intolerance.
+
+HOME BLOOD GLUCOSE MONITORING: Semi-compliant.
+
+DIET: Semi-compliant with low-salt ADA.
+
+ACTIVITY LEVEL: METS 2. 
+
+PHYSICAL EXAMINATION: Vital signs: Blood pressure 114/68. Weight 198
+pounds.  Heart rate 68. Respiratory rate 18. General appearance: Overweight. 
+HEENT: No retinal bleeding.  Neck: No JVD, no bruits, no masses.  Heart: Heart
+sounds normal. Lungs: Clear. Extremities: No peripheral edema.
+
+ASSESSMENT AND PLAN:  
+
+(1)  Type 2 diabetes mellitus.  I suspect the control is not adequate.  The last
+     hemoglobin A1C was 7.9% on 04/29/73.  Plan: Repeat hemoglobin A1C. 
+     Diet and increase activity level.  She most likely is going to need a second
+     nighttime injection. 
+
+(2)  Depression.  Plan: Continue the same medications.  
+
+(3)  Mild diabetic nephropathy.  Plan: Check urine microalbumin.  Blood
+     pressure is excellent today.  
+
+(4)  Health maintenance.  The patient will need a lipid profile and flu vaccine.
+
+The patient will follow up in one month.
+
+Austin Jaeger, M.D.
+
+AJ/yeung/updegraff
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2074-10-20" TYPE="DATE" comment="" />
+<NAME id="P1" start="41" end="54" text="Fonsea, Lydia" TYPE="PATIENT" comment="" />
+<ID id="P2" start="65" end="72" text="7090253" TYPE="MEDICALRECORD" comment="" />
+<AGE id="P3" start="91" end="93" text="58" TYPE="AGE" comment="" />
+<DATE id="P4" start="859" end="867" text="04/29/73" TYPE="DATE" comment="" />
+<NAME id="P5" start="1301" end="1314" text="Austin Jaeger" TYPE="DOCTOR" comment="" />
+<NAME id="P6" start="1322" end="1324" text="AJ" TYPE="DOCTOR" comment="" />
+<NAME id="P7" start="1325" end="1330" text="yeung" TYPE="DOCTOR" comment="" />
+<NAME id="P8" start="1331" end="1340" text="updegraff" TYPE="DOCTOR" comment="" />
+</TAGS>
+</deIdi2b2>

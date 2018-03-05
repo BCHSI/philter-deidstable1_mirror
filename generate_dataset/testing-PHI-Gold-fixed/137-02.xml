@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2068-12-12
+
+
+
+
+
+
+
+Eudowood Services Physician Group
+128 Williams Ct              M OSCAR, JOHNNY
+Hyderabad, WI  62297                    76324418
+547-598-7353                     12/12/2068
+
+
+
+
+HISTORY OF PRESENT ILLNESS:  The patient is a 59-year-old white male who comes to the office for reevaluation regarding his diabetes.  He also has high blood pressure and coronary artery disease.
+
+
+Diabetes.  The patient is trying to adhere to his diet.  He stays on his usual medicines, which include Glucophage and glyburide.  He takes an aspirin regularly and he is on his blood pressure medicines.  He does not smoke.  He follows closely his foot regimen and had not noticed any difficulty.  He sees a foot doctor.  He has not seen an eye doctor recently.  He has not been to the Jay Hospital for his routine followup and says he will start setting up appointments with the diabetes group out in Littleton, Wisconsin where he lives.  The patient specifically denies any increased thirst or urination.  His blood sugars taken at home are approximately 140-160 on a fasting basis.  He has not had any episodes of hypoglycemia.
+
+
+Coronary artery disease.  The patient is also followed by Dr. Garza.  He does stay on his Plavix and aspirin and also is on other medicines including atenolol, hydrochlorothiazide, Norvasc, Vasotec and he has not needed any nitroglycerin.  He still does complain of some nonspecific chest type discomfort for which he was evaluated by Dr. Garza last spring.  He had a cardiac catheterization.
+
+
+Elevated cholesterol.  The patient does take the Lipitor.  He does not have any muscle aches.
+
+
+Slightly elevated liver function tests.  He had a history of fatty liver.
+
+
+Obstructive sleep apnea.  The patient refuses to take CPAP.
+
+
+REVIEW OF SYSTEMS:  Reveals no headaches, no difficulty with the ears, nose or throat.  No neck pain, no chronic cough or sputum production and no chest pains or palpitations.  No nausea, vomiting, black or bloody stools.  No burning on urination.  His weight has been fairly stable.
+
+
+PHYSICAL EXAMINATION:  Showed a pleasant white male in no acute distress.  Blood pressure taken by me 132/76, pulse 72 and weight 206 pounds.  Skin was moist and warm without any specific lesions.  Head, ears, eyes, nose and throat were normal.  Neck showed no thyroid nodes or tenderness.  No bruits were heard.  Lungs were clear to percussion and auscultation.  Heart showed a regular sinus rhythm.  S1, S2 were normal.  Abdomen was soft, no liver or spleen was felt.  Chest wall without any pain secondary to his prior coronary artery bypass graft surgery.  Extremities showed pulses to be satisfactory.  His feet were warm.  There was no sign of infection.  Neurologic, well oriented.  Light touch was found easily in his feet.
+
+
+IMPRESSION:  Overall, the patient is satisfied with his health.  He has followup appointment with the cardiologist and needs to follow up with the eye doctor as well.  He will set up a diabetes follow up at the Rappahannock Medical Clinic.
+
+
+DISCHARGE DIAGNOSES:
+1.  Diabetes mellitus, on oral hypoglycemic medicines, will recheck his hemoglobin A1c, recheck his urine and urine for protein.
+
+
+The patient does take his enalapril regularly as well.
+
+
+2.Coronary artery disease on multiple medicines without any severe angina.  He is followed by Dr. Garza.  His weight has been fairly stable.  He has not needed to use his nitroglycerin.
+
+
+3.Obstructive sleep apnea.  The patient refuses to take the therapy.
+
+
+Elevated cholesterol, on Lipitor.
+
+
+Essential hypertension on medicine.
+
+
+Left kidney mass.  Dr. Jefferson did not feel this was any real finding.
+
+
+Follow up will be in four to six months in my office for a comprehensive exam.
+
+
+Routine laboratory test including CBC, hemoglobin A1c, comprehensive metabolic profile, lipid panel, urinalysis, TSH, urine microalbumin and PSA were ordered today.
+
+
+
+
+______________________________
+Todd Brandt, M.D.
+
+
+
+
+
+
+
+
+
+
+eScription document:4-4822140 CSSten Tel
+
+
+
+
+
+
+DD: 12/12/68
+DT: 12/12/68
+DV: 12/12/68
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2068-12-12" TYPE="DATE" comment="" />
+<LOCATION id="P1" start="34" end="51" text="Eudowood Services" TYPE="HOSPITAL" comment="" />
+<LOCATION id="P2" start="68" end="83" text="128 Williams Ct" TYPE="STREET" comment="" />
+<NAME id="P3" start="97" end="112" text="M OSCAR, JOHNNY" TYPE="PATIENT" comment="" />
+<LOCATION id="P4" start="113" end="122" text="Hyderabad" TYPE="CITY" comment="" />
+<LOCATION id="P5" start="124" end="126" text="WI" TYPE="STATE" comment="" />
+<LOCATION id="P6" start="128" end="133" text="62297" TYPE="ZIP" comment="" />
+<ID id="P7" start="153" end="161" text="76324418" TYPE="MEDICALRECORD" comment="" />
+<CONTACT id="P8" start="162" end="174" text="547-598-7353" TYPE="PHONE" comment="" />
+<DATE id="P9" start="195" end="205" text="12/12/2068" TYPE="DATE" comment="" />
+<AGE id="P10" start="256" end="258" text="59" TYPE="AGE" comment="" />
+<LOCATION id="P11" start="794" end="806" text="Jay Hospital" TYPE="HOSPITAL" comment="" />
+<LOCATION id="P12" start="910" end="919" text="Littleton" TYPE="CITY" comment="" />
+<LOCATION id="P13" start="921" end="930" text="Wisconsin" TYPE="STATE" comment="" />
+<NAME id="P14" start="1203" end="1208" text="Garza" TYPE="DOCTOR" comment="" />
+<NAME id="P15" start="1480" end="1485" text="Garza" TYPE="DOCTOR" comment="" />
+<DATE id="P16" start="1491" end="1497" text="spring" TYPE="DATE" comment="" />
+<LOCATION id="P17" start="3001" end="3028" text="Rappahannock Medical Clinic" TYPE="HOSPITAL" comment="" />
+<NAME id="P18" start="3339" end="3344" text="Garza" TYPE="DOCTOR" comment="" />
+<NAME id="P19" start="3597" end="3606" text="Jefferson" TYPE="DOCTOR" comment="" />
+<NAME id="P20" start="3930" end="3941" text="Todd Brandt" TYPE="DOCTOR" comment="" />
+<ID id="P21" start="3978" end="3987" text="4-4822140" TYPE="IDNUM" comment="" />
+<DATE id="P22" start="4009" end="4017" text="12/12/68" TYPE="DATE" comment="" />
+<DATE id="P23" start="4022" end="4030" text="12/12/68" TYPE="DATE" comment="" />
+<DATE id="P24" start="4035" end="4043" text="12/12/68" TYPE="DATE" comment="" />
+</TAGS>
+</deIdi2b2>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2155-05-17
+
+
+
+
+
+
+
+
+
+17 May 2155
+
+
+
+
+
+Brandon Ponce, MD
+
+974 Parkhurst Drive
+
+Peculiar, NE 54583
+
+
+
+Re:	Jarome DEJESUS
+
+	ECI 280-44-07-1
+
+
+
+Dear Dr. Ponce:
+
+
+
+I had the pleasure of caring for Mr. Dejesus during his ECI admission 05/16-07/14.  He is a 72-year-old man with CAD S/P diagnostic cath one week ago at SCMHC, found to have a moderately tight lesion in the LAD without significant disease in the left circumflex or RCA.  Because of the recent onset of angina and a stress test showing anterior ischemia, he was brought to ECI, where Dr. Yoseph Flint stented the LAD lesion with a 3.5mm by 32mm Taxus drug-eluting stent, with zero percent residual.  The right femoral arteriotomy was closed with an Angioseal, and there were no complications.  
+
+
+
+He spent an uneventful evening without complaints, ambulating without difficulty.  His left groin was soft without hematoma or bruit, and extremities were warm and well perfused.  Morning labs included a BUN of 17, creatinine 0.9, hematocrit 37, platelets 236,000, and flat cardiac enzymes.  He was discharged home on Plavix, 75mg po qd for a minimum of six months; enteric-coated aspirin, 325mg po qd; digoxin, 0.25mg po qd; glyburide, 5mg po bid; metoprolol, 50mg po bid; Lipitor, 20mg po qd; Tikosyn, 500mcg po bid; Glucophage, to be resumed at 500mg po bid in two days; and Coumadin, to be resumed tonight.  He has PT/INR check arranged in several days.  He will follow up with you in the next two weeks, and will see his PMD, Dr. Paige, in the near future.  Thank you for allowing us to participate in his care.  Please call if you have questions.
+
+
+
+Sincerely,
+
+
+
+
+
+
+
+Barbara A. Rhoades, MD
+
+
+
+BAR/pham
+
+cc:	Robert-Joseph Paige, MD, 558 Paxton Terrace, Peculiar, NE 54583
+
+
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2155-05-17" TYPE="DATE" comment="" />
+<DATE id="P1" start="36" end="47" text="17 May 2155" TYPE="DATE" comment="" />
+<NAME id="P2" start="53" end="66" text="Brandon Ponce" TYPE="DOCTOR" comment="" />
+<LOCATION id="P3" start="72" end="91" text="974 Parkhurst Drive" TYPE="STREET" comment="" />
+<LOCATION id="P4" start="93" end="101" text="Peculiar" TYPE="CITY" comment="" />
+<LOCATION id="P5" start="103" end="105" text="NE" TYPE="STATE" comment="" />
+<LOCATION id="P6" start="106" end="111" text="54583" TYPE="ZIP" comment="" />
+<NAME id="P7" start="119" end="133" text="Jarome DEJESUS" TYPE="PATIENT" comment="" />
+<LOCATION id="P8" start="136" end="139" text="ECI" TYPE="HOSPITAL" comment="" />
+<ID id="P9" start="140" end="151" text="280-44-07-1" TYPE="MEDICALRECORD" comment="" />
+<NAME id="P10" start="164" end="169" text="Ponce" TYPE="DOCTOR" comment="" />
+<NAME id="P11" start="211" end="218" text="Dejesus" TYPE="PATIENT" comment="" />
+<LOCATION id="P12" start="230" end="233" text="ECI" TYPE="HOSPITAL" comment="" />
+<DATE id="P13" start="244" end="249" text="05/16" TYPE="DATE" comment="" />
+<DATE id="P14" start="250" end="255" text="07/14" TYPE="DATE" comment="" />
+<AGE id="P15" start="266" end="268" text="72" TYPE="AGE" comment="" />
+<LOCATION id="P16" start="327" end="332" text="SCMHC" TYPE="HOSPITAL" comment="" />
+<LOCATION id="P17" start="546" end="549" text="ECI" TYPE="HOSPITAL" comment="" />
+<NAME id="P18" start="561" end="573" text="Yoseph Flint" TYPE="DOCTOR" comment="" />
+<NAME id="P19" start="1506" end="1511" text="Paige" TYPE="DOCTOR" comment="" />
+<NAME id="P20" start="1645" end="1663" text="Barbara A. Rhoades" TYPE="DOCTOR" comment="" />
+<NAME id="P21" start="1671" end="1674" text="BAR" TYPE="DOCTOR" comment="" />
+<NAME id="P22" start="1675" end="1679" text="pham" TYPE="DOCTOR" comment="" />
+<NAME id="P23" start="1685" end="1704" text="Robert-Joseph Paige" TYPE="DOCTOR" comment="" />
+<LOCATION id="P24" start="1710" end="1728" text="558 Paxton Terrace" TYPE="STREET" comment="" />
+<LOCATION id="P25" start="1730" end="1738" text="Peculiar" TYPE="CITY" comment="" />
+<LOCATION id="P26" start="1740" end="1742" text="NE" TYPE="STATE" comment="" />
+<LOCATION id="P27" start="1743" end="1748" text="54583" TYPE="ZIP" comment="" />
+</TAGS>
+</deIdi2b2>

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2084-05-12
+
+                                                          (958) 291-8310
+GEORGIA REGIONAL HOSPITAL
+May 12, 2084 
+ 
+ 
+ 
+Brit Eastman, M.D.
+3793 Rhode Island Avenue
+East Stroudsburg, GA  13756
+ 
+RE:  Lara, Uriah
+MRN: 62115644
+ 
+Dear Dr. Eastman:
+ 
+Thank you very much for referring Uriah Lara to the Georgia Regional.  He's a 51 year old male who approximately 2 weeks ago developed 
+a pain and stiffness in his neck that limits his range of motion.  
+Approximately 5 days ago he developed acute, severe and boring pain at 
+the right trapezius and medial scapular that limits his ability to sleep 
+and function.  Toradol, anti-inflammatory muscle relaxants and Percocet 
+were of minimal help.  He had no other constitutional symptoms; fevers, 
+rashes.  He had noticed some numbness and tingling down the right 5th 
+finger and the pain would often travel down the outer part of the 
+triceps region to the elbow and down to the right 5th finger.  He notes 
+certain positions will alleviate the pain.  He then presented to a 
+chiropractor on Saturday who manipulated his back, obtained x-rays which 
+showed no abnormality.  Sunday, he received another manipulation and on 
+Sunday night he was abdominal to sleep through the night.  This morning 
+he states he had no pain in his neck, however, in mid-morning he did 
+have recurrent pain.  He presents today for management treatment of his 
+disorder.
+ 
+ALLERGIES:  No known drug allergies.
+ 
+MEDICATIONS:  Flurazepam 20mg. at night.
+ 
+PAST SURGICAL HISTORY:  History is significant for repair of a right 
+femoral compound fracture approximately 2 years ago and breast reduction 
+surgery.
+ 
+PAST MEDICAL HISTORY:  Significant for pulmonary embolism after his 
+orthopedic surgery.
+ 
+SOCIAL HISTORY:  The patient works as a pilot for Frontier Airlines.  He is married and has 3 children who are healthy.  He 
+smokes a pipe.
+ 
+FAMILY HISTORY:  He has one sister who has had a radiculopathy.  Mother 
+is alive and well at 86.  Father died of an MI. 
+ 
+Brit Eastman, M.D.
+May 12, 2084 
+Page 2
+ 
+ 
+ 
+PHYSICAL EXAMINATION:  On examination, blood pressure is 140/90.  HEENT 
+examination was otherwise normal. Posture is somewhat stooped.  
+Examination of the joints reveal deformity and swelling of the right 3rd 
+PIP.  Has normal DIPs, PIPs, MCPs, wrists, elbows and shoulders.  Normal 
+hips, knees, ankles and toes.  In the effected arm, he has normal elbow, 
+normal triceps and biceps reflexes.  Normal brachioradialis reflexes.  
+He has normal sensation in his hand.  He has weakness of the right hand 
+intrinsic muscles and palpation in the medial muscle has felt an 
+improvement in the pain. 
+ 
+IMPRESSION:  Mr. Lara, I believe, has an acute radiculopathy of the 
+a-cervical nerve.  I informed him that this will get better and that it 
+was probably brought on by his antecedent muscle spasm.
+ 
+PLAN:  We prescribed a neck collar, Indocin 50 TID, Flexeril 10 TID and 
+I gave him additional Percocet.  I also prescribed a course of physical 
+therapy with ultrasound and massage.
+ 
+ 
+He will call me in one week and return in roughly 2 weeks.
+ 
+Sincerely yours,
+ 
+ 
+ 
+Olivia Levin, M.D. 
+ 
+KQ:BU:1592
+DD:5-12-84
+DT:5-13-84
+ ******** Approved but not reviewed by Attending Provider ********
+
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2084-05-12" TYPE="DATE" comment="" />
+<CONTACT id="P1" start="86" end="100" text="(958) 291-8310" TYPE="PHONE" comment="" />
+<LOCATION id="P2" start="101" end="126" text="GEORGIA REGIONAL HOSPITAL" TYPE="HOSPITAL" comment="" />
+<DATE id="P3" start="127" end="139" text="May 12, 2084" TYPE="DATE" comment="" />
+<NAME id="P4" start="147" end="159" text="Brit Eastman" TYPE="DOCTOR" comment="" />
+<LOCATION id="P5" start="166" end="190" text="3793 Rhode Island Avenue" TYPE="STREET" comment="" />
+<LOCATION id="P6" start="191" end="207" text="East Stroudsburg" TYPE="CITY" comment="" />
+<LOCATION id="P7" start="209" end="211" text="GA" TYPE="STATE" comment="" />
+<LOCATION id="P8" start="213" end="218" text="13756" TYPE="ZIP" comment="" />
+<NAME id="P9" start="226" end="237" text="Lara, Uriah" TYPE="PATIENT" comment="" />
+<ID id="P10" start="243" end="251" text="62115644" TYPE="MEDICALRECORD" comment="" />
+<NAME id="P11" start="263" end="270" text="Eastman" TYPE="DOCTOR" comment="" />
+<NAME id="P12" start="308" end="318" text="Uriah Lara" TYPE="PATIENT" comment="" />
+<LOCATION id="P13" start="326" end="342" text="Georgia Regional" TYPE="HOSPITAL" comment="" />
+<AGE id="P14" start="352" end="354" text="51" TYPE="AGE" comment="" />
+<DATE id="P15" start="1065" end="1073" text="Saturday" TYPE="DATE" comment="" />
+<DATE id="P16" start="1147" end="1153" text="Sunday" TYPE="DATE" comment="" />
+<DATE id="P17" start="1196" end="1202" text="Sunday" TYPE="DATE" comment="" />
+<PROFESSION id="P18" start="1792" end="1797" text="pilot" TYPE="PROFESSION" comment="" />
+<LOCATION id="P19" start="1802" end="1819" text="Frontier Airlines" TYPE="ORGANIZATION" comment="" />
+<AGE id="P20" start="1988" end="1990" text="86" TYPE="AGE" comment="" />
+<NAME id="P21" start="2018" end="2030" text="Brit Eastman" TYPE="DOCTOR" comment="" />
+<DATE id="P22" start="2037" end="2049" text="May 12, 2084" TYPE="DATE" comment="" />
+<NAME id="P23" start="2680" end="2684" text="Lara" TYPE="PATIENT" comment="" />
+<NAME id="P24" start="3134" end="3146" text="Olivia Levin" TYPE="DOCTOR" comment="" />
+<ID id="P25" start="3156" end="3166" text="KQ:BU:1592" TYPE="IDNUM" comment="" />
+<DATE id="P26" start="3170" end="3177" text="5-12-84" TYPE="DATE" comment="" />
+<DATE id="P27" start="3181" end="3188" text="5-13-84" TYPE="DATE" comment="" />
+</TAGS>
+</deIdi2b2>

@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2090-12-14
+
+EDVISIT^43294739^FINNEY, INDIANA^12/15/90^MARTIN, CONSTANCE
+
+HISTORY OF PRESENT ILLNESS:  The patient is a 53-year-old female
+
+with a history of insulin-dependent diabetes, hypertension and
+
+atrial fibrillation who comes in to the ER complaining of
+
+sensation of a racing heart since 5:10 p.m. in the evening.  She
+
+said it was acute onset and felt like palpitations.  She also
+
+said it felt like a burning.  She had mild shortness of breath
+
+and left arm achiness.  She had no nausea, no vomiting, no fevers
+
+or chills.  She had no trauma, no lightheadedness, and no
+
+syncope.
+
+PAST MEDICAL HISTORY:  Hypertension, insulin-dependent diabetes,
+
+and atrial fibrillation.
+
+PAST SURGICAL HISTORY:  Not related.
+
+SOCIAL HISTORY:  No tobacco or occasional alcohol.
+
+FAMILY HISTORY:  Reviewed and noncontributory.
+
+REVIEW OF SYSTEMS:  Palpitations, otherwise negative.
+
+MEDICATIONS:  Metoprolol, the patient missed two doses today,
+
+aspirin, simvastatin, glyburide and NovoLog.
+
+ALLERGIES:  Erythromycin and IV dye.
+
+PHYSICAL EXAMINATION:  Temperature 97, heart rate 155,
+
+respiratory rate 18, blood pressure 136/52, O2 100% on 2 liters. 
+
+The patient is awake and alert, well developed, well nourished,
+
+talking in complete sentences, in no acute distress.  ENT: 
+
+Atraumatic, normal to inspection.  Eyes are normal.  Neck: 
+
+Normal to inspection, supple, and nontender.  Respiratory:  Clear
+
+to auscultation bilaterally.  Cardiovascular:  Regular rate and
+
+rhythm.  No murmurs, rubs, or gallops.  GI:  Abdomen is soft and
+
+nontender.  Skin is intact, warm, and dry.  Back is nontender. 
+
+Musculoskeletal:  No lower extremity swelling or edema. 
+
+Neuropsychiatric:  Oriented x3.  Mood and affect is normal. 
+
+Cranial nerves II through XII tested and intact.  No motor or
+
+sensory deficits.
+
+EMERGENCY DEPARTMENT COURSE:  Initial EKG showed a rate of about
+
+150, unclear.  It seemed that there was T waves in V3.  There is
+
+no evidence of ST elevation MI.  We thought this could be an SVT.
+
+ It was not really consistent with an atrial fibrillation.  Our
+
+plan was to give adenosine, however, during the IV placement. 
+
+Prior to giving adenosine, the patient converted to a normal
+
+sinus rhythm with mild tachycardia at around 100, but it was
+
+clear that there was T waves.  At this point, we decided to give
+
+her baseline metoprolol dose and she missed two doses.
+
+LABORATORY DATA:  Labs checked include sodium of 139, potassium
+
+3.7, chloride 104, bicarbonate 23, BUN 14, creatinine 0.81,
+
+glucose 268.  ALT 19, AST 18, CK 350, alkaline phosphatase 128,
+
+total bilirubin 0.5, CK-MB 5.2, troponin I less than 0.04,
+
+calcium 9.1, and mag 1.9.  White blood cells 10.29, hematocrit
+
+42.7, and platelets 438, 000.  INR is 1.  UA is negative for
+
+infection with trace blood present.
+
+PLAN:  Our plan is to check two more enzymes because the patient
+
+had the left arm heaviness during the palpitations.  If both of
+
+those enzymes are negative, we feel that she is safe to go home
+
+from the ED Observation Unit.  It is unclear the etiology of her
+
+arrhythmia.  It did seem to be likely SVT, which broke
+
+spontaneously.  The patient is to follow up with her primary
+
+doctor.
+
+DISPOSITION:  ED Observation Unit.
+
+CONDITION ON DISCHARGE:  Satisfactory.
+
+I confirm that I have interviewed and examined the patient,
+
+reviewed the resident's documentation, the patient's chart,
+
+discussed the evaluation, plan of care, and disposition with the
+
+patient.
+
+______________________________
+
+MARTIN, CONSTANCE M.D.
+
+D: 12/15/90
+
+T: 12/15/90
+
+Dictated By: MARTIN, CONSTANCE
+
+eScription document:8-4109370 BFFocus
+
+ ******** Not reviewed by Attending Physician ********
+
+
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2090-12-14" TYPE="DATE" comment="" />
+<ID id="P1" start="36" end="44" text="43294739" TYPE="MEDICALRECORD" comment="" />
+<NAME id="P2" start="45" end="60" text="FINNEY, INDIANA" TYPE="PATIENT" comment="" />
+<DATE id="P3" start="61" end="69" text="12/15/90" TYPE="DATE" comment="" />
+<NAME id="P4" start="70" end="87" text="MARTIN, CONSTANCE" TYPE="DOCTOR" comment="" />
+<AGE id="P5" start="135" end="137" text="53" TYPE="AGE" comment="" />
+<NAME id="P6" start="3497" end="3514" text="MARTIN, CONSTANCE" TYPE="DOCTOR" comment="" />
+<DATE id="P7" start="3524" end="3532" text="12/15/90" TYPE="DATE" comment="" />
+<DATE id="P8" start="3537" end="3545" text="12/15/90" TYPE="DATE" comment="" />
+<NAME id="P9" start="3560" end="3577" text="MARTIN, CONSTANCE" TYPE="DOCTOR" comment="" />
+<ID id="P10" start="3599" end="3608" text="8-4109370" TYPE="IDNUM" comment="" />
+</TAGS>
+</deIdi2b2>

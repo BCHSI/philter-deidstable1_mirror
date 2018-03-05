@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2067-12-06
+
+
+
+Chief Complaint
+
+   1.  cough is better.  She uses the inhalers regularly.
+
+2.  Funny taste in the mouth after she does the inhalers in the morning.  No sore throat.  She does rinse her mouth after the pulmicort.
+
+3.  No recurrence of the hand numbness.
+
+
+
+Problems
+
+      Hypertension
+
+      Insomnia
+
+      H/O cerebrovascular accident
+
+      borderline aodm
+
+      Basal cell carcinoma
+
+
+
+Medications
+
+      Vioxx (ROFECOXIB)    25MG,  1 Tablet(s)  PO QD
+
+      Lotrisone Cream (BETAMETHASONE And Clotri...    APPLY CREAM TOP BID
+
+      Asa (ACETYLSALICYLIC Acid)    325MG,  1 Tablet(s)  PO QD
+
+      Allegra (FEXOFENADINE Hcl)    60MG,  1 Tablet(s)  PO BID PRN .
+
+      Lipitor (ATORVASTATIN)    10MG,  1 Tablet(s)  PO QD
+
+      ATENOLOL   100MG,  1 Tablet(s)  PO BID : take 1/2 in morning and 1 in evening
+
+      Flonase (FLUTICASONE Nasal Spray)    1-2 SPRAY NAS QD
+
+      Celexa (CITALOPRAM)    20MG,  1 Tablet(s)  PO QD
+
+      Prilosec (OMEPRAZOLE)    20MG,  1 Capsule(s)  PO QHS
+
+      Dyazide  (TRIAMTERENE 37.5 Mg/hctz 25 Mg)    1 CAPSULE PO QD
+
+      LISINOPRIL   10MG,  1 Tablet(s)  PO QD
+
+      Albuterol Inhaler    2 PUFF INH Q4-6H PRN .cough : use with chamber
+
+      Singulair (MONTELUKAST)    10MG,  1 Tablet(s)  PO QHS
+
+      Pulmicort (BUDESONIDE Oral Inhaler)    2 PUFF INH BID
+
+      Plavix (CLOPIDOGREL)    75 MG PO QD
+
+
+
+Allergies
+
+      Sulfa    - Unknown
+
+      Penicillins    - Unknown
+
+
+
+Social History
+
+   Married.  Her husband has Alzheimer's.  His moods are variable.  
+
+She has been going to FitSport and exercising better.
+
+non-smoker.  
+
+Six children and six grandchildren. 
+
+No alcohol in 30 years.  Prior alcohol dependence.
+
+Her daughter, son-in-law and 18 month old twins are living in her house.
+
+Her Daughter, Uber, in Vietnam may come back for the holidays.
+
+Her Daughter, Ingalls, lives in BOURNE-she is a variable cause of stress.
+
+She is going to FitSport almost every day.
+
+
+
+Review of Systems
+
+ROS-Sleep has been OK, occ wakening in the middle of the night-she uses amytriptiline at night.  energy is better since she is exercising more.
+
+
+
+Vital Signs
+
+      BLOOD PRESSURE   140/80
+
+
+
+Exam
+
+  HEENT-NC/AT, EOMI, PERRL
+
+TM-Clear
+
+Pharynx-Clear
+
+Chest-clear to P and A
+
+Cor-S1S2 normal no murmers, rubs or gallops
+
+Abd-soft, nontender, no hepatosplenomegaly
+
+Ext-no edema
+
+
+
+Disposition and Plans
+
+1.  Cough-we discussed that she will need to stay on the albuterol and the pulmicort in order to prevent the cough from coming back.  
+
+2.  Insomnia which had been such a problem seems better now.  Continue the celexa 20mg and she is also on amytriptiline (per Dr. Dill).  She will double check the dose through him. 
+
+3.  Hyperlipidemia-On lipitor.  Check LFTs and CPK along with chol/HDL today.
+
+4.  HTN-good control on the lisinopril, atenolol and dyazide.  Check electrolytes today.
+
+5.  Borderline AODM.  Check glucose today.
+
+______________________________
+
+Othel  Vidal, M.D.
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2067-12-06" TYPE="DATE" comment="" />
+<LOCATION id="P1" start="1554" end="1562" text="FitSport" TYPE="ORGANIZATION" comment="" />
+<AGE id="P2" start="1721" end="1729" text="18 month" TYPE="AGE" comment="" />
+<NAME id="P3" start="1780" end="1784" text="Uber" TYPE="PATIENT" comment="" />
+<LOCATION id="P4" start="1789" end="1796" text="Vietnam" TYPE="COUNTRY" comment="" />
+<NAME id="P5" start="1844" end="1851" text="Ingalls" TYPE="PATIENT" comment="" />
+<LOCATION id="P6" start="1862" end="1868" text="BOURNE" TYPE="CITY" comment="" />
+<LOCATION id="P7" start="1921" end="1929" text="FitSport" TYPE="ORGANIZATION" comment="" />
+<NAME id="P8" start="2639" end="2643" text="Dill" TYPE="DOCTOR" comment="" />
+<NAME id="P9" start="2938" end="2950" text="Othel  Vidal" TYPE="DOCTOR" comment="" />
+</TAGS>
+</deIdi2b2>

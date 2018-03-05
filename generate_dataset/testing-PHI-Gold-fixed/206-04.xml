@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2077-02-09
+
+ 
+BRENNAN CONVALESCENT HOME
+
+Reason For Visit
+Cough.
+
+History Of Present Illness
+68 year-old male presents with complaint of cough productive of white-to-clear sputum for two days.  He feels minimal chest tightness, with no shortness of breath.  No dyspnea on exertion or PND.  He denies wheeze.  He is able to tolerate exercise on treadmill without chest pain.  He denies fever or chills.  Presently, self-treating with Robitussin DM and Halls cough drops.  Has clear rhinorrhea.  No ear pain, no throat pain.  No sinus pain or pressure.
+
+Past Medical History
+CAD, status post stent x2.  
+MI.  
+Hypertension.  
+Hyperlipidemia.  
+CVA.  
+BPH.  
+Elevated PSA.  
+Tobacco use in the past.
+
+Physical Exam
+Temperature: 97.9 degrees
+Pulse: 64
+Blood Pressure: 140/70
+General: Well-developed white male in no acute distress
+HEENT: TMs and oropharynx unremarkable.  Oropharynx is clear without exudate or tonsillar hypertrophy.  No posterior pharynx exudate.  Sinuses are nontender
+Chest: Lungs are clear to auscultation bilaterally
+Cardiac: Regular rate and rhythm.  No murmur, rub, or gallop
+Extremities: No peripheral edema
+
+Assessment And Plan
+1.  Cough, likely viral.  Robitussin DM as directed for daytime use, may use Robitussin A-C at HS PRN,(patient has own).  Reassurance re:  findings on exam.  
+2.  Hypertension.  Blood pressure again today 140/70.  Continue to monitor for indication of increase in Lisinopril per Dr.  Uddin.  The patient has followup with Cardiology on 02/17/2077.
+____________________________________
+Yazmin Doss, NP
+
+
+
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2077-02-09" TYPE="DATE" comment="" />
+<LOCATION id="P1" start="30" end="55" text="BRENNAN CONVALESCENT HOME" TYPE="HOSPITAL" comment="" />
+<AGE id="P2" start="109" end="111" text="68" TYPE="AGE" comment="" />
+<NAME id="P3" start="1450" end="1455" text="Uddin" TYPE="DOCTOR" comment="" />
+<DATE id="P4" start="1502" end="1512" text="02/17/2077" TYPE="DATE" comment="" />
+<NAME id="P5" start="1551" end="1562" text="Yazmin Doss" TYPE="DOCTOR" comment="" />
+</TAGS>
+</deIdi2b2>

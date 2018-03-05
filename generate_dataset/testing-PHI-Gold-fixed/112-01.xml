@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2060-10-11
+
+                     BCH EMERGENCY DEPT VISIT
+ 
+HESS,CLARENCE H   643-65-59-5                 VISIT DATE: 10/11/60
+HISTORY OF PRESENTING COMPLAINT:  The patient is a 46 year old male 
+with complaints of chest pain and throat tightness.  The patient 
+reported that he was stuck in traffic for about 12 hours last night 
+and apparently got very tense.  He felt some heat from his car, 
+thought that it was overheating, and then developed some chest pain 
+and throat tightness.  He really described what seems to be 
+fleeting chest tightness and no diaphoresis, no shortness of 
+breath, and no arm numbness or tingling.  However, he did have one 
+associated symptom of some throat tightness. 
+PAST MEDICAL HISTORY:  The patient has had a stress test one year 
+ago that was normal.  He had an echocardiogram at that time that 
+was also normal. 
+MEDICATIONS:  Claritin, Proventil, and cimetidine. 
+ALLERGIES:  Morphine sulfate. 
+PHYSICAL EXAMINATION:  VITAL SIGNS:  The patient is afebrile. 
+Vital signs are normal.  HEENT:  Normal.  NECK:  Supple.  LUNGS: 
+Clear bilaterally.  CARDIAC:  Regular rate and rhythm without 
+murmur.  ABDOMEN:  Soft and non-tender.  EXTREMITIES:  Negative. 
+No CVA tenderness. 
+LABORATORY EVALUATION:  EKG shows normal sinus rhythm.  There is no 
+change in his electrocardiogram.  Chest x-ray is clear.  CK is 155. 
+Troponin is 0.13.  Electrolytes are normal.  BUN and creatinine are 
+20 and 1.0.  Hematocrit is 39, white count normal. 
+THERAPY RENDERED/COURSE IN ED:  The patient is a 46 year old male 
+with a fleeting episode of chest pain and throat tightness while 
+stuck in traffic.  He was seen at Southwest Texas Medical Center and 
+then sent here appearing somewhat anxious, with a normal physical 
+examination, normal EKG, normal chest x-ray, and normal metabolic 
+panel.  Most likely low probability for ischemia.  Risk factors are 
+also very low. 
+DISPOSITION (including condition upon discharge):   The patient is 
+going to be admitted to the Short Stay Unit for a rule out MI 
+protocol and possibly for another ETT. 
+___________________________________                    NE270/9072
+VICTOR T. BONNER, M.D.  VB07                             D:10/11/60 
+                                                       T:10/11/60 
+Dictated by:  VICTOR T. BONNER, M.D.  VB07 
+ ******** Not reviewed by Attending Physician ********
+
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2060-10-11" TYPE="DATE" comment="" />
+<LOCATION id="P1" start="49" end="52" text="BCH" TYPE="HOSPITAL" comment="" />
+<NAME id="P2" start="76" end="91" text="HESS,CLARENCE H" TYPE="PATIENT" comment="" />
+<ID id="P3" start="94" end="105" text="643-65-59-5" TYPE="MEDICALRECORD" comment="" />
+<DATE id="P4" start="134" end="142" text="10/11/60" TYPE="DATE" comment="" />
+<AGE id="P5" start="194" end="196" text="46" TYPE="AGE" comment="" />
+<AGE id="P6" start="1538" end="1540" text="46" TYPE="AGE" comment="" />
+<LOCATION id="P7" start="1656" end="1686" text="Southwest Texas Medical Center" TYPE="HOSPITAL" comment="" />
+<ID id="P8" start="2137" end="2147" text="NE270/9072" TYPE="IDNUM" comment="" />
+<NAME id="P9" start="2148" end="2164" text="VICTOR T. BONNER" TYPE="DOCTOR" comment="" />
+<NAME id="P10" start="2172" end="2176" text="VB07" TYPE="USERNAME" comment="" />
+<DATE id="P11" start="2207" end="2215" text="10/11/60" TYPE="DATE" comment="" />
+<DATE id="P12" start="2274" end="2282" text="10/11/60" TYPE="DATE" comment="" />
+<NAME id="P13" start="2298" end="2314" text="VICTOR T. BONNER" TYPE="DOCTOR" comment="" />
+<NAME id="P14" start="2322" end="2326" text="VB07" TYPE="USERNAME" comment="" />
+</TAGS>
+</deIdi2b2>

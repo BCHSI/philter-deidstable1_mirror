@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2097-05-21
+
+
+	CARDIOLOGY
+	
+
+	SOUTH OAKS HOSPITAL
+	
+
+
+	Reason for visit:
+   Routine scheduled followup.
+
+
+	Interval History:
+   Mr. Crawford returns to the clinic for routine scheduled follow-up.  His cardiovascular issues include prior syncope, nonobstructive coronary disease, and hypertension. In the interval, since our last visit, he continues to do well from a CV perspective. He has had free of chest pain, pressure, tightness, orthopnea, PND, progressive lower extremity swelling, or claudication. He has had no recurrent symptomatic diverticulosis. He remains fairly limited due to his osteoarthritis but continues to perform all ADLs successfully.  He is unfortunately not able to do any gardening this year due to progressive joint pain and stiffness. He was recently seen by Dr. Powers (nephrology) after a recent mild bump in his creatinine. His renal workup is ongoing.
+
+Physical examination:
+	
+-Pulse:   55, which is strong and regular
+-resp. rate:   12.  He is saturating 100% at room air
+-General:   He is alert and appropriate in no apparent distress
+-Heent:   Normocephalic.
+-Neck:   Jugular venous pressure is 7 cm of water with normal AV contour.  He has 2+ carotids with brisk upstrokes.
+-Chest:   His lungs are clear.
+-Cardiac:   Regular with nondisplaced PMI, 1-2/6 systolic ejection murmur heard best at the base with the crisp S2.
+-Abdomen:   Soft and nontender.
+-Extremities:   There is trace dependent 1+ lower extremity swelling, which is stable.
+-BP: 122/74    in the right arm seated
+
+
+	EKG:
+   Sinus bradycardia at 55.  Normal intervals. Leftward axis (-30).  Normal repolarization pattern.
+
+
+	Impression:
+   1.) Nonobstructive CAD
+2.) Neurocardiogenic syncope
+3.) Hypertension
+4.) Aortic sclerosis
+
+
+	Assessment and plan:
+   Overall he is doing well his cardiovascular issues are stable.  No changes in his cardiovascular regimen today.  I will see him back in six months, sooner if new issues arise.
+		Medication List (confirmed)
+
+				CONFIRMED
+
+		- allopurinol  100 mg PO daily
+
+		- aspirin  325 mg PO daily
+
+		- folate  1 mg PO daily
+
+		- hydrochlorothiazide  25 mg PO daily
+
+		- lisinopril  40 mg PO daily
+
+		- medication list reviewed  in CAS
+
+		- multivitamins 
+
+		- ranitidine HCl  150 mg PO daily PRN
+
+		- Toprol XL  50 mg PO BID
+
+		- Zocor  10 mg PO daily
+
+
+	
+	
+
+	
+Xavier K. Youmans, MD pager #24791
+
+	
+Signed electronically by  Xavier K. Youmans, MD
+Document Status: Final
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2097-05-21" TYPE="DATE" comment="" />
+<LOCATION id="P1" start="45" end="64" text="SOUTH OAKS HOSPITAL" TYPE="HOSPITAL" comment="" />
+<NAME id="P2" start="147" end="155" text="Crawford" TYPE="PATIENT" comment="" />
+<NAME id="P3" start="806" end="812" text="Powers" TYPE="DOCTOR" comment="" />
+<NAME id="P4" start="2322" end="2339" text="Xavier K. Youmans" TYPE="DOCTOR" comment="" />
+<CONTACT id="P5" start="2351" end="2356" text="24791" TYPE="PHONE" comment="" />
+<NAME id="P6" start="2386" end="2403" text="Xavier K. Youmans" TYPE="DOCTOR" comment="" />
+</TAGS>
+</deIdi2b2>

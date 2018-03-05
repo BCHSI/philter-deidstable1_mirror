@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2076-04-16
+
+
+
+
+
+
+Shelby Dental Care Center
+1888 Oldham Lane              PRESTON, FRANCES
+Cozad, OK  53952                    05850080
+(060) 107-3378                     04/16/2076
+
+
+
+
+HISTORY OF PRESENT ILLNESS:  The patient is a 51-year-old woman who returns after recent acute coronary syndrome experience and for follow up of other medical problems.
+
+
+PROBLEMS:
+1.  Acute coronary syndrome.  She was in New York and experienced chest pain.  She was seen at Conway Hospital where she underwent placement of two stents in the right coronary artery.  EKG changes suggest IMI.  She was told that she would need further intervention, but comes with no paperwork.  She has had no further chest pain.
+2.  Diabetes mellitus.  A1c one month ago was 6.7.
+3.  Hyperlipidemia.  Please see prior notes for full lipid analysis, but LDL was 221.  She has been on Zocor.
+4.  Mitral valve disease.  Prior to recent coronary event, she underwent an echocardiogram which demonstrated a mildly thickened and calcific aortic valve with a slight gradient.  There is calcification of the posterior mitral annulus and leaflet as well as the subvalvular apparatus with an echo dense mobile structure and trigger aspect suggesting a partially disrupted chordae.
+
+
+MEDICATIONS:  
+1.  Aspirin 325 mg p.o. daily.
+2.  Plavix 75 mg p.o. daily.
+3.  Hydrochlorothiazide 25 mg daily.
+4.  Zocor 20 mg p.o. nightly though given a prescription for Lipitor 80 mg nightly in New York.
+5.  Lisinopril 20 mg p.o. daily.
+6.  Metformin 500 mg daily.
+7.  Norvasc 10 mg daily.
+8.  Nitroglycerin 0.4 mg p.r.n.
+
+
+REVIEW OF SYMPTOMS:  No significant weight change, febrile signs or symptoms, headache, blurred vision, tinnitus, cough, shortness of breath, nausea, abdominal pain, nightsweats, diarrhea, dysuria, polyuria, skin rash, bruising, joint pain, or focal weakness.
+
+
+PHYSICAL EXAMINATION:  The patient is in no acute distress.  Blood pressure 120/88, weight 213 pounds, and temperature 97.8.  Chest clear to percussion and auscultation. Cardiac exam; no extra sounds. Rather coarse near holosystolic murmur. No apprecialble 2nd or third compenents. No pedal edema.
+
+
+EKG today:  Heart rate was 54 and regular with normal intervals.  She has a Q-wave in III and F and slight reversal of R-wave progression in right precordium.  These are distinct change from EKG done one month ago.
+
+
+ASSESSMENT AND PLAN:
+1.  Status post IMI.  Not on beta-blocker and I will not initiate given sinus bradycardia.  I have arranged for her to be seen in Cardiology to determine best next steps.  I tried to contact the cardiologist who took care of her in Conway Hospital whose phone number is 674-449-3338.
+2.  Diabetes mellitus.  Good control.
+3.  Hyperlipidemia.  Will initiate therapy with Lipitor 80 mg p.o. nightly for this and problem 1 above.  Prior authorization form completed.
+4.  Mitral valve disease.
+
+
+
+
+______________________________
+Louis P Barron, M.D., M.Sc.
+
+
+
+
+
+
+
+
+
+
+eScription document:0-0320324 MEeScription
+
+
+
+
+
+
+DD: 04/16/76
+DT: 04/16/76
+DV: 04/16/76
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2076-04-16" TYPE="DATE" comment="" />
+<LOCATION id="P1" start="33" end="58" text="Shelby Dental Care Center" TYPE="HOSPITAL" comment="" />
+<LOCATION id="P2" start="59" end="75" text="1888 Oldham Lane" TYPE="STREET" comment="" />
+<NAME id="P3" start="89" end="105" text="PRESTON, FRANCES" TYPE="PATIENT" comment="" />
+<LOCATION id="P4" start="106" end="111" text="Cozad" TYPE="CITY" comment="" />
+<LOCATION id="P5" start="113" end="115" text="OK" TYPE="STATE" comment="" />
+<LOCATION id="P6" start="117" end="122" text="53952" TYPE="ZIP" comment="" />
+<ID id="P7" start="142" end="150" text="05850080" TYPE="MEDICALRECORD" comment="" />
+<CONTACT id="P8" start="151" end="165" text="(060) 107-3378" TYPE="PHONE" comment="" />
+<DATE id="P9" start="186" end="196" text="04/16/2076" TYPE="DATE" comment="" />
+<AGE id="P10" start="247" end="249" text="51" TYPE="AGE" comment="" />
+<LOCATION id="P11" start="423" end="431" text="New York" TYPE="STATE" comment="" />
+<LOCATION id="P12" start="477" end="492" text="Conway Hospital" TYPE="HOSPITAL" comment="" />
+<LOCATION id="P13" start="1456" end="1464" text="New York" TYPE="STATE" comment="" />
+<LOCATION id="P14" start="2618" end="2633" text="Conway Hospital" TYPE="HOSPITAL" comment="" />
+<CONTACT id="P15" start="2656" end="2668" text="674-449-3338" TYPE="PHONE" comment="" />
+<NAME id="P16" start="2911" end="2925" text="Louis P Barron" TYPE="DOCTOR" comment="" />
+<ID id="P17" start="2969" end="2978" text="0-0320324" TYPE="IDNUM" comment="" />
+<DATE id="P18" start="3002" end="3010" text="04/16/76" TYPE="DATE" comment="" />
+<DATE id="P19" start="3015" end="3023" text="04/16/76" TYPE="DATE" comment="" />
+<DATE id="P20" start="3028" end="3036" text="04/16/76" TYPE="DATE" comment="" />
+</TAGS>
+</deIdi2b2>

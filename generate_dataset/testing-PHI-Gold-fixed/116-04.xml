@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2082-03-08
+
+ 
+ 
+March 8, 2082
+ 
+Francis Xayarath, M.D. 
+Integra Health Center
+ Derry Street
+La Grulla, ME 21614
+ 
+RE:Branch, Earnest
+MRN:53023691
+ 
+Dear Dr. Xayarath:
+ 
+Your patient Earnest Branch came in the office today for a follow up 
+visit.  Mr. Branch is now two years out from a right femoral-
+tibial bypass and nine months out from a left femoral-tibial 
+bypass with subsequent transmetatarsal amputation of the left foot 
+and split-thickness skin grafting.  Over the last several months, 
+he has been undergoing dressing changes to remaining, small, 
+superficial, open wounds on the dorsum of the left foot.  Over the 
+last one to two weeks, he began to note the development of a new 
+area of dark skin on the lateral aspect of the left foot and 
+recently has noted some drainage.  He denies any fevers.  In 
+addition and of note, he complains of recent onset of pain in the 
+right eye and has an appointment at the Ophthalmology Clinic 
+immediately following his visit with us.  He last underwent 
+vascular lab studies in September at which time both lower 
+extremity bypass grafts were widely patent and without stenoses.
+ 
+On examination today, there are strong, easily palpable pulses 
+over both lower extremity bypass grafts.  The right foot is warm 
+and without any new ischemic skin changes or lesions.  On 
+examination of the left foot, there is a large area of full-
+thickness skin necrosis on the lateral aspect of the foot where 
+there had never been any previous open wounds.  This area 
+encompasses a significant proportion of the lateral aspect of the 
+foot from the end of the transmetatarsal incision to the proximal 
+mid foot.  On probing, purulent material drains from the margins 
+and there is obvious significant sepsis.  The foot itself is warm 
+and there is a good posterior tibial Doppler signal at the ankle.
+ 
+Unfortunately, Mr. Branch has developed a new, large wound on the 
+left foot which likely began as a pressure (decubitus) ulceration 
+due to his severe neuropathy.  This is now complicated by 
+significant local sepsis and there is a large area of soft tissue 
+loss on the foot.  He will require urgent admission and operative 
+debridement today.  In addition, given the extent of the problem, 
+it is likely that he will ultimately come to below-knee amputation 
+in the end.  Immediately following his visit to the Ophthalmology 
+Clinic, he will be admitted to the
+ 
+ 
+RE:Branch, Earnest
+MRN:53023691
+3-8-82
+Page 2
+ 
+ 
+ 
+hospital with the hopes of performing debridement and drainage 
+later today.  I will certainly continue to keep you apprised of 
+his progress.
+ 
+Sincerely, 
+ 
+ 
+ 
+Luis J. Nicholas, M.D. 
+ 
+RH:KU:0156/DD:3-8-82/DT:3-14-82 
+ 
+ 
+ ******** Not reviewed by Attending Physician ********
+
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2082-03-08" TYPE="DATE" comment="" />
+<DATE id="P1" start="32" end="45" text="March 8, 2082" TYPE="DATE" comment="" />
+<NAME id="P2" start="48" end="64" text="Francis Xayarath" TYPE="DOCTOR" comment="" />
+<LOCATION id="P3" start="72" end="93" text="Integra Health Center" TYPE="HOSPITAL" comment="" />
+<LOCATION id="P4" start="94" end="107" text=" Derry Street" TYPE="STREET" comment="" />
+<LOCATION id="P5" start="108" end="117" text="La Grulla" TYPE="CITY" comment="" />
+<LOCATION id="P6" start="119" end="121" text="ME" TYPE="STATE" comment="" />
+<LOCATION id="P7" start="122" end="127" text="21614" TYPE="ZIP" comment="" />
+<NAME id="P8" start="133" end="148" text="Branch, Earnest" TYPE="PATIENT" comment="" />
+<ID id="P9" start="153" end="161" text="53023691" TYPE="MEDICALRECORD" comment="" />
+<NAME id="P10" start="173" end="181" text="Xayarath" TYPE="DOCTOR" comment="" />
+<NAME id="P11" start="198" end="212" text="Earnest Branch" TYPE="PATIENT" comment="" />
+<NAME id="P12" start="267" end="273" text="Branch" TYPE="PATIENT" comment="" />
+<DATE id="P13" start="1048" end="1057" text="September" TYPE="DATE" comment="" />
+<NAME id="P14" start="1879" end="1885" text="Branch" TYPE="PATIENT" comment="" />
+<NAME id="P15" start="2431" end="2446" text="Branch, Earnest" TYPE="PATIENT" comment="" />
+<ID id="P16" start="2451" end="2459" text="53023691" TYPE="MEDICALRECORD" comment="" />
+<DATE id="P17" start="2460" end="2466" text="3-8-82" TYPE="DATE" comment="" />
+<NAME id="P18" start="2643" end="2659" text="Luis J. Nicholas" TYPE="DOCTOR" comment="" />
+<ID id="P19" start="2669" end="2679" text="RH:KU:0156" TYPE="IDNUM" comment="" />
+<DATE id="P20" start="2683" end="2689" text="3-8-82" TYPE="DATE" comment="" />
+<DATE id="P21" start="2693" end="2700" text="3-14-82" TYPE="DATE" comment="" />
+</TAGS>
+</deIdi2b2>

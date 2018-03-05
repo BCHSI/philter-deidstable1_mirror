@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2120-09-08
+
+                     MARY EMERGENCY DEPT VISIT
+
+ 
+
+RODRIQUEZ,JACOB   863-35-65-5                       VISIT DATE: 09/08/20
+
+I saw and examined the patient personally.  I also reviewed and 
+
+confirm the resident's detailed note.  Please refer to it.  
+
+PRESENTING COMPLAINT:  Foot ulcer.
+
+HISTORY OF PRESENTING COMPLAINT:  This is a 78-year-old gentleman 
+
+who is a diabetic developed left foot ulcer six weeks ago after he 
+
+had shaving of some calluses by a podiatrist.  The wound has not 
+
+healed and then got infected.  He was started on Keflex, then when 
+
+the initial cultures came back showing resistance to Keflex so he 
+
+was switched to Cipro, however, his final cultures showed MRSA.  He 
+
+comes in with increasing redness and pain.  
+
+PAST MEDICAL HISTORY:  Hypertension, diabetes, peripheral vascular 
+
+disease, mitral regurgitation, anemia, sleep apnea and pulmonary 
+
+hypertension.   
+
+MEDICATIONS:  Documented on the chart.
+
+ALLERGIES:  Documented on the chart.  
+
+SOCIAL HISTORY AND FAMILY HISTORY:  He is a Electrician.  He drinks 
+
+alcohol occasionally, he does not smoke.  Family history of kidney 
+
+stones.  
+
+PHYSICAL EXAMINATION:  VITAL SIGNS:  He is afebrile, vital signs 
+
+are stable.  GENERAL:  The patient was awake, alert in no distress. 
+
+He does not look toxic.  HEART:  He had a small heart murmur.  
+
+LUNGS:  Clear to auscultation.  ABDOMEN:  Soft and nontender.  
+
+EXTREMITIES:  He had multiple ulcers on his left foot, stage two or 
+
+three, an ulcer on his heel as well as the distal third and fourth 
+
+toes.  There was some mild surrounding cellulitis.  He had 3+ pedal 
+
+edema.  The casts were symmetric and nontender.  There is no 
+
+adenopathy.  
+
+LABORATORY EVALUATION:  The patient had a white count of about 16, 
+
+mildly elevated but no bandemia.  His BUN and creatinine were 50 
+
+and 1.8.  Blood cultures were sent. 
+
+THERAPY RENDERED/COURSE IN ED:  He was given a dose of Vancomycin.  
+
+Surgery was consulted.  The primary came and saw the patient as 
+
+well and he was admitted to the hospital.   
+
+FINAL DIAGNOSIS:  Diabetic foot ulceration with cellulitis, rule 
+
+out osteomyelitis.  
+
+DISPOSITION (including condition upon discharge):  Condition is 
+
+stable.  
+
+___________________________________                    TT554/9917 
+
+CHRISTOPHER QUIGLEY, M.D.       CQ03                           D:09/09/20 
+
+                                                       T:09/09/20 
+
+Dictated by:  CHRISTOPHER QUIGLEY, M.D.       CQ03 
+
+ ******** Not reviewed by Attending Physician ********
+
+
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2120-09-08" TYPE="DATE" comment="" />
+<LOCATION id="P1" start="49" end="53" text="MARY" TYPE="HOSPITAL" comment="" />
+<NAME id="P2" start="79" end="94" text="RODRIQUEZ,JACOB" TYPE="PATIENT" comment="" />
+<ID id="P3" start="97" end="108" text="863-35-65-5" TYPE="MEDICALRECORD" comment="" />
+<DATE id="P4" start="143" end="151" text="09/08/20" TYPE="DATE" comment="" />
+<AGE id="P5" start="361" end="363" text="78" TYPE="AGE" comment="" />
+<PROFESSION id="P6" start="1052" end="1063" text="Electrician" TYPE="PROFESSION" comment="" />
+<ID id="P7" start="2289" end="2299" text="TT554/9917" TYPE="IDNUM" comment="" />
+<NAME id="P8" start="2302" end="2321" text="CHRISTOPHER QUIGLEY" TYPE="DOCTOR" comment="" />
+<NAME id="P9" start="2334" end="2338" text="CQ03" TYPE="USERNAME" comment="" />
+<DATE id="P10" start="2367" end="2375" text="09/09/20" TYPE="DATE" comment="" />
+<DATE id="P11" start="2435" end="2443" text="09/09/20" TYPE="DATE" comment="" />
+<NAME id="P12" start="2460" end="2479" text="CHRISTOPHER QUIGLEY" TYPE="DOCTOR" comment="" />
+<NAME id="P13" start="2492" end="2496" text="CQ03" TYPE="USERNAME" comment="" />
+</TAGS>
+</deIdi2b2>

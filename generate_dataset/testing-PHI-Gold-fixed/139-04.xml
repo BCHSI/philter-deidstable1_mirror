@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2095-12-07
+
+
+
+
+NAME:     Upham, Zelda
+MRN:      0308696
+
+The patient is here for a scheduled visit, status post hospitalization for emergent
+bypass surgery.  She is late for the visit.  She is accompanied by her daughter,
+Qazi.  The patient denies chest pain and has done quite well, based on reports
+from her rehab stay at the Miller County Hospital.  Currently complaining of
+left-sided chest wall pain. No exertional chest pain and no shortness of breath.  Has
+an appointment pending with her cardiologist tomorrow.  Also has an appointment
+pending with surgeon Dr. Weeks for 12/13/95. Has been compliant with
+medications.  
+
+The patient's daughter is concerned that the patient is not eating enough.  Has lost
+significant weight since hospitalization.  Patient did agree that she has been watching
+what she eats because she did not want to gain much weight.  Explained to her the
+importance of proper nutrition and getting back her strength.  
+
+Asked if she can use an OTC pain patch called Salonpas. Says that the chest wall
+tenderness is very different from any exertional chest pain that she may have had in
+the past.  Would like some relief for this.  Uses it on her knees and finds it helpful
+for the arthritic knee pain. 
+
+Emotionally, the patient did admit to feeling depressed and did become tearful
+during the visit. 
+
+PROBLEMS: See extensive LMR list. 
+
+MEDICATIONS:  See LMR list. 
+
+ALLERGIES:  Sulfa, Percocet and quinine. 
+
+PHYSICAL EXAMINATION: Well-appearing female. Vital signs: WNL, as per flow
+sheet. Lungs: Clear with rales. COR: RRR, S1 and S2 without murmurs noted. 
+
+ASSESSMENT:
+
+(1)  CAD: The patient is also on a cholesterol-lowering agent, but will update list
+     at next visit.  Keep appointment with cardiologist. 
+
+(2)  Chest wall tenderness status post CABG: Tried to encourage patient that there
+     will be some persistent discomfort in her wound for several months.  Told her
+     to hold off on using the OTC pain patch until I can verify the ingredients. 
+
+(3)  Depressed mood status post surgery: Refuses referral to Mental Health. Not
+     suicidal. Encouraged patient to eat more regularly. 
+
+(4)  Return to clinic for follow-up in two weeks.  
+
+This visit lasted for 35 minutes, half of which was spent trying to counsel the patient
+to obtain proper nutrition and to go to Mental Health.  I was unsuccessful in
+convincing her to attend a Mental Health session. 
+
+Helen Whitehead, M.D.
+
+HW/warren/stark
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2095-12-07" TYPE="DATE" comment="" />
+<NAME id="P1" start="41" end="53" text="Upham, Zelda" TYPE="PATIENT" comment="" />
+<ID id="P2" start="64" end="71" text="0308696" TYPE="MEDICALRECORD" comment="" />
+<NAME id="P3" start="238" end="242" text="Qazi" TYPE="PATIENT" comment="" />
+<LOCATION id="P4" start="344" end="366" text="Miller County Hospital" TYPE="HOSPITAL" comment="" />
+<NAME id="P5" start="585" end="590" text="Weeks" TYPE="DOCTOR" comment="" />
+<DATE id="P6" start="595" end="603" text="12/13/95" TYPE="DATE" comment="" />
+<NAME id="P7" start="2424" end="2439" text="Helen Whitehead" TYPE="DOCTOR" comment="" />
+<NAME id="P8" start="2447" end="2449" text="HW" TYPE="DOCTOR" comment="" />
+<NAME id="P9" start="2450" end="2456" text="warren" TYPE="DOCTOR" comment="" />
+<NAME id="P10" start="2457" end="2462" text="stark" TYPE="DOCTOR" comment="" />
+</TAGS>
+</deIdi2b2>

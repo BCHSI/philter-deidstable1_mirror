@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2079-07-21
+
+PONTIAC INTERNAL MEDICINE ASSOCIATES          Sherman, Andrew
+                                              7-21-79
+ 
+ 
+ 
+History of Present Illness:  Mr. Sherman is a patient well known to 
+me.  I have seen him on multiple occasions for his coronary artery 
+disease, hypertension, and diabetes.  The patient has had a positive 
+exercise tolerance test recently and was seen by Cardiology who felt 
+that he should undergo cardiac catheterization.  However, patient was 
+overweight and the decision was made for him to reduce his weight by 
+approximately 50 lb. at which time he would be suitable for cardiac 
+catheterization on the Pontiac equipment.  Patient was seen last night 
+in the Pontiac Emergency Room with a several day history of back pain 
+which began in the middle of his back and has subsequently become right 
+flank pain which is persistent and colicky in nature.  
+ 
+On exam in the Emergency Room he was noted to be afebrile.  His exam was 
+notable for CVA tenderness and an exam highly suspicious of renal colic.  
+His EKG was unremarkable and his laboratory exam was unremarkable as 
+well.  His urinalysis did not demonstrate any red blood cells, however, 
+did have 3+ uric acid crystals with a normal uric acid blood level.  An 
+abdominal ultrasound was ordered which was unremarkable except for the 
+presence of his slight abnormality in the right pole of a kidney.  IVP 
+was recommended by the radiologist for follow-up.  He was given Toradol 
+in the Emergency Room with minimal improvement and sent home with some 
+Motrin with the follow-up to be by me in Internal Medicine Clinic.  I was called by 
+the patient this morning complaining of worsening pain in his right 
+flank.  On it, patient states he is unable to get out of bed and was 
+brought to the Pontiac State Hospital to my Internal Medicine Clinic.  On exam 
+he was afebrile and his exam was notable for a right CVA tenderness with 
+pain radiating around to his abdomen and exacerbated by pushing on his 
+abdomen.  Patient has good bowel sounds throughout and there are no 
+peritoneal signs.
+ 
+Assessment and Plan:  While I am concerned about his possible renal 
+pathology I believe that there is a significant chance that this may be 
+musculoskeletal in nature, however, due to his other medical problems I 
+feel that an intravenous pyelogram is definitely indicated and he will 
+undergo this study this afternoon.  I have also sent off a repeat CBC 
+with differential, a repeat urinalysis and amylase and lipase levels to 
+rule out pancreatitis.  Of note, patient does have a history of peptic 
+ulcer disease, however, he was guaiac negative in the Emergency Room and 
+reports no episodes of hematemesis, hematochezia, or melena.  He is also 
+status post cholecystectomy.  I will review his IVP later today and make 
+further therapeutic interventions at that time.
+ 
+ 
+_________________________
+Michael Holman, M.D.
+ 
+AE:JP:5824:DD:7-21-79:DT:7-24-79
+DV:7-21-79
+
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2079-07-21" TYPE="DATE" comment="" />
+<LOCATION id="P1" start="28" end="35" text="PONTIAC" TYPE="HOSPITAL" comment="" />
+<NAME id="P2" start="74" end="89" text="Sherman, Andrew" TYPE="PATIENT" comment="" />
+<DATE id="P3" start="136" end="143" text="7-21-79" TYPE="DATE" comment="" />
+<NAME id="P4" start="183" end="190" text="Sherman" TYPE="PATIENT" comment="" />
+<LOCATION id="P5" start="660" end="667" text="Pontiac" TYPE="HOSPITAL" comment="" />
+<LOCATION id="P6" start="716" end="723" text="Pontiac" TYPE="HOSPITAL" comment="" />
+<LOCATION id="P8" start="1804" end="1826" text="Pontiac State Hospital" TYPE="HOSPITAL" comment="" />
+<NAME id="P10" start="2907" end="2921" text="Michael Holman" TYPE="DOCTOR" comment="" />
+<ID id="P11" start="2930" end="2940" text="AE:JP:5824" TYPE="IDNUM" comment="" />
+<DATE id="P12" start="2944" end="2951" text="7-21-79" TYPE="DATE" comment="" />
+<DATE id="P13" start="2955" end="2962" text="7-24-79" TYPE="DATE" comment="" />
+<DATE id="P14" start="2966" end="2973" text="7-21-79" TYPE="DATE" comment="" />
+</TAGS>
+</deIdi2b2>

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2077-02-05
+
+                     AASC EMERGENCY DEPT VISIT
+
+ 
+
+QUIJANO,BAYLEE   853-62-51-4
+
+Ms. Quijano is a 62-year-old female who was seen by the resident and 
+
+seen and examined by me.
+
+PRESENTING COMPLAINT:  Nausea, vomiting and diarrhea.
+
+HISTORY OF PRESENTING COMPLAINT:  Patient is a 62-year-old female 
+
+with history of asthma and CHF with coronary artery disease, 
+
+presents now with multiple episodes of vomiting and diarrhea and 
+
+"feeling sick".  Has no history of fevers.  Mildly tachycardic with 
+
+a pulse rate of 100.
+
+REVIEW OF SYSTEMS:  Stated that recently was feeling sick.  Had a 
+
+chest x-ray recently and was negative.  Treated with Amoxicillin, 
+
+but still continued to have some mild cough and wheezes.  That 
+
+brought her to the Emergency Department, but no complaints of any 
+
+new shortness of breath, but has this persistent cough that has not 
+
+gone away despite being treated with antibiotics.  Denies fever or 
+
+chills.  Denies shortness of breath.  Denies dyspnea on exertion.  
+
+Denies PND.   Review of systems otherwise unremarkable.
+
+PAST MEDICAL HISTORY:  History of hypertension, CHF, asthma, status 
+
+post cholecystectomy.  History of coronary artery disease.  Status 
+
+post C-section times two.  
+
+MEDICATIONS:  On multiple medicines including Ventolin, Lasix, 
+
+Lopressor and Zantac as well as Lipitor.
+
+PHYSICAL EXAMINATION:  HEENT:  Normal.  NECK:  Supple.  LUNGS:  
+
+Some mild wheezes bilaterally.  No rales however.  No respiratory 
+
+distress.  Some course rhonchi heard throughout lung fields.  
+
+CARDIAC EXAM:  Regular rate and rhythm.  No murmurs.  ABDOMEN:  
+
+Soft, nontender without any masses.  MUSCULOSKELETAL:  Shows trace 
+
+edema greatest in the lower extremities, but good pulses, normal.  
+
+Capillary refill and neurological is intact.
+
+LABORATORY EVALUATION:  Full laboratory studies were done including 
+
+chest x-ray.  EKG showed sinus rhythm with T-wave inversion in A, V 
+
+and L.  This is not new based on old cardiograms.  Chest x-ray 
+
+shows some cardiomegaly and a fluffy chest x-ray indicating CHF.  
+
+Electrolytes, BUN and creatinine normal.  Hematocrit of 45 and a 
+
+normal white count.   
+
+THERAPY RENDERED/COURSE IN ED:  Initially systolic blood pressure 
+
+was over 200 and diastolic over 91 and patient also received some 
+
+Diltiazem for blood pressure control.  
+
+Assessment:  This is a 62-year-old woman who has vomiting, 
+
+diarrhea, and "feeling sick" and she has a chronic cough despite 
+
+recent treatment with antibiotics, but no shortness of breath, now 
+
+found to be in CHF on chest x-ray.  Patient has been diuresed.  PCP 
+
+is aware.  She is going to be admitted. 
+
+CONSULTATIONS (including PCP):  Primary care physician.
+
+FINAL DIAGNOSIS:  Cough with congestive heart failure.
+
+DISPOSITION (including condition upon discharge):  The patient was 
+
+admitted to the hospital in stable condition.
+
+___________________________________                    UZ272/3146
+
+FRANK ISON, M.D.       FI65                           D:02/05/77 
+
+                                                       T:02/05/77 
+
+Dictated by:  FRANK ISON, M.D.       FI65 
+
+ ******** Not reviewed by Attending Physician ********
+
+
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2077-02-05" TYPE="DATE" comment="" />
+<LOCATION id="P1" start="49" end="53" text="AASC" TYPE="HOSPITAL" comment="" />
+<NAME id="P2" start="79" end="93" text="QUIJANO,BAYLEE" TYPE="PATIENT" comment="" />
+<ID id="P3" start="96" end="107" text="853-62-51-4" TYPE="MEDICALRECORD" comment="" />
+<NAME id="P4" start="113" end="120" text="Quijano" TYPE="PATIENT" comment="" />
+<AGE id="P5" start="126" end="128" text="62" TYPE="AGE" comment="" />
+<AGE id="P6" start="308" end="310" text="62" TYPE="AGE" comment="" />
+<AGE id="P7" start="2372" end="2374" text="62" TYPE="AGE" comment="" />
+<ID id="P8" start="2942" end="2952" text="UZ272/3146" TYPE="IDNUM" comment="" />
+<NAME id="P9" start="2954" end="2964" text="FRANK ISON" TYPE="DOCTOR" comment="" />
+<NAME id="P10" start="2977" end="2981" text="FI65" TYPE="USERNAME" comment="" />
+<DATE id="P11" start="3010" end="3018" text="02/05/77" TYPE="DATE" comment="" />
+<DATE id="P12" start="3078" end="3086" text="02/05/77" TYPE="DATE" comment="" />
+<NAME id="P13" start="3103" end="3113" text="FRANK ISON" TYPE="DOCTOR" comment="" />
+<NAME id="P14" start="3126" end="3130" text="FI65" TYPE="USERNAME" comment="" />
+</TAGS>
+</deIdi2b2>

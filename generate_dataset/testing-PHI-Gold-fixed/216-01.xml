@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2096-08-06
+
+                     BHC EMERGENCY DEPT VISIT
+
+ 
+
+MARVINYANDELL,GRACE   904-68-07-1              VISIT DATE: 08/06/96
+
+HISTORY OF PRESENTING COMPLAINT:  This patient is a 68 year old 
+
+woman who is being seen by Dr. Dodd who had what was a syncopal 
+
+episode on the premises.  A code was called when bystanders and 
+
+medics reported she was on the floor, diaphoretic and clammy.  The 
+
+patient drank something and then proceeded to be taken to the 
+
+Emergency Department. 
+
+The patient had a cystoscopy planned for today.  She took her 
+
+medication for her diabetes and presented here with weakness, 
+
+nausea, diaphoresis and felt like she may have passed out.  Her 
+
+other complaint was mild back pain from passing out.  No epigastric 
+
+pain or tenderness and no chest pain.  The patient never had any 
+
+chest pain prior to her event.  She is followed by the United Medical Center East and their input is pending at this point. 
+
+PAST MEDICAL HISTORY:  The patient has a past medical history 
+
+significant for diabetes, hypertension, hypothyroidism and 
+
+migraines. 
+
+MEDICATIONS:  The patient's current medications include Plavix, 
+
+Calan slow release and Glucophage. 
+
+ALLERGIES:  The patient is allergic to intravenous pyelogram dye, 
+
+Percocet, penicillin, cephalosporin and lisinopril. 
+
+PHYSICAL EXAMINATION:  HEENT:  Examination is normal.  LUNGS: 
+
+Clear bilaterally.  CARDIAC:  Regular rate and rhythm with no 
+
+murmurs.  ABDOMEN:  Soft and nontender.  EXTREMITIES:  Normal. 
+
+GENERAL:  The patient looks well and has no complaints here. 
+
+LABORATORY EVALUATION:  Finger stick in the Emergency Department 
+
+was 160.  Electrocardiogram shows some PR depressions in multiple 
+
+leads.  No significant ST elevations. 
+
+THERAPY RENDERED/COURSE IN ED:  Impression is this patient is a 68 
+
+year old female with planned cystoscopy today who passed out on the 
+
+premises.  A code was called overhead.  Bystanders reported that 
+
+the patient was diaphoretic.  They gave her something to drink. 
+
+Her blood sugar here was within normal limits.  The patient has no 
+
+complaints of chest pain or shortness of breath.  She looks well 
+
+but does have PR depressions on electrocardiogram but has no rubs 
+
+or gallops on her electrocardiogram.  The patient was made NPO 
+
+because of her cystoscopy procedure. 
+
+FINAL DIAGNOSES: 
+
+1.  Syncopal episode versus presyncope from the taking of her 
+
+diabetes medicine this morning. 
+
+2.  PR depression on electrocardiogram which appears to be new.  No 
+
+old electrocardiogram to compare.  We need to address the PR 
+
+depressions.  This is possibly pericarditis but it is unlikely.  I 
+
+would think that this more likely ischemia than pericarditis. 
+
+3.  Cardiac ischemia. 
+
+DISPOSITION (including condition upon discharge):  The patient will 
+
+need admission and a formal rule out.  She may even need an 
+
+echocardiogram inpatient.  A full work up is pending.  The 
+
+patient's full disposition is pending and she was signed out to Dr. 
+
+Aleta Nunley at 15:00. 
+
+___________________________________                    TR682/13484 
+
+GEORGE DUNHAM, M.D.       GD74                           D:08/06/96 
+
+                                                       T:08/06/96 
+
+Dictated by:  GEORGE DUNHAM, M.D.       GD74 
+
+ ******** Not reviewed by Attending Physician ********
+
+
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2096-08-06" TYPE="DATE" comment="" />
+<LOCATION id="P1" start="49" end="52" text="BHC" TYPE="HOSPITAL" comment="" />
+<NAME id="P2" start="78" end="97" text="MARVINYANDELL,GRACE" TYPE="PATIENT" comment="" />
+<ID id="P3" start="100" end="111" text="904-68-07-1" TYPE="MEDICALRECORD" comment="" />
+<DATE id="P4" start="137" end="145" text="08/06/96" TYPE="DATE" comment="" />
+<AGE id="P5" start="199" end="201" text="68" TYPE="AGE" comment="" />
+<NAME id="P6" start="244" end="248" text="Dodd" TYPE="DOCTOR" comment="" />
+<LOCATION id="P7" start="888" end="914" text="United Medical Center East" TYPE="HOSPITAL" comment="" />
+<AGE id="P8" start="1817" end="1819" text="68" TYPE="AGE" comment="" />
+<NAME id="P9" start="3003" end="3015" text="Aleta Nunley" TYPE="DOCTOR" comment="" />
+<ID id="P10" start="3083" end="3094" text="TR682/13484" TYPE="IDNUM" comment="" />
+<NAME id="P11" start="3097" end="3110" text="GEORGE DUNHAM" TYPE="DOCTOR" comment="" />
+<NAME id="P12" start="3123" end="3127" text="GD74" TYPE="USERNAME" comment="" />
+<DATE id="P13" start="3156" end="3164" text="08/06/96" TYPE="DATE" comment="" />
+<DATE id="P14" start="3224" end="3232" text="08/06/96" TYPE="DATE" comment="" />
+<NAME id="P15" start="3249" end="3262" text="GEORGE DUNHAM" TYPE="DOCTOR" comment="" />
+<NAME id="P16" start="3275" end="3279" text="GD74" TYPE="USERNAME" comment="" />
+</TAGS>
+</deIdi2b2>

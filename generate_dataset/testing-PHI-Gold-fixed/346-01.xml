@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2085-11-28
+
+CC: Pt presents to walk-in clinic, wants to establish care w/ me.
+
+HPI: 73 y.o. man, here w/ his son, wants to establish care w/ me.  He needs medication refills today.  Prior MD was Dr. Valerio on the Weedsport.  He has DM, HTN, glaucoma, is legally blind.  He feels well today, has no complaints presently.
+
+
+
+
+
+Problems
+
+Diabetes mellitus 
+
+Hypertension 
+
+Glaucoma 
+
+Visual impairment : pt legally blind 
+
+
+
+
+
+Medications
+
+DIPYRIDAMOLE 75MG, 2 Tablet(s) PO TID
+
+Enalapril Maleate 20MG, 1 Tablet(s) PO QD
+
+Metoprolol Tartrate 50MG, 1 Tablet(s) PO BID
+
+TRAZODONE 50MG, 1 Tablet(s) PO QHS PRN insomnia
+
+Insulin 70/30 Human 30 UNITS SC BID : 30U qAM, 30U qPM 
+
+
+
+
+
+Allergies
+
+NKDA 
+
+
+
+PE:  156/80   72
+
+Gen: overweight, elderly man, NAD
+
+HEENT: PERRL, EOM intact; oral mucosa moist, no lesions
+
+Neck: supple, no LAN
+
+Lungs: clear to auscultation bilaterally
+
+CV: RRR, nl S1, S2, no M/R/G
+
+Extrem: no clubbing, cyanosis or edema
+
+
+
+A/P: 73 y.o. man w/ DM, HTN, claucoma, legally blind, here to establish care.  Will refill pt's meds; he should make appt w/ me in one month for CPE; he will obtain his medical records prior to next visit.
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2085-11-28" TYPE="DATE" comment="" />
+<AGE id="P1" start="100" end="102" text="73" TYPE="AGE" comment="" />
+<NAME id="P2" start="215" end="222" text="Valerio" TYPE="DOCTOR" comment="" />
+<LOCATION id="P3" start="230" end="239" text="Weedsport" TYPE="CITY" comment="" />
+<AGE id="P4" start="963" end="965" text="73" TYPE="AGE" comment="" />
+</TAGS>
+</deIdi2b2>

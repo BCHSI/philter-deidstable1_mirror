@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2099-09-27
+
+EDVISIT^43634211^LEON, MAURICE^9/27/2099^HALEY, BEVERLY
+
+ADDENDUM:
+
+The patient had dizzy spells since 12/2099, which resolved after
+
+resection of his cervical medullary tumor.  He had recurrence 3
+
+times this morning of similar episodes.  He feels presyncopal and
+
+has headache.  He denies any nausea, vomiting, fevers, chills or
+
+upper respiratory symptoms.  He has had some epigastric pain. 
+
+During all of these episodes, he never lost consciousness, but he
+
+does a fall and slump.  He feels lightheaded prior to the
+
+episode.
+
+PAST MEDICAL HISTORY:  Remarkable for rheumatoid arthritis,
+
+psoriasis, hypertension, cholesterol, and asthma.
+
+Social history, family history, and review of systems are as per
+
+the written note.  The patient was counseled regarding smoking
+
+cessation.
+
+MEDICATIONS:  Aspirin, Lipitor, nifedipine, and Neurontin.
+
+ALLERGIES:  None.
+
+PHYSICAL EXAMINATION:  The patient is awake, alert, in no acute
+
+distress.  Vital signs are remarkable for temperature of 97.3,
+
+pulse 58, respiratory rate 16, blood pressure 134/79, and oxygen
+
+saturation is 96% on room air.  For full physical exam findings,
+
+please see the resident's written notes.  Specifically, HEENT
+
+exam is atraumatic and normal to inspection.  There is minimal
+
+right ptosis on my exam.  Neck is normal, supple, with posterior
+
+well-healed cervical scar.  There is no lymphadenopathy on my
+
+exam.  Respiratory, cardiac, abdominal, skin, and musculoskeletal
+
+exam are within normal limits as documented.  Neurologically, the
+
+patient is oriented with normal pleasant mood and affect.  Speech
+
+is fluent.  Cranial nerves are remarkable only for intermittent
+
+right-sided ptosis.  Extraocular movements are otherwise intact,
+
+and the patient is moving all 4 extremities without any motor or
+
+sensory deficit.
+
+LABORATORY DATA:  CBC and electrolytes are remarkable for BUN and
+
+creatinine ratio of 22-0.9 respectively.  CK and troponin are
+
+flat.  INR is 1.  EKG demonstrates sinus rhythm without any
+
+significant ST-T wave changes when compared to prior studies.
+
+IMAGING STUDIES:  Head CT is unremarkable.
+
+EMERGENCY DEPARTMENT COURSE:  The patient with possible
+
+presyncope without EKG changes, nor any evidence for new disease
+
+on his head CT, will undergo consultation by Neurology and
+
+Neurosurgery, and will be admitted to the ED Observation area for
+
+likely MR imaging prior to admission.  The patient if not
+
+admitted to either of the Neurosurgery or Neurology Services will
+
+require admission to the Medicine Service for syncope workup.
+
+ ******** Not reviewed by Attending Physician ********
+
+DISPOSITION:  Admitted to ED Observation Unit.
+
+PRIMARY DIAGNOSIS:  Near syncope.
+
+SECONDARY DIAGNOSIS:  Status post cervical medullary tumor
+
+resection.
+
+______________________________
+
+HALEY, BEVERLY MD
+
+D: 09/27/99
+
+T: 09/27/99
+
+Dictated By: HALEY, BEVERLY
+
+eScription document:7-2933615 BFFocus
+
+
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2099-09-27" TYPE="DATE" comment="" />
+<ID id="P1" start="36" end="44" text="43634211" TYPE="MEDICALRECORD" comment="" />
+<NAME id="P2" start="45" end="58" text="LEON, MAURICE" TYPE="PATIENT" comment="" />
+<DATE id="P3" start="59" end="68" text="9/27/2099" TYPE="DATE" comment="" />
+<NAME id="P4" start="69" end="83" text="HALEY, BEVERLY" TYPE="DOCTOR" comment="" />
+<DATE id="P5" start="131" end="138" text="12/2099" TYPE="DATE" comment="" />
+<NAME id="P6" start="2806" end="2820" text="HALEY, BEVERLY" TYPE="DOCTOR" comment="" />
+<DATE id="P7" start="2828" end="2836" text="09/27/99" TYPE="DATE" comment="" />
+<DATE id="P8" start="2841" end="2849" text="09/27/99" TYPE="DATE" comment="" />
+<NAME id="P9" start="2864" end="2878" text="HALEY, BEVERLY" TYPE="DOCTOR" comment="" />
+<ID id="P10" start="2900" end="2909" text="7-2933615" TYPE="IDNUM" comment="" />
+</TAGS>
+</deIdi2b2>

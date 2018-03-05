@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2085-08-21
+
+
+MIMA 5Z
+36 Santa Fe Road, Suite Z                          WILKERSON, EDWARD
+Louisa, MS 59817                                      37199514
+(238) 757-3898                                           08/21/85
+
+
+CHIEF COMPLAINT:  The patient is a 61 year old gentleman
+here for his first visit to me as his PCP, referred by Dr.
+Xavier.
+
+HISTORY OF PRESENT ILLNESS/PAST MEDICAL HISTORY BY PROBLEMS:
+ The patient has no acute complaints today.  His medical
+history includes:
+1.  Hypertension.  He is currently on hydrochlorothiazide 25
+mg q.d. and aspirin q.d.
+2.  Hypercholesterolemia.  The patient is on 30 mg q.h.s. of
+simvastatin.  His last lipid panel in April of this year
+showed total cholesterol of 196, triglycerides 169, HDL 52,
+and LDL of 110.  He has no LFTs on file.
+3.  Psychiatry.  According to the patient, he carried a
+diagnosis of major depression with paranoid features.  He is
+being followed by Dr. Uhler, psychiatrist at Marshfield Clinic as well as Betty Villasenor, a therapist at Marshfield Clinic.  He is currently on Depakote, Tegretol, Risperdal,
+and Paxil although he does not know the doses of his
+medications.  He still feels depressed but his paranoid
+symptoms have subsided.  He has no manic or hypermanic
+episodes.
+
+MEDICATIONS:  Aspirin 325 mg q.d., Paxil, Risperdal,
+Tegretol, Depakote doses unknown, simvastatin 30 mg q.h.s.,
+HCTZ 20 mg q.d.
+
+ALLERGIES:  No known drug allergies.
+
+SOCIAL HISTORY:  No tobacco, alcohol, or recreational drugs.
+ He quit drinking alcohol 16 years ago.  He has not been
+sexually active for 16 years and is currently not
+interested.  He lives by himself in  Denver Drive, walks
+about 20 minutes per day, and is from Louisa originally.
+
+FAMILY HISTORY:  Mother and father died of MIs in their 70s.
+ There is no history of sudden cardiac death.  No cancer,
+liver, kidney, or thyroid disease in the family.
+
+PHYSICAL EXAMINATION:  Blood pressure 132/84, heart rate 84,
+and weight 202 pounds.  The remainder of the exam is
+deferred.
+
+ASSESSMENT AND PLAN:
+1.  Hypertension.  The patient is well controlled on his
+current regimen.  I will therefore not change anything
+today.
+2.  Hypercholesterolemia.  The patient is at his goal LDL
+level.  I will continue to follow his lipid panel yearly.  I
+will also check LFTs today, given that he had a statin.
+3.  Psychiatry.  The patient will follow up with his
+psychiatrist and therapist.  He will let me know his actual
+medication and medication doses at his earliest convenience.
+ Also, I will recheck an LFT as stated above, given that he
+is on possibly hepatotoxic psychoactive medications.
+4.  Healthcare maintenance.  I have emphasized to the
+patient the benefits of weight reduction as well as
+increasing his exercise.  He is not interested in any
+exercise as in walking and I have therefore counseled him to
+walk longer and faster.  He had a negative flexible
+sigmoidoscopy in November 2083 and I will give him stool
+cards today.  His last tetanus was 10 years ago and he is
+not interested in the booster today.  His immunizations are
+otherwise up to date according to him and he will need the
+remainder of the history and a full physical exam at the
+next visit in 3 months' time.
+
+
+______________________________
+Wyatt Yeo, M.D.
+
+
+eScription document:0-726841 CFFocus
+
+DD: 08/21/85
+DT: 08/22/85
+DV: 08/21/85
+
+
+
+========================== Preceptor's Note ==========================
+
+
+
+
+
+August 21st
+
+
+
+Dr Yeo  Mr Wilkerson
+
+
+
+61 year old man  Hx hypertension.Hx elev cholesterol, on zocor.  Recently underwent a stress test for chest pain, with completely negative dopamine MIBI. PMH also + depression and paranoia , on rx. BP 132/84, p 84. 
+
+\Health maintenance: will be given stool cards, is up to date with others . Declines tetanus. 
+
+
+
+Dr. Yeo and I jointly interviewed and examined this  61year old patient who presents with  for f/u hypercholesterolemia, hypertension, recent stress test. See resident's note for details. PMH/FH/SH significant for depression/paranoia. ROS remarkable for + depression at this time . 
+
+
+
+On exam, we found bp 132/80   pulse 80. Rest of exam deferred. See Resident's note for further detail. 
+
+
+
+Impression and Plan reviewed and I agree with the resident's assessment of  and diagnosis of dperession, hypertension . We agree on the plan to review test results with patient, stool cards given, tetanus offered and declined.
+
+
+
+______________________________                              
+
+
+
+Connie Angelina Wills, M.D.
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2085-08-21" TYPE="DATE" comment="" />
+<LOCATION id="P1" start="29" end="30" text="M" TYPE="HOSPITAL" comment="" />
+<LOCATION id="P3" start="37" end="53" text="36 Santa Fe Road" TYPE="STREET" comment="" />
+<NAME id="P5" start="88" end="105" text="WILKERSON, EDWARD" TYPE="PATIENT" comment="" />
+<LOCATION id="P6" start="106" end="112" text="Louisa" TYPE="CITY" comment="" />
+<LOCATION id="P7" start="114" end="116" text="MS" TYPE="STATE" comment="" />
+<LOCATION id="P8" start="117" end="122" text="59817" TYPE="ZIP" comment="" />
+<ID id="P9" start="160" end="168" text="37199514" TYPE="MEDICALRECORD" comment="" />
+<CONTACT id="P10" start="169" end="183" text="(238) 757-3898" TYPE="PHONE" comment="" />
+<DATE id="P11" start="226" end="234" text="08/21/85" TYPE="DATE" comment="" />
+<AGE id="P12" start="272" end="274" text="61" TYPE="AGE" comment="" />
+<NAME id="P13" start="353" end="359" text="Xavier" TYPE="DOCTOR" comment="" />
+<DATE id="P14" start="683" end="688" text="April" TYPE="DATE" comment="" />
+<NAME id="P15" start="942" end="947" text="Uhler" TYPE="DOCTOR" comment="" />
+<LOCATION id="P16" start="965" end="982" text="Marshfield Clinic" TYPE="HOSPITAL" comment="" />
+<NAME id="P17" start="994" end="1010" text="Betty Villasenor" TYPE="DOCTOR" comment="" />
+<LOCATION id="P18" start="1027" end="1044" text="Marshfield Clinic" TYPE="HOSPITAL" comment="" />
+<LOCATION id="P19" start="1644" end="1657" text=" Denver Drive" TYPE="STREET" comment="" />
+<LOCATION id="P20" start="1703" end="1709" text="Louisa" TYPE="CITY" comment="" />
+<AGE id="P21" start="1779" end="1781" text="70" TYPE="AGE" comment="" />
+<DATE id="P22" start="2909" end="2922" text="November 2083" TYPE="DATE" comment="" />
+<NAME id="P23" start="3246" end="3255" text="Wyatt Yeo" TYPE="DOCTOR" comment="" />
+<ID id="P24" start="3284" end="3292" text="0-726841" TYPE="IDNUM" comment="" />
+<DATE id="P25" start="3306" end="3314" text="08/21/85" TYPE="DATE" comment="" />
+<DATE id="P26" start="3319" end="3327" text="08/22/85" TYPE="DATE" comment="" />
+<DATE id="P27" start="3332" end="3340" text="08/21/85" TYPE="DATE" comment="" />
+<DATE id="P28" start="3420" end="3431" text="August 21st" TYPE="DATE" comment="" />
+<NAME id="P29" start="3438" end="3441" text="Yeo" TYPE="DOCTOR" comment="" />
+<NAME id="P30" start="3446" end="3455" text="Wilkerson" TYPE="PATIENT" comment="" />
+<AGE id="P31" start="3459" end="3461" text="61" TYPE="AGE" comment="" />
+<NAME id="P32" start="3778" end="3781" text="Yeo" TYPE="DOCTOR" comment="" />
+<AGE id="P33" start="3827" end="3829" text="61" TYPE="AGE" comment="" />
+<NAME id="P34" start="4461" end="4482" text="Connie Angelina Wills" TYPE="DOCTOR" comment="" />
+</TAGS>
+</deIdi2b2>

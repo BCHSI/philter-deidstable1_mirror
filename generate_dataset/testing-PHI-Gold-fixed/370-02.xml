@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2070-03-22
+
+                     PROMPTCARE EMERGENCY DEPT VISIT
+
+ 
+
+UMALI,DANA YURI   124-23-22-9
+
+The patient was seen by me along with Dr. Frank Griffin on 03/22/70.  
+
+The history is documented by Dr. Griffin.  It was reviewed by me 
+
+with the patient found to be accurate and complete.  The physical 
+
+examination was confirmed by my examination.  Evaluation and 
+
+management was also concurred with.
+
+PRESENTING COMPLAINT:  Right face and arm numbness.
+
+HISTORY OF PRESENTING COMPLAINT:  This is a 66-year-old woman with 
+
+a new onset at 11 p.m. with right face and right arm numbness, now 
+
+improving.  No speech or motor deficits.  No recent illness.  
+
+REVIEW OF SYSTEMS:  No fever, chills, nausea or vomiting.  No 
+
+headache, no neck stiffness.  All negative.
+
+PAST MEDICAL HISTORY:  History of hypertension, diabetes and has a 
+
+history of hypercholesterolemia.  She had a cerebrovascular 
+
+accident with left sided weakness which has resolved in the past.  
+
+MEDICATIONS:  Hydrochlorothiazide, Zocor, Glyburide, Captopril and 
+
+enalapril.  The patient also takes metformin.
+
+ALLERGIES:  None.
+
+SOCIAL HISTORY AND FAMILY HISTORY:  She does not smoke or drink.  
+
+She lives with her family and her husband.  The patient speaks 
+
+Taiwanese and daughter and son are interpreting.  
+
+PHYSICAL EXAMINATION:  GENERAL:  Awake, alert and oriented woman in 
+
+no apparent distress.  She is a very pleasant lady, smiling at 
+
+times and makes eye contact.  VITAL SIGNS:  Temperature 97.8, pulse 
+
+84, respirations 20, blood pressure 166/66.  HEENT:  Normal.  NECK: 
+
+Normal.  LUNGS:  Clear of rales, wheezes or rhonchi.  
+
+CARDIOVASCULAR:  Regular, rate and rhythm.  ABDOMEN:  Nondistended. 
+
+Bowel sounds are normoactive and nontender.  SKIN:  Intact, warm 
+
+and dry with no lesions or rashes.  EXTREMITIES:  No cyanosis.  
+
+Normal extremities with no deformities, joint effusions or 
+
+crepitance noted over her joints.  She has a subjective decreased 
+
+sensation over her right lower forearm.  NEUROLOGICAL:  Cranial 
+
+nerves II through XII are intact.  She is oriented x3.  She has 5/5 
+
+motor in upper and lower extremities.  She has not walked, 
+
+therefore gait cannot be assessed.  She has no dysarthria, no 
+
+dysmetria and no signs of any focal weakness.
+
+LABORATORY EVALUATION:  Electrocardiogram revealed a sinus rhythm.  
+
+CT of the head was negative on initial evaluation.
+
+DISPOSITION (including condition upon discharge):  As such, 
+
+neurology was called and they elected to admit her.  She was 
+
+admitted on 03/22/70 by Dr. Yang in stable condition.
+
+___________________________________                    JT365/31932 
+
+NORRIS ELDER, M.D.     NE00                            D:03/22/70 
+
+                                                       T:03/23/70 
+
+Dictated by:  NORRIS ELDER, M.D.     NE00 
+
+ ******** Not reviewed by Attending Physician ********
+
+
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2070-03-22" TYPE="DATE" comment="" />
+<LOCATION id="P1" start="49" end="59" text="PROMPTCARE" TYPE="HOSPITAL" comment="" />
+<NAME id="P2" start="85" end="100" text="UMALI,DANA YURI" TYPE="PATIENT" comment="" />
+<ID id="P3" start="103" end="114" text="124-23-22-9" TYPE="MEDICALRECORD" comment="" />
+<NAME id="P4" start="158" end="171" text="Frank Griffin" TYPE="DOCTOR" comment="" />
+<DATE id="P5" start="175" end="183" text="03/22/70" TYPE="DATE" comment="" />
+<NAME id="P6" start="221" end="228" text="Griffin" TYPE="DOCTOR" comment="" />
+<AGE id="P7" start="520" end="522" text="66" TYPE="AGE" comment="" />
+<LOCATION id="P8" start="1255" end="1264" text="Taiwanese" TYPE="COUNTRY" comment="" />
+<DATE id="P9" start="2537" end="2545" text="03/22/70" TYPE="DATE" comment="" />
+<NAME id="P10" start="2553" end="2557" text="Yang" TYPE="DOCTOR" comment="" />
+<ID id="P11" start="2635" end="2646" text="JT365/31932" TYPE="IDNUM" comment="" />
+<NAME id="P12" start="2649" end="2661" text="NORRIS ELDER" TYPE="DOCTOR" comment="" />
+<NAME id="P13" start="2672" end="2676" text="NE00" TYPE="USERNAME" comment="" />
+<DATE id="P14" start="2706" end="2714" text="03/22/70" TYPE="DATE" comment="" />
+<DATE id="P15" start="2774" end="2782" text="03/23/70" TYPE="DATE" comment="" />
+<NAME id="P16" start="2799" end="2811" text="NORRIS ELDER" TYPE="DOCTOR" comment="" />
+<NAME id="P17" start="2822" end="2826" text="NE00" TYPE="USERNAME" comment="" />
+</TAGS>
+</deIdi2b2>

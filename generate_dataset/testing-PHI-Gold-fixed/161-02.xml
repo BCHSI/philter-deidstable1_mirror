@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2070-12-03
+
+
+
+
+
+
+
+
+
+
+
+
+
+December 3, 2070
+
+
+
+
+
+Thomas You, M.D.
+
+239 Gilson Road
+
+Vernon, ME 27525
+
+
+
+
+
+RE:  		Jaquante Xuereb
+
+SRI: 		134-43-51
+
+
+
+Dear Dr. You:
+
+
+
+I had the pleasure of seeing our mutual patient, Mr. Jaquante Xuereb, in follow up evaluation in our vascular surgery clinic here at the Santa Rosa Infirmary today.  As you remember, he recently underwent a revision of his lower extremity bypass graft with thrombectomy of the fem-pop bypass graft and subsequent jump graft to the below-knee popliteal artery.  He returns today for follow up evaluation. 
+
+
+
+He has a warm, well-perfused foot with a palpable dorsalis pedis pulse.  Unfortunately, over the last ten days he has developed increased erythema and tenderness on the medial aspect of his left knee with superficial skin breakdown consistent with either a staph or a strep cellulitis.  He had been on a course of p.o. antibiotics over a week ago for treatment of strep throat as well.  The patient has been increased his activity and prior to this time had been extremely active with no erythema, tenderness or drainage from his leg.  My concern is that he has increased warmth with blanching and erythema on the medial aspect of his knee consistent with a superficial cellulitis and I believe that he would benefit from hospital admission with a course of IV antibiotics, bedrest and elevate.  We will tentatively plan to admit him for localized wound care measures, treatment with IV Nafcillin on a q.4 hour basis.  In addition, he has intact femoral pulses on the left side.  He does report when he was ambulating he was having increased difficulty with claudication in the distal left lower extremity and calf region.  Most recent vascular lab studies dated November 29, 2070 reveal an ABI of 0.96 on the right, 0.56 on the left.  
+
+
+
+I will keep you informed as to the status of Mr. Xuereb.  My concern is that if he does infect this PTFE graft we do not have any suitable autogenous conduit to perform an additional reconstruction and he would stand a very high chance of losing his limb at the knee level.  If I can be of any further assistance in the management of this or any of your other patients with vascular disease, particularly those in need of a minimally invasive vascular procedure, please feel free to contact me directly.
+
+
+
+
+
+Sincerely,
+
+
+
+
+
+Shane R. Herring, M.D.
+
+
+
+cc:	Dirk O. Reece, M.D., 9 Church Street, Pune, ME 99597
+
+
+
+SH/truitt		89-05167655.doc
+
+
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2070-12-03" TYPE="DATE" comment="" />
+<DATE id="P1" start="40" end="56" text="December 3, 2070" TYPE="DATE" comment="" />
+<NAME id="P2" start="62" end="72" text="Thomas You" TYPE="DOCTOR" comment="" />
+<LOCATION id="P3" start="80" end="95" text="239 Gilson Road" TYPE="STREET" comment="" />
+<LOCATION id="P4" start="97" end="103" text="Vernon" TYPE="CITY" comment="" />
+<LOCATION id="P5" start="105" end="107" text="ME" TYPE="STATE" comment="" />
+<LOCATION id="P6" start="108" end="113" text="27525" TYPE="ZIP" comment="" />
+<NAME id="P7" start="126" end="141" text="Jaquante Xuereb" TYPE="PATIENT" comment="" />
+<LOCATION id="P8" start="143" end="146" text="SRI" TYPE="HOSPITAL" comment="" />
+<ID id="P9" start="150" end="159" text="134-43-51" TYPE="MEDICALRECORD" comment="" />
+<NAME id="P10" start="172" end="175" text="You" TYPE="DOCTOR" comment="" />
+<NAME id="P11" start="233" end="248" text="Jaquante Xuereb" TYPE="PATIENT" comment="" />
+<LOCATION id="P12" start="317" end="337" text="Santa Rosa Infirmary" TYPE="HOSPITAL" comment="" />
+<DATE id="P13" start="1751" end="1768" text="November 29, 2070" TYPE="DATE" comment="" />
+<NAME id="P14" start="1877" end="1883" text="Xuereb" TYPE="PATIENT" comment="" />
+<NAME id="P15" start="2353" end="2369" text="Shane R. Herring" TYPE="DOCTOR" comment="" />
+<NAME id="P16" start="2383" end="2396" text="Dirk O. Reece" TYPE="DOCTOR" comment="" />
+<LOCATION id="P17" start="2404" end="2419" text="9 Church Street" TYPE="STREET" comment="" />
+<LOCATION id="P18" start="2421" end="2425" text="Pune" TYPE="CITY" comment="" />
+<LOCATION id="P19" start="2427" end="2429" text="ME" TYPE="STATE" comment="" />
+<LOCATION id="P20" start="2430" end="2435" text="99597" TYPE="ZIP" comment="" />
+<NAME id="P21" start="2439" end="2441" text="SH" TYPE="DOCTOR" comment="" />
+<NAME id="P22" start="2442" end="2448" text="truitt" TYPE="DOCTOR" comment="" />
+<ID id="P23" start="2450" end="2461" text="89-05167655" TYPE="IDNUM" comment="" />
+</TAGS>
+</deIdi2b2>

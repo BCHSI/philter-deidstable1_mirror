@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2093-08-09
+
+EDVISIT^03689964^VALENZUELA, BRIAN^08/09/93^BOYER, DAWN
+
+CHIEF COMPLAINT:  Fever.
+
+I saw this patient with Dr. Edwards.  Please see his note for
+
+further details.  I confirm that I have interviewed and examined
+
+the patient, reviewed the resident's documentation, and
+
+discussed, plan of care, and disposition with the patient. 
+
+History is obtained through discussion with the patient who says
+
+yes or no, as well as transporting paramedics.
+
+HISTORY OF PRESENT ILLNESS:  The patient is a 56-year-old
+
+gentleman with end-stage MS at nursing home.  He has indwelling
+
+Foley catheter.  He was transported from nursing home to ED as he
+
+has had a fever today to approximately 100.5.  Per EMS, they were
+
+told that the patient has also been more lethargic with decreased
+
+POs today.  He received Tylenol and defervesced somewhat.  He
+
+then received 400 mL of fluid en route and he has become more
+
+awake and alert.  He is telling the paramedics that he is at his
+
+baseline.  He denies to me any headaches, neck pain.  No chest
+
+pain, shortness of breath, no abdominal pain, no cough, no fevers
+
+or chills.  He reports that he is able to discern when he has
+
+abdominal pain.  He has intact sensation.
+
+PAST MEDICAL HISTORY:  As per HPI.  In addition, CAD, diabetes,
+
+hypertension, CHF.
+
+Please see resident note for list of medication and allergies.
+
+SOCIAL HISTORY:  He does not smoke.  He does not drink.  He is at
+
+a nursing home.  He is married.
+
+FAMILY HISTORY:  Noncontributory.
+
+REVIEW OF SYSTEMS:  As per resident note and my HPI.
+
+PHYSICAL EXAMINATION:  He is awake, alert, and nontoxic, in no
+
+distress.  Afebrile, pulse in 90s, respiratory 18, blood pressure
+
+102/66, O2 saturation 99% on room air.  HEENT exam: 
+
+Normocephalic and atraumatic.  Neck:  Supple.  He has coarse
+
+upper airway sounds bilaterally anteriorly.  Heart is regular
+
+rate and rhythm.  His abdomen is slightly distended.  He is
+
+nontender.  He has sacral decubitus ulcers that are well healing,
+
+no evidence of acute infection, contractures in his lower
+
+extremities.  He is alert and does say yes or no to questions.
+
+The most likely etiology in this patient for an infection is his
+
+urinary tract infection.  His urine and his catheter was cloudy. 
+
+Prior to sending the urine for evaluation for urinalysis to the
+
+lab, the patient had his catheter changed.  He then began to no
+
+longer drain urine.  Accordingly, a bladder probe was put on
+
+using ultrasound and clearly showed a distended bladder. 
+
+Attempts were made to change the catheter, but they were
+
+unsuccessful.  There was pus found at the meatus.  At this point,
+
+the patient is awaiting a CT scan of his abdomen and urology
+
+evaluation.  He is also receiving antibiotics for presumed UTI
+
+and/or abscess.
+
+LABORATORY DATA:  Include sodium 136, K 4.5, chloride 102,
+
+bicarbonate 22, BUN 22, creatinine 0.45, and glucose 136.  LFTs
+
+within normal limits.  Normal lipase.  White count of 5.7,
+
+hematocrit 35.5, and platelet count 306,000.  Coags within normal
+
+limits.  UA again is pending at this time.
+
+He will be admitted to the hospital.  I attempted to reach the
+
+patient's primary care physician, Dr. Earle to contact from the
+
+WBM office, however, my calls went unanswered.  At this point, I
+
+am signing out the patient and he is awaiting his CT scan and
+
+urology evaluation.
+
+DIAGNOSIS:  Urinary infection, mild dehydration, end-stage MS.
+
+CONDITION:  Stable.
+
+DISPOSITION:  Will be admitted.
+
+______________________________
+
+BOYER, DAWN MD
+
+D: 08/09/93
+
+T: 08/10/93
+
+Dictated By: BOYER, DAWN
+
+eScription document:6-1950972 BFFocus
+
+ ******** Not reviewed by Attending Physician ********
+
+
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2093-08-09" TYPE="DATE" comment="" />
+<ID id="P1" start="36" end="44" text="03689964" TYPE="MEDICALRECORD" comment="" />
+<NAME id="P2" start="45" end="62" text="VALENZUELA, BRIAN" TYPE="PATIENT" comment="" />
+<DATE id="P3" start="63" end="71" text="08/09/93" TYPE="DATE" comment="" />
+<NAME id="P4" start="72" end="83" text="BOYER, DAWN" TYPE="DOCTOR" comment="" />
+<NAME id="P5" start="139" end="146" text="Edwards" TYPE="DOCTOR" comment="" />
+<AGE id="P6" start="518" end="520" text="56" TYPE="AGE" comment="" />
+<NAME id="P7" start="3175" end="3180" text="Earle" TYPE="DOCTOR" comment="" />
+<LOCATION id="P8" start="3202" end="3205" text="WBM" TYPE="HOSPITAL" comment="" />
+<NAME id="P9" start="3502" end="3513" text="BOYER, DAWN" TYPE="DOCTOR" comment="" />
+<DATE id="P10" start="3521" end="3529" text="08/09/93" TYPE="DATE" comment="" />
+<DATE id="P11" start="3534" end="3542" text="08/10/93" TYPE="DATE" comment="" />
+<NAME id="P12" start="3557" end="3568" text="BOYER, DAWN" TYPE="DOCTOR" comment="" />
+<ID id="P13" start="3590" end="3599" text="6-1950972" TYPE="IDNUM" comment="" />
+</TAGS>
+</deIdi2b2>

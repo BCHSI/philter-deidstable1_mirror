@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2066-02-12
+
+                                                       Patient Name: BARRERA,MARY [ MRN: 45167459SLO ]
+
+                                                         Date of Visit: 02/12/2066
+
+
+
+
+
+
+
+
+
+Chief Complaint	
+
+The patient presents for care of pain in her legs.
+
+
+
+History of Present Illness	
+
+86F reports worsening b/l leg pain. Pain only occurs when she walks. No trauma. No pain at rest. Pain is in both legs and can't be localized to any specific part of her leg. No pain when lying down. She takes tylenol bid which helps somewhat, but is now less effective than previously.
+
+
+
+No problems with medications.  No CP or new numbness or weakness. No problems with GERD. No new muscle pain. No symptoms of hypo- or hyperglycemia.
+
+
+
+Pt recently had brain MRI ordered by ophtho for ? R hemianonymous hemianopsia. MRI revealed multiple lacunes.
+
+
+
+Medications	  
+
+ECASA	 325MG PO QD
+
+ZOCOR	 20MG PO QHS
+
+TYLENOL (ACETAMINOPHEN)	 500MG 1 Capsule(s) PO Q4H
+
+OSCAL+D (CALCIUM CARBONATE + VIT D(1TABLE...	 500MG PO BID
+
+KCL SLOW REL.	 10MEQ 2 Tablet(s) PO QD
+
+ATENOLOL	 100MG PO QD
+
+GLYBURIDE	 2.5MG PO QD
+
+HCTZ	 50MG PO QD
+
+LISINOPRIL	 40MG PO QD
+
+NORVASC (AMLODIPINE)	 10MG 1 Tablet(s) PO QD
+
+
+
+Physical Exam	
+
+WDWN elderly F, NAD
+
+175/70 P64 R12 153#
+
+Chest: CTA/P
+
+Cor: RRR, S1, S2, No MRG
+
+Abd: Soft, NT. +BS. No HSM
+
+Ext: No C/C/E; FROM; SLR negative bilaterally; no focal tenderness; no knee or hip pain.
+
+
+
+Assessment	
+
+1. AODM - last A1C=5.3; will recheck today, but d/c glyburide
+
+2. HTN - increase lisinopril to 40 mg and norvasc to 10; check chem
+
+3. OA - vioxx 12.5 qd with tylenol bid prn.
+
+4. Multiple lacunes - control htn
+
+5. CAD,  PVD and hiatal hernia - stable
+
+
+
+The patient will f/u with me in  3 mos, or sooner prn.
+
+
+
+
+
+______________________________                              
+
+
+
+Tracy T. Xenakis, M.D.
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2066-02-12" TYPE="DATE" comment="" />
+<NAME id="P1" start="97" end="109" text="BARRERA,MARY" TYPE="PATIENT" comment="" />
+<ID id="P2" start="117" end="125" text="45167459" TYPE="MEDICALRECORD" comment="" />
+<LOCATION id="P3" start="125" end="128" text="SLO" TYPE="HOSPITAL" comment="" />
+<DATE id="P4" start="204" end="214" text="02/12/2066" TYPE="DATE" comment="" />
+<AGE id="P5" start="325" end="327" text="86" TYPE="AGE" comment="" />
+<NAME id="P6" start="1833" end="1849" text="Tracy T. Xenakis" TYPE="DOCTOR" comment="" />
+</TAGS>
+</deIdi2b2>

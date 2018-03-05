@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2063-12-31
+
+UHER,OLGA
+258-16-49-2
+12/31/63
+ 
+                     CARDIOLOGY OFFICE NOTE
+ 
+NOTE
+     Ms. Uher returns after a 4  year hiatus.  She is now 52 and
+has long-standing insulin dependant diabetes with a h/o retinopathy
+OS, possible peripheral neuropathy but not known nephropathy.  She
+had a maximal negative exercise test in 2059 and has felt generally
+well since that time.  Over the past year she has not been as
+careful as previously with her diet and has not been checking her
+sugars regularly.  A random cholesterol w/i the past year was over
+300.
+     She has intermittently had sharp, brief discomforts of the
+anterior chest lasting only seconds and not accompanied by dyspnea,
+diaphoresis or light-headedness.  There has not been any reduction
+in her physical capacity, in fact, she feels stronger than a year
+ago and is working full-time.  There has been no orthopnea, PND or
+peripheral edema.  She is interested in increasing her physical
+activity program.
+     Cardiac risk factors include remote smoking, stopped by age
+20, hypercholesterolemia and family history in that her father
+developed coronary disease possibly in his 50's.  She is
+perimenopausal and has discussed later estrogen usage with her
+gynecologist Dr. Bradley Brandt.
+     Her only medication is lente insulin taken twice per day.
+ 
+EXAM
+     She is comfortable at rest.  BP 110/76, HR 80 and reg.  No
+JVD.  Carotids full w/o bruits.  Chest clr.  Cardiac exam shows
+normal heart sounds w/o gallop or murmur.  Abd. soft w/o
+organomegaly.  No peripheral edema.
+     Resting EKG shows sinus rhythm with normal intervals and axis
+and is a normal tracing.
+     For further evaluation of her chest discomforts and to help
+gauge her exercise program an exercise treadmill test was performed
+using the standard bruce protocol.  She exercised for 9 minutes, 8
+seconds and stopped because of knee discomfort but not because of
+chest pain or inordinate dyspnea.  Peak heart rate was 143 (85%
+maximal predicted) with an appropriate rise in systolic pressure. 
+There were no diagnostic changes of ischemia at this good work
+load.  Compared to the test of 9/15/59 she exercised 1 minute, 4
+seconds longer.
+ 
+IMPRESSION
+     1.  No evidence of clinical coronary disease at this time. 
+She has major risk factors of insulin dependant diabetes,
+hypercholesterolemia, family h/o coronary disease and a
+perimenopausal state.  She will be seeing Dr. David Yun as
+her primary care provider, and would urge that a fasting lipid
+profile be obtained and that dietary/pharmacologic therapy be 
+PAGE 2
+UHER,OLGA
+12/31/63
+ 
+ 
+instituted to achieve an LDL cholesterol <130.  From a cardiac
+standpoint, post-menopausal estrogen therapy would be desired.  Low
+dose aspirin therapy could also be considered.
+     I would be happy to see Ms. Uher for additional cardiac
+evaluation as needed in the future.
+ 
+REFERRING MD
+cc:  David Yun, M.D.
+ 
+ 
+ 
+Ivan M. Ing, M.D.
+ 
+DD: 12/31/63
+DT: 01/01/64
+DV: 12/31/63
+ 
+ ******** Approved but not reviewed by Attending Provider ********
+
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2063-12-31" TYPE="DATE" comment="" />
+<NAME id="P1" start="28" end="37" text="UHER,OLGA" TYPE="PATIENT" comment="" />
+<ID id="P2" start="38" end="49" text="258-16-49-2" TYPE="MEDICALRECORD" comment="" />
+<DATE id="P3" start="50" end="58" text="12/31/63" TYPE="DATE" comment="" />
+<NAME id="P4" start="121" end="125" text="Uher" TYPE="PATIENT" comment="" />
+<AGE id="P5" start="170" end="172" text="52" TYPE="AGE" comment="" />
+<DATE id="P6" start="352" end="356" text="2059" TYPE="DATE" comment="" />
+<AGE id="P7" start="1059" end="1061" text="20" TYPE="AGE" comment="" />
+<AGE id="P8" start="1165" end="1167" text="50" TYPE="AGE" comment="" />
+<NAME id="P9" start="1259" end="1273" text="Bradley Brandt" TYPE="DOCTOR" comment="" />
+<DATE id="P10" start="2149" end="2156" text="9/15/59" TYPE="DATE" comment="" />
+<NAME id="P11" start="2437" end="2446" text="David Yun" TYPE="DOCTOR" comment="" />
+<NAME id="P12" start="2583" end="2592" text="UHER,OLGA" TYPE="PATIENT" comment="" />
+<DATE id="P13" start="2593" end="2601" text="12/31/63" TYPE="DATE" comment="" />
+<NAME id="P14" start="2817" end="2821" text="Uher" TYPE="PATIENT" comment="" />
+<NAME id="P15" start="2901" end="2910" text="David Yun" TYPE="DOCTOR" comment="" />
+<NAME id="P16" start="2923" end="2934" text="Ivan M. Ing" TYPE="DOCTOR" comment="" />
+<DATE id="P17" start="2947" end="2955" text="12/31/63" TYPE="DATE" comment="" />
+<DATE id="P18" start="2960" end="2968" text="01/01/64" TYPE="DATE" comment="" />
+<DATE id="P19" start="2973" end="2981" text="12/31/63" TYPE="DATE" comment="" />
+</TAGS>
+</deIdi2b2>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2095-08-06
+
+Oncology COMPLETION NOTE 
+
+Patient: Oscar Meyer  #277-14-47
+
+RADIATION ONCOLOGIST: VICTOR M. ZUBIA, MD 
+
+DATES OF RADIATION: 5/27/95 - 7/24/95 (58 elapsed days) 
+
+DIAGNOSIS: Prostate adenocarcinoma T2B Nx,  Gleason 4+3 = 7,  PSA 7.1
+
+CONCISE HISTORY: Mr. Meyer is a 63 year old man who was found to have an elevated PSA of 7.1 on screening exam. An abnormality was also noted on DRE at that time.  Prostate biopsy was performed, and all 12 cores were positive for disease, including 8 cores with Gleason 7 disease.  Prostatic MRI showed no evidence of extracapsular extension.  CT of the abdomen and bone scan revealed no evidence of metastatic disease.  He was treated with definitive radiation to the prostate and seminal vesicles by IMRT, with concomitant Zoladex treatment.
+
+SPECIAL TECHNICAL CONSIDERATIONS: The patient underwent CT-based imaging to define the target volume and the normal tissue structures and 3D treatment planning was performed for treatment with IMRT. Daily localization of the prostate was done using the BAT ultrasound. 
+
+SUMMARY OF RADIATION AND TREATMENT ADMINISTERED: The treatment site was the prostate gland plus the caudal seminal vesicles followed by a boost to the prostate alone. 
+
+The patient underwent external beam radiotherapy to the prostate and caudal seminal vesicles to a dose of 45 Gy given as 25 fractions of 1.8 Gy/day. He then underwent a boost to the prostate only of 34. Gy given in 17 fractions of 2 Gy/day for a total dose of 79 Gy. 
+
+CLINICAL COURSE: The patient developed mild nocturia and more frequent bowel movements, for which he took Flomax and Metamucil. Mr. Meyer has tolerated his androgen deprivation therapy well.
+
+FOLLOW-UP: Mr. Meyer will follow up with us in 3 months with a PSA in advance.
+
+Ulysses Imler, MD (Resident)
+
+Victor Zubia, MD (Attending) 
+
+cc:
+
+
+
+
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2095-08-06" TYPE="DATE" comment="" />
+<NAME id="P2" start="64" end="75" text="Oscar Meyer" TYPE="PATIENT" comment="" />
+<ID id="P3" start="78" end="87" text="277-14-47" TYPE="MEDICALRECORD" comment="" />
+<NAME id="P4" start="111" end="126" text="VICTOR M. ZUBIA" TYPE="DOCTOR" comment="" />
+<DATE id="P5" start="153" end="160" text="5/27/95" TYPE="DATE" comment="" />
+<DATE id="P6" start="163" end="170" text="7/24/95" TYPE="DATE" comment="" />
+<NAME id="P7" start="283" end="288" text="Meyer" TYPE="PATIENT" comment="" />
+<AGE id="P8" start="294" end="296" text="63" TYPE="AGE" comment="" />
+<NAME id="P9" start="1648" end="1653" text="Meyer" TYPE="PATIENT" comment="" />
+<NAME id="P10" start="1723" end="1728" text="Meyer" TYPE="PATIENT" comment="" />
+<NAME id="P11" start="1788" end="1801" text="Ulysses Imler" TYPE="DOCTOR" comment="" />
+<NAME id="P12" start="1818" end="1830" text="Victor Zubia" TYPE="DOCTOR" comment="" />
+</TAGS>
+</deIdi2b2>

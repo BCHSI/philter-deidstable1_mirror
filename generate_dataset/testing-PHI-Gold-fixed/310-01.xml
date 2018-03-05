@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2073-06-13
+
+EDVISIT^98044905^WARE, VINCENT^06/13/73^ZORN, TYLER
+
+The patient is a 65-year-old gentleman who presents complaining
+
+of shortness of breath, weakness, and fatigue.  The patient was
+
+seen in conjunction with resident physician, Ostrowski.  Please see
+
+her note for details of the visit.  Resident's history was
+
+reviewed by me.  The patient was interviewed and examined by me.
+
+PAST MEDICAL HISTORY:  Significant for non-Hodgkin lymphoma,
+
+diabetes, and hypercholesterolemia.
+
+MEDICATIONS:  Metformin, insulin, aspirin, and multivitamins.
+
+ALLERGIES:  The patient has no allergies.
+
+FAMILY HISTORY:  Negative for chronic diseases.
+
+SOCIAL HISTORY:  No alcohol, tobacco, or illicit substances.
+
+HISTORY OF PRESENT ILLNESS:  The patient is followed by his
+
+hematology-oncologist for unexplainable anemia.  The patient
+
+presents complaining of dyspnea.
+
+REVIEW OF SYSTEMS:  Significant for dyspnea on exertion,
+
+weakness, fatigue, fever and shortness of breath, negative for
+
+headache, blurred vision, chest pain.  Other systems were
+
+reviewed and found to be negative, unless noted positive on
+
+resident's note.
+
+PHYSICAL EXAMINATION:  I concur with documented resident's note. 
+
+Specifically, abdomen was soft and nontender.  Rectal Exam: 
+
+Guaiac negative, normal tone, and no masses.
+
+ASSESSMENT AND PLAN:  Laboratory studies remarkable for
+
+hematocrit of 24.  EKG is unremarkable.  Chest x-ray is negative.
+
+ The patient's management was discussed with Dr. Walsh,
+
+oncology.
+
+The patient will be admitted to oncology hematology for workup.
+
+______________________________
+
+ZORN, TYLER M.D.
+
+D: 06/13/73
+
+T: 06/13/73
+
+Dictated By: ZORN, TYLER
+
+eScription document:2-2004166 IFFocus
+
+ ******** Not reviewed by Attending Physician ********
+
+
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2073-06-13" TYPE="DATE" comment="" />
+<ID id="P1" start="36" end="44" text="98044905" TYPE="MEDICALRECORD" comment="" />
+<NAME id="P2" start="45" end="58" text="WARE, VINCENT" TYPE="PATIENT" comment="" />
+<DATE id="P3" start="59" end="67" text="06/13/73" TYPE="DATE" comment="" />
+<NAME id="P4" start="68" end="79" text="ZORN, TYLER" TYPE="DOCTOR" comment="" />
+<AGE id="P5" start="98" end="100" text="65" TYPE="AGE" comment="" />
+<NAME id="P6" start="256" end="265" text="Ostrowski" TYPE="DOCTOR" comment="" />
+<NAME id="P7" start="1487" end="1492" text="Walsh" TYPE="DOCTOR" comment="" />
+<NAME id="P8" start="1603" end="1614" text="ZORN, TYLER" TYPE="DOCTOR" comment="" />
+<DATE id="P9" start="1624" end="1632" text="06/13/73" TYPE="DATE" comment="" />
+<DATE id="P10" start="1637" end="1645" text="06/13/73" TYPE="DATE" comment="" />
+<NAME id="P11" start="1660" end="1671" text="ZORN, TYLER" TYPE="DOCTOR" comment="" />
+<ID id="P12" start="1693" end="1702" text="2-2004166" TYPE="IDNUM" comment="" />
+</TAGS>
+</deIdi2b2>

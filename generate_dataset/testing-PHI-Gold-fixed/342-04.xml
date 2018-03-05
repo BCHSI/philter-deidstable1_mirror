@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2094-09-07
+
+ Patient Name: BARR,NICKY  [ 32612454(LDC) ] 
+                                                         Date of Visit:  09/07/2094
+
+Chief Complaint	
+Mrs Barr  is here to follow up on Hypertension, diabetes, cholesterol
+
+History of Present Illness	
+Mrs Barr has been doing well. 
+Didn't take her blood pressure meds today, forgot
+Seen yesterday by RN and got glucemeter. Still can not make it work 
+Has been on  Metformin 850 mg TID and Avandia 4 mg QD
+Not checking her glucose yet
+Last HbA1C  9.6 on 6/28 down from 5/11/94 - 10.6
+
+She is taking Lipitor 80 mg for few weeks. Last LDL  134 on 6/28
+
+On Lisinopril to 40 mg QD and Metoprolol 100 mg BID
+She still smokes 1/2 PPD 
+
+
+
+Review of Systems	
+C/P: Occasional chest pain on and off, No SOB or leg edema
+Skin(-)
+MSK(-)
+HEENT : Denies cold sx
+General: Denies fever, chills,  weigth loss
+GI :Denies nausea, vomiting, diarrhea
+Neuro: denies headaches
+Psych: depressed.
+All other systems negative
+
+
+Problems
+Cerebrovascular accident : x 4
+Obesity : BMI 40 - Type 3
+Hypertension 
+Diabetes mellitus type 2 
+Osteopenia : T score -1.8 L1-4
+
+
+Allergies
+NKA
+
+
+
+Medications
+Plavix (CLOPIDOGREL) 75 MG (75MG TABLET take 1) PO QD 
+Hydrochlorothiazide 25 MG PO QD 
+Multivitamins 1 CAPSULE PO QD 
+Fosamax (ALENDRONATE) 35MG TABLET PO QSundayAM , Take it with 8 Oz of water 
+Oscal 500 + D (CALCIUM CARBONATE 1250 MG (500MG ELEM CA)/ VIT D 200 IU)) 2 TAB PO qd 
+Ambien (ZOLPIDEM TARTRATE) 5 MG PO QHS 
+Ibuprofen 800 MG (800MG TABLET take 1) PO TID PRN leg pain 
+Lisinopril 40 MG (40MG TABLET take 1) PO QD , dose increased from 10 to 20 mg QD on 5/11/94 and from 20 to 40 mg today 6/1/94
+Metoprolol TARTRATE 150 MG (100MG TABLET take 1.5) PO BID , Change of dose from 100 mg BID to 150 mg BID
+Avandia (ROSIGLITAZONE) 4 MG (4MG TABLET take 1) PO QD 
+Lipitor (ATORVASTATIN) 80MG TABLET PO QHS , dose increased from 40 to 80 mg today
+Metformin 850MG TABLET PO TID , dose increased today from 500 mg TID to 850 mg TID. Thanks 
+
+Vital Signs
+BP 160/110, P 78, RR 14, Temp 97 F, Wt 249 lb
+ 
+
+ 
+Physical Exam	
+Alert, in no distress, obese, flat affect
+HEENT :   oral mucosa moist, no lesions. Throat clear
+Neck : supple, no masses or nodes, no JVD.
+Lungs: clear anteriorly and posteriroly to auscultation, no rhonchi, crackles or wheezes
+Heart: regular,. S1S2 normal, no S3 or murmurs
+Abdomen: soft, no tenderness BS(+), no rebound
+Ext: no edema, normal skin
+Feet exam: normal skin,. good DP, good capillary filling
+
+Assessment	
+1. HYPERTENSION
+Poorly controlled today
+hasn't taken her meds yet
+Explained the importance of taking BP meds eraly AM
+Keep same meds and see me in 6 weeks
+Continue Metroprolol to  150 mg BID 
+Continue  HCTZ 25 mg QD
+Continue Lisinopril to 40 mg QD 
+See me in 2 weeks to recheck BP
+
+
+2. CEREBROVASCULAR ACCIDENT
+Uncontrolled HTN
+Smoking - active
+Elevated LDL
+Obese
+Sedentary
+On statins. Goal LDL <100
+Goal LDL <70
+Plavix 75 mg QD 
+
+3. DIABETES MELLITUS
+Start checking glucose QD
+Continue Avandia 4 mg QD and Metformin 850 mg TID
+Goal below 7
+Repeat HbA1C now and glucose
+Nutritionist referal
+Due for eye exam. 
+LDL 134 on Lipitor 40 
+Repeat cholesterol and lipir profile today
+
+4. OSTEOPENIA
+Continue  Fosamax 35 mg Q week, calcium and MVI
+
+Plan	
+Follow up in  2 weeks
+
+
+
+
+_____________________________________________
+Victoria Amy-Armstrong, M.D.
+
+
+
+
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2094-09-07" TYPE="DATE" comment="" />
+<NAME id="P1" start="43" end="53" text="BARR,NICKY" TYPE="PATIENT" comment="" />
+<ID id="P2" start="57" end="65" text="32612454" TYPE="MEDICALRECORD" comment="" />
+<LOCATION id="P3" start="66" end="69" text="LDC" TYPE="HOSPITAL" comment="" />
+<DATE id="P4" start="147" end="157" text="09/07/2094" TYPE="DATE" comment="" />
+<NAME id="P5" start="180" end="184" text="Barr" TYPE="PATIENT" comment="" />
+<NAME id="P6" start="279" end="283" text="Barr" TYPE="PATIENT" comment="" />
+<DATE id="P7" start="527" end="531" text="6/28" TYPE="DATE" comment="" />
+<DATE id="P8" start="542" end="549" text="5/11/94" TYPE="DATE" comment="" />
+<DATE id="P9" start="618" end="622" text="6/28" TYPE="DATE" comment="" />
+<DATE id="P10" start="1299" end="1305" text="Sunday" TYPE="DATE" comment="" />
+<DATE id="P11" start="1608" end="1615" text="5/11/94" TYPE="DATE" comment="" />
+<DATE id="P12" start="1643" end="1649" text="6/1/94" TYPE="DATE" comment="" />
+<NAME id="P13" start="3301" end="3323" text="Victoria Amy-Armstrong" TYPE="DOCTOR" comment="" />
+</TAGS>
+</deIdi2b2>

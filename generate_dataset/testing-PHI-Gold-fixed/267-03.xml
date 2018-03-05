@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2096-10-17
+
+                     ST VINCENT EMERGENCY DEPT VISIT
+ 
+LAU,HELEN M.   544-41-32-1              VISIT DATE: 10/17/96
+PRESENTING COMPLAINT and HISTORY OF PRESENTING COMPLAINT:  The 
+patient is a 68-year-old female status post CABG in September of 
+this past year.  She comes in with an acute headache this morning, 
+followed by a syncopal event, which lasted approximately five 
+seconds.  Currently, she is complaining of intermittent chest pain 
+and a continuing headache across her head and down to her eyes. 
+PAST MEDICAL and SURGICAL HISTORY:  The past history is notable for 
+her CABG, as well as for a history of temporal arteritis. 
+MEDICATIONS:  She was on prednisone, which was recently stopped. 
+The rest of the PAST MEDICAL HISTORY, MEDICATIONS, and ALLERGIES: 
+As documented in the written chart by the resident physician, and 
+as reviewed by me. 
+PHYSICAL EXAMINATION:  On physical examination, she is an elderly 
+black female in no acute distress.  She has a temperature of 100 
+degrees F., a pulse of 90, and a blood pressure of 150/70.  The O2 
+saturation is 97% on room air.  The examination is notable for a 
+surgically altered pupil in the right eye, which is non-reactive. 
+The extraocular movements are intact.  She has no palpable temporal 
+or skull tenderness.  The lungs show rhonchorous breath sounds 
+throughout.  The cardiovascular examination shows a midline scar, 
+with a regular rate and rhythm and no murmur.  The abdomen is soft 
+and non-tender.  The extremities show 1+ pitting edema bilaterally. 
+The neurologic examination is grossly intact. 
+THERAPY RENDERED/COURSE IN ED:  This is an elderly female status 
+post recent CABG, who had a syncopal episode this morning after 
+complaining of a headache.  The plan at this time is to obtain a 
+head CT to rule out an intracerebral process.  She has had an EKG, 
+which does show some T-wave changes, different from when she was 
+here for her CABG.  She will also have cardiac enzymes sent and 
+will be admitted to the hospital for further monitoring of her 
+syncopal event. 
+DISPOSITION (including condition upon discharge):  As above.  The 
+patient's condition on admission is stable. 
+___________________________________                    HA563/486 
+FRANCES LOVELL, M.D.  FL01                           D:10/17/96 
+                                                       T:10/17/96 
+Dictated by:  FRANCES LOVELL, M.D.  FL01 
+ ******** Not reviewed by Attending Physician ********
+
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2096-10-17" TYPE="DATE" comment="" />
+<LOCATION id="P1" start="49" end="59" text="ST VINCENT" TYPE="HOSPITAL" comment="" />
+<NAME id="P2" start="83" end="95" text="LAU,HELEN M." TYPE="PATIENT" comment="" />
+<ID id="P3" start="98" end="109" text="544-41-32-1" TYPE="MEDICALRECORD" comment="" />
+<DATE id="P4" start="135" end="143" text="10/17/96" TYPE="DATE" comment="" />
+<AGE id="P5" start="221" end="223" text="68" TYPE="AGE" comment="" />
+<DATE id="P6" start="260" end="269" text="September" TYPE="DATE" comment="" />
+<ID id="P7" start="2248" end="2257" text="HA563/486" TYPE="IDNUM" comment="" />
+<NAME id="P8" start="2259" end="2273" text="FRANCES LOVELL" TYPE="DOCTOR" comment="" />
+<NAME id="P9" start="2281" end="2285" text="FL01" TYPE="USERNAME" comment="" />
+<DATE id="P10" start="2314" end="2322" text="10/17/96" TYPE="DATE" comment="" />
+<DATE id="P11" start="2381" end="2389" text="10/17/96" TYPE="DATE" comment="" />
+<NAME id="P12" start="2405" end="2419" text="FRANCES LOVELL" TYPE="DOCTOR" comment="" />
+<NAME id="P13" start="2427" end="2431" text="FL01" TYPE="USERNAME" comment="" />
+</TAGS>
+</deIdi2b2>

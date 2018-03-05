@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2095-07-16
+
+          
+
+Transplant Surgery Admit Note
+Surgical Attending: Dr. John Escamilla
+Fellow:  Dr. Robert Ivy
+Senior Resident:  Dr. Zachary Terrell								
+Intern: Dr. Victor L. Bonilla
+MRN: 0658969
+Pt Name:  Fagan, Joanne
+Date of admission:  7/16/95
+
+RFA:  Living-related renal transplant (from sister)
+
+HPI:  The patient is a 41 year old woman with ESRD 2/2 DM nephropathy here for living-related renal transplant this morning.  She continues to make urine and her disease has not been complicated by UTI or voiding dysfunction.  Her past medical history is significant for CV disease   she has had 3 cardiac stents placed since 2094 and suffered an ischemic stroke in 2089 for which she takes Plavix.   This morning, she denies fever, chills, N/V/D, SOB, dyspnea, burning on urination, or any other symptoms.  
+
+PAST MEDICAL/SURGICAL HISTORY:
+
+IDDM diagnosed 30 yrs ago
+CAD: 8/94 stent to mid LAD, 9/94 restenosis of LAD    taxus sten to LADt, RCA stent 10/94
+12/94: dyspnea    40% in-stent restenosis of LAD. RCA stent patent.    with Cypher stents (2) to RCA (prox and distal).
+Recent TTE: EF 77%
+Recent stress test: 8 mets, mild anterior ischemia
+CVA of left PCA territory 2093. No residual. Rx with ASA, folate, niaspan
+CKD 
+HTN
+High cholesterol
+Diabetic retinopathy
+Anemia
+
+MEDICATIONS: 
+
+Lasix 80 mg qday
+Toprol 25 mg qam
+Vytorin  5/40 mg qpm
+Niaspan  1000 mg qpm
+Folic Acid 1 mg qdayEpogen 10,000 U q Sunday
+Vitamin B12 500 mg qam
+Vitamin B6 100 mg qam
+Colace prn
+Isosorbide 30 mg qam
+Insulin pump at 1U/hr ( = NPH 12 U qam as per Dr. Valenti)
+Sodium bicarbonate 650 mg tid
+Diovan 160 mg qd (held)
+Norvasc 5 mg qd  (held)
+Plavix 75 mg qd (held)
+ASA 325 mg qd (held)
+
+ALLERGIES:
+
+NKDA/NKA
+
+SOCIAL HISTORY:
+
+seamstress, lives with parents (single).
+Tobacco:  negative
+EtOH:  negative
+Other drugs:  
+
+FAMILY HISTORY:  
+
+Father: HTN 
+Mother: HTN, hyperlipidemia 
+Maternal grandmother: CVA in her 60's, CAD, HTN - deceased at age 70
+Siblings: all alive and well- no DM, CAD, CVA
+
+ROS:   As per HPI. 
+
+PHYSICAL EXAM:
+
+Gen:  appears well, in NAD
+VS:   pending
+HEENT:  NCAT, PERRLA, OC/OP clear, sclerae anicteric
+Pulm:  CTAB
+Cardiac:  RRR, no M/R/G
+Abd:  soft, NT/ND, BS+
+Ext:  WWP, no LE edema. 2+ DP/PT pulses
+
+LABS:
+
+
+
+
+
+U/A: negative
+
+Serologies:
+
+  CMV
+NEG
+  HBsAb
+POS
+  HBsAg
+NEG
+  HBcAb
+
+  HCV
+NEG
+  EBV
+
+  VZV
+
+  HIV
+NEG
+
+
+IMAGING:
+
+CXR:  clear
+
+
+A/P:   41 year old woman with diabetic nephropathy-induced ESRD here this morning for living-related renal transplant from sister.  
+
+Cellcept in the AM, no thymoglobulin
+to the OR today 
+
+
+Victor L. Bonilla, MD, PhD
+Pager 76006
+
+
+
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2095-07-16" TYPE="DATE" comment="" />
+<NAME id="P1" start="94" end="108" text="John Escamilla" TYPE="DOCTOR" comment="" />
+<NAME id="P2" start="122" end="132" text="Robert Ivy" TYPE="DOCTOR" comment="" />
+<NAME id="P3" start="155" end="170" text="Zachary Terrell" TYPE="DOCTOR" comment="" />
+<NAME id="P4" start="191" end="208" text="Victor L. Bonilla" TYPE="DOCTOR" comment="" />
+<ID id="P5" start="214" end="221" text="0658969" TYPE="MEDICALRECORD" comment="" />
+<NAME id="P6" start="232" end="245" text="Fagan, Joanne" TYPE="PATIENT" comment="" />
+<DATE id="P7" start="266" end="273" text="7/16/95" TYPE="DATE" comment="" />
+<AGE id="P8" start="351" end="353" text="41" TYPE="AGE" comment="" />
+<DATE id="P9" start="654" end="658" text="2094" TYPE="DATE" comment="" />
+<DATE id="P10" start="694" end="698" text="2089" TYPE="DATE" comment="" />
+<DATE id="P11" start="901" end="905" text="8/94" TYPE="DATE" comment="" />
+<DATE id="P12" start="924" end="928" text="9/94" TYPE="DATE" comment="" />
+<DATE id="P13" start="980" end="985" text="10/94" TYPE="DATE" comment="" />
+<DATE id="P14" start="986" end="991" text="12/94" TYPE="DATE" comment="" />
+<DATE id="P15" start="1202" end="1206" text="2093" TYPE="DATE" comment="" />
+<DATE id="P16" start="1434" end="1440" text="Sunday" TYPE="DATE" comment="" />
+<NAME id="P17" start="1568" end="1575" text="Valenti" TYPE="DOCTOR" comment="" />
+<PROFESSION id="P18" start="1739" end="1749" text="seamstress" TYPE="PROFESSION" comment="" />
+<AGE id="P19" start="1925" end="1929" text="60's" TYPE="AGE" comment="" />
+<AGE id="P20" start="1958" end="1960" text="70" TYPE="AGE" comment="" />
+<AGE id="P21" start="2388" end="2390" text="41" TYPE="AGE" comment="" />
+<NAME id="P22" start="2571" end="2588" text="Victor L. Bonilla" TYPE="DOCTOR" comment="" />
+<CONTACT id="P23" start="2604" end="2609" text="76006" TYPE="PHONE" comment="" />
+</TAGS>
+</deIdi2b2>

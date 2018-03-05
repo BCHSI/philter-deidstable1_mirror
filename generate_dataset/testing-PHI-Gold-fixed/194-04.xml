@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2096-11-20
+
+
+	CARDIOLOGY
+	
+
+	SOUTH OAKS HOSPITAL
+	
+
+
+	Interval History:
+   Mr. Crawford returns to the clinic for routine scheduled follow-up.  His cardiovascular issues include prior syncope, nonobstructive coronary disease, and hypertension. In the interval, since our last visit, he has done well from a CV perspective. He has had no episodes of chest pain, pressure, tightness, orthopnea, PND, progressive lower extremity swelling, or claudication. He did unfortunately have an episode of diverticulosis requiring hospitalization at Oakcrest Nursing Home. He did not require transfusion. The bleeding sounds as though it was self-limiting and has not recurred. Otherwise, his health is unchanged.  He remains fairly limited due to his osteoarthritis but continues to perform all ADLs successfully.
+
+	
+
+	Changes to Allergies
+	
+BRIMONIDINE TARTRATE - reaction: Unknown [reviewed]
+Latex - reaction: Rash [reviewed]
+no known allergies: He has no current allergies - reaction: Unknown [reviewed]
+
+Physical examination:
+	
+-Pulse:   50, which is strong and regular
+-resp. rate:   12.  He is saturating 100% at room air
+-Extremities:   There is trace dependent 1+ lower extremity swelling, which is stable.
+-Abdomen:   Soft and nontender.
+-Cardiac:   Regular with nondisplaced PMI, 1-2/6 systolic ejection murmur heard best at the base with the crisp S2.
+-Chest:   His lungs are clear.
+-Neck:   Jugular venous pressure is 7 cm of water with normal AV contour.  He has 2+ carotids with brisk upstrokes.
+-Heent:   Normocephalic.
+-General:   He is alert and appropriate in no apparent distress
+-BP: 138/72    in the right arm seated
+
+
+	EKG:
+   Sinus bradycardia at 50. Delayed R-wave progression. Leftward axis. Nonspecific ST-T wave abnormalities.
+
+Selected recent labs:
+	
+		
+	
+
+
+	Impression:
+   1.) Nonobstructive CAD
+2.) Neurocardiogenic syncope
+3.) Hypertension
+
+
+	Assessment and plan:
+   Overall he is doing well his cardiovascular issues are stable.  His blood pressure slightly above goal but given his past syncopal tendencies with aggressive lowering will hold off on any med changes for now.  I will see him back in six months, sooner if new issues arise.
+		Medication List (confirmed)
+
+				CONFIRMED
+
+		- allopurinol  100 mg PO daily
+
+		- aspirin  325 mg PO daily
+
+		- folate  1 mg PO daily
+
+		- hydrochlorothiazide  25 mg PO daily
+
+		- lisinopril  40 mg PO daily
+
+		- medication list reviewed  in CAS
+
+		- multivitamins 
+
+		- ranitidine HCl  150 mg PO daily PRN
+
+		- Toprol XL  50 mg PO BID
+
+		- Zocor  10 mg PO daily
+
+			------------------------------------------------------------
+
+				REMOVED
+
+		- Toprol XL  75 mg PO BID
+
+
+	
+	
+
+	
+Xavier Youmans, MD pager #24791
+
+	
+Signed electronically by  Xavier Youmans, MD
+Document Status: Final
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2096-11-20" TYPE="DATE" comment="" />
+<LOCATION id="P1" start="45" end="64" text="SOUTH OAKS HOSPITAL" TYPE="HOSPITAL" comment="" />
+<NAME id="P2" start="95" end="103" text="Crawford" TYPE="PATIENT" comment="" />
+<LOCATION id="P3" start="553" end="574" text="Oakcrest Nursing Home" TYPE="HOSPITAL" comment="" />
+<NAME id="P4" start="2655" end="2669" text="Xavier Youmans" TYPE="DOCTOR" comment="" />
+<CONTACT id="P5" start="2681" end="2686" text="24791" TYPE="PHONE" comment="" />
+<NAME id="P6" start="2716" end="2730" text="Xavier Youmans" TYPE="DOCTOR" comment="" />
+</TAGS>
+</deIdi2b2>

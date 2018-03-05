@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2090-04-04
+
+Problems	    
+
+HTN	      
+
+
+
+History of Present Illness	
+
+Lovely 59 year old woman with a history of hypertension to establish primary care.  She is feeling generally well, though feels that her bp med (hyzaar) makes her feel weak and lightheaded.  Would like to change meds.  Otherwise, she has no complaints.
+
+
+
+Past Medical History	
+
+See above
+
+
+
+Medications	    
+
+DYAZIDE  (TRIAMTERENE 37.5 MG/HCTZ 25 MG)	 1CAPSULE PO QD Start Date: 4/04/90
+
+
+
+Allergies	    
+
+PCN BENZATHINE (PENICILLIN G BENZATHINE L...	 Dizziness
+
+
+
+Family History	
+
+No significant family history.
+
+
+
+Social History	
+
+She is the mother of Tania Foust and mother-in-law of Willie Spencer, classmates of mine from UC Davis.  She is retired as a health policy consultant.  Emigrated from Hungary in the 2060's.  No tob, rare etoh.  No dv, walks for exercise. 
+
+
+
+Review of Systems	
+
+neg
+
+
+
+
+
+Vital Signs	    
+
+Blood Pressure:	 122/70   Left Arm
+
+Weight:	 126   Pounds
+
+
+
+Physical Exam	  
+
+General Appearance	
+
+Well appearing in NAD
+
+Skin	
+
+Skin is without appreciable lesions
+
+HEENT	
+
+EOMI.  PERRLA.  OP benign.
+
+Neck	
+
+Supple with no lympadenopathy or thyromegaly.  Carotids are 2+ and equal without bruits.
+
+Nodes/Lymphatic	
+
+No axillary or supraclavicular lan.
+
+Breast	
+
+Breast exam is without masses, dimpling, retraction.  No nipple d/c noted.
+
+Chest	
+
+Lungs are clear to ascultation
+
+Cor/Cardiac	
+
+Regular rate and rhythm without m/r/g.  Normal S1 and S2
+
+Abdomen	
+
+Soft, nt/nd s hsm.  No guarding or rebound tenderness.
+
+Extremity	
+
+Without c/c/e
+
+Neurological	
+
+Intact
+
+
+
+Disposition and Plans	
+
+Imp: Healthy woman.  She states that her pap/mammo are up to date as of 11/89 at the Nye Regional Medical Center.  Feels well except would like to change her bp med.  At this time, will have a trial of dyazide.  I have asked her to come for bp check in 2-3 weeks.  
+
+Also,
+
+1. Cholesterol today.
+
+2. Encouraged colonoscopy.
+
+
+
+
+
+
+
+______________________________                              
+
+
+
+Bethany Kristin Downs, M.D.
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2090-04-04" TYPE="DATE" comment="" />
+<AGE id="P1" start="93" end="95" text="59" TYPE="AGE" comment="" />
+<DATE id="P2" start="466" end="473" text="4/04/90" TYPE="DATE" comment="" />
+<NAME id="P3" start="641" end="652" text="Tania Foust" TYPE="PATIENT" comment="" />
+<NAME id="P4" start="674" end="688" text="Willie Spencer" TYPE="PATIENT" comment="" />
+<LOCATION id="P5" start="714" end="722" text="UC Davis" TYPE="ORGANIZATION" comment="" />
+<PROFESSION id="P6" start="745" end="769" text="health policy consultant" TYPE="PROFESSION" comment="" />
+<LOCATION id="P7" start="787" end="794" text="Hungary" TYPE="COUNTRY" comment="" />
+<DATE id="P8" start="802" end="808" text="2060's" TYPE="DATE" comment="" />
+<DATE id="P9" start="1675" end="1680" text="11/89" TYPE="DATE" comment="" />
+<LOCATION id="P10" start="1688" end="1715" text="Nye Regional Medical Center" TYPE="HOSPITAL" comment="" />
+<NAME id="P11" start="1998" end="2019" text="Bethany Kristin Downs" TYPE="DOCTOR" comment="" />
+</TAGS>
+</deIdi2b2>

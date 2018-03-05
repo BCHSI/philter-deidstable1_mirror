@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2096-05-09
+
+
+
+			CARDIOLOGY
+
+			
+
+			WORTHINGTON REGIONAL HOSPITAL
+
+			
+
+
+
+			Reason for visit:
+
+   Follow-up
+
+
+
+			Interval History:
+
+   Mr. Urban is doing well today.  Since his last visit with me he continues to feel well without chest pain, shortness of breath or other symptoms.  He remains very physically active and has no symptoms with sctivity.
+
+
+
+			Medications (Confirmed):
+
+			
+
+aspirin 325 mg po qd
+
+atorvastatin 80 mg po qd
+
+Coreg 6.25mg PO BID
+
+CPAP
+
+Klonopin 1.0mg po QPM
+
+Lasix 20 mg po qd
+
+lisinopril 10 mg po qd
+
+Zetia 10mg po qd
+
+
+
+Allergies:
+
+			
+
+No known drug allergy   
+
+
+
+Physical examination:
+
+			
+
+-Pulse: 58  beats per minute and regular
+
+-General:   He is well appearing and in no apparent distress.
+
+-Neck:   His JVP is 4 cm. No carotid bruits
+
+-Chest:   Clear to auscultation bilaterally.
+
+-Cardiac:   Regular in rhythm, but bradycardic. Normal S1 and S2. He has no S3 or S4. He has no audible murmurs.
+
+-Abdomen:   Soft. It is neither tender nor distended.
+
+-Extremities:   Warm and well perfused. No edema.
+
+-BP: 120/72  mmHg. 
+
+
+
+			EKG:
+
+   Sinus bradycardia. Otherwise normal
+
+
+
+			Assessment and plan:
+
+   Overall, Mr. Urban is doing very well. He continues to be very active with no symptoms of angina or congestive heart failure. Currently, his lipids are under excellent control as is his blood pressure. Ongoing secondary prevention and risk factor modification will continue to be paramount in Mr. Urban's care. I have discussed these issues with him in detail. 
+
+
+
+I would like to obtain another echocardiogram to re-assess his ejection fraction which has been low in the past.  Also, I would like to see if he has had further development of pulmonary hypertension.  He will continue his current medications and return to see me in six months' time or sooner if need be.
+
+
+
+Changes to Medications this visit
+
+			
+
+lisinopril 10 mg  po qd QTY:90 Refills:3 Start: 08/24/2093
+
+Coreg 6.25mg  PO BID QTY:180 Refills:2 Start: 08/24/2093
+
+atorvastatin 80 mg  po qd QTY:90 Refills:3 Start: 08/24/2093
+
+Zetia 10mg  po qd QTY:90 Refills:3
+
+Lasix 20 mg  po qd QTY:90 Refills:3 Start: 06/06/2094
+
+aspirin 325 mg  po qd QTY:90 Refills:3 Start: 08/24/2093
+
+Klonopin 1.0mg  po QPM QTY:30 Refills:3 Start: 05/01/2095
+
+CPAP     Nocturnal.
+
+
+
+			Signed electronically by   Jimmy  Orozco MD  on  May 09, 2096     
+
+		
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2096-05-09" TYPE="DATE" comment="" />
+<LOCATION id="P1" start="53" end="82" text="WORTHINGTON REGIONAL HOSPITAL" TYPE="HOSPITAL" comment="" />
+<NAME id="P2" start="158" end="163" text="Urban" TYPE="PATIENT" comment="" />
+<NAME id="P3" start="1172" end="1177" text="Urban" TYPE="PATIENT" comment="" />
+<NAME id="P4" start="1456" end="1461" text="Urban" TYPE="PATIENT" comment="" />
+<DATE id="P5" start="1921" end="1931" text="08/24/2093" TYPE="DATE" comment="" />
+<DATE id="P6" start="1979" end="1989" text="08/24/2093" TYPE="DATE" comment="" />
+<DATE id="P7" start="2041" end="2051" text="08/24/2093" TYPE="DATE" comment="" />
+<DATE id="P8" start="2132" end="2142" text="06/06/2094" TYPE="DATE" comment="" />
+<DATE id="P9" start="2190" end="2200" text="08/24/2093" TYPE="DATE" comment="" />
+<DATE id="P10" start="2249" end="2259" text="05/01/2095" TYPE="DATE" comment="" />
+<NAME id="P11" start="2314" end="2327" text="Jimmy  Orozco" TYPE="DOCTOR" comment="" />
+<DATE id="P12" start="2336" end="2348" text="May 09, 2096" TYPE="DATE" comment="" />
+</TAGS>
+</deIdi2b2>
