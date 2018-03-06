@@ -16,6 +16,7 @@ from chardet.universaldetector import UniversalDetector
 
 pos = {}
 total_counts = {}
+total_non_phi = {}
 
 phi = json.loads(open("./phi_notes.json", "r").read())
 
@@ -43,6 +44,10 @@ for fn in phi:
             if item[1] not in total_counts:
                 total_counts[item[1]] = 0
             total_counts[item[1]] += 1
+        else:
+            if item[1] not in total_non_phi:
+                total_non_phi[item[1]] = 0
+            total_non_phi[item[1]] += 1
 
     pos[fn] = pos_phi
 
@@ -51,14 +56,26 @@ json.dump(total_counts, open("phi_pos_total.json", "w"), indent=4)
 
 #save a csv output sorted
 
-lst = []
+#sort our phi
+philst = []
 for k in total_counts:
-    lst.append([k,total_counts[k]])
+    philst.append([k,total_counts[k]])
 
-lst = sorted(lst, key=lambda x: x[1], reverse=True)
+#sort our non-phi
+nonphilst = []
+for k in total_non_phi:
+    nonphilst.append([k,total_non_phi[k]])
+
+philst = sorted(philst, key=lambda x: x[1], reverse=True)
 with open("phi_pos.csv", "w") as f:
-    f.write(",".join([ str(x[0]) for x in lst])+"\n")
-    f.write(",".join([ str(x[1]) for x in lst])+"\n")
+    #save the phi POS
+    f.write("PHI POS: \n")
+    f.write(",".join([ str(x[0]) for x in philst])+"\n")
+    f.write(",".join([ str(x[1]) for x in philst])+"\n\n")
+
+    f.write("Non-PHI POS: \n")
+    f.write(",".join([ str(x[0]) for x in nonphilst])+"\n")
+    f.write(",".join([ str(x[1]) for x in nonphilst])+"\n\n")
 
 #lst = total_counts.keys()
 
