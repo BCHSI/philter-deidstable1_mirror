@@ -516,6 +516,12 @@ class Philter:
         elif summary***REMOVED***"total_true_positives"***REMOVED*** == 0:
             print("Precision: 0.00%")
 
+
+        if summary***REMOVED***"total_true_negatives"***REMOVED***+summary***REMOVED***"total_false_positives"***REMOVED*** > 0:
+            print("Retention: {:.2%}".format(summary***REMOVED***"total_true_negatives"***REMOVED***/(summary***REMOVED***"total_true_negatives"***REMOVED***+summary***REMOVED***"total_false_positives"***REMOVED***)))
+        else:
+            print("Retention: 0.00%")
+
         #save the phi we missed
         json.dump(summary, open(summary_output, "w"), indent=4)
         json.dump(all_fn, open(fn_output, "w"), indent=4)

@@ -16,6 +16,7 @@ from chardet.universaldetector import UniversalDetector
 
 pos = {}
 total_counts = {}
+total_non_phi = {}
 
 phi = json.loads(open("./phi_notes.json", "r").read())
 
@@ -43,6 +44,10 @@ for fn in phi:
             if item***REMOVED***1***REMOVED*** not in total_counts:
                 total_counts***REMOVED***item***REMOVED***1***REMOVED******REMOVED*** = 0
             total_counts***REMOVED***item***REMOVED***1***REMOVED******REMOVED*** += 1
+        else:
+            if item***REMOVED***1***REMOVED*** not in total_non_phi:
+                total_non_phi***REMOVED***item***REMOVED***1***REMOVED******REMOVED*** = 0
+            total_non_phi***REMOVED***item***REMOVED***1***REMOVED******REMOVED*** += 1
 
     pos***REMOVED***fn***REMOVED*** = pos_phi
 
@@ -51,14 +56,26 @@ json.dump(total_counts, open("phi_pos_total.json", "w"), indent=4)
 
 #save a csv output sorted
 
-lst = ***REMOVED******REMOVED***
+#sort our phi
+philst = ***REMOVED******REMOVED***
 for k in total_counts:
-    lst.append(***REMOVED***k,total_counts***REMOVED***k***REMOVED******REMOVED***)
+    philst.append(***REMOVED***k,total_counts***REMOVED***k***REMOVED******REMOVED***)
 
-lst = sorted(lst, key=lambda x: x***REMOVED***1***REMOVED***, reverse=True)
+#sort our non-phi
+nonphilst = ***REMOVED******REMOVED***
+for k in total_non_phi:
+    nonphilst.append(***REMOVED***k,total_non_phi***REMOVED***k***REMOVED******REMOVED***)
+
+philst = sorted(philst, key=lambda x: x***REMOVED***1***REMOVED***, reverse=True)
 with open("phi_pos.csv", "w") as f:
-    f.write(",".join(***REMOVED*** str(x***REMOVED***0***REMOVED***) for x in lst***REMOVED***)+"\n")
-    f.write(",".join(***REMOVED*** str(x***REMOVED***1***REMOVED***) for x in lst***REMOVED***)+"\n")
+    #save the phi POS
+    f.write("PHI POS: \n")
+    f.write(",".join(***REMOVED*** str(x***REMOVED***0***REMOVED***) for x in philst***REMOVED***)+"\n")
+    f.write(",".join(***REMOVED*** str(x***REMOVED***1***REMOVED***) for x in philst***REMOVED***)+"\n\n")
+
+    f.write("Non-PHI POS: \n")
+    f.write(",".join(***REMOVED*** str(x***REMOVED***0***REMOVED***) for x in nonphilst***REMOVED***)+"\n")
+    f.write(",".join(***REMOVED*** str(x***REMOVED***1***REMOVED***) for x in nonphilst***REMOVED***)+"\n\n")
 
 #lst = total_counts.keys()
 

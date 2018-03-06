@@ -81,3 +81,5 @@ for fn in phi:
 
     with open(ANNO_FOLDER+fn.split(".")***REMOVED***0***REMOVED***+".txt", "w") as anno_file:
         anno_file.write("".join(contents))
+
+
