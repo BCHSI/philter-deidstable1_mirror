@@ -49,7 +49,6 @@ PHI_CONTEXT = "data/i2b2_phi_context/"
 PHI_POS     = "data/i2b2_phi_pos/"
 
 #save our phi notes 
-#*** POTENTIAL BUG HERE***
 for fn in phi:
 
     #get text and remove any initial *'s from the raw notes
