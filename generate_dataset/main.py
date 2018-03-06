@@ -53,7 +53,7 @@ PHI_POS     = "data/i2b2_phi_pos/"
 for fn in phi:
 
     #get text and remove any initial *'s from the raw notes
-    txt = phi[fn]["text"].replace("*", "")
+    txt = phi[fn]["text"].replace("*", " ")
 
     #save our notes file
     with open(NOTES_FOLDER+fn.split(".")[0]+".txt", "w") as note_file:
