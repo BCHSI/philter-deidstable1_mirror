@@ -17,7 +17,7 @@ def main():
     ap.add_argument("-o", "--output", default="./data/i2b2_results/",
                     help="Path to the directory to save the PHI-reduced notes in, the default is ./data/i2b2_results/",
                     type=str)
-    ap.add_argument("-f", "--filters", default="./configs/test_set.json",
+    ap.add_argument("-f", "--filters", default="./configs/just_digits.json",
                     help="Path to our config file",
                     type=str)
     ap.add_argument("-d", "--debug", default=True,
