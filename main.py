@@ -54,35 +54,6 @@ def main():
         fn_output="data/phi/fn.json",
         fp_output="data/phi/fp.json")
 
-
-    #test evals
-
-    # filterer.eval(
-    #     in_path="data/i2b2_anno/",
-    #     anno_path="data/i2b2_anno/",
-    #     anno_suffix=".txt",
-    #     summary_output="data/phi/summary.json",
-    #     fn_output="data/phi/fn.json",
-    #     fp_output="data/phi/fp.json")
-
-    # filterer.eval(
-    #     in_path="data/i2b2_notes/",
-    #     anno_path="data/i2b2_anno/",
-    #     anno_suffix=".txt",
-    #     summary_output="data/phi/summary.json",
-    #     fn_output="data/phi/fn.json",
-    #     fp_output="data/phi/fp.json")
-
-    # filterer.eval(
-    #     in_path="data/i2b2_results_test/",
-    #     anno_path="data/i2b2_anno_test/",
-    #     anno_suffix=".txt",
-    #     summary_output="data/phi/summary.json",
-    #     fn_output="data/phi/fn.json",
-    #     fp_output="data/phi/fp.json")
-
-
-        
         
 if __name__ == "__main__":
     main()
