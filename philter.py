@@ -6,7 +6,6 @@ import nltk
 import itertools
 import chardet
 import pickle
-import difflib
 from chardet.universaldetector import UniversalDetector
 from nltk.stem.wordnet import WordNetLemmatizer
 from coordinate_map import CoordinateMap
@@ -20,10 +19,16 @@ class Philter:
         if "debug" in config:
             self.debug = config["debug"]
         if "finpath" in config:
+            if not os.path.exists(config["finpath"]):
+                raise Exception("Filepath does not exist", config["finpath"])
             self.finpath = config["finpath"]
         if "foutpath" in config:
+            if not os.path.exists(config["foutpath"]):
+                raise Exception("Filepath does not exist", config["foutpath"])
             self.foutpath = config["foutpath"]
         if "anno_folder" in config:
+            if not os.path.exists(config["anno_folder"]):
+                raise Exception("Filepath does not exist", config["foutpath"])
             self.anno_folder = config["anno_folder"]
         if "filters" in config:
             self.patterns = json.loads(open(config["filters"], "r").read())
@@ -48,7 +53,7 @@ class Philter:
         for i,pattern in enumerate(self.patterns):
 
             if pattern["type"] in require_files and not os.path.exists(pattern["filepath"]):
-                raise Exception("Filepath does not exist", pattern["filepath"])
+                raise Exception("Config filepath does not exist", pattern["filepath"])
             for k in reserved_list:
                 if k in pattern:
                     raise Exception("Error, Keyword is reserved", k, pattern)
@@ -89,6 +94,9 @@ class Philter:
             generating a coordinate map of hits given 
             (this performs a dry run on the data and doesn't transform)
         """
+
+        if not os.path.exists(in_path):
+            raise Exception("Filepath does not exist", in_path)
         
         #create coordinate maps for each pattern
         for i,pat in enumerate(self.patterns):
@@ -129,6 +137,10 @@ class Philter:
         """ Creates a coordinate map from the pattern on this data
             generating a coordinate map of hits given (dry run doesn't transform)
         """
+
+        if not os.path.exists(filename):
+            raise Exception("Filepath does not exist", filename)
+
         if pattern_index < 0 or pattern_index >= len(self.patterns):
             raise Exception("Invalid pattern index: ", pattern_index, "pattern length", len(patterns))
         coord_map = self.patterns[pattern_index]["coordinate_map"]
@@ -156,6 +168,9 @@ class Philter:
 
     def map_set(self, filename="", text="", pattern_index=-1):
         """ Creates a coordinate mapping of words any words in this set"""
+        if not os.path.exists(filename):
+            raise Exception("Filepath does not exist", filename)
+
         if pattern_index < 0 or pattern_index >= len(self.patterns):
             raise Exception("Invalid pattern index: ", pattern_index, "pattern length", len(patterns))
 
@@ -214,9 +229,17 @@ class Philter:
 
     def map_ner(self, filename="", text="", pattern_index=-1):
         """ map NER tagging"""
-        #todo
+      
+        if not os.path.exists(filename):
+            raise Exception("Filepath does not exist", filename)
+
         if pattern_index < 0 or pattern_index >= len(self.patterns):
             raise Exception("Invalid pattern index: ", pattern_index, "pattern length", len(patterns))
+
+        #creat an NER tagger, 
+        #for the text, break into words and mark POS
+        #with the parts of speech labeled, match any of these to our coordinate
+        #add these coordinates to our coordinate map
 
         self.patterns[pattern_index]["coordinate_map"] = CoordinateMap()
 
@@ -248,6 +271,11 @@ class Philter:
 
             **Anything not caught in these passes will be assumed to be PHI
         """
+
+        if not os.path.exists(in_path):
+            raise Exception("Filepath does not exist", in_path)
+        if not os.path.exists(out_path):
+            raise Exception("Filepath does not exist", out_path)
 
         punctuation_matcher = re.compile(r"[^a-zA-Z0-9*]")
 
@@ -332,6 +360,9 @@ class Philter:
         json.dump(data, open("./data/coordinates.json", "w"), indent=4)
 
     def detect_encoding(self, fp):
+        if not os.path.exists(fp):
+            raise Exception("Filepath does not exist", fp)
+
         detector = UniversalDetector()
         with open(fp, "rb") as f:
             for line in f:
@@ -343,6 +374,8 @@ class Philter:
 
     def phi_context(self, filename, word, word_index, words, context_window=10):
         """ helper function, creates our phi data type with source file, and context window"""
+        if not os.path.exists(filename):
+            raise Exception("Filepath does not exist", filename)
 
         left_index = word_index - context_window
         if left_index < 0:
@@ -364,6 +397,7 @@ class Philter:
             note_lst, 
             anno_lst, 
             punctuation_matcher=re.compile(r"[^a-zA-Z0-9*]"), 
+            text_matcher=re.compile(r"[a-zA-Z0-9]"), 
             phi_matcher=re.compile(r"\*+")):
         """ 
             Compares two sequences item by item, 
@@ -373,42 +407,76 @@ class Philter:
             classifications can be TP, FP, FN, TN 
             corresponding to True Positive, False Positive, False Negative and True Negative
         """
-        d = difflib.Differ()
-        for line in list(d.compare(note_lst, anno_lst)):
+        
 
-            if punctuation_matcher.match(line[2:].strip()):
-                #skip lines with only punctuation
-                #print("PUNC", line)
-                continue
+        for note_word, anno_word in list(zip(note_lst, anno_lst)):
+            
+            #print(note_word, anno_word)
 
-            if line.startswith(" "):
-                #match
-                if phi_matcher.search(line[2:]):
-                    #print("TP", line)
-                    yield "TP", line[2:]
+            if phi_matcher.search(anno_word):
+                #this contains phi
+                
+                if note_word == anno_word:
+                    #print(note_word, anno_word, "TP")
+                    yield "TP", note_word
                 else:
-                    #print("TN", line)
-                    yield "TN", line[2:]
+                    if text_matcher.search(anno_word):
 
-            elif line.startswith("-"):
+                        #print("COMPLEX", note_word, anno_word)
 
-                if phi_matcher.search(line[2:]):
-                    #skip doubles
-                    continue
+                        #this is a complex edge case, 
+                        #the phi annotation has some characters *'ed, and some not, 
+                        #find the overlap and report any string of chars in anno as FP
+                        #and any string of chars in note as FN
+                        fn_words = []
+                        fp_words = []
 
-                #false negative
-                yield "FN",line[2:]
-            elif line.startswith("+"):
+                        fn_chunk = []
+                        fp_chunk = []
+                        for n,a in list(zip(note_word, anno_word)):
+                            if n == a:
+                                #these characters match, clear our chunks
+                                if len(fp_chunk) > 0:
+                                    fp_words.append("".join(fp_chunk))
+                                    fp_chunk = []
+                                if len(fn_chunk) > 0:
+                                    fn_words.append("".join(fn_words))
+                                    fn_chunk = []
+                                
+                                continue 
+                            if a == "*" and n != "*":
+                                fn_chunk.append(n)
+                            elif a != "*" and n == "*":
+                                fp_chunk.append(a)
 
-                if phi_matcher.search(line[2:]):
-                    #skip doubles
-                    continue
+                        #clear any remaining chunks
+                        if len(fp_chunk) > 0:
+                            fp_words.append("".join(fp_chunk))
+                        if len(fn_chunk) > 0:
+                            fn_words.append("".join(fn_words))
 
-                #false positive
-                yield "FP",line[2:]
+                        #now drain the difference
+                        for w in fn_words:
+                            yield "FN", w
+                        for w in fp_words:
+                            yield "FP", w
+                    else:
+                        #simpler case, anno word is completely blocked out except punctuation
+                        yield "FN", note_word
+
             else:
-                #shoudn't be possible, but for now fail loudly
-                raise Exception("Found erronous characters", line)
+                #this isn't phi
+                if note_word == anno_word:
+                    #print(note_word, anno_word, "TN")
+                    yield "TN", note_word
+                else:
+                    #print(note_word, anno_word, "FP")
+                    yield "FP", anno_word
+
+
+            
+
+            
 
 
     def eval(self,
@@ -426,9 +494,16 @@ class Philter:
             only_digits = <boolean> will constrain evaluation on philtering of only digit types
         """
 
+        if not os.path.exists(anno_path):
+            raise Exception("Anno Filepath does not exist", anno_path)
+        if not os.path.exists(in_path):
+            raise Exception("Input Filepath does not exist", in_path)
+        if not os.path.exists(fn_output):
+            raise Exception("False Negative Filepath does not exist", fn_output)
+        if not os.path.exists(fp_output):
+            raise Exception("False Positive Filepath does not exist", fp_output)
         if self.debug:
             print("eval")
-
         
         summary = {
             "total_false_positives":0,
@@ -479,7 +554,7 @@ class Philter:
 
 
                 for c,w in self.seq_eval(philtered_words, anno_words):
-                   
+                    
                     if c == "FP":
                         false_positives.append(w)
                     elif c == "FN":
