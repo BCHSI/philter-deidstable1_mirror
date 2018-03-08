@@ -1,0 +1,1 @@
+This is a sentence ***** contains a date: **/*/**** and some other info like medicine, 20mg. Additionally it has a name: Mr. Thompson and an address 1123 Yorkshire Ave, NY. The other info shouldn't be removed. 
