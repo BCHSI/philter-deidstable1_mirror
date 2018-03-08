@@ -4,7 +4,7 @@
 		"title":"Test Whitelist",
 		"type":"set",
 		"exclude":false,
-		"filepath":"filters/whitelists/whitelist_2-28.json",
+		"filepath":"filters/whitelists/whitelist_2-28_2.json",
 		"pos":***REMOVED******REMOVED***,
 		"notes":"These are words we beleive are safe"
 	}
