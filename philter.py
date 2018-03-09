@@ -9,6 +9,8 @@ import pickle
 from chardet.universaldetector import UniversalDetector
 from nltk.stem.wordnet import WordNetLemmatizer
 from coordinate_map import CoordinateMap
+from nltk.tag.stanford import StanfordNERTagger
+import subprocess
 
 class Philter:
     """ 
@@ -31,7 +33,24 @@ class Philter:
                 raise Exception("Filepath does not exist", config***REMOVED***"foutpath"***REMOVED***)
             self.anno_folder = config***REMOVED***"anno_folder"***REMOVED***
         if "filters" in config:
+            if not os.path.exists(config***REMOVED***"filters"***REMOVED***):
+                raise Exception("Filepath does not exist", config***REMOVED***"filters"***REMOVED***)
             self.patterns = json.loads(open(config***REMOVED***"filters"***REMOVED***, "r").read())
+
+        if "stanford_ner_tagger" in config:
+            if not os.path.exists(config***REMOVED***"stanford_ner_tagger"***REMOVED******REMOVED***"classifier"***REMOVED***) and config***REMOVED***"stanford_ner_tagger"***REMOVED******REMOVED***"download"***REMOVED*** == False:
+                raise Exception("Filepath does not exist", config***REMOVED***"stanford_ner_tagger"***REMOVED******REMOVED***"classifier"***REMOVED***)
+            else:
+                #download the ner data
+                process = subprocess.Popen("cd generate_dataset && ./download_ner.sh".split(), stdout=subprocess.PIPE)
+                output, error = process.communicate()
+                print(output, error)
+            self.stanford_ner_tagger_classifier = config***REMOVED***"stanford_ner_tagger"***REMOVED******REMOVED***"classifier"***REMOVED***
+            if not os.path.exists(config***REMOVED***"stanford_ner_tagger"***REMOVED******REMOVED***"jar"***REMOVED***):
+                raise Exception("Filepath does not exist", config***REMOVED***"stanford_ner_tagger"***REMOVED******REMOVED***"jar"***REMOVED***)
+            self.stanford_ner_tagger_jar = config***REMOVED***"stanford_ner_tagger"***REMOVED******REMOVED***"jar"***REMOVED***
+            #we lazy load our tagger only if there's a corresponding pattern
+        self.stanford_ner_tagger = None
 
         #All coordinate maps stored here
         self.coordinate_maps = ***REMOVED******REMOVED***
@@ -43,7 +62,7 @@ class Philter:
     def init_patterns(self):
         """ given our input pattern config will load our sets and pre-compile our regex"""
 
-        known_pattern_types = set(***REMOVED***"regex", "set", "NER_tagging"***REMOVED***)
+        known_pattern_types = set(***REMOVED***"regex", "set", "stanford_ner"***REMOVED***)
         require_files = set(***REMOVED***"regex", "set"***REMOVED***)
         set_filetypes = set(***REMOVED***"pkl", "json"***REMOVED***)
         regex_filetypes = set(***REMOVED***"txt"***REMOVED***)
@@ -122,7 +141,7 @@ class Philter:
                         self.map_regex(filename=filename, text=txt, pattern_index=i)
                     elif pat***REMOVED***"type"***REMOVED*** == "set":
                         self.map_set(filename=filename, text=txt, pattern_index=i)
-                    elif pat***REMOVED***"type"***REMOVED*** == "NER_tagging":
+                    elif pat***REMOVED***"type"***REMOVED*** == "stanford_ner":
                         self.map_ner(filename=filename, text=txt, pattern_index=i)
                     else:
                         raise Exception("Error, pattern type not supported: ", pat***REMOVED***"type"***REMOVED***)
@@ -166,7 +185,7 @@ class Philter:
         self.patterns***REMOVED***pattern_index***REMOVED******REMOVED***"coordinate_map"***REMOVED*** = coord_map
 
 
-    def map_set(self, filename="", text="", pattern_index=-1):
+    def map_set(self, filename="", text="", pattern_index=-1,  pre_process= r"***REMOVED***^a-zA-Z0-9***REMOVED***+"):
         """ Creates a coordinate mapping of words any words in this set"""
         if not os.path.exists(filename):
             raise Exception("Filepath does not exist", filename)
@@ -186,8 +205,6 @@ class Philter:
         if len(pos_set) > 0:
             check_pos = True
 
-        start_cursor = 0
-        pre_process= r"***REMOVED***^a-zA-Z0-9***REMOVED***+"
 
         #preserve spaces while getting POS. 
         lst = re.split("(\s+)", text)
@@ -227,7 +244,7 @@ class Philter:
 
         self.patterns***REMOVED***pattern_index***REMOVED******REMOVED***"coordinate_map"***REMOVED*** = coord_map
 
-    def map_ner(self, filename="", text="", pattern_index=-1):
+    def map_ner(self, filename="", text="", pattern_index=-1, pre_process= r"***REMOVED***^a-zA-Z0-9***REMOVED***+"):
         """ map NER tagging"""
       
         if not os.path.exists(filename):
@@ -236,13 +253,63 @@ class Philter:
         if pattern_index < 0 or pattern_index >= len(self.patterns):
             raise Exception("Invalid pattern index: ", pattern_index, "pattern length", len(patterns))
 
-        #creat an NER tagger, 
+        #load and create an NER tagger if it doesn't exist
+        if self.stanford_ner_tagger == None:
+            classifier_path = self.stanford_ner_tagger_classifier #'/usr/local/stanford-ner/classifiers/english.all.3class.distsim.crf.ser.gz'
+            jar_path = self.stanford_ner_tagger_jar #'/usr/local/stanford-ner/stanford-ner.jar'     
+            self.stanford_ner_tagger = StanfordNERTagger(classifier_path,jar_path)
+        
+        coord_map = self.patterns***REMOVED***pattern_index***REMOVED******REMOVED***"coordinate_map"***REMOVED***
+        pos_set = set(***REMOVED******REMOVED***)
+        if "pos" in self.patterns***REMOVED***pattern_index***REMOVED***:
+            pos_set = set(self.patterns***REMOVED***pattern_index***REMOVED******REMOVED***"pos"***REMOVED***)
+        if len(pos_set) > 0:
+            check_pos = True
+
+        lst = re.split("(\s+)", text)
+        cleaned = ***REMOVED******REMOVED***
+        for item in lst:
+            if len(item) > 0:
+                cleaned.append(item)
+        
+        ner_no_spaces = self.stanford_ner_tagger.tag(cleaned)
+        #get our ner tags
+        ner_set = {}
+        for tup in ner_no_spaces:
+            ner_set***REMOVED***tup***REMOVED***0***REMOVED******REMOVED*** = tup***REMOVED***1***REMOVED***
+        ner_set_with_locations = {}
+        start_coordinate = 0
+        for w in cleaned:
+            if w in ner_set:
+                ner_set_with_locations***REMOVED***w***REMOVED*** = (ner_set***REMOVED***w***REMOVED***, start_coordinate)
+            start_coordinate += len(w)
+
+
         #for the text, break into words and mark POS
         #with the parts of speech labeled, match any of these to our coordinate
         #add these coordinates to our coordinate map
+        start_coordinate = 0
+        for word in cleaned:
 
-        self.patterns***REMOVED***pattern_index***REMOVED******REMOVED***"coordinate_map"***REMOVED*** = CoordinateMap()
+            word_clean = re.sub(pre_process, "", word.lower().strip())
+            if len(word_clean) == 0:
+                #got a blank space or something without any characters or digits, move forward
+                start_coordinate += len(word)
+                continue
+            
+            if word in ner_set_with_locations:
+                ner_tag = ner_set_with_locations***REMOVED***word***REMOVED******REMOVED***0***REMOVED***
+                start = ner_set_with_locations***REMOVED***word***REMOVED******REMOVED***1***REMOVED***
+                if ner_tag in pos_set:
+                    stop = start + len(word)
+                    coord_map.add_extend(filename, start, stop)
+                    print("FOUND: ",word, "NER: ", ner_tag, start, stop)
+            
+                    
+            #advance our start coordinate
+            start_coordinate += len(word)
 
+        self.patterns***REMOVED***pattern_index***REMOVED******REMOVED***"coordinate_map"***REMOVED*** = coord_map
 
     def folder_walk(self, folder):
         """ utility func will make a generator to walk a folder
