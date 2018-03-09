@@ -16,13 +16,6 @@
 		"notes":"These are words we beleive are safe"
 	},
 	{
-		"title":"Remove PERSON",
-		"type":"stanford_ner",
-		"tags":***REMOVED***"PERSON"***REMOVED***,
-		"exclude":true,
-		"notes":"This will use the NER tagging and remove any words it thinks are PERSON"
-	},
-	{
 		"title":"Mg dosage matcher", 
 		"type":"regex",
 		"exclude":false,
