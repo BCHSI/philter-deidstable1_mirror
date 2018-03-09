@@ -5,32 +5,140 @@
 ### What is PHIlter? 
 The package and associated scripts provide an end-to-end pipeline for removing Protected Health Information from clinical notes (or other sensitive text documents) in a completely secure environment (a machine with no external connections or exposed ports). We use a combination of regular expressions, Part Of Speech (POS) and Entity Recognition (NER) tagging, and filtering through a whitelist to achieve nearly perfect Recall and generate clean, readable notes. Everything is written in straight python and the package will process any text file, regardless of structure. You can install with PIP (see below) and run with a single command-line argument. Parallelization of processesing can be infinitly divided across cores or machines. 
 
-- Please note: we don't make any claims that running this software on your data will instantly produce HIPAA compliance. 
+### Important
+- Please note: we don't make any claims that running this software on your data will instantly produce HIPAA compliance. THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-There are 3 core functions in the pipeline. We've also included 2 bonus, or convenience functions, because they have been important for our own development and work.
+see: [MIT LISCENCE](https://opensource.org/licenses/MIT)
 
-1. **philter-annotation:** Annotate each word in a text file as either being PHI (if so, annotate the type of PHI) or not. This is useful to generate a ground-truth corpus for evaluation of phi-reduction software on your own files. 
+# Running Philter
 
-2. **philter:** Pull in each note from a directory (nested directories are supported), maintain clean words and replace PHI words with a safe filtered word: **\*\*PHI\*\***, then write the 'phi-reduced' output to a new file with the original file name appended by '\_phi\_reduced'. Conveniently generates additional output files containing meta data from the run: 
-	- number of files processed
-	- number of instances of PHI that were filtered
-	- list of filtered words
-	- etc.
-
-3. **philter-eval:** Compares the outputs of **annotation.py** and **philter.py** to evaluate phi-reduction performance. Provides the True and False Positive words found, True and False Negative words found, Precision and Recall scores, etc. 
-4. **infoextract (bonus script):** Extracts entity:value pairs (eg: alcohol\_use:rare or blood_pressure:130/90) from phi-reduced clinical notes and writes them to table. 
-5. **randompick (bonus script):** Randomly select n-notes from a directory (can be nested).Useful to generate subsets of notes to annotate, evaluate performance, and identify terms that may be common only at your institution. 
+## Running from command line
+```bash
+python3 main.py -i=./data/i2b2_notes/ -a=./data/i2b2_anno/ -o=./data/i2b2_results/ -f=./configs/example.json
+```
 
 
+### Run a Stanford NER Taggger  (Warning, very slow)
+#### Remove 'PERSON' configs/remove_person_tags.json
+```json
+python3 main.py -i=./data/i2b2_notes/ -a=./data/i2b2_anno/ -o=./data/i2b2_results/ -f=./configs/test_ner.json
+```
 
 
- 
+### Run a Whitelist
+#### Remove 'PERSON' configs/remove_person_tags.json
+```json
+python3 main.py -i=./data/i2b2_notes/ -a=./data/i2b2_anno/ -o=./data/i2b2_results/ -f=./configs/test_whitelist.json
+```
+
+
+### Run a Blacklist
+#### Remove 'PERSON' configs/remove_person_tags.json
+```json
+python3 main.py -i=./data/i2b2_notes/ -a=./data/i2b2_anno/ -o=./data/i2b2_results/ -f=./configs/test_blacklist.json
+```
+
+
+### Run a Regex
+#### Remove 'PERSON' configs/remove_person_tags.json
+```json
+python3 main.py -i=./data/i2b2_notes/ -a=./data/i2b2_anno/ -o=./data/i2b2_results/ -f=./configs/just_digits.json
+```
+
+### Run Multiple patterns
+#### Remove PHI configs/example.json
+```json
+python3 main.py -i=./data/i2b2_notes/ -a=./data/i2b2_anno/ -o=./data/i2b2_results/ -f=./configs/example.json
+```
+
+# Features : Dynamic filtering
+
+## Dynamic Filtering
+Turn non-Protected Health information notes into annotation notes using a list of pattern recognizers. The types are configured as follows:
+
+### Regex (remove all digits) 
+#### patterns/remove_all_digits.json
+```json
+[
+	{
+		"title":"All Digits", 
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/alldigits.txt",
+		"notes":"Greedy catches anything with digits in it"
+	}
+]
+
+
+```
+
+### Whitelists / Blacklists (remove anything not in this dictionary, or keep anything in a dict)
+#### patterns/keep_whitelist_remove_blacklist.json
+
+Note the only difference in the config between a whitlist and a blacklist is the "exclude" 
+value set to true / false. 
+
+```json
+[
+	{
+		"title":"Names Blacklist",
+		"type":"set",
+		"exclude":true,
+		"filepath":"filters/blacklists/names_blacklist_common.pkl",
+		"pos":[],
+		"notes":""
+	},
+	{
+		"title":"General Whitelist",
+		"type":"set",
+		"exclude":false,
+		"filepath":"filters/whitelists/whitelist.pkl",
+		"pos":[],
+		"notes":"These are words we beleive are safe"
+	},
+]
+```
+
+### POS (Part of Speech Whitelist / Blacklist) Similar to above, but will only match NLTK tag types
+see: [NLTK Tags](https://stackoverflow.com/a/38264311/1404663)
+```json
+[
+	{
+		"title":"Test Whitelist",
+		"type":"set",
+		"exclude":false,
+		"filepath":"filters/whitelists/whitelist_2-28_2.json",
+		"pos":[],
+		"notes":"These are words we beleive are safe"
+	}
+]
+```
+
+### NER Tagging (Warning, very slow)
+#### Remove 'PERSON' TAGS
+```json
+[	
+	{
+		"title":"Test NER",
+		"type":"stanford_ner",
+		"exclude":true,
+		"pos":["PERSON"],
+		"notes":"This should test that ner is working"
+	}
+]
+
+```
 
 
 # Installation
 
 **Install philter**
+```bash
 
+//TODO, see RUN
+
+```
+<!-- 
 ```pip3 install philter```
 
 ### Dependencies
@@ -43,71 +151,11 @@ You can learn more about the model at the [spacy model documentation]("https://s
 
 Note for Windows Users: This command must be run with admin previleges because it will create a *short-cut link* that let's you load a model by name.
 
-
-
-# Run
-
-**annotation**
-```philter-annotation -i ~/unprocessed_note_dir/ -p ~/philtered_notes_dir -o ~/dir_to_save_annotated_pickled_file_to/  -r```
-
-Arguments:
-
-- ("-i", "--inputfile") = Path to the directory containing files the unprocessed files
-- ("-p") = Path to the directory containing annotations (as text files) generated by PHIlter
-- ("-o", "--output")= Path to the directory where your updated/edited annotated note will be saved.
-- ("-r", "--random") = Have Philter pick a random file from the input directory that has not already been annotated. Recommend. 
-
-**philter**
-``` philter -i ./raw_notes_dir -r -o dir_to_write_to -p 32```
-
-Arguments:
-
-- ("-i", "--input") = Path to the directory or the file that contains the PHI note, the default is ./input_test/
-- ("-r", "--recursive") = help="whether read files in the input folder recursively. Default = False. 
-- ("-o", "--output") = Path to the directory that save the PHI-reduced note, the default is ./output_test/.
-- ("-w", "--whitelist") = Path to the whitelist, the default is phireducer/whitelist.pkl
-- ("-n", "--name") = The key word of the output file name, the default is *_phi_reduced.txt.
-- ("-p", "--process") = The number of processes to run simultaneously, the default is 1.
-
-**eval.py**
-```phi-eval -p dir_containing_phi_notes -a dir_annotated_pkl.ano -o output_path```
-
-Arguments:
-
-- ("-p", "--phinote") = Path to the directory containing phi reduced notes (or a single file)
-- ("-a", "--annotation") = Path to the annotated file
-- ("-o", "--output") = Path to save the summary pkl and statistics text
-- ("-r", "--recursive") = whether read files in the input folder recursively
-
-**randompick**
-```python3 ./randompick.py -i ./dir_to_sample_from/ -r -n 2 -o dir_to_copy_to```
-
-Arguments:
-
-- ("-i", "--input") = Path to the directory that contains the notes you would like to sample from.
-- ("-r", "--recursive") = Whether to search through all sub-directories that exist in "i"
-- ("-o", "--output") = Output path to the directory that will store the randomly picked notes.
-- ("-n", "--number") = "How many files you want to pick?
-
+ -->
 
 
 # How it works
 This should a reasonable overview of *exactly* what each script does
-
-**Annotation Interface**
-![Alt text](https://github.com/beaunorgeot/images_for_presentations/blob/master/philter-annotator_screen.png?raw=true "annotation interface")
-
-
-Once you have launched the annotation software using a given note as input, you will see that note displayed on your screen with each word having an index() on it's left and the phi-category currently assigned to the word on the right []. Each word is intially assigned to the non-phi category. Choose from the available commands to annotate your file for phi.
-
-Command Options
-
-- all: change the phi-category of all words in the document at the same time.
-- range: select a range of word indices and then assign the same phi-category to all words in that range. Enter the index of the first word and hit RETURN.Enter the index of the last word and hit RETURN.
-- select: select a list of word indices and then assign the same phi-category to all words in that list. Enter the index of each word, using spaces to separate each word index, hit RETURN when you have listed all desired word indices
-- show: show the current phi-category of all words
-- done: to finish annotating the current sentence and start the next one.
-- exit: exit the script without saving
 
 **philter**
 
