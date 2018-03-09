@@ -17,7 +17,7 @@
 	},
 	{
 		"title":"Remove PERSON",
-		"type":"NER_tagging",
+		"type":"stanford_ner",
 		"tags":["PERSON"],
 		"exclude":true,
 		"notes":"This will use the NER tagging and remove any words it thinks are PERSON"
