@@ -5,8 +5,15 @@
 		"type":"set",
 		"exclude":false,
 		"filepath":"filters/whitelists/whitelist_2-28_2.json",
-		"pos":***REMOVED******REMOVED***,
+		"pos":***REMOVED***"CD"***REMOVED***,
 		"notes":"These are words we beleive are safe"
+	},
+	{
+		"title":"No catchall",
+		"type":"regex",
+		"exclude":false,
+		"filepath":"filters/regex/catchall.txt",
+		"notes":"This should match anything, preventing the catchall"
 	}
 ***REMOVED***
 

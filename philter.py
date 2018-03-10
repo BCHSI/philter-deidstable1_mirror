@@ -44,7 +44,6 @@ class Philter:
                 #download the ner data
                 process = subprocess.Popen("cd generate_dataset && ./download_ner.sh".split(), stdout=subprocess.PIPE)
                 output, error = process.communicate()
-                print(output, error)
             self.stanford_ner_tagger_classifier = config***REMOVED***"stanford_ner_tagger"***REMOVED******REMOVED***"classifier"***REMOVED***
             if not os.path.exists(config***REMOVED***"stanford_ner_tagger"***REMOVED******REMOVED***"jar"***REMOVED***):
                 raise Exception("Filepath does not exist", config***REMOVED***"stanford_ner_tagger"***REMOVED******REMOVED***"jar"***REMOVED***)
@@ -62,8 +61,9 @@ class Philter:
     def init_patterns(self):
         """ given our input pattern config will load our sets and pre-compile our regex"""
 
-        known_pattern_types = set(***REMOVED***"regex", "set", "stanford_ner"***REMOVED***)
+        known_pattern_types = set(***REMOVED***"regex", "set", "stanford_ner", "pos_matcher", "match_all"***REMOVED***)
         require_files = set(***REMOVED***"regex", "set"***REMOVED***)
+        require_pos = set(***REMOVED***"pos_matcher"***REMOVED***)
         set_filetypes = set(***REMOVED***"pkl", "json"***REMOVED***)
         regex_filetypes = set(***REMOVED***"txt"***REMOVED***)
         reserved_list = set(***REMOVED***"data", "coordinate_map"***REMOVED***)
@@ -135,6 +135,8 @@ class Philter:
                 encoding = self.detect_encoding(filename)
                 txt = open(filename,"r", encoding=encoding***REMOVED***'encoding'***REMOVED***).read()
 
+                # if self.debug:
+                #     print("Transforming", pat)
 
                 for i,pat in enumerate(self.patterns):
                     if pat***REMOVED***"type"***REMOVED*** == "regex":
@@ -143,6 +145,10 @@ class Philter:
                         self.map_set(filename=filename, text=txt, pattern_index=i)
                     elif pat***REMOVED***"type"***REMOVED*** == "stanford_ner":
                         self.map_ner(filename=filename, text=txt, pattern_index=i)
+                    elif pat***REMOVED***"type"***REMOVED*** == "pos_matcher":
+                        self.map_pos(filename=filename, text=txt, pattern_index=i)
+                    elif pat***REMOVED***"type"***REMOVED*** == "match_all":
+                        self.match_all(filename=filename, text=txt, pattern_index=i)
                     else:
                         raise Exception("Error, pattern type not supported: ", pat***REMOVED***"type"***REMOVED***)
 
@@ -184,6 +190,20 @@ class Philter:
         #     coord_map.add_extend(filename, m.start(), m.start()+len(m.group()))
         self.patterns***REMOVED***pattern_index***REMOVED******REMOVED***"coordinate_map"***REMOVED*** = coord_map
 
+    def match_all(self, filename="", text="", pattern_index=-1):
+        """ Simply maps to the entirety of the file """
+        if not os.path.exists(filename):
+            raise Exception("Filepath does not exist", filename)
+
+        if pattern_index < 0 or pattern_index >= len(self.patterns):
+            raise Exception("Invalid pattern index: ", pattern_index, "pattern length", len(patterns))
+
+        coord_map = self.patterns***REMOVED***pattern_index***REMOVED******REMOVED***"coordinate_map"***REMOVED***
+        #add the entire length of the file
+        coord_map.add(filename, 0, len(text))
+        print(0, len(text))
+        self.patterns***REMOVED***pattern_index***REMOVED******REMOVED***"coordinate_map"***REMOVED*** = coord_map
+
 
     def map_set(self, filename="", text="", pattern_index=-1,  pre_process= r"***REMOVED***^a-zA-Z0-9***REMOVED***+"):
         """ Creates a coordinate mapping of words any words in this set"""
@@ -205,7 +225,6 @@ class Philter:
         if len(pos_set) > 0:
             check_pos = True
 
-
         #preserve spaces while getting POS. 
         lst = re.split("(\s+)", text)
         cleaned = ***REMOVED******REMOVED***
@@ -214,24 +233,20 @@ class Philter:
                 cleaned.append(item)
         pos_list = nltk.pos_tag(cleaned)
 
-        
         start_coordinate = 0
         for tup in pos_list:
-
             word = tup***REMOVED***0***REMOVED***
             pos  = tup***REMOVED***1***REMOVED***
-
             start = start_coordinate
             stop = start_coordinate + len(word)
-
             word_clean = re.sub(pre_process, "", word.lower().strip())
-
             if len(word_clean) == 0:
                 #got a blank space or something without any characters or digits, move forward
                 start_coordinate += len(word)
                 continue
 
             if check_pos == False or (check_pos == True and pos in pos_set):
+
                 if word_clean in map_set or word in map_set:
                     coord_map.add_extend(filename, start, stop)
                     #print("FOUND: ",word, "COORD: ",  text***REMOVED***start:stop***REMOVED***)
@@ -239,6 +254,49 @@ class Philter:
                     #print("not in set: ",word, "COORD: ",  text***REMOVED***start:stop***REMOVED***)
                     pass
                     
+            #advance our start coordinate
+            start_coordinate += len(word)
+
+        self.patterns***REMOVED***pattern_index***REMOVED******REMOVED***"coordinate_map"***REMOVED*** = coord_map
+
+    def map_pos(self, filename="", text="", pattern_index=-1, pre_process= r"***REMOVED***^a-zA-Z0-9***REMOVED***+"):
+        """ Creates a coordinate mapping of words which match this part of speech (POS)"""
+        if not os.path.exists(filename):
+            raise Exception("Filepath does not exist", filename)
+
+        if pattern_index < 0 or pattern_index >= len(self.patterns):
+            raise Exception("Invalid pattern index: ", pattern_index, "pattern length", len(patterns))
+
+        if "pos" not in self.patterns***REMOVED***pattern_index***REMOVED***:
+            raise Exception("Mapping POS must include parts of speech", pattern_index, "pattern length", len(patterns))
+            
+        coord_map = self.patterns***REMOVED***pattern_index***REMOVED******REMOVED***"coordinate_map"***REMOVED***
+        pos_set = set(self.patterns***REMOVED***pattern_index***REMOVED******REMOVED***"pos"***REMOVED***)
+        
+        #preserve spaces while getting POS. 
+        lst = re.split("(\s+)", text)
+        cleaned = ***REMOVED******REMOVED***
+        for item in lst:
+            if len(item) > 0:
+                cleaned.append(item)
+        pos_list = nltk.pos_tag(cleaned)
+
+        start_coordinate = 0
+        for tup in pos_list:
+            word = tup***REMOVED***0***REMOVED***
+            pos  = tup***REMOVED***1***REMOVED***
+            start = start_coordinate
+            stop = start_coordinate + len(word)
+            word_clean = re.sub(pre_process, "", word.lower().strip())
+            if len(word_clean) == 0:
+                #got a blank space or something without any characters or digits, move forward
+                start_coordinate += len(word)
+                continue
+
+            if pos in pos_set:    
+                coord_map.add_extend(filename, start, stop)
+                #print("FOUND: ",word,"POS",pos, "COORD: ",  text***REMOVED***start:stop***REMOVED***)
+                
             #advance our start coordinate
             start_coordinate += len(word)
 
@@ -539,9 +597,6 @@ class Philter:
                 else:
                     #print(note_word, anno_word, "FP")
                     yield "FP", anno_word
-
-
-            
 
             
 
