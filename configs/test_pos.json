@@ -1,0 +1,26 @@
+[
+	{
+		"title":"Test Pos Whitelist",
+		"type":"set",
+		"exclude":false,
+		"filepath":"filters/whitelists/test_pos.json",
+		"pos":["NNP"],
+		"notes":"These are words we believe are safe"
+	},
+	{
+		"title":"POS MATCHER",
+		"type":"pos_matcher",
+		"exclude":true,
+		"pos":["NNP"],
+		"notes":"This will exclude any NNPs that arent included in earlier steps"
+	},
+	{
+		"title":"No catchall",
+		"type":"regex",
+		"exclude":false,
+		"filepath":"filters/regex/catchall.txt",
+		"notes":"This should match anything, preventing the catchall"
+	}
+]
+
+
