@@ -64,6 +64,13 @@
 		"notes":"These are words we beleive are safe"
 	},
 {
+                "title":"POS MATCHER",
+                "type":"pos_matcher",
+                "exclude":true,
+                "pos":["NNP","NN","JJ","VBZ","PRP"],
+                "notes":"This will exclude any NNPs that arent included in earlier steps"
+        },
+{
 		"title":"Match all",
 		"type":"regex",
 		"exclude":true,
