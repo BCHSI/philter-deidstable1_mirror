@@ -29,6 +29,9 @@ def main():
 
     args = ap.parse_args()
 
+    if args.debug:
+        print("RUNNING ", args.filters)
+
     philter_config = {
         "debug":args.debug,
         "finpath":args.input,
