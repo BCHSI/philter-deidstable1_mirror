@@ -1,0 +1,27 @@
+[
+	
+	{
+		"title":"safe4 digits",
+		"type":"regex",
+		"exclude":false,
+		"filepath":"filters/regex/match_mg.txt",
+		"notes":"mg"
+	},
+	{
+	    "title":"no digits",
+	    "type":"regex",
+	    "exclude":true,
+	    "filepath":"filters/regex/alldigits.txt",
+	    "notes":"This should remove anything with digits"
+	},
+	{
+		"title":"No catchall",
+		"type":"regex",
+		"exclude":false,
+		"filepath":"filters/regex/catchall.txt",
+		"notes":"exclude false keeps all tokens not yet labeled, true filters all remaining tokens"
+	}
+		
+]
+
+
