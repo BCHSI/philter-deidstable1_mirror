@@ -1,5 +1,60 @@
 ***REMOVED***
-	
+	{
+                "title":"Dates1",
+                "type":"regex",
+                "exclude":true,
+                "filepath":"filters/regex/date001.txt",
+                "notes":""
+        },
+{
+                "title":"Dates2",
+                "type":"regex",
+                "exclude":true,
+                "filepath":"filters/regex/date002.txt",
+                "notes":""
+        },
+{
+                "title":"Dates3",
+                "type":"regex",
+                "exclude":true,
+                "filepath":"filters/regex/date003.txt",
+                "notes":""
+        },
+{
+                "title":"Dates4",
+                "type":"regex",
+                "exclude":true,
+                "filepath":"filters/regex/date004.txt",
+                "notes":""
+        },
+{
+                "title":"Dates5",
+                "type":"regex",
+                "exclude":true,
+                "filepath":"filters/regex/date005.txt",
+                "notes":""
+        },
+{
+                "title":"Dates6",
+                "type":"regex",
+                "exclude":true,
+                "filepath":"filters/regex/date006.txt",
+                "notes":""
+        },
+{
+                "title":"Dates7",
+                "type":"regex",
+                "exclude":true,
+                "filepath":"filters/regex/date007.txt",
+                "notes":""
+        },
+{
+                "title":"Dates8",
+                "type":"regex",
+                "exclude":true,
+                "filepath":"filters/regex/date008.txt",
+                "notes":""
+        },
 	{
 		"title":"Test Whitelist",
 		"type":"set",
