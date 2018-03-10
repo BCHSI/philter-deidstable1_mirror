@@ -56,7 +56,7 @@
                 "notes":""
         },
 	{
-		"title":"Test Whitelist",
+		"title":"Whitelist",
 		"type":"set",
 		"exclude":false,
 		"filepath":"filters/whitelists/whitelist_names_100.json",
@@ -64,11 +64,18 @@
 		"notes":"These are words we beleive are safe"
 	},
 {
+                "title":"NER Matcher",
+                "type":"stanford_ner",
+                "exclude":true,
+                "pos":["PERSON","DATE","LOCATION"],
+                "notes":"Exclude any word with any of the above tags. Dont use Organization, FP off the charts"
+        },
+{
                 "title":"POS MATCHER",
                 "type":"pos_matcher",
                 "exclude":true,
                 "pos":["NNP","NN","JJ","VBZ","PRP"],
-                "notes":"This will exclude any NNPs that arent included in earlier steps"
+                "notes":"This will exclude any of the listed POS not marked safe by earlier steps"
         },
 {
 		"title":"Match all",
