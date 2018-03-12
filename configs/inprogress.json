@@ -80,7 +80,7 @@
 {
 		"title":"Match all",
 		"type":"regex",
-		"exclude":false,
+		"exclude":true,
 		"filepath":"filters/regex/catchall.txt",
 		"notes":"exclude false keeps all tokens not yet labeled, true filters all remaining tokens"
 	}
