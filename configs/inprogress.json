@@ -1,90 +1,26 @@
 ***REMOVED***
 	{
-                "title":"Dates1",
-                "type":"regex",
-                "exclude":true,
-                "filepath":"filters/regex/date001.txt",
-                "notes":""
-        },
-{
-                "title":"Dates2",
-                "type":"regex",
-                "exclude":true,
-                "filepath":"filters/regex/date002.txt",
-                "notes":""
-        },
-{
-                "title":"Dates3",
-                "type":"regex",
-                "exclude":true,
-                "filepath":"filters/regex/date003.txt",
-                "notes":""
-        },
-{
-                "title":"Dates4",
-                "type":"regex",
-                "exclude":true,
-                "filepath":"filters/regex/date004.txt",
-                "notes":""
-        },
-{
-                "title":"Dates5",
-                "type":"regex",
-                "exclude":true,
-                "filepath":"filters/regex/date005.txt",
-                "notes":""
-        },
-{
-                "title":"Dates6",
-                "type":"regex",
-                "exclude":true,
-                "filepath":"filters/regex/date006.txt",
-                "notes":""
-        },
-{
-                "title":"Dates7",
-                "type":"regex",
-                "exclude":true,
-                "filepath":"filters/regex/date007.txt",
-                "notes":""
-        },
-{
-                "title":"Dates8",
-                "type":"regex",
-                "exclude":true,
-                "filepath":"filters/regex/date008.txt",
-                "notes":""
-        },
-	{
-		"title":"Whitelist",
-		"type":"set",
-		"exclude":false,
-		"filepath":"filters/whitelists/whitelist_names_100.json",
-		"pos":***REMOVED******REMOVED***,
-		"notes":"These are words we beleive are safe"
-	},
-{
-                "title":"NER Matcher",
-                "type":"stanford_ner",
-                "exclude":true,
-                "pos":***REMOVED***"PERSON","DATE","LOCATION"***REMOVED***,
-                "notes":"Exclude any word with any of the above tags. Dont use Organization, FP off the charts"
-        },
-{
-                "title":"POS MATCHER",
-                "type":"pos_matcher",
-                "exclude":true,
-                "pos":***REMOVED***"NNP","NN","JJ","VBZ","PRP"***REMOVED***,
-                "notes":"This will exclude any of the listed POS not marked safe by earlier steps"
-        },
-{
-		"title":"Match all",
+		"title":"Date Regex K1",
 		"type":"regex",
 		"exclude":true,
+		"filepath":"filters/regex/date001.txt",
+		"notes":"Complicated dates regex"
+	},
+    {
+	    "title":"Date Regex K2",
+	    "type":"regex",
+	    "exclude":true,
+	    "filepath":"filters/regex/date002.txt",
+	    "notes":"Other date regex"
+    },
+    {
+    	"title":"No catchall",
+		"type":"regex",
+		"exclude":false,
 		"filepath":"filters/regex/catchall.txt",
-		"notes":"exclude false keeps all tokens not yet labeled, true filters all remaining tokens"
+		"notes":"This should match anything, preventing the catchall"
 	}
-		
+    
 ***REMOVED***
 
 
