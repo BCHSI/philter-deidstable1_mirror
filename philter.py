@@ -89,7 +89,13 @@ class Philter:
         
     def precompile(self, filepath):
         """ precompiles our regex to speed up pattern matching"""
+        day_name = "(S|s)un(day)?(s)?|SUN(DAY)?(S)?|(M|m)on(day)?(s)?|MON(DAY)?(S)?|(T|t)ues(day)?(s)?|TUES(DAY)?(S)?|(W|w)ed(nesday)?(s)?|WED(NESDAY)?(S)?|(T|t)hurs(day)?(s)?|THURS(DAY)?(S)?|(F|f)ri(day)?(s)?|FRI(DAY)?(S)?|(S|s)at(urday)?(s)?|SAT(URDAY)?(S)?"
+        month_name = "(J|j)an(uary)?|JAN(UARY)?|(F|f)eb(ruary)?|FEB(RUARY)?|(M|m)ar(ch)?|MAR(CH)?|(A|a)pr(il)?|APR(IL)?|(M|m)ay|MAY|(J|j)un(e)?|JUN(E)?|(J|j)ul(y)?|JUL(Y)?|(A|a)ug(ust)?|AUG(UST)?|(S|s)ep(tember)?|SEP(TEMBER)?|SEPT|(O|o)ct(ober)?|OCT(OBER)?|(N|n)ov(ember)?|NOV(EMBER)?|(D|d)ec(ember)?|DEC(EMBER)?"
+        day_numbering = "1st|2nd|3rd|4th|5th|6th|7th|8th|9th|10th|11th|12th|13th|14th|15th|16th|17th|18th|19th|20th|21st|22nd|23rd|24th|25th|26th|27th|28th|29th|30th|31st"
+        seasons = "(S|s)pring|SPRING|(F|f)all|FALL|(A|a)utumn|AUTUMN|(W|w)inter|WINTER|(S|s)ummer|SUMMER"
+        
         regex = open(filepath,"r").read().strip()
+        regex = regex.replace('"""+month_name+r"""', month_name).replace('"""+day_numbering+r"""', day_numbering).replace('"""+day_name+r"""', day_name).replace('"""+seasons+r"""', seasons) 
         return re.compile(regex)
                
     def init_set(self, filepath):
@@ -174,21 +180,27 @@ class Philter:
         start_coordinate = 0
         pre_process= re.compile(r"[^a-zA-Z0-9]")
 
-        for w in re.split("(\s+)", text):
-            stop = start_coordinate+len(w)
-            if len(pre_process.sub("", w.lower().strip())) == 0:
-                #got a blank space or something without any characters or digits, move forward
-                start_coordinate = stop
-                continue
-
-            if regex.match(w):
-                coord_map.add_extend(filename,start_coordinate, stop)
-            start_coordinate = stop
-
-        # matches = regex.finditer(text)
-        # for m in matches:
-        #     coord_map.add_extend(filename, m.start(), m.start()+len(m.group()))
+        # for w in re.split("(\s+)", text):
+        #     stop = start_coordinate+len(w)
+        #     if len(pre_process.sub("", w.lower().strip())) == 0:
+        #         #got a blank space or something without any characters or digits, move forward
+        #         start_coordinate = stop
+        #         continue
+        #     if regex.match(w):
+        #         coord_map.add_extend(filename,start_coordinate, stop)
+        #     start_coordinate = stop
+            
+        #text = text.replace("\n"," ")
+        matches = regex.finditer(text)
+        
+        for m in matches:
+            coord_map.add_extend(filename, m.start(), m.start()+len(m.group()))
+            # if filename == "./data/i2b2_notes/167-02.txt" and len(m.group()) >1:
+            #     print(m)
+        
         self.patterns[pattern_index]["coordinate_map"] = coord_map
+
+
 
     def match_all(self, filename="", text="", pattern_index=-1):
         """ Simply maps to the entirety of the file """
@@ -932,7 +944,6 @@ class Philter:
 
         items.sort(key=lambda x: x["count"], reverse=True)
         json.dump(items, open(sorted_path, "w"), indent=4)
-
 
 
 

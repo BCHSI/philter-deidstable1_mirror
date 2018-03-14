@@ -49,7 +49,8 @@ class CoordinateMap:
 		"""  adds a new coordinate to the coordinate map
 			if overlaps with another, will extend to the larger size
 		"""
-
+		# if filename == "./data/i2b2_notes/167-02.txt":
+		
 		if self.debug:
 			print("add_extend", start, stop)
 

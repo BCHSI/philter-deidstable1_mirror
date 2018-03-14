@@ -5,6 +5,7 @@ from philter import Philter
 import gzip
 import json
 
+
 def main():
     # get input/output/filename
     help_str = """ Philter 
