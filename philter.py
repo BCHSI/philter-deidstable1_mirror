@@ -11,6 +11,8 @@ from nltk.stem.wordnet import WordNetLemmatizer
 from coordinate_map import CoordinateMap
 from nltk.tag.stanford import StanfordNERTagger
 import subprocess
+import numpy
+
 
 class Philter:
     """ 
@@ -168,7 +170,6 @@ class Philter:
         """ Creates a coordinate map from the pattern on this data
             generating a coordinate map of hits given (dry run doesn't transform)
         """
-
         if not os.path.exists(filename):
             raise Exception("Filepath does not exist", filename)
 
@@ -177,29 +178,28 @@ class Philter:
         coord_map = self.patterns[pattern_index]["coordinate_map"]
         regex = self.patterns[pattern_index]["data"]
 
-        start_coordinate = 0
-        pre_process= re.compile(r"[^a-zA-Z0-9]")
-
-        # for w in re.split("(\s+)", text):
-        #     stop = start_coordinate+len(w)
-        #     if len(pre_process.sub("", w.lower().strip())) == 0:
-        #         #got a blank space or something without any characters or digits, move forward
-        #         start_coordinate = stop
-        #         continue
-        #     if regex.match(w):
-        #         coord_map.add_extend(filename,start_coordinate, stop)
-        #     start_coordinate = stop
+        
+        if regex != re.compile('.'):
+            matches = regex.finditer(text)
             
-        #text = text.replace("\n"," ")
-        matches = regex.finditer(text)
+            for m in matches:
+                coord_map.add_extend(filename, m.start(), m.start()+len(m.group()))
         
-        for m in matches:
-            coord_map.add_extend(filename, m.start(), m.start()+len(m.group()))
-            # if filename == "./data/i2b2_notes/167-02.txt" and len(m.group()) >1:
-            #     print(m)
+            self.patterns[pattern_index]["coordinate_map"] = coord_map
         
-        self.patterns[pattern_index]["coordinate_map"] = coord_map
-
+        elif regex == re.compile('.'):
+            start_coordinate = 0
+            pre_process= re.compile(r"[^a-zA-Z0-9]")
+            for w in re.split("(\s+)", text):
+                stop = start_coordinate+len(w)
+                if len(pre_process.sub("", w.lower().strip())) == 0:
+                    #got a blank space or something without any characters or digits, move forward
+                    start_coordinate = stop
+                    continue
+                if regex.match(w):
+                    coord_map.add_extend(filename,start_coordinate, stop)
+                start_coordinate = stop
+            self.patterns[pattern_index]["coordinate_map"] = coord_map
 
 
     def match_all(self, filename="", text="", pattern_index=-1):
@@ -440,10 +440,12 @@ class Philter:
 
             #create an intersection map of all coordinates we'll be removing
             exclude_map = CoordinateMap()
+
             exclude_map.add_file(filename)
 
             #create an interestion map of all coordinates we'll be keeping
             include_map = CoordinateMap()
+
             include_map.add_file(filename)
 
             for i,pattern in enumerate(self.patterns):
@@ -451,18 +453,31 @@ class Philter:
                 exclude = pattern["exclude"]
 
                 for start,stop in coord_map.filecoords(filename):
+                        
                     if exclude:
-                        if not include_map.does_overlap(filename, start, stop):
-                            exclude_map.add_extend(filename, start, stop)
-                            data[filename]["phi"].append({"start":start, "stop":stop, "word":txt[start:stop]})
+                        exclude_map.add_extend(filename, start, stop)
+                        data[filename]["phi"].append({"start":start, "stop":stop, "word":txt[start:stop]})  
+            
+            for beginning in exclude_map.map[filename]:
+                end = exclude_map.map[filename][beginning]
+                exclude_map.map[filename][beginning] = list(range(beginning,end+1))
+            exclude_map.map[filename] = numpy.concatenate(list(exclude_map.map[filename].values()))            
+            
+            for i,pattern in enumerate(self.patterns):
+                coord_map = pattern["coordinate_map"]
+                exclude = pattern["exclude"]
+
+                for start,stop in coord_map.filecoords(filename):
+
+                    if not exclude_map.does_overlap(filename, start, stop):
+                        #print("include", start, stop, txt[start:stop])
+
+                        include_map.add_extend(filename, start, stop)
+                        data[filename]["non-phi"].append({"start":start, "stop":stop, "word":txt[start:stop]})
                     else:
-                        if not exclude_map.does_overlap(filename, start, stop):
-                            #print("include", start, stop, txt[start:stop])
-                            include_map.add_extend(filename, start, stop)
-                            data[filename]["non-phi"].append({"start":start, "stop":stop, "word":txt[start:stop]})
-                        else:
-                            pass
-                            #print("include overlapped", start, stop, txt[start:stop])
+                        pass
+                        #print("include overlapped", start, stop, txt[start:stop])
+
 
             #now we transform the text
             with open(out_path+f, "w") as f:

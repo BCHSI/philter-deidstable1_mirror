@@ -1,5 +1,4 @@
-
-
+import numpy
 
 class CoordinateMap:
 	""" 
@@ -57,22 +56,30 @@ class CoordinateMap:
 		if filename not in self.map:
 			self.map[filename] = {}
 		overlaps = self.max_overlap(filename, start, stop)
-
+		# if filename == "./data/i2b2_notes/167-02.txt":
+		# 	print(self.map)
 	
 		def clear_overlaps(filename, lst):
 			for o in lst:
 				del self.map[filename][o["orig_start"]]
 
 		if len(overlaps) == 0:
+
 			#no overlap, just save these coordinates
 			self.map[filename][start] = stop
 			self.add_pattern(filename,start,stop,pattern)
+			# if filename == "./data/i2b2_notes/167-02.txt":
+			# 	print("No overlaps:")
+			# 	print(filename,start,stop,pattern)
 		elif len(overlaps) == 1:
 			clear_overlaps(filename, overlaps)
 			#1 overlap, save this value
 			o = overlaps[0]
 			self.map[filename][o["new_start"]] = o["new_stop"]
 			self.add_pattern(filename,start,stop,pattern)
+			# if filename == "./data/i2b2_notes/167-02.txt":
+			# 	print("One overlap:")			
+			# 	print(filename,start,stop,pattern)
 		else:
 			clear_overlaps(filename, overlaps)
 			#greater than 1 overlap, by default this is sorted because of scan order
@@ -80,6 +87,9 @@ class CoordinateMap:
 			o2 = overlaps[-1]
 			self.map[filename][o2["new_start"]] = o1["new_stop"]
 			self.add_pattern(filename,start,stop,pattern)
+			# if filename == "./data/i2b2_notes/167-02.txt":
+			# 	print("Multiple overlaps:")			
+			# 	print(filename,start,stop,pattern)
 
 		return True, None
 
