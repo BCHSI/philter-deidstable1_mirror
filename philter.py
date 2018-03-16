@@ -183,6 +183,8 @@ class Philter:
             matches = regex.finditer(text)
             
             for m in matches:
+                # if filename == './data/i2b2_notes/312-04.txt':
+                #     print(m)
                 coord_map.add_extend(filename, m.start(), m.start()+len(m.group()))
         
             self.patterns[pattern_index]["coordinate_map"] = coord_map
@@ -447,38 +449,23 @@ class Philter:
             include_map = CoordinateMap()
 
             include_map.add_file(filename)
-
             for i,pattern in enumerate(self.patterns):
                 coord_map = pattern["coordinate_map"]
                 exclude = pattern["exclude"]
 
                 for start,stop in coord_map.filecoords(filename):
-                        
                     if exclude:
-                        exclude_map.add_extend(filename, start, stop)
-                        data[filename]["phi"].append({"start":start, "stop":stop, "word":txt[start:stop]})  
-            
-            for beginning in exclude_map.map[filename]:
-                end = exclude_map.map[filename][beginning]
-                exclude_map.map[filename][beginning] = list(range(beginning,end+1))
-            if exclude_map.map[filename] != {}:
-                exclude_map.map[filename] = numpy.concatenate(list(exclude_map.map[filename].values()))            
-            
-            for i,pattern in enumerate(self.patterns):
-                coord_map = pattern["coordinate_map"]
-                exclude = pattern["exclude"]
-
-                for start,stop in coord_map.filecoords(filename):
-
-                    if not exclude_map.does_overlap(filename, start, stop):
-                        #print("include", start, stop, txt[start:stop])
-
-                        include_map.add_extend(filename, start, stop)
-                        data[filename]["non-phi"].append({"start":start, "stop":stop, "word":txt[start:stop]})
+                        if not include_map.does_overlap(filename, start, stop):
+                            exclude_map.add_extend(filename, start, stop)
+                            data[filename]["phi"].append({"start":start, "stop":stop, "word":txt[start:stop]})
                     else:
-                        pass
-                        #print("include overlapped", start, stop, txt[start:stop])
-
+                        if not exclude_map.does_overlap(filename, start, stop):
+                            #print("include", start, stop, txt[start:stop])
+                            include_map.add_extend(filename, start, stop)
+                            data[filename]["non-phi"].append({"start":start, "stop":stop, "word":txt[start:stop]})
+                        else:
+                            pass
+                            #print("include overlapped", start, stop, txt[start:stop])
 
             #now we transform the text
             with open(out_path+f, "w") as f:

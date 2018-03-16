@@ -312,7 +312,7 @@
 		"type":"regex",
 		"exclude":false,
 		"filepath":"filters/regex/catchall.txt",
-		"notes":"This should match anything, preventing the catchall"
+		"notes":"False will turn off catchall, True will turn on catchll (default)"
 	}
 
 
