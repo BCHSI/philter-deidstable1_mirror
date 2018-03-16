@@ -34,6 +34,8 @@ all_phone_phi = 0
 all_location_other_phi = 0
 all_date_phi = 0
 all_email_phi = 0
+all_fax_phi = 0
+all_device_phi = 0
 all_unspecified_phi = 0
 # Get number of phi in each category
 for file in phi:
@@ -76,6 +78,10 @@ for file in phi:
 			all_date_phi += 1
 		if item***REMOVED***'TYPE'***REMOVED*** == 'EMAIL':
 			all_email_phi += 1
+		if item***REMOVED***'TYPE'***REMOVED*** == 'FAX':
+			all_fax_phi += 1
+		if item***REMOVED***'TYPE'***REMOVED*** == 'DEVICE':
+			all_device_phi += 1
 
 # Create dictionary to hold fn tags
 fn_tags = {}
@@ -116,7 +122,7 @@ for fn2 in fn_tags:
 			phi_tag_lists***REMOVED***fn_tags***REMOVED***fn2***REMOVED******REMOVED***subdict***REMOVED******REMOVED***0***REMOVED******REMOVED***.append(keys***REMOVED***counter***REMOVED***)
 		counter += 1			
 
-phi_tag_counts = {}
+phi_tag_counts = {'DATE': 0, 'HOSPITAL': 0, 'DOCTOR': 0, 'CITY': 0, 'STATE': 0, 'AGE': 0, 'COUNTRY': 0, 'PATIENT': 0, 'MEDICALRECORD': 0, 'IDNUM': 0, 'USERNAME': 0, 'STREET': 0, 'ZIP': 0, 'PHONE': 0, 'PROFESSION': 0, 'ORGANIZATION': 0, 'LOCATION-OTHER': 0, 'FAX': 0, 'DEVICE': 0, 'EMAIL': 0}
 for key in phi_tag_lists:
 	phi_tag_counts***REMOVED***key***REMOVED*** = len(phi_tag_lists***REMOVED***key***REMOVED***)
 
@@ -125,6 +131,7 @@ recall_dict = {}
 recall_dict***REMOVED***'DOCTOR Recall'***REMOVED*** = (all_doctor_phi-phi_tag_counts***REMOVED***'DOCTOR'***REMOVED***)/all_doctor_phi
 recall_dict***REMOVED***'HOSPITAL Recall'***REMOVED*** = (all_hospital_phi-phi_tag_counts***REMOVED***'HOSPITAL'***REMOVED***)/all_hospital_phi
 recall_dict***REMOVED***'COUNTRY Recall'***REMOVED*** = (all_country_phi-phi_tag_counts***REMOVED***'COUNTRY'***REMOVED***)/all_country_phi
+recall_dict***REMOVED***'AGE Recall'***REMOVED*** = (all_age_phi-phi_tag_counts***REMOVED***'AGE'***REMOVED***)/all_age_phi
 recall_dict***REMOVED***'USERNAME Recall'***REMOVED*** = (all_username_phi-phi_tag_counts***REMOVED***'USERNAME'***REMOVED***)/all_username_phi
 recall_dict***REMOVED***'CITY Recall'***REMOVED*** = (all_city_phi-phi_tag_counts***REMOVED***'CITY'***REMOVED***)/all_city_phi
 recall_dict***REMOVED***'STATE Recall'***REMOVED*** = (all_state_phi-phi_tag_counts***REMOVED***'STATE'***REMOVED***)/all_state_phi
@@ -135,10 +142,12 @@ recall_dict***REMOVED***'STREET Recall'***REMOVED*** = (all_street_phi-phi_tag_c
 recall_dict***REMOVED***'PROFESSION Recall'***REMOVED*** = (all_profession_phi-phi_tag_counts***REMOVED***'PROFESSION'***REMOVED***)/all_profession_phi
 recall_dict***REMOVED***'IDNUM Recall'***REMOVED*** = (all_idnum_phi-phi_tag_counts***REMOVED***'IDNUM'***REMOVED***)/all_idnum_phi
 recall_dict***REMOVED***'ORGANIZATION Recall'***REMOVED*** = (all_organization_phi-phi_tag_counts***REMOVED***'ORGANIZATION'***REMOVED***)/all_organization_phi
+recall_dict***REMOVED***'PHONE Recall'***REMOVED*** = (all_phone_phi-phi_tag_counts***REMOVED***'PHONE'***REMOVED***)/all_phone_phi
 recall_dict***REMOVED***'LOCATION-OTHER Recall'***REMOVED*** = (all_location_other_phi-phi_tag_counts***REMOVED***'LOCATION-OTHER'***REMOVED***)/all_location_other_phi
 recall_dict***REMOVED***'DATE Recall'***REMOVED*** = (all_date_phi-phi_tag_counts***REMOVED***'DATE'***REMOVED***)/all_date_phi
 recall_dict***REMOVED***'EMAIL Recall'***REMOVED*** = (all_email_phi-phi_tag_counts***REMOVED***'EMAIL'***REMOVED***)/all_email_phi
-
+recall_dict***REMOVED***'FAX Recall'***REMOVED*** = (all_fax_phi-phi_tag_counts***REMOVED***'FAX'***REMOVED***)/all_fax_phi
+recall_dict***REMOVED***'DEVICE Recall'***REMOVED*** = (all_device_phi-phi_tag_counts***REMOVED***'DEVICE'***REMOVED***)/all_device_phi
 
 # Get totals for PHI in all notes
 
