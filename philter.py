@@ -183,6 +183,8 @@ class Philter:
             matches = regex.finditer(text)
             
             for m in matches:
+                # if filename == './data/i2b2_notes/312-04.txt':
+                #     print(m)
                 coord_map.add_extend(filename, m.start(), m.start()+len(m.group()))
         
             self.patterns***REMOVED***pattern_index***REMOVED******REMOVED***"coordinate_map"***REMOVED*** = coord_map
@@ -447,38 +449,23 @@ class Philter:
             include_map = CoordinateMap()
 
             include_map.add_file(filename)
-
             for i,pattern in enumerate(self.patterns):
                 coord_map = pattern***REMOVED***"coordinate_map"***REMOVED***
                 exclude = pattern***REMOVED***"exclude"***REMOVED***
 
                 for start,stop in coord_map.filecoords(filename):
-                        
                     if exclude:
-                        exclude_map.add_extend(filename, start, stop)
-                        data***REMOVED***filename***REMOVED******REMOVED***"phi"***REMOVED***.append({"start":start, "stop":stop, "word":txt***REMOVED***start:stop***REMOVED***})  
-            
-            for beginning in exclude_map.map***REMOVED***filename***REMOVED***:
-                end = exclude_map.map***REMOVED***filename***REMOVED******REMOVED***beginning***REMOVED***
-                exclude_map.map***REMOVED***filename***REMOVED******REMOVED***beginning***REMOVED*** = list(range(beginning,end+1))
-            if exclude_map.map***REMOVED***filename***REMOVED*** != {}:
-                exclude_map.map***REMOVED***filename***REMOVED*** = numpy.concatenate(list(exclude_map.map***REMOVED***filename***REMOVED***.values()))            
-            
-            for i,pattern in enumerate(self.patterns):
-                coord_map = pattern***REMOVED***"coordinate_map"***REMOVED***
-                exclude = pattern***REMOVED***"exclude"***REMOVED***
-
-                for start,stop in coord_map.filecoords(filename):
-
-                    if not exclude_map.does_overlap(filename, start, stop):
-                        #print("include", start, stop, txt***REMOVED***start:stop***REMOVED***)
-
-                        include_map.add_extend(filename, start, stop)
-                        data***REMOVED***filename***REMOVED******REMOVED***"non-phi"***REMOVED***.append({"start":start, "stop":stop, "word":txt***REMOVED***start:stop***REMOVED***})
+                        if not include_map.does_overlap(filename, start, stop):
+                            exclude_map.add_extend(filename, start, stop)
+                            data***REMOVED***filename***REMOVED******REMOVED***"phi"***REMOVED***.append({"start":start, "stop":stop, "word":txt***REMOVED***start:stop***REMOVED***})
                     else:
-                        pass
-                        #print("include overlapped", start, stop, txt***REMOVED***start:stop***REMOVED***)
-
+                        if not exclude_map.does_overlap(filename, start, stop):
+                            #print("include", start, stop, txt***REMOVED***start:stop***REMOVED***)
+                            include_map.add_extend(filename, start, stop)
+                            data***REMOVED***filename***REMOVED******REMOVED***"non-phi"***REMOVED***.append({"start":start, "stop":stop, "word":txt***REMOVED***start:stop***REMOVED***})
+                        else:
+                            pass
+                            #print("include overlapped", start, stop, txt***REMOVED***start:stop***REMOVED***)
 
             #now we transform the text
             with open(out_path+f, "w") as f:

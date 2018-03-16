@@ -1,0 +1,39 @@
+***REMOVED***
+
+	{
+		"title":"mrn 1",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/medical_records/mrn001.txt",
+		"notes":"This should remove anything that matches DDDDNDDDDD"
+	},
+	{
+		"title":"mixed 1",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/medical_records/mixed001.txt",
+		"notes":"This should remove anything that matches NNDDD(anything)DDDD"
+	},
+	{
+		"title":"mixed 2",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/medical_records/mixed002.txt",
+		"notes":"This should remove anything that matches NND"
+	},
+	{
+		"title":"mixed 3",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/medical_records/mixed003.txt",
+		"notes":"This should remove anything that matches DDDDNNN"
+	},
+	{
+    	"title":"No catchall",
+		"type":"regex",
+		"exclude":false,
+		"filepath":"filters/regex/catchall.txt",
+		"notes":"This should match anything, preventing the catchall"
+	}
+
+***REMOVED***
