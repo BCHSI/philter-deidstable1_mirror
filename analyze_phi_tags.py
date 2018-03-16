@@ -34,6 +34,8 @@ all_phone_phi = 0
 all_location_other_phi = 0
 all_date_phi = 0
 all_email_phi = 0
+all_fax_phi = 0
+all_device_phi = 0
 all_unspecified_phi = 0
 # Get number of phi in each category
 for file in phi:
@@ -76,6 +78,10 @@ for file in phi:
 			all_date_phi += 1
 		if item['TYPE'] == 'EMAIL':
 			all_email_phi += 1
+		if item['TYPE'] == 'FAX':
+			all_fax_phi += 1
+		if item['TYPE'] == 'DEVICE':
+			all_device_phi += 1
 
 # Create dictionary to hold fn tags
 fn_tags = {}
@@ -116,7 +122,7 @@ for fn2 in fn_tags:
 			phi_tag_lists[fn_tags[fn2][subdict][0]].append(keys[counter])
 		counter += 1			
 
-phi_tag_counts = {}
+phi_tag_counts = {'DATE': 0, 'HOSPITAL': 0, 'DOCTOR': 0, 'CITY': 0, 'STATE': 0, 'AGE': 0, 'COUNTRY': 0, 'PATIENT': 0, 'MEDICALRECORD': 0, 'IDNUM': 0, 'USERNAME': 0, 'STREET': 0, 'ZIP': 0, 'PHONE': 0, 'PROFESSION': 0, 'ORGANIZATION': 0, 'LOCATION-OTHER': 0, 'FAX': 0, 'DEVICE': 0, 'EMAIL': 0}
 for key in phi_tag_lists:
 	phi_tag_counts[key] = len(phi_tag_lists[key])
 
@@ -125,6 +131,7 @@ recall_dict = {}
 recall_dict['DOCTOR Recall'] = (all_doctor_phi-phi_tag_counts['DOCTOR'])/all_doctor_phi
 recall_dict['HOSPITAL Recall'] = (all_hospital_phi-phi_tag_counts['HOSPITAL'])/all_hospital_phi
 recall_dict['COUNTRY Recall'] = (all_country_phi-phi_tag_counts['COUNTRY'])/all_country_phi
+recall_dict['AGE Recall'] = (all_age_phi-phi_tag_counts['AGE'])/all_age_phi
 recall_dict['USERNAME Recall'] = (all_username_phi-phi_tag_counts['USERNAME'])/all_username_phi
 recall_dict['CITY Recall'] = (all_city_phi-phi_tag_counts['CITY'])/all_city_phi
 recall_dict['STATE Recall'] = (all_state_phi-phi_tag_counts['STATE'])/all_state_phi
@@ -135,10 +142,12 @@ recall_dict['STREET Recall'] = (all_street_phi-phi_tag_counts['STREET'])/all_str
 recall_dict['PROFESSION Recall'] = (all_profession_phi-phi_tag_counts['PROFESSION'])/all_profession_phi
 recall_dict['IDNUM Recall'] = (all_idnum_phi-phi_tag_counts['IDNUM'])/all_idnum_phi
 recall_dict['ORGANIZATION Recall'] = (all_organization_phi-phi_tag_counts['ORGANIZATION'])/all_organization_phi
+recall_dict['PHONE Recall'] = (all_phone_phi-phi_tag_counts['PHONE'])/all_phone_phi
 recall_dict['LOCATION-OTHER Recall'] = (all_location_other_phi-phi_tag_counts['LOCATION-OTHER'])/all_location_other_phi
 recall_dict['DATE Recall'] = (all_date_phi-phi_tag_counts['DATE'])/all_date_phi
 recall_dict['EMAIL Recall'] = (all_email_phi-phi_tag_counts['EMAIL'])/all_email_phi
-
+recall_dict['FAX Recall'] = (all_fax_phi-phi_tag_counts['FAX'])/all_fax_phi
+recall_dict['DEVICE Recall'] = (all_device_phi-phi_tag_counts['DEVICE'])/all_device_phi
 
 # Get totals for PHI in all notes
 

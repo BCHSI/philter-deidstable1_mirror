@@ -280,6 +280,13 @@
 		"notes":"This should remove anything with pattern day_name"
 	},
 	{
+		"title":"in_the_yy",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/dates/in_the_yy.txt",
+		"notes":"This should remove anything with pattern 'in the (late/early) yy'"
+	},
+	{
 		"title":"in_yy",
 		"type":"regex",
 		"exclude":true,
