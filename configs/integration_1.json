@@ -308,12 +308,12 @@
 		"notes":"This should remove anything with pattern month_name"
 	},
 	{
-                "title":"POS MATCHER",
-                "type":"pos_matcher",
-                "exclude":false,
-                "pos":***REMOVED***"CD"***REMOVED***,
-                "notes":"This will mark safe any CDs that arent included in earlier steps"
-        },
+	    "title":"POS MATCHER",
+	    "type":"pos_matcher",
+	    "exclude":false,
+	    "pos":***REMOVED***"CD"***REMOVED***,
+	    "notes":"This will mark safe any CDs that arent included in earlier steps"
+    },
 	{
     	"title":"No catchall",
 		"type":"regex",

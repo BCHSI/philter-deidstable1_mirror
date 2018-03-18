@@ -38,7 +38,8 @@ class CoordinateMap:
 			self.all_coords***REMOVED***filename***REMOVED*** = {}
 
 		if overlap == False:
-			if self.does_overlap(filename, start, stop)
+			if self.does_overlap(filename, start, stop):
+				return False, "Error, overlaps were found: {} {} {}".format(filename, start, stop)
 
 		#add our start / stop coordinates
 		self.map***REMOVED***filename***REMOVED******REMOVED***start***REMOVED*** = stop
@@ -79,7 +80,7 @@ class CoordinateMap:
 
 		if len(overlaps) == 0:
 			#no overlap, just save these coordinates
-			self.add(filename,start,stop,pattern, check_overlap=False)
+			self.add(filename,start,stop,pattern=pattern, overlap=True)
 			# if filename == "./data/i2b2_notes/167-02.txt":
 			# 	print("No overlaps:")
 			# 	print(filename,start,stop,pattern)
@@ -87,7 +88,7 @@ class CoordinateMap:
 			clear_overlaps(filename, overlaps)	
 			#1 overlap, save this value
 			o = overlaps***REMOVED***0***REMOVED***
-			self.add(filename,o***REMOVED***"new_start"***REMOVED***,o***REMOVED***"new_stop"***REMOVED***,pattern=pattern, check_overlap=False)
+			self.add(filename,o***REMOVED***"new_start"***REMOVED***,o***REMOVED***"new_stop"***REMOVED***,pattern=pattern, overlap=True)
 			# if filename == "./data/i2b2_notes/167-02.txt":
 			# 	print("One overlap:")			
 			# 	print(filename,start,stop,pattern)
@@ -96,7 +97,7 @@ class CoordinateMap:
 			#greater than 1 overlap, by default this is sorted because of scan order
 			o1 = overlaps***REMOVED***0***REMOVED***
 			o2 = overlaps***REMOVED***-1***REMOVED***
-			self.add(filename,o2***REMOVED***"new_start"***REMOVED***, o1***REMOVED***"new_stop"***REMOVED***,pattern=pattern, check_overlap=False)
+			self.add(filename,o2***REMOVED***"new_start"***REMOVED***, o1***REMOVED***"new_stop"***REMOVED***,pattern=pattern, overlap=True)
 			# if filename == "./data/i2b2_notes/167-02.txt":
 			# 	print("Multiple overlaps:")			
 			# 	print(filename,start,stop,pattern)
