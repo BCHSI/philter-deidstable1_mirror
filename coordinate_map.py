@@ -7,33 +7,47 @@ class CoordinateMap:
 
 	"""
 	def __init__(self, pattern={"title":"untitled"}, debug=False):
-		""" internal data structure maps fielpaths to a map of int:string (coordinate start --> value)
+		""" internal data structure maps filepaths to a map of int:string (coordinate start --> stop)
 
-		{ "data/foo.txt": {123:"bar", 124:"baz"} }
+		map is the internal structure of 
+	    { filename : { startcoordinate : stop_coordinate}}
+	    eg: { "data/foo.txt": {123:126, 19:25} }
+
+
+	    coord2pattern keeps reference of the patterns 
+		that matched this coorinate (can be multiple patterns)
+
+		all_coords keeps a reference of all coordinates mapped by filename, 
+		allowing us to easily check if these coordinates have been matched yet
 
 		"""
 		self.map = {}
-		self.coord2pattern = {} #keeps reference of the patterns that matched this coorinate (can be multiple patterns)
+		self.coord2pattern = {} 
 		self.pattern = pattern
 		self.debug = debug
+		self.all_coords = {} 
 
-	def add(self, fn, start, stop, overlap=False, pattern=""):
+	def add(self, filename, start, stop, overlap=False, pattern=""):
 		"""  adds a new coordinate to the coordinate map
-			if overlap is false, this will reject any overlapping hits (usually from multiple regex scan runs)
+			 if overlap is false, this will reject any overlapping hits (usually from multiple regex scan runs)
 		"""
-		if fn not in self.map:
-			self.map[fn] = {}
+		if filename not in self.map:
+			self.map[filename] = {}
 
-		if not overlap:
-			if start in self.map[fn]:
-				raise Exception('adding coordinate multiple times Exception', start)
+		if filename not in self.all_coords:
+			self.all_coords[filename] = {}
 
-			for i in range(start, stop):
-				if i in self.map[fn]:
-					raise Exception('Overlapping coordinates found', start, i, fn)
+		if overlap == False:
+			if self.does_overlap(filename, start, stop)
 
-		self.map[fn][start] = stop
-		self.add_pattern(fn,start,stop,pattern)
+		#add our start / stop coordinates
+		self.map[filename][start] = stop
+		#add these coordinates to our all_coords map
+		for i in range(start,stop):
+			self.all_coords[filename][i] = 1
+		
+		if pattern != "":
+			self.add_pattern(filename, start, stop, pattern)
 		return True, None
 
 	def add_pattern(self, filename, start, stop, pattern):
@@ -61,22 +75,19 @@ class CoordinateMap:
 	
 		def clear_overlaps(filename, lst):
 			for o in lst:
-				del self.map[filename][o["orig_start"]]
+				self.remove(filename, o["orig_start"], o["orig_end"])
 
 		if len(overlaps) == 0:
-
 			#no overlap, just save these coordinates
-			self.map[filename][start] = stop
-			self.add_pattern(filename,start,stop,pattern)
+			self.add(filename,start,stop,pattern, check_overlap=False)
 			# if filename == "./data/i2b2_notes/167-02.txt":
 			# 	print("No overlaps:")
 			# 	print(filename,start,stop,pattern)
 		elif len(overlaps) == 1:
-			clear_overlaps(filename, overlaps)
+			clear_overlaps(filename, overlaps)	
 			#1 overlap, save this value
 			o = overlaps[0]
-			self.map[filename][o["new_start"]] = o["new_stop"]
-			self.add_pattern(filename,start,stop,pattern)
+			self.add(filename,o["new_start"],o["new_stop"],pattern=pattern, check_overlap=False)
 			# if filename == "./data/i2b2_notes/167-02.txt":
 			# 	print("One overlap:")			
 			# 	print(filename,start,stop,pattern)
@@ -85,21 +96,24 @@ class CoordinateMap:
 			#greater than 1 overlap, by default this is sorted because of scan order
 			o1 = overlaps[0]
 			o2 = overlaps[-1]
-			self.map[filename][o2["new_start"]] = o1["new_stop"]
-			self.add_pattern(filename,start,stop,pattern)
+			self.add(filename,o2["new_start"], o1["new_stop"],pattern=pattern, check_overlap=False)
 			# if filename == "./data/i2b2_notes/167-02.txt":
 			# 	print("Multiple overlaps:")			
 			# 	print(filename,start,stop,pattern)
 
 		return True, None
 
-	def remove(self, fn, coord, value):
-		""" """
-		if fn not in self.map:
-			raise Exception('Filename does not exist', fn)
-		if coord in self.map[fn]:
-			raise Exception('Adding coordinate multiple times Exception')
-		del self.map[fn][coord]
+	def remove(self, filename, start, stop):
+		""" Removes this coordinate pairing from the map, all_coords, and coord2pattern"""
+		if filename not in self.map:
+			raise Exception('Filename does not exist', filename)
+		#delete from our map structure
+		if start in self.map[filename]:
+			del self.map[filename][start]
+		#delete any of these coordinates in our all_coords data structure
+		for i in range(start, stop+1):
+			if i in self.all_coords:
+				del self.all_coords[i]
 		return True, None
 
 	def scan(self):
@@ -137,12 +151,8 @@ class CoordinateMap:
 
 	def does_overlap(self, filename, start, stop):
 		""" Check if this coordinate overlaps with any existing range"""
-
-		ranges = [list(range(key,self.map[filename][key]+1)) for key in self.map[filename]]
-		all_coords = [item for sublist in ranges for item in sublist]
-
-		for i in range(start, stop):
-			if i in all_coords:
+		for i in range(start, stop+1):
+			if i in self.all_coords:
 				return True
 		return False
 
