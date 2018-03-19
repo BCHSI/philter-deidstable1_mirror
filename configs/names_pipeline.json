@@ -1,0 +1,56 @@
+[
+	{
+                "title":"Mr., Ms., etc.",
+                "type":"regex",
+                "exclude":true,
+                "filepath":"filters/regex/salutations/pre_salutations.txt",
+                "notes":"This should remove anything that matches Mr. [name], Ms. [name], etc."
+        },
+        {
+                "title":"M.D., N.P., etc.",
+                "type":"regex",
+                "exclude":true,
+                "filepath":"filters/regex/salutations/post_salutations.txt",
+                "notes":"This should remove anything that matches [name] M.D., etc."
+        },
+	{
+                "title":"Test NER",
+                "type":"stanford_ner",
+                "exclude":true,
+                "pos":["PERSON"],
+                "notes":"This should test that ner is working"
+        },
+        {
+                "title":"Names Blacklist",
+                "type":"set",
+                "exclude":true,
+                "filepath":"filters/blacklists/names_blacklists/names_blacklist_allnames.json",
+                "pos":[],
+                "notes":"if word is NNP and in blacklist remove"
+        },
+	{
+                "title":"Drugs Whitelist",
+                "type":"set",
+                "exclude":false,
+                "filepath":"filters/separated_whitelists/whitelist_drugs_dictionary.json",
+                "pos":[],
+                "notes":"These are words we beleive are safe"
+        },
+	{
+                "title":"Drugs Whitelist",
+                "type":"set",
+                "exclude":false,
+                "filepath":"filters/separated_whitelists/whitelist_medical_terms_dictionary.json",
+                "pos":[],
+                "notes":"These are words we beleive are safe"
+        },
+        {
+                "title":"POS MATCHER",
+                "type":"pos_matcher",
+                "exclude":false,
+                "pos":["CD"],
+                "notes":"This will mark safe any CDs that arent included in earlier steps"
+        }
+]
+
+
