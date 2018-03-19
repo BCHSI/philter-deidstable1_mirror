@@ -1,6 +1,13 @@
 
 [
-	
+
+	{
+		"title":"ssn only",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/ssn_phone_fax/ssn.txt",
+		"notes":"This should remove anything that matches XXX-XX-XXXX"
+	},
 	{
 		"title":"ssn_phone_fax",
 		"type":"regex",
