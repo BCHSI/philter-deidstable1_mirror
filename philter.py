@@ -88,7 +88,7 @@ class Philter:
                 if pattern***REMOVED***"filepath"***REMOVED***.split(".")***REMOVED***-1***REMOVED*** not in regex_filetypes:
                     raise Exception("Invalid filteype", pattern***REMOVED***"filepath"***REMOVED***, "must be of", regex_filetypes)
                 self.patterns***REMOVED***i***REMOVED******REMOVED***"data"***REMOVED*** = self.precompile(pattern***REMOVED***"filepath"***REMOVED***)
-        
+                #print(self.precompile(pattern***REMOVED***"filepath"***REMOVED***))
     def precompile(self, filepath):
         """ precompiles our regex to speed up pattern matching"""
         regex = open(filepath,"r").read().strip()

@@ -20,7 +20,7 @@ state_names = "arizona|AZ|virginia|VA|minnesota|MN|alaska|AK|new york|NY|texas|T
 rootdir = '.'
 for subdir, dirs, files in os.walk(rootdir):
 	for file in files:
-		if ".txt" in file:
+		if ".txt" in file and "_transformed.txt" not in file and "catchall" not in file:
 			filepath = os.path.join(subdir, file)
 			# Get currnet file name and create transformed name
 			file_root = file.split(".")***REMOVED***0***REMOVED***
@@ -29,8 +29,7 @@ for subdir, dirs, files in os.walk(rootdir):
 			# Open file
 			regex = open(filepath,"r").read().strip()
 			# Replace variables
-			regex = regex.replace('"""+month_name+r"""', month_name).replace('"""+day_numbering+r"""', day_numbering).replace('"""+day_name+r"""', day_name).replace('"""+seasons+r"""', seasons)
-			# Write new file
+			regex = regex.replace('"""+month_name+r"""', month_name).replace('"""+day_numbering+r"""', day_numbering).replace('"""+day_name+r"""', day_name).replace('"""+seasons+r"""', seasons).replace('"""+address_indicator+r"""',address_indicator).replace('"""+state_name+r"""', state_names)			# Write new file
 			with open(new_filepath, "w") as fin:
 				fin.write(regex)
 
