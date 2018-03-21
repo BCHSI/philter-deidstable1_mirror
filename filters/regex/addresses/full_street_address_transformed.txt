@@ -1,0 +1,1 @@
+\b(\d+)(\s+[a-zA-Z]+\s+[a-zA-Z]+\s+|\s+[a-zA-Z]+\s+)(?i)("""+address_indicator+r""")(\,)?\s+([a-zA-Z]+\s+[a-zA-Z]+|[a-zA-Z]+)\,\s+([a-zA-Z]+\s+[a-zA-Z]+\s+|[a-zA-Z]+\s+)[0-9]+\b
