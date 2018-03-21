@@ -1,0 +1,1 @@
+\b(\d+)(\s+***REMOVED***a-zA-Z***REMOVED***+\s+***REMOVED***a-zA-Z***REMOVED***+\s+|\s+***REMOVED***a-zA-Z***REMOVED***+\s+)(?i)("""+address_indicator+r""")\,\s+(***REMOVED***a-zA-Z***REMOVED***+\s+***REMOVED***a-zA-Z***REMOVED***+\s+|***REMOVED***a-zA-Z***REMOVED***+\s+)***REMOVED***0-9***REMOVED***+\b
