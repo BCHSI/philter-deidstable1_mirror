@@ -88,7 +88,7 @@ class Philter:
                 if pattern["filepath"].split(".")[-1] not in regex_filetypes:
                     raise Exception("Invalid filteype", pattern["filepath"], "must be of", regex_filetypes)
                 self.patterns[i]["data"] = self.precompile(pattern["filepath"])
-        
+                #print(self.precompile(pattern["filepath"]))
     def precompile(self, filepath):
         """ precompiles our regex to speed up pattern matching"""
         regex = open(filepath,"r").read().strip()
