@@ -1,0 +1,60 @@
+[
+	
+	{
+		"title":"full street address",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/addresses/full_street_address.txt",
+		"notes":"This should remove anything that looks like a full street address (numbers and words)"
+	},
+	{
+		"title":"street number, street name, extension",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/addresses/num_streetname_extension.txt",
+		"notes":"This should remove anything that looks like, eg. 15 First Street, Suite 5"
+	},
+	{
+		"title":"number streetname",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/addresses/num_streetname.txt",
+		"notes":"This should remove anything that looks like a street address (numbers and words)"
+	},
+	{
+		"title":"city state zip",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/addresses/city_state_zip.txt",
+		"notes":"This should remove anything that looks like a partial street address (city, state, zip"
+	},
+	{
+		"title":"city state",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/addresses/city_state.txt",
+		"notes":"This should remove anything that has a city name, followed by a full or abbreviated state name"
+	},
+	{
+		"title":"weird street names",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/addresses/weird_street_names.txt",
+		"notes":"This should remove anything that has a number, followed by 2 capitalized words"
+	},
+	{
+		"title":"in city",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/addresses/in_city.txt",
+		"notes":"This should remove anything that matches pattern in [city]"
+	},
+	{
+    	"title":"No catchall",
+		"type":"regex",
+		"exclude":false,
+		"filepath":"filters/regex/catchall.txt",
+		"notes":"This should match anything, preventing the catchall"
+	}
+
+]
