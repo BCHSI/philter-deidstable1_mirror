@@ -152,8 +152,12 @@ class CoordinateMap:
 
 	def does_overlap(self, filename, start, stop):
 		""" Check if this coordinate overlaps with any existing range"""
+
+		ranges = [list(range(key,self.map[filename][key]+1)) for key in self.map[filename]]
+		all_coords = [item for sublist in ranges for item in sublist]
+		#removing all_coords implementation until we write some tests
 		for i in range(start, stop+1):
-			if i in self.all_coords:
+			if i in all_coords:
 				return True
 		return False
 
