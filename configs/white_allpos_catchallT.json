@@ -9,11 +9,11 @@
 		"notes":"This is the results of full whitelist - blacklist"
 	},
 	{	
-    	"title":"No catchall",
+    	"title":"Catchall",
 		"type":"regex",
 		"exclude":true,
 		"filepath":"filters/regex/catchall.txt",
-		"notes":"This should match anything, preventing the catchall"
+		"notes":"This should keep the catchall on (default behavior)"
 	}
 
 ***REMOVED***
