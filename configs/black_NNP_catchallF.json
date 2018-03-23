@@ -5,7 +5,7 @@
 		"type":"set",
 		"exclude":true,
 		"filepath":"filters/blacklists/names_blacklist_allnames.json",
-		"pos":***REMOVED******REMOVED***,
+		"pos":***REMOVED***"NNP"***REMOVED***,
 		"notes":"Names blacklist"
 	},	
 	{	
