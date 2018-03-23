@@ -29,11 +29,25 @@
 		"notes":"This should remove anything that looks like a partial street address (city, state, zip"
 	},
 	{
+		"title":"ambiguous city state zip",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/addresses/ambiguous_city_state_zip_transformed.txt",
+		"notes":"This should remove anything that matches a city, state zip pattern with an ambiguous state name"
+	},
+	{
 		"title":"city state",
 		"type":"regex",
 		"exclude":true,
 		"filepath":"filters/regex/addresses/city_state_transformed.txt",
 		"notes":"This should remove anything that has a city name, followed by a full or abbreviated state name"
+	},
+	{
+		"title":"city zip",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/addresses/city_zip_transformed.txt",
+		"notes":"This should remove anything that has a city name, followed by a zip code"
 	},
 	{
 		"title":"weird street names",

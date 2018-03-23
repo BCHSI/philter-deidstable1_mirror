@@ -1,0 +1,19 @@
+[
+
+	{
+		"title":"Blacklist",
+		"type":"set",
+		"exclude":true,
+		"filepath":"filters/blacklists/names_blacklist_allnames.json",
+		"pos":["NNP"],
+		"notes":"Names blacklist"
+	},
+	{	
+    	"title":"Catchall",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/catchall.txt",
+		"notes":"This should keep the catchall on (default behavior)"
+	}
+
+]

@@ -1,0 +1,19 @@
+[
+	
+	{
+		"title":"Combined Whitelist",
+		"type":"set",
+		"exclude":false,
+		"filepath":"filters/whitelists/white_combined.json",
+		"pos":[],
+		"notes":"This is the results of full whitelist - blacklist"
+	},
+	{	
+    	"title":"No catchall",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/catchall.txt",
+		"notes":"This should match anything, preventing the catchall"
+	}
+
+]

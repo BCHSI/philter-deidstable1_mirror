@@ -1,1 +1,1 @@
-\bin\s+([a-zA-Z]+\s+[a-zA-Z]+|[a-zA-Z]+)\b
+\b(in|IN|at|near|from|travel\s{1,4}to|visit\s{1,4}to)\s{1,4}([A-Z][a-zA-Z]+\s{1,4}[A-Z][a-zA-Z]+\s{1,4}[A-Z][a-zA-Z]+|[A-Z][a-zA-Z]+\s{1,4}[A-Z][a-zA-Z]+|[A-Z][a-zA-Z]+)\b
