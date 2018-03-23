@@ -1,1 +1,1 @@
-\b(***REMOVED***a-zA-Z***REMOVED***+\s+***REMOVED***a-zA-Z***REMOVED***+|***REMOVED***a-zA-Z***REMOVED***+)\,\s+(?i)("""+state_name+r""")(\:\s+|\,\s+|\.\s+|\s+)***REMOVED***0-9***REMOVED***+\b
+\b(***REMOVED***a-zA-Z***REMOVED***+\s{1,4}***REMOVED***a-zA-Z***REMOVED***+|***REMOVED***a-zA-Z***REMOVED***+)(\:\s{1,4}|\,\s{1,4}|\.\s{1,4}|\s{1,4})("""+state_name+r""")(\:\s{1,4}|\,\s{1,4}|\.\s{1,4}|\s{1,4})***REMOVED***0-9***REMOVED***{5}(\-***REMOVED***0-9***REMOVED***{4})?\b

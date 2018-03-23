@@ -106,6 +106,7 @@ class Philter:
                     map_set = pickle.load(pickle_file, encoding = 'latin1')
         elif filepath.endswith(".json"):
             map_set = json.loads(open(filepath, "r").read())
+
         else:
             raise Exception("Invalid filteype",filepath)
         return map_set
@@ -260,6 +261,7 @@ class Philter:
                     #print("FOUND: ",word, "COORD: ",  text***REMOVED***start:stop***REMOVED***)
                 else:
                     #print("not in set: ",word, "COORD: ",  text***REMOVED***start:stop***REMOVED***)
+                    #print(word_clean)
                     pass
                     
             #advance our start coordinate
@@ -616,7 +618,7 @@ class Philter:
         in_path="data/i2b2_results/",
         summary_output="data/phi/summary.json",
         phi_matcher=re.compile("\*+"),
-        pre_process=r":|\-|\/|_|~", #characters we're going to strip from our notes to analyze against anno
+        pre_process=r":|\,|\-|\/|_|~", #characters we're going to strip from our notes to analyze against anno
         only_digits=False,
         fn_output="data/phi/fn.json",
         fp_output="data/phi/fp.json"):
