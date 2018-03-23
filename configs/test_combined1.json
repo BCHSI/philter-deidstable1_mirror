@@ -1,0 +1,50 @@
+[
+
+	{
+		"title":"Mr., Ms., etc.",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/salutations/pre_salutations.txt",
+		"notes":"This should remove anything that matches Mr. [name], Ms. [name], etc."
+	},
+	{
+		"title":"M.D., N.P., etc.",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/salutations/post_salutations.txt",
+		"notes":"This should remove anything that matches [name] M.D., etc."
+	},
+	{
+		"title":"Combined Whitelist",
+		"type":"set",
+		"exclude":false,
+		"filepath":"filters/whitelists/white_combined.json",
+		"pos":[],
+		"notes":"This is the results of full whitelist - blacklist"
+	},
+	{
+		"title":"Blacklist",
+		"type":"set",
+		"exclude":true,
+		"filepath":"filters/blacklists/names_blacklist_allnames.json",
+		"pos":[],
+		"notes":"Names blacklist"
+	},
+	{
+		"title":"Test NER",
+		"type":"stanford_ner",
+		"exclude":true,
+		"pos":["PERSON"],
+		"notes":"This should test that ner is working"
+	},
+	{	
+    	"title":"No catchall",
+		"type":"regex",
+		"exclude":false,
+		"filepath":"filters/regex/catchall.txt",
+		"notes":"This should match anything, preventing the catchall"
+	}
+
+
+
+]
