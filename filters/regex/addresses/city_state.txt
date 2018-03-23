@@ -1,1 +1,1 @@
-\b([a-zA-Z]+\s+[a-zA-Z]+|[a-zA-Z]+)\,\s+(?i)("""+state_name+r""")\b
+\b([A-Z][a-zA-Z]+\s{1,4}[A-Z][a-zA-Z]+|[A-Z][a-zA-Z]+)(\,\s{1,4})("""+state_name+r""")\b
