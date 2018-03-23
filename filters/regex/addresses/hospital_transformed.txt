@@ -1,0 +1,1 @@
+\b(***REMOVED***a-zA-Z***REMOVED***+\s{1,4}***REMOVED***a-zA-Z***REMOVED***+|***REMOVED***a-zA-Z***REMOVED***+)\s{1,4}((H|h)ospital|HOSPITAL)\b
