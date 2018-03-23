@@ -16,17 +16,20 @@ def main():
                     help="Path to the directory or the file that contains the PHI note, the default is ./data/i2b2_notes/",
                     type=str)
     ap.add_argument("-a", "--anno", default="./data/i2b2_anno/",
-                    help="Path to the directory or the file that contains the PHI note, the default is ./data/i2b2_notes/",
+                    help="Path to the directory or the file that contains the PHI annotation, the default is ./data/i2b2_anno/",
                     type=str)
     ap.add_argument("-o", "--output", default="./data/i2b2_results/",
                     help="Path to the directory to save the PHI-reduced notes in, the default is ./data/i2b2_results/",
                     type=str)
     ap.add_argument("-f", "--filters", default="./configs/inprogress.json",
-                    help="Path to our config file",
+                    help="Path to our config file, the default is ./configs/inprogress.json",
                     type=str)
     ap.add_argument("-d", "--debug", default=True,
                     help="When debug is true, will run our eval script and emit helpful messages",
                     type=bool)
+    ap.add_argument("--stanfordner", default="/usr/local/stanford-ner/",
+                    help="Path to Stanford NER, the default is /usr/local/stanford-ner/",
+                    type=str)
 
     args = ap.parse_args()
 
@@ -40,8 +43,8 @@ def main():
         "anno_folder":args.anno,
         "filters":args.filters,
         "stanford_ner_tagger": { 
-            "classifier":"/usr/local/stanford-ner/classifiers/english.all.3class.distsim.crf.ser.gz",
-            "jar":"/usr/local/stanford-ner/stanford-ner.jar",
+            "classifier":args.stanfordner+"classifiers/english.all.3class.distsim.crf.ser.gz",
+            "jar":args.stanfordner+"stanford-ner.jar",
             "download":True,
         }
     }    
