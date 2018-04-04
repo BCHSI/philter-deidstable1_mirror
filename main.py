@@ -65,13 +65,14 @@ def main():
                        replacement="*")
 
     #evaluate the effectiveness
-    filterer.eval(
-        in_path=args.output,
-        anno_path=args.anno,
-        anno_suffix=".txt",
-        summary_output="data/phi/summary.json",
-        fn_output="data/phi/fn.json",
-        fp_output="data/phi/fp.json")
+    if args.debug and args.outputformat == "asterisk":
+        filterer.eval(
+            in_path=args.output,
+            anno_path=args.anno,
+            anno_suffix=".txt",
+            summary_output="data/phi/summary.json",
+            fn_output="data/phi/fn.json",
+            fp_output="data/phi/fp.json")
 
         
 if __name__ == "__main__":
