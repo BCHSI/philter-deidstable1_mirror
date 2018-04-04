@@ -34,6 +34,12 @@ class Philter:
             if not os.path.exists(config***REMOVED***"anno_folder"***REMOVED***):
                 raise Exception("Filepath does not exist", config***REMOVED***"foutpath"***REMOVED***)
             self.anno_folder = config***REMOVED***"anno_folder"***REMOVED***
+
+        if "outformat" in config:
+            self.outformat = config***REMOVED***"outformat"***REMOVED***
+        else:
+            raise Exception("Output format undefined")
+        
         if "filters" in config:
             if not os.path.exists(config***REMOVED***"filters"***REMOVED***):
                 raise Exception("Filepath does not exist", config***REMOVED***"filters"***REMOVED***)
@@ -406,14 +412,7 @@ class Philter:
 
             **Anything not caught in these passes will be assumed to be PHI
         """
-
-        if not os.path.exists(in_path):
-            raise Exception("Filepath does not exist", in_path)
-        if not os.path.exists(out_path):
-            raise Exception("Filepath does not exist", out_path)
-
-        punctuation_matcher = re.compile(r"***REMOVED***^a-zA-Z0-9****REMOVED***")
-
+        
         if self.debug:
             print("running transform")
 
@@ -422,6 +421,7 @@ class Philter:
         
         if not os.path.exists(out_path):
             raise Exception("File output path does not exist", out_path)
+
 
         #keeps a record of all phi coordinates and text
         data = {}
@@ -464,37 +464,85 @@ class Philter:
                             #print("include overlapped", start, stop, txt***REMOVED***start:stop***REMOVED***)
 
             #now we transform the text
-            with open(out_path+f, "w") as f:
+            fbase, fext = os.path.splitext(f)
+            outpathfbase = out_path + fbase
+            if self.outformat == "asterisk":
+                with open(outpathfbase+".txt", "w") as f:
+                    contents = self.transform_text_asterisk(txt, filename, 
+                                                            include_map,
+                                                            exclude_map)
+                    f.write(contents)
+                    
+            elif self.outformat == "i2b2":
+                with open(outpathfbase+".xml", "w") as f:
+                    contents = self.transform_text_i2b2(data***REMOVED***filename***REMOVED***)
+                    f.write(contents)
+            else:
+                raise Exception("Outformat not supported: ",
+                                self.outformat)
                 
-                #keep any matches in our include map
+
+        if self.debug: #output our data for eval
+            json.dump(data, open("./data/coordinates.json", "w"), indent=4)
+
+    # infilename needed for addressing maps
+    def transform_text_asterisk(self, txt, infilename,
+                                include_map, exclude_map):
+        last_marker = 0
+        current_chunk = ***REMOVED******REMOVED***
+        punctuation_matcher = re.compile(r"***REMOVED***^a-zA-Z0-9****REMOVED***")
+
+        #read the text by character, any non-punc non-overlaps will be replaced
+        contents = ***REMOVED******REMOVED***
+        for i in range(0, len(txt)):
+
+            if i < last_marker:
+                continue
+            
+            if include_map.does_exist(infilename, i):
+                #add our preserved text
+                start,stop = include_map.get_coords(infilename, i)
+                contents.append(txt***REMOVED***start:stop***REMOVED***)
+                last_marker = stop
+            elif punctuation_matcher.match(txt***REMOVED***i***REMOVED***):
+                contents.append(txt***REMOVED***i***REMOVED***)
+            else:
+                contents.append("*")
+
+        return "".join(contents)
+
+    def transform_text_i2b2(self, tagdata):
+        """creates a string in i2b2-XML format"""
+        root = "Philter"
+        contents = ***REMOVED******REMOVED***
+        
+        contents.append("<?xml version=\"1.0\" ?>\n")
+        contents.append("<"+root+">\n")
+        contents.append("<TEXT><!***REMOVED***CDATA***REMOVED***")
+        contents.append(tagdata***REMOVED***'text'***REMOVED***)
+        contents.append("***REMOVED******REMOVED***></TEXT>\n")
+        contents.append("<TAGS>\n")
+        for i in range(len(tagdata***REMOVED***'phi'***REMOVED***)):
+            tagcategory = "OTHER" # TODO: replace with actual category
+            phitype = "OTHER" # TODO: replace with actual phi type
+            contents.append("<")
+            contents.append(phitype)
+            contents.append(" id=\"P")
+            contents.append(str(i))
+            contents.append("\" start=\"")
+            contents.append(str(tagdata***REMOVED***'phi'***REMOVED******REMOVED***i***REMOVED******REMOVED***'start'***REMOVED***))
+            contents.append("\" end=\"")
+            contents.append(str(tagdata***REMOVED***'phi'***REMOVED******REMOVED***i***REMOVED******REMOVED***'stop'***REMOVED***))
+            contents.append("\" text=\"")
+            contents.append(tagdata***REMOVED***'phi'***REMOVED******REMOVED***i***REMOVED******REMOVED***'word'***REMOVED***)
+            contents.append("\" TYPE=\"")
+            contents.append(phitype)
+            contents.append("\" comment=\"\" />\n")
+        contents.append("</TAGS>\n")
+        contents.append("</"+root+">\n")
+        
+        return "".join(contents)
                 
-                data***REMOVED***filename***REMOVED******REMOVED***"text"***REMOVED*** = txt
-                
-                last_marker = 0
-                current_chunk = ***REMOVED******REMOVED***
-
-                #read the text by character, any non-punc non-overlaps will be replaced
-                contents = ***REMOVED******REMOVED***
-                for i in range(0, len(txt)):
-
-                    if i < last_marker:
-                        continue
-
-                    if include_map.does_exist(filename, i):
-                        #add our preserved text
-                        start,stop = include_map.get_coords(filename, i)
-                        contents.append(txt***REMOVED***start:stop***REMOVED***)
-                        last_marker = stop
-                    elif punctuation_matcher.match(txt***REMOVED***i***REMOVED***):
-                        contents.append(txt***REMOVED***i***REMOVED***)
-                    else:
-                        contents.append("*")
-
-                f.write("".join(contents))
-
-        #output our data for eval
-        json.dump(data, open("./data/coordinates.json", "w"), indent=4)
-
     def detect_encoding(self, fp):
         if not os.path.exists(fp):
             raise Exception("Filepath does not exist", fp)
