@@ -705,7 +705,9 @@ class Philter:
         for root, dirs, files in os.walk(in_path):
 
             for f in files:
-
+                if not f.endswith(".txt"):
+                    continue
+                
                 #local values per file
                 false_positives = [] #non-phi we think are phi
                 true_positives  = [] #phi we correctly identify
