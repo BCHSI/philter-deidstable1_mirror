@@ -30,6 +30,9 @@ def main():
     ap.add_argument("--stanfordner", default="/usr/local/stanford-ner/",
                     help="Path to Stanford NER, the default is /usr/local/stanford-ner/",
                     type=str)
+    ap.add_argument("--outputformat", default="asterisk",
+                    help="Define format of annotation, allowed values are \"asterisk\", \"i2b2\". Default is \"asterisk\"",
+                    type=str)
 
     args = ap.parse_args()
 
@@ -40,6 +43,7 @@ def main():
         "debug":args.debug,
         "finpath":args.input,
         "foutpath":args.output,
+        "outformat":args.outputformat,
         "anno_folder":args.anno,
         "filters":args.filters,
         "stanford_ner_tagger": { 
