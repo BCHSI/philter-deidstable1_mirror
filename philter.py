@@ -45,6 +45,11 @@ class Philter:
                 raise Exception("Filepath does not exist", config["filters"])
             self.patterns = json.loads(open(config["filters"], "r").read())
 
+        if "xml" in config:
+            if not os.path.exists(config["xml"]):
+                raise Exception("Filepath does not exist", config["xml"])
+            self.xml = json.loads(open(config["xml"], "r").read())
+
         if "stanford_ner_tagger" in config:
             if not os.path.exists(config["stanford_ner_tagger"]["classifier"]) and config["stanford_ner_tagger"]["download"] == False:
                 raise Exception("Filepath does not exist", config["stanford_ner_tagger"]["classifier"])
@@ -220,7 +225,7 @@ class Philter:
         self.patterns[pattern_index]["coordinate_map"] = coord_map
 
 
-    def map_set(self, filename="", text="", pattern_index=-1,  pre_process= r"[^a-zA-Z0-9]+"):
+    def map_set(self, filename="", text="", pattern_index=-1,  pre_process= r"[^a-zA-Z0-9]"):
         """ Creates a coordinate mapping of words any words in this set"""
         if not os.path.exists(filename):
             raise Exception("Filepath does not exist", filename)
@@ -240,12 +245,19 @@ class Philter:
         if len(pos_set) > 0:
             check_pos = True
 
-        #preserve spaces while getting POS. 
+        # Use pre-process to split sentence by spaces AND symbols, while preserving spaces in the split list
         lst = re.split("(\s+)", text)
         cleaned = []
         for item in lst:
             if len(item) > 0:
-                cleaned.append(item)
+                if item.isspace() == False:
+                    split_item = re.split("(\s+)", re.sub(pre_process, " ", item))
+                    for elem in split_item:
+                        if len(elem) > 0:
+                            cleaned.append(elem)
+                else:
+                    cleaned.append(item)
+
         pos_list = nltk.pos_tag(cleaned)
 
         start_coordinate = 0
@@ -254,7 +266,8 @@ class Philter:
             pos  = tup[1]
             start = start_coordinate
             stop = start_coordinate + len(word)
-            word_clean = re.sub(pre_process, "", word.lower().strip())
+            # This converts spaces into empty strings, so we know to skip forward to the next real word
+            word_clean = re.sub(r"[^a-zA-Z0-9]+", "", word.lower().strip())
             if len(word_clean) == 0:
                 #got a blank space or something without any characters or digits, move forward
                 start_coordinate += len(word)
@@ -275,7 +288,7 @@ class Philter:
 
         self.patterns[pattern_index]["coordinate_map"] = coord_map
 
-    def map_pos(self, filename="", text="", pattern_index=-1, pre_process= r"[^a-zA-Z0-9]+"):
+    def map_pos(self, filename="", text="", pattern_index=-1, pre_process= r"[^a-zA-Z0-9]"):
         """ Creates a coordinate mapping of words which match this part of speech (POS)"""
         if not os.path.exists(filename):
             raise Exception("Filepath does not exist", filename)
@@ -289,12 +302,19 @@ class Philter:
         coord_map = self.patterns[pattern_index]["coordinate_map"]
         pos_set = set(self.patterns[pattern_index]["pos"])
         
-        #preserve spaces while getting POS. 
+        # Use pre-process to split sentence by spaces AND symbols, while preserving spaces in the split list
         lst = re.split("(\s+)", text)
         cleaned = []
         for item in lst:
             if len(item) > 0:
-                cleaned.append(item)
+                if item.isspace() == False:
+                    split_item = re.split("(\s+)", re.sub(pre_process, " ", item))
+                    for elem in split_item:
+                        if len(elem) > 0:
+                            cleaned.append(elem)
+                else:
+                    cleaned.append(item)
+
         pos_list = nltk.pos_tag(cleaned)
 
         start_coordinate = 0
@@ -303,7 +323,7 @@ class Philter:
             pos  = tup[1]
             start = start_coordinate
             stop = start_coordinate + len(word)
-            word_clean = re.sub(pre_process, "", word.lower().strip())
+            word_clean = re.sub(r"[^a-zA-Z0-9]+", "", word.lower().strip())
             if len(word_clean) == 0:
                 #got a blank space or something without any characters or digits, move forward
                 start_coordinate += len(word)
@@ -580,7 +600,7 @@ class Philter:
     def seq_eval(self,
             note_lst, 
             anno_lst, 
-            punctuation_matcher=re.compile(r"[^a-zA-Z0-9*]"), 
+            punctuation_matcher=re.compile(r"[^a-zA-Z0-9*\.]"), 
             text_matcher=re.compile(r"[a-zA-Z0-9]"), 
             phi_matcher=re.compile(r"\*+")):
         """ 
@@ -594,6 +614,7 @@ class Philter:
         
 
         for note_word, anno_word in list(zip(note_lst, anno_lst)):
+            #print(note_word, anno_word)
             
             #print(note_word, anno_word)
 
@@ -603,6 +624,7 @@ class Philter:
                 if note_word == anno_word:
                     #print(note_word, anno_word, "TP")
                     yield "TP", note_word
+                    #print(note_word, anno_word)
                 else:
                     if text_matcher.search(anno_word):
 
@@ -644,6 +666,7 @@ class Philter:
                             yield "FN", w
                         for w in fp_words:
                             yield "FP", w
+
                     else:
                         #simpler case, anno word is completely blocked out except punctuation
                         yield "FN", note_word
@@ -669,7 +692,8 @@ class Philter:
         pre_process=r":|\,|\-|\/|_|~", #characters we're going to strip from our notes to analyze against anno
         only_digits=False,
         fn_output="data/phi/fn.json",
-        fp_output="data/phi/fp.json"):
+        fp_output="data/phi/fp.json",
+        punctuation_matcher=re.compile(r"[^a-zA-Z0-9*\.]")):
         """ calculates the effectiveness of the philtering / extraction
 
             only_digits = <boolean> will constrain evaluation on philtering of only digit types
@@ -698,16 +722,14 @@ class Philter:
             "summary_by_file":{}
         }
 
-        punctuation_matcher = re.compile(r"[^a-zA-Z0-9]")
+        #punctuation_matcher = re.compile(r"[^a-zA-Z0-9]")
         all_fn = []
         all_fp = []
 
         for root, dirs, files in os.walk(in_path):
 
             for f in files:
-                if not f.endswith(".txt"):
-                    continue
-                
+                #print(f)
                 #local values per file
                 false_positives = [] #non-phi we think are phi
                 true_positives  = [] #phi we correctly identify
@@ -724,19 +746,40 @@ class Philter:
                     raise Exception("FILE DOESNT EXIST", philtered_filename)
                 
                 if not os.path.exists(anno_filename):
-                    print("FILE DOESNT EXIST", anno_filename)
+                    #print("FILE DOESNT EXIST", anno_filename)
                     continue
 
                 encoding1 = self.detect_encoding(philtered_filename)
                 philtered = open(philtered_filename,"r", encoding=encoding1['encoding']).read()
                 philtered_words = re.split("\s+", philtered)
-                
+                philtered_words_cleaned = []
+                for item in philtered_words:
+                    split_item = re.split("(\s+)", re.sub(punctuation_matcher, " ", item))
+                    # if filename == './data/i2b2_notes/137-03.txt':
+                    #     print(split_item)
+                    for elem in split_item:
+                        # If we have found a symbol, we want to mark that as such
+                        if len(elem) > 0 and elem.isspace() == False:
+                            philtered_words_cleaned.append(elem)            
+                # if f == '110-01.txt':
+                #     print(philtered_words_cleaned)
+                #     print(len(philtered_words_cleaned))
                 encoding2 = self.detect_encoding(anno_filename)
                 anno = open(anno_filename,"r", encoding=encoding2['encoding']).read()
                 anno_words = re.split("\s+", anno)
-
-
-                for c,w in self.seq_eval(philtered_words, anno_words):
+                anno_words_cleaned = []
+                for item in anno_words:
+                    split_item = re.split("(\s+)", re.sub(punctuation_matcher, " ", item))
+                    # if filename == './data/i2b2_notes/137-03.txt':
+                    #     print(split_item)
+                    for elem in split_item:
+                        # If we have found a symbol, we want to mark that as such
+                        if len(elem) > 0 and elem.isspace() == False:
+                            anno_words_cleaned.append(elem) 
+                # if f == '110-01.txt':
+                #     print(anno_words_cleaned)
+                #     print(len(anno_words_cleaned))
+                for c,w in self.seq_eval(philtered_words_cleaned, anno_words_cleaned):
                     
                     if c == "FP":
                         false_positives.append(w)
@@ -748,7 +791,7 @@ class Philter:
                         true_positives.append(w)
                     elif c == "TN":
                         true_negatives.append(w)
-
+                #print("FP length:",len(false_positives))
                 #print("TOTAL WORDS: ",total_words,"true_positives: ", true_positives,"false_positives: ", len(false_positives),"false_negatives: ", len(false_negatives),"true_negatives: ", len(true_negatives))
                 #print(false_negatives, false_positives)
                 #update summary
