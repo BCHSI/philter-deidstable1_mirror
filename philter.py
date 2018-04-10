@@ -178,7 +178,7 @@ class Philter:
                 del self.patterns[i]["data"]
 
                 
-    def map_regex(self, filename="", text="", pattern_index=-1):
+    def map_regex(self, filename="", text="", pattern_index=-1, pre_process= r"[^a-zA-Z0-9\.]"):
         """ Creates a coordinate map from the pattern on this data
             generating a coordinate map of hits given (dry run doesn't transform)
         """
@@ -201,19 +201,41 @@ class Philter:
         
             self.patterns[pattern_index]["coordinate_map"] = coord_map
         
+        #### MATCHALL ####
         elif regex == re.compile('.'):
+         
+            # Split note the same way we would split for set or POS matching
+
+            matchall_list = re.split("(\s+)", text)
+            matchall_list_cleaned = []
+            for item in matchall_list:
+                if len(item) > 0:
+                    if item.isspace() == False:
+                        split_item = re.split("(\s+)", re.sub(pre_process, " ", item))
+                        for elem in split_item:
+                            if len(elem) > 0:
+                                matchall_list_cleaned.append(elem)
+                    else:
+                        matchall_list_cleaned.append(item)
+
             start_coordinate = 0
-            pre_process= re.compile(r"[^a-zA-Z0-9]")
-            for w in re.split("(\s+)", text):
-                stop = start_coordinate+len(w)
-                if len(pre_process.sub("", w.lower().strip())) == 0:
+            for word in matchall_list_cleaned:
+                start = start_coordinate
+                stop = start_coordinate + len(word)
+                word_clean = re.sub(r"[^a-zA-Z0-9]+", "", word.lower().strip())
+                if len(word_clean) == 0:
                     #got a blank space or something without any characters or digits, move forward
-                    start_coordinate = stop
+                    start_coordinate += len(word)
                     continue
-                if regex.match(w):
-                    coord_map.add_extend(filename,start_coordinate, stop)
-                start_coordinate = stop
+
+                if regex.match(word_clean):
+                    coord_map.add_extend(filename, start, stop)
+                    
+                #advance our start coordinate
+                start_coordinate += len(word)
+
             self.patterns[pattern_index]["coordinate_map"] = coord_map
+
 
 
     def match_all(self, filename="", text="", pattern_index=-1):
@@ -828,6 +850,8 @@ class Philter:
                     if c == "FP":
                         false_positives.append(w)
                         false_positives_coords.append([w,r])
+                        if w == "exlap":
+                            print(f)
                     elif c == "FN":
                         false_negatives.append(w)
                         false_negatives_coords.append([w,r])
