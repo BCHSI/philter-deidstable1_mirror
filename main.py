@@ -33,6 +33,9 @@ def main():
     ap.add_argument("-e", "--errorcheck", default=True,
                     help="When errorcheck is true, will output helpful information about FNs and FPs",
                     type=bool)
+    ap.add_argument("-p", "--parallel", default=False,
+                    help="When parall is true, will suppress any print statements not wanted in terminal output",
+                    type=bool)   
     ap.add_argument("--stanfordner", default="/usr/local/stanford-ner/",
                     help="Path to Stanford NER, the default is /usr/local/stanford-ner/",
                     type=str)
@@ -44,12 +47,13 @@ def main():
 
     args = ap.parse_args()
 
-    if args.debug:
+    if args.debug and args.parallel == False:
         print("RUNNING ", args.filters)
 
     philter_config = {
         "debug":args.debug,
-        "errorcheck":args.errorcheck,        
+        "errorcheck":args.errorcheck,
+        "parallel":args.parallel,             
         "finpath":args.input,
         "foutpath":args.output,
         "outformat":args.outputformat,
@@ -77,6 +81,7 @@ def main():
     #evaluate the effectiveness
     if (args.debug or args.errorcheck) and args.outputformat == "asterisk":
         filterer.eval(
+            philter_config,
             in_path=args.output,
             anno_path=args.anno,
             anno_suffix=".txt",
