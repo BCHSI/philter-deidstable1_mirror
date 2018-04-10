@@ -22,6 +22,8 @@ class Philter:
     def __init__(self, config):
         if "debug" in config:
             self.debug = config["debug"]
+        if "errorcheck" in config:
+            self.errorcheck = config["errorcheck"]
         if "finpath" in config:
             if not os.path.exists(config["finpath"]):
                 raise Exception("Filepath does not exist", config["finpath"])
@@ -600,7 +602,7 @@ class Philter:
     def seq_eval(self,
             note_lst, 
             anno_lst, 
-            punctuation_matcher=re.compile(r"[^a-zA-Z0-9*\.]"), 
+            punctuation_matcher=re.compile(r"[^a-zA-Z0-9*]"), 
             text_matcher=re.compile(r"[a-zA-Z0-9]"), 
             phi_matcher=re.compile(r"\*+")):
         """ 
@@ -613,18 +615,26 @@ class Philter:
         """
         
 
+        start_coordinate = 0
         for note_word, anno_word in list(zip(note_lst, anno_lst)):
             #print(note_word, anno_word)
-            
-            #print(note_word, anno_word)
+            ##### Get coordinates ######
+            start = start_coordinate
+            stop = start_coordinate + len(note_word)
+            note_word_stripped = re.sub(r"[^a-zA-Z0-9\*]+", "", note_word.strip())
+            anno_word_stripped = re.sub(r"[^a-zA-Z0-9\*]+", "", anno_word.strip())
+            if len(note_word_stripped) == 0:
+                #got a blank space or something without any characters or digits, move forward
+                start_coordinate += len(note_word)
+                continue
 
+            
             if phi_matcher.search(anno_word):
                 #this contains phi
                 
                 if note_word == anno_word:
-                    #print(note_word, anno_word, "TP")
-                    yield "TP", note_word
-                    #print(note_word, anno_word)
+                    yield "TP", note_word, start_coordinate
+
                 else:
                     if text_matcher.search(anno_word):
 
@@ -663,24 +673,26 @@ class Philter:
 
                         #now drain the difference
                         for w in fn_words:
-                            yield "FN", w
+                            yield "FN", w, start_coordinate
                         for w in fp_words:
-                            yield "FP", w
+                            yield "FP", w, start_coordinate
 
                     else:
                         #simpler case, anno word is completely blocked out except punctuation
-                        yield "FN", note_word
+                        yield "FN", note_word, start_coordinate
 
             else:
-                #this isn't phi
-                if note_word == anno_word:
-                    #print(note_word, anno_word, "TN")
-                    yield "TN", note_word
-                else:
-                    #print(note_word, anno_word, "FP")
-                    yield "FP", anno_word
+                if note_word.isspace() == False:
+                    #this isn't phi
+                    if note_word == anno_word:
+                        #print(note_word, anno_word, "TN")
+                        yield "TN", note_word, start_coordinate
+                    else:
+                        #print(note_word, anno_word, "FP")
+                        yield "FP", anno_word, start_coordinate
 
-            
+            #advance our start coordinate
+            start_coordinate += len(note_word) 
 
 
     def eval(self,
@@ -689,11 +701,14 @@ class Philter:
         in_path="data/i2b2_results/",
         summary_output="data/phi/summary.json",
         phi_matcher=re.compile("\*+"),
-        pre_process=r":|\,|\-|\/|_|~", #characters we're going to strip from our notes to analyze against anno
         only_digits=False,
         fn_output="data/phi/fn.json",
         fp_output="data/phi/fp.json",
-        punctuation_matcher=re.compile(r"[^a-zA-Z0-9*\.]")):
+        fn_tag_output = "data/phi/fn_tags.csv",
+        fp_tag_output = "data/phi/fp_tags.csv",
+        pre_process=r":|\,|\-|\/|_|~", #characters we're going to strip from our notes to analyze against anno        
+        pre_process2= r"[^a-zA-Z0-9]",
+        punctuation_matcher=re.compile(r"[^a-zA-Z0-9\*\.]")):
         """ calculates the effectiveness of the philtering / extraction
 
             only_digits = <boolean> will constrain evaluation on philtering of only digit types
@@ -721,8 +736,10 @@ class Philter:
             "true_negatives": [], #non-phi words we correctly identify
             "summary_by_file":{}
         }
+        summary_coords = {
+            "summary_by_file":{}
+        }
 
-        #punctuation_matcher = re.compile(r"[^a-zA-Z0-9]")
         all_fn = []
         all_fp = []
 
@@ -732,9 +749,13 @@ class Philter:
                 #print(f)
                 #local values per file
                 false_positives = [] #non-phi we think are phi
+                false_positives_coords = []
                 true_positives  = [] #phi we correctly identify
+                true_positives_coords = []
                 false_negatives = [] #phi we think are non-phi
+                false_negatives_coords = []
                 true_negatives  = [] #non-phi we correctly identify
+                true_negatives_coords = []
 
                 philtered_filename = root+f
                 anno_filename = anno_path+''.join(f.split(".")[0])+anno_suffix
@@ -751,49 +772,57 @@ class Philter:
 
                 encoding1 = self.detect_encoding(philtered_filename)
                 philtered = open(philtered_filename,"r", encoding=encoding1['encoding']).read()
-                philtered_words = re.split("\s+", philtered)
+                
+                          
+                philtered_words = re.split("(\s+)", philtered)
+                # if f == '110-01.txt':
+                #     print(philtered_words)
+                #     print(len("".join(philtered_words)))
                 philtered_words_cleaned = []
                 for item in philtered_words:
-                    split_item = re.split("(\s+)", re.sub(punctuation_matcher, " ", item))
-                    # if filename == './data/i2b2_notes/137-03.txt':
-                    #     print(split_item)
-                    for elem in split_item:
-                        # If we have found a symbol, we want to mark that as such
-                        if len(elem) > 0 and elem.isspace() == False:
-                            philtered_words_cleaned.append(elem)            
-                # if f == '110-01.txt':
-                #     print(philtered_words_cleaned)
-                #     print(len(philtered_words_cleaned))
+                    if len(item) > 0:
+                        if item.isspace() == False:
+                            split_item = re.split("(\s+)", re.sub(punctuation_matcher, " ", item))
+                            for elem in split_item:
+                                if len(elem) > 0:
+                                    philtered_words_cleaned.append(elem)
+                        else:
+                            philtered_words_cleaned.append(item)
+                
                 encoding2 = self.detect_encoding(anno_filename)
-                anno = open(anno_filename,"r", encoding=encoding2['encoding']).read()
-                anno_words = re.split("\s+", anno)
+                anno = open(anno_filename,"r", encoding=encoding2['encoding']).read()              
+                
+                anno_words = re.split("(\s+)", anno)
+                # if f == '110-01.txt':
+                #     print(anno_words)
+                #     print(len("".join(anno_words)))
                 anno_words_cleaned = []
                 for item in anno_words:
-                    split_item = re.split("(\s+)", re.sub(punctuation_matcher, " ", item))
-                    # if filename == './data/i2b2_notes/137-03.txt':
-                    #     print(split_item)
-                    for elem in split_item:
-                        # If we have found a symbol, we want to mark that as such
-                        if len(elem) > 0 and elem.isspace() == False:
-                            anno_words_cleaned.append(elem) 
-                # if f == '110-01.txt':
-                #     print(anno_words_cleaned)
-                #     print(len(anno_words_cleaned))
-                for c,w in self.seq_eval(philtered_words_cleaned, anno_words_cleaned):
-                    
+                    if len(item) > 0:
+                        if item.isspace() == False:
+                            split_item = re.split("(\s+)", re.sub(punctuation_matcher, " ", item))
+                            for elem in split_item:
+                                if len(elem) > 0:
+                                    anno_words_cleaned.append(elem)
+                        else:
+                            anno_words_cleaned.append(item)
+
+                for c,w,r in self.seq_eval(philtered_words_cleaned, anno_words_cleaned):
+
+
                     if c == "FP":
                         false_positives.append(w)
+                        false_positives_coords.append([w,r])
                     elif c == "FN":
-                        #todo get context: phi = self.phi_context(philtered_filename, w, i, philtered_words)
-                        #phi = {"file":philtered_filename, "word":w}
                         false_negatives.append(w)
+                        false_negatives_coords.append([w,r])
                     elif c == "TP":
                         true_positives.append(w)
+                        true_positives_coords.append([w,r])
                     elif c == "TN":
                         true_negatives.append(w)
-                #print("FP length:",len(false_positives))
-                #print("TOTAL WORDS: ",total_words,"true_positives: ", true_positives,"false_positives: ", len(false_positives),"false_negatives: ", len(false_negatives),"true_negatives: ", len(true_negatives))
-                #print(false_negatives, false_positives)
+                        true_negatives_coords.append([w,r])
+
                 #update summary
                 summary["summary_by_file"][philtered_filename] = {"false_positives":false_positives,"false_negatives":false_negatives, "num_false_negatives":len(false_negatives)}
                 summary["total_true_positives"] = summary["total_true_positives"] + len(true_positives)
@@ -803,7 +832,10 @@ class Philter:
                 all_fp = all_fp + false_positives
                 all_fn = all_fn + false_negatives
 
-                #print(len(summary["true_positives"]), len(summary["false_positives"]), len(summary["true_negatives"]), len(summary["false_negatives"]) )
+
+                # Create coordinate summaries
+                summary_coords["summary_by_file"][philtered_filename] = {"false_positives":false_positives_coords,"false_negatives":false_negatives_coords}
+
 
         print("true_negatives", summary["total_true_negatives"],"true_positives", summary["total_true_positives"], "false_negatives", summary["total_false_negatives"], "false_positives", summary["total_false_positives"])
 
@@ -827,6 +859,170 @@ class Philter:
         json.dump(summary, open(summary_output, "w"), indent=4)
         json.dump(all_fn, open(fn_output, "w"), indent=4)
         json.dump(all_fp, open(fp_output, "w"), indent=4)
+
+        ###################### Get phi tags #####################
+        if self.errorcheck:
+            print("error checking")
+
+            # Get xml summary
+            phi = self.xml
+            # Create dictionary to hold fn tags
+            fn_tags = {}
+            fp_tags = {}
+
+            # Loop through all filenames in summary
+            for fn in summary_coords['summary_by_file']:
+
+                current_summary =  summary_coords['summary_by_file'][fn]
+                # Get corresponding info in phi_notes
+                note_name = fn.split('/')[3]
+                anno_name = note_name.split('.')[0] + ".xml"
+
+
+                text = phi[anno_name]['text']
+                lst = re.split("(\s+)", text)
+                cleaned = []
+                cleaned_coords = []
+                for item in lst:
+                    if len(item) > 0:
+                        if item.isspace() == False:
+                            split_item = re.split("(\s+)", re.sub(r"[^a-zA-Z0-9\.]", " ", item))
+                            for elem in split_item:
+                                if len(elem) > 0:
+                                    cleaned.append(elem)
+                        else:
+                            cleaned.append(item)
+             
+                # Get coords for POS tags
+                start_coordinate = 0
+                pos_coords = []
+                for item in cleaned:
+                    pos_coords.append(start_coordinate)
+                    start_coordinate += len(item)
+
+                pos_list = nltk.pos_tag(cleaned)
+
+                cleaned_with_pos = {}
+                for i in range(0,len(pos_list)):
+                    cleaned_with_pos[str(pos_coords[i])] = [pos_list[i][0], pos_list[i][1]]
+
+
+                ########## Get FN tags ##########
+                phi_list = phi[anno_name]['phi']
+                fn_tag_summary = {}
+            
+                if current_summary['false_negatives'] != [] and current_summary['false_negatives'] != [""]:              
+                    current_fns = current_summary['false_negatives']
+     
+                    for word in current_fns:
+                        false_negative = word[0]
+                        start_coordinate_fn = word[1]                    
+                      
+                        for phi_item in phi_list:
+                            phi_text = phi_item['text']
+                            phi_type = phi_item['TYPE']
+                            phi_start = phi_item['start']
+                            phi_end = phi_item['end']
+                            phi_id = phi_item['id']
+
+                            # Find PHI match: fn in text, coord in range
+                            if (false_negative in phi_text) and (start_coordinate_fn in range(int(phi_start), int(phi_end))):
+                                # Get PHI tag
+                                phi_tag = phi_type
+                                # Get POS tag
+                                pos_tag = cleaned_with_pos[str(start_coordinate_fn)][1]
+                                # Get fn id, to distinguish multiple entries
+                                fn_id = phi_id
+                                ###### Create output dicitonary with id/word/pos/phi
+                                fn_tag_summary[fn_id] = [false_negative, phi_tag, pos_tag]
+                             
+                if fn_tag_summary != {}:
+                    fn_tags[fn] = fn_tag_summary
+
+
+                ####### Get FP tags #########
+                fp_tag_summary = {}
+
+                if current_summary['false_positives'] != [] and current_summary['false_positives'] != [""]:              
+
+                    current_fps = current_summary['false_positives']
+
+                    counter = 0
+                    for word in current_fps:
+                        counter += 1
+                        false_positive = word[0]
+                        start_coordinate_fp = word[1]
+                     
+                        pos_entry = cleaned_with_pos[str(start_coordinate_fp)]
+
+                        pos_tag = pos_entry[1]
+                        fp_id = "R" + str(counter)
+                        fp_tag_summary[fp_id] = [false_positive, pos_tag]
+               
+                if fp_tag_summary != {}:
+                    fp_tags[fn] = fp_tag_summary
+            
+            ######## Summarize FN results #########
+            # Condensed tags will contain id, word, PHI tag, POS tag, occurrences
+            fn_tags_condensed = {}
+            # Stores lists that represent distinct groups of words, PHI and POS tags
+            fn_tags_condensed_list = []
+            # Keep track of how many distinct combinations we've added to the list
+            counter = 1
+            for fn in fn_tags:
+                file_dict = fn_tags[fn] 
+                for subfile in file_dict:
+                    current_list = file_dict[subfile]
+                    word = current_list[0]
+                    phi_tag = current_list[1]
+                    pos_tag = current_list[2]
+                    if current_list not in fn_tags_condensed_list:
+                        fn_tags_condensed_list.append(current_list)
+                        key_name = "uniq" + str(counter)
+                        fn_tags_condensed[key_name] = [word, phi_tag, pos_tag, 1]
+                        counter += 1
+                    else:
+                        uniq_id_index = fn_tags_condensed_list.index(current_list)
+                        uniq_id = "uniq" + str(uniq_id_index)
+                        fn_tags_condensed[uniq_id][3] += 1
+
+
+            ####### Summariz FP results #######
+            # Condensed tags will contain id, word, POS tag, occurrences
+            fp_tags_condensed = {}
+            # Stores lists that represent distinct groups of wordss and POS tags
+            fp_tags_condensed_list = []
+            # Keep track of how many distinct combinations we've added to the list
+            counter = 1
+            for fp in fp_tags:
+                file_dict = fp_tags[fp] 
+                for subfile in file_dict:
+                    current_list = file_dict[subfile]
+                    word = current_list[0]
+                    pos_tag = current_list[1]
+                    if current_list not in fp_tags_condensed_list:
+                        fp_tags_condensed_list.append(current_list)
+                        key_name = "uniq" + str(counter)
+                        fp_tags_condensed[key_name] = [word, pos_tag, 1]
+                        counter += 1
+                    else:
+                        uniq_id_index = fp_tags_condensed_list.index(current_list)
+                        uniq_id = "uniq" + str(uniq_id_index)
+                        fp_tags_condensed[uniq_id][2] += 1
+            
+
+            # Write FN and FP results to outfolder
+            with open(fn_tag_output, "w") as fn_file:
+                fn_file.write("key" + "," + "note_word" + "," + "phi_tag" + "," + "pos_tag" + "," + "occurrences"+"\n")
+                for key in fn_tags_condensed:
+                    current_list = fn_tags_condensed[key]
+                    fn_file.write(key + "," + current_list[0] + "," + current_list[1] + "," + current_list[2] + "," + str(current_list[3])+"\n")
+            
+            with open(fp_tag_output, "w") as fp_file:
+                fp_file.write("key" + "," + "note_word" + "," + "pos_tag" + "," + "occurrences"+"\n")
+                for key in fp_tags_condensed:
+                    current_list = fp_tags_condensed[key]
+                    fp_file.write(key + "," + current_list[0] + "," + current_list[1] + "," + str(current_list[2])+"\n")
 
 
     def getphi(self, 
@@ -1036,29 +1232,3 @@ class Philter:
 
         items.sort(key=lambda x: x["count"], reverse=True)
         json.dump(items, open(sorted_path, "w"), indent=4)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

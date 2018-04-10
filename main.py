@@ -30,12 +30,17 @@ def main():
     ap.add_argument("-d", "--debug", default=True,
                     help="When debug is true, will run our eval script and emit helpful messages",
                     type=bool)
+    ap.add_argument("-e", "--errorcheck", default=True,
+                    help="When errorcheck is true, will output helpful information about FNs and FPs",
+                    type=bool)
     ap.add_argument("--stanfordner", default="/usr/local/stanford-ner/",
                     help="Path to Stanford NER, the default is /usr/local/stanford-ner/",
                     type=str)
     ap.add_argument("--outputformat", default="asterisk",
                     help="Define format of annotation, allowed values are \"asterisk\", \"i2b2\". Default is \"asterisk\"",
                     type=str)
+
+
 
     args = ap.parse_args()
 
@@ -44,6 +49,7 @@ def main():
 
     philter_config = {
         "debug":args.debug,
+        "errorcheck":args.errorcheck,        
         "finpath":args.input,
         "foutpath":args.output,
         "outformat":args.outputformat,
@@ -69,15 +75,21 @@ def main():
                        replacement="*")
 
     #evaluate the effectiveness
-    if args.debug and args.outputformat == "asterisk":
+    if (args.debug or args.errorcheck) and args.outputformat == "asterisk":
         filterer.eval(
             in_path=args.output,
             anno_path=args.anno,
             anno_suffix=".txt",
             summary_output="data/phi/summary.json",
             fn_output="data/phi/fn.json",
-            fp_output="data/phi/fp.json")
+            fp_output="data/phi/fp.json",
+            phi_matcher=re.compile("\*+"),
+            pre_process=r":|\,|\-|\/|_|~", #characters we're going to strip from our notes to analyze against anno
+            only_digits=False,
+            pre_process2= r"[^a-zA-Z0-9]",
+            punctuation_matcher=re.compile(r"[^a-zA-Z0-9\*\.]"))
 
+# error analysis
         
 if __name__ == "__main__":
     main()
