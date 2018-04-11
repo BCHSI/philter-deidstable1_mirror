@@ -850,9 +850,9 @@ class Philter:
                     if c == "FP":
                         false_positives.append(w)
                         false_positives_coords.append(***REMOVED***w,r***REMOVED***)
-                        if w == "she" or w == "no" or w == "he" or w == "increased" or w == "wave" or w == "In" or w == "AS":
-                            print(w)
-                            print(f)
+                        # if w == "she" or w == "no" or w == "he" or w == "increased" or w == "wave" or w == "In" or w == "AS":
+                        #     print(w)
+                        #     print(f)
 
                     elif c == "FN":
                         false_negatives.append(w)
