@@ -978,6 +978,8 @@ class Philter:
                 names_fn_counter = 0
                 if current_summary***REMOVED***'false_negatives'***REMOVED*** != ***REMOVED******REMOVED*** and current_summary***REMOVED***'false_negatives'***REMOVED*** != ***REMOVED***""***REMOVED***:              
                     current_fns = current_summary***REMOVED***'false_negatives'***REMOVED***
+                    # if fn == './data/i2b2_results/137-03.txt':
+                    #     print(current_fns)
 
                     for word in current_fns:
                         false_negative = word***REMOVED***0***REMOVED***
@@ -989,7 +991,7 @@ class Philter:
                             phi_start = phi_item***REMOVED***'start'***REMOVED***
                             phi_end = phi_item***REMOVED***'end'***REMOVED***
                             phi_id = phi_item***REMOVED***'id'***REMOVED***
-
+    
                             # Check for FNs
                             if (start_coordinate_fn in range(int(phi_start), int(phi_end))) and (phi_type == "DOCTOR" or phi_type == "PATIENT"):
                                 rp_summaries***REMOVED***"names_fns"***REMOVED*** += 1
@@ -1001,10 +1003,24 @@ class Philter:
                                 phi_tag = phi_type
                                 # Get POS tag
                                 pos_tag = cleaned_with_pos***REMOVED***str(start_coordinate_fn)***REMOVED******REMOVED***1***REMOVED***
+                                
+                                # Get 20 characters surrounding FN on either side
+                                fn_context = ''
+                                context_start = start_coordinate_fn - 10
+                                context_end = start_coordinate_fn + len(false_negative) + 10
+                                if context_start >= 0 and context_end <= len(text)-1:
+                                    fn_context = text***REMOVED***context_start:context_end***REMOVED***
+                                elif context_start >= 0 and context_end > len(text)-1:
+                                    fn_context = text***REMOVED***context_start:***REMOVED***
+                                else:
+                                    fn_context = text***REMOVED***:context_end***REMOVED***
+                                # if fn == './data/i2b2_results/137-03.txt':
+                                #     print(fn_context)                  
+                                
                                 # Get fn id, to distinguish multiple entries
                                 fn_id = phi_id
                                 ###### Create output dicitonary with id/word/pos/phi
-                                fn_tag_summary***REMOVED***fn_id***REMOVED*** = ***REMOVED***false_negative, phi_tag, pos_tag***REMOVED***
+                                fn_tag_summary***REMOVED***fn_id***REMOVED*** = ***REMOVED***false_negative, phi_tag, pos_tag, fn_context***REMOVED***
                  
                 if fn_tag_summary != {}:
                     fn_tags***REMOVED***fn***REMOVED*** = fn_tag_summary
@@ -1050,15 +1066,16 @@ class Philter:
                     word = current_list***REMOVED***0***REMOVED***
                     phi_tag = current_list***REMOVED***1***REMOVED***
                     pos_tag = current_list***REMOVED***2***REMOVED***
+                    fn_context = current_list***REMOVED***3***REMOVED***.replace("\n"," ")
                     if current_list not in fn_tags_condensed_list:
                         fn_tags_condensed_list.append(current_list)
                         key_name = "uniq" + str(counter)
-                        fn_tags_condensed***REMOVED***key_name***REMOVED*** = ***REMOVED***word, phi_tag, pos_tag, 1***REMOVED***
+                        fn_tags_condensed***REMOVED***key_name***REMOVED*** = ***REMOVED***word, phi_tag, pos_tag, fn_context, 1***REMOVED***
                         counter += 1
                     else:
                         uniq_id_index = fn_tags_condensed_list.index(current_list)
                         uniq_id = "uniq" + str(uniq_id_index)
-                        fn_tags_condensed***REMOVED***uniq_id***REMOVED******REMOVED***3***REMOVED*** += 1
+                        fn_tags_condensed***REMOVED***uniq_id***REMOVED******REMOVED***4***REMOVED*** += 1
 
 
             ####### Summariz FP results #######
@@ -1086,13 +1103,13 @@ class Philter:
 
             # Write FN and FP results to outfolder
             with open(fn_tag_output, "w") as fn_file:
-                fn_file.write("key" + "," + "note_word" + "," + "phi_tag" + "," + "pos_tag" + "," + "occurrences"+"\n")
+                fn_file.write("key" + "|" + "note_word" + "|" + "phi_tag" + "|" + "pos_tag" + "|" + "context" + "|" + "occurrences"+"\n")
                 for key in fn_tags_condensed:
                     current_list = fn_tags_condensed***REMOVED***key***REMOVED***
-                    fn_file.write(key + "," + current_list***REMOVED***0***REMOVED*** + "," + current_list***REMOVED***1***REMOVED*** + "," + current_list***REMOVED***2***REMOVED*** + "," + str(current_list***REMOVED***3***REMOVED***)+"\n")
+                    fn_file.write(key + "|" + current_list***REMOVED***0***REMOVED*** + "|" + current_list***REMOVED***1***REMOVED*** + "|" + current_list***REMOVED***2***REMOVED*** + "|" + current_list***REMOVED***3***REMOVED*** + "|" + str(current_list***REMOVED***4***REMOVED***)+"\n")
             
             with open(fp_tag_output, "w") as fp_file:
-                fp_file.write("key" + "," + "note_word" + "," + "pos_tag" + "," + "occurrences"+"\n")
+                fp_file.write("key" + "," + "note_word" + "," + "pos_tag" + "," + "context" + "occurrences"+"\n")
                 for key in fp_tags_condensed:
                     current_list = fp_tags_condensed***REMOVED***key***REMOVED***
                     fp_file.write(key + "," + current_list***REMOVED***0***REMOVED*** + "," + current_list***REMOVED***1***REMOVED*** + "," + str(current_list***REMOVED***2***REMOVED***)+"\n")
