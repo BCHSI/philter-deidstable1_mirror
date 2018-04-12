@@ -1068,10 +1068,10 @@ class Philter:
                                 # Get POS tag
                                 pos_tag = cleaned_with_pos[str(start_coordinate_fn)][1]
                                 
-                                # Get 20 characters surrounding FN on either side
+                                # Get 15 characters surrounding FN on either side
                                 fn_context = ''
-                                context_start = start_coordinate_fn - 10
-                                context_end = start_coordinate_fn + len(false_negative) + 10
+                                context_start = start_coordinate_fn - 15
+                                context_end = start_coordinate_fn + len(false_negative) + 15
                                 if context_start >= 0 and context_end <= len(text)-1:
                                     fn_context = text[context_start:context_end]
                                 elif context_start >= 0 and context_end > len(text)-1:
@@ -1107,8 +1107,21 @@ class Philter:
                         pos_entry = cleaned_with_pos[str(start_coordinate_fp)]
 
                         pos_tag = pos_entry[1]
+
+                        # Get 15 characters surrounding FP on either side
+                        fp_context = ''
+                        context_start = start_coordinate_fp - 15
+                        context_end = start_coordinate_fp + len(false_positive) + 15
+                        if context_start >= 0 and context_end <= len(text)-1:
+                            fp_context = text[context_start:context_end]
+                        elif context_start >= 0 and context_end > len(text)-1:
+                            fp_context = text[context_start:]
+                        else:
+                            fp_context = text[:context_end]
+
+
                         fp_id = "R" + str(counter)
-                        fp_tag_summary[fp_id] = [false_positive, pos_tag]
+                        fp_tag_summary[fp_id] = [false_positive, pos_tag, fp_context]
 
                 if fp_tag_summary != {}:
                     fp_tags[fn] = fp_tag_summary
@@ -1174,15 +1187,16 @@ class Philter:
                     current_list = file_dict[subfile]
                     word = current_list[0]
                     pos_tag = current_list[1]
+                    fp_context = current_list[2].replace("\n"," ")
                     if current_list not in fp_tags_condensed_list:
                         fp_tags_condensed_list.append(current_list)
                         key_name = "uniq" + str(counter)
-                        fp_tags_condensed[key_name] = [word, pos_tag, 1]
+                        fp_tags_condensed[key_name] = [word, pos_tag, fp_context, 1]
                         counter += 1
                     else:
                         uniq_id_index = fp_tags_condensed_list.index(current_list)
                         uniq_id = "uniq" + str(uniq_id_index)
-                        fp_tags_condensed[uniq_id][2] += 1          
+                        fp_tags_condensed[uniq_id][3] += 1          
 
             # Write FN and FP results to outfolder
             with open(fn_tag_output, "w") as fn_file:
@@ -1192,10 +1206,10 @@ class Philter:
                     fn_file.write(key + "|" + current_list[0] + "|" + current_list[1] + "|" + current_list[2] + "|" + current_list[3] + "|" + str(current_list[4])+"\n")
             
             with open(fp_tag_output, "w") as fp_file:
-                fp_file.write("key" + "," + "note_word" + "," + "pos_tag" + "," + "context" + "occurrences"+"\n")
+                fp_file.write("key" + "|" + "note_word" + "|" + "pos_tag" + "|" + "context" + "|" + "occurrences"+"\n")
                 for key in fp_tags_condensed:
                     current_list = fp_tags_condensed[key]
-                    fp_file.write(key + "," + current_list[0] + "," + current_list[1] + "," + str(current_list[2])+"\n")
+                    fp_file.write(key + "|" + current_list[0] + "|" + current_list[1]  + "|" +  current_list[2] + "|" + str(current_list[3])+"\n")
             
             if self.parallel:
                 # Get info on whitelist, blacklist, POS
