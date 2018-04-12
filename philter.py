@@ -978,6 +978,8 @@ class Philter:
                 names_fn_counter = 0
                 if current_summary['false_negatives'] != [] and current_summary['false_negatives'] != [""]:              
                     current_fns = current_summary['false_negatives']
+                    # if fn == './data/i2b2_results/137-03.txt':
+                    #     print(current_fns)
 
                     for word in current_fns:
                         false_negative = word[0]
@@ -989,7 +991,7 @@ class Philter:
                             phi_start = phi_item['start']
                             phi_end = phi_item['end']
                             phi_id = phi_item['id']
-
+    
                             # Check for FNs
                             if (start_coordinate_fn in range(int(phi_start), int(phi_end))) and (phi_type == "DOCTOR" or phi_type == "PATIENT"):
                                 rp_summaries["names_fns"] += 1
@@ -1001,10 +1003,24 @@ class Philter:
                                 phi_tag = phi_type
                                 # Get POS tag
                                 pos_tag = cleaned_with_pos[str(start_coordinate_fn)][1]
+                                
+                                # Get 20 characters surrounding FN on either side
+                                fn_context = ''
+                                context_start = start_coordinate_fn - 10
+                                context_end = start_coordinate_fn + len(false_negative) + 10
+                                if context_start >= 0 and context_end <= len(text)-1:
+                                    fn_context = text[context_start:context_end]
+                                elif context_start >= 0 and context_end > len(text)-1:
+                                    fn_context = text[context_start:]
+                                else:
+                                    fn_context = text[:context_end]
+                                # if fn == './data/i2b2_results/137-03.txt':
+                                #     print(fn_context)                  
+                                
                                 # Get fn id, to distinguish multiple entries
                                 fn_id = phi_id
                                 ###### Create output dicitonary with id/word/pos/phi
-                                fn_tag_summary[fn_id] = [false_negative, phi_tag, pos_tag]
+                                fn_tag_summary[fn_id] = [false_negative, phi_tag, pos_tag, fn_context]
                  
                 if fn_tag_summary != {}:
                     fn_tags[fn] = fn_tag_summary
@@ -1050,15 +1066,16 @@ class Philter:
                     word = current_list[0]
                     phi_tag = current_list[1]
                     pos_tag = current_list[2]
+                    fn_context = current_list[3].replace("\n"," ")
                     if current_list not in fn_tags_condensed_list:
                         fn_tags_condensed_list.append(current_list)
                         key_name = "uniq" + str(counter)
-                        fn_tags_condensed[key_name] = [word, phi_tag, pos_tag, 1]
+                        fn_tags_condensed[key_name] = [word, phi_tag, pos_tag, fn_context, 1]
                         counter += 1
                     else:
                         uniq_id_index = fn_tags_condensed_list.index(current_list)
                         uniq_id = "uniq" + str(uniq_id_index)
-                        fn_tags_condensed[uniq_id][3] += 1
+                        fn_tags_condensed[uniq_id][4] += 1
 
 
             ####### Summariz FP results #######
@@ -1086,13 +1103,13 @@ class Philter:
 
             # Write FN and FP results to outfolder
             with open(fn_tag_output, "w") as fn_file:
-                fn_file.write("key" + "," + "note_word" + "," + "phi_tag" + "," + "pos_tag" + "," + "occurrences"+"\n")
+                fn_file.write("key" + "|" + "note_word" + "|" + "phi_tag" + "|" + "pos_tag" + "|" + "context" + "|" + "occurrences"+"\n")
                 for key in fn_tags_condensed:
                     current_list = fn_tags_condensed[key]
-                    fn_file.write(key + "," + current_list[0] + "," + current_list[1] + "," + current_list[2] + "," + str(current_list[3])+"\n")
+                    fn_file.write(key + "|" + current_list[0] + "|" + current_list[1] + "|" + current_list[2] + "|" + current_list[3] + "|" + str(current_list[4])+"\n")
             
             with open(fp_tag_output, "w") as fp_file:
-                fp_file.write("key" + "," + "note_word" + "," + "pos_tag" + "," + "occurrences"+"\n")
+                fp_file.write("key" + "," + "note_word" + "," + "pos_tag" + "," + "context" + "occurrences"+"\n")
                 for key in fp_tags_condensed:
                     current_list = fp_tags_condensed[key]
                     fp_file.write(key + "," + current_list[0] + "," + current_list[1] + "," + str(current_list[2])+"\n")
