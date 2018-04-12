@@ -1,1 +1,1 @@
-(?<=Dr\.\s|DR\.\s|Mr\.\s|MR\.\s|Ms\.\s|MS\.\s|Sir\s|SIR\s|Mrs\s|MRS\s)(***REMOVED***A-Z***REMOVED***\'?***REMOVED***A-Z***REMOVED***?***REMOVED***\-aA-zZ***REMOVED***+(\s***REMOVED***A-Z***REMOVED***\'?***REMOVED***A-Z***REMOVED***?***REMOVED***\-aA-zZ***REMOVED***+)*)
+(?<=Dr\.\s|DR\.\s|Mr\.\s|MR\.\s|Ms\.\s|MS\.\s|Sir\s|SIR\s|Mrs\s|MRS\s)((***REMOVED***A-Z***REMOVED***(\s|\.\s))?***REMOVED***A-Z***REMOVED***\'?***REMOVED***A-Z***REMOVED***?***REMOVED***\-aA-zZ***REMOVED***+(\s***REMOVED***A-Z***REMOVED***\'?***REMOVED***A-Z***REMOVED***?***REMOVED***\-aA-zZ***REMOVED***+)*)

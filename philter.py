@@ -1068,10 +1068,10 @@ class Philter:
                                 # Get POS tag
                                 pos_tag = cleaned_with_pos***REMOVED***str(start_coordinate_fn)***REMOVED******REMOVED***1***REMOVED***
                                 
-                                # Get 20 characters surrounding FN on either side
+                                # Get 15 characters surrounding FN on either side
                                 fn_context = ''
-                                context_start = start_coordinate_fn - 10
-                                context_end = start_coordinate_fn + len(false_negative) + 10
+                                context_start = start_coordinate_fn - 15
+                                context_end = start_coordinate_fn + len(false_negative) + 15
                                 if context_start >= 0 and context_end <= len(text)-1:
                                     fn_context = text***REMOVED***context_start:context_end***REMOVED***
                                 elif context_start >= 0 and context_end > len(text)-1:
@@ -1107,8 +1107,21 @@ class Philter:
                         pos_entry = cleaned_with_pos***REMOVED***str(start_coordinate_fp)***REMOVED***
 
                         pos_tag = pos_entry***REMOVED***1***REMOVED***
+
+                        # Get 15 characters surrounding FP on either side
+                        fp_context = ''
+                        context_start = start_coordinate_fp - 15
+                        context_end = start_coordinate_fp + len(false_positive) + 15
+                        if context_start >= 0 and context_end <= len(text)-1:
+                            fp_context = text***REMOVED***context_start:context_end***REMOVED***
+                        elif context_start >= 0 and context_end > len(text)-1:
+                            fp_context = text***REMOVED***context_start:***REMOVED***
+                        else:
+                            fp_context = text***REMOVED***:context_end***REMOVED***
+
+
                         fp_id = "R" + str(counter)
-                        fp_tag_summary***REMOVED***fp_id***REMOVED*** = ***REMOVED***false_positive, pos_tag***REMOVED***
+                        fp_tag_summary***REMOVED***fp_id***REMOVED*** = ***REMOVED***false_positive, pos_tag, fp_context***REMOVED***
 
                 if fp_tag_summary != {}:
                     fp_tags***REMOVED***fn***REMOVED*** = fp_tag_summary
@@ -1174,15 +1187,16 @@ class Philter:
                     current_list = file_dict***REMOVED***subfile***REMOVED***
                     word = current_list***REMOVED***0***REMOVED***
                     pos_tag = current_list***REMOVED***1***REMOVED***
+                    fp_context = current_list***REMOVED***2***REMOVED***.replace("\n"," ")
                     if current_list not in fp_tags_condensed_list:
                         fp_tags_condensed_list.append(current_list)
                         key_name = "uniq" + str(counter)
-                        fp_tags_condensed***REMOVED***key_name***REMOVED*** = ***REMOVED***word, pos_tag, 1***REMOVED***
+                        fp_tags_condensed***REMOVED***key_name***REMOVED*** = ***REMOVED***word, pos_tag, fp_context, 1***REMOVED***
                         counter += 1
                     else:
                         uniq_id_index = fp_tags_condensed_list.index(current_list)
                         uniq_id = "uniq" + str(uniq_id_index)
-                        fp_tags_condensed***REMOVED***uniq_id***REMOVED******REMOVED***2***REMOVED*** += 1          
+                        fp_tags_condensed***REMOVED***uniq_id***REMOVED******REMOVED***3***REMOVED*** += 1          
 
             # Write FN and FP results to outfolder
             with open(fn_tag_output, "w") as fn_file:
@@ -1192,10 +1206,10 @@ class Philter:
                     fn_file.write(key + "|" + current_list***REMOVED***0***REMOVED*** + "|" + current_list***REMOVED***1***REMOVED*** + "|" + current_list***REMOVED***2***REMOVED*** + "|" + current_list***REMOVED***3***REMOVED*** + "|" + str(current_list***REMOVED***4***REMOVED***)+"\n")
             
             with open(fp_tag_output, "w") as fp_file:
-                fp_file.write("key" + "," + "note_word" + "," + "pos_tag" + "," + "context" + "occurrences"+"\n")
+                fp_file.write("key" + "|" + "note_word" + "|" + "pos_tag" + "|" + "context" + "|" + "occurrences"+"\n")
                 for key in fp_tags_condensed:
                     current_list = fp_tags_condensed***REMOVED***key***REMOVED***
-                    fp_file.write(key + "," + current_list***REMOVED***0***REMOVED*** + "," + current_list***REMOVED***1***REMOVED*** + "," + str(current_list***REMOVED***2***REMOVED***)+"\n")
+                    fp_file.write(key + "|" + current_list***REMOVED***0***REMOVED*** + "|" + current_list***REMOVED***1***REMOVED***  + "|" +  current_list***REMOVED***2***REMOVED*** + "|" + str(current_list***REMOVED***3***REMOVED***)+"\n")
             
             if self.parallel:
                 # Get info on whitelist, blacklist, POS

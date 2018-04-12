@@ -1,1 +1,1 @@
-(?<=Madam\s|MADAM\s)(***REMOVED***A-Z***REMOVED***\'?***REMOVED***A-Z***REMOVED***?***REMOVED***\-aA-zZ***REMOVED***+(\s***REMOVED***A-Z***REMOVED***\'?***REMOVED***A-Z***REMOVED***?***REMOVED***\-aA-zZ***REMOVED***+)*)
+(?<=Madam\s|MADAM\s)((***REMOVED***A-Z***REMOVED***(\s|\.\s))?***REMOVED***A-Z***REMOVED***\'?***REMOVED***A-Z***REMOVED***?***REMOVED***\-aA-zZ***REMOVED***+(\s***REMOVED***A-Z***REMOVED***\'?***REMOVED***A-Z***REMOVED***?***REMOVED***\-aA-zZ***REMOVED***+)*)
