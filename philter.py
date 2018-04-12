@@ -25,7 +25,9 @@ class Philter:
         if "errorcheck" in config:
             self.errorcheck = config***REMOVED***"errorcheck"***REMOVED***
         if "parallel" in config:
-            self.parallel = config***REMOVED***"parallel"***REMOVED***           
+            self.parallel = config***REMOVED***"parallel"***REMOVED***
+        if "freq_table" in config:
+            self.freq_table = config***REMOVED***"freq_table"***REMOVED***                       
         if "finpath" in config:
             if not os.path.exists(config***REMOVED***"finpath"***REMOVED***):
                 raise Exception("Filepath does not exist", config***REMOVED***"finpath"***REMOVED***)
@@ -916,8 +918,13 @@ class Philter:
             # Keep track of recall and precision for each category
             rp_summaries = {
                 "names_fns": 0,
-                "names_tps": 0,
+                "names_tps": 0
             }
+            # Create dictionaries for unigram and bigram PHI/non-PHI frequencies
+            # Diciontary values look like: ***REMOVED***phi_count, non-phi_count***REMOVED***
+            unigram_dict = {}
+            bigram_dict = {}
+
             # Loop through all filenames in summary
             for fn in summary_coords***REMOVED***'summary_by_file'***REMOVED***:
 
@@ -949,8 +956,7 @@ class Philter:
                     start_coordinate += len(item)
 
                 pos_list = nltk.pos_tag(cleaned)
-                # if fn == './data/i2b2_notes/160-03.txt':
-                #     print(pos_list)
+
 
                 cleaned_with_pos = {}
                 for i in range(0,len(pos_list)):
@@ -958,6 +964,64 @@ class Philter:
 
                 ########## Get FN tags ##########
                 phi_list = phi***REMOVED***anno_name***REMOVED******REMOVED***'phi'***REMOVED***
+                # print(cleaned)
+                # print(pos_coords)
+                
+
+                ######### Create unigram and bigram frequency tables #######
+                if self.freq_table:
+
+                    # Create separate cleaned list/coord list without spaces
+                    cleaned_nospaces = ***REMOVED******REMOVED***
+                    coords_nospaces = ***REMOVED******REMOVED***
+                    for i in range(0,len(cleaned)):
+                        if cleaned***REMOVED***i***REMOVED***.isspace() == False:
+                            cleaned_nospaces.append(cleaned***REMOVED***i***REMOVED***)
+                            coords_nospaces.append(pos_coords***REMOVED***i***REMOVED***)
+
+                    # Loop through all single words and word pairs, and compare with PHI list
+                    for i in range(0,len(cleaned_nospaces)-1):
+                        #cleaned_nospaces***REMOVED***i***REMOVED***= word, coords_nospaces***REMOVED***i***REMOVED*** = start coordinate
+                        unigram_word = cleaned_nospaces***REMOVED***i***REMOVED***.replace('\n','').replace('\t','').replace(' ','').lower()
+                        bigram_word = " ".join(***REMOVED***cleaned_nospaces***REMOVED***i***REMOVED***.replace('\n','').replace('\t','').replace(' ','').lower(),cleaned_nospaces***REMOVED***i+1***REMOVED***.replace('\n','').replace('\t','').replace(' ','').lower()***REMOVED***)
+                        unigram_start = coords_nospaces***REMOVED***i***REMOVED***
+                        bigram_start1 = coords_nospaces***REMOVED***i***REMOVED***
+                        bigram_start2 = coords_nospaces***REMOVED***i+1***REMOVED***
+
+                        # Loop through PHI list and compare ranges
+                        for phi_item in phi_list:
+                            phi_start = phi_item***REMOVED***'start'***REMOVED***
+                            phi_end = phi_item***REMOVED***'end'***REMOVED***
+                            if unigram_start in range(int(phi_start), int(phi_end)):
+                                # This word is PHI and hasn't been added to the dictionary yet
+                                if unigram_word not in unigram_dict:
+                                    unigram_dict***REMOVED***unigram_word***REMOVED*** = ***REMOVED***1, 0***REMOVED***
+                               # This word is PHI and has already been added to the dictionary
+                                else:
+                                    unigram_dict***REMOVED***unigram_word***REMOVED******REMOVED***0***REMOVED*** += 1
+                            else:
+                                # This word is not PHI and hasn't been aded to the dictionary yet
+                                if unigram_word not in unigram_dict:
+                                    unigram_dict***REMOVED***unigram_word***REMOVED*** = ***REMOVED***0, 1***REMOVED***
+                               # This word is not PHI and has already been added to the dictionary
+                                else:
+                                    unigram_dict***REMOVED***unigram_word***REMOVED******REMOVED***1***REMOVED*** += 1                               
+                            if bigram_start1 in range(int(phi_start), int(phi_end)) and bigram_start2 in range(int(phi_start), int(phi_end)):
+                                # This word is PHI and hasn't been added to the dictionary yet
+                                if bigram_word not in bigram_dict:
+                                    bigram_dict***REMOVED***bigram_word***REMOVED*** = ***REMOVED***1, 0***REMOVED***
+                               # This word is PHI and has already been added to the dictionary
+                                else:
+                                    bigram_dict***REMOVED***bigram_word***REMOVED******REMOVED***0***REMOVED*** += 1                                
+                            else:
+                                # This word is not PHI and hasn't been aded to the dictionary yet
+                                if bigram_word not in bigram_dict:
+                                    bigram_dict***REMOVED***bigram_word***REMOVED*** = ***REMOVED***0, 1***REMOVED***
+                               # This word is not PHI and has already been added to the dictionary
+                                else:
+                                    bigram_dict***REMOVED***bigram_word***REMOVED******REMOVED***1***REMOVED*** += 1
+
+
 
                 # Get tokenized names PHI list and number of names PHI
                 names_cleaned = ***REMOVED******REMOVED***
@@ -991,7 +1055,7 @@ class Philter:
                             phi_start = phi_item***REMOVED***'start'***REMOVED***
                             phi_end = phi_item***REMOVED***'end'***REMOVED***
                             phi_id = phi_item***REMOVED***'id'***REMOVED***
-    
+                            
                             # Check for FNs
                             if (start_coordinate_fn in range(int(phi_start), int(phi_end))) and (phi_type == "DOCTOR" or phi_type == "PATIENT"):
                                 rp_summaries***REMOVED***"names_fns"***REMOVED*** += 1
@@ -1048,7 +1112,26 @@ class Philter:
 
                 if fp_tag_summary != {}:
                     fp_tags***REMOVED***fn***REMOVED*** = fp_tag_summary
+            
+            # Create frequency table outputs
+            if self.freq_table:
+                # Unigram table
+                with open('./data/phi/unigram_freq_table.csv','w') as f:
+                    f.write('unigram,phi_count,non-phi_count\n')
+                    for key in unigram_dict:
+                        word = key
+                        phi_count = unigram_dict***REMOVED***key***REMOVED******REMOVED***0***REMOVED***
+                        non_phi_count = unigram_dict***REMOVED***key***REMOVED******REMOVED***1***REMOVED***
+                        f.write(word + ',' + str(phi_count) + ',' + str(non_phi_count) + '\n')
+                with open('./data/phi/bigranm_freq_table.csv','w') as f:
+                    f.write('bigram,phi_count,non-phi_count\n')
+                    for key in bigram_dict:
+                        term = key
+                        phi_count = bigram_dict***REMOVED***key***REMOVED******REMOVED***0***REMOVED***
+                        non_phi_count = bigram_dict***REMOVED***key***REMOVED******REMOVED***1***REMOVED***
+                        f.write(term + ',' + str(phi_count) + ',' + str(non_phi_count) + '\n')
 
+            
             # Get names recall
             names_recall = (rp_summaries***REMOVED***'names_tps'***REMOVED***-rp_summaries***REMOVED***'names_fns'***REMOVED***)/rp_summaries***REMOVED***'names_tps'***REMOVED***
             
