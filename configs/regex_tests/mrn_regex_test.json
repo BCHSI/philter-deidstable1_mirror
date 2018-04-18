@@ -48,7 +48,21 @@
 		"exclude":true,
 		"filepath":"filters/regex/mrn_id/mixed006.txt",
 		"notes":"This should remove anything that matches CDDDC"
-	},	
+	},
+	{
+		"title":"mixed 7",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/mrn_id/mixed007.txt",
+		"notes":"This should remove anything that matches a weird string of numbers/letters connected by colons etc"
+	},
+	{
+		"title":"mixed 8",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/mrn_id/mixed008.txt",
+		"notes":"This should remove anything that matches a (longer) weird string of numbers/letters connected by colons etc"
+	},
 	{
 		"title":"CCCDDD",
 		"type":"regex",
@@ -92,6 +106,13 @@
 		"notes":"This should remove anything that matches any blocked MRN number with last digits"
 	},
 	{
+		"title":"model and serial numbers",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/mrn_id/model_and_serial.txt",
+		"notes":"This should remove anything that matches a model or serial number pattern"
+	},
+	{
 		"title":"ssn only",
 		"type":"regex",
 		"exclude":true,
@@ -104,28 +125,8 @@
 		"exclude":true,
 		"filepath":"filters/regex/mrn_id/ssn_phone_fax.txt",
 		"notes":"This should remove anything that matches XXX-XX-XXXX, XXX-XXX-XXXX, XXX-XXXXXXXX, etc."
-	},
-	{
-		"title":"blake phone regex",
-		"type":"regex",
-		"exclude":true,
-		"filepath":"filters/regex/mrn_id/phone001.txt",
-		"notes":"This should remove anything that matches a phone number"
-	},
-	{
-		"title":"second phone regex",
-		"type":"regex",
-		"exclude":true,
-		"filepath":"filters/regex/mrn_id/phone002.txt",
-		"notes":"This should remove anything that xxx.xxx.xxxx"
-	},
-	{
-		"title":"5 digit pager",
-		"type":"regex",
-		"exclude":true,
-		"filepath":"filters/regex/mrn_id/pager.txt",
-		"notes":"This should remove anything that matches a pager number"
-	},			
+			
+	},	
 	{
     	"title":"No catchall",
 		"type":"regex",

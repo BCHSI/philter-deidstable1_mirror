@@ -902,9 +902,9 @@ class Philter:
             json.dump(all_fp, open(fp_output, "w"), indent=4)
             
             print("true_negatives", summary["total_true_negatives"],"true_positives", summary["total_true_positives"], "false_negatives", summary["total_false_negatives"], "false_positives", summary["total_false_positives"])
-            print("Recall: {:.2%}".format(recall))
-            print("Precision: {:.2%}".format(precision))
-            print("Retention: {:.2%}".format(retention))
+            print("Global Recall: {:.2%}".format(recall))
+            print("Global Precision: {:.2%}".format(precision))
+            print("Global Retention: {:.2%}".format(retention))
 
         ###################### Get phi tags #####################
         if self.errorcheck and self.parallel == False:
@@ -918,7 +918,13 @@ class Philter:
             # Keep track of recall and precision for each category
             rp_summaries = {
                 "names_fns": 0,
-                "names_tps": 0
+                "names_tps": 0, 
+                "dates_fns":0,
+                "dates_tps":0,
+                "id_fns":0,
+                "id_tps":0,
+                "contact_fns":0,
+                "contact_tps":0
             }
             # Create dictionaries for unigram and bigram PHI/non-PHI frequencies
             # Diciontary values look like: [phi_count, non-phi_count]
@@ -1023,9 +1029,13 @@ class Philter:
 
 
 
-                # Get tokenized names PHI list and number of names PHI
+                # Get tokenized PHI list and number of PHI for each category
                 names_cleaned = []
+                dates_cleaned = []
+                ids_cleaned = []
+                contact_cleaned = []
                 for phi_dict in phi_list:
+                    # Names
                     if phi_dict['TYPE'] == 'DOCTOR' or phi_dict['TYPE'] == 'PATIENT':
                         lst = re.split("(\s+)", phi_dict['text'])
                         for item in lst:
@@ -1036,10 +1046,50 @@ class Philter:
                                         if len(elem) > 0:
                                             names_cleaned.append(elem)
                                 else:
-                                    names_cleaned.append(item)                     
+                                    names_cleaned.append(item)
+                    # Dates
+                    if phi_dict['TYPE'] == 'DATE':
+                        lst = re.split("(\s+)", phi_dict['text'])
+                        for item in lst:
+                            if len(item) > 0:
+                                if item.isspace() == False:
+                                    split_item = re.split("(\s+)", re.sub(r"[^a-zA-Z0-9]", " ", item))
+                                    for elem in split_item:
+                                        if len(elem) > 0:
+                                            dates_cleaned.append(elem)
+                                else:
+                                    dates_cleaned.append(item)
+                    # IDs
+                    if phi_dict['TYPE'] == 'MEDICALRECORD' or phi_dict['TYPE'] == 'IDNUM' or phi_dict['TYPE'] == 'DEVICE':
+                        lst = re.split("(\s+)", phi_dict['text'])
+                        for item in lst:
+                            if len(item) > 0:
+                                if item.isspace() == False:
+                                    split_item = re.split("(\s+)", re.sub(r"[^a-zA-Z0-9]", " ", item))
+                                    for elem in split_item:
+                                        if len(elem) > 0:
+                                            ids_cleaned.append(elem)
+                                else:
+                                    ids_cleaned.append(item) 
+
+                    # Contact info                    
+                    if phi_dict['TYPE'] == 'USERNAME' or phi_dict['TYPE'] == 'PHONE' or phi_dict['TYPE'] == 'EMAIL' or phi_dict['TYPE'] == 'FAX':
+                        lst = re.split("(\s+)", phi_dict['text'])
+                        for item in lst:
+                            if len(item) > 0:
+                                if item.isspace() == False:
+                                    split_item = re.split("(\s+)", re.sub(r"[^a-zA-Z0-9]", " ", item))
+                                    for elem in split_item:
+                                        if len(elem) > 0:
+                                            contact_cleaned.append(elem)
+                                else:
+                                    contact_cleaned.append(item)           
 
                 fn_tag_summary = {}
                 names_fn_counter = 0
+                dates_fn_counter = 0
+                id_fn_counter = 0
+                contact_fn_counter = 0
                 if current_summary['false_negatives'] != [] and current_summary['false_negatives'] != [""]:              
                     current_fns = current_summary['false_negatives']
                     # if fn == './data/i2b2_results/137-03.txt':
@@ -1056,10 +1106,26 @@ class Philter:
                             phi_end = phi_item['end']
                             phi_id = phi_item['id']
                             
-                            # Check for FNs
+                            # Names FNs
                             if (start_coordinate_fn in range(int(phi_start), int(phi_end))) and (phi_type == "DOCTOR" or phi_type == "PATIENT"):
                                 rp_summaries["names_fns"] += 1
                                 names_fn_counter += 1
+
+                            # Dates FNs
+                            if (start_coordinate_fn in range(int(phi_start), int(phi_end))) and phi_type == "DATE":
+                                rp_summaries["dates_fns"] += 1
+                                dates_fn_counter += 1
+
+
+                            # ID FNs
+                            if (start_coordinate_fn in range(int(phi_start), int(phi_end))) and (phi_type == "MEDICALRECORD" or phi_type == "IDNUM" or phi_type == "DEVICE"):
+                                rp_summaries["id_fns"] += 1
+                                id_fn_counter += 1
+
+                            # Contact FNs
+                            if (start_coordinate_fn in range(int(phi_start), int(phi_end))) and (phi_type == "USERNAME" or phi_type == "PHONE" or phi_type == "EMAIL" or phi_type == "FAX"):
+                                rp_summaries["contact_fns"] += 1
+                                contact_fn_counter += 1                              
 
                             # Find PHI match: fn in text, coord in range
                             if (false_negative in phi_text) and (start_coordinate_fn in range(int(phi_start), int(phi_end))):
@@ -1091,6 +1157,9 @@ class Philter:
 
                 # Update recall/precision dictionary
                 rp_summaries['names_tps'] += (len(names_cleaned) - names_fn_counter)
+                rp_summaries['dates_tps'] += (len(dates_cleaned) - dates_fn_counter)
+                rp_summaries['id_tps'] += (len(ids_cleaned) - id_fn_counter)
+                rp_summaries['contact_tps'] += (len(contact_cleaned) - contact_fn_counter)
 
                 ####### Get FP tags #########
                 fp_tag_summary = {}
@@ -1147,7 +1216,16 @@ class Philter:
             
             # Get names recall
             names_recall = (rp_summaries['names_tps']-rp_summaries['names_fns'])/rp_summaries['names_tps']
-            
+            dates_recall = (rp_summaries['dates_tps']-rp_summaries['dates_fns'])/rp_summaries['dates_tps']
+            ids_recall = (rp_summaries['id_tps']-rp_summaries['id_fns'])/rp_summaries['id_tps']
+            contact_recall = (rp_summaries['contact_tps']-rp_summaries['contact_fns'])/rp_summaries['contact_tps']
+
+            # Print to terminal
+            print("Names Recall: " + "{:.2%}".format(names_recall))
+            print("Dates Recall: " + "{:.2%}".format(dates_recall))
+            print("IDs Recall: " + "{:.2%}".format(ids_recall))
+            print("Contact Recall: " + "{:.2%}".format(contact_recall))
+
             ######## Summarize FN results #########
             # Condensed tags will contain id, word, PHI tag, POS tag, occurrences
             fn_tags_condensed = {}
