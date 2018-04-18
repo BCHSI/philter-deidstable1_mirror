@@ -1,0 +1,1 @@
+\b((***REMOVED***a-zA-Z***REMOVED***+|\d+)(\:|\-)){5,}(***REMOVED***a-zA-Z***REMOVED***+|\d+)\b
