@@ -603,8 +603,14 @@
         "filepath":"filters/whitelists/whitelist_addback_100.json",
         "pos":***REMOVED******REMOVED***,
         "notes":"These are words we beleive are safe"
-    }
-
+    },
+   	{
+		"title":"POS MATCHER",
+		"type":"pos_matcher",
+		"exclude":false,
+		"pos":***REMOVED***"CD"***REMOVED***,
+		"notes":"This will include any CDs that aren't included in earlier steps"
+	}
 
 
 ***REMOVED***
