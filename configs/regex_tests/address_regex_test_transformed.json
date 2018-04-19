@@ -11,7 +11,7 @@
 		"title":"street number, street name, extension",
 		"type":"regex",
 		"exclude":true,
-		"filepath":"filters/regex/addresses/num_streetname_extension_transformed.txt",
+		"filepath":"filters/regex/addresses/num_streetname_extension?_transformed.txt",
 		"notes":"This should remove anything that looks like, eg. 15 First Street, Suite 5"
 	},
 	{
@@ -50,18 +50,11 @@
 		"notes":"This should remove anything that has a city name, followed by a zip code"
 	},
 	{
-		"title":"weird street names",
+		"title":"city",
 		"type":"regex",
 		"exclude":true,
-		"filepath":"filters/regex/addresses/weird_street_names_transformed.txt",
-		"notes":"This should remove anything that has a number, followed by 2 capitalized words"
-	},
-	{
-		"title":"in city",
-		"type":"regex",
-		"exclude":true,
-		"filepath":"filters/regex/addresses/in_city_transformed.txt",
-		"notes":"This should remove anything that matches pattern in [city]"
+		"filepath":"filters/regex/addresses/city_transformed.txt",
+		"notes":"This should remove anything that has a city name"
 	},
 	{
     	"title":"No catchall",
@@ -70,5 +63,6 @@
 		"filepath":"filters/regex/catchall.txt",
 		"notes":"This should match anything, preventing the catchall"
 	}
+
 
 ]

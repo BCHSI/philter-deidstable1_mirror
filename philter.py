@@ -924,7 +924,9 @@ class Philter:
                 "id_fns":0,
                 "id_tps":0,
                 "contact_fns":0,
-                "contact_tps":0
+                "contact_tps":0,
+                "location_fns":0,
+                "location_tps":0
             }
             # Create dictionaries for unigram and bigram PHI/non-PHI frequencies
             # Diciontary values look like: [phi_count, non-phi_count]
@@ -1034,6 +1036,10 @@ class Philter:
                 dates_cleaned = []
                 ids_cleaned = []
                 contact_cleaned = []
+                locations_cleaned = []
+
+
+
                 for phi_dict in phi_list:
                     # Names
                     if phi_dict['TYPE'] == 'DOCTOR' or phi_dict['TYPE'] == 'PATIENT':
@@ -1041,7 +1047,7 @@ class Philter:
                         for item in lst:
                             if len(item) > 0:
                                 if item.isspace() == False:
-                                    split_item = re.split("(\s+)", re.sub(r"[^a-zA-Z0-9]", " ", item))
+                                    split_item = re.split("(\s+)", re.sub(punctuation_matcher, " ", item))
                                     for elem in split_item:
                                         if len(elem) > 0:
                                             names_cleaned.append(elem)
@@ -1053,7 +1059,7 @@ class Philter:
                         for item in lst:
                             if len(item) > 0:
                                 if item.isspace() == False:
-                                    split_item = re.split("(\s+)", re.sub(r"[^a-zA-Z0-9]", " ", item))
+                                    split_item = re.split("(\s+)", re.sub(punctuation_matcher, " ", item))
                                     for elem in split_item:
                                         if len(elem) > 0:
                                             dates_cleaned.append(elem)
@@ -1065,7 +1071,7 @@ class Philter:
                         for item in lst:
                             if len(item) > 0:
                                 if item.isspace() == False:
-                                    split_item = re.split("(\s+)", re.sub(r"[^a-zA-Z0-9]", " ", item))
+                                    split_item = re.split("(\s+)", re.sub(punctuation_matcher, " ", item))
                                     for elem in split_item:
                                         if len(elem) > 0:
                                             ids_cleaned.append(elem)
@@ -1078,18 +1084,32 @@ class Philter:
                         for item in lst:
                             if len(item) > 0:
                                 if item.isspace() == False:
-                                    split_item = re.split("(\s+)", re.sub(r"[^a-zA-Z0-9]", " ", item))
+                                    split_item = re.split("(\s+)", re.sub(punctuation_matcher, " ", item))
                                     for elem in split_item:
                                         if len(elem) > 0:
                                             contact_cleaned.append(elem)
                                 else:
                                     contact_cleaned.append(item)           
 
+                    # Locations                    
+                    if phi_dict['TYPE'] == 'CITY' or phi_dict['TYPE'] == 'STATE' or phi_dict['TYPE'] == 'ZIP' or phi_dict['TYPE'] == 'STREET' or phi_dict['TYPE'] == 'LOCATION-OTHER':
+                        lst = re.split("(\s+)", phi_dict['text'])
+                        for item in lst:
+                            if len(item) > 0:
+                                if item.isspace() == False:
+                                    split_item = re.split("(\s+)", re.sub(punctuation_matcher, " ", item))
+                                    for elem in split_item:
+                                        if len(elem) > 0:
+                                            locations_cleaned.append(elem)
+                                else:
+                                    locations_cleaned.append(item)  
+                
                 fn_tag_summary = {}
                 names_fn_counter = 0
                 dates_fn_counter = 0
                 id_fn_counter = 0
                 contact_fn_counter = 0
+                location_fn_counter = 0
                 if current_summary['false_negatives'] != [] and current_summary['false_negatives'] != [""]:              
                     current_fns = current_summary['false_negatives']
                     # if fn == './data/i2b2_results/137-03.txt':
@@ -1125,7 +1145,12 @@ class Philter:
                             # Contact FNs
                             if (start_coordinate_fn in range(int(phi_start), int(phi_end))) and (phi_type == "USERNAME" or phi_type == "PHONE" or phi_type == "EMAIL" or phi_type == "FAX"):
                                 rp_summaries["contact_fns"] += 1
-                                contact_fn_counter += 1                              
+                                contact_fn_counter += 1 
+                            
+                            # Location FNs
+                            if (start_coordinate_fn in range(int(phi_start), int(phi_end))) and (phi_type == 'CITY' or phi_type == 'STATE' or phi_type == 'ZIP' or phi_type == 'STREET' or phi_type == 'LOCATION-OTHER'):
+                                rp_summaries["location_fns"] += 1
+                                location_fn_counter += 1                               
 
                             # Find PHI match: fn in text, coord in range
                             if (false_negative in phi_text) and (start_coordinate_fn in range(int(phi_start), int(phi_end))):
@@ -1160,6 +1185,7 @@ class Philter:
                 rp_summaries['dates_tps'] += (len(dates_cleaned) - dates_fn_counter)
                 rp_summaries['id_tps'] += (len(ids_cleaned) - id_fn_counter)
                 rp_summaries['contact_tps'] += (len(contact_cleaned) - contact_fn_counter)
+                rp_summaries['location_tps'] += (len(locations_cleaned) - location_fn_counter)
 
                 ####### Get FP tags #########
                 fp_tag_summary = {}
@@ -1219,12 +1245,14 @@ class Philter:
             dates_recall = (rp_summaries['dates_tps']-rp_summaries['dates_fns'])/rp_summaries['dates_tps']
             ids_recall = (rp_summaries['id_tps']-rp_summaries['id_fns'])/rp_summaries['id_tps']
             contact_recall = (rp_summaries['contact_tps']-rp_summaries['contact_fns'])/rp_summaries['contact_tps']
+            location_recall = (rp_summaries['location_tps']-rp_summaries['location_fns'])/rp_summaries['location_tps']
 
             # Print to terminal
             print("Names Recall: " + "{:.2%}".format(names_recall))
             print("Dates Recall: " + "{:.2%}".format(dates_recall))
             print("IDs Recall: " + "{:.2%}".format(ids_recall))
             print("Contact Recall: " + "{:.2%}".format(contact_recall))
+            print("Location Recall: " + "{:.2%}".format(location_recall))
 
             ######## Summarize FN results #########
             # Condensed tags will contain id, word, PHI tag, POS tag, occurrences
