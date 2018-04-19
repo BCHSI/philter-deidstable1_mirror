@@ -741,8 +741,10 @@ class Philter:
         only_digits=False,
         fn_output="data/phi/fn.json",
         fp_output="data/phi/fp.json",
-        fn_tag_output = "data/phi/fn_tags.txt",
-        fp_tag_output = "data/phi/fp_tags.txt",
+        fn_tags_context = "data/phi/fn_tags_context.txt",
+        fp_tags_context = "data/phi/fp_tags_context.txt",
+        fn_tags_nocontext = "data/phi/fn_tags.txt",
+        fp_tags_nocontext = "data/phi/fp_tags.txt",
         pre_process=r":|\,|\-|\/|_|~", #characters we're going to strip from our notes to analyze against anno        
         pre_process2= r"[^a-zA-Z0-9]",
         punctuation_matcher=re.compile(r"[^a-zA-Z0-9\*\.]")):
@@ -1254,68 +1256,134 @@ class Philter:
             print("Contact Recall: " + "{:.2%}".format(contact_recall))
             print("Location Recall: " + "{:.2%}".format(location_recall))
 
+
             ######## Summarize FN results #########
+            
+            ##### With and without context #####
+            
+            # With context:
+            # Condensed tags will contain id, word, PHI tag, POS tag, occurrences
+            fn_tags_condensed_context = {}
+            # Stores lists that represent distinct groups of words, PHI and POS tags
+            fn_tags_condensed_list_context = []
+            
+            # No context:
             # Condensed tags will contain id, word, PHI tag, POS tag, occurrences
             fn_tags_condensed = {}
             # Stores lists that represent distinct groups of words, PHI and POS tags
             fn_tags_condensed_list = []
-            # Keep track of how many distinct combinations we've added to the list
-            counter = 0
+
+            # Keep track of how many distinct combinations we've added to each list
+            context_counter = 0
+            nocontext_counter = 0
             for fn in fn_tags:
                 file_dict = fn_tags[fn] 
                 for subfile in file_dict:
-                    current_list = file_dict[subfile]
-                    word = current_list[0]
-                    phi_tag = current_list[1]
-                    pos_tag = current_list[2]
-                    fn_context = current_list[3].replace("\n"," ")
-                    if current_list not in fn_tags_condensed_list:
-                        fn_tags_condensed_list.append(current_list)
-                        key_name = "uniq" + str(counter)
-                        fn_tags_condensed[key_name] = [word, phi_tag, pos_tag, fn_context, 1]
-                        counter += 1
+                    current_list_context = file_dict[subfile]
+                    current_list_nocontext = current_list_context[:3]
+                    
+                    word = current_list_context[0]
+                    phi_tag = current_list_context[1]
+                    pos_tag = current_list_context[2]
+                    fn_context = current_list_context[3].replace("\n"," ")
+                    
+                    # Context
+                    if current_list_context not in fn_tags_condensed_list_context:
+                        fn_tags_condensed_list_context.append(current_list_context)
+                        key_name = "uniq" + str(context_counter)
+                        fn_tags_condensed_context[key_name] = [word, phi_tag, pos_tag, fn_context, 1]
+                        context_counter += 1
                     else:
-                        uniq_id_index = fn_tags_condensed_list.index(current_list)
+                        uniq_id_index = fn_tags_condensed_list_context.index(current_list_context)
                         uniq_id = "uniq" + str(uniq_id_index)
-                        fn_tags_condensed[uniq_id][4] += 1
+                        fn_tags_condensed_context[uniq_id][4] += 1
 
+                    # No context
+                    if current_list_nocontext not in fn_tags_condensed_list:
+                        fn_tags_condensed_list.append(current_list_nocontext)
+                        key_name = "uniq" + str(nocontext_counter)
+                        fn_tags_condensed[key_name] = [word, phi_tag, pos_tag, 1]
+                        nocontext_counter += 1
+                    else:
+                        uniq_id_index = fn_tags_condensed_list.index(current_list_nocontext)
+                        uniq_id = "uniq" + str(uniq_id_index)
+                        fn_tags_condensed[uniq_id][3] += 1
 
             ####### Summariz FP results #######
+
+            # With context
+            # Condensed tags will contain id, word, POS tag, occurrences
+            fp_tags_condensed_context = {}
+            # Stores lists that represent distinct groups of wordss and POS tags
+            fp_tags_condensed_list_context = []
+
+            # No context
             # Condensed tags will contain id, word, POS tag, occurrences
             fp_tags_condensed = {}
             # Stores lists that represent distinct groups of wordss and POS tags
             fp_tags_condensed_list = []
-            # Keep track of how many distinct combinations we've added to the list
-            counter = 0
+
+            # Keep track of how many distinct combinations we've added to each list
+            context_counter = 0
+            nocontext_counter = 0
             for fp in fp_tags:
                 file_dict = fp_tags[fp] 
                 for subfile in file_dict:
-                    current_list = file_dict[subfile]
-                    word = current_list[0]
-                    pos_tag = current_list[1]
-                    fp_context = current_list[2].replace("\n"," ")
-                    if current_list not in fp_tags_condensed_list:
-                        fp_tags_condensed_list.append(current_list)
-                        key_name = "uniq" + str(counter)
-                        fp_tags_condensed[key_name] = [word, pos_tag, fp_context, 1]
-                        counter += 1
+                    current_list_context = file_dict[subfile]
+                    current_list_nocontext = current_list_context[:2]
+
+                    word = current_list_context[0]
+                    pos_tag = current_list_context[1]
+                    fp_context = current_list_context[2].replace("\n"," ")
+
+                    # Context
+                    if current_list_context not in fp_tags_condensed_list_context:
+                        fp_tags_condensed_list_context.append(current_list_context)
+                        key_name = "uniq" + str(context_counter)
+                        fp_tags_condensed_context[key_name] = [word, pos_tag, fp_context, 1]
+                        context_counter += 1
                     else:
-                        uniq_id_index = fp_tags_condensed_list.index(current_list)
+                        uniq_id_index = fp_tags_condensed_list_context.index(current_list_context)
                         uniq_id = "uniq" + str(uniq_id_index)
-                        fp_tags_condensed[uniq_id][3] += 1          
+                        fp_tags_condensed_context[uniq_id][3] += 1          
+
+                    # No Context
+                    if current_list_nocontext not in fp_tags_condensed_list:
+                        fp_tags_condensed_list.append(current_list_nocontext)
+                        key_name = "uniq" + str(nocontext_counter)
+                        fp_tags_condensed[key_name] = [word, pos_tag, 1]
+                        nocontext_counter += 1
+                    else:
+                        uniq_id_index = fp_tags_condensed_list.index(current_list_nocontext)
+                        uniq_id = "uniq" + str(uniq_id_index)
+                        fp_tags_condensed[uniq_id][2] += 1 
 
             # Write FN and FP results to outfolder
-            with open(fn_tag_output, "w") as fn_file:
+            # Conext
+            with open(fn_tags_context, "w") as fn_file:
                 fn_file.write("key" + "|" + "note_word" + "|" + "phi_tag" + "|" + "pos_tag" + "|" + "context" + "|" + "occurrences"+"\n")
-                for key in fn_tags_condensed:
-                    current_list = fn_tags_condensed[key]
+                for key in fn_tags_condensed_context:
+                    current_list = fn_tags_condensed_context[key]
                     fn_file.write(key + "|" + current_list[0] + "|" + current_list[1] + "|" + current_list[2] + "|" + current_list[3] + "|" + str(current_list[4])+"\n")
             
-            with open(fp_tag_output, "w") as fp_file:
+            with open(fp_tags_context, "w") as fp_file:
                 fp_file.write("key" + "|" + "note_word" + "|" + "pos_tag" + "|" + "context" + "|" + "occurrences"+"\n")
+                for key in fp_tags_condensed_context:
+                    current_list = fp_tags_condensed_context[key]
+                    fp_file.write(key + "|" + current_list[0] + "|" + current_list[1]  + "|" +  current_list[2] + "|" + str(current_list[3])+"\n")
+
+            # No context
+            with open(fn_tags_nocontext, "w") as fn_file:
+                fn_file.write("key" + "|" + "note_word" + "|" + "phi_tag" + "|" + "pos_tag" + "|" + "occurrences"+"\n")
+                for key in fn_tags_condensed:
+                    current_list = fn_tags_condensed[key]
+                    fn_file.write(key + "|" + current_list[0] + "|" + current_list[1] + "|" + current_list[2] + "|" + str(current_list[3])+"\n")
+            
+            with open(fp_tags_nocontext, "w") as fp_file:
+                fp_file.write("key" + "|" + "note_word" + "|" + "pos_tag" + "|" + "occurrences"+"\n")
                 for key in fp_tags_condensed:
                     current_list = fp_tags_condensed[key]
-                    fp_file.write(key + "|" + current_list[0] + "|" + current_list[1]  + "|" +  current_list[2] + "|" + str(current_list[3])+"\n")
+                    fp_file.write(key + "|" + current_list[0] + "|" + current_list[1]  + "|" +  str(current_list[2])+"\n")            
             
             if self.parallel:
                 # Get info on whitelist, blacklist, POS
@@ -1330,7 +1398,7 @@ class Philter:
                     if config_dict['type'] == 'set' and config_dict['exclude'] == False:
                         current_whitelist = config_dict['filepath'].split('/')[-1].split('.')[0]
                 
-                print(current_whitelist + " " + current_blacklist + " " + current_pos + " " + "{:.2%}".format(names_recall) + " " + "{:.2%}".format(precision) + " " + "{:.2%}".format(retention))
+                print(current_whitelist + " " + current_blacklist + " " + current_pos + " " + "{:.2%}".format(names_recall) + " " + "{:.2%}".format(dates_recall) + " "+ "{:.2%}".format(ids_recall) + " "+ "{:.2%}".format(contact_recall) + " "+ "{:.2%}".format(location_recall) + " " + "{:.2%}".format(precision) + " " + "{:.2%}".format(retention))
     
     def getphi(self, 
             anno_folder="data/i2b2_anno/", 
