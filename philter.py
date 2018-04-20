@@ -930,7 +930,9 @@ class Philter:
                 "contact_fns":0,
                 "contact_tps":0,
                 "location_fns":0,
-                "location_tps":0
+                "location_tps":0,
+                "organization_fns":0,
+                "organization_tps":0
             }
             # Create dictionaries for unigram and bigram PHI/non-PHI frequencies
             # Diciontary values look like: ***REMOVED***phi_count, non-phi_count***REMOVED***
@@ -1041,7 +1043,7 @@ class Philter:
                 ids_cleaned = ***REMOVED******REMOVED***
                 contact_cleaned = ***REMOVED******REMOVED***
                 locations_cleaned = ***REMOVED******REMOVED***
-
+                organizations_cleaned =***REMOVED******REMOVED***
 
 
                 for phi_dict in phi_list:
@@ -1107,6 +1109,20 @@ class Philter:
                                             locations_cleaned.append(elem)
                                 else:
                                     locations_cleaned.append(item)  
+
+
+                    # Organizations                    
+                    if phi_dict***REMOVED***'TYPE'***REMOVED*** == 'HOSPITAL':
+                        lst = re.split("(\s+)", phi_dict***REMOVED***'text'***REMOVED***)
+                        for item in lst:
+                            if len(item) > 0:
+                                if item.isspace() == False:
+                                    split_item = re.split("(\s+)", re.sub(punctuation_matcher, " ", item))
+                                    for elem in split_item:
+                                        if len(elem) > 0:
+                                            organizations_cleaned.append(elem)
+                                else:
+                                    organizations_cleaned.append(item)                
                 
                 fn_tag_summary = {}
                 names_fn_counter = 0
@@ -1114,6 +1130,8 @@ class Philter:
                 id_fn_counter = 0
                 contact_fn_counter = 0
                 location_fn_counter = 0
+                organization_fn_counter = 0
+
                 if current_summary***REMOVED***'false_negatives'***REMOVED*** != ***REMOVED******REMOVED*** and current_summary***REMOVED***'false_negatives'***REMOVED*** != ***REMOVED***""***REMOVED***:              
                     current_fns = current_summary***REMOVED***'false_negatives'***REMOVED***
                     # if fn == './data/i2b2_results/137-03.txt':
@@ -1156,6 +1174,11 @@ class Philter:
                                 rp_summaries***REMOVED***"location_fns"***REMOVED*** += 1
                                 location_fn_counter += 1                               
 
+                            # Organization FNs
+                            if (start_coordinate_fn in range(int(phi_start), int(phi_end))) and (phi_type == 'HOSPITAL'):
+                                rp_summaries***REMOVED***"organization_fns"***REMOVED*** += 1
+                                organization_fn_counter += 1  
+
                             # Find PHI match: fn in text, coord in range
                             if (false_negative in phi_text) and (start_coordinate_fn in range(int(phi_start), int(phi_end))):
                                 # Get PHI tag
@@ -1190,6 +1213,7 @@ class Philter:
                 rp_summaries***REMOVED***'id_tps'***REMOVED*** += (len(ids_cleaned) - id_fn_counter)
                 rp_summaries***REMOVED***'contact_tps'***REMOVED*** += (len(contact_cleaned) - contact_fn_counter)
                 rp_summaries***REMOVED***'location_tps'***REMOVED*** += (len(locations_cleaned) - location_fn_counter)
+                rp_summaries***REMOVED***'organization_tps'***REMOVED*** += (len(organizations_cleaned) - organization_fn_counter)
 
                 ####### Get FP tags #########
                 fp_tag_summary = {}
@@ -1246,10 +1270,23 @@ class Philter:
             
             # Get names recall
             names_recall = (rp_summaries***REMOVED***'names_tps'***REMOVED***-rp_summaries***REMOVED***'names_fns'***REMOVED***)/rp_summaries***REMOVED***'names_tps'***REMOVED***
+            if names_recall < 0:
+                names_recall = 0
             dates_recall = (rp_summaries***REMOVED***'dates_tps'***REMOVED***-rp_summaries***REMOVED***'dates_fns'***REMOVED***)/rp_summaries***REMOVED***'dates_tps'***REMOVED***
+            if dates_recall < 0:
+                dates_recall = 0            
             ids_recall = (rp_summaries***REMOVED***'id_tps'***REMOVED***-rp_summaries***REMOVED***'id_fns'***REMOVED***)/rp_summaries***REMOVED***'id_tps'***REMOVED***
+            if ids_recall < 0:
+                ids_recall = 0            
             contact_recall = (rp_summaries***REMOVED***'contact_tps'***REMOVED***-rp_summaries***REMOVED***'contact_fns'***REMOVED***)/rp_summaries***REMOVED***'contact_tps'***REMOVED***
+            if contact_recall < 0:
+                contact_recall = 0            
             location_recall = (rp_summaries***REMOVED***'location_tps'***REMOVED***-rp_summaries***REMOVED***'location_fns'***REMOVED***)/rp_summaries***REMOVED***'location_tps'***REMOVED***
+            if location_recall < 0:
+                location_recall = 0
+            organization_recall = (rp_summaries***REMOVED***'organization_tps'***REMOVED***-rp_summaries***REMOVED***'organization_fns'***REMOVED***)/rp_summaries***REMOVED***'organization_tps'***REMOVED***
+            if organization_recall < 0:
+                organization_recall = 0             
 
             # Print to terminal
             print("Names Recall: " + "{:.2%}".format(names_recall))
@@ -1257,6 +1294,7 @@ class Philter:
             print("IDs Recall: " + "{:.2%}".format(ids_recall))
             print("Contact Recall: " + "{:.2%}".format(contact_recall))
             print("Location Recall: " + "{:.2%}".format(location_recall))
+            print("Organization Recall: " + "{:.2%}".format(organization_recall))
 
 
             ######## Summarize FN results #########
