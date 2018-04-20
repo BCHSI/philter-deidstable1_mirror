@@ -192,7 +192,7 @@ class Philter:
         coord_map = self.patterns[pattern_index]["coordinate_map"]
         regex = self.patterns[pattern_index]["data"]
 
-        
+        # All regexes except matchall
         if regex != re.compile('.'):
             matches = regex.finditer(text)
             
@@ -850,23 +850,25 @@ class Philter:
 
                 for c,w,r in self.seq_eval(philtered_words_cleaned, anno_words_cleaned):
 
+                    # Double check that we aren't adding blank spaces or single punctionation characters to our lists
+                    if w.isspace() == False and (re.sub(r"[^a-zA-Z0-9\*]+", "", w) != ""):
 
-                    if c == "FP":
-                        false_positives.append(w)
-                        false_positives_coords.append([w,r])
-                        # if w == "she" or w == "no" or w == "he" or w == "increased" or w == "wave" or w == "In" or w == "AS":
-                        #     print(w)
-                        #     print(f)
+                        if c == "FP":
+                            false_positives.append(w)
+                            false_positives_coords.append([w,r])
+                            # if w == "she" or w == "no" or w == "he" or w == "increased" or w == "wave" or w == "In" or w == "AS":
+                            #     print(w)
+                            #     print(f)
 
-                    elif c == "FN":
-                        false_negatives.append(w)
-                        false_negatives_coords.append([w,r])
-                    elif c == "TP":
-                        true_positives.append(w)
-                        true_positives_coords.append([w,r])
-                    elif c == "TN":
-                        true_negatives.append(w)
-                        true_negatives_coords.append([w,r])
+                        elif c == "FN":
+                            false_negatives.append(w)
+                            false_negatives_coords.append([w,r])
+                        elif c == "TP":
+                            true_positives.append(w)
+                            true_positives_coords.append([w,r])
+                        elif c == "TN":
+                            true_negatives.append(w)
+                            true_negatives_coords.append([w,r])
 
                 #update summary
                 summary["summary_by_file"][philtered_filename] = {"false_positives":false_positives,"false_negatives":false_negatives, "num_false_negatives":len(false_negatives)}
