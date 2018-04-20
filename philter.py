@@ -192,7 +192,7 @@ class Philter:
         coord_map = self.patterns***REMOVED***pattern_index***REMOVED******REMOVED***"coordinate_map"***REMOVED***
         regex = self.patterns***REMOVED***pattern_index***REMOVED******REMOVED***"data"***REMOVED***
 
-        
+        # All regexes except matchall
         if regex != re.compile('.'):
             matches = regex.finditer(text)
             
@@ -850,23 +850,25 @@ class Philter:
 
                 for c,w,r in self.seq_eval(philtered_words_cleaned, anno_words_cleaned):
 
+                    # Double check that we aren't adding blank spaces or single punctionation characters to our lists
+                    if w.isspace() == False and (re.sub(r"***REMOVED***^a-zA-Z0-9\****REMOVED***+", "", w) != ""):
 
-                    if c == "FP":
-                        false_positives.append(w)
-                        false_positives_coords.append(***REMOVED***w,r***REMOVED***)
-                        # if w == "she" or w == "no" or w == "he" or w == "increased" or w == "wave" or w == "In" or w == "AS":
-                        #     print(w)
-                        #     print(f)
+                        if c == "FP":
+                            false_positives.append(w)
+                            false_positives_coords.append(***REMOVED***w,r***REMOVED***)
+                            # if w == "she" or w == "no" or w == "he" or w == "increased" or w == "wave" or w == "In" or w == "AS":
+                            #     print(w)
+                            #     print(f)
 
-                    elif c == "FN":
-                        false_negatives.append(w)
-                        false_negatives_coords.append(***REMOVED***w,r***REMOVED***)
-                    elif c == "TP":
-                        true_positives.append(w)
-                        true_positives_coords.append(***REMOVED***w,r***REMOVED***)
-                    elif c == "TN":
-                        true_negatives.append(w)
-                        true_negatives_coords.append(***REMOVED***w,r***REMOVED***)
+                        elif c == "FN":
+                            false_negatives.append(w)
+                            false_negatives_coords.append(***REMOVED***w,r***REMOVED***)
+                        elif c == "TP":
+                            true_positives.append(w)
+                            true_positives_coords.append(***REMOVED***w,r***REMOVED***)
+                        elif c == "TN":
+                            true_negatives.append(w)
+                            true_negatives_coords.append(***REMOVED***w,r***REMOVED***)
 
                 #update summary
                 summary***REMOVED***"summary_by_file"***REMOVED******REMOVED***philtered_filename***REMOVED*** = {"false_positives":false_positives,"false_negatives":false_negatives, "num_false_negatives":len(false_negatives)}
