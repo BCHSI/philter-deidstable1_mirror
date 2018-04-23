@@ -1,0 +1,89 @@
+<?xml version='1.0' encoding='utf8'?>
+<deIdi2b2>
+<TEXT>
+
+
+Record date: 2112-01-27
+
+
+
+
+
+NAME:    Werner, Brian  
+
+MRN:     4097229
+
+
+
+This patient reports approximately 3-4 years ago he had episodes of right sided
+
+visual loss.  He thought it was only related to his right eye.  What he describes is a
+
+right peripheral hemispheric visual loss.  He reports having a history of headaches
+
+in the past.  It is nothing that is significantly worse than usual.  On Thursday he
+
+reports having a mild bitemporal headache and then later that day ensuing right
+
+peripheral loss that has lasted for the past 3-4 days.  In the past his visual loss only
+
+lasted for about one day.  He denies any other focal neurological complaints.
+
+
+
+PAST MEDICAL HISTORY:  Hypertension.  He is on a baby aspirin a day.  He
+
+denies any further headaches.  He denies any numbness, tingling or weakness on
+
+one side of his body or other.  He has chronic left knee problems from an old
+
+injury.  He is unable to bend the leg.  He has no new problems with his gait.  He
+
+denies any symptoms of jaw claudication.  
+
+
+
+PHYSICAL EXAM:  His exam reveals no temporal artery tenderness to palpation. 
+
+His funduscopic exam appears normal on undilated exam.  His visual fields reveals
+
+what appears to be consistent with right bilateral hemianopsia.  PERRLA.  EOMI. 
+
+Cranial nerves II-XII are otherwise intact.  His motor strength is 5/5.  He has no
+
+pronator drift.  His cerebellar exam is intact.  His blood pressure is 150/100.
+
+Carotid - no bruit.  Cor - RRR no MGR Lungs - CTA
+
+ASSESSMENT AND PLAN:  Question bilateral hemianopsia.  The patient will get
+
+scheduled for an MRI/MRA as soon as possible.  He was sent to the NDMG
+Ophthalmology Clinic to confirm bilateral vs. unilateral hemianopsia (central vs. peripheral etiology) today for further evaluation plus/minus ESR and CBC at
+
+that point in time.   
+
+                                                                    
+
+Ernestine Phan, M.D.
+
+
+
+EP/gillis/cook
+
+
+
+
+
+</TEXT>
+<TAGS>
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2112-01-27" />
+<NAME TYPE="PATIENT" comment="" end="54" id="P1" start="41" text="Werner, Brian" />
+<ID TYPE="MEDICALRECORD" comment="" end="74" id="P2" start="67" text="4097229" />
+<DATE TYPE="DATE" comment="" end="412" id="P3" start="404" text="Thursday" />
+<LOCATION TYPE="HOSPITAL" comment="" end="1638" id="P4" start="1634" text="NDMG" />
+<NAME TYPE="DOCTOR" comment="" end="1906" id="P5" start="1892" text="Ernestine Phan" />
+<NAME TYPE="USERNAME" comment="" end="1918" id="P6" start="1916" text="EP" />
+<NAME TYPE="DOCTOR" comment="" end="1925" id="P7" start="1919" text="gillis" />
+<NAME TYPE="DOCTOR" comment="" end="1930" id="P8" start="1926" text="cook" />
+</TAGS>
+</deIdi2b2>

@@ -1,0 +1,115 @@
+<?xml version='1.0' encoding='utf8'?>
+<deIdi2b2>
+<TEXT>
+
+
+Record date: 2067-09-05
+
+Internal Medicine                         Vance, Jennifer
+                                              54266003
+                                              9-5-67
+ 
+ 
+ 
+CHIEF COMPLAINT:  Ms. Vance is a 45 year old woman with diabetes, 
+porphyria and coronary artery disease, who came in today for annual visit.  
+ 
+HPI:  
+1.   Pain in right hand.  The patient has a Dupuytren's contraction in the 
+     right hand.  She did have one in the left hand for which she had 
+     surgery in June, 2064.  The surgery was performed by Dr. Peter 
+     Vandenberg.  At that time, she also had an ulnar nerve decompression.  
+     She had trigger fingers in the left index and ring finger as well, 
+     which were repaired.  She is a Transport Operations Supervisor that uses her hands 
+     extensively and is very concerned about the pain in her right hand.
+2.   Diabetes mellitus.  She only rarely checks her blood sugars.  They 
+     tend to run about 160.  She has had diabetes for 28 years.  She takes 
+     NPH insulin 25 units sub q q.a.m. and CGI 10 units sub q q.a.m.  She 
+     is not on an evening dose.  Her last ophthalmology visit was in 6/66.  
+     She denies any problems with peripheral neuropathy.  
+3.   Coronary artery disease.  She is status post single vessel CABG in 
+     9/61 for isolated lesion.  Since then she has had no angina.  She has 
+     been on no medications for coronary artery disease since 2063.  
+4.   Left breast lesion.  She was found to have a breast mass in 12/66 and 
+     underwent wire localization and biopsy.  At that  time, she had micro 
+     calcifications on her mammogram at that time.  The past report 
+     revealed atypical ductal hyperplasia only.
+ 
+CURRENT MEDICATIONS:  NPH insulin 25 units sub q q.a.m., CGI 10 units sub 
+q q.a.m., Tylenol p.r.n., aspirin 85 mg PO q.d.
+ 
+PHYSICAL EXAM:  Blood pressure 114/50.  Weight 111.5 lbs.  General 
+appearance: healthy appearing middle aged woman in no acute distress.  
+HEENT: no retinopathy was noted on my exam.  Neck: no thyromegaly.  Chest 
+is clear to P&amp;A.  She has sternotomy scars present.  Cardiac: normal S1, 
+S2.  Breasts: right breast is normal, left breast reveals surgical 
+incisional scars at 12:00 and 3:00 O'clock.  She does have a firm mass 
+below the incisional scar at 3:00 P.M.  Abdomen: midline scar in the lower 
+abdomen is evident from her C section.  No hepatosplenomegaly.  
+Extremities: no edema.  Pelvic exam: external genitalia are normal.  
+Vagina, cervix, fundus, adnexae all normal.
+ 
+IMPRESSION: 
+1.   Painful right hand.  The patient was referred back to Dr. Peter 
+     Vandenberg for evaluation for surgery.
+2.   Diabetes mellitus.  I asked the patient to keep track of her blood 
+     sugars for then next month and to return to see me.  I also checked a 
+     BUN and creatinine as well as a urine micro albumen.  We checked her 
+     annual cholesterol.  Her previous cholesterol was done 5/66 and was 
+     203.  She was referred to Dr. Nava for a good retinal exam.  
+INDIANOLA VALLEY CENTER                         Vance, Jennifer
+Page 2                                        54266003
+                                              9-5-67
+ 
+ 
+ 
+3.   Status post CABG.  I started her on atenolol 25 mg PO q.d. given that 
+     she does have coronary artery disease, and there is a question as to 
+     whether or not she had an MI in 2061, which she will return in one 
+     month for blood pressure check and also to review her blood sugars.       
+ 
+ 
+ 
+_________________________
+Vester Light, M.D.
+ 
+WV:AV:8176
+DD:9-5-67
+DT:9-6-67
+DV:9-5-67
+ ******** Not reviewed by Attending Physician ********
+
+
+
+
+</TEXT>
+<TAGS>
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2067-09-05" />
+<NAME TYPE="PATIENT" comment="" end="85" id="P2" start="70" text="Vance, Jennifer" />
+<ID TYPE="MEDICALRECORD" comment="" end="140" id="P3" start="132" text="54266003" />
+<DATE TYPE="DATE" comment="" end="193" id="P4" start="187" text="9-5-67" />
+<NAME TYPE="PATIENT" comment="" end="227" id="P5" start="222" text="Vance" />
+<DATE TYPE="DATE" comment="" end="526" id="P7" start="516" text="June, 2064" />
+<NAME TYPE="DOCTOR" comment="" end="584" id="P8" start="562" text="Peter      Vandenberg" />
+<PROFESSION TYPE="PROFESSION" comment="" end="786" id="P9" start="755" text="Transport Operations Supervisor" />
+<DATE TYPE="DATE" comment="" end="1178" id="P10" start="1174" text="6/66" />
+<DATE TYPE="DATE" comment="" end="1323" id="P11" start="1319" text="9/61" />
+<DATE TYPE="DATE" comment="" end="1456" id="P12" start="1452" text="2063" />
+<DATE TYPE="DATE" comment="" end="1530" id="P13" start="1525" text="12/66" />
+<NAME TYPE="DOCTOR" comment="" end="2640" id="P14" start="2618" text="Peter      Vandenberg" />
+<DATE TYPE="DATE" comment="" end="2957" id="P15" start="2953" text="5/66" />
+<NAME TYPE="DOCTOR" comment="" end="3006" id="P16" start="3002" text="Nava" />
+<LOCATION TYPE="HOSPITAL" comment="" end="3057" id="P17" start="3034" text="INDIANOLA VALLEY CENTER" />
+<NAME TYPE="PATIENT" comment="" end="3097" id="P18" start="3082" text="Vance, Jennifer" />
+<ID TYPE="MEDICALRECORD" comment="" end="3152" id="P19" start="3144" text="54266003" />
+<DATE TYPE="DATE" comment="" end="3205" id="P20" start="3199" text="9-5-67" />
+<DATE TYPE="DATE" comment="" end="3404" id="P21" start="3400" text="2061" />
+<NAME TYPE="DOCTOR" comment="" end="3560" id="P22" start="3548" text="Vester Light" />
+<NAME TYPE="DOCTOR" comment="" end="3571" id="P23" start="3569" text="WV" />
+<NAME TYPE="DOCTOR" comment="" end="3574" id="P24" start="3572" text="AV" />
+<ID TYPE="IDNUM" comment="" end="3579" id="P25" start="3575" text="8176" />
+<DATE TYPE="DATE" comment="" end="3589" id="P26" start="3583" text="9-5-67" />
+<DATE TYPE="DATE" comment="" end="3599" id="P27" start="3593" text="9-6-67" />
+<DATE TYPE="DATE" comment="" end="3609" id="P28" start="3603" text="9-5-67" />
+</TAGS>
+</deIdi2b2>

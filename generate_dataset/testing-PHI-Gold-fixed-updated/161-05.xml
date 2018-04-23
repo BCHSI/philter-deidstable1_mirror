@@ -1,0 +1,168 @@
+<?xml version='1.0' encoding='utf8'?>
+<deIdi2b2>
+<TEXT>
+
+
+Record date: 2073-12-05
+
+      
+
+ 
+
+
+
+CCU JAR TRANSFER NOTE
+
+
+
+Name:   Xuereb, Jaquante D
+
+MRN:   1344351
+
+Date of Admission:   12/03/73
+
+Date of Transfer:  12/05/73
+
+Admitting Physician:   Dr. Burke
+
+Code Status: Full
+
+Source of Hx:   Chart, patient
+
+
+
+ID/CC:   Chest pressure, pulmonary edema. 
+
+
+
+HPI:   58 year old man with PMH significant for HTN , Hypercholesterolemia, smoking and PVD. S/P LE bypass.  Admitted to Vascular service with 1-2 day history of RLE pain, discoloration. Found to have occluded fem-pop bypass. Underwent unsuccesfull attmp by IR to open vessel and was awaiting sheath pull on the vascular floor when he developed shortness of breath and b/l chest pressure in the setting of FFP transfusion. Did have a troponin bump to 0.6 and some anterior ST changes. He was diuresed and placed on CPAP when he began to have increasing respiratory effort and evidence of tiring.  He was then intubated and transferred to the CCU.  On arrival in the CCU, pt became hypotensive with MAPS in the 40's. He was startered on peripheral dopamine with good respone. No EKG chages associated with these symptoms.
+
+
+
+PMH/Old Data
+
+PVD
+
+Hyperlipidemia
+
+HTN
+
+Smoking
+
+B knee arthroscopies and multiple bypass grafts and revascularizations of his LE
+
+
+
+Allergies/Adverse Reactions
+
+	NKDA
+
+
+
+Social Hx:
+
+	Ex-smoker, quit 2 yrs PTA
+
+	school administrator
+
+
+
+Home Meds:
+
+	Glucophage, Actos, Gemfibrozil, Lipitor, Lisinopril, Norvasc, HCTZ, Effexor, Coumadin, ASA.
+
+  
+
+Please see admission H&amp;P for initial exam and today's progress note for current exam.
+
+
+
+Labs/Studies
+
+Admission EKG-NSR, dynamic t-wave changes anterior, ~1mm ST elevation worse than prior
+
+Admission CXR:  Vascular congestion.
+
+12/05/73:
+
+Chem7 WNL, Cr 1.0, Glu 200-265, Mag 1.8
+
+Peak Trop 0.65 (trending down)
+
+WBC 8.8    16.2, Hct 33.2, Plt 283
+
+INR 2.7, PTT 61.5
+
+
+
+
+
+CCU Course/Plan:  
+
+
+
+Ischemia:  Patient was taken to cath lab on 12/03/73 and found to have 3-V CAD (70% prox LAD, 60% LCx, occluded RCA).  He was transferred to the CCU (intubated) but with diuresis he was weaned and extubated on 12/04/73.  He continued to be medically managed with ASA/Plavix (on hold now for anticipated surgery), Statin (lipitor 80 mg po qhs), BB (lopressor 50 mg po q6h), and ACE-I (captopril 6.25 mg po tid started on 12/05/73).  He is awaiting CABG but does not have good conduits as expected given his extensive PVD.  Plastic surgery is evaluating patient for potential grafts.  CNI pending pre-op.
+
+
+
+Pump: Patient was quickly weaned off all pressors.  TTE was obtained on 12/05/73.  EF was 38%, mild MR, LA dilatation, LV is dilated and fxn is moderately impaired (inf/post/lat dysfunction).  There were echodensities noted in the LV apex which may be trabeculations, however, thrombus cannot be excluded.  He has received prn doses of lasix (responds to 80 IV) and we are continuing his BB and ACE-I.  Goal TBB is ~-1.0 L.
+
+
+
+Rhythm: Stable, continuing BB, Telemetry.
+
+
+
+Resp: Stable, s/p extubation.  On NC with sats &gt; 95%.  Continue diuresis and f/u CXRs.
+
+
+
+PVD/LE: Unsuccessful attempt at percutaneous revascularization of his RLE.  Limb is currently not threatened and he has dopplerable pulses.  No plans now for interventions in LE.
+
+
+
+ID/WBC: WBC elevated on 12/05/73 but no fevers.  May be due to steroids (was receiving Dex while cort-stim was in process).  This was discontinued.  Cultures all show no growth to date.  Continue to trend WBCs.
+
+
+
+Proph: Heparin gtt, Nexium.
+
+
+
+FULL CODE
+
+
+
+John Yeatts, MD
+
+CCU JAR, Pager 09171
+
+
+
+
+
+
+
+
+
+
+
+</TEXT>
+<TAGS>
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2073-12-05" />
+<NAME TYPE="PATIENT" comment="" end="92" id="P1" start="74" text="Xuereb, Jaquante D" />
+<ID TYPE="MEDICALRECORD" comment="" end="108" id="P2" start="101" text="1344351" />
+<DATE TYPE="DATE" comment="" end="139" id="P3" start="131" text="12/03/73" />
+<DATE TYPE="DATE" comment="" end="168" id="P4" start="160" text="12/05/73" />
+<NAME TYPE="DOCTOR" comment="" end="202" id="P5" start="197" text="Burke" />
+<PROFESSION TYPE="PROFESSION" comment="" end="1359" id="P7" start="1339" text="school administrator" />
+<DATE TYPE="DATE" comment="" end="1710" id="P8" start="1702" text="12/05/73" />
+<DATE TYPE="DATE" comment="" end="1919" id="P9" start="1911" text="12/03/73" />
+<DATE TYPE="DATE" comment="" end="2085" id="P10" start="2077" text="12/04/73" />
+<DATE TYPE="DATE" comment="" end="2295" id="P11" start="2287" text="12/05/73" />
+<DATE TYPE="DATE" comment="" end="2553" id="P12" start="2545" text="12/05/73" />
+<DATE TYPE="DATE" comment="" end="3249" id="P13" start="3241" text="12/05/73" />
+<NAME TYPE="DOCTOR" comment="" end="3486" id="P14" start="3475" text="John Yeatts" />
+<CONTACT TYPE="PHONE" comment="" end="3512" id="P15" start="3507" text="09171" />
+</TAGS>
+</deIdi2b2>

@@ -1,0 +1,114 @@
+<?xml version='1.0' encoding='utf8'?>
+<deIdi2b2>
+<TEXT>
+
+
+Record date: 2088-01-20
+
+
+
+PCC Internal Medicine PRIMARY CARE
+
+630 Poliquin Drive, 642
+
+Asmara, PA  96931
+
+
+
+RE:		Jarvis, Amador
+
+PCC#:		090-73-07
+
+
+
+January 20, 2088
+
+
+
+Reason for visit:  Mr. Jarvis comes to follow up on his hypertension, hyperglycemia, renal insufficiency and elevated PSA.  
+
+
+
+HISTORY OF PRESENT ILLNESS:  He has seen Dr. Jose Quirk and a prostate biopsy has been recommended.  This is scheduled for next week and Mr. Jarvis is quite anxious about it.  
+
+
+
+He began the Captopril and HCTZ (? or Maxide) and has noted good blood pressure control as checked at BH.  At first he developed a considerable cough but in the last two weeks this has largely resolved.  He states that the cough is productive of thick phlegm and may reflect a respiratory infection rather than the Captopril itself.  His blood sugars when checked at home have averaged between the 140 to 150 range fasting.  On one occasion a three hour postprandial was 170.  
+
+
+
+He has had no attacks of gout or gout like arthritis in the past six weeks and is quite pleased about this. 
+
+
+
+He has continued actively managing production and is planning a trip to Italy next month.  
+
+
+
+PHYSICAL EXAMINATION:  On examination today he looks well and comfortable.  His blood pressure is 140/76 right arm sitting with regular pulse of 68.  His weight is 173 (stable).  
+
+
+
+IMPRESSION:  Doing reasonably well on the new blood pressure program.  Since the cough is resolving it would seem reasonable to continue the present program.  
+
+
+
+We will look forward to seeing the results of the prostate biopsy and we will check glucose and glycosylated hemoglobin today.  He will return in four months for follow up.  
+
+
+
+
+
+Orvell Oliver, M.D. 
+
+Labs:  Hemolyzed sample shows K of 6.0.  Will check re HCTZ vs Maxide.  If the latter, will change it.
+
+O
+
+
+
+Plasma Sodium           138                      135-145        mmol/L
+
+Plasma Potassium        6.0       H              3.4-4.8        mmol/L
+
+  Result Text:
+
+     HEMOLYZED
+
+Plasma Chloride         98        L              100-108        mmol/L
+
+Plasma Carbon Dioxide   25.9                     24.0-30.0      mmol/L
+
+Plasma Urea Nitrogen    29        H              8-25           mg/dl
+
+Plasma Creatinine       2.1       H              0.6-1.5        mg/dl
+
+Plasma Glucose          167       H              70-110         mg/dl
+
+Transaminase-SGOT       26                       10-40          U/L
+
+
+
+
+
+</TEXT>
+<TAGS>
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2088-01-20" />
+<LOCATION TYPE="HOSPITAL" comment="" end="33" id="P1" start="30" text="PCC" />
+<LOCATION TYPE="STREET" comment="" end="84" id="P3" start="66" text="630 Poliquin Drive" />
+<LOCATION TYPE="CITY" comment="" end="97" id="P5" start="91" text="Asmara" />
+<LOCATION TYPE="STATE" comment="" end="101" id="P6" start="99" text="PA" />
+<LOCATION TYPE="ZIP" comment="" end="108" id="P7" start="103" text="96931" />
+<NAME TYPE="PATIENT" comment="" end="131" id="P8" start="117" text="Jarvis, Amador" />
+<LOCATION TYPE="HOSPITAL" comment="" end="136" id="P9" start="133" text="PCC" />
+<ID TYPE="MEDICALRECORD" comment="" end="149" id="P10" start="140" text="090-73-07" />
+<DATE TYPE="DATE" comment="" end="169" id="P11" start="153" text="January 20, 2088" />
+<NAME TYPE="PATIENT" comment="" end="202" id="P12" start="196" text="Jarvis" />
+<NAME TYPE="DOCTOR" comment="" end="356" id="P13" start="346" text="Jose Quirk" />
+<NAME TYPE="PATIENT" comment="" end="448" id="P14" start="442" text="Jarvis" />
+<LOCATION TYPE="HOSPITAL" comment="" end="585" id="P15" start="583" text="BH" />
+<PROFESSION TYPE="PROFESSION" comment="" end="1119" id="P16" start="1100" text="managing production" />
+<NAME TYPE="DOCTOR" comment="" end="1708" id="P18" start="1695" text="Orvell Oliver" />
+<NAME TYPE="DOCTOR" comment="" end="1822" id="P19" start="1821" text="O" />
+</TAGS>
+</deIdi2b2>

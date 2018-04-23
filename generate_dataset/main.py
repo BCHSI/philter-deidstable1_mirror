@@ -11,7 +11,7 @@ import xml.etree.ElementTree as ET
 
 
 
-xml_folder = "./testing-PHI-Gold-fixed/"
+xml_folder = "./testing-PHI-Gold-fixed-updated/"
 
 phi = {} #fn --> {"text":"...", "phi":[{"type":"DATE"...}]}
 

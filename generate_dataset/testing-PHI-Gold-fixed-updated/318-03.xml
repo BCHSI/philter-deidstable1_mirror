@@ -1,0 +1,127 @@
+<?xml version='1.0' encoding='utf8'?>
+<deIdi2b2>
+<TEXT>
+
+
+Record date: 2096-12-13
+
+
+
+
+
+
+
+Trinity Regional Medical Center
+
+1190 Mill Street              MARSH, CARL
+
+Albertville, RI  87193                    39955317
+
+(906) 517-8625                     12/13/2096
+
+
+
+
+
+HISTORY OF PRESENT ILLNESS:  Mr. Marsh is a 75-year-old male who comes for comprehensive exam and follow up medical problems.
+
+1.  Chronic renal failure.  He is on chronic dialysis twice a week.
+
+2.  Hyperlipidemia.  Fasting lipid analysis 18 months ago showed total cholesterol 221, triglycerides 192, LDL 136, and HDL 47.
+
+3.  Cataracts.  He is about to undergo cataract removal.  Comes as well today for clearance.
+
+
+
+MEDICATIONS:  Nephrocaps 1 p.o. daily, Phoslo 670 mg tablets 3 p.o. t.i.d., and senna two tablets b.i.d. p.r.n.
+
+
+
+ALLERGIES:  No known allergies to any medications.
+
+
+
+HABITS:  He smokes one pack per week.  Denies alcohol or drug use.
+
+
+
+FAMILY HISTORY:  Unchanged.
+
+
+
+SOCIAL HISTORY:  He lives with wife and daughter.  He is retired.
+
+
+
+REVIEW OF SYMPTOMS:  No significant weight change, febrile signs or symptoms, headache, blurred vision, tinnitus, chest pain, cough, shortness of breath, nausea, abdominal pain, nightsweats, diarrhea, dysuria, polyuria, skin rash, bruising, joint pain, or focal weakness.  
+
+
+
+PHYSICAL EXAMINATION:  The patient is in no acute distress.  Blood pressure 125/82, weight 138 pounds, and temperature 97.3.  BMI 19.8.  Skin exam:  No rash.  Head and neck exam:  Patient has bilateral arcus senilis.  He is edentulous.  Chest:  Clear to percussion and auscultation.  Cardiovascular exam:  No extra sounds or murmurs.  Pedal pulses are trace posterior tibial bilaterally.  Abdominal exam:  No masses, tenderness, or organomegaly.  Stool guaiac negative.  GU exam:  Both testes descended.  Testes were soft.  Prostate 2+ enlarged without masses or tenderness.  Lymph exam:  No axillary or cervical lymphadenopathy.  Musculoskeletal exam:  Grossly intact.  Neuro exam:  Grossly intact.
+
+
+
+ASSESSMENT AND PLAN:
+
+1.  Chronic renal failure.  Appears to be stable on routine dialysis.  Will check screening blood work.
+
+2.  Hyperlipidemia.  His LDL goal is less than 130.  He is slightly above that.  Encouraged careful attention to nutrition.
+
+3.  Cataract.  EKG and other preop testing were requested.
+
+4.  Adult health maintenance.  Tetanus and Pneumovax given last year.  He reports influenza vaccine was given elsewhere.  A colonoscopy has not been done according to our records.  Colonoscopy requested today.  Home guaiac cards given as well.
+
+
+
+
+
+______________________________
+
+Xavier T Mccoy, M.D., M.Sc.
+
+
+
+
+
+
+
+
+
+
+
+eScription document:6-2359741 EMSSten Tel
+
+
+
+
+
+
+
+DD: 12/14/96
+
+DT: 12/15/96
+
+DV: 12/13/96
+
+
+
+</TEXT>
+<TAGS>
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2096-12-13" />
+<LOCATION TYPE="HOSPITAL" comment="" end="65" id="P1" start="34" text="Trinity Regional Medical Center" />
+<LOCATION TYPE="STREET" comment="" end="83" id="P2" start="67" text="1190 Mill Street" />
+<NAME TYPE="PATIENT" comment="" end="108" id="P3" start="97" text="MARSH, CARL" />
+<LOCATION TYPE="CITY" comment="" end="121" id="P4" start="110" text="Albertville" />
+<LOCATION TYPE="STATE" comment="" end="125" id="P5" start="123" text="RI" />
+<LOCATION TYPE="ZIP" comment="" end="132" id="P6" start="127" text="87193" />
+<ID TYPE="MEDICALRECORD" comment="" end="160" id="P7" start="152" text="39955317" />
+<CONTACT TYPE="PHONE" comment="" end="176" id="P8" start="162" text="(906) 517-8625" />
+<DATE TYPE="DATE" comment="" end="207" id="P9" start="197" text="12/13/2096" />
+<NAME TYPE="PATIENT" comment="" end="251" id="P10" start="246" text="Marsh" />
+<NAME TYPE="DOCTOR" comment="" end="2560" id="P12" start="2546" text="Xavier T Mccoy" />
+<ID TYPE="IDNUM" comment="" end="2614" id="P13" start="2605" text="6-2359741" />
+<DATE TYPE="DATE" comment="" end="2646" id="P14" start="2638" text="12/14/96" />
+<DATE TYPE="DATE" comment="" end="2660" id="P15" start="2652" text="12/15/96" />
+<DATE TYPE="DATE" comment="" end="2674" id="P16" start="2666" text="12/13/96" />
+</TAGS>
+</deIdi2b2>

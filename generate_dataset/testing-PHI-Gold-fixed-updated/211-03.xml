@@ -1,0 +1,125 @@
+<?xml version='1.0' encoding='utf8'?>
+<deIdi2b2>
+<TEXT>
+
+
+Record date: 2094-05-11
+
+Patient Name:  Urban, Russell
+
+Patient ID:  472-20-64
+
+Provider Name:  Orozco, Jimmy
+
+Date of Visit:  05/11/2094
+
+Visit Type:  Return Visit
+
+
+
+
+
+John Ussery, M.D.
+
+Worthington Internal Medicine
+
+28 Shattuck Street, IM 270
+
+Citrus Ridge, MT 43782
+
+
+
+Dear Dr. Ussery:
+
+
+
+I saw Mr. Urban in follow-up in the office today.  Since his last visit in November, he has been feeling well.  He has had no angina, no exertional dyspnea, no shortness of breath, no orthopnea, no paroxysmal nocturnal dyspnea, no palpitations, and no other symptoms of note.  Since his last visit with me, he has participated in and completed outpatient cardiac rehabilitation.  He found this program to be very helpful; he sis very well with the program.  He is currently exercising on a regular basis and has no chest discomfort of dyspnea with exercise.  He has stopped smoking.  There have been no difficulties with his medications.  
+
+
+
+On 03/16/2094, he had a follow-up echocardiogram done; this study shows an LV ejection fraction of 37% with septal hypokinesis and inferoposterior akinesis; there is trace mitral regurgitation; and aortic sclerosis, but no stenosis.  Notably, he has a right ventricular systolic pressure estimated to be 46 mmHg with a right ventricle that is mildly dilated and mildly-to-moderately hypokinetic.  He has been feeling quite well and has no other symptoms.
+
+
+
+His review of systems is as above and is otherwise negative in detail.
+
+
+
+Medications:
+
+Aspirin 325 mg daily
+
+Plavix 75 mg daily 
+
+Lipitor 40 mg daily
+
+lisinopril 10 mg daily
+
+Coreg 6.25 mg daily.
+
+
+
+
+
+Physical examination:
+
+He appears quite well and is in no apparent distress.  His blood pressure is 112/60 mmHg and his pulse rate is 50 beats per minutes and regular.  His JVP is 7 cm of water with no Kussmaul's sign.  His chest is clear to auscultation bilaterally.  His heart is regular in rhythm and rate with a normal S1 and S2.  He has no S3 or S4 gallop and no audible murmurs.  His abdomen is soft.  It is neither tender nor distended.  He has normal bowel sounds.  His extremities are warm and well perfused.  He has no edema.
+
+
+
+Impression:  This is a 50 year-old man with coronary disease who suffered an inferoposterior myocardial infarction in July 2093.  Additionally, he was also found to have cardiomyopathy with an LV ejection fraction of 37 percent.  He is currently asymptomatic from his coronary disease and his LV dysfunction.  Notably, his last echocardiogram shows that he has increased RV systolic pressure and some early right ventricular dysfunction.  The etiology of this right ventricular dysfunction is not clear.  There is likely a component of left heart failure.  In addition, he may have right heart failure out-of-proportion to left heart failure: he has a longstanding smoking history and may have a degree of COPD and, lastly, he may have obstructive sleep apnea.  He reports to me that he does snore at night, and his first wife in Georgia had told him for many years that during the night he had periods were he would stop breathing.  This raises obstructive sleep apnea as a consideration.  
+
+
+
+Recommendations: Initially, I am going to start him on Lasix 20 mg daily to lower his preload to help with any component of LV failure that is leading to this.  The rest of his regimen is quite good, and I intend to continue them.  To help to see if there is any component of cor pulmonale that may be contributing to this, I am going to obtain first a chest x-ray, secondly a pulmonary function testing, and lastly a sleep study.  If indeed we find components of obstructive lung disease or obstructive sleep apnea, we will have him see a pulmonologist and treat these accordingly.  I will see him again in six months' time.
+
+
+
+Thank you for allowing me to participate in the care of this pleasant gentleman.
+
+
+
+Regards,
+
+
+
+
+
+
+
+
+
+__________________________
+
+Jimmy J. Orozco M.D.
+
+Internal Medicine
+
+Worthington Regional Hospital
+
+
+
+
+
+</TEXT>
+<TAGS>
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2094-05-11" />
+<NAME TYPE="PATIENT" comment="" end="57" id="P1" start="43" text="Urban, Russell" />
+<ID TYPE="MEDICALRECORD" comment="" end="81" id="P2" start="72" text="472-20-64" />
+<NAME TYPE="DOCTOR" comment="" end="112" id="P3" start="99" text="Orozco, Jimmy" />
+<DATE TYPE="DATE" comment="" end="140" id="P4" start="130" text="05/11/2094" />
+<NAME TYPE="DOCTOR" comment="" end="184" id="P5" start="173" text="John Ussery" />
+<LOCATION TYPE="HOSPITAL" comment="" end="203" id="P6" start="192" text="Worthington" />
+<LOCATION TYPE="STREET" comment="" end="241" id="P8" start="223" text="28 Shattuck Street" />
+<LOCATION TYPE="CITY" comment="" end="263" id="P10" start="251" text="Citrus Ridge" />
+<LOCATION TYPE="STATE" comment="" end="267" id="P11" start="265" text="MT" />
+<LOCATION TYPE="ZIP" comment="" end="273" id="P12" start="268" text="43782" />
+<NAME TYPE="DOCTOR" comment="" end="292" id="P13" start="286" text="Ussery" />
+<NAME TYPE="PATIENT" comment="" end="312" id="P14" start="307" text="Urban" />
+<DATE TYPE="DATE" comment="" end="380" id="P15" start="372" text="November" />
+<DATE TYPE="DATE" comment="" end="953" id="P16" start="943" text="03/16/2094" />
+<DATE TYPE="DATE" comment="" end="2266" id="P18" start="2257" text="July 2093" />
+<NAME TYPE="DOCTOR" comment="" end="3908" id="P20" start="3893" text="Jimmy J. Orozco" />
+<LOCATION TYPE="HOSPITAL" comment="" end="3963" id="P22" start="3934" text="Worthington Regional Hospital" />
+</TAGS>
+</deIdi2b2>
