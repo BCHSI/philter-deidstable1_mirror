@@ -1,0 +1,75 @@
+<?xml version='1.0' encoding='utf8'?>
+<deIdi2b2>
+<TEXT>
+
+
+Record date: 2086-12-08
+
+
+Silver Ridge Internal Medicine
+3 Eaton Place                                      OROZCO, KYLE
+Mansfield, NV 29473                                      56040785
+-----------                                           12/08/86
+
+
+INTERVAL HISTORY:  The patient is status post one lumbar epidural
+injection.  He is 61 years old with previous history of diabetes,
+as well as bilateral fem-pop surgery.  He has pain radiating to
+both legs up to calves and thighs.  He has moderate-to-severe
+spinal stenosis.  He had good response to L5-S1 epidural steroid
+injection once, about 3 months ago.  He states that he is
+reasonably symptom free but the pain is coming back.  Today, we
+are going to repeat the injection.
+
+PHYSICAL EXAMINATION:  Essentially unchanged from prior.
+
+PROCEDURE NOTE:  After obtaining informed consent, the patient
+placed in sitting position.  Lower back prepped and draped in
+usual sterile fashion.  A 17-gauge, Weiss needle used to access
+epidural space at L5-S1.  Three cc of Depo-Medrol and 3 cc of
+0.5% lidocaine were allowed to drip in via gravity.  No
+complications.  No heme, no CSF.  No paresthesia.
+
+FOLLOW-UP PLAN:  The patient to report for further injection in
+case needed in the next 2 or 3 months.
+
+
+
+
+
+______________________________
+Hardy Ostrowski, M.D.
+
+
+Dictated By: Hardy Ostrowski
+
+
+eScription document:1-1277442 EMSSten Tel
+
+
+
+DD: 12/08/86
+DT: 12/09/86
+DV: 12/08/86
+
+
+
+</TEXT>
+<TAGS>
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2086-12-08" />
+<LOCATION TYPE="HOSPITAL" comment="" end="41" id="P1" start="29" text="Silver Ridge" />
+<LOCATION TYPE="STREET" comment="" end="73" id="P3" start="60" text="3 Eaton Place" />
+<NAME TYPE="PATIENT" comment="" end="123" id="P4" start="111" text="OROZCO, KYLE" />
+<LOCATION TYPE="CITY" comment="" end="133" id="P5" start="124" text="Mansfield" />
+<LOCATION TYPE="STATE" comment="" end="137" id="P6" start="135" text="NV" />
+<LOCATION TYPE="ZIP" comment="" end="143" id="P7" start="138" text="29473" />
+<ID TYPE="MEDICALRECORD" comment="" end="189" id="P8" start="181" text="56040785" />
+<DATE TYPE="DATE" comment="" end="252" id="P9" start="244" text="12/08/86" />
+<NAME TYPE="DOCTOR" comment="" end="1306" id="P11" start="1291" text="Hardy Ostrowski" />
+<NAME TYPE="DOCTOR" comment="" end="1343" id="P12" start="1328" text="Hardy Ostrowski" />
+<ID TYPE="IDNUM" comment="" end="1375" id="P13" start="1366" text="1-1277442" />
+<DATE TYPE="DATE" comment="" end="1403" id="P14" start="1395" text="12/08/86" />
+<DATE TYPE="DATE" comment="" end="1416" id="P15" start="1408" text="12/09/86" />
+<DATE TYPE="DATE" comment="" end="1429" id="P16" start="1421" text="12/08/86" />
+</TAGS>
+</deIdi2b2>

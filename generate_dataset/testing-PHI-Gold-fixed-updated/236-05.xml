@@ -1,0 +1,96 @@
+<?xml version='1.0' encoding='utf8'?>
+<deIdi2b2>
+<TEXT>
+
+
+Record date: 2073-05-10
+
+
+LUH Cardiovascular Division
+CVD ER8
+92 Batchelder Street                                      VANCE, JENNIFER
+Minerva, TN 41694                                           54266003
+(727) 859-7945                                           05/10/73
+
+Wanda A. Koontz, M.D.
+Internal Medicine Associates
+Barton Memorial Hospital
+70 Batchelder Street
+Minerva, TN  41694
+
+
+Dear Wanda:
+
+Mr. Vance returns for followup.  Since last seen, she apparently was recently seen in the walk-in clinic in your office complaining of profound fatigue and depression.  She wonders if she was having a flare of her porphyria.  Apparently, her examination at that time was relatively benign, and no specific new findings were noted.  After talking with Dr. Vogt at that office visit, she felt modestly improved, and over the past few weeks feels that her energy level has returned to its baseline.  Lab studies obtained at that time revealed creatinine 0.9, glucose elevated at 236, hematocrit of 43, with a white count 10.  As no specific pathology was noted, she was sent home without any change in her medical regimen.
+
+Currently, she continues on Lantus insulin 20 units subcutaneous. q.p.m., Celexa 40 mg p.o. q.d., enteric-coated aspirin 81 mg p.o. q.d., Flonase 1-2 puffs p.o. q.d., isosorbide mononitrate 60 mg p.o. q.d., Neurontin 600 mg p.o. t.i.d., nitroglycerin p.r.n. which she has not had to take, lisinopril 10 mg p.o. q.d., furosemide 20 mg p.o. q.d., and p.r.n. Motrin.
+
+Physical exam reveals a thin woman in no acute distress.  Blood pressure right arm sitting 105/78, heart rate 70 and regular, respirations 14 and unlabored, and weight is pending.  The neck is supple.  JVP is flat.  Carotids are 2+ with very soft bilateral referred murmurs.  Chest is clear.  Cardiac exam shows normal S1, physiologically split S2 with 1/6 systolic ejection murmur radiating from the apex to the base, and a 1-2/6 holosystolic murmur radiating from the apex to the axilla.  No significant diastolic murmur or rub.  The abdomen is benign.  Extremities reveal trace bipedal edema.  Peripheral pulses are diminished but detectable.
+
+Electrocardiogram is pending.
+
+Impression:  Ms. Vance remains relatively stable from a cardiovascular perspective.  However, as you know, her last echocardiogram did show evidence of at least moderate mitral regurgitation with significantly reduced left ventricular systolic function.  She has made it quite clear that under no circumstances would she consider repeat cardiac surgery to treat her valvular heart disease.  Nonetheless, I think it would be helpful for her to undergo repeat echocardiogram to help gauge the current status of her left ventricle and degree of regurgitation, which may allow for additional modifications to her therapeutic regimen.  Beyond this, her condition is actually relatively stable from a cardiovascular standpoint.  I have not further altered her medical regimen.
+
+Thank you very much for allowing me to assist in her care.
+
+Sincerely yours,
+
+
+
+
+
+______________________________
+Timothy Quarterman, M.D.
+
+
+Dictated By: Timothy Quarterman
+
+
+eScription document:6-0437424 GFFocus
+
+
+CC: John Koontz MD
+489 MONICA STREET
+MINERVA, TN 41694
+
+DD: 05/10/73
+DT: 05/11/73
+DV: 05/10/73
+
+
+
+</TEXT>
+<TAGS>
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2073-05-10" />
+<LOCATION TYPE="HOSPITAL" comment="" end="32" id="P1" start="29" text="LUH" />
+<LOCATION TYPE="STREET" comment="" end="85" id="P3" start="65" text="92 Batchelder Street" />
+<NAME TYPE="PATIENT" comment="" end="138" id="P4" start="123" text="VANCE, JENNIFER" />
+<LOCATION TYPE="CITY" comment="" end="146" id="P5" start="139" text="Minerva" />
+<LOCATION TYPE="STATE" comment="" end="150" id="P6" start="148" text="TN" />
+<LOCATION TYPE="ZIP" comment="" end="156" id="P7" start="151" text="41694" />
+<ID TYPE="MEDICALRECORD" comment="" end="207" id="P8" start="199" text="54266003" />
+<CONTACT TYPE="PHONE" comment="" end="222" id="P9" start="208" text="(727) 859-7945" />
+<DATE TYPE="DATE" comment="" end="273" id="P10" start="265" text="05/10/73" />
+<NAME TYPE="DOCTOR" comment="" end="290" id="P11" start="275" text="Wanda A. Koontz" />
+<LOCATION TYPE="HOSPITAL" comment="" end="350" id="P13" start="326" text="Barton Memorial Hospital" />
+<LOCATION TYPE="STREET" comment="" end="371" id="P14" start="351" text="70 Batchelder Street" />
+<LOCATION TYPE="CITY" comment="" end="379" id="P15" start="372" text="Minerva" />
+<LOCATION TYPE="STATE" comment="" end="383" id="P16" start="381" text="TN" />
+<LOCATION TYPE="ZIP" comment="" end="390" id="P17" start="385" text="41694" />
+<NAME TYPE="DOCTOR" comment="" end="403" id="P18" start="398" text="Wanda" />
+<NAME TYPE="PATIENT" comment="" end="415" id="P19" start="410" text="Vance" />
+<NAME TYPE="DOCTOR" comment="" end="765" id="P20" start="761" text="Vogt" />
+<NAME TYPE="PATIENT" comment="" end="2192" id="P21" start="2187" text="Vance" />
+<NAME TYPE="DOCTOR" comment="" end="3073" id="P22" start="3055" text="Timothy Quarterman" />
+<NAME TYPE="DOCTOR" comment="" end="3113" id="P23" start="3095" text="Timothy Quarterman" />
+<ID TYPE="IDNUM" comment="" end="3145" id="P24" start="3136" text="6-0437424" />
+<NAME TYPE="DOCTOR" comment="" end="3171" id="P25" start="3160" text="John Koontz" />
+<LOCATION TYPE="STREET" comment="" end="3192" id="P26" start="3175" text="489 MONICA STREET" />
+<LOCATION TYPE="CITY" comment="" end="3200" id="P27" start="3193" text="MINERVA" />
+<LOCATION TYPE="STATE" comment="" end="3204" id="P28" start="3202" text="TN" />
+<LOCATION TYPE="ZIP" comment="" end="3210" id="P29" start="3205" text="41694" />
+<DATE TYPE="DATE" comment="" end="3224" id="P30" start="3216" text="05/10/73" />
+<DATE TYPE="DATE" comment="" end="3237" id="P31" start="3229" text="05/11/73" />
+<DATE TYPE="DATE" comment="" end="3250" id="P32" start="3242" text="05/10/73" />
+</TAGS>
+</deIdi2b2>

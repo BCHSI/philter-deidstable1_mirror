@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='utf8'?>
+<deIdi2b2>
+<TEXT>
+
+
+Record date: 2107-10-24
+
+TOOLE COUNTY HOSPITAL
+Cardiology
+871 Westerdale Drive                           Werner, Nancy
+West Liberty, AL 54854                       2-05-09
+ 
+ 
+ 
+Routine Visit
+ 
+Taking Diabeta 10 b.i.d. as well as other medications and has now added 
+Pravachol 40 mg. at bedtime.  She is tolerating the Pravachol well.  
+Blood sugars at home, morning and at bedtime, are in the 130-155 range.  
+No side effects of the medication.  No evidence of hypoglycemia.  No 
+polyuria, polydipsia.  Trying to walk on a treadmill inside the house 20 
+minutes at a time several times a week.  Trying to watch diet.
+ 
+Physical Exam:  Blood pressure:  150/86, 148/84.  Pulse 78.  PERRL.  
+Carotids 1+, no bruits.  No peripheral edema.
+ 
+Assessment:  Blood pressure adequately controlled.  Sounds like diabetes 
+is moderately well controlled.  Check hemoglobin A1 today.  She will 
+call me for these results in 10 days.  Adjust Diabeta if necessary.  
+Return here in three months.  
+ 
+ 
+ 
+ 
+ 
+_________________________
+Paul D. Quaglia, M.D.
+ 
+mzy:KX:7901
+DD:2-15-09
+
+
+
+
+</TEXT>
+<TAGS>
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2107-10-24" />
+<LOCATION TYPE="HOSPITAL" comment="" end="49" id="P1" start="28" text="TOOLE COUNTY HOSPITAL" />
+<LOCATION TYPE="STREET" comment="" end="81" id="P3" start="61" text="871 Westerdale Drive" />
+<NAME TYPE="PATIENT" comment="" end="121" id="P4" start="108" text="Werner, Nancy" />
+<LOCATION TYPE="CITY" comment="" end="134" id="P5" start="122" text="West Liberty" />
+<LOCATION TYPE="STATE" comment="" end="138" id="P6" start="136" text="AL" />
+<LOCATION TYPE="ZIP" comment="" end="144" id="P7" start="139" text="54854" />
+<DATE TYPE="DATE" comment="" end="174" id="P8" start="167" text="2-05-09" />
+<NAME TYPE="DOCTOR" comment="" end="1037" id="P9" start="1022" text="Paul D. Quaglia" />
+<ID TYPE="IDNUM" comment="" end="1057" id="P10" start="1046" text="mzy:KX:7901" />
+<DATE TYPE="DATE" comment="" end="1068" id="P11" start="1061" text="2-15-09" />
+</TAGS>
+</deIdi2b2>

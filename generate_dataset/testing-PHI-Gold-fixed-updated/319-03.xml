@@ -1,0 +1,118 @@
+<?xml version='1.0' encoding='utf8'?>
+<deIdi2b2>
+<TEXT>
+
+
+Record date: 2088-03-03
+
+                                                       Patient Name: WILKERSON,EDWARD ***REMOVED*** MRN: 37199514MEDIQUIK ***REMOVED***
+
+                                                         Date of Visit: 3/3/2088
+
+
+
+
+
+MIMA PCP VISIT
+
+
+
+Health problems discussed:
+
+1. DM type 2. Fingerstick in the office today 130. At home, these have been mostly in the 84 -130s, but rarely up to the 180-190s. Last HbA1c was 5.8.
+
+--given outlier hyperglycemia and no hypoglycemia, increase metformin to 1000 bid from 1000 qAM/500 qPM
+
+--recheck A1c today
+
+--increase lisinopril to 20 daily given BP 142/66 today
+
+
+
+2. Lipids. Last dLDL 108. Denies any muscle cramps or weakness.
+
+--increase atorvastatin to 40 daily, check transaminases
+
+
+
+3. Weight. Has lost 11 pounds intentionally since September by doing more walking, eating fewer potatoes, red meat, rice.  BMI now 26.  Patient congratulated, encouraged to continue with his current diet and increase exercise as tolerated. Cautioned on caffeine given h/o SVT.
+
+
+
+4. SVT. To see Dr. Pate from cardiology in 2 days to f/u his SVT. No known further episodes since starting verapamil.
+
+
+
+5. Health maintenance.
+
+--due for colonoscopy: referred, given Rx for Golytely
+
+
+
+PE:
+
+Blood Pressure:   142/66   ***REMOVED***Left Arm, Sitting***REMOVED***
+
+Pulse:   74   ***REMOVED***Regular, Brachial***REMOVED***
+
+Weight:   191   ***REMOVED***Pounds***REMOVED***
+
+NAD, does not appear to be responding to internal stimuli
+
+JVP 7
+
+CTA bilat
+
+RRR no mrg, no heave
+
+Abd soft, nt/nd, nabs, no mass
+
+No foot lesions
+
+Trace bilat ankle pitting
+
+2+ DP and PTs bilat
+
+
+
+______________________________                              
+
+
+
+Floyd Bobby Ventura, M.D.
+
+
+
+========================== Preceptor's Note ==========================
+
+
+
+Pt discussed with Dr. Ventura; I agree with his evaluation and plan.
+
+
+
+
+
+______________________________                              
+
+
+
+Nancy Elizabeth Roman, M.D.
+
+
+
+</TEXT>
+<TAGS>
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2088-03-03" />
+<NAME TYPE="PATIENT" comment="" end="113" id="P1" start="97" text="WILKERSON,EDWARD" />
+<ID TYPE="MEDICALRECORD" comment="" end="129" id="P2" start="121" text="37199514" />
+<LOCATION TYPE="HOSPITAL" comment="" end="137" id="P3" start="129" text="MEDIQUIK" />
+<DATE TYPE="DATE" comment="" end="221" id="P4" start="213" text="3/3/2088" />
+<LOCATION TYPE="HOSPITAL" comment="" end="228" id="P5" start="227" text="M" />
+<DATE TYPE="DATE" comment="" end="794" id="P6" start="785" text="September" />
+<NAME TYPE="DOCTOR" comment="" end="1038" id="P7" start="1034" text="Pate" />
+<NAME TYPE="DOCTOR" comment="" end="1613" id="P8" start="1594" text="Floyd Bobby Ventura" />
+<NAME TYPE="DOCTOR" comment="" end="1726" id="P9" start="1719" text="Ventura" />
+<NAME TYPE="DOCTOR" comment="" end="1856" id="P10" start="1835" text="Nancy Elizabeth Roman" />
+</TAGS>
+</deIdi2b2>

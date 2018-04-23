@@ -1,0 +1,175 @@
+<?xml version='1.0' encoding='utf8'?>
+<deIdi2b2>
+<TEXT>
+
+
+Record date: 2095-02-06
+
+
+
+
+
+
+
+
+
+PATIENT NAME:  MEYER, OSCAR;    MRN:  2771447
+
+Dictated on:  02/06/2095 by VICTOR M. ZUBIA, M.D.
+
+
+
+
+
+Oncology CONSULTATION NOTE:
+
+
+
+DATE OF CONSULTATION:
+
+
+
+DIAGNOSIS:  T2b, NX, M0 Gleason 4+3=7 adenocarcinoma of the prostate.
+
+
+
+HISTORY:  Mr. Meyar is a delightful patient referred to me by Dr. Osiel Mckee.  His PSA in 2093 was 3.8, early this year 6.3, and on repeat 7.1.  Abnormality was noted on digital rectal exam.  He has very little in the way of voiding symptoms with a good stream, no dribbling, nor any frequency.  He does still have his erections, though they are not as good as they used to be.  The erections are still an important issue with him.  Dr. Mckee performed a transrectal ultrasound that showed a 13 cc prostate.  He took 12 biopsy cores and all 12 demonstrated prostate cancer.  In 4 it was Gleason 6 and in the remainder Gleason 7.  Many cores had a predominant Gleason 4 pattern.  Many of the cores were heavily involved with 40% involvement or more.  Mr. Mercado has a CT scan and a pelvic MRI scheduled for next week.
+
+
+
+PAST MEDICAL HISTORY:
+
+1.	Diabetes.
+
+2.	Nephrolithiasis status post lithotripsy.
+
+3.	Tonsillectomy.
+
+4.	Right inguinal hernia repair.
+
+5.	Inflammatory bowel disease.
+
+
+
+CURRENT MEDICATIONS:  Glipizide, metformin, and Avandia.
+
+
+
+DRUG ALLERGIES:  None known.
+
+
+
+SOCIAL HISTORY:  His father was diagnosed with prostate cancer in his late 70s, but he did not die from his disease.
+
+
+
+SOCIAL HISTORY:  He works as a Web Developer in Audiovox.  He is married and came with his wife to the appointment today.  He has no children.  He is a former smoker and occasional drinker.
+
+
+
+
+
+PHYSICAL EXAM:
+
+No anemia, jaundice, cyanosis, or clubbing
+
+No gynecomastia
+
+Respiration comfortable
+
+No neurologic abnormalities in the arms or legs
+
+No skeletal deformity or tenderness
+
+Head, eyes, ears, and nose normal 
+
+Abdomen soft with no hepatomegaly, splenomegaly, nor any additional masses.
+
+No hernias.
+
+Normal penis, scrotum, and testes.
+
+Rectum: no mural lesion. Stool guaiac negative
+
+Prostate is small.  The entire right side of his gland is taken up with tumor.
+
+
+
+IMPRESSION AND PLAN:  Mr. Meyer is a young man with a significant and quite bulky prostate cancer.  I certainly do not think active surveillance is an option for him, which is a shame, as that was his preference.  Left untreated, I think he will be in deep trouble at some stage over the next few years.  His second choice for treatment is prostate brachytherapy but again I believe his disease is too extensive for this and brachytherapy would represent significant under treatment.
+
+
+
+On balance, my preference for him is either to have a radical prostatectomy, perhaps followed by postoperative radiation or alternatively, if he wishes to avoid surgery and he does, for him to have high-dose external radiation in conjunction with neoadjuvant and concomitant androgen deprivation.  While I think he will recover good voiding function after either of these treatment combinations his sex life is under threat and he is aware of this.  We will defer the final decision next week until he has had his scans.  Obviously, should they show extensive extracapsular disease then surgery will be off the table, if they show nodal disease the same is true and we will be thinking in terms of long-term androgen deprivation.  Hopefully neither of these scenarios will occur.
+
+
+
+
+
+
+
+
+
+Victor M. Zubia, M.D.
+
+
+
+cc:
+
+Osiel U. Mckee, M.D.
+
+Urology, Shelby Community Hospital
+
+
+
+Oscar Nagel, M.D.
+
+1502 Maple Street
+
+rm 929
+
+Kalaheo, AL
+
+
+
+
+
+VZ/78916
+
+HT/148-8151
+
+D:  02/06/2095
+
+T:  02/07/2095
+
+
+
+</TEXT>
+<TAGS>
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2095-02-06" />
+<NAME TYPE="PATIENT" comment="" end="63" id="P1" start="51" text="MEYER, OSCAR" />
+<ID TYPE="MEDICALRECORD" comment="" end="81" id="P2" start="74" text="2771447" />
+<DATE TYPE="DATE" comment="" end="107" id="P3" start="97" text="02/06/2095" />
+<NAME TYPE="DOCTOR" comment="" end="126" id="P4" start="111" text="VICTOR M. ZUBIA" />
+<NAME TYPE="PATIENT" comment="" end="286" id="P6" start="281" text="Meyar" />
+<NAME TYPE="DOCTOR" comment="" end="344" id="P7" start="333" text="Osiel Mckee" />
+<DATE TYPE="DATE" comment="" end="362" id="P8" start="358" text="2093" />
+<NAME TYPE="DOCTOR" comment="" end="710" id="P9" start="705" text="Mckee" />
+<NAME TYPE="PATIENT" comment="" end="1029" id="P10" start="1022" text="Mercado" />
+<PROFESSION TYPE="PROFESSION" comment="" end="1514" id="P12" start="1501" text="Web Developer" />
+<LOCATION TYPE="ORGANIZATION" comment="" end="1526" id="P13" start="1518" text="Audiovox" />
+<NAME TYPE="PATIENT" comment="" end="2176" id="P14" start="2171" text="Meyer" />
+<NAME TYPE="DOCTOR" comment="" end="3436" id="P15" start="3421" text="Victor M. Zubia" />
+<NAME TYPE="DOCTOR" comment="" end="3465" id="P16" start="3451" text="Osiel U. Mckee" />
+<LOCATION TYPE="HOSPITAL" comment="" end="3507" id="P17" start="3482" text="Shelby Community Hospital" />
+<NAME TYPE="DOCTOR" comment="" end="3522" id="P18" start="3511" text="Oscar Nagel" />
+<LOCATION TYPE="STREET" comment="" end="3547" id="P19" start="3530" text="1502 Maple Street" />
+<LOCATION TYPE="CITY" comment="" end="3564" id="P21" start="3557" text="Kalaheo" />
+<LOCATION TYPE="STATE" comment="" end="3568" id="P22" start="3566" text="AL" />
+<NAME TYPE="DOCTOR" comment="" end="3576" id="P23" start="3574" text="VZ" />
+<CONTACT TYPE="PHONE" comment="" end="3582" id="P24" start="3577" text="78916" />
+<NAME TYPE="DOCTOR" comment="" end="3586" id="P25" start="3584" text="HT" />
+<CONTACT TYPE="PHONE" comment="" end="3595" id="P26" start="3587" text="148-8151" />
+<DATE TYPE="DATE" comment="" end="3611" id="P27" start="3601" text="02/06/2095" />
+<DATE TYPE="DATE" comment="" end="3627" id="P28" start="3617" text="02/07/2095" />
+</TAGS>
+</deIdi2b2>
