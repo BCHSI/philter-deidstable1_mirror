@@ -932,7 +932,11 @@ class Philter:
                 "location_fns":0,
                 "location_tps":0,
                 "organization_fns":0,
-                "organization_tps":0
+                "organization_tps":0,
+                "age_fns":0,
+                "age_tps":0
+                # "profession_fns":0,
+                # "profession_tps":0              
             }
             # Create dictionaries for unigram and bigram PHI/non-PHI frequencies
             # Diciontary values look like: [phi_count, non-phi_count]
@@ -1044,7 +1048,8 @@ class Philter:
                 contact_cleaned = []
                 locations_cleaned = []
                 organizations_cleaned =[]
-
+                age_cleaned =[]
+                profession_cleaned =[]
 
                 for phi_dict in phi_list:
                     # Names
@@ -1124,6 +1129,32 @@ class Philter:
                                 else:
                                     organizations_cleaned.append(item)                
                 
+                    # Age >90                    
+                    if phi_dict['TYPE'] == 'AGE':
+                        lst = re.split("(\s+)", phi_dict['text'])
+                        for item in lst:
+                            if len(item) > 0:
+                                if item.isspace() == False:
+                                    split_item = re.split("(\s+)", re.sub(punctuation_matcher, " ", item))
+                                    for elem in split_item:
+                                        if len(elem) > 0:
+                                            age_cleaned.append(elem)
+                                else:
+                                    age_cleaned.append(item)                  
+
+                    # Profession                    
+                    # if phi_dict['TYPE'] == 'PROFESSION':
+                    #     lst = re.split("(\s+)", phi_dict['text'])
+                    #     for item in lst:
+                    #         if len(item) > 0:
+                    #             if item.isspace() == False:
+                    #                 split_item = re.split("(\s+)", re.sub(punctuation_matcher, " ", item))
+                    #                 for elem in split_item:
+                    #                     if len(elem) > 0:
+                    #                         profession_cleaned.append(elem)
+                    #             else:
+                    #                 profession_cleaned.append(item)  
+
                 fn_tag_summary = {}
                 names_fn_counter = 0
                 dates_fn_counter = 0
@@ -1131,6 +1162,8 @@ class Philter:
                 contact_fn_counter = 0
                 location_fn_counter = 0
                 organization_fn_counter = 0
+                age_fn_counter = 0
+                #profession_fn_counter = 0
 
                 if current_summary['false_negatives'] != [] and current_summary['false_negatives'] != [""]:              
                     current_fns = current_summary['false_negatives']
@@ -1179,8 +1212,19 @@ class Philter:
                                 rp_summaries["organization_fns"] += 1
                                 organization_fn_counter += 1  
 
+                            # Age FNs
+                            if (start_coordinate_fn in range(int(phi_start), int(phi_end))) and (phi_type == 'AGE'):
+                                rp_summaries["age_fns"] += 1
+                                age_fn_counter += 1 
+                                # print(word) 
+                            
+                            # profession FNs
+                            # if (start_coordinate_fn in range(int(phi_start), int(phi_end))) and (phi_type == 'PROFESSION'):
+                            #     rp_summaries["profession_fns"] += 1
+                            #     profession_fn_counter += 1  
+
                             # Find PHI match: fn in text, coord in range
-                            if (false_negative in phi_text) and (start_coordinate_fn in range(int(phi_start), int(phi_end))):
+                            if start_coordinate_fn in range(int(phi_start), int(phi_end)):
                                 # Get PHI tag
                                 phi_tag = phi_type
                                 # Get POS tag
@@ -1199,10 +1243,12 @@ class Philter:
                                 # if fn == './data/i2b2_results/137-03.txt':
                                 #     print(fn_context)                  
                                 
-                                # Get fn id, to distinguish multiple entries
+                                # Get fn id, to distinguish betweem multiple entries
                                 fn_id = phi_id
                                 ###### Create output dicitonary with id/word/pos/phi
                                 fn_tag_summary[fn_id] = [false_negative, phi_tag, pos_tag, fn_context]
+                                # if phi_tag == 'AGE':
+                                #     print(word)
                  
                 if fn_tag_summary != {}:
                     fn_tags[fn] = fn_tag_summary
@@ -1214,6 +1260,8 @@ class Philter:
                 rp_summaries['contact_tps'] += (len(contact_cleaned) - contact_fn_counter)
                 rp_summaries['location_tps'] += (len(locations_cleaned) - location_fn_counter)
                 rp_summaries['organization_tps'] += (len(organizations_cleaned) - organization_fn_counter)
+                rp_summaries['age_tps'] += (len(age_cleaned) - age_fn_counter)
+                #rp_summaries['profession_tps'] += (len(profession_cleaned) - profession_fn_counter)
 
                 ####### Get FP tags #########
                 fp_tag_summary = {}
@@ -1287,6 +1335,14 @@ class Philter:
             organization_recall = (rp_summaries['organization_tps']-rp_summaries['organization_fns'])/rp_summaries['organization_tps']
             if organization_recall < 0:
                 organization_recall = 0             
+            # print("TPs:",rp_summaries['age_tps'])
+            # print("FNs:",rp_summaries['age_fns'])
+            age_recall = (rp_summaries['age_tps']-rp_summaries['age_fns'])/rp_summaries['age_tps']
+            if age_recall < 0:
+                age_recall = 0 
+            # profession_recall = (rp_summaries['profession_tps']-rp_summaries['profession_fns'])/rp_summaries['profession_tps']
+            # if profession_recall < 0:
+            #     profession_recall = 0             
 
             # Print to terminal
             print("Names Recall: " + "{:.2%}".format(names_recall))
@@ -1295,7 +1351,8 @@ class Philter:
             print("Contact Recall: " + "{:.2%}".format(contact_recall))
             print("Location Recall: " + "{:.2%}".format(location_recall))
             print("Organization Recall: " + "{:.2%}".format(organization_recall))
-
+            print("Age>=90 Recall: " + "{:.2%}".format(age_recall))
+            # print("Profession Recall: " + "{:.2%}".format(profession_recall))
 
             ######## Summarize FN results #########
             
@@ -1326,9 +1383,8 @@ class Philter:
                     phi_tag = current_list_context[1]
                     pos_tag = current_list_context[2]
                     fn_context = current_list_context[3].replace("\n"," ")
-                    
-                    # Context
-                    if current_list_context not in fn_tags_condensed_list_context:
+                    #Context
+                    if current_list_context not in fn_tags_condensed_list_context:                      
                         fn_tags_condensed_list_context.append(current_list_context)
                         key_name = "uniq" + str(context_counter)
                         fn_tags_condensed_context[key_name] = [word, phi_tag, pos_tag, fn_context, 1]
@@ -1339,12 +1395,12 @@ class Philter:
                         fn_tags_condensed_context[uniq_id][4] += 1
 
                     # No context
-                    if current_list_nocontext not in fn_tags_condensed_list:
+                    if current_list_nocontext not in fn_tags_condensed_list:   
                         fn_tags_condensed_list.append(current_list_nocontext)
                         key_name = "uniq" + str(nocontext_counter)
                         fn_tags_condensed[key_name] = [word, phi_tag, pos_tag, 1]
                         nocontext_counter += 1
-                    else:
+                    else: 
                         uniq_id_index = fn_tags_condensed_list.index(current_list_nocontext)
                         uniq_id = "uniq" + str(uniq_id_index)
                         fn_tags_condensed[uniq_id][3] += 1
