@@ -46,6 +46,9 @@ class Philter:
         else:
             raise Exception("Output format undefined")
         
+        if "ucsfformat" in config:
+            self.ucsf_format = config["ucsfformat"]
+       
         if "filters" in config:
             if not os.path.exists(config["filters"]):
                 raise Exception("Filepath does not exist", config["filters"])
@@ -1050,11 +1053,10 @@ class Philter:
                 locations_cleaned = []
                 organizations_cleaned =[]
                 age_cleaned =[]
-                profession_cleaned =[]
 
                 for phi_dict in phi_list:
                     # Names
-                    if phi_dict['TYPE'] == 'DOCTOR' or phi_dict['TYPE'] == 'PATIENT':
+                    if phi_dict['TYPE'] == 'DOCTOR' or phi_dict['TYPE'] == 'PATIENT' or phi_dict['TYPE'] == "Patient_Name_or_Family_Member_Name" or phi_dict['TYPE'] == "Provider_Name":
                         lst = re.split("(\s+)", phi_dict['text'])
                         for item in lst:
                             if len(item) > 0:
@@ -1066,7 +1068,7 @@ class Philter:
                                 else:
                                     names_cleaned.append(item)
                     # Dates
-                    if phi_dict['TYPE'] == 'DATE':
+                    if phi_dict['TYPE'] == 'DATE' or phi_dict['TYPE'] == 'Date':
                         lst = re.split("(\s+)", phi_dict['text'])
                         for item in lst:
                             if len(item) > 0:
@@ -1078,7 +1080,7 @@ class Philter:
                                 else:
                                     dates_cleaned.append(item)
                     # IDs
-                    if phi_dict['TYPE'] == 'MEDICALRECORD' or phi_dict['TYPE'] == 'IDNUM' or phi_dict['TYPE'] == 'DEVICE':
+                    if phi_dict['TYPE'] == 'MEDICALRECORD' or phi_dict['TYPE'] == 'IDNUM' or phi_dict['TYPE'] == 'DEVICE' or phi_dict['TYPE'] == "URL_IP" or phi_dict['TYPE'] == "Social_Security" or phi_dict['TYPE'] == "Medical_Record_ID" or phi_dict['TYPE'] == "Account_Number" or phi_dict['TYPE'] == "Certificate_or_License" or phi_dict['TYPE'] == "Vehicle_or_Device_ID" or phi_dict['TYPE'] == "Unique_Patient_Id" or phi_dict['TYPE'] == "Biometric_ID_or_Face_Photo":
                         lst = re.split("(\s+)", phi_dict['text'])
                         for item in lst:
                             if len(item) > 0:
@@ -1091,7 +1093,7 @@ class Philter:
                                     ids_cleaned.append(item) 
 
                     # Contact info                    
-                    if phi_dict['TYPE'] == 'USERNAME' or phi_dict['TYPE'] == 'PHONE' or phi_dict['TYPE'] == 'EMAIL' or phi_dict['TYPE'] == 'FAX':
+                    if phi_dict['TYPE'] == 'USERNAME' or phi_dict['TYPE'] == 'PHONE' or phi_dict['TYPE'] == 'EMAIL' or phi_dict['TYPE'] == 'FAX' or phi_dict['TYPE'] == "Phone_Fax" or phi_dict['TYPE'] == 'Email':
                         lst = re.split("(\s+)", phi_dict['text'])
                         for item in lst:
                             if len(item) > 0:
@@ -1104,7 +1106,7 @@ class Philter:
                                     contact_cleaned.append(item)           
 
                     # Locations                    
-                    if phi_dict['TYPE'] == 'CITY' or phi_dict['TYPE'] == 'STATE' or phi_dict['TYPE'] == 'ZIP' or phi_dict['TYPE'] == 'STREET' or phi_dict['TYPE'] == 'LOCATION-OTHER':
+                    if phi_dict['TYPE'] == 'CITY' or phi_dict['TYPE'] == 'STATE' or phi_dict['TYPE'] == 'ZIP' or phi_dict['TYPE'] == 'STREET' or phi_dict['TYPE'] == 'LOCATION-OTHER' or phi_dict['TYPE'] == 'Address':
                         lst = re.split("(\s+)", phi_dict['text'])
                         for item in lst:
                             if len(item) > 0:
@@ -1131,7 +1133,7 @@ class Philter:
                                     organizations_cleaned.append(item)                
                 
                     # Age >90                    
-                    if phi_dict['TYPE'] == 'AGE':
+                    if phi_dict['TYPE'] == 'AGE' or phi_dict['TYPE'] == 'Age':
                         lst = re.split("(\s+)", phi_dict['text'])
                         for item in lst:
                             if len(item) > 0:
@@ -1143,18 +1145,6 @@ class Philter:
                                 else:
                                     age_cleaned.append(item)                  
 
-                    # Profession                    
-                    # if phi_dict['TYPE'] == 'PROFESSION':
-                    #     lst = re.split("(\s+)", phi_dict['text'])
-                    #     for item in lst:
-                    #         if len(item) > 0:
-                    #             if item.isspace() == False:
-                    #                 split_item = re.split("(\s+)", re.sub(punctuation_matcher, " ", item))
-                    #                 for elem in split_item:
-                    #                     if len(elem) > 0:
-                    #                         profession_cleaned.append(elem)
-                    #             else:
-                    #                 profession_cleaned.append(item)  
 
                 fn_tag_summary = {}
                 names_fn_counter = 0
@@ -1175,36 +1165,40 @@ class Philter:
                         false_negative = word[0]
                         start_coordinate_fn = word[1]
                       
-                        for phi_item in phi_list:
+                        for phi_item in phi_list:                           
                             phi_text = phi_item['text']
                             phi_type = phi_item['TYPE']
-                            phi_start = phi_item['start']
-                            phi_end = phi_item['end']
                             phi_id = phi_item['id']
+                            if self.ucsf_format:
+                                phi_start = int(phi_item['spans'].split('~')[0])
+                                phi_end = int(phi_item['spans'].split('~')[1])                               
+                            else:
+                                phi_start = phi_item['start']
+                                phi_end = phi_item['end']
 
                             # Names FNs
-                            if (start_coordinate_fn in range(int(phi_start), int(phi_end))) and (phi_type == "DOCTOR" or phi_type == "PATIENT"):
+                            if (start_coordinate_fn in range(int(phi_start), int(phi_end))) and (phi_type == "DOCTOR" or phi_type == "PATIENT" or phi_type == "Patient_Name_or_Family_Member_Name" or phi_type == "Provider_Name"):
                                 rp_summaries["names_fns"] += 1
                                 names_fn_counter += 1
 
                             # Dates FNs
-                            if (start_coordinate_fn in range(int(phi_start), int(phi_end))) and phi_type == "DATE":
+                            if (start_coordinate_fn in range(int(phi_start), int(phi_end))) and (phi_type == "DATE" or phi_type == 'Date'):
                                 rp_summaries["dates_fns"] += 1
                                 dates_fn_counter += 1
 
 
                             # ID FNs
-                            if (start_coordinate_fn in range(int(phi_start), int(phi_end))) and (phi_type == "MEDICALRECORD" or phi_type == "IDNUM" or phi_type == "DEVICE"):
+                            if (start_coordinate_fn in range(int(phi_start), int(phi_end))) and (phi_type == "MEDICALRECORD" or phi_type == "IDNUM" or phi_type == "DEVICE" or phi_type == "URL_IP" or phi_type == "Social_Security" or phi_type == "Medical_Record_ID" or phi_type == "Account_Number" or phi_type == "Certificate_or_License" or phi_type == "Vehicle_or_Device_ID" or phi_type == "Unique_Patient_Id" or phi_type == "Biometric_ID_or_Face_Photo"):
                                 rp_summaries["id_fns"] += 1
                                 id_fn_counter += 1
 
                             # Contact FNs
-                            if (start_coordinate_fn in range(int(phi_start), int(phi_end))) and (phi_type == "USERNAME" or phi_type == "PHONE" or phi_type == "EMAIL" or phi_type == "FAX"):
+                            if (start_coordinate_fn in range(int(phi_start), int(phi_end))) and (phi_type == "USERNAME" or phi_type == "PHONE" or phi_type == "EMAIL" or phi_type == "FAX" or phi_type == "Phone_Fax" or phi_type == 'Email'):
                                 rp_summaries["contact_fns"] += 1
                                 contact_fn_counter += 1 
                             
                             # Location FNs
-                            if (start_coordinate_fn in range(int(phi_start), int(phi_end))) and (phi_type == 'CITY' or phi_type == 'STATE' or phi_type == 'ZIP' or phi_type == 'STREET' or phi_type == 'LOCATION-OTHER'):
+                            if (start_coordinate_fn in range(int(phi_start), int(phi_end))) and (phi_type == 'CITY' or phi_type == 'STATE' or phi_type == 'ZIP' or phi_type == 'STREET' or phi_type == 'LOCATION-OTHER' or phi_type == 'Address'):
                                 rp_summaries["location_fns"] += 1
                                 location_fn_counter += 1                               
 
@@ -1214,7 +1208,7 @@ class Philter:
                                 organization_fn_counter += 1  
 
                             # Age FNs
-                            if (start_coordinate_fn in range(int(phi_start), int(phi_end))) and (phi_type == 'AGE'):
+                            if (start_coordinate_fn in range(int(phi_start), int(phi_end))) and (phi_type == 'AGE' or phi_type == 'Age'):
                                 rp_summaries["age_fns"] += 1
                                 age_fn_counter += 1 
                                 # print(word) 
@@ -1318,32 +1312,48 @@ class Philter:
 
             
             # Get names recall
-            names_recall = (rp_summaries['names_tps']-rp_summaries['names_fns'])/rp_summaries['names_tps']
-            if names_recall < 0:
+            if rp_summaries['names_tps'] != 0:
+                names_recall = (rp_summaries['names_tps']-rp_summaries['names_fns'])/rp_summaries['names_tps']
+            if (rp_summaries['names_tps']-rp_summaries['names_fns']) < 0 or rp_summaries['names_tps'] == 0:
                 names_recall = 0
-            dates_recall = (rp_summaries['dates_tps']-rp_summaries['dates_fns'])/rp_summaries['dates_tps']
-            if dates_recall < 0:
+            
+            # Get dates recall
+            if rp_summaries['dates_tps'] != 0:
+                dates_recall = (rp_summaries['dates_tps']-rp_summaries['dates_fns'])/rp_summaries['dates_tps']
+            if (rp_summaries['dates_tps']-rp_summaries['dates_fns']) < 0 or rp_summaries['dates_tps'] == 0:
                 dates_recall = 0            
-            ids_recall = (rp_summaries['id_tps']-rp_summaries['id_fns'])/rp_summaries['id_tps']
-            if ids_recall < 0:
+            
+            # Get ids recall
+            if rp_summaries['id_tps'] != 0:
+                ids_recall = (rp_summaries['id_tps']-rp_summaries['id_fns'])/rp_summaries['id_tps']
+            if (rp_summaries['id_tps']-rp_summaries['id_fns']) < 0 or rp_summaries['id_tps'] == 0:
                 ids_recall = 0            
-            contact_recall = (rp_summaries['contact_tps']-rp_summaries['contact_fns'])/rp_summaries['contact_tps']
-            if contact_recall < 0:
+            
+            # Get contact recall
+            if rp_summaries['contact_tps'] != 0:
+                contact_recall = (rp_summaries['contact_tps']-rp_summaries['contact_fns'])/rp_summaries['contact_tps']
+            if (rp_summaries['contact_tps']-rp_summaries['contact_fns']) < 0 or rp_summaries['contact_tps'] == 0:
                 contact_recall = 0            
-            location_recall = (rp_summaries['location_tps']-rp_summaries['location_fns'])/rp_summaries['location_tps']
-            if location_recall < 0:
+            
+            # Get location recall
+            if rp_summaries['location_tps'] != 0:
+                location_recall = (rp_summaries['location_tps']-rp_summaries['location_fns'])/rp_summaries['location_tps']
+            if (rp_summaries['location_tps']-rp_summaries['location_fns']) < 0 or rp_summaries['location_tps'] == 0:
                 location_recall = 0
-            organization_recall = (rp_summaries['organization_tps']-rp_summaries['organization_fns'])/rp_summaries['organization_tps']
-            if organization_recall < 0:
+            
+            # Get organization recall
+            if rp_summaries['organization_tps'] != 0:
+                organization_recall = (rp_summaries['organization_tps']-rp_summaries['organization_fns'])/rp_summaries['organization_tps']
+            if (rp_summaries['organization_tps']-rp_summaries['organization_fns']) < 0 or rp_summaries['organization_tps'] == 0:
                 organization_recall = 0             
-            # print("TPs:",rp_summaries['age_tps'])
-            # print("FNs:",rp_summaries['age_fns'])
-            age_recall = (rp_summaries['age_tps']-rp_summaries['age_fns'])/rp_summaries['age_tps']
-            if age_recall < 0:
+            
+
+            # Get age recall
+            if rp_summaries['age_tps'] != 0:
+                age_recall = (rp_summaries['age_tps']-rp_summaries['age_fns'])/rp_summaries['age_tps']
+            if age_recall < 0 or rp_summaries['age_tps'] == 0:
                 age_recall = 0 
-            # profession_recall = (rp_summaries['profession_tps']-rp_summaries['profession_fns'])/rp_summaries['profession_tps']
-            # if profession_recall < 0:
-            #     profession_recall = 0             
+            
 
             # Print to terminal
             print("Names Recall: " + "{:.2%}".format(names_recall))

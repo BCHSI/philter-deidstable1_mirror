@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<PhilterUCSF>
+<TEXT><![CDATA[A900001  2011-1-20 18:40:00.000 7465789 1       EMERGENCY DEPARTMENT CHART [FINAL]    ---------- VISIT DATA  ------------------------------------------------------------  Patient NORGEOT, BEAU (317 62 10-1), visit number 189487645, arrived at the  ED at 1/20/2011 5:35:18 PM with  a complaint at registration of  PAIN ARM/LEG-EXTREMITIES.    ---------- HISTORY OF PRESENT ILLNESS  ------------------------------------  (Triage complaint:  brick fell on RT foot yesterday at work. now c/o rt big  toe pain. no swelling UC  ),  29  y.o. M c/o of R big toe pain 1/10 mild after a brick fell on his R foot  yesterday.  He denies any other  injury or pain or complaint. No fall. Able to walk without pain or difficulty.  No pain or complaint  proximally up his RLE. No numbness/tingling.,  --Medications    None--Allergies  None  --Past Medical History    rt eye surgery  --Tobacco: None  --Alcohol: None  --Recreational drugs: denies  Other medical charts and records reviewed and interpreted: Triage and nursing  notes    ---------- REVIEW OF SYSTEMS  --------------------------------------------------  --GENERAL ROS comments / Constitutional: negative,  fever,  chills.  --EYES: negative .  --EAR NOSE MOUTH THROAT: see HPI.  --RESPIRATORY: negative.  --CARDIOVASCULAR: negative.  --MUSCULOSKELETAL and EXTREMITY: see HPI,  denies the following:  myalgia,  leg pain,  hand pain,  foot pain,  arm pain,  back pain.  --SKIN and lymph system: negative,  denies the following:  abrasion,  ecchymosis,  laceration,  puncture  wound.  --NEUROLOGIC: negative,  denies the following:  extrem. weakness,  decr.  sensation,  paresthesias.    ----------  PHYSICAL EXAM  --------------------------------------------------  --GENERAL APPEARANCE: well nourished,  NAD,  alert & responsive.  Triage VS - BP 123/82,  pulse 64,  resp 18,  O2 sat 100,  temp 36.8  oral.  Pain = 2/10..  Provider  interpretation =  normal VS,  nl O2 sat.  --ENMT exam: Normal exam including:   head,  nose,  external ear,
+]]></TEXT>
+<TAGS>
+<Age id="A0" spans="0~7" text="A900001" TYPE="Age" />
+<Age id="A1" spans="526~528" text="29" TYPE="Age" />
+<Phone_Fax id="P0" spans="313~317" text="PAIN" TYPE="Phone_Fax" />
+<Email id="E0" spans="326~337" text="EXTREMITIES" TYPE="Email" />
+<URL_IP id="U0" spans="19~31" text="18:40:00.000" TYPE="URL_IP" />
+<Date id="D0" spans="254~263" text="1/20/2011" TYPE="Date" />
+<Social_Security id="S0" spans="618~624" text="denies" TYPE="Social_Security" />
+<Medical_Record_ID id="M0" spans="727~736" text="complaint" TYPE="Medical_Record_ID" />
+<Account_Number id="Ac0" spans="756~759" text="RLE" TYPE="Account_Number" />
+<Certificate_or_License id="C0" spans="787~798" text="Medications" TYPE="Certificate_or_License" />
+<Vehicle_or_Device_ID id="V0" spans="808~817" text="Allergies" TYPE="Vehicle_or_Device_ID" />
+<Unique_Patient_Id id="Un0" spans="827~831" text="Past" TYPE="Unique_Patient_Id" />
+<Biometric_ID_or_Face_Photo id="B0" spans="931~936" text="Other" TYPE="Biometric_ID_or_Face_Photo" />
+<Address id="Ad0" spans="990~996" text="Triage" TYPE="Address" />
+<Patient_Name_or_Family_Member_Name id="Pa0" spans="1103~1110" text="GENERAL" TYPE="Patient_Name_or_Family_Member_Name" />
+<Patient_Name_or_Family_Member_Name id="Pa1" spans="179~192" text="NORGEOT, BEAU" TYPE="Patient_Name_or_Family_Member_Name" />
+<Provider_Name id="Pr0" spans="1207~1213" text="THROAT" TYPE="Provider_Name" />
+<Unclear id="Unc0" spans="1269~1277" text="negative" TYPE="Unclear" />
+</TAGS>
+</PhilterUCSF>

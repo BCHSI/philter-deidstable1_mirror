@@ -45,7 +45,9 @@ def main():
     ap.add_argument("--outputformat", default="asterisk",
                     help="Define format of annotation, allowed values are \"asterisk\", \"i2b2\". Default is \"asterisk\"",
                     type=str)
-
+    ap.add_argument("--ucsfformat", default=False,
+                    help="When ucsfformat is true, will adjust eval script for slightly different xml format",
+                    type=str)
 
 
     args = ap.parse_args()
@@ -61,6 +63,7 @@ def main():
         "finpath":args.input,
         "foutpath":args.output,
         "outformat":args.outputformat,
+        "ucsfformat":args.ucsfformat,
         "anno_folder":args.anno,
         "filters":args.filters,
         "xml":args.xml,
