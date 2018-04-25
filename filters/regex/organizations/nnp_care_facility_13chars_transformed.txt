@@ -1,0 +1,1 @@
+\b***REMOVED***A-Z***REMOVED******REMOVED***a-zA-Z***REMOVED***+((\s|\-)***REMOVED***A-Z***REMOVED******REMOVED***a-zA-Z***REMOVED***+)?((\s|\-)***REMOVED***A-Z***REMOVED******REMOVED***a-zA-Z***REMOVED***+)?(?=\sCare Facility|\sCARE FACILITY|\sDental Clinic|\sDENTAL CLINIC|\sCounty Clinic|\sCOUNTY CLINIC|\sHealth Center|\sHEALTH CENTER)\b
