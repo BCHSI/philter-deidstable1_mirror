@@ -945,8 +945,9 @@ class Philter:
 
             # Loop through all filenames in summary
             for fn in summary_coords['summary_by_file']:
-
+                
                 current_summary =  summary_coords['summary_by_file'][fn]
+
                 # Get corresponding info in phi_notes
                 note_name = fn.split('/')[3]
                 anno_name = note_name.split('.')[0] + ".xml"
@@ -984,7 +985,7 @@ class Philter:
                 phi_list = phi[anno_name]['phi']
                 # print(cleaned)
                 # print(pos_coords)
-                
+
 
                 ######### Create unigram and bigram frequency tables #######
                 if self.freq_table:
@@ -1166,13 +1167,13 @@ class Philter:
                 #profession_fn_counter = 0
 
                 if current_summary['false_negatives'] != [] and current_summary['false_negatives'] != [""]:              
+                    counter = 0
                     current_fns = current_summary['false_negatives']
-                    # if fn == './data/i2b2_results/137-03.txt':
-                    #     print(current_fns)
 
                     for word in current_fns:
+                        counter += 1
                         false_negative = word[0]
-                        start_coordinate_fn = word[1]                    
+                        start_coordinate_fn = word[1]
                       
                         for phi_item in phi_list:
                             phi_text = phi_item['text']
@@ -1180,7 +1181,7 @@ class Philter:
                             phi_start = phi_item['start']
                             phi_end = phi_item['end']
                             phi_id = phi_item['id']
-                            
+
                             # Names FNs
                             if (start_coordinate_fn in range(int(phi_start), int(phi_end))) and (phi_type == "DOCTOR" or phi_type == "PATIENT"):
                                 rp_summaries["names_fns"] += 1
@@ -1244,7 +1245,7 @@ class Philter:
                                 #     print(fn_context)                  
                                 
                                 # Get fn id, to distinguish betweem multiple entries
-                                fn_id = phi_id
+                                fn_id = "N" + str(counter)
                                 ###### Create output dicitonary with id/word/pos/phi
                                 fn_tag_summary[fn_id] = [false_negative, phi_tag, pos_tag, fn_context]
                                 # if phi_tag == 'AGE':
@@ -1291,7 +1292,7 @@ class Philter:
                             fp_context = text[:context_end]
 
 
-                        fp_id = "R" + str(counter)
+                        fp_id = "P" + str(counter)
                         fp_tag_summary[fp_id] = [false_positive, pos_tag, fp_context]
 
                 if fp_tag_summary != {}:

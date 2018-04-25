@@ -1,0 +1,3 @@
+\b[A-Z][a-zA-Z]+(\s|\-)([A-Z][a-zA-Z]+)?(\s|\-)?([A-Z][a-zA-Z]+\s)?(\s|\-)?(Extended Care Facility|EXTENDED CARE FACILITY)
+
+(\s[A-Z][a-zA-Z]+|\s(at|At|AT)\s[A-Z][a-zA-Z]+(\s[A-Z][a-zA-Z]+)?)?\b
