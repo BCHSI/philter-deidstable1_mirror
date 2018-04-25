@@ -46,6 +46,9 @@ class Philter:
         else:
             raise Exception("Output format undefined")
         
+        if "ucsfformat" in config:
+            self.ucsf_format = config***REMOVED***"ucsfformat"***REMOVED***
+       
         if "filters" in config:
             if not os.path.exists(config***REMOVED***"filters"***REMOVED***):
                 raise Exception("Filepath does not exist", config***REMOVED***"filters"***REMOVED***)
@@ -1050,11 +1053,10 @@ class Philter:
                 locations_cleaned = ***REMOVED******REMOVED***
                 organizations_cleaned =***REMOVED******REMOVED***
                 age_cleaned =***REMOVED******REMOVED***
-                profession_cleaned =***REMOVED******REMOVED***
 
                 for phi_dict in phi_list:
                     # Names
-                    if phi_dict***REMOVED***'TYPE'***REMOVED*** == 'DOCTOR' or phi_dict***REMOVED***'TYPE'***REMOVED*** == 'PATIENT':
+                    if phi_dict***REMOVED***'TYPE'***REMOVED*** == 'DOCTOR' or phi_dict***REMOVED***'TYPE'***REMOVED*** == 'PATIENT' or phi_dict***REMOVED***'TYPE'***REMOVED*** == "Patient_Name_or_Family_Member_Name" or phi_dict***REMOVED***'TYPE'***REMOVED*** == "Provider_Name":
                         lst = re.split("(\s+)", phi_dict***REMOVED***'text'***REMOVED***)
                         for item in lst:
                             if len(item) > 0:
@@ -1066,7 +1068,7 @@ class Philter:
                                 else:
                                     names_cleaned.append(item)
                     # Dates
-                    if phi_dict***REMOVED***'TYPE'***REMOVED*** == 'DATE':
+                    if phi_dict***REMOVED***'TYPE'***REMOVED*** == 'DATE' or phi_dict***REMOVED***'TYPE'***REMOVED*** == 'Date':
                         lst = re.split("(\s+)", phi_dict***REMOVED***'text'***REMOVED***)
                         for item in lst:
                             if len(item) > 0:
@@ -1078,7 +1080,7 @@ class Philter:
                                 else:
                                     dates_cleaned.append(item)
                     # IDs
-                    if phi_dict***REMOVED***'TYPE'***REMOVED*** == 'MEDICALRECORD' or phi_dict***REMOVED***'TYPE'***REMOVED*** == 'IDNUM' or phi_dict***REMOVED***'TYPE'***REMOVED*** == 'DEVICE':
+                    if phi_dict***REMOVED***'TYPE'***REMOVED*** == 'MEDICALRECORD' or phi_dict***REMOVED***'TYPE'***REMOVED*** == 'IDNUM' or phi_dict***REMOVED***'TYPE'***REMOVED*** == 'DEVICE' or phi_dict***REMOVED***'TYPE'***REMOVED*** == "URL_IP" or phi_dict***REMOVED***'TYPE'***REMOVED*** == "Social_Security" or phi_dict***REMOVED***'TYPE'***REMOVED*** == "Medical_Record_ID" or phi_dict***REMOVED***'TYPE'***REMOVED*** == "Account_Number" or phi_dict***REMOVED***'TYPE'***REMOVED*** == "Certificate_or_License" or phi_dict***REMOVED***'TYPE'***REMOVED*** == "Vehicle_or_Device_ID" or phi_dict***REMOVED***'TYPE'***REMOVED*** == "Unique_Patient_Id" or phi_dict***REMOVED***'TYPE'***REMOVED*** == "Biometric_ID_or_Face_Photo":
                         lst = re.split("(\s+)", phi_dict***REMOVED***'text'***REMOVED***)
                         for item in lst:
                             if len(item) > 0:
@@ -1091,7 +1093,7 @@ class Philter:
                                     ids_cleaned.append(item) 
 
                     # Contact info                    
-                    if phi_dict***REMOVED***'TYPE'***REMOVED*** == 'USERNAME' or phi_dict***REMOVED***'TYPE'***REMOVED*** == 'PHONE' or phi_dict***REMOVED***'TYPE'***REMOVED*** == 'EMAIL' or phi_dict***REMOVED***'TYPE'***REMOVED*** == 'FAX':
+                    if phi_dict***REMOVED***'TYPE'***REMOVED*** == 'USERNAME' or phi_dict***REMOVED***'TYPE'***REMOVED*** == 'PHONE' or phi_dict***REMOVED***'TYPE'***REMOVED*** == 'EMAIL' or phi_dict***REMOVED***'TYPE'***REMOVED*** == 'FAX' or phi_dict***REMOVED***'TYPE'***REMOVED*** == "Phone_Fax" or phi_dict***REMOVED***'TYPE'***REMOVED*** == 'Email':
                         lst = re.split("(\s+)", phi_dict***REMOVED***'text'***REMOVED***)
                         for item in lst:
                             if len(item) > 0:
@@ -1104,7 +1106,7 @@ class Philter:
                                     contact_cleaned.append(item)           
 
                     # Locations                    
-                    if phi_dict***REMOVED***'TYPE'***REMOVED*** == 'CITY' or phi_dict***REMOVED***'TYPE'***REMOVED*** == 'STATE' or phi_dict***REMOVED***'TYPE'***REMOVED*** == 'ZIP' or phi_dict***REMOVED***'TYPE'***REMOVED*** == 'STREET' or phi_dict***REMOVED***'TYPE'***REMOVED*** == 'LOCATION-OTHER':
+                    if phi_dict***REMOVED***'TYPE'***REMOVED*** == 'CITY' or phi_dict***REMOVED***'TYPE'***REMOVED*** == 'STATE' or phi_dict***REMOVED***'TYPE'***REMOVED*** == 'ZIP' or phi_dict***REMOVED***'TYPE'***REMOVED*** == 'STREET' or phi_dict***REMOVED***'TYPE'***REMOVED*** == 'LOCATION-OTHER' or phi_dict***REMOVED***'TYPE'***REMOVED*** == 'Address':
                         lst = re.split("(\s+)", phi_dict***REMOVED***'text'***REMOVED***)
                         for item in lst:
                             if len(item) > 0:
@@ -1131,7 +1133,7 @@ class Philter:
                                     organizations_cleaned.append(item)                
                 
                     # Age >90                    
-                    if phi_dict***REMOVED***'TYPE'***REMOVED*** == 'AGE':
+                    if phi_dict***REMOVED***'TYPE'***REMOVED*** == 'AGE' or phi_dict***REMOVED***'TYPE'***REMOVED*** == 'Age':
                         lst = re.split("(\s+)", phi_dict***REMOVED***'text'***REMOVED***)
                         for item in lst:
                             if len(item) > 0:
@@ -1143,18 +1145,6 @@ class Philter:
                                 else:
                                     age_cleaned.append(item)                  
 
-                    # Profession                    
-                    # if phi_dict***REMOVED***'TYPE'***REMOVED*** == 'PROFESSION':
-                    #     lst = re.split("(\s+)", phi_dict***REMOVED***'text'***REMOVED***)
-                    #     for item in lst:
-                    #         if len(item) > 0:
-                    #             if item.isspace() == False:
-                    #                 split_item = re.split("(\s+)", re.sub(punctuation_matcher, " ", item))
-                    #                 for elem in split_item:
-                    #                     if len(elem) > 0:
-                    #                         profession_cleaned.append(elem)
-                    #             else:
-                    #                 profession_cleaned.append(item)  
 
                 fn_tag_summary = {}
                 names_fn_counter = 0
@@ -1175,36 +1165,40 @@ class Philter:
                         false_negative = word***REMOVED***0***REMOVED***
                         start_coordinate_fn = word***REMOVED***1***REMOVED***
                       
-                        for phi_item in phi_list:
+                        for phi_item in phi_list:                           
                             phi_text = phi_item***REMOVED***'text'***REMOVED***
                             phi_type = phi_item***REMOVED***'TYPE'***REMOVED***
-                            phi_start = phi_item***REMOVED***'start'***REMOVED***
-                            phi_end = phi_item***REMOVED***'end'***REMOVED***
                             phi_id = phi_item***REMOVED***'id'***REMOVED***
+                            if self.ucsf_format:
+                                phi_start = int(phi_item***REMOVED***'spans'***REMOVED***.split('~')***REMOVED***0***REMOVED***)
+                                phi_end = int(phi_item***REMOVED***'spans'***REMOVED***.split('~')***REMOVED***1***REMOVED***)                               
+                            else:
+                                phi_start = phi_item***REMOVED***'start'***REMOVED***
+                                phi_end = phi_item***REMOVED***'end'***REMOVED***
 
                             # Names FNs
-                            if (start_coordinate_fn in range(int(phi_start), int(phi_end))) and (phi_type == "DOCTOR" or phi_type == "PATIENT"):
+                            if (start_coordinate_fn in range(int(phi_start), int(phi_end))) and (phi_type == "DOCTOR" or phi_type == "PATIENT" or phi_type == "Patient_Name_or_Family_Member_Name" or phi_type == "Provider_Name"):
                                 rp_summaries***REMOVED***"names_fns"***REMOVED*** += 1
                                 names_fn_counter += 1
 
                             # Dates FNs
-                            if (start_coordinate_fn in range(int(phi_start), int(phi_end))) and phi_type == "DATE":
+                            if (start_coordinate_fn in range(int(phi_start), int(phi_end))) and (phi_type == "DATE" or phi_type == 'Date'):
                                 rp_summaries***REMOVED***"dates_fns"***REMOVED*** += 1
                                 dates_fn_counter += 1
 
 
                             # ID FNs
-                            if (start_coordinate_fn in range(int(phi_start), int(phi_end))) and (phi_type == "MEDICALRECORD" or phi_type == "IDNUM" or phi_type == "DEVICE"):
+                            if (start_coordinate_fn in range(int(phi_start), int(phi_end))) and (phi_type == "MEDICALRECORD" or phi_type == "IDNUM" or phi_type == "DEVICE" or phi_type == "URL_IP" or phi_type == "Social_Security" or phi_type == "Medical_Record_ID" or phi_type == "Account_Number" or phi_type == "Certificate_or_License" or phi_type == "Vehicle_or_Device_ID" or phi_type == "Unique_Patient_Id" or phi_type == "Biometric_ID_or_Face_Photo"):
                                 rp_summaries***REMOVED***"id_fns"***REMOVED*** += 1
                                 id_fn_counter += 1
 
                             # Contact FNs
-                            if (start_coordinate_fn in range(int(phi_start), int(phi_end))) and (phi_type == "USERNAME" or phi_type == "PHONE" or phi_type == "EMAIL" or phi_type == "FAX"):
+                            if (start_coordinate_fn in range(int(phi_start), int(phi_end))) and (phi_type == "USERNAME" or phi_type == "PHONE" or phi_type == "EMAIL" or phi_type == "FAX" or phi_type == "Phone_Fax" or phi_type == 'Email'):
                                 rp_summaries***REMOVED***"contact_fns"***REMOVED*** += 1
                                 contact_fn_counter += 1 
                             
                             # Location FNs
-                            if (start_coordinate_fn in range(int(phi_start), int(phi_end))) and (phi_type == 'CITY' or phi_type == 'STATE' or phi_type == 'ZIP' or phi_type == 'STREET' or phi_type == 'LOCATION-OTHER'):
+                            if (start_coordinate_fn in range(int(phi_start), int(phi_end))) and (phi_type == 'CITY' or phi_type == 'STATE' or phi_type == 'ZIP' or phi_type == 'STREET' or phi_type == 'LOCATION-OTHER' or phi_type == 'Address'):
                                 rp_summaries***REMOVED***"location_fns"***REMOVED*** += 1
                                 location_fn_counter += 1                               
 
@@ -1214,7 +1208,7 @@ class Philter:
                                 organization_fn_counter += 1  
 
                             # Age FNs
-                            if (start_coordinate_fn in range(int(phi_start), int(phi_end))) and (phi_type == 'AGE'):
+                            if (start_coordinate_fn in range(int(phi_start), int(phi_end))) and (phi_type == 'AGE' or phi_type == 'Age'):
                                 rp_summaries***REMOVED***"age_fns"***REMOVED*** += 1
                                 age_fn_counter += 1 
                                 # print(word) 
@@ -1318,32 +1312,48 @@ class Philter:
 
             
             # Get names recall
-            names_recall = (rp_summaries***REMOVED***'names_tps'***REMOVED***-rp_summaries***REMOVED***'names_fns'***REMOVED***)/rp_summaries***REMOVED***'names_tps'***REMOVED***
-            if names_recall < 0:
+            if rp_summaries***REMOVED***'names_tps'***REMOVED*** != 0:
+                names_recall = (rp_summaries***REMOVED***'names_tps'***REMOVED***-rp_summaries***REMOVED***'names_fns'***REMOVED***)/rp_summaries***REMOVED***'names_tps'***REMOVED***
+            if (rp_summaries***REMOVED***'names_tps'***REMOVED***-rp_summaries***REMOVED***'names_fns'***REMOVED***) < 0 or rp_summaries***REMOVED***'names_tps'***REMOVED*** == 0:
                 names_recall = 0
-            dates_recall = (rp_summaries***REMOVED***'dates_tps'***REMOVED***-rp_summaries***REMOVED***'dates_fns'***REMOVED***)/rp_summaries***REMOVED***'dates_tps'***REMOVED***
-            if dates_recall < 0:
+            
+            # Get dates recall
+            if rp_summaries***REMOVED***'dates_tps'***REMOVED*** != 0:
+                dates_recall = (rp_summaries***REMOVED***'dates_tps'***REMOVED***-rp_summaries***REMOVED***'dates_fns'***REMOVED***)/rp_summaries***REMOVED***'dates_tps'***REMOVED***
+            if (rp_summaries***REMOVED***'dates_tps'***REMOVED***-rp_summaries***REMOVED***'dates_fns'***REMOVED***) < 0 or rp_summaries***REMOVED***'dates_tps'***REMOVED*** == 0:
                 dates_recall = 0            
-            ids_recall = (rp_summaries***REMOVED***'id_tps'***REMOVED***-rp_summaries***REMOVED***'id_fns'***REMOVED***)/rp_summaries***REMOVED***'id_tps'***REMOVED***
-            if ids_recall < 0:
+            
+            # Get ids recall
+            if rp_summaries***REMOVED***'id_tps'***REMOVED*** != 0:
+                ids_recall = (rp_summaries***REMOVED***'id_tps'***REMOVED***-rp_summaries***REMOVED***'id_fns'***REMOVED***)/rp_summaries***REMOVED***'id_tps'***REMOVED***
+            if (rp_summaries***REMOVED***'id_tps'***REMOVED***-rp_summaries***REMOVED***'id_fns'***REMOVED***) < 0 or rp_summaries***REMOVED***'id_tps'***REMOVED*** == 0:
                 ids_recall = 0            
-            contact_recall = (rp_summaries***REMOVED***'contact_tps'***REMOVED***-rp_summaries***REMOVED***'contact_fns'***REMOVED***)/rp_summaries***REMOVED***'contact_tps'***REMOVED***
-            if contact_recall < 0:
+            
+            # Get contact recall
+            if rp_summaries***REMOVED***'contact_tps'***REMOVED*** != 0:
+                contact_recall = (rp_summaries***REMOVED***'contact_tps'***REMOVED***-rp_summaries***REMOVED***'contact_fns'***REMOVED***)/rp_summaries***REMOVED***'contact_tps'***REMOVED***
+            if (rp_summaries***REMOVED***'contact_tps'***REMOVED***-rp_summaries***REMOVED***'contact_fns'***REMOVED***) < 0 or rp_summaries***REMOVED***'contact_tps'***REMOVED*** == 0:
                 contact_recall = 0            
-            location_recall = (rp_summaries***REMOVED***'location_tps'***REMOVED***-rp_summaries***REMOVED***'location_fns'***REMOVED***)/rp_summaries***REMOVED***'location_tps'***REMOVED***
-            if location_recall < 0:
+            
+            # Get location recall
+            if rp_summaries***REMOVED***'location_tps'***REMOVED*** != 0:
+                location_recall = (rp_summaries***REMOVED***'location_tps'***REMOVED***-rp_summaries***REMOVED***'location_fns'***REMOVED***)/rp_summaries***REMOVED***'location_tps'***REMOVED***
+            if (rp_summaries***REMOVED***'location_tps'***REMOVED***-rp_summaries***REMOVED***'location_fns'***REMOVED***) < 0 or rp_summaries***REMOVED***'location_tps'***REMOVED*** == 0:
                 location_recall = 0
-            organization_recall = (rp_summaries***REMOVED***'organization_tps'***REMOVED***-rp_summaries***REMOVED***'organization_fns'***REMOVED***)/rp_summaries***REMOVED***'organization_tps'***REMOVED***
-            if organization_recall < 0:
+            
+            # Get organization recall
+            if rp_summaries***REMOVED***'organization_tps'***REMOVED*** != 0:
+                organization_recall = (rp_summaries***REMOVED***'organization_tps'***REMOVED***-rp_summaries***REMOVED***'organization_fns'***REMOVED***)/rp_summaries***REMOVED***'organization_tps'***REMOVED***
+            if (rp_summaries***REMOVED***'organization_tps'***REMOVED***-rp_summaries***REMOVED***'organization_fns'***REMOVED***) < 0 or rp_summaries***REMOVED***'organization_tps'***REMOVED*** == 0:
                 organization_recall = 0             
-            # print("TPs:",rp_summaries***REMOVED***'age_tps'***REMOVED***)
-            # print("FNs:",rp_summaries***REMOVED***'age_fns'***REMOVED***)
-            age_recall = (rp_summaries***REMOVED***'age_tps'***REMOVED***-rp_summaries***REMOVED***'age_fns'***REMOVED***)/rp_summaries***REMOVED***'age_tps'***REMOVED***
-            if age_recall < 0:
+            
+
+            # Get age recall
+            if rp_summaries***REMOVED***'age_tps'***REMOVED*** != 0:
+                age_recall = (rp_summaries***REMOVED***'age_tps'***REMOVED***-rp_summaries***REMOVED***'age_fns'***REMOVED***)/rp_summaries***REMOVED***'age_tps'***REMOVED***
+            if age_recall < 0 or rp_summaries***REMOVED***'age_tps'***REMOVED*** == 0:
                 age_recall = 0 
-            # profession_recall = (rp_summaries***REMOVED***'profession_tps'***REMOVED***-rp_summaries***REMOVED***'profession_fns'***REMOVED***)/rp_summaries***REMOVED***'profession_tps'***REMOVED***
-            # if profession_recall < 0:
-            #     profession_recall = 0             
+            
 
             # Print to terminal
             print("Names Recall: " + "{:.2%}".format(names_recall))
