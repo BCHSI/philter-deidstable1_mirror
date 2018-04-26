@@ -826,7 +826,7 @@
 		"type":"set",
 		"exclude":true,
 		"filepath":"filters/blacklists/address_blacklist_cities_counties_noletters.json",
-		"pos":***REMOVED***"NNP"***REMOVED***,
+		"pos":***REMOVED***"NNP",***REMOVED***,
 		"notes":""
 	},
 	{
