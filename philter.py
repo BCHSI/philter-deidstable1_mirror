@@ -923,24 +923,61 @@ class Philter:
             fn_tags = {}
             fp_tags = {}
             # Keep track of recall and precision for each category
-            rp_summaries = {
-                "names_fns": 0,
-                "names_tps": 0, 
-                "dates_fns":0,
-                "dates_tps":0,
-                "id_fns":0,
-                "id_tps":0,
-                "contact_fns":0,
-                "contact_tps":0,
-                "location_fns":0,
-                "location_tps":0,
-                "organization_fns":0,
-                "organization_tps":0,
-                "age_fns":0,
-                "age_tps":0
-                # "profession_fns":0,
-                # "profession_tps":0              
-            }
+            # i2b2:
+            if not self.ucsf_format:
+                rp_summaries = {
+                    "names_fns": 0,
+                    "names_tps": 0, 
+                    "dates_fns":0,
+                    "dates_tps":0,
+                    "id_fns":0,
+                    "id_tps":0,
+                    "contact_fns":0,
+                    "contact_tps":0,
+                    "location_fns":0,
+                    "location_tps":0,
+                    "organization_fns":0,
+                    "organization_tps":0,
+                    "age_fns":0,
+                    "age_tps":0             
+                }
+            # ucsf:
+            if self.ucsf_format:   
+                rp_summaries = { 
+                    "account_number_fns": 0,
+                    "account_number_tps": 0,
+                    "address_fns": 0,
+                    "address_tps": 0, 
+                    "age_fns":0,
+                    "age_tps":0,
+                    "biometric_or_photo_id_fns": 0,
+                    "biometric_or_photo_id_tps": 0,
+                    "certificate_license_id_fns": 0,
+                    "certificate_license_id_tps": 0,
+                    "date_fns":0,
+                    "date_tps":0,
+                    "email_fns":0,
+                    "email_tps":0,
+                    "mrn_id_fns": 0,
+                    "mrn_id_tps": 0,
+                    "patient_family_name_fns": 0,
+                    "patient_family_name_tps": 0,
+                    "phone_fax_fns":0,
+                    "phone_fax_tps":0,
+                    "provider_name_fns": 0,
+                    "provider_name_tps": 0,
+                    "social_security_fns":0,
+                    "social_security_tps":0,
+                    "unclear_fns": 0,
+                    "unclear_tps": 0,
+                    "unique_patient_id_fns": 0,
+                    "unique_patient_id_tps": 0,                         
+                    "url_ip_fns":0,
+                    "url_ip_tps":0, 
+                    "vehicle_device_id_fns": 0,
+                    "vehicle_device_id_tps": 0            
+                }
+
             # Create dictionaries for unigram and bigram PHI/non-PHI frequencies
             # Diciontary values look like: [phi_count, non-phi_count]
             unigram_dict = {}
@@ -1044,69 +1081,28 @@ class Philter:
                                     bigram_dict[bigram_word][1] += 1
 
 
-
                 # Get tokenized PHI list and number of PHI for each category
-                names_cleaned = []
-                dates_cleaned = []
-                ids_cleaned = []
-                contact_cleaned = []
-                locations_cleaned = []
-                organizations_cleaned =[]
-                age_cleaned =[]
+                #### i2b2
+                if not self.ucsf_format:
 
-                for phi_dict in phi_list:
-                    # Names
-                    if phi_dict['TYPE'] == 'DOCTOR' or phi_dict['TYPE'] == 'PATIENT' or phi_dict['TYPE'] == "Patient_Name_or_Family_Member_Name" or phi_dict['TYPE'] == "Provider_Name":
-                        lst = re.split("(\s+)", phi_dict['text'])
-                        for item in lst:
-                            if len(item) > 0:
-                                if item.isspace() == False:
-                                    split_item = re.split("(\s+)", re.sub(punctuation_matcher, " ", item))
-                                    for elem in split_item:
-                                        if len(elem) > 0:
-                                            names_cleaned.append(elem)
-                                else:
-                                    names_cleaned.append(item)
-                    # Dates
-                    if phi_dict['TYPE'] == 'DATE' or phi_dict['TYPE'] == 'Date':
-                        lst = re.split("(\s+)", phi_dict['text'])
-                        for item in lst:
-                            if len(item) > 0:
-                                if item.isspace() == False:
-                                    split_item = re.split("(\s+)", re.sub(punctuation_matcher, " ", item))
-                                    for elem in split_item:
-                                        if len(elem) > 0:
-                                            dates_cleaned.append(elem)
-                                else:
-                                    dates_cleaned.append(item)
-                    # IDs
-                    if phi_dict['TYPE'] == 'MEDICALRECORD' or phi_dict['TYPE'] == 'IDNUM' or phi_dict['TYPE'] == 'DEVICE' or phi_dict['TYPE'] == "URL_IP" or phi_dict['TYPE'] == "Social_Security" or phi_dict['TYPE'] == "Medical_Record_ID" or phi_dict['TYPE'] == "Account_Number" or phi_dict['TYPE'] == "Certificate_or_License" or phi_dict['TYPE'] == "Vehicle_or_Device_ID" or phi_dict['TYPE'] == "Unique_Patient_Id" or phi_dict['TYPE'] == "Biometric_ID_or_Face_Photo":
-                        lst = re.split("(\s+)", phi_dict['text'])
-                        for item in lst:
-                            if len(item) > 0:
-                                if item.isspace() == False:
-                                    split_item = re.split("(\s+)", re.sub(punctuation_matcher, " ", item))
-                                    for elem in split_item:
-                                        if len(elem) > 0:
-                                            ids_cleaned.append(elem)
-                                else:
-                                    ids_cleaned.append(item) 
+                    names_fn_counter = 0
+                    dates_fn_counter = 0
+                    id_fn_counter = 0
+                    contact_fn_counter = 0
+                    location_fn_counter = 0
+                    organization_fn_counter = 0
+                    age_fn_counter = 0 
 
-                    # Contact info                    
-                    if phi_dict['TYPE'] == 'USERNAME' or phi_dict['TYPE'] == 'PHONE' or phi_dict['TYPE'] == 'EMAIL' or phi_dict['TYPE'] == 'FAX' or phi_dict['TYPE'] == "Phone_Fax" or phi_dict['TYPE'] == 'Email':
-                        lst = re.split("(\s+)", phi_dict['text'])
-                        for item in lst:
-                            if len(item) > 0:
-                                if item.isspace() == False:
-                                    split_item = re.split("(\s+)", re.sub(punctuation_matcher, " ", item))
-                                    for elem in split_item:
-                                        if len(elem) > 0:
-                                            contact_cleaned.append(elem)
-                                else:
-                                    contact_cleaned.append(item)           
+                    names_cleaned = []
+                    dates_cleaned = []
+                    ids_cleaned = []
+                    contact_cleaned = []
+                    locations_cleaned = []
+                    organizations_cleaned =[]
+                    age_cleaned =[]
 
-                    # Locations                    
-                    if phi_dict['TYPE'] == 'CITY' or phi_dict['TYPE'] == 'STATE' or phi_dict['TYPE'] == 'ZIP' or phi_dict['TYPE'] == 'STREET' or phi_dict['TYPE'] == 'LOCATION-OTHER' or phi_dict['TYPE'] == 'Address':
+                    for phi_dict in phi_list:
+                        # Tokenize words
                         lst = re.split("(\s+)", phi_dict['text'])
                         for item in lst:
                             if len(item) > 0:
@@ -1114,47 +1110,150 @@ class Philter:
                                     split_item = re.split("(\s+)", re.sub(punctuation_matcher, " ", item))
                                     for elem in split_item:
                                         if len(elem) > 0:
-                                            locations_cleaned.append(elem)
+                                            if phi_dict['TYPE'] == 'DOCTOR' or phi_dict['TYPE'] == 'PATIENT':
+                                                names_cleaned.append(elem)
+                                            if phi_dict['TYPE'] == 'DATE':
+                                                dates_cleaned.append(elem)
+                                            if phi_dict['TYPE'] == 'MEDICALRECORD' or phi_dict['TYPE'] == 'IDNUM' or phi_dict['TYPE'] == 'DEVICE':
+                                                ids_cleaned.append(elem)
+                                            if phi_dict['TYPE'] == 'USERNAME' or phi_dict['TYPE'] == 'PHONE' or phi_dict['TYPE'] == 'EMAIL' or phi_dict['TYPE'] == 'FAX':
+                                                contact_cleaned.append(elem)
+                                            if phi_dict['TYPE'] == 'CITY' or phi_dict['TYPE'] == 'STATE' or phi_dict['TYPE'] == 'ZIP' or phi_dict['TYPE'] == 'STREET' or phi_dict['TYPE'] == 'LOCATION-OTHER':
+                                                locations_cleaned.append(elem)
+                                            if phi_dict['TYPE'] == 'HOSPITAL':
+                                                organizations_cleaned.append(elem)
+                                            if phi_dict['TYPE'] == 'AGE':
+                                                age_cleaned.append(elem)
                                 else:
-                                    locations_cleaned.append(item)  
+                                    if phi_dict['TYPE'] == 'DOCTOR' or phi_dict['TYPE'] == 'PATIENT':
+                                        names_cleaned.append(item)
+                                    if phi_dict['TYPE'] == 'DATE':
+                                        dates_cleaned.append(elem)
+                                    if phi_dict['TYPE'] == 'MEDICALRECORD' or phi_dict['TYPE'] == 'IDNUM' or phi_dict['TYPE'] == 'DEVICE':
+                                        ids_cleaned.append(elem)
+                                    if phi_dict['TYPE'] == 'USERNAME' or phi_dict['TYPE'] == 'PHONE' or phi_dict['TYPE'] == 'EMAIL' or phi_dict['TYPE'] == 'FAX':
+                                        contact_cleaned.append(elem)
+                                    if phi_dict['TYPE'] == 'CITY' or phi_dict['TYPE'] == 'STATE' or phi_dict['TYPE'] == 'ZIP' or phi_dict['TYPE'] == 'STREET' or phi_dict['TYPE'] == 'LOCATION-OTHER':
+                                        locations_cleaned.append(elem)
+                                    if phi_dict['TYPE'] == 'HOSPITAL':
+                                        organizations_cleaned.append(elem)
+                                    if phi_dict['TYPE'] == 'AGE':
+                                        age_cleaned.append(elem)
 
 
-                    # Organizations                    
-                    if phi_dict['TYPE'] == 'HOSPITAL':
-                        lst = re.split("(\s+)", phi_dict['text'])
-                        for item in lst:
-                            if len(item) > 0:
-                                if item.isspace() == False:
-                                    split_item = re.split("(\s+)", re.sub(punctuation_matcher, " ", item))
-                                    for elem in split_item:
-                                        if len(elem) > 0:
-                                            organizations_cleaned.append(elem)
-                                else:
-                                    organizations_cleaned.append(item)                
-                
-                    # Age >90                    
-                    if phi_dict['TYPE'] == 'AGE' or phi_dict['TYPE'] == 'Age':
-                        lst = re.split("(\s+)", phi_dict['text'])
-                        for item in lst:
-                            if len(item) > 0:
-                                if item.isspace() == False:
-                                    split_item = re.split("(\s+)", re.sub(punctuation_matcher, " ", item))
-                                    for elem in split_item:
-                                        if len(elem) > 0:
-                                            age_cleaned.append(elem)
-                                else:
-                                    age_cleaned.append(item)                  
+                #### ucsf
+                if self.ucsf_format:
 
+                    account_number_fn_counter = 0
+                    address_fn_counter = 0
+                    age_fn_counter = 0
+                    biometric_or_photo_id_fn_counter = 0
+                    certificate_license_id_fn_counter = 0
+                    date_fn_counter = 0
+                    email_fn_counter = 0
+                    mrn_id_fn_counter = 0
+                    patient_family_name_fn_counter = 0
+                    phone_fax_fn_counter = 0
+                    provider_name_fn_counter = 0
+                    social_security_fn_counter = 0
+                    unclear_fn_counter = 0
+                    unique_patient_id_fn_counter = 0                      
+                    url_ip_fn_counter = 0
+                    vehicle_device_id_fn_counter = 0
+
+                    account_number_cleaned = []
+                    address_cleaned = []
+                    age_cleaned = []
+                    biometric_or_photo_id_cleaned =[]
+                    certificate_license_id_cleaned =[]
+                    date_cleaned = []
+                    email_cleaned = []
+                    mrn_id_cleaned = []
+                    patient_family_name_cleaned = []
+                    phone_fax_cleaned = []
+                    provider_name_cleaned = []
+                    social_security_cleaned = []
+                    unclear_cleaned = []
+                    unique_patient_id_cleaned = []                       
+                    url_ip_cleaned = [] 
+                    vehicle_device_id_cleaned = []
+                    
+                    for phi_dict in phi_list:
+                        # Tokenize words
+                        lst = re.split("(\s+)", phi_dict['text'])
+                        for item in lst:
+                            if len(item) > 0:
+                                if item.isspace() == False:
+                                    split_item = re.split("(\s+)", re.sub(punctuation_matcher, " ", item))
+                                    for elem in split_item:
+                                        if len(elem) > 0:
+                                            if phi_dict['TYPE'] == "Account_Number":
+                                                account_number_cleaned.append(elem)
+                                            if phi_dict['TYPE'] == 'Address':
+                                                address_cleaned.append(elem)
+                                            if phi_dict['TYPE'] == 'Age':
+                                                age_cleaned.append(elem)
+                                            if phi_dict['TYPE'] == "Biometric_ID_or_Face_Photo":
+                                                biometric_or_photo_id_cleaned.append(elem)
+                                            if phi_dict['TYPE'] == "Certificate_or_License":
+                                                certificate_license_id_cleaned.append(elem)
+                                            if phi_dict['TYPE'] == 'Date':
+                                                date_cleaned.append(elem)
+                                            if phi_dict['TYPE'] == 'Email':
+                                                email_cleaned.append(elem)
+                                            if phi_dict['TYPE'] == "Medical_Record_ID":
+                                                mrn_id_cleaned.append(elem)
+                                            if phi_dict['TYPE'] == "Patient_Name_or_Family_Member_Name":
+                                                patient_family_name_cleaned.append(elem)
+                                            if phi_dict['TYPE'] == "Phone_Fax":
+                                                age_cleaned.append(elem)  
+                                            if phi_dict['TYPE'] == "Provider_Name":
+                                                provider_name_cleaned.append(elem)
+                                            if phi_dict['TYPE'] == "Social_Security":
+                                                social_security_cleaned.append(elem)
+                                            if phi_dict['TYPE'] == 'Unclear':
+                                                unclear_cleaned.append(elem)                                 
+                                            if phi_dict['TYPE'] == "Unique_Patient_Id":
+                                                unique_patient_id_cleaned.append(elem)
+                                            if phi_dict['TYPE'] == "URL_IP":
+                                                url_ip_cleaned.append(elem)
+                                            if phi_dict['TYPE'] == "Vehicle_or_Device_ID":
+                                                vehicle_device_id_cleaned.append(elem) 
+                                else:
+                                    if phi_dict['TYPE'] == "Account_Number":
+                                        account_number_cleaned.append(item)
+                                    if phi_dict['TYPE'] == 'Address':
+                                        address_cleaned.append(elem)
+                                    if phi_dict['TYPE'] == 'Age':
+                                        age_cleaned.append(elem)
+                                    if phi_dict['TYPE'] == "Biometric_ID_or_Face_Photo":
+                                        biometric_or_photo_id_cleaned.append(elem)
+                                    if phi_dict['TYPE'] == "Certificate_or_License":
+                                        certificate_license_id_cleaned.append(elem)
+                                    if phi_dict['TYPE'] == 'Date':
+                                        date_cleaned.append(elem)
+                                    if phi_dict['TYPE'] == 'Email':
+                                        email_cleaned.append(elem)
+                                    if phi_dict['TYPE'] == "Medical_Record_ID":
+                                        mrn_id_cleaned.append(elem)
+                                    if phi_dict['TYPE'] == "Patient_Name_or_Family_Member_Name":
+                                        patient_family_name_cleaned.append(elem)
+                                    if phi_dict['TYPE'] == "Phone_Fax":
+                                        phone_fax_cleaned.append(elem)
+                                    if phi_dict['TYPE'] == "Provider_Name":
+                                        provider_name_cleaned.append(elem)
+                                    if phi_dict['TYPE'] == "Social_Security":
+                                        social_security_cleaned.append(elem)
+                                    if phi_dict['TYPE'] == 'Unclear':
+                                        unclear_cleaned.append(elem) 
+                                    if phi_dict['TYPE'] == "Unique_Patient_Id":
+                                        unique_patient_id_cleaned.append(elem)
+                                    if phi_dict['TYPE'] == "URL_IP":
+                                        url_ip_cleaned.append(elem)
+                                    if phi_dict['TYPE'] == "Vehicle_or_Device_ID":
+                                        vehicle_device_id_cleaned.append(elem)                                     
 
                 fn_tag_summary = {}
-                names_fn_counter = 0
-                dates_fn_counter = 0
-                id_fn_counter = 0
-                contact_fn_counter = 0
-                location_fn_counter = 0
-                organization_fn_counter = 0
-                age_fn_counter = 0
-                #profession_fn_counter = 0
 
                 if current_summary['false_negatives'] != [] and current_summary['false_negatives'] != [""]:              
                     counter = 0
@@ -1176,47 +1275,108 @@ class Philter:
                                 phi_start = phi_item['start']
                                 phi_end = phi_item['end']
 
-                            # Names FNs
-                            if (start_coordinate_fn in range(int(phi_start), int(phi_end))) and (phi_type == "DOCTOR" or phi_type == "PATIENT" or phi_type == "Patient_Name_or_Family_Member_Name" or phi_type == "Provider_Name"):
-                                rp_summaries["names_fns"] += 1
-                                names_fn_counter += 1
 
-                            # Dates FNs
-                            if (start_coordinate_fn in range(int(phi_start), int(phi_end))) and (phi_type == "DATE" or phi_type == 'Date'):
-                                rp_summaries["dates_fns"] += 1
-                                dates_fn_counter += 1
-
-
-                            # ID FNs
-                            if (start_coordinate_fn in range(int(phi_start), int(phi_end))) and (phi_type == "MEDICALRECORD" or phi_type == "IDNUM" or phi_type == "DEVICE" or phi_type == "URL_IP" or phi_type == "Social_Security" or phi_type == "Medical_Record_ID" or phi_type == "Account_Number" or phi_type == "Certificate_or_License" or phi_type == "Vehicle_or_Device_ID" or phi_type == "Unique_Patient_Id" or phi_type == "Biometric_ID_or_Face_Photo"):
-                                rp_summaries["id_fns"] += 1
-                                id_fn_counter += 1
-
-                            # Contact FNs
-                            if (start_coordinate_fn in range(int(phi_start), int(phi_end))) and (phi_type == "USERNAME" or phi_type == "PHONE" or phi_type == "EMAIL" or phi_type == "FAX" or phi_type == "Phone_Fax" or phi_type == 'Email'):
-                                rp_summaries["contact_fns"] += 1
-                                contact_fn_counter += 1 
+                            #### i2b2
+                            if not self.ucsf_format:
+                                # Names FNs
+                                if (start_coordinate_fn in range(int(phi_start), int(phi_end))) and (phi_type == "DOCTOR" or phi_type == "PATIENT" or phi_type == "Patient_Name_or_Family_Member_Name" or phi_type == "Provider_Name"):
+                                    rp_summaries["names_fns"] += 1
+                                    names_fn_counter += 1
+                                # Dates FNs
+                                if (start_coordinate_fn in range(int(phi_start), int(phi_end))) and (phi_type == "DATE" or phi_type == 'Date'):
+                                    rp_summaries["dates_fns"] += 1
+                                    dates_fn_counter += 1
+                                # ID FNs
+                                if (start_coordinate_fn in range(int(phi_start), int(phi_end))) and (phi_type == "MEDICALRECORD" or phi_type == "IDNUM" or phi_type == "DEVICE" or phi_type == "URL_IP" or phi_type == "Social_Security" or phi_type == "Medical_Record_ID" or phi_type == "Account_Number" or phi_type == "Certificate_or_License" or phi_type == "Vehicle_or_Device_ID" or phi_type == "Unique_Patient_Id" or phi_type == "Biometric_ID_or_Face_Photo"):
+                                    rp_summaries["id_fns"] += 1
+                                    id_fn_counter += 1
+                                # Contact FNs
+                                if (start_coordinate_fn in range(int(phi_start), int(phi_end))) and (phi_type == "USERNAME" or phi_type == "PHONE" or phi_type == "EMAIL" or phi_type == "FAX" or phi_type == "Phone_Fax" or phi_type == 'Email'):
+                                    rp_summaries["contact_fns"] += 1
+                                    contact_fn_counter += 1 
+                                # Location FNs
+                                if (start_coordinate_fn in range(int(phi_start), int(phi_end))) and (phi_type == 'CITY' or phi_type == 'STATE' or phi_type == 'ZIP' or phi_type == 'STREET' or phi_type == 'LOCATION-OTHER' or phi_type == 'Address'):
+                                    rp_summaries["location_fns"] += 1
+                                    location_fn_counter += 1                               
+                                # Organization FNs
+                                if (start_coordinate_fn in range(int(phi_start), int(phi_end))) and (phi_type == 'HOSPITAL'):
+                                    rp_summaries["organization_fns"] += 1
+                                    organization_fn_counter += 1  
+                                # Age FNs
+                                if (start_coordinate_fn in range(int(phi_start), int(phi_end))) and (phi_type == 'AGE' or phi_type == 'Age'):
+                                    rp_summaries["age_fns"] += 1
+                                    age_fn_counter += 1 
+                                    # print(word) 
                             
-                            # Location FNs
-                            if (start_coordinate_fn in range(int(phi_start), int(phi_end))) and (phi_type == 'CITY' or phi_type == 'STATE' or phi_type == 'ZIP' or phi_type == 'STREET' or phi_type == 'LOCATION-OTHER' or phi_type == 'Address'):
-                                rp_summaries["location_fns"] += 1
-                                location_fn_counter += 1                               
+                            #### ucsf
+                            if self.ucsf_format:
+                                # Account number FNs
+                                if (start_coordinate_fn in range(int(phi_start), int(phi_end))) and phi_type == "Account_Number":
+                                    rp_summaries["account_number_fns"] += 1
+                                    account_number_fn_counter += 1
+                                # Address FNs
+                                if (start_coordinate_fn in range(int(phi_start), int(phi_end))) and phi_type == 'Address':
+                                    rp_summaries["address_fns"] += 1
+                                    address_fn_counter += 1
+                                # Age FNs
+                                if (start_coordinate_fn in range(int(phi_start), int(phi_end))) and phi_type == 'Age':
+                                    rp_summaries["age_fns"] += 1
+                                    age_fn_counter += 1
+                                # Biometric id/photo FNs
+                                if (start_coordinate_fn in range(int(phi_start), int(phi_end))) and phi_type == "Biometric_ID_or_Face_Photo":
+                                    rp_summaries["biometric_or_photo_id_fns"] += 1
+                                    biometric_or_photo_id_fn_counter += 1                                
+                                # Certificate/license FNs
+                                if (start_coordinate_fn in range(int(phi_start), int(phi_end))) and phi_type == "Certificate_or_License":
+                                    rp_summaries["certificate_license_id_fns"] += 1
+                                    certificate_license_id_fn_counter += 1                               
+                                # Date FNs
+                                if (start_coordinate_fn in range(int(phi_start), int(phi_end))) and phi_type == 'Date':
+                                    rp_summaries["date_fns"] += 1
+                                    date_fn_counter += 1  
+                                # Email FNs
+                                if (start_coordinate_fn in range(int(phi_start), int(phi_end))) and phi_type == 'Email':
+                                    rp_summaries["email_fns"] += 1
+                                    email_fn_counter += 1
+                                # MRN FNs
+                                if (start_coordinate_fn in range(int(phi_start), int(phi_end))) and phi_type == "Medical_Record_ID":
+                                    rp_summaries["mrn_id_fns"] += 1
+                                    mrn_id_fn_counter += 1
+                                # Patient name FNs
+                                if (start_coordinate_fn in range(int(phi_start), int(phi_end))) and phi_type == "Patient_Name_or_Family_Member_Name":
+                                    rp_summaries["patient_family_name_fns"] += 1
+                                    patient_family_name_fn_counter += 1
+                                # phone/fax FNs
+                                if (start_coordinate_fn in range(int(phi_start), int(phi_end))) and phi_type == "Phone_Fax":
+                                    rp_summaries["phone_fax_fns"] += 1
+                                    phone_fax_fn_counter += 1
+                                # provider name FNs
+                                if (start_coordinate_fn in range(int(phi_start), int(phi_end))) and phi_type == "Provider_Name":
+                                    rp_summaries["provider_name_fns"] += 1
+                                    provider_name_fn_counter += 1 
+                                # SSN FNs
+                                if (start_coordinate_fn in range(int(phi_start), int(phi_end))) and phi_type == "Social_Security":
+                                    rp_summaries["social_security_fns"] += 1
+                                    social_security_fn_counter += 1                               
+                                # unclear FNs
+                                if (start_coordinate_fn in range(int(phi_start), int(phi_end))) and phi_type == 'Unclear':
+                                    rp_summaries["unclear_fns"] += 1
+                                    unclear_fn_counter += 1  
+                                # unique patient FNs
+                                if (start_coordinate_fn in range(int(phi_start), int(phi_end))) and phi_type == "Unique_Patient_Id":
+                                    rp_summaries["unique_patient_fns"] += 1
+                                    unique_patient_fn_counter += 1
 
-                            # Organization FNs
-                            if (start_coordinate_fn in range(int(phi_start), int(phi_end))) and (phi_type == 'HOSPITAL'):
-                                rp_summaries["organization_fns"] += 1
-                                organization_fn_counter += 1  
+                                # url/ip FNs
+                                if (start_coordinate_fn in range(int(phi_start), int(phi_end))) and phi_type == "URL_IP":
+                                    rp_summaries["url_ip_fns"] += 1
+                                    url_ip_fn_counter += 1
 
-                            # Age FNs
-                            if (start_coordinate_fn in range(int(phi_start), int(phi_end))) and (phi_type == 'AGE' or phi_type == 'Age'):
-                                rp_summaries["age_fns"] += 1
-                                age_fn_counter += 1 
-                                # print(word) 
-                            
-                            # profession FNs
-                            # if (start_coordinate_fn in range(int(phi_start), int(phi_end))) and (phi_type == 'PROFESSION'):
-                            #     rp_summaries["profession_fns"] += 1
-                            #     profession_fn_counter += 1  
+                                # vehicle/device id FNs
+                                if (start_coordinate_fn in range(int(phi_start), int(phi_end))) and phi_type == "Vehicle_or_Device_ID":
+                                    rp_summaries["vehicle_device_id_fns"] += 1
+                                    vehicle_device_id_fn_counter += 1
+
 
                             # Find PHI match: fn in text, coord in range
                             if start_coordinate_fn in range(int(phi_start), int(phi_end)):
@@ -1249,13 +1409,35 @@ class Philter:
                     fn_tags[fn] = fn_tag_summary
 
                 # Update recall/precision dictionary
-                rp_summaries['names_tps'] += (len(names_cleaned) - names_fn_counter)
-                rp_summaries['dates_tps'] += (len(dates_cleaned) - dates_fn_counter)
-                rp_summaries['id_tps'] += (len(ids_cleaned) - id_fn_counter)
-                rp_summaries['contact_tps'] += (len(contact_cleaned) - contact_fn_counter)
-                rp_summaries['location_tps'] += (len(locations_cleaned) - location_fn_counter)
-                rp_summaries['organization_tps'] += (len(organizations_cleaned) - organization_fn_counter)
-                rp_summaries['age_tps'] += (len(age_cleaned) - age_fn_counter)
+                #### i2b2
+                if not self.ucsf_format:
+
+                    rp_summaries['names_tps'] += (len(names_cleaned) - names_fn_counter)
+                    rp_summaries['dates_tps'] += (len(dates_cleaned) - dates_fn_counter)
+                    rp_summaries['id_tps'] += (len(ids_cleaned) - id_fn_counter)
+                    rp_summaries['contact_tps'] += (len(contact_cleaned) - contact_fn_counter)
+                    rp_summaries['location_tps'] += (len(locations_cleaned) - location_fn_counter)
+                    rp_summaries['organization_tps'] += (len(organizations_cleaned) - organization_fn_counter)
+                    rp_summaries['age_tps'] += (len(age_cleaned) - age_fn_counter)
+                
+                if self.ucsf_format:
+
+                    rp_summaries['account_number_tps'] += (len(account_number_cleaned) - account_number_fn_counter)
+                    rp_summaries['address_tps'] += (len(address_cleaned) - address_fn_counter)
+                    rp_summaries['age_tps'] += (len(age_cleaned) - age_fn_counter)
+                    rp_summaries['biometric_or_photo_id_tps'] += (len(biometric_or_photo_id_cleaned) - biometric_or_photo_id_fn_counter)
+                    rp_summaries['certificate_license_id_tps'] += (len(certificate_license_id_cleaned) - certificate_license_id_fn_counter)
+                    rp_summaries['date_tps'] += (len(date_cleaned) - date_fn_counter)
+                    rp_summaries['email_tps'] += (len(email_cleaned) - email_fn_counter)
+                    rp_summaries['mrn_id_tps'] += (len(mrn_id_cleaned) - mrn_id_fn_counter)
+                    rp_summaries['patient_family_name_tps'] += (len(patient_family_name_cleaned) - patient_family_name_fn_counter)
+                    rp_summaries['phone_fax_tps'] += (len(phone_fax_cleaned) - phone_fax_fn_counter)
+                    rp_summaries['provider_name_tps'] += (len(provider_name_cleaned) - provider_name_fn_counter)
+                    rp_summaries['social_security_tps'] += (len(social_security_cleaned) - social_security_fn_counter)
+                    rp_summaries['unclear_tps'] += (len(unclear_cleaned) - unclear_fn_counter)
+                    rp_summaries['unique_patient_id_tps'] += (len(unique_patient_id_cleaned) - unique_patient_id_fn_counter)
+                    rp_summaries['url_ip_tps'] += (len(url_ip_cleaned) - url_ip_fn_counter)
+                    rp_summaries['vehicle_device_id_tps'] += (len(vehicle_device_id_cleaned) - vehicle_device_id_fn_counter)
                 #rp_summaries['profession_tps'] += (len(profession_cleaned) - profession_fn_counter)
 
                 ####### Get FP tags #########
@@ -1310,60 +1492,182 @@ class Philter:
                         non_phi_count = bigram_dict[key][1]
                         f.write(term + ',' + str(phi_count) + ',' + str(non_phi_count) + '\n')
 
+            # get specific recalls
+            # i2b2
+            if not self.ucsf_format:
+                # Get names recall
+                if rp_summaries['names_tps'] != 0:
+                    names_recall = (rp_summaries['names_tps']-rp_summaries['names_fns'])/rp_summaries['names_tps']
+                if (rp_summaries['names_tps']-rp_summaries['names_fns']) < 0 or rp_summaries['names_tps'] == 0:
+                    names_recall = 0
+                
+                # Get dates recall
+                if rp_summaries['dates_tps'] != 0:
+                    dates_recall = (rp_summaries['dates_tps']-rp_summaries['dates_fns'])/rp_summaries['dates_tps']
+                if (rp_summaries['dates_tps']-rp_summaries['dates_fns']) < 0 or rp_summaries['dates_tps'] == 0:
+                    dates_recall = 0            
+                
+                # Get ids recall
+                if rp_summaries['id_tps'] != 0:
+                    ids_recall = (rp_summaries['id_tps']-rp_summaries['id_fns'])/rp_summaries['id_tps']
+                if (rp_summaries['id_tps']-rp_summaries['id_fns']) < 0 or rp_summaries['id_tps'] == 0:
+                    ids_recall = 0            
+                
+                # Get contact recall
+                if rp_summaries['contact_tps'] != 0:
+                    contact_recall = (rp_summaries['contact_tps']-rp_summaries['contact_fns'])/rp_summaries['contact_tps']
+                if (rp_summaries['contact_tps']-rp_summaries['contact_fns']) < 0 or rp_summaries['contact_tps'] == 0:
+                    contact_recall = 0            
+                
+                # Get location recall
+                if rp_summaries['location_tps'] != 0:
+                    location_recall = (rp_summaries['location_tps']-rp_summaries['location_fns'])/rp_summaries['location_tps']
+                if (rp_summaries['location_tps']-rp_summaries['location_fns']) < 0 or rp_summaries['location_tps'] == 0:
+                    location_recall = 0
+                
+                # Get organization recall
+                if rp_summaries['organization_tps'] != 0:
+                    organization_recall = (rp_summaries['organization_tps']-rp_summaries['organization_fns'])/rp_summaries['organization_tps']
+                if (rp_summaries['organization_tps']-rp_summaries['organization_fns']) < 0 or rp_summaries['organization_tps'] == 0:
+                    organization_recall = 0             
             
-            # Get names recall
-            if rp_summaries['names_tps'] != 0:
-                names_recall = (rp_summaries['names_tps']-rp_summaries['names_fns'])/rp_summaries['names_tps']
-            if (rp_summaries['names_tps']-rp_summaries['names_fns']) < 0 or rp_summaries['names_tps'] == 0:
-                names_recall = 0
-            
-            # Get dates recall
-            if rp_summaries['dates_tps'] != 0:
-                dates_recall = (rp_summaries['dates_tps']-rp_summaries['dates_fns'])/rp_summaries['dates_tps']
-            if (rp_summaries['dates_tps']-rp_summaries['dates_fns']) < 0 or rp_summaries['dates_tps'] == 0:
-                dates_recall = 0            
-            
-            # Get ids recall
-            if rp_summaries['id_tps'] != 0:
-                ids_recall = (rp_summaries['id_tps']-rp_summaries['id_fns'])/rp_summaries['id_tps']
-            if (rp_summaries['id_tps']-rp_summaries['id_fns']) < 0 or rp_summaries['id_tps'] == 0:
-                ids_recall = 0            
-            
-            # Get contact recall
-            if rp_summaries['contact_tps'] != 0:
-                contact_recall = (rp_summaries['contact_tps']-rp_summaries['contact_fns'])/rp_summaries['contact_tps']
-            if (rp_summaries['contact_tps']-rp_summaries['contact_fns']) < 0 or rp_summaries['contact_tps'] == 0:
-                contact_recall = 0            
-            
-            # Get location recall
-            if rp_summaries['location_tps'] != 0:
-                location_recall = (rp_summaries['location_tps']-rp_summaries['location_fns'])/rp_summaries['location_tps']
-            if (rp_summaries['location_tps']-rp_summaries['location_fns']) < 0 or rp_summaries['location_tps'] == 0:
-                location_recall = 0
-            
-            # Get organization recall
-            if rp_summaries['organization_tps'] != 0:
-                organization_recall = (rp_summaries['organization_tps']-rp_summaries['organization_fns'])/rp_summaries['organization_tps']
-            if (rp_summaries['organization_tps']-rp_summaries['organization_fns']) < 0 or rp_summaries['organization_tps'] == 0:
-                organization_recall = 0             
+                # Get age recall
+                if rp_summaries['age_tps'] != 0:
+                    age_recall = (rp_summaries['age_tps']-rp_summaries['age_fns'])/rp_summaries['age_tps']
+                if (rp_summaries['age_tps']-rp_summaries['age_fns']) < 0 or rp_summaries['age_tps'] == 0:
+                    age_recall = 0 
             
 
-            # Get age recall
-            if rp_summaries['age_tps'] != 0:
-                age_recall = (rp_summaries['age_tps']-rp_summaries['age_fns'])/rp_summaries['age_tps']
-            if age_recall < 0 or rp_summaries['age_tps'] == 0:
-                age_recall = 0 
-            
+                # Print to terminal
+                print('\n')
+                print("Names Recall: " + "{:.2%}".format(names_recall))
+                print("Dates Recall: " + "{:.2%}".format(dates_recall))
+                print("IDs Recall: " + "{:.2%}".format(ids_recall))
+                print("Contact Recall: " + "{:.2%}".format(contact_recall))
+                print("Location Recall: " + "{:.2%}".format(location_recall))
+                print("Organization Recall: " + "{:.2%}".format(organization_recall))
+                print("Age>=90 Recall: " + "{:.2%}".format(age_recall))
+                print('\n')
 
-            # Print to terminal
-            print("Names Recall: " + "{:.2%}".format(names_recall))
-            print("Dates Recall: " + "{:.2%}".format(dates_recall))
-            print("IDs Recall: " + "{:.2%}".format(ids_recall))
-            print("Contact Recall: " + "{:.2%}".format(contact_recall))
-            print("Location Recall: " + "{:.2%}".format(location_recall))
-            print("Organization Recall: " + "{:.2%}".format(organization_recall))
-            print("Age>=90 Recall: " + "{:.2%}".format(age_recall))
-            # print("Profession Recall: " + "{:.2%}".format(profession_recall))
+            # ucsf
+            if self.ucsf_format:
+
+                # account # recall
+                if rp_summaries['account_number_tps'] != 0:
+                    account_number_recall = (rp_summaries['account_number_tps']-rp_summaries['account_number_fns'])/rp_summaries['account_number_tps']
+                if (rp_summaries['account_number_tps']-rp_summaries['account_number_fns']) < 0 or rp_summaries['account_number_tps'] == 0:
+                    account_number_recall = 0
+                
+                # address recall
+                if rp_summaries['address_tps'] != 0:
+                    address_recall = (rp_summaries['address_tps']-rp_summaries['address_fns'])/rp_summaries['address_tps']
+                if (rp_summaries['address_tps']-rp_summaries['address_fns']) < 0 or rp_summaries['address_tps'] == 0:
+                    address_recall = 0            
+                
+                # Age recall
+                if rp_summaries['age_tps'] != 0:
+                    age_recall = (rp_summaries['age_tps']-rp_summaries['age_fns'])/rp_summaries['age_tps']
+                if (rp_summaries['age_tps']-rp_summaries['age_fns']) < 0 or rp_summaries['age_tps'] == 0:
+                    age_recall = 0            
+                
+                # biometric_or_photo_id recall
+                if rp_summaries['biometric_or_photo_id_tps'] != 0:
+                    biometric_or_photo_id_recall = (rp_summaries['biometric_or_photo_id_tps']-rp_summaries['biometric_or_photo_id_fns'])/rp_summaries['biometric_or_photo_id_tps']
+                if (rp_summaries['biometric_or_photo_id_tps']-rp_summaries['biometric_or_photo_id_fns']) < 0 or rp_summaries['biometric_or_photo_id_tps'] == 0:
+                    biometric_or_photo_id_recall = 0            
+                
+                # certificate_license_id recall
+                if rp_summaries['certificate_license_id_tps'] != 0:
+                    certificate_license_id_recall = (rp_summaries['certificate_license_id_tps']-rp_summaries['certificate_license_id_fns'])/rp_summaries['certificate_license_id_tps']
+                if (rp_summaries['certificate_license_id_tps']-rp_summaries['certificate_license_id_fns']) < 0 or rp_summaries['certificate_license_id_tps'] == 0:
+                    certificate_license_id_recall = 0
+                
+                # date recall
+                if rp_summaries['date_tps'] != 0:
+                    date_recall = (rp_summaries['date_tps']-rp_summaries['date_fns'])/rp_summaries['date_tps']
+                if (rp_summaries['date_tps']-rp_summaries['date_fns']) < 0 or rp_summaries['date_tps'] == 0:
+                    date_recall = 0             
+            
+                # email recall
+                if rp_summaries['email_tps'] != 0:
+                    email_recall = (rp_summaries['email_tps']-rp_summaries['email_fns'])/rp_summaries['email_tps']
+                if (rp_summaries['email_tps']-rp_summaries['email_fns']) < 0 or rp_summaries['email_tps'] == 0:
+                    email_recall = 0 
+                
+                # mrn id recall
+                if rp_summaries['mrn_id_tps'] != 0:
+                    mrn_id_recall = (rp_summaries['mrn_id_tps']-rp_summaries['mrn_id_fns'])/rp_summaries['mrn_id_tps']
+                if (rp_summaries['mrn_id_tps']-rp_summaries['mrn_id_fns']) < 0 or rp_summaries['mrn_id_tps'] == 0:
+                    mrn_id_recall = 0
+                
+                # patient_family_name recall
+                if rp_summaries['patient_family_name_tps'] != 0:
+                    patient_family_name_recall = (rp_summaries['patient_family_name_tps']-rp_summaries['patient_family_name_fns'])/rp_summaries['patient_family_name_tps']
+                if (rp_summaries['patient_family_name_tps']-rp_summaries['patient_family_name_fns']) < 0 or rp_summaries['patient_family_name_tps'] == 0:
+                    patient_family_name_recall = 0            
+                
+                # phone/fax recall
+                if rp_summaries['phone_fax_tps'] != 0:
+                    phone_fax_recall = (rp_summaries['phone_fax_tps']-rp_summaries['phone_fax_fns'])/rp_summaries['phone_fax_tps']
+                if (rp_summaries['phone_fax_tps']-rp_summaries['phone_fax_fns']) < 0 or rp_summaries['phone_fax_tps'] == 0:
+                    phone_fax_recall = 0            
+                
+                # provider_name recall
+                if rp_summaries['provider_name_tps'] != 0:
+                    provider_name_recall = (rp_summaries['provider_name_tps']-rp_summaries['provider_name_fns'])/rp_summaries['provider_name_tps']
+                if (rp_summaries['provider_name_tps']-rp_summaries['provider_name_fns']) < 0 or rp_summaries['provider_name_tps'] == 0:
+                    provider_name_recall = 0            
+                
+                # social_security recall
+                if rp_summaries['social_security_tps'] != 0:
+                    social_security_recall = (rp_summaries['social_security_tps']-rp_summaries['social_security_fns'])/rp_summaries['social_security_tps']
+                if (rp_summaries['social_security_tps']-rp_summaries['social_security_fns']) < 0 or rp_summaries['social_security_tps'] == 0:
+                    social_security_recall = 0
+                
+                # unclear recall
+                if rp_summaries['unclear_tps'] != 0:
+                    unclear_recall = (rp_summaries['unclear_tps']-rp_summaries['unclear_fns'])/rp_summaries['unclear_tps']
+                if (rp_summaries['unclear_tps']-rp_summaries['unclear_fns']) < 0 or rp_summaries['unclear_tps'] == 0:
+                    unclear_recall = 0             
+            
+                # unique_patient_id recall
+                if rp_summaries['unique_patient_id_tps'] != 0:
+                    unique_patient_id_recall = (rp_summaries['unique_patient_id_tps']-rp_summaries['unique_patient_id_fns'])/rp_summaries['unique_patient_id_tps']
+                if (rp_summaries['unique_patient_id_tps']-rp_summaries['unique_patient_id_fns']) < 0 or rp_summaries['unique_patient_id_tps'] == 0:
+                    unique_patient_id_recall = 0           
+                
+                # url_ip recall
+                if rp_summaries['url_ip_tps'] != 0:
+                    url_ip_recall = (rp_summaries['url_ip_tps']-rp_summaries['url_ip_fns'])/rp_summaries['url_ip_tps']
+                if (rp_summaries['url_ip_tps']-rp_summaries['url_ip_fns']) < 0 or rp_summaries['url_ip_tps'] == 0:
+                    url_ip_recall = 0             
+            
+                # vehicle_device_id recall
+                if rp_summaries['vehicle_device_id_tps'] != 0:
+                    vehicle_device_id_recall = (rp_summaries['vehicle_device_id_tps']-rp_summaries['vehicle_device_id_fns'])/rp_summaries['vehicle_device_id_tps']
+                if (rp_summaries['vehicle_device_id_tps']-rp_summaries['vehicle_device_id_fns']) < 0 or rp_summaries['vehicle_device_id_tps'] == 0:
+                    vehicle_device_id_recall = 0
+
+                # Print to terminal
+                print('\n')
+                print("Account Number Recall: " + "{:.2%}".format(account_number_recall))
+                print("Address Recall: " + "{:.2%}".format(address_recall))
+                print("Age>=90 Recall: " + "{:.2%}".format(age_recall))
+                print("Biometric ID and Face Photo Recall: " + "{:.2%}".format(biometric_or_photo_id_recall))
+                print("Certificate and License Number Recall: " + "{:.2%}".format(certificate_license_id_recall))
+                print("Date Recall: " + "{:.2%}".format(date_recall))
+                print("Email Recall: " + "{:.2%}".format(email_recall))
+                print("Medical Record Number Recall: " + "{:.2%}".format(mrn_id_recall))
+                print("Patient or Family Member Name Recall: " + "{:.2%}".format(patient_family_name_recall))
+                print("Phone and Fax Recall: " + "{:.2%}".format(phone_fax_recall))
+                print("Provider Name Recall: " + "{:.2%}".format(provider_name_recall))
+                print("Social Security Recall: " + "{:.2%}".format(social_security_recall))
+                print("Unclear PHI Recall: " + "{:.2%}".format(unclear_recall))
+                print("Unique Patient Identifier Recall: " + "{:.2%}".format(unique_patient_id_recall))
+                print("URL and IP Address Recall: " + "{:.2%}".format(url_ip_recall))
+                print("Vehicle and Device ID Recall: " + "{:.2%}".format(vehicle_device_id_recall))
+                print('\n')
+
 
             ######## Summarize FN results #########
             
