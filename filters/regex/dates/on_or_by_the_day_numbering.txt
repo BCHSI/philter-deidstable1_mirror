@@ -1,1 +1,1 @@
-\b(by|on)\sthe\s("""+day_numbering+r""")\b
+(?<=\bby\sthe\s|\bon\sthe\s)("""+day_numbering+r""")\b

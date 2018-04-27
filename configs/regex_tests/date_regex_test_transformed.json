@@ -259,27 +259,6 @@
 		"notes":"This should remove anything with pattern on_or_by_the_day_numbering"
 	},		
 	{
-		"title":"season_of_yy",
-		"type":"regex",
-		"exclude":true,
-		"filepath":"filters/regex/dates/season_of_yy_transformed.txt",
-		"notes":"This should remove anything with pattern season_of_yy"
-	},
-	{
-		"title":"season_of_yyyy",
-		"type":"regex",
-		"exclude":true,
-		"filepath":"filters/regex/dates/season_of_yyyy_transformed.txt",
-		"notes":"This should remove anything with pattern season_of_yyyy"
-	},
-	{
-		"title":"day_name",
-		"type":"regex",
-		"exclude":true,
-		"filepath":"filters/regex/dates/day_name_transformed.txt",
-		"notes":"This should remove anything with pattern day_name"
-	},
-	{
 		"title":"in_the_yy",
 		"type":"regex",
 		"exclude":true,
