@@ -1,1 +1,1 @@
-\b((in|from|since)\s)?\d{4}(s)?\b
+(?<=\bin\s)\d{4}|(?<=\bsince\s)\d{4}\b

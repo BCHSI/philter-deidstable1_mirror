@@ -187,6 +187,7 @@ class Philter:
         """ Creates a coordinate map from the pattern on this data
             generating a coordinate map of hits given (dry run doesn't transform)
         """
+
         if not os.path.exists(filename):
             raise Exception("Filepath does not exist", filename)
 
@@ -200,8 +201,10 @@ class Philter:
             matches = regex.finditer(text)
             
             for m in matches:
-                # if filename == './data/i2b2_notes/312-04.txt':
-                #     print(m)
+                #if filename == './data/i2b2_notes_updated/373-04.txt':
+                if 'sat' in m.group():
+                    #print(m.group())
+                    print(self.patterns[pattern_index]["title"])
                 coord_map.add_extend(filename, m.start(), m.start()+len(m.group()))
         
             self.patterns[pattern_index]["coordinate_map"] = coord_map
