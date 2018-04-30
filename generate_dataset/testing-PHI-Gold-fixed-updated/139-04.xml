@@ -72,7 +72,6 @@ HW/warren/stark
 <NAME TYPE="PATIENT" comment="" end="53" id="P1" start="41" text="Upham, Zelda" />
 <ID TYPE="MEDICALRECORD" comment="" end="71" id="P2" start="64" text="0308696" />
 <NAME TYPE="PATIENT" comment="" end="242" id="P3" start="238" text="Qazi" />
-<LOCATION TYPE="HOSPITAL" comment="" end="366" id="P4" start="344" text="Miller County Hospital" />
 <NAME TYPE="DOCTOR" comment="" end="590" id="P5" start="585" text="Weeks" />
 <DATE TYPE="DATE" comment="" end="603" id="P6" start="595" text="12/13/95" />
 <NAME TYPE="DOCTOR" comment="" end="2439" id="P7" start="2424" text="Helen Whitehead" />

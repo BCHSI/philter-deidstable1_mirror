@@ -55,7 +55,6 @@ DV: 02/26/60
 </TEXT>
 <TAGS>
 <DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2060-02-26" />
-<LOCATION TYPE="HOSPITAL" comment="" end="32" id="P1" start="29" text="BCH" />
 <LOCATION TYPE="STREET" comment="" end="79" id="P3" start="65" text="86 Cote Avenue" />
 <NAME TYPE="PATIENT" comment="" end="131" id="P4" start="117" text="HESS, CLARENCE" />
 <LOCATION TYPE="CITY" comment="" end="141" id="P5" start="132" text="Pinehurst" />
@@ -65,7 +64,6 @@ DV: 02/26/60
 <CONTACT TYPE="PHONE" comment="" end="217" id="P9" start="203" text="(680) 317-3494" />
 <DATE TYPE="DATE" comment="" end="268" id="P10" start="260" text="02/26/60" />
 <NAME TYPE="DOCTOR" comment="" end="281" id="P11" start="271" text="Yariel Law" />
-<LOCATION TYPE="HOSPITAL" comment="" end="319" id="P12" start="288" text="Wheatland Memorial Nursing Home" />
 <LOCATION TYPE="CITY" comment="" end="328" id="P13" start="320" text="Bangdung" />
 <LOCATION TYPE="STREET" comment="" end="355" id="P14" start="336" text="870 Newburgh Street" />
 <LOCATION TYPE="CITY" comment="" end="365" id="P15" start="356" text="Pinehurst" />

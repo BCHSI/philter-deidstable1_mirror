@@ -108,7 +108,6 @@ DV: 12/13/96
 </TEXT>
 <TAGS>
 <DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2096-12-13" />
-<LOCATION TYPE="HOSPITAL" comment="" end="65" id="P1" start="34" text="Trinity Regional Medical Center" />
 <LOCATION TYPE="STREET" comment="" end="83" id="P2" start="67" text="1190 Mill Street" />
 <NAME TYPE="PATIENT" comment="" end="108" id="P3" start="97" text="MARSH, CARL" />
 <LOCATION TYPE="CITY" comment="" end="121" id="P4" start="110" text="Albertville" />

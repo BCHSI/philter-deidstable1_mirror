@@ -127,13 +127,10 @@ Follow-up in 9/72.  Will contact him with results of lab work.
 <NAME TYPE="DOCTOR" comment="" end="254" id="P5" start="250" text="Pena" />
 <DATE TYPE="DATE" comment="" end="359" id="P6" start="355" text="4/71" />
 <DATE TYPE="DATE" comment="" end="492" id="P7" start="485" text="11/1/69" />
-<LOCATION TYPE="HOSPITAL" comment="" end="564" id="P8" start="548" text="Montreal Medical" />
 <NAME TYPE="DOCTOR" comment="" end="668" id="P9" start="662" text="Lozano" />
 <DATE TYPE="DATE" comment="" end="713" id="P10" start="709" text="6/71" />
 <DATE TYPE="DATE" comment="" end="729" id="P11" start="725" text="9/71" />
 <DATE TYPE="DATE" comment="" end="1277" id="P12" start="1271" text="1/2070" />
-<LOCATION TYPE="HOSPITAL" comment="" end="1310" id="P13" start="1306" text="NAMG" />
-<LOCATION TYPE="HOSPITAL" comment="" end="1370" id="P14" start="1347" text="Montreal Medical Center" />
 <DATE TYPE="DATE" comment="" end="1412" id="P15" start="1406" text="2/2070" />
 <NAME TYPE="DOCTOR" comment="" end="1479" id="P16" start="1473" text="Conley" />
 <NAME TYPE="DOCTOR" comment="" end="1491" id="P17" start="1484" text="Sheehan" />

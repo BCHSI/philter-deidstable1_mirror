@@ -164,7 +164,6 @@ Patient will return for a follow-up visit in clinic in 1 wk for chem 7 and 1 mon
 </TEXT>
 <TAGS>
 <DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2076-03-23" />
-<LOCATION TYPE="HOSPITAL" comment="" end="85" id="P1" start="70" text="Lakeview Clinic" />
 <DATE TYPE="DATE" comment="" end="443" id="P4" start="437" text="3/9/76" />
 <DATE TYPE="DATE" comment="" end="2339" id="P5" start="2329" text="march 2076" />
 <DATE TYPE="DATE" comment="" end="2588" id="P6" start="2584" text="2074" />

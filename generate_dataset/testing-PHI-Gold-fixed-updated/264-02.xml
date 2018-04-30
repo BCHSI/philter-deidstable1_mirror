@@ -108,13 +108,11 @@ Dictated by:  FLORENCE F. CASEY, M.D.     FC44
 </TEXT>
 <TAGS>
 <DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2089-03-28" />
-<LOCATION TYPE="HOSPITAL" comment="" end="58" id="P1" start="49" text="RHINELAND" />
 <NAME TYPE="PATIENT" comment="" end="95" id="P2" start="84" text="PIERRE,EDEN" />
 <ID TYPE="MEDICALRECORD" comment="" end="109" id="P3" start="98" text="241-52-56-3" />
 <DATE TYPE="DATE" comment="" end="151" id="P4" start="143" text="03/28/89" />
 <DATE TYPE="DATE" comment="" end="234" id="P5" start="227" text="3/28/89" />
 <DATE TYPE="DATE" comment="" end="769" id="P6" start="765" text="9/87" />
-<LOCATION TYPE="HOSPITAL" comment="" end="2201" id="P7" start="2185" text="Guzmans Hospital" />
 <NAME TYPE="DOCTOR" comment="" end="2321" id="P8" start="2315" text="Rhodes" />
 <ID TYPE="IDNUM" comment="" end="2552" id="P9" start="2541" text="ZP289/32887" />
 <NAME TYPE="DOCTOR" comment="" end="2572" id="P10" start="2555" text="FLORENCE F. CASEY" />

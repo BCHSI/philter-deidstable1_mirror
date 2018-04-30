@@ -64,13 +64,11 @@ DWI/yim
 <DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2064-07-26" />
 <DATE TYPE="DATE" comment="" end="41" id="P1" start="28" text="July 26, 2064" />
 <NAME TYPE="DOCTOR" comment="" end="60" id="P2" start="47" text="Harry R. Lynn" />
-<LOCATION TYPE="HOSPITAL" comment="" end="98" id="P3" start="68" text="Doraville County Health Center" />
 <LOCATION TYPE="STREET" comment="" end="116" id="P4" start="100" text="897 Cider Street" />
 <LOCATION TYPE="CITY" comment="" end="129" id="P5" start="118" text="Platteville" />
 <LOCATION TYPE="STATE" comment="" end="133" id="P6" start="131" text="HI" />
 <LOCATION TYPE="ZIP" comment="" end="139" id="P7" start="134" text="79812" />
 <NAME TYPE="PATIENT" comment="" end="168" id="P8" start="151" text="Isabelle Y. Quick" />
-<LOCATION TYPE="HOSPITAL" comment="" end="174" id="P9" start="170" text="ATCH" />
 <ID TYPE="MEDICALRECORD" comment="" end="187" id="P10" start="178" text="655-75-45" />
 <NAME TYPE="DOCTOR" comment="" end="201" id="P11" start="196" text="Harry" />
 <NAME TYPE="DOCTOR" comment="" end="210" id="P12" start="206" text="Yair" />

@@ -404,7 +404,6 @@ Signed electronically by Flaherty, Wanda H on May 04, 2123
 </TEXT>
 <TAGS>
 <DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2123-05-01" />
-<LOCATION TYPE="HOSPITAL" comment="" end="80" id="P1" start="62" text="PENDER CARE CENTER" />
 <PROFESSION TYPE="PROFESSION" comment="" end="218" id="P3" start="201" text="Personnel Officer" />
 <LOCATION TYPE="CITY" comment="" end="252" id="P4" start="246" text="Polson" />
 <LOCATION TYPE="STATE" comment="" end="256" id="P5" start="254" text="VA" />
@@ -447,11 +446,8 @@ Signed electronically by Flaherty, Wanda H on May 04, 2123
 <DATE TYPE="DATE" comment="" end="4250" id="P42" start="4240" text="05/01/2123" />
 <DATE TYPE="DATE" comment="" end="4309" id="P43" start="4299" text="05/01/2123" />
 <DATE TYPE="DATE" comment="" end="4359" id="P44" start="4355" text="2115" />
-<LOCATION TYPE="HOSPITAL" comment="" end="4363" id="P45" start="4360" text="TCH" />
 <DATE TYPE="DATE" comment="" end="4378" id="P46" start="4374" text="2120" />
-<LOCATION TYPE="HOSPITAL" comment="" end="4382" id="P47" start="4379" text="TCH" />
 <DATE TYPE="DATE" comment="" end="4413" id="P48" start="4409" text="2120" />
-<LOCATION TYPE="HOSPITAL" comment="" end="4417" id="P49" start="4414" text="PCC" />
 <DATE TYPE="DATE" comment="" end="4469" id="P50" start="4465" text="2064" />
 <DATE TYPE="DATE" comment="" end="4508" id="P51" start="4504" text="2090" />
 <DATE TYPE="DATE" comment="" end="4517" id="P52" start="4513" text="2097" />

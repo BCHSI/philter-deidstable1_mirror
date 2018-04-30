@@ -101,10 +101,8 @@ ____________________________________Paul Anthony Jaramillo, M.D.Pager # 52666.Sh
 </TEXT>
 <TAGS>
 <DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2069-10-07" />
-<LOCATION TYPE="HOSPITAL" comment="" end="31" id="P1" start="28" text="IMC" />
 <LOCATION TYPE="CITY" comment="" end="36" id="P2" start="32" text="Odem" />
 <NAME TYPE="PATIENT" comment="" end="89" id="P3" start="75" text="Ulysses Ogrady" />
-<LOCATION TYPE="HOSPITAL" comment="" end="92" id="P4" start="89" text="IMC" />
 <ID TYPE="MEDICALRECORD" comment="" end="102" id="P5" start="95" text="0937884" />
 <DATE TYPE="DATE" comment="" end="116" id="P6" start="108" text="10/07/69" />
 <NAME TYPE="DOCTOR" comment="" end="150" id="P7" start="136" text="Paul Jaramillo" />
@@ -114,7 +112,6 @@ ____________________________________Paul Anthony Jaramillo, M.D.Pager # 52666.Sh
 <DATE TYPE="DATE" comment="" end="2027" id="P12" start="2022" text="11/64" />
 <DATE TYPE="DATE" comment="" end="2152" id="P13" start="2147" text="11/65" />
 <DATE TYPE="DATE" comment="" end="2174" id="P14" start="2170" text="2066" />
-<LOCATION TYPE="HOSPITAL" comment="" end="3016" id="P17" start="2990" text="Superior Memorial Hospital" />
 <DATE TYPE="DATE" comment="" end="3620" id="P18" start="3610" text="10/07/2069" />
 <DATE TYPE="DATE" comment="" end="3698" id="P19" start="3688" text="10/07/2069" />
 <DATE TYPE="DATE" comment="" end="3776" id="P20" start="3766" text="10/06/2069" />

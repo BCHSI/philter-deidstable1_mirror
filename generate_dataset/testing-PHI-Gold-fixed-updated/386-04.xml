@@ -225,7 +225,6 @@ Cynthia Nancy-Nesmith, M.D.
 <DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2088-06-24" />
 <NAME TYPE="PATIENT" comment="" end="109" id="P1" start="97" text="CHAPMAN,NOOR" />
 <ID TYPE="MEDICALRECORD" comment="" end="125" id="P2" start="117" text="45479406" />
-<LOCATION TYPE="HOSPITAL" comment="" end="129" id="P3" start="125" text="HBMC" />
 <DATE TYPE="DATE" comment="" end="214" id="P4" start="205" text="6/24/2088" />
 <NAME TYPE="PATIENT" comment="" end="253" id="P5" start="246" text="Chapman" />
 <DATE TYPE="DATE" comment="" end="1252" id="P6" start="1244" text="10/08/85" />

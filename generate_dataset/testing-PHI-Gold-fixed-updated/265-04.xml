@@ -119,8 +119,6 @@ Cochran, Patricia Hannah, M.D.
 </TEXT>
 <TAGS>
 <DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2070-06-15" />
-<LOCATION TYPE="HOSPITAL" comment="" end="57" id="P1" start="31" text="JELLICO COMMUNITY HOSPITAL" />
-<LOCATION TYPE="HOSPITAL" comment="" end="65" id="P2" start="58" text="Jellico" />
 <LOCATION TYPE="STREET" comment="" end="108" id="P3" start="95" text="44 Brigham St" />
 <LOCATION TYPE="CITY" comment="" end="115" id="P4" start="109" text="Elwood" />
 <LOCATION TYPE="STATE" comment="" end="119" id="P5" start="117" text="OH" />

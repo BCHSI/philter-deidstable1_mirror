@@ -120,9 +120,6 @@ Record date: 2092-10-05
 <NAME TYPE="PATIENT" comment="" end="81" id="P1" start="68" text="Rickey George" />
 <ID TYPE="MEDICALRECORD" comment="" end="94" id="P2" start="87" text="1131414" />
 <DATE TYPE="DATE" comment="" end="113" id="P3" start="97" text="October 05, 2092" />
-<LOCATION TYPE="HOSPITAL" comment="" end="172" id="P4" start="169" text="MCH" />
-<LOCATION TYPE="HOSPITAL" comment="" end="256" id="P5" start="253" text="MCH" />
-<LOCATION TYPE="HOSPITAL" comment="" end="310" id="P6" start="307" text="MCH" />
 <DATE TYPE="DATE" comment="" end="315" id="P7" start="311" text="8/29" />
 <DATE TYPE="DATE" comment="" end="330" id="P8" start="324" text="9/9/92" />
 <NAME TYPE="DOCTOR" comment="" end="355" id="P9" start="348" text="Randall" />

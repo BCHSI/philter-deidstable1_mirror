@@ -63,7 +63,6 @@ cc:  Georgia Xing, M.D.
 <NAME TYPE="PATIENT" comment="" end="77" id="P3" start="72" text="Becky" />
 <PROFESSION TYPE="PROFESSION" comment="" end="221" id="P4" start="207" text="Credit Manager" />
 <DATE TYPE="DATE" comment="" end="238" id="P5" start="225" text="December 2093" />
-<LOCATION TYPE="HOSPITAL" comment="" end="2474" id="P6" start="2464" text="PROMPTCARE" />
 <NAME TYPE="DOCTOR" comment="" end="2554" id="P7" start="2540" text="Rowena Xanders" />
 <NAME TYPE="DOCTOR" comment="" end="2564" id="P8" start="2562" text="RX" />
 <NAME TYPE="DOCTOR" comment="" end="2572" id="P9" start="2565" text="mcbride" />

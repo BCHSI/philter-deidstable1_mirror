@@ -312,13 +312,10 @@ Team 4 Beeper #07736
 <ID TYPE="MEDICALRECORD" comment="" end="122" id="P2" start="115" text="7271902" />
 <DATE TYPE="DATE" comment="" end="151" id="P3" start="143" text="10/28/34" />
 <NAME TYPE="PATIENT" comment="" end="221" id="P4" start="214" text="Pearson" />
-<LOCATION TYPE="HOSPITAL" comment="" end="323" id="P6" start="320" text="WMC" />
-<LOCATION TYPE="HOSPITAL" comment="" end="415" id="P7" start="396" text="Ross Medical Center" />
 <DATE TYPE="DATE" comment="" end="922" id="P8" start="916" text="6/2129" />
 <DATE TYPE="DATE" comment="" end="1041" id="P9" start="1037" text="2106" />
 <DATE TYPE="DATE" comment="" end="1095" id="P10" start="1091" text="2069" />
 <PROFESSION TYPE="PROFESSION" comment="" end="1819" id="P11" start="1805" text="Civil Engineer" />
-<LOCATION TYPE="HOSPITAL" comment="" end="6090" id="P13" start="6077" text="Ross Hospital" />
 <NAME TYPE="DOCTOR" comment="" end="6816" id="P14" start="6798" text="Gennaro B. Norwood" />
 <CONTACT TYPE="PHONE" comment="" end="6859" id="P15" start="6854" text="07736" />
 </TAGS>

@@ -116,12 +116,10 @@ Dictated by:  FAITH GALINDO, M.D.       FG9
 </TEXT>
 <TAGS>
 <DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2082-12-31" />
-<LOCATION TYPE="HOSPITAL" comment="" end="51" id="P1" start="49" text="AH" />
 <NAME TYPE="PATIENT" comment="" end="91" id="P2" start="77" text="BRANCH,EARNEST" />
 <ID TYPE="MEDICALRECORD" comment="" end="105" id="P3" start="94" text="530-23-69-1" />
 <DATE TYPE="DATE" comment="" end="147" id="P4" start="139" text="12/31/82" />
 <NAME TYPE="DOCTOR" comment="" end="204" id="P5" start="188" text="Xavier Whittaker" />
-<LOCATION TYPE="HOSPITAL" comment="" end="2406" id="P7" start="2392" text="Integra Health" />
 <ID TYPE="IDNUM" comment="" end="2846" id="P8" start="2835" text="ZI623/55469" />
 <NAME TYPE="DOCTOR" comment="" end="2862" id="P9" start="2849" text="FAITH GALINDO" />
 <NAME TYPE="USERNAME" comment="" end="2878" id="P10" start="2875" text="FG9" />

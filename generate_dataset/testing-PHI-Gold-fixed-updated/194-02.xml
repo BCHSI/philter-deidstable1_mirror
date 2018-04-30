@@ -337,18 +337,15 @@ I have seen and examined the patient wtih Leon and agree with his assessment.
 <TAGS>
 <DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2092-10-11" />
 <NAME TYPE="PATIENT" comment="" end="98" id="P2" start="81" text="Crawford, Patrick" />
-<LOCATION TYPE="HOSPITAL" comment="" end="104" id="P3" start="100" text="Mary" />
 <ID TYPE="MEDICALRECORD" comment="" end="128" id="P5" start="119" text="902-15-55" />
 <DATE TYPE="DATE" comment="" end="157" id="P6" start="149" text="10/10/92" />
 <NAME TYPE="DOCTOR" comment="" end="185" id="P7" start="171" text="Yancey, Ursula" />
 <NAME TYPE="DOCTOR" comment="" end="204" id="P8" start="192" text="Estep, Willa" />
-<LOCATION TYPE="HOSPITAL" comment="" end="1377" id="P10" start="1374" text="SOH" />
 <NAME TYPE="PATIENT" comment="" end="1412" id="P11" start="1404" text="Crawford" />
 <NAME TYPE="PATIENT" comment="" end="2544" id="P12" start="2536" text="Crawford" />
 <DATE TYPE="DATE" comment="" end="3350" id="P13" start="3346" text="2080" />
 <DATE TYPE="DATE" comment="" end="3574" id="P14" start="3568" text="8/2090" />
 <DATE TYPE="DATE" comment="" end="3721" id="P15" start="3714" text="10/2090" />
-<LOCATION TYPE="HOSPITAL" comment="" end="3823" id="P16" start="3820" text="SOH" />
 <DATE TYPE="DATE" comment="" end="3896" id="P17" start="3892" text="2072" />
 <DATE TYPE="DATE" comment="" end="4106" id="P18" start="4102" text="6/85" />
 <PROFESSION TYPE="PROFESSION" comment="" end="4824" id="P19" start="4811" text="army corporal" />

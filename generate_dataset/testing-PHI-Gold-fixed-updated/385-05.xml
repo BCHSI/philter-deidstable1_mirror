@@ -250,7 +250,6 @@ Frank T. Xuan, M.D.
 <DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2090-02-18" />
 <NAME TYPE="PATIENT" comment="" end="109" id="P1" start="97" text="MOSS,DEREK P" />
 <ID TYPE="MEDICALRECORD" comment="" end="120" id="P2" start="112" text="89659991" />
-<LOCATION TYPE="HOSPITAL" comment="" end="124" id="P3" start="121" text="QMC" />
 <DATE TYPE="DATE" comment="" end="212" id="P4" start="202" text="02/18/2090" />
 <DATE TYPE="DATE" comment="" end="1326" id="P6" start="1322" text="2084" />
 <DATE TYPE="DATE" comment="" end="1342" id="P7" start="1338" text="2085" />
@@ -262,8 +261,6 @@ Frank T. Xuan, M.D.
 <PROFESSION TYPE="PROFESSION" comment="" end="1806" id="P13" start="1785" text="vocational instructor" />
 <NAME TYPE="PATIENT" comment="" end="1840" id="P14" start="1836" text="West" />
 <NAME TYPE="DOCTOR" comment="" end="2773" id="P15" start="2767" text="Dunlap" />
-<LOCATION TYPE="HOSPITAL" comment="" end="4331" id="P16" start="4328" text="QMC" />
-<LOCATION TYPE="HOSPITAL" comment="" end="4529" id="P17" start="4526" text="QMC" />
 <NAME TYPE="DOCTOR" comment="" end="4622" id="P18" start="4609" text="Frank T. Xuan" />
 </TAGS>
 </deIdi2b2>

@@ -52,7 +52,6 @@ Document Status: Final
 </TEXT>
 <TAGS>
 <DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2089-04-05" />
-<LOCATION TYPE="HOSPITAL" comment="" end="67" id="P1" start="45" text="SAINT VINCENT HOSPITAL" />
 <NAME TYPE="PATIENT" comment="" end="100" id="P2" start="94" text="Ursula" />
 <NAME TYPE="PATIENT" comment="" end="1537" id="P4" start="1531" text="Ursula" />
 <NAME TYPE="DOCTOR" comment="" end="2068" id="P5" start="2054" text="Umberto Uzzell" />

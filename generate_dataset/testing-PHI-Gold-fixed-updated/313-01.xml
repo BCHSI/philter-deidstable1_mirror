@@ -95,7 +95,6 @@ DV:6-19-59
 </TEXT>
 <TAGS>
 <DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2059-06-19" />
-<LOCATION TYPE="HOSPITAL" comment="" end="38" id="P1" start="28" text="PROMPTCARE" />
 <NAME TYPE="PATIENT" comment="" end="90" id="P2" start="77" text="Rutledge, Eva" />
 <ID TYPE="MEDICALRECORD" comment="" end="145" id="P3" start="137" text="29195561" />
 <DATE TYPE="DATE" comment="" end="199" id="P4" start="192" text="6-19-59" />
@@ -105,7 +104,6 @@ DV:6-19-59
 <NAME TYPE="PATIENT" comment="" end="917" id="P11" start="914" text="Eva" />
 <NAME TYPE="PATIENT" comment="" end="2006" id="P12" start="2003" text="Eva" />
 <PROFESSION TYPE="PROFESSION" comment="" end="2612" id="P13" start="2588" text="Pulping Control Operator" />
-<LOCATION TYPE="HOSPITAL" comment="" end="2784" id="P14" start="2774" text="PROMPTCARE" />
 <NAME TYPE="PATIENT" comment="" end="2836" id="P15" start="2823" text="Rutledge, Eva" />
 <ID TYPE="MEDICALRECORD" comment="" end="2891" id="P16" start="2883" text="29195561" />
 <DATE TYPE="DATE" comment="" end="2945" id="P17" start="2938" text="6-19-59" />

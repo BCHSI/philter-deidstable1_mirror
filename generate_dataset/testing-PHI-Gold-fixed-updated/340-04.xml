@@ -140,7 +140,6 @@ Charles Craig Max Zavaleta, M.D.
 <DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2078-06-22" />
 <NAME TYPE="PATIENT" comment="" end="105" id="P1" start="97" text="XIA,JEAN" />
 <ID TYPE="MEDICALRECORD" comment="" end="117" id="P2" start="109" text="58269151" />
-<LOCATION TYPE="HOSPITAL" comment="" end="128" id="P3" start="118" text="PROMPTCARE" />
 <DATE TYPE="DATE" comment="" end="216" id="P4" start="206" text="06/22/2078" />
 <DATE TYPE="DATE" comment="" end="1354" id="P5" start="1346" text="11/11/76" />
 <NAME TYPE="DOCTOR" comment="" end="1509" id="P6" start="1503" text="osburn" />

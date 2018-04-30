@@ -203,7 +203,6 @@ DV: 01/18/20
 <DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2120-01-18" />
 <DATE TYPE="DATE" comment="" end="44" id="P1" start="28" text="January 18, 2120" />
 <NAME TYPE="DOCTOR" comment="" end="59" id="P2" start="46" text="Freeman Faust" />
-<LOCATION TYPE="HOSPITAL" comment="" end="102" id="P3" start="78" text="Evergreen Court Hospital" />
 <LOCATION TYPE="STREET" comment="" end="120" id="P4" start="103" text="97 Factory Street" />
 <LOCATION TYPE="CITY" comment="" end="131" id="P5" start="121" text="Haleyville" />
 <LOCATION TYPE="STATE" comment="" end="135" id="P6" start="133" text="MN" />

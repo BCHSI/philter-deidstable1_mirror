@@ -101,7 +101,6 @@ RS:91294     :1305
 <DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2127-05-18" />
 <DATE TYPE="DATE" comment="" end="42" id="P1" start="30" text="May 18, 2127" />
 <NAME TYPE="DOCTOR" comment="" end="60" id="P2" start="46" text="Robert Xenakis" />
-<LOCATION TYPE="HOSPITAL" comment="" end="148" id="P5" start="126" text="Houston Medical Center" />
 <LOCATION TYPE="CITY" comment="" end="155" id="P6" start="150" text="Hayti" />
 <LOCATION TYPE="STATE" comment="" end="159" id="P7" start="157" text="DE" />
 <LOCATION TYPE="ZIP" comment="" end="165" id="P8" start="160" text="69436" />
@@ -118,7 +117,6 @@ RS:91294     :1305
 <DATE TYPE="DATE" comment="" end="5706" id="P22" start="5699" text="3/26/27" />
 <NAME TYPE="PATIENT" comment="" end="7159" id="P25" start="7148" text="Norma Mckee" />
 <NAME TYPE="DOCTOR" comment="" end="7253" id="P26" start="7236" text="Salvador B. Irvin" />
-<LOCATION TYPE="HOSPITAL" comment="" end="7313" id="P28" start="7291" text="Houston Medical Center" />
 <DATE TYPE="DATE" comment="" end="7358" id="P29" start="7351" text="3/26/27" />
 <DATE TYPE="DATE" comment="" end="9252" id="P30" start="9242" text="05/18/2127" />
 <DATE TYPE="DATE" comment="" end="9267" id="P31" start="9257" text="05/20/2127" />

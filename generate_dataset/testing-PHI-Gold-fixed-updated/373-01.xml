@@ -168,7 +168,6 @@ cc:
 <DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2081-01-05" />
 <NAME TYPE="PATIENT" comment="" end="182" id="P2" start="175" text="Jimenez" />
 <DATE TYPE="DATE" comment="" end="272" id="P3" start="255" text="September of 2080" />
-<LOCATION TYPE="HOSPITAL" comment="" end="297" id="P4" start="294" text="LCH" />
 <DATE TYPE="DATE" comment="" end="309" id="P5" start="301" text="10/11/80" />
 <LOCATION TYPE="ORGANIZATION" comment="" end="960" id="P6" start="949" text="the library" />
 <DATE TYPE="DATE" comment="" end="1159" id="P7" start="1155" text="3/78" />

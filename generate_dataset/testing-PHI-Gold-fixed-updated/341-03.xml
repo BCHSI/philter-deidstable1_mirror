@@ -180,14 +180,12 @@ Casey Frey, M.D.                 Pager 46311
 <NAME TYPE="DOCTOR" comment="" end="179" id="P7" start="169" text="Casey Frey" />
 <NAME TYPE="PATIENT" comment="" end="206" id="P8" start="195" text="Leo Wilhelm" />
 <CONTACT TYPE="PHONE" comment="" end="225" id="P9" start="213" text="705-690-8475" />
-<LOCATION TYPE="HOSPITAL" comment="" end="560" id="P11" start="552" text="MEDIQUIK" />
 <DATE TYPE="DATE" comment="" end="567" id="P12" start="564" text="6/2" />
 <DATE TYPE="DATE" comment="" end="575" id="P13" start="568" text="6/20/97" />
 <DATE TYPE="DATE" comment="" end="755" id="P14" start="752" text="May" />
 <NAME TYPE="DOCTOR" comment="" end="1060" id="P15" start="1055" text="Utter" />
 <DATE TYPE="DATE" comment="" end="1792" id="P16" start="1785" text="6/08/97" />
 <DATE TYPE="DATE" comment="" end="2538" id="P17" start="2531" text="7/19/97" />
-<LOCATION TYPE="HOSPITAL" comment="" end="4830" id="P19" start="4822" text="MEDIQUIK" />
 <PROFESSION TYPE="PROFESSION" comment="" end="4854" id="P20" start="4849" text="nurse" />
 <DATE TYPE="DATE" comment="" end="5578" id="P21" start="5570" text="06/30/97" />
 <DATE TYPE="DATE" comment="" end="5589" id="P22" start="5581" text="06/29/97" />

@@ -199,7 +199,6 @@ Document Status: Final
 </TEXT>
 <TAGS>
 <DATE TYPE="DATE" comment="" end="28" id="P0" start="18" text="2091-07-02" />
-<LOCATION TYPE="HOSPITAL" comment="" end="77" id="P1" start="49" text="BEAUREGARD MEMORIAL HOSPITAL" />
 <NAME TYPE="DOCTOR" comment="" end="101" id="P2" start="83" text="Nathan J Fernandes" />
 <LOCATION TYPE="CITY" comment="" end="126" id="P3" start="111" text="College Station" />
 <LOCATION TYPE="STATE" comment="" end="130" id="P4" start="128" text="NC" />

@@ -71,9 +71,7 @@ Note:  The duration of this visit was 25 minutes with the majority of the time s
 </TEXT>
 <TAGS>
 <DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2096-12-29" />
-<LOCATION TYPE="HOSPITAL" comment="" end="33" id="P1" start="30" text="NMH" />
 <NAME TYPE="PATIENT" comment="" end="48" id="P2" start="38" text="Donn Emery" />
-<LOCATION TYPE="HOSPITAL" comment="" end="52" id="P3" start="49" text="NMH" />
 <ID TYPE="MEDICALRECORD" comment="" end="65" id="P4" start="56" text="059-57-26" />
 <DATE TYPE="DATE" comment="" end="84" id="P5" start="67" text="December 29, 2096" />
 <NAME TYPE="DOCTOR" comment="" end="175" id="P6" start="171" text="Pina" />

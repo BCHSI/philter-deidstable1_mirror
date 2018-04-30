@@ -145,9 +145,7 @@ TYO/ellington		04-14609701.doc
 <TAGS>
 <DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2084-10-19" />
 <NAME TYPE="PATIENT" comment="" end="173" id="P1" start="165" text="Mae Paul" />
-<LOCATION TYPE="HOSPITAL" comment="" end="309" id="P2" start="306" text="LMC" />
 <ID TYPE="MEDICALRECORD" comment="" end="320" id="P3" start="311" text="100-57-08" />
-<LOCATION TYPE="HOSPITAL" comment="" end="334" id="P4" start="331" text="LMC" />
 <DATE TYPE="DATE" comment="" end="374" id="P5" start="358" text="October 19, 2084" />
 <DATE TYPE="DATE" comment="" end="774" id="P7" start="770" text="2078" />
 <DATE TYPE="DATE" comment="" end="783" id="P8" start="779" text="2075" />
@@ -157,7 +155,6 @@ TYO/ellington		04-14609701.doc
 <DATE TYPE="DATE" comment="" end="1191" id="P12" start="1185" text="Monday" />
 <DATE TYPE="DATE" comment="" end="1202" id="P13" start="1193" text="Wednesday" />
 <DATE TYPE="DATE" comment="" end="1213" id="P14" start="1207" text="Friday" />
-<LOCATION TYPE="HOSPITAL" comment="" end="1262" id="P15" start="1258" text="EHCC" />
 <DATE TYPE="DATE" comment="" end="1373" id="P16" start="1369" text="9/83" />
 <NAME TYPE="DOCTOR" comment="" end="1387" id="P17" start="1379" text="Xayasane" />
 <DATE TYPE="DATE" comment="" end="1686" id="P18" start="1680" text="Monday" />
@@ -167,17 +164,12 @@ TYO/ellington		04-14609701.doc
 <LOCATION TYPE="ORGANIZATION" comment="" end="1824" id="P22" start="1818" text="Vassar" />
 <PROFESSION TYPE="PROFESSION" comment="" end="1885" id="P23" start="1878" text="surgeon" />
 <NAME TYPE="PATIENT" comment="" end="2559" id="P24" start="2551" text="Mae Paul" />
-<LOCATION TYPE="HOSPITAL" comment="" end="2695" id="P25" start="2692" text="LMC" />
 <ID TYPE="MEDICALRECORD" comment="" end="2706" id="P26" start="2697" text="100-57-08" />
 <NAME TYPE="DOCTOR" comment="" end="3159" id="P27" start="3140" text="Thomas Y. Ontiveros" />
 <NAME TYPE="DOCTOR" comment="" end="3182" id="P28" start="3173" text="Jack John" />
-<LOCATION TYPE="HOSPITAL" comment="" end="3193" id="P29" start="3190" text="LMC" />
 <NAME TYPE="DOCTOR" comment="" end="3211" id="P30" start="3196" text="Harvey Ethridge" />
-<LOCATION TYPE="HOSPITAL" comment="" end="3222" id="P31" start="3219" text="LMC" />
 <NAME TYPE="DOCTOR" comment="" end="3237" id="P32" start="3225" text="E. K. Sutton" />
-<LOCATION TYPE="HOSPITAL" comment="" end="3248" id="P33" start="3245" text="LMC" />
 <NAME TYPE="DOCTOR" comment="" end="3262" id="P34" start="3250" text="Herman Lemus" />
-<LOCATION TYPE="HOSPITAL" comment="" end="3274" id="P35" start="3270" text="EHCC" />
 <NAME TYPE="DOCTOR" comment="" end="3281" id="P36" start="3278" text="TYO" />
 <NAME TYPE="DOCTOR" comment="" end="3291" id="P37" start="3282" text="ellington" />
 <ID TYPE="IDNUM" comment="" end="3304" id="P38" start="3293" text="04-14609701" />

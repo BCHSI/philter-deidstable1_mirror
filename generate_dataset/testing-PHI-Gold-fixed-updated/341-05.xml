@@ -291,19 +291,15 @@ Pager 47234
 <ID TYPE="MEDICALRECORD" comment="" end="111" id="P4" start="104" text="9543443" />
 <DATE TYPE="DATE" comment="" end="131" id="P5" start="125" text="8/2/98" />
 <NAME TYPE="DOCTOR" comment="" end="153" id="P6" start="143" text="Casey Frey" />
-<LOCATION TYPE="HOSPITAL" comment="" end="404" id="P8" start="396" text="MEDIQUIK" />
 <DATE TYPE="DATE" comment="" end="410" id="P9" start="406" text="6/29" />
 <DATE TYPE="DATE" comment="" end="415" id="P10" start="411" text="7/05" />
 <DATE TYPE="DATE" comment="" end="785" id="P11" start="781" text="7/18" />
-<LOCATION TYPE="HOSPITAL" comment="" end="1167" id="P12" start="1159" text="MEDIQUIK" />
-<LOCATION TYPE="HOSPITAL" comment="" end="1191" id="P13" start="1183" text="MEDIQUIK" />
 <DATE TYPE="DATE" comment="" end="1363" id="P14" start="1358" text="11/97" />
 <DATE TYPE="DATE" comment="" end="1447" id="P15" start="1440" text="4/29/98" />
 <DATE TYPE="DATE" comment="" end="1531" id="P16" start="1527" text="1/98" />
 <NAME TYPE="DOCTOR" comment="" end="1706" id="P17" start="1701" text="Joshi" />
 <DATE TYPE="DATE" comment="" end="1715" id="P18" start="1710" text="10/97" />
 <DATE TYPE="DATE" comment="" end="1782" id="P19" start="1773" text="6/20/2085" />
-<LOCATION TYPE="HOSPITAL" comment="" end="2937" id="P20" start="2922" text="Ingham Hospital" />
 <DATE TYPE="DATE" comment="" end="3785" id="P21" start="3779" text="8/2/98" />
 <DATE TYPE="DATE" comment="" end="3913" id="P22" start="3906" text="7/18/98" />
 <DATE TYPE="DATE" comment="" end="4097" id="P23" start="4090" text="6/30/98" />

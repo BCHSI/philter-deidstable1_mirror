@@ -87,9 +87,7 @@ J. Orellana MD
 <TAGS>
 <DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2146-02-20" />
 <NAME TYPE="PATIENT" comment="" end="34" id="P1" start="30" text="Olga" />
-<LOCATION TYPE="HOSPITAL" comment="" end="111" id="P2" start="103" text="MEDIQUIK" />
 <DATE TYPE="DATE" comment="" end="120" id="P3" start="115" text="12/45" />
-<LOCATION TYPE="HOSPITAL" comment="" end="203" id="P4" start="187" text="Parsons Hospital" />
 <LOCATION TYPE="CITY" comment="" end="213" id="P5" start="207" text="Vernal" />
 <DATE TYPE="DATE" comment="" end="220" id="P6" start="217" text="1/7" />
 <DATE TYPE="DATE" comment="" end="229" id="P7" start="225" text="1/29" />

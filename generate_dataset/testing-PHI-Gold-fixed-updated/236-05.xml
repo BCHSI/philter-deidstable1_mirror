@@ -62,7 +62,6 @@ DV: 05/10/73
 </TEXT>
 <TAGS>
 <DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2073-05-10" />
-<LOCATION TYPE="HOSPITAL" comment="" end="32" id="P1" start="29" text="LUH" />
 <LOCATION TYPE="STREET" comment="" end="85" id="P3" start="65" text="92 Batchelder Street" />
 <NAME TYPE="PATIENT" comment="" end="138" id="P4" start="123" text="VANCE, JENNIFER" />
 <LOCATION TYPE="CITY" comment="" end="146" id="P5" start="139" text="Minerva" />
@@ -72,7 +71,6 @@ DV: 05/10/73
 <CONTACT TYPE="PHONE" comment="" end="222" id="P9" start="208" text="(727) 859-7945" />
 <DATE TYPE="DATE" comment="" end="273" id="P10" start="265" text="05/10/73" />
 <NAME TYPE="DOCTOR" comment="" end="290" id="P11" start="275" text="Wanda A. Koontz" />
-<LOCATION TYPE="HOSPITAL" comment="" end="350" id="P13" start="326" text="Barton Memorial Hospital" />
 <LOCATION TYPE="STREET" comment="" end="371" id="P14" start="351" text="70 Batchelder Street" />
 <LOCATION TYPE="CITY" comment="" end="379" id="P15" start="372" text="Minerva" />
 <LOCATION TYPE="STATE" comment="" end="383" id="P16" start="381" text="TN" />
