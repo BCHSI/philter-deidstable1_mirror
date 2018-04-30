@@ -347,7 +347,6 @@ Internal Medicine PGY1
 <CONTACT TYPE="PHONE" comment="" end="238" id="P7" start="225" text="(215)579-9664" />
 <NAME TYPE="PATIENT" comment="" end="342" id="P8" start="336" text="Slater" />
 <NAME TYPE="PATIENT" comment="" end="586" id="P10" start="580" text="Slater" />
-<LOCATION TYPE="HOSPITAL" comment="" end="860" id="P11" start="857" text="FPC" />
 <DATE TYPE="DATE" comment="" end="2262" id="P12" start="2258" text="2133" />
 <DATE TYPE="DATE" comment="" end="2316" id="P13" start="2312" text="8/41" />
 <PROFESSION TYPE="PROFESSION" comment="" end="2622" id="P14" start="2602" text="political journalist" />

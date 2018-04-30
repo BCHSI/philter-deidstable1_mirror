@@ -88,14 +88,9 @@ Patrick Winn, M.D.
 <NAME TYPE="PATIENT" comment="" end="120" id="P4" start="98" text="Nikkolas Nancy-Jasmine" />
 <DATE TYPE="DATE" comment="" end="178" id="P5" start="167" text="August 2091" />
 <DATE TYPE="DATE" comment="" end="348" id="P8" start="342" text="August" />
-<LOCATION TYPE="HOSPITAL" comment="" end="590" id="P9" start="554" text="Dubuque Obstetrics Gynocology Center" />
-<LOCATION TYPE="HOSPITAL" comment="" end="696" id="P10" start="672" text="Mitchell County Hospital" />
-<LOCATION TYPE="HOSPITAL" comment="" end="828" id="P11" start="812" text="Flagler Hospital" />
 <DATE TYPE="DATE" comment="" end="1555" id="P15" start="1551" text="2073" />
 <PROFESSION TYPE="PROFESSION" comment="" end="1590" id="P16" start="1578" text="construction" />
 <DATE TYPE="DATE" comment="" end="3394" id="P18" start="3388" text="August" />
-<LOCATION TYPE="HOSPITAL" comment="" end="3455" id="P19" start="3451" text="DOGC" />
-<LOCATION TYPE="HOSPITAL" comment="" end="3532" id="P20" start="3516" text="Flagler Hospital" />
 <NAME TYPE="DOCTOR" comment="" end="3761" id="P21" start="3749" text="Patrick Winn" />
 </TAGS>
 </deIdi2b2>

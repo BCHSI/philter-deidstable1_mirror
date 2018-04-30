@@ -152,13 +152,11 @@ Dictated by:  SHERRY PERKINS, M.D.  SP79
 </TEXT>
 <TAGS>
 <DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2095-04-03" />
-<LOCATION TYPE="HOSPITAL" comment="" end="60" id="P1" start="49" text="LEPROSARIUM" />
 <NAME TYPE="PATIENT" comment="" end="100" id="P2" start="86" text="KIM,DOUGLAS JR" />
 <ID TYPE="MEDICALRECORD" comment="" end="114" id="P3" start="103" text="201-63-51-2" />
 <DATE TYPE="DATE" comment="" end="150" id="P4" start="142" text="04/03/95" />
 <NAME TYPE="PATIENT" comment="" end="286" id="P5" start="279" text="Killian" />
 <DATE TYPE="DATE" comment="" end="396" id="P7" start="379" text="December 18, 2094" />
-<LOCATION TYPE="HOSPITAL" comment="" end="1120" id="P8" start="1105" text="EDUCARE-PULLMAN" />
 <DATE TYPE="DATE" comment="" end="1128" id="P9" start="1124" text="2083" />
 <PROFESSION TYPE="PROFESSION" comment="" end="1485" id="P10" start="1474" text="engineering" />
 <NAME TYPE="DOCTOR" comment="" end="3932" id="P11" start="3930" text="VN" />

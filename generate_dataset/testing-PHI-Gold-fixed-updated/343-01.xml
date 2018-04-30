@@ -69,7 +69,6 @@ eScription document:2-320209
 </TEXT>
 <TAGS>
 <DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2094-10-26" />
-<LOCATION TYPE="HOSPITAL" comment="" end="60" id="P1" start="29" text="Saint John Valley Health Center" />
 <LOCATION TYPE="STREET" comment="" end="83" id="P2" start="61" text="157 Peterborough Place" />
 <NAME TYPE="PATIENT" comment="" end="138" id="P3" start="123" text="KIM JR, DOUGLAS" />
 <LOCATION TYPE="CITY" comment="" end="146" id="P4" start="139" text="Sulphur" />

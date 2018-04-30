@@ -130,34 +130,24 @@ DV:8-02-73
 </TEXT>
 <TAGS>
 <DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2073-08-02" />
-<LOCATION TYPE="HOSPITAL" comment="" end="38" id="P1" start="28" text="MAMARONECK" />
 <NAME TYPE="PATIENT" comment="" end="87" id="P2" start="77" text="Orta, Phil" />
 <ID TYPE="MEDICALRECORD" comment="" end="142" id="P3" start="134" text="55931516" />
 <DATE TYPE="DATE" comment="" end="196" id="P4" start="189" text="8-02-73" />
 <NAME TYPE="PATIENT" comment="" end="307" id="P5" start="303" text="Orta" />
-<LOCATION TYPE="HOSPITAL" comment="" end="398" id="P7" start="395" text="LBH" />
 <LOCATION TYPE="CITY" comment="" end="411" id="P8" start="402" text="Edgefield" />
-<LOCATION TYPE="HOSPITAL" comment="" end="432" id="P9" start="429" text="MHC" />
-<LOCATION TYPE="HOSPITAL" comment="" end="464" id="P10" start="461" text="LBH" />
 <NAME TYPE="DOCTOR" comment="" end="489" id="P11" start="483" text="Jaeger" />
 <CONTACT TYPE="PHONE" comment="" end="523" id="P12" start="515" text="872-9985" />
-<LOCATION TYPE="HOSPITAL" comment="" end="625" id="P13" start="622" text="LBH" />
 <DATE TYPE="DATE" comment="" end="774" id="P14" start="770" text="2063" />
 <NAME TYPE="DOCTOR" comment="" end="1189" id="P15" start="1172" text="Guadalupe Thacker" />
-<LOCATION TYPE="HOSPITAL" comment="" end="1196" id="P16" start="1193" text="LBH" />
 <PROFESSION TYPE="PROFESSION" comment="" end="1548" id="P17" start="1535" text="social worker" />
 <PROFESSION TYPE="PROFESSION" comment="" end="1627" id="P18" start="1599" text="community services managment" />
 <NAME TYPE="PATIENT" comment="" end="2570" id="P19" start="2566" text="Orta" />
-<LOCATION TYPE="HOSPITAL" comment="" end="2964" id="P20" start="2961" text="MHC" />
 <NAME TYPE="PATIENT" comment="" end="3013" id="P21" start="3003" text="Orta, Phil" />
 <ID TYPE="MEDICALRECORD" comment="" end="3068" id="P22" start="3060" text="55931516" />
 <DATE TYPE="DATE" comment="" end="3122" id="P23" start="3115" text="8-02-73" />
-<LOCATION TYPE="HOSPITAL" comment="" end="5520" id="P24" start="5517" text="MHC" />
 <NAME TYPE="PATIENT" comment="" end="5569" id="P25" start="5559" text="Orta, Phil" />
 <ID TYPE="MEDICALRECORD" comment="" end="5624" id="P26" start="5616" text="55931516" />
 <DATE TYPE="DATE" comment="" end="5678" id="P27" start="5671" text="8-02-73" />
-<LOCATION TYPE="HOSPITAL" comment="" end="5845" id="P28" start="5821" text="Mamaroneck Health Center" />
-<LOCATION TYPE="HOSPITAL" comment="" end="5886" id="P29" start="5883" text="LBH" />
 <CONTACT TYPE="PHONE" comment="" end="5958" id="P30" start="5950" text="534-3442" />
 <NAME TYPE="DOCTOR" comment="" end="6010" id="P31" start="5999" text="Oscar Allen" />
 <NAME TYPE="DOCTOR" comment="" end="6022" id="P32" start="6020" text="LF" />

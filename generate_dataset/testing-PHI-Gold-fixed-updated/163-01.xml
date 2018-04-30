@@ -218,7 +218,6 @@ DV: 05/18/83
 <DATE TYPE="DATE" comment="" end="263" id="P12" start="257" text="May 18" />
 <DATE TYPE="DATE" comment="" end="418" id="P14" start="414" text="2065" />
 <NAME TYPE="DOCTOR" comment="" end="903" id="P15" start="899" text="Zink" />
-<LOCATION TYPE="HOSPITAL" comment="" end="918" id="P16" start="907" text="Barr Clinic" />
 <LOCATION TYPE="CITY" comment="" end="2312" id="P18" start="2299" text="Elizabethtown" />
 <PROFESSION TYPE="PROFESSION" comment="" end="2352" id="P19" start="2332" text="midwife and director" />
 <LOCATION TYPE="ORGANIZATION" comment="" end="2373" id="P20" start="2356" text="Iowa Birth Clinic" />
@@ -228,7 +227,6 @@ DV: 05/18/83
 <ID TYPE="MEDICALRECORD" comment="" end="2529" id="P24" start="2521" text="48967301" />
 <NAME TYPE="DOCTOR" comment="" end="3788" id="P25" start="3774" text="Miguel H. Ames" />
 <NAME TYPE="DOCTOR" comment="" end="3813" id="P26" start="3803" text="Gerald Yan" />
-<LOCATION TYPE="HOSPITAL" comment="" end="3831" id="P27" start="3821" text="PROMPTCARE" />
 <DATE TYPE="DATE" comment="" end="3848" id="P28" start="3840" text="05/18/83" />
 <DATE TYPE="DATE" comment="" end="3863" id="P29" start="3855" text="05/21/83" />
 <DATE TYPE="DATE" comment="" end="3878" id="P30" start="3870" text="05/18/83" />

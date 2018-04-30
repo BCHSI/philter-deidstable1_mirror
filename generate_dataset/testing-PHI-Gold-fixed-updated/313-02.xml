@@ -133,7 +133,6 @@ Xen Chris Emmons, M.D.
 <NAME TYPE="PATIENT" comment="" end="109" id="P1" start="97" text="RUTLEDGE,EVA" />
 <ID TYPE="MEDICALRECORD" comment="" end="128" id="P2" start="117" text="37947241ZGJ" />
 <DATE TYPE="DATE" comment="" end="214" id="P3" start="204" text="10/08/2066" />
-<LOCATION TYPE="HOSPITAL" comment="" end="265" id="P4" start="255" text="PROMPTCARE" />
 <NAME TYPE="PATIENT" comment="" end="297" id="P5" start="289" text="Rutledge" />
 <NAME TYPE="DOCTOR" comment="" end="328" id="P6" start="325" text="Xia" />
 <DATE TYPE="DATE" comment="" end="880" id="P7" start="876" text="2062" />

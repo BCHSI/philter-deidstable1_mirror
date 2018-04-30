@@ -300,7 +300,6 @@ Noah X. Rush, M.D., Pager #02428
 <DATE TYPE="DATE" comment="" end="131" id="P4" start="124" text="7/28/03" />
 <NAME TYPE="DOCTOR" comment="" end="150" id="P5" start="143" text="WINTERS" />
 <NAME TYPE="DOCTOR" comment="" end="182" id="P6" start="164" text="Patricia Mcfarland" />
-<LOCATION TYPE="HOSPITAL" comment="" end="192" id="P7" start="184" text="MEDIQUIK" />
 <CONTACT TYPE="PHONE" comment="" end="206" id="P8" start="194" text="127-319-4834" />
 <NAME TYPE="PATIENT" comment="" end="244" id="P9" start="228" text="Penelope Yandell" />
 <CONTACT TYPE="PHONE" comment="" end="257" id="P10" start="245" text="761-259-5716" />
@@ -324,10 +323,8 @@ Noah X. Rush, M.D., Pager #02428
 <DATE TYPE="DATE" comment="" end="3283" id="P29" start="3279" text="70's" />
 <DATE TYPE="DATE" comment="" end="3416" id="P30" start="3403" text="November 2095" />
 <DATE TYPE="DATE" comment="" end="3441" id="P31" start="3437" text="2096" />
-<LOCATION TYPE="HOSPITAL" comment="" end="3465" id="P32" start="3455" text="San Rafael" />
 <DATE TYPE="DATE" comment="" end="3555" id="P33" start="3551" text="2092" />
 <DATE TYPE="DATE" comment="" end="3656" id="P34" start="3652" text="8/92" />
-<LOCATION TYPE="HOSPITAL" comment="" end="3720" id="P35" start="3710" text="San Rafael" />
 <DATE TYPE="DATE" comment="" end="3729" id="P36" start="3721" text="February" />
 <DATE TYPE="DATE" comment="" end="3745" id="P37" start="3734" text="March, 2102" />
 <DATE TYPE="DATE" comment="" end="3783" id="P38" start="3778" text="10/02" />

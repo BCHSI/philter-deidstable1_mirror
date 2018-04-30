@@ -107,7 +107,6 @@ Palm Springs, CO  19496
 </TEXT>
 <TAGS>
 <DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2086-08-28" />
-<LOCATION TYPE="HOSPITAL" comment="" end="113" id="P1" start="92" text="Floyd County Hospital" />
 <LOCATION TYPE="STREET" comment="" end="155" id="P2" start="138" text="05 Greeley Street" />
 <LOCATION TYPE="CITY" comment="" end="192" id="P3" start="180" text="Palm Springs" />
 <LOCATION TYPE="STATE" comment="" end="196" id="P4" start="194" text="CO" />
@@ -121,7 +120,6 @@ Palm Springs, CO  19496
 <NAME TYPE="DOCTOR" comment="" end="1554" id="P12" start="1544" text="Edward Yim" />
 <NAME TYPE="DOCTOR" comment="" end="1570" id="P13" start="1566" text="pina" />
 <NAME TYPE="DOCTOR" comment="" end="1589" id="P14" start="1577" text="Harry Truong" />
-<LOCATION TYPE="HOSPITAL" comment="" end="1618" id="P15" start="1597" text="Floyd County Hospital" />
 <LOCATION TYPE="STREET" comment="" end="1636" id="P16" start="1619" text="17 Greeley Street" />
 <LOCATION TYPE="CITY" comment="" end="1650" id="P17" start="1638" text="Palm Springs" />
 <LOCATION TYPE="STATE" comment="" end="1654" id="P18" start="1652" text="CO" />

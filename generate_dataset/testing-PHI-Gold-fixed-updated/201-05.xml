@@ -404,7 +404,6 @@ Discussed with senior resident, Dr. Skylar Watson
 <DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2084-01-08" />
 <NAME TYPE="PATIENT" comment="" end="121" id="P1" start="103" text="XAYAVONG,BRANDON H" />
 <ID TYPE="MEDICALRECORD" comment="" end="136" id="P2" start="129" text="7826250" />
-<LOCATION TYPE="HOSPITAL" comment="" end="140" id="P3" start="137" text="GNC" />
 <DATE TYPE="DATE" comment="" end="250" id="P5" start="246" text="2077" />
 <DATE TYPE="DATE" comment="" end="1277" id="P6" start="1269" text="Thursday" />
 <DATE TYPE="DATE" comment="" end="1719" id="P7" start="1715" text="2077" />
@@ -429,7 +428,6 @@ Discussed with senior resident, Dr. Skylar Watson
 <CONTACT TYPE="PHONE" comment="" end="8091" id="P27" start="8086" text="90395" />
 <CONTACT TYPE="PHONE" comment="" end="9019" id="P28" start="9014" text="90395" />
 <NAME TYPE="DOCTOR" comment="" end="9107" id="P29" start="9096" text="Carol Upton" />
-<LOCATION TYPE="HOSPITAL" comment="" end="9133" id="P30" start="9123" text="Winchendon" />
 <CONTACT TYPE="PHONE" comment="" end="9165" id="P31" start="9160" text="25539" />
 <CONTACT TYPE="PHONE" comment="" end="9171" id="P32" start="9166" text="69926" />
 <NAME TYPE="DOCTOR" comment="" end="9224" id="P33" start="9211" text="Skylar Watson" />

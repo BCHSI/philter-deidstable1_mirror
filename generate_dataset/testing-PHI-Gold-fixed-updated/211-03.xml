@@ -109,7 +109,6 @@ Worthington Regional Hospital
 <NAME TYPE="DOCTOR" comment="" end="112" id="P3" start="99" text="Orozco, Jimmy" />
 <DATE TYPE="DATE" comment="" end="140" id="P4" start="130" text="05/11/2094" />
 <NAME TYPE="DOCTOR" comment="" end="184" id="P5" start="173" text="John Ussery" />
-<LOCATION TYPE="HOSPITAL" comment="" end="203" id="P6" start="192" text="Worthington" />
 <LOCATION TYPE="STREET" comment="" end="241" id="P8" start="223" text="28 Shattuck Street" />
 <LOCATION TYPE="CITY" comment="" end="263" id="P10" start="251" text="Citrus Ridge" />
 <LOCATION TYPE="STATE" comment="" end="267" id="P11" start="265" text="MT" />
@@ -120,6 +119,5 @@ Worthington Regional Hospital
 <DATE TYPE="DATE" comment="" end="953" id="P16" start="943" text="03/16/2094" />
 <DATE TYPE="DATE" comment="" end="2266" id="P18" start="2257" text="July 2093" />
 <NAME TYPE="DOCTOR" comment="" end="3908" id="P20" start="3893" text="Jimmy J. Orozco" />
-<LOCATION TYPE="HOSPITAL" comment="" end="3963" id="P22" start="3934" text="Worthington Regional Hospital" />
 </TAGS>
 </deIdi2b2>

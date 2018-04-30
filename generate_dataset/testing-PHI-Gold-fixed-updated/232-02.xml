@@ -219,11 +219,9 @@ John Ingle MD.
 <NAME TYPE="DOCTOR" comment="" end="106" id="P2" start="101" text="Ingle" />
 <DATE TYPE="DATE" comment="" end="361" id="P4" start="357" text="8/27" />
 <DATE TYPE="DATE" comment="" end="369" id="P5" start="362" text="8/30/97" />
-<LOCATION TYPE="HOSPITAL" comment="" end="785" id="P6" start="782" text="NGH" />
 <DATE TYPE="DATE" comment="" end="1437" id="P7" start="1433" text="2096" />
 <DATE TYPE="DATE" comment="" end="1612" id="P8" start="1607" text="12/96" />
 <DATE TYPE="DATE" comment="" end="1729" id="P9" start="1725" text="7/97" />
-<LOCATION TYPE="HOSPITAL" comment="" end="1825" id="P10" start="1822" text="NGH" />
 <DATE TYPE="DATE" comment="" end="2625" id="P11" start="2618" text="8/27/97" />
 <DATE TYPE="DATE" comment="" end="2668" id="P12" start="2664" text="8/27" />
 <DATE TYPE="DATE" comment="" end="2689" id="P13" start="2685" text="8/27" />

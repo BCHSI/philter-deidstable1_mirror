@@ -128,7 +128,6 @@ Division of Infectious Diseases
 </TEXT>
 <TAGS>
 <DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2073-09-20" />
-<LOCATION TYPE="HOSPITAL" comment="" end="37" id="P1" start="29" text="MANAMANA" />
 <NAME TYPE="PATIENT" comment="" end="96" id="P2" start="84" text="Vincent Ware" />
 <ID TYPE="MEDICALRECORD" comment="" end="113" id="P3" start="98" text="71417347     2Y" />
 <NAME TYPE="DOCTOR" comment="" end="135" id="P4" start="125" text="Casey Best" />
@@ -141,10 +140,8 @@ Division of Infectious Diseases
 <DATE TYPE="DATE" comment="" end="545" id="P12" start="537" text="Nov 2066" />
 <DATE TYPE="DATE" comment="" end="596" id="P13" start="588" text="May 2073" />
 <DATE TYPE="DATE" comment="" end="916" id="P14" start="908" text="May 2073" />
-<LOCATION TYPE="HOSPITAL" comment="" end="1190" id="P15" start="1177" text="Educare-Fargo" />
 <DATE TYPE="DATE" comment="" end="1294" id="P16" start="1290" text="July" />
 <DATE TYPE="DATE" comment="" end="1408" id="P17" start="1397" text="August 2073" />
-<LOCATION TYPE="HOSPITAL" comment="" end="1757" id="P18" start="1753" text="KCGH" />
 <DATE TYPE="DATE" comment="" end="2353" id="P19" start="2349" text="2066" />
 <DATE TYPE="DATE" comment="" end="2493" id="P20" start="2486" text="9/20/73" />
 <DATE TYPE="DATE" comment="" end="2504" id="P21" start="2498" text="8/7/73" />

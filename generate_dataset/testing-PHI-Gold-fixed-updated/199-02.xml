@@ -67,7 +67,6 @@ DV:12-16-84
 </TEXT>
 <TAGS>
 <DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2084-12-16" />
-<LOCATION TYPE="HOSPITAL" comment="" end="43" id="P1" start="28" text="FOREST HOSPITAL" />
 <NAME TYPE="DOCTOR" comment="" end="76" id="P2" start="60" text="Vincent Y. Keyes" />
 <LOCATION TYPE="STREET" comment="" end="101" id="P3" start="83" text="315 Westchester Dr" />
 <NAME TYPE="PATIENT" comment="" end="139" id="P4" start="128" text="Lara, Uriah" />

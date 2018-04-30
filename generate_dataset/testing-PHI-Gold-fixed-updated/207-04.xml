@@ -122,7 +122,6 @@ eScription document:2-6098361 BFFocus
 <NAME TYPE="PATIENT" comment="" end="55" id="P2" start="45" text="Orta, Phil" />
 <DATE TYPE="DATE" comment="" end="64" id="P3" start="56" text="08/19/82" />
 <NAME TYPE="DOCTOR" comment="" end="80" id="P4" start="65" text="IP, INDIGO JOHN" />
-<LOCATION TYPE="HOSPITAL" comment="" end="418" id="P6" start="401" text="Mamaroneck Health" />
 <DATE TYPE="DATE" comment="" end="454" id="P7" start="444" text="08/19/2082" />
 <DATE TYPE="DATE" comment="" end="547" id="P8" start="543" text="2062" />
 <DATE TYPE="DATE" comment="" end="873" id="P9" start="869" text="2080" />

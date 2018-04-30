@@ -106,9 +106,7 @@ Nancy Elizabeth Roman, M.D.
 <DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2088-03-03" />
 <NAME TYPE="PATIENT" comment="" end="113" id="P1" start="97" text="WILKERSON,EDWARD" />
 <ID TYPE="MEDICALRECORD" comment="" end="129" id="P2" start="121" text="37199514" />
-<LOCATION TYPE="HOSPITAL" comment="" end="137" id="P3" start="129" text="MEDIQUIK" />
 <DATE TYPE="DATE" comment="" end="221" id="P4" start="213" text="3/3/2088" />
-<LOCATION TYPE="HOSPITAL" comment="" end="228" id="P5" start="227" text="M" />
 <DATE TYPE="DATE" comment="" end="794" id="P6" start="785" text="September" />
 <NAME TYPE="DOCTOR" comment="" end="1038" id="P7" start="1034" text="Pate" />
 <NAME TYPE="DOCTOR" comment="" end="1613" id="P8" start="1594" text="Floyd Bobby Ventura" />

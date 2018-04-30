@@ -253,7 +253,6 @@ cc:Dr. Veronica Frey
 <LOCATION TYPE="STATE" comment="" end="1375" id="P10" start="1373" text="NY" />
 <DATE TYPE="DATE" comment="" end="1386" id="P11" start="1379" text="12/2084" />
 <NAME TYPE="DOCTOR" comment="" end="3439" id="P14" start="3425" text="Taj E. Landers" />
-<LOCATION TYPE="HOSPITAL" comment="" end="3483" id="P16" start="3454" text="Martinsville General Hospital" />
 <LOCATION TYPE="ORGANIZATION" comment="" end="3503" id="P17" start="3485" text="Norfolk University" />
 <CONTACT TYPE="PHONE" comment="" end="3517" id="P18" start="3505" text="131-631-4189" />
 <NAME TYPE="DOCTOR" comment="" end="3541" id="P19" start="3528" text="Veronica Frey" />

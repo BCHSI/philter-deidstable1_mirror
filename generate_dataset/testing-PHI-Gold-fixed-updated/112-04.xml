@@ -68,13 +68,10 @@ DT:   08/2150
 <DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2060-08-05" />
 <DATE TYPE="DATE" comment="" end="46" id="P1" start="33" text="5 August 2060" />
 <NAME TYPE="DOCTOR" comment="" end="68" id="P2" start="52" text="Quatrell Swanson" />
-<LOCATION TYPE="HOSPITAL" comment="" end="126" id="P3" start="98" text="Barney Convalescent Hospital" />
 <NAME TYPE="PATIENT" comment="" end="150" id="P4" start="134" text="Clarence H. HESS" />
-<LOCATION TYPE="HOSPITAL" comment="" end="156" id="P5" start="153" text="BCH" />
 <ID TYPE="MEDICALRECORD" comment="" end="168" id="P6" start="157" text="643-65-59-5" />
 <NAME TYPE="DOCTOR" comment="" end="188" id="P7" start="181" text="Swanson" />
 <NAME TYPE="PATIENT" comment="" end="239" id="P8" start="226" text="Clarence Hess" />
-<LOCATION TYPE="HOSPITAL" comment="" end="246" id="P9" start="243" text="BCH" />
 <DATE TYPE="DATE" comment="" end="252" id="P10" start="247" text="08/04" />
 <DATE TYPE="DATE" comment="" end="258" id="P11" start="253" text="03/07" />
 <NAME TYPE="DOCTOR" comment="" end="386" id="P13" start="374" text="Una Trujillo" />
@@ -91,7 +88,6 @@ DT:   08/2150
 <LOCATION TYPE="STATE" comment="" end="1867" id="P24" start="1865" text="OH" />
 <LOCATION TYPE="ZIP" comment="" end="1873" id="P25" start="1868" text="23751" />
 <NAME TYPE="DOCTOR" comment="" end="1888" id="P26" start="1876" text="Una Trujillo" />
-<LOCATION TYPE="HOSPITAL" comment="" end="1897" id="P27" start="1894" text="BCH" />
 <DATE TYPE="DATE" comment="" end="1925" id="P28" start="1917" text="08/05/60" />
 <DATE TYPE="DATE" comment="" end="1941" id="P29" start="1933" text="08/05/60" />
 <DATE TYPE="DATE" comment="" end="1956" id="P30" start="1949" text="08/2150" />

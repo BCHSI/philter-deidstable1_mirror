@@ -127,13 +127,11 @@ A/P:
 <TAGS>
 <DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2093-07-03" />
 <NAME TYPE="DOCTOR" comment="" end="43" id="P1" start="28" text="Nathan D. Akins" />
-<LOCATION TYPE="HOSPITAL" comment="" end="57" id="P2" start="54" text="BMC" />
 <LOCATION TYPE="STREET" comment="" end="109" id="P3" start="88" text="96 Hassell Brook Road" />
 <LOCATION TYPE="CITY" comment="" end="136" id="P4" start="111" text="Daytona Highridge Estates" />
 <LOCATION TYPE="STATE" comment="" end="140" id="P5" start="138" text="AZ" />
 <LOCATION TYPE="ZIP" comment="" end="146" id="P6" start="141" text="39757" />
 <CONTACT TYPE="PHONE" comment="" end="162" id="P7" start="148" text="(742) 270-8900" />
 <DATE TYPE="DATE" comment="" end="230" id="P9" start="226" text="5/93" />
-<LOCATION TYPE="HOSPITAL" comment="" end="346" id="P10" start="326" text="Park Nicollet Clinic" />
 </TAGS>
 </deIdi2b2>

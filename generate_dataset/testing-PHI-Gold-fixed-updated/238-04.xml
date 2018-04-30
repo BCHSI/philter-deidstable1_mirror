@@ -223,7 +223,6 @@ Document Status: Preliminary
 </TEXT>
 <TAGS>
 <DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2082-06-23" />
-<LOCATION TYPE="HOSPITAL" comment="" end="90" id="P1" start="65" text="BROADLAWNS MEDICAL CENTER" />
 <NAME TYPE="PATIENT" comment="" end="142" id="P2" start="134" text="Vanmeter" />
 <DATE TYPE="DATE" comment="" end="1128" id="P3" start="1124" text="2074" />
 <DATE TYPE="DATE" comment="" end="1160" id="P4" start="1156" text="2074" />

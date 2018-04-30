@@ -51,7 +51,6 @@ Charles Wallace MDp73703
 </TEXT>
 <TAGS>
 <DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2093-04-11" />
-<LOCATION TYPE="HOSPITAL" comment="" end="36" id="P1" start="28" text="MEDIQUIK" />
 <NAME TYPE="PATIENT" comment="" end="78" id="P2" start="62" text="Edward Wilkerson" />
 <ID TYPE="MEDICALRECORD" comment="" end="92" id="P3" start="84" text="37199514" />
 <NAME TYPE="DOCTOR" comment="" end="132" id="P4" start="124" text="Nicky Li" />

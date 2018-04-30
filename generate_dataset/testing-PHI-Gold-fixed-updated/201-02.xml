@@ -351,13 +351,10 @@ Pager #41393
 <NAME TYPE="PATIENT" comment="" end="346" id="P8" start="338" text="Xayavong" />
 <DATE TYPE="DATE" comment="" end="384" id="P10" start="380" text="2077" />
 <DATE TYPE="DATE" comment="" end="434" id="P11" start="430" text="2080" />
-<LOCATION TYPE="HOSPITAL" comment="" end="597" id="P12" start="573" text="Duluth Clinic-Hermantown" />
 <NAME TYPE="DOCTOR" comment="" end="607" id="P13" start="603" text="Moss" />
-<LOCATION TYPE="HOSPITAL" comment="" end="895" id="P14" start="892" text="GNC" />
 <NAME TYPE="DOCTOR" comment="" end="928" id="P15" start="920" text="U. Wyatt" />
 <NAME TYPE="DOCTOR" comment="" end="985" id="P16" start="977" text="A. Tyson" />
 <DATE TYPE="DATE" comment="" end="2508" id="P17" start="2504" text="2077" />
-<LOCATION TYPE="HOSPITAL" comment="" end="2593" id="P18" start="2587" text="Duluth" />
 <DATE TYPE="DATE" comment="" end="2705" id="P19" start="2698" text="5/13/81" />
 <DATE TYPE="DATE" comment="" end="2782" id="P20" start="2772" text="11/04/2077" />
 <DATE TYPE="DATE" comment="" end="2904" id="P21" start="2897" text="10/2077" />
@@ -369,7 +366,6 @@ Pager #41393
 <DATE TYPE="DATE" comment="" end="6955" id="P28" start="6951" text="2077" />
 <DATE TYPE="DATE" comment="" end="7005" id="P29" start="7001" text="2080" />
 <NAME TYPE="DOCTOR" comment="" end="8598" id="P30" start="8587" text="Armani Iler" />
-<LOCATION TYPE="HOSPITAL" comment="" end="8612" id="P31" start="8609" text="GNC" />
 <CONTACT TYPE="PHONE" comment="" end="8649" id="P32" start="8644" text="41393" />
 </TAGS>
 </deIdi2b2>

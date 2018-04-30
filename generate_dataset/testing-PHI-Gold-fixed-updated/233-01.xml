@@ -93,7 +93,6 @@ DV: 10/13/61
 <DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2061-10-13" />
 <DATE TYPE="DATE" comment="" end="56" id="P1" start="40" text="October 13, 2061" />
 <NAME TYPE="DOCTOR" comment="" end="75" id="P2" start="61" text="Philip Stanley" />
-<LOCATION TYPE="HOSPITAL" comment="" end="127" id="P4" start="100" text="Donnellson Community Clinic" />
 <NAME TYPE="PATIENT" comment="" end="149" id="P5" start="135" text="Shilpa Pickett" />
 <ID TYPE="MEDICALRECORD" comment="" end="170" id="P6" start="159" text="129-53-47-3" />
 <NAME TYPE="DOCTOR" comment="" end="184" id="P7" start="178" text="Philip" />
@@ -105,7 +104,6 @@ DV: 10/13/61
 <DATE TYPE="DATE" comment="" end="2051" id="P13" start="2035" text="October 13, 2061" />
 <NAME TYPE="PATIENT" comment="" end="2306" id="P14" start="2292" text="ShilpaPickett" />
 <NAME TYPE="DOCTOR" comment="" end="2418" id="P15" start="2406" text="Leona Xiques" />
-<LOCATION TYPE="HOSPITAL" comment="" end="2448" id="P16" start="2425" text="Second Alabama Hospital" />
 <LOCATION TYPE="STREET" comment="" end="2467" id="P17" start="2449" text="78 Parkhurst Drive" />
 <LOCATION TYPE="CITY" comment="" end="2477" id="P18" start="2468" text="Ladysmith" />
 <LOCATION TYPE="STATE" comment="" end="2482" id="P19" start="2480" text="TN" />

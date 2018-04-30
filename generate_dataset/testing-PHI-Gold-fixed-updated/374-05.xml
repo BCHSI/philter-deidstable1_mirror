@@ -179,7 +179,6 @@ PGY-2 General Surgery
 </TEXT>
 <TAGS>
 <DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2135-08-03" />
-<LOCATION TYPE="HOSPITAL" comment="" end="72" id="P1" start="69" text="WSA" />
 <NAME TYPE="PATIENT" comment="" end="130" id="P2" start="118" text="Mckee, Norma" />
 <ID TYPE="MEDICALRECORD" comment="" end="154" id="P3" start="147" text="6987776" />
 <DATE TYPE="DATE" comment="" end="177" id="P4" start="169" text="8/3/2135" />
@@ -201,7 +200,6 @@ PGY-2 General Surgery
 <DATE TYPE="DATE" comment="" end="1280" id="P21" start="1275" text="12/33" />
 <DATE TYPE="DATE" comment="" end="1332" id="P22" start="1327" text="12/34" />
 <DATE TYPE="DATE" comment="" end="1372" id="P23" start="1367" text="11/34" />
-<LOCATION TYPE="HOSPITAL" comment="" end="6730" id="P25" start="6727" text="WSA" />
 <NAME TYPE="DOCTOR" comment="" end="6756" id="P26" start="6752" text="Kirk" />
 <NAME TYPE="DOCTOR" comment="" end="6908" id="P27" start="6894" text="Patrizia Scott" />
 <NAME TYPE="DOCTOR" comment="" end="6955" id="P28" start="6938" text="Cheryl H. Holland" />

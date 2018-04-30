@@ -80,7 +80,6 @@ EP/gillis/cook
 <NAME TYPE="PATIENT" comment="" end="54" id="P1" start="41" text="Werner, Brian" />
 <ID TYPE="MEDICALRECORD" comment="" end="74" id="P2" start="67" text="4097229" />
 <DATE TYPE="DATE" comment="" end="412" id="P3" start="404" text="Thursday" />
-<LOCATION TYPE="HOSPITAL" comment="" end="1638" id="P4" start="1634" text="NDMG" />
 <NAME TYPE="DOCTOR" comment="" end="1906" id="P5" start="1892" text="Ernestine Phan" />
 <NAME TYPE="USERNAME" comment="" end="1918" id="P6" start="1916" text="EP" />
 <NAME TYPE="DOCTOR" comment="" end="1925" id="P7" start="1919" text="gillis" />

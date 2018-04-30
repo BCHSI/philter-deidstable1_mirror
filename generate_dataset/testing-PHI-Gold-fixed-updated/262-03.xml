@@ -551,17 +551,12 @@ Pager #30547
 <ID TYPE="MEDICALRECORD" comment="" end="105" id="P2" start="98" text="3299811" />
 <DATE TYPE="DATE" comment="" end="168" id="P4" start="151" text="December 15, 2091" />
 <NAME TYPE="DOCTOR" comment="" end="184" id="P5" start="176" text="Isaac Ng" />
-<LOCATION TYPE="HOSPITAL" comment="" end="1176" id="P7" start="1173" text="ALH" />
 <DATE TYPE="DATE" comment="" end="1658" id="P8" start="1654" text="2080" />
-<LOCATION TYPE="HOSPITAL" comment="" end="1948" id="P10" start="1945" text="ALH" />
-<LOCATION TYPE="HOSPITAL" comment="" end="1980" id="P11" start="1977" text="ALH" />
 <DATE TYPE="DATE" comment="" end="2446" id="P12" start="2442" text="4/90" />
 <LOCATION TYPE="CITY" comment="" end="3012" id="P13" start="3005" text="Ardmore" />
 <DATE TYPE="DATE" comment="" end="7848" id="P14" start="7841" text="7/16/91" />
 <DATE TYPE="DATE" comment="" end="8481" id="P15" start="8477" text="7/91" />
-<LOCATION TYPE="HOSPITAL" comment="" end="8845" id="P16" start="8842" text="ALH" />
 <DATE TYPE="DATE" comment="" end="8878" id="P18" start="8867" text="25-Oct-2090" />
-<LOCATION TYPE="HOSPITAL" comment="" end="9938" id="P19" start="9935" text="ALH" />
 <DATE TYPE="DATE" comment="" end="9977" id="P20" start="9966" text="11-May-2087" />
 <ID TYPE="IDNUM" comment="" end="10000" id="P21" start="9994" text="732087" />
 <DATE TYPE="DATE" comment="" end="11907" id="P22" start="11900" text="10/2089" />

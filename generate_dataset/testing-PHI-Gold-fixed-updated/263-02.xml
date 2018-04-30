@@ -108,12 +108,10 @@ Dictated by:  FREDA F. PELLETIER, M.D.     FP00
 </TEXT>
 <TAGS>
 <DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2079-09-28" />
-<LOCATION TYPE="HOSPITAL" comment="" end="56" id="P1" start="49" text="DOUGLAS" />
 <NAME TYPE="PATIENT" comment="" end="93" id="P2" start="82" text="DODD,STEVEN" />
 <ID TYPE="MEDICALRECORD" comment="" end="107" id="P3" start="96" text="350-93-05-3" />
 <DATE TYPE="DATE" comment="" end="149" id="P4" start="141" text="09/28/79" />
 <DATE TYPE="DATE" comment="" end="607" id="P6" start="604" text="May" />
-<LOCATION TYPE="HOSPITAL" comment="" end="2153" id="P7" start="2139" text="Christus Spohn" />
 <ID TYPE="IDNUM" comment="" end="2549" id="P8" start="2538" text="QQ632/54034" />
 <NAME TYPE="DOCTOR" comment="" end="2570" id="P9" start="2552" text="FREDA F. PELLETIER" />
 <NAME TYPE="USERNAME" comment="" end="2585" id="P10" start="2581" text="FP00" />

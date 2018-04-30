@@ -65,13 +65,9 @@ DV:7-21-79
 </TEXT>
 <TAGS>
 <DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2079-07-21" />
-<LOCATION TYPE="HOSPITAL" comment="" end="35" id="P1" start="28" text="PONTIAC" />
 <NAME TYPE="PATIENT" comment="" end="89" id="P2" start="74" text="Sherman, Andrew" />
 <DATE TYPE="DATE" comment="" end="143" id="P3" start="136" text="7-21-79" />
 <NAME TYPE="PATIENT" comment="" end="190" id="P4" start="183" text="Sherman" />
-<LOCATION TYPE="HOSPITAL" comment="" end="667" id="P5" start="660" text="Pontiac" />
-<LOCATION TYPE="HOSPITAL" comment="" end="723" id="P6" start="716" text="Pontiac" />
-<LOCATION TYPE="HOSPITAL" comment="" end="1826" id="P8" start="1804" text="Pontiac State Hospital" />
 <NAME TYPE="DOCTOR" comment="" end="2921" id="P10" start="2907" text="Michael Holman" />
 <ID TYPE="IDNUM" comment="" end="2940" id="P11" start="2930" text="AE:JP:5824" />
 <DATE TYPE="DATE" comment="" end="2951" id="P12" start="2944" text="7-21-79" />

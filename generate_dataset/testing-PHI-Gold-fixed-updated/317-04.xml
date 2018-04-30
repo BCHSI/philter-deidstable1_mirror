@@ -271,7 +271,6 @@ Pg 68283
 <DATE TYPE="DATE" comment="" end="3952" id="P23" start="3944" text="09/17/78" />
 <DATE TYPE="DATE" comment="" end="4193" id="P24" start="4185" text="06/11/78" />
 <NAME TYPE="DOCTOR" comment="" end="5356" id="P26" start="5341" text="Hayden Shepherd" />
-<LOCATION TYPE="HOSPITAL" comment="" end="5366" id="P27" start="5358" text="MANAMANA" />
 <CONTACT TYPE="PHONE" comment="" end="5376" id="P28" start="5371" text="01722" />
 <NAME TYPE="DOCTOR" comment="" end="6153" id="P30" start="6147" text="Weller" />
 <NAME TYPE="DOCTOR" comment="" end="6251" id="P31" start="6237" text="Kathryn Brewer" />

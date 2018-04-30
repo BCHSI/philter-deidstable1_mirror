@@ -42,8 +42,6 @@ Helen Ochs NP
 <ID TYPE="MEDICALRECORD" comment="" end="56" id="P2" start="49" text="6444877" />
 <DATE TYPE="DATE" comment="" end="72" id="P3" start="63" text="8/11/2062" />
 <DATE TYPE="DATE" comment="" end="88" id="P4" start="73" text="August 26, 2117" />
-<LOCATION TYPE="HOSPITAL" comment="" end="120" id="P5" start="90" text="Sisters Of Providence Hospital" />
-<LOCATION TYPE="HOSPITAL" comment="" end="260" id="P8" start="257" text="PNC" />
 <DATE TYPE="DATE" comment="" end="271" id="P9" start="264" text="7/12/17" />
 <NAME TYPE="DOCTOR" comment="" end="1378" id="P10" start="1365" text="Hugh Delarosa" />
 <NAME TYPE="DOCTOR" comment="" end="1392" id="P11" start="1382" text="Helen Ochs" />

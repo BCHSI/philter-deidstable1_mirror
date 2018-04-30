@@ -291,7 +291,6 @@ Caleb N. Womack, M.D.,M.P.H.
 <TAGS>
 <DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2070-08-28" />
 <DATE TYPE="DATE" comment="" end="173" id="P2" start="169" text="2067" />
-<LOCATION TYPE="HOSPITAL" comment="" end="215" id="P3" start="212" text="OCH" />
 <DATE TYPE="DATE" comment="" end="263" id="P4" start="259" text="2068" />
 <DATE TYPE="DATE" comment="" end="405" id="P5" start="400" text="06/69" />
 <DATE TYPE="DATE" comment="" end="890" id="P8" start="883" text="October" />
@@ -301,7 +300,6 @@ Caleb N. Womack, M.D.,M.P.H.
 <NAME TYPE="DOCTOR" comment="" end="2753" id="P14" start="2731" text="Timothy Howard Baldwin" />
 <NAME TYPE="DOCTOR" comment="" end="2863" id="P15" start="2848" text="Caleb N. Womack" />
 <DATE TYPE="DATE" comment="" end="3021" id="P17" start="3017" text="2067" />
-<LOCATION TYPE="HOSPITAL" comment="" end="3063" id="P18" start="3060" text="OCH" />
 <DATE TYPE="DATE" comment="" end="3111" id="P19" start="3107" text="2068" />
 <DATE TYPE="DATE" comment="" end="3253" id="P20" start="3248" text="06/69" />
 <DATE TYPE="DATE" comment="" end="3738" id="P23" start="3731" text="October" />

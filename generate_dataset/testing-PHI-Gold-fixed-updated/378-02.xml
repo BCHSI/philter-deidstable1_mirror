@@ -79,7 +79,6 @@ SU/utz/rankin
 <NAME TYPE="PATIENT" comment="" end="55" id="P1" start="41" text="Umphrey, Tammy" />
 <ID TYPE="MEDICALRECORD" comment="" end="75" id="P2" start="68" text="0942207" />
 <DATE TYPE="DATE" comment="" end="191" id="P3" start="185" text="Monday" />
-<LOCATION TYPE="HOSPITAL" comment="" end="689" id="P4" start="686" text="CPI" />
 <DATE TYPE="DATE" comment="" end="1161" id="P5" start="1155" text="Monday" />
 <DATE TYPE="DATE" comment="" end="1597" id="P6" start="1589" text="12/13/63" />
 <NAME TYPE="DOCTOR" comment="" end="2508" id="P7" start="2503" text="Zeman" />

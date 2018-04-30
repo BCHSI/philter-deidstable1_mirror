@@ -126,16 +126,12 @@ Signed electronically by   Quentin T Edward MD  on  Mar 12, 2114
 </TEXT>
 <TAGS>
 <DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2114-03-12" />
-<LOCATION TYPE="HOSPITAL" comment="" end="60" id="P1" start="40" text="SAN ANTONIO HOSPITAL" />
 <NAME TYPE="PATIENT" comment="" end="138" id="P2" start="124" text="Quinten Dawson" />
 <DATE TYPE="DATE" comment="" end="265" id="P3" start="257" text="03/12/14" />
-<LOCATION TYPE="HOSPITAL" comment="" end="309" id="P4" start="306" text="SAH" />
 <ID TYPE="MEDICALRECORD" comment="" end="321" id="P5" start="312" text="469-27-58" />
 <DATE TYPE="DATE" comment="" end="432" id="P7" start="426" text="2/1/11" />
 <DATE TYPE="DATE" comment="" end="446" id="P8" start="440" text="4/4/12" />
-<LOCATION TYPE="HOSPITAL" comment="" end="469" id="P9" start="466" text="SAH" />
 <DATE TYPE="DATE" comment="" end="518" id="P10" start="511" text="2/21/14" />
-<LOCATION TYPE="HOSPITAL" comment="" end="541" id="P11" start="538" text="SAH" />
 <DATE TYPE="DATE" comment="" end="1081" id="P13" start="1075" text="2/1/11" />
 <NAME TYPE="DOCTOR" comment="" end="1361" id="P14" start="1353" text="Everhart" />
 <DATE TYPE="DATE" comment="" end="1415" id="P15" start="1408" text="1/08/14" />
@@ -148,7 +144,6 @@ Signed electronically by   Quentin T Edward MD  on  Mar 12, 2114
 <LOCATION TYPE="STATE" comment="" end="4032" id="P24" start="4030" text="VA" />
 <LOCATION TYPE="ZIP" comment="" end="4038" id="P25" start="4033" text="67999" />
 <NAME TYPE="DOCTOR" comment="" end="4066" id="P26" start="4051" text="Xavier Everhart" />
-<LOCATION TYPE="HOSPITAL" comment="" end="4090" id="P28" start="4087" text="SAH" />
 <NAME TYPE="DOCTOR" comment="" end="4139" id="P29" start="4123" text="Quentin T Edward" />
 <DATE TYPE="DATE" comment="" end="4160" id="P30" start="4148" text="Mar 12, 2114" />
 </TAGS>

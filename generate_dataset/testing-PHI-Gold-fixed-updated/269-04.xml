@@ -218,7 +218,6 @@ Rec/Plan:
 <DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2114-04-07" />
 <DATE TYPE="DATE" comment="" end="48" id="P1" start="34" text="07 April, 2114" />
 <NAME TYPE="PATIENT" comment="" end="92" id="P2" start="75" text="Dawson, Quinten W" />
-<LOCATION TYPE="HOSPITAL" comment="" end="97" id="P3" start="94" text="SAH" />
 <ID TYPE="MEDICALRECORD" comment="" end="110" id="P4" start="101" text="469 27 58" />
 <DATE TYPE="DATE" comment="" end="782" id="P6" start="776" text="7/2111" />
 <DATE TYPE="DATE" comment="" end="1322" id="P7" start="1318" text="2066" />
