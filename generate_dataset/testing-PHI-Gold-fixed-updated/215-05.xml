@@ -318,7 +318,6 @@ aspirin 325 mg   QD
 </TEXT>
 <TAGS>
 <DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2130-08-09" />
-<DATE TYPE="DATE" comment="" end="144" id="P3" start="142" text="25" />
 <DATE TYPE="DATE" comment="" end="465" id="P5" start="461" text="4/25" />
 <DATE TYPE="DATE" comment="" end="761" id="P6" start="757" text="1/26" />
 <DATE TYPE="DATE" comment="" end="969" id="P7" start="964" text="12/27" />
@@ -327,8 +326,6 @@ aspirin 325 mg   QD
 <DATE TYPE="DATE" comment="" end="1782" id="P10" start="1778" text="6/14" />
 <DATE TYPE="DATE" comment="" end="1888" id="P11" start="1884" text="6/20" />
 <NAME TYPE="DOCTOR" comment="" end="2272" id="P12" start="2269" text="You" />
-<DATE TYPE="DATE" comment="" end="2967" id="P14" start="2965" text="25" />
-<DATE TYPE="DATE" comment="" end="3438" id="P16" start="3436" text="08" />
 <PROFESSION TYPE="PROFESSION" comment="" end="3486" id="P17" start="3464" text="communications manager" />
 <DATE TYPE="DATE" comment="" end="4436" id="P18" start="4428" text="08/09/30" />
 <DATE TYPE="DATE" comment="" end="4510" id="P19" start="4502" text="08/08/30" />

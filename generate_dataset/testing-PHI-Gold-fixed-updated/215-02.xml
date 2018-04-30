@@ -102,27 +102,16 @@ A/P:
 <DATE TYPE="DATE" comment="" end="1281" id="P5" start="1276" text="10/24" />
 <NAME TYPE="DOCTOR" comment="" end="1338" id="P6" start="1332" text="Massey" />
 <DATE TYPE="DATE" comment="" end="1405" id="P8" start="1401" text="5/25" />
-<DATE TYPE="DATE" comment="" end="1455" id="P9" start="1453" text="18" />
 <DATE TYPE="DATE" comment="" end="1479" id="P10" start="1475" text="4/19" />
-<DATE TYPE="DATE" comment="" end="1619" id="P12" start="1617" text="19" />
 <LOCATION TYPE="ORGANIZATION" comment="" end="1648" id="P13" start="1644" text="CNET" />
 <PROFESSION TYPE="PROFESSION" comment="" end="1657" id="P14" start="1650" text="manager" />
-<DATE TYPE="DATE" comment="" end="1679" id="P15" start="1677" text="24" />
 <NAME TYPE="PATIENT" comment="" end="1720" id="P16" start="1715" text="Laura" />
-<DATE TYPE="DATE" comment="" end="1723" id="P17" start="1721" text="23" />
 <LOCATION TYPE="CITY" comment="" end="1766" id="P18" start="1756" text="Brownstown" />
 <LOCATION TYPE="ORGANIZATION" comment="" end="1784" id="P19" start="1776" text="Brown U." />
 <LOCATION TYPE="ORGANIZATION" comment="" end="1820" id="P20" start="1811" text="Air Force" />
 <PROFESSION TYPE="PROFESSION" comment="" end="1837" id="P22" start="1832" text="pilot" />
 <AGE TYPE="AGE" comment="" end="1909" id="P24" start="1907" text="90" />
-<DATE TYPE="DATE" comment="" end="1988" id="P28" start="1986" text="66" />
-<DATE TYPE="DATE" comment="" end="1996" id="P29" start="1994" text="74" />
-<DATE TYPE="DATE" comment="" end="2006" id="P30" start="2004" text="93" />
-<DATE TYPE="DATE" comment="" end="2011" id="P31" start="2009" text="94" />
-<DATE TYPE="DATE" comment="" end="2020" id="P32" start="2018" text="22" />
 <NAME TYPE="PATIENT" comment="" end="2026" id="P33" start="2022" text="Fran" />
-<DATE TYPE="DATE" comment="" end="2030" id="P34" start="2028" text="03" />
-<DATE TYPE="DATE" comment="" end="2040" id="P35" start="2038" text="24" />
 <DATE TYPE="DATE" comment="" end="2058" id="P36" start="2054" text="3/25" />
 <ID TYPE="IDNUM" comment="" end="2545" id="P37" start="2540" text="38/48" />
 </TAGS>
