@@ -287,17 +287,17 @@
 		"notes":"This should remove anything with pattern month_name"
 	},
 	{
-		"title":"five or more digits",
+		"title":"six or more digits",
 		"type":"regex",
 		"exclude":true,
-		"filepath":"filters/regex/mrn_id/DDDDD+.txt",
-		"notes":"This should remove anything that matches any number with 5 or more digits (15 limit is arbitrary)"
+		"filepath":"filters/regex/mrn_id/DDDDDD+.txt",
+		"notes":"This should remove anything that matches any number with 6 or more digits (15 limit is arbitrary)"
 	},
 	{
-		"title":"mixed 1",
+		"title":"CCDDD_DDD",
 		"type":"regex",
 		"exclude":true,
-		"filepath":"filters/regex/mrn_id/mixed001.txt",
+		"filepath":"filters/regex/mrn_id/CCDDD_DDD.txt",
 		"notes":"This should remove anything that matches NNDDD(anything)DDDD"
 	},
 	{
@@ -404,14 +404,6 @@
 		"exclude":true,
 		"filepath":"filters/regex/mrn_id/ssn.txt",
 		"notes":"This should remove anything that matches XXX-XX-XXXX"
-	},
-	{
-		"title":"ssn_phone_fax",
-		"type":"regex",
-		"exclude":true,
-		"filepath":"filters/regex/mrn_id/ssn_phone_fax.txt",
-		"notes":"This should remove anything that matches XXX-XX-XXXX, XXX-XXX-XXXX, XXX-XXXXXXXX, etc."
-			
 	},
 	{
 		"title":"emails",
