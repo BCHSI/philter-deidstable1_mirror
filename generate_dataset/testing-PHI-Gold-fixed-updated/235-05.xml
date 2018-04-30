@@ -1,6 +1,6 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT>
+<TEXT><![CDATA[
 
 
 Record date: 2089-04-05
@@ -49,12 +49,13 @@ Document Status: Final
 
 
 
-</TEXT>
+]]></TEXT>
 <TAGS>
-<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2089-04-05" />
-<NAME TYPE="PATIENT" comment="" end="100" id="P2" start="94" text="Ursula" />
-<NAME TYPE="PATIENT" comment="" end="1537" id="P4" start="1531" text="Ursula" />
-<NAME TYPE="DOCTOR" comment="" end="2068" id="P5" start="2054" text="Umberto Uzzell" />
-<NAME TYPE="DOCTOR" comment="" end="2116" id="P6" start="2102" text="Umberto Uzzell" />
+<DATE id="P0" start="16" end="26" text="2089-04-05" TYPE="DATE" comment="" />
+<LOCATION id="P1" start="45" end="67" text="SAINT VINCENT HOSPITAL" TYPE="HOSPITAL" comment="" />
+<NAME id="P2" start="94" end="100" text="Ursula" TYPE="PATIENT" comment="" />
+<NAME id="P4" start="1531" end="1537" text="Ursula" TYPE="PATIENT" comment="" />
+<NAME id="P5" start="2054" end="2068" text="Umberto Uzzell" TYPE="DOCTOR" comment="" />
+<NAME id="P6" start="2102" end="2116" text="Umberto Uzzell" TYPE="DOCTOR" comment="" />
 </TAGS>
 </deIdi2b2>

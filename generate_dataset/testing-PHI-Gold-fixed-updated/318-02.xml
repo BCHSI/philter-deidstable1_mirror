@@ -1,6 +1,6 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT>
+<TEXT><![CDATA[
 
 
 Record date: 2095-09-19
@@ -305,25 +305,36 @@ Renal Fellow
 
 
 
-</TEXT>
+]]></TEXT>
 <TAGS>
-<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2095-09-19" />
-<NAME TYPE="PATIENT" comment="" end="96" id="P2" start="85" text="Marsh, Carl" />
-<ID TYPE="MEDICALRECORD" comment="" end="111" id="P3" start="103" text="99579205" />
-<NAME TYPE="DOCTOR" comment="" end="147" id="P4" start="132" text="Xavier T. Mccoy" />
-<NAME TYPE="DOCTOR" comment="" end="189" id="P5" start="176" text="Keith Tierney" />
-<DATE TYPE="DATE" comment="" end="246" id="P7" start="245" text="S" />
-<DATE TYPE="DATE" comment="" end="252" id="P8" start="251" text="T" />
-<DATE TYPE="DATE" comment="" end="1242" id="P13" start="1227" text="January of 2092" />
-<DATE TYPE="DATE" comment="" end="1797" id="P15" start="1784" text="November 2090" />
-<DATE TYPE="DATE" comment="" end="1869" id="P16" start="1856" text="April of 2091" />
-<NAME TYPE="DOCTOR" comment="" end="1906" id="P17" start="1899" text="Tierney" />
-<DATE TYPE="DATE" comment="" end="2226" id="P21" start="2222" text="2061" />
-<LOCATION TYPE="CITY" comment="" end="2264" id="P22" start="2254" text="Mount Airy" />
-<LOCATION TYPE="CITY" comment="" end="2303" id="P23" start="2293" text="Mount Airy" />
-<NAME TYPE="DOCTOR" comment="" end="7115" id="P25" start="7108" text="Tierney" />
-<NAME TYPE="DOCTOR" comment="" end="7482" id="P26" start="7475" text="Tierney" />
-<NAME TYPE="DOCTOR" comment="" end="7529" id="P27" start="7516" text="Uriah T. Quin" />
-<CONTACT TYPE="PHONE" comment="" end="7557" id="P28" start="7552" text="80467" />
+<DATE id="P0" start="16" end="26" text="2095-09-19" TYPE="DATE" comment="" />
+<LOCATION id="P1" start="37" end="43" text="KEKELA" TYPE="HOSPITAL" comment="" />
+<NAME id="P2" start="85" end="96" text="Marsh, Carl" TYPE="PATIENT" comment="" />
+<ID id="P3" start="103" end="111" text="99579205" TYPE="MEDICALRECORD" comment="" />
+<NAME id="P4" start="132" end="147" text="Xavier T. Mccoy" TYPE="DOCTOR" comment="" />
+<NAME id="P5" start="176" end="189" text="Keith Tierney" TYPE="DOCTOR" comment="" />
+<LOCATION id="P6" start="218" end="243" text="Sanford Memorial Hospital" TYPE="HOSPITAL" comment="" />
+<DATE id="P7" start="245" end="246" text="S" TYPE="DATE" comment="" />
+<DATE id="P8" start="251" end="252" text="T" TYPE="DATE" comment="" />
+<AGE id="P9" start="382" end="384" text="74" TYPE="AGE" comment="" />
+<LOCATION id="P10" start="394" end="406" text="Turkmenistan" TYPE="COUNTRY" comment="" />
+<LOCATION id="P11" start="492" end="498" text="KEKELA" TYPE="HOSPITAL" comment="" />
+<LOCATION id="P12" start="1166" end="1172" text="KEKELA" TYPE="HOSPITAL" comment="" />
+<DATE id="P13" start="1227" end="1242" text="January of 2092" TYPE="DATE" comment="" />
+<LOCATION id="P14" start="1508" end="1521" text="EDUCARE-FARGO" TYPE="HOSPITAL" comment="" />
+<DATE id="P15" start="1784" end="1797" text="November 2090" TYPE="DATE" comment="" />
+<DATE id="P16" start="1856" end="1869" text="April of 2091" TYPE="DATE" comment="" />
+<NAME id="P17" start="1899" end="1906" text="Tierney" TYPE="DOCTOR" comment="" />
+<LOCATION id="P18" start="1914" end="1939" text="Sanford Memorial Hospital" TYPE="HOSPITAL" comment="" />
+<LOCATION id="P19" start="2203" end="2208" text="Tonga" TYPE="COUNTRY" comment="" />
+<LOCATION id="P20" start="2212" end="2218" text="Uganda" TYPE="COUNTRY" comment="" />
+<DATE id="P21" start="2222" end="2226" text="2061" TYPE="DATE" comment="" />
+<LOCATION id="P22" start="2254" end="2264" text="Mount Airy" TYPE="CITY" comment="" />
+<LOCATION id="P23" start="2293" end="2303" text="Mount Airy" TYPE="CITY" comment="" />
+<AGE id="P24" start="6431" end="6433" text="74" TYPE="AGE" comment="" />
+<NAME id="P25" start="7108" end="7115" text="Tierney" TYPE="DOCTOR" comment="" />
+<NAME id="P26" start="7475" end="7482" text="Tierney" TYPE="DOCTOR" comment="" />
+<NAME id="P27" start="7516" end="7529" text="Uriah T. Quin" TYPE="DOCTOR" comment="" />
+<CONTACT id="P28" start="7552" end="7557" text="80467" TYPE="PHONE" comment="" />
 </TAGS>
 </deIdi2b2>

@@ -1,6 +1,6 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT>
+<TEXT><![CDATA[
 
 
 Record date: 2067-09-05
@@ -41,7 +41,7 @@ q q.a.m., Tylenol p.r.n., aspirin 85 mg PO q.d.
 PHYSICAL EXAM:  Blood pressure 114/50.  Weight 111.5 lbs.  General 
 appearance: healthy appearing middle aged woman in no acute distress.  
 HEENT: no retinopathy was noted on my exam.  Neck: no thyromegaly.  Chest 
-is clear to P&amp;A.  She has sternotomy scars present.  Cardiac: normal S1, 
+is clear to P&A.  She has sternotomy scars present.  Cardiac: normal S1, 
 S2.  Breasts: right breast is normal, left breast reveals surgical 
 incisional scars at 12:00 and 3:00 O'clock.  She does have a firm mass 
 below the incisional scar at 3:00 P.M.  Abdomen: midline scar in the lower 
@@ -82,33 +82,35 @@ DV:9-5-67
 
 
 
-</TEXT>
+]]></TEXT>
 <TAGS>
-<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2067-09-05" />
-<NAME TYPE="PATIENT" comment="" end="85" id="P2" start="70" text="Vance, Jennifer" />
-<ID TYPE="MEDICALRECORD" comment="" end="140" id="P3" start="132" text="54266003" />
-<DATE TYPE="DATE" comment="" end="193" id="P4" start="187" text="9-5-67" />
-<NAME TYPE="PATIENT" comment="" end="227" id="P5" start="222" text="Vance" />
-<DATE TYPE="DATE" comment="" end="526" id="P7" start="516" text="June, 2064" />
-<NAME TYPE="DOCTOR" comment="" end="584" id="P8" start="562" text="Peter      Vandenberg" />
-<PROFESSION TYPE="PROFESSION" comment="" end="786" id="P9" start="755" text="Transport Operations Supervisor" />
-<DATE TYPE="DATE" comment="" end="1178" id="P10" start="1174" text="6/66" />
-<DATE TYPE="DATE" comment="" end="1323" id="P11" start="1319" text="9/61" />
-<DATE TYPE="DATE" comment="" end="1456" id="P12" start="1452" text="2063" />
-<DATE TYPE="DATE" comment="" end="1530" id="P13" start="1525" text="12/66" />
-<NAME TYPE="DOCTOR" comment="" end="2640" id="P14" start="2618" text="Peter      Vandenberg" />
-<DATE TYPE="DATE" comment="" end="2957" id="P15" start="2953" text="5/66" />
-<NAME TYPE="DOCTOR" comment="" end="3006" id="P16" start="3002" text="Nava" />
-<NAME TYPE="PATIENT" comment="" end="3097" id="P18" start="3082" text="Vance, Jennifer" />
-<ID TYPE="MEDICALRECORD" comment="" end="3152" id="P19" start="3144" text="54266003" />
-<DATE TYPE="DATE" comment="" end="3205" id="P20" start="3199" text="9-5-67" />
-<DATE TYPE="DATE" comment="" end="3404" id="P21" start="3400" text="2061" />
-<NAME TYPE="DOCTOR" comment="" end="3560" id="P22" start="3548" text="Vester Light" />
-<NAME TYPE="DOCTOR" comment="" end="3571" id="P23" start="3569" text="WV" />
-<NAME TYPE="DOCTOR" comment="" end="3574" id="P24" start="3572" text="AV" />
-<ID TYPE="IDNUM" comment="" end="3579" id="P25" start="3575" text="8176" />
-<DATE TYPE="DATE" comment="" end="3589" id="P26" start="3583" text="9-5-67" />
-<DATE TYPE="DATE" comment="" end="3599" id="P27" start="3593" text="9-6-67" />
-<DATE TYPE="DATE" comment="" end="3609" id="P28" start="3603" text="9-5-67" />
+<DATE id="P0" start="16" end="26" text="2067-09-05" TYPE="DATE" comment="" />
+<NAME id="P2" start="70" end="85" text="Vance, Jennifer" TYPE="PATIENT" comment="" />
+<ID id="P3" start="132" end="140" text="54266003" TYPE="MEDICALRECORD" comment="" />
+<DATE id="P4" start="187" end="193" text="9-5-67" TYPE="DATE" comment="" />
+<NAME id="P5" start="222" end="227" text="Vance" TYPE="PATIENT" comment="" />
+<AGE id="P6" start="233" end="235" text="45" TYPE="AGE" comment="" />
+<DATE id="P7" start="516" end="526" text="June, 2064" TYPE="DATE" comment="" />
+<NAME id="P8" start="562" end="584" text="Peter      Vandenberg" TYPE="DOCTOR" comment="" />
+<PROFESSION id="P9" start="755" end="786" text="Transport Operations Supervisor" TYPE="PROFESSION" comment="" />
+<DATE id="P10" start="1174" end="1178" text="6/66" TYPE="DATE" comment="" />
+<DATE id="P11" start="1319" end="1323" text="9/61" TYPE="DATE" comment="" />
+<DATE id="P12" start="1452" end="1456" text="2063" TYPE="DATE" comment="" />
+<DATE id="P13" start="1525" end="1530" text="12/66" TYPE="DATE" comment="" />
+<NAME id="P14" start="2618" end="2640" text="Peter      Vandenberg" TYPE="DOCTOR" comment="" />
+<DATE id="P15" start="2953" end="2957" text="5/66" TYPE="DATE" comment="" />
+<NAME id="P16" start="3002" end="3006" text="Nava" TYPE="DOCTOR" comment="" />
+<LOCATION id="P17" start="3034" end="3057" text="INDIANOLA VALLEY CENTER" TYPE="HOSPITAL" comment="" />
+<NAME id="P18" start="3082" end="3097" text="Vance, Jennifer" TYPE="PATIENT" comment="" />
+<ID id="P19" start="3144" end="3152" text="54266003" TYPE="MEDICALRECORD" comment="" />
+<DATE id="P20" start="3199" end="3205" text="9-5-67" TYPE="DATE" comment="" />
+<DATE id="P21" start="3400" end="3404" text="2061" TYPE="DATE" comment="" />
+<NAME id="P22" start="3548" end="3560" text="Vester Light" TYPE="DOCTOR" comment="" />
+<NAME id="P23" start="3569" end="3571" text="WV" TYPE="DOCTOR" comment="" />
+<NAME id="P24" start="3572" end="3574" text="AV" TYPE="DOCTOR" comment="" />
+<ID id="P25" start="3575" end="3579" text="8176" TYPE="IDNUM" comment="" />
+<DATE id="P26" start="3583" end="3589" text="9-5-67" TYPE="DATE" comment="" />
+<DATE id="P27" start="3593" end="3599" text="9-6-67" TYPE="DATE" comment="" />
+<DATE id="P28" start="3603" end="3609" text="9-5-67" TYPE="DATE" comment="" />
 </TAGS>
 </deIdi2b2>

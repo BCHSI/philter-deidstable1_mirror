@@ -1,6 +1,6 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT>
+<TEXT><![CDATA[
 
 
 Record date: 2097-05-21
@@ -84,13 +84,14 @@ Document Status: Final
 
 
 
-</TEXT>
+]]></TEXT>
 <TAGS>
-<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2097-05-21" />
-<NAME TYPE="PATIENT" comment="" end="155" id="P2" start="147" text="Crawford" />
-<NAME TYPE="DOCTOR" comment="" end="812" id="P3" start="806" text="Powers" />
-<NAME TYPE="DOCTOR" comment="" end="2339" id="P4" start="2322" text="Xavier K. Youmans" />
-<CONTACT TYPE="PHONE" comment="" end="2356" id="P5" start="2351" text="24791" />
-<NAME TYPE="DOCTOR" comment="" end="2403" id="P6" start="2386" text="Xavier K. Youmans" />
+<DATE id="P0" start="16" end="26" text="2097-05-21" TYPE="DATE" comment="" />
+<LOCATION id="P1" start="45" end="64" text="SOUTH OAKS HOSPITAL" TYPE="HOSPITAL" comment="" />
+<NAME id="P2" start="147" end="155" text="Crawford" TYPE="PATIENT" comment="" />
+<NAME id="P3" start="806" end="812" text="Powers" TYPE="DOCTOR" comment="" />
+<NAME id="P4" start="2322" end="2339" text="Xavier K. Youmans" TYPE="DOCTOR" comment="" />
+<CONTACT id="P5" start="2351" end="2356" text="24791" TYPE="PHONE" comment="" />
+<NAME id="P6" start="2386" end="2403" text="Xavier K. Youmans" TYPE="DOCTOR" comment="" />
 </TAGS>
 </deIdi2b2>

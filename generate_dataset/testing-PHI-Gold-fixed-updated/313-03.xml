@@ -1,6 +1,6 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT>
+<TEXT><![CDATA[
 
 
 Record date: 2069-11-18
@@ -181,26 +181,28 @@ David R. Quintin, M.D.
 
 
 
-</TEXT>
+]]></TEXT>
 <TAGS>
-<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2069-11-18" />
-<NAME TYPE="DOCTOR" comment="" end="409" id="P2" start="402" text="Uriarte" />
-<DATE TYPE="DATE" comment="" end="688" id="P4" start="683" text="12/67" />
-<DATE TYPE="DATE" comment="" end="789" id="P5" start="783" text="4/8/67" />
-<DATE TYPE="DATE" comment="" end="808" id="P6" start="804" text="2064" />
-<DATE TYPE="DATE" comment="" end="827" id="P7" start="823" text="2062" />
-<DATE TYPE="DATE" comment="" end="889" id="P8" start="885" text="9/67" />
-<DATE TYPE="DATE" comment="" end="2296" id="P10" start="2292" text="2/69" />
-<NAME TYPE="DOCTOR" comment="" end="2378" id="P11" start="2371" text="Uriarte" />
-<DATE TYPE="DATE" comment="" end="2400" id="P12" start="2396" text="5/69" />
-<NAME TYPE="DOCTOR" comment="" end="2512" id="P13" start="2505" text="Uriarte" />
-<DATE TYPE="DATE" comment="" end="2928" id="P14" start="2924" text="8/69" />
-<DATE TYPE="DATE" comment="" end="3030" id="P15" start="3027" text="Feb" />
-<DATE TYPE="DATE" comment="" end="3043" id="P16" start="3038" text="10/68" />
-<DATE TYPE="DATE" comment="" end="3067" id="P17" start="3063" text="2/68" />
-<DATE TYPE="DATE" comment="" end="3108" id="P18" start="3103" text="12/69" />
-<NAME TYPE="DOCTOR" comment="" end="3238" id="P19" start="3225" text="Quiana Gagnon" />
-<NAME TYPE="DOCTOR" comment="" end="3402" id="P20" start="3396" text="Gagnon" />
-<NAME TYPE="DOCTOR" comment="" end="3489" id="P21" start="3473" text="David R. Quintin" />
+<DATE id="P0" start="16" end="26" text="2069-11-18" TYPE="DATE" comment="" />
+<AGE id="P1" start="33" end="35" text="54" TYPE="AGE" comment="" />
+<NAME id="P2" start="402" end="409" text="Uriarte" TYPE="DOCTOR" comment="" />
+<DATE id="P4" start="683" end="688" text="12/67" TYPE="DATE" comment="" />
+<DATE id="P5" start="783" end="789" text="4/8/67" TYPE="DATE" comment="" />
+<DATE id="P6" start="804" end="808" text="2064" TYPE="DATE" comment="" />
+<DATE id="P7" start="823" end="827" text="2062" TYPE="DATE" comment="" />
+<DATE id="P8" start="885" end="889" text="9/67" TYPE="DATE" comment="" />
+<AGE id="P9" start="1938" end="1940" text="54" TYPE="AGE" comment="" />
+<DATE id="P10" start="2292" end="2296" text="2/69" TYPE="DATE" comment="" />
+<NAME id="P11" start="2371" end="2378" text="Uriarte" TYPE="DOCTOR" comment="" />
+<DATE id="P12" start="2396" end="2400" text="5/69" TYPE="DATE" comment="" />
+<NAME id="P13" start="2505" end="2512" text="Uriarte" TYPE="DOCTOR" comment="" />
+<DATE id="P14" start="2924" end="2928" text="8/69" TYPE="DATE" comment="" />
+<DATE id="P15" start="3027" end="3030" text="Feb" TYPE="DATE" comment="" />
+<DATE id="P16" start="3038" end="3043" text="10/68" TYPE="DATE" comment="" />
+<DATE id="P17" start="3063" end="3067" text="2/68" TYPE="DATE" comment="" />
+<DATE id="P18" start="3103" end="3108" text="12/69" TYPE="DATE" comment="" />
+<NAME id="P19" start="3225" end="3238" text="Quiana Gagnon" TYPE="DOCTOR" comment="" />
+<NAME id="P20" start="3396" end="3402" text="Gagnon" TYPE="DOCTOR" comment="" />
+<NAME id="P21" start="3473" end="3489" text="David R. Quintin" TYPE="DOCTOR" comment="" />
 </TAGS>
 </deIdi2b2>

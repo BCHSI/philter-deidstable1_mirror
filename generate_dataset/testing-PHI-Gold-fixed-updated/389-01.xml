@@ -1,6 +1,6 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT>
+<TEXT><![CDATA[
 
 
 Record date: 2129-08-20
@@ -61,22 +61,23 @@ SEL:kerns
 
 
 
-</TEXT>
+]]></TEXT>
 <TAGS>
-<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2129-08-20" />
-<DATE TYPE="DATE" comment="" end="47" id="P1" start="34" text="July 06, 2129" />
-<NAME TYPE="DOCTOR" comment="" end="69" id="P2" start="57" text="Robert Trejo" />
-<LOCATION TYPE="STREET" comment="" end="91" id="P3" start="77" text="17 Unicorn Way" />
-<LOCATION TYPE="CITY" comment="" end="113" id="P5" start="104" text="Chickasha" />
-<LOCATION TYPE="STATE" comment="" end="117" id="P6" start="115" text="NC" />
-<LOCATION TYPE="ZIP" comment="" end="123" id="P7" start="118" text="75156" />
-<NAME TYPE="PATIENT" comment="" end="151" id="P8" start="138" text="Tyler Pearson" />
-<ID TYPE="MEDICALRECORD" comment="" end="191" id="P10" start="182" text="727-19-02" />
-<NAME TYPE="DOCTOR" comment="" end="212" id="P11" start="207" text="Trejo" />
-<NAME TYPE="PATIENT" comment="" end="283" id="P12" start="270" text="Tyler Pearson" />
-<NAME TYPE="PATIENT" comment="" end="932" id="P13" start="925" text="Pearson" />
-<NAME TYPE="DOCTOR" comment="" end="1443" id="P14" start="1429" text="Steven E. Land" />
-<NAME TYPE="DOCTOR" comment="" end="1456" id="P15" start="1453" text="SEL" />
-<NAME TYPE="DOCTOR" comment="" end="1462" id="P16" start="1457" text="kerns" />
+<DATE id="P0" start="16" end="26" text="2129-08-20" TYPE="DATE" comment="" />
+<DATE id="P1" start="34" end="47" text="July 06, 2129" TYPE="DATE" comment="" />
+<NAME id="P2" start="57" end="69" text="Robert Trejo" TYPE="DOCTOR" comment="" />
+<LOCATION id="P3" start="77" end="91" text="17 Unicorn Way" TYPE="STREET" comment="" />
+<LOCATION id="P5" start="104" end="113" text="Chickasha" TYPE="CITY" comment="" />
+<LOCATION id="P6" start="115" end="117" text="NC" TYPE="STATE" comment="" />
+<LOCATION id="P7" start="118" end="123" text="75156" TYPE="ZIP" comment="" />
+<NAME id="P8" start="138" end="151" text="Tyler Pearson" TYPE="PATIENT" comment="" />
+<LOCATION id="P9" start="178" end="181" text="WMC" TYPE="HOSPITAL" comment="" />
+<ID id="P10" start="182" end="191" text="727-19-02" TYPE="MEDICALRECORD" comment="" />
+<NAME id="P11" start="207" end="212" text="Trejo" TYPE="DOCTOR" comment="" />
+<NAME id="P12" start="270" end="283" text="Tyler Pearson" TYPE="PATIENT" comment="" />
+<NAME id="P13" start="925" end="932" text="Pearson" TYPE="PATIENT" comment="" />
+<NAME id="P14" start="1429" end="1443" text="Steven E. Land" TYPE="DOCTOR" comment="" />
+<NAME id="P15" start="1453" end="1456" text="SEL" TYPE="DOCTOR" comment="" />
+<NAME id="P16" start="1457" end="1462" text="kerns" TYPE="DOCTOR" comment="" />
 </TAGS>
 </deIdi2b2>

@@ -1,6 +1,6 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT>
+<TEXT><![CDATA[
 
 
 Record date: 2132-06-14
@@ -116,9 +116,9 @@ Assessment and Plan
 
 Mr. Pearson is a pleasant 87 year old gentleman with a history of COPD, never intubated, who presented with one day of dyspnea.  He had a fever to 103, and presented with hypotension and respiratory distress requiring intubation.  He has an elevated wbc and an increased creatinine to 1.6; his chest x-ray is consistent with a RUL and RML pneumonia, and he has a low bnp negative for cardiac stretching.  His presentation is consistent with sepsis secondary to pneumonia.
 
-Sepsis: continue EGDT, with goal MAP&gt;65 and goal CVP of 8-12
+Sepsis: continue EGDT, with goal MAP>65 and goal CVP of 8-12
 a. IVF with NS for goal CVP 8-12
-b. pressors as needed (vasopressin +/- levophed) for goal MAP&gt;65 (currently off pressors)
+b. pressors as needed (vasopressin +/- levophed) for goal MAP>65 (currently off pressors)
 c. monitor urine output
 d. measure central venous oxygen saturation
 e. antibiotics for pneumonia: would treat with vancomycin and cefepime, check vancomycin trough tomorrow am
@@ -140,43 +140,46 @@ PGY-1
 
 
 
-</TEXT>
+]]></TEXT>
 <TAGS>
-<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2132-06-14" />
-<NAME TYPE="PATIENT" comment="" end="89" id="P2" start="76" text="Tyler Pearson" />
-<ID TYPE="MEDICALRECORD" comment="" end="102" id="P3" start="95" text="7271902" />
-<DATE TYPE="DATE" comment="" end="134" id="P4" start="122" text="14 June 2132" />
-<NAME TYPE="DOCTOR" comment="" end="165" id="P5" start="153" text="Noah Rosario" />
-<NAME TYPE="DOCTOR" comment="" end="196" id="P6" start="184" text="Raymond Pack" />
-<NAME TYPE="DOCTOR" comment="" end="217" id="P7" start="208" text="Frank Ash" />
-<NAME TYPE="PATIENT" comment="" end="296" id="P8" start="289" text="Pearson" />
-<DATE TYPE="DATE" comment="" end="521" id="P10" start="515" text="May 26" />
-<DATE TYPE="DATE" comment="" end="534" id="P11" start="528" text="May 29" />
-<LOCATION TYPE="STATE" comment="" end="756" id="P12" start="745" text="Connecticut" />
-<DATE TYPE="DATE" comment="" end="796" id="P13" start="789" text="June 13" />
-<PROFESSION TYPE="PROFESSION" comment="" end="2489" id="P16" start="2475" text="Civil Engineer" />
-<DATE TYPE="DATE" comment="" end="3252" id="P17" start="3242" text="06/14/2132" />
-<DATE TYPE="DATE" comment="" end="3331" id="P18" start="3321" text="06/14/2132" />
-<DATE TYPE="DATE" comment="" end="3474" id="P19" start="3464" text="06/14/2132" />
-<DATE TYPE="DATE" comment="" end="3538" id="P20" start="3528" text="06/14/2132" />
-<DATE TYPE="DATE" comment="" end="3682" id="P21" start="3672" text="06/14/2132" />
-<DATE TYPE="DATE" comment="" end="3840" id="P22" start="3830" text="06/14/2132" />
-<DATE TYPE="DATE" comment="" end="3953" id="P23" start="3943" text="06/14/2132" />
-<DATE TYPE="DATE" comment="" end="4067" id="P24" start="4057" text="06/14/2132" />
-<DATE TYPE="DATE" comment="" end="4180" id="P25" start="4170" text="06/14/2132" />
-<DATE TYPE="DATE" comment="" end="4294" id="P26" start="4284" text="06/14/2132" />
-<DATE TYPE="DATE" comment="" end="4437" id="P27" start="4427" text="06/14/2132" />
-<DATE TYPE="DATE" comment="" end="4501" id="P28" start="4491" text="06/14/2132" />
-<DATE TYPE="DATE" comment="" end="4630" id="P29" start="4620" text="06/14/2132" />
-<DATE TYPE="DATE" comment="" end="4774" id="P30" start="4764" text="06/14/2132" />
-<DATE TYPE="DATE" comment="" end="4932" id="P31" start="4922" text="06/14/2132" />
-<DATE TYPE="DATE" comment="" end="5090" id="P32" start="5080" text="06/14/2132" />
-<DATE TYPE="DATE" comment="" end="5249" id="P33" start="5239" text="06/14/2132" />
-<DATE TYPE="DATE" comment="" end="5408" id="P34" start="5398" text="06/14/2132" />
-<DATE TYPE="DATE" comment="" end="5488" id="P35" start="5478" text="06/14/2132" />
-<DATE TYPE="DATE" comment="" end="5576" id="P36" start="5567" text="5/27/2132" />
-<NAME TYPE="PATIENT" comment="" end="5834" id="P37" start="5827" text="Pearson" />
-<NAME TYPE="DOCTOR" comment="" end="7113" id="P39" start="7098" text="Noah G. Rosario" />
-<CONTACT TYPE="PHONE" comment="" end="7125" id="P40" start="7120" text="81251" />
+<DATE id="P0" start="16" end="26" text="2132-06-14" TYPE="DATE" comment="" />
+<NAME id="P2" start="76" end="89" text="Tyler Pearson" TYPE="PATIENT" comment="" />
+<ID id="P3" start="95" end="102" text="7271902" TYPE="MEDICALRECORD" comment="" />
+<DATE id="P4" start="122" end="134" text="14 June 2132" TYPE="DATE" comment="" />
+<NAME id="P5" start="153" end="165" text="Noah Rosario" TYPE="DOCTOR" comment="" />
+<NAME id="P6" start="184" end="196" text="Raymond Pack" TYPE="DOCTOR" comment="" />
+<NAME id="P7" start="208" end="217" text="Frank Ash" TYPE="DOCTOR" comment="" />
+<NAME id="P8" start="289" end="296" text="Pearson" TYPE="PATIENT" comment="" />
+<AGE id="P9" start="305" end="307" text="87" TYPE="AGE" comment="" />
+<DATE id="P10" start="515" end="521" text="May 26" TYPE="DATE" comment="" />
+<DATE id="P11" start="528" end="534" text="May 29" TYPE="DATE" comment="" />
+<LOCATION id="P12" start="745" end="756" text="Connecticut" TYPE="STATE" comment="" />
+<DATE id="P13" start="789" end="796" text="June 13" TYPE="DATE" comment="" />
+<LOCATION id="P14" start="1174" end="1177" text="WMC" TYPE="HOSPITAL" comment="" />
+<PROFESSION id="P16" start="2475" end="2489" text="Civil Engineer" TYPE="PROFESSION" comment="" />
+<DATE id="P17" start="3242" end="3252" text="06/14/2132" TYPE="DATE" comment="" />
+<DATE id="P18" start="3321" end="3331" text="06/14/2132" TYPE="DATE" comment="" />
+<DATE id="P19" start="3464" end="3474" text="06/14/2132" TYPE="DATE" comment="" />
+<DATE id="P20" start="3528" end="3538" text="06/14/2132" TYPE="DATE" comment="" />
+<DATE id="P21" start="3672" end="3682" text="06/14/2132" TYPE="DATE" comment="" />
+<DATE id="P22" start="3830" end="3840" text="06/14/2132" TYPE="DATE" comment="" />
+<DATE id="P23" start="3943" end="3953" text="06/14/2132" TYPE="DATE" comment="" />
+<DATE id="P24" start="4057" end="4067" text="06/14/2132" TYPE="DATE" comment="" />
+<DATE id="P25" start="4170" end="4180" text="06/14/2132" TYPE="DATE" comment="" />
+<DATE id="P26" start="4284" end="4294" text="06/14/2132" TYPE="DATE" comment="" />
+<DATE id="P27" start="4427" end="4437" text="06/14/2132" TYPE="DATE" comment="" />
+<DATE id="P28" start="4491" end="4501" text="06/14/2132" TYPE="DATE" comment="" />
+<DATE id="P29" start="4620" end="4630" text="06/14/2132" TYPE="DATE" comment="" />
+<DATE id="P30" start="4764" end="4774" text="06/14/2132" TYPE="DATE" comment="" />
+<DATE id="P31" start="4922" end="4932" text="06/14/2132" TYPE="DATE" comment="" />
+<DATE id="P32" start="5080" end="5090" text="06/14/2132" TYPE="DATE" comment="" />
+<DATE id="P33" start="5239" end="5249" text="06/14/2132" TYPE="DATE" comment="" />
+<DATE id="P34" start="5398" end="5408" text="06/14/2132" TYPE="DATE" comment="" />
+<DATE id="P35" start="5478" end="5488" text="06/14/2132" TYPE="DATE" comment="" />
+<DATE id="P36" start="5567" end="5576" text="5/27/2132" TYPE="DATE" comment="" />
+<NAME id="P37" start="5827" end="5834" text="Pearson" TYPE="PATIENT" comment="" />
+<AGE id="P38" start="5849" end="5851" text="87" TYPE="AGE" comment="" />
+<NAME id="P39" start="7098" end="7113" text="Noah G. Rosario" TYPE="DOCTOR" comment="" />
+<CONTACT id="P40" start="7120" end="7125" text="81251" TYPE="PHONE" comment="" />
 </TAGS>
 </deIdi2b2>

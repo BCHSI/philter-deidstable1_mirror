@@ -1,6 +1,6 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT>
+<TEXT><![CDATA[
 
 
 Record date: 2071-06-26
@@ -59,22 +59,23 @@ DV: 06/26/71
 
 
 
-</TEXT>
+]]></TEXT>
 <TAGS>
-<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2071-06-26" />
-<LOCATION TYPE="STREET" comment="" end="74" id="P2" start="60" text="94 Aspen Court" />
-<NAME TYPE="PATIENT" comment="" end="124" id="P3" start="114" text="Uher, Olga" />
-<LOCATION TYPE="CITY" comment="" end="132" id="P4" start="125" text="Chilton" />
-<LOCATION TYPE="STATE" comment="" end="136" id="P5" start="134" text="IN" />
-<LOCATION TYPE="ZIP" comment="" end="142" id="P6" start="137" text="26297" />
-<ID TYPE="MEDICALRECORD" comment="" end="188" id="P7" start="180" text="25816492" />
-<CONTACT TYPE="PHONE" comment="" end="203" id="P8" start="189" text="(606) 846-1043" />
-<DATE TYPE="DATE" comment="" end="254" id="P9" start="246" text="06/26/71" />
-<LOCATION TYPE="ORGANIZATION" comment="" end="504" id="P10" start="489" text="Sel de la Terre" />
-<NAME TYPE="DOCTOR" comment="" end="1828" id="P11" start="1817" text="Sean Ugalde" />
-<ID TYPE="IDNUM" comment="" end="1865" id="P12" start="1857" text="7-829452" />
-<DATE TYPE="DATE" comment="" end="1892" id="P13" start="1884" text="06/27/71" />
-<DATE TYPE="DATE" comment="" end="1905" id="P14" start="1897" text="06/27/71" />
-<DATE TYPE="DATE" comment="" end="1918" id="P15" start="1910" text="06/26/71" />
+<DATE id="P0" start="16" end="26" text="2071-06-26" TYPE="DATE" comment="" />
+<LOCATION id="P1" start="29" end="59" text="Long Prairie Memorial Hospital" TYPE="HOSPITAL" comment="" />
+<LOCATION id="P2" start="60" end="74" text="94 Aspen Court" TYPE="STREET" comment="" />
+<NAME id="P3" start="114" end="124" text="Uher, Olga" TYPE="PATIENT" comment="" />
+<LOCATION id="P4" start="125" end="132" text="Chilton" TYPE="CITY" comment="" />
+<LOCATION id="P5" start="134" end="136" text="IN" TYPE="STATE" comment="" />
+<LOCATION id="P6" start="137" end="142" text="26297" TYPE="ZIP" comment="" />
+<ID id="P7" start="180" end="188" text="25816492" TYPE="MEDICALRECORD" comment="" />
+<CONTACT id="P8" start="189" end="203" text="(606) 846-1043" TYPE="PHONE" comment="" />
+<DATE id="P9" start="246" end="254" text="06/26/71" TYPE="DATE" comment="" />
+<LOCATION id="P10" start="489" end="504" text="Sel de la Terre" TYPE="ORGANIZATION" comment="" />
+<NAME id="P11" start="1817" end="1828" text="Sean Ugalde" TYPE="DOCTOR" comment="" />
+<ID id="P12" start="1857" end="1865" text="7-829452" TYPE="IDNUM" comment="" />
+<DATE id="P13" start="1884" end="1892" text="06/27/71" TYPE="DATE" comment="" />
+<DATE id="P14" start="1897" end="1905" text="06/27/71" TYPE="DATE" comment="" />
+<DATE id="P15" start="1910" end="1918" text="06/26/71" TYPE="DATE" comment="" />
 </TAGS>
 </deIdi2b2>

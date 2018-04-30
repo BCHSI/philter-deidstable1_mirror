@@ -1,6 +1,6 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT>
+<TEXT><![CDATA[
 
 
 Record date: 2097-06-29
@@ -65,7 +65,7 @@ SH: Lives with her son in Ardmore. Has two sons and a daughter. Daughter, Yoland
 Flowsheet Data:
 
 VS: Tm  HR 
-52-70 SR SBP 223/90 &amp;#224; 148/53 MAP  RR 19 O2 sat 100 % on FiO2 1.0
+52-70 SR SBP 223/90 &#224; 148/53 MAP  RR 19 O2 sat 100 % on FiO2 1.0
 
 CVP ICP  CPP 
 
@@ -114,7 +114,7 @@ Ortho: R. arm fracture (old)
 
 
 
-Neuro Exam: Off sedation &amp;#8211; no verbal response to noxious stimuli, intermittently extensor postures; minimally reactive small pupils, midline gaze in primary position, able to x-midline, no BTT, + R. corneal brisk vs. L., grimace to nasal tickle better on the L. than on the R., R. UE slight w/d to deep noxious stim, plegic in LUE., w/d briskly in the L. LE vs. RLE, toes up b/l
+Neuro Exam: Off sedation &#8211; no verbal response to noxious stimuli, intermittently extensor postures; minimally reactive small pupils, midline gaze in primary position, able to x-midline, no BTT, + R. corneal brisk vs. L., grimace to nasal tickle better on the L. than on the R., R. UE slight w/d to deep noxious stim, plegic in LUE., w/d briskly in the L. LE vs. RLE, toes up b/l
 
 
 
@@ -141,13 +141,13 @@ Neuro: ICH with IVH, prior h/o sz d/o not AEDs now
 
 -repeat I-HCT in 6 h  (at 9:45 p.m.), 24 h (6/30/97 at 3:45 p.m.), and STAT with exam change
 
--SBP goal &amp;lt; 140 mm Hg
+-SBP goal &lt; 140 mm Hg
 
 -A-line
 
 -propofol for  BP control
 
--HOB &amp;gt; 30 degrees
+-HOB &gt; 30 degrees
 
 -no antiplatelet or anticoagulants 
 
@@ -179,7 +179,7 @@ CV: HTN, HL, angina
 
 -Tn x 3
 
--SBP goal &amp;lt; 140 mm Hg
+-SBP goal &lt; 140 mm Hg
 
 
 
@@ -264,7 +264,7 @@ Ortho:
 
 
 
-Prophy: DVT teds &amp;amp; boots, fragmin if repeat CT stable in 48 h Sz - 
+Prophy: DVT teds &amp; boots, fragmin if repeat CT stable in 48 h Sz - 
 GI PPI VAP peridex Restraints -
 
 
@@ -289,20 +289,23 @@ Neurology Resident
 
 
 
-</TEXT>
+]]></TEXT>
 <TAGS>
-<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2097-06-29" />
-<NAME TYPE="PATIENT" comment="" end="114" id="P2" start="98" text="Ollivo, Kimberly" />
-<ID TYPE="MEDICALRECORD" comment="" end="128" id="P3" start="121" text="3299811" />
-<DATE TYPE="DATE" comment="" end="143" id="P4" start="136" text="6/29/97" />
-<NAME TYPE="PATIENT" comment="" end="361" id="P5" start="356" text="Olivo" />
-<NAME TYPE="PATIENT" comment="" end="1299" id="P7" start="1294" text="Olivo" />
-<LOCATION TYPE="CITY" comment="" end="2218" id="P8" start="2211" text="Ardmore" />
-<NAME TYPE="PATIENT" comment="" end="2266" id="P9" start="2259" text="Yolanda" />
-<CONTACT TYPE="PHONE" comment="" end="2292" id="P10" start="2280" text="817-638-1328" />
-<DATE TYPE="DATE" comment="" end="3451" id="P11" start="3447" text="6/29" />
-<NAME TYPE="PATIENT" comment="" end="3787" id="P12" start="3782" text="Olivo" />
-<DATE TYPE="DATE" comment="" end="4477" id="P14" start="4470" text="6/30/97" />
-<NAME TYPE="DOCTOR" comment="" end="5813" id="P15" start="5800" text="Yuval Xaysana" />
+<DATE id="P0" start="16" end="26" text="2097-06-29" TYPE="DATE" comment="" />
+<LOCATION id="P1" start="29" end="53" text="AMERICAN LEGION HOSPITAL" TYPE="HOSPITAL" comment="" />
+<NAME id="P2" start="98" end="114" text="Ollivo, Kimberly" TYPE="PATIENT" comment="" />
+<ID id="P3" start="121" end="128" text="3299811" TYPE="MEDICALRECORD" comment="" />
+<DATE id="P4" start="136" end="143" text="6/29/97" TYPE="DATE" comment="" />
+<NAME id="P5" start="356" end="361" text="Olivo" TYPE="PATIENT" comment="" />
+<AGE id="P6" start="367" end="369" text="75" TYPE="AGE" comment="" />
+<NAME id="P7" start="1294" end="1299" text="Olivo" TYPE="PATIENT" comment="" />
+<LOCATION id="P8" start="2211" end="2218" text="Ardmore" TYPE="CITY" comment="" />
+<NAME id="P9" start="2259" end="2266" text="Yolanda" TYPE="PATIENT" comment="" />
+<CONTACT id="P10" start="2280" end="2292" text="817-638-1328" TYPE="PHONE" comment="" />
+<DATE id="P11" start="3447" end="3451" text="6/29" TYPE="DATE" comment="" />
+<NAME id="P12" start="3782" end="3787" text="Olivo" TYPE="PATIENT" comment="" />
+<AGE id="P13" start="3793" end="3795" text="75" TYPE="AGE" comment="" />
+<DATE id="P14" start="4470" end="4477" text="6/30/97" TYPE="DATE" comment="" />
+<NAME id="P15" start="5800" end="5813" text="Yuval Xaysana" TYPE="DOCTOR" comment="" />
 </TAGS>
 </deIdi2b2>

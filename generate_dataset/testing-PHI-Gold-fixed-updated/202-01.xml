@@ -1,6 +1,6 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT>
+<TEXT><![CDATA[
 
 
 Record date: 2155-05-17
@@ -65,30 +65,35 @@ cc:	Robert-Joseph Paige, MD, 558 Paxton Terrace, Peculiar, NE 54583
 
 
 
-</TEXT>
+]]></TEXT>
 <TAGS>
-<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2155-05-17" />
-<DATE TYPE="DATE" comment="" end="47" id="P1" start="36" text="17 May 2155" />
-<NAME TYPE="DOCTOR" comment="" end="66" id="P2" start="53" text="Brandon Ponce" />
-<LOCATION TYPE="STREET" comment="" end="91" id="P3" start="72" text="974 Parkhurst Drive" />
-<LOCATION TYPE="CITY" comment="" end="101" id="P4" start="93" text="Peculiar" />
-<LOCATION TYPE="STATE" comment="" end="105" id="P5" start="103" text="NE" />
-<LOCATION TYPE="ZIP" comment="" end="111" id="P6" start="106" text="54583" />
-<NAME TYPE="PATIENT" comment="" end="133" id="P7" start="119" text="Jarome DEJESUS" />
-<ID TYPE="MEDICALRECORD" comment="" end="151" id="P9" start="140" text="280-44-07-1" />
-<NAME TYPE="DOCTOR" comment="" end="169" id="P10" start="164" text="Ponce" />
-<NAME TYPE="PATIENT" comment="" end="218" id="P11" start="211" text="Dejesus" />
-<DATE TYPE="DATE" comment="" end="249" id="P13" start="244" text="05/16" />
-<DATE TYPE="DATE" comment="" end="255" id="P14" start="250" text="07/14" />
-<NAME TYPE="DOCTOR" comment="" end="573" id="P18" start="561" text="Yoseph Flint" />
-<NAME TYPE="DOCTOR" comment="" end="1511" id="P19" start="1506" text="Paige" />
-<NAME TYPE="DOCTOR" comment="" end="1663" id="P20" start="1645" text="Barbara A. Rhoades" />
-<NAME TYPE="DOCTOR" comment="" end="1674" id="P21" start="1671" text="BAR" />
-<NAME TYPE="DOCTOR" comment="" end="1679" id="P22" start="1675" text="pham" />
-<NAME TYPE="DOCTOR" comment="" end="1704" id="P23" start="1685" text="Robert-Joseph Paige" />
-<LOCATION TYPE="STREET" comment="" end="1728" id="P24" start="1710" text="558 Paxton Terrace" />
-<LOCATION TYPE="CITY" comment="" end="1738" id="P25" start="1730" text="Peculiar" />
-<LOCATION TYPE="STATE" comment="" end="1742" id="P26" start="1740" text="NE" />
-<LOCATION TYPE="ZIP" comment="" end="1748" id="P27" start="1743" text="54583" />
+<DATE id="P0" start="16" end="26" text="2155-05-17" TYPE="DATE" comment="" />
+<DATE id="P1" start="36" end="47" text="17 May 2155" TYPE="DATE" comment="" />
+<NAME id="P2" start="53" end="66" text="Brandon Ponce" TYPE="DOCTOR" comment="" />
+<LOCATION id="P3" start="72" end="91" text="974 Parkhurst Drive" TYPE="STREET" comment="" />
+<LOCATION id="P4" start="93" end="101" text="Peculiar" TYPE="CITY" comment="" />
+<LOCATION id="P5" start="103" end="105" text="NE" TYPE="STATE" comment="" />
+<LOCATION id="P6" start="106" end="111" text="54583" TYPE="ZIP" comment="" />
+<NAME id="P7" start="119" end="133" text="Jarome DEJESUS" TYPE="PATIENT" comment="" />
+<LOCATION id="P8" start="136" end="139" text="ECI" TYPE="HOSPITAL" comment="" />
+<ID id="P9" start="140" end="151" text="280-44-07-1" TYPE="MEDICALRECORD" comment="" />
+<NAME id="P10" start="164" end="169" text="Ponce" TYPE="DOCTOR" comment="" />
+<NAME id="P11" start="211" end="218" text="Dejesus" TYPE="PATIENT" comment="" />
+<LOCATION id="P12" start="230" end="233" text="ECI" TYPE="HOSPITAL" comment="" />
+<DATE id="P13" start="244" end="249" text="05/16" TYPE="DATE" comment="" />
+<DATE id="P14" start="250" end="255" text="07/14" TYPE="DATE" comment="" />
+<AGE id="P15" start="266" end="268" text="72" TYPE="AGE" comment="" />
+<LOCATION id="P16" start="327" end="332" text="SCMHC" TYPE="HOSPITAL" comment="" />
+<LOCATION id="P17" start="546" end="549" text="ECI" TYPE="HOSPITAL" comment="" />
+<NAME id="P18" start="561" end="573" text="Yoseph Flint" TYPE="DOCTOR" comment="" />
+<NAME id="P19" start="1506" end="1511" text="Paige" TYPE="DOCTOR" comment="" />
+<NAME id="P20" start="1645" end="1663" text="Barbara A. Rhoades" TYPE="DOCTOR" comment="" />
+<NAME id="P21" start="1671" end="1674" text="BAR" TYPE="DOCTOR" comment="" />
+<NAME id="P22" start="1675" end="1679" text="pham" TYPE="DOCTOR" comment="" />
+<NAME id="P23" start="1685" end="1704" text="Robert-Joseph Paige" TYPE="DOCTOR" comment="" />
+<LOCATION id="P24" start="1710" end="1728" text="558 Paxton Terrace" TYPE="STREET" comment="" />
+<LOCATION id="P25" start="1730" end="1738" text="Peculiar" TYPE="CITY" comment="" />
+<LOCATION id="P26" start="1740" end="1742" text="NE" TYPE="STATE" comment="" />
+<LOCATION id="P27" start="1743" end="1748" text="54583" TYPE="ZIP" comment="" />
 </TAGS>
 </deIdi2b2>

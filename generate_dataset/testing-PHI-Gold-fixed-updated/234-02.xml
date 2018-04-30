@@ -1,6 +1,6 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT>
+<TEXT><![CDATA[
 
 
 Record date: 2074-12-09
@@ -25,7 +25,7 @@ Medications
 
 Colace (DOCUSATE SODIUM) 100 MG (100MG TABLET take 1) PO BID 
 
-Nystatin SUSPENSION (MOUTHWASH) 5 ML SWISH &amp; SPIT QID 
+Nystatin SUSPENSION (MOUTHWASH) 5 ML SWISH & SPIT QID 
 
 Lisinopril 40 MG PO QD 
 
@@ -81,7 +81,7 @@ BP 126/78, P 68, Wt 133 lb
 
 WD,WN,NAD.
 
-M&amp;T- lips and gums unremarkable. Good dentition. Moist; no erythema; no exudate; no lesions
+M&T- lips and gums unremarkable. Good dentition. Moist; no erythema; no exudate; no lesions
 
 Neck- supple.  No JVD.  No bruit.  No LAN.  No thyromegaly
 
@@ -163,12 +163,14 @@ P- Repeat CMP. Information given for her MD in DR. f/u when she returns in 3-4 m
 
 
 
-</TEXT>
+]]></TEXT>
 <TAGS>
-<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2074-12-09" />
-<NAME TYPE="PATIENT" comment="" end="37" id="P1" start="28" text="Francesca" />
-<DATE TYPE="DATE" comment="" end="98" id="P3" start="93" text="11/21" />
-<DATE TYPE="DATE" comment="" end="183" id="P4" start="179" text="9/74" />
-<DATE TYPE="DATE" comment="" end="1658" id="P6" start="1653" text="12/13" />
+<DATE id="P0" start="16" end="26" text="2074-12-09" TYPE="DATE" comment="" />
+<NAME id="P1" start="28" end="37" text="Francesca" TYPE="PATIENT" comment="" />
+<AGE id="P2" start="43" end="45" text="72" TYPE="AGE" comment="" />
+<DATE id="P3" start="93" end="98" text="11/21" TYPE="DATE" comment="" />
+<DATE id="P4" start="179" end="183" text="9/74" TYPE="DATE" comment="" />
+<LOCATION id="P5" start="1644" end="1652" text="Paraguay" TYPE="COUNTRY" comment="" />
+<DATE id="P6" start="1653" end="1658" text="12/13" TYPE="DATE" comment="" />
 </TAGS>
 </deIdi2b2>

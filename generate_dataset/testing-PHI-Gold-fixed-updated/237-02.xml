@@ -1,6 +1,6 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT>
+<TEXT><![CDATA[
 
 
 Record date: 2093-04-13
@@ -54,28 +54,29 @@ Document Status: Final
 
 
 
-</TEXT>
+]]></TEXT>
 <TAGS>
-<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2093-04-13" />
-<NAME TYPE="DOCTOR" comment="" end="91" id="P2" start="76" text="Steven N Cooper" />
-<LOCATION TYPE="STREET" comment="" end="116" id="P3" start="98" text="8 Riverview Avenue" />
-<LOCATION TYPE="CITY" comment="" end="145" id="P5" start="130" text="College Station" />
-<LOCATION TYPE="STATE" comment="" end="149" id="P6" start="147" text="NC" />
-<LOCATION TYPE="ZIP" comment="" end="155" id="P7" start="150" text="22169" />
-<NAME TYPE="DOCTOR" comment="" end="172" id="P8" start="166" text="Cooper" />
-<NAME TYPE="PATIENT" comment="" end="236" id="P9" start="220" text="Christian Mullen" />
-<NAME TYPE="DOCTOR" comment="" end="411" id="P10" start="402" text="Fernandes" />
-<NAME TYPE="DOCTOR" comment="" end="569" id="P11" start="558" text="Fredrick Xa" />
-<NAME TYPE="PATIENT" comment="" end="855" id="P12" start="850" text="Chris" />
-<LOCATION TYPE="CITY" comment="" end="1003" id="P13" start="995" text="Bogalusa" />
-<NAME TYPE="PATIENT" comment="" end="1018" id="P14" start="1009" text="Brad Fair" />
-<DATE TYPE="DATE" comment="" end="1286" id="P15" start="1282" text="2082" />
-<NAME TYPE="PATIENT" comment="" end="1825" id="P16" start="1820" text="Chris" />
-<NAME TYPE="PATIENT" comment="" end="2541" id="P17" start="2536" text="Chris" />
-<NAME TYPE="DOCTOR" comment="" end="3055" id="P18" start="3042" text="Vernon Galvan" />
-<NAME TYPE="DOCTOR" comment="" end="3225" id="P19" start="3213" text="Guyton Nunes" />
-<NAME TYPE="DOCTOR" comment="" end="3254" id="P20" start="3236" text="Nathan   Fernandes" />
-<NAME TYPE="DOCTOR" comment="" end="3276" id="P21" start="3261" text="Vernon X Galvan" />
-<NAME TYPE="DOCTOR" comment="" end="3328" id="P22" start="3316" text="Guyton Nunes" />
+<DATE id="P0" start="16" end="26" text="2093-04-13" TYPE="DATE" comment="" />
+<LOCATION id="P1" start="45" end="73" text="BEAUREGARD MEMORIAL HOSPITAL" TYPE="HOSPITAL" comment="" />
+<NAME id="P2" start="76" end="91" text="Steven N Cooper" TYPE="DOCTOR" comment="" />
+<LOCATION id="P3" start="98" end="116" text="8 Riverview Avenue" TYPE="STREET" comment="" />
+<LOCATION id="P5" start="130" end="145" text="College Station" TYPE="CITY" comment="" />
+<LOCATION id="P6" start="147" end="149" text="NC" TYPE="STATE" comment="" />
+<LOCATION id="P7" start="150" end="155" text="22169" TYPE="ZIP" comment="" />
+<NAME id="P8" start="166" end="172" text="Cooper" TYPE="DOCTOR" comment="" />
+<NAME id="P9" start="220" end="236" text="Christian Mullen" TYPE="PATIENT" comment="" />
+<NAME id="P10" start="402" end="411" text="Fernandes" TYPE="DOCTOR" comment="" />
+<NAME id="P11" start="558" end="569" text="Fredrick Xa" TYPE="DOCTOR" comment="" />
+<NAME id="P12" start="850" end="855" text="Chris" TYPE="PATIENT" comment="" />
+<LOCATION id="P13" start="995" end="1003" text="Bogalusa" TYPE="CITY" comment="" />
+<NAME id="P14" start="1009" end="1018" text="Brad Fair" TYPE="PATIENT" comment="" />
+<DATE id="P15" start="1282" end="1286" text="2082" TYPE="DATE" comment="" />
+<NAME id="P16" start="1820" end="1825" text="Chris" TYPE="PATIENT" comment="" />
+<NAME id="P17" start="2536" end="2541" text="Chris" TYPE="PATIENT" comment="" />
+<NAME id="P18" start="3042" end="3055" text="Vernon Galvan" TYPE="DOCTOR" comment="" />
+<NAME id="P19" start="3213" end="3225" text="Guyton Nunes" TYPE="DOCTOR" comment="" />
+<NAME id="P20" start="3236" end="3254" text="Nathan   Fernandes" TYPE="DOCTOR" comment="" />
+<NAME id="P21" start="3261" end="3276" text="Vernon X Galvan" TYPE="DOCTOR" comment="" />
+<NAME id="P22" start="3316" end="3328" text="Guyton Nunes" TYPE="DOCTOR" comment="" />
 </TAGS>
 </deIdi2b2>

@@ -1,6 +1,6 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT>
+<TEXT><![CDATA[
 
 
 Record date: 2087-08-15
@@ -91,19 +91,20 @@ eScription document:3-7918390 BFFocus
 
 
 
-</TEXT>
+]]></TEXT>
 <TAGS>
-<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2087-08-15" />
-<ID TYPE="MEDICALRECORD" comment="" end="44" id="P1" start="36" text="43294739" />
-<NAME TYPE="PATIENT" comment="" end="60" id="P2" start="45" text="FINNEY, INDIANA" />
-<DATE TYPE="DATE" comment="" end="69" id="P3" start="61" text="08/15/87" />
-<NAME TYPE="DOCTOR" comment="" end="86" id="P4" start="70" text="NARANJO, KENNETH" />
-<DATE TYPE="DATE" comment="" end="164" id="P5" start="154" text="08/15/2087" />
-<NAME TYPE="DOCTOR" comment="" end="203" id="P6" start="195" text="Kaminski" />
-<NAME TYPE="DOCTOR" comment="" end="2066" id="P8" start="2050" text="NARANJO, KENNETH" />
-<DATE TYPE="DATE" comment="" end="2084" id="P9" start="2076" text="08/15/87" />
-<DATE TYPE="DATE" comment="" end="2097" id="P10" start="2089" text="08/15/87" />
-<NAME TYPE="DOCTOR" comment="" end="2128" id="P11" start="2112" text="NARANJO, KENNETH" />
-<ID TYPE="IDNUM" comment="" end="2159" id="P12" start="2150" text="3-7918390" />
+<DATE id="P0" start="16" end="26" text="2087-08-15" TYPE="DATE" comment="" />
+<ID id="P1" start="36" end="44" text="43294739" TYPE="MEDICALRECORD" comment="" />
+<NAME id="P2" start="45" end="60" text="FINNEY, INDIANA" TYPE="PATIENT" comment="" />
+<DATE id="P3" start="61" end="69" text="08/15/87" TYPE="DATE" comment="" />
+<NAME id="P4" start="70" end="86" text="NARANJO, KENNETH" TYPE="DOCTOR" comment="" />
+<DATE id="P5" start="154" end="164" text="08/15/2087" TYPE="DATE" comment="" />
+<NAME id="P6" start="195" end="203" text="Kaminski" TYPE="DOCTOR" comment="" />
+<AGE id="P7" start="409" end="411" text="50" TYPE="AGE" comment="" />
+<NAME id="P8" start="2050" end="2066" text="NARANJO, KENNETH" TYPE="DOCTOR" comment="" />
+<DATE id="P9" start="2076" end="2084" text="08/15/87" TYPE="DATE" comment="" />
+<DATE id="P10" start="2089" end="2097" text="08/15/87" TYPE="DATE" comment="" />
+<NAME id="P11" start="2112" end="2128" text="NARANJO, KENNETH" TYPE="DOCTOR" comment="" />
+<ID id="P12" start="2150" end="2159" text="3-7918390" TYPE="IDNUM" comment="" />
 </TAGS>
 </deIdi2b2>

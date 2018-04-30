@@ -1,6 +1,6 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT>
+<TEXT><![CDATA[
 
 
 Record date: 2086-11-17
@@ -187,26 +187,28 @@ DV: 11/18/86
 
 
 
-</TEXT>
+]]></TEXT>
 <TAGS>
-<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2086-11-17" />
-<LOCATION TYPE="STREET" comment="" end="83" id="P2" start="68" text="427 Ohio Street" />
-<NAME TYPE="PATIENT" comment="" end="136" id="P3" start="123" text="CHAPMAN, NOOR" />
-<LOCATION TYPE="CITY" comment="" end="144" id="P4" start="138" text="Weston" />
-<LOCATION TYPE="STATE" comment="" end="148" id="P5" start="146" text="VT" />
-<LOCATION TYPE="ZIP" comment="" end="154" id="P6" start="149" text="36112" />
-<ID TYPE="MEDICALRECORD" comment="" end="190" id="P7" start="182" text="45479406" />
-<CONTACT TYPE="PHONE" comment="" end="206" id="P8" start="192" text="(324) 090-7704" />
-<DATE TYPE="DATE" comment="" end="258" id="P9" start="250" text="11/17/86" />
-<NAME TYPE="PATIENT" comment="" end="294" id="P10" start="287" text="Chapman" />
-<DATE TYPE="DATE" comment="" end="2264" id="P12" start="2252" text="September 18" />
-<DATE TYPE="DATE" comment="" end="2328" id="P13" start="2322" text="August" />
-<DATE TYPE="DATE" comment="" end="3286" id="P14" start="3275" text="December 13" />
-<NAME TYPE="DOCTOR" comment="" end="3491" id="P15" start="3478" text="Sandra Jewell" />
-<NAME TYPE="DOCTOR" comment="" end="3529" id="P16" start="3516" text="Sandra Jewell" />
-<ID TYPE="IDNUM" comment="" end="3564" id="P17" start="3555" text="5-7786571" />
-<DATE TYPE="DATE" comment="" end="3596" id="P18" start="3588" text="11/18/86" />
-<DATE TYPE="DATE" comment="" end="3610" id="P19" start="3602" text="11/19/86" />
-<DATE TYPE="DATE" comment="" end="3624" id="P20" start="3616" text="11/18/86" />
+<DATE id="P0" start="16" end="26" text="2086-11-17" TYPE="DATE" comment="" />
+<LOCATION id="P1" start="30" end="66" text="Chilton County Hospital Nursing Home" TYPE="HOSPITAL" comment="" />
+<LOCATION id="P2" start="68" end="83" text="427 Ohio Street" TYPE="STREET" comment="" />
+<NAME id="P3" start="123" end="136" text="CHAPMAN, NOOR" TYPE="PATIENT" comment="" />
+<LOCATION id="P4" start="138" end="144" text="Weston" TYPE="CITY" comment="" />
+<LOCATION id="P5" start="146" end="148" text="VT" TYPE="STATE" comment="" />
+<LOCATION id="P6" start="149" end="154" text="36112" TYPE="ZIP" comment="" />
+<ID id="P7" start="182" end="190" text="45479406" TYPE="MEDICALRECORD" comment="" />
+<CONTACT id="P8" start="192" end="206" text="(324) 090-7704" TYPE="PHONE" comment="" />
+<DATE id="P9" start="250" end="258" text="11/17/86" TYPE="DATE" comment="" />
+<NAME id="P10" start="287" end="294" text="Chapman" TYPE="PATIENT" comment="" />
+<AGE id="P11" start="300" end="302" text="58" TYPE="AGE" comment="" />
+<DATE id="P12" start="2252" end="2264" text="September 18" TYPE="DATE" comment="" />
+<DATE id="P13" start="2322" end="2328" text="August" TYPE="DATE" comment="" />
+<DATE id="P14" start="3275" end="3286" text="December 13" TYPE="DATE" comment="" />
+<NAME id="P15" start="3478" end="3491" text="Sandra Jewell" TYPE="DOCTOR" comment="" />
+<NAME id="P16" start="3516" end="3529" text="Sandra Jewell" TYPE="DOCTOR" comment="" />
+<ID id="P17" start="3555" end="3564" text="5-7786571" TYPE="IDNUM" comment="" />
+<DATE id="P18" start="3588" end="3596" text="11/18/86" TYPE="DATE" comment="" />
+<DATE id="P19" start="3602" end="3610" text="11/19/86" TYPE="DATE" comment="" />
+<DATE id="P20" start="3616" end="3624" text="11/18/86" TYPE="DATE" comment="" />
 </TAGS>
 </deIdi2b2>

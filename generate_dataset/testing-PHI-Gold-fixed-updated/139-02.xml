@@ -1,6 +1,6 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT>
+<TEXT><![CDATA[
 
 
 Record date: 2094-09-28
@@ -121,14 +121,14 @@ RTC 6 weeks
 
 
 
-</TEXT>
+]]></TEXT>
 <TAGS>
-<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2094-09-28" />
-<NAME TYPE="DOCTOR" comment="" end="140" id="P1" start="136" text="Mora" />
-<DATE TYPE="DATE" comment="" end="325" id="P2" start="317" text="10/28/94" />
-<NAME TYPE="DOCTOR" comment="" end="458" id="P3" start="451" text="Solomon" />
-<DATE TYPE="DATE" comment="" end="490" id="P4" start="485" text="12/93" />
-<NAME TYPE="DOCTOR" comment="" end="1076" id="P5" start="1072" text="Mora" />
-<NAME TYPE="DOCTOR" comment="" end="1506" id="P6" start="1499" text="Solomon" />
+<DATE id="P0" start="16" end="26" text="2094-09-28" TYPE="DATE" comment="" />
+<NAME id="P1" start="136" end="140" text="Mora" TYPE="DOCTOR" comment="" />
+<DATE id="P2" start="317" end="325" text="10/28/94" TYPE="DATE" comment="" />
+<NAME id="P3" start="451" end="458" text="Solomon" TYPE="DOCTOR" comment="" />
+<DATE id="P4" start="485" end="490" text="12/93" TYPE="DATE" comment="" />
+<NAME id="P5" start="1072" end="1076" text="Mora" TYPE="DOCTOR" comment="" />
+<NAME id="P6" start="1499" end="1506" text="Solomon" TYPE="DOCTOR" comment="" />
 </TAGS>
 </deIdi2b2>

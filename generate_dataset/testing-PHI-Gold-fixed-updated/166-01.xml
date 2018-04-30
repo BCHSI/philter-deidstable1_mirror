@@ -1,6 +1,6 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT>
+<TEXT><![CDATA[
 
 
 Record date: 2095-02-06
@@ -143,32 +143,34 @@ T:  02/07/2095
 
 
 
-</TEXT>
+]]></TEXT>
 <TAGS>
-<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2095-02-06" />
-<NAME TYPE="PATIENT" comment="" end="63" id="P1" start="51" text="MEYER, OSCAR" />
-<ID TYPE="MEDICALRECORD" comment="" end="81" id="P2" start="74" text="2771447" />
-<DATE TYPE="DATE" comment="" end="107" id="P3" start="97" text="02/06/2095" />
-<NAME TYPE="DOCTOR" comment="" end="126" id="P4" start="111" text="VICTOR M. ZUBIA" />
-<NAME TYPE="PATIENT" comment="" end="286" id="P6" start="281" text="Meyar" />
-<NAME TYPE="DOCTOR" comment="" end="344" id="P7" start="333" text="Osiel Mckee" />
-<DATE TYPE="DATE" comment="" end="362" id="P8" start="358" text="2093" />
-<NAME TYPE="DOCTOR" comment="" end="710" id="P9" start="705" text="Mckee" />
-<NAME TYPE="PATIENT" comment="" end="1029" id="P10" start="1022" text="Mercado" />
-<PROFESSION TYPE="PROFESSION" comment="" end="1514" id="P12" start="1501" text="Web Developer" />
-<LOCATION TYPE="ORGANIZATION" comment="" end="1526" id="P13" start="1518" text="Audiovox" />
-<NAME TYPE="PATIENT" comment="" end="2176" id="P14" start="2171" text="Meyer" />
-<NAME TYPE="DOCTOR" comment="" end="3436" id="P15" start="3421" text="Victor M. Zubia" />
-<NAME TYPE="DOCTOR" comment="" end="3465" id="P16" start="3451" text="Osiel U. Mckee" />
-<NAME TYPE="DOCTOR" comment="" end="3522" id="P18" start="3511" text="Oscar Nagel" />
-<LOCATION TYPE="STREET" comment="" end="3547" id="P19" start="3530" text="1502 Maple Street" />
-<LOCATION TYPE="CITY" comment="" end="3564" id="P21" start="3557" text="Kalaheo" />
-<LOCATION TYPE="STATE" comment="" end="3568" id="P22" start="3566" text="AL" />
-<NAME TYPE="DOCTOR" comment="" end="3576" id="P23" start="3574" text="VZ" />
-<CONTACT TYPE="PHONE" comment="" end="3582" id="P24" start="3577" text="78916" />
-<NAME TYPE="DOCTOR" comment="" end="3586" id="P25" start="3584" text="HT" />
-<CONTACT TYPE="PHONE" comment="" end="3595" id="P26" start="3587" text="148-8151" />
-<DATE TYPE="DATE" comment="" end="3611" id="P27" start="3601" text="02/06/2095" />
-<DATE TYPE="DATE" comment="" end="3627" id="P28" start="3617" text="02/07/2095" />
+<DATE id="P0" start="16" end="26" text="2095-02-06" TYPE="DATE" comment="" />
+<NAME id="P1" start="51" end="63" text="MEYER, OSCAR" TYPE="PATIENT" comment="" />
+<ID id="P2" start="74" end="81" text="2771447" TYPE="MEDICALRECORD" comment="" />
+<DATE id="P3" start="97" end="107" text="02/06/2095" TYPE="DATE" comment="" />
+<NAME id="P4" start="111" end="126" text="VICTOR M. ZUBIA" TYPE="DOCTOR" comment="" />
+<NAME id="P6" start="281" end="286" text="Meyar" TYPE="PATIENT" comment="" />
+<NAME id="P7" start="333" end="344" text="Osiel Mckee" TYPE="DOCTOR" comment="" />
+<DATE id="P8" start="358" end="362" text="2093" TYPE="DATE" comment="" />
+<NAME id="P9" start="705" end="710" text="Mckee" TYPE="DOCTOR" comment="" />
+<NAME id="P10" start="1022" end="1029" text="Mercado" TYPE="PATIENT" comment="" />
+<AGE id="P11" start="1425" end="1428" text="70s" TYPE="AGE" comment="" />
+<PROFESSION id="P12" start="1501" end="1514" text="Web Developer" TYPE="PROFESSION" comment="" />
+<LOCATION id="P13" start="1518" end="1526" text="Audiovox" TYPE="ORGANIZATION" comment="" />
+<NAME id="P14" start="2171" end="2176" text="Meyer" TYPE="PATIENT" comment="" />
+<NAME id="P15" start="3421" end="3436" text="Victor M. Zubia" TYPE="DOCTOR" comment="" />
+<NAME id="P16" start="3451" end="3465" text="Osiel U. Mckee" TYPE="DOCTOR" comment="" />
+<LOCATION id="P17" start="3482" end="3507" text="Shelby Community Hospital" TYPE="HOSPITAL" comment="" />
+<NAME id="P18" start="3511" end="3522" text="Oscar Nagel" TYPE="DOCTOR" comment="" />
+<LOCATION id="P19" start="3530" end="3547" text="1502 Maple Street" TYPE="STREET" comment="" />
+<LOCATION id="P21" start="3557" end="3564" text="Kalaheo" TYPE="CITY" comment="" />
+<LOCATION id="P22" start="3566" end="3568" text="AL" TYPE="STATE" comment="" />
+<NAME id="P23" start="3574" end="3576" text="VZ" TYPE="DOCTOR" comment="" />
+<CONTACT id="P24" start="3577" end="3582" text="78916" TYPE="PHONE" comment="" />
+<NAME id="P25" start="3584" end="3586" text="HT" TYPE="DOCTOR" comment="" />
+<CONTACT id="P26" start="3587" end="3595" text="148-8151" TYPE="PHONE" comment="" />
+<DATE id="P27" start="3601" end="3611" text="02/06/2095" TYPE="DATE" comment="" />
+<DATE id="P28" start="3617" end="3627" text="02/07/2095" TYPE="DATE" comment="" />
 </TAGS>
 </deIdi2b2>

@@ -1,6 +1,6 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT>
+<TEXT><![CDATA[
 
 
 Record date: 2094-04-14
@@ -139,7 +139,7 @@ No crackles. No use of accessory muscles.
 
 -Musc skel:   No bony deformities.
 
--Neuro:   A&amp;O x3, CN 2-12 grossly intact. Reflexes 2+ and symmetric x 4 extremities. Toes B downgoing.
+-Neuro:   A&O x3, CN 2-12 grossly intact. Reflexes 2+ and symmetric x 4 extremities. Toes B downgoing.
 
 -BP: 128/70  
 
@@ -339,46 +339,51 @@ Signed electronically by   Quinton G Janssen MD  on  Apr 14, 2094
 
 
 
-</TEXT>
+]]></TEXT>
 <TAGS>
-<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2094-04-14" />
-<NAME TYPE="PATIENT" comment="" end="267" id="P3" start="259" text="Mitchell" />
-<DATE TYPE="DATE" comment="" end="449" id="P4" start="445" text="2085" />
-<NAME TYPE="PATIENT" comment="" end="1069" id="P5" start="1061" text="Mitchell" />
-<NAME TYPE="DOCTOR" comment="" end="1811" id="P7" start="1805" text="Conway" />
-<NAME TYPE="DOCTOR" comment="" end="2035" id="P8" start="2029" text="Cherry" />
-<NAME TYPE="DOCTOR" comment="" end="2108" id="P9" start="2095" text="Evelyn Conway" />
-<NAME TYPE="DOCTOR" comment="" end="2150" id="P10" start="2136" text="Geoffrey Lucas" />
-<NAME TYPE="PATIENT" comment="" end="2774" id="P11" start="2769" text="Bobby" />
-<PROFESSION TYPE="PROFESSION" comment="" end="2808" id="P12" start="2784" text="Secondary School Teacher" />
-<LOCATION TYPE="CITY" comment="" end="2853" id="P13" start="2846" text="Chipley" />
-<LOCATION TYPE="CITY" comment="" end="2870" id="P14" start="2860" text="Eagle Pass" />
-<NAME TYPE="PATIENT" comment="" end="2893" id="P15" start="2886" text="Bethany" />
-<NAME TYPE="PATIENT" comment="" end="4259" id="P16" start="4241" text="Mitchell, Katie E." />
-<ID TYPE="MEDICALRECORD" comment="" end="4281" id="P17" start="4274" text="6146161" />
-<DATE TYPE="DATE" comment="" end="4304" id="P18" start="4297" text="3/13/94" />
-<NAME TYPE="DOCTOR" comment="" end="4367" id="P20" start="4350" text="Geoffrey D. Lucas" />
-<DATE TYPE="DATE" comment="" end="4497" id="P22" start="4487" text="03/02/2094" />
-<DATE TYPE="DATE" comment="" end="6851" id="P23" start="6841" text="12/14/2092" />
-<NAME TYPE="DOCTOR" comment="" end="7026" id="P24" start="7005" text="Kevondrick K. Naranjo" />
-<NAME TYPE="DOCTOR" comment="" end="7052" id="P25" start="7035" text="Charles Yzaguirre" />
-<NAME TYPE="DOCTOR" comment="" end="7609" id="P27" start="7604" text="Lucas" />
-<DATE TYPE="DATE" comment="" end="7740" id="P28" start="7730" text="04/14/2094" />
-<DATE TYPE="DATE" comment="" end="7778" id="P29" start="7768" text="04/29/2092" />
-<DATE TYPE="DATE" comment="" end="7829" id="P30" start="7819" text="04/29/2092" />
-<DATE TYPE="DATE" comment="" end="7934" id="P31" start="7924" text="11/11/2092" />
-<DATE TYPE="DATE" comment="" end="8016" id="P32" start="8006" text="04/29/2092" />
-<DATE TYPE="DATE" comment="" end="8061" id="P33" start="8051" text="04/29/2092" />
-<DATE TYPE="DATE" comment="" end="8100" id="P34" start="8090" text="04/29/2092" />
-<DATE TYPE="DATE" comment="" end="8138" id="P35" start="8128" text="04/29/2092" />
-<DATE TYPE="DATE" comment="" end="8176" id="P36" start="8166" text="04/29/2092" />
-<DATE TYPE="DATE" comment="" end="8217" id="P37" start="8207" text="04/14/2093" />
-<DATE TYPE="DATE" comment="" end="8255" id="P38" start="8245" text="11/13/2092" />
-<DATE TYPE="DATE" comment="" end="8313" id="P39" start="8303" text="04/14/2093" />
-<DATE TYPE="DATE" comment="" end="8353" id="P40" start="8343" text="04/29/2092" />
-<DATE TYPE="DATE" comment="" end="8392" id="P41" start="8382" text="04/14/2093" />
-<DATE TYPE="DATE" comment="" end="8429" id="P42" start="8419" text="04/29/2092" />
-<NAME TYPE="DOCTOR" comment="" end="8477" id="P43" start="8460" text="Quinton G Janssen" />
-<DATE TYPE="DATE" comment="" end="8498" id="P44" start="8486" text="Apr 14, 2094" />
+<DATE id="P0" start="16" end="26" text="2094-04-14" TYPE="DATE" comment="" />
+<LOCATION id="P1" start="40" end="59" text="PORT HURON HOSPITAL" TYPE="HOSPITAL" comment="" />
+<AGE id="P2" start="85" end="87" text="77" TYPE="AGE" comment="" />
+<NAME id="P3" start="259" end="267" text="Mitchell" TYPE="PATIENT" comment="" />
+<DATE id="P4" start="445" end="449" text="2085" TYPE="DATE" comment="" />
+<NAME id="P5" start="1061" end="1069" text="Mitchell" TYPE="PATIENT" comment="" />
+<LOCATION id="P6" start="1128" end="1151" text="North Mountain Hospital" TYPE="HOSPITAL" comment="" />
+<NAME id="P7" start="1805" end="1811" text="Conway" TYPE="DOCTOR" comment="" />
+<NAME id="P8" start="2029" end="2035" text="Cherry" TYPE="DOCTOR" comment="" />
+<NAME id="P9" start="2095" end="2108" text="Evelyn Conway" TYPE="DOCTOR" comment="" />
+<NAME id="P10" start="2136" end="2150" text="Geoffrey Lucas" TYPE="DOCTOR" comment="" />
+<NAME id="P11" start="2769" end="2774" text="Bobby" TYPE="PATIENT" comment="" />
+<PROFESSION id="P12" start="2784" end="2808" text="Secondary School Teacher" TYPE="PROFESSION" comment="" />
+<LOCATION id="P13" start="2846" end="2853" text="Chipley" TYPE="CITY" comment="" />
+<LOCATION id="P14" start="2860" end="2870" text="Eagle Pass" TYPE="CITY" comment="" />
+<NAME id="P15" start="2886" end="2893" text="Bethany" TYPE="PATIENT" comment="" />
+<NAME id="P16" start="4241" end="4259" text="Mitchell, Katie E." TYPE="PATIENT" comment="" />
+<ID id="P17" start="4274" end="4281" text="6146161" TYPE="MEDICALRECORD" comment="" />
+<DATE id="P18" start="4297" end="4304" text="3/13/94" TYPE="DATE" comment="" />
+<NAME id="P20" start="4350" end="4367" text="Geoffrey D. Lucas" TYPE="DOCTOR" comment="" />
+<AGE id="P21" start="4380" end="4382" text="77" TYPE="AGE" comment="" />
+<DATE id="P22" start="4487" end="4497" text="03/02/2094" TYPE="DATE" comment="" />
+<DATE id="P23" start="6841" end="6851" text="12/14/2092" TYPE="DATE" comment="" />
+<NAME id="P24" start="7005" end="7026" text="Kevondrick K. Naranjo" TYPE="DOCTOR" comment="" />
+<NAME id="P25" start="7035" end="7052" text="Charles Yzaguirre" TYPE="DOCTOR" comment="" />
+<AGE id="P26" start="7138" end="7140" text="77" TYPE="AGE" comment="" />
+<NAME id="P27" start="7604" end="7609" text="Lucas" TYPE="DOCTOR" comment="" />
+<DATE id="P28" start="7730" end="7740" text="04/14/2094" TYPE="DATE" comment="" />
+<DATE id="P29" start="7768" end="7778" text="04/29/2092" TYPE="DATE" comment="" />
+<DATE id="P30" start="7819" end="7829" text="04/29/2092" TYPE="DATE" comment="" />
+<DATE id="P31" start="7924" end="7934" text="11/11/2092" TYPE="DATE" comment="" />
+<DATE id="P32" start="8006" end="8016" text="04/29/2092" TYPE="DATE" comment="" />
+<DATE id="P33" start="8051" end="8061" text="04/29/2092" TYPE="DATE" comment="" />
+<DATE id="P34" start="8090" end="8100" text="04/29/2092" TYPE="DATE" comment="" />
+<DATE id="P35" start="8128" end="8138" text="04/29/2092" TYPE="DATE" comment="" />
+<DATE id="P36" start="8166" end="8176" text="04/29/2092" TYPE="DATE" comment="" />
+<DATE id="P37" start="8207" end="8217" text="04/14/2093" TYPE="DATE" comment="" />
+<DATE id="P38" start="8245" end="8255" text="11/13/2092" TYPE="DATE" comment="" />
+<DATE id="P39" start="8303" end="8313" text="04/14/2093" TYPE="DATE" comment="" />
+<DATE id="P40" start="8343" end="8353" text="04/29/2092" TYPE="DATE" comment="" />
+<DATE id="P41" start="8382" end="8392" text="04/14/2093" TYPE="DATE" comment="" />
+<DATE id="P42" start="8419" end="8429" text="04/29/2092" TYPE="DATE" comment="" />
+<NAME id="P43" start="8460" end="8477" text="Quinton G Janssen" TYPE="DOCTOR" comment="" />
+<DATE id="P44" start="8486" end="8498" text="Apr 14, 2094" TYPE="DATE" comment="" />
 </TAGS>
 </deIdi2b2>

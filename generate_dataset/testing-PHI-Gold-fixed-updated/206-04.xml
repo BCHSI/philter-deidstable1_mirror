@@ -1,6 +1,6 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT>
+<TEXT><![CDATA[
 
 
 Record date: 2077-02-09
@@ -45,11 +45,13 @@ Yazmin Doss, NP
 
 
 
-</TEXT>
+]]></TEXT>
 <TAGS>
-<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2077-02-09" />
-<NAME TYPE="DOCTOR" comment="" end="1455" id="P3" start="1450" text="Uddin" />
-<DATE TYPE="DATE" comment="" end="1512" id="P4" start="1502" text="02/17/2077" />
-<NAME TYPE="DOCTOR" comment="" end="1562" id="P5" start="1551" text="Yazmin Doss" />
+<DATE id="P0" start="16" end="26" text="2077-02-09" TYPE="DATE" comment="" />
+<LOCATION id="P1" start="30" end="55" text="BRENNAN CONVALESCENT HOME" TYPE="HOSPITAL" comment="" />
+<AGE id="P2" start="109" end="111" text="68" TYPE="AGE" comment="" />
+<NAME id="P3" start="1450" end="1455" text="Uddin" TYPE="DOCTOR" comment="" />
+<DATE id="P4" start="1502" end="1512" text="02/17/2077" TYPE="DATE" comment="" />
+<NAME id="P5" start="1551" end="1562" text="Yazmin Doss" TYPE="DOCTOR" comment="" />
 </TAGS>
 </deIdi2b2>

@@ -1,6 +1,6 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT>
+<TEXT><![CDATA[
 
 
 Record date: 2171-09-20
@@ -115,40 +115,42 @@ VoiceJob ID:  91587262
 
 
 
-</TEXT>
+]]></TEXT>
 <TAGS>
-<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2171-09-20" />
-<DATE TYPE="DATE" comment="" end="40" id="P1" start="30" text="09/20/2171" />
-<NAME TYPE="DOCTOR" comment="" end="66" id="P2" start="51" text="Charles Calhoun" />
-<LOCATION TYPE="STREET" comment="" end="91" id="P3" start="72" text="479 Clairmoor Drive" />
-<LOCATION TYPE="CITY" comment="" end="99" id="P4" start="93" text="Athina" />
-<LOCATION TYPE="STATE" comment="" end="103" id="P5" start="101" text="GA" />
-<LOCATION TYPE="ZIP" comment="" end="109" id="P6" start="104" text="39341" />
-<NAME TYPE="PATIENT" comment="" end="135" id="P7" start="119" text="HEATH, QUINTEN M" />
-<ID TYPE="MEDICALRECORD" comment="" end="154" id="P8" start="147" text="8059475" />
-<DATE TYPE="DATE" comment="" end="176" id="P9" start="166" text="08/02/2095" />
-<NAME TYPE="DOCTOR" comment="" end="195" id="P10" start="188" text="Calhoun" />
-<NAME TYPE="PATIENT" comment="" end="255" id="P11" start="242" text="Quinten Heath" />
-<NAME TYPE="PATIENT" comment="" end="353" id="P13" start="349" text="Heat" />
-<DATE TYPE="DATE" comment="" end="447" id="P15" start="443" text="2169" />
-<DATE TYPE="DATE" comment="" end="738" id="P16" start="731" text="05/2171" />
-<DATE TYPE="DATE" comment="" end="1183" id="P17" start="1179" text="2169" />
-<DATE TYPE="DATE" comment="" end="1400" id="P18" start="1396" text="2165" />
-<DATE TYPE="DATE" comment="" end="2124" id="P19" start="2114" text="09/13/2171" />
-<DATE TYPE="DATE" comment="" end="2168" id="P20" start="2161" text="02/2171" />
-<NAME TYPE="PATIENT" comment="" end="2235" id="P21" start="2230" text="Heath" />
-<NAME TYPE="DOCTOR" comment="" end="2815" id="P23" start="2799" text="Vincent Voorhees" />
-<NAME TYPE="PATIENT" comment="" end="2845" id="P24" start="2832" text="Quinten Heath" />
-<LOCATION TYPE="STREET" comment="" end="2865" id="P25" start="2847" text="976 Clinton Street" />
-<LOCATION TYPE="CITY" comment="" end="2887" id="P26" start="2867" text="Gardnerville Ranchos" />
-<LOCATION TYPE="STATE" comment="" end="2891" id="P27" start="2889" text="GA" />
-<LOCATION TYPE="ZIP" comment="" end="2897" id="P28" start="2892" text="79269" />
-<NAME TYPE="DOCTOR" comment="" end="2912" id="P29" start="2902" text="Quebedeaux" />
-<NAME TYPE="DOCTOR" comment="" end="2926" id="P30" start="2917" text="Hendricks" />
-<DATE TYPE="DATE" comment="" end="2943" id="P31" start="2933" text="09/20/2171" />
-<DATE TYPE="DATE" comment="" end="2958" id="P32" start="2948" text="09/21/2171" />
-<ID TYPE="IDNUM" comment="" end="2979" id="P33" start="2972" text="8190465" />
-<ID TYPE="IDNUM" comment="" end="2999" id="P34" start="2993" text="326372" />
-<ID TYPE="IDNUM" comment="" end="3022" id="P35" start="3014" text="91587262" />
+<DATE id="P0" start="16" end="26" text="2171-09-20" TYPE="DATE" comment="" />
+<DATE id="P1" start="30" end="40" text="09/20/2171" TYPE="DATE" comment="" />
+<NAME id="P2" start="51" end="66" text="Charles Calhoun" TYPE="DOCTOR" comment="" />
+<LOCATION id="P3" start="72" end="91" text="479 Clairmoor Drive" TYPE="STREET" comment="" />
+<LOCATION id="P4" start="93" end="99" text="Athina" TYPE="CITY" comment="" />
+<LOCATION id="P5" start="101" end="103" text="GA" TYPE="STATE" comment="" />
+<LOCATION id="P6" start="104" end="109" text="39341" TYPE="ZIP" comment="" />
+<NAME id="P7" start="119" end="135" text="HEATH, QUINTEN M" TYPE="PATIENT" comment="" />
+<ID id="P8" start="147" end="154" text="8059475" TYPE="MEDICALRECORD" comment="" />
+<DATE id="P9" start="166" end="176" text="08/02/2095" TYPE="DATE" comment="" />
+<NAME id="P10" start="188" end="195" text="Calhoun" TYPE="DOCTOR" comment="" />
+<NAME id="P11" start="242" end="255" text="Quinten Heath" TYPE="PATIENT" comment="" />
+<NAME id="P13" start="349" end="353" text="Heat" TYPE="PATIENT" comment="" />
+<AGE id="P14" start="368" end="370" text="76" TYPE="AGE" comment="" />
+<DATE id="P15" start="443" end="447" text="2169" TYPE="DATE" comment="" />
+<DATE id="P16" start="731" end="738" text="05/2171" TYPE="DATE" comment="" />
+<DATE id="P17" start="1179" end="1183" text="2169" TYPE="DATE" comment="" />
+<DATE id="P18" start="1396" end="1400" text="2165" TYPE="DATE" comment="" />
+<DATE id="P19" start="2114" end="2124" text="09/13/2171" TYPE="DATE" comment="" />
+<DATE id="P20" start="2161" end="2168" text="02/2171" TYPE="DATE" comment="" />
+<NAME id="P21" start="2230" end="2235" text="Heath" TYPE="PATIENT" comment="" />
+<AGE id="P22" start="2241" end="2243" text="76" TYPE="AGE" comment="" />
+<NAME id="P23" start="2799" end="2815" text="Vincent Voorhees" TYPE="DOCTOR" comment="" />
+<NAME id="P24" start="2832" end="2845" text="Quinten Heath" TYPE="PATIENT" comment="" />
+<LOCATION id="P25" start="2847" end="2865" text="976 Clinton Street" TYPE="STREET" comment="" />
+<LOCATION id="P26" start="2867" end="2887" text="Gardnerville Ranchos" TYPE="CITY" comment="" />
+<LOCATION id="P27" start="2889" end="2891" text="GA" TYPE="STATE" comment="" />
+<LOCATION id="P28" start="2892" end="2897" text="79269" TYPE="ZIP" comment="" />
+<NAME id="P29" start="2902" end="2912" text="Quebedeaux" TYPE="DOCTOR" comment="" />
+<NAME id="P30" start="2917" end="2926" text="Hendricks" TYPE="DOCTOR" comment="" />
+<DATE id="P31" start="2933" end="2943" text="09/20/2171" TYPE="DATE" comment="" />
+<DATE id="P32" start="2948" end="2958" text="09/21/2171" TYPE="DATE" comment="" />
+<ID id="P33" start="2972" end="2979" text="8190465" TYPE="IDNUM" comment="" />
+<ID id="P34" start="2993" end="2999" text="326372" TYPE="IDNUM" comment="" />
+<ID id="P35" start="3014" end="3022" text="91587262" TYPE="IDNUM" comment="" />
 </TAGS>
 </deIdi2b2>

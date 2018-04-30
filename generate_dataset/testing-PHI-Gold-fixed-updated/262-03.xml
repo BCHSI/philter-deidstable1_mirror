@@ -1,6 +1,6 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT>
+<TEXT><![CDATA[
 
 
 Record date: 2091-12-16
@@ -193,11 +193,11 @@ Troponin-I               NEGATIVE                    (NEG)
 
 
 
-Nortriptyline            &lt;50                                          mcg/L
+Nortriptyline            <50                                          mcg/L
 
 Desmethylsertraline      PRESENT                                      mcg/L
 
-Sertraline               &lt;50                                          mcg/L
+Sertraline               <50                                          mcg/L
 
      REF. RANGE: 40-160
 
@@ -329,9 +329,9 @@ ALH  Cardiology
 
       DURATION @ MAX DOSE (min:sec) 5:00
 
-      HR (REST=&gt;MAX)          57 =&gt; 76  (50% PREDICTED)
+      HR (REST=>MAX)          57 => 76  (50% PREDICTED)
 
-      BP (INITIAL=&gt;PEAK)      146/60 =&gt; 146/60   (MINIMUM = 114/52)
+      BP (INITIAL=>PEAK)      146/60 => 146/60   (MINIMUM = 114/52)
 
       PEAK DOUBLE PRODUCT:    11096
 
@@ -379,7 +379,7 @@ COMPLEX CHD        NORM  IVS   11 mm.( 7-11mm)    pos.lat.
 
 CORONARIES         UV                             lateral
 
-PERICARDIUM        NORM  EF    75 % ( &gt;50 %)
+PERICARDIUM        NORM  EF    75 % ( >50 %)
 
 
 
@@ -427,7 +427,7 @@ is within normal limits.
 
 PERICARDIAL DISEASE AND EXTRACARDIAC MASSES
 
-  Echo free space between visceral &amp; parietal pericardium is c/w pericardial
+  Echo free space between visceral & parietal pericardium is c/w pericardial
 
 fat.
 
@@ -507,7 +507,7 @@ ASSESSMENT AND PLAN:
 
 1.	Change in mental status
 
-1.	Hyponatremia - Euvolemic by exam, Serum sodium 125, Serum Osm 262, Urine sodium 126, Urine Osm 387. Consistent with SIADH (euvolemic hypotonic hyponatremia, Uosm&gt;100, Una&gt;20). Will place on fluid restriction, follow correction rate slowly. Past Na levels: 130 (10/91), 135 (6/91), 133 (1/91). Other etiologies: diuretics, polydipsia, adrenal insufficiency, hypoaldo, third-spacing less likely. 
+1.	Hyponatremia - Euvolemic by exam, Serum sodium 125, Serum Osm 262, Urine sodium 126, Urine Osm 387. Consistent with SIADH (euvolemic hypotonic hyponatremia, Uosm>100, Una>20). Will place on fluid restriction, follow correction rate slowly. Past Na levels: 130 (10/91), 135 (6/91), 133 (1/91). Other etiologies: diuretics, polydipsia, adrenal insufficiency, hypoaldo, third-spacing less likely. 
 
 2.	Hepatic encephalopathy - known cirrhosis, on home standing lactulose. By exam, no asterixis. Abdomen obese but no obvious fluid collection. Somewhat tender, no peritoneal signs. Will schedule for Abdominal U/S to r/o ascites. Low suspicion for SBP, will hold off prophylaxis antibiotics.
 
@@ -544,27 +544,34 @@ Pager #30547
 
 
 
-</TEXT>
+]]></TEXT>
 <TAGS>
-<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2091-12-16" />
-<NAME TYPE="PATIENT" comment="" end="92" id="P1" start="77" text="Olivo, Kimberly" />
-<ID TYPE="MEDICALRECORD" comment="" end="105" id="P2" start="98" text="3299811" />
-<DATE TYPE="DATE" comment="" end="168" id="P4" start="151" text="December 15, 2091" />
-<NAME TYPE="DOCTOR" comment="" end="184" id="P5" start="176" text="Isaac Ng" />
-<DATE TYPE="DATE" comment="" end="1658" id="P8" start="1654" text="2080" />
-<DATE TYPE="DATE" comment="" end="2446" id="P12" start="2442" text="4/90" />
-<LOCATION TYPE="CITY" comment="" end="3012" id="P13" start="3005" text="Ardmore" />
-<DATE TYPE="DATE" comment="" end="7848" id="P14" start="7841" text="7/16/91" />
-<DATE TYPE="DATE" comment="" end="8481" id="P15" start="8477" text="7/91" />
-<DATE TYPE="DATE" comment="" end="8878" id="P18" start="8867" text="25-Oct-2090" />
-<DATE TYPE="DATE" comment="" end="9977" id="P20" start="9966" text="11-May-2087" />
-<ID TYPE="IDNUM" comment="" end="10000" id="P21" start="9994" text="732087" />
-<DATE TYPE="DATE" comment="" end="11907" id="P22" start="11900" text="10/2089" />
-<DATE TYPE="DATE" comment="" end="12443" id="P23" start="12436" text="11/2089" />
-<DATE TYPE="DATE" comment="" end="14075" id="P25" start="14070" text="10/91" />
-<DATE TYPE="DATE" comment="" end="14087" id="P26" start="14083" text="6/91" />
-<DATE TYPE="DATE" comment="" end="14099" id="P27" start="14095" text="1/91" />
-<NAME TYPE="DOCTOR" comment="" end="15330" id="P28" start="15315" text="Taquan Q. Cantu" />
-<CONTACT TYPE="PHONE" comment="" end="15348" id="P29" start="15343" text="30547" />
+<DATE id="P0" start="16" end="26" text="2091-12-16" TYPE="DATE" comment="" />
+<NAME id="P1" start="77" end="92" text="Olivo, Kimberly" TYPE="PATIENT" comment="" />
+<ID id="P2" start="98" end="105" text="3299811" TYPE="MEDICALRECORD" comment="" />
+<DATE id="P4" start="151" end="168" text="December 15, 2091" TYPE="DATE" comment="" />
+<NAME id="P5" start="176" end="184" text="Isaac Ng" TYPE="DOCTOR" comment="" />
+<AGE id="P6" start="229" end="231" text="70" TYPE="AGE" comment="" />
+<LOCATION id="P7" start="1173" end="1176" text="ALH" TYPE="HOSPITAL" comment="" />
+<DATE id="P8" start="1654" end="1658" text="2080" TYPE="DATE" comment="" />
+<LOCATION id="P10" start="1945" end="1948" text="ALH" TYPE="HOSPITAL" comment="" />
+<LOCATION id="P11" start="1977" end="1980" text="ALH" TYPE="HOSPITAL" comment="" />
+<DATE id="P12" start="2442" end="2446" text="4/90" TYPE="DATE" comment="" />
+<LOCATION id="P13" start="3005" end="3012" text="Ardmore" TYPE="CITY" comment="" />
+<DATE id="P14" start="7841" end="7848" text="7/16/91" TYPE="DATE" comment="" />
+<DATE id="P15" start="8477" end="8481" text="7/91" TYPE="DATE" comment="" />
+<LOCATION id="P16" start="8842" end="8845" text="ALH" TYPE="HOSPITAL" comment="" />
+<DATE id="P18" start="8867" end="8878" text="25-Oct-2090" TYPE="DATE" comment="" />
+<LOCATION id="P19" start="9935" end="9938" text="ALH" TYPE="HOSPITAL" comment="" />
+<DATE id="P20" start="9966" end="9977" text="11-May-2087" TYPE="DATE" comment="" />
+<ID id="P21" start="9994" end="10000" text="732087" TYPE="IDNUM" comment="" />
+<DATE id="P22" start="11900" end="11907" text="10/2089" TYPE="DATE" comment="" />
+<DATE id="P23" start="12436" end="12443" text="11/2089" TYPE="DATE" comment="" />
+<AGE id="P24" start="13594" end="13596" text="70" TYPE="AGE" comment="" />
+<DATE id="P25" start="14070" end="14075" text="10/91" TYPE="DATE" comment="" />
+<DATE id="P26" start="14083" end="14087" text="6/91" TYPE="DATE" comment="" />
+<DATE id="P27" start="14095" end="14099" text="1/91" TYPE="DATE" comment="" />
+<NAME id="P28" start="15315" end="15330" text="Taquan Q. Cantu" TYPE="DOCTOR" comment="" />
+<CONTACT id="P29" start="15343" end="15348" text="30547" TYPE="PHONE" comment="" />
 </TAGS>
 </deIdi2b2>

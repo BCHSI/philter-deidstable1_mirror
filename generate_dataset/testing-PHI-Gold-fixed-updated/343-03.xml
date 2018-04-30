@@ -1,6 +1,6 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT>
+<TEXT><![CDATA[
 
 
 Record date: 2096-02-13
@@ -113,17 +113,19 @@ Quijada, M.D.
 
 
 
-</TEXT>
+]]></TEXT>
 <TAGS>
-<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2096-02-13" />
-<LOCATION TYPE="STREET" comment="" end="80" id="P2" start="61" text="707 Newburgh Street" />
-<LOCATION TYPE="CITY" comment="" end="89" id="P3" start="82" text="Sulphur" />
-<LOCATION TYPE="STATE" comment="" end="93" id="P4" start="91" text="AR" />
-<LOCATION TYPE="ZIP" comment="" end="100" id="P5" start="95" text="26822" />
-<CONTACT TYPE="PHONE" comment="" end="114" id="P6" start="102" text="859-168-0145" />
-<DATE TYPE="DATE" comment="" end="232" id="P8" start="223" text="Wednesday" />
-<DATE TYPE="DATE" comment="" end="557" id="P9" start="552" text="'70's" />
-<CONTACT TYPE="PHONE" comment="" end="701" id="P10" start="689" text="171-311-7974" />
-<NAME TYPE="DOCTOR" comment="" end="1763" id="P11" start="1756" text="Quijada" />
+<DATE id="P0" start="16" end="26" text="2096-02-13" TYPE="DATE" comment="" />
+<LOCATION id="P1" start="28" end="59" text="Saint John Valley Health Center" TYPE="HOSPITAL" comment="" />
+<LOCATION id="P2" start="61" end="80" text="707 Newburgh Street" TYPE="STREET" comment="" />
+<LOCATION id="P3" start="82" end="89" text="Sulphur" TYPE="CITY" comment="" />
+<LOCATION id="P4" start="91" end="93" text="AR" TYPE="STATE" comment="" />
+<LOCATION id="P5" start="95" end="100" text="26822" TYPE="ZIP" comment="" />
+<CONTACT id="P6" start="102" end="114" text="859-168-0145" TYPE="PHONE" comment="" />
+<AGE id="P7" start="154" end="156" text="55" TYPE="AGE" comment="" />
+<DATE id="P8" start="223" end="232" text="Wednesday" TYPE="DATE" comment="" />
+<DATE id="P9" start="552" end="557" text="'70's" TYPE="DATE" comment="" />
+<CONTACT id="P10" start="689" end="701" text="171-311-7974" TYPE="PHONE" comment="" />
+<NAME id="P11" start="1756" end="1763" text="Quijada" TYPE="DOCTOR" comment="" />
 </TAGS>
 </deIdi2b2>

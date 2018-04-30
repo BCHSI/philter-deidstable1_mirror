@@ -1,6 +1,6 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT>
+<TEXT><![CDATA[
 
 
 Record date: 2081-06-24
@@ -132,7 +132,7 @@ Lives with mother and cousin in house in 3 family house. No pets, or recent trav
 
 
 
-Tobacco: active smoker, &amp;#189;  to 2 ppd &amp;gt;50yrs. Not interested in quitting at this time. Does not want a nicotine patch.
+Tobacco: active smoker, &#189;  to 2 ppd &gt;50yrs. Not interested in quitting at this time. Does not want a nicotine patch.
 
 Etoh: denies
 
@@ -172,7 +172,7 @@ INR 1.0
 
 TSH 1.28, FT4 1.0
 
-UA: clear, trace ketone, &amp;gt;1.030, gluc neg, 1+ prot, Hcasts neg, 1+ WBC
+UA: clear, trace ketone, &gt;1.030, gluc neg, 1+ prot, Hcasts neg, 1+ WBC
 
 
 
@@ -200,33 +200,33 @@ Plan:
 
 Diarrhea
 
-&amp;#183;         Follow-up stool cultures
+&#183;         Follow-up stool cultures
 
-&amp;#183;         Support with IV fluids
+&#183;         Support with IV fluids
 
-&amp;#183;         Consider CT scan if w/u is negative
+&#183;         Consider CT scan if w/u is negative
 
 
 
 Pancreatitis
 
-&amp;#183;         Bowel rest, NPO
+&#183;         Bowel rest, NPO
 
-&amp;#183;         Aggressive IVF w/D5NS x 2 liters
+&#183;         Aggressive IVF w/D5NS x 2 liters
 
-&amp;#183;         Pain control with morphine prn (but discomfort is very mild)
+&#183;         Pain control with morphine prn (but discomfort is very mild)
 
-&amp;#183;         Check RUQ US to assess for gallbladder/pancreatic pathology
+&#183;         Check RUQ US to assess for gallbladder/pancreatic pathology
 
 
 
 DM2
 
-&amp;#183;         &amp;#189; dose insulin while NPO
+&#183;         &#189; dose insulin while NPO
 
-&amp;#183;         RISS
+&#183;         RISS
 
-&amp;#183;         Consider adding very low dose ACE I after diarrhea resolves
+&#183;         Consider adding very low dose ACE I after diarrhea resolves
 
 
 
@@ -269,22 +269,29 @@ Pager 48249
 
 
 
-</TEXT>
+]]></TEXT>
 <TAGS>
-<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2081-06-24" />
-<NAME TYPE="PATIENT" comment="" end="111" id="P3" start="97" text="Fonseca, Linda" />
-<ID TYPE="MEDICALRECORD" comment="" end="129" id="P5" start="122" text="7090253" />
-<DATE TYPE="DATE" comment="" end="179" id="P7" start="171" text="06/24/81" />
-<NAME TYPE="DOCTOR" comment="" end="204" id="P8" start="196" text="A Jaeger" />
-<NAME TYPE="PATIENT" comment="" end="321" id="P9" start="314" text="Fonseca" />
-<DATE TYPE="DATE" comment="" end="495" id="P12" start="487" text="06/15/81" />
-<NAME TYPE="DOCTOR" comment="" end="1971" id="P15" start="1964" text="Merritt" />
-<NAME TYPE="DOCTOR" comment="" end="2039" id="P16" start="2035" text="Land" />
-<DATE TYPE="DATE" comment="" end="2119" id="P17" start="2115" text="2/81" />
-<DATE TYPE="DATE" comment="" end="2135" id="P18" start="2131" text="2/81" />
-<NAME TYPE="DOCTOR" comment="" end="5234" id="P20" start="5228" text="Ritter" />
-<NAME TYPE="DOCTOR" comment="" end="5260" id="P21" start="5252" text="A Jaeger" />
-<NAME TYPE="DOCTOR" comment="" end="5327" id="P22" start="5312" text="Virginia N Volk" />
-<CONTACT TYPE="PHONE" comment="" end="5379" id="P24" start="5374" text="48249" />
+<DATE id="P0" start="16" end="26" text="2081-06-24" TYPE="DATE" comment="" />
+<LOCATION id="P1" start="28" end="50" text="Dunn County Associates" TYPE="HOSPITAL" comment="" />
+<NAME id="P3" start="97" end="111" text="Fonseca, Linda" TYPE="PATIENT" comment="" />
+<LOCATION id="P4" start="113" end="116" text="DCA" TYPE="HOSPITAL" comment="" />
+<ID id="P5" start="122" end="129" text="7090253" TYPE="MEDICALRECORD" comment="" />
+<DATE id="P7" start="171" end="179" text="06/24/81" TYPE="DATE" comment="" />
+<NAME id="P8" start="196" end="204" text="A Jaeger" TYPE="DOCTOR" comment="" />
+<NAME id="P9" start="314" end="321" text="Fonseca" TYPE="PATIENT" comment="" />
+<AGE id="P10" start="327" end="329" text="64" TYPE="AGE" comment="" />
+<LOCATION id="P11" start="477" end="480" text="DCA" TYPE="HOSPITAL" comment="" />
+<DATE id="P12" start="487" end="495" text="06/15/81" TYPE="DATE" comment="" />
+<LOCATION id="P13" start="1243" end="1246" text="DCA" TYPE="HOSPITAL" comment="" />
+<NAME id="P15" start="1964" end="1971" text="Merritt" TYPE="DOCTOR" comment="" />
+<NAME id="P16" start="2035" end="2039" text="Land" TYPE="DOCTOR" comment="" />
+<DATE id="P17" start="2115" end="2119" text="2/81" TYPE="DATE" comment="" />
+<DATE id="P18" start="2131" end="2135" text="2/81" TYPE="DATE" comment="" />
+<AGE id="P19" start="3986" end="3988" text="64" TYPE="AGE" comment="" />
+<NAME id="P20" start="5228" end="5234" text="Ritter" TYPE="DOCTOR" comment="" />
+<NAME id="P21" start="5252" end="5260" text="A Jaeger" TYPE="DOCTOR" comment="" />
+<NAME id="P22" start="5312" end="5327" text="Virginia N Volk" TYPE="DOCTOR" comment="" />
+<LOCATION id="P23" start="5363" end="5366" text="DCA" TYPE="HOSPITAL" comment="" />
+<CONTACT id="P24" start="5374" end="5379" text="48249" TYPE="PHONE" comment="" />
 </TAGS>
 </deIdi2b2>

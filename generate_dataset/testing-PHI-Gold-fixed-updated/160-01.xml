@@ -1,6 +1,6 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT>
+<TEXT><![CDATA[
 
 
 Record date: 2063-12-31
@@ -63,7 +63,7 @@ UHER,OLGA
 12/31/63
  
  
-instituted to achieve an LDL cholesterol &lt;130.  From a cardiac
+instituted to achieve an LDL cholesterol <130.  From a cardiac
 standpoint, post-menopausal estrogen therapy would be desired.  Low
 dose aspirin therapy could also be considered.
      I would be happy to see Ms. Uher for additional cardiac
@@ -85,24 +85,27 @@ DV: 12/31/63
 
 
 
-</TEXT>
+]]></TEXT>
 <TAGS>
-<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2063-12-31" />
-<NAME TYPE="PATIENT" comment="" end="37" id="P1" start="28" text="UHER,OLGA" />
-<ID TYPE="MEDICALRECORD" comment="" end="49" id="P2" start="38" text="258-16-49-2" />
-<DATE TYPE="DATE" comment="" end="58" id="P3" start="50" text="12/31/63" />
-<NAME TYPE="PATIENT" comment="" end="125" id="P4" start="121" text="Uher" />
-<DATE TYPE="DATE" comment="" end="356" id="P6" start="352" text="2059" />
-<NAME TYPE="DOCTOR" comment="" end="1273" id="P9" start="1259" text="Bradley Brandt" />
-<DATE TYPE="DATE" comment="" end="2156" id="P10" start="2149" text="9/15/59" />
-<NAME TYPE="DOCTOR" comment="" end="2446" id="P11" start="2437" text="David Yun" />
-<NAME TYPE="PATIENT" comment="" end="2592" id="P12" start="2583" text="UHER,OLGA" />
-<DATE TYPE="DATE" comment="" end="2601" id="P13" start="2593" text="12/31/63" />
-<NAME TYPE="PATIENT" comment="" end="2821" id="P14" start="2817" text="Uher" />
-<NAME TYPE="DOCTOR" comment="" end="2910" id="P15" start="2901" text="David Yun" />
-<NAME TYPE="DOCTOR" comment="" end="2934" id="P16" start="2923" text="Ivan M. Ing" />
-<DATE TYPE="DATE" comment="" end="2955" id="P17" start="2947" text="12/31/63" />
-<DATE TYPE="DATE" comment="" end="2968" id="P18" start="2960" text="01/01/64" />
-<DATE TYPE="DATE" comment="" end="2981" id="P19" start="2973" text="12/31/63" />
+<DATE id="P0" start="16" end="26" text="2063-12-31" TYPE="DATE" comment="" />
+<NAME id="P1" start="28" end="37" text="UHER,OLGA" TYPE="PATIENT" comment="" />
+<ID id="P2" start="38" end="49" text="258-16-49-2" TYPE="MEDICALRECORD" comment="" />
+<DATE id="P3" start="50" end="58" text="12/31/63" TYPE="DATE" comment="" />
+<NAME id="P4" start="121" end="125" text="Uher" TYPE="PATIENT" comment="" />
+<AGE id="P5" start="170" end="172" text="52" TYPE="AGE" comment="" />
+<DATE id="P6" start="352" end="356" text="2059" TYPE="DATE" comment="" />
+<AGE id="P7" start="1059" end="1061" text="20" TYPE="AGE" comment="" />
+<AGE id="P8" start="1165" end="1167" text="50" TYPE="AGE" comment="" />
+<NAME id="P9" start="1259" end="1273" text="Bradley Brandt" TYPE="DOCTOR" comment="" />
+<DATE id="P10" start="2149" end="2156" text="9/15/59" TYPE="DATE" comment="" />
+<NAME id="P11" start="2437" end="2446" text="David Yun" TYPE="DOCTOR" comment="" />
+<NAME id="P12" start="2583" end="2592" text="UHER,OLGA" TYPE="PATIENT" comment="" />
+<DATE id="P13" start="2593" end="2601" text="12/31/63" TYPE="DATE" comment="" />
+<NAME id="P14" start="2817" end="2821" text="Uher" TYPE="PATIENT" comment="" />
+<NAME id="P15" start="2901" end="2910" text="David Yun" TYPE="DOCTOR" comment="" />
+<NAME id="P16" start="2923" end="2934" text="Ivan M. Ing" TYPE="DOCTOR" comment="" />
+<DATE id="P17" start="2947" end="2955" text="12/31/63" TYPE="DATE" comment="" />
+<DATE id="P18" start="2960" end="2968" text="01/01/64" TYPE="DATE" comment="" />
+<DATE id="P19" start="2973" end="2981" text="12/31/63" TYPE="DATE" comment="" />
 </TAGS>
 </deIdi2b2>

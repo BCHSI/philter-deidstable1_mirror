@@ -1,6 +1,6 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT>
+<TEXT><![CDATA[
 
 
 Record date: 2080-01-26
@@ -93,10 +93,12 @@ Signed electronically by Edmondson, Bryan on Feb 2, 2080
 
 
 
-</TEXT>
+]]></TEXT>
 <TAGS>
-<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2080-01-26" />
-<NAME TYPE="DOCTOR" comment="" end="1955" id="P3" start="1939" text="Edmondson, Bryan" />
-<DATE TYPE="DATE" comment="" end="1970" id="P4" start="1959" text="Feb 2, 2080" />
+<DATE id="P0" start="16" end="26" text="2080-01-26" TYPE="DATE" comment="" />
+<LOCATION id="P1" start="62" end="87" text="BROADLAWNS MEDICAL CENTER" TYPE="HOSPITAL" comment="" />
+<AGE id="P2" start="131" end="133" text="81" TYPE="AGE" comment="" />
+<NAME id="P3" start="1939" end="1955" text="Edmondson, Bryan" TYPE="DOCTOR" comment="" />
+<DATE id="P4" start="1959" end="1970" text="Feb 2, 2080" TYPE="DATE" comment="" />
 </TAGS>
 </deIdi2b2>

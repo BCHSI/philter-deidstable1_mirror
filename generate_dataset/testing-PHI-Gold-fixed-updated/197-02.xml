@@ -1,6 +1,6 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT>
+<TEXT><![CDATA[
 
 
 Record date: 2096-12-29
@@ -68,26 +68,28 @@ Note:  The duration of this visit was 25 minutes with the majority of the time s
 
 
 
-</TEXT>
+]]></TEXT>
 <TAGS>
-<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2096-12-29" />
-<NAME TYPE="PATIENT" comment="" end="48" id="P2" start="38" text="Donn Emery" />
-<ID TYPE="MEDICALRECORD" comment="" end="65" id="P4" start="56" text="059-57-26" />
-<DATE TYPE="DATE" comment="" end="84" id="P5" start="67" text="December 29, 2096" />
-<NAME TYPE="DOCTOR" comment="" end="175" id="P6" start="171" text="Pina" />
-<NAME TYPE="DOCTOR" comment="" end="212" id="P7" start="208" text="Park" />
-<DATE TYPE="DATE" comment="" end="296" id="P8" start="280" text="January 15, 2097" />
-<NAME TYPE="DOCTOR" comment="" end="976" id="P9" start="972" text="Pina" />
-<DATE TYPE="DATE" comment="" end="1172" id="P10" start="1155" text="November 14, 2096" />
-<NAME TYPE="DOCTOR" comment="" end="1307" id="P11" start="1303" text="Pina" />
-<DATE TYPE="DATE" comment="" end="1360" id="P12" start="1343" text="December 22, 2096" />
-<NAME TYPE="PATIENT" comment="" end="1579" id="P13" start="1574" text="Emery" />
-<NAME TYPE="DOCTOR" comment="" end="1988" id="P14" start="1984" text="Pina" />
-<NAME TYPE="DOCTOR" comment="" end="2719" id="P15" start="2706" text="Connor Quincy" />
-<NAME TYPE="DOCTOR" comment="" end="2741" id="P16" start="2729" text="Patrick Park" />
-<NAME TYPE="DOCTOR" comment="" end="2755" id="P17" start="2751" text="Pina" />
-<NAME TYPE="DOCTOR" comment="" end="2761" id="P18" start="2759" text="CQ" />
-<NAME TYPE="DOCTOR" comment="" end="2768" id="P19" start="2762" text="earley" />
-<ID TYPE="IDNUM" comment="" end="2781" id="P20" start="2770" text="65-77827705" />
+<DATE id="P0" start="16" end="26" text="2096-12-29" TYPE="DATE" comment="" />
+<LOCATION id="P1" start="30" end="33" text="NMH" TYPE="HOSPITAL" comment="" />
+<NAME id="P2" start="38" end="48" text="Donn Emery" TYPE="PATIENT" comment="" />
+<LOCATION id="P3" start="49" end="52" text="NMH" TYPE="HOSPITAL" comment="" />
+<ID id="P4" start="56" end="65" text="059-57-26" TYPE="MEDICALRECORD" comment="" />
+<DATE id="P5" start="67" end="84" text="December 29, 2096" TYPE="DATE" comment="" />
+<NAME id="P6" start="171" end="175" text="Pina" TYPE="DOCTOR" comment="" />
+<NAME id="P7" start="208" end="212" text="Park" TYPE="DOCTOR" comment="" />
+<DATE id="P8" start="280" end="296" text="January 15, 2097" TYPE="DATE" comment="" />
+<NAME id="P9" start="972" end="976" text="Pina" TYPE="DOCTOR" comment="" />
+<DATE id="P10" start="1155" end="1172" text="November 14, 2096" TYPE="DATE" comment="" />
+<NAME id="P11" start="1303" end="1307" text="Pina" TYPE="DOCTOR" comment="" />
+<DATE id="P12" start="1343" end="1360" text="December 22, 2096" TYPE="DATE" comment="" />
+<NAME id="P13" start="1574" end="1579" text="Emery" TYPE="PATIENT" comment="" />
+<NAME id="P14" start="1984" end="1988" text="Pina" TYPE="DOCTOR" comment="" />
+<NAME id="P15" start="2706" end="2719" text="Connor Quincy" TYPE="DOCTOR" comment="" />
+<NAME id="P16" start="2729" end="2741" text="Patrick Park" TYPE="DOCTOR" comment="" />
+<NAME id="P17" start="2751" end="2755" text="Pina" TYPE="DOCTOR" comment="" />
+<NAME id="P18" start="2759" end="2761" text="CQ" TYPE="DOCTOR" comment="" />
+<NAME id="P19" start="2762" end="2768" text="earley" TYPE="DOCTOR" comment="" />
+<ID id="P20" start="2770" end="2781" text="65-77827705" TYPE="IDNUM" comment="" />
 </TAGS>
 </deIdi2b2>

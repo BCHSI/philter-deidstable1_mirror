@@ -1,6 +1,6 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT>
+<TEXT><![CDATA[
 
 
 Record date: 2094-08-11
@@ -71,7 +71,7 @@ Vytorin QD
 
 Family history:
 
-   Mom A&amp;W in her 60's with HTN. Dad A&amp;W. 
+   Mom A&W in her 60's with HTN. Dad A&W. 
 
 
 
@@ -119,7 +119,7 @@ Physical examination:
 
 -Extremities:   No cyanosis, clubbing or edema. 2+ femoral pulses without bruits. 2+ pedal pulses.
 
--Neuro:   A&amp;O x3, CN 2-12 grossly intact. Reflexes 2+ and symmetric x 4 extremities. Toes B downgoing.
+-Neuro:   A&O x3, CN 2-12 grossly intact. Reflexes 2+ and symmetric x 4 extremities. Toes B downgoing.
 
 
 
@@ -173,26 +173,29 @@ Signed electronically by   Frances T Potts NP  on  Aug 11, 2094
 
 
 
-</TEXT>
+]]></TEXT>
 <TAGS>
-<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2094-08-11" />
-<NAME TYPE="DOCTOR" comment="" end="150" id="P2" start="138" text="Irvin Vitale" />
-<NAME TYPE="DOCTOR" comment="" end="335" id="P3" start="323" text="Bonnie Eaves" />
-<DATE TYPE="DATE" comment="" end="345" id="P4" start="341" text="8/25" />
-<NAME TYPE="DOCTOR" comment="" end="671" id="P5" start="665" text="Vitale" />
-<DATE TYPE="DATE" comment="" end="733" id="P6" start="729" text="2093" />
-<NAME TYPE="DOCTOR" comment="" end="859" id="P7" start="846" text="Orlando Ernst" />
-<NAME TYPE="DOCTOR" comment="" end="890" id="P8" start="883" text="Ratliff" />
-<PROFESSION TYPE="PROFESSION" comment="" end="1256" id="P10" start="1244" text="Patternmaker" />
-<LOCATION TYPE="ORGANIZATION" comment="" end="1263" id="P11" start="1260" text="IMN" />
-<PROFESSION TYPE="PROFESSION" comment="" end="1288" id="P12" start="1267" text="volunteer firefighter" />
-<DATE TYPE="DATE" comment="" end="2439" id="P13" start="2433" text="8/4/94" />
-<NAME TYPE="DOCTOR" comment="" end="2855" id="P15" start="2849" text="Vitale" />
-<NAME TYPE="DOCTOR" comment="" end="2870" id="P16" start="2863" text="Rollins" />
-<NAME TYPE="DOCTOR" comment="" end="2904" id="P17" start="2892" text="Bonnie Eaves" />
-<NAME TYPE="DOCTOR" comment="" end="2932" id="P18" start="2912" text="Frances Travis Potts" />
-<CONTACT TYPE="PHONE" comment="" end="2942" id="P19" start="2937" text="23119" />
-<NAME TYPE="DOCTOR" comment="" end="2988" id="P20" start="2973" text="Frances T Potts" />
-<DATE TYPE="DATE" comment="" end="3009" id="P21" start="2997" text="Aug 11, 2094" />
+<DATE id="P0" start="16" end="26" text="2094-08-11" TYPE="DATE" comment="" />
+<LOCATION id="P1" start="40" end="64" text="COQUILLE VALLEY HOSPITAL" TYPE="HOSPITAL" comment="" />
+<NAME id="P2" start="138" end="150" text="Irvin Vitale" TYPE="DOCTOR" comment="" />
+<NAME id="P3" start="323" end="335" text="Bonnie Eaves" TYPE="DOCTOR" comment="" />
+<DATE id="P4" start="341" end="345" text="8/25" TYPE="DATE" comment="" />
+<NAME id="P5" start="665" end="671" text="Vitale" TYPE="DOCTOR" comment="" />
+<DATE id="P6" start="729" end="733" text="2093" TYPE="DATE" comment="" />
+<NAME id="P7" start="846" end="859" text="Orlando Ernst" TYPE="DOCTOR" comment="" />
+<NAME id="P8" start="883" end="890" text="Ratliff" TYPE="DOCTOR" comment="" />
+<AGE id="P9" start="1187" end="1191" text="60's" TYPE="AGE" comment="" />
+<PROFESSION id="P10" start="1244" end="1256" text="Patternmaker" TYPE="PROFESSION" comment="" />
+<LOCATION id="P11" start="1260" end="1263" text="IMN" TYPE="ORGANIZATION" comment="" />
+<PROFESSION id="P12" start="1267" end="1288" text="volunteer firefighter" TYPE="PROFESSION" comment="" />
+<DATE id="P13" start="2433" end="2439" text="8/4/94" TYPE="DATE" comment="" />
+<AGE id="P14" start="2556" end="2558" text="40" TYPE="AGE" comment="" />
+<NAME id="P15" start="2849" end="2855" text="Vitale" TYPE="DOCTOR" comment="" />
+<NAME id="P16" start="2863" end="2870" text="Rollins" TYPE="DOCTOR" comment="" />
+<NAME id="P17" start="2892" end="2904" text="Bonnie Eaves" TYPE="DOCTOR" comment="" />
+<NAME id="P18" start="2912" end="2932" text="Frances Travis Potts" TYPE="DOCTOR" comment="" />
+<CONTACT id="P19" start="2937" end="2942" text="23119" TYPE="PHONE" comment="" />
+<NAME id="P20" start="2973" end="2988" text="Frances T Potts" TYPE="DOCTOR" comment="" />
+<DATE id="P21" start="2997" end="3009" text="Aug 11, 2094" TYPE="DATE" comment="" />
 </TAGS>
 </deIdi2b2>

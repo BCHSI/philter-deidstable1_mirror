@@ -1,6 +1,6 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT>
+<TEXT><![CDATA[
 
 
 Record date: 2059-06-19
@@ -92,31 +92,34 @@ DV:6-19-59
 
 
 
-</TEXT>
+]]></TEXT>
 <TAGS>
-<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2059-06-19" />
-<NAME TYPE="PATIENT" comment="" end="90" id="P2" start="77" text="Rutledge, Eva" />
-<ID TYPE="MEDICALRECORD" comment="" end="145" id="P3" start="137" text="29195561" />
-<DATE TYPE="DATE" comment="" end="199" id="P4" start="192" text="6-19-59" />
-<NAME TYPE="PATIENT" comment="" end="268" id="P5" start="257" text="Eva Ruledge" />
-<DATE TYPE="DATE" comment="" end="376" id="P7" start="368" text="February" />
-<NAME TYPE="PATIENT" comment="" end="773" id="P10" start="770" text="Eva" />
-<NAME TYPE="PATIENT" comment="" end="917" id="P11" start="914" text="Eva" />
-<NAME TYPE="PATIENT" comment="" end="2006" id="P12" start="2003" text="Eva" />
-<PROFESSION TYPE="PROFESSION" comment="" end="2612" id="P13" start="2588" text="Pulping Control Operator" />
-<NAME TYPE="PATIENT" comment="" end="2836" id="P15" start="2823" text="Rutledge, Eva" />
-<ID TYPE="MEDICALRECORD" comment="" end="2891" id="P16" start="2883" text="29195561" />
-<DATE TYPE="DATE" comment="" end="2945" id="P17" start="2938" text="6-19-59" />
-<NAME TYPE="PATIENT" comment="" end="2997" id="P18" start="2994" text="Eva" />
-<NAME TYPE="DOCTOR" comment="" end="3171" id="P19" start="3156" text="Eileen Xayavong" />
-<DATE TYPE="DATE" comment="" end="3209" id="P20" start="3205" text="29th" />
-<NAME TYPE="PATIENT" comment="" end="3302" id="P21" start="3299" text="Eva" />
-<DATE TYPE="DATE" comment="" end="3701" id="P22" start="3693" text="February" />
-<NAME TYPE="DOCTOR" comment="" end="3856" id="P23" start="3841" text="Ulysses Quijano" />
-<NAME TYPE="DOCTOR" comment="" end="3870" id="P24" start="3868" text="PX" />
-<ID TYPE="MEDICALRECORD" comment="" end="3875" id="P25" start="3871" text="4740" />
-<DATE TYPE="DATE" comment="" end="3886" id="P26" start="3879" text="6-20-59" />
-<DATE TYPE="DATE" comment="" end="3897" id="P27" start="3890" text="6-19-59" />
-<DATE TYPE="DATE" comment="" end="3908" id="P28" start="3901" text="6-19-59" />
+<DATE id="P0" start="16" end="26" text="2059-06-19" TYPE="DATE" comment="" />
+<LOCATION id="P1" start="28" end="38" text="PROMPTCARE" TYPE="HOSPITAL" comment="" />
+<NAME id="P2" start="77" end="90" text="Rutledge, Eva" TYPE="PATIENT" comment="" />
+<ID id="P3" start="137" end="145" text="29195561" TYPE="MEDICALRECORD" comment="" />
+<DATE id="P4" start="192" end="199" text="6-19-59" TYPE="DATE" comment="" />
+<NAME id="P5" start="257" end="268" text="Eva Ruledge" TYPE="PATIENT" comment="" />
+<AGE id="P6" start="272" end="274" text="44" TYPE="AGE" comment="" />
+<DATE id="P7" start="368" end="376" text="February" TYPE="DATE" comment="" />
+<NAME id="P10" start="770" end="773" text="Eva" TYPE="PATIENT" comment="" />
+<NAME id="P11" start="914" end="917" text="Eva" TYPE="PATIENT" comment="" />
+<NAME id="P12" start="2003" end="2006" text="Eva" TYPE="PATIENT" comment="" />
+<PROFESSION id="P13" start="2588" end="2612" text="Pulping Control Operator" TYPE="PROFESSION" comment="" />
+<LOCATION id="P14" start="2774" end="2784" text="PROMPTCARE" TYPE="HOSPITAL" comment="" />
+<NAME id="P15" start="2823" end="2836" text="Rutledge, Eva" TYPE="PATIENT" comment="" />
+<ID id="P16" start="2883" end="2891" text="29195561" TYPE="MEDICALRECORD" comment="" />
+<DATE id="P17" start="2938" end="2945" text="6-19-59" TYPE="DATE" comment="" />
+<NAME id="P18" start="2994" end="2997" text="Eva" TYPE="PATIENT" comment="" />
+<NAME id="P19" start="3156" end="3171" text="Eileen Xayavong" TYPE="DOCTOR" comment="" />
+<DATE id="P20" start="3205" end="3209" text="29th" TYPE="DATE" comment="" />
+<NAME id="P21" start="3299" end="3302" text="Eva" TYPE="PATIENT" comment="" />
+<DATE id="P22" start="3693" end="3701" text="February" TYPE="DATE" comment="" />
+<NAME id="P23" start="3841" end="3856" text="Ulysses Quijano" TYPE="DOCTOR" comment="" />
+<NAME id="P24" start="3868" end="3870" text="PX" TYPE="DOCTOR" comment="" />
+<ID id="P25" start="3871" end="3875" text="4740" TYPE="MEDICALRECORD" comment="" />
+<DATE id="P26" start="3879" end="3886" text="6-20-59" TYPE="DATE" comment="" />
+<DATE id="P27" start="3890" end="3897" text="6-19-59" TYPE="DATE" comment="" />
+<DATE id="P28" start="3901" end="3908" text="6-19-59" TYPE="DATE" comment="" />
 </TAGS>
 </deIdi2b2>

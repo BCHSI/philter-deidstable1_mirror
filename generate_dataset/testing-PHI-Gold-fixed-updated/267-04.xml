@@ -1,6 +1,6 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT>
+<TEXT><![CDATA[
 
 
 Record date: 2097-01-30
@@ -54,20 +54,21 @@ Dictated by:  VIRGIL HARRELL, M.D.  VH79
 
 
 
-</TEXT>
+]]></TEXT>
 <TAGS>
-<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2097-01-30" />
-<NAME TYPE="PATIENT" comment="" end="95" id="P2" start="83" text="LAU,HELEN M." />
-<ID TYPE="MEDICALRECORD" comment="" end="109" id="P3" start="98" text="544-41-32-1" />
-<DATE TYPE="DATE" comment="" end="143" id="P4" start="135" text="01/30/97" />
-<DATE TYPE="DATE" comment="" end="326" id="P5" start="309" text="September of 2096" />
-<NAME TYPE="DOCTOR" comment="" end="2089" id="P6" start="2086" text="Nix" />
-<ID TYPE="IDNUM" comment="" end="2364" id="P7" start="2354" text="MG040/1987" />
-<NAME TYPE="DOCTOR" comment="" end="2380" id="P8" start="2366" text="VIRGIL HARRELL" />
-<NAME TYPE="USERNAME" comment="" end="2392" id="P9" start="2388" text="VH79" />
-<DATE TYPE="DATE" comment="" end="2434" id="P10" start="2426" text="02/12/97" />
-<DATE TYPE="DATE" comment="" end="2501" id="P11" start="2493" text="02/13/97" />
-<NAME TYPE="DOCTOR" comment="" end="2531" id="P12" start="2517" text="VIRGIL HARRELL" />
-<NAME TYPE="USERNAME" comment="" end="2543" id="P13" start="2539" text="VH79" />
+<DATE id="P0" start="16" end="26" text="2097-01-30" TYPE="DATE" comment="" />
+<LOCATION id="P1" start="49" end="59" text="ST VINCENT" TYPE="HOSPITAL" comment="" />
+<NAME id="P2" start="83" end="95" text="LAU,HELEN M." TYPE="PATIENT" comment="" />
+<ID id="P3" start="98" end="109" text="544-41-32-1" TYPE="MEDICALRECORD" comment="" />
+<DATE id="P4" start="135" end="143" text="01/30/97" TYPE="DATE" comment="" />
+<DATE id="P5" start="309" end="326" text="September of 2096" TYPE="DATE" comment="" />
+<NAME id="P6" start="2086" end="2089" text="Nix" TYPE="DOCTOR" comment="" />
+<ID id="P7" start="2354" end="2364" text="MG040/1987" TYPE="IDNUM" comment="" />
+<NAME id="P8" start="2366" end="2380" text="VIRGIL HARRELL" TYPE="DOCTOR" comment="" />
+<NAME id="P9" start="2388" end="2392" text="VH79" TYPE="USERNAME" comment="" />
+<DATE id="P10" start="2426" end="2434" text="02/12/97" TYPE="DATE" comment="" />
+<DATE id="P11" start="2493" end="2501" text="02/13/97" TYPE="DATE" comment="" />
+<NAME id="P12" start="2517" end="2531" text="VIRGIL HARRELL" TYPE="DOCTOR" comment="" />
+<NAME id="P13" start="2539" end="2543" text="VH79" TYPE="USERNAME" comment="" />
 </TAGS>
 </deIdi2b2>

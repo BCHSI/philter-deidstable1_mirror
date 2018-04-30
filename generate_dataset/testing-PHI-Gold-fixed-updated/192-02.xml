@@ -1,6 +1,6 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT>
+<TEXT><![CDATA[
 
 
 Record date: 2086-08-28
@@ -104,25 +104,27 @@ Palm Springs, CO  19496
 
 
 
-</TEXT>
+]]></TEXT>
 <TAGS>
-<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2086-08-28" />
-<LOCATION TYPE="STREET" comment="" end="155" id="P2" start="138" text="05 Greeley Street" />
-<LOCATION TYPE="CITY" comment="" end="192" id="P3" start="180" text="Palm Springs" />
-<LOCATION TYPE="STATE" comment="" end="196" id="P4" start="194" text="CO" />
-<LOCATION TYPE="ZIP" comment="" end="203" id="P5" start="198" text="19496" />
-<NAME TYPE="PATIENT" comment="" end="250" id="P6" start="239" text="Tanner, Yul" />
-<ID TYPE="MEDICALRECORD" comment="" end="267" id="P7" start="256" text="099-04-65-0" />
-<DATE TYPE="DATE" comment="" end="277" id="P8" start="269" text="08/28/86" />
-<NAME TYPE="PATIENT" comment="" end="298" id="P9" start="292" text="Tanner" />
-<DATE TYPE="DATE" comment="" end="372" id="P10" start="356" text="November of 2085" />
-<DATE TYPE="DATE" comment="" end="381" id="P11" start="378" text="May" />
-<NAME TYPE="DOCTOR" comment="" end="1554" id="P12" start="1544" text="Edward Yim" />
-<NAME TYPE="DOCTOR" comment="" end="1570" id="P13" start="1566" text="pina" />
-<NAME TYPE="DOCTOR" comment="" end="1589" id="P14" start="1577" text="Harry Truong" />
-<LOCATION TYPE="STREET" comment="" end="1636" id="P16" start="1619" text="17 Greeley Street" />
-<LOCATION TYPE="CITY" comment="" end="1650" id="P17" start="1638" text="Palm Springs" />
-<LOCATION TYPE="STATE" comment="" end="1654" id="P18" start="1652" text="CO" />
-<LOCATION TYPE="ZIP" comment="" end="1661" id="P19" start="1656" text="19496" />
+<DATE id="P0" start="16" end="26" text="2086-08-28" TYPE="DATE" comment="" />
+<LOCATION id="P1" start="92" end="113" text="Floyd County Hospital" TYPE="HOSPITAL" comment="" />
+<LOCATION id="P2" start="138" end="155" text="05 Greeley Street" TYPE="STREET" comment="" />
+<LOCATION id="P3" start="180" end="192" text="Palm Springs" TYPE="CITY" comment="" />
+<LOCATION id="P4" start="194" end="196" text="CO" TYPE="STATE" comment="" />
+<LOCATION id="P5" start="198" end="203" text="19496" TYPE="ZIP" comment="" />
+<NAME id="P6" start="239" end="250" text="Tanner, Yul" TYPE="PATIENT" comment="" />
+<ID id="P7" start="256" end="267" text="099-04-65-0" TYPE="MEDICALRECORD" comment="" />
+<DATE id="P8" start="269" end="277" text="08/28/86" TYPE="DATE" comment="" />
+<NAME id="P9" start="292" end="298" text="Tanner" TYPE="PATIENT" comment="" />
+<DATE id="P10" start="356" end="372" text="November of 2085" TYPE="DATE" comment="" />
+<DATE id="P11" start="378" end="381" text="May" TYPE="DATE" comment="" />
+<NAME id="P12" start="1544" end="1554" text="Edward Yim" TYPE="DOCTOR" comment="" />
+<NAME id="P13" start="1566" end="1570" text="pina" TYPE="DOCTOR" comment="" />
+<NAME id="P14" start="1577" end="1589" text="Harry Truong" TYPE="DOCTOR" comment="" />
+<LOCATION id="P15" start="1597" end="1618" text="Floyd County Hospital" TYPE="HOSPITAL" comment="" />
+<LOCATION id="P16" start="1619" end="1636" text="17 Greeley Street" TYPE="STREET" comment="" />
+<LOCATION id="P17" start="1638" end="1650" text="Palm Springs" TYPE="CITY" comment="" />
+<LOCATION id="P18" start="1652" end="1654" text="CO" TYPE="STATE" comment="" />
+<LOCATION id="P19" start="1656" end="1661" text="19496" TYPE="ZIP" comment="" />
 </TAGS>
 </deIdi2b2>

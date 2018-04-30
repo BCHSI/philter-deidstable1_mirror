@@ -1,6 +1,6 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT>
+<TEXT><![CDATA[
 
 
 Record date: 2068-09-26
@@ -103,11 +103,11 @@ Inez Yelverton, NP
 
 
 
-</TEXT>
+]]></TEXT>
 <TAGS>
-<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2068-09-26" />
-<NAME TYPE="DOCTOR" comment="" end="133" id="P1" start="128" text="Janes" />
-<DATE TYPE="DATE" comment="" end="145" id="P2" start="137" text="10/04/68" />
-<NAME TYPE="DOCTOR" comment="" end="1548" id="P3" start="1534" text="Inez Yelverton" />
+<DATE id="P0" start="16" end="26" text="2068-09-26" TYPE="DATE" comment="" />
+<NAME id="P1" start="128" end="133" text="Janes" TYPE="DOCTOR" comment="" />
+<DATE id="P2" start="137" end="145" text="10/04/68" TYPE="DATE" comment="" />
+<NAME id="P3" start="1534" end="1548" text="Inez Yelverton" TYPE="DOCTOR" comment="" />
 </TAGS>
 </deIdi2b2>

@@ -1,6 +1,6 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT>
+<TEXT><![CDATA[
 
 
 Record date: 2090-02-14
@@ -107,18 +107,19 @@ eScription document:7-9617124 SJZvdbs
 
 
 
-</TEXT>
+]]></TEXT>
 <TAGS>
-<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2090-02-14" />
-<ID TYPE="MEDICALRECORD" comment="" end="44" id="P1" start="36" text="56040785" />
-<NAME TYPE="PATIENT" comment="" end="57" id="P2" start="45" text="OROZCO, KYLE" />
-<DATE TYPE="DATE" comment="" end="66" id="P3" start="58" text="02/14/90" />
-<NAME TYPE="DOCTOR" comment="" end="82" id="P4" start="67" text="CHANEY, QUENTIN" />
-<DATE TYPE="DATE" comment="" end="1096" id="P6" start="1092" text="2074" />
-<NAME TYPE="DOCTOR" comment="" end="2361" id="P7" start="2346" text="CHANEY, QUENTIN" />
-<DATE TYPE="DATE" comment="" end="2379" id="P8" start="2371" text="02/15/90" />
-<DATE TYPE="DATE" comment="" end="2392" id="P9" start="2384" text="02/15/90" />
-<NAME TYPE="DOCTOR" comment="" end="2422" id="P10" start="2407" text="CHANEY, QUENTIN" />
-<ID TYPE="IDNUM" comment="" end="2460" id="P11" start="2443" text="7-9617124 SJZvdbs" />
+<DATE id="P0" start="16" end="26" text="2090-02-14" TYPE="DATE" comment="" />
+<ID id="P1" start="36" end="44" text="56040785" TYPE="MEDICALRECORD" comment="" />
+<NAME id="P2" start="45" end="57" text="OROZCO, KYLE" TYPE="PATIENT" comment="" />
+<DATE id="P3" start="58" end="66" text="02/14/90" TYPE="DATE" comment="" />
+<NAME id="P4" start="67" end="82" text="CHANEY, QUENTIN" TYPE="DOCTOR" comment="" />
+<AGE id="P5" start="379" end="381" text="65" TYPE="AGE" comment="" />
+<DATE id="P6" start="1092" end="1096" text="2074" TYPE="DATE" comment="" />
+<NAME id="P7" start="2346" end="2361" text="CHANEY, QUENTIN" TYPE="DOCTOR" comment="" />
+<DATE id="P8" start="2371" end="2379" text="02/15/90" TYPE="DATE" comment="" />
+<DATE id="P9" start="2384" end="2392" text="02/15/90" TYPE="DATE" comment="" />
+<NAME id="P10" start="2407" end="2422" text="CHANEY, QUENTIN" TYPE="DOCTOR" comment="" />
+<ID id="P11" start="2443" end="2460" text="7-9617124 SJZvdbs" TYPE="IDNUM" comment="" />
 </TAGS>
 </deIdi2b2>

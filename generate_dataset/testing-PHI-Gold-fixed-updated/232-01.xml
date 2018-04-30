@@ -1,6 +1,6 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT>
+<TEXT><![CDATA[
 
 
 Record date: 2097-06-09
@@ -66,7 +66,7 @@ BP: 159/70  P:  72   R:  16    T=97
 SKIN:  No rash
 HEENT: Anicteric
 NECK:  Supple. JVP= 6 cm
-CHEST: Left base crackles&amp;gt; right
+CHEST: Left base crackles&gt; right
 COR:   S1 S2 
 ABD:   Benign. No HSM
 EXT: No edema
@@ -101,15 +101,17 @@ Needs Medication clarification and good BP control.
 
 
 
-</TEXT>
+]]></TEXT>
 <TAGS>
-<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2097-06-09" />
-<NAME TYPE="DOCTOR" comment="" end="66" id="P1" start="52" text="Quinton Delong" />
-<NAME TYPE="PATIENT" comment="" end="130" id="P2" start="118" text="Lori Stevens" />
-<DATE TYPE="DATE" comment="" end="648" id="P4" start="645" text="Mon" />
-<DATE TYPE="DATE" comment="" end="652" id="P5" start="649" text="Wed" />
-<DATE TYPE="DATE" comment="" end="656" id="P6" start="653" text="Fri" />
-<NAME TYPE="PATIENT" comment="" end="4541" id="P7" start="4534" text="Stevens" />
-<NAME TYPE="DOCTOR" comment="" end="4869" id="P9" start="4855" text="Quinton Delong" />
+<DATE id="P0" start="16" end="26" text="2097-06-09" TYPE="DATE" comment="" />
+<NAME id="P1" start="52" end="66" text="Quinton Delong" TYPE="DOCTOR" comment="" />
+<NAME id="P2" start="118" end="130" text="Lori Stevens" TYPE="PATIENT" comment="" />
+<AGE id="P3" start="215" end="217" text="62" TYPE="AGE" comment="" />
+<DATE id="P4" start="645" end="648" text="Mon" TYPE="DATE" comment="" />
+<DATE id="P5" start="649" end="652" text="Wed" TYPE="DATE" comment="" />
+<DATE id="P6" start="653" end="656" text="Fri" TYPE="DATE" comment="" />
+<NAME id="P7" start="4534" end="4541" text="Stevens" TYPE="PATIENT" comment="" />
+<AGE id="P8" start="4547" end="4549" text="64" TYPE="AGE" comment="" />
+<NAME id="P9" start="4855" end="4869" text="Quinton Delong" TYPE="DOCTOR" comment="" />
 </TAGS>
 </deIdi2b2>

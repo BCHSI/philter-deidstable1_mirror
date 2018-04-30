@@ -1,6 +1,6 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT>
+<TEXT><![CDATA[
 
 
 Record date: 2084-12-16
@@ -64,24 +64,25 @@ DV:12-16-84
 
 
 
-</TEXT>
+]]></TEXT>
 <TAGS>
-<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2084-12-16" />
-<NAME TYPE="DOCTOR" comment="" end="76" id="P2" start="60" text="Vincent Y. Keyes" />
-<LOCATION TYPE="STREET" comment="" end="101" id="P3" start="83" text="315 Westchester Dr" />
-<NAME TYPE="PATIENT" comment="" end="139" id="P4" start="128" text="Lara, Uriah" />
-<LOCATION TYPE="CITY" comment="" end="151" id="P5" start="140" text="Avra Valley" />
-<LOCATION TYPE="STATE" comment="" end="155" id="P6" start="153" text="GA" />
-<LOCATION TYPE="ZIP" comment="" end="161" id="P7" start="156" text="12442" />
-<ID TYPE="MEDICALRECORD" comment="" end="192" id="P8" start="184" text="62115644" />
-<CONTACT TYPE="PHONE" comment="" end="207" id="P9" start="193" text="(708) 670-7983" />
-<DATE TYPE="DATE" comment="" end="247" id="P10" start="239" text="12-16-84" />
-<NAME TYPE="PATIENT" comment="" end="265" id="P11" start="260" text="Uriah" />
-<DATE TYPE="DATE" comment="" end="1434" id="P12" start="1425" text="July 2084" />
-<NAME TYPE="DOCTOR" comment="" end="2262" id="P13" start="2246" text="Vincent Y. Keyes" />
-<ID TYPE="IDNUM" comment="" end="2281" id="P14" start="2271" text="BI:YD:0043" />
-<DATE TYPE="DATE" comment="" end="2293" id="P15" start="2285" text="12-16-84" />
-<DATE TYPE="DATE" comment="" end="2305" id="P16" start="2297" text="12-16-84" />
-<DATE TYPE="DATE" comment="" end="2317" id="P17" start="2309" text="12-16-84" />
+<DATE id="P0" start="16" end="26" text="2084-12-16" TYPE="DATE" comment="" />
+<LOCATION id="P1" start="28" end="43" text="FOREST HOSPITAL" TYPE="HOSPITAL" comment="" />
+<NAME id="P2" start="60" end="76" text="Vincent Y. Keyes" TYPE="DOCTOR" comment="" />
+<LOCATION id="P3" start="83" end="101" text="315 Westchester Dr" TYPE="STREET" comment="" />
+<NAME id="P4" start="128" end="139" text="Lara, Uriah" TYPE="PATIENT" comment="" />
+<LOCATION id="P5" start="140" end="151" text="Avra Valley" TYPE="CITY" comment="" />
+<LOCATION id="P6" start="153" end="155" text="GA" TYPE="STATE" comment="" />
+<LOCATION id="P7" start="156" end="161" text="12442" TYPE="ZIP" comment="" />
+<ID id="P8" start="184" end="192" text="62115644" TYPE="MEDICALRECORD" comment="" />
+<CONTACT id="P9" start="193" end="207" text="(708) 670-7983" TYPE="PHONE" comment="" />
+<DATE id="P10" start="239" end="247" text="12-16-84" TYPE="DATE" comment="" />
+<NAME id="P11" start="260" end="265" text="Uriah" TYPE="PATIENT" comment="" />
+<DATE id="P12" start="1425" end="1434" text="July 2084" TYPE="DATE" comment="" />
+<NAME id="P13" start="2246" end="2262" text="Vincent Y. Keyes" TYPE="DOCTOR" comment="" />
+<ID id="P14" start="2271" end="2281" text="BI:YD:0043" TYPE="IDNUM" comment="" />
+<DATE id="P15" start="2285" end="2293" text="12-16-84" TYPE="DATE" comment="" />
+<DATE id="P16" start="2297" end="2305" text="12-16-84" TYPE="DATE" comment="" />
+<DATE id="P17" start="2309" end="2317" text="12-16-84" TYPE="DATE" comment="" />
 </TAGS>
 </deIdi2b2>

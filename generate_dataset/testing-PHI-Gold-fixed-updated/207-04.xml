@@ -1,6 +1,6 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT>
+<TEXT><![CDATA[
 
 
 Record date: 2082-08-19
@@ -115,21 +115,23 @@ eScription document:2-6098361 BFFocus
 
 
 
-</TEXT>
+]]></TEXT>
 <TAGS>
-<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2082-08-19" />
-<ID TYPE="MEDICALRECORD" comment="" end="44" id="P1" start="36" text="55931516" />
-<NAME TYPE="PATIENT" comment="" end="55" id="P2" start="45" text="Orta, Phil" />
-<DATE TYPE="DATE" comment="" end="64" id="P3" start="56" text="08/19/82" />
-<NAME TYPE="DOCTOR" comment="" end="80" id="P4" start="65" text="IP, INDIGO JOHN" />
-<DATE TYPE="DATE" comment="" end="454" id="P7" start="444" text="08/19/2082" />
-<DATE TYPE="DATE" comment="" end="547" id="P8" start="543" text="2062" />
-<DATE TYPE="DATE" comment="" end="873" id="P9" start="869" text="2080" />
-<NAME TYPE="DOCTOR" comment="" end="2609" id="P10" start="2601" text="Irizarry" />
-<NAME TYPE="DOCTOR" comment="" end="2715" id="P11" start="2700" text="IP, INDIGO JOHN" />
-<DATE TYPE="DATE" comment="" end="2733" id="P12" start="2725" text="08/19/82" />
-<DATE TYPE="DATE" comment="" end="2746" id="P13" start="2738" text="08/19/82" />
-<NAME TYPE="DOCTOR" comment="" end="2776" id="P14" start="2761" text="IP, INDIGO JOHN" />
-<ID TYPE="IDNUM" comment="" end="2807" id="P15" start="2798" text="2-6098361" />
+<DATE id="P0" start="16" end="26" text="2082-08-19" TYPE="DATE" comment="" />
+<ID id="P1" start="36" end="44" text="55931516" TYPE="MEDICALRECORD" comment="" />
+<NAME id="P2" start="45" end="55" text="Orta, Phil" TYPE="PATIENT" comment="" />
+<DATE id="P3" start="56" end="64" text="08/19/82" TYPE="DATE" comment="" />
+<NAME id="P4" start="65" end="80" text="IP, INDIGO JOHN" TYPE="DOCTOR" comment="" />
+<AGE id="P5" start="367" end="369" text="59" TYPE="AGE" comment="" />
+<LOCATION id="P6" start="401" end="418" text="Mamaroneck Health" TYPE="HOSPITAL" comment="" />
+<DATE id="P7" start="444" end="454" text="08/19/2082" TYPE="DATE" comment="" />
+<DATE id="P8" start="543" end="547" text="2062" TYPE="DATE" comment="" />
+<DATE id="P9" start="869" end="873" text="2080" TYPE="DATE" comment="" />
+<NAME id="P10" start="2601" end="2609" text="Irizarry" TYPE="DOCTOR" comment="" />
+<NAME id="P11" start="2700" end="2715" text="IP, INDIGO JOHN" TYPE="DOCTOR" comment="" />
+<DATE id="P12" start="2725" end="2733" text="08/19/82" TYPE="DATE" comment="" />
+<DATE id="P13" start="2738" end="2746" text="08/19/82" TYPE="DATE" comment="" />
+<NAME id="P14" start="2761" end="2776" text="IP, INDIGO JOHN" TYPE="DOCTOR" comment="" />
+<ID id="P15" start="2798" end="2807" text="2-6098361" TYPE="IDNUM" comment="" />
 </TAGS>
 </deIdi2b2>

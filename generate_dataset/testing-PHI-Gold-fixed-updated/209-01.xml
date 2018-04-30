@@ -1,6 +1,6 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT>
+<TEXT><![CDATA[
 
 
 Record date: 2089-04-13
@@ -56,29 +56,35 @@ AL:0138:855
 
 
 
-</TEXT>
+]]></TEXT>
 <TAGS>
-<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2089-04-13" />
-<DATE TYPE="DATE" comment="" end="48" id="P1" start="34" text="April 13, 2089" />
-<NAME TYPE="DOCTOR" comment="" end="70" id="P2" start="56" text="Quadarius Kirk" />
-<LOCATION TYPE="STREET" comment="" end="120" id="P4" start="104" text="531 Westfield St" />
-<LOCATION TYPE="CITY" comment="" end="135" id="P5" start="122" text="Clifton Forge" />
-<LOCATION TYPE="STATE" comment="" end="139" id="P6" start="137" text="WI" />
-<LOCATION TYPE="ZIP" comment="" end="146" id="P7" start="141" text="11674" />
-<NAME TYPE="PATIENT" comment="" end="175" id="P8" start="155" text="Parrish, Christopher" />
-<ID TYPE="MEDICALRECORD" comment="" end="193" id="P10" start="184" text="553-15-48" />
-<NAME TYPE="DOCTOR" comment="" end="210" id="P11" start="206" text="Kirk" />
-<NAME TYPE="PATIENT" comment="" end="278" id="P12" start="259" text="Christopher Parrish" />
-<DATE TYPE="DATE" comment="" end="402" id="P15" start="385" text="December 29, 2088" />
-<DATE TYPE="DATE" comment="" end="2202" id="P16" start="2198" text="2060" />
-<DATE TYPE="DATE" comment="" end="2238" id="P17" start="2234" text="2083" />
-<DATE TYPE="DATE" comment="" end="2269" id="P18" start="2265" text="2087" />
-<LOCATION TYPE="ORGANIZATION" comment="" end="3057" id="P19" start="3037" text="Marble Slab Creamery" />
-<NAME TYPE="PATIENT" comment="" end="4439" id="P20" start="4432" text="Parrish" />
-<NAME TYPE="DOCTOR" comment="" end="6357" id="P22" start="6345" text="Laith Greene" />
-<NAME TYPE="DOCTOR" comment="" end="6522" id="P24" start="6506" text="Johnathan Kiefer" />
-<DATE TYPE="DATE" comment="" end="6543" id="P25" start="6535" text="04/13/89" />
-<DATE TYPE="DATE" comment="" end="6556" id="P26" start="6548" text="04/14/89" />
-<ID TYPE="IDNUM" comment="" end="6569" id="P27" start="6558" text="AL:0138:855" />
+<DATE id="P0" start="16" end="26" text="2089-04-13" TYPE="DATE" comment="" />
+<DATE id="P1" start="34" end="48" text="April 13, 2089" TYPE="DATE" comment="" />
+<NAME id="P2" start="56" end="70" text="Quadarius Kirk" TYPE="DOCTOR" comment="" />
+<LOCATION id="P3" start="79" end="102" text="Carrizoza Health Center" TYPE="HOSPITAL" comment="" />
+<LOCATION id="P4" start="104" end="120" text="531 Westfield St" TYPE="STREET" comment="" />
+<LOCATION id="P5" start="122" end="135" text="Clifton Forge" TYPE="CITY" comment="" />
+<LOCATION id="P6" start="137" end="139" text="WI" TYPE="STATE" comment="" />
+<LOCATION id="P7" start="141" end="146" text="11674" TYPE="ZIP" comment="" />
+<NAME id="P8" start="155" end="175" text="Parrish, Christopher" TYPE="PATIENT" comment="" />
+<LOCATION id="P9" start="177" end="180" text="SFC" TYPE="HOSPITAL" comment="" />
+<ID id="P10" start="184" end="193" text="553-15-48" TYPE="MEDICALRECORD" comment="" />
+<NAME id="P11" start="206" end="210" text="Kirk" TYPE="DOCTOR" comment="" />
+<NAME id="P12" start="259" end="278" text="Christopher Parrish" TYPE="PATIENT" comment="" />
+<AGE id="P13" start="309" end="311" text="71" TYPE="AGE" comment="" />
+<LOCATION id="P14" start="363" end="381" text="Sutton Family Care" TYPE="HOSPITAL" comment="" />
+<DATE id="P15" start="385" end="402" text="December 29, 2088" TYPE="DATE" comment="" />
+<DATE id="P16" start="2198" end="2202" text="2060" TYPE="DATE" comment="" />
+<DATE id="P17" start="2234" end="2238" text="2083" TYPE="DATE" comment="" />
+<DATE id="P18" start="2265" end="2269" text="2087" TYPE="DATE" comment="" />
+<LOCATION id="P19" start="3037" end="3057" text="Marble Slab Creamery" TYPE="ORGANIZATION" comment="" />
+<NAME id="P20" start="4432" end="4439" text="Parrish" TYPE="PATIENT" comment="" />
+<LOCATION id="P21" start="5575" end="5593" text="Sutton Family Care" TYPE="HOSPITAL" comment="" />
+<NAME id="P22" start="6345" end="6357" text="Laith Greene" TYPE="DOCTOR" comment="" />
+<LOCATION id="P23" start="6365" end="6383" text="Sutton Family Care" TYPE="HOSPITAL" comment="" />
+<NAME id="P24" start="6506" end="6522" text="Johnathan Kiefer" TYPE="DOCTOR" comment="" />
+<DATE id="P25" start="6535" end="6543" text="04/13/89" TYPE="DATE" comment="" />
+<DATE id="P26" start="6548" end="6556" text="04/14/89" TYPE="DATE" comment="" />
+<ID id="P27" start="6558" end="6569" text="AL:0138:855" TYPE="IDNUM" comment="" />
 </TAGS>
 </deIdi2b2>

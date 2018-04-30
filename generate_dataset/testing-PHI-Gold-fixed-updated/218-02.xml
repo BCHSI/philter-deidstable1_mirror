@@ -1,6 +1,6 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT>
+<TEXT><![CDATA[
 
 
 Record date: 2093-10-29
@@ -91,7 +91,7 @@ Weight 129
 
 Neck   carotids 1+, JVP 6 cm, no nodes, thyroid non palpable
 
-Chest   CTA, except few crackles L &gt; R
+Chest   CTA, except few crackles L > R
 
 Cor   RRR, normal s1, split s2, no murmur
 
@@ -125,23 +125,27 @@ Signed electronically by Eggleston, William on Jan 31, 2094
 
 
 
-</TEXT>
+]]></TEXT>
 <TAGS>
-<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2093-10-29" />
-<DATE TYPE="DATE" comment="" end="177" id="P3" start="172" text="11/92" />
-<DATE TYPE="DATE" comment="" end="511" id="P4" start="507" text="2082" />
-<DATE TYPE="DATE" comment="" end="526" id="P5" start="522" text="2082" />
-<DATE TYPE="DATE" comment="" end="559" id="P6" start="555" text="2082" />
-<DATE TYPE="DATE" comment="" end="570" id="P7" start="566" text="2087" />
-<DATE TYPE="DATE" comment="" end="684" id="P8" start="679" text="11/92" />
-<DATE TYPE="DATE" comment="" end="735" id="P9" start="731" text="7/88" />
-<DATE TYPE="DATE" comment="" end="795" id="P10" start="790" text="10/91" />
-<DATE TYPE="DATE" comment="" end="852" id="P11" start="847" text="10/92" />
-<DATE TYPE="DATE" comment="" end="889" id="P12" start="884" text="12/92" />
-<LOCATION TYPE="STATE" comment="" end="1433" id="P15" start="1425" text="Oklahoma" />
-<LOCATION TYPE="STATE" comment="" end="1451" id="P16" start="1442" text="New Hamp." />
-<DATE TYPE="DATE" comment="" end="2289" id="P17" start="2284" text="10/92" />
-<NAME TYPE="DOCTOR" comment="" end="2621" id="P18" start="2603" text="Eggleston, William" />
-<DATE TYPE="DATE" comment="" end="2637" id="P19" start="2625" text="Jan 31, 2094" />
+<DATE id="P0" start="16" end="26" text="2093-10-29" TYPE="DATE" comment="" />
+<LOCATION id="P1" start="62" end="84" text="MISSOULA CLINIC CENTER" TYPE="HOSPITAL" comment="" />
+<AGE id="P2" start="107" end="109" text="86" TYPE="AGE" comment="" />
+<DATE id="P3" start="172" end="177" text="11/92" TYPE="DATE" comment="" />
+<DATE id="P4" start="507" end="511" text="2082" TYPE="DATE" comment="" />
+<DATE id="P5" start="522" end="526" text="2082" TYPE="DATE" comment="" />
+<DATE id="P6" start="555" end="559" text="2082" TYPE="DATE" comment="" />
+<DATE id="P7" start="566" end="570" text="2087" TYPE="DATE" comment="" />
+<DATE id="P8" start="679" end="684" text="11/92" TYPE="DATE" comment="" />
+<DATE id="P9" start="731" end="735" text="7/88" TYPE="DATE" comment="" />
+<DATE id="P10" start="790" end="795" text="10/91" TYPE="DATE" comment="" />
+<DATE id="P11" start="847" end="852" text="10/92" TYPE="DATE" comment="" />
+<DATE id="P12" start="884" end="889" text="12/92" TYPE="DATE" comment="" />
+<AGE id="P13" start="1384" end="1386" text="84" TYPE="AGE" comment="" />
+<AGE id="P14" start="1412" end="1416" text="80's" TYPE="AGE" comment="" />
+<LOCATION id="P15" start="1425" end="1433" text="Oklahoma" TYPE="STATE" comment="" />
+<LOCATION id="P16" start="1442" end="1451" text="New Hamp." TYPE="STATE" comment="" />
+<DATE id="P17" start="2284" end="2289" text="10/92" TYPE="DATE" comment="" />
+<NAME id="P18" start="2603" end="2621" text="Eggleston, William" TYPE="DOCTOR" comment="" />
+<DATE id="P19" start="2625" end="2637" text="Jan 31, 2094" TYPE="DATE" comment="" />
 </TAGS>
 </deIdi2b2>

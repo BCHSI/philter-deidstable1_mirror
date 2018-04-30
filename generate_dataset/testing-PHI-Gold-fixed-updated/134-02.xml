@@ -1,6 +1,6 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT>
+<TEXT><![CDATA[
 
 
 Record date: 2089-05-11
@@ -30,7 +30,7 @@ per day along with 1 Hyzaar tablet per day.  Otherwise, the review of systems is
 unremarkable.
 
 PHYSICAL EXAMINATION:  He looks cheerful and fit.  Blood pressure in the 
-right arm, sitting 140/86 with regular pulse 64.  Chest is clear to P&amp;A.  Heart 
+right arm, sitting 140/86 with regular pulse 64.  Chest is clear to P&A.  Heart 
 sounds are very faint, but appear normal with normal rate and rhythm.  Neck 
 veins are not distended.  Abdomen is nontender.  Extremities have good dorsalis 
 pedis pulses.  Sensation in feet is intact to light touch and vibration.
@@ -94,19 +94,22 @@ O
 
 
 
-</TEXT>
+]]></TEXT>
 <TAGS>
-<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2089-05-11" />
-<NAME TYPE="PATIENT" comment="" end="110" id="P1" start="97" text="JARVIS,AMADOR" />
-<ID TYPE="MEDICALRECORD" comment="" end="125" id="P2" start="118" text="0907307" />
-<DATE TYPE="DATE" comment="" end="214" id="P4" start="204" text="05/11/2089" />
-<NAME TYPE="PATIENT" comment="" end="249" id="P5" start="243" text="Jarvis" />
-<PROFESSION TYPE="PROFESSION" comment="" end="452" id="P6" start="434" text="production manager" />
-<DATE TYPE="DATE" comment="" end="496" id="P7" start="490" text="spring" />
-<LOCATION TYPE="STATE" comment="" end="628" id="P10" start="618" text="New Mexico" />
-<NAME TYPE="DOCTOR" comment="" end="1682" id="P11" start="1672" text="Jose Quirk" />
-<NAME TYPE="DOCTOR" comment="" end="1991" id="P12" start="1978" text="Orvell Oliver" />
-<NAME TYPE="PATIENT" comment="" end="2948" id="P13" start="2942" text="Jarvis" />
-<NAME TYPE="DOCTOR" comment="" end="3544" id="P14" start="3543" text="O" />
+<DATE id="P0" start="16" end="26" text="2089-05-11" TYPE="DATE" comment="" />
+<NAME id="P1" start="97" end="110" text="JARVIS,AMADOR" TYPE="PATIENT" comment="" />
+<ID id="P2" start="118" end="125" text="0907307" TYPE="MEDICALRECORD" comment="" />
+<LOCATION id="P3" start="125" end="128" text="PCC" TYPE="HOSPITAL" comment="" />
+<DATE id="P4" start="204" end="214" text="05/11/2089" TYPE="DATE" comment="" />
+<NAME id="P5" start="243" end="249" text="Jarvis" TYPE="PATIENT" comment="" />
+<PROFESSION id="P6" start="434" end="452" text="production manager" TYPE="PROFESSION" comment="" />
+<DATE id="P7" start="490" end="496" text="spring" TYPE="DATE" comment="" />
+<LOCATION id="P8" start="539" end="544" text="Italy" TYPE="COUNTRY" comment="" />
+<LOCATION id="P9" start="549" end="555" text="Greece" TYPE="COUNTRY" comment="" />
+<LOCATION id="P10" start="618" end="628" text="New Mexico" TYPE="STATE" comment="" />
+<NAME id="P11" start="1672" end="1682" text="Jose Quirk" TYPE="DOCTOR" comment="" />
+<NAME id="P12" start="1978" end="1991" text="Orvell Oliver" TYPE="DOCTOR" comment="" />
+<NAME id="P13" start="2942" end="2948" text="Jarvis" TYPE="PATIENT" comment="" />
+<NAME id="P14" start="3543" end="3544" text="O" TYPE="DOCTOR" comment="" />
 </TAGS>
 </deIdi2b2>

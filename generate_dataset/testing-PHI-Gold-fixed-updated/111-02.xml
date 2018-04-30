@@ -1,6 +1,6 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT>
+<TEXT><![CDATA[
 
 
 Record date: 2083-08-26
@@ -109,18 +109,21 @@ Dictated by:  PERRY UPSHAW, M.D.       PU38
 
 
 
-</TEXT>
+]]></TEXT>
 <TAGS>
-<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2083-08-26" />
-<NAME TYPE="PATIENT" comment="" end="98" id="P2" start="87" text="OROZCO,KYLE" />
-<ID TYPE="MEDICALRECORD" comment="" end="112" id="P3" start="101" text="560-40-78-5" />
-<DATE TYPE="DATE" comment="" end="153" id="P4" start="145" text="08/26/83" />
-<ID TYPE="IDNUM" comment="" end="2745" id="P7" start="2734" text="VF918/05141" />
-<NAME TYPE="DOCTOR" comment="" end="2759" id="P8" start="2747" text="PERRY UPSHAW" />
-<NAME TYPE="USERNAME" comment="" end="2776" id="P9" start="2772" text="PU38" />
-<DATE TYPE="DATE" comment="" end="2813" id="P10" start="2805" text="08/26/83" />
-<DATE TYPE="DATE" comment="" end="2881" id="P11" start="2873" text="08/27/83" />
-<NAME TYPE="DOCTOR" comment="" end="2910" id="P12" start="2898" text="PERRY UPSHAW" />
-<NAME TYPE="USERNAME" comment="" end="2927" id="P13" start="2923" text="PU38" />
+<DATE id="P0" start="16" end="26" text="2083-08-26" TYPE="DATE" comment="" />
+<LOCATION id="P1" start="49" end="61" text="SILVER RIDGE" TYPE="HOSPITAL" comment="" />
+<NAME id="P2" start="87" end="98" text="OROZCO,KYLE" TYPE="PATIENT" comment="" />
+<ID id="P3" start="101" end="112" text="560-40-78-5" TYPE="MEDICALRECORD" comment="" />
+<DATE id="P4" start="145" end="153" text="08/26/83" TYPE="DATE" comment="" />
+<AGE id="P5" start="269" end="271" text="58" TYPE="AGE" comment="" />
+<AGE id="P6" start="1970" end="1972" text="58" TYPE="AGE" comment="" />
+<ID id="P7" start="2734" end="2745" text="VF918/05141" TYPE="IDNUM" comment="" />
+<NAME id="P8" start="2747" end="2759" text="PERRY UPSHAW" TYPE="DOCTOR" comment="" />
+<NAME id="P9" start="2772" end="2776" text="PU38" TYPE="USERNAME" comment="" />
+<DATE id="P10" start="2805" end="2813" text="08/26/83" TYPE="DATE" comment="" />
+<DATE id="P11" start="2873" end="2881" text="08/27/83" TYPE="DATE" comment="" />
+<NAME id="P12" start="2898" end="2910" text="PERRY UPSHAW" TYPE="DOCTOR" comment="" />
+<NAME id="P13" start="2923" end="2927" text="PU38" TYPE="USERNAME" comment="" />
 </TAGS>
 </deIdi2b2>

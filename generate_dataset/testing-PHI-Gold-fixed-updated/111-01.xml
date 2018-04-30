@@ -1,6 +1,6 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT>
+<TEXT><![CDATA[
 
 
 Record date: 2083-07-20
@@ -73,19 +73,21 @@ Dictated by:  FILBERT BRIGHT, M.D.    FB59
 
 
 
-</TEXT>
+]]></TEXT>
 <TAGS>
-<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2083-07-20" />
-<NAME TYPE="PATIENT" comment="" end="98" id="P2" start="87" text="OROZCO,KYLE" />
-<ID TYPE="MEDICALRECORD" comment="" end="112" id="P3" start="101" text="560-40-78-5" />
-<DATE TYPE="DATE" comment="" end="153" id="P4" start="145" text="07/20/83" />
-<DATE TYPE="DATE" comment="" end="348" id="P6" start="341" text="8-09-83" />
-<ID TYPE="IDNUM" comment="" end="1612" id="P7" start="1601" text="XW277/90683" />
-<NAME TYPE="DOCTOR" comment="" end="1629" id="P8" start="1615" text="FILBERT BRIGHT" />
-<NAME TYPE="USERNAME" comment="" end="1643" id="P9" start="1639" text="FB59" />
-<DATE TYPE="DATE" comment="" end="1674" id="P10" start="1666" text="07/20/83" />
-<DATE TYPE="DATE" comment="" end="1742" id="P11" start="1734" text="07/20/83" />
-<NAME TYPE="DOCTOR" comment="" end="1773" id="P12" start="1759" text="FILBERT BRIGHT" />
-<NAME TYPE="USERNAME" comment="" end="1787" id="P13" start="1783" text="FB59" />
+<DATE id="P0" start="16" end="26" text="2083-07-20" TYPE="DATE" comment="" />
+<LOCATION id="P1" start="49" end="61" text="SILVER RIDGE" TYPE="HOSPITAL" comment="" />
+<NAME id="P2" start="87" end="98" text="OROZCO,KYLE" TYPE="PATIENT" comment="" />
+<ID id="P3" start="101" end="112" text="560-40-78-5" TYPE="MEDICALRECORD" comment="" />
+<DATE id="P4" start="145" end="153" text="07/20/83" TYPE="DATE" comment="" />
+<AGE id="P5" start="239" end="241" text="58" TYPE="AGE" comment="" />
+<DATE id="P6" start="341" end="348" text="8-09-83" TYPE="DATE" comment="" />
+<ID id="P7" start="1601" end="1612" text="XW277/90683" TYPE="IDNUM" comment="" />
+<NAME id="P8" start="1615" end="1629" text="FILBERT BRIGHT" TYPE="DOCTOR" comment="" />
+<NAME id="P9" start="1639" end="1643" text="FB59" TYPE="USERNAME" comment="" />
+<DATE id="P10" start="1666" end="1674" text="07/20/83" TYPE="DATE" comment="" />
+<DATE id="P11" start="1734" end="1742" text="07/20/83" TYPE="DATE" comment="" />
+<NAME id="P12" start="1759" end="1773" text="FILBERT BRIGHT" TYPE="DOCTOR" comment="" />
+<NAME id="P13" start="1783" end="1787" text="FB59" TYPE="USERNAME" comment="" />
 </TAGS>
 </deIdi2b2>

@@ -1,6 +1,6 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT>
+<TEXT><![CDATA[
 
 
 Record date: 2079-10-02
@@ -116,17 +116,19 @@ Erik D. Raines, M.D.
 
 
 
-</TEXT>
+]]></TEXT>
 <TAGS>
-<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2079-10-02" />
-<DATE TYPE="DATE" comment="" end="1194" id="P3" start="1188" text="spring" />
-<DATE TYPE="DATE" comment="" end="1457" id="P4" start="1449" text="11/15/77" />
-<DATE TYPE="DATE" comment="" end="1544" id="P5" start="1538" text="oct 12" />
-<DATE TYPE="DATE" comment="" end="2205" id="P6" start="2194" text="oct 12 2077" />
-<DATE TYPE="DATE" comment="" end="2376" id="P7" start="2368" text="11/15/77" />
-<DATE TYPE="DATE" comment="" end="3039" id="P8" start="3032" text="8/03/76" />
-<NAME TYPE="DOCTOR" comment="" end="6288" id="P11" start="6281" text="Ferrara" />
-<DATE TYPE="DATE" comment="" end="6338" id="P12" start="6331" text="7/16/79" />
-<NAME TYPE="DOCTOR" comment="" end="6583" id="P13" start="6569" text="Erik D. Raines" />
+<DATE id="P0" start="16" end="26" text="2079-10-02" TYPE="DATE" comment="" />
+<AGE id="P1" start="29" end="31" text="71" TYPE="AGE" comment="" />
+<DATE id="P3" start="1188" end="1194" text="spring" TYPE="DATE" comment="" />
+<DATE id="P4" start="1449" end="1457" text="11/15/77" TYPE="DATE" comment="" />
+<DATE id="P5" start="1538" end="1544" text="oct 12" TYPE="DATE" comment="" />
+<DATE id="P6" start="2194" end="2205" text="oct 12 2077" TYPE="DATE" comment="" />
+<DATE id="P7" start="2368" end="2376" text="11/15/77" TYPE="DATE" comment="" />
+<DATE id="P8" start="3032" end="3039" text="8/03/76" TYPE="DATE" comment="" />
+<AGE id="P9" start="3394" end="3396" text="71" TYPE="AGE" comment="" />
+<NAME id="P11" start="6281" end="6288" text="Ferrara" TYPE="DOCTOR" comment="" />
+<DATE id="P12" start="6331" end="6338" text="7/16/79" TYPE="DATE" comment="" />
+<NAME id="P13" start="6569" end="6583" text="Erik D. Raines" TYPE="DOCTOR" comment="" />
 </TAGS>
 </deIdi2b2>

@@ -1,6 +1,6 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT>
+<TEXT><![CDATA[
 
 
 Record date: 2089-11-05
@@ -135,18 +135,21 @@ eScription document:0-6602107 BFFocus
 
 
 
-</TEXT>
+]]></TEXT>
 <TAGS>
-<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2089-11-05" />
-<ID TYPE="MEDICALRECORD" comment="" end="42" id="P1" start="34" text="43294739" />
-<NAME TYPE="PATIENT" comment="" end="58" id="P2" start="43" text="FINNEY, INDIANA" />
-<DATE TYPE="DATE" comment="" end="67" id="P3" start="59" text="11/04/89" />
-<NAME TYPE="DOCTOR" comment="" end="82" id="P4" start="68" text="YEAGER, HAROLD" />
-<NAME TYPE="DOCTOR" comment="" end="118" id="P5" start="112" text="Sawyer" />
-<NAME TYPE="DOCTOR" comment="" end="3182" id="P9" start="3168" text="YEAGER, HAROLD" />
-<DATE TYPE="DATE" comment="" end="3200" id="P10" start="3192" text="11/05/89" />
-<DATE TYPE="DATE" comment="" end="3213" id="P11" start="3205" text="11/05/89" />
-<NAME TYPE="DOCTOR" comment="" end="3242" id="P12" start="3228" text="YEAGER, HAROLD" />
-<ID TYPE="IDNUM" comment="" end="3273" id="P13" start="3264" text="0-6602107" />
+<DATE id="P0" start="16" end="26" text="2089-11-05" TYPE="DATE" comment="" />
+<ID id="P1" start="34" end="42" text="43294739" TYPE="MEDICALRECORD" comment="" />
+<NAME id="P2" start="43" end="58" text="FINNEY, INDIANA" TYPE="PATIENT" comment="" />
+<DATE id="P3" start="59" end="67" text="11/04/89" TYPE="DATE" comment="" />
+<NAME id="P4" start="68" end="82" text="YEAGER, HAROLD" TYPE="DOCTOR" comment="" />
+<NAME id="P5" start="112" end="118" text="Sawyer" TYPE="DOCTOR" comment="" />
+<AGE id="P6" start="407" end="409" text="52" TYPE="AGE" comment="" />
+<AGE id="P7" start="2122" end="2124" text="52" TYPE="AGE" comment="" />
+<LOCATION id="P8" start="2778" end="2784" text="KEKELA" TYPE="HOSPITAL" comment="" />
+<NAME id="P9" start="3168" end="3182" text="YEAGER, HAROLD" TYPE="DOCTOR" comment="" />
+<DATE id="P10" start="3192" end="3200" text="11/05/89" TYPE="DATE" comment="" />
+<DATE id="P11" start="3205" end="3213" text="11/05/89" TYPE="DATE" comment="" />
+<NAME id="P12" start="3228" end="3242" text="YEAGER, HAROLD" TYPE="DOCTOR" comment="" />
+<ID id="P13" start="3264" end="3273" text="0-6602107" TYPE="IDNUM" comment="" />
 </TAGS>
 </deIdi2b2>

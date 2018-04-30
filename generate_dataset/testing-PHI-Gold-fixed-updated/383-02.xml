@@ -1,6 +1,6 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT>
+<TEXT><![CDATA[
 
 
 Record date: 2114-09-25
@@ -107,17 +107,17 @@ TDK/gillis/dougherty
 
 
 
-</TEXT>
+]]></TEXT>
 <TAGS>
-<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2114-09-25" />
-<NAME TYPE="PATIENT" comment="" end="56" id="P1" start="43" text="Werner, Brian" />
-<ID TYPE="MEDICALRECORD" comment="" end="76" id="P2" start="69" text="4097229" />
-<DATE TYPE="DATE" comment="" end="636" id="P3" start="630" text="5/8/14" />
-<DATE TYPE="DATE" comment="" end="976" id="P4" start="972" text="2112" />
-<DATE TYPE="DATE" comment="" end="1024" id="P5" start="1019" text="10/14" />
-<NAME TYPE="DOCTOR" comment="" end="1721" id="P6" start="1705" text="Thomas D. Kinney" />
-<NAME TYPE="USERNAME" comment="" end="1734" id="P7" start="1731" text="TDK" />
-<NAME TYPE="DOCTOR" comment="" end="1741" id="P8" start="1735" text="gillis" />
-<NAME TYPE="DOCTOR" comment="" end="1751" id="P9" start="1742" text="dougherty" />
+<DATE id="P0" start="16" end="26" text="2114-09-25" TYPE="DATE" comment="" />
+<NAME id="P1" start="43" end="56" text="Werner, Brian" TYPE="PATIENT" comment="" />
+<ID id="P2" start="69" end="76" text="4097229" TYPE="MEDICALRECORD" comment="" />
+<DATE id="P3" start="630" end="636" text="5/8/14" TYPE="DATE" comment="" />
+<DATE id="P4" start="972" end="976" text="2112" TYPE="DATE" comment="" />
+<DATE id="P5" start="1019" end="1024" text="10/14" TYPE="DATE" comment="" />
+<NAME id="P6" start="1705" end="1721" text="Thomas D. Kinney" TYPE="DOCTOR" comment="" />
+<NAME id="P7" start="1731" end="1734" text="TDK" TYPE="USERNAME" comment="" />
+<NAME id="P8" start="1735" end="1741" text="gillis" TYPE="DOCTOR" comment="" />
+<NAME id="P9" start="1742" end="1751" text="dougherty" TYPE="DOCTOR" comment="" />
 </TAGS>
 </deIdi2b2>

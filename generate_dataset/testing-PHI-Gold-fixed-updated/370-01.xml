@@ -1,6 +1,6 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT>
+<TEXT><![CDATA[
 
 
 Record date: 2063-09-04
@@ -33,11 +33,11 @@ Otha V. Espinal, M.D.
 
 
 
-</TEXT>
+]]></TEXT>
 <TAGS>
-<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2063-09-04" />
-<ID TYPE="MEDICALRECORD" comment="" end="66" id="P1" start="55" text="124-23-22-9" />
-<NAME TYPE="DOCTOR" comment="" end="875" id="P2" start="863" text="Isaiah Viola" />
-<NAME TYPE="DOCTOR" comment="" end="961" id="P3" start="946" text="Otha V. Espinal" />
+<DATE id="P0" start="16" end="26" text="2063-09-04" TYPE="DATE" comment="" />
+<ID id="P1" start="55" end="66" text="124-23-22-9" TYPE="MEDICALRECORD" comment="" />
+<NAME id="P2" start="863" end="875" text="Isaiah Viola" TYPE="DOCTOR" comment="" />
+<NAME id="P3" start="946" end="961" text="Otha V. Espinal" TYPE="DOCTOR" comment="" />
 </TAGS>
 </deIdi2b2>

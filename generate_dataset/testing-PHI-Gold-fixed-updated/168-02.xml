@@ -1,6 +1,6 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT>
+<TEXT><![CDATA[
 
 
 Record date: 2073-03-25
@@ -61,17 +61,20 @@ cc:	Harold Elliott, M.D.
 
 
 
-</TEXT>
+]]></TEXT>
 <TAGS>
-<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2073-03-25" />
-<NAME TYPE="PATIENT" comment="" end="89" id="P2" start="77" text="Victor Lujan" />
-<ID TYPE="MEDICALRECORD" comment="" end="106" id="P4" start="97" text="018-92-33" />
-<DATE TYPE="DATE" comment="" end="121" id="P5" start="107" text="March 25, 2073" />
-<DATE TYPE="DATE" comment="" end="1431" id="P7" start="1427" text="2062" />
-<NAME TYPE="DOCTOR" comment="" end="2424" id="P8" start="2403" text="Vance-Ernest Yamasaki" />
-<NAME TYPE="DOCTOR" comment="" end="2450" id="P9" start="2447" text="VEY" />
-<NAME TYPE="DOCTOR" comment="" end="2456" id="P10" start="2451" text="kiser" />
-<ID TYPE="IDNUM" comment="" end="2469" id="P11" start="2458" text="59-56557099" />
-<NAME TYPE="DOCTOR" comment="" end="2493" id="P12" start="2479" text="Harold Elliott" />
+<DATE id="P0" start="16" end="26" text="2073-03-25" TYPE="DATE" comment="" />
+<LOCATION id="P1" start="29" end="61" text="THE SPECIALTY HOSPITAL OF AUSTIN" TYPE="HOSPITAL" comment="" />
+<NAME id="P2" start="77" end="89" text="Victor Lujan" TYPE="PATIENT" comment="" />
+<LOCATION id="P3" start="90" end="93" text="SMH" TYPE="HOSPITAL" comment="" />
+<ID id="P4" start="97" end="106" text="018-92-33" TYPE="MEDICALRECORD" comment="" />
+<DATE id="P5" start="107" end="121" text="March 25, 2073" TYPE="DATE" comment="" />
+<AGE id="P6" start="235" end="237" text="54" TYPE="AGE" comment="" />
+<DATE id="P7" start="1427" end="1431" text="2062" TYPE="DATE" comment="" />
+<NAME id="P8" start="2403" end="2424" text="Vance-Ernest Yamasaki" TYPE="DOCTOR" comment="" />
+<NAME id="P9" start="2447" end="2450" text="VEY" TYPE="DOCTOR" comment="" />
+<NAME id="P10" start="2451" end="2456" text="kiser" TYPE="DOCTOR" comment="" />
+<ID id="P11" start="2458" end="2469" text="59-56557099" TYPE="IDNUM" comment="" />
+<NAME id="P12" start="2479" end="2493" text="Harold Elliott" TYPE="DOCTOR" comment="" />
 </TAGS>
 </deIdi2b2>

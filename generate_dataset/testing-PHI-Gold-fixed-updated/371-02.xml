@@ -1,6 +1,6 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT>
+<TEXT><![CDATA[
 
 
 Record date: 2076-03-23
@@ -161,12 +161,17 @@ Patient will return for a follow-up visit in clinic in 1 wk for chem 7 and 1 mon
 
 
 
-</TEXT>
+]]></TEXT>
 <TAGS>
-<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2076-03-23" />
-<DATE TYPE="DATE" comment="" end="443" id="P4" start="437" text="3/9/76" />
-<DATE TYPE="DATE" comment="" end="2339" id="P5" start="2329" text="march 2076" />
-<DATE TYPE="DATE" comment="" end="2588" id="P6" start="2584" text="2074" />
-<DATE TYPE="DATE" comment="" end="2641" id="P7" start="2637" text="2074" />
+<DATE id="P0" start="16" end="26" text="2076-03-23" TYPE="DATE" comment="" />
+<LOCATION id="P1" start="70" end="85" text="Lakeview Clinic" TYPE="HOSPITAL" comment="" />
+<LOCATION id="P2" start="308" end="319" text="South Korea" TYPE="COUNTRY" comment="" />
+<LOCATION id="P3" start="397" end="403" text="canada" TYPE="COUNTRY" comment="" />
+<DATE id="P4" start="437" end="443" text="3/9/76" TYPE="DATE" comment="" />
+<DATE id="P5" start="2329" end="2339" text="march 2076" TYPE="DATE" comment="" />
+<DATE id="P6" start="2584" end="2588" text="2074" TYPE="DATE" comment="" />
+<DATE id="P7" start="2637" end="2641" text="2074" TYPE="DATE" comment="" />
+<AGE id="P8" start="2680" end="2682" text="67" TYPE="AGE" comment="" />
+<AGE id="P9" start="4189" end="4191" text="67" TYPE="AGE" comment="" />
 </TAGS>
 </deIdi2b2>

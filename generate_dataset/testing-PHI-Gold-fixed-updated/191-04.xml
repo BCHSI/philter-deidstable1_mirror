@@ -1,6 +1,6 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT>
+<TEXT><![CDATA[
 
 
 Record date: 2096-06-02
@@ -49,7 +49,7 @@ Doxycycline HYCLATE 100MG TABLET take 1 Tablet(s) GTUBE BID
 
 Amlodipine 10MG TABLET take 1 Tablet(s) GTUBE QD 
 
-Atenolol 50 MG PO qhs , take 1/2 tab/day , if heart rate&gt;50, can increase to one tablet/day
+Atenolol 50 MG PO qhs , take 1/2 tab/day , if heart rate>50, can increase to one tablet/day
 
 Hydrochlorothiazide 25 MG (25MG TABLET take 1) PO QD 
 
@@ -109,10 +109,10 @@ f/u in 3 mos
 
 
 
-</TEXT>
+]]></TEXT>
 <TAGS>
-<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2096-06-02" />
-<DATE TYPE="DATE" comment="" end="218" id="P1" start="214" text="2091" />
-<DATE TYPE="DATE" comment="" end="1691" id="P2" start="1682" text="wednesday" />
+<DATE id="P0" start="16" end="26" text="2096-06-02" TYPE="DATE" comment="" />
+<DATE id="P1" start="214" end="218" text="2091" TYPE="DATE" comment="" />
+<DATE id="P2" start="1682" end="1691" text="wednesday" TYPE="DATE" comment="" />
 </TAGS>
 </deIdi2b2>

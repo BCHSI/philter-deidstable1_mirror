@@ -1,6 +1,6 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT>
+<TEXT><![CDATA[
 
 
 Record date: 2064-01-08
@@ -24,7 +24,7 @@ CC/ID:	clotted AV fistula / renal failure
 
 
 
-HPI: 	The patient is a 55 year old male with a past medical history significant for chronic renal failure (secondary to diabetes &amp; hypertension) and gastrointestinal mucormycosis who underwent an arteriovenous graft placement ten days prior to admission. The patient was doing well until a few days prior to admission when he noticed a swelling in his new graft and a decrease in the degree of its pulse. Then on the morning of admission when he noticed his graft was without a palpable pulse or thrill. The patient then presented to the EDUCARE-PULLMAN ER for evaluation and treatment. 
+HPI: 	The patient is a 55 year old male with a past medical history significant for chronic renal failure (secondary to diabetes & hypertension) and gastrointestinal mucormycosis who underwent an arteriovenous graft placement ten days prior to admission. The patient was doing well until a few days prior to admission when he noticed a swelling in his new graft and a decrease in the degree of its pulse. Then on the morning of admission when he noticed his graft was without a palpable pulse or thrill. The patient then presented to the EDUCARE-PULLMAN ER for evaluation and treatment. 
 
 
 
@@ -42,7 +42,7 @@ Diabetic neuropathy
 
 Hypertension		
 
-Chronic renal disease		- secondary to diabetes &amp; hypertension, baseline Cr 4
+Chronic renal disease		- secondary to diabetes & hypertension, baseline Cr 4
 
 Anemia				- baseline hematocrit mid 30s
 
@@ -142,7 +142,7 @@ Neck:  		supple.
 
 Chest: 		clear to auscultation bilaterally.
 
-CVS:  		regular rate &amp; rhythm, III/VI holosystolic murmurs, no rubs.
+CVS:  		regular rate & rhythm, III/VI holosystolic murmurs, no rubs.
 
 Abd:  		soft, non-distended, non-tender to palpation, normoactive bowel sounds.
 
@@ -240,7 +240,7 @@ Urinalysis
 
 
 
-Micro:		Blood &amp; urine cultures pending
+Micro:		Blood & urine cultures pending
 
 
 
@@ -248,7 +248,7 @@ UpperExt U/S:	Clotted right upper extremity arteriovenous graft.
 
 
 
-Impression:  	55 year old male with chronic renal failure, hypertension, diabetes and gastrointestinal mucormycosis who is s/p AV graft placement presents with clotted AV graft &amp; renal failure.
+Impression:  	55 year old male with chronic renal failure, hypertension, diabetes and gastrointestinal mucormycosis who is s/p AV graft placement presents with clotted AV graft & renal failure.
 
 
 
@@ -290,7 +290,7 @@ Prophylaxis
 
    	DVT prophylaxis: 	will encourage ambulation 
 
-   	GI prophylaxis: 	will initiate nexium &amp; colace
+   	GI prophylaxis: 	will initiate nexium & colace
 
 
 
@@ -310,71 +310,77 @@ Pager #89356
 
 
 
-</TEXT>
+]]></TEXT>
 <TAGS>
-<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2064-01-08" />
-<NAME TYPE="PATIENT" comment="" end="111" id="P2" start="94" text="Ethridge, Clayton" />
-<ID TYPE="MEDICALRECORD" comment="" end="139" id="P3" start="132" text="8381729" />
-<DATE TYPE="DATE" comment="" end="169" id="P4" start="161" text="01/08/64" />
-<NAME TYPE="DOCTOR" comment="" end="193" id="P5" start="187" text="Burton" />
-<LOCATION TYPE="CITY" comment="" end="1899" id="P8" start="1891" text="Kemmerer" />
-<PROFESSION TYPE="PROFESSION" comment="" end="2011" id="P11" start="2004" text="Glazier" />
-<DATE TYPE="DATE" comment="" end="2139" id="P12" start="2131" text="thursday" />
-<DATE TYPE="DATE" comment="" end="2166" id="P13" start="2157" text="wednesday" />
-<DATE TYPE="DATE" comment="" end="3412" id="P14" start="3404" text="01/08/64" />
-<DATE TYPE="DATE" comment="" end="3438" id="P15" start="3430" text="08/28/62" />
-<DATE TYPE="DATE" comment="" end="3501" id="P16" start="3493" text="01/08/64" />
-<DATE TYPE="DATE" comment="" end="3527" id="P17" start="3519" text="01/08/64" />
-<DATE TYPE="DATE" comment="" end="3590" id="P18" start="3582" text="01/08/64" />
-<DATE TYPE="DATE" comment="" end="3616" id="P19" start="3608" text="01/08/64" />
-<DATE TYPE="DATE" comment="" end="3679" id="P20" start="3671" text="01/08/64" />
-<DATE TYPE="DATE" comment="" end="3705" id="P21" start="3697" text="01/08/64" />
-<DATE TYPE="DATE" comment="" end="3768" id="P22" start="3760" text="01/08/64" />
-<DATE TYPE="DATE" comment="" end="3794" id="P23" start="3786" text="01/08/64" />
-<DATE TYPE="DATE" comment="" end="3857" id="P24" start="3849" text="01/08/64" />
-<DATE TYPE="DATE" comment="" end="3883" id="P25" start="3875" text="01/08/64" />
-<DATE TYPE="DATE" comment="" end="3946" id="P26" start="3938" text="01/08/64" />
-<DATE TYPE="DATE" comment="" end="3972" id="P27" start="3964" text="01/08/64" />
-<DATE TYPE="DATE" comment="" end="4071" id="P28" start="4063" text="01/08/64" />
-<DATE TYPE="DATE" comment="" end="4097" id="P29" start="4089" text="04/29/63" />
-<DATE TYPE="DATE" comment="" end="4160" id="P30" start="4152" text="01/08/64" />
-<DATE TYPE="DATE" comment="" end="4186" id="P31" start="4178" text="01/08/64" />
-<DATE TYPE="DATE" comment="" end="4249" id="P32" start="4241" text="01/08/64" />
-<DATE TYPE="DATE" comment="" end="4275" id="P33" start="4267" text="01/08/64" />
-<DATE TYPE="DATE" comment="" end="4338" id="P34" start="4330" text="01/08/64" />
-<DATE TYPE="DATE" comment="" end="4364" id="P35" start="4356" text="01/08/64" />
-<DATE TYPE="DATE" comment="" end="4427" id="P36" start="4419" text="01/08/64" />
-<DATE TYPE="DATE" comment="" end="4453" id="P37" start="4445" text="12/22/63" />
-<DATE TYPE="DATE" comment="" end="4516" id="P38" start="4508" text="01/08/64" />
-<DATE TYPE="DATE" comment="" end="4584" id="P39" start="4576" text="01/08/64" />
-<DATE TYPE="DATE" comment="" end="4610" id="P40" start="4602" text="07/09/62" />
-<DATE TYPE="DATE" comment="" end="4673" id="P41" start="4665" text="01/08/64" />
-<DATE TYPE="DATE" comment="" end="4699" id="P42" start="4691" text="08/27/62" />
-<DATE TYPE="DATE" comment="" end="4762" id="P43" start="4754" text="01/08/64" />
-<DATE TYPE="DATE" comment="" end="4788" id="P44" start="4780" text="01/08/64" />
-<DATE TYPE="DATE" comment="" end="4875" id="P45" start="4867" text="01/08/64" />
-<DATE TYPE="DATE" comment="" end="4901" id="P46" start="4893" text="08/27/62" />
-<DATE TYPE="DATE" comment="" end="4964" id="P47" start="4956" text="01/08/64" />
-<DATE TYPE="DATE" comment="" end="4990" id="P48" start="4982" text="01/08/64" />
-<DATE TYPE="DATE" comment="" end="5053" id="P49" start="5045" text="01/08/64" />
-<DATE TYPE="DATE" comment="" end="5079" id="P50" start="5071" text="08/27/62" />
-<DATE TYPE="DATE" comment="" end="5142" id="P51" start="5134" text="01/08/64" />
-<DATE TYPE="DATE" comment="" end="5210" id="P52" start="5202" text="01/08/64" />
-<DATE TYPE="DATE" comment="" end="5292" id="P53" start="5284" text="01/08/64" />
-<DATE TYPE="DATE" comment="" end="5360" id="P54" start="5352" text="01/08/64" />
-<DATE TYPE="DATE" comment="" end="5428" id="P55" start="5420" text="01/08/64" />
-<DATE TYPE="DATE" comment="" end="5454" id="P56" start="5446" text="07/16/59" />
-<DATE TYPE="DATE" comment="" end="5517" id="P57" start="5509" text="01/08/64" />
-<DATE TYPE="DATE" comment="" end="5585" id="P58" start="5577" text="01/08/64" />
-<DATE TYPE="DATE" comment="" end="5653" id="P59" start="5645" text="01/08/64" />
-<DATE TYPE="DATE" comment="" end="5721" id="P60" start="5713" text="01/08/64" />
-<DATE TYPE="DATE" comment="" end="5789" id="P61" start="5781" text="01/08/64" />
-<DATE TYPE="DATE" comment="" end="5857" id="P62" start="5849" text="01/08/64" />
-<DATE TYPE="DATE" comment="" end="5925" id="P63" start="5917" text="01/08/64" />
-<DATE TYPE="DATE" comment="" end="5993" id="P64" start="5985" text="01/08/64" />
-<DATE TYPE="DATE" comment="" end="6061" id="P65" start="6053" text="01/08/64" />
-<DATE TYPE="DATE" comment="" end="6437" id="P67" start="6432" text="01/09" />
-<NAME TYPE="DOCTOR" comment="" end="7169" id="P69" start="7151" text="Uriel Q. Yarbrough" />
-<CONTACT TYPE="PHONE" comment="" end="7187" id="P70" start="7182" text="89356" />
+<DATE id="P0" start="16" end="26" text="2064-01-08" TYPE="DATE" comment="" />
+<NAME id="P2" start="94" end="111" text="Ethridge, Clayton" TYPE="PATIENT" comment="" />
+<ID id="P3" start="132" end="139" text="8381729" TYPE="MEDICALRECORD" comment="" />
+<DATE id="P4" start="161" end="169" text="01/08/64" TYPE="DATE" comment="" />
+<NAME id="P5" start="187" end="193" text="Burton" TYPE="DOCTOR" comment="" />
+<AGE id="P6" start="265" end="267" text="55" TYPE="AGE" comment="" />
+<LOCATION id="P7" start="780" end="795" text="EDUCARE-PULLMAN" TYPE="HOSPITAL" comment="" />
+<LOCATION id="P8" start="1891" end="1899" text="Kemmerer" TYPE="CITY" comment="" />
+<LOCATION id="P9" start="1907" end="1932" text="Chestnut Lodge Sanitarium" TYPE="HOSPITAL" comment="" />
+<LOCATION id="P10" start="1945" end="1955" text="Kazakhstan" TYPE="COUNTRY" comment="" />
+<PROFESSION id="P11" start="2004" end="2011" text="Glazier" TYPE="PROFESSION" comment="" />
+<DATE id="P12" start="2131" end="2139" text="thursday" TYPE="DATE" comment="" />
+<DATE id="P13" start="2157" end="2166" text="wednesday" TYPE="DATE" comment="" />
+<DATE id="P14" start="3404" end="3412" text="01/08/64" TYPE="DATE" comment="" />
+<DATE id="P15" start="3430" end="3438" text="08/28/62" TYPE="DATE" comment="" />
+<DATE id="P16" start="3493" end="3501" text="01/08/64" TYPE="DATE" comment="" />
+<DATE id="P17" start="3519" end="3527" text="01/08/64" TYPE="DATE" comment="" />
+<DATE id="P18" start="3582" end="3590" text="01/08/64" TYPE="DATE" comment="" />
+<DATE id="P19" start="3608" end="3616" text="01/08/64" TYPE="DATE" comment="" />
+<DATE id="P20" start="3671" end="3679" text="01/08/64" TYPE="DATE" comment="" />
+<DATE id="P21" start="3697" end="3705" text="01/08/64" TYPE="DATE" comment="" />
+<DATE id="P22" start="3760" end="3768" text="01/08/64" TYPE="DATE" comment="" />
+<DATE id="P23" start="3786" end="3794" text="01/08/64" TYPE="DATE" comment="" />
+<DATE id="P24" start="3849" end="3857" text="01/08/64" TYPE="DATE" comment="" />
+<DATE id="P25" start="3875" end="3883" text="01/08/64" TYPE="DATE" comment="" />
+<DATE id="P26" start="3938" end="3946" text="01/08/64" TYPE="DATE" comment="" />
+<DATE id="P27" start="3964" end="3972" text="01/08/64" TYPE="DATE" comment="" />
+<DATE id="P28" start="4063" end="4071" text="01/08/64" TYPE="DATE" comment="" />
+<DATE id="P29" start="4089" end="4097" text="04/29/63" TYPE="DATE" comment="" />
+<DATE id="P30" start="4152" end="4160" text="01/08/64" TYPE="DATE" comment="" />
+<DATE id="P31" start="4178" end="4186" text="01/08/64" TYPE="DATE" comment="" />
+<DATE id="P32" start="4241" end="4249" text="01/08/64" TYPE="DATE" comment="" />
+<DATE id="P33" start="4267" end="4275" text="01/08/64" TYPE="DATE" comment="" />
+<DATE id="P34" start="4330" end="4338" text="01/08/64" TYPE="DATE" comment="" />
+<DATE id="P35" start="4356" end="4364" text="01/08/64" TYPE="DATE" comment="" />
+<DATE id="P36" start="4419" end="4427" text="01/08/64" TYPE="DATE" comment="" />
+<DATE id="P37" start="4445" end="4453" text="12/22/63" TYPE="DATE" comment="" />
+<DATE id="P38" start="4508" end="4516" text="01/08/64" TYPE="DATE" comment="" />
+<DATE id="P39" start="4576" end="4584" text="01/08/64" TYPE="DATE" comment="" />
+<DATE id="P40" start="4602" end="4610" text="07/09/62" TYPE="DATE" comment="" />
+<DATE id="P41" start="4665" end="4673" text="01/08/64" TYPE="DATE" comment="" />
+<DATE id="P42" start="4691" end="4699" text="08/27/62" TYPE="DATE" comment="" />
+<DATE id="P43" start="4754" end="4762" text="01/08/64" TYPE="DATE" comment="" />
+<DATE id="P44" start="4780" end="4788" text="01/08/64" TYPE="DATE" comment="" />
+<DATE id="P45" start="4867" end="4875" text="01/08/64" TYPE="DATE" comment="" />
+<DATE id="P46" start="4893" end="4901" text="08/27/62" TYPE="DATE" comment="" />
+<DATE id="P47" start="4956" end="4964" text="01/08/64" TYPE="DATE" comment="" />
+<DATE id="P48" start="4982" end="4990" text="01/08/64" TYPE="DATE" comment="" />
+<DATE id="P49" start="5045" end="5053" text="01/08/64" TYPE="DATE" comment="" />
+<DATE id="P50" start="5071" end="5079" text="08/27/62" TYPE="DATE" comment="" />
+<DATE id="P51" start="5134" end="5142" text="01/08/64" TYPE="DATE" comment="" />
+<DATE id="P52" start="5202" end="5210" text="01/08/64" TYPE="DATE" comment="" />
+<DATE id="P53" start="5284" end="5292" text="01/08/64" TYPE="DATE" comment="" />
+<DATE id="P54" start="5352" end="5360" text="01/08/64" TYPE="DATE" comment="" />
+<DATE id="P55" start="5420" end="5428" text="01/08/64" TYPE="DATE" comment="" />
+<DATE id="P56" start="5446" end="5454" text="07/16/59" TYPE="DATE" comment="" />
+<DATE id="P57" start="5509" end="5517" text="01/08/64" TYPE="DATE" comment="" />
+<DATE id="P58" start="5577" end="5585" text="01/08/64" TYPE="DATE" comment="" />
+<DATE id="P59" start="5645" end="5653" text="01/08/64" TYPE="DATE" comment="" />
+<DATE id="P60" start="5713" end="5721" text="01/08/64" TYPE="DATE" comment="" />
+<DATE id="P61" start="5781" end="5789" text="01/08/64" TYPE="DATE" comment="" />
+<DATE id="P62" start="5849" end="5857" text="01/08/64" TYPE="DATE" comment="" />
+<DATE id="P63" start="5917" end="5925" text="01/08/64" TYPE="DATE" comment="" />
+<DATE id="P64" start="5985" end="5993" text="01/08/64" TYPE="DATE" comment="" />
+<DATE id="P65" start="6053" end="6061" text="01/08/64" TYPE="DATE" comment="" />
+<AGE id="P66" start="6195" end="6197" text="55" TYPE="AGE" comment="" />
+<DATE id="P67" start="6432" end="6437" text="01/09" TYPE="DATE" comment="" />
+<LOCATION id="P68" start="7072" end="7097" text="Chestnut Lodge Sanitarium" TYPE="HOSPITAL" comment="" />
+<NAME id="P69" start="7151" end="7169" text="Uriel Q. Yarbrough" TYPE="DOCTOR" comment="" />
+<CONTACT id="P70" start="7182" end="7187" text="89356" TYPE="PHONE" comment="" />
 </TAGS>
 </deIdi2b2>

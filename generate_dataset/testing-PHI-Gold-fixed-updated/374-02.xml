@@ -1,6 +1,6 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT>
+<TEXT><![CDATA[
 
 
 Record date: 2130-02-16
@@ -225,32 +225,34 @@ Signed electronically by Xenakis, Robert on Mar 3, 2130
 
 
 
-</TEXT>
+]]></TEXT>
 <TAGS>
-<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2130-02-16" />
-<NAME TYPE="DOCTOR" comment="" end="448" id="P3" start="440" text="Thurston" />
-<NAME TYPE="DOCTOR" comment="" end="686" id="P4" start="678" text="Thurston" />
-<DATE TYPE="DATE" comment="" end="2093" id="P5" start="2089" text="2123" />
-<DATE TYPE="DATE" comment="" end="2820" id="P6" start="2810" text="02/16/2130" />
-<DATE TYPE="DATE" comment="" end="3160" id="P7" start="3150" text="02/16/2130" />
-<DATE TYPE="DATE" comment="" end="3202" id="P8" start="3192" text="02/16/2130" />
-<DATE TYPE="DATE" comment="" end="4546" id="P9" start="4539" text="4/12/20" />
-<DATE TYPE="DATE" comment="" end="4609" id="P10" start="4603" text="8/2/20" />
-<DATE TYPE="DATE" comment="" end="4677" id="P11" start="4669" text="10/16/23" />
-<DATE TYPE="DATE" comment="" end="4735" id="P12" start="4728" text="9/11/21" />
-<DATE TYPE="DATE" comment="" end="4791" id="P13" start="4784" text="5/22/23" />
-<DATE TYPE="DATE" comment="" end="4844" id="P14" start="4837" text="9/18/23" />
-<DATE TYPE="DATE" comment="" end="4882" id="P15" start="4875" text="11/2/24" />
-<DATE TYPE="DATE" comment="" end="4926" id="P16" start="4916" text="10/18/2125" />
-<DATE TYPE="DATE" comment="" end="4985" id="P17" start="4975" text="10/18/2125" />
-<DATE TYPE="DATE" comment="" end="5000" id="P18" start="4991" text="2/16/2130" />
-<DATE TYPE="DATE" comment="" end="5074" id="P19" start="5065" text="8/13/2127" />
-<DATE TYPE="DATE" comment="" end="5129" id="P20" start="5119" text="11/30/2129" />
-<ID TYPE="IDNUM" comment="" end="5197" id="P21" start="5190" text="N2453KM" />
-<DATE TYPE="DATE" comment="" end="6640" id="P22" start="6630" text="03/09/2130" />
-<NAME TYPE="DOCTOR" comment="" end="6667" id="P23" start="6659" text="Thurston" />
-<NAME TYPE="DOCTOR" comment="" end="6880" id="P24" start="6866" text="Queen Thurston" />
-<NAME TYPE="DOCTOR" comment="" end="7006" id="P25" start="6991" text="Xenakis, Robert" />
-<DATE TYPE="DATE" comment="" end="7021" id="P26" start="7010" text="Mar 3, 2130" />
+<DATE id="P0" start="16" end="26" text="2130-02-16" TYPE="DATE" comment="" />
+<LOCATION id="P1" start="62" end="84" text="HOUSTON MEDICAL CENTER" TYPE="HOSPITAL" comment="" />
+<AGE id="P2" start="133" end="135" text="54" TYPE="AGE" comment="" />
+<NAME id="P3" start="440" end="448" text="Thurston" TYPE="DOCTOR" comment="" />
+<NAME id="P4" start="678" end="686" text="Thurston" TYPE="DOCTOR" comment="" />
+<DATE id="P5" start="2089" end="2093" text="2123" TYPE="DATE" comment="" />
+<DATE id="P6" start="2810" end="2820" text="02/16/2130" TYPE="DATE" comment="" />
+<DATE id="P7" start="3150" end="3160" text="02/16/2130" TYPE="DATE" comment="" />
+<DATE id="P8" start="3192" end="3202" text="02/16/2130" TYPE="DATE" comment="" />
+<DATE id="P9" start="4539" end="4546" text="4/12/20" TYPE="DATE" comment="" />
+<DATE id="P10" start="4603" end="4609" text="8/2/20" TYPE="DATE" comment="" />
+<DATE id="P11" start="4669" end="4677" text="10/16/23" TYPE="DATE" comment="" />
+<DATE id="P12" start="4728" end="4735" text="9/11/21" TYPE="DATE" comment="" />
+<DATE id="P13" start="4784" end="4791" text="5/22/23" TYPE="DATE" comment="" />
+<DATE id="P14" start="4837" end="4844" text="9/18/23" TYPE="DATE" comment="" />
+<DATE id="P15" start="4875" end="4882" text="11/2/24" TYPE="DATE" comment="" />
+<DATE id="P16" start="4916" end="4926" text="10/18/2125" TYPE="DATE" comment="" />
+<DATE id="P17" start="4975" end="4985" text="10/18/2125" TYPE="DATE" comment="" />
+<DATE id="P18" start="4991" end="5000" text="2/16/2130" TYPE="DATE" comment="" />
+<DATE id="P19" start="5065" end="5074" text="8/13/2127" TYPE="DATE" comment="" />
+<DATE id="P20" start="5119" end="5129" text="11/30/2129" TYPE="DATE" comment="" />
+<ID id="P21" start="5190" end="5197" text="N2453KM" TYPE="IDNUM" comment="" />
+<DATE id="P22" start="6630" end="6640" text="03/09/2130" TYPE="DATE" comment="" />
+<NAME id="P23" start="6659" end="6667" text="Thurston" TYPE="DOCTOR" comment="" />
+<NAME id="P24" start="6866" end="6880" text="Queen Thurston" TYPE="DOCTOR" comment="" />
+<NAME id="P25" start="6991" end="7006" text="Xenakis, Robert" TYPE="DOCTOR" comment="" />
+<DATE id="P26" start="7010" end="7021" text="Mar 3, 2130" TYPE="DATE" comment="" />
 </TAGS>
 </deIdi2b2>

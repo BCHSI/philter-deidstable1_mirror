@@ -1,6 +1,6 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT>
+<TEXT><![CDATA[
 
 
 Record date: 2077-12-04
@@ -101,19 +101,21 @@ eScription document:6-60827686 BFFocus
 
 
 
-</TEXT>
+]]></TEXT>
 <TAGS>
-<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2077-12-04" />
-<ID TYPE="MEDICALRECORD" comment="" end="44" id="P1" start="36" text="12423229" />
-<NAME TYPE="PATIENT" comment="" end="56" id="P2" start="45" text="UMALI, DANA" />
-<DATE TYPE="DATE" comment="" end="65" id="P3" start="57" text="12/04/77" />
-<NAME TYPE="DOCTOR" comment="" end="80" id="P4" start="66" text="DUFFY, FELICIA" />
-<NAME TYPE="PATIENT" comment="" end="150" id="P5" start="145" text="Umali" />
-<NAME TYPE="PATIENT" comment="" end="1545" id="P7" start="1540" text="Umali" />
-<NAME TYPE="DOCTOR" comment="" end="2211" id="P9" start="2197" text="DUFFY, FELICIA" />
-<DATE TYPE="DATE" comment="" end="2229" id="P10" start="2221" text="12/04/77" />
-<DATE TYPE="DATE" comment="" end="2242" id="P11" start="2234" text="12/04/77" />
-<NAME TYPE="DOCTOR" comment="" end="2271" id="P12" start="2257" text="DUFFY, FELICIA" />
-<ID TYPE="IDNUM" comment="" end="2303" id="P13" start="2293" text="6-60827686" />
+<DATE id="P0" start="16" end="26" text="2077-12-04" TYPE="DATE" comment="" />
+<ID id="P1" start="36" end="44" text="12423229" TYPE="MEDICALRECORD" comment="" />
+<NAME id="P2" start="45" end="56" text="UMALI, DANA" TYPE="PATIENT" comment="" />
+<DATE id="P3" start="57" end="65" text="12/04/77" TYPE="DATE" comment="" />
+<NAME id="P4" start="66" end="80" text="DUFFY, FELICIA" TYPE="DOCTOR" comment="" />
+<NAME id="P5" start="145" end="150" text="Umali" TYPE="PATIENT" comment="" />
+<AGE id="P6" start="156" end="158" text="73" TYPE="AGE" comment="" />
+<NAME id="P7" start="1540" end="1545" text="Umali" TYPE="PATIENT" comment="" />
+<AGE id="P8" start="1552" end="1554" text="73" TYPE="AGE" comment="" />
+<NAME id="P9" start="2197" end="2211" text="DUFFY, FELICIA" TYPE="DOCTOR" comment="" />
+<DATE id="P10" start="2221" end="2229" text="12/04/77" TYPE="DATE" comment="" />
+<DATE id="P11" start="2234" end="2242" text="12/04/77" TYPE="DATE" comment="" />
+<NAME id="P12" start="2257" end="2271" text="DUFFY, FELICIA" TYPE="DOCTOR" comment="" />
+<ID id="P13" start="2293" end="2303" text="6-60827686" TYPE="IDNUM" comment="" />
 </TAGS>
 </deIdi2b2>

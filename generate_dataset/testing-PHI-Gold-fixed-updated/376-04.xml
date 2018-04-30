@@ -1,6 +1,6 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT>
+<TEXT><![CDATA[
 
 
 Record date: 2078-03-18
@@ -30,7 +30,7 @@ Lower back pain
 Hypertension
 Hyperlipidemia
 Elevated blood sugar
-Parkinson&amp;#8217;s disease
+Parkinson&#8217;s disease
 C. difficile colitis
 ALLERGIES: NKDA
 
@@ -67,8 +67,8 @@ Drug use: Denies
 
 PHYSICAL EXAM
 VITALS:  T 97.9 HR 77 BP 164/70  RR   SpO2 100    
-GEN&amp;#8217;L :              Alert, well appearing, NAD.
-HEENT:  AT / NC.  EOMI, no nystagmus.  PERRL 6mm -&amp;gt; 4mm bilaterally.  MMM.  2+ carotids without bruits.  No lympadenopathy.
+GEN&#8217;L :              Alert, well appearing, NAD.
+HEENT:  AT / NC.  EOMI, no nystagmus.  PERRL 6mm -&gt; 4mm bilaterally.  MMM.  2+ carotids without bruits.  No lympadenopathy.
 Heart:  RRR, no MRG
 LUNG:  CTAB
 ABD:  Soft, NT/ND, NABS.  No organomegaly.
@@ -90,8 +90,8 @@ Phosphorus                       2.4              L        (2.6-4.5)      mg/dl
 Magnesium                        1.6                       (1.4-2.0)      meq/L
 Plasma Urea Nitrogen             16                        (8-25)         mg/dl
 Plasma Creatinine                1.11                      (0.60-1.50)    mg/dl
-eGFR                             &amp;gt;60                                      mL/min/1.73m2
-     Abnormal if &amp;lt;60 mL/min/1.73m2. If patient is African-American, multiply the
+eGFR                             &gt;60                                      mL/min/1.73m2
+     Abnormal if &lt;60 mL/min/1.73m2. If patient is African-American, multiply the
      result by 1.21.
      
 Plasma Glucose                   135              H        (70-110)       mg/dl
@@ -143,7 +143,7 @@ RADIOLOGY:
 ECG:  Normal sinus rhythm, rate 84.  Normal axis.  Normal intervals.  No ST segment deviation or T wave inversion. 
 
 
-ASSESSMENT &amp;amp; PLAN:  81M with recurrent C. diff infections presenting with diarrhea.  Likely he has a recurrent episode of C. diff infection.  
+ASSESSMENT &amp; PLAN:  81M with recurrent C. diff infections presenting with diarrhea.  Likely he has a recurrent episode of C. diff infection.  
 
 
 1.  Diarrhea.  
@@ -158,7 +158,7 @@ ASSESSMENT &amp;amp; PLAN:  81M with recurrent C. diff infections presenting wit
 - will replace atenolol with metoprolol while in-patient, up-titrate as needed, starting 37.5mg Q8h
 
 
-3.  L lower extremity edema.  Patient states he was evaluated at OSH recently and felt to not have a DVT.  Will disuss whether any further workup is neeed with pt&amp;#8217;s PCP in AM.
+3.  L lower extremity edema.  Patient states he was evaluated at OSH recently and felt to not have a DVT.  Will disuss whether any further workup is neeed with pt&#8217;s PCP in AM.
 
 
 3.  FEN.  PO diet as tolerated.  RISS / NPH.
@@ -176,20 +176,26 @@ Pager 84261
 
 
 
-</TEXT>
+]]></TEXT>
 <TAGS>
-<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2078-03-18" />
-<NAME TYPE="PATIENT" comment="" end="108" id="P3" start="90" text="Whitehead, Aidan D" />
-<ID TYPE="MEDICALRECORD" comment="" end="122" id="P4" start="115" text="9855218" />
-<DATE TYPE="DATE" comment="" end="143" id="P5" start="136" text="3/17/78" />
-<NAME TYPE="DOCTOR" comment="" end="169" id="P6" start="156" text="Bell, Charley" />
-<DATE TYPE="DATE" comment="" end="271" id="P8" start="267" text="7/77" />
-<DATE TYPE="DATE" comment="" end="557" id="P10" start="550" text="7/31/77" />
-<DATE TYPE="DATE" comment="" end="705" id="P12" start="701" text="1/77" />
-<PROFESSION TYPE="PROFESSION" comment="" end="2868" id="P14" start="2854" text="Web Technician" />
-<NAME TYPE="PATIENT" comment="" end="3434" id="P15" start="3416" text="WHITEHEAD, AIDAN D" />
-<DATE TYPE="DATE" comment="" end="7179" id="P16" start="7175" text="3/17" />
-<NAME TYPE="DOCTOR" comment="" end="8207" id="P18" start="8189" text="Alexander X. Jenks" />
-<CONTACT TYPE="PHONE" comment="" end="8228" id="P19" start="8223" text="84261" />
+<DATE id="P0" start="16" end="26" text="2078-03-18" TYPE="DATE" comment="" />
+<LOCATION id="P1" start="30" end="37" text="Freeman" TYPE="HOSPITAL" comment="" />
+<NAME id="P3" start="90" end="108" text="Whitehead, Aidan D" TYPE="PATIENT" comment="" />
+<ID id="P4" start="115" end="122" text="9855218" TYPE="MEDICALRECORD" comment="" />
+<DATE id="P5" start="136" end="143" text="3/17/78" TYPE="DATE" comment="" />
+<NAME id="P6" start="156" end="169" text="Bell, Charley" TYPE="DOCTOR" comment="" />
+<AGE id="P7" start="217" end="218" text="1" TYPE="AGE" comment="" />
+<DATE id="P8" start="267" end="271" text="7/77" TYPE="DATE" comment="" />
+<LOCATION id="P9" start="296" end="300" text="NAMG" TYPE="HOSPITAL" comment="" />
+<DATE id="P10" start="550" end="557" text="7/31/77" TYPE="DATE" comment="" />
+<LOCATION id="P11" start="658" end="662" text="NAMG" TYPE="HOSPITAL" comment="" />
+<DATE id="P12" start="701" end="705" text="1/77" TYPE="DATE" comment="" />
+<LOCATION id="P13" start="791" end="795" text="NAMG" TYPE="HOSPITAL" comment="" />
+<PROFESSION id="P14" start="2854" end="2868" text="Web Technician" TYPE="PROFESSION" comment="" />
+<NAME id="P15" start="3416" end="3434" text="WHITEHEAD, AIDAN D" TYPE="PATIENT" comment="" />
+<DATE id="P16" start="7175" end="7179" text="3/17" TYPE="DATE" comment="" />
+<AGE id="P17" start="7366" end="7368" text="81" TYPE="AGE" comment="" />
+<NAME id="P18" start="8189" end="8207" text="Alexander X. Jenks" TYPE="DOCTOR" comment="" />
+<CONTACT id="P19" start="8223" end="8228" text="84261" TYPE="PHONE" comment="" />
 </TAGS>
 </deIdi2b2>

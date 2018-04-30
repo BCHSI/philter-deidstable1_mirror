@@ -1,6 +1,6 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT>
+<TEXT><![CDATA[
 
 
 Record date: 2078-11-08
@@ -14,7 +14,7 @@ Record date: 2078-11-08
 
 
 	Reason for visit:
-   A 63 yr old man with CAD and extensive PAD history s/p multiple peripheral PCI's admitted after elective cardiac &amp;amp;amp; peripheral angiography and LSFA cryoplasty/PTA/stents.
+   A 63 yr old man with CAD and extensive PAD history s/p multiple peripheral PCI's admitted after elective cardiac &amp;amp; peripheral angiography and LSFA cryoplasty/PTA/stents.
 
 
 	Interval History:
@@ -23,7 +23,7 @@ The Fall of 77, he could only walk about 25 feet before experiencing
 pain. Exercise ABI's revealed R ABI drop from 0.65 to 0.16 and L ABI drop from 0.74 to 0.24. An MRA revealed non-obstructive plaque in the common iliacs, 50% left external iliac and question of disease in right internal iliac; 40 to 60% common femoral and 40 to 50% stenosis more distally with 60 to 70% serial left SFA stenoses. He had a totally occluded anterior tibialis bilaterally with 60 to 80% trifurcation area disease and high grade posterior tibial on the right and occluded posterior tibial on the left. 
 10/77 he was admitted with angina and ruled out for an MI. A cardiac catheterization revealed 50% focal LM lesion, mid 100% LAD lesion, 60 mid LCX, 50-70 OM2, 40-50 dominant RCA distal lesion with an EF of 65%. He has been treated medically without any further angina. 
 . 
-11/77 peripheral angiography revealed 40-60% LIIA lesion, 50-80 LSFA stenosis, 40-60 L profunda lesion, totally occluded L AT &amp;amp;amp; L PT, R EIA 60% lesion, RIIA 40-60 proximal &amp;amp;amp; 70-90 mid disease, totally occluded R AT &amp;amp;amp; R PT, 70-80 R peroneal. The LSAF was treated with PTA/Xpert 6 x 60 stent, the R EIA lesion was treated with Palmaz Blue 6 x 24 stent. 
+11/77 peripheral angiography revealed 40-60% LIIA lesion, 50-80 LSFA stenosis, 40-60 L profunda lesion, totally occluded L AT &amp;amp; L PT, R EIA 60% lesion, RIIA 40-60 proximal &amp;amp; 70-90 mid disease, totally occluded R AT &amp;amp; R PT, 70-80 R peroneal. The LSAF was treated with PTA/Xpert 6 x 60 stent, the R EIA lesion was treated with Palmaz Blue 6 x 24 stent. 
 6/78 he was taken for peripheral angiography which revealed 30% REIA ISR, mod-sev bil IIA disease, R SFA 70-75, TO AT/PT and 50-60 peroneal. The proximal R SFA was treated with PTA, mid was tx with DCA/PTA 
 Since then he has experienced exertional and rest CP occasionally requiring SL TNG with relief. In addition, he has experienced SOB with stair climbing but denies SOB with chest pain. He also has been experiencing claudication with left leg worse than right which has been preventing him from performing exercise. 
 
@@ -114,8 +114,8 @@ Physical examination:
 -Chest:   Clear anteriorly
 -Cardiac:   S1 and S2 , no murmur/rub/gallop
 -Abdomen:   Normal bowel sounds, soft and nontender, with no hepatosplenomegaly or masses appreciated.
--Extremities:   Right femoral sheath D&amp;amp;I, D?P?PT 1+/1+ - left femoral 1+, + bruit, DP/PT 1+/1+
--Neuro:   A&amp;amp;O x3
+-Extremities:   Right femoral sheath D&amp;I, D?P?PT 1+/1+ - left femoral 1+, + bruit, DP/PT 1+/1+
+-Neuro:   A&amp;O x3
 -BP: 124/61  
 
 
@@ -156,21 +156,26 @@ Document Status: Final
 
 
 
-</TEXT>
+]]></TEXT>
 <TAGS>
-<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2078-11-08" />
-<DATE TYPE="DATE" comment="" end="395" id="P4" start="385" text="Fall of 77" />
-<DATE TYPE="DATE" comment="" end="972" id="P5" start="967" text="10/77" />
-<DATE TYPE="DATE" comment="" end="1245" id="P6" start="1240" text="11/77" />
-<DATE TYPE="DATE" comment="" end="1620" id="P7" start="1616" text="6/78" />
-<DATE TYPE="DATE" comment="" end="2167" id="P8" start="2159" text="10/31/78" />
-<NAME TYPE="DOCTOR" comment="" end="2446" id="P9" start="2440" text="Barton" />
-<DATE TYPE="DATE" comment="" end="3168" id="P11" start="3163" text="April" />
-<DATE TYPE="DATE" comment="" end="3369" id="P12" start="3365" text="7/78" />
-<PROFESSION TYPE="PROFESSION" comment="" end="4152" id="P14" start="4133" text="landscape architect" />
-<DATE TYPE="DATE" comment="" end="4209" id="P15" start="4205" text="4/78" />
-<LOCATION TYPE="CITY" comment="" end="4337" id="P16" start="4325" text="Wilkes-Barre" />
-<NAME TYPE="DOCTOR" comment="" end="5508" id="P19" start="5494" text="Yvette Ferraro" />
-<NAME TYPE="DOCTOR" comment="" end="5560" id="P20" start="5546" text="Yvette Ferraro" />
+<DATE id="P0" start="16" end="26" text="2078-11-08" TYPE="DATE" comment="" />
+<LOCATION id="P1" start="45" end="70" text="OAKLAND ASSOCIATES CENTER" TYPE="HOSPITAL" comment="" />
+<AGE id="P2" start="99" end="101" text="63" TYPE="AGE" comment="" />
+<AGE id="P3" start="312" end="314" text="63" TYPE="AGE" comment="" />
+<DATE id="P4" start="385" end="395" text="Fall of 77" TYPE="DATE" comment="" />
+<DATE id="P5" start="967" end="972" text="10/77" TYPE="DATE" comment="" />
+<DATE id="P6" start="1240" end="1245" text="11/77" TYPE="DATE" comment="" />
+<DATE id="P7" start="1616" end="1620" text="6/78" TYPE="DATE" comment="" />
+<DATE id="P8" start="2159" end="2167" text="10/31/78" TYPE="DATE" comment="" />
+<NAME id="P9" start="2440" end="2446" text="Barton" TYPE="DOCTOR" comment="" />
+<DATE id="P11" start="3163" end="3168" text="April" TYPE="DATE" comment="" />
+<DATE id="P12" start="3365" end="3369" text="7/78" TYPE="DATE" comment="" />
+<AGE id="P13" start="4098" end="4102" text="80's" TYPE="AGE" comment="" />
+<PROFESSION id="P14" start="4133" end="4152" text="landscape architect" TYPE="PROFESSION" comment="" />
+<DATE id="P15" start="4205" end="4209" text="4/78" TYPE="DATE" comment="" />
+<LOCATION id="P16" start="4325" end="4337" text="Wilkes-Barre" TYPE="CITY" comment="" />
+<AGE id="P17" start="5168" end="5170" text="63" TYPE="AGE" comment="" />
+<NAME id="P19" start="5494" end="5508" text="Yvette Ferraro" TYPE="DOCTOR" comment="" />
+<NAME id="P20" start="5546" end="5560" text="Yvette Ferraro" TYPE="DOCTOR" comment="" />
 </TAGS>
 </deIdi2b2>

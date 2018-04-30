@@ -1,6 +1,6 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT>
+<TEXT><![CDATA[
 
 
 Record date: 2093-04-28
@@ -137,19 +137,21 @@ Dictated by:  ALISHA VIOLA, M.D.       AV51
 
 
 
-</TEXT>
+]]></TEXT>
 <TAGS>
-<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2093-04-28" />
-<NAME TYPE="PATIENT" comment="" end="100" id="P2" start="78" text="NANCY-JASMINE,NIKKOLAS" />
-<ID TYPE="MEDICALRECORD" comment="" end="114" id="P3" start="103" text="693-31-18-1" />
-<DATE TYPE="DATE" comment="" end="150" id="P4" start="142" text="04/28/93" />
-<NAME TYPE="DOCTOR" comment="" end="230" id="P5" start="226" text="Judd" />
-<ID TYPE="IDNUM" comment="" end="3583" id="P7" start="3572" text="KM855/90247" />
-<NAME TYPE="DOCTOR" comment="" end="3598" id="P8" start="3586" text="ALISHA VIOLA" />
-<NAME TYPE="USERNAME" comment="" end="3615" id="P9" start="3611" text="AV51" />
-<DATE TYPE="DATE" comment="" end="3649" id="P10" start="3641" text="04/28/93" />
-<DATE TYPE="DATE" comment="" end="3717" id="P11" start="3709" text="04/28/93" />
-<NAME TYPE="DOCTOR" comment="" end="3746" id="P12" start="3734" text="ALISHA VIOLA" />
-<NAME TYPE="USERNAME" comment="" end="3763" id="P13" start="3759" text="AV51" />
+<DATE id="P0" start="16" end="26" text="2093-04-28" TYPE="DATE" comment="" />
+<LOCATION id="P1" start="49" end="52" text="BMC" TYPE="HOSPITAL" comment="" />
+<NAME id="P2" start="78" end="100" text="NANCY-JASMINE,NIKKOLAS" TYPE="PATIENT" comment="" />
+<ID id="P3" start="103" end="114" text="693-31-18-1" TYPE="MEDICALRECORD" comment="" />
+<DATE id="P4" start="142" end="150" text="04/28/93" TYPE="DATE" comment="" />
+<NAME id="P5" start="226" end="230" text="Judd" TYPE="DOCTOR" comment="" />
+<AGE id="P6" start="352" end="354" text="68" TYPE="AGE" comment="" />
+<ID id="P7" start="3572" end="3583" text="KM855/90247" TYPE="IDNUM" comment="" />
+<NAME id="P8" start="3586" end="3598" text="ALISHA VIOLA" TYPE="DOCTOR" comment="" />
+<NAME id="P9" start="3611" end="3615" text="AV51" TYPE="USERNAME" comment="" />
+<DATE id="P10" start="3641" end="3649" text="04/28/93" TYPE="DATE" comment="" />
+<DATE id="P11" start="3709" end="3717" text="04/28/93" TYPE="DATE" comment="" />
+<NAME id="P12" start="3734" end="3746" text="ALISHA VIOLA" TYPE="DOCTOR" comment="" />
+<NAME id="P13" start="3759" end="3763" text="AV51" TYPE="USERNAME" comment="" />
 </TAGS>
 </deIdi2b2>

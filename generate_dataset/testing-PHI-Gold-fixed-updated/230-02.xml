@@ -1,6 +1,6 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT>
+<TEXT><![CDATA[
 
 
 Record date: 2078-07-26
@@ -72,19 +72,22 @@ PH  Surgery, Pager #: 79920
 
 
 
-</TEXT>
+]]></TEXT>
 <TAGS>
-<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2078-07-26" />
-<NAME TYPE="PATIENT" comment="" end="88" id="P1" start="72" text="Richard, Ulysses" />
-<ID TYPE="MEDICALRECORD" comment="" end="103" id="P2" start="96" text="8913196" />
-<DATE TYPE="DATE" comment="" end="129" id="P3" start="122" text="7/26/78" />
-<DATE TYPE="DATE" comment="" end="714" id="P5" start="707" text="6/01/78" />
-<DATE TYPE="DATE" comment="" end="777" id="P6" start="773" text="6/07" />
-<DATE TYPE="DATE" comment="" end="857" id="P7" start="853" text="June" />
-<NAME TYPE="DOCTOR" comment="" end="3502" id="P9" start="3498" text="Ring" />
-<NAME TYPE="DOCTOR" comment="" end="3528" id="P10" start="3521" text="Velasco" />
-<NAME TYPE="DOCTOR" comment="" end="3692" id="P11" start="3681" text="Uriah Wills" />
-<NAME TYPE="DOCTOR" comment="" end="3705" id="P12" start="3695" text="James Kopp" />
-<CONTACT TYPE="PHONE" comment="" end="3739" id="P14" start="3734" text="79920" />
+<DATE id="P0" start="16" end="26" text="2078-07-26" TYPE="DATE" comment="" />
+<NAME id="P1" start="72" end="88" text="Richard, Ulysses" TYPE="PATIENT" comment="" />
+<ID id="P2" start="96" end="103" text="8913196" TYPE="MEDICALRECORD" comment="" />
+<DATE id="P3" start="122" end="129" text="7/26/78" TYPE="DATE" comment="" />
+<AGE id="P4" start="186" end="188" text="85" TYPE="AGE" comment="" />
+<DATE id="P5" start="707" end="714" text="6/01/78" TYPE="DATE" comment="" />
+<DATE id="P6" start="773" end="777" text="6/07" TYPE="DATE" comment="" />
+<DATE id="P7" start="853" end="857" text="June" TYPE="DATE" comment="" />
+<AGE id="P8" start="3223" end="3225" text="85" TYPE="AGE" comment="" />
+<NAME id="P9" start="3498" end="3502" text="Ring" TYPE="DOCTOR" comment="" />
+<NAME id="P10" start="3521" end="3528" text="Velasco" TYPE="DOCTOR" comment="" />
+<NAME id="P11" start="3681" end="3692" text="Uriah Wills" TYPE="DOCTOR" comment="" />
+<NAME id="P12" start="3695" end="3705" text="James Kopp" TYPE="DOCTOR" comment="" />
+<LOCATION id="P13" start="3712" end="3714" text="PH" TYPE="HOSPITAL" comment="" />
+<CONTACT id="P14" start="3734" end="3739" text="79920" TYPE="PHONE" comment="" />
 </TAGS>
 </deIdi2b2>

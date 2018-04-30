@@ -1,6 +1,6 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT>
+<TEXT><![CDATA[
 
 
 Record date: 2065-07-29
@@ -115,20 +115,21 @@ Dictated by:  AMANDA A. VAUGHT, M.D.     AV55
 
 
 
-</TEXT>
+]]></TEXT>
 <TAGS>
-<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2065-07-29" />
-<NAME TYPE="PATIENT" comment="" end="93" id="P2" start="80" text="WAGNER,LONNIE" />
-<ID TYPE="MEDICALRECORD" comment="" end="107" id="P3" start="96" text="097-87-37-2" />
-<DATE TYPE="DATE" comment="" end="145" id="P4" start="137" text="07/29/65" />
-<NAME TYPE="DOCTOR" comment="" end="207" id="P5" start="202" text="Chase" />
-<NAME TYPE="DOCTOR" comment="" end="2624" id="P6" start="2619" text="Duong" />
-<ID TYPE="IDNUM" comment="" end="2870" id="P7" start="2859" text="NU604/29497" />
-<NAME TYPE="DOCTOR" comment="" end="2889" id="P8" start="2873" text="AMANDA A. VAUGHT" />
-<NAME TYPE="USERNAME" comment="" end="2904" id="P9" start="2900" text="AV55" />
-<DATE TYPE="DATE" comment="" end="2936" id="P10" start="2928" text="07/29/65" />
-<DATE TYPE="DATE" comment="" end="3004" id="P11" start="2996" text="07/29/65" />
-<NAME TYPE="DOCTOR" comment="" end="3037" id="P12" start="3021" text="AMANDA A. VAUGHT" />
-<NAME TYPE="USERNAME" comment="" end="3052" id="P13" start="3048" text="AV55" />
+<DATE id="P0" start="16" end="26" text="2065-07-29" TYPE="DATE" comment="" />
+<LOCATION id="P1" start="49" end="54" text="GREEN" TYPE="HOSPITAL" comment="" />
+<NAME id="P2" start="80" end="93" text="WAGNER,LONNIE" TYPE="PATIENT" comment="" />
+<ID id="P3" start="96" end="107" text="097-87-37-2" TYPE="MEDICALRECORD" comment="" />
+<DATE id="P4" start="137" end="145" text="07/29/65" TYPE="DATE" comment="" />
+<NAME id="P5" start="202" end="207" text="Chase" TYPE="DOCTOR" comment="" />
+<NAME id="P6" start="2619" end="2624" text="Duong" TYPE="DOCTOR" comment="" />
+<ID id="P7" start="2859" end="2870" text="NU604/29497" TYPE="IDNUM" comment="" />
+<NAME id="P8" start="2873" end="2889" text="AMANDA A. VAUGHT" TYPE="DOCTOR" comment="" />
+<NAME id="P9" start="2900" end="2904" text="AV55" TYPE="USERNAME" comment="" />
+<DATE id="P10" start="2928" end="2936" text="07/29/65" TYPE="DATE" comment="" />
+<DATE id="P11" start="2996" end="3004" text="07/29/65" TYPE="DATE" comment="" />
+<NAME id="P12" start="3021" end="3037" text="AMANDA A. VAUGHT" TYPE="DOCTOR" comment="" />
+<NAME id="P13" start="3048" end="3052" text="AV55" TYPE="USERNAME" comment="" />
 </TAGS>
 </deIdi2b2>

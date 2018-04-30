@@ -1,6 +1,6 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT>
+<TEXT><![CDATA[
 
 
 Record date: 2096-06-07
@@ -307,29 +307,35 @@ Florence Urquhart, APRN-BC
 
 
 
-</TEXT>
+]]></TEXT>
 <TAGS>
-<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2096-06-07" />
-<NAME TYPE="PATIENT" comment="" end="94" id="P2" start="81" text="Kenneth Weeks" />
-<ID TYPE="MEDICALRECORD" comment="" end="103" id="P3" start="96" text="1205466" />
-<NAME TYPE="PATIENT" comment="" end="147" id="P4" start="142" text="Weeks" />
-<DATE TYPE="DATE" comment="" end="826" id="P6" start="820" text="4/3/96" />
-<DATE TYPE="DATE" comment="" end="982" id="P7" start="978" text="4/10" />
-<DATE TYPE="DATE" comment="" end="1028" id="P8" start="1024" text="1/95" />
-<DATE TYPE="DATE" comment="" end="1212" id="P9" start="1208" text="5/19" />
-<DATE TYPE="DATE" comment="" end="1721" id="P11" start="1715" text="2070's" />
-<NAME TYPE="DOCTOR" comment="" end="1796" id="P12" start="1793" text="FWO" />
-<DATE TYPE="DATE" comment="" end="1897" id="P14" start="1893" text="3/86" />
-<NAME TYPE="DOCTOR" comment="" end="1913" id="P16" start="1906" text="Fonseca" />
-<PROFESSION TYPE="PROFESSION" comment="" end="2149" id="P19" start="2134" text="claims examiner" />
-<DATE TYPE="DATE" comment="" end="2200" id="P20" start="2194" text="2070's" />
-<DATE TYPE="DATE" comment="" end="3912" id="P21" start="3903" text="Wednesday" />
-<NAME TYPE="PATIENT" comment="" end="4323" id="P22" start="4318" text="Weeks" />
-<DATE TYPE="DATE" comment="" end="5255" id="P25" start="5249" text="Friday" />
-<DATE TYPE="DATE" comment="" end="5419" id="P26" start="5415" text="4/95" />
-<NAME TYPE="DOCTOR" comment="" end="6156" id="P27" start="6150" text="Felder" />
-<NAME TYPE="DOCTOR" comment="" end="6229" id="P28" start="6223" text="Felder" />
-<NAME TYPE="DOCTOR" comment="" end="6254" id="P29" start="6237" text="Florence Urquhart" />
-<CONTACT TYPE="PHONE" comment="" end="6270" id="P30" start="6265" text="32954" />
+<DATE id="P0" start="16" end="26" text="2096-06-07" TYPE="DATE" comment="" />
+<NAME id="P2" start="81" end="94" text="Kenneth Weeks" TYPE="PATIENT" comment="" />
+<ID id="P3" start="96" end="103" text="1205466" TYPE="MEDICALRECORD" comment="" />
+<NAME id="P4" start="142" end="147" text="Weeks" TYPE="PATIENT" comment="" />
+<AGE id="P5" start="153" end="155" text="78" TYPE="AGE" comment="" />
+<DATE id="P6" start="820" end="826" text="4/3/96" TYPE="DATE" comment="" />
+<DATE id="P7" start="978" end="982" text="4/10" TYPE="DATE" comment="" />
+<DATE id="P8" start="1024" end="1028" text="1/95" TYPE="DATE" comment="" />
+<DATE id="P9" start="1208" end="1212" text="5/19" TYPE="DATE" comment="" />
+<DATE id="P11" start="1715" end="1721" text="2070's" TYPE="DATE" comment="" />
+<NAME id="P12" start="1793" end="1796" text="FWO" TYPE="DOCTOR" comment="" />
+<LOCATION id="P13" start="1800" end="1803" text="VMC" TYPE="HOSPITAL" comment="" />
+<DATE id="P14" start="1893" end="1897" text="3/86" TYPE="DATE" comment="" />
+<LOCATION id="P15" start="1901" end="1904" text="VMC" TYPE="HOSPITAL" comment="" />
+<NAME id="P16" start="1906" end="1913" text="Fonseca" TYPE="DOCTOR" comment="" />
+<AGE id="P17" start="1955" end="1957" text="89" TYPE="AGE" comment="" />
+<AGE id="P18" start="1991" end="1993" text="37" TYPE="AGE" comment="" />
+<PROFESSION id="P19" start="2134" end="2149" text="claims examiner" TYPE="PROFESSION" comment="" />
+<DATE id="P20" start="2194" end="2200" text="2070's" TYPE="DATE" comment="" />
+<DATE id="P21" start="3903" end="3912" text="Wednesday" TYPE="DATE" comment="" />
+<NAME id="P22" start="4318" end="4323" text="Weeks" TYPE="PATIENT" comment="" />
+<AGE id="P23" start="4329" end="4331" text="78" TYPE="AGE" comment="" />
+<DATE id="P25" start="5249" end="5255" text="Friday" TYPE="DATE" comment="" />
+<DATE id="P26" start="5415" end="5419" text="4/95" TYPE="DATE" comment="" />
+<NAME id="P27" start="6150" end="6156" text="Felder" TYPE="DOCTOR" comment="" />
+<NAME id="P28" start="6223" end="6229" text="Felder" TYPE="DOCTOR" comment="" />
+<NAME id="P29" start="6237" end="6254" text="Florence Urquhart" TYPE="DOCTOR" comment="" />
+<CONTACT id="P30" start="6265" end="6270" text="32954" TYPE="PHONE" comment="" />
 </TAGS>
 </deIdi2b2>

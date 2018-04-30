@@ -1,6 +1,6 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT>
+<TEXT><![CDATA[
 
 
 Record date: 2094-10-29
@@ -305,7 +305,7 @@ placement. No endoleak is identified. The left limb of the graft is occluded thr
 
 
 
-ECHO 2/94: EF &gt; 50% Trace to mild mitral regurgitation. There are thin mobile echoes associated with the aortic valve leaflets most c/w Lambl's excresence.  There is no evidence of aortic insufficiency by color or spectral Doppler.  There are atheroma in the aorta but no protruding or mobile components.The left ventricular cavity size is normal.  The left ventricular systolic function is within normal limits.There is a very small circumferential pericardial effusion.  There is evidence of a large pleural effusion.
+ECHO 2/94: EF > 50% Trace to mild mitral regurgitation. There are thin mobile echoes associated with the aortic valve leaflets most c/w Lambl's excresence.  There is no evidence of aortic insufficiency by color or spectral Doppler.  There are atheroma in the aorta but no protruding or mobile components.The left ventricular cavity size is normal.  The left ventricular systolic function is within normal limits.There is a very small circumferential pericardial effusion.  There is evidence of a large pleural effusion.
 
 
 
@@ -337,7 +337,7 @@ GI Bleed
 
 -	Repeat EGD 48 hrs
 
--	Follow HCT q 6h and transfuse for HCT&lt;30
+-	Follow HCT q 6h and transfuse for HCT<30
 
 -	Acid suppression w/ IV zantac
 
@@ -409,28 +409,31 @@ Pager #29447
 
 
 
-</TEXT>
+]]></TEXT>
 <TAGS>
-<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2094-10-29" />
-<NAME TYPE="PATIENT" comment="" end="72" id="P1" start="56" text="Faulkner, Yandel" />
-<ID TYPE="MEDICALRECORD" comment="" end="84" id="P2" start="77" text="5075561" />
-<DATE TYPE="DATE" comment="" end="121" id="P3" start="105" text="October 28, 2094" />
-<NAME TYPE="DOCTOR" comment="" end="138" id="P4" start="128" text="Lord, Dana" />
-<DATE TYPE="DATE" comment="" end="1399" id="P6" start="1395" text="1/92" />
-<DATE TYPE="DATE" comment="" end="1424" id="P7" start="1420" text="2091" />
-<DATE TYPE="DATE" comment="" end="1659" id="P8" start="1647" text="January 2091" />
-<NAME TYPE="PATIENT" comment="" end="2777" id="P9" start="2759" text="FAULKNER, YANDEL B" />
-<DATE TYPE="DATE" comment="" end="2816" id="P11" start="2805" text="28-Oct-2094" />
-<ID TYPE="MEDICALRECORD" comment="" end="2845" id="P12" start="2835" text="8175S66443" />
-<DATE TYPE="DATE" comment="" end="6833" id="P13" start="6825" text="10/29/94" />
-<DATE TYPE="DATE" comment="" end="6844" id="P14" start="6836" text="10/28/94" />
-<DATE TYPE="DATE" comment="" end="6855" id="P15" start="6847" text="10/28/94" />
-<DATE TYPE="DATE" comment="" end="6866" id="P16" start="6858" text="10/28/94" />
-<DATE TYPE="DATE" comment="" end="6877" id="P17" start="6869" text="10/19/94" />
-<DATE TYPE="DATE" comment="" end="7598" id="P18" start="7591" text="8/11/94" />
-<DATE TYPE="DATE" comment="" end="8167" id="P19" start="8163" text="2/94" />
-<DATE TYPE="DATE" comment="" end="8689" id="P20" start="8685" text="1/94" />
-<NAME TYPE="DOCTOR" comment="" end="10346" id="P22" start="10334" text="Rachel Quade" />
-<CONTACT TYPE="PHONE" comment="" end="10364" id="P23" start="10359" text="29447" />
+<DATE id="P0" start="16" end="26" text="2094-10-29" TYPE="DATE" comment="" />
+<NAME id="P1" start="56" end="72" text="Faulkner, Yandel" TYPE="PATIENT" comment="" />
+<ID id="P2" start="77" end="84" text="5075561" TYPE="MEDICALRECORD" comment="" />
+<DATE id="P3" start="105" end="121" text="October 28, 2094" TYPE="DATE" comment="" />
+<NAME id="P4" start="128" end="138" text="Lord, Dana" TYPE="DOCTOR" comment="" />
+<AGE id="P5" start="171" end="173" text="69" TYPE="AGE" comment="" />
+<DATE id="P6" start="1395" end="1399" text="1/92" TYPE="DATE" comment="" />
+<DATE id="P7" start="1420" end="1424" text="2091" TYPE="DATE" comment="" />
+<DATE id="P8" start="1647" end="1659" text="January 2091" TYPE="DATE" comment="" />
+<NAME id="P9" start="2759" end="2777" text="FAULKNER, YANDEL B" TYPE="PATIENT" comment="" />
+<LOCATION id="P10" start="2784" end="2788" text="DCGH" TYPE="HOSPITAL" comment="" />
+<DATE id="P11" start="2805" end="2816" text="28-Oct-2094" TYPE="DATE" comment="" />
+<ID id="P12" start="2835" end="2845" text="8175S66443" TYPE="MEDICALRECORD" comment="" />
+<DATE id="P13" start="6825" end="6833" text="10/29/94" TYPE="DATE" comment="" />
+<DATE id="P14" start="6836" end="6844" text="10/28/94" TYPE="DATE" comment="" />
+<DATE id="P15" start="6847" end="6855" text="10/28/94" TYPE="DATE" comment="" />
+<DATE id="P16" start="6858" end="6866" text="10/28/94" TYPE="DATE" comment="" />
+<DATE id="P17" start="6869" end="6877" text="10/19/94" TYPE="DATE" comment="" />
+<DATE id="P18" start="7591" end="7598" text="8/11/94" TYPE="DATE" comment="" />
+<DATE id="P19" start="8163" end="8167" text="2/94" TYPE="DATE" comment="" />
+<DATE id="P20" start="8685" end="8689" text="1/94" TYPE="DATE" comment="" />
+<AGE id="P21" start="8907" end="8909" text="70" TYPE="AGE" comment="" />
+<NAME id="P22" start="10334" end="10346" text="Rachel Quade" TYPE="DOCTOR" comment="" />
+<CONTACT id="P23" start="10359" end="10364" text="29447" TYPE="PHONE" comment="" />
 </TAGS>
 </deIdi2b2>

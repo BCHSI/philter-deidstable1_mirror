@@ -1,6 +1,6 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT>
+<TEXT><![CDATA[
 
 
 Record date: 2135-12-15
@@ -113,25 +113,28 @@ Document Status: Final
 
 
 
-</TEXT>
+]]></TEXT>
 <TAGS>
-<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2135-12-15" />
-<DATE TYPE="DATE" comment="" end="214" id="P3" start="201" text="November 2134" />
-<DATE TYPE="DATE" comment="" end="449" id="P4" start="441" text="12/16/34" />
-<DATE TYPE="DATE" comment="" end="1218" id="P5" start="1210" text="12/07/34" />
-<DATE TYPE="DATE" comment="" end="1653" id="P6" start="1648" text="March" />
-<DATE TYPE="DATE" comment="" end="3063" id="P7" start="3058" text="March" />
-<DATE TYPE="DATE" comment="" end="3530" id="P8" start="3525" text="11/34" />
-<DATE TYPE="DATE" comment="" end="4648" id="P9" start="4636" text="16-June-2135" />
-<DATE TYPE="DATE" comment="" end="4803" id="P11" start="4798" text="11/34" />
-<DATE TYPE="DATE" comment="" end="5814" id="P12" start="5809" text="March" />
-<DATE TYPE="DATE" comment="" end="6302" id="P13" start="6297" text="10/35" />
-<DATE TYPE="DATE" comment="" end="7333" id="P14" start="7323" text="12/15/2135" />
-<DATE TYPE="DATE" comment="" end="7373" id="P15" start="7363" text="12/16/2134" />
-<DATE TYPE="DATE" comment="" end="7389" id="P16" start="7379" text="12/19/2135" />
-<DATE TYPE="DATE" comment="" end="7440" id="P17" start="7430" text="12/16/2134" />
-<NAME TYPE="DOCTOR" comment="" end="7495" id="P18" start="7486" text="Jan Ivory" />
-<DATE TYPE="DATE" comment="" end="7550" id="P19" start="7545" text="12/21" />
-<NAME TYPE="DOCTOR" comment="" end="7759" id="P20" start="7750" text="Jan Ivory" />
+<DATE id="P0" start="16" end="26" text="2135-12-15" TYPE="DATE" comment="" />
+<LOCATION id="P1" start="45" end="66" text="PERDUE MEDICAL CENTER" TYPE="HOSPITAL" comment="" />
+<AGE id="P2" start="139" end="141" text="60" TYPE="AGE" comment="" />
+<DATE id="P3" start="201" end="214" text="November 2134" TYPE="DATE" comment="" />
+<DATE id="P4" start="441" end="449" text="12/16/34" TYPE="DATE" comment="" />
+<DATE id="P5" start="1210" end="1218" text="12/07/34" TYPE="DATE" comment="" />
+<DATE id="P6" start="1648" end="1653" text="March" TYPE="DATE" comment="" />
+<DATE id="P7" start="3058" end="3063" text="March" TYPE="DATE" comment="" />
+<DATE id="P8" start="3525" end="3530" text="11/34" TYPE="DATE" comment="" />
+<DATE id="P9" start="4636" end="4648" text="16-June-2135" TYPE="DATE" comment="" />
+<AGE id="P10" start="4746" end="4748" text="60" TYPE="AGE" comment="" />
+<DATE id="P11" start="4798" end="4803" text="11/34" TYPE="DATE" comment="" />
+<DATE id="P12" start="5809" end="5814" text="March" TYPE="DATE" comment="" />
+<DATE id="P13" start="6297" end="6302" text="10/35" TYPE="DATE" comment="" />
+<DATE id="P14" start="7323" end="7333" text="12/15/2135" TYPE="DATE" comment="" />
+<DATE id="P15" start="7363" end="7373" text="12/16/2134" TYPE="DATE" comment="" />
+<DATE id="P16" start="7379" end="7389" text="12/19/2135" TYPE="DATE" comment="" />
+<DATE id="P17" start="7430" end="7440" text="12/16/2134" TYPE="DATE" comment="" />
+<NAME id="P18" start="7486" end="7495" text="Jan Ivory" TYPE="DOCTOR" comment="" />
+<DATE id="P19" start="7545" end="7550" text="12/21" TYPE="DATE" comment="" />
+<NAME id="P20" start="7750" end="7759" text="Jan Ivory" TYPE="DOCTOR" comment="" />
 </TAGS>
 </deIdi2b2>

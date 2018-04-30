@@ -1,6 +1,6 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT>
+<TEXT><![CDATA[
 
 
 Record date: 2096-08-06
@@ -121,20 +121,24 @@ Dictated by:  GEORGE DUNHAM, M.D.       GD74
 
 
 
-</TEXT>
+]]></TEXT>
 <TAGS>
-<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2096-08-06" />
-<NAME TYPE="PATIENT" comment="" end="97" id="P2" start="78" text="MARVINYANDELL,GRACE" />
-<ID TYPE="MEDICALRECORD" comment="" end="111" id="P3" start="100" text="904-68-07-1" />
-<DATE TYPE="DATE" comment="" end="145" id="P4" start="137" text="08/06/96" />
-<NAME TYPE="DOCTOR" comment="" end="248" id="P6" start="244" text="Dodd" />
-<NAME TYPE="DOCTOR" comment="" end="3015" id="P9" start="3003" text="Aleta Nunley" />
-<ID TYPE="IDNUM" comment="" end="3094" id="P10" start="3083" text="TR682/13484" />
-<NAME TYPE="DOCTOR" comment="" end="3110" id="P11" start="3097" text="GEORGE DUNHAM" />
-<NAME TYPE="USERNAME" comment="" end="3127" id="P12" start="3123" text="GD74" />
-<DATE TYPE="DATE" comment="" end="3164" id="P13" start="3156" text="08/06/96" />
-<DATE TYPE="DATE" comment="" end="3232" id="P14" start="3224" text="08/06/96" />
-<NAME TYPE="DOCTOR" comment="" end="3262" id="P15" start="3249" text="GEORGE DUNHAM" />
-<NAME TYPE="USERNAME" comment="" end="3279" id="P16" start="3275" text="GD74" />
+<DATE id="P0" start="16" end="26" text="2096-08-06" TYPE="DATE" comment="" />
+<LOCATION id="P1" start="49" end="52" text="BHC" TYPE="HOSPITAL" comment="" />
+<NAME id="P2" start="78" end="97" text="MARVINYANDELL,GRACE" TYPE="PATIENT" comment="" />
+<ID id="P3" start="100" end="111" text="904-68-07-1" TYPE="MEDICALRECORD" comment="" />
+<DATE id="P4" start="137" end="145" text="08/06/96" TYPE="DATE" comment="" />
+<AGE id="P5" start="199" end="201" text="68" TYPE="AGE" comment="" />
+<NAME id="P6" start="244" end="248" text="Dodd" TYPE="DOCTOR" comment="" />
+<LOCATION id="P7" start="888" end="914" text="United Medical Center East" TYPE="HOSPITAL" comment="" />
+<AGE id="P8" start="1817" end="1819" text="68" TYPE="AGE" comment="" />
+<NAME id="P9" start="3003" end="3015" text="Aleta Nunley" TYPE="DOCTOR" comment="" />
+<ID id="P10" start="3083" end="3094" text="TR682/13484" TYPE="IDNUM" comment="" />
+<NAME id="P11" start="3097" end="3110" text="GEORGE DUNHAM" TYPE="DOCTOR" comment="" />
+<NAME id="P12" start="3123" end="3127" text="GD74" TYPE="USERNAME" comment="" />
+<DATE id="P13" start="3156" end="3164" text="08/06/96" TYPE="DATE" comment="" />
+<DATE id="P14" start="3224" end="3232" text="08/06/96" TYPE="DATE" comment="" />
+<NAME id="P15" start="3249" end="3262" text="GEORGE DUNHAM" TYPE="DOCTOR" comment="" />
+<NAME id="P16" start="3275" end="3279" text="GD74" TYPE="USERNAME" comment="" />
 </TAGS>
 </deIdi2b2>

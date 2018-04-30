@@ -1,6 +1,6 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT>
+<TEXT><![CDATA[
 
 
 Record date: 2064-07-28
@@ -235,7 +235,7 @@ a.	Patient for dialysis on Monday, if still inpatient.
 
 b.	Contine nephrocaps, renagel, CaCarbonate, 
 
-3.	DM: Pt reports well-controlled, rarely c FS&gt;200
+3.	DM: Pt reports well-controlled, rarely c FS>200
 
 a.	FS qam, qpm before breakfast and dinner; reg ins sliding scale
 
@@ -279,38 +279,48 @@ Team 2 intern
 
 
 
-</TEXT>
+]]></TEXT>
 <TAGS>
-<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2064-07-28" />
-<NAME TYPE="PATIENT" comment="" end="107" id="P2" start="90" text="Ethridge, Clayton" />
-<ID TYPE="MEDICALRECORD" comment="" end="122" id="P3" start="115" text="8381729" />
-<DATE TYPE="DATE" comment="" end="143" id="P4" start="136" text="7/28/64" />
-<NAME TYPE="DOCTOR" comment="" end="167" id="P5" start="161" text="Tomlin" />
-<NAME TYPE="DOCTOR" comment="" end="200" id="P6" start="187" text="Ursula Quiles" />
-<DATE TYPE="DATE" comment="" end="475" id="P9" start="462" text="April of 2064" />
-<NAME TYPE="DOCTOR" comment="" end="489" id="P10" start="483" text="Jordon" />
-<DATE TYPE="DATE" comment="" end="667" id="P11" start="660" text="July 23" />
-<DATE TYPE="DATE" comment="" end="684" id="P12" start="680" text="24th" />
-<DATE TYPE="DATE" comment="" end="736" id="P13" start="729" text="July 25" />
-<DATE TYPE="DATE" comment="" end="1034" id="P14" start="1021" text="April of 2064" />
-<DATE TYPE="DATE" comment="" end="1528" id="P16" start="1519" text="June 2062" />
-<DATE TYPE="DATE" comment="" end="1760" id="P17" start="1751" text="June 2062" />
-<DATE TYPE="DATE" comment="" end="1796" id="P18" start="1792" text="4/63" />
-<PROFESSION TYPE="PROFESSION" comment="" end="2704" id="P21" start="2684" text="Electrical Mechanics" />
-<LOCATION TYPE="ORGANIZATION" comment="" end="2722" id="P22" start="2708" text="OpenMarket Inc" />
-<PROFESSION TYPE="PROFESSION" comment="" end="2838" id="P23" start="2832" text="intern" />
-<LOCATION TYPE="CITY" comment="" end="2909" id="P25" start="2901" text="Kemmerer" />
-<DATE TYPE="DATE" comment="" end="3626" id="P27" start="3615" text="27-Jul-2064" />
-<ID TYPE="MEDICALRECORD" comment="" end="3655" id="P28" start="3645" text="8911Z65654" />
-<DATE TYPE="DATE" comment="" end="4515" id="P30" start="4504" text="27-Jul-2064" />
-<ID TYPE="MEDICALRECORD" comment="" end="4544" id="P31" start="4534" text="8911Z65654" />
-<DATE TYPE="DATE" comment="" end="5547" id="P32" start="5537" text="April 2064" />
-<DATE TYPE="DATE" comment="" end="5625" id="P33" start="5616" text="4/25/2064" />
-<DATE TYPE="DATE" comment="" end="5730" id="P34" start="5717" text="July 27, 2064" />
-<NAME TYPE="DOCTOR" comment="" end="6313" id="P37" start="6307" text="Jordon" />
-<DATE TYPE="DATE" comment="" end="6961" id="P38" start="6957" text="7/27" />
-<DATE TYPE="DATE" comment="" end="7041" id="P39" start="7037" text="1/64" />
-<NAME TYPE="DOCTOR" comment="" end="7168" id="P40" start="7155" text="Ursula Quiles" />
-<CONTACT TYPE="PHONE" comment="" end="7195" id="P41" start="7190" text="50684" />
+<DATE id="P0" start="16" end="26" text="2064-07-28" TYPE="DATE" comment="" />
+<NAME id="P2" start="90" end="107" text="Ethridge, Clayton" TYPE="PATIENT" comment="" />
+<ID id="P3" start="115" end="122" text="8381729" TYPE="MEDICALRECORD" comment="" />
+<DATE id="P4" start="136" end="143" text="7/28/64" TYPE="DATE" comment="" />
+<NAME id="P5" start="161" end="167" text="Tomlin" TYPE="DOCTOR" comment="" />
+<NAME id="P6" start="187" end="200" text="Ursula Quiles" TYPE="DOCTOR" comment="" />
+<AGE id="P7" start="325" end="327" text="59" TYPE="AGE" comment="" />
+<LOCATION id="P8" start="331" end="343" text="Khazakhstani" TYPE="COUNTRY" comment="" />
+<DATE id="P9" start="462" end="475" text="April of 2064" TYPE="DATE" comment="" />
+<NAME id="P10" start="483" end="489" text="Jordon" TYPE="DOCTOR" comment="" />
+<DATE id="P11" start="660" end="667" text="July 23" TYPE="DATE" comment="" />
+<DATE id="P12" start="680" end="684" text="24th" TYPE="DATE" comment="" />
+<DATE id="P13" start="729" end="736" text="July 25" TYPE="DATE" comment="" />
+<DATE id="P14" start="1021" end="1034" text="April of 2064" TYPE="DATE" comment="" />
+<LOCATION id="P15" start="1056" end="1072" text="McLaren Hospital" TYPE="HOSPITAL" comment="" />
+<DATE id="P16" start="1519" end="1528" text="June 2062" TYPE="DATE" comment="" />
+<DATE id="P17" start="1751" end="1760" text="June 2062" TYPE="DATE" comment="" />
+<DATE id="P18" start="1792" end="1796" text="4/63" TYPE="DATE" comment="" />
+<LOCATION id="P19" start="2638" end="2648" text="Kazakhstan" TYPE="COUNTRY" comment="" />
+<LOCATION id="P20" start="2667" end="2674" text="UKRAINE" TYPE="COUNTRY" comment="" />
+<PROFESSION id="P21" start="2684" end="2704" text="Electrical Mechanics" TYPE="PROFESSION" comment="" />
+<LOCATION id="P22" start="2708" end="2722" text="OpenMarket Inc" TYPE="ORGANIZATION" comment="" />
+<PROFESSION id="P23" start="2832" end="2838" text="intern" TYPE="PROFESSION" comment="" />
+<LOCATION id="P24" start="2881" end="2897" text="McLaren Hospital" TYPE="HOSPITAL" comment="" />
+<LOCATION id="P25" start="2901" end="2909" text="Kemmerer" TYPE="CITY" comment="" />
+<LOCATION id="P26" start="3583" end="3598" text="EDUCARE-PULLMAN" TYPE="HOSPITAL" comment="" />
+<DATE id="P27" start="3615" end="3626" text="27-Jul-2064" TYPE="DATE" comment="" />
+<ID id="P28" start="3645" end="3655" text="8911Z65654" TYPE="MEDICALRECORD" comment="" />
+<LOCATION id="P29" start="4472" end="4487" text="EDUCARE-PULLMAN" TYPE="HOSPITAL" comment="" />
+<DATE id="P30" start="4504" end="4515" text="27-Jul-2064" TYPE="DATE" comment="" />
+<ID id="P31" start="4534" end="4544" text="8911Z65654" TYPE="MEDICALRECORD" comment="" />
+<DATE id="P32" start="5537" end="5547" text="April 2064" TYPE="DATE" comment="" />
+<DATE id="P33" start="5616" end="5625" text="4/25/2064" TYPE="DATE" comment="" />
+<DATE id="P34" start="5717" end="5730" text="July 27, 2064" TYPE="DATE" comment="" />
+<AGE id="P35" start="6006" end="6008" text="59" TYPE="AGE" comment="" />
+<LOCATION id="P36" start="6012" end="6023" text="Kazakhstani" TYPE="COUNTRY" comment="" />
+<NAME id="P37" start="6307" end="6313" text="Jordon" TYPE="DOCTOR" comment="" />
+<DATE id="P38" start="6957" end="6961" text="7/27" TYPE="DATE" comment="" />
+<DATE id="P39" start="7037" end="7041" text="1/64" TYPE="DATE" comment="" />
+<NAME id="P40" start="7155" end="7168" text="Ursula Quiles" TYPE="DOCTOR" comment="" />
+<CONTACT id="P41" start="7190" end="7195" text="50684" TYPE="PHONE" comment="" />
 </TAGS>
 </deIdi2b2>

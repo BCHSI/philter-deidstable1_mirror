@@ -1,6 +1,6 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT>
+<TEXT><![CDATA[
 
 
 Record date: 2090-10-07
@@ -207,17 +207,25 @@ IN/rowe/yeater
 
 
 
-</TEXT>
+]]></TEXT>
 <TAGS>
-<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2090-10-07" />
-<NAME TYPE="PATIENT" comment="" end="60" id="P1" start="45" text="Olivo, Kimberly" />
-<ID TYPE="MEDICALRECORD" comment="" end="79" id="P2" start="72" text="3299811" />
-<DATE TYPE="DATE" comment="" end="958" id="P10" start="942" text="October 02, 2089" />
-<NAME TYPE="DOCTOR" comment="" end="4813" id="P12" start="4807" text="Xavier" />
-<NAME TYPE="DOCTOR" comment="" end="4897" id="P13" start="4891" text="Xavier" />
-<NAME TYPE="DOCTOR" comment="" end="5182" id="P14" start="5174" text="Isaac Ng" />
-<NAME TYPE="DOCTOR" comment="" end="5192" id="P15" start="5190" text="IN" />
-<NAME TYPE="DOCTOR" comment="" end="5197" id="P16" start="5193" text="rowe" />
-<NAME TYPE="DOCTOR" comment="" end="5204" id="P17" start="5198" text="yeater" />
+<DATE id="P0" start="16" end="26" text="2090-10-07" TYPE="DATE" comment="" />
+<NAME id="P1" start="45" end="60" text="Olivo, Kimberly" TYPE="PATIENT" comment="" />
+<ID id="P2" start="72" end="79" text="3299811" TYPE="MEDICALRECORD" comment="" />
+<AGE id="P3" start="112" end="114" text="69" TYPE="AGE" comment="" />
+<LOCATION id="P4" start="277" end="301" text="American Legion Hospital" TYPE="HOSPITAL" comment="" />
+<LOCATION id="P5" start="389" end="402" text="Neligh Clinic" TYPE="HOSPITAL" comment="" />
+<LOCATION id="P6" start="499" end="512" text="Neligh Clinic" TYPE="HOSPITAL" comment="" />
+<LOCATION id="P7" start="576" end="600" text="American Legion Hospital" TYPE="HOSPITAL" comment="" />
+<LOCATION id="P8" start="721" end="734" text="Neligh Clinic" TYPE="HOSPITAL" comment="" />
+<LOCATION id="P9" start="914" end="938" text="American Legion Hospital" TYPE="HOSPITAL" comment="" />
+<DATE id="P10" start="942" end="958" text="October 02, 2089" TYPE="DATE" comment="" />
+<LOCATION id="P11" start="1039" end="1063" text="American Legion Hospital" TYPE="HOSPITAL" comment="" />
+<NAME id="P12" start="4807" end="4813" text="Xavier" TYPE="DOCTOR" comment="" />
+<NAME id="P13" start="4891" end="4897" text="Xavier" TYPE="DOCTOR" comment="" />
+<NAME id="P14" start="5174" end="5182" text="Isaac Ng" TYPE="DOCTOR" comment="" />
+<NAME id="P15" start="5190" end="5192" text="IN" TYPE="DOCTOR" comment="" />
+<NAME id="P16" start="5193" end="5197" text="rowe" TYPE="DOCTOR" comment="" />
+<NAME id="P17" start="5198" end="5204" text="yeater" TYPE="DOCTOR" comment="" />
 </TAGS>
 </deIdi2b2>

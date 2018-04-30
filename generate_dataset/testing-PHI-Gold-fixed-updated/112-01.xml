@@ -1,6 +1,6 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT>
+<TEXT><![CDATA[
 
 
 Record date: 2060-10-11
@@ -50,18 +50,22 @@ Dictated by:  VICTOR T. BONNER, M.D.  VB07
 
 
 
-</TEXT>
+]]></TEXT>
 <TAGS>
-<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2060-10-11" />
-<NAME TYPE="PATIENT" comment="" end="91" id="P2" start="76" text="HESS,CLARENCE H" />
-<ID TYPE="MEDICALRECORD" comment="" end="105" id="P3" start="94" text="643-65-59-5" />
-<DATE TYPE="DATE" comment="" end="142" id="P4" start="134" text="10/11/60" />
-<ID TYPE="IDNUM" comment="" end="2147" id="P8" start="2137" text="NE270/9072" />
-<NAME TYPE="DOCTOR" comment="" end="2164" id="P9" start="2148" text="VICTOR T. BONNER" />
-<NAME TYPE="USERNAME" comment="" end="2176" id="P10" start="2172" text="VB07" />
-<DATE TYPE="DATE" comment="" end="2215" id="P11" start="2207" text="10/11/60" />
-<DATE TYPE="DATE" comment="" end="2282" id="P12" start="2274" text="10/11/60" />
-<NAME TYPE="DOCTOR" comment="" end="2314" id="P13" start="2298" text="VICTOR T. BONNER" />
-<NAME TYPE="USERNAME" comment="" end="2326" id="P14" start="2322" text="VB07" />
+<DATE id="P0" start="16" end="26" text="2060-10-11" TYPE="DATE" comment="" />
+<LOCATION id="P1" start="49" end="52" text="BCH" TYPE="HOSPITAL" comment="" />
+<NAME id="P2" start="76" end="91" text="HESS,CLARENCE H" TYPE="PATIENT" comment="" />
+<ID id="P3" start="94" end="105" text="643-65-59-5" TYPE="MEDICALRECORD" comment="" />
+<DATE id="P4" start="134" end="142" text="10/11/60" TYPE="DATE" comment="" />
+<AGE id="P5" start="194" end="196" text="46" TYPE="AGE" comment="" />
+<AGE id="P6" start="1538" end="1540" text="46" TYPE="AGE" comment="" />
+<LOCATION id="P7" start="1656" end="1686" text="Southwest Texas Medical Center" TYPE="HOSPITAL" comment="" />
+<ID id="P8" start="2137" end="2147" text="NE270/9072" TYPE="IDNUM" comment="" />
+<NAME id="P9" start="2148" end="2164" text="VICTOR T. BONNER" TYPE="DOCTOR" comment="" />
+<NAME id="P10" start="2172" end="2176" text="VB07" TYPE="USERNAME" comment="" />
+<DATE id="P11" start="2207" end="2215" text="10/11/60" TYPE="DATE" comment="" />
+<DATE id="P12" start="2274" end="2282" text="10/11/60" TYPE="DATE" comment="" />
+<NAME id="P13" start="2298" end="2314" text="VICTOR T. BONNER" TYPE="DOCTOR" comment="" />
+<NAME id="P14" start="2322" end="2326" text="VB07" TYPE="USERNAME" comment="" />
 </TAGS>
 </deIdi2b2>

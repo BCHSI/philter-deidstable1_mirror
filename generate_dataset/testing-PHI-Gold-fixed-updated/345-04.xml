@@ -1,6 +1,6 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT>
+<TEXT><![CDATA[
 
 
 Record date: 2080-07-19
@@ -183,20 +183,33 @@ eScription document:4-5337537 BFFocus
 
 
 
-</TEXT>
+]]></TEXT>
 <TAGS>
-<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2080-07-19" />
-<ID TYPE="MEDICALRECORD" comment="" end="44" id="P1" start="36" text="72841920" />
-<NAME TYPE="PATIENT" comment="" end="61" id="P2" start="45" text="MULLINS, DOLORES" />
-<DATE TYPE="DATE" comment="" end="70" id="P3" start="62" text="07/19/80" />
-<NAME TYPE="DOCTOR" comment="" end="85" id="P4" start="71" text="TAVARES, IDRIS" />
-<NAME TYPE="DOCTOR" comment="" end="130" id="P5" start="115" text="Xavier Palacios" />
-<NAME TYPE="DOCTOR" comment="" end="1139" id="P9" start="1128" text="Octavia Xue" />
-<NAME TYPE="DOCTOR" comment="" end="4277" id="P18" start="4266" text="Octavia Xue" />
-<NAME TYPE="DOCTOR" comment="" end="4875" id="P21" start="4861" text="TAVARES, IDRIS" />
-<DATE TYPE="DATE" comment="" end="4893" id="P22" start="4885" text="07/19/80" />
-<DATE TYPE="DATE" comment="" end="4906" id="P23" start="4898" text="07/19/80" />
-<NAME TYPE="DOCTOR" comment="" end="4935" id="P24" start="4921" text="TAVARES, IDRIS" />
-<ID TYPE="IDNUM" comment="" end="4966" id="P25" start="4957" text="4-5337537" />
+<DATE id="P0" start="16" end="26" text="2080-07-19" TYPE="DATE" comment="" />
+<ID id="P1" start="36" end="44" text="72841920" TYPE="MEDICALRECORD" comment="" />
+<NAME id="P2" start="45" end="61" text="MULLINS, DOLORES" TYPE="PATIENT" comment="" />
+<DATE id="P3" start="62" end="70" text="07/19/80" TYPE="DATE" comment="" />
+<NAME id="P4" start="71" end="85" text="TAVARES, IDRIS" TYPE="DOCTOR" comment="" />
+<NAME id="P5" start="115" end="130" text="Xavier Palacios" TYPE="DOCTOR" comment="" />
+<AGE id="P6" start="473" end="475" text="78" TYPE="AGE" comment="" />
+<LOCATION id="P7" start="624" end="651" text="Southwest Montana Radiology" TYPE="HOSPITAL" comment="" />
+<LOCATION id="P8" start="736" end="753" text="Southwest Montana" TYPE="HOSPITAL" comment="" />
+<NAME id="P9" start="1128" end="1139" text="Octavia Xue" TYPE="DOCTOR" comment="" />
+<LOCATION id="P10" start="1143" end="1160" text="Heritage Hospital" TYPE="HOSPITAL" comment="" />
+<LOCATION id="P11" start="1201" end="1218" text="Southwest Montana" TYPE="HOSPITAL" comment="" />
+<LOCATION id="P12" start="1305" end="1330" text="Riverton General Hospital" TYPE="HOSPITAL" comment="" />
+<AGE id="P13" start="2864" end="2866" text="78" TYPE="AGE" comment="" />
+<LOCATION id="P14" start="2974" end="2991" text="Southwest Montana" TYPE="HOSPITAL" comment="" />
+<LOCATION id="P15" start="3222" end="3239" text="Heritage Hospital" TYPE="HOSPITAL" comment="" />
+<LOCATION id="P16" start="4111" end="4128" text="Heritage Hospital" TYPE="HOSPITAL" comment="" />
+<LOCATION id="P17" start="4191" end="4208" text="Heritage Hospital" TYPE="HOSPITAL" comment="" />
+<NAME id="P18" start="4266" end="4277" text="Octavia Xue" TYPE="DOCTOR" comment="" />
+<LOCATION id="P19" start="4328" end="4345" text="Heritage Hospital" TYPE="HOSPITAL" comment="" />
+<LOCATION id="P20" start="4736" end="4753" text="Heritage Hospital" TYPE="HOSPITAL" comment="" />
+<NAME id="P21" start="4861" end="4875" text="TAVARES, IDRIS" TYPE="DOCTOR" comment="" />
+<DATE id="P22" start="4885" end="4893" text="07/19/80" TYPE="DATE" comment="" />
+<DATE id="P23" start="4898" end="4906" text="07/19/80" TYPE="DATE" comment="" />
+<NAME id="P24" start="4921" end="4935" text="TAVARES, IDRIS" TYPE="DOCTOR" comment="" />
+<ID id="P25" start="4957" end="4966" text="4-5337537" TYPE="IDNUM" comment="" />
 </TAGS>
 </deIdi2b2>

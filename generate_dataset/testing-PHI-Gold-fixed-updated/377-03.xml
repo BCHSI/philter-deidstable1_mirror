@@ -1,6 +1,6 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT>
+<TEXT><![CDATA[
 
 
 Record date: 2065-08-02
@@ -89,7 +89,7 @@ PSH:
 
 4/2063: R CFA and EIA endarterectomy; R fem-pop BPG to AK pop using transposed greater saphenous veins
 
-1/2063: L iliofemoral endarterectomy with PTA &amp;amp; in situ vein AK L fem-pop bpg
+1/2063: L iliofemoral endarterectomy with PTA &amp; in situ vein AK L fem-pop bpg
 
 2061: Whipple procedure for chronic pancreatitis
 
@@ -198,7 +198,7 @@ Plasma Urea Nitrogen             9                         (8-25)         mg/dl
 
 Plasma Creatinine                0.94                      (0.60-1.50)    mg/dl
 
-eGFR                             &amp;gt;60                                      mL/min/1.73m2
+eGFR                             &gt;60                                      mL/min/1.73m2
 
 Plasma Glucose                   289              H        (70-110)       mg/dl
 
@@ -326,36 +326,39 @@ Pager 40232
 
 
 
-</TEXT>
+]]></TEXT>
 <TAGS>
-<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2065-08-02" />
-<NAME TYPE="PATIENT" comment="" end="116" id="P1" start="101" text="Quick, Isabelle" />
-<ID TYPE="MEDICALRECORD" comment="" end="131" id="P2" start="124" text="6557545" />
-<DATE TYPE="DATE" comment="" end="155" id="P3" start="148" text="8/02/65" />
-<NAME TYPE="DOCTOR" comment="" end="183" id="P4" start="179" text="Iyer" />
-<NAME TYPE="DOCTOR" comment="" end="201" id="P5" start="197" text="Wade" />
-<NAME TYPE="DOCTOR" comment="" end="229" id="P6" start="224" text="Joyce" />
-<DATE TYPE="DATE" comment="" end="431" id="P8" start="427" text="2063" />
-<DATE TYPE="DATE" comment="" end="466" id="P9" start="462" text="2063" />
-<DATE TYPE="DATE" comment="" end="513" id="P10" start="506" text="9/17/64" />
-<DATE TYPE="DATE" comment="" end="686" id="P11" start="680" text="9/2064" />
-<DATE TYPE="DATE" comment="" end="1529" id="P12" start="1522" text="7/31/65" />
-<DATE TYPE="DATE" comment="" end="1581" id="P13" start="1574" text="7/17/65" />
-<DATE TYPE="DATE" comment="" end="1843" id="P14" start="1836" text="9/20/64" />
-<DATE TYPE="DATE" comment="" end="1896" id="P15" start="1889" text="9/17/64" />
-<DATE TYPE="DATE" comment="" end="1964" id="P16" start="1957" text="10/2063" />
-<DATE TYPE="DATE" comment="" end="1993" id="P17" start="1987" text="4/2063" />
-<DATE TYPE="DATE" comment="" end="2097" id="P18" start="2091" text="1/2063" />
-<DATE TYPE="DATE" comment="" end="2178" id="P19" start="2174" text="2061" />
-<DATE TYPE="DATE" comment="" end="6353" id="P20" start="6349" text="8/02" />
-<DATE TYPE="DATE" comment="" end="6392" id="P21" start="6385" text="7/17/65" />
-<DATE TYPE="DATE" comment="" end="7044" id="P23" start="7040" text="2063" />
-<DATE TYPE="DATE" comment="" end="7079" id="P24" start="7075" text="2063" />
-<DATE TYPE="DATE" comment="" end="7126" id="P25" start="7119" text="9/17/64" />
-<DATE TYPE="DATE" comment="" end="7336" id="P26" start="7332" text="8/03" />
-<NAME TYPE="DOCTOR" comment="" end="7498" id="P27" start="7494" text="Iyer" />
-<NAME TYPE="DOCTOR" comment="" end="7772" id="P28" start="7762" text="David Wade" />
-<NAME TYPE="DOCTOR" comment="" end="7816" id="P29" start="7801" text="Francis D. Link" />
-<CONTACT TYPE="PHONE" comment="" end="7843" id="P31" start="7838" text="40232" />
+<DATE id="P0" start="16" end="26" text="2065-08-02" TYPE="DATE" comment="" />
+<NAME id="P1" start="101" end="116" text="Quick, Isabelle" TYPE="PATIENT" comment="" />
+<ID id="P2" start="124" end="131" text="6557545" TYPE="MEDICALRECORD" comment="" />
+<DATE id="P3" start="148" end="155" text="8/02/65" TYPE="DATE" comment="" />
+<NAME id="P4" start="179" end="183" text="Iyer" TYPE="DOCTOR" comment="" />
+<NAME id="P5" start="197" end="201" text="Wade" TYPE="DOCTOR" comment="" />
+<NAME id="P6" start="224" end="229" text="Joyce" TYPE="DOCTOR" comment="" />
+<AGE id="P7" start="319" end="321" text="53" TYPE="AGE" comment="" />
+<DATE id="P8" start="427" end="431" text="2063" TYPE="DATE" comment="" />
+<DATE id="P9" start="462" end="466" text="2063" TYPE="DATE" comment="" />
+<DATE id="P10" start="506" end="513" text="9/17/64" TYPE="DATE" comment="" />
+<DATE id="P11" start="680" end="686" text="9/2064" TYPE="DATE" comment="" />
+<DATE id="P12" start="1522" end="1529" text="7/31/65" TYPE="DATE" comment="" />
+<DATE id="P13" start="1574" end="1581" text="7/17/65" TYPE="DATE" comment="" />
+<DATE id="P14" start="1836" end="1843" text="9/20/64" TYPE="DATE" comment="" />
+<DATE id="P15" start="1889" end="1896" text="9/17/64" TYPE="DATE" comment="" />
+<DATE id="P16" start="1957" end="1964" text="10/2063" TYPE="DATE" comment="" />
+<DATE id="P17" start="1987" end="1993" text="4/2063" TYPE="DATE" comment="" />
+<DATE id="P18" start="2091" end="2097" text="1/2063" TYPE="DATE" comment="" />
+<DATE id="P19" start="2174" end="2178" text="2061" TYPE="DATE" comment="" />
+<DATE id="P20" start="6349" end="6353" text="8/02" TYPE="DATE" comment="" />
+<DATE id="P21" start="6385" end="6392" text="7/17/65" TYPE="DATE" comment="" />
+<AGE id="P22" start="6932" end="6934" text="53" TYPE="AGE" comment="" />
+<DATE id="P23" start="7040" end="7044" text="2063" TYPE="DATE" comment="" />
+<DATE id="P24" start="7075" end="7079" text="2063" TYPE="DATE" comment="" />
+<DATE id="P25" start="7119" end="7126" text="9/17/64" TYPE="DATE" comment="" />
+<DATE id="P26" start="7332" end="7336" text="8/03" TYPE="DATE" comment="" />
+<NAME id="P27" start="7494" end="7498" text="Iyer" TYPE="DOCTOR" comment="" />
+<NAME id="P28" start="7762" end="7772" text="David Wade" TYPE="DOCTOR" comment="" />
+<NAME id="P29" start="7801" end="7816" text="Francis D. Link" TYPE="DOCTOR" comment="" />
+<LOCATION id="P30" start="7818" end="7822" text="ATCH" TYPE="HOSPITAL" comment="" />
+<CONTACT id="P31" start="7838" end="7843" text="40232" TYPE="PHONE" comment="" />
 </TAGS>
 </deIdi2b2>

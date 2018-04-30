@@ -1,6 +1,6 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT>
+<TEXT><![CDATA[
 
 
 Record date: 2081-04-21
@@ -53,16 +53,17 @@ Quiana Lou Qu, M.D.
 
 
 
-</TEXT>
+]]></TEXT>
 <TAGS>
-<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2081-04-21" />
-<DATE TYPE="DATE" comment="" end="103" id="P2" start="99" text="2/81" />
-<DATE TYPE="DATE" comment="" end="292" id="P3" start="288" text="3/17" />
-<DATE TYPE="DATE" comment="" end="457" id="P4" start="453" text="2080" />
-<NAME TYPE="DOCTOR" comment="" end="761" id="P5" start="757" text="Sims" />
-<DATE TYPE="DATE" comment="" end="1097" id="P6" start="1093" text="3/18" />
-<DATE TYPE="DATE" comment="" end="1107" id="P7" start="1103" text="3/17" />
-<DATE TYPE="DATE" comment="" end="1266" id="P8" start="1262" text="1/20" />
-<NAME TYPE="DOCTOR" comment="" end="1378" id="P9" start="1365" text="Quiana Lou Qu" />
+<DATE id="P0" start="16" end="26" text="2081-04-21" TYPE="DATE" comment="" />
+<AGE id="P1" start="28" end="30" text="58" TYPE="AGE" comment="" />
+<DATE id="P2" start="99" end="103" text="2/81" TYPE="DATE" comment="" />
+<DATE id="P3" start="288" end="292" text="3/17" TYPE="DATE" comment="" />
+<DATE id="P4" start="453" end="457" text="2080" TYPE="DATE" comment="" />
+<NAME id="P5" start="757" end="761" text="Sims" TYPE="DOCTOR" comment="" />
+<DATE id="P6" start="1093" end="1097" text="3/18" TYPE="DATE" comment="" />
+<DATE id="P7" start="1103" end="1107" text="3/17" TYPE="DATE" comment="" />
+<DATE id="P8" start="1262" end="1266" text="1/20" TYPE="DATE" comment="" />
+<NAME id="P9" start="1365" end="1378" text="Quiana Lou Qu" TYPE="DOCTOR" comment="" />
 </TAGS>
 </deIdi2b2>

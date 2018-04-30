@@ -1,6 +1,6 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT>
+<TEXT><![CDATA[
 
 
 Record date: 2087-02-21
@@ -81,20 +81,22 @@ Dictated by:  HAROLD OSBORNE, M.D.       HO97
 
 
 
-</TEXT>
+]]></TEXT>
 <TAGS>
-<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2087-02-21" />
-<NAME TYPE="PATIENT" comment="" end="98" id="P2" start="82" text="VALENZUELA,BRIAN" />
-<ID TYPE="MEDICALRECORD" comment="" end="112" id="P3" start="101" text="036-89-96-4" />
-<DATE TYPE="DATE" comment="" end="153" id="P4" start="145" text="02/21/87" />
-<DATE TYPE="DATE" comment="" end="221" id="P5" start="213" text="02/21/87" />
-<LOCATION TYPE="CITY" comment="" end="471" id="P6" start="464" text="Ellijay" />
-<ID TYPE="IDNUM" comment="" end="1881" id="P8" start="1870" text="GJ089/08607" />
-<NAME TYPE="DOCTOR" comment="" end="1898" id="P9" start="1884" text="HAROLD OSBORNE" />
-<NAME TYPE="USERNAME" comment="" end="1915" id="P10" start="1911" text="HO97" />
-<DATE TYPE="DATE" comment="" end="1950" id="P11" start="1942" text="02/21/87" />
-<DATE TYPE="DATE" comment="" end="2018" id="P12" start="2010" text="02/21/87" />
-<NAME TYPE="DOCTOR" comment="" end="2049" id="P13" start="2035" text="HAROLD OSBORNE" />
-<NAME TYPE="USERNAME" comment="" end="2066" id="P14" start="2062" text="HO97" />
+<DATE id="P0" start="16" end="26" text="2087-02-21" TYPE="DATE" comment="" />
+<LOCATION id="P1" start="49" end="56" text="DAMERON" TYPE="HOSPITAL" comment="" />
+<NAME id="P2" start="82" end="98" text="VALENZUELA,BRIAN" TYPE="PATIENT" comment="" />
+<ID id="P3" start="101" end="112" text="036-89-96-4" TYPE="MEDICALRECORD" comment="" />
+<DATE id="P4" start="145" end="153" text="02/21/87" TYPE="DATE" comment="" />
+<DATE id="P5" start="213" end="221" text="02/21/87" TYPE="DATE" comment="" />
+<LOCATION id="P6" start="464" end="471" text="Ellijay" TYPE="CITY" comment="" />
+<AGE id="P7" start="575" end="577" text="49" TYPE="AGE" comment="" />
+<ID id="P8" start="1870" end="1881" text="GJ089/08607" TYPE="IDNUM" comment="" />
+<NAME id="P9" start="1884" end="1898" text="HAROLD OSBORNE" TYPE="DOCTOR" comment="" />
+<NAME id="P10" start="1911" end="1915" text="HO97" TYPE="USERNAME" comment="" />
+<DATE id="P11" start="1942" end="1950" text="02/21/87" TYPE="DATE" comment="" />
+<DATE id="P12" start="2010" end="2018" text="02/21/87" TYPE="DATE" comment="" />
+<NAME id="P13" start="2035" end="2049" text="HAROLD OSBORNE" TYPE="DOCTOR" comment="" />
+<NAME id="P14" start="2062" end="2066" text="HO97" TYPE="USERNAME" comment="" />
 </TAGS>
 </deIdi2b2>

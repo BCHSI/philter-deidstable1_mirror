@@ -1,6 +1,6 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT>
+<TEXT><![CDATA[
 
 
 Record date: 2077-03-31
@@ -103,21 +103,26 @@ eScription document:6-0689198 BFFocus
 
 
 
-</TEXT>
+]]></TEXT>
 <TAGS>
-<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2077-03-31" />
-<ID TYPE="MEDICALRECORD" comment="" end="44" id="P1" start="36" text="80780896" />
-<NAME TYPE="PATIENT" comment="" end="69" id="P2" start="45" text="SERGIO STEVEN, FRANCESCA" />
-<DATE TYPE="DATE" comment="" end="78" id="P3" start="70" text="03/31/77" />
-<NAME TYPE="DOCTOR" comment="" end="96" id="P4" start="79" text="DELACRUZ, ARMANDO" />
-<NAME TYPE="DOCTOR" comment="" end="574" id="P7" start="567" text="Nettles" />
-<NAME TYPE="DOCTOR" comment="" end="736" id="P8" start="729" text="Nettles" />
-<DATE TYPE="DATE" comment="" end="1109" id="P9" start="1102" text="09/2074" />
-<NAME TYPE="DOCTOR" comment="" end="1933" id="P11" start="1926" text="Nettles" />
-<NAME TYPE="DOCTOR" comment="" end="2255" id="P14" start="2238" text="DELACRUZ, ARMANDO" />
-<DATE TYPE="DATE" comment="" end="2273" id="P15" start="2265" text="03/31/77" />
-<DATE TYPE="DATE" comment="" end="2286" id="P16" start="2278" text="03/31/77" />
-<NAME TYPE="DOCTOR" comment="" end="2318" id="P17" start="2301" text="DELACRUZ, ARMANDO" />
-<ID TYPE="IDNUM" comment="" end="2349" id="P18" start="2340" text="6-0689198" />
+<DATE id="P0" start="16" end="26" text="2077-03-31" TYPE="DATE" comment="" />
+<ID id="P1" start="36" end="44" text="80780896" TYPE="MEDICALRECORD" comment="" />
+<NAME id="P2" start="45" end="69" text="SERGIO STEVEN, FRANCESCA" TYPE="PATIENT" comment="" />
+<DATE id="P3" start="70" end="78" text="03/31/77" TYPE="DATE" comment="" />
+<NAME id="P4" start="79" end="96" text="DELACRUZ, ARMANDO" TYPE="DOCTOR" comment="" />
+<AGE id="P5" start="313" end="315" text="74" TYPE="AGE" comment="" />
+<AGE id="P6" start="425" end="427" text="74" TYPE="AGE" comment="" />
+<NAME id="P7" start="567" end="574" text="Nettles" TYPE="DOCTOR" comment="" />
+<NAME id="P8" start="729" end="736" text="Nettles" TYPE="DOCTOR" comment="" />
+<DATE id="P9" start="1102" end="1109" text="09/2074" TYPE="DATE" comment="" />
+<AGE id="P10" start="1709" end="1711" text="74" TYPE="AGE" comment="" />
+<NAME id="P11" start="1926" end="1933" text="Nettles" TYPE="DOCTOR" comment="" />
+<LOCATION id="P12" start="1947" end="1953" text="Benson" TYPE="HOSPITAL" comment="" />
+<LOCATION id="P13" start="1983" end="1989" text="Benson" TYPE="HOSPITAL" comment="" />
+<NAME id="P14" start="2238" end="2255" text="DELACRUZ, ARMANDO" TYPE="DOCTOR" comment="" />
+<DATE id="P15" start="2265" end="2273" text="03/31/77" TYPE="DATE" comment="" />
+<DATE id="P16" start="2278" end="2286" text="03/31/77" TYPE="DATE" comment="" />
+<NAME id="P17" start="2301" end="2318" text="DELACRUZ, ARMANDO" TYPE="DOCTOR" comment="" />
+<ID id="P18" start="2340" end="2349" text="6-0689198" TYPE="IDNUM" comment="" />
 </TAGS>
 </deIdi2b2>

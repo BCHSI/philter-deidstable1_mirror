@@ -1,6 +1,6 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT>
+<TEXT><![CDATA[
 
 
 Record date: 2092-03-05
@@ -147,7 +147,7 @@ Gen: pt resting in bed in NAD
 
 	HEENT:  EOM intact, mucous membranes moist, neck supple
 
-	Chest: bi-basilar crackles R&gt;L (slightly) approx 1/3 to    way up
+	Chest: bi-basilar crackles R>L (slightly) approx 1/3 to    way up
 
 Cor:  RRR, 2/6 blowing crescendo-decrescendo murmur at USB to carotids, carotid bruits, JVP approx 7-8
 
@@ -357,27 +357,32 @@ Pager 49057
 
 
 
-</TEXT>
+]]></TEXT>
 <TAGS>
-<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2092-03-05" />
-<NAME TYPE="PATIENT" comment="" end="88" id="P2" start="74" text="Katie Mitchell" />
-<ID TYPE="MEDICALRECORD" comment="" end="102" id="P3" start="95" text="6146161" />
-<NAME TYPE="DOCTOR" comment="" end="123" id="P4" start="110" text="Evelyn Conway" />
-<NAME TYPE="DOCTOR" comment="" end="152" id="P5" start="140" text="Michael Doss" />
-<DATE TYPE="DATE" comment="" end="181" id="P6" start="174" text="3/05/92" />
-<NAME TYPE="DOCTOR" comment="" end="349" id="P8" start="337" text="Camille Dodd" />
-<DATE TYPE="DATE" comment="" end="373" id="P9" start="368" text="12/91" />
-<NAME TYPE="PATIENT" comment="" end="395" id="P10" start="387" text="Mitchell" />
-<DATE TYPE="DATE" comment="" end="1822" id="P13" start="1816" text="6/2085" />
-<DATE TYPE="DATE" comment="" end="1840" id="P14" start="1836" text="8/91" />
-<DATE TYPE="DATE" comment="" end="1954" id="P15" start="1949" text="10/89" />
-<DATE TYPE="DATE" comment="" end="1980" id="P16" start="1973" text="7/17/91" />
-<DATE TYPE="DATE" comment="" end="2121" id="P17" start="2117" text="2091" />
-<DATE TYPE="DATE" comment="" end="2191" id="P18" start="2187" text="8/91" />
-<DATE TYPE="DATE" comment="" end="2209" id="P19" start="2204" text="11/91" />
-<DATE TYPE="DATE" comment="" end="2994" id="P20" start="2989" text="08/91" />
-<DATE TYPE="DATE" comment="" end="3675" id="P21" start="3671" text="July" />
-<NAME TYPE="DOCTOR" comment="" end="9617" id="P24" start="9606" text="Kevin Henry" />
-<CONTACT TYPE="PHONE" comment="" end="9634" id="P25" start="9629" text="49057" />
+<DATE id="P0" start="16" end="26" text="2092-03-05" TYPE="DATE" comment="" />
+<NAME id="P2" start="74" end="88" text="Katie Mitchell" TYPE="PATIENT" comment="" />
+<ID id="P3" start="95" end="102" text="6146161" TYPE="MEDICALRECORD" comment="" />
+<NAME id="P4" start="110" end="123" text="Evelyn Conway" TYPE="DOCTOR" comment="" />
+<NAME id="P5" start="140" end="152" text="Michael Doss" TYPE="DOCTOR" comment="" />
+<DATE id="P6" start="174" end="181" text="3/05/92" TYPE="DATE" comment="" />
+<AGE id="P7" start="193" end="195" text="75" TYPE="AGE" comment="" />
+<NAME id="P8" start="337" end="349" text="Camille Dodd" TYPE="DOCTOR" comment="" />
+<DATE id="P9" start="368" end="373" text="12/91" TYPE="DATE" comment="" />
+<NAME id="P10" start="387" end="395" text="Mitchell" TYPE="PATIENT" comment="" />
+<AGE id="P11" start="401" end="403" text="75" TYPE="AGE" comment="" />
+<LOCATION id="P12" start="1540" end="1543" text="PHH" TYPE="HOSPITAL" comment="" />
+<DATE id="P13" start="1816" end="1822" text="6/2085" TYPE="DATE" comment="" />
+<DATE id="P14" start="1836" end="1840" text="8/91" TYPE="DATE" comment="" />
+<DATE id="P15" start="1949" end="1954" text="10/89" TYPE="DATE" comment="" />
+<DATE id="P16" start="1973" end="1980" text="7/17/91" TYPE="DATE" comment="" />
+<DATE id="P17" start="2117" end="2121" text="2091" TYPE="DATE" comment="" />
+<DATE id="P18" start="2187" end="2191" text="8/91" TYPE="DATE" comment="" />
+<DATE id="P19" start="2204" end="2209" text="11/91" TYPE="DATE" comment="" />
+<DATE id="P20" start="2989" end="2994" text="08/91" TYPE="DATE" comment="" />
+<DATE id="P21" start="3671" end="3675" text="July" TYPE="DATE" comment="" />
+<AGE id="P22" start="3794" end="3796" text="59" TYPE="AGE" comment="" />
+<AGE id="P23" start="8247" end="8249" text="75" TYPE="AGE" comment="" />
+<NAME id="P24" start="9606" end="9617" text="Kevin Henry" TYPE="DOCTOR" comment="" />
+<CONTACT id="P25" start="9629" end="9634" text="49057" TYPE="PHONE" comment="" />
 </TAGS>
 </deIdi2b2>

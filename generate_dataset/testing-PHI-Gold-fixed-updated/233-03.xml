@@ -1,6 +1,6 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT>
+<TEXT><![CDATA[
 
 
 Record date: 2063-03-20
@@ -88,27 +88,31 @@ DV:03-20-63
 
 
 
-</TEXT>
+]]></TEXT>
 <TAGS>
-<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2063-03-20" />
-<NAME TYPE="PATIENT" comment="" end="90" id="P2" start="76" text="Pickett, Silpa" />
-<ID TYPE="MEDICALRECORD" comment="" end="146" id="P3" start="138" text="12953473" />
-<DATE TYPE="DATE" comment="" end="201" id="P4" start="193" text="03-20-63" />
-<NAME TYPE="PATIENT" comment="" end="238" id="P5" start="231" text="Pickett" />
-<DATE TYPE="DATE" comment="" end="455" id="P7" start="448" text="January" />
-<NAME TYPE="PATIENT" comment="" end="767" id="P8" start="760" text="Pickett" />
-<NAME TYPE="DOCTOR" comment="" end="2950" id="P10" start="2937" text="Mario Robison" />
-<NAME TYPE="PATIENT" comment="" end="3022" id="P11" start="3015" text="Pickett" />
-<NAME TYPE="PATIENT" comment="" end="3162" id="P13" start="3148" text="Pickett, Silpa" />
-<ID TYPE="MEDICALRECORD" comment="" end="3218" id="P14" start="3210" text="12953473" />
-<DATE TYPE="DATE" comment="" end="3273" id="P15" start="3265" text="03-20-63" />
-<NAME TYPE="DOCTOR" comment="" end="3353" id="P16" start="3347" text="Xiques" />
-<NAME TYPE="DOCTOR" comment="" end="3794" id="P17" start="3784" text="Una Romano" />
-<NAME TYPE="DOCTOR" comment="" end="3856" id="P18" start="3854" text="LL" />
-<NAME TYPE="DOCTOR" comment="" end="3859" id="P19" start="3857" text="OB" />
-<ID TYPE="IDNUM" comment="" end="3864" id="P20" start="3860" text="6245" />
-<DATE TYPE="DATE" comment="" end="3938" id="P21" start="3930" text="03-20-63" />
-<DATE TYPE="DATE" comment="" end="4011" id="P22" start="4003" text="03-20-63" />
-<DATE TYPE="DATE" comment="" end="4084" id="P23" start="4076" text="03-20-63" />
+<DATE id="P0" start="16" end="26" text="2063-03-20" TYPE="DATE" comment="" />
+<LOCATION id="P1" start="28" end="51" text="EASLEY BAPTIST HOSPITAL" TYPE="HOSPITAL" comment="" />
+<NAME id="P2" start="76" end="90" text="Pickett, Silpa" TYPE="PATIENT" comment="" />
+<ID id="P3" start="138" end="146" text="12953473" TYPE="MEDICALRECORD" comment="" />
+<DATE id="P4" start="193" end="201" text="03-20-63" TYPE="DATE" comment="" />
+<NAME id="P5" start="231" end="238" text="Pickett" TYPE="PATIENT" comment="" />
+<LOCATION id="P6" start="252" end="275" text="Easley Baptist Hospital" TYPE="HOSPITAL" comment="" />
+<DATE id="P7" start="448" end="455" text="January" TYPE="DATE" comment="" />
+<NAME id="P8" start="760" end="767" text="Pickett" TYPE="PATIENT" comment="" />
+<AGE id="P9" start="2163" end="2174" text="seventy-one" TYPE="AGE" comment="" />
+<NAME id="P10" start="2937" end="2950" text="Mario Robison" TYPE="DOCTOR" comment="" />
+<NAME id="P11" start="3015" end="3022" text="Pickett" TYPE="PATIENT" comment="" />
+<LOCATION id="P12" start="3100" end="3123" text="EASLEY BAPTIST HOSPITAL" TYPE="HOSPITAL" comment="" />
+<NAME id="P13" start="3148" end="3162" text="Pickett, Silpa" TYPE="PATIENT" comment="" />
+<ID id="P14" start="3210" end="3218" text="12953473" TYPE="MEDICALRECORD" comment="" />
+<DATE id="P15" start="3265" end="3273" text="03-20-63" TYPE="DATE" comment="" />
+<NAME id="P16" start="3347" end="3353" text="Xiques" TYPE="DOCTOR" comment="" />
+<NAME id="P17" start="3784" end="3794" text="Una Romano" TYPE="DOCTOR" comment="" />
+<NAME id="P18" start="3854" end="3856" text="LL" TYPE="DOCTOR" comment="" />
+<NAME id="P19" start="3857" end="3859" text="OB" TYPE="DOCTOR" comment="" />
+<ID id="P20" start="3860" end="3864" text="6245" TYPE="IDNUM" comment="" />
+<DATE id="P21" start="3930" end="3938" text="03-20-63" TYPE="DATE" comment="" />
+<DATE id="P22" start="4003" end="4011" text="03-20-63" TYPE="DATE" comment="" />
+<DATE id="P23" start="4076" end="4084" text="03-20-63" TYPE="DATE" comment="" />
 </TAGS>
 </deIdi2b2>

@@ -1,6 +1,6 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT>
+<TEXT><![CDATA[
 
 
 Record date: 2081-09-15
@@ -137,21 +137,25 @@ Document Status: Final
 
 
 
-</TEXT>
+]]></TEXT>
 <TAGS>
-<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2081-09-15" />
-<NAME TYPE="DOCTOR" comment="" end="123" id="P2" start="117" text="Dunham" />
-<NAME TYPE="DOCTOR" comment="" end="274" id="P4" start="268" text="Dunham" />
-<DATE TYPE="DATE" comment="" end="1044" id="P5" start="1040" text="2076" />
-<DATE TYPE="DATE" comment="" end="1863" id="P6" start="1859" text="7/81" />
-<DATE TYPE="DATE" comment="" end="1929" id="P7" start="1925" text="2074" />
-<DATE TYPE="DATE" comment="" end="2185" id="P8" start="2181" text="2078" />
-<PROFESSION TYPE="PROFESSION" comment="" end="2576" id="P10" start="2573" text="CPA" />
-<DATE TYPE="DATE" comment="" end="2641" id="P11" start="2637" text="2075" />
-<LOCATION TYPE="ORGANIZATION" comment="" end="2739" id="P12" start="2708" text="Applied Industrial Technologies" />
-<PROFESSION TYPE="PROFESSION" comment="" end="2756" id="P13" start="2746" text="accountant" />
-<NAME TYPE="DOCTOR" comment="" end="4394" id="P15" start="4379" text="Sherrill Gaines" />
-<CONTACT TYPE="PHONE" comment="" end="4411" id="P16" start="4406" text="36466" />
-<NAME TYPE="DOCTOR" comment="" end="4457" id="P17" start="4442" text="Sherrill Gaines" />
+<DATE id="P0" start="16" end="26" text="2081-09-15" TYPE="DATE" comment="" />
+<LOCATION id="P1" start="47" end="71" text="FORT WASHINGTON HOSPITAL" TYPE="HOSPITAL" comment="" />
+<NAME id="P2" start="117" end="123" text="Dunham" TYPE="DOCTOR" comment="" />
+<AGE id="P3" start="187" end="189" text="53" TYPE="AGE" comment="" />
+<NAME id="P4" start="268" end="274" text="Dunham" TYPE="DOCTOR" comment="" />
+<DATE id="P5" start="1040" end="1044" text="2076" TYPE="DATE" comment="" />
+<DATE id="P6" start="1859" end="1863" text="7/81" TYPE="DATE" comment="" />
+<DATE id="P7" start="1925" end="1929" text="2074" TYPE="DATE" comment="" />
+<DATE id="P8" start="2181" end="2185" text="2078" TYPE="DATE" comment="" />
+<AGE id="P9" start="2323" end="2325" text="45" TYPE="AGE" comment="" />
+<PROFESSION id="P10" start="2573" end="2576" text="CPA" TYPE="PROFESSION" comment="" />
+<DATE id="P11" start="2637" end="2641" text="2075" TYPE="DATE" comment="" />
+<LOCATION id="P12" start="2708" end="2739" text="Applied Industrial Technologies" TYPE="ORGANIZATION" comment="" />
+<PROFESSION id="P13" start="2746" end="2756" text="accountant" TYPE="PROFESSION" comment="" />
+<AGE id="P14" start="4192" end="4194" text="53" TYPE="AGE" comment="" />
+<NAME id="P15" start="4379" end="4394" text="Sherrill Gaines" TYPE="DOCTOR" comment="" />
+<CONTACT id="P16" start="4406" end="4411" text="36466" TYPE="PHONE" comment="" />
+<NAME id="P17" start="4442" end="4457" text="Sherrill Gaines" TYPE="DOCTOR" comment="" />
 </TAGS>
 </deIdi2b2>

@@ -1,6 +1,6 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT>
+<TEXT><![CDATA[
 
 
 Record date: 2060-05-21
@@ -91,33 +91,37 @@ DV: 05/21/60
 
 
 
-</TEXT>
+]]></TEXT>
 <TAGS>
-<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2060-05-21" />
-<NAME TYPE="PATIENT" comment="" end="48" id="P1" start="34" text="HESS, CLARENCE" />
-<ID TYPE="MEDICALRECORD" comment="" end="58" id="P2" start="50" text="64365595" />
-<DATE TYPE="DATE" comment="" end="70" id="P3" start="60" text="05/21/2060" />
-<NAME TYPE="DOCTOR" comment="" end="92" id="P4" start="76" text="Robert Y. Gordon" />
-<LOCATION TYPE="CITY" comment="" end="128" id="P6" start="123" text="Olney" />
-<LOCATION TYPE="STREET" comment="" end="148" id="P7" start="130" text="494 Fairhaven Road" />
-<LOCATION TYPE="CITY" comment="" end="155" id="P8" start="150" text="Olney" />
-<LOCATION TYPE="STATE" comment="" end="159" id="P9" start="157" text="OH" />
-<LOCATION TYPE="ZIP" comment="" end="166" id="P10" start="161" text="23751" />
-<NAME TYPE="DOCTOR" comment="" end="185" id="P11" start="179" text="Gordon" />
-<NAME TYPE="PATIENT" comment="" end="227" id="P12" start="223" text="Hess" />
-<DATE TYPE="DATE" comment="" end="370" id="P15" start="360" text="02/11/2060" />
-<NAME TYPE="PATIENT" comment="" end="861" id="P16" start="857" text="Hess" />
-<ID TYPE="DEVICE" comment="" end="1348" id="P18" start="1341" text="CTE 226" />
-<NAME TYPE="PATIENT" comment="" end="1870" id="P19" start="1866" text="Hess" />
-<NAME TYPE="PATIENT" comment="" end="2365" id="P20" start="2361" text="Hess" />
-<NAME TYPE="DOCTOR" comment="" end="2511" id="P21" start="2495" text="Quatrell Swanson" />
-<NAME TYPE="PATIENT" comment="" end="2568" id="P22" start="2564" text="Hess" />
-<NAME TYPE="DOCTOR" comment="" end="2602" id="P23" start="2599" text="Law" />
-<NAME TYPE="PATIENT" comment="" end="2662" id="P25" start="2658" text="Hess" />
-<NAME TYPE="DOCTOR" comment="" end="2854" id="P26" start="2842" text="Una Trujillo" />
-<ID TYPE="IDNUM" comment="" end="2899" id="P27" start="2890" text="4-3989721" />
-<DATE TYPE="DATE" comment="" end="2945" id="P28" start="2937" text="06/02/60" />
-<DATE TYPE="DATE" comment="" end="2959" id="P29" start="2951" text="06/02/60" />
-<DATE TYPE="DATE" comment="" end="2973" id="P30" start="2965" text="05/21/60" />
+<DATE id="P0" start="16" end="26" text="2060-05-21" TYPE="DATE" comment="" />
+<NAME id="P1" start="34" end="48" text="HESS, CLARENCE" TYPE="PATIENT" comment="" />
+<ID id="P2" start="50" end="58" text="64365595" TYPE="MEDICALRECORD" comment="" />
+<DATE id="P3" start="60" end="70" text="05/21/2060" TYPE="DATE" comment="" />
+<NAME id="P4" start="76" end="92" text="Robert Y. Gordon" TYPE="DOCTOR" comment="" />
+<LOCATION id="P5" start="100" end="104" text="WMNH" TYPE="HOSPITAL" comment="" />
+<LOCATION id="P6" start="123" end="128" text="Olney" TYPE="CITY" comment="" />
+<LOCATION id="P7" start="130" end="148" text="494 Fairhaven Road" TYPE="STREET" comment="" />
+<LOCATION id="P8" start="150" end="155" text="Olney" TYPE="CITY" comment="" />
+<LOCATION id="P9" start="157" end="159" text="OH" TYPE="STATE" comment="" />
+<LOCATION id="P10" start="161" end="166" text="23751" TYPE="ZIP" comment="" />
+<NAME id="P11" start="179" end="185" text="Gordon" TYPE="DOCTOR" comment="" />
+<NAME id="P12" start="223" end="227" text="Hess" TYPE="PATIENT" comment="" />
+<AGE id="P14" start="283" end="285" text="54" TYPE="AGE" comment="" />
+<DATE id="P15" start="360" end="370" text="02/11/2060" TYPE="DATE" comment="" />
+<NAME id="P16" start="857" end="861" text="Hess" TYPE="PATIENT" comment="" />
+<LOCATION id="P17" start="1122" end="1140" text="Wheatland Memorial" TYPE="HOSPITAL" comment="" />
+<ID id="P18" start="1341" end="1348" text="CTE 226" TYPE="DEVICE" comment="" />
+<NAME id="P19" start="1866" end="1870" text="Hess" TYPE="PATIENT" comment="" />
+<NAME id="P20" start="2361" end="2365" text="Hess" TYPE="PATIENT" comment="" />
+<NAME id="P21" start="2495" end="2511" text="Quatrell Swanson" TYPE="DOCTOR" comment="" />
+<NAME id="P22" start="2564" end="2568" text="Hess" TYPE="PATIENT" comment="" />
+<NAME id="P23" start="2599" end="2602" text="Law" TYPE="DOCTOR" comment="" />
+<LOCATION id="P24" start="2633" end="2637" text="NCHC" TYPE="HOSPITAL" comment="" />
+<NAME id="P25" start="2658" end="2662" text="Hess" TYPE="PATIENT" comment="" />
+<NAME id="P26" start="2842" end="2854" text="Una Trujillo" TYPE="DOCTOR" comment="" />
+<ID id="P27" start="2890" end="2899" text="4-3989721" TYPE="IDNUM" comment="" />
+<DATE id="P28" start="2937" end="2945" text="06/02/60" TYPE="DATE" comment="" />
+<DATE id="P29" start="2951" end="2959" text="06/02/60" TYPE="DATE" comment="" />
+<DATE id="P30" start="2965" end="2973" text="05/21/60" TYPE="DATE" comment="" />
 </TAGS>
 </deIdi2b2>

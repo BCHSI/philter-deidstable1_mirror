@@ -1,6 +1,6 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT>
+<TEXT><![CDATA[
 
 
 Record date: 2135-02-23
@@ -39,7 +39,7 @@ CP, R/O MI
 
 HPI
 
-59 y.o. male followed by PMC Cardiologist Jan Ivory, is 3 months s/p stents, p/w c/c dull, aching chest pain which is NOT exertional.   He took NTG and this &gt; no change.   He is certain were assocaited with post-meals. He is certai that  his sx are now differnt than those he recalls prior to his acute intervention/ stents.   Currently no SOB. Some relief with antacids.
+59 y.o. male followed by PMC Cardiologist Jan Ivory, is 3 months s/p stents, p/w c/c dull, aching chest pain which is NOT exertional.   He took NTG and this > no change.   He is certain were assocaited with post-meals. He is certai that  his sx are now differnt than those he recalls prior to his acute intervention/ stents.   Currently no SOB. Some relief with antacids.
 
 PFSHx/ROS
 
@@ -187,22 +187,27 @@ Henry X. Shelton, MD
 
 
 
-</TEXT>
+]]></TEXT>
 <TAGS>
-<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2135-02-23" />
-<NAME TYPE="PATIENT" comment="" end="272" id="P3" start="256" text="QUINN SR, GEORGE" />
-<ID TYPE="MEDICALRECORD" comment="" end="297" id="P4" start="290" text="7924118" />
-<DATE TYPE="DATE" comment="" end="320" id="P5" start="311" text="6/12/2075" />
-<DATE TYPE="DATE" comment="" end="366" id="P6" start="357" text="2/23/2135" />
-<NAME TYPE="DOCTOR" comment="" end="501" id="P9" start="492" text="Jan Ivory" />
-<DATE TYPE="DATE" comment="" end="901" id="P10" start="896" text="11/34" />
-<NAME TYPE="DOCTOR" comment="" end="1715" id="P11" start="1710" text="Ivory" />
-<NAME TYPE="DOCTOR" comment="" end="2016" id="P13" start="2002" text="MARGIE  ECHOLS" />
-<DATE TYPE="DATE" comment="" end="2029" id="P14" start="2021" text="3/1/2135" />
-<NAME TYPE="DOCTOR" comment="" end="2135" id="P15" start="2121" text="MARGIE  ECHOLS" />
-<DATE TYPE="DATE" comment="" end="2217" id="P16" start="2210" text="Nov '34" />
-<NAME TYPE="DOCTOR" comment="" end="2508" id="P17" start="2492" text="Henry X. Shelton" />
-<DATE TYPE="DATE" comment="" end="2522" id="P18" start="2513" text="2/23/2135" />
-<NAME TYPE="DOCTOR" comment="" end="2647" id="P19" start="2631" text="Henry X. Shelton" />
+<DATE id="P0" start="16" end="26" text="2135-02-23" TYPE="DATE" comment="" />
+<LOCATION id="P1" start="61" end="67" text="Perdue" TYPE="HOSPITAL" comment="" />
+<LOCATION id="P2" start="145" end="166" text="Perdue Medical Center" TYPE="HOSPITAL" comment="" />
+<NAME id="P3" start="256" end="272" text="QUINN SR, GEORGE" TYPE="PATIENT" comment="" />
+<ID id="P4" start="290" end="297" text="7924118" TYPE="MEDICALRECORD" comment="" />
+<DATE id="P5" start="311" end="320" text="6/12/2075" TYPE="DATE" comment="" />
+<DATE id="P6" start="357" end="366" text="2/23/2135" TYPE="DATE" comment="" />
+<AGE id="P7" start="450" end="452" text="59" TYPE="AGE" comment="" />
+<LOCATION id="P8" start="475" end="478" text="PMC" TYPE="HOSPITAL" comment="" />
+<NAME id="P9" start="492" end="501" text="Jan Ivory" TYPE="DOCTOR" comment="" />
+<DATE id="P10" start="896" end="901" text="11/34" TYPE="DATE" comment="" />
+<NAME id="P11" start="1710" end="1715" text="Ivory" TYPE="DOCTOR" comment="" />
+<AGE id="P12" start="1820" end="1822" text="59" TYPE="AGE" comment="" />
+<NAME id="P13" start="2002" end="2016" text="MARGIE  ECHOLS" TYPE="DOCTOR" comment="" />
+<DATE id="P14" start="2021" end="2029" text="3/1/2135" TYPE="DATE" comment="" />
+<NAME id="P15" start="2121" end="2135" text="MARGIE  ECHOLS" TYPE="DOCTOR" comment="" />
+<DATE id="P16" start="2210" end="2217" text="Nov '34" TYPE="DATE" comment="" />
+<NAME id="P17" start="2492" end="2508" text="Henry X. Shelton" TYPE="DOCTOR" comment="" />
+<DATE id="P18" start="2513" end="2522" text="2/23/2135" TYPE="DATE" comment="" />
+<NAME id="P19" start="2631" end="2647" text="Henry X. Shelton" TYPE="DOCTOR" comment="" />
 </TAGS>
 </deIdi2b2>

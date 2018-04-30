@@ -1,11 +1,11 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT>
+<TEXT><![CDATA[
 
 
 Record date: 2078-05-31
 
-VASCULAR SURGERY H&amp;P
+VASCULAR SURGERY H&P
 Ulysses Richard
 8913196
 May 31, 2078
@@ -74,18 +74,19 @@ Resident in Surgery
 
 
 
-</TEXT>
+]]></TEXT>
 <TAGS>
-<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2078-05-31" />
-<NAME TYPE="PATIENT" comment="" end="64" id="P1" start="49" text="Ulysses Richard" />
-<ID TYPE="MEDICALRECORD" comment="" end="72" id="P2" start="65" text="8913196" />
-<DATE TYPE="DATE" comment="" end="85" id="P3" start="73" text="May 31, 2078" />
-<NAME TYPE="DOCTOR" comment="" end="103" id="P4" start="97" text="Mosley" />
-<NAME TYPE="DOCTOR" comment="" end="121" id="P5" start="115" text="Snyder" />
-<NAME TYPE="DOCTOR" comment="" end="137" id="P6" start="130" text="Allison" />
-<NAME TYPE="DOCTOR" comment="" end="153" id="P7" start="147" text="Fulton" />
-<NAME TYPE="DOCTOR" comment="" end="170" id="P8" start="163" text="Benitez" />
-<NAME TYPE="PATIENT" comment="" end="182" id="P9" start="175" text="Richard" />
-<NAME TYPE="DOCTOR" comment="" end="1372" id="P11" start="1357" text="Richard Benitez" />
+<DATE id="P0" start="16" end="26" text="2078-05-31" TYPE="DATE" comment="" />
+<NAME id="P1" start="49" end="64" text="Ulysses Richard" TYPE="PATIENT" comment="" />
+<ID id="P2" start="65" end="72" text="8913196" TYPE="MEDICALRECORD" comment="" />
+<DATE id="P3" start="73" end="85" text="May 31, 2078" TYPE="DATE" comment="" />
+<NAME id="P4" start="97" end="103" text="Mosley" TYPE="DOCTOR" comment="" />
+<NAME id="P5" start="115" end="121" text="Snyder" TYPE="DOCTOR" comment="" />
+<NAME id="P6" start="130" end="137" text="Allison" TYPE="DOCTOR" comment="" />
+<NAME id="P7" start="147" end="153" text="Fulton" TYPE="DOCTOR" comment="" />
+<NAME id="P8" start="163" end="170" text="Benitez" TYPE="DOCTOR" comment="" />
+<NAME id="P9" start="175" end="182" text="Richard" TYPE="PATIENT" comment="" />
+<AGE id="P10" start="189" end="191" text="85" TYPE="AGE" comment="" />
+<NAME id="P11" start="1357" end="1372" text="Richard Benitez" TYPE="DOCTOR" comment="" />
 </TAGS>
 </deIdi2b2>

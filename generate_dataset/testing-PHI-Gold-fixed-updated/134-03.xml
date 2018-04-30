@@ -1,6 +1,6 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT>
+<TEXT><![CDATA[
 
 
 Record date: 2091-09-18
@@ -179,42 +179,43 @@ O
 
 
 
-</TEXT>
+]]></TEXT>
 <TAGS>
-<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2091-09-18" />
-<NAME TYPE="PATIENT" comment="" end="65" id="P1" start="52" text="Amador Jarvis" />
-<NAME TYPE="DOCTOR" comment="" end="667" id="P2" start="662" text="Quirk" />
-<NAME TYPE="PATIENT" comment="" end="1648" id="P3" start="1642" text="Jarvis" />
-<NAME TYPE="PATIENT" comment="" end="2575" id="P4" start="2569" text="Jarvis" />
-<NAME TYPE="PATIENT" comment="" end="2879" id="P5" start="2873" text="Jarvis" />
-<DATE TYPE="DATE" comment="" end="3390" id="P6" start="3380" text="11/28/2090" />
-<ID TYPE="IDNUM" comment="" end="3415" id="P7" start="3408" text="GL735LM" />
-<DATE TYPE="DATE" comment="" end="3431" id="P8" start="3422" text="7/08/2091" />
-<DATE TYPE="DATE" comment="" end="3451" id="P9" start="3443" text="11/26/90" />
-<DATE TYPE="DATE" comment="" end="3469" id="P10" start="3462" text="7/04/90" />
-<NAME TYPE="DOCTOR" comment="" end="3487" id="P11" start="3478" text="A. Torres" />
-<DATE TYPE="DATE" comment="" end="3523" id="P12" start="3513" text="09/21/2090" />
-<DATE TYPE="DATE" comment="" end="3567" id="P13" start="3557" text="03/13/2091" />
-<DATE TYPE="DATE" comment="" end="3607" id="P14" start="3597" text="10/18/2090" />
-<DATE TYPE="DATE" comment="" end="3666" id="P15" start="3656" text="03/13/2091" />
-<DATE TYPE="DATE" comment="" end="3719" id="P16" start="3711" text="06/17/87" />
-<DATE TYPE="DATE" comment="" end="3756" id="P17" start="3746" text="08/21/2091" />
-<DATE TYPE="DATE" comment="" end="3820" id="P19" start="3810" text="03/14/2091" />
-<DATE TYPE="DATE" comment="" end="3861" id="P20" start="3851" text="05/15/2090" />
-<DATE TYPE="DATE" comment="" end="3903" id="P21" start="3893" text="05/15/2090" />
-<DATE TYPE="DATE" comment="" end="3942" id="P22" start="3932" text="03/13/2091" />
-<DATE TYPE="DATE" comment="" end="3985" id="P23" start="3975" text="03/13/2091" />
-<DATE TYPE="DATE" comment="" end="4028" id="P24" start="4018" text="05/15/2090" />
-<DATE TYPE="DATE" comment="" end="4070" id="P25" start="4060" text="03/13/2091" />
-<NAME TYPE="DOCTOR" comment="" end="4137" id="P26" start="4125" text="Michael Jett" />
-<DATE TYPE="DATE" comment="" end="4282" id="P27" start="4278" text="2068" />
-<DATE TYPE="DATE" comment="" end="4311" id="P28" start="4307" text="2063" />
-<DATE TYPE="DATE" comment="" end="4360" id="P29" start="4356" text="2080" />
-<DATE TYPE="DATE" comment="" end="4375" id="P30" start="4371" text="2091" />
-<NAME TYPE="PATIENT" comment="" end="4405" id="P31" start="4399" text="Jarvis" />
-<PROFESSION TYPE="PROFESSION" comment="" end="4445" id="P32" start="4426" text=" production manager" />
-<DATE TYPE="DATE" comment="" end="4530" id="P33" start="4524" text="spring" />
-<NAME TYPE="PATIENT" comment="" end="4551" id="P34" start="4545" text="Amador" />
-<NAME TYPE="DOCTOR" comment="" end="4699" id="P35" start="4698" text="O" />
+<DATE id="P0" start="16" end="26" text="2091-09-18" TYPE="DATE" comment="" />
+<NAME id="P1" start="52" end="65" text="Amador Jarvis" TYPE="PATIENT" comment="" />
+<NAME id="P2" start="662" end="667" text="Quirk" TYPE="DOCTOR" comment="" />
+<NAME id="P3" start="1642" end="1648" text="Jarvis" TYPE="PATIENT" comment="" />
+<NAME id="P4" start="2569" end="2575" text="Jarvis" TYPE="PATIENT" comment="" />
+<NAME id="P5" start="2873" end="2879" text="Jarvis" TYPE="PATIENT" comment="" />
+<DATE id="P6" start="3380" end="3390" text="11/28/2090" TYPE="DATE" comment="" />
+<ID id="P7" start="3408" end="3415" text="GL735LM" TYPE="IDNUM" comment="" />
+<DATE id="P8" start="3422" end="3431" text="7/08/2091" TYPE="DATE" comment="" />
+<DATE id="P9" start="3443" end="3451" text="11/26/90" TYPE="DATE" comment="" />
+<DATE id="P10" start="3462" end="3469" text="7/04/90" TYPE="DATE" comment="" />
+<NAME id="P11" start="3478" end="3487" text="A. Torres" TYPE="DOCTOR" comment="" />
+<DATE id="P12" start="3513" end="3523" text="09/21/2090" TYPE="DATE" comment="" />
+<DATE id="P13" start="3557" end="3567" text="03/13/2091" TYPE="DATE" comment="" />
+<DATE id="P14" start="3597" end="3607" text="10/18/2090" TYPE="DATE" comment="" />
+<DATE id="P15" start="3656" end="3666" text="03/13/2091" TYPE="DATE" comment="" />
+<DATE id="P16" start="3711" end="3719" text="06/17/87" TYPE="DATE" comment="" />
+<DATE id="P17" start="3746" end="3756" text="08/21/2091" TYPE="DATE" comment="" />
+<LOCATION id="P18" start="3777" end="3794" text="Brewster Hospital" TYPE="HOSPITAL" comment="" />
+<DATE id="P19" start="3810" end="3820" text="03/14/2091" TYPE="DATE" comment="" />
+<DATE id="P20" start="3851" end="3861" text="05/15/2090" TYPE="DATE" comment="" />
+<DATE id="P21" start="3893" end="3903" text="05/15/2090" TYPE="DATE" comment="" />
+<DATE id="P22" start="3932" end="3942" text="03/13/2091" TYPE="DATE" comment="" />
+<DATE id="P23" start="3975" end="3985" text="03/13/2091" TYPE="DATE" comment="" />
+<DATE id="P24" start="4018" end="4028" text="05/15/2090" TYPE="DATE" comment="" />
+<DATE id="P25" start="4060" end="4070" text="03/13/2091" TYPE="DATE" comment="" />
+<NAME id="P26" start="4125" end="4137" text="Michael Jett" TYPE="DOCTOR" comment="" />
+<DATE id="P27" start="4278" end="4282" text="2068" TYPE="DATE" comment="" />
+<DATE id="P28" start="4307" end="4311" text="2063" TYPE="DATE" comment="" />
+<DATE id="P29" start="4356" end="4360" text="2080" TYPE="DATE" comment="" />
+<DATE id="P30" start="4371" end="4375" text="2091" TYPE="DATE" comment="" />
+<NAME id="P31" start="4399" end="4405" text="Jarvis" TYPE="PATIENT" comment="" />
+<PROFESSION id="P32" start="4426" end="4445" text=" production manager" TYPE="PROFESSION" comment="" />
+<DATE id="P33" start="4524" end="4530" text="spring" TYPE="DATE" comment="" />
+<NAME id="P34" start="4545" end="4551" text="Amador" TYPE="PATIENT" comment="" />
+<NAME id="P35" start="4698" end="4699" text="O" TYPE="DOCTOR" comment="" />
 </TAGS>
 </deIdi2b2>

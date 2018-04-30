@@ -1,6 +1,6 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT>
+<TEXT><![CDATA[
 
 
 Record date: 2084-01-08
@@ -245,7 +245,7 @@ CN:
  
 I:          Not tested.
 
-II:         VFFC. PERRL 4 mm &amp;#224; 2 mm. No RAPD.
+II:         VFFC. PERRL 4 mm &#224; 2 mm. No RAPD.
 
 III,IV,VI   EOMI w/o nystagmus or saccadic breakdown. No diplopia. No ptosis.
 
@@ -296,7 +296,7 @@ Labs/Studies:
 
 
 
-01/08/2084 NA 140,  K 4.0,  CL 106,  CO2 27.1,  BUN 20,  CRE 1.04,  EGFR &amp;gt;60,  GLU 172 (H) 
+01/08/2084 NA 140,  K 4.0,  CL 106,  CO2 27.1,  BUN 20,  CRE 1.04,  EGFR &gt;60,  GLU 172 (H) 
 01/08/2084 ANION 7
 01/08/2084 CA 8.9,  PHOS 2.1 (L),  MG 1.4,  TBILI 0.5,  DBILI 0.2,  TP 6.1,  ALB 3.7,  GLOB 2.4
 01/08/2084 ALT/SGPT 12,  AST/SGOT 20,  ALKP 87,  TBILI 0.5,  DBILI 0.2
@@ -359,12 +359,12 @@ Plan:
 - Continuous telemetry and pulse oximetry
 - ROMI with serial CE q 8h x3, and serial EKGs.
 
-- Keep K&amp;gt;4, Mg&amp;gt;2
+- Keep K&gt;4, Mg&gt;2
 - Risk factor assessment: ESR, CRP, HBA1c
 - Check blood cultures
 - Check chromogenic Factor X level
 - PT/OT evaluation
-- Hold Glypizide XL: use RISS for sugar control with target blood glucose&amp;lt;130
+- Hold Glypizide XL: use RISS for sugar control with target blood glucose&lt;130
 
 
 
@@ -399,37 +399,41 @@ Discussed with senior resident, Dr. Skylar Watson
 
 
 
-</TEXT>
+]]></TEXT>
 <TAGS>
-<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2084-01-08" />
-<NAME TYPE="PATIENT" comment="" end="121" id="P1" start="103" text="XAYAVONG,BRANDON H" />
-<ID TYPE="MEDICALRECORD" comment="" end="136" id="P2" start="129" text="7826250" />
-<DATE TYPE="DATE" comment="" end="250" id="P5" start="246" text="2077" />
-<DATE TYPE="DATE" comment="" end="1277" id="P6" start="1269" text="Thursday" />
-<DATE TYPE="DATE" comment="" end="1719" id="P7" start="1715" text="2077" />
-<DATE TYPE="DATE" comment="" end="1827" id="P8" start="1817" text="05/13/2081" />
-<PROFESSION TYPE="PROFESSION" comment="" end="2249" id="P9" start="2233" text="purchasing agent" />
-<DATE TYPE="DATE" comment="" end="3562" id="P10" start="3554" text="1/8/2084" />
-<DATE TYPE="DATE" comment="" end="5745" id="P11" start="5735" text="01/08/2084" />
-<DATE TYPE="DATE" comment="" end="5840" id="P12" start="5830" text="01/08/2084" />
-<DATE TYPE="DATE" comment="" end="5859" id="P13" start="5849" text="01/08/2084" />
-<DATE TYPE="DATE" comment="" end="5955" id="P14" start="5945" text="01/08/2084" />
-<DATE TYPE="DATE" comment="" end="6026" id="P15" start="6016" text="01/08/2084" />
-<DATE TYPE="DATE" comment="" end="6053" id="P16" start="6043" text="01/08/2084" />
-<DATE TYPE="DATE" comment="" end="6080" id="P17" start="6070" text="01/08/2084" />
-<DATE TYPE="DATE" comment="" end="6186" id="P18" start="6176" text="01/08/2084" />
-<DATE TYPE="DATE" comment="" end="6210" id="P19" start="6200" text="01/08/2084" />
-<DATE TYPE="DATE" comment="" end="6293" id="P20" start="6283" text="01/08/2084" />
-<DATE TYPE="DATE" comment="" end="6372" id="P21" start="6362" text="01/08/2084" />
-<DATE TYPE="DATE" comment="" end="6434" id="P22" start="6424" text="01/08/2084" />
-<DATE TYPE="DATE" comment="" end="6481" id="P23" start="6471" text="01/08/2084" />
-<DATE TYPE="DATE" comment="" end="6503" id="P24" start="6493" text="01/11/2084" />
-<DATE TYPE="DATE" comment="" end="6950" id="P26" start="6946" text="2077" />
-<CONTACT TYPE="PHONE" comment="" end="8091" id="P27" start="8086" text="90395" />
-<CONTACT TYPE="PHONE" comment="" end="9019" id="P28" start="9014" text="90395" />
-<NAME TYPE="DOCTOR" comment="" end="9107" id="P29" start="9096" text="Carol Upton" />
-<CONTACT TYPE="PHONE" comment="" end="9165" id="P31" start="9160" text="25539" />
-<CONTACT TYPE="PHONE" comment="" end="9171" id="P32" start="9166" text="69926" />
-<NAME TYPE="DOCTOR" comment="" end="9224" id="P33" start="9211" text="Skylar Watson" />
+<DATE id="P0" start="16" end="26" text="2084-01-08" TYPE="DATE" comment="" />
+<NAME id="P1" start="103" end="121" text="XAYAVONG,BRANDON H" TYPE="PATIENT" comment="" />
+<ID id="P2" start="129" end="136" text="7826250" TYPE="MEDICALRECORD" comment="" />
+<LOCATION id="P3" start="137" end="140" text="GNC" TYPE="HOSPITAL" comment="" />
+<AGE id="P4" start="197" end="199" text="63" TYPE="AGE" comment="" />
+<DATE id="P5" start="246" end="250" text="2077" TYPE="DATE" comment="" />
+<DATE id="P6" start="1269" end="1277" text="Thursday" TYPE="DATE" comment="" />
+<DATE id="P7" start="1715" end="1719" text="2077" TYPE="DATE" comment="" />
+<DATE id="P8" start="1817" end="1827" text="05/13/2081" TYPE="DATE" comment="" />
+<PROFESSION id="P9" start="2233" end="2249" text="purchasing agent" TYPE="PROFESSION" comment="" />
+<DATE id="P10" start="3554" end="3562" text="1/8/2084" TYPE="DATE" comment="" />
+<DATE id="P11" start="5735" end="5745" text="01/08/2084" TYPE="DATE" comment="" />
+<DATE id="P12" start="5830" end="5840" text="01/08/2084" TYPE="DATE" comment="" />
+<DATE id="P13" start="5849" end="5859" text="01/08/2084" TYPE="DATE" comment="" />
+<DATE id="P14" start="5945" end="5955" text="01/08/2084" TYPE="DATE" comment="" />
+<DATE id="P15" start="6016" end="6026" text="01/08/2084" TYPE="DATE" comment="" />
+<DATE id="P16" start="6043" end="6053" text="01/08/2084" TYPE="DATE" comment="" />
+<DATE id="P17" start="6070" end="6080" text="01/08/2084" TYPE="DATE" comment="" />
+<DATE id="P18" start="6176" end="6186" text="01/08/2084" TYPE="DATE" comment="" />
+<DATE id="P19" start="6200" end="6210" text="01/08/2084" TYPE="DATE" comment="" />
+<DATE id="P20" start="6283" end="6293" text="01/08/2084" TYPE="DATE" comment="" />
+<DATE id="P21" start="6362" end="6372" text="01/08/2084" TYPE="DATE" comment="" />
+<DATE id="P22" start="6424" end="6434" text="01/08/2084" TYPE="DATE" comment="" />
+<DATE id="P23" start="6471" end="6481" text="01/08/2084" TYPE="DATE" comment="" />
+<DATE id="P24" start="6493" end="6503" text="01/11/2084" TYPE="DATE" comment="" />
+<AGE id="P25" start="6897" end="6899" text="63" TYPE="AGE" comment="" />
+<DATE id="P26" start="6946" end="6950" text="2077" TYPE="DATE" comment="" />
+<CONTACT id="P27" start="8086" end="8091" text="90395" TYPE="PHONE" comment="" />
+<CONTACT id="P28" start="9014" end="9019" text="90395" TYPE="PHONE" comment="" />
+<NAME id="P29" start="9096" end="9107" text="Carol Upton" TYPE="DOCTOR" comment="" />
+<LOCATION id="P30" start="9123" end="9133" text="Winchendon" TYPE="HOSPITAL" comment="" />
+<CONTACT id="P31" start="9160" end="9165" text="25539" TYPE="PHONE" comment="" />
+<CONTACT id="P32" start="9166" end="9171" text="69926" TYPE="PHONE" comment="" />
+<NAME id="P33" start="9211" end="9224" text="Skylar Watson" TYPE="DOCTOR" comment="" />
 </TAGS>
 </deIdi2b2>

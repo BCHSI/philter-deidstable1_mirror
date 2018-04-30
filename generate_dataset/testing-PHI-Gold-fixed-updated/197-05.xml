@@ -1,6 +1,6 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT>
+<TEXT><![CDATA[
 
 
 Record date: 2098-12-23
@@ -229,17 +229,19 @@ Vascular Junior
 
 
 
-</TEXT>
+]]></TEXT>
 <TAGS>
-<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2098-12-23" />
-<NAME TYPE="DOCTOR" comment="" end="70" id="P1" start="64" text="Kinder" />
-<DATE TYPE="DATE" comment="" end="88" id="P2" start="78" text="12/23/2098" />
-<NAME TYPE="DOCTOR" comment="" end="108" id="P3" start="101" text="Quiring" />
-<NAME TYPE="PATIENT" comment="" end="126" id="P4" start="115" text="Emery, Donn" />
-<ID TYPE="MEDICALRECORD" comment="" end="140" id="P5" start="133" text="0595726" />
-<PROFESSION TYPE="PROFESSION" comment="" end="1158" id="P7" start="1143" text="Finance manager" />
-<NAME TYPE="DOCTOR" comment="" end="3690" id="P9" start="3683" text="Quiring" />
-<NAME TYPE="DOCTOR" comment="" end="3759" id="P10" start="3748" text="Vicki Oneil" />
-<CONTACT TYPE="PHONE" comment="" end="3789" id="P11" start="3784" text="90148" />
+<DATE id="P0" start="16" end="26" text="2098-12-23" TYPE="DATE" comment="" />
+<NAME id="P1" start="64" end="70" text="Kinder" TYPE="DOCTOR" comment="" />
+<DATE id="P2" start="78" end="88" text="12/23/2098" TYPE="DATE" comment="" />
+<NAME id="P3" start="101" end="108" text="Quiring" TYPE="DOCTOR" comment="" />
+<NAME id="P4" start="115" end="126" text="Emery, Donn" TYPE="PATIENT" comment="" />
+<ID id="P5" start="133" end="140" text="0595726" TYPE="MEDICALRECORD" comment="" />
+<AGE id="P6" start="211" end="213" text="89" TYPE="AGE" comment="" />
+<PROFESSION id="P7" start="1143" end="1158" text="Finance manager" TYPE="PROFESSION" comment="" />
+<AGE id="P8" start="3474" end="3476" text="85" TYPE="AGE" comment="" />
+<NAME id="P9" start="3683" end="3690" text="Quiring" TYPE="DOCTOR" comment="" />
+<NAME id="P10" start="3748" end="3759" text="Vicki Oneil" TYPE="DOCTOR" comment="" />
+<CONTACT id="P11" start="3784" end="3789" text="90148" TYPE="PHONE" comment="" />
 </TAGS>
 </deIdi2b2>

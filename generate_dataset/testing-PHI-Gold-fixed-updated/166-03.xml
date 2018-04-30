@@ -1,6 +1,6 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT>
+<TEXT><![CDATA[
 
 
 Record date: 2095-12-02
@@ -26,7 +26,7 @@ HPI:
 Oscar Meyer is a 64yoM with type II DM and HL who has been having exertional, non-radiating, SSCP with activities such as shoveling snow and taking out the trash over the past several months, increasing in frequency.  He endorses 6 episodes over the last week, the most recent yesterday morning when he was shoveling.  The pain always resolves after 4-5 min of rest and deep breathing.  He denies n/v, palps, LH, and SOB but does have diaphoresis at times.  He presented to the SCH ED for evaluation today.
 
 
-OSH course: The patient was hypertensive (max BP 200/89); he received Lopressor 5 mg IV x 2, resulting in BP 170/90; an additional 5-mg dose resulted in BP 160/87 (later, 146/79 just prior to transfer).  EKG showed small 0.5-1 mm STDs in V4-6.  Initial TnI was 1.00 (CK/MB wnl).  He received ASA 325, Nitropaste 1/2&amp;#8221; (despite the fact that he takes Viagra at home), A heparin gtt was started (with bolus), and the patient was transferred to WPH in anticipation of cardiac cath.
+OSH course: The patient was hypertensive (max BP 200/89); he received Lopressor 5 mg IV x 2, resulting in BP 170/90; an additional 5-mg dose resulted in BP 160/87 (later, 146/79 just prior to transfer).  EKG showed small 0.5-1 mm STDs in V4-6.  Initial TnI was 1.00 (CK/MB wnl).  He received ASA 325, Nitropaste 1/2&#8221; (despite the fact that he takes Viagra at home), A heparin gtt was started (with bolus), and the patient was transferred to WPH in anticipation of cardiac cath.
 
 
 Past Medical/Surgical History
@@ -34,12 +34,12 @@ Past Medical/Surgical History
 Diabetes mellitus type 2: gets yearly eye checks and was recently told he needs laser surgery.  HbA1c 11.0 at SCH today. 
 HL: Not on meds 
 Actinic keratosis : , right hand 
-Squamous cell carcinoma in situ : and , dorsum, left hand, CE&amp;amp;D 
+Squamous cell carcinoma in situ : and , dorsum, left hand, CE&amp;D 
 Hypertrophic callus : , right fifth metatarsal, painful,pared 
 Prostate CA: dx July 2095, primary treatment radiation therapy 42 fragments. 
 Anxiety: occasional panic attacks 
 H/o positive : 2064, s/p INH x 3-6 mo at that time 
-H/o Barrett&amp;#8217;s esophagus and GERD
+H/o Barrett&#8217;s esophagus and GERD
 
 
 Home meds: 
@@ -55,7 +55,7 @@ Home meds:
 Allergies/adverse drug reactions: NKDA
 
 
-FH: Father had a stroke at 80 and died of ?another stroke at age 83.  Mother died of colon CA at 76.  Twin sister A&amp;amp;W.
+FH: Father had a stroke at 80 and died of ?another stroke at age 83.  Mother died of colon CA at 76.  Twin sister A&amp;W.
 
 
 SH: Lives with wife; no children.  Works in programming at Audiovox.  Formerly at BrightPoint.
@@ -103,12 +103,12 @@ TOTAL BILIRUBIN                  0.3                       (0.3-1.2)      MG/DL
 
 FASTING (LIPIP)                 NONFASTING       *
 CHOLESTEROL, SERUM               220              H        (140-200)      MG/DL
-TRIGLYCERIDE                     247              H        (&amp;lt; 150)        MG/DL
-CHOLESTEROL                  37               L        (&amp;gt;40)          MG/DL
-CHOLESTEROL                  134              H        (&amp;lt;130)         MG/DL
+TRIGLYCERIDE                     247              H        (&lt; 150)        MG/DL
+CHOLESTEROL                  37               L        (&gt;40)          MG/DL
+CHOLESTEROL                  134              H        (&lt;130)         MG/DL
 
 
-1st set biomarkers (SCH): CK 156, MB 3.8, TnI 1&amp;#224;0.93 (Tns &amp;lt; 3 hr apart)
+1st set biomarkers (SCH): CK 156, MB 3.8, TnI 1&#224;0.93 (Tns &lt; 3 hr apart)
 
 
 2nd set biomarkers (WPH):
@@ -159,23 +159,38 @@ PGY-2, Internal Medicine
 
 
 
-</TEXT>
+]]></TEXT>
 <TAGS>
-<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2095-12-02" />
-<NAME TYPE="PATIENT" comment="" end="284" id="P1" start="272" text="Meyer, Oscar" />
-<ID TYPE="MEDICALRECORD" comment="" end="297" id="P2" start="290" text="2771447" />
-<DATE TYPE="DATE" comment="" end="324" id="P3" start="315" text="12/2/2095" />
-<NAME TYPE="DOCTOR" comment="" end="352" id="P4" start="334" text="Patricia Whittaker" />
-<NAME TYPE="DOCTOR" comment="" end="374" id="P5" start="368" text="Jolley" />
-<NAME TYPE="PATIENT" comment="" end="599" id="P7" start="588" text="Oscar Meyer" />
-<DATE TYPE="DATE" comment="" end="1944" id="P12" start="1935" text="July 2095" />
-<DATE TYPE="DATE" comment="" end="2051" id="P13" start="2047" text="2064" />
-<DATE TYPE="DATE" comment="" end="2328" id="P14" start="2323" text="11/29" />
-<PROFESSION TYPE="PROFESSION" comment="" end="2630" id="P18" start="2619" text="programming" />
-<LOCATION TYPE="ORGANIZATION" comment="" end="2642" id="P19" start="2634" text="Audiovox" />
-<LOCATION TYPE="ORGANIZATION" comment="" end="2668" id="P20" start="2657" text="BrightPoint" />
-<DATE TYPE="DATE" comment="" end="6484" id="P28" start="6469" text="Thursday, 11/29" />
-<NAME TYPE="DOCTOR" comment="" end="7002" id="P29" start="6984" text="Patricia Whittaker" />
-<CONTACT TYPE="PHONE" comment="" end="7041" id="P30" start="7036" text="63765" />
+<DATE id="P0" start="16" end="26" text="2095-12-02" TYPE="DATE" comment="" />
+<NAME id="P1" start="272" end="284" text="Meyer, Oscar" TYPE="PATIENT" comment="" />
+<ID id="P2" start="290" end="297" text="2771447" TYPE="MEDICALRECORD" comment="" />
+<DATE id="P3" start="315" end="324" text="12/2/2095" TYPE="DATE" comment="" />
+<NAME id="P4" start="334" end="352" text="Patricia Whittaker" TYPE="DOCTOR" comment="" />
+<NAME id="P5" start="368" end="374" text="Jolley" TYPE="DOCTOR" comment="" />
+<AGE id="P6" start="486" end="488" text="64" TYPE="AGE" comment="" />
+<NAME id="P7" start="588" end="599" text="Oscar Meyer" TYPE="PATIENT" comment="" />
+<AGE id="P8" start="605" end="607" text="64" TYPE="AGE" comment="" />
+<LOCATION id="P9" start="1066" end="1069" text="SCH" TYPE="HOSPITAL" comment="" />
+<LOCATION id="P10" start="1544" end="1547" text="WPH" TYPE="HOSPITAL" comment="" />
+<LOCATION id="P11" start="1724" end="1727" text="SCH" TYPE="HOSPITAL" comment="" />
+<DATE id="P12" start="1935" end="1944" text="July 2095" TYPE="DATE" comment="" />
+<DATE id="P13" start="2047" end="2051" text="2064" TYPE="DATE" comment="" />
+<DATE id="P14" start="2323" end="2328" text="11/29" TYPE="DATE" comment="" />
+<AGE id="P15" start="2477" end="2479" text="80" TYPE="AGE" comment="" />
+<AGE id="P16" start="2515" end="2517" text="83" TYPE="AGE" comment="" />
+<AGE id="P17" start="2547" end="2549" text="76" TYPE="AGE" comment="" />
+<PROFESSION id="P18" start="2619" end="2630" text="programming" TYPE="PROFESSION" comment="" />
+<LOCATION id="P19" start="2634" end="2642" text="Audiovox" TYPE="ORGANIZATION" comment="" />
+<LOCATION id="P20" start="2657" end="2668" text="BrightPoint" TYPE="ORGANIZATION" comment="" />
+<AGE id="P21" start="2703" end="2705" text="38" TYPE="AGE" comment="" />
+<LOCATION id="P22" start="4853" end="4856" text="SCH" TYPE="HOSPITAL" comment="" />
+<LOCATION id="P23" start="4935" end="4938" text="WPH" TYPE="HOSPITAL" comment="" />
+<LOCATION id="P24" start="5258" end="5261" text="SCH" TYPE="HOSPITAL" comment="" />
+<LOCATION id="P25" start="6065" end="6068" text="SCH" TYPE="HOSPITAL" comment="" />
+<AGE id="P26" start="6127" end="6129" text="64" TYPE="AGE" comment="" />
+<LOCATION id="P27" start="6430" end="6433" text="SCH" TYPE="HOSPITAL" comment="" />
+<DATE id="P28" start="6469" end="6484" text="Thursday, 11/29" TYPE="DATE" comment="" />
+<NAME id="P29" start="6984" end="7002" text="Patricia Whittaker" TYPE="DOCTOR" comment="" />
+<CONTACT id="P30" start="7036" end="7041" text="63765" TYPE="PHONE" comment="" />
 </TAGS>
 </deIdi2b2>

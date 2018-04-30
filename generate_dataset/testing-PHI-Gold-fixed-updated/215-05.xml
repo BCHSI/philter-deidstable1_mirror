@@ -1,6 +1,6 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT>
+<TEXT><![CDATA[
 
 
 Record date: 2130-08-09
@@ -27,7 +27,7 @@ Record date: 2130-08-09
 
    Cardiac history began in 2125 with inappropriate sinus tachycardia. A cardiac echo revealed EF of 64% with no valvular disease and normal wall motion. An Aden MIBI 4/25 revealed inferior and PL ischemia and he was taken to the cath lab. The cath revealed mild pulmonary hypertension, PCW of 14, co-dominance with 65% PDA, moderate LCX disease and severe proximal LAD lesion. HE subsequently underwent CABG with LIMA to LAD, radial artery to LCX and VG to PDA. 1/26 he noted progressive DOE with upper chest discomfort and was brought to the cath lab. His PA pressure was 45/20 with a PCW of 20, all grafts were open and his BB and lasix were increased.
 
-An Aden MIBI 12/27 showed an EF of 60% w small PB scar &amp; inferior-lateral ischemia. Echo 2/28 revealed new LA enlargement with EF of 62%. He was admitted 1/29 with HF exacerbation/acute renal failure in the setting of rapid out-patient diureses with zaroxolyn.  (BUN 74, creat 2.2) Diuretics as well as Glucophage and ACE I were held and he was discharged with a creat of 1.2. An echo revealed new mild MR and RF of 59%. 
+An Aden MIBI 12/27 showed an EF of 60% w small PB scar & inferior-lateral ischemia. Echo 2/28 revealed new LA enlargement with EF of 62%. He was admitted 1/29 with HF exacerbation/acute renal failure in the setting of rapid out-patient diureses with zaroxolyn.  (BUN 74, creat 2.2) Diuretics as well as Glucophage and ACE I were held and he was discharged with a creat of 1.2. An echo revealed new mild MR and RF of 59%. 
 
 Over the last few months he has noted episodes of sudden lightheadedness/dizziness, floaters. He would take his BP with a home machine and it could be as low as 77/47. In addition, he has noted progressive DOE as well an now rest angina that is requiring a SL TNG for relief. He has 3 flights of stairs to climb to his apartment and uses 1 SL TNG prophylactically.  
 
@@ -153,7 +153,7 @@ Physical examination:
 
 -Heent:   Unremarkable
 
--Neck:   JVP flat but difficult to see. - carotids 2+, bilateral bruits R&gt;L
+-Neck:   JVP flat but difficult to see. - carotids 2+, bilateral bruits R>L
 
 -Chest:   Lungs clear anteriorly
 
@@ -161,9 +161,9 @@ Physical examination:
 
 -Abdomen:   Normal bowel sounds, soft and nontender, with no hepatosplenomegaly or masses appreciated.
 
--Extremities:   right groin D&amp;I, no hematoma or bruit DP/PT 1+/1+, left groin 2+, no bruit DP/PT 1+/1+
+-Extremities:   right groin D&I, no hematoma or bruit DP/PT 1+/1+, left groin 2+, no bruit DP/PT 1+/1+
 
--Neuro:   A&amp;O x3, CN 2-12 grossly intact. 
+-Neuro:   A&O x3, CN 2-12 grossly intact. 
 
 -BP: 139/85   
 
@@ -315,39 +315,44 @@ aspirin 325 mg   QD
 
 
 
-</TEXT>
+]]></TEXT>
 <TAGS>
-<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2130-08-09" />
-<DATE TYPE="DATE" comment="" end="144" id="P3" start="142" text="25" />
-<DATE TYPE="DATE" comment="" end="326" id="P4" start="322" text="2125" />
-<DATE TYPE="DATE" comment="" end="465" id="P5" start="461" text="4/25" />
-<DATE TYPE="DATE" comment="" end="761" id="P6" start="757" text="1/26" />
-<DATE TYPE="DATE" comment="" end="969" id="P7" start="964" text="12/27" />
-<DATE TYPE="DATE" comment="" end="1044" id="P8" start="1040" text="2/28" />
-<DATE TYPE="DATE" comment="" end="1109" id="P9" start="1105" text="1/29" />
-<DATE TYPE="DATE" comment="" end="1782" id="P10" start="1778" text="6/14" />
-<DATE TYPE="DATE" comment="" end="1888" id="P11" start="1884" text="6/20" />
-<NAME TYPE="DOCTOR" comment="" end="2272" id="P12" start="2269" text="You" />
-<DATE TYPE="DATE" comment="" end="2967" id="P14" start="2965" text="25" />
-<DATE TYPE="DATE" comment="" end="3438" id="P16" start="3436" text="08" />
-<PROFESSION TYPE="PROFESSION" comment="" end="3486" id="P17" start="3464" text="communications manager" />
-<DATE TYPE="DATE" comment="" end="4436" id="P18" start="4428" text="08/09/30" />
-<DATE TYPE="DATE" comment="" end="4510" id="P19" start="4502" text="08/08/30" />
-<DATE TYPE="DATE" comment="" end="4681" id="P20" start="4673" text="07/05/30" />
-<DATE TYPE="DATE" comment="" end="4746" id="P21" start="4738" text="05/30/30" />
-<DATE TYPE="DATE" comment="" end="4872" id="P22" start="4864" text="08/01/30" />
-<DATE TYPE="DATE" comment="" end="4981" id="P23" start="4973" text="08/01/30" />
-<DATE TYPE="DATE" comment="" end="5028" id="P24" start="5020" text="01/09/29" />
-<DATE TYPE="DATE" comment="" end="5075" id="P25" start="5067" text="07/31/27" />
-<DATE TYPE="DATE" comment="" end="5156" id="P26" start="5148" text="04/11/30" />
-<DATE TYPE="DATE" comment="" end="5214" id="P27" start="5206" text="07/25/30" />
-<DATE TYPE="DATE" comment="" end="5275" id="P28" start="5271" text="7/26" />
-<NAME TYPE="DOCTOR" comment="" end="6087" id="P31" start="6072" text="Andreea Marquez" />
-<CONTACT TYPE="PHONE" comment="" end="6103" id="P32" start="6097" text="1-3051" />
-<DATE TYPE="DATE" comment="" end="6208" id="P33" start="6198" text="08/09/2130" />
-<DATE TYPE="DATE" comment="" end="6289" id="P34" start="6279" text="08/09/2130" />
-<DATE TYPE="DATE" comment="" end="6456" id="P35" start="6446" text="07/13/2130" />
-<NAME TYPE="DOCTOR" comment="" end="6527" id="P36" start="6511" text="Andreea  Marquez" />
-<DATE TYPE="DATE" comment="" end="6552" id="P37" start="6540" text="Aug 10, 2130" />
+<DATE id="P0" start="16" end="26" text="2130-08-09" TYPE="DATE" comment="" />
+<LOCATION id="P1" start="53" end="74" text="ELKHORN VALLEY CLINIC" TYPE="HOSPITAL" comment="" />
+<AGE id="P2" start="110" end="112" text="59" TYPE="AGE" comment="" />
+<DATE id="P3" start="142" end="144" text="25" TYPE="DATE" comment="" />
+<DATE id="P4" start="322" end="326" text="2125" TYPE="DATE" comment="" />
+<DATE id="P5" start="461" end="465" text="4/25" TYPE="DATE" comment="" />
+<DATE id="P6" start="757" end="761" text="1/26" TYPE="DATE" comment="" />
+<DATE id="P7" start="964" end="969" text="12/27" TYPE="DATE" comment="" />
+<DATE id="P8" start="1040" end="1044" text="2/28" TYPE="DATE" comment="" />
+<DATE id="P9" start="1105" end="1109" text="1/29" TYPE="DATE" comment="" />
+<DATE id="P10" start="1778" end="1782" text="6/14" TYPE="DATE" comment="" />
+<DATE id="P11" start="1884" end="1888" text="6/20" TYPE="DATE" comment="" />
+<NAME id="P12" start="2269" end="2272" text="You" TYPE="DOCTOR" comment="" />
+<AGE id="P13" start="2927" end="2931" text="20's" TYPE="AGE" comment="" />
+<DATE id="P14" start="2965" end="2967" text="25" TYPE="DATE" comment="" />
+<AGE id="P15" start="3381" end="3383" text="59" TYPE="AGE" comment="" />
+<DATE id="P16" start="3436" end="3438" text="08" TYPE="DATE" comment="" />
+<PROFESSION id="P17" start="3464" end="3486" text="communications manager" TYPE="PROFESSION" comment="" />
+<DATE id="P18" start="4428" end="4436" text="08/09/30" TYPE="DATE" comment="" />
+<DATE id="P19" start="4502" end="4510" text="08/08/30" TYPE="DATE" comment="" />
+<DATE id="P20" start="4673" end="4681" text="07/05/30" TYPE="DATE" comment="" />
+<DATE id="P21" start="4738" end="4746" text="05/30/30" TYPE="DATE" comment="" />
+<DATE id="P22" start="4864" end="4872" text="08/01/30" TYPE="DATE" comment="" />
+<DATE id="P23" start="4973" end="4981" text="08/01/30" TYPE="DATE" comment="" />
+<DATE id="P24" start="5020" end="5028" text="01/09/29" TYPE="DATE" comment="" />
+<DATE id="P25" start="5067" end="5075" text="07/31/27" TYPE="DATE" comment="" />
+<DATE id="P26" start="5148" end="5156" text="04/11/30" TYPE="DATE" comment="" />
+<DATE id="P27" start="5206" end="5214" text="07/25/30" TYPE="DATE" comment="" />
+<DATE id="P28" start="5271" end="5275" text="7/26" TYPE="DATE" comment="" />
+<AGE id="P29" start="5328" end="5330" text="77" TYPE="AGE" comment="" />
+<NAME id="P31" start="6072" end="6087" text="Andreea Marquez" TYPE="DOCTOR" comment="" />
+<CONTACT id="P32" start="6097" end="6103" text="1-3051" TYPE="PHONE" comment="" />
+<DATE id="P33" start="6198" end="6208" text="08/09/2130" TYPE="DATE" comment="" />
+<DATE id="P34" start="6279" end="6289" text="08/09/2130" TYPE="DATE" comment="" />
+<DATE id="P35" start="6446" end="6456" text="07/13/2130" TYPE="DATE" comment="" />
+<NAME id="P36" start="6511" end="6527" text="Andreea  Marquez" TYPE="DOCTOR" comment="" />
+<DATE id="P37" start="6540" end="6552" text="Aug 10, 2130" TYPE="DATE" comment="" />
 </TAGS>
 </deIdi2b2>

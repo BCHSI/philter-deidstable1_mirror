@@ -1,6 +1,6 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT>
+<TEXT><![CDATA[
 
 
 Record date: 2096-03-18
@@ -112,53 +112,56 @@ DV: 03/18/96
 
 
 
-</TEXT>
+]]></TEXT>
 <TAGS>
-<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2096-03-18" />
-<NAME TYPE="PATIENT" comment="" end="44" id="P1" start="34" text="FOUST, FAY" />
-<ID TYPE="MEDICALRECORD" comment="" end="53" id="P2" start="45" text="50294530" />
-<DATE TYPE="DATE" comment="" end="64" id="P3" start="54" text="03/18/2096" />
-<NAME TYPE="DOCTOR" comment="" end="82" id="P4" start="69" text="Bethany Downs" />
-<LOCATION TYPE="STREET" comment="" end="136" id="P6" start="124" text="08 Kent Lane" />
-<LOCATION TYPE="CITY" comment="" end="154" id="P8" start="144" text="Union City" />
-<LOCATION TYPE="STATE" comment="" end="158" id="P9" start="156" text="MO" />
-<LOCATION TYPE="ZIP" comment="" end="165" id="P10" start="160" text="43733" />
-<PROFESSION TYPE="PROFESSION" comment="" end="223" id="P12" start="199" text="health policy consultant" />
-<NAME TYPE="DOCTOR" comment="" end="293" id="P13" start="288" text="Downs" />
-<DATE TYPE="DATE" comment="" end="334" id="P14" start="329" text="12/95" />
-<DATE TYPE="DATE" comment="" end="381" id="P15" start="376" text="11/95" />
-<DATE TYPE="DATE" comment="" end="434" id="P16" start="429" text="12/95" />
-<DATE TYPE="DATE" comment="" end="534" id="P17" start="529" text="11/95" />
-<DATE TYPE="DATE" comment="" end="879" id="P18" start="874" text="01/95" />
-<DATE TYPE="DATE" comment="" end="988" id="P19" start="983" text="11/95" />
-<DATE TYPE="DATE" comment="" end="1129" id="P20" start="1124" text="11/95" />
-<DATE TYPE="DATE" comment="" end="1512" id="P21" start="1507" text="01/96" />
-<DATE TYPE="DATE" comment="" end="1714" id="P22" start="1709" text="02/96" />
-<DATE TYPE="DATE" comment="" end="1874" id="P23" start="1869" text="03/96" />
-<DATE TYPE="DATE" comment="" end="2122" id="P24" start="2117" text="02/96" />
-<DATE TYPE="DATE" comment="" end="2401" id="P25" start="2396" text="12/95" />
-<DATE TYPE="DATE" comment="" end="2433" id="P26" start="2428" text="11/95" />
-<DATE TYPE="DATE" comment="" end="2454" id="P27" start="2449" text="01/95" />
-<DATE TYPE="DATE" comment="" end="2503" id="P28" start="2498" text="01/96" />
-<DATE TYPE="DATE" comment="" end="2549" id="P29" start="2544" text="11/95" />
-<DATE TYPE="DATE" comment="" end="2634" id="P30" start="2629" text="01/96" />
-<DATE TYPE="DATE" comment="" end="2789" id="P31" start="2784" text="01/95" />
-<DATE TYPE="DATE" comment="" end="2821" id="P32" start="2816" text="11/95" />
-<DATE TYPE="DATE" comment="" end="2928" id="P33" start="2923" text="01/96" />
-<DATE TYPE="DATE" comment="" end="2942" id="P34" start="2937" text="01/95" />
-<DATE TYPE="DATE" comment="" end="2952" id="P35" start="2947" text="11/95" />
-<DATE TYPE="DATE" comment="" end="3107" id="P36" start="3102" text="11/95" />
-<NAME TYPE="DOCTOR" comment="" end="3337" id="P37" start="3330" text="Bethany" />
-<NAME TYPE="PATIENT" comment="" end="3371" id="P38" start="3362" text="Fay Foust" />
-<NAME TYPE="PATIENT" comment="" end="3404" id="P39" start="3399" text="Foust" />
-<NAME TYPE="PATIENT" comment="" end="3947" id="P41" start="3942" text="Foust" />
-<DATE TYPE="DATE" comment="" end="5318" id="P42" start="5313" text="01/96" />
-<NAME TYPE="PATIENT" comment="" end="6539" id="P43" start="6534" text="Foust" />
-<NAME TYPE="PATIENT" comment="" end="7881" id="P44" start="7876" text="Foust" />
-<NAME TYPE="DOCTOR" comment="" end="8063" id="P45" start="8049" text="Stephen C Rice" />
-<ID TYPE="IDNUM" comment="" end="8109" id="P46" start="8100" text="8-1475473" />
-<DATE TYPE="DATE" comment="" end="8127" id="P47" start="8119" text="03/18/96" />
-<DATE TYPE="DATE" comment="" end="8140" id="P48" start="8132" text="03/19/96" />
-<DATE TYPE="DATE" comment="" end="8153" id="P49" start="8145" text="03/18/96" />
+<DATE id="P0" start="16" end="26" text="2096-03-18" TYPE="DATE" comment="" />
+<NAME id="P1" start="34" end="44" text="FOUST, FAY" TYPE="PATIENT" comment="" />
+<ID id="P2" start="45" end="53" text="50294530" TYPE="MEDICALRECORD" comment="" />
+<DATE id="P3" start="54" end="64" text="03/18/2096" TYPE="DATE" comment="" />
+<NAME id="P4" start="69" end="82" text="Bethany Downs" TYPE="DOCTOR" comment="" />
+<LOCATION id="P5" start="88" end="94" text="Linden" TYPE="HOSPITAL" comment="" />
+<LOCATION id="P6" start="124" end="136" text="08 Kent Lane" TYPE="STREET" comment="" />
+<LOCATION id="P8" start="144" end="154" text="Union City" TYPE="CITY" comment="" />
+<LOCATION id="P9" start="156" end="158" text="MO" TYPE="STATE" comment="" />
+<LOCATION id="P10" start="160" end="165" text="43733" TYPE="ZIP" comment="" />
+<LOCATION id="P11" start="172" end="179" text="Hungary" TYPE="COUNTRY" comment="" />
+<PROFESSION id="P12" start="199" end="223" text="health policy consultant" TYPE="PROFESSION" comment="" />
+<NAME id="P13" start="288" end="293" text="Downs" TYPE="DOCTOR" comment="" />
+<DATE id="P14" start="329" end="334" text="12/95" TYPE="DATE" comment="" />
+<DATE id="P15" start="376" end="381" text="11/95" TYPE="DATE" comment="" />
+<DATE id="P16" start="429" end="434" text="12/95" TYPE="DATE" comment="" />
+<DATE id="P17" start="529" end="534" text="11/95" TYPE="DATE" comment="" />
+<DATE id="P18" start="874" end="879" text="01/95" TYPE="DATE" comment="" />
+<DATE id="P19" start="983" end="988" text="11/95" TYPE="DATE" comment="" />
+<DATE id="P20" start="1124" end="1129" text="11/95" TYPE="DATE" comment="" />
+<DATE id="P21" start="1507" end="1512" text="01/96" TYPE="DATE" comment="" />
+<DATE id="P22" start="1709" end="1714" text="02/96" TYPE="DATE" comment="" />
+<DATE id="P23" start="1869" end="1874" text="03/96" TYPE="DATE" comment="" />
+<DATE id="P24" start="2117" end="2122" text="02/96" TYPE="DATE" comment="" />
+<DATE id="P25" start="2396" end="2401" text="12/95" TYPE="DATE" comment="" />
+<DATE id="P26" start="2428" end="2433" text="11/95" TYPE="DATE" comment="" />
+<DATE id="P27" start="2449" end="2454" text="01/95" TYPE="DATE" comment="" />
+<DATE id="P28" start="2498" end="2503" text="01/96" TYPE="DATE" comment="" />
+<DATE id="P29" start="2544" end="2549" text="11/95" TYPE="DATE" comment="" />
+<DATE id="P30" start="2629" end="2634" text="01/96" TYPE="DATE" comment="" />
+<DATE id="P31" start="2784" end="2789" text="01/95" TYPE="DATE" comment="" />
+<DATE id="P32" start="2816" end="2821" text="11/95" TYPE="DATE" comment="" />
+<DATE id="P33" start="2923" end="2928" text="01/96" TYPE="DATE" comment="" />
+<DATE id="P34" start="2937" end="2942" text="01/95" TYPE="DATE" comment="" />
+<DATE id="P35" start="2947" end="2952" text="11/95" TYPE="DATE" comment="" />
+<DATE id="P36" start="3102" end="3107" text="11/95" TYPE="DATE" comment="" />
+<NAME id="P37" start="3330" end="3337" text="Bethany" TYPE="DOCTOR" comment="" />
+<NAME id="P38" start="3362" end="3371" text="Fay Foust" TYPE="PATIENT" comment="" />
+<NAME id="P39" start="3399" end="3404" text="Foust" TYPE="PATIENT" comment="" />
+<AGE id="P40" start="3410" end="3412" text="65" TYPE="AGE" comment="" />
+<NAME id="P41" start="3942" end="3947" text="Foust" TYPE="PATIENT" comment="" />
+<DATE id="P42" start="5313" end="5318" text="01/96" TYPE="DATE" comment="" />
+<NAME id="P43" start="6534" end="6539" text="Foust" TYPE="PATIENT" comment="" />
+<NAME id="P44" start="7876" end="7881" text="Foust" TYPE="PATIENT" comment="" />
+<NAME id="P45" start="8049" end="8063" text="Stephen C Rice" TYPE="DOCTOR" comment="" />
+<ID id="P46" start="8100" end="8109" text="8-1475473" TYPE="IDNUM" comment="" />
+<DATE id="P47" start="8119" end="8127" text="03/18/96" TYPE="DATE" comment="" />
+<DATE id="P48" start="8132" end="8140" text="03/19/96" TYPE="DATE" comment="" />
+<DATE id="P49" start="8145" end="8153" text="03/18/96" TYPE="DATE" comment="" />
 </TAGS>
 </deIdi2b2>

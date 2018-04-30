@@ -1,6 +1,6 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT>
+<TEXT><![CDATA[
 
 
 Record date: 2088-03-26
@@ -33,7 +33,7 @@ HYZAAR (25 MG/100 MG) (HCTZ 25MG   LOSART... 1 TAB     PO QD
 
 
 
-When I found his A1c to be 8.7%, I added back 5 mg QD of glyburide which he has been taking for &lt; 1 month. He feels well. He says he's lost 10 lbs. since his last visit (262 lbs. on 2/26 - 263 lbs. today) but he's interested in a weight loss program.
+When I found his A1c to be 8.7%, I added back 5 mg QD of glyburide which he has been taking for < 1 month. He feels well. He says he's lost 10 lbs. since his last visit (262 lbs. on 2/26 - 263 lbs. today) but he's interested in a weight loss program.
 
 
 
@@ -101,12 +101,12 @@ Plan:
 
 
 
-</TEXT>
+]]></TEXT>
 <TAGS>
-<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2088-03-26" />
-<NAME TYPE="PATIENT" comment="" end="38" id="P1" start="32" text="Tanner" />
-<DATE TYPE="DATE" comment="" end="679" id="P2" start="675" text="2/26" />
-<PROFESSION TYPE="PROFESSION" comment="" end="959" id="P3" start="924" text="Ground Transit Operators Supervisor" />
-<LOCATION TYPE="ORGANIZATION" comment="" end="969" id="P4" start="963" text="HASBRO" />
+<DATE id="P0" start="16" end="26" text="2088-03-26" TYPE="DATE" comment="" />
+<NAME id="P1" start="32" end="38" text="Tanner" TYPE="PATIENT" comment="" />
+<DATE id="P2" start="675" end="679" text="2/26" TYPE="DATE" comment="" />
+<PROFESSION id="P3" start="924" end="959" text="Ground Transit Operators Supervisor" TYPE="PROFESSION" comment="" />
+<LOCATION id="P4" start="963" end="969" text="HASBRO" TYPE="ORGANIZATION" comment="" />
 </TAGS>
 </deIdi2b2>

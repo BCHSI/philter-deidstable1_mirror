@@ -1,6 +1,6 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT>
+<TEXT><![CDATA[
 
 
 Record date: 2079-02-28
@@ -59,18 +59,20 @@ Dictated by:  VIRGIL L. IVERY, M.D.   VI65
 
 
 
-</TEXT>
+]]></TEXT>
 <TAGS>
-<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2079-02-28" />
-<NAME TYPE="PATIENT" comment="" end="93" id="P2" start="82" text="DODD,STEVEN" />
-<ID TYPE="MEDICALRECORD" comment="" end="107" id="P3" start="96" text="350-93-05-3" />
-<DATE TYPE="DATE" comment="" end="149" id="P4" start="141" text="02/28/79" />
-<ID TYPE="IDNUM" comment="" end="1174" id="P6" start="1164" text="TO761/1620" />
-<NAME TYPE="DOCTOR" comment="" end="1192" id="P7" start="1177" text="VIRGIL L. IVERY" />
-<NAME TYPE="USERNAME" comment="" end="1205" id="P8" start="1201" text="VI65" />
-<DATE TYPE="DATE" comment="" end="1243" id="P9" start="1235" text="02/28/79" />
-<DATE TYPE="DATE" comment="" end="1311" id="P10" start="1303" text="02/28/79" />
-<NAME TYPE="DOCTOR" comment="" end="1343" id="P11" start="1328" text="VIRGIL L. IVERY" />
-<NAME TYPE="USERNAME" comment="" end="1356" id="P12" start="1352" text="VI65" />
+<DATE id="P0" start="16" end="26" text="2079-02-28" TYPE="DATE" comment="" />
+<LOCATION id="P1" start="49" end="56" text="DOUGLAS" TYPE="HOSPITAL" comment="" />
+<NAME id="P2" start="82" end="93" text="DODD,STEVEN" TYPE="PATIENT" comment="" />
+<ID id="P3" start="96" end="107" text="350-93-05-3" TYPE="MEDICALRECORD" comment="" />
+<DATE id="P4" start="141" end="149" text="02/28/79" TYPE="DATE" comment="" />
+<AGE id="P5" start="357" end="359" text="63" TYPE="AGE" comment="" />
+<ID id="P6" start="1164" end="1174" text="TO761/1620" TYPE="IDNUM" comment="" />
+<NAME id="P7" start="1177" end="1192" text="VIRGIL L. IVERY" TYPE="DOCTOR" comment="" />
+<NAME id="P8" start="1201" end="1205" text="VI65" TYPE="USERNAME" comment="" />
+<DATE id="P9" start="1235" end="1243" text="02/28/79" TYPE="DATE" comment="" />
+<DATE id="P10" start="1303" end="1311" text="02/28/79" TYPE="DATE" comment="" />
+<NAME id="P11" start="1328" end="1343" text="VIRGIL L. IVERY" TYPE="DOCTOR" comment="" />
+<NAME id="P12" start="1352" end="1356" text="VI65" TYPE="USERNAME" comment="" />
 </TAGS>
 </deIdi2b2>

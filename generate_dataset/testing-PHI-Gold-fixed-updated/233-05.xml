@@ -1,6 +1,6 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT>
+<TEXT><![CDATA[
 
 
 Record date: 2069-06-27
@@ -95,18 +95,19 @@ eScription document:3-4025432 BF
 
 
 
-</TEXT>
+]]></TEXT>
 <TAGS>
-<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2069-06-27" />
-<ID TYPE="MEDICALRECORD" comment="" end="44" id="P1" start="36" text="12953473" />
-<NAME TYPE="PATIENT" comment="" end="60" id="P2" start="45" text="PICKETT, SHILPA" />
-<DATE TYPE="DATE" comment="" end="69" id="P3" start="61" text="06/27/69" />
-<NAME TYPE="DOCTOR" comment="" end="83" id="P4" start="70" text="RICO, WILLARD" />
-<NAME TYPE="DOCTOR" comment="" end="122" id="P5" start="115" text="Mueller" />
-<NAME TYPE="DOCTOR" comment="" end="2256" id="P7" start="2243" text="RICO, WILLARD" />
-<DATE TYPE="DATE" comment="" end="2272" id="P8" start="2264" text="06/28/69" />
-<DATE TYPE="DATE" comment="" end="2285" id="P9" start="2277" text="06/28/69" />
-<NAME TYPE="DOCTOR" comment="" end="2313" id="P10" start="2300" text="RICO, WILLARD" />
-<ID TYPE="IDNUM" comment="" end="2344" id="P11" start="2335" text="3-4025432" />
+<DATE id="P0" start="16" end="26" text="2069-06-27" TYPE="DATE" comment="" />
+<ID id="P1" start="36" end="44" text="12953473" TYPE="MEDICALRECORD" comment="" />
+<NAME id="P2" start="45" end="60" text="PICKETT, SHILPA" TYPE="PATIENT" comment="" />
+<DATE id="P3" start="61" end="69" text="06/27/69" TYPE="DATE" comment="" />
+<NAME id="P4" start="70" end="83" text="RICO, WILLARD" TYPE="DOCTOR" comment="" />
+<NAME id="P5" start="115" end="122" text="Mueller" TYPE="DOCTOR" comment="" />
+<AGE id="P6" start="290" end="292" text="77" TYPE="AGE" comment="" />
+<NAME id="P7" start="2243" end="2256" text="RICO, WILLARD" TYPE="DOCTOR" comment="" />
+<DATE id="P8" start="2264" end="2272" text="06/28/69" TYPE="DATE" comment="" />
+<DATE id="P9" start="2277" end="2285" text="06/28/69" TYPE="DATE" comment="" />
+<NAME id="P10" start="2300" end="2313" text="RICO, WILLARD" TYPE="DOCTOR" comment="" />
+<ID id="P11" start="2335" end="2344" text="3-4025432" TYPE="IDNUM" comment="" />
 </TAGS>
 </deIdi2b2>

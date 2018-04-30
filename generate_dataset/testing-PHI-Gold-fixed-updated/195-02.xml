@@ -1,6 +1,6 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT>
+<TEXT><![CDATA[
 
 
 Record date: 2079-07-21
@@ -62,16 +62,20 @@ DV:7-21-79
 
 
 
-</TEXT>
+]]></TEXT>
 <TAGS>
-<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2079-07-21" />
-<NAME TYPE="PATIENT" comment="" end="89" id="P2" start="74" text="Sherman, Andrew" />
-<DATE TYPE="DATE" comment="" end="143" id="P3" start="136" text="7-21-79" />
-<NAME TYPE="PATIENT" comment="" end="190" id="P4" start="183" text="Sherman" />
-<NAME TYPE="DOCTOR" comment="" end="2921" id="P10" start="2907" text="Michael Holman" />
-<ID TYPE="IDNUM" comment="" end="2940" id="P11" start="2930" text="AE:JP:5824" />
-<DATE TYPE="DATE" comment="" end="2951" id="P12" start="2944" text="7-21-79" />
-<DATE TYPE="DATE" comment="" end="2962" id="P13" start="2955" text="7-24-79" />
-<DATE TYPE="DATE" comment="" end="2973" id="P14" start="2966" text="7-21-79" />
+<DATE id="P0" start="16" end="26" text="2079-07-21" TYPE="DATE" comment="" />
+<LOCATION id="P1" start="28" end="35" text="PONTIAC" TYPE="HOSPITAL" comment="" />
+<NAME id="P2" start="74" end="89" text="Sherman, Andrew" TYPE="PATIENT" comment="" />
+<DATE id="P3" start="136" end="143" text="7-21-79" TYPE="DATE" comment="" />
+<NAME id="P4" start="183" end="190" text="Sherman" TYPE="PATIENT" comment="" />
+<LOCATION id="P5" start="660" end="667" text="Pontiac" TYPE="HOSPITAL" comment="" />
+<LOCATION id="P6" start="716" end="723" text="Pontiac" TYPE="HOSPITAL" comment="" />
+<LOCATION id="P8" start="1804" end="1826" text="Pontiac State Hospital" TYPE="HOSPITAL" comment="" />
+<NAME id="P10" start="2907" end="2921" text="Michael Holman" TYPE="DOCTOR" comment="" />
+<ID id="P11" start="2930" end="2940" text="AE:JP:5824" TYPE="IDNUM" comment="" />
+<DATE id="P12" start="2944" end="2951" text="7-21-79" TYPE="DATE" comment="" />
+<DATE id="P13" start="2955" end="2962" text="7-24-79" TYPE="DATE" comment="" />
+<DATE id="P14" start="2966" end="2973" text="7-21-79" TYPE="DATE" comment="" />
 </TAGS>
 </deIdi2b2>

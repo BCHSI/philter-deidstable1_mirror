@@ -1,6 +1,6 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT>
+<TEXT><![CDATA[
 
 
 Record date: 2084-01-21
@@ -95,21 +95,28 @@ DV:1-21-84
 
 
 
-</TEXT>
+]]></TEXT>
 <TAGS>
-<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2084-01-21" />
-<NAME TYPE="PATIENT" comment="" end="88" id="P2" start="76" text="Xavier, Fred" />
-<ID TYPE="MEDICALRECORD" comment="" end="143" id="P3" start="135" text="65856594" />
-<DATE TYPE="DATE" comment="" end="197" id="P4" start="190" text="1-21-84" />
-<NAME TYPE="PATIENT" comment="" end="215" id="P5" start="209" text="Xavier" />
-<DATE TYPE="DATE" comment="" end="755" id="P8" start="740" text="January of 2083" />
-<NAME TYPE="PATIENT" comment="" end="3009" id="P13" start="2997" text="Xavier, Fred" />
-<ID TYPE="MEDICALRECORD" comment="" end="3064" id="P14" start="3056" text="65856594" />
-<DATE TYPE="DATE" comment="" end="3118" id="P15" start="3111" text="1-21-84" />
-<NAME TYPE="DOCTOR" comment="" end="3704" id="P16" start="3691" text="Yadiel Fisher" />
-<ID TYPE="IDNUM" comment="" end="3724" id="P17" start="3714" text="TF:WM:8839" />
-<DATE TYPE="DATE" comment="" end="3735" id="P18" start="3728" text="1-21-84" />
-<DATE TYPE="DATE" comment="" end="3747" id="P19" start="3740" text="1-22-84" />
-<DATE TYPE="DATE" comment="" end="3759" id="P20" start="3752" text="1-21-84" />
+<DATE id="P0" start="16" end="26" text="2084-01-21" TYPE="DATE" comment="" />
+<LOCATION id="P1" start="28" end="44" text="ORLANDO REGIONAL" TYPE="HOSPITAL" comment="" />
+<NAME id="P2" start="76" end="88" text="Xavier, Fred" TYPE="PATIENT" comment="" />
+<ID id="P3" start="135" end="143" text="65856594" TYPE="MEDICALRECORD" comment="" />
+<DATE id="P4" start="190" end="197" text="1-21-84" TYPE="DATE" comment="" />
+<NAME id="P5" start="209" end="215" text="Xavier" TYPE="PATIENT" comment="" />
+<AGE id="P6" start="221" end="223" text="71" TYPE="AGE" comment="" />
+<LOCATION id="P7" start="385" end="392" text="Eritrea" TYPE="COUNTRY" comment="" />
+<DATE id="P8" start="740" end="755" text="January of 2083" TYPE="DATE" comment="" />
+<LOCATION id="P9" start="788" end="795" text="Eritrea" TYPE="COUNTRY" comment="" />
+<LOCATION id="P10" start="1521" end="1528" text="Eritrea" TYPE="COUNTRY" comment="" />
+<LOCATION id="P11" start="2578" end="2585" text="Eritrea" TYPE="COUNTRY" comment="" />
+<LOCATION id="P12" start="2949" end="2965" text="ORLANDO REGIONAL" TYPE="HOSPITAL" comment="" />
+<NAME id="P13" start="2997" end="3009" text="Xavier, Fred" TYPE="PATIENT" comment="" />
+<ID id="P14" start="3056" end="3064" text="65856594" TYPE="MEDICALRECORD" comment="" />
+<DATE id="P15" start="3111" end="3118" text="1-21-84" TYPE="DATE" comment="" />
+<NAME id="P16" start="3691" end="3704" text="Yadiel Fisher" TYPE="DOCTOR" comment="" />
+<ID id="P17" start="3714" end="3724" text="TF:WM:8839" TYPE="IDNUM" comment="" />
+<DATE id="P18" start="3728" end="3735" text="1-21-84" TYPE="DATE" comment="" />
+<DATE id="P19" start="3740" end="3747" text="1-22-84" TYPE="DATE" comment="" />
+<DATE id="P20" start="3752" end="3759" text="1-21-84" TYPE="DATE" comment="" />
 </TAGS>
 </deIdi2b2>

@@ -1,6 +1,6 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT>
+<TEXT><![CDATA[
 
 
 Record date: 2129-05-10
@@ -17,7 +17,7 @@ OSA:  Likely has near optimal mask set up now...We'll explore potential for CBT 
 
 
 
-DM:  improving with wt loss and diet.  Agree with insulin taper as sugars drop.  UAMLB high but &lt; 1 year ago, recheck in future.  Creatinine stable 2 months ago, recheck renal panel with labs.  Optho and podiatry current.  
+DM:  improving with wt loss and diet.  Agree with insulin taper as sugars drop.  UAMLB high but < 1 year ago, recheck in future.  Creatinine stable 2 months ago, recheck renal panel with labs.  Optho and podiatry current.  
 
 
 
@@ -69,16 +69,17 @@ Leon Virgil Fontenot, M.D.
 
 
 
-</TEXT>
+]]></TEXT>
 <TAGS>
-<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2129-05-10" />
-<LOCATION TYPE="ORGANIZATION" comment="" end="878" id="P1" start="869" text="atkins dt" />
-<DATE TYPE="DATE" comment="" end="1973" id="P2" start="1969" text="5/25" />
-<LOCATION TYPE="ORGANIZATION" comment="" end="2193" id="P3" start="2183" text="adtkins dt" />
-<NAME TYPE="DOCTOR" comment="" end="2229" id="P4" start="2224" text="Russo" />
-<NAME TYPE="DOCTOR" comment="" end="2586" id="P6" start="2572" text="Barbara Fierro" />
-<NAME TYPE="DOCTOR" comment="" end="2613" id="P7" start="2606" text="Yeargin" />
-<NAME TYPE="DOCTOR" comment="" end="2629" id="P8" start="2623" text="Ingham" />
-<NAME TYPE="DOCTOR" comment="" end="2758" id="P9" start="2738" text="Leon Virgil Fontenot" />
+<DATE id="P0" start="16" end="26" text="2129-05-10" TYPE="DATE" comment="" />
+<LOCATION id="P1" start="869" end="878" text="atkins dt" TYPE="ORGANIZATION" comment="" />
+<DATE id="P2" start="1969" end="1973" text="5/25" TYPE="DATE" comment="" />
+<LOCATION id="P3" start="2183" end="2193" text="adtkins dt" TYPE="ORGANIZATION" comment="" />
+<NAME id="P4" start="2224" end="2229" text="Russo" TYPE="DOCTOR" comment="" />
+<LOCATION id="P5" start="2231" end="2234" text="HWS" TYPE="HOSPITAL" comment="" />
+<NAME id="P6" start="2572" end="2586" text="Barbara Fierro" TYPE="DOCTOR" comment="" />
+<NAME id="P7" start="2606" end="2613" text="Yeargin" TYPE="DOCTOR" comment="" />
+<NAME id="P8" start="2623" end="2629" text="Ingham" TYPE="DOCTOR" comment="" />
+<NAME id="P9" start="2738" end="2758" text="Leon Virgil Fontenot" TYPE="DOCTOR" comment="" />
 </TAGS>
 </deIdi2b2>

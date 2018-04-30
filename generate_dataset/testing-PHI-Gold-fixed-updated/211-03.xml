@@ -1,6 +1,6 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT>
+<TEXT><![CDATA[
 
 
 Record date: 2094-05-11
@@ -101,23 +101,27 @@ Worthington Regional Hospital
 
 
 
-</TEXT>
+]]></TEXT>
 <TAGS>
-<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2094-05-11" />
-<NAME TYPE="PATIENT" comment="" end="57" id="P1" start="43" text="Urban, Russell" />
-<ID TYPE="MEDICALRECORD" comment="" end="81" id="P2" start="72" text="472-20-64" />
-<NAME TYPE="DOCTOR" comment="" end="112" id="P3" start="99" text="Orozco, Jimmy" />
-<DATE TYPE="DATE" comment="" end="140" id="P4" start="130" text="05/11/2094" />
-<NAME TYPE="DOCTOR" comment="" end="184" id="P5" start="173" text="John Ussery" />
-<LOCATION TYPE="STREET" comment="" end="241" id="P8" start="223" text="28 Shattuck Street" />
-<LOCATION TYPE="CITY" comment="" end="263" id="P10" start="251" text="Citrus Ridge" />
-<LOCATION TYPE="STATE" comment="" end="267" id="P11" start="265" text="MT" />
-<LOCATION TYPE="ZIP" comment="" end="273" id="P12" start="268" text="43782" />
-<NAME TYPE="DOCTOR" comment="" end="292" id="P13" start="286" text="Ussery" />
-<NAME TYPE="PATIENT" comment="" end="312" id="P14" start="307" text="Urban" />
-<DATE TYPE="DATE" comment="" end="380" id="P15" start="372" text="November" />
-<DATE TYPE="DATE" comment="" end="953" id="P16" start="943" text="03/16/2094" />
-<DATE TYPE="DATE" comment="" end="2266" id="P18" start="2257" text="July 2093" />
-<NAME TYPE="DOCTOR" comment="" end="3908" id="P20" start="3893" text="Jimmy J. Orozco" />
+<DATE id="P0" start="16" end="26" text="2094-05-11" TYPE="DATE" comment="" />
+<NAME id="P1" start="43" end="57" text="Urban, Russell" TYPE="PATIENT" comment="" />
+<ID id="P2" start="72" end="81" text="472-20-64" TYPE="MEDICALRECORD" comment="" />
+<NAME id="P3" start="99" end="112" text="Orozco, Jimmy" TYPE="DOCTOR" comment="" />
+<DATE id="P4" start="130" end="140" text="05/11/2094" TYPE="DATE" comment="" />
+<NAME id="P5" start="173" end="184" text="John Ussery" TYPE="DOCTOR" comment="" />
+<LOCATION id="P6" start="192" end="203" text="Worthington" TYPE="HOSPITAL" comment="" />
+<LOCATION id="P8" start="223" end="241" text="28 Shattuck Street" TYPE="STREET" comment="" />
+<LOCATION id="P10" start="251" end="263" text="Citrus Ridge" TYPE="CITY" comment="" />
+<LOCATION id="P11" start="265" end="267" text="MT" TYPE="STATE" comment="" />
+<LOCATION id="P12" start="268" end="273" text="43782" TYPE="ZIP" comment="" />
+<NAME id="P13" start="286" end="292" text="Ussery" TYPE="DOCTOR" comment="" />
+<NAME id="P14" start="307" end="312" text="Urban" TYPE="PATIENT" comment="" />
+<DATE id="P15" start="372" end="380" text="November" TYPE="DATE" comment="" />
+<DATE id="P16" start="943" end="953" text="03/16/2094" TYPE="DATE" comment="" />
+<AGE id="P17" start="2162" end="2164" text="50" TYPE="AGE" comment="" />
+<DATE id="P18" start="2257" end="2266" text="July 2093" TYPE="DATE" comment="" />
+<LOCATION id="P19" start="2969" end="2976" text="Georgia" TYPE="COUNTRY" comment="" />
+<NAME id="P20" start="3893" end="3908" text="Jimmy J. Orozco" TYPE="DOCTOR" comment="" />
+<LOCATION id="P22" start="3934" end="3963" text="Worthington Regional Hospital" TYPE="HOSPITAL" comment="" />
 </TAGS>
 </deIdi2b2>

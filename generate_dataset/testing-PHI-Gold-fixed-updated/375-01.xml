@@ -1,6 +1,6 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT>
+<TEXT><![CDATA[
 
 
 Record date: 2154-11-14
@@ -108,29 +108,31 @@ DV: 11/14/54
 
 
 
-</TEXT>
+]]></TEXT>
 <TAGS>
-<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2154-11-14" />
-<LOCATION TYPE="STREET" comment="" end="72" id="P1" start="62" text="42 Wood St" />
-<NAME TYPE="PATIENT" comment="" end="125" id="P2" start="112" text="OLIVE, XAVIER" />
-<LOCATION TYPE="CITY" comment="" end="132" id="P3" start="126" text="Sydney" />
-<LOCATION TYPE="STATE" comment="" end="136" id="P4" start="134" text="WV" />
-<LOCATION TYPE="ZIP" comment="" end="142" id="P5" start="137" text="65157" />
-<ID TYPE="MEDICALRECORD" comment="" end="188" id="P6" start="180" text="26690002" />
-<DATE TYPE="DATE" comment="" end="254" id="P7" start="246" text="11/14/54" />
-<NAME TYPE="DOCTOR" comment="" end="270" id="P8" start="257" text="Michael Ulrey" />
-<LOCATION TYPE="STREET" comment="" end="287" id="P9" start="277" text="45 Wood St" />
-<LOCATION TYPE="CITY" comment="" end="294" id="P10" start="288" text="Sydney" />
-<LOCATION TYPE="STATE" comment="" end="298" id="P11" start="296" text="WV" />
-<LOCATION TYPE="ZIP" comment="" end="305" id="P12" start="300" text="65157" />
-<NAME TYPE="PATIENT" comment="" end="324" id="P13" start="312" text="Xavier Olive" />
-<NAME TYPE="DOCTOR" comment="" end="338" id="P14" start="331" text="Michael" />
-<NAME TYPE="PATIENT" comment="" end="357" id="P15" start="345" text="Xavier Olive" />
-<NAME TYPE="DOCTOR" comment="" end="3778" id="P18" start="3763" text="Stephen Nichols" />
-<NAME TYPE="DOCTOR" comment="" end="3815" id="P19" start="3800" text="Stephen Nichols" />
-<ID TYPE="IDNUM" comment="" end="3847" id="P20" start="3838" text="6-0190274" />
-<DATE TYPE="DATE" comment="" end="3871" id="P21" start="3863" text="11/14/54" />
-<DATE TYPE="DATE" comment="" end="3884" id="P22" start="3876" text="11/14/54" />
-<DATE TYPE="DATE" comment="" end="3897" id="P23" start="3889" text="11/14/54" />
+<DATE id="P0" start="16" end="26" text="2154-11-14" TYPE="DATE" comment="" />
+<LOCATION id="P1" start="62" end="72" text="42 Wood St" TYPE="STREET" comment="" />
+<NAME id="P2" start="112" end="125" text="OLIVE, XAVIER" TYPE="PATIENT" comment="" />
+<LOCATION id="P3" start="126" end="132" text="Sydney" TYPE="CITY" comment="" />
+<LOCATION id="P4" start="134" end="136" text="WV" TYPE="STATE" comment="" />
+<LOCATION id="P5" start="137" end="142" text="65157" TYPE="ZIP" comment="" />
+<ID id="P6" start="180" end="188" text="26690002" TYPE="MEDICALRECORD" comment="" />
+<DATE id="P7" start="246" end="254" text="11/14/54" TYPE="DATE" comment="" />
+<NAME id="P8" start="257" end="270" text="Michael Ulrey" TYPE="DOCTOR" comment="" />
+<LOCATION id="P9" start="277" end="287" text="45 Wood St" TYPE="STREET" comment="" />
+<LOCATION id="P10" start="288" end="294" text="Sydney" TYPE="CITY" comment="" />
+<LOCATION id="P11" start="296" end="298" text="WV" TYPE="STATE" comment="" />
+<LOCATION id="P12" start="300" end="305" text="65157" TYPE="ZIP" comment="" />
+<NAME id="P13" start="312" end="324" text="Xavier Olive" TYPE="PATIENT" comment="" />
+<NAME id="P14" start="331" end="338" text="Michael" TYPE="DOCTOR" comment="" />
+<NAME id="P15" start="345" end="357" text="Xavier Olive" TYPE="PATIENT" comment="" />
+<AGE id="P16" start="432" end="434" text="71" TYPE="AGE" comment="" />
+<AGE id="P17" start="1669" end="1671" text="71" TYPE="AGE" comment="" />
+<NAME id="P18" start="3763" end="3778" text="Stephen Nichols" TYPE="DOCTOR" comment="" />
+<NAME id="P19" start="3800" end="3815" text="Stephen Nichols" TYPE="DOCTOR" comment="" />
+<ID id="P20" start="3838" end="3847" text="6-0190274" TYPE="IDNUM" comment="" />
+<DATE id="P21" start="3863" end="3871" text="11/14/54" TYPE="DATE" comment="" />
+<DATE id="P22" start="3876" end="3884" text="11/14/54" TYPE="DATE" comment="" />
+<DATE id="P23" start="3889" end="3897" text="11/14/54" TYPE="DATE" comment="" />
 </TAGS>
 </deIdi2b2>

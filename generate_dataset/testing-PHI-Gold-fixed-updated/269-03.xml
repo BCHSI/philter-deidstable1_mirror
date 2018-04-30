@@ -1,6 +1,6 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT>
+<TEXT><![CDATA[
 
 
 Record date: 2114-03-12
@@ -81,7 +81,7 @@ Allergies - No drug allergies and no allergies to dye
 
 
 
-Past History:  T &amp; A, laparoscopic cholecystectomy.  He has no other major illnesses.  He does not smoke and drinks about one glass of wine per day.
+Past History:  T & A, laparoscopic cholecystectomy.  He has no other major illnesses.  He does not smoke and drinks about one glass of wine per day.
 
 
 
@@ -123,28 +123,37 @@ Signed electronically by   Quentin T Edward MD  on  Mar 12, 2114
 
 
 
-</TEXT>
+]]></TEXT>
 <TAGS>
-<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2114-03-12" />
-<NAME TYPE="PATIENT" comment="" end="138" id="P2" start="124" text="Quinten Dawson" />
-<DATE TYPE="DATE" comment="" end="265" id="P3" start="257" text="03/12/14" />
-<ID TYPE="MEDICALRECORD" comment="" end="321" id="P5" start="312" text="469-27-58" />
-<DATE TYPE="DATE" comment="" end="432" id="P7" start="426" text="2/1/11" />
-<DATE TYPE="DATE" comment="" end="446" id="P8" start="440" text="4/4/12" />
-<DATE TYPE="DATE" comment="" end="518" id="P10" start="511" text="2/21/14" />
-<DATE TYPE="DATE" comment="" end="1081" id="P13" start="1075" text="2/1/11" />
-<NAME TYPE="DOCTOR" comment="" end="1361" id="P14" start="1353" text="Everhart" />
-<DATE TYPE="DATE" comment="" end="1415" id="P15" start="1408" text="1/08/14" />
-<PROFESSION TYPE="PROFESSION" comment="" end="2480" id="P18" start="2460" text="mapping technologist" />
-<PROFESSION TYPE="PROFESSION" comment="" end="2606" id="P19" start="2598" text="optician" />
-<NAME TYPE="DOCTOR" comment="" end="3964" id="P20" start="3942" text="Quentin T. Edward, Jr." />
-<NAME TYPE="PATIENT" comment="" end="3996" id="P21" start="3982" text="Quinten Dawson" />
-<LOCATION TYPE="STREET" comment="" end="4015" id="P22" start="3998" text="653 Wildwood Lane" />
-<LOCATION TYPE="CITY" comment="" end="4028" id="P23" start="4017" text="New Ashford" />
-<LOCATION TYPE="STATE" comment="" end="4032" id="P24" start="4030" text="VA" />
-<LOCATION TYPE="ZIP" comment="" end="4038" id="P25" start="4033" text="67999" />
-<NAME TYPE="DOCTOR" comment="" end="4066" id="P26" start="4051" text="Xavier Everhart" />
-<NAME TYPE="DOCTOR" comment="" end="4139" id="P29" start="4123" text="Quentin T Edward" />
-<DATE TYPE="DATE" comment="" end="4160" id="P30" start="4148" text="Mar 12, 2114" />
+<DATE id="P0" start="16" end="26" text="2114-03-12" TYPE="DATE" comment="" />
+<LOCATION id="P1" start="40" end="60" text="SAN ANTONIO HOSPITAL" TYPE="HOSPITAL" comment="" />
+<NAME id="P2" start="124" end="138" text="Quinten Dawson" TYPE="PATIENT" comment="" />
+<DATE id="P3" start="257" end="265" text="03/12/14" TYPE="DATE" comment="" />
+<LOCATION id="P4" start="306" end="309" text="SAH" TYPE="HOSPITAL" comment="" />
+<ID id="P5" start="312" end="321" text="469-27-58" TYPE="MEDICALRECORD" comment="" />
+<AGE id="P6" start="349" end="351" text="73" TYPE="AGE" comment="" />
+<DATE id="P7" start="426" end="432" text="2/1/11" TYPE="DATE" comment="" />
+<DATE id="P8" start="440" end="446" text="4/4/12" TYPE="DATE" comment="" />
+<LOCATION id="P9" start="466" end="469" text="SAH" TYPE="HOSPITAL" comment="" />
+<DATE id="P10" start="511" end="518" text="2/21/14" TYPE="DATE" comment="" />
+<LOCATION id="P11" start="538" end="541" text="SAH" TYPE="HOSPITAL" comment="" />
+<AGE id="P12" start="1001" end="1003" text="73" TYPE="AGE" comment="" />
+<DATE id="P13" start="1075" end="1081" text="2/1/11" TYPE="DATE" comment="" />
+<NAME id="P14" start="1353" end="1361" text="Everhart" TYPE="DOCTOR" comment="" />
+<DATE id="P15" start="1408" end="1415" text="1/08/14" TYPE="DATE" comment="" />
+<AGE id="P16" start="2298" end="2300" text="83" TYPE="AGE" comment="" />
+<AGE id="P17" start="2351" end="2353" text="73" TYPE="AGE" comment="" />
+<PROFESSION id="P18" start="2460" end="2480" text="mapping technologist" TYPE="PROFESSION" comment="" />
+<PROFESSION id="P19" start="2598" end="2606" text="optician" TYPE="PROFESSION" comment="" />
+<NAME id="P20" start="3942" end="3964" text="Quentin T. Edward, Jr." TYPE="DOCTOR" comment="" />
+<NAME id="P21" start="3982" end="3996" text="Quinten Dawson" TYPE="PATIENT" comment="" />
+<LOCATION id="P22" start="3998" end="4015" text="653 Wildwood Lane" TYPE="STREET" comment="" />
+<LOCATION id="P23" start="4017" end="4028" text="New Ashford" TYPE="CITY" comment="" />
+<LOCATION id="P24" start="4030" end="4032" text="VA" TYPE="STATE" comment="" />
+<LOCATION id="P25" start="4033" end="4038" text="67999" TYPE="ZIP" comment="" />
+<NAME id="P26" start="4051" end="4066" text="Xavier Everhart" TYPE="DOCTOR" comment="" />
+<LOCATION id="P28" start="4087" end="4090" text="SAH" TYPE="HOSPITAL" comment="" />
+<NAME id="P29" start="4123" end="4139" text="Quentin T Edward" TYPE="DOCTOR" comment="" />
+<DATE id="P30" start="4148" end="4160" text="Mar 12, 2114" TYPE="DATE" comment="" />
 </TAGS>
 </deIdi2b2>

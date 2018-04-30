@@ -1,6 +1,6 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT>
+<TEXT><![CDATA[
 
 
 Record date: 2157-05-17
@@ -237,30 +237,45 @@ Plavix     Stopped because of ecchymosis and epistaxis - InactivatedCC:
 
 
 
-</TEXT>
+]]></TEXT>
 <TAGS>
-<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2157-05-17" />
-<NAME TYPE="PATIENT" comment="" end="258" id="P2" start="246" text="Xavier Olive" />
-<NAME TYPE="DOCTOR" comment="" end="511" id="P6" start="499" text="Ximena Keane" />
-<NAME TYPE="PATIENT" comment="" end="561" id="P8" start="556" text="Olive" />
-<DATE TYPE="DATE" comment="" end="682" id="P12" start="678" text="2135" />
-<NAME TYPE="DOCTOR" comment="" end="808" id="P13" start="804" text="Cain" />
-<NAME TYPE="DOCTOR" comment="" end="968" id="P16" start="964" text="Cain" />
-<LOCATION TYPE="CITY" comment="" end="1269" id="P18" start="1259" text="Big Rapids" />
-<DATE TYPE="DATE" comment="" end="2586" id="P21" start="2582" text="2135" />
-<NAME TYPE="DOCTOR" comment="" end="2652" id="P22" start="2645" text="Jeffers" />
-<NAME TYPE="DOCTOR" comment="" end="2662" id="P23" start="2657" text="Innis" />
-<DATE TYPE="DATE" comment="" end="2830" id="P25" start="2826" text="2153" />
-<DATE TYPE="DATE" comment="" end="2979" id="P26" start="2975" text="2151" />
-<DATE TYPE="DATE" comment="" end="3072" id="P27" start="3068" text="2128" />
-<DATE TYPE="DATE" comment="" end="3194" id="P28" start="3190" text="2153" />
-<PROFESSION TYPE="PROFESSION" comment="" end="3823" id="P29" start="3796" text="Motor Vehicle Body Repairer" />
-<LOCATION TYPE="ORGANIZATION" comment="" end="3847" id="P30" start="3845" text="GM" />
-<DATE TYPE="DATE" comment="" end="6436" id="P31" start="6426" text="11/25/2083" />
-<NAME TYPE="DOCTOR" comment="" end="8126" id="P35" start="8122" text="Ruiz" />
-<NAME TYPE="DOCTOR" comment="" end="8604" id="P36" start="8589" text="Brittany Naylor" />
-<NAME TYPE="DOCTOR" comment="" end="8618" id="P37" start="8606" text="Ximena Keane" />
-<NAME TYPE="DOCTOR" comment="" end="8677" id="P38" start="8662" text="Jared  Xayasane" />
-<DATE TYPE="DATE" comment="" end="8698" id="P39" start="8686" text="Sep 17, 2157" />
+<DATE id="P0" start="16" end="26" text="2157-05-17" TYPE="DATE" comment="" />
+<LOCATION id="P1" start="53" end="79" text="TRUMBULL MEMORIAL HOSPITAL" TYPE="HOSPITAL" comment="" />
+<NAME id="P2" start="246" end="258" text="Xavier Olive" TYPE="PATIENT" comment="" />
+<AGE id="P3" start="264" end="266" text="73" TYPE="AGE" comment="" />
+<LOCATION id="P4" start="301" end="318" text="Trumbull Memorial" TYPE="HOSPITAL" comment="" />
+<NAME id="P6" start="499" end="511" text="Ximena Keane" TYPE="DOCTOR" comment="" />
+<LOCATION id="P7" start="531" end="548" text="Alexandria Clinic" TYPE="HOSPITAL" comment="" />
+<NAME id="P8" start="556" end="561" text="Olive" TYPE="PATIENT" comment="" />
+<LOCATION id="P9" start="583" end="586" text="TMH" TYPE="HOSPITAL" comment="" />
+<AGE id="P11" start="628" end="630" text="73" TYPE="AGE" comment="" />
+<DATE id="P12" start="678" end="682" text="2135" TYPE="DATE" comment="" />
+<NAME id="P13" start="804" end="808" text="Cain" TYPE="DOCTOR" comment="" />
+<LOCATION id="P14" start="812" end="829" text="Alexandria Clinic" TYPE="HOSPITAL" comment="" />
+<LOCATION id="P15" start="878" end="904" text="Corcoran District Hospital" TYPE="HOSPITAL" comment="" />
+<NAME id="P16" start="964" end="968" text="Cain" TYPE="DOCTOR" comment="" />
+<LOCATION id="P17" start="1238" end="1257" text="Pomeroy Care Center" TYPE="HOSPITAL" comment="" />
+<LOCATION id="P18" start="1259" end="1269" text="Big Rapids" TYPE="CITY" comment="" />
+<LOCATION id="P19" start="1271" end="1273" text="AC" TYPE="HOSPITAL" comment="" />
+<LOCATION id="P20" start="1309" end="1335" text="Corcoran District Hospital" TYPE="HOSPITAL" comment="" />
+<DATE id="P21" start="2582" end="2586" text="2135" TYPE="DATE" comment="" />
+<NAME id="P22" start="2645" end="2652" text="Jeffers" TYPE="DOCTOR" comment="" />
+<NAME id="P23" start="2657" end="2662" text="Innis" TYPE="DOCTOR" comment="" />
+<LOCATION id="P24" start="2811" end="2813" text="AC" TYPE="HOSPITAL" comment="" />
+<DATE id="P25" start="2826" end="2830" text="2153" TYPE="DATE" comment="" />
+<DATE id="P26" start="2975" end="2979" text="2151" TYPE="DATE" comment="" />
+<DATE id="P27" start="3068" end="3072" text="2128" TYPE="DATE" comment="" />
+<DATE id="P28" start="3190" end="3194" text="2153" TYPE="DATE" comment="" />
+<PROFESSION id="P29" start="3796" end="3823" text="Motor Vehicle Body Repairer" TYPE="PROFESSION" comment="" />
+<LOCATION id="P30" start="3845" end="3847" text="GM" TYPE="ORGANIZATION" comment="" />
+<DATE id="P31" start="6426" end="6436" text="11/25/2083" TYPE="DATE" comment="" />
+<LOCATION id="P32" start="7624" end="7626" text="AC" TYPE="HOSPITAL" comment="" />
+<LOCATION id="P33" start="7638" end="7641" text="CDH" TYPE="HOSPITAL" comment="" />
+<LOCATION id="P34" start="8053" end="8055" text="AC" TYPE="HOSPITAL" comment="" />
+<NAME id="P35" start="8122" end="8126" text="Ruiz" TYPE="DOCTOR" comment="" />
+<NAME id="P36" start="8589" end="8604" text="Brittany Naylor" TYPE="DOCTOR" comment="" />
+<NAME id="P37" start="8606" end="8618" text="Ximena Keane" TYPE="DOCTOR" comment="" />
+<NAME id="P38" start="8662" end="8677" text="Jared  Xayasane" TYPE="DOCTOR" comment="" />
+<DATE id="P39" start="8686" end="8698" text="Sep 17, 2157" TYPE="DATE" comment="" />
 </TAGS>
 </deIdi2b2>

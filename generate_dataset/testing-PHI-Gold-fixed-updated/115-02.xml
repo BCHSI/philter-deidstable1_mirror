@@ -1,6 +1,6 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT>
+<TEXT><![CDATA[
 
 
 Record date: 2114-11-26
@@ -82,25 +82,26 @@ Isaac Q. Whitman, M.D.
 
 
 
-</TEXT>
+]]></TEXT>
 <TAGS>
-<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2114-11-26" />
-<DATE TYPE="DATE" comment="" end="55" id="P1" start="38" text="November 26, 2114" />
-<NAME TYPE="DOCTOR" comment="" end="81" id="P2" start="67" text="Wanda Flaherty" />
-<LOCATION TYPE="STREET" comment="" end="126" id="P4" start="109" text="98 Greeley Street" />
-<LOCATION TYPE="CITY" comment="" end="134" id="P5" start="127" text="Sturgis" />
-<LOCATION TYPE="STATE" comment="" end="138" id="P6" start="136" text="AL" />
-<LOCATION TYPE="ZIP" comment="" end="144" id="P7" start="139" text="52345" />
-<NAME TYPE="PATIENT" comment="" end="165" id="P8" start="153" text="Nancy Werner" />
-<ID TYPE="MEDICALRECORD" comment="" end="182" id="P9" start="174" text="57274347" />
-<NAME TYPE="DOCTOR" comment="" end="197" id="P10" start="192" text="Wanda" />
-<NAME TYPE="PATIENT" comment="" end="213" id="P11" start="201" text="Nancy Werner" />
-<DATE TYPE="DATE" comment="" end="265" id="P12" start="262" text="May" />
-<NAME TYPE="PATIENT" comment="" end="1334" id="P13" start="1328" text="Werner" />
-<NAME TYPE="PATIENT" comment="" end="1522" id="P14" start="1516" text="Werner" />
-<NAME TYPE="PATIENT" comment="" end="1549" id="P15" start="1537" text="Nancy Werner" />
-<DATE TYPE="DATE" comment="" end="1567" id="P16" start="1550" text="November 26, 2114" />
-<NAME TYPE="DOCTOR" comment="" end="1691" id="P17" start="1675" text="Isaac Q. Whitman" />
-<NAME TYPE="DOCTOR" comment="" end="1709" id="P18" start="1702" text="quiggle" />
+<DATE id="P0" start="16" end="26" text="2114-11-26" TYPE="DATE" comment="" />
+<DATE id="P1" start="38" end="55" text="November 26, 2114" TYPE="DATE" comment="" />
+<NAME id="P2" start="67" end="81" text="Wanda Flaherty" TYPE="DOCTOR" comment="" />
+<LOCATION id="P3" start="88" end="108" text="Saint Annes Hospital" TYPE="HOSPITAL" comment="" />
+<LOCATION id="P4" start="109" end="126" text="98 Greeley Street" TYPE="STREET" comment="" />
+<LOCATION id="P5" start="127" end="134" text="Sturgis" TYPE="CITY" comment="" />
+<LOCATION id="P6" start="136" end="138" text="AL" TYPE="STATE" comment="" />
+<LOCATION id="P7" start="139" end="144" text="52345" TYPE="ZIP" comment="" />
+<NAME id="P8" start="153" end="165" text="Nancy Werner" TYPE="PATIENT" comment="" />
+<ID id="P9" start="174" end="182" text="57274347" TYPE="MEDICALRECORD" comment="" />
+<NAME id="P10" start="192" end="197" text="Wanda" TYPE="DOCTOR" comment="" />
+<NAME id="P11" start="201" end="213" text="Nancy Werner" TYPE="PATIENT" comment="" />
+<DATE id="P12" start="262" end="265" text="May" TYPE="DATE" comment="" />
+<NAME id="P13" start="1328" end="1334" text="Werner" TYPE="PATIENT" comment="" />
+<NAME id="P14" start="1516" end="1522" text="Werner" TYPE="PATIENT" comment="" />
+<NAME id="P15" start="1537" end="1549" text="Nancy Werner" TYPE="PATIENT" comment="" />
+<DATE id="P16" start="1550" end="1567" text="November 26, 2114" TYPE="DATE" comment="" />
+<NAME id="P17" start="1675" end="1691" text="Isaac Q. Whitman" TYPE="DOCTOR" comment="" />
+<NAME id="P18" start="1702" end="1709" text="quiggle" TYPE="DOCTOR" comment="" />
 </TAGS>
 </deIdi2b2>

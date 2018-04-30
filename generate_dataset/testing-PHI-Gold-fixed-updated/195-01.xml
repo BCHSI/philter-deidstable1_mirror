@@ -1,6 +1,6 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT>
+<TEXT><![CDATA[
 
 
 Record date: 2078-11-22
@@ -63,14 +63,18 @@ rin:KZ:9636:DD:11-24-78:DT:11-25-78:DV:11-22-78
 
 
 
-</TEXT>
+]]></TEXT>
 <TAGS>
-<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2078-11-22" />
-<NAME TYPE="PATIENT" comment="" end="89" id="P2" start="74" text="Sherman, Andrew" />
-<NAME TYPE="DOCTOR" comment="" end="2595" id="P8" start="2581" text="Michael Holman" />
-<ID TYPE="IDNUM" comment="" end="2615" id="P9" start="2604" text="rin:KZ:9636" />
-<DATE TYPE="DATE" comment="" end="2627" id="P10" start="2619" text="11-24-78" />
-<DATE TYPE="DATE" comment="" end="2639" id="P11" start="2631" text="11-25-78" />
-<DATE TYPE="DATE" comment="" end="2651" id="P12" start="2643" text="11-22-78" />
+<DATE id="P0" start="16" end="26" text="2078-11-22" TYPE="DATE" comment="" />
+<LOCATION id="P1" start="28" end="35" text="PONTIAC" TYPE="HOSPITAL" comment="" />
+<NAME id="P2" start="74" end="89" text="Sherman, Andrew" TYPE="PATIENT" comment="" />
+<LOCATION id="P4" start="520" end="536" text="Humbert Hospital" TYPE="HOSPITAL" comment="" />
+<LOCATION id="P5" start="811" end="827" text="Humbert Hospital" TYPE="HOSPITAL" comment="" />
+<LOCATION id="P6" start="901" end="914" text="Pontiac State" TYPE="HOSPITAL" comment="" />
+<NAME id="P8" start="2581" end="2595" text="Michael Holman" TYPE="DOCTOR" comment="" />
+<ID id="P9" start="2604" end="2615" text="rin:KZ:9636" TYPE="IDNUM" comment="" />
+<DATE id="P10" start="2619" end="2627" text="11-24-78" TYPE="DATE" comment="" />
+<DATE id="P11" start="2631" end="2639" text="11-25-78" TYPE="DATE" comment="" />
+<DATE id="P12" start="2643" end="2651" text="11-22-78" TYPE="DATE" comment="" />
 </TAGS>
 </deIdi2b2>

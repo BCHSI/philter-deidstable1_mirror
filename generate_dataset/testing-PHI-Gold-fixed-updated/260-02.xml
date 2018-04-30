@@ -1,6 +1,6 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT>
+<TEXT><![CDATA[
 
 
 Record date: 2070-02-14
@@ -89,7 +89,7 @@ Health Maintenance
 
       M-alb/creat ratio   03/25/2068 120.5  PERFORMED AT HOLLY MANOR NURSING HOME
 
-(NOTE)Reference Range:  &lt;30.0 mg/g creatinine
+(NOTE)Reference Range:  <30.0 mg/g creatinine
 
       UA-Protein   04/16/2066 NEGATIVE  
 
@@ -103,9 +103,9 @@ Health Maintenance
 
 (NOTE)Reference Range:
 
-   Random urine    &lt;2.0 mg/dL
+   Random urine    <2.0 mg/dL
 
-   24 hr urine     &lt;300 mg/24 hr
+   24 hr urine     <300 mg/24 hr
 
       Hct (Hematocrit)   02/22/2069 40.2  
 
@@ -151,7 +151,7 @@ Vital Signs
 
 Physical Exam
 
-Lungs - clear to P&amp;A.  Heart - S1S2 normal, no murmur, rub, gallop. Abd - BS normal.  No LSKK, masses, hernias, tenderness, aneurysm.  Rectal - pros 1+, normal consistency, no masses or Feet - no edema or sores.  Position, light touch intact. 
+Lungs - clear to P&A.  Heart - S1S2 normal, no murmur, rub, gallop. Abd - BS normal.  No LSKK, masses, hernias, tenderness, aneurysm.  Rectal - pros 1+, normal consistency, no masses or Feet - no edema or sores.  Position, light touch intact. 
 
 
 
@@ -179,30 +179,33 @@ Xavier Tristan Huerta, M.D.
 
 
 
-</TEXT>
+]]></TEXT>
 <TAGS>
-<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2070-02-14" />
-<NAME TYPE="PATIENT" comment="" end="110" id="P1" start="97" text="VERA,XANDER N" />
-<ID TYPE="MEDICALRECORD" comment="" end="120" id="P2" start="113" text="2152363" />
-<DATE TYPE="DATE" comment="" end="1716" id="P4" start="1712" text="2064" />
-<NAME TYPE="DOCTOR" comment="" end="1730" id="P5" start="1725" text="Quint" />
-<NAME TYPE="DOCTOR" comment="" end="1784" id="P6" start="1777" text="Umstead" />
-<DATE TYPE="DATE" comment="" end="1949" id="P7" start="1946" text="May" />
-<DATE TYPE="DATE" comment="" end="2172" id="P8" start="2162" text="03/02/2069" />
-<DATE TYPE="DATE" comment="" end="2230" id="P9" start="2220" text="04/16/2069" />
-<DATE TYPE="DATE" comment="" end="2304" id="P10" start="2294" text="06/20/2068" />
-<DATE TYPE="DATE" comment="" end="2345" id="P11" start="2335" text="07/17/2069" />
-<DATE TYPE="DATE" comment="" end="2389" id="P12" start="2379" text="03/25/2068" />
-<DATE TYPE="DATE" comment="" end="2512" id="P14" start="2502" text="04/16/2066" />
-<DATE TYPE="DATE" comment="" end="2549" id="P15" start="2539" text="07/18/2069" />
-<DATE TYPE="DATE" comment="" end="2590" id="P16" start="2580" text="07/17/2069" />
-<DATE TYPE="DATE" comment="" end="2632" id="P17" start="2622" text="07/17/2069" />
-<DATE TYPE="DATE" comment="" end="2671" id="P18" start="2661" text="03/25/2068" />
-<DATE TYPE="DATE" comment="" end="2841" id="P20" start="2831" text="02/22/2069" />
-<DATE TYPE="DATE" comment="" end="2884" id="P21" start="2874" text="07/17/2069" />
-<DATE TYPE="DATE" comment="" end="2926" id="P22" start="2916" text="02/22/2069" />
-<DATE TYPE="DATE" comment="" end="2965" id="P23" start="2955" text="03/22/2068" />
-<DATE TYPE="DATE" comment="" end="3857" id="P24" start="3851" text="August" />
-<NAME TYPE="DOCTOR" comment="" end="4023" id="P25" start="4002" text="Xavier Tristan Huerta" />
+<DATE id="P0" start="16" end="26" text="2070-02-14" TYPE="DATE" comment="" />
+<NAME id="P1" start="97" end="110" text="VERA,XANDER N" TYPE="PATIENT" comment="" />
+<ID id="P2" start="113" end="120" text="2152363" TYPE="MEDICALRECORD" comment="" />
+<LOCATION id="P3" start="121" end="124" text="BMH" TYPE="HOSPITAL" comment="" />
+<DATE id="P4" start="1712" end="1716" text="2064" TYPE="DATE" comment="" />
+<NAME id="P5" start="1725" end="1730" text="Quint" TYPE="DOCTOR" comment="" />
+<NAME id="P6" start="1777" end="1784" text="Umstead" TYPE="DOCTOR" comment="" />
+<DATE id="P7" start="1946" end="1949" text="May" TYPE="DATE" comment="" />
+<DATE id="P8" start="2162" end="2172" text="03/02/2069" TYPE="DATE" comment="" />
+<DATE id="P9" start="2220" end="2230" text="04/16/2069" TYPE="DATE" comment="" />
+<DATE id="P10" start="2294" end="2304" text="06/20/2068" TYPE="DATE" comment="" />
+<DATE id="P11" start="2335" end="2345" text="07/17/2069" TYPE="DATE" comment="" />
+<DATE id="P12" start="2379" end="2389" text="03/25/2068" TYPE="DATE" comment="" />
+<LOCATION id="P13" start="2410" end="2434" text="HOLLY MANOR NURSING HOME" TYPE="HOSPITAL" comment="" />
+<DATE id="P14" start="2502" end="2512" text="04/16/2066" TYPE="DATE" comment="" />
+<DATE id="P15" start="2539" end="2549" text="07/18/2069" TYPE="DATE" comment="" />
+<DATE id="P16" start="2580" end="2590" text="07/17/2069" TYPE="DATE" comment="" />
+<DATE id="P17" start="2622" end="2632" text="07/17/2069" TYPE="DATE" comment="" />
+<DATE id="P18" start="2661" end="2671" text="03/25/2068" TYPE="DATE" comment="" />
+<LOCATION id="P19" start="2691" end="2715" text="HOLLY MANOR NURSING HOME" TYPE="HOSPITAL" comment="" />
+<DATE id="P20" start="2831" end="2841" text="02/22/2069" TYPE="DATE" comment="" />
+<DATE id="P21" start="2874" end="2884" text="07/17/2069" TYPE="DATE" comment="" />
+<DATE id="P22" start="2916" end="2926" text="02/22/2069" TYPE="DATE" comment="" />
+<DATE id="P23" start="2955" end="2965" text="03/22/2068" TYPE="DATE" comment="" />
+<DATE id="P24" start="3851" end="3857" text="August" TYPE="DATE" comment="" />
+<NAME id="P25" start="4002" end="4023" text="Xavier Tristan Huerta" TYPE="DOCTOR" comment="" />
 </TAGS>
 </deIdi2b2>

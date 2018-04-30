@@ -1,6 +1,6 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT>
+<TEXT><![CDATA[
 
 
 Record date: 2079-08-04
@@ -151,21 +151,22 @@ eScription document:7-11192535 BFFocus
 
 
 
-</TEXT>
+]]></TEXT>
 <TAGS>
-<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2079-08-04" />
-<ID TYPE="MEDICALRECORD" comment="" end="44" id="P1" start="36" text="75322175" />
-<NAME TYPE="PATIENT" comment="" end="62" id="P2" start="45" text="HENDRICKS, HANNAH" />
-<DATE TYPE="DATE" comment="" end="71" id="P3" start="63" text="08/04/79" />
-<NAME TYPE="DOCTOR" comment="" end="89" id="P4" start="72" text="FAULKNER, GABRIAL" />
-<DATE TYPE="DATE" comment="" end="1081" id="P6" start="1077" text="2061" />
-<DATE TYPE="DATE" comment="" end="1096" id="P7" start="1092" text="2066" />
-<DATE TYPE="DATE" comment="" end="1140" id="P8" start="1133" text="05/2078" />
-<PROFESSION TYPE="PROFESSION" comment="" end="1213" id="P9" start="1183" text="Senior Manager of Broadcasting" />
-<NAME TYPE="DOCTOR" comment="" end="3885" id="P12" start="3868" text="FAULKNER, GABRIAL" />
-<DATE TYPE="DATE" comment="" end="3901" id="P13" start="3893" text="08/05/79" />
-<DATE TYPE="DATE" comment="" end="3914" id="P14" start="3906" text="08/05/79" />
-<NAME TYPE="DOCTOR" comment="" end="3946" id="P15" start="3929" text="FAULKNER, GABRIAL" />
-<ID TYPE="IDNUM" comment="" end="3978" id="P16" start="3968" text="7-11192535" />
+<DATE id="P0" start="16" end="26" text="2079-08-04" TYPE="DATE" comment="" />
+<ID id="P1" start="36" end="44" text="75322175" TYPE="MEDICALRECORD" comment="" />
+<NAME id="P2" start="45" end="62" text="HENDRICKS, HANNAH" TYPE="PATIENT" comment="" />
+<DATE id="P3" start="63" end="71" text="08/04/79" TYPE="DATE" comment="" />
+<NAME id="P4" start="72" end="89" text="FAULKNER, GABRIAL" TYPE="DOCTOR" comment="" />
+<AGE id="P5" start="177" end="179" text="53" TYPE="AGE" comment="" />
+<DATE id="P6" start="1077" end="1081" text="2061" TYPE="DATE" comment="" />
+<DATE id="P7" start="1092" end="1096" text="2066" TYPE="DATE" comment="" />
+<DATE id="P8" start="1133" end="1140" text="05/2078" TYPE="DATE" comment="" />
+<PROFESSION id="P9" start="1183" end="1213" text="Senior Manager of Broadcasting" TYPE="PROFESSION" comment="" />
+<NAME id="P12" start="3868" end="3885" text="FAULKNER, GABRIAL" TYPE="DOCTOR" comment="" />
+<DATE id="P13" start="3893" end="3901" text="08/05/79" TYPE="DATE" comment="" />
+<DATE id="P14" start="3906" end="3914" text="08/05/79" TYPE="DATE" comment="" />
+<NAME id="P15" start="3929" end="3946" text="FAULKNER, GABRIAL" TYPE="DOCTOR" comment="" />
+<ID id="P16" start="3968" end="3978" text="7-11192535" TYPE="IDNUM" comment="" />
 </TAGS>
 </deIdi2b2>

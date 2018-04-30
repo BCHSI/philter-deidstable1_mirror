@@ -1,6 +1,6 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT>
+<TEXT><![CDATA[
 
 
 Record date: 2068-02-04
@@ -84,20 +84,22 @@ DV:2-03-68
 
 
 
-</TEXT>
+]]></TEXT>
 <TAGS>
-<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2068-02-04" />
-<NAME TYPE="PATIENT" comment="" end="94" id="P2" start="79" text="Quijano, Baylee" />
-<DATE TYPE="DATE" comment="" end="148" id="P3" start="141" text="2-03-68" />
-<LOCATION TYPE="ORGANIZATION" comment="" end="594" id="P5" start="579" text="Briggs Stratton" />
-<DATE TYPE="DATE" comment="" end="1296" id="P6" start="1292" text="2064" />
-<DATE TYPE="DATE" comment="" end="2697" id="P7" start="2690" text="2-03-68" />
-<NAME TYPE="DOCTOR" comment="" end="3148" id="P9" start="3135" text="Ada R. Kruger" />
-<NAME TYPE="DOCTOR" comment="" end="3159" id="P10" start="3157" text="FK" />
-<NAME TYPE="DOCTOR" comment="" end="3162" id="P11" start="3160" text="SK" />
-<ID TYPE="IDNUM" comment="" end="3167" id="P12" start="3163" text="3696" />
-<DATE TYPE="DATE" comment="" end="3178" id="P13" start="3171" text="2-03-68" />
-<DATE TYPE="DATE" comment="" end="3189" id="P14" start="3182" text="2-05-68" />
-<DATE TYPE="DATE" comment="" end="3200" id="P15" start="3193" text="2-03-68" />
+<DATE id="P0" start="16" end="26" text="2068-02-04" TYPE="DATE" comment="" />
+<LOCATION id="P1" start="28" end="67" text="ASSOCIATED ARTHRITIS SPECIALISTS CENTER" TYPE="HOSPITAL" comment="" />
+<NAME id="P2" start="79" end="94" text="Quijano, Baylee" TYPE="PATIENT" comment="" />
+<DATE id="P3" start="141" end="148" text="2-03-68" TYPE="DATE" comment="" />
+<AGE id="P4" start="185" end="187" text="53" TYPE="AGE" comment="" />
+<LOCATION id="P5" start="579" end="594" text="Briggs Stratton" TYPE="ORGANIZATION" comment="" />
+<DATE id="P6" start="1292" end="1296" text="2064" TYPE="DATE" comment="" />
+<DATE id="P7" start="2690" end="2697" text="2-03-68" TYPE="DATE" comment="" />
+<NAME id="P9" start="3135" end="3148" text="Ada R. Kruger" TYPE="DOCTOR" comment="" />
+<NAME id="P10" start="3157" end="3159" text="FK" TYPE="DOCTOR" comment="" />
+<NAME id="P11" start="3160" end="3162" text="SK" TYPE="DOCTOR" comment="" />
+<ID id="P12" start="3163" end="3167" text="3696" TYPE="IDNUM" comment="" />
+<DATE id="P13" start="3171" end="3178" text="2-03-68" TYPE="DATE" comment="" />
+<DATE id="P14" start="3182" end="3189" text="2-05-68" TYPE="DATE" comment="" />
+<DATE id="P15" start="3193" end="3200" text="2-03-68" TYPE="DATE" comment="" />
 </TAGS>
 </deIdi2b2>
