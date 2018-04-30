@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version='1.0' encoding='utf8'?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT>
 
 
 Record date: 2070-08-28
@@ -287,38 +287,22 @@ Caleb N. Womack, M.D.,M.P.H.
 
 
 
-***REMOVED******REMOVED***></TEXT>
+</TEXT>
 <TAGS>
-<DATE id="P0" start="16" end="26" text="2070-08-28" TYPE="DATE" comment="" />
-<AGE id="P1" start="55" end="57" text="75" TYPE="AGE" comment="" />
-<DATE id="P2" start="169" end="173" text="2067" TYPE="DATE" comment="" />
-<LOCATION id="P3" start="212" end="215" text="OCH" TYPE="HOSPITAL" comment="" />
-<DATE id="P4" start="259" end="263" text="2068" TYPE="DATE" comment="" />
-<DATE id="P5" start="400" end="405" text="06/69" TYPE="DATE" comment="" />
-<LOCATION id="P6" start="461" end="470" text="columbian" TYPE="COUNTRY" comment="" />
-<LOCATION id="P7" start="869" end="877" text="Columbia" TYPE="COUNTRY" comment="" />
-<DATE id="P8" start="883" end="890" text="October" TYPE="DATE" comment="" />
-<DATE id="P9" start="1169" end="1176" text="8/28/70" TYPE="DATE" comment="" />
-<LOCATION id="P10" start="1488" end="1496" text="Columbia" TYPE="COUNTRY" comment="" />
-<DATE id="P11" start="2368" end="2373" text="07/70" TYPE="DATE" comment="" />
-<LOCATION id="P12" start="2537" end="2545" text="Columbia" TYPE="COUNTRY" comment="" />
-<NAME id="P13" start="2600" end="2628" text="David Timothy Howard Baldwin" TYPE="DOCTOR" comment="" />
-<NAME id="P14" start="2731" end="2753" text="Timothy Howard Baldwin" TYPE="DOCTOR" comment="" />
-<NAME id="P15" start="2848" end="2863" text="Caleb N. Womack" TYPE="DOCTOR" comment="" />
-<AGE id="P16" start="2903" end="2905" text="75" TYPE="AGE" comment="" />
-<DATE id="P17" start="3017" end="3021" text="2067" TYPE="DATE" comment="" />
-<LOCATION id="P18" start="3060" end="3063" text="OCH" TYPE="HOSPITAL" comment="" />
-<DATE id="P19" start="3107" end="3111" text="2068" TYPE="DATE" comment="" />
-<DATE id="P20" start="3248" end="3253" text="06/69" TYPE="DATE" comment="" />
-<LOCATION id="P21" start="3309" end="3318" text="Columbian" TYPE="COUNTRY" comment="" />
-<LOCATION id="P22" start="3717" end="3725" text="Columbia" TYPE="COUNTRY" comment="" />
-<DATE id="P23" start="3731" end="3738" text="October" TYPE="DATE" comment="" />
-<DATE id="P24" start="4017" end="4024" text="8/28/70" TYPE="DATE" comment="" />
-<LOCATION id="P25" start="4336" end="4344" text="Columbia" TYPE="COUNTRY" comment="" />
-<DATE id="P26" start="5216" end="5221" text="07/70" TYPE="DATE" comment="" />
-<LOCATION id="P27" start="5385" end="5394" text="Columbian" TYPE="COUNTRY" comment="" />
-<NAME id="P28" start="5449" end="5477" text="David Timothy Howard Baldwin" TYPE="DOCTOR" comment="" />
-<NAME id="P29" start="5580" end="5602" text="Timothy Howard Baldwin" TYPE="DOCTOR" comment="" />
-<NAME id="P30" start="5697" end="5712" text="Caleb N. Womack" TYPE="DOCTOR" comment="" />
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2070-08-28" />
+<DATE TYPE="DATE" comment="" end="405" id="P5" start="400" text="06/69" />
+<DATE TYPE="DATE" comment="" end="890" id="P8" start="883" text="October" />
+<DATE TYPE="DATE" comment="" end="1176" id="P9" start="1169" text="8/28/70" />
+<DATE TYPE="DATE" comment="" end="2373" id="P11" start="2368" text="07/70" />
+<NAME TYPE="DOCTOR" comment="" end="2628" id="P13" start="2600" text="David Timothy Howard Baldwin" />
+<NAME TYPE="DOCTOR" comment="" end="2753" id="P14" start="2731" text="Timothy Howard Baldwin" />
+<NAME TYPE="DOCTOR" comment="" end="2863" id="P15" start="2848" text="Caleb N. Womack" />
+<DATE TYPE="DATE" comment="" end="3253" id="P20" start="3248" text="06/69" />
+<DATE TYPE="DATE" comment="" end="3738" id="P23" start="3731" text="October" />
+<DATE TYPE="DATE" comment="" end="4024" id="P24" start="4017" text="8/28/70" />
+<DATE TYPE="DATE" comment="" end="5221" id="P26" start="5216" text="07/70" />
+<NAME TYPE="DOCTOR" comment="" end="5477" id="P28" start="5449" text="David Timothy Howard Baldwin" />
+<NAME TYPE="DOCTOR" comment="" end="5602" id="P29" start="5580" text="Timothy Howard Baldwin" />
+<NAME TYPE="DOCTOR" comment="" end="5712" id="P30" start="5697" text="Caleb N. Womack" />
 </TAGS>
 </deIdi2b2>

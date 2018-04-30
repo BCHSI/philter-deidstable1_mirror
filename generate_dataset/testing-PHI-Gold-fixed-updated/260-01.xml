@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version='1.0' encoding='utf8'?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT>
 
 
 Record date: 2069-03-26
@@ -95,7 +95,7 @@ Health Maintenance
 
 
 
-      Cholesterol   02/23/2069 182  DESIRABLE: <200
+      Cholesterol   02/23/2069 182  DESIRABLE: &lt;200
 
 
 
@@ -105,7 +105,7 @@ Health Maintenance
 
       M-alb/creat ratio   03/25/2068 120.5  PERFORMED AT HOLLY MANOR NURSING HOME
 
-(NOTE)Reference Range:  <30.0 mg/g creatinine
+(NOTE)Reference Range:  &lt;30.0 mg/g creatinine
 
 
 
@@ -129,9 +129,9 @@ Health Maintenance
 
 (NOTE)Reference Range:
 
-   Random urine    <2.0 mg/dL
+   Random urine    &lt;2.0 mg/dL
 
-   24 hr urine     <300 mg/24 hr
+   24 hr urine     &lt;300 mg/24 hr
 
 
 
@@ -183,7 +183,7 @@ Vital Signs
 
 Physical Exam
 
-Skin - stasis dermatitis changes, tr edema both lower legs.  Neck - no adenopathy, thy normal, carotids 2+ without bruit.  JVP < 5 cm.  Lungs - clear to P&A.  Heart - S1S2 normal, no murmur, rub, gallop. Abd - BS normal.  No LSKK, masses, hernias, tenderness, aneurysm.  Feet - no sores.
+Skin - stasis dermatitis changes, tr edema both lower legs.  Neck - no adenopathy, thy normal, carotids 2+ without bruit.  JVP &lt; 5 cm.  Lungs - clear to P&amp;A.  Heart - S1S2 normal, no murmur, rub, gallop. Abd - BS normal.  No LSKK, masses, hernias, tenderness, aneurysm.  Feet - no sores.
 
 
 
@@ -207,39 +207,32 @@ Ret 1 mo.  PT/INR, lipids, AST, HbA1C.  Continue above meds.
 
 
 
-***REMOVED******REMOVED***></TEXT>
+</TEXT>
 <TAGS>
-<DATE id="P0" start="16" end="26" text="2069-03-26" TYPE="DATE" comment="" />
-<NAME id="P1" start="320" end="329" text="Ily Light" TYPE="DOCTOR" comment="" />
-<NAME id="P2" start="1476" end="1486" text="Ilya Light" TYPE="DOCTOR" comment="" />
-<DATE id="P3" start="1536" end="1540" text="2064" TYPE="DATE" comment="" />
-<NAME id="P4" start="1549" end="1554" text="Quint" TYPE="DOCTOR" comment="" />
-<NAME id="P5" start="1601" end="1608" text="Umstead" TYPE="DOCTOR" comment="" />
-<NAME id="P6" start="1660" end="1666" text="Alcala" TYPE="DOCTOR" comment="" />
-<NAME id="P7" start="1675" end="1680" text="Adams" TYPE="DOCTOR" comment="" />
-<DATE id="P8" start="1683" end="1687" text="2064" TYPE="DATE" comment="" />
-<DATE id="P9" start="1717" end="1725" text="10/31/64" TYPE="DATE" comment="" />
-<NAME id="P10" start="1767" end="1772" text="Quint" TYPE="DOCTOR" comment="" />
-<NAME id="P11" start="1781" end="1786" text="Faust" TYPE="DOCTOR" comment="" />
-<DATE id="P12" start="1882" end="1892" text="02/23/2069" TYPE="DATE" comment="" />
-<DATE id="P13" start="1937" end="1947" text="03/22/2068" TYPE="DATE" comment="" />
-<DATE id="P14" start="2044" end="2054" text="03/25/2068" TYPE="DATE" comment="" />
-<LOCATION id="P15" start="2075" end="2099" text="HOLLY MANOR NURSING HOME" TYPE="HOSPITAL" comment="" />
-<DATE id="P16" start="2162" end="2172" text="03/02/2069" TYPE="DATE" comment="" />
-<DATE id="P17" start="2220" end="2230" text="04/16/2066" TYPE="DATE" comment="" />
-<DATE id="P18" start="2266" end="2276" text="07/03/2067" TYPE="DATE" comment="" />
-<DATE id="P19" start="2311" end="2321" text="03/23/2068" TYPE="DATE" comment="" />
-<DATE id="P20" start="2354" end="2364" text="03/25/2068" TYPE="DATE" comment="" />
-<LOCATION id="P21" start="2384" end="2408" text="HOLLY MANOR NURSING HOME" TYPE="HOSPITAL" comment="" />
-<DATE id="P22" start="2546" end="2550" text="2061" TYPE="DATE" comment="" />
-<PROFESSION id="P23" start="2640" end="2669" text="Communications senior manager" TYPE="PROFESSION" comment="" />
-<PROFESSION id="P24" start="2671" end="2680" text="marketing" TYPE="PROFESSION" comment="" />
-<LOCATION id="P25" start="2693" end="2714" text="Brinker International" TYPE="ORGANIZATION" comment="" />
-<LOCATION id="P26" start="2720" end="2728" text="Facebook" TYPE="ORGANIZATION" comment="" />
-<LOCATION id="P27" start="2735" end="2742" text="Twitter" TYPE="ORGANIZATION" comment="" />
-<PROFESSION id="P28" start="2770" end="2798" text="securities investment dealer" TYPE="PROFESSION" comment="" />
-<LOCATION id="P29" start="2975" end="2981" text="Delnor" TYPE="HOSPITAL" comment="" />
-<DATE id="P30" start="2983" end="2987" text="2067" TYPE="DATE" comment="" />
-<DATE id="P31" start="3025" end="3033" text="Feb 2069" TYPE="DATE" comment="" />
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2069-03-26" />
+<NAME TYPE="DOCTOR" comment="" end="329" id="P1" start="320" text="Ily Light" />
+<NAME TYPE="DOCTOR" comment="" end="1486" id="P2" start="1476" text="Ilya Light" />
+<NAME TYPE="DOCTOR" comment="" end="1554" id="P4" start="1549" text="Quint" />
+<NAME TYPE="DOCTOR" comment="" end="1608" id="P5" start="1601" text="Umstead" />
+<NAME TYPE="DOCTOR" comment="" end="1666" id="P6" start="1660" text="Alcala" />
+<NAME TYPE="DOCTOR" comment="" end="1680" id="P7" start="1675" text="Adams" />
+<DATE TYPE="DATE" comment="" end="1725" id="P9" start="1717" text="10/31/64" />
+<NAME TYPE="DOCTOR" comment="" end="1772" id="P10" start="1767" text="Quint" />
+<NAME TYPE="DOCTOR" comment="" end="1786" id="P11" start="1781" text="Faust" />
+<DATE TYPE="DATE" comment="" end="1892" id="P12" start="1882" text="02/23/2069" />
+<DATE TYPE="DATE" comment="" end="1947" id="P13" start="1937" text="03/22/2068" />
+<DATE TYPE="DATE" comment="" end="2054" id="P14" start="2044" text="03/25/2068" />
+<DATE TYPE="DATE" comment="" end="2172" id="P16" start="2162" text="03/02/2069" />
+<DATE TYPE="DATE" comment="" end="2230" id="P17" start="2220" text="04/16/2066" />
+<DATE TYPE="DATE" comment="" end="2276" id="P18" start="2266" text="07/03/2067" />
+<DATE TYPE="DATE" comment="" end="2321" id="P19" start="2311" text="03/23/2068" />
+<DATE TYPE="DATE" comment="" end="2364" id="P20" start="2354" text="03/25/2068" />
+<PROFESSION TYPE="PROFESSION" comment="" end="2669" id="P23" start="2640" text="Communications senior manager" />
+<PROFESSION TYPE="PROFESSION" comment="" end="2680" id="P24" start="2671" text="marketing" />
+<LOCATION TYPE="ORGANIZATION" comment="" end="2714" id="P25" start="2693" text="Brinker International" />
+<LOCATION TYPE="ORGANIZATION" comment="" end="2728" id="P26" start="2720" text="Facebook" />
+<LOCATION TYPE="ORGANIZATION" comment="" end="2742" id="P27" start="2735" text="Twitter" />
+<PROFESSION TYPE="PROFESSION" comment="" end="2798" id="P28" start="2770" text="securities investment dealer" />
+<DATE TYPE="DATE" comment="" end="3033" id="P31" start="3025" text="Feb 2069" />
 </TAGS>
 </deIdi2b2>

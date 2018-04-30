@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version='1.0' encoding='utf8'?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT>
 
 
 Record date: 2078-06-18
@@ -205,7 +205,7 @@ A/P
 
 2) Renal 
 
-- has Cr 1.4, was on glucophage, received contrast --> will need IVF
+- has Cr 1.4, was on glucophage, received contrast --&gt; will need IVF
 
 
 
@@ -239,15 +239,12 @@ Pioneer Neurology Resident
 
 
 
-***REMOVED******REMOVED***></TEXT>
+</TEXT>
 <TAGS>
-<DATE id="P0" start="16" end="26" text="2078-06-18" TYPE="DATE" comment="" />
-<AGE id="P1" start="117" end="119" text="50" TYPE="AGE" comment="" />
-<LOCATION id="P2" start="743" end="755" text="Chincoteague" TYPE="CITY" comment="" />
-<DATE id="P3" start="1070" end="1075" text="11/77" TYPE="DATE" comment="" />
-<AGE id="P4" start="3291" end="3293" text="50" TYPE="AGE" comment="" />
-<NAME id="P5" start="3688" end="3701" text="Davine Malone" TYPE="DOCTOR" comment="" />
-<CONTACT id="P6" start="3706" end="3712" text="5-4328" TYPE="PHONE" comment="" />
-<LOCATION id="P7" start="3714" end="3721" text="Pioneer" TYPE="HOSPITAL" comment="" />
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2078-06-18" />
+<LOCATION TYPE="CITY" comment="" end="755" id="P2" start="743" text="Chincoteague" />
+<DATE TYPE="DATE" comment="" end="1075" id="P3" start="1070" text="11/77" />
+<NAME TYPE="DOCTOR" comment="" end="3701" id="P5" start="3688" text="Davine Malone" />
+<CONTACT TYPE="PHONE" comment="" end="3712" id="P6" start="3706" text="5-4328" />
 </TAGS>
 </deIdi2b2>

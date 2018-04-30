@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version='1.0' encoding='utf8'?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT>
 
 
 Record date: 2078-05-29
@@ -153,20 +153,18 @@ eScription document:9-7189367 BFFocus
 
 
 
-***REMOVED******REMOVED***></TEXT>
+</TEXT>
 <TAGS>
-<DATE id="P0" start="16" end="26" text="2078-05-29" TYPE="DATE" comment="" />
-<ID id="P1" start="36" end="44" text="47190847" TYPE="MEDICALRECORD" comment="" />
-<NAME id="P2" start="45" end="65" text="JORGENSON, VIVIANLEE" TYPE="PATIENT" comment="" />
-<DATE id="P3" start="66" end="74" text="05/29/78" TYPE="DATE" comment="" />
-<NAME id="P4" start="75" end="89" text="XUEREB, VESTER" TYPE="DOCTOR" comment="" />
-<NAME id="P5" start="119" end="127" text="Wendy Wu" TYPE="DOCTOR" comment="" />
-<AGE id="P6" start="293" end="295" text="71" TYPE="AGE" comment="" />
-<AGE id="P7" start="2287" end="2289" text="71" TYPE="AGE" comment="" />
-<NAME id="P8" start="3825" end="3839" text="XUEREB, VESTER" TYPE="DOCTOR" comment="" />
-<DATE id="P9" start="3849" end="3857" text="05/29/78" TYPE="DATE" comment="" />
-<DATE id="P10" start="3862" end="3870" text="05/30/78" TYPE="DATE" comment="" />
-<NAME id="P11" start="3885" end="3899" text="XUEREB, VESTER" TYPE="DOCTOR" comment="" />
-<ID id="P12" start="3921" end="3930" text="9-7189367" TYPE="IDNUM" comment="" />
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2078-05-29" />
+<ID TYPE="MEDICALRECORD" comment="" end="44" id="P1" start="36" text="47190847" />
+<NAME TYPE="PATIENT" comment="" end="65" id="P2" start="45" text="JORGENSON, VIVIANLEE" />
+<DATE TYPE="DATE" comment="" end="74" id="P3" start="66" text="05/29/78" />
+<NAME TYPE="DOCTOR" comment="" end="89" id="P4" start="75" text="XUEREB, VESTER" />
+<NAME TYPE="DOCTOR" comment="" end="127" id="P5" start="119" text="Wendy Wu" />
+<NAME TYPE="DOCTOR" comment="" end="3839" id="P8" start="3825" text="XUEREB, VESTER" />
+<DATE TYPE="DATE" comment="" end="3857" id="P9" start="3849" text="05/29/78" />
+<DATE TYPE="DATE" comment="" end="3870" id="P10" start="3862" text="05/30/78" />
+<NAME TYPE="DOCTOR" comment="" end="3899" id="P11" start="3885" text="XUEREB, VESTER" />
+<ID TYPE="IDNUM" comment="" end="3930" id="P12" start="3921" text="9-7189367" />
 </TAGS>
 </deIdi2b2>

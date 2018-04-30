@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version='1.0' encoding='utf8'?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT>
 
 
 Record date: 2097-01-04
@@ -197,31 +197,23 @@ Signed electronically by   Henry  Mays MD, PhD  on  Jan 6, 2097
 
 
 
-***REMOVED******REMOVED***></TEXT>
+</TEXT>
 <TAGS>
-<DATE id="P0" start="16" end="26" text="2097-01-04" TYPE="DATE" comment="" />
-<LOCATION id="P1" start="40" end="61" text="VICTOR MEDICAL CLINIC" TYPE="HOSPITAL" comment="" />
-<NAME id="P2" start="65" end="79" text="Thomas N Ramos" TYPE="DOCTOR" comment="" />
-<LOCATION id="P3" start="87" end="108" text="Victor Medical Clinic" TYPE="HOSPITAL" comment="" />
-<LOCATION id="P4" start="110" end="126" text="55 Harbor Avenue" TYPE="STREET" comment="" />
-<LOCATION id="P6" start="137" end="144" text="Pullman" TYPE="CITY" comment="" />
-<LOCATION id="P7" start="146" end="148" text="MN" TYPE="STATE" comment="" />
-<LOCATION id="P8" start="149" end="154" text="74618" TYPE="ZIP" comment="" />
-<NAME id="P9" start="163" end="169" text="Thomas" TYPE="DOCTOR" comment="" />
-<NAME id="P10" start="215" end="220" text="Weeks" TYPE="PATIENT" comment="" />
-<AGE id="P11" start="352" end="354" text="78" TYPE="AGE" comment="" />
-<DATE id="P12" start="423" end="433" text="07/20/2096" TYPE="DATE" comment="" />
-<DATE id="P13" start="1191" end="1197" text="spring" TYPE="DATE" comment="" />
-<AGE id="P14" start="1855" end="1857" text="78" TYPE="AGE" comment="" />
-<DATE id="P15" start="2062" end="2066" text="2065" TYPE="DATE" comment="" />
-<LOCATION id="P16" start="2192" end="2210" text="Casco Bay Shipping" TYPE="ORGANIZATION" comment="" />
-<DATE id="P17" start="4339" end="4349" text="12/22/2096" TYPE="DATE" comment="" />
-<DATE id="P18" start="4354" end="4364" text="12/26/2096" TYPE="DATE" comment="" />
-<AGE id="P19" start="4416" end="4418" text="78" TYPE="AGE" comment="" />
-<DATE id="P20" start="4587" end="4596" text="July 2096" TYPE="DATE" comment="" />
-<LOCATION id="P21" start="7092" end="7111" text="Wayne Dental Clinic" TYPE="HOSPITAL" comment="" />
-<NAME id="P22" start="7292" end="7302" text="Henry Mays" TYPE="DOCTOR" comment="" />
-<NAME id="P23" start="7341" end="7352" text="Henry  Mays" TYPE="DOCTOR" comment="" />
-<DATE id="P24" start="7366" end="7377" text="Jan 6, 2097" TYPE="DATE" comment="" />
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2097-01-04" />
+<NAME TYPE="DOCTOR" comment="" end="79" id="P2" start="65" text="Thomas N Ramos" />
+<LOCATION TYPE="STREET" comment="" end="126" id="P4" start="110" text="55 Harbor Avenue" />
+<LOCATION TYPE="CITY" comment="" end="144" id="P6" start="137" text="Pullman" />
+<LOCATION TYPE="STATE" comment="" end="148" id="P7" start="146" text="MN" />
+<LOCATION TYPE="ZIP" comment="" end="154" id="P8" start="149" text="74618" />
+<NAME TYPE="DOCTOR" comment="" end="169" id="P9" start="163" text="Thomas" />
+<NAME TYPE="PATIENT" comment="" end="220" id="P10" start="215" text="Weeks" />
+<DATE TYPE="DATE" comment="" end="433" id="P12" start="423" text="07/20/2096" />
+<LOCATION TYPE="ORGANIZATION" comment="" end="2210" id="P16" start="2192" text="Casco Bay Shipping" />
+<DATE TYPE="DATE" comment="" end="4349" id="P17" start="4339" text="12/22/2096" />
+<DATE TYPE="DATE" comment="" end="4364" id="P18" start="4354" text="12/26/2096" />
+<DATE TYPE="DATE" comment="" end="4596" id="P20" start="4587" text="July 2096" />
+<NAME TYPE="DOCTOR" comment="" end="7302" id="P22" start="7292" text="Henry Mays" />
+<NAME TYPE="DOCTOR" comment="" end="7352" id="P23" start="7341" text="Henry  Mays" />
+<DATE TYPE="DATE" comment="" end="7377" id="P24" start="7366" text="Jan 6, 2097" />
 </TAGS>
 </deIdi2b2>

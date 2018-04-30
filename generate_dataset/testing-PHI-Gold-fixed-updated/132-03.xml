@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version='1.0' encoding='utf8'?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT>
 
 
 Record date: 2074-06-20
@@ -49,32 +49,29 @@ DV: 06/20/74
 
 
 
-***REMOVED******REMOVED***></TEXT>
+</TEXT>
 <TAGS>
-<DATE id="P0" start="16" end="26" text="2074-06-20" TYPE="DATE" comment="" />
-<LOCATION id="P1" start="29" end="32" text="HHH" TYPE="HOSPITAL" comment="" />
-<LOCATION id="P3" start="66" end="76" text="89 Buck St" TYPE="STREET" comment="" />
-<NAME id="P4" start="114" end="134" text="JORGENSON, VIVIANLEE" TYPE="PATIENT" comment="" />
-<LOCATION id="P5" start="135" end="145" text="Sioux City" TYPE="CITY" comment="" />
-<LOCATION id="P6" start="147" end="149" text="FL" TYPE="STATE" comment="" />
-<LOCATION id="P7" start="150" end="155" text="76546" TYPE="ZIP" comment="" />
-<ID id="P8" start="198" end="206" text="47190847" TYPE="MEDICALRECORD" comment="" />
-<CONTACT id="P9" start="207" end="221" text="(179) 732-8159" TYPE="PHONE" comment="" />
-<DATE id="P10" start="264" end="272" text="06/20/74" TYPE="DATE" comment="" />
-<NAME id="P11" start="275" end="289" text="Charles F. Van" TYPE="DOCTOR" comment="" />
-<LOCATION id="P12" start="296" end="317" text="66 Kessler Farm Drive" TYPE="STREET" comment="" />
-<LOCATION id="P14" start="331" end="337" text="Jordan" TYPE="CITY" comment="" />
-<LOCATION id="P15" start="339" end="341" text="FL" TYPE="STATE" comment="" />
-<LOCATION id="P16" start="343" end="348" text="83712" TYPE="ZIP" comment="" />
-<NAME id="P17" start="360" end="363" text="Van" TYPE="DOCTOR" comment="" />
-<NAME id="P18" start="417" end="436" text="VivianLee Jorgenson" TYPE="PATIENT" comment="" />
-<LOCATION id="P19" start="474" end="489" text="Goulds Hospital" TYPE="HOSPITAL" comment="" />
-<AGE id="P20" start="504" end="506" text="67" TYPE="AGE" comment="" />
-<NAME id="P21" start="1499" end="1518" text="Vickie Frank-Jarvis" TYPE="DOCTOR" comment="" />
-<NAME id="P22" start="1540" end="1559" text="Vickie Frank-Jarvis" TYPE="DOCTOR" comment="" />
-<ID id="P23" start="1582" end="1591" text="9-9294537" TYPE="IDNUM" comment="" />
-<DATE id="P24" start="1607" end="1615" text="06/20/74" TYPE="DATE" comment="" />
-<DATE id="P25" start="1620" end="1628" text="06/20/74" TYPE="DATE" comment="" />
-<DATE id="P26" start="1633" end="1641" text="06/20/74" TYPE="DATE" comment="" />
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2074-06-20" />
+<LOCATION TYPE="STREET" comment="" end="76" id="P3" start="66" text="89 Buck St" />
+<NAME TYPE="PATIENT" comment="" end="134" id="P4" start="114" text="JORGENSON, VIVIANLEE" />
+<LOCATION TYPE="CITY" comment="" end="145" id="P5" start="135" text="Sioux City" />
+<LOCATION TYPE="STATE" comment="" end="149" id="P6" start="147" text="FL" />
+<LOCATION TYPE="ZIP" comment="" end="155" id="P7" start="150" text="76546" />
+<ID TYPE="MEDICALRECORD" comment="" end="206" id="P8" start="198" text="47190847" />
+<CONTACT TYPE="PHONE" comment="" end="221" id="P9" start="207" text="(179) 732-8159" />
+<DATE TYPE="DATE" comment="" end="272" id="P10" start="264" text="06/20/74" />
+<NAME TYPE="DOCTOR" comment="" end="289" id="P11" start="275" text="Charles F. Van" />
+<LOCATION TYPE="STREET" comment="" end="317" id="P12" start="296" text="66 Kessler Farm Drive" />
+<LOCATION TYPE="CITY" comment="" end="337" id="P14" start="331" text="Jordan" />
+<LOCATION TYPE="STATE" comment="" end="341" id="P15" start="339" text="FL" />
+<LOCATION TYPE="ZIP" comment="" end="348" id="P16" start="343" text="83712" />
+<NAME TYPE="DOCTOR" comment="" end="363" id="P17" start="360" text="Van" />
+<NAME TYPE="PATIENT" comment="" end="436" id="P18" start="417" text="VivianLee Jorgenson" />
+<NAME TYPE="DOCTOR" comment="" end="1518" id="P21" start="1499" text="Vickie Frank-Jarvis" />
+<NAME TYPE="DOCTOR" comment="" end="1559" id="P22" start="1540" text="Vickie Frank-Jarvis" />
+<ID TYPE="IDNUM" comment="" end="1591" id="P23" start="1582" text="9-9294537" />
+<DATE TYPE="DATE" comment="" end="1615" id="P24" start="1607" text="06/20/74" />
+<DATE TYPE="DATE" comment="" end="1628" id="P25" start="1620" text="06/20/74" />
+<DATE TYPE="DATE" comment="" end="1641" id="P26" start="1633" text="06/20/74" />
 </TAGS>
 </deIdi2b2>

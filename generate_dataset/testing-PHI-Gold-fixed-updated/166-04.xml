@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version='1.0' encoding='utf8'?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT>
 
 
 Record date: 2096-03-16
@@ -138,33 +138,22 @@ Document Status: Final
 
 
 
-***REMOVED******REMOVED***></TEXT>
+</TEXT>
 <TAGS>
-<DATE id="P0" start="16" end="26" text="2096-03-16" TYPE="DATE" comment="" />
-<LOCATION id="P1" start="45" end="70" text="WESTBROOK PLAINS HOSPITAL" TYPE="HOSPITAL" comment="" />
-<NAME id="P2" start="139" end="154" text="J. Jordan Duran" TYPE="DOCTOR" comment="" />
-<AGE id="P3" start="157" end="159" text="64" TYPE="AGE" comment="" />
-<DATE id="P4" start="252" end="265" text="December 2095" TYPE="DATE" comment="" />
-<LOCATION id="P5" start="483" end="486" text="SCH" TYPE="HOSPITAL" comment="" />
-<LOCATION id="P6" start="605" end="608" text="WPH" TYPE="HOSPITAL" comment="" />
-<LOCATION id="P7" start="1219" end="1222" text="SCH" TYPE="HOSPITAL" comment="" />
-<AGE id="P9" start="2622" end="2624" text="83" TYPE="AGE" comment="" />
-<AGE id="P10" start="2654" end="2656" text="76" TYPE="AGE" comment="" />
-<AGE id="P11" start="2665" end="2667" text="63" TYPE="AGE" comment="" />
-<AGE id="P12" start="2676" end="2678" text="62" TYPE="AGE" comment="" />
-<PROFESSION id="P13" start="2760" end="2774" text="web programmer" TYPE="PROFESSION" comment="" />
-<LOCATION id="P14" start="2778" end="2786" text="Audiovox" TYPE="ORGANIZATION" comment="" />
-<AGE id="P15" start="2806" end="2808" text="38" TYPE="AGE" comment="" />
-<DATE id="P16" start="3815" end="3823" text="03/11/96" TYPE="DATE" comment="" />
-<DATE id="P17" start="3861" end="3869" text="12/06/95" TYPE="DATE" comment="" />
-<DATE id="P18" start="3968" end="3976" text="02/13/96" TYPE="DATE" comment="" />
-<DATE id="P19" start="4072" end="4080" text="03/11/96" TYPE="DATE" comment="" />
-<DATE id="P20" start="4168" end="4176" text="03/11/96" TYPE="DATE" comment="" />
-<DATE id="P21" start="4237" end="4245" text="03/11/96" TYPE="DATE" comment="" />
-<AGE id="P22" start="4279" end="4281" text="64" TYPE="AGE" comment="" />
-<NAME id="P23" start="5010" end="5018" text="Oxendine" TYPE="DOCTOR" comment="" />
-<NAME id="P24" start="5023" end="5038" text="Freida P. Lloyd" TYPE="DOCTOR" comment="" />
-<CONTACT id="P25" start="5046" end="5051" text="82454" TYPE="PHONE" comment="" />
-<NAME id="P26" start="5081" end="5096" text="Freida P. Lloyd" TYPE="DOCTOR" comment="" />
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2096-03-16" />
+<NAME TYPE="DOCTOR" comment="" end="154" id="P2" start="139" text="J. Jordan Duran" />
+<DATE TYPE="DATE" comment="" end="265" id="P4" start="252" text="December 2095" />
+<PROFESSION TYPE="PROFESSION" comment="" end="2774" id="P13" start="2760" text="web programmer" />
+<LOCATION TYPE="ORGANIZATION" comment="" end="2786" id="P14" start="2778" text="Audiovox" />
+<DATE TYPE="DATE" comment="" end="3823" id="P16" start="3815" text="03/11/96" />
+<DATE TYPE="DATE" comment="" end="3869" id="P17" start="3861" text="12/06/95" />
+<DATE TYPE="DATE" comment="" end="3976" id="P18" start="3968" text="02/13/96" />
+<DATE TYPE="DATE" comment="" end="4080" id="P19" start="4072" text="03/11/96" />
+<DATE TYPE="DATE" comment="" end="4176" id="P20" start="4168" text="03/11/96" />
+<DATE TYPE="DATE" comment="" end="4245" id="P21" start="4237" text="03/11/96" />
+<NAME TYPE="DOCTOR" comment="" end="5018" id="P23" start="5010" text="Oxendine" />
+<NAME TYPE="DOCTOR" comment="" end="5038" id="P24" start="5023" text="Freida P. Lloyd" />
+<CONTACT TYPE="PHONE" comment="" end="5051" id="P25" start="5046" text="82454" />
+<NAME TYPE="DOCTOR" comment="" end="5096" id="P26" start="5081" text="Freida P. Lloyd" />
 </TAGS>
 </deIdi2b2>

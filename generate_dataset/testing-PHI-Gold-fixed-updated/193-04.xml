@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version='1.0' encoding='utf8'?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT>
 
 
 Record date: 2095-12-14
@@ -105,19 +105,18 @@ eScription document:5-4132381 BFFocus
 
 
 
-***REMOVED******REMOVED***></TEXT>
+</TEXT>
 <TAGS>
-<DATE id="P0" start="16" end="26" text="2095-12-14" TYPE="DATE" comment="" />
-<ID id="P1" start="36" end="44" text="50294530" TYPE="MEDICALRECORD" comment="" />
-<NAME id="P2" start="45" end="55" text="FOUST, FAY" TYPE="PATIENT" comment="" />
-<DATE id="P3" start="56" end="64" text="12/14/95" TYPE="DATE" comment="" />
-<NAME id="P4" start="65" end="79" text="FISHER, CARRIE" TYPE="DOCTOR" comment="" />
-<NAME id="P5" start="125" end="134" text="Dickerson" TYPE="DOCTOR" comment="" />
-<AGE id="P6" start="413" end="415" text="65" TYPE="AGE" comment="" />
-<NAME id="P7" start="2444" end="2458" text="FISHER, CARRIE" TYPE="DOCTOR" comment="" />
-<DATE id="P8" start="2468" end="2476" text="12/15/95" TYPE="DATE" comment="" />
-<DATE id="P9" start="2481" end="2489" text="12/15/95" TYPE="DATE" comment="" />
-<NAME id="P10" start="2504" end="2518" text="FISHER, CARRIE" TYPE="DOCTOR" comment="" />
-<ID id="P11" start="2539" end="2548" text="5-4132381" TYPE="IDNUM" comment="" />
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2095-12-14" />
+<ID TYPE="MEDICALRECORD" comment="" end="44" id="P1" start="36" text="50294530" />
+<NAME TYPE="PATIENT" comment="" end="55" id="P2" start="45" text="FOUST, FAY" />
+<DATE TYPE="DATE" comment="" end="64" id="P3" start="56" text="12/14/95" />
+<NAME TYPE="DOCTOR" comment="" end="79" id="P4" start="65" text="FISHER, CARRIE" />
+<NAME TYPE="DOCTOR" comment="" end="134" id="P5" start="125" text="Dickerson" />
+<NAME TYPE="DOCTOR" comment="" end="2458" id="P7" start="2444" text="FISHER, CARRIE" />
+<DATE TYPE="DATE" comment="" end="2476" id="P8" start="2468" text="12/15/95" />
+<DATE TYPE="DATE" comment="" end="2489" id="P9" start="2481" text="12/15/95" />
+<NAME TYPE="DOCTOR" comment="" end="2518" id="P10" start="2504" text="FISHER, CARRIE" />
+<ID TYPE="IDNUM" comment="" end="2548" id="P11" start="2539" text="5-4132381" />
 </TAGS>
 </deIdi2b2>

@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version='1.0' encoding='utf8'?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT>
 
 
 Record date: 2071-11-24
@@ -233,41 +233,35 @@ DV: 11/24/71
 
 
 
-***REMOVED******REMOVED***></TEXT>
+</TEXT>
 <TAGS>
-<DATE id="P0" start="16" end="26" text="2071-11-24" TYPE="DATE" comment="" />
-<LOCATION id="P1" start="52" end="76" text="Jeanes Memorial Hospital" TYPE="HOSPITAL" comment="" />
-<LOCATION id="P2" start="78" end="88" text="89 Buck St" TYPE="STREET" comment="" />
-<LOCATION id="P3" start="90" end="100" text="Sioux City" TYPE="CITY" comment="" />
-<LOCATION id="P4" start="102" end="104" text="FL" TYPE="STATE" comment="" />
-<LOCATION id="P5" start="106" end="111" text="76546" TYPE="ZIP" comment="" />
-<NAME id="P6" start="119" end="138" text="VivianLee Jorgenson" TYPE="PATIENT" comment="" />
-<ID id="P7" start="144" end="155" text="471-90-84-7" TYPE="MEDICALRECORD" comment="" />
-<DATE id="P8" start="157" end="174" text="November 24, 2071" TYPE="DATE" comment="" />
-<NAME id="P9" start="211" end="220" text="Jorgenson" TYPE="PATIENT" comment="" />
-<AGE id="P10" start="230" end="232" text="64" TYPE="AGE" comment="" />
-<DATE id="P11" start="330" end="339" text="May, 2071" TYPE="DATE" comment="" />
-<DATE id="P12" start="549" end="559" text="June, 2071" TYPE="DATE" comment="" />
-<LOCATION id="P13" start="617" end="620" text="JMH" TYPE="HOSPITAL" comment="" />
-<NAME id="P14" start="757" end="763" text="Geiger" TYPE="DOCTOR" comment="" />
-<LOCATION id="P15" start="767" end="770" text="JMH" TYPE="HOSPITAL" comment="" />
-<DATE id="P16" start="822" end="829" text="9/17/71" TYPE="DATE" comment="" />
-<NAME id="P17" start="1503" end="1512" text="Jorgenson" TYPE="PATIENT" comment="" />
-<NAME id="P18" start="2986" end="3005" text="VivianLee Jorgenson" TYPE="PATIENT" comment="" />
-<ID id="P19" start="3011" end="3022" text="471-90-84-7" TYPE="MEDICALRECORD" comment="" />
-<DATE id="P20" start="3024" end="3041" text="November 24, 2071" TYPE="DATE" comment="" />
-<DATE id="P21" start="3483" end="3495" text="August, 2071" TYPE="DATE" comment="" />
-<AGE id="P22" start="3726" end="3728" text="64" TYPE="AGE" comment="" />
-<NAME id="P23" start="3861" end="3870" text="Jorgenson" TYPE="PATIENT" comment="" />
-<DATE id="P24" start="4399" end="4406" text="January" TYPE="DATE" comment="" />
-<NAME id="P25" start="4422" end="4435" text="Hilda Vincent" TYPE="DOCTOR" comment="" />
-<NAME id="P26" start="4452" end="4467" text="Brittany Farrar" TYPE="DOCTOR" comment="" />
-<NAME id="P27" start="4484" end="4486" text="BF" TYPE="DOCTOR" comment="" />
-<NAME id="P28" start="4487" end="4493" text="cooley" TYPE="DOCTOR" comment="" />
-<NAME id="P29" start="4498" end="4510" text="Aiden Geiger" TYPE="DOCTOR" comment="" />
-<NAME id="P30" start="4557" end="4570" text="Hilda Vincent" TYPE="DOCTOR" comment="" />
-<DATE id="P31" start="4579" end="4587" text="11/24/71" TYPE="DATE" comment="" />
-<DATE id="P32" start="4593" end="4601" text="12/31/71" TYPE="DATE" comment="" />
-<DATE id="P33" start="4607" end="4615" text="11/24/71" TYPE="DATE" comment="" />
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2071-11-24" />
+<LOCATION TYPE="STREET" comment="" end="88" id="P2" start="78" text="89 Buck St" />
+<LOCATION TYPE="CITY" comment="" end="100" id="P3" start="90" text="Sioux City" />
+<LOCATION TYPE="STATE" comment="" end="104" id="P4" start="102" text="FL" />
+<LOCATION TYPE="ZIP" comment="" end="111" id="P5" start="106" text="76546" />
+<NAME TYPE="PATIENT" comment="" end="138" id="P6" start="119" text="VivianLee Jorgenson" />
+<ID TYPE="MEDICALRECORD" comment="" end="155" id="P7" start="144" text="471-90-84-7" />
+<DATE TYPE="DATE" comment="" end="174" id="P8" start="157" text="November 24, 2071" />
+<NAME TYPE="PATIENT" comment="" end="220" id="P9" start="211" text="Jorgenson" />
+<DATE TYPE="DATE" comment="" end="339" id="P11" start="330" text="May, 2071" />
+<DATE TYPE="DATE" comment="" end="559" id="P12" start="549" text="June, 2071" />
+<NAME TYPE="DOCTOR" comment="" end="763" id="P14" start="757" text="Geiger" />
+<DATE TYPE="DATE" comment="" end="829" id="P16" start="822" text="9/17/71" />
+<NAME TYPE="PATIENT" comment="" end="1512" id="P17" start="1503" text="Jorgenson" />
+<NAME TYPE="PATIENT" comment="" end="3005" id="P18" start="2986" text="VivianLee Jorgenson" />
+<ID TYPE="MEDICALRECORD" comment="" end="3022" id="P19" start="3011" text="471-90-84-7" />
+<DATE TYPE="DATE" comment="" end="3041" id="P20" start="3024" text="November 24, 2071" />
+<DATE TYPE="DATE" comment="" end="3495" id="P21" start="3483" text="August, 2071" />
+<NAME TYPE="PATIENT" comment="" end="3870" id="P23" start="3861" text="Jorgenson" />
+<DATE TYPE="DATE" comment="" end="4406" id="P24" start="4399" text="January" />
+<NAME TYPE="DOCTOR" comment="" end="4435" id="P25" start="4422" text="Hilda Vincent" />
+<NAME TYPE="DOCTOR" comment="" end="4467" id="P26" start="4452" text="Brittany Farrar" />
+<NAME TYPE="DOCTOR" comment="" end="4493" id="P28" start="4487" text="cooley" />
+<NAME TYPE="DOCTOR" comment="" end="4510" id="P29" start="4498" text="Aiden Geiger" />
+<NAME TYPE="DOCTOR" comment="" end="4570" id="P30" start="4557" text="Hilda Vincent" />
+<DATE TYPE="DATE" comment="" end="4587" id="P31" start="4579" text="11/24/71" />
+<DATE TYPE="DATE" comment="" end="4601" id="P32" start="4593" text="12/31/71" />
+<DATE TYPE="DATE" comment="" end="4615" id="P33" start="4607" text="11/24/71" />
 </TAGS>
 </deIdi2b2>

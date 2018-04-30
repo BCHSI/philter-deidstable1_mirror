@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version='1.0' encoding='utf8'?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT>
 
 
 Record date: 2112-07-28
@@ -76,32 +76,21 @@ Record date: 2112-07-28
 
 
 
-***REMOVED******REMOVED***></TEXT>
+</TEXT>
 <TAGS>
-<DATE id="P0" start="16" end="26" text="2112-07-28" TYPE="DATE" comment="" />
-<NAME id="P1" start="102" end="117" text="Dawson, Quinten" TYPE="PATIENT" comment="" />
-<ID id="P2" start="126" end="133" text="4692758" TYPE="MEDICALRECORD" comment="" />
-<DATE id="P3" start="136" end="149" text="July 28, 2112" TYPE="DATE" comment="" />
-<AGE id="P4" start="195" end="197" text="71" TYPE="AGE" comment="" />
-<DATE id="P5" start="339" end="343" text="2087" TYPE="DATE" comment="" />
-<DATE id="P6" start="561" end="565" text="2111" TYPE="DATE" comment="" />
-<DATE id="P7" start="785" end="789" text="2112" TYPE="DATE" comment="" />
-<DATE id="P8" start="1229" end="1233" text="2111" TYPE="DATE" comment="" />
-<NAME id="P9" start="1507" end="1511" text="Barr" TYPE="DOCTOR" comment="" />
-<NAME id="P10" start="1636" end="1652" text="Dominique Stokes" TYPE="DOCTOR" comment="" />
-<DATE id="P11" start="1681" end="1685" text="2111" TYPE="DATE" comment="" />
-<LOCATION id="P12" start="2245" end="2268" text="Field Crest Care Center" TYPE="HOSPITAL" comment="" />
-<AGE id="P13" start="2351" end="2355" text="80's" TYPE="AGE" comment="" />
-<AGE id="P14" start="2408" end="2412" text="80's" TYPE="AGE" comment="" />
-<NAME id="P15" start="2774" end="2789" text="Dawson, Quinten" TYPE="PATIENT" comment="" />
-<ID id="P16" start="2798" end="2805" text="4692758" TYPE="MEDICALRECORD" comment="" />
-<DATE id="P17" start="2808" end="2821" text="July 28, 2112" TYPE="DATE" comment="" />
-<DATE id="P18" start="3180" end="3184" text="2108" TYPE="DATE" comment="" />
-<NAME id="P19" start="3189" end="3198" text="Wilkinson" TYPE="DOCTOR" comment="" />
-<DATE id="P20" start="3240" end="3245" text="12/12" TYPE="DATE" comment="" />
-<DATE id="P21" start="3261" end="3265" text="8/13" TYPE="DATE" comment="" />
-<NAME id="P22" start="3296" end="3311" text="Gerald Everhart" TYPE="DOCTOR" comment="" />
-<NAME id="P23" start="3340" end="3342" text="GE" TYPE="DOCTOR" comment="" />
-<NAME id="P24" start="3343" end="3350" text="tierney" TYPE="DOCTOR" comment="" />
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2112-07-28" />
+<NAME TYPE="PATIENT" comment="" end="117" id="P1" start="102" text="Dawson, Quinten" />
+<ID TYPE="MEDICALRECORD" comment="" end="133" id="P2" start="126" text="4692758" />
+<DATE TYPE="DATE" comment="" end="149" id="P3" start="136" text="July 28, 2112" />
+<NAME TYPE="DOCTOR" comment="" end="1511" id="P9" start="1507" text="Barr" />
+<NAME TYPE="DOCTOR" comment="" end="1652" id="P10" start="1636" text="Dominique Stokes" />
+<NAME TYPE="PATIENT" comment="" end="2789" id="P15" start="2774" text="Dawson, Quinten" />
+<ID TYPE="MEDICALRECORD" comment="" end="2805" id="P16" start="2798" text="4692758" />
+<DATE TYPE="DATE" comment="" end="2821" id="P17" start="2808" text="July 28, 2112" />
+<NAME TYPE="DOCTOR" comment="" end="3198" id="P19" start="3189" text="Wilkinson" />
+<DATE TYPE="DATE" comment="" end="3245" id="P20" start="3240" text="12/12" />
+<DATE TYPE="DATE" comment="" end="3265" id="P21" start="3261" text="8/13" />
+<NAME TYPE="DOCTOR" comment="" end="3311" id="P22" start="3296" text="Gerald Everhart" />
+<NAME TYPE="DOCTOR" comment="" end="3350" id="P24" start="3343" text="tierney" />
 </TAGS>
 </deIdi2b2>

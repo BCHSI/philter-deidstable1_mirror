@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version='1.0' encoding='utf8'?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT>
 
 
 Record date: 2134-01-05
@@ -74,15 +74,15 @@ Regular      8 Units                  Blood Sugar under 101
 
 
 
-&#183;         This is only an initial set of guidelines. The doses will have to be adjusted based on experience, diet, exercise, and illness.
+&amp;#183;         This is only an initial set of guidelines. The doses will have to be adjusted based on experience, diet, exercise, and illness.
 
-&#183;         Goal is to have blood sugars before meals in the 90-130 range and blood sugars at bedtime in the 110-140 range.
+&amp;#183;         Goal is to have blood sugars before meals in the 90-130 range and blood sugars at bedtime in the 110-140 range.
 
-&#183;         Check blood sugars initially before meals and at bedtime each day. Record the times, blood sugars, insulin doses and all food on the sheets provided and bring these sheets to your medical appointments.
+&amp;#183;         Check blood sugars initially before meals and at bedtime each day. Record the times, blood sugars, insulin doses and all food on the sheets provided and bring these sheets to your medical appointments.
 
-&#183;         Call Dr. Xenakis&#8217;s office for any blood sugars under 70, or any symptoms of hypoglycemia (low blood sugars).
+&amp;#183;         Call Dr. Xenakis&amp;#8217;s office for any blood sugars under 70, or any symptoms of hypoglycemia (low blood sugars).
 
-&#183;         Also call if blood sugars are often over 180.
+&amp;#183;         Also call if blood sugars are often over 180.
 
 
 
@@ -93,15 +93,15 @@ Regular      8 Units                  Blood Sugar under 101
 
 
 
-***REMOVED******REMOVED***></TEXT>
+</TEXT>
 <TAGS>
-<DATE id="P0" start="16" end="26" text="2134-01-05" TYPE="DATE" comment="" />
-<ID id="P1" start="134" end="143" text="698-77-76" TYPE="MEDICALRECORD" comment="" />
-<NAME id="P2" start="247" end="259" text="Mckee, Norma" TYPE="PATIENT" comment="" />
-<DATE id="P3" start="263" end="278" text="January 5, 2134" TYPE="DATE" comment="" />
-<NAME id="P4" start="326" end="331" text="Mckee" TYPE="PATIENT" comment="" />
-<NAME id="P5" start="745" end="759" text="Robert Xenakis" TYPE="DOCTOR" comment="" />
-<NAME id="P6" start="2132" end="2139" text="Xenakis" TYPE="DOCTOR" comment="" />
-<NAME id="P7" start="2389" end="2401" text="Elliot N. Xi" TYPE="DOCTOR" comment="" />
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2134-01-05" />
+<ID TYPE="MEDICALRECORD" comment="" end="143" id="P1" start="134" text="698-77-76" />
+<NAME TYPE="PATIENT" comment="" end="259" id="P2" start="247" text="Mckee, Norma" />
+<DATE TYPE="DATE" comment="" end="278" id="P3" start="263" text="January 5, 2134" />
+<NAME TYPE="PATIENT" comment="" end="331" id="P4" start="326" text="Mckee" />
+<NAME TYPE="DOCTOR" comment="" end="759" id="P5" start="745" text="Robert Xenakis" />
+<NAME TYPE="DOCTOR" comment="" end="2139" id="P6" start="2132" text="Xenakis" />
+<NAME TYPE="DOCTOR" comment="" end="2401" id="P7" start="2389" text="Elliot N. Xi" />
 </TAGS>
 </deIdi2b2>

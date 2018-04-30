@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version='1.0' encoding='utf8'?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT>
 
 
 Record date: 2088-02-18
@@ -145,25 +145,21 @@ RTC in 3 mos for f/u, sooner prn.
 
 
 
-***REMOVED******REMOVED***></TEXT>
+</TEXT>
 <TAGS>
-<DATE id="P0" start="16" end="26" text="2088-02-18" TYPE="DATE" comment="" />
-<NAME id="P1" start="52" end="57" text="Oshea" TYPE="PATIENT" comment="" />
-<LOCATION id="P2" start="499" end="511" text="RR Donnelley" TYPE="ORGANIZATION" comment="" />
-<NAME id="P3" start="663" end="668" text="Oshea" TYPE="PATIENT" comment="" />
-<NAME id="P4" start="833" end="843" text="Villagomez" TYPE="DOCTOR" comment="" />
-<PROFESSION id="P5" start="1088" end="1118" text="Senior Manager of Broadcasting" TYPE="PROFESSION" comment="" />
-<NAME id="P6" start="1674" end="1681" text="Landers" TYPE="DOCTOR" comment="" />
-<LOCATION id="P7" start="2517" end="2519" text="NY" TYPE="STATE" comment="" />
-<DATE id="P8" start="2523" end="2530" text="12/2084" TYPE="DATE" comment="" />
-<PROFESSION id="P9" start="2546" end="2576" text="Senior Manager of Broadcasting" TYPE="PROFESSION" comment="" />
-<AGE id="P10" start="2612" end="2614" text="39" TYPE="AGE" comment="" />
-<AGE id="P11" start="2653" end="2655" text="39" TYPE="AGE" comment="" />
-<AGE id="P12" start="3354" end="3356" text="75" TYPE="AGE" comment="" />
-<DATE id="P13" start="3604" end="3609" text="April" TYPE="DATE" comment="" />
-<NAME id="P14" start="3677" end="3687" text="Villagomez" TYPE="DOCTOR" comment="" />
-<LOCATION id="P15" start="3691" end="3699" text="MEDIQUIK" TYPE="HOSPITAL" comment="" />
-<DATE id="P16" start="3792" end="3797" text="April" TYPE="DATE" comment="" />
-<NAME id="P17" start="3907" end="3914" text="Landers" TYPE="DOCTOR" comment="" />
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2088-02-18" />
+<NAME TYPE="PATIENT" comment="" end="57" id="P1" start="52" text="Oshea" />
+<LOCATION TYPE="ORGANIZATION" comment="" end="511" id="P2" start="499" text="RR Donnelley" />
+<NAME TYPE="PATIENT" comment="" end="668" id="P3" start="663" text="Oshea" />
+<NAME TYPE="DOCTOR" comment="" end="843" id="P4" start="833" text="Villagomez" />
+<PROFESSION TYPE="PROFESSION" comment="" end="1118" id="P5" start="1088" text="Senior Manager of Broadcasting" />
+<NAME TYPE="DOCTOR" comment="" end="1681" id="P6" start="1674" text="Landers" />
+<LOCATION TYPE="STATE" comment="" end="2519" id="P7" start="2517" text="NY" />
+<DATE TYPE="DATE" comment="" end="2530" id="P8" start="2523" text="12/2084" />
+<PROFESSION TYPE="PROFESSION" comment="" end="2576" id="P9" start="2546" text="Senior Manager of Broadcasting" />
+<DATE TYPE="DATE" comment="" end="3609" id="P13" start="3604" text="April" />
+<NAME TYPE="DOCTOR" comment="" end="3687" id="P14" start="3677" text="Villagomez" />
+<DATE TYPE="DATE" comment="" end="3797" id="P16" start="3792" text="April" />
+<NAME TYPE="DOCTOR" comment="" end="3914" id="P17" start="3907" text="Landers" />
 </TAGS>
 </deIdi2b2>

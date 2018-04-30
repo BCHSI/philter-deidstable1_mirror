@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version='1.0' encoding='utf8'?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT>
 
 
 Record date: 2092-10-29
@@ -80,7 +80,7 @@ Allergies: NKDA
 
 SHx: lives with wife; walks around the mall daily
 
-Tobacco - quit >35 years ago
+Tobacco - quit &gt;35 years ago
 
 EtOH - 2 mixed drinks (vodka) per night; denies anything more
 
@@ -108,7 +108,7 @@ EXT: no axillary or inguinal LAD; no c/c/e
 
 MSK: significantly limited and painful ROM at both shoulders
 
-NEURO: A&O x 3; CN II-XII intact; otherwise non-focal
+NEURO: A&amp;O x 3; CN II-XII intact; otherwise non-focal
 
 
 
@@ -202,7 +202,7 @@ Superstat APTT           25.3                        (22.1-35.1)      sec
 
 
 
-UA-Specific Gravity      <1.005                      (1.001-1.035)
+UA-Specific Gravity      &lt;1.005                      (1.001-1.035)
 
 UA-pH                    5.0                         (5.0-9.0)
 
@@ -316,25 +316,20 @@ Pager 92915
 
 
 
-***REMOVED******REMOVED***></TEXT>
+</TEXT>
 <TAGS>
-<DATE id="P0" start="16" end="26" text="2092-10-29" TYPE="DATE" comment="" />
-<NAME id="P1" start="63" end="75" text="Walton, Levi" TYPE="PATIENT" comment="" />
-<ID id="P2" start="82" end="89" text="2554172" TYPE="MEDICALRECORD" comment="" />
-<DATE id="P3" start="97" end="105" text="10/29/92" TYPE="DATE" comment="" />
-<NAME id="P4" start="111" end="125" text="Paul Eggleston" TYPE="DOCTOR" comment="" />
-<NAME id="P5" start="139" end="146" text="Youmans" TYPE="DOCTOR" comment="" />
-<AGE id="P6" start="188" end="190" text="85" TYPE="AGE" comment="" />
-<DATE id="P7" start="227" end="231" text="6/87" TYPE="DATE" comment="" />
-<DATE id="P8" start="1906" end="1910" text="2082" TYPE="DATE" comment="" />
-<DATE id="P9" start="1978" end="1982" text="2082" TYPE="DATE" comment="" />
-<DATE id="P10" start="2058" end="2062" text="6/87" TYPE="DATE" comment="" />
-<DATE id="P11" start="2206" end="2210" text="3/87" TYPE="DATE" comment="" />
-<DATE id="P12" start="2293" end="2297" text="2087" TYPE="DATE" comment="" />
-<DATE id="P13" start="2429" end="2434" text="10/92" TYPE="DATE" comment="" />
-<DATE id="P14" start="2491" end="2496" text="10/92" TYPE="DATE" comment="" />
-<AGE id="P15" start="7749" end="7751" text="85" TYPE="AGE" comment="" />
-<NAME id="P16" start="9107" end="9116" text="John Kirk" TYPE="DOCTOR" comment="" />
-<CONTACT id="P17" start="9149" end="9154" text="92915" TYPE="PHONE" comment="" />
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2092-10-29" />
+<NAME TYPE="PATIENT" comment="" end="75" id="P1" start="63" text="Walton, Levi" />
+<ID TYPE="MEDICALRECORD" comment="" end="89" id="P2" start="82" text="2554172" />
+<DATE TYPE="DATE" comment="" end="105" id="P3" start="97" text="10/29/92" />
+<NAME TYPE="DOCTOR" comment="" end="125" id="P4" start="111" text="Paul Eggleston" />
+<NAME TYPE="DOCTOR" comment="" end="146" id="P5" start="139" text="Youmans" />
+<DATE TYPE="DATE" comment="" end="231" id="P7" start="227" text="6/87" />
+<DATE TYPE="DATE" comment="" end="2062" id="P10" start="2058" text="6/87" />
+<DATE TYPE="DATE" comment="" end="2210" id="P11" start="2206" text="3/87" />
+<DATE TYPE="DATE" comment="" end="2434" id="P13" start="2429" text="10/92" />
+<DATE TYPE="DATE" comment="" end="2496" id="P14" start="2491" text="10/92" />
+<NAME TYPE="DOCTOR" comment="" end="9116" id="P16" start="9107" text="John Kirk" />
+<CONTACT TYPE="PHONE" comment="" end="9154" id="P17" start="9149" text="92915" />
 </TAGS>
 </deIdi2b2>

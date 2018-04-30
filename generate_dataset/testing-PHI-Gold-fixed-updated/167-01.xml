@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version='1.0' encoding='utf8'?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT>
 
 
 Record date: 2078-10-13
@@ -40,22 +40,19 @@ Dictated by:  TRISTAN O. XAVIER, M.D.  TX12
 
 
 
-***REMOVED******REMOVED***></TEXT>
+</TEXT>
 <TAGS>
-<DATE id="P0" start="16" end="26" text="2078-10-13" TYPE="DATE" comment="" />
-<LOCATION id="P1" start="49" end="52" text="CDH" TYPE="HOSPITAL" comment="" />
-<NAME id="P2" start="76" end="91" text="YARBROUGH,IRENE" TYPE="PATIENT" comment="" />
-<ID id="P3" start="94" end="105" text="810-86-43-7" TYPE="MEDICALRECORD" comment="" />
-<DATE id="P4" start="141" end="149" text="10/13/78" TYPE="DATE" comment="" />
-<AGE id="P5" start="227" end="229" text="54" TYPE="AGE" comment="" />
-<NAME id="P6" start="258" end="265" text="Paulson" TYPE="DOCTOR" comment="" />
-<AGE id="P8" start="321" end="323" text="54" TYPE="AGE" comment="" />
-<ID id="P11" start="1655" end="1665" text="CQ774/2253" TYPE="IDNUM" comment="" />
-<NAME id="P12" start="1667" end="1684" text="TRISTAN O. XAVIER" TYPE="DOCTOR" comment="" />
-<NAME id="P13" start="1692" end="1696" text="TX12" TYPE="USERNAME" comment="" />
-<DATE id="P14" start="1727" end="1735" text="10/13/78" TYPE="DATE" comment="" />
-<DATE id="P15" start="1794" end="1802" text="10/13/78" TYPE="DATE" comment="" />
-<NAME id="P16" start="1818" end="1835" text="TRISTAN O. XAVIER" TYPE="DOCTOR" comment="" />
-<NAME id="P17" start="1843" end="1847" text="TX12" TYPE="USERNAME" comment="" />
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2078-10-13" />
+<NAME TYPE="PATIENT" comment="" end="91" id="P2" start="76" text="YARBROUGH,IRENE" />
+<ID TYPE="MEDICALRECORD" comment="" end="105" id="P3" start="94" text="810-86-43-7" />
+<DATE TYPE="DATE" comment="" end="149" id="P4" start="141" text="10/13/78" />
+<NAME TYPE="DOCTOR" comment="" end="265" id="P6" start="258" text="Paulson" />
+<ID TYPE="IDNUM" comment="" end="1665" id="P11" start="1655" text="CQ774/2253" />
+<NAME TYPE="DOCTOR" comment="" end="1684" id="P12" start="1667" text="TRISTAN O. XAVIER" />
+<NAME TYPE="USERNAME" comment="" end="1696" id="P13" start="1692" text="TX12" />
+<DATE TYPE="DATE" comment="" end="1735" id="P14" start="1727" text="10/13/78" />
+<DATE TYPE="DATE" comment="" end="1802" id="P15" start="1794" text="10/13/78" />
+<NAME TYPE="DOCTOR" comment="" end="1835" id="P16" start="1818" text="TRISTAN O. XAVIER" />
+<NAME TYPE="USERNAME" comment="" end="1847" id="P17" start="1843" text="TX12" />
 </TAGS>
 </deIdi2b2>

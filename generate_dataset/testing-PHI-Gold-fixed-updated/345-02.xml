@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version='1.0' encoding='utf8'?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT>
 
 
 Record date: 2079-09-01
@@ -148,37 +148,31 @@ Rheumatology fellow
 
 
 
-***REMOVED******REMOVED***></TEXT>
+</TEXT>
 <TAGS>
-<DATE id="P0" start="16" end="26" text="2079-09-01" TYPE="DATE" comment="" />
-<NAME id="P1" start="64" end="82" text="Mullins, Dolores U" TYPE="PATIENT" comment="" />
-<ID id="P2" start="88" end="96" text="72841920" TYPE="MEDICALRECORD" comment="" />
-<DATE id="P3" start="102" end="110" text="06/06/02" TYPE="DATE" comment="" />
-<DATE id="P5" start="144" end="152" text="09/01/79" TYPE="DATE" comment="" />
-<NAME id="P6" start="174" end="185" text="Gay Langley" TYPE="DOCTOR" comment="" />
-<AGE id="P7" start="314" end="316" text="77" TYPE="AGE" comment="" />
-<DATE id="P8" start="2147" end="2151" text="2060" TYPE="DATE" comment="" />
-<DATE id="P9" start="2239" end="2244" text="11/72" TYPE="DATE" comment="" />
-<DATE id="P10" start="2310" end="2314" text="7/78" TYPE="DATE" comment="" />
-<LOCATION id="P11" start="2359" end="2363" text="HHMR" TYPE="HOSPITAL" comment="" />
-<DATE id="P12" start="2373" end="2377" text="4/78" TYPE="DATE" comment="" />
-<DATE id="P13" start="2379" end="2383" text="1/79" TYPE="DATE" comment="" />
-<DATE id="P14" start="2397" end="2404" text="6/29/79" TYPE="DATE" comment="" />
-<AGE id="P15" start="2510" end="2512" text="25" TYPE="AGE" comment="" />
-<LOCATION id="P16" start="3409" end="3415" text="Alaska" TYPE="STATE" comment="" />
-<AGE id="P17" start="3515" end="3517" text="65" TYPE="AGE" comment="" />
-<DATE id="P18" start="5160" end="5167" text="8/31/79" TYPE="DATE" comment="" />
-<DATE id="P19" start="5453" end="5460" text="8/31/79" TYPE="DATE" comment="" />
-<DATE id="P20" start="5535" end="5542" text="8/31/79" TYPE="DATE" comment="" />
-<DATE id="P21" start="5699" end="5706" text="8/30/79" TYPE="DATE" comment="" />
-<DATE id="P22" start="5817" end="5824" text="8/29/79" TYPE="DATE" comment="" />
-<AGE id="P23" start="6163" end="6165" text="77" TYPE="AGE" comment="" />
-<NAME id="P24" start="7401" end="7404" text="Yau" TYPE="DOCTOR" comment="" />
-<NAME id="P25" start="7903" end="7906" text="Yau" TYPE="DOCTOR" comment="" />
-<NAME id="P26" start="7916" end="7923" text="Woodard" TYPE="DOCTOR" comment="" />
-<NAME id="P27" start="8169" end="8178" text="Isaac Ito" TYPE="DOCTOR" comment="" />
-<CONTACT id="P28" start="8185" end="8190" text="79975" TYPE="PHONE" comment="" />
-<NAME id="P29" start="8326" end="8333" text="Woodard" TYPE="DOCTOR" comment="" />
-<NAME id="P30" start="8362" end="8373" text="Unknown Yau" TYPE="DOCTOR" comment="" />
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2079-09-01" />
+<NAME TYPE="PATIENT" comment="" end="82" id="P1" start="64" text="Mullins, Dolores U" />
+<ID TYPE="MEDICALRECORD" comment="" end="96" id="P2" start="88" text="72841920" />
+<DATE TYPE="DATE" comment="" end="110" id="P3" start="102" text="06/06/02" />
+<DATE TYPE="DATE" comment="" end="152" id="P5" start="144" text="09/01/79" />
+<NAME TYPE="DOCTOR" comment="" end="185" id="P6" start="174" text="Gay Langley" />
+<DATE TYPE="DATE" comment="" end="2244" id="P9" start="2239" text="11/72" />
+<DATE TYPE="DATE" comment="" end="2314" id="P10" start="2310" text="7/78" />
+<DATE TYPE="DATE" comment="" end="2377" id="P12" start="2373" text="4/78" />
+<DATE TYPE="DATE" comment="" end="2383" id="P13" start="2379" text="1/79" />
+<DATE TYPE="DATE" comment="" end="2404" id="P14" start="2397" text="6/29/79" />
+<LOCATION TYPE="STATE" comment="" end="3415" id="P16" start="3409" text="Alaska" />
+<DATE TYPE="DATE" comment="" end="5167" id="P18" start="5160" text="8/31/79" />
+<DATE TYPE="DATE" comment="" end="5460" id="P19" start="5453" text="8/31/79" />
+<DATE TYPE="DATE" comment="" end="5542" id="P20" start="5535" text="8/31/79" />
+<DATE TYPE="DATE" comment="" end="5706" id="P21" start="5699" text="8/30/79" />
+<DATE TYPE="DATE" comment="" end="5824" id="P22" start="5817" text="8/29/79" />
+<NAME TYPE="DOCTOR" comment="" end="7404" id="P24" start="7401" text="Yau" />
+<NAME TYPE="DOCTOR" comment="" end="7906" id="P25" start="7903" text="Yau" />
+<NAME TYPE="DOCTOR" comment="" end="7923" id="P26" start="7916" text="Woodard" />
+<NAME TYPE="DOCTOR" comment="" end="8178" id="P27" start="8169" text="Isaac Ito" />
+<CONTACT TYPE="PHONE" comment="" end="8190" id="P28" start="8185" text="79975" />
+<NAME TYPE="DOCTOR" comment="" end="8333" id="P29" start="8326" text="Woodard" />
+<NAME TYPE="DOCTOR" comment="" end="8373" id="P30" start="8362" text="Unknown Yau" />
 </TAGS>
 </deIdi2b2>

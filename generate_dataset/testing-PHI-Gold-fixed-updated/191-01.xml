@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version='1.0' encoding='utf8'?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT>
 
 
 Record date: 2091-08-02
@@ -265,7 +265,7 @@ ASA Physical Status:  III
 
 
 
-66 y.o male with AAA scheduled for endovascular repair on 8/06/91.  His CRF include HTN, elevated cholesterol, smoking, male gender.  He denies S & S of cardiac ischemia, no h/o MI.  BP (systolic) elevated initially and pt. states it is usually runs 140 - 150.  To have epidural with sedation though pt. would prefer to be "just groggy" rather than asleep.
+66 y.o male with AAA scheduled for endovascular repair on 8/06/91.  His CRF include HTN, elevated cholesterol, smoking, male gender.  He denies S &amp; S of cardiac ischemia, no h/o MI.  BP (systolic) elevated initially and pt. states it is usually runs 140 - 150.  To have epidural with sedation though pt. would prefer to be "just groggy" rather than asleep.
 
 
 
@@ -349,20 +349,16 @@ Araujo, Ursula X,NP
 
 
 
-***REMOVED******REMOVED***></TEXT>
+</TEXT>
 <TAGS>
-<DATE id="P0" start="16" end="26" text="2091-08-02" TYPE="DATE" comment="" />
-<AGE id="P1" start="101" end="103" text="66" TYPE="AGE" comment="" />
-<DATE id="P2" start="174" end="189" text="August 06, 2091" TYPE="DATE" comment="" />
-<NAME id="P3" start="199" end="211" text="Carter Horne" TYPE="DOCTOR" comment="" />
-<DATE id="P4" start="765" end="771" text="1/2091" TYPE="DATE" comment="" />
-<LOCATION id="P5" start="781" end="811" text="Vanderbilt University Hospital" TYPE="HOSPITAL" comment="" />
-<DATE id="P6" start="882" end="886" text="2061" TYPE="DATE" comment="" />
-<DATE id="P7" start="1088" end="1095" text="7/29/91" TYPE="DATE" comment="" />
-<PROFESSION id="P8" start="1619" end="1628" text="Air Pilot" TYPE="PROFESSION" comment="" />
-<LOCATION id="P9" start="1633" end="1644" text="S3 Graphics" TYPE="ORGANIZATION" comment="" />
-<AGE id="P10" start="4312" end="4314" text="66" TYPE="AGE" comment="" />
-<DATE id="P11" start="4370" end="4377" text="8/06/91" TYPE="DATE" comment="" />
-<NAME id="P12" start="5525" end="5541" text="Araujo, Ursula X" TYPE="DOCTOR" comment="" />
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2091-08-02" />
+<DATE TYPE="DATE" comment="" end="189" id="P2" start="174" text="August 06, 2091" />
+<NAME TYPE="DOCTOR" comment="" end="211" id="P3" start="199" text="Carter Horne" />
+<DATE TYPE="DATE" comment="" end="771" id="P4" start="765" text="1/2091" />
+<DATE TYPE="DATE" comment="" end="1095" id="P7" start="1088" text="7/29/91" />
+<PROFESSION TYPE="PROFESSION" comment="" end="1628" id="P8" start="1619" text="Air Pilot" />
+<LOCATION TYPE="ORGANIZATION" comment="" end="1644" id="P9" start="1633" text="S3 Graphics" />
+<DATE TYPE="DATE" comment="" end="4377" id="P11" start="4370" text="8/06/91" />
+<NAME TYPE="DOCTOR" comment="" end="5541" id="P12" start="5525" text="Araujo, Ursula X" />
 </TAGS>
 </deIdi2b2>

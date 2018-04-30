@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version='1.0' encoding='utf8'?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT>
 
 
 Record date: 2088-05-21
@@ -65,21 +65,20 @@ UL:30614     :7550
 
 
 
-***REMOVED******REMOVED***></TEXT>
+</TEXT>
 <TAGS>
-<DATE id="P0" start="16" end="26" text="2088-05-21" TYPE="DATE" comment="" />
-<NAME id="P1" start="42" end="52" text="CURTIS, OM" TYPE="PATIENT" comment="" />
-<ID id="P2" start="60" end="67" text="7682941" TYPE="MEDICALRECORD" comment="" />
-<DATE id="P3" start="82" end="90" text="05/21/88" TYPE="DATE" comment="" />
-<NAME id="P4" start="94" end="109" text="VICTOR R. GOMES" TYPE="DOCTOR" comment="" />
-<NAME id="P5" start="124" end="130" text="Curtis" TYPE="PATIENT" comment="" />
-<NAME id="P6" start="571" end="577" text="Geiger" TYPE="DOCTOR" comment="" />
-<DATE id="P7" start="1698" end="1706" text="11/14/87" TYPE="DATE" comment="" />
-<NAME id="P8" start="2119" end="2134" text="Victor R. Gomes" TYPE="DOCTOR" comment="" />
-<NAME id="P9" start="2154" end="2168" text="William Geiger" TYPE="DOCTOR" comment="" />
-<LOCATION id="P10" start="2176" end="2209" text="Allina Medical Clinic At Hinckley" TYPE="HOSPITAL" comment="" />
-<DATE id="P12" start="2241" end="2249" text="05/21/88" TYPE="DATE" comment="" />
-<DATE id="P13" start="2255" end="2263" text="05/21/88" TYPE="DATE" comment="" />
-<ID id="P14" start="2266" end="2284" text="UL:30614     :7550" TYPE="IDNUM" comment="" />
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2088-05-21" />
+<NAME TYPE="PATIENT" comment="" end="52" id="P1" start="42" text="CURTIS, OM" />
+<ID TYPE="MEDICALRECORD" comment="" end="67" id="P2" start="60" text="7682941" />
+<DATE TYPE="DATE" comment="" end="90" id="P3" start="82" text="05/21/88" />
+<NAME TYPE="DOCTOR" comment="" end="109" id="P4" start="94" text="VICTOR R. GOMES" />
+<NAME TYPE="PATIENT" comment="" end="130" id="P5" start="124" text="Curtis" />
+<NAME TYPE="DOCTOR" comment="" end="577" id="P6" start="571" text="Geiger" />
+<DATE TYPE="DATE" comment="" end="1706" id="P7" start="1698" text="11/14/87" />
+<NAME TYPE="DOCTOR" comment="" end="2134" id="P8" start="2119" text="Victor R. Gomes" />
+<NAME TYPE="DOCTOR" comment="" end="2168" id="P9" start="2154" text="William Geiger" />
+<DATE TYPE="DATE" comment="" end="2249" id="P12" start="2241" text="05/21/88" />
+<DATE TYPE="DATE" comment="" end="2263" id="P13" start="2255" text="05/21/88" />
+<ID TYPE="IDNUM" comment="" end="2284" id="P14" start="2266" text="UL:30614     :7550" />
 </TAGS>
 </deIdi2b2>

@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version='1.0' encoding='utf8'?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT>
 
 
 Record date: 2096-11-18
@@ -64,27 +64,23 @@ Harry Bernard-Moyer, M.D.
 
 
 
-***REMOVED******REMOVED***></TEXT>
+</TEXT>
 <TAGS>
-<DATE id="P0" start="16" end="26" text="2096-11-18" TYPE="DATE" comment="" />
-<LOCATION id="P1" start="40" end="51" text="71 Dan Chan" TYPE="STREET" comment="" />
-<NAME id="P2" start="91" end="112" text="OSWALDO AUSTIN, HENRY" TYPE="PATIENT" comment="" />
-<LOCATION id="P3" start="113" end="124" text="Angels City" TYPE="CITY" comment="" />
-<LOCATION id="P4" start="126" end="128" text="NH" TYPE="STATE" comment="" />
-<LOCATION id="P5" start="129" end="134" text="31731" TYPE="ZIP" comment="" />
-<ID id="P6" start="172" end="180" text="64415974" TYPE="MEDICALRECORD" comment="" />
-<CONTACT id="P7" start="181" end="195" text="(729) 481-3539" TYPE="PHONE" comment="" />
-<DATE id="P8" start="238" end="246" text="11/18/96" TYPE="DATE" comment="" />
-<NAME id="P9" start="286" end="292" text="Austin" TYPE="PATIENT" comment="" />
-<AGE id="P10" start="298" end="300" text="78" TYPE="AGE" comment="" />
-<LOCATION id="P11" start="310" end="320" text="Ecuadorian" TYPE="COUNTRY" comment="" />
-<NAME id="P12" start="855" end="862" text="Oswaldo" TYPE="PATIENT" comment="" />
-<NAME id="P13" start="889" end="893" text="Jean" TYPE="DOCTOR" comment="" />
-<NAME id="P14" start="922" end="929" text="Oswaldo" TYPE="PATIENT" comment="" />
-<DATE id="P15" start="1001" end="1005" text="8/17" TYPE="DATE" comment="" />
-<DATE id="P16" start="1024" end="1028" text="2090" TYPE="DATE" comment="" />
-<AGE id="P17" start="2142" end="2144" text="78" TYPE="AGE" comment="" />
-<NAME id="P18" start="2468" end="2472" text="Jean" TYPE="DOCTOR" comment="" />
-<NAME id="P19" start="2673" end="2692" text="Harry Bernard-Moyer" TYPE="DOCTOR" comment="" />
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2096-11-18" />
+<LOCATION TYPE="STREET" comment="" end="51" id="P1" start="40" text="71 Dan Chan" />
+<NAME TYPE="PATIENT" comment="" end="112" id="P2" start="91" text="OSWALDO AUSTIN, HENRY" />
+<LOCATION TYPE="CITY" comment="" end="124" id="P3" start="113" text="Angels City" />
+<LOCATION TYPE="STATE" comment="" end="128" id="P4" start="126" text="NH" />
+<LOCATION TYPE="ZIP" comment="" end="134" id="P5" start="129" text="31731" />
+<ID TYPE="MEDICALRECORD" comment="" end="180" id="P6" start="172" text="64415974" />
+<CONTACT TYPE="PHONE" comment="" end="195" id="P7" start="181" text="(729) 481-3539" />
+<DATE TYPE="DATE" comment="" end="246" id="P8" start="238" text="11/18/96" />
+<NAME TYPE="PATIENT" comment="" end="292" id="P9" start="286" text="Austin" />
+<NAME TYPE="PATIENT" comment="" end="862" id="P12" start="855" text="Oswaldo" />
+<NAME TYPE="DOCTOR" comment="" end="893" id="P13" start="889" text="Jean" />
+<NAME TYPE="PATIENT" comment="" end="929" id="P14" start="922" text="Oswaldo" />
+<DATE TYPE="DATE" comment="" end="1005" id="P15" start="1001" text="8/17" />
+<NAME TYPE="DOCTOR" comment="" end="2472" id="P18" start="2468" text="Jean" />
+<NAME TYPE="DOCTOR" comment="" end="2692" id="P19" start="2673" text="Harry Bernard-Moyer" />
 </TAGS>
 </deIdi2b2>

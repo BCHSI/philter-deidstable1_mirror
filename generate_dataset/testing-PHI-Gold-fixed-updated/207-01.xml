@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version='1.0' encoding='utf8'?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT>
 
 
 Record date: 2073-08-02
@@ -127,45 +127,31 @@ DV:8-02-73
 
 
 
-***REMOVED******REMOVED***></TEXT>
+</TEXT>
 <TAGS>
-<DATE id="P0" start="16" end="26" text="2073-08-02" TYPE="DATE" comment="" />
-<LOCATION id="P1" start="28" end="38" text="MAMARONECK" TYPE="HOSPITAL" comment="" />
-<NAME id="P2" start="77" end="87" text="Orta, Phil" TYPE="PATIENT" comment="" />
-<ID id="P3" start="134" end="142" text="55931516" TYPE="MEDICALRECORD" comment="" />
-<DATE id="P4" start="189" end="196" text="8-02-73" TYPE="DATE" comment="" />
-<NAME id="P5" start="303" end="307" text="Orta" TYPE="PATIENT" comment="" />
-<AGE id="P6" start="313" end="315" text="50" TYPE="AGE" comment="" />
-<LOCATION id="P7" start="395" end="398" text="LBH" TYPE="HOSPITAL" comment="" />
-<LOCATION id="P8" start="402" end="411" text="Edgefield" TYPE="CITY" comment="" />
-<LOCATION id="P9" start="429" end="432" text="MHC" TYPE="HOSPITAL" comment="" />
-<LOCATION id="P10" start="461" end="464" text="LBH" TYPE="HOSPITAL" comment="" />
-<NAME id="P11" start="483" end="489" text="Jaeger" TYPE="DOCTOR" comment="" />
-<CONTACT id="P12" start="515" end="523" text="872-9985" TYPE="PHONE" comment="" />
-<LOCATION id="P13" start="622" end="625" text="LBH" TYPE="HOSPITAL" comment="" />
-<DATE id="P14" start="770" end="774" text="2063" TYPE="DATE" comment="" />
-<NAME id="P15" start="1172" end="1189" text="Guadalupe Thacker" TYPE="DOCTOR" comment="" />
-<LOCATION id="P16" start="1193" end="1196" text="LBH" TYPE="HOSPITAL" comment="" />
-<PROFESSION id="P17" start="1535" end="1548" text="social worker" TYPE="PROFESSION" comment="" />
-<PROFESSION id="P18" start="1599" end="1627" text="community services managment" TYPE="PROFESSION" comment="" />
-<NAME id="P19" start="2566" end="2570" text="Orta" TYPE="PATIENT" comment="" />
-<LOCATION id="P20" start="2961" end="2964" text="MHC" TYPE="HOSPITAL" comment="" />
-<NAME id="P21" start="3003" end="3013" text="Orta, Phil" TYPE="PATIENT" comment="" />
-<ID id="P22" start="3060" end="3068" text="55931516" TYPE="MEDICALRECORD" comment="" />
-<DATE id="P23" start="3115" end="3122" text="8-02-73" TYPE="DATE" comment="" />
-<LOCATION id="P24" start="5517" end="5520" text="MHC" TYPE="HOSPITAL" comment="" />
-<NAME id="P25" start="5559" end="5569" text="Orta, Phil" TYPE="PATIENT" comment="" />
-<ID id="P26" start="5616" end="5624" text="55931516" TYPE="MEDICALRECORD" comment="" />
-<DATE id="P27" start="5671" end="5678" text="8-02-73" TYPE="DATE" comment="" />
-<LOCATION id="P28" start="5821" end="5845" text="Mamaroneck Health Center" TYPE="HOSPITAL" comment="" />
-<LOCATION id="P29" start="5883" end="5886" text="LBH" TYPE="HOSPITAL" comment="" />
-<CONTACT id="P30" start="5950" end="5958" text="534-3442" TYPE="PHONE" comment="" />
-<NAME id="P31" start="5999" end="6010" text="Oscar Allen" TYPE="DOCTOR" comment="" />
-<NAME id="P32" start="6020" end="6022" text="LF" TYPE="DOCTOR" comment="" />
-<NAME id="P33" start="6023" end="6025" text="XS" TYPE="DOCTOR" comment="" />
-<ID id="P34" start="6026" end="6030" text="4181" TYPE="IDNUM" comment="" />
-<DATE id="P35" start="6034" end="6041" text="8-06-73" TYPE="DATE" comment="" />
-<DATE id="P36" start="6046" end="6053" text="8-07-73" TYPE="DATE" comment="" />
-<DATE id="P37" start="6058" end="6065" text="8-02-73" TYPE="DATE" comment="" />
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2073-08-02" />
+<NAME TYPE="PATIENT" comment="" end="87" id="P2" start="77" text="Orta, Phil" />
+<ID TYPE="MEDICALRECORD" comment="" end="142" id="P3" start="134" text="55931516" />
+<DATE TYPE="DATE" comment="" end="196" id="P4" start="189" text="8-02-73" />
+<NAME TYPE="PATIENT" comment="" end="307" id="P5" start="303" text="Orta" />
+<LOCATION TYPE="CITY" comment="" end="411" id="P8" start="402" text="Edgefield" />
+<NAME TYPE="DOCTOR" comment="" end="489" id="P11" start="483" text="Jaeger" />
+<CONTACT TYPE="PHONE" comment="" end="523" id="P12" start="515" text="872-9985" />
+<NAME TYPE="DOCTOR" comment="" end="1189" id="P15" start="1172" text="Guadalupe Thacker" />
+<PROFESSION TYPE="PROFESSION" comment="" end="1548" id="P17" start="1535" text="social worker" />
+<PROFESSION TYPE="PROFESSION" comment="" end="1627" id="P18" start="1599" text="community services managment" />
+<NAME TYPE="PATIENT" comment="" end="2570" id="P19" start="2566" text="Orta" />
+<NAME TYPE="PATIENT" comment="" end="3013" id="P21" start="3003" text="Orta, Phil" />
+<ID TYPE="MEDICALRECORD" comment="" end="3068" id="P22" start="3060" text="55931516" />
+<DATE TYPE="DATE" comment="" end="3122" id="P23" start="3115" text="8-02-73" />
+<NAME TYPE="PATIENT" comment="" end="5569" id="P25" start="5559" text="Orta, Phil" />
+<ID TYPE="MEDICALRECORD" comment="" end="5624" id="P26" start="5616" text="55931516" />
+<DATE TYPE="DATE" comment="" end="5678" id="P27" start="5671" text="8-02-73" />
+<CONTACT TYPE="PHONE" comment="" end="5958" id="P30" start="5950" text="534-3442" />
+<NAME TYPE="DOCTOR" comment="" end="6010" id="P31" start="5999" text="Oscar Allen" />
+<ID TYPE="IDNUM" comment="" end="6030" id="P34" start="6026" text="4181" />
+<DATE TYPE="DATE" comment="" end="6041" id="P35" start="6034" text="8-06-73" />
+<DATE TYPE="DATE" comment="" end="6053" id="P36" start="6046" text="8-07-73" />
+<DATE TYPE="DATE" comment="" end="6065" id="P37" start="6058" text="8-02-73" />
 </TAGS>
 </deIdi2b2>

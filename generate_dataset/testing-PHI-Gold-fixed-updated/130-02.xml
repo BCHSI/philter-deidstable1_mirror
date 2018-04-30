@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version='1.0' encoding='utf8'?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT>
 
 
 Record date: 2084-12-27
@@ -239,7 +239,7 @@ Assessment/Plan: 73yo female with ESRD presents with SB/ cough and RML pna on CX
 
 1)	PNA: levo 250 qod; RML lobe on CXR. Check sputum/blood Cx. Rapid flu neg; on precautions until final.
 
-2)	ESRD: Renal aware; HD in am 12/27; CA-phos product<50; cont phoslo.
+2)	ESRD: Renal aware; HD in am 12/27; CA-phos product&lt;50; cont phoslo.
 
 3)	CV:
 
@@ -271,40 +271,35 @@ Elinor Keenan #10985
 
 
 
-***REMOVED******REMOVED***></TEXT>
+</TEXT>
 <TAGS>
-<DATE id="P0" start="16" end="26" text="2084-12-27" TYPE="DATE" comment="" />
-<NAME id="P2" start="98" end="106" text="Mae Paul" TYPE="PATIENT" comment="" />
-<ID id="P3" start="117" end="124" text="1005708" TYPE="MEDICALRECORD" comment="" />
-<DATE id="P4" start="145" end="155" text="12/27/2084" TYPE="DATE" comment="" />
-<NAME id="P5" start="179" end="183" text="John" TYPE="DOCTOR" comment="" />
-<AGE id="P6" start="236" end="238" text="73" TYPE="AGE" comment="" />
-<AGE id="P7" start="475" end="476" text="4" TYPE="AGE" comment="" />
-<PROFESSION id="P8" start="524" end="531" text="surgeon" TYPE="PROFESSION" comment="" />
-<DATE id="P9" start="638" end="648" text="12/26/2084" TYPE="DATE" comment="" />
-<DATE id="P10" start="661" end="666" text="12/22" TYPE="DATE" comment="" />
-<DATE id="P11" start="678" end="683" text="12/25" TYPE="DATE" comment="" />
-<DATE id="P12" start="1239" end="1243" text="2078" TYPE="DATE" comment="" />
-<DATE id="P13" start="1248" end="1252" text="2075" TYPE="DATE" comment="" />
-<DATE id="P14" start="1380" end="1384" text="9/83" TYPE="DATE" comment="" />
-<NAME id="P15" start="1390" end="1398" text="Xayasane" TYPE="DOCTOR" comment="" />
-<DATE id="P16" start="1705" end="1709" text="4/82" TYPE="DATE" comment="" />
-<NAME id="P17" start="1768" end="1774" text="Sutton" TYPE="DOCTOR" comment="" />
-<DATE id="P18" start="1813" end="1817" text="8/81" TYPE="DATE" comment="" />
-<PROFESSION id="P19" start="2090" end="2103" text="Mathematician" TYPE="PROFESSION" comment="" />
-<LOCATION id="P20" start="2107" end="2113" text="Vassar" TYPE="ORGANIZATION" comment="" />
-<PROFESSION id="P21" start="2166" end="2173" text="surgeon" TYPE="PROFESSION" comment="" />
-<DATE id="P22" start="2704" end="2712" text="12/27/84" TYPE="DATE" comment="" />
-<DATE id="P23" start="2715" end="2723" text="12/26/84" TYPE="DATE" comment="" />
-<DATE id="P24" start="3211" end="3219" text="12/26/84" TYPE="DATE" comment="" />
-<DATE id="P25" start="3884" end="3892" text="12/26/84" TYPE="DATE" comment="" />
-<DATE id="P26" start="4222" end="4230" text="12/26/84" TYPE="DATE" comment="" />
-<DATE id="P27" start="4477" end="4485" text="12/26/84" TYPE="DATE" comment="" />
-<DATE id="P28" start="4952" end="4962" text="12/26/2084" TYPE="DATE" comment="" />
-<DATE id="P29" start="4976" end="4983" text="6/15/84" TYPE="DATE" comment="" />
-<AGE id="P30" start="5461" end="5463" text="73" TYPE="AGE" comment="" />
-<DATE id="P31" start="5665" end="5670" text="12/27" TYPE="DATE" comment="" />
-<NAME id="P32" start="5950" end="5963" text="Elinor Keenan" TYPE="DOCTOR" comment="" />
-<CONTACT id="P33" start="5965" end="5970" text="10985" TYPE="PHONE" comment="" />
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2084-12-27" />
+<NAME TYPE="PATIENT" comment="" end="106" id="P2" start="98" text="Mae Paul" />
+<ID TYPE="MEDICALRECORD" comment="" end="124" id="P3" start="117" text="1005708" />
+<DATE TYPE="DATE" comment="" end="155" id="P4" start="145" text="12/27/2084" />
+<NAME TYPE="DOCTOR" comment="" end="183" id="P5" start="179" text="John" />
+<PROFESSION TYPE="PROFESSION" comment="" end="531" id="P8" start="524" text="surgeon" />
+<DATE TYPE="DATE" comment="" end="648" id="P9" start="638" text="12/26/2084" />
+<DATE TYPE="DATE" comment="" end="666" id="P10" start="661" text="12/22" />
+<DATE TYPE="DATE" comment="" end="683" id="P11" start="678" text="12/25" />
+<DATE TYPE="DATE" comment="" end="1384" id="P14" start="1380" text="9/83" />
+<NAME TYPE="DOCTOR" comment="" end="1398" id="P15" start="1390" text="Xayasane" />
+<DATE TYPE="DATE" comment="" end="1709" id="P16" start="1705" text="4/82" />
+<NAME TYPE="DOCTOR" comment="" end="1774" id="P17" start="1768" text="Sutton" />
+<DATE TYPE="DATE" comment="" end="1817" id="P18" start="1813" text="8/81" />
+<PROFESSION TYPE="PROFESSION" comment="" end="2103" id="P19" start="2090" text="Mathematician" />
+<LOCATION TYPE="ORGANIZATION" comment="" end="2113" id="P20" start="2107" text="Vassar" />
+<PROFESSION TYPE="PROFESSION" comment="" end="2173" id="P21" start="2166" text="surgeon" />
+<DATE TYPE="DATE" comment="" end="2712" id="P22" start="2704" text="12/27/84" />
+<DATE TYPE="DATE" comment="" end="2723" id="P23" start="2715" text="12/26/84" />
+<DATE TYPE="DATE" comment="" end="3219" id="P24" start="3211" text="12/26/84" />
+<DATE TYPE="DATE" comment="" end="3892" id="P25" start="3884" text="12/26/84" />
+<DATE TYPE="DATE" comment="" end="4230" id="P26" start="4222" text="12/26/84" />
+<DATE TYPE="DATE" comment="" end="4485" id="P27" start="4477" text="12/26/84" />
+<DATE TYPE="DATE" comment="" end="4962" id="P28" start="4952" text="12/26/2084" />
+<DATE TYPE="DATE" comment="" end="4983" id="P29" start="4976" text="6/15/84" />
+<DATE TYPE="DATE" comment="" end="5670" id="P31" start="5665" text="12/27" />
+<NAME TYPE="DOCTOR" comment="" end="5963" id="P32" start="5950" text="Elinor Keenan" />
+<CONTACT TYPE="PHONE" comment="" end="5970" id="P33" start="5965" text="10985" />
 </TAGS>
 </deIdi2b2>

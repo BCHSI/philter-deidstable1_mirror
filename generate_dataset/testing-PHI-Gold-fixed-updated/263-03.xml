@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version='1.0' encoding='utf8'?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT>
 
 
 Record date: 2080-08-08
@@ -85,18 +85,17 @@ eScription document:5-0405500 BFFocus
 
 
 
-***REMOVED******REMOVED***></TEXT>
+</TEXT>
 <TAGS>
-<DATE id="P0" start="16" end="26" text="2080-08-08" TYPE="DATE" comment="" />
-<ID id="P1" start="36" end="44" text="35093053" TYPE="MEDICALRECORD" comment="" />
-<NAME id="P2" start="45" end="57" text="Dodd, Steven" TYPE="PATIENT" comment="" />
-<DATE id="P3" start="58" end="66" text="08/08/80" TYPE="DATE" comment="" />
-<NAME id="P4" start="67" end="89" text="DURHAM, DENA CHRISTENA" TYPE="DOCTOR" comment="" />
-<AGE id="P5" start="332" end="334" text="65" TYPE="AGE" comment="" />
-<NAME id="P6" start="1804" end="1826" text="DURHAM, DENA CHRISTENA" TYPE="DOCTOR" comment="" />
-<DATE id="P7" start="1836" end="1844" text="08/08/80" TYPE="DATE" comment="" />
-<DATE id="P8" start="1849" end="1857" text="08/08/80" TYPE="DATE" comment="" />
-<NAME id="P9" start="1872" end="1894" text="DURHAM, DENA CHRISTENA" TYPE="DOCTOR" comment="" />
-<ID id="P10" start="1916" end="1925" text="5-0405500" TYPE="IDNUM" comment="" />
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2080-08-08" />
+<ID TYPE="MEDICALRECORD" comment="" end="44" id="P1" start="36" text="35093053" />
+<NAME TYPE="PATIENT" comment="" end="57" id="P2" start="45" text="Dodd, Steven" />
+<DATE TYPE="DATE" comment="" end="66" id="P3" start="58" text="08/08/80" />
+<NAME TYPE="DOCTOR" comment="" end="89" id="P4" start="67" text="DURHAM, DENA CHRISTENA" />
+<NAME TYPE="DOCTOR" comment="" end="1826" id="P6" start="1804" text="DURHAM, DENA CHRISTENA" />
+<DATE TYPE="DATE" comment="" end="1844" id="P7" start="1836" text="08/08/80" />
+<DATE TYPE="DATE" comment="" end="1857" id="P8" start="1849" text="08/08/80" />
+<NAME TYPE="DOCTOR" comment="" end="1894" id="P9" start="1872" text="DURHAM, DENA CHRISTENA" />
+<ID TYPE="IDNUM" comment="" end="1925" id="P10" start="1916" text="5-0405500" />
 </TAGS>
 </deIdi2b2>

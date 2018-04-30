@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version='1.0' encoding='utf8'?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT>
 
 
 Record date: 2089-08-24
@@ -75,15 +75,14 @@ WVG/xin/quilici
 
 
 
-***REMOVED******REMOVED***></TEXT>
+</TEXT>
 <TAGS>
-<DATE id="P0" start="16" end="26" text="2089-08-24" TYPE="DATE" comment="" />
-<NAME id="P1" start="42" end="52" text="Curtis, Om" TYPE="PATIENT" comment="" />
-<ID id="P2" start="64" end="71" text="7682941" TYPE="MEDICALRECORD" comment="" />
-<NAME id="P3" start="1115" end="1120" text="Gomes" TYPE="DOCTOR" comment="" />
-<NAME id="P4" start="1287" end="1304" text="William V. Geiger" TYPE="DOCTOR" comment="" />
-<NAME id="P5" start="1314" end="1317" text="WVG" TYPE="DOCTOR" comment="" />
-<NAME id="P6" start="1318" end="1321" text="xin" TYPE="DOCTOR" comment="" />
-<NAME id="P7" start="1322" end="1329" text="quilici" TYPE="DOCTOR" comment="" />
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2089-08-24" />
+<NAME TYPE="PATIENT" comment="" end="52" id="P1" start="42" text="Curtis, Om" />
+<ID TYPE="MEDICALRECORD" comment="" end="71" id="P2" start="64" text="7682941" />
+<NAME TYPE="DOCTOR" comment="" end="1120" id="P3" start="1115" text="Gomes" />
+<NAME TYPE="DOCTOR" comment="" end="1304" id="P4" start="1287" text="William V. Geiger" />
+<NAME TYPE="DOCTOR" comment="" end="1321" id="P6" start="1318" text="xin" />
+<NAME TYPE="DOCTOR" comment="" end="1329" id="P7" start="1322" text="quilici" />
 </TAGS>
 </deIdi2b2>

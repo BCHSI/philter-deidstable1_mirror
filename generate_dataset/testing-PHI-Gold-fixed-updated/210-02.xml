@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version='1.0' encoding='utf8'?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT>
 
 
 Record date: 2069-11-25
@@ -29,10 +29,10 @@ Follow-up with PCP as planned.
 
 
 
-***REMOVED******REMOVED***></TEXT>
+</TEXT>
 <TAGS>
-<DATE id="P0" start="16" end="26" text="2069-11-25" TYPE="DATE" comment="" />
-<NAME id="P1" start="32" end="40" text="Gallegos" TYPE="PATIENT" comment="" />
-<DATE id="P2" start="145" end="150" text="11/18" TYPE="DATE" comment="" />
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2069-11-25" />
+<NAME TYPE="PATIENT" comment="" end="40" id="P1" start="32" text="Gallegos" />
+<DATE TYPE="DATE" comment="" end="150" id="P2" start="145" text="11/18" />
 </TAGS>
 </deIdi2b2>

@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version='1.0' encoding='utf8'?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT>
 
 
 Record date: 2077-09-20
@@ -54,17 +54,17 @@ Vernon Ramses Cruz, M.D.
 
 
 
-***REMOVED******REMOVED***></TEXT>
+</TEXT>
 <TAGS>
-<DATE id="P0" start="16" end="26" text="2077-09-20" TYPE="DATE" comment="" />
-<NAME id="P1" start="35" end="46" text="UMALI, DANA" TYPE="PATIENT" comment="" />
-<ID id="P2" start="48" end="56" text="12423229" TYPE="MEDICALRECORD" comment="" />
-<DATE id="P3" start="58" end="68" text="09/20/2077" TYPE="DATE" comment="" />
-<NAME id="P4" start="106" end="111" text="Umali" TYPE="PATIENT" comment="" />
-<NAME id="P5" start="346" end="352" text="Holden" TYPE="DOCTOR" comment="" />
-<DATE id="P6" start="476" end="484" text="09/14/77" TYPE="DATE" comment="" />
-<NAME id="P7" start="731" end="737" text="Holden" TYPE="DOCTOR" comment="" />
-<NAME id="P8" start="1004" end="1010" text="Holden" TYPE="DOCTOR" comment="" />
-<NAME id="P9" start="1048" end="1066" text="Vernon Ramses Cruz" TYPE="DOCTOR" comment="" />
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2077-09-20" />
+<NAME TYPE="PATIENT" comment="" end="46" id="P1" start="35" text="UMALI, DANA" />
+<ID TYPE="MEDICALRECORD" comment="" end="56" id="P2" start="48" text="12423229" />
+<DATE TYPE="DATE" comment="" end="68" id="P3" start="58" text="09/20/2077" />
+<NAME TYPE="PATIENT" comment="" end="111" id="P4" start="106" text="Umali" />
+<NAME TYPE="DOCTOR" comment="" end="352" id="P5" start="346" text="Holden" />
+<DATE TYPE="DATE" comment="" end="484" id="P6" start="476" text="09/14/77" />
+<NAME TYPE="DOCTOR" comment="" end="737" id="P7" start="731" text="Holden" />
+<NAME TYPE="DOCTOR" comment="" end="1010" id="P8" start="1004" text="Holden" />
+<NAME TYPE="DOCTOR" comment="" end="1066" id="P9" start="1048" text="Vernon Ramses Cruz" />
 </TAGS>
 </deIdi2b2>

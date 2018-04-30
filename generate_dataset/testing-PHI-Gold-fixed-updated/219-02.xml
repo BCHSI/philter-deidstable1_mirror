@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version='1.0' encoding='utf8'?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT>
 
 
 Record date: 2073-09-28
@@ -27,7 +27,7 @@ O/E Looks well. BLOOD PRESSURE   120/70  wt 218 HR 68 reg
 
 A/P 1) BP - good control
 
-    2) low HDL - much time spent discussing lifestyle treatment. Has increased exercise to walking but wght unchanged > will increase exercise
+    2) low HDL - much time spent discussing lifestyle treatment. Has increased exercise to walking but wght unchanged &gt; will increase exercise
 
     3) ED - no change
 
@@ -45,9 +45,8 @@ A/P 1) BP - good control
 
 
 
-***REMOVED******REMOVED***></TEXT>
+</TEXT>
 <TAGS>
-<DATE id="P0" start="16" end="26" text="2073-09-28" TYPE="DATE" comment="" />
-<AGE id="P1" start="28" end="30" text="59" TYPE="AGE" comment="" />
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2073-09-28" />
 </TAGS>
 </deIdi2b2>

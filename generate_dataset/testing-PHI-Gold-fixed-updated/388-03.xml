@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version='1.0' encoding='utf8'?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT>
 
 
 Record date: 2073-05-29
@@ -99,35 +99,30 @@ DV: 05/29/73
 
 
 
-***REMOVED******REMOVED***></TEXT>
+</TEXT>
 <TAGS>
-<DATE id="P0" start="16" end="26" text="2073-05-29" TYPE="DATE" comment="" />
-<LOCATION id="P2" start="47" end="57" text="97 Weld St" TYPE="STREET" comment="" />
-<NAME id="P3" start="97" end="110" text="Xian, Imogene" TYPE="PATIENT" comment="" />
-<LOCATION id="P4" start="111" end="120" text="Grandview" TYPE="CITY" comment="" />
-<LOCATION id="P5" start="122" end="124" text="NE" TYPE="STATE" comment="" />
-<LOCATION id="P6" start="125" end="130" text="13472" TYPE="ZIP" comment="" />
-<ID id="P7" start="168" end="176" text="81376761" TYPE="MEDICALRECORD" comment="" />
-<CONTACT id="P8" start="177" end="191" text="(552) 598-5590" TYPE="PHONE" comment="" />
-<DATE id="P9" start="234" end="242" text="05/29/73" TYPE="DATE" comment="" />
-<NAME id="P10" start="278" end="282" text="Xian" TYPE="PATIENT" comment="" />
-<AGE id="P11" start="286" end="288" text="75" TYPE="AGE" comment="" />
-<DATE id="P12" start="532" end="538" text="August" TYPE="DATE" comment="" />
-<NAME id="P13" start="574" end="578" text="Vann" TYPE="DOCTOR" comment="" />
-<DATE id="P14" start="612" end="615" text="May" TYPE="DATE" comment="" />
-<NAME id="P15" start="777" end="783" text="Vann's" TYPE="DOCTOR" comment="" />
-<DATE id="P16" start="792" end="804" text="Apr29, 2073" TYPE="DATE" comment="" />
-<DATE id="P17" start="932" end="936" text="2072" TYPE="DATE" comment="" />
-<DATE id="P18" start="1186" end="1198" text="Apr 29, 2073" TYPE="DATE" comment="" />
-<DATE id="P19" start="1903" end="1917" text="September 2071" TYPE="DATE" comment="" />
-<DATE id="P20" start="2163" end="2169" text="August" TYPE="DATE" comment="" />
-<LOCATION id="P21" start="2215" end="2220" text="Ghana" TYPE="COUNTRY" comment="" />
-<AGE id="P22" start="2701" end="2703" text="76" TYPE="AGE" comment="" />
-<LOCATION id="P23" start="3634" end="3639" text="Ghana" TYPE="COUNTRY" comment="" />
-<NAME id="P24" start="3849" end="3869" text="Kevin Shamar-Trevino" TYPE="DOCTOR" comment="" />
-<ID id="P25" start="3898" end="3906" text="0-389401" TYPE="IDNUM" comment="" />
-<DATE id="P26" start="3920" end="3928" text="05/29/73" TYPE="DATE" comment="" />
-<DATE id="P27" start="3933" end="3941" text="05/30/73" TYPE="DATE" comment="" />
-<DATE id="P28" start="3946" end="3954" text="05/29/73" TYPE="DATE" comment="" />
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2073-05-29" />
+<LOCATION TYPE="STREET" comment="" end="57" id="P2" start="47" text="97 Weld St" />
+<NAME TYPE="PATIENT" comment="" end="110" id="P3" start="97" text="Xian, Imogene" />
+<LOCATION TYPE="CITY" comment="" end="120" id="P4" start="111" text="Grandview" />
+<LOCATION TYPE="STATE" comment="" end="124" id="P5" start="122" text="NE" />
+<LOCATION TYPE="ZIP" comment="" end="130" id="P6" start="125" text="13472" />
+<ID TYPE="MEDICALRECORD" comment="" end="176" id="P7" start="168" text="81376761" />
+<CONTACT TYPE="PHONE" comment="" end="191" id="P8" start="177" text="(552) 598-5590" />
+<DATE TYPE="DATE" comment="" end="242" id="P9" start="234" text="05/29/73" />
+<NAME TYPE="PATIENT" comment="" end="282" id="P10" start="278" text="Xian" />
+<DATE TYPE="DATE" comment="" end="538" id="P12" start="532" text="August" />
+<NAME TYPE="DOCTOR" comment="" end="578" id="P13" start="574" text="Vann" />
+<DATE TYPE="DATE" comment="" end="615" id="P14" start="612" text="May" />
+<NAME TYPE="DOCTOR" comment="" end="783" id="P15" start="777" text="Vann's" />
+<DATE TYPE="DATE" comment="" end="804" id="P16" start="792" text="Apr29, 2073" />
+<DATE TYPE="DATE" comment="" end="1198" id="P18" start="1186" text="Apr 29, 2073" />
+<DATE TYPE="DATE" comment="" end="1917" id="P19" start="1903" text="September 2071" />
+<DATE TYPE="DATE" comment="" end="2169" id="P20" start="2163" text="August" />
+<NAME TYPE="DOCTOR" comment="" end="3869" id="P24" start="3849" text="Kevin Shamar-Trevino" />
+<ID TYPE="IDNUM" comment="" end="3906" id="P25" start="3898" text="0-389401" />
+<DATE TYPE="DATE" comment="" end="3928" id="P26" start="3920" text="05/29/73" />
+<DATE TYPE="DATE" comment="" end="3941" id="P27" start="3933" text="05/30/73" />
+<DATE TYPE="DATE" comment="" end="3954" id="P28" start="3946" text="05/29/73" />
 </TAGS>
 </deIdi2b2>

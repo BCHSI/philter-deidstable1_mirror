@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version='1.0' encoding='utf8'?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT>
 
 
 Record date: 2086-12-08
@@ -54,23 +54,21 @@ DV: 12/08/86
 
 
 
-***REMOVED******REMOVED***></TEXT>
+</TEXT>
 <TAGS>
-<DATE id="P0" start="16" end="26" text="2086-12-08" TYPE="DATE" comment="" />
-<LOCATION id="P1" start="29" end="41" text="Silver Ridge" TYPE="HOSPITAL" comment="" />
-<LOCATION id="P3" start="60" end="73" text="3 Eaton Place" TYPE="STREET" comment="" />
-<NAME id="P4" start="111" end="123" text="OROZCO, KYLE" TYPE="PATIENT" comment="" />
-<LOCATION id="P5" start="124" end="133" text="Mansfield" TYPE="CITY" comment="" />
-<LOCATION id="P6" start="135" end="137" text="NV" TYPE="STATE" comment="" />
-<LOCATION id="P7" start="138" end="143" text="29473" TYPE="ZIP" comment="" />
-<ID id="P8" start="181" end="189" text="56040785" TYPE="MEDICALRECORD" comment="" />
-<DATE id="P9" start="244" end="252" text="12/08/86" TYPE="DATE" comment="" />
-<AGE id="P10" start="339" end="341" text="61" TYPE="AGE" comment="" />
-<NAME id="P11" start="1291" end="1306" text="Hardy Ostrowski" TYPE="DOCTOR" comment="" />
-<NAME id="P12" start="1328" end="1343" text="Hardy Ostrowski" TYPE="DOCTOR" comment="" />
-<ID id="P13" start="1366" end="1375" text="1-1277442" TYPE="IDNUM" comment="" />
-<DATE id="P14" start="1395" end="1403" text="12/08/86" TYPE="DATE" comment="" />
-<DATE id="P15" start="1408" end="1416" text="12/09/86" TYPE="DATE" comment="" />
-<DATE id="P16" start="1421" end="1429" text="12/08/86" TYPE="DATE" comment="" />
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2086-12-08" />
+<LOCATION TYPE="STREET" comment="" end="73" id="P3" start="60" text="3 Eaton Place" />
+<NAME TYPE="PATIENT" comment="" end="123" id="P4" start="111" text="OROZCO, KYLE" />
+<LOCATION TYPE="CITY" comment="" end="133" id="P5" start="124" text="Mansfield" />
+<LOCATION TYPE="STATE" comment="" end="137" id="P6" start="135" text="NV" />
+<LOCATION TYPE="ZIP" comment="" end="143" id="P7" start="138" text="29473" />
+<ID TYPE="MEDICALRECORD" comment="" end="189" id="P8" start="181" text="56040785" />
+<DATE TYPE="DATE" comment="" end="252" id="P9" start="244" text="12/08/86" />
+<NAME TYPE="DOCTOR" comment="" end="1306" id="P11" start="1291" text="Hardy Ostrowski" />
+<NAME TYPE="DOCTOR" comment="" end="1343" id="P12" start="1328" text="Hardy Ostrowski" />
+<ID TYPE="IDNUM" comment="" end="1375" id="P13" start="1366" text="1-1277442" />
+<DATE TYPE="DATE" comment="" end="1403" id="P14" start="1395" text="12/08/86" />
+<DATE TYPE="DATE" comment="" end="1416" id="P15" start="1408" text="12/09/86" />
+<DATE TYPE="DATE" comment="" end="1429" id="P16" start="1421" text="12/08/86" />
 </TAGS>
 </deIdi2b2>

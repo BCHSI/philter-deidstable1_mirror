@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version='1.0' encoding='utf8'?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT>
 
 
 Record date: 2074-12-21
@@ -111,21 +111,19 @@ eScription document:7-5753770 BFFocus
 
 
 
-***REMOVED******REMOVED***></TEXT>
+</TEXT>
 <TAGS>
-<DATE id="P0" start="16" end="26" text="2074-12-21" TYPE="DATE" comment="" />
-<ID id="P1" start="36" end="44" text="98044905" TYPE="MEDICALRECORD" comment="" />
-<NAME id="P2" start="45" end="58" text="WARE, VINCENT" TYPE="PATIENT" comment="" />
-<DATE id="P3" start="59" end="67" text="12/21/74" TYPE="DATE" comment="" />
-<NAME id="P4" start="68" end="80" text="VILLA, SCOTT" TYPE="DOCTOR" comment="" />
-<NAME id="P5" start="155" end="159" text="Ware" TYPE="PATIENT" comment="" />
-<AGE id="P6" start="165" end="167" text="67" TYPE="AGE" comment="" />
-<NAME id="P7" start="1853" end="1857" text="Ware" TYPE="PATIENT" comment="" />
-<AGE id="P8" start="1863" end="1865" text="67" TYPE="AGE" comment="" />
-<NAME id="P9" start="2542" end="2554" text="VILLA, SCOTT" TYPE="DOCTOR" comment="" />
-<DATE id="P10" start="2564" end="2572" text="12/21/74" TYPE="DATE" comment="" />
-<DATE id="P11" start="2577" end="2585" text="12/21/74" TYPE="DATE" comment="" />
-<NAME id="P12" start="2600" end="2612" text="VILLA, SCOTT" TYPE="DOCTOR" comment="" />
-<ID id="P13" start="2634" end="2643" text="7-5753770" TYPE="IDNUM" comment="" />
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2074-12-21" />
+<ID TYPE="MEDICALRECORD" comment="" end="44" id="P1" start="36" text="98044905" />
+<NAME TYPE="PATIENT" comment="" end="58" id="P2" start="45" text="WARE, VINCENT" />
+<DATE TYPE="DATE" comment="" end="67" id="P3" start="59" text="12/21/74" />
+<NAME TYPE="DOCTOR" comment="" end="80" id="P4" start="68" text="VILLA, SCOTT" />
+<NAME TYPE="PATIENT" comment="" end="159" id="P5" start="155" text="Ware" />
+<NAME TYPE="PATIENT" comment="" end="1857" id="P7" start="1853" text="Ware" />
+<NAME TYPE="DOCTOR" comment="" end="2554" id="P9" start="2542" text="VILLA, SCOTT" />
+<DATE TYPE="DATE" comment="" end="2572" id="P10" start="2564" text="12/21/74" />
+<DATE TYPE="DATE" comment="" end="2585" id="P11" start="2577" text="12/21/74" />
+<NAME TYPE="DOCTOR" comment="" end="2612" id="P12" start="2600" text="VILLA, SCOTT" />
+<ID TYPE="IDNUM" comment="" end="2643" id="P13" start="2634" text="7-5753770" />
 </TAGS>
 </deIdi2b2>

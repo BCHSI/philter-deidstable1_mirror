@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version='1.0' encoding='utf8'?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT>
 
 
 Record date: 2082-03-08
@@ -83,29 +83,28 @@ RH:KU:0156/DD:3-8-82/DT:3-14-82
 
 
 
-***REMOVED******REMOVED***></TEXT>
+</TEXT>
 <TAGS>
-<DATE id="P0" start="16" end="26" text="2082-03-08" TYPE="DATE" comment="" />
-<DATE id="P1" start="32" end="45" text="March 8, 2082" TYPE="DATE" comment="" />
-<NAME id="P2" start="48" end="64" text="Francis Xayarath" TYPE="DOCTOR" comment="" />
-<LOCATION id="P3" start="72" end="93" text="Integra Health Center" TYPE="HOSPITAL" comment="" />
-<LOCATION id="P4" start="94" end="107" text=" Derry Street" TYPE="STREET" comment="" />
-<LOCATION id="P5" start="108" end="117" text="La Grulla" TYPE="CITY" comment="" />
-<LOCATION id="P6" start="119" end="121" text="ME" TYPE="STATE" comment="" />
-<LOCATION id="P7" start="122" end="127" text="21614" TYPE="ZIP" comment="" />
-<NAME id="P8" start="133" end="148" text="Branch, Earnest" TYPE="PATIENT" comment="" />
-<ID id="P9" start="153" end="161" text="53023691" TYPE="MEDICALRECORD" comment="" />
-<NAME id="P10" start="173" end="181" text="Xayarath" TYPE="DOCTOR" comment="" />
-<NAME id="P11" start="198" end="212" text="Earnest Branch" TYPE="PATIENT" comment="" />
-<NAME id="P12" start="267" end="273" text="Branch" TYPE="PATIENT" comment="" />
-<DATE id="P13" start="1048" end="1057" text="September" TYPE="DATE" comment="" />
-<NAME id="P14" start="1879" end="1885" text="Branch" TYPE="PATIENT" comment="" />
-<NAME id="P15" start="2431" end="2446" text="Branch, Earnest" TYPE="PATIENT" comment="" />
-<ID id="P16" start="2451" end="2459" text="53023691" TYPE="MEDICALRECORD" comment="" />
-<DATE id="P17" start="2460" end="2466" text="3-8-82" TYPE="DATE" comment="" />
-<NAME id="P18" start="2643" end="2659" text="Luis J. Nicholas" TYPE="DOCTOR" comment="" />
-<ID id="P19" start="2669" end="2679" text="RH:KU:0156" TYPE="IDNUM" comment="" />
-<DATE id="P20" start="2683" end="2689" text="3-8-82" TYPE="DATE" comment="" />
-<DATE id="P21" start="2693" end="2700" text="3-14-82" TYPE="DATE" comment="" />
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2082-03-08" />
+<DATE TYPE="DATE" comment="" end="45" id="P1" start="32" text="March 8, 2082" />
+<NAME TYPE="DOCTOR" comment="" end="64" id="P2" start="48" text="Francis Xayarath" />
+<LOCATION TYPE="STREET" comment="" end="107" id="P4" start="94" text=" Derry Street" />
+<LOCATION TYPE="CITY" comment="" end="117" id="P5" start="108" text="La Grulla" />
+<LOCATION TYPE="STATE" comment="" end="121" id="P6" start="119" text="ME" />
+<LOCATION TYPE="ZIP" comment="" end="127" id="P7" start="122" text="21614" />
+<NAME TYPE="PATIENT" comment="" end="148" id="P8" start="133" text="Branch, Earnest" />
+<ID TYPE="MEDICALRECORD" comment="" end="161" id="P9" start="153" text="53023691" />
+<NAME TYPE="DOCTOR" comment="" end="181" id="P10" start="173" text="Xayarath" />
+<NAME TYPE="PATIENT" comment="" end="212" id="P11" start="198" text="Earnest Branch" />
+<NAME TYPE="PATIENT" comment="" end="273" id="P12" start="267" text="Branch" />
+<DATE TYPE="DATE" comment="" end="1057" id="P13" start="1048" text="September" />
+<NAME TYPE="PATIENT" comment="" end="1885" id="P14" start="1879" text="Branch" />
+<NAME TYPE="PATIENT" comment="" end="2446" id="P15" start="2431" text="Branch, Earnest" />
+<ID TYPE="MEDICALRECORD" comment="" end="2459" id="P16" start="2451" text="53023691" />
+<DATE TYPE="DATE" comment="" end="2466" id="P17" start="2460" text="3-8-82" />
+<NAME TYPE="DOCTOR" comment="" end="2659" id="P18" start="2643" text="Luis J. Nicholas" />
+<ID TYPE="IDNUM" comment="" end="2679" id="P19" start="2669" text="RH:KU:0156" />
+<DATE TYPE="DATE" comment="" end="2689" id="P20" start="2683" text="3-8-82" />
+<DATE TYPE="DATE" comment="" end="2700" id="P21" start="2693" text="3-14-82" />
 </TAGS>
 </deIdi2b2>

@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version='1.0' encoding='utf8'?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT>
 
 
 Record date: 2094-10-26
@@ -66,21 +66,19 @@ eScription document:2-320209
 
 
 
-***REMOVED******REMOVED***></TEXT>
+</TEXT>
 <TAGS>
-<DATE id="P0" start="16" end="26" text="2094-10-26" TYPE="DATE" comment="" />
-<LOCATION id="P1" start="29" end="60" text="Saint John Valley Health Center" TYPE="HOSPITAL" comment="" />
-<LOCATION id="P2" start="61" end="83" text="157 Peterborough Place" TYPE="STREET" comment="" />
-<NAME id="P3" start="123" end="138" text="KIM JR, DOUGLAS" TYPE="PATIENT" comment="" />
-<LOCATION id="P4" start="139" end="146" text="Sulphur" TYPE="CITY" comment="" />
-<LOCATION id="P5" start="148" end="150" text="AR" TYPE="STATE" comment="" />
-<LOCATION id="P6" start="151" end="156" text="26822" TYPE="ZIP" comment="" />
-<ID id="P7" start="184" end="192" text="20163512" TYPE="MEDICALRECORD" comment="" />
-<CONTACT id="P8" start="193" end="207" text="(426) 819-5183" TYPE="PHONE" comment="" />
-<DATE id="P9" start="251" end="259" text="10/26/94" TYPE="DATE" comment="" />
-<AGE id="P10" start="368" end="370" text="54" TYPE="AGE" comment="" />
-<DATE id="P11" start="744" end="754" text="10/14/2094" TYPE="DATE" comment="" />
-<NAME id="P12" start="2334" end="2350" text="QUEST J. QUEENAN" TYPE="DOCTOR" comment="" />
-<ID id="P13" start="2378" end="2386" text="2-320209" TYPE="IDNUM" comment="" />
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2094-10-26" />
+<LOCATION TYPE="STREET" comment="" end="83" id="P2" start="61" text="157 Peterborough Place" />
+<NAME TYPE="PATIENT" comment="" end="138" id="P3" start="123" text="KIM JR, DOUGLAS" />
+<LOCATION TYPE="CITY" comment="" end="146" id="P4" start="139" text="Sulphur" />
+<LOCATION TYPE="STATE" comment="" end="150" id="P5" start="148" text="AR" />
+<LOCATION TYPE="ZIP" comment="" end="156" id="P6" start="151" text="26822" />
+<ID TYPE="MEDICALRECORD" comment="" end="192" id="P7" start="184" text="20163512" />
+<CONTACT TYPE="PHONE" comment="" end="207" id="P8" start="193" text="(426) 819-5183" />
+<DATE TYPE="DATE" comment="" end="259" id="P9" start="251" text="10/26/94" />
+<DATE TYPE="DATE" comment="" end="754" id="P11" start="744" text="10/14/2094" />
+<NAME TYPE="DOCTOR" comment="" end="2350" id="P12" start="2334" text="QUEST J. QUEENAN" />
+<ID TYPE="IDNUM" comment="" end="2386" id="P13" start="2378" text="2-320209" />
 </TAGS>
 </deIdi2b2>

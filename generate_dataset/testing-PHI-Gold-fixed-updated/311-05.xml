@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version='1.0' encoding='utf8'?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT>
 
 
 Record date: 2090-12-14
@@ -145,18 +145,17 @@ eScription document:8-4109370 BFFocus
 
 
 
-***REMOVED******REMOVED***></TEXT>
+</TEXT>
 <TAGS>
-<DATE id="P0" start="16" end="26" text="2090-12-14" TYPE="DATE" comment="" />
-<ID id="P1" start="36" end="44" text="43294739" TYPE="MEDICALRECORD" comment="" />
-<NAME id="P2" start="45" end="60" text="FINNEY, INDIANA" TYPE="PATIENT" comment="" />
-<DATE id="P3" start="61" end="69" text="12/15/90" TYPE="DATE" comment="" />
-<NAME id="P4" start="70" end="87" text="MARTIN, CONSTANCE" TYPE="DOCTOR" comment="" />
-<AGE id="P5" start="135" end="137" text="53" TYPE="AGE" comment="" />
-<NAME id="P6" start="3497" end="3514" text="MARTIN, CONSTANCE" TYPE="DOCTOR" comment="" />
-<DATE id="P7" start="3524" end="3532" text="12/15/90" TYPE="DATE" comment="" />
-<DATE id="P8" start="3537" end="3545" text="12/15/90" TYPE="DATE" comment="" />
-<NAME id="P9" start="3560" end="3577" text="MARTIN, CONSTANCE" TYPE="DOCTOR" comment="" />
-<ID id="P10" start="3599" end="3608" text="8-4109370" TYPE="IDNUM" comment="" />
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2090-12-14" />
+<ID TYPE="MEDICALRECORD" comment="" end="44" id="P1" start="36" text="43294739" />
+<NAME TYPE="PATIENT" comment="" end="60" id="P2" start="45" text="FINNEY, INDIANA" />
+<DATE TYPE="DATE" comment="" end="69" id="P3" start="61" text="12/15/90" />
+<NAME TYPE="DOCTOR" comment="" end="87" id="P4" start="70" text="MARTIN, CONSTANCE" />
+<NAME TYPE="DOCTOR" comment="" end="3514" id="P6" start="3497" text="MARTIN, CONSTANCE" />
+<DATE TYPE="DATE" comment="" end="3532" id="P7" start="3524" text="12/15/90" />
+<DATE TYPE="DATE" comment="" end="3545" id="P8" start="3537" text="12/15/90" />
+<NAME TYPE="DOCTOR" comment="" end="3577" id="P9" start="3560" text="MARTIN, CONSTANCE" />
+<ID TYPE="IDNUM" comment="" end="3608" id="P10" start="3599" text="8-4109370" />
 </TAGS>
 </deIdi2b2>

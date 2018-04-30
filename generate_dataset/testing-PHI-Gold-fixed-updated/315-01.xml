@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version='1.0' encoding='utf8'?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT>
 
 
 Record date: 2121-03-31
@@ -32,7 +32,7 @@ Procedure:  The patient is a 53 year old female scheduled for parathyroidectomy.
 
 
 
-Chief Complaint & Present Illness:  hyperparathyroidism-parathormone level > 900-resulting in spontaneous fractures.  Patient had previous semi total parathyroidectomy in 2112.
+Chief Complaint &amp; Present Illness:  hyperparathyroidism-parathormone level &gt; 900-resulting in spontaneous fractures.  Patient had previous semi total parathyroidectomy in 2112.
 
 
 
@@ -116,7 +116,7 @@ Exam:
 
 
 
-HEEN&T:  good range of motion, no bruits
+HEEN&amp;T:  good range of motion, no bruits
 
 Airway:  Mallampatti Class II
 
@@ -178,25 +178,21 @@ Tina Purcell, M.D.
 
 
 
-***REMOVED******REMOVED***></TEXT>
+</TEXT>
 <TAGS>
-<DATE id="P0" start="16" end="26" text="2121-03-31" TYPE="DATE" comment="" />
-<LOCATION id="P1" start="28" end="47" text="Kern Medical Center" TYPE="HOSPITAL" comment="" />
-<NAME id="P3" start="137" end="152" text="Tina L. Purcell" TYPE="DOCTOR" comment="" />
-<DATE id="P4" start="189" end="203" text="March 31, 2121" TYPE="DATE" comment="" />
-<ID id="P5" start="231" end="238" text="4698877" TYPE="MEDICALRECORD" comment="" />
-<NAME id="P6" start="239" end="256" text="Isabella T. Valle" TYPE="PATIENT" comment="" />
-<AGE id="P7" start="289" end="291" text="53" TYPE="AGE" comment="" />
-<DATE id="P8" start="366" end="373" text="4/03/21" TYPE="DATE" comment="" />
-<DATE id="P9" start="549" end="553" text="2112" TYPE="DATE" comment="" />
-<DATE id="P10" start="608" end="610" text="09" TYPE="DATE" comment="" />
-<DATE id="P11" start="621" end="623" text="10" TYPE="DATE" comment="" />
-<DATE id="P12" start="644" end="646" text="13" TYPE="DATE" comment="" />
-<DATE id="P13" start="676" end="678" text="18" TYPE="DATE" comment="" />
-<DATE id="P14" start="1570" end="1574" text="2/13" TYPE="DATE" comment="" />
-<AGE id="P15" start="2422" end="2424" text="53" TYPE="AGE" comment="" />
-<NAME id="P16" start="2726" end="2730" text="Uren" TYPE="DOCTOR" comment="" />
-<DATE id="P17" start="2760" end="2764" text="1/21" TYPE="DATE" comment="" />
-<NAME id="P18" start="3358" end="3370" text="Tina Purcell" TYPE="DOCTOR" comment="" />
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2121-03-31" />
+<NAME TYPE="DOCTOR" comment="" end="152" id="P3" start="137" text="Tina L. Purcell" />
+<DATE TYPE="DATE" comment="" end="203" id="P4" start="189" text="March 31, 2121" />
+<ID TYPE="MEDICALRECORD" comment="" end="238" id="P5" start="231" text="4698877" />
+<NAME TYPE="PATIENT" comment="" end="256" id="P6" start="239" text="Isabella T. Valle" />
+<DATE TYPE="DATE" comment="" end="373" id="P8" start="366" text="4/03/21" />
+<DATE TYPE="DATE" comment="" end="610" id="P10" start="608" text="09" />
+<DATE TYPE="DATE" comment="" end="623" id="P11" start="621" text="10" />
+<DATE TYPE="DATE" comment="" end="646" id="P12" start="644" text="13" />
+<DATE TYPE="DATE" comment="" end="678" id="P13" start="676" text="18" />
+<DATE TYPE="DATE" comment="" end="1574" id="P14" start="1570" text="2/13" />
+<NAME TYPE="DOCTOR" comment="" end="2730" id="P16" start="2726" text="Uren" />
+<DATE TYPE="DATE" comment="" end="2764" id="P17" start="2760" text="1/21" />
+<NAME TYPE="DOCTOR" comment="" end="3370" id="P18" start="3358" text="Tina Purcell" />
 </TAGS>
 </deIdi2b2>

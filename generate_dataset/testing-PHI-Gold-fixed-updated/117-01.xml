@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version='1.0' encoding='utf8'?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT>
 
 
 Record date: 2065-09-20
@@ -117,27 +117,21 @@ KI/espinoza/nolen
 
 
 
-***REMOVED******REMOVED***></TEXT>
+</TEXT>
 <TAGS>
-<DATE id="P0" start="16" end="26" text="2065-09-20" TYPE="DATE" comment="" />
-<NAME id="P1" start="28" end="44" text="Melissa Cummings" TYPE="PATIENT" comment="" />
-<LOCATION id="P2" start="46" end="49" text="HGH" TYPE="HOSPITAL" comment="" />
-<ID id="P3" start="59" end="68" text="265-01-73" TYPE="MEDICALRECORD" comment="" />
-<LOCATION id="P4" start="72" end="94" text="SAINT VINCENT HOSPITAL" TYPE="HOSPITAL" comment="" />
-<DATE id="P5" start="124" end="142" text="September 20, 2065" TYPE="DATE" comment="" />
-<LOCATION id="P6" start="187" end="195" text="Paraguay" TYPE="COUNTRY" comment="" />
-<NAME id="P7" start="1390" end="1399" text="Yelverton" TYPE="DOCTOR" comment="" />
-<DATE id="P8" start="1420" end="1424" text="9/16" TYPE="DATE" comment="" />
-<DATE id="P9" start="1722" end="1726" text="7/27" TYPE="DATE" comment="" />
-<NAME id="P10" start="1822" end="1838" text="Melissa Cummings" TYPE="PATIENT" comment="" />
-<LOCATION id="P11" start="1840" end="1843" text="HGH" TYPE="HOSPITAL" comment="" />
-<ID id="P12" start="1853" end="1862" text="265-01-73" TYPE="MEDICALRECORD" comment="" />
-<LOCATION id="P13" start="1866" end="1888" text="SAINT VINCENT HOSPITAL" TYPE="HOSPITAL" comment="" />
-<DATE id="P14" start="1918" end="1936" text="September 20, 2065" TYPE="DATE" comment="" />
-<NAME id="P15" start="2473" end="2476" text="Eng" TYPE="DOCTOR" comment="" />
-<NAME id="P16" start="2483" end="2498" text="Kimberly I Kidd" TYPE="DOCTOR" comment="" />
-<NAME id="P17" start="2512" end="2514" text="KI" TYPE="DOCTOR" comment="" />
-<NAME id="P18" start="2515" end="2523" text="espinoza" TYPE="DOCTOR" comment="" />
-<NAME id="P19" start="2524" end="2529" text="nolen" TYPE="DOCTOR" comment="" />
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2065-09-20" />
+<NAME TYPE="PATIENT" comment="" end="44" id="P1" start="28" text="Melissa Cummings" />
+<ID TYPE="MEDICALRECORD" comment="" end="68" id="P3" start="59" text="265-01-73" />
+<DATE TYPE="DATE" comment="" end="142" id="P5" start="124" text="September 20, 2065" />
+<NAME TYPE="DOCTOR" comment="" end="1399" id="P7" start="1390" text="Yelverton" />
+<DATE TYPE="DATE" comment="" end="1424" id="P8" start="1420" text="9/16" />
+<DATE TYPE="DATE" comment="" end="1726" id="P9" start="1722" text="7/27" />
+<NAME TYPE="PATIENT" comment="" end="1838" id="P10" start="1822" text="Melissa Cummings" />
+<ID TYPE="MEDICALRECORD" comment="" end="1862" id="P12" start="1853" text="265-01-73" />
+<DATE TYPE="DATE" comment="" end="1936" id="P14" start="1918" text="September 20, 2065" />
+<NAME TYPE="DOCTOR" comment="" end="2476" id="P15" start="2473" text="Eng" />
+<NAME TYPE="DOCTOR" comment="" end="2498" id="P16" start="2483" text="Kimberly I Kidd" />
+<NAME TYPE="DOCTOR" comment="" end="2523" id="P18" start="2515" text="espinoza" />
+<NAME TYPE="DOCTOR" comment="" end="2529" id="P19" start="2524" text="nolen" />
 </TAGS>
 </deIdi2b2>

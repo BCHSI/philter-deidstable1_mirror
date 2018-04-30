@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version='1.0' encoding='utf8'?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT>
 
 
 Record date: 2135-08-03
@@ -133,7 +133,7 @@ RRR
 Pulm: 
 CTAB
 Abd:
- soft, obese with additionally protruding ventral hernia; well-healed lower midline incision, moderately distended, minimally tender over inferior incision &amp; to the right of it, no skin changes; hypoactive BS; hernia is reducible on exam with palpable large &gt;5cm fascial defect
+ soft, obese with additionally protruding ventral hernia; well-healed lower midline incision, moderately distended, minimally tender over inferior incision &amp;amp; to the right of it, no skin changes; hypoactive BS; hernia is reducible on exam with palpable large &amp;gt;5cm fascial defect
 Rectal: no stool palpated in vault, guaiac negative, no masses/tenderness
 
 
@@ -176,37 +176,33 @@ PGY-2 General Surgery
 
 
 
-***REMOVED******REMOVED***></TEXT>
+</TEXT>
 <TAGS>
-<DATE id="P0" start="16" end="26" text="2135-08-03" TYPE="DATE" comment="" />
-<LOCATION id="P1" start="69" end="72" text="WSA" TYPE="HOSPITAL" comment="" />
-<NAME id="P2" start="118" end="130" text="Mckee, Norma" TYPE="PATIENT" comment="" />
-<ID id="P3" start="147" end="154" text="6987776" TYPE="MEDICALRECORD" comment="" />
-<DATE id="P4" start="169" end="177" text="8/3/2135" TYPE="DATE" comment="" />
-<NAME id="P5" start="191" end="205" text="Robert Xenakis" TYPE="DOCTOR" comment="" />
-<NAME id="P6" start="230" end="234" text="Kirk" TYPE="DOCTOR" comment="" />
-<NAME id="P7" start="254" end="260" text="Huerta" TYPE="DOCTOR" comment="" />
-<NAME id="P8" start="279" end="284" text="Dukes" TYPE="DOCTOR" comment="" />
-<AGE id="P9" start="333" end="335" text="60" TYPE="AGE" comment="" />
-<NAME id="P10" start="373" end="379" text="Meyers" TYPE="DOCTOR" comment="" />
-<NAME id="P11" start="380" end="385" text="Hayes" TYPE="DOCTOR" comment="" />
-<DATE id="P12" start="387" end="391" text="7/25" TYPE="DATE" comment="" />
-<NAME id="P13" start="477" end="483" text="Steves" TYPE="DOCTOR" comment="" />
-<DATE id="P14" start="486" end="491" text="12/33" TYPE="DATE" comment="" />
-<DATE id="P15" start="533" end="538" text="12/34" TYPE="DATE" comment="" />
-<DATE id="P16" start="558" end="565" text="5/23-49" TYPE="DATE" comment="" />
-<NAME id="P17" start="1161" end="1167" text="Meyers" TYPE="DOCTOR" comment="" />
-<NAME id="P18" start="1168" end="1173" text="Hayes" TYPE="DOCTOR" comment="" />
-<DATE id="P19" start="1176" end="1180" text="7/01" TYPE="DATE" comment="" />
-<NAME id="P20" start="1266" end="1272" text="Steves" TYPE="DOCTOR" comment="" />
-<DATE id="P21" start="1275" end="1280" text="12/33" TYPE="DATE" comment="" />
-<DATE id="P22" start="1327" end="1332" text="12/34" TYPE="DATE" comment="" />
-<DATE id="P23" start="1367" end="1372" text="11/34" TYPE="DATE" comment="" />
-<AGE id="P24" start="6440" end="6442" text="59" TYPE="AGE" comment="" />
-<LOCATION id="P25" start="6727" end="6730" text="WSA" TYPE="HOSPITAL" comment="" />
-<NAME id="P26" start="6752" end="6756" text="Kirk" TYPE="DOCTOR" comment="" />
-<NAME id="P27" start="6894" end="6908" text="Patrizia Scott" TYPE="DOCTOR" comment="" />
-<NAME id="P28" start="6938" end="6955" text="Cheryl H. Holland" TYPE="DOCTOR" comment="" />
-<CONTACT id="P29" start="6973" end="6978" text="67268" TYPE="PHONE" comment="" />
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2135-08-03" />
+<NAME TYPE="PATIENT" comment="" end="130" id="P2" start="118" text="Mckee, Norma" />
+<ID TYPE="MEDICALRECORD" comment="" end="154" id="P3" start="147" text="6987776" />
+<DATE TYPE="DATE" comment="" end="177" id="P4" start="169" text="8/3/2135" />
+<NAME TYPE="DOCTOR" comment="" end="205" id="P5" start="191" text="Robert Xenakis" />
+<NAME TYPE="DOCTOR" comment="" end="234" id="P6" start="230" text="Kirk" />
+<NAME TYPE="DOCTOR" comment="" end="260" id="P7" start="254" text="Huerta" />
+<NAME TYPE="DOCTOR" comment="" end="284" id="P8" start="279" text="Dukes" />
+<NAME TYPE="DOCTOR" comment="" end="379" id="P10" start="373" text="Meyers" />
+<NAME TYPE="DOCTOR" comment="" end="385" id="P11" start="380" text="Hayes" />
+<DATE TYPE="DATE" comment="" end="391" id="P12" start="387" text="7/25" />
+<NAME TYPE="DOCTOR" comment="" end="483" id="P13" start="477" text="Steves" />
+<DATE TYPE="DATE" comment="" end="491" id="P14" start="486" text="12/33" />
+<DATE TYPE="DATE" comment="" end="538" id="P15" start="533" text="12/34" />
+<DATE TYPE="DATE" comment="" end="565" id="P16" start="558" text="5/23-49" />
+<NAME TYPE="DOCTOR" comment="" end="1167" id="P17" start="1161" text="Meyers" />
+<NAME TYPE="DOCTOR" comment="" end="1173" id="P18" start="1168" text="Hayes" />
+<DATE TYPE="DATE" comment="" end="1180" id="P19" start="1176" text="7/01" />
+<NAME TYPE="DOCTOR" comment="" end="1272" id="P20" start="1266" text="Steves" />
+<DATE TYPE="DATE" comment="" end="1280" id="P21" start="1275" text="12/33" />
+<DATE TYPE="DATE" comment="" end="1332" id="P22" start="1327" text="12/34" />
+<DATE TYPE="DATE" comment="" end="1372" id="P23" start="1367" text="11/34" />
+<NAME TYPE="DOCTOR" comment="" end="6756" id="P26" start="6752" text="Kirk" />
+<NAME TYPE="DOCTOR" comment="" end="6908" id="P27" start="6894" text="Patrizia Scott" />
+<NAME TYPE="DOCTOR" comment="" end="6955" id="P28" start="6938" text="Cheryl H. Holland" />
+<CONTACT TYPE="PHONE" comment="" end="6978" id="P29" start="6973" text="67268" />
 </TAGS>
 </deIdi2b2>

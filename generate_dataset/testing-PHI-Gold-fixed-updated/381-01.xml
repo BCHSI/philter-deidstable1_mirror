@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version='1.0' encoding='utf8'?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT>
 
 
 Record date: 2092-08-16
@@ -175,19 +175,18 @@ eScription document:3-3296461 BFFocus
 
 
 
-***REMOVED******REMOVED***></TEXT>
+</TEXT>
 <TAGS>
-<DATE id="P0" start="16" end="26" text="2092-08-16" TYPE="DATE" comment="" />
-<ID id="P1" start="36" end="44" text="06129040" TYPE="MEDICALRECORD" comment="" />
-<NAME id="P2" start="45" end="55" text="MACK, ROSE" TYPE="PATIENT" comment="" />
-<DATE id="P3" start="56" end="64" text="08/16/92" TYPE="DATE" comment="" />
-<NAME id="P4" start="65" end="79" text="GRAHAM, ANGELA" TYPE="DOCTOR" comment="" />
-<NAME id="P5" start="122" end="129" text="Quiring" TYPE="DOCTOR" comment="" />
-<AGE id="P6" start="230" end="232" text="50" TYPE="AGE" comment="" />
-<NAME id="P8" start="4517" end="4531" text="GRAHAM, ANGELA" TYPE="DOCTOR" comment="" />
-<DATE id="P9" start="4541" end="4549" text="08/16/92" TYPE="DATE" comment="" />
-<DATE id="P10" start="4554" end="4562" text="08/16/92" TYPE="DATE" comment="" />
-<NAME id="P11" start="4577" end="4591" text="GRAHAM, ANGELA" TYPE="DOCTOR" comment="" />
-<ID id="P12" start="4613" end="4622" text="3-3296461" TYPE="IDNUM" comment="" />
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2092-08-16" />
+<ID TYPE="MEDICALRECORD" comment="" end="44" id="P1" start="36" text="06129040" />
+<NAME TYPE="PATIENT" comment="" end="55" id="P2" start="45" text="MACK, ROSE" />
+<DATE TYPE="DATE" comment="" end="64" id="P3" start="56" text="08/16/92" />
+<NAME TYPE="DOCTOR" comment="" end="79" id="P4" start="65" text="GRAHAM, ANGELA" />
+<NAME TYPE="DOCTOR" comment="" end="129" id="P5" start="122" text="Quiring" />
+<NAME TYPE="DOCTOR" comment="" end="4531" id="P8" start="4517" text="GRAHAM, ANGELA" />
+<DATE TYPE="DATE" comment="" end="4549" id="P9" start="4541" text="08/16/92" />
+<DATE TYPE="DATE" comment="" end="4562" id="P10" start="4554" text="08/16/92" />
+<NAME TYPE="DOCTOR" comment="" end="4591" id="P11" start="4577" text="GRAHAM, ANGELA" />
+<ID TYPE="IDNUM" comment="" end="4622" id="P12" start="4613" text="3-3296461" />
 </TAGS>
 </deIdi2b2>

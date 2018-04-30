@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version='1.0' encoding='utf8'?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT>
 
 
 Record date: 2082-10-30
@@ -85,21 +85,15 @@ XC/olivas/finn
 
 
 
-***REMOVED******REMOVED***></TEXT>
+</TEXT>
 <TAGS>
-<DATE id="P0" start="16" end="26" text="2082-10-30" TYPE="DATE" comment="" />
-<NAME id="P1" start="28" end="39" text="COLIN RAMEY" TYPE="PATIENT" comment="" />
-<LOCATION id="P2" start="41" end="44" text="CHH" TYPE="HOSPITAL" comment="" />
-<ID id="P3" start="55" end="64" text="433-88-47" TYPE="MEDICALRECORD" comment="" />
-<LOCATION id="P4" start="68" end="93" text="MISSOURI PACIFIC HOSPITAL" TYPE="HOSPITAL" comment="" />
-<DATE id="P5" start="124" end="140" text="October 30, 2082" TYPE="DATE" comment="" />
-<AGE id="P6" start="144" end="146" text="78" TYPE="AGE" comment="" />
-<NAME id="P7" start="377" end="382" text="Ramey" TYPE="PATIENT" comment="" />
-<DATE id="P8" start="586" end="590" text="2069" TYPE="DATE" comment="" />
-<DATE id="P9" start="1179" end="1183" text="2080" TYPE="DATE" comment="" />
-<NAME id="P10" start="1529" end="1541" text="Xavier Combs" TYPE="DOCTOR" comment="" />
-<NAME id="P11" start="1549" end="1551" text="XC" TYPE="DOCTOR" comment="" />
-<NAME id="P12" start="1552" end="1558" text="olivas" TYPE="DOCTOR" comment="" />
-<NAME id="P13" start="1559" end="1563" text="finn" TYPE="DOCTOR" comment="" />
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2082-10-30" />
+<NAME TYPE="PATIENT" comment="" end="39" id="P1" start="28" text="COLIN RAMEY" />
+<ID TYPE="MEDICALRECORD" comment="" end="64" id="P3" start="55" text="433-88-47" />
+<DATE TYPE="DATE" comment="" end="140" id="P5" start="124" text="October 30, 2082" />
+<NAME TYPE="PATIENT" comment="" end="382" id="P7" start="377" text="Ramey" />
+<NAME TYPE="DOCTOR" comment="" end="1541" id="P10" start="1529" text="Xavier Combs" />
+<NAME TYPE="DOCTOR" comment="" end="1558" id="P12" start="1552" text="olivas" />
+<NAME TYPE="DOCTOR" comment="" end="1563" id="P13" start="1559" text="finn" />
 </TAGS>
 </deIdi2b2>

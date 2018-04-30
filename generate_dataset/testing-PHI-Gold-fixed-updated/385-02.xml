@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version='1.0' encoding='utf8'?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT>
 
 
 Record date: 2088-01-20
@@ -39,7 +39,7 @@ HPI: Mr. Moss is a 77 yo M with PmHx significant for DMII, CHF (EF 20-25%), afib
 
 Mr. Moss has experienced multiple falls recently, and was ultimately diagnosed with Parkinsons last September.  Following the diagnosis, he was discharged to Bellaire City Hospital, where he continued to experience falls.  After one episode, he was forcibly picked up, and began to have L shoulder pain thereafter.  He also noted a cut over the L elbow on transfer to the NH that was slow to heal.   After several weeks of worsening shoulder pain, erythema, and warmth, he was re-hospitalized at Ouagadougou, where he underwent L shoulder aspiration.  MRI 10/87 demonstrated complete rupture of the rotator cuff, with associated large joint effusion.  Of note, he denied fevers, chills, or NS.
 
-L shoulder aspiration 10/10/87 demonstrated purulent fluid, with 2,800,000 WBC (97%PMN). Gram stain demonstrated GPC in clusters.  He subsequently underwent L shoulder I&D 10/12, with removal of 300cc of frankly purulent fluid.  He was started on cefazolin.  Culture results returned a pan-sensitive Staphylococcus aureus isolate (including to ampicillin, cefazolin, clindamycin, penicillin, rifampin).  Blood cultures were negative.  He was taken back to the OR 10/16 for arthroscopy, with extensive debridement.  Interop findings included demonstration of significant fibrinous tissue, with no normal-appearing cartiledge present.  A penrose was placed into a large cavity down the subdeltoid rescess, and a second in the subacromial space.  He was transitioned to ampicillin 2g q6 hours x 2 weeks, and then given amoxicillin (either 1g BID or 500mg TID, unsure which) x 2 weeks.  
+L shoulder aspiration 10/10/87 demonstrated purulent fluid, with 2,800,000 WBC (97%PMN). Gram stain demonstrated GPC in clusters.  He subsequently underwent L shoulder I&amp;D 10/12, with removal of 300cc of frankly purulent fluid.  He was started on cefazolin.  Culture results returned a pan-sensitive Staphylococcus aureus isolate (including to ampicillin, cefazolin, clindamycin, penicillin, rifampin).  Blood cultures were negative.  He was taken back to the OR 10/16 for arthroscopy, with extensive debridement.  Interop findings included demonstration of significant fibrinous tissue, with no normal-appearing cartiledge present.  A penrose was placed into a large cavity down the subdeltoid rescess, and a second in the subacromial space.  He was transitioned to ampicillin 2g q6 hours x 2 weeks, and then given amoxicillin (either 1g BID or 500mg TID, unsure which) x 2 weeks.  
 
 
 
@@ -257,45 +257,38 @@ Infectious disease fellow
 
 
 
-***REMOVED******REMOVED***></TEXT>
+</TEXT>
 <TAGS>
-<DATE id="P0" start="16" end="26" text="2088-01-20" TYPE="DATE" comment="" />
-<NAME id="P1" start="84" end="95" text="Moss, Derek" TYPE="PATIENT" comment="" />
-<ID id="P2" start="101" end="109" text="89659991" TYPE="MEDICALRECORD" comment="" />
-<NAME id="P3" start="305" end="317" text="Everett Pace" TYPE="DOCTOR" comment="" />
-<DATE id="P4" start="336" end="340" text="1/20" TYPE="DATE" comment="" />
-<NAME id="P6" start="438" end="442" text="Moss" TYPE="PATIENT" comment="" />
-<AGE id="P7" start="448" end="450" text="77" TYPE="AGE" comment="" />
-<DATE id="P8" start="691" end="696" text="10/87" TYPE="DATE" comment="" />
-<DATE id="P9" start="712" end="716" text="1/19" TYPE="DATE" comment="" />
-<NAME id="P10" start="736" end="740" text="Moss" TYPE="PATIENT" comment="" />
-<DATE id="P11" start="832" end="841" text="September" TYPE="DATE" comment="" />
-<LOCATION id="P12" start="890" end="912" text="Bellaire City Hospital" TYPE="HOSPITAL" comment="" />
-<LOCATION id="P13" start="1228" end="1239" text="Ouagadougou" TYPE="CITY" comment="" />
-<DATE id="P14" start="1288" end="1293" text="10/87" TYPE="DATE" comment="" />
-<DATE id="P15" start="1449" end="1457" text="10/10/87" TYPE="DATE" comment="" />
-<DATE id="P16" start="1599" end="1604" text="10/12" TYPE="DATE" comment="" />
-<DATE id="P17" start="1890" end="1895" text="10/16" TYPE="DATE" comment="" />
-<DATE id="P18" start="2345" end="2353" text="12/12/87" TYPE="DATE" comment="" />
-<NAME id="P19" start="2805" end="2809" text="Moss" TYPE="PATIENT" comment="" />
-<DATE id="P20" start="2836" end="2840" text="1/18" TYPE="DATE" comment="" />
-<DATE id="P21" start="3389" end="3396" text="12/6/87" TYPE="DATE" comment="" />
-<DATE id="P22" start="3405" end="3413" text="12/19/87" TYPE="DATE" comment="" />
-<DATE id="P23" start="3421" end="3428" text="1/18/88" TYPE="DATE" comment="" />
-<NAME id="P24" start="3459" end="3463" text="Moss" TYPE="PATIENT" comment="" />
-<DATE id="P25" start="3492" end="3496" text="1/19" TYPE="DATE" comment="" />
-<DATE id="P26" start="3995" end="4000" text="10/87" TYPE="DATE" comment="" />
-<DATE id="P27" start="4132" end="4136" text="2081" TYPE="DATE" comment="" />
-<NAME id="P28" start="4138" end="4142" text="Kent" TYPE="DOCTOR" comment="" />
-<DATE id="P29" start="4472" end="4477" text="12/87" TYPE="DATE" comment="" />
-<DATE id="P30" start="5942" end="5951" text="Wednesday" TYPE="DATE" comment="" />
-<DATE id="P31" start="6173" end="6182" text="Wednesday" TYPE="DATE" comment="" />
-<AGE id="P32" start="8079" end="8081" text="77" TYPE="AGE" comment="" />
-<DATE id="P33" start="8268" end="8273" text="10/87" TYPE="DATE" comment="" />
-<DATE id="P34" start="8276" end="8281" text="11/87" TYPE="DATE" comment="" />
-<DATE id="P35" start="8297" end="8301" text="1/19" TYPE="DATE" comment="" />
-<DATE id="P36" start="8893" end="8902" text="Wednesday" TYPE="DATE" comment="" />
-<NAME id="P37" start="10320" end="10334" text="Yair Gillespie" TYPE="DOCTOR" comment="" />
-<CONTACT id="P38" start="10344" end="10349" text="52719" TYPE="PHONE" comment="" />
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2088-01-20" />
+<NAME TYPE="PATIENT" comment="" end="95" id="P1" start="84" text="Moss, Derek" />
+<ID TYPE="MEDICALRECORD" comment="" end="109" id="P2" start="101" text="89659991" />
+<NAME TYPE="DOCTOR" comment="" end="317" id="P3" start="305" text="Everett Pace" />
+<DATE TYPE="DATE" comment="" end="340" id="P4" start="336" text="1/20" />
+<NAME TYPE="PATIENT" comment="" end="442" id="P6" start="438" text="Moss" />
+<DATE TYPE="DATE" comment="" end="696" id="P8" start="691" text="10/87" />
+<DATE TYPE="DATE" comment="" end="716" id="P9" start="712" text="1/19" />
+<NAME TYPE="PATIENT" comment="" end="740" id="P10" start="736" text="Moss" />
+<DATE TYPE="DATE" comment="" end="841" id="P11" start="832" text="September" />
+<LOCATION TYPE="CITY" comment="" end="1239" id="P13" start="1228" text="Ouagadougou" />
+<DATE TYPE="DATE" comment="" end="1293" id="P14" start="1288" text="10/87" />
+<DATE TYPE="DATE" comment="" end="1457" id="P15" start="1449" text="10/10/87" />
+<DATE TYPE="DATE" comment="" end="1604" id="P16" start="1599" text="10/12" />
+<DATE TYPE="DATE" comment="" end="1895" id="P17" start="1890" text="10/16" />
+<DATE TYPE="DATE" comment="" end="2353" id="P18" start="2345" text="12/12/87" />
+<NAME TYPE="PATIENT" comment="" end="2809" id="P19" start="2805" text="Moss" />
+<DATE TYPE="DATE" comment="" end="2840" id="P20" start="2836" text="1/18" />
+<DATE TYPE="DATE" comment="" end="3396" id="P21" start="3389" text="12/6/87" />
+<DATE TYPE="DATE" comment="" end="3413" id="P22" start="3405" text="12/19/87" />
+<DATE TYPE="DATE" comment="" end="3428" id="P23" start="3421" text="1/18/88" />
+<NAME TYPE="PATIENT" comment="" end="3463" id="P24" start="3459" text="Moss" />
+<DATE TYPE="DATE" comment="" end="3496" id="P25" start="3492" text="1/19" />
+<DATE TYPE="DATE" comment="" end="4000" id="P26" start="3995" text="10/87" />
+<NAME TYPE="DOCTOR" comment="" end="4142" id="P28" start="4138" text="Kent" />
+<DATE TYPE="DATE" comment="" end="4477" id="P29" start="4472" text="12/87" />
+<DATE TYPE="DATE" comment="" end="8273" id="P33" start="8268" text="10/87" />
+<DATE TYPE="DATE" comment="" end="8281" id="P34" start="8276" text="11/87" />
+<DATE TYPE="DATE" comment="" end="8301" id="P35" start="8297" text="1/19" />
+<NAME TYPE="DOCTOR" comment="" end="10334" id="P37" start="10320" text="Yair Gillespie" />
+<CONTACT TYPE="PHONE" comment="" end="10349" id="P38" start="10344" text="52719" />
 </TAGS>
 </deIdi2b2>

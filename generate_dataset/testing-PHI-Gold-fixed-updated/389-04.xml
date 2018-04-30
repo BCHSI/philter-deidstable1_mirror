@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version='1.0' encoding='utf8'?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT>
 
 
 Record date: 2134-10-28
@@ -61,7 +61,7 @@ L ICA stenosis, followed medically with serial ultrasound, on aspirin
 
 DM2
 
-Lung cancer: s/p L partial resection 2106&#8217;s
+Lung cancer: s/p L partial resection 2106&amp;#8217;s
 
 BPH
 
@@ -69,7 +69,7 @@ PTSD
 
 Artificial R eye (s/p trauma 2069)
 
-CRI (baseline 1.1 &#8211; 1.3)
+CRI (baseline 1.1 &amp;#8211; 1.3)
 
 
 
@@ -119,7 +119,7 @@ SH:
 retired Civil Engineer; 
 
 (-) ETOH 
-(-) illicit drugs (+) tobacco &#8211; stopped 30 years ago; 30 pack year history
+(-) illicit drugs (+) tobacco &amp;#8211; stopped 30 years ago; 30 pack year history
 
 
 
@@ -175,7 +175,7 @@ Plasma Creatinine                1.38                      (0.60-1.50)    mg/dl
 
 eGFR                             51                                       mL/min/1.73m2
 
-     Abnormal if &lt;60 mL/min/1.73m2. If patient is African-American, multiply the
+     Abnormal if &amp;lt;60 mL/min/1.73m2. If patient is African-American, multiply the
 
      result by 1.21.
 
@@ -277,16 +277,16 @@ Plan:
 
 
 
-2.  HTN &#8211; continue Lasix, Losartan, and Lasix
+2.  HTN &amp;#8211; continue Lasix, Losartan, and Lasix
 
 
 
-3.  diabetes &#8211; Patient reportedly does NOT require medication for management.   Will check BS BID now that he is on oral Prednisone
+3.  diabetes &amp;#8211; Patient reportedly does NOT require medication for management.   Will check BS BID now that he is on oral Prednisone
 
 
 
 4. Glaucoma 
-&#8211; continue Brimonidine BID
+&amp;#8211; continue Brimonidine BID
 
 
 
@@ -305,23 +305,16 @@ Team 4 Beeper #07736
 
 
 
-***REMOVED******REMOVED***></TEXT>
+</TEXT>
 <TAGS>
-<DATE id="P0" start="16" end="26" text="2134-10-28" TYPE="DATE" comment="" />
-<NAME id="P1" start="95" end="109" text="Pearson, Tyler" TYPE="PATIENT" comment="" />
-<ID id="P2" start="115" end="122" text="7271902" TYPE="MEDICALRECORD" comment="" />
-<DATE id="P3" start="143" end="151" text="10/28/34" TYPE="DATE" comment="" />
-<NAME id="P4" start="214" end="221" text="Pearson" TYPE="PATIENT" comment="" />
-<AGE id="P5" start="227" end="229" text="89" TYPE="AGE" comment="" />
-<LOCATION id="P6" start="320" end="323" text="WMC" TYPE="HOSPITAL" comment="" />
-<LOCATION id="P7" start="396" end="415" text="Ross Medical Center" TYPE="HOSPITAL" comment="" />
-<DATE id="P8" start="916" end="922" text="6/2129" TYPE="DATE" comment="" />
-<DATE id="P9" start="1037" end="1041" text="2106" TYPE="DATE" comment="" />
-<DATE id="P10" start="1091" end="1095" text="2069" TYPE="DATE" comment="" />
-<PROFESSION id="P11" start="1805" end="1819" text="Civil Engineer" TYPE="PROFESSION" comment="" />
-<AGE id="P12" start="5913" end="5915" text="89" TYPE="AGE" comment="" />
-<LOCATION id="P13" start="6077" end="6090" text="Ross Hospital" TYPE="HOSPITAL" comment="" />
-<NAME id="P14" start="6798" end="6816" text="Gennaro B. Norwood" TYPE="DOCTOR" comment="" />
-<CONTACT id="P15" start="6854" end="6859" text="07736" TYPE="PHONE" comment="" />
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2134-10-28" />
+<NAME TYPE="PATIENT" comment="" end="109" id="P1" start="95" text="Pearson, Tyler" />
+<ID TYPE="MEDICALRECORD" comment="" end="122" id="P2" start="115" text="7271902" />
+<DATE TYPE="DATE" comment="" end="151" id="P3" start="143" text="10/28/34" />
+<NAME TYPE="PATIENT" comment="" end="221" id="P4" start="214" text="Pearson" />
+<DATE TYPE="DATE" comment="" end="922" id="P8" start="916" text="6/2129" />
+<PROFESSION TYPE="PROFESSION" comment="" end="1819" id="P11" start="1805" text="Civil Engineer" />
+<NAME TYPE="DOCTOR" comment="" end="6816" id="P14" start="6798" text="Gennaro B. Norwood" />
+<CONTACT TYPE="PHONE" comment="" end="6859" id="P15" start="6854" text="07736" />
 </TAGS>
 </deIdi2b2>

@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version='1.0' encoding='utf8'?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT>
 
 
 Record date: 2064-07-26
@@ -59,37 +59,31 @@ DWI/yim
 
 
 
-***REMOVED******REMOVED***></TEXT>
+</TEXT>
 <TAGS>
-<DATE id="P0" start="16" end="26" text="2064-07-26" TYPE="DATE" comment="" />
-<DATE id="P1" start="28" end="41" text="July 26, 2064" TYPE="DATE" comment="" />
-<NAME id="P2" start="47" end="60" text="Harry R. Lynn" TYPE="DOCTOR" comment="" />
-<LOCATION id="P3" start="68" end="98" text="Doraville County Health Center" TYPE="HOSPITAL" comment="" />
-<LOCATION id="P4" start="100" end="116" text="897 Cider Street" TYPE="STREET" comment="" />
-<LOCATION id="P5" start="118" end="129" text="Platteville" TYPE="CITY" comment="" />
-<LOCATION id="P6" start="131" end="133" text="HI" TYPE="STATE" comment="" />
-<LOCATION id="P7" start="134" end="139" text="79812" TYPE="ZIP" comment="" />
-<NAME id="P8" start="151" end="168" text="Isabelle Y. Quick" TYPE="PATIENT" comment="" />
-<LOCATION id="P9" start="170" end="174" text="ATCH" TYPE="HOSPITAL" comment="" />
-<ID id="P10" start="178" end="187" text="655-75-45" TYPE="MEDICALRECORD" comment="" />
-<NAME id="P11" start="196" end="201" text="Harry" TYPE="DOCTOR" comment="" />
-<NAME id="P12" start="206" end="210" text="Yair" TYPE="DOCTOR" comment="" />
-<AGE id="P13" start="399" end="401" text="52" TYPE="AGE" comment="" />
-<DATE id="P14" start="863" end="878" text="January of 2063" TYPE="DATE" comment="" />
-<DATE id="P15" start="1137" end="1150" text="April of 2063" TYPE="DATE" comment="" />
-<DATE id="P16" start="1473" end="1479" text="spring" TYPE="DATE" comment="" />
-<DATE id="P17" start="1896" end="1903" text="October" TYPE="DATE" comment="" />
-<NAME id="P18" start="2125" end="2131" text="Adcock" TYPE="DOCTOR" comment="" />
-<DATE id="P19" start="2355" end="2359" text="2061" TYPE="DATE" comment="" />
-<NAME id="P20" start="3322" end="3326" text="Yair" TYPE="DOCTOR" comment="" />
-<DATE id="P21" start="3527" end="3534" text="October" TYPE="DATE" comment="" />
-<NAME id="P22" start="3825" end="3842" text="Daniel W. Iniguez" TYPE="DOCTOR" comment="" />
-<NAME id="P23" start="3856" end="3871" text="Yair K. Bennett" TYPE="DOCTOR" comment="" />
-<LOCATION id="P24" start="3879" end="3896" text="208 Pheasant Lane" TYPE="STREET" comment="" />
-<LOCATION id="P25" start="3898" end="3909" text="Platteville" TYPE="CITY" comment="" />
-<LOCATION id="P26" start="3911" end="3913" text="HI" TYPE="STATE" comment="" />
-<LOCATION id="P27" start="3914" end="3919" text="79812" TYPE="ZIP" comment="" />
-<NAME id="P28" start="3923" end="3926" text="DWI" TYPE="DOCTOR" comment="" />
-<NAME id="P29" start="3927" end="3930" text="yim" TYPE="DOCTOR" comment="" />
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2064-07-26" />
+<DATE TYPE="DATE" comment="" end="41" id="P1" start="28" text="July 26, 2064" />
+<NAME TYPE="DOCTOR" comment="" end="60" id="P2" start="47" text="Harry R. Lynn" />
+<LOCATION TYPE="STREET" comment="" end="116" id="P4" start="100" text="897 Cider Street" />
+<LOCATION TYPE="CITY" comment="" end="129" id="P5" start="118" text="Platteville" />
+<LOCATION TYPE="STATE" comment="" end="133" id="P6" start="131" text="HI" />
+<LOCATION TYPE="ZIP" comment="" end="139" id="P7" start="134" text="79812" />
+<NAME TYPE="PATIENT" comment="" end="168" id="P8" start="151" text="Isabelle Y. Quick" />
+<ID TYPE="MEDICALRECORD" comment="" end="187" id="P10" start="178" text="655-75-45" />
+<NAME TYPE="DOCTOR" comment="" end="201" id="P11" start="196" text="Harry" />
+<NAME TYPE="DOCTOR" comment="" end="210" id="P12" start="206" text="Yair" />
+<DATE TYPE="DATE" comment="" end="878" id="P14" start="863" text="January of 2063" />
+<DATE TYPE="DATE" comment="" end="1150" id="P15" start="1137" text="April of 2063" />
+<DATE TYPE="DATE" comment="" end="1903" id="P17" start="1896" text="October" />
+<NAME TYPE="DOCTOR" comment="" end="2131" id="P18" start="2125" text="Adcock" />
+<NAME TYPE="DOCTOR" comment="" end="3326" id="P20" start="3322" text="Yair" />
+<DATE TYPE="DATE" comment="" end="3534" id="P21" start="3527" text="October" />
+<NAME TYPE="DOCTOR" comment="" end="3842" id="P22" start="3825" text="Daniel W. Iniguez" />
+<NAME TYPE="DOCTOR" comment="" end="3871" id="P23" start="3856" text="Yair K. Bennett" />
+<LOCATION TYPE="STREET" comment="" end="3896" id="P24" start="3879" text="208 Pheasant Lane" />
+<LOCATION TYPE="CITY" comment="" end="3909" id="P25" start="3898" text="Platteville" />
+<LOCATION TYPE="STATE" comment="" end="3913" id="P26" start="3911" text="HI" />
+<LOCATION TYPE="ZIP" comment="" end="3919" id="P27" start="3914" text="79812" />
+<NAME TYPE="DOCTOR" comment="" end="3930" id="P29" start="3927" text="yim" />
 </TAGS>
 </deIdi2b2>

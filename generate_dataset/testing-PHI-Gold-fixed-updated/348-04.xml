@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version='1.0' encoding='utf8'?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT>
 
 
 Record date: 2070-04-02
@@ -149,14 +149,13 @@ Othel  Vidal, M.D.
 
 
 
-***REMOVED******REMOVED***></TEXT>
+</TEXT>
 <TAGS>
-<DATE id="P0" start="16" end="26" text="2070-04-02" TYPE="DATE" comment="" />
-<NAME id="P1" start="170" end="173" text="Xin" TYPE="PATIENT" comment="" />
-<DATE id="P2" start="431" end="437" text="3/2070" TYPE="DATE" comment="" />
-<DATE id="P3" start="610" end="614" text="2069" TYPE="DATE" comment="" />
-<PROFESSION id="P4" start="1768" end="1775" text="cashier" TYPE="PROFESSION" comment="" />
-<NAME id="P5" start="2210" end="2224" text="Carolyn Delong" TYPE="DOCTOR" comment="" />
-<NAME id="P6" start="2640" end="2652" text="Othel  Vidal" TYPE="DOCTOR" comment="" />
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2070-04-02" />
+<NAME TYPE="PATIENT" comment="" end="173" id="P1" start="170" text="Xin" />
+<DATE TYPE="DATE" comment="" end="437" id="P2" start="431" text="3/2070" />
+<PROFESSION TYPE="PROFESSION" comment="" end="1775" id="P4" start="1768" text="cashier" />
+<NAME TYPE="DOCTOR" comment="" end="2224" id="P5" start="2210" text="Carolyn Delong" />
+<NAME TYPE="DOCTOR" comment="" end="2652" id="P6" start="2640" text="Othel  Vidal" />
 </TAGS>
 </deIdi2b2>

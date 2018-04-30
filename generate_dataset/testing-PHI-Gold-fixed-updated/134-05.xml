@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version='1.0' encoding='utf8'?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT>
 
 
 Record date: 2096-04-15
@@ -84,7 +84,7 @@ Physical examination:
 -Cardiac:   RRR. S1 and S2 normal.  No S3, S4, murmur, gallop, or rub.
 -Abdomen:   Soft, nontender.  No hepatomegaly or splenomegaly.  No bruit.
 -Extremities:   No edema. 2+ femorals with no bruits bilaterally. 1+ DP/PT bilaterally. 
--Neuro:   A &amp;O X 3. MAE. 
+-Neuro:   A &amp;amp;O X 3. MAE. 
 -BP:   right 130/67 left-146/40
 
 Selected recent labs:
@@ -140,36 +140,30 @@ Document Status: Final
 
 
 
-***REMOVED******REMOVED***></TEXT>
+</TEXT>
 <TAGS>
-<DATE id="P0" start="16" end="26" text="2096-04-15" TYPE="DATE" comment="" />
-<LOCATION id="P1" start="45" end="65" text="PRIMGHAR CARE CENTER" TYPE="HOSPITAL" comment="" />
-<NAME id="P2" start="197" end="202" text="Ickes" TYPE="DOCTOR" comment="" />
-<AGE id="P3" start="215" end="217" text="82" TYPE="AGE" comment="" />
-<DATE id="P4" start="379" end="384" text="12/95" TYPE="DATE" comment="" />
-<NAME id="P5" start="476" end="483" text="Xaysana" TYPE="DOCTOR" comment="" />
-<DATE id="P6" start="487" end="494" text="4/23/96" TYPE="DATE" comment="" />
-<NAME id="P7" start="502" end="508" text="Jarvis" TYPE="PATIENT" comment="" />
-<DATE id="P8" start="536" end="541" text="12/95" TYPE="DATE" comment="" />
-<DATE id="P9" start="1520" end="1525" text="12/95" TYPE="DATE" comment="" />
-<NAME id="P10" start="1569" end="1576" text="Xaysana" TYPE="DOCTOR" comment="" />
-<NAME id="P11" start="1803" end="1810" text="Xaysana" TYPE="DOCTOR" comment="" />
-<DATE id="P12" start="1814" end="1821" text="4/23/96" TYPE="DATE" comment="" />
-<AGE id="P13" start="2608" end="2610" text="56" TYPE="AGE" comment="" />
-<AGE id="P14" start="2665" end="2668" text="80s" TYPE="AGE" comment="" />
-<AGE id="P15" start="2731" end="2733" text="55" TYPE="AGE" comment="" />
-<PROFESSION id="P16" start="2984" end="3010" text="Primary Production Manager" TYPE="PROFESSION" comment="" />
-<DATE id="P17" start="4209" end="4217" text="04/10/96" TYPE="DATE" comment="" />
-<DATE id="P18" start="4282" end="4290" text="04/15/96" TYPE="DATE" comment="" />
-<DATE id="P19" start="4413" end="4421" text="12/13/95" TYPE="DATE" comment="" />
-<DATE id="P20" start="4502" end="4510" text="12/12/95" TYPE="DATE" comment="" />
-<DATE id="P21" start="4597" end="4605" text="04/10/96" TYPE="DATE" comment="" />
-<DATE id="P22" start="4684" end="4692" text="04/10/96" TYPE="DATE" comment="" />
-<DATE id="P23" start="4752" end="4760" text="02/08/96" TYPE="DATE" comment="" />
-<DATE id="P24" start="4797" end="4805" text="04/10/96" TYPE="DATE" comment="" />
-<AGE id="P25" start="4858" end="4860" text="82" TYPE="AGE" comment="" />
-<NAME id="P26" start="5434" end="5439" text="Ickes" TYPE="DOCTOR" comment="" />
-<NAME id="P27" start="5443" end="5461" text="Jenna H. Whittaker" TYPE="DOCTOR" comment="" />
-<NAME id="P28" start="5495" end="5513" text="Jenna H. Whittaker" TYPE="DOCTOR" comment="" />
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2096-04-15" />
+<NAME TYPE="DOCTOR" comment="" end="202" id="P2" start="197" text="Ickes" />
+<DATE TYPE="DATE" comment="" end="384" id="P4" start="379" text="12/95" />
+<NAME TYPE="DOCTOR" comment="" end="483" id="P5" start="476" text="Xaysana" />
+<DATE TYPE="DATE" comment="" end="494" id="P6" start="487" text="4/23/96" />
+<NAME TYPE="PATIENT" comment="" end="508" id="P7" start="502" text="Jarvis" />
+<DATE TYPE="DATE" comment="" end="541" id="P8" start="536" text="12/95" />
+<DATE TYPE="DATE" comment="" end="1525" id="P9" start="1520" text="12/95" />
+<NAME TYPE="DOCTOR" comment="" end="1576" id="P10" start="1569" text="Xaysana" />
+<NAME TYPE="DOCTOR" comment="" end="1810" id="P11" start="1803" text="Xaysana" />
+<DATE TYPE="DATE" comment="" end="1821" id="P12" start="1814" text="4/23/96" />
+<PROFESSION TYPE="PROFESSION" comment="" end="3010" id="P16" start="2984" text="Primary Production Manager" />
+<DATE TYPE="DATE" comment="" end="4217" id="P17" start="4209" text="04/10/96" />
+<DATE TYPE="DATE" comment="" end="4290" id="P18" start="4282" text="04/15/96" />
+<DATE TYPE="DATE" comment="" end="4421" id="P19" start="4413" text="12/13/95" />
+<DATE TYPE="DATE" comment="" end="4510" id="P20" start="4502" text="12/12/95" />
+<DATE TYPE="DATE" comment="" end="4605" id="P21" start="4597" text="04/10/96" />
+<DATE TYPE="DATE" comment="" end="4692" id="P22" start="4684" text="04/10/96" />
+<DATE TYPE="DATE" comment="" end="4760" id="P23" start="4752" text="02/08/96" />
+<DATE TYPE="DATE" comment="" end="4805" id="P24" start="4797" text="04/10/96" />
+<NAME TYPE="DOCTOR" comment="" end="5439" id="P26" start="5434" text="Ickes" />
+<NAME TYPE="DOCTOR" comment="" end="5461" id="P27" start="5443" text="Jenna H. Whittaker" />
+<NAME TYPE="DOCTOR" comment="" end="5513" id="P28" start="5495" text="Jenna H. Whittaker" />
 </TAGS>
 </deIdi2b2>

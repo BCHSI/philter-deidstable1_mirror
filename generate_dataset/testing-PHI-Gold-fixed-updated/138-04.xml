@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version='1.0' encoding='utf8'?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT>
 
 
 Record date: 2076-04-19
@@ -113,38 +113,33 @@ DV: 04/19/76
 
 
 
-***REMOVED******REMOVED***></TEXT>
+</TEXT>
 <TAGS>
-<DATE id="P0" start="16" end="26" text="2076-04-19" TYPE="DATE" comment="" />
-<NAME id="P1" start="33" end="49" text="PRESTON, FRANCES" TYPE="PATIENT" comment="" />
-<ID id="P2" start="50" end="58" text="05850080" TYPE="MEDICALRECORD" comment="" />
-<DATE id="P3" start="59" end="69" text="04/19/2076" TYPE="DATE" comment="" />
-<NAME id="P4" start="74" end="86" text="Louis Barron" TYPE="DOCTOR" comment="" />
-<LOCATION id="P5" start="93" end="118" text="Shelby Dental Care Center" TYPE="HOSPITAL" comment="" />
-<LOCATION id="P6" start="119" end="138" text="5601 Edwards Street" TYPE="STREET" comment="" />
-<LOCATION id="P7" start="139" end="144" text="Cozad" TYPE="CITY" comment="" />
-<LOCATION id="P8" start="146" end="148" text="OK" TYPE="STATE" comment="" />
-<LOCATION id="P9" start="150" end="155" text="53952" TYPE="ZIP" comment="" />
-<NAME id="P10" start="167" end="173" text="Barron" TYPE="DOCTOR" comment="" />
-<NAME id="P11" start="223" end="238" text="Frances Preston" TYPE="PATIENT" comment="" />
-<LOCATION id="P12" start="273" end="296" text="Weston General Hospital" TYPE="HOSPITAL" comment="" />
-<NAME id="P13" start="454" end="461" text="Frances" TYPE="PATIENT" comment="" />
-<AGE id="P14" start="481" end="483" text="51" TYPE="AGE" comment="" />
-<LOCATION id="P15" start="493" end="499" text="Danish" TYPE="COUNTRY" comment="" />
-<DATE id="P16" start="741" end="746" text="March" TYPE="DATE" comment="" />
-<DATE id="P17" start="783" end="793" text="04/09/2076" TYPE="DATE" comment="" />
-<LOCATION id="P18" start="805" end="813" text="New York" TYPE="STATE" comment="" />
-<LOCATION id="P19" start="1048" end="1070" text="Cabrini Medical Center" TYPE="HOSPITAL" comment="" />
-<NAME id="P20" start="2360" end="2366" text="Landis" TYPE="PATIENT" comment="" />
-<NAME id="P21" start="2413" end="2419" text="Landis" TYPE="PATIENT" comment="" />
-<CONTACT id="P22" start="2454" end="2466" text="944-351-0904" TYPE="PHONE" comment="" />
-<DATE id="P23" start="3842" end="3852" text="04/16/2076" TYPE="DATE" comment="" />
-<NAME id="P24" start="4226" end="4233" text="Preston" TYPE="PATIENT" comment="" />
-<NAME id="P25" start="6183" end="6189" text="Landis" TYPE="PATIENT" comment="" />
-<NAME id="P26" start="6510" end="6526" text="Corrie Q Newland" TYPE="DOCTOR" comment="" />
-<ID id="P27" start="6561" end="6570" text="3-6567539" TYPE="IDNUM" comment="" />
-<DATE id="P28" start="6589" end="6597" text="04/19/76" TYPE="DATE" comment="" />
-<DATE id="P29" start="6602" end="6610" text="04/20/76" TYPE="DATE" comment="" />
-<DATE id="P30" start="6615" end="6623" text="04/19/76" TYPE="DATE" comment="" />
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2076-04-19" />
+<NAME TYPE="PATIENT" comment="" end="49" id="P1" start="33" text="PRESTON, FRANCES" />
+<ID TYPE="MEDICALRECORD" comment="" end="58" id="P2" start="50" text="05850080" />
+<DATE TYPE="DATE" comment="" end="69" id="P3" start="59" text="04/19/2076" />
+<NAME TYPE="DOCTOR" comment="" end="86" id="P4" start="74" text="Louis Barron" />
+<LOCATION TYPE="STREET" comment="" end="138" id="P6" start="119" text="5601 Edwards Street" />
+<LOCATION TYPE="CITY" comment="" end="144" id="P7" start="139" text="Cozad" />
+<LOCATION TYPE="STATE" comment="" end="148" id="P8" start="146" text="OK" />
+<LOCATION TYPE="ZIP" comment="" end="155" id="P9" start="150" text="53952" />
+<NAME TYPE="DOCTOR" comment="" end="173" id="P10" start="167" text="Barron" />
+<NAME TYPE="PATIENT" comment="" end="238" id="P11" start="223" text="Frances Preston" />
+<NAME TYPE="PATIENT" comment="" end="461" id="P13" start="454" text="Frances" />
+<DATE TYPE="DATE" comment="" end="746" id="P16" start="741" text="March" />
+<DATE TYPE="DATE" comment="" end="793" id="P17" start="783" text="04/09/2076" />
+<LOCATION TYPE="STATE" comment="" end="813" id="P18" start="805" text="New York" />
+<NAME TYPE="PATIENT" comment="" end="2366" id="P20" start="2360" text="Landis" />
+<NAME TYPE="PATIENT" comment="" end="2419" id="P21" start="2413" text="Landis" />
+<CONTACT TYPE="PHONE" comment="" end="2466" id="P22" start="2454" text="944-351-0904" />
+<DATE TYPE="DATE" comment="" end="3852" id="P23" start="3842" text="04/16/2076" />
+<NAME TYPE="PATIENT" comment="" end="4233" id="P24" start="4226" text="Preston" />
+<NAME TYPE="PATIENT" comment="" end="6189" id="P25" start="6183" text="Landis" />
+<NAME TYPE="DOCTOR" comment="" end="6526" id="P26" start="6510" text="Corrie Q Newland" />
+<ID TYPE="IDNUM" comment="" end="6570" id="P27" start="6561" text="3-6567539" />
+<DATE TYPE="DATE" comment="" end="6597" id="P28" start="6589" text="04/19/76" />
+<DATE TYPE="DATE" comment="" end="6610" id="P29" start="6602" text="04/20/76" />
+<DATE TYPE="DATE" comment="" end="6623" id="P30" start="6615" text="04/19/76" />
 </TAGS>
 </deIdi2b2>

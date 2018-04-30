@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version='1.0' encoding='utf8'?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT>
 
 
 Record date: 2071-05-31
@@ -93,30 +93,21 @@ DV:5-31-71
 
 
 
-***REMOVED******REMOVED***></TEXT>
+</TEXT>
 <TAGS>
-<DATE id="P0" start="16" end="26" text="2071-05-31" TYPE="DATE" comment="" />
-<NAME id="P2" start="74" end="87" text="Xian, Imogene" TYPE="PATIENT" comment="" />
-<ID id="P3" start="135" end="143" text="81376761" TYPE="MEDICALRECORD" comment="" />
-<DATE id="P4" start="191" end="198" text="5-31-71" TYPE="DATE" comment="" />
-<NAME id="P5" start="215" end="219" text="Xian" TYPE="PATIENT" comment="" />
-<AGE id="P6" start="225" end="227" text="74" TYPE="AGE" comment="" />
-<DATE id="P8" start="351" end="356" text="11-70" TYPE="DATE" comment="" />
-<LOCATION id="P9" start="387" end="392" text="Ghana" TYPE="COUNTRY" comment="" />
-<DATE id="P10" start="443" end="449" text="Friday" TYPE="DATE" comment="" />
-<LOCATION id="P11" start="674" end="679" text="Ghana" TYPE="COUNTRY" comment="" />
-<LOCATION id="P12" start="719" end="724" text="Ghana" TYPE="COUNTRY" comment="" />
-<NAME id="P13" start="946" end="950" text="Xian" TYPE="PATIENT" comment="" />
-<DATE id="P14" start="1178" end="1184" text="Sunday" TYPE="DATE" comment="" />
-<DATE id="P15" start="1254" end="1259" text="11-70" TYPE="DATE" comment="" />
-<DATE id="P16" start="1697" end="1705" text="Saturday" TYPE="DATE" comment="" />
-<DATE id="P17" start="1706" end="1710" text="6-05" TYPE="DATE" comment="" />
-<NAME id="P18" start="1868" end="1878" text="Grace Vann" TYPE="DOCTOR" comment="" />
-<NAME id="P19" start="1941" end="1943" text="DG" TYPE="DOCTOR" comment="" />
-<NAME id="P20" start="1944" end="1946" text="WA" TYPE="DOCTOR" comment="" />
-<ID id="P21" start="1947" end="1951" text="1749" TYPE="IDNUM" comment="" />
-<DATE id="P22" start="2018" end="2025" text="5-31-71" TYPE="DATE" comment="" />
-<DATE id="P23" start="2093" end="2099" text="6-1-71" TYPE="DATE" comment="" />
-<DATE id="P24" start="2167" end="2174" text="5-31-71" TYPE="DATE" comment="" />
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2071-05-31" />
+<NAME TYPE="PATIENT" comment="" end="87" id="P2" start="74" text="Xian, Imogene" />
+<ID TYPE="MEDICALRECORD" comment="" end="143" id="P3" start="135" text="81376761" />
+<DATE TYPE="DATE" comment="" end="198" id="P4" start="191" text="5-31-71" />
+<NAME TYPE="PATIENT" comment="" end="219" id="P5" start="215" text="Xian" />
+<DATE TYPE="DATE" comment="" end="356" id="P8" start="351" text="11-70" />
+<NAME TYPE="PATIENT" comment="" end="950" id="P13" start="946" text="Xian" />
+<DATE TYPE="DATE" comment="" end="1259" id="P15" start="1254" text="11-70" />
+<DATE TYPE="DATE" comment="" end="1710" id="P17" start="1706" text="6-05" />
+<NAME TYPE="DOCTOR" comment="" end="1878" id="P18" start="1868" text="Grace Vann" />
+<ID TYPE="IDNUM" comment="" end="1951" id="P21" start="1947" text="1749" />
+<DATE TYPE="DATE" comment="" end="2025" id="P22" start="2018" text="5-31-71" />
+<DATE TYPE="DATE" comment="" end="2099" id="P23" start="2093" text="6-1-71" />
+<DATE TYPE="DATE" comment="" end="2174" id="P24" start="2167" text="5-31-71" />
 </TAGS>
 </deIdi2b2>

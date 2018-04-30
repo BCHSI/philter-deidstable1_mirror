@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version='1.0' encoding='utf8'?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT>
 
 
 Record date: 2088-01-06
@@ -141,19 +141,13 @@ Singh, M.D.
 
 
 
-***REMOVED******REMOVED***></TEXT>
+</TEXT>
 <TAGS>
-<DATE id="P0" start="16" end="26" text="2088-01-06" TYPE="DATE" comment="" />
-<AGE id="P1" start="70" end="72" text="59" TYPE="AGE" comment="" />
-<LOCATION id="P2" start="230" end="233" text="HDC" TYPE="HOSPITAL" comment="" />
-<DATE id="P3" start="498" end="503" text="11/25" TYPE="DATE" comment="" />
-<NAME id="P4" start="603" end="606" text="Yap" TYPE="DOCTOR" comment="" />
-<LOCATION id="P5" start="610" end="612" text="MS" TYPE="HOSPITAL" comment="" />
-<AGE id="P6" start="813" end="815" text="52" TYPE="AGE" comment="" />
-<DATE id="P7" start="873" end="879" text="1/2082" TYPE="DATE" comment="" />
-<DATE id="P8" start="1005" end="1008" text="'67" TYPE="DATE" comment="" />
-<LOCATION id="P9" start="2573" end="2575" text="MS" TYPE="HOSPITAL" comment="" />
-<LOCATION id="P10" start="2846" end="2864" text="Montefiore Springs" TYPE="HOSPITAL" comment="" />
-<NAME id="P11" start="2869" end="2874" text="Singh" TYPE="DOCTOR" comment="" />
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2088-01-06" />
+<DATE TYPE="DATE" comment="" end="503" id="P3" start="498" text="11/25" />
+<NAME TYPE="DOCTOR" comment="" end="606" id="P4" start="603" text="Yap" />
+<DATE TYPE="DATE" comment="" end="879" id="P7" start="873" text="1/2082" />
+<DATE TYPE="DATE" comment="" end="1008" id="P8" start="1005" text="'67" />
+<NAME TYPE="DOCTOR" comment="" end="2874" id="P11" start="2869" text="Singh" />
 </TAGS>
 </deIdi2b2>

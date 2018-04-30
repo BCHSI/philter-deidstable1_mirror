@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version='1.0' encoding='utf8'?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT>
 
 
 Record date: 2067-08-02
@@ -27,7 +27,7 @@ Diabetes mellitus : type 2
 Noncompliance : poor compliance
 Basal cell carcinoma : carcinoma of skin left cheek
 Lower extremity ulcer : DIABETIC FOOT ULCER. L Foot
-Abscess : Rt shin 2062Back: 11/64. S/P I&D
+Abscess : Rt shin 2062Back: 11/64. S/P I&amp;D
 Mitral valve insufficiency : severe, with cardiomyopathy and EF 36%
 Colonic polyps : tubulovillious adenoma 11/65. Needs repeat scope 11/66
 FH Uncoded Information:
@@ -60,19 +60,12 @@ At today's visit, the patient's wound was dressed and cleaned the our nursing st
 
 
 
-***REMOVED******REMOVED***></TEXT>
+</TEXT>
 <TAGS>
-<DATE id="P0" start="16" end="26" text="2067-08-02" TYPE="DATE" comment="" />
-<AGE id="P1" start="28" end="30" text="60" TYPE="AGE" comment="" />
-<NAME id="P2" start="295" end="302" text="Sanchez" TYPE="DOCTOR" comment="" />
-<LOCATION id="P3" start="529" end="556" text="Northport Veterans Hospital" TYPE="HOSPITAL" comment="" />
-<DATE id="P4" start="1444" end="1448" text="2062" TYPE="DATE" comment="" />
-<DATE id="P5" start="1454" end="1459" text="11/64" TYPE="DATE" comment="" />
-<DATE id="P6" start="1577" end="1582" text="11/65" TYPE="DATE" comment="" />
-<DATE id="P7" start="1603" end="1608" text="11/66" TYPE="DATE" comment="" />
-<AGE id="P8" start="3208" end="3210" text="60" TYPE="AGE" comment="" />
-<LOCATION id="P9" start="3785" end="3806" text="Island Medical Center" TYPE="HOSPITAL" comment="" />
-<DATE id="P10" start="3829" end="3836" text="Tuesday" TYPE="DATE" comment="" />
-<DATE id="P11" start="4335" end="4342" text="Tuesday" TYPE="DATE" comment="" />
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2067-08-02" />
+<NAME TYPE="DOCTOR" comment="" end="302" id="P2" start="295" text="Sanchez" />
+<DATE TYPE="DATE" comment="" end="1459" id="P5" start="1454" text="11/64" />
+<DATE TYPE="DATE" comment="" end="1582" id="P6" start="1577" text="11/65" />
+<DATE TYPE="DATE" comment="" end="1608" id="P7" start="1603" text="11/66" />
 </TAGS>
 </deIdi2b2>

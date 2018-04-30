@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version='1.0' encoding='utf8'?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT>
 
 
 Record date: 2096-07-19
@@ -59,22 +59,20 @@ Dictated by:  MARY LUND, M.D.  ML82
 
 
 
-***REMOVED******REMOVED***></TEXT>
+</TEXT>
 <TAGS>
-<DATE id="P0" start="16" end="26" text="2096-07-19" TYPE="DATE" comment="" />
-<LOCATION id="P1" start="49" end="59" text="ST VINCENT" TYPE="HOSPITAL" comment="" />
-<NAME id="P2" start="83" end="95" text="LAU,HELEN M." TYPE="PATIENT" comment="" />
-<ID id="P3" start="98" end="109" text="544-41-32-1" TYPE="MEDICALRECORD" comment="" />
-<DATE id="P4" start="135" end="143" text="07/19/96" TYPE="DATE" comment="" />
-<NAME id="P5" start="179" end="184" text="Foust" TYPE="DOCTOR" comment="" />
-<DATE id="P6" start="185" end="193" text="07-19-96" TYPE="DATE" comment="" />
-<AGE id="P7" start="285" end="287" text="67" TYPE="AGE" comment="" />
-<ID id="P8" start="2681" end="2691" text="OX540/6976" TYPE="IDNUM" comment="" />
-<NAME id="P9" start="2693" end="2702" text="MARY LUND" TYPE="DOCTOR" comment="" />
-<NAME id="P10" start="2710" end="2714" text="ML82" TYPE="USERNAME" comment="" />
-<DATE id="P11" start="2747" end="2755" text="07/19/96" TYPE="DATE" comment="" />
-<DATE id="P12" start="2814" end="2822" text="07/19/96" TYPE="DATE" comment="" />
-<NAME id="P13" start="2838" end="2847" text="MARY LUND" TYPE="DOCTOR" comment="" />
-<NAME id="P14" start="2855" end="2859" text="ML82" TYPE="USERNAME" comment="" />
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2096-07-19" />
+<NAME TYPE="PATIENT" comment="" end="95" id="P2" start="83" text="LAU,HELEN M." />
+<ID TYPE="MEDICALRECORD" comment="" end="109" id="P3" start="98" text="544-41-32-1" />
+<DATE TYPE="DATE" comment="" end="143" id="P4" start="135" text="07/19/96" />
+<NAME TYPE="DOCTOR" comment="" end="184" id="P5" start="179" text="Foust" />
+<DATE TYPE="DATE" comment="" end="193" id="P6" start="185" text="07-19-96" />
+<ID TYPE="IDNUM" comment="" end="2691" id="P8" start="2681" text="OX540/6976" />
+<NAME TYPE="DOCTOR" comment="" end="2702" id="P9" start="2693" text="MARY LUND" />
+<NAME TYPE="USERNAME" comment="" end="2714" id="P10" start="2710" text="ML82" />
+<DATE TYPE="DATE" comment="" end="2755" id="P11" start="2747" text="07/19/96" />
+<DATE TYPE="DATE" comment="" end="2822" id="P12" start="2814" text="07/19/96" />
+<NAME TYPE="DOCTOR" comment="" end="2847" id="P13" start="2838" text="MARY LUND" />
+<NAME TYPE="USERNAME" comment="" end="2859" id="P14" start="2855" text="ML82" />
 </TAGS>
 </deIdi2b2>

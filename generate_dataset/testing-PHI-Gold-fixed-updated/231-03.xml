@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version='1.0' encoding='utf8'?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT>
 
 
 Record date: 2095-07-16
@@ -129,31 +129,23 @@ Pager 76006
 
 
 
-***REMOVED******REMOVED***></TEXT>
+</TEXT>
 <TAGS>
-<DATE id="P0" start="16" end="26" text="2095-07-16" TYPE="DATE" comment="" />
-<NAME id="P1" start="94" end="108" text="John Escamilla" TYPE="DOCTOR" comment="" />
-<NAME id="P2" start="122" end="132" text="Robert Ivy" TYPE="DOCTOR" comment="" />
-<NAME id="P3" start="155" end="170" text="Zachary Terrell" TYPE="DOCTOR" comment="" />
-<NAME id="P4" start="191" end="208" text="Victor L. Bonilla" TYPE="DOCTOR" comment="" />
-<ID id="P5" start="214" end="221" text="0658969" TYPE="MEDICALRECORD" comment="" />
-<NAME id="P6" start="232" end="245" text="Fagan, Joanne" TYPE="PATIENT" comment="" />
-<DATE id="P7" start="266" end="273" text="7/16/95" TYPE="DATE" comment="" />
-<AGE id="P8" start="351" end="353" text="41" TYPE="AGE" comment="" />
-<DATE id="P9" start="654" end="658" text="2094" TYPE="DATE" comment="" />
-<DATE id="P10" start="694" end="698" text="2089" TYPE="DATE" comment="" />
-<DATE id="P11" start="901" end="905" text="8/94" TYPE="DATE" comment="" />
-<DATE id="P12" start="924" end="928" text="9/94" TYPE="DATE" comment="" />
-<DATE id="P13" start="980" end="985" text="10/94" TYPE="DATE" comment="" />
-<DATE id="P14" start="986" end="991" text="12/94" TYPE="DATE" comment="" />
-<DATE id="P15" start="1202" end="1206" text="2093" TYPE="DATE" comment="" />
-<DATE id="P16" start="1434" end="1440" text="Sunday" TYPE="DATE" comment="" />
-<NAME id="P17" start="1568" end="1575" text="Valenti" TYPE="DOCTOR" comment="" />
-<PROFESSION id="P18" start="1739" end="1749" text="seamstress" TYPE="PROFESSION" comment="" />
-<AGE id="P19" start="1925" end="1929" text="60's" TYPE="AGE" comment="" />
-<AGE id="P20" start="1958" end="1960" text="70" TYPE="AGE" comment="" />
-<AGE id="P21" start="2388" end="2390" text="41" TYPE="AGE" comment="" />
-<NAME id="P22" start="2571" end="2588" text="Victor L. Bonilla" TYPE="DOCTOR" comment="" />
-<CONTACT id="P23" start="2604" end="2609" text="76006" TYPE="PHONE" comment="" />
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2095-07-16" />
+<NAME TYPE="DOCTOR" comment="" end="108" id="P1" start="94" text="John Escamilla" />
+<NAME TYPE="DOCTOR" comment="" end="132" id="P2" start="122" text="Robert Ivy" />
+<NAME TYPE="DOCTOR" comment="" end="170" id="P3" start="155" text="Zachary Terrell" />
+<NAME TYPE="DOCTOR" comment="" end="208" id="P4" start="191" text="Victor L. Bonilla" />
+<ID TYPE="MEDICALRECORD" comment="" end="221" id="P5" start="214" text="0658969" />
+<NAME TYPE="PATIENT" comment="" end="245" id="P6" start="232" text="Fagan, Joanne" />
+<DATE TYPE="DATE" comment="" end="273" id="P7" start="266" text="7/16/95" />
+<DATE TYPE="DATE" comment="" end="905" id="P11" start="901" text="8/94" />
+<DATE TYPE="DATE" comment="" end="928" id="P12" start="924" text="9/94" />
+<DATE TYPE="DATE" comment="" end="985" id="P13" start="980" text="10/94" />
+<DATE TYPE="DATE" comment="" end="991" id="P14" start="986" text="12/94" />
+<NAME TYPE="DOCTOR" comment="" end="1575" id="P17" start="1568" text="Valenti" />
+<PROFESSION TYPE="PROFESSION" comment="" end="1749" id="P18" start="1739" text="seamstress" />
+<NAME TYPE="DOCTOR" comment="" end="2588" id="P22" start="2571" text="Victor L. Bonilla" />
+<CONTACT TYPE="PHONE" comment="" end="2609" id="P23" start="2604" text="76006" />
 </TAGS>
 </deIdi2b2>

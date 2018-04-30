@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version='1.0' encoding='utf8'?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT>
 
 
 Record date: 2071-08-21
@@ -291,47 +291,40 @@ Jordan, FL  83712
 
 
 
-***REMOVED******REMOVED***></TEXT>
+</TEXT>
 <TAGS>
-<DATE id="P0" start="16" end="26" text="2071-08-21" TYPE="DATE" comment="" />
-<DATE id="P1" start="52" end="67" text="August 21, 2071" TYPE="DATE" comment="" />
-<NAME id="P2" start="78" end="90" text="Aiden Geiger" TYPE="DOCTOR" comment="" />
-<LOCATION id="P3" start="99" end="127" text="Friendship Villa Care Center" TYPE="HOSPITAL" comment="" />
-<LOCATION id="P4" start="129" end="146" text="58 Hyannis Street" TYPE="STREET" comment="" />
-<LOCATION id="P5" start="148" end="158" text="Sioux City" TYPE="CITY" comment="" />
-<LOCATION id="P6" start="161" end="163" text="FL" TYPE="STATE" comment="" />
-<LOCATION id="P7" start="165" end="170" text="76546" TYPE="ZIP" comment="" />
-<NAME id="P8" start="180" end="200" text="Vivian Lea Jorgenson" TYPE="PATIENT" comment="" />
-<ID id="P9" start="210" end="221" text="471-90-84-7" TYPE="MEDICALRECORD" comment="" />
-<NAME id="P10" start="235" end="241" text="Geiger" TYPE="DOCTOR" comment="" />
-<NAME id="P11" start="285" end="310" text="Victoria Carina Jorgenson" TYPE="PATIENT" comment="" />
-<DATE id="P12" start="369" end="387" text="September 17, 2071" TYPE="DATE" comment="" />
-<AGE id="P13" start="413" end="415" text="64" TYPE="AGE" comment="" />
-<DATE id="P14" start="555" end="560" text="April" TYPE="DATE" comment="" />
-<DATE id="P15" start="564" end="567" text="May" TYPE="DATE" comment="" />
-<DATE id="P16" start="771" end="780" text="September" TYPE="DATE" comment="" />
-<LOCATION id="P17" start="931" end="949" text="Lake Park Hospital" TYPE="HOSPITAL" comment="" />
-<DATE id="P18" start="1227" end="1240" text="June of2071" TYPE="DATE" comment="" />
-<NAME id="P19" start="1891" end="1912" text="Jorgenson, Vivian Lea" TYPE="PATIENT" comment="" />
-<ID id="P20" start="1918" end="1929" text="471-90-84-7" TYPE="MEDICALRECORD" comment="" />
-<DATE id="P21" start="1959" end="1974" text="August 21, 2071" TYPE="DATE" comment="" />
-<AGE id="P22" start="2305" end="2307" text="55" TYPE="AGE" comment="" />
-<LOCATION id="P23" start="2520" end="2540" text="Amy's Baking Company" TYPE="ORGANIZATION" comment="" />
-<PROFESSION id="P24" start="2573" end="2592" text="electrical engineer" TYPE="PROFESSION" comment="" />
-<NAME id="P25" start="3785" end="3794" text="Jorgenson" TYPE="PATIENT" comment="" />
-<AGE id="P26" start="3800" end="3802" text="64" TYPE="AGE" comment="" />
-<NAME id="P27" start="4192" end="4213" text="Jorgenson, Vivian Lea" TYPE="PATIENT" comment="" />
-<ID id="P28" start="4219" end="4230" text="471-90-84-7" TYPE="MEDICALRECORD" comment="" />
-<DATE id="P29" start="4260" end="4275" text="August 21, 2071" TYPE="DATE" comment="" />
-<DATE id="P30" start="4417" end="4421" text="2067" TYPE="DATE" comment="" />
-<NAME id="P31" start="5463" end="5474" text="Charles Van" TYPE="DOCTOR" comment="" />
-<NAME id="P32" start="5676" end="5680" text="Voss" TYPE="DOCTOR" comment="" />
-<NAME id="P33" start="5709" end="5724" text="Pamela Imperial" TYPE="DOCTOR" comment="" />
-<NAME id="P34" start="5733" end="5735" text="PI" TYPE="DOCTOR" comment="" />
-<NAME id="P35" start="5736" end="5743" text="waldron" TYPE="DOCTOR" comment="" />
-<NAME id="P36" start="5753" end="5764" text="Charles Van" TYPE="DOCTOR" comment="" />
-<LOCATION id="P37" start="5775" end="5781" text="Jordan" TYPE="CITY" comment="" />
-<LOCATION id="P38" start="5783" end="5785" text="FL" TYPE="STATE" comment="" />
-<LOCATION id="P39" start="5787" end="5792" text="83712" TYPE="ZIP" comment="" />
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2071-08-21" />
+<DATE TYPE="DATE" comment="" end="67" id="P1" start="52" text="August 21, 2071" />
+<NAME TYPE="DOCTOR" comment="" end="90" id="P2" start="78" text="Aiden Geiger" />
+<LOCATION TYPE="STREET" comment="" end="146" id="P4" start="129" text="58 Hyannis Street" />
+<LOCATION TYPE="CITY" comment="" end="158" id="P5" start="148" text="Sioux City" />
+<LOCATION TYPE="STATE" comment="" end="163" id="P6" start="161" text="FL" />
+<LOCATION TYPE="ZIP" comment="" end="170" id="P7" start="165" text="76546" />
+<NAME TYPE="PATIENT" comment="" end="200" id="P8" start="180" text="Vivian Lea Jorgenson" />
+<ID TYPE="MEDICALRECORD" comment="" end="221" id="P9" start="210" text="471-90-84-7" />
+<NAME TYPE="DOCTOR" comment="" end="241" id="P10" start="235" text="Geiger" />
+<NAME TYPE="PATIENT" comment="" end="310" id="P11" start="285" text="Victoria Carina Jorgenson" />
+<DATE TYPE="DATE" comment="" end="387" id="P12" start="369" text="September 17, 2071" />
+<DATE TYPE="DATE" comment="" end="560" id="P14" start="555" text="April" />
+<DATE TYPE="DATE" comment="" end="567" id="P15" start="564" text="May" />
+<DATE TYPE="DATE" comment="" end="780" id="P16" start="771" text="September" />
+<DATE TYPE="DATE" comment="" end="1240" id="P18" start="1227" text="June of2071" />
+<NAME TYPE="PATIENT" comment="" end="1912" id="P19" start="1891" text="Jorgenson, Vivian Lea" />
+<ID TYPE="MEDICALRECORD" comment="" end="1929" id="P20" start="1918" text="471-90-84-7" />
+<DATE TYPE="DATE" comment="" end="1974" id="P21" start="1959" text="August 21, 2071" />
+<LOCATION TYPE="ORGANIZATION" comment="" end="2540" id="P23" start="2520" text="Amy's Baking Company" />
+<PROFESSION TYPE="PROFESSION" comment="" end="2592" id="P24" start="2573" text="electrical engineer" />
+<NAME TYPE="PATIENT" comment="" end="3794" id="P25" start="3785" text="Jorgenson" />
+<NAME TYPE="PATIENT" comment="" end="4213" id="P27" start="4192" text="Jorgenson, Vivian Lea" />
+<ID TYPE="MEDICALRECORD" comment="" end="4230" id="P28" start="4219" text="471-90-84-7" />
+<DATE TYPE="DATE" comment="" end="4275" id="P29" start="4260" text="August 21, 2071" />
+<NAME TYPE="DOCTOR" comment="" end="5474" id="P31" start="5463" text="Charles Van" />
+<NAME TYPE="DOCTOR" comment="" end="5680" id="P32" start="5676" text="Voss" />
+<NAME TYPE="DOCTOR" comment="" end="5724" id="P33" start="5709" text="Pamela Imperial" />
+<NAME TYPE="DOCTOR" comment="" end="5743" id="P35" start="5736" text="waldron" />
+<NAME TYPE="DOCTOR" comment="" end="5764" id="P36" start="5753" text="Charles Van" />
+<LOCATION TYPE="CITY" comment="" end="5781" id="P37" start="5775" text="Jordan" />
+<LOCATION TYPE="STATE" comment="" end="5785" id="P38" start="5783" text="FL" />
+<LOCATION TYPE="ZIP" comment="" end="5792" id="P39" start="5787" text="83712" />
 </TAGS>
 </deIdi2b2>

@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version='1.0' encoding='utf8'?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT>
 
 
 Record date: 2096-02-22
@@ -86,7 +86,7 @@ Mrs. Shirley Trent is a 71 year-old right-handed woman who had a stroke in the l
 
 Plan
 1. We will obtain repeat carotid studies to assess for interval progression of the left carotid stenosis.
-2. We recommend continued management of vascular risk factors, with (1) target BP 120/80 or less, (2) target LDL < 100, (3) continued glycemic control. Continue clopidogrel as an antiplatelet agent.
+2. We recommend continued management of vascular risk factors, with (1) target BP 120/80 or less, (2) target LDL &lt; 100, (3) continued glycemic control. Continue clopidogrel as an antiplatelet agent.
 3. Regarding the spasticity, it is reasonable to utilize a higher evening dose of gabapentin and assess the efficacy. Other potential agents to consider for future use include cyclobenzaprine, tizanidine, and trihexyphenidyl. I will continue to follow and would be happy to discuss this management with you at any time. 
 4. I agree with mirtazapine for antidepressant therapy given Mrs. Trent's poor appetite and impaired sleep. After her gabapentin has been appropriately titrated, one may consider increasing mirtazapine to 45 mg HS.
 5. Mrs. Trent will be scheduled for follow up in approximately 6 months.
@@ -111,68 +111,58 @@ Galena, MN 64864
 
 
 
-***REMOVED******REMOVED***></TEXT>
+</TEXT>
 <TAGS>
-<DATE id="P0" start="16" end="26" text="2096-02-22" TYPE="DATE" comment="" />
-<NAME id="P1" start="38" end="52" text="TRENT, SHIRLEY" TYPE="PATIENT" comment="" />
-<LOCATION id="P2" start="53" end="56" text="LCC" TYPE="HOSPITAL" comment="" />
-<ID id="P3" start="58" end="66" text="99210914" TYPE="MEDICALRECORD" comment="" />
-<DATE id="P4" start="67" end="77" text="02/22/2096" TYPE="DATE" comment="" />
-<NAME id="P5" start="80" end="96" text="Xitlalic Pearson" TYPE="DOCTOR" comment="" />
-<LOCATION id="P6" start="103" end="129" text="Martha Washington Hospital" TYPE="HOSPITAL" comment="" />
-<LOCATION id="P7" start="130" end="149" text="617 Comanche Street" TYPE="STREET" comment="" />
-<LOCATION id="P8" start="150" end="157" text="Milbank" TYPE="CITY" comment="" />
-<LOCATION id="P9" start="159" end="161" text="MN" TYPE="STATE" comment="" />
-<LOCATION id="P10" start="162" end="167" text="49757" TYPE="ZIP" comment="" />
-<NAME id="P11" start="182" end="189" text="Pearson" TYPE="DOCTOR" comment="" />
-<NAME id="P12" start="227" end="240" text="Shirley Trent" TYPE="PATIENT" comment="" />
-<NAME id="P13" start="273" end="278" text="Trent" TYPE="PATIENT" comment="" />
-<AGE id="P14" start="284" end="286" text="71" TYPE="AGE" comment="" />
-<DATE id="P15" start="365" end="378" text="December 2094" TYPE="DATE" comment="" />
-<NAME id="P16" start="469" end="480" text="Carey Trent" TYPE="PATIENT" comment="" />
-<NAME id="P17" start="486" end="491" text="Trent" TYPE="PATIENT" comment="" />
-<NAME id="P18" start="570" end="575" text="Trent" TYPE="PATIENT" comment="" />
-<LOCATION id="P19" start="589" end="600" text="Eddie Bauer" TYPE="ORGANIZATION" comment="" />
-<NAME id="P20" start="967" end="972" text="Carey" TYPE="PATIENT" comment="" />
-<DATE id="P21" start="1092" end="1099" text="2/10/96" TYPE="DATE" comment="" />
-<NAME id="P22" start="1108" end="1113" text="Trent" TYPE="PATIENT" comment="" />
-<DATE id="P23" start="1212" end="1218" text="August" TYPE="DATE" comment="" />
-<NAME id="P24" start="1341" end="1346" text="Trent" TYPE="PATIENT" comment="" />
-<NAME id="P25" start="1418" end="1423" text="Carey" TYPE="PATIENT" comment="" />
-<NAME id="P26" start="1433" end="1438" text="Carey" TYPE="PATIENT" comment="" />
-<NAME id="P27" start="1459" end="1464" text="Trent" TYPE="PATIENT" comment="" />
-<NAME id="P28" start="1541" end="1546" text="Trent" TYPE="PATIENT" comment="" />
-<DATE id="P29" start="1606" end="1614" text="February" TYPE="DATE" comment="" />
-<NAME id="P30" start="1745" end="1750" text="Trent" TYPE="PATIENT" comment="" />
-<DATE id="P31" start="1946" end="1959" text="December 2094" TYPE="DATE" comment="" />
-<NAME id="P32" start="2780" end="2785" text="Trent" TYPE="PATIENT" comment="" />
-<LOCATION id="P33" start="2805" end="2813" text="Suriname" TYPE="COUNTRY" comment="" />
-<AGE id="P34" start="2875" end="2877" text="42" TYPE="AGE" comment="" />
-<DATE id="P35" start="2881" end="2893" text="August, 2095" TYPE="DATE" comment="" />
-<NAME id="P36" start="2900" end="2905" text="Trent" TYPE="PATIENT" comment="" />
-<LOCATION id="P37" start="3050" end="3055" text="Dutch" TYPE="COUNTRY" comment="" />
-<LOCATION id="P38" start="3763" end="3766" text="LCC" TYPE="HOSPITAL" comment="" />
-<LOCATION id="P39" start="3772" end="3778" text="Galena" TYPE="CITY" comment="" />
-<DATE id="P40" start="3782" end="3792" text="March 2095" TYPE="DATE" comment="" />
-<LOCATION id="P41" start="3812" end="3817" text="Dutch" TYPE="COUNTRY" comment="" />
-<DATE id="P42" start="4649" end="4657" text="12/10/94" TYPE="DATE" comment="" />
-<DATE id="P43" start="4735" end="4743" text="12/11/94" TYPE="DATE" comment="" />
-<DATE id="P44" start="4839" end="4847" text="12/14/94" TYPE="DATE" comment="" />
-<DATE id="P45" start="5064" end="5072" text="12/14/94" TYPE="DATE" comment="" />
-<NAME id="P46" start="5227" end="5240" text="Shirley Trent" TYPE="PATIENT" comment="" />
-<AGE id="P47" start="5246" end="5248" text="71" TYPE="AGE" comment="" />
-<DATE id="P48" start="5324" end="5337" text="December 2094" TYPE="DATE" comment="" />
-<DATE id="P49" start="5575" end="5580" text="11/94" TYPE="DATE" comment="" />
-<NAME id="P50" start="5595" end="5600" text="Trent" TYPE="PATIENT" comment="" />
-<NAME id="P51" start="6408" end="6413" text="Trent" TYPE="PATIENT" comment="" />
-<NAME id="P52" start="6565" end="6570" text="Trent" TYPE="PATIENT" comment="" />
-<NAME id="P53" start="6683" end="6688" text="Trent" TYPE="PATIENT" comment="" />
-<NAME id="P54" start="6898" end="6910" text="James Rosado" TYPE="DOCTOR" comment="" />
-<LOCATION id="P56" start="6927" end="6944" text="Lenox Care Center" TYPE="HOSPITAL" comment="" />
-<NAME id="P57" start="6956" end="6967" text="Carey Trent" TYPE="PATIENT" comment="" />
-<LOCATION id="P58" start="6968" end="6981" text="45 Hoyts Lane" TYPE="STREET" comment="" />
-<LOCATION id="P60" start="6990" end="6996" text="Galena" TYPE="CITY" comment="" />
-<LOCATION id="P61" start="6998" end="7000" text="MN" TYPE="STATE" comment="" />
-<LOCATION id="P62" start="7001" end="7006" text="64864" TYPE="ZIP" comment="" />
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2096-02-22" />
+<NAME TYPE="PATIENT" comment="" end="52" id="P1" start="38" text="TRENT, SHIRLEY" />
+<ID TYPE="MEDICALRECORD" comment="" end="66" id="P3" start="58" text="99210914" />
+<DATE TYPE="DATE" comment="" end="77" id="P4" start="67" text="02/22/2096" />
+<NAME TYPE="DOCTOR" comment="" end="96" id="P5" start="80" text="Xitlalic Pearson" />
+<LOCATION TYPE="STREET" comment="" end="149" id="P7" start="130" text="617 Comanche Street" />
+<LOCATION TYPE="CITY" comment="" end="157" id="P8" start="150" text="Milbank" />
+<LOCATION TYPE="STATE" comment="" end="161" id="P9" start="159" text="MN" />
+<LOCATION TYPE="ZIP" comment="" end="167" id="P10" start="162" text="49757" />
+<NAME TYPE="DOCTOR" comment="" end="189" id="P11" start="182" text="Pearson" />
+<NAME TYPE="PATIENT" comment="" end="240" id="P12" start="227" text="Shirley Trent" />
+<NAME TYPE="PATIENT" comment="" end="278" id="P13" start="273" text="Trent" />
+<DATE TYPE="DATE" comment="" end="378" id="P15" start="365" text="December 2094" />
+<NAME TYPE="PATIENT" comment="" end="480" id="P16" start="469" text="Carey Trent" />
+<NAME TYPE="PATIENT" comment="" end="491" id="P17" start="486" text="Trent" />
+<NAME TYPE="PATIENT" comment="" end="575" id="P18" start="570" text="Trent" />
+<LOCATION TYPE="ORGANIZATION" comment="" end="600" id="P19" start="589" text="Eddie Bauer" />
+<NAME TYPE="PATIENT" comment="" end="972" id="P20" start="967" text="Carey" />
+<DATE TYPE="DATE" comment="" end="1099" id="P21" start="1092" text="2/10/96" />
+<NAME TYPE="PATIENT" comment="" end="1113" id="P22" start="1108" text="Trent" />
+<DATE TYPE="DATE" comment="" end="1218" id="P23" start="1212" text="August" />
+<NAME TYPE="PATIENT" comment="" end="1346" id="P24" start="1341" text="Trent" />
+<NAME TYPE="PATIENT" comment="" end="1423" id="P25" start="1418" text="Carey" />
+<NAME TYPE="PATIENT" comment="" end="1438" id="P26" start="1433" text="Carey" />
+<NAME TYPE="PATIENT" comment="" end="1464" id="P27" start="1459" text="Trent" />
+<NAME TYPE="PATIENT" comment="" end="1546" id="P28" start="1541" text="Trent" />
+<DATE TYPE="DATE" comment="" end="1614" id="P29" start="1606" text="February" />
+<NAME TYPE="PATIENT" comment="" end="1750" id="P30" start="1745" text="Trent" />
+<DATE TYPE="DATE" comment="" end="1959" id="P31" start="1946" text="December 2094" />
+<NAME TYPE="PATIENT" comment="" end="2785" id="P32" start="2780" text="Trent" />
+<DATE TYPE="DATE" comment="" end="2893" id="P35" start="2881" text="August, 2095" />
+<NAME TYPE="PATIENT" comment="" end="2905" id="P36" start="2900" text="Trent" />
+<LOCATION TYPE="CITY" comment="" end="3778" id="P39" start="3772" text="Galena" />
+<DATE TYPE="DATE" comment="" end="3792" id="P40" start="3782" text="March 2095" />
+<DATE TYPE="DATE" comment="" end="4657" id="P42" start="4649" text="12/10/94" />
+<DATE TYPE="DATE" comment="" end="4743" id="P43" start="4735" text="12/11/94" />
+<DATE TYPE="DATE" comment="" end="4847" id="P44" start="4839" text="12/14/94" />
+<DATE TYPE="DATE" comment="" end="5072" id="P45" start="5064" text="12/14/94" />
+<NAME TYPE="PATIENT" comment="" end="5240" id="P46" start="5227" text="Shirley Trent" />
+<DATE TYPE="DATE" comment="" end="5337" id="P48" start="5324" text="December 2094" />
+<DATE TYPE="DATE" comment="" end="5580" id="P49" start="5575" text="11/94" />
+<NAME TYPE="PATIENT" comment="" end="5600" id="P50" start="5595" text="Trent" />
+<NAME TYPE="PATIENT" comment="" end="6413" id="P51" start="6408" text="Trent" />
+<NAME TYPE="PATIENT" comment="" end="6570" id="P52" start="6565" text="Trent" />
+<NAME TYPE="PATIENT" comment="" end="6688" id="P53" start="6683" text="Trent" />
+<NAME TYPE="DOCTOR" comment="" end="6910" id="P54" start="6898" text="James Rosado" />
+<NAME TYPE="PATIENT" comment="" end="6967" id="P57" start="6956" text="Carey Trent" />
+<LOCATION TYPE="STREET" comment="" end="6981" id="P58" start="6968" text="45 Hoyts Lane" />
+<LOCATION TYPE="CITY" comment="" end="6996" id="P60" start="6990" text="Galena" />
+<LOCATION TYPE="STATE" comment="" end="7000" id="P61" start="6998" text="MN" />
+<LOCATION TYPE="ZIP" comment="" end="7006" id="P62" start="7001" text="64864" />
 </TAGS>
 </deIdi2b2>

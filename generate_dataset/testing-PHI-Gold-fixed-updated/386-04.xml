@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version='1.0' encoding='utf8'?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT>
 
 
 Record date: 2088-06-24
@@ -220,19 +220,18 @@ Cynthia Nancy-Nesmith, M.D.
 
 
 
-***REMOVED******REMOVED***></TEXT>
+</TEXT>
 <TAGS>
-<DATE id="P0" start="16" end="26" text="2088-06-24" TYPE="DATE" comment="" />
-<NAME id="P1" start="97" end="109" text="CHAPMAN,NOOR" TYPE="PATIENT" comment="" />
-<ID id="P2" start="117" end="125" text="45479406" TYPE="MEDICALRECORD" comment="" />
-<LOCATION id="P3" start="125" end="129" text="HBMC" TYPE="HOSPITAL" comment="" />
-<DATE id="P4" start="205" end="214" text="6/24/2088" TYPE="DATE" comment="" />
-<NAME id="P5" start="246" end="253" text="Chapman" TYPE="PATIENT" comment="" />
-<DATE id="P6" start="1244" end="1252" text="10/08/85" TYPE="DATE" comment="" />
-<DATE id="P7" start="1357" end="1364" text="01/2086" TYPE="DATE" comment="" />
-<LOCATION id="P8" start="3207" end="3223" text="AllMed Insurance" TYPE="ORGANIZATION" comment="" />
-<DATE id="P9" start="3358" end="3362" text="5/88" TYPE="DATE" comment="" />
-<DATE id="P10" start="3375" end="3379" text="5/88" TYPE="DATE" comment="" />
-<NAME id="P11" start="3562" end="3583" text="Cynthia Nancy-Nesmith" TYPE="DOCTOR" comment="" />
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2088-06-24" />
+<NAME TYPE="PATIENT" comment="" end="109" id="P1" start="97" text="CHAPMAN,NOOR" />
+<ID TYPE="MEDICALRECORD" comment="" end="125" id="P2" start="117" text="45479406" />
+<DATE TYPE="DATE" comment="" end="214" id="P4" start="205" text="6/24/2088" />
+<NAME TYPE="PATIENT" comment="" end="253" id="P5" start="246" text="Chapman" />
+<DATE TYPE="DATE" comment="" end="1252" id="P6" start="1244" text="10/08/85" />
+<DATE TYPE="DATE" comment="" end="1364" id="P7" start="1357" text="01/2086" />
+<LOCATION TYPE="ORGANIZATION" comment="" end="3223" id="P8" start="3207" text="AllMed Insurance" />
+<DATE TYPE="DATE" comment="" end="3362" id="P9" start="3358" text="5/88" />
+<DATE TYPE="DATE" comment="" end="3379" id="P10" start="3375" text="5/88" />
+<NAME TYPE="DOCTOR" comment="" end="3583" id="P11" start="3562" text="Cynthia Nancy-Nesmith" />
 </TAGS>
 </deIdi2b2>

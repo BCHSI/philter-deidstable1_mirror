@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version='1.0' encoding='utf8'?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT>
 
 
 Record date: 2071-01-12
@@ -134,7 +134,7 @@ Disposition and Plans
 
 2.  DM - poor control.  Very brittle. Recently seen by Dr. Nelson.
 
-3.  Cholesterol - last LDL <100.  Pravachol increased to 40mg.
+3.  Cholesterol - last LDL &lt;100.  Pravachol increased to 40mg.
 
 4.  Menorrhagia - currently not an issue.
 
@@ -162,17 +162,15 @@ Wanda Andrea Koontz, M.D.
 
 
 
-***REMOVED******REMOVED***></TEXT>
+</TEXT>
 <TAGS>
-<DATE id="P0" start="16" end="26" text="2071-01-12" TYPE="DATE" comment="" />
-<DATE id="P1" start="121" end="125" text="2061" TYPE="DATE" comment="" />
-<NAME id="P2" start="246" end="254" text="Jennifer" TYPE="PATIENT" comment="" />
-<NAME id="P3" start="583" end="596" text="Pearline Rush" TYPE="DOCTOR" comment="" />
-<LOCATION id="P4" start="1671" end="1679" text="LONGMONT" TYPE="HOSPITAL" comment="" />
-<PROFESSION id="P5" start="1916" end="1947" text="Transport Operations Supervisor" TYPE="PROFESSION" comment="" />
-<NAME id="P6" start="2265" end="2271" text="Nelson" TYPE="DOCTOR" comment="" />
-<NAME id="P7" start="2501" end="2512" text="John Koontz" TYPE="DOCTOR" comment="" />
-<NAME id="P8" start="2518" end="2536" text="Timothy Quarterman" TYPE="DOCTOR" comment="" />
-<NAME id="P9" start="2610" end="2629" text="Wanda Andrea Koontz" TYPE="DOCTOR" comment="" />
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2071-01-12" />
+<NAME TYPE="PATIENT" comment="" end="254" id="P2" start="246" text="Jennifer" />
+<NAME TYPE="DOCTOR" comment="" end="596" id="P3" start="583" text="Pearline Rush" />
+<PROFESSION TYPE="PROFESSION" comment="" end="1947" id="P5" start="1916" text="Transport Operations Supervisor" />
+<NAME TYPE="DOCTOR" comment="" end="2271" id="P6" start="2265" text="Nelson" />
+<NAME TYPE="DOCTOR" comment="" end="2512" id="P7" start="2501" text="John Koontz" />
+<NAME TYPE="DOCTOR" comment="" end="2536" id="P8" start="2518" text="Timothy Quarterman" />
+<NAME TYPE="DOCTOR" comment="" end="2629" id="P9" start="2610" text="Wanda Andrea Koontz" />
 </TAGS>
 </deIdi2b2>

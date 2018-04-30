@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version='1.0' encoding='utf8'?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT>
 
 
 Record date: 2117-07-12
@@ -21,7 +21,7 @@ CLASSIFICATION OF MALNUTRITION: NSPCM
 
 
 
-HPI:	Patient is a 54- year old male w/pancreatitis, NPO, was on TPN @ OSH. Transferred to PNC for further management. TPN off for 2 days (7/14-7/15), noPO's for about 15 days per pt. Anticipate NPO > 1wk. 
+HPI:	Patient is a 54- year old male w/pancreatitis, NPO, was on TPN @ OSH. Transferred to PNC for further management. TPN off for 2 days (7/14-7/15), noPO's for about 15 days per pt. Anticipate NPO &gt; 1wk. 
 
 
 
@@ -85,7 +85,7 @@ dry, no rashes.
 
 
 
-ASSESSMENT & PLAN	Patient will be started on  70/100/25  per liter  at 50 cc/hr.  This will provide the patient with 84 gms of protein and 1044 Kcals/day.  Adjust to goal.
+ASSESSMENT &amp; PLAN	Patient will be started on  70/100/25  per liter  at 50 cc/hr.  This will provide the patient with 84 gms of protein and 1044 Kcals/day.  Adjust to goal.
 
 
 
@@ -123,25 +123,22 @@ Gianna Irish, M.D.
 
 
 
-***REMOVED******REMOVED***></TEXT>
+</TEXT>
 <TAGS>
-<DATE id="P0" start="16" end="26" text="2117-07-12" TYPE="DATE" comment="" />
-<DATE id="P1" start="51" end="58" text="7/16/17" TYPE="DATE" comment="" />
-<NAME id="P2" start="98" end="111" text="Anthony Usrey" TYPE="PATIENT" comment="" />
-<ID id="P3" start="118" end="127" text="644-48-77" TYPE="MEDICALRECORD" comment="" />
-<DATE id="P4" start="244" end="251" text="7/12/17" TYPE="DATE" comment="" />
-<NAME id="P5" start="254" end="272" text="Heather O. Shelton" TYPE="DOCTOR" comment="" />
-<AGE id="P6" start="477" end="479" text="54" TYPE="AGE" comment="" />
-<LOCATION id="P7" start="549" end="552" text="PNC" TYPE="HOSPITAL" comment="" />
-<DATE id="P8" start="597" end="601" text="7/14" TYPE="DATE" comment="" />
-<DATE id="P9" start="602" end="606" text="7/15" TYPE="DATE" comment="" />
-<DATE id="P10" start="732" end="736" text="3/17" TYPE="DATE" comment="" />
-<DATE id="P11" start="764" end="768" text="7/07" TYPE="DATE" comment="" />
-<DATE id="P12" start="1173" end="1177" text="7/14" TYPE="DATE" comment="" />
-<LOCATION id="P13" start="2231" end="2234" text="PNC" TYPE="HOSPITAL" comment="" />
-<NAME id="P14" start="2241" end="2256" text="Charles Zylstra" TYPE="DOCTOR" comment="" />
-<NAME id="P15" start="2274" end="2285" text="Iman Anders" TYPE="DOCTOR" comment="" />
-<CONTACT id="P16" start="2288" end="2293" text="65985" TYPE="PHONE" comment="" />
-<NAME id="P17" start="2394" end="2406" text="Gianna Irish" TYPE="DOCTOR" comment="" />
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2117-07-12" />
+<DATE TYPE="DATE" comment="" end="58" id="P1" start="51" text="7/16/17" />
+<NAME TYPE="PATIENT" comment="" end="111" id="P2" start="98" text="Anthony Usrey" />
+<ID TYPE="MEDICALRECORD" comment="" end="127" id="P3" start="118" text="644-48-77" />
+<DATE TYPE="DATE" comment="" end="251" id="P4" start="244" text="7/12/17" />
+<NAME TYPE="DOCTOR" comment="" end="272" id="P5" start="254" text="Heather O. Shelton" />
+<DATE TYPE="DATE" comment="" end="601" id="P8" start="597" text="7/14" />
+<DATE TYPE="DATE" comment="" end="606" id="P9" start="602" text="7/15" />
+<DATE TYPE="DATE" comment="" end="736" id="P10" start="732" text="3/17" />
+<DATE TYPE="DATE" comment="" end="768" id="P11" start="764" text="7/07" />
+<DATE TYPE="DATE" comment="" end="1177" id="P12" start="1173" text="7/14" />
+<NAME TYPE="DOCTOR" comment="" end="2256" id="P14" start="2241" text="Charles Zylstra" />
+<NAME TYPE="DOCTOR" comment="" end="2285" id="P15" start="2274" text="Iman Anders" />
+<CONTACT TYPE="PHONE" comment="" end="2293" id="P16" start="2288" text="65985" />
+<NAME TYPE="DOCTOR" comment="" end="2406" id="P17" start="2394" text="Gianna Irish" />
 </TAGS>
 </deIdi2b2>

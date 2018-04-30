@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version='1.0' encoding='utf8'?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT>
 
 
 Record date: 2161-06-03
@@ -178,54 +178,45 @@ DV: 06/03/61
 
 
 
-***REMOVED******REMOVED***></TEXT>
+</TEXT>
 <TAGS>
-<DATE id="P0" start="16" end="26" text="2161-06-03" TYPE="DATE" comment="" />
-<NAME id="P1" start="35" end="50" text="DEJESUS, JAROME" TYPE="PATIENT" comment="" />
-<ID id="P2" start="52" end="60" text="28044071" TYPE="MEDICALRECORD" comment="" />
-<DATE id="P3" start="62" end="72" text="06/03/2161" TYPE="DATE" comment="" />
-<NAME id="P4" start="78" end="92" text="Isaiah Y. Dill" TYPE="DOCTOR" comment="" />
-<LOCATION id="P5" start="100" end="140" text="Southwest Colorado Medical Health Center" TYPE="HOSPITAL" comment="" />
-<LOCATION id="P6" start="142" end="163" text="607 Batchelder Street" TYPE="STREET" comment="" />
-<LOCATION id="P8" start="176" end="184" text="Robstown" TYPE="CITY" comment="" />
-<LOCATION id="P9" start="186" end="188" text="NE" TYPE="STATE" comment="" />
-<LOCATION id="P10" start="190" end="195" text="29768" TYPE="ZIP" comment="" />
-<NAME id="P11" start="210" end="214" text="Dill" TYPE="DOCTOR" comment="" />
-<DATE id="P12" start="225" end="235" text="10/11/2082" TYPE="DATE" comment="" />
-<NAME id="P13" start="267" end="274" text="Dejesus" TYPE="PATIENT" comment="" />
-<LOCATION id="P14" start="282" end="293" text="Erie County" TYPE="HOSPITAL" comment="" />
-<NAME id="P15" start="460" end="467" text="Dejesus" TYPE="PATIENT" comment="" />
-<AGE id="P16" start="473" end="475" text="78" TYPE="AGE" comment="" />
-<DATE id="P17" start="1521" end="1531" text="03/19/2161" TYPE="DATE" comment="" />
-<DATE id="P18" start="1588" end="1596" text="February" TYPE="DATE" comment="" />
-<DATE id="P19" start="1821" end="1831" text="01/18/2161" TYPE="DATE" comment="" />
-<DATE id="P20" start="2531" end="2535" text="2155" TYPE="DATE" comment="" />
-<DATE id="P21" start="2574" end="2581" text="07/2157" TYPE="DATE" comment="" />
-<DATE id="P22" start="2704" end="2711" text="12/2159" TYPE="DATE" comment="" />
-<DATE id="P23" start="2979" end="2986" text="01/2161" TYPE="DATE" comment="" />
-<DATE id="P24" start="3170" end="3180" text="03/06/2161" TYPE="DATE" comment="" />
-<DATE id="P25" start="3216" end="3223" text="01/2160" TYPE="DATE" comment="" />
-<DATE id="P26" start="3567" end="3574" text="07/2159" TYPE="DATE" comment="" />
-<DATE id="P27" start="3749" end="3754" text="April" TYPE="DATE" comment="" />
-<PROFESSION id="P28" start="4103" end="4124" text="buidling construction" TYPE="PROFESSION" comment="" />
-<AGE id="P29" start="4425" end="4427" text="88" TYPE="AGE" comment="" />
-<AGE id="P30" start="4472" end="4474" text="80" TYPE="AGE" comment="" />
-<AGE id="P31" start="4507" end="4509" text="86" TYPE="AGE" comment="" />
-<DATE id="P32" start="5200" end="5210" text="05/28/2161" TYPE="DATE" comment="" />
-<NAME id="P33" start="5520" end="5527" text="Dejesus" TYPE="PATIENT" comment="" />
-<AGE id="P34" start="5542" end="5544" text="78" TYPE="AGE" comment="" />
-<NAME id="P35" start="6065" end="6072" text="Dejesus" TYPE="PATIENT" comment="" />
-<NAME id="P36" start="6969" end="6976" text="Dejesus" TYPE="PATIENT" comment="" />
-<NAME id="P37" start="7137" end="7149" text="Oscar U Rice" TYPE="DOCTOR" comment="" />
-<ID id="P38" start="7187" end="7197" text="0-16320445" TYPE="IDNUM" comment="" />
-<NAME id="P39" start="7213" end="7232" text="Robert-Joseph Paige" TYPE="DOCTOR" comment="" />
-<LOCATION id="P40" start="7239" end="7267" text="Koenen Collins County Clinic" TYPE="HOSPITAL" comment="" />
-<LOCATION id="P41" start="7269" end="7287" text="266 Paxton Terrace" TYPE="STREET" comment="" />
-<LOCATION id="P42" start="7289" end="7297" text="Peculiar" TYPE="CITY" comment="" />
-<LOCATION id="P43" start="7299" end="7301" text="NE" TYPE="STATE" comment="" />
-<LOCATION id="P44" start="7303" end="7308" text="54583" TYPE="ZIP" comment="" />
-<DATE id="P45" start="7336" end="7344" text="06/03/61" TYPE="DATE" comment="" />
-<DATE id="P46" start="7350" end="7358" text="06/04/61" TYPE="DATE" comment="" />
-<DATE id="P47" start="7364" end="7372" text="06/03/61" TYPE="DATE" comment="" />
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2161-06-03" />
+<NAME TYPE="PATIENT" comment="" end="50" id="P1" start="35" text="DEJESUS, JAROME" />
+<ID TYPE="MEDICALRECORD" comment="" end="60" id="P2" start="52" text="28044071" />
+<DATE TYPE="DATE" comment="" end="72" id="P3" start="62" text="06/03/2161" />
+<NAME TYPE="DOCTOR" comment="" end="92" id="P4" start="78" text="Isaiah Y. Dill" />
+<LOCATION TYPE="STREET" comment="" end="163" id="P6" start="142" text="607 Batchelder Street" />
+<LOCATION TYPE="CITY" comment="" end="184" id="P8" start="176" text="Robstown" />
+<LOCATION TYPE="STATE" comment="" end="188" id="P9" start="186" text="NE" />
+<LOCATION TYPE="ZIP" comment="" end="195" id="P10" start="190" text="29768" />
+<NAME TYPE="DOCTOR" comment="" end="214" id="P11" start="210" text="Dill" />
+<DATE TYPE="DATE" comment="" end="235" id="P12" start="225" text="10/11/2082" />
+<NAME TYPE="PATIENT" comment="" end="274" id="P13" start="267" text="Dejesus" />
+<NAME TYPE="PATIENT" comment="" end="467" id="P15" start="460" text="Dejesus" />
+<DATE TYPE="DATE" comment="" end="1531" id="P17" start="1521" text="03/19/2161" />
+<DATE TYPE="DATE" comment="" end="1596" id="P18" start="1588" text="February" />
+<DATE TYPE="DATE" comment="" end="1831" id="P19" start="1821" text="01/18/2161" />
+<DATE TYPE="DATE" comment="" end="2581" id="P21" start="2574" text="07/2157" />
+<DATE TYPE="DATE" comment="" end="2711" id="P22" start="2704" text="12/2159" />
+<DATE TYPE="DATE" comment="" end="2986" id="P23" start="2979" text="01/2161" />
+<DATE TYPE="DATE" comment="" end="3180" id="P24" start="3170" text="03/06/2161" />
+<DATE TYPE="DATE" comment="" end="3223" id="P25" start="3216" text="01/2160" />
+<DATE TYPE="DATE" comment="" end="3574" id="P26" start="3567" text="07/2159" />
+<DATE TYPE="DATE" comment="" end="3754" id="P27" start="3749" text="April" />
+<PROFESSION TYPE="PROFESSION" comment="" end="4124" id="P28" start="4103" text="buidling construction" />
+<DATE TYPE="DATE" comment="" end="5210" id="P32" start="5200" text="05/28/2161" />
+<NAME TYPE="PATIENT" comment="" end="5527" id="P33" start="5520" text="Dejesus" />
+<NAME TYPE="PATIENT" comment="" end="6072" id="P35" start="6065" text="Dejesus" />
+<NAME TYPE="PATIENT" comment="" end="6976" id="P36" start="6969" text="Dejesus" />
+<NAME TYPE="DOCTOR" comment="" end="7149" id="P37" start="7137" text="Oscar U Rice" />
+<ID TYPE="IDNUM" comment="" end="7197" id="P38" start="7187" text="0-16320445" />
+<NAME TYPE="DOCTOR" comment="" end="7232" id="P39" start="7213" text="Robert-Joseph Paige" />
+<LOCATION TYPE="STREET" comment="" end="7287" id="P41" start="7269" text="266 Paxton Terrace" />
+<LOCATION TYPE="CITY" comment="" end="7297" id="P42" start="7289" text="Peculiar" />
+<LOCATION TYPE="STATE" comment="" end="7301" id="P43" start="7299" text="NE" />
+<LOCATION TYPE="ZIP" comment="" end="7308" id="P44" start="7303" text="54583" />
+<DATE TYPE="DATE" comment="" end="7344" id="P45" start="7336" text="06/03/61" />
+<DATE TYPE="DATE" comment="" end="7358" id="P46" start="7350" text="06/04/61" />
+<DATE TYPE="DATE" comment="" end="7372" id="P47" start="7364" text="06/03/61" />
 </TAGS>
 </deIdi2b2>

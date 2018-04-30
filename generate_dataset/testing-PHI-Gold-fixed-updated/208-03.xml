@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version='1.0' encoding='utf8'?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT>
 
 
 Record date: 2068-04-06
@@ -109,14 +109,12 @@ Tracy T. Xenakis, M.D.
 
 
 
-***REMOVED******REMOVED***></TEXT>
+</TEXT>
 <TAGS>
-<DATE id="P0" start="16" end="26" text="2068-04-06" TYPE="DATE" comment="" />
-<NAME id="P1" start="97" end="111" text="BARRERA,MARY U" TYPE="PATIENT" comment="" />
-<ID id="P2" start="114" end="122" text="45167459" TYPE="MEDICALRECORD" comment="" />
-<LOCATION id="P3" start="123" end="126" text="SLO" TYPE="HOSPITAL" comment="" />
-<DATE id="P4" start="204" end="214" text="04/06/2068" TYPE="DATE" comment="" />
-<AGE id="P5" start="343" end="345" text="88" TYPE="AGE" comment="" />
-<NAME id="P6" start="2378" end="2394" text="Tracy T. Xenakis" TYPE="DOCTOR" comment="" />
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2068-04-06" />
+<NAME TYPE="PATIENT" comment="" end="111" id="P1" start="97" text="BARRERA,MARY U" />
+<ID TYPE="MEDICALRECORD" comment="" end="122" id="P2" start="114" text="45167459" />
+<DATE TYPE="DATE" comment="" end="214" id="P4" start="204" text="04/06/2068" />
+<NAME TYPE="DOCTOR" comment="" end="2394" id="P6" start="2378" text="Tracy T. Xenakis" />
 </TAGS>
 </deIdi2b2>

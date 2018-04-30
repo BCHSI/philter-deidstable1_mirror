@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version='1.0' encoding='utf8'?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT>
 
 
 Record date: 2078-05-01
@@ -92,44 +92,36 @@ DV: 05/01/78
 
 
 
-***REMOVED******REMOVED***></TEXT>
+</TEXT>
 <TAGS>
-<DATE id="P0" start="16" end="26" text="2078-05-01" TYPE="DATE" comment="" />
-<NAME id="P1" start="28" end="45" text="HENDRICKS, HANNAH" TYPE="PATIENT" comment="" />
-<ID id="P2" start="46" end="54" text="75322175" TYPE="MEDICALRECORD" comment="" />
-<DATE id="P3" start="55" end="65" text="05/01/2078" TYPE="DATE" comment="" />
-<NAME id="P4" start="67" end="85" text="Hunter N. Ishikawa" TYPE="DOCTOR" comment="" />
-<LOCATION id="P6" start="100" end="118" text="03 Greenwood Drive" TYPE="STREET" comment="" />
-<LOCATION id="P7" start="119" end="129" text="Dyersville" TYPE="CITY" comment="" />
-<LOCATION id="P8" start="131" end="133" text="WI" TYPE="STATE" comment="" />
-<LOCATION id="P9" start="135" end="140" text="69617" TYPE="ZIP" comment="" />
-<NAME id="P10" start="148" end="153" text="Hicks" TYPE="DOCTOR" comment="" />
-<NAME id="P11" start="186" end="202" text="Hannah Hendricks" TYPE="PATIENT" comment="" />
-<NAME id="P13" start="273" end="287" text="Heidi Erik-Roy" TYPE="DOCTOR" comment="" />
-<AGE id="P14" start="319" end="321" text="52" TYPE="AGE" comment="" />
-<NAME id="P15" start="460" end="469" text="Hendricks" TYPE="PATIENT" comment="" />
-<DATE id="P16" start="750" end="754" text="2066" TYPE="DATE" comment="" />
-<DATE id="P17" start="788" end="792" text="2066" TYPE="DATE" comment="" />
-<DATE id="P18" start="1036" end="1044" text="Saturday" TYPE="DATE" comment="" />
-<NAME id="P19" start="1052" end="1061" text="Hendricks" TYPE="PATIENT" comment="" />
-<AGE id="P20" start="1422" end="1424" text="48" TYPE="AGE" comment="" />
-<AGE id="P21" start="2736" end="2738" text="20" TYPE="AGE" comment="" />
-<PROFESSION id="P22" start="2757" end="2787" text="Senior Manager of Broadcasting" TYPE="PROFESSION" comment="" />
-<LOCATION id="P23" start="2791" end="2801" text="giant food" TYPE="ORGANIZATION" comment="" />
-<LOCATION id="P24" start="2805" end="2814" text="Albemarle" TYPE="CITY" comment="" />
-<AGE id="P25" start="2919" end="2921" text="40" TYPE="AGE" comment="" />
-<NAME id="P26" start="4254" end="4263" text="Hendricks" TYPE="PATIENT" comment="" />
-<AGE id="P27" start="4276" end="4278" text="52" TYPE="AGE" comment="" />
-<NAME id="P28" start="6098" end="6107" text="Hendricks" TYPE="PATIENT" comment="" />
-<NAME id="P29" start="6328" end="6342" text="Fatima K Baird" TYPE="DOCTOR" comment="" />
-<ID id="P30" start="6375" end="6384" text="0-1465457" TYPE="IDNUM" comment="" />
-<NAME id="P31" start="6399" end="6413" text="Trevon Schmidt" TYPE="DOCTOR" comment="" />
-<LOCATION id="P32" start="6419" end="6436" text="54 Clinton Street" TYPE="STREET" comment="" />
-<LOCATION id="P33" start="6437" end="6444" text="Decatur" TYPE="CITY" comment="" />
-<LOCATION id="P34" start="6446" end="6448" text="WI" TYPE="STATE" comment="" />
-<LOCATION id="P35" start="6449" end="6454" text="96857" TYPE="ZIP" comment="" />
-<DATE id="P36" start="6463" end="6471" text="05/01/78" TYPE="DATE" comment="" />
-<DATE id="P37" start="6476" end="6484" text="05/02/78" TYPE="DATE" comment="" />
-<DATE id="P38" start="6489" end="6497" text="05/01/78" TYPE="DATE" comment="" />
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2078-05-01" />
+<NAME TYPE="PATIENT" comment="" end="45" id="P1" start="28" text="HENDRICKS, HANNAH" />
+<ID TYPE="MEDICALRECORD" comment="" end="54" id="P2" start="46" text="75322175" />
+<DATE TYPE="DATE" comment="" end="65" id="P3" start="55" text="05/01/2078" />
+<NAME TYPE="DOCTOR" comment="" end="85" id="P4" start="67" text="Hunter N. Ishikawa" />
+<LOCATION TYPE="STREET" comment="" end="118" id="P6" start="100" text="03 Greenwood Drive" />
+<LOCATION TYPE="CITY" comment="" end="129" id="P7" start="119" text="Dyersville" />
+<LOCATION TYPE="STATE" comment="" end="133" id="P8" start="131" text="WI" />
+<LOCATION TYPE="ZIP" comment="" end="140" id="P9" start="135" text="69617" />
+<NAME TYPE="DOCTOR" comment="" end="153" id="P10" start="148" text="Hicks" />
+<NAME TYPE="PATIENT" comment="" end="202" id="P11" start="186" text="Hannah Hendricks" />
+<NAME TYPE="DOCTOR" comment="" end="287" id="P13" start="273" text="Heidi Erik-Roy" />
+<NAME TYPE="PATIENT" comment="" end="469" id="P15" start="460" text="Hendricks" />
+<NAME TYPE="PATIENT" comment="" end="1061" id="P19" start="1052" text="Hendricks" />
+<PROFESSION TYPE="PROFESSION" comment="" end="2787" id="P22" start="2757" text="Senior Manager of Broadcasting" />
+<LOCATION TYPE="ORGANIZATION" comment="" end="2801" id="P23" start="2791" text="giant food" />
+<LOCATION TYPE="CITY" comment="" end="2814" id="P24" start="2805" text="Albemarle" />
+<NAME TYPE="PATIENT" comment="" end="4263" id="P26" start="4254" text="Hendricks" />
+<NAME TYPE="PATIENT" comment="" end="6107" id="P28" start="6098" text="Hendricks" />
+<NAME TYPE="DOCTOR" comment="" end="6342" id="P29" start="6328" text="Fatima K Baird" />
+<ID TYPE="IDNUM" comment="" end="6384" id="P30" start="6375" text="0-1465457" />
+<NAME TYPE="DOCTOR" comment="" end="6413" id="P31" start="6399" text="Trevon Schmidt" />
+<LOCATION TYPE="STREET" comment="" end="6436" id="P32" start="6419" text="54 Clinton Street" />
+<LOCATION TYPE="CITY" comment="" end="6444" id="P33" start="6437" text="Decatur" />
+<LOCATION TYPE="STATE" comment="" end="6448" id="P34" start="6446" text="WI" />
+<LOCATION TYPE="ZIP" comment="" end="6454" id="P35" start="6449" text="96857" />
+<DATE TYPE="DATE" comment="" end="6471" id="P36" start="6463" text="05/01/78" />
+<DATE TYPE="DATE" comment="" end="6484" id="P37" start="6476" text="05/02/78" />
+<DATE TYPE="DATE" comment="" end="6497" id="P38" start="6489" text="05/01/78" />
 </TAGS>
 </deIdi2b2>

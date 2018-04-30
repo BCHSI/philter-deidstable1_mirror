@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version='1.0' encoding='utf8'?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT>
 
 
 Record date: 2094-03-19
@@ -31,9 +31,9 @@ HPI:   Patient is a 66 yo M with a complicated medical history.  Recent medical 
 
 1/22/94: presented to Vanderbilt University Hospital on 1/22/94, notable for the following:
 
--	hyperosmolar nonketotic hyperglycemia (BS>1400)
+-	hyperosmolar nonketotic hyperglycemia (BS&gt;1400)
 
--	LLE was noted to be cool and ischemic, CPKs > 1300
+-	LLE was noted to be cool and ischemic, CPKs &gt; 1300
 
 
 
@@ -637,67 +637,49 @@ Ursula Isabella-Venegas, MD
 
 
 
-***REMOVED******REMOVED***></TEXT>
+</TEXT>
 <TAGS>
-<DATE id="P0" start="16" end="26" text="2094-03-19" TYPE="DATE" comment="" />
-<LOCATION id="P1" start="28" end="31" text="GSH" TYPE="HOSPITAL" comment="" />
-<NAME id="P3" start="80" end="96" text="Faulkner, Yandel" TYPE="PATIENT" comment="" />
-<ID id="P4" start="103" end="112" text="507-55-61" TYPE="MEDICALRECORD" comment="" />
-<DATE id="P5" start="134" end="141" text="3/18/94" TYPE="DATE" comment="" />
-<NAME id="P6" start="149" end="155" text="Yazzie" TYPE="DOCTOR" comment="" />
-<NAME id="P7" start="166" end="181" text="Carlos Faulkner" TYPE="PATIENT" comment="" />
-<CONTACT id="P8" start="188" end="200" text="441-626-7981" TYPE="PHONE" comment="" />
-<CONTACT id="P9" start="202" end="214" text="278-032-7163" TYPE="PHONE" comment="" />
-<AGE id="P10" start="227" end="229" text="69" TYPE="AGE" comment="" />
-<AGE id="P11" start="394" end="396" text="66" TYPE="AGE" comment="" />
-<DATE id="P12" start="482" end="489" text="1/22/94" TYPE="DATE" comment="" />
-<LOCATION id="P13" start="504" end="534" text="Vanderbilt University Hospital" TYPE="HOSPITAL" comment="" />
-<DATE id="P14" start="538" end="545" text="1/22/94" TYPE="DATE" comment="" />
-<DATE id="P15" start="682" end="689" text="1/24/94" TYPE="DATE" comment="" />
-<LOCATION id="P16" start="707" end="711" text="DCGH" TYPE="HOSPITAL" comment="" />
-<NAME id="P17" start="1080" end="1086" text="Phelps" TYPE="DOCTOR" comment="" />
-<DATE id="P18" start="1671" end="1678" text="3/15/94" TYPE="DATE" comment="" />
-<LOCATION id="P19" start="1696" end="1698" text="KH" TYPE="HOSPITAL" comment="" />
-<DATE id="P20" start="1797" end="1804" text="3/18/94" TYPE="DATE" comment="" />
-<DATE id="P21" start="1898" end="1905" text="3/18/94" TYPE="DATE" comment="" />
-<LOCATION id="P22" start="1907" end="1911" text="DCGH" TYPE="HOSPITAL" comment="" />
-<DATE id="P23" start="2320" end="2332" text="January 2091" TYPE="DATE" comment="" />
-<LOCATION id="P24" start="2836" end="2845" text="Old River" TYPE="CITY" comment="" />
-<LOCATION id="P25" start="3455" end="3459" text="DCGH" TYPE="HOSPITAL" comment="" />
-<DATE id="P26" start="3476" end="3487" text="18-Mar-2094" TYPE="DATE" comment="" />
-<ID id="P27" start="3506" end="3516" text="9027U41613" TYPE="MEDICALRECORD" comment="" />
-<LOCATION id="P28" start="4023" end="4027" text="DCGH" TYPE="HOSPITAL" comment="" />
-<DATE id="P29" start="4044" end="4055" text="18-Mar-2094" TYPE="DATE" comment="" />
-<ID id="P30" start="4074" end="4084" text="8663L14453" TYPE="MEDICALRECORD" comment="" />
-<LOCATION id="P31" start="5005" end="5009" text="DCGH" TYPE="HOSPITAL" comment="" />
-<DATE id="P32" start="5026" end="5037" text="18-Mar-2094" TYPE="DATE" comment="" />
-<ID id="P33" start="5056" end="5066" text="7428Y74680" TYPE="MEDICALRECORD" comment="" />
-<LOCATION id="P34" start="6890" end="6894" text="DCGH" TYPE="HOSPITAL" comment="" />
-<DATE id="P35" start="6911" end="6922" text="18-Mar-2094" TYPE="DATE" comment="" />
-<ID id="P36" start="6941" end="6951" text="7741J60844" TYPE="MEDICALRECORD" comment="" />
-<LOCATION id="P37" start="7801" end="7805" text="DCGH" TYPE="HOSPITAL" comment="" />
-<DATE id="P38" start="7822" end="7833" text="18-Mar-2094" TYPE="DATE" comment="" />
-<ID id="P39" start="7852" end="7862" text="7607Z82720" TYPE="MEDICALRECORD" comment="" />
-<LOCATION id="P40" start="8012" end="8016" text="DCGH" TYPE="HOSPITAL" comment="" />
-<DATE id="P41" start="8044" end="8055" text="13-Mar-2094" TYPE="DATE" comment="" />
-<ID id="P42" start="8075" end="8085" text="1540R27019" TYPE="IDNUM" comment="" />
-<DATE id="P43" start="8123" end="8132" text="16-Mar-94" TYPE="DATE" comment="" />
-<DATE id="P44" start="8248" end="8257" text="16-Mar-94" TYPE="DATE" comment="" />
-<LOCATION id="P45" start="8392" end="8396" text="DCGH" TYPE="HOSPITAL" comment="" />
-<DATE id="P46" start="8424" end="8435" text="08-Mar-2094" TYPE="DATE" comment="" />
-<ID id="P47" start="8455" end="8465" text="2503U88389" TYPE="MEDICALRECORD" comment="" />
-<DATE id="P48" start="8506" end="8515" text="15-Mar-94" TYPE="DATE" comment="" />
-<LOCATION id="P49" start="9220" end="9224" text="DCGH" TYPE="HOSPITAL" comment="" />
-<DATE id="P50" start="9252" end="9263" text="16-Feb-2094" TYPE="DATE" comment="" />
-<ID id="P51" start="9283" end="9293" text="8388H26401" TYPE="MEDICALRECORD" comment="" />
-<DATE id="P52" start="9340" end="9349" text="19-Feb-94" TYPE="DATE" comment="" />
-<LOCATION id="P53" start="10758" end="10762" text="DCGH" TYPE="HOSPITAL" comment="" />
-<DATE id="P54" start="10793" end="10804" text="18-Mar-2094" TYPE="DATE" comment="" />
-<ID id="P55" start="10822" end="10829" text="3624881" TYPE="MEDICALRECORD" comment="" />
-<AGE id="P56" start="11092" end="11094" text="69" TYPE="AGE" comment="" />
-<LOCATION id="P57" start="11672" end="11686" text="Madison County" TYPE="HOSPITAL" comment="" />
-<NAME id="P58" start="11863" end="11869" text="Phelps" TYPE="DOCTOR" comment="" />
-<NAME id="P59" start="12543" end="12566" text="Ursula Isabella-Venegas" TYPE="DOCTOR" comment="" />
-<CONTACT id="P60" start="12573" end="12578" text="25112" TYPE="PHONE" comment="" />
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2094-03-19" />
+<NAME TYPE="PATIENT" comment="" end="96" id="P3" start="80" text="Faulkner, Yandel" />
+<ID TYPE="MEDICALRECORD" comment="" end="112" id="P4" start="103" text="507-55-61" />
+<DATE TYPE="DATE" comment="" end="141" id="P5" start="134" text="3/18/94" />
+<NAME TYPE="DOCTOR" comment="" end="155" id="P6" start="149" text="Yazzie" />
+<NAME TYPE="PATIENT" comment="" end="181" id="P7" start="166" text="Carlos Faulkner" />
+<CONTACT TYPE="PHONE" comment="" end="200" id="P8" start="188" text="441-626-7981" />
+<CONTACT TYPE="PHONE" comment="" end="214" id="P9" start="202" text="278-032-7163" />
+<DATE TYPE="DATE" comment="" end="489" id="P12" start="482" text="1/22/94" />
+<DATE TYPE="DATE" comment="" end="545" id="P14" start="538" text="1/22/94" />
+<DATE TYPE="DATE" comment="" end="689" id="P15" start="682" text="1/24/94" />
+<NAME TYPE="DOCTOR" comment="" end="1086" id="P17" start="1080" text="Phelps" />
+<DATE TYPE="DATE" comment="" end="1678" id="P18" start="1671" text="3/15/94" />
+<DATE TYPE="DATE" comment="" end="1804" id="P20" start="1797" text="3/18/94" />
+<DATE TYPE="DATE" comment="" end="1905" id="P21" start="1898" text="3/18/94" />
+<DATE TYPE="DATE" comment="" end="2332" id="P23" start="2320" text="January 2091" />
+<LOCATION TYPE="CITY" comment="" end="2845" id="P24" start="2836" text="Old River" />
+<DATE TYPE="DATE" comment="" end="3487" id="P26" start="3476" text="18-Mar-2094" />
+<ID TYPE="MEDICALRECORD" comment="" end="3516" id="P27" start="3506" text="9027U41613" />
+<DATE TYPE="DATE" comment="" end="4055" id="P29" start="4044" text="18-Mar-2094" />
+<ID TYPE="MEDICALRECORD" comment="" end="4084" id="P30" start="4074" text="8663L14453" />
+<DATE TYPE="DATE" comment="" end="5037" id="P32" start="5026" text="18-Mar-2094" />
+<ID TYPE="MEDICALRECORD" comment="" end="5066" id="P33" start="5056" text="7428Y74680" />
+<DATE TYPE="DATE" comment="" end="6922" id="P35" start="6911" text="18-Mar-2094" />
+<ID TYPE="MEDICALRECORD" comment="" end="6951" id="P36" start="6941" text="7741J60844" />
+<DATE TYPE="DATE" comment="" end="7833" id="P38" start="7822" text="18-Mar-2094" />
+<ID TYPE="MEDICALRECORD" comment="" end="7862" id="P39" start="7852" text="7607Z82720" />
+<DATE TYPE="DATE" comment="" end="8055" id="P41" start="8044" text="13-Mar-2094" />
+<ID TYPE="IDNUM" comment="" end="8085" id="P42" start="8075" text="1540R27019" />
+<DATE TYPE="DATE" comment="" end="8132" id="P43" start="8123" text="16-Mar-94" />
+<DATE TYPE="DATE" comment="" end="8257" id="P44" start="8248" text="16-Mar-94" />
+<DATE TYPE="DATE" comment="" end="8435" id="P46" start="8424" text="08-Mar-2094" />
+<ID TYPE="MEDICALRECORD" comment="" end="8465" id="P47" start="8455" text="2503U88389" />
+<DATE TYPE="DATE" comment="" end="8515" id="P48" start="8506" text="15-Mar-94" />
+<DATE TYPE="DATE" comment="" end="9263" id="P50" start="9252" text="16-Feb-2094" />
+<ID TYPE="MEDICALRECORD" comment="" end="9293" id="P51" start="9283" text="8388H26401" />
+<DATE TYPE="DATE" comment="" end="9349" id="P52" start="9340" text="19-Feb-94" />
+<DATE TYPE="DATE" comment="" end="10804" id="P54" start="10793" text="18-Mar-2094" />
+<ID TYPE="MEDICALRECORD" comment="" end="10829" id="P55" start="10822" text="3624881" />
+<NAME TYPE="DOCTOR" comment="" end="11869" id="P58" start="11863" text="Phelps" />
+<NAME TYPE="DOCTOR" comment="" end="12566" id="P59" start="12543" text="Ursula Isabella-Venegas" />
+<CONTACT TYPE="PHONE" comment="" end="12578" id="P60" start="12573" text="25112" />
 </TAGS>
 </deIdi2b2>

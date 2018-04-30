@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version='1.0' encoding='utf8'?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT>
 
 
 Record date: 2091-03-30
@@ -51,25 +51,22 @@ DV: 03/30/91
 
 
 
-***REMOVED******REMOVED***></TEXT>
+</TEXT>
 <TAGS>
-<DATE id="P0" start="16" end="26" text="2091-03-30" TYPE="DATE" comment="" />
-<LOCATION id="P1" start="29" end="33" text="ORLH" TYPE="HOSPITAL" comment="" />
-<LOCATION id="P2" start="34" end="55" text="58 Kessler Farm Drive" TYPE="STREET" comment="" />
-<NAME id="P3" start="95" end="116" text="NICHOLAS-XAVIER, FRED" TYPE="PATIENT" comment="" />
-<LOCATION id="P4" start="117" end="127" text="White Hall" TYPE="CITY" comment="" />
-<LOCATION id="P5" start="129" end="131" text="MN" TYPE="STATE" comment="" />
-<LOCATION id="P6" start="132" end="137" text="76715" TYPE="ZIP" comment="" />
-<ID id="P7" start="175" end="183" text="65856594" TYPE="MEDICALRECORD" comment="" />
-<CONTACT id="P8" start="184" end="198" text="(959) 149-6104" TYPE="PHONE" comment="" />
-<DATE id="P9" start="241" end="249" text="03/30/91" TYPE="DATE" comment="" />
-<NAME id="P10" start="274" end="289" text="Nicholas Xavier" TYPE="PATIENT" comment="" />
-<AGE id="P11" start="295" end="297" text="73" TYPE="AGE" comment="" />
-<LOCATION id="P12" start="330" end="346" text="Orlando Regional" TYPE="HOSPITAL" comment="" />
-<NAME id="P13" start="1504" end="1517" text="Billy Vanpelt" TYPE="DOCTOR" comment="" />
-<ID id="P14" start="1545" end="1554" text="3-9348364" TYPE="IDNUM" comment="" />
-<DATE id="P15" start="1559" end="1567" text="03/30/91" TYPE="DATE" comment="" />
-<DATE id="P16" start="1572" end="1580" text="03/31/91" TYPE="DATE" comment="" />
-<DATE id="P17" start="1585" end="1593" text="03/30/91" TYPE="DATE" comment="" />
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2091-03-30" />
+<LOCATION TYPE="STREET" comment="" end="55" id="P2" start="34" text="58 Kessler Farm Drive" />
+<NAME TYPE="PATIENT" comment="" end="116" id="P3" start="95" text="NICHOLAS-XAVIER, FRED" />
+<LOCATION TYPE="CITY" comment="" end="127" id="P4" start="117" text="White Hall" />
+<LOCATION TYPE="STATE" comment="" end="131" id="P5" start="129" text="MN" />
+<LOCATION TYPE="ZIP" comment="" end="137" id="P6" start="132" text="76715" />
+<ID TYPE="MEDICALRECORD" comment="" end="183" id="P7" start="175" text="65856594" />
+<CONTACT TYPE="PHONE" comment="" end="198" id="P8" start="184" text="(959) 149-6104" />
+<DATE TYPE="DATE" comment="" end="249" id="P9" start="241" text="03/30/91" />
+<NAME TYPE="PATIENT" comment="" end="289" id="P10" start="274" text="Nicholas Xavier" />
+<NAME TYPE="DOCTOR" comment="" end="1517" id="P13" start="1504" text="Billy Vanpelt" />
+<ID TYPE="IDNUM" comment="" end="1554" id="P14" start="1545" text="3-9348364" />
+<DATE TYPE="DATE" comment="" end="1567" id="P15" start="1559" text="03/30/91" />
+<DATE TYPE="DATE" comment="" end="1580" id="P16" start="1572" text="03/31/91" />
+<DATE TYPE="DATE" comment="" end="1593" id="P17" start="1585" text="03/30/91" />
 </TAGS>
 </deIdi2b2>

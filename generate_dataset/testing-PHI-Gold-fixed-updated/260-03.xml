@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version='1.0' encoding='utf8'?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT>
 
 
 Record date: 2071-01-30
@@ -159,30 +159,23 @@ Signed electronically by   Steven  Vega MD  on  Feb 3, 2071
 
 
 
-***REMOVED******REMOVED***></TEXT>
+</TEXT>
 <TAGS>
-<DATE id="P0" start="16" end="26" text="2071-01-30" TYPE="DATE" comment="" />
-<LOCATION id="P1" start="40" end="66" text="BETHESDA MEMORIAL HOSPITAL" TYPE="HOSPITAL" comment="" />
-<NAME id="P2" start="70" end="85" text="Xavier T Huerta" TYPE="DOCTOR" comment="" />
-<LOCATION id="P3" start="93" end="96" text="BMH" TYPE="HOSPITAL" comment="" />
-<LOCATION id="P5" start="116" end="135" text="583 Appaloosa Place" TYPE="STREET" comment="" />
-<LOCATION id="P6" start="137" end="148" text="CHESTERTOWN" TYPE="CITY" comment="" />
-<LOCATION id="P7" start="150" end="152" text="NY" TYPE="STATE" comment="" />
-<LOCATION id="P8" start="153" end="158" text="91987" TYPE="ZIP" comment="" />
-<NAME id="P9" start="171" end="177" text="Huerta" TYPE="DOCTOR" comment="" />
-<NAME id="P10" start="240" end="251" text="Irving Vera" TYPE="PATIENT" comment="" />
-<NAME id="P12" start="304" end="314" text="Ilya Light" TYPE="DOCTOR" comment="" />
-<AGE id="P13" start="324" end="326" text="59" TYPE="AGE" comment="" />
-<DATE id="P14" start="476" end="480" text="2069" TYPE="DATE" comment="" />
-<DATE id="P15" start="498" end="502" text="2069" TYPE="DATE" comment="" />
-<DATE id="P16" start="746" end="756" text="02/22/2069" TYPE="DATE" comment="" />
-<DATE id="P17" start="898" end="908" text="03/16/2069" TYPE="DATE" comment="" />
-<PROFESSION id="P18" start="2386" end="2396" text="securities" TYPE="PROFESSION" comment="" />
-<DATE id="P19" start="2910" end="2920" text="06/18/2070" TYPE="DATE" comment="" />
-<AGE id="P20" start="3079" end="3081" text="59" TYPE="AGE" comment="" />
-<DATE id="P21" start="3312" end="3316" text="2069" TYPE="DATE" comment="" />
-<NAME id="P22" start="4379" end="4390" text="Steven Vega" TYPE="DOCTOR" comment="" />
-<NAME id="P23" start="4424" end="4436" text="Steven  Vega" TYPE="DOCTOR" comment="" />
-<DATE id="P24" start="4445" end="4456" text="Feb 3, 2071" TYPE="DATE" comment="" />
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2071-01-30" />
+<NAME TYPE="DOCTOR" comment="" end="85" id="P2" start="70" text="Xavier T Huerta" />
+<LOCATION TYPE="STREET" comment="" end="135" id="P5" start="116" text="583 Appaloosa Place" />
+<LOCATION TYPE="CITY" comment="" end="148" id="P6" start="137" text="CHESTERTOWN" />
+<LOCATION TYPE="STATE" comment="" end="152" id="P7" start="150" text="NY" />
+<LOCATION TYPE="ZIP" comment="" end="158" id="P8" start="153" text="91987" />
+<NAME TYPE="DOCTOR" comment="" end="177" id="P9" start="171" text="Huerta" />
+<NAME TYPE="PATIENT" comment="" end="251" id="P10" start="240" text="Irving Vera" />
+<NAME TYPE="DOCTOR" comment="" end="314" id="P12" start="304" text="Ilya Light" />
+<DATE TYPE="DATE" comment="" end="756" id="P16" start="746" text="02/22/2069" />
+<DATE TYPE="DATE" comment="" end="908" id="P17" start="898" text="03/16/2069" />
+<PROFESSION TYPE="PROFESSION" comment="" end="2396" id="P18" start="2386" text="securities" />
+<DATE TYPE="DATE" comment="" end="2920" id="P19" start="2910" text="06/18/2070" />
+<NAME TYPE="DOCTOR" comment="" end="4390" id="P22" start="4379" text="Steven Vega" />
+<NAME TYPE="DOCTOR" comment="" end="4436" id="P23" start="4424" text="Steven  Vega" />
+<DATE TYPE="DATE" comment="" end="4456" id="P24" start="4445" text="Feb 3, 2071" />
 </TAGS>
 </deIdi2b2>

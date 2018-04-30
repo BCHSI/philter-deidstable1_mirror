@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version='1.0' encoding='utf8'?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT>
 
 
 Record date: 2072-04-24
@@ -117,30 +117,27 @@ Follow-up in 9/72.  Will contact him with results of lab work.
 
 
 
-***REMOVED******REMOVED***></TEXT>
+</TEXT>
 <TAGS>
-<DATE id="P0" start="16" end="26" text="2072-04-24" TYPE="DATE" comment="" />
-<NAME id="P1" start="51" end="60" text="Whitehead" TYPE="PATIENT" comment="" />
-<DATE id="P2" start="166" end="170" text="8/69" TYPE="DATE" comment="" />
-<DATE id="P3" start="182" end="186" text="8/70" TYPE="DATE" comment="" />
-<DATE id="P4" start="198" end="202" text="2/72" TYPE="DATE" comment="" />
-<NAME id="P5" start="250" end="254" text="Pena" TYPE="DOCTOR" comment="" />
-<DATE id="P6" start="355" end="359" text="4/71" TYPE="DATE" comment="" />
-<DATE id="P7" start="485" end="492" text="11/1/69" TYPE="DATE" comment="" />
-<LOCATION id="P8" start="548" end="564" text="Montreal Medical" TYPE="HOSPITAL" comment="" />
-<NAME id="P9" start="662" end="668" text="Lozano" TYPE="DOCTOR" comment="" />
-<DATE id="P10" start="709" end="713" text="6/71" TYPE="DATE" comment="" />
-<DATE id="P11" start="725" end="729" text="9/71" TYPE="DATE" comment="" />
-<DATE id="P12" start="1271" end="1277" text="1/2070" TYPE="DATE" comment="" />
-<LOCATION id="P13" start="1306" end="1310" text="NAMG" TYPE="HOSPITAL" comment="" />
-<LOCATION id="P14" start="1347" end="1370" text="Montreal Medical Center" TYPE="HOSPITAL" comment="" />
-<DATE id="P15" start="1406" end="1412" text="2/2070" TYPE="DATE" comment="" />
-<NAME id="P16" start="1473" end="1479" text="Conley" TYPE="DOCTOR" comment="" />
-<NAME id="P17" start="1484" end="1491" text="Sheehan" TYPE="DOCTOR" comment="" />
-<DATE id="P18" start="1514" end="1520" text="8/5/71" TYPE="DATE" comment="" />
-<NAME id="P19" start="1763" end="1770" text="Sheehan" TYPE="DOCTOR" comment="" />
-<NAME id="P20" start="1888" end="1897" text="Whitehead" TYPE="PATIENT" comment="" />
-<DATE id="P21" start="1922" end="1930" text="12/25/71" TYPE="DATE" comment="" />
-<DATE id="P22" start="2749" end="2753" text="9/72" TYPE="DATE" comment="" />
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2072-04-24" />
+<NAME TYPE="PATIENT" comment="" end="60" id="P1" start="51" text="Whitehead" />
+<DATE TYPE="DATE" comment="" end="170" id="P2" start="166" text="8/69" />
+<DATE TYPE="DATE" comment="" end="186" id="P3" start="182" text="8/70" />
+<DATE TYPE="DATE" comment="" end="202" id="P4" start="198" text="2/72" />
+<NAME TYPE="DOCTOR" comment="" end="254" id="P5" start="250" text="Pena" />
+<DATE TYPE="DATE" comment="" end="359" id="P6" start="355" text="4/71" />
+<DATE TYPE="DATE" comment="" end="492" id="P7" start="485" text="11/1/69" />
+<NAME TYPE="DOCTOR" comment="" end="668" id="P9" start="662" text="Lozano" />
+<DATE TYPE="DATE" comment="" end="713" id="P10" start="709" text="6/71" />
+<DATE TYPE="DATE" comment="" end="729" id="P11" start="725" text="9/71" />
+<DATE TYPE="DATE" comment="" end="1277" id="P12" start="1271" text="1/2070" />
+<DATE TYPE="DATE" comment="" end="1412" id="P15" start="1406" text="2/2070" />
+<NAME TYPE="DOCTOR" comment="" end="1479" id="P16" start="1473" text="Conley" />
+<NAME TYPE="DOCTOR" comment="" end="1491" id="P17" start="1484" text="Sheehan" />
+<DATE TYPE="DATE" comment="" end="1520" id="P18" start="1514" text="8/5/71" />
+<NAME TYPE="DOCTOR" comment="" end="1770" id="P19" start="1763" text="Sheehan" />
+<NAME TYPE="PATIENT" comment="" end="1897" id="P20" start="1888" text="Whitehead" />
+<DATE TYPE="DATE" comment="" end="1930" id="P21" start="1922" text="12/25/71" />
+<DATE TYPE="DATE" comment="" end="2753" id="P22" start="2749" text="9/72" />
 </TAGS>
 </deIdi2b2>

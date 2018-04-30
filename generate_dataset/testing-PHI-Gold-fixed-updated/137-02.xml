@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version='1.0' encoding='utf8'?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT>
 
 
 Record date: 2068-12-12
@@ -101,32 +101,27 @@ DV: 12/12/68
 
 
 
-***REMOVED******REMOVED***></TEXT>
+</TEXT>
 <TAGS>
-<DATE id="P0" start="16" end="26" text="2068-12-12" TYPE="DATE" comment="" />
-<LOCATION id="P1" start="34" end="51" text="Eudowood Services" TYPE="HOSPITAL" comment="" />
-<LOCATION id="P2" start="68" end="83" text="128 Williams Ct" TYPE="STREET" comment="" />
-<NAME id="P3" start="97" end="112" text="M OSCAR, JOHNNY" TYPE="PATIENT" comment="" />
-<LOCATION id="P4" start="113" end="122" text="Hyderabad" TYPE="CITY" comment="" />
-<LOCATION id="P5" start="124" end="126" text="WI" TYPE="STATE" comment="" />
-<LOCATION id="P6" start="128" end="133" text="62297" TYPE="ZIP" comment="" />
-<ID id="P7" start="153" end="161" text="76324418" TYPE="MEDICALRECORD" comment="" />
-<CONTACT id="P8" start="162" end="174" text="547-598-7353" TYPE="PHONE" comment="" />
-<DATE id="P9" start="195" end="205" text="12/12/2068" TYPE="DATE" comment="" />
-<AGE id="P10" start="256" end="258" text="59" TYPE="AGE" comment="" />
-<LOCATION id="P11" start="794" end="806" text="Jay Hospital" TYPE="HOSPITAL" comment="" />
-<LOCATION id="P12" start="910" end="919" text="Littleton" TYPE="CITY" comment="" />
-<LOCATION id="P13" start="921" end="930" text="Wisconsin" TYPE="STATE" comment="" />
-<NAME id="P14" start="1203" end="1208" text="Garza" TYPE="DOCTOR" comment="" />
-<NAME id="P15" start="1480" end="1485" text="Garza" TYPE="DOCTOR" comment="" />
-<DATE id="P16" start="1491" end="1497" text="spring" TYPE="DATE" comment="" />
-<LOCATION id="P17" start="3001" end="3028" text="Rappahannock Medical Clinic" TYPE="HOSPITAL" comment="" />
-<NAME id="P18" start="3339" end="3344" text="Garza" TYPE="DOCTOR" comment="" />
-<NAME id="P19" start="3597" end="3606" text="Jefferson" TYPE="DOCTOR" comment="" />
-<NAME id="P20" start="3930" end="3941" text="Todd Brandt" TYPE="DOCTOR" comment="" />
-<ID id="P21" start="3978" end="3987" text="4-4822140" TYPE="IDNUM" comment="" />
-<DATE id="P22" start="4009" end="4017" text="12/12/68" TYPE="DATE" comment="" />
-<DATE id="P23" start="4022" end="4030" text="12/12/68" TYPE="DATE" comment="" />
-<DATE id="P24" start="4035" end="4043" text="12/12/68" TYPE="DATE" comment="" />
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2068-12-12" />
+<LOCATION TYPE="STREET" comment="" end="83" id="P2" start="68" text="128 Williams Ct" />
+<NAME TYPE="PATIENT" comment="" end="112" id="P3" start="97" text="M OSCAR, JOHNNY" />
+<LOCATION TYPE="CITY" comment="" end="122" id="P4" start="113" text="Hyderabad" />
+<LOCATION TYPE="STATE" comment="" end="126" id="P5" start="124" text="WI" />
+<LOCATION TYPE="ZIP" comment="" end="133" id="P6" start="128" text="62297" />
+<ID TYPE="MEDICALRECORD" comment="" end="161" id="P7" start="153" text="76324418" />
+<CONTACT TYPE="PHONE" comment="" end="174" id="P8" start="162" text="547-598-7353" />
+<DATE TYPE="DATE" comment="" end="205" id="P9" start="195" text="12/12/2068" />
+<LOCATION TYPE="CITY" comment="" end="919" id="P12" start="910" text="Littleton" />
+<LOCATION TYPE="STATE" comment="" end="930" id="P13" start="921" text="Wisconsin" />
+<NAME TYPE="DOCTOR" comment="" end="1208" id="P14" start="1203" text="Garza" />
+<NAME TYPE="DOCTOR" comment="" end="1485" id="P15" start="1480" text="Garza" />
+<NAME TYPE="DOCTOR" comment="" end="3344" id="P18" start="3339" text="Garza" />
+<NAME TYPE="DOCTOR" comment="" end="3606" id="P19" start="3597" text="Jefferson" />
+<NAME TYPE="DOCTOR" comment="" end="3941" id="P20" start="3930" text="Todd Brandt" />
+<ID TYPE="IDNUM" comment="" end="3987" id="P21" start="3978" text="4-4822140" />
+<DATE TYPE="DATE" comment="" end="4017" id="P22" start="4009" text="12/12/68" />
+<DATE TYPE="DATE" comment="" end="4030" id="P23" start="4022" text="12/12/68" />
+<DATE TYPE="DATE" comment="" end="4043" id="P24" start="4035" text="12/12/68" />
 </TAGS>
 </deIdi2b2>

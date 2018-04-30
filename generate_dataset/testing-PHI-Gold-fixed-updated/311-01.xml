@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version='1.0' encoding='utf8'?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT>
 
 
 Record date: 2082-11-22
@@ -79,21 +79,19 @@ Dictated by:  YVES BLACKBURN, M.D.       HB79
 
 
 
-***REMOVED******REMOVED***></TEXT>
+</TEXT>
 <TAGS>
-<DATE id="P0" start="16" end="26" text="2082-11-22" TYPE="DATE" comment="" />
-<LOCATION id="P1" start="49" end="52" text="ZHH" TYPE="HOSPITAL" comment="" />
-<NAME id="P2" start="78" end="92" text="FINNEY,INDIANA" TYPE="PATIENT" comment="" />
-<ID id="P3" start="95" end="106" text="432-94-73-9" TYPE="MEDICALRECORD" comment="" />
-<DATE id="P4" start="136" end="144" text="11/22/82" TYPE="DATE" comment="" />
-<NAME id="P5" start="221" end="227" text="Finney" TYPE="PATIENT" comment="" />
-<AGE id="P6" start="233" end="235" text="45" TYPE="AGE" comment="" />
-<ID id="P7" start="1754" end="1764" text="TJ371/9248" TYPE="IDNUM" comment="" />
-<NAME id="P8" start="1767" end="1781" text="YVES BLACKBURN" TYPE="DOCTOR" comment="" />
-<NAME id="P9" start="1794" end="1798" text="HB79" TYPE="USERNAME" comment="" />
-<DATE id="P10" start="1825" end="1833" text="11/22/82" TYPE="DATE" comment="" />
-<DATE id="P11" start="1893" end="1901" text="11/23/82" TYPE="DATE" comment="" />
-<NAME id="P12" start="1918" end="1932" text="YVES BLACKBURN" TYPE="DOCTOR" comment="" />
-<NAME id="P13" start="1945" end="1949" text="HB79" TYPE="USERNAME" comment="" />
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2082-11-22" />
+<NAME TYPE="PATIENT" comment="" end="92" id="P2" start="78" text="FINNEY,INDIANA" />
+<ID TYPE="MEDICALRECORD" comment="" end="106" id="P3" start="95" text="432-94-73-9" />
+<DATE TYPE="DATE" comment="" end="144" id="P4" start="136" text="11/22/82" />
+<NAME TYPE="PATIENT" comment="" end="227" id="P5" start="221" text="Finney" />
+<ID TYPE="IDNUM" comment="" end="1764" id="P7" start="1754" text="TJ371/9248" />
+<NAME TYPE="DOCTOR" comment="" end="1781" id="P8" start="1767" text="YVES BLACKBURN" />
+<NAME TYPE="USERNAME" comment="" end="1798" id="P9" start="1794" text="HB79" />
+<DATE TYPE="DATE" comment="" end="1833" id="P10" start="1825" text="11/22/82" />
+<DATE TYPE="DATE" comment="" end="1901" id="P11" start="1893" text="11/23/82" />
+<NAME TYPE="DOCTOR" comment="" end="1932" id="P12" start="1918" text="YVES BLACKBURN" />
+<NAME TYPE="USERNAME" comment="" end="1949" id="P13" start="1945" text="HB79" />
 </TAGS>
 </deIdi2b2>

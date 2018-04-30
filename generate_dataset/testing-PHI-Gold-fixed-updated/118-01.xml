@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version='1.0' encoding='utf8'?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT>
 
 
 Record date: 2117-03-10
@@ -92,7 +92,7 @@ At OSH in Columbia:  LVH, nl fxn, AV calcified. Max gradient 62, mean 38mmHg. Mi
    EKG: 
 Sinus brady at 55 bpm, nl axis, 1st degree AV block, STD/TWI in I, II, III, aVF, V5, V6. LVH pattern w/ J pt elevation in V1-V3.  
 
-ASSESSMENT & PLAN
+ASSESSMENT &amp; PLAN
 54 y/o Spanish speaking male with HTN, HL presents to PNC after syncopal episode 2 days ago and was found to have AS at OSH.  Mean gradient of 38mmHg indicates moderate disease.  Prognosis after syncopal episode due to AS is 3 years.
 
 AS:  Monitor for syncope, CHF, ischemia
@@ -119,29 +119,17 @@ Jennifer Yuan, MD 67404
 
 
 
-***REMOVED******REMOVED***></TEXT>
+</TEXT>
 <TAGS>
-<DATE id="P0" start="16" end="26" text="2117-03-10" TYPE="DATE" comment="" />
-<NAME id="P1" start="57" end="71" text="Usrey, Anthony" TYPE="PATIENT" comment="" />
-<ID id="P2" start="81" end="88" text="6444877" TYPE="MEDICALRECORD" comment="" />
-<DATE id="P3" start="102" end="116" text="March 10, 2117" TYPE="DATE" comment="" />
-<NAME id="P4" start="155" end="161" text="Updyke" TYPE="DOCTOR" comment="" />
-<NAME id="P5" start="176" end="188" text="Iacono, Cruz" TYPE="DOCTOR" comment="" />
-<AGE id="P6" start="216" end="218" text="54" TYPE="AGE" comment="" />
-<LOCATION id="P7" start="223" end="232" text="Columbian" TYPE="COUNTRY" comment="" />
-<LOCATION id="P8" start="271" end="279" text="Columbia" TYPE="COUNTRY" comment="" />
-<LOCATION id="P9" start="698" end="706" text="Columbia" TYPE="COUNTRY" comment="" />
-<LOCATION id="P10" start="790" end="798" text="Columbia" TYPE="COUNTRY" comment="" />
-<LOCATION id="P11" start="941" end="948" text="America" TYPE="COUNTRY" comment="" />
-<LOCATION id="P12" start="1330" end="1338" text="Columbia" TYPE="COUNTRY" comment="" />
-<LOCATION id="P13" start="1559" end="1567" text="Columbia" TYPE="COUNTRY" comment="" />
-<LOCATION id="P14" start="1593" end="1605" text="Johnson City" TYPE="CITY" comment="" />
-<LOCATION id="P15" start="1617" end="1632" text="Pilgrim's Pride" TYPE="ORGANIZATION" comment="" />
-<AGE id="P16" start="1667" end="1670" text="50s" TYPE="AGE" comment="" />
-<LOCATION id="P17" start="3686" end="3694" text="Columbia" TYPE="COUNTRY" comment="" />
-<AGE id="P18" start="3934" end="3936" text="54" TYPE="AGE" comment="" />
-<LOCATION id="P19" start="3988" end="3991" text="PNC" TYPE="HOSPITAL" comment="" />
-<NAME id="P20" start="4773" end="4786" text="Jennifer Yuan" TYPE="DOCTOR" comment="" />
-<CONTACT id="P21" start="4791" end="4796" text="67404" TYPE="PHONE" comment="" />
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2117-03-10" />
+<NAME TYPE="PATIENT" comment="" end="71" id="P1" start="57" text="Usrey, Anthony" />
+<ID TYPE="MEDICALRECORD" comment="" end="88" id="P2" start="81" text="6444877" />
+<DATE TYPE="DATE" comment="" end="116" id="P3" start="102" text="March 10, 2117" />
+<NAME TYPE="DOCTOR" comment="" end="161" id="P4" start="155" text="Updyke" />
+<NAME TYPE="DOCTOR" comment="" end="188" id="P5" start="176" text="Iacono, Cruz" />
+<LOCATION TYPE="CITY" comment="" end="1605" id="P14" start="1593" text="Johnson City" />
+<LOCATION TYPE="ORGANIZATION" comment="" end="1632" id="P15" start="1617" text="Pilgrim's Pride" />
+<NAME TYPE="DOCTOR" comment="" end="4786" id="P20" start="4773" text="Jennifer Yuan" />
+<CONTACT TYPE="PHONE" comment="" end="4796" id="P21" start="4791" text="67404" />
 </TAGS>
 </deIdi2b2>

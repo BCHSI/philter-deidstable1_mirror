@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version='1.0' encoding='utf8'?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT>
 
 
 Record date: 2081-03-02
@@ -71,19 +71,18 @@ eScription document:6-1192641 BFFocus
 
 
 
-***REMOVED******REMOVED***></TEXT>
+</TEXT>
 <TAGS>
-<DATE id="P0" start="16" end="26" text="2081-03-02" TYPE="DATE" comment="" />
-<ID id="P1" start="36" end="44" text="35093053" TYPE="MEDICALRECORD" comment="" />
-<NAME id="P2" start="45" end="57" text="Dodd, Steven" TYPE="PATIENT" comment="" />
-<DATE id="P3" start="58" end="66" text="03/02/81" TYPE="DATE" comment="" />
-<NAME id="P4" start="67" end="79" text="CHURCH, XION" TYPE="DOCTOR" comment="" />
-<NAME id="P5" start="470" end="474" text="Dodd" TYPE="PATIENT" comment="" />
-<AGE id="P6" start="480" end="482" text="65" TYPE="AGE" comment="" />
-<NAME id="P7" start="1298" end="1310" text="CHURCH, XION" TYPE="DOCTOR" comment="" />
-<DATE id="P8" start="1320" end="1328" text="03/02/81" TYPE="DATE" comment="" />
-<DATE id="P9" start="1333" end="1341" text="03/02/81" TYPE="DATE" comment="" />
-<NAME id="P10" start="1356" end="1368" text="CHURCH, XION" TYPE="DOCTOR" comment="" />
-<ID id="P11" start="1390" end="1399" text="6-1192641" TYPE="IDNUM" comment="" />
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2081-03-02" />
+<ID TYPE="MEDICALRECORD" comment="" end="44" id="P1" start="36" text="35093053" />
+<NAME TYPE="PATIENT" comment="" end="57" id="P2" start="45" text="Dodd, Steven" />
+<DATE TYPE="DATE" comment="" end="66" id="P3" start="58" text="03/02/81" />
+<NAME TYPE="DOCTOR" comment="" end="79" id="P4" start="67" text="CHURCH, XION" />
+<NAME TYPE="PATIENT" comment="" end="474" id="P5" start="470" text="Dodd" />
+<NAME TYPE="DOCTOR" comment="" end="1310" id="P7" start="1298" text="CHURCH, XION" />
+<DATE TYPE="DATE" comment="" end="1328" id="P8" start="1320" text="03/02/81" />
+<DATE TYPE="DATE" comment="" end="1341" id="P9" start="1333" text="03/02/81" />
+<NAME TYPE="DOCTOR" comment="" end="1368" id="P10" start="1356" text="CHURCH, XION" />
+<ID TYPE="IDNUM" comment="" end="1399" id="P11" start="1390" text="6-1192641" />
 </TAGS>
 </deIdi2b2>

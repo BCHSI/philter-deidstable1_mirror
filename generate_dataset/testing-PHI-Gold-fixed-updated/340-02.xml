@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version='1.0' encoding='utf8'?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT>
 
 
 Record date: 2076-04-23
@@ -130,25 +130,23 @@ DV: 04/23/76
 
 
 
-***REMOVED******REMOVED***></TEXT>
+</TEXT>
 <TAGS>
-<DATE id="P0" start="16" end="26" text="2076-04-23" TYPE="DATE" comment="" />
-<LOCATION id="P1" start="30" end="69" text="Carolyn Huntington Bailey Health Center" TYPE="HOSPITAL" comment="" />
-<LOCATION id="P2" start="71" end="90" text="592 Kristina Street" TYPE="STREET" comment="" />
-<NAME id="P3" start="130" end="139" text="XIA, JEAN" TYPE="PATIENT" comment="" />
-<LOCATION id="P4" start="141" end="151" text="North East" TYPE="CITY" comment="" />
-<LOCATION id="P5" start="153" end="155" text="AL" TYPE="STATE" comment="" />
-<LOCATION id="P6" start="156" end="161" text="81699" TYPE="ZIP" comment="" />
-<ID id="P7" start="189" end="197" text="58269151" TYPE="MEDICALRECORD" comment="" />
-<CONTACT id="P8" start="199" end="213" text="(375) 512-0897" TYPE="PHONE" comment="" />
-<DATE id="P9" start="257" end="265" text="04/23/76" TYPE="DATE" comment="" />
-<DATE id="P10" start="746" end="753" text="11/2075" TYPE="DATE" comment="" />
-<LOCATION id="P11" start="1123" end="1140" text="Schroder Hospital" TYPE="HOSPITAL" comment="" />
-<NAME id="P12" start="3410" end="3423" text="Charles Moran" TYPE="DOCTOR" comment="" />
-<NAME id="P13" start="3444" end="3457" text="Charles Moran" TYPE="DOCTOR" comment="" />
-<ID id="P14" start="3479" end="3488" text="0-0545950" TYPE="IDNUM" comment="" />
-<DATE id="P15" start="3502" end="3510" text="04/23/76" TYPE="DATE" comment="" />
-<DATE id="P16" start="3516" end="3524" text="04/24/76" TYPE="DATE" comment="" />
-<DATE id="P17" start="3530" end="3538" text="04/23/76" TYPE="DATE" comment="" />
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2076-04-23" />
+<LOCATION TYPE="STREET" comment="" end="90" id="P2" start="71" text="592 Kristina Street" />
+<NAME TYPE="PATIENT" comment="" end="139" id="P3" start="130" text="XIA, JEAN" />
+<LOCATION TYPE="CITY" comment="" end="151" id="P4" start="141" text="North East" />
+<LOCATION TYPE="STATE" comment="" end="155" id="P5" start="153" text="AL" />
+<LOCATION TYPE="ZIP" comment="" end="161" id="P6" start="156" text="81699" />
+<ID TYPE="MEDICALRECORD" comment="" end="197" id="P7" start="189" text="58269151" />
+<CONTACT TYPE="PHONE" comment="" end="213" id="P8" start="199" text="(375) 512-0897" />
+<DATE TYPE="DATE" comment="" end="265" id="P9" start="257" text="04/23/76" />
+<DATE TYPE="DATE" comment="" end="753" id="P10" start="746" text="11/2075" />
+<NAME TYPE="DOCTOR" comment="" end="3423" id="P12" start="3410" text="Charles Moran" />
+<NAME TYPE="DOCTOR" comment="" end="3457" id="P13" start="3444" text="Charles Moran" />
+<ID TYPE="IDNUM" comment="" end="3488" id="P14" start="3479" text="0-0545950" />
+<DATE TYPE="DATE" comment="" end="3510" id="P15" start="3502" text="04/23/76" />
+<DATE TYPE="DATE" comment="" end="3524" id="P16" start="3516" text="04/24/76" />
+<DATE TYPE="DATE" comment="" end="3538" id="P17" start="3530" text="04/23/76" />
 </TAGS>
 </deIdi2b2>

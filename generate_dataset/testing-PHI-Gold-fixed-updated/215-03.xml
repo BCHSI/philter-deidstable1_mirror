@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version='1.0' encoding='utf8'?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT>
 
 
 Record date: 2129-01-09
@@ -45,7 +45,7 @@ The patient noted a decreased amount of concentrated foul smelling urine, worsen
 
 Past Medical/Surgical History: 
 
-CAD s/p MI & CABG (5/25: LIMA to LAD, SVG to PDA, Radial Artery to OM1); last catheterization 1/2126  patent grafts, last stress 12/2127   adenosine MIBI, equivocal inferolateral ischemia and small posterobasal scar, last ECHO 2/2128  Mild MR, LA dilatation, EF 62 %, trace TR, RVSP 25 mmHg
+CAD s/p MI &amp; CABG (5/25: LIMA to LAD, SVG to PDA, Radial Artery to OM1); last catheterization 1/2126  patent grafts, last stress 12/2127   adenosine MIBI, equivocal inferolateral ischemia and small posterobasal scar, last ECHO 2/2128  Mild MR, LA dilatation, EF 62 %, trace TR, RVSP 25 mmHg
 
 CHF(diastolic dysfunction)
 
@@ -155,7 +155,7 @@ CK-MB	--	4.5
 
 RI		--	--
 
-Trop T	0.02	<0.01
+Trop T	0.02	&lt;0.01
 
    Blood Counts:
 
@@ -237,34 +237,28 @@ Pager # 32591
 
 
 
-***REMOVED******REMOVED***></TEXT>
+</TEXT>
 <TAGS>
-<DATE id="P0" start="16" end="26" text="2129-01-09" TYPE="DATE" comment="" />
-<NAME id="P1" start="65" end="81" text="Valdivia, Elijah" TYPE="PATIENT" comment="" />
-<LOCATION id="P2" start="83" end="86" text="EVC" TYPE="HOSPITAL" comment="" />
-<ID id="P3" start="100" end="109" text="845 52 82" TYPE="MEDICALRECORD" comment="" />
-<DATE id="P4" start="131" end="145" text="9 January 2129" TYPE="DATE" comment="" />
-<NAME id="P5" start="168" end="181" text="Quentin Lemus" TYPE="DOCTOR" comment="" />
-<NAME id="P8" start="241" end="254" text="Leon Fontenot" TYPE="DOCTOR" comment="" />
-<LOCATION id="P9" start="262" end="276" text="Elkhorn Valley" TYPE="HOSPITAL" comment="" />
-<AGE id="P10" start="373" end="375" text="58" TYPE="AGE" comment="" />
-<NAME id="P11" start="678" end="693" text="Queenie Yeargan" TYPE="DOCTOR" comment="" />
-<DATE id="P12" start="697" end="705" text="01/03/29" TYPE="DATE" comment="" />
-<NAME id="P13" start="736" end="742" text="Haynes" TYPE="DOCTOR" comment="" />
-<DATE id="P14" start="1028" end="1036" text="01/05/29" TYPE="DATE" comment="" />
-<NAME id="P15" start="1061" end="1067" text="Haynes" TYPE="DOCTOR" comment="" />
-<NAME id="P16" start="1203" end="1216" text="Quentin Lemus" TYPE="DOCTOR" comment="" />
-<DATE id="P17" start="1665" end="1669" text="5/25" TYPE="DATE" comment="" />
-<DATE id="P18" start="1740" end="1746" text="1/2126" TYPE="DATE" comment="" />
-<DATE id="P19" start="1775" end="1782" text="12/2127" TYPE="DATE" comment="" />
-<DATE id="P20" start="1873" end="1879" text="2/2128" TYPE="DATE" comment="" />
-<PROFESSION id="P21" start="2160" end="2165" text="Pilot" TYPE="PROFESSION" comment="" />
-<LOCATION id="P22" start="2167" end="2176" text="Air Force" TYPE="ORGANIZATION" comment="" />
-<DATE id="P23" start="2177" end="2181" text="2090" TYPE="DATE" comment="" />
-<DATE id="P24" start="2182" end="2186" text="2092" TYPE="DATE" comment="" />
-<PROFESSION id="P25" start="2468" end="2490" text="communications manager" TYPE="PROFESSION" comment="" />
-<AGE id="P26" start="4013" end="4015" text="58" TYPE="AGE" comment="" />
-<NAME id="P27" start="5207" end="5221" text="Quincey Harmon" TYPE="DOCTOR" comment="" />
-<CONTACT id="P28" start="5264" end="5269" text="32591" TYPE="PHONE" comment="" />
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2129-01-09" />
+<NAME TYPE="PATIENT" comment="" end="81" id="P1" start="65" text="Valdivia, Elijah" />
+<ID TYPE="MEDICALRECORD" comment="" end="109" id="P3" start="100" text="845 52 82" />
+<DATE TYPE="DATE" comment="" end="145" id="P4" start="131" text="9 January 2129" />
+<NAME TYPE="DOCTOR" comment="" end="181" id="P5" start="168" text="Quentin Lemus" />
+<NAME TYPE="DOCTOR" comment="" end="254" id="P8" start="241" text="Leon Fontenot" />
+<NAME TYPE="DOCTOR" comment="" end="693" id="P11" start="678" text="Queenie Yeargan" />
+<DATE TYPE="DATE" comment="" end="705" id="P12" start="697" text="01/03/29" />
+<NAME TYPE="DOCTOR" comment="" end="742" id="P13" start="736" text="Haynes" />
+<DATE TYPE="DATE" comment="" end="1036" id="P14" start="1028" text="01/05/29" />
+<NAME TYPE="DOCTOR" comment="" end="1067" id="P15" start="1061" text="Haynes" />
+<NAME TYPE="DOCTOR" comment="" end="1216" id="P16" start="1203" text="Quentin Lemus" />
+<DATE TYPE="DATE" comment="" end="1669" id="P17" start="1665" text="5/25" />
+<DATE TYPE="DATE" comment="" end="1746" id="P18" start="1740" text="1/2126" />
+<DATE TYPE="DATE" comment="" end="1782" id="P19" start="1775" text="12/2127" />
+<DATE TYPE="DATE" comment="" end="1879" id="P20" start="1873" text="2/2128" />
+<PROFESSION TYPE="PROFESSION" comment="" end="2165" id="P21" start="2160" text="Pilot" />
+<LOCATION TYPE="ORGANIZATION" comment="" end="2176" id="P22" start="2167" text="Air Force" />
+<PROFESSION TYPE="PROFESSION" comment="" end="2490" id="P25" start="2468" text="communications manager" />
+<NAME TYPE="DOCTOR" comment="" end="5221" id="P27" start="5207" text="Quincey Harmon" />
+<CONTACT TYPE="PHONE" comment="" end="5269" id="P28" start="5264" text="32591" />
 </TAGS>
 </deIdi2b2>

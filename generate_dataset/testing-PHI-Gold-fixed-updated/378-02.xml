@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version='1.0' encoding='utf8'?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT>
 
 
 Record date: 2063-12-13
@@ -73,19 +73,15 @@ SU/utz/rankin
 
 
 
-***REMOVED******REMOVED***></TEXT>
+</TEXT>
 <TAGS>
-<DATE id="P0" start="16" end="26" text="2063-12-13" TYPE="DATE" comment="" />
-<NAME id="P1" start="41" end="55" text="Umphrey, Tammy" TYPE="PATIENT" comment="" />
-<ID id="P2" start="68" end="75" text="0942207" TYPE="MEDICALRECORD" comment="" />
-<DATE id="P3" start="185" end="191" text="Monday" TYPE="DATE" comment="" />
-<LOCATION id="P4" start="686" end="689" text="CPI" TYPE="HOSPITAL" comment="" />
-<DATE id="P5" start="1155" end="1161" text="Monday" TYPE="DATE" comment="" />
-<DATE id="P6" start="1589" end="1597" text="12/13/63" TYPE="DATE" comment="" />
-<NAME id="P7" start="2503" end="2508" text="Zeman" TYPE="DOCTOR" comment="" />
-<NAME id="P8" start="2863" end="2874" text="Susan Ullom" TYPE="DOCTOR" comment="" />
-<NAME id="P9" start="2882" end="2884" text="SU" TYPE="DOCTOR" comment="" />
-<NAME id="P10" start="2885" end="2888" text="utz" TYPE="DOCTOR" comment="" />
-<NAME id="P11" start="2889" end="2895" text="rankin" TYPE="DOCTOR" comment="" />
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2063-12-13" />
+<NAME TYPE="PATIENT" comment="" end="55" id="P1" start="41" text="Umphrey, Tammy" />
+<ID TYPE="MEDICALRECORD" comment="" end="75" id="P2" start="68" text="0942207" />
+<DATE TYPE="DATE" comment="" end="1597" id="P6" start="1589" text="12/13/63" />
+<NAME TYPE="DOCTOR" comment="" end="2508" id="P7" start="2503" text="Zeman" />
+<NAME TYPE="DOCTOR" comment="" end="2874" id="P8" start="2863" text="Susan Ullom" />
+<NAME TYPE="DOCTOR" comment="" end="2888" id="P10" start="2885" text="utz" />
+<NAME TYPE="DOCTOR" comment="" end="2895" id="P11" start="2889" text="rankin" />
 </TAGS>
 </deIdi2b2>

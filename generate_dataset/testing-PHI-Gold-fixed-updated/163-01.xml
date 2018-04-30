@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version='1.0' encoding='utf8'?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT>
 
 
 Record date: 2083-05-18
@@ -147,7 +147,7 @@ cervical and lumbar area.  Otherwise, no active synovitis or skin lesions.
 
 No oral ulcerations.  Good salivary pool.  No lymphadenopathy, thyromegaly, 
 
-or axillary adenopathy.  Chest: clear to A&P.  No carotid bruits.  Vascular 
+or axillary adenopathy.  Chest: clear to A&amp;P.  No carotid bruits.  Vascular 
 
 exam: normal.  Cardiac exam: quiet precordium without murmur or gallop.  
 
@@ -201,39 +201,34 @@ DV: 05/18/83
 
 
 
-***REMOVED******REMOVED***></TEXT>
+</TEXT>
 <TAGS>
-<DATE id="P0" start="16" end="26" text="2083-05-18" TYPE="DATE" comment="" />
-<DATE id="P1" start="52" end="64" text="May 18, 2083" TYPE="DATE" comment="" />
-<NAME id="P2" start="68" end="81" text="Yesenia Olive" TYPE="DOCTOR" comment="" />
-<LOCATION id="P3" start="89" end="104" text="26 Jeremy Place" TYPE="STREET" comment="" />
-<LOCATION id="P4" start="106" end="113" text="Antioch" TYPE="CITY" comment="" />
-<LOCATION id="P5" start="115" end="117" text="KY" TYPE="STATE" comment="" />
-<LOCATION id="P6" start="119" end="124" text="71287" TYPE="ZIP" comment="" />
-<NAME id="P7" start="133" end="147" text="Gerald, Marion" TYPE="PATIENT" comment="" />
-<ID id="P8" start="155" end="163" text="48967301" TYPE="MEDICALRECORD" comment="" />
-<DATE id="P9" start="171" end="179" text="05/18/83" TYPE="DATE" comment="" />
-<NAME id="P10" start="192" end="197" text="Olive" TYPE="DOCTOR" comment="" />
-<NAME id="P11" start="230" end="243" text="Marion Gerald" TYPE="PATIENT" comment="" />
-<DATE id="P12" start="257" end="263" text="May 18" TYPE="DATE" comment="" />
-<AGE id="P13" start="363" end="365" text="60" TYPE="AGE" comment="" />
-<DATE id="P14" start="414" end="418" text="2065" TYPE="DATE" comment="" />
-<NAME id="P15" start="899" end="903" text="Zink" TYPE="DOCTOR" comment="" />
-<LOCATION id="P16" start="907" end="918" text="Barr Clinic" TYPE="HOSPITAL" comment="" />
-<AGE id="P17" start="1677" end="1679" text="85" TYPE="AGE" comment="" />
-<LOCATION id="P18" start="2299" end="2312" text="Elizabethtown" TYPE="CITY" comment="" />
-<PROFESSION id="P19" start="2332" end="2352" text="midwife and director" TYPE="PROFESSION" comment="" />
-<LOCATION id="P20" start="2356" end="2373" text="Iowa Birth Clinic" TYPE="ORGANIZATION" comment="" />
-<PROFESSION id="P21" start="2395" end="2415" text="Broadcast Technician" TYPE="PROFESSION" comment="" />
-<NAME id="P22" start="2473" end="2486" text="Yesenia Olive" TYPE="DOCTOR" comment="" />
-<NAME id="P23" start="2499" end="2513" text="Gerald, Marion" TYPE="PATIENT" comment="" />
-<ID id="P24" start="2521" end="2529" text="48967301" TYPE="MEDICALRECORD" comment="" />
-<NAME id="P25" start="3774" end="3788" text="Miguel H. Ames" TYPE="DOCTOR" comment="" />
-<NAME id="P26" start="3803" end="3813" text="Gerald Yan" TYPE="DOCTOR" comment="" />
-<LOCATION id="P27" start="3821" end="3831" text="PROMPTCARE" TYPE="HOSPITAL" comment="" />
-<DATE id="P28" start="3840" end="3848" text="05/18/83" TYPE="DATE" comment="" />
-<DATE id="P29" start="3855" end="3863" text="05/21/83" TYPE="DATE" comment="" />
-<DATE id="P30" start="3870" end="3878" text="05/18/83" TYPE="DATE" comment="" />
-<NAME id="P31" start="3882" end="3891" text="maldonado" TYPE="DOCTOR" comment="" />
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2083-05-18" />
+<DATE TYPE="DATE" comment="" end="64" id="P1" start="52" text="May 18, 2083" />
+<NAME TYPE="DOCTOR" comment="" end="81" id="P2" start="68" text="Yesenia Olive" />
+<LOCATION TYPE="STREET" comment="" end="104" id="P3" start="89" text="26 Jeremy Place" />
+<LOCATION TYPE="CITY" comment="" end="113" id="P4" start="106" text="Antioch" />
+<LOCATION TYPE="STATE" comment="" end="117" id="P5" start="115" text="KY" />
+<LOCATION TYPE="ZIP" comment="" end="124" id="P6" start="119" text="71287" />
+<NAME TYPE="PATIENT" comment="" end="147" id="P7" start="133" text="Gerald, Marion" />
+<ID TYPE="MEDICALRECORD" comment="" end="163" id="P8" start="155" text="48967301" />
+<DATE TYPE="DATE" comment="" end="179" id="P9" start="171" text="05/18/83" />
+<NAME TYPE="DOCTOR" comment="" end="197" id="P10" start="192" text="Olive" />
+<NAME TYPE="PATIENT" comment="" end="243" id="P11" start="230" text="Marion Gerald" />
+<DATE TYPE="DATE" comment="" end="263" id="P12" start="257" text="May 18" />
+<NAME TYPE="DOCTOR" comment="" end="903" id="P15" start="899" text="Zink" />
+<LOCATION TYPE="CITY" comment="" end="2312" id="P18" start="2299" text="Elizabethtown" />
+<PROFESSION TYPE="PROFESSION" comment="" end="2352" id="P19" start="2332" text="midwife and director" />
+<LOCATION TYPE="ORGANIZATION" comment="" end="2373" id="P20" start="2356" text="Iowa Birth Clinic" />
+<PROFESSION TYPE="PROFESSION" comment="" end="2415" id="P21" start="2395" text="Broadcast Technician" />
+<NAME TYPE="DOCTOR" comment="" end="2486" id="P22" start="2473" text="Yesenia Olive" />
+<NAME TYPE="PATIENT" comment="" end="2513" id="P23" start="2499" text="Gerald, Marion" />
+<ID TYPE="MEDICALRECORD" comment="" end="2529" id="P24" start="2521" text="48967301" />
+<NAME TYPE="DOCTOR" comment="" end="3788" id="P25" start="3774" text="Miguel H. Ames" />
+<NAME TYPE="DOCTOR" comment="" end="3813" id="P26" start="3803" text="Gerald Yan" />
+<DATE TYPE="DATE" comment="" end="3848" id="P28" start="3840" text="05/18/83" />
+<DATE TYPE="DATE" comment="" end="3863" id="P29" start="3855" text="05/21/83" />
+<DATE TYPE="DATE" comment="" end="3878" id="P30" start="3870" text="05/18/83" />
+<NAME TYPE="DOCTOR" comment="" end="3891" id="P31" start="3882" text="maldonado" />
 </TAGS>
 </deIdi2b2>

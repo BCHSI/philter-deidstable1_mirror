@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version='1.0' encoding='utf8'?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT>
 
 
 Record date: 2077-02-05
@@ -117,22 +117,18 @@ Dictated by:  FRANK ISON, M.D.       FI65
 
 
 
-***REMOVED******REMOVED***></TEXT>
+</TEXT>
 <TAGS>
-<DATE id="P0" start="16" end="26" text="2077-02-05" TYPE="DATE" comment="" />
-<LOCATION id="P1" start="49" end="53" text="AASC" TYPE="HOSPITAL" comment="" />
-<NAME id="P2" start="79" end="93" text="QUIJANO,BAYLEE" TYPE="PATIENT" comment="" />
-<ID id="P3" start="96" end="107" text="853-62-51-4" TYPE="MEDICALRECORD" comment="" />
-<NAME id="P4" start="113" end="120" text="Quijano" TYPE="PATIENT" comment="" />
-<AGE id="P5" start="126" end="128" text="62" TYPE="AGE" comment="" />
-<AGE id="P6" start="308" end="310" text="62" TYPE="AGE" comment="" />
-<AGE id="P7" start="2372" end="2374" text="62" TYPE="AGE" comment="" />
-<ID id="P8" start="2942" end="2952" text="UZ272/3146" TYPE="IDNUM" comment="" />
-<NAME id="P9" start="2954" end="2964" text="FRANK ISON" TYPE="DOCTOR" comment="" />
-<NAME id="P10" start="2977" end="2981" text="FI65" TYPE="USERNAME" comment="" />
-<DATE id="P11" start="3010" end="3018" text="02/05/77" TYPE="DATE" comment="" />
-<DATE id="P12" start="3078" end="3086" text="02/05/77" TYPE="DATE" comment="" />
-<NAME id="P13" start="3103" end="3113" text="FRANK ISON" TYPE="DOCTOR" comment="" />
-<NAME id="P14" start="3126" end="3130" text="FI65" TYPE="USERNAME" comment="" />
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2077-02-05" />
+<NAME TYPE="PATIENT" comment="" end="93" id="P2" start="79" text="QUIJANO,BAYLEE" />
+<ID TYPE="MEDICALRECORD" comment="" end="107" id="P3" start="96" text="853-62-51-4" />
+<NAME TYPE="PATIENT" comment="" end="120" id="P4" start="113" text="Quijano" />
+<ID TYPE="IDNUM" comment="" end="2952" id="P8" start="2942" text="UZ272/3146" />
+<NAME TYPE="DOCTOR" comment="" end="2964" id="P9" start="2954" text="FRANK ISON" />
+<NAME TYPE="USERNAME" comment="" end="2981" id="P10" start="2977" text="FI65" />
+<DATE TYPE="DATE" comment="" end="3018" id="P11" start="3010" text="02/05/77" />
+<DATE TYPE="DATE" comment="" end="3086" id="P12" start="3078" text="02/05/77" />
+<NAME TYPE="DOCTOR" comment="" end="3113" id="P13" start="3103" text="FRANK ISON" />
+<NAME TYPE="USERNAME" comment="" end="3130" id="P14" start="3126" text="FI65" />
 </TAGS>
 </deIdi2b2>

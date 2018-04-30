@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version='1.0' encoding='utf8'?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT>
 
 
 Record date: 2097-06-03
@@ -117,36 +117,34 @@ Internal Medicine B Attending
 
 
 
-***REMOVED******REMOVED***></TEXT>
+</TEXT>
 <TAGS>
-<DATE id="P0" start="16" end="26" text="2097-06-03" TYPE="DATE" comment="" />
-<DATE id="P1" start="44" end="53" text="6/03/2097" TYPE="DATE" comment="" />
-<NAME id="P2" start="146" end="151" text="Ellis" TYPE="DOCTOR" comment="" />
-<AGE id="P3" start="255" end="257" text="73" TYPE="AGE" comment="" />
-<PROFESSION id="P4" start="290" end="295" text="nurse" TYPE="PROFESSION" comment="" />
-<LOCATION id="P5" start="299" end="302" text="TLC" TYPE="ORGANIZATION" comment="" />
-<NAME id="P6" start="2767" end="2772" text="Utter" TYPE="DOCTOR" comment="" />
-<DATE id="P7" start="2788" end="2794" text="5/2097" TYPE="DATE" comment="" />
-<DATE id="P8" start="2951" end="2961" text="06/03/2097" TYPE="DATE" comment="" />
-<DATE id="P9" start="3000" end="3010" text="06/02/2097" TYPE="DATE" comment="" />
-<DATE id="P10" start="3049" end="3059" text="05/28/2097" TYPE="DATE" comment="" />
-<DATE id="P11" start="3178" end="3188" text="06/03/2097" TYPE="DATE" comment="" />
-<DATE id="P12" start="3337" end="3347" text="06/03/2097" TYPE="DATE" comment="" />
-<DATE id="P13" start="3416" end="3426" text="06/03/2097" TYPE="DATE" comment="" />
-<DATE id="P14" start="3519" end="3529" text="06/02/2097" TYPE="DATE" comment="" />
-<DATE id="P15" start="3598" end="3608" text="06/02/2097" TYPE="DATE" comment="" />
-<DATE id="P16" start="3727" end="3737" text="06/03/2097" TYPE="DATE" comment="" />
-<DATE id="P17" start="3776" end="3786" text="06/03/2097" TYPE="DATE" comment="" />
-<DATE id="P18" start="3825" end="3835" text="06/02/2097" TYPE="DATE" comment="" />
-<DATE id="P19" start="3874" end="3884" text="06/02/2097" TYPE="DATE" comment="" />
-<DATE id="P20" start="4001" end="4011" text="05/28/2097" TYPE="DATE" comment="" />
-<DATE id="P21" start="4159" end="4169" text="06/03/2097" TYPE="DATE" comment="" />
-<DATE id="P22" start="4318" end="4328" text="06/03/2097" TYPE="DATE" comment="" />
-<DATE id="P23" start="4483" end="4493" text="06/03/2097" TYPE="DATE" comment="" />
-<DATE id="P24" start="4627" end="4637" text="06/03/2097" TYPE="DATE" comment="" />
-<DATE id="P25" start="4726" end="4736" text="06/03/2097" TYPE="DATE" comment="" />
-<DATE id="P26" start="5239" end="5243" text="2085" TYPE="DATE" comment="" />
-<NAME id="P27" start="7102" end="7121" text="Edmond I. Utterback" TYPE="DOCTOR" comment="" />
-<CONTACT id="P28" start="7135" end="7140" text="57863" TYPE="PHONE" comment="" />
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2097-06-03" />
+<DATE TYPE="DATE" comment="" end="53" id="P1" start="44" text="6/03/2097" />
+<NAME TYPE="DOCTOR" comment="" end="151" id="P2" start="146" text="Ellis" />
+<PROFESSION TYPE="PROFESSION" comment="" end="295" id="P4" start="290" text="nurse" />
+<LOCATION TYPE="ORGANIZATION" comment="" end="302" id="P5" start="299" text="TLC" />
+<NAME TYPE="DOCTOR" comment="" end="2772" id="P6" start="2767" text="Utter" />
+<DATE TYPE="DATE" comment="" end="2794" id="P7" start="2788" text="5/2097" />
+<DATE TYPE="DATE" comment="" end="2961" id="P8" start="2951" text="06/03/2097" />
+<DATE TYPE="DATE" comment="" end="3010" id="P9" start="3000" text="06/02/2097" />
+<DATE TYPE="DATE" comment="" end="3059" id="P10" start="3049" text="05/28/2097" />
+<DATE TYPE="DATE" comment="" end="3188" id="P11" start="3178" text="06/03/2097" />
+<DATE TYPE="DATE" comment="" end="3347" id="P12" start="3337" text="06/03/2097" />
+<DATE TYPE="DATE" comment="" end="3426" id="P13" start="3416" text="06/03/2097" />
+<DATE TYPE="DATE" comment="" end="3529" id="P14" start="3519" text="06/02/2097" />
+<DATE TYPE="DATE" comment="" end="3608" id="P15" start="3598" text="06/02/2097" />
+<DATE TYPE="DATE" comment="" end="3737" id="P16" start="3727" text="06/03/2097" />
+<DATE TYPE="DATE" comment="" end="3786" id="P17" start="3776" text="06/03/2097" />
+<DATE TYPE="DATE" comment="" end="3835" id="P18" start="3825" text="06/02/2097" />
+<DATE TYPE="DATE" comment="" end="3884" id="P19" start="3874" text="06/02/2097" />
+<DATE TYPE="DATE" comment="" end="4011" id="P20" start="4001" text="05/28/2097" />
+<DATE TYPE="DATE" comment="" end="4169" id="P21" start="4159" text="06/03/2097" />
+<DATE TYPE="DATE" comment="" end="4328" id="P22" start="4318" text="06/03/2097" />
+<DATE TYPE="DATE" comment="" end="4493" id="P23" start="4483" text="06/03/2097" />
+<DATE TYPE="DATE" comment="" end="4637" id="P24" start="4627" text="06/03/2097" />
+<DATE TYPE="DATE" comment="" end="4736" id="P25" start="4726" text="06/03/2097" />
+<NAME TYPE="DOCTOR" comment="" end="7121" id="P27" start="7102" text="Edmond I. Utterback" />
+<CONTACT TYPE="PHONE" comment="" end="7140" id="P28" start="7135" text="57863" />
 </TAGS>
 </deIdi2b2>

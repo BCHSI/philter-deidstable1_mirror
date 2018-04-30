@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version='1.0' encoding='utf8'?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT>
 
 
 Record date: 2072-03-13
@@ -229,34 +229,29 @@ Betty Doris Hanna, MD
 
 
 
-***REMOVED******REMOVED***></TEXT>
+</TEXT>
 <TAGS>
-<DATE id="P0" start="16" end="26" text="2072-03-13" TYPE="DATE" comment="" />
-<NAME id="P1" start="97" end="110" text="RUTLEDGE,EMMA" TYPE="PATIENT" comment="" />
-<ID id="P2" start="118" end="129" text="37947241ZGJ" TYPE="MEDICALRECORD" comment="" />
-<DATE id="P3" start="204" end="213" text="3/13/2072" TYPE="DATE" comment="" />
-<AGE id="P4" start="313" end="315" text="56" TYPE="AGE" comment="" />
-<NAME id="P5" start="490" end="497" text="Uriarte" TYPE="DOCTOR" comment="" />
-<DATE id="P7" start="645" end="655" text="March 2070" TYPE="DATE" comment="" />
-<DATE id="P8" start="779" end="789" text="April 2070" TYPE="DATE" comment="" />
-<DATE id="P9" start="837" end="846" text="2/13/2071" TYPE="DATE" comment="" />
-<DATE id="P10" start="857" end="866" text="9/27/2070" TYPE="DATE" comment="" />
-<LOCATION id="P11" start="1167" end="1177" text="PROMPTCARE" TYPE="HOSPITAL" comment="" />
-<DATE id="P12" start="1501" end="1506" text="12/68" TYPE="DATE" comment="" />
-<DATE id="P13" start="1601" end="1607" text="4/8/67" TYPE="DATE" comment="" />
-<DATE id="P14" start="1622" end="1626" text="2064" TYPE="DATE" comment="" />
-<DATE id="P15" start="1641" end="1645" text="2062" TYPE="DATE" comment="" />
-<DATE id="P16" start="1703" end="1707" text="9/67" TYPE="DATE" comment="" />
-<AGE id="P17" start="2795" end="2797" text="56" TYPE="AGE" comment="" />
-<DATE id="P18" start="3145" end="3154" text="3/28/2071" TYPE="DATE" comment="" />
-<NAME id="P19" start="3303" end="3310" text="Uriarte" TYPE="DOCTOR" comment="" />
-<DATE id="P20" start="3328" end="3334" text="4/2070" TYPE="DATE" comment="" />
-<NAME id="P21" start="3426" end="3433" text="Uriarte" TYPE="DOCTOR" comment="" />
-<DATE id="P22" start="3505" end="3511" text="4/2070" TYPE="DATE" comment="" />
-<DATE id="P23" start="3899" end="3904" text="10/68" TYPE="DATE" comment="" />
-<DATE id="P24" start="3924" end="3930" text="3/2070" TYPE="DATE" comment="" />
-<DATE id="P25" start="3983" end="3991" text="4/8/2070" TYPE="DATE" comment="" />
-<DATE id="P26" start="4008" end="4014" text="2/2071" TYPE="DATE" comment="" />
-<NAME id="P27" start="4258" end="4275" text="Betty Doris Hanna" TYPE="DOCTOR" comment="" />
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2072-03-13" />
+<NAME TYPE="PATIENT" comment="" end="110" id="P1" start="97" text="RUTLEDGE,EMMA" />
+<ID TYPE="MEDICALRECORD" comment="" end="129" id="P2" start="118" text="37947241ZGJ" />
+<DATE TYPE="DATE" comment="" end="213" id="P3" start="204" text="3/13/2072" />
+<NAME TYPE="DOCTOR" comment="" end="497" id="P5" start="490" text="Uriarte" />
+<DATE TYPE="DATE" comment="" end="655" id="P7" start="645" text="March 2070" />
+<DATE TYPE="DATE" comment="" end="789" id="P8" start="779" text="April 2070" />
+<DATE TYPE="DATE" comment="" end="846" id="P9" start="837" text="2/13/2071" />
+<DATE TYPE="DATE" comment="" end="866" id="P10" start="857" text="9/27/2070" />
+<DATE TYPE="DATE" comment="" end="1506" id="P12" start="1501" text="12/68" />
+<DATE TYPE="DATE" comment="" end="1607" id="P13" start="1601" text="4/8/67" />
+<DATE TYPE="DATE" comment="" end="1707" id="P16" start="1703" text="9/67" />
+<DATE TYPE="DATE" comment="" end="3154" id="P18" start="3145" text="3/28/2071" />
+<NAME TYPE="DOCTOR" comment="" end="3310" id="P19" start="3303" text="Uriarte" />
+<DATE TYPE="DATE" comment="" end="3334" id="P20" start="3328" text="4/2070" />
+<NAME TYPE="DOCTOR" comment="" end="3433" id="P21" start="3426" text="Uriarte" />
+<DATE TYPE="DATE" comment="" end="3511" id="P22" start="3505" text="4/2070" />
+<DATE TYPE="DATE" comment="" end="3904" id="P23" start="3899" text="10/68" />
+<DATE TYPE="DATE" comment="" end="3930" id="P24" start="3924" text="3/2070" />
+<DATE TYPE="DATE" comment="" end="3991" id="P25" start="3983" text="4/8/2070" />
+<DATE TYPE="DATE" comment="" end="4014" id="P26" start="4008" text="2/2071" />
+<NAME TYPE="DOCTOR" comment="" end="4275" id="P27" start="4258" text="Betty Doris Hanna" />
 </TAGS>
 </deIdi2b2>

@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version='1.0' encoding='utf8'?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT>
 
 
 Record date: 2067-07-28
@@ -50,27 +50,25 @@ Dictated by:  TAYLOR E. INNIS, M.D.  TI56
 
 
 
-***REMOVED******REMOVED***></TEXT>
+</TEXT>
 <TAGS>
-<DATE id="P0" start="16" end="26" text="2067-07-28" TYPE="DATE" comment="" />
-<LOCATION id="P1" start="49" end="56" text="JELLICO" TYPE="HOSPITAL" comment="" />
-<NAME id="P2" start="80" end="93" text="FOY,KEONTE H." TYPE="PATIENT" comment="" />
-<ID id="P3" start="96" end="107" text="732-35-79-0" TYPE="MEDICALRECORD" comment="" />
-<DATE id="P4" start="138" end="146" text="07/28/67" TYPE="DATE" comment="" />
-<NAME id="P5" start="276" end="282" text="Holden" TYPE="DOCTOR" comment="" />
-<NAME id="P6" start="316" end="322" text="Holden" TYPE="DOCTOR" comment="" />
-<AGE id="P7" start="356" end="358" text="59" TYPE="AGE" comment="" />
-<NAME id="P8" start="753" end="759" text="Holden" TYPE="DOCTOR" comment="" />
-<NAME id="P9" start="806" end="812" text="Holden" TYPE="DOCTOR" comment="" />
-<NAME id="P10" start="850" end="856" text="Holden" TYPE="DOCTOR" comment="" />
-<NAME id="P11" start="892" end="898" text="Holden" TYPE="DOCTOR" comment="" />
-<NAME id="P12" start="958" end="964" text="Holden" TYPE="DOCTOR" comment="" />
-<ID id="P13" start="2087" end="2097" text="MF916/9742" TYPE="IDNUM" comment="" />
-<NAME id="P14" start="2099" end="2114" text="TAYLOR E. INNIS" TYPE="DOCTOR" comment="" />
-<NAME id="P15" start="2122" end="2126" text="TI56" TYPE="USERNAME" comment="" />
-<DATE id="P16" start="2156" end="2164" text="07/28/67" TYPE="DATE" comment="" />
-<DATE id="P17" start="2223" end="2231" text="07/28/67" TYPE="DATE" comment="" />
-<NAME id="P18" start="2247" end="2262" text="TAYLOR E. INNIS" TYPE="DOCTOR" comment="" />
-<NAME id="P19" start="2270" end="2274" text="TI56" TYPE="USERNAME" comment="" />
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2067-07-28" />
+<NAME TYPE="PATIENT" comment="" end="93" id="P2" start="80" text="FOY,KEONTE H." />
+<ID TYPE="MEDICALRECORD" comment="" end="107" id="P3" start="96" text="732-35-79-0" />
+<DATE TYPE="DATE" comment="" end="146" id="P4" start="138" text="07/28/67" />
+<NAME TYPE="DOCTOR" comment="" end="282" id="P5" start="276" text="Holden" />
+<NAME TYPE="DOCTOR" comment="" end="322" id="P6" start="316" text="Holden" />
+<NAME TYPE="DOCTOR" comment="" end="759" id="P8" start="753" text="Holden" />
+<NAME TYPE="DOCTOR" comment="" end="812" id="P9" start="806" text="Holden" />
+<NAME TYPE="DOCTOR" comment="" end="856" id="P10" start="850" text="Holden" />
+<NAME TYPE="DOCTOR" comment="" end="898" id="P11" start="892" text="Holden" />
+<NAME TYPE="DOCTOR" comment="" end="964" id="P12" start="958" text="Holden" />
+<ID TYPE="IDNUM" comment="" end="2097" id="P13" start="2087" text="MF916/9742" />
+<NAME TYPE="DOCTOR" comment="" end="2114" id="P14" start="2099" text="TAYLOR E. INNIS" />
+<NAME TYPE="USERNAME" comment="" end="2126" id="P15" start="2122" text="TI56" />
+<DATE TYPE="DATE" comment="" end="2164" id="P16" start="2156" text="07/28/67" />
+<DATE TYPE="DATE" comment="" end="2231" id="P17" start="2223" text="07/28/67" />
+<NAME TYPE="DOCTOR" comment="" end="2262" id="P18" start="2247" text="TAYLOR E. INNIS" />
+<NAME TYPE="USERNAME" comment="" end="2274" id="P19" start="2270" text="TI56" />
 </TAGS>
 </deIdi2b2>

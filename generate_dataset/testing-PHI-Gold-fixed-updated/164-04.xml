@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version='1.0' encoding='utf8'?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT>
 
 
 Record date: 2084-05-05
@@ -93,13 +93,11 @@ Xavier U. Combs, M.D.
 
 
 
-***REMOVED******REMOVED***></TEXT>
+</TEXT>
 <TAGS>
-<DATE id="P0" start="16" end="26" text="2084-05-05" TYPE="DATE" comment="" />
-<AGE id="P1" start="28" end="30" text="82" TYPE="AGE" comment="" />
-<DATE id="P2" start="323" end="327" text="2069" TYPE="DATE" comment="" />
-<DATE id="P3" start="369" end="373" text="4/84" TYPE="DATE" comment="" />
-<DATE id="P4" start="404" end="409" text="12/83" TYPE="DATE" comment="" />
-<NAME id="P5" start="1212" end="1227" text="Xavier U. Combs" TYPE="DOCTOR" comment="" />
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2084-05-05" />
+<DATE TYPE="DATE" comment="" end="373" id="P3" start="369" text="4/84" />
+<DATE TYPE="DATE" comment="" end="409" id="P4" start="404" text="12/83" />
+<NAME TYPE="DOCTOR" comment="" end="1227" id="P5" start="1212" text="Xavier U. Combs" />
 </TAGS>
 </deIdi2b2>
