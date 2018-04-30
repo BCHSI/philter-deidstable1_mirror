@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version='1.0' encoding='utf8'?>
 <deIdi2b2>
-<TEXT><![CDATA[
+<TEXT>
 
 
 Record date: 2077-01-22
@@ -99,29 +99,26 @@ DV: 01/22/77
 
 
 
-]]></TEXT>
+</TEXT>
 <TAGS>
-<DATE id="P0" start="16" end="26" text="2077-01-22" TYPE="DATE" comment="" />
-<LOCATION id="P1" start="30" end="69" text="Carolyn Huntington Bailey Health Center" TYPE="HOSPITAL" comment="" />
-<LOCATION id="P2" start="71" end="90" text="592 Kristina Street" TYPE="STREET" comment="" />
-<NAME id="P3" start="130" end="139" text="XIA, JEAN" TYPE="PATIENT" comment="" />
-<LOCATION id="P4" start="141" end="151" text="North East" TYPE="CITY" comment="" />
-<LOCATION id="P5" start="153" end="155" text="AL" TYPE="STATE" comment="" />
-<LOCATION id="P6" start="156" end="161" text="81699" TYPE="ZIP" comment="" />
-<ID id="P7" start="189" end="197" text="58269151" TYPE="MEDICALRECORD" comment="" />
-<CONTACT id="P8" start="199" end="213" text="(375) 512-0897" TYPE="PHONE" comment="" />
-<DATE id="P9" start="257" end="265" text="01/22/77" TYPE="DATE" comment="" />
-<NAME id="P10" start="304" end="307" text="Xia" TYPE="PATIENT" comment="" />
-<AGE id="P11" start="313" end="315" text="57" TYPE="AGE" comment="" />
-<DATE id="P12" start="2561" end="2568" text="October" TYPE="DATE" comment="" />
-<DATE id="P13" start="2593" end="2596" text="May" TYPE="DATE" comment="" />
-<LOCATION id="P14" start="3409" end="3427" text="Carolyn Huntington" TYPE="HOSPITAL" comment="" />
-<DATE id="P15" start="3725" end="3732" text="11/2076" TYPE="DATE" comment="" />
-<NAME id="P16" start="3871" end="3885" text="Yolanda Osburn" TYPE="DOCTOR" comment="" />
-<NAME id="P17" start="3910" end="3924" text="Yolanda Osburn" TYPE="DOCTOR" comment="" />
-<ID id="P18" start="3950" end="3959" text="9-2062651" TYPE="IDNUM" comment="" />
-<DATE id="P19" start="3983" end="3991" text="01/23/77" TYPE="DATE" comment="" />
-<DATE id="P20" start="3997" end="4005" text="01/24/77" TYPE="DATE" comment="" />
-<DATE id="P21" start="4011" end="4019" text="01/22/77" TYPE="DATE" comment="" />
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2077-01-22" />
+<LOCATION TYPE="STREET" comment="" end="90" id="P2" start="71" text="592 Kristina Street" />
+<NAME TYPE="PATIENT" comment="" end="139" id="P3" start="130" text="XIA, JEAN" />
+<LOCATION TYPE="CITY" comment="" end="151" id="P4" start="141" text="North East" />
+<LOCATION TYPE="STATE" comment="" end="155" id="P5" start="153" text="AL" />
+<LOCATION TYPE="ZIP" comment="" end="161" id="P6" start="156" text="81699" />
+<ID TYPE="MEDICALRECORD" comment="" end="197" id="P7" start="189" text="58269151" />
+<CONTACT TYPE="PHONE" comment="" end="213" id="P8" start="199" text="(375) 512-0897" />
+<DATE TYPE="DATE" comment="" end="265" id="P9" start="257" text="01/22/77" />
+<NAME TYPE="PATIENT" comment="" end="307" id="P10" start="304" text="Xia" />
+<DATE TYPE="DATE" comment="" end="2568" id="P12" start="2561" text="October" />
+<DATE TYPE="DATE" comment="" end="2596" id="P13" start="2593" text="May" />
+<DATE TYPE="DATE" comment="" end="3732" id="P15" start="3725" text="11/2076" />
+<NAME TYPE="DOCTOR" comment="" end="3885" id="P16" start="3871" text="Yolanda Osburn" />
+<NAME TYPE="DOCTOR" comment="" end="3924" id="P17" start="3910" text="Yolanda Osburn" />
+<ID TYPE="IDNUM" comment="" end="3959" id="P18" start="3950" text="9-2062651" />
+<DATE TYPE="DATE" comment="" end="3991" id="P19" start="3983" text="01/23/77" />
+<DATE TYPE="DATE" comment="" end="4005" id="P20" start="3997" text="01/24/77" />
+<DATE TYPE="DATE" comment="" end="4019" id="P21" start="4011" text="01/22/77" />
 </TAGS>
 </deIdi2b2>

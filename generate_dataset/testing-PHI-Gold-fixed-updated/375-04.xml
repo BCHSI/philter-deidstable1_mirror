@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version='1.0' encoding='utf8'?>
 <deIdi2b2>
-<TEXT><![CDATA[
+<TEXT>
 
 
 Record date: 2158-06-08
@@ -82,7 +82,7 @@ older person);
     Gait:  2 (walks with difficulty but requires little or no assistance; may
 have some festination, short steps, or propulsion);
     Postural stability:  1 (retropulsion, but recovers unaided);
-    Body bradykinesia and hypokinesia:  2 (mild degree of slowness & poverty of
+    Body bradykinesia and hypokinesia:  2 (mild degree of slowness &amp; poverty of
 movement that is definitely abnormal; alternatively, some reduced amplitude).
 
 Assessment:  
@@ -115,20 +115,17 @@ were completed by  Genevieve Noland, NP.
 
 
 
-]]></TEXT>
+</TEXT>
 <TAGS>
-<DATE id="P0" start="16" end="26" text="2158-06-08" TYPE="DATE" comment="" />
-<LOCATION id="P2" start="89" end="115" text="Trumbull Memorial Hospital" TYPE="HOSPITAL" comment="" />
-<LOCATION id="P3" start="118" end="144" text="Corcoran District Hospital" TYPE="HOSPITAL" comment="" />
-<CONTACT id="P4" start="148" end="162" text="(315) 433-0039" TYPE="PHONE" comment="" />
-<DATE id="P5" start="1632" end="1641" text="6/08/2158" TYPE="DATE" comment="" />
-<DATE id="P6" start="1915" end="1924" text="6/08/2158" TYPE="DATE" comment="" />
-<NAME id="P7" start="4054" end="4066" text="Mary Darnell" TYPE="DOCTOR" comment="" />
-<LOCATION id="P8" start="4078" end="4081" text="TMH" TYPE="HOSPITAL" comment="" />
-<NAME id="P9" start="4098" end="4111" text="Edward Nguyen" TYPE="DOCTOR" comment="" />
-<NAME id="P10" start="4246" end="4259" text="Edward Nguyen" TYPE="DOCTOR" comment="" />
-<NAME id="P11" start="4273" end="4289" text="Genevieve Noland" TYPE="DOCTOR" comment="" />
-<DATE id="P12" start="4490" end="4499" text="6/08/2158" TYPE="DATE" comment="" />
-<NAME id="P13" start="4629" end="4645" text="Genevieve Noland" TYPE="DOCTOR" comment="" />
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2158-06-08" />
+<CONTACT TYPE="PHONE" comment="" end="162" id="P4" start="148" text="(315) 433-0039" />
+<DATE TYPE="DATE" comment="" end="1641" id="P5" start="1632" text="6/08/2158" />
+<DATE TYPE="DATE" comment="" end="1924" id="P6" start="1915" text="6/08/2158" />
+<NAME TYPE="DOCTOR" comment="" end="4066" id="P7" start="4054" text="Mary Darnell" />
+<NAME TYPE="DOCTOR" comment="" end="4111" id="P9" start="4098" text="Edward Nguyen" />
+<NAME TYPE="DOCTOR" comment="" end="4259" id="P10" start="4246" text="Edward Nguyen" />
+<NAME TYPE="DOCTOR" comment="" end="4289" id="P11" start="4273" text="Genevieve Noland" />
+<DATE TYPE="DATE" comment="" end="4499" id="P12" start="4490" text="6/08/2158" />
+<NAME TYPE="DOCTOR" comment="" end="4645" id="P13" start="4629" text="Genevieve Noland" />
 </TAGS>
 </deIdi2b2>

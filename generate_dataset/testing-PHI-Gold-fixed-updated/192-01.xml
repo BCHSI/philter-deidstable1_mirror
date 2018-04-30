@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version='1.0' encoding='utf8'?>
 <deIdi2b2>
-<TEXT><![CDATA[
+<TEXT>
 
 
 Record date: 2086-05-25
@@ -37,23 +37,21 @@ Dictated by:  MAX URIARTE, M.D.       MU11
 
 
 
-]]></TEXT>
+</TEXT>
 <TAGS>
-<DATE id="P0" start="16" end="26" text="2086-05-25" TYPE="DATE" comment="" />
-<LOCATION id="P1" start="49" end="52" text="FCH" TYPE="HOSPITAL" comment="" />
-<NAME id="P2" start="76" end="89" text="TANNER,YUL M." TYPE="PATIENT" comment="" />
-<ID id="P3" start="92" end="103" text="099-04-65-0" TYPE="MEDICALRECORD" comment="" />
-<DATE id="P4" start="131" end="139" text="05/25/86" TYPE="DATE" comment="" />
-<DATE id="P5" start="159" end="165" text="May 25" TYPE="DATE" comment="" />
-<AGE id="P6" start="307" end="309" text="50" TYPE="AGE" comment="" />
-<NAME id="P7" start="347" end="352" text="Locke" TYPE="DOCTOR" comment="" />
-<NAME id="P8" start="370" end="376" text="Tirado" TYPE="DOCTOR" comment="" />
-<ID id="P9" start="1299" end="1310" text="HU019/45662" TYPE="IDNUM" comment="" />
-<NAME id="P10" start="1312" end="1323" text="MAX URIARTE" TYPE="DOCTOR" comment="" />
-<NAME id="P11" start="1336" end="1340" text="MU11" TYPE="USERNAME" comment="" />
-<DATE id="P12" start="1368" end="1376" text="05/25/86" TYPE="DATE" comment="" />
-<DATE id="P13" start="1435" end="1443" text="05/25/86" TYPE="DATE" comment="" />
-<NAME id="P14" start="1459" end="1470" text="MAX URIARTE" TYPE="DOCTOR" comment="" />
-<NAME id="P15" start="1483" end="1487" text="MU11" TYPE="USERNAME" comment="" />
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2086-05-25" />
+<NAME TYPE="PATIENT" comment="" end="89" id="P2" start="76" text="TANNER,YUL M." />
+<ID TYPE="MEDICALRECORD" comment="" end="103" id="P3" start="92" text="099-04-65-0" />
+<DATE TYPE="DATE" comment="" end="139" id="P4" start="131" text="05/25/86" />
+<DATE TYPE="DATE" comment="" end="165" id="P5" start="159" text="May 25" />
+<NAME TYPE="DOCTOR" comment="" end="352" id="P7" start="347" text="Locke" />
+<NAME TYPE="DOCTOR" comment="" end="376" id="P8" start="370" text="Tirado" />
+<ID TYPE="IDNUM" comment="" end="1310" id="P9" start="1299" text="HU019/45662" />
+<NAME TYPE="DOCTOR" comment="" end="1323" id="P10" start="1312" text="MAX URIARTE" />
+<NAME TYPE="USERNAME" comment="" end="1340" id="P11" start="1336" text="MU11" />
+<DATE TYPE="DATE" comment="" end="1376" id="P12" start="1368" text="05/25/86" />
+<DATE TYPE="DATE" comment="" end="1443" id="P13" start="1435" text="05/25/86" />
+<NAME TYPE="DOCTOR" comment="" end="1470" id="P14" start="1459" text="MAX URIARTE" />
+<NAME TYPE="USERNAME" comment="" end="1487" id="P15" start="1483" text="MU11" />
 </TAGS>
 </deIdi2b2>

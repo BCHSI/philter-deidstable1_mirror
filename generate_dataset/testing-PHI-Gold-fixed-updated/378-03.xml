@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version='1.0' encoding='utf8'?>
 <deIdi2b2>
-<TEXT><![CDATA[
+<TEXT>
 
 
 Record date: 2064-08-28
@@ -40,22 +40,19 @@ DT:2617      :6415
 
 
 
-]]></TEXT>
+</TEXT>
 <TAGS>
-<DATE id="P0" start="16" end="26" text="2064-08-28" TYPE="DATE" comment="" />
-<NAME id="P1" start="42" end="58" text="UMPHREY, FRANKIE" TYPE="PATIENT" comment="" />
-<ID id="P2" start="66" end="73" text="0942207" TYPE="MEDICALRECORD" comment="" />
-<DATE id="P3" start="87" end="97" text="08/28/2064" TYPE="DATE" comment="" />
-<NAME id="P4" start="101" end="119" text="WHITNEY EASTERLING" TYPE="DOCTOR" comment="" />
-<AGE id="P5" start="218" end="220" text="66" TYPE="AGE" comment="" />
-<DATE id="P6" start="336" end="351" text="January of 2061" TYPE="DATE" comment="" />
-<DATE id="P7" start="518" end="523" text="12/01" TYPE="DATE" comment="" />
-<DATE id="P8" start="1460" end="1475" text="January of 2061" TYPE="DATE" comment="" />
-<AGE id="P9" start="2052" end="2054" text="66" TYPE="AGE" comment="" />
-<AGE id="P10" start="2520" end="2522" text="66" TYPE="AGE" comment="" />
-<NAME id="P11" start="3116" end="3134" text="Whitney Easterling" TYPE="DOCTOR" comment="" />
-<DATE id="P12" start="3152" end="3162" text="08/28/2064" TYPE="DATE" comment="" />
-<DATE id="P13" start="3167" end="3177" text="08/29/2064" TYPE="DATE" comment="" />
-<ID id="P14" start="3179" end="3197" text="DT:2617      :6415" TYPE="IDNUM" comment="" />
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2064-08-28" />
+<NAME TYPE="PATIENT" comment="" end="58" id="P1" start="42" text="UMPHREY, FRANKIE" />
+<ID TYPE="MEDICALRECORD" comment="" end="73" id="P2" start="66" text="0942207" />
+<DATE TYPE="DATE" comment="" end="97" id="P3" start="87" text="08/28/2064" />
+<NAME TYPE="DOCTOR" comment="" end="119" id="P4" start="101" text="WHITNEY EASTERLING" />
+<DATE TYPE="DATE" comment="" end="351" id="P6" start="336" text="January of 2061" />
+<DATE TYPE="DATE" comment="" end="523" id="P7" start="518" text="12/01" />
+<DATE TYPE="DATE" comment="" end="1475" id="P8" start="1460" text="January of 2061" />
+<NAME TYPE="DOCTOR" comment="" end="3134" id="P11" start="3116" text="Whitney Easterling" />
+<DATE TYPE="DATE" comment="" end="3162" id="P12" start="3152" text="08/28/2064" />
+<DATE TYPE="DATE" comment="" end="3177" id="P13" start="3167" text="08/29/2064" />
+<ID TYPE="IDNUM" comment="" end="3197" id="P14" start="3179" text="DT:2617      :6415" />
 </TAGS>
 </deIdi2b2>

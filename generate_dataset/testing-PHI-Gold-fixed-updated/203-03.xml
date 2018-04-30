@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version='1.0' encoding='utf8'?>
 <deIdi2b2>
-<TEXT><![CDATA[
+<TEXT>
 
 
 Record date: 2090-07-07
@@ -98,7 +98,7 @@ Physical examination: Weight 175 (down from 181 6/89).  Pulse 64,
 ? frequent ectopic beats versus irregularly irregular rhythm. 
 Blood pressure 130/70.  General: thin, but well appearing.  Skin:
 no suspicious lesions.  HEENT: oropharynx edentulous, no lesions.
-Lungs: clear to A&P.  Cor.: Carotids 2+, no bruits appreciated on
+Lungs: clear to A&amp;P.  Cor.: Carotids 2+, no bruits appreciated on
 my exam. No thyromegaly.  Nodes: no adenopathy. Cor.: status post
 median sternotomy.  Pacer left 
 George, Rickey
@@ -131,47 +131,43 @@ Mexico CT 51299
 
 
 
-]]></TEXT>
+</TEXT>
 <TAGS>
-<DATE id="P0" start="16" end="26" text="2090-07-07" TYPE="DATE" comment="" />
-<NAME id="P1" start="72" end="86" text="George, Rickey" TYPE="PATIENT" comment="" />
-<ID id="P2" start="92" end="99" text="1131414" TYPE="MEDICALRECORD" comment="" />
-<DATE id="P3" start="100" end="112" text="July 7, 2090" TYPE="DATE" comment="" />
-<DATE id="P4" start="267" end="273" text="7/7/90" TYPE="DATE" comment="" />
-<NAME id="P5" start="327" end="332" text="Ortiz" TYPE="DOCTOR" comment="" />
-<DATE id="P6" start="363" end="372" text="winter 90" TYPE="DATE" comment="" />
-<DATE id="P7" start="469" end="474" text="10/87" TYPE="DATE" comment="" />
-<NAME id="P8" start="492" end="498" text="Ramsey" TYPE="DOCTOR" comment="" />
-<DATE id="P9" start="676" end="680" text="1/77" TYPE="DATE" comment="" />
-<DATE id="P10" start="705" end="710" text="10/87" TYPE="DATE" comment="" />
-<LOCATION id="P11" start="812" end="825" text="West Virginia" TYPE="STATE" comment="" />
-<DATE id="P12" start="831" end="837" text="spring" TYPE="DATE" comment="" />
-<NAME id="P13" start="922" end="926" text="Cook" TYPE="DOCTOR" comment="" />
-<DATE id="P14" start="1205" end="1211" text="spring" TYPE="DATE" comment="" />
-<LOCATION id="P15" start="1220" end="1233" text="West Virginia" TYPE="STATE" comment="" />
-<DATE id="P16" start="1548" end="1552" text="4/88" TYPE="DATE" comment="" />
-<NAME id="P17" start="1823" end="1837" text="George, Rickey" TYPE="PATIENT" comment="" />
-<ID id="P18" start="1843" end="1850" text="1131414" TYPE="MEDICALRECORD" comment="" />
-<DATE id="P19" start="1851" end="1863" text="July 7, 2090" TYPE="DATE" comment="" />
-<DATE id="P20" start="2283" end="2287" text="5/88" TYPE="DATE" comment="" />
-<NAME id="P21" start="2718" end="2724" text="Robles" TYPE="DOCTOR" comment="" />
-<LOCATION id="P22" start="2777" end="2790" text="West Virginia" TYPE="STATE" comment="" />
-<DATE id="P23" start="2796" end="2802" text="spring" TYPE="DATE" comment="" />
-<NAME id="P24" start="2878" end="2884" text="Robles" TYPE="DOCTOR" comment="" />
-<NAME id="P25" start="3112" end="3118" text="Robles" TYPE="DOCTOR" comment="" />
-<DATE id="P26" start="3165" end="3170" text="10/79" TYPE="DATE" comment="" />
-<DATE id="P27" start="3485" end="3489" text="6/89" TYPE="DATE" comment="" />
-<NAME id="P28" start="3862" end="3876" text="George, Rickey" TYPE="PATIENT" comment="" />
-<ID id="P29" start="3882" end="3889" text="1131414" TYPE="MEDICALRECORD" comment="" />
-<DATE id="P30" start="3890" end="3902" text="July 7, 2090" TYPE="DATE" comment="" />
-<NAME id="P31" start="4373" end="4384" text="Opal Fierro" TYPE="DOCTOR" comment="" />
-<NAME id="P32" start="4402" end="4413" text="Opal Fierro" TYPE="DOCTOR" comment="" />
-<NAME id="P33" start="4440" end="4446" text="harris" TYPE="DOCTOR" comment="" />
-<NAME id="P34" start="4452" end="4462" text="Keith Cook" TYPE="DOCTOR" comment="" />
-<LOCATION id="P35" start="4469" end="4497" text="Massillon Community Hospital" TYPE="HOSPITAL" comment="" />
-<LOCATION id="P36" start="4498" end="4515" text="7 Monterey Avenue" TYPE="STREET" comment="" />
-<LOCATION id="P37" start="4516" end="4522" text="Mexico" TYPE="CITY" comment="" />
-<LOCATION id="P38" start="4523" end="4525" text="CT" TYPE="STATE" comment="" />
-<LOCATION id="P39" start="4526" end="4531" text="51299" TYPE="ZIP" comment="" />
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2090-07-07" />
+<NAME TYPE="PATIENT" comment="" end="86" id="P1" start="72" text="George, Rickey" />
+<ID TYPE="MEDICALRECORD" comment="" end="99" id="P2" start="92" text="1131414" />
+<DATE TYPE="DATE" comment="" end="112" id="P3" start="100" text="July 7, 2090" />
+<DATE TYPE="DATE" comment="" end="273" id="P4" start="267" text="7/7/90" />
+<NAME TYPE="DOCTOR" comment="" end="332" id="P5" start="327" text="Ortiz" />
+<DATE TYPE="DATE" comment="" end="372" id="P6" start="363" text="winter 90" />
+<DATE TYPE="DATE" comment="" end="474" id="P7" start="469" text="10/87" />
+<NAME TYPE="DOCTOR" comment="" end="498" id="P8" start="492" text="Ramsey" />
+<DATE TYPE="DATE" comment="" end="680" id="P9" start="676" text="1/77" />
+<DATE TYPE="DATE" comment="" end="710" id="P10" start="705" text="10/87" />
+<LOCATION TYPE="STATE" comment="" end="825" id="P11" start="812" text="West Virginia" />
+<NAME TYPE="DOCTOR" comment="" end="926" id="P13" start="922" text="Cook" />
+<LOCATION TYPE="STATE" comment="" end="1233" id="P15" start="1220" text="West Virginia" />
+<DATE TYPE="DATE" comment="" end="1552" id="P16" start="1548" text="4/88" />
+<NAME TYPE="PATIENT" comment="" end="1837" id="P17" start="1823" text="George, Rickey" />
+<ID TYPE="MEDICALRECORD" comment="" end="1850" id="P18" start="1843" text="1131414" />
+<DATE TYPE="DATE" comment="" end="1863" id="P19" start="1851" text="July 7, 2090" />
+<DATE TYPE="DATE" comment="" end="2287" id="P20" start="2283" text="5/88" />
+<NAME TYPE="DOCTOR" comment="" end="2724" id="P21" start="2718" text="Robles" />
+<LOCATION TYPE="STATE" comment="" end="2790" id="P22" start="2777" text="West Virginia" />
+<NAME TYPE="DOCTOR" comment="" end="2884" id="P24" start="2878" text="Robles" />
+<NAME TYPE="DOCTOR" comment="" end="3118" id="P25" start="3112" text="Robles" />
+<DATE TYPE="DATE" comment="" end="3170" id="P26" start="3165" text="10/79" />
+<DATE TYPE="DATE" comment="" end="3489" id="P27" start="3485" text="6/89" />
+<NAME TYPE="PATIENT" comment="" end="3876" id="P28" start="3862" text="George, Rickey" />
+<ID TYPE="MEDICALRECORD" comment="" end="3889" id="P29" start="3882" text="1131414" />
+<DATE TYPE="DATE" comment="" end="3902" id="P30" start="3890" text="July 7, 2090" />
+<NAME TYPE="DOCTOR" comment="" end="4384" id="P31" start="4373" text="Opal Fierro" />
+<NAME TYPE="DOCTOR" comment="" end="4413" id="P32" start="4402" text="Opal Fierro" />
+<NAME TYPE="DOCTOR" comment="" end="4446" id="P33" start="4440" text="harris" />
+<NAME TYPE="DOCTOR" comment="" end="4462" id="P34" start="4452" text="Keith Cook" />
+<LOCATION TYPE="STREET" comment="" end="4515" id="P36" start="4498" text="7 Monterey Avenue" />
+<LOCATION TYPE="CITY" comment="" end="4522" id="P37" start="4516" text="Mexico" />
+<LOCATION TYPE="STATE" comment="" end="4525" id="P38" start="4523" text="CT" />
+<LOCATION TYPE="ZIP" comment="" end="4531" id="P39" start="4526" text="51299" />
 </TAGS>
 </deIdi2b2>

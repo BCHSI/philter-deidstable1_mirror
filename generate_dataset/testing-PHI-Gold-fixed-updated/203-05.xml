@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version='1.0' encoding='utf8'?>
 <deIdi2b2>
-<TEXT><![CDATA[
+<TEXT>
 
 
 Record date: 2092-10-05
@@ -71,7 +71,7 @@ Record date: 2092-10-05
   
   Social history: wife very involved with his care.  
   
-  Physical exam: BP 98/60.  Pulse 64.  Lungs clear to A & P.  Cor: SEMACIAN gallop. 
+  Physical exam: BP 98/60.  Pulse 64.  Lungs clear to A &amp; P.  Cor: SEMACIAN gallop. 
   No rub.  Abdomen: mildly distended, nontender.  Multiple well healed surgical scars. 
   Extremities: incisions in the groin.  No erythema.  Right groin several cm question cystic
   structure beneath the incision.  Soft, nontender, non-erythematous.  2-3+ edema in the
@@ -114,31 +114,28 @@ Record date: 2092-10-05
 
 
 
-]]></TEXT>
+</TEXT>
 <TAGS>
-<DATE id="P0" start="16" end="26" text="2092-10-05" TYPE="DATE" comment="" />
-<NAME id="P1" start="68" end="81" text="Rickey George" TYPE="PATIENT" comment="" />
-<ID id="P2" start="87" end="94" text="1131414" TYPE="MEDICALRECORD" comment="" />
-<DATE id="P3" start="97" end="113" text="October 05, 2092" TYPE="DATE" comment="" />
-<LOCATION id="P4" start="169" end="172" text="MCH" TYPE="HOSPITAL" comment="" />
-<LOCATION id="P5" start="253" end="256" text="MCH" TYPE="HOSPITAL" comment="" />
-<LOCATION id="P6" start="307" end="310" text="MCH" TYPE="HOSPITAL" comment="" />
-<DATE id="P7" start="311" end="315" text="8/29" TYPE="DATE" comment="" />
-<DATE id="P8" start="324" end="330" text="9/9/92" TYPE="DATE" comment="" />
-<NAME id="P9" start="348" end="355" text="Randall" TYPE="DOCTOR" comment="" />
-<NAME id="P10" start="988" end="995" text="Randall" TYPE="DOCTOR" comment="" />
-<DATE id="P11" start="1218" end="1222" text="9/02" TYPE="DATE" comment="" />
-<DATE id="P12" start="1297" end="1300" text="9/9" TYPE="DATE" comment="" />
-<NAME id="P13" start="2591" end="2604" text="Rickey George" TYPE="PATIENT" comment="" />
-<ID id="P14" start="2610" end="2617" text="1131414" TYPE="MEDICALRECORD" comment="" />
-<DATE id="P15" start="2620" end="2636" text="October 05, 2092" TYPE="DATE" comment="" />
-<NAME id="P16" start="3828" end="3835" text="Randall" TYPE="DOCTOR" comment="" />
-<NAME id="P17" start="4477" end="4488" text="Opal Fierro" TYPE="DOCTOR" comment="" />
-<NAME id="P18" start="4518" end="4524" text="howell" TYPE="DOCTOR" comment="" />
-<NAME id="P19" start="4536" end="4549" text="Rickey George" TYPE="PATIENT" comment="" />
-<ID id="P20" start="4555" end="4562" text="1131414" TYPE="MEDICALRECORD" comment="" />
-<DATE id="P21" start="4565" end="4581" text="October 05, 2092" TYPE="DATE" comment="" />
-<NAME id="P22" start="4602" end="4615" text="Oscar Randall" TYPE="DOCTOR" comment="" />
-<NAME id="P23" start="4635" end="4649" text="Keith Caldwell" TYPE="DOCTOR" comment="" />
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2092-10-05" />
+<NAME TYPE="PATIENT" comment="" end="81" id="P1" start="68" text="Rickey George" />
+<ID TYPE="MEDICALRECORD" comment="" end="94" id="P2" start="87" text="1131414" />
+<DATE TYPE="DATE" comment="" end="113" id="P3" start="97" text="October 05, 2092" />
+<DATE TYPE="DATE" comment="" end="315" id="P7" start="311" text="8/29" />
+<DATE TYPE="DATE" comment="" end="330" id="P8" start="324" text="9/9/92" />
+<NAME TYPE="DOCTOR" comment="" end="355" id="P9" start="348" text="Randall" />
+<NAME TYPE="DOCTOR" comment="" end="995" id="P10" start="988" text="Randall" />
+<DATE TYPE="DATE" comment="" end="1222" id="P11" start="1218" text="9/02" />
+<DATE TYPE="DATE" comment="" end="1300" id="P12" start="1297" text="9/9" />
+<NAME TYPE="PATIENT" comment="" end="2604" id="P13" start="2591" text="Rickey George" />
+<ID TYPE="MEDICALRECORD" comment="" end="2617" id="P14" start="2610" text="1131414" />
+<DATE TYPE="DATE" comment="" end="2636" id="P15" start="2620" text="October 05, 2092" />
+<NAME TYPE="DOCTOR" comment="" end="3835" id="P16" start="3828" text="Randall" />
+<NAME TYPE="DOCTOR" comment="" end="4488" id="P17" start="4477" text="Opal Fierro" />
+<NAME TYPE="DOCTOR" comment="" end="4524" id="P18" start="4518" text="howell" />
+<NAME TYPE="PATIENT" comment="" end="4549" id="P19" start="4536" text="Rickey George" />
+<ID TYPE="MEDICALRECORD" comment="" end="4562" id="P20" start="4555" text="1131414" />
+<DATE TYPE="DATE" comment="" end="4581" id="P21" start="4565" text="October 05, 2092" />
+<NAME TYPE="DOCTOR" comment="" end="4615" id="P22" start="4602" text="Oscar Randall" />
+<NAME TYPE="DOCTOR" comment="" end="4649" id="P23" start="4635" text="Keith Caldwell" />
 </TAGS>
 </deIdi2b2>

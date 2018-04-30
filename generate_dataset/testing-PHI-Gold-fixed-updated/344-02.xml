@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version='1.0' encoding='utf8'?>
 <deIdi2b2>
-<TEXT><![CDATA[
+<TEXT>
 
 
 Record date: 2099-02-01
@@ -143,22 +143,20 @@ Dictated by:  MAX RHODES, M.D.       MR75
 
 
 
-]]></TEXT>
+</TEXT>
 <TAGS>
-<DATE id="P0" start="16" end="26" text="2099-02-01" TYPE="DATE" comment="" />
-<LOCATION id="P1" start="49" end="55" text="KEKELA" TYPE="HOSPITAL" comment="" />
-<NAME id="P2" start="81" end="93" text="LEON,MAURICE" TYPE="PATIENT" comment="" />
-<ID id="P3" start="96" end="107" text="436-34-21-1" TYPE="MEDICALRECORD" comment="" />
-<DATE id="P4" start="136" end="144" text="02/01/99" TYPE="DATE" comment="" />
-<AGE id="P5" start="296" end="298" text="45" TYPE="AGE" comment="" />
-<DATE id="P6" start="2883" end="2895" text="May 01, 2099" TYPE="DATE" comment="" />
-<NAME id="P7" start="3178" end="3184" text="Greene" TYPE="DOCTOR" comment="" />
-<ID id="P8" start="3707" end="3717" text="CL893/2080" TYPE="IDNUM" comment="" />
-<NAME id="P9" start="3720" end="3730" text="MAX RHODES" TYPE="DOCTOR" comment="" />
-<NAME id="P10" start="3743" end="3747" text="MR75" TYPE="USERNAME" comment="" />
-<DATE id="P11" start="3773" end="3781" text="02/01/99" TYPE="DATE" comment="" />
-<DATE id="P12" start="3841" end="3849" text="02/01/99" TYPE="DATE" comment="" />
-<NAME id="P13" start="3866" end="3876" text="MAX RHODES" TYPE="DOCTOR" comment="" />
-<NAME id="P14" start="3889" end="3893" text="MR75" TYPE="USERNAME" comment="" />
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2099-02-01" />
+<NAME TYPE="PATIENT" comment="" end="93" id="P2" start="81" text="LEON,MAURICE" />
+<ID TYPE="MEDICALRECORD" comment="" end="107" id="P3" start="96" text="436-34-21-1" />
+<DATE TYPE="DATE" comment="" end="144" id="P4" start="136" text="02/01/99" />
+<DATE TYPE="DATE" comment="" end="2895" id="P6" start="2883" text="May 01, 2099" />
+<NAME TYPE="DOCTOR" comment="" end="3184" id="P7" start="3178" text="Greene" />
+<ID TYPE="IDNUM" comment="" end="3717" id="P8" start="3707" text="CL893/2080" />
+<NAME TYPE="DOCTOR" comment="" end="3730" id="P9" start="3720" text="MAX RHODES" />
+<NAME TYPE="USERNAME" comment="" end="3747" id="P10" start="3743" text="MR75" />
+<DATE TYPE="DATE" comment="" end="3781" id="P11" start="3773" text="02/01/99" />
+<DATE TYPE="DATE" comment="" end="3849" id="P12" start="3841" text="02/01/99" />
+<NAME TYPE="DOCTOR" comment="" end="3876" id="P13" start="3866" text="MAX RHODES" />
+<NAME TYPE="USERNAME" comment="" end="3893" id="P14" start="3889" text="MR75" />
 </TAGS>
 </deIdi2b2>

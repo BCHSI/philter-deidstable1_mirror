@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version='1.0' encoding='utf8'?>
 <deIdi2b2>
-<TEXT><![CDATA[
+<TEXT>
 
 
 Record date: 2084-05-12
@@ -95,35 +95,28 @@ DT:5-13-84
 
 
 
-]]></TEXT>
+</TEXT>
 <TAGS>
-<DATE id="P0" start="16" end="26" text="2084-05-12" TYPE="DATE" comment="" />
-<CONTACT id="P1" start="86" end="100" text="(958) 291-8310" TYPE="PHONE" comment="" />
-<LOCATION id="P2" start="101" end="126" text="GEORGIA REGIONAL HOSPITAL" TYPE="HOSPITAL" comment="" />
-<DATE id="P3" start="127" end="139" text="May 12, 2084" TYPE="DATE" comment="" />
-<NAME id="P4" start="147" end="159" text="Brit Eastman" TYPE="DOCTOR" comment="" />
-<LOCATION id="P5" start="166" end="190" text="3793 Rhode Island Avenue" TYPE="STREET" comment="" />
-<LOCATION id="P6" start="191" end="207" text="East Stroudsburg" TYPE="CITY" comment="" />
-<LOCATION id="P7" start="209" end="211" text="GA" TYPE="STATE" comment="" />
-<LOCATION id="P8" start="213" end="218" text="13756" TYPE="ZIP" comment="" />
-<NAME id="P9" start="226" end="237" text="Lara, Uriah" TYPE="PATIENT" comment="" />
-<ID id="P10" start="243" end="251" text="62115644" TYPE="MEDICALRECORD" comment="" />
-<NAME id="P11" start="263" end="270" text="Eastman" TYPE="DOCTOR" comment="" />
-<NAME id="P12" start="308" end="318" text="Uriah Lara" TYPE="PATIENT" comment="" />
-<LOCATION id="P13" start="326" end="342" text="Georgia Regional" TYPE="HOSPITAL" comment="" />
-<AGE id="P14" start="352" end="354" text="51" TYPE="AGE" comment="" />
-<DATE id="P15" start="1065" end="1073" text="Saturday" TYPE="DATE" comment="" />
-<DATE id="P16" start="1147" end="1153" text="Sunday" TYPE="DATE" comment="" />
-<DATE id="P17" start="1196" end="1202" text="Sunday" TYPE="DATE" comment="" />
-<PROFESSION id="P18" start="1792" end="1797" text="pilot" TYPE="PROFESSION" comment="" />
-<LOCATION id="P19" start="1802" end="1819" text="Frontier Airlines" TYPE="ORGANIZATION" comment="" />
-<AGE id="P20" start="1988" end="1990" text="86" TYPE="AGE" comment="" />
-<NAME id="P21" start="2018" end="2030" text="Brit Eastman" TYPE="DOCTOR" comment="" />
-<DATE id="P22" start="2037" end="2049" text="May 12, 2084" TYPE="DATE" comment="" />
-<NAME id="P23" start="2680" end="2684" text="Lara" TYPE="PATIENT" comment="" />
-<NAME id="P24" start="3134" end="3146" text="Olivia Levin" TYPE="DOCTOR" comment="" />
-<ID id="P25" start="3156" end="3166" text="KQ:BU:1592" TYPE="IDNUM" comment="" />
-<DATE id="P26" start="3170" end="3177" text="5-12-84" TYPE="DATE" comment="" />
-<DATE id="P27" start="3181" end="3188" text="5-13-84" TYPE="DATE" comment="" />
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2084-05-12" />
+<CONTACT TYPE="PHONE" comment="" end="100" id="P1" start="86" text="(958) 291-8310" />
+<DATE TYPE="DATE" comment="" end="139" id="P3" start="127" text="May 12, 2084" />
+<NAME TYPE="DOCTOR" comment="" end="159" id="P4" start="147" text="Brit Eastman" />
+<LOCATION TYPE="STREET" comment="" end="190" id="P5" start="166" text="3793 Rhode Island Avenue" />
+<LOCATION TYPE="CITY" comment="" end="207" id="P6" start="191" text="East Stroudsburg" />
+<LOCATION TYPE="STATE" comment="" end="211" id="P7" start="209" text="GA" />
+<LOCATION TYPE="ZIP" comment="" end="218" id="P8" start="213" text="13756" />
+<NAME TYPE="PATIENT" comment="" end="237" id="P9" start="226" text="Lara, Uriah" />
+<ID TYPE="MEDICALRECORD" comment="" end="251" id="P10" start="243" text="62115644" />
+<NAME TYPE="DOCTOR" comment="" end="270" id="P11" start="263" text="Eastman" />
+<NAME TYPE="PATIENT" comment="" end="318" id="P12" start="308" text="Uriah Lara" />
+<PROFESSION TYPE="PROFESSION" comment="" end="1797" id="P18" start="1792" text="pilot" />
+<LOCATION TYPE="ORGANIZATION" comment="" end="1819" id="P19" start="1802" text="Frontier Airlines" />
+<NAME TYPE="DOCTOR" comment="" end="2030" id="P21" start="2018" text="Brit Eastman" />
+<DATE TYPE="DATE" comment="" end="2049" id="P22" start="2037" text="May 12, 2084" />
+<NAME TYPE="PATIENT" comment="" end="2684" id="P23" start="2680" text="Lara" />
+<NAME TYPE="DOCTOR" comment="" end="3146" id="P24" start="3134" text="Olivia Levin" />
+<ID TYPE="IDNUM" comment="" end="3166" id="P25" start="3156" text="KQ:BU:1592" />
+<DATE TYPE="DATE" comment="" end="3177" id="P26" start="3170" text="5-12-84" />
+<DATE TYPE="DATE" comment="" end="3188" id="P27" start="3181" text="5-13-84" />
 </TAGS>
 </deIdi2b2>

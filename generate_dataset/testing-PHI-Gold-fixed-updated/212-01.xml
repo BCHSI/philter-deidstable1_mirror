@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version='1.0' encoding='utf8'?>
 <deIdi2b2>
-<TEXT><![CDATA[
+<TEXT>
 
 
 Record date: 2083-07-26
@@ -176,21 +176,17 @@ Signed electronically by Gary O Xa MD on Aug 5, 2083
 
 
 
-]]></TEXT>
+</TEXT>
 <TAGS>
-<DATE id="P0" start="16" end="26" text="2083-07-26" TYPE="DATE" comment="" />
-<LOCATION id="P1" start="62" end="83" text="SAN FERNANDO HOSPITAL" TYPE="HOSPITAL" comment="" />
-<DATE id="P2" start="508" end="516" text="10/29/81" TYPE="DATE" comment="" />
-<NAME id="P3" start="712" end="716" text="Lacy" TYPE="DOCTOR" comment="" />
-<LOCATION id="P4" start="722" end="725" text="CCH" TYPE="HOSPITAL" comment="" />
-<DATE id="P5" start="726" end="733" text="7/26/83" TYPE="DATE" comment="" />
-<DATE id="P6" start="803" end="808" text="10/21" TYPE="DATE" comment="" />
-<DATE id="P7" start="1321" end="1330" text="10/5/2081" TYPE="DATE" comment="" />
-<DATE id="P8" start="1357" end="1362" text="10/21" TYPE="DATE" comment="" />
-<AGE id="P9" start="1438" end="1442" text="80's" TYPE="AGE" comment="" />
-<AGE id="P10" start="1457" end="1461" text="80's" TYPE="AGE" comment="" />
-<PROFESSION id="P11" start="1551" end="1556" text="baker" TYPE="PROFESSION" comment="" />
-<NAME id="P12" start="2500" end="2509" text="Gary O Xa" TYPE="DOCTOR" comment="" />
-<DATE id="P13" start="2516" end="2527" text="Aug 5, 2083" TYPE="DATE" comment="" />
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2083-07-26" />
+<DATE TYPE="DATE" comment="" end="516" id="P2" start="508" text="10/29/81" />
+<NAME TYPE="DOCTOR" comment="" end="716" id="P3" start="712" text="Lacy" />
+<DATE TYPE="DATE" comment="" end="733" id="P5" start="726" text="7/26/83" />
+<DATE TYPE="DATE" comment="" end="808" id="P6" start="803" text="10/21" />
+<DATE TYPE="DATE" comment="" end="1330" id="P7" start="1321" text="10/5/2081" />
+<DATE TYPE="DATE" comment="" end="1362" id="P8" start="1357" text="10/21" />
+<PROFESSION TYPE="PROFESSION" comment="" end="1556" id="P11" start="1551" text="baker" />
+<NAME TYPE="DOCTOR" comment="" end="2509" id="P12" start="2500" text="Gary O Xa" />
+<DATE TYPE="DATE" comment="" end="2527" id="P13" start="2516" text="Aug 5, 2083" />
 </TAGS>
 </deIdi2b2>

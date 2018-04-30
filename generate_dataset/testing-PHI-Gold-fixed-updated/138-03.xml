@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version='1.0' encoding='utf8'?>
 <deIdi2b2>
-<TEXT><![CDATA[
+<TEXT>
 
 
 Record date: 2076-04-16
@@ -82,28 +82,24 @@ DV: 04/16/76
 
 
 
-]]></TEXT>
+</TEXT>
 <TAGS>
-<DATE id="P0" start="16" end="26" text="2076-04-16" TYPE="DATE" comment="" />
-<LOCATION id="P1" start="33" end="58" text="Shelby Dental Care Center" TYPE="HOSPITAL" comment="" />
-<LOCATION id="P2" start="59" end="75" text="1888 Oldham Lane" TYPE="STREET" comment="" />
-<NAME id="P3" start="89" end="105" text="PRESTON, FRANCES" TYPE="PATIENT" comment="" />
-<LOCATION id="P4" start="106" end="111" text="Cozad" TYPE="CITY" comment="" />
-<LOCATION id="P5" start="113" end="115" text="OK" TYPE="STATE" comment="" />
-<LOCATION id="P6" start="117" end="122" text="53952" TYPE="ZIP" comment="" />
-<ID id="P7" start="142" end="150" text="05850080" TYPE="MEDICALRECORD" comment="" />
-<CONTACT id="P8" start="151" end="165" text="(060) 107-3378" TYPE="PHONE" comment="" />
-<DATE id="P9" start="186" end="196" text="04/16/2076" TYPE="DATE" comment="" />
-<AGE id="P10" start="247" end="249" text="51" TYPE="AGE" comment="" />
-<LOCATION id="P11" start="423" end="431" text="New York" TYPE="STATE" comment="" />
-<LOCATION id="P12" start="477" end="492" text="Conway Hospital" TYPE="HOSPITAL" comment="" />
-<LOCATION id="P13" start="1456" end="1464" text="New York" TYPE="STATE" comment="" />
-<LOCATION id="P14" start="2618" end="2633" text="Conway Hospital" TYPE="HOSPITAL" comment="" />
-<CONTACT id="P15" start="2656" end="2668" text="674-449-3338" TYPE="PHONE" comment="" />
-<NAME id="P16" start="2911" end="2925" text="Louis P Barron" TYPE="DOCTOR" comment="" />
-<ID id="P17" start="2969" end="2978" text="0-0320324" TYPE="IDNUM" comment="" />
-<DATE id="P18" start="3002" end="3010" text="04/16/76" TYPE="DATE" comment="" />
-<DATE id="P19" start="3015" end="3023" text="04/16/76" TYPE="DATE" comment="" />
-<DATE id="P20" start="3028" end="3036" text="04/16/76" TYPE="DATE" comment="" />
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2076-04-16" />
+<LOCATION TYPE="STREET" comment="" end="75" id="P2" start="59" text="1888 Oldham Lane" />
+<NAME TYPE="PATIENT" comment="" end="105" id="P3" start="89" text="PRESTON, FRANCES" />
+<LOCATION TYPE="CITY" comment="" end="111" id="P4" start="106" text="Cozad" />
+<LOCATION TYPE="STATE" comment="" end="115" id="P5" start="113" text="OK" />
+<LOCATION TYPE="ZIP" comment="" end="122" id="P6" start="117" text="53952" />
+<ID TYPE="MEDICALRECORD" comment="" end="150" id="P7" start="142" text="05850080" />
+<CONTACT TYPE="PHONE" comment="" end="165" id="P8" start="151" text="(060) 107-3378" />
+<DATE TYPE="DATE" comment="" end="196" id="P9" start="186" text="04/16/2076" />
+<LOCATION TYPE="STATE" comment="" end="431" id="P11" start="423" text="New York" />
+<LOCATION TYPE="STATE" comment="" end="1464" id="P13" start="1456" text="New York" />
+<CONTACT TYPE="PHONE" comment="" end="2668" id="P15" start="2656" text="674-449-3338" />
+<NAME TYPE="DOCTOR" comment="" end="2925" id="P16" start="2911" text="Louis P Barron" />
+<ID TYPE="IDNUM" comment="" end="2978" id="P17" start="2969" text="0-0320324" />
+<DATE TYPE="DATE" comment="" end="3010" id="P18" start="3002" text="04/16/76" />
+<DATE TYPE="DATE" comment="" end="3023" id="P19" start="3015" text="04/16/76" />
+<DATE TYPE="DATE" comment="" end="3036" id="P20" start="3028" text="04/16/76" />
 </TAGS>
 </deIdi2b2>

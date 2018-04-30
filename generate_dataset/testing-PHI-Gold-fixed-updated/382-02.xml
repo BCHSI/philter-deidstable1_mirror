@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version='1.0' encoding='utf8'?>
 <deIdi2b2>
-<TEXT><![CDATA[
+<TEXT>
 
 
 Record date: 2082-09-29
@@ -45,16 +45,14 @@ Quinton Israel,D.O.
 
 
 
-]]></TEXT>
+</TEXT>
 <TAGS>
-<DATE id="P0" start="16" end="26" text="2082-09-29" TYPE="DATE" comment="" />
-<NAME id="P1" start="243" end="256" text="Ursula Bowers" TYPE="DOCTOR" comment="" />
-<NAME id="P2" start="303" end="318" text="Vicente Aguilar" TYPE="PATIENT" comment="" />
-<AGE id="P3" start="324" end="326" text="49" TYPE="AGE" comment="" />
-<NAME id="P4" start="1541" end="1556" text="Vicente Aguilar" TYPE="PATIENT" comment="" />
-<AGE id="P5" start="1562" end="1564" text="49" TYPE="AGE" comment="" />
-<DATE id="P6" start="3085" end="3088" text="60s" TYPE="DATE" comment="" />
-<DATE id="P7" start="3802" end="3806" text="8/30" TYPE="DATE" comment="" />
-<NAME id="P8" start="4006" end="4020" text="Quinton Israel" TYPE="DOCTOR" comment="" />
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2082-09-29" />
+<NAME TYPE="DOCTOR" comment="" end="256" id="P1" start="243" text="Ursula Bowers" />
+<NAME TYPE="PATIENT" comment="" end="318" id="P2" start="303" text="Vicente Aguilar" />
+<NAME TYPE="PATIENT" comment="" end="1556" id="P4" start="1541" text="Vicente Aguilar" />
+<DATE TYPE="DATE" comment="" end="3088" id="P6" start="3085" text="60s" />
+<DATE TYPE="DATE" comment="" end="3806" id="P7" start="3802" text="8/30" />
+<NAME TYPE="DOCTOR" comment="" end="4020" id="P8" start="4006" text="Quinton Israel" />
 </TAGS>
 </deIdi2b2>

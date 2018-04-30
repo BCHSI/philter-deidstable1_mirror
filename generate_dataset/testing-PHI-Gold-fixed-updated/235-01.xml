@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version='1.0' encoding='utf8'?>
 <deIdi2b2>
-<TEXT><![CDATA[
+<TEXT>
 
 
 Record date: 2082-06-29
@@ -171,20 +171,20 @@ Assessment and Plan
 
 
 
-]]></TEXT>
+</TEXT>
 <TAGS>
-<DATE id="P0" start="16" end="26" text="2082-06-29" TYPE="DATE" comment="" />
-<DATE id="P1" start="158" end="167" text="July 22nd" TYPE="DATE" comment="" />
-<NAME id="P2" start="413" end="419" text="Uzzell" TYPE="DOCTOR" comment="" />
-<DATE id="P3" start="630" end="634" text="July" TYPE="DATE" comment="" />
-<NAME id="P4" start="681" end="688" text="Newkirk" TYPE="DOCTOR" comment="" />
-<DATE id="P5" start="966" end="975" text="June 23rd" TYPE="DATE" comment="" />
-<DATE id="P6" start="1105" end="1109" text="4/80" TYPE="DATE" comment="" />
-<DATE id="P7" start="1260" end="1262" text="78" TYPE="DATE" comment="" />
-<DATE id="P8" start="1293" end="1295" text="74" TYPE="DATE" comment="" />
-<DATE id="P9" start="2674" end="2683" text="July 22nd" TYPE="DATE" comment="" />
-<NAME id="P10" start="2690" end="2696" text="Rivers" TYPE="DOCTOR" comment="" />
-<NAME id="P11" start="2925" end="2931" text="Uzzell" TYPE="DOCTOR" comment="" />
-<DATE id="P12" start="3081" end="3085" text="July" TYPE="DATE" comment="" />
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2082-06-29" />
+<DATE TYPE="DATE" comment="" end="167" id="P1" start="158" text="July 22nd" />
+<NAME TYPE="DOCTOR" comment="" end="419" id="P2" start="413" text="Uzzell" />
+<DATE TYPE="DATE" comment="" end="634" id="P3" start="630" text="July" />
+<NAME TYPE="DOCTOR" comment="" end="688" id="P4" start="681" text="Newkirk" />
+<DATE TYPE="DATE" comment="" end="975" id="P5" start="966" text="June 23rd" />
+<DATE TYPE="DATE" comment="" end="1109" id="P6" start="1105" text="4/80" />
+<DATE TYPE="DATE" comment="" end="1262" id="P7" start="1260" text="78" />
+<DATE TYPE="DATE" comment="" end="1295" id="P8" start="1293" text="74" />
+<DATE TYPE="DATE" comment="" end="2683" id="P9" start="2674" text="July 22nd" />
+<NAME TYPE="DOCTOR" comment="" end="2696" id="P10" start="2690" text="Rivers" />
+<NAME TYPE="DOCTOR" comment="" end="2931" id="P11" start="2925" text="Uzzell" />
+<DATE TYPE="DATE" comment="" end="3085" id="P12" start="3081" text="July" />
 </TAGS>
 </deIdi2b2>

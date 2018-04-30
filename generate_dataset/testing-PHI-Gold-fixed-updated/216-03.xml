@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version='1.0' encoding='utf8'?>
 <deIdi2b2>
-<TEXT><![CDATA[
+<TEXT>
 
 
 Record date: 2102-12-01
@@ -80,37 +80,26 @@ A/P:  74 yr old woman with multiple medical problems, s/p 5 month hospitalizatio
 
 
 
-]]></TEXT>
+</TEXT>
 <TAGS>
-<DATE id="P0" start="16" end="26" text="2102-12-01" TYPE="DATE" comment="" />
-<AGE id="P1" start="48" end="50" text="74" TYPE="AGE" comment="" />
-<DATE id="P2" start="230" end="234" text="5/02" TYPE="DATE" comment="" />
-<DATE id="P3" start="503" end="508" text="March" TYPE="DATE" comment="" />
-<NAME id="P4" start="598" end="606" text="Yamasaki" TYPE="DOCTOR" comment="" />
-<LOCATION id="P5" start="676" end="686" text="San Rafael" TYPE="HOSPITAL" comment="" />
-<DATE id="P6" start="827" end="831" text="2098" TYPE="DATE" comment="" />
-<DATE id="P7" start="869" end="876" text="July O2" TYPE="DATE" comment="" />
-<LOCATION id="P8" start="1083" end="1093" text="San Rafael" TYPE="HOSPITAL" comment="" />
-<LOCATION id="P9" start="1311" end="1314" text="GCH" TYPE="HOSPITAL" comment="" />
-<DATE id="P10" start="1318" end="1324" text="August" TYPE="DATE" comment="" />
-<LOCATION id="P11" start="1506" end="1509" text="GCH" TYPE="HOSPITAL" comment="" />
-<DATE id="P12" start="1538" end="1550" text="September 10" TYPE="DATE" comment="" />
-<DATE id="P13" start="1672" end="1681" text="September" TYPE="DATE" comment="" />
-<LOCATION id="P14" start="1740" end="1750" text="San Rafael" TYPE="HOSPITAL" comment="" />
-<DATE id="P15" start="1876" end="1886" text="October 10" TYPE="DATE" comment="" />
-<LOCATION id="P16" start="2237" end="2240" text="SRH" TYPE="HOSPITAL" comment="" />
-<DATE id="P17" start="2281" end="2294" text="November 21st" TYPE="DATE" comment="" />
-<AGE id="P18" start="2902" end="2904" text="74" TYPE="AGE" comment="" />
-<DATE id="P19" start="3083" end="3089" text="spring" TYPE="DATE" comment="" />
-<DATE id="P20" start="3229" end="3237" text="12/04/02" TYPE="DATE" comment="" />
-<NAME id="P21" start="3643" end="3656" text="Herbert Paris" TYPE="DOCTOR" comment="" />
-<DATE id="P22" start="3667" end="3672" text="12/02" TYPE="DATE" comment="" />
-<LOCATION id="P24" start="4282" end="4285" text="SRH" TYPE="HOSPITAL" comment="" />
-<DATE id="P25" start="4290" end="4298" text="12/04/02" TYPE="DATE" comment="" />
-<DATE id="P26" start="4458" end="4466" text="12/04/02" TYPE="DATE" comment="" />
-<NAME id="P27" start="4536" end="4546" text="Gary Keyes" TYPE="DOCTOR" comment="" />
-<NAME id="P28" start="4732" end="4737" text="Keyes" TYPE="DOCTOR" comment="" />
-<NAME id="P29" start="4789" end="4794" text="Keyes" TYPE="DOCTOR" comment="" />
-<NAME id="P30" start="4876" end="4881" text="Barry" TYPE="DOCTOR" comment="" />
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2102-12-01" />
+<DATE TYPE="DATE" comment="" end="234" id="P2" start="230" text="5/02" />
+<DATE TYPE="DATE" comment="" end="508" id="P3" start="503" text="March" />
+<NAME TYPE="DOCTOR" comment="" end="606" id="P4" start="598" text="Yamasaki" />
+<DATE TYPE="DATE" comment="" end="876" id="P7" start="869" text="July O2" />
+<DATE TYPE="DATE" comment="" end="1324" id="P10" start="1318" text="August" />
+<DATE TYPE="DATE" comment="" end="1550" id="P12" start="1538" text="September 10" />
+<DATE TYPE="DATE" comment="" end="1681" id="P13" start="1672" text="September" />
+<DATE TYPE="DATE" comment="" end="1886" id="P15" start="1876" text="October 10" />
+<DATE TYPE="DATE" comment="" end="2294" id="P17" start="2281" text="November 21st" />
+<DATE TYPE="DATE" comment="" end="3237" id="P20" start="3229" text="12/04/02" />
+<NAME TYPE="DOCTOR" comment="" end="3656" id="P21" start="3643" text="Herbert Paris" />
+<DATE TYPE="DATE" comment="" end="3672" id="P22" start="3667" text="12/02" />
+<DATE TYPE="DATE" comment="" end="4298" id="P25" start="4290" text="12/04/02" />
+<DATE TYPE="DATE" comment="" end="4466" id="P26" start="4458" text="12/04/02" />
+<NAME TYPE="DOCTOR" comment="" end="4546" id="P27" start="4536" text="Gary Keyes" />
+<NAME TYPE="DOCTOR" comment="" end="4737" id="P28" start="4732" text="Keyes" />
+<NAME TYPE="DOCTOR" comment="" end="4794" id="P29" start="4789" text="Keyes" />
+<NAME TYPE="DOCTOR" comment="" end="4881" id="P30" start="4876" text="Barry" />
 </TAGS>
 </deIdi2b2>

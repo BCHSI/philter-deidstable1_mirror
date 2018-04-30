@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version='1.0' encoding='utf8'?>
 <deIdi2b2>
-<TEXT><![CDATA[
+<TEXT>
 
 
 Record date: 2132-05-27
@@ -110,7 +110,7 @@ CV: 	no bruits auscultated. Tachy, regular, S1 and S2 normal, no murmurs
 ABD: 	soft, NT/ND/NM/NHSM. BS active
 EXT: 	no c/c/e, DPs 2+ 
 NEURO:   
-MS 	A&Ox3
+MS 	A&amp;Ox3
 SKIN:		no rash, good skin turgor
 
 Data: 
@@ -143,7 +143,7 @@ CK        	30(L)
 CK-MB     	2.9       	Negative  	          	          	          
 CKMBRI    	see detail	          	          	          	          
 TROP-I    	          	Negative  	          	          	          
-TROP-T    	<0.01     	          	          	          	          
+TROP-T    	&lt;0.01     	          	          	          	          
 
 WBC       	          	          	17.5(H)   	          	          
 RBC       	          	          	5.31      	          	          
@@ -212,29 +212,24 @@ Pager: #84464
 
 
 
-]]></TEXT>
+</TEXT>
 <TAGS>
-<DATE id="P0" start="16" end="26" text="2132-05-27" TYPE="DATE" comment="" />
-<DATE id="P1" start="33" end="40" text="5/27/32" TYPE="DATE" comment="" />
-<NAME id="P2" start="82" end="96" text="Pearson, Tyler" TYPE="PATIENT" comment="" />
-<ID id="P3" start="121" end="130" text="727 19 02" TYPE="MEDICALRECORD" comment="" />
-<DATE id="P5" start="163" end="170" text="5/26/32" TYPE="DATE" comment="" />
-<NAME id="P6" start="176" end="189" text="Yale Triplett" TYPE="DOCTOR" comment="" />
-<LOCATION id="P7" start="191" end="204" text="Turner Clinic" TYPE="HOSPITAL" comment="" />
-<NAME id="P8" start="227" end="232" text="Arias" TYPE="DOCTOR" comment="" />
-<NAME id="P9" start="233" end="239" text="Wesley" TYPE="DOCTOR" comment="" />
-<NAME id="P10" start="258" end="272" text="Jaquan Mahoney" TYPE="DOCTOR" comment="" />
-<AGE id="P11" start="337" end="339" text="87" TYPE="AGE" comment="" />
-<LOCATION id="P12" start="603" end="606" text="VGH" TYPE="HOSPITAL" comment="" />
-<LOCATION id="P13" start="943" end="946" text="WMC" TYPE="HOSPITAL" comment="" />
-<NAME id="P14" start="2301" end="2312" text="Steven Land" TYPE="DOCTOR" comment="" />
-<DATE id="P15" start="2541" end="2547" text="5/3/32" TYPE="DATE" comment="" />
-<LOCATION id="P16" start="2862" end="2878" text="North Wilkesboro" TYPE="CITY" comment="" />
-<PROFESSION id="P17" start="3005" end="3019" text="civil engineer" TYPE="PROFESSION" comment="" />
-<PROFESSION id="P18" start="3021" end="3031" text="supervisor" TYPE="PROFESSION" comment="" />
-<PROFESSION id="P19" start="3033" end="3043" text="consultant" TYPE="PROFESSION" comment="" />
-<AGE id="P20" start="7378" end="7380" text="87" TYPE="AGE" comment="" />
-<NAME id="P21" start="8830" end="8844" text="Jaquan Mahoney" TYPE="DOCTOR" comment="" />
-<CONTACT id="P22" start="8857" end="8862" text="84464" TYPE="PHONE" comment="" />
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2132-05-27" />
+<DATE TYPE="DATE" comment="" end="40" id="P1" start="33" text="5/27/32" />
+<NAME TYPE="PATIENT" comment="" end="96" id="P2" start="82" text="Pearson, Tyler" />
+<ID TYPE="MEDICALRECORD" comment="" end="130" id="P3" start="121" text="727 19 02" />
+<DATE TYPE="DATE" comment="" end="170" id="P5" start="163" text="5/26/32" />
+<NAME TYPE="DOCTOR" comment="" end="189" id="P6" start="176" text="Yale Triplett" />
+<NAME TYPE="DOCTOR" comment="" end="232" id="P8" start="227" text="Arias" />
+<NAME TYPE="DOCTOR" comment="" end="239" id="P9" start="233" text="Wesley" />
+<NAME TYPE="DOCTOR" comment="" end="272" id="P10" start="258" text="Jaquan Mahoney" />
+<NAME TYPE="DOCTOR" comment="" end="2312" id="P14" start="2301" text="Steven Land" />
+<DATE TYPE="DATE" comment="" end="2547" id="P15" start="2541" text="5/3/32" />
+<LOCATION TYPE="CITY" comment="" end="2878" id="P16" start="2862" text="North Wilkesboro" />
+<PROFESSION TYPE="PROFESSION" comment="" end="3019" id="P17" start="3005" text="civil engineer" />
+<PROFESSION TYPE="PROFESSION" comment="" end="3031" id="P18" start="3021" text="supervisor" />
+<PROFESSION TYPE="PROFESSION" comment="" end="3043" id="P19" start="3033" text="consultant" />
+<NAME TYPE="DOCTOR" comment="" end="8844" id="P21" start="8830" text="Jaquan Mahoney" />
+<CONTACT TYPE="PHONE" comment="" end="8862" id="P22" start="8857" text="84464" />
 </TAGS>
 </deIdi2b2>

@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version='1.0' encoding='utf8'?>
 <deIdi2b2>
-<TEXT><![CDATA[
+<TEXT>
 
 
 Record date: 2099-07-17
@@ -43,21 +43,19 @@ Dictated by:  WINIFRED MANNING, M.D.  WM26
 
 
 
-]]></TEXT>
+</TEXT>
 <TAGS>
-<DATE id="P0" start="16" end="26" text="2099-07-17" TYPE="DATE" comment="" />
-<LOCATION id="P1" start="49" end="55" text="KEKELA" TYPE="HOSPITAL" comment="" />
-<NAME id="P2" start="79" end="91" text="LEON,MAURICE" TYPE="PATIENT" comment="" />
-<ID id="P3" start="94" end="105" text="436-34-21-1" TYPE="MEDICALRECORD" comment="" />
-<DATE id="P4" start="134" end="142" text="07/17/99" TYPE="DATE" comment="" />
-<DATE id="P5" start="159" end="166" text="7/17/99" TYPE="DATE" comment="" />
-<AGE id="P6" start="309" end="311" text="44" TYPE="AGE" comment="" />
-<ID id="P7" start="1623" end="1633" text="HP506/6486" TYPE="IDNUM" comment="" />
-<NAME id="P8" start="1635" end="1651" text="WINIFRED MANNING" TYPE="DOCTOR" comment="" />
-<NAME id="P9" start="1659" end="1663" text="WM26" TYPE="USERNAME" comment="" />
-<DATE id="P10" start="1696" end="1704" text="07/17/99" TYPE="DATE" comment="" />
-<DATE id="P11" start="1763" end="1771" text="07/17/99" TYPE="DATE" comment="" />
-<NAME id="P12" start="1787" end="1803" text="WINIFRED MANNING" TYPE="DOCTOR" comment="" />
-<NAME id="P13" start="1811" end="1815" text="WM26" TYPE="USERNAME" comment="" />
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2099-07-17" />
+<NAME TYPE="PATIENT" comment="" end="91" id="P2" start="79" text="LEON,MAURICE" />
+<ID TYPE="MEDICALRECORD" comment="" end="105" id="P3" start="94" text="436-34-21-1" />
+<DATE TYPE="DATE" comment="" end="142" id="P4" start="134" text="07/17/99" />
+<DATE TYPE="DATE" comment="" end="166" id="P5" start="159" text="7/17/99" />
+<ID TYPE="IDNUM" comment="" end="1633" id="P7" start="1623" text="HP506/6486" />
+<NAME TYPE="DOCTOR" comment="" end="1651" id="P8" start="1635" text="WINIFRED MANNING" />
+<NAME TYPE="USERNAME" comment="" end="1663" id="P9" start="1659" text="WM26" />
+<DATE TYPE="DATE" comment="" end="1704" id="P10" start="1696" text="07/17/99" />
+<DATE TYPE="DATE" comment="" end="1771" id="P11" start="1763" text="07/17/99" />
+<NAME TYPE="DOCTOR" comment="" end="1803" id="P12" start="1787" text="WINIFRED MANNING" />
+<NAME TYPE="USERNAME" comment="" end="1815" id="P13" start="1811" text="WM26" />
 </TAGS>
 </deIdi2b2>

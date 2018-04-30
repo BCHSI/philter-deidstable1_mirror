@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version='1.0' encoding='utf8'?>
 <deIdi2b2>
-<TEXT><![CDATA[
+<TEXT>
 
 
 Record date: 2067-12-06
@@ -143,17 +143,15 @@ Othel  Vidal, M.D.
 
 
 
-]]></TEXT>
+</TEXT>
 <TAGS>
-<DATE id="P0" start="16" end="26" text="2067-12-06" TYPE="DATE" comment="" />
-<LOCATION id="P1" start="1554" end="1562" text="FitSport" TYPE="ORGANIZATION" comment="" />
-<AGE id="P2" start="1721" end="1729" text="18 month" TYPE="AGE" comment="" />
-<NAME id="P3" start="1780" end="1784" text="Uber" TYPE="PATIENT" comment="" />
-<LOCATION id="P4" start="1789" end="1796" text="Vietnam" TYPE="COUNTRY" comment="" />
-<NAME id="P5" start="1844" end="1851" text="Ingalls" TYPE="PATIENT" comment="" />
-<LOCATION id="P6" start="1862" end="1868" text="BOURNE" TYPE="CITY" comment="" />
-<LOCATION id="P7" start="1921" end="1929" text="FitSport" TYPE="ORGANIZATION" comment="" />
-<NAME id="P8" start="2639" end="2643" text="Dill" TYPE="DOCTOR" comment="" />
-<NAME id="P9" start="2938" end="2950" text="Othel  Vidal" TYPE="DOCTOR" comment="" />
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2067-12-06" />
+<LOCATION TYPE="ORGANIZATION" comment="" end="1562" id="P1" start="1554" text="FitSport" />
+<NAME TYPE="PATIENT" comment="" end="1784" id="P3" start="1780" text="Uber" />
+<NAME TYPE="PATIENT" comment="" end="1851" id="P5" start="1844" text="Ingalls" />
+<LOCATION TYPE="CITY" comment="" end="1868" id="P6" start="1862" text="BOURNE" />
+<LOCATION TYPE="ORGANIZATION" comment="" end="1929" id="P7" start="1921" text="FitSport" />
+<NAME TYPE="DOCTOR" comment="" end="2643" id="P8" start="2639" text="Dill" />
+<NAME TYPE="DOCTOR" comment="" end="2950" id="P9" start="2938" text="Othel  Vidal" />
 </TAGS>
 </deIdi2b2>

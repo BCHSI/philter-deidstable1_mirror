@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version='1.0' encoding='utf8'?>
 <deIdi2b2>
-<TEXT><![CDATA[
+<TEXT>
 
 
 Record date: 2088-03-03
@@ -101,18 +101,16 @@ Nancy Elizabeth Roman, M.D.
 
 
 
-]]></TEXT>
+</TEXT>
 <TAGS>
-<DATE id="P0" start="16" end="26" text="2088-03-03" TYPE="DATE" comment="" />
-<NAME id="P1" start="97" end="113" text="WILKERSON,EDWARD" TYPE="PATIENT" comment="" />
-<ID id="P2" start="121" end="129" text="37199514" TYPE="MEDICALRECORD" comment="" />
-<LOCATION id="P3" start="129" end="137" text="MEDIQUIK" TYPE="HOSPITAL" comment="" />
-<DATE id="P4" start="213" end="221" text="3/3/2088" TYPE="DATE" comment="" />
-<LOCATION id="P5" start="227" end="228" text="M" TYPE="HOSPITAL" comment="" />
-<DATE id="P6" start="785" end="794" text="September" TYPE="DATE" comment="" />
-<NAME id="P7" start="1034" end="1038" text="Pate" TYPE="DOCTOR" comment="" />
-<NAME id="P8" start="1594" end="1613" text="Floyd Bobby Ventura" TYPE="DOCTOR" comment="" />
-<NAME id="P9" start="1719" end="1726" text="Ventura" TYPE="DOCTOR" comment="" />
-<NAME id="P10" start="1835" end="1856" text="Nancy Elizabeth Roman" TYPE="DOCTOR" comment="" />
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2088-03-03" />
+<NAME TYPE="PATIENT" comment="" end="113" id="P1" start="97" text="WILKERSON,EDWARD" />
+<ID TYPE="MEDICALRECORD" comment="" end="129" id="P2" start="121" text="37199514" />
+<DATE TYPE="DATE" comment="" end="221" id="P4" start="213" text="3/3/2088" />
+<DATE TYPE="DATE" comment="" end="794" id="P6" start="785" text="September" />
+<NAME TYPE="DOCTOR" comment="" end="1038" id="P7" start="1034" text="Pate" />
+<NAME TYPE="DOCTOR" comment="" end="1613" id="P8" start="1594" text="Floyd Bobby Ventura" />
+<NAME TYPE="DOCTOR" comment="" end="1726" id="P9" start="1719" text="Ventura" />
+<NAME TYPE="DOCTOR" comment="" end="1856" id="P10" start="1835" text="Nancy Elizabeth Roman" />
 </TAGS>
 </deIdi2b2>

@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version='1.0' encoding='utf8'?>
 <deIdi2b2>
-<TEXT><![CDATA[
+<TEXT>
 
 
 Record date: 2069-10-07
@@ -19,7 +19,7 @@ This AM.  the patient actually denies ever experiencing chest pain. He also only
 ROS otherwise negative.,  
 Past Medical History:
 
-Neuropathy Nephropathy : cr. 2.6. 3.3 gm proteinuria. Currently on hemodialysisHyperlipidemia Hypertension Obesity Diabetes mellitus : type 2Noncompliance : poor complianceBasal cell carcinoma : carcinoma of skin left cheekLower extremity ulcer : DIABETIC FOOT ULCER. L FootAbscess : Rt shin 2062 Back: 11/64. S/P I&amp;DMitral valve insufficiency : severe, with cardiomyopathy and EF 36%Colonic polyps : tubulovillious adenoma 11/65.  
+Neuropathy Nephropathy : cr. 2.6. 3.3 gm proteinuria. Currently on hemodialysisHyperlipidemia Hypertension Obesity Diabetes mellitus : type 2Noncompliance : poor complianceBasal cell carcinoma : carcinoma of skin left cheekLower extremity ulcer : DIABETIC FOOT ULCER. L FootAbscess : Rt shin 2062 Back: 11/64. S/P I&amp;amp;DMitral valve insufficiency : severe, with cardiomyopathy and EF 36%Colonic polyps : tubulovillious adenoma 11/65.  
  CAD: cath in 2066 showed occluded mid LAD with collaterals.  Stress test showed mid-distal anterior wall and apical ischemia.  - Cardiomyopathy with EF=36%, severe mitral regurg not on any SBE ppx
 
 
@@ -46,7 +46,7 @@ Examination:
 Modestly confused but not agitated. Does recognize PCP. Does not know date or time. Does not clearly know why he is hospitalized.
 
 
-VITALS:  99.0   hr 80-101 R   BP  150/76 .GEN&#8217;L    NAD, AO X 2 (&#8220;Superior Memorial Hospital)HEENT   MMM, no scleral icterus, no pale conjunctiva. No roth spots. NECK     supple, no thyromegaly, no LAD, no carotid bruits. + 10cm JVOP Heart:     RRR, no m/r/gLUNG:  Bibasilar crackles. No wheezeABD:      Soft, non-tender, obese, NABS. No HSM. No masses, no rebound. EXT:     RLE in Vac dressing. Wound open without surrounding erythema.NEURO: AO x 3; alert; CN II-XII grossly intact; Motor: 5/5 B UE/LE; sensation dinished to light tough, proprioception. Full neurologic eval per neurology assessment  Data: Date/Time         NA             K              CL             CO2            10/07/2069        136            4.4            100            24.5           10/07/2069        138            4.7            100            26.4           10/06/2069        136            4.7            99 (L)         26.6           10/06/2069        136            4.2            98 (L)         
+VITALS:  99.0   hr 80-101 R   BP  150/76 .GEN&amp;#8217;L    NAD, AO X 2 (&amp;#8220;Superior Memorial Hospital)HEENT   MMM, no scleral icterus, no pale conjunctiva. No roth spots. NECK     supple, no thyromegaly, no LAD, no carotid bruits. + 10cm JVOP Heart:     RRR, no m/r/gLUNG:  Bibasilar crackles. No wheezeABD:      Soft, non-tender, obese, NABS. No HSM. No masses, no rebound. EXT:     RLE in Vac dressing. Wound open without surrounding erythema.NEURO: AO x 3; alert; CN II-XII grossly intact; Motor: 5/5 B UE/LE; sensation dinished to light tough, proprioception. Full neurologic eval per neurology assessment  Data: Date/Time         NA             K              CL             CO2            10/07/2069        136            4.4            100            24.5           10/07/2069        138            4.7            100            26.4           10/06/2069        136            4.7            99 (L)         26.6           10/06/2069        136            4.2            98 (L)         
 
 
 Date/Time         BUN            CRE            EGFR           GLU            10/07/2069        35 (H)         6.64 (H)       9 [1]          124 (H)        10/07/2069        35 (H)         6.38 (H)       9 [2]          106            10/06/2069        34 (H)         6.33 (H)       10 [3]         141 (H)        
@@ -98,67 +98,55 @@ ____________________________________Paul Anthony Jaramillo, M.D.Pager # 52666.Sh
 
 
 
-]]></TEXT>
+</TEXT>
 <TAGS>
-<DATE id="P0" start="16" end="26" text="2069-10-07" TYPE="DATE" comment="" />
-<LOCATION id="P1" start="28" end="31" text="IMC" TYPE="HOSPITAL" comment="" />
-<LOCATION id="P2" start="32" end="36" text="Odem" TYPE="CITY" comment="" />
-<NAME id="P3" start="75" end="89" text="Ulysses Ogrady" TYPE="PATIENT" comment="" />
-<LOCATION id="P4" start="89" end="92" text="IMC" TYPE="HOSPITAL" comment="" />
-<ID id="P5" start="95" end="102" text="0937884" TYPE="MEDICALRECORD" comment="" />
-<DATE id="P6" start="108" end="116" text="10/07/69" TYPE="DATE" comment="" />
-<NAME id="P7" start="136" end="150" text="Paul Jaramillo" TYPE="DOCTOR" comment="" />
-<CONTACT id="P8" start="164" end="169" text="52666" TYPE="PHONE" comment="" />
-<AGE id="P9" start="365" end="367" text="62" TYPE="AGE" comment="" />
-<DATE id="P10" start="423" end="432" text="September" TYPE="DATE" comment="" />
-<DATE id="P11" start="2011" end="2015" text="2062" TYPE="DATE" comment="" />
-<DATE id="P12" start="2022" end="2027" text="11/64" TYPE="DATE" comment="" />
-<DATE id="P13" start="2147" end="2152" text="11/65" TYPE="DATE" comment="" />
-<DATE id="P14" start="2170" end="2174" text="2066" TYPE="DATE" comment="" />
-<LOCATION id="P15" start="2707" end="2717" text="tajikistan" TYPE="COUNTRY" comment="" />
-<LOCATION id="P16" start="2762" end="2766" text="Chad" TYPE="COUNTRY" comment="" />
-<LOCATION id="P17" start="2990" end="3016" text="Superior Memorial Hospital" TYPE="HOSPITAL" comment="" />
-<DATE id="P18" start="3610" end="3620" text="10/07/2069" TYPE="DATE" comment="" />
-<DATE id="P19" start="3688" end="3698" text="10/07/2069" TYPE="DATE" comment="" />
-<DATE id="P20" start="3766" end="3776" text="10/06/2069" TYPE="DATE" comment="" />
-<DATE id="P21" start="3844" end="3854" text="10/06/2069" TYPE="DATE" comment="" />
-<DATE id="P22" start="3988" end="3998" text="10/07/2069" TYPE="DATE" comment="" />
-<DATE id="P23" start="4066" end="4076" text="10/07/2069" TYPE="DATE" comment="" />
-<DATE id="P24" start="4144" end="4154" text="10/06/2069" TYPE="DATE" comment="" />
-<DATE id="P25" start="4258" end="4268" text="10/07/2069" TYPE="DATE" comment="" />
-<DATE id="P26" start="4291" end="4301" text="10/07/2069" TYPE="DATE" comment="" />
-<DATE id="P27" start="4324" end="4334" text="10/06/2069" TYPE="DATE" comment="" />
-<DATE id="P28" start="4436" end="4446" text="10/07/2069" TYPE="DATE" comment="" />
-<DATE id="P29" start="4514" end="4524" text="10/07/2069" TYPE="DATE" comment="" />
-<DATE id="P30" start="4592" end="4602" text="10/06/2069" TYPE="DATE" comment="" />
-<DATE id="P31" start="4670" end="4680" text="10/06/2069" TYPE="DATE" comment="" />
-<DATE id="P32" start="4782" end="4792" text="10/02/2069" TYPE="DATE" comment="" />
-<DATE id="P33" start="4893" end="4903" text="10/07/2069" TYPE="DATE" comment="" />
-<DATE id="P34" start="4971" end="4981" text="10/06/2069" TYPE="DATE" comment="" />
-<DATE id="P35" start="5112" end="5122" text="10/02/2069" TYPE="DATE" comment="" />
-<DATE id="P36" start="5208" end="5218" text="10/02/2069" TYPE="DATE" comment="" />
-<DATE id="P37" start="5320" end="5330" text="10/07/2069" TYPE="DATE" comment="" />
-<DATE id="P38" start="5398" end="5408" text="10/07/2069" TYPE="DATE" comment="" />
-<DATE id="P39" start="5476" end="5486" text="10/06/2069" TYPE="DATE" comment="" />
-<DATE id="P40" start="5633" end="5643" text="10/07/2069" TYPE="DATE" comment="" />
-<DATE id="P41" start="5711" end="5721" text="10/07/2069" TYPE="DATE" comment="" />
-<DATE id="P42" start="5789" end="5799" text="10/06/2069" TYPE="DATE" comment="" />
-<DATE id="P43" start="5890" end="5900" text="10/02/2069" TYPE="DATE" comment="" />
-<DATE id="P44" start="5986" end="5996" text="10/07/2069" TYPE="DATE" comment="" />
-<DATE id="P45" start="6049" end="6059" text="10/01/2069" TYPE="DATE" comment="" />
-<DATE id="P46" start="6175" end="6185" text="10/02/2069" TYPE="DATE" comment="" />
-<DATE id="P47" start="6286" end="6296" text="10/07/2069" TYPE="DATE" comment="" />
-<DATE id="P48" start="6334" end="6344" text="10/04/2069" TYPE="DATE" comment="" />
-<DATE id="P49" start="6556" end="6565" text="06-Oct-69" TYPE="DATE" comment="" />
-<DATE id="P50" start="8595" end="8604" text="06-Oct-69" TYPE="DATE" comment="" />
-<AGE id="P51" start="8782" end="8784" text="62" TYPE="AGE" comment="" />
-<NAME id="P52" start="9439" end="9443" text="Shah" TYPE="DOCTOR" comment="" />
-<LOCATION id="P53" start="9662" end="9664" text="CT" TYPE="STATE" comment="" />
-<LOCATION id="P54" start="10940" end="10947" text="Chadian" TYPE="COUNTRY" comment="" />
-<NAME id="P55" start="11046" end="11068" text="Paul Anthony Jaramillo" TYPE="DOCTOR" comment="" />
-<CONTACT id="P56" start="11082" end="11087" text="52666" TYPE="PHONE" comment="" />
-<NAME id="P57" start="11088" end="11101" text="Sheila Strong" TYPE="DOCTOR" comment="" />
-<DATE id="P58" start="11115" end="11123" text="Thursday" TYPE="DATE" comment="" />
-<DATE id="P59" start="11128" end="11134" text="Friday" TYPE="DATE" comment="" />
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2069-10-07" />
+<LOCATION TYPE="CITY" comment="" end="36" id="P2" start="32" text="Odem" />
+<NAME TYPE="PATIENT" comment="" end="89" id="P3" start="75" text="Ulysses Ogrady" />
+<ID TYPE="MEDICALRECORD" comment="" end="102" id="P5" start="95" text="0937884" />
+<DATE TYPE="DATE" comment="" end="116" id="P6" start="108" text="10/07/69" />
+<NAME TYPE="DOCTOR" comment="" end="150" id="P7" start="136" text="Paul Jaramillo" />
+<CONTACT TYPE="PHONE" comment="" end="169" id="P8" start="164" text="52666" />
+<DATE TYPE="DATE" comment="" end="432" id="P10" start="423" text="September" />
+<DATE TYPE="DATE" comment="" end="2027" id="P12" start="2022" text="11/64" />
+<DATE TYPE="DATE" comment="" end="2152" id="P13" start="2147" text="11/65" />
+<DATE TYPE="DATE" comment="" end="3620" id="P18" start="3610" text="10/07/2069" />
+<DATE TYPE="DATE" comment="" end="3698" id="P19" start="3688" text="10/07/2069" />
+<DATE TYPE="DATE" comment="" end="3776" id="P20" start="3766" text="10/06/2069" />
+<DATE TYPE="DATE" comment="" end="3854" id="P21" start="3844" text="10/06/2069" />
+<DATE TYPE="DATE" comment="" end="3998" id="P22" start="3988" text="10/07/2069" />
+<DATE TYPE="DATE" comment="" end="4076" id="P23" start="4066" text="10/07/2069" />
+<DATE TYPE="DATE" comment="" end="4154" id="P24" start="4144" text="10/06/2069" />
+<DATE TYPE="DATE" comment="" end="4268" id="P25" start="4258" text="10/07/2069" />
+<DATE TYPE="DATE" comment="" end="4301" id="P26" start="4291" text="10/07/2069" />
+<DATE TYPE="DATE" comment="" end="4334" id="P27" start="4324" text="10/06/2069" />
+<DATE TYPE="DATE" comment="" end="4446" id="P28" start="4436" text="10/07/2069" />
+<DATE TYPE="DATE" comment="" end="4524" id="P29" start="4514" text="10/07/2069" />
+<DATE TYPE="DATE" comment="" end="4602" id="P30" start="4592" text="10/06/2069" />
+<DATE TYPE="DATE" comment="" end="4680" id="P31" start="4670" text="10/06/2069" />
+<DATE TYPE="DATE" comment="" end="4792" id="P32" start="4782" text="10/02/2069" />
+<DATE TYPE="DATE" comment="" end="4903" id="P33" start="4893" text="10/07/2069" />
+<DATE TYPE="DATE" comment="" end="4981" id="P34" start="4971" text="10/06/2069" />
+<DATE TYPE="DATE" comment="" end="5122" id="P35" start="5112" text="10/02/2069" />
+<DATE TYPE="DATE" comment="" end="5218" id="P36" start="5208" text="10/02/2069" />
+<DATE TYPE="DATE" comment="" end="5330" id="P37" start="5320" text="10/07/2069" />
+<DATE TYPE="DATE" comment="" end="5408" id="P38" start="5398" text="10/07/2069" />
+<DATE TYPE="DATE" comment="" end="5486" id="P39" start="5476" text="10/06/2069" />
+<DATE TYPE="DATE" comment="" end="5643" id="P40" start="5633" text="10/07/2069" />
+<DATE TYPE="DATE" comment="" end="5721" id="P41" start="5711" text="10/07/2069" />
+<DATE TYPE="DATE" comment="" end="5799" id="P42" start="5789" text="10/06/2069" />
+<DATE TYPE="DATE" comment="" end="5900" id="P43" start="5890" text="10/02/2069" />
+<DATE TYPE="DATE" comment="" end="5996" id="P44" start="5986" text="10/07/2069" />
+<DATE TYPE="DATE" comment="" end="6059" id="P45" start="6049" text="10/01/2069" />
+<DATE TYPE="DATE" comment="" end="6185" id="P46" start="6175" text="10/02/2069" />
+<DATE TYPE="DATE" comment="" end="6296" id="P47" start="6286" text="10/07/2069" />
+<DATE TYPE="DATE" comment="" end="6344" id="P48" start="6334" text="10/04/2069" />
+<DATE TYPE="DATE" comment="" end="6565" id="P49" start="6556" text="06-Oct-69" />
+<DATE TYPE="DATE" comment="" end="8604" id="P50" start="8595" text="06-Oct-69" />
+<NAME TYPE="DOCTOR" comment="" end="9443" id="P52" start="9439" text="Shah" />
+<LOCATION TYPE="STATE" comment="" end="9664" id="P53" start="9662" text="CT" />
+<NAME TYPE="DOCTOR" comment="" end="11068" id="P55" start="11046" text="Paul Anthony Jaramillo" />
+<CONTACT TYPE="PHONE" comment="" end="11087" id="P56" start="11082" text="52666" />
+<NAME TYPE="DOCTOR" comment="" end="11101" id="P57" start="11088" text="Sheila Strong" />
 </TAGS>
 </deIdi2b2>

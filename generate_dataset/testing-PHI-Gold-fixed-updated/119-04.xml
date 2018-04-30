@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version='1.0' encoding='utf8'?>
 <deIdi2b2>
-<TEXT><![CDATA[
+<TEXT>
 
 
 Record date: 2092-03-26
@@ -101,13 +101,12 @@ Assessment and Plan
 
 
 
-]]></TEXT>
+</TEXT>
 <TAGS>
-<DATE id="P0" start="16" end="26" text="2092-03-26" TYPE="DATE" comment="" />
-<DATE id="P1" start="772" end="776" text="2091" TYPE="DATE" comment="" />
-<NAME id="P2" start="1011" end="1017" text="Jessup" TYPE="DOCTOR" comment="" />
-<NAME id="P3" start="1031" end="1038" text="Enright" TYPE="DOCTOR" comment="" />
-<NAME id="P4" start="1455" end="1463" text="Jeffries" TYPE="DOCTOR" comment="" />
-<NAME id="P5" start="1533" end="1541" text="Jeffries" TYPE="DOCTOR" comment="" />
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2092-03-26" />
+<NAME TYPE="DOCTOR" comment="" end="1017" id="P2" start="1011" text="Jessup" />
+<NAME TYPE="DOCTOR" comment="" end="1038" id="P3" start="1031" text="Enright" />
+<NAME TYPE="DOCTOR" comment="" end="1463" id="P4" start="1455" text="Jeffries" />
+<NAME TYPE="DOCTOR" comment="" end="1541" id="P5" start="1533" text="Jeffries" />
 </TAGS>
 </deIdi2b2>

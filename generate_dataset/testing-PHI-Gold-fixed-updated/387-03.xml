@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version='1.0' encoding='utf8'?>
 <deIdi2b2>
-<TEXT><![CDATA[
+<TEXT>
 
 
 Record date: 2084-06-09
@@ -19,11 +19,11 @@ I interviewed and examined the patient on rounds this morning with Dr. Lilly and
 
 Mr. Gillespie is a 53 year-old man with medical history that includes: 
 
-h/p Hodgkin&#8217;s lymphoma, 2070-2071, treated with local resection, bleomycin, adriamycin, and other agents, XRT to a wide chest field 
+h/p Hodgkin&amp;#8217;s lymphoma, 2070-2071, treated with local resection, bleomycin, adriamycin, and other agents, XRT to a wide chest field 
 Atrial fibrillation - diagnosed in 3/84; on warfarin, metoprolol 
-Pectus excavatum &#8211; repair failed as a child 
+Pectus excavatum &amp;#8211; repair failed as a child 
 Pneumonia several times in the past 
-Central obesity &#8211; weighs about 315#, down from a high of 360# 
+Central obesity &amp;#8211; weighs about 315#, down from a high of 360# 
 Type II diabetes mellitus, last A1C 6.4, on metformin only, 1000 mg BID 
 Hypertension, on lisinopril 10 mg, Toprol XL 
 Elevated lipids - on statin 
@@ -74,22 +74,19 @@ pager 32089
 
 
 
-]]></TEXT>
+</TEXT>
 <TAGS>
-<DATE id="P0" start="16" end="26" text="2084-06-09" TYPE="DATE" comment="" />
-<DATE id="P1" start="61" end="73" text="June 9, 2084" TYPE="DATE" comment="" />
-<NAME id="P2" start="155" end="160" text="Lilly" TYPE="DOCTOR" comment="" />
-<NAME id="P3" start="299" end="304" text="Lilly" TYPE="DOCTOR" comment="" />
-<NAME id="P4" start="559" end="568" text="Gillespie" TYPE="PATIENT" comment="" />
-<AGE id="P5" start="574" end="576" text="53" TYPE="AGE" comment="" />
-<DATE id="P6" start="658" end="662" text="2070" TYPE="DATE" comment="" />
-<DATE id="P7" start="663" end="667" text="2071" TYPE="DATE" comment="" />
-<DATE id="P8" start="802" end="806" text="3/84" TYPE="DATE" comment="" />
-<DATE id="P9" start="1197" end="1201" text="3/84" TYPE="DATE" comment="" />
-<NAME id="P10" start="1344" end="1349" text="Lilly" TYPE="DOCTOR" comment="" />
-<NAME id="P11" start="1818" end="1823" text="Lilly" TYPE="DOCTOR" comment="" />
-<NAME id="P12" start="2536" end="2541" text="Lilly" TYPE="DOCTOR" comment="" />
-<NAME id="P13" start="2549" end="2562" text="Peter Wiggins" TYPE="DOCTOR" comment="" />
-<CONTACT id="P14" start="2578" end="2583" text="32089" TYPE="PHONE" comment="" />
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2084-06-09" />
+<DATE TYPE="DATE" comment="" end="73" id="P1" start="61" text="June 9, 2084" />
+<NAME TYPE="DOCTOR" comment="" end="160" id="P2" start="155" text="Lilly" />
+<NAME TYPE="DOCTOR" comment="" end="304" id="P3" start="299" text="Lilly" />
+<NAME TYPE="PATIENT" comment="" end="568" id="P4" start="559" text="Gillespie" />
+<DATE TYPE="DATE" comment="" end="806" id="P8" start="802" text="3/84" />
+<DATE TYPE="DATE" comment="" end="1201" id="P9" start="1197" text="3/84" />
+<NAME TYPE="DOCTOR" comment="" end="1349" id="P10" start="1344" text="Lilly" />
+<NAME TYPE="DOCTOR" comment="" end="1823" id="P11" start="1818" text="Lilly" />
+<NAME TYPE="DOCTOR" comment="" end="2541" id="P12" start="2536" text="Lilly" />
+<NAME TYPE="DOCTOR" comment="" end="2562" id="P13" start="2549" text="Peter Wiggins" />
+<CONTACT TYPE="PHONE" comment="" end="2583" id="P14" start="2578" text="32089" />
 </TAGS>
 </deIdi2b2>

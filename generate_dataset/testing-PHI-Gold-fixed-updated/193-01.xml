@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version='1.0' encoding='utf8'?>
 <deIdi2b2>
-<TEXT><![CDATA[
+<TEXT>
 
 
 Record date: 2090-04-04
@@ -135,19 +135,16 @@ Bethany Kristin Downs, M.D.
 
 
 
-]]></TEXT>
+</TEXT>
 <TAGS>
-<DATE id="P0" start="16" end="26" text="2090-04-04" TYPE="DATE" comment="" />
-<AGE id="P1" start="93" end="95" text="59" TYPE="AGE" comment="" />
-<DATE id="P2" start="466" end="473" text="4/04/90" TYPE="DATE" comment="" />
-<NAME id="P3" start="641" end="652" text="Tania Foust" TYPE="PATIENT" comment="" />
-<NAME id="P4" start="674" end="688" text="Willie Spencer" TYPE="PATIENT" comment="" />
-<LOCATION id="P5" start="714" end="722" text="UC Davis" TYPE="ORGANIZATION" comment="" />
-<PROFESSION id="P6" start="745" end="769" text="health policy consultant" TYPE="PROFESSION" comment="" />
-<LOCATION id="P7" start="787" end="794" text="Hungary" TYPE="COUNTRY" comment="" />
-<DATE id="P8" start="802" end="808" text="2060's" TYPE="DATE" comment="" />
-<DATE id="P9" start="1675" end="1680" text="11/89" TYPE="DATE" comment="" />
-<LOCATION id="P10" start="1688" end="1715" text="Nye Regional Medical Center" TYPE="HOSPITAL" comment="" />
-<NAME id="P11" start="1998" end="2019" text="Bethany Kristin Downs" TYPE="DOCTOR" comment="" />
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2090-04-04" />
+<DATE TYPE="DATE" comment="" end="473" id="P2" start="466" text="4/04/90" />
+<NAME TYPE="PATIENT" comment="" end="652" id="P3" start="641" text="Tania Foust" />
+<NAME TYPE="PATIENT" comment="" end="688" id="P4" start="674" text="Willie Spencer" />
+<LOCATION TYPE="ORGANIZATION" comment="" end="722" id="P5" start="714" text="UC Davis" />
+<PROFESSION TYPE="PROFESSION" comment="" end="769" id="P6" start="745" text="health policy consultant" />
+<DATE TYPE="DATE" comment="" end="808" id="P8" start="802" text="2060's" />
+<DATE TYPE="DATE" comment="" end="1680" id="P9" start="1675" text="11/89" />
+<NAME TYPE="DOCTOR" comment="" end="2019" id="P11" start="1998" text="Bethany Kristin Downs" />
 </TAGS>
 </deIdi2b2>

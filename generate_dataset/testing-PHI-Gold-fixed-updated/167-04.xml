@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version='1.0' encoding='utf8'?>
 <deIdi2b2>
-<TEXT><![CDATA[
+<TEXT>
 
 
 Record date: 2090-07-12
@@ -108,7 +108,7 @@ NECK: No thyromegaly or lymphadenopathy. Neck supple.
 CHEST: Clear to auscultation bilaterally.  No accessory muscle use.  
 CV: Irregular rhythm without murmurs, rubs, or gallops.  Distal pulses present and normal bilaterally. 
 ABDOMEN: Soft, non-tender, non-distended. Normal bowel sounds. No masses or organomegaly. 
-EXTREMITIES: No lower extremity edema. Warm &amp; well-perfused. No clubbing or cyanosis. 
+EXTREMITIES: No lower extremity edema. Warm &amp;amp; well-perfused. No clubbing or cyanosis. 
 SKIN: No rashes, hematomas, or pigment changes. 
 NEUROLOGICAL: Alert, attentive, oriented x 3. Pupils constricted but reactive bilaterally.  Cranial nerves II-XII intact.  Moving all extremities to command. Sensation intact to light touch sensation throughout. 
 
@@ -192,27 +192,20 @@ Giovanni Huang, MD, PGY-1 (pager 76567)
 
 
 
-]]></TEXT>
+</TEXT>
 <TAGS>
-<DATE id="P0" start="16" end="26" text="2090-07-12" TYPE="DATE" comment="" />
-<NAME id="P1" start="103" end="121" text="Yarbrough, Irene H" TYPE="PATIENT" comment="" />
-<ID id="P2" start="127" end="135" text="81086437" TYPE="MEDICALRECORD" comment="" />
-<DATE id="P3" start="156" end="163" text="7/12/90" TYPE="DATE" comment="" />
-<NAME id="P4" start="178" end="184" text="Gaines" TYPE="DOCTOR" comment="" />
-<NAME id="P5" start="197" end="202" text="Silva" TYPE="DOCTOR" comment="" />
-<AGE id="P6" start="311" end="313" text="66" TYPE="AGE" comment="" />
-<DATE id="P7" start="2166" end="2171" text="10/89" TYPE="DATE" comment="" />
-<DATE id="P8" start="2248" end="2252" text="2083" TYPE="DATE" comment="" />
-<DATE id="P9" start="2263" end="2267" text="4/88" TYPE="DATE" comment="" />
-<DATE id="P10" start="2603" end="2611" text="Saturday" TYPE="DATE" comment="" />
-<DATE id="P11" start="2616" end="2624" text="Saturday" TYPE="DATE" comment="" />
-<NAME id="P12" start="3075" end="3087" text="Debra Jaquez" TYPE="PATIENT" comment="" />
-<CONTACT id="P13" start="3100" end="3112" text="901-063-0839" TYPE="PHONE" comment="" />
-<AGE id="P14" start="6175" end="6177" text="66" TYPE="AGE" comment="" />
-<NAME id="P15" start="6919" end="6928" text="Bert Lord" TYPE="DOCTOR" comment="" />
-<DATE id="P16" start="7119" end="7127" text="Saturday" TYPE="DATE" comment="" />
-<DATE id="P17" start="7140" end="7148" text="Saturday" TYPE="DATE" comment="" />
-<NAME id="P18" start="7878" end="7892" text="Giovanni Huang" TYPE="DOCTOR" comment="" />
-<CONTACT id="P19" start="7911" end="7916" text="76567" TYPE="PHONE" comment="" />
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2090-07-12" />
+<NAME TYPE="PATIENT" comment="" end="121" id="P1" start="103" text="Yarbrough, Irene H" />
+<ID TYPE="MEDICALRECORD" comment="" end="135" id="P2" start="127" text="81086437" />
+<DATE TYPE="DATE" comment="" end="163" id="P3" start="156" text="7/12/90" />
+<NAME TYPE="DOCTOR" comment="" end="184" id="P4" start="178" text="Gaines" />
+<NAME TYPE="DOCTOR" comment="" end="202" id="P5" start="197" text="Silva" />
+<DATE TYPE="DATE" comment="" end="2171" id="P7" start="2166" text="10/89" />
+<DATE TYPE="DATE" comment="" end="2267" id="P9" start="2263" text="4/88" />
+<NAME TYPE="PATIENT" comment="" end="3087" id="P12" start="3075" text="Debra Jaquez" />
+<CONTACT TYPE="PHONE" comment="" end="3112" id="P13" start="3100" text="901-063-0839" />
+<NAME TYPE="DOCTOR" comment="" end="6928" id="P15" start="6919" text="Bert Lord" />
+<NAME TYPE="DOCTOR" comment="" end="7892" id="P18" start="7878" text="Giovanni Huang" />
+<CONTACT TYPE="PHONE" comment="" end="7916" id="P19" start="7911" text="76567" />
 </TAGS>
 </deIdi2b2>

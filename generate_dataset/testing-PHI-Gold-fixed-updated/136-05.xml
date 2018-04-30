@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version='1.0' encoding='utf8'?>
 <deIdi2b2>
-<TEXT><![CDATA[
+<TEXT>
 
 
 Record date: 2082-04-07
@@ -63,11 +63,11 @@ CC:         chest pain
 
 HPI:
 
-This is a 65 yo female with T2DM, HL, active smoking, breast cancer s/p BL mastectomy and chemoradiation, and a question of a lupus-like disorder who presents with chest pain.  She was seated at breakfast this AM when she developed sudden onset ripping chest pain which radiated &#8220;like a knife&#8221; to her upper back.  It was associated with nausea but no vomiting or diaphoresis or shortness of breath.  It did radiate down both arms, but she her arm pains are now new.  It was not relieved by any positioning, or largely affected by taking deep breaths.  It tapered off over about 20 minutes.  She felt fatigued and layed down, when it occurred again several hours later, again lasting for about 20 minutes.  She then presented to DCA-ED for evaluation.  She had a negative adenosine MIBI at JMH in 2078.
+This is a 65 yo female with T2DM, HL, active smoking, breast cancer s/p BL mastectomy and chemoradiation, and a question of a lupus-like disorder who presents with chest pain.  She was seated at breakfast this AM when she developed sudden onset ripping chest pain which radiated &amp;#8220;like a knife&amp;#8221; to her upper back.  It was associated with nausea but no vomiting or diaphoresis or shortness of breath.  It did radiate down both arms, but she her arm pains are now new.  It was not relieved by any positioning, or largely affected by taking deep breaths.  It tapered off over about 20 minutes.  She felt fatigued and layed down, when it occurred again several hours later, again lasting for about 20 minutes.  She then presented to DCA-ED for evaluation.  She had a negative adenosine MIBI at JMH in 2078.
 
 
 
-She has had a difficult time recently, she is under evaluation for a lupus-like syndrome (she has noted positivity for ANA, anti-smith, anti-dsDNA).  She has had progressive joint and muscle pain of all of her major joints (ankes, knees, hips, wrists, elbows, shoulders, neck, lumbar back) and the muscles of her arms and legs.  She endorses progressive mental &#8220;cloudiness&#8221;, frequently dropping items like cutlery and cups, and increasing tremor in her hands.
+She has had a difficult time recently, she is under evaluation for a lupus-like syndrome (she has noted positivity for ANA, anti-smith, anti-dsDNA).  She has had progressive joint and muscle pain of all of her major joints (ankes, knees, hips, wrists, elbows, shoulders, neck, lumbar back) and the muscles of her arms and legs.  She endorses progressive mental &amp;#8220;cloudiness&amp;#8221;, frequently dropping items like cutlery and cups, and increasing tremor in her hands.
 
 
 
@@ -143,7 +143,7 @@ Lives with 90 yo mother and cousin.
 
 Etoh - denies
 
-Tobacco &#8211; &#189; PPD, down from &gt; 2 ppd.
+Tobacco &amp;#8211; &amp;#189; PPD, down from &amp;gt; 2 ppd.
 
 Drugs - denies
 
@@ -210,7 +210,7 @@ SAO2 100 % on RA
 
 
 
-GEN&#8217;L:      awake, alert pleasant, in no distress
+GEN&amp;#8217;L:      awake, alert pleasant, in no distress
 
 HEENT:      JVD not elevated, no carotid bruits 
 
@@ -223,11 +223,11 @@ ABD:
 
 EXT:        warm without edema, 2+ DP pulses bilaterally
 
-NEURO:      A&amp;OX3, CN unremarkable, no dysmetria, no obvious tremor on examination
+NEURO:      A&amp;amp;OX3, CN unremarkable, no dysmetria, no obvious tremor on examination
 
 
 
-&#183; Chemistries:   
+&amp;#183; Chemistries:   
 
 
 
@@ -253,7 +253,7 @@ Plasma Glucose                   345              H        (70-110)       mg/dl
 
 
 
-&#183; Cardiac:  
+&amp;#183; Cardiac:  
 
 
 
@@ -261,11 +261,11 @@ Creatine Kinase Isoenzymes       32.8             H        (0.0-6.9)      ng/ml
 
 CPK Isoenzymes Index             7.7              H        (0.0-3.5)      %
 
-Troponin-T                       0.36             H        (&lt;0.03)        ng/ml
+Troponin-T                       0.36             H        (&amp;lt;0.03)        ng/ml
 
 Creatine Kinase                  428              H        (40-150)       U/L
 
-&#183; Hematology:  
+&amp;#183; Hematology:  
 
 
 
@@ -294,7 +294,7 @@ Basos                            0                         (0-3)          %
 
 
 
-&#183; Coags:  
+&amp;#183; Coags:  
 
 
 
@@ -306,15 +306,15 @@ Superstat APTT                   25.5                      (21.0-33.0)    sec
 
 
 
-&#183; Imaging:  CXR &#8211; no acute processes
+&amp;#183; Imaging:  CXR &amp;#8211; no acute processes
 
 
 
-&#183; EKG: (admit to SDU) 
+&amp;#183; EKG: (admit to SDU) 
 
 
 
-ASSESSMENT &amp; PLAN
+ASSESSMENT &amp;amp; PLAN
 
 This is a 65 yo female with T2DM, HL, active smoking, breast cancer s/p BL mastectomy and chemoradiation, and a question of a lupus-like disorder who presents with chest pain, + troponins, unremarkable EKG.  Cardiac RF = age, DM, HL, active smoking.  TIMI score = 3 (age, asa use, + biomarkers).  DDx = ACS (high risk NSTEMI), aortic dissection (concerning elements of hx), PE (given cancer hx, on SERM), or perimyocarditis (question associated with lupus-like condition).  The lack of hypoxia or tachycardia argue against PE.  Given her risk factors, after exoneration of her aorta by CT scan, she should undergo cardiac catheterization to assess for epicardial disease.  She is currently CP free.
 
@@ -354,17 +354,17 @@ This is a 65 yo female with T2DM, HL, active smoking, breast cancer s/p BL maste
 
 4.    Renal
 
--     renal prophylaxis give planned dye loads &#8211; mucormyst 1200 BID + IV bicarbonate
+-     renal prophylaxis give planned dye loads &amp;#8211; mucormyst 1200 BID + IV bicarbonate
 
 
 
 5.    Psych
 
--     continue home regimen &#8211; klonopin, effexor, topamax
+-     continue home regimen &amp;#8211; klonopin, effexor, topamax
 
 
 
-Code status &#8211; Full code
+Code status &amp;#8211; Full code
 
 
 
@@ -383,25 +383,18 @@ Pager #46656
 
 
 
-]]></TEXT>
+</TEXT>
 <TAGS>
-<DATE id="P0" start="16" end="26" text="2082-04-07" TYPE="DATE" comment="" />
-<NAME id="P1" start="100" end="114" text="Fonseca, Linda" TYPE="PATIENT" comment="" />
-<LOCATION id="P2" start="116" end="119" text="DCA" TYPE="HOSPITAL" comment="" />
-<ID id="P3" start="128" end="135" text="7090253" TYPE="MEDICALRECORD" comment="" />
-<DATE id="P4" start="156" end="164" text="04/07/82" TYPE="DATE" comment="" />
-<NAME id="P5" start="178" end="187" text="Asia Doty" TYPE="DOCTOR" comment="" />
-<NAME id="P6" start="201" end="214" text="Austin Jaeger" TYPE="DOCTOR" comment="" />
-<LOCATION id="P7" start="217" end="227" text="Whitehouse" TYPE="CITY" comment="" />
-<AGE id="P8" start="299" end="301" text="65" TYPE="AGE" comment="" />
-<LOCATION id="P9" start="1029" end="1032" text="DCA" TYPE="HOSPITAL" comment="" />
-<LOCATION id="P10" start="1090" end="1093" text="JMH" TYPE="HOSPITAL" comment="" />
-<DATE id="P11" start="1097" end="1101" text="2078" TYPE="DATE" comment="" />
-<LOCATION id="P12" start="1581" end="1584" text="DCA" TYPE="HOSPITAL" comment="" />
-<AGE id="P13" start="2621" end="2623" text="90" TYPE="AGE" comment="" />
-<ID id="P14" start="3125" end="3134" text="QJ1829196" TYPE="IDNUM" comment="" />
-<AGE id="P15" start="6761" end="6763" text="65" TYPE="AGE" comment="" />
-<NAME id="P16" start="8368" end="8381" text="Eli S Lindsay" TYPE="DOCTOR" comment="" />
-<CONTACT id="P17" start="8404" end="8409" text="46656" TYPE="PHONE" comment="" />
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2082-04-07" />
+<NAME TYPE="PATIENT" comment="" end="114" id="P1" start="100" text="Fonseca, Linda" />
+<ID TYPE="MEDICALRECORD" comment="" end="135" id="P3" start="128" text="7090253" />
+<DATE TYPE="DATE" comment="" end="164" id="P4" start="156" text="04/07/82" />
+<NAME TYPE="DOCTOR" comment="" end="187" id="P5" start="178" text="Asia Doty" />
+<NAME TYPE="DOCTOR" comment="" end="214" id="P6" start="201" text="Austin Jaeger" />
+<LOCATION TYPE="CITY" comment="" end="227" id="P7" start="217" text="Whitehouse" />
+<AGE TYPE="AGE" comment="" end="2623" id="P13" start="2621" text="90" />
+<ID TYPE="IDNUM" comment="" end="3134" id="P14" start="3125" text="QJ1829196" />
+<NAME TYPE="DOCTOR" comment="" end="8381" id="P16" start="8368" text="Eli S Lindsay" />
+<CONTACT TYPE="PHONE" comment="" end="8409" id="P17" start="8404" text="46656" />
 </TAGS>
 </deIdi2b2>

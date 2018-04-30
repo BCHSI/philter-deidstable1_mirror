@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version='1.0' encoding='utf8'?>
 <deIdi2b2>
-<TEXT><![CDATA[
+<TEXT>
 
 
 Record date: 2095-12-07
@@ -66,18 +66,16 @@ HW/warren/stark
 
 
 
-]]></TEXT>
+</TEXT>
 <TAGS>
-<DATE id="P0" start="16" end="26" text="2095-12-07" TYPE="DATE" comment="" />
-<NAME id="P1" start="41" end="53" text="Upham, Zelda" TYPE="PATIENT" comment="" />
-<ID id="P2" start="64" end="71" text="0308696" TYPE="MEDICALRECORD" comment="" />
-<NAME id="P3" start="238" end="242" text="Qazi" TYPE="PATIENT" comment="" />
-<LOCATION id="P4" start="344" end="366" text="Miller County Hospital" TYPE="HOSPITAL" comment="" />
-<NAME id="P5" start="585" end="590" text="Weeks" TYPE="DOCTOR" comment="" />
-<DATE id="P6" start="595" end="603" text="12/13/95" TYPE="DATE" comment="" />
-<NAME id="P7" start="2424" end="2439" text="Helen Whitehead" TYPE="DOCTOR" comment="" />
-<NAME id="P8" start="2447" end="2449" text="HW" TYPE="DOCTOR" comment="" />
-<NAME id="P9" start="2450" end="2456" text="warren" TYPE="DOCTOR" comment="" />
-<NAME id="P10" start="2457" end="2462" text="stark" TYPE="DOCTOR" comment="" />
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2095-12-07" />
+<NAME TYPE="PATIENT" comment="" end="53" id="P1" start="41" text="Upham, Zelda" />
+<ID TYPE="MEDICALRECORD" comment="" end="71" id="P2" start="64" text="0308696" />
+<NAME TYPE="PATIENT" comment="" end="242" id="P3" start="238" text="Qazi" />
+<NAME TYPE="DOCTOR" comment="" end="590" id="P5" start="585" text="Weeks" />
+<DATE TYPE="DATE" comment="" end="603" id="P6" start="595" text="12/13/95" />
+<NAME TYPE="DOCTOR" comment="" end="2439" id="P7" start="2424" text="Helen Whitehead" />
+<NAME TYPE="DOCTOR" comment="" end="2456" id="P9" start="2450" text="warren" />
+<NAME TYPE="DOCTOR" comment="" end="2462" id="P10" start="2457" text="stark" />
 </TAGS>
 </deIdi2b2>

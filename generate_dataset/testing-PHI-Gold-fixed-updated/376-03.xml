@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version='1.0' encoding='utf8'?>
 <deIdi2b2>
-<TEXT><![CDATA[
+<TEXT>
 
 
 Record date: 2074-03-25
@@ -83,19 +83,18 @@ FU in one month.  Total visit time was 40 minutes.
 
 
 
-]]></TEXT>
+</TEXT>
 <TAGS>
-<DATE id="P0" start="16" end="26" text="2074-03-25" TYPE="DATE" comment="" />
-<DATE id="P1" start="121" end="128" text="3/20/74" TYPE="DATE" comment="" />
-<DATE id="P2" start="204" end="211" text="3/09/74" TYPE="DATE" comment="" />
-<DATE id="P3" start="357" end="364" text="3/23/74" TYPE="DATE" comment="" />
-<DATE id="P5" start="429" end="436" text="3/28/74" TYPE="DATE" comment="" />
-<DATE id="P6" start="590" end="597" text="11/1/69" TYPE="DATE" comment="" />
-<LOCATION id="P7" start="653" end="669" text="Montreal Medical" TYPE="HOSPITAL" comment="" />
-<DATE id="P8" start="898" end="903" text="11/73" TYPE="DATE" comment="" />
-<DATE id="P9" start="1108" end="1112" text="8/69" TYPE="DATE" comment="" />
-<DATE id="P10" start="1124" end="1128" text="8/70" TYPE="DATE" comment="" />
-<DATE id="P11" start="1140" end="1144" text="2/72" TYPE="DATE" comment="" />
-<DATE id="P12" start="1197" end="1201" text="3/74" TYPE="DATE" comment="" />
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2074-03-25" />
+<DATE TYPE="DATE" comment="" end="128" id="P1" start="121" text="3/20/74" />
+<DATE TYPE="DATE" comment="" end="211" id="P2" start="204" text="3/09/74" />
+<DATE TYPE="DATE" comment="" end="364" id="P3" start="357" text="3/23/74" />
+<DATE TYPE="DATE" comment="" end="436" id="P5" start="429" text="3/28/74" />
+<DATE TYPE="DATE" comment="" end="597" id="P6" start="590" text="11/1/69" />
+<DATE TYPE="DATE" comment="" end="903" id="P8" start="898" text="11/73" />
+<DATE TYPE="DATE" comment="" end="1112" id="P9" start="1108" text="8/69" />
+<DATE TYPE="DATE" comment="" end="1128" id="P10" start="1124" text="8/70" />
+<DATE TYPE="DATE" comment="" end="1144" id="P11" start="1140" text="2/72" />
+<DATE TYPE="DATE" comment="" end="1201" id="P12" start="1197" text="3/74" />
 </TAGS>
 </deIdi2b2>

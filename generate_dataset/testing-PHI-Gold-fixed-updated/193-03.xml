@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version='1.0' encoding='utf8'?>
 <deIdi2b2>
-<TEXT><![CDATA[
+<TEXT>
 
 
 Record date: 2095-01-31
@@ -95,22 +95,21 @@ eScription document:9-8829102 BFFocus
 
 
 
-]]></TEXT>
+</TEXT>
 <TAGS>
-<DATE id="P0" start="16" end="26" text="2095-01-31" TYPE="DATE" comment="" />
-<ID id="P1" start="36" end="44" text="50294530" TYPE="MEDICALRECORD" comment="" />
-<NAME id="P2" start="45" end="55" text="FOUST, FAY" TYPE="PATIENT" comment="" />
-<DATE id="P3" start="56" end="64" text="01/31/95" TYPE="DATE" comment="" />
-<NAME id="P4" start="65" end="81" text="SULLIVAN, MILTON" TYPE="DOCTOR" comment="" />
-<NAME id="P5" start="96" end="101" text="Foust" TYPE="PATIENT" comment="" />
-<DATE id="P6" start="144" end="154" text="01/31/2095" TYPE="DATE" comment="" />
-<NAME id="P7" start="185" end="191" text="Ferrer" TYPE="DOCTOR" comment="" />
-<AGE id="P8" start="384" end="386" text="64" TYPE="AGE" comment="" />
-<NAME id="P9" start="1890" end="1896" text="Melton" TYPE="DOCTOR" comment="" />
-<NAME id="P10" start="2069" end="2085" text="SULLIVAN, MILTON" TYPE="DOCTOR" comment="" />
-<DATE id="P11" start="2095" end="2103" text="01/31/95" TYPE="DATE" comment="" />
-<DATE id="P12" start="2108" end="2116" text="01/31/95" TYPE="DATE" comment="" />
-<NAME id="P13" start="2131" end="2147" text="SULLIVAN, MILTON" TYPE="DOCTOR" comment="" />
-<ID id="P14" start="2169" end="2178" text="9-8829102" TYPE="IDNUM" comment="" />
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2095-01-31" />
+<ID TYPE="MEDICALRECORD" comment="" end="44" id="P1" start="36" text="50294530" />
+<NAME TYPE="PATIENT" comment="" end="55" id="P2" start="45" text="FOUST, FAY" />
+<DATE TYPE="DATE" comment="" end="64" id="P3" start="56" text="01/31/95" />
+<NAME TYPE="DOCTOR" comment="" end="81" id="P4" start="65" text="SULLIVAN, MILTON" />
+<NAME TYPE="PATIENT" comment="" end="101" id="P5" start="96" text="Foust" />
+<DATE TYPE="DATE" comment="" end="154" id="P6" start="144" text="01/31/2095" />
+<NAME TYPE="DOCTOR" comment="" end="191" id="P7" start="185" text="Ferrer" />
+<NAME TYPE="DOCTOR" comment="" end="1896" id="P9" start="1890" text="Melton" />
+<NAME TYPE="DOCTOR" comment="" end="2085" id="P10" start="2069" text="SULLIVAN, MILTON" />
+<DATE TYPE="DATE" comment="" end="2103" id="P11" start="2095" text="01/31/95" />
+<DATE TYPE="DATE" comment="" end="2116" id="P12" start="2108" text="01/31/95" />
+<NAME TYPE="DOCTOR" comment="" end="2147" id="P13" start="2131" text="SULLIVAN, MILTON" />
+<ID TYPE="IDNUM" comment="" end="2178" id="P14" start="2169" text="9-8829102" />
 </TAGS>
 </deIdi2b2>

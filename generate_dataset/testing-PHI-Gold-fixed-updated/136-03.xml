@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version='1.0' encoding='utf8'?>
 <deIdi2b2>
-<TEXT><![CDATA[
+<TEXT>
 
 
 Record date: 2078-03-11
@@ -103,18 +103,17 @@ eScription document:7-3872310 CB
 
 
 
-]]></TEXT>
+</TEXT>
 <TAGS>
-<DATE id="P0" start="16" end="26" text="2078-03-11" TYPE="DATE" comment="" />
-<ID id="P1" start="36" end="44" text="30921467" TYPE="MEDICALRECORD" comment="" />
-<NAME id="P2" start="45" end="59" text="FONSECA, LINDA" TYPE="PATIENT" comment="" />
-<DATE id="P3" start="60" end="68" text="03/11/78" TYPE="DATE" comment="" />
-<NAME id="P4" start="69" end="87" text="ULLOA, CHRISTOPHER" TYPE="DOCTOR" comment="" />
-<AGE id="P5" start="242" end="244" text="61" TYPE="AGE" comment="" />
-<NAME id="P6" start="2419" end="2437" text="ULLOA, CHRISTOPHER" TYPE="DOCTOR" comment="" />
-<DATE id="P7" start="2443" end="2451" text="03/13/78" TYPE="DATE" comment="" />
-<DATE id="P8" start="2456" end="2464" text="03/13/78" TYPE="DATE" comment="" />
-<NAME id="P9" start="2479" end="2497" text="ULLOA, CHRISTOPHER" TYPE="DOCTOR" comment="" />
-<ID id="P10" start="2519" end="2531" text="7-3872310 CB" TYPE="IDNUM" comment="" />
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2078-03-11" />
+<ID TYPE="MEDICALRECORD" comment="" end="44" id="P1" start="36" text="30921467" />
+<NAME TYPE="PATIENT" comment="" end="59" id="P2" start="45" text="FONSECA, LINDA" />
+<DATE TYPE="DATE" comment="" end="68" id="P3" start="60" text="03/11/78" />
+<NAME TYPE="DOCTOR" comment="" end="87" id="P4" start="69" text="ULLOA, CHRISTOPHER" />
+<NAME TYPE="DOCTOR" comment="" end="2437" id="P6" start="2419" text="ULLOA, CHRISTOPHER" />
+<DATE TYPE="DATE" comment="" end="2451" id="P7" start="2443" text="03/13/78" />
+<DATE TYPE="DATE" comment="" end="2464" id="P8" start="2456" text="03/13/78" />
+<NAME TYPE="DOCTOR" comment="" end="2497" id="P9" start="2479" text="ULLOA, CHRISTOPHER" />
+<ID TYPE="IDNUM" comment="" end="2531" id="P10" start="2519" text="7-3872310 CB" />
 </TAGS>
 </deIdi2b2>

@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version='1.0' encoding='utf8'?>
 <deIdi2b2>
-<TEXT><![CDATA[
+<TEXT>
 
 
 Record date: 2071-04-14
@@ -51,18 +51,18 @@ FJ:801734    :77
 
 
 
-]]></TEXT>
+</TEXT>
 <TAGS>
-<DATE id="P0" start="16" end="26" text="2071-04-14" TYPE="DATE" comment="" />
-<NAME id="P1" start="42" end="58" text="XUEREB, JAQUANTE" TYPE="PATIENT" comment="" />
-<ID id="P2" start="66" end="73" text="1344351" TYPE="MEDICALRECORD" comment="" />
-<DATE id="P3" start="88" end="98" text="04/27/2071" TYPE="DATE" comment="" />
-<NAME id="P4" start="102" end="116" text="LILLIAN STEELE" TYPE="DOCTOR" comment="" />
-<NAME id="P5" start="141" end="147" text="Xuereb" TYPE="PATIENT" comment="" />
-<NAME id="P6" start="1167" end="1173" text="Xuereb" TYPE="PATIENT" comment="" />
-<NAME id="P7" start="1245" end="1259" text="Lillian Steele" TYPE="DOCTOR" comment="" />
-<DATE id="P8" start="1282" end="1292" text="04/27/2071" TYPE="DATE" comment="" />
-<DATE id="P9" start="1298" end="1308" text="04/28/2071" TYPE="DATE" comment="" />
-<ID id="P10" start="1311" end="1327" text="FJ:801734    :77" TYPE="IDNUM" comment="" />
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2071-04-14" />
+<NAME TYPE="PATIENT" comment="" end="58" id="P1" start="42" text="XUEREB, JAQUANTE" />
+<ID TYPE="MEDICALRECORD" comment="" end="73" id="P2" start="66" text="1344351" />
+<DATE TYPE="DATE" comment="" end="98" id="P3" start="88" text="04/27/2071" />
+<NAME TYPE="DOCTOR" comment="" end="116" id="P4" start="102" text="LILLIAN STEELE" />
+<NAME TYPE="PATIENT" comment="" end="147" id="P5" start="141" text="Xuereb" />
+<NAME TYPE="PATIENT" comment="" end="1173" id="P6" start="1167" text="Xuereb" />
+<NAME TYPE="DOCTOR" comment="" end="1259" id="P7" start="1245" text="Lillian Steele" />
+<DATE TYPE="DATE" comment="" end="1292" id="P8" start="1282" text="04/27/2071" />
+<DATE TYPE="DATE" comment="" end="1308" id="P9" start="1298" text="04/28/2071" />
+<ID TYPE="IDNUM" comment="" end="1327" id="P10" start="1311" text="FJ:801734    :77" />
 </TAGS>
 </deIdi2b2>

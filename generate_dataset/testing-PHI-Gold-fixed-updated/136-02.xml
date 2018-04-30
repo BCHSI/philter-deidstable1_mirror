@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version='1.0' encoding='utf8'?>
 <deIdi2b2>
-<TEXT><![CDATA[
+<TEXT>
 
 
 Record date: 2076-11-20
@@ -47,7 +47,7 @@ PMH
 
 Breast cancer
 
-Depression & anxiety
+Depression &amp; anxiety
 
 
 
@@ -213,7 +213,7 @@ Basos                    0                           (0-3)            %
 
 
 
-MICRO:  BCX sent; stool sent for fecal leukocytes, C. diff, O&P
+MICRO:  BCX sent; stool sent for fecal leukocytes, C. diff, O&amp;P
 
 
 
@@ -249,7 +249,7 @@ ASSESSMENT AND PLAN
 
  - Diet: clears now, NPO after midnight
 
- - Stool for fecal leukocytes, O&P, C. diff
+ - Stool for fecal leukocytes, O&amp;P, C. diff
 
  - Bowel regimen:  colace, senokot, miralax
 
@@ -273,7 +273,7 @@ ASSESSMENT AND PLAN
 
 
 
-3) Psychiatric:  Depression & anxiety
+3) Psychiatric:  Depression &amp; anxiety
 
  - Buspar
 
@@ -301,25 +301,19 @@ Pager #71151
 
 
 
-]]></TEXT>
+</TEXT>
 <TAGS>
-<DATE id="P0" start="16" end="26" text="2076-11-20" TYPE="DATE" comment="" />
-<LOCATION id="P1" start="28" end="31" text="JMH" TYPE="HOSPITAL" comment="" />
-<NAME id="P3" start="86" end="99" text="Linda Fonseca" TYPE="PATIENT" comment="" />
-<ID id="P4" start="106" end="113" text="7090253" TYPE="MEDICALRECORD" comment="" />
-<NAME id="P6" start="162" end="175" text="Austin Jaeger" TYPE="DOCTOR" comment="" />
-<NAME id="P7" start="181" end="193" text="Lenard Wyatt" TYPE="DOCTOR" comment="" />
-<DATE id="P8" start="245" end="255" text="11/19/2076" TYPE="DATE" comment="" />
-<AGE id="P9" start="291" end="293" text="60" TYPE="AGE" comment="" />
-<AGE id="P10" start="1681" end="1683" text="78" TYPE="AGE" comment="" />
-<AGE id="P11" start="1715" end="1717" text="78" TYPE="AGE" comment="" />
-<DATE id="P12" start="5348" end="5358" text="08/20/2073" TYPE="DATE" comment="" />
-<AGE id="P13" start="5956" end="5958" text="60" TYPE="AGE" comment="" />
-<DATE id="P14" start="6574" end="6584" text="08/20/2076" TYPE="DATE" comment="" />
-<NAME id="P15" start="7298" end="7307" text="Utterback" TYPE="DOCTOR" comment="" />
-<NAME id="P16" start="7342" end="7350" text="Espinosa" TYPE="DOCTOR" comment="" />
-<NAME id="P17" start="7823" end="7835" text="Vernon Ewing" TYPE="DOCTOR" comment="" />
-<LOCATION id="P18" start="7837" end="7840" text="JMH" TYPE="HOSPITAL" comment="" />
-<CONTACT id="P20" start="7874" end="7879" text="71151" TYPE="PHONE" comment="" />
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2076-11-20" />
+<NAME TYPE="PATIENT" comment="" end="99" id="P3" start="86" text="Linda Fonseca" />
+<ID TYPE="MEDICALRECORD" comment="" end="113" id="P4" start="106" text="7090253" />
+<NAME TYPE="DOCTOR" comment="" end="175" id="P6" start="162" text="Austin Jaeger" />
+<NAME TYPE="DOCTOR" comment="" end="193" id="P7" start="181" text="Lenard Wyatt" />
+<DATE TYPE="DATE" comment="" end="255" id="P8" start="245" text="11/19/2076" />
+<DATE TYPE="DATE" comment="" end="5358" id="P12" start="5348" text="08/20/2073" />
+<DATE TYPE="DATE" comment="" end="6584" id="P14" start="6574" text="08/20/2076" />
+<NAME TYPE="DOCTOR" comment="" end="7307" id="P15" start="7298" text="Utterback" />
+<NAME TYPE="DOCTOR" comment="" end="7350" id="P16" start="7342" text="Espinosa" />
+<NAME TYPE="DOCTOR" comment="" end="7835" id="P17" start="7823" text="Vernon Ewing" />
+<CONTACT TYPE="PHONE" comment="" end="7879" id="P20" start="7874" text="71151" />
 </TAGS>
 </deIdi2b2>

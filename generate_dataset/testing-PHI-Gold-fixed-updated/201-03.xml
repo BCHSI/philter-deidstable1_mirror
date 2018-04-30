@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version='1.0' encoding='utf8'?>
 <deIdi2b2>
-<TEXT><![CDATA[
+<TEXT>
 
 
 Record date: 2082-10-22
@@ -121,26 +121,19 @@ Document Status: Final
 
 
 
-]]></TEXT>
+</TEXT>
 <TAGS>
-<DATE id="P0" start="16" end="26" text="2082-10-22" TYPE="DATE" comment="" />
-<LOCATION id="P1" start="45" end="67" text="GRIFFIN NURSING CENTER" TYPE="HOSPITAL" comment="" />
-<NAME id="P2" start="124" end="132" text="Xayavong" TYPE="PATIENT" comment="" />
-<AGE id="P3" start="138" end="140" text="61" TYPE="AGE" comment="" />
-<DATE id="P4" start="196" end="200" text="2077" TYPE="DATE" comment="" />
-<DATE id="P5" start="250" end="254" text="2080" TYPE="DATE" comment="" />
-<DATE id="P6" start="369" end="373" text="5/82" TYPE="DATE" comment="" />
-<DATE id="P7" start="520" end="524" text="6/82" TYPE="DATE" comment="" />
-<DATE id="P8" start="1050" end="1054" text="2077" TYPE="DATE" comment="" />
-<LOCATION id="P9" start="1131" end="1134" text="OCH" TYPE="HOSPITAL" comment="" />
-<DATE id="P10" start="1186" end="1196" text="05/13/2081" TYPE="DATE" comment="" />
-<PROFESSION id="P11" start="1538" end="1554" text="purchasing agent" TYPE="PROFESSION" comment="" />
-<AGE id="P12" start="2481" end="2483" text="61" TYPE="AGE" comment="" />
-<DATE id="P13" start="2612" end="2617" text="11/82" TYPE="DATE" comment="" />
-<NAME id="P14" start="3196" end="3209" text="Crystal Perez" TYPE="DOCTOR" comment="" />
-<NAME id="P15" start="3217" end="3235" text="Quintin D. Quesada" TYPE="DOCTOR" comment="" />
-<CONTACT id="P16" start="3247" end="3252" text="15657" TYPE="PHONE" comment="" />
-<NAME id="P17" start="3282" end="3295" text="Crystal Perez" TYPE="DOCTOR" comment="" />
-<NAME id="P18" start="3301" end="3319" text="Quintin D. Quesada" TYPE="DOCTOR" comment="" />
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2082-10-22" />
+<NAME TYPE="PATIENT" comment="" end="132" id="P2" start="124" text="Xayavong" />
+<DATE TYPE="DATE" comment="" end="373" id="P6" start="369" text="5/82" />
+<DATE TYPE="DATE" comment="" end="524" id="P7" start="520" text="6/82" />
+<DATE TYPE="DATE" comment="" end="1196" id="P10" start="1186" text="05/13/2081" />
+<PROFESSION TYPE="PROFESSION" comment="" end="1554" id="P11" start="1538" text="purchasing agent" />
+<DATE TYPE="DATE" comment="" end="2617" id="P13" start="2612" text="11/82" />
+<NAME TYPE="DOCTOR" comment="" end="3209" id="P14" start="3196" text="Crystal Perez" />
+<NAME TYPE="DOCTOR" comment="" end="3235" id="P15" start="3217" text="Quintin D. Quesada" />
+<CONTACT TYPE="PHONE" comment="" end="3252" id="P16" start="3247" text="15657" />
+<NAME TYPE="DOCTOR" comment="" end="3295" id="P17" start="3282" text="Crystal Perez" />
+<NAME TYPE="DOCTOR" comment="" end="3319" id="P18" start="3301" text="Quintin D. Quesada" />
 </TAGS>
 </deIdi2b2>

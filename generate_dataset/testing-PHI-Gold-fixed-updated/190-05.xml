@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version='1.0' encoding='utf8'?>
 <deIdi2b2>
-<TEXT><![CDATA[
+<TEXT>
 
 
 Record date: 2091-05-08
@@ -297,41 +297,37 @@ Olivia Spence, M.D.DD: 05/08/91DT: 05/12/91DV: 05/08/91
 
 
 
-]]></TEXT>
+</TEXT>
 <TAGS>
-<DATE id="P0" start="16" end="26" text="2091-05-08" TYPE="DATE" comment="" />
-<DATE id="P1" start="46" end="58" text="May 08, 2091" TYPE="DATE" comment="" />
-<NAME id="P2" start="75" end="88" text="Billy Vanpelt" TYPE="DOCTOR" comment="" />
-<LOCATION id="P3" start="96" end="129" text="Orlando Regional Lucerne Hospital" TYPE="HOSPITAL" comment="" />
-<LOCATION id="P4" start="131" end="152" text="60 Kessler Farm Drive" TYPE="STREET" comment="" />
-<LOCATION id="P5" start="154" end="164" text="White Hall" TYPE="CITY" comment="" />
-<LOCATION id="P6" start="166" end="168" text="MN" TYPE="STATE" comment="" />
-<LOCATION id="P7" start="169" end="174" text="76715" TYPE="ZIP" comment="" />
-<NAME id="P8" start="183" end="204" text="Nicholas-Xaviar, Fred" TYPE="PATIENT" comment="" />
-<ID id="P9" start="208" end="216" text="65856594" TYPE="MEDICALRECORD" comment="" />
-<NAME id="P10" start="230" end="237" text="Vanpelt" TYPE="DOCTOR" comment="" />
-<NAME id="P11" start="276" end="291" text="Nicholas-Xavier" TYPE="PATIENT" comment="" />
-<DATE id="P12" start="419" end="422" text="Apr" TYPE="DATE" comment="" />
-<AGE id="P13" start="468" end="470" text="77" TYPE="AGE" comment="" />
-<LOCATION id="P14" start="491" end="498" text="Eritrea" TYPE="COUNTRY" comment="" />
-<DATE id="P15" start="687" end="698" text="Apr of 2091" TYPE="DATE" comment="" />
-<DATE id="P16" start="1406" end="1418" text="Apr 15, 2091" TYPE="DATE" comment="" />
-<DATE id="P17" start="1722" end="1734" text="Apr 13, 2091" TYPE="DATE" comment="" />
-<DATE id="P18" start="1932" end="1944" text="Apr 20, 2091" TYPE="DATE" comment="" />
-<NAME id="P19" start="2182" end="2203" text="Nicholas-Xaviar, Fred" TYPE="PATIENT" comment="" />
-<ID id="P20" start="2209" end="2217" text="65856594" TYPE="MEDICALRECORD" comment="" />
-<DATE id="P21" start="2219" end="2231" text="May 08, 2091" TYPE="DATE" comment="" />
-<DATE id="P22" start="2376" end="2392" text="April 27, 2091" TYPE="DATE" comment="" />
-<NAME id="P23" start="4228" end="4243" text="Nicholas-Xaviar" TYPE="PATIENT" comment="" />
-<AGE id="P24" start="4249" end="4251" text="77" TYPE="AGE" comment="" />
-<NAME id="P25" start="4966" end="4987" text="Nicholas-Xaviar, Fred" TYPE="PATIENT" comment="" />
-<ID id="P26" start="4993" end="5001" text="65856594" TYPE="MEDICALRECORD" comment="" />
-<DATE id="P27" start="5003" end="5015" text="May 08, 2091" TYPE="DATE" comment="" />
-<NAME id="P28" start="5328" end="5340" text="Steve Franks" TYPE="DOCTOR" comment="" />
-<NAME id="P29" start="5425" end="5438" text="Olivia Spence" TYPE="DOCTOR" comment="" />
-<DATE id="P30" start="5448" end="5456" text="05/08/91" TYPE="DATE" comment="" />
-<DATE id="P31" start="5460" end="5468" text="05/12/91" TYPE="DATE" comment="" />
-<DATE id="P32" start="5472" end="5480" text="05/08/91" TYPE="DATE" comment="" />
-<NAME id="P33" start="5483" end="5488" text="piper" TYPE="DOCTOR" comment="" />
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2091-05-08" />
+<DATE TYPE="DATE" comment="" end="58" id="P1" start="46" text="May 08, 2091" />
+<NAME TYPE="DOCTOR" comment="" end="88" id="P2" start="75" text="Billy Vanpelt" />
+<LOCATION TYPE="STREET" comment="" end="152" id="P4" start="131" text="60 Kessler Farm Drive" />
+<LOCATION TYPE="CITY" comment="" end="164" id="P5" start="154" text="White Hall" />
+<LOCATION TYPE="STATE" comment="" end="168" id="P6" start="166" text="MN" />
+<LOCATION TYPE="ZIP" comment="" end="174" id="P7" start="169" text="76715" />
+<NAME TYPE="PATIENT" comment="" end="204" id="P8" start="183" text="Nicholas-Xaviar, Fred" />
+<ID TYPE="MEDICALRECORD" comment="" end="216" id="P9" start="208" text="65856594" />
+<NAME TYPE="DOCTOR" comment="" end="237" id="P10" start="230" text="Vanpelt" />
+<NAME TYPE="PATIENT" comment="" end="291" id="P11" start="276" text="Nicholas-Xavier" />
+<DATE TYPE="DATE" comment="" end="422" id="P12" start="419" text="Apr" />
+<DATE TYPE="DATE" comment="" end="698" id="P15" start="687" text="Apr of 2091" />
+<DATE TYPE="DATE" comment="" end="1418" id="P16" start="1406" text="Apr 15, 2091" />
+<DATE TYPE="DATE" comment="" end="1734" id="P17" start="1722" text="Apr 13, 2091" />
+<DATE TYPE="DATE" comment="" end="1944" id="P18" start="1932" text="Apr 20, 2091" />
+<NAME TYPE="PATIENT" comment="" end="2203" id="P19" start="2182" text="Nicholas-Xaviar, Fred" />
+<ID TYPE="MEDICALRECORD" comment="" end="2217" id="P20" start="2209" text="65856594" />
+<DATE TYPE="DATE" comment="" end="2231" id="P21" start="2219" text="May 08, 2091" />
+<DATE TYPE="DATE" comment="" end="2392" id="P22" start="2376" text="April 27, 2091" />
+<NAME TYPE="PATIENT" comment="" end="4243" id="P23" start="4228" text="Nicholas-Xaviar" />
+<NAME TYPE="PATIENT" comment="" end="4987" id="P25" start="4966" text="Nicholas-Xaviar, Fred" />
+<ID TYPE="MEDICALRECORD" comment="" end="5001" id="P26" start="4993" text="65856594" />
+<DATE TYPE="DATE" comment="" end="5015" id="P27" start="5003" text="May 08, 2091" />
+<NAME TYPE="DOCTOR" comment="" end="5340" id="P28" start="5328" text="Steve Franks" />
+<NAME TYPE="DOCTOR" comment="" end="5438" id="P29" start="5425" text="Olivia Spence" />
+<DATE TYPE="DATE" comment="" end="5456" id="P30" start="5448" text="05/08/91" />
+<DATE TYPE="DATE" comment="" end="5468" id="P31" start="5460" text="05/12/91" />
+<DATE TYPE="DATE" comment="" end="5480" id="P32" start="5472" text="05/08/91" />
+<NAME TYPE="DOCTOR" comment="" end="5488" id="P33" start="5483" text="piper" />
 </TAGS>
 </deIdi2b2>

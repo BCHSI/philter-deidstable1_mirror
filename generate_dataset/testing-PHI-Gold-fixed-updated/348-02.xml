@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version='1.0' encoding='utf8'?>
 <deIdi2b2>
-<TEXT><![CDATA[
+<TEXT>
 
 
 Record date: 2068-06-01
@@ -131,13 +131,12 @@ Othel  Vidal, M.D.
 
 
 
-]]></TEXT>
+</TEXT>
 <TAGS>
-<DATE id="P0" start="16" end="26" text="2068-06-01" TYPE="DATE" comment="" />
-<ID id="P1" start="1461" end="1470" text="UL5104263" TYPE="IDNUM" comment="" />
-<AGE id="P2" start="1833" end="1834" text="2" TYPE="AGE" comment="" />
-<NAME id="P3" start="1871" end="1875" text="Judd" TYPE="PATIENT" comment="" />
-<NAME id="P4" start="2565" end="2568" text="Kim" TYPE="DOCTOR" comment="" />
-<NAME id="P5" start="2603" end="2615" text="Othel  Vidal" TYPE="DOCTOR" comment="" />
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2068-06-01" />
+<ID TYPE="IDNUM" comment="" end="1470" id="P1" start="1461" text="UL5104263" />
+<NAME TYPE="PATIENT" comment="" end="1875" id="P3" start="1871" text="Judd" />
+<NAME TYPE="DOCTOR" comment="" end="2568" id="P4" start="2565" text="Kim" />
+<NAME TYPE="DOCTOR" comment="" end="2615" id="P5" start="2603" text="Othel  Vidal" />
 </TAGS>
 </deIdi2b2>

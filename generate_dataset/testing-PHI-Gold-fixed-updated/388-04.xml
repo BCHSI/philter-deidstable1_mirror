@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version='1.0' encoding='utf8'?>
 <deIdi2b2>
-<TEXT><![CDATA[
+<TEXT>
 
 
 Record date: 2080-06-15
@@ -77,11 +77,9 @@ Anxxiety: letter to  antecipate  her  trip
 
 
 
-]]></TEXT>
+</TEXT>
 <TAGS>
-<DATE id="P0" start="16" end="26" text="2080-06-15" TYPE="DATE" comment="" />
-<NAME id="P1" start="65" end="71" text="Shamar" TYPE="DOCTOR" comment="" />
-<LOCATION id="P2" start="284" end="289" text="Ghana" TYPE="COUNTRY" comment="" />
-<DATE id="P3" start="520" end="524" text="2071" TYPE="DATE" comment="" />
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2080-06-15" />
+<NAME TYPE="DOCTOR" comment="" end="71" id="P1" start="65" text="Shamar" />
 </TAGS>
 </deIdi2b2>

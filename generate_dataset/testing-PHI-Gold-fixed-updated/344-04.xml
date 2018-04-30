@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version='1.0' encoding='utf8'?>
 <deIdi2b2>
-<TEXT><![CDATA[
+<TEXT>
 
 
 Record date: 2099-03-29
@@ -21,7 +21,7 @@ Consult reason:
 
 
 
-HPI:  53RHM who going to bed Wednesday was in usoh, but Thursday 2:30AM awoke w/ terrible HA, so came to ED; got CT head and LP, both negative for blood. However, BP was reportedly as high as 190/106 (and wife says she&#8217;s measured it this high at home at least once in past 2 weeks), and blood glucose 400s. I see no LMR note about the visit, but am told that he was given some medication for his BP, given some insulin and a Rx for insulin, and instructed to see his PCP the next day, and discharged. Friday he did see his PCP, who told him not to take insulin but to take oral DM meds instead, and told him to return to the ED b/c he still had a terrible HA, so he came back to the EDUCARE-PULLMAN ED tonight. He was given caffeine, ibuprofen, Tylenol, and compazine, reported that his HA was gone. However, a staff physician in the ED on exam noted a wide based gait. An MRI was originally ordered, but canceled when it came to notice that he has an implanted device to prevent syncope that precludes MRI. Neurology is now consulted.to comment on his gait and other sx. 
+HPI:  53RHM who going to bed Wednesday was in usoh, but Thursday 2:30AM awoke w/ terrible HA, so came to ED; got CT head and LP, both negative for blood. However, BP was reportedly as high as 190/106 (and wife says she&amp;#8217;s measured it this high at home at least once in past 2 weeks), and blood glucose 400s. I see no LMR note about the visit, but am told that he was given some medication for his BP, given some insulin and a Rx for insulin, and instructed to see his PCP the next day, and discharged. Friday he did see his PCP, who told him not to take insulin but to take oral DM meds instead, and told him to return to the ED b/c he still had a terrible HA, so he came back to the EDUCARE-PULLMAN ED tonight. He was given caffeine, ibuprofen, Tylenol, and compazine, reported that his HA was gone. However, a staff physician in the ED on exam noted a wide based gait. An MRI was originally ordered, but canceled when it came to notice that he has an implanted device to prevent syncope that precludes MRI. Neurology is now consulted.to comment on his gait and other sx. 
 
 
 
@@ -53,11 +53,11 @@ PMH:
 
 -HTN; he denies prior dx of DM before yesterday night
 
--recurrent cardiogenic syncope, for which he has had &#8220;Reveal&#8221; device implanted, then explanted b/c of pain, then recurrent sycope and reimplantation of device, after which syncope stopped (see notes in LMR from Dr. Susan Root)
+-recurrent cardiogenic syncope, for which he has had &amp;#8220;Reveal&amp;#8221; device implanted, then explanted b/c of pain, then recurrent sycope and reimplantation of device, after which syncope stopped (see notes in LMR from Dr. Susan Root)
 
 
 
-SH: denies t/e/d, works as &#8220;Pipefitter&#8221;
+SH: denies t/e/d, works as &amp;#8220;Pipefitter&amp;#8221;
 
 FH: HTN, DM
 
@@ -73,7 +73,7 @@ Speech is fluent with intact comprehension and repetition, no paraphasic errors.
 
 Concentration and attention intact. 
 
-CN: Visual fields full to confrontation; pupils equal and reactive 3&gt;2 direct and concensual; no ptosis; 
+CN: Visual fields full to confrontation; pupils equal and reactive 3&amp;gt;2 direct and concensual; no ptosis; 
 
 Extraocular movements full without nystagmus; facial sensation to LT normal. 
 
@@ -262,32 +262,25 @@ Addendum:
 
 He did not mention this when I questioned him and wife about PMH, but digging through prior LMR notes I find this addition to his PMH: 
 
-A note from Dr. Robert Irish, neurosurgery, from 3/2099 notes that he is s/p &#8220;cervical laminectomy and foramen magnum resection followed by removal of an intramedullary tumor near his foramen magnum.  He is doing much better today.  He states that his headaches are considerably better, and the left hemibody dysesthesias are much better tolerated since the initiation of Neurontin.&#8221;
+A note from Dr. Robert Irish, neurosurgery, from 3/2099 notes that he is s/p &amp;#8220;cervical laminectomy and foramen magnum resection followed by removal of an intramedullary tumor near his foramen magnum.  He is doing much better today.  He states that his headaches are considerably better, and the left hemibody dysesthesias are much better tolerated since the initiation of Neurontin.&amp;#8221;
 
 
 
 
 
 
-]]></TEXT>
+</TEXT>
 <TAGS>
-<DATE id="P0" start="16" end="26" text="2099-03-29" TYPE="DATE" comment="" />
-<NAME id="P1" start="84" end="88" text="Leon" TYPE="PATIENT" comment="" />
-<ID id="P2" start="116" end="124" text="43634211" TYPE="MEDICALRECORD" comment="" />
-<DATE id="P3" start="153" end="157" text="0021" TYPE="DATE" comment="" />
-<AGE id="P4" start="201" end="203" text="53" TYPE="AGE" comment="" />
-<DATE id="P5" start="224" end="233" text="Wednesday" TYPE="DATE" comment="" />
-<DATE id="P6" start="251" end="259" text="Thursday" TYPE="DATE" comment="" />
-<DATE id="P7" start="702" end="708" text="Friday" TYPE="DATE" comment="" />
-<LOCATION id="P8" start="884" end="899" text="EDUCARE-PULLMAN" TYPE="HOSPITAL" comment="" />
-<NAME id="P9" start="2539" end="2549" text="Susan Root" TYPE="DOCTOR" comment="" />
-<PROFESSION id="P10" start="2588" end="2598" text="Pipefitter" TYPE="PROFESSION" comment="" />
-<AGE id="P11" start="3876" end="3878" text="53" TYPE="AGE" comment="" />
-<LOCATION id="P12" start="4810" end="4816" text="KEKELA" TYPE="HOSPITAL" comment="" />
-<NAME id="P13" start="4851" end="4859" text="Ivan Guy" TYPE="DOCTOR" comment="" />
-<CONTACT id="P14" start="4881" end="4886" text="86383" TYPE="PHONE" comment="" />
-<NAME id="P15" start="4892" end="4905" text="Keith Gilbert" TYPE="DOCTOR" comment="" />
-<NAME id="P16" start="5110" end="5122" text="Robert Irish" TYPE="DOCTOR" comment="" />
-<DATE id="P17" start="5143" end="5149" text="3/2099" TYPE="DATE" comment="" />
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2099-03-29" />
+<NAME TYPE="PATIENT" comment="" end="88" id="P1" start="84" text="Leon" />
+<ID TYPE="MEDICALRECORD" comment="" end="124" id="P2" start="116" text="43634211" />
+<DATE TYPE="DATE" comment="" end="157" id="P3" start="153" text="0021" />
+<NAME TYPE="DOCTOR" comment="" end="2549" id="P9" start="2539" text="Susan Root" />
+<PROFESSION TYPE="PROFESSION" comment="" end="2598" id="P10" start="2588" text="Pipefitter" />
+<NAME TYPE="DOCTOR" comment="" end="4859" id="P13" start="4851" text="Ivan Guy" />
+<CONTACT TYPE="PHONE" comment="" end="4886" id="P14" start="4881" text="86383" />
+<NAME TYPE="DOCTOR" comment="" end="4905" id="P15" start="4892" text="Keith Gilbert" />
+<NAME TYPE="DOCTOR" comment="" end="5122" id="P16" start="5110" text="Robert Irish" />
+<DATE TYPE="DATE" comment="" end="5149" id="P17" start="5143" text="3/2099" />
 </TAGS>
 </deIdi2b2>

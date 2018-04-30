@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version='1.0' encoding='utf8'?>
 <deIdi2b2>
-<TEXT><![CDATA[
+<TEXT>
 
 
 Record date: 2073-09-22
@@ -130,7 +130,7 @@ MS:	Responds by grunting "Ouch" to sternal rub, does not follow simple commands,
 
 	
 
-CN:	I - not tested; II,III - pupils round reactive to light bilaterally 4->3mm, VFF by confrontation,; III,IV,VI - no gaze preference, no nystagmus;  V-unable to assess VII - no facial asymmetries, y, VIII - hears finger rub 2 feet away B; IX,X - voice normal, palate elevates symmetrically, gag intact; XI - SCM/Trapezii 5/5 B; XII - tongue protrudes midline.
+CN:	I - not tested; II,III - pupils round reactive to light bilaterally 4-&gt;3mm, VFF by confrontation,; III,IV,VI - no gaze preference, no nystagmus;  V-unable to assess VII - no facial asymmetries, y, VIII - hears finger rub 2 feet away B; IX,X - voice normal, palate elevates symmetrically, gag intact; XI - SCM/Trapezii 5/5 B; XII - tongue protrudes midline.
 
 
 
@@ -338,36 +338,27 @@ Pgr 47878
 
 
 
-]]></TEXT>
+</TEXT>
 <TAGS>
-<DATE id="P0" start="16" end="26" text="2073-09-22" TYPE="DATE" comment="" />
-<LOCATION id="P1" start="31" end="34" text="SMH" TYPE="HOSPITAL" comment="" />
-<DATE id="P2" start="66" end="73" text="9/22/73" TYPE="DATE" comment="" />
-<AGE id="P3" start="85" end="87" text="55" TYPE="AGE" comment="" />
-<DATE id="P4" start="243" end="253" text="09/03/2073" TYPE="DATE" comment="" />
-<LOCATION id="P5" start="375" end="378" text="SMH" TYPE="HOSPITAL" comment="" />
-<DATE id="P6" start="385" end="393" text="Mon 9/17" TYPE="DATE" comment="" />
-<LOCATION id="P7" start="2958" end="2961" text="SMH" TYPE="HOSPITAL" comment="" />
-<DATE id="P8" start="2978" end="2989" text="22-Sep-2073" TYPE="DATE" comment="" />
-<ID id="P9" start="3008" end="3018" text="4981N91964" TYPE="MEDICALRECORD" comment="" />
-<NAME id="P10" start="3630" end="3643" text="LUJAN, VICTOR" TYPE="PATIENT" comment="" />
-<LOCATION id="P11" start="3651" end="3654" text="SMH" TYPE="HOSPITAL" comment="" />
-<DATE id="P12" start="3671" end="3682" text="22-Sep-2073" TYPE="DATE" comment="" />
-<ID id="P13" start="3701" end="3711" text="0389R30883" TYPE="MEDICALRECORD" comment="" />
-<LOCATION id="P14" start="4220" end="4223" text="SMH" TYPE="HOSPITAL" comment="" />
-<DATE id="P15" start="4240" end="4251" text="21-Sep-2073" TYPE="DATE" comment="" />
-<ID id="P16" start="4270" end="4280" text="0646L21612" TYPE="MEDICALRECORD" comment="" />
-<LOCATION id="P17" start="4427" end="4430" text="SMH" TYPE="HOSPITAL" comment="" />
-<DATE id="P18" start="4447" end="4458" text="21-Sep-2073" TYPE="DATE" comment="" />
-<ID id="P19" start="4477" end="4487" text="1993W67007" TYPE="MEDICALRECORD" comment="" />
-<LOCATION id="P20" start="5570" end="5573" text="SMH" TYPE="HOSPITAL" comment="" />
-<DATE id="P21" start="5590" end="5601" text="22-Sep-2073" TYPE="DATE" comment="" />
-<ID id="P22" start="5620" end="5630" text="4996A57897" TYPE="MEDICALRECORD" comment="" />
-<DATE id="P23" start="6026" end="6033" text="4/27/73" TYPE="DATE" comment="" />
-<DATE id="P24" start="6113" end="6117" text="9/18" TYPE="DATE" comment="" />
-<AGE id="P25" start="6135" end="6137" text="55" TYPE="AGE" comment="" />
-<NAME id="P26" start="6984" end="6997" text="Benjamin Iles" TYPE="DOCTOR" comment="" />
-<NAME id="P27" start="7174" end="7185" text="Sean Quinto" TYPE="DOCTOR" comment="" />
-<CONTACT id="P28" start="7219" end="7224" text="47878" TYPE="PHONE" comment="" />
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2073-09-22" />
+<DATE TYPE="DATE" comment="" end="73" id="P2" start="66" text="9/22/73" />
+<DATE TYPE="DATE" comment="" end="253" id="P4" start="243" text="09/03/2073" />
+<DATE TYPE="DATE" comment="" end="393" id="P6" start="385" text="Mon 9/17" />
+<DATE TYPE="DATE" comment="" end="2989" id="P8" start="2978" text="22-Sep-2073" />
+<ID TYPE="MEDICALRECORD" comment="" end="3018" id="P9" start="3008" text="4981N91964" />
+<NAME TYPE="PATIENT" comment="" end="3643" id="P10" start="3630" text="LUJAN, VICTOR" />
+<DATE TYPE="DATE" comment="" end="3682" id="P12" start="3671" text="22-Sep-2073" />
+<ID TYPE="MEDICALRECORD" comment="" end="3711" id="P13" start="3701" text="0389R30883" />
+<DATE TYPE="DATE" comment="" end="4251" id="P15" start="4240" text="21-Sep-2073" />
+<ID TYPE="MEDICALRECORD" comment="" end="4280" id="P16" start="4270" text="0646L21612" />
+<DATE TYPE="DATE" comment="" end="4458" id="P18" start="4447" text="21-Sep-2073" />
+<ID TYPE="MEDICALRECORD" comment="" end="4487" id="P19" start="4477" text="1993W67007" />
+<DATE TYPE="DATE" comment="" end="5601" id="P21" start="5590" text="22-Sep-2073" />
+<ID TYPE="MEDICALRECORD" comment="" end="5630" id="P22" start="5620" text="4996A57897" />
+<DATE TYPE="DATE" comment="" end="6033" id="P23" start="6026" text="4/27/73" />
+<DATE TYPE="DATE" comment="" end="6117" id="P24" start="6113" text="9/18" />
+<NAME TYPE="DOCTOR" comment="" end="6997" id="P26" start="6984" text="Benjamin Iles" />
+<NAME TYPE="DOCTOR" comment="" end="7185" id="P27" start="7174" text="Sean Quinto" />
+<CONTACT TYPE="PHONE" comment="" end="7224" id="P28" start="7219" text="47878" />
 </TAGS>
 </deIdi2b2>

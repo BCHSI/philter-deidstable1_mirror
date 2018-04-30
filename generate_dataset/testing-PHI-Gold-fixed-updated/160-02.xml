@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version='1.0' encoding='utf8'?>
 <deIdi2b2>
-<TEXT><![CDATA[
+<TEXT>
 
 
 Record date: 2064-04-20
@@ -55,17 +55,16 @@ DV: 04/20/64
 
 
 
-]]></TEXT>
+</TEXT>
 <TAGS>
-<DATE id="P0" start="16" end="26" text="2064-04-20" TYPE="DATE" comment="" />
-<NAME id="P1" start="71" end="81" text="Uher, Olga" TYPE="PATIENT" comment="" />
-<ID id="P2" start="82" end="93" text="258-16-49-2" TYPE="MEDICALRECORD" comment="" />
-<DATE id="P3" start="94" end="102" text="04/20/64" TYPE="DATE" comment="" />
-<DATE id="P4" start="272" end="280" text="Thursday" TYPE="DATE" comment="" />
-<NAME id="P5" start="1264" end="1280" text="Phyllis Jacobson" TYPE="DOCTOR" comment="" />
-<NAME id="P6" start="1290" end="1294" text="lott" TYPE="DOCTOR" comment="" />
-<DATE id="P7" start="1301" end="1309" text="04/20/64" TYPE="DATE" comment="" />
-<DATE id="P8" start="1314" end="1322" text="04/22/64" TYPE="DATE" comment="" />
-<DATE id="P9" start="1327" end="1335" text="04/20/64" TYPE="DATE" comment="" />
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2064-04-20" />
+<NAME TYPE="PATIENT" comment="" end="81" id="P1" start="71" text="Uher, Olga" />
+<ID TYPE="MEDICALRECORD" comment="" end="93" id="P2" start="82" text="258-16-49-2" />
+<DATE TYPE="DATE" comment="" end="102" id="P3" start="94" text="04/20/64" />
+<NAME TYPE="DOCTOR" comment="" end="1280" id="P5" start="1264" text="Phyllis Jacobson" />
+<NAME TYPE="DOCTOR" comment="" end="1294" id="P6" start="1290" text="lott" />
+<DATE TYPE="DATE" comment="" end="1309" id="P7" start="1301" text="04/20/64" />
+<DATE TYPE="DATE" comment="" end="1322" id="P8" start="1314" text="04/22/64" />
+<DATE TYPE="DATE" comment="" end="1335" id="P9" start="1327" text="04/20/64" />
 </TAGS>
 </deIdi2b2>

@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version='1.0' encoding='utf8'?>
 <deIdi2b2>
-<TEXT><![CDATA[
+<TEXT>
 
 
 Record date: 2064-10-05
@@ -71,22 +71,18 @@ Dictated by:  ADAM OLDHAM, M.D.   AO66
 
 
 
-]]></TEXT>
+</TEXT>
 <TAGS>
-<DATE id="P0" start="16" end="26" text="2064-10-05" TYPE="DATE" comment="" />
-<LOCATION id="P1" start="49" end="58" text="DONELLSON" TYPE="HOSPITAL" comment="" />
-<NAME id="P2" start="84" end="98" text="PICKETT,SHILPA" TYPE="PATIENT" comment="" />
-<ID id="P3" start="101" end="112" text="129-53-47-3" TYPE="MEDICALRECORD" comment="" />
-<DATE id="P4" start="142" end="150" text="10/05/64" TYPE="DATE" comment="" />
-<AGE id="P5" start="361" end="363" text="73" TYPE="AGE" comment="" />
-<DATE id="P6" start="468" end="472" text="2062" TYPE="DATE" comment="" />
-<DATE id="P7" start="516" end="520" text="2063" TYPE="DATE" comment="" />
-<ID id="P8" start="1596" end="1607" text="LR676/41602" TYPE="IDNUM" comment="" />
-<NAME id="P9" start="1610" end="1621" text="ADAM OLDHAM" TYPE="DOCTOR" comment="" />
-<NAME id="P10" start="1630" end="1634" text="AO66" TYPE="USERNAME" comment="" />
-<DATE id="P11" start="1665" end="1673" text="10/05/64" TYPE="DATE" comment="" />
-<DATE id="P12" start="1733" end="1741" text="10/05/64" TYPE="DATE" comment="" />
-<NAME id="P13" start="1758" end="1769" text="ADAM OLDHAM" TYPE="DOCTOR" comment="" />
-<NAME id="P14" start="1778" end="1782" text="AO66" TYPE="USERNAME" comment="" />
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2064-10-05" />
+<NAME TYPE="PATIENT" comment="" end="98" id="P2" start="84" text="PICKETT,SHILPA" />
+<ID TYPE="MEDICALRECORD" comment="" end="112" id="P3" start="101" text="129-53-47-3" />
+<DATE TYPE="DATE" comment="" end="150" id="P4" start="142" text="10/05/64" />
+<ID TYPE="IDNUM" comment="" end="1607" id="P8" start="1596" text="LR676/41602" />
+<NAME TYPE="DOCTOR" comment="" end="1621" id="P9" start="1610" text="ADAM OLDHAM" />
+<NAME TYPE="USERNAME" comment="" end="1634" id="P10" start="1630" text="AO66" />
+<DATE TYPE="DATE" comment="" end="1673" id="P11" start="1665" text="10/05/64" />
+<DATE TYPE="DATE" comment="" end="1741" id="P12" start="1733" text="10/05/64" />
+<NAME TYPE="DOCTOR" comment="" end="1769" id="P13" start="1758" text="ADAM OLDHAM" />
+<NAME TYPE="USERNAME" comment="" end="1782" id="P14" start="1778" text="AO66" />
 </TAGS>
 </deIdi2b2>

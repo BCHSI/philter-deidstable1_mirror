@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version='1.0' encoding='utf8'?>
 <deIdi2b2>
-<TEXT><![CDATA[
+<TEXT>
 
 
 Record date: 2093-11-24
@@ -17,7 +17,7 @@ Mrs. Trent is a pleasant 69 y/o woman with type 2 DM insulin treated. She has ac
 
 
 
-She is s/p L SFA and doing well from that standopoint, however developed N&V today and required NG tube placement, now better but remaoins NPO. 
+She is s/p L SFA and doing well from that standopoint, however developed N&amp;V today and required NG tube placement, now better but remaoins NPO. 
 
 
 
@@ -159,14 +159,12 @@ Wendy Kiefer MD
 
 
 
-]]></TEXT>
+</TEXT>
 <TAGS>
-<DATE id="P0" start="16" end="26" text="2093-11-24" TYPE="DATE" comment="" />
-<NAME id="P1" start="71" end="79" text="Trujillo" TYPE="DOCTOR" comment="" />
-<LOCATION id="P2" start="155" end="160" text="dutch" TYPE="COUNTRY" comment="" />
-<NAME id="P3" start="185" end="190" text="Trent" TYPE="PATIENT" comment="" />
-<AGE id="P4" start="205" end="207" text="69" TYPE="AGE" comment="" />
-<CONTACT id="P6" start="2156" end="2161" text="42721" TYPE="PHONE" comment="" />
-<NAME id="P7" start="2185" end="2197" text="Wendy Kiefer" TYPE="DOCTOR" comment="" />
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2093-11-24" />
+<NAME TYPE="DOCTOR" comment="" end="79" id="P1" start="71" text="Trujillo" />
+<NAME TYPE="PATIENT" comment="" end="190" id="P3" start="185" text="Trent" />
+<CONTACT TYPE="PHONE" comment="" end="2161" id="P6" start="2156" text="42721" />
+<NAME TYPE="DOCTOR" comment="" end="2197" id="P7" start="2185" text="Wendy Kiefer" />
 </TAGS>
 </deIdi2b2>

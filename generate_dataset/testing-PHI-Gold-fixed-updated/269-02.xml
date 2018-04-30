@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version='1.0' encoding='utf8'?>
 <deIdi2b2>
-<TEXT><![CDATA[
+<TEXT>
 
 
 Record date: 2114-01-10
@@ -69,24 +69,19 @@ Record date: 2114-01-10
 
 
 
-]]></TEXT>
+</TEXT>
 <TAGS>
-<DATE id="P0" start="16" end="26" text="2114-01-10" TYPE="DATE" comment="" />
-<NAME id="P1" start="68" end="82" text="Quinten Dawson" TYPE="PATIENT" comment="" />
-<ID id="P2" start="88" end="95" text="4692758" TYPE="MEDICALRECORD" comment="" />
-<DATE id="P3" start="98" end="114" text="January 10, 2114" TYPE="DATE" comment="" />
-<AGE id="P4" start="153" end="155" text="73" TYPE="AGE" comment="" />
-<DATE id="P5" start="626" end="630" text="2112" TYPE="DATE" comment="" />
-<DATE id="P6" start="999" end="1003" text="9/13" TYPE="DATE" comment="" />
-<LOCATION id="P7" start="1308" end="1327" text="Christiana Hospital" TYPE="HOSPITAL" comment="" />
-<DATE id="P8" start="1447" end="1451" text="2111" TYPE="DATE" comment="" />
-<NAME id="P9" start="1504" end="1510" text="Dillon" TYPE="DOCTOR" comment="" />
-<LOCATION id="P10" start="1637" end="1662" text="Naples Community Hospital" TYPE="HOSPITAL" comment="" />
-<DATE id="P11" start="2251" end="2255" text="5/14" TYPE="DATE" comment="" />
-<NAME id="P12" start="2269" end="2284" text="Gerald Everhart" TYPE="DOCTOR" comment="" />
-<NAME id="P13" start="2319" end="2333" text="Quinten Dawson" TYPE="PATIENT" comment="" />
-<ID id="P14" start="2339" end="2346" text="4692758" TYPE="MEDICALRECORD" comment="" />
-<DATE id="P15" start="2349" end="2365" text="January 10, 2114" TYPE="DATE" comment="" />
-<NAME id="P16" start="2381" end="2387" text="talbot" TYPE="DOCTOR" comment="" />
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2114-01-10" />
+<NAME TYPE="PATIENT" comment="" end="82" id="P1" start="68" text="Quinten Dawson" />
+<ID TYPE="MEDICALRECORD" comment="" end="95" id="P2" start="88" text="4692758" />
+<DATE TYPE="DATE" comment="" end="114" id="P3" start="98" text="January 10, 2114" />
+<DATE TYPE="DATE" comment="" end="1003" id="P6" start="999" text="9/13" />
+<NAME TYPE="DOCTOR" comment="" end="1510" id="P9" start="1504" text="Dillon" />
+<DATE TYPE="DATE" comment="" end="2255" id="P11" start="2251" text="5/14" />
+<NAME TYPE="DOCTOR" comment="" end="2284" id="P12" start="2269" text="Gerald Everhart" />
+<NAME TYPE="PATIENT" comment="" end="2333" id="P13" start="2319" text="Quinten Dawson" />
+<ID TYPE="MEDICALRECORD" comment="" end="2346" id="P14" start="2339" text="4692758" />
+<DATE TYPE="DATE" comment="" end="2365" id="P15" start="2349" text="January 10, 2114" />
+<NAME TYPE="DOCTOR" comment="" end="2387" id="P16" start="2381" text="talbot" />
 </TAGS>
 </deIdi2b2>

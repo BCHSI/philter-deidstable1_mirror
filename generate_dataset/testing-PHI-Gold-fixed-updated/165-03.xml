@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version='1.0' encoding='utf8'?>
 <deIdi2b2>
-<TEXT><![CDATA[
+<TEXT>
 
 
 Record date: 2094-04-03
@@ -55,19 +55,17 @@ cc:  Georgia Xing, M.D.
 
 
 
-]]></TEXT>
+</TEXT>
 <TAGS>
-<DATE id="P0" start="16" end="26" text="2094-04-03" TYPE="DATE" comment="" />
-<NAME id="P1" start="40" end="52" text="Yager, Becky" TYPE="PATIENT" comment="" />
-<ID id="P2" start="63" end="70" text="0887181" TYPE="MEDICALRECORD" comment="" />
-<NAME id="P3" start="72" end="77" text="Becky" TYPE="PATIENT" comment="" />
-<PROFESSION id="P4" start="207" end="221" text="Credit Manager" TYPE="PROFESSION" comment="" />
-<DATE id="P5" start="225" end="238" text="December 2093" TYPE="DATE" comment="" />
-<LOCATION id="P6" start="2464" end="2474" text="PROMPTCARE" TYPE="HOSPITAL" comment="" />
-<NAME id="P7" start="2540" end="2554" text="Rowena Xanders" TYPE="DOCTOR" comment="" />
-<NAME id="P8" start="2562" end="2564" text="RX" TYPE="DOCTOR" comment="" />
-<NAME id="P9" start="2565" end="2572" text="mcbride" TYPE="DOCTOR" comment="" />
-<NAME id="P10" start="2573" end="2579" text="tucker" TYPE="DOCTOR" comment="" />
-<NAME id="P11" start="2586" end="2598" text="Georgia Xing" TYPE="DOCTOR" comment="" />
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2094-04-03" />
+<NAME TYPE="PATIENT" comment="" end="52" id="P1" start="40" text="Yager, Becky" />
+<ID TYPE="MEDICALRECORD" comment="" end="70" id="P2" start="63" text="0887181" />
+<NAME TYPE="PATIENT" comment="" end="77" id="P3" start="72" text="Becky" />
+<PROFESSION TYPE="PROFESSION" comment="" end="221" id="P4" start="207" text="Credit Manager" />
+<DATE TYPE="DATE" comment="" end="238" id="P5" start="225" text="December 2093" />
+<NAME TYPE="DOCTOR" comment="" end="2554" id="P7" start="2540" text="Rowena Xanders" />
+<NAME TYPE="DOCTOR" comment="" end="2572" id="P9" start="2565" text="mcbride" />
+<NAME TYPE="DOCTOR" comment="" end="2579" id="P10" start="2573" text="tucker" />
+<NAME TYPE="DOCTOR" comment="" end="2598" id="P11" start="2586" text="Georgia Xing" />
 </TAGS>
 </deIdi2b2>

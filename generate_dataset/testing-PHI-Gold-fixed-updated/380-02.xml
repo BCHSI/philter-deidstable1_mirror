@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version='1.0' encoding='utf8'?>
 <deIdi2b2>
-<TEXT><![CDATA[
+<TEXT>
 
 
 Record date: 2069-05-27
@@ -105,7 +105,7 @@ EXT: No c/c/e
 
 SKIN: No rashes or ulcers. 
 
-NEURO: Cognitive testing limited secondary to language barrier. Alert and oriented.  Interacting well in Spanish with  her family members. No neglect or apraxias. Pupils  3->2mm.  Fundi are normal. EOMI without nystagmus. Right field cut.  Right facial. Tongue and palate are midline. Facial sensation is intact. Hearing is normal.  On motor exam there is normal muscle bulk, but increased tone right more than left. She has a mild right HP. There is a RPD. On sensory exam, pp/temp/vib are symmetric.  There is distal gradient loss of sensation.  There is no loss of cortical sensation.  There is mild ataxia with FNF and HTS and RAM on the right. Gait is normal based and uses a walker. Reflexes are symmetric. Plantar responses are extensor.
+NEURO: Cognitive testing limited secondary to language barrier. Alert and oriented.  Interacting well in Spanish with  her family members. No neglect or apraxias. Pupils  3-&gt;2mm.  Fundi are normal. EOMI without nystagmus. Right field cut.  Right facial. Tongue and palate are midline. Facial sensation is intact. Hearing is normal.  On motor exam there is normal muscle bulk, but increased tone right more than left. She has a mild right HP. There is a RPD. On sensory exam, pp/temp/vib are symmetric.  There is distal gradient loss of sensation.  There is no loss of cortical sensation.  There is mild ataxia with FNF and HTS and RAM on the right. Gait is normal based and uses a walker. Reflexes are symmetric. Plantar responses are extensor.
 
 
 
@@ -155,30 +155,19 @@ Prestonsburg, MS 54151
 
 
 
-]]></TEXT>
+</TEXT>
 <TAGS>
-<DATE id="P0" start="16" end="26" text="2069-05-27" TYPE="DATE" comment="" />
-<DATE id="P1" start="28" end="40" text="May 27, 2069" TYPE="DATE" comment="" />
-<NAME id="P2" start="44" end="56" text="Chad Norwood" TYPE="DOCTOR" comment="" />
-<NAME id="P3" start="70" end="82" text="Hannah Heath" TYPE="PATIENT" comment="" />
-<LOCATION id="P4" start="84" end="87" text="OCH" TYPE="HOSPITAL" comment="" />
-<ID id="P5" start="91" end="99" text="91156456" TYPE="MEDICALRECORD" comment="" />
-<NAME id="P6" start="114" end="121" text="Norwood" TYPE="DOCTOR" comment="" />
-<NAME id="P7" start="170" end="182" text="Hannah Heath" TYPE="PATIENT" comment="" />
-<LOCATION id="P9" start="229" end="232" text="OCH" TYPE="HOSPITAL" comment="" />
-<AGE id="P10" start="256" end="258" text="72" TYPE="AGE" comment="" />
-<AGE id="P11" start="362" end="364" text="72" TYPE="AGE" comment="" />
-<DATE id="P12" start="489" end="493" text="2067" TYPE="DATE" comment="" />
-<LOCATION id="P13" start="532" end="535" text="OCH" TYPE="HOSPITAL" comment="" />
-<DATE id="P14" start="579" end="583" text="2068" TYPE="DATE" comment="" />
-<DATE id="P15" start="2918" end="2922" text="2068" TYPE="DATE" comment="" />
-<DATE id="P16" start="2949" end="2953" text="2068" TYPE="DATE" comment="" />
-<AGE id="P17" start="2992" end="2994" text="72" TYPE="AGE" comment="" />
-<NAME id="P18" start="3601" end="3606" text="Queen" TYPE="DOCTOR" comment="" />
-<NAME id="P19" start="3872" end="3887" text="Jordan N. Akers" TYPE="DOCTOR" comment="" />
-<LOCATION id="P20" start="3945" end="3965" text="Orange City Hospital" TYPE="HOSPITAL" comment="" />
-<LOCATION id="P21" start="3967" end="3979" text="Prestonsburg" TYPE="CITY" comment="" />
-<LOCATION id="P22" start="3981" end="3983" text="MS" TYPE="STATE" comment="" />
-<LOCATION id="P23" start="3984" end="3989" text="54151" TYPE="ZIP" comment="" />
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2069-05-27" />
+<DATE TYPE="DATE" comment="" end="40" id="P1" start="28" text="May 27, 2069" />
+<NAME TYPE="DOCTOR" comment="" end="56" id="P2" start="44" text="Chad Norwood" />
+<NAME TYPE="PATIENT" comment="" end="82" id="P3" start="70" text="Hannah Heath" />
+<ID TYPE="MEDICALRECORD" comment="" end="99" id="P5" start="91" text="91156456" />
+<NAME TYPE="DOCTOR" comment="" end="121" id="P6" start="114" text="Norwood" />
+<NAME TYPE="PATIENT" comment="" end="182" id="P7" start="170" text="Hannah Heath" />
+<NAME TYPE="DOCTOR" comment="" end="3606" id="P18" start="3601" text="Queen" />
+<NAME TYPE="DOCTOR" comment="" end="3887" id="P19" start="3872" text="Jordan N. Akers" />
+<LOCATION TYPE="CITY" comment="" end="3979" id="P21" start="3967" text="Prestonsburg" />
+<LOCATION TYPE="STATE" comment="" end="3983" id="P22" start="3981" text="MS" />
+<LOCATION TYPE="ZIP" comment="" end="3989" id="P23" start="3984" text="54151" />
 </TAGS>
 </deIdi2b2>

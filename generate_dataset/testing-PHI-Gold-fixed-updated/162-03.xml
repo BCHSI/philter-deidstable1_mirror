@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version='1.0' encoding='utf8'?>
 <deIdi2b2>
-<TEXT><![CDATA[
+<TEXT>
 
 
 Record date: 2075-01-15
@@ -54,21 +54,18 @@ Dictated by:  O. DE OTIS, M.D.       DO36
 
 
 
-]]></TEXT>
+</TEXT>
 <TAGS>
-<DATE id="P0" start="16" end="26" text="2075-01-15" TYPE="DATE" comment="" />
-<LOCATION id="P1" start="49" end="53" text="AASC" TYPE="HOSPITAL" comment="" />
-<NAME id="P2" start="77" end="91" text="QUIJANO,BAYLEE" TYPE="PATIENT" comment="" />
-<ID id="P3" start="94" end="105" text="853-62-51-4" TYPE="MEDICALRECORD" comment="" />
-<DATE id="P4" start="137" end="145" text="01/15/75" TYPE="DATE" comment="" />
-<AGE id="P5" start="435" end="437" text="60" TYPE="AGE" comment="" />
-<LOCATION id="P6" start="500" end="520" text="Associated Arthritis" TYPE="HOSPITAL" comment="" />
-<ID id="P7" start="2315" end="2326" text="CY313/62627" TYPE="IDNUM" comment="" />
-<NAME id="P8" start="2328" end="2338" text="O. DE OTIS" TYPE="DOCTOR" comment="" />
-<NAME id="P9" start="2351" end="2355" text="DO36" TYPE="USERNAME" comment="" />
-<DATE id="P10" start="2380" end="2388" text="01/18/75" TYPE="DATE" comment="" />
-<DATE id="P11" start="2447" end="2455" text="01/18/75" TYPE="DATE" comment="" />
-<NAME id="P12" start="2471" end="2481" text="O. DE OTIS" TYPE="DOCTOR" comment="" />
-<NAME id="P13" start="2494" end="2498" text="DO36" TYPE="USERNAME" comment="" />
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2075-01-15" />
+<NAME TYPE="PATIENT" comment="" end="91" id="P2" start="77" text="QUIJANO,BAYLEE" />
+<ID TYPE="MEDICALRECORD" comment="" end="105" id="P3" start="94" text="853-62-51-4" />
+<DATE TYPE="DATE" comment="" end="145" id="P4" start="137" text="01/15/75" />
+<ID TYPE="IDNUM" comment="" end="2326" id="P7" start="2315" text="CY313/62627" />
+<NAME TYPE="DOCTOR" comment="" end="2338" id="P8" start="2328" text="O. DE OTIS" />
+<NAME TYPE="USERNAME" comment="" end="2355" id="P9" start="2351" text="DO36" />
+<DATE TYPE="DATE" comment="" end="2388" id="P10" start="2380" text="01/18/75" />
+<DATE TYPE="DATE" comment="" end="2455" id="P11" start="2447" text="01/18/75" />
+<NAME TYPE="DOCTOR" comment="" end="2481" id="P12" start="2471" text="O. DE OTIS" />
+<NAME TYPE="USERNAME" comment="" end="2498" id="P13" start="2494" text="DO36" />
 </TAGS>
 </deIdi2b2>

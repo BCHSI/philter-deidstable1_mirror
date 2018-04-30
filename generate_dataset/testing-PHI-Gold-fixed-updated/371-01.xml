@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version='1.0' encoding='utf8'?>
 <deIdi2b2>
-<TEXT><![CDATA[
+<TEXT>
 
 
 Record date: 2074-11-11
@@ -91,23 +91,18 @@ Dictated by:  ROXANNE SPEARS, M.D.  RS40
 
 
 
-]]></TEXT>
+</TEXT>
 <TAGS>
-<DATE id="P0" start="16" end="26" text="2074-11-11" TYPE="DATE" comment="" />
-<LOCATION id="P1" start="49" end="60" text="LEPROSARIUM" TYPE="HOSPITAL" comment="" />
-<NAME id="P2" start="86" end="99" text="OLIVIER,OZELL" TYPE="PATIENT" comment="" />
-<ID id="P3" start="102" end="113" text="337-67-25-9" TYPE="MEDICALRECORD" comment="" />
-<DATE id="P4" start="139" end="147" text="11/11/74" TYPE="DATE" comment="" />
-<AGE id="P5" start="293" end="295" text="67" TYPE="AGE" comment="" />
-<LOCATION id="P6" start="318" end="329" text="South Korea" TYPE="COUNTRY" comment="" />
-<LOCATION id="P7" start="346" end="352" text="Canada" TYPE="COUNTRY" comment="" />
-<LOCATION id="P8" start="1910" end="1925" text="Lakeview Clinic" TYPE="HOSPITAL" comment="" />
-<ID id="P9" start="2128" end="2139" text="OK878/13176" TYPE="IDNUM" comment="" />
-<NAME id="P10" start="2142" end="2156" text="ROXANNE SPEARS" TYPE="DOCTOR" comment="" />
-<NAME id="P11" start="2164" end="2168" text="RS40" TYPE="USERNAME" comment="" />
-<DATE id="P12" start="2199" end="2207" text="11/11/74" TYPE="DATE" comment="" />
-<DATE id="P13" start="2267" end="2275" text="11/12/74" TYPE="DATE" comment="" />
-<NAME id="P14" start="2292" end="2306" text="ROXANNE SPEARS" TYPE="DOCTOR" comment="" />
-<NAME id="P15" start="2314" end="2318" text="RS40" TYPE="USERNAME" comment="" />
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2074-11-11" />
+<NAME TYPE="PATIENT" comment="" end="99" id="P2" start="86" text="OLIVIER,OZELL" />
+<ID TYPE="MEDICALRECORD" comment="" end="113" id="P3" start="102" text="337-67-25-9" />
+<DATE TYPE="DATE" comment="" end="147" id="P4" start="139" text="11/11/74" />
+<ID TYPE="IDNUM" comment="" end="2139" id="P9" start="2128" text="OK878/13176" />
+<NAME TYPE="DOCTOR" comment="" end="2156" id="P10" start="2142" text="ROXANNE SPEARS" />
+<NAME TYPE="USERNAME" comment="" end="2168" id="P11" start="2164" text="RS40" />
+<DATE TYPE="DATE" comment="" end="2207" id="P12" start="2199" text="11/11/74" />
+<DATE TYPE="DATE" comment="" end="2275" id="P13" start="2267" text="11/12/74" />
+<NAME TYPE="DOCTOR" comment="" end="2306" id="P14" start="2292" text="ROXANNE SPEARS" />
+<NAME TYPE="USERNAME" comment="" end="2318" id="P15" start="2314" text="RS40" />
 </TAGS>
 </deIdi2b2>

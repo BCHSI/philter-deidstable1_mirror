@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version='1.0' encoding='utf8'?>
 <deIdi2b2>
-<TEXT><![CDATA[
+<TEXT>
 
 
 Record date: 2078-03-17
@@ -70,7 +70,7 @@ CV: irreg irreg, no murmurs appreciated. JVP 15 cm
 LUNG: Rales in bases bilaterally
 ABD: soft, non-tender, non-distended
 EXT: no c/c/e
-Neuro: A&amp;Ox3, moves all extremiteis.
+Neuro: A&amp;amp;Ox3, moves all extremiteis.
 
 
 CXR: enlarged heart. Minimal pulmonary infiltrate
@@ -102,50 +102,43 @@ Xavier B. Nix, M.D., Ph.D.
 
 
 
-]]></TEXT>
+</TEXT>
 <TAGS>
-<DATE id="P0" start="16" end="26" text="2078-03-17" TYPE="DATE" comment="" />
-<NAME id="P1" start="44" end="63" text="JORGENSON,VIVIANLEE" TYPE="PATIENT" comment="" />
-<ID id="P2" start="66" end="74" text="47190847" TYPE="MEDICALRECORD" comment="" />
-<LOCATION id="P3" start="75" end="78" text="JMH" TYPE="HOSPITAL" comment="" />
-<DATE id="P4" start="97" end="107" text="03/17/2078" TYPE="DATE" comment="" />
-<AGE id="P5" start="136" end="138" text="71" TYPE="AGE" comment="" />
-<DATE id="P6" start="828" end="832" text="2075" TYPE="DATE" comment="" />
-<DATE id="P7" start="846" end="851" text="11/77" TYPE="DATE" comment="" />
-<DATE id="P8" start="1010" end="1017" text="6/19/74" TYPE="DATE" comment="" />
-<DATE id="P9" start="1056" end="1064" text="11/26/77" TYPE="DATE" comment="" />
-<DATE id="P10" start="1127" end="1134" text="6/19/74" TYPE="DATE" comment="" />
-<DATE id="P11" start="1187" end="1191" text="2071" TYPE="DATE" comment="" />
-<DATE id="P12" start="1272" end="1277" text="11/25" TYPE="DATE" comment="" />
-<DATE id="P13" start="1302" end="1307" text="11/25" TYPE="DATE" comment="" />
-<DATE id="P14" start="1344" end="1349" text="11/26" TYPE="DATE" comment="" />
-<AGE id="P15" start="2145" end="2147" text="50" TYPE="AGE" comment="" />
-<PROFESSION id="P16" start="2177" end="2187" text="Blacksmith" TYPE="PROFESSION" comment="" />
-<DATE id="P17" start="2312" end="2316" text="2067" TYPE="DATE" comment="" />
-<DATE id="P18" start="2814" end="2824" text="03/17/2078" TYPE="DATE" comment="" />
-<DATE id="P19" start="2892" end="2902" text="03/17/2078" TYPE="DATE" comment="" />
-<DATE id="P20" start="3048" end="3058" text="03/17/2078" TYPE="DATE" comment="" />
-<DATE id="P21" start="3126" end="3136" text="03/17/2078" TYPE="DATE" comment="" />
-<DATE id="P22" start="3237" end="3247" text="03/17/2078" TYPE="DATE" comment="" />
-<DATE id="P23" start="3270" end="3280" text="03/17/2078" TYPE="DATE" comment="" />
-<DATE id="P24" start="3381" end="3391" text="03/17/2078" TYPE="DATE" comment="" />
-<DATE id="P25" start="3459" end="3469" text="03/17/2078" TYPE="DATE" comment="" />
-<DATE id="P26" start="3600" end="3610" text="03/17/2078" TYPE="DATE" comment="" />
-<DATE id="P27" start="3663" end="3673" text="03/17/2078" TYPE="DATE" comment="" />
-<DATE id="P28" start="3804" end="3814" text="03/17/2078" TYPE="DATE" comment="" />
-<DATE id="P29" start="3882" end="3892" text="03/17/2078" TYPE="DATE" comment="" />
-<DATE id="P30" start="4023" end="4033" text="03/17/2078" TYPE="DATE" comment="" />
-<DATE id="P31" start="4119" end="4129" text="03/17/2078" TYPE="DATE" comment="" />
-<DATE id="P32" start="4230" end="4240" text="03/17/2078" TYPE="DATE" comment="" />
-<DATE id="P33" start="4386" end="4396" text="03/17/2078" TYPE="DATE" comment="" />
-<DATE id="P34" start="4497" end="4507" text="03/17/2078" TYPE="DATE" comment="" />
-<DATE id="P35" start="4608" end="4618" text="03/17/2078" TYPE="DATE" comment="" />
-<DATE id="P36" start="4719" end="4729" text="03/17/2078" TYPE="DATE" comment="" />
-<DATE id="P37" start="4830" end="4840" text="03/17/2078" TYPE="DATE" comment="" />
-<DATE id="P38" start="4941" end="4951" text="03/17/2078" TYPE="DATE" comment="" />
-<DATE id="P39" start="5022" end="5032" text="03/17/2078" TYPE="DATE" comment="" />
-<DATE id="P40" start="5133" end="5143" text="03/17/2078" TYPE="DATE" comment="" />
-<AGE id="P41" start="5223" end="5225" text="71" TYPE="AGE" comment="" />
-<NAME id="P42" start="5976" end="5989" text="Xavier B. Nix" TYPE="DOCTOR" comment="" />
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2078-03-17" />
+<NAME TYPE="PATIENT" comment="" end="63" id="P1" start="44" text="JORGENSON,VIVIANLEE" />
+<ID TYPE="MEDICALRECORD" comment="" end="74" id="P2" start="66" text="47190847" />
+<DATE TYPE="DATE" comment="" end="107" id="P4" start="97" text="03/17/2078" />
+<DATE TYPE="DATE" comment="" end="851" id="P7" start="846" text="11/77" />
+<DATE TYPE="DATE" comment="" end="1017" id="P8" start="1010" text="6/19/74" />
+<DATE TYPE="DATE" comment="" end="1064" id="P9" start="1056" text="11/26/77" />
+<DATE TYPE="DATE" comment="" end="1134" id="P10" start="1127" text="6/19/74" />
+<DATE TYPE="DATE" comment="" end="1277" id="P12" start="1272" text="11/25" />
+<DATE TYPE="DATE" comment="" end="1307" id="P13" start="1302" text="11/25" />
+<DATE TYPE="DATE" comment="" end="1349" id="P14" start="1344" text="11/26" />
+<PROFESSION TYPE="PROFESSION" comment="" end="2187" id="P16" start="2177" text="Blacksmith" />
+<DATE TYPE="DATE" comment="" end="2824" id="P18" start="2814" text="03/17/2078" />
+<DATE TYPE="DATE" comment="" end="2902" id="P19" start="2892" text="03/17/2078" />
+<DATE TYPE="DATE" comment="" end="3058" id="P20" start="3048" text="03/17/2078" />
+<DATE TYPE="DATE" comment="" end="3136" id="P21" start="3126" text="03/17/2078" />
+<DATE TYPE="DATE" comment="" end="3247" id="P22" start="3237" text="03/17/2078" />
+<DATE TYPE="DATE" comment="" end="3280" id="P23" start="3270" text="03/17/2078" />
+<DATE TYPE="DATE" comment="" end="3391" id="P24" start="3381" text="03/17/2078" />
+<DATE TYPE="DATE" comment="" end="3469" id="P25" start="3459" text="03/17/2078" />
+<DATE TYPE="DATE" comment="" end="3610" id="P26" start="3600" text="03/17/2078" />
+<DATE TYPE="DATE" comment="" end="3673" id="P27" start="3663" text="03/17/2078" />
+<DATE TYPE="DATE" comment="" end="3814" id="P28" start="3804" text="03/17/2078" />
+<DATE TYPE="DATE" comment="" end="3892" id="P29" start="3882" text="03/17/2078" />
+<DATE TYPE="DATE" comment="" end="4033" id="P30" start="4023" text="03/17/2078" />
+<DATE TYPE="DATE" comment="" end="4129" id="P31" start="4119" text="03/17/2078" />
+<DATE TYPE="DATE" comment="" end="4240" id="P32" start="4230" text="03/17/2078" />
+<DATE TYPE="DATE" comment="" end="4396" id="P33" start="4386" text="03/17/2078" />
+<DATE TYPE="DATE" comment="" end="4507" id="P34" start="4497" text="03/17/2078" />
+<DATE TYPE="DATE" comment="" end="4618" id="P35" start="4608" text="03/17/2078" />
+<DATE TYPE="DATE" comment="" end="4729" id="P36" start="4719" text="03/17/2078" />
+<DATE TYPE="DATE" comment="" end="4840" id="P37" start="4830" text="03/17/2078" />
+<DATE TYPE="DATE" comment="" end="4951" id="P38" start="4941" text="03/17/2078" />
+<DATE TYPE="DATE" comment="" end="5032" id="P39" start="5022" text="03/17/2078" />
+<DATE TYPE="DATE" comment="" end="5143" id="P40" start="5133" text="03/17/2078" />
+<NAME TYPE="DOCTOR" comment="" end="5989" id="P42" start="5976" text="Xavier B. Nix" />
 </TAGS>
 </deIdi2b2>

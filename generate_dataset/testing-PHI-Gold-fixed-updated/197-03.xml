@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version='1.0' encoding='utf8'?>
 <deIdi2b2>
-<TEXT><![CDATA[
+<TEXT>
 
 
 Record date: 2098-11-04
@@ -81,16 +81,15 @@ NXN/wynn/draper
 
 
 
-]]></TEXT>
+</TEXT>
 <TAGS>
-<DATE id="P0" start="16" end="26" text="2098-11-04" TYPE="DATE" comment="" />
-<NAME id="P1" start="43" end="58" text="Emmery, Donn S." TYPE="PATIENT" comment="" />
-<ID id="P2" start="70" end="77" text="0595726" TYPE="MEDICALRECORD" comment="" />
-<NAME id="P3" start="177" end="191" text="Noah Velazquez" TYPE="DOCTOR" comment="" />
-<DATE id="P4" start="200" end="204" text="July" TYPE="DATE" comment="" />
-<NAME id="P5" start="1353" end="1366" text="Noah X. Nagle" TYPE="DOCTOR" comment="" />
-<NAME id="P6" start="1375" end="1378" text="NXN" TYPE="DOCTOR" comment="" />
-<NAME id="P7" start="1379" end="1383" text="wynn" TYPE="DOCTOR" comment="" />
-<NAME id="P8" start="1384" end="1390" text="draper" TYPE="DOCTOR" comment="" />
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2098-11-04" />
+<NAME TYPE="PATIENT" comment="" end="58" id="P1" start="43" text="Emmery, Donn S." />
+<ID TYPE="MEDICALRECORD" comment="" end="77" id="P2" start="70" text="0595726" />
+<NAME TYPE="DOCTOR" comment="" end="191" id="P3" start="177" text="Noah Velazquez" />
+<DATE TYPE="DATE" comment="" end="204" id="P4" start="200" text="July" />
+<NAME TYPE="DOCTOR" comment="" end="1366" id="P5" start="1353" text="Noah X. Nagle" />
+<NAME TYPE="DOCTOR" comment="" end="1383" id="P7" start="1379" text="wynn" />
+<NAME TYPE="DOCTOR" comment="" end="1390" id="P8" start="1384" text="draper" />
 </TAGS>
 </deIdi2b2>

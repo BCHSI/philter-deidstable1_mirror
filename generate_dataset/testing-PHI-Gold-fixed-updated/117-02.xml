@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version='1.0' encoding='utf8'?>
 <deIdi2b2>
-<TEXT><![CDATA[
+<TEXT>
 
 
 Record date: 2066-05-23
@@ -8,7 +8,7 @@ Record date: 2066-05-23
 Hinds General Hospital
 Preadmission Testing Area
 
-History & Physical Examination
+History &amp; Physical Examination
 
 and Anesthesia Assessment
 
@@ -36,7 +36,7 @@ Procedure:  The patient is a 71 year old Spanish-speaking female scheduled for r
 
 
 
-Chief Complaint & Present Illness:  Patient reports that she was having difficulty with constipation and colonoscopy was scheduled 5/07/66.  Colonoscopy showed a malignant appearing tumor or possibly a villous adenoma in the cecum.  Pathology revealed adenocarcinoma.
+Chief Complaint &amp; Present Illness:  Patient reports that she was having difficulty with constipation and colonoscopy was scheduled 5/07/66.  Colonoscopy showed a malignant appearing tumor or possibly a villous adenoma in the cecum.  Pathology revealed adenocarcinoma.
 
 
 
@@ -200,7 +200,7 @@ Exam:
 
 General:  well developed, well nourished female
 
-HEEN&T:  good range of motion, no masses, neck veins flat, no bruits
+HEEN&amp;T:  good range of motion, no masses, neck veins flat, no bruits
 
 Airway:  Mallampatti Class II
 
@@ -322,32 +322,28 @@ signed:  ___________________________________________________________
 
 
 
-]]></TEXT>
+</TEXT>
 <TAGS>
-<DATE id="P0" start="16" end="26" text="2066-05-23" TYPE="DATE" comment="" />
-<LOCATION id="P1" start="28" end="50" text="Hinds General Hospital" TYPE="HOSPITAL" comment="" />
-<NAME id="P2" start="137" end="153" text="Ulonda Jablonski" TYPE="DOCTOR" comment="" />
-<NAME id="P3" start="161" end="174" text="Patricia Wynn" TYPE="DOCTOR" comment="" />
-<NAME id="P4" start="182" end="200" text="Frances Strickland" TYPE="DOCTOR" comment="" />
-<NAME id="P5" start="210" end="222" text="Mark C. Xian" TYPE="DOCTOR" comment="" />
-<DATE id="P6" start="248" end="260" text="May 22, 2066" TYPE="DATE" comment="" />
-<ID id="P7" start="288" end="295" text="2650173" TYPE="MEDICALRECORD" comment="" />
-<NAME id="P8" start="297" end="314" text="Cummings, Melissa" TYPE="PATIENT" comment="" />
-<AGE id="P9" start="347" end="349" text="71" TYPE="AGE" comment="" />
-<DATE id="P10" start="439" end="451" text="May 31, 2066" TYPE="DATE" comment="" />
-<NAME id="P11" start="459" end="473" text="Patrick Frantz" TYPE="DOCTOR" comment="" />
-<DATE id="P12" start="609" end="616" text="5/07/66" TYPE="DATE" comment="" />
-<DATE id="P13" start="1352" end="1357" text="11/63" TYPE="DATE" comment="" />
-<DATE id="P14" start="1602" end="1607" text="10/62" TYPE="DATE" comment="" />
-<DATE id="P15" start="1932" end="1939" text="5/20/66" TYPE="DATE" comment="" />
-<DATE id="P16" start="2128" end="2132" text="3/66" TYPE="DATE" comment="" />
-<DATE id="P17" start="3053" end="3060" text="5/23/66" TYPE="DATE" comment="" />
-<DATE id="P18" start="3087" end="3094" text="5/23/66" TYPE="DATE" comment="" />
-<PROFESSION id="P19" start="3387" end="3401" text="Customs Broker" TYPE="PROFESSION" comment="" />
-<AGE id="P20" start="5097" end="5099" text="71" TYPE="AGE" comment="" />
-<DATE id="P21" start="5483" end="5487" text="2063" TYPE="DATE" comment="" />
-<NAME id="P22" start="5674" end="5691" text="Emma-Wendy Alcala" TYPE="DOCTOR" comment="" />
-<NAME id="P23" start="5866" end="5872" text="Alcala" TYPE="DOCTOR" comment="" />
-<NAME id="P24" start="6748" end="6764" text="Patricia C. Wynn" TYPE="DOCTOR" comment="" />
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2066-05-23" />
+<NAME TYPE="DOCTOR" comment="" end="153" id="P2" start="137" text="Ulonda Jablonski" />
+<NAME TYPE="DOCTOR" comment="" end="174" id="P3" start="161" text="Patricia Wynn" />
+<NAME TYPE="DOCTOR" comment="" end="200" id="P4" start="182" text="Frances Strickland" />
+<NAME TYPE="DOCTOR" comment="" end="222" id="P5" start="210" text="Mark C. Xian" />
+<DATE TYPE="DATE" comment="" end="260" id="P6" start="248" text="May 22, 2066" />
+<ID TYPE="MEDICALRECORD" comment="" end="295" id="P7" start="288" text="2650173" />
+<NAME TYPE="PATIENT" comment="" end="314" id="P8" start="297" text="Cummings, Melissa" />
+<DATE TYPE="DATE" comment="" end="451" id="P10" start="439" text="May 31, 2066" />
+<NAME TYPE="DOCTOR" comment="" end="473" id="P11" start="459" text="Patrick Frantz" />
+<DATE TYPE="DATE" comment="" end="616" id="P12" start="609" text="5/07/66" />
+<DATE TYPE="DATE" comment="" end="1357" id="P13" start="1352" text="11/63" />
+<DATE TYPE="DATE" comment="" end="1607" id="P14" start="1602" text="10/62" />
+<DATE TYPE="DATE" comment="" end="1939" id="P15" start="1932" text="5/20/66" />
+<DATE TYPE="DATE" comment="" end="2132" id="P16" start="2128" text="3/66" />
+<DATE TYPE="DATE" comment="" end="3060" id="P17" start="3053" text="5/23/66" />
+<DATE TYPE="DATE" comment="" end="3094" id="P18" start="3087" text="5/23/66" />
+<PROFESSION TYPE="PROFESSION" comment="" end="3401" id="P19" start="3387" text="Customs Broker" />
+<NAME TYPE="DOCTOR" comment="" end="5691" id="P22" start="5674" text="Emma-Wendy Alcala" />
+<NAME TYPE="DOCTOR" comment="" end="5872" id="P23" start="5866" text="Alcala" />
+<NAME TYPE="DOCTOR" comment="" end="6764" id="P24" start="6748" text="Patricia C. Wynn" />
 </TAGS>
 </deIdi2b2>

@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version='1.0' encoding='utf8'?>
 <deIdi2b2>
-<TEXT><![CDATA[
+<TEXT>
 
 
 Record date: 2074-02-06
@@ -103,7 +103,7 @@ G/U: R groin without hematoma or bruit; mild ecchymosis infero-lateral R hip.
 
 Data
 
-2/01: CK 299 -> 398 -> 167; CPK Index 20.6 -> 31.8 -> 6.3; Trop-T 0.76 -> 0.85.
+2/01: CK 299 -&gt; 398 -&gt; 167; CPK Index 20.6 -&gt; 31.8 -&gt; 6.3; Trop-T 0.76 -&gt; 0.85.
 
 2/02: A1c 6.50.
 
@@ -137,26 +137,25 @@ Peter H Uddin, M.D.
 
 
 
-]]></TEXT>
+</TEXT>
 <TAGS>
-<DATE id="P0" start="16" end="26" text="2074-02-06" TYPE="DATE" comment="" />
-<DATE id="P1" start="86" end="90" text="2/01" TYPE="DATE" comment="" />
-<DATE id="P2" start="91" end="98" text="2/03/74" TYPE="DATE" comment="" />
-<DATE id="P3" start="115" end="119" text="1/31" TYPE="DATE" comment="" />
-<DATE id="P4" start="187" end="191" text="2073" TYPE="DATE" comment="" />
-<DATE id="P5" start="334" end="338" text="2/01" TYPE="DATE" comment="" />
-<NAME id="P6" start="498" end="505" text="Ishmael" TYPE="DOCTOR" comment="" />
-<NAME id="P7" start="532" end="541" text="Patterson" TYPE="DOCTOR" comment="" />
-<NAME id="P8" start="615" end="624" text="Patterson" TYPE="DOCTOR" comment="" />
-<DATE id="P9" start="855" end="859" text="2/02" TYPE="DATE" comment="" />
-<DATE id="P10" start="1079" end="1083" text="2/03" TYPE="DATE" comment="" />
-<NAME id="P11" start="1392" end="1399" text="Ishmael" TYPE="DOCTOR" comment="" />
-<DATE id="P12" start="1650" end="1654" text="2/73" TYPE="DATE" comment="" />
-<DATE id="P13" start="2806" end="2810" text="2/01" TYPE="DATE" comment="" />
-<DATE id="P14" start="2887" end="2891" text="2/02" TYPE="DATE" comment="" />
-<DATE id="P15" start="2904" end="2908" text="2/02" TYPE="DATE" comment="" />
-<DATE id="P16" start="2970" end="2974" text="2/01" TYPE="DATE" comment="" />
-<NAME id="P17" start="3231" end="3238" text="Ishmael" TYPE="DOCTOR" comment="" />
-<NAME id="P18" start="3458" end="3471" text="Peter H Uddin" TYPE="DOCTOR" comment="" />
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2074-02-06" />
+<DATE TYPE="DATE" comment="" end="90" id="P1" start="86" text="2/01" />
+<DATE TYPE="DATE" comment="" end="98" id="P2" start="91" text="2/03/74" />
+<DATE TYPE="DATE" comment="" end="119" id="P3" start="115" text="1/31" />
+<DATE TYPE="DATE" comment="" end="338" id="P5" start="334" text="2/01" />
+<NAME TYPE="DOCTOR" comment="" end="505" id="P6" start="498" text="Ishmael" />
+<NAME TYPE="DOCTOR" comment="" end="541" id="P7" start="532" text="Patterson" />
+<NAME TYPE="DOCTOR" comment="" end="624" id="P8" start="615" text="Patterson" />
+<DATE TYPE="DATE" comment="" end="859" id="P9" start="855" text="2/02" />
+<DATE TYPE="DATE" comment="" end="1083" id="P10" start="1079" text="2/03" />
+<NAME TYPE="DOCTOR" comment="" end="1399" id="P11" start="1392" text="Ishmael" />
+<DATE TYPE="DATE" comment="" end="1654" id="P12" start="1650" text="2/73" />
+<DATE TYPE="DATE" comment="" end="2810" id="P13" start="2806" text="2/01" />
+<DATE TYPE="DATE" comment="" end="2891" id="P14" start="2887" text="2/02" />
+<DATE TYPE="DATE" comment="" end="2908" id="P15" start="2904" text="2/02" />
+<DATE TYPE="DATE" comment="" end="2974" id="P16" start="2970" text="2/01" />
+<NAME TYPE="DOCTOR" comment="" end="3238" id="P17" start="3231" text="Ishmael" />
+<NAME TYPE="DOCTOR" comment="" end="3471" id="P18" start="3458" text="Peter H Uddin" />
 </TAGS>
 </deIdi2b2>

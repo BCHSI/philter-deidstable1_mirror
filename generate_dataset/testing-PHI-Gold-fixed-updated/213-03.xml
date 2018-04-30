@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version='1.0' encoding='utf8'?>
 <deIdi2b2>
-<TEXT><![CDATA[
+<TEXT>
 
 
 Record date: 2065-10-12
@@ -117,23 +117,21 @@ Dictated by:  LARRY INOUE, M.D.  LI12
 
 
 
-]]></TEXT>
+</TEXT>
 <TAGS>
-<DATE id="P0" start="16" end="26" text="2065-10-12" TYPE="DATE" comment="" />
-<LOCATION id="P1" start="49" end="52" text="GOH" TYPE="HOSPITAL" comment="" />
-<NAME id="P2" start="78" end="91" text="WAGNER,LONNIE" TYPE="PATIENT" comment="" />
-<ID id="P3" start="94" end="105" text="097-87-37-2" TYPE="MEDICALRECORD" comment="" />
-<AGE id="P4" start="369" end="371" text="72" TYPE="AGE" comment="" />
-<DATE id="P5" start="2214" end="2231" text="12th of September" TYPE="DATE" comment="" />
-<DATE id="P6" start="2242" end="2250" text="August 1" TYPE="DATE" comment="" />
-<DATE id="P7" start="2309" end="2317" text="August 1" TYPE="DATE" comment="" />
-<DATE id="P8" start="2328" end="2332" text="9/12" TYPE="DATE" comment="" />
-<ID id="P9" start="2902" end="2913" text="GF977/84271" TYPE="IDNUM" comment="" />
-<NAME id="P10" start="2916" end="2927" text="LARRY INOUE" TYPE="DOCTOR" comment="" />
-<NAME id="P11" start="2935" end="2939" text="LI12" TYPE="USERNAME" comment="" />
-<DATE id="P12" start="2969" end="2977" text="10/12/65" TYPE="DATE" comment="" />
-<DATE id="P13" start="3037" end="3045" text="10/13/65" TYPE="DATE" comment="" />
-<NAME id="P14" start="3062" end="3073" text="LARRY INOUE" TYPE="DOCTOR" comment="" />
-<NAME id="P15" start="3081" end="3085" text="LI12" TYPE="USERNAME" comment="" />
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2065-10-12" />
+<NAME TYPE="PATIENT" comment="" end="91" id="P2" start="78" text="WAGNER,LONNIE" />
+<ID TYPE="MEDICALRECORD" comment="" end="105" id="P3" start="94" text="097-87-37-2" />
+<DATE TYPE="DATE" comment="" end="2231" id="P5" start="2214" text="12th of September" />
+<DATE TYPE="DATE" comment="" end="2250" id="P6" start="2242" text="August 1" />
+<DATE TYPE="DATE" comment="" end="2317" id="P7" start="2309" text="August 1" />
+<DATE TYPE="DATE" comment="" end="2332" id="P8" start="2328" text="9/12" />
+<ID TYPE="IDNUM" comment="" end="2913" id="P9" start="2902" text="GF977/84271" />
+<NAME TYPE="DOCTOR" comment="" end="2927" id="P10" start="2916" text="LARRY INOUE" />
+<NAME TYPE="USERNAME" comment="" end="2939" id="P11" start="2935" text="LI12" />
+<DATE TYPE="DATE" comment="" end="2977" id="P12" start="2969" text="10/12/65" />
+<DATE TYPE="DATE" comment="" end="3045" id="P13" start="3037" text="10/13/65" />
+<NAME TYPE="DOCTOR" comment="" end="3073" id="P14" start="3062" text="LARRY INOUE" />
+<NAME TYPE="USERNAME" comment="" end="3085" id="P15" start="3081" text="LI12" />
 </TAGS>
 </deIdi2b2>

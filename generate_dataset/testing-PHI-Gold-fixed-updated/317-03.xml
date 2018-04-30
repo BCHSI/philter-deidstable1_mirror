@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version='1.0' encoding='utf8'?>
 <deIdi2b2>
-<TEXT><![CDATA[
+<TEXT>
 
 
 Record date: 2078-09-17
@@ -40,23 +40,22 @@ Dictated by: Quanisha Logan, PA-C
 
 
 
-]]></TEXT>
+</TEXT>
 <TAGS>
-<DATE id="P0" start="16" end="26" text="2078-09-17" TYPE="DATE" comment="" />
-<NAME id="P1" start="30" end="47" text="HENDRICKS, HANNAH" TYPE="PATIENT" comment="" />
-<ID id="P2" start="48" end="56" text="75322175" TYPE="MEDICALRECORD" comment="" />
-<DATE id="P3" start="57" end="67" text="09/17/2078" TYPE="DATE" comment="" />
-<NAME id="P4" start="69" end="83" text="Trevon Schmidt" TYPE="DOCTOR" comment="" />
-<LOCATION id="P5" start="90" end="107" text="47 Clinton Street" TYPE="STREET" comment="" />
-<LOCATION id="P7" start="119" end="126" text="Decatur" TYPE="CITY" comment="" />
-<LOCATION id="P8" start="128" end="130" text="WI" TYPE="STATE" comment="" />
-<LOCATION id="P9" start="131" end="136" text="33955" TYPE="ZIP" comment="" />
-<NAME id="P10" start="148" end="155" text="Schmidt" TYPE="DOCTOR" comment="" />
-<NAME id="P11" start="172" end="188" text="Hannah Hendricks" TYPE="PATIENT" comment="" />
-<AGE id="P13" start="246" end="248" text="52" TYPE="AGE" comment="" />
-<DATE id="P14" start="432" end="443" text="May 3, 2078" TYPE="DATE" comment="" />
-<NAME id="P15" start="1253" end="1259" text="Hannah" TYPE="PATIENT" comment="" />
-<NAME id="P16" start="1786" end="1797" text="Hunter Shea" TYPE="DOCTOR" comment="" />
-<NAME id="P17" start="1817" end="1831" text="Quanisha Logan" TYPE="DOCTOR" comment="" />
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2078-09-17" />
+<NAME TYPE="PATIENT" comment="" end="47" id="P1" start="30" text="HENDRICKS, HANNAH" />
+<ID TYPE="MEDICALRECORD" comment="" end="56" id="P2" start="48" text="75322175" />
+<DATE TYPE="DATE" comment="" end="67" id="P3" start="57" text="09/17/2078" />
+<NAME TYPE="DOCTOR" comment="" end="83" id="P4" start="69" text="Trevon Schmidt" />
+<LOCATION TYPE="STREET" comment="" end="107" id="P5" start="90" text="47 Clinton Street" />
+<LOCATION TYPE="CITY" comment="" end="126" id="P7" start="119" text="Decatur" />
+<LOCATION TYPE="STATE" comment="" end="130" id="P8" start="128" text="WI" />
+<LOCATION TYPE="ZIP" comment="" end="136" id="P9" start="131" text="33955" />
+<NAME TYPE="DOCTOR" comment="" end="155" id="P10" start="148" text="Schmidt" />
+<NAME TYPE="PATIENT" comment="" end="188" id="P11" start="172" text="Hannah Hendricks" />
+<DATE TYPE="DATE" comment="" end="443" id="P14" start="432" text="May 3, 2078" />
+<NAME TYPE="PATIENT" comment="" end="1259" id="P15" start="1253" text="Hannah" />
+<NAME TYPE="DOCTOR" comment="" end="1797" id="P16" start="1786" text="Hunter Shea" />
+<NAME TYPE="DOCTOR" comment="" end="1831" id="P17" start="1817" text="Quanisha Logan" />
 </TAGS>
 </deIdi2b2>

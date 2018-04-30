@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version='1.0' encoding='utf8'?>
 <deIdi2b2>
-<TEXT><![CDATA[
+<TEXT>
 
 
 Record date: 2090-07-16
@@ -36,15 +36,13 @@ WVG/xin/quilici
 
 
 
-]]></TEXT>
+</TEXT>
 <TAGS>
-<DATE id="P0" start="16" end="26" text="2090-07-16" TYPE="DATE" comment="" />
-<NAME id="P1" start="40" end="50" text="Curtis, Om" TYPE="PATIENT" comment="" />
-<ID id="P2" start="61" end="68" text="7682941" TYPE="MEDICALRECORD" comment="" />
-<DATE id="P3" start="972" end="978" text="spring" TYPE="DATE" comment="" />
-<NAME id="P4" start="981" end="998" text="William V. Geiger" TYPE="DOCTOR" comment="" />
-<NAME id="P5" start="1006" end="1009" text="WVG" TYPE="DOCTOR" comment="" />
-<NAME id="P6" start="1010" end="1013" text="xin" TYPE="DOCTOR" comment="" />
-<NAME id="P7" start="1014" end="1021" text="quilici" TYPE="DOCTOR" comment="" />
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2090-07-16" />
+<NAME TYPE="PATIENT" comment="" end="50" id="P1" start="40" text="Curtis, Om" />
+<ID TYPE="MEDICALRECORD" comment="" end="68" id="P2" start="61" text="7682941" />
+<NAME TYPE="DOCTOR" comment="" end="998" id="P4" start="981" text="William V. Geiger" />
+<NAME TYPE="DOCTOR" comment="" end="1013" id="P6" start="1010" text="xin" />
+<NAME TYPE="DOCTOR" comment="" end="1021" id="P7" start="1014" text="quilici" />
 </TAGS>
 </deIdi2b2>

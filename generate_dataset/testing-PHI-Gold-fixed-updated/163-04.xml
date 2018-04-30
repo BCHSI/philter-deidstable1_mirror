@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version='1.0' encoding='utf8'?>
 <deIdi2b2>
-<TEXT><![CDATA[
+<TEXT>
 
 
 Record date: 2083-11-01
@@ -183,27 +183,26 @@ DV: 11/01/83
 
 
 
-]]></TEXT>
+</TEXT>
 <TAGS>
-<DATE id="P0" start="16" end="26" text="2083-11-01" TYPE="DATE" comment="" />
-<LOCATION id="P1" start="30" end="57" text="Westwing Place Nursing Home" TYPE="HOSPITAL" comment="" />
-<LOCATION id="P2" start="59" end="76" text="144 Chablis Court" TYPE="STREET" comment="" />
-<NAME id="P3" start="112" end="126" text="GERALD, MARION" TYPE="PATIENT" comment="" />
-<LOCATION id="P4" start="128" end="132" text="Doha" TYPE="CITY" comment="" />
-<LOCATION id="P5" start="134" end="136" text="KY" TYPE="STATE" comment="" />
-<LOCATION id="P6" start="137" end="142" text="63216" TYPE="ZIP" comment="" />
-<ID id="P7" start="170" end="178" text="48967301" TYPE="MEDICALRECORD" comment="" />
-<CONTACT id="P8" start="180" end="194" text="(638) 074-1457" TYPE="PHONE" comment="" />
-<DATE id="P9" start="237" end="245" text="11/01/83" TYPE="DATE" comment="" />
-<CONTACT id="P10" start="247" end="261" text="(449) 515-0294" TYPE="PHONE" comment="" />
-<DATE id="P11" start="401" end="409" text="10/07/83" TYPE="DATE" comment="" />
-<NAME id="P12" start="1297" end="1305" text="Schaefer" TYPE="DOCTOR" comment="" />
-<NAME id="P13" start="2997" end="3005" text="Schaefer" TYPE="DOCTOR" comment="" />
-<NAME id="P14" start="3541" end="3557" text="E Xochil Higgins" TYPE="DOCTOR" comment="" />
-<NAME id="P15" start="3582" end="3598" text="E Xochil Higgins" TYPE="DOCTOR" comment="" />
-<ID id="P16" start="3624" end="3633" text="4-4587137" TYPE="IDNUM" comment="" />
-<DATE id="P17" start="3657" end="3665" text="11/01/83" TYPE="DATE" comment="" />
-<DATE id="P18" start="3671" end="3679" text="11/01/83" TYPE="DATE" comment="" />
-<DATE id="P19" start="3685" end="3693" text="11/01/83" TYPE="DATE" comment="" />
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2083-11-01" />
+<LOCATION TYPE="STREET" comment="" end="76" id="P2" start="59" text="144 Chablis Court" />
+<NAME TYPE="PATIENT" comment="" end="126" id="P3" start="112" text="GERALD, MARION" />
+<LOCATION TYPE="CITY" comment="" end="132" id="P4" start="128" text="Doha" />
+<LOCATION TYPE="STATE" comment="" end="136" id="P5" start="134" text="KY" />
+<LOCATION TYPE="ZIP" comment="" end="142" id="P6" start="137" text="63216" />
+<ID TYPE="MEDICALRECORD" comment="" end="178" id="P7" start="170" text="48967301" />
+<CONTACT TYPE="PHONE" comment="" end="194" id="P8" start="180" text="(638) 074-1457" />
+<DATE TYPE="DATE" comment="" end="245" id="P9" start="237" text="11/01/83" />
+<CONTACT TYPE="PHONE" comment="" end="261" id="P10" start="247" text="(449) 515-0294" />
+<DATE TYPE="DATE" comment="" end="409" id="P11" start="401" text="10/07/83" />
+<NAME TYPE="DOCTOR" comment="" end="1305" id="P12" start="1297" text="Schaefer" />
+<NAME TYPE="DOCTOR" comment="" end="3005" id="P13" start="2997" text="Schaefer" />
+<NAME TYPE="DOCTOR" comment="" end="3557" id="P14" start="3541" text="E Xochil Higgins" />
+<NAME TYPE="DOCTOR" comment="" end="3598" id="P15" start="3582" text="E Xochil Higgins" />
+<ID TYPE="IDNUM" comment="" end="3633" id="P16" start="3624" text="4-4587137" />
+<DATE TYPE="DATE" comment="" end="3665" id="P17" start="3657" text="11/01/83" />
+<DATE TYPE="DATE" comment="" end="3679" id="P18" start="3671" text="11/01/83" />
+<DATE TYPE="DATE" comment="" end="3693" id="P19" start="3685" text="11/01/83" />
 </TAGS>
 </deIdi2b2>

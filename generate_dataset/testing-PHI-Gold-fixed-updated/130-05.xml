@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version='1.0' encoding='utf8'?>
 <deIdi2b2>
-<TEXT><![CDATA[
+<TEXT>
 
 
 Record date: 2090-04-30
@@ -109,21 +109,19 @@ eScription document:5-52221754 FVQtwry
 
 
 
-]]></TEXT>
+</TEXT>
 <TAGS>
-<DATE id="P0" start="16" end="26" text="2090-04-30" TYPE="DATE" comment="" />
-<ID id="P1" start="36" end="44" text="83288425" TYPE="MEDICALRECORD" comment="" />
-<NAME id="P2" start="45" end="54" text="PAUL, MAE" TYPE="PATIENT" comment="" />
-<DATE id="P3" start="55" end="63" text="04/30/90" TYPE="DATE" comment="" />
-<NAME id="P4" start="64" end="78" text="CORTES, ODESSA" TYPE="DOCTOR" comment="" />
-<NAME id="P5" start="135" end="142" text="Peacock" TYPE="DOCTOR" comment="" />
-<AGE id="P6" start="435" end="437" text="78" TYPE="AGE" comment="" />
-<PROFESSION id="P8" start="1482" end="1489" text="surgeon" TYPE="PROFESSION" comment="" />
-<LOCATION id="P9" start="2307" end="2311" text="EHCC" TYPE="HOSPITAL" comment="" />
-<NAME id="P10" start="2508" end="2522" text="CORTES, ODESSA" TYPE="DOCTOR" comment="" />
-<DATE id="P11" start="2532" end="2540" text="04/30/90" TYPE="DATE" comment="" />
-<DATE id="P12" start="2545" end="2553" text="04/30/90" TYPE="DATE" comment="" />
-<NAME id="P13" start="2568" end="2582" text="CORTES, ODESSA" TYPE="DOCTOR" comment="" />
-<ID id="P14" start="2604" end="2622" text="5-52221754 FVQtwry" TYPE="IDNUM" comment="" />
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2090-04-30" />
+<ID TYPE="MEDICALRECORD" comment="" end="44" id="P1" start="36" text="83288425" />
+<NAME TYPE="PATIENT" comment="" end="54" id="P2" start="45" text="PAUL, MAE" />
+<DATE TYPE="DATE" comment="" end="63" id="P3" start="55" text="04/30/90" />
+<NAME TYPE="DOCTOR" comment="" end="78" id="P4" start="64" text="CORTES, ODESSA" />
+<NAME TYPE="DOCTOR" comment="" end="142" id="P5" start="135" text="Peacock" />
+<PROFESSION TYPE="PROFESSION" comment="" end="1489" id="P8" start="1482" text="surgeon" />
+<NAME TYPE="DOCTOR" comment="" end="2522" id="P10" start="2508" text="CORTES, ODESSA" />
+<DATE TYPE="DATE" comment="" end="2540" id="P11" start="2532" text="04/30/90" />
+<DATE TYPE="DATE" comment="" end="2553" id="P12" start="2545" text="04/30/90" />
+<NAME TYPE="DOCTOR" comment="" end="2582" id="P13" start="2568" text="CORTES, ODESSA" />
+<ID TYPE="IDNUM" comment="" end="2622" id="P14" start="2604" text="5-52221754 FVQtwry" />
 </TAGS>
 </deIdi2b2>

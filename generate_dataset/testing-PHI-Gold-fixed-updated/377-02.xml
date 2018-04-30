@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version='1.0' encoding='utf8'?>
 <deIdi2b2>
-<TEXT><![CDATA[
+<TEXT>
 
 
 Record date: 2064-09-10
@@ -11,7 +11,7 @@ Medical Record Number:  6557545, Quick, Isabelle.
 
 Procedure:  The patient is a 52 year old female scheduled for a right femoral popliteal BPG. Surgery is to be performed on 9/17/64, by Dr. Iyer.
 
-Chief Complaint & Present Illness: Patient has history of claudication within past year. She underwent a left ileofemoral  endarterectomy 1/63, and a right  right common femoral and external iliac endarterectomy with right fem-pop 4/63. She denies any relief with any previous procedures. She states she has to stop before walking 1 block due to pain in both legs R>L. Pain resolves with rest. 
+Chief Complaint &amp; Present Illness: Patient has history of claudication within past year. She underwent a left ileofemoral  endarterectomy 1/63, and a right  right common femoral and external iliac endarterectomy with right fem-pop 4/63. She denies any relief with any previous procedures. She states she has to stop before walking 1 block due to pain in both legs R&gt;L. Pain resolves with rest. 
 
 Past Medical History: 
 1. type 2 diabetes treated with metformin and Glyburide
@@ -77,7 +77,7 @@ Musculoskeletal:  No history of arthritis, muscle pain, joint pain, stiffness, g
 
 Neuro:History of right inner leg numbness.  No history of seizures, stroke,  TIAs, migraine, fainting, weakness, paralysis, tingling, tremors, or other involuntary movements.
 
-Peripheral Vascular: History of bilateral claudication R>L.  No history of DVT, varicosities, cramps, or ulcers.
+Peripheral Vascular: History of bilateral claudication R&gt;L.  No history of DVT, varicosities, cramps, or ulcers.
 
 Endocrine: History of type II diabetes (non insulin dependent) diagnosed 2 years ago. Checks BS regularly usually 150 -160 in am. No history of thyroid problems, heat or cold intolerance, excessive sweating,  excessive thirst    
 
@@ -124,8 +124,8 @@ Physical Exam:
 
     Neuro:         
       CNII:  Visual Acuity:  Able to read newspaper and see distances with glasses.  Visual fields full to confrontation.
-      CN III, IV, and VI, : EOMs intact, parallel, no ptosis.  PERRLA&A.
-      CN V & VII: Intact. Temporal and masseter muscle contractions equal  in symmetry and strength.  Equal sensation to sharp stimulus to forehead, cheek, and jaws.
+      CN III, IV, and VI, : EOMs intact, parallel, no ptosis.  PERRLA&amp;A.
+      CN V &amp; VII: Intact. Temporal and masseter muscle contractions equal  in symmetry and strength.  Equal sensation to sharp stimulus to forehead, cheek, and jaws.
       CNVIII: Intact. No loss of hearing to either ear via whisper test.
       CN IX, X:  Intact.  Voice without hoarseness or nasal quality.  Uvula midline.
       CN XI:  Intact. Equal strength and contraction to trapezii and sternomastoid muscle.
@@ -163,13 +163,13 @@ Last signed by: RICO,HELEN U.,RNC on 09/10/2064 at 09:21
   9. Amitriptyline Hcl  50 MG PO QHS
  10. Therapeutic Multivitamins (Multivitamin Therapeutic)  1 TAB PO QHS
  11. Acetylsalicylic Acid (Aspirin)  81 MG PO QAM
-          Medications to be held on day of surgery: <>
-          Diabetic Medications: <>
+          Medications to be held on day of surgery: &lt;&gt;
+          Diabetic Medications: &lt;&gt;
           NSAIDS: Avoid for three days prior to surgery
           Aspirin:  Avoid for one week prior to surgery.
-          NPO: <>
+          NPO: &lt;&gt;
 
-Ancillary Studies: <>
+Ancillary Studies: &lt;&gt;
 
 
 
@@ -185,40 +185,32 @@ ___________________________________________________________________
 
 
 
-]]></TEXT>
+</TEXT>
 <TAGS>
-<DATE id="P0" start="16" end="26" text="2064-09-10" TYPE="DATE" comment="" />
-<DATE id="P1" start="36" end="43" text="9/10/64" TYPE="DATE" comment="" />
-<ID id="P2" start="78" end="85" text="6557545" TYPE="MEDICALRECORD" comment="" />
-<NAME id="P3" start="87" end="102" text="Quick, Isabelle" TYPE="PATIENT" comment="" />
-<AGE id="P4" start="134" end="136" text="52" TYPE="AGE" comment="" />
-<DATE id="P5" start="228" end="235" text="9/17/64" TYPE="DATE" comment="" />
-<NAME id="P6" start="244" end="248" text="Iyer" TYPE="DOCTOR" comment="" />
-<DATE id="P7" start="389" end="393" text="1/63" TYPE="DATE" comment="" />
-<DATE id="P8" start="482" end="486" text="4/63" TYPE="DATE" comment="" />
-<DATE id="P9" start="820" end="835" text="January of 2063" TYPE="DATE" comment="" />
-<DATE id="P10" start="949" end="962" text="April of 2063" TYPE="DATE" comment="" />
-<DATE id="P11" start="1142" end="1150" text="10/09/63" TYPE="DATE" comment="" />
-<DATE id="P12" start="1268" end="1272" text="2061" TYPE="DATE" comment="" />
-<NAME id="P13" start="1450" end="1466" text="QUICK,ISABELLE Y" TYPE="PATIENT" comment="" />
-<ID id="P14" start="1468" end="1475" text="6557545" TYPE="MEDICALRECORD" comment="" />
-<LOCATION id="P15" start="1477" end="1481" text="ATCH" TYPE="HOSPITAL" comment="" />
-<AGE id="P16" start="1483" end="1485" text="52" TYPE="AGE" comment="" />
-<NAME id="P17" start="1505" end="1517" text="RICO,HELEN U" TYPE="DOCTOR" comment="" />
-<DATE id="P18" start="1526" end="1536" text="09/10/2064" TYPE="DATE" comment="" />
-<DATE id="P19" start="1705" end="1715" text="09/10/2064" TYPE="DATE" comment="" />
-<DATE id="P20" start="2939" end="2945" text="9/8/64" TYPE="DATE" comment="" />
-<AGE id="P21" start="7329" end="7331" text="52" TYPE="AGE" comment="" />
-<LOCATION id="P22" start="7566" end="7584" text="Hospital Lafayette" TYPE="HOSPITAL" comment="" />
-<LOCATION id="P23" start="7586" end="7597" text="Platteville" TYPE="CITY" comment="" />
-<LOCATION id="P24" start="7599" end="7601" text="Hi" TYPE="STATE" comment="" />
-<NAME id="P25" start="7992" end="8008" text="QUICK,ISABELLE Y" TYPE="PATIENT" comment="" />
-<ID id="P26" start="8010" end="8017" text="6557545" TYPE="MEDICALRECORD" comment="" />
-<LOCATION id="P27" start="8019" end="8023" text="ATCH" TYPE="HOSPITAL" comment="" />
-<AGE id="P28" start="8025" end="8027" text="52" TYPE="AGE" comment="" />
-<NAME id="P29" start="8047" end="8059" text="RICO,HELEN U" TYPE="DOCTOR" comment="" />
-<DATE id="P30" start="8068" end="8078" text="09/10/2064" TYPE="DATE" comment="" />
-<DATE id="P31" start="8247" end="8257" text="09/10/2064" TYPE="DATE" comment="" />
-<NAME id="P32" start="8882" end="8892" text="Helen Rico" TYPE="DOCTOR" comment="" />
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2064-09-10" />
+<DATE TYPE="DATE" comment="" end="43" id="P1" start="36" text="9/10/64" />
+<ID TYPE="MEDICALRECORD" comment="" end="85" id="P2" start="78" text="6557545" />
+<NAME TYPE="PATIENT" comment="" end="102" id="P3" start="87" text="Quick, Isabelle" />
+<DATE TYPE="DATE" comment="" end="235" id="P5" start="228" text="9/17/64" />
+<NAME TYPE="DOCTOR" comment="" end="248" id="P6" start="244" text="Iyer" />
+<DATE TYPE="DATE" comment="" end="393" id="P7" start="389" text="1/63" />
+<DATE TYPE="DATE" comment="" end="486" id="P8" start="482" text="4/63" />
+<DATE TYPE="DATE" comment="" end="835" id="P9" start="820" text="January of 2063" />
+<DATE TYPE="DATE" comment="" end="962" id="P10" start="949" text="April of 2063" />
+<DATE TYPE="DATE" comment="" end="1150" id="P11" start="1142" text="10/09/63" />
+<NAME TYPE="PATIENT" comment="" end="1466" id="P13" start="1450" text="QUICK,ISABELLE Y" />
+<ID TYPE="MEDICALRECORD" comment="" end="1475" id="P14" start="1468" text="6557545" />
+<NAME TYPE="DOCTOR" comment="" end="1517" id="P17" start="1505" text="RICO,HELEN U" />
+<DATE TYPE="DATE" comment="" end="1536" id="P18" start="1526" text="09/10/2064" />
+<DATE TYPE="DATE" comment="" end="1715" id="P19" start="1705" text="09/10/2064" />
+<DATE TYPE="DATE" comment="" end="2945" id="P20" start="2939" text="9/8/64" />
+<LOCATION TYPE="CITY" comment="" end="7597" id="P23" start="7586" text="Platteville" />
+<LOCATION TYPE="STATE" comment="" end="7601" id="P24" start="7599" text="Hi" />
+<NAME TYPE="PATIENT" comment="" end="8008" id="P25" start="7992" text="QUICK,ISABELLE Y" />
+<ID TYPE="MEDICALRECORD" comment="" end="8017" id="P26" start="8010" text="6557545" />
+<NAME TYPE="DOCTOR" comment="" end="8059" id="P29" start="8047" text="RICO,HELEN U" />
+<DATE TYPE="DATE" comment="" end="8078" id="P30" start="8068" text="09/10/2064" />
+<DATE TYPE="DATE" comment="" end="8257" id="P31" start="8247" text="09/10/2064" />
+<NAME TYPE="DOCTOR" comment="" end="8892" id="P32" start="8882" text="Helen Rico" />
 </TAGS>
 </deIdi2b2>

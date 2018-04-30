@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version='1.0' encoding='utf8'?>
 <deIdi2b2>
-<TEXT><![CDATA[
+<TEXT>
 
 
 Record date: 2080-07-19
@@ -95,22 +95,19 @@ Dictated by:  RUTH R. PALMER, M.D.     RP11
 
 
 
-]]></TEXT>
+</TEXT>
 <TAGS>
-<DATE id="P0" start="16" end="26" text="2080-07-19" TYPE="DATE" comment="" />
-<LOCATION id="P1" start="49" end="52" text="MHC" TYPE="HOSPITAL" comment="" />
-<NAME id="P2" start="78" end="90" text="ORTA,PHIL F." TYPE="PATIENT" comment="" />
-<ID id="P3" start="93" end="104" text="559-31-51-6" TYPE="MEDICALRECORD" comment="" />
-<DATE id="P4" start="131" end="139" text="07/19/80" TYPE="DATE" comment="" />
-<NAME id="P5" start="197" end="203" text="Palmer" TYPE="DOCTOR" comment="" />
-<AGE id="P6" start="313" end="315" text="57" TYPE="AGE" comment="" />
-<DATE id="P7" start="892" end="896" text="2063" TYPE="DATE" comment="" />
-<ID id="P8" start="2211" end="2222" text="EO166/60228" TYPE="IDNUM" comment="" />
-<NAME id="P9" start="2225" end="2239" text="RUTH R. PALMER" TYPE="DOCTOR" comment="" />
-<NAME id="P10" start="2250" end="2254" text="RP11" TYPE="USERNAME" comment="" />
-<DATE id="P11" start="2278" end="2286" text="07/19/80" TYPE="DATE" comment="" />
-<DATE id="P12" start="2346" end="2354" text="07/20/80" TYPE="DATE" comment="" />
-<NAME id="P13" start="2371" end="2385" text="RUTH R. PALMER" TYPE="DOCTOR" comment="" />
-<NAME id="P14" start="2396" end="2400" text="RP11" TYPE="USERNAME" comment="" />
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2080-07-19" />
+<NAME TYPE="PATIENT" comment="" end="90" id="P2" start="78" text="ORTA,PHIL F." />
+<ID TYPE="MEDICALRECORD" comment="" end="104" id="P3" start="93" text="559-31-51-6" />
+<DATE TYPE="DATE" comment="" end="139" id="P4" start="131" text="07/19/80" />
+<NAME TYPE="DOCTOR" comment="" end="203" id="P5" start="197" text="Palmer" />
+<ID TYPE="IDNUM" comment="" end="2222" id="P8" start="2211" text="EO166/60228" />
+<NAME TYPE="DOCTOR" comment="" end="2239" id="P9" start="2225" text="RUTH R. PALMER" />
+<NAME TYPE="USERNAME" comment="" end="2254" id="P10" start="2250" text="RP11" />
+<DATE TYPE="DATE" comment="" end="2286" id="P11" start="2278" text="07/19/80" />
+<DATE TYPE="DATE" comment="" end="2354" id="P12" start="2346" text="07/20/80" />
+<NAME TYPE="DOCTOR" comment="" end="2385" id="P13" start="2371" text="RUTH R. PALMER" />
+<NAME TYPE="USERNAME" comment="" end="2400" id="P14" start="2396" text="RP11" />
 </TAGS>
 </deIdi2b2>

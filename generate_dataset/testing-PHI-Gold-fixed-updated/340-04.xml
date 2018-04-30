@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version='1.0' encoding='utf8'?>
 <deIdi2b2>
-<TEXT><![CDATA[
+<TEXT>
 
 
 Record date: 2078-06-22
@@ -135,15 +135,14 @@ Charles Craig Max Zavaleta, M.D.
 
 
 
-]]></TEXT>
+</TEXT>
 <TAGS>
-<DATE id="P0" start="16" end="26" text="2078-06-22" TYPE="DATE" comment="" />
-<NAME id="P1" start="97" end="105" text="XIA,JEAN" TYPE="PATIENT" comment="" />
-<ID id="P2" start="109" end="117" text="58269151" TYPE="MEDICALRECORD" comment="" />
-<LOCATION id="P3" start="118" end="128" text="PROMPTCARE" TYPE="HOSPITAL" comment="" />
-<DATE id="P4" start="206" end="216" text="06/22/2078" TYPE="DATE" comment="" />
-<DATE id="P5" start="1346" end="1354" text="11/11/76" TYPE="DATE" comment="" />
-<NAME id="P6" start="1503" end="1509" text="osburn" TYPE="DOCTOR" comment="" />
-<NAME id="P7" start="2788" end="2814" text="Charles Craig Max Zavaleta" TYPE="DOCTOR" comment="" />
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2078-06-22" />
+<NAME TYPE="PATIENT" comment="" end="105" id="P1" start="97" text="XIA,JEAN" />
+<ID TYPE="MEDICALRECORD" comment="" end="117" id="P2" start="109" text="58269151" />
+<DATE TYPE="DATE" comment="" end="216" id="P4" start="206" text="06/22/2078" />
+<DATE TYPE="DATE" comment="" end="1354" id="P5" start="1346" text="11/11/76" />
+<NAME TYPE="DOCTOR" comment="" end="1509" id="P6" start="1503" text="osburn" />
+<NAME TYPE="DOCTOR" comment="" end="2814" id="P7" start="2788" text="Charles Craig Max Zavaleta" />
 </TAGS>
 </deIdi2b2>

@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version='1.0' encoding='utf8'?>
 <deIdi2b2>
-<TEXT><![CDATA[
+<TEXT>
 
 
 Record date: 2084-01-10
@@ -135,13 +135,13 @@ f/u 3 mos, sooner as needed.
 
 
 
-]]></TEXT>
+</TEXT>
 <TAGS>
-<DATE id="P0" start="16" end="26" text="2084-01-10" TYPE="DATE" comment="" />
-<NAME id="P1" start="90" end="96" text="Marion" TYPE="PATIENT" comment="" />
-<NAME id="P2" start="134" end="142" text="Schaefer" TYPE="DOCTOR" comment="" />
-<DATE id="P3" start="150" end="158" text="December" TYPE="DATE" comment="" />
-<DATE id="P4" start="488" end="502" text="New Year's Eve" TYPE="DATE" comment="" />
-<NAME id="P5" start="2084" end="2092" text="Schaefer" TYPE="DOCTOR" comment="" />
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2084-01-10" />
+<NAME TYPE="PATIENT" comment="" end="96" id="P1" start="90" text="Marion" />
+<NAME TYPE="DOCTOR" comment="" end="142" id="P2" start="134" text="Schaefer" />
+<DATE TYPE="DATE" comment="" end="158" id="P3" start="150" text="December" />
+<DATE TYPE="DATE" comment="" end="502" id="P4" start="488" text="New Year's Eve" />
+<NAME TYPE="DOCTOR" comment="" end="2092" id="P5" start="2084" text="Schaefer" />
 </TAGS>
 </deIdi2b2>

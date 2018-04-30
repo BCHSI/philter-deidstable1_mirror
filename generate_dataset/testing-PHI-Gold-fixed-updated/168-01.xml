@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version='1.0' encoding='utf8'?>
 <deIdi2b2>
-<TEXT><![CDATA[
+<TEXT>
 
 
 Record date: 2070-04-23
@@ -35,7 +35,7 @@ Procedure:  The patient is a 51 year old male scheduled for AV fistula left fore
 
 
 
-Chief Complaint & Present Illness:  chronic renal failure secondary to diabetes-4/19 creatinine 2.9, BUN 69, potassium 3.5.  Patient has been troubled recently by increasing fatigue and shortness of breath-no PND, but has peripheral edema.
+Chief Complaint &amp; Present Illness:  chronic renal failure secondary to diabetes-4/19 creatinine 2.9, BUN 69, potassium 3.5.  Patient has been troubled recently by increasing fatigue and shortness of breath-no PND, but has peripheral edema.
 
 
 
@@ -87,7 +87,7 @@ Gastrointestinal: positive reflux
 
 Hematological:   anemia-hematocrit 31.7, WBC 11.5,platelets 549,000  4/23/70
 
-Endocrine/metabolic: diabetes for the past 37 years-always on insulin-blood sugar 141 this a.m.[120-> 200] 
+Endocrine/metabolic: diabetes for the past 37 years-always on insulin-blood sugar 141 this a.m.[120-&gt; 200] 
 
 Musculoskeletal/Skin: weakness of hands
 
@@ -121,7 +121,7 @@ Exam:
 
 
 
-HEEN&T:  good range of motion, no bruits
+HEEN&amp;T:  good range of motion, no bruits
 
 Airway:  Mallampatti Class II
 
@@ -183,23 +183,21 @@ Traci Mills, M.D.
 
 
 
-]]></TEXT>
+</TEXT>
 <TAGS>
-<DATE id="P0" start="16" end="26" text="2070-04-23" TYPE="DATE" comment="" />
-<LOCATION id="P1" start="28" end="54" text="Stephens Memorial Hospital" TYPE="HOSPITAL" comment="" />
-<NAME id="P3" start="100" end="114" text="Traci Y. Mills" TYPE="DOCTOR" comment="" />
-<DATE id="P4" start="156" end="170" text="April 23, 2070" TYPE="DATE" comment="" />
-<ID id="P5" start="198" end="205" text="0189233" TYPE="MEDICALRECORD" comment="" />
-<NAME id="P6" start="206" end="218" text="Victor Lujan" TYPE="PATIENT" comment="" />
-<AGE id="P7" start="251" end="253" text="51" TYPE="AGE" comment="" />
-<DATE id="P8" start="332" end="339" text="4/30/70" TYPE="DATE" comment="" />
-<DATE id="P9" start="424" end="428" text="4/19" TYPE="DATE" comment="" />
-<DATE id="P10" start="1564" end="1568" text="3/69" TYPE="DATE" comment="" />
-<DATE id="P11" start="1641" end="1645" text="3/66" TYPE="DATE" comment="" />
-<DATE id="P12" start="1716" end="1720" text="3/70" TYPE="DATE" comment="" />
-<DATE id="P13" start="1768" end="1772" text="4/21" TYPE="DATE" comment="" />
-<DATE id="P14" start="2072" end="2079" text="4/23/70" TYPE="DATE" comment="" />
-<NAME id="P15" start="2691" end="2698" text="Elliott" TYPE="DOCTOR" comment="" />
-<NAME id="P16" start="3308" end="3319" text="Traci Mills" TYPE="DOCTOR" comment="" />
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2070-04-23" />
+<NAME TYPE="DOCTOR" comment="" end="114" id="P3" start="100" text="Traci Y. Mills" />
+<DATE TYPE="DATE" comment="" end="170" id="P4" start="156" text="April 23, 2070" />
+<ID TYPE="MEDICALRECORD" comment="" end="205" id="P5" start="198" text="0189233" />
+<NAME TYPE="PATIENT" comment="" end="218" id="P6" start="206" text="Victor Lujan" />
+<DATE TYPE="DATE" comment="" end="339" id="P8" start="332" text="4/30/70" />
+<DATE TYPE="DATE" comment="" end="428" id="P9" start="424" text="4/19" />
+<DATE TYPE="DATE" comment="" end="1568" id="P10" start="1564" text="3/69" />
+<DATE TYPE="DATE" comment="" end="1645" id="P11" start="1641" text="3/66" />
+<DATE TYPE="DATE" comment="" end="1720" id="P12" start="1716" text="3/70" />
+<DATE TYPE="DATE" comment="" end="1772" id="P13" start="1768" text="4/21" />
+<DATE TYPE="DATE" comment="" end="2079" id="P14" start="2072" text="4/23/70" />
+<NAME TYPE="DOCTOR" comment="" end="2698" id="P15" start="2691" text="Elliott" />
+<NAME TYPE="DOCTOR" comment="" end="3319" id="P16" start="3308" text="Traci Mills" />
 </TAGS>
 </deIdi2b2>

@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version='1.0' encoding='utf8'?>
 <deIdi2b2>
-<TEXT><![CDATA[
+<TEXT>
 
 
 Record date: 2078-05-08
@@ -18,7 +18,7 @@ HPI: Ms. Hendricks is a 52yoF with a history of PVD and non-healing wounds of th
 PMHx: PVD, HTN, Hypercholesterolemia
 PSHx: Right fem-pop bypass 2066, Left fem-dp bypass 2066, redo left fem-pt bypass 5/3/78.
 Meds: Tylenol, ASA, Vitamin C, Atenolol, Lipitor, Colace, Folic Acid, Lactulose, Milk of Magnesia, Oxycodone, Valsartan
-All: Percocet-&gt;nausea
+All: Percocet-&amp;gt;nausea
 SHx: Denies any recent etoh/ivda/tob
 
 
@@ -54,24 +54,20 @@ Xavier G. England, MD, EdM      #15725
 
 
 
-]]></TEXT>
+</TEXT>
 <TAGS>
-<DATE id="P0" start="16" end="26" text="2078-05-08" TYPE="DATE" comment="" />
-<DATE id="P1" start="75" end="81" text="5/8/78" TYPE="DATE" comment="" />
-<NAME id="P2" start="151" end="168" text="Hendricks, Hannah" TYPE="PATIENT" comment="" />
-<ID id="P3" start="174" end="182" text="75322175" TYPE="MEDICALRECORD" comment="" />
-<NAME id="P4" start="193" end="210" text="Xavier G. England" TYPE="DOCTOR" comment="" />
-<NAME id="P5" start="235" end="250" text="Hunter Ishikawa" TYPE="DOCTOR" comment="" />
-<NAME id="P6" start="343" end="352" text="Hendricks" TYPE="PATIENT" comment="" />
-<AGE id="P7" start="358" end="360" text="52" TYPE="AGE" comment="" />
-<DATE id="P8" start="473" end="479" text="5/3/78" TYPE="DATE" comment="" />
-<DATE id="P9" start="1064" end="1068" text="2066" TYPE="DATE" comment="" />
-<DATE id="P10" start="1089" end="1093" text="2066" TYPE="DATE" comment="" />
-<DATE id="P11" start="1119" end="1125" text="5/3/78" TYPE="DATE" comment="" />
-<AGE id="P12" start="1800" end="1802" text="52" TYPE="AGE" comment="" />
-<NAME id="P13" start="2172" end="2180" text="Ishikawa" TYPE="DOCTOR" comment="" />
-<NAME id="P14" start="2369" end="2381" text="Casey Iacono" TYPE="DOCTOR" comment="" />
-<NAME id="P16" start="2451" end="2468" text="Xavier G. England" TYPE="DOCTOR" comment="" />
-<CONTACT id="P17" start="2484" end="2489" text="15725" TYPE="PHONE" comment="" />
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2078-05-08" />
+<DATE TYPE="DATE" comment="" end="81" id="P1" start="75" text="5/8/78" />
+<NAME TYPE="PATIENT" comment="" end="168" id="P2" start="151" text="Hendricks, Hannah" />
+<ID TYPE="MEDICALRECORD" comment="" end="182" id="P3" start="174" text="75322175" />
+<NAME TYPE="DOCTOR" comment="" end="210" id="P4" start="193" text="Xavier G. England" />
+<NAME TYPE="DOCTOR" comment="" end="250" id="P5" start="235" text="Hunter Ishikawa" />
+<NAME TYPE="PATIENT" comment="" end="352" id="P6" start="343" text="Hendricks" />
+<DATE TYPE="DATE" comment="" end="479" id="P8" start="473" text="5/3/78" />
+<DATE TYPE="DATE" comment="" end="1125" id="P11" start="1119" text="5/3/78" />
+<NAME TYPE="DOCTOR" comment="" end="2180" id="P13" start="2172" text="Ishikawa" />
+<NAME TYPE="DOCTOR" comment="" end="2381" id="P14" start="2369" text="Casey Iacono" />
+<NAME TYPE="DOCTOR" comment="" end="2468" id="P16" start="2451" text="Xavier G. England" />
+<CONTACT TYPE="PHONE" comment="" end="2489" id="P17" start="2484" text="15725" />
 </TAGS>
 </deIdi2b2>

@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version='1.0' encoding='utf8'?>
 <deIdi2b2>
-<TEXT><![CDATA[
+<TEXT>
 
 
 Record date: 2092-05-06
@@ -93,30 +93,23 @@ TL:95468     :423
 
 
 
-]]></TEXT>
+</TEXT>
 <TAGS>
-<DATE id="P0" start="16" end="26" text="2092-05-06" TYPE="DATE" comment="" />
-<NAME id="P1" start="42" end="56" text="WILHELM, GOLDY" TYPE="PATIENT" comment="" />
-<ID id="P2" start="64" end="71" text="9543443" TYPE="MEDICALRECORD" comment="" />
-<DATE id="P3" start="86" end="96" text="05/06/2092" TYPE="DATE" comment="" />
-<NAME id="P4" start="100" end="115" text="EDWARD XAYASANE" TYPE="DOCTOR" comment="" />
-<NAME id="P5" start="221" end="228" text="Wilhelm" TYPE="PATIENT" comment="" />
-<AGE id="P6" start="234" end="236" text="68" TYPE="AGE" comment="" />
-<DATE id="P7" start="1342" end="1352" text="April 2092" TYPE="DATE" comment="" />
-<DATE id="P8" start="1578" end="1582" text="2091" TYPE="DATE" comment="" />
-<PROFESSION id="P9" start="2235" end="2245" text="Head Nurse" TYPE="PROFESSION" comment="" />
-<LOCATION id="P10" start="2260" end="2283" text="The Library Corporation" TYPE="ORGANIZATION" comment="" />
-<AGE id="P11" start="2534" end="2536" text="51" TYPE="AGE" comment="" />
-<AGE id="P12" start="2538" end="2540" text="50" TYPE="AGE" comment="" />
-<AGE id="P13" start="2542" end="2544" text="48" TYPE="AGE" comment="" />
-<AGE id="P14" start="2550" end="2552" text="46" TYPE="AGE" comment="" />
-<AGE id="P15" start="2680" end="2682" text="59" TYPE="AGE" comment="" />
-<NAME id="P16" start="5063" end="5071" text="Xayasane" TYPE="DOCTOR" comment="" />
-<NAME id="P17" start="5148" end="5163" text="Edward Xayasane" TYPE="DOCTOR" comment="" />
-<NAME id="P18" start="5177" end="5192" text="David Utterback" TYPE="DOCTOR" comment="" />
-<DATE id="P19" start="5205" end="5215" text="05/06/2092" TYPE="DATE" comment="" />
-<DATE id="P20" start="5221" end="5231" text="05/09/2092" TYPE="DATE" comment="" />
-<ID id="P21" start="5237" end="5242" text="95468" TYPE="IDNUM" comment="" />
-<ID id="P22" start="5248" end="5251" text="423" TYPE="IDNUM" comment="" />
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2092-05-06" />
+<NAME TYPE="PATIENT" comment="" end="56" id="P1" start="42" text="WILHELM, GOLDY" />
+<ID TYPE="MEDICALRECORD" comment="" end="71" id="P2" start="64" text="9543443" />
+<DATE TYPE="DATE" comment="" end="96" id="P3" start="86" text="05/06/2092" />
+<NAME TYPE="DOCTOR" comment="" end="115" id="P4" start="100" text="EDWARD XAYASANE" />
+<NAME TYPE="PATIENT" comment="" end="228" id="P5" start="221" text="Wilhelm" />
+<DATE TYPE="DATE" comment="" end="1352" id="P7" start="1342" text="April 2092" />
+<PROFESSION TYPE="PROFESSION" comment="" end="2245" id="P9" start="2235" text="Head Nurse" />
+<LOCATION TYPE="ORGANIZATION" comment="" end="2283" id="P10" start="2260" text="The Library Corporation" />
+<NAME TYPE="DOCTOR" comment="" end="5071" id="P16" start="5063" text="Xayasane" />
+<NAME TYPE="DOCTOR" comment="" end="5163" id="P17" start="5148" text="Edward Xayasane" />
+<NAME TYPE="DOCTOR" comment="" end="5192" id="P18" start="5177" text="David Utterback" />
+<DATE TYPE="DATE" comment="" end="5215" id="P19" start="5205" text="05/06/2092" />
+<DATE TYPE="DATE" comment="" end="5231" id="P20" start="5221" text="05/09/2092" />
+<ID TYPE="IDNUM" comment="" end="5242" id="P21" start="5237" text="95468" />
+<ID TYPE="IDNUM" comment="" end="5251" id="P22" start="5248" text="423" />
 </TAGS>
 </deIdi2b2>

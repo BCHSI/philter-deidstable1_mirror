@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version='1.0' encoding='utf8'?>
 <deIdi2b2>
-<TEXT><![CDATA[
+<TEXT>
 
 
 Record date: 2094-04-16
@@ -203,7 +203,7 @@ ECG: On floor, NSR w/ poor R wave progression (Q waves in V1 an dV2, TWI III), i
 
 Chest xray: Clear
 
-Assessment & Plan
+Assessment &amp; Plan
 83 y/o man with known CAD, diabetes, hypertension, hyperlipidemia who presents with near syncope, as well as vomiting. Certainly in someone with known CAD, cardiogenic near-syncope is most concerning, namely, MI, with atypical features. However, his EKG is unchanged, his troponins are negative, and he never had chest pain. Perhaps his light-headedness is secondary to bradycardia, as his heart rate has been in the 50s and 60s. However, I think the most likely explanation is that he has a bit of gastroenteritis, was dehydrated, and had a vasovagal response in the setting of exertion. It is worth checking orthostatics given his rigorous blood pressure regimen. There is nothing to suggest seizure or other neurologic etiologies given his story.
 
 Syncope: Stable, no longer feeling dizzy or nauseated
@@ -228,65 +228,43 @@ Kimberly Ring, PGY 1, 59907
 
 
 
-]]></TEXT>
+</TEXT>
 <TAGS>
-<DATE id="P0" start="16" end="26" text="2094-04-16" TYPE="DATE" comment="" />
-<NAME id="P2" start="70" end="87" text="Crawford, Patrick" TYPE="PATIENT" comment="" />
-<ID id="P3" start="94" end="101" text="9021555" TYPE="MEDICALRECORD" comment="" />
-<DATE id="P4" start="121" end="129" text="04.15.94" TYPE="DATE" comment="" />
-<NAME id="P5" start="136" end="149" text="Ehlers, Willa" TYPE="DOCTOR" comment="" />
-<NAME id="P6" start="186" end="199" text="Kimberly Ring" TYPE="DOCTOR" comment="" />
-<AGE id="P7" start="205" end="207" text="83" TYPE="AGE" comment="" />
-<AGE id="P8" start="266" end="268" text="83" TYPE="AGE" comment="" />
-<NAME id="P9" start="314" end="321" text="Youmans" TYPE="DOCTOR" comment="" />
-<DATE id="P10" start="461" end="469" text="Saturday" TYPE="DATE" comment="" />
-<DATE id="P11" start="1092" end="1096" text="2092" TYPE="DATE" comment="" />
-<DATE id="P12" start="1920" end="1925" text="10/92" TYPE="DATE" comment="" />
-<NAME id="P13" start="2311" end="2318" text="Youmans" TYPE="DOCTOR" comment="" />
-<DATE id="P14" start="2372" end="2376" text="2092" TYPE="DATE" comment="" />
-<DATE id="P15" start="2519" end="2523" text="2080" TYPE="DATE" comment="" />
-<DATE id="P16" start="2740" end="2746" text="8/2090" TYPE="DATE" comment="" />
-<DATE id="P17" start="2885" end="2892" text="10/2090" TYPE="DATE" comment="" />
-<LOCATION id="P18" start="2991" end="2994" text="SOH" TYPE="HOSPITAL" comment="" />
-<DATE id="P19" start="3063" end="3067" text="2072" TYPE="DATE" comment="" />
-<DATE id="P20" start="3148" end="3152" text="2086" TYPE="DATE" comment="" />
-<DATE id="P21" start="3286" end="3290" text="6/85" TYPE="DATE" comment="" />
-<PROFESSION id="P22" start="3945" end="3958" text="army corporal" TYPE="PROFESSION" comment="" />
-<PROFESSION id="P23" start="4008" end="4014" text="design" TYPE="PROFESSION" comment="" />
-<AGE id="P24" start="4034" end="4036" text="62" TYPE="AGE" comment="" />
-<NAME id="P25" start="4809" end="4828" text="CRAWFORD, PATRICK P" TYPE="PATIENT" comment="" />
-<LOCATION id="P26" start="4841" end="4844" text="SOH" TYPE="HOSPITAL" comment="" />
-<DATE id="P27" start="4863" end="4871" text="04/14/94" TYPE="DATE" comment="" />
-<NAME id="P28" start="5377" end="5396" text="CRAWFORD, PATRICK P" TYPE="PATIENT" comment="" />
-<LOCATION id="P29" start="5409" end="5412" text="SOH" TYPE="HOSPITAL" comment="" />
-<DATE id="P30" start="5431" end="5439" text="04/14/94" TYPE="DATE" comment="" />
-<NAME id="P31" start="6011" end="6030" text="CRAWFORD, PATRICK P" TYPE="PATIENT" comment="" />
-<LOCATION id="P32" start="6043" end="6046" text="SOH" TYPE="HOSPITAL" comment="" />
-<DATE id="P33" start="6065" end="6073" text="04/14/94" TYPE="DATE" comment="" />
-<NAME id="P34" start="6447" end="6466" text="CRAWFORD, PATRICK P" TYPE="PATIENT" comment="" />
-<LOCATION id="P35" start="6479" end="6482" text="SOH" TYPE="HOSPITAL" comment="" />
-<LOCATION id="P36" start="6490" end="6493" text="SOH" TYPE="HOSPITAL" comment="" />
-<LOCATION id="P37" start="6501" end="6504" text="SOH" TYPE="HOSPITAL" comment="" />
-<LOCATION id="P38" start="6512" end="6515" text="SOH" TYPE="HOSPITAL" comment="" />
-<DATE id="P39" start="6534" end="6542" text="04/15/94" TYPE="DATE" comment="" />
-<DATE id="P40" start="6545" end="6553" text="04/15/94" TYPE="DATE" comment="" />
-<DATE id="P41" start="6556" end="6564" text="04/14/94" TYPE="DATE" comment="" />
-<DATE id="P42" start="6567" end="6575" text="04/14/94" TYPE="DATE" comment="" />
-<NAME id="P43" start="6850" end="6869" text="CRAWFORD, PATRICK P" TYPE="PATIENT" comment="" />
-<LOCATION id="P44" start="6882" end="6885" text="SOH" TYPE="HOSPITAL" comment="" />
-<DATE id="P45" start="6904" end="6912" text="04/14/94" TYPE="DATE" comment="" />
-<NAME id="P46" start="8607" end="8626" text="CRAWFORD, PATRICK P" TYPE="PATIENT" comment="" />
-<LOCATION id="P47" start="8639" end="8642" text="SOH" TYPE="HOSPITAL" comment="" />
-<DATE id="P48" start="8661" end="8669" text="04/14/94" TYPE="DATE" comment="" />
-<NAME id="P49" start="8911" end="8930" text="CRAWFORD, PATRICK P" TYPE="PATIENT" comment="" />
-<LOCATION id="P50" start="8943" end="8946" text="SOH" TYPE="HOSPITAL" comment="" />
-<LOCATION id="P51" start="8954" end="8957" text="SOH" TYPE="HOSPITAL" comment="" />
-<DATE id="P52" start="8976" end="8984" text="04/14/94" TYPE="DATE" comment="" />
-<DATE id="P53" start="8987" end="8995" text="04/14/94" TYPE="DATE" comment="" />
-<AGE id="P54" start="10047" end="10049" text="83" TYPE="AGE" comment="" />
-<NAME id="P55" start="11003" end="11010" text="Youmans" TYPE="DOCTOR" comment="" />
-<NAME id="P56" start="11135" end="11142" text="Youmans" TYPE="DOCTOR" comment="" />
-<NAME id="P57" start="11498" end="11511" text="Kimberly Ring" TYPE="DOCTOR" comment="" />
-<CONTACT id="P58" start="11520" end="11525" text="59907" TYPE="PHONE" comment="" />
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2094-04-16" />
+<NAME TYPE="PATIENT" comment="" end="87" id="P2" start="70" text="Crawford, Patrick" />
+<ID TYPE="MEDICALRECORD" comment="" end="101" id="P3" start="94" text="9021555" />
+<DATE TYPE="DATE" comment="" end="129" id="P4" start="121" text="04.15.94" />
+<NAME TYPE="DOCTOR" comment="" end="149" id="P5" start="136" text="Ehlers, Willa" />
+<NAME TYPE="DOCTOR" comment="" end="199" id="P6" start="186" text="Kimberly Ring" />
+<NAME TYPE="DOCTOR" comment="" end="321" id="P9" start="314" text="Youmans" />
+<DATE TYPE="DATE" comment="" end="1925" id="P12" start="1920" text="10/92" />
+<NAME TYPE="DOCTOR" comment="" end="2318" id="P13" start="2311" text="Youmans" />
+<DATE TYPE="DATE" comment="" end="2746" id="P16" start="2740" text="8/2090" />
+<DATE TYPE="DATE" comment="" end="2892" id="P17" start="2885" text="10/2090" />
+<DATE TYPE="DATE" comment="" end="3290" id="P21" start="3286" text="6/85" />
+<PROFESSION TYPE="PROFESSION" comment="" end="3958" id="P22" start="3945" text="army corporal" />
+<PROFESSION TYPE="PROFESSION" comment="" end="4014" id="P23" start="4008" text="design" />
+<NAME TYPE="PATIENT" comment="" end="4828" id="P25" start="4809" text="CRAWFORD, PATRICK P" />
+<DATE TYPE="DATE" comment="" end="4871" id="P27" start="4863" text="04/14/94" />
+<NAME TYPE="PATIENT" comment="" end="5396" id="P28" start="5377" text="CRAWFORD, PATRICK P" />
+<DATE TYPE="DATE" comment="" end="5439" id="P30" start="5431" text="04/14/94" />
+<NAME TYPE="PATIENT" comment="" end="6030" id="P31" start="6011" text="CRAWFORD, PATRICK P" />
+<DATE TYPE="DATE" comment="" end="6073" id="P33" start="6065" text="04/14/94" />
+<NAME TYPE="PATIENT" comment="" end="6466" id="P34" start="6447" text="CRAWFORD, PATRICK P" />
+<DATE TYPE="DATE" comment="" end="6542" id="P39" start="6534" text="04/15/94" />
+<DATE TYPE="DATE" comment="" end="6553" id="P40" start="6545" text="04/15/94" />
+<DATE TYPE="DATE" comment="" end="6564" id="P41" start="6556" text="04/14/94" />
+<DATE TYPE="DATE" comment="" end="6575" id="P42" start="6567" text="04/14/94" />
+<NAME TYPE="PATIENT" comment="" end="6869" id="P43" start="6850" text="CRAWFORD, PATRICK P" />
+<DATE TYPE="DATE" comment="" end="6912" id="P45" start="6904" text="04/14/94" />
+<NAME TYPE="PATIENT" comment="" end="8626" id="P46" start="8607" text="CRAWFORD, PATRICK P" />
+<DATE TYPE="DATE" comment="" end="8669" id="P48" start="8661" text="04/14/94" />
+<NAME TYPE="PATIENT" comment="" end="8930" id="P49" start="8911" text="CRAWFORD, PATRICK P" />
+<DATE TYPE="DATE" comment="" end="8984" id="P52" start="8976" text="04/14/94" />
+<DATE TYPE="DATE" comment="" end="8995" id="P53" start="8987" text="04/14/94" />
+<NAME TYPE="DOCTOR" comment="" end="11010" id="P55" start="11003" text="Youmans" />
+<NAME TYPE="DOCTOR" comment="" end="11142" id="P56" start="11135" text="Youmans" />
+<NAME TYPE="DOCTOR" comment="" end="11511" id="P57" start="11498" text="Kimberly Ring" />
+<CONTACT TYPE="PHONE" comment="" end="11525" id="P58" start="11520" text="59907" />
 </TAGS>
 </deIdi2b2>

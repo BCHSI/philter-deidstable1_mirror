@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version='1.0' encoding='utf8'?>
 <deIdi2b2>
-<TEXT><![CDATA[
+<TEXT>
 
 
 Record date: 2093-06-12
@@ -47,32 +47,29 @@ DV: 06/12/93
 
 
 
-]]></TEXT>
+</TEXT>
 <TAGS>
-<DATE id="P0" start="16" end="26" text="2093-06-12" TYPE="DATE" comment="" />
-<LOCATION id="P1" start="29" end="34" text="Dutch" TYPE="COUNTRY" comment="" />
-<LOCATION id="P2" start="35" end="52" text="19 Tamworth Place" TYPE="STREET" comment="" />
-<NAME id="P3" start="92" end="106" text="TRENT, SHIRLEY" TYPE="PATIENT" comment="" />
-<LOCATION id="P4" start="107" end="113" text="Galena" TYPE="CITY" comment="" />
-<LOCATION id="P5" start="115" end="117" text="MN" TYPE="STATE" comment="" />
-<LOCATION id="P6" start="118" end="123" text="64864" TYPE="ZIP" comment="" />
-<ID id="P7" start="161" end="169" text="99210914" TYPE="MEDICALRECORD" comment="" />
-<CONTACT id="P8" start="170" end="184" text="(676) 312-7662" TYPE="PHONE" comment="" />
-<DATE id="P9" start="227" end="235" text="06/12/93" TYPE="DATE" comment="" />
-<NAME id="P10" start="271" end="276" text="Trent" TYPE="PATIENT" comment="" />
-<AGE id="P11" start="280" end="282" text="69" TYPE="AGE" comment="" />
-<DATE id="P12" start="876" end="885" text="September" TYPE="DATE" comment="" />
-<DATE id="P13" start="1050" end="1058" text="December" TYPE="DATE" comment="" />
-<DATE id="P14" start="1509" end="1518" text="September" TYPE="DATE" comment="" />
-<NAME id="P15" start="1946" end="1951" text="Trent" TYPE="PATIENT" comment="" />
-<DATE id="P16" start="2087" end="2096" text="September" TYPE="DATE" comment="" />
-<AGE id="P17" start="3177" end="3179" text="69" TYPE="AGE" comment="" />
-<DATE id="P18" start="3463" end="3470" text="October" TYPE="DATE" comment="" />
-<NAME id="P19" start="4614" end="4627" text="Rose Irvin-Ly" TYPE="DOCTOR" comment="" />
-<NAME id="P20" start="4649" end="4662" text="Rose Irvin-Ly" TYPE="DOCTOR" comment="" />
-<ID id="P21" start="4685" end="4694" text="0-2524422" TYPE="IDNUM" comment="" />
-<DATE id="P22" start="4714" end="4722" text="06/12/93" TYPE="DATE" comment="" />
-<DATE id="P23" start="4727" end="4735" text="06/13/93" TYPE="DATE" comment="" />
-<DATE id="P24" start="4740" end="4748" text="06/12/93" TYPE="DATE" comment="" />
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2093-06-12" />
+<LOCATION TYPE="STREET" comment="" end="52" id="P2" start="35" text="19 Tamworth Place" />
+<NAME TYPE="PATIENT" comment="" end="106" id="P3" start="92" text="TRENT, SHIRLEY" />
+<LOCATION TYPE="CITY" comment="" end="113" id="P4" start="107" text="Galena" />
+<LOCATION TYPE="STATE" comment="" end="117" id="P5" start="115" text="MN" />
+<LOCATION TYPE="ZIP" comment="" end="123" id="P6" start="118" text="64864" />
+<ID TYPE="MEDICALRECORD" comment="" end="169" id="P7" start="161" text="99210914" />
+<CONTACT TYPE="PHONE" comment="" end="184" id="P8" start="170" text="(676) 312-7662" />
+<DATE TYPE="DATE" comment="" end="235" id="P9" start="227" text="06/12/93" />
+<NAME TYPE="PATIENT" comment="" end="276" id="P10" start="271" text="Trent" />
+<DATE TYPE="DATE" comment="" end="885" id="P12" start="876" text="September" />
+<DATE TYPE="DATE" comment="" end="1058" id="P13" start="1050" text="December" />
+<DATE TYPE="DATE" comment="" end="1518" id="P14" start="1509" text="September" />
+<NAME TYPE="PATIENT" comment="" end="1951" id="P15" start="1946" text="Trent" />
+<DATE TYPE="DATE" comment="" end="2096" id="P16" start="2087" text="September" />
+<DATE TYPE="DATE" comment="" end="3470" id="P18" start="3463" text="October" />
+<NAME TYPE="DOCTOR" comment="" end="4627" id="P19" start="4614" text="Rose Irvin-Ly" />
+<NAME TYPE="DOCTOR" comment="" end="4662" id="P20" start="4649" text="Rose Irvin-Ly" />
+<ID TYPE="IDNUM" comment="" end="4694" id="P21" start="4685" text="0-2524422" />
+<DATE TYPE="DATE" comment="" end="4722" id="P22" start="4714" text="06/12/93" />
+<DATE TYPE="DATE" comment="" end="4735" id="P23" start="4727" text="06/13/93" />
+<DATE TYPE="DATE" comment="" end="4748" id="P24" start="4740" text="06/12/93" />
 </TAGS>
 </deIdi2b2>

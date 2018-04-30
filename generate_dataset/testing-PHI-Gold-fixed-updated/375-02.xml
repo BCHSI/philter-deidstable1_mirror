@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version='1.0' encoding='utf8'?>
 <deIdi2b2>
-<TEXT><![CDATA[
+<TEXT>
 
 
 Record date: 2155-07-11
@@ -23,7 +23,7 @@ Mr. Olive was seen with Dr. Innis in general neurology clinic on 07/11/55.   Dr.
 
 Return visit.
 
-Mr. Olive is a 71y old RHM, with Idiopathic Parkinson's disease. He was started on Sinemet 25/100mg tid with significant improvement in his balance & gait & rest tremor. However there were still periods of shuffling & stumbling especially going down slope. He also complained of persistant fatigue in his legs. We started him on Amantadine 100mg tid during his last visit. He did not tolerate it well & complained of dizziness especially when he goes out, even with reduced dose of 100mg bid. He has discontinued it since then.
+Mr. Olive is a 71y old RHM, with Idiopathic Parkinson's disease. He was started on Sinemet 25/100mg tid with significant improvement in his balance &amp; gait &amp; rest tremor. However there were still periods of shuffling &amp; stumbling especially going down slope. He also complained of persistant fatigue in his legs. We started him on Amantadine 100mg tid during his last visit. He did not tolerate it well &amp; complained of dizziness especially when he goes out, even with reduced dose of 100mg bid. He has discontinued it since then.
 
 He is tolerating Sinemet well, no hallucinations, on-off phenomenon. He does not notice any wearing off of the effect prior to next dose. No dyskinesias.
 
@@ -83,9 +83,9 @@ Neuro:
 
 MS: Alert, oriented, appropriately interactive. Follows all commands. Speech is fluent without paraphasic errors. Voice is hypophonic. Facial expression is flat.
 
-CN II-XII:  Visual fields full to confrontation; PERRLA 3.5 => 3.0; no ptosis; no nystagmus, no hypometric saccades, full EOMI, no restriction of upgaze; sensation on face normal bilaterally, no facial asymmetry; reduced spontaneous blinking of eyes; good smile; good cheek puff; tongue and palate midline; grossly normal hearing; good shoulder shrug and head turn.
+CN II-XII:  Visual fields full to confrontation; PERRLA 3.5 =&gt; 3.0; no ptosis; no nystagmus, no hypometric saccades, full EOMI, no restriction of upgaze; sensation on face normal bilaterally, no facial asymmetry; reduced spontaneous blinking of eyes; good smile; good cheek puff; tongue and palate midline; grossly normal hearing; good shoulder shrug and head turn.
 
-Motor:  normal bulk, axial rigidity present. Mild cogwheel rigidity, R>L at rest. No rest tremor. No drift.  Strength 5/5 throughout including: biceps, triceps, brachioradialis, finger flexor and extension, hip, knee and ankle flex and extensions. No bradykinesia.
+Motor:  normal bulk, axial rigidity present. Mild cogwheel rigidity, R&gt;L at rest. No rest tremor. No drift.  Strength 5/5 throughout including: biceps, triceps, brachioradialis, finger flexor and extension, hip, knee and ankle flex and extensions. No bradykinesia.
 
 Sensation:  Decreased to touch, temperature and pin prick bilaterally in feet. Vibration reduced in toes. JP sense normal bilaterally. 
 
@@ -95,11 +95,11 @@ Gait/Stance:  Gait is wide based with mild stooped posture, slightly unsteady bu
 
 
 
-Assessment and Plan: 71y old RHM, with early idiopathic Parkinson's disease. No evidence of restricted up gaze (PSP), or parkinson-plus syndrome at this time. He had a good response to Sinemet but still has persistent fatigue & periods of festination. Recommend increasing Sinemet to 37.5/150mg tid 7am, 12noon, & 5pm. Wife will give me a call in 2wks to let me know his progress.
+Assessment and Plan: 71y old RHM, with early idiopathic Parkinson's disease. No evidence of restricted up gaze (PSP), or parkinson-plus syndrome at this time. He had a good response to Sinemet but still has persistent fatigue &amp; periods of festination. Recommend increasing Sinemet to 37.5/150mg tid 7am, 12noon, &amp; 5pm. Wife will give me a call in 2wks to let me know his progress.
 
 
 
-Follow up in Neurology clinic in 3mths. Patient & family can contact me in interim with any concerns.
+Follow up in Neurology clinic in 3mths. Patient &amp; family can contact me in interim with any concerns.
 
 
 
@@ -139,30 +139,28 @@ Conneaut Lake, WV: 85486
 
 
 
-]]></TEXT>
+</TEXT>
 <TAGS>
-<DATE id="P0" start="16" end="26" text="2155-07-11" TYPE="DATE" comment="" />
-<DATE id="P1" start="30" end="43" text="July 11, 2155" TYPE="DATE" comment="" />
-<NAME id="P2" start="53" end="66" text="Olive, Xavier" TYPE="PATIENT" comment="" />
-<ID id="P3" start="75" end="83" text="26690002" TYPE="MEDICALRECORD" comment="" />
-<NAME id="P4" start="91" end="96" text="Olive" TYPE="PATIENT" comment="" />
-<NAME id="P5" start="115" end="120" text="Innis" TYPE="DOCTOR" comment="" />
-<DATE id="P6" start="152" end="160" text="07/11/55" TYPE="DATE" comment="" />
-<NAME id="P7" start="168" end="173" text="Innis" TYPE="DOCTOR" comment="" />
-<NAME id="P8" start="354" end="359" text="Olive" TYPE="PATIENT" comment="" />
-<AGE id="P9" start="365" end="367" text="71" TYPE="AGE" comment="" />
-<AGE id="P10" start="2877" end="2879" text="71" TYPE="AGE" comment="" />
-<NAME id="P11" start="3479" end="3494" text="Isabella Edmond" TYPE="DOCTOR" comment="" />
-<CONTACT id="P12" start="3534" end="3539" text="98768" TYPE="PHONE" comment="" />
-<NAME id="P13" start="3546" end="3559" text="Michael Ulrey" TYPE="DOCTOR" comment="" />
-<LOCATION id="P14" start="3564" end="3574" text="24 WOOD ST" TYPE="STREET" comment="" />
-<LOCATION id="P15" start="3576" end="3582" text="SYDNEY" TYPE="CITY" comment="" />
-<LOCATION id="P16" start="3584" end="3586" text="WV" TYPE="STATE" comment="" />
-<LOCATION id="P17" start="3587" end="3592" text="65157" TYPE="ZIP" comment="" />
-<NAME id="P18" start="3596" end="3608" text="Ximena Keane" TYPE="DOCTOR" comment="" />
-<LOCATION id="P19" start="3610" end="3628" text="46 Marshall Street" TYPE="STREET" comment="" />
-<LOCATION id="P20" start="3630" end="3643" text="Conneaut Lake" TYPE="CITY" comment="" />
-<LOCATION id="P21" start="3645" end="3647" text="WV" TYPE="STATE" comment="" />
-<LOCATION id="P22" start="3649" end="3654" text="85486" TYPE="ZIP" comment="" />
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2155-07-11" />
+<DATE TYPE="DATE" comment="" end="43" id="P1" start="30" text="July 11, 2155" />
+<NAME TYPE="PATIENT" comment="" end="66" id="P2" start="53" text="Olive, Xavier" />
+<ID TYPE="MEDICALRECORD" comment="" end="83" id="P3" start="75" text="26690002" />
+<NAME TYPE="PATIENT" comment="" end="96" id="P4" start="91" text="Olive" />
+<NAME TYPE="DOCTOR" comment="" end="120" id="P5" start="115" text="Innis" />
+<DATE TYPE="DATE" comment="" end="160" id="P6" start="152" text="07/11/55" />
+<NAME TYPE="DOCTOR" comment="" end="173" id="P7" start="168" text="Innis" />
+<NAME TYPE="PATIENT" comment="" end="359" id="P8" start="354" text="Olive" />
+<NAME TYPE="DOCTOR" comment="" end="3494" id="P11" start="3479" text="Isabella Edmond" />
+<CONTACT TYPE="PHONE" comment="" end="3539" id="P12" start="3534" text="98768" />
+<NAME TYPE="DOCTOR" comment="" end="3559" id="P13" start="3546" text="Michael Ulrey" />
+<LOCATION TYPE="STREET" comment="" end="3574" id="P14" start="3564" text="24 WOOD ST" />
+<LOCATION TYPE="CITY" comment="" end="3582" id="P15" start="3576" text="SYDNEY" />
+<LOCATION TYPE="STATE" comment="" end="3586" id="P16" start="3584" text="WV" />
+<LOCATION TYPE="ZIP" comment="" end="3592" id="P17" start="3587" text="65157" />
+<NAME TYPE="DOCTOR" comment="" end="3608" id="P18" start="3596" text="Ximena Keane" />
+<LOCATION TYPE="STREET" comment="" end="3628" id="P19" start="3610" text="46 Marshall Street" />
+<LOCATION TYPE="CITY" comment="" end="3643" id="P20" start="3630" text="Conneaut Lake" />
+<LOCATION TYPE="STATE" comment="" end="3647" id="P21" start="3645" text="WV" />
+<LOCATION TYPE="ZIP" comment="" end="3654" id="P22" start="3649" text="85486" />
 </TAGS>
 </deIdi2b2>

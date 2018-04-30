@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version='1.0' encoding='utf8'?>
 <deIdi2b2>
-<TEXT><![CDATA[
+<TEXT>
 
 
 Record date: 2093-02-28
@@ -367,40 +367,23 @@ Follow a low fat diet
 
 
 
-]]></TEXT>
+</TEXT>
 <TAGS>
-<DATE id="P0" start="16" end="26" text="2093-02-28" TYPE="DATE" comment="" />
-<NAME id="P1" start="69" end="73" text="Barr" TYPE="PATIENT" comment="" />
-<AGE id="P2" start="79" end="81" text="57" TYPE="AGE" comment="" />
-<LOCATION id="P3" start="148" end="154" text="KEKELA" TYPE="HOSPITAL" comment="" />
-<DATE id="P4" start="329" end="333" text="2087" TYPE="DATE" comment="" />
-<DATE id="P5" start="335" end="339" text="2088" TYPE="DATE" comment="" />
-<DATE id="P6" start="341" end="345" text="2089" TYPE="DATE" comment="" />
-<DATE id="P7" start="350" end="354" text="2090" TYPE="DATE" comment="" />
-<LOCATION id="P8" start="506" end="509" text="LDC" TYPE="HOSPITAL" comment="" />
-<DATE id="P9" start="522" end="528" text="Jan 13" TYPE="DATE" comment="" />
-<DATE id="P10" start="533" end="538" text="21/05" TYPE="DATE" comment="" />
-<DATE id="P11" start="758" end="765" text="1/21/93" TYPE="DATE" comment="" />
-<DATE id="P12" start="834" end="841" text="1/23/93" TYPE="DATE" comment="" />
-<LOCATION id="P13" start="1142" end="1155" text="EDUCARE-FARGO" TYPE="HOSPITAL" comment="" />
-<NAME id="P14" start="1160" end="1171" text="Nancy Odell" TYPE="DOCTOR" comment="" />
-<LOCATION id="P15" start="1185" end="1191" text="KEKELA" TYPE="HOSPITAL" comment="" />
-<AGE id="P16" start="1405" end="1407" text="28" TYPE="AGE" comment="" />
-<LOCATION id="P17" start="1933" end="1950" text="mcilhenny company" TYPE="ORGANIZATION" comment="" />
-<PROFESSION id="P18" start="1952" end="1962" text="Fire Chief" TYPE="PROFESSION" comment="" />
-<DATE id="P19" start="2260" end="2264" text="2087" TYPE="DATE" comment="" />
-<DATE id="P20" start="2265" end="2269" text="2088" TYPE="DATE" comment="" />
-<DATE id="P21" start="2270" end="2274" text="2089" TYPE="DATE" comment="" />
-<DATE id="P22" start="2275" end="2279" text="2090" TYPE="DATE" comment="" />
-<LOCATION id="P23" start="2957" end="2959" text="MC" TYPE="ORGANIZATION" comment="" />
-<PROFESSION id="P24" start="2971" end="2981" text="Fire Chief" TYPE="PROFESSION" comment="" />
-<DATE id="P25" start="3201" end="3205" text="1/92" TYPE="DATE" comment="" />
-<DATE id="P26" start="3223" end="3227" text="1/92" TYPE="DATE" comment="" />
-<LOCATION id="P27" start="3231" end="3244" text="EDUCARE-FARGO" TYPE="HOSPITAL" comment="" />
-<DATE id="P28" start="3275" end="3279" text="1/92" TYPE="DATE" comment="" />
-<LOCATION id="P29" start="3290" end="3303" text="EDUCARE-FARGO" TYPE="HOSPITAL" comment="" />
-<DATE id="P30" start="3631" end="3635" text="4/92" TYPE="DATE" comment="" />
-<NAME id="P31" start="8339" end="8353" text="Georgia Upshaw" TYPE="DOCTOR" comment="" />
-<LOCATION id="P33" start="9167" end="9173" text="KEKELA" TYPE="HOSPITAL" comment="" />
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2093-02-28" />
+<NAME TYPE="PATIENT" comment="" end="73" id="P1" start="69" text="Barr" />
+<DATE TYPE="DATE" comment="" end="528" id="P9" start="522" text="Jan 13" />
+<DATE TYPE="DATE" comment="" end="538" id="P10" start="533" text="21/05" />
+<DATE TYPE="DATE" comment="" end="765" id="P11" start="758" text="1/21/93" />
+<DATE TYPE="DATE" comment="" end="841" id="P12" start="834" text="1/23/93" />
+<NAME TYPE="DOCTOR" comment="" end="1171" id="P14" start="1160" text="Nancy Odell" />
+<LOCATION TYPE="ORGANIZATION" comment="" end="1950" id="P17" start="1933" text="mcilhenny company" />
+<PROFESSION TYPE="PROFESSION" comment="" end="1962" id="P18" start="1952" text="Fire Chief" />
+<LOCATION TYPE="ORGANIZATION" comment="" end="2959" id="P23" start="2957" text="MC" />
+<PROFESSION TYPE="PROFESSION" comment="" end="2981" id="P24" start="2971" text="Fire Chief" />
+<DATE TYPE="DATE" comment="" end="3205" id="P25" start="3201" text="1/92" />
+<DATE TYPE="DATE" comment="" end="3227" id="P26" start="3223" text="1/92" />
+<DATE TYPE="DATE" comment="" end="3279" id="P28" start="3275" text="1/92" />
+<DATE TYPE="DATE" comment="" end="3635" id="P30" start="3631" text="4/92" />
+<NAME TYPE="DOCTOR" comment="" end="8353" id="P31" start="8339" text="Georgia Upshaw" />
 </TAGS>
 </deIdi2b2>

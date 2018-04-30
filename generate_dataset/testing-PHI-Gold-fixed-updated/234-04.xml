@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version='1.0' encoding='utf8'?>
 <deIdi2b2>
-<TEXT><![CDATA[
+<TEXT>
 
 
 Record date: 2076-06-22
@@ -99,9 +99,9 @@ Exam
 
 NAD,WD,WN
 
-Eyes- conj & sclera not injected EOMI,PERLA
+Eyes- conj &amp; sclera not injected EOMI,PERLA
 
-M&T- lips and gums unremarkable.  Moist no erythema; no exudate; no lesions
+M&amp;T- lips and gums unremarkable.  Moist no erythema; no exudate; no lesions
 
 Neck- supple. No JVD. No bruit. No LAN. No thyromegaly
 
@@ -153,13 +153,12 @@ Armando Brian Nettles, M.D.
 
 
 
-]]></TEXT>
+</TEXT>
 <TAGS>
-<DATE id="P0" start="16" end="26" text="2076-06-22" TYPE="DATE" comment="" />
-<NAME id="P1" start="51" end="60" text="Francesca" TYPE="PATIENT" comment="" />
-<AGE id="P2" start="66" end="68" text="74" TYPE="AGE" comment="" />
-<DATE id="P3" start="229" end="233" text="9/74" TYPE="DATE" comment="" />
-<DATE id="P4" start="2125" end="2135" text="05/26/2076" TYPE="DATE" comment="" />
-<NAME id="P5" start="2473" end="2494" text="Armando Brian Nettles" TYPE="DOCTOR" comment="" />
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2076-06-22" />
+<NAME TYPE="PATIENT" comment="" end="60" id="P1" start="51" text="Francesca" />
+<DATE TYPE="DATE" comment="" end="233" id="P3" start="229" text="9/74" />
+<DATE TYPE="DATE" comment="" end="2135" id="P4" start="2125" text="05/26/2076" />
+<NAME TYPE="DOCTOR" comment="" end="2494" id="P5" start="2473" text="Armando Brian Nettles" />
 </TAGS>
 </deIdi2b2>

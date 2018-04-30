@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version='1.0' encoding='utf8'?>
 <deIdi2b2>
-<TEXT><![CDATA[
+<TEXT>
 
 
 Record date: 2097-11-30
@@ -112,31 +112,27 @@ DV: 11/30/97
 
 
 
-]]></TEXT>
+</TEXT>
 <TAGS>
-<DATE id="P0" start="16" end="26" text="2097-11-30" TYPE="DATE" comment="" />
-<LOCATION id="P1" start="29" end="50" text="Cookson Memorial Home" TYPE="HOSPITAL" comment="" />
-<LOCATION id="P4" start="78" end="93" text="50 Wellesley Rd" TYPE="STREET" comment="" />
-<NAME id="P5" start="133" end="147" text="DARLING, BETTY" TYPE="PATIENT" comment="" />
-<LOCATION id="P6" start="148" end="155" text="Seattle" TYPE="CITY" comment="" />
-<LOCATION id="P7" start="157" end="159" text="SC" TYPE="STATE" comment="" />
-<LOCATION id="P8" start="160" end="165" text="84126" TYPE="ZIP" comment="" />
-<ID id="P9" start="203" end="211" text="78567873" TYPE="MEDICALRECORD" comment="" />
-<CONTACT id="P10" start="212" end="226" text="(121) 537-3484" TYPE="PHONE" comment="" />
-<DATE id="P11" start="269" end="277" text="11/30/97" TYPE="DATE" comment="" />
-<AGE id="P12" start="421" end="423" text="77" TYPE="AGE" comment="" />
-<LOCATION id="P13" start="566" end="596" text="Saint Joseph Memorial Hospital" TYPE="HOSPITAL" comment="" />
-<NAME id="P14" start="735" end="746" text="Fitzpatrick" TYPE="PATIENT" comment="" />
-<NAME id="P15" start="764" end="775" text="Fitzpatrick" TYPE="PATIENT" comment="" />
-<LOCATION id="P16" start="1049" end="1052" text="EFH" TYPE="HOSPITAL" comment="" />
-<DATE id="P17" start="2036" end="2045" text="Christmas" TYPE="DATE" comment="" />
-<NAME id="P18" start="2084" end="2095" text="Fitzpatrick" TYPE="PATIENT" comment="" />
-<NAME id="P19" start="3739" end="3745" text="Dewitt" TYPE="DOCTOR" comment="" />
-<NAME id="P20" start="4430" end="4440" text="Julia Yale" TYPE="DOCTOR" comment="" />
-<NAME id="P21" start="4462" end="4472" text="Julia Yale" TYPE="DOCTOR" comment="" />
-<ID id="P22" start="4495" end="4504" text="3-5285833" TYPE="IDNUM" comment="" />
-<DATE id="P23" start="4524" end="4532" text="11/30/97" TYPE="DATE" comment="" />
-<DATE id="P24" start="4537" end="4545" text="11/30/97" TYPE="DATE" comment="" />
-<DATE id="P25" start="4550" end="4558" text="11/30/97" TYPE="DATE" comment="" />
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2097-11-30" />
+<LOCATION TYPE="STREET" comment="" end="93" id="P4" start="78" text="50 Wellesley Rd" />
+<NAME TYPE="PATIENT" comment="" end="147" id="P5" start="133" text="DARLING, BETTY" />
+<LOCATION TYPE="CITY" comment="" end="155" id="P6" start="148" text="Seattle" />
+<LOCATION TYPE="STATE" comment="" end="159" id="P7" start="157" text="SC" />
+<LOCATION TYPE="ZIP" comment="" end="165" id="P8" start="160" text="84126" />
+<ID TYPE="MEDICALRECORD" comment="" end="211" id="P9" start="203" text="78567873" />
+<CONTACT TYPE="PHONE" comment="" end="226" id="P10" start="212" text="(121) 537-3484" />
+<DATE TYPE="DATE" comment="" end="277" id="P11" start="269" text="11/30/97" />
+<NAME TYPE="PATIENT" comment="" end="746" id="P14" start="735" text="Fitzpatrick" />
+<NAME TYPE="PATIENT" comment="" end="775" id="P15" start="764" text="Fitzpatrick" />
+<DATE TYPE="DATE" comment="" end="2045" id="P17" start="2036" text="Christmas" />
+<NAME TYPE="PATIENT" comment="" end="2095" id="P18" start="2084" text="Fitzpatrick" />
+<NAME TYPE="DOCTOR" comment="" end="3745" id="P19" start="3739" text="Dewitt" />
+<NAME TYPE="DOCTOR" comment="" end="4440" id="P20" start="4430" text="Julia Yale" />
+<NAME TYPE="DOCTOR" comment="" end="4472" id="P21" start="4462" text="Julia Yale" />
+<ID TYPE="IDNUM" comment="" end="4504" id="P22" start="4495" text="3-5285833" />
+<DATE TYPE="DATE" comment="" end="4532" id="P23" start="4524" text="11/30/97" />
+<DATE TYPE="DATE" comment="" end="4545" id="P24" start="4537" text="11/30/97" />
+<DATE TYPE="DATE" comment="" end="4558" id="P25" start="4550" text="11/30/97" />
 </TAGS>
 </deIdi2b2>

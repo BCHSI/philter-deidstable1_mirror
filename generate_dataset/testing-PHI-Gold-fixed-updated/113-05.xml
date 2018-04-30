@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version='1.0' encoding='utf8'?>
 <deIdi2b2>
-<TEXT><![CDATA[
+<TEXT>
 
 
 Record date: 2094-10-23
@@ -81,7 +81,7 @@ PLT-EST NL
 PT 15.7 (*),  PT-INR 1.2 (*),  PTT 33.9
 UA-COLOR LT BROWN,  UA-GLUC NEG,  UA-BILI TRACE,  UA-KET NEG,  UA-SPGR 1.010,  UA-BLD 3+ (*),  UA-PH 8.5 (*),  UA-PROT 2+ (*)
 UA-UROBI NEG,  UA-NIT POS,  UA-WBC 3+ (*)
-UAS-RBC 4-10 (*),  UAS-WBC &gt;200 (*),  UAS-BACT 4+,  UAS-SQHI 1+,  OCAST NEG,  HCAST 0,  UAS-CRYS 1+,  UAS-COM NEG
+UAS-RBC 4-10 (*),  UAS-WBC &amp;gt;200 (*),  UAS-BACT 4+,  UAS-SQHI 1+,  OCAST NEG,  HCAST 0,  UAS-CRYS 1+,  UAS-COM NEG
 UA-EPIS NEG
 
 
@@ -94,7 +94,7 @@ CV: RRR no m/r/g
 Abd: + BS, soft, NT, ND, no grimace to palpation, no rebound or guarding
 Extr: no edema, thin frail with multiple ulcers on big toes, small toes and R heel
 SKIN: several large decub ulcers below buttocks 
-Neuro: Alert &amp; Oriented x 3, CN II-XII appear intact
+Neuro: Alert &amp;amp; Oriented x 3, CN II-XII appear intact
 no focal deficits
 
 
@@ -123,22 +123,18 @@ Heather T. Quinonez, M.D.
 
 
 
-]]></TEXT>
+</TEXT>
 <TAGS>
-<DATE id="P0" start="16" end="26" text="2094-10-23" TYPE="DATE" comment="" />
-<NAME id="P1" start="37" end="53" text="VALENZUELA,BRIAN" TYPE="PATIENT" comment="" />
-<ID id="P2" start="56" end="64" text="03689964" TYPE="MEDICALRECORD" comment="" />
-<DATE id="P3" start="83" end="93" text="10/23/2094" TYPE="DATE" comment="" />
-<NAME id="P4" start="105" end="111" text="Davila" TYPE="DOCTOR" comment="" />
-<AGE id="P6" start="190" end="192" text="57" TYPE="AGE" comment="" />
-<LOCATION id="P7" start="1026" end="1029" text="WBM" TYPE="HOSPITAL" comment="" />
-<DATE id="P8" start="1034" end="1039" text="12/93" TYPE="DATE" comment="" />
-<DATE id="P9" start="1555" end="1559" text="2091" TYPE="DATE" comment="" />
-<DATE id="P10" start="1887" end="1897" text="Wednesdays" TYPE="DATE" comment="" />
-<DATE id="P11" start="2507" end="2515" text="10/22/94" TYPE="DATE" comment="" />
-<DATE id="P12" start="2662" end="2679" text="December 03, 2093" TYPE="DATE" comment="" />
-<DATE id="P13" start="2848" end="2856" text="10/22/94" TYPE="DATE" comment="" />
-<AGE id="P14" start="4309" end="4311" text="57" TYPE="AGE" comment="" />
-<NAME id="P15" start="5234" end="5253" text="Heather T. Quinonez" TYPE="DOCTOR" comment="" />
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2094-10-23" />
+<NAME TYPE="PATIENT" comment="" end="53" id="P1" start="37" text="VALENZUELA,BRIAN" />
+<ID TYPE="MEDICALRECORD" comment="" end="64" id="P2" start="56" text="03689964" />
+<DATE TYPE="DATE" comment="" end="93" id="P3" start="83" text="10/23/2094" />
+<NAME TYPE="DOCTOR" comment="" end="111" id="P4" start="105" text="Davila" />
+<DATE TYPE="DATE" comment="" end="1039" id="P8" start="1034" text="12/93" />
+<DATE TYPE="DATE" comment="" end="1897" id="P10" start="1887" text="Wednesdays" />
+<DATE TYPE="DATE" comment="" end="2515" id="P11" start="2507" text="10/22/94" />
+<DATE TYPE="DATE" comment="" end="2679" id="P12" start="2662" text="December 03, 2093" />
+<DATE TYPE="DATE" comment="" end="2856" id="P13" start="2848" text="10/22/94" />
+<NAME TYPE="DOCTOR" comment="" end="5253" id="P15" start="5234" text="Heather T. Quinonez" />
 </TAGS>
 </deIdi2b2>

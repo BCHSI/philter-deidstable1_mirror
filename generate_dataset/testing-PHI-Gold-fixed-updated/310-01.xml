@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version='1.0' encoding='utf8'?>
 <deIdi2b2>
-<TEXT><![CDATA[
+<TEXT>
 
 
 Record date: 2073-06-13
@@ -79,20 +79,19 @@ eScription document:2-2004166 IFFocus
 
 
 
-]]></TEXT>
+</TEXT>
 <TAGS>
-<DATE id="P0" start="16" end="26" text="2073-06-13" TYPE="DATE" comment="" />
-<ID id="P1" start="36" end="44" text="98044905" TYPE="MEDICALRECORD" comment="" />
-<NAME id="P2" start="45" end="58" text="WARE, VINCENT" TYPE="PATIENT" comment="" />
-<DATE id="P3" start="59" end="67" text="06/13/73" TYPE="DATE" comment="" />
-<NAME id="P4" start="68" end="79" text="ZORN, TYLER" TYPE="DOCTOR" comment="" />
-<AGE id="P5" start="98" end="100" text="65" TYPE="AGE" comment="" />
-<NAME id="P6" start="256" end="265" text="Ostrowski" TYPE="DOCTOR" comment="" />
-<NAME id="P7" start="1487" end="1492" text="Walsh" TYPE="DOCTOR" comment="" />
-<NAME id="P8" start="1603" end="1614" text="ZORN, TYLER" TYPE="DOCTOR" comment="" />
-<DATE id="P9" start="1624" end="1632" text="06/13/73" TYPE="DATE" comment="" />
-<DATE id="P10" start="1637" end="1645" text="06/13/73" TYPE="DATE" comment="" />
-<NAME id="P11" start="1660" end="1671" text="ZORN, TYLER" TYPE="DOCTOR" comment="" />
-<ID id="P12" start="1693" end="1702" text="2-2004166" TYPE="IDNUM" comment="" />
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2073-06-13" />
+<ID TYPE="MEDICALRECORD" comment="" end="44" id="P1" start="36" text="98044905" />
+<NAME TYPE="PATIENT" comment="" end="58" id="P2" start="45" text="WARE, VINCENT" />
+<DATE TYPE="DATE" comment="" end="67" id="P3" start="59" text="06/13/73" />
+<NAME TYPE="DOCTOR" comment="" end="79" id="P4" start="68" text="ZORN, TYLER" />
+<NAME TYPE="DOCTOR" comment="" end="265" id="P6" start="256" text="Ostrowski" />
+<NAME TYPE="DOCTOR" comment="" end="1492" id="P7" start="1487" text="Walsh" />
+<NAME TYPE="DOCTOR" comment="" end="1614" id="P8" start="1603" text="ZORN, TYLER" />
+<DATE TYPE="DATE" comment="" end="1632" id="P9" start="1624" text="06/13/73" />
+<DATE TYPE="DATE" comment="" end="1645" id="P10" start="1637" text="06/13/73" />
+<NAME TYPE="DOCTOR" comment="" end="1671" id="P11" start="1660" text="ZORN, TYLER" />
+<ID TYPE="IDNUM" comment="" end="1702" id="P12" start="1693" text="2-2004166" />
 </TAGS>
 </deIdi2b2>

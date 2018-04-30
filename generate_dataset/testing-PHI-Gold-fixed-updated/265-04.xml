@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version='1.0' encoding='utf8'?>
 <deIdi2b2>
-<TEXT><![CDATA[
+<TEXT>
 
 
 Record date: 2070-06-15
@@ -104,7 +104,7 @@ YJ:isenberg:74:585:40;00-10142.doc;DD:06/15/70;DT:06/16/70;DV:06/15/70
 
 
 
-62 year old man with dm and vascular disease.  He is starting to improve his self-care of dm and last a1c was 8.2  Blood sugars mostly less than 250.  Increased am insulin and will increase atenolol from 25--->50 mg for a bp of 150/88.  
+62 year old man with dm and vascular disease.  He is starting to improve his self-care of dm and last a1c was 8.2  Blood sugars mostly less than 250.  Increased am insulin and will increase atenolol from 25---&gt;50 mg for a bp of 150/88.  
 
 
 
@@ -116,34 +116,26 @@ Cochran, Patricia Hannah, M.D.
 
 
 
-]]></TEXT>
+</TEXT>
 <TAGS>
-<DATE id="P0" start="16" end="26" text="2070-06-15" TYPE="DATE" comment="" />
-<LOCATION id="P1" start="31" end="57" text="JELLICO COMMUNITY HOSPITAL" TYPE="HOSPITAL" comment="" />
-<LOCATION id="P2" start="58" end="65" text="Jellico" TYPE="HOSPITAL" comment="" />
-<LOCATION id="P3" start="95" end="108" text="44 Brigham St" TYPE="STREET" comment="" />
-<LOCATION id="P4" start="109" end="115" text="Elwood" TYPE="CITY" comment="" />
-<LOCATION id="P5" start="117" end="119" text="OH" TYPE="STATE" comment="" />
-<LOCATION id="P6" start="121" end="126" text="49817" TYPE="ZIP" comment="" />
-<NAME id="P7" start="128" end="139" text="Foy, Keonte" TYPE="PATIENT" comment="" />
-<ID id="P8" start="140" end="148" text="73235790" TYPE="MEDICALRECORD" comment="" />
-<DATE id="P9" start="149" end="157" text="06/15/70" TYPE="DATE" comment="" />
-<AGE id="P10" start="202" end="204" text="62" TYPE="AGE" comment="" />
-<DATE id="P11" start="1385" end="1389" text="2061" TYPE="DATE" comment="" />
-<DATE id="P12" start="1604" end="1608" text="2063" TYPE="DATE" comment="" />
-<DATE id="P13" start="1748" end="1752" text="2067" TYPE="DATE" comment="" />
-<NAME id="P14" start="2549" end="2560" text="Foy, Keonte" TYPE="PATIENT" comment="" />
-<ID id="P15" start="2561" end="2569" text="73235790" TYPE="MEDICALRECORD" comment="" />
-<DATE id="P16" start="2570" end="2578" text="06/15/70" TYPE="DATE" comment="" />
-<NAME id="P17" start="3812" end="3823" text="Yale Jordan" TYPE="DOCTOR" comment="" />
-<NAME id="P18" start="3831" end="3833" text="YJ" TYPE="DOCTOR" comment="" />
-<NAME id="P19" start="3834" end="3842" text="isenberg" TYPE="DOCTOR" comment="" />
-<ID id="P20" start="3843" end="3852" text="74:585:40" TYPE="IDNUM" comment="" />
-<ID id="P21" start="3853" end="3861" text="00-10142" TYPE="IDNUM" comment="" />
-<DATE id="P22" start="3869" end="3877" text="06/15/70" TYPE="DATE" comment="" />
-<DATE id="P23" start="3881" end="3889" text="06/16/70" TYPE="DATE" comment="" />
-<DATE id="P24" start="3893" end="3901" text="06/15/70" TYPE="DATE" comment="" />
-<AGE id="P25" start="3979" end="3981" text="62" TYPE="AGE" comment="" />
-<NAME id="P26" start="4284" end="4308" text="Cochran, Patricia Hannah" TYPE="DOCTOR" comment="" />
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2070-06-15" />
+<LOCATION TYPE="STREET" comment="" end="108" id="P3" start="95" text="44 Brigham St" />
+<LOCATION TYPE="CITY" comment="" end="115" id="P4" start="109" text="Elwood" />
+<LOCATION TYPE="STATE" comment="" end="119" id="P5" start="117" text="OH" />
+<LOCATION TYPE="ZIP" comment="" end="126" id="P6" start="121" text="49817" />
+<NAME TYPE="PATIENT" comment="" end="139" id="P7" start="128" text="Foy, Keonte" />
+<ID TYPE="MEDICALRECORD" comment="" end="148" id="P8" start="140" text="73235790" />
+<DATE TYPE="DATE" comment="" end="157" id="P9" start="149" text="06/15/70" />
+<NAME TYPE="PATIENT" comment="" end="2560" id="P14" start="2549" text="Foy, Keonte" />
+<ID TYPE="MEDICALRECORD" comment="" end="2569" id="P15" start="2561" text="73235790" />
+<DATE TYPE="DATE" comment="" end="2578" id="P16" start="2570" text="06/15/70" />
+<NAME TYPE="DOCTOR" comment="" end="3823" id="P17" start="3812" text="Yale Jordan" />
+<NAME TYPE="DOCTOR" comment="" end="3842" id="P19" start="3834" text="isenberg" />
+<ID TYPE="IDNUM" comment="" end="3852" id="P20" start="3843" text="74:585:40" />
+<ID TYPE="IDNUM" comment="" end="3861" id="P21" start="3853" text="00-10142" />
+<DATE TYPE="DATE" comment="" end="3877" id="P22" start="3869" text="06/15/70" />
+<DATE TYPE="DATE" comment="" end="3889" id="P23" start="3881" text="06/16/70" />
+<DATE TYPE="DATE" comment="" end="3901" id="P24" start="3893" text="06/15/70" />
+<NAME TYPE="DOCTOR" comment="" end="4308" id="P26" start="4284" text="Cochran, Patricia Hannah" />
 </TAGS>
 </deIdi2b2>

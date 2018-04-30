@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version='1.0' encoding='utf8'?>
 <deIdi2b2>
-<TEXT><![CDATA[
+<TEXT>
 
 
 Record date: 2092-05-24
@@ -72,28 +72,25 @@ NQ:jaeger; 80-55488880.doc; DD: 5/27/92; DT: 5/28/92; DV: 5/24/92
 
 
 
-]]></TEXT>
+</TEXT>
 <TAGS>
-<DATE id="P0" start="16" end="26" text="2092-05-24" TYPE="DATE" comment="" />
-<LOCATION id="P1" start="31" end="53" text="BAYONNE MEDICAL CENTER" TYPE="HOSPITAL" comment="" />
-<LOCATION id="P3" start="72" end="93" text="15 Hassell Brook Road" TYPE="STREET" comment="" />
-<LOCATION id="P4" start="94" end="119" text="Daytona Highridge Estates" TYPE="CITY" comment="" />
-<LOCATION id="P5" start="121" end="123" text="AZ" TYPE="STATE" comment="" />
-<LOCATION id="P6" start="125" end="130" text="39757" TYPE="ZIP" comment="" />
-<NAME id="P7" start="139" end="162" text="Nancy-Jasmine, Nikkolas" TYPE="PATIENT" comment="" />
-<ID id="P8" start="171" end="179" text="69331181" TYPE="MEDICALRECORD" comment="" />
-<DATE id="P9" start="187" end="195" text="05/24/92" TYPE="DATE" comment="" />
-<AGE id="P10" start="216" end="218" text="67" TYPE="AGE" comment="" />
-<DATE id="P11" start="1003" end="1011" text="February" TYPE="DATE" comment="" />
-<DATE id="P12" start="1022" end="1025" text="May" TYPE="DATE" comment="" />
-<DATE id="P13" start="1051" end="1059" text="February" TYPE="DATE" comment="" />
-<DATE id="P14" start="1160" end="1171" text="August 2091" TYPE="DATE" comment="" />
-<NAME id="P15" start="2181" end="2194" text="Nena Quiambao" TYPE="DOCTOR" comment="" />
-<NAME id="P16" start="2202" end="2204" text="NQ" TYPE="DOCTOR" comment="" />
-<NAME id="P17" start="2205" end="2211" text="jaeger" TYPE="DOCTOR" comment="" />
-<ID id="P18" start="2213" end="2224" text="80-55488880" TYPE="IDNUM" comment="" />
-<DATE id="P19" start="2234" end="2241" text="5/27/92" TYPE="DATE" comment="" />
-<DATE id="P20" start="2247" end="2254" text="5/28/92" TYPE="DATE" comment="" />
-<DATE id="P21" start="2260" end="2267" text="5/24/92" TYPE="DATE" comment="" />
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2092-05-24" />
+<LOCATION TYPE="STREET" comment="" end="93" id="P3" start="72" text="15 Hassell Brook Road" />
+<LOCATION TYPE="CITY" comment="" end="119" id="P4" start="94" text="Daytona Highridge Estates" />
+<LOCATION TYPE="STATE" comment="" end="123" id="P5" start="121" text="AZ" />
+<LOCATION TYPE="ZIP" comment="" end="130" id="P6" start="125" text="39757" />
+<NAME TYPE="PATIENT" comment="" end="162" id="P7" start="139" text="Nancy-Jasmine, Nikkolas" />
+<ID TYPE="MEDICALRECORD" comment="" end="179" id="P8" start="171" text="69331181" />
+<DATE TYPE="DATE" comment="" end="195" id="P9" start="187" text="05/24/92" />
+<DATE TYPE="DATE" comment="" end="1011" id="P11" start="1003" text="February" />
+<DATE TYPE="DATE" comment="" end="1025" id="P12" start="1022" text="May" />
+<DATE TYPE="DATE" comment="" end="1059" id="P13" start="1051" text="February" />
+<DATE TYPE="DATE" comment="" end="1171" id="P14" start="1160" text="August 2091" />
+<NAME TYPE="DOCTOR" comment="" end="2194" id="P15" start="2181" text="Nena Quiambao" />
+<NAME TYPE="DOCTOR" comment="" end="2211" id="P17" start="2205" text="jaeger" />
+<ID TYPE="IDNUM" comment="" end="2224" id="P18" start="2213" text="80-55488880" />
+<DATE TYPE="DATE" comment="" end="2241" id="P19" start="2234" text="5/27/92" />
+<DATE TYPE="DATE" comment="" end="2254" id="P20" start="2247" text="5/28/92" />
+<DATE TYPE="DATE" comment="" end="2267" id="P21" start="2260" text="5/24/92" />
 </TAGS>
 </deIdi2b2>

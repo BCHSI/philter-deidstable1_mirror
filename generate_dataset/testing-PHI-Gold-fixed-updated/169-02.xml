@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version='1.0' encoding='utf8'?>
 <deIdi2b2>
-<TEXT><![CDATA[
+<TEXT>
 
 
 Record date: 2076-09-28
@@ -71,13 +71,13 @@ lean pro w/ each meal
 
 increase fiber goal 20-35g/d
 
-label reading <250 mg Na
+label reading &lt;250 mg Na
 
-<2,400mg/d Na goal
+&lt;2,400mg/d Na goal
 
 portion control
 
-sat fat <7% kcals
+sat fat &lt;7% kcals
 
 healthful eating out guidelines
 
@@ -105,13 +105,12 @@ Sampson, MS,RD,LDN
 
 
 
-]]></TEXT>
+</TEXT>
 <TAGS>
-<DATE id="P0" start="16" end="26" text="2076-09-28" TYPE="DATE" comment="" />
-<DATE id="P1" start="64" end="71" text="9/28/76" TYPE="DATE" comment="" />
-<DATE id="P2" start="472" end="476" text="8/76" TYPE="DATE" comment="" />
-<AGE id="P3" start="510" end="512" text="48" TYPE="AGE" comment="" />
-<LOCATION id="P4" start="648" end="654" text="atkins" TYPE="ORGANIZATION" comment="" />
-<NAME id="P5" start="1543" end="1550" text="Sampson" TYPE="DOCTOR" comment="" />
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2076-09-28" />
+<DATE TYPE="DATE" comment="" end="71" id="P1" start="64" text="9/28/76" />
+<DATE TYPE="DATE" comment="" end="476" id="P2" start="472" text="8/76" />
+<LOCATION TYPE="ORGANIZATION" comment="" end="654" id="P4" start="648" text="atkins" />
+<NAME TYPE="DOCTOR" comment="" end="1550" id="P5" start="1543" text="Sampson" />
 </TAGS>
 </deIdi2b2>

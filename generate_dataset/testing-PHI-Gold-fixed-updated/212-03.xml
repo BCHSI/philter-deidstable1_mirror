@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version='1.0' encoding='utf8'?>
 <deIdi2b2>
-<TEXT><![CDATA[
+<TEXT>
 
 
 Record date: 2085-11-25
@@ -153,7 +153,7 @@ Blindness
 
 Congestive heart failure
 
-EF &lt;20% 5/81
+EF &amp;lt;20% 5/81
 
 
 
@@ -358,62 +358,54 @@ Signed electronically by Xa, Gary O on Nov 25, 2085
 
 
 
-]]></TEXT>
+</TEXT>
 <TAGS>
-<DATE id="P0" start="16" end="26" text="2085-11-25" TYPE="DATE" comment="" />
-<LOCATION id="P1" start="62" end="83" text="SAN FERNANDO HOSPITAL" TYPE="HOSPITAL" comment="" />
-<DATE id="P2" start="1553" end="1560" text="7/15/84" TYPE="DATE" comment="" />
-<DATE id="P3" start="1590" end="1597" text="9/12/84" TYPE="DATE" comment="" />
-<DATE id="P4" start="1718" end="1726" text="10/29/81" TYPE="DATE" comment="" />
-<DATE id="P5" start="1835" end="1839" text="2071" TYPE="DATE" comment="" />
-<DATE id="P6" start="1979" end="1986" text="8/16/81" TYPE="DATE" comment="" />
-<DATE id="P7" start="2007" end="2014" text="9/12/84" TYPE="DATE" comment="" />
-<DATE id="P8" start="2019" end="2026" text="1/22/85" TYPE="DATE" comment="" />
-<DATE id="P9" start="2031" end="2037" text="2/6/85" TYPE="DATE" comment="" />
-<DATE id="P10" start="2141" end="2148" text="2/06/85" TYPE="DATE" comment="" />
-<DATE id="P11" start="2268" end="2275" text="4/04/85" TYPE="DATE" comment="" />
-<DATE id="P12" start="2319" end="2321" text="85" TYPE="DATE" comment="" />
-<DATE id="P13" start="2368" end="2373" text="10/81" TYPE="DATE" comment="" />
-<DATE id="P14" start="2418" end="2420" text="85" TYPE="DATE" comment="" />
-<DATE id="P15" start="2457" end="2461" text="2080" TYPE="DATE" comment="" />
-<NAME id="P16" start="2466" end="2474" text="Wm Moses" TYPE="DOCTOR" comment="" />
-<DATE id="P17" start="2490" end="2497" text="6/04/84" TYPE="DATE" comment="" />
-<DATE id="P18" start="2527" end="2534" text="9/12/84" TYPE="DATE" comment="" />
-<DATE id="P19" start="2578" end="2580" text="85" TYPE="DATE" comment="" />
-<DATE id="P20" start="2673" end="2677" text="5/81" TYPE="DATE" comment="" />
-<NAME id="P21" start="2714" end="2726" text="Omar Needham" TYPE="DOCTOR" comment="" />
-<NAME id="P22" start="2769" end="2774" text="Lewis" TYPE="DOCTOR" comment="" />
-<LOCATION id="P23" start="2780" end="2783" text="CCH" TYPE="HOSPITAL" comment="" />
-<DATE id="P24" start="2784" end="2791" text="7/26/83" TYPE="DATE" comment="" />
-<NAME id="P25" start="2836" end="2845" text="Underwood" TYPE="DOCTOR" comment="" />
-<DATE id="P26" start="2846" end="2852" text="7/7/85" TYPE="DATE" comment="" />
-<DATE id="P27" start="2913" end="2919" text="7/5/85" TYPE="DATE" comment="" />
-<NAME id="P28" start="2973" end="2978" text="Wendy" TYPE="PATIENT" comment="" />
-<AGE id="P29" start="3710" end="3714" text="80's" TYPE="AGE" comment="" />
-<AGE id="P30" start="3729" end="3733" text="80's" TYPE="AGE" comment="" />
-<PROFESSION id="P31" start="3827" end="3832" text="Baker" TYPE="PROFESSION" comment="" />
-<LOCATION id="P32" start="4028" end="4036" text="Medicare" TYPE="ORGANIZATION" comment="" />
-<DATE id="P33" start="4059" end="4064" text="10/81" TYPE="DATE" comment="" />
-<ID id="P34" start="4064" end="4071" text="ye423zc" TYPE="IDNUM" comment="" />
-<DATE id="P35" start="4071" end="4075" text="6/82" TYPE="DATE" comment="" />
-<DATE id="P36" start="4077" end="4081" text="2085" TYPE="DATE" comment="" />
-<DATE id="P37" start="4092" end="4097" text="10/81" TYPE="DATE" comment="" />
-<ID id="P38" start="4112" end="4117" text="5519v" TYPE="IDNUM" comment="" />
-<DATE id="P39" start="4118" end="4124" text="aug/82" TYPE="DATE" comment="" />
-<DATE id="P40" start="4135" end="4140" text="10/81" TYPE="DATE" comment="" />
-<LOCATION id="P41" start="4394" end="4397" text="SFH" TYPE="HOSPITAL" comment="" />
-<DATE id="P42" start="4628" end="4636" text="11/25/85" TYPE="DATE" comment="" />
-<DATE id="P43" start="4653" end="4661" text="11/25/85" TYPE="DATE" comment="" />
-<DATE id="P44" start="4684" end="4692" text="11/25/85" TYPE="DATE" comment="" />
-<DATE id="P45" start="4718" end="4726" text="11/25/85" TYPE="DATE" comment="" />
-<DATE id="P46" start="4742" end="4750" text="11/25/85" TYPE="DATE" comment="" />
-<DATE id="P47" start="4772" end="4780" text="11/25/85" TYPE="DATE" comment="" />
-<DATE id="P48" start="4818" end="4826" text="11/25/85" TYPE="DATE" comment="" />
-<DATE id="P49" start="4847" end="4855" text="11/25/85" TYPE="DATE" comment="" />
-<DATE id="P50" start="4868" end="4876" text="11/25/85" TYPE="DATE" comment="" />
-<DATE id="P51" start="4889" end="4897" text="09/17/85" TYPE="DATE" comment="" />
-<NAME id="P52" start="5159" end="5172" text="William Lewis" TYPE="DOCTOR" comment="" />
-<NAME id="P53" start="5271" end="5281" text="Xa, Gary O" TYPE="DOCTOR" comment="" />
-<DATE id="P54" start="5285" end="5297" text="Nov 25, 2085" TYPE="DATE" comment="" />
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2085-11-25" />
+<DATE TYPE="DATE" comment="" end="1560" id="P2" start="1553" text="7/15/84" />
+<DATE TYPE="DATE" comment="" end="1597" id="P3" start="1590" text="9/12/84" />
+<DATE TYPE="DATE" comment="" end="1726" id="P4" start="1718" text="10/29/81" />
+<DATE TYPE="DATE" comment="" end="1986" id="P6" start="1979" text="8/16/81" />
+<DATE TYPE="DATE" comment="" end="2014" id="P7" start="2007" text="9/12/84" />
+<DATE TYPE="DATE" comment="" end="2026" id="P8" start="2019" text="1/22/85" />
+<DATE TYPE="DATE" comment="" end="2037" id="P9" start="2031" text="2/6/85" />
+<DATE TYPE="DATE" comment="" end="2148" id="P10" start="2141" text="2/06/85" />
+<DATE TYPE="DATE" comment="" end="2275" id="P11" start="2268" text="4/04/85" />
+<DATE TYPE="DATE" comment="" end="2321" id="P12" start="2319" text="85" />
+<DATE TYPE="DATE" comment="" end="2373" id="P13" start="2368" text="10/81" />
+<DATE TYPE="DATE" comment="" end="2420" id="P14" start="2418" text="85" />
+<NAME TYPE="DOCTOR" comment="" end="2474" id="P16" start="2466" text="Wm Moses" />
+<DATE TYPE="DATE" comment="" end="2497" id="P17" start="2490" text="6/04/84" />
+<DATE TYPE="DATE" comment="" end="2534" id="P18" start="2527" text="9/12/84" />
+<DATE TYPE="DATE" comment="" end="2580" id="P19" start="2578" text="85" />
+<DATE TYPE="DATE" comment="" end="2677" id="P20" start="2673" text="5/81" />
+<NAME TYPE="DOCTOR" comment="" end="2726" id="P21" start="2714" text="Omar Needham" />
+<NAME TYPE="DOCTOR" comment="" end="2774" id="P22" start="2769" text="Lewis" />
+<DATE TYPE="DATE" comment="" end="2791" id="P24" start="2784" text="7/26/83" />
+<NAME TYPE="DOCTOR" comment="" end="2845" id="P25" start="2836" text="Underwood" />
+<DATE TYPE="DATE" comment="" end="2852" id="P26" start="2846" text="7/7/85" />
+<DATE TYPE="DATE" comment="" end="2919" id="P27" start="2913" text="7/5/85" />
+<NAME TYPE="PATIENT" comment="" end="2978" id="P28" start="2973" text="Wendy" />
+<PROFESSION TYPE="PROFESSION" comment="" end="3832" id="P31" start="3827" text="Baker" />
+<LOCATION TYPE="ORGANIZATION" comment="" end="4036" id="P32" start="4028" text="Medicare" />
+<DATE TYPE="DATE" comment="" end="4064" id="P33" start="4059" text="10/81" />
+<ID TYPE="IDNUM" comment="" end="4071" id="P34" start="4064" text="ye423zc" />
+<DATE TYPE="DATE" comment="" end="4075" id="P35" start="4071" text="6/82" />
+<DATE TYPE="DATE" comment="" end="4097" id="P37" start="4092" text="10/81" />
+<ID TYPE="IDNUM" comment="" end="4117" id="P38" start="4112" text="5519v" />
+<DATE TYPE="DATE" comment="" end="4124" id="P39" start="4118" text="aug/82" />
+<DATE TYPE="DATE" comment="" end="4140" id="P40" start="4135" text="10/81" />
+<DATE TYPE="DATE" comment="" end="4636" id="P42" start="4628" text="11/25/85" />
+<DATE TYPE="DATE" comment="" end="4661" id="P43" start="4653" text="11/25/85" />
+<DATE TYPE="DATE" comment="" end="4692" id="P44" start="4684" text="11/25/85" />
+<DATE TYPE="DATE" comment="" end="4726" id="P45" start="4718" text="11/25/85" />
+<DATE TYPE="DATE" comment="" end="4750" id="P46" start="4742" text="11/25/85" />
+<DATE TYPE="DATE" comment="" end="4780" id="P47" start="4772" text="11/25/85" />
+<DATE TYPE="DATE" comment="" end="4826" id="P48" start="4818" text="11/25/85" />
+<DATE TYPE="DATE" comment="" end="4855" id="P49" start="4847" text="11/25/85" />
+<DATE TYPE="DATE" comment="" end="4876" id="P50" start="4868" text="11/25/85" />
+<DATE TYPE="DATE" comment="" end="4897" id="P51" start="4889" text="09/17/85" />
+<NAME TYPE="DOCTOR" comment="" end="5172" id="P52" start="5159" text="William Lewis" />
+<NAME TYPE="DOCTOR" comment="" end="5281" id="P53" start="5271" text="Xa, Gary O" />
+<DATE TYPE="DATE" comment="" end="5297" id="P54" start="5285" text="Nov 25, 2085" />
 </TAGS>
 </deIdi2b2>

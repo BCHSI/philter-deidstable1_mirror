@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version='1.0' encoding='utf8'?>
 <deIdi2b2>
-<TEXT><![CDATA[
+<TEXT>
 
 
 Record date: 2086-01-17
@@ -240,26 +240,20 @@ cc:Dr. Veronica Frey
 
 
 
-]]></TEXT>
+</TEXT>
 <TAGS>
-<DATE id="P0" start="16" end="26" text="2086-01-17" TYPE="DATE" comment="" />
-<NAME id="P1" start="28" end="40" text="Xavier Oshea" TYPE="PATIENT" comment="" />
-<ID id="P2" start="47" end="56" text="581 77 50" TYPE="MEDICALRECORD" comment="" />
-<DATE id="P3" start="60" end="67" text="1/17/86" TYPE="DATE" comment="" />
-<NAME id="P4" start="110" end="123" text="Veronica Frey" TYPE="DOCTOR" comment="" />
-<DATE id="P5" start="260" end="264" text="2082" TYPE="DATE" comment="" />
-<LOCATION id="P6" start="268" end="270" text="NY" TYPE="STATE" comment="" />
-<LOCATION id="P7" start="400" end="402" text="NY" TYPE="STATE" comment="" />
-<AGE id="P8" start="1207" end="1209" text="37" TYPE="AGE" comment="" />
-<AGE id="P9" start="1234" end="1236" text="52" TYPE="AGE" comment="" />
-<LOCATION id="P10" start="1373" end="1375" text="NY" TYPE="STATE" comment="" />
-<DATE id="P11" start="1379" end="1386" text="12/2084" TYPE="DATE" comment="" />
-<AGE id="P12" start="1437" end="1439" text="39" TYPE="AGE" comment="" />
-<AGE id="P13" start="1478" end="1480" text="39" TYPE="AGE" comment="" />
-<NAME id="P14" start="3425" end="3439" text="Taj E. Landers" TYPE="DOCTOR" comment="" />
-<LOCATION id="P16" start="3454" end="3483" text="Martinsville General Hospital" TYPE="HOSPITAL" comment="" />
-<LOCATION id="P17" start="3485" end="3503" text="Norfolk University" TYPE="ORGANIZATION" comment="" />
-<CONTACT id="P18" start="3505" end="3517" text="131-631-4189" TYPE="PHONE" comment="" />
-<NAME id="P19" start="3528" end="3541" text="Veronica Frey" TYPE="DOCTOR" comment="" />
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2086-01-17" />
+<NAME TYPE="PATIENT" comment="" end="40" id="P1" start="28" text="Xavier Oshea" />
+<ID TYPE="MEDICALRECORD" comment="" end="56" id="P2" start="47" text="581 77 50" />
+<DATE TYPE="DATE" comment="" end="67" id="P3" start="60" text="1/17/86" />
+<NAME TYPE="DOCTOR" comment="" end="123" id="P4" start="110" text="Veronica Frey" />
+<LOCATION TYPE="STATE" comment="" end="270" id="P6" start="268" text="NY" />
+<LOCATION TYPE="STATE" comment="" end="402" id="P7" start="400" text="NY" />
+<LOCATION TYPE="STATE" comment="" end="1375" id="P10" start="1373" text="NY" />
+<DATE TYPE="DATE" comment="" end="1386" id="P11" start="1379" text="12/2084" />
+<NAME TYPE="DOCTOR" comment="" end="3439" id="P14" start="3425" text="Taj E. Landers" />
+<LOCATION TYPE="ORGANIZATION" comment="" end="3503" id="P17" start="3485" text="Norfolk University" />
+<CONTACT TYPE="PHONE" comment="" end="3517" id="P18" start="3505" text="131-631-4189" />
+<NAME TYPE="DOCTOR" comment="" end="3541" id="P19" start="3528" text="Veronica Frey" />
 </TAGS>
 </deIdi2b2>

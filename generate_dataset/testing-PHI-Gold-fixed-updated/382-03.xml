@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version='1.0' encoding='utf8'?>
 <deIdi2b2>
-<TEXT><![CDATA[
+<TEXT>
 
 
 Record date: 2084-12-07
@@ -106,31 +106,27 @@ Francine Morales, PA-C
 
 
 
-]]></TEXT>
+</TEXT>
 <TAGS>
-<DATE id="P0" start="16" end="26" text="2084-12-07" TYPE="DATE" comment="" />
-<NAME id="P1" start="62" end="77" text="Vicente Aguilar" TYPE="PATIENT" comment="" />
-<ID id="P2" start="79" end="87" text="98179909" TYPE="MEDICALRECORD" comment="" />
-<DATE id="P3" start="88" end="104" text="December 7, 2084" TYPE="DATE" comment="" />
-<AGE id="P4" start="112" end="114" text="51" TYPE="AGE" comment="" />
-<DATE id="P5" start="216" end="222" text="1/2084" TYPE="DATE" comment="" />
-<NAME id="P6" start="261" end="265" text="Mann" TYPE="DOCTOR" comment="" />
-<LOCATION id="P7" start="283" end="294" text="long island" TYPE="LOCATION-OTHER" comment="" />
-<NAME id="P8" start="483" end="487" text="Haas" TYPE="DOCTOR" comment="" />
-<DATE id="P9" start="491" end="504" text="November 13th" TYPE="DATE" comment="" />
-<NAME id="P10" start="565" end="569" text="Mann" TYPE="DOCTOR" comment="" />
-<NAME id="P11" start="636" end="643" text="Aguilar" TYPE="PATIENT" comment="" />
-<DATE id="P12" start="647" end="653" text="friday" TYPE="DATE" comment="" />
-<DATE id="P13" start="983" end="989" text="summer" TYPE="DATE" comment="" />
-<DATE id="P14" start="2134" end="2137" text="thu" TYPE="DATE" comment="" />
-<DATE id="P15" start="2138" end="2141" text="sat" TYPE="DATE" comment="" />
-<DATE id="P16" start="2142" end="2148" text="Monday" TYPE="DATE" comment="" />
-<LOCATION id="P17" start="2410" end="2421" text="long island" TYPE="LOCATION-OTHER" comment="" />
-<PROFESSION id="P18" start="2456" end="2462" text="Notary" TYPE="PROFESSION" comment="" />
-<PROFESSION id="P19" start="2473" end="2484" text="shoe repair" TYPE="PROFESSION" comment="" />
-<NAME id="P20" start="3127" end="3134" text="Aguilar" TYPE="PATIENT" comment="" />
-<AGE id="P21" start="3140" end="3142" text="51" TYPE="AGE" comment="" />
-<NAME id="P22" start="5146" end="5162" text="Francine Morales" TYPE="DOCTOR" comment="" />
-<CONTACT id="P23" start="5169" end="5174" text="68626" TYPE="PHONE" comment="" />
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2084-12-07" />
+<NAME TYPE="PATIENT" comment="" end="77" id="P1" start="62" text="Vicente Aguilar" />
+<ID TYPE="MEDICALRECORD" comment="" end="87" id="P2" start="79" text="98179909" />
+<DATE TYPE="DATE" comment="" end="104" id="P3" start="88" text="December 7, 2084" />
+<DATE TYPE="DATE" comment="" end="222" id="P5" start="216" text="1/2084" />
+<NAME TYPE="DOCTOR" comment="" end="265" id="P6" start="261" text="Mann" />
+<LOCATION TYPE="LOCATION-OTHER" comment="" end="294" id="P7" start="283" text="long island" />
+<NAME TYPE="DOCTOR" comment="" end="487" id="P8" start="483" text="Haas" />
+<DATE TYPE="DATE" comment="" end="504" id="P9" start="491" text="November 13th" />
+<NAME TYPE="DOCTOR" comment="" end="569" id="P10" start="565" text="Mann" />
+<NAME TYPE="PATIENT" comment="" end="643" id="P11" start="636" text="Aguilar" />
+<DATE TYPE="DATE" comment="" end="653" id="P12" start="647" text="friday" />
+<DATE TYPE="DATE" comment="" end="2137" id="P14" start="2134" text="thu" />
+<DATE TYPE="DATE" comment="" end="2141" id="P15" start="2138" text="sat" />
+<LOCATION TYPE="LOCATION-OTHER" comment="" end="2421" id="P17" start="2410" text="long island" />
+<PROFESSION TYPE="PROFESSION" comment="" end="2462" id="P18" start="2456" text="Notary" />
+<PROFESSION TYPE="PROFESSION" comment="" end="2484" id="P19" start="2473" text="shoe repair" />
+<NAME TYPE="PATIENT" comment="" end="3134" id="P20" start="3127" text="Aguilar" />
+<NAME TYPE="DOCTOR" comment="" end="5162" id="P22" start="5146" text="Francine Morales" />
+<CONTACT TYPE="PHONE" comment="" end="5174" id="P23" start="5169" text="68626" />
 </TAGS>
 </deIdi2b2>

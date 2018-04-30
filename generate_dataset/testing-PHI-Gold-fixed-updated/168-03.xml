@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version='1.0' encoding='utf8'?>
 <deIdi2b2>
-<TEXT><![CDATA[
+<TEXT>
 
 
 Record date: 2073-04-27
@@ -35,7 +35,7 @@ Chest pain
 
 History of present illness
 
-54 year old man with DM1 for >40 years, ESRD on HD, CAD, s/p PCI at VHOC and Sipher stent to LAD (100% lesion) on 4/10. Discharged on heart failure regimen. Developed chest pain last night, pleuritic, different than previous CP. No ECG changes noted in EW, went to Alina Medical where symptoms changed abruptly to 8/10 SSC pressure that was similar to pain experienced at VHOC admission.ECG showed biphasic TWI in anterior precordium V1-V3, and    saddle-shaped    T waves, ST elevations in II/III/aVF. Troponin mildly elevated at 0.2. Patient moved to cath lab for urgent re-look.
+54 year old man with DM1 for &gt;40 years, ESRD on HD, CAD, s/p PCI at VHOC and Sipher stent to LAD (100% lesion) on 4/10. Discharged on heart failure regimen. Developed chest pain last night, pleuritic, different than previous CP. No ECG changes noted in EW, went to Alina Medical where symptoms changed abruptly to 8/10 SSC pressure that was similar to pain experienced at VHOC admission.ECG showed biphasic TWI in anterior precordium V1-V3, and    saddle-shaped    T waves, ST elevations in II/III/aVF. Troponin mildly elevated at 0.2. Patient moved to cath lab for urgent re-look.
 
 
 
@@ -381,7 +381,7 @@ IMPRESSION:
 
 Other imaging
 
-Ribs,unil,>2vws              27-Apr-2073 07:29 
+Ribs,unil,&gt;2vws              27-Apr-2073 07:29 
 
 	Technique: Rib detail radiographs.  Comparison is made a prior
 
@@ -471,9 +471,9 @@ VHOC  ECHO                      13-Apr-2073
 
                               Dimensions                    Normal adult values
 
-Aortic Root:                    3.3 cm                              <2.2 cm/m2
+Aortic Root:                    3.3 cm                              &lt;2.2 cm/m2
 
-Left Atrium:                    3.9 cm                              <2.1 cm/m2
+Left Atrium:                    3.9 cm                              &lt;2.1 cm/m2
 
 I.V. Septum
 
@@ -569,7 +569,7 @@ ICA Dist  no plaque                  smooth                73          0
 
  
 
-ECA       no plaque                  smooth                116         <50     
+ECA       no plaque                  smooth                116         &lt;50     
 
  
 
@@ -601,7 +601,7 @@ ICA Dist  no plaque                  smooth                73          0
 
  
 
-ECA       no plaque                  smooth                95          <50     
+ECA       no plaque                  smooth                95          &lt;50     
 
  
 
@@ -707,64 +707,45 @@ Pager 43548
 
 
 
-]]></TEXT>
+</TEXT>
 <TAGS>
-<DATE id="P0" start="16" end="26" text="2073-04-27" TYPE="DATE" comment="" />
-<DATE id="P1" start="48" end="69" text="Tuesday, Apr 27, 2073" TYPE="DATE" comment="" />
-<NAME id="P2" start="73" end="86" text="Lujan, Victor" TYPE="PATIENT" comment="" />
-<LOCATION id="P3" start="88" end="91" text="SMH" TYPE="HOSPITAL" comment="" />
-<ID id="P4" start="92" end="99" text="0189233" TYPE="MEDICALRECORD" comment="" />
-<AGE id="P5" start="101" end="103" text="54" TYPE="AGE" comment="" />
-<DATE id="P6" start="122" end="130" text="04/27/73" TYPE="DATE" comment="" />
-<NAME id="P7" start="139" end="146" text="Elliott" TYPE="DOCTOR" comment="" />
-<NAME id="P8" start="155" end="161" text="Alston" TYPE="DOCTOR" comment="" />
-<AGE id="P9" start="224" end="226" text="54" TYPE="AGE" comment="" />
-<LOCATION id="P10" start="292" end="296" text="VHOC" TYPE="HOSPITAL" comment="" />
-<DATE id="P11" start="338" end="342" text="4/10" TYPE="DATE" comment="" />
-<LOCATION id="P12" start="489" end="502" text="Alina Medical" TYPE="HOSPITAL" comment="" />
-<LOCATION id="P13" start="596" end="600" text="VHOC" TYPE="HOSPITAL" comment="" />
-<DATE id="P14" start="1295" end="1302" text="4/09/73" TYPE="DATE" comment="" />
-<LOCATION id="P15" start="2427" end="2434" text="Zebulon" TYPE="CITY" comment="" />
-<LOCATION id="P16" start="3070" end="3073" text="SMH" TYPE="HOSPITAL" comment="" />
-<LOCATION id="P17" start="3081" end="3084" text="SMH" TYPE="HOSPITAL" comment="" />
-<LOCATION id="P18" start="3092" end="3096" text="VHOC" TYPE="HOSPITAL" comment="" />
-<DATE id="P19" start="3116" end="3124" text="04/27/73" TYPE="DATE" comment="" />
-<DATE id="P20" start="3127" end="3135" text="04/27/73" TYPE="DATE" comment="" />
-<DATE id="P21" start="3138" end="3146" text="04/21/73" TYPE="DATE" comment="" />
-<DATE id="P22" start="4154" end="4162" text="04/27/73" TYPE="DATE" comment="" />
-<DATE id="P23" start="4165" end="4173" text="04/27/73" TYPE="DATE" comment="" />
-<DATE id="P24" start="4176" end="4184" text="04/21/73" TYPE="DATE" comment="" />
-<DATE id="P25" start="4785" end="4793" text="04/27/73" TYPE="DATE" comment="" />
-<DATE id="P26" start="4796" end="4804" text="04/27/73" TYPE="DATE" comment="" />
-<DATE id="P27" start="4807" end="4815" text="04/21/73" TYPE="DATE" comment="" />
-<LOCATION id="P28" start="5308" end="5311" text="SMH" TYPE="HOSPITAL" comment="" />
-<LOCATION id="P29" start="5319" end="5323" text="VHOC" TYPE="HOSPITAL" comment="" />
-<DATE id="P30" start="5343" end="5351" text="04/27/73" TYPE="DATE" comment="" />
-<DATE id="P31" start="5354" end="5362" text="04/21/73" TYPE="DATE" comment="" />
-<DATE id="P32" start="5755" end="5763" text="04/27/73" TYPE="DATE" comment="" />
-<DATE id="P33" start="5766" end="5774" text="04/27/73" TYPE="DATE" comment="" />
-<LOCATION id="P34" start="6096" end="6099" text="SMH" TYPE="HOSPITAL" comment="" />
-<LOCATION id="P35" start="6107" end="6110" text="SMH" TYPE="HOSPITAL" comment="" />
-<LOCATION id="P36" start="6118" end="6121" text="SMH" TYPE="HOSPITAL" comment="" />
-<LOCATION id="P37" start="6129" end="6133" text="VHOC" TYPE="HOSPITAL" comment="" />
-<DATE id="P38" start="6153" end="6161" text="04/27/73" TYPE="DATE" comment="" />
-<DATE id="P39" start="6164" end="6172" text="04/27/73" TYPE="DATE" comment="" />
-<DATE id="P40" start="6175" end="6183" text="04/27/73" TYPE="DATE" comment="" />
-<DATE id="P41" start="6186" end="6194" text="04/21/73" TYPE="DATE" comment="" />
-<DATE id="P42" start="6532" end="6543" text="27-Apr-2073" TYPE="DATE" comment="" />
-<DATE id="P43" start="6600" end="6607" text="4/12/73" TYPE="DATE" comment="" />
-<DATE id="P44" start="6926" end="6937" text="27-Apr-2073" TYPE="DATE" comment="" />
-<DATE id="P45" start="7028" end="7035" text="9/19/71" TYPE="DATE" comment="" />
-<LOCATION id="P46" start="7410" end="7414" text="VHOC" TYPE="HOSPITAL" comment="" />
-<DATE id="P47" start="7442" end="7453" text="12-Apr-2073" TYPE="DATE" comment="" />
-<LOCATION id="P48" start="8934" end="8938" text="VHOC" TYPE="HOSPITAL" comment="" />
-<DATE id="P49" start="8966" end="8977" text="13-Apr-2073" TYPE="DATE" comment="" />
-<LOCATION id="P50" start="10783" end="10787" text="VHOC" TYPE="HOSPITAL" comment="" />
-<DATE id="P51" start="10815" end="10826" text="12-Apr-2073" TYPE="DATE" comment="" />
-<ID id="P52" start="10843" end="10852" text="89-06402Z" TYPE="MEDICALRECORD" comment="" />
-<AGE id="P53" start="12352" end="12354" text="54" TYPE="AGE" comment="" />
-<NAME id="P54" start="12868" end="12875" text="Elliott" TYPE="DOCTOR" comment="" />
-<NAME id="P55" start="13209" end="13223" text="Harold Younkin" TYPE="DOCTOR" comment="" />
-<CONTACT id="P56" start="13261" end="13266" text="43548" TYPE="PHONE" comment="" />
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2073-04-27" />
+<DATE TYPE="DATE" comment="" end="69" id="P1" start="48" text="Tuesday, Apr 27, 2073" />
+<NAME TYPE="PATIENT" comment="" end="86" id="P2" start="73" text="Lujan, Victor" />
+<ID TYPE="MEDICALRECORD" comment="" end="99" id="P4" start="92" text="0189233" />
+<DATE TYPE="DATE" comment="" end="130" id="P6" start="122" text="04/27/73" />
+<NAME TYPE="DOCTOR" comment="" end="146" id="P7" start="139" text="Elliott" />
+<NAME TYPE="DOCTOR" comment="" end="161" id="P8" start="155" text="Alston" />
+<DATE TYPE="DATE" comment="" end="342" id="P11" start="338" text="4/10" />
+<DATE TYPE="DATE" comment="" end="1302" id="P14" start="1295" text="4/09/73" />
+<LOCATION TYPE="CITY" comment="" end="2434" id="P15" start="2427" text="Zebulon" />
+<DATE TYPE="DATE" comment="" end="3124" id="P19" start="3116" text="04/27/73" />
+<DATE TYPE="DATE" comment="" end="3135" id="P20" start="3127" text="04/27/73" />
+<DATE TYPE="DATE" comment="" end="3146" id="P21" start="3138" text="04/21/73" />
+<DATE TYPE="DATE" comment="" end="4162" id="P22" start="4154" text="04/27/73" />
+<DATE TYPE="DATE" comment="" end="4173" id="P23" start="4165" text="04/27/73" />
+<DATE TYPE="DATE" comment="" end="4184" id="P24" start="4176" text="04/21/73" />
+<DATE TYPE="DATE" comment="" end="4793" id="P25" start="4785" text="04/27/73" />
+<DATE TYPE="DATE" comment="" end="4804" id="P26" start="4796" text="04/27/73" />
+<DATE TYPE="DATE" comment="" end="4815" id="P27" start="4807" text="04/21/73" />
+<DATE TYPE="DATE" comment="" end="5351" id="P30" start="5343" text="04/27/73" />
+<DATE TYPE="DATE" comment="" end="5362" id="P31" start="5354" text="04/21/73" />
+<DATE TYPE="DATE" comment="" end="5763" id="P32" start="5755" text="04/27/73" />
+<DATE TYPE="DATE" comment="" end="5774" id="P33" start="5766" text="04/27/73" />
+<DATE TYPE="DATE" comment="" end="6161" id="P38" start="6153" text="04/27/73" />
+<DATE TYPE="DATE" comment="" end="6172" id="P39" start="6164" text="04/27/73" />
+<DATE TYPE="DATE" comment="" end="6183" id="P40" start="6175" text="04/27/73" />
+<DATE TYPE="DATE" comment="" end="6194" id="P41" start="6186" text="04/21/73" />
+<DATE TYPE="DATE" comment="" end="6543" id="P42" start="6532" text="27-Apr-2073" />
+<DATE TYPE="DATE" comment="" end="6607" id="P43" start="6600" text="4/12/73" />
+<DATE TYPE="DATE" comment="" end="6937" id="P44" start="6926" text="27-Apr-2073" />
+<DATE TYPE="DATE" comment="" end="7035" id="P45" start="7028" text="9/19/71" />
+<DATE TYPE="DATE" comment="" end="7453" id="P47" start="7442" text="12-Apr-2073" />
+<DATE TYPE="DATE" comment="" end="8977" id="P49" start="8966" text="13-Apr-2073" />
+<DATE TYPE="DATE" comment="" end="10826" id="P51" start="10815" text="12-Apr-2073" />
+<ID TYPE="MEDICALRECORD" comment="" end="10852" id="P52" start="10843" text="89-06402Z" />
+<NAME TYPE="DOCTOR" comment="" end="12875" id="P54" start="12868" text="Elliott" />
+<NAME TYPE="DOCTOR" comment="" end="13223" id="P55" start="13209" text="Harold Younkin" />
+<CONTACT TYPE="PHONE" comment="" end="13266" id="P56" start="13261" text="43548" />
 </TAGS>
 </deIdi2b2>

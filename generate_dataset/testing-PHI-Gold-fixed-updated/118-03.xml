@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version='1.0' encoding='utf8'?>
 <deIdi2b2>
-<TEXT><![CDATA[
+<TEXT>
 
 
 Record date: 2117-08-26
@@ -35,19 +35,15 @@ Helen Ochs NP
 
 
 
-]]></TEXT>
+</TEXT>
 <TAGS>
-<DATE id="P0" start="16" end="26" text="2117-08-26" TYPE="DATE" comment="" />
-<NAME id="P1" start="29" end="43" text="Usrey, Anthony" TYPE="PATIENT" comment="" />
-<ID id="P2" start="49" end="56" text="6444877" TYPE="MEDICALRECORD" comment="" />
-<DATE id="P3" start="63" end="72" text="8/11/2062" TYPE="DATE" comment="" />
-<DATE id="P4" start="73" end="88" text="August 26, 2117" TYPE="DATE" comment="" />
-<LOCATION id="P5" start="90" end="120" text="Sisters Of Providence Hospital" TYPE="HOSPITAL" comment="" />
-<AGE id="P6" start="150" end="152" text="55" TYPE="AGE" comment="" />
-<LOCATION id="P7" start="163" end="172" text="Columbian" TYPE="COUNTRY" comment="" />
-<LOCATION id="P8" start="257" end="260" text="PNC" TYPE="HOSPITAL" comment="" />
-<DATE id="P9" start="264" end="271" text="7/12/17" TYPE="DATE" comment="" />
-<NAME id="P10" start="1365" end="1378" text="Hugh Delarosa" TYPE="DOCTOR" comment="" />
-<NAME id="P11" start="1382" end="1392" text="Helen Ochs" TYPE="DOCTOR" comment="" />
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2117-08-26" />
+<NAME TYPE="PATIENT" comment="" end="43" id="P1" start="29" text="Usrey, Anthony" />
+<ID TYPE="MEDICALRECORD" comment="" end="56" id="P2" start="49" text="6444877" />
+<DATE TYPE="DATE" comment="" end="72" id="P3" start="63" text="8/11/2062" />
+<DATE TYPE="DATE" comment="" end="88" id="P4" start="73" text="August 26, 2117" />
+<DATE TYPE="DATE" comment="" end="271" id="P9" start="264" text="7/12/17" />
+<NAME TYPE="DOCTOR" comment="" end="1378" id="P10" start="1365" text="Hugh Delarosa" />
+<NAME TYPE="DOCTOR" comment="" end="1392" id="P11" start="1382" text="Helen Ochs" />
 </TAGS>
 </deIdi2b2>

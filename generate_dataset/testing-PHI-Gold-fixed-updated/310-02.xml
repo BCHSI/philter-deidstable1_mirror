@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version='1.0' encoding='utf8'?>
 <deIdi2b2>
-<TEXT><![CDATA[
+<TEXT>
 
 
 Record date: 2073-09-20
@@ -85,7 +85,7 @@ Radiology
 09/19/2073 CT SCAN CHEST W/O CONTRAST
 REPORT NOT FINALIZED 
 
-09/19/2073 Chest PA & Lateral  
+09/19/2073 Chest PA &amp; Lateral  
       IMPRESSION: Chest PA and lateral views are compared to prior  done on 9/18/2073. Paramediastinal opacification is changed.  Cardiomediastinal silhoutte is stable. Nodular opacity in the  left perihilar region appears less apparent. No new consolidations are seen. There is a new left-sided Hickman catheter with its tip in the SVC. No pneumothorax is seen .
       
 Impression:
@@ -125,66 +125,54 @@ Division of Infectious Diseases
 
 
 
-]]></TEXT>
+</TEXT>
 <TAGS>
-<DATE id="P0" start="16" end="26" text="2073-09-20" TYPE="DATE" comment="" />
-<LOCATION id="P1" start="29" end="37" text="MANAMANA" TYPE="HOSPITAL" comment="" />
-<NAME id="P2" start="84" end="96" text="Vincent Ware" TYPE="PATIENT" comment="" />
-<ID id="P3" start="98" end="113" text="71417347     2Y" TYPE="MEDICALRECORD" comment="" />
-<NAME id="P4" start="125" end="135" text="Casey Best" TYPE="DOCTOR" comment="" />
-<NAME id="P5" start="153" end="175" text="Tina Isaiah-Villagomez" TYPE="DOCTOR" comment="" />
-<NAME id="P6" start="193" end="209" text="Alexander Y Xian" TYPE="DOCTOR" comment="" />
-<NAME id="P7" start="234" end="241" text="Webster" TYPE="DOCTOR" comment="" />
-<DATE id="P8" start="262" end="280" text="September 20, 2073" TYPE="DATE" comment="" />
-<AGE id="P9" start="373" end="375" text="66" TYPE="AGE" comment="" />
-<DATE id="P10" start="419" end="423" text="2066" TYPE="DATE" comment="" />
-<DATE id="P11" start="493" end="497" text="2066" TYPE="DATE" comment="" />
-<DATE id="P12" start="537" end="545" text="Nov 2066" TYPE="DATE" comment="" />
-<DATE id="P13" start="588" end="596" text="May 2073" TYPE="DATE" comment="" />
-<DATE id="P14" start="908" end="916" text="May 2073" TYPE="DATE" comment="" />
-<LOCATION id="P15" start="1177" end="1190" text="Educare-Fargo" TYPE="HOSPITAL" comment="" />
-<DATE id="P16" start="1290" end="1294" text="July" TYPE="DATE" comment="" />
-<DATE id="P17" start="1397" end="1408" text="August 2073" TYPE="DATE" comment="" />
-<LOCATION id="P18" start="1753" end="1757" text="KCGH" TYPE="HOSPITAL" comment="" />
-<DATE id="P19" start="2349" end="2353" text="2066" TYPE="DATE" comment="" />
-<DATE id="P20" start="2486" end="2493" text="9/20/73" TYPE="DATE" comment="" />
-<DATE id="P21" start="2498" end="2504" text="8/7/73" TYPE="DATE" comment="" />
-<LOCATION id="P22" start="2586" end="2598" text="Saudi Arabia" TYPE="COUNTRY" comment="" />
-<LOCATION id="P23" start="2600" end="2612" text="Cartersville" TYPE="CITY" comment="" />
-<LOCATION id="P24" start="2614" end="2621" text="Newport" TYPE="CITY" comment="" />
-<DATE id="P25" start="2667" end="2674" text="9/18/73" TYPE="DATE" comment="" />
-<PROFESSION id="P26" start="3103" end="3113" text="programmer" TYPE="PROFESSION" comment="" />
-<PROFESSION id="P27" start="3129" end="3182" text="Industrial Engineering and Manufacturing Technologist" TYPE="PROFESSION" comment="" />
-<LOCATION id="P28" start="3186" end="3205" text="Activision Blizzard" TYPE="ORGANIZATION" comment="" />
-<LOCATION id="P29" start="3352" end="3370" text="Rockefeller Centre" TYPE="LOCATION-OTHER" comment="" />
-<LOCATION id="P30" start="3384" end="3390" text="global" TYPE="LOCATION-OTHER" comment="" />
-<LOCATION id="P31" start="3399" end="3406" text="Fernley" TYPE="CITY" comment="" />
-<LOCATION id="P32" start="3408" end="3420" text="Cartersville" TYPE="CITY" comment="" />
-<LOCATION id="P33" start="3422" end="3429" text="Iceland" TYPE="COUNTRY" comment="" />
-<LOCATION id="P34" start="3455" end="3461" text="Muscat" TYPE="CITY" comment="" />
-<LOCATION id="P35" start="3634" end="3642" text="Storting" TYPE="LOCATION-OTHER" comment="" />
-<LOCATION id="P36" start="3647" end="3654" text="Capitol" TYPE="LOCATION-OTHER" comment="" />
-<AGE id="P37" start="3764" end="3766" text="90" TYPE="AGE" comment="" />
-<DATE id="P38" start="4252" end="4262" text="09/20/2073" TYPE="DATE" comment="" />
-<DATE id="P39" start="4272" end="4282" text="09/20/2073" TYPE="DATE" comment="" />
-<DATE id="P40" start="4291" end="4301" text="09/20/2073" TYPE="DATE" comment="" />
-<DATE id="P41" start="4362" end="4372" text="09/20/2073" TYPE="DATE" comment="" />
-<DATE id="P42" start="4387" end="4397" text="09/20/2073" TYPE="DATE" comment="" />
-<DATE id="P43" start="4454" end="4464" text="09/20/2073" TYPE="DATE" comment="" />
-<DATE id="P44" start="4553" end="4563" text="09/20/2073" TYPE="DATE" comment="" />
-<DATE id="P45" start="4598" end="4608" text="09/19/2073" TYPE="DATE" comment="" />
-<DATE id="P46" start="4679" end="4689" text="09/18/2073" TYPE="DATE" comment="" />
-<DATE id="P47" start="4765" end="4775" text="09/19/2073" TYPE="DATE" comment="" />
-<DATE id="P48" start="4826" end="4836" text="09/19/2073" TYPE="DATE" comment="" />
-<DATE id="P49" start="4934" end="4943" text="9/18/2073" TYPE="DATE" comment="" />
-<AGE id="P50" start="5241" end="5243" text="66" TYPE="AGE" comment="" />
-<DATE id="P51" start="5287" end="5291" text="2066" TYPE="DATE" comment="" />
-<NAME id="P52" start="6115" end="6118" text="AYX" TYPE="DOCTOR" comment="" />
-<NAME id="P53" start="6154" end="6158" text="Ware" TYPE="PATIENT" comment="" />
-<NAME id="P54" start="7283" end="7289" text="Dalton" TYPE="DOCTOR" comment="" />
-<NAME id="P55" start="7298" end="7311" text="Robin Jeffery" TYPE="DOCTOR" comment="" />
-<NAME id="P56" start="7449" end="7471" text="Tina Isaiah-Villagomez" TYPE="DOCTOR" comment="" />
-<NAME id="P57" start="7484" end="7501" text="Alexander Y. Xian" TYPE="DOCTOR" comment="" />
-<CONTACT id="P58" start="7526" end="7531" text="43486" TYPE="PHONE" comment="" />
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2073-09-20" />
+<NAME TYPE="PATIENT" comment="" end="96" id="P2" start="84" text="Vincent Ware" />
+<ID TYPE="MEDICALRECORD" comment="" end="113" id="P3" start="98" text="71417347     2Y" />
+<NAME TYPE="DOCTOR" comment="" end="135" id="P4" start="125" text="Casey Best" />
+<NAME TYPE="DOCTOR" comment="" end="175" id="P5" start="153" text="Tina Isaiah-Villagomez" />
+<NAME TYPE="DOCTOR" comment="" end="209" id="P6" start="193" text="Alexander Y Xian" />
+<NAME TYPE="DOCTOR" comment="" end="241" id="P7" start="234" text="Webster" />
+<DATE TYPE="DATE" comment="" end="280" id="P8" start="262" text="September 20, 2073" />
+<DATE TYPE="DATE" comment="" end="545" id="P12" start="537" text="Nov 2066" />
+<DATE TYPE="DATE" comment="" end="596" id="P13" start="588" text="May 2073" />
+<DATE TYPE="DATE" comment="" end="916" id="P14" start="908" text="May 2073" />
+<DATE TYPE="DATE" comment="" end="1294" id="P16" start="1290" text="July" />
+<DATE TYPE="DATE" comment="" end="1408" id="P17" start="1397" text="August 2073" />
+<DATE TYPE="DATE" comment="" end="2493" id="P20" start="2486" text="9/20/73" />
+<DATE TYPE="DATE" comment="" end="2504" id="P21" start="2498" text="8/7/73" />
+<LOCATION TYPE="CITY" comment="" end="2612" id="P23" start="2600" text="Cartersville" />
+<LOCATION TYPE="CITY" comment="" end="2621" id="P24" start="2614" text="Newport" />
+<DATE TYPE="DATE" comment="" end="2674" id="P25" start="2667" text="9/18/73" />
+<PROFESSION TYPE="PROFESSION" comment="" end="3113" id="P26" start="3103" text="programmer" />
+<PROFESSION TYPE="PROFESSION" comment="" end="3182" id="P27" start="3129" text="Industrial Engineering and Manufacturing Technologist" />
+<LOCATION TYPE="ORGANIZATION" comment="" end="3205" id="P28" start="3186" text="Activision Blizzard" />
+<LOCATION TYPE="LOCATION-OTHER" comment="" end="3370" id="P29" start="3352" text="Rockefeller Centre" />
+<LOCATION TYPE="LOCATION-OTHER" comment="" end="3390" id="P30" start="3384" text="global" />
+<LOCATION TYPE="CITY" comment="" end="3406" id="P31" start="3399" text="Fernley" />
+<LOCATION TYPE="CITY" comment="" end="3420" id="P32" start="3408" text="Cartersville" />
+<LOCATION TYPE="CITY" comment="" end="3461" id="P34" start="3455" text="Muscat" />
+<LOCATION TYPE="LOCATION-OTHER" comment="" end="3642" id="P35" start="3634" text="Storting" />
+<LOCATION TYPE="LOCATION-OTHER" comment="" end="3654" id="P36" start="3647" text="Capitol" />
+<AGE TYPE="AGE" comment="" end="3766" id="P37" start="3764" text="90" />
+<DATE TYPE="DATE" comment="" end="4262" id="P38" start="4252" text="09/20/2073" />
+<DATE TYPE="DATE" comment="" end="4282" id="P39" start="4272" text="09/20/2073" />
+<DATE TYPE="DATE" comment="" end="4301" id="P40" start="4291" text="09/20/2073" />
+<DATE TYPE="DATE" comment="" end="4372" id="P41" start="4362" text="09/20/2073" />
+<DATE TYPE="DATE" comment="" end="4397" id="P42" start="4387" text="09/20/2073" />
+<DATE TYPE="DATE" comment="" end="4464" id="P43" start="4454" text="09/20/2073" />
+<DATE TYPE="DATE" comment="" end="4563" id="P44" start="4553" text="09/20/2073" />
+<DATE TYPE="DATE" comment="" end="4608" id="P45" start="4598" text="09/19/2073" />
+<DATE TYPE="DATE" comment="" end="4689" id="P46" start="4679" text="09/18/2073" />
+<DATE TYPE="DATE" comment="" end="4775" id="P47" start="4765" text="09/19/2073" />
+<DATE TYPE="DATE" comment="" end="4836" id="P48" start="4826" text="09/19/2073" />
+<DATE TYPE="DATE" comment="" end="4943" id="P49" start="4934" text="9/18/2073" />
+<NAME TYPE="PATIENT" comment="" end="6158" id="P53" start="6154" text="Ware" />
+<NAME TYPE="DOCTOR" comment="" end="7289" id="P54" start="7283" text="Dalton" />
+<NAME TYPE="DOCTOR" comment="" end="7311" id="P55" start="7298" text="Robin Jeffery" />
+<NAME TYPE="DOCTOR" comment="" end="7471" id="P56" start="7449" text="Tina Isaiah-Villagomez" />
+<NAME TYPE="DOCTOR" comment="" end="7501" id="P57" start="7484" text="Alexander Y. Xian" />
+<CONTACT TYPE="PHONE" comment="" end="7531" id="P58" start="7526" text="43486" />
 </TAGS>
 </deIdi2b2>

@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version='1.0' encoding='utf8'?>
 <deIdi2b2>
-<TEXT><![CDATA[
+<TEXT>
 
 
 Record date: 2083-09-10
@@ -149,7 +149,7 @@ U/A: nitrite (-), 0-2 WBC, no bacteria
 
    Radiology:
 
-CXR: Enlarged cardiac silhouette likely technically related, b/l pleural fluid collections R>L with bibasilar atelectasis
+CXR: Enlarged cardiac silhouette likely technically related, b/l pleural fluid collections R&gt;L with bibasilar atelectasis
 
    Cardiogram:
 
@@ -215,29 +215,23 @@ Pager # 77136
 
 
 
-]]></TEXT>
+</TEXT>
 <TAGS>
-<DATE id="P0" start="16" end="26" text="2083-09-10" TYPE="DATE" comment="" />
-<LOCATION id="P1" start="28" end="37" text="Woodstock" TYPE="HOSPITAL" comment="" />
-<NAME id="P2" start="70" end="86" text="Jimenez, Youssef" TYPE="PATIENT" comment="" />
-<LOCATION id="P3" start="89" end="92" text="LCH" TYPE="HOSPITAL" comment="" />
-<ID id="P4" start="106" end="115" text="055 47 33" TYPE="MEDICALRECORD" comment="" />
-<DATE id="P5" start="137" end="154" text="09 September 2083" TYPE="DATE" comment="" />
-<NAME id="P6" start="177" end="192" text="Nathan Yearwood" TYPE="DOCTOR" comment="" />
-<LOCATION id="P7" start="204" end="213" text="Woodstock" TYPE="HOSPITAL" comment="" />
-<NAME id="P9" start="246" end="260" text="Charles Eggers" TYPE="DOCTOR" comment="" />
-<LOCATION id="P10" start="268" end="276" text="Seminole" TYPE="CITY" comment="" />
-<NAME id="P11" start="290" end="302" text="Ernest Byers" TYPE="DOCTOR" comment="" />
-<AGE id="P12" start="398" end="400" text="74" TYPE="AGE" comment="" />
-<DATE id="P13" start="834" end="839" text="10/80" TYPE="DATE" comment="" />
-<DATE id="P14" start="867" end="871" text="4/81" TYPE="DATE" comment="" />
-<DATE id="P15" start="1023" end="1027" text="3/78" TYPE="DATE" comment="" />
-<DATE id="P16" start="1119" end="1126" text="10/2080" TYPE="DATE" comment="" />
-<DATE id="P17" start="1202" end="1207" text="10/80" TYPE="DATE" comment="" />
-<PROFESSION id="P18" start="1410" end="1426" text="network operator" TYPE="PROFESSION" comment="" />
-<AGE id="P19" start="2813" end="2815" text="74" TYPE="AGE" comment="" />
-<DATE id="P20" start="3111" end="3115" text="2080" TYPE="DATE" comment="" />
-<NAME id="P21" start="3871" end="3888" text="Shaquel Whitfield" TYPE="DOCTOR" comment="" />
-<CONTACT id="P22" start="3931" end="3936" text="77136" TYPE="PHONE" comment="" />
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2083-09-10" />
+<NAME TYPE="PATIENT" comment="" end="86" id="P2" start="70" text="Jimenez, Youssef" />
+<ID TYPE="MEDICALRECORD" comment="" end="115" id="P4" start="106" text="055 47 33" />
+<DATE TYPE="DATE" comment="" end="154" id="P5" start="137" text="09 September 2083" />
+<NAME TYPE="DOCTOR" comment="" end="192" id="P6" start="177" text="Nathan Yearwood" />
+<NAME TYPE="DOCTOR" comment="" end="260" id="P9" start="246" text="Charles Eggers" />
+<LOCATION TYPE="CITY" comment="" end="276" id="P10" start="268" text="Seminole" />
+<NAME TYPE="DOCTOR" comment="" end="302" id="P11" start="290" text="Ernest Byers" />
+<DATE TYPE="DATE" comment="" end="839" id="P13" start="834" text="10/80" />
+<DATE TYPE="DATE" comment="" end="871" id="P14" start="867" text="4/81" />
+<DATE TYPE="DATE" comment="" end="1027" id="P15" start="1023" text="3/78" />
+<DATE TYPE="DATE" comment="" end="1126" id="P16" start="1119" text="10/2080" />
+<DATE TYPE="DATE" comment="" end="1207" id="P17" start="1202" text="10/80" />
+<PROFESSION TYPE="PROFESSION" comment="" end="1426" id="P18" start="1410" text="network operator" />
+<NAME TYPE="DOCTOR" comment="" end="3888" id="P21" start="3871" text="Shaquel Whitfield" />
+<CONTACT TYPE="PHONE" comment="" end="3936" id="P22" start="3931" text="77136" />
 </TAGS>
 </deIdi2b2>

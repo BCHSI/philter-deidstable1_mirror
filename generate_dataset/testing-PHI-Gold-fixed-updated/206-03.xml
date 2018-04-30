@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version='1.0' encoding='utf8'?>
 <deIdi2b2>
-<TEXT><![CDATA[
+<TEXT>
 
 
 Record date: 2074-12-25
@@ -104,16 +104,12 @@ Peter H Uddin, M.D.
 
 
 
-]]></TEXT>
+</TEXT>
 <TAGS>
-<DATE id="P0" start="16" end="26" text="2074-12-25" TYPE="DATE" comment="" />
-<DATE id="P1" start="122" end="130" text="Saturday" TYPE="DATE" comment="" />
-<DATE id="P2" start="189" end="195" text="Sunday" TYPE="DATE" comment="" />
-<DATE id="P3" start="218" end="225" text="Tuesday" TYPE="DATE" comment="" />
-<LOCATION id="P4" start="435" end="439" text="TFMC" TYPE="HOSPITAL" comment="" />
-<DATE id="P5" start="443" end="448" text="11/74" TYPE="DATE" comment="" />
-<DATE id="P6" start="479" end="484" text="11/74" TYPE="DATE" comment="" />
-<DATE id="P7" start="896" end="900" text="2/73" TYPE="DATE" comment="" />
-<NAME id="P8" start="2167" end="2180" text="Peter H Uddin" TYPE="DOCTOR" comment="" />
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2074-12-25" />
+<DATE TYPE="DATE" comment="" end="448" id="P5" start="443" text="11/74" />
+<DATE TYPE="DATE" comment="" end="484" id="P6" start="479" text="11/74" />
+<DATE TYPE="DATE" comment="" end="900" id="P7" start="896" text="2/73" />
+<NAME TYPE="DOCTOR" comment="" end="2180" id="P8" start="2167" text="Peter H Uddin" />
 </TAGS>
 </deIdi2b2>

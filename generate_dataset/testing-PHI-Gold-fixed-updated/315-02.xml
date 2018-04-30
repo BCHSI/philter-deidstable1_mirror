@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version='1.0' encoding='utf8'?>
 <deIdi2b2>
-<TEXT><![CDATA[
+<TEXT>
 
 
 Record date: 2122-04-23
@@ -11,7 +11,7 @@ Record date: 2122-04-23
 
 
 
-Neurosurgery H & P:
+Neurosurgery H &amp; P:
 
 
 
@@ -87,7 +87,7 @@ PE: Afebrile, BP 160/80, P 80, R 16
 
 
 
-Neuro:	AA & Ox3, speech clear
+Neuro:	AA &amp; Ox3, speech clear
 
 	PRL (L6 to 5, R 5 to 4), FOV full grossly, EOMI, FS, TML, SCM/TPZ 5/5 B
 
@@ -111,7 +111,7 @@ LABS: Normal CBC,lytes, and coags except WBC = 12.6, K = 5.3, BUN/CR = 48 / 9.6,
 
 
 
-A/P: 54 yo F w/ PCDK & HTN p/w Hunt Hess grade 2, Fischer grade 1 SAH from L MCA aneurysm. D/W Drs. Ashley & Dang:
+A/P: 54 yo F w/ PCDK &amp; HTN p/w Hunt Hess grade 2, Fischer grade 1 SAH from L MCA aneurysm. D/W Drs. Ashley &amp; Dang:
 
 	- D/W Dr. Uren and Dr. Quenton Vanburen who related that CTA and Angio could both be done for this patient safely.  A dialysis RN will be by soon to dialyse the patient.  CTA done.
 
@@ -137,26 +137,21 @@ Michael Tomlinson, M.D.
 
 
 
-]]></TEXT>
+</TEXT>
 <TAGS>
-<DATE id="P0" start="16" end="26" text="2122-04-23" TYPE="DATE" comment="" />
-<NAME id="P1" start="97" end="111" text="VALLE,ISABELLA" TYPE="PATIENT" comment="" />
-<ID id="P2" start="119" end="126" text="4698877" TYPE="MEDICALRECORD" comment="" />
-<LOCATION id="P3" start="126" end="129" text="KMC" TYPE="HOSPITAL" comment="" />
-<DATE id="P4" start="205" end="214" text="4/23/2122" TYPE="DATE" comment="" />
-<AGE id="P5" start="258" end="260" text="54" TYPE="AGE" comment="" />
-<DATE id="P6" start="782" end="784" text="13" TYPE="DATE" comment="" />
-<DATE id="P7" start="811" end="813" text="18" TYPE="DATE" comment="" />
-<DATE id="P8" start="951" end="955" text="2112" TYPE="DATE" comment="" />
-<DATE id="P9" start="1002" end="1004" text="09" TYPE="DATE" comment="" />
-<DATE id="P10" start="1017" end="1019" text="10" TYPE="DATE" comment="" />
-<DATE id="P11" start="1042" end="1044" text="18" TYPE="DATE" comment="" />
-<LOCATION id="P12" start="1312" end="1315" text="KMC" TYPE="HOSPITAL" comment="" />
-<AGE id="P13" start="1869" end="1871" text="54" TYPE="AGE" comment="" />
-<NAME id="P14" start="1964" end="1970" text="Ashley" TYPE="DOCTOR" comment="" />
-<NAME id="P15" start="1973" end="1977" text="Dang" TYPE="DOCTOR" comment="" />
-<NAME id="P16" start="1991" end="1995" text="Uren" TYPE="DOCTOR" comment="" />
-<NAME id="P17" start="2004" end="2020" text="Quenton Vanburen" TYPE="DOCTOR" comment="" />
-<NAME id="P18" start="2377" end="2394" text="Michael Tomlinson" TYPE="DOCTOR" comment="" />
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2122-04-23" />
+<NAME TYPE="PATIENT" comment="" end="111" id="P1" start="97" text="VALLE,ISABELLA" />
+<ID TYPE="MEDICALRECORD" comment="" end="126" id="P2" start="119" text="4698877" />
+<DATE TYPE="DATE" comment="" end="214" id="P4" start="205" text="4/23/2122" />
+<DATE TYPE="DATE" comment="" end="784" id="P6" start="782" text="13" />
+<DATE TYPE="DATE" comment="" end="813" id="P7" start="811" text="18" />
+<DATE TYPE="DATE" comment="" end="1004" id="P9" start="1002" text="09" />
+<DATE TYPE="DATE" comment="" end="1019" id="P10" start="1017" text="10" />
+<DATE TYPE="DATE" comment="" end="1044" id="P11" start="1042" text="18" />
+<NAME TYPE="DOCTOR" comment="" end="1970" id="P14" start="1964" text="Ashley" />
+<NAME TYPE="DOCTOR" comment="" end="1977" id="P15" start="1973" text="Dang" />
+<NAME TYPE="DOCTOR" comment="" end="1995" id="P16" start="1991" text="Uren" />
+<NAME TYPE="DOCTOR" comment="" end="2020" id="P17" start="2004" text="Quenton Vanburen" />
+<NAME TYPE="DOCTOR" comment="" end="2394" id="P18" start="2377" text="Michael Tomlinson" />
 </TAGS>
 </deIdi2b2>

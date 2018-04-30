@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version='1.0' encoding='utf8'?>
 <deIdi2b2>
-<TEXT><![CDATA[
+<TEXT>
 
 
 Record date: 2072-11-25
@@ -131,22 +131,19 @@ Dictated by:  YULIANNA ELKINS, M.D.   YE96
 
 
 
-]]></TEXT>
+</TEXT>
 <TAGS>
-<DATE id="P0" start="16" end="26" text="2072-11-25" TYPE="DATE" comment="" />
-<LOCATION id="P1" start="49" end="52" text="RGH" TYPE="HOSPITAL" comment="" />
-<NAME id="P2" start="78" end="95" text="MULLINS,DOLORES U" TYPE="PATIENT" comment="" />
-<ID id="P3" start="98" end="109" text="728-41-92-0" TYPE="MEDICALRECORD" comment="" />
-<DATE id="P4" start="136" end="144" text="01/24/73" TYPE="DATE" comment="" />
-<NAME id="P5" start="221" end="228" text="Hawkins" TYPE="DOCTOR" comment="" />
-<AGE id="P6" start="320" end="322" text="70" TYPE="AGE" comment="" />
-<DATE id="P7" start="2564" end="2568" text="2068" TYPE="DATE" comment="" />
-<ID id="P8" start="3444" end="3454" text="OH527/2519" TYPE="IDNUM" comment="" />
-<NAME id="P9" start="3457" end="3472" text="YULIANNA ELKINS" TYPE="DOCTOR" comment="" />
-<NAME id="P10" start="3481" end="3485" text="YE96" TYPE="USERNAME" comment="" />
-<DATE id="P11" start="3515" end="3523" text="01/24/73" TYPE="DATE" comment="" />
-<DATE id="P12" start="3583" end="3591" text="01/24/73" TYPE="DATE" comment="" />
-<NAME id="P13" start="3608" end="3623" text="YULIANNA ELKINS" TYPE="DOCTOR" comment="" />
-<NAME id="P14" start="3632" end="3636" text="YE96" TYPE="USERNAME" comment="" />
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2072-11-25" />
+<NAME TYPE="PATIENT" comment="" end="95" id="P2" start="78" text="MULLINS,DOLORES U" />
+<ID TYPE="MEDICALRECORD" comment="" end="109" id="P3" start="98" text="728-41-92-0" />
+<DATE TYPE="DATE" comment="" end="144" id="P4" start="136" text="01/24/73" />
+<NAME TYPE="DOCTOR" comment="" end="228" id="P5" start="221" text="Hawkins" />
+<ID TYPE="IDNUM" comment="" end="3454" id="P8" start="3444" text="OH527/2519" />
+<NAME TYPE="DOCTOR" comment="" end="3472" id="P9" start="3457" text="YULIANNA ELKINS" />
+<NAME TYPE="USERNAME" comment="" end="3485" id="P10" start="3481" text="YE96" />
+<DATE TYPE="DATE" comment="" end="3523" id="P11" start="3515" text="01/24/73" />
+<DATE TYPE="DATE" comment="" end="3591" id="P12" start="3583" text="01/24/73" />
+<NAME TYPE="DOCTOR" comment="" end="3623" id="P13" start="3608" text="YULIANNA ELKINS" />
+<NAME TYPE="USERNAME" comment="" end="3636" id="P14" start="3632" text="YE96" />
 </TAGS>
 </deIdi2b2>

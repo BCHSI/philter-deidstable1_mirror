@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version='1.0' encoding='utf8'?>
 <deIdi2b2>
-<TEXT><![CDATA[
+<TEXT>
 
 
 Record date: 2098-12-10
@@ -141,24 +141,18 @@ Thanks. Will follow.
 
 
 
-]]></TEXT>
+</TEXT>
 <TAGS>
-<DATE id="P0" start="16" end="26" text="2098-12-10" TYPE="DATE" comment="" />
-<ID id="P1" start="31" end="40" text="059-57-26" TYPE="MEDICALRECORD" comment="" />
-<NAME id="P2" start="43" end="54" text="Emery, Donn" TYPE="PATIENT" comment="" />
-<DATE id="P3" start="58" end="75" text="December 10, 2098" TYPE="DATE" comment="" />
-<AGE id="P4" start="137" end="139" text="89" TYPE="AGE" comment="" />
-<NAME id="P5" start="165" end="169" text="Pina" TYPE="DOCTOR" comment="" />
-<NAME id="P6" start="174" end="179" text="Keefe" TYPE="DOCTOR" comment="" />
-<AGE id="P7" start="433" end="435" text="50" TYPE="AGE" comment="" />
-<NAME id="P8" start="923" end="932" text="Valentine" TYPE="DOCTOR" comment="" />
-<NAME id="P9" start="941" end="947" text="Wilkes" TYPE="DOCTOR" comment="" />
-<NAME id="P10" start="1000" end="1009" text="Valentine" TYPE="DOCTOR" comment="" />
-<DATE id="P11" start="1522" end="1526" text="2077" TYPE="DATE" comment="" />
-<PROFESSION id="P12" start="1965" end="1989" text="Financial Senior Manager" TYPE="PROFESSION" comment="" />
-<AGE id="P13" start="2051" end="2053" text="68" TYPE="AGE" comment="" />
-<AGE id="P15" start="2907" end="2909" text="89" TYPE="AGE" comment="" />
-<AGE id="P16" start="3354" end="3356" text="89" TYPE="AGE" comment="" />
-<NAME id="P17" start="3970" end="3984" text="Daniel M. Arce" TYPE="DOCTOR" comment="" />
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2098-12-10" />
+<ID TYPE="MEDICALRECORD" comment="" end="40" id="P1" start="31" text="059-57-26" />
+<NAME TYPE="PATIENT" comment="" end="54" id="P2" start="43" text="Emery, Donn" />
+<DATE TYPE="DATE" comment="" end="75" id="P3" start="58" text="December 10, 2098" />
+<NAME TYPE="DOCTOR" comment="" end="169" id="P5" start="165" text="Pina" />
+<NAME TYPE="DOCTOR" comment="" end="179" id="P6" start="174" text="Keefe" />
+<NAME TYPE="DOCTOR" comment="" end="932" id="P8" start="923" text="Valentine" />
+<NAME TYPE="DOCTOR" comment="" end="947" id="P9" start="941" text="Wilkes" />
+<NAME TYPE="DOCTOR" comment="" end="1009" id="P10" start="1000" text="Valentine" />
+<PROFESSION TYPE="PROFESSION" comment="" end="1989" id="P12" start="1965" text="Financial Senior Manager" />
+<NAME TYPE="DOCTOR" comment="" end="3984" id="P17" start="3970" text="Daniel M. Arce" />
 </TAGS>
 </deIdi2b2>

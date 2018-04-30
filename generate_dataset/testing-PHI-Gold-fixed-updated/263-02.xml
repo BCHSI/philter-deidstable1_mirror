@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version='1.0' encoding='utf8'?>
 <deIdi2b2>
-<TEXT><![CDATA[
+<TEXT>
 
 
 Record date: 2079-09-28
@@ -105,22 +105,19 @@ Dictated by:  FREDA F. PELLETIER, M.D.     FP00
 
 
 
-]]></TEXT>
+</TEXT>
 <TAGS>
-<DATE id="P0" start="16" end="26" text="2079-09-28" TYPE="DATE" comment="" />
-<LOCATION id="P1" start="49" end="56" text="DOUGLAS" TYPE="HOSPITAL" comment="" />
-<NAME id="P2" start="82" end="93" text="DODD,STEVEN" TYPE="PATIENT" comment="" />
-<ID id="P3" start="96" end="107" text="350-93-05-3" TYPE="MEDICALRECORD" comment="" />
-<DATE id="P4" start="141" end="149" text="09/28/79" TYPE="DATE" comment="" />
-<AGE id="P5" start="283" end="285" text="64" TYPE="AGE" comment="" />
-<DATE id="P6" start="604" end="607" text="May" TYPE="DATE" comment="" />
-<LOCATION id="P7" start="2139" end="2153" text="Christus Spohn" TYPE="HOSPITAL" comment="" />
-<ID id="P8" start="2538" end="2549" text="QQ632/54034" TYPE="IDNUM" comment="" />
-<NAME id="P9" start="2552" end="2570" text="FREDA F. PELLETIER" TYPE="DOCTOR" comment="" />
-<NAME id="P10" start="2581" end="2585" text="FP00" TYPE="USERNAME" comment="" />
-<DATE id="P11" start="2609" end="2617" text="09/28/79" TYPE="DATE" comment="" />
-<DATE id="P12" start="2677" end="2685" text="09/28/79" TYPE="DATE" comment="" />
-<NAME id="P13" start="2702" end="2720" text="FREDA F. PELLETIER" TYPE="DOCTOR" comment="" />
-<NAME id="P14" start="2731" end="2735" text="FP00" TYPE="USERNAME" comment="" />
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2079-09-28" />
+<NAME TYPE="PATIENT" comment="" end="93" id="P2" start="82" text="DODD,STEVEN" />
+<ID TYPE="MEDICALRECORD" comment="" end="107" id="P3" start="96" text="350-93-05-3" />
+<DATE TYPE="DATE" comment="" end="149" id="P4" start="141" text="09/28/79" />
+<DATE TYPE="DATE" comment="" end="607" id="P6" start="604" text="May" />
+<ID TYPE="IDNUM" comment="" end="2549" id="P8" start="2538" text="QQ632/54034" />
+<NAME TYPE="DOCTOR" comment="" end="2570" id="P9" start="2552" text="FREDA F. PELLETIER" />
+<NAME TYPE="USERNAME" comment="" end="2585" id="P10" start="2581" text="FP00" />
+<DATE TYPE="DATE" comment="" end="2617" id="P11" start="2609" text="09/28/79" />
+<DATE TYPE="DATE" comment="" end="2685" id="P12" start="2677" text="09/28/79" />
+<NAME TYPE="DOCTOR" comment="" end="2720" id="P13" start="2702" text="FREDA F. PELLETIER" />
+<NAME TYPE="USERNAME" comment="" end="2735" id="P14" start="2731" text="FP00" />
 </TAGS>
 </deIdi2b2>

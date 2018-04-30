@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version='1.0' encoding='utf8'?>
 <deIdi2b2>
-<TEXT><![CDATA[
+<TEXT>
 
 
 Record date: 2088-03-02
@@ -21,7 +21,7 @@ Date Admitted to Internal Medicine: 3/01/88
 
 Contact: Daughter-In-Law (Petty): 138-378-3051
 
-Attendings:  Dr.  Queen & Dr. Pineda
+Attendings:  Dr.  Queen &amp; Dr. Pineda
 
 
 
@@ -251,7 +251,7 @@ U/A (2/28/88): yellow, cloudy, gluc 1+, prot: 1+, Urine Nitrite: Positive, UA-BL
 
 Micro: 
 
-UC: Abundant (>=100,000 CFU/ml) STAPHYLOCOCCUS SPECIES
+UC: Abundant (&gt;=100,000 CFU/ml) STAPHYLOCOCCUS SPECIES
 
 Nasal Swab: POSITIVE for INFLUENZA VIRUS TYPE A ANTIGEN
 
@@ -301,7 +301,7 @@ a.	Will check Na now, and if sodium continues to improve will continue IVFs
 
 a.	F/u UC
 
-b.	Empiric treatment with Vancomycin 1g q12h for 7 days (CrCl > 60), await c&s for possible alternative agents
+b.	Empiric treatment with Vancomycin 1g q12h for 7 days (CrCl &gt; 60), await c&amp;s for possible alternative agents
 
 5.	Influenza A
 
@@ -333,46 +333,38 @@ Pager #93278
 
 
 
-]]></TEXT>
+</TEXT>
 <TAGS>
-<DATE id="P0" start="16" end="26" text="2088-03-02" TYPE="DATE" comment="" />
-<LOCATION id="P1" start="33" end="41" text="Mediquik" TYPE="HOSPITAL" comment="" />
-<NAME id="P2" start="69" end="82" text="Oshea, Xavier" TYPE="PATIENT" comment="" />
-<ID id="P3" start="89" end="98" text="581-77-50" TYPE="MEDICALRECORD" comment="" />
-<DATE id="P4" start="125" end="132" text="2/27/88" TYPE="DATE" comment="" />
-<DATE id="P6" start="170" end="177" text="3/01/88" TYPE="DATE" comment="" />
-<NAME id="P7" start="205" end="210" text="Petty" TYPE="PATIENT" comment="" />
-<CONTACT id="P8" start="213" end="225" text="138-378-3051" TYPE="PHONE" comment="" />
-<NAME id="P9" start="245" end="250" text="Queen" TYPE="DOCTOR" comment="" />
-<NAME id="P10" start="257" end="263" text="Pineda" TYPE="DOCTOR" comment="" />
-<NAME id="P11" start="336" end="341" text="Oshea" TYPE="PATIENT" comment="" />
-<AGE id="P12" start="356" end="358" text="76" TYPE="AGE" comment="" />
-<LOCATION id="P13" start="1176" end="1190" text="Procter Gamble" TYPE="ORGANIZATION" comment="" />
-<NAME id="P14" start="2222" end="2229" text="Landers" TYPE="DOCTOR" comment="" />
-<NAME id="P15" start="2828" end="2833" text="Petty" TYPE="PATIENT" comment="" />
-<LOCATION id="P16" start="3003" end="3011" text="New York" TYPE="STATE" comment="" />
-<AGE id="P17" start="3062" end="3064" text="39" TYPE="AGE" comment="" />
-<AGE id="P18" start="3125" end="3127" text="39" TYPE="AGE" comment="" />
-<AGE id="P19" start="3189" end="3191" text="52" TYPE="AGE" comment="" />
-<AGE id="P20" start="3250" end="3252" text="36" TYPE="AGE" comment="" />
-<AGE id="P21" start="3308" end="3310" text="50" TYPE="AGE" comment="" />
-<DATE id="P22" start="3883" end="3891" text="02/28/88" TYPE="DATE" comment="" />
-<DATE id="P23" start="3894" end="3902" text="02/28/88" TYPE="DATE" comment="" />
-<DATE id="P24" start="3905" end="3913" text="02/27/88" TYPE="DATE" comment="" />
-<DATE id="P25" start="3916" end="3924" text="01/17/88" TYPE="DATE" comment="" />
-<DATE id="P26" start="4461" end="4469" text="02/28/88" TYPE="DATE" comment="" />
-<DATE id="P27" start="4472" end="4480" text="02/27/88" TYPE="DATE" comment="" />
-<DATE id="P28" start="4483" end="4491" text="01/17/88" TYPE="DATE" comment="" />
-<DATE id="P29" start="4818" end="4826" text="02/27/88" TYPE="DATE" comment="" />
-<DATE id="P30" start="4999" end="5007" text="02/28/88" TYPE="DATE" comment="" />
-<DATE id="P31" start="5246" end="5254" text="02/27/88" TYPE="DATE" comment="" />
-<DATE id="P32" start="6351" end="6359" text="02/27/88" TYPE="DATE" comment="" />
-<DATE id="P33" start="6515" end="6522" text="2/28/88" TYPE="DATE" comment="" />
-<DATE id="P34" start="6843" end="6850" text="3/01/88" TYPE="DATE" comment="" />
-<DATE id="P35" start="6942" end="6949" text="2/27/88" TYPE="DATE" comment="" />
-<DATE id="P36" start="7009" end="7016" text="2/27/88" TYPE="DATE" comment="" />
-<AGE id="P37" start="7317" end="7319" text="76" TYPE="AGE" comment="" />
-<NAME id="P38" start="8860" end="8874" text="David Phillips" TYPE="DOCTOR" comment="" />
-<CONTACT id="P39" start="8887" end="8892" text="93278" TYPE="PHONE" comment="" />
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2088-03-02" />
+<NAME TYPE="PATIENT" comment="" end="82" id="P2" start="69" text="Oshea, Xavier" />
+<ID TYPE="MEDICALRECORD" comment="" end="98" id="P3" start="89" text="581-77-50" />
+<DATE TYPE="DATE" comment="" end="132" id="P4" start="125" text="2/27/88" />
+<DATE TYPE="DATE" comment="" end="177" id="P6" start="170" text="3/01/88" />
+<NAME TYPE="PATIENT" comment="" end="210" id="P7" start="205" text="Petty" />
+<CONTACT TYPE="PHONE" comment="" end="225" id="P8" start="213" text="138-378-3051" />
+<NAME TYPE="DOCTOR" comment="" end="250" id="P9" start="245" text="Queen" />
+<NAME TYPE="DOCTOR" comment="" end="263" id="P10" start="257" text="Pineda" />
+<NAME TYPE="PATIENT" comment="" end="341" id="P11" start="336" text="Oshea" />
+<LOCATION TYPE="ORGANIZATION" comment="" end="1190" id="P13" start="1176" text="Procter Gamble" />
+<NAME TYPE="DOCTOR" comment="" end="2229" id="P14" start="2222" text="Landers" />
+<NAME TYPE="PATIENT" comment="" end="2833" id="P15" start="2828" text="Petty" />
+<LOCATION TYPE="STATE" comment="" end="3011" id="P16" start="3003" text="New York" />
+<DATE TYPE="DATE" comment="" end="3891" id="P22" start="3883" text="02/28/88" />
+<DATE TYPE="DATE" comment="" end="3902" id="P23" start="3894" text="02/28/88" />
+<DATE TYPE="DATE" comment="" end="3913" id="P24" start="3905" text="02/27/88" />
+<DATE TYPE="DATE" comment="" end="3924" id="P25" start="3916" text="01/17/88" />
+<DATE TYPE="DATE" comment="" end="4469" id="P26" start="4461" text="02/28/88" />
+<DATE TYPE="DATE" comment="" end="4480" id="P27" start="4472" text="02/27/88" />
+<DATE TYPE="DATE" comment="" end="4491" id="P28" start="4483" text="01/17/88" />
+<DATE TYPE="DATE" comment="" end="4826" id="P29" start="4818" text="02/27/88" />
+<DATE TYPE="DATE" comment="" end="5007" id="P30" start="4999" text="02/28/88" />
+<DATE TYPE="DATE" comment="" end="5254" id="P31" start="5246" text="02/27/88" />
+<DATE TYPE="DATE" comment="" end="6359" id="P32" start="6351" text="02/27/88" />
+<DATE TYPE="DATE" comment="" end="6522" id="P33" start="6515" text="2/28/88" />
+<DATE TYPE="DATE" comment="" end="6850" id="P34" start="6843" text="3/01/88" />
+<DATE TYPE="DATE" comment="" end="6949" id="P35" start="6942" text="2/27/88" />
+<DATE TYPE="DATE" comment="" end="7016" id="P36" start="7009" text="2/27/88" />
+<NAME TYPE="DOCTOR" comment="" end="8874" id="P38" start="8860" text="David Phillips" />
+<CONTACT TYPE="PHONE" comment="" end="8892" id="P39" start="8887" text="93278" />
 </TAGS>
 </deIdi2b2>

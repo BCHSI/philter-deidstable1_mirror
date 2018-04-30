@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version='1.0' encoding='utf8'?>
 <deIdi2b2>
-<TEXT><![CDATA[
+<TEXT>
 
 
 Record date: 2081-06-22
@@ -51,20 +51,18 @@ Dictated by:  FRANK E. BENDER, M.D.  FB25
 
 
 
-]]></TEXT>
+</TEXT>
 <TAGS>
-<DATE id="P0" start="16" end="26" text="2081-06-22" TYPE="DATE" comment="" />
-<LOCATION id="P1" start="49" end="51" text="AH" TYPE="HOSPITAL" comment="" />
-<NAME id="P2" start="75" end="89" text="BRANCH,EARNEST" TYPE="PATIENT" comment="" />
-<ID id="P3" start="92" end="103" text="530-23-69-1" TYPE="MEDICALRECORD" comment="" />
-<DATE id="P4" start="137" end="145" text="06/22/81" TYPE="DATE" comment="" />
-<AGE id="P5" start="307" end="309" text="47" TYPE="AGE" comment="" />
-<ID id="P6" start="2260" end="2270" text="RD883/1008" TYPE="IDNUM" comment="" />
-<NAME id="P7" start="2272" end="2287" text="FRANK E. BENDER" TYPE="DOCTOR" comment="" />
-<NAME id="P8" start="2295" end="2299" text="FB25" TYPE="USERNAME" comment="" />
-<DATE id="P9" start="2330" end="2338" text="07/25/81" TYPE="DATE" comment="" />
-<DATE id="P10" start="2397" end="2405" text="07/25/81" TYPE="DATE" comment="" />
-<NAME id="P11" start="2421" end="2436" text="FRANK E. BENDER" TYPE="DOCTOR" comment="" />
-<NAME id="P12" start="2444" end="2448" text="FB25" TYPE="USERNAME" comment="" />
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2081-06-22" />
+<NAME TYPE="PATIENT" comment="" end="89" id="P2" start="75" text="BRANCH,EARNEST" />
+<ID TYPE="MEDICALRECORD" comment="" end="103" id="P3" start="92" text="530-23-69-1" />
+<DATE TYPE="DATE" comment="" end="145" id="P4" start="137" text="06/22/81" />
+<ID TYPE="IDNUM" comment="" end="2270" id="P6" start="2260" text="RD883/1008" />
+<NAME TYPE="DOCTOR" comment="" end="2287" id="P7" start="2272" text="FRANK E. BENDER" />
+<NAME TYPE="USERNAME" comment="" end="2299" id="P8" start="2295" text="FB25" />
+<DATE TYPE="DATE" comment="" end="2338" id="P9" start="2330" text="07/25/81" />
+<DATE TYPE="DATE" comment="" end="2405" id="P10" start="2397" text="07/25/81" />
+<NAME TYPE="DOCTOR" comment="" end="2436" id="P11" start="2421" text="FRANK E. BENDER" />
+<NAME TYPE="USERNAME" comment="" end="2448" id="P12" start="2444" text="FB25" />
 </TAGS>
 </deIdi2b2>
