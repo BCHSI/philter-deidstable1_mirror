@@ -143,11 +143,6 @@ Michael Tomlinson, M.D.
 <NAME TYPE="PATIENT" comment="" end="111" id="P1" start="97" text="VALLE,ISABELLA" />
 <ID TYPE="MEDICALRECORD" comment="" end="126" id="P2" start="119" text="4698877" />
 <DATE TYPE="DATE" comment="" end="214" id="P4" start="205" text="4/23/2122" />
-<DATE TYPE="DATE" comment="" end="784" id="P6" start="782" text="13" />
-<DATE TYPE="DATE" comment="" end="813" id="P7" start="811" text="18" />
-<DATE TYPE="DATE" comment="" end="1004" id="P9" start="1002" text="09" />
-<DATE TYPE="DATE" comment="" end="1019" id="P10" start="1017" text="10" />
-<DATE TYPE="DATE" comment="" end="1044" id="P11" start="1042" text="18" />
 <NAME TYPE="DOCTOR" comment="" end="1970" id="P14" start="1964" text="Ashley" />
 <NAME TYPE="DOCTOR" comment="" end="1977" id="P15" start="1973" text="Dang" />
 <NAME TYPE="DOCTOR" comment="" end="1995" id="P16" start="1991" text="Uren" />
