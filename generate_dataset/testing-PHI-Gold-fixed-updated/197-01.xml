@@ -1,6 +1,6 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT>
+<TEXT><!***REMOVED***CDATA***REMOVED***
 
 
 Record date: 2095-05-05
@@ -66,24 +66,29 @@ WK:65255     :4653
 
 
 
-</TEXT>
+***REMOVED******REMOVED***></TEXT>
 <TAGS>
-<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2095-05-05" />
-<DATE TYPE="DATE" comment="" end="42" id="P1" start="30" text="May 03, 2095" />
-<NAME TYPE="DOCTOR" comment="" end="60" id="P2" start="46" text="Carlos Pacheco" />
-<NAME TYPE="PATIENT" comment="" end="132" id="P4" start="121" text="Emery, Donn" />
-<ID TYPE="MEDICALRECORD" comment="" end="149" id="P6" start="140" text="059-57-26" />
-<NAME TYPE="DOCTOR" comment="" end="169" id="P7" start="162" text="Pacheco" />
-<NAME TYPE="PATIENT" comment="" end="228" id="P8" start="218" text="Donn Emery" />
-<NAME TYPE="PATIENT" comment="" end="386" id="P10" start="381" text="Emery" />
-<LOCATION TYPE="CITY" comment="" end="2277" id="P13" start="2265" text="Juneau South" />
-<NAME TYPE="PATIENT" comment="" end="4207" id="P15" start="4202" text="Emery" />
-<NAME TYPE="PATIENT" comment="" end="4771" id="P16" start="4766" text="Emery" />
-<NAME TYPE="PATIENT" comment="" end="6188" id="P17" start="6183" text="Emery" />
-<NAME TYPE="PATIENT" comment="" end="6394" id="P18" start="6389" text="Emery" />
-<NAME TYPE="DOCTOR" comment="" end="6690" id="P19" start="6676" text="Igor Velazquez" />
-<DATE TYPE="DATE" comment="" end="6725" id="P20" start="6715" text="05/05/2095" />
-<DATE TYPE="DATE" comment="" end="6740" id="P21" start="6730" text="05/05/2095" />
-<ID TYPE="IDNUM" comment="" end="6760" id="P22" start="6742" text="WK:65255     :4653" />
+<DATE id="P0" start="16" end="26" text="2095-05-05" TYPE="DATE" comment="" />
+<DATE id="P1" start="30" end="42" text="May 03, 2095" TYPE="DATE" comment="" />
+<NAME id="P2" start="46" end="60" text="Carlos Pacheco" TYPE="DOCTOR" comment="" />
+<LOCATION id="P3" start="69" end="89" text="New Milford Hospital" TYPE="HOSPITAL" comment="" />
+<NAME id="P4" start="121" end="132" text="Emery, Donn" TYPE="PATIENT" comment="" />
+<LOCATION id="P5" start="134" end="137" text="NMH" TYPE="HOSPITAL" comment="" />
+<ID id="P6" start="140" end="149" text="059-57-26" TYPE="MEDICALRECORD" comment="" />
+<NAME id="P7" start="162" end="169" text="Pacheco" TYPE="DOCTOR" comment="" />
+<NAME id="P8" start="218" end="228" text="Donn Emery" TYPE="PATIENT" comment="" />
+<NAME id="P10" start="381" end="386" text="Emery" TYPE="PATIENT" comment="" />
+<AGE id="P11" start="392" end="394" text="86" TYPE="AGE" comment="" />
+<AGE id="P12" start="1962" end="1964" text="50" TYPE="AGE" comment="" />
+<LOCATION id="P13" start="2265" end="2277" text="Juneau South" TYPE="CITY" comment="" />
+<AGE id="P14" start="2430" end="2433" text="50s" TYPE="AGE" comment="" />
+<NAME id="P15" start="4202" end="4207" text="Emery" TYPE="PATIENT" comment="" />
+<NAME id="P16" start="4766" end="4771" text="Emery" TYPE="PATIENT" comment="" />
+<NAME id="P17" start="6183" end="6188" text="Emery" TYPE="PATIENT" comment="" />
+<NAME id="P18" start="6389" end="6394" text="Emery" TYPE="PATIENT" comment="" />
+<NAME id="P19" start="6676" end="6690" text="Igor Velazquez" TYPE="DOCTOR" comment="" />
+<DATE id="P20" start="6715" end="6725" text="05/05/2095" TYPE="DATE" comment="" />
+<DATE id="P21" start="6730" end="6740" text="05/05/2095" TYPE="DATE" comment="" />
+<ID id="P22" start="6742" end="6760" text="WK:65255     :4653" TYPE="IDNUM" comment="" />
 </TAGS>
 </deIdi2b2>

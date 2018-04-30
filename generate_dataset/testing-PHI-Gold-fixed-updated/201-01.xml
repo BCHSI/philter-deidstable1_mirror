@@ -1,6 +1,6 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT>
+<TEXT><!***REMOVED***CDATA***REMOVED***
 
 
 Record date: 2077-10-31
@@ -74,7 +74,7 @@ Skin:	No rashes
 
 Neck:  	Supple, full ROM, JVP flat, 2+ carotids w/o bruits, no thyromegaly or nodules, no nodes
 
-Chest: 	CTA&amp;P bilaterally
+Chest: 	CTA&P bilaterally
 
 CVS:  	RRR nl S1 S2, IABP in place
 
@@ -282,18 +282,23 @@ Pager #36784
 
 
 
-</TEXT>
+***REMOVED******REMOVED***></TEXT>
 <TAGS>
-<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2077-10-31" />
-<NAME TYPE="PATIENT" comment="" end="63" id="P1" start="46" text="Xayavong, Brandon" />
-<ID TYPE="MEDICALRECORD" comment="" end="75" id="P2" start="68" text="7826250" />
-<DATE TYPE="DATE" comment="" end="105" id="P3" start="97" text="10/30/77" />
-<NAME TYPE="DOCTOR" comment="" end="129" id="P4" start="122" text="Umphrey" />
-<NAME TYPE="PATIENT" comment="" end="230" id="P6" start="222" text="Xayavong" />
-<LOCATION TYPE="CITY" comment="" end="1198" id="P10" start="1183" text="Lake Pocotopaug" />
-<PROFESSION TYPE="PROFESSION" comment="" end="1231" id="P11" start="1211" text="Justice of the peace" />
-<DATE TYPE="DATE" comment="" end="5961" id="P13" start="5955" text="Monday" />
-<NAME TYPE="DOCTOR" comment="" end="6562" id="P14" start="6549" text="Charles Amaya" />
-<CONTACT TYPE="PHONE" comment="" end="6580" id="P15" start="6575" text="36784" />
+<DATE id="P0" start="16" end="26" text="2077-10-31" TYPE="DATE" comment="" />
+<NAME id="P1" start="46" end="63" text="Xayavong, Brandon" TYPE="PATIENT" comment="" />
+<ID id="P2" start="68" end="75" text="7826250" TYPE="MEDICALRECORD" comment="" />
+<DATE id="P3" start="97" end="105" text="10/30/77" TYPE="DATE" comment="" />
+<NAME id="P4" start="122" end="129" text="Umphrey" TYPE="DOCTOR" comment="" />
+<AGE id="P5" start="140" end="142" text="56" TYPE="AGE" comment="" />
+<NAME id="P6" start="222" end="230" text="Xayavong" TYPE="PATIENT" comment="" />
+<AGE id="P7" start="236" end="238" text="56" TYPE="AGE" comment="" />
+<LOCATION id="P8" start="606" end="621" text="Carver Hospital" TYPE="HOSPITAL" comment="" />
+<LOCATION id="P9" start="787" end="790" text="GNC" TYPE="HOSPITAL" comment="" />
+<LOCATION id="P10" start="1183" end="1198" text="Lake Pocotopaug" TYPE="CITY" comment="" />
+<PROFESSION id="P11" start="1211" end="1231" text="Justice of the peace" TYPE="PROFESSION" comment="" />
+<AGE id="P12" start="5747" end="5749" text="56" TYPE="AGE" comment="" />
+<DATE id="P13" start="5955" end="5961" text="Monday" TYPE="DATE" comment="" />
+<NAME id="P14" start="6549" end="6562" text="Charles Amaya" TYPE="DOCTOR" comment="" />
+<CONTACT id="P15" start="6575" end="6580" text="36784" TYPE="PHONE" comment="" />
 </TAGS>
 </deIdi2b2>

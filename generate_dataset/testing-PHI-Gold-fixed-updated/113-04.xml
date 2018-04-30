@@ -1,6 +1,6 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT>
+<TEXT><!***REMOVED***CDATA***REMOVED***
 
 
 Record date: 2093-08-09
@@ -143,19 +143,21 @@ eScription document:6-1950972 BFFocus
 
 
 
-</TEXT>
+***REMOVED******REMOVED***></TEXT>
 <TAGS>
-<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2093-08-09" />
-<ID TYPE="MEDICALRECORD" comment="" end="44" id="P1" start="36" text="03689964" />
-<NAME TYPE="PATIENT" comment="" end="62" id="P2" start="45" text="VALENZUELA, BRIAN" />
-<DATE TYPE="DATE" comment="" end="71" id="P3" start="63" text="08/09/93" />
-<NAME TYPE="DOCTOR" comment="" end="83" id="P4" start="72" text="BOYER, DAWN" />
-<NAME TYPE="DOCTOR" comment="" end="146" id="P5" start="139" text="Edwards" />
-<NAME TYPE="DOCTOR" comment="" end="3180" id="P7" start="3175" text="Earle" />
-<NAME TYPE="DOCTOR" comment="" end="3513" id="P9" start="3502" text="BOYER, DAWN" />
-<DATE TYPE="DATE" comment="" end="3529" id="P10" start="3521" text="08/09/93" />
-<DATE TYPE="DATE" comment="" end="3542" id="P11" start="3534" text="08/10/93" />
-<NAME TYPE="DOCTOR" comment="" end="3568" id="P12" start="3557" text="BOYER, DAWN" />
-<ID TYPE="IDNUM" comment="" end="3599" id="P13" start="3590" text="6-1950972" />
+<DATE id="P0" start="16" end="26" text="2093-08-09" TYPE="DATE" comment="" />
+<ID id="P1" start="36" end="44" text="03689964" TYPE="MEDICALRECORD" comment="" />
+<NAME id="P2" start="45" end="62" text="VALENZUELA, BRIAN" TYPE="PATIENT" comment="" />
+<DATE id="P3" start="63" end="71" text="08/09/93" TYPE="DATE" comment="" />
+<NAME id="P4" start="72" end="83" text="BOYER, DAWN" TYPE="DOCTOR" comment="" />
+<NAME id="P5" start="139" end="146" text="Edwards" TYPE="DOCTOR" comment="" />
+<AGE id="P6" start="518" end="520" text="56" TYPE="AGE" comment="" />
+<NAME id="P7" start="3175" end="3180" text="Earle" TYPE="DOCTOR" comment="" />
+<LOCATION id="P8" start="3202" end="3205" text="WBM" TYPE="HOSPITAL" comment="" />
+<NAME id="P9" start="3502" end="3513" text="BOYER, DAWN" TYPE="DOCTOR" comment="" />
+<DATE id="P10" start="3521" end="3529" text="08/09/93" TYPE="DATE" comment="" />
+<DATE id="P11" start="3534" end="3542" text="08/10/93" TYPE="DATE" comment="" />
+<NAME id="P12" start="3557" end="3568" text="BOYER, DAWN" TYPE="DOCTOR" comment="" />
+<ID id="P13" start="3590" end="3599" text="6-1950972" TYPE="IDNUM" comment="" />
 </TAGS>
 </deIdi2b2>

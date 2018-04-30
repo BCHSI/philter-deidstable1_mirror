@@ -1,6 +1,6 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT>
+<TEXT><!***REMOVED***CDATA***REMOVED***
 
 
 Record date: 2094-05-20
@@ -53,7 +53,7 @@ Recent testing - L-spine films confirm grade 2 anterospondylolisthesis L4-L5 wit
 
 
 
-O:	HEENT - Unremarkable. Skin - No obvious sign of rash or infection where she states the animals are present. CV - BP is 170/88. RR at 60. No murmurs, gallops, rubs present. Lungs - Clear to P&amp;A. B12 was 331. Attempted Pap smear. External genitalia unremarkable. Vaginal introitus is very small. Patient got very cold and clammy and nervous throughout the tried Pap smear; so Pap smear attempt was terminated at that time. Consent was obtained to conduct Pap smear. Lungs - Clear to P&amp;A. 
+O:	HEENT - Unremarkable. Skin - No obvious sign of rash or infection where she states the animals are present. CV - BP is 170/88. RR at 60. No murmurs, gallops, rubs present. Lungs - Clear to P&A. B12 was 331. Attempted Pap smear. External genitalia unremarkable. Vaginal introitus is very small. Patient got very cold and clammy and nervous throughout the tried Pap smear; so Pap smear attempt was terminated at that time. Consent was obtained to conduct Pap smear. Lungs - Clear to P&A. 
 
 
 
@@ -81,25 +81,30 @@ FN/warren/forbes
 
 
 
-</TEXT>
+***REMOVED******REMOVED***></TEXT>
 <TAGS>
-<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2094-05-20" />
-<NAME TYPE="PATIENT" comment="" end="39" id="P1" start="28" text="ZELDA UPHAM" />
-<DATE TYPE="DATE" comment="" end="122" id="P4" start="110" text="May 20, 2094" />
-<DATE TYPE="DATE" comment="" end="597" id="P7" start="593" text="2062" />
-<NAME TYPE="PATIENT" comment="" end="654" id="P9" start="650" text="Qazi" />
-<NAME TYPE="DOCTOR" comment="" end="734" id="P10" start="729" text="Faust" />
-<NAME TYPE="DOCTOR" comment="" end="831" id="P11" start="824" text="Solomon" />
-<DATE TYPE="DATE" comment="" end="1998" id="P12" start="1993" text="12/93" />
-<DATE TYPE="DATE" comment="" end="2098" id="P13" start="2093" text="11/92" />
-<DATE TYPE="DATE" comment="" end="2164" id="P14" start="2160" text="3/94" />
-<DATE TYPE="DATE" comment="" end="2199" id="P15" start="2194" text="12/93" />
-<DATE TYPE="DATE" comment="" end="2272" id="P16" start="2267" text="12/93" />
-<DATE TYPE="DATE" comment="" end="2382" id="P17" start="2377" text="12/93" />
-<NAME TYPE="DOCTOR" comment="" end="3373" id="P18" start="3358" text="Helen Whitehead" />
-<NAME TYPE="DOCTOR" comment="" end="3409" id="P19" start="3396" text="Frieda Nadeau" />
-<NAME TYPE="DOCTOR" comment="" end="3424" id="P20" start="3422" text="FN" />
-<NAME TYPE="DOCTOR" comment="" end="3431" id="P21" start="3425" text="warren" />
-<NAME TYPE="DOCTOR" comment="" end="3438" id="P22" start="3432" text="forbes" />
+<DATE id="P0" start="16" end="26" text="2094-05-20" TYPE="DATE" comment="" />
+<NAME id="P1" start="28" end="39" text="ZELDA UPHAM" TYPE="PATIENT" comment="" />
+<LOCATION id="P2" start="41" end="44" text="SMC" TYPE="HOSPITAL" comment="" />
+<LOCATION id="P3" start="59" end="79" text="MOLLY STARK HOSPITAL" TYPE="HOSPITAL" comment="" />
+<DATE id="P4" start="110" end="122" text="May 20, 2094" TYPE="DATE" comment="" />
+<AGE id="P5" start="126" end="128" text="70" TYPE="AGE" comment="" />
+<LOCATION id="P6" start="161" end="164" text="MSH" TYPE="HOSPITAL" comment="" />
+<DATE id="P7" start="593" end="597" text="2062" TYPE="DATE" comment="" />
+<AGE id="P8" start="606" end="608" text="70" TYPE="AGE" comment="" />
+<NAME id="P9" start="650" end="654" text="Qazi" TYPE="PATIENT" comment="" />
+<NAME id="P10" start="729" end="734" text="Faust" TYPE="DOCTOR" comment="" />
+<NAME id="P11" start="824" end="831" text="Solomon" TYPE="DOCTOR" comment="" />
+<DATE id="P12" start="1993" end="1998" text="12/93" TYPE="DATE" comment="" />
+<DATE id="P13" start="2093" end="2098" text="11/92" TYPE="DATE" comment="" />
+<DATE id="P14" start="2160" end="2164" text="3/94" TYPE="DATE" comment="" />
+<DATE id="P15" start="2194" end="2199" text="12/93" TYPE="DATE" comment="" />
+<DATE id="P16" start="2267" end="2272" text="12/93" TYPE="DATE" comment="" />
+<DATE id="P17" start="2377" end="2382" text="12/93" TYPE="DATE" comment="" />
+<NAME id="P18" start="3358" end="3373" text="Helen Whitehead" TYPE="DOCTOR" comment="" />
+<NAME id="P19" start="3396" end="3409" text="Frieda Nadeau" TYPE="DOCTOR" comment="" />
+<NAME id="P20" start="3422" end="3424" text="FN" TYPE="DOCTOR" comment="" />
+<NAME id="P21" start="3425" end="3431" text="warren" TYPE="DOCTOR" comment="" />
+<NAME id="P22" start="3432" end="3438" text="forbes" TYPE="DOCTOR" comment="" />
 </TAGS>
 </deIdi2b2>

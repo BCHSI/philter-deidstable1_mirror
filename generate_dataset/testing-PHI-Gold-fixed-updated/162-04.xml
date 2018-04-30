@@ -1,6 +1,6 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT>
+<TEXT><!***REMOVED***CDATA***REMOVED***
 
 
 Record date: 2076-07-20
@@ -209,18 +209,23 @@ Xanthopoulos, Kelly Willie, M.D.
 
 
 
-</TEXT>
+***REMOVED******REMOVED***></TEXT>
 <TAGS>
-<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2076-07-20" />
-<NAME TYPE="PATIENT" comment="" end="111" id="P1" start="97" text="QUIJANO,BAYLEE" />
-<ID TYPE="MEDICALRECORD" comment="" end="127" id="P2" start="119" text="85362514" />
-<DATE TYPE="DATE" comment="" end="215" id="P4" start="205" text="07/20/2076" />
-<NAME TYPE="PATIENT" comment="" end="244" id="P5" start="237" text="Quijano" />
-<PROFESSION TYPE="PROFESSION" comment="" end="1821" id="P7" start="1804" text="commercial diving" />
-<LOCATION TYPE="STATE" comment="" end="1993" id="P8" start="1982" text="Mississippi" />
-<DATE TYPE="DATE" comment="" end="2198" id="P11" start="2189" text="Apr, 2075" />
-<DATE TYPE="DATE" comment="" end="4120" id="P13" start="4113" text="5/26/76" />
-<NAME TYPE="DOCTOR" comment="" end="4565" id="P15" start="4552" text="Bobby Davison" />
-<NAME TYPE="DOCTOR" comment="" end="4837" id="P16" start="4811" text="Xanthopoulos, Kelly Willie" />
+<DATE id="P0" start="16" end="26" text="2076-07-20" TYPE="DATE" comment="" />
+<NAME id="P1" start="97" end="111" text="QUIJANO,BAYLEE" TYPE="PATIENT" comment="" />
+<ID id="P2" start="119" end="127" text="85362514" TYPE="MEDICALRECORD" comment="" />
+<LOCATION id="P3" start="127" end="131" text="MARY" TYPE="HOSPITAL" comment="" />
+<DATE id="P4" start="205" end="215" text="07/20/2076" TYPE="DATE" comment="" />
+<NAME id="P5" start="237" end="244" text="Quijano" TYPE="PATIENT" comment="" />
+<AGE id="P6" start="250" end="252" text="61" TYPE="AGE" comment="" />
+<PROFESSION id="P7" start="1804" end="1821" text="commercial diving" TYPE="PROFESSION" comment="" />
+<LOCATION id="P8" start="1982" end="1993" text="Mississippi" TYPE="STATE" comment="" />
+<AGE id="P9" start="2020" end="2022" text="81" TYPE="AGE" comment="" />
+<AGE id="P10" start="2183" end="2185" text="80" TYPE="AGE" comment="" />
+<DATE id="P11" start="2189" end="2198" text="Apr, 2075" TYPE="DATE" comment="" />
+<AGE id="P12" start="2365" end="2367" text="12" TYPE="AGE" comment="" />
+<DATE id="P13" start="4113" end="4120" text="5/26/76" TYPE="DATE" comment="" />
+<NAME id="P15" start="4552" end="4565" text="Bobby Davison" TYPE="DOCTOR" comment="" />
+<NAME id="P16" start="4811" end="4837" text="Xanthopoulos, Kelly Willie" TYPE="DOCTOR" comment="" />
 </TAGS>
 </deIdi2b2>

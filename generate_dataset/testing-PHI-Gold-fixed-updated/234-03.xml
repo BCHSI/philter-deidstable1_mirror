@@ -1,6 +1,6 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT>
+<TEXT><!***REMOVED***CDATA***REMOVED***
 
 
 Record date: 2075-07-03
@@ -117,18 +117,19 @@ eScription document:1-0201766 BF
 
 
 
-</TEXT>
+***REMOVED******REMOVED***></TEXT>
 <TAGS>
-<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2075-07-03" />
-<ID TYPE="MEDICALRECORD" comment="" end="44" id="P1" start="36" text="80780896" />
-<NAME TYPE="PATIENT" comment="" end="69" id="P2" start="45" text="SERGIO-STEVEN, FRANCESCA" />
-<DATE TYPE="DATE" comment="" end="78" id="P3" start="70" text="07/03/75" />
-<NAME TYPE="DOCTOR" comment="" end="93" id="P4" start="79" text="VARNER, FALLON" />
-<NAME TYPE="DOCTOR" comment="" end="158" id="P5" start="155" text="Vue" />
-<NAME TYPE="DOCTOR" comment="" end="2855" id="P7" start="2841" text="VARNER, FALLON" />
-<DATE TYPE="DATE" comment="" end="2873" id="P8" start="2865" text="07/03/75" />
-<DATE TYPE="DATE" comment="" end="2886" id="P9" start="2878" text="07/03/75" />
-<NAME TYPE="DOCTOR" comment="" end="2915" id="P10" start="2901" text="VARNER, FALLON" />
-<ID TYPE="IDNUM" comment="" end="2946" id="P11" start="2937" text="1-0201766" />
+<DATE id="P0" start="16" end="26" text="2075-07-03" TYPE="DATE" comment="" />
+<ID id="P1" start="36" end="44" text="80780896" TYPE="MEDICALRECORD" comment="" />
+<NAME id="P2" start="45" end="69" text="SERGIO-STEVEN, FRANCESCA" TYPE="PATIENT" comment="" />
+<DATE id="P3" start="70" end="78" text="07/03/75" TYPE="DATE" comment="" />
+<NAME id="P4" start="79" end="93" text="VARNER, FALLON" TYPE="DOCTOR" comment="" />
+<NAME id="P5" start="155" end="158" text="Vue" TYPE="DOCTOR" comment="" />
+<AGE id="P6" start="283" end="285" text="73" TYPE="AGE" comment="" />
+<NAME id="P7" start="2841" end="2855" text="VARNER, FALLON" TYPE="DOCTOR" comment="" />
+<DATE id="P8" start="2865" end="2873" text="07/03/75" TYPE="DATE" comment="" />
+<DATE id="P9" start="2878" end="2886" text="07/03/75" TYPE="DATE" comment="" />
+<NAME id="P10" start="2901" end="2915" text="VARNER, FALLON" TYPE="DOCTOR" comment="" />
+<ID id="P11" start="2937" end="2946" text="1-0201766" TYPE="IDNUM" comment="" />
 </TAGS>
 </deIdi2b2>

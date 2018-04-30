@@ -1,6 +1,6 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT>
+<TEXT><!***REMOVED***CDATA***REMOVED***
 
 
 Record date: 2060-07-08
@@ -45,22 +45,23 @@ DV: 07/08/60
 
 
 
-</TEXT>
+***REMOVED******REMOVED***></TEXT>
 <TAGS>
-<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2060-07-08" />
-<NAME TYPE="PATIENT" comment="" end="45" id="P1" start="31" text="HESS, CLARENCE" />
-<ID TYPE="MEDICALRECORD" comment="" end="54" id="P2" start="46" text="64365595" />
-<DATE TYPE="DATE" comment="" end="65" id="P3" start="55" text="07/08/2060" />
-<DATE TYPE="DATE" comment="" end="181" id="P4" start="173" text="December" />
-<NAME TYPE="PATIENT" comment="" end="322" id="P5" start="319" text="Lea" />
-<DATE TYPE="DATE" comment="" end="1506" id="P7" start="1496" text="12/24/2060" />
-<NAME TYPE="DOCTOR" comment="" end="1910" id="P8" start="1905" text="Ohara" />
-<NAME TYPE="DOCTOR" comment="" end="1923" id="P9" start="1919" text="Xiao" />
-<NAME TYPE="DOCTOR" comment="" end="1953" id="P10" start="1943" text="Sutherland" />
-<NAME TYPE="DOCTOR" comment="" end="2183" id="P11" start="2167" text="Quatrell Swanson" />
-<ID TYPE="IDNUM" comment="" end="2224" id="P12" start="2215" text="5-9051404" />
-<DATE TYPE="DATE" comment="" end="2248" id="P13" start="2240" text="07/08/60" />
-<DATE TYPE="DATE" comment="" end="2261" id="P14" start="2253" text="07/09/60" />
-<DATE TYPE="DATE" comment="" end="2274" id="P15" start="2266" text="07/08/60" />
+<DATE id="P0" start="16" end="26" text="2060-07-08" TYPE="DATE" comment="" />
+<NAME id="P1" start="31" end="45" text="HESS, CLARENCE" TYPE="PATIENT" comment="" />
+<ID id="P2" start="46" end="54" text="64365595" TYPE="MEDICALRECORD" comment="" />
+<DATE id="P3" start="55" end="65" text="07/08/2060" TYPE="DATE" comment="" />
+<DATE id="P4" start="173" end="181" text="December" TYPE="DATE" comment="" />
+<NAME id="P5" start="319" end="322" text="Lea" TYPE="PATIENT" comment="" />
+<LOCATION id="P6" start="485" end="513" text="Barney Convalescent Hospital" TYPE="HOSPITAL" comment="" />
+<DATE id="P7" start="1496" end="1506" text="12/24/2060" TYPE="DATE" comment="" />
+<NAME id="P8" start="1905" end="1910" text="Ohara" TYPE="DOCTOR" comment="" />
+<NAME id="P9" start="1919" end="1923" text="Xiao" TYPE="DOCTOR" comment="" />
+<NAME id="P10" start="1943" end="1953" text="Sutherland" TYPE="DOCTOR" comment="" />
+<NAME id="P11" start="2167" end="2183" text="Quatrell Swanson" TYPE="DOCTOR" comment="" />
+<ID id="P12" start="2215" end="2224" text="5-9051404" TYPE="IDNUM" comment="" />
+<DATE id="P13" start="2240" end="2248" text="07/08/60" TYPE="DATE" comment="" />
+<DATE id="P14" start="2253" end="2261" text="07/09/60" TYPE="DATE" comment="" />
+<DATE id="P15" start="2266" end="2274" text="07/08/60" TYPE="DATE" comment="" />
 </TAGS>
 </deIdi2b2>

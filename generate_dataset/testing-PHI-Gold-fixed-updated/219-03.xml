@@ -1,6 +1,6 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT>
+<TEXT><!***REMOVED***CDATA***REMOVED***
 
 
 Record date: 2074-08-02
@@ -74,22 +74,24 @@ DV: 08/02/74
 
 
 
-</TEXT>
+***REMOVED******REMOVED***></TEXT>
 <TAGS>
-<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2074-08-02" />
-<LOCATION TYPE="STREET" comment="" end="71" id="P2" start="53" text="1992 Madera Circle" />
-<NAME TYPE="PATIENT" comment="" end="123" id="P3" start="109" text="Potts, William" />
-<LOCATION TYPE="CITY" comment="" end="131" id="P4" start="124" text="Hyannis" />
-<LOCATION TYPE="STATE" comment="" end="135" id="P5" start="133" text="NV" />
-<LOCATION TYPE="ZIP" comment="" end="141" id="P6" start="136" text="21113" />
-<ID TYPE="MEDICALRECORD" comment="" end="187" id="P7" start="179" text="10916758" />
-<CONTACT TYPE="PHONE" comment="" end="202" id="P8" start="188" text="(391) 643-6925" />
-<DATE TYPE="DATE" comment="" end="253" id="P9" start="245" text="08/02/74" />
-<NAME TYPE="PATIENT" comment="" end="294" id="P10" start="289" text="Potts" />
-<NAME TYPE="DOCTOR" comment="" end="2454" id="P12" start="2438" text="Matthew H. Wyatt" />
-<ID TYPE="IDNUM" comment="" end="2491" id="P13" start="2483" text="8-959314" />
-<DATE TYPE="DATE" comment="" end="2513" id="P14" start="2505" text="08/02/74" />
-<DATE TYPE="DATE" comment="" end="2526" id="P15" start="2518" text="08/03/74" />
-<DATE TYPE="DATE" comment="" end="2539" id="P16" start="2531" text="08/02/74" />
+<DATE id="P0" start="16" end="26" text="2074-08-02" TYPE="DATE" comment="" />
+<LOCATION id="P1" start="29" end="52" text="Notre Dame Nursing Home" TYPE="HOSPITAL" comment="" />
+<LOCATION id="P2" start="53" end="71" text="1992 Madera Circle" TYPE="STREET" comment="" />
+<NAME id="P3" start="109" end="123" text="Potts, William" TYPE="PATIENT" comment="" />
+<LOCATION id="P4" start="124" end="131" text="Hyannis" TYPE="CITY" comment="" />
+<LOCATION id="P5" start="133" end="135" text="NV" TYPE="STATE" comment="" />
+<LOCATION id="P6" start="136" end="141" text="21113" TYPE="ZIP" comment="" />
+<ID id="P7" start="179" end="187" text="10916758" TYPE="MEDICALRECORD" comment="" />
+<CONTACT id="P8" start="188" end="202" text="(391) 643-6925" TYPE="PHONE" comment="" />
+<DATE id="P9" start="245" end="253" text="08/02/74" TYPE="DATE" comment="" />
+<NAME id="P10" start="289" end="294" text="Potts" TYPE="PATIENT" comment="" />
+<AGE id="P11" start="300" end="302" text="60" TYPE="AGE" comment="" />
+<NAME id="P12" start="2438" end="2454" text="Matthew H. Wyatt" TYPE="DOCTOR" comment="" />
+<ID id="P13" start="2483" end="2491" text="8-959314" TYPE="IDNUM" comment="" />
+<DATE id="P14" start="2505" end="2513" text="08/02/74" TYPE="DATE" comment="" />
+<DATE id="P15" start="2518" end="2526" text="08/03/74" TYPE="DATE" comment="" />
+<DATE id="P16" start="2531" end="2539" text="08/02/74" TYPE="DATE" comment="" />
 </TAGS>
 </deIdi2b2>

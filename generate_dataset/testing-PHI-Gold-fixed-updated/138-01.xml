@@ -1,6 +1,6 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT>
+<TEXT><!***REMOVED***CDATA***REMOVED***
 
 
 Record date: 2076-03-05
@@ -76,22 +76,25 @@ DV: 03/05/76
 
 
 
-</TEXT>
+***REMOVED******REMOVED***></TEXT>
 <TAGS>
-<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2076-03-05" />
-<LOCATION TYPE="STREET" comment="" end="75" id="P2" start="59" text="4040 Oldham Lane" />
-<NAME TYPE="PATIENT" comment="" end="105" id="P3" start="89" text="PRESTON, FRANCES" />
-<LOCATION TYPE="CITY" comment="" end="111" id="P4" start="106" text="Cozad" />
-<LOCATION TYPE="STATE" comment="" end="115" id="P5" start="113" text="OK" />
-<LOCATION TYPE="ZIP" comment="" end="122" id="P6" start="117" text="53952" />
-<ID TYPE="MEDICALRECORD" comment="" end="150" id="P7" start="142" text="05850080" />
-<CONTACT TYPE="PHONE" comment="" end="165" id="P8" start="151" text="(060) 107-3378" />
-<DATE TYPE="DATE" comment="" end="196" id="P9" start="186" text="03/05/2076" />
-<LOCATION TYPE="CITY" comment="" end="736" id="P12" start="724" text="Big Pine Key" />
-<NAME TYPE="DOCTOR" comment="" end="2304" id="P13" start="2290" text="Louis P Barron" />
-<ID TYPE="IDNUM" comment="" end="2357" id="P14" start="2348" text="9-6873721" />
-<DATE TYPE="DATE" comment="" end="2389" id="P15" start="2381" text="03/05/76" />
-<DATE TYPE="DATE" comment="" end="2402" id="P16" start="2394" text="03/06/76" />
-<DATE TYPE="DATE" comment="" end="2415" id="P17" start="2407" text="03/05/76" />
+<DATE id="P0" start="16" end="26" text="2076-03-05" TYPE="DATE" comment="" />
+<LOCATION id="P1" start="33" end="58" text="Shelby Dental Care Center" TYPE="HOSPITAL" comment="" />
+<LOCATION id="P2" start="59" end="75" text="4040 Oldham Lane" TYPE="STREET" comment="" />
+<NAME id="P3" start="89" end="105" text="PRESTON, FRANCES" TYPE="PATIENT" comment="" />
+<LOCATION id="P4" start="106" end="111" text="Cozad" TYPE="CITY" comment="" />
+<LOCATION id="P5" start="113" end="115" text="OK" TYPE="STATE" comment="" />
+<LOCATION id="P6" start="117" end="122" text="53952" TYPE="ZIP" comment="" />
+<ID id="P7" start="142" end="150" text="05850080" TYPE="MEDICALRECORD" comment="" />
+<CONTACT id="P8" start="151" end="165" text="(060) 107-3378" TYPE="PHONE" comment="" />
+<DATE id="P9" start="186" end="196" text="03/05/2076" TYPE="DATE" comment="" />
+<AGE id="P10" start="247" end="249" text="51" TYPE="AGE" comment="" />
+<LOCATION id="P11" start="278" end="282" text="SDCC" TYPE="HOSPITAL" comment="" />
+<LOCATION id="P12" start="724" end="736" text="Big Pine Key" TYPE="CITY" comment="" />
+<NAME id="P13" start="2290" end="2304" text="Louis P Barron" TYPE="DOCTOR" comment="" />
+<ID id="P14" start="2348" end="2357" text="9-6873721" TYPE="IDNUM" comment="" />
+<DATE id="P15" start="2381" end="2389" text="03/05/76" TYPE="DATE" comment="" />
+<DATE id="P16" start="2394" end="2402" text="03/06/76" TYPE="DATE" comment="" />
+<DATE id="P17" start="2407" end="2415" text="03/05/76" TYPE="DATE" comment="" />
 </TAGS>
 </deIdi2b2>

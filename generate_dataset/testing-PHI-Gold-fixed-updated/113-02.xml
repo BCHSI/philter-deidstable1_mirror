@@ -1,6 +1,6 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT>
+<TEXT><!***REMOVED***CDATA***REMOVED***
 
 
 Record date: 2088-08-03
@@ -183,18 +183,21 @@ Dictated by:  KEITH TOLLIVER, M.D.       KT40
 
 
 
-</TEXT>
+***REMOVED******REMOVED***></TEXT>
 <TAGS>
-<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2088-08-03" />
-<NAME TYPE="PATIENT" comment="" end="98" id="P2" start="82" text="VALENZUELA,BRIAN" />
-<ID TYPE="MEDICALRECORD" comment="" end="112" id="P3" start="101" text="036-89-96-4" />
-<DATE TYPE="DATE" comment="" end="541" id="P5" start="537" text="2063" />
-<ID TYPE="IDNUM" comment="" end="5115" id="P7" start="5104" text="VI752/79442" />
-<NAME TYPE="DOCTOR" comment="" end="5132" id="P8" start="5118" text="KEITH TOLLIVER" />
-<NAME TYPE="USERNAME" comment="" end="5149" id="P9" start="5145" text="KT40" />
-<DATE TYPE="DATE" comment="" end="5186" id="P10" start="5178" text="08/05/88" />
-<DATE TYPE="DATE" comment="" end="5254" id="P11" start="5246" text="08/05/88" />
-<NAME TYPE="DOCTOR" comment="" end="5285" id="P12" start="5271" text="KEITH TOLLIVER" />
-<NAME TYPE="USERNAME" comment="" end="5302" id="P13" start="5298" text="KT40" />
+<DATE id="P0" start="16" end="26" text="2088-08-03" TYPE="DATE" comment="" />
+<LOCATION id="P1" start="49" end="56" text="DAMERON" TYPE="HOSPITAL" comment="" />
+<NAME id="P2" start="82" end="98" text="VALENZUELA,BRIAN" TYPE="PATIENT" comment="" />
+<ID id="P3" start="101" end="112" text="036-89-96-4" TYPE="MEDICALRECORD" comment="" />
+<AGE id="P4" start="458" end="460" text="51" TYPE="AGE" comment="" />
+<DATE id="P5" start="537" end="541" text="2063" TYPE="DATE" comment="" />
+<AGE id="P6" start="4373" end="4375" text="51" TYPE="AGE" comment="" />
+<ID id="P7" start="5104" end="5115" text="VI752/79442" TYPE="IDNUM" comment="" />
+<NAME id="P8" start="5118" end="5132" text="KEITH TOLLIVER" TYPE="DOCTOR" comment="" />
+<NAME id="P9" start="5145" end="5149" text="KT40" TYPE="USERNAME" comment="" />
+<DATE id="P10" start="5178" end="5186" text="08/05/88" TYPE="DATE" comment="" />
+<DATE id="P11" start="5246" end="5254" text="08/05/88" TYPE="DATE" comment="" />
+<NAME id="P12" start="5271" end="5285" text="KEITH TOLLIVER" TYPE="DOCTOR" comment="" />
+<NAME id="P13" start="5298" end="5302" text="KT40" TYPE="USERNAME" comment="" />
 </TAGS>
 </deIdi2b2>

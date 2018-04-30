@@ -1,6 +1,6 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT>
+<TEXT><!***REMOVED***CDATA***REMOVED***
 
 
 Record date: 2085-11-28
@@ -69,10 +69,12 @@ A/P: 73 y.o. man w/ DM, HTN, claucoma, legally blind, here to establish care.  W
 
 
 
-</TEXT>
+***REMOVED******REMOVED***></TEXT>
 <TAGS>
-<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2085-11-28" />
-<NAME TYPE="DOCTOR" comment="" end="222" id="P2" start="215" text="Valerio" />
-<LOCATION TYPE="CITY" comment="" end="239" id="P3" start="230" text="Weedsport" />
+<DATE id="P0" start="16" end="26" text="2085-11-28" TYPE="DATE" comment="" />
+<AGE id="P1" start="100" end="102" text="73" TYPE="AGE" comment="" />
+<NAME id="P2" start="215" end="222" text="Valerio" TYPE="DOCTOR" comment="" />
+<LOCATION id="P3" start="230" end="239" text="Weedsport" TYPE="CITY" comment="" />
+<AGE id="P4" start="963" end="965" text="73" TYPE="AGE" comment="" />
 </TAGS>
 </deIdi2b2>

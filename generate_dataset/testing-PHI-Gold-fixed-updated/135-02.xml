@@ -1,6 +1,6 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT>
+<TEXT><!***REMOVED***CDATA***REMOVED***
 
 
 Record date: 2091-10-27
@@ -289,27 +289,32 @@ Betty Kaleena-Kern, MD (Internal Medicine)
 
 
 
-</TEXT>
+***REMOVED******REMOVED***></TEXT>
 <TAGS>
-<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2091-10-27" />
-<NAME TYPE="PATIENT" comment="" end="56" id="P1" start="44" text="Munoz, Katie" />
-<ID TYPE="MEDICALRECORD" comment="" end="71" id="P2" start="64" text="6146161" />
-<DATE TYPE="DATE" comment="" end="101" id="P3" start="93" text="10/26/91" />
-<NAME TYPE="DOCTOR" comment="" end="130" id="P4" start="112" text="Betty Kaleena-Kern" />
-<NAME TYPE="DOCTOR" comment="" end="157" id="P5" start="143" text="Youssef Easton" />
-<NAME TYPE="DOCTOR" comment="" end="177" id="P6" start="164" text="Evelyn Conway" />
-<NAME TYPE="DOCTOR" comment="" end="208" id="P7" start="193" text="Quinton Janssen" />
-<NAME TYPE="PATIENT" comment="" end="1274" id="P10" start="1266" text="Mitchell" />
-<DATE TYPE="DATE" comment="" end="1545" id="P12" start="1539" text="6/2085" />
-<DATE TYPE="DATE" comment="" end="1668" id="P13" start="1663" text="10/89" />
-<DATE TYPE="DATE" comment="" end="1694" id="P14" start="1687" text="7/17/91" />
-<DATE TYPE="DATE" comment="" end="2165" id="P15" start="2159" text="Sunday" />
-<DATE TYPE="DATE" comment="" end="2680" id="P17" start="2674" text="8/2091" />
-<NAME TYPE="PATIENT" comment="" end="2694" id="P18" start="2686" text="Mitchell" />
-<DATE TYPE="DATE" comment="" end="2788" id="P20" start="2779" text="September" />
-<DATE TYPE="DATE" comment="" end="4307" id="P21" start="4300" text="8/07/91" />
-<DATE TYPE="DATE" comment="" end="4395" id="P22" start="4388" text="7/28/91" />
-<NAME TYPE="DOCTOR" comment="" end="5854" id="P24" start="5836" text="Betty Kaleena-Kern" />
-<CONTACT TYPE="PHONE" comment="" end="5886" id="P26" start="5880" text="6-6804" />
+<DATE id="P0" start="16" end="26" text="2091-10-27" TYPE="DATE" comment="" />
+<NAME id="P1" start="44" end="56" text="Munoz, Katie" TYPE="PATIENT" comment="" />
+<ID id="P2" start="64" end="71" text="6146161" TYPE="MEDICALRECORD" comment="" />
+<DATE id="P3" start="93" end="101" text="10/26/91" TYPE="DATE" comment="" />
+<NAME id="P4" start="112" end="130" text="Betty Kaleena-Kern" TYPE="DOCTOR" comment="" />
+<NAME id="P5" start="143" end="157" text="Youssef Easton" TYPE="DOCTOR" comment="" />
+<NAME id="P6" start="164" end="177" text="Evelyn Conway" TYPE="DOCTOR" comment="" />
+<NAME id="P7" start="193" end="208" text="Quinton Janssen" TYPE="DOCTOR" comment="" />
+<AGE id="P9" start="336" end="338" text="75" TYPE="AGE" comment="" />
+<NAME id="P10" start="1266" end="1274" text="Mitchell" TYPE="PATIENT" comment="" />
+<LOCATION id="P11" start="1444" end="1447" text="PHH" TYPE="HOSPITAL" comment="" />
+<DATE id="P12" start="1539" end="1545" text="6/2085" TYPE="DATE" comment="" />
+<DATE id="P13" start="1663" end="1668" text="10/89" TYPE="DATE" comment="" />
+<DATE id="P14" start="1687" end="1694" text="7/17/91" TYPE="DATE" comment="" />
+<DATE id="P15" start="2159" end="2165" text="Sunday" TYPE="DATE" comment="" />
+<AGE id="P16" start="2507" end="2509" text="59" TYPE="AGE" comment="" />
+<DATE id="P17" start="2674" end="2680" text="8/2091" TYPE="DATE" comment="" />
+<NAME id="P18" start="2686" end="2694" text="Mitchell" TYPE="PATIENT" comment="" />
+<LOCATION id="P19" start="2718" end="2721" text="NMH" TYPE="HOSPITAL" comment="" />
+<DATE id="P20" start="2779" end="2788" text="September" TYPE="DATE" comment="" />
+<DATE id="P21" start="4300" end="4307" text="8/07/91" TYPE="DATE" comment="" />
+<DATE id="P22" start="4388" end="4395" text="7/28/91" TYPE="DATE" comment="" />
+<AGE id="P23" start="4579" end="4581" text="75" TYPE="AGE" comment="" />
+<NAME id="P24" start="5836" end="5854" text="Betty Kaleena-Kern" TYPE="DOCTOR" comment="" />
+<CONTACT id="P26" start="5880" end="5886" text="6-6804" TYPE="PHONE" comment="" />
 </TAGS>
 </deIdi2b2>

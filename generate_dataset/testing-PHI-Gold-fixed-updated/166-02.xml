@@ -1,6 +1,6 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT>
+<TEXT><!***REMOVED***CDATA***REMOVED***
 
 
 Record date: 2095-08-06
@@ -39,18 +39,19 @@ cc:
 
 
 
-</TEXT>
+***REMOVED******REMOVED***></TEXT>
 <TAGS>
-<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2095-08-06" />
-<NAME TYPE="PATIENT" comment="" end="75" id="P2" start="64" text="Oscar Meyer" />
-<ID TYPE="MEDICALRECORD" comment="" end="87" id="P3" start="78" text="277-14-47" />
-<NAME TYPE="DOCTOR" comment="" end="126" id="P4" start="111" text="VICTOR M. ZUBIA" />
-<DATE TYPE="DATE" comment="" end="160" id="P5" start="153" text="5/27/95" />
-<DATE TYPE="DATE" comment="" end="170" id="P6" start="163" text="7/24/95" />
-<NAME TYPE="PATIENT" comment="" end="288" id="P7" start="283" text="Meyer" />
-<NAME TYPE="PATIENT" comment="" end="1653" id="P9" start="1648" text="Meyer" />
-<NAME TYPE="PATIENT" comment="" end="1728" id="P10" start="1723" text="Meyer" />
-<NAME TYPE="DOCTOR" comment="" end="1801" id="P11" start="1788" text="Ulysses Imler" />
-<NAME TYPE="DOCTOR" comment="" end="1830" id="P12" start="1818" text="Victor Zubia" />
+<DATE id="P0" start="16" end="26" text="2095-08-06" TYPE="DATE" comment="" />
+<NAME id="P2" start="64" end="75" text="Oscar Meyer" TYPE="PATIENT" comment="" />
+<ID id="P3" start="78" end="87" text="277-14-47" TYPE="MEDICALRECORD" comment="" />
+<NAME id="P4" start="111" end="126" text="VICTOR M. ZUBIA" TYPE="DOCTOR" comment="" />
+<DATE id="P5" start="153" end="160" text="5/27/95" TYPE="DATE" comment="" />
+<DATE id="P6" start="163" end="170" text="7/24/95" TYPE="DATE" comment="" />
+<NAME id="P7" start="283" end="288" text="Meyer" TYPE="PATIENT" comment="" />
+<AGE id="P8" start="294" end="296" text="63" TYPE="AGE" comment="" />
+<NAME id="P9" start="1648" end="1653" text="Meyer" TYPE="PATIENT" comment="" />
+<NAME id="P10" start="1723" end="1728" text="Meyer" TYPE="PATIENT" comment="" />
+<NAME id="P11" start="1788" end="1801" text="Ulysses Imler" TYPE="DOCTOR" comment="" />
+<NAME id="P12" start="1818" end="1830" text="Victor Zubia" TYPE="DOCTOR" comment="" />
 </TAGS>
 </deIdi2b2>

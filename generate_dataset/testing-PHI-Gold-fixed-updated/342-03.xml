@@ -1,6 +1,6 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT>
+<TEXT><!***REMOVED***CDATA***REMOVED***
 
 
 Record date: 2093-12-26
@@ -165,11 +165,11 @@ Obese
 
 Sedentary
 
-On statins. Goal LDL &lt;100
+On statins. Goal LDL <100
 
 Check Lipid profile and LFTs
 
-Goal LDL &lt;70
+Goal LDL <70
 
 Quit smoking - try Nicorette Gum. Referal to see Georgia Upshaw- smoking cessation counselour
 
@@ -223,18 +223,19 @@ Victoria Amy-Armstrong, M.D.
 
 
 
-</TEXT>
+***REMOVED******REMOVED***></TEXT>
 <TAGS>
-<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2093-12-26" />
-<NAME TYPE="PATIENT" comment="" end="113" id="P1" start="103" text="BARR,NICKY" />
-<ID TYPE="MEDICALRECORD" comment="" end="129" id="P2" start="121" text="32612454" />
-<DATE TYPE="DATE" comment="" end="216" id="P4" start="208" text="12/26/93" />
-<NAME TYPE="PATIENT" comment="" end="248" id="P5" start="244" text="Barr" />
-<NAME TYPE="PATIENT" comment="" end="337" id="P6" start="333" text="Barr" />
-<DATE TYPE="DATE" comment="" end="607" id="P7" start="603" text="5/93" />
-<DATE TYPE="DATE" comment="" end="1464" id="P8" start="1458" text="Sunday" />
-<NAME TYPE="DOCTOR" comment="" end="2680" id="P9" start="2666" text="Georgia Upshaw" />
-<DATE TYPE="DATE" comment="" end="2771" id="P10" start="2767" text="5/93" />
-<NAME TYPE="DOCTOR" comment="" end="3043" id="P11" start="3021" text="Victoria Amy-Armstrong" />
+<DATE id="P0" start="16" end="26" text="2093-12-26" TYPE="DATE" comment="" />
+<NAME id="P1" start="103" end="113" text="BARR,NICKY" TYPE="PATIENT" comment="" />
+<ID id="P2" start="121" end="129" text="32612454" TYPE="MEDICALRECORD" comment="" />
+<LOCATION id="P3" start="129" end="132" text="LDC" TYPE="HOSPITAL" comment="" />
+<DATE id="P4" start="208" end="216" text="12/26/93" TYPE="DATE" comment="" />
+<NAME id="P5" start="244" end="248" text="Barr" TYPE="PATIENT" comment="" />
+<NAME id="P6" start="333" end="337" text="Barr" TYPE="PATIENT" comment="" />
+<DATE id="P7" start="603" end="607" text="5/93" TYPE="DATE" comment="" />
+<DATE id="P8" start="1458" end="1464" text="Sunday" TYPE="DATE" comment="" />
+<NAME id="P9" start="2666" end="2680" text="Georgia Upshaw" TYPE="DOCTOR" comment="" />
+<DATE id="P10" start="2767" end="2771" text="5/93" TYPE="DATE" comment="" />
+<NAME id="P11" start="3021" end="3043" text="Victoria Amy-Armstrong" TYPE="DOCTOR" comment="" />
 </TAGS>
 </deIdi2b2>

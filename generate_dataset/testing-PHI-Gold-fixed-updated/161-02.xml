@@ -1,6 +1,6 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT>
+<TEXT><!***REMOVED***CDATA***REMOVED***
 
 
 Record date: 2070-12-03
@@ -77,29 +77,31 @@ SH/truitt		89-05167655.doc
 
 
 
-</TEXT>
+***REMOVED******REMOVED***></TEXT>
 <TAGS>
-<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2070-12-03" />
-<DATE TYPE="DATE" comment="" end="56" id="P1" start="40" text="December 3, 2070" />
-<NAME TYPE="DOCTOR" comment="" end="72" id="P2" start="62" text="Thomas You" />
-<LOCATION TYPE="STREET" comment="" end="95" id="P3" start="80" text="239 Gilson Road" />
-<LOCATION TYPE="CITY" comment="" end="103" id="P4" start="97" text="Vernon" />
-<LOCATION TYPE="STATE" comment="" end="107" id="P5" start="105" text="ME" />
-<LOCATION TYPE="ZIP" comment="" end="113" id="P6" start="108" text="27525" />
-<NAME TYPE="PATIENT" comment="" end="141" id="P7" start="126" text="Jaquante Xuereb" />
-<ID TYPE="MEDICALRECORD" comment="" end="159" id="P9" start="150" text="134-43-51" />
-<NAME TYPE="DOCTOR" comment="" end="175" id="P10" start="172" text="You" />
-<NAME TYPE="PATIENT" comment="" end="248" id="P11" start="233" text="Jaquante Xuereb" />
-<DATE TYPE="DATE" comment="" end="1768" id="P13" start="1751" text="November 29, 2070" />
-<NAME TYPE="PATIENT" comment="" end="1883" id="P14" start="1877" text="Xuereb" />
-<NAME TYPE="DOCTOR" comment="" end="2369" id="P15" start="2353" text="Shane R. Herring" />
-<NAME TYPE="DOCTOR" comment="" end="2396" id="P16" start="2383" text="Dirk O. Reece" />
-<LOCATION TYPE="STREET" comment="" end="2419" id="P17" start="2404" text="9 Church Street" />
-<LOCATION TYPE="CITY" comment="" end="2425" id="P18" start="2421" text="Pune" />
-<LOCATION TYPE="STATE" comment="" end="2429" id="P19" start="2427" text="ME" />
-<LOCATION TYPE="ZIP" comment="" end="2435" id="P20" start="2430" text="99597" />
-<NAME TYPE="DOCTOR" comment="" end="2441" id="P21" start="2439" text="SH" />
-<NAME TYPE="DOCTOR" comment="" end="2448" id="P22" start="2442" text="truitt" />
-<ID TYPE="IDNUM" comment="" end="2461" id="P23" start="2450" text="89-05167655" />
+<DATE id="P0" start="16" end="26" text="2070-12-03" TYPE="DATE" comment="" />
+<DATE id="P1" start="40" end="56" text="December 3, 2070" TYPE="DATE" comment="" />
+<NAME id="P2" start="62" end="72" text="Thomas You" TYPE="DOCTOR" comment="" />
+<LOCATION id="P3" start="80" end="95" text="239 Gilson Road" TYPE="STREET" comment="" />
+<LOCATION id="P4" start="97" end="103" text="Vernon" TYPE="CITY" comment="" />
+<LOCATION id="P5" start="105" end="107" text="ME" TYPE="STATE" comment="" />
+<LOCATION id="P6" start="108" end="113" text="27525" TYPE="ZIP" comment="" />
+<NAME id="P7" start="126" end="141" text="Jaquante Xuereb" TYPE="PATIENT" comment="" />
+<LOCATION id="P8" start="143" end="146" text="SRI" TYPE="HOSPITAL" comment="" />
+<ID id="P9" start="150" end="159" text="134-43-51" TYPE="MEDICALRECORD" comment="" />
+<NAME id="P10" start="172" end="175" text="You" TYPE="DOCTOR" comment="" />
+<NAME id="P11" start="233" end="248" text="Jaquante Xuereb" TYPE="PATIENT" comment="" />
+<LOCATION id="P12" start="317" end="337" text="Santa Rosa Infirmary" TYPE="HOSPITAL" comment="" />
+<DATE id="P13" start="1751" end="1768" text="November 29, 2070" TYPE="DATE" comment="" />
+<NAME id="P14" start="1877" end="1883" text="Xuereb" TYPE="PATIENT" comment="" />
+<NAME id="P15" start="2353" end="2369" text="Shane R. Herring" TYPE="DOCTOR" comment="" />
+<NAME id="P16" start="2383" end="2396" text="Dirk O. Reece" TYPE="DOCTOR" comment="" />
+<LOCATION id="P17" start="2404" end="2419" text="9 Church Street" TYPE="STREET" comment="" />
+<LOCATION id="P18" start="2421" end="2425" text="Pune" TYPE="CITY" comment="" />
+<LOCATION id="P19" start="2427" end="2429" text="ME" TYPE="STATE" comment="" />
+<LOCATION id="P20" start="2430" end="2435" text="99597" TYPE="ZIP" comment="" />
+<NAME id="P21" start="2439" end="2441" text="SH" TYPE="DOCTOR" comment="" />
+<NAME id="P22" start="2442" end="2448" text="truitt" TYPE="DOCTOR" comment="" />
+<ID id="P23" start="2450" end="2461" text="89-05167655" TYPE="IDNUM" comment="" />
 </TAGS>
 </deIdi2b2>

@@ -1,6 +1,6 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT>
+<TEXT><!***REMOVED***CDATA***REMOVED***
 
 
 Record date: 2114-04-07
@@ -213,15 +213,17 @@ Rec/Plan:
 
 
 
-</TEXT>
+***REMOVED******REMOVED***></TEXT>
 <TAGS>
-<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2114-04-07" />
-<DATE TYPE="DATE" comment="" end="48" id="P1" start="34" text="07 April, 2114" />
-<NAME TYPE="PATIENT" comment="" end="92" id="P2" start="75" text="Dawson, Quinten W" />
-<ID TYPE="MEDICALRECORD" comment="" end="110" id="P4" start="101" text="469 27 58" />
-<DATE TYPE="DATE" comment="" end="782" id="P6" start="776" text="7/2111" />
-<DATE TYPE="DATE" comment="" end="1322" id="P7" start="1318" text="2066" />
-<PROFESSION TYPE="PROFESSION" comment="" end="1387" id="P8" start="1380" text="mapping" />
-<NAME TYPE="DOCTOR" comment="" end="3130" id="P9" start="3113" text="Uriel Y. Springer" />
+<DATE id="P0" start="16" end="26" text="2114-04-07" TYPE="DATE" comment="" />
+<DATE id="P1" start="34" end="48" text="07 April, 2114" TYPE="DATE" comment="" />
+<NAME id="P2" start="75" end="92" text="Dawson, Quinten W" TYPE="PATIENT" comment="" />
+<LOCATION id="P3" start="94" end="97" text="SAH" TYPE="HOSPITAL" comment="" />
+<ID id="P4" start="101" end="110" text="469 27 58" TYPE="MEDICALRECORD" comment="" />
+<AGE id="P5" start="121" end="123" text="73" TYPE="AGE" comment="" />
+<DATE id="P6" start="776" end="782" text="7/2111" TYPE="DATE" comment="" />
+<DATE id="P7" start="1318" end="1322" text="2066" TYPE="DATE" comment="" />
+<PROFESSION id="P8" start="1380" end="1387" text="mapping" TYPE="PROFESSION" comment="" />
+<NAME id="P9" start="3113" end="3130" text="Uriel Y. Springer" TYPE="DOCTOR" comment="" />
 </TAGS>
 </deIdi2b2>

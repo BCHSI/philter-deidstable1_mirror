@@ -1,6 +1,6 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT>
+<TEXT><!***REMOVED***CDATA***REMOVED***
 
 
 Record date: 2082-12-31
@@ -113,19 +113,22 @@ Dictated by:  FAITH GALINDO, M.D.       FG9
 
 
 
-</TEXT>
+***REMOVED******REMOVED***></TEXT>
 <TAGS>
-<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2082-12-31" />
-<NAME TYPE="PATIENT" comment="" end="91" id="P2" start="77" text="BRANCH,EARNEST" />
-<ID TYPE="MEDICALRECORD" comment="" end="105" id="P3" start="94" text="530-23-69-1" />
-<DATE TYPE="DATE" comment="" end="147" id="P4" start="139" text="12/31/82" />
-<NAME TYPE="DOCTOR" comment="" end="204" id="P5" start="188" text="Xavier Whittaker" />
-<ID TYPE="IDNUM" comment="" end="2846" id="P8" start="2835" text="ZI623/55469" />
-<NAME TYPE="DOCTOR" comment="" end="2862" id="P9" start="2849" text="FAITH GALINDO" />
-<NAME TYPE="USERNAME" comment="" end="2878" id="P10" start="2875" text="FG9" />
-<DATE TYPE="DATE" comment="" end="2913" id="P11" start="2905" text="12/31/82" />
-<DATE TYPE="DATE" comment="" end="2981" id="P12" start="2973" text="12/31/82" />
-<NAME TYPE="DOCTOR" comment="" end="3011" id="P13" start="2998" text="FAITH GALINDO" />
-<NAME TYPE="USERNAME" comment="" end="3027" id="P14" start="3024" text="FG9" />
+<DATE id="P0" start="16" end="26" text="2082-12-31" TYPE="DATE" comment="" />
+<LOCATION id="P1" start="49" end="51" text="AH" TYPE="HOSPITAL" comment="" />
+<NAME id="P2" start="77" end="91" text="BRANCH,EARNEST" TYPE="PATIENT" comment="" />
+<ID id="P3" start="94" end="105" text="530-23-69-1" TYPE="MEDICALRECORD" comment="" />
+<DATE id="P4" start="139" end="147" text="12/31/82" TYPE="DATE" comment="" />
+<NAME id="P5" start="188" end="204" text="Xavier Whittaker" TYPE="DOCTOR" comment="" />
+<AGE id="P6" start="397" end="399" text="49" TYPE="AGE" comment="" />
+<LOCATION id="P7" start="2392" end="2406" text="Integra Health" TYPE="HOSPITAL" comment="" />
+<ID id="P8" start="2835" end="2846" text="ZI623/55469" TYPE="IDNUM" comment="" />
+<NAME id="P9" start="2849" end="2862" text="FAITH GALINDO" TYPE="DOCTOR" comment="" />
+<NAME id="P10" start="2875" end="2878" text="FG9" TYPE="USERNAME" comment="" />
+<DATE id="P11" start="2905" end="2913" text="12/31/82" TYPE="DATE" comment="" />
+<DATE id="P12" start="2973" end="2981" text="12/31/82" TYPE="DATE" comment="" />
+<NAME id="P13" start="2998" end="3011" text="FAITH GALINDO" TYPE="DOCTOR" comment="" />
+<NAME id="P14" start="3024" end="3027" text="FG9" TYPE="USERNAME" comment="" />
 </TAGS>
 </deIdi2b2>

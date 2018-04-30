@@ -1,6 +1,6 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT>
+<TEXT><!***REMOVED***CDATA***REMOVED***
 
 
 Record date: 2134-11-09
@@ -61,19 +61,20 @@ Pager #36472
 
 
 
-</TEXT>
+***REMOVED******REMOVED***></TEXT>
 <TAGS>
-<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2134-11-09" />
-<NAME TYPE="PATIENT" comment="" end="84" id="P1" start="72" text="George Quinn" />
-<ID TYPE="MEDICALRECORD" comment="" end="96" id="P2" start="89" text="7924118" />
-<DATE TYPE="DATE" comment="" end="133" id="P3" start="116" text="November 09, 2134" />
-<NAME TYPE="DOCTOR" comment="" end="158" id="P4" start="140" text="Michael Quakenbush" />
-<NAME TYPE="DOCTOR" comment="" end="181" id="P5" start="168" text="Unknown Ivory" />
-<NAME TYPE="DOCTOR" comment="" end="199" id="P6" start="193" text="Inglis" />
-<NAME TYPE="PATIENT" comment="" end="245" id="P7" start="234" text="Tammy Quinn" />
-<CONTACT TYPE="PHONE" comment="" end="258" id="P8" start="246" text="746-313-1881" />
-<DATE TYPE="DATE" comment="" end="1394" id="P10" start="1389" text="11/08" />
-<NAME TYPE="DOCTOR" comment="" end="2088" id="P11" start="2076" text="Eric Donovan" />
-<CONTACT TYPE="PHONE" comment="" end="2115" id="P12" start="2110" text="36472" />
+<DATE id="P0" start="16" end="26" text="2134-11-09" TYPE="DATE" comment="" />
+<NAME id="P1" start="72" end="84" text="George Quinn" TYPE="PATIENT" comment="" />
+<ID id="P2" start="89" end="96" text="7924118" TYPE="MEDICALRECORD" comment="" />
+<DATE id="P3" start="116" end="133" text="November 09, 2134" TYPE="DATE" comment="" />
+<NAME id="P4" start="140" end="158" text="Michael Quakenbush" TYPE="DOCTOR" comment="" />
+<NAME id="P5" start="168" end="181" text="Unknown Ivory" TYPE="DOCTOR" comment="" />
+<NAME id="P6" start="193" end="199" text="Inglis" TYPE="DOCTOR" comment="" />
+<NAME id="P7" start="234" end="245" text="Tammy Quinn" TYPE="PATIENT" comment="" />
+<CONTACT id="P8" start="246" end="258" text="746-313-1881" TYPE="PHONE" comment="" />
+<AGE id="P9" start="339" end="341" text="59" TYPE="AGE" comment="" />
+<DATE id="P10" start="1389" end="1394" text="11/08" TYPE="DATE" comment="" />
+<NAME id="P11" start="2076" end="2088" text="Eric Donovan" TYPE="DOCTOR" comment="" />
+<CONTACT id="P12" start="2110" end="2115" text="36472" TYPE="PHONE" comment="" />
 </TAGS>
 </deIdi2b2>

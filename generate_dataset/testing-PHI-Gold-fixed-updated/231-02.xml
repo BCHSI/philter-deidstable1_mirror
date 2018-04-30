@@ -1,6 +1,6 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT>
+<TEXT><!***REMOVED***CDATA***REMOVED***
 
 
 Record date: 2094-12-26
@@ -27,7 +27,7 @@ Interval History:
 
 
 
-9/29/2094 she was readmitted for elective RCA PCI. A relook at her LAD stent found &gt;90% restenosis to proximal edge of LAD stent. Treated with 2.75 X 12 mm TAXUS stent. Tolerated procedure well. Discharged the following day with creat 3.3. Plan was to again return for RCA PCI.
+9/29/2094 she was readmitted for elective RCA PCI. A relook at her LAD stent found >90% restenosis to proximal edge of LAD stent. Treated with 2.75 X 12 mm TAXUS stent. Tolerated procedure well. Discharged the following day with creat 3.3. Plan was to again return for RCA PCI.
 
 
 
@@ -107,7 +107,7 @@ No known drug allergy
 
 Family history:
 
-   Mom A&amp;W in her 60's with HTN. Dad A&amp;W. Sister is planning to be donor kidney. Other sister is back-up donor. 
+   Mom A&W in her 60's with HTN. Dad A&W. Sister is planning to be donor kidney. Other sister is back-up donor. 
 
 
 
@@ -153,7 +153,7 @@ Physical examination:
 
 -Extremities:   No cyanosis, clubbing or edema. 2+ femoral pulses without bruits. 2+ pedal pulses.
 
--Neuro:   A&amp;O x3, CN 2-12 grossly intact. Reflexes 2+ and symmetric x 4 extremities. Toes B downgoing.
+-Neuro:   A&O x3, CN 2-12 grossly intact. Reflexes 2+ and symmetric x 4 extremities. Toes B downgoing.
 
 
 
@@ -225,45 +225,52 @@ Signed electronically by   Frances T Potts NP  on  Dec 26, 2094
 
 
 
-</TEXT>
+***REMOVED******REMOVED***></TEXT>
 <TAGS>
-<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2094-12-26" />
-<DATE TYPE="DATE" comment="" end="256" id="P2" start="242" text="spring of 2094" />
-<NAME TYPE="DOCTOR" comment="" end="306" id="P3" start="294" text="Bonnie Eaves" />
-<DATE TYPE="DATE" comment="" end="578" id="P4" start="572" text="8/2094" />
-<NAME TYPE="DOCTOR" comment="" end="633" id="P6" start="627" text="Vitale" />
-<DATE TYPE="DATE" comment="" end="981" id="P7" start="972" text="9/29/2094" />
-<DATE TYPE="DATE" comment="" end="1258" id="P8" start="1253" text="10/94" />
-<DATE TYPE="DATE" comment="" end="1469" id="P9" start="1464" text="12/25" />
-<DATE TYPE="DATE" comment="" end="1719" id="P12" start="1715" text="2093" />
-<DATE TYPE="DATE" comment="" end="1810" id="P13" start="1805" text="10/94" />
-<DATE TYPE="DATE" comment="" end="1833" id="P14" start="1829" text="2093" />
-<NAME TYPE="DOCTOR" comment="" end="1932" id="P15" start="1919" text="Orlando Ernst" />
-<NAME TYPE="DOCTOR" comment="" end="1963" id="P16" start="1956" text="Ratliff" />
-<DATE TYPE="DATE" comment="" end="2272" id="P17" start="2265" text="sundays" />
-<PROFESSION TYPE="PROFESSION" comment="" end="2790" id="P19" start="2778" text="Patternmaker" />
-<LOCATION TYPE="ORGANIZATION" comment="" end="2797" id="P20" start="2794" text="IMN" />
-<PROFESSION TYPE="PROFESSION" comment="" end="2822" id="P21" start="2801" text="volunteer firefighter" />
-<NAME TYPE="DOCTOR" comment="" end="4538" id="P24" start="4531" text="Rollins" />
-<NAME TYPE="DOCTOR" comment="" end="4563" id="P25" start="4558" text="Eaves" />
-<NAME TYPE="DOCTOR" comment="" end="4587" id="P26" start="4567" text="Frances Travis Potts" />
-<DATE TYPE="DATE" comment="" end="4668" id="P27" start="4658" text="09/28/2094" />
-<DATE TYPE="DATE" comment="" end="4706" id="P28" start="4696" text="09/28/2094" />
-<DATE TYPE="DATE" comment="" end="4748" id="P29" start="4738" text="09/28/2094" />
-<DATE TYPE="DATE" comment="" end="4809" id="P30" start="4799" text="09/28/2094" />
-<DATE TYPE="DATE" comment="" end="4847" id="P31" start="4837" text="09/28/2094" />
-<DATE TYPE="DATE" comment="" end="4892" id="P32" start="4882" text="09/28/2094" />
-<DATE TYPE="DATE" comment="" end="4937" id="P33" start="4927" text="09/28/2094" />
-<DATE TYPE="DATE" comment="" end="4979" id="P34" start="4969" text="09/28/2094" />
-<DATE TYPE="DATE" comment="" end="5006" id="P35" start="4999" text="sundays" />
-<DATE TYPE="DATE" comment="" end="5024" id="P36" start="5014" text="09/28/2094" />
-<DATE TYPE="DATE" comment="" end="5070" id="P37" start="5060" text="09/28/2094" />
-<DATE TYPE="DATE" comment="" end="5118" id="P38" start="5108" text="09/28/2094" />
-<DATE TYPE="DATE" comment="" end="5158" id="P39" start="5148" text="09/28/2094" />
-<DATE TYPE="DATE" comment="" end="5202" id="P40" start="5192" text="09/28/2094" />
-<DATE TYPE="DATE" comment="" end="5248" id="P41" start="5238" text="09/28/2094" />
-<DATE TYPE="DATE" comment="" end="5311" id="P42" start="5301" text="09/28/2094" />
-<NAME TYPE="DOCTOR" comment="" end="5375" id="P43" start="5360" text="Frances T Potts" />
-<DATE TYPE="DATE" comment="" end="5396" id="P44" start="5384" text="Dec 26, 2094" />
+<DATE id="P0" start="16" end="26" text="2094-12-26" TYPE="DATE" comment="" />
+<LOCATION id="P1" start="40" end="64" text="COQUILLE VALLEY HOSPITAL" TYPE="HOSPITAL" comment="" />
+<DATE id="P2" start="242" end="256" text="spring of 2094" TYPE="DATE" comment="" />
+<NAME id="P3" start="294" end="306" text="Bonnie Eaves" TYPE="DOCTOR" comment="" />
+<DATE id="P4" start="572" end="578" text="8/2094" TYPE="DATE" comment="" />
+<LOCATION id="P5" start="591" end="594" text="CVH" TYPE="HOSPITAL" comment="" />
+<NAME id="P6" start="627" end="633" text="Vitale" TYPE="DOCTOR" comment="" />
+<DATE id="P7" start="972" end="981" text="9/29/2094" TYPE="DATE" comment="" />
+<DATE id="P8" start="1253" end="1258" text="10/94" TYPE="DATE" comment="" />
+<DATE id="P9" start="1464" end="1469" text="12/25" TYPE="DATE" comment="" />
+<LOCATION id="P10" start="1505" end="1508" text="SMM" TYPE="HOSPITAL" comment="" />
+<LOCATION id="P11" start="1645" end="1648" text="CVH" TYPE="HOSPITAL" comment="" />
+<DATE id="P12" start="1715" end="1719" text="2093" TYPE="DATE" comment="" />
+<DATE id="P13" start="1805" end="1810" text="10/94" TYPE="DATE" comment="" />
+<DATE id="P14" start="1829" end="1833" text="2093" TYPE="DATE" comment="" />
+<NAME id="P15" start="1919" end="1932" text="Orlando Ernst" TYPE="DOCTOR" comment="" />
+<NAME id="P16" start="1956" end="1963" text="Ratliff" TYPE="DOCTOR" comment="" />
+<DATE id="P17" start="2265" end="2272" text="sundays" TYPE="DATE" comment="" />
+<AGE id="P18" start="2651" end="2655" text="60's" TYPE="AGE" comment="" />
+<PROFESSION id="P19" start="2778" end="2790" text="Patternmaker" TYPE="PROFESSION" comment="" />
+<LOCATION id="P20" start="2794" end="2797" text="IMN" TYPE="ORGANIZATION" comment="" />
+<PROFESSION id="P21" start="2801" end="2822" text="volunteer firefighter" TYPE="PROFESSION" comment="" />
+<AGE id="P22" start="4015" end="4017" text="40" TYPE="AGE" comment="" />
+<LOCATION id="P23" start="4256" end="4259" text="CVH" TYPE="HOSPITAL" comment="" />
+<NAME id="P24" start="4531" end="4538" text="Rollins" TYPE="DOCTOR" comment="" />
+<NAME id="P25" start="4558" end="4563" text="Eaves" TYPE="DOCTOR" comment="" />
+<NAME id="P26" start="4567" end="4587" text="Frances Travis Potts" TYPE="DOCTOR" comment="" />
+<DATE id="P27" start="4658" end="4668" text="09/28/2094" TYPE="DATE" comment="" />
+<DATE id="P28" start="4696" end="4706" text="09/28/2094" TYPE="DATE" comment="" />
+<DATE id="P29" start="4738" end="4748" text="09/28/2094" TYPE="DATE" comment="" />
+<DATE id="P30" start="4799" end="4809" text="09/28/2094" TYPE="DATE" comment="" />
+<DATE id="P31" start="4837" end="4847" text="09/28/2094" TYPE="DATE" comment="" />
+<DATE id="P32" start="4882" end="4892" text="09/28/2094" TYPE="DATE" comment="" />
+<DATE id="P33" start="4927" end="4937" text="09/28/2094" TYPE="DATE" comment="" />
+<DATE id="P34" start="4969" end="4979" text="09/28/2094" TYPE="DATE" comment="" />
+<DATE id="P35" start="4999" end="5006" text="sundays" TYPE="DATE" comment="" />
+<DATE id="P36" start="5014" end="5024" text="09/28/2094" TYPE="DATE" comment="" />
+<DATE id="P37" start="5060" end="5070" text="09/28/2094" TYPE="DATE" comment="" />
+<DATE id="P38" start="5108" end="5118" text="09/28/2094" TYPE="DATE" comment="" />
+<DATE id="P39" start="5148" end="5158" text="09/28/2094" TYPE="DATE" comment="" />
+<DATE id="P40" start="5192" end="5202" text="09/28/2094" TYPE="DATE" comment="" />
+<DATE id="P41" start="5238" end="5248" text="09/28/2094" TYPE="DATE" comment="" />
+<DATE id="P42" start="5301" end="5311" text="09/28/2094" TYPE="DATE" comment="" />
+<NAME id="P43" start="5360" end="5375" text="Frances T Potts" TYPE="DOCTOR" comment="" />
+<DATE id="P44" start="5384" end="5396" text="Dec 26, 2094" TYPE="DATE" comment="" />
 </TAGS>
 </deIdi2b2>

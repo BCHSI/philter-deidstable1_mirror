@@ -1,6 +1,6 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT>
+<TEXT><!***REMOVED***CDATA***REMOVED***
 
 
 Record date: 2089-03-29
@@ -116,57 +116,63 @@ EHCC Intern
 
 
 
-</TEXT>
+***REMOVED******REMOVED***></TEXT>
 <TAGS>
-<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2089-03-29" />
-<ID TYPE="MEDICALRECORD" comment="" end="92" id="P2" start="84" text="57585291" />
-<NAME TYPE="DOCTOR" comment="" end="120" id="P3" start="108" text="Olivia Perry" />
-<NAME TYPE="DOCTOR" comment="" end="152" id="P4" start="139" text="Qiana Solomon" />
-<CONTACT TYPE="PHONE" comment="" end="199" id="P6" start="187" text="665-578-7821" />
-<NAME TYPE="PATIENT" comment="" end="228" id="P7" start="205" text="Quanita-Ella Paul-Doyle" />
-<CONTACT TYPE="PHONE" comment="" end="254" id="P8" start="242" text="448-876-4285" />
-<DATE TYPE="DATE" comment="" end="355" id="P10" start="349" text="Monday" />
-<DATE TYPE="DATE" comment="" end="365" id="P11" start="356" text="Wednesday" />
-<DATE TYPE="DATE" comment="" end="372" id="P12" start="366" text="Friday" />
-<DATE TYPE="DATE" comment="" end="412" id="P13" start="408" text="2068" />
-<DATE TYPE="DATE" comment="" end="418" id="P14" start="414" text="2075" />
-<DATE TYPE="DATE" comment="" end="621" id="P15" start="615" text="6/2088" />
-<DATE TYPE="DATE" comment="" end="803" id="P16" start="796" text="12/2088" />
-<DATE TYPE="DATE" comment="" end="1418" id="P18" start="1414" text="3/27" />
-<DATE TYPE="DATE" comment="" end="1507" id="P19" start="1503" text="3/27" />
-<DATE TYPE="DATE" comment="" end="1677" id="P20" start="1673" text="3/27" />
-<DATE TYPE="DATE" comment="" end="1721" id="P21" start="1717" text="3/27" />
-<DATE TYPE="DATE" comment="" end="2242" id="P22" start="2239" text="Mon" />
-<DATE TYPE="DATE" comment="" end="2246" id="P23" start="2243" text="Wed" />
-<DATE TYPE="DATE" comment="" end="2250" id="P24" start="2247" text="Fri" />
-<DATE TYPE="DATE" comment="" end="2287" id="P25" start="2283" text="2068" />
-<DATE TYPE="DATE" comment="" end="2296" id="P26" start="2292" text="2075" />
-<DATE TYPE="DATE" comment="" end="2639" id="P27" start="2636" text="Sun" />
-<DATE TYPE="DATE" comment="" end="2643" id="P28" start="2640" text="Mon" />
-<DATE TYPE="DATE" comment="" end="2647" id="P29" start="2644" text="Wed" />
-<DATE TYPE="DATE" comment="" end="2651" id="P30" start="2648" text="Fri" />
-<PROFESSION TYPE="PROFESSION" comment="" end="3725" id="P32" start="3718" text="surgeon" />
-<PROFESSION TYPE="PROFESSION" comment="" end="3756" id="P33" start="3746" text="mathmatics" />
-<DATE TYPE="DATE" comment="" end="4450" id="P34" start="4440" text="03/29/2089" />
-<DATE TYPE="DATE" comment="" end="4528" id="P35" start="4518" text="03/29/2089" />
-<DATE TYPE="DATE" comment="" end="4580" id="P36" start="4570" text="03/27/2089" />
-<DATE TYPE="DATE" comment="" end="4617" id="P37" start="4607" text="03/29/2089" />
-<DATE TYPE="DATE" comment="" end="4676" id="P38" start="4666" text="03/29/2089" />
-<DATE TYPE="DATE" comment="" end="4789" id="P39" start="4779" text="03/29/2089" />
-<DATE TYPE="DATE" comment="" end="4812" id="P40" start="4802" text="03/29/2089" />
-<DATE TYPE="DATE" comment="" end="4888" id="P41" start="4878" text="03/29/2089" />
-<DATE TYPE="DATE" comment="" end="4929" id="P42" start="4919" text="03/29/2089" />
-<ID TYPE="IDNUM" comment="" end="5009" id="P43" start="4997" text="82:F9402026Y" />
-<DATE TYPE="DATE" comment="" end="5038" id="P44" start="5029" text="27-Mar-89" />
-<DATE TYPE="DATE" comment="" end="5113" id="P45" start="5104" text="27-Mar-89" />
-<NAME TYPE="DOCTOR" comment="" end="5169" id="P46" start="5156" text="LEMUS, HERMAN" />
-<DATE TYPE="DATE" comment="" end="5285" id="P47" start="5276" text="28-Mar-89" />
-<ID TYPE="IDNUM" comment="" end="5337" id="P48" start="5325" text="38:Z8912708G" />
-<DATE TYPE="DATE" comment="" end="5366" id="P49" start="5357" text="27-Mar-89" />
-<DATE TYPE="DATE" comment="" end="5441" id="P50" start="5432" text="27-Mar-89" />
-<NAME TYPE="DOCTOR" comment="" end="5497" id="P51" start="5484" text="LEMUS, HERMAN" />
-<DATE TYPE="DATE" comment="" end="5663" id="P52" start="5654" text="28-Mar-89" />
-<DATE TYPE="DATE" comment="" end="5811" id="P53" start="5802" text="28-Mar-89" />
-<NAME TYPE="DOCTOR" comment="" end="6675" id="P55" start="6655" text="Collette M. Kirkland" />
+<DATE id="P0" start="16" end="26" text="2089-03-29" TYPE="DATE" comment="" />
+<ID id="P2" start="84" end="92" text="57585291" TYPE="MEDICALRECORD" comment="" />
+<NAME id="P3" start="108" end="120" text="Olivia Perry" TYPE="DOCTOR" comment="" />
+<NAME id="P4" start="139" end="152" text="Qiana Solomon" TYPE="DOCTOR" comment="" />
+<LOCATION id="P5" start="154" end="185" text="Emmons Health Counseling Center" TYPE="HOSPITAL" comment="" />
+<CONTACT id="P6" start="187" end="199" text="665-578-7821" TYPE="PHONE" comment="" />
+<NAME id="P7" start="205" end="228" text="Quanita-Ella Paul-Doyle" TYPE="PATIENT" comment="" />
+<CONTACT id="P8" start="242" end="254" text="448-876-4285" TYPE="PHONE" comment="" />
+<AGE id="P9" start="308" end="310" text="77" TYPE="AGE" comment="" />
+<DATE id="P10" start="349" end="355" text="Monday" TYPE="DATE" comment="" />
+<DATE id="P11" start="356" end="365" text="Wednesday" TYPE="DATE" comment="" />
+<DATE id="P12" start="366" end="372" text="Friday" TYPE="DATE" comment="" />
+<DATE id="P13" start="408" end="412" text="2068" TYPE="DATE" comment="" />
+<DATE id="P14" start="414" end="418" text="2075" TYPE="DATE" comment="" />
+<DATE id="P15" start="615" end="621" text="6/2088" TYPE="DATE" comment="" />
+<DATE id="P16" start="796" end="803" text="12/2088" TYPE="DATE" comment="" />
+<LOCATION id="P17" start="1231" end="1235" text="EHCC" TYPE="HOSPITAL" comment="" />
+<DATE id="P18" start="1414" end="1418" text="3/27" TYPE="DATE" comment="" />
+<DATE id="P19" start="1503" end="1507" text="3/27" TYPE="DATE" comment="" />
+<DATE id="P20" start="1673" end="1677" text="3/27" TYPE="DATE" comment="" />
+<DATE id="P21" start="1717" end="1721" text="3/27" TYPE="DATE" comment="" />
+<DATE id="P22" start="2239" end="2242" text="Mon" TYPE="DATE" comment="" />
+<DATE id="P23" start="2243" end="2246" text="Wed" TYPE="DATE" comment="" />
+<DATE id="P24" start="2247" end="2250" text="Fri" TYPE="DATE" comment="" />
+<DATE id="P25" start="2283" end="2287" text="2068" TYPE="DATE" comment="" />
+<DATE id="P26" start="2292" end="2296" text="2075" TYPE="DATE" comment="" />
+<DATE id="P27" start="2636" end="2639" text="Sun" TYPE="DATE" comment="" />
+<DATE id="P28" start="2640" end="2643" text="Mon" TYPE="DATE" comment="" />
+<DATE id="P29" start="2644" end="2647" text="Wed" TYPE="DATE" comment="" />
+<DATE id="P30" start="2648" end="2651" text="Fri" TYPE="DATE" comment="" />
+<AGE id="P31" start="3647" end="3650" text="60s" TYPE="AGE" comment="" />
+<PROFESSION id="P32" start="3718" end="3725" text="surgeon" TYPE="PROFESSION" comment="" />
+<PROFESSION id="P33" start="3746" end="3756" text="mathmatics" TYPE="PROFESSION" comment="" />
+<DATE id="P34" start="4440" end="4450" text="03/29/2089" TYPE="DATE" comment="" />
+<DATE id="P35" start="4518" end="4528" text="03/29/2089" TYPE="DATE" comment="" />
+<DATE id="P36" start="4570" end="4580" text="03/27/2089" TYPE="DATE" comment="" />
+<DATE id="P37" start="4607" end="4617" text="03/29/2089" TYPE="DATE" comment="" />
+<DATE id="P38" start="4666" end="4676" text="03/29/2089" TYPE="DATE" comment="" />
+<DATE id="P39" start="4779" end="4789" text="03/29/2089" TYPE="DATE" comment="" />
+<DATE id="P40" start="4802" end="4812" text="03/29/2089" TYPE="DATE" comment="" />
+<DATE id="P41" start="4878" end="4888" text="03/29/2089" TYPE="DATE" comment="" />
+<DATE id="P42" start="4919" end="4929" text="03/29/2089" TYPE="DATE" comment="" />
+<ID id="P43" start="4997" end="5009" text="82:F9402026Y" TYPE="IDNUM" comment="" />
+<DATE id="P44" start="5029" end="5038" text="27-Mar-89" TYPE="DATE" comment="" />
+<DATE id="P45" start="5104" end="5113" text="27-Mar-89" TYPE="DATE" comment="" />
+<NAME id="P46" start="5156" end="5169" text="LEMUS, HERMAN" TYPE="DOCTOR" comment="" />
+<DATE id="P47" start="5276" end="5285" text="28-Mar-89" TYPE="DATE" comment="" />
+<ID id="P48" start="5325" end="5337" text="38:Z8912708G" TYPE="IDNUM" comment="" />
+<DATE id="P49" start="5357" end="5366" text="27-Mar-89" TYPE="DATE" comment="" />
+<DATE id="P50" start="5432" end="5441" text="27-Mar-89" TYPE="DATE" comment="" />
+<NAME id="P51" start="5484" end="5497" text="LEMUS, HERMAN" TYPE="DOCTOR" comment="" />
+<DATE id="P52" start="5654" end="5663" text="28-Mar-89" TYPE="DATE" comment="" />
+<DATE id="P53" start="5802" end="5811" text="28-Mar-89" TYPE="DATE" comment="" />
+<AGE id="P54" start="5903" end="5905" text="77" TYPE="AGE" comment="" />
+<NAME id="P55" start="6655" end="6675" text="Collette M. Kirkland" TYPE="DOCTOR" comment="" />
+<LOCATION id="P56" start="6680" end="6684" text="EHCC" TYPE="HOSPITAL" comment="" />
 </TAGS>
 </deIdi2b2>

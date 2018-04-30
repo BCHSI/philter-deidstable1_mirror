@@ -1,6 +1,6 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT>
+<TEXT><!***REMOVED***CDATA***REMOVED***
 
 
 Record date: 2092-03-21
@@ -207,17 +207,18 @@ eScription document:3-2120502 BFFocus
 
 
 
-</TEXT>
+***REMOVED******REMOVED***></TEXT>
 <TAGS>
-<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2092-03-21" />
-<ID TYPE="MEDICALRECORD" comment="" end="44" id="P1" start="36" text="62115644" />
-<NAME TYPE="PATIENT" comment="" end="56" id="P2" start="45" text="Lara, Uriah" />
-<DATE TYPE="DATE" comment="" end="65" id="P3" start="57" text="03/21/92" />
-<NAME TYPE="DOCTOR" comment="" end="80" id="P4" start="66" text="MELENDEZ, LEAH" />
-<NAME TYPE="DOCTOR" comment="" end="5720" id="P6" start="5706" text="MELENDEZ, LEAH" />
-<DATE TYPE="DATE" comment="" end="5738" id="P7" start="5730" text="03/22/92" />
-<DATE TYPE="DATE" comment="" end="5751" id="P8" start="5743" text="03/22/92" />
-<NAME TYPE="DOCTOR" comment="" end="5780" id="P9" start="5766" text="MELENDEZ, LEAH" />
-<ID TYPE="IDNUM" comment="" end="5811" id="P10" start="5802" text="3-2120502" />
+<DATE id="P0" start="16" end="26" text="2092-03-21" TYPE="DATE" comment="" />
+<ID id="P1" start="36" end="44" text="62115644" TYPE="MEDICALRECORD" comment="" />
+<NAME id="P2" start="45" end="56" text="Lara, Uriah" TYPE="PATIENT" comment="" />
+<DATE id="P3" start="57" end="65" text="03/21/92" TYPE="DATE" comment="" />
+<NAME id="P4" start="66" end="80" text="MELENDEZ, LEAH" TYPE="DOCTOR" comment="" />
+<AGE id="P5" start="276" end="278" text="59" TYPE="AGE" comment="" />
+<NAME id="P6" start="5706" end="5720" text="MELENDEZ, LEAH" TYPE="DOCTOR" comment="" />
+<DATE id="P7" start="5730" end="5738" text="03/22/92" TYPE="DATE" comment="" />
+<DATE id="P8" start="5743" end="5751" text="03/22/92" TYPE="DATE" comment="" />
+<NAME id="P9" start="5766" end="5780" text="MELENDEZ, LEAH" TYPE="DOCTOR" comment="" />
+<ID id="P10" start="5802" end="5811" text="3-2120502" TYPE="IDNUM" comment="" />
 </TAGS>
 </deIdi2b2>

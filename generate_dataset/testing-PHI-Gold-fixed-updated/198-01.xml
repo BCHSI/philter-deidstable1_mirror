@@ -1,6 +1,6 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT>
+<TEXT><!***REMOVED***CDATA***REMOVED***
 
 
 Record date: 2076-07-01
@@ -99,7 +99,7 @@ EXT 	no C/C/E, distal pulses full, no rashes or petechiae
 
 Neuro
 
-MS:	AA&amp;Ox3, appropriately interactive, normal affect 
+MS:	AA&Ox3, appropriately interactive, normal affect 
 
 Attention: intact for interview	 
 
@@ -126,11 +126,13 @@ Motor:	normal bulk and tone, no tremor, rigidity or bradykinesia, no pronator dr
               
 
 
-</TEXT>
+***REMOVED******REMOVED***></TEXT>
 <TAGS>
-<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2076-07-01" />
-<NAME TYPE="PATIENT" comment="" end="94" id="P1" start="80" text="Yusuf, Russell" />
-<ID TYPE="MEDICALRECORD" comment="" end="109" id="P2" start="102" text="1423602" />
-<DATE TYPE="DATE" comment="" end="124" id="P3" start="117" text="7/01/76" />
+<DATE id="P0" start="16" end="26" text="2076-07-01" TYPE="DATE" comment="" />
+<NAME id="P1" start="80" end="94" text="Yusuf, Russell" TYPE="PATIENT" comment="" />
+<ID id="P2" start="102" end="109" text="1423602" TYPE="MEDICALRECORD" comment="" />
+<DATE id="P3" start="117" end="124" text="7/01/76" TYPE="DATE" comment="" />
+<AGE id="P4" start="181" end="183" text="61" TYPE="AGE" comment="" />
+<LOCATION id="P5" start="1296" end="1308" text="Wolfe Clinic" TYPE="HOSPITAL" comment="" />
 </TAGS>
 </deIdi2b2>

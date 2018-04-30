@@ -1,6 +1,6 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT>
+<TEXT><!***REMOVED***CDATA***REMOVED***
 
 
 Record date: 2092-08-30
@@ -63,21 +63,21 @@ cc:  Georgia Xing, M.D.
 
 
 
-</TEXT>
+***REMOVED******REMOVED***></TEXT>
 <TAGS>
-<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2092-08-30" />
-<NAME TYPE="PATIENT" comment="" end="54" id="P1" start="42" text="Yager, Becky" />
-<ID TYPE="MEDICALRECORD" comment="" end="73" id="P2" start="66" text="0887181" />
-<NAME TYPE="PATIENT" comment="" end="82" id="P3" start="77" text="Becka" />
-<DATE TYPE="DATE" comment="" end="191" id="P4" start="185" text="August" />
-<DATE TYPE="DATE" comment="" end="231" id="P5" start="223" text="August 9" />
-<NAME TYPE="DOCTOR" comment="" end="245" id="P6" start="240" text="Noyes" />
-<NAME TYPE="DOCTOR" comment="" end="641" id="P7" start="637" text="Drew" />
-<NAME TYPE="PATIENT" comment="" end="894" id="P8" start="887" text="Rebecca" />
-<NAME TYPE="DOCTOR" comment="" end="1077" id="P9" start="1063" text="Rowena Xanders" />
-<NAME TYPE="DOCTOR" comment="" end="1089" id="P10" start="1087" text="RX" />
-<NAME TYPE="DOCTOR" comment="" end="1097" id="P11" start="1090" text="mcbride" />
-<NAME TYPE="DOCTOR" comment="" end="1108" id="P12" start="1098" text="richardson" />
-<NAME TYPE="DOCTOR" comment="" end="1129" id="P13" start="1117" text="Georgia Xing" />
+<DATE id="P0" start="16" end="26" text="2092-08-30" TYPE="DATE" comment="" />
+<NAME id="P1" start="42" end="54" text="Yager, Becky" TYPE="PATIENT" comment="" />
+<ID id="P2" start="66" end="73" text="0887181" TYPE="MEDICALRECORD" comment="" />
+<NAME id="P3" start="77" end="82" text="Becka" TYPE="PATIENT" comment="" />
+<DATE id="P4" start="185" end="191" text="August" TYPE="DATE" comment="" />
+<DATE id="P5" start="223" end="231" text="August 9" TYPE="DATE" comment="" />
+<NAME id="P6" start="240" end="245" text="Noyes" TYPE="DOCTOR" comment="" />
+<NAME id="P7" start="637" end="641" text="Drew" TYPE="DOCTOR" comment="" />
+<NAME id="P8" start="887" end="894" text="Rebecca" TYPE="PATIENT" comment="" />
+<NAME id="P9" start="1063" end="1077" text="Rowena Xanders" TYPE="DOCTOR" comment="" />
+<NAME id="P10" start="1087" end="1089" text="RX" TYPE="DOCTOR" comment="" />
+<NAME id="P11" start="1090" end="1097" text="mcbride" TYPE="DOCTOR" comment="" />
+<NAME id="P12" start="1098" end="1108" text="richardson" TYPE="DOCTOR" comment="" />
+<NAME id="P13" start="1117" end="1129" text="Georgia Xing" TYPE="DOCTOR" comment="" />
 </TAGS>
 </deIdi2b2>

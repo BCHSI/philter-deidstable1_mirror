@@ -1,6 +1,6 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT>
+<TEXT><!***REMOVED***CDATA***REMOVED***
 
 
 Record date: 2084-07-30
@@ -35,11 +35,12 @@ Document Status: Final
 
 
 
-</TEXT>
+***REMOVED******REMOVED***></TEXT>
 <TAGS>
-<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2084-07-30" />
-<DATE TYPE="DATE" comment="" end="241" id="P2" start="234" text="7/21/84" />
-<NAME TYPE="DOCTOR" comment="" end="704" id="P3" start="685" text="Ximena M. Gillespie" />
-<NAME TYPE="DOCTOR" comment="" end="755" id="P4" start="736" text="Ximena M. Gillespie" />
+<DATE id="P0" start="16" end="26" text="2084-07-30" TYPE="DATE" comment="" />
+<LOCATION id="P1" start="59" end="80" text="SAN FERNANDO HOSPITAL" TYPE="HOSPITAL" comment="" />
+<DATE id="P2" start="234" end="241" text="7/21/84" TYPE="DATE" comment="" />
+<NAME id="P3" start="685" end="704" text="Ximena M. Gillespie" TYPE="DOCTOR" comment="" />
+<NAME id="P4" start="736" end="755" text="Ximena M. Gillespie" TYPE="DOCTOR" comment="" />
 </TAGS>
 </deIdi2b2>

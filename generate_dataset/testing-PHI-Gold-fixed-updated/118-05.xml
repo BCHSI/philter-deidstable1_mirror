@@ -1,6 +1,6 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT>
+<TEXT><!***REMOVED***CDATA***REMOVED***
 
 
 Record date: 2118-04-15
@@ -78,7 +78,7 @@ Physical examination:
 -Cardiac:   Discrete non-displaced PMI. No clear RV heave. Sternal wound well healed with no sternal click. RRR. Normal S1 and widely split  S2.  Soft 1-2/6 SEM. No diastolic murmur. 
 -Abdomen:   Soft, non-tender, non-distended with pulsatile liver.
 -Extremities:   No lower extremity edema. Tip of 3rd toe on right foot has dry gangrene but no exudate or open ulceration. 1+ DP on the right and 2+ DP on left.
--Neuro:   A&amp;amp;O x3
+-Neuro:   A&amp;O x3
 -BP: 107/60  
 
 
@@ -118,37 +118,43 @@ Document Status: Final
 
 
 
-</TEXT>
+***REMOVED******REMOVED***></TEXT>
 <TAGS>
-<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2118-04-15" />
-<DATE TYPE="DATE" comment="" end="190" id="P4" start="186" text="3/17" />
-<DATE TYPE="DATE" comment="" end="380" id="P5" start="376" text="3/17" />
-<DATE TYPE="DATE" comment="" end="621" id="P6" start="617" text="7/17" />
-<DATE TYPE="DATE" comment="" end="789" id="P8" start="785" text="1/18" />
-<DATE TYPE="DATE" comment="" end="895" id="P9" start="888" text="1/11/18" />
-<DATE TYPE="DATE" comment="" end="1191" id="P10" start="1184" text="2/07/18" />
-<DATE TYPE="DATE" comment="" end="1472" id="P11" start="1465" text="2/10/18" />
-<DATE TYPE="DATE" comment="" end="1491" id="P12" start="1484" text="2/11/18" />
-<DATE TYPE="DATE" comment="" end="1614" id="P13" start="1607" text="2/17/18" />
-<NAME TYPE="DOCTOR" comment="" end="1702" id="P14" start="1697" text="Elrod" />
-<DATE TYPE="DATE" comment="" end="1713" id="P15" start="1706" text="2/17/18" />
-<DATE TYPE="DATE" comment="" end="2307" id="P16" start="2300" text="2/22/18" />
-<DATE TYPE="DATE" comment="" end="3100" id="P17" start="3093" text="3/22/18" />
-<NAME TYPE="DOCTOR" comment="" end="3524" id="P18" start="3511" text="Infant-Nickel" />
-<DATE TYPE="DATE" comment="" end="3869" id="P19" start="3859" text="03/13/2117" />
-<DATE TYPE="DATE" comment="" end="3965" id="P20" start="3961" text="2/18" />
-<DATE TYPE="DATE" comment="" end="4029" id="P21" start="4022" text="2/19/18" />
-<DATE TYPE="DATE" comment="" end="4148" id="P22" start="4141" text="2/20/18" />
-<DATE TYPE="DATE" comment="" end="4274" id="P23" start="4270" text="2/18" />
-<DATE TYPE="DATE" comment="" end="4354" id="P24" start="4344" text="03/11/2117" />
-<DATE TYPE="DATE" comment="" end="6024" id="P27" start="6020" text="3/17" />
-<NAME TYPE="DOCTOR" comment="" end="6674" id="P28" start="6661" text="Infant-Nickel" />
-<NAME TYPE="DOCTOR" comment="" end="7182" id="P29" start="7177" text="Elrod" />
-<DATE TYPE="DATE" comment="" end="7638" id="P30" start="7634" text="3/18" />
-<NAME TYPE="DOCTOR" comment="" end="7704" id="P31" start="7698" text="Werner" />
-<NAME TYPE="DOCTOR" comment="" end="8191" id="P32" start="8184" text="Calhoun" />
-<NAME TYPE="DOCTOR" comment="" end="8280" id="P33" start="8262" text="Jonathan Forrester" />
-<CONTACT TYPE="PHONE" comment="" end="8301" id="P34" start="8296" text="08374" />
-<NAME TYPE="DOCTOR" comment="" end="8349" id="P35" start="8331" text="Jonathan Forrester" />
+<DATE id="P0" start="16" end="26" text="2118-04-15" TYPE="DATE" comment="" />
+<LOCATION id="P1" start="45" end="65" text="PARK NICOLLET CLINIC" TYPE="HOSPITAL" comment="" />
+<AGE id="P2" start="92" end="94" text="55" TYPE="AGE" comment="" />
+<LOCATION id="P3" start="99" end="108" text="Columbian" TYPE="COUNTRY" comment="" />
+<DATE id="P4" start="186" end="190" text="3/17" TYPE="DATE" comment="" />
+<DATE id="P5" start="376" end="380" text="3/17" TYPE="DATE" comment="" />
+<DATE id="P6" start="617" end="621" text="7/17" TYPE="DATE" comment="" />
+<LOCATION id="P7" start="778" end="781" text="PNC" TYPE="HOSPITAL" comment="" />
+<DATE id="P8" start="785" end="789" text="1/18" TYPE="DATE" comment="" />
+<DATE id="P9" start="888" end="895" text="1/11/18" TYPE="DATE" comment="" />
+<DATE id="P10" start="1184" end="1191" text="2/07/18" TYPE="DATE" comment="" />
+<DATE id="P11" start="1465" end="1472" text="2/10/18" TYPE="DATE" comment="" />
+<DATE id="P12" start="1484" end="1491" text="2/11/18" TYPE="DATE" comment="" />
+<DATE id="P13" start="1607" end="1614" text="2/17/18" TYPE="DATE" comment="" />
+<NAME id="P14" start="1697" end="1702" text="Elrod" TYPE="DOCTOR" comment="" />
+<DATE id="P15" start="1706" end="1713" text="2/17/18" TYPE="DATE" comment="" />
+<DATE id="P16" start="2300" end="2307" text="2/22/18" TYPE="DATE" comment="" />
+<DATE id="P17" start="3093" end="3100" text="3/22/18" TYPE="DATE" comment="" />
+<NAME id="P18" start="3511" end="3524" text="Infant-Nickel" TYPE="DOCTOR" comment="" />
+<DATE id="P19" start="3859" end="3869" text="03/13/2117" TYPE="DATE" comment="" />
+<DATE id="P20" start="3961" end="3965" text="2/18" TYPE="DATE" comment="" />
+<DATE id="P21" start="4022" end="4029" text="2/19/18" TYPE="DATE" comment="" />
+<DATE id="P22" start="4141" end="4148" text="2/20/18" TYPE="DATE" comment="" />
+<DATE id="P23" start="4270" end="4274" text="2/18" TYPE="DATE" comment="" />
+<DATE id="P24" start="4344" end="4354" text="03/11/2117" TYPE="DATE" comment="" />
+<AGE id="P25" start="5926" end="5928" text="55" TYPE="AGE" comment="" />
+<LOCATION id="P26" start="5933" end="5942" text="Columbian" TYPE="COUNTRY" comment="" />
+<DATE id="P27" start="6020" end="6024" text="3/17" TYPE="DATE" comment="" />
+<NAME id="P28" start="6661" end="6674" text="Infant-Nickel" TYPE="DOCTOR" comment="" />
+<NAME id="P29" start="7177" end="7182" text="Elrod" TYPE="DOCTOR" comment="" />
+<DATE id="P30" start="7634" end="7638" text="3/18" TYPE="DATE" comment="" />
+<NAME id="P31" start="7698" end="7704" text="Werner" TYPE="DOCTOR" comment="" />
+<NAME id="P32" start="8184" end="8191" text="Calhoun" TYPE="DOCTOR" comment="" />
+<NAME id="P33" start="8262" end="8280" text="Jonathan Forrester" TYPE="DOCTOR" comment="" />
+<CONTACT id="P34" start="8296" end="8301" text="08374" TYPE="PHONE" comment="" />
+<NAME id="P35" start="8331" end="8349" text="Jonathan Forrester" TYPE="DOCTOR" comment="" />
 </TAGS>
 </deIdi2b2>

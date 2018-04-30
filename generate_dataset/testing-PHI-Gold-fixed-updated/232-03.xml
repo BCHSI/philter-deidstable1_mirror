@@ -1,6 +1,6 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT>
+<TEXT><!***REMOVED***CDATA***REMOVED***
 
 
 Record date: 2098-02-12
@@ -9,8 +9,8 @@ Record date: 2098-02-12
 RENAL CONSULT NOTE 
  
 
-ATTENDING &amp;#8211; Dr. John Ingle
-DOA &amp;#8211; 02/12/98
+ATTENDING &#8211; Dr. John Ingle
+DOA &#8211; 02/12/98
 
 Consult indication - Pt with ESRD, consulted for HD needs
  from ED department
@@ -18,11 +18,11 @@ Consult indication - Pt with ESRD, consulted for HD needs
 
 HPI - 
 
-64 yo F with ho ESRD due to DM on HD TTS, Type 2 DM, CVA, prior GI bleeds -&amp;gt; admitted with nausea and vomiting and abdo distention.
+64 yo F with ho ESRD due to DM on HD TTS, Type 2 DM, CVA, prior GI bleeds -&gt; admitted with nausea and vomiting and abdo distention.
 Very difficult history in ED as limited English and orevious dysphasia from CVA.
 
 
-Recently admitted 12/1-12/10/97 for N/V/abd pain.  CT abdomen demonstrated thickened sigmoid colon/rectum.  Underwent colonoscopy demonstrating polyp -&amp;gt; high grade dysplasia/adenoca on path.  CT pancreas protocol demonstrated low density foci in the head and uncinate process unchanged since 1/96.  Had blood cx positive for stenotrophomonas (cefepime resistant), e faecium, and achromobacter, briefly received cefepime, surveillance cx&amp;#8217;s negative, and abx were d/c&amp;#8217;ed.
+Recently admitted 12/1-12/10/97 for N/V/abd pain.  CT abdomen demonstrated thickened sigmoid colon/rectum.  Underwent colonoscopy demonstrating polyp -&gt; high grade dysplasia/adenoca on path.  CT pancreas protocol demonstrated low density foci in the head and uncinate process unchanged since 1/96.  Had blood cx positive for stenotrophomonas (cefepime resistant), e faecium, and achromobacter, briefly received cefepime, surveillance cx&#8217;s negative, and abx were d/c&#8217;ed.
  
 
 
@@ -165,27 +165,28 @@ John Ingle MD.
 
 
 
-</TEXT>
+***REMOVED******REMOVED***></TEXT>
 <TAGS>
-<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2098-02-12" />
-<NAME TYPE="DOCTOR" comment="" end="84" id="P1" start="74" text="John Ingle" />
-<DATE TYPE="DATE" comment="" end="105" id="P2" start="97" text="02/12/98" />
-<DATE TYPE="DATE" comment="" end="435" id="P4" start="431" text="12/1" />
-<DATE TYPE="DATE" comment="" end="444" id="P5" start="436" text="12/10/97" />
-<DATE TYPE="DATE" comment="" end="712" id="P6" start="708" text="1/96" />
-<DATE TYPE="DATE" comment="" end="931" id="P7" start="927" text="2096" />
-<DATE TYPE="DATE" comment="" end="1107" id="P8" start="1102" text="12/96" />
-<DATE TYPE="DATE" comment="" end="1187" id="P9" start="1183" text="7/97" />
-<DATE TYPE="DATE" comment="" end="2281" id="P10" start="2271" text="02/12/2098" />
-<DATE TYPE="DATE" comment="" end="2361" id="P11" start="2351" text="02/12/2098" />
-<DATE TYPE="DATE" comment="" end="2441" id="P12" start="2431" text="02/12/2098" />
-<DATE TYPE="DATE" comment="" end="2459" id="P13" start="2449" text="02/12/2098" />
-<DATE TYPE="DATE" comment="" end="2496" id="P14" start="2486" text="02/12/2098" />
-<DATE TYPE="DATE" comment="" end="2555" id="P15" start="2545" text="02/12/2098" />
-<DATE TYPE="DATE" comment="" end="2626" id="P16" start="2616" text="02/12/2098" />
-<DATE TYPE="DATE" comment="" end="2665" id="P17" start="2655" text="02/12/2098" />
-<NAME TYPE="DOCTOR" comment="" end="3429" id="P18" start="3409" text="Calvin Stanley Tripp" />
-<CONTACT TYPE="PHONE" comment="" end="3449" id="P19" start="3444" text="94122" />
-<NAME TYPE="DOCTOR" comment="" end="4143" id="P20" start="4133" text="John Ingle" />
+<DATE id="P0" start="16" end="26" text="2098-02-12" TYPE="DATE" comment="" />
+<NAME id="P1" start="74" end="84" text="John Ingle" TYPE="DOCTOR" comment="" />
+<DATE id="P2" start="97" end="105" text="02/12/98" TYPE="DATE" comment="" />
+<AGE id="P3" start="195" end="197" text="64" TYPE="AGE" comment="" />
+<DATE id="P4" start="431" end="435" text="12/1" TYPE="DATE" comment="" />
+<DATE id="P5" start="436" end="444" text="12/10/97" TYPE="DATE" comment="" />
+<DATE id="P6" start="708" end="712" text="1/96" TYPE="DATE" comment="" />
+<DATE id="P7" start="927" end="931" text="2096" TYPE="DATE" comment="" />
+<DATE id="P8" start="1102" end="1107" text="12/96" TYPE="DATE" comment="" />
+<DATE id="P9" start="1183" end="1187" text="7/97" TYPE="DATE" comment="" />
+<DATE id="P10" start="2271" end="2281" text="02/12/2098" TYPE="DATE" comment="" />
+<DATE id="P11" start="2351" end="2361" text="02/12/2098" TYPE="DATE" comment="" />
+<DATE id="P12" start="2431" end="2441" text="02/12/2098" TYPE="DATE" comment="" />
+<DATE id="P13" start="2449" end="2459" text="02/12/2098" TYPE="DATE" comment="" />
+<DATE id="P14" start="2486" end="2496" text="02/12/2098" TYPE="DATE" comment="" />
+<DATE id="P15" start="2545" end="2555" text="02/12/2098" TYPE="DATE" comment="" />
+<DATE id="P16" start="2616" end="2626" text="02/12/2098" TYPE="DATE" comment="" />
+<DATE id="P17" start="2655" end="2665" text="02/12/2098" TYPE="DATE" comment="" />
+<NAME id="P18" start="3409" end="3429" text="Calvin Stanley Tripp" TYPE="DOCTOR" comment="" />
+<CONTACT id="P19" start="3444" end="3449" text="94122" TYPE="PHONE" comment="" />
+<NAME id="P20" start="4133" end="4143" text="John Ingle" TYPE="DOCTOR" comment="" />
 </TAGS>
 </deIdi2b2>

@@ -1,6 +1,6 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT>
+<TEXT><!***REMOVED***CDATA***REMOVED***
 
 
 Record date: 2068-03-31
@@ -93,26 +93,30 @@ DV: 03/31/68
 
 
 
-</TEXT>
+***REMOVED******REMOVED***></TEXT>
 <TAGS>
-<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2068-03-31" />
-<LOCATION TYPE="STREET" comment="" end="82" id="P2" start="67" text="807 Williams Ct" />
-<NAME TYPE="PATIENT" comment="" end="109" id="P3" start="96" text="MOODY, JOHNNY" />
-<LOCATION TYPE="CITY" comment="" end="119" id="P4" start="110" text="Hyderabad" />
-<LOCATION TYPE="STATE" comment="" end="123" id="P5" start="121" text="WI" />
-<LOCATION TYPE="ZIP" comment="" end="130" id="P6" start="125" text="62297" />
-<ID TYPE="MEDICALRECORD" comment="" end="158" id="P7" start="150" text="76324418" />
-<CONTACT TYPE="PHONE" comment="" end="171" id="P8" start="159" text="547-598-7353" />
-<DATE TYPE="DATE" comment="" end="202" id="P9" start="192" text="03/31/2068" />
-<DATE TYPE="DATE" comment="" end="670" id="P11" start="666" text="2065" />
-<LOCATION TYPE="CITY" comment="" end="786" id="P12" start="775" text="Blountstown" />
-<NAME TYPE="DOCTOR" comment="" end="1864" id="P14" start="1860" text="Jung" />
-<NAME TYPE="DOCTOR" comment="" end="4026" id="P16" start="4022" text="Jung" />
-<NAME TYPE="DOCTOR" comment="" end="4399" id="P17" start="4395" text="Jung" />
-<NAME TYPE="DOCTOR" comment="" end="4530" id="P18" start="4519" text="Todd Brandt" />
-<ID TYPE="IDNUM" comment="" end="4576" id="P19" start="4567" text="0-0901410" />
-<DATE TYPE="DATE" comment="" end="4606" id="P20" start="4598" text="03/31/68" />
-<DATE TYPE="DATE" comment="" end="4619" id="P21" start="4611" text="03/31/68" />
-<DATE TYPE="DATE" comment="" end="4632" id="P22" start="4624" text="03/31/68" />
+<DATE id="P0" start="16" end="26" text="2068-03-31" TYPE="DATE" comment="" />
+<LOCATION id="P1" start="33" end="50" text="Eudowood Services" TYPE="HOSPITAL" comment="" />
+<LOCATION id="P2" start="67" end="82" text="807 Williams Ct" TYPE="STREET" comment="" />
+<NAME id="P3" start="96" end="109" text="MOODY, JOHNNY" TYPE="PATIENT" comment="" />
+<LOCATION id="P4" start="110" end="119" text="Hyderabad" TYPE="CITY" comment="" />
+<LOCATION id="P5" start="121" end="123" text="WI" TYPE="STATE" comment="" />
+<LOCATION id="P6" start="125" end="130" text="62297" TYPE="ZIP" comment="" />
+<ID id="P7" start="150" end="158" text="76324418" TYPE="MEDICALRECORD" comment="" />
+<CONTACT id="P8" start="159" end="171" text="547-598-7353" TYPE="PHONE" comment="" />
+<DATE id="P9" start="192" end="202" text="03/31/2068" TYPE="DATE" comment="" />
+<AGE id="P10" start="241" end="243" text="58" TYPE="AGE" comment="" />
+<DATE id="P11" start="666" end="670" text="2065" TYPE="DATE" comment="" />
+<LOCATION id="P12" start="775" end="786" text="Blountstown" TYPE="CITY" comment="" />
+<LOCATION id="P13" start="799" end="819" text="Roper Hospital North" TYPE="HOSPITAL" comment="" />
+<NAME id="P14" start="1860" end="1864" text="Jung" TYPE="DOCTOR" comment="" />
+<LOCATION id="P15" start="1883" end="1903" text="Roper Hospital North" TYPE="HOSPITAL" comment="" />
+<NAME id="P16" start="4022" end="4026" text="Jung" TYPE="DOCTOR" comment="" />
+<NAME id="P17" start="4395" end="4399" text="Jung" TYPE="DOCTOR" comment="" />
+<NAME id="P18" start="4519" end="4530" text="Todd Brandt" TYPE="DOCTOR" comment="" />
+<ID id="P19" start="4567" end="4576" text="0-0901410" TYPE="IDNUM" comment="" />
+<DATE id="P20" start="4598" end="4606" text="03/31/68" TYPE="DATE" comment="" />
+<DATE id="P21" start="4611" end="4619" text="03/31/68" TYPE="DATE" comment="" />
+<DATE id="P22" start="4624" end="4632" text="03/31/68" TYPE="DATE" comment="" />
 </TAGS>
 </deIdi2b2>

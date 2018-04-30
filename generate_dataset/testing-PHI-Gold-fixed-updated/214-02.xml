@@ -1,6 +1,6 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT>
+<TEXT><!***REMOVED***CDATA***REMOVED***
 
 
 Record date: 2096-08-02
@@ -69,21 +69,29 @@ Sincerely yours,
 
 
 
-</TEXT>
+***REMOVED******REMOVED***></TEXT>
 <TAGS>
-<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2096-08-02" />
-<NAME TYPE="DOCTOR" comment="" end="47" id="P1" start="28" text="Graydon Harold Jean" />
-<LOCATION TYPE="STREET" comment="" end="98" id="P4" start="87" text="01 Dan Chan" />
-<LOCATION TYPE="CITY" comment="" end="110" id="P5" start="99" text="Angels City" />
-<LOCATION TYPE="STATE" comment="" end="114" id="P6" start="112" text="NH" />
-<LOCATION TYPE="ZIP" comment="" end="120" id="P7" start="115" text="31731" />
-<NAME TYPE="DOCTOR" comment="" end="132" id="P8" start="128" text="Gray" />
-<NAME TYPE="PATIENT" comment="" end="200" id="P9" start="187" text="Henry Oswaldo" />
-<DATE TYPE="DATE" comment="" end="309" id="P11" start="299" text="06/28/2096" />
-<LOCATION TYPE="CITY" comment="" end="318" id="P12" start="313" text="Quito" />
-<LOCATION TYPE="CITY" comment="" end="634" id="P13" start="629" text="Quiti" />
-<DATE TYPE="DATE" comment="" end="657" id="P14" start="653" text="June" />
-<LOCATION TYPE="CITY" comment="" end="793" id="P16" start="788" text="Quuto" />
-<NAME TYPE="PATIENT" comment="" end="2572" id="P21" start="2565" text="Oswaldo" />
+<DATE id="P0" start="16" end="26" text="2096-08-02" TYPE="DATE" comment="" />
+<NAME id="P1" start="28" end="47" text="Graydon Harold Jean" TYPE="DOCTOR" comment="" />
+<LOCATION id="P2" start="53" end="68" text="Nevada Hospital" TYPE="HOSPITAL" comment="" />
+<LOCATION id="P4" start="87" end="98" text="01 Dan Chan" TYPE="STREET" comment="" />
+<LOCATION id="P5" start="99" end="110" text="Angels City" TYPE="CITY" comment="" />
+<LOCATION id="P6" start="112" end="114" text="NH" TYPE="STATE" comment="" />
+<LOCATION id="P7" start="115" end="120" text="31731" TYPE="ZIP" comment="" />
+<NAME id="P8" start="128" end="132" text="Gray" TYPE="DOCTOR" comment="" />
+<NAME id="P9" start="187" end="200" text="Henry Oswaldo" TYPE="PATIENT" comment="" />
+<AGE id="P10" start="239" end="241" text="78" TYPE="AGE" comment="" />
+<DATE id="P11" start="299" end="309" text="06/28/2096" TYPE="DATE" comment="" />
+<LOCATION id="P12" start="313" end="318" text="Quito" TYPE="CITY" comment="" />
+<LOCATION id="P13" start="629" end="634" text="Quiti" TYPE="CITY" comment="" />
+<DATE id="P14" start="653" end="657" text="June" TYPE="DATE" comment="" />
+<LOCATION id="P15" start="771" end="784" text="Merlin Clinic" TYPE="HOSPITAL" comment="" />
+<LOCATION id="P16" start="788" end="793" text="Quuto" TYPE="CITY" comment="" />
+<LOCATION id="P17" start="1152" end="1159" text="Wyandot" TYPE="HOSPITAL" comment="" />
+<LOCATION id="P18" start="1205" end="1212" text="America" TYPE="COUNTRY" comment="" />
+<LOCATION id="P19" start="1889" end="1899" text="Equadorian" TYPE="COUNTRY" comment="" />
+<AGE id="P20" start="2016" end="2018" text="60" TYPE="AGE" comment="" />
+<NAME id="P21" start="2565" end="2572" text="Oswaldo" TYPE="PATIENT" comment="" />
+<AGE id="P22" start="2605" end="2607" text="78" TYPE="AGE" comment="" />
 </TAGS>
 </deIdi2b2>

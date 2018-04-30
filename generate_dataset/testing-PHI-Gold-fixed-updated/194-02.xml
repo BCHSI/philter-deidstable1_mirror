@@ -1,6 +1,6 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT>
+<TEXT><!***REMOVED***CDATA***REMOVED***
 
 
 Record date: 2092-10-11
@@ -333,28 +333,37 @@ I have seen and examined the patient wtih Leon and agree with his assessment.
 
 
 
-</TEXT>
+***REMOVED******REMOVED***></TEXT>
 <TAGS>
-<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2092-10-11" />
-<NAME TYPE="PATIENT" comment="" end="98" id="P2" start="81" text="Crawford, Patrick" />
-<ID TYPE="MEDICALRECORD" comment="" end="128" id="P5" start="119" text="902-15-55" />
-<DATE TYPE="DATE" comment="" end="157" id="P6" start="149" text="10/10/92" />
-<NAME TYPE="DOCTOR" comment="" end="185" id="P7" start="171" text="Yancey, Ursula" />
-<NAME TYPE="DOCTOR" comment="" end="204" id="P8" start="192" text="Estep, Willa" />
-<NAME TYPE="PATIENT" comment="" end="1412" id="P11" start="1404" text="Crawford" />
-<NAME TYPE="PATIENT" comment="" end="2544" id="P12" start="2536" text="Crawford" />
-<DATE TYPE="DATE" comment="" end="3350" id="P13" start="3346" text="2080" />
-<DATE TYPE="DATE" comment="" end="3574" id="P14" start="3568" text="8/2090" />
-<DATE TYPE="DATE" comment="" end="3721" id="P15" start="3714" text="10/2090" />
-<DATE TYPE="DATE" comment="" end="3896" id="P17" start="3892" text="2072" />
-<DATE TYPE="DATE" comment="" end="4106" id="P18" start="4102" text="6/85" />
-<PROFESSION TYPE="PROFESSION" comment="" end="4824" id="P19" start="4811" text="army corporal" />
-<PROFESSION TYPE="PROFESSION" comment="" end="4880" id="P20" start="4874" text="design" />
-<AGE TYPE="AGE" comment="" end="5122" id="P22" start="5120" text="90" />
-<DATE TYPE="DATE" comment="" end="7659" id="P26" start="7651" text="10/10/92" />
-<DATE TYPE="DATE" comment="" end="7684" id="P27" start="7676" text="11/02/90" />
-<NAME TYPE="DOCTOR" comment="" end="9903" id="P29" start="9889" text="Leon Xayachack" />
-<CONTACT TYPE="PHONE" comment="" end="9918" id="P30" start="9913" text="76680" />
-<NAME TYPE="DOCTOR" comment="" end="9968" id="P31" start="9964" text="Leon" />
+<DATE id="P0" start="16" end="26" text="2092-10-11" TYPE="DATE" comment="" />
+<NAME id="P2" start="81" end="98" text="Crawford, Patrick" TYPE="PATIENT" comment="" />
+<LOCATION id="P3" start="100" end="104" text="Mary" TYPE="HOSPITAL" comment="" />
+<ID id="P5" start="119" end="128" text="902-15-55" TYPE="MEDICALRECORD" comment="" />
+<DATE id="P6" start="149" end="157" text="10/10/92" TYPE="DATE" comment="" />
+<NAME id="P7" start="171" end="185" text="Yancey, Ursula" TYPE="DOCTOR" comment="" />
+<NAME id="P8" start="192" end="204" text="Estep, Willa" TYPE="DOCTOR" comment="" />
+<AGE id="P9" start="287" end="289" text="82" TYPE="AGE" comment="" />
+<LOCATION id="P10" start="1374" end="1377" text="SOH" TYPE="HOSPITAL" comment="" />
+<NAME id="P11" start="1404" end="1412" text="Crawford" TYPE="PATIENT" comment="" />
+<NAME id="P12" start="2536" end="2544" text="Crawford" TYPE="PATIENT" comment="" />
+<DATE id="P13" start="3346" end="3350" text="2080" TYPE="DATE" comment="" />
+<DATE id="P14" start="3568" end="3574" text="8/2090" TYPE="DATE" comment="" />
+<DATE id="P15" start="3714" end="3721" text="10/2090" TYPE="DATE" comment="" />
+<LOCATION id="P16" start="3820" end="3823" text="SOH" TYPE="HOSPITAL" comment="" />
+<DATE id="P17" start="3892" end="3896" text="2072" TYPE="DATE" comment="" />
+<DATE id="P18" start="4102" end="4106" text="6/85" TYPE="DATE" comment="" />
+<PROFESSION id="P19" start="4811" end="4824" text="army corporal" TYPE="PROFESSION" comment="" />
+<PROFESSION id="P20" start="4874" end="4880" text="design" TYPE="PROFESSION" comment="" />
+<AGE id="P21" start="4901" end="4903" text="62" TYPE="AGE" comment="" />
+<AGE id="P22" start="5120" end="5122" text="90" TYPE="AGE" comment="" />
+<AGE id="P23" start="5157" end="5159" text="66" TYPE="AGE" comment="" />
+<AGE id="P24" start="5209" end="5212" text="50s" TYPE="AGE" comment="" />
+<AGE id="P25" start="5253" end="5255" text="76" TYPE="AGE" comment="" />
+<DATE id="P26" start="7651" end="7659" text="10/10/92" TYPE="DATE" comment="" />
+<DATE id="P27" start="7676" end="7684" text="11/02/90" TYPE="DATE" comment="" />
+<AGE id="P28" start="8120" end="8122" text="82" TYPE="AGE" comment="" />
+<NAME id="P29" start="9889" end="9903" text="Leon Xayachack" TYPE="DOCTOR" comment="" />
+<CONTACT id="P30" start="9913" end="9918" text="76680" TYPE="PHONE" comment="" />
+<NAME id="P31" start="9964" end="9968" text="Leon" TYPE="DOCTOR" comment="" />
 </TAGS>
 </deIdi2b2>

@@ -1,6 +1,6 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT>
+<TEXT><!***REMOVED***CDATA***REMOVED***
 
 
 Record date: 2096-04-11
@@ -135,7 +135,7 @@ Physical Exam:
 
 	Ext: no LE edema, no pain, 2+ pulses bilaterally.  
 
-	Neuro: A&amp;O x 3; NF.  CN 2-12 intact, motor 5/5 throughout, reflexes not elicited.  Babinskis not elicited.  Sensory exam notable for decreased pinprick, soft touch sense in stocking/glove distribution.  
+	Neuro: A&O x 3; NF.  CN 2-12 intact, motor 5/5 throughout, reflexes not elicited.  Babinskis not elicited.  Sensory exam notable for decreased pinprick, soft touch sense in stocking/glove distribution.  
 
 
 
@@ -247,7 +247,7 @@ Labs:
 
     PTT                   20.2L  22.1-35.1 sec      04/11/96 12:54    20.2(L) 04/11/96 12:54
 
-    D-Dimer (ng/mL)        783H  &lt;500 ng/ml         04/11/96 13:28     783(H) 04/11/96 13:28
+    D-Dimer (ng/mL)        783H  <500 ng/ml         04/11/96 13:28     783(H) 04/11/96 13:28
 
 
 
@@ -383,105 +383,109 @@ Prophy
 
 
 
-</TEXT>
+***REMOVED******REMOVED***></TEXT>
 <TAGS>
-<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2096-04-11" />
-<NAME TYPE="PATIENT" comment="" end="102" id="P2" start="89" text="REBECCA YAGER" />
-<ID TYPE="MEDICALRECORD" comment="" end="117" id="P3" start="110" text="0887181" />
-<DATE TYPE="DATE" comment="" end="146" id="P4" start="139" text="4/11/96" />
-<NAME TYPE="DOCTOR" comment="" end="176" id="P5" start="164" text="Georgia Xing" />
-<NAME TYPE="DOCTOR" comment="" end="201" id="P6" start="187" text="Branden Ocasio" />
-<DATE TYPE="DATE" comment="" end="2132" id="P9" start="2128" text="2092" />
-<DATE TYPE="DATE" comment="" end="2551" id="P11" start="2545" text="2080's" />
-<DATE TYPE="DATE" comment="" end="2732" id="P12" start="2728" text="2089" />
-<DATE TYPE="DATE" comment="" end="2767" id="P13" start="2763" text="2065" />
-<DATE TYPE="DATE" comment="" end="2802" id="P14" start="2798" text="2094" />
-<PROFESSION TYPE="PROFESSION" comment="" end="3653" id="P15" start="3646" text="manager" />
-<DATE TYPE="DATE" comment="" end="3740" id="P16" start="3736" text="2080" />
-<DATE TYPE="DATE" comment="" end="4446" id="P17" start="4438" text="04/11/96" />
-<DATE TYPE="DATE" comment="" end="4514" id="P18" start="4506" text="04/11/96" />
-<DATE TYPE="DATE" comment="" end="4540" id="P19" start="4532" text="11/03/93" />
-<DATE TYPE="DATE" comment="" end="4608" id="P20" start="4600" text="04/11/96" />
-<DATE TYPE="DATE" comment="" end="4634" id="P21" start="4626" text="11/03/95" />
-<DATE TYPE="DATE" comment="" end="4702" id="P22" start="4694" text="04/11/96" />
-<DATE TYPE="DATE" comment="" end="4728" id="P23" start="4720" text="04/01/93" />
-<DATE TYPE="DATE" comment="" end="4796" id="P24" start="4788" text="04/11/96" />
-<DATE TYPE="DATE" comment="" end="4864" id="P25" start="4856" text="04/11/96" />
-<DATE TYPE="DATE" comment="" end="4890" id="P26" start="4882" text="10/04/87" />
-<DATE TYPE="DATE" comment="" end="4958" id="P27" start="4950" text="04/11/96" />
-<DATE TYPE="DATE" comment="" end="4984" id="P28" start="4976" text="04/11/96" />
-<DATE TYPE="DATE" comment="" end="5075" id="P29" start="5067" text="04/11/96" />
-<DATE TYPE="DATE" comment="" end="5101" id="P30" start="5093" text="04/01/93" />
-<DATE TYPE="DATE" comment="" end="5169" id="P31" start="5161" text="04/11/96" />
-<DATE TYPE="DATE" comment="" end="5195" id="P32" start="5187" text="04/03/94" />
-<DATE TYPE="DATE" comment="" end="5263" id="P33" start="5255" text="04/11/96" />
-<DATE TYPE="DATE" comment="" end="5289" id="P34" start="5281" text="06/16/88" />
-<DATE TYPE="DATE" comment="" end="5359" id="P35" start="5351" text="04/11/96" />
-<DATE TYPE="DATE" comment="" end="5385" id="P36" start="5377" text="04/01/93" />
-<DATE TYPE="DATE" comment="" end="5453" id="P37" start="5445" text="04/11/96" />
-<DATE TYPE="DATE" comment="" end="5523" id="P38" start="5515" text="02/13/96" />
-<DATE TYPE="DATE" comment="" end="5549" id="P39" start="5541" text="03/17/91" />
-<DATE TYPE="DATE" comment="" end="5617" id="P40" start="5609" text="02/13/96" />
-<DATE TYPE="DATE" comment="" end="5643" id="P41" start="5635" text="02/13/96" />
-<DATE TYPE="DATE" comment="" end="5711" id="P42" start="5703" text="02/13/96" />
-<DATE TYPE="DATE" comment="" end="5779" id="P43" start="5771" text="02/13/96" />
-<DATE TYPE="DATE" comment="" end="5805" id="P44" start="5797" text="03/17/91" />
-<DATE TYPE="DATE" comment="" end="5873" id="P45" start="5865" text="02/13/96" />
-<DATE TYPE="DATE" comment="" end="5943" id="P46" start="5935" text="04/11/96" />
-<DATE TYPE="DATE" comment="" end="5969" id="P47" start="5961" text="04/11/96" />
-<DATE TYPE="DATE" comment="" end="6037" id="P48" start="6029" text="04/11/96" />
-<DATE TYPE="DATE" comment="" end="6063" id="P49" start="6055" text="04/01/93" />
-<DATE TYPE="DATE" comment="" end="6131" id="P50" start="6123" text="04/11/96" />
-<DATE TYPE="DATE" comment="" end="6157" id="P51" start="6149" text="04/01/93" />
-<DATE TYPE="DATE" comment="" end="6225" id="P52" start="6217" text="04/11/96" />
-<DATE TYPE="DATE" comment="" end="6251" id="P53" start="6243" text="10/06/94" />
-<DATE TYPE="DATE" comment="" end="6319" id="P54" start="6311" text="04/11/96" />
-<DATE TYPE="DATE" comment="" end="6345" id="P55" start="6337" text="07/28/88" />
-<DATE TYPE="DATE" comment="" end="6413" id="P56" start="6405" text="04/11/96" />
-<DATE TYPE="DATE" comment="" end="6481" id="P57" start="6473" text="04/11/96" />
-<DATE TYPE="DATE" comment="" end="6549" id="P58" start="6541" text="04/11/96" />
-<DATE TYPE="DATE" comment="" end="6575" id="P59" start="6567" text="04/11/96" />
-<DATE TYPE="DATE" comment="" end="6643" id="P60" start="6635" text="04/11/96" />
-<DATE TYPE="DATE" comment="" end="6669" id="P61" start="6661" text="10/06/94" />
-<DATE TYPE="DATE" comment="" end="6761" id="P62" start="6753" text="04/11/96" />
-<DATE TYPE="DATE" comment="" end="6829" id="P63" start="6821" text="04/11/96" />
-<DATE TYPE="DATE" comment="" end="6897" id="P64" start="6889" text="04/11/96" />
-<DATE TYPE="DATE" comment="" end="6923" id="P65" start="6915" text="04/11/96" />
-<DATE TYPE="DATE" comment="" end="6991" id="P66" start="6983" text="04/11/96" />
-<DATE TYPE="DATE" comment="" end="7017" id="P67" start="7009" text="04/11/96" />
-<DATE TYPE="DATE" comment="" end="7085" id="P68" start="7077" text="04/11/96" />
-<DATE TYPE="DATE" comment="" end="7111" id="P69" start="7103" text="04/11/96" />
-<DATE TYPE="DATE" comment="" end="7179" id="P70" start="7171" text="04/11/96" />
-<DATE TYPE="DATE" comment="" end="7247" id="P71" start="7239" text="04/11/96" />
-<DATE TYPE="DATE" comment="" end="7342" id="P72" start="7334" text="04/11/96" />
-<DATE TYPE="DATE" comment="" end="7368" id="P73" start="7360" text="04/11/96" />
-<DATE TYPE="DATE" comment="" end="7436" id="P74" start="7428" text="04/11/96" />
-<DATE TYPE="DATE" comment="" end="7504" id="P75" start="7496" text="04/11/96" />
-<DATE TYPE="DATE" comment="" end="7572" id="P76" start="7564" text="04/11/96" />
-<DATE TYPE="DATE" comment="" end="7598" id="P77" start="7590" text="04/11/96" />
-<DATE TYPE="DATE" comment="" end="7666" id="P78" start="7658" text="04/11/96" />
-<DATE TYPE="DATE" comment="" end="7734" id="P79" start="7726" text="04/11/96" />
-<DATE TYPE="DATE" comment="" end="7802" id="P80" start="7794" text="04/11/96" />
-<DATE TYPE="DATE" comment="" end="7870" id="P81" start="7862" text="04/11/96" />
-<DATE TYPE="DATE" comment="" end="7938" id="P82" start="7930" text="04/11/96" />
-<DATE TYPE="DATE" comment="" end="8008" id="P83" start="8000" text="04/11/96" />
-<DATE TYPE="DATE" comment="" end="8076" id="P84" start="8068" text="04/11/96" />
-<DATE TYPE="DATE" comment="" end="8102" id="P85" start="8094" text="04/11/96" />
-<DATE TYPE="DATE" comment="" end="8170" id="P86" start="8162" text="04/11/96" />
-<DATE TYPE="DATE" comment="" end="8196" id="P87" start="8188" text="04/11/96" />
-<DATE TYPE="DATE" comment="" end="8266" id="P88" start="8258" text="04/11/96" />
-<DATE TYPE="DATE" comment="" end="8334" id="P89" start="8326" text="11/03/93" />
-<DATE TYPE="DATE" comment="" end="8402" id="P90" start="8394" text="04/11/96" />
-<DATE TYPE="DATE" comment="" end="8470" id="P91" start="8462" text="04/11/96" />
-<DATE TYPE="DATE" comment="" end="8538" id="P92" start="8530" text="04/11/96" />
-<DATE TYPE="DATE" comment="" end="8606" id="P93" start="8598" text="04/11/96" />
-<DATE TYPE="DATE" comment="" end="8674" id="P94" start="8666" text="04/11/96" />
-<DATE TYPE="DATE" comment="" end="8742" id="P95" start="8734" text="11/03/93" />
-<DATE TYPE="DATE" comment="" end="8810" id="P96" start="8802" text="04/11/96" />
-<DATE TYPE="DATE" comment="" end="8878" id="P97" start="8870" text="04/11/96" />
-<DATE TYPE="DATE" comment="" end="8948" id="P98" start="8940" text="04/11/96" />
-<DATE TYPE="DATE" comment="" end="8974" id="P99" start="8966" text="09/27/95" />
-<DATE TYPE="DATE" comment="" end="9015" id="P100" start="9008" text="4/11/96" />
-<NAME TYPE="DOCTOR" comment="" end="10186" id="P101" start="10177" text="Hendricks" />
+<DATE id="P0" start="16" end="26" text="2096-04-11" TYPE="DATE" comment="" />
+<NAME id="P2" start="89" end="102" text="REBECCA YAGER" TYPE="PATIENT" comment="" />
+<ID id="P3" start="110" end="117" text="0887181" TYPE="MEDICALRECORD" comment="" />
+<DATE id="P4" start="139" end="146" text="4/11/96" TYPE="DATE" comment="" />
+<NAME id="P5" start="164" end="176" text="Georgia Xing" TYPE="DOCTOR" comment="" />
+<NAME id="P6" start="187" end="201" text="Branden Ocasio" TYPE="DOCTOR" comment="" />
+<AGE id="P7" start="269" end="271" text="69" TYPE="AGE" comment="" />
+<LOCATION id="P8" start="1162" end="1165" text="TPG" TYPE="HOSPITAL" comment="" />
+<DATE id="P9" start="2128" end="2132" text="2092" TYPE="DATE" comment="" />
+<AGE id="P10" start="2271" end="2273" text="19" TYPE="AGE" comment="" />
+<DATE id="P11" start="2545" end="2551" text="2080's" TYPE="DATE" comment="" />
+<DATE id="P12" start="2728" end="2732" text="2089" TYPE="DATE" comment="" />
+<DATE id="P13" start="2763" end="2767" text="2065" TYPE="DATE" comment="" />
+<DATE id="P14" start="2798" end="2802" text="2094" TYPE="DATE" comment="" />
+<PROFESSION id="P15" start="3646" end="3653" text="manager" TYPE="PROFESSION" comment="" />
+<DATE id="P16" start="3736" end="3740" text="2080" TYPE="DATE" comment="" />
+<DATE id="P17" start="4438" end="4446" text="04/11/96" TYPE="DATE" comment="" />
+<DATE id="P18" start="4506" end="4514" text="04/11/96" TYPE="DATE" comment="" />
+<DATE id="P19" start="4532" end="4540" text="11/03/93" TYPE="DATE" comment="" />
+<DATE id="P20" start="4600" end="4608" text="04/11/96" TYPE="DATE" comment="" />
+<DATE id="P21" start="4626" end="4634" text="11/03/95" TYPE="DATE" comment="" />
+<DATE id="P22" start="4694" end="4702" text="04/11/96" TYPE="DATE" comment="" />
+<DATE id="P23" start="4720" end="4728" text="04/01/93" TYPE="DATE" comment="" />
+<DATE id="P24" start="4788" end="4796" text="04/11/96" TYPE="DATE" comment="" />
+<DATE id="P25" start="4856" end="4864" text="04/11/96" TYPE="DATE" comment="" />
+<DATE id="P26" start="4882" end="4890" text="10/04/87" TYPE="DATE" comment="" />
+<DATE id="P27" start="4950" end="4958" text="04/11/96" TYPE="DATE" comment="" />
+<DATE id="P28" start="4976" end="4984" text="04/11/96" TYPE="DATE" comment="" />
+<DATE id="P29" start="5067" end="5075" text="04/11/96" TYPE="DATE" comment="" />
+<DATE id="P30" start="5093" end="5101" text="04/01/93" TYPE="DATE" comment="" />
+<DATE id="P31" start="5161" end="5169" text="04/11/96" TYPE="DATE" comment="" />
+<DATE id="P32" start="5187" end="5195" text="04/03/94" TYPE="DATE" comment="" />
+<DATE id="P33" start="5255" end="5263" text="04/11/96" TYPE="DATE" comment="" />
+<DATE id="P34" start="5281" end="5289" text="06/16/88" TYPE="DATE" comment="" />
+<DATE id="P35" start="5351" end="5359" text="04/11/96" TYPE="DATE" comment="" />
+<DATE id="P36" start="5377" end="5385" text="04/01/93" TYPE="DATE" comment="" />
+<DATE id="P37" start="5445" end="5453" text="04/11/96" TYPE="DATE" comment="" />
+<DATE id="P38" start="5515" end="5523" text="02/13/96" TYPE="DATE" comment="" />
+<DATE id="P39" start="5541" end="5549" text="03/17/91" TYPE="DATE" comment="" />
+<DATE id="P40" start="5609" end="5617" text="02/13/96" TYPE="DATE" comment="" />
+<DATE id="P41" start="5635" end="5643" text="02/13/96" TYPE="DATE" comment="" />
+<DATE id="P42" start="5703" end="5711" text="02/13/96" TYPE="DATE" comment="" />
+<DATE id="P43" start="5771" end="5779" text="02/13/96" TYPE="DATE" comment="" />
+<DATE id="P44" start="5797" end="5805" text="03/17/91" TYPE="DATE" comment="" />
+<DATE id="P45" start="5865" end="5873" text="02/13/96" TYPE="DATE" comment="" />
+<DATE id="P46" start="5935" end="5943" text="04/11/96" TYPE="DATE" comment="" />
+<DATE id="P47" start="5961" end="5969" text="04/11/96" TYPE="DATE" comment="" />
+<DATE id="P48" start="6029" end="6037" text="04/11/96" TYPE="DATE" comment="" />
+<DATE id="P49" start="6055" end="6063" text="04/01/93" TYPE="DATE" comment="" />
+<DATE id="P50" start="6123" end="6131" text="04/11/96" TYPE="DATE" comment="" />
+<DATE id="P51" start="6149" end="6157" text="04/01/93" TYPE="DATE" comment="" />
+<DATE id="P52" start="6217" end="6225" text="04/11/96" TYPE="DATE" comment="" />
+<DATE id="P53" start="6243" end="6251" text="10/06/94" TYPE="DATE" comment="" />
+<DATE id="P54" start="6311" end="6319" text="04/11/96" TYPE="DATE" comment="" />
+<DATE id="P55" start="6337" end="6345" text="07/28/88" TYPE="DATE" comment="" />
+<DATE id="P56" start="6405" end="6413" text="04/11/96" TYPE="DATE" comment="" />
+<DATE id="P57" start="6473" end="6481" text="04/11/96" TYPE="DATE" comment="" />
+<DATE id="P58" start="6541" end="6549" text="04/11/96" TYPE="DATE" comment="" />
+<DATE id="P59" start="6567" end="6575" text="04/11/96" TYPE="DATE" comment="" />
+<DATE id="P60" start="6635" end="6643" text="04/11/96" TYPE="DATE" comment="" />
+<DATE id="P61" start="6661" end="6669" text="10/06/94" TYPE="DATE" comment="" />
+<DATE id="P62" start="6753" end="6761" text="04/11/96" TYPE="DATE" comment="" />
+<DATE id="P63" start="6821" end="6829" text="04/11/96" TYPE="DATE" comment="" />
+<DATE id="P64" start="6889" end="6897" text="04/11/96" TYPE="DATE" comment="" />
+<DATE id="P65" start="6915" end="6923" text="04/11/96" TYPE="DATE" comment="" />
+<DATE id="P66" start="6983" end="6991" text="04/11/96" TYPE="DATE" comment="" />
+<DATE id="P67" start="7009" end="7017" text="04/11/96" TYPE="DATE" comment="" />
+<DATE id="P68" start="7077" end="7085" text="04/11/96" TYPE="DATE" comment="" />
+<DATE id="P69" start="7103" end="7111" text="04/11/96" TYPE="DATE" comment="" />
+<DATE id="P70" start="7171" end="7179" text="04/11/96" TYPE="DATE" comment="" />
+<DATE id="P71" start="7239" end="7247" text="04/11/96" TYPE="DATE" comment="" />
+<DATE id="P72" start="7334" end="7342" text="04/11/96" TYPE="DATE" comment="" />
+<DATE id="P73" start="7360" end="7368" text="04/11/96" TYPE="DATE" comment="" />
+<DATE id="P74" start="7428" end="7436" text="04/11/96" TYPE="DATE" comment="" />
+<DATE id="P75" start="7496" end="7504" text="04/11/96" TYPE="DATE" comment="" />
+<DATE id="P76" start="7564" end="7572" text="04/11/96" TYPE="DATE" comment="" />
+<DATE id="P77" start="7590" end="7598" text="04/11/96" TYPE="DATE" comment="" />
+<DATE id="P78" start="7658" end="7666" text="04/11/96" TYPE="DATE" comment="" />
+<DATE id="P79" start="7726" end="7734" text="04/11/96" TYPE="DATE" comment="" />
+<DATE id="P80" start="7794" end="7802" text="04/11/96" TYPE="DATE" comment="" />
+<DATE id="P81" start="7862" end="7870" text="04/11/96" TYPE="DATE" comment="" />
+<DATE id="P82" start="7930" end="7938" text="04/11/96" TYPE="DATE" comment="" />
+<DATE id="P83" start="8000" end="8008" text="04/11/96" TYPE="DATE" comment="" />
+<DATE id="P84" start="8068" end="8076" text="04/11/96" TYPE="DATE" comment="" />
+<DATE id="P85" start="8094" end="8102" text="04/11/96" TYPE="DATE" comment="" />
+<DATE id="P86" start="8162" end="8170" text="04/11/96" TYPE="DATE" comment="" />
+<DATE id="P87" start="8188" end="8196" text="04/11/96" TYPE="DATE" comment="" />
+<DATE id="P88" start="8258" end="8266" text="04/11/96" TYPE="DATE" comment="" />
+<DATE id="P89" start="8326" end="8334" text="11/03/93" TYPE="DATE" comment="" />
+<DATE id="P90" start="8394" end="8402" text="04/11/96" TYPE="DATE" comment="" />
+<DATE id="P91" start="8462" end="8470" text="04/11/96" TYPE="DATE" comment="" />
+<DATE id="P92" start="8530" end="8538" text="04/11/96" TYPE="DATE" comment="" />
+<DATE id="P93" start="8598" end="8606" text="04/11/96" TYPE="DATE" comment="" />
+<DATE id="P94" start="8666" end="8674" text="04/11/96" TYPE="DATE" comment="" />
+<DATE id="P95" start="8734" end="8742" text="11/03/93" TYPE="DATE" comment="" />
+<DATE id="P96" start="8802" end="8810" text="04/11/96" TYPE="DATE" comment="" />
+<DATE id="P97" start="8870" end="8878" text="04/11/96" TYPE="DATE" comment="" />
+<DATE id="P98" start="8940" end="8948" text="04/11/96" TYPE="DATE" comment="" />
+<DATE id="P99" start="8966" end="8974" text="09/27/95" TYPE="DATE" comment="" />
+<DATE id="P100" start="9008" end="9015" text="4/11/96" TYPE="DATE" comment="" />
+<NAME id="P101" start="10177" end="10186" text="Hendricks" TYPE="DOCTOR" comment="" />
+<AGE id="P102" start="10363" end="10365" text="69" TYPE="AGE" comment="" />
 </TAGS>
 </deIdi2b2>

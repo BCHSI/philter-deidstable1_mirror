@@ -1,6 +1,6 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT>
+<TEXT><!***REMOVED***CDATA***REMOVED***
 
 
 Record date: 2080-06-04
@@ -115,17 +115,19 @@ eScription document:7-1892564 BFFocus
 
 
 
-</TEXT>
+***REMOVED******REMOVED***></TEXT>
 <TAGS>
-<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2080-06-04" />
-<ID TYPE="MEDICALRECORD" comment="" end="44" id="P1" start="36" text="72841920" />
-<NAME TYPE="PATIENT" comment="" end="61" id="P2" start="45" text="MULLINS, DOLORES" />
-<DATE TYPE="DATE" comment="" end="70" id="P3" start="62" text="06/04/80" />
-<NAME TYPE="DOCTOR" comment="" end="84" id="P4" start="71" text="KROLL, OLIVIA" />
-<NAME TYPE="DOCTOR" comment="" end="2476" id="P7" start="2463" text="KROLL, OLIVIA" />
-<DATE TYPE="DATE" comment="" end="2494" id="P8" start="2486" text="06/04/80" />
-<DATE TYPE="DATE" comment="" end="2507" id="P9" start="2499" text="06/04/80" />
-<NAME TYPE="DOCTOR" comment="" end="2535" id="P10" start="2522" text="KROLL, OLIVIA" />
-<ID TYPE="IDNUM" comment="" end="2566" id="P11" start="2557" text="7-1892564" />
+<DATE id="P0" start="16" end="26" text="2080-06-04" TYPE="DATE" comment="" />
+<ID id="P1" start="36" end="44" text="72841920" TYPE="MEDICALRECORD" comment="" />
+<NAME id="P2" start="45" end="61" text="MULLINS, DOLORES" TYPE="PATIENT" comment="" />
+<DATE id="P3" start="62" end="70" text="06/04/80" TYPE="DATE" comment="" />
+<NAME id="P4" start="71" end="84" text="KROLL, OLIVIA" TYPE="DOCTOR" comment="" />
+<AGE id="P5" start="300" end="302" text="70" TYPE="AGE" comment="" />
+<LOCATION id="P6" start="2406" end="2410" text="HHMR" TYPE="HOSPITAL" comment="" />
+<NAME id="P7" start="2463" end="2476" text="KROLL, OLIVIA" TYPE="DOCTOR" comment="" />
+<DATE id="P8" start="2486" end="2494" text="06/04/80" TYPE="DATE" comment="" />
+<DATE id="P9" start="2499" end="2507" text="06/04/80" TYPE="DATE" comment="" />
+<NAME id="P10" start="2522" end="2535" text="KROLL, OLIVIA" TYPE="DOCTOR" comment="" />
+<ID id="P11" start="2557" end="2566" text="7-1892564" TYPE="IDNUM" comment="" />
 </TAGS>
 </deIdi2b2>

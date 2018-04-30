@@ -1,6 +1,6 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT>
+<TEXT><!***REMOVED***CDATA***REMOVED***
 
 
 Record date: 2080-10-01
@@ -181,16 +181,17 @@ Owen M Gallagher, M.D.
 
 
 
-</TEXT>
+***REMOVED******REMOVED***></TEXT>
 <TAGS>
-<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2080-10-01" />
-<DATE TYPE="DATE" comment="" end="131" id="P2" start="127" text="3/80" />
-<DATE TYPE="DATE" comment="" end="200" id="P3" start="194" text="Monday" />
-<DATE TYPE="DATE" comment="" end="1057" id="P4" start="1053" text="3/80" />
-<DATE TYPE="DATE" comment="" end="2914" id="P5" start="2910" text="8/79" />
-<NAME TYPE="DOCTOR" comment="" end="3570" id="P6" start="3559" text="Xavier Rush" />
-<NAME TYPE="DOCTOR" comment="" end="3835" id="P7" start="3829" text="Thorne" />
-<NAME TYPE="DOCTOR" comment="" end="3877" id="P8" start="3872" text="Perez" />
-<NAME TYPE="DOCTOR" comment="" end="4080" id="P9" start="4064" text="Owen M Gallagher" />
+<DATE id="P0" start="16" end="26" text="2080-10-01" TYPE="DATE" comment="" />
+<AGE id="P1" start="93" end="95" text="71" TYPE="AGE" comment="" />
+<DATE id="P2" start="127" end="131" text="3/80" TYPE="DATE" comment="" />
+<DATE id="P3" start="194" end="200" text="Monday" TYPE="DATE" comment="" />
+<DATE id="P4" start="1053" end="1057" text="3/80" TYPE="DATE" comment="" />
+<DATE id="P5" start="2910" end="2914" text="8/79" TYPE="DATE" comment="" />
+<NAME id="P6" start="3559" end="3570" text="Xavier Rush" TYPE="DOCTOR" comment="" />
+<NAME id="P7" start="3829" end="3835" text="Thorne" TYPE="DOCTOR" comment="" />
+<NAME id="P8" start="3872" end="3877" text="Perez" TYPE="DOCTOR" comment="" />
+<NAME id="P9" start="4064" end="4080" text="Owen M Gallagher" TYPE="DOCTOR" comment="" />
 </TAGS>
 </deIdi2b2>

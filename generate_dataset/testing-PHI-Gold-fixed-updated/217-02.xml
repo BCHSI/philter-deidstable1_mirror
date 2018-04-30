@@ -1,6 +1,6 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT>
+<TEXT><!***REMOVED***CDATA***REMOVED***
 
 
 Record date: 2065-06-20
@@ -75,7 +75,7 @@ BP 132/70, Wt 179 lb
 
 
 
-Gen NAD. A&amp;Ox4
+Gen NAD. A&Ox4
 
 Affect nl
 
@@ -129,8 +129,8 @@ f/u 3 mos
 
 
 
-</TEXT>
+***REMOVED******REMOVED***></TEXT>
 <TAGS>
-<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2065-06-20" />
+<DATE id="P0" start="16" end="26" text="2065-06-20" TYPE="DATE" comment="" />
 </TAGS>
 </deIdi2b2>

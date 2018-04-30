@@ -1,6 +1,6 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT>
+<TEXT><!***REMOVED***CDATA***REMOVED***
 
 
 Record date: 2096-03-16
@@ -171,26 +171,29 @@ Document Status: Final
 
 
 
-</TEXT>
+***REMOVED******REMOVED***></TEXT>
 <TAGS>
-<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2096-03-16" />
-<DATE TYPE="DATE" comment="" end="845" id="P3" start="841" text="2082" />
-<DATE TYPE="DATE" comment="" end="860" id="P4" start="856" text="2082" />
-<DATE TYPE="DATE" comment="" end="893" id="P5" start="889" text="2082" />
-<DATE TYPE="DATE" comment="" end="904" id="P6" start="900" text="2087" />
-<DATE TYPE="DATE" comment="" end="1018" id="P7" start="1013" text="11/92" />
-<NAME TYPE="DOCTOR" comment="" end="1193" id="P8" start="1184" text="Etheridge" />
-<DATE TYPE="DATE" comment="" end="1232" id="P9" start="1228" text="7/88" />
-<DATE TYPE="DATE" comment="" end="1292" id="P10" start="1287" text="10/91" />
-<DATE TYPE="DATE" comment="" end="1348" id="P11" start="1344" text="8/94" />
-<DATE TYPE="DATE" comment="" end="1921" id="P12" start="1916" text="11/95" />
-<ID TYPE="IDNUM" comment="" end="1925" id="P13" start="1922" text="MLL" />
-<NAME TYPE="DOCTOR" comment="" end="3026" id="P15" start="3019" text="Youmans" />
-<NAME TYPE="DOCTOR" comment="" end="3057" id="P16" start="3050" text="Youmans" />
-<DATE TYPE="DATE" comment="" end="3297" id="P17" start="3292" text="11/95" />
-<DATE TYPE="DATE" comment="" end="3326" id="P18" start="3322" text="2087" />
-<NAME TYPE="DOCTOR" comment="" end="3381" id="P19" start="3364" text="William Eggleston" />
-<CONTACT TYPE="PHONE" comment="" end="3398" id="P20" start="3393" text="40547" />
-<NAME TYPE="DOCTOR" comment="" end="3445" id="P21" start="3428" text="William Eggleston" />
+<DATE id="P0" start="16" end="26" text="2096-03-16" TYPE="DATE" comment="" />
+<LOCATION id="P1" start="62" end="84" text="MISSOULA CLINIC CENTER" TYPE="HOSPITAL" comment="" />
+<AGE id="P2" start="111" end="113" text="88" TYPE="AGE" comment="" />
+<DATE id="P3" start="841" end="845" text="2082" TYPE="DATE" comment="" />
+<DATE id="P4" start="856" end="860" text="2082" TYPE="DATE" comment="" />
+<DATE id="P5" start="889" end="893" text="2082" TYPE="DATE" comment="" />
+<DATE id="P6" start="900" end="904" text="2087" TYPE="DATE" comment="" />
+<DATE id="P7" start="1013" end="1018" text="11/92" TYPE="DATE" comment="" />
+<NAME id="P8" start="1184" end="1193" text="Etheridge" TYPE="DOCTOR" comment="" />
+<DATE id="P9" start="1228" end="1232" text="7/88" TYPE="DATE" comment="" />
+<DATE id="P10" start="1287" end="1292" text="10/91" TYPE="DATE" comment="" />
+<DATE id="P11" start="1344" end="1348" text="8/94" TYPE="DATE" comment="" />
+<DATE id="P12" start="1916" end="1921" text="11/95" TYPE="DATE" comment="" />
+<ID id="P13" start="1922" end="1925" text="MLL" TYPE="IDNUM" comment="" />
+<AGE id="P14" start="2883" end="2885" text="88" TYPE="AGE" comment="" />
+<NAME id="P15" start="3019" end="3026" text="Youmans" TYPE="DOCTOR" comment="" />
+<NAME id="P16" start="3050" end="3057" text="Youmans" TYPE="DOCTOR" comment="" />
+<DATE id="P17" start="3292" end="3297" text="11/95" TYPE="DATE" comment="" />
+<DATE id="P18" start="3322" end="3326" text="2087" TYPE="DATE" comment="" />
+<NAME id="P19" start="3364" end="3381" text="William Eggleston" TYPE="DOCTOR" comment="" />
+<CONTACT id="P20" start="3393" end="3398" text="40547" TYPE="PHONE" comment="" />
+<NAME id="P21" start="3428" end="3445" text="William Eggleston" TYPE="DOCTOR" comment="" />
 </TAGS>
 </deIdi2b2>

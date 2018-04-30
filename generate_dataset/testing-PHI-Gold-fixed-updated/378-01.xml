@@ -1,6 +1,6 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT>
+<TEXT><!***REMOVED***CDATA***REMOVED***
 
 
 Record date: 2062-09-18
@@ -57,17 +57,19 @@ KL/utz/orton
 
 
 
-</TEXT>
+***REMOVED******REMOVED***></TEXT>
 <TAGS>
-<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2062-09-18" />
-<NAME TYPE="PATIENT" comment="" end="41" id="P1" start="28" text="Tammy Umphrey" />
-<ID TYPE="MEDICALRECORD" comment="" end="65" id="P3" start="56" text="094-22-07" />
-<DATE TYPE="DATE" comment="" end="146" id="P6" start="128" text="September 18, 2062" />
-<DATE TYPE="DATE" comment="" end="2205" id="P7" start="2197" text="November" />
-<NAME TYPE="DOCTOR" comment="" end="2218" id="P8" start="2213" text="Ullom" />
-<NAME TYPE="DOCTOR" comment="" end="2251" id="P9" start="2236" text="Kathleen L Kuhn" />
-<NAME TYPE="DOCTOR" comment="" end="2265" id="P10" start="2263" text="KL" />
-<NAME TYPE="DOCTOR" comment="" end="2269" id="P11" start="2266" text="utz" />
-<NAME TYPE="DOCTOR" comment="" end="2275" id="P12" start="2270" text="orton" />
+<DATE id="P0" start="16" end="26" text="2062-09-18" TYPE="DATE" comment="" />
+<NAME id="P1" start="28" end="41" text="Tammy Umphrey" TYPE="PATIENT" comment="" />
+<LOCATION id="P2" start="43" end="46" text="PDI" TYPE="HOSPITAL" comment="" />
+<ID id="P3" start="56" end="65" text="094-22-07" TYPE="MEDICALRECORD" comment="" />
+<LOCATION id="P4" start="69" end="95" text="CLEVELAND PUBLIC INSTITUTE" TYPE="HOSPITAL" comment="" />
+<DATE id="P6" start="128" end="146" text="September 18, 2062" TYPE="DATE" comment="" />
+<DATE id="P7" start="2197" end="2205" text="November" TYPE="DATE" comment="" />
+<NAME id="P8" start="2213" end="2218" text="Ullom" TYPE="DOCTOR" comment="" />
+<NAME id="P9" start="2236" end="2251" text="Kathleen L Kuhn" TYPE="DOCTOR" comment="" />
+<NAME id="P10" start="2263" end="2265" text="KL" TYPE="DOCTOR" comment="" />
+<NAME id="P11" start="2266" end="2269" text="utz" TYPE="DOCTOR" comment="" />
+<NAME id="P12" start="2270" end="2275" text="orton" TYPE="DOCTOR" comment="" />
 </TAGS>
 </deIdi2b2>

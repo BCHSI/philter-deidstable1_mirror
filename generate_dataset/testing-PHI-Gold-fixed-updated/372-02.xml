@@ -1,6 +1,6 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT>
+<TEXT><!***REMOVED***CDATA***REMOVED***
 
 
 Record date: 2121-05-19
@@ -135,7 +135,7 @@ Assessment and plan   The patient is a 72 year old male, with a past medical his
 
 1. Diabetes 
 
--HemA1C 10/20-&gt;7.5. Will recheck
+-HemA1C 10/20->7.5. Will recheck
 
 -cont metformin to 850mg bid - Ordered repeat chem 7 (creatinine) and LFTs
 
@@ -145,7 +145,7 @@ Assessment and plan   The patient is a 72 year old male, with a past medical his
 
 -NEXT visit patient will bring cath supplies and WILL check for microalbuniuria -
 
--increased lipitor to 20 (patient's Chol 179 and LDL 111) -&gt; goal LDL 70 
+-increased lipitor to 20 (patient's Chol 179 and LDL 111) -> goal LDL 70 
 
 -patient refused nutrition consult 
 
@@ -237,39 +237,44 @@ Signed electronically by John  Ross MD on May 25, 2121     Rebecca  Downs MD on 
 
 
 
-</TEXT>
+***REMOVED******REMOVED***></TEXT>
 <TAGS>
-<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2121-05-19" />
-<DATE TYPE="DATE" comment="" end="534" id="P4" start="524" text="11/22/2118" />
-<DATE TYPE="DATE" comment="" end="602" id="P5" start="593" text="6/15/2119" />
-<DATE TYPE="DATE" comment="" end="660" id="P6" start="651" text="6/15/2119" />
-<DATE TYPE="DATE" comment="" end="716" id="P7" start="707" text="6/15/2119" />
-<DATE TYPE="DATE" comment="" end="793" id="P8" start="784" text="6/19/2119" />
-<DATE TYPE="DATE" comment="" end="854" id="P9" start="845" text="7/18/2120" />
-<DATE TYPE="DATE" comment="" end="924" id="P10" start="915" text="4/07/2121" />
-<DATE TYPE="DATE" comment="" end="984" id="P11" start="975" text="4/07/2121" />
-<DATE TYPE="DATE" comment="" end="1045" id="P12" start="1036" text="5/19/2121" />
-<DATE TYPE="DATE" comment="" end="1083" id="P13" start="1074" text="5/19/2121" />
-<DATE TYPE="DATE" comment="" end="1130" id="P14" start="1125" text="10/06" />
-<DATE TYPE="DATE" comment="" end="1220" id="P15" start="1216" text="5/07" />
-<DATE TYPE="DATE" comment="" end="1269" id="P16" start="1265" text="7/07" />
-<DATE TYPE="DATE" comment="" end="1506" id="P17" start="1502" text="9/09" />
-<DATE TYPE="DATE" comment="" end="1609" id="P18" start="1604" text="12/14" />
-<DATE TYPE="DATE" comment="" end="1700" id="P19" start="1696" text="2113" />
-<DATE TYPE="DATE" comment="" end="1910" id="P20" start="1904" text="2690's" />
-<PROFESSION TYPE="PROFESSION" comment="" end="2290" id="P23" start="2261" text="Heavy-Duty Equipment Mechanic" />
-<PROFESSION TYPE="PROFESSION" comment="" end="2320" id="P24" start="2303" text="Concrete Finisher" />
-<PROFESSION TYPE="PROFESSION" comment="" end="2345" id="P25" start="2338" text="veteran" />
-<DATE TYPE="DATE" comment="" end="2949" id="P27" start="2944" text="10/20" />
-<DATE TYPE="DATE" comment="" end="3489" id="P28" start="3485" text="4/21" />
-<DATE TYPE="DATE" comment="" end="4149" id="P29" start="4144" text="12/21" />
-<DATE TYPE="DATE" comment="" end="4306" id="P30" start="4301" text="12/18" />
-<DATE TYPE="DATE" comment="" end="4337" id="P31" start="4331" text="spring" />
-<NAME TYPE="DOCTOR" comment="" end="4483" id="P32" start="4474" text="John Ross" />
-<NAME TYPE="DOCTOR" comment="" end="4577" id="P33" start="4564" text="Rebecca Downs" />
-<NAME TYPE="DOCTOR" comment="" end="4616" id="P34" start="4606" text="John  Ross" />
-<DATE TYPE="DATE" comment="" end="4635" id="P35" start="4623" text="May 25, 2121" />
-<NAME TYPE="DOCTOR" comment="" end="4654" id="P36" start="4640" text="Rebecca  Downs" />
-<DATE TYPE="DATE" comment="" end="4673" id="P37" start="4661" text="May 29, 2121" />
+<DATE id="P0" start="16" end="26" text="2121-05-19" TYPE="DATE" comment="" />
+<LOCATION id="P2" start="51" end="70" text="HOLY CROSS HOSPITAL" TYPE="HOSPITAL" comment="" />
+<AGE id="P3" start="120" end="122" text="72" TYPE="AGE" comment="" />
+<DATE id="P4" start="524" end="534" text="11/22/2118" TYPE="DATE" comment="" />
+<DATE id="P5" start="593" end="602" text="6/15/2119" TYPE="DATE" comment="" />
+<DATE id="P6" start="651" end="660" text="6/15/2119" TYPE="DATE" comment="" />
+<DATE id="P7" start="707" end="716" text="6/15/2119" TYPE="DATE" comment="" />
+<DATE id="P8" start="784" end="793" text="6/19/2119" TYPE="DATE" comment="" />
+<DATE id="P9" start="845" end="854" text="7/18/2120" TYPE="DATE" comment="" />
+<DATE id="P10" start="915" end="924" text="4/07/2121" TYPE="DATE" comment="" />
+<DATE id="P11" start="975" end="984" text="4/07/2121" TYPE="DATE" comment="" />
+<DATE id="P12" start="1036" end="1045" text="5/19/2121" TYPE="DATE" comment="" />
+<DATE id="P13" start="1074" end="1083" text="5/19/2121" TYPE="DATE" comment="" />
+<DATE id="P14" start="1125" end="1130" text="10/06" TYPE="DATE" comment="" />
+<DATE id="P15" start="1216" end="1220" text="5/07" TYPE="DATE" comment="" />
+<DATE id="P16" start="1265" end="1269" text="7/07" TYPE="DATE" comment="" />
+<DATE id="P17" start="1502" end="1506" text="9/09" TYPE="DATE" comment="" />
+<DATE id="P18" start="1604" end="1609" text="12/14" TYPE="DATE" comment="" />
+<DATE id="P19" start="1696" end="1700" text="2113" TYPE="DATE" comment="" />
+<DATE id="P20" start="1904" end="1910" text="2690's" TYPE="DATE" comment="" />
+<AGE id="P21" start="2077" end="2079" text="76" TYPE="AGE" comment="" />
+<AGE id="P22" start="2132" end="2136" text="50's" TYPE="AGE" comment="" />
+<PROFESSION id="P23" start="2261" end="2290" text="Heavy-Duty Equipment Mechanic" TYPE="PROFESSION" comment="" />
+<PROFESSION id="P24" start="2303" end="2320" text="Concrete Finisher" TYPE="PROFESSION" comment="" />
+<PROFESSION id="P25" start="2338" end="2345" text="veteran" TYPE="PROFESSION" comment="" />
+<AGE id="P26" start="2760" end="2762" text="72" TYPE="AGE" comment="" />
+<DATE id="P27" start="2944" end="2949" text="10/20" TYPE="DATE" comment="" />
+<DATE id="P28" start="3485" end="3489" text="4/21" TYPE="DATE" comment="" />
+<DATE id="P29" start="4144" end="4149" text="12/21" TYPE="DATE" comment="" />
+<DATE id="P30" start="4301" end="4306" text="12/18" TYPE="DATE" comment="" />
+<DATE id="P31" start="4331" end="4337" text="spring" TYPE="DATE" comment="" />
+<NAME id="P32" start="4474" end="4483" text="John Ross" TYPE="DOCTOR" comment="" />
+<NAME id="P33" start="4564" end="4577" text="Rebecca Downs" TYPE="DOCTOR" comment="" />
+<NAME id="P34" start="4606" end="4616" text="John  Ross" TYPE="DOCTOR" comment="" />
+<DATE id="P35" start="4623" end="4635" text="May 25, 2121" TYPE="DATE" comment="" />
+<NAME id="P36" start="4640" end="4654" text="Rebecca  Downs" TYPE="DOCTOR" comment="" />
+<DATE id="P37" start="4661" end="4673" text="May 29, 2121" TYPE="DATE" comment="" />
 </TAGS>
 </deIdi2b2>

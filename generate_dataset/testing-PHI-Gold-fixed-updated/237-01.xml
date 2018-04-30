@@ -1,6 +1,6 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT>
+<TEXT><!***REMOVED***CDATA***REMOVED***
 
 
 
@@ -196,38 +196,41 @@ Document Status: Final
 
 
 
-</TEXT>
+***REMOVED******REMOVED***></TEXT>
 <TAGS>
-<DATE TYPE="DATE" comment="" end="28" id="P0" start="18" text="2091-07-02" />
-<NAME TYPE="DOCTOR" comment="" end="101" id="P2" start="83" text="Nathan J Fernandes" />
-<LOCATION TYPE="CITY" comment="" end="126" id="P3" start="111" text="College Station" />
-<LOCATION TYPE="STATE" comment="" end="130" id="P4" start="128" text="NC" />
-<LOCATION TYPE="ZIP" comment="" end="136" id="P5" start="131" text="22169" />
-<NAME TYPE="DOCTOR" comment="" end="158" id="P6" start="149" text="Fernandes" />
-<NAME TYPE="DOCTOR" comment="" end="174" id="P7" start="169" text="Nunes" />
-<NAME TYPE="PATIENT" comment="" end="239" id="P8" start="223" text="Christian Mullen" />
-<NAME TYPE="PATIENT" comment="" end="486" id="P9" start="480" text="Mullen" />
-<DATE TYPE="DATE" comment="" end="756" id="P11" start="743" text="November 2088" />
-<DATE TYPE="DATE" comment="" end="867" id="P12" start="854" text="February 2089" />
-<DATE TYPE="DATE" comment="" end="1026" id="P13" start="1013" text="November 2089" />
-<NAME TYPE="PATIENT" comment="" end="1876" id="P14" start="1870" text="Mullen" />
-<NAME TYPE="PATIENT" comment="" end="2684" id="P15" start="2678" text="Mullen" />
-<DATE TYPE="DATE" comment="" end="3408" id="P16" start="3404" text="2082" />
-<DATE TYPE="DATE" comment="" end="3446" id="P17" start="3442" text="2079" />
-<NAME TYPE="PATIENT" comment="" end="3531" id="P18" start="3515" text="Christian Mullen" />
-<NAME TYPE="PATIENT" comment="" end="3853" id="P20" start="3847" text="Mullen" />
-<DATE TYPE="DATE" comment="" end="4088" id="P21" start="4084" text="2088" />
-<DATE TYPE="DATE" comment="" end="4097" id="P22" start="4093" text="2089" />
-<NAME TYPE="PATIENT" comment="" end="4239" id="P23" start="4233" text="Mullen" />
-<NAME TYPE="PATIENT" comment="" end="4633" id="P24" start="4627" text="Mullen" />
-<NAME TYPE="PATIENT" comment="" end="4893" id="P25" start="4887" text="Mullen" />
-<NAME TYPE="PATIENT" comment="" end="5063" id="P26" start="5057" text="Mullen" />
-<NAME TYPE="DOCTOR" comment="" end="6422" id="P27" start="6408" text="Sharon Oglesby" />
-<NAME TYPE="DOCTOR" comment="" end="7194" id="P28" start="7185" text="Guy Nunes" />
-<NAME TYPE="DOCTOR" comment="" end="7216" id="P29" start="7204" text="Guyton Nunes" />
-<CONTACT TYPE="PHONE" comment="" end="7233" id="P30" start="7228" text="53530" />
-<NAME TYPE="DOCTOR" comment="" end="7278" id="P31" start="7264" text="Sharon Oglesby" />
-<NAME TYPE="DOCTOR" comment="" end="7296" id="P32" start="7284" text="Guyton Nunes" />
-<CONTACT TYPE="PHONE" comment="" end="7313" id="P33" start="7308" text="53530" />
+<DATE id="P0" start="18" end="28" text="2091-07-02" TYPE="DATE" comment="" />
+<LOCATION id="P1" start="49" end="77" text="BEAUREGARD MEMORIAL HOSPITAL" TYPE="HOSPITAL" comment="" />
+<NAME id="P2" start="83" end="101" text="Nathan J Fernandes" TYPE="DOCTOR" comment="" />
+<LOCATION id="P3" start="111" end="126" text="College Station" TYPE="CITY" comment="" />
+<LOCATION id="P4" start="128" end="130" text="NC" TYPE="STATE" comment="" />
+<LOCATION id="P5" start="131" end="136" text="22169" TYPE="ZIP" comment="" />
+<NAME id="P6" start="149" end="158" text="Fernandes" TYPE="DOCTOR" comment="" />
+<NAME id="P7" start="169" end="174" text="Nunes" TYPE="DOCTOR" comment="" />
+<NAME id="P8" start="223" end="239" text="Christian Mullen" TYPE="PATIENT" comment="" />
+<NAME id="P9" start="480" end="486" text="Mullen" TYPE="PATIENT" comment="" />
+<AGE id="P10" start="503" end="505" text="69" TYPE="AGE" comment="" />
+<DATE id="P11" start="743" end="756" text="November 2088" TYPE="DATE" comment="" />
+<DATE id="P12" start="854" end="867" text="February 2089" TYPE="DATE" comment="" />
+<DATE id="P13" start="1013" end="1026" text="November 2089" TYPE="DATE" comment="" />
+<NAME id="P14" start="1870" end="1876" text="Mullen" TYPE="PATIENT" comment="" />
+<NAME id="P15" start="2678" end="2684" text="Mullen" TYPE="PATIENT" comment="" />
+<DATE id="P16" start="3404" end="3408" text="2082" TYPE="DATE" comment="" />
+<DATE id="P17" start="3442" end="3446" text="2079" TYPE="DATE" comment="" />
+<NAME id="P18" start="3515" end="3531" text="Christian Mullen" TYPE="PATIENT" comment="" />
+<AGE id="P19" start="3548" end="3550" text="69" TYPE="AGE" comment="" />
+<NAME id="P20" start="3847" end="3853" text="Mullen" TYPE="PATIENT" comment="" />
+<DATE id="P21" start="4084" end="4088" text="2088" TYPE="DATE" comment="" />
+<DATE id="P22" start="4093" end="4097" text="2089" TYPE="DATE" comment="" />
+<NAME id="P23" start="4233" end="4239" text="Mullen" TYPE="PATIENT" comment="" />
+<NAME id="P24" start="4627" end="4633" text="Mullen" TYPE="PATIENT" comment="" />
+<NAME id="P25" start="4887" end="4893" text="Mullen" TYPE="PATIENT" comment="" />
+<NAME id="P26" start="5057" end="5063" text="Mullen" TYPE="PATIENT" comment="" />
+<NAME id="P27" start="6408" end="6422" text="Sharon Oglesby" TYPE="DOCTOR" comment="" />
+<NAME id="P28" start="7185" end="7194" text="Guy Nunes" TYPE="DOCTOR" comment="" />
+<NAME id="P29" start="7204" end="7216" text="Guyton Nunes" TYPE="DOCTOR" comment="" />
+<CONTACT id="P30" start="7228" end="7233" text="53530" TYPE="PHONE" comment="" />
+<NAME id="P31" start="7264" end="7278" text="Sharon Oglesby" TYPE="DOCTOR" comment="" />
+<NAME id="P32" start="7284" end="7296" text="Guyton Nunes" TYPE="DOCTOR" comment="" />
+<CONTACT id="P33" start="7308" end="7313" text="53530" TYPE="PHONE" comment="" />
 </TAGS>
 </deIdi2b2>

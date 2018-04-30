@@ -1,6 +1,6 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT>
+<TEXT><!***REMOVED***CDATA***REMOVED***
 
 
 Record date: 2065-11-03
@@ -133,20 +133,22 @@ Dictated by:  KATHERN OLMSTEAD, M.D.  KO19
 
 
 
-</TEXT>
+***REMOVED******REMOVED***></TEXT>
 <TAGS>
-<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2065-11-03" />
-<NAME TYPE="PATIENT" comment="" end="93" id="P2" start="80" text="WAGNER,LONNIE" />
-<ID TYPE="MEDICALRECORD" comment="" end="107" id="P3" start="96" text="097-87-37-2" />
-<DATE TYPE="DATE" comment="" end="145" id="P4" start="137" text="11/03/65" />
-<DATE TYPE="DATE" comment="" end="680" id="P6" start="668" text="July of 2065" />
-<NAME TYPE="DOCTOR" comment="" end="3131" id="P7" start="3125" text="Hanson" />
-<ID TYPE="IDNUM" comment="" end="3582" id="P8" start="3571" text="DV105/64892" />
-<NAME TYPE="DOCTOR" comment="" end="3601" id="P9" start="3585" text="KATHERN OLMSTEAD" />
-<NAME TYPE="USERNAME" comment="" end="3613" id="P10" start="3609" text="KO19" />
-<DATE TYPE="DATE" comment="" end="3653" id="P11" start="3645" text="11/03/65" />
-<DATE TYPE="DATE" comment="" end="3721" id="P12" start="3713" text="11/03/65" />
-<NAME TYPE="DOCTOR" comment="" end="3754" id="P13" start="3738" text="KATHERN OLMSTEAD" />
-<NAME TYPE="USERNAME" comment="" end="3766" id="P14" start="3762" text="KO19" />
+<DATE id="P0" start="16" end="26" text="2065-11-03" TYPE="DATE" comment="" />
+<LOCATION id="P1" start="49" end="54" text="GREEN" TYPE="HOSPITAL" comment="" />
+<NAME id="P2" start="80" end="93" text="WAGNER,LONNIE" TYPE="PATIENT" comment="" />
+<ID id="P3" start="96" end="107" text="097-87-37-2" TYPE="MEDICALRECORD" comment="" />
+<DATE id="P4" start="137" end="145" text="11/03/65" TYPE="DATE" comment="" />
+<AGE id="P5" start="543" end="545" text="72" TYPE="AGE" comment="" />
+<DATE id="P6" start="668" end="680" text="July of 2065" TYPE="DATE" comment="" />
+<NAME id="P7" start="3125" end="3131" text="Hanson" TYPE="DOCTOR" comment="" />
+<ID id="P8" start="3571" end="3582" text="DV105/64892" TYPE="IDNUM" comment="" />
+<NAME id="P9" start="3585" end="3601" text="KATHERN OLMSTEAD" TYPE="DOCTOR" comment="" />
+<NAME id="P10" start="3609" end="3613" text="KO19" TYPE="USERNAME" comment="" />
+<DATE id="P11" start="3645" end="3653" text="11/03/65" TYPE="DATE" comment="" />
+<DATE id="P12" start="3713" end="3721" text="11/03/65" TYPE="DATE" comment="" />
+<NAME id="P13" start="3738" end="3754" text="KATHERN OLMSTEAD" TYPE="DOCTOR" comment="" />
+<NAME id="P14" start="3762" end="3766" text="KO19" TYPE="USERNAME" comment="" />
 </TAGS>
 </deIdi2b2>

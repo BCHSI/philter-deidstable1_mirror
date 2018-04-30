@@ -1,6 +1,6 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT>
+<TEXT><!***REMOVED***CDATA***REMOVED***
 
 
 Record date: 2126-01-04
@@ -93,38 +93,45 @@ A/P:
 
 
 
-</TEXT>
+***REMOVED******REMOVED***></TEXT>
 <TAGS>
-<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2126-01-04" />
-<NAME TYPE="PATIENT" comment="" end="73" id="P1" start="65" text="Valdivia" />
-<NAME TYPE="DOCTOR" comment="" end="992" id="P2" start="989" text="Lau" />
-<DATE TYPE="DATE" comment="" end="1185" id="P4" start="1181" text="5/23" />
-<DATE TYPE="DATE" comment="" end="1281" id="P5" start="1276" text="10/24" />
-<NAME TYPE="DOCTOR" comment="" end="1338" id="P6" start="1332" text="Massey" />
-<DATE TYPE="DATE" comment="" end="1405" id="P8" start="1401" text="5/25" />
-<DATE TYPE="DATE" comment="" end="1455" id="P9" start="1453" text="18" />
-<DATE TYPE="DATE" comment="" end="1479" id="P10" start="1475" text="4/19" />
-<DATE TYPE="DATE" comment="" end="1553" id="P11" start="1549" text="2114" />
-<DATE TYPE="DATE" comment="" end="1619" id="P12" start="1617" text="19" />
-<LOCATION TYPE="ORGANIZATION" comment="" end="1648" id="P13" start="1644" text="CNET" />
-<PROFESSION TYPE="PROFESSION" comment="" end="1657" id="P14" start="1650" text="manager" />
-<DATE TYPE="DATE" comment="" end="1679" id="P15" start="1677" text="24" />
-<NAME TYPE="PATIENT" comment="" end="1720" id="P16" start="1715" text="Laura" />
-<DATE TYPE="DATE" comment="" end="1723" id="P17" start="1721" text="23" />
-<LOCATION TYPE="CITY" comment="" end="1766" id="P18" start="1756" text="Brownstown" />
-<LOCATION TYPE="ORGANIZATION" comment="" end="1784" id="P19" start="1776" text="Brown U." />
-<LOCATION TYPE="ORGANIZATION" comment="" end="1820" id="P20" start="1811" text="Air Force" />
-<PROFESSION TYPE="PROFESSION" comment="" end="1837" id="P22" start="1832" text="pilot" />
-<AGE TYPE="AGE" comment="" end="1909" id="P24" start="1907" text="90" />
-<DATE TYPE="DATE" comment="" end="1988" id="P28" start="1986" text="66" />
-<DATE TYPE="DATE" comment="" end="1996" id="P29" start="1994" text="74" />
-<DATE TYPE="DATE" comment="" end="2006" id="P30" start="2004" text="93" />
-<DATE TYPE="DATE" comment="" end="2011" id="P31" start="2009" text="94" />
-<DATE TYPE="DATE" comment="" end="2020" id="P32" start="2018" text="22" />
-<NAME TYPE="PATIENT" comment="" end="2026" id="P33" start="2022" text="Fran" />
-<DATE TYPE="DATE" comment="" end="2030" id="P34" start="2028" text="03" />
-<DATE TYPE="DATE" comment="" end="2040" id="P35" start="2038" text="24" />
-<DATE TYPE="DATE" comment="" end="2058" id="P36" start="2054" text="3/25" />
-<ID TYPE="IDNUM" comment="" end="2545" id="P37" start="2540" text="38/48" />
+<DATE id="P0" start="16" end="26" text="2126-01-04" TYPE="DATE" comment="" />
+<NAME id="P1" start="65" end="73" text="Valdivia" TYPE="PATIENT" comment="" />
+<NAME id="P2" start="989" end="992" text="Lau" TYPE="DOCTOR" comment="" />
+<LOCATION id="P3" start="994" end="997" text="HWS" TYPE="HOSPITAL" comment="" />
+<DATE id="P4" start="1181" end="1185" text="5/23" TYPE="DATE" comment="" />
+<DATE id="P5" start="1276" end="1281" text="10/24" TYPE="DATE" comment="" />
+<NAME id="P6" start="1332" end="1338" text="Massey" TYPE="DOCTOR" comment="" />
+<LOCATION id="P7" start="1340" end="1343" text="HWS" TYPE="HOSPITAL" comment="" />
+<DATE id="P8" start="1401" end="1405" text="5/25" TYPE="DATE" comment="" />
+<DATE id="P9" start="1453" end="1455" text="18" TYPE="DATE" comment="" />
+<DATE id="P10" start="1475" end="1479" text="4/19" TYPE="DATE" comment="" />
+<DATE id="P11" start="1549" end="1553" text="2114" TYPE="DATE" comment="" />
+<DATE id="P12" start="1617" end="1619" text="19" TYPE="DATE" comment="" />
+<LOCATION id="P13" start="1644" end="1648" text="CNET" TYPE="ORGANIZATION" comment="" />
+<PROFESSION id="P14" start="1650" end="1657" text="manager" TYPE="PROFESSION" comment="" />
+<DATE id="P15" start="1677" end="1679" text="24" TYPE="DATE" comment="" />
+<NAME id="P16" start="1715" end="1720" text="Laura" TYPE="PATIENT" comment="" />
+<DATE id="P17" start="1721" end="1723" text="23" TYPE="DATE" comment="" />
+<LOCATION id="P18" start="1756" end="1766" text="Brownstown" TYPE="CITY" comment="" />
+<LOCATION id="P19" start="1776" end="1784" text="Brown U." TYPE="ORGANIZATION" comment="" />
+<LOCATION id="P20" start="1811" end="1820" text="Air Force" TYPE="ORGANIZATION" comment="" />
+<LOCATION id="P21" start="1824" end="1830" text="Canada" TYPE="COUNTRY" comment="" />
+<PROFESSION id="P22" start="1832" end="1837" text="pilot" TYPE="PROFESSION" comment="" />
+<AGE id="P23" start="1890" end="1893" text="80s" TYPE="AGE" comment="" />
+<AGE id="P24" start="1907" end="1909" text="90" TYPE="AGE" comment="" />
+<AGE id="P25" start="1920" end="1922" text="73" TYPE="AGE" comment="" />
+<AGE id="P26" start="1930" end="1932" text="73" TYPE="AGE" comment="" />
+<AGE id="P27" start="1958" end="1960" text="84" TYPE="AGE" comment="" />
+<DATE id="P28" start="1986" end="1988" text="66" TYPE="DATE" comment="" />
+<DATE id="P29" start="1994" end="1996" text="74" TYPE="DATE" comment="" />
+<DATE id="P30" start="2004" end="2006" text="93" TYPE="DATE" comment="" />
+<DATE id="P31" start="2009" end="2011" text="94" TYPE="DATE" comment="" />
+<DATE id="P32" start="2018" end="2020" text="22" TYPE="DATE" comment="" />
+<NAME id="P33" start="2022" end="2026" text="Fran" TYPE="PATIENT" comment="" />
+<DATE id="P34" start="2028" end="2030" text="03" TYPE="DATE" comment="" />
+<DATE id="P35" start="2038" end="2040" text="24" TYPE="DATE" comment="" />
+<DATE id="P36" start="2054" end="2058" text="3/25" TYPE="DATE" comment="" />
+<ID id="P37" start="2540" end="2545" text="38/48" TYPE="IDNUM" comment="" />
 </TAGS>
 </deIdi2b2>

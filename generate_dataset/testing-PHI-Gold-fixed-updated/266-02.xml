@@ -1,6 +1,6 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT>
+<TEXT><!***REMOVED***CDATA***REMOVED***
 
 
 Record date: 2067-08-07
@@ -272,9 +272,9 @@ Patient Education:  1. reduce dietary saturated fats to less than 10% total calo
 
 2. reduce weight
 
-3. restrict total fat to &lt; 30% of total calories
+3. restrict total fat to < 30% of total calories
 
-4. limit cholesterol to &lt; 300 mg/d
+4. limit cholesterol to < 300 mg/d
 
 5. allow carbohydrates to account for 50-60% of calories. Substitute complex carbohydrates for saturated fats, increase intake of soluble fiber.
 
@@ -289,50 +289,52 @@ THIS IS A COPY PRODUCED FOR THE LMR. THE ORGINAL IS STORED ON THE BRIGHTPOINT SE
 
 
 
-</TEXT>
+***REMOVED******REMOVED***></TEXT>
 <TAGS>
-<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2067-08-07" />
-<NAME TYPE="DOCTOR" comment="" end="408" id="P1" start="404" text="frye" />
-<DATE TYPE="DATE" comment="" end="423" id="P2" start="413" text="03/13/2066" />
-<DATE TYPE="DATE" comment="" end="899" id="P3" start="889" text="08/07/2067" />
-<NAME TYPE="DOCTOR" comment="" end="922" id="P4" start="913" text="rosenberg" />
-<DATE TYPE="DATE" comment="" end="2118" id="P5" start="2108" text="04/17/2067" />
-<NAME TYPE="DOCTOR" comment="" end="2128" id="P6" start="2119" text="rosenberg" />
-<DATE TYPE="DATE" comment="" end="2193" id="P7" start="2183" text="06/19/2067" />
-<DATE TYPE="DATE" comment="" end="2206" id="P8" start="2196" text="03/25/2068" />
-<NAME TYPE="DOCTOR" comment="" end="2215" id="P9" start="2213" text="um" />
-<DATE TYPE="DATE" comment="" end="2264" id="P10" start="2254" text="09/23/2067" />
-<NAME TYPE="DOCTOR" comment="" end="2269" id="P11" start="2267" text="um" />
-<DATE TYPE="DATE" comment="" end="2320" id="P12" start="2310" text="09/06/2066" />
-<DATE TYPE="DATE" comment="" end="2333" id="P13" start="2323" text="03/25/2068" />
-<NAME TYPE="DOCTOR" comment="" end="2349" id="P14" start="2340" text="rosenberg" />
-<DATE TYPE="DATE" comment="" end="2397" id="P15" start="2387" text="11/20/2067" />
-<NAME TYPE="DOCTOR" comment="" end="2409" id="P16" start="2400" text="rosenberg" />
-<DATE TYPE="DATE" comment="" end="2443" id="P17" start="2433" text="05/10/2066" />
-<DATE TYPE="DATE" comment="" end="2456" id="P18" start="2446" text="04/15/2068" />
-<NAME TYPE="DOCTOR" comment="" end="2472" id="P19" start="2463" text="rosenberg" />
-<DATE TYPE="DATE" comment="" end="2521" id="P20" start="2511" text="11/20/2067" />
-<NAME TYPE="DOCTOR" comment="" end="2533" id="P21" start="2524" text="rosenberg" />
-<DATE TYPE="DATE" comment="" end="2576" id="P22" start="2566" text="04/08/2065" />
-<DATE TYPE="DATE" comment="" end="2589" id="P23" start="2579" text="11/12/2067" />
-<NAME TYPE="DOCTOR" comment="" end="2604" id="P24" start="2596" text="stephens" />
-<DATE TYPE="DATE" comment="" end="2653" id="P25" start="2643" text="04/24/2067" />
-<NAME TYPE="DOCTOR" comment="" end="2664" id="P26" start="2656" text="stephens" />
-<DATE TYPE="DATE" comment="" end="2700" id="P27" start="2690" text="03/02/2065" />
-<DATE TYPE="DATE" comment="" end="2713" id="P28" start="2703" text="03/30/2074" />
-<NAME TYPE="DOCTOR" comment="" end="2729" id="P29" start="2720" text="rosenberg" />
-<DATE TYPE="DATE" comment="" end="2765" id="P30" start="2755" text="03/02/2065" />
-<DATE TYPE="DATE" comment="" end="2778" id="P31" start="2768" text="03/30/2074" />
-<NAME TYPE="DOCTOR" comment="" end="2794" id="P32" start="2785" text="rosenberg" />
-<DATE TYPE="DATE" comment="" end="2827" id="P33" start="2817" text="03/02/2065" />
-<DATE TYPE="DATE" comment="" end="2840" id="P34" start="2830" text="11/12/2067" />
-<NAME TYPE="DOCTOR" comment="" end="2856" id="P35" start="2847" text="rosenberg" />
-<DATE TYPE="DATE" comment="" end="2904" id="P36" start="2894" text="10/26/2066" />
-<NAME TYPE="DOCTOR" comment="" end="2916" id="P37" start="2907" text="rosenberg" />
-<DATE TYPE="DATE" comment="" end="2952" id="P38" start="2942" text="01/29/2068" />
-<NAME TYPE="DOCTOR" comment="" end="2968" id="P39" start="2959" text="rosenberg" />
-<DATE TYPE="DATE" comment="" end="3007" id="P40" start="2997" text="11/25/2065" />
-<DATE TYPE="DATE" comment="" end="3024" id="P41" start="3014" text="11/25/2065" />
-<LOCATION TYPE="ORGANIZATION" comment="" end="4192" id="P42" start="4181" text="BRIGHTPOINT" />
+<DATE id="P0" start="16" end="26" text="2067-08-07" TYPE="DATE" comment="" />
+<NAME id="P1" start="404" end="408" text="frye" TYPE="DOCTOR" comment="" />
+<DATE id="P2" start="413" end="423" text="03/13/2066" TYPE="DATE" comment="" />
+<DATE id="P3" start="889" end="899" text="08/07/2067" TYPE="DATE" comment="" />
+<NAME id="P4" start="913" end="922" text="rosenberg" TYPE="DOCTOR" comment="" />
+<DATE id="P5" start="2108" end="2118" text="04/17/2067" TYPE="DATE" comment="" />
+<NAME id="P6" start="2119" end="2128" text="rosenberg" TYPE="DOCTOR" comment="" />
+<DATE id="P7" start="2183" end="2193" text="06/19/2067" TYPE="DATE" comment="" />
+<DATE id="P8" start="2196" end="2206" text="03/25/2068" TYPE="DATE" comment="" />
+<NAME id="P9" start="2213" end="2215" text="um" TYPE="DOCTOR" comment="" />
+<DATE id="P10" start="2254" end="2264" text="09/23/2067" TYPE="DATE" comment="" />
+<NAME id="P11" start="2267" end="2269" text="um" TYPE="DOCTOR" comment="" />
+<DATE id="P12" start="2310" end="2320" text="09/06/2066" TYPE="DATE" comment="" />
+<DATE id="P13" start="2323" end="2333" text="03/25/2068" TYPE="DATE" comment="" />
+<NAME id="P14" start="2340" end="2349" text="rosenberg" TYPE="DOCTOR" comment="" />
+<DATE id="P15" start="2387" end="2397" text="11/20/2067" TYPE="DATE" comment="" />
+<NAME id="P16" start="2400" end="2409" text="rosenberg" TYPE="DOCTOR" comment="" />
+<DATE id="P17" start="2433" end="2443" text="05/10/2066" TYPE="DATE" comment="" />
+<DATE id="P18" start="2446" end="2456" text="04/15/2068" TYPE="DATE" comment="" />
+<NAME id="P19" start="2463" end="2472" text="rosenberg" TYPE="DOCTOR" comment="" />
+<DATE id="P20" start="2511" end="2521" text="11/20/2067" TYPE="DATE" comment="" />
+<NAME id="P21" start="2524" end="2533" text="rosenberg" TYPE="DOCTOR" comment="" />
+<DATE id="P22" start="2566" end="2576" text="04/08/2065" TYPE="DATE" comment="" />
+<DATE id="P23" start="2579" end="2589" text="11/12/2067" TYPE="DATE" comment="" />
+<NAME id="P24" start="2596" end="2604" text="stephens" TYPE="DOCTOR" comment="" />
+<DATE id="P25" start="2643" end="2653" text="04/24/2067" TYPE="DATE" comment="" />
+<NAME id="P26" start="2656" end="2664" text="stephens" TYPE="DOCTOR" comment="" />
+<DATE id="P27" start="2690" end="2700" text="03/02/2065" TYPE="DATE" comment="" />
+<DATE id="P28" start="2703" end="2713" text="03/30/2074" TYPE="DATE" comment="" />
+<NAME id="P29" start="2720" end="2729" text="rosenberg" TYPE="DOCTOR" comment="" />
+<DATE id="P30" start="2755" end="2765" text="03/02/2065" TYPE="DATE" comment="" />
+<DATE id="P31" start="2768" end="2778" text="03/30/2074" TYPE="DATE" comment="" />
+<NAME id="P32" start="2785" end="2794" text="rosenberg" TYPE="DOCTOR" comment="" />
+<DATE id="P33" start="2817" end="2827" text="03/02/2065" TYPE="DATE" comment="" />
+<DATE id="P34" start="2830" end="2840" text="11/12/2067" TYPE="DATE" comment="" />
+<NAME id="P35" start="2847" end="2856" text="rosenberg" TYPE="DOCTOR" comment="" />
+<DATE id="P36" start="2894" end="2904" text="10/26/2066" TYPE="DATE" comment="" />
+<NAME id="P37" start="2907" end="2916" text="rosenberg" TYPE="DOCTOR" comment="" />
+<DATE id="P38" start="2942" end="2952" text="01/29/2068" TYPE="DATE" comment="" />
+<NAME id="P39" start="2959" end="2968" text="rosenberg" TYPE="DOCTOR" comment="" />
+<DATE id="P40" start="2997" end="3007" text="11/25/2065" TYPE="DATE" comment="" />
+<DATE id="P41" start="3014" end="3024" text="11/25/2065" TYPE="DATE" comment="" />
+<LOCATION id="P42" start="4181" end="4192" text="BRIGHTPOINT" TYPE="ORGANIZATION" comment="" />
+<LOCATION id="P43" start="4203" end="4235" text="COLUMBIA KINGWOOD MEDICAL CENTER" TYPE="HOSPITAL" comment="" />
+<LOCATION id="P44" start="4266" end="4270" text="CKMC" TYPE="HOSPITAL" comment="" />
 </TAGS>
 </deIdi2b2>

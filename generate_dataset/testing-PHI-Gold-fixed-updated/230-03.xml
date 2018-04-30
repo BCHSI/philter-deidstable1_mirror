@@ -1,12 +1,12 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT>
+<TEXT><!***REMOVED***CDATA***REMOVED***
 
 
 Record date: 2078-09-06
 
 
-Vascular Surgery H&amp;P
+Vascular Surgery H&P
 Date 09/06/78
 
 Name:  Richard, Ulysses
@@ -85,25 +85,26 @@ Pager # 04873
 
 
 
-</TEXT>
+***REMOVED******REMOVED***></TEXT>
 <TAGS>
-<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2078-09-06" />
-<DATE TYPE="DATE" comment="" end="63" id="P1" start="55" text="09/06/78" />
-<NAME TYPE="PATIENT" comment="" end="88" id="P2" start="72" text="Richard, Ulysses" />
-<ID TYPE="MEDICALRECORD" comment="" end="112" id="P3" start="105" text="8913196" />
-<NAME TYPE="DOCTOR" comment="" end="131" id="P4" start="125" text="Snyder" />
-<NAME TYPE="PATIENT" comment="" end="172" id="P5" start="165" text="Ulysses" />
-<DATE TYPE="DATE" comment="" end="363" id="P7" start="358" text="07/78" />
-<DATE TYPE="DATE" comment="" end="409" id="P8" start="404" text="05/78" />
-<DATE TYPE="DATE" comment="" end="1326" id="P9" start="1322" text="3/73" />
-<DATE TYPE="DATE" comment="" end="1421" id="P10" start="1417" text="2078" />
-<DATE TYPE="DATE" comment="" end="1480" id="P11" start="1476" text="2078" />
-<DATE TYPE="DATE" comment="" end="1513" id="P12" start="1509" text="2074" />
-<DATE TYPE="DATE" comment="" end="1532" id="P13" start="1528" text="2073" />
-<NAME TYPE="DOCTOR" comment="" end="2473" id="P14" start="2459" text="Matthew Snyder" />
-<DATE TYPE="DATE" comment="" end="2556" id="P15" start="2551" text="09/08" />
-<NAME TYPE="DOCTOR" comment="" end="2602" id="P16" start="2590" text="Jackson Roth" />
-<NAME TYPE="DOCTOR" comment="" end="2687" id="P17" start="2672" text="Julia Jorgenson" />
-<CONTACT TYPE="PHONE" comment="" end="2741" id="P18" start="2736" text="04873" />
+<DATE id="P0" start="16" end="26" text="2078-09-06" TYPE="DATE" comment="" />
+<DATE id="P1" start="55" end="63" text="09/06/78" TYPE="DATE" comment="" />
+<NAME id="P2" start="72" end="88" text="Richard, Ulysses" TYPE="PATIENT" comment="" />
+<ID id="P3" start="105" end="112" text="8913196" TYPE="MEDICALRECORD" comment="" />
+<NAME id="P4" start="125" end="131" text="Snyder" TYPE="DOCTOR" comment="" />
+<NAME id="P5" start="165" end="172" text="Ulysses" TYPE="PATIENT" comment="" />
+<AGE id="P6" start="179" end="181" text="85" TYPE="AGE" comment="" />
+<DATE id="P7" start="358" end="363" text="07/78" TYPE="DATE" comment="" />
+<DATE id="P8" start="404" end="409" text="05/78" TYPE="DATE" comment="" />
+<DATE id="P9" start="1322" end="1326" text="3/73" TYPE="DATE" comment="" />
+<DATE id="P10" start="1417" end="1421" text="2078" TYPE="DATE" comment="" />
+<DATE id="P11" start="1476" end="1480" text="2078" TYPE="DATE" comment="" />
+<DATE id="P12" start="1509" end="1513" text="2074" TYPE="DATE" comment="" />
+<DATE id="P13" start="1528" end="1532" text="2073" TYPE="DATE" comment="" />
+<NAME id="P14" start="2459" end="2473" text="Matthew Snyder" TYPE="DOCTOR" comment="" />
+<DATE id="P15" start="2551" end="2556" text="09/08" TYPE="DATE" comment="" />
+<NAME id="P16" start="2590" end="2602" text="Jackson Roth" TYPE="DOCTOR" comment="" />
+<NAME id="P17" start="2672" end="2687" text="Julia Jorgenson" TYPE="DOCTOR" comment="" />
+<CONTACT id="P18" start="2736" end="2741" text="04873" TYPE="PHONE" comment="" />
 </TAGS>
 </deIdi2b2>

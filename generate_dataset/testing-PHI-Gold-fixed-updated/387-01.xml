@@ -1,6 +1,6 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT>
+<TEXT><!***REMOVED***CDATA***REMOVED***
 
 
 Record date: 2081-03-22
@@ -181,17 +181,20 @@ cc:
 
 
 
-</TEXT>
+***REMOVED******REMOVED***></TEXT>
 <TAGS>
-<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2081-03-22" />
-<DATE TYPE="DATE" comment="" end="75" id="P1" start="68" text="2/28/81" />
-<LOCATION TYPE="ORGANIZATION" comment="" end="908" id="P3" start="899" text="dc comics" />
-<DATE TYPE="DATE" comment="" end="2218" id="P4" start="2207" text="22-Mar-2081" />
-<DATE TYPE="DATE" comment="" end="2304" id="P5" start="2297" text="3/14/81" />
-<DATE TYPE="DATE" comment="" end="2866" id="P7" start="2862" text="June" />
-<DATE TYPE="DATE" comment="" end="3177" id="P8" start="3173" text="June" />
-<DATE TYPE="DATE" comment="" end="3265" id="P9" start="3261" text="June" />
-<DATE TYPE="DATE" comment="" end="3288" id="P10" start="3284" text="June" />
-<NAME TYPE="DOCTOR" comment="" end="3308" id="P11" start="3292" text="Patricia Barajas" />
+<DATE id="P0" start="16" end="26" text="2081-03-22" TYPE="DATE" comment="" />
+<DATE id="P1" start="68" end="75" text="2/28/81" TYPE="DATE" comment="" />
+<AGE id="P2" start="150" end="152" text="50" TYPE="AGE" comment="" />
+<LOCATION id="P3" start="899" end="908" text="dc comics" TYPE="ORGANIZATION" comment="" />
+<DATE id="P4" start="2207" end="2218" text="22-Mar-2081" TYPE="DATE" comment="" />
+<DATE id="P5" start="2297" end="2304" text="3/14/81" TYPE="DATE" comment="" />
+<AGE id="P6" start="2657" end="2659" text="50" TYPE="AGE" comment="" />
+<DATE id="P7" start="2862" end="2866" text="June" TYPE="DATE" comment="" />
+<DATE id="P8" start="3173" end="3177" text="June" TYPE="DATE" comment="" />
+<DATE id="P9" start="3261" end="3265" text="June" TYPE="DATE" comment="" />
+<DATE id="P10" start="3284" end="3288" text="June" TYPE="DATE" comment="" />
+<NAME id="P11" start="3292" end="3308" text="Patricia Barajas" TYPE="DOCTOR" comment="" />
+<LOCATION id="P13" start="3323" end="3345" text="Gila Regional Hospital" TYPE="HOSPITAL" comment="" />
 </TAGS>
 </deIdi2b2>

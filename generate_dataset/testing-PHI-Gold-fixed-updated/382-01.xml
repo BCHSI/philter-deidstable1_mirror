@@ -1,6 +1,6 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT>
+<TEXT><!***REMOVED***CDATA***REMOVED***
 
 
 Record date: 2082-01-28
@@ -189,18 +189,26 @@ Debra F. Mullen, MD
 
 
 
-</TEXT>
+***REMOVED******REMOVED***></TEXT>
 <TAGS>
-<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2082-01-28" />
-<DATE TYPE="DATE" comment="" end="324" id="P4" start="320" text="1/26" />
-<DATE TYPE="DATE" comment="" end="1411" id="P8" start="1407" text="2062" />
-<DATE TYPE="DATE" comment="" end="1467" id="P9" start="1463" text="2062" />
-<PROFESSION TYPE="PROFESSION" comment="" end="1999" id="P11" start="1986" text="shoe repairer" />
-<NAME TYPE="DOCTOR" comment="" end="3260" id="P13" start="3248" text="Quiana Titus" />
-<CONTACT TYPE="PHONE" comment="" end="3302" id="P15" start="3297" text="33911" />
-<NAME TYPE="DOCTOR" comment="" end="3392" id="P16" start="3387" text="Titus" />
-<NAME TYPE="PATIENT" comment="" end="3465" id="P17" start="3458" text="Aguilar" />
-<DATE TYPE="DATE" comment="" end="3553" id="P19" start="3549" text="1/26" />
-<NAME TYPE="DOCTOR" comment="" end="4647" id="P20" start="4632" text="Debra F. Mullen" />
+<DATE id="P0" start="16" end="26" text="2082-01-28" TYPE="DATE" comment="" />
+<AGE id="P2" start="163" end="165" text="48" TYPE="AGE" comment="" />
+<LOCATION id="P3" start="298" end="319" text="Sheffield Care Center" TYPE="HOSPITAL" comment="" />
+<DATE id="P4" start="320" end="324" text="1/26" TYPE="DATE" comment="" />
+<LOCATION id="P5" start="521" end="537" text="Sheffield Center" TYPE="HOSPITAL" comment="" />
+<LOCATION id="P6" start="999" end="1002" text="HSH" TYPE="HOSPITAL" comment="" />
+<LOCATION id="P7" start="1011" end="1027" text="Sheffield Center" TYPE="HOSPITAL" comment="" />
+<DATE id="P8" start="1407" end="1411" text="2062" TYPE="DATE" comment="" />
+<DATE id="P9" start="1463" end="1467" text="2062" TYPE="DATE" comment="" />
+<AGE id="P10" start="1902" end="1904" text="33" TYPE="AGE" comment="" />
+<PROFESSION id="P11" start="1986" end="1999" text="shoe repairer" TYPE="PROFESSION" comment="" />
+<AGE id="P12" start="2611" end="2613" text="48" TYPE="AGE" comment="" />
+<NAME id="P13" start="3248" end="3260" text="Quiana Titus" TYPE="DOCTOR" comment="" />
+<CONTACT id="P15" start="3297" end="3302" text="33911" TYPE="PHONE" comment="" />
+<NAME id="P16" start="3387" end="3392" text="Titus" TYPE="DOCTOR" comment="" />
+<NAME id="P17" start="3458" end="3465" text="Aguilar" TYPE="PATIENT" comment="" />
+<AGE id="P18" start="3471" end="3473" text="48" TYPE="AGE" comment="" />
+<DATE id="P19" start="3549" end="3553" text="1/26" TYPE="DATE" comment="" />
+<NAME id="P20" start="4632" end="4647" text="Debra F. Mullen" TYPE="DOCTOR" comment="" />
 </TAGS>
 </deIdi2b2>

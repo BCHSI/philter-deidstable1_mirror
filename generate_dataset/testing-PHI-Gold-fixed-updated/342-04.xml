@@ -1,6 +1,6 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT>
+<TEXT><!***REMOVED***CDATA***REMOVED***
 
 
 Record date: 2094-09-07
@@ -98,8 +98,8 @@ Smoking - active
 Elevated LDL
 Obese
 Sedentary
-On statins. Goal LDL &lt;100
-Goal LDL &lt;70
+On statins. Goal LDL <100
+Goal LDL <70
 Plavix 75 mg QD 
 
 3. DIABETES MELLITUS
@@ -130,20 +130,21 @@ Victoria Amy-Armstrong, M.D.
 
 
 
-</TEXT>
+***REMOVED******REMOVED***></TEXT>
 <TAGS>
-<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2094-09-07" />
-<NAME TYPE="PATIENT" comment="" end="53" id="P1" start="43" text="BARR,NICKY" />
-<ID TYPE="MEDICALRECORD" comment="" end="65" id="P2" start="57" text="32612454" />
-<DATE TYPE="DATE" comment="" end="157" id="P4" start="147" text="09/07/2094" />
-<NAME TYPE="PATIENT" comment="" end="184" id="P5" start="180" text="Barr" />
-<NAME TYPE="PATIENT" comment="" end="283" id="P6" start="279" text="Barr" />
-<DATE TYPE="DATE" comment="" end="531" id="P7" start="527" text="6/28" />
-<DATE TYPE="DATE" comment="" end="549" id="P8" start="542" text="5/11/94" />
-<DATE TYPE="DATE" comment="" end="622" id="P9" start="618" text="6/28" />
-<DATE TYPE="DATE" comment="" end="1305" id="P10" start="1299" text="Sunday" />
-<DATE TYPE="DATE" comment="" end="1615" id="P11" start="1608" text="5/11/94" />
-<DATE TYPE="DATE" comment="" end="1649" id="P12" start="1643" text="6/1/94" />
-<NAME TYPE="DOCTOR" comment="" end="3323" id="P13" start="3301" text="Victoria Amy-Armstrong" />
+<DATE id="P0" start="16" end="26" text="2094-09-07" TYPE="DATE" comment="" />
+<NAME id="P1" start="43" end="53" text="BARR,NICKY" TYPE="PATIENT" comment="" />
+<ID id="P2" start="57" end="65" text="32612454" TYPE="MEDICALRECORD" comment="" />
+<LOCATION id="P3" start="66" end="69" text="LDC" TYPE="HOSPITAL" comment="" />
+<DATE id="P4" start="147" end="157" text="09/07/2094" TYPE="DATE" comment="" />
+<NAME id="P5" start="180" end="184" text="Barr" TYPE="PATIENT" comment="" />
+<NAME id="P6" start="279" end="283" text="Barr" TYPE="PATIENT" comment="" />
+<DATE id="P7" start="527" end="531" text="6/28" TYPE="DATE" comment="" />
+<DATE id="P8" start="542" end="549" text="5/11/94" TYPE="DATE" comment="" />
+<DATE id="P9" start="618" end="622" text="6/28" TYPE="DATE" comment="" />
+<DATE id="P10" start="1299" end="1305" text="Sunday" TYPE="DATE" comment="" />
+<DATE id="P11" start="1608" end="1615" text="5/11/94" TYPE="DATE" comment="" />
+<DATE id="P12" start="1643" end="1649" text="6/1/94" TYPE="DATE" comment="" />
+<NAME id="P13" start="3301" end="3323" text="Victoria Amy-Armstrong" TYPE="DOCTOR" comment="" />
 </TAGS>
 </deIdi2b2>

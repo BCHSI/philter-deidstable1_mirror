@@ -1,6 +1,6 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT>
+<TEXT><!***REMOVED***CDATA***REMOVED***
 
 
 Record date: 2096-12-18
@@ -172,37 +172,46 @@ Pager 04401
 
 
 
-</TEXT>
+***REMOVED******REMOVED***></TEXT>
 <TAGS>
-<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2096-12-18" />
-<NAME TYPE="DOCTOR" comment="" end="165" id="P3" start="152" text="Pedro Quesnel" />
-<LOCATION TYPE="STREET" comment="" end="325" id="P6" start="307" text="08 Doncaster Drive" />
-<LOCATION TYPE="CITY" comment="" end="419" id="P7" start="409" text="Pine Bluff" />
-<LOCATION TYPE="STATE" comment="" end="431" id="P8" start="421" text="Washington" />
-<LOCATION TYPE="ZIP" comment="" end="443" id="P9" start="433" text="63879-1383" />
-<CONTACT TYPE="PHONE" comment="" end="476" id="P10" start="464" text="945 669-1044" />
-<CONTACT TYPE="PHONE" comment="" end="494" id="P11" start="482" text="778 210-2105" />
-<DATE TYPE="DATE" comment="" end="536" id="P12" start="526" text="12/18/2096" />
-<NAME TYPE="PATIENT" comment="" end="573" id="P13" start="561" text="Walton, Levi" />
-<ID TYPE="MEDICALRECORD" comment="" end="586" id="P14" start="579" text="2554172" />
-<NAME TYPE="DOCTOR" comment="" end="618" id="P15" start="601" text="Navarrete, Pamela" />
-<DATE TYPE="DATE" comment="" end="634" id="P16" start="624" text="12/18/2096" />
-<DATE TYPE="DATE" comment="" end="704" id="P18" start="699" text="12/18" />
-<DATE TYPE="DATE" comment="" end="774" id="P19" start="766" text="Dec 13th" />
-<NAME TYPE="DOCTOR" comment="" end="799" id="P20" start="791" text="Esposito" />
-<DATE TYPE="DATE" comment="" end="1747" id="P21" start="1743" text="2092" />
-<DATE TYPE="DATE" comment="" end="1812" id="P22" start="1808" text="2087" />
-<DATE TYPE="DATE" comment="" end="2042" id="P23" start="2029" text="December 15th" />
-<DATE TYPE="DATE" comment="" end="4709" id="P29" start="4699" text="12/18/2096" />
-<DATE TYPE="DATE" comment="" end="4854" id="P30" start="4844" text="12/18/2096" />
-<DATE TYPE="DATE" comment="" end="4985" id="P31" start="4975" text="12/18/2096" />
-<DATE TYPE="DATE" comment="" end="5048" id="P32" start="5038" text="12/18/2096" />
-<DATE TYPE="DATE" comment="" end="5189" id="P33" start="5179" text="12/18/2096" />
-<DATE TYPE="DATE" comment="" end="5300" id="P34" start="5290" text="12/18/2096" />
-<DATE TYPE="DATE" comment="" end="5411" id="P35" start="5401" text="12/18/2096" />
-<DATE TYPE="DATE" comment="" end="5489" id="P36" start="5479" text="12/15/2096" />
-<DATE TYPE="DATE" comment="" end="5575" id="P37" start="5567" text="Dec 13th" />
-<NAME TYPE="DOCTOR" comment="" end="6693" id="P39" start="6680" text="Pedro Quesnel" />
-<CONTACT TYPE="PHONE" comment="" end="6741" id="P42" start="6736" text="04401" />
+<DATE id="P0" start="16" end="26" text="2096-12-18" TYPE="DATE" comment="" />
+<LOCATION id="P1" start="71" end="74" text="MCC" TYPE="HOSPITAL" comment="" />
+<NAME id="P3" start="152" end="165" text="Pedro Quesnel" TYPE="DOCTOR" comment="" />
+<LOCATION id="P6" start="307" end="325" text="08 Doncaster Drive" TYPE="STREET" comment="" />
+<LOCATION id="P7" start="409" end="419" text="Pine Bluff" TYPE="CITY" comment="" />
+<LOCATION id="P8" start="421" end="431" text="Washington" TYPE="STATE" comment="" />
+<LOCATION id="P9" start="433" end="443" text="63879-1383" TYPE="ZIP" comment="" />
+<CONTACT id="P10" start="464" end="476" text="945 669-1044" TYPE="PHONE" comment="" />
+<CONTACT id="P11" start="482" end="494" text="778 210-2105" TYPE="PHONE" comment="" />
+<DATE id="P12" start="526" end="536" text="12/18/2096" TYPE="DATE" comment="" />
+<NAME id="P13" start="561" end="573" text="Walton, Levi" TYPE="PATIENT" comment="" />
+<ID id="P14" start="579" end="586" text="2554172" TYPE="MEDICALRECORD" comment="" />
+<NAME id="P15" start="601" end="618" text="Navarrete, Pamela" TYPE="DOCTOR" comment="" />
+<DATE id="P16" start="624" end="634" text="12/18/2096" TYPE="DATE" comment="" />
+<AGE id="P17" start="683" end="685" text="89" TYPE="AGE" comment="" />
+<DATE id="P18" start="699" end="704" text="12/18" TYPE="DATE" comment="" />
+<DATE id="P19" start="766" end="774" text="Dec 13th" TYPE="DATE" comment="" />
+<NAME id="P20" start="791" end="799" text="Esposito" TYPE="DOCTOR" comment="" />
+<DATE id="P21" start="1743" end="1747" text="2092" TYPE="DATE" comment="" />
+<DATE id="P22" start="1808" end="1812" text="2087" TYPE="DATE" comment="" />
+<DATE id="P23" start="2029" end="2042" text="December 15th" TYPE="DATE" comment="" />
+<AGE id="P24" start="4001" end="4005" text="80's" TYPE="AGE" comment="" />
+<AGE id="P25" start="4039" end="4043" text="70's" TYPE="AGE" comment="" />
+<AGE id="P26" start="4170" end="4171" text="7" TYPE="AGE" comment="" />
+<AGE id="P27" start="4175" end="4177" text="15" TYPE="AGE" comment="" />
+<AGE id="P28" start="4200" end="4202" text="15" TYPE="AGE" comment="" />
+<DATE id="P29" start="4699" end="4709" text="12/18/2096" TYPE="DATE" comment="" />
+<DATE id="P30" start="4844" end="4854" text="12/18/2096" TYPE="DATE" comment="" />
+<DATE id="P31" start="4975" end="4985" text="12/18/2096" TYPE="DATE" comment="" />
+<DATE id="P32" start="5038" end="5048" text="12/18/2096" TYPE="DATE" comment="" />
+<DATE id="P33" start="5179" end="5189" text="12/18/2096" TYPE="DATE" comment="" />
+<DATE id="P34" start="5290" end="5300" text="12/18/2096" TYPE="DATE" comment="" />
+<DATE id="P35" start="5401" end="5411" text="12/18/2096" TYPE="DATE" comment="" />
+<DATE id="P36" start="5479" end="5489" text="12/15/2096" TYPE="DATE" comment="" />
+<DATE id="P37" start="5567" end="5575" text="Dec 13th" TYPE="DATE" comment="" />
+<AGE id="P38" start="5843" end="5845" text="89" TYPE="AGE" comment="" />
+<NAME id="P39" start="6680" end="6693" text="Pedro Quesnel" TYPE="DOCTOR" comment="" />
+<LOCATION id="P40" start="6709" end="6712" text="MCC" TYPE="HOSPITAL" comment="" />
+<CONTACT id="P42" start="6736" end="6741" text="04401" TYPE="PHONE" comment="" />
 </TAGS>
 </deIdi2b2>

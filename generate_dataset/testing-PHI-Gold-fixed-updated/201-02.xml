@@ -1,6 +1,6 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT>
+<TEXT><!***REMOVED***CDATA***REMOVED***
 
 
 Record date: 2082-06-13
@@ -53,7 +53,7 @@ Mr. Xayavong is a 61M h/o CAD (anterior STEMI 2077, stents x2 to LAD, 4 stents s
 
 
 
-He receives most of his care at Duluth Clinic-Hermantown (Dr. Moss).  Two weeks ago, he had BiV/ICD placement, as well as left heart catheterization that showed, per verbal report, &amp;#8220;multivessel disease difficult for CABG.&amp;#8221;  He says he also had a chemical stress study but is unsure of the results.  He reports that he was then referred to GNC for high-risk CABG (Dr. U. Wyatt) and potential heart transplant evaluation (Dr. A. Tyson).  
+He receives most of his care at Duluth Clinic-Hermantown (Dr. Moss).  Two weeks ago, he had BiV/ICD placement, as well as left heart catheterization that showed, per verbal report, &#8220;multivessel disease difficult for CABG.&#8221;  He says he also had a chemical stress study but is unsure of the results.  He reports that he was then referred to GNC for high-risk CABG (Dr. U. Wyatt) and potential heart transplant evaluation (Dr. A. Tyson).  
 
 
 
@@ -73,7 +73,7 @@ Negative in detail except as noted otherwise above.
 
 PAST MEDICAL/SURGICAL HISTORY: 
 
-CAD, h/o STEMI 2077, 8 stents including LAD at least x2, BiV/ICD placement 2 weeks ago, last cath Duluth 2 weeks with &amp;#8220;multivessel disease not amenable to CABG&amp;#8221;
+CAD, h/o STEMI 2077, 8 stents including LAD at least x2, BiV/ICD placement 2 weeks ago, last cath Duluth 2 weeks with &#8220;multivessel disease not amenable to CABG&#8221;
 
 BiV/ICD (DDD, St. Jude Promote RF, 5/13/81)
 
@@ -120,7 +120,7 @@ Cx/RCA: minimal irregularities
 
 
 
-FAMILY HISTORY: Heart disease on both mother&amp;#8217;s and father&amp;#8217;s side, but no early CAD in 1st degree relatives. HTN and HL on both sides.
+FAMILY HISTORY: Heart disease on both mother&#8217;s and father&#8217;s side, but no early CAD in 1st degree relatives. HTN and HL on both sides.
 
 
 
@@ -162,25 +162,25 @@ PHYSICAL EXAMINATION
 VITALS: 
 T 96.8 / HF 133 / BP 112/65 / RR 18 / O2 96% RA
 
-General &amp;#8211; NAD, male, pleasant
+General &#8211; NAD, male, pleasant
 
-HEENT &amp;#8211; NC/AT, PERRL, EOMI, sclerae anicteric, OP pink/moist without erythema, exudates, or lesions
+HEENT &#8211; NC/AT, PERRL, EOMI, sclerae anicteric, OP pink/moist without erythema, exudates, or lesions
 
-Neck &amp;#8211; No LAD, JVP flat; carotid pulses 2+ bilaterally
+Neck &#8211; No LAD, JVP flat; carotid pulses 2+ bilaterally
 
-Pulmonary &amp;#8211; no rhonchi, wheezes, +bibasilar few crackles
+Pulmonary &#8211; no rhonchi, wheezes, +bibasilar few crackles
 
-Cardiac &amp;#8211; tachycardic to ~100; nl S1/S2; no m/r/g; 2+pulses in the extremities bilaterally
+Cardiac &#8211; tachycardic to ~100; nl S1/S2; no m/r/g; 2+pulses in the extremities bilaterally
 
-Abdomen &amp;#8211; soft, NT/ND, no rebound/guarding, +BS, no HSM/masses
+Abdomen &#8211; soft, NT/ND, no rebound/guarding, +BS, no HSM/masses
 
-Extremity &amp;#8211; WWP, no c/c/e
+Extremity &#8211; WWP, no c/c/e
 
-Neurology &amp;#8211; CN II-XII grossly intact, good strength/sensation bilaterally
+Neurology &#8211; CN II-XII grossly intact, good strength/sensation bilaterally
 
-Skin &amp;#8211; no concerning lesions
+Skin &#8211; no concerning lesions
 
-Mental status &amp;#8211; alert and oriented x 3
+Mental status &#8211; alert and oriented x 3
 
 
 
@@ -338,34 +338,40 @@ Pager #41393
 
 
 
-</TEXT>
+***REMOVED******REMOVED***></TEXT>
 <TAGS>
-<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2082-06-13" />
-<NAME TYPE="PATIENT" comment="" end="98" id="P1" start="81" text="XAYAVONG, BRANDON" />
-<ID TYPE="MEDICALRECORD" comment="" end="113" id="P2" start="106" text="7826250" />
-<DATE TYPE="DATE" comment="" end="136" id="P3" start="127" text="6/13/2082" />
-<NAME TYPE="DOCTOR" comment="" end="158" id="P4" start="147" text="ERNEST EDGE" />
-<NAME TYPE="DOCTOR" comment="" end="197" id="P5" start="185" text="ASHLEI TYSON" />
-<NAME TYPE="DOCTOR" comment="" end="238" id="P6" start="228" text="BRIAN MOSS" />
-<CONTACT TYPE="PHONE" comment="" end="252" id="P7" start="240" text="772-261-4350" />
-<NAME TYPE="PATIENT" comment="" end="346" id="P8" start="338" text="Xayavong" />
-<DATE TYPE="DATE" comment="" end="384" id="P10" start="380" text="2077" />
-<DATE TYPE="DATE" comment="" end="434" id="P11" start="430" text="2080" />
-<NAME TYPE="DOCTOR" comment="" end="607" id="P13" start="603" text="Moss" />
-<NAME TYPE="DOCTOR" comment="" end="928" id="P15" start="920" text="U. Wyatt" />
-<NAME TYPE="DOCTOR" comment="" end="985" id="P16" start="977" text="A. Tyson" />
-<DATE TYPE="DATE" comment="" end="2508" id="P17" start="2504" text="2077" />
-<DATE TYPE="DATE" comment="" end="2705" id="P19" start="2698" text="5/13/81" />
-<DATE TYPE="DATE" comment="" end="2782" id="P20" start="2772" text="11/04/2077" />
-<DATE TYPE="DATE" comment="" end="2904" id="P21" start="2897" text="10/2077" />
-<DATE TYPE="DATE" comment="" end="3009" id="P22" start="3002" text="10/2077" />
-<PROFESSION TYPE="PROFESSION" comment="" end="3534" id="P23" start="3518" text="purchasing agent" />
-<DATE TYPE="DATE" comment="" end="4940" id="P24" start="4932" text="06/13/82" />
-<DATE TYPE="DATE" comment="" end="5896" id="P25" start="5888" text="06/13/82" />
-<NAME TYPE="PATIENT" comment="" end="6917" id="P26" start="6909" text="Xayavong" />
-<DATE TYPE="DATE" comment="" end="6955" id="P28" start="6951" text="2077" />
-<DATE TYPE="DATE" comment="" end="7005" id="P29" start="7001" text="2080" />
-<NAME TYPE="DOCTOR" comment="" end="8598" id="P30" start="8587" text="Armani Iler" />
-<CONTACT TYPE="PHONE" comment="" end="8649" id="P32" start="8644" text="41393" />
+<DATE id="P0" start="16" end="26" text="2082-06-13" TYPE="DATE" comment="" />
+<NAME id="P1" start="81" end="98" text="XAYAVONG, BRANDON" TYPE="PATIENT" comment="" />
+<ID id="P2" start="106" end="113" text="7826250" TYPE="MEDICALRECORD" comment="" />
+<DATE id="P3" start="127" end="136" text="6/13/2082" TYPE="DATE" comment="" />
+<NAME id="P4" start="147" end="158" text="ERNEST EDGE" TYPE="DOCTOR" comment="" />
+<NAME id="P5" start="185" end="197" text="ASHLEI TYSON" TYPE="DOCTOR" comment="" />
+<NAME id="P6" start="228" end="238" text="BRIAN MOSS" TYPE="DOCTOR" comment="" />
+<CONTACT id="P7" start="240" end="252" text="772-261-4350" TYPE="PHONE" comment="" />
+<NAME id="P8" start="338" end="346" text="Xayavong" TYPE="PATIENT" comment="" />
+<AGE id="P9" start="352" end="354" text="61" TYPE="AGE" comment="" />
+<DATE id="P10" start="380" end="384" text="2077" TYPE="DATE" comment="" />
+<DATE id="P11" start="430" end="434" text="2080" TYPE="DATE" comment="" />
+<LOCATION id="P12" start="573" end="597" text="Duluth Clinic-Hermantown" TYPE="HOSPITAL" comment="" />
+<NAME id="P13" start="603" end="607" text="Moss" TYPE="DOCTOR" comment="" />
+<LOCATION id="P14" start="892" end="895" text="GNC" TYPE="HOSPITAL" comment="" />
+<NAME id="P15" start="920" end="928" text="U. Wyatt" TYPE="DOCTOR" comment="" />
+<NAME id="P16" start="977" end="985" text="A. Tyson" TYPE="DOCTOR" comment="" />
+<DATE id="P17" start="2504" end="2508" text="2077" TYPE="DATE" comment="" />
+<LOCATION id="P18" start="2587" end="2593" text="Duluth" TYPE="HOSPITAL" comment="" />
+<DATE id="P19" start="2698" end="2705" text="5/13/81" TYPE="DATE" comment="" />
+<DATE id="P20" start="2772" end="2782" text="11/04/2077" TYPE="DATE" comment="" />
+<DATE id="P21" start="2897" end="2904" text="10/2077" TYPE="DATE" comment="" />
+<DATE id="P22" start="3002" end="3009" text="10/2077" TYPE="DATE" comment="" />
+<PROFESSION id="P23" start="3518" end="3534" text="purchasing agent" TYPE="PROFESSION" comment="" />
+<DATE id="P24" start="4932" end="4940" text="06/13/82" TYPE="DATE" comment="" />
+<DATE id="P25" start="5888" end="5896" text="06/13/82" TYPE="DATE" comment="" />
+<NAME id="P26" start="6909" end="6917" text="Xayavong" TYPE="PATIENT" comment="" />
+<AGE id="P27" start="6923" end="6925" text="61" TYPE="AGE" comment="" />
+<DATE id="P28" start="6951" end="6955" text="2077" TYPE="DATE" comment="" />
+<DATE id="P29" start="7001" end="7005" text="2080" TYPE="DATE" comment="" />
+<NAME id="P30" start="8587" end="8598" text="Armani Iler" TYPE="DOCTOR" comment="" />
+<LOCATION id="P31" start="8609" end="8612" text="GNC" TYPE="HOSPITAL" comment="" />
+<CONTACT id="P32" start="8644" end="8649" text="41393" TYPE="PHONE" comment="" />
 </TAGS>
 </deIdi2b2>

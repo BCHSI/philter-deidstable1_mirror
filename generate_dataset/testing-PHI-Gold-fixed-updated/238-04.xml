@@ -1,6 +1,6 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT>
+<TEXT><!***REMOVED***CDATA***REMOVED***
 
 
 Record date: 2082-06-23
@@ -220,32 +220,36 @@ Document Status: Preliminary
 
 
 
-</TEXT>
+***REMOVED******REMOVED***></TEXT>
 <TAGS>
-<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2082-06-23" />
-<NAME TYPE="PATIENT" comment="" end="142" id="P2" start="134" text="Vanmeter" />
-<DATE TYPE="DATE" comment="" end="1128" id="P3" start="1124" text="2074" />
-<DATE TYPE="DATE" comment="" end="1160" id="P4" start="1156" text="2074" />
-<DATE TYPE="DATE" comment="" end="3056" id="P8" start="3048" text="05/18/82" />
-<DATE TYPE="DATE" comment="" end="3156" id="P9" start="3148" text="11/14/79" />
-<DATE TYPE="DATE" comment="" end="3256" id="P10" start="3248" text="04/21/79" />
-<DATE TYPE="DATE" comment="" end="3377" id="P11" start="3369" text="05/18/82" />
-<DATE TYPE="DATE" comment="" end="3396" id="P12" start="3388" text="11/14/79" />
-<DATE TYPE="DATE" comment="" end="3415" id="P13" start="3407" text="04/21/79" />
-<DATE TYPE="DATE" comment="" end="3523" id="P14" start="3515" text="10/08/81" />
-<DATE TYPE="DATE" comment="" end="3596" id="P15" start="3588" text="01/14/81" />
-<DATE TYPE="DATE" comment="" end="3669" id="P16" start="3661" text="05/23/78" />
-<DATE TYPE="DATE" comment="" end="3792" id="P17" start="3784" text="12/22/80" />
-<DATE TYPE="DATE" comment="" end="3861" id="P18" start="3853" text="05/18/82" />
-<NAME TYPE="PATIENT" comment="" end="3931" id="P19" start="3923" text="Vanmeter" />
-<DATE TYPE="DATE" comment="" end="4082" id="P20" start="4070" text="January 2082" />
-<DATE TYPE="DATE" comment="" end="4173" id="P21" start="4164" text="June 2081" />
-<DATE TYPE="DATE" comment="" end="5213" id="P22" start="5204" text="6/23/2082" />
-<DATE TYPE="DATE" comment="" end="5289" id="P23" start="5279" text="11/21/2072" />
-<DATE TYPE="DATE" comment="" end="5386" id="P24" start="5376" text="08/20/2078" />
-<DATE TYPE="DATE" comment="" end="5591" id="P25" start="5581" text="04/14/2081" />
-<NAME TYPE="DOCTOR" comment="" end="5774" id="P26" start="5755" text="Barbara T. Sandoval" />
-<CONTACT TYPE="PHONE" comment="" end="5791" id="P27" start="5786" text="19360" />
-<NAME TYPE="DOCTOR" comment="" end="5824" id="P28" start="5809" text="Bryan Edmondson" />
+<DATE id="P0" start="16" end="26" text="2082-06-23" TYPE="DATE" comment="" />
+<LOCATION id="P1" start="65" end="90" text="BROADLAWNS MEDICAL CENTER" TYPE="HOSPITAL" comment="" />
+<NAME id="P2" start="134" end="142" text="Vanmeter" TYPE="PATIENT" comment="" />
+<DATE id="P3" start="1124" end="1128" text="2074" TYPE="DATE" comment="" />
+<DATE id="P4" start="1156" end="1160" text="2074" TYPE="DATE" comment="" />
+<AGE id="P5" start="1728" end="1731" text="60s" TYPE="AGE" comment="" />
+<AGE id="P6" start="1793" end="1796" text="50s" TYPE="AGE" comment="" />
+<LOCATION id="P7" start="1898" end="1905" text="Bermuda" TYPE="COUNTRY" comment="" />
+<DATE id="P8" start="3048" end="3056" text="05/18/82" TYPE="DATE" comment="" />
+<DATE id="P9" start="3148" end="3156" text="11/14/79" TYPE="DATE" comment="" />
+<DATE id="P10" start="3248" end="3256" text="04/21/79" TYPE="DATE" comment="" />
+<DATE id="P11" start="3369" end="3377" text="05/18/82" TYPE="DATE" comment="" />
+<DATE id="P12" start="3388" end="3396" text="11/14/79" TYPE="DATE" comment="" />
+<DATE id="P13" start="3407" end="3415" text="04/21/79" TYPE="DATE" comment="" />
+<DATE id="P14" start="3515" end="3523" text="10/08/81" TYPE="DATE" comment="" />
+<DATE id="P15" start="3588" end="3596" text="01/14/81" TYPE="DATE" comment="" />
+<DATE id="P16" start="3661" end="3669" text="05/23/78" TYPE="DATE" comment="" />
+<DATE id="P17" start="3784" end="3792" text="12/22/80" TYPE="DATE" comment="" />
+<DATE id="P18" start="3853" end="3861" text="05/18/82" TYPE="DATE" comment="" />
+<NAME id="P19" start="3923" end="3931" text="Vanmeter" TYPE="PATIENT" comment="" />
+<DATE id="P20" start="4070" end="4082" text="January 2082" TYPE="DATE" comment="" />
+<DATE id="P21" start="4164" end="4173" text="June 2081" TYPE="DATE" comment="" />
+<DATE id="P22" start="5204" end="5213" text="6/23/2082" TYPE="DATE" comment="" />
+<DATE id="P23" start="5279" end="5289" text="11/21/2072" TYPE="DATE" comment="" />
+<DATE id="P24" start="5376" end="5386" text="08/20/2078" TYPE="DATE" comment="" />
+<DATE id="P25" start="5581" end="5591" text="04/14/2081" TYPE="DATE" comment="" />
+<NAME id="P26" start="5755" end="5774" text="Barbara T. Sandoval" TYPE="DOCTOR" comment="" />
+<CONTACT id="P27" start="5786" end="5791" text="19360" TYPE="PHONE" comment="" />
+<NAME id="P28" start="5809" end="5824" text="Bryan Edmondson" TYPE="DOCTOR" comment="" />
 </TAGS>
 </deIdi2b2>

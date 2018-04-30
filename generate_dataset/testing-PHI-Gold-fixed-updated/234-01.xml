@@ -1,6 +1,6 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT>
+<TEXT><!***REMOVED***CDATA***REMOVED***
 
 
 Record date: 2074-09-03
@@ -56,25 +56,28 @@ DV: 09/03/74
 
 
 
-</TEXT>
+***REMOVED******REMOVED***></TEXT>
 <TAGS>
-<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2074-09-03" />
-<LOCATION TYPE="STREET" comment="" end="86" id="P3" start="65" text="99 Fitzpatrick Circle" />
-<NAME TYPE="PATIENT" comment="" end="148" id="P4" start="124" text="SERGIO-STEVEN, FRANCESCA" />
-<LOCATION TYPE="CITY" comment="" end="155" id="P5" start="149" text="Adrian" />
-<LOCATION TYPE="STATE" comment="" end="159" id="P6" start="157" text="TN" />
-<LOCATION TYPE="ZIP" comment="" end="165" id="P7" start="160" text="13467" />
-<ID TYPE="MEDICALRECORD" comment="" end="216" id="P8" start="208" text="80780896" />
-<CONTACT TYPE="PHONE" comment="" end="231" id="P9" start="217" text="(433) 758-3431" />
-<DATE TYPE="DATE" comment="" end="282" id="P10" start="274" text="09/03/74" />
-<NAME TYPE="DOCTOR" comment="" end="321" id="P11" start="307" text="Armando Newton" />
-<NAME TYPE="PATIENT" comment="" end="357" id="P12" start="334" text="Francesca Sergio-Steven" />
-<NAME TYPE="PATIENT" comment="" end="3415" id="P15" start="3402" text="Sergio-Steven" />
-<NAME TYPE="DOCTOR" comment="" end="4360" id="P16" start="4348" text="Yakov Ferris" />
-<NAME TYPE="DOCTOR" comment="" end="4392" id="P17" start="4380" text="Yakov Ferris" />
-<ID TYPE="IDNUM" comment="" end="4424" id="P18" start="4415" text="5-4672574" />
-<DATE TYPE="DATE" comment="" end="4448" id="P19" start="4440" text="09/03/74" />
-<DATE TYPE="DATE" comment="" end="4461" id="P20" start="4453" text="09/03/74" />
-<DATE TYPE="DATE" comment="" end="4474" id="P21" start="4466" text="09/03/74" />
+<DATE id="P0" start="16" end="26" text="2074-09-03" TYPE="DATE" comment="" />
+<LOCATION id="P1" start="29" end="32" text="HSP" TYPE="HOSPITAL" comment="" />
+<LOCATION id="P3" start="65" end="86" text="99 Fitzpatrick Circle" TYPE="STREET" comment="" />
+<NAME id="P4" start="124" end="148" text="SERGIO-STEVEN, FRANCESCA" TYPE="PATIENT" comment="" />
+<LOCATION id="P5" start="149" end="155" text="Adrian" TYPE="CITY" comment="" />
+<LOCATION id="P6" start="157" end="159" text="TN" TYPE="STATE" comment="" />
+<LOCATION id="P7" start="160" end="165" text="13467" TYPE="ZIP" comment="" />
+<ID id="P8" start="208" end="216" text="80780896" TYPE="MEDICALRECORD" comment="" />
+<CONTACT id="P9" start="217" end="231" text="(433) 758-3431" TYPE="PHONE" comment="" />
+<DATE id="P10" start="274" end="282" text="09/03/74" TYPE="DATE" comment="" />
+<NAME id="P11" start="307" end="321" text="Armando Newton" TYPE="DOCTOR" comment="" />
+<NAME id="P12" start="334" end="357" text="Francesca Sergio-Steven" TYPE="PATIENT" comment="" />
+<AGE id="P13" start="363" end="365" text="72" TYPE="AGE" comment="" />
+<LOCATION id="P14" start="2249" end="2257" text="Paraguay" TYPE="COUNTRY" comment="" />
+<NAME id="P15" start="3402" end="3415" text="Sergio-Steven" TYPE="PATIENT" comment="" />
+<NAME id="P16" start="4348" end="4360" text="Yakov Ferris" TYPE="DOCTOR" comment="" />
+<NAME id="P17" start="4380" end="4392" text="Yakov Ferris" TYPE="DOCTOR" comment="" />
+<ID id="P18" start="4415" end="4424" text="5-4672574" TYPE="IDNUM" comment="" />
+<DATE id="P19" start="4440" end="4448" text="09/03/74" TYPE="DATE" comment="" />
+<DATE id="P20" start="4453" end="4461" text="09/03/74" TYPE="DATE" comment="" />
+<DATE id="P21" start="4466" end="4474" text="09/03/74" TYPE="DATE" comment="" />
 </TAGS>
 </deIdi2b2>

@@ -1,6 +1,6 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT>
+<TEXT><!***REMOVED***CDATA***REMOVED***
 
 
 Record date: 2092-12-31
@@ -139,7 +139,7 @@ Lipitor 80mg po qd
 
 Nasonex 50mcg/spray nasal qd 2 sprays/nostril
 
-Nitro stat 0.3mg SL PRN chest pain,max 3 pills &amp;amp; call pcp
+Nitro stat 0.3mg SL PRN chest pain,max 3 pills &amp; call pcp
 
 ranitidine hcl 300mg po qhs
 
@@ -237,26 +237,27 @@ Signed electronically by Riddle, Rhonda on Jan 07, 2093
 
 
 
-</TEXT>
+***REMOVED******REMOVED***></TEXT>
 <TAGS>
-<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2092-12-31" />
-<DATE TYPE="DATE" comment="" end="1879" id="P2" start="1875" text="1/86" />
-<DATE TYPE="DATE" comment="" end="1907" id="P3" start="1903" text="1/84" />
-<DATE TYPE="DATE" comment="" end="1919" id="P4" start="1913" text="3/2091" />
-<DATE TYPE="DATE" comment="" end="1958" id="P5" start="1953" text="12/92" />
-<DATE TYPE="DATE" comment="" end="2242" id="P6" start="2229" text="November 2091" />
-<DATE TYPE="DATE" comment="" end="3570" id="P7" start="3561" text="2/06/2087" />
-<DATE TYPE="DATE" comment="" end="3627" id="P8" start="3618" text="3/25/2087" />
-<DATE TYPE="DATE" comment="" end="3643" id="P9" start="3633" text="12/31/2092" />
-<DATE TYPE="DATE" comment="" end="3695" id="P10" start="3686" text="1/24/2090" />
-<DATE TYPE="DATE" comment="" end="3734" id="P11" start="3725" text="4/27/2090" />
-<DATE TYPE="DATE" comment="" end="3797" id="P12" start="3787" text="12/11/2092" />
-<DATE TYPE="DATE" comment="" end="3813" id="P13" start="3803" text="12/31/2092" />
-<DATE TYPE="DATE" comment="" end="3907" id="P14" start="3897" text="12/31/2092" />
-<DATE TYPE="DATE" comment="" end="3961" id="P15" start="3951" text="12/15/2092" />
-<DATE TYPE="DATE" comment="" end="3977" id="P16" start="3967" text="12/31/2092" />
-<DATE TYPE="DATE" comment="" end="5023" id="P17" start="5019" text="5/92" />
-<NAME TYPE="DOCTOR" comment="" end="5974" id="P18" start="5960" text="Riddle, Rhonda" />
-<DATE TYPE="DATE" comment="" end="5990" id="P19" start="5978" text="Jan 07, 2093" />
+<DATE id="P0" start="16" end="26" text="2092-12-31" TYPE="DATE" comment="" />
+<LOCATION id="P1" start="62" end="86" text="HOLDEN DISTRICT HOSPITAL" TYPE="HOSPITAL" comment="" />
+<DATE id="P2" start="1875" end="1879" text="1/86" TYPE="DATE" comment="" />
+<DATE id="P3" start="1903" end="1907" text="1/84" TYPE="DATE" comment="" />
+<DATE id="P4" start="1913" end="1919" text="3/2091" TYPE="DATE" comment="" />
+<DATE id="P5" start="1953" end="1958" text="12/92" TYPE="DATE" comment="" />
+<DATE id="P6" start="2229" end="2242" text="November 2091" TYPE="DATE" comment="" />
+<DATE id="P7" start="3561" end="3570" text="2/06/2087" TYPE="DATE" comment="" />
+<DATE id="P8" start="3618" end="3627" text="3/25/2087" TYPE="DATE" comment="" />
+<DATE id="P9" start="3633" end="3643" text="12/31/2092" TYPE="DATE" comment="" />
+<DATE id="P10" start="3686" end="3695" text="1/24/2090" TYPE="DATE" comment="" />
+<DATE id="P11" start="3725" end="3734" text="4/27/2090" TYPE="DATE" comment="" />
+<DATE id="P12" start="3787" end="3797" text="12/11/2092" TYPE="DATE" comment="" />
+<DATE id="P13" start="3803" end="3813" text="12/31/2092" TYPE="DATE" comment="" />
+<DATE id="P14" start="3897" end="3907" text="12/31/2092" TYPE="DATE" comment="" />
+<DATE id="P15" start="3951" end="3961" text="12/15/2092" TYPE="DATE" comment="" />
+<DATE id="P16" start="3967" end="3977" text="12/31/2092" TYPE="DATE" comment="" />
+<DATE id="P17" start="5019" end="5023" text="5/92" TYPE="DATE" comment="" />
+<NAME id="P18" start="5960" end="5974" text="Riddle, Rhonda" TYPE="DOCTOR" comment="" />
+<DATE id="P19" start="5978" end="5990" text="Jan 07, 2093" TYPE="DATE" comment="" />
 </TAGS>
 </deIdi2b2>

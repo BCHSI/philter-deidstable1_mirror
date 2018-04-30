@@ -1,6 +1,6 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT>
+<TEXT><!***REMOVED***CDATA***REMOVED***
 
 
 Record date: 2121-03-28
@@ -203,7 +203,7 @@ Neck: supple no nodes; thyroid not enlarged, no nodules. no bruits
 
 CHEST: 
 
- some crackles at bases, R&gt;L; no wheezes, rhonchi
+ some crackles at bases, R>L; no wheezes, rhonchi
 
 Extrem: 1+ edema 
 
@@ -299,12 +299,12 @@ Note: reviewed old heme values. Tends to run high WBC, low lymphs, high ESR. ???
 
 
 
-</TEXT>
+***REMOVED******REMOVED***></TEXT>
 <TAGS>
-<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2121-03-28" />
-<NAME TYPE="DOCTOR" comment="" end="1106" id="P1" start="1099" text="Ulbrich" />
-<NAME TYPE="DOCTOR" comment="" end="1235" id="P2" start="1228" text="Ulbrich" />
-<NAME TYPE="DOCTOR" comment="" end="2941" id="P3" start="2934" text="Ulbrich" />
-<NAME TYPE="DOCTOR" comment="" end="4036" id="P4" start="4029" text="Ulbrich" />
+<DATE id="P0" start="16" end="26" text="2121-03-28" TYPE="DATE" comment="" />
+<NAME id="P1" start="1099" end="1106" text="Ulbrich" TYPE="DOCTOR" comment="" />
+<NAME id="P2" start="1228" end="1235" text="Ulbrich" TYPE="DOCTOR" comment="" />
+<NAME id="P3" start="2934" end="2941" text="Ulbrich" TYPE="DOCTOR" comment="" />
+<NAME id="P4" start="4029" end="4036" text="Ulbrich" TYPE="DOCTOR" comment="" />
 </TAGS>
 </deIdi2b2>

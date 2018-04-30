@@ -1,6 +1,6 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT>
+<TEXT><!***REMOVED***CDATA***REMOVED***
 
 
 Record date: 2082-01-10
@@ -43,19 +43,21 @@ Dictated by:  CHRISTOPHER LEMUS, M.D.       CL58
 
 
 
-</TEXT>
+***REMOVED******REMOVED***></TEXT>
 <TAGS>
-<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2082-01-10" />
-<NAME TYPE="PATIENT" comment="" end="89" id="P2" start="75" text="BRANCH,EARNEST" />
-<ID TYPE="MEDICALRECORD" comment="" end="103" id="P3" start="92" text="530-23-69-1" />
-<DATE TYPE="DATE" comment="" end="145" id="P4" start="137" text="01/10/82" />
-<NAME TYPE="DOCTOR" comment="" end="220" id="P5" start="211" text="Whittaker" />
-<ID TYPE="IDNUM" comment="" end="1665" id="P7" start="1655" text="ED832/1818" />
-<NAME TYPE="DOCTOR" comment="" end="1684" id="P8" start="1667" text="CHRISTOPHER LEMUS" />
-<NAME TYPE="USERNAME" comment="" end="1701" id="P9" start="1697" text="CL58" />
-<DATE TYPE="DATE" comment="" end="1736" id="P10" start="1728" text="01/10/82" />
-<DATE TYPE="DATE" comment="" end="1803" id="P11" start="1795" text="01/11/82" />
-<NAME TYPE="DOCTOR" comment="" end="1836" id="P12" start="1819" text="CHRISTOPHER LEMUS" />
-<NAME TYPE="USERNAME" comment="" end="1853" id="P13" start="1849" text="CL58" />
+<DATE id="P0" start="16" end="26" text="2082-01-10" TYPE="DATE" comment="" />
+<LOCATION id="P1" start="49" end="51" text="AH" TYPE="HOSPITAL" comment="" />
+<NAME id="P2" start="75" end="89" text="BRANCH,EARNEST" TYPE="PATIENT" comment="" />
+<ID id="P3" start="92" end="103" text="530-23-69-1" TYPE="MEDICALRECORD" comment="" />
+<DATE id="P4" start="137" end="145" text="01/10/82" TYPE="DATE" comment="" />
+<NAME id="P5" start="211" end="220" text="Whittaker" TYPE="DOCTOR" comment="" />
+<AGE id="P6" start="377" end="379" text="50" TYPE="AGE" comment="" />
+<ID id="P7" start="1655" end="1665" text="ED832/1818" TYPE="IDNUM" comment="" />
+<NAME id="P8" start="1667" end="1684" text="CHRISTOPHER LEMUS" TYPE="DOCTOR" comment="" />
+<NAME id="P9" start="1697" end="1701" text="CL58" TYPE="USERNAME" comment="" />
+<DATE id="P10" start="1728" end="1736" text="01/10/82" TYPE="DATE" comment="" />
+<DATE id="P11" start="1795" end="1803" text="01/11/82" TYPE="DATE" comment="" />
+<NAME id="P12" start="1819" end="1836" text="CHRISTOPHER LEMUS" TYPE="DOCTOR" comment="" />
+<NAME id="P13" start="1849" end="1853" text="CL58" TYPE="USERNAME" comment="" />
 </TAGS>
 </deIdi2b2>

@@ -1,6 +1,6 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT>
+<TEXT><!***REMOVED***CDATA***REMOVED***
 
 
 Record date: 2072-03-01
@@ -231,18 +231,20 @@ eScription document:4-2135677 IFFocus
 
 
 
-</TEXT>
+***REMOVED******REMOVED***></TEXT>
 <TAGS>
-<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2072-03-01" />
-<ID TYPE="MEDICALRECORD" comment="" end="44" id="P1" start="36" text="91156456" />
-<NAME TYPE="PATIENT" comment="" end="58" id="P2" start="45" text="HEATH, HANNAH" />
-<DATE TYPE="DATE" comment="" end="67" id="P3" start="59" text="03/01/72" />
-<NAME TYPE="DOCTOR" comment="" end="87" id="P4" start="68" text="YEAGER, CHRISTOPHER" />
-<NAME TYPE="DOCTOR" comment="" end="129" id="P5" start="117" text="Rosalia West" />
-<NAME TYPE="DOCTOR" comment="" end="6329" id="P8" start="6310" text="YEAGER, CHRISTOPHER" />
-<DATE TYPE="DATE" comment="" end="6347" id="P9" start="6339" text="03/01/72" />
-<DATE TYPE="DATE" comment="" end="6360" id="P10" start="6352" text="03/01/72" />
-<NAME TYPE="DOCTOR" comment="" end="6394" id="P11" start="6375" text="YEAGER, CHRISTOPHER" />
-<ID TYPE="IDNUM" comment="" end="6425" id="P12" start="6416" text="4-2135677" />
+<DATE id="P0" start="16" end="26" text="2072-03-01" TYPE="DATE" comment="" />
+<ID id="P1" start="36" end="44" text="91156456" TYPE="MEDICALRECORD" comment="" />
+<NAME id="P2" start="45" end="58" text="HEATH, HANNAH" TYPE="PATIENT" comment="" />
+<DATE id="P3" start="59" end="67" text="03/01/72" TYPE="DATE" comment="" />
+<NAME id="P4" start="68" end="87" text="YEAGER, CHRISTOPHER" TYPE="DOCTOR" comment="" />
+<NAME id="P5" start="117" end="129" text="Rosalia West" TYPE="DOCTOR" comment="" />
+<AGE id="P6" start="478" end="480" text="76" TYPE="AGE" comment="" />
+<AGE id="P7" start="3207" end="3209" text="76" TYPE="AGE" comment="" />
+<NAME id="P8" start="6310" end="6329" text="YEAGER, CHRISTOPHER" TYPE="DOCTOR" comment="" />
+<DATE id="P9" start="6339" end="6347" text="03/01/72" TYPE="DATE" comment="" />
+<DATE id="P10" start="6352" end="6360" text="03/01/72" TYPE="DATE" comment="" />
+<NAME id="P11" start="6375" end="6394" text="YEAGER, CHRISTOPHER" TYPE="DOCTOR" comment="" />
+<ID id="P12" start="6416" end="6425" text="4-2135677" TYPE="IDNUM" comment="" />
 </TAGS>
 </deIdi2b2>

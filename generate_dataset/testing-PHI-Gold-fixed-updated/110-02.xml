@@ -1,6 +1,6 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT>
+<TEXT><!***REMOVED***CDATA***REMOVED***
 
 
 Record date: 2075-01-07
@@ -73,15 +73,15 @@ GPP/church/olinger
 
 
 
-</TEXT>
+***REMOVED******REMOVED***></TEXT>
 <TAGS>
-<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2075-01-07" />
-<NAME TYPE="PATIENT" comment="" end="56" id="P1" start="41" text="Villegas, Yosef" />
-<ID TYPE="MEDICALRECORD" comment="" end="77" id="P2" start="70" text="8249813" />
-<NAME TYPE="DOCTOR" comment="" end="1263" id="P3" start="1258" text="Hobbs" />
-<NAME TYPE="DOCTOR" comment="" end="1300" id="P4" start="1284" text="Gilbert P. Perez" />
-<NAME TYPE="DOCTOR" comment="" end="1313" id="P5" start="1310" text="GPP" />
-<NAME TYPE="DOCTOR" comment="" end="1320" id="P6" start="1314" text="church" />
-<NAME TYPE="DOCTOR" comment="" end="1328" id="P7" start="1321" text="olinger" />
+<DATE id="P0" start="16" end="26" text="2075-01-07" TYPE="DATE" comment="" />
+<NAME id="P1" start="41" end="56" text="Villegas, Yosef" TYPE="PATIENT" comment="" />
+<ID id="P2" start="70" end="77" text="8249813" TYPE="MEDICALRECORD" comment="" />
+<NAME id="P3" start="1258" end="1263" text="Hobbs" TYPE="DOCTOR" comment="" />
+<NAME id="P4" start="1284" end="1300" text="Gilbert P. Perez" TYPE="DOCTOR" comment="" />
+<NAME id="P5" start="1310" end="1313" text="GPP" TYPE="DOCTOR" comment="" />
+<NAME id="P6" start="1314" end="1320" text="church" TYPE="DOCTOR" comment="" />
+<NAME id="P7" start="1321" end="1328" text="olinger" TYPE="DOCTOR" comment="" />
 </TAGS>
 </deIdi2b2>

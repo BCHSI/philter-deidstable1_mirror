@@ -1,12 +1,12 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT>
+<TEXT><!***REMOVED***CDATA***REMOVED***
 
 
 Record date: 2090-01-03
 
 
-CC: f/up of HTN &amp;amp; DM management
+CC: f/up of HTN &amp; DM management
 
 
 HPI: 61 yo female who presents back to clinic having an upcoming eye appt again
@@ -77,18 +77,24 @@ Singh, M.D.
 
 
 
-</TEXT>
+***REMOVED******REMOVED***></TEXT>
 <TAGS>
-<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2090-01-03" />
-<DATE TYPE="DATE" comment="" end="179" id="P3" start="172" text="1/12/90" />
-<DATE TYPE="DATE" comment="" end="210" id="P4" start="203" text="6/15/89" />
-<DATE TYPE="DATE" comment="" end="511" id="P7" start="505" text="1/2082" />
-<DATE TYPE="DATE" comment="" end="600" id="P8" start="597" text="'67" />
-<DATE TYPE="DATE" comment="" end="701" id="P9" start="694" text="1/16/88" />
-<DATE TYPE="DATE" comment="" end="873" id="P10" start="866" text="7/23/88" />
-<DATE TYPE="DATE" comment="" end="905" id="P11" start="898" text="4/20/89" />
-<DATE TYPE="DATE" comment="" end="2178" id="P12" start="2172" text="6/2089" />
-<DATE TYPE="DATE" comment="" end="2348" id="P14" start="2341" text="1/12/90" />
-<NAME TYPE="DOCTOR" comment="" end="2365" id="P16" start="2360" text="Singh" />
+<DATE id="P0" start="16" end="26" text="2090-01-03" TYPE="DATE" comment="" />
+<AGE id="P1" start="72" end="74" text="61" TYPE="AGE" comment="" />
+<LOCATION id="P2" start="150" end="171" text="Harmon Doctors Clinic" TYPE="HOSPITAL" comment="" />
+<DATE id="P3" start="172" end="179" text="1/12/90" TYPE="DATE" comment="" />
+<DATE id="P4" start="203" end="210" text="6/15/89" TYPE="DATE" comment="" />
+<LOCATION id="P5" start="230" end="232" text="MS" TYPE="HOSPITAL" comment="" />
+<AGE id="P6" start="465" end="467" text="52" TYPE="AGE" comment="" />
+<DATE id="P7" start="505" end="511" text="1/2082" TYPE="DATE" comment="" />
+<DATE id="P8" start="597" end="600" text="'67" TYPE="DATE" comment="" />
+<DATE id="P9" start="694" end="701" text="1/16/88" TYPE="DATE" comment="" />
+<DATE id="P10" start="866" end="873" text="7/23/88" TYPE="DATE" comment="" />
+<DATE id="P11" start="898" end="905" text="4/20/89" TYPE="DATE" comment="" />
+<DATE id="P12" start="2172" end="2178" text="6/2089" TYPE="DATE" comment="" />
+<LOCATION id="P13" start="2221" end="2223" text="MS" TYPE="HOSPITAL" comment="" />
+<DATE id="P14" start="2341" end="2348" text="1/12/90" TYPE="DATE" comment="" />
+<LOCATION id="P15" start="2352" end="2355" text="HDC" TYPE="HOSPITAL" comment="" />
+<NAME id="P16" start="2360" end="2365" text="Singh" TYPE="DOCTOR" comment="" />
 </TAGS>
 </deIdi2b2>

@@ -1,6 +1,6 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT>
+<TEXT><!***REMOVED***CDATA***REMOVED***
 
 
 Record date: 2070-07-28
@@ -106,24 +106,27 @@ DV: 07/28/70
 
 
 
-</TEXT>
+***REMOVED******REMOVED***></TEXT>
 <TAGS>
-<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2070-07-28" />
-<LOCATION TYPE="STREET" comment="" end="156" id="P3" start="140" text="28 Bailey Street" />
-<LOCATION TYPE="CITY" comment="" end="228" id="P5" start="215" text="North Webster" />
-<LOCATION TYPE="STATE" comment="" end="232" id="P6" start="230" text="SD" />
-<LOCATION TYPE="ZIP" comment="" end="239" id="P7" start="234" text="48493" />
-<NAME TYPE="PATIENT" comment="" end="261" id="P8" start="244" text="Chandler, Jessica" />
-<ID TYPE="MEDICALRECORD" comment="" end="278" id="P9" start="267" text="748-80-38-0" />
-<DATE TYPE="DATE" comment="" end="287" id="P10" start="279" text="07/28/70" />
-<NAME TYPE="PATIENT" comment="" end="297" id="P11" start="290" text="Jessica" />
-<NAME TYPE="PATIENT" comment="" end="2224" id="P12" start="2207" text="Chandler, Jessica" />
-<ID TYPE="MEDICALRECORD" comment="" end="2241" id="P13" start="2230" text="748-80-38-0" />
-<DATE TYPE="DATE" comment="" end="2250" id="P14" start="2242" text="07/28/70" />
-<NAME TYPE="DOCTOR" comment="" end="3925" id="P17" start="3912" text="Ruby C. Ayala" />
-<DATE TYPE="DATE" comment="" end="3946" id="P18" start="3938" text="07/28/70" />
-<DATE TYPE="DATE" comment="" end="3959" id="P19" start="3951" text="07/31/70" />
-<DATE TYPE="DATE" comment="" end="3972" id="P20" start="3964" text="07/28/70" />
-<NAME TYPE="DOCTOR" comment="" end="3981" id="P21" start="3974" text="naranjo" />
+<DATE id="P0" start="16" end="26" text="2070-07-28" TYPE="DATE" comment="" />
+<LOCATION id="P1" start="89" end="98" text="FRANKFORT" TYPE="HOSPITAL" comment="" />
+<LOCATION id="P3" start="140" end="156" text="28 Bailey Street" TYPE="STREET" comment="" />
+<LOCATION id="P5" start="215" end="228" text="North Webster" TYPE="CITY" comment="" />
+<LOCATION id="P6" start="230" end="232" text="SD" TYPE="STATE" comment="" />
+<LOCATION id="P7" start="234" end="239" text="48493" TYPE="ZIP" comment="" />
+<NAME id="P8" start="244" end="261" text="Chandler, Jessica" TYPE="PATIENT" comment="" />
+<ID id="P9" start="267" end="278" text="748-80-38-0" TYPE="MEDICALRECORD" comment="" />
+<DATE id="P10" start="279" end="287" text="07/28/70" TYPE="DATE" comment="" />
+<NAME id="P11" start="290" end="297" text="Jessica" TYPE="PATIENT" comment="" />
+<NAME id="P12" start="2207" end="2224" text="Chandler, Jessica" TYPE="PATIENT" comment="" />
+<ID id="P13" start="2230" end="2241" text="748-80-38-0" TYPE="MEDICALRECORD" comment="" />
+<DATE id="P14" start="2242" end="2250" text="07/28/70" TYPE="DATE" comment="" />
+<LOCATION id="P15" start="3110" end="3134" text="Frankfort State Hospital" TYPE="HOSPITAL" comment="" />
+<LOCATION id="P16" start="3364" end="3375" text="Sibley Care" TYPE="HOSPITAL" comment="" />
+<NAME id="P17" start="3912" end="3925" text="Ruby C. Ayala" TYPE="DOCTOR" comment="" />
+<DATE id="P18" start="3938" end="3946" text="07/28/70" TYPE="DATE" comment="" />
+<DATE id="P19" start="3951" end="3959" text="07/31/70" TYPE="DATE" comment="" />
+<DATE id="P20" start="3964" end="3972" text="07/28/70" TYPE="DATE" comment="" />
+<NAME id="P21" start="3974" end="3981" text="naranjo" TYPE="DOCTOR" comment="" />
 </TAGS>
 </deIdi2b2>

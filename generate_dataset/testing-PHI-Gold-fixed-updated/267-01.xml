@@ -1,6 +1,6 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT>
+<TEXT><!***REMOVED***CDATA***REMOVED***
 
 
 Record date: 2096-02-15
@@ -51,18 +51,20 @@ Dictated by:  IVAN UHER, M.D.  IU67
 
 
 
-</TEXT>
+***REMOVED******REMOVED***></TEXT>
 <TAGS>
-<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2096-02-15" />
-<NAME TYPE="PATIENT" comment="" end="95" id="P2" start="83" text="LAU,HELEN M." />
-<ID TYPE="MEDICALRECORD" comment="" end="109" id="P3" start="98" text="544-41-32-1" />
-<DATE TYPE="DATE" comment="" end="143" id="P4" start="135" text="02/15/96" />
-<ID TYPE="IDNUM" comment="" end="2210" id="P6" start="2200" text="XD305/7899" />
-<NAME TYPE="DOCTOR" comment="" end="2220" id="P7" start="2211" text="IVAN UHER" />
-<NAME TYPE="USERNAME" comment="" end="2232" id="P8" start="2228" text="IU67" />
-<DATE TYPE="DATE" comment="" end="2274" id="P9" start="2266" text="02/15/96" />
-<DATE TYPE="DATE" comment="" end="2340" id="P10" start="2332" text="02/15/96" />
-<NAME TYPE="DOCTOR" comment="" end="2364" id="P11" start="2355" text="IVAN UHER" />
-<NAME TYPE="USERNAME" comment="" end="2376" id="P12" start="2372" text="IU67" />
+<DATE id="P0" start="16" end="26" text="2096-02-15" TYPE="DATE" comment="" />
+<LOCATION id="P1" start="49" end="59" text="ST VINCENT" TYPE="HOSPITAL" comment="" />
+<NAME id="P2" start="83" end="95" text="LAU,HELEN M." TYPE="PATIENT" comment="" />
+<ID id="P3" start="98" end="109" text="544-41-32-1" TYPE="MEDICALRECORD" comment="" />
+<DATE id="P4" start="135" end="143" text="02/15/96" TYPE="DATE" comment="" />
+<AGE id="P5" start="326" end="328" text="68" TYPE="AGE" comment="" />
+<ID id="P6" start="2200" end="2210" text="XD305/7899" TYPE="IDNUM" comment="" />
+<NAME id="P7" start="2211" end="2220" text="IVAN UHER" TYPE="DOCTOR" comment="" />
+<NAME id="P8" start="2228" end="2232" text="IU67" TYPE="USERNAME" comment="" />
+<DATE id="P9" start="2266" end="2274" text="02/15/96" TYPE="DATE" comment="" />
+<DATE id="P10" start="2332" end="2340" text="02/15/96" TYPE="DATE" comment="" />
+<NAME id="P11" start="2355" end="2364" text="IVAN UHER" TYPE="DOCTOR" comment="" />
+<NAME id="P12" start="2372" end="2376" text="IU67" TYPE="USERNAME" comment="" />
 </TAGS>
 </deIdi2b2>

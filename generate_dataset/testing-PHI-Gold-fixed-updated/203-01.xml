@@ -1,6 +1,6 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT>
+<TEXT><!***REMOVED***CDATA***REMOVED***
 
 
 Record date: 2088-06-28
@@ -117,7 +117,7 @@ Neck is supple, without thyromegaly.
 
 Chest	
 
-Lungs are clear to A&amp;P.
+Lungs are clear to A&P.
 
 Cor	
 
@@ -171,48 +171,51 @@ cc:  Keith Cook, M.D./Cardiology, EUD1
 
 
 
-</TEXT>
+***REMOVED******REMOVED***></TEXT>
 <TAGS>
-<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2088-06-28" />
-<DATE TYPE="DATE" comment="" end="205" id="P2" start="201" text="9/87" />
-<DATE TYPE="DATE" comment="" end="442" id="P3" start="435" text="5/02/88" />
-<NAME TYPE="DOCTOR" comment="" end="902" id="P4" start="898" text="Cook" />
-<DATE TYPE="DATE" comment="" end="1049" id="P5" start="1042" text="9/30/87" />
-<DATE TYPE="DATE" comment="" end="1304" id="P7" start="1299" text="10/87" />
-<DATE TYPE="DATE" comment="" end="2108" id="P8" start="2104" text="7/83" />
-<NAME TYPE="DOCTOR" comment="" end="2163" id="P9" start="2155" text="Whitlock" />
-<NAME TYPE="DOCTOR" comment="" end="2168" id="P10" start="2164" text="Cook" />
-<DATE TYPE="DATE" comment="" end="2203" id="P11" start="2198" text="12/76" />
-<DATE TYPE="DATE" comment="" end="2211" id="P12" start="2206" text="10/76" />
-<DATE TYPE="DATE" comment="" end="2319" id="P13" start="2314" text="12/76" />
-<DATE TYPE="DATE" comment="" end="2433" id="P15" start="2429" text="2/77" />
-<DATE TYPE="DATE" comment="" end="2448" id="P16" start="2437" text="04-Nov-2078" />
-<DATE TYPE="DATE" comment="" end="2498" id="P17" start="2494" text="2/77" />
-<DATE TYPE="DATE" comment="" end="2521" id="P18" start="2517" text="7/80" />
-<DATE TYPE="DATE" comment="" end="2533" id="P19" start="2529" text="2084" />
-<DATE TYPE="DATE" comment="" end="3198" id="P20" start="3193" text="10/79" />
-<DATE TYPE="DATE" comment="" end="3388" id="P21" start="3377" text="02-Jun-2087" />
-<NAME TYPE="DOCTOR" comment="" end="3683" id="P22" start="3677" text="JENSON" />
-<NAME TYPE="DOCTOR" comment="" end="3993" id="P23" start="3987" text="JENSON" />
-<DATE TYPE="DATE" comment="" end="4389" id="P24" start="4383" text="spring" />
-<NAME TYPE="DOCTOR" comment="" end="4511" id="P25" start="4505" text="Robles" />
-<NAME TYPE="DOCTOR" comment="" end="4583" id="P26" start="4579" text="Cook" />
-<DATE TYPE="DATE" comment="" end="4633" id="P27" start="4629" text="5/06" />
-<NAME TYPE="DOCTOR" comment="" end="4795" id="P28" start="4791" text="Cook" />
-<DATE TYPE="DATE" comment="" end="4836" id="P29" start="4833" text="'80" />
-<NAME TYPE="DOCTOR" comment="" end="5083" id="P30" start="5074" text="Valentine" />
-<DATE TYPE="DATE" comment="" end="5091" id="P31" start="5087" text="5/06" />
-<DATE TYPE="DATE" comment="" end="6523" id="P32" start="6510" text="spring of '88" />
-<NAME TYPE="DOCTOR" comment="" end="6748" id="P33" start="6742" text="Thomas" />
-<NAME TYPE="DOCTOR" comment="" end="6817" id="P34" start="6811" text="Robles" />
-<DATE TYPE="DATE" comment="" end="6954" id="P35" start="6948" text="winter" />
-<NAME TYPE="DOCTOR" comment="" end="6974" id="P36" start="6964" text="Keith Cook" />
-<ID TYPE="IDNUM" comment="" end="6997" id="P37" start="6993" text="EUD1" />
-<NAME TYPE="DOCTOR" comment="" end="7022" id="P38" start="7006" text="K. Alex Whitlock" />
-<ID TYPE="IDNUM" comment="" end="7047" id="P39" start="7041" text="NOU042" />
-<NAME TYPE="DOCTOR" comment="" end="7070" id="P40" start="7056" text="Vincent Thomas" />
-<ID TYPE="IDNUM" comment="" end="7096" id="P41" start="7090" text="AUX745" />
-<NAME TYPE="DOCTOR" comment="" end="7116" id="P42" start="7105" text="Owen Robles" />
-<ID TYPE="IDNUM" comment="" end="7142" id="P43" start="7136" text="KMZ928" />
+<DATE id="P0" start="16" end="26" text="2088-06-28" TYPE="DATE" comment="" />
+<LOCATION id="P1" start="197" end="200" text="MCH" TYPE="HOSPITAL" comment="" />
+<DATE id="P2" start="201" end="205" text="9/87" TYPE="DATE" comment="" />
+<DATE id="P3" start="435" end="442" text="5/02/88" TYPE="DATE" comment="" />
+<NAME id="P4" start="898" end="902" text="Cook" TYPE="DOCTOR" comment="" />
+<DATE id="P5" start="1042" end="1049" text="9/30/87" TYPE="DATE" comment="" />
+<LOCATION id="P6" start="1255" end="1258" text="MCH" TYPE="HOSPITAL" comment="" />
+<DATE id="P7" start="1299" end="1304" text="10/87" TYPE="DATE" comment="" />
+<DATE id="P8" start="2104" end="2108" text="7/83" TYPE="DATE" comment="" />
+<NAME id="P9" start="2155" end="2163" text="Whitlock" TYPE="DOCTOR" comment="" />
+<NAME id="P10" start="2164" end="2168" text="Cook" TYPE="DOCTOR" comment="" />
+<DATE id="P11" start="2198" end="2203" text="12/76" TYPE="DATE" comment="" />
+<DATE id="P12" start="2206" end="2211" text="10/76" TYPE="DATE" comment="" />
+<DATE id="P13" start="2314" end="2319" text="12/76" TYPE="DATE" comment="" />
+<LOCATION id="P14" start="2397" end="2400" text="MCH" TYPE="HOSPITAL" comment="" />
+<DATE id="P15" start="2429" end="2433" text="2/77" TYPE="DATE" comment="" />
+<DATE id="P16" start="2437" end="2448" text="04-Nov-2078" TYPE="DATE" comment="" />
+<DATE id="P17" start="2494" end="2498" text="2/77" TYPE="DATE" comment="" />
+<DATE id="P18" start="2517" end="2521" text="7/80" TYPE="DATE" comment="" />
+<DATE id="P19" start="2529" end="2533" text="2084" TYPE="DATE" comment="" />
+<DATE id="P20" start="3193" end="3198" text="10/79" TYPE="DATE" comment="" />
+<DATE id="P21" start="3377" end="3388" text="02-Jun-2087" TYPE="DATE" comment="" />
+<NAME id="P22" start="3677" end="3683" text="JENSON" TYPE="DOCTOR" comment="" />
+<NAME id="P23" start="3987" end="3993" text="JENSON" TYPE="DOCTOR" comment="" />
+<DATE id="P24" start="4383" end="4389" text="spring" TYPE="DATE" comment="" />
+<NAME id="P25" start="4505" end="4511" text="Robles" TYPE="DOCTOR" comment="" />
+<NAME id="P26" start="4579" end="4583" text="Cook" TYPE="DOCTOR" comment="" />
+<DATE id="P27" start="4629" end="4633" text="5/06" TYPE="DATE" comment="" />
+<NAME id="P28" start="4791" end="4795" text="Cook" TYPE="DOCTOR" comment="" />
+<DATE id="P29" start="4833" end="4836" text="'80" TYPE="DATE" comment="" />
+<NAME id="P30" start="5074" end="5083" text="Valentine" TYPE="DOCTOR" comment="" />
+<DATE id="P31" start="5087" end="5091" text="5/06" TYPE="DATE" comment="" />
+<DATE id="P32" start="6510" end="6523" text="spring of '88" TYPE="DATE" comment="" />
+<NAME id="P33" start="6742" end="6748" text="Thomas" TYPE="DOCTOR" comment="" />
+<NAME id="P34" start="6811" end="6817" text="Robles" TYPE="DOCTOR" comment="" />
+<DATE id="P35" start="6948" end="6954" text="winter" TYPE="DATE" comment="" />
+<NAME id="P36" start="6964" end="6974" text="Keith Cook" TYPE="DOCTOR" comment="" />
+<ID id="P37" start="6993" end="6997" text="EUD1" TYPE="IDNUM" comment="" />
+<NAME id="P38" start="7006" end="7022" text="K. Alex Whitlock" TYPE="DOCTOR" comment="" />
+<ID id="P39" start="7041" end="7047" text="NOU042" TYPE="IDNUM" comment="" />
+<NAME id="P40" start="7056" end="7070" text="Vincent Thomas" TYPE="DOCTOR" comment="" />
+<ID id="P41" start="7090" end="7096" text="AUX745" TYPE="IDNUM" comment="" />
+<NAME id="P42" start="7105" end="7116" text="Owen Robles" TYPE="DOCTOR" comment="" />
+<ID id="P43" start="7136" end="7142" text="KMZ928" TYPE="IDNUM" comment="" />
 </TAGS>
 </deIdi2b2>

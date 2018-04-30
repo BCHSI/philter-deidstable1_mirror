@@ -1,6 +1,6 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT>
+<TEXT><!***REMOVED***CDATA***REMOVED***
 
 
 Record date: 2170-02-17
@@ -16,8 +16,8 @@ Diagnosis/Treatment Summary:
 10/21/69 CT chest: LLL 8 mm nodule, R-sided pleural thickening.
 10/21/69 Upper EUS: large esophageal mass extending 35-40 cm,  9 mm thickness, partially obstructing, suggest invasion muscularis propria. Porta hepatis LAD 2 LN, largest 12 mm. 
 10/22/69 FNA LN (porta hepatis); no malignancy
-12/01/69 esophagectomy -&gt; pT2N1 (three positive nodes)
-2/08/2170 -&gt; adjuvant chemotherapy with 5FU/LCV
+12/01/69 esophagectomy -> pT2N1 (three positive nodes)
+2/08/2170 -> adjuvant chemotherapy with 5FU/LCV
 
 Interval History:
 
@@ -206,27 +206,30 @@ Pauline Victoria Xenos,NP
 
 
 
-</TEXT>
+***REMOVED******REMOVED***></TEXT>
 <TAGS>
-<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2170-02-17" />
-<DATE TYPE="DATE" comment="" end="101" id="P1" start="93" text="10/16/69" />
-<DATE TYPE="DATE" comment="" end="271" id="P3" start="263" text="10/17/69" />
-<DATE TYPE="DATE" comment="" end="334" id="P4" start="326" text="10/21/69" />
-<DATE TYPE="DATE" comment="" end="398" id="P5" start="390" text="10/21/69" />
-<DATE TYPE="DATE" comment="" end="577" id="P6" start="569" text="10/22/69" />
-<DATE TYPE="DATE" comment="" end="624" id="P7" start="616" text="12/01/69" />
-<DATE TYPE="DATE" comment="" end="680" id="P8" start="671" text="2/08/2170" />
-<DATE TYPE="DATE" comment="" end="907" id="P9" start="903" text="2/09" />
-<DATE TYPE="DATE" comment="" end="1196" id="P10" start="1192" text="2165" />
-<DATE TYPE="DATE" comment="" end="1202" id="P11" start="1198" text="2167" />
-<DATE TYPE="DATE" comment="" end="1221" id="P12" start="1217" text="2164" />
-<DATE TYPE="DATE" comment="" end="1990" id="P13" start="1986" text="2158" />
-<PROFESSION TYPE="PROFESSION" comment="" end="1999" id="P14" start="1991" text="Producer" />
-<LOCATION TYPE="ORGANIZATION" comment="" end="2018" id="P15" start="2004" text="National Radio" />
-<LOCATION TYPE="ORGANIZATION" comment="" end="2037" id="P16" start="2023" text="Access America" />
-<DATE TYPE="DATE" comment="" end="2078" id="P17" start="2074" text="2153" />
-<DATE TYPE="DATE" comment="" end="4603" id="P20" start="4599" text="2/19" />
-<NAME TYPE="DOCTOR" comment="" end="4620" id="P21" start="4613" text="Everson" />
-<NAME TYPE="DOCTOR" comment="" end="4728" id="P22" start="4706" text="Pauline Victoria Xenos" />
+<DATE id="P0" start="16" end="26" text="2170-02-17" TYPE="DATE" comment="" />
+<DATE id="P1" start="93" end="101" text="10/16/69" TYPE="DATE" comment="" />
+<LOCATION id="P2" start="108" end="124" text="Griffin Hospital" TYPE="HOSPITAL" comment="" />
+<DATE id="P3" start="263" end="271" text="10/17/69" TYPE="DATE" comment="" />
+<DATE id="P4" start="326" end="334" text="10/21/69" TYPE="DATE" comment="" />
+<DATE id="P5" start="390" end="398" text="10/21/69" TYPE="DATE" comment="" />
+<DATE id="P6" start="569" end="577" text="10/22/69" TYPE="DATE" comment="" />
+<DATE id="P7" start="616" end="624" text="12/01/69" TYPE="DATE" comment="" />
+<DATE id="P8" start="671" end="680" text="2/08/2170" TYPE="DATE" comment="" />
+<DATE id="P9" start="903" end="907" text="2/09" TYPE="DATE" comment="" />
+<DATE id="P10" start="1192" end="1196" text="2165" TYPE="DATE" comment="" />
+<DATE id="P11" start="1198" end="1202" text="2167" TYPE="DATE" comment="" />
+<DATE id="P12" start="1217" end="1221" text="2164" TYPE="DATE" comment="" />
+<DATE id="P13" start="1986" end="1990" text="2158" TYPE="DATE" comment="" />
+<PROFESSION id="P14" start="1991" end="1999" text="Producer" TYPE="PROFESSION" comment="" />
+<LOCATION id="P15" start="2004" end="2018" text="National Radio" TYPE="ORGANIZATION" comment="" />
+<LOCATION id="P16" start="2023" end="2037" text="Access America" TYPE="ORGANIZATION" comment="" />
+<DATE id="P17" start="2074" end="2078" text="2153" TYPE="DATE" comment="" />
+<AGE id="P18" start="2376" end="2378" text="65" TYPE="AGE" comment="" />
+<AGE id="P19" start="2399" end="2401" text="89" TYPE="AGE" comment="" />
+<DATE id="P20" start="4599" end="4603" text="2/19" TYPE="DATE" comment="" />
+<NAME id="P21" start="4613" end="4620" text="Everson" TYPE="DOCTOR" comment="" />
+<NAME id="P22" start="4706" end="4728" text="Pauline Victoria Xenos" TYPE="DOCTOR" comment="" />
 </TAGS>
 </deIdi2b2>

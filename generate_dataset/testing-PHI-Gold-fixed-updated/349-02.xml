@@ -1,6 +1,6 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT>
+<TEXT><!***REMOVED***CDATA***REMOVED***
 
 
 Record date: 2145-07-25
@@ -133,13 +133,13 @@ Janet Orellana MD
 
 
 
-</TEXT>
+***REMOVED******REMOVED***></TEXT>
 <TAGS>
-<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2145-07-25" />
-<NAME TYPE="PATIENT" comment="" end="34" id="P1" start="30" text="Olga" />
-<NAME TYPE="DOCTOR" comment="" end="131" id="P2" start="125" text="Walter" />
-<DATE TYPE="DATE" comment="" end="140" id="P3" start="135" text="11/45" />
-<NAME TYPE="DOCTOR" comment="" end="1820" id="P4" start="1814" text="Walter" />
-<NAME TYPE="DOCTOR" comment="" end="1846" id="P5" start="1832" text="Janet Orellana" />
+<DATE id="P0" start="16" end="26" text="2145-07-25" TYPE="DATE" comment="" />
+<NAME id="P1" start="30" end="34" text="Olga" TYPE="PATIENT" comment="" />
+<NAME id="P2" start="125" end="131" text="Walter" TYPE="DOCTOR" comment="" />
+<DATE id="P3" start="135" end="140" text="11/45" TYPE="DATE" comment="" />
+<NAME id="P4" start="1814" end="1820" text="Walter" TYPE="DOCTOR" comment="" />
+<NAME id="P5" start="1832" end="1846" text="Janet Orellana" TYPE="DOCTOR" comment="" />
 </TAGS>
 </deIdi2b2>

@@ -1,6 +1,6 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT>
+<TEXT><!***REMOVED***CDATA***REMOVED***
 
 
 Record date: 2081-01-05
@@ -163,14 +163,20 @@ cc:
 
 
 
-</TEXT>
+***REMOVED******REMOVED***></TEXT>
 <TAGS>
-<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2081-01-05" />
-<NAME TYPE="PATIENT" comment="" end="182" id="P2" start="175" text="Jimenez" />
-<DATE TYPE="DATE" comment="" end="272" id="P3" start="255" text="September of 2080" />
-<DATE TYPE="DATE" comment="" end="309" id="P5" start="301" text="10/11/80" />
-<LOCATION TYPE="ORGANIZATION" comment="" end="960" id="P6" start="949" text="the library" />
-<DATE TYPE="DATE" comment="" end="1159" id="P7" start="1155" text="3/78" />
-<PROFESSION TYPE="PROFESSION" comment="" end="1459" id="P11" start="1430" text="Computer and Network Operator" />
+<DATE id="P0" start="16" end="26" text="2081-01-05" TYPE="DATE" comment="" />
+<AGE id="P1" start="46" end="48" text="72" TYPE="AGE" comment="" />
+<NAME id="P2" start="175" end="182" text="Jimenez" TYPE="PATIENT" comment="" />
+<DATE id="P3" start="255" end="272" text="September of 2080" TYPE="DATE" comment="" />
+<LOCATION id="P4" start="294" end="297" text="LCH" TYPE="HOSPITAL" comment="" />
+<DATE id="P5" start="301" end="309" text="10/11/80" TYPE="DATE" comment="" />
+<LOCATION id="P6" start="949" end="960" text="the library" TYPE="ORGANIZATION" comment="" />
+<DATE id="P7" start="1155" end="1159" text="3/78" TYPE="DATE" comment="" />
+<AGE id="P8" start="1291" end="1293" text="74" TYPE="AGE" comment="" />
+<AGE id="P9" start="1312" end="1314" text="89" TYPE="AGE" comment="" />
+<AGE id="P10" start="1346" end="1348" text="78" TYPE="AGE" comment="" />
+<PROFESSION id="P11" start="1430" end="1459" text="Computer and Network Operator" TYPE="PROFESSION" comment="" />
+<AGE id="P12" start="2889" end="2891" text="72" TYPE="AGE" comment="" />
 </TAGS>
 </deIdi2b2>

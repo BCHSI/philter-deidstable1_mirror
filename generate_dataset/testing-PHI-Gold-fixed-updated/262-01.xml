@@ -1,6 +1,6 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT>
+<TEXT><!***REMOVED***CDATA***REMOVED***
 
 
 Record date: 2088-06-26
@@ -127,7 +127,7 @@ SaO2: 98%
 
 
 
-HEEN&amp;T:  good range of motion, no masses, neck veins flat, no bruits
+HEEN&T:  good range of motion, no masses, neck veins flat, no bruits
 
 Airway:  Mallampatti Class I or II
 
@@ -215,13 +215,14 @@ Hunt, Xavier I., MD
 
 
 
-</TEXT>
+***REMOVED******REMOVED***></TEXT>
 <TAGS>
-<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2088-06-26" />
-<DATE TYPE="DATE" comment="" end="121" id="P2" start="113" text="July 1st" />
-<DATE TYPE="DATE" comment="" end="328" id="P3" start="316" text="January 2087" />
-<DATE TYPE="DATE" comment="" end="1457" id="P4" start="1453" text="2081" />
-<DATE TYPE="DATE" comment="" end="1880" id="P5" start="1876" text="2081" />
-<NAME TYPE="DOCTOR" comment="" end="3440" id="P6" start="3425" text="Hunt, Xavier I." />
+<DATE id="P0" start="16" end="26" text="2088-06-26" TYPE="DATE" comment="" />
+<AGE id="P1" start="63" end="65" text="66" TYPE="AGE" comment="" />
+<DATE id="P2" start="113" end="121" text="July 1st" TYPE="DATE" comment="" />
+<DATE id="P3" start="316" end="328" text="January 2087" TYPE="DATE" comment="" />
+<DATE id="P4" start="1453" end="1457" text="2081" TYPE="DATE" comment="" />
+<DATE id="P5" start="1876" end="1880" text="2081" TYPE="DATE" comment="" />
+<NAME id="P6" start="3425" end="3440" text="Hunt, Xavier I." TYPE="DOCTOR" comment="" />
 </TAGS>
 </deIdi2b2>

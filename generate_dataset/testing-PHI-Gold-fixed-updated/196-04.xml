@@ -1,6 +1,6 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT>
+<TEXT><!***REMOVED***CDATA***REMOVED***
 
 
 Record date: 2090-11-21
@@ -87,20 +87,22 @@ Singh, M.D.
 
 
 
-</TEXT>
+***REMOVED******REMOVED***></TEXT>
 <TAGS>
-<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2090-11-21" />
-<DATE TYPE="DATE" comment="" end="172" id="P2" start="167" text="11/13" />
-<DATE TYPE="DATE" comment="" end="178" id="P3" start="173" text="11/16" />
-<DATE TYPE="DATE" comment="" end="556" id="P5" start="550" text="1/2082" />
-<DATE TYPE="DATE" comment="" end="664" id="P6" start="660" text="2067" />
-<DATE TYPE="DATE" comment="" end="764" id="P7" start="757" text="1/16/88" />
-<DATE TYPE="DATE" comment="" end="936" id="P8" start="929" text="7/23/88" />
-<DATE TYPE="DATE" comment="" end="968" id="P9" start="961" text="4/20/89" />
-<DATE TYPE="DATE" comment="" end="1169" id="P10" start="1162" text="11/2090" />
-<DATE TYPE="DATE" comment="" end="2810" id="P11" start="2805" text="12/91" />
-<DATE TYPE="DATE" comment="" end="2962" id="P12" start="2954" text="11/14/90" />
-<DATE TYPE="DATE" comment="" end="3088" id="P13" start="3080" text="12/14/90" />
-<NAME TYPE="DOCTOR" comment="" end="3097" id="P14" start="3092" text="Singh" />
+<DATE id="P0" start="16" end="26" text="2090-11-21" TYPE="DATE" comment="" />
+<AGE id="P1" start="97" end="99" text="62" TYPE="AGE" comment="" />
+<DATE id="P2" start="167" end="172" text="11/13" TYPE="DATE" comment="" />
+<DATE id="P3" start="173" end="178" text="11/16" TYPE="DATE" comment="" />
+<AGE id="P4" start="510" end="512" text="52" TYPE="AGE" comment="" />
+<DATE id="P5" start="550" end="556" text="1/2082" TYPE="DATE" comment="" />
+<DATE id="P6" start="660" end="664" text="2067" TYPE="DATE" comment="" />
+<DATE id="P7" start="757" end="764" text="1/16/88" TYPE="DATE" comment="" />
+<DATE id="P8" start="929" end="936" text="7/23/88" TYPE="DATE" comment="" />
+<DATE id="P9" start="961" end="968" text="4/20/89" TYPE="DATE" comment="" />
+<DATE id="P10" start="1162" end="1169" text="11/2090" TYPE="DATE" comment="" />
+<DATE id="P11" start="2805" end="2810" text="12/91" TYPE="DATE" comment="" />
+<DATE id="P12" start="2954" end="2962" text="11/14/90" TYPE="DATE" comment="" />
+<DATE id="P13" start="3080" end="3088" text="12/14/90" TYPE="DATE" comment="" />
+<NAME id="P14" start="3092" end="3097" text="Singh" TYPE="DOCTOR" comment="" />
 </TAGS>
 </deIdi2b2>

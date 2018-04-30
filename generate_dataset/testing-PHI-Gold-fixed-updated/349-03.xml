@@ -1,6 +1,6 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT>
+<TEXT><!***REMOVED***CDATA***REMOVED***
 
 
 Record date: 2145-12-19
@@ -87,15 +87,18 @@ Janet Orellana MD
 
 
 
-</TEXT>
+***REMOVED******REMOVED***></TEXT>
 <TAGS>
-<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2145-12-19" />
-<NAME TYPE="PATIENT" comment="" end="34" id="P1" start="30" text="Olga" />
-<NAME TYPE="DOCTOR" comment="" end="108" id="P2" start="102" text="Walter" />
-<DATE TYPE="DATE" comment="" end="120" id="P3" start="112" text="10/15/45" />
-<DATE TYPE="DATE" comment="" end="379" id="P7" start="374" text="11/05" />
-<DATE TYPE="DATE" comment="" end="410" id="P8" start="402" text="12/10/45" />
-<DATE TYPE="DATE" comment="" end="1012" id="P9" start="1007" text="11/44" />
-<NAME TYPE="DOCTOR" comment="" end="2532" id="P10" start="2518" text="Janet Orellana" />
+<DATE id="P0" start="16" end="26" text="2145-12-19" TYPE="DATE" comment="" />
+<NAME id="P1" start="30" end="34" text="Olga" TYPE="PATIENT" comment="" />
+<NAME id="P2" start="102" end="108" text="Walter" TYPE="DOCTOR" comment="" />
+<DATE id="P3" start="112" end="120" text="10/15/45" TYPE="DATE" comment="" />
+<LOCATION id="P4" start="145" end="156" text="Leprosarium" TYPE="HOSPITAL" comment="" />
+<LOCATION id="P5" start="231" end="239" text="MEDIQUIK" TYPE="HOSPITAL" comment="" />
+<LOCATION id="P6" start="354" end="370" text="Parsons Hospital" TYPE="HOSPITAL" comment="" />
+<DATE id="P7" start="374" end="379" text="11/05" TYPE="DATE" comment="" />
+<DATE id="P8" start="402" end="410" text="12/10/45" TYPE="DATE" comment="" />
+<DATE id="P9" start="1007" end="1012" text="11/44" TYPE="DATE" comment="" />
+<NAME id="P10" start="2518" end="2532" text="Janet Orellana" TYPE="DOCTOR" comment="" />
 </TAGS>
 </deIdi2b2>

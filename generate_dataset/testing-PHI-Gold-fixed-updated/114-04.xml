@@ -1,6 +1,6 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT>
+<TEXT><!***REMOVED***CDATA***REMOVED***
 
 
 Record date: 2141-08-31
@@ -54,7 +54,7 @@ HISTORY OF THE PRESENT ILLNESS
 
 
 
-            Mr. Slater is an 83 yo w/ h/o bullous pemphigoid, chronic kidney disease, HTN, dyslipidemia, and multiple vasculopathies presenting with hyperglycemia.  His dermatologist started prednisone (60 mg daily) three weeks ago for a pemphigiod flair.  Mr Slater&amp;#8217;s sugars were initially well controlled off insulin, but a week and a half ago he began to develop lower extremity edema, DOE, and general fatigue.  He began to taper the prednisone (to 40 mg daily) and then stopped them altogether yesterday.  He presented to the FPC ED complaining of fatigue and weakness and was found to have a FSBG&amp;gt;500.  His initial labs were notable for a glucose of 804.  An EKG showed a-fib (rate 70s).  His blood pressure, oxygenation, and respiratory were the normal range and he was given 2 L of NS and regular insulin.  Repeat labs showed Glu 479 w/ partial resolution of other electrolyte abnormalities.  He was admitted to the hospital for further evaluation and management.
+            Mr. Slater is an 83 yo w/ h/o bullous pemphigoid, chronic kidney disease, HTN, dyslipidemia, and multiple vasculopathies presenting with hyperglycemia.  His dermatologist started prednisone (60 mg daily) three weeks ago for a pemphigiod flair.  Mr Slater&#8217;s sugars were initially well controlled off insulin, but a week and a half ago he began to develop lower extremity edema, DOE, and general fatigue.  He began to taper the prednisone (to 40 mg daily) and then stopped them altogether yesterday.  He presented to the FPC ED complaining of fatigue and weakness and was found to have a FSBG&gt;500.  His initial labs were notable for a glucose of 804.  An EKG showed a-fib (rate 70s).  His blood pressure, oxygenation, and respiratory were the normal range and he was given 2 L of NS and regular insulin.  Repeat labs showed Glu 479 w/ partial resolution of other electrolyte abnormalities.  He was admitted to the hospital for further evaluation and management.
 
             On arrival to the floor, he reports feeling tired, but that his weakness and fatigue have improved since he arrived in the ED.  He continues to have LE edema, which has worsened in the last day.  He denies recent weight loss, fevers, cough, dyspnea or PND, syncope, N/V, diarrhea, constipation, melena, urinary symptoms, joint pain, bruising, worsening rash, skin lesions, double vision, dysarthria, headache, or focal weakness or numbness.  
 
@@ -65,21 +65,21 @@ HISTORY OF THE PRESENT ILLNESS
 PAST MEDICAL HISTORY:
 
 
-&amp;#183;         Bullous pemphigoid 2/2 simvastatin
+&#183;         Bullous pemphigoid 2/2 simvastatin
 
-&amp;#183;         Chronic kidney disease
+&#183;         Chronic kidney disease
 
-&amp;#183;         RAS
+&#183;         RAS
 
-&amp;#183;         History of CVA with residual minor weakness and numbness on the right side &amp;#8216;00
+&#183;         History of CVA with residual minor weakness and numbness on the right side &#8216;00
 
-&amp;#183;         Hypertension
+&#183;         Hypertension
 
-&amp;#183;         Hypercholesterolemia
+&#183;         Hypercholesterolemia
 
-&amp;#183;         PVD (ABI 0.43/0.20 after exercise)
+&#183;         PVD (ABI 0.43/0.20 after exercise)
 
-&amp;#183;         AAA 2.8 cm &amp;#8216;06
+&#183;         AAA 2.8 cm &#8216;06
 
 
 
@@ -88,7 +88,7 @@ PAST MEDICAL HISTORY:
 PAST SURGICAL HISTORY:
 
 
-&amp;#183;         
+&#183;         
 
  Stage III renal cell carcinoma status post L nephrectomy in 2133, now w/ metastatic disease (+ retroperitoneal LN 8/41)
 
@@ -147,11 +147,11 @@ VITALS:  T 98.4   ; BP 140/72 , HR 72 , RR 18 , 97% O2 Sat RA
  
 
 
-General &amp;#8211; NAD
+General &#8211; NAD
 
 , AOx3
 
-HEENT &amp;#8211; PERRL, EOMI; sclerae anicteric, no conjunctival injection; oropharynx dry w/o erythema or exudate
+HEENT &#8211; PERRL, EOMI; sclerae anicteric, no conjunctival injection; oropharynx dry w/o erythema or exudate
 
 
 
@@ -159,25 +159,25 @@ Neck - no lymphadenopathy, JVP 5 cm; carotid pulses 2+ bilaterally; ? R carotid 
 
 
 
-Pulmonary &amp;#8211; rhonci at L base, otherwise CTAB
+Pulmonary &#8211; rhonci at L base, otherwise CTAB
 
 
 
-Cardiac &amp;#8211; irregularly irregular, no murmurs 
+Cardiac &#8211; irregularly irregular, no murmurs 
 
 
 
-Abdomen &amp;#8211; S/NT +BS
+Abdomen &#8211; S/NT +BS
 
-Extremity &amp;#8211; warm, 2-3+ pitting edema bilaterally
-
-
-
-Neurology &amp;#8211; CN II-XII grossly intact, good strength bilaterally, normal sensation bilaterally
+Extremity &#8211; warm, 2-3+ pitting edema bilaterally
 
 
 
-Skin &amp;#8211; legs 2-5 cm flat red patches w/o bullae; arms, legs, and chest, 2-6 cm, multiple excoriated red urticarial patches w/o bullae
+Neurology &#8211; CN II-XII grossly intact, good strength bilaterally, normal sensation bilaterally
+
+
+
+Skin &#8211; legs 2-5 cm flat red patches w/o bullae; arms, legs, and chest, 2-6 cm, multiple excoriated red urticarial patches w/o bullae
 
 
 
@@ -336,26 +336,29 @@ Internal Medicine PGY1
 
 
 
-</TEXT>
+***REMOVED******REMOVED***></TEXT>
 <TAGS>
-<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2141-08-31" />
-<NAME TYPE="PATIENT" comment="" end="96" id="P2" start="84" text="Slater, Owen" />
-<ID TYPE="MEDICALRECORD" comment="" end="111" id="P3" start="104" text="8635779" />
-<DATE TYPE="DATE" comment="" end="133" id="P4" start="121" text="31 August 41" />
-<NAME TYPE="DOCTOR" comment="" end="176" id="P5" start="171" text="Gregg" />
-<NAME TYPE="PATIENT" comment="" end="213" id="P6" start="200" text="Talissa Irish" />
-<CONTACT TYPE="PHONE" comment="" end="238" id="P7" start="225" text="(215)579-9664" />
-<NAME TYPE="PATIENT" comment="" end="342" id="P8" start="336" text="Slater" />
-<NAME TYPE="PATIENT" comment="" end="586" id="P10" start="580" text="Slater" />
-<DATE TYPE="DATE" comment="" end="2262" id="P12" start="2258" text="2133" />
-<DATE TYPE="DATE" comment="" end="2316" id="P13" start="2312" text="8/41" />
-<PROFESSION TYPE="PROFESSION" comment="" end="2622" id="P14" start="2602" text="political journalist" />
-<DATE TYPE="DATE" comment="" end="3849" id="P15" start="3845" text="2133" />
-<DATE TYPE="DATE" comment="" end="3891" id="P16" start="3887" text="8/30" />
-<DATE TYPE="DATE" comment="" end="3953" id="P17" start="3949" text="1/40" />
-<DATE TYPE="DATE" comment="" end="4051" id="P18" start="4044" text="8/31/41" />
-<NAME TYPE="PATIENT" comment="" end="4242" id="P19" start="4236" text="Slater" />
-<NAME TYPE="DOCTOR" comment="" end="7228" id="P21" start="7217" text="Umar Barton" />
-<CONTACT TYPE="PHONE" comment="" end="7254" id="P22" start="7248" text="5-4228" />
+<DATE id="P0" start="16" end="26" text="2141-08-31" TYPE="DATE" comment="" />
+<NAME id="P2" start="84" end="96" text="Slater, Owen" TYPE="PATIENT" comment="" />
+<ID id="P3" start="104" end="111" text="8635779" TYPE="MEDICALRECORD" comment="" />
+<DATE id="P4" start="121" end="133" text="31 August 41" TYPE="DATE" comment="" />
+<NAME id="P5" start="171" end="176" text="Gregg" TYPE="DOCTOR" comment="" />
+<NAME id="P6" start="200" end="213" text="Talissa Irish" TYPE="PATIENT" comment="" />
+<CONTACT id="P7" start="225" end="238" text="(215)579-9664" TYPE="PHONE" comment="" />
+<NAME id="P8" start="336" end="342" text="Slater" TYPE="PATIENT" comment="" />
+<AGE id="P9" start="349" end="351" text="83" TYPE="AGE" comment="" />
+<NAME id="P10" start="580" end="586" text="Slater" TYPE="PATIENT" comment="" />
+<LOCATION id="P11" start="857" end="860" text="FPC" TYPE="HOSPITAL" comment="" />
+<DATE id="P12" start="2258" end="2262" text="2133" TYPE="DATE" comment="" />
+<DATE id="P13" start="2312" end="2316" text="8/41" TYPE="DATE" comment="" />
+<PROFESSION id="P14" start="2602" end="2622" text="political journalist" TYPE="PROFESSION" comment="" />
+<DATE id="P15" start="3845" end="3849" text="2133" TYPE="DATE" comment="" />
+<DATE id="P16" start="3887" end="3891" text="8/30" TYPE="DATE" comment="" />
+<DATE id="P17" start="3949" end="3953" text="1/40" TYPE="DATE" comment="" />
+<DATE id="P18" start="4044" end="4051" text="8/31/41" TYPE="DATE" comment="" />
+<NAME id="P19" start="4236" end="4242" text="Slater" TYPE="PATIENT" comment="" />
+<AGE id="P20" start="4249" end="4251" text="83" TYPE="AGE" comment="" />
+<NAME id="P21" start="7217" end="7228" text="Umar Barton" TYPE="DOCTOR" comment="" />
+<CONTACT id="P22" start="7248" end="7254" text="5-4228" TYPE="PHONE" comment="" />
 </TAGS>
 </deIdi2b2>

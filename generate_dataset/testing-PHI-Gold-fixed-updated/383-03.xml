@@ -1,11 +1,11 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT>
+<TEXT><!***REMOVED***CDATA***REMOVED***
 
 
 Record date: 2119-12-22
 
-Radiology H&amp;amp;P
+Radiology H&amp;P
 Pt: WERNER, Brian U
 MRN: 4097229
 Date: 12/22/2119     10:56h
@@ -36,7 +36,7 @@ PMH/PSH:
 
 MEDICATIONS:
 ASA 325mg daily (took dose this AM)
-Plavix 75mg daily (started &amp;gt;10days ago, took dose this AM)
+Plavix 75mg daily (started &gt;10days ago, took dose this AM)
 Albuterol 2puffs QID prn SOB/wheeze
 Flovent 110mcg inh bid prn SOB/wheeze
 Nifedipine ER 60mg daily
@@ -59,7 +59,7 @@ AVSS per report
 Awake/alert, fully oriented x3, appropriately conversant
 PERRL / EOMI, right visual field cut in far lateral right visual field past approximately 60-degrees (right homonymous hemianopsia)
 Face sensation to LT in b/l V123, masseters strong b/l, face strength full b/l, hearing to finger rub b/l
-Voice clear with UML/TML, SCM &amp;amp; shoulder shrugs full strength b/l
+Voice clear with UML/TML, SCM &amp; shoulder shrugs full strength b/l
 No pronator drift, full strength in BUE/BLE to resistance testing except minimal bending ROM of left knee joint related to old LLE injury from motorcycle accident s/p surgery 2068, gait with LLE limp related to minimal left knee bending
 Sensation to LT in distal BUE/BLE
 Cardiac: S1S2, no murmurs noted
@@ -72,7 +72,7 @@ Abdomen: soft, NT/ND
 A/P:   73yo RHM with h/o left PCA stroke (residual right partial visual field cut) and h/o bilateral carotid endarterectomies having recurrent stenosis of left ICA here for elective left ICA stent placement.  He is noted on CTA head/neck on 11/14/19 to have a 'bovine' variant left common carotid artery takeoff (origin of the left CCA from the proximal innominate artery - anatomic variant) for access considerations.
 
 
-     - Consent with discussion of potential benefits/risks &amp;amp; alternatives discussed with opportunity for questions provided.
+     - Consent with discussion of potential benefits/risks &amp; alternatives discussed with opportunity for questions provided.
 
 
 _____________________________________
@@ -83,30 +83,33 @@ Discussed with Dr Landen Mccarthy
 
 
 
-</TEXT>
+***REMOVED******REMOVED***></TEXT>
 <TAGS>
-<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2119-12-22" />
-<NAME TYPE="PATIENT" comment="" end="65" id="P2" start="50" text="WERNER, Brian U" />
-<ID TYPE="MEDICALRECORD" comment="" end="78" id="P3" start="71" text="4097229" />
-<DATE TYPE="DATE" comment="" end="95" id="P4" start="85" text="12/22/2119" />
-<DATE TYPE="DATE" comment="" end="405" id="P6" start="397" text="11/14/19" />
-<DATE TYPE="DATE" comment="" end="752" id="P7" start="748" text="2112" />
-<DATE TYPE="DATE" comment="" end="773" id="P8" start="769" text="2114" />
-<DATE TYPE="DATE" comment="" end="801" id="P9" start="797" text="2112" />
-<DATE TYPE="DATE" comment="" end="896" id="P10" start="892" text="2068" />
-<DATE TYPE="DATE" comment="" end="1060" id="P11" start="1056" text="2116" />
-<DATE TYPE="DATE" comment="" end="1099" id="P12" start="1095" text="2111" />
-<DATE TYPE="DATE" comment="" end="1271" id="P13" start="1266" text="2100s" />
-<DATE TYPE="DATE" comment="" end="1772" id="P15" start="1766" text="2100's" />
-<PROFESSION TYPE="PROFESSION" comment="" end="1800" id="P16" start="1793" text="mailman" />
-<NAME TYPE="PATIENT" comment="" end="1832" id="P17" start="1818" text="Javonna Werner" />
-<CONTACT TYPE="PHONE" comment="" end="1845" id="P18" start="1833" text="026-003-5757" />
-<CONTACT TYPE="PHONE" comment="" end="1861" id="P19" start="1849" text="631-133-0409" />
-<LOCATION TYPE="CITY" comment="" end="1870" id="P20" start="1865" text="Sayre" />
-<LOCATION TYPE="STATE" comment="" end="1874" id="P21" start="1872" text="KY" />
-<DATE TYPE="DATE" comment="" end="2445" id="P22" start="2441" text="2068" />
-<DATE TYPE="DATE" comment="" end="2884" id="P24" start="2876" text="11/14/19" />
-<NAME TYPE="DOCTOR" comment="" end="3239" id="P25" start="3225" text="Victor Donovan" />
-<NAME TYPE="DOCTOR" comment="" end="3298" id="P27" start="3283" text="Landen Mccarthy" />
+<DATE id="P0" start="16" end="26" text="2119-12-22" TYPE="DATE" comment="" />
+<NAME id="P2" start="50" end="65" text="WERNER, Brian U" TYPE="PATIENT" comment="" />
+<ID id="P3" start="71" end="78" text="4097229" TYPE="MEDICALRECORD" comment="" />
+<DATE id="P4" start="85" end="95" text="12/22/2119" TYPE="DATE" comment="" />
+<AGE id="P5" start="163" end="165" text="73" TYPE="AGE" comment="" />
+<DATE id="P6" start="397" end="405" text="11/14/19" TYPE="DATE" comment="" />
+<DATE id="P7" start="748" end="752" text="2112" TYPE="DATE" comment="" />
+<DATE id="P8" start="769" end="773" text="2114" TYPE="DATE" comment="" />
+<DATE id="P9" start="797" end="801" text="2112" TYPE="DATE" comment="" />
+<DATE id="P10" start="892" end="896" text="2068" TYPE="DATE" comment="" />
+<DATE id="P11" start="1056" end="1060" text="2116" TYPE="DATE" comment="" />
+<DATE id="P12" start="1095" end="1099" text="2111" TYPE="DATE" comment="" />
+<DATE id="P13" start="1266" end="1271" text="2100s" TYPE="DATE" comment="" />
+<AGE id="P14" start="1726" end="1729" text="50s" TYPE="AGE" comment="" />
+<DATE id="P15" start="1766" end="1772" text="2100's" TYPE="DATE" comment="" />
+<PROFESSION id="P16" start="1793" end="1800" text="mailman" TYPE="PROFESSION" comment="" />
+<NAME id="P17" start="1818" end="1832" text="Javonna Werner" TYPE="PATIENT" comment="" />
+<CONTACT id="P18" start="1833" end="1845" text="026-003-5757" TYPE="PHONE" comment="" />
+<CONTACT id="P19" start="1849" end="1861" text="631-133-0409" TYPE="PHONE" comment="" />
+<LOCATION id="P20" start="1865" end="1870" text="Sayre" TYPE="CITY" comment="" />
+<LOCATION id="P21" start="1872" end="1874" text="KY" TYPE="STATE" comment="" />
+<DATE id="P22" start="2441" end="2445" text="2068" TYPE="DATE" comment="" />
+<AGE id="P23" start="2642" end="2644" text="73" TYPE="AGE" comment="" />
+<DATE id="P24" start="2876" end="2884" text="11/14/19" TYPE="DATE" comment="" />
+<NAME id="P25" start="3225" end="3239" text="Victor Donovan" TYPE="DOCTOR" comment="" />
+<NAME id="P27" start="3283" end="3298" text="Landen Mccarthy" TYPE="DOCTOR" comment="" />
 </TAGS>
 </deIdi2b2>

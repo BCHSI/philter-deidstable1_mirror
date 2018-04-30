@@ -1,6 +1,6 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT>
+<TEXT><!***REMOVED***CDATA***REMOVED***
 
 
 Record date: 2070-10-13
@@ -68,23 +68,23 @@ He had no HA, visual changes, light-headedness, SOB, abd pain, n/v/d/c, LE edema
 
 Past Medical History
 
-1.       CAD &amp;#8211; non-dx treadmill stress (exercise 8 mets) 3/70; cath 11/69 BMS of RCA x2; treadmill mibi 11/69 inferior reversible ischemia
+1.       CAD &#8211; non-dx treadmill stress (exercise 8 mets) 3/70; cath 11/69 BMS of RCA x2; treadmill mibi 11/69 inferior reversible ischemia
 
 2.       HTN
 
-3.       HLD &amp;#8211; 6/70 lipids LDL 45, HDL 35, TG 123
+3.       HLD &#8211; 6/70 lipids LDL 45, HDL 35, TG 123
 
-4.       DM2 &amp;#8211; A1c 6.7 in 6/70
+4.       DM2 &#8211; A1c 6.7 in 6/70
 
 5.       CVA in 2064 w/residual L facial droop (no other sx)
 
-6.       Hepatitis B &amp;#8211; 2063: HBV CAB pos, SAB neg, SAG neg; HBV Vaccine most recent 7/70
+6.       Hepatitis B &#8211; 2063: HBV CAB pos, SAB neg, SAG neg; HBV Vaccine most recent 7/70
 
-7.       Hepatitis C &amp;#8211; failed IFN tx in the past; HCV VL&amp;gt;700k 6/70; AFP 17.5 6/70 (up from 15.1 in 3/70, 15.6 12/68)
+7.       Hepatitis C &#8211; failed IFN tx in the past; HCV VL&gt;700k 6/70; AFP 17.5 6/70 (up from 15.1 in 3/70, 15.6 12/68)
 
-8.       Alcohol Abuse &amp;#8211; last drink 7 yrs ago, goes to AA/NA
+8.       Alcohol Abuse &#8211; last drink 7 yrs ago, goes to AA/NA
 
-9.       IVDA &amp;#8211; on methadone ~10 yrs
+9.       IVDA &#8211; on methadone ~10 yrs
 
 
 
@@ -106,7 +106,7 @@ MEDICATIONS ON ADMISSION (source of information)
 
 8.       Risperdal 1mg PO BID
 
-9.       Methadone 93mg daily &amp;#224; Physicians Hospital, 46 Champagne Drive, Freeport, WY 94152 587-033-5624
+9.       Methadone 93mg daily &#224; Physicians Hospital, 46 Champagne Drive, Freeport, WY 94152 587-033-5624
 
 
 
@@ -136,21 +136,21 @@ PHYSICAL EXAMINATION
 
 VITALS:  97.2, 52, 134/79, 22 100% RA
 
-General &amp;#8211; middle-aged man laying in bed
+General &#8211; middle-aged man laying in bed
 
-Skin &amp;#8211; tan in sun-exposed areas, scattered angiomata bilat LE
+Skin &#8211; tan in sun-exposed areas, scattered angiomata bilat LE
 
-HEENT &amp;#8211; PEERL, no scleral icterus, OP clear, MMM
+HEENT &#8211; PEERL, no scleral icterus, OP clear, MMM
 
-Lymph nodes &amp;#8211; no palpable LAD
+Lymph nodes &#8211; no palpable LAD
 
-Pulmonary &amp;#8211; CTAB, no wheezes or rhonchi
+Pulmonary &#8211; CTAB, no wheezes or rhonchi
 
-Cardiac &amp;#8211; brady, reg rhythm, nl s1 s2, no murmurs
+Cardiac &#8211; brady, reg rhythm, nl s1 s2, no murmurs
 
-Abdomen &amp;#8211; obese, soft, nontender, no HSM, no caput
+Abdomen &#8211; obese, soft, nontender, no HSM, no caput
 
-Extremity &amp;#8211; bilt hemosiderin changes
+Extremity &#8211; bilt hemosiderin changes
 
 
 
@@ -174,7 +174,7 @@ None
 
 RADIOLOGICAL STUDIES
 
-CXR &amp;#8211; image not yet available
+CXR &#8211; image not yet available
 
 
 
@@ -254,7 +254,7 @@ ASSESSMENT AND PLAN
 
 
 
-#) Addiction: abstinent from etoh and IVD &amp;gt;5yrs
+#) Addiction: abstinent from etoh and IVD &gt;5yrs
 
 -Urine tox
 
@@ -276,7 +276,7 @@ ASSESSMENT AND PLAN
 
 
 
-#) F/E/N: NPO for stress; D5 &amp;#189; NS while NPO; replete lytes prn K&amp;gt;4, Mg&amp;gt;2
+#) F/E/N: NPO for stress; D5 &#189; NS while NPO; replete lytes prn K&gt;4, Mg&gt;2
 
 #) Ppx: DVT-ASA/Plavix, hold fragmin given pending heparin gtt decision ; GI-not indicated ; Bowel-colace/senna/dulculax
 
@@ -299,46 +299,52 @@ Pager #25204
 
 
 
-</TEXT>
+***REMOVED******REMOVED***></TEXT>
 <TAGS>
-<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2070-10-13" />
-<NAME TYPE="PATIENT" comment="" end="123" id="P2" start="106" text="Gallegos, Stephen" />
-<ID TYPE="MEDICALRECORD" comment="" end="137" id="P3" start="130" text="5605330" />
-<DATE TYPE="DATE" comment="" end="155" id="P4" start="145" text="10/13/2070" />
-<NAME TYPE="DOCTOR" comment="" end="184" id="P5" start="176" text="Albright" />
-<NAME TYPE="DOCTOR" comment="" end="204" id="P6" start="192" text="Julie Morrow" />
-<NAME TYPE="PATIENT" comment="" end="219" id="P7" start="212" text="Oconnor" />
-<CONTACT TYPE="PHONE" comment="" end="239" id="P8" start="227" text="988-128-8518" />
-<LOCATION TYPE="ORGANIZATION" comment="" end="961" id="P10" start="944" text="H J Heinz Company" />
-<DATE TYPE="DATE" comment="" end="1454" id="P11" start="1450" text="3/70" />
-<DATE TYPE="DATE" comment="" end="1466" id="P12" start="1461" text="11/69" />
-<DATE TYPE="DATE" comment="" end="1502" id="P13" start="1497" text="11/69" />
-<DATE TYPE="DATE" comment="" end="1572" id="P14" start="1568" text="6/70" />
-<DATE TYPE="DATE" comment="" end="1640" id="P15" start="1636" text="6/70" />
-<DATE TYPE="DATE" comment="" end="1662" id="P16" start="1658" text="2064" />
-<DATE TYPE="DATE" comment="" end="1737" id="P17" start="1733" text="2063" />
-<DATE TYPE="DATE" comment="" end="1798" id="P18" start="1794" text="7/70" />
-<DATE TYPE="DATE" comment="" end="1875" id="P19" start="1871" text="6/70" />
-<DATE TYPE="DATE" comment="" end="1890" id="P20" start="1886" text="6/70" />
-<DATE TYPE="DATE" comment="" end="1912" id="P21" start="1908" text="3/70" />
-<DATE TYPE="DATE" comment="" end="1924" id="P22" start="1919" text="12/68" />
-<LOCATION TYPE="STREET" comment="" end="2417" id="P24" start="2399" text="46 Champagne Drive" />
-<LOCATION TYPE="CITY" comment="" end="2427" id="P25" start="2419" text="Freeport" />
-<LOCATION TYPE="STATE" comment="" end="2431" id="P26" start="2429" text="WY" />
-<LOCATION TYPE="ZIP" comment="" end="2437" id="P27" start="2432" text="94152" />
-<CONTACT TYPE="PHONE" comment="" end="2450" id="P28" start="2438" text="587-033-5624" />
-<LOCATION TYPE="CITY" comment="" end="2642" id="P31" start="2637" text="Manti" />
-<PROFESSION TYPE="PROFESSION" comment="" end="2710" id="P32" start="2689" text="Forestry Technologist" />
-<DATE TYPE="DATE" comment="" end="5257" id="P34" start="5253" text="6/70" />
-<DATE TYPE="DATE" comment="" end="5664" id="P35" start="5660" text="7/70" />
-<DATE TYPE="DATE" comment="" end="5814" id="P36" start="5810" text="3/65" />
-<DATE TYPE="DATE" comment="" end="5819" id="P37" start="5815" text="9/65" />
-<LOCATION TYPE="STREET" comment="" end="6154" id="P39" start="6136" text="65 Champagne Drive" />
-<LOCATION TYPE="CITY" comment="" end="6164" id="P40" start="6156" text="Freeport" />
-<LOCATION TYPE="STATE" comment="" end="6168" id="P41" start="6166" text="WY" />
-<LOCATION TYPE="ZIP" comment="" end="6174" id="P42" start="6169" text="94152" />
-<CONTACT TYPE="PHONE" comment="" end="6187" id="P43" start="6175" text="587-033-5624" />
-<NAME TYPE="DOCTOR" comment="" end="6819" id="P44" start="6805" text="Stephen Olguin" />
-<CONTACT TYPE="PHONE" comment="" end="6837" id="P45" start="6832" text="25204" />
+<DATE id="P0" start="16" end="26" text="2070-10-13" TYPE="DATE" comment="" />
+<NAME id="P2" start="106" end="123" text="Gallegos, Stephen" TYPE="PATIENT" comment="" />
+<ID id="P3" start="130" end="137" text="5605330" TYPE="MEDICALRECORD" comment="" />
+<DATE id="P4" start="145" end="155" text="10/13/2070" TYPE="DATE" comment="" />
+<NAME id="P5" start="176" end="184" text="Albright" TYPE="DOCTOR" comment="" />
+<NAME id="P6" start="192" end="204" text="Julie Morrow" TYPE="DOCTOR" comment="" />
+<NAME id="P7" start="212" end="219" text="Oconnor" TYPE="PATIENT" comment="" />
+<CONTACT id="P8" start="227" end="239" text="988-128-8518" TYPE="PHONE" comment="" />
+<AGE id="P9" start="350" end="352" text="56" TYPE="AGE" comment="" />
+<LOCATION id="P10" start="944" end="961" text="H J Heinz Company" TYPE="ORGANIZATION" comment="" />
+<DATE id="P11" start="1450" end="1454" text="3/70" TYPE="DATE" comment="" />
+<DATE id="P12" start="1461" end="1466" text="11/69" TYPE="DATE" comment="" />
+<DATE id="P13" start="1497" end="1502" text="11/69" TYPE="DATE" comment="" />
+<DATE id="P14" start="1568" end="1572" text="6/70" TYPE="DATE" comment="" />
+<DATE id="P15" start="1636" end="1640" text="6/70" TYPE="DATE" comment="" />
+<DATE id="P16" start="1658" end="1662" text="2064" TYPE="DATE" comment="" />
+<DATE id="P17" start="1733" end="1737" text="2063" TYPE="DATE" comment="" />
+<DATE id="P18" start="1794" end="1798" text="7/70" TYPE="DATE" comment="" />
+<DATE id="P19" start="1871" end="1875" text="6/70" TYPE="DATE" comment="" />
+<DATE id="P20" start="1886" end="1890" text="6/70" TYPE="DATE" comment="" />
+<DATE id="P21" start="1908" end="1912" text="3/70" TYPE="DATE" comment="" />
+<DATE id="P22" start="1919" end="1924" text="12/68" TYPE="DATE" comment="" />
+<LOCATION id="P23" start="2378" end="2397" text="Physicians Hospital" TYPE="HOSPITAL" comment="" />
+<LOCATION id="P24" start="2399" end="2417" text="46 Champagne Drive" TYPE="STREET" comment="" />
+<LOCATION id="P25" start="2419" end="2427" text="Freeport" TYPE="CITY" comment="" />
+<LOCATION id="P26" start="2429" end="2431" text="WY" TYPE="STATE" comment="" />
+<LOCATION id="P27" start="2432" end="2437" text="94152" TYPE="ZIP" comment="" />
+<CONTACT id="P28" start="2438" end="2450" text="587-033-5624" TYPE="PHONE" comment="" />
+<AGE id="P29" start="2530" end="2532" text="49" TYPE="AGE" comment="" />
+<AGE id="P30" start="2554" end="2557" text="80s" TYPE="AGE" comment="" />
+<LOCATION id="P31" start="2637" end="2642" text="Manti" TYPE="CITY" comment="" />
+<PROFESSION id="P32" start="2689" end="2710" text="Forestry Technologist" TYPE="PROFESSION" comment="" />
+<AGE id="P33" start="3746" end="3748" text="56" TYPE="AGE" comment="" />
+<DATE id="P34" start="5253" end="5257" text="6/70" TYPE="DATE" comment="" />
+<DATE id="P35" start="5660" end="5664" text="7/70" TYPE="DATE" comment="" />
+<DATE id="P36" start="5810" end="5814" text="3/65" TYPE="DATE" comment="" />
+<DATE id="P37" start="5815" end="5819" text="9/65" TYPE="DATE" comment="" />
+<LOCATION id="P38" start="6115" end="6134" text="Physicians Hospital" TYPE="HOSPITAL" comment="" />
+<LOCATION id="P39" start="6136" end="6154" text="65 Champagne Drive" TYPE="STREET" comment="" />
+<LOCATION id="P40" start="6156" end="6164" text="Freeport" TYPE="CITY" comment="" />
+<LOCATION id="P41" start="6166" end="6168" text="WY" TYPE="STATE" comment="" />
+<LOCATION id="P42" start="6169" end="6174" text="94152" TYPE="ZIP" comment="" />
+<CONTACT id="P43" start="6175" end="6187" text="587-033-5624" TYPE="PHONE" comment="" />
+<NAME id="P44" start="6805" end="6819" text="Stephen Olguin" TYPE="DOCTOR" comment="" />
+<CONTACT id="P45" start="6832" end="6837" text="25204" TYPE="PHONE" comment="" />
 </TAGS>
 </deIdi2b2>

@@ -1,6 +1,6 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT>
+<TEXT><!***REMOVED***CDATA***REMOVED***
 
 
 Record date: 2078-08-20
@@ -79,7 +79,7 @@ Cardiac:	 	 No, palpitations, syncope.
 
 
 
-Gastrointestinal:	Denies N &amp; V, heartburn, constipation, diarrhea, bleeding.
+Gastrointestinal:	Denies N & V, heartburn, constipation, diarrhea, bleeding.
 
 
 
@@ -175,13 +175,16 @@ Ila Easter, M.D.
 
 
 
-</TEXT>
+***REMOVED******REMOVED***></TEXT>
 <TAGS>
-<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2078-08-20" />
-<NAME TYPE="DOCTOR" comment="" end="83" id="P1" start="78" text="Ebert" />
-<NAME TYPE="DOCTOR" comment="" end="118" id="P3" start="103" text="Bryan Edmondson" />
-<NAME TYPE="DOCTOR" comment="" end="1121" id="P5" start="1116" text="Ebert" />
-<DATE TYPE="DATE" comment="" end="1569" id="P6" start="1556" text="December 2074" />
-<NAME TYPE="DOCTOR" comment="" end="4040" id="P8" start="4030" text="Ila Easter" />
+<DATE id="P0" start="16" end="26" text="2078-08-20" TYPE="DATE" comment="" />
+<NAME id="P1" start="78" end="83" text="Ebert" TYPE="DOCTOR" comment="" />
+<LOCATION id="P2" start="85" end="88" text="BMC" TYPE="HOSPITAL" comment="" />
+<NAME id="P3" start="103" end="118" text="Bryan Edmondson" TYPE="DOCTOR" comment="" />
+<LOCATION id="P4" start="120" end="123" text="BMC" TYPE="HOSPITAL" comment="" />
+<NAME id="P5" start="1116" end="1121" text="Ebert" TYPE="DOCTOR" comment="" />
+<DATE id="P6" start="1556" end="1569" text="December 2074" TYPE="DATE" comment="" />
+<LOCATION id="P7" start="1854" end="1861" text="Bermuda" TYPE="COUNTRY" comment="" />
+<NAME id="P8" start="4030" end="4040" text="Ila Easter" TYPE="DOCTOR" comment="" />
 </TAGS>
 </deIdi2b2>

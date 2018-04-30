@@ -1,6 +1,6 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT>
+<TEXT><!***REMOVED***CDATA***REMOVED***
 
 
 Record date: 2067-06-18
@@ -52,18 +52,20 @@ Dictated by:  EDGAR BELTRAN, M.D.  EB83
 
 
 
-</TEXT>
+***REMOVED******REMOVED***></TEXT>
 <TAGS>
-<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2067-06-18" />
-<NAME TYPE="PATIENT" comment="" end="92" id="P2" start="79" text="FOY,KEONTE H." />
-<ID TYPE="MEDICALRECORD" comment="" end="106" id="P3" start="95" text="732-35-79-0" />
-<DATE TYPE="DATE" comment="" end="145" id="P4" start="137" text="06/18/67" />
-<ID TYPE="IDNUM" comment="" end="2369" id="P6" start="2359" text="HA304/1577" />
-<NAME TYPE="DOCTOR" comment="" end="2384" id="P7" start="2371" text="EDGAR BELTRAN" />
-<NAME TYPE="USERNAME" comment="" end="2396" id="P8" start="2392" text="EB83" />
-<DATE TYPE="DATE" comment="" end="2438" id="P9" start="2430" text="06/18/67" />
-<DATE TYPE="DATE" comment="" end="2505" id="P10" start="2497" text="06/18/67" />
-<NAME TYPE="DOCTOR" comment="" end="2534" id="P11" start="2521" text="EDGAR BELTRAN" />
-<NAME TYPE="USERNAME" comment="" end="2546" id="P12" start="2542" text="EB83" />
+<DATE id="P0" start="16" end="26" text="2067-06-18" TYPE="DATE" comment="" />
+<LOCATION id="P1" start="48" end="55" text="JELLICO" TYPE="HOSPITAL" comment="" />
+<NAME id="P2" start="79" end="92" text="FOY,KEONTE H." TYPE="PATIENT" comment="" />
+<ID id="P3" start="95" end="106" text="732-35-79-0" TYPE="MEDICALRECORD" comment="" />
+<DATE id="P4" start="137" end="145" text="06/18/67" TYPE="DATE" comment="" />
+<AGE id="P5" start="322" end="324" text="54" TYPE="AGE" comment="" />
+<ID id="P6" start="2359" end="2369" text="HA304/1577" TYPE="IDNUM" comment="" />
+<NAME id="P7" start="2371" end="2384" text="EDGAR BELTRAN" TYPE="DOCTOR" comment="" />
+<NAME id="P8" start="2392" end="2396" text="EB83" TYPE="USERNAME" comment="" />
+<DATE id="P9" start="2430" end="2438" text="06/18/67" TYPE="DATE" comment="" />
+<DATE id="P10" start="2497" end="2505" text="06/18/67" TYPE="DATE" comment="" />
+<NAME id="P11" start="2521" end="2534" text="EDGAR BELTRAN" TYPE="DOCTOR" comment="" />
+<NAME id="P12" start="2542" end="2546" text="EB83" TYPE="USERNAME" comment="" />
 </TAGS>
 </deIdi2b2>

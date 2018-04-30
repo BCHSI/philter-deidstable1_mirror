@@ -1,6 +1,6 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT>
+<TEXT><!***REMOVED***CDATA***REMOVED***
 
 
 Record date: 2091-12-28
@@ -79,18 +79,29 @@ Patrick Winn, M.D.
 
 
 
-</TEXT>
+***REMOVED******REMOVED***></TEXT>
 <TAGS>
-<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2091-12-28" />
-<DATE TYPE="DATE" comment="" end="45" id="P1" start="28" text="December 28, 2091" />
-<NAME TYPE="PATIENT" comment="" end="75" id="P2" start="53" text="Nikkolas Nancy-Jasmine" />
-<ID TYPE="MEDICALRECORD" comment="" end="88" id="P3" start="77" text="693-31-18-1" />
-<NAME TYPE="PATIENT" comment="" end="120" id="P4" start="98" text="Nikkolas Nancy-Jasmine" />
-<DATE TYPE="DATE" comment="" end="178" id="P5" start="167" text="August 2091" />
-<DATE TYPE="DATE" comment="" end="348" id="P8" start="342" text="August" />
-<DATE TYPE="DATE" comment="" end="1555" id="P15" start="1551" text="2073" />
-<PROFESSION TYPE="PROFESSION" comment="" end="1590" id="P16" start="1578" text="construction" />
-<DATE TYPE="DATE" comment="" end="3394" id="P18" start="3388" text="August" />
-<NAME TYPE="DOCTOR" comment="" end="3761" id="P21" start="3749" text="Patrick Winn" />
+<DATE id="P0" start="16" end="26" text="2091-12-28" TYPE="DATE" comment="" />
+<DATE id="P1" start="28" end="45" text="December 28, 2091" TYPE="DATE" comment="" />
+<NAME id="P2" start="53" end="75" text="Nikkolas Nancy-Jasmine" TYPE="PATIENT" comment="" />
+<ID id="P3" start="77" end="88" text="693-31-18-1" TYPE="MEDICALRECORD" comment="" />
+<NAME id="P4" start="98" end="120" text="Nikkolas Nancy-Jasmine" TYPE="PATIENT" comment="" />
+<DATE id="P5" start="167" end="178" text="August 2091" TYPE="DATE" comment="" />
+<AGE id="P6" start="268" end="270" text="67" TYPE="AGE" comment="" />
+<LOCATION id="P7" start="280" end="288" text="Honduran" TYPE="COUNTRY" comment="" />
+<DATE id="P8" start="342" end="348" text="August" TYPE="DATE" comment="" />
+<LOCATION id="P9" start="554" end="590" text="Dubuque Obstetrics Gynocology Center" TYPE="HOSPITAL" comment="" />
+<LOCATION id="P10" start="672" end="696" text="Mitchell County Hospital" TYPE="HOSPITAL" comment="" />
+<LOCATION id="P11" start="812" end="828" text="Flagler Hospital" TYPE="HOSPITAL" comment="" />
+<AGE id="P12" start="1497" end="1499" text="22" TYPE="AGE" comment="" />
+<LOCATION id="P13" start="1526" end="1533" text="america" TYPE="COUNTRY" comment="" />
+<LOCATION id="P14" start="1539" end="1547" text="Honduras" TYPE="COUNTRY" comment="" />
+<DATE id="P15" start="1551" end="1555" text="2073" TYPE="DATE" comment="" />
+<PROFESSION id="P16" start="1578" end="1590" text="construction" TYPE="PROFESSION" comment="" />
+<LOCATION id="P17" start="1842" end="1849" text="Spanish" TYPE="COUNTRY" comment="" />
+<DATE id="P18" start="3388" end="3394" text="August" TYPE="DATE" comment="" />
+<LOCATION id="P19" start="3451" end="3455" text="DOGC" TYPE="HOSPITAL" comment="" />
+<LOCATION id="P20" start="3516" end="3532" text="Flagler Hospital" TYPE="HOSPITAL" comment="" />
+<NAME id="P21" start="3749" end="3761" text="Patrick Winn" TYPE="DOCTOR" comment="" />
 </TAGS>
 </deIdi2b2>

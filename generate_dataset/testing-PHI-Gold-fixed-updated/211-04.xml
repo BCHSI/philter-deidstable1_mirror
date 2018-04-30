@@ -1,6 +1,6 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT>
+<TEXT><!***REMOVED***CDATA***REMOVED***
 
 
 Record date: 2095-09-19
@@ -211,7 +211,7 @@ Plan:
 
 1. Cardiac: HR, BP well controlled. Lipids were somewhat elevated in recent past- lipitor inc to 80 mg QD- will repeat in am with LFT's and add zetia tonite for better risk modification. Increase ASA to 325 mg QD and add plavix 75 mg QD indefinitely. He is at high risk of progressive disease given his early RCA ISR. Continue reopro as ordered. Remove sheaths once PTT normalizes. Ambulate once activity restrictions lifted.
 
-     Continue heart healthy diet, exercise, meds as ordered. Weigh daily, strict I&amp;O given hx CHF after his MI. LP(a) was 24 last draw- Dr Orozco will consider adding niaspan after evaluating effect of zetia/lipitor in clinic. 
+     Continue heart healthy diet, exercise, meds as ordered. Weigh daily, strict I&O given hx CHF after his MI. LP(a) was 24 last draw- Dr Orozco will consider adding niaspan after evaluating effect of zetia/lipitor in clinic. 
 
 
 
@@ -231,24 +231,26 @@ b 28961
 
 
 
-</TEXT>
+***REMOVED******REMOVED***></TEXT>
 <TAGS>
-<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2095-09-19" />
-<NAME TYPE="PATIENT" comment="" end="92" id="P1" start="77" text="Russell P Urban" />
-<ID TYPE="MEDICALRECORD" comment="" end="105" id="P2" start="96" text="472 20 64" />
-<DATE TYPE="DATE" comment="" end="116" id="P3" start="109" text="9/19/95" />
-<NAME TYPE="PATIENT" comment="" end="128" id="P4" start="123" text="Urban" />
-<DATE TYPE="DATE" comment="" end="287" id="P6" start="283" text="7/93" />
-<DATE TYPE="DATE" comment="" end="471" id="P7" start="467" text="8/93" />
-<DATE TYPE="DATE" comment="" end="673" id="P8" start="667" text="spring" />
-<NAME TYPE="PATIENT" comment="" end="683" id="P9" start="678" text="Urban" />
-<DATE TYPE="DATE" comment="" end="842" id="P10" start="835" text="7/31/95" />
-<DATE TYPE="DATE" comment="" end="1330" id="P12" start="1326" text="2093" />
-<LOCATION TYPE="ORGANIZATION" comment="" end="1469" id="P13" start="1462" text="Borders" />
-<NAME TYPE="DOCTOR" comment="" end="3347" id="P15" start="3341" text="Orozco" />
-<NAME TYPE="DOCTOR" comment="" end="3458" id="P16" start="3454" text="Ness" />
-<NAME TYPE="DOCTOR" comment="" end="3468" id="P17" start="3462" text="Orozco" />
-<NAME TYPE="DOCTOR" comment="" end="3485" id="P18" start="3476" text="Rose Kang" />
-<CONTACT TYPE="PHONE" comment="" end="3504" id="P19" start="3499" text="28961" />
+<DATE id="P0" start="16" end="26" text="2095-09-19" TYPE="DATE" comment="" />
+<NAME id="P1" start="77" end="92" text="Russell P Urban" TYPE="PATIENT" comment="" />
+<ID id="P2" start="96" end="105" text="472 20 64" TYPE="MEDICALRECORD" comment="" />
+<DATE id="P3" start="109" end="116" text="9/19/95" TYPE="DATE" comment="" />
+<NAME id="P4" start="123" end="128" text="Urban" TYPE="PATIENT" comment="" />
+<AGE id="P5" start="229" end="231" text="52" TYPE="AGE" comment="" />
+<DATE id="P6" start="283" end="287" text="7/93" TYPE="DATE" comment="" />
+<DATE id="P7" start="467" end="471" text="8/93" TYPE="DATE" comment="" />
+<DATE id="P8" start="667" end="673" text="spring" TYPE="DATE" comment="" />
+<NAME id="P9" start="678" end="683" text="Urban" TYPE="PATIENT" comment="" />
+<DATE id="P10" start="835" end="842" text="7/31/95" TYPE="DATE" comment="" />
+<DATE id="P12" start="1326" end="1330" text="2093" TYPE="DATE" comment="" />
+<LOCATION id="P13" start="1462" end="1469" text="Borders" TYPE="ORGANIZATION" comment="" />
+<AGE id="P14" start="2690" end="2692" text="52" TYPE="AGE" comment="" />
+<NAME id="P15" start="3341" end="3347" text="Orozco" TYPE="DOCTOR" comment="" />
+<NAME id="P16" start="3454" end="3458" text="Ness" TYPE="DOCTOR" comment="" />
+<NAME id="P17" start="3462" end="3468" text="Orozco" TYPE="DOCTOR" comment="" />
+<NAME id="P18" start="3476" end="3485" text="Rose Kang" TYPE="DOCTOR" comment="" />
+<CONTACT id="P19" start="3499" end="3504" text="28961" TYPE="PHONE" comment="" />
 </TAGS>
 </deIdi2b2>

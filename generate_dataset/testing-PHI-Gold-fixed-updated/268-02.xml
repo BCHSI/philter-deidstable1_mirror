@@ -1,6 +1,6 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT>
+<TEXT><!***REMOVED***CDATA***REMOVED***
 
 
 Record date: 2092-03-17
@@ -101,7 +101,7 @@ Active Medications
 
  Avapro 150 mg
 
- Nitro stat 0.3mg SL PRN; Dir: chest pain,max 3 pills &amp; call pcp
+ Nitro stat 0.3mg SL PRN; Dir: chest pain,max 3 pills & call pcp
 
  Coumadin 5 mg po as directed
 
@@ -225,20 +225,21 @@ Signed electronically by Riddle, Rhonda on Mar 31, 2092
 
 
 
-</TEXT>
+***REMOVED******REMOVED***></TEXT>
 <TAGS>
-<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2092-03-17" />
-<DATE TYPE="DATE" comment="" end="1205" id="P2" start="1192" text="November 2091" />
-<DATE TYPE="DATE" comment="" end="1620" id="P3" start="1608" text="January 2092" />
-<DATE TYPE="DATE" comment="" end="3850" id="P4" start="3841" text="2/06/2087" />
-<DATE TYPE="DATE" comment="" end="3907" id="P5" start="3898" text="3/25/2087" />
-<DATE TYPE="DATE" comment="" end="3970" id="P6" start="3960" text="03/17/2092" />
-<DATE TYPE="DATE" comment="" end="4071" id="P7" start="4060" text="August 2081" />
-<DATE TYPE="DATE" comment="" end="4158" id="P8" start="4149" text="June 2088" />
-<DATE TYPE="DATE" comment="" end="4220" id="P9" start="4211" text="June 2087" />
-<PROFESSION TYPE="PROFESSION" comment="" end="4593" id="P10" start="4587" text="pastor" />
-<DATE TYPE="DATE" comment="" end="4930" id="P11" start="4918" text="January 2092" />
-<NAME TYPE="DOCTOR" comment="" end="7132" id="P12" start="7118" text="Riddle, Rhonda" />
-<DATE TYPE="DATE" comment="" end="7148" id="P13" start="7136" text="Mar 31, 2092" />
+<DATE id="P0" start="16" end="26" text="2092-03-17" TYPE="DATE" comment="" />
+<LOCATION id="P1" start="62" end="86" text="HOLDEN DISTRICT HOSPITAL" TYPE="HOSPITAL" comment="" />
+<DATE id="P2" start="1192" end="1205" text="November 2091" TYPE="DATE" comment="" />
+<DATE id="P3" start="1608" end="1620" text="January 2092" TYPE="DATE" comment="" />
+<DATE id="P4" start="3841" end="3850" text="2/06/2087" TYPE="DATE" comment="" />
+<DATE id="P5" start="3898" end="3907" text="3/25/2087" TYPE="DATE" comment="" />
+<DATE id="P6" start="3960" end="3970" text="03/17/2092" TYPE="DATE" comment="" />
+<DATE id="P7" start="4060" end="4071" text="August 2081" TYPE="DATE" comment="" />
+<DATE id="P8" start="4149" end="4158" text="June 2088" TYPE="DATE" comment="" />
+<DATE id="P9" start="4211" end="4220" text="June 2087" TYPE="DATE" comment="" />
+<PROFESSION id="P10" start="4587" end="4593" text="pastor" TYPE="PROFESSION" comment="" />
+<DATE id="P11" start="4918" end="4930" text="January 2092" TYPE="DATE" comment="" />
+<NAME id="P12" start="7118" end="7132" text="Riddle, Rhonda" TYPE="DOCTOR" comment="" />
+<DATE id="P13" start="7136" end="7148" text="Mar 31, 2092" TYPE="DATE" comment="" />
 </TAGS>
 </deIdi2b2>

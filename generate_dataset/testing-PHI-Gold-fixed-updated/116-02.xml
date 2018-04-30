@@ -1,6 +1,6 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT>
+<TEXT><!***REMOVED***CDATA***REMOVED***
 
 
 Record date: 2081-07-07
@@ -112,28 +112,29 @@ NU:UJ:4653/DD:7-8-81/DT:7-13-81/DV:7-8-81
 
 
 
-</TEXT>
+***REMOVED******REMOVED***></TEXT>
 <TAGS>
-<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2081-07-07" />
-<DATE TYPE="DATE" comment="" end="40" id="P1" start="28" text="July 8, 2081" />
-<NAME TYPE="DOCTOR" comment="" end="59" id="P2" start="43" text="Francis Xayarath" />
-<LOCATION TYPE="STREET" comment="" end="106" id="P4" start="88" text="487 Jackson Street" />
-<LOCATION TYPE="CITY" comment="" end="116" id="P5" start="107" text="La Grulla" />
-<LOCATION TYPE="STATE" comment="" end="120" id="P6" start="118" text="ME" />
-<LOCATION TYPE="ZIP" comment="" end="126" id="P7" start="121" text="21614" />
-<NAME TYPE="PATIENT" comment="" end="150" id="P8" start="134" text="Branche, Earnest" />
-<ID TYPE="MEDICALRECORD" comment="" end="164" id="P9" start="156" text="53023691" />
-<NAME TYPE="DOCTOR" comment="" end="184" id="P10" start="176" text="Xayarath" />
-<NAME TYPE="PATIENT" comment="" end="220" id="P11" start="205" text="EarnestBranche" />
-<NAME TYPE="PATIENT" comment="" end="298" id="P12" start="291" text="Branche" />
-<NAME TYPE="PATIENT" comment="" end="1362" id="P13" start="1355" text="Branche" />
-<NAME TYPE="PATIENT" comment="" end="1831" id="P14" start="1815" text="Branche, Earnest" />
-<ID TYPE="MEDICALRECORD" comment="" end="1845" id="P15" start="1837" text="53023691" />
-<DATE TYPE="DATE" comment="" end="1852" id="P16" start="1846" text="7-8-81" />
-<NAME TYPE="DOCTOR" comment="" end="1925" id="P17" start="1909" text="Luis J. Nicholas" />
-<ID TYPE="IDNUM" comment="" end="1944" id="P18" start="1934" text="NU:UJ:4653" />
-<DATE TYPE="DATE" comment="" end="1954" id="P19" start="1948" text="7-8-81" />
-<DATE TYPE="DATE" comment="" end="1965" id="P20" start="1958" text="7-13-81" />
-<DATE TYPE="DATE" comment="" end="1975" id="P21" start="1969" text="7-8-81" />
+<DATE id="P0" start="16" end="26" text="2081-07-07" TYPE="DATE" comment="" />
+<DATE id="P1" start="28" end="40" text="July 8, 2081" TYPE="DATE" comment="" />
+<NAME id="P2" start="43" end="59" text="Francis Xayarath" TYPE="DOCTOR" comment="" />
+<LOCATION id="P3" start="66" end="87" text="Integra Health Center" TYPE="HOSPITAL" comment="" />
+<LOCATION id="P4" start="88" end="106" text="487 Jackson Street" TYPE="STREET" comment="" />
+<LOCATION id="P5" start="107" end="116" text="La Grulla" TYPE="CITY" comment="" />
+<LOCATION id="P6" start="118" end="120" text="ME" TYPE="STATE" comment="" />
+<LOCATION id="P7" start="121" end="126" text="21614" TYPE="ZIP" comment="" />
+<NAME id="P8" start="134" end="150" text="Branche, Earnest" TYPE="PATIENT" comment="" />
+<ID id="P9" start="156" end="164" text="53023691" TYPE="MEDICALRECORD" comment="" />
+<NAME id="P10" start="176" end="184" text="Xayarath" TYPE="DOCTOR" comment="" />
+<NAME id="P11" start="205" end="220" text="EarnestBranche" TYPE="PATIENT" comment="" />
+<NAME id="P12" start="291" end="298" text="Branche" TYPE="PATIENT" comment="" />
+<NAME id="P13" start="1355" end="1362" text="Branche" TYPE="PATIENT" comment="" />
+<NAME id="P14" start="1815" end="1831" text="Branche, Earnest" TYPE="PATIENT" comment="" />
+<ID id="P15" start="1837" end="1845" text="53023691" TYPE="MEDICALRECORD" comment="" />
+<DATE id="P16" start="1846" end="1852" text="7-8-81" TYPE="DATE" comment="" />
+<NAME id="P17" start="1909" end="1925" text="Luis J. Nicholas" TYPE="DOCTOR" comment="" />
+<ID id="P18" start="1934" end="1944" text="NU:UJ:4653" TYPE="IDNUM" comment="" />
+<DATE id="P19" start="1948" end="1954" text="7-8-81" TYPE="DATE" comment="" />
+<DATE id="P20" start="1958" end="1965" text="7-13-81" TYPE="DATE" comment="" />
+<DATE id="P21" start="1969" end="1975" text="7-8-81" TYPE="DATE" comment="" />
 </TAGS>
 </deIdi2b2>

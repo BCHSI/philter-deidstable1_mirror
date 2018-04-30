@@ -1,6 +1,6 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT>
+<TEXT><!***REMOVED***CDATA***REMOVED***
 
 
 Record date: 2085-06-16
@@ -145,24 +145,25 @@ Xavier U. Combs, M.D.
 
 
 
-</TEXT>
+***REMOVED******REMOVED***></TEXT>
 <TAGS>
-<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2085-06-16" />
-<DATE TYPE="DATE" comment="" end="282" id="P2" start="278" text="4/84" />
-<DATE TYPE="DATE" comment="" end="341" id="P3" start="337" text="2069" />
-<DATE TYPE="DATE" comment="" end="379" id="P4" start="374" text="12/83" />
-<DATE TYPE="DATE" comment="" end="1707" id="P5" start="1697" text="11/04/2084" />
-<DATE TYPE="DATE" comment="" end="1732" id="P6" start="1722" text="09/01/2084" />
-<DATE TYPE="DATE" comment="" end="1785" id="P7" start="1775" text="01/29/2083" />
-<DATE TYPE="DATE" comment="" end="1808" id="P8" start="1798" text="01/29/2083" />
-<DATE TYPE="DATE" comment="" end="1836" id="P9" start="1826" text="01/20/2085" />
-<DATE TYPE="DATE" comment="" end="1875" id="P10" start="1865" text="09/23/2084" />
-<DATE TYPE="DATE" comment="" end="1897" id="P11" start="1887" text="10/31/2082" />
-<DATE TYPE="DATE" comment="" end="1929" id="P12" start="1919" text="09/01/2084" />
-<DATE TYPE="DATE" comment="" end="1961" id="P13" start="1951" text="09/01/2084" />
-<DATE TYPE="DATE" comment="" end="2018" id="P14" start="2008" text="01/20/2085" />
-<DATE TYPE="DATE" comment="" end="2052" id="P15" start="2042" text="09/01/2084" />
-<DATE TYPE="DATE" comment="" end="2085" id="P16" start="2075" text="01/20/2085" />
-<NAME TYPE="DOCTOR" comment="" end="2163" id="P17" start="2148" text="Xavier U. Combs" />
+<DATE id="P0" start="16" end="26" text="2085-06-16" TYPE="DATE" comment="" />
+<AGE id="P1" start="28" end="30" text="83" TYPE="AGE" comment="" />
+<DATE id="P2" start="278" end="282" text="4/84" TYPE="DATE" comment="" />
+<DATE id="P3" start="337" end="341" text="2069" TYPE="DATE" comment="" />
+<DATE id="P4" start="374" end="379" text="12/83" TYPE="DATE" comment="" />
+<DATE id="P5" start="1697" end="1707" text="11/04/2084" TYPE="DATE" comment="" />
+<DATE id="P6" start="1722" end="1732" text="09/01/2084" TYPE="DATE" comment="" />
+<DATE id="P7" start="1775" end="1785" text="01/29/2083" TYPE="DATE" comment="" />
+<DATE id="P8" start="1798" end="1808" text="01/29/2083" TYPE="DATE" comment="" />
+<DATE id="P9" start="1826" end="1836" text="01/20/2085" TYPE="DATE" comment="" />
+<DATE id="P10" start="1865" end="1875" text="09/23/2084" TYPE="DATE" comment="" />
+<DATE id="P11" start="1887" end="1897" text="10/31/2082" TYPE="DATE" comment="" />
+<DATE id="P12" start="1919" end="1929" text="09/01/2084" TYPE="DATE" comment="" />
+<DATE id="P13" start="1951" end="1961" text="09/01/2084" TYPE="DATE" comment="" />
+<DATE id="P14" start="2008" end="2018" text="01/20/2085" TYPE="DATE" comment="" />
+<DATE id="P15" start="2042" end="2052" text="09/01/2084" TYPE="DATE" comment="" />
+<DATE id="P16" start="2075" end="2085" text="01/20/2085" TYPE="DATE" comment="" />
+<NAME id="P17" start="2148" end="2163" text="Xavier U. Combs" TYPE="DOCTOR" comment="" />
 </TAGS>
 </deIdi2b2>

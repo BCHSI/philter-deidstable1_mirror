@@ -1,6 +1,6 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT>
+<TEXT><!***REMOVED***CDATA***REMOVED***
 
 
 Record date: 2083-10-14
@@ -101,20 +101,22 @@ Xavier U. Combs, M.D.
 
 
 
-</TEXT>
+***REMOVED******REMOVED***></TEXT>
 <TAGS>
-<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2083-10-14" />
-<LOCATION TYPE="CITY" comment="" end="119" id="P3" start="109" text="Blacksburg" />
-<NAME TYPE="DOCTOR" comment="" end="135" id="P4" start="125" text="Wllie Falk" />
-<CONTACT TYPE="PHONE" comment="" end="167" id="P5" start="155" text="856 241 8283" />
-<NAME TYPE="PATIENT" comment="" end="179" id="P6" start="174" text="ramey" />
-<DATE TYPE="DATE" comment="" end="524" id="P7" start="520" text="2069" />
-<NAME TYPE="DOCTOR" comment="" end="957" id="P8" start="951" text="nunley" />
-<DATE TYPE="DATE" comment="" end="1155" id="P9" start="1145" text="10/14/2083" />
-<DATE TYPE="DATE" comment="" end="1214" id="P10" start="1204" text="01/29/2083" />
-<DATE TYPE="DATE" comment="" end="1247" id="P11" start="1237" text="01/29/2083" />
-<DATE TYPE="DATE" comment="" end="1283" id="P12" start="1275" text="02/28/80" />
-<DATE TYPE="DATE" comment="" end="1314" id="P13" start="1304" text="10/31/2082" />
-<NAME TYPE="DOCTOR" comment="" end="1387" id="P14" start="1372" text="Xavier U. Combs" />
+<DATE id="P0" start="16" end="26" text="2083-10-14" TYPE="DATE" comment="" />
+<AGE id="P1" start="28" end="30" text="79" TYPE="AGE" comment="" />
+<LOCATION id="P2" start="93" end="105" text="Newton House" TYPE="HOSPITAL" comment="" />
+<LOCATION id="P3" start="109" end="119" text="Blacksburg" TYPE="CITY" comment="" />
+<NAME id="P4" start="125" end="135" text="Wllie Falk" TYPE="DOCTOR" comment="" />
+<CONTACT id="P5" start="155" end="167" text="856 241 8283" TYPE="PHONE" comment="" />
+<NAME id="P6" start="174" end="179" text="ramey" TYPE="PATIENT" comment="" />
+<DATE id="P7" start="520" end="524" text="2069" TYPE="DATE" comment="" />
+<NAME id="P8" start="951" end="957" text="nunley" TYPE="DOCTOR" comment="" />
+<DATE id="P9" start="1145" end="1155" text="10/14/2083" TYPE="DATE" comment="" />
+<DATE id="P10" start="1204" end="1214" text="01/29/2083" TYPE="DATE" comment="" />
+<DATE id="P11" start="1237" end="1247" text="01/29/2083" TYPE="DATE" comment="" />
+<DATE id="P12" start="1275" end="1283" text="02/28/80" TYPE="DATE" comment="" />
+<DATE id="P13" start="1304" end="1314" text="10/31/2082" TYPE="DATE" comment="" />
+<NAME id="P14" start="1372" end="1387" text="Xavier U. Combs" TYPE="DOCTOR" comment="" />
 </TAGS>
 </deIdi2b2>

@@ -1,6 +1,6 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT>
+<TEXT><!***REMOVED***CDATA***REMOVED***
 
 
 Record date: 2085-08-29
@@ -67,7 +67,7 @@ NEURO:alert and oriented x 3, no focal deficits
 
  
 DATA (from CHB):
-PFT&amp;#8217;s 
+PFT&#8217;s 
 2/01/85 : 65/43/14
 12/12/84: 78/46/14
 2/4/2084: 90/56/18
@@ -143,33 +143,35 @@ Rachel G. Richardson, MD
 
 
 
-</TEXT>
+***REMOVED******REMOVED***></TEXT>
 <TAGS>
-<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2085-08-29" />
-<DATE TYPE="DATE" comment="" end="740" id="P2" start="732" text="Thursday" />
-<DATE TYPE="DATE" comment="" end="749" id="P3" start="741" text="Saturday" />
-<DATE TYPE="DATE" comment="" end="756" id="P4" start="750" text="Monday" />
-<DATE TYPE="DATE" comment="" end="784" id="P5" start="781" text="thu" />
-<DATE TYPE="DATE" comment="" end="788" id="P6" start="785" text="sat" />
-<DATE TYPE="DATE" comment="" end="795" id="P7" start="789" text="monday" />
-<LOCATION TYPE="LOCATION-OTHER" comment="" end="1209" id="P8" start="1198" text="long island" />
-<PROFESSION TYPE="PROFESSION" comment="" end="1250" id="P9" start="1244" text="Notary" />
-<PROFESSION TYPE="PROFESSION" comment="" end="1272" id="P10" start="1261" text="shoe repair" />
-<DATE TYPE="DATE" comment="" end="2071" id="P11" start="2064" text="2/01/85" />
-<DATE TYPE="DATE" comment="" end="2091" id="P12" start="2083" text="12/12/84" />
-<DATE TYPE="DATE" comment="" end="2110" id="P13" start="2102" text="2/4/2084" />
-<DATE TYPE="DATE" comment="" end="2128" id="P14" start="2121" text="1/26/84" />
-<DATE TYPE="DATE" comment="" end="2146" id="P15" start="2139" text="10/6/82" />
-<DATE TYPE="DATE" comment="" end="2164" id="P16" start="2157" text="8/13/82" />
-<DATE TYPE="DATE" comment="" end="2201" id="P17" start="2194" text="2/01/85" />
-<DATE TYPE="DATE" comment="" end="2273" id="P18" start="2266" text="12/8/84" />
-<DATE TYPE="DATE" comment="" end="2448" id="P19" start="2441" text="1/26/84" />
-<NAME TYPE="PATIENT" comment="" end="2562" id="P20" start="2555" text="Aguilar" />
-<NAME TYPE="DOCTOR" comment="" end="3586" id="P22" start="3579" text="Esparza" />
-<NAME TYPE="DOCTOR" comment="" end="3791" id="P23" start="3778" text="Ursula Bowers" />
-<CONTACT TYPE="PHONE" comment="" end="3803" id="P24" start="3798" text="34680" />
-<NAME TYPE="PATIENT" comment="" end="3866" id="P25" start="3859" text="Aguilar" />
-<NAME TYPE="DOCTOR" comment="" end="3881" id="P26" start="3875" text="Bowers" />
-<NAME TYPE="DOCTOR" comment="" end="4513" id="P27" start="4493" text="Rachel G. Richardson" />
+<DATE id="P0" start="16" end="26" text="2085-08-29" TYPE="DATE" comment="" />
+<AGE id="P1" start="69" end="71" text="52" TYPE="AGE" comment="" />
+<DATE id="P2" start="732" end="740" text="Thursday" TYPE="DATE" comment="" />
+<DATE id="P3" start="741" end="749" text="Saturday" TYPE="DATE" comment="" />
+<DATE id="P4" start="750" end="756" text="Monday" TYPE="DATE" comment="" />
+<DATE id="P5" start="781" end="784" text="thu" TYPE="DATE" comment="" />
+<DATE id="P6" start="785" end="788" text="sat" TYPE="DATE" comment="" />
+<DATE id="P7" start="789" end="795" text="monday" TYPE="DATE" comment="" />
+<LOCATION id="P8" start="1198" end="1209" text="long island" TYPE="LOCATION-OTHER" comment="" />
+<PROFESSION id="P9" start="1244" end="1250" text="Notary" TYPE="PROFESSION" comment="" />
+<PROFESSION id="P10" start="1261" end="1272" text="shoe repair" TYPE="PROFESSION" comment="" />
+<DATE id="P11" start="2064" end="2071" text="2/01/85" TYPE="DATE" comment="" />
+<DATE id="P12" start="2083" end="2091" text="12/12/84" TYPE="DATE" comment="" />
+<DATE id="P13" start="2102" end="2110" text="2/4/2084" TYPE="DATE" comment="" />
+<DATE id="P14" start="2121" end="2128" text="1/26/84" TYPE="DATE" comment="" />
+<DATE id="P15" start="2139" end="2146" text="10/6/82" TYPE="DATE" comment="" />
+<DATE id="P16" start="2157" end="2164" text="8/13/82" TYPE="DATE" comment="" />
+<DATE id="P17" start="2194" end="2201" text="2/01/85" TYPE="DATE" comment="" />
+<DATE id="P18" start="2266" end="2273" text="12/8/84" TYPE="DATE" comment="" />
+<DATE id="P19" start="2441" end="2448" text="1/26/84" TYPE="DATE" comment="" />
+<NAME id="P20" start="2555" end="2562" text="Aguilar" TYPE="PATIENT" comment="" />
+<AGE id="P21" start="2568" end="2570" text="51" TYPE="AGE" comment="" />
+<NAME id="P22" start="3579" end="3586" text="Esparza" TYPE="DOCTOR" comment="" />
+<NAME id="P23" start="3778" end="3791" text="Ursula Bowers" TYPE="DOCTOR" comment="" />
+<CONTACT id="P24" start="3798" end="3803" text="34680" TYPE="PHONE" comment="" />
+<NAME id="P25" start="3859" end="3866" text="Aguilar" TYPE="PATIENT" comment="" />
+<NAME id="P26" start="3875" end="3881" text="Bowers" TYPE="DOCTOR" comment="" />
+<NAME id="P27" start="4493" end="4513" text="Rachel G. Richardson" TYPE="DOCTOR" comment="" />
 </TAGS>
 </deIdi2b2>

@@ -1,6 +1,6 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT>
+<TEXT><!***REMOVED***CDATA***REMOVED***
 
 
 Record date: 2086-09-24
@@ -269,7 +269,7 @@ Dec. vibration sense in stocking distribution.  Mild dec. pp.  No Deformities: G
 
       Neurological
 
-EOM's intact, no pronator drift, dysmmetria, increased tone R&gt;L, Bilat Babinski, ankle jerks abset; gait with normal speed and en bloc turn, dec. step height; cogent conversation, language fluent but brief contextual responses.  No aphasia.  Significant visuospatial disorganization. 2/6 at 5 mins. Moderate executive dysfunction.  Mild perseveration. No frontal signs.  No agnosia.
+EOM's intact, no pronator drift, dysmmetria, increased tone R>L, Bilat Babinski, ankle jerks abset; gait with normal speed and en bloc turn, dec. step height; cogent conversation, language fluent but brief contextual responses.  No aphasia.  Significant visuospatial disorganization. 2/6 at 5 mins. Moderate executive dysfunction.  Mild perseveration. No frontal signs.  No agnosia.
 
 
 
@@ -345,20 +345,24 @@ William B. Dodd, M.D.
 
 
 
-</TEXT>
+***REMOVED******REMOVED***></TEXT>
 <TAGS>
-<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2086-09-24" />
-<NAME TYPE="PATIENT" comment="" end="114" id="P1" start="97" text="JIMENEZ,YOUSSEF I" />
-<ID TYPE="MEDICALRECORD" comment="" end="124" id="P2" start="117" text="0554733" />
-<DATE TYPE="DATE" comment="" end="216" id="P4" start="206" text="09/24/2086" />
-<NAME TYPE="DOCTOR" comment="" end="280" id="P5" start="266" text="Wesley Carroll" />
-<LOCATION TYPE="CITY" comment="" end="293" id="P6" start="285" text="Seminole" />
-<LOCATION TYPE="STATE" comment="" end="297" id="P7" start="295" text="RI" />
-<NAME TYPE="DOCTOR" comment="" end="1115" id="P8" start="1103" text="Ernest Byers" />
-<PROFESSION TYPE="PROFESSION" comment="" end="2431" id="P12" start="2415" text="network operator" />
-<PROFESSION TYPE="PROFESSION" comment="" end="2443" id="P13" start="2432" text="Craftperson" />
-<LOCATION TYPE="CITY" comment="" end="2452" id="P14" start="2447" text="Amman" />
-<LOCATION TYPE="ORGANIZATION" comment="" end="2563" id="P15" start="2556" text="library" />
-<NAME TYPE="DOCTOR" comment="" end="6115" id="P16" start="6100" text="William B. Dodd" />
+<DATE id="P0" start="16" end="26" text="2086-09-24" TYPE="DATE" comment="" />
+<NAME id="P1" start="97" end="114" text="JIMENEZ,YOUSSEF I" TYPE="PATIENT" comment="" />
+<ID id="P2" start="117" end="124" text="0554733" TYPE="MEDICALRECORD" comment="" />
+<LOCATION id="P3" start="125" end="128" text="LCH" TYPE="HOSPITAL" comment="" />
+<DATE id="P4" start="206" end="216" text="09/24/2086" TYPE="DATE" comment="" />
+<NAME id="P5" start="266" end="280" text="Wesley Carroll" TYPE="DOCTOR" comment="" />
+<LOCATION id="P6" start="285" end="293" text="Seminole" TYPE="CITY" comment="" />
+<LOCATION id="P7" start="295" end="297" text="RI" TYPE="STATE" comment="" />
+<NAME id="P8" start="1103" end="1115" text="Ernest Byers" TYPE="DOCTOR" comment="" />
+<AGE id="P9" start="2303" end="2305" text="89" TYPE="AGE" comment="" />
+<AGE id="P10" start="2323" end="2325" text="76" TYPE="AGE" comment="" />
+<AGE id="P11" start="2363" end="2365" text="80" TYPE="AGE" comment="" />
+<PROFESSION id="P12" start="2415" end="2431" text="network operator" TYPE="PROFESSION" comment="" />
+<PROFESSION id="P13" start="2432" end="2443" text="Craftperson" TYPE="PROFESSION" comment="" />
+<LOCATION id="P14" start="2447" end="2452" text="Amman" TYPE="CITY" comment="" />
+<LOCATION id="P15" start="2556" end="2563" text="library" TYPE="ORGANIZATION" comment="" />
+<NAME id="P16" start="6100" end="6115" text="William B. Dodd" TYPE="DOCTOR" comment="" />
 </TAGS>
 </deIdi2b2>

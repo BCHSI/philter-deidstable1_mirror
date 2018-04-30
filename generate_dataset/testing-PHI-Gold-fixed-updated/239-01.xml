@@ -1,6 +1,6 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT>
+<TEXT><!***REMOVED***CDATA***REMOVED***
 
 
 Record date: 2066-11-14
@@ -77,7 +77,7 @@ repeated noncompliance, frequently, but not always, due to financial constraints
 
       Abscess    : Rt shin 2062
 
-Back: 11/64. S/P I&amp;D
+Back: 11/64. S/P I&D
 
 
 
@@ -235,21 +235,26 @@ Plan
 
 
 
-</TEXT>
+***REMOVED******REMOVED***></TEXT>
 <TAGS>
-<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2066-11-14" />
-<DATE TYPE="DATE" comment="" end="1914" id="P3" start="1910" text="2062" />
-<DATE TYPE="DATE" comment="" end="1927" id="P4" start="1922" text="11/64" />
-<DATE TYPE="DATE" comment="" end="2072" id="P5" start="2067" text="11/65" />
-<DATE TYPE="DATE" comment="" end="2098" id="P6" start="2093" text="11/66" />
-<LOCATION TYPE="CITY" comment="" end="2160" id="P7" start="2153" text="De Soto" />
-<PROFESSION TYPE="PROFESSION" comment="" end="2352" id="P8" start="2342" text="visual art" />
-<NAME TYPE="PATIENT" comment="" end="3528" id="P9" start="3514" text="Ogrady,Ulysses" />
-<DATE TYPE="DATE" comment="" end="3575" id="P11" start="3565" text="11/08/2066" />
-<DATE TYPE="DATE" comment="" end="4056" id="P12" start="4050" text="Nov 08" />
-<DATE TYPE="DATE" comment="" end="4228" id="P13" start="4221" text="8/18/66" />
-<DATE TYPE="DATE" comment="" end="4928" id="P16" start="4922" text="Friday" />
-<NAME TYPE="DOCTOR" comment="" end="4954" id="P17" start="4946" text="Mcdaniel" />
-<DATE TYPE="DATE" comment="" end="5012" id="P18" start="5004" text="Thursday" />
+<DATE id="P0" start="16" end="26" text="2066-11-14" TYPE="DATE" comment="" />
+<AGE id="P1" start="132" end="134" text="59" TYPE="AGE" comment="" />
+<LOCATION id="P2" start="144" end="151" text="Chadian" TYPE="COUNTRY" comment="" />
+<DATE id="P3" start="1910" end="1914" text="2062" TYPE="DATE" comment="" />
+<DATE id="P4" start="1922" end="1927" text="11/64" TYPE="DATE" comment="" />
+<DATE id="P5" start="2067" end="2072" text="11/65" TYPE="DATE" comment="" />
+<DATE id="P6" start="2093" end="2098" text="11/66" TYPE="DATE" comment="" />
+<LOCATION id="P7" start="2153" end="2160" text="De Soto" TYPE="CITY" comment="" />
+<PROFESSION id="P8" start="2342" end="2352" text="visual art" TYPE="PROFESSION" comment="" />
+<NAME id="P9" start="3514" end="3528" text="Ogrady,Ulysses" TYPE="PATIENT" comment="" />
+<LOCATION id="P10" start="3542" end="3545" text="IMC" TYPE="HOSPITAL" comment="" />
+<DATE id="P11" start="3565" end="3575" text="11/08/2066" TYPE="DATE" comment="" />
+<DATE id="P12" start="4050" end="4056" text="Nov 08" TYPE="DATE" comment="" />
+<DATE id="P13" start="4221" end="4228" text="8/18/66" TYPE="DATE" comment="" />
+<AGE id="P14" start="4515" end="4517" text="58" TYPE="AGE" comment="" />
+<LOCATION id="P15" start="4527" end="4534" text="Chadian" TYPE="COUNTRY" comment="" />
+<DATE id="P16" start="4922" end="4928" text="Friday" TYPE="DATE" comment="" />
+<NAME id="P17" start="4946" end="4954" text="Mcdaniel" TYPE="DOCTOR" comment="" />
+<DATE id="P18" start="5004" end="5012" text="Thursday" TYPE="DATE" comment="" />
 </TAGS>
 </deIdi2b2>
