@@ -191,8 +191,19 @@ eScription document:4-5337537 BFFocus
 <DATE TYPE="DATE" comment="" end="70" id="P3" start="62" text="07/19/80" />
 <NAME TYPE="DOCTOR" comment="" end="85" id="P4" start="71" text="TAVARES, IDRIS" />
 <NAME TYPE="DOCTOR" comment="" end="130" id="P5" start="115" text="Xavier Palacios" />
+<LOCATION TYPE="HOSPITAL" comment="" end="651" id="P7" start="624" text="Southwest Montana Radiology" />
+<LOCATION TYPE="HOSPITAL" comment="" end="753" id="P8" start="736" text="Southwest Montana" />
 <NAME TYPE="DOCTOR" comment="" end="1139" id="P9" start="1128" text="Octavia Xue" />
+<LOCATION TYPE="HOSPITAL" comment="" end="1160" id="P10" start="1143" text="Heritage Hospital" />
+<LOCATION TYPE="HOSPITAL" comment="" end="1218" id="P11" start="1201" text="Southwest Montana" />
+<LOCATION TYPE="HOSPITAL" comment="" end="1330" id="P12" start="1305" text="Riverton General Hospital" />
+<LOCATION TYPE="HOSPITAL" comment="" end="2991" id="P14" start="2974" text="Southwest Montana" />
+<LOCATION TYPE="HOSPITAL" comment="" end="3239" id="P15" start="3222" text="Heritage Hospital" />
+<LOCATION TYPE="HOSPITAL" comment="" end="4128" id="P16" start="4111" text="Heritage Hospital" />
+<LOCATION TYPE="HOSPITAL" comment="" end="4208" id="P17" start="4191" text="Heritage Hospital" />
 <NAME TYPE="DOCTOR" comment="" end="4277" id="P18" start="4266" text="Octavia Xue" />
+<LOCATION TYPE="HOSPITAL" comment="" end="4345" id="P19" start="4328" text="Heritage Hospital" />
+<LOCATION TYPE="HOSPITAL" comment="" end="4753" id="P20" start="4736" text="Heritage Hospital" />
 <NAME TYPE="DOCTOR" comment="" end="4875" id="P21" start="4861" text="TAVARES, IDRIS" />
 <DATE TYPE="DATE" comment="" end="4893" id="P22" start="4885" text="07/19/80" />
 <DATE TYPE="DATE" comment="" end="4906" id="P23" start="4898" text="07/19/80" />

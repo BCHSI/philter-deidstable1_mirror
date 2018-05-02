@@ -220,9 +220,12 @@ Pager: #84464
 <ID TYPE="MEDICALRECORD" comment="" end="130" id="P3" start="121" text="727 19 02" />
 <DATE TYPE="DATE" comment="" end="170" id="P5" start="163" text="5/26/32" />
 <NAME TYPE="DOCTOR" comment="" end="189" id="P6" start="176" text="Yale Triplett" />
+<LOCATION TYPE="HOSPITAL" comment="" end="204" id="P7" start="191" text="Turner Clinic" />
 <NAME TYPE="DOCTOR" comment="" end="232" id="P8" start="227" text="Arias" />
 <NAME TYPE="DOCTOR" comment="" end="239" id="P9" start="233" text="Wesley" />
 <NAME TYPE="DOCTOR" comment="" end="272" id="P10" start="258" text="Jaquan Mahoney" />
+<LOCATION TYPE="HOSPITAL" comment="" end="606" id="P12" start="603" text="VGH" />
+<LOCATION TYPE="HOSPITAL" comment="" end="946" id="P13" start="943" text="WMC" />
 <NAME TYPE="DOCTOR" comment="" end="2312" id="P14" start="2301" text="Steven Land" />
 <DATE TYPE="DATE" comment="" end="2547" id="P15" start="2541" text="5/3/32" />
 <LOCATION TYPE="CITY" comment="" end="2878" id="P16" start="2862" text="North Wilkesboro" />

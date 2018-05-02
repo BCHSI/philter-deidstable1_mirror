@@ -132,6 +132,7 @@ Document Status: Final
 </TEXT>
 <TAGS>
 <DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2079-06-22" />
+<LOCATION TYPE="HOSPITAL" comment="" end="70" id="P1" start="45" text="OAKLAND ASSOCIATES CENTER" />
 <NAME TYPE="PATIENT" comment="" end="158" id="P2" start="153" text="Yusuf" />
 <NAME TYPE="DOCTOR" comment="" end="203" id="P4" start="197" text="Barton" />
 <DATE TYPE="DATE" comment="" end="223" id="P5" start="216" text="6/18/79" />

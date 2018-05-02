@@ -62,6 +62,7 @@ DV: 06/26/71
 </TEXT>
 <TAGS>
 <DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2071-06-26" />
+<LOCATION TYPE="HOSPITAL" comment="" end="59" id="P1" start="29" text="Long Prairie Memorial Hospital" />
 <LOCATION TYPE="STREET" comment="" end="74" id="P2" start="60" text="94 Aspen Court" />
 <NAME TYPE="PATIENT" comment="" end="124" id="P3" start="114" text="Uher, Olga" />
 <LOCATION TYPE="CITY" comment="" end="132" id="P4" start="125" text="Chilton" />

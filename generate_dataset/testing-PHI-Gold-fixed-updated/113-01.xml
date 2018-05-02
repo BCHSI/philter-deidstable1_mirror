@@ -84,6 +84,7 @@ Dictated by:  HAROLD OSBORNE, M.D.       HO97
 </TEXT>
 <TAGS>
 <DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2087-02-21" />
+<LOCATION TYPE="HOSPITAL" comment="" end="56" id="P1" start="49" text="DAMERON" />
 <NAME TYPE="PATIENT" comment="" end="98" id="P2" start="82" text="VALENZUELA,BRIAN" />
 <ID TYPE="MEDICALRECORD" comment="" end="112" id="P3" start="101" text="036-89-96-4" />
 <DATE TYPE="DATE" comment="" end="153" id="P4" start="145" text="02/21/87" />

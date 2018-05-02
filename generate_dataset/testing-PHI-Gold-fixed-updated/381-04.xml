@@ -212,7 +212,9 @@ Case discussed with infectious disease attending, Dr. Amber Akins.
 <DATE TYPE="DATE" comment="" end="564" id="P9" start="559" text="10/92" />
 <DATE TYPE="DATE" comment="" end="670" id="P10" start="666" text="2/93" />
 <DATE TYPE="DATE" comment="" end="784" id="P11" start="780" text="2/94" />
+<LOCATION TYPE="HOSPITAL" comment="" end="837" id="P12" start="820" text="Altadena Hospital" />
 <DATE TYPE="DATE" comment="" end="1000" id="P13" start="996" text="3/18" />
+<LOCATION TYPE="HOSPITAL" comment="" end="1007" id="P14" start="1004" text="GCC" />
 <DATE TYPE="DATE" comment="" end="1077" id="P15" start="1073" text="3/18" />
 <DATE TYPE="DATE" comment="" end="3016" id="P18" start="3012" text="5/92" />
 <DATE TYPE="DATE" comment="" end="3053" id="P19" start="3049" text="9/92" />

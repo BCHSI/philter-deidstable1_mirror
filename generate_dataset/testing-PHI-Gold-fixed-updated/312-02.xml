@@ -317,7 +317,9 @@ Pager #89356
 <ID TYPE="MEDICALRECORD" comment="" end="139" id="P3" start="132" text="8381729" />
 <DATE TYPE="DATE" comment="" end="169" id="P4" start="161" text="01/08/64" />
 <NAME TYPE="DOCTOR" comment="" end="193" id="P5" start="187" text="Burton" />
+<LOCATION TYPE="HOSPITAL" comment="" end="795" id="P7" start="780" text="EDUCARE-PULLMAN" />
 <LOCATION TYPE="CITY" comment="" end="1899" id="P8" start="1891" text="Kemmerer" />
+<LOCATION TYPE="HOSPITAL" comment="" end="1932" id="P9" start="1907" text="Chestnut Lodge Sanitarium" />
 <PROFESSION TYPE="PROFESSION" comment="" end="2011" id="P11" start="2004" text="Glazier" />
 <DATE TYPE="DATE" comment="" end="2139" id="P12" start="2131" text="thursday" />
 <DATE TYPE="DATE" comment="" end="2166" id="P13" start="2157" text="wednesday" />
@@ -374,6 +376,7 @@ Pager #89356
 <DATE TYPE="DATE" comment="" end="5993" id="P64" start="5985" text="01/08/64" />
 <DATE TYPE="DATE" comment="" end="6061" id="P65" start="6053" text="01/08/64" />
 <DATE TYPE="DATE" comment="" end="6437" id="P67" start="6432" text="01/09" />
+<LOCATION TYPE="HOSPITAL" comment="" end="7097" id="P68" start="7072" text="Chestnut Lodge Sanitarium" />
 <NAME TYPE="DOCTOR" comment="" end="7169" id="P69" start="7151" text="Uriel Q. Yarbrough" />
 <CONTACT TYPE="PHONE" comment="" end="7187" id="P70" start="7182" text="89356" />
 </TAGS>

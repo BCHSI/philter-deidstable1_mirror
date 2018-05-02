@@ -124,10 +124,12 @@ Dictated by:  GEORGE DUNHAM, M.D.       GD74
 </TEXT>
 <TAGS>
 <DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2096-08-06" />
+<LOCATION TYPE="HOSPITAL" comment="" end="52" id="P1" start="49" text="BHC" />
 <NAME TYPE="PATIENT" comment="" end="97" id="P2" start="78" text="MARVINYANDELL,GRACE" />
 <ID TYPE="MEDICALRECORD" comment="" end="111" id="P3" start="100" text="904-68-07-1" />
 <DATE TYPE="DATE" comment="" end="145" id="P4" start="137" text="08/06/96" />
 <NAME TYPE="DOCTOR" comment="" end="248" id="P6" start="244" text="Dodd" />
+<LOCATION TYPE="HOSPITAL" comment="" end="914" id="P7" start="888" text="United Medical Center East" />
 <NAME TYPE="DOCTOR" comment="" end="3015" id="P9" start="3003" text="Aleta Nunley" />
 <ID TYPE="IDNUM" comment="" end="3094" id="P10" start="3083" text="TR682/13484" />
 <NAME TYPE="DOCTOR" comment="" end="3110" id="P11" start="3097" text="GEORGE DUNHAM" />

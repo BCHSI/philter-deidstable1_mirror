@@ -355,6 +355,7 @@ Araujo, Ursula X,NP
 <DATE TYPE="DATE" comment="" end="189" id="P2" start="174" text="August 06, 2091" />
 <NAME TYPE="DOCTOR" comment="" end="211" id="P3" start="199" text="Carter Horne" />
 <DATE TYPE="DATE" comment="" end="771" id="P4" start="765" text="1/2091" />
+<LOCATION TYPE="HOSPITAL" comment="" end="811" id="P5" start="781" text="Vanderbilt University Hospital" />
 <DATE TYPE="DATE" comment="" end="1095" id="P7" start="1088" text="7/29/91" />
 <PROFESSION TYPE="PROFESSION" comment="" end="1628" id="P8" start="1619" text="Air Pilot" />
 <LOCATION TYPE="ORGANIZATION" comment="" end="1644" id="P9" start="1633" text="S3 Graphics" />

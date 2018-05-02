@@ -76,7 +76,9 @@ Record date: 2114-01-10
 <ID TYPE="MEDICALRECORD" comment="" end="95" id="P2" start="88" text="4692758" />
 <DATE TYPE="DATE" comment="" end="114" id="P3" start="98" text="January 10, 2114" />
 <DATE TYPE="DATE" comment="" end="1003" id="P6" start="999" text="9/13" />
+<LOCATION TYPE="HOSPITAL" comment="" end="1327" id="P7" start="1308" text="Christiana Hospital" />
 <NAME TYPE="DOCTOR" comment="" end="1510" id="P9" start="1504" text="Dillon" />
+<LOCATION TYPE="HOSPITAL" comment="" end="1662" id="P10" start="1637" text="Naples Community Hospital" />
 <DATE TYPE="DATE" comment="" end="2255" id="P11" start="2251" text="5/14" />
 <NAME TYPE="DOCTOR" comment="" end="2284" id="P12" start="2269" text="Gerald Everhart" />
 <NAME TYPE="PATIENT" comment="" end="2333" id="P13" start="2319" text="Quinten Dawson" />

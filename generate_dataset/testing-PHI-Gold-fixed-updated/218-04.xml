@@ -179,6 +179,7 @@ Document Status: Final
 <NAME TYPE="DOCTOR" comment="" end="507" id="P13" start="500" text="Youmans" />
 <DATE TYPE="DATE" comment="" end="581" id="P14" start="566" text="Friday, June 19" />
 <DATE TYPE="DATE" comment="" end="787" id="P15" start="770" text="Wednesday June 21" />
+<LOCATION TYPE="HOSPITAL" comment="" end="878" id="P16" start="875" text="MCC" />
 <DATE TYPE="DATE" comment="" end="1166" id="P17" start="1161" text="11/92" />
 <DATE TYPE="DATE" comment="" end="1230" id="P18" start="1226" text="3/96" />
 <DATE TYPE="DATE" comment="" end="1468" id="P23" start="1463" text="11/92" />

@@ -38,6 +38,7 @@ Document Status: Final
 </TEXT>
 <TAGS>
 <DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2084-07-30" />
+<LOCATION TYPE="HOSPITAL" comment="" end="80" id="P1" start="59" text="SAN FERNANDO HOSPITAL" />
 <DATE TYPE="DATE" comment="" end="241" id="P2" start="234" text="7/21/84" />
 <NAME TYPE="DOCTOR" comment="" end="704" id="P3" start="685" text="Ximena M. Gillespie" />
 <NAME TYPE="DOCTOR" comment="" end="755" id="P4" start="736" text="Ximena M. Gillespie" />

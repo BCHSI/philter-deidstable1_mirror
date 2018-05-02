@@ -117,6 +117,7 @@ Mike Ivan, MD, EHMS pager 84710
 <DATE TYPE="DATE" comment="" end="304" id="P7" start="300" text="2/03" />
 <DATE TYPE="DATE" comment="" end="3333" id="P9" start="3329" text="2/18" />
 <NAME TYPE="DOCTOR" comment="" end="3592" id="P10" start="3583" text="Mike Ivan" />
+<LOCATION TYPE="HOSPITAL" comment="" end="3602" id="P11" start="3598" text="EHMS" />
 <CONTACT TYPE="PHONE" comment="" end="3614" id="P12" start="3609" text="84710" />
 </TAGS>
 </deIdi2b2>

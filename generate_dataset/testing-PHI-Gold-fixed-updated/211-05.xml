@@ -128,6 +128,7 @@ CPAP     Nocturnal.
 </TEXT>
 <TAGS>
 <DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2096-05-09" />
+<LOCATION TYPE="HOSPITAL" comment="" end="82" id="P1" start="53" text="WORTHINGTON REGIONAL HOSPITAL" />
 <NAME TYPE="PATIENT" comment="" end="163" id="P2" start="158" text="Urban" />
 <NAME TYPE="PATIENT" comment="" end="1177" id="P3" start="1172" text="Urban" />
 <NAME TYPE="PATIENT" comment="" end="1461" id="P4" start="1456" text="Urban" />

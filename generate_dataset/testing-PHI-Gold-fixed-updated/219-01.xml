@@ -136,6 +136,7 @@ Casper, NV 33182
 <DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2070-01-05" />
 <DATE TYPE="DATE" comment="" end="53" id="P1" start="38" text="January 5, 2070" />
 <NAME TYPE="DOCTOR" comment="" end="71" id="P2" start="58" text="Matthew Wyatt" />
+<LOCATION TYPE="HOSPITAL" comment="" end="102" id="P3" start="79" text="Notre Dame Nursing Home" />
 <LOCATION TYPE="STREET" comment="" end="119" id="P4" start="104" text="4379 New Street" />
 <LOCATION TYPE="CITY" comment="" end="128" id="P5" start="121" text="Hyannis" />
 <LOCATION TYPE="STATE" comment="" end="132" id="P6" start="130" text="NV" />
@@ -149,6 +150,7 @@ Casper, NV 33182
 <NAME TYPE="PATIENT" comment="" end="1773" id="P14" start="1768" text="Potts" />
 <NAME TYPE="PATIENT" comment="" end="1811" id="P15" start="1806" text="Potts" />
 <NAME TYPE="PATIENT" comment="" end="2000" id="P16" start="1995" text="Potts" />
+<LOCATION TYPE="HOSPITAL" comment="" end="2093" id="P18" start="2084" text="Whitehead" />
 <NAME TYPE="PATIENT" comment="" end="2118" id="P19" start="2105" text="William Potts" />
 <ID TYPE="MEDICALRECORD" comment="" end="2135" id="P20" start="2124" text="109-16-75-8" />
 <DATE TYPE="DATE" comment="" end="2174" id="P21" start="2159" text="January 5, 2070" />
@@ -161,7 +163,9 @@ Casper, NV 33182
 <NAME TYPE="PATIENT" comment="" end="3819" id="P28" start="3814" text="Potts" />
 <NAME TYPE="PATIENT" comment="" end="3957" id="P30" start="3952" text="Potts" />
 <NAME TYPE="PATIENT" comment="" end="4200" id="P31" start="4195" text="Potts" />
+<LOCATION TYPE="HOSPITAL" comment="" end="4266" id="P32" start="4262" text="NDNH" />
 <NAME TYPE="DOCTOR" comment="" end="4320" id="P33" start="4309" text="Olivia Xing" />
+<LOCATION TYPE="HOSPITAL" comment="" end="4350" id="P34" start="4327" text="Monmouth Medical Center" />
 <LOCATION TYPE="STREET" comment="" end="4367" id="P35" start="4351" text="81 Clergy Street" />
 <LOCATION TYPE="CITY" comment="" end="4374" id="P36" start="4368" text="Casper" />
 <LOCATION TYPE="STATE" comment="" end="4378" id="P37" start="4376" text="NV" />
@@ -173,6 +177,7 @@ Casper, NV 33182
 <DATE TYPE="DATE" comment="" end="4483" id="P43" start="4475" text="01/06/70" />
 <DATE TYPE="DATE" comment="" end="4496" id="P44" start="4488" text="01/05/70" />
 <NAME TYPE="DOCTOR" comment="" end="4513" id="P45" start="4503" text="Earl Jacob" />
+<LOCATION TYPE="HOSPITAL" comment="" end="4560" id="P46" start="4536" text="Laurel Regional Hospital" />
 <LOCATION TYPE="STREET" comment="" end="4577" id="P47" start="4561" text="96 Clergy Street" />
 <LOCATION TYPE="CITY" comment="" end="4584" id="P48" start="4578" text="Casper" />
 <LOCATION TYPE="STATE" comment="" end="4588" id="P49" start="4586" text="NV" />

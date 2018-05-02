@@ -302,6 +302,7 @@ Olivia Spence, M.D.DD: 05/08/91DT: 05/12/91DV: 05/08/91
 <DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2091-05-08" />
 <DATE TYPE="DATE" comment="" end="58" id="P1" start="46" text="May 08, 2091" />
 <NAME TYPE="DOCTOR" comment="" end="88" id="P2" start="75" text="Billy Vanpelt" />
+<LOCATION TYPE="HOSPITAL" comment="" end="129" id="P3" start="96" text="Orlando Regional Lucerne Hospital" />
 <LOCATION TYPE="STREET" comment="" end="152" id="P4" start="131" text="60 Kessler Farm Drive" />
 <LOCATION TYPE="CITY" comment="" end="164" id="P5" start="154" text="White Hall" />
 <LOCATION TYPE="STATE" comment="" end="168" id="P6" start="166" text="MN" />

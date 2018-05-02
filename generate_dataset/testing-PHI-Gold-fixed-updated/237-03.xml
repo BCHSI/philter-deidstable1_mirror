@@ -142,6 +142,7 @@ Document Status: Final
 </TEXT>
 <TAGS>
 <DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2093-12-27" />
+<LOCATION TYPE="HOSPITAL" comment="" end="73" id="P1" start="45" text="BEAUREGARD MEMORIAL HOSPITAL" />
 <NAME TYPE="PATIENT" comment="" end="235" id="P3" start="229" text="Mullen" />
 <DATE TYPE="DATE" comment="" end="504" id="P6" start="499" text="11/88" />
 <DATE TYPE="DATE" comment="" end="665" id="P7" start="661" text="2/89" />

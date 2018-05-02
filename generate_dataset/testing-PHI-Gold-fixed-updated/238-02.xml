@@ -71,6 +71,7 @@ Signed electronically by Noreen O Dotson RN on Apr 22, 2079     Bryan  Edmondson
 </TEXT>
 <TAGS>
 <DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2079-04-22" />
+<LOCATION TYPE="HOSPITAL" comment="" end="86" id="P1" start="61" text="BROADLAWNS MEDICAL CENTER" />
 <DATE TYPE="DATE" comment="" end="428" id="P2" start="419" text="3/12/2075" />
 <NAME TYPE="DOCTOR" comment="" end="485" id="P3" start="476" text="Edmondson" />
 <NAME TYPE="DOCTOR" comment="" end="593" id="P4" start="584" text="Edmondson" />

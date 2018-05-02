@@ -52,6 +52,7 @@ DV:1-3-87
 </TEXT>
 <TAGS>
 <DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2086-12-30" />
+<LOCATION TYPE="HOSPITAL" comment="" end="44" id="P1" start="28" text="ORLANDO REGIONAL" />
 <NAME TYPE="PATIENT" comment="" end="97" id="P2" start="76" text="NICHOLAS-XAVIER, FRED" />
 <ID TYPE="MEDICALRECORD" comment="" end="153" id="P3" start="145" text="65856594" />
 <DATE TYPE="DATE" comment="" end="206" id="P4" start="200" text="1-3-87" />

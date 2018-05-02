@@ -228,6 +228,7 @@ Signed electronically by Xenakis, Robert on Mar 3, 2130
 </TEXT>
 <TAGS>
 <DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2130-02-16" />
+<LOCATION TYPE="HOSPITAL" comment="" end="84" id="P1" start="62" text="HOUSTON MEDICAL CENTER" />
 <NAME TYPE="DOCTOR" comment="" end="448" id="P3" start="440" text="Thurston" />
 <NAME TYPE="DOCTOR" comment="" end="686" id="P4" start="678" text="Thurston" />
 <DATE TYPE="DATE" comment="" end="2820" id="P6" start="2810" text="02/16/2130" />

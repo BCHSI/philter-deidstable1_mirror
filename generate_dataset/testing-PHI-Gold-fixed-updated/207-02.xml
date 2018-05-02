@@ -98,6 +98,7 @@ Dictated by:  RUTH R. PALMER, M.D.     RP11
 </TEXT>
 <TAGS>
 <DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2080-07-19" />
+<LOCATION TYPE="HOSPITAL" comment="" end="52" id="P1" start="49" text="MHC" />
 <NAME TYPE="PATIENT" comment="" end="90" id="P2" start="78" text="ORTA,PHIL F." />
 <ID TYPE="MEDICALRECORD" comment="" end="104" id="P3" start="93" text="559-31-51-6" />
 <DATE TYPE="DATE" comment="" end="139" id="P4" start="131" text="07/19/80" />

@@ -56,6 +56,7 @@ Document Status: Final
 </TEXT>
 <TAGS>
 <DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2087-09-15" />
+<LOCATION TYPE="HOSPITAL" comment="" end="69" id="P1" start="47" text="SAINT VINCENT HOSPITAL" />
 <NAME TYPE="PATIENT" comment="" end="122" id="P2" start="116" text="Ursula" />
 <NAME TYPE="DOCTOR" comment="" end="1369" id="P3" start="1352" text="Umberto M. Uzzell" />
 <CONTACT TYPE="PHONE" comment="" end="1386" id="P4" start="1381" text="12472" />

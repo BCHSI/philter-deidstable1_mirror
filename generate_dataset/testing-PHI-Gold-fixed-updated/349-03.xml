@@ -93,6 +93,9 @@ Janet Orellana MD
 <NAME TYPE="PATIENT" comment="" end="34" id="P1" start="30" text="Olga" />
 <NAME TYPE="DOCTOR" comment="" end="108" id="P2" start="102" text="Walter" />
 <DATE TYPE="DATE" comment="" end="120" id="P3" start="112" text="10/15/45" />
+<LOCATION TYPE="HOSPITAL" comment="" end="156" id="P4" start="145" text="Leprosarium" />
+<LOCATION TYPE="HOSPITAL" comment="" end="239" id="P5" start="231" text="MEDIQUIK" />
+<LOCATION TYPE="HOSPITAL" comment="" end="370" id="P6" start="354" text="Parsons Hospital" />
 <DATE TYPE="DATE" comment="" end="379" id="P7" start="374" text="11/05" />
 <DATE TYPE="DATE" comment="" end="410" id="P8" start="402" text="12/10/45" />
 <DATE TYPE="DATE" comment="" end="1012" id="P9" start="1007" text="11/44" />

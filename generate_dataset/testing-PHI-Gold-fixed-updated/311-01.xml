@@ -82,6 +82,7 @@ Dictated by:  YVES BLACKBURN, M.D.       HB79
 </TEXT>
 <TAGS>
 <DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2082-11-22" />
+<LOCATION TYPE="HOSPITAL" comment="" end="52" id="P1" start="49" text="ZHH" />
 <NAME TYPE="PATIENT" comment="" end="92" id="P2" start="78" text="FINNEY,INDIANA" />
 <ID TYPE="MEDICALRECORD" comment="" end="106" id="P3" start="95" text="432-94-73-9" />
 <DATE TYPE="DATE" comment="" end="144" id="P4" start="136" text="11/22/82" />

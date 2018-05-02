@@ -138,8 +138,11 @@ Dictated by:  OMAR IM, M.D.       OI23
 </TEXT>
 <TAGS>
 <DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2095-08-21" />
+<LOCATION TYPE="HOSPITAL" comment="" end="55" id="P1" start="49" text="Bailey" />
 <NAME TYPE="PATIENT" comment="" end="94" id="P2" start="81" text="DARLING,BETTY" />
 <ID TYPE="MEDICALRECORD" comment="" end="108" id="P3" start="97" text="785-67-87-3" />
+<LOCATION TYPE="HOSPITAL" comment="" end="679" id="P5" start="665" text="Faith Hospital" />
+<LOCATION TYPE="HOSPITAL" comment="" end="962" id="P6" start="938" text="Bailey Memorial Hospital" />
 <ID TYPE="IDNUM" comment="" end="3368" id="P7" start="3357" text="YA226/51903" />
 <NAME TYPE="DOCTOR" comment="" end="3378" id="P8" start="3371" text="OMAR IM" />
 <NAME TYPE="USERNAME" comment="" end="3395" id="P9" start="3391" text="OI23" />

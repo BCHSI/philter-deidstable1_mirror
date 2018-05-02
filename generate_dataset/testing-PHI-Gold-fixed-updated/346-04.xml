@@ -336,6 +336,7 @@ Pager #93278
 </TEXT>
 <TAGS>
 <DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2088-03-02" />
+<LOCATION TYPE="HOSPITAL" comment="" end="41" id="P1" start="33" text="Mediquik" />
 <NAME TYPE="PATIENT" comment="" end="82" id="P2" start="69" text="Oshea, Xavier" />
 <ID TYPE="MEDICALRECORD" comment="" end="98" id="P3" start="89" text="581-77-50" />
 <DATE TYPE="DATE" comment="" end="132" id="P4" start="125" text="2/27/88" />

@@ -87,6 +87,7 @@ DV:2-03-68
 </TEXT>
 <TAGS>
 <DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2068-02-04" />
+<LOCATION TYPE="HOSPITAL" comment="" end="67" id="P1" start="28" text="ASSOCIATED ARTHRITIS SPECIALISTS CENTER" />
 <NAME TYPE="PATIENT" comment="" end="94" id="P2" start="79" text="Quijano, Baylee" />
 <DATE TYPE="DATE" comment="" end="148" id="P3" start="141" text="2-03-68" />
 <LOCATION TYPE="ORGANIZATION" comment="" end="594" id="P5" start="579" text="Briggs Stratton" />

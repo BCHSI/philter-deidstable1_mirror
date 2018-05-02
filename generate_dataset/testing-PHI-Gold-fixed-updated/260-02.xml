@@ -184,6 +184,7 @@ Xavier Tristan Huerta, M.D.
 <DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2070-02-14" />
 <NAME TYPE="PATIENT" comment="" end="110" id="P1" start="97" text="VERA,XANDER N" />
 <ID TYPE="MEDICALRECORD" comment="" end="120" id="P2" start="113" text="2152363" />
+<LOCATION TYPE="HOSPITAL" comment="" end="124" id="P3" start="121" text="BMH" />
 <NAME TYPE="DOCTOR" comment="" end="1730" id="P5" start="1725" text="Quint" />
 <NAME TYPE="DOCTOR" comment="" end="1784" id="P6" start="1777" text="Umstead" />
 <DATE TYPE="DATE" comment="" end="1949" id="P7" start="1946" text="May" />
@@ -192,11 +193,13 @@ Xavier Tristan Huerta, M.D.
 <DATE TYPE="DATE" comment="" end="2304" id="P10" start="2294" text="06/20/2068" />
 <DATE TYPE="DATE" comment="" end="2345" id="P11" start="2335" text="07/17/2069" />
 <DATE TYPE="DATE" comment="" end="2389" id="P12" start="2379" text="03/25/2068" />
+<LOCATION TYPE="HOSPITAL" comment="" end="2434" id="P13" start="2410" text="HOLLY MANOR NURSING HOME" />
 <DATE TYPE="DATE" comment="" end="2512" id="P14" start="2502" text="04/16/2066" />
 <DATE TYPE="DATE" comment="" end="2549" id="P15" start="2539" text="07/18/2069" />
 <DATE TYPE="DATE" comment="" end="2590" id="P16" start="2580" text="07/17/2069" />
 <DATE TYPE="DATE" comment="" end="2632" id="P17" start="2622" text="07/17/2069" />
 <DATE TYPE="DATE" comment="" end="2671" id="P18" start="2661" text="03/25/2068" />
+<LOCATION TYPE="HOSPITAL" comment="" end="2715" id="P19" start="2691" text="HOLLY MANOR NURSING HOME" />
 <DATE TYPE="DATE" comment="" end="2841" id="P20" start="2831" text="02/22/2069" />
 <DATE TYPE="DATE" comment="" end="2884" id="P21" start="2874" text="07/17/2069" />
 <DATE TYPE="DATE" comment="" end="2926" id="P22" start="2916" text="02/22/2069" />

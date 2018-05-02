@@ -240,17 +240,30 @@ Plavix     Stopped because of ecchymosis and epistaxis - InactivatedCC:
 </TEXT>
 <TAGS>
 <DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2157-05-17" />
+<LOCATION TYPE="HOSPITAL" comment="" end="79" id="P1" start="53" text="TRUMBULL MEMORIAL HOSPITAL" />
 <NAME TYPE="PATIENT" comment="" end="258" id="P2" start="246" text="Xavier Olive" />
+<LOCATION TYPE="HOSPITAL" comment="" end="318" id="P4" start="301" text="Trumbull Memorial" />
 <NAME TYPE="DOCTOR" comment="" end="511" id="P6" start="499" text="Ximena Keane" />
+<LOCATION TYPE="HOSPITAL" comment="" end="548" id="P7" start="531" text="Alexandria Clinic" />
 <NAME TYPE="PATIENT" comment="" end="561" id="P8" start="556" text="Olive" />
+<LOCATION TYPE="HOSPITAL" comment="" end="586" id="P9" start="583" text="TMH" />
 <NAME TYPE="DOCTOR" comment="" end="808" id="P13" start="804" text="Cain" />
+<LOCATION TYPE="HOSPITAL" comment="" end="829" id="P14" start="812" text="Alexandria Clinic" />
+<LOCATION TYPE="HOSPITAL" comment="" end="904" id="P15" start="878" text="Corcoran District Hospital" />
 <NAME TYPE="DOCTOR" comment="" end="968" id="P16" start="964" text="Cain" />
+<LOCATION TYPE="HOSPITAL" comment="" end="1257" id="P17" start="1238" text="Pomeroy Care Center" />
 <LOCATION TYPE="CITY" comment="" end="1269" id="P18" start="1259" text="Big Rapids" />
+<LOCATION TYPE="HOSPITAL" comment="" end="1273" id="P19" start="1271" text="AC" />
+<LOCATION TYPE="HOSPITAL" comment="" end="1335" id="P20" start="1309" text="Corcoran District Hospital" />
 <NAME TYPE="DOCTOR" comment="" end="2652" id="P22" start="2645" text="Jeffers" />
 <NAME TYPE="DOCTOR" comment="" end="2662" id="P23" start="2657" text="Innis" />
+<LOCATION TYPE="HOSPITAL" comment="" end="2813" id="P24" start="2811" text="AC" />
 <PROFESSION TYPE="PROFESSION" comment="" end="3823" id="P29" start="3796" text="Motor Vehicle Body Repairer" />
 <LOCATION TYPE="ORGANIZATION" comment="" end="3847" id="P30" start="3845" text="GM" />
 <DATE TYPE="DATE" comment="" end="6436" id="P31" start="6426" text="11/25/2083" />
+<LOCATION TYPE="HOSPITAL" comment="" end="7626" id="P32" start="7624" text="AC" />
+<LOCATION TYPE="HOSPITAL" comment="" end="7641" id="P33" start="7638" text="CDH" />
+<LOCATION TYPE="HOSPITAL" comment="" end="8055" id="P34" start="8053" text="AC" />
 <NAME TYPE="DOCTOR" comment="" end="8126" id="P35" start="8122" text="Ruiz" />
 <NAME TYPE="DOCTOR" comment="" end="8604" id="P36" start="8589" text="Brittany Naylor" />
 <NAME TYPE="DOCTOR" comment="" end="8618" id="P37" start="8606" text="Ximena Keane" />

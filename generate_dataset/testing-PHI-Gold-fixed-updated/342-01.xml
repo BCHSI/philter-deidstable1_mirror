@@ -175,6 +175,8 @@ eScription document:1-1843613 BFFocus
 <DATE TYPE="DATE" comment="" end="65" id="P3" start="57" text="01/13/93" />
 <NAME TYPE="DOCTOR" comment="" end="76" id="P4" start="66" text="IP, CARRIE" />
 <NAME TYPE="DOCTOR" comment="" end="124" id="P5" start="121" text="Xue" />
+<LOCATION TYPE="HOSPITAL" comment="" end="824" id="P7" start="811" text="EDUCARE-FARGO" />
+<LOCATION TYPE="HOSPITAL" comment="" end="988" id="P8" start="968" text="Lansing Dover Clinic" />
 <NAME TYPE="DOCTOR" comment="" end="4163" id="P9" start="4153" text="IP, CARRIE" />
 <DATE TYPE="DATE" comment="" end="4179" id="P10" start="4171" text="01/13/93" />
 <DATE TYPE="DATE" comment="" end="4192" id="P11" start="4184" text="01/13/93" />

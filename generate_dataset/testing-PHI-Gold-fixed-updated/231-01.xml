@@ -176,6 +176,7 @@ Signed electronically by   Frances T Potts NP  on  Aug 11, 2094
 </TEXT>
 <TAGS>
 <DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2094-08-11" />
+<LOCATION TYPE="HOSPITAL" comment="" end="64" id="P1" start="40" text="COQUILLE VALLEY HOSPITAL" />
 <NAME TYPE="DOCTOR" comment="" end="150" id="P2" start="138" text="Irvin Vitale" />
 <NAME TYPE="DOCTOR" comment="" end="335" id="P3" start="323" text="Bonnie Eaves" />
 <DATE TYPE="DATE" comment="" end="345" id="P4" start="341" text="8/25" />

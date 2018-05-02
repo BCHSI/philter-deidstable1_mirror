@@ -308,16 +308,22 @@ Renal Fellow
 </TEXT>
 <TAGS>
 <DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2095-09-19" />
+<LOCATION TYPE="HOSPITAL" comment="" end="43" id="P1" start="37" text="KEKELA" />
 <NAME TYPE="PATIENT" comment="" end="96" id="P2" start="85" text="Marsh, Carl" />
 <ID TYPE="MEDICALRECORD" comment="" end="111" id="P3" start="103" text="99579205" />
 <NAME TYPE="DOCTOR" comment="" end="147" id="P4" start="132" text="Xavier T. Mccoy" />
 <NAME TYPE="DOCTOR" comment="" end="189" id="P5" start="176" text="Keith Tierney" />
+<LOCATION TYPE="HOSPITAL" comment="" end="243" id="P6" start="218" text="Sanford Memorial Hospital" />
 <DATE TYPE="DATE" comment="" end="246" id="P7" start="245" text="S" />
 <DATE TYPE="DATE" comment="" end="252" id="P8" start="251" text="T" />
+<LOCATION TYPE="HOSPITAL" comment="" end="498" id="P11" start="492" text="KEKELA" />
+<LOCATION TYPE="HOSPITAL" comment="" end="1172" id="P12" start="1166" text="KEKELA" />
 <DATE TYPE="DATE" comment="" end="1242" id="P13" start="1227" text="January of 2092" />
+<LOCATION TYPE="HOSPITAL" comment="" end="1521" id="P14" start="1508" text="EDUCARE-FARGO" />
 <DATE TYPE="DATE" comment="" end="1797" id="P15" start="1784" text="November 2090" />
 <DATE TYPE="DATE" comment="" end="1869" id="P16" start="1856" text="April of 2091" />
 <NAME TYPE="DOCTOR" comment="" end="1906" id="P17" start="1899" text="Tierney" />
+<LOCATION TYPE="HOSPITAL" comment="" end="1939" id="P18" start="1914" text="Sanford Memorial Hospital" />
 <LOCATION TYPE="CITY" comment="" end="2264" id="P22" start="2254" text="Mount Airy" />
 <LOCATION TYPE="CITY" comment="" end="2303" id="P23" start="2293" text="Mount Airy" />
 <NAME TYPE="DOCTOR" comment="" end="7115" id="P25" start="7108" text="Tierney" />

@@ -52,6 +52,7 @@ DV: 06/20/74
 </TEXT>
 <TAGS>
 <DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2074-06-20" />
+<LOCATION TYPE="HOSPITAL" comment="" end="32" id="P1" start="29" text="HHH" />
 <LOCATION TYPE="STREET" comment="" end="76" id="P3" start="66" text="89 Buck St" />
 <NAME TYPE="PATIENT" comment="" end="134" id="P4" start="114" text="JORGENSON, VIVIANLEE" />
 <LOCATION TYPE="CITY" comment="" end="145" id="P5" start="135" text="Sioux City" />
@@ -67,6 +68,7 @@ DV: 06/20/74
 <LOCATION TYPE="ZIP" comment="" end="348" id="P16" start="343" text="83712" />
 <NAME TYPE="DOCTOR" comment="" end="363" id="P17" start="360" text="Van" />
 <NAME TYPE="PATIENT" comment="" end="436" id="P18" start="417" text="VivianLee Jorgenson" />
+<LOCATION TYPE="HOSPITAL" comment="" end="489" id="P19" start="474" text="Goulds Hospital" />
 <NAME TYPE="DOCTOR" comment="" end="1518" id="P21" start="1499" text="Vickie Frank-Jarvis" />
 <NAME TYPE="DOCTOR" comment="" end="1559" id="P22" start="1540" text="Vickie Frank-Jarvis" />
 <ID TYPE="IDNUM" comment="" end="1591" id="P23" start="1582" text="9-9294537" />

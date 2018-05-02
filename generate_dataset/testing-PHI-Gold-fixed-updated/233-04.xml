@@ -74,6 +74,7 @@ Dictated by:  ADAM OLDHAM, M.D.   AO66
 </TEXT>
 <TAGS>
 <DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2064-10-05" />
+<LOCATION TYPE="HOSPITAL" comment="" end="58" id="P1" start="49" text="DONELLSON" />
 <NAME TYPE="PATIENT" comment="" end="98" id="P2" start="84" text="PICKETT,SHILPA" />
 <ID TYPE="MEDICALRECORD" comment="" end="112" id="P3" start="101" text="129-53-47-3" />
 <DATE TYPE="DATE" comment="" end="150" id="P4" start="142" text="10/05/64" />

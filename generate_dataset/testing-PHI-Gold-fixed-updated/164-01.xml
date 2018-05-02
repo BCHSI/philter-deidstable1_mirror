@@ -89,7 +89,9 @@ XC/olivas/finn
 <TAGS>
 <DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2082-10-30" />
 <NAME TYPE="PATIENT" comment="" end="39" id="P1" start="28" text="COLIN RAMEY" />
+<LOCATION TYPE="HOSPITAL" comment="" end="44" id="P2" start="41" text="CHH" />
 <ID TYPE="MEDICALRECORD" comment="" end="64" id="P3" start="55" text="433-88-47" />
+<LOCATION TYPE="HOSPITAL" comment="" end="93" id="P4" start="68" text="MISSOURI PACIFIC HOSPITAL" />
 <DATE TYPE="DATE" comment="" end="140" id="P5" start="124" text="October 30, 2082" />
 <NAME TYPE="PATIENT" comment="" end="382" id="P7" start="377" text="Ramey" />
 <NAME TYPE="DOCTOR" comment="" end="1541" id="P10" start="1529" text="Xavier Combs" />

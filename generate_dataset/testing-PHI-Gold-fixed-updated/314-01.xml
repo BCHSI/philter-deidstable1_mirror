@@ -246,6 +246,7 @@ DV: 09/21/92
 </TEXT>
 <TAGS>
 <DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2092-09-21" />
+<LOCATION TYPE="HOSPITAL" comment="" end="39" id="P1" start="31" text="MEDIQUIK" />
 <LOCATION TYPE="STREET" comment="" end="91" id="P3" start="74" text="23 Tamworth Place" />
 <NAME TYPE="PATIENT" comment="" end="143" id="P4" start="129" text="TRENT, SHIRLEY" />
 <LOCATION TYPE="CITY" comment="" end="151" id="P5" start="145" text="Galena" />
@@ -255,6 +256,7 @@ DV: 09/21/92
 <CONTACT TYPE="PHONE" comment="" end="228" id="P9" start="214" text="(176) 232-6146" />
 <DATE TYPE="DATE" comment="" end="279" id="P10" start="271" text="09/21/92" />
 <NAME TYPE="DOCTOR" comment="" end="305" id="P11" start="287" text="Robert J. Trujillo" />
+<LOCATION TYPE="HOSPITAL" comment="" end="362" id="P12" start="345" text="Lenox Care Center" />
 <LOCATION TYPE="STREET" comment="" end="381" id="P13" start="364" text="21 Tamworth Place" />
 <LOCATION TYPE="CITY" comment="" end="389" id="P14" start="383" text="Galena" />
 <LOCATION TYPE="STATE" comment="" end="393" id="P15" start="391" text="MN" />

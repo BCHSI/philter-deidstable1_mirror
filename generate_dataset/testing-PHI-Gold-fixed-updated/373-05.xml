@@ -212,6 +212,7 @@ Pager #46876
 </TEXT>
 <TAGS>
 <DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2087-03-26" />
+<LOCATION TYPE="HOSPITAL" comment="" end="36" id="P1" start="31" text="Perth" />
 <NAME TYPE="PATIENT" comment="" end="85" id="P2" start="70" text="Youssef Jimenez" />
 <ID TYPE="MEDICALRECORD" comment="" end="98" id="P3" start="91" text="0554733" />
 <DATE TYPE="DATE" comment="" end="125" id="P4" start="111" text="March 26, 2087" />
@@ -221,6 +222,8 @@ Pager #46876
 <NAME TYPE="PATIENT" comment="" end="288" id="P8" start="281" text="Jimenez" />
 <DATE TYPE="DATE" comment="" end="612" id="P11" start="608" text="3/09" />
 <DATE TYPE="DATE" comment="" end="637" id="P12" start="633" text="3/20" />
+<LOCATION TYPE="HOSPITAL" comment="" end="979" id="P13" start="976" text="LCH" />
+<LOCATION TYPE="HOSPITAL" comment="" end="1149" id="P14" start="1146" text="LCH" />
 <DATE TYPE="DATE" comment="" end="1701" id="P15" start="1697" text="9/86" />
 <AGE TYPE="AGE" comment="" end="1988" id="P16" start="1986" text="90" />
 <PROFESSION TYPE="PROFESSION" comment="" end="2110" id="P19" start="2094" text="network operator" />

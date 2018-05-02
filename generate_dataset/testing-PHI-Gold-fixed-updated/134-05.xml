@@ -143,6 +143,7 @@ Document Status: Final
 </TEXT>
 <TAGS>
 <DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2096-04-15" />
+<LOCATION TYPE="HOSPITAL" comment="" end="65" id="P1" start="45" text="PRIMGHAR CARE CENTER" />
 <NAME TYPE="DOCTOR" comment="" end="202" id="P2" start="197" text="Ickes" />
 <DATE TYPE="DATE" comment="" end="384" id="P4" start="379" text="12/95" />
 <NAME TYPE="DOCTOR" comment="" end="483" id="P5" start="476" text="Xaysana" />

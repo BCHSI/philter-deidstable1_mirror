@@ -108,6 +108,7 @@ Dictated by:  NORRIS ELDER, M.D.     NE00
 </TEXT>
 <TAGS>
 <DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2070-03-22" />
+<LOCATION TYPE="HOSPITAL" comment="" end="59" id="P1" start="49" text="PROMPTCARE" />
 <NAME TYPE="PATIENT" comment="" end="100" id="P2" start="85" text="UMALI,DANA YURI" />
 <ID TYPE="MEDICALRECORD" comment="" end="114" id="P3" start="103" text="124-23-22-9" />
 <NAME TYPE="DOCTOR" comment="" end="171" id="P4" start="158" text="Frank Griffin" />

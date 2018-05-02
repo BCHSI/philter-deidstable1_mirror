@@ -53,9 +53,11 @@ Dictated by:  VICTOR T. BONNER, M.D.  VB07
 </TEXT>
 <TAGS>
 <DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2060-10-11" />
+<LOCATION TYPE="HOSPITAL" comment="" end="52" id="P1" start="49" text="BCH" />
 <NAME TYPE="PATIENT" comment="" end="91" id="P2" start="76" text="HESS,CLARENCE H" />
 <ID TYPE="MEDICALRECORD" comment="" end="105" id="P3" start="94" text="643-65-59-5" />
 <DATE TYPE="DATE" comment="" end="142" id="P4" start="134" text="10/11/60" />
+<LOCATION TYPE="HOSPITAL" comment="" end="1686" id="P7" start="1656" text="Southwest Texas Medical Center" />
 <ID TYPE="IDNUM" comment="" end="2147" id="P8" start="2137" text="NE270/9072" />
 <NAME TYPE="DOCTOR" comment="" end="2164" id="P9" start="2148" text="VICTOR T. BONNER" />
 <NAME TYPE="USERNAME" comment="" end="2176" id="P10" start="2172" text="VB07" />

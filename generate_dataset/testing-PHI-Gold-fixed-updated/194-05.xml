@@ -87,6 +87,7 @@ Document Status: Final
 </TEXT>
 <TAGS>
 <DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2097-05-21" />
+<LOCATION TYPE="HOSPITAL" comment="" end="64" id="P1" start="45" text="SOUTH OAKS HOSPITAL" />
 <NAME TYPE="PATIENT" comment="" end="155" id="P2" start="147" text="Crawford" />
 <NAME TYPE="DOCTOR" comment="" end="812" id="P3" start="806" text="Powers" />
 <NAME TYPE="DOCTOR" comment="" end="2339" id="P4" start="2322" text="Xavier K. Youmans" />

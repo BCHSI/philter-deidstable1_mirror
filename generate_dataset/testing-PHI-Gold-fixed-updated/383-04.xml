@@ -63,6 +63,7 @@ VoiceJob ID:  62867896
 <NAME TYPE="DOCTOR" comment="" end="1485" id="P11" start="1482" text="Guy" />
 <DATE TYPE="DATE" comment="" end="1607" id="P12" start="1597" text="12/22/2119" />
 <DATE TYPE="DATE" comment="" end="1809" id="P13" start="1801" text="November" />
+<LOCATION TYPE="HOSPITAL" comment="" end="2228" id="P14" start="2224" text="NDMG" />
 <DATE TYPE="DATE" comment="" end="2275" id="P15" start="2265" text="12/22/2119" />
 <DATE TYPE="DATE" comment="" end="2989" id="P17" start="2982" text="11/2119" />
 <DATE TYPE="DATE" comment="" end="3091" id="P18" start="3081" text="11/14/2119" />

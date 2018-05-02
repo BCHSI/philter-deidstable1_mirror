@@ -54,6 +54,7 @@ Dictated by:  RONNIE HUFFMAN, M.D.  RH31
 </TEXT>
 <TAGS>
 <DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2070-01-08" />
+<LOCATION TYPE="HOSPITAL" comment="" end="52" id="P1" start="49" text="FSH" />
 <NAME TYPE="PATIENT" comment="" end="92" id="P2" start="76" text="CHANDLER,JESSICA" />
 <ID TYPE="MEDICALRECORD" comment="" end="106" id="P3" start="95" text="748-80-38-0" />
 <DATE TYPE="DATE" comment="" end="149" id="P4" start="141" text="01/08/70" />

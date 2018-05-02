@@ -120,6 +120,7 @@ Dictated by:  FRANK ISON, M.D.       FI65
 </TEXT>
 <TAGS>
 <DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2077-02-05" />
+<LOCATION TYPE="HOSPITAL" comment="" end="53" id="P1" start="49" text="AASC" />
 <NAME TYPE="PATIENT" comment="" end="93" id="P2" start="79" text="QUIJANO,BAYLEE" />
 <ID TYPE="MEDICALRECORD" comment="" end="107" id="P3" start="96" text="853-62-51-4" />
 <NAME TYPE="PATIENT" comment="" end="120" id="P4" start="113" text="Quijano" />

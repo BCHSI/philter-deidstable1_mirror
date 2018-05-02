@@ -64,8 +64,10 @@ At today's visit, the patient's wound was dressed and cleaned the our nursing st
 <TAGS>
 <DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2067-08-02" />
 <NAME TYPE="DOCTOR" comment="" end="302" id="P2" start="295" text="Sanchez" />
+<LOCATION TYPE="HOSPITAL" comment="" end="556" id="P3" start="529" text="Northport Veterans Hospital" />
 <DATE TYPE="DATE" comment="" end="1459" id="P5" start="1454" text="11/64" />
 <DATE TYPE="DATE" comment="" end="1582" id="P6" start="1577" text="11/65" />
 <DATE TYPE="DATE" comment="" end="1608" id="P7" start="1603" text="11/66" />
+<LOCATION TYPE="HOSPITAL" comment="" end="3806" id="P9" start="3785" text="Island Medical Center" />
 </TAGS>
 </deIdi2b2>

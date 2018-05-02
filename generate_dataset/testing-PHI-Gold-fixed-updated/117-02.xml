@@ -325,6 +325,7 @@ signed:  ___________________________________________________________
 </TEXT>
 <TAGS>
 <DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2066-05-23" />
+<LOCATION TYPE="HOSPITAL" comment="" end="50" id="P1" start="28" text="Hinds General Hospital" />
 <NAME TYPE="DOCTOR" comment="" end="153" id="P2" start="137" text="Ulonda Jablonski" />
 <NAME TYPE="DOCTOR" comment="" end="174" id="P3" start="161" text="Patricia Wynn" />
 <NAME TYPE="DOCTOR" comment="" end="200" id="P4" start="182" text="Frances Strickland" />

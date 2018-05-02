@@ -98,11 +98,13 @@ DV:1-21-84
 </TEXT>
 <TAGS>
 <DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2084-01-21" />
+<LOCATION TYPE="HOSPITAL" comment="" end="44" id="P1" start="28" text="ORLANDO REGIONAL" />
 <NAME TYPE="PATIENT" comment="" end="88" id="P2" start="76" text="Xavier, Fred" />
 <ID TYPE="MEDICALRECORD" comment="" end="143" id="P3" start="135" text="65856594" />
 <DATE TYPE="DATE" comment="" end="197" id="P4" start="190" text="1-21-84" />
 <NAME TYPE="PATIENT" comment="" end="215" id="P5" start="209" text="Xavier" />
 <DATE TYPE="DATE" comment="" end="755" id="P8" start="740" text="January of 2083" />
+<LOCATION TYPE="HOSPITAL" comment="" end="2965" id="P12" start="2949" text="ORLANDO REGIONAL" />
 <NAME TYPE="PATIENT" comment="" end="3009" id="P13" start="2997" text="Xavier, Fred" />
 <ID TYPE="MEDICALRECORD" comment="" end="3064" id="P14" start="3056" text="65856594" />
 <DATE TYPE="DATE" comment="" end="3118" id="P15" start="3111" text="1-21-84" />

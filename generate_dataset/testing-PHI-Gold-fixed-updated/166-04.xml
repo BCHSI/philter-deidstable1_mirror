@@ -141,8 +141,12 @@ Document Status: Final
 </TEXT>
 <TAGS>
 <DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2096-03-16" />
+<LOCATION TYPE="HOSPITAL" comment="" end="70" id="P1" start="45" text="WESTBROOK PLAINS HOSPITAL" />
 <NAME TYPE="DOCTOR" comment="" end="154" id="P2" start="139" text="J. Jordan Duran" />
 <DATE TYPE="DATE" comment="" end="265" id="P4" start="252" text="December 2095" />
+<LOCATION TYPE="HOSPITAL" comment="" end="486" id="P5" start="483" text="SCH" />
+<LOCATION TYPE="HOSPITAL" comment="" end="608" id="P6" start="605" text="WPH" />
+<LOCATION TYPE="HOSPITAL" comment="" end="1222" id="P7" start="1219" text="SCH" />
 <PROFESSION TYPE="PROFESSION" comment="" end="2774" id="P13" start="2760" text="web programmer" />
 <LOCATION TYPE="ORGANIZATION" comment="" end="2786" id="P14" start="2778" text="Audiovox" />
 <DATE TYPE="DATE" comment="" end="3823" id="P16" start="3815" text="03/11/96" />

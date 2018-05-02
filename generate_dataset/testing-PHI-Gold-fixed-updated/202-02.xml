@@ -65,17 +65,21 @@ DV: 07/17/57
 <ID TYPE="MEDICALRECORD" comment="" end="55" id="P2" start="47" text="28044071" />
 <DATE TYPE="DATE" comment="" end="66" id="P3" start="56" text="07/17/2157" />
 <NAME TYPE="DOCTOR" comment="" end="80" id="P4" start="69" text="Yoseph Berg" />
+<LOCATION TYPE="HOSPITAL" comment="" end="114" id="P5" start="87" text="Broome Developmental Center" />
 <LOCATION TYPE="STREET" comment="" end="133" id="P6" start="115" text="84 Parkhurst Drive" />
 <LOCATION TYPE="CITY" comment="" end="142" id="P7" start="134" text="Peculiar" />
 <LOCATION TYPE="STATE" comment="" end="146" id="P8" start="144" text="NE" />
 <LOCATION TYPE="ZIP" comment="" end="153" id="P9" start="148" text="54583" />
 <NAME TYPE="DOCTOR" comment="" end="168" id="P10" start="164" text="Berg" />
 <NAME TYPE="PATIENT" comment="" end="233" id="P11" start="219" text="Jarome Dejesus" />
+<LOCATION TYPE="HOSPITAL" comment="" end="284" id="P12" start="263" text="Erie County Infirmary" />
 <DATE TYPE="DATE" comment="" end="300" id="P13" start="290" text="07/16/2157" />
 <DATE TYPE="DATE" comment="" end="314" id="P14" start="304" text="07/17/2157" />
 <NAME TYPE="PATIENT" comment="" end="394" id="P15" start="387" text="Dejesus" />
 <DATE TYPE="DATE" comment="" end="691" id="P17" start="684" text="05/2155" />
+<LOCATION TYPE="HOSPITAL" comment="" end="888" id="P18" start="862" text="Southwest Colorado Medical" />
 <DATE TYPE="DATE" comment="" end="902" id="P19" start="892" text="07/13/2157" />
+<LOCATION TYPE="HOSPITAL" comment="" end="1072" id="P20" start="1051" text="Erie County Infirmary" />
 <DATE TYPE="DATE" comment="" end="1107" id="P21" start="1097" text="07/16/2157" />
 <NAME TYPE="DOCTOR" comment="" end="1125" id="P22" start="1113" text="Yoseph Flint" />
 <NAME TYPE="PATIENT" comment="" end="1464" id="P23" start="1457" text="Dejesus" />
@@ -85,6 +89,7 @@ DV: 07/17/57
 <NAME TYPE="DOCTOR" comment="" end="3405" id="P28" start="3393" text="Henry Phelps" />
 <ID TYPE="IDNUM" comment="" end="3442" id="P29" start="3433" text="8-0687422" />
 <NAME TYPE="DOCTOR" comment="" end="3475" id="P30" start="3456" text="Robert-Joseph Paige" />
+<LOCATION TYPE="HOSPITAL" comment="" end="3509" id="P31" start="3481" text="Koenen Collins County Clinic" />
 <LOCATION TYPE="STREET" comment="" end="3528" id="P32" start="3510" text="886 Paxton Terrace" />
 <LOCATION TYPE="CITY" comment="" end="3537" id="P33" start="3529" text="Peculiar" />
 <LOCATION TYPE="STATE" comment="" end="3541" id="P34" start="3539" text="NE" />
