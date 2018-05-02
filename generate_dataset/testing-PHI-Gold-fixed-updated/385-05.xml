@@ -251,7 +251,6 @@ Frank T. Xuan, M.D.
 <NAME TYPE="PATIENT" comment="" end="109" id="P1" start="97" text="MOSS,DEREK P" />
 <ID TYPE="MEDICALRECORD" comment="" end="120" id="P2" start="112" text="89659991" />
 <DATE TYPE="DATE" comment="" end="212" id="P4" start="202" text="02/18/2090" />
-<DATE TYPE="DATE" comment="" end="1461" id="P8" start="1456" text="2060s" />
 <DATE TYPE="DATE" comment="" end="1576" id="P10" start="1572" text="2/88" />
 <PROFESSION TYPE="PROFESSION" comment="" end="1806" id="P13" start="1785" text="vocational instructor" />
 <NAME TYPE="PATIENT" comment="" end="1840" id="P14" start="1836" text="West" />

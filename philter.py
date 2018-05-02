@@ -202,7 +202,7 @@ class Philter:
             
             for m in matches:
                 #if filename == './data/i2b2_notes_updated/373-04.txt':
-                if 'SpO2' in m.group():
+                if 'Medicine' in m.group():
                     print(self.patterns***REMOVED***pattern_index***REMOVED******REMOVED***"title"***REMOVED***)
                     print(m.group())
                 
@@ -1137,7 +1137,7 @@ class Philter:
                                         ids_cleaned.append(elem)
                                     if phi_dict***REMOVED***'TYPE'***REMOVED*** == 'USERNAME' or phi_dict***REMOVED***'TYPE'***REMOVED*** == 'PHONE' or phi_dict***REMOVED***'TYPE'***REMOVED*** == 'EMAIL' or phi_dict***REMOVED***'TYPE'***REMOVED*** == 'FAX':
                                         contact_cleaned.append(elem)
-                                    if phi_dict***REMOVED***'TYPE'***REMOVED*** == 'CITY' or phi_dict***REMOVED***'TYPE'***REMOVED*** == 'STATE' or phi_dict***REMOVED***'TYPE'***REMOVED*** == 'ZIP' or phi_dict***REMOVED***'TYPE'***REMOVED*** == 'STREET' or phi_dict***REMOVED***'TYPE'***REMOVED*** == 'LOCATION-OTHER':
+                                    if phi_dict***REMOVED***'TYPE'***REMOVED*** == 'CITY' or phi_dict***REMOVED***'TYPE'***REMOVED*** == 'STATE' or phi_dict***REMOVED***'TYPE'***REMOVED*** == 'ZIP' or phi_dict***REMOVED***'TYPE'***REMOVED*** == 'STREET' or phi_dict***REMOVED***'TYPE'***REMOVED*** == 'LOCATION-OTHER' or phi_dict***REMOVED***'TYPE'***REMOVED*** == 'HOSPITAL':
                                         locations_cleaned.append(elem)
                                     if phi_dict***REMOVED***'TYPE'***REMOVED*** == 'HOSPITAL':
                                         organizations_cleaned.append(elem)
@@ -1283,23 +1283,23 @@ class Philter:
                             #### i2b2
                             if not self.ucsf_format:
                                 # Names FNs
-                                if (start_coordinate_fn in range(int(phi_start), int(phi_end))) and (phi_type == "DOCTOR" or phi_type == "PATIENT" or phi_type == "Patient_Name_or_Family_Member_Name" or phi_type == "Provider_Name"):
+                                if (start_coordinate_fn in range(int(phi_start), int(phi_end))) and (phi_type == "DOCTOR" or phi_type == "PATIENT"):
                                     rp_summaries***REMOVED***"names_fns"***REMOVED*** += 1
                                     names_fn_counter += 1
                                 # Dates FNs
-                                if (start_coordinate_fn in range(int(phi_start), int(phi_end))) and (phi_type == "DATE" or phi_type == 'Date'):
+                                if (start_coordinate_fn in range(int(phi_start), int(phi_end))) and (phi_type == "DATE"):
                                     rp_summaries***REMOVED***"dates_fns"***REMOVED*** += 1
                                     dates_fn_counter += 1
                                 # ID FNs
-                                if (start_coordinate_fn in range(int(phi_start), int(phi_end))) and (phi_type == "MEDICALRECORD" or phi_type == "IDNUM" or phi_type == "DEVICE" or phi_type == "URL_IP" or phi_type == "Social_Security" or phi_type == "Medical_Record_ID" or phi_type == "Account_Number" or phi_type == "Certificate_or_License" or phi_type == "Vehicle_or_Device_ID" or phi_type == "Unique_Patient_Id" or phi_type == "Biometric_ID_or_Face_Photo"):
+                                if (start_coordinate_fn in range(int(phi_start), int(phi_end))) and (phi_type == "MEDICALRECORD" or phi_type == "IDNUM" or phi_type == "DEVICE"):
                                     rp_summaries***REMOVED***"id_fns"***REMOVED*** += 1
                                     id_fn_counter += 1
                                 # Contact FNs
-                                if (start_coordinate_fn in range(int(phi_start), int(phi_end))) and (phi_type == "USERNAME" or phi_type == "PHONE" or phi_type == "EMAIL" or phi_type == "FAX" or phi_type == "Phone_Fax" or phi_type == 'Email'):
+                                if (start_coordinate_fn in range(int(phi_start), int(phi_end))) and (phi_type == "USERNAME" or phi_type == "PHONE" or phi_type == "EMAIL" or phi_type == "FAX"):
                                     rp_summaries***REMOVED***"contact_fns"***REMOVED*** += 1
                                     contact_fn_counter += 1 
                                 # Location FNs
-                                if (start_coordinate_fn in range(int(phi_start), int(phi_end))) and (phi_type == 'CITY' or phi_type == 'STATE' or phi_type == 'ZIP' or phi_type == 'STREET' or phi_type == 'LOCATION-OTHER' or phi_type == 'Address'):
+                                if (start_coordinate_fn in range(int(phi_start), int(phi_end))) and (phi_type == 'CITY' or phi_type == 'STATE' or phi_type == 'ZIP' or phi_type == 'STREET' or phi_type == 'LOCATION-OTHER' or phi_type == 'HOSPITAL'):
                                     rp_summaries***REMOVED***"location_fns"***REMOVED*** += 1
                                     location_fn_counter += 1                               
                                 # Organization FNs
@@ -1307,7 +1307,7 @@ class Philter:
                                     rp_summaries***REMOVED***"organization_fns"***REMOVED*** += 1
                                     organization_fn_counter += 1  
                                 # Age FNs
-                                if (start_coordinate_fn in range(int(phi_start), int(phi_end))) and (phi_type == 'AGE' or phi_type == 'Age'):
+                                if (start_coordinate_fn in range(int(phi_start), int(phi_end))) and (phi_type == 'AGE'):
                                     rp_summaries***REMOVED***"age_fns"***REMOVED*** += 1
                                     age_fn_counter += 1 
                                     # print(word) 
