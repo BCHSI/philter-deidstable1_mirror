@@ -99,6 +99,7 @@ DT:5-13-84
 <TAGS>
 <DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2084-05-12" />
 <CONTACT TYPE="PHONE" comment="" end="100" id="P1" start="86" text="(958) 291-8310" />
+<LOCATION TYPE="HOSPITAL" comment="" end="126" id="P2" start="101" text="GEORGIA REGIONAL HOSPITAL" />
 <DATE TYPE="DATE" comment="" end="139" id="P3" start="127" text="May 12, 2084" />
 <NAME TYPE="DOCTOR" comment="" end="159" id="P4" start="147" text="Brit Eastman" />
 <LOCATION TYPE="STREET" comment="" end="190" id="P5" start="166" text="3793 Rhode Island Avenue" />
@@ -109,6 +110,7 @@ DT:5-13-84
 <ID TYPE="MEDICALRECORD" comment="" end="251" id="P10" start="243" text="62115644" />
 <NAME TYPE="DOCTOR" comment="" end="270" id="P11" start="263" text="Eastman" />
 <NAME TYPE="PATIENT" comment="" end="318" id="P12" start="308" text="Uriah Lara" />
+<LOCATION TYPE="HOSPITAL" comment="" end="342" id="P13" start="326" text="Georgia Regional" />
 <PROFESSION TYPE="PROFESSION" comment="" end="1797" id="P18" start="1792" text="pilot" />
 <LOCATION TYPE="ORGANIZATION" comment="" end="1819" id="P19" start="1802" text="Frontier Airlines" />
 <NAME TYPE="DOCTOR" comment="" end="2030" id="P21" start="2018" text="Brit Eastman" />

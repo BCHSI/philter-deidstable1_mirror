@@ -95,6 +95,7 @@ PNC Surgery
 </TEXT>
 <TAGS>
 <DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2118-01-08" />
+<LOCATION TYPE="HOSPITAL" comment="" end="53" id="P1" start="32" text="Garner Medical Clinic" />
 <NAME TYPE="DOCTOR" comment="" end="99" id="P3" start="87" text="Mariusz Soto" />
 <NAME TYPE="DOCTOR" comment="" end="125" id="P4" start="113" text="Gregory Xing" />
 <NAME TYPE="DOCTOR" comment="" end="153" id="P5" start="139" text="Frances Justus" />
@@ -104,13 +105,20 @@ PNC Surgery
 <ID TYPE="MEDICALRECORD" comment="" end="251" id="P9" start="244" text="6444877" />
 <DATE TYPE="DATE" comment="" end="268" id="P10" start="258" text="01/08/2118" />
 <DATE TYPE="DATE" comment="" end="308" id="P11" start="301" text="1/13/18" />
+<LOCATION TYPE="HOSPITAL" comment="" end="412" id="P13" start="409" text="PNC" />
+<LOCATION TYPE="HOSPITAL" comment="" end="464" id="P14" start="432" text="Montebello Convalescent Hospital" />
+<LOCATION TYPE="HOSPITAL" comment="" end="560" id="P15" start="537" text="Montebello Convalescent" />
 <DATE TYPE="DATE" comment="" end="610" id="P16" start="602" text="July 3rd" />
 <DATE TYPE="DATE" comment="" end="704" id="P17" start="697" text="July 07" />
+<LOCATION TYPE="HOSPITAL" comment="" end="969" id="P18" start="966" text="PNC" />
 <NAME TYPE="DOCTOR" comment="" end="1009" id="P19" start="997" text="Gregory Xing" />
 <DATE TYPE="DATE" comment="" end="1186" id="P20" start="1177" text="July 2117" />
 <DATE TYPE="DATE" comment="" end="2117" id="P21" start="2109" text="10/10/17" />
+<LOCATION TYPE="HOSPITAL" comment="" end="2124" id="P22" start="2121" text="PNC" />
 <DATE TYPE="DATE" comment="" end="2293" id="P23" start="2286" text="1/02/18" />
 <NAME TYPE="DOCTOR" comment="" end="2784" id="P25" start="2772" text="Gregory Xing" />
+<LOCATION TYPE="HOSPITAL" comment="" end="2806" id="P26" start="2802" text="SOPH" />
 <NAME TYPE="DOCTOR" comment="" end="2845" id="P28" start="2831" text="Frances Justus" />
+<LOCATION TYPE="HOSPITAL" comment="" end="2853" id="P29" start="2850" text="PNC" />
 </TAGS>
 </deIdi2b2>

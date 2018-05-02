@@ -62,6 +62,7 @@ DV: 12/07/89
 <ID TYPE="MEDICALRECORD" comment="" end="127" id="P7" start="119" text="78197017" />
 <DATE TYPE="DATE" comment="" end="167" id="P8" start="157" text="12/07/2089" />
 <NAME TYPE="DOCTOR" comment="" end="182" id="P9" start="170" text="Steven Short" />
+<LOCATION TYPE="HOSPITAL" comment="" end="212" id="P10" start="189" text="Evans Memorial Hospital" />
 <LOCATION TYPE="STREET" comment="" end="230" id="P11" start="213" text="745 Morgan Street" />
 <LOCATION TYPE="CITY" comment="" end="241" id="P12" start="231" text="Sag Harbor" />
 <LOCATION TYPE="STATE" comment="" end="245" id="P13" start="243" text="NV" />

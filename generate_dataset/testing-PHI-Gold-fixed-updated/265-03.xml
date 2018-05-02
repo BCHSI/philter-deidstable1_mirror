@@ -88,9 +88,11 @@ Dictated by:  KYLE TEAGUE, M.D.       KT24
 </TEXT>
 <TAGS>
 <DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2068-12-22" />
+<LOCATION TYPE="HOSPITAL" comment="" end="56" id="P1" start="49" text="Jellico" />
 <NAME TYPE="PATIENT" comment="" end="93" id="P2" start="80" text="FOY,KEONTE H." />
 <ID TYPE="MEDICALRECORD" comment="" end="107" id="P3" start="96" text="732-35-79-0" />
 <DATE TYPE="DATE" comment="" end="146" id="P4" start="138" text="12/22/68" />
+<LOCATION TYPE="HOSPITAL" comment="" end="1543" id="P6" start="1517" text="Jellico Community Hospital" />
 <NAME TYPE="DOCTOR" comment="" end="3798" id="P7" start="3792" text="Hooper" />
 <NAME TYPE="DOCTOR" comment="" end="3926" id="P8" start="3920" text="Hooper" />
 <ID TYPE="IDNUM" comment="" end="4208" id="P9" start="4198" text="PD770/9096" />

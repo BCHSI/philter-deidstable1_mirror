@@ -133,6 +133,7 @@ DV: 04/23/76
 </TEXT>
 <TAGS>
 <DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2076-04-23" />
+<LOCATION TYPE="HOSPITAL" comment="" end="69" id="P1" start="30" text="Carolyn Huntington Bailey Health Center" />
 <LOCATION TYPE="STREET" comment="" end="90" id="P2" start="71" text="592 Kristina Street" />
 <NAME TYPE="PATIENT" comment="" end="139" id="P3" start="130" text="XIA, JEAN" />
 <LOCATION TYPE="CITY" comment="" end="151" id="P4" start="141" text="North East" />
@@ -142,6 +143,7 @@ DV: 04/23/76
 <CONTACT TYPE="PHONE" comment="" end="213" id="P8" start="199" text="(375) 512-0897" />
 <DATE TYPE="DATE" comment="" end="265" id="P9" start="257" text="04/23/76" />
 <DATE TYPE="DATE" comment="" end="753" id="P10" start="746" text="11/2075" />
+<LOCATION TYPE="HOSPITAL" comment="" end="1140" id="P11" start="1123" text="Schroder Hospital" />
 <NAME TYPE="DOCTOR" comment="" end="3423" id="P12" start="3410" text="Charles Moran" />
 <NAME TYPE="DOCTOR" comment="" end="3457" id="P13" start="3444" text="Charles Moran" />
 <ID TYPE="IDNUM" comment="" end="3488" id="P14" start="3479" text="0-0545950" />

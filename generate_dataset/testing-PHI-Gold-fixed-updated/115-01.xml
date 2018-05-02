@@ -45,6 +45,7 @@ DD:2-15-09
 </TEXT>
 <TAGS>
 <DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2107-10-24" />
+<LOCATION TYPE="HOSPITAL" comment="" end="49" id="P1" start="28" text="TOOLE COUNTY HOSPITAL" />
 <LOCATION TYPE="STREET" comment="" end="81" id="P3" start="61" text="871 Westerdale Drive" />
 <NAME TYPE="PATIENT" comment="" end="121" id="P4" start="108" text="Werner, Nancy" />
 <LOCATION TYPE="CITY" comment="" end="134" id="P5" start="122" text="West Liberty" />

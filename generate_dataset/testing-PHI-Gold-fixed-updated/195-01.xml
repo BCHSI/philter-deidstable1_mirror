@@ -66,7 +66,11 @@ rin:KZ:9636:DD:11-24-78:DT:11-25-78:DV:11-22-78
 </TEXT>
 <TAGS>
 <DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2078-11-22" />
+<LOCATION TYPE="HOSPITAL" comment="" end="35" id="P1" start="28" text="PONTIAC" />
 <NAME TYPE="PATIENT" comment="" end="89" id="P2" start="74" text="Sherman, Andrew" />
+<LOCATION TYPE="HOSPITAL" comment="" end="536" id="P4" start="520" text="Humbert Hospital" />
+<LOCATION TYPE="HOSPITAL" comment="" end="827" id="P5" start="811" text="Humbert Hospital" />
+<LOCATION TYPE="HOSPITAL" comment="" end="914" id="P6" start="901" text="Pontiac State" />
 <NAME TYPE="DOCTOR" comment="" end="2595" id="P8" start="2581" text="Michael Holman" />
 <ID TYPE="IDNUM" comment="" end="2615" id="P9" start="2604" text="rin:KZ:9636" />
 <DATE TYPE="DATE" comment="" end="2627" id="P10" start="2619" text="11-24-78" />

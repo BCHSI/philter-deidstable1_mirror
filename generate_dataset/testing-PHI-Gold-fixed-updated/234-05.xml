@@ -114,6 +114,8 @@ eScription document:6-0689198 BFFocus
 <NAME TYPE="DOCTOR" comment="" end="736" id="P8" start="729" text="Nettles" />
 <DATE TYPE="DATE" comment="" end="1109" id="P9" start="1102" text="09/2074" />
 <NAME TYPE="DOCTOR" comment="" end="1933" id="P11" start="1926" text="Nettles" />
+<LOCATION TYPE="HOSPITAL" comment="" end="1953" id="P12" start="1947" text="Benson" />
+<LOCATION TYPE="HOSPITAL" comment="" end="1989" id="P13" start="1983" text="Benson" />
 <NAME TYPE="DOCTOR" comment="" end="2255" id="P14" start="2238" text="DELACRUZ, ARMANDO" />
 <DATE TYPE="DATE" comment="" end="2273" id="P15" start="2265" text="03/31/77" />
 <DATE TYPE="DATE" comment="" end="2286" id="P16" start="2278" text="03/31/77" />

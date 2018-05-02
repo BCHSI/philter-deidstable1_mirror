@@ -76,6 +76,7 @@ Leon Virgil Fontenot, M.D.
 <DATE TYPE="DATE" comment="" end="1973" id="P2" start="1969" text="5/25" />
 <LOCATION TYPE="ORGANIZATION" comment="" end="2193" id="P3" start="2183" text="adtkins dt" />
 <NAME TYPE="DOCTOR" comment="" end="2229" id="P4" start="2224" text="Russo" />
+<LOCATION TYPE="HOSPITAL" comment="" end="2234" id="P5" start="2231" text="HWS" />
 <NAME TYPE="DOCTOR" comment="" end="2586" id="P6" start="2572" text="Barbara Fierro" />
 <NAME TYPE="DOCTOR" comment="" end="2613" id="P7" start="2606" text="Yeargin" />
 <NAME TYPE="DOCTOR" comment="" end="2629" id="P8" start="2623" text="Ingham" />

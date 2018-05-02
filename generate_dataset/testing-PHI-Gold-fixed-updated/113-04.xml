@@ -152,6 +152,7 @@ eScription document:6-1950972 BFFocus
 <NAME TYPE="DOCTOR" comment="" end="83" id="P4" start="72" text="BOYER, DAWN" />
 <NAME TYPE="DOCTOR" comment="" end="146" id="P5" start="139" text="Edwards" />
 <NAME TYPE="DOCTOR" comment="" end="3180" id="P7" start="3175" text="Earle" />
+<LOCATION TYPE="HOSPITAL" comment="" end="3205" id="P8" start="3202" text="WBM" />
 <NAME TYPE="DOCTOR" comment="" end="3513" id="P9" start="3502" text="BOYER, DAWN" />
 <DATE TYPE="DATE" comment="" end="3529" id="P10" start="3521" text="08/09/93" />
 <DATE TYPE="DATE" comment="" end="3542" id="P11" start="3534" text="08/10/93" />

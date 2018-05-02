@@ -144,9 +144,13 @@ Singh, M.D.
 </TEXT>
 <TAGS>
 <DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2088-01-06" />
+<LOCATION TYPE="HOSPITAL" comment="" end="233" id="P2" start="230" text="HDC" />
 <DATE TYPE="DATE" comment="" end="503" id="P3" start="498" text="11/25" />
 <NAME TYPE="DOCTOR" comment="" end="606" id="P4" start="603" text="Yap" />
+<LOCATION TYPE="HOSPITAL" comment="" end="612" id="P5" start="610" text="MS" />
 <DATE TYPE="DATE" comment="" end="879" id="P7" start="873" text="1/2082" />
+<LOCATION TYPE="HOSPITAL" comment="" end="2575" id="P9" start="2573" text="MS" />
+<LOCATION TYPE="HOSPITAL" comment="" end="2864" id="P10" start="2846" text="Montefiore Springs" />
 <NAME TYPE="DOCTOR" comment="" end="2874" id="P11" start="2869" text="Singh" />
 </TAGS>
 </deIdi2b2>

@@ -107,6 +107,7 @@ Xavier B. Nix, M.D., Ph.D.
 <DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2078-03-17" />
 <NAME TYPE="PATIENT" comment="" end="63" id="P1" start="44" text="JORGENSON,VIVIANLEE" />
 <ID TYPE="MEDICALRECORD" comment="" end="74" id="P2" start="66" text="47190847" />
+<LOCATION TYPE="HOSPITAL" comment="" end="78" id="P3" start="75" text="JMH" />
 <DATE TYPE="DATE" comment="" end="107" id="P4" start="97" text="03/17/2078" />
 <DATE TYPE="DATE" comment="" end="851" id="P7" start="846" text="11/77" />
 <DATE TYPE="DATE" comment="" end="1017" id="P8" start="1010" text="6/19/74" />

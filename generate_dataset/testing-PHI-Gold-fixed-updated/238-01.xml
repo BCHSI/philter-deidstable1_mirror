@@ -179,7 +179,9 @@ Ila Easter, M.D.
 <TAGS>
 <DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2078-08-20" />
 <NAME TYPE="DOCTOR" comment="" end="83" id="P1" start="78" text="Ebert" />
+<LOCATION TYPE="HOSPITAL" comment="" end="88" id="P2" start="85" text="BMC" />
 <NAME TYPE="DOCTOR" comment="" end="118" id="P3" start="103" text="Bryan Edmondson" />
+<LOCATION TYPE="HOSPITAL" comment="" end="123" id="P4" start="120" text="BMC" />
 <NAME TYPE="DOCTOR" comment="" end="1121" id="P5" start="1116" text="Ebert" />
 <DATE TYPE="DATE" comment="" end="1569" id="P6" start="1556" text="December 2074" />
 <NAME TYPE="DOCTOR" comment="" end="4040" id="P8" start="4030" text="Ila Easter" />

@@ -356,5 +356,7 @@ THIS IS A COPY PRODUCED FOR THE LMR. THE ORGINAL IS STORED ON THE BRIGHTPOINT SE
 <DATE TYPE="DATE" comment="" end="3260" id="P43" start="3250" text="11/25/2065" />
 <DATE TYPE="DATE" comment="" end="3277" id="P44" start="3267" text="11/25/2065" />
 <LOCATION TYPE="ORGANIZATION" comment="" end="4684" id="P45" start="4673" text="BRIGHTPOINT" />
+<LOCATION TYPE="HOSPITAL" comment="" end="4727" id="P46" start="4695" text="COLUMBIA KINGWOOD MEDICAL CENTER" />
+<LOCATION TYPE="HOSPITAL" comment="" end="4762" id="P47" start="4758" text="CKMC" />
 </TAGS>
 </deIdi2b2>

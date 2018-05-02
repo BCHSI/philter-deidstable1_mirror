@@ -175,6 +175,7 @@ Pager 04401
 </TEXT>
 <TAGS>
 <DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2096-12-18" />
+<LOCATION TYPE="HOSPITAL" comment="" end="74" id="P1" start="71" text="MCC" />
 <NAME TYPE="DOCTOR" comment="" end="165" id="P3" start="152" text="Pedro Quesnel" />
 <LOCATION TYPE="STREET" comment="" end="325" id="P6" start="307" text="08 Doncaster Drive" />
 <LOCATION TYPE="CITY" comment="" end="419" id="P7" start="409" text="Pine Bluff" />
@@ -201,6 +202,7 @@ Pager 04401
 <DATE TYPE="DATE" comment="" end="5489" id="P36" start="5479" text="12/15/2096" />
 <DATE TYPE="DATE" comment="" end="5575" id="P37" start="5567" text="Dec 13th" />
 <NAME TYPE="DOCTOR" comment="" end="6693" id="P39" start="6680" text="Pedro Quesnel" />
+<LOCATION TYPE="HOSPITAL" comment="" end="6712" id="P40" start="6709" text="MCC" />
 <CONTACT TYPE="PHONE" comment="" end="6741" id="P42" start="6736" text="04401" />
 </TAGS>
 </deIdi2b2>

@@ -116,6 +116,7 @@ Document Status: Final
 </TEXT>
 <TAGS>
 <DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2135-12-15" />
+<LOCATION TYPE="HOSPITAL" comment="" end="66" id="P1" start="45" text="PERDUE MEDICAL CENTER" />
 <DATE TYPE="DATE" comment="" end="214" id="P3" start="201" text="November 2134" />
 <DATE TYPE="DATE" comment="" end="449" id="P4" start="441" text="12/16/34" />
 <DATE TYPE="DATE" comment="" end="1218" id="P5" start="1210" text="12/07/34" />

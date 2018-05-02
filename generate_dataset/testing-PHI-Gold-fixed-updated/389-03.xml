@@ -154,6 +154,7 @@ PGY-1
 <DATE TYPE="DATE" comment="" end="534" id="P11" start="528" text="May 29" />
 <LOCATION TYPE="STATE" comment="" end="756" id="P12" start="745" text="Connecticut" />
 <DATE TYPE="DATE" comment="" end="796" id="P13" start="789" text="June 13" />
+<LOCATION TYPE="HOSPITAL" comment="" end="1177" id="P14" start="1174" text="WMC" />
 <PROFESSION TYPE="PROFESSION" comment="" end="2489" id="P16" start="2475" text="Civil Engineer" />
 <DATE TYPE="DATE" comment="" end="3252" id="P17" start="3242" text="06/14/2132" />
 <DATE TYPE="DATE" comment="" end="3331" id="P18" start="3321" text="06/14/2132" />

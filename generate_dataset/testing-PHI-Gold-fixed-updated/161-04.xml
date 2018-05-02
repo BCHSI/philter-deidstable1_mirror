@@ -272,6 +272,7 @@ Pager 86807
 <NAME TYPE="DOCTOR" comment="" end="162" id="P4" start="157" text="Burke" />
 <PROFESSION TYPE="PROFESSION" comment="" end="1752" id="P6" start="1732" text="school administrator" />
 <DATE TYPE="DATE" comment="" end="5440" id="P8" start="5435" text="12/08" />
+<LOCATION TYPE="HOSPITAL" comment="" end="5858" id="P9" start="5855" text="FMC" />
 <NAME TYPE="DOCTOR" comment="" end="6053" id="P10" start="6037" text="S. Stanley Oberg" />
 <CONTACT TYPE="PHONE" comment="" end="6091" id="P11" start="6086" text="86807" />
 </TAGS>

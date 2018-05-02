@@ -467,6 +467,7 @@ Pager  #00138
 </TEXT>
 <TAGS>
 <DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2098-11-02" />
+<LOCATION TYPE="HOSPITAL" comment="" end="68" id="P1" start="47" text="MERCED MEDICAL CENTER" />
 <NAME TYPE="DOCTOR" comment="" end="122" id="P2" start="109" text="Stevens, Lori" />
 <ID TYPE="MEDICALRECORD" comment="" end="137" id="P3" start="130" text="8593546" />
 <DATE TYPE="DATE" comment="" end="166" id="P4" start="157" text="11/2/2098" />
@@ -476,7 +477,10 @@ Pager  #00138
 <DATE TYPE="DATE" comment="" end="452" id="P9" start="451" text="M" />
 <DATE TYPE="DATE" comment="" end="454" id="P10" start="453" text="W" />
 <DATE TYPE="DATE" comment="" end="456" id="P11" start="455" text="F" />
+<LOCATION TYPE="HOSPITAL" comment="" end="657" id="P12" start="654" text="LCH" />
+<LOCATION TYPE="HOSPITAL" comment="" end="716" id="P13" start="706" text="Santa Rosa" />
 <DATE TYPE="DATE" comment="" end="729" id="P14" start="720" text="9/10/2098" />
+<LOCATION TYPE="HOSPITAL" comment="" end="1971" id="P15" start="1958" text="Levi Hospital" />
 <DATE TYPE="DATE" comment="" end="2226" id="P16" start="2219" text="12/2097" />
 <DATE TYPE="DATE" comment="" end="2261" id="P17" start="2252" text="September" />
 <DATE TYPE="DATE" comment="" end="2461" id="P19" start="2460" text="M" />
@@ -485,6 +489,7 @@ Pager  #00138
 <DATE TYPE="DATE" comment="" end="2732" id="P22" start="2725" text="12/2096" />
 <DATE TYPE="DATE" comment="" end="2890" id="P23" start="2884" text="2/2098" />
 <DATE TYPE="DATE" comment="" end="3024" id="P24" start="3015" text="September" />
+<LOCATION TYPE="HOSPITAL" comment="" end="3066" id="P25" start="3063" text="NGH" />
 <DATE TYPE="DATE" comment="" end="3155" id="P26" start="3147" text="09/14/98" />
 <DATE TYPE="DATE" comment="" end="3216" id="P27" start="3208" text="09/14/98" />
 <DATE TYPE="DATE" comment="" end="3311" id="P28" start="3303" text="09/13/98" />
@@ -493,14 +498,18 @@ Pager  #00138
 <DATE TYPE="DATE" comment="" end="3570" id="P31" start="3562" text="09/14/98" />
 <DATE TYPE="DATE" comment="" end="3625" id="P32" start="3617" text="09/14/98" />
 <DATE TYPE="DATE" comment="" end="3782" id="P33" start="3774" text="09/14/98" />
+<LOCATION TYPE="HOSPITAL" comment="" end="4484" id="P34" start="4469" text="Wheatland Manor" />
 <NAME TYPE="PATIENT" comment="" end="4590" id="P35" start="4585" text="Sally" />
 <CONTACT TYPE="PHONE" comment="" end="4609" id="P36" start="4597" text="011-053-5691" />
 <CONTACT TYPE="PHONE" comment="" end="4628" id="P37" start="4616" text="544-761-0912" />
+<LOCATION TYPE="HOSPITAL" comment="" end="4645" id="P38" start="4630" text="Wheatland Manor" />
 <CONTACT TYPE="PHONE" comment="" end="4659" id="P39" start="4647" text="154-734-1487" />
 <CONTACT TYPE="PHONE" comment="" end="4665" id="P40" start="4662" text="557" />
 <DATE TYPE="DATE" comment="" end="6168" id="P42" start="6162" text="4/2/98" />
 <DATE TYPE="DATE" comment="" end="9972" id="P43" start="9965" text="3/18/98" />
+<LOCATION TYPE="HOSPITAL" comment="" end="11818" id="P45" start="11815" text="NGH" />
 <NAME TYPE="DOCTOR" comment="" end="12204" id="P46" start="12191" text="Quenton Stark" />
+<LOCATION TYPE="HOSPITAL" comment="" end="12213" id="P47" start="12210" text="MMC" />
 <CONTACT TYPE="PHONE" comment="" end="12235" id="P48" start="12230" text="00138" />
 </TAGS>
 </deIdi2b2>

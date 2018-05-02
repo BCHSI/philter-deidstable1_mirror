@@ -186,6 +186,7 @@ Dictated by:  KEITH TOLLIVER, M.D.       KT40
 </TEXT>
 <TAGS>
 <DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2088-08-03" />
+<LOCATION TYPE="HOSPITAL" comment="" end="56" id="P1" start="49" text="DAMERON" />
 <NAME TYPE="PATIENT" comment="" end="98" id="P2" start="82" text="VALENZUELA,BRIAN" />
 <ID TYPE="MEDICALRECORD" comment="" end="112" id="P3" start="101" text="036-89-96-4" />
 <ID TYPE="IDNUM" comment="" end="5115" id="P7" start="5104" text="VI752/79442" />

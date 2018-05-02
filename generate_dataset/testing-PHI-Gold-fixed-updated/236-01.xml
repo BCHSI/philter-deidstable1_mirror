@@ -98,6 +98,7 @@ DV:9-5-67
 <NAME TYPE="DOCTOR" comment="" end="2640" id="P14" start="2618" text="Peter      Vandenberg" />
 <DATE TYPE="DATE" comment="" end="2957" id="P15" start="2953" text="5/66" />
 <NAME TYPE="DOCTOR" comment="" end="3006" id="P16" start="3002" text="Nava" />
+<LOCATION TYPE="HOSPITAL" comment="" end="3057" id="P17" start="3034" text="INDIANOLA VALLEY CENTER" />
 <NAME TYPE="PATIENT" comment="" end="3097" id="P18" start="3082" text="Vance, Jennifer" />
 <ID TYPE="MEDICALRECORD" comment="" end="3152" id="P19" start="3144" text="54266003" />
 <DATE TYPE="DATE" comment="" end="3205" id="P20" start="3199" text="9-5-67" />

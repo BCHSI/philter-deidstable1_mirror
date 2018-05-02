@@ -54,6 +54,7 @@ DV: 03/30/91
 </TEXT>
 <TAGS>
 <DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2091-03-30" />
+<LOCATION TYPE="HOSPITAL" comment="" end="33" id="P1" start="29" text="ORLH" />
 <LOCATION TYPE="STREET" comment="" end="55" id="P2" start="34" text="58 Kessler Farm Drive" />
 <NAME TYPE="PATIENT" comment="" end="116" id="P3" start="95" text="NICHOLAS-XAVIER, FRED" />
 <LOCATION TYPE="CITY" comment="" end="127" id="P4" start="117" text="White Hall" />
@@ -63,6 +64,7 @@ DV: 03/30/91
 <CONTACT TYPE="PHONE" comment="" end="198" id="P8" start="184" text="(959) 149-6104" />
 <DATE TYPE="DATE" comment="" end="249" id="P9" start="241" text="03/30/91" />
 <NAME TYPE="PATIENT" comment="" end="289" id="P10" start="274" text="Nicholas Xavier" />
+<LOCATION TYPE="HOSPITAL" comment="" end="346" id="P12" start="330" text="Orlando Regional" />
 <NAME TYPE="DOCTOR" comment="" end="1517" id="P13" start="1504" text="Billy Vanpelt" />
 <ID TYPE="IDNUM" comment="" end="1554" id="P14" start="1545" text="3-9348364" />
 <DATE TYPE="DATE" comment="" end="1567" id="P15" start="1559" text="03/30/91" />

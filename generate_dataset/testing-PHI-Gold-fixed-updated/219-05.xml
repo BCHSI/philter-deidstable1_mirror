@@ -71,6 +71,7 @@ DV: 03/09/80
 </TEXT>
 <TAGS>
 <DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2080-03-09" />
+<LOCATION TYPE="HOSPITAL" comment="" end="56" id="P1" start="33" text="Notre Dame Nursing Home" />
 <LOCATION TYPE="STREET" comment="" end="75" id="P2" start="57" text="6250 Madera Circle" />
 <NAME TYPE="PATIENT" comment="" end="103" id="P3" start="89" text="POTTS, WILLIAM" />
 <LOCATION TYPE="CITY" comment="" end="111" id="P4" start="104" text="Hyannis" />

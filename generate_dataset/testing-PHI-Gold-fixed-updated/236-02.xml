@@ -282,11 +282,13 @@ Gastroenterology Division - BMH
 <DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2069-07-18" />
 <DATE TYPE="DATE" comment="" end="62" id="P1" start="49" text="July 18, 2069" />
 <NAME TYPE="DOCTOR" comment="" end="85" id="P2" start="73" text="Vester Light" />
+<LOCATION TYPE="HOSPITAL" comment="" end="136" id="P4" start="112" text="Barton Memorial Hospital" />
 <NAME TYPE="PATIENT" comment="" end="160" id="P5" start="146" text="Jennifer Vance" />
 <ID TYPE="MEDICALRECORD" comment="" end="182" id="P6" start="171" text="542-66-00-3" />
 <NAME TYPE="DOCTOR" comment="" end="198" id="P7" start="192" text="Vester" />
 <NAME TYPE="PATIENT" comment="" end="214" id="P8" start="209" text="Vance" />
 <NAME TYPE="PATIENT" comment="" end="369" id="P9" start="364" text="Vance" />
+<LOCATION TYPE="HOSPITAL" comment="" end="629" id="P12" start="605" text="Barton Memorial Hospital" />
 <DATE TYPE="DATE" comment="" end="1061" id="P13" start="1050" text="May of 2063" />
 <DATE TYPE="DATE" comment="" end="1662" id="P14" start="1646" text="November of 2068" />
 <DATE TYPE="DATE" comment="" end="2271" id="P15" start="2259" text="October 2068" />
@@ -303,10 +305,12 @@ Gastroenterology Division - BMH
 <DATE TYPE="DATE" comment="" end="5314" id="P29" start="5306" text="07/18/69" />
 <NAME TYPE="DOCTOR" comment="" end="5325" id="P30" start="5320" text="riggs" />
 <NAME TYPE="DOCTOR" comment="" end="5346" id="P31" start="5335" text="John Koontz" />
+<LOCATION TYPE="HOSPITAL" comment="" end="5376" id="P32" start="5354" text="Kearney Urology Center" />
 <LOCATION TYPE="STREET" comment="" end="5391" id="P33" start="5378" text="49 Buswell St" />
 <LOCATION TYPE="CITY" comment="" end="5400" id="P34" start="5393" text="Minerva" />
 <LOCATION TYPE="STATE" comment="" end="5405" id="P35" start="5403" text="TN" />
 <LOCATION TYPE="ZIP" comment="" end="5412" id="P36" start="5407" text="41694" />
 <NAME TYPE="DOCTOR" comment="" end="5434" id="P37" start="5422" text="Vincent Veal" />
+<LOCATION TYPE="HOSPITAL" comment="" end="5473" id="P38" start="5470" text="BMH" />
 </TAGS>
 </deIdi2b2>

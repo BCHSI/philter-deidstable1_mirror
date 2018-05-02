@@ -200,14 +200,17 @@ ___________________________________________________________________
 <DATE TYPE="DATE" comment="" end="1150" id="P11" start="1142" text="10/09/63" />
 <NAME TYPE="PATIENT" comment="" end="1466" id="P13" start="1450" text="QUICK,ISABELLE Y" />
 <ID TYPE="MEDICALRECORD" comment="" end="1475" id="P14" start="1468" text="6557545" />
+<LOCATION TYPE="HOSPITAL" comment="" end="1481" id="P15" start="1477" text="ATCH" />
 <NAME TYPE="DOCTOR" comment="" end="1517" id="P17" start="1505" text="RICO,HELEN U" />
 <DATE TYPE="DATE" comment="" end="1536" id="P18" start="1526" text="09/10/2064" />
 <DATE TYPE="DATE" comment="" end="1715" id="P19" start="1705" text="09/10/2064" />
 <DATE TYPE="DATE" comment="" end="2945" id="P20" start="2939" text="9/8/64" />
+<LOCATION TYPE="HOSPITAL" comment="" end="7584" id="P22" start="7566" text="Hospital Lafayette" />
 <LOCATION TYPE="CITY" comment="" end="7597" id="P23" start="7586" text="Platteville" />
 <LOCATION TYPE="STATE" comment="" end="7601" id="P24" start="7599" text="Hi" />
 <NAME TYPE="PATIENT" comment="" end="8008" id="P25" start="7992" text="QUICK,ISABELLE Y" />
 <ID TYPE="MEDICALRECORD" comment="" end="8017" id="P26" start="8010" text="6557545" />
+<LOCATION TYPE="HOSPITAL" comment="" end="8023" id="P27" start="8019" text="ATCH" />
 <NAME TYPE="DOCTOR" comment="" end="8059" id="P29" start="8047" text="RICO,HELEN U" />
 <DATE TYPE="DATE" comment="" end="8078" id="P30" start="8068" text="09/10/2064" />
 <DATE TYPE="DATE" comment="" end="8257" id="P31" start="8247" text="09/10/2064" />

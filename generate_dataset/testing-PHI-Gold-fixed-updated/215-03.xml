@@ -241,10 +241,12 @@ Pager # 32591
 <TAGS>
 <DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2129-01-09" />
 <NAME TYPE="PATIENT" comment="" end="81" id="P1" start="65" text="Valdivia, Elijah" />
+<LOCATION TYPE="HOSPITAL" comment="" end="86" id="P2" start="83" text="EVC" />
 <ID TYPE="MEDICALRECORD" comment="" end="109" id="P3" start="100" text="845 52 82" />
 <DATE TYPE="DATE" comment="" end="145" id="P4" start="131" text="9 January 2129" />
 <NAME TYPE="DOCTOR" comment="" end="181" id="P5" start="168" text="Quentin Lemus" />
 <NAME TYPE="DOCTOR" comment="" end="254" id="P8" start="241" text="Leon Fontenot" />
+<LOCATION TYPE="HOSPITAL" comment="" end="276" id="P9" start="262" text="Elkhorn Valley" />
 <NAME TYPE="DOCTOR" comment="" end="693" id="P11" start="678" text="Queenie Yeargan" />
 <DATE TYPE="DATE" comment="" end="705" id="P12" start="697" text="01/03/29" />
 <NAME TYPE="DOCTOR" comment="" end="742" id="P13" start="736" text="Haynes" />

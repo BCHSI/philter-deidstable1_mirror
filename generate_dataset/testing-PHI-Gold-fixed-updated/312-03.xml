@@ -382,6 +382,7 @@ Herbert C. Guerrero, M. D.
 <ID TYPE="MEDICALRECORD" comment="" end="88" id="P2" start="81" text="8381729" />
 <NAME TYPE="DOCTOR" comment="" end="113" id="P3" start="107" text="Burton" />
 <LOCATION TYPE="CITY" comment="" end="1397" id="P5" start="1389" text="Kemmerer" />
+<LOCATION TYPE="HOSPITAL" comment="" end="1430" id="P6" start="1405" text="Chestnut Lodge Sanitarium" />
 <PROFESSION TYPE="PROFESSION" comment="" end="1509" id="P8" start="1502" text="Glazier" />
 <DATE TYPE="DATE" comment="" end="2763" id="P9" start="2753" text="01/23/2064" />
 <DATE TYPE="DATE" comment="" end="2910" id="P10" start="2900" text="01/23/2064" />
@@ -404,16 +405,19 @@ Herbert C. Guerrero, M. D.
 <DATE TYPE="DATE" comment="" end="4558" id="P27" start="4548" text="01/28/2064" />
 <DATE TYPE="DATE" comment="" end="4675" id="P28" start="4665" text="01/28/2064" />
 <DATE TYPE="DATE" comment="" end="4930" id="P29" start="4920" text="01/28/2064" />
+<LOCATION TYPE="HOSPITAL" comment="" end="4952" id="P30" start="4937" text="EDUCARE-PULLMAN" />
 <ID TYPE="MEDICALRECORD" comment="" end="5017" id="P31" start="5008" text="5856E7910" />
 <ID TYPE="MEDICALRECORD" comment="" end="5046" id="P32" start="5037" text="5856E7910" />
 <DATE TYPE="DATE" comment="" end="5073" id="P33" start="5064" text="28-Jan-64" />
 <DATE TYPE="DATE" comment="" end="5150" id="P34" start="5141" text="28-Jan-64" />
 <DATE TYPE="DATE" comment="" end="5335" id="P35" start="5325" text="01/28/2064" />
+<LOCATION TYPE="HOSPITAL" comment="" end="5357" id="P36" start="5342" text="EDUCARE-PULLMAN" />
 <ID TYPE="MEDICALRECORD" comment="" end="5422" id="P37" start="5413" text="6934P2380" />
 <ID TYPE="MEDICALRECORD" comment="" end="5451" id="P38" start="5442" text="6934P2380" />
 <DATE TYPE="DATE" comment="" end="5478" id="P39" start="5469" text="28-Jan-64" />
 <DATE TYPE="DATE" comment="" end="5555" id="P40" start="5546" text="28-Jan-64" />
 <DATE TYPE="DATE" comment="" end="5725" id="P41" start="5715" text="01/27/2064" />
+<LOCATION TYPE="HOSPITAL" comment="" end="5747" id="P42" start="5732" text="EDUCARE-PULLMAN" />
 <ID TYPE="MEDICALRECORD" comment="" end="5813" id="P43" start="5803" text="6931L53151" />
 <ID TYPE="MEDICALRECORD" comment="" end="5843" id="P44" start="5833" text="6931L53151" />
 <DATE TYPE="DATE" comment="" end="5869" id="P45" start="5860" text="27-Jan-64" />
@@ -421,6 +425,7 @@ Herbert C. Guerrero, M. D.
 <DATE TYPE="DATE" comment="" end="6133" id="P47" start="6124" text="28-Jan-64" />
 <DATE TYPE="DATE" comment="" end="6270" id="P48" start="6263" text="1/28/64" />
 <DATE TYPE="DATE" comment="" end="6289" id="P49" start="6279" text="01/27/2064" />
+<LOCATION TYPE="HOSPITAL" comment="" end="6311" id="P50" start="6296" text="EDUCARE-PULLMAN" />
 <ID TYPE="MEDICALRECORD" comment="" end="6377" id="P51" start="6367" text="3194S62727" />
 <ID TYPE="MEDICALRECORD" comment="" end="6407" id="P52" start="6397" text="3194S62727" />
 <DATE TYPE="DATE" comment="" end="6433" id="P53" start="6424" text="27-Jan-64" />

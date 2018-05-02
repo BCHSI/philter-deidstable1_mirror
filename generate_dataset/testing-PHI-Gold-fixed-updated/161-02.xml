@@ -87,9 +87,11 @@ SH/truitt		89-05167655.doc
 <LOCATION TYPE="STATE" comment="" end="107" id="P5" start="105" text="ME" />
 <LOCATION TYPE="ZIP" comment="" end="113" id="P6" start="108" text="27525" />
 <NAME TYPE="PATIENT" comment="" end="141" id="P7" start="126" text="Jaquante Xuereb" />
+<LOCATION TYPE="HOSPITAL" comment="" end="146" id="P8" start="143" text="SRI" />
 <ID TYPE="MEDICALRECORD" comment="" end="159" id="P9" start="150" text="134-43-51" />
 <NAME TYPE="DOCTOR" comment="" end="175" id="P10" start="172" text="You" />
 <NAME TYPE="PATIENT" comment="" end="248" id="P11" start="233" text="Jaquante Xuereb" />
+<LOCATION TYPE="HOSPITAL" comment="" end="337" id="P12" start="317" text="Santa Rosa Infirmary" />
 <DATE TYPE="DATE" comment="" end="1768" id="P13" start="1751" text="November 29, 2070" />
 <NAME TYPE="PATIENT" comment="" end="1883" id="P14" start="1877" text="Xuereb" />
 <NAME TYPE="DOCTOR" comment="" end="2369" id="P15" start="2353" text="Shane R. Herring" />

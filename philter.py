@@ -1122,7 +1122,7 @@ class Philter:
                                                 ids_cleaned.append(elem)
                                             if phi_dict['TYPE'] == 'USERNAME' or phi_dict['TYPE'] == 'PHONE' or phi_dict['TYPE'] == 'EMAIL' or phi_dict['TYPE'] == 'FAX':
                                                 contact_cleaned.append(elem)
-                                            if phi_dict['TYPE'] == 'CITY' or phi_dict['TYPE'] == 'STATE' or phi_dict['TYPE'] == 'ZIP' or phi_dict['TYPE'] == 'STREET' or phi_dict['TYPE'] == 'LOCATION-OTHER':
+                                            if phi_dict['TYPE'] == 'CITY' or phi_dict['TYPE'] == 'STATE' or phi_dict['TYPE'] == 'ZIP' or phi_dict['TYPE'] == 'STREET' or phi_dict['TYPE'] == 'LOCATION-OTHER' or phi_dict['TYPE'] == 'HOSPITAL':
                                                 locations_cleaned.append(elem)
                                             if phi_dict['TYPE'] == 'HOSPITAL':
                                                 organizations_cleaned.append(elem)

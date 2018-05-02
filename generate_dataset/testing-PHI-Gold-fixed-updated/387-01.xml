@@ -193,5 +193,6 @@ cc:
 <DATE TYPE="DATE" comment="" end="3265" id="P9" start="3261" text="June" />
 <DATE TYPE="DATE" comment="" end="3288" id="P10" start="3284" text="June" />
 <NAME TYPE="DOCTOR" comment="" end="3308" id="P11" start="3292" text="Patricia Barajas" />
+<LOCATION TYPE="HOSPITAL" comment="" end="3345" id="P13" start="3323" text="Gila Regional Hospital" />
 </TAGS>
 </deIdi2b2>

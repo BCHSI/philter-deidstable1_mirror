@@ -318,6 +318,7 @@ aspirin 325 mg   QD
 </TEXT>
 <TAGS>
 <DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2130-08-09" />
+<LOCATION TYPE="HOSPITAL" comment="" end="74" id="P1" start="53" text="ELKHORN VALLEY CLINIC" />
 <DATE TYPE="DATE" comment="" end="465" id="P5" start="461" text="4/25" />
 <DATE TYPE="DATE" comment="" end="761" id="P6" start="757" text="1/26" />
 <DATE TYPE="DATE" comment="" end="969" id="P7" start="964" text="12/27" />

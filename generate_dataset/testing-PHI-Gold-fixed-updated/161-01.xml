@@ -129,6 +129,7 @@ SRH/valdovinos	19-35905660.doc
 <LOCATION TYPE="STATE" comment="" end="110" id="P5" start="108" text="ME" />
 <LOCATION TYPE="ZIP" comment="" end="116" id="P6" start="111" text="27525" />
 <NAME TYPE="PATIENT" comment="" end="142" id="P7" start="127" text="Jaquante Xuereb" />
+<LOCATION TYPE="HOSPITAL" comment="" end="147" id="P8" start="144" text="SRI" />
 <ID TYPE="MEDICALRECORD" comment="" end="160" id="P9" start="151" text="134-43-51" />
 <NAME TYPE="DOCTOR" comment="" end="176" id="P10" start="173" text="You" />
 <NAME TYPE="PATIENT" comment="" end="264" id="P11" start="258" text="Xuereb" />

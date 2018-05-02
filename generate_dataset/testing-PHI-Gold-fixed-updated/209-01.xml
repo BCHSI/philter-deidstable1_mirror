@@ -61,18 +61,23 @@ AL:0138:855
 <DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2089-04-13" />
 <DATE TYPE="DATE" comment="" end="48" id="P1" start="34" text="April 13, 2089" />
 <NAME TYPE="DOCTOR" comment="" end="70" id="P2" start="56" text="Quadarius Kirk" />
+<LOCATION TYPE="HOSPITAL" comment="" end="102" id="P3" start="79" text="Carrizoza Health Center" />
 <LOCATION TYPE="STREET" comment="" end="120" id="P4" start="104" text="531 Westfield St" />
 <LOCATION TYPE="CITY" comment="" end="135" id="P5" start="122" text="Clifton Forge" />
 <LOCATION TYPE="STATE" comment="" end="139" id="P6" start="137" text="WI" />
 <LOCATION TYPE="ZIP" comment="" end="146" id="P7" start="141" text="11674" />
 <NAME TYPE="PATIENT" comment="" end="175" id="P8" start="155" text="Parrish, Christopher" />
+<LOCATION TYPE="HOSPITAL" comment="" end="180" id="P9" start="177" text="SFC" />
 <ID TYPE="MEDICALRECORD" comment="" end="193" id="P10" start="184" text="553-15-48" />
 <NAME TYPE="DOCTOR" comment="" end="210" id="P11" start="206" text="Kirk" />
 <NAME TYPE="PATIENT" comment="" end="278" id="P12" start="259" text="Christopher Parrish" />
+<LOCATION TYPE="HOSPITAL" comment="" end="381" id="P14" start="363" text="Sutton Family Care" />
 <DATE TYPE="DATE" comment="" end="402" id="P15" start="385" text="December 29, 2088" />
 <LOCATION TYPE="ORGANIZATION" comment="" end="3057" id="P19" start="3037" text="Marble Slab Creamery" />
 <NAME TYPE="PATIENT" comment="" end="4439" id="P20" start="4432" text="Parrish" />
+<LOCATION TYPE="HOSPITAL" comment="" end="5593" id="P21" start="5575" text="Sutton Family Care" />
 <NAME TYPE="DOCTOR" comment="" end="6357" id="P22" start="6345" text="Laith Greene" />
+<LOCATION TYPE="HOSPITAL" comment="" end="6383" id="P23" start="6365" text="Sutton Family Care" />
 <NAME TYPE="DOCTOR" comment="" end="6522" id="P24" start="6506" text="Johnathan Kiefer" />
 <DATE TYPE="DATE" comment="" end="6543" id="P25" start="6535" text="04/13/89" />
 <DATE TYPE="DATE" comment="" end="6556" id="P26" start="6548" text="04/14/89" />

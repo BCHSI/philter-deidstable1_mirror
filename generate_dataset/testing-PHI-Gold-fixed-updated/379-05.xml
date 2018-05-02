@@ -322,6 +322,7 @@ Thank you for this interesting consult.
 </TEXT>
 <TAGS>
 <DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2094-02-04" />
+<LOCATION TYPE="HOSPITAL" comment="" end="31" id="P1" start="28" text="BMC" />
 <DATE TYPE="DATE" comment="" end="72" id="P2" start="63" text="2/04/2094" />
 <NAME TYPE="PATIENT" comment="" end="105" id="P3" start="82" text="Nancy-Jasmine, Nikkolas" />
 <ID TYPE="MEDICALRECORD" comment="" end="120" id="P4" start="112" text="69331181" />

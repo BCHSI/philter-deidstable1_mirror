@@ -132,5 +132,6 @@ Motor:	normal bulk and tone, no tremor, rigidity or bradykinesia, no pronator dr
 <NAME TYPE="PATIENT" comment="" end="94" id="P1" start="80" text="Yusuf, Russell" />
 <ID TYPE="MEDICALRECORD" comment="" end="109" id="P2" start="102" text="1423602" />
 <DATE TYPE="DATE" comment="" end="124" id="P3" start="117" text="7/01/76" />
+<LOCATION TYPE="HOSPITAL" comment="" end="1308" id="P5" start="1296" text="Wolfe Clinic" />
 </TAGS>
 </deIdi2b2>

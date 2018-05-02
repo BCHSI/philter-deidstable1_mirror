@@ -368,6 +368,7 @@ Pager 49057
 <NAME TYPE="DOCTOR" comment="" end="349" id="P8" start="337" text="Camille Dodd" />
 <DATE TYPE="DATE" comment="" end="373" id="P9" start="368" text="12/91" />
 <NAME TYPE="PATIENT" comment="" end="395" id="P10" start="387" text="Mitchell" />
+<LOCATION TYPE="HOSPITAL" comment="" end="1543" id="P12" start="1540" text="PHH" />
 <DATE TYPE="DATE" comment="" end="1822" id="P13" start="1816" text="6/2085" />
 <DATE TYPE="DATE" comment="" end="1840" id="P14" start="1836" text="8/91" />
 <DATE TYPE="DATE" comment="" end="1954" id="P15" start="1949" text="10/89" />

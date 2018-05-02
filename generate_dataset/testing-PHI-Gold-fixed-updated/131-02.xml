@@ -223,8 +223,10 @@ Disposition and Plans
 <DATE TYPE="DATE" comment="" end="288" id="P3" start="283" text="12/93" />
 <DATE TYPE="DATE" comment="" end="442" id="P4" start="438" text="4/94" />
 <DATE TYPE="DATE" comment="" end="663" id="P5" start="657" text="4/4/90" />
+<LOCATION TYPE="HOSPITAL" comment="" end="759" id="P6" start="753" text="Cedars" />
 <DATE TYPE="DATE" comment="" end="1073" id="P7" start="1067" text="2060'S" />
 <NAME TYPE="DOCTOR" comment="" end="1105" id="P8" start="1100" text="TITUS" />
+<LOCATION TYPE="HOSPITAL" comment="" end="1128" id="P9" start="1109" text="DARDANELLE HOSPITAL" />
 <DATE TYPE="DATE" comment="" end="1144" id="P10" start="1137" text="5/12/82" />
 <DATE TYPE="DATE" comment="" end="1465" id="P11" start="1458" text="5/23/86" />
 <DATE TYPE="DATE" comment="" end="1613" id="P12" start="1609" text="5/86" />
@@ -273,6 +275,7 @@ Disposition and Plans
 <NAME TYPE="DOCTOR" comment="" end="5728" id="P55" start="5719" text="QUINLIVAN" />
 <DATE TYPE="DATE" comment="" end="5754" id="P56" start="5749" text="10/30" />
 <DATE TYPE="DATE" comment="" end="5855" id="P57" start="5850" text="12/89" />
+<LOCATION TYPE="HOSPITAL" comment="" end="5869" id="P58" start="5859" text="ST FRANCIS" />
 <NAME TYPE="DOCTOR" comment="" end="5920" id="P59" start="5914" text="TOMLIN" />
 <DATE TYPE="DATE" comment="" end="5948" id="P60" start="5944" text="3/93" />
 <DATE TYPE="DATE" comment="" end="5967" id="P61" start="5963" text="7/94" />

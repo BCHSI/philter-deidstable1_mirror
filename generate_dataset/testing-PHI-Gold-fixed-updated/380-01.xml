@@ -171,8 +171,10 @@ DV: 09/16/67
 <DATE TYPE="DATE" comment="" end="236" id="P9" start="228" text="08/15/67" />
 <DATE TYPE="DATE" comment="" end="458" id="P11" start="448" text="06/18/2067" />
 <DATE TYPE="DATE" comment="" end="1483" id="P13" start="1473" text="08/04/2067" />
+<LOCATION TYPE="HOSPITAL" comment="" end="1740" id="P14" start="1720" text="Tracy Medical Clinic" />
 <LOCATION TYPE="CITY" comment="" end="3002" id="P15" start="2991" text="Castle Rock" />
 <DATE TYPE="DATE" comment="" end="4726" id="P16" start="4716" text="06/18/2067" />
+<LOCATION TYPE="HOSPITAL" comment="" end="5751" id="P18" start="5748" text="OCH" />
 <NAME TYPE="DOCTOR" comment="" end="6785" id="P19" start="6766" text="Jordan Namari Akers" />
 <NAME TYPE="DOCTOR" comment="" end="6829" id="P20" start="6810" text="Jordan Namari Akers" />
 <ID TYPE="IDNUM" comment="" end="6861" id="P21" start="6852" text="7-1410500" />

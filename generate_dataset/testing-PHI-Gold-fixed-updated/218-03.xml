@@ -174,6 +174,7 @@ Document Status: Final
 </TEXT>
 <TAGS>
 <DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2096-03-16" />
+<LOCATION TYPE="HOSPITAL" comment="" end="84" id="P1" start="62" text="MISSOULA CLINIC CENTER" />
 <DATE TYPE="DATE" comment="" end="1018" id="P7" start="1013" text="11/92" />
 <NAME TYPE="DOCTOR" comment="" end="1193" id="P8" start="1184" text="Etheridge" />
 <DATE TYPE="DATE" comment="" end="1232" id="P9" start="1228" text="7/88" />

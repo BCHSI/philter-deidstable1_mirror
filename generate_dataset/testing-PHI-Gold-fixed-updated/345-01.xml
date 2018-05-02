@@ -134,6 +134,7 @@ Dictated by:  YULIANNA ELKINS, M.D.   YE96
 </TEXT>
 <TAGS>
 <DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2072-11-25" />
+<LOCATION TYPE="HOSPITAL" comment="" end="52" id="P1" start="49" text="RGH" />
 <NAME TYPE="PATIENT" comment="" end="95" id="P2" start="78" text="MULLINS,DOLORES U" />
 <ID TYPE="MEDICALRECORD" comment="" end="109" id="P3" start="98" text="728-41-92-0" />
 <DATE TYPE="DATE" comment="" end="144" id="P4" start="136" text="01/24/73" />

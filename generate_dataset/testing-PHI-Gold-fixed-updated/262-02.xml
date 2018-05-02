@@ -212,7 +212,14 @@ IN/rowe/yeater
 <DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2090-10-07" />
 <NAME TYPE="PATIENT" comment="" end="60" id="P1" start="45" text="Olivo, Kimberly" />
 <ID TYPE="MEDICALRECORD" comment="" end="79" id="P2" start="72" text="3299811" />
+<LOCATION TYPE="HOSPITAL" comment="" end="301" id="P4" start="277" text="American Legion Hospital" />
+<LOCATION TYPE="HOSPITAL" comment="" end="402" id="P5" start="389" text="Neligh Clinic" />
+<LOCATION TYPE="HOSPITAL" comment="" end="512" id="P6" start="499" text="Neligh Clinic" />
+<LOCATION TYPE="HOSPITAL" comment="" end="600" id="P7" start="576" text="American Legion Hospital" />
+<LOCATION TYPE="HOSPITAL" comment="" end="734" id="P8" start="721" text="Neligh Clinic" />
+<LOCATION TYPE="HOSPITAL" comment="" end="938" id="P9" start="914" text="American Legion Hospital" />
 <DATE TYPE="DATE" comment="" end="958" id="P10" start="942" text="October 02, 2089" />
+<LOCATION TYPE="HOSPITAL" comment="" end="1063" id="P11" start="1039" text="American Legion Hospital" />
 <NAME TYPE="DOCTOR" comment="" end="4813" id="P12" start="4807" text="Xavier" />
 <NAME TYPE="DOCTOR" comment="" end="4897" id="P13" start="4891" text="Xavier" />
 <NAME TYPE="DOCTOR" comment="" end="5182" id="P14" start="5174" text="Isaac Ng" />

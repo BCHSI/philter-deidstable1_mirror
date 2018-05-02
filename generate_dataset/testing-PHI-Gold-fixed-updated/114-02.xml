@@ -66,5 +66,6 @@ Dr. Harry Tolliver, FPC Cardiology Unit
 <DATE TYPE="DATE" comment="" end="1060" id="P9" start="1052" text="12/31/32" />
 <NAME TYPE="DOCTOR" comment="" end="1590" id="P10" start="1582" text="Tolliver" />
 <NAME TYPE="DOCTOR" comment="" end="1725" id="P11" start="1711" text="Harry Tolliver" />
+<LOCATION TYPE="HOSPITAL" comment="" end="1730" id="P12" start="1727" text="FPC" />
 </TAGS>
 </deIdi2b2>

@@ -43,6 +43,7 @@ Dictated by:  TRISTAN O. XAVIER, M.D.  TX12
 </TEXT>
 <TAGS>
 <DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2078-10-13" />
+<LOCATION TYPE="HOSPITAL" comment="" end="52" id="P1" start="49" text="CDH" />
 <NAME TYPE="PATIENT" comment="" end="91" id="P2" start="76" text="YARBROUGH,IRENE" />
 <ID TYPE="MEDICALRECORD" comment="" end="105" id="P3" start="94" text="810-86-43-7" />
 <DATE TYPE="DATE" comment="" end="149" id="P4" start="141" text="10/13/78" />

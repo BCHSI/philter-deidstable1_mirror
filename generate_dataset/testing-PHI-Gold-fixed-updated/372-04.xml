@@ -377,10 +377,12 @@ PGY-1, Pager #55518
 </TEXT>
 <TAGS>
 <DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2126-09-04" />
+<LOCATION TYPE="HOSPITAL" comment="" end="55" id="P1" start="47" text="Manamana" />
 <NAME TYPE="PATIENT" comment="" end="102" id="P3" start="86" text="Flaherty, Xavier" />
 <ID TYPE="MEDICALRECORD" comment="" end="116" id="P4" start="109" text="1935081" />
 <DATE TYPE="DATE" comment="" end="137" id="P5" start="130" text="9/04/26" />
 <NAME TYPE="DOCTOR" comment="" end="157" id="P6" start="145" text="Michael Ring" />
+<LOCATION TYPE="HOSPITAL" comment="" end="191" id="P7" start="183" text="Manamana" />
 <NAME TYPE="PATIENT" comment="" end="388" id="P9" start="380" text="Flaherty" />
 <NAME TYPE="PATIENT" comment="" end="913" id="P11" start="905" text="Flaherty" />
 <DATE TYPE="DATE" comment="" end="2613" id="P13" start="2607" text="8/1/26" />

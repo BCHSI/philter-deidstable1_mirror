@@ -129,6 +129,7 @@ Jennifer Yuan, MD 67404
 <NAME TYPE="DOCTOR" comment="" end="188" id="P5" start="176" text="Iacono, Cruz" />
 <LOCATION TYPE="CITY" comment="" end="1605" id="P14" start="1593" text="Johnson City" />
 <LOCATION TYPE="ORGANIZATION" comment="" end="1632" id="P15" start="1617" text="Pilgrim's Pride" />
+<LOCATION TYPE="HOSPITAL" comment="" end="3991" id="P19" start="3988" text="PNC" />
 <NAME TYPE="DOCTOR" comment="" end="4786" id="P20" start="4773" text="Jennifer Yuan" />
 <CONTACT TYPE="PHONE" comment="" end="4796" id="P21" start="4791" text="67404" />
 </TAGS>

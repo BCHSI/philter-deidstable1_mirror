@@ -85,6 +85,7 @@ PH  Surgery, Pager #: 79920
 <NAME TYPE="DOCTOR" comment="" end="3528" id="P10" start="3521" text="Velasco" />
 <NAME TYPE="DOCTOR" comment="" end="3692" id="P11" start="3681" text="Uriah Wills" />
 <NAME TYPE="DOCTOR" comment="" end="3705" id="P12" start="3695" text="James Kopp" />
+<LOCATION TYPE="HOSPITAL" comment="" end="3714" id="P13" start="3712" text="PH" />
 <CONTACT TYPE="PHONE" comment="" end="3739" id="P14" start="3734" text="79920" />
 </TAGS>
 </deIdi2b2>

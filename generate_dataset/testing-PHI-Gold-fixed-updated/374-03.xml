@@ -109,6 +109,7 @@ Document Status: Final
 <TAGS>
 <DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2133-01-22" />
 <NAME TYPE="DOCTOR" comment="" end="40" id="P1" start="29" text="Wise, Willa" />
+<LOCATION TYPE="HOSPITAL" comment="" end="114" id="P3" start="79" text="Bayne-Jones Army Community Hospital" />
 <LOCATION TYPE="CITY" comment="" end="142" id="P5" start="137" text="Hayti" />
 <LOCATION TYPE="STATE" comment="" end="146" id="P6" start="144" text="DE" />
 <LOCATION TYPE="ZIP" comment="" end="158" id="P7" start="148" text="36349-2179" />

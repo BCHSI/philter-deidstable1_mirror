@@ -304,6 +304,7 @@ Pager #71151
 </TEXT>
 <TAGS>
 <DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2076-11-20" />
+<LOCATION TYPE="HOSPITAL" comment="" end="31" id="P1" start="28" text="JMH" />
 <NAME TYPE="PATIENT" comment="" end="99" id="P3" start="86" text="Linda Fonseca" />
 <ID TYPE="MEDICALRECORD" comment="" end="113" id="P4" start="106" text="7090253" />
 <NAME TYPE="DOCTOR" comment="" end="175" id="P6" start="162" text="Austin Jaeger" />
@@ -314,6 +315,7 @@ Pager #71151
 <NAME TYPE="DOCTOR" comment="" end="7307" id="P15" start="7298" text="Utterback" />
 <NAME TYPE="DOCTOR" comment="" end="7350" id="P16" start="7342" text="Espinosa" />
 <NAME TYPE="DOCTOR" comment="" end="7835" id="P17" start="7823" text="Vernon Ewing" />
+<LOCATION TYPE="HOSPITAL" comment="" end="7840" id="P18" start="7837" text="JMH" />
 <CONTACT TYPE="PHONE" comment="" end="7879" id="P20" start="7874" text="71151" />
 </TAGS>
 </deIdi2b2>

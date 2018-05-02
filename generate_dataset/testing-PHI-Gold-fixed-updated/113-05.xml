@@ -130,6 +130,7 @@ Heather T. Quinonez, M.D.
 <ID TYPE="MEDICALRECORD" comment="" end="64" id="P2" start="56" text="03689964" />
 <DATE TYPE="DATE" comment="" end="93" id="P3" start="83" text="10/23/2094" />
 <NAME TYPE="DOCTOR" comment="" end="111" id="P4" start="105" text="Davila" />
+<LOCATION TYPE="HOSPITAL" comment="" end="1029" id="P7" start="1026" text="WBM" />
 <DATE TYPE="DATE" comment="" end="1039" id="P8" start="1034" text="12/93" />
 <DATE TYPE="DATE" comment="" end="1897" id="P10" start="1887" text="Wednesdays" />
 <DATE TYPE="DATE" comment="" end="2515" id="P11" start="2507" text="10/22/94" />

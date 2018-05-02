@@ -280,6 +280,7 @@ DV: 12/05/87
 </TEXT>
 <TAGS>
 <DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2087-12-05" />
+<LOCATION TYPE="HOSPITAL" comment="" end="71" id="P1" start="34" text="Beckley Appalachian Regional Hospital" />
 <LOCATION TYPE="STREET" comment="" end="90" id="P2" start="73" text="040 Townsend West" />
 <NAME TYPE="PATIENT" comment="" end="115" id="P3" start="104" text="MOSS, DEREK" />
 <LOCATION TYPE="CITY" comment="" end="125" id="P4" start="117" text="Espanola" />
@@ -293,6 +294,7 @@ DV: 12/05/87
 <LOCATION TYPE="CITY" comment="" end="1457" id="P14" start="1447" text="Harrisburg" />
 <PROFESSION TYPE="PROFESSION" comment="" end="1570" id="P15" start="1549" text="vocational instructor" />
 <LOCATION TYPE="CITY" comment="" end="1607" id="P16" start="1602" text="Cadiz" />
+<LOCATION TYPE="HOSPITAL" comment="" end="5332" id="P18" start="5328" text="BARH" />
 <NAME TYPE="DOCTOR" comment="" end="5623" id="P19" start="5612" text="Ursula Yawn" />
 <ID TYPE="IDNUM" comment="" end="5668" id="P20" start="5659" text="7-3720969" />
 <DATE TYPE="DATE" comment="" end="5696" id="P21" start="5688" text="12/05/87" />

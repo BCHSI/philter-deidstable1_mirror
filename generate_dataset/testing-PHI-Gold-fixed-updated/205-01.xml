@@ -144,8 +144,12 @@ Cardiology Division - FSH
 <DATE TYPE="DATE" comment="" end="116" id="P3" start="104" text="May 05, 2069" />
 <NAME TYPE="PATIENT" comment="" end="131" id="P4" start="123" text="Chandler" />
 <DATE TYPE="DATE" comment="" end="218" id="P5" start="212" text="4/1/69" />
+<LOCATION TYPE="HOSPITAL" comment="" end="294" id="P6" start="276" text="Sibley Care Center" />
 <DATE TYPE="DATE" comment="" end="304" id="P7" start="300" text="4/08" />
 <DATE TYPE="DATE" comment="" end="315" id="P8" start="308" text="4/22/69" />
+<LOCATION TYPE="HOSPITAL" comment="" end="774" id="P9" start="763" text="Sibley Care" />
+<LOCATION TYPE="HOSPITAL" comment="" end="1065" id="P10" start="1054" text="Sibley Care" />
+<LOCATION TYPE="HOSPITAL" comment="" end="1396" id="P11" start="1364" text="Northern Illinois Medical Center" />
 <DATE TYPE="DATE" comment="" end="2409" id="P12" start="2403" text="4/1/69" />
 <NAME TYPE="PATIENT" comment="" end="2461" id="P13" start="2444" text="Chandler, Jessica" />
 <ID TYPE="MEDICALRECORD" comment="" end="2478" id="P14" start="2467" text="748-80-38-0" />
@@ -159,6 +163,8 @@ Cardiology Division - FSH
 <DATE TYPE="DATE" comment="" end="4454" id="P22" start="4446" text="05/05/69" />
 <NAME TYPE="DOCTOR" comment="" end="4461" id="P23" start="4456" text="denny" />
 <NAME TYPE="DOCTOR" comment="" end="4481" id="P24" start="4469" text="Noah Kimball" />
+<LOCATION TYPE="HOSPITAL" comment="" end="4509" id="P26" start="4506" text="FSH" />
 <NAME TYPE="DOCTOR" comment="" end="4526" id="P27" start="4512" text="William Wesley" />
+<LOCATION TYPE="HOSPITAL" comment="" end="4558" id="P28" start="4555" text="FSH" />
 </TAGS>
 </deIdi2b2>

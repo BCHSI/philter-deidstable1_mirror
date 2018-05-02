@@ -91,14 +91,17 @@ DV:03-20-63
 </TEXT>
 <TAGS>
 <DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2063-03-20" />
+<LOCATION TYPE="HOSPITAL" comment="" end="51" id="P1" start="28" text="EASLEY BAPTIST HOSPITAL" />
 <NAME TYPE="PATIENT" comment="" end="90" id="P2" start="76" text="Pickett, Silpa" />
 <ID TYPE="MEDICALRECORD" comment="" end="146" id="P3" start="138" text="12953473" />
 <DATE TYPE="DATE" comment="" end="201" id="P4" start="193" text="03-20-63" />
 <NAME TYPE="PATIENT" comment="" end="238" id="P5" start="231" text="Pickett" />
+<LOCATION TYPE="HOSPITAL" comment="" end="275" id="P6" start="252" text="Easley Baptist Hospital" />
 <DATE TYPE="DATE" comment="" end="455" id="P7" start="448" text="January" />
 <NAME TYPE="PATIENT" comment="" end="767" id="P8" start="760" text="Pickett" />
 <NAME TYPE="DOCTOR" comment="" end="2950" id="P10" start="2937" text="Mario Robison" />
 <NAME TYPE="PATIENT" comment="" end="3022" id="P11" start="3015" text="Pickett" />
+<LOCATION TYPE="HOSPITAL" comment="" end="3123" id="P12" start="3100" text="EASLEY BAPTIST HOSPITAL" />
 <NAME TYPE="PATIENT" comment="" end="3162" id="P13" start="3148" text="Pickett, Silpa" />
 <ID TYPE="MEDICALRECORD" comment="" end="3218" id="P14" start="3210" text="12953473" />
 <DATE TYPE="DATE" comment="" end="3273" id="P15" start="3265" text="03-20-63" />

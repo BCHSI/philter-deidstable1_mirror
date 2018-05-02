@@ -64,6 +64,7 @@ eScription document:2-0605694 BFFocus
 <NAME TYPE="PATIENT" comment="" end="58" id="P2" start="45" text="Werner, Nancy" />
 <DATE TYPE="DATE" comment="" end="67" id="P3" start="59" text="07/12/20" />
 <NAME TYPE="DOCTOR" comment="" end="84" id="P4" start="68" text="WILLIAMSON, PAUL" />
+<LOCATION TYPE="HOSPITAL" comment="" end="493" id="P6" start="474" text="Ihle Central Clinic" />
 <NAME TYPE="DOCTOR" comment="" end="1003" id="P7" start="987" text="WILLIAMSON, PAUL" />
 <DATE TYPE="DATE" comment="" end="1021" id="P8" start="1013" text="07/12/20" />
 <DATE TYPE="DATE" comment="" end="1034" id="P9" start="1026" text="07/13/20" />

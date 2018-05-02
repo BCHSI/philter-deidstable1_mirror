@@ -99,6 +99,7 @@ O
 <DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2089-05-11" />
 <NAME TYPE="PATIENT" comment="" end="110" id="P1" start="97" text="JARVIS,AMADOR" />
 <ID TYPE="MEDICALRECORD" comment="" end="125" id="P2" start="118" text="0907307" />
+<LOCATION TYPE="HOSPITAL" comment="" end="128" id="P3" start="125" text="PCC" />
 <DATE TYPE="DATE" comment="" end="214" id="P4" start="204" text="05/11/2089" />
 <NAME TYPE="PATIENT" comment="" end="249" id="P5" start="243" text="Jarvis" />
 <PROFESSION TYPE="PROFESSION" comment="" end="452" id="P6" start="434" text="production manager" />

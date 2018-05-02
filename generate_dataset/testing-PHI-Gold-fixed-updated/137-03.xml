@@ -44,10 +44,14 @@ Consultation-
 <TAGS>
 <DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2070-08-15" />
 <NAME TYPE="DOCTOR" comment="" end="151" id="P1" start="146" text="Garza" />
+<LOCATION TYPE="HOSPITAL" comment="" end="154" id="P2" start="151" text="RHN" />
+<LOCATION TYPE="HOSPITAL" comment="" end="184" id="P3" start="182" text="RH" />
 <NAME TYPE="DOCTOR" comment="" end="192" id="P4" start="189" text="Gil" />
 <DATE TYPE="DATE" comment="" end="215" id="P5" start="211" text="5/65" />
 <NAME TYPE="DOCTOR" comment="" end="223" id="P6" start="220" text="Gil" />
+<LOCATION TYPE="HOSPITAL" comment="" end="227" id="P7" start="224" text="RHN" />
 <NAME TYPE="DOCTOR" comment="" end="437" id="P8" start="431" text="Willis" />
+<LOCATION TYPE="HOSPITAL" comment="" end="452" id="P9" start="450" text="JH" />
 <NAME TYPE="DOCTOR" comment="" end="519" id="P10" start="513" text="Willis" />
 <NAME TYPE="DOCTOR" comment="" end="779" id="P11" start="772" text="Kincaid" />
 <DATE TYPE="DATE" comment="" end="1115" id="P12" start="1111" text="1/69" />
@@ -76,6 +80,7 @@ Consultation-
 <DATE TYPE="DATE" comment="" end="5364" id="P36" start="5354" text="08/15/2070" />
 <DATE TYPE="DATE" comment="" end="5402" id="P37" start="5392" text="05/08/2070" />
 <DATE TYPE="DATE" comment="" end="5436" id="P38" start="5426" text="08/15/2070" />
+<LOCATION TYPE="HOSPITAL" comment="" end="5593" id="P39" start="5558" text="BARRY COUNTY EXTENDED CARE FACILITY" />
 <LOCATION TYPE="CITY" comment="" end="5610" id="P40" start="5595" text="COLLEGE STATION" />
 <LOCATION TYPE="STATE" comment="" end="5614" id="P41" start="5612" text="WI" />
 <LOCATION TYPE="ZIP" comment="" end="5621" id="P42" start="5616" text="34674" />

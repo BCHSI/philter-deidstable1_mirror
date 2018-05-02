@@ -181,6 +181,7 @@ Tina Purcell, M.D.
 </TEXT>
 <TAGS>
 <DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2121-03-31" />
+<LOCATION TYPE="HOSPITAL" comment="" end="47" id="P1" start="28" text="Kern Medical Center" />
 <NAME TYPE="DOCTOR" comment="" end="152" id="P3" start="137" text="Tina L. Purcell" />
 <DATE TYPE="DATE" comment="" end="203" id="P4" start="189" text="March 31, 2121" />
 <ID TYPE="MEDICALRECORD" comment="" end="238" id="P5" start="231" text="4698877" />

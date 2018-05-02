@@ -40,6 +40,7 @@ Dictated by:  MAX URIARTE, M.D.       MU11
 </TEXT>
 <TAGS>
 <DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2086-05-25" />
+<LOCATION TYPE="HOSPITAL" comment="" end="52" id="P1" start="49" text="FCH" />
 <NAME TYPE="PATIENT" comment="" end="89" id="P2" start="76" text="TANNER,YUL M." />
 <ID TYPE="MEDICALRECORD" comment="" end="103" id="P3" start="92" text="099-04-65-0" />
 <DATE TYPE="DATE" comment="" end="139" id="P4" start="131" text="05/25/86" />

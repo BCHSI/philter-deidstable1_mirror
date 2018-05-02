@@ -118,6 +118,7 @@ eScription document:0-50096032 BFFocus
 <NAME TYPE="DOCTOR" comment="" end="84" id="P4" start="72" text="HODGES, CHAD" />
 <NAME TYPE="DOCTOR" comment="" end="149" id="P5" start="141" text="Caldwell" />
 <NAME TYPE="PATIENT" comment="" end="366" id="P6" start="357" text="Wilkerson" />
+<LOCATION TYPE="HOSPITAL" comment="" end="569" id="P8" start="565" text="MIMA" />
 <NAME TYPE="DOCTOR" comment="" end="608" id="P9" start="600" text="Caldwell" />
 <NAME TYPE="DOCTOR" comment="" end="2508" id="P10" start="2496" text="HODGES, CHAD" />
 <DATE TYPE="DATE" comment="" end="2526" id="P11" start="2518" text="01/17/93" />

@@ -112,6 +112,7 @@ Dictated by:  PERRY UPSHAW, M.D.       PU38
 </TEXT>
 <TAGS>
 <DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2083-08-26" />
+<LOCATION TYPE="HOSPITAL" comment="" end="61" id="P1" start="49" text="SILVER RIDGE" />
 <NAME TYPE="PATIENT" comment="" end="98" id="P2" start="87" text="OROZCO,KYLE" />
 <ID TYPE="MEDICALRECORD" comment="" end="112" id="P3" start="101" text="560-40-78-5" />
 <DATE TYPE="DATE" comment="" end="153" id="P4" start="145" text="08/26/83" />

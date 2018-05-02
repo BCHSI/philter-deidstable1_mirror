@@ -342,8 +342,10 @@ Signed electronically by   Quinton G Janssen MD  on  Apr 14, 2094
 </TEXT>
 <TAGS>
 <DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2094-04-14" />
+<LOCATION TYPE="HOSPITAL" comment="" end="59" id="P1" start="40" text="PORT HURON HOSPITAL" />
 <NAME TYPE="PATIENT" comment="" end="267" id="P3" start="259" text="Mitchell" />
 <NAME TYPE="PATIENT" comment="" end="1069" id="P5" start="1061" text="Mitchell" />
+<LOCATION TYPE="HOSPITAL" comment="" end="1151" id="P6" start="1128" text="North Mountain Hospital" />
 <NAME TYPE="DOCTOR" comment="" end="1811" id="P7" start="1805" text="Conway" />
 <NAME TYPE="DOCTOR" comment="" end="2035" id="P8" start="2029" text="Cherry" />
 <NAME TYPE="DOCTOR" comment="" end="2108" id="P9" start="2095" text="Evelyn Conway" />
