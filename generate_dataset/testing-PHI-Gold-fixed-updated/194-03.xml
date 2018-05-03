@@ -241,37 +241,25 @@ Kimberly Ring, PGY 1, 59907
 <NAME TYPE="DOCTOR" comment="" end="2318" id="P13" start="2311" text="Youmans" />
 <DATE TYPE="DATE" comment="" end="2746" id="P16" start="2740" text="8/2090" />
 <DATE TYPE="DATE" comment="" end="2892" id="P17" start="2885" text="10/2090" />
-<LOCATION TYPE="HOSPITAL" comment="" end="2994" id="P18" start="2991" text="SOH" />
 <DATE TYPE="DATE" comment="" end="3290" id="P21" start="3286" text="6/85" />
 <PROFESSION TYPE="PROFESSION" comment="" end="3958" id="P22" start="3945" text="army corporal" />
 <PROFESSION TYPE="PROFESSION" comment="" end="4014" id="P23" start="4008" text="design" />
 <NAME TYPE="PATIENT" comment="" end="4828" id="P25" start="4809" text="CRAWFORD, PATRICK P" />
-<LOCATION TYPE="HOSPITAL" comment="" end="4844" id="P26" start="4841" text="SOH" />
 <DATE TYPE="DATE" comment="" end="4871" id="P27" start="4863" text="04/14/94" />
 <NAME TYPE="PATIENT" comment="" end="5396" id="P28" start="5377" text="CRAWFORD, PATRICK P" />
-<LOCATION TYPE="HOSPITAL" comment="" end="5412" id="P29" start="5409" text="SOH" />
 <DATE TYPE="DATE" comment="" end="5439" id="P30" start="5431" text="04/14/94" />
 <NAME TYPE="PATIENT" comment="" end="6030" id="P31" start="6011" text="CRAWFORD, PATRICK P" />
-<LOCATION TYPE="HOSPITAL" comment="" end="6046" id="P32" start="6043" text="SOH" />
 <DATE TYPE="DATE" comment="" end="6073" id="P33" start="6065" text="04/14/94" />
 <NAME TYPE="PATIENT" comment="" end="6466" id="P34" start="6447" text="CRAWFORD, PATRICK P" />
-<LOCATION TYPE="HOSPITAL" comment="" end="6482" id="P35" start="6479" text="SOH" />
-<LOCATION TYPE="HOSPITAL" comment="" end="6493" id="P36" start="6490" text="SOH" />
-<LOCATION TYPE="HOSPITAL" comment="" end="6504" id="P37" start="6501" text="SOH" />
-<LOCATION TYPE="HOSPITAL" comment="" end="6515" id="P38" start="6512" text="SOH" />
 <DATE TYPE="DATE" comment="" end="6542" id="P39" start="6534" text="04/15/94" />
 <DATE TYPE="DATE" comment="" end="6553" id="P40" start="6545" text="04/15/94" />
 <DATE TYPE="DATE" comment="" end="6564" id="P41" start="6556" text="04/14/94" />
 <DATE TYPE="DATE" comment="" end="6575" id="P42" start="6567" text="04/14/94" />
 <NAME TYPE="PATIENT" comment="" end="6869" id="P43" start="6850" text="CRAWFORD, PATRICK P" />
-<LOCATION TYPE="HOSPITAL" comment="" end="6885" id="P44" start="6882" text="SOH" />
 <DATE TYPE="DATE" comment="" end="6912" id="P45" start="6904" text="04/14/94" />
 <NAME TYPE="PATIENT" comment="" end="8626" id="P46" start="8607" text="CRAWFORD, PATRICK P" />
-<LOCATION TYPE="HOSPITAL" comment="" end="8642" id="P47" start="8639" text="SOH" />
 <DATE TYPE="DATE" comment="" end="8669" id="P48" start="8661" text="04/14/94" />
 <NAME TYPE="PATIENT" comment="" end="8930" id="P49" start="8911" text="CRAWFORD, PATRICK P" />
-<LOCATION TYPE="HOSPITAL" comment="" end="8946" id="P50" start="8943" text="SOH" />
-<LOCATION TYPE="HOSPITAL" comment="" end="8957" id="P51" start="8954" text="SOH" />
 <DATE TYPE="DATE" comment="" end="8984" id="P52" start="8976" text="04/14/94" />
 <DATE TYPE="DATE" comment="" end="8995" id="P53" start="8987" text="04/14/94" />
 <NAME TYPE="DOCTOR" comment="" end="11010" id="P55" start="11003" text="Youmans" />

@@ -202,7 +202,6 @@ Document Status: Final
 <PROFESSION TYPE="PROFESSION" comment="" end="2852" id="P17" start="2845" text="glazier" />
 <NAME TYPE="PATIENT" comment="" end="3865" id="P19" start="3859" text="Mullen" />
 <NAME TYPE="DOCTOR" comment="" end="5109" id="P21" start="5093" text="Nicholas B Fuchs" />
-<LOCATION TYPE="HOSPITAL" comment="" end="5973" id="P22" start="5970" text="BMH" />
 <NAME TYPE="DOCTOR" comment="" end="6033" id="P23" start="6021" text="Guyton Nunes" />
 <CONTACT TYPE="PHONE" comment="" end="6050" id="P24" start="6045" text="53530" />
 <NAME TYPE="DOCTOR" comment="" end="6097" id="P25" start="6080" text="Nicholas B. Fuchs" />

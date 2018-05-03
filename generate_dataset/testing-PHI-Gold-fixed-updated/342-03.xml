@@ -228,7 +228,6 @@ Victoria Amy-Armstrong, M.D.
 <DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2093-12-26" />
 <NAME TYPE="PATIENT" comment="" end="113" id="P1" start="103" text="BARR,NICKY" />
 <ID TYPE="MEDICALRECORD" comment="" end="129" id="P2" start="121" text="32612454" />
-<LOCATION TYPE="HOSPITAL" comment="" end="132" id="P3" start="129" text="LDC" />
 <DATE TYPE="DATE" comment="" end="216" id="P4" start="208" text="12/26/93" />
 <NAME TYPE="PATIENT" comment="" end="248" id="P5" start="244" text="Barr" />
 <NAME TYPE="PATIENT" comment="" end="337" id="P6" start="333" text="Barr" />

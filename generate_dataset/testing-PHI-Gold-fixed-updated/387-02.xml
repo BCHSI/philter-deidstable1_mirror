@@ -296,10 +296,8 @@ Pager 67531
 <NAME TYPE="PATIENT" comment="" end="334" id="P12" start="325" text="Gillespie" />
 <LOCATION TYPE="HOSPITAL" comment="" end="433" id="P14" start="408" text="House Of Calvary Hospital" />
 <LOCATION TYPE="HOSPITAL" comment="" end="958" id="P15" start="951" text="Calvary" />
-<LOCATION TYPE="HOSPITAL" comment="" end="1107" id="P16" start="1104" text="GRH" />
 <LOCATION TYPE="HOSPITAL" comment="" end="1449" id="P17" start="1441" text="Mediquik" />
 <NAME TYPE="DOCTOR" comment="" end="2612" id="P20" start="2608" text="Bass" />
-<LOCATION TYPE="HOSPITAL" comment="" end="2619" id="P21" start="2616" text="MAC" />
 <DATE TYPE="DATE" comment="" end="2951" id="P23" start="2944" text="3/25/84" />
 <LOCATION TYPE="CITY" comment="" end="3684" id="P24" start="3675" text="Edgefield" />
 <LOCATION TYPE="CITY" comment="" end="3705" id="P25" start="3696" text="Edgefield" />

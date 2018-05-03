@@ -75,15 +75,12 @@ cc:	Robert-Joseph Paige, MD, 558 Paxton Terrace, Peculiar, NE 54583
 <LOCATION TYPE="STATE" comment="" end="105" id="P5" start="103" text="NE" />
 <LOCATION TYPE="ZIP" comment="" end="111" id="P6" start="106" text="54583" />
 <NAME TYPE="PATIENT" comment="" end="133" id="P7" start="119" text="Jarome DEJESUS" />
-<LOCATION TYPE="HOSPITAL" comment="" end="139" id="P8" start="136" text="ECI" />
 <ID TYPE="MEDICALRECORD" comment="" end="151" id="P9" start="140" text="280-44-07-1" />
 <NAME TYPE="DOCTOR" comment="" end="169" id="P10" start="164" text="Ponce" />
 <NAME TYPE="PATIENT" comment="" end="218" id="P11" start="211" text="Dejesus" />
-<LOCATION TYPE="HOSPITAL" comment="" end="233" id="P12" start="230" text="ECI" />
 <DATE TYPE="DATE" comment="" end="249" id="P13" start="244" text="05/16" />
 <DATE TYPE="DATE" comment="" end="255" id="P14" start="250" text="07/14" />
 <LOCATION TYPE="HOSPITAL" comment="" end="332" id="P16" start="327" text="SCMHC" />
-<LOCATION TYPE="HOSPITAL" comment="" end="549" id="P17" start="546" text="ECI" />
 <NAME TYPE="DOCTOR" comment="" end="573" id="P18" start="561" text="Yoseph Flint" />
 <NAME TYPE="DOCTOR" comment="" end="1511" id="P19" start="1506" text="Paige" />
 <NAME TYPE="DOCTOR" comment="" end="1663" id="P20" start="1645" text="Barbara A. Rhoades" />

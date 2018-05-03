@@ -168,11 +168,9 @@ Ximena Espinoza, MD  Pager #60806
 <DATE TYPE="DATE" comment="" end="1959" id="P16" start="1953" text="8/7/02" />
 <DATE TYPE="DATE" comment="" end="2049" id="P17" start="2043" text="8/8/02" />
 <DATE TYPE="DATE" comment="" end="2100" id="P18" start="2094" text="7/7/02" />
-<LOCATION TYPE="HOSPITAL" comment="" end="2314" id="P19" start="2310" text="MSRH" />
 <DATE TYPE="DATE" comment="" end="2348" id="P20" start="2341" text="7/31/02" />
 <DATE TYPE="DATE" comment="" end="2439" id="P21" start="2432" text="8/02/02" />
 <DATE TYPE="DATE" comment="" end="2920" id="P22" start="2913" text="8/15/02" />
-<LOCATION TYPE="HOSPITAL" comment="" end="3096" id="P23" start="3093" text="GCH" />
 <DATE TYPE="DATE" comment="" end="3133" id="P24" start="3126" text="8/20/02" />
 <DATE TYPE="DATE" comment="" end="3616" id="P25" start="3610" text="8/5/02" />
 <DATE TYPE="DATE" comment="" end="4035" id="P26" start="4028" text="8/13/02" />
@@ -181,8 +179,6 @@ Ximena Espinoza, MD  Pager #60806
 <LOCATION TYPE="HOSPITAL" comment="" end="7882" id="P36" start="7863" text="San Rafael Hospital" />
 <DATE TYPE="DATE" comment="" end="7920" id="P37" start="7913" text="7/30/02" />
 <LOCATION TYPE="HOSPITAL" comment="" end="8235" id="P38" start="8225" text="San Rafael" />
-<LOCATION TYPE="HOSPITAL" comment="" end="8324" id="P39" start="8320" text="MSRH" />
-<LOCATION TYPE="HOSPITAL" comment="" end="8445" id="P40" start="8442" text="GCH" />
 <LOCATION TYPE="HOSPITAL" comment="" end="9335" id="P41" start="9325" text="San Rafael" />
 <DATE TYPE="DATE" comment="" end="9438" id="P42" start="9432" text="8/5/02" />
 <LOCATION TYPE="HOSPITAL" comment="" end="9896" id="P43" start="9886" text="San Rafael" />

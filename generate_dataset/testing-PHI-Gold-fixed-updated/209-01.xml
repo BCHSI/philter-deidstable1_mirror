@@ -67,7 +67,6 @@ AL:0138:855
 <LOCATION TYPE="STATE" comment="" end="139" id="P6" start="137" text="WI" />
 <LOCATION TYPE="ZIP" comment="" end="146" id="P7" start="141" text="11674" />
 <NAME TYPE="PATIENT" comment="" end="175" id="P8" start="155" text="Parrish, Christopher" />
-<LOCATION TYPE="HOSPITAL" comment="" end="180" id="P9" start="177" text="SFC" />
 <ID TYPE="MEDICALRECORD" comment="" end="193" id="P10" start="184" text="553-15-48" />
 <NAME TYPE="DOCTOR" comment="" end="210" id="P11" start="206" text="Kirk" />
 <NAME TYPE="PATIENT" comment="" end="278" id="P12" start="259" text="Christopher Parrish" />

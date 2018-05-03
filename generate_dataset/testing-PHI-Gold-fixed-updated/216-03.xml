@@ -89,19 +89,15 @@ A/P:  74 yr old woman with multiple medical problems, s/p 5 month hospitalizatio
 <LOCATION TYPE="HOSPITAL" comment="" end="686" id="P5" start="676" text="San Rafael" />
 <DATE TYPE="DATE" comment="" end="876" id="P7" start="869" text="July O2" />
 <LOCATION TYPE="HOSPITAL" comment="" end="1093" id="P8" start="1083" text="San Rafael" />
-<LOCATION TYPE="HOSPITAL" comment="" end="1314" id="P9" start="1311" text="GCH" />
 <DATE TYPE="DATE" comment="" end="1324" id="P10" start="1318" text="August" />
-<LOCATION TYPE="HOSPITAL" comment="" end="1509" id="P11" start="1506" text="GCH" />
 <DATE TYPE="DATE" comment="" end="1550" id="P12" start="1538" text="September 10" />
 <DATE TYPE="DATE" comment="" end="1681" id="P13" start="1672" text="September" />
 <LOCATION TYPE="HOSPITAL" comment="" end="1750" id="P14" start="1740" text="San Rafael" />
 <DATE TYPE="DATE" comment="" end="1886" id="P15" start="1876" text="October 10" />
-<LOCATION TYPE="HOSPITAL" comment="" end="2240" id="P16" start="2237" text="SRH" />
 <DATE TYPE="DATE" comment="" end="2294" id="P17" start="2281" text="November 21st" />
 <DATE TYPE="DATE" comment="" end="3237" id="P20" start="3229" text="12/04/02" />
 <NAME TYPE="DOCTOR" comment="" end="3656" id="P21" start="3643" text="Herbert Paris" />
 <DATE TYPE="DATE" comment="" end="3672" id="P22" start="3667" text="12/02" />
-<LOCATION TYPE="HOSPITAL" comment="" end="4285" id="P24" start="4282" text="SRH" />
 <DATE TYPE="DATE" comment="" end="4298" id="P25" start="4290" text="12/04/02" />
 <DATE TYPE="DATE" comment="" end="4466" id="P26" start="4458" text="12/04/02" />
 <NAME TYPE="DOCTOR" comment="" end="4546" id="P27" start="4536" text="Gary Keyes" />

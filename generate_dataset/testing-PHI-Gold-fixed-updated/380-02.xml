@@ -161,12 +161,9 @@ Prestonsburg, MS 54151
 <DATE TYPE="DATE" comment="" end="40" id="P1" start="28" text="May 27, 2069" />
 <NAME TYPE="DOCTOR" comment="" end="56" id="P2" start="44" text="Chad Norwood" />
 <NAME TYPE="PATIENT" comment="" end="82" id="P3" start="70" text="Hannah Heath" />
-<LOCATION TYPE="HOSPITAL" comment="" end="87" id="P4" start="84" text="OCH" />
 <ID TYPE="MEDICALRECORD" comment="" end="99" id="P5" start="91" text="91156456" />
 <NAME TYPE="DOCTOR" comment="" end="121" id="P6" start="114" text="Norwood" />
 <NAME TYPE="PATIENT" comment="" end="182" id="P7" start="170" text="Hannah Heath" />
-<LOCATION TYPE="HOSPITAL" comment="" end="232" id="P9" start="229" text="OCH" />
-<LOCATION TYPE="HOSPITAL" comment="" end="535" id="P13" start="532" text="OCH" />
 <NAME TYPE="DOCTOR" comment="" end="3606" id="P18" start="3601" text="Queen" />
 <NAME TYPE="DOCTOR" comment="" end="3887" id="P19" start="3872" text="Jordan N. Akers" />
 <LOCATION TYPE="HOSPITAL" comment="" end="3965" id="P20" start="3945" text="Orange City Hospital" />

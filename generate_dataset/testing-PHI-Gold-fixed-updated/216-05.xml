@@ -84,7 +84,6 @@ Xavier U. Mahoney, M.D.
 <DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2104-09-23" />
 <NAME TYPE="PATIENT" comment="" end="57" id="P1" start="38" text="MARVINYANDELL,GRACE" />
 <ID TYPE="MEDICALRECORD" comment="" end="70" id="P2" start="62" text="90468071" />
-<LOCATION TYPE="HOSPITAL" comment="" end="74" id="P3" start="71" text="BHC" />
 <DATE TYPE="DATE" comment="" end="105" id="P4" start="95" text="09/23/2104" />
 <NAME TYPE="DOCTOR" comment="" end="128" id="P5" start="119" text="Mcfarland" />
 <NAME TYPE="PATIENT" comment="" end="179" id="P6" start="166" text="Marvinyandell" />

@@ -317,9 +317,7 @@ Florence Urquhart, APRN-BC
 <DATE TYPE="DATE" comment="" end="982" id="P7" start="978" text="4/10" />
 <DATE TYPE="DATE" comment="" end="1028" id="P8" start="1024" text="1/95" />
 <DATE TYPE="DATE" comment="" end="1212" id="P9" start="1208" text="5/19" />
-<LOCATION TYPE="HOSPITAL" comment="" end="1803" id="P13" start="1800" text="VMC" />
 <DATE TYPE="DATE" comment="" end="1897" id="P14" start="1893" text="3/86" />
-<LOCATION TYPE="HOSPITAL" comment="" end="1904" id="P15" start="1901" text="VMC" />
 <NAME TYPE="DOCTOR" comment="" end="1913" id="P16" start="1906" text="Fonseca" />
 <PROFESSION TYPE="PROFESSION" comment="" end="2149" id="P19" start="2134" text="claims examiner" />
 <NAME TYPE="PATIENT" comment="" end="4323" id="P22" start="4318" text="Weeks" />

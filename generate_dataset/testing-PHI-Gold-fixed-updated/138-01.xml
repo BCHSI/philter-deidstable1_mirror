@@ -88,7 +88,6 @@ DV: 03/05/76
 <ID TYPE="MEDICALRECORD" comment="" end="150" id="P7" start="142" text="05850080" />
 <CONTACT TYPE="PHONE" comment="" end="165" id="P8" start="151" text="(060) 107-3378" />
 <DATE TYPE="DATE" comment="" end="196" id="P9" start="186" text="03/05/2076" />
-<LOCATION TYPE="HOSPITAL" comment="" end="282" id="P11" start="278" text="SDCC" />
 <LOCATION TYPE="CITY" comment="" end="736" id="P12" start="724" text="Big Pine Key" />
 <NAME TYPE="DOCTOR" comment="" end="2304" id="P13" start="2290" text="Louis P Barron" />
 <ID TYPE="IDNUM" comment="" end="2357" id="P14" start="2348" text="9-6873721" />

@@ -247,9 +247,7 @@ DV: 11/24/71
 <NAME TYPE="PATIENT" comment="" end="220" id="P9" start="211" text="Jorgenson" />
 <DATE TYPE="DATE" comment="" end="339" id="P11" start="330" text="May, 2071" />
 <DATE TYPE="DATE" comment="" end="559" id="P12" start="549" text="June, 2071" />
-<LOCATION TYPE="HOSPITAL" comment="" end="620" id="P13" start="617" text="JMH" />
 <NAME TYPE="DOCTOR" comment="" end="763" id="P14" start="757" text="Geiger" />
-<LOCATION TYPE="HOSPITAL" comment="" end="770" id="P15" start="767" text="JMH" />
 <DATE TYPE="DATE" comment="" end="829" id="P16" start="822" text="9/17/71" />
 <NAME TYPE="PATIENT" comment="" end="1512" id="P17" start="1503" text="Jorgenson" />
 <NAME TYPE="PATIENT" comment="" end="3005" id="P18" start="2986" text="VivianLee Jorgenson" />

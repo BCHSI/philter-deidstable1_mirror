@@ -77,7 +77,6 @@ QE/mcclain/newsom
 <TAGS>
 <DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2074-09-21" />
 <NAME TYPE="PATIENT" comment="" end="42" id="P1" start="28" text="MICHAEL NOLAND" />
-<LOCATION TYPE="HOSPITAL" comment="" end="47" id="P2" start="44" text="FWH" />
 <ID TYPE="MEDICALRECORD" comment="" end="67" id="P3" start="58" text="233-87-20" />
 <LOCATION TYPE="HOSPITAL" comment="" end="93" id="P4" start="71" text="MINERAL SPRINGS CLINIC" />
 <DATE TYPE="DATE" comment="" end="142" id="P5" start="124" text="September 21, 2074" />

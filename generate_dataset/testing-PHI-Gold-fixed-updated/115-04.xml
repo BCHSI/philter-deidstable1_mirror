@@ -445,9 +445,6 @@ Signed electronically by Flaherty, Wanda H on May 04, 2123
 <DATE TYPE="DATE" comment="" end="4208" id="P41" start="4199" text="6/28/2122" />
 <DATE TYPE="DATE" comment="" end="4250" id="P42" start="4240" text="05/01/2123" />
 <DATE TYPE="DATE" comment="" end="4309" id="P43" start="4299" text="05/01/2123" />
-<LOCATION TYPE="HOSPITAL" comment="" end="4363" id="P45" start="4360" text="TCH" />
-<LOCATION TYPE="HOSPITAL" comment="" end="4382" id="P47" start="4379" text="TCH" />
-<LOCATION TYPE="HOSPITAL" comment="" end="4417" id="P49" start="4414" text="PCC" />
 <LOCATION TYPE="CITY" comment="" end="5123" id="P60" start="5117" text="Polson" />
 <LOCATION TYPE="STATE" comment="" end="5127" id="P61" start="5125" text="VA" />
 <NAME TYPE="PATIENT" comment="" end="5474" id="P62" start="5461" text="Norman Werner" />
