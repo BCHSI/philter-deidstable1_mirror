@@ -256,9 +256,7 @@ Pager # 32591
 <DATE TYPE="DATE" comment="" end="1746" id="P18" start="1740" text="1/2126" />
 <DATE TYPE="DATE" comment="" end="1782" id="P19" start="1775" text="12/2127" />
 <DATE TYPE="DATE" comment="" end="1879" id="P20" start="1873" text="2/2128" />
-<PROFESSION TYPE="PROFESSION" comment="" end="2165" id="P21" start="2160" text="Pilot" />
 <LOCATION TYPE="ORGANIZATION" comment="" end="2176" id="P22" start="2167" text="Air Force" />
-<PROFESSION TYPE="PROFESSION" comment="" end="2490" id="P25" start="2468" text="communications manager" />
 <NAME TYPE="DOCTOR" comment="" end="5221" id="P27" start="5207" text="Quincey Harmon" />
 <CONTACT TYPE="PHONE" comment="" end="5269" id="P28" start="5264" text="32591" />
 </TAGS>

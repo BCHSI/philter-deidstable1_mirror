@@ -122,7 +122,6 @@ Internal Medicine B Attending
 <DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2097-06-03" />
 <DATE TYPE="DATE" comment="" end="53" id="P1" start="44" text="6/03/2097" />
 <NAME TYPE="DOCTOR" comment="" end="151" id="P2" start="146" text="Ellis" />
-<PROFESSION TYPE="PROFESSION" comment="" end="295" id="P4" start="290" text="nurse" />
 <LOCATION TYPE="ORGANIZATION" comment="" end="302" id="P5" start="299" text="TLC" />
 <NAME TYPE="DOCTOR" comment="" end="2772" id="P6" start="2767" text="Utter" />
 <DATE TYPE="DATE" comment="" end="2794" id="P7" start="2788" text="5/2097" />

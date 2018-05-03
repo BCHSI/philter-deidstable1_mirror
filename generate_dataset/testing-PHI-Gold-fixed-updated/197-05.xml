@@ -237,7 +237,6 @@ Vascular Junior
 <NAME TYPE="DOCTOR" comment="" end="108" id="P3" start="101" text="Quiring" />
 <NAME TYPE="PATIENT" comment="" end="126" id="P4" start="115" text="Emery, Donn" />
 <ID TYPE="MEDICALRECORD" comment="" end="140" id="P5" start="133" text="0595726" />
-<PROFESSION TYPE="PROFESSION" comment="" end="1158" id="P7" start="1143" text="Finance manager" />
 <NAME TYPE="DOCTOR" comment="" end="3690" id="P9" start="3683" text="Quiring" />
 <NAME TYPE="DOCTOR" comment="" end="3759" id="P10" start="3748" text="Vicki Oneil" />
 <CONTACT TYPE="PHONE" comment="" end="3789" id="P11" start="3784" text="90148" />

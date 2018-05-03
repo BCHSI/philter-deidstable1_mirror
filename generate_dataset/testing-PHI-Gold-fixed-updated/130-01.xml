@@ -152,9 +152,7 @@ TYO/ellington		04-14609701.doc
 <DATE TYPE="DATE" comment="" end="1003" id="P11" start="999" text="8/81" />
 <DATE TYPE="DATE" comment="" end="1373" id="P16" start="1369" text="9/83" />
 <NAME TYPE="DOCTOR" comment="" end="1387" id="P17" start="1379" text="Xayasane" />
-<PROFESSION TYPE="PROFESSION" comment="" end="1814" id="P21" start="1801" text="Mathematician" />
 <LOCATION TYPE="ORGANIZATION" comment="" end="1824" id="P22" start="1818" text="Vassar" />
-<PROFESSION TYPE="PROFESSION" comment="" end="1885" id="P23" start="1878" text="surgeon" />
 <NAME TYPE="PATIENT" comment="" end="2559" id="P24" start="2551" text="Mae Paul" />
 <ID TYPE="MEDICALRECORD" comment="" end="2706" id="P26" start="2697" text="100-57-08" />
 <NAME TYPE="DOCTOR" comment="" end="3159" id="P27" start="3140" text="Thomas Y. Ontiveros" />

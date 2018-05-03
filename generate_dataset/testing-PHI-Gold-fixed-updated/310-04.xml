@@ -186,8 +186,6 @@ pager 65296
 <LOCATION TYPE="CITY" comment="" end="3891" id="P32" start="3884" text="Newport" />
 <DATE TYPE="DATE" comment="" end="4138" id="P33" start="4134" text="7/73" />
 <AGE TYPE="AGE" comment="" end="4757" id="P34" start="4755" text="90" />
-<PROFESSION TYPE="PROFESSION" comment="" end="4959" id="P35" start="4949" text="programmer" />
-<PROFESSION TYPE="PROFESSION" comment="" end="5028" id="P36" start="4975" text="Industrial Engineering and Manufacturing Technologist" />
 <LOCATION TYPE="ORGANIZATION" comment="" end="5051" id="P37" start="5032" text="Activision Blizzard" />
 <LOCATION TYPE="LOCATION-OTHER" comment="" end="5212" id="P38" start="5194" text="Rockefeller Centre" />
 <LOCATION TYPE="LOCATION-OTHER" comment="" end="5232" id="P39" start="5226" text="global" />
@@ -196,7 +194,6 @@ pager 65296
 <LOCATION TYPE="CITY" comment="" end="5303" id="P43" start="5297" text="Muscat" />
 <LOCATION TYPE="LOCATION-OTHER" comment="" end="5436" id="P44" start="5428" text="Storting" />
 <LOCATION TYPE="LOCATION-OTHER" comment="" end="5450" id="P45" start="5441" text="Acropolis" />
-<PROFESSION TYPE="PROFESSION" comment="" end="5476" id="P46" start="5464" text="model planes" />
 <DATE TYPE="DATE" comment="" end="6075" id="P47" start="6072" text="2/9" />
 <DATE TYPE="DATE" comment="" end="6111" id="P48" start="6107" text="3/02" />
 <DATE TYPE="DATE" comment="" end="6117" id="P49" start="6113" text="3/03" />

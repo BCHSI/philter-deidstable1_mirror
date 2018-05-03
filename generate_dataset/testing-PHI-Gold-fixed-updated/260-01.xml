@@ -229,12 +229,9 @@ Ret 1 mo.  PT/INR, lipids, AST, HbA1C.  Continue above meds.
 <DATE TYPE="DATE" comment="" end="2321" id="P19" start="2311" text="03/23/2068" />
 <DATE TYPE="DATE" comment="" end="2364" id="P20" start="2354" text="03/25/2068" />
 <LOCATION TYPE="HOSPITAL" comment="" end="2408" id="P21" start="2384" text="HOLLY MANOR NURSING HOME" />
-<PROFESSION TYPE="PROFESSION" comment="" end="2669" id="P23" start="2640" text="Communications senior manager" />
-<PROFESSION TYPE="PROFESSION" comment="" end="2680" id="P24" start="2671" text="marketing" />
 <LOCATION TYPE="ORGANIZATION" comment="" end="2714" id="P25" start="2693" text="Brinker International" />
 <LOCATION TYPE="ORGANIZATION" comment="" end="2728" id="P26" start="2720" text="Facebook" />
 <LOCATION TYPE="ORGANIZATION" comment="" end="2742" id="P27" start="2735" text="Twitter" />
-<PROFESSION TYPE="PROFESSION" comment="" end="2798" id="P28" start="2770" text="securities investment dealer" />
 <LOCATION TYPE="HOSPITAL" comment="" end="2981" id="P29" start="2975" text="Delnor" />
 <DATE TYPE="DATE" comment="" end="3033" id="P31" start="3025" text="Feb 2069" />
 </TAGS>

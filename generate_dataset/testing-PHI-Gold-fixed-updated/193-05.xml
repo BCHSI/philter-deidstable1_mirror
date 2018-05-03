@@ -124,7 +124,6 @@ DV: 03/18/96
 <LOCATION TYPE="CITY" comment="" end="154" id="P8" start="144" text="Union City" />
 <LOCATION TYPE="STATE" comment="" end="158" id="P9" start="156" text="MO" />
 <LOCATION TYPE="ZIP" comment="" end="165" id="P10" start="160" text="43733" />
-<PROFESSION TYPE="PROFESSION" comment="" end="223" id="P12" start="199" text="health policy consultant" />
 <NAME TYPE="DOCTOR" comment="" end="293" id="P13" start="288" text="Downs" />
 <DATE TYPE="DATE" comment="" end="334" id="P14" start="329" text="12/95" />
 <DATE TYPE="DATE" comment="" end="381" id="P15" start="376" text="11/95" />

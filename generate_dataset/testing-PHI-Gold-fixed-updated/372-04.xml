@@ -386,9 +386,6 @@ PGY-1, Pager #55518
 <NAME TYPE="PATIENT" comment="" end="388" id="P9" start="380" text="Flaherty" />
 <NAME TYPE="PATIENT" comment="" end="913" id="P11" start="905" text="Flaherty" />
 <DATE TYPE="DATE" comment="" end="2613" id="P13" start="2607" text="8/1/26" />
-<PROFESSION TYPE="PROFESSION" comment="" end="3928" id="P17" start="3899" text="Heavy-Duty Equipment Mechanic" />
-<PROFESSION TYPE="PROFESSION" comment="" end="3958" id="P18" start="3941" text="Concrete Finisher" />
-<PROFESSION TYPE="PROFESSION" comment="" end="3983" id="P19" start="3976" text="veteran" />
 <NAME TYPE="PATIENT" comment="" end="8990" id="P21" start="8982" text="Flaherty" />
 <DATE TYPE="DATE" comment="" end="9674" id="P22" start="9668" text="8/1/26" />
 <NAME TYPE="DOCTOR" comment="" end="10204" id="P23" start="10191" text="Kenneth Titus" />

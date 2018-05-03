@@ -303,7 +303,6 @@ Dr Mickey Kyle, DMD, MD
 <ID TYPE="MEDICALRECORD" comment="" end="93" id="P3" start="86" text="1205466" />
 <DATE TYPE="DATE" comment="" end="190" id="P5" start="178" text="Jul 20, 2096" />
 <DATE TYPE="DATE" comment="" end="255" id="P6" start="240" text="August 31, 2096" />
-<PROFESSION TYPE="PROFESSION" comment="" end="1252" id="P11" start="1227" text="Insurance Claims Examiner" />
 <LOCATION TYPE="ORGANIZATION" comment="" end="1267" id="P12" start="1257" text="Prudential" />
 <LOCATION TYPE="CITY" comment="" end="1296" id="P13" start="1286" text="New Iberia" />
 <LOCATION TYPE="STATE" comment="" end="1300" id="P14" start="1298" text="MN" />

@@ -170,7 +170,6 @@ PGY-2, Internal Medicine
 <NAME TYPE="PATIENT" comment="" end="599" id="P7" start="588" text="Oscar Meyer" />
 <DATE TYPE="DATE" comment="" end="1944" id="P12" start="1935" text="July 2095" />
 <DATE TYPE="DATE" comment="" end="2328" id="P14" start="2323" text="11/29" />
-<PROFESSION TYPE="PROFESSION" comment="" end="2630" id="P18" start="2619" text="programming" />
 <LOCATION TYPE="ORGANIZATION" comment="" end="2642" id="P19" start="2634" text="Audiovox" />
 <LOCATION TYPE="ORGANIZATION" comment="" end="2668" id="P20" start="2657" text="BrightPoint" />
 <DATE TYPE="DATE" comment="" end="6484" id="P28" start="6469" text="Thursday, 11/29" />

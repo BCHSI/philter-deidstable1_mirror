@@ -278,7 +278,6 @@ Elinor Keenan #10985
 <ID TYPE="MEDICALRECORD" comment="" end="124" id="P3" start="117" text="1005708" />
 <DATE TYPE="DATE" comment="" end="155" id="P4" start="145" text="12/27/2084" />
 <NAME TYPE="DOCTOR" comment="" end="183" id="P5" start="179" text="John" />
-<PROFESSION TYPE="PROFESSION" comment="" end="531" id="P8" start="524" text="surgeon" />
 <DATE TYPE="DATE" comment="" end="648" id="P9" start="638" text="12/26/2084" />
 <DATE TYPE="DATE" comment="" end="666" id="P10" start="661" text="12/22" />
 <DATE TYPE="DATE" comment="" end="683" id="P11" start="678" text="12/25" />
@@ -287,9 +286,7 @@ Elinor Keenan #10985
 <DATE TYPE="DATE" comment="" end="1709" id="P16" start="1705" text="4/82" />
 <NAME TYPE="DOCTOR" comment="" end="1774" id="P17" start="1768" text="Sutton" />
 <DATE TYPE="DATE" comment="" end="1817" id="P18" start="1813" text="8/81" />
-<PROFESSION TYPE="PROFESSION" comment="" end="2103" id="P19" start="2090" text="Mathematician" />
 <LOCATION TYPE="ORGANIZATION" comment="" end="2113" id="P20" start="2107" text="Vassar" />
-<PROFESSION TYPE="PROFESSION" comment="" end="2173" id="P21" start="2166" text="surgeon" />
 <DATE TYPE="DATE" comment="" end="2712" id="P22" start="2704" text="12/27/84" />
 <DATE TYPE="DATE" comment="" end="2723" id="P23" start="2715" text="12/26/84" />
 <DATE TYPE="DATE" comment="" end="3219" id="P24" start="3211" text="12/26/84" />

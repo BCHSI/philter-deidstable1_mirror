@@ -91,7 +91,6 @@ DV:9-5-67
 <NAME TYPE="PATIENT" comment="" end="227" id="P5" start="222" text="Vance" />
 <DATE TYPE="DATE" comment="" end="526" id="P7" start="516" text="June, 2064" />
 <NAME TYPE="DOCTOR" comment="" end="584" id="P8" start="562" text="Peter      Vandenberg" />
-<PROFESSION TYPE="PROFESSION" comment="" end="786" id="P9" start="755" text="Transport Operations Supervisor" />
 <DATE TYPE="DATE" comment="" end="1178" id="P10" start="1174" text="6/66" />
 <DATE TYPE="DATE" comment="" end="1323" id="P11" start="1319" text="9/61" />
 <DATE TYPE="DATE" comment="" end="1530" id="P13" start="1525" text="12/66" />

@@ -139,8 +139,6 @@ DV:8-02-73
 <NAME TYPE="DOCTOR" comment="" end="489" id="P11" start="483" text="Jaeger" />
 <CONTACT TYPE="PHONE" comment="" end="523" id="P12" start="515" text="872-9985" />
 <NAME TYPE="DOCTOR" comment="" end="1189" id="P15" start="1172" text="Guadalupe Thacker" />
-<PROFESSION TYPE="PROFESSION" comment="" end="1548" id="P17" start="1535" text="social worker" />
-<PROFESSION TYPE="PROFESSION" comment="" end="1627" id="P18" start="1599" text="community services managment" />
 <NAME TYPE="PATIENT" comment="" end="2570" id="P19" start="2566" text="Orta" />
 <NAME TYPE="PATIENT" comment="" end="3013" id="P21" start="3003" text="Orta, Phil" />
 <ID TYPE="MEDICALRECORD" comment="" end="3068" id="P22" start="3060" text="55931516" />

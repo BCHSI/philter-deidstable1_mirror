@@ -159,7 +159,6 @@ Dictated by:  SHERRY PERKINS, M.D.  SP79
 <NAME TYPE="PATIENT" comment="" end="286" id="P5" start="279" text="Killian" />
 <DATE TYPE="DATE" comment="" end="396" id="P7" start="379" text="December 18, 2094" />
 <LOCATION TYPE="HOSPITAL" comment="" end="1120" id="P8" start="1105" text="EDUCARE-PULLMAN" />
-<PROFESSION TYPE="PROFESSION" comment="" end="1485" id="P10" start="1474" text="engineering" />
 <ID TYPE="IDNUM" comment="" end="3940" id="P12" start="3932" text="983/2356" />
 <NAME TYPE="DOCTOR" comment="" end="3956" id="P13" start="3942" text="SHERRY PERKINS" />
 <NAME TYPE="USERNAME" comment="" end="3968" id="P14" start="3964" text="SP79" />

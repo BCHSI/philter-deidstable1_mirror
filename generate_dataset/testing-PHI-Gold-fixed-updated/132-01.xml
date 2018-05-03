@@ -315,7 +315,6 @@ Jordan, FL  83712
 <ID TYPE="MEDICALRECORD" comment="" end="1929" id="P20" start="1918" text="471-90-84-7" />
 <DATE TYPE="DATE" comment="" end="1974" id="P21" start="1959" text="August 21, 2071" />
 <LOCATION TYPE="ORGANIZATION" comment="" end="2540" id="P23" start="2520" text="Amy's Baking Company" />
-<PROFESSION TYPE="PROFESSION" comment="" end="2592" id="P24" start="2573" text="electrical engineer" />
 <NAME TYPE="PATIENT" comment="" end="3794" id="P25" start="3785" text="Jorgenson" />
 <NAME TYPE="PATIENT" comment="" end="4213" id="P27" start="4192" text="Jorgenson, Vivian Lea" />
 <ID TYPE="MEDICALRECORD" comment="" end="4230" id="P28" start="4219" text="471-90-84-7" />

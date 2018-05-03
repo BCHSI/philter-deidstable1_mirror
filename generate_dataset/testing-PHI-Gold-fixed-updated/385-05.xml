@@ -252,7 +252,6 @@ Frank T. Xuan, M.D.
 <ID TYPE="MEDICALRECORD" comment="" end="120" id="P2" start="112" text="89659991" />
 <DATE TYPE="DATE" comment="" end="212" id="P4" start="202" text="02/18/2090" />
 <DATE TYPE="DATE" comment="" end="1576" id="P10" start="1572" text="2/88" />
-<PROFESSION TYPE="PROFESSION" comment="" end="1806" id="P13" start="1785" text="vocational instructor" />
 <NAME TYPE="PATIENT" comment="" end="1840" id="P14" start="1836" text="West" />
 <NAME TYPE="DOCTOR" comment="" end="2773" id="P15" start="2767" text="Dunlap" />
 <NAME TYPE="DOCTOR" comment="" end="4622" id="P18" start="4609" text="Frank T. Xuan" />

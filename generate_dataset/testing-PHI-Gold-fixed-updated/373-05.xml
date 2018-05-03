@@ -224,8 +224,6 @@ Pager #46876
 <DATE TYPE="DATE" comment="" end="637" id="P12" start="633" text="3/20" />
 <DATE TYPE="DATE" comment="" end="1701" id="P15" start="1697" text="9/86" />
 <AGE TYPE="AGE" comment="" end="1988" id="P16" start="1986" text="90" />
-<PROFESSION TYPE="PROFESSION" comment="" end="2110" id="P19" start="2094" text="network operator" />
-<PROFESSION TYPE="PROFESSION" comment="" end="2122" id="P20" start="2111" text="Craftperson" />
 <DATE TYPE="DATE" comment="" end="8521" id="P21" start="8514" text="3/07/87" />
 <NAME TYPE="PATIENT" comment="" end="8914" id="P22" start="8907" text="Jimenez" />
 <DATE TYPE="DATE" comment="" end="9238" id="P25" start="9234" text="3/09" />

@@ -320,7 +320,6 @@ Pager #00311
 <NAME TYPE="DOCTOR" comment="" end="175" id="P6" start="173" text="Li" />
 <LOCATION TYPE="CITY" comment="" end="1754" id="P10" start="1749" text="Flint" />
 <NAME TYPE="PATIENT" comment="" end="1778" id="P11" start="1771" text="Epstein" />
-<PROFESSION TYPE="PROFESSION" comment="" end="1825" id="P12" start="1818" text="banking" />
 <DATE TYPE="DATE" comment="" end="2876" id="P13" start="2868" text="05/24/94" />
 <DATE TYPE="DATE" comment="" end="2902" id="P14" start="2894" text="05/24/93" />
 <DATE TYPE="DATE" comment="" end="2965" id="P15" start="2957" text="05/24/94" />
