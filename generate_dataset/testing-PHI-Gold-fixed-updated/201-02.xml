@@ -351,7 +351,6 @@ Pager #41393
 <NAME TYPE="PATIENT" comment="" end="346" id="P8" start="338" text="Xayavong" />
 <LOCATION TYPE="HOSPITAL" comment="" end="597" id="P12" start="573" text="Duluth Clinic-Hermantown" />
 <NAME TYPE="DOCTOR" comment="" end="607" id="P13" start="603" text="Moss" />
-<LOCATION TYPE="HOSPITAL" comment="" end="895" id="P14" start="892" text="GNC" />
 <NAME TYPE="DOCTOR" comment="" end="928" id="P15" start="920" text="U. Wyatt" />
 <NAME TYPE="DOCTOR" comment="" end="985" id="P16" start="977" text="A. Tyson" />
 <LOCATION TYPE="HOSPITAL" comment="" end="2593" id="P18" start="2587" text="Duluth" />
@@ -364,7 +363,6 @@ Pager #41393
 <DATE TYPE="DATE" comment="" end="5896" id="P25" start="5888" text="06/13/82" />
 <NAME TYPE="PATIENT" comment="" end="6917" id="P26" start="6909" text="Xayavong" />
 <NAME TYPE="DOCTOR" comment="" end="8598" id="P30" start="8587" text="Armani Iler" />
-<LOCATION TYPE="HOSPITAL" comment="" end="8612" id="P31" start="8609" text="GNC" />
 <CONTACT TYPE="PHONE" comment="" end="8649" id="P32" start="8644" text="41393" />
 </TAGS>
 </deIdi2b2>

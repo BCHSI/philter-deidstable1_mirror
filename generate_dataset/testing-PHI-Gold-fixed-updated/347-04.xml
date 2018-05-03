@@ -183,7 +183,6 @@ BMH Neurology
 <TAGS>
 <DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2098-06-13" />
 <NAME TYPE="PATIENT" comment="" end="33" id="P1" start="28" text="Betty" />
-<LOCATION TYPE="HOSPITAL" comment="" end="172" id="P2" start="168" text="SJMH" />
 <NAME TYPE="PATIENT" comment="" end="193" id="P3" start="182" text="Fitzpatrick" />
 <DATE TYPE="DATE" comment="" end="547" id="P4" start="540" text="9/02/95" />
 <DATE TYPE="DATE" comment="" end="665" id="P5" start="658" text="3/20/98" />
@@ -205,9 +204,7 @@ BMH Neurology
 <NAME TYPE="PATIENT" comment="" end="3380" id="P22" start="3375" text="Betty" />
 <NAME TYPE="DOCTOR" comment="" end="4324" id="P24" start="4308" text="Howard Yelverton" />
 <DATE TYPE="DATE" comment="" end="4717" id="P25" start="4713" text="July" />
-<LOCATION TYPE="HOSPITAL" comment="" end="4782" id="P26" start="4779" text="BMH" />
 <NAME TYPE="PATIENT" comment="" end="4911" id="P27" start="4906" text="Betty" />
 <NAME TYPE="DOCTOR" comment="" end="4994" id="P28" start="4985" text="Elvin Cox" />
-<LOCATION TYPE="HOSPITAL" comment="" end="5007" id="P29" start="5004" text="BMH" />
 </TAGS>
 </deIdi2b2>

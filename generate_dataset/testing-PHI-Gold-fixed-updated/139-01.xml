@@ -85,10 +85,8 @@ FN/warren/forbes
 <TAGS>
 <DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2094-05-20" />
 <NAME TYPE="PATIENT" comment="" end="39" id="P1" start="28" text="ZELDA UPHAM" />
-<LOCATION TYPE="HOSPITAL" comment="" end="44" id="P2" start="41" text="SMC" />
 <LOCATION TYPE="HOSPITAL" comment="" end="79" id="P3" start="59" text="MOLLY STARK HOSPITAL" />
 <DATE TYPE="DATE" comment="" end="122" id="P4" start="110" text="May 20, 2094" />
-<LOCATION TYPE="HOSPITAL" comment="" end="164" id="P6" start="161" text="MSH" />
 <NAME TYPE="PATIENT" comment="" end="654" id="P9" start="650" text="Qazi" />
 <NAME TYPE="DOCTOR" comment="" end="734" id="P10" start="729" text="Faust" />
 <NAME TYPE="DOCTOR" comment="" end="831" id="P11" start="824" text="Solomon" />

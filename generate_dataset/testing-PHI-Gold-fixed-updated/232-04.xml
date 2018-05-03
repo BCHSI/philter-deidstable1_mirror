@@ -477,7 +477,6 @@ Pager  #00138
 <DATE TYPE="DATE" comment="" end="452" id="P9" start="451" text="M" />
 <DATE TYPE="DATE" comment="" end="454" id="P10" start="453" text="W" />
 <DATE TYPE="DATE" comment="" end="456" id="P11" start="455" text="F" />
-<LOCATION TYPE="HOSPITAL" comment="" end="657" id="P12" start="654" text="LCH" />
 <LOCATION TYPE="HOSPITAL" comment="" end="716" id="P13" start="706" text="Santa Rosa" />
 <DATE TYPE="DATE" comment="" end="729" id="P14" start="720" text="9/10/2098" />
 <LOCATION TYPE="HOSPITAL" comment="" end="1971" id="P15" start="1958" text="Levi Hospital" />
@@ -489,7 +488,6 @@ Pager  #00138
 <DATE TYPE="DATE" comment="" end="2732" id="P22" start="2725" text="12/2096" />
 <DATE TYPE="DATE" comment="" end="2890" id="P23" start="2884" text="2/2098" />
 <DATE TYPE="DATE" comment="" end="3024" id="P24" start="3015" text="September" />
-<LOCATION TYPE="HOSPITAL" comment="" end="3066" id="P25" start="3063" text="NGH" />
 <DATE TYPE="DATE" comment="" end="3155" id="P26" start="3147" text="09/14/98" />
 <DATE TYPE="DATE" comment="" end="3216" id="P27" start="3208" text="09/14/98" />
 <DATE TYPE="DATE" comment="" end="3311" id="P28" start="3303" text="09/13/98" />
@@ -507,9 +505,7 @@ Pager  #00138
 <CONTACT TYPE="PHONE" comment="" end="4665" id="P40" start="4662" text="557" />
 <DATE TYPE="DATE" comment="" end="6168" id="P42" start="6162" text="4/2/98" />
 <DATE TYPE="DATE" comment="" end="9972" id="P43" start="9965" text="3/18/98" />
-<LOCATION TYPE="HOSPITAL" comment="" end="11818" id="P45" start="11815" text="NGH" />
 <NAME TYPE="DOCTOR" comment="" end="12204" id="P46" start="12191" text="Quenton Stark" />
-<LOCATION TYPE="HOSPITAL" comment="" end="12213" id="P47" start="12210" text="MMC" />
 <CONTACT TYPE="PHONE" comment="" end="12235" id="P48" start="12230" text="00138" />
 </TAGS>
 </deIdi2b2>

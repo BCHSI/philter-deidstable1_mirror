@@ -123,7 +123,6 @@ DT:  08/20/93
 <LOCATION TYPE="STATE" comment="" end="144" id="P8" start="142" text="MT" />
 <LOCATION TYPE="ZIP" comment="" end="151" id="P9" start="146" text="43782" />
 <NAME TYPE="PATIENT" comment="" end="174" id="P10" start="161" text="Russell Urban" />
-<LOCATION TYPE="HOSPITAL" comment="" end="180" id="P11" start="177" text="WRH" />
 <ID TYPE="MEDICALRECORD" comment="" end="189" id="P12" start="182" text="4722064" />
 <NAME TYPE="DOCTOR" comment="" end="211" id="P13" start="205" text="Ussery" />
 <NAME TYPE="PATIENT" comment="" end="262" id="P14" start="249" text="Russell Urban" />

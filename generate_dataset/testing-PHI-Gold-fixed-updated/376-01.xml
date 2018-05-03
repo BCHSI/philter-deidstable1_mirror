@@ -124,7 +124,6 @@ cc: Dr. Conley
 <DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2071-08-08" />
 <NAME TYPE="PATIENT" comment="" end="60" id="P1" start="51" text="Whitehead" />
 <DATE TYPE="DATE" comment="" end="188" id="P2" start="182" text="1/2070" />
-<LOCATION TYPE="HOSPITAL" comment="" end="221" id="P3" start="217" text="NAMG" />
 <LOCATION TYPE="HOSPITAL" comment="" end="281" id="P4" start="258" text="Montreal Medical Center" />
 <DATE TYPE="DATE" comment="" end="323" id="P5" start="317" text="2/2070" />
 <NAME TYPE="DOCTOR" comment="" end="389" id="P6" start="383" text="Conley" />

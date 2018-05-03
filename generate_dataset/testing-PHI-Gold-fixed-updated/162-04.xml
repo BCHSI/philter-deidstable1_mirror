@@ -214,7 +214,6 @@ Xanthopoulos, Kelly Willie, M.D.
 <DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2076-07-20" />
 <NAME TYPE="PATIENT" comment="" end="111" id="P1" start="97" text="QUIJANO,BAYLEE" />
 <ID TYPE="MEDICALRECORD" comment="" end="127" id="P2" start="119" text="85362514" />
-<LOCATION TYPE="HOSPITAL" comment="" end="131" id="P3" start="127" text="MARY" />
 <DATE TYPE="DATE" comment="" end="215" id="P4" start="205" text="07/20/2076" />
 <NAME TYPE="PATIENT" comment="" end="244" id="P5" start="237" text="Quijano" />
 <PROFESSION TYPE="PROFESSION" comment="" end="1821" id="P7" start="1804" text="commercial diving" />

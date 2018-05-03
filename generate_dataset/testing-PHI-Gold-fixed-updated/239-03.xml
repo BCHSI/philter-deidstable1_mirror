@@ -90,7 +90,6 @@ Kenneth DUSTIN Mcdaniel, M.D.
 <DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2069-04-16" />
 <NAME TYPE="PATIENT" comment="" end="58" id="P1" start="44" text="OGRADY,ULYSSES" />
 <ID TYPE="MEDICALRECORD" comment="" end="68" id="P2" start="61" text="0937884" />
-<LOCATION TYPE="HOSPITAL" comment="" end="72" id="P3" start="69" text="IMC" />
 <DATE TYPE="DATE" comment="" end="101" id="P4" start="91" text="04/16/2069" />
 <LOCATION TYPE="HOSPITAL" comment="" end="589" id="P7" start="566" text="Eureka Springs Hospital" />
 <NAME TYPE="DOCTOR" comment="" end="607" id="P8" start="595" text="Allan Jester" />

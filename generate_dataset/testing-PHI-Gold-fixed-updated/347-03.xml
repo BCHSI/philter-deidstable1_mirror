@@ -127,7 +127,6 @@ DV: 11/30/97
 <LOCATION TYPE="HOSPITAL" comment="" end="596" id="P13" start="566" text="Saint Joseph Memorial Hospital" />
 <NAME TYPE="PATIENT" comment="" end="746" id="P14" start="735" text="Fitzpatrick" />
 <NAME TYPE="PATIENT" comment="" end="775" id="P15" start="764" text="Fitzpatrick" />
-<LOCATION TYPE="HOSPITAL" comment="" end="1052" id="P16" start="1049" text="EFH" />
 <DATE TYPE="DATE" comment="" end="2045" id="P17" start="2036" text="Christmas" />
 <NAME TYPE="PATIENT" comment="" end="2095" id="P18" start="2084" text="Fitzpatrick" />
 <NAME TYPE="DOCTOR" comment="" end="3745" id="P19" start="3739" text="Dewitt" />

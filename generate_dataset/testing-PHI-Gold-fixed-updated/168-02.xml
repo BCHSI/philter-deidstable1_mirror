@@ -66,7 +66,6 @@ cc:	Harold Elliott, M.D.
 <DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2073-03-25" />
 <LOCATION TYPE="HOSPITAL" comment="" end="61" id="P1" start="29" text="THE SPECIALTY HOSPITAL OF AUSTIN" />
 <NAME TYPE="PATIENT" comment="" end="89" id="P2" start="77" text="Victor Lujan" />
-<LOCATION TYPE="HOSPITAL" comment="" end="93" id="P3" start="90" text="SMH" />
 <ID TYPE="MEDICALRECORD" comment="" end="106" id="P4" start="97" text="018-92-33" />
 <DATE TYPE="DATE" comment="" end="121" id="P5" start="107" text="March 25, 2073" />
 <NAME TYPE="DOCTOR" comment="" end="2424" id="P8" start="2403" text="Vance-Ernest Yamasaki" />

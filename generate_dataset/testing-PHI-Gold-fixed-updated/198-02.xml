@@ -315,22 +315,15 @@ Document Status: Final
 <TAGS>
 <DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2078-07-01" />
 <LOCATION TYPE="HOSPITAL" comment="" end="72" id="P1" start="47" text="OAKLAND ASSOCIATES CENTER" />
-<LOCATION TYPE="HOSPITAL" comment="" end="455" id="P3" start="452" text="OAC" />
 <NAME TYPE="DOCTOR" comment="" end="637" id="P4" start="626" text="Levi Barton" />
-<LOCATION TYPE="HOSPITAL" comment="" end="648" id="P5" start="645" text="OAC" />
 <DATE TYPE="DATE" comment="" end="659" id="P6" start="649" text="04/09/2078" />
 <NAME TYPE="DOCTOR" comment="" end="1107" id="P7" start="1101" text="Barton" />
-<LOCATION TYPE="HOSPITAL" comment="" end="1362" id="P8" start="1359" text="OAC" />
 <DATE TYPE="DATE" comment="" end="1376" id="P9" start="1366" text="11/21/2077" />
 <NAME TYPE="DOCTOR" comment="" end="1401" id="P10" start="1395" text="Barton" />
-<LOCATION TYPE="HOSPITAL" comment="" end="1646" id="P11" start="1643" text="OAC" />
 <DATE TYPE="DATE" comment="" end="1657" id="P12" start="1650" text="01/2078" />
-<LOCATION TYPE="HOSPITAL" comment="" end="1986" id="P13" start="1983" text="OAC" />
 <DATE TYPE="DATE" comment="" end="1997" id="P14" start="1990" text="10/2077" />
 <DATE TYPE="DATE" comment="" end="2722" id="P15" start="2715" text="10/2077" />
-<LOCATION TYPE="HOSPITAL" comment="" end="2915" id="P16" start="2912" text="OAC" />
 <DATE TYPE="DATE" comment="" end="2926" id="P17" start="2919" text="10/2077" />
-<LOCATION TYPE="HOSPITAL" comment="" end="3053" id="P18" start="3050" text="OAC" />
 <DATE TYPE="DATE" comment="" end="3064" id="P19" start="3057" text="11/2077" />
 <DATE TYPE="DATE" comment="" end="3124" id="P20" start="3114" text="06/27/2078" />
 <NAME TYPE="DOCTOR" comment="" end="3277" id="P21" start="3273" text="Ryan" />
@@ -341,23 +334,16 @@ Document Status: Final
 <DATE TYPE="DATE" comment="" end="7980" id="P26" start="7970" text="06/27/2078" />
 <LOCATION TYPE="HOSPITAL" comment="" end="8020" id="P27" start="7996" text="Perham Memorial Hospital" />
 <DATE TYPE="DATE" comment="" end="8588" id="P28" start="8578" text="02/12/2078" />
-<LOCATION TYPE="HOSPITAL" comment="" end="8607" id="P29" start="8604" text="OAC" />
 <DATE TYPE="DATE" comment="" end="9264" id="P30" start="9254" text="06/27/2078" />
 <LOCATION TYPE="HOSPITAL" comment="" end="9304" id="P31" start="9280" text="Perham Memorial Hospital" />
 <DATE TYPE="DATE" comment="" end="9675" id="P32" start="9665" text="10/12/2077" />
-<LOCATION TYPE="HOSPITAL" comment="" end="9687" id="P33" start="9684" text="OAC" />
 <NAME TYPE="DOCTOR" comment="" end="9718" id="P34" start="9707" text="Yahir Woods" />
 <NAME TYPE="DOCTOR" comment="" end="9733" id="P35" start="9724" text="Donna Yeh" />
 <DATE TYPE="DATE" comment="" end="10436" id="P36" start="10426" text="11/21/2077" />
-<LOCATION TYPE="HOSPITAL" comment="" end="10448" id="P37" start="10445" text="OAC" />
 <NAME TYPE="DOCTOR" comment="" end="10479" id="P38" start="10468" text="Levi Barton" />
 <NAME TYPE="DOCTOR" comment="" end="10495" id="P39" start="10485" text="Vernon Vue" />
 <DATE TYPE="DATE" comment="" end="12084" id="P40" start="12074" text="01/15/2078" />
-<LOCATION TYPE="HOSPITAL" comment="" end="12096" id="P41" start="12093" text="OAC" />
-<LOCATION TYPE="HOSPITAL" comment="" end="13304" id="P43" start="13301" text="OAC" />
-<LOCATION TYPE="HOSPITAL" comment="" end="14457" id="P44" start="14454" text="OAC" />
 <NAME TYPE="DOCTOR" comment="" end="14496" id="P45" start="14490" text="Barton" />
-<LOCATION TYPE="HOSPITAL" comment="" end="14989" id="P46" start="14986" text="OAC" />
 <NAME TYPE="DOCTOR" comment="" end="15505" id="P47" start="15499" text="Barton" />
 <NAME TYPE="DOCTOR" comment="" end="15728" id="P48" start="15722" text="Barton" />
 <NAME TYPE="DOCTOR" comment="" end="15954" id="P49" start="15948" text="Barton" />
@@ -375,15 +361,12 @@ Document Status: Final
 <LOCATION TYPE="CITY" comment="" end="16330" id="P62" start="16322" text="Sallisaw" />
 <LOCATION TYPE="STATE" comment="" end="16334" id="P63" start="16332" text="PA" />
 <NAME TYPE="DOCTOR" comment="" end="16348" id="P64" start="16337" text="Levi Barton" />
-<LOCATION TYPE="HOSPITAL" comment="" end="16359" id="P65" start="16356" text="OAC" />
 <LOCATION TYPE="CITY" comment="" end="16379" id="P67" start="16372" text="Chicago" />
 <LOCATION TYPE="STATE" comment="" end="16383" id="P68" start="16381" text="PA" />
 <NAME TYPE="DOCTOR" comment="" end="16396" id="P69" start="16386" text="Erica Jain" />
-<LOCATION TYPE="HOSPITAL" comment="" end="16407" id="P70" start="16404" text="OAC" />
 <LOCATION TYPE="CITY" comment="" end="16426" id="P71" start="16419" text="Chicago" />
 <LOCATION TYPE="STATE" comment="" end="16430" id="P72" start="16428" text="PA" />
 <NAME TYPE="DOCTOR" comment="" end="16445" id="P73" start="16433" text="Richard Ryan" />
-<LOCATION TYPE="HOSPITAL" comment="" end="16456" id="P74" start="16453" text="OAC" />
 <LOCATION TYPE="CITY" comment="" end="16485" id="P75" start="16478" text="Chicago" />
 <LOCATION TYPE="STATE" comment="" end="16489" id="P76" start="16487" text="PA" />
 <NAME TYPE="DOCTOR" comment="" end="16517" id="P77" start="16501" text="Isaac W. Paredes" />

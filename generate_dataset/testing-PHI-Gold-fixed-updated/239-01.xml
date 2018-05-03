@@ -244,7 +244,6 @@ Plan
 <LOCATION TYPE="CITY" comment="" end="2160" id="P7" start="2153" text="De Soto" />
 <PROFESSION TYPE="PROFESSION" comment="" end="2352" id="P8" start="2342" text="visual art" />
 <NAME TYPE="PATIENT" comment="" end="3528" id="P9" start="3514" text="Ogrady,Ulysses" />
-<LOCATION TYPE="HOSPITAL" comment="" end="3545" id="P10" start="3542" text="IMC" />
 <DATE TYPE="DATE" comment="" end="3575" id="P11" start="3565" text="11/08/2066" />
 <DATE TYPE="DATE" comment="" end="4056" id="P12" start="4050" text="Nov 08" />
 <DATE TYPE="DATE" comment="" end="4228" id="P13" start="4221" text="8/18/66" />

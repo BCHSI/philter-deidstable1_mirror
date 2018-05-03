@@ -163,7 +163,6 @@ Casper, NV 33182
 <NAME TYPE="PATIENT" comment="" end="3819" id="P28" start="3814" text="Potts" />
 <NAME TYPE="PATIENT" comment="" end="3957" id="P30" start="3952" text="Potts" />
 <NAME TYPE="PATIENT" comment="" end="4200" id="P31" start="4195" text="Potts" />
-<LOCATION TYPE="HOSPITAL" comment="" end="4266" id="P32" start="4262" text="NDNH" />
 <NAME TYPE="DOCTOR" comment="" end="4320" id="P33" start="4309" text="Olivia Xing" />
 <LOCATION TYPE="HOSPITAL" comment="" end="4350" id="P34" start="4327" text="Monmouth Medical Center" />
 <LOCATION TYPE="STREET" comment="" end="4367" id="P35" start="4351" text="81 Clergy Street" />

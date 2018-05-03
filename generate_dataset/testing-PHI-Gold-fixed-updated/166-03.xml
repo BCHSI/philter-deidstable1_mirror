@@ -168,19 +168,11 @@ PGY-2, Internal Medicine
 <NAME TYPE="DOCTOR" comment="" end="352" id="P4" start="334" text="Patricia Whittaker" />
 <NAME TYPE="DOCTOR" comment="" end="374" id="P5" start="368" text="Jolley" />
 <NAME TYPE="PATIENT" comment="" end="599" id="P7" start="588" text="Oscar Meyer" />
-<LOCATION TYPE="HOSPITAL" comment="" end="1069" id="P9" start="1066" text="SCH" />
-<LOCATION TYPE="HOSPITAL" comment="" end="1547" id="P10" start="1544" text="WPH" />
-<LOCATION TYPE="HOSPITAL" comment="" end="1727" id="P11" start="1724" text="SCH" />
 <DATE TYPE="DATE" comment="" end="1944" id="P12" start="1935" text="July 2095" />
 <DATE TYPE="DATE" comment="" end="2328" id="P14" start="2323" text="11/29" />
 <PROFESSION TYPE="PROFESSION" comment="" end="2630" id="P18" start="2619" text="programming" />
 <LOCATION TYPE="ORGANIZATION" comment="" end="2642" id="P19" start="2634" text="Audiovox" />
 <LOCATION TYPE="ORGANIZATION" comment="" end="2668" id="P20" start="2657" text="BrightPoint" />
-<LOCATION TYPE="HOSPITAL" comment="" end="4856" id="P22" start="4853" text="SCH" />
-<LOCATION TYPE="HOSPITAL" comment="" end="4938" id="P23" start="4935" text="WPH" />
-<LOCATION TYPE="HOSPITAL" comment="" end="5261" id="P24" start="5258" text="SCH" />
-<LOCATION TYPE="HOSPITAL" comment="" end="6068" id="P25" start="6065" text="SCH" />
-<LOCATION TYPE="HOSPITAL" comment="" end="6433" id="P27" start="6430" text="SCH" />
 <DATE TYPE="DATE" comment="" end="6484" id="P28" start="6469" text="Thursday, 11/29" />
 <NAME TYPE="DOCTOR" comment="" end="7002" id="P29" start="6984" text="Patricia Whittaker" />
 <CONTACT TYPE="PHONE" comment="" end="7041" id="P30" start="7036" text="63765" />

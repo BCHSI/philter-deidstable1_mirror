@@ -83,15 +83,12 @@ Singh, M.D.
 <LOCATION TYPE="HOSPITAL" comment="" end="171" id="P2" start="150" text="Harmon Doctors Clinic" />
 <DATE TYPE="DATE" comment="" end="179" id="P3" start="172" text="1/12/90" />
 <DATE TYPE="DATE" comment="" end="210" id="P4" start="203" text="6/15/89" />
-<LOCATION TYPE="HOSPITAL" comment="" end="232" id="P5" start="230" text="MS" />
 <DATE TYPE="DATE" comment="" end="511" id="P7" start="505" text="1/2082" />
 <DATE TYPE="DATE" comment="" end="701" id="P9" start="694" text="1/16/88" />
 <DATE TYPE="DATE" comment="" end="873" id="P10" start="866" text="7/23/88" />
 <DATE TYPE="DATE" comment="" end="905" id="P11" start="898" text="4/20/89" />
 <DATE TYPE="DATE" comment="" end="2178" id="P12" start="2172" text="6/2089" />
-<LOCATION TYPE="HOSPITAL" comment="" end="2223" id="P13" start="2221" text="MS" />
 <DATE TYPE="DATE" comment="" end="2348" id="P14" start="2341" text="1/12/90" />
-<LOCATION TYPE="HOSPITAL" comment="" end="2355" id="P15" start="2352" text="HDC" />
 <NAME TYPE="DOCTOR" comment="" end="2365" id="P16" start="2360" text="Singh" />
 </TAGS>
 </deIdi2b2>

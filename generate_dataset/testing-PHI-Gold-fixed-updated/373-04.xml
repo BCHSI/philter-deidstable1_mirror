@@ -139,7 +139,6 @@ Cincere D. Urban, M.D.
 <DATE TYPE="DATE" comment="" end="257" id="P5" start="252" text="11/86" />
 <NAME TYPE="DOCTOR" comment="" end="479" id="P6" start="474" text="Bates" />
 <DATE TYPE="DATE" comment="" end="501" id="P7" start="497" text="2/18" />
-<LOCATION TYPE="HOSPITAL" comment="" end="671" id="P8" start="668" text="LCH" />
 <NAME TYPE="DOCTOR" comment="" end="876" id="P9" start="864" text="Ernest Byers" />
 <DATE TYPE="DATE" comment="" end="1424" id="P10" start="1414" text="09/24/2086" />
 <DATE TYPE="DATE" comment="" end="1453" id="P11" start="1443" text="09/24/2086" />
@@ -188,7 +187,6 @@ Cincere D. Urban, M.D.
 <DATE TYPE="DATE" comment="" end="4521" id="P56" start="4511" text="02/19/2087" />
 <DATE TYPE="DATE" comment="" end="4655" id="P57" start="4645" text="02/19/2087" />
 <DATE TYPE="DATE" comment="" end="4703" id="P58" start="4693" text="02/19/2087" />
-<LOCATION TYPE="HOSPITAL" comment="" end="4713" id="P59" start="4710" text="LCH" />
 <ID TYPE="MEDICALRECORD" comment="" end="4767" id="P60" start="4759" text="22670961" />
 <ID TYPE="MEDICALRECORD" comment="" end="4801" id="P61" start="4793" text="22670961" />
 <DATE TYPE="DATE" comment="" end="4888" id="P62" start="4878" text="02/19/2087" />

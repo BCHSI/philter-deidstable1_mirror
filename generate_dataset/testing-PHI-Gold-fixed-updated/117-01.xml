@@ -121,7 +121,6 @@ KI/espinoza/nolen
 <TAGS>
 <DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2065-09-20" />
 <NAME TYPE="PATIENT" comment="" end="44" id="P1" start="28" text="Melissa Cummings" />
-<LOCATION TYPE="HOSPITAL" comment="" end="49" id="P2" start="46" text="HGH" />
 <ID TYPE="MEDICALRECORD" comment="" end="68" id="P3" start="59" text="265-01-73" />
 <LOCATION TYPE="HOSPITAL" comment="" end="94" id="P4" start="72" text="SAINT VINCENT HOSPITAL" />
 <DATE TYPE="DATE" comment="" end="142" id="P5" start="124" text="September 20, 2065" />
@@ -129,7 +128,6 @@ KI/espinoza/nolen
 <DATE TYPE="DATE" comment="" end="1424" id="P8" start="1420" text="9/16" />
 <DATE TYPE="DATE" comment="" end="1726" id="P9" start="1722" text="7/27" />
 <NAME TYPE="PATIENT" comment="" end="1838" id="P10" start="1822" text="Melissa Cummings" />
-<LOCATION TYPE="HOSPITAL" comment="" end="1843" id="P11" start="1840" text="HGH" />
 <ID TYPE="MEDICALRECORD" comment="" end="1862" id="P12" start="1853" text="265-01-73" />
 <LOCATION TYPE="HOSPITAL" comment="" end="1888" id="P13" start="1866" text="SAINT VINCENT HOSPITAL" />
 <DATE TYPE="DATE" comment="" end="1936" id="P14" start="1918" text="September 20, 2065" />

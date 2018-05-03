@@ -55,7 +55,6 @@ DV: 02/26/60
 </TEXT>
 <TAGS>
 <DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2060-02-26" />
-<LOCATION TYPE="HOSPITAL" comment="" end="32" id="P1" start="29" text="BCH" />
 <LOCATION TYPE="STREET" comment="" end="79" id="P3" start="65" text="86 Cote Avenue" />
 <NAME TYPE="PATIENT" comment="" end="131" id="P4" start="117" text="HESS, CLARENCE" />
 <LOCATION TYPE="CITY" comment="" end="141" id="P5" start="132" text="Pinehurst" />

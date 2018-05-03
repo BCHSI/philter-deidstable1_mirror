@@ -387,15 +387,11 @@ Pager #46656
 <TAGS>
 <DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2082-04-07" />
 <NAME TYPE="PATIENT" comment="" end="114" id="P1" start="100" text="Fonseca, Linda" />
-<LOCATION TYPE="HOSPITAL" comment="" end="119" id="P2" start="116" text="DCA" />
 <ID TYPE="MEDICALRECORD" comment="" end="135" id="P3" start="128" text="7090253" />
 <DATE TYPE="DATE" comment="" end="164" id="P4" start="156" text="04/07/82" />
 <NAME TYPE="DOCTOR" comment="" end="187" id="P5" start="178" text="Asia Doty" />
 <NAME TYPE="DOCTOR" comment="" end="214" id="P6" start="201" text="Austin Jaeger" />
 <LOCATION TYPE="CITY" comment="" end="227" id="P7" start="217" text="Whitehouse" />
-<LOCATION TYPE="HOSPITAL" comment="" end="1032" id="P9" start="1029" text="DCA" />
-<LOCATION TYPE="HOSPITAL" comment="" end="1093" id="P10" start="1090" text="JMH" />
-<LOCATION TYPE="HOSPITAL" comment="" end="1584" id="P12" start="1581" text="DCA" />
 <AGE TYPE="AGE" comment="" end="2623" id="P13" start="2621" text="90" />
 <ID TYPE="IDNUM" comment="" end="3134" id="P14" start="3125" text="QJ1829196" />
 <NAME TYPE="DOCTOR" comment="" end="8381" id="P16" start="8368" text="Eli S Lindsay" />

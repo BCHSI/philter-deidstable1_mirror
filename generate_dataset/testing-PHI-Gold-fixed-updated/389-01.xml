@@ -71,7 +71,6 @@ SEL:kerns
 <LOCATION TYPE="STATE" comment="" end="117" id="P6" start="115" text="NC" />
 <LOCATION TYPE="ZIP" comment="" end="123" id="P7" start="118" text="75156" />
 <NAME TYPE="PATIENT" comment="" end="151" id="P8" start="138" text="Tyler Pearson" />
-<LOCATION TYPE="HOSPITAL" comment="" end="181" id="P9" start="178" text="WMC" />
 <ID TYPE="MEDICALRECORD" comment="" end="191" id="P10" start="182" text="727-19-02" />
 <NAME TYPE="DOCTOR" comment="" end="212" id="P11" start="207" text="Trejo" />
 <NAME TYPE="PATIENT" comment="" end="283" id="P12" start="270" text="Tyler Pearson" />
