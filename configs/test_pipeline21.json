@@ -259,27 +259,6 @@
 		"notes":"This should remove anything with pattern on_or_by_the_day_numbering"
 	},		
 	{
-		"title":"in_the_yy",
-		"type":"regex",
-		"exclude":true,
-		"filepath":"filters/regex/dates/in_the_yy_transformed.txt",
-		"notes":"This should remove anything with pattern 'in the (late/early) yy'"
-	},
-	{
-		"title":"in_yy",
-		"type":"regex",
-		"exclude":true,
-		"filepath":"filters/regex/dates/in_yy_transformed.txt",
-		"notes":"This should remove anything with pattern in_yy"
-	},
-	{
-		"title":"in_yyyy",
-		"type":"regex",
-		"exclude":true,
-		"filepath":"filters/regex/dates/in_yyyy_transformed.txt",
-		"notes":"This should remove anything with pattern in_yyyy"
-	},
-	{
 		"title":"month_name",
 		"type":"regex",
 		"exclude":true,
@@ -636,7 +615,7 @@
         ***REMOVED***,
         "notes": "These are words we believe are not safe"
     },
-   	{
+	{
 		"title":"Address Blacklist",
 		"type":"set",
 		"exclude":true,

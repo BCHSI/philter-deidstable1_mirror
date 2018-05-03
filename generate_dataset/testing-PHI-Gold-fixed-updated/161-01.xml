@@ -132,7 +132,6 @@ SRH/valdovinos	19-35905660.doc
 <ID TYPE="MEDICALRECORD" comment="" end="160" id="P9" start="151" text="134-43-51" />
 <NAME TYPE="DOCTOR" comment="" end="176" id="P10" start="173" text="You" />
 <NAME TYPE="PATIENT" comment="" end="264" id="P11" start="258" text="Xuereb" />
-<PROFESSION TYPE="PROFESSION" comment="" end="444" id="P13" start="423" text="high school principle" />
 <DATE TYPE="DATE" comment="" end="629" id="P16" start="616" text="February 2070" />
 <DATE TYPE="DATE" comment="" end="706" id="P17" start="696" text="April 2070" />
 <DATE TYPE="DATE" comment="" end="817" id="P18" start="803" text="September 2070" />

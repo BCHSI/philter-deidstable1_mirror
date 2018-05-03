@@ -123,8 +123,6 @@ Francine Morales, PA-C
 <DATE TYPE="DATE" comment="" end="2137" id="P14" start="2134" text="thu" />
 <DATE TYPE="DATE" comment="" end="2141" id="P15" start="2138" text="sat" />
 <LOCATION TYPE="LOCATION-OTHER" comment="" end="2421" id="P17" start="2410" text="long island" />
-<PROFESSION TYPE="PROFESSION" comment="" end="2462" id="P18" start="2456" text="Notary" />
-<PROFESSION TYPE="PROFESSION" comment="" end="2484" id="P19" start="2473" text="shoe repair" />
 <NAME TYPE="PATIENT" comment="" end="3134" id="P20" start="3127" text="Aguilar" />
 <NAME TYPE="DOCTOR" comment="" end="5162" id="P22" start="5146" text="Francine Morales" />
 <CONTACT TYPE="PHONE" comment="" end="5174" id="P23" start="5169" text="68626" />

@@ -102,7 +102,6 @@ TL:95468     :423
 <NAME TYPE="DOCTOR" comment="" end="115" id="P4" start="100" text="EDWARD XAYASANE" />
 <NAME TYPE="PATIENT" comment="" end="228" id="P5" start="221" text="Wilhelm" />
 <DATE TYPE="DATE" comment="" end="1352" id="P7" start="1342" text="April 2092" />
-<PROFESSION TYPE="PROFESSION" comment="" end="2245" id="P9" start="2235" text="Head Nurse" />
 <LOCATION TYPE="ORGANIZATION" comment="" end="2283" id="P10" start="2260" text="The Library Corporation" />
 <NAME TYPE="DOCTOR" comment="" end="5071" id="P16" start="5063" text="Xayasane" />
 <NAME TYPE="DOCTOR" comment="" end="5163" id="P17" start="5148" text="Edward Xayasane" />

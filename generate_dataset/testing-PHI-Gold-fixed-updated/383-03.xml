@@ -90,7 +90,6 @@ Discussed with Dr Landen Mccarthy
 <ID TYPE="MEDICALRECORD" comment="" end="78" id="P3" start="71" text="4097229" />
 <DATE TYPE="DATE" comment="" end="95" id="P4" start="85" text="12/22/2119" />
 <DATE TYPE="DATE" comment="" end="405" id="P6" start="397" text="11/14/19" />
-<PROFESSION TYPE="PROFESSION" comment="" end="1800" id="P16" start="1793" text="mailman" />
 <NAME TYPE="PATIENT" comment="" end="1832" id="P17" start="1818" text="Javonna Werner" />
 <CONTACT TYPE="PHONE" comment="" end="1845" id="P18" start="1833" text="026-003-5757" />
 <CONTACT TYPE="PHONE" comment="" end="1861" id="P19" start="1849" text="631-133-0409" />

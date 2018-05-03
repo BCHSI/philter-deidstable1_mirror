@@ -232,7 +232,6 @@ DV: 12/09/95
 <DATE TYPE="DATE" comment="" end="2460" id="P21" start="2451" text="12/7/2095" />
 <LOCATION TYPE="HOSPITAL" comment="" end="2873" id="P23" start="2841" text="Richwood Area Community Hospital" />
 <NAME TYPE="PATIENT" comment="" end="4588" id="P26" start="4577" text="Fitzpatrick" />
-<PROFESSION TYPE="PROFESSION" comment="" end="4617" id="P27" start="4594" text="Food Service Supervisor" />
 <NAME TYPE="DOCTOR" comment="" end="8433" id="P31" start="8423" text="Julia Yale" />
 <ID TYPE="IDNUM" comment="" end="8475" id="P32" start="8467" text="0-136282" />
 <DATE TYPE="DATE" comment="" end="8503" id="P33" start="8495" text="12/09/95" />

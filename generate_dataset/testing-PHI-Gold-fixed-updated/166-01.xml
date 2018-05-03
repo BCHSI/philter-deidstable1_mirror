@@ -154,7 +154,6 @@ T:  02/07/2095
 <NAME TYPE="DOCTOR" comment="" end="344" id="P7" start="333" text="Osiel Mckee" />
 <NAME TYPE="DOCTOR" comment="" end="710" id="P9" start="705" text="Mckee" />
 <NAME TYPE="PATIENT" comment="" end="1029" id="P10" start="1022" text="Mercado" />
-<PROFESSION TYPE="PROFESSION" comment="" end="1514" id="P12" start="1501" text="Web Developer" />
 <LOCATION TYPE="ORGANIZATION" comment="" end="1526" id="P13" start="1518" text="Audiovox" />
 <NAME TYPE="PATIENT" comment="" end="2176" id="P14" start="2171" text="Meyer" />
 <NAME TYPE="DOCTOR" comment="" end="3436" id="P15" start="3421" text="Victor M. Zubia" />

@@ -219,9 +219,7 @@ DV: 05/18/83
 <NAME TYPE="DOCTOR" comment="" end="903" id="P15" start="899" text="Zink" />
 <LOCATION TYPE="HOSPITAL" comment="" end="918" id="P16" start="907" text="Barr Clinic" />
 <LOCATION TYPE="CITY" comment="" end="2312" id="P18" start="2299" text="Elizabethtown" />
-<PROFESSION TYPE="PROFESSION" comment="" end="2352" id="P19" start="2332" text="midwife and director" />
 <LOCATION TYPE="ORGANIZATION" comment="" end="2373" id="P20" start="2356" text="Iowa Birth Clinic" />
-<PROFESSION TYPE="PROFESSION" comment="" end="2415" id="P21" start="2395" text="Broadcast Technician" />
 <NAME TYPE="DOCTOR" comment="" end="2486" id="P22" start="2473" text="Yesenia Olive" />
 <NAME TYPE="PATIENT" comment="" end="2513" id="P23" start="2499" text="Gerald, Marion" />
 <ID TYPE="MEDICALRECORD" comment="" end="2529" id="P24" start="2521" text="48967301" />

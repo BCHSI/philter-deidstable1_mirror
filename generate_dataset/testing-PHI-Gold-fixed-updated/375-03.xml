@@ -255,7 +255,6 @@ Plavix     Stopped because of ecchymosis and epistaxis - InactivatedCC:
 <LOCATION TYPE="HOSPITAL" comment="" end="1335" id="P20" start="1309" text="Corcoran District Hospital" />
 <NAME TYPE="DOCTOR" comment="" end="2652" id="P22" start="2645" text="Jeffers" />
 <NAME TYPE="DOCTOR" comment="" end="2662" id="P23" start="2657" text="Innis" />
-<PROFESSION TYPE="PROFESSION" comment="" end="3823" id="P29" start="3796" text="Motor Vehicle Body Repairer" />
 <LOCATION TYPE="ORGANIZATION" comment="" end="3847" id="P30" start="3845" text="GM" />
 <DATE TYPE="DATE" comment="" end="6436" id="P31" start="6426" text="11/25/2083" />
 <NAME TYPE="DOCTOR" comment="" end="8126" id="P35" start="8122" text="Ruiz" />

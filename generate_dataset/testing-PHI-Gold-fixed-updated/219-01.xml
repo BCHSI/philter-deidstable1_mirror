@@ -157,7 +157,6 @@ Casper, NV 33182
 <NAME TYPE="PATIENT" comment="" end="2297" id="P22" start="2292" text="Potts" />
 <NAME TYPE="PATIENT" comment="" end="3265" id="P23" start="3260" text="Potts" />
 <LOCATION TYPE="ORGANIZATION" comment="" end="3491" id="P24" start="3471" text="Screen Actor's Guild" />
-<PROFESSION TYPE="PROFESSION" comment="" end="3617" id="P25" start="3612" text="actor" />
 <NAME TYPE="PATIENT" comment="" end="3636" id="P26" start="3631" text="Potts" />
 <NAME TYPE="DOCTOR" comment="" end="3702" id="P27" start="3692" text="Earl Jacob" />
 <NAME TYPE="PATIENT" comment="" end="3819" id="P28" start="3814" text="Potts" />

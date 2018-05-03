@@ -147,8 +147,6 @@ Division of Infectious Diseases
 <LOCATION TYPE="CITY" comment="" end="2612" id="P23" start="2600" text="Cartersville" />
 <LOCATION TYPE="CITY" comment="" end="2621" id="P24" start="2614" text="Newport" />
 <DATE TYPE="DATE" comment="" end="2674" id="P25" start="2667" text="9/18/73" />
-<PROFESSION TYPE="PROFESSION" comment="" end="3113" id="P26" start="3103" text="programmer" />
-<PROFESSION TYPE="PROFESSION" comment="" end="3182" id="P27" start="3129" text="Industrial Engineering and Manufacturing Technologist" />
 <LOCATION TYPE="ORGANIZATION" comment="" end="3205" id="P28" start="3186" text="Activision Blizzard" />
 <LOCATION TYPE="LOCATION-OTHER" comment="" end="3370" id="P29" start="3352" text="Rockefeller Centre" />
 <LOCATION TYPE="LOCATION-OTHER" comment="" end="3390" id="P30" start="3384" text="global" />

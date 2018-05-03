@@ -104,7 +104,6 @@ DV:6-19-59
 <NAME TYPE="PATIENT" comment="" end="773" id="P10" start="770" text="Eva" />
 <NAME TYPE="PATIENT" comment="" end="917" id="P11" start="914" text="Eva" />
 <NAME TYPE="PATIENT" comment="" end="2006" id="P12" start="2003" text="Eva" />
-<PROFESSION TYPE="PROFESSION" comment="" end="2612" id="P13" start="2588" text="Pulping Control Operator" />
 <LOCATION TYPE="HOSPITAL" comment="" end="2784" id="P14" start="2774" text="PROMPTCARE" />
 <NAME TYPE="PATIENT" comment="" end="2836" id="P15" start="2823" text="Rutledge, Eva" />
 <ID TYPE="MEDICALRECORD" comment="" end="2891" id="P16" start="2883" text="29195561" />

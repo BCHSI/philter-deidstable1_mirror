@@ -105,7 +105,6 @@ Dictated by:  CHRISTOPHER QUIGLEY, M.D.       CQ03
 <NAME TYPE="PATIENT" comment="" end="94" id="P2" start="79" text="RODRIQUEZ,JACOB" />
 <ID TYPE="MEDICALRECORD" comment="" end="108" id="P3" start="97" text="863-35-65-5" />
 <DATE TYPE="DATE" comment="" end="151" id="P4" start="143" text="09/08/20" />
-<PROFESSION TYPE="PROFESSION" comment="" end="1063" id="P6" start="1052" text="Electrician" />
 <ID TYPE="IDNUM" comment="" end="2299" id="P7" start="2289" text="TT554/9917" />
 <NAME TYPE="DOCTOR" comment="" end="2321" id="P8" start="2302" text="CHRISTOPHER QUIGLEY" />
 <NAME TYPE="USERNAME" comment="" end="2338" id="P9" start="2334" text="CQ03" />

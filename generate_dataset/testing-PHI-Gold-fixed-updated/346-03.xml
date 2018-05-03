@@ -152,11 +152,9 @@ RTC in 3 mos for f/u, sooner prn.
 <LOCATION TYPE="ORGANIZATION" comment="" end="511" id="P2" start="499" text="RR Donnelley" />
 <NAME TYPE="PATIENT" comment="" end="668" id="P3" start="663" text="Oshea" />
 <NAME TYPE="DOCTOR" comment="" end="843" id="P4" start="833" text="Villagomez" />
-<PROFESSION TYPE="PROFESSION" comment="" end="1118" id="P5" start="1088" text="Senior Manager of Broadcasting" />
 <NAME TYPE="DOCTOR" comment="" end="1681" id="P6" start="1674" text="Landers" />
 <LOCATION TYPE="STATE" comment="" end="2519" id="P7" start="2517" text="NY" />
 <DATE TYPE="DATE" comment="" end="2530" id="P8" start="2523" text="12/2084" />
-<PROFESSION TYPE="PROFESSION" comment="" end="2576" id="P9" start="2546" text="Senior Manager of Broadcasting" />
 <DATE TYPE="DATE" comment="" end="3609" id="P13" start="3604" text="April" />
 <NAME TYPE="DOCTOR" comment="" end="3687" id="P14" start="3677" text="Villagomez" />
 <LOCATION TYPE="HOSPITAL" comment="" end="3699" id="P15" start="3691" text="MEDIQUIK" />

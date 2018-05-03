@@ -133,10 +133,8 @@ DT:  08/20/93
 <DATE TYPE="DATE" comment="" end="1885" id="P20" start="1872" text="July 15, 2093" />
 <NAME TYPE="PATIENT" comment="" end="2431" id="P21" start="2426" text="Urban" />
 <LOCATION TYPE="ORGANIZATION" comment="" end="2500" id="P22" start="2493" text="factory" />
-<PROFESSION TYPE="PROFESSION" comment="" end="2546" id="P23" start="2525" text="manufacturing manager" />
 <NAME TYPE="PATIENT" comment="" end="3491" id="P25" start="3486" text="Urban" />
 <LOCATION TYPE="ORGANIZATION" comment="" end="3555" id="P27" start="3543" text="Imports, Inc" />
-<PROFESSION TYPE="PROFESSION" comment="" end="3634" id="P29" start="3618" text="Registered Nurse" />
 <LOCATION TYPE="ORGANIZATION" comment="" end="3748" id="P31" start="3741" text="Borders" />
 <LOCATION TYPE="CITY" comment="" end="3779" id="P32" start="3773" text="Toledo" />
 <LOCATION TYPE="STATE" comment="" end="3788" id="P33" start="3781" text="Montana" />

@@ -111,7 +111,6 @@ DT:5-13-84
 <NAME TYPE="DOCTOR" comment="" end="270" id="P11" start="263" text="Eastman" />
 <NAME TYPE="PATIENT" comment="" end="318" id="P12" start="308" text="Uriah Lara" />
 <LOCATION TYPE="HOSPITAL" comment="" end="342" id="P13" start="326" text="Georgia Regional" />
-<PROFESSION TYPE="PROFESSION" comment="" end="1797" id="P18" start="1792" text="pilot" />
 <LOCATION TYPE="ORGANIZATION" comment="" end="1819" id="P19" start="1802" text="Frontier Airlines" />
 <NAME TYPE="DOCTOR" comment="" end="2030" id="P21" start="2018" text="Brit Eastman" />
 <DATE TYPE="DATE" comment="" end="2049" id="P22" start="2037" text="May 12, 2084" />
