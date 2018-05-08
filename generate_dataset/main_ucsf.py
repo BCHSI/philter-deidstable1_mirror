@@ -8,10 +8,13 @@ from difflib import SequenceMatcher
 from chardet.universaldetector import UniversalDetector
 from coordinate_map import CoordinateMap
 import xml.etree.ElementTree as ET
+import sys
 
 
 
-xml_folder = "./ucsf_xml/"
+
+xml_folder = sys.argv***REMOVED***1***REMOVED***
+
 
 phi = {} #fn --> {"text":"...", "phi":***REMOVED***{"type":"DATE"...}***REMOVED***}
 
@@ -20,27 +23,29 @@ def isolate_phi(xml_folder):
     #turn them into a json representation
     for root_dir, dirs, files in os.walk(xml_folder):
         for f in files:
+            with open(root_dir+f, 'r', encoding='latin1') as file:
+                tree = ET.parse(file)
+                root = tree.getroot()
 
-            tree = ET.parse(root_dir+f)
-            root = tree.getroot()
+                text = ""
+                phi_list = ***REMOVED******REMOVED***
 
-            text = ""
-            phi_list = ***REMOVED******REMOVED***
-
-            for child in root:
-                if child.tag == "TEXT":
-                    text = child.text
-                    #print (child.tag, child.attrib, child.text)
-                if child.tag == "TAGS":
-                    for t in child:
-                        phi_list.append(t.attrib)
-                        #print(t.tag, t.attrib, t.text)
-            phi***REMOVED***f***REMOVED*** = {"text":text, "phi":phi_list}
+                for child in root:
+                    if child.tag == "TEXT":
+                        text = child.text
+                        # if f == '167937985.txt.xml':
+                        #     print(text)
+                        #print (child.tag, child.attrib, child.text)
+                    if child.tag == "TAGS":
+                        for t in child:
+                            phi_list.append(t.attrib)
+                            #print(t.tag, t.attrib, t.text)
+                phi***REMOVED***f***REMOVED*** = {"text":text, "phi":phi_list}
 
 isolate_phi(xml_folder)
 
 #save our data
-json.dump(phi, open("phi_notes_ucsf.json", "w"), indent=4)
+json.dump(phi, open("../data/phi_notes_ucsf.json", "w"), indent=4)
 
 NOTES_FOLDER = "../data/ucsf_notes/"
 ANNO_FOLDER = "../data/ucsf_anno/"
@@ -55,7 +60,7 @@ for fn in phi:
     txt = phi***REMOVED***fn***REMOVED******REMOVED***"text"***REMOVED***.replace("*", " ")
 
     #save our notes file
-    with open(NOTES_FOLDER+fn.split(".")***REMOVED***0***REMOVED***+".txt", "w") as note_file:
+    with open(NOTES_FOLDER+fn.split(".")***REMOVED***0***REMOVED***+".txt", "w",encoding='utf-8') as note_file:
         note_file.write(txt)
 
     #create a coordinate mapping of all phi
@@ -79,7 +84,7 @@ for fn in phi:
     if last_marker < len(txt):
         contents.append(txt***REMOVED***last_marker:len(txt)***REMOVED***)
 
-    with open(ANNO_FOLDER+fn.split(".")***REMOVED***0***REMOVED***+".txt", "w") as anno_file:
+    with open(ANNO_FOLDER+fn.split(".")***REMOVED***0***REMOVED***+".txt", "w", encoding='utf-8') as anno_file:
         anno_file.write("".join(contents))
 
 

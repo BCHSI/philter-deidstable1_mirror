@@ -1,1 +1,1 @@
-\b(lives\s{1,4}(in|on))\s{1,4}(***REMOVED***a-zA-Z***REMOVED***+\s{1,4}***REMOVED***a-zA-Z***REMOVED***+|***REMOVED***a-zA-Z***REMOVED***+)\b
+\b(?<=lives\sin\s|lives\son\s)(***REMOVED***a-zA-Z***REMOVED***+\s{1,4}***REMOVED***A-Z***REMOVED******REMOVED***a-zA-Z***REMOVED***+|***REMOVED***a-zA-Z***REMOVED***+)\b

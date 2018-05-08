@@ -57,7 +57,7 @@ class Philter:
         if "xml" in config:
             if not os.path.exists(config***REMOVED***"xml"***REMOVED***):
                 raise Exception("Filepath does not exist", config***REMOVED***"xml"***REMOVED***)
-            self.xml = json.loads(open(config***REMOVED***"xml"***REMOVED***, "r").read())
+            self.xml = json.loads(open(config***REMOVED***"xml"***REMOVED***, "r", encoding='utf-8').read())
 
         if "stanford_ner_tagger" in config:
             if not os.path.exists(config***REMOVED***"stanford_ner_tagger"***REMOVED******REMOVED***"classifier"***REMOVED***) and config***REMOVED***"stanford_ner_tagger"***REMOVED******REMOVED***"download"***REMOVED*** == False:
@@ -202,9 +202,9 @@ class Philter:
             
             for m in matches:
                 #if filename == './data/i2b2_notes_updated/373-04.txt':
-                if 'S1' in m.group():
-                    print(self.patterns***REMOVED***pattern_index***REMOVED******REMOVED***"title"***REMOVED***)
-                    print(m.group())
+                # if '3' in m.group():
+                #     print(self.patterns***REMOVED***pattern_index***REMOVED******REMOVED***"title"***REMOVED***)
+                #     print(m.group())
                 
                 coord_map.add_extend(filename, m.start(), m.start()+len(m.group()))
         
@@ -532,7 +532,7 @@ class Philter:
             fbase, fext = os.path.splitext(f)
             outpathfbase = out_path + fbase
             if self.outformat == "asterisk":
-                with open(outpathfbase+".txt", "w") as f:
+                with open(outpathfbase+".txt", "w", encoding='utf-8') as f:
                     contents = self.transform_text_asterisk(txt, filename, 
                                                             include_map,
                                                             exclude_map)
@@ -819,7 +819,7 @@ class Philter:
                     continue
 
                 encoding1 = self.detect_encoding(philtered_filename)
-                philtered = open(philtered_filename,"r", encoding=encoding1***REMOVED***'encoding'***REMOVED***).read()
+                philtered = open(philtered_filename,"r").read()
                 
                           
                 philtered_words = re.split("(\s+)", philtered)
@@ -836,9 +836,12 @@ class Philter:
                                     philtered_words_cleaned.append(elem)
                         else:
                             philtered_words_cleaned.append(item)
-                
+                #print(len(philtered))
+                # if f == '167937985.txt':
+                #     print('Results text:')
+                #     print(philtered)
                 encoding2 = self.detect_encoding(anno_filename)
-                anno = open(anno_filename,"r", encoding=encoding2***REMOVED***'encoding'***REMOVED***).read()              
+                anno = open(anno_filename,"r").read()              
                 
                 anno_words = re.split("(\s+)", anno)
                 # if f == '110-01.txt':
@@ -962,6 +965,8 @@ class Philter:
                     "date_tps":0,
                     "email_fns":0,
                     "email_tps":0,
+                    "initials_fns": 0,
+                    "initials_tps": 0 ,
                     "mrn_id_fns": 0,
                     "mrn_id_tps": 0,
                     "patient_family_name_fns": 0,
@@ -979,7 +984,7 @@ class Philter:
                     "url_ip_fns":0,
                     "url_ip_tps":0, 
                     "vehicle_device_id_fns": 0,
-                    "vehicle_device_id_tps": 0            
+                    "vehicle_device_id_tps": 0        
                 }
 
             # Create dictionaries for unigram and bigram PHI/non-PHI frequencies
@@ -994,10 +999,17 @@ class Philter:
 
                 # Get corresponding info in phi_notes
                 note_name = fn.split('/')***REMOVED***3***REMOVED***
-                anno_name = note_name.split('.')***REMOVED***0***REMOVED*** + ".xml"
+                
+                try:
+                    anno_name = note_name.split('.')***REMOVED***0***REMOVED*** + ".xml"
+                    text = phi***REMOVED***anno_name***REMOVED******REMOVED***'text'***REMOVED***
+                except KeyError:
+                    anno_name = note_name.split('.')***REMOVED***0***REMOVED*** + ".txt.xml"
+                    text = phi***REMOVED***anno_name***REMOVED******REMOVED***'text'***REMOVED***
+                    # except KeyError:
+                    #     anno_name = note_name.split('.')***REMOVED***0***REMOVED*** + "_nounicode.txt.xml"
+                    #     text = phi***REMOVED***anno_name***REMOVED******REMOVED***'text'***REMOVED***                       
 
-
-                text = phi***REMOVED***anno_name***REMOVED******REMOVED***'text'***REMOVED***
                 lst = re.split("(\s+)", text)
                 cleaned = ***REMOVED******REMOVED***
                 cleaned_coords = ***REMOVED******REMOVED***
@@ -1010,7 +1022,12 @@ class Philter:
                                     cleaned.append(elem)
                         else:
                             cleaned.append(item)
-             
+                # if anno_name == '167937985.txt.xml':
+                #     print(anno_name)
+                #     #print(cleaned)
+                #     print('Anno text:')
+                #     print(text)
+                
                 # Get coords for POS tags
                 start_coordinate = 0
                 pos_coords = ***REMOVED******REMOVED***
@@ -1018,6 +1035,7 @@ class Philter:
                     pos_coords.append(start_coordinate)
                     start_coordinate += len(item)
 
+                #print(pos_coords)
                 pos_list = nltk.pos_tag(cleaned)
 
 
@@ -1155,6 +1173,7 @@ class Philter:
                     certificate_license_id_fn_counter = 0
                     date_fn_counter = 0
                     email_fn_counter = 0
+                    initials_fn_counter = 0
                     mrn_id_fn_counter = 0
                     patient_family_name_fn_counter = 0
                     phone_fax_fn_counter = 0
@@ -1164,6 +1183,7 @@ class Philter:
                     unique_patient_id_fn_counter = 0                      
                     url_ip_fn_counter = 0
                     vehicle_device_id_fn_counter = 0
+                    
 
                     account_number_cleaned = ***REMOVED******REMOVED***
                     address_cleaned = ***REMOVED******REMOVED***
@@ -1172,6 +1192,7 @@ class Philter:
                     certificate_license_id_cleaned =***REMOVED******REMOVED***
                     date_cleaned = ***REMOVED******REMOVED***
                     email_cleaned = ***REMOVED******REMOVED***
+                    initials_cleaned = ***REMOVED******REMOVED***
                     mrn_id_cleaned = ***REMOVED******REMOVED***
                     patient_family_name_cleaned = ***REMOVED******REMOVED***
                     phone_fax_cleaned = ***REMOVED******REMOVED***
@@ -1181,6 +1202,7 @@ class Philter:
                     unique_patient_id_cleaned = ***REMOVED******REMOVED***                       
                     url_ip_cleaned = ***REMOVED******REMOVED*** 
                     vehicle_device_id_cleaned = ***REMOVED******REMOVED***
+                    
                     
                     for phi_dict in phi_list:
                         # Tokenize words
@@ -1205,6 +1227,8 @@ class Philter:
                                                 date_cleaned.append(elem)
                                             if phi_dict***REMOVED***'TYPE'***REMOVED*** == 'Email':
                                                 email_cleaned.append(elem)
+                                            if phi_dict***REMOVED***'TYPE'***REMOVED*** == "Initials":
+                                                initials_cleaned.append(elem) 
                                             if phi_dict***REMOVED***'TYPE'***REMOVED*** == "Medical_Record_ID":
                                                 mrn_id_cleaned.append(elem)
                                             if phi_dict***REMOVED***'TYPE'***REMOVED*** == "Patient_Name_or_Family_Member_Name":
@@ -1222,7 +1246,8 @@ class Philter:
                                             if phi_dict***REMOVED***'TYPE'***REMOVED*** == "URL_IP":
                                                 url_ip_cleaned.append(elem)
                                             if phi_dict***REMOVED***'TYPE'***REMOVED*** == "Vehicle_or_Device_ID":
-                                                vehicle_device_id_cleaned.append(elem) 
+                                                vehicle_device_id_cleaned.append(elem)
+ 
                                 else:
                                     if phi_dict***REMOVED***'TYPE'***REMOVED*** == "Account_Number":
                                         account_number_cleaned.append(item)
@@ -1238,6 +1263,8 @@ class Philter:
                                         date_cleaned.append(elem)
                                     if phi_dict***REMOVED***'TYPE'***REMOVED*** == 'Email':
                                         email_cleaned.append(elem)
+                                    if phi_dict***REMOVED***'TYPE'***REMOVED*** == "Initials":
+                                        initials_cleaned.append(elem)  
                                     if phi_dict***REMOVED***'TYPE'***REMOVED*** == "Medical_Record_ID":
                                         mrn_id_cleaned.append(elem)
                                     if phi_dict***REMOVED***'TYPE'***REMOVED*** == "Patient_Name_or_Family_Member_Name":
@@ -1342,6 +1369,10 @@ class Philter:
                                 if (start_coordinate_fn in range(int(phi_start), int(phi_end))) and phi_type == 'Email':
                                     rp_summaries***REMOVED***"email_fns"***REMOVED*** += 1
                                     email_fn_counter += 1
+                                # Initials FNs
+                                if (start_coordinate_fn in range(int(phi_start), int(phi_end))) and phi_type == 'Initials':
+                                    rp_summaries***REMOVED***"initials_fns"***REMOVED*** += 1
+                                    initials_fn_counter += 1                               
                                 # MRN FNs
                                 if (start_coordinate_fn in range(int(phi_start), int(phi_end))) and phi_type == "Medical_Record_ID":
                                     rp_summaries***REMOVED***"mrn_id_fns"***REMOVED*** += 1
@@ -1368,8 +1399,8 @@ class Philter:
                                     unclear_fn_counter += 1  
                                 # unique patient FNs
                                 if (start_coordinate_fn in range(int(phi_start), int(phi_end))) and phi_type == "Unique_Patient_Id":
-                                    rp_summaries***REMOVED***"unique_patient_fns"***REMOVED*** += 1
-                                    unique_patient_fn_counter += 1
+                                    rp_summaries***REMOVED***"unique_patient_id_fns"***REMOVED*** += 1
+                                    unique_patient_id_fn_counter += 1
 
                                 # url/ip FNs
                                 if (start_coordinate_fn in range(int(phi_start), int(phi_end))) and phi_type == "URL_IP":
@@ -1433,6 +1464,7 @@ class Philter:
                     rp_summaries***REMOVED***'certificate_license_id_tps'***REMOVED*** += (len(certificate_license_id_cleaned) - certificate_license_id_fn_counter)
                     rp_summaries***REMOVED***'date_tps'***REMOVED*** += (len(date_cleaned) - date_fn_counter)
                     rp_summaries***REMOVED***'email_tps'***REMOVED*** += (len(email_cleaned) - email_fn_counter)
+                    rp_summaries***REMOVED***'initials_tps'***REMOVED*** += (len(initials_cleaned) - initials_fn_counter)
                     rp_summaries***REMOVED***'mrn_id_tps'***REMOVED*** += (len(mrn_id_cleaned) - mrn_id_fn_counter)
                     rp_summaries***REMOVED***'patient_family_name_tps'***REMOVED*** += (len(patient_family_name_cleaned) - patient_family_name_fn_counter)
                     rp_summaries***REMOVED***'phone_fax_tps'***REMOVED*** += (len(phone_fax_cleaned) - phone_fax_fn_counter)
@@ -1446,11 +1478,12 @@ class Philter:
 
                 ####### Get FP tags #########
                 fp_tag_summary = {}
-
+                #print(cleaned_with_pos)
                 if current_summary***REMOVED***'false_positives'***REMOVED*** != ***REMOVED******REMOVED*** and current_summary***REMOVED***'false_positives'***REMOVED*** != ***REMOVED***""***REMOVED***:              
 
                     current_fps = current_summary***REMOVED***'false_positives'***REMOVED***
                     counter = 0
+                    #print(current_fps)
                     for word in current_fps:
                         counter += 1
                         false_positive = word***REMOVED***0***REMOVED***
@@ -1557,110 +1590,168 @@ class Philter:
             if self.ucsf_format:
 
                 # account # recall
-                if rp_summaries***REMOVED***'account_number_tps'***REMOVED*** != 0:
-                    account_number_recall = (rp_summaries***REMOVED***'account_number_tps'***REMOVED***-rp_summaries***REMOVED***'account_number_fns'***REMOVED***)/rp_summaries***REMOVED***'account_number_tps'***REMOVED***
-                if (rp_summaries***REMOVED***'account_number_tps'***REMOVED***-rp_summaries***REMOVED***'account_number_fns'***REMOVED***) < 0 or rp_summaries***REMOVED***'account_number_tps'***REMOVED*** == 0:
-                    account_number_recall = 0
+                if rp_summaries***REMOVED***'account_number_fns'***REMOVED*** != 0:
+                    if rp_summaries***REMOVED***'account_number_tps'***REMOVED*** != 0 and (rp_summaries***REMOVED***'account_number_tps'***REMOVED***-rp_summaries***REMOVED***'account_number_fns'***REMOVED***) > 0:
+                        account_number_recall = (rp_summaries***REMOVED***'account_number_tps'***REMOVED***-rp_summaries***REMOVED***'account_number_fns'***REMOVED***)/rp_summaries***REMOVED***'account_number_tps'***REMOVED***
+                    else:
+                        account_number_recall = 0
+                else:
+                    account_number_recall = 1
                 
                 # address recall
-                if rp_summaries***REMOVED***'address_tps'***REMOVED*** != 0:
-                    address_recall = (rp_summaries***REMOVED***'address_tps'***REMOVED***-rp_summaries***REMOVED***'address_fns'***REMOVED***)/rp_summaries***REMOVED***'address_tps'***REMOVED***
-                if (rp_summaries***REMOVED***'address_tps'***REMOVED***-rp_summaries***REMOVED***'address_fns'***REMOVED***) < 0 or rp_summaries***REMOVED***'address_tps'***REMOVED*** == 0:
-                    address_recall = 0            
+                if rp_summaries***REMOVED***'address_fns'***REMOVED*** != 0:
+                    if rp_summaries***REMOVED***'address_tps'***REMOVED*** != 0 and (rp_summaries***REMOVED***'address_tps'***REMOVED***-rp_summaries***REMOVED***'address_fns'***REMOVED***) > 0:
+                        address_recall = (rp_summaries***REMOVED***'address_tps'***REMOVED***-rp_summaries***REMOVED***'address_fns'***REMOVED***)/rp_summaries***REMOVED***'address_tps'***REMOVED***
+                    else:
+                        address_recall = 0
+                else:
+                    address_recall = 1        
                 
                 # Age recall
-                if rp_summaries***REMOVED***'age_tps'***REMOVED*** != 0:
-                    age_recall = (rp_summaries***REMOVED***'age_tps'***REMOVED***-rp_summaries***REMOVED***'age_fns'***REMOVED***)/rp_summaries***REMOVED***'age_tps'***REMOVED***
-                if (rp_summaries***REMOVED***'age_tps'***REMOVED***-rp_summaries***REMOVED***'age_fns'***REMOVED***) < 0 or rp_summaries***REMOVED***'age_tps'***REMOVED*** == 0:
-                    age_recall = 0            
+                if rp_summaries***REMOVED***'age_fns'***REMOVED*** != 0:
+                    if rp_summaries***REMOVED***'age_tps'***REMOVED*** != 0 and (rp_summaries***REMOVED***'age_tps'***REMOVED***-rp_summaries***REMOVED***'age_fns'***REMOVED***) > 0:
+                        age_recall = (rp_summaries***REMOVED***'age_tps'***REMOVED***-rp_summaries***REMOVED***'age_fns'***REMOVED***)/rp_summaries***REMOVED***'age_tps'***REMOVED***
+                    else:
+                        age_recall = 0
+                else:
+                    age_recall = 1        
                 
                 # biometric_or_photo_id recall
-                if rp_summaries***REMOVED***'biometric_or_photo_id_tps'***REMOVED*** != 0:
-                    biometric_or_photo_id_recall = (rp_summaries***REMOVED***'biometric_or_photo_id_tps'***REMOVED***-rp_summaries***REMOVED***'biometric_or_photo_id_fns'***REMOVED***)/rp_summaries***REMOVED***'biometric_or_photo_id_tps'***REMOVED***
-                if (rp_summaries***REMOVED***'biometric_or_photo_id_tps'***REMOVED***-rp_summaries***REMOVED***'biometric_or_photo_id_fns'***REMOVED***) < 0 or rp_summaries***REMOVED***'biometric_or_photo_id_tps'***REMOVED*** == 0:
-                    biometric_or_photo_id_recall = 0            
+                if rp_summaries***REMOVED***'biometric_or_photo_id_fns'***REMOVED*** != 0:
+                    if rp_summaries***REMOVED***'biometric_or_photo_id_tps'***REMOVED*** != 0 and (rp_summaries***REMOVED***'biometric_or_photo_id_tps'***REMOVED***-rp_summaries***REMOVED***'biometric_or_photo_id_fns'***REMOVED***) > 0:
+                        biometric_or_photo_id_recall = (rp_summaries***REMOVED***'biometric_or_photo_id_tps'***REMOVED***-rp_summaries***REMOVED***'biometric_or_photo_id_fns'***REMOVED***)/rp_summaries***REMOVED***'biometric_or_photo_id_tps'***REMOVED***
+                    else:
+                        biometric_or_photo_id_recall = 0    
+                else:
+                    biometric_or_photo_id_recall = 1     
                 
                 # certificate_license_id recall
-                if rp_summaries***REMOVED***'certificate_license_id_tps'***REMOVED*** != 0:
-                    certificate_license_id_recall = (rp_summaries***REMOVED***'certificate_license_id_tps'***REMOVED***-rp_summaries***REMOVED***'certificate_license_id_fns'***REMOVED***)/rp_summaries***REMOVED***'certificate_license_id_tps'***REMOVED***
-                if (rp_summaries***REMOVED***'certificate_license_id_tps'***REMOVED***-rp_summaries***REMOVED***'certificate_license_id_fns'***REMOVED***) < 0 or rp_summaries***REMOVED***'certificate_license_id_tps'***REMOVED*** == 0:
-                    certificate_license_id_recall = 0
+                if rp_summaries***REMOVED***'certificate_license_id_fns'***REMOVED*** != 0:
+                    if rp_summaries***REMOVED***'certificate_license_id_tps'***REMOVED*** != 0 and (rp_summaries***REMOVED***'certificate_license_id_tps'***REMOVED***-rp_summaries***REMOVED***'certificate_license_id_fns'***REMOVED***) > 0:
+                        certificate_license_id_recall = (rp_summaries***REMOVED***'certificate_license_id_tps'***REMOVED***-rp_summaries***REMOVED***'certificate_license_id_fns'***REMOVED***)/rp_summaries***REMOVED***'certificate_license_id_tps'***REMOVED***
+                    else:
+                        certificate_license_id_recall = 0
+                else:
+                    certificate_license_id_recall = 1
                 
                 # date recall
-                if rp_summaries***REMOVED***'date_tps'***REMOVED*** != 0:
-                    date_recall = (rp_summaries***REMOVED***'date_tps'***REMOVED***-rp_summaries***REMOVED***'date_fns'***REMOVED***)/rp_summaries***REMOVED***'date_tps'***REMOVED***
-                if (rp_summaries***REMOVED***'date_tps'***REMOVED***-rp_summaries***REMOVED***'date_fns'***REMOVED***) < 0 or rp_summaries***REMOVED***'date_tps'***REMOVED*** == 0:
-                    date_recall = 0             
+                if rp_summaries***REMOVED***'date_fns'***REMOVED*** != 0:
+                    if rp_summaries***REMOVED***'date_tps'***REMOVED*** != 0 and (rp_summaries***REMOVED***'date_tps'***REMOVED***-rp_summaries***REMOVED***'date_fns'***REMOVED***) > 0:
+                        date_recall = (rp_summaries***REMOVED***'date_tps'***REMOVED***-rp_summaries***REMOVED***'date_fns'***REMOVED***)/rp_summaries***REMOVED***'date_tps'***REMOVED***
+                    else:
+                        date_recall = 0
+                else:
+                    date_recall = 1      
             
                 # email recall
-                if rp_summaries***REMOVED***'email_tps'***REMOVED*** != 0:
-                    email_recall = (rp_summaries***REMOVED***'email_tps'***REMOVED***-rp_summaries***REMOVED***'email_fns'***REMOVED***)/rp_summaries***REMOVED***'email_tps'***REMOVED***
-                if (rp_summaries***REMOVED***'email_tps'***REMOVED***-rp_summaries***REMOVED***'email_fns'***REMOVED***) < 0 or rp_summaries***REMOVED***'email_tps'***REMOVED*** == 0:
-                    email_recall = 0 
-                
+                if rp_summaries***REMOVED***'email_fns'***REMOVED*** != 0:
+                    if rp_summaries***REMOVED***'email_tps'***REMOVED*** != 0 and (rp_summaries***REMOVED***'email_tps'***REMOVED***-rp_summaries***REMOVED***'email_fns'***REMOVED***) > 0:
+                        email_recall = (rp_summaries***REMOVED***'email_tps'***REMOVED***-rp_summaries***REMOVED***'email_fns'***REMOVED***)/rp_summaries***REMOVED***'email_tps'***REMOVED***
+                    else:
+                        email_recall = 0 
+                else:
+                    email_recall = 1
+
+                # initials recall
+                if rp_summaries***REMOVED***'initials_fns'***REMOVED*** != 0:
+                    if rp_summaries***REMOVED***'initials_tps'***REMOVED*** != 0 and (rp_summaries***REMOVED***'initials_tps'***REMOVED***-rp_summaries***REMOVED***'initials_fns'***REMOVED***) > 0:
+                        initials_recall = (rp_summaries***REMOVED***'initials_tps'***REMOVED***-rp_summaries***REMOVED***'initials_fns'***REMOVED***)/rp_summaries***REMOVED***'initials_tps'***REMOVED***
+                    else:
+                        initials_recall = 0 
+                else:
+                    initials_recall = 1
+               
                 # mrn id recall
-                if rp_summaries***REMOVED***'mrn_id_tps'***REMOVED*** != 0:
-                    mrn_id_recall = (rp_summaries***REMOVED***'mrn_id_tps'***REMOVED***-rp_summaries***REMOVED***'mrn_id_fns'***REMOVED***)/rp_summaries***REMOVED***'mrn_id_tps'***REMOVED***
-                if (rp_summaries***REMOVED***'mrn_id_tps'***REMOVED***-rp_summaries***REMOVED***'mrn_id_fns'***REMOVED***) < 0 or rp_summaries***REMOVED***'mrn_id_tps'***REMOVED*** == 0:
-                    mrn_id_recall = 0
+                if rp_summaries***REMOVED***'mrn_id_fns'***REMOVED*** != 0:
+                    if rp_summaries***REMOVED***'mrn_id_tps'***REMOVED*** != 0 and (rp_summaries***REMOVED***'mrn_id_tps'***REMOVED***-rp_summaries***REMOVED***'mrn_id_fns'***REMOVED***) > 0:
+                        mrn_id_recall = (rp_summaries***REMOVED***'mrn_id_tps'***REMOVED***-rp_summaries***REMOVED***'mrn_id_fns'***REMOVED***)/rp_summaries***REMOVED***'mrn_id_tps'***REMOVED***
+                    else:
+                        mrn_id_recall = 0
+                else:
+                    mrn_id_recall = 1
                 
                 # patient_family_name recall
-                if rp_summaries***REMOVED***'patient_family_name_tps'***REMOVED*** != 0:
-                    patient_family_name_recall = (rp_summaries***REMOVED***'patient_family_name_tps'***REMOVED***-rp_summaries***REMOVED***'patient_family_name_fns'***REMOVED***)/rp_summaries***REMOVED***'patient_family_name_tps'***REMOVED***
-                if (rp_summaries***REMOVED***'patient_family_name_tps'***REMOVED***-rp_summaries***REMOVED***'patient_family_name_fns'***REMOVED***) < 0 or rp_summaries***REMOVED***'patient_family_name_tps'***REMOVED*** == 0:
-                    patient_family_name_recall = 0            
+                if rp_summaries***REMOVED***'patient_family_name_fns'***REMOVED*** != 0:
+                    if rp_summaries***REMOVED***'patient_family_name_tps'***REMOVED*** != 0 and (rp_summaries***REMOVED***'patient_family_name_tps'***REMOVED***-rp_summaries***REMOVED***'patient_family_name_fns'***REMOVED***) > 0:
+                        patient_family_name_recall = (rp_summaries***REMOVED***'patient_family_name_tps'***REMOVED***-rp_summaries***REMOVED***'patient_family_name_fns'***REMOVED***)/rp_summaries***REMOVED***'patient_family_name_tps'***REMOVED***
+                    else:
+                        patient_family_name_recall = 0    
+                else:
+                    patient_family_name_recall = 1   
                 
                 # phone/fax recall
-                if rp_summaries***REMOVED***'phone_fax_tps'***REMOVED*** != 0:
-                    phone_fax_recall = (rp_summaries***REMOVED***'phone_fax_tps'***REMOVED***-rp_summaries***REMOVED***'phone_fax_fns'***REMOVED***)/rp_summaries***REMOVED***'phone_fax_tps'***REMOVED***
-                if (rp_summaries***REMOVED***'phone_fax_tps'***REMOVED***-rp_summaries***REMOVED***'phone_fax_fns'***REMOVED***) < 0 or rp_summaries***REMOVED***'phone_fax_tps'***REMOVED*** == 0:
-                    phone_fax_recall = 0            
+                if rp_summaries***REMOVED***'phone_fax_fns'***REMOVED*** != 0:
+                    if rp_summaries***REMOVED***'phone_fax_tps'***REMOVED*** != 0 and (rp_summaries***REMOVED***'phone_fax_tps'***REMOVED***-rp_summaries***REMOVED***'phone_fax_fns'***REMOVED***) > 0:
+                        phone_fax_recall = (rp_summaries***REMOVED***'phone_fax_tps'***REMOVED***-rp_summaries***REMOVED***'phone_fax_fns'***REMOVED***)/rp_summaries***REMOVED***'phone_fax_tps'***REMOVED***
+                    else:
+                        phone_fax_recall = 0   
+                else:
+                    phone_fax_recall = 1     
                 
                 # provider_name recall
-                if rp_summaries***REMOVED***'provider_name_tps'***REMOVED*** != 0:
-                    provider_name_recall = (rp_summaries***REMOVED***'provider_name_tps'***REMOVED***-rp_summaries***REMOVED***'provider_name_fns'***REMOVED***)/rp_summaries***REMOVED***'provider_name_tps'***REMOVED***
-                if (rp_summaries***REMOVED***'provider_name_tps'***REMOVED***-rp_summaries***REMOVED***'provider_name_fns'***REMOVED***) < 0 or rp_summaries***REMOVED***'provider_name_tps'***REMOVED*** == 0:
-                    provider_name_recall = 0            
+                if rp_summaries***REMOVED***'provider_name_fns'***REMOVED*** != 0:
+                    if rp_summaries***REMOVED***'provider_name_tps'***REMOVED*** != 0 and (rp_summaries***REMOVED***'provider_name_tps'***REMOVED***-rp_summaries***REMOVED***'provider_name_fns'***REMOVED***) > 0:
+                        provider_name_recall = (rp_summaries***REMOVED***'provider_name_tps'***REMOVED***-rp_summaries***REMOVED***'provider_name_fns'***REMOVED***)/rp_summaries***REMOVED***'provider_name_tps'***REMOVED***
+                    else:
+                        provider_name_recall = 0  
+                else:
+                    provider_name_recall = 1      
                 
                 # social_security recall
-                if rp_summaries***REMOVED***'social_security_tps'***REMOVED*** != 0:
-                    social_security_recall = (rp_summaries***REMOVED***'social_security_tps'***REMOVED***-rp_summaries***REMOVED***'social_security_fns'***REMOVED***)/rp_summaries***REMOVED***'social_security_tps'***REMOVED***
-                if (rp_summaries***REMOVED***'social_security_tps'***REMOVED***-rp_summaries***REMOVED***'social_security_fns'***REMOVED***) < 0 or rp_summaries***REMOVED***'social_security_tps'***REMOVED*** == 0:
-                    social_security_recall = 0
+                if rp_summaries***REMOVED***'social_security_fns'***REMOVED*** != 0:
+                    if rp_summaries***REMOVED***'social_security_tps'***REMOVED*** != 0 and (rp_summaries***REMOVED***'social_security_tps'***REMOVED***-rp_summaries***REMOVED***'social_security_fns'***REMOVED***) > 0:
+                        social_security_recall = (rp_summaries***REMOVED***'social_security_tps'***REMOVED***-rp_summaries***REMOVED***'social_security_fns'***REMOVED***)/rp_summaries***REMOVED***'social_security_tps'***REMOVED***
+                    else:
+                        social_security_recall = 0
+                else:
+                    social_security_recall = 1
                 
                 # unclear recall
-                if rp_summaries***REMOVED***'unclear_tps'***REMOVED*** != 0:
-                    unclear_recall = (rp_summaries***REMOVED***'unclear_tps'***REMOVED***-rp_summaries***REMOVED***'unclear_fns'***REMOVED***)/rp_summaries***REMOVED***'unclear_tps'***REMOVED***
-                if (rp_summaries***REMOVED***'unclear_tps'***REMOVED***-rp_summaries***REMOVED***'unclear_fns'***REMOVED***) < 0 or rp_summaries***REMOVED***'unclear_tps'***REMOVED*** == 0:
-                    unclear_recall = 0             
+                if rp_summaries***REMOVED***'unclear_fns'***REMOVED*** != 0:
+                    if rp_summaries***REMOVED***'unclear_tps'***REMOVED*** != 0 and (rp_summaries***REMOVED***'unclear_tps'***REMOVED***-rp_summaries***REMOVED***'unclear_fns'***REMOVED***) > 0:
+                        unclear_recall = (rp_summaries***REMOVED***'unclear_tps'***REMOVED***-rp_summaries***REMOVED***'unclear_fns'***REMOVED***)/rp_summaries***REMOVED***'unclear_tps'***REMOVED***
+                    else:
+                        unclear_recall = 0   
+                else:
+                    unclear_recall = 1     
             
                 # unique_patient_id recall
-                if rp_summaries***REMOVED***'unique_patient_id_tps'***REMOVED*** != 0:
-                    unique_patient_id_recall = (rp_summaries***REMOVED***'unique_patient_id_tps'***REMOVED***-rp_summaries***REMOVED***'unique_patient_id_fns'***REMOVED***)/rp_summaries***REMOVED***'unique_patient_id_tps'***REMOVED***
-                if (rp_summaries***REMOVED***'unique_patient_id_tps'***REMOVED***-rp_summaries***REMOVED***'unique_patient_id_fns'***REMOVED***) < 0 or rp_summaries***REMOVED***'unique_patient_id_tps'***REMOVED*** == 0:
-                    unique_patient_id_recall = 0           
+                if rp_summaries***REMOVED***'unique_patient_id_fns'***REMOVED*** != 0:
+                    if rp_summaries***REMOVED***'unique_patient_id_tps'***REMOVED*** != 0 and (rp_summaries***REMOVED***'unique_patient_id_tps'***REMOVED***-rp_summaries***REMOVED***'unique_patient_id_fns'***REMOVED***) > 0:
+                        unique_patient_id_recall = (rp_summaries***REMOVED***'unique_patient_id_tps'***REMOVED***-rp_summaries***REMOVED***'unique_patient_id_fns'***REMOVED***)/rp_summaries***REMOVED***'unique_patient_id_tps'***REMOVED***
+                    else:
+                        unique_patient_id_recall = 0    
+                else:
+                    unique_patient_id_recall = 1
                 
                 # url_ip recall
-                if rp_summaries***REMOVED***'url_ip_tps'***REMOVED*** != 0:
-                    url_ip_recall = (rp_summaries***REMOVED***'url_ip_tps'***REMOVED***-rp_summaries***REMOVED***'url_ip_fns'***REMOVED***)/rp_summaries***REMOVED***'url_ip_tps'***REMOVED***
-                if (rp_summaries***REMOVED***'url_ip_tps'***REMOVED***-rp_summaries***REMOVED***'url_ip_fns'***REMOVED***) < 0 or rp_summaries***REMOVED***'url_ip_tps'***REMOVED*** == 0:
-                    url_ip_recall = 0             
+                if rp_summaries***REMOVED***'url_ip_fns'***REMOVED*** != 0:
+                    if rp_summaries***REMOVED***'url_ip_tps'***REMOVED*** != 0 and (rp_summaries***REMOVED***'url_ip_tps'***REMOVED***-rp_summaries***REMOVED***'url_ip_fns'***REMOVED***) > 0:
+                        url_ip_recall = (rp_summaries***REMOVED***'url_ip_tps'***REMOVED***-rp_summaries***REMOVED***'url_ip_fns'***REMOVED***)/rp_summaries***REMOVED***'url_ip_tps'***REMOVED***
+                    else:
+                        url_ip_recall = 0  
+                else:
+                    url_ip_recall = 1    
             
                 # vehicle_device_id recall
-                if rp_summaries***REMOVED***'vehicle_device_id_tps'***REMOVED*** != 0:
-                    vehicle_device_id_recall = (rp_summaries***REMOVED***'vehicle_device_id_tps'***REMOVED***-rp_summaries***REMOVED***'vehicle_device_id_fns'***REMOVED***)/rp_summaries***REMOVED***'vehicle_device_id_tps'***REMOVED***
-                if (rp_summaries***REMOVED***'vehicle_device_id_tps'***REMOVED***-rp_summaries***REMOVED***'vehicle_device_id_fns'***REMOVED***) < 0 or rp_summaries***REMOVED***'vehicle_device_id_tps'***REMOVED*** == 0:
-                    vehicle_device_id_recall = 0
+                if rp_summaries***REMOVED***'vehicle_device_id_fns'***REMOVED*** != 0:
+                    if rp_summaries***REMOVED***'vehicle_device_id_tps'***REMOVED*** != 0 and (rp_summaries***REMOVED***'vehicle_device_id_tps'***REMOVED***-rp_summaries***REMOVED***'vehicle_device_id_fns'***REMOVED***) > 0:
+                        vehicle_device_id_recall = (rp_summaries***REMOVED***'vehicle_device_id_tps'***REMOVED***-rp_summaries***REMOVED***'vehicle_device_id_fns'***REMOVED***)/rp_summaries***REMOVED***'vehicle_device_id_tps'***REMOVED***
+                    else:
+                        vehicle_device_id_recall = 0
+                else:
+                    vehicle_device_id_recall = 1
 
                 # Print to terminal
                 print('\n')
                 print("Account Number Recall: " + "{:.2%}".format(account_number_recall))
                 print("Address Recall: " + "{:.2%}".format(address_recall))
-                print("Age>=90 Recall: " + "{:.2%}".format(age_recall))
+                print("Age Recall: " + "{:.2%}".format(age_recall))
                 print("Biometric ID and Face Photo Recall: " + "{:.2%}".format(biometric_or_photo_id_recall))
                 print("Certificate and License Number Recall: " + "{:.2%}".format(certificate_license_id_recall))
                 print("Date Recall: " + "{:.2%}".format(date_recall))
                 print("Email Recall: " + "{:.2%}".format(email_recall))
+                print("Initials Recall: " + "{:.2%}".format(initials_recall))
                 print("Medical Record Number Recall: " + "{:.2%}".format(mrn_id_recall))
                 print("Patient or Family Member Name Recall: " + "{:.2%}".format(patient_family_name_recall))
                 print("Phone and Fax Recall: " + "{:.2%}".format(phone_fax_recall))
