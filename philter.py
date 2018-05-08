@@ -202,9 +202,9 @@ class Philter:
             
             for m in matches:
                 #if filename == './data/i2b2_notes_updated/373-04.txt':
-                # if '3' in m.group():
-                #     print(self.patterns***REMOVED***pattern_index***REMOVED******REMOVED***"title"***REMOVED***)
-                #     print(m.group())
+                if 'ACID' in m.group():
+                    print(self.patterns***REMOVED***pattern_index***REMOVED******REMOVED***"title"***REMOVED***)
+                    print(m.group())
                 
                 coord_map.add_extend(filename, m.start(), m.start()+len(m.group()))
         
@@ -1783,6 +1783,7 @@ class Philter:
             # Keep track of how many distinct combinations we've added to each list
             context_counter = 0
             nocontext_counter = 0
+
             for fn in fn_tags:
                 file_dict = fn_tags***REMOVED***fn***REMOVED*** 
                 for subfile in file_dict:
@@ -1868,6 +1869,7 @@ class Philter:
             # Conext
             with open(fn_tags_context, "w") as fn_file:
                 fn_file.write("key" + "|" + "note_word" + "|" + "phi_tag" + "|" + "pos_tag" + "|" + "context" + "|" + "occurrences"+"\n")
+                # print(fn_tags_condensed_context)
                 for key in fn_tags_condensed_context:
                     current_list = fn_tags_condensed_context***REMOVED***key***REMOVED***
                     fn_file.write(key + "|" + current_list***REMOVED***0***REMOVED*** + "|" + current_list***REMOVED***1***REMOVED*** + "|" + current_list***REMOVED***2***REMOVED*** + "|" + current_list***REMOVED***3***REMOVED*** + "|" + str(current_list***REMOVED***4***REMOVED***)+"\n")
