@@ -108,4 +108,4 @@ venv.bak/
 /site
 
 # mypy
-.mypy_cache/
+.mypy_cache/./generate_dataset/phi_notes_ucsf.json
