@@ -1,0 +1,1 @@
+\b((?i)pain***REMOVED*** ***REMOVED***{1,2}((is|was)( a)? )?\d\/10)\b|\b((?i)\d\/10***REMOVED*** ***REMOVED***{1,2}pain)\b
