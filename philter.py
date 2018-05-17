@@ -1400,7 +1400,7 @@ class Philter:
                         include_dict***REMOVED***'fns'***REMOVED*** += rp_summaries***REMOVED***fn_key***REMOVED***
                         include_dict***REMOVED***'tps'***REMOVED*** += rp_summaries***REMOVED***tp_key***REMOVED***
 
-                        tag_category = i2b2_category_dict***REMOVED***tag***REMOVED***
+                        tag_category = ucsf_category_dict***REMOVED***tag***REMOVED***
                         category_fns = tag_category + '_fns'
                         category_tps = tag_category + '_tps'
 
