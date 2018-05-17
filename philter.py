@@ -1400,7 +1400,7 @@ class Philter:
                         include_dict['fns'] += rp_summaries[fn_key]
                         include_dict['tps'] += rp_summaries[tp_key]
 
-                        tag_category = i2b2_category_dict[tag]
+                        tag_category = ucsf_category_dict[tag]
                         category_fns = tag_category + '_fns'
                         category_tps = tag_category + '_tps'
 
