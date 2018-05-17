@@ -774,7 +774,7 @@ class Philter:
             raise Exception("False Positive Filepath does not exist", fp_output)
         if self.debug and self.parallel == False:
             print("RUNNING EVAL")
-            print('\n')
+            
         
         summary = {
             "total_false_positives":0,
@@ -922,17 +922,19 @@ class Philter:
             json.dump(all_fn, open(fn_output, "w"), indent=4)
             json.dump(all_fp, open(fp_output, "w"), indent=4)
             
+            print('\n')
             print("true_negatives", summary["total_true_negatives"],"true_positives", summary["total_true_positives"], "false_negatives", summary["total_false_negatives"], "false_positives", summary["total_false_positives"])
             print('\n')
             print("Global Recall: {:.2%}".format(recall))
             print("Global Precision: {:.2%}".format(precision))
             print("Global Retention: {:.2%}".format(retention))
-            print('\n')
+
 
         ###################### Get phi tags #####################
         if self.errorcheck and self.parallel == False:
-            print("RUNNING ERRORCHECK")
             print('\n')
+            print("RUNNING ERRORCHECK")
+
         if self.errorcheck:
             # Get xml summary
             phi = self.xml
@@ -1013,7 +1015,7 @@ class Philter:
                 'Unclear':'Other'
                 }
                 
-                ucsf_include_tags = ['Date','Provider_Name','Phone_Fax','Age','Patient_Name_or_Family_Member_Name','Patient_Address','Patient_Initials','Provider_Address_or_Location','Provider_Initials','Provider_Certificate_or_License','Patient_Medical_Record_Id','Patient_Account_Number','Patient_Social_Security_Number','Patient_Vehicle_or_Device_Id','Patient_Unique_Id','Diagnosis_Code_ICD_or_International','Procedure_or_Billing_Code','Medical_Department_Name','Email','URL_IP','Patient_Biometric_Id_or_Face_Photo','Patient_Language_Spoken','Patient_Place_Of_Work_or_Occupation','Patient_Certificate_or_License','Medical_Research_Study_Name_or_Number','Teaching_Institution_Name','Non_UCSF_Medical_Institution_Name','Medical_Institution_Abbreviation','Unclear']
+                ucsf_include_tags = ['Date','Provider_Name','Phone_Fax','Age','Patient_Name_or_Family_Member_Name','Patient_Address','Provider_Address_or_Location','Provider_Initials','Provider_Certificate_or_License','Patient_Medical_Record_Id','Patient_Account_Number','Patient_Social_Security_Number','Patient_Vehicle_or_Device_Id','Patient_Unique_Id','Email','URL_IP','Patient_Biometric_Id_or_Face_Photo','Patient_Certificate_or_License']
 
 
                 rp_summaries = {}
@@ -1326,6 +1328,7 @@ class Philter:
 
             # get specific recalls
             # i2b2
+            overall_data = []
             if not self.ucsf_format:
                 include_dict = {'fns':0,'tps':0}
                 category_dict = {}
@@ -1338,7 +1341,7 @@ class Philter:
                     category_dict[category_tps] = 0
 
                 overall_recall_dict = {}
-                print("Recall by Tag: ")
+
                 for i in range(0,len(i2b2_tags)):
                     tag = i2b2_tags[i]
                     fn_key = tag + '_fns'
@@ -1368,11 +1371,13 @@ class Philter:
                         #     overall_recall_dict[recall_key] = 0
                     else:
                         overall_recall_dict[recall_key] = 1
-
-                    print(tag + " Recall: " + "{:.2%}".format(overall_recall_dict[recall_key]) + " TP: " + str(rp_summaries[tp_key]) + " FN: " + str(rp_summaries[fn_key]))
+                    
+                    overall_data.append([tag,"{:.2%}".format(overall_recall_dict[recall_key]),str(rp_summaries[tp_key]),str(rp_summaries[fn_key])])
+                    #print(tag + " Recall: " + "{:.2%}".format(overall_recall_dict[recall_key]) + " TP: " + str(rp_summaries[tp_key]) + " FN: " + str(rp_summaries[fn_key]))
 
             
             # ucsf
+            
             if self.ucsf_format:
                 include_dict = {'fns':0,'tps':0}
                 category_dict = {}
@@ -1385,7 +1390,8 @@ class Philter:
                     category_dict[category_tps] = 0
 
                 overall_recall_dict = {}
-                print("Recall by Tag: ")
+
+                
                 for i in range(0,len(ucsf_tags)):
                     tag = ucsf_tags[i]
                     fn_key = tag + '_fns'
@@ -1416,11 +1422,28 @@ class Philter:
                     else:
                         overall_recall_dict[recall_key] = 1
 
-                    print(tag + " Recall: " + "{:.2%}".format(overall_recall_dict[recall_key]) + " TP: " + str(rp_summaries[tp_key]) + " FN: " + str(rp_summaries[fn_key]))
+                    overall_data.append([tag,"{:.2%}".format(overall_recall_dict[recall_key]),str(rp_summaries[tp_key]),str(rp_summaries[fn_key])])
+                    # print(tag + " Recall: " + "{:.2%}".format(overall_recall_dict[recall_key]) + " TP: " + str(rp_summaries[tp_key]) + " FN: " + str(rp_summaries[fn_key]))
+            
+            # pretty print tag recalls
+            overall_data.sort(key=lambda x: float(x[1][:-1]),reverse=True)
+            print(overall_data)
+            print(type(overall_data))
+            sorted_overall_data = [["Tag","Recall","TPs","FNs"]]
+            for item in overall_data:
+                sorted_overall_data.append(item)
+
+            print('\n')
+            print("Recall by Tag:")
+            col_width = max(len(word) for row in sorted_overall_data for word in row) + 2  # padding
+            for row in sorted_overall_data:
+                print("".join(word.ljust(col_width) for word in row))
+
+            
+
 
             # Get category recall
-            print('\n')
-            print('Recall by PHI Category:')
+            category_data = []
             for i in range(0,len(phi_categories)):
                 category_tag = phi_categories[i]
                 category_fns = category_tag + '_fns'
@@ -1434,10 +1457,21 @@ class Philter:
                     #     category_recall = 0
                 else:
                     category_recall = 1
+                category_data.append([category_tag,"{:.2%}".format(category_recall),str(category_dict[category_tps]),str(category_dict[category_fns])])
+                # print(category_tag + " Recall: " + "{:.2%}".format(category_recall) + " TP: " + str(category_dict[category_tps]) + " FN: " + str(category_dict[category_fns]))                 
 
-                print(category_tag + " Recall: " + "{:.2%}".format(category_recall) + " TP: " + str(category_dict[category_tps]) + " FN: " + str(category_dict[category_fns]))                 
+            # pretty print category recalls
+            category_data.sort(key=lambda x: float(x[1][:-1]),reverse=True)
+            sorted_category_data = [["Tag","Recall","TPs","FNs"]]
+            for item in category_data:
+                sorted_category_data.append(item)
 
-
+            print('\n')
+            print('Recall by PHI Category:')
+            col_width = max(len(word) for row in category_data for word in row) + 2  # padding
+            for row in category_data:
+                print("".join(word.ljust(col_width) for word in row))
+            
             # Get corrected recall
             corrected_recall = 0
             if include_dict['fns'] != 0:
@@ -1451,6 +1485,10 @@ class Philter:
             print('\n')
             print("Corrected Overall Recall: " + "{:.2%}".format(corrected_recall) + " TP: " + str(include_dict['tps']) + " FN: " + str(include_dict['fns']))
             print('\n')
+
+
+
+
 
             ######## Summarize FN results #########
             
