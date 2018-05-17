@@ -371,6 +371,13 @@
 		"notes":"This should remove anything that matches a (longer) weird string of numbers/letters connected by colons etc"
 	},
 	{
+		"title":"mixed 10",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/mrn_id/mixed_010_transformed.txt",
+		"notes":"This should remove anything with weird number/letter mashups"
+	},
+	{
 		"title":"CCCDDD",
 		"type":"regex",
 		"exclude":true,
