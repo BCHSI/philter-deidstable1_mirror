@@ -1427,8 +1427,6 @@ class Philter:
             
             # pretty print tag recalls
             overall_data.sort(key=lambda x: float(x***REMOVED***1***REMOVED******REMOVED***:-1***REMOVED***),reverse=True)
-            print(overall_data)
-            print(type(overall_data))
             sorted_overall_data = ***REMOVED******REMOVED***"Tag","Recall","TPs","FNs"***REMOVED******REMOVED***
             for item in overall_data:
                 sorted_overall_data.append(item)
@@ -1439,7 +1437,6 @@ class Philter:
             for row in sorted_overall_data:
                 print("".join(word.ljust(col_width) for word in row))
 
-            
 
 
             # Get category recall
