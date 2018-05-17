@@ -1147,8 +1147,12 @@ class Philter:
 
                     start_coordinate_tp = word[1]
                     for phi_dict in phi_list:
-                        phi_start = phi_dict['start']
-                        phi_end = phi_dict['end']
+                        if self.ucsf_format:
+                            phi_start = int(phi_item['spans'].split('~')[0])
+                            phi_end = int(phi_item['spans'].split('~')[1])                               
+                        else:
+                            phi_start = phi_item['start']
+                            phi_end = phi_item['end']
                         phi_type = phi_dict['TYPE']
 
                         if not self.ucsf_format:
