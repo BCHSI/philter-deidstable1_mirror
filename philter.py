@@ -1146,14 +1146,14 @@ class Philter:
                 for word in current_tps:
 
                     start_coordinate_tp = word[1]
-                    for phi_dict in phi_list:
+                    for phi_item in phi_list:
                         if self.ucsf_format:
                             phi_start = int(phi_item['spans'].split('~')[0])
                             phi_end = int(phi_item['spans'].split('~')[1])                               
                         else:
                             phi_start = phi_item['start']
                             phi_end = phi_item['end']
-                        phi_type = phi_dict['TYPE']
+                        phi_type = phi_item['TYPE']
 
                         if not self.ucsf_format:
                             for i in range(0,len(i2b2_tags)):
