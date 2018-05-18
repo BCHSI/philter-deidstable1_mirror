@@ -1466,7 +1466,7 @@ class Philter:
             print('\n')
             print('Recall by PHI Category:')
             col_width = max(len(word) for row in category_data for word in row) + 2  # padding
-            for row in category_data:
+            for row in sorted_category_data:
                 print("".join(word.ljust(col_width) for word in row))
             
             # Get corrected recall
