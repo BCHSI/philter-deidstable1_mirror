@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2088-05-21
+
+Patient Name: CURTIS, OM;  MRN: 7682941
+
+Dictated at: 05/21/88 by VICTOR R. GOMES, M.D. 
+
+
+
+Mr. Curtis returns with a history of ureteral stones, BPH, and dysuria.  He has not had any stone passage in the last six months.  He has passed some tissue, and had some gross hematuria with his last visit, but has not had any symptoms since then. 
+
+  
+
+With his BPH, he has not had any significant worsening of his nocturia or daytime frequency.  He feels as if he is emptying his bladder well now on the Cardura.  He did have some dysuria, and Dr. Geiger gave him a pill which seems to have helped him.  
+
+ 
+
+His review of systems today is negative.  His past medical history is unchanged, and he is continuing with a cholesterol medication, a pill for burning, Cardura, and Atenolol. 
+
+  
+
+On physical examination, his vital signs show him to be well-nourished and well-developed.  His respirations are 14.  His pulse is regular.  A general examination shows his neck to be supple.  He is alert and oriented x 3.  He has no labored breathing.  He has no palpable groin adenopathy.  His skin has normal turgor, and his cardiovascular exam shows no JVD.
+
+   
+
+A complete GU examination shows his epididymis to be without masses.  A rectal exam shows his anus to be without masses.  His scrotum is without lesions.  His urethral meatus has no discharge.  His prostate has some BPH, but no nodularity.  His penis has no foreskin lesions.  His testes have no masses.  His seminal vesicles have no masses.  His sphincter tone is normal. 
+
+  
+
+An independent review of a urinalysis today is negative.  A review of clinical lab testes shows a nuclear matrix protein less than 10 on 11/14/87.  This was done via PCIS.  A post-void residual today is 14 cc.  
+
+ 
+
+For his BPH, I believe he should continue with Cardura 2 mg p.o.  q.d.  His stone disease is quiescent, and he will let me know if there are any recurrences with symptoms of these.  We will consider checking a KUB in one year's time.  He will let me know if there are any difficulties in the interim.   
+
+ 
+
+_______________________________ 
+
+Victor R. Gomes, M.D.  
+
+ 
+
+ 
+
+cc: William Geiger, M.D., Allina Medical Clinic At Hinckley, Internal Medicine  
+
+ 
+
+ 
+
+DD:05/21/88 
+
+DT:05/21/88 
+
+UL:30614     :7550 
+
+ 
+
+
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2088-05-21" TYPE="DATE" comment="" />
+<NAME id="P1" start="42" end="52" text="CURTIS, OM" TYPE="PATIENT" comment="" />
+<ID id="P2" start="60" end="67" text="7682941" TYPE="MEDICALRECORD" comment="" />
+<DATE id="P3" start="82" end="90" text="05/21/88" TYPE="DATE" comment="" />
+<NAME id="P4" start="94" end="109" text="VICTOR R. GOMES" TYPE="DOCTOR" comment="" />
+<NAME id="P5" start="124" end="130" text="Curtis" TYPE="PATIENT" comment="" />
+<NAME id="P6" start="571" end="577" text="Geiger" TYPE="DOCTOR" comment="" />
+<DATE id="P7" start="1698" end="1706" text="11/14/87" TYPE="DATE" comment="" />
+<NAME id="P8" start="2119" end="2134" text="Victor R. Gomes" TYPE="DOCTOR" comment="" />
+<NAME id="P9" start="2154" end="2168" text="William Geiger" TYPE="DOCTOR" comment="" />
+<LOCATION id="P10" start="2176" end="2209" text="Allina Medical Clinic At Hinckley" TYPE="HOSPITAL" comment="" />
+<DATE id="P12" start="2241" end="2249" text="05/21/88" TYPE="DATE" comment="" />
+<DATE id="P13" start="2255" end="2263" text="05/21/88" TYPE="DATE" comment="" />
+<ID id="P14" start="2266" end="2284" text="UL:30614     :7550" TYPE="IDNUM" comment="" />
+</TAGS>
+</deIdi2b2>

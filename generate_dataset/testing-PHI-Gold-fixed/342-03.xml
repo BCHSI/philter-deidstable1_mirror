@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2093-12-26
+
+                                                             Patient Name: BARR,NICKY [ MRN: 32612454LDC ]
+
+                                                         Date of Visit: 12/26/93
+
+
+
+
+
+Chief Complaint	
+
+Mrs Barr  is here to follow up on Hypertension, diabetes
+
+
+
+History of Present Illness	
+
+Mrs Barr has been doing well. Has a 8 weeks grandaughter and is very happy with her. Interesetd on quiting smoking. Can not hold the baby as long as she smokes and she has  decided to quit to be able to care or the baby. 
+
+She is taking all her meds as directed. 
+
+HbA1C in 5/93 7.2 and LDL 99 on Lipitor 20 mg.
+
+She still smokes 1/2 PPD but better than before 
+
+Declines the FLu shot and Pneumovax
+
+Not exercising. Walks daily 1-2 blocks for chores.
+
+
+
+Review of Systems	
+
+C/P:Denies chest pain, SOB
+
+Skin(-)
+
+MSK(-)
+
+HEENT : Denies cold sx
+
+GU(-)
+
+General: Denies fever, chills,  weigth loss
+
+GI :Denies nausea, vomiting, diarrhea
+
+Neuro: denies headaches
+
+All other systems negative
+
+Problems
+
+Cerebrovascular accident : x 4
+
+Obesity : BMI 40 - Type 3
+
+Hypertension 
+
+Diabetes mellitus type 2 
+
+Osteopenia : T score -1.8 L1-4 
+
+
+
+
+
+
+
+Allergies
+
+NKA 
+
+
+
+
+
+Medications
+
+Plavix (CLOPIDOGREL) 75 MG (75MG TABLET take 1) PO QD 
+
+Hydrochlorothiazide 25 MG PO QD 
+
+Metoprolol TARTRATE 100 MG (100MG TABLET take 1) PO QD 
+
+Multivitamins 1 CAPSULE PO QD 
+
+Ambien (ZOLPIDEM TARTRATE) 5 MG PO QHS 
+
+Fosamax (ALENDRONATE) 35MG TABLET PO QSunday AM , Take it with 8 Oz of water 
+
+Lisinopril 5 MG (5MG TABLET take 1) PO QD 
+
+Oscal 500 + D (CALCIUM CARBONATE 1250 MG (500MG ELEM CA)/ VIT D 200 IU)) 2 TAB PO qd 
+
+Ibuprofen 800 MG (800MG TABLET take 1) PO TID PRN leg pain 
+
+Lipitor (ATORVASTATIN) 20MG TABLET PO QHS 
+
+
+
+
+
+Vital Signs
+
+BP 136/90, P 68, RR 14, Wt 242 lb
+
+ 
+
+
+
+
+
+Physical Exam	
+
+Alert, in no distress, obese, happy looking, smiling
+
+HEENT : PEERL, EOMI,  oral mucosa moist, no lesions
+
+Neck : supple, no masses or nodes, no JVD.
+
+Lungs: clear anteriorly and posteriroly to auscultation, no rhonchi, crackles or wheezes
+
+Heart: regular,. S1S2 normal, no S3 or murmurs
+
+Abdomen: soft, no tenderness BS(+), no rebound
+
+Ext: no edema, normal skin
+
+Feet exam: normal ksin,. good DP, good capillary filling
+
+
+
+Assessment	
+
+1. HYPERTENSION
+
+Poorly controlled today
+
+Continue Lisinopril 5 mg QD # 30 and 3 refills
+
+Increase Metroprolol to  50 mg BID from QD and  HCTZ 25 mg QD
+
+See me in 8 weeks to recheck BP
+
+Check SMA-7
+
+
+
+2. CEREBROVASCULAR ACCIDENT
+
+Uncontrolled HTN
+
+Smoking - active
+
+Elevated LDL
+
+Obese
+
+Sedentary
+
+On statins. Goal LDL <100
+
+Check Lipid profile and LFTs
+
+Goal LDL <70
+
+Quit smoking - try Nicorette Gum. Referal to see Georgia Upshaw- smoking cessation counselour
+
+Plavix 75 mg QD 
+
+
+
+3. DIABETES MELLITUS
+
+HbA1C 7.2 in 5/93
+
+Goal below 7
+
+Repeat HbA1C and microalbuminuria
+
+Due for eye exam. 
+
+Declines Flu shot
+
+
+
+4. OSTEOPENIA
+
+Continue  Fosamax 35 mg Q week, calcium and MVI
+
+  
+
+
+
+
+
+Plan	
+
+Follow up in   8 weeks
+
+
+
+
+
+
+
+
+
+_____________________________________________
+
+Victoria Amy-Armstrong, M.D.
+
+
+
+
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2093-12-26" TYPE="DATE" comment="" />
+<NAME id="P1" start="103" end="113" text="BARR,NICKY" TYPE="PATIENT" comment="" />
+<ID id="P2" start="121" end="129" text="32612454" TYPE="MEDICALRECORD" comment="" />
+<LOCATION id="P3" start="129" end="132" text="LDC" TYPE="HOSPITAL" comment="" />
+<DATE id="P4" start="208" end="216" text="12/26/93" TYPE="DATE" comment="" />
+<NAME id="P5" start="244" end="248" text="Barr" TYPE="PATIENT" comment="" />
+<NAME id="P6" start="333" end="337" text="Barr" TYPE="PATIENT" comment="" />
+<DATE id="P7" start="603" end="607" text="5/93" TYPE="DATE" comment="" />
+<DATE id="P8" start="1458" end="1464" text="Sunday" TYPE="DATE" comment="" />
+<NAME id="P9" start="2666" end="2680" text="Georgia Upshaw" TYPE="DOCTOR" comment="" />
+<DATE id="P10" start="2767" end="2771" text="5/93" TYPE="DATE" comment="" />
+<NAME id="P11" start="3021" end="3043" text="Victoria Amy-Armstrong" TYPE="DOCTOR" comment="" />
+</TAGS>
+</deIdi2b2>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2157-07-17
+
+
+
+
+DEJESUS, JAROME
+28044071
+07/17/2157
+
+
+Yoseph Berg, M.D.
+Broome Developmental Center
+84 Parkhurst Drive
+Peculiar, NE  54583
+
+Dear Dr. Berg:
+
+We had the pleasure of caring for your patient, Jarome Dejesus, during his admission to the Erie County Infirmary from 07/16/2157 to 07/17/2157 for evaluation and treatment of his anginal symptoms.  As you know, Mr. Dejesus is a very pleasant 74-year-old gentleman with paroxysmal atrial fibrillation who is on Coumadin.  He has a history of insulin-dependent diabetes mellitus, hypertension and dyslipidemia.  He has known coronary artery disease and underwent stenting of his left anterior descending artery in 05/2155, at which time he had a Taxus drug-eluting stent placed.  He returns now with increasing dyspnea on exertion and had an elective cardiac catheterization performed at the Southwest Colorado Medical on 07/13/2157 that showed focal 90% instent restenosis in the left anterior descending artery with no other focally occlusive disease.  He was transferred to the Erie County Infirmary and on the afternoon of 07/16/2157, Dr. Yoseph Flint was able to dilate and stent the lesion in the left anterior descending artery with placement of a 3.5 x 28 mm Cypher drug-eluting stent.  The procedure was complicated by brief transient no re-flow that resolved immediately to intracoronary nitroglycerin.  The left femoral arteriotomy was closed using an Angio-Seal device.  Mr. Dejesus has spent an uneventful evening on our Cardiovascular Service.  He has had no complaints of chest pain or shortness of breath.  He is ambulating, eating, and voiding without difficulty.
+
+His heart rate has been in the 70s, blood pressure in the 110s/60.  He is in atrial fibrillation.  His cardiac exam was irregular with no appreciable murmur.  His lungs were clear to auscultation bilaterally.  His left groin is moderately ecchymotic but soft.  There is no hematoma or bruit.  Extremities are warm and well perfused.
+
+His morning labs revealed a sodium of 138, potassium of 4.9, BUN of 21, creatinine of 1.2.  His total CK is 58 with a CK-MB of 0.4.  His hematocrit is stable at 38, white count of 9, platelets of 300,000.  His fasting lipid panel showed a total cholesterol 123 with an HDL of 25, LDL of 49, and triglycerides of 244.
+
+We are discharging him home on the following medications:  Plavix 75 mg p.o. daily, which must be continued for a minimum of the next three months, aspirin 325 mg p.o. daily is to be backed off to 81 mg after a few months.  He will resume his Coumadin at 5 mg daily, and have this checked with his primary care physician, Dr. Paige.  He will be on Lipitor 20 mg p.o. daily, digoxin 0.25 mg p.o. daily, Tikosyn 500 mcg p.o. b.i.d., glyburide 5 mg p.o. daily, Avandia 4 mg p.o. daily, Diovan 80 mg p.o. daily, NPH insulin 16 units each evening and sublingual nitroglycerin to be used as needed for chest pain.  We have asked him to arrange a followup appointment with you within the next couple of weeks and to see Robert-Joseph Paige in the near future also.  Thank you very much for allowing us to participate in the care of this pleasant gentleman, and please do not hesitate to contact us with any issues regarding his ongoing management.
+
+With warmest regards.
+
+Sincerely,
+
+
+______________________________
+Irving R. Ramirez, M.D.
+ATTENDING
+
+
+______________________________
+Dictated by: Henry Phelps, PA
+
+
+
+eScription document:8-0687422 DFFocus
+
+CC: Robert-Joseph Paige M.D.
+Koenen Collins County Clinic
+886 Paxton Terrace
+Peculiar, NE 19649
+
+
+DD: 07/17/57
+DT: 07/17/57
+DV: 07/17/57
+
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2157-07-17" TYPE="DATE" comment="" />
+<NAME id="P1" start="31" end="46" text="DEJESUS, JAROME" TYPE="PATIENT" comment="" />
+<ID id="P2" start="47" end="55" text="28044071" TYPE="MEDICALRECORD" comment="" />
+<DATE id="P3" start="56" end="66" text="07/17/2157" TYPE="DATE" comment="" />
+<NAME id="P4" start="69" end="80" text="Yoseph Berg" TYPE="DOCTOR" comment="" />
+<LOCATION id="P5" start="87" end="114" text="Broome Developmental Center" TYPE="HOSPITAL" comment="" />
+<LOCATION id="P6" start="115" end="133" text="84 Parkhurst Drive" TYPE="STREET" comment="" />
+<LOCATION id="P7" start="134" end="142" text="Peculiar" TYPE="CITY" comment="" />
+<LOCATION id="P8" start="144" end="146" text="NE" TYPE="STATE" comment="" />
+<LOCATION id="P9" start="148" end="153" text="54583" TYPE="ZIP" comment="" />
+<NAME id="P10" start="164" end="168" text="Berg" TYPE="DOCTOR" comment="" />
+<NAME id="P11" start="219" end="233" text="Jarome Dejesus" TYPE="PATIENT" comment="" />
+<LOCATION id="P12" start="263" end="284" text="Erie County Infirmary" TYPE="HOSPITAL" comment="" />
+<DATE id="P13" start="290" end="300" text="07/16/2157" TYPE="DATE" comment="" />
+<DATE id="P14" start="304" end="314" text="07/17/2157" TYPE="DATE" comment="" />
+<NAME id="P15" start="387" end="394" text="Dejesus" TYPE="PATIENT" comment="" />
+<AGE id="P16" start="414" end="416" text="74" TYPE="AGE" comment="" />
+<DATE id="P17" start="684" end="691" text="05/2155" TYPE="DATE" comment="" />
+<LOCATION id="P18" start="862" end="888" text="Southwest Colorado Medical" TYPE="HOSPITAL" comment="" />
+<DATE id="P19" start="892" end="902" text="07/13/2157" TYPE="DATE" comment="" />
+<LOCATION id="P20" start="1051" end="1072" text="Erie County Infirmary" TYPE="HOSPITAL" comment="" />
+<DATE id="P21" start="1097" end="1107" text="07/16/2157" TYPE="DATE" comment="" />
+<NAME id="P22" start="1113" end="1125" text="Yoseph Flint" TYPE="DOCTOR" comment="" />
+<NAME id="P23" start="1457" end="1464" text="Dejesus" TYPE="PATIENT" comment="" />
+<NAME id="P25" start="2630" end="2635" text="Paige" TYPE="DOCTOR" comment="" />
+<NAME id="P26" start="3017" end="3036" text="Robert-Joseph Paige" TYPE="DOCTOR" comment="" />
+<NAME id="P27" start="3313" end="3330" text="Irving R. Ramirez" TYPE="DOCTOR" comment="" />
+<NAME id="P28" start="3393" end="3405" text="Henry Phelps" TYPE="DOCTOR" comment="" />
+<ID id="P29" start="3433" end="3442" text="8-0687422" TYPE="IDNUM" comment="" />
+<NAME id="P30" start="3456" end="3475" text="Robert-Joseph Paige" TYPE="DOCTOR" comment="" />
+<LOCATION id="P31" start="3481" end="3509" text="Koenen Collins County Clinic" TYPE="HOSPITAL" comment="" />
+<LOCATION id="P32" start="3510" end="3528" text="886 Paxton Terrace" TYPE="STREET" comment="" />
+<LOCATION id="P33" start="3529" end="3537" text="Peculiar" TYPE="CITY" comment="" />
+<LOCATION id="P34" start="3539" end="3541" text="NE" TYPE="STATE" comment="" />
+<LOCATION id="P35" start="3542" end="3547" text="19649" TYPE="ZIP" comment="" />
+<DATE id="P36" start="3554" end="3562" text="07/17/57" TYPE="DATE" comment="" />
+<DATE id="P37" start="3567" end="3575" text="07/17/57" TYPE="DATE" comment="" />
+<DATE id="P38" start="3580" end="3588" text="07/17/57" TYPE="DATE" comment="" />
+</TAGS>
+</deIdi2b2>

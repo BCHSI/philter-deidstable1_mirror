@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2138-06-14
+
+Patient Name: SLATER, OWEN;  MRN: 8635779
+
+Dictated on: 06/14/2138 by URIEL T. ZIRKLE, MD 
+
+ 
+ATTENDING CONSULTATION NOTE 
+ 
+DIAGNOSIS: Recurrent renal cell carcinoma.  
+ 
+HISTORY: Mr. Slater is a delightful and active 80-year-old man who was incidentally found to have a renal mass in 2133. At that time Dr. Updike performed a left partial nephrectomy, and the final pathology showed a 1.5 cm clear cell renal cell carcinoma. Since that date he has remained well with no clinical evidence of recurrent disease and has had interval CT scans. For the last 2 years, enhancing nodules have been noted within the region of the partial nephrectomy. A biopsy performed approximately 1 year ago did not demonstrate any cancer within modestly enlarged retroperitoneal lymph nodes. CT scan was repeated in December of 2137. This again showed some enlarged retroperitoneal adenopathy and also enlargement of the soft tissue nodules. Biopsy in March of this year showed probable recurrent renal cell carcinoma of the clear cell type within the nodules. Biopsy of an adjacent adrenal gland showed no cancer. His metastatic workup has included CT scans of the chest, which have demonstrated small pulmonary nodules of uncertain significance.  
+ 
+He has met with Drs. Eagle and Yzaguirre. Both have recommended completion of the nephrectomy and resection of any visible tumor, perhaps with intraoperative radiation as well. 
+  
+PAST MEDICAL HISTORY:  
+ 
+1. Hypertension.  
+ 
+2. CVA with residual weakness on the right side. He is, however, still able to walk with a cane.  
+ 
+3. High cholesterol.  
+ 
+CURRENT MEDICATIONS: Atenolol, hydrochlorothiazide, lisinopril, Norvasc, Avapro, clonidine, Lipitor, and allopurinol.   
+
+DRUG ALLERGIES: None known.  
+ 
+SOCIAL HISTORY: He is a long retired news writer with a heavy smoking history. He last smoked in 2132. He is a widow and came today to the appointment with 1 of his daughters.  
+ 
+REVIEW OF SYSTEMS: No respiratory symptoms suggesting progressive pulmonary metastases, no abdominal or GI symptoms.  
+ 
+
+PHYSICAL EXAM:
+No anemia, jaundice, cyanosis, or clubbing
+No gynecomastia
+Respiration comfortable
+Mild right-sided motor weakness, walks with a cane. 
+No skeletal deformity or tenderness
+Head, eyes, ears, and nose normal 
+Abdomen soft with no hepatomegaly, splenomegaly, nor any additional masses.
+No hernias.
+ 
+ 
+RADIOLOGY: CT scans demonstrate multiple soft tissue nodules within the partial nephrectomy bed, the largest being 15 mm across. He also has prominent lymph nodes within the retroperitoneum, the largest of which is 14 mm, and an enlarged left common iliac lymph node of 18 mm. Chest CT shows scattered 2 mm nodules of uncertain significance.  
+ 
+IMPRESSION AND PLAN: Confirmed local recurrence of renal cell cancer - for completion nephrectomy and resection of tumor bed.  Lymph nodes will be also be sampled.  
+ 
+For intraoperative radiation if appropriate and possibly adjuvant radiation to follow.  Consent obtained today.  
+ 
+ 
+URIEL T. ZIRKLE, MD 
+ 
+cc:  
+Dr. Francis Eagle 
+ 
+Dr. Vonnie Yzaguirre 
+ 
+Dr. Fernando Gregg 
+Internal Medicine, FPC 
+ 
+DD:06/14/2138 
+DT:06/15/2138 
+CI:100417    :7153 
+ 
+
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2138-06-14" TYPE="DATE" comment="" />
+<NAME id="P1" start="42" end="54" text="SLATER, OWEN" TYPE="PATIENT" comment="" />
+<ID id="P2" start="62" end="69" text="8635779" TYPE="MEDICALRECORD" comment="" />
+<DATE id="P3" start="84" end="94" text="06/14/2138" TYPE="DATE" comment="" />
+<NAME id="P4" start="98" end="113" text="URIEL T. ZIRKLE" TYPE="DOCTOR" comment="" />
+<NAME id="P5" start="213" end="219" text="Slater" TYPE="PATIENT" comment="" />
+<AGE id="P6" start="247" end="249" text="80" TYPE="AGE" comment="" />
+<DATE id="P7" start="314" end="318" text="2133" TYPE="DATE" comment="" />
+<NAME id="P8" start="337" end="343" text="Updike" TYPE="DOCTOR" comment="" />
+<DATE id="P9" start="825" end="841" text="December of 2137" TYPE="DATE" comment="" />
+<DATE id="P10" start="961" end="966" text="March" TYPE="DATE" comment="" />
+<NAME id="P11" start="1282" end="1287" text="Eagle" TYPE="DOCTOR" comment="" />
+<NAME id="P12" start="1292" end="1301" text="Yzaguirre" TYPE="DOCTOR" comment="" />
+<PROFESSION id="P13" start="1806" end="1817" text="news writer" TYPE="PROFESSION" comment="" />
+<DATE id="P14" start="1866" end="1870" text="2132" TYPE="DATE" comment="" />
+<NAME id="P15" start="3017" end="3032" text="URIEL T. ZIRKLE" TYPE="DOCTOR" comment="" />
+<NAME id="P16" start="3050" end="3063" text="Francis Eagle" TYPE="DOCTOR" comment="" />
+<NAME id="P17" start="3071" end="3087" text="Vonnie Yzaguirre" TYPE="DOCTOR" comment="" />
+<NAME id="P18" start="3095" end="3109" text="Fernando Gregg" TYPE="DOCTOR" comment="" />
+<LOCATION id="P19" start="3130" end="3133" text="FPC" TYPE="HOSPITAL" comment="" />
+<DATE id="P20" start="3140" end="3150" text="06/14/2138" TYPE="DATE" comment="" />
+<DATE id="P21" start="3155" end="3165" text="06/15/2138" TYPE="DATE" comment="" />
+<ID id="P22" start="3167" end="3185" text="CI:100417    :7153" TYPE="IDNUM" comment="" />
+</TAGS>
+</deIdi2b2>

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2073-05-29
+
+
+Internal Medicine
+97 Weld St                                        Xian, Imogene
+Grandview, NE 13472                                      81376761
+(552) 598-5590                                           05/29/73
+
+
+HISTORY OF PRESENT ILLNESS:  Ms. Xian is 75 years of age. 
+She has adult-onset diabetes, which in the past has required
+treatment with insulin.  She has been managed with oral
+hypoglycemics because of her reticence to using injections. 
+She also has a history of CVA.
+
+I last saw her in August of last year.  She was seen by Ms.
+Vann, our nurse practitioner in early May.
+
+CURRENT MEDICATIONS:  Glipizide 5 mg two in the morning and
+two in the evening, Plavix 75 mg one p.o. q.d., and Avandia
+2 mg one p.o. q.a.m.  According to Ms. Vann's note of Apr
+29, 2073, she is also supposed to be taking metformin 500 mg
+one in the morning and two with the evening meal as was
+prescribed back in 2072.  The patient and her son today are
+not sure that she is taking this medication.  In fact, they
+believe that she is not.  There has been moderate polyuria
+and polydipsia.  Control of diabetes has been erratic. 
+Hemoglobin A1c has been elevated.  On Apr 29, 2073, blood
+glucose was 274, BUN was 25, creatinine 1.0, electrolytes
+within normal limits as was calcium.  Cholesterol was 315. 
+Hemoglobin A1c 10.6.  The patient has not experienced chest
+pain, palpitations but she is moderately short of breath
+when climbing stairs.  There has been no orthopnea and no
+PND.  She denies dysuria and urgency and has not experienced
+near syncope.  She denies nausea, vomiting, diarrhea, and
+constipation.
+
+PHYSICAL EXAMINATION:  On physical examination today, she
+appears well.  Blood pressure 122/66.  The heart rate is 90
+and regular, weight 113 pounds, approximately five pounds
+less than last year.  Random blood glucose was 224.
+
+The patient suffered a minor CVA back in September 2071. 
+She denies any recurrence of motor deficits or symptoms
+suggestive of TIA.  The patient has a past history of
+hyperthyroidism that was treated with iodine 131.  She has
+not been hypothyroid since then.  In fact, the last TSH
+level was 0.05 in August of last year, just prior to her
+departure to Ghana.  She denies heat intolerance as well
+as palpitations.
+
+On physical examination, she is a small lady in no acute
+distress.  The neck veins are flat.  The extraocular
+movements are full.  There are no symptoms of
+hyperthyroidism.  The chest is clear to auscultation.  The
+heart sounds are regular.  There are no rubs or gallops. 
+The lower extremities are free of edema and now her toes are
+free of fungi but the nails are overgrown and require
+attention.
+
+ASSESSMENT AND PLAN:  A 76 year old woman with a past
+history of hyperthyroidism, which was treated with I-131
+with good results who, last year before she left the
+country, had a subnormal TSH.  She does not have obvious
+symptoms of hyperthyroidism but today I have obtained a
+repeat TSH as well as T3 and T4.
+
+Diabetes continues to be a problem.  Glycemic control
+continues to be difficult to achieve.  Today, I have
+reinstated metformin at 500 mg p.o. q.d.  The son is going
+to check on the medications to make certain that indeed she
+is not taking this medicine at this point.  The other
+medications were continued.  It is indeed possible that she
+will need insulin in the near future.  I plan close followup
+and will see her again in six weeks' time.  If she is
+hyperthyroid, this may also explain the difficulty in
+achieving glycemic control.  Against this is the high
+cholesterol.  She used to be on Lipitor, which was
+discontinued during her trip to Ghana.  I have
+reinstated the Lipitor today 20 mg p.o. q.d.  I have also
+added a small dose of enalapril 2.5 mg p.o. q.d. to protect
+her kidneys even though she is not hypertensive.
+
+
+______________________________
+Kevin Shamar-Trevino, M.D.
+
+
+eScription document:0-389401 NFFocus
+
+DD: 05/29/73
+DT: 05/30/73
+DV: 05/29/73
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2073-05-29" TYPE="DATE" comment="" />
+<LOCATION id="P2" start="47" end="57" text="97 Weld St" TYPE="STREET" comment="" />
+<NAME id="P3" start="97" end="110" text="Xian, Imogene" TYPE="PATIENT" comment="" />
+<LOCATION id="P4" start="111" end="120" text="Grandview" TYPE="CITY" comment="" />
+<LOCATION id="P5" start="122" end="124" text="NE" TYPE="STATE" comment="" />
+<LOCATION id="P6" start="125" end="130" text="13472" TYPE="ZIP" comment="" />
+<ID id="P7" start="168" end="176" text="81376761" TYPE="MEDICALRECORD" comment="" />
+<CONTACT id="P8" start="177" end="191" text="(552) 598-5590" TYPE="PHONE" comment="" />
+<DATE id="P9" start="234" end="242" text="05/29/73" TYPE="DATE" comment="" />
+<NAME id="P10" start="278" end="282" text="Xian" TYPE="PATIENT" comment="" />
+<AGE id="P11" start="286" end="288" text="75" TYPE="AGE" comment="" />
+<DATE id="P12" start="532" end="538" text="August" TYPE="DATE" comment="" />
+<NAME id="P13" start="574" end="578" text="Vann" TYPE="DOCTOR" comment="" />
+<DATE id="P14" start="612" end="615" text="May" TYPE="DATE" comment="" />
+<NAME id="P15" start="777" end="783" text="Vann's" TYPE="DOCTOR" comment="" />
+<DATE id="P16" start="792" end="804" text="Apr29, 2073" TYPE="DATE" comment="" />
+<DATE id="P17" start="932" end="936" text="2072" TYPE="DATE" comment="" />
+<DATE id="P18" start="1186" end="1198" text="Apr 29, 2073" TYPE="DATE" comment="" />
+<DATE id="P19" start="1903" end="1917" text="September 2071" TYPE="DATE" comment="" />
+<DATE id="P20" start="2163" end="2169" text="August" TYPE="DATE" comment="" />
+<LOCATION id="P21" start="2215" end="2220" text="Ghana" TYPE="COUNTRY" comment="" />
+<AGE id="P22" start="2701" end="2703" text="76" TYPE="AGE" comment="" />
+<LOCATION id="P23" start="3634" end="3639" text="Ghana" TYPE="COUNTRY" comment="" />
+<NAME id="P24" start="3849" end="3869" text="Kevin Shamar-Trevino" TYPE="DOCTOR" comment="" />
+<ID id="P25" start="3898" end="3906" text="0-389401" TYPE="IDNUM" comment="" />
+<DATE id="P26" start="3920" end="3928" text="05/29/73" TYPE="DATE" comment="" />
+<DATE id="P27" start="3933" end="3941" text="05/30/73" TYPE="DATE" comment="" />
+<DATE id="P28" start="3946" end="3954" text="05/29/73" TYPE="DATE" comment="" />
+</TAGS>
+</deIdi2b2>

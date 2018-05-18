@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2083-01-30
+
+COLIN RAMEY
+
+CHH Unit No:  433-88-47
+
+
+
+MISSOURI PACIFIC HOSPITAL
+
+
+
+ADULT MEDICINE
+
+
+
+
+
+Date:  January 30, 2083
+
+78-year-old male for follow-up of blood pressure. He continues to live at the home of his sister-in-law's brother who reports complaints of knee discomfort that do affect his ability to walk. He is not using his cane. Regarding his inguinal hernia, Mr. Ramey reports that it is only slightly bothersome infrequently. No chest pain, shortness of breath, or abdominal discomfort. He may have at time some difficulty starting to urinate but does not have nocturia on a regular basis. 
+
+
+
+PAST MEDICAL HISTORY:  
+
+(1)	Mental retardation.
+
+(2)	Hypertension. 
+
+(3)	Anemia.
+
+(4)	BPH. 
+
+(5)	History of peptic ulcer disease diagnosed by upper endoscopy in 2069.
+
+
+
+MEDICATIONS:  Hydrochlorothiazide 25 q.d., atenolol 25 q.d. 
+
+
+
+ALLERGIES TO MEDICATIONS: None.
+
+
+
+SOCIAL HISTORY:  Not smoking.
+
+
+
+PHYSICAL EXAM:  Weight is 145, down 2 lb. Blood pressure today is 148/70. Pulse is 76. Lungs are clear. Cardiac - Regular rate and rhythm, S1, S2. Abdomen - Soft, nontender. Inguinal examination reveals a left inguinal hernia reducible, nontender today. Rectal - Prostate symmetrically enlarged 1+ but no specific nodules or masses. Extremities - Knees - There is some tenderness in the medial joint line bilaterally, but no evidence of any effusion or erythema. No ankle edema. 
+
+
+
+ASSESSMENT AND PLAN:  
+
+(1)	Hypertension, stable. Continue present regimen. Will check a potassium level.
+
+(2)	History of anemia. Will recheck CBC as well as a B12 level as his MCV was slightly up at 97. TSH done in November was normal. 
+
+(3)	Osteoarthritis. Advised use of Tylenol 2 tablets Extra-Strength q6 hours as needed. Will get Sissonville VNA to come and see him regarding physical therapy evaluation. He will otherwise follow up in 6 months. 
+
+
+
+Xavier Combs, M.D.
+
+XC/olivas/quijano
+
+
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2083-01-30" TYPE="DATE" comment="" />
+<NAME id="P1" start="28" end="39" text="COLIN RAMEY" TYPE="PATIENT" comment="" />
+<LOCATION id="P2" start="41" end="44" text="CHH" TYPE="HOSPITAL" comment="" />
+<ID id="P3" start="55" end="64" text="433-88-47" TYPE="MEDICALRECORD" comment="" />
+<LOCATION id="P4" start="68" end="93" text="MISSOURI PACIFIC HOSPITAL" TYPE="HOSPITAL" comment="" />
+<DATE id="P5" start="124" end="140" text="January 30, 2083" TYPE="DATE" comment="" />
+<AGE id="P6" start="142" end="144" text="78" TYPE="AGE" comment="" />
+<NAME id="P7" start="395" end="400" text="Ramey" TYPE="PATIENT" comment="" />
+<DATE id="P8" start="789" end="793" text="2069" TYPE="DATE" comment="" />
+<DATE id="P9" start="1629" end="1637" text="November" TYPE="DATE" comment="" />
+<LOCATION id="P10" start="1749" end="1760" text="Sissonville" TYPE="CITY" comment="" />
+<NAME id="P11" start="1869" end="1881" text="Xavier Combs" TYPE="DOCTOR" comment="" />
+<NAME id="P12" start="1889" end="1891" text="XC" TYPE="DOCTOR" comment="" />
+<NAME id="P13" start="1892" end="1898" text="olivas" TYPE="DOCTOR" comment="" />
+<NAME id="P14" start="1899" end="1906" text="quijano" TYPE="DOCTOR" comment="" />
+</TAGS>
+</deIdi2b2>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2122-07-21
+
+Valle, Isabella
+
+KMC Neuro EW Consult
+
+Date 7/21/22
+
+MRN 4698877
+
+DOB: 7/30/67
+
+
+
+CC: Unresponsive this AM, with R sided deficit
+
+HPI : 54 yo ?handedness WF with sig h/o PCKD on peritoneal dialysis, HTN, hypercholesterolemia, IDDM, s/p L MCA aneurysmal rupture and repair 4/22, who presents this AM found unresponsive by husband (All report given by EMS< cannot contact husband and he is not currently present.) Pt reportedly was last seen in USOH last night about 9pm when peritoneal dialysis was started. She was found this AM with her dialysate fluid half run through and it was on the floor, she was unresponsive.  Pt intermittenly responds to commands and is not speaking, so ROS is unabl to obtain at this point.
+
+
+
+ALL: unknown if any allergies
+
+Meds: Lipitor, Prednisone,Zestril, Norvasc, Calcitol, Phenytoin, Mesnest, Nephrocaps, Phoslo, Insulin NPH 37 and Reg 7
+
+Med Hx:  as above, HTN, hypercholesterolemia, PCKD, IDDM, s/p L MCA aneurysm 4/22 
+
+Soc Hx: unknown at this time
+
+
+
+PE: T   96.6         P   101       R   20        BP    167/62         O2=100 RA
+
+Gen: WF, appears older than stated age, withdrawing R side, looking to left
+
+HEENT: normocephalic,atraumatic
+
+Neck: supple, no bruits
+
+Lungs: CTAB no w/r/c
+
+Heart: RRR S1, S2, no m/r/g
+
+Abd: soft, +BSs, slightly firm, peritoneal dialysate access in abdomen, abd bandaged, fluid exuding from abdomen
+
+Ext: no c/c/e
+
+Neuro: alert, cannot assess if pt is oriented to person, place, time, pt completely aphasic, follows verbal commands, cannot perform rest of MMSE at this time
+
+CN: PERRLA, EOMI, eyes deviated to L, not roving, able to track and cross midline, no blink to threat on the L, visual acuity unable to assess, sensation face equal bilaterally, R sided NLF flattening, 
+
+Motor: no PND on L, cannot lift R arm off bed to command, normal bulk on R, increased tone on R, atrophy of leg and arm on L, no tremors or fasiculations noted 
+
+Strength unable to assess officially, moving L arm and leg spontaneously, no movement of R upper and lower extremities, only demonstrates flexor withraw to painful stimuli on R side
+
+Sensation: unable to assess, pt does not respond to questions re:extinction or sensation but does respond to painful stimuli
+
+Cerebellum: unable to assess
+
+Gait: unable to assess
+
+Reflexes: biceps, triceps, BR R 3+, L 2+
+
+	Patellar, Achilles 3+ R, 2+ L, toes upgoing on R, downgoing on L
+
+Labs: WBC sig for 17.5 w/ 90%N, chem 7 pending
+
+Imaging: Pending CXR
+
+A/P: 54 yo WF with sig medical problems, including L MCA stroke in 4/22, now with new R sided deficits ?stroke vs. sz
+
+-CT no angio for now givenperitoneal dialysis
+
+-likely for MRI/A of head and neck with diffusion as per acute stroke protocol 
+
+-likely CMF admission/ stroke team unless suspicion for sz, infectious cause
+
+
+
+
+
+
+
+
+
+Thelma Delarosa MD,PhD Neurology Resident Pager 04272
+
+
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2122-07-21" TYPE="DATE" comment="" />
+<NAME id="P1" start="28" end="43" text="Valle, Isabella" TYPE="PATIENT" comment="" />
+<LOCATION id="P2" start="45" end="48" text="KMC" TYPE="HOSPITAL" comment="" />
+<DATE id="P3" start="72" end="79" text="7/21/22" TYPE="DATE" comment="" />
+<ID id="P4" start="85" end="92" text="4698877" TYPE="MEDICALRECORD" comment="" />
+<DATE id="P5" start="99" end="106" text="7/30/67" TYPE="DATE" comment="" />
+<AGE id="P6" start="164" end="166" text="54" TYPE="AGE" comment="" />
+<DATE id="P7" start="300" end="304" text="4/22" TYPE="DATE" comment="" />
+<DATE id="P8" start="978" end="982" text="4/22" TYPE="DATE" comment="" />
+<AGE id="P9" start="2486" end="2488" text="54" TYPE="AGE" comment="" />
+<DATE id="P10" start="2548" end="2552" text="4/22" TYPE="DATE" comment="" />
+<NAME id="P11" start="2814" end="2829" text="Thelma Delarosa" TYPE="DOCTOR" comment="" />
+<CONTACT id="P12" start="2862" end="2867" text="04272" TYPE="PHONE" comment="" />
+</TAGS>
+</deIdi2b2>

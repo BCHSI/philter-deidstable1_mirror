@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2078-09-17
+
+
+
+HENDRICKS, HANNAH
+75322175
+09/17/2078
+
+Trevon Schmidt, M.D.
+47 Clinton Street, Guite 299
+Decatur, WI 33955
+
+
+Dear Dr. Schmidt:
+
+Your patient, Hannah Hendricks, was in the Surgery Clinic today.  As you know, she is a 52-year-old woman with a history of peripheral vascular disease.  She underwent a redo left femoral to anterior tibial bypass graft using basilic and cephalic vein from her right arm on May 3, 2078.  She has done well since the procedure.  She is now comes here complaining of left foot pain.  She had an ultrasound in the vascular lab to rule out a DVT, which it did.  She explains the discomfort as pain and burning in the bottom of her foot as well as her arch and over the dorsum of the foot.  
+
+
+On exam, she is a well appearing female in no acute distress.  She is alert and oriented x3.  She appears grossly neurologically intact.  Her lower extremity exam reveals easily palpable bypass graft pulse in her left leg.  Her left foot is warm and well perfused and she has a very small pinhole ulcer over the plantar aspect of her left great toe.  This does not appear infected and I cannot probe to bone.  It remains superficial.  She has no other ischemic skin changes noted. 
+
+
+I have discussed with Hannah that her discomfort most likely is due to peripheral neuropathy due to her diabetes.  She also experienced this discomfort prior to her surgery.  She is enquiring about starting Neurontin.  I have said she would be able to try either Neurontin or Lyrica to help with the peripheral neuropathy.  She will return next week for her postoperative graft scan to assess her circulation.  She knows to contact us sooner if thing worsen. 
+
+
+If I can be of further assistance in her care, do not hesitate to contact me.
+
+
+Sincerely,
+
+
+Hunter Shea, MD
+
+
+Dictated by: Quanisha Logan, PA-C
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2078-09-17" TYPE="DATE" comment="" />
+<NAME id="P1" start="30" end="47" text="HENDRICKS, HANNAH" TYPE="PATIENT" comment="" />
+<ID id="P2" start="48" end="56" text="75322175" TYPE="MEDICALRECORD" comment="" />
+<DATE id="P3" start="57" end="67" text="09/17/2078" TYPE="DATE" comment="" />
+<NAME id="P4" start="69" end="83" text="Trevon Schmidt" TYPE="DOCTOR" comment="" />
+<LOCATION id="P5" start="90" end="107" text="47 Clinton Street" TYPE="STREET" comment="" />
+<LOCATION id="P7" start="119" end="126" text="Decatur" TYPE="CITY" comment="" />
+<LOCATION id="P8" start="128" end="130" text="WI" TYPE="STATE" comment="" />
+<LOCATION id="P9" start="131" end="136" text="33955" TYPE="ZIP" comment="" />
+<NAME id="P10" start="148" end="155" text="Schmidt" TYPE="DOCTOR" comment="" />
+<NAME id="P11" start="172" end="188" text="Hannah Hendricks" TYPE="PATIENT" comment="" />
+<AGE id="P13" start="246" end="248" text="52" TYPE="AGE" comment="" />
+<DATE id="P14" start="432" end="443" text="May 3, 2078" TYPE="DATE" comment="" />
+<NAME id="P15" start="1253" end="1259" text="Hannah" TYPE="PATIENT" comment="" />
+<NAME id="P16" start="1786" end="1797" text="Hunter Shea" TYPE="DOCTOR" comment="" />
+<NAME id="P17" start="1817" end="1831" text="Quanisha Logan" TYPE="DOCTOR" comment="" />
+</TAGS>
+</deIdi2b2>

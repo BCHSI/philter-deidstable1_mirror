@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2093-01-10
+
+  CARDIOLOGY ADMISSION NOTE
+
+
+
+Uriah LARA
+
+FH 621-15-64-4
+
+Date of admission 01/10/93
+
+PMD:  Kenneth Bruce, MD, 92 Grand Avenue #704F, East Stroudsburg 97162
+
+Ref:  Collin L. Cardenas, MD, FH Cardiology
+
+
+
+This 60-yr-old man is admitted w/dizziness and CP.  Hx of CAD S/P stenting in 7/92, now has several wks of positional dizziness and CD.  Reports over past wks on reaching the top of 1 flight of stairs he feels lightheaded and SOB, some episodes accompanied by chest tightness w/radiation to R axilla.  Not exactly but somewhat reminiscent of previous CD w/radiation to R scapula.  Also had dizziness when rising from squatting to standing, at times quite profound.  Has not had LOC w/episodes.  Also denies PND, orthopnea, leg edema, fevers, chills, ill contacts, or travel hx.  He saw Dr. Cardenas in the office several days ago, was scheduled for ETT and event monitor, but due to persistent symptoms came to FH ER for eval.  
+
+
+
+PMH:  CAD S/P LAD DES placement 7/92, HTN, dyslipidemia, MVA, mild MR.
+
+
+
+Outpt meds:  aspirin 325 qd, Plavix 75 qd, Lipitor 40 qd, Lopid 600 bid, Toprol XL 12.5 qd, folate, trazedone.  Intolerance to high dose beta blockers (orthostatic symptoms and fatigue).  
+
+
+
+Former tobacco use, occasional alcohol.  Denies IVDU.  Recently married.  Family hx pos for CAD.  
+
+
+
+ROS:  10-system review negative.
+
+
+
+PE:  Afebrile, P 80, BP 150/90, R 18, O2 sat 76%.  Somewhat disillusioned appearing man lying in bed NAD.  HEENT PERLA EOMI, neck supple, JVP <10, no lymphadenopathy or thyromegaly, lungs clear.  CV RRR S1 S2, soft MR murmur.  Extremities warm w/o edema.  Abdomen pos BS soft NT ND.  Pulses intact distally.
+
+
+
+Labs:  BUN 18, crea 1.1, crit 40, CK and troponin neg x 2.  
+
+ECG:  NSR, normal intervals and axis, no acute ST T-wave abnormalities.
+
+ETT MIBI today:  5 minutes, no evidence of ECG changes albeit at a very low work load.  Nuclear images (preliminary) reveal evidence of mild ischemia in the anterior territory.  
+
+
+
+A&P:  60-yr-old man w/known CAD S/P LAD stenting presents w/recurrent CP and episodes of lightheadedness.  Plan to continue current meds, and in light of hx and mildly positive ETT at low workload will pursue cardiac cath, obtain transthoracic echo.
+
+
+
+
+
+_____________
+
+Steven Huerta, MD
+
+DS:   01/10/93
+
+DD:   01/10/93
+
+DT:   01/12/93
+
+    
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2093-01-10" TYPE="DATE" comment="" />
+<NAME id="P1" start="59" end="69" text="Uriah LARA" TYPE="PATIENT" comment="" />
+<LOCATION id="P2" start="71" end="73" text="FH" TYPE="HOSPITAL" comment="" />
+<ID id="P3" start="74" end="85" text="621-15-64-4" TYPE="MEDICALRECORD" comment="" />
+<DATE id="P4" start="105" end="113" text="01/10/93" TYPE="DATE" comment="" />
+<NAME id="P5" start="121" end="134" text="Kenneth Bruce" TYPE="DOCTOR" comment="" />
+<LOCATION id="P6" start="140" end="155" text="92 Grand Avenue" TYPE="STREET" comment="" />
+<LOCATION id="P8" start="163" end="179" text="East Stroudsburg" TYPE="CITY" comment="" />
+<LOCATION id="P9" start="180" end="185" text="97162" TYPE="ZIP" comment="" />
+<NAME id="P10" start="193" end="211" text="Collin L. Cardenas" TYPE="DOCTOR" comment="" />
+<LOCATION id="P11" start="217" end="219" text="FH" TYPE="HOSPITAL" comment="" />
+<AGE id="P12" start="239" end="241" text="60" TYPE="AGE" comment="" />
+<DATE id="P13" start="312" end="316" text="7/92" TYPE="DATE" comment="" />
+<NAME id="P14" start="824" end="832" text="Cardenas" TYPE="DOCTOR" comment="" />
+<LOCATION id="P15" start="945" end="947" text="FH" TYPE="HOSPITAL" comment="" />
+<DATE id="P16" start="998" end="1002" text="7/92" TYPE="DATE" comment="" />
+<AGE id="P17" start="2004" end="2006" text="60" TYPE="AGE" comment="" />
+<NAME id="P18" start="2268" end="2281" text="Steven Huerta" TYPE="DOCTOR" comment="" />
+<DATE id="P19" start="2293" end="2301" text="01/10/93" TYPE="DATE" comment="" />
+<DATE id="P20" start="2309" end="2317" text="01/10/93" TYPE="DATE" comment="" />
+<DATE id="P21" start="2325" end="2333" text="01/12/93" TYPE="DATE" comment="" />
+</TAGS>
+</deIdi2b2>

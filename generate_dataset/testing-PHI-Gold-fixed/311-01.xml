@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2082-11-22
+
+                     ZHH EMERGENCY DEPT VISIT
+
+ 
+
+FINNEY,INDIANA   432-94-73-9                  VISIT DATE: 11/22/82
+
+PRESENTING COMPLAINT:  Chest pain. 
+
+HISTORY OF PRESENTING COMPLAINT:  Ms. Finney is a 45 year-old 
+
+woman with type II diabetes who presents with new onset of 
+
+palpitations and chest tightness.  The episodes last 10-15 minutes 
+
+and mainly occur with exertion, relieved by rest.  These occurred 
+
+at rest today and so she came to the hospital.  She reports being 
+
+ill lately with a cough, for a long time.  She has no history of 
+
+coronary artery disease.  She has had no fever. 
+
+PAST MEDICAL HISTORY:  She had recent dental work and she was told 
+
+she has a heart murmur. 
+
+MEDICATIONS:  Oral hypoglycemics. 
+
+ALLERGIES:  No known allergies. 
+
+SOCIAL HISTORY AND FAMILY HISTORY:  She does not smoke. 
+
+PHYSICAL EXAMINATION:  VITAL SIGNS:  Pulse 111, temperature 100, 
+
+blood pressure 157/69.  GENERAL:  Alert, calm and oriented.  In no 
+
+distress.  NECK:  No adenopathy.  Thyroid was not palpable. 
+
+Oropharynx was normal.  CHEST:  Clear.  CARDIOVASCULAR:  Regular 
+
+rate and rhythm.  ABDOMEN:  Soft and non-tender.  EXTREMITIES:  No 
+
+clubbing, cyanosis or edema.  She had no rash. 
+
+LABORATORY EVALUATION:  Electrocardiogram showed mild ST segment 
+
+change that was non-diagnostic and confirmed the tachycardia. 
+
+Laboratory evaluation is pending at the time of dictation.  Chest 
+
+x-ray is pending and the results will be appended by my successor. 
+
+FINAL DIAGNOSIS:  Chest pain, exertional type. 
+
+DISPOSITION (including condition upon discharge):  Disposition will 
+
+be appended by my successor.  Patient is currently in stable 
+
+condition. 
+
+___________________________________                    TJ371/9248 
+
+YVES BLACKBURN, M.D.       HB79                         D:11/22/82 
+
+                                                       T:11/23/82 
+
+Dictated by:  YVES BLACKBURN, M.D.       HB79 
+
+ ******** Not reviewed by Attending Physician ********
+
+
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2082-11-22" TYPE="DATE" comment="" />
+<LOCATION id="P1" start="49" end="52" text="ZHH" TYPE="HOSPITAL" comment="" />
+<NAME id="P2" start="78" end="92" text="FINNEY,INDIANA" TYPE="PATIENT" comment="" />
+<ID id="P3" start="95" end="106" text="432-94-73-9" TYPE="MEDICALRECORD" comment="" />
+<DATE id="P4" start="136" end="144" text="11/22/82" TYPE="DATE" comment="" />
+<NAME id="P5" start="221" end="227" text="Finney" TYPE="PATIENT" comment="" />
+<AGE id="P6" start="233" end="235" text="45" TYPE="AGE" comment="" />
+<ID id="P7" start="1754" end="1764" text="TJ371/9248" TYPE="IDNUM" comment="" />
+<NAME id="P8" start="1767" end="1781" text="YVES BLACKBURN" TYPE="DOCTOR" comment="" />
+<NAME id="P9" start="1794" end="1798" text="HB79" TYPE="USERNAME" comment="" />
+<DATE id="P10" start="1825" end="1833" text="11/22/82" TYPE="DATE" comment="" />
+<DATE id="P11" start="1893" end="1901" text="11/23/82" TYPE="DATE" comment="" />
+<NAME id="P12" start="1918" end="1932" text="YVES BLACKBURN" TYPE="DOCTOR" comment="" />
+<NAME id="P13" start="1945" end="1949" text="HB79" TYPE="USERNAME" comment="" />
+</TAGS>
+</deIdi2b2>

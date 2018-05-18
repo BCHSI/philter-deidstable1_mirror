@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2062-09-18
+
+Tammy Umphrey
+
+PDI Unit No: 094-22-07
+
+
+
+CLEVELAND PUBLIC INSTITUTE
+
+
+
+Internal Medicine
+
+
+
+
+
+Date: September 18, 2062
+
+
+
+MEDICATIONS: Glynase 3 mg q.a.m., Glucophage 500 mg q.p.m., Ultram 50 mg b.i.d., Synthroid ? dose q.d., Premarin 0.625 mg q.d., Monopril 40 mg q.d., Dyazide 1 q.d., Neurontin 300 mg q.i.d., glucosamine chondroitin, vitamin E 400 IU q.d., Citracal 2 q.d., Centrum Silver 1 q.d. 
+
+
+
+(1)	Diabetes mellitus: Went on cruise.  Ate frequently but watched portions.  Apparently patient checks blood sugars between 3:00 and 3:00 and when she has shakiness.  She was under the impression that after lunch she had to fast for three hours prior to checking sugar, at which point notes low blood sugars in the 50's to 70's with shakiness, for which she takes a handful of raisins.  Generally eats breakfast at 8:30, lunch 12:00 or 12:30, supper at 5:30.  Snacks in the evening, always apple and yogurt.  Most recently, additionally popcorn and saltine crackers, occasional pretzels.  After takes raisins, shakiness of hypoglycemic symptoms resolve.  While on cruise, patient found that she could actually walk more than she thought she could.  Since she has been home, has not been walking routinely.
+
+(2)	HTN: No chest pain, shortness of breath or palpitations.  
+
+(3)	Back pain/lower extremity pain.  States taking glucosamine chondroitin.  Over the last two or three months, feels that it is helping with decreased pain.  Also has been seen at physical therapy again.  Feels that this is helping.
+
+
+
+PE:	Weight down 2 pounds!.  Blood pressure, right arm: 126/68.  Chest is clear.  Cardiac: Regular rhythm at 66, no murmur or gallop.  
+
+
+
+A/P:	(1)	Diabetes mellitus: Somewhat better control with mildly elevated morning sugars.  Have asked patient to decrease popcorn and/or crackers at h.s.  Have advised patient to take small handful of raisins prior to onset of hypoglycemic symptoms advised around 2:00 to 2:30 p.m.  Have encouraged patient to continue to walk daily.  Continue current treatment.
+
+(2)	Back pain/lower extremity pain: Some improvement with PT and increased med.  Continue for now.
+
+(3)	HTN: At goal.  Return to clinic at the beginning of November to Dr. Ullom to resume care.
+
+Kathleen L Kuhn, RNC, ANP
+
+KL/utz/orton
+
+
+
+
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2062-09-18" TYPE="DATE" comment="" />
+<NAME id="P1" start="28" end="41" text="Tammy Umphrey" TYPE="PATIENT" comment="" />
+<LOCATION id="P2" start="43" end="46" text="PDI" TYPE="HOSPITAL" comment="" />
+<ID id="P3" start="56" end="65" text="094-22-07" TYPE="MEDICALRECORD" comment="" />
+<LOCATION id="P4" start="69" end="95" text="CLEVELAND PUBLIC INSTITUTE" TYPE="HOSPITAL" comment="" />
+<DATE id="P6" start="128" end="146" text="September 18, 2062" TYPE="DATE" comment="" />
+<DATE id="P7" start="2197" end="2205" text="November" TYPE="DATE" comment="" />
+<NAME id="P8" start="2213" end="2218" text="Ullom" TYPE="DOCTOR" comment="" />
+<NAME id="P9" start="2236" end="2251" text="Kathleen L Kuhn" TYPE="DOCTOR" comment="" />
+<NAME id="P10" start="2263" end="2265" text="KL" TYPE="DOCTOR" comment="" />
+<NAME id="P11" start="2266" end="2269" text="utz" TYPE="DOCTOR" comment="" />
+<NAME id="P12" start="2270" end="2275" text="orton" TYPE="DOCTOR" comment="" />
+</TAGS>
+</deIdi2b2>

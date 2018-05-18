@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2093-04-28
+
+                     BMC EMERGENCY DEPT VISIT
+
+ 
+
+NANCY-JASMINE,NIKKOLAS   693-31-18-1                VISIT DATE: 04/28/93
+
+The patient was seen, interviewed and examined by myself as well as 
+
+Dr. Judd whose note I have reviewed, and whose findings I have 
+
+confirmed. 
+
+HISTORY OF PRESENTING COMPLAINT:  This patient is a 68 year-old 
+
+male who presents with slurred speech.  The patient has a history 
+
+of a prior cerebrovascular accident with residual right sided 
+
+deficit.  One day prior to arrival, the patient was found to have 
+
+increasing slurring of speech and he was found to increasing 
+
+weakness over his baseline on the right side.  The patient arrives 
+
+without acute complaints except for difficulty speaking.  He denies 
+
+any headache.  He also does complain of some throat pain. 
+
+REVIEW OF SYSTEMS:  Review of systems is as per the written note.  
+
+The patient denies fevers, chills, chest pain, shortness of breath 
+
+or dysphagia.  
+
+PAST MEDICAL HISTORY:  The patient's past medical history is 
+
+significant for hypertension, diabetes mellitus, cerebrovascular 
+
+accident and otherwise as per the written note.
+
+MEDICATIONS:  The patient's medications include Tylenol, aspirin, 
+
+Avenida, Glucophage, Zoloft, hydrochlorothiazide, metoprolol and 
+
+otherwise as per the written note.
+
+ALLERGIES:  The patient has no known drug allergies. 
+
+SOCIAL HISTORY AND FAMILY HISTORY:  The patient's social history 
+
+and family history are as per the written note and are significant 
+
+for past tobacco use and no alcohol use.  He lives with family and 
+
+goes to a day care facility.
+
+PHYSICAL EXAMINATION:  GENERAL:  The patient is a well nourished 
+
+male in no acute distress.  VITAL SIGNS:  Temperature 97, pulse 62, 
+
+respiratory rate 16, blood pressure 163/96, oxygen saturation 100% 
+
+on room air.  NECK:  Supple with full range of motion.  No nuchal 
+
+rigidity.  LUNGS:  Clear to auscultation bilaterally with good air 
+
+movement.  CARDIAC:  Regular with ectopy.  No murmur is 
+
+auscultated.  NEUROLOGIC:  Alert, oriented x 3, dysarthric.  Finger 
+
+to nose is within normal limits bilaterally.  There is 5/5 motor 
+
+strength throughout the left upper extremity and left lower 
+
+extremity.  The right upper extremity and right lower extremity 
+
+there is 3/5 motor strength throughout all motor groups tested.  
+
+The patient is able to follow all commands.  His ability to 
+
+understand appears to be completely intact.  
+
+Further details of the patient's physical examination are as per 
+
+the written note.
+
+LABORATORY EVALUATION:  Laboratory studies are significant for a 
+
+glucose of 195, BUN of 14, creatinine of 1.2, bicarbonate of 26, CK 
+
+of 68, toxicology screen which is negative, troponin of 0.04, white 
+
+count of 7.4, hematocrit of 42.0, platelets of 327 and a urinalysis 
+
+that is pending.  A head CT is also pending.
+
+THERAPY RENDERED/COURSE IN ED:  The patient was interviewed and 
+
+examined in the emergency department.  His past medical records 
+
+were reviewed.  The patient has new neurologic findings on top of 
+
+an old cerebrovascular accident.   
+
+CONSULTATIONS (including PCP):  The neurology service was therefore 
+
+consulted and a head CT was ordered.  The patient will be admitted 
+
+to the neurology service for further work up and he will likely 
+
+also undergo an MRI/MRA.
+
+FINAL DIAGNOSIS:  Cerebrovascular accident.
+
+DISPOSITION (including condition upon discharge):  The patient is 
+
+admitted to the neurology service in satisfactory condition.
+
+___________________________________                    KM855/90247 
+
+ALISHA VIOLA, M.D.       AV51                        D:04/28/93 
+
+                                                       T:04/28/93 
+
+Dictated by:  ALISHA VIOLA, M.D.       AV51 
+
+ ******** Not reviewed by Attending Physician ********
+
+
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2093-04-28" TYPE="DATE" comment="" />
+<LOCATION id="P1" start="49" end="52" text="BMC" TYPE="HOSPITAL" comment="" />
+<NAME id="P2" start="78" end="100" text="NANCY-JASMINE,NIKKOLAS" TYPE="PATIENT" comment="" />
+<ID id="P3" start="103" end="114" text="693-31-18-1" TYPE="MEDICALRECORD" comment="" />
+<DATE id="P4" start="142" end="150" text="04/28/93" TYPE="DATE" comment="" />
+<NAME id="P5" start="226" end="230" text="Judd" TYPE="DOCTOR" comment="" />
+<AGE id="P6" start="352" end="354" text="68" TYPE="AGE" comment="" />
+<ID id="P7" start="3572" end="3583" text="KM855/90247" TYPE="IDNUM" comment="" />
+<NAME id="P8" start="3586" end="3598" text="ALISHA VIOLA" TYPE="DOCTOR" comment="" />
+<NAME id="P9" start="3611" end="3615" text="AV51" TYPE="USERNAME" comment="" />
+<DATE id="P10" start="3641" end="3649" text="04/28/93" TYPE="DATE" comment="" />
+<DATE id="P11" start="3709" end="3717" text="04/28/93" TYPE="DATE" comment="" />
+<NAME id="P12" start="3734" end="3746" text="ALISHA VIOLA" TYPE="DOCTOR" comment="" />
+<NAME id="P13" start="3759" end="3763" text="AV51" TYPE="USERNAME" comment="" />
+</TAGS>
+</deIdi2b2>

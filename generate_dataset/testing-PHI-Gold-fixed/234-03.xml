@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2075-07-03
+
+EDVISIT^80780896^SERGIO-STEVEN, FRANCESCA^07/03/75^VARNER, FALLON
+
+The patient was seen in conjunction with the resident, Dr.
+
+Vue.  Resident's note was reviewed.  The patient was seen and
+
+examined by me.
+
+HISTORY OF PRESENT ILLNESS:  Briefly, this is a 73-year-old woman
+
+with extensive cardiac history of hypertension and coronary
+
+artery disease, IMI with any EF 40%, history of V-TACH, high
+
+cholesterol, insulin-dependent diabetes, and status post AICD
+
+cardiac catheterization and in the past.  The patient was in the
+
+Emergency Department today visiting a family member.  She was
+
+completely asymptomatic, but had her blood pressure taken which
+
+showed a pressure of 190/98.  The patient states that she usually
+
+takes 9 cardiac and antihypertensive medicines but the
+
+prescriptions has run out and so for the past week or so, she has
+
+been taking only 4 of the 9.  She is unable to say exactly which
+
+ones.  She denies any headache, visual changes, chest pain,
+
+shortness of breath, palpitations, dizziness, or lightheadedness.
+
+ Her husband is the one in the Emergency Department today and
+
+that is causing her some stress.  Denies any rash, joint pain,
+
+back pain, polyuria, or polydipsia.
+
+Please see the resident's note for details of the patient's past
+
+medical history, surgical history, family history, review of
+
+systems, and physical exam.
+
+PHYSICAL EXAMINATION:  She is awake, alert, in no distress with
+
+no complaints.  Has a repeat blood pressure of 190/95 and
+
+saturating 99% on room air with a pulse of 70.  Exam is
+
+remarkable for a systolic ejection murmur at the right upper
+
+sternal border of 3/6.  No JVD, with good and equal pulses. 
+
+Abdomen is soft and nontender.  She has no papilledema and fundal
+
+exam is clear.  Neurologically, she is oriented x3 with normal
+
+mood and affect.
+
+IMAGING STUDIES:  EKG shows first-degree AV block with an old
+
+LAD.  This is considered normal for this patient and is unchanged
+
+from before.  Urinary dip is negative.
+
+EMERGENCY DEPARTMENT COURSE:  The patient's usual pharmacy is
+
+contacted.  Correct doses of her medications are obtained and
+
+refills for 2 weeks were given.  She is told to follow up with
+
+her primary care physician within 2 weeks.  She says she will be
+
+able to do that and remains asymptomatic throughout her Emergency
+
+Department stay.  At one point during her stay, her blood
+
+pressure went up to as high as 209/98, however, on my last
+
+recheck, just prior to the patient leaving, the pressure was
+
+185/90.  The patient's primary care physician was contacted about
+
+this and agrees to follow up with the patient within 3 days.
+
+DISPOSITION:  The patient is discharged home in satisfactory
+
+condition.
+
+ ******** Not reviewed by Attending Physician ********
+
+PRIMARY DIAGNOSIS:  Hypertension.
+
+______________________________
+
+VARNER, FALLON M.D.
+
+D: 07/03/75
+
+T: 07/03/75
+
+Dictated By: VARNER, FALLON
+
+eScription document:1-0201766 BF
+
+
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2075-07-03" TYPE="DATE" comment="" />
+<ID id="P1" start="36" end="44" text="80780896" TYPE="MEDICALRECORD" comment="" />
+<NAME id="P2" start="45" end="69" text="SERGIO-STEVEN, FRANCESCA" TYPE="PATIENT" comment="" />
+<DATE id="P3" start="70" end="78" text="07/03/75" TYPE="DATE" comment="" />
+<NAME id="P4" start="79" end="93" text="VARNER, FALLON" TYPE="DOCTOR" comment="" />
+<NAME id="P5" start="155" end="158" text="Vue" TYPE="DOCTOR" comment="" />
+<AGE id="P6" start="283" end="285" text="73" TYPE="AGE" comment="" />
+<NAME id="P7" start="2841" end="2855" text="VARNER, FALLON" TYPE="DOCTOR" comment="" />
+<DATE id="P8" start="2865" end="2873" text="07/03/75" TYPE="DATE" comment="" />
+<DATE id="P9" start="2878" end="2886" text="07/03/75" TYPE="DATE" comment="" />
+<NAME id="P10" start="2901" end="2915" text="VARNER, FALLON" TYPE="DOCTOR" comment="" />
+<ID id="P11" start="2937" end="2946" text="1-0201766" TYPE="IDNUM" comment="" />
+</TAGS>
+</deIdi2b2>

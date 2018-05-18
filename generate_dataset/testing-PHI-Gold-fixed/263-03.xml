@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2080-08-08
+
+EDVISIT^35093053^Dodd, Steven^08/08/80^DURHAM, DENA CHRISTENA
+
+CHIEF COMPLAINT:  Chest pain.
+
+I confirm that I have seen and evaluated this patient, reviewed
+
+the resident's documentation, discussed the evaluation, plan of
+
+care, and disposition with the patient.
+
+HISTORY OF PRESENT ILLNESS:  This is a 65-year-old gentleman with
+
+a history of coronary artery disease who is transferred here from
+
+an outlying institution after an episode of left chest radiated
+
+to his arm that awoke him from sleep at about 11 o'clock.  This
+
+resolved after some sublingual nitroglycerin at the hospital but
+
+was associated with some diaphoresis.  He cannot tell if it is
+
+like his previous coronary pain or not.
+
+REVIEW OF SYSTEMS:  Negative for nausea, vomiting, diarrhea,
+
+abdominal pain, fever, or chills.  Otherwise, negative.
+
+PAST MEDICAL HISTORY, MEDICATIONS, ALLERGIES, SOCIAL, AND FAMILY
+
+HISTORY:  As per the chart.
+
+PHYSICAL EXAMINATION:  Shows a well-developed morbidly obese
+
+gentleman snoring in the bed in no acute distress.  He is
+
+asymptomatic when I see him and complaining of being tired. 
+
+HEENT is normocephalic, atraumatic.  Oropharynx is unremarkable. 
+
+Neck is supple.  Chest is clear.  Abdomen is morbidly obese,
+
+soft, and nontender.  Extremities are without cyanosis, clubbing,
+
+or edema.
+
+EMERGENCY DEPARTMENT COURSE:  The patient has an EKG, an abnormal
+
+but unchanged in comparison with previously.  He had a total
+
+troponin here of 0.99 equal to the 0.1 at the outlying
+
+institution.  His MB is 8 with a CK of 242.  His creatinine is
+
+also 4.5.
+
+PLAN:  Admission to the hospital for further evaluation.
+
+DIAGNOSIS:  Non-Q-wave, non-ST-elevation myocardial infarction.
+
+DISPOSITION:  The patient is admitted for further care.
+
+______________________________
+
+DURHAM, DENA CHRISTENA M.D.
+
+D: 08/08/80
+
+T: 08/08/80
+
+Dictated By: DURHAM, DENA CHRISTENA
+
+eScription document:5-0405500 BFFocus
+
+******** Not reviewed by Attending Physician ********
+
+
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2080-08-08" TYPE="DATE" comment="" />
+<ID id="P1" start="36" end="44" text="35093053" TYPE="MEDICALRECORD" comment="" />
+<NAME id="P2" start="45" end="57" text="Dodd, Steven" TYPE="PATIENT" comment="" />
+<DATE id="P3" start="58" end="66" text="08/08/80" TYPE="DATE" comment="" />
+<NAME id="P4" start="67" end="89" text="DURHAM, DENA CHRISTENA" TYPE="DOCTOR" comment="" />
+<AGE id="P5" start="332" end="334" text="65" TYPE="AGE" comment="" />
+<NAME id="P6" start="1804" end="1826" text="DURHAM, DENA CHRISTENA" TYPE="DOCTOR" comment="" />
+<DATE id="P7" start="1836" end="1844" text="08/08/80" TYPE="DATE" comment="" />
+<DATE id="P8" start="1849" end="1857" text="08/08/80" TYPE="DATE" comment="" />
+<NAME id="P9" start="1872" end="1894" text="DURHAM, DENA CHRISTENA" TYPE="DOCTOR" comment="" />
+<ID id="P10" start="1916" end="1925" text="5-0405500" TYPE="IDNUM" comment="" />
+</TAGS>
+</deIdi2b2>

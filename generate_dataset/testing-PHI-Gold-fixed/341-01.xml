@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2092-05-06
+
+Patient Name: WILHELM, GOLDY;  MRN: 9543443
+
+Dictated at: 05/06/2092 by EDWARD XAYASANE, M.D. 
+
+
+
+ 
+
+CHIEF COMPLAINT: Right leg pain and difficulty walking.   
+
+HISTORY OF PRESENT ILLNESS: Ms. Wilhelm is a 68-year-old right-handed female who has had a three-week history of having right leg pain and difficulty walking. She states that her pain started about three weeks ago when she was bending and picking up a pot. She states she had a pain in her back that radiated around her right side down her groin into her medial leg, not past the knee. She states that it went away at that time. The next day she felt worsened and had difficulty working and saw her physician.  An MRI was ordered. Since then, she feels about 60-75 percent better. She states that her pain is constant and describes it as a sharp pain. She does state she feels weak and her knee would buckle. She does not have any numbness or tingling. She states she uses a walker to get to her bathroom, however, otherwise stays in the recliner. Her symptoms are increased with lying down and standing and decreased with sitting.  
+
+ 
+
+Therapeutically, she has not received any physical therapy or occupational therapy. She is currently taking Darvocet, however, less frequently, and Celebrex for arthritis. Diagnostically, she has had an MRI scan in April 2092 that showed multi-level spinal stenosis, most prominent at L3/L4, especially on the right side, secondary to facet arthropathy and ligamentum flavum infolding, as well as possibly a mild disk bulge. Her mammogram was done in 2091 which was okay. She has not had a bone mineral density at this time.  
+
+ 
+
+MEDICATIONS: Currently, the medication she is on is Celebrex, Hyzaar for her blood pressure, and Darvocet for her pain.   
+
+ALLERGIES: She states that taking Tylenol With Codeine gives her toes a burning sensation, and ibuprofen causes tinnitus.   
+
+PAST MEDICAL HISTORY: She has got high blood pressure and shoulder arthritis.  
+
+ 
+
+PAST SURGICAL HISTORY: She had a left breast biopsy which she states was not cancerous.  
+
+ 
+
+SOCIAL/FUNCTIONAL HISTORY: She is functionally currently not working. She is taking sick time. She has not worked for the past three weeks. She is a Head Nurse and worked at The Library Corporation for the last 35 years. She states her job is medium as far as intensity of work. Functionally, her activities of daily living are limited, and she uses an assistive device.  
+
+ 
+
+SOCIAL HISTORY: She is widowed and she has four healthy children, ages 51, 50, 48, and 46. She does not smoke or drink.   
+
+FAMILY HISTORY: She has aunts with diabetes and brother that had an myocardial infarction at 59.  
+
+ 
+
+REVIEW OF SYSTEMS: On review of systems, no fevers, chills, recent infections, bladder, thyroid problems, rash, shortness of breath, palpations, chest pain, nausea, abdominal pain, diarrhea, or bowel or bladder or sexual problems or urination difficulty.  She does have some joint pain and swelling in her shoulders and her feet occasionally. She does not have any numbness or tingling. She does have some trouble walking secondary to the pain. She does not feel fatigued and her appetite is okay and she does not feel anxious or stressed. She does have some mild trouble with sleeping, however, this has improved over the last few days.  
+
+ 
+
+PHYSICAL EXAMINATION: On physical examination, well-developed, well-nourished, well-groomed, normal mood and affect, but slightly anxious with movement, female in no acute distress at this time. On musculoskeletal examination of lumbar spine, flexion was within normal limits. Extension she had her type of pain at about 10-20 degrees. Side-bending was unremarkable. On hip examination she had some decreased internal rotation on the right when compared to the left. Straight leg raise bilaterally was negative, however, supine, slight guarding on the right.  Femoral stretch was positive on the right but not on the left. On neurological examination, as far as motor examination, there is some slight decrease, half a grade, quadriceps and hip flexors; however, this was functional; otherwise unremarkable on the right or the left. Her reflexes were 2 plus in the achilles. Babinskis were downgoing, 1 plus at the patella on the right, and 2 plus on the left. Sensory examination slightly decreased at L3 on the right; however, normal throughout; otherwise, gait was antalgic on the right and she did not want to bear weight.  
+
+ 
+
+IMPRESSION:  
+
+1. Right L3 acute radiculopathy secondary to herniated disk and facet arthropathy.  
+
+2. Functional limitations secondary to pain, causing her functional weakness.  
+
+ 
+
+RECOMMENDATIONS:  
+
+1. Transforaminal epidural steroid injection at L3 and L4 on the right.  
+
+2. Physical therapy after her injection.  
+
+3. Continue her medications of Darvocet and Celebrex.  4. Keep her out of work until she is able to receive the injection, as well as continue with her physical therapy to improve her strength, given her acute radiculopathy.   
+
+The patient was seen and examined with Dr. Xayasane, who agrees with the plan above.  
+
+ 
+
+ 
+
+_______________________________ 
+
+Edward Xayasane, M.D.  
+
+cc: David Utterback, M.D.  
+
+DD:05/06/2092 
+
+DT:05/09/2092 
+
+TL:95468     :423 
+
+ 
+
+
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2092-05-06" TYPE="DATE" comment="" />
+<NAME id="P1" start="42" end="56" text="WILHELM, GOLDY" TYPE="PATIENT" comment="" />
+<ID id="P2" start="64" end="71" text="9543443" TYPE="MEDICALRECORD" comment="" />
+<DATE id="P3" start="86" end="96" text="05/06/2092" TYPE="DATE" comment="" />
+<NAME id="P4" start="100" end="115" text="EDWARD XAYASANE" TYPE="DOCTOR" comment="" />
+<NAME id="P5" start="221" end="228" text="Wilhelm" TYPE="PATIENT" comment="" />
+<AGE id="P6" start="234" end="236" text="68" TYPE="AGE" comment="" />
+<DATE id="P7" start="1342" end="1352" text="April 2092" TYPE="DATE" comment="" />
+<DATE id="P8" start="1578" end="1582" text="2091" TYPE="DATE" comment="" />
+<PROFESSION id="P9" start="2235" end="2245" text="Head Nurse" TYPE="PROFESSION" comment="" />
+<LOCATION id="P10" start="2260" end="2283" text="The Library Corporation" TYPE="ORGANIZATION" comment="" />
+<AGE id="P11" start="2534" end="2536" text="51" TYPE="AGE" comment="" />
+<AGE id="P12" start="2538" end="2540" text="50" TYPE="AGE" comment="" />
+<AGE id="P13" start="2542" end="2544" text="48" TYPE="AGE" comment="" />
+<AGE id="P14" start="2550" end="2552" text="46" TYPE="AGE" comment="" />
+<AGE id="P15" start="2680" end="2682" text="59" TYPE="AGE" comment="" />
+<NAME id="P16" start="5063" end="5071" text="Xayasane" TYPE="DOCTOR" comment="" />
+<NAME id="P17" start="5148" end="5163" text="Edward Xayasane" TYPE="DOCTOR" comment="" />
+<NAME id="P18" start="5177" end="5192" text="David Utterback" TYPE="DOCTOR" comment="" />
+<DATE id="P19" start="5205" end="5215" text="05/06/2092" TYPE="DATE" comment="" />
+<DATE id="P20" start="5221" end="5231" text="05/09/2092" TYPE="DATE" comment="" />
+<ID id="P21" start="5237" end="5242" text="95468" TYPE="IDNUM" comment="" />
+<ID id="P22" start="5248" end="5251" text="423" TYPE="IDNUM" comment="" />
+</TAGS>
+</deIdi2b2>

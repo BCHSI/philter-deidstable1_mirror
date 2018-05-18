@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2080-07-19
+
+                     MHC EMERGENCY DEPT VISIT
+
+ 
+
+ORTA,PHIL F.   559-31-51-6               VISIT DATE: 07/19/80
+
+The patient was interviewed and examined by myself, Dr. Palmer, 
+
+and the resident.  Please see note for full details. 
+
+HISTORY OF PRESENTING COMPLAINT:  The patient is a 57 year old 
+
+gentleman with history of hypertension, high cholesterol, and 
+
+angina in the past, comes in today with increasing use of 
+
+nitroglycerins and chest pain, light headedness and diaphoresis 
+
+after exerting himself this afternoon.  He took two of the 
+
+sublingual nitros with gradual improvement and gradually became 
+
+chest pain free.  EMS gave him aspirin.  Of note, he has had two 
+
+episodes of chest pain over the last few day.    
+
+REVIEW OF SYSTEMS:  Negative for shortness of breath or chest pain 
+
+currently. 
+
+PAST MEDICAL HISTORY:  Myocardial infarction in 2063, and 
+
+apparently had PTCA and cath.  Status post back surgery.
+
+MEDICATIONS:  Zocor, Lisinopril, aspirin and Zoloft.
+
+ALLERGIES:  Sulfa.
+
+SOCIAL HISTORY AND FAMILY HISTORY:  Past tobacco.  Family history 
+
+is positive for coronary artery disease. 
+
+PHYSICAL EXAMINATION:  Alert and awake gentleman, no apparent 
+
+distress, obese.  Temperature 97, pulse 81, respiratory rate 18, 
+
+blood pressure 112/56, 02 sat 100% on room air.  Physical 
+
+examination continued, clear lungs.  Heart is regular rate and 
+
+rhythm.  Soft abdomen, although obese.  Neuro is alert and oriented 
+
+X3.  No obvious cranial, motor or sensory deficits.          
+
+LABORATORY EVALUATION:  CK in the 625, MB fraction 11.2, and 
+
+troponin 0.02, this could be on the rise.  His electrocardiogram 
+
+was 85, with Q waves in 3 and F, and T wave inversions in 2 and F, 
+
+as well as flattening in V4 through V6.  Chest x-ray showed no 
+
+congestive heart failure but an elevated right hemidiaphragm.
+
+THERAPY RENDERED/COURSE IN ED:  In the emergency room he is treated 
+
+with a full dose of aspirin even though he was chest pain free on 
+
+arrival.   
+
+FINAL DIAGNOSIS:  Unstable angina.
+
+DISPOSITION (including condition upon discharge):  He is admitted 
+
+to the hospital in stable condition.
+
+___________________________________                    EO166/60228 
+
+RUTH R. PALMER, M.D.     RP11                      D:07/19/80 
+
+                                                       T:07/20/80 
+
+Dictated by:  RUTH R. PALMER, M.D.     RP11 
+
+ ******** Not reviewed by Attending Physician ********
+
+
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2080-07-19" TYPE="DATE" comment="" />
+<LOCATION id="P1" start="49" end="52" text="MHC" TYPE="HOSPITAL" comment="" />
+<NAME id="P2" start="78" end="90" text="ORTA,PHIL F." TYPE="PATIENT" comment="" />
+<ID id="P3" start="93" end="104" text="559-31-51-6" TYPE="MEDICALRECORD" comment="" />
+<DATE id="P4" start="131" end="139" text="07/19/80" TYPE="DATE" comment="" />
+<NAME id="P5" start="197" end="203" text="Palmer" TYPE="DOCTOR" comment="" />
+<AGE id="P6" start="313" end="315" text="57" TYPE="AGE" comment="" />
+<DATE id="P7" start="892" end="896" text="2063" TYPE="DATE" comment="" />
+<ID id="P8" start="2211" end="2222" text="EO166/60228" TYPE="IDNUM" comment="" />
+<NAME id="P9" start="2225" end="2239" text="RUTH R. PALMER" TYPE="DOCTOR" comment="" />
+<NAME id="P10" start="2250" end="2254" text="RP11" TYPE="USERNAME" comment="" />
+<DATE id="P11" start="2278" end="2286" text="07/19/80" TYPE="DATE" comment="" />
+<DATE id="P12" start="2346" end="2354" text="07/20/80" TYPE="DATE" comment="" />
+<NAME id="P13" start="2371" end="2385" text="RUTH R. PALMER" TYPE="DOCTOR" comment="" />
+<NAME id="P14" start="2396" end="2400" text="RP11" TYPE="USERNAME" comment="" />
+</TAGS>
+</deIdi2b2>

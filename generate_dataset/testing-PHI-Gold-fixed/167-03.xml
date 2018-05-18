@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2079-03-10
+
+                     CDH EMERGENCY DEPT VISIT
+ 
+YARBROUGH,IRENE   810-86-43-7                        VISIT DATE: 03/10/79
+HISTORY OF PRESENTING COMPLAINT:  This patient was seen with Dr. 
+Nettles, Emergency Medicine resident.  The Chief Complaint, History 
+of Present Illness, Past Medical History, Medications, Allergies, 
+Social History, Family History and Review of Systems are as noted 
+by Dr. Nettles on the record and were reviewed with him and with 
+the patient.  Briefly, this is a 55 year old woman who presented 
+with chest pain which was epigastric and substernal in nature, 
+essentially sharp and non-radiating that had come on at rest.  She 
+has several cardiac risk factors including hypertension, obesity 
+and hormone replacement but had no specific cardiac history.  Her 
+symptoms did not resolve with Mylanta. 
+PHYSICAL EXAMINATION:  As noted by Dr. Nettles and is most 
+noteworthy for normal heart sounds, although she does have a II/VI 
+systolic ejection murmur at the apex (the upper right sternal 
+border). 
+LABORATORY EVALUATION:  An electrocardiogram does not show acute 
+changes but does have T wave inversions in V1 to V3.  These were 
+previously noted in 10/78. 
+THERAPY RENDERED/COURSE IN ED:  The patient required nitroglycerine 
+and nitroglycerine, IV nitroglycerine and IV heparin with some 
+morphine to relieve her pain.  She also received Lopressor 25 mg IV 
+and was given some GI meds.  She eventually became pain-free, 
+although she does admit to a residual mild discomfort in her chest. 
+There are no electrocardiographic changes. 
+IMPRESSION:  I concur with Dr. Nettles that this patient has chest 
+pain suspicious for unstable angina.  She has responded well to 
+aggressive treatment of this and she will be admitted for further 
+evaluation. 
+FINAL DIAGNOSIS:  Chest pain. 
+DISPOSITION (including condition upon discharge):  Admission. 
+Condition satisfactory. 
+___________________________________                    MR190/0660 
+ANTHONY G. PETTY, M.D.  AP06                               D:03/10/79 
+                                                       T:03/10/79 
+Dictated by:  ANTHONY G. PETTY, M.D.  AP06 
+ ******** Not reviewed by Attending Physician ********
+
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2079-03-10" TYPE="DATE" comment="" />
+<LOCATION id="P1" start="49" end="52" text="CDH" TYPE="HOSPITAL" comment="" />
+<NAME id="P2" start="76" end="91" text="YARBROUGH,IRENE" TYPE="PATIENT" comment="" />
+<ID id="P3" start="94" end="105" text="810-86-43-7" TYPE="MEDICALRECORD" comment="" />
+<DATE id="P4" start="141" end="149" text="03/10/79" TYPE="DATE" comment="" />
+<NAME id="P5" start="216" end="223" text="Nettles" TYPE="DOCTOR" comment="" />
+<NAME id="P6" start="426" end="433" text="Nettles" TYPE="DOCTOR" comment="" />
+<AGE id="P7" start="518" end="520" text="55" TYPE="AGE" comment="" />
+<NAME id="P8" start="895" end="902" text="Nettles" TYPE="DOCTOR" comment="" />
+<DATE id="P9" start="1209" end="1214" text="10/78" TYPE="DATE" comment="" />
+<NAME id="P10" start="1626" end="1633" text="Nettles" TYPE="DOCTOR" comment="" />
+<ID id="P11" start="1982" end="1992" text="MR190/0660" TYPE="IDNUM" comment="" />
+<NAME id="P12" start="1994" end="2010" text="ANTHONY G. PETTY" TYPE="DOCTOR" comment="" />
+<NAME id="P13" start="2018" end="2022" text="AP06" TYPE="USERNAME" comment="" />
+<DATE id="P14" start="2055" end="2063" text="03/10/79" TYPE="DATE" comment="" />
+<DATE id="P15" start="2122" end="2130" text="03/10/79" TYPE="DATE" comment="" />
+<NAME id="P16" start="2146" end="2162" text="ANTHONY G. PETTY" TYPE="DOCTOR" comment="" />
+<NAME id="P17" start="2170" end="2174" text="AP06" TYPE="USERNAME" comment="" />
+</TAGS>
+</deIdi2b2>

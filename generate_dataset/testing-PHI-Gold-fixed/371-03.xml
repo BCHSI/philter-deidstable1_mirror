@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2079-06-18
+
+Pt is a pleasant obese 70yo South Korean woman presenting for f/u DM, HTN. She is a poor historian, accompanied by family members who interpret, both in Korean and English. Also spoke w/ daughter by phone during the visit to help clarify med regimen.
+Problems
+Hypertension 
+Elevated cholesterol 
+Cervical polyp 
+endometrial polyp 
+osteoarthritis 
+Sleep apnea 
+diastolic heart failure 
+Restrictive pulmonary disease 
+Diabetes mellitus type 2 
+FH Uncoded Information:
+	 Comments: Denies family h/o ovarian, endometrial, breast or GI cancer. Reports mother and older sister with endometrial ca.
+ 
+Medications
+Colace (DOCUSATE SODIUM) 100MG TABLET take 1 Tablet(s) PO TID 
+Caltrate and D 2 TABS PO qd , keep md appt for 11/15/77
+Lopressor (METOPROLOL TARTRATE) 12.5MG TABLET take 1 Tablet(s) PO BID 
+Zantac (RANITIDINE HCL) 150MG TABLET take 1 Tablet(s) PO BID 
+Estrace (ESTRADIOL) 1 GM PV BIW , keep md appt for 11/15/77
+Neurontin (GABAPENTIN) 300 MG (300MG CAPSULE take 1) PO TID
+Loratadine 10 MG (10MG TABLET take 1) PO QD 
+Diazepam 5 MG (5MG TABLET take 1) PO QHS x 30 days
+Nexium (ESOMEPRAZOLE) 40 MG (40MG CAPSULE DR take 1) PO QD x 30 days
+Lasix (FUROSEMIDE) 20 MG (20MG TABLET take 1) PO QD x 30 days
+Hydrochlorothiazide 25 MG (25MG TABLET take 1) PO QD 
+Levothyroxine SODIUM 100MCG TABLET PO QD 
+Fosamax (ALENDRONATE) 70 MG (70MG TABLET take 1) PO QWEEK 
+Diovan (VALSARTAN) 160 MG (160MG TABLET take 1) PO QD 
+Plavix (CLOPIDOGREL) 75 MG (75MG TABLET take 1) PO QD 
+Metformin 500 MG (500MG TABLET take 1) PO BID 
+Percocet (OXYCODONE+APAP) 325-5 TABLET take 1 Tablet(s) PO TID x 30 days
+Zocor (SIMVASTATIN) 20 MG (20MG TABLET take 1) PO QHS , to replace lipitor 
+
+Last seen by PCP approx 3 wks ago. Pt was having sxs dyastolic dysfunction, asked to take Lasix 20mg qd. Bp meds include Diovan 160mg, HCTZ 25mg and Bisoprolol 5mg qd, which replaced Lopressor at some point. Unclear from pt/family when this was changed. 
+Patient denies CP, increased SOB or edema. Sleeps on 2 pillows. Adds salt to food and is sedentary. Has gained an additional #2 since last visit.
+According to her daughter, she eats sweets every day and complains of feeling dizzy if she does not eat sweets. Also eats mod amts starches. Takes Metformin 500mg bid w/ recent A1c 6.7. She uses a glucometer to test fingersticks, though inconsistently. Family reports typical fasting results 110-130, randoms 150-170's; no 200's. She is a former smoker. No alcohol or OTC meds.
+Followed by multiple disciplines including cards, neuro, ortho and pain mgmt. Also has upcoming appt w/ nutrition.
+Exam: pleasant obese 70yo woman NAD
+Bp 144/64 in triage,  140/70 rechecked by me  HR 64reg  Wt #220
+Random fingerstick 137   
+Neck: obese, supple; no JVD
+Lungs: clear; no rales, ronchi, wheezes
+Cor: RRR; no r/m/g
+Extrems: (+)1 ptiting edema bilat 1/3 up legs; pulses intact, no lesions
+A/P: 70yo woman w/ multiple medical problems, overall poor understanding of meds and problems. Pt counselled regarding importance of no sweets or added salt in her diet. She needs to lose wt for both her medical and subjectvie well being. Encouraged to walk as tolerated, elevate feet when seated. Asked to bring all meds plus glucometer to next PCP appt in 2 wks for full clarification. Cont current regimen for now until completely sure of her regimen. Asked to check fingersticks when feeling dizzy. If < 80, treat w/ 4oz orange juice and healthy snack. Sent to lab to check basic panel on Lasix, also for urine malb/creat for hx DM, f/u as needed. RTC to PCP, other appts as scheduled, prn.
+
+
+_____________________________________________
+Virginia M Townsend,N.P.,M.S.
+  
+
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2079-06-18" TYPE="DATE" comment="" />
+<AGE id="P1" start="51" end="53" text="70" TYPE="AGE" comment="" />
+<LOCATION id="P2" start="56" end="68" text="South Korean" TYPE="COUNTRY" comment="" />
+<LOCATION id="P3" start="181" end="187" text="Korean" TYPE="COUNTRY" comment="" />
+<LOCATION id="P4" start="192" end="199" text="English" TYPE="COUNTRY" comment="" />
+<DATE id="P5" start="744" end="752" text="11/15/77" TYPE="DATE" comment="" />
+<DATE id="P6" start="937" end="945" text="11/15/77" TYPE="DATE" comment="" />
+<AGE id="P7" start="2610" end="2612" text="70" TYPE="AGE" comment="" />
+<AGE id="P8" start="2880" end="2882" text="70" TYPE="AGE" comment="" />
+<NAME id="P9" start="3618" end="3637" text="Virginia M Townsend" TYPE="DOCTOR" comment="" />
+</TAGS>
+</deIdi2b2>

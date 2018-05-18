@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2081-09-15
+
+
+
+	CARDIOLOGY
+
+	
+
+	FORT WASHINGTON HOSPITAL
+
+	
+
+
+
+	Reason for visit:
+
+   consulted by Dr Dunham for continuity of care s/p cabg
+
+
+
+	Interval History:
+
+   This 53 yo male was referred with DM and CAD who today underwent CABG and CEA with Dr Dunham. Specifically he had: CABG x 3;  LIMA: Pedicle (IMA) to LAD-Mid Saphenous Vein: Ascending Aorta to Diagonal-2nd Saphenous Vein: Ascending Aorta to Diagonal-3rd; Coronary Endarterectomy.
+
+
+
+He was in his USOH until several months ago when he first noticed lower extremity edema and activity intolerance. Symptoms waxed and waned, but eventually progressed so he was experiencing daily SOB and fatigue with usual daily activities such as walking or working around his home, and worsening LE edema up to his knees. He sought evaluation from his PCP 3 weeks ago was and found to have severe cardiomyopathy with LVEF of 25% on stress-MIBI. There was global hypokinesis. Perfusion images suggest a small distal anteroapical scar and moderately dilated LV (both new since 2076). There was no definite evidence of ischemia, although it is noted the patient was unable to achieve 85% MPHR due to poor activity tolerance. 
+
+
+
+He was started on Coreg, as well as Lasix which has been uptitrated from 20 to 60mg qd, with subsequent 12-14 lbs weight loss. His lower extremity edema is markedly improved, and activity tolerance is moderately improved. He can perform basic ADLs such as dressing and bathing without difficulty. Walking, especially inclines, climbing stairs, and carrying parcels will cause SOB. He still feels fatigued throughout the day. He has no orthopnea, PND, abdominal distension, early satiety, abdominal pain or anorexia. He reports BPs are much improved with the addition of Coreg, even as they are running 130-150s/80-100. 
+
+
+
+	Past medical history:
+
+   1. DCM, diagnosed 7/81. 
+
+2. HTN, long standing, poorly controlled. 
+
+3. DM, onset ~2074. became insulin dependent several months ago. 
+
+a. Retinopathy and cotton wool spot. 
+
+b. No peripheral neuropathy. 
+
+4. Renal insufficiency, creatinine 1.6. 
+
+5. S/P CVA, L putamen, ? cocaine related. 
+
+6. History of cocaine abuse, last reported use 2078. 
+
+7. Obesity. 
+
+8. Sleep apnea, untreated. 
+
+9. Hyperlipidemia. On low dose statin. 
+
+
+
+	Family history:
+
+   Father had HTN, stroke age 45. 
+
+Mother had HTN. 
+
+No known coronary artery disease, arrhythmias, SCD, heart failure, cardiomyopathy in immediate family members.
+
+
+
+	Social history:
+
+   He is married, with 3 young adult children who are A+W. He was formerly self-employed as a CPA and would often travel worldwide. He stopped doing so after 2075 so has no recent travel out of the country. He is now employed by Applied Industrial Technologies as an accountant. 
+
+
+
+Habits: Denies any history of tobacco use. Although he denied illicit drug use, his chart review revealed above noted history of cocaine abuse. He subsequently admitted to prior use, i.e. at parties while traveling. He denies related excessive ETOH use, use of other illicit drugs, or high risk sexual behaviors. He admits to 3 drinks per week currently. 
+
+
+
+	Review of systems:
+
+   As detailed in HPI. He has never had chest pain or pressure, palpitations, irregular heartbeat, presyncope, or syncope. He denies having had fever, chills, or acute viral illness preceding onset of symptoms, recent travel out of the country or history of tick bites, hepatitis, or TB. He has no known thyroid problems. Remaining ROS noncontributory. 
+
+
+
+Physical examination:
+
+	
+
+-General:   Obese WM, somewhat anxious appearing in NAD. Intubated/sedated
+
+-Skin:   No rashes, nonicteric.
+
+-HEENT:   NC.  No scleral icterus.  MMM.
+
+-Neck:   Short neck.  Carotids +2 bilaterally, no bruits.  JVP assessment difficult due to body habitus, ~ 8-9cm H20. 
+
+-Chest:   Clear to percussion and ausculation. median sternotomy bandaged.
+
+-Cardiac:   RRR; no rub
+
+-Abdomen:   Obese, soft, NTND, no fluid wave.  Unable to appreciate liver edge.  No palpable masses.
+
+-Extremities:   Somewhat cool distal to lower shins, with trace pretibial edema bilaterally. Good femoral pulses, no bruit.  PT pulses intact.  
+
+-Neuro:   sedated
+
+
+
+	Assessment and plan:
+
+   53 yom with DM and CAD now immediatey s/p CABG.
+
+
+
+At this point routing CABG post-op care; will follow with you. 
+
+
+
+As he weans off support would resume his usual regimen of meds. 
+
+	
+
+Sherrill Gaines, MD pager #36466
+
+	
+
+Signed electronically by  Sherrill Gaines, MD
+
+Document Status: Final
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2081-09-15" TYPE="DATE" comment="" />
+<LOCATION id="P1" start="47" end="71" text="FORT WASHINGTON HOSPITAL" TYPE="HOSPITAL" comment="" />
+<NAME id="P2" start="117" end="123" text="Dunham" TYPE="DOCTOR" comment="" />
+<AGE id="P3" start="187" end="189" text="53" TYPE="AGE" comment="" />
+<NAME id="P4" start="268" end="274" text="Dunham" TYPE="DOCTOR" comment="" />
+<DATE id="P5" start="1040" end="1044" text="2076" TYPE="DATE" comment="" />
+<DATE id="P6" start="1859" end="1863" text="7/81" TYPE="DATE" comment="" />
+<DATE id="P7" start="1925" end="1929" text="2074" TYPE="DATE" comment="" />
+<DATE id="P8" start="2181" end="2185" text="2078" TYPE="DATE" comment="" />
+<AGE id="P9" start="2323" end="2325" text="45" TYPE="AGE" comment="" />
+<PROFESSION id="P10" start="2573" end="2576" text="CPA" TYPE="PROFESSION" comment="" />
+<DATE id="P11" start="2637" end="2641" text="2075" TYPE="DATE" comment="" />
+<LOCATION id="P12" start="2708" end="2739" text="Applied Industrial Technologies" TYPE="ORGANIZATION" comment="" />
+<PROFESSION id="P13" start="2746" end="2756" text="accountant" TYPE="PROFESSION" comment="" />
+<AGE id="P14" start="4192" end="4194" text="53" TYPE="AGE" comment="" />
+<NAME id="P15" start="4379" end="4394" text="Sherrill Gaines" TYPE="DOCTOR" comment="" />
+<CONTACT id="P16" start="4406" end="4411" text="36466" TYPE="PHONE" comment="" />
+<NAME id="P17" start="4442" end="4457" text="Sherrill Gaines" TYPE="DOCTOR" comment="" />
+</TAGS>
+</deIdi2b2>

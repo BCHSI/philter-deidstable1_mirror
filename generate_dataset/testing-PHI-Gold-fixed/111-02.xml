@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2083-08-26
+
+                     SILVER RIDGE EMERGENCY DEPT VISIT
+
+ 
+
+OROZCO,KYLE   560-40-78-5                     VISIT DATE: 08/26/83
+
+This is a preliminary dictation. 
+
+PRESENTING COMPLAINT and HISTORY OF PRESENTING COMPLAINT:  This 
+
+patient is a 58-year-old male with a history of hypertension and 
+
+diabetes who presents with fever and chills.  He is four weeks 
+
+status post revision of an aorto-bifemoral bypass graft, which got 
+
+infected and had to be revised.  He has been doing well, but now 
+
+presents here with a low-grade fever to 100.9 degrees F. (he states 
+
+his maximum temperature at home was 101 degrees F., while he was 
+
+taking Advil for the fever).  He presents for evaluation.  He has 
+
+had no drainage from the site, and has been home on IV Nafcillin 
+
+for the past two months secondary to his graft infection. 
+
+PAST MEDICAL HISTORY:  As above. 
+
+MEDICATIONS:  IV Nafcillin, Lasix, Zocor, and insulin. 
+
+ALLERGIES:  No known drug allergies. 
+
+PHYSICAL EXAMINATION:  The vital signs include a blood pressure of 
+
+179/85, a pulse of 91, respirations of 20, and a fever to 100.9 
+
+degrees F.  The HEENT examination is normal.  There are some 
+
+crackles at the left base, but the lungs are otherwise normal.  The 
+
+heart has a regular rate and rhythm.  The abdomen is soft and 
+
+non-tender, with good bowel sounds.  There is a right groin mass, 
+
+questionably a hematoma, with good pulses however.  The extremities 
+
+are well-perfused. 
+
+LABORATORY EVALUATION:  The electrolytes, BUN, and creatinine are 
+
+normal.  The blood sugar is 180.  The white count is normal at 3.7. 
+
+The hematocrit is 29.  The PT/PTT are pending.  The urinalysis is 
+
+negative so far, with microscopic pending. 
+
+THERAPY RENDERED/COURSE IN ED:  The patient was seen by Surgery. 
+
+The consensus was to order a CT scan of the abdomen, since the 
+
+patient had a fever at that point, and so the CT scan is pending. 
+
+Thus, the assessment was that this was a 58-year-old male with a 
+
+history of a recent revision of an aorto-bifemoral bypass graft, 
+
+who had been on two months of IV Nafcillin, and who presented with 
+
+a fever.  Laboratory studies are done and cultures sent.  A Surgery 
+
+consultation and abdominal CT scan were ordered, and results were 
+
+pending.  The patient was admitted to the Emergency Department 
+
+Observation Unit awaiting the scan, full evaluation, and 
+
+disposition.  The patient was signed out to the 3 p.m. attending. 
+
+CONSULTATIONS (INCLUDING PCP):  Surgery. 
+
+FINAL DIAGNOSIS:  Fever. 
+
+DISPOSITION (including condition upon discharge):  The patient is 
+
+admitted to the Emergency Department Observation Unit in stable 
+
+condition. 
+
+___________________________________                    VF918/05141
+
+PERRY UPSHAW, M.D.       PU38                           D:08/26/83 
+
+                                                       T:08/27/83 
+
+Dictated by:  PERRY UPSHAW, M.D.       PU38 
+
+ ******** Not reviewed by Attending Physician ********
+
+
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2083-08-26" TYPE="DATE" comment="" />
+<LOCATION id="P1" start="49" end="61" text="SILVER RIDGE" TYPE="HOSPITAL" comment="" />
+<NAME id="P2" start="87" end="98" text="OROZCO,KYLE" TYPE="PATIENT" comment="" />
+<ID id="P3" start="101" end="112" text="560-40-78-5" TYPE="MEDICALRECORD" comment="" />
+<DATE id="P4" start="145" end="153" text="08/26/83" TYPE="DATE" comment="" />
+<AGE id="P5" start="269" end="271" text="58" TYPE="AGE" comment="" />
+<AGE id="P6" start="1970" end="1972" text="58" TYPE="AGE" comment="" />
+<ID id="P7" start="2734" end="2745" text="VF918/05141" TYPE="IDNUM" comment="" />
+<NAME id="P8" start="2747" end="2759" text="PERRY UPSHAW" TYPE="DOCTOR" comment="" />
+<NAME id="P9" start="2772" end="2776" text="PU38" TYPE="USERNAME" comment="" />
+<DATE id="P10" start="2805" end="2813" text="08/26/83" TYPE="DATE" comment="" />
+<DATE id="P11" start="2873" end="2881" text="08/27/83" TYPE="DATE" comment="" />
+<NAME id="P12" start="2898" end="2910" text="PERRY UPSHAW" TYPE="DOCTOR" comment="" />
+<NAME id="P13" start="2923" end="2927" text="PU38" TYPE="USERNAME" comment="" />
+</TAGS>
+</deIdi2b2>

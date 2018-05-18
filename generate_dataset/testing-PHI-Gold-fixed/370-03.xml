@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2077-09-20
+
+
+
+
+
+
+
+
+UMALI, DANA
+
+12423229
+
+09/20/2077
+
+
+
+
+
+HISTORY OF PRESENT ILLNESS: Ms. Umali returns for followup after her angioplasty of a superficial femoral artery occlusive disease, with a more proximal left iliac stent placement of the common iliac. She has a nonhealing left great toe ulceration. She is followed by Dr. Holden, and I performed an endovascular recanalization.
+
+
+
+PHYSICAL EXAMINATION: Today, she is doing well, after her procedure on 09/14/77.
+
+
+
+IMAGING: Noninvasive vascular lab studies were performed today, showing an ABI on the left of 0.67 on the right of 0.42. This is a great improvement from the 0.24 ABI on the left before the endovascular procedure.
+
+
+
+ASSESSMENT AND PLAN: Dr. Holden explained to the patient and family about toe amputation recommendations at this time. Otherwise, from a circulatory standpoint, we counseled them that this was the optimal time to perform toe amputation to allow for primary healing.
+
+
+
+They will follow up with Dr. Holden in 2 weeks, once they decide.
+
+
+
+
+
+
+
+Vernon Ramses Cruz, M.D.
+
+
+
+
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2077-09-20" TYPE="DATE" comment="" />
+<NAME id="P1" start="35" end="46" text="UMALI, DANA" TYPE="PATIENT" comment="" />
+<ID id="P2" start="48" end="56" text="12423229" TYPE="MEDICALRECORD" comment="" />
+<DATE id="P3" start="58" end="68" text="09/20/2077" TYPE="DATE" comment="" />
+<NAME id="P4" start="106" end="111" text="Umali" TYPE="PATIENT" comment="" />
+<NAME id="P5" start="346" end="352" text="Holden" TYPE="DOCTOR" comment="" />
+<DATE id="P6" start="476" end="484" text="09/14/77" TYPE="DATE" comment="" />
+<NAME id="P7" start="731" end="737" text="Holden" TYPE="DOCTOR" comment="" />
+<NAME id="P8" start="1004" end="1010" text="Holden" TYPE="DOCTOR" comment="" />
+<NAME id="P9" start="1048" end="1066" text="Vernon Ramses Cruz" TYPE="DOCTOR" comment="" />
+</TAGS>
+</deIdi2b2>

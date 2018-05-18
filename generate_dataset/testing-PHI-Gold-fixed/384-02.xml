@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2088-10-12
+
+EDVISIT^45630268^UHRICH, KARSON^10/12/88^ABREU, OLIVIA
+
+The patient was seen primarily by myself.
+
+HISTORY OF PRESENT ILLNESS:  This is a 71-year-old female with a
+
+history of diabetes, high blood pressure, and
+
+hypercholesterolemia presents to the emergency room with some
+
+right thumb pain and swelling after poking with a turkey bone 2
+
+days ago.  Denies any fevers or chills.  Does report some
+
+increased redness and swelling at the right side.  Also reports
+
+some left dental pain that started this morning.  She has had
+
+history of dental pain in the past, however, much worse today. 
+
+No fevers and no chills.  Tolerating secretions.  No pain on
+
+swallowing.  No recent dental work.
+
+PAST MEDICAL HISTORY:  As noted above, hypercholesterolemia,
+
+diabetes, and hypertension.
+
+ALLERGIES:  Aspirin.
+
+MEDICATIONS:  Atenolol, Protonix, amitriptyline, and Lipitor.
+
+SOCIAL HISTORY:  Denies any tobacco, alcohol, or IV drug use.
+
+PAST SURGICAL HISTORY:  No past surgery or procedure.
+
+REVIEW OF SYSTEMS:  Right thumb pain and left tooth pain.
+
+PHYSICAL EXAMINATION:  Mild tachycardic at 108 and low-grade
+
+temperature 99.2.  Rectal same.  She is an elderly female in mild
+
+to moderate distress complaining significant dental pain.  Head
+
+and neck exam, post dental exam, the patient has pain over tooth
+
+#16 which is intact.  No surrounding fluctuance, pus discharge,
+
+or bleeding.  Tooth is intact in the socket.  Does appear to have
+
+caries.  Posterior pharynx is clear.  Neck is supple with full
+
+range of motion.  Lungs are clear to auscultation bilaterally. 
+
+Cardiac exam reveals S1 and S2.  Regular rate.  No gallops, rubs,
+
+or murmurs.  Abdomen is soft and nontender.  On extremity exam,
+
+right thumb, the patient has an indurated right thumb with some
+
+streaking up into her mid forearm on the lateral aspect.  There
+
+is some induration and warmth to touch.  There is no foreign body
+
+visualized.  There is no area of pus discharge or bleeding.  2+
+
+radial pulses.
+
+LABORATORY DATA:  Normal CBC.  X-ray of the right hand shows no
+
+evidence of foreign body.
+
+ ******** Not reviewed by Attending Physician ********
+
+IMPRESSION AND PLAN:  This is a 71-year-old female with diabetes
+
+presenting with cellulitis and some streaking.  She had received
+
+IV Ancef in the emergency room.  She will be admitted for
+
+continued IV antibiotics and observation.
+
+______________________________
+
+ABREU, OLIVIA M.D.
+
+D: 10/12/88
+
+T: 10/12/88
+
+Dictated By: ABREU, OLIVIA
+
+eScription document:1-4087689 BFFocus
+
+
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2088-10-12" TYPE="DATE" comment="" />
+<ID id="P1" start="36" end="44" text="45630268" TYPE="MEDICALRECORD" comment="" />
+<NAME id="P2" start="45" end="59" text="UHRICH, KARSON" TYPE="PATIENT" comment="" />
+<DATE id="P3" start="60" end="68" text="10/12/88" TYPE="DATE" comment="" />
+<NAME id="P4" start="69" end="82" text="ABREU, OLIVIA" TYPE="DOCTOR" comment="" />
+<AGE id="P5" start="166" end="168" text="71" TYPE="AGE" comment="" />
+<AGE id="P6" start="2183" end="2185" text="71" TYPE="AGE" comment="" />
+<NAME id="P7" start="2417" end="2430" text="ABREU, OLIVIA" TYPE="DOCTOR" comment="" />
+<DATE id="P8" start="2440" end="2448" text="10/12/88" TYPE="DATE" comment="" />
+<DATE id="P9" start="2453" end="2461" text="10/12/88" TYPE="DATE" comment="" />
+<NAME id="P10" start="2476" end="2489" text="ABREU, OLIVIA" TYPE="DOCTOR" comment="" />
+<ID id="P11" start="2511" end="2520" text="1-4087689" TYPE="IDNUM" comment="" />
+</TAGS>
+</deIdi2b2>

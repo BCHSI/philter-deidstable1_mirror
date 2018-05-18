@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2063-03-20
+
+EASLEY BAPTIST HOSPITAL                         Pickett, Silpa 
+                                              12953473
+                                              03-20-63 
+ 
+ 
+ 
+CHIEF COMPLAINT:  Ms. Pickett comes to the Easley Baptist Hospital with 
+numerous complaints.  
+ 
+HISTORY OF PRESENT ILLNESS:  She states that she has not been feeling well 
+since her upper respiratory tract infection.  She had the flu in January 
+and then developed another upper respiratory tract infection a couple of 
+weeks ago.  She states that this has severely debilitated her.  She is 
+complaining of occasional nonproductive cough, post nasal drip, and 
+occasional dull headache.  However, her main concern is her stomach and 
+her back.  Ms. Pickett continues to have postprandial nausea and discomfort 
+in her epigastrium, particularly after eating.  This is different than her 
+reflux disease, which she feels is under fairly good control, with the 
+Prilosec-Propulsid combination.  She is describing some anorexia, although 
+she has not lost any weight.  She has not had any alterations in her bowel 
+movements.  She has not been constipated or had diarrhea.  She wonders 
+whether this could be in gallbladder.  In addition, she is continuing to 
+have some back pain with radiation down her left leg in the L5/S1 
+distribution.  She had one epidural steroid injection but was due to go 
+back.  Given her upper respiratory tract infection, this was postponed.  
+ 
+She is not having any heart symptoms or shortness of breath.  Her sugars 
+have been under good control, ranging between 111 and 143.  Her blood 
+pressure is 152/70 today, with a pulse of 70.  She is saturating well.
+ 
+PHYSICAL EXAMINATION:  On physical exam, lungs were clear to auscultation.  
+There was no JVD.  Heart: regular rate and rhythm with positive S4, ? S3 
+with no significant murmur.  Abdomen was soft, nondistended, with some 
+mild tenderness without rebound or guarding over the right upper quadrant.  
+Abdomen was somewhat bloated per patient and diffusely tender.  
+Extremities revealed some mild pedal edema left greater than right.  
+ 
+ASSESSMENT AND PLAN:  A seventy-one-year-old woman with multiple medical 
+issues, including coronary artery disease, CHF, diabetes, hypertension, 
+and cerebrovascular disease.  She came in today for discussion of her 
+ongoing lumbar radiculopathic pain as well as her abdominal complaint.
+ 
+With regard to her back pain, she wanted a prescription for Tylenol with 
+codeine, which has helped in the past.  I gave her a prescription.  I 
+warned her about the possible side effects of constipation.  She should 
+contact the pain clinic as soon as she feels able, for a repeat epidural 
+steroid injection.
+ 
+With regard to her abdominal complaints, the bubbling in her chest, 
+postprandial nausea and anorexia could certainly be due to gallbladder 
+disease.  Unclear contribution from her reflux.  Dr. Mario Robison 
+recommended elective cholecystectomy.  Given the fact that Ms. Pickett is 
+being more and more bothered by these symptoms, it may be reasonable to 
+EASLEY BAPTIST HOSPITAL                         Pickett, Silpa 
+                                              12953473
+                                              03-20-63 
+page 2 
+ 
+ 
+consider her for the surgery.  I have asked her to call Dr. Xiques and 
+make an appointment to discuss her cardiovascular risk so that she can 
+make an informed decision about the surgery.  
+ 
+She is otherwise up to date with her issues and doing relatively well from 
+a cardiovascular and diabetic perspective.  She would probably do better 
+with lower blood pressure.  We could consider increasing her Imdur.  
+ 
+I plan to follow up with her in a few weeks time.
+ 
+ 
+ 
+_________________________
+Una Romano, M.D.                                                   
+ 
+LL:OB:6245                                                              
+DD:03-20-63                                                             
+DT:03-20-63                                                             
+DV:03-20-63                                                             
+ ******** Not reviewed by Attending Physician ********
+
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2063-03-20" TYPE="DATE" comment="" />
+<LOCATION id="P1" start="28" end="51" text="EASLEY BAPTIST HOSPITAL" TYPE="HOSPITAL" comment="" />
+<NAME id="P2" start="76" end="90" text="Pickett, Silpa" TYPE="PATIENT" comment="" />
+<ID id="P3" start="138" end="146" text="12953473" TYPE="MEDICALRECORD" comment="" />
+<DATE id="P4" start="193" end="201" text="03-20-63" TYPE="DATE" comment="" />
+<NAME id="P5" start="231" end="238" text="Pickett" TYPE="PATIENT" comment="" />
+<LOCATION id="P6" start="252" end="275" text="Easley Baptist Hospital" TYPE="HOSPITAL" comment="" />
+<DATE id="P7" start="448" end="455" text="January" TYPE="DATE" comment="" />
+<NAME id="P8" start="760" end="767" text="Pickett" TYPE="PATIENT" comment="" />
+<AGE id="P9" start="2163" end="2174" text="seventy-one" TYPE="AGE" comment="" />
+<NAME id="P10" start="2937" end="2950" text="Mario Robison" TYPE="DOCTOR" comment="" />
+<NAME id="P11" start="3015" end="3022" text="Pickett" TYPE="PATIENT" comment="" />
+<LOCATION id="P12" start="3100" end="3123" text="EASLEY BAPTIST HOSPITAL" TYPE="HOSPITAL" comment="" />
+<NAME id="P13" start="3148" end="3162" text="Pickett, Silpa" TYPE="PATIENT" comment="" />
+<ID id="P14" start="3210" end="3218" text="12953473" TYPE="MEDICALRECORD" comment="" />
+<DATE id="P15" start="3265" end="3273" text="03-20-63" TYPE="DATE" comment="" />
+<NAME id="P16" start="3347" end="3353" text="Xiques" TYPE="DOCTOR" comment="" />
+<NAME id="P17" start="3784" end="3794" text="Una Romano" TYPE="DOCTOR" comment="" />
+<NAME id="P18" start="3854" end="3856" text="LL" TYPE="DOCTOR" comment="" />
+<NAME id="P19" start="3857" end="3859" text="OB" TYPE="DOCTOR" comment="" />
+<ID id="P20" start="3860" end="3864" text="6245" TYPE="IDNUM" comment="" />
+<DATE id="P21" start="3930" end="3938" text="03-20-63" TYPE="DATE" comment="" />
+<DATE id="P22" start="4003" end="4011" text="03-20-63" TYPE="DATE" comment="" />
+<DATE id="P23" start="4076" end="4084" text="03-20-63" TYPE="DATE" comment="" />
+</TAGS>
+</deIdi2b2>

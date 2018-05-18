@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2096-03-16
+
+
+
+
+
+INTERNAL MEDICINE ASSOCIATES
+
+MISSOULA CLINIC CENTER
+
+
+
+Reason for visit
+
+	
+
+  88 year old man h/o type 2 DM, CAD here for follow up
+
+
+
+History of present illness
+
+	
+
+  He missed his last appointment, but today he states that he has been feeling fine. He reports no chest pain, no dyspnea, no palpitations, no orthopnea, no PND. He is ambulating around the house without a problem. He has some occasional leg pains, but he now takes acetaminophen instead of nitroglycerin. He reports no recent ankle swelling, because he states that he elevates his legs. 
+
+
+
+He cares for his wife- doing chores around the house, such as washing dishes or making the bed. The only thing he reports being unable to do is lifting arms over his head (old problem).
+
+
+
+Major Problems
+
+
+
+
+
+Coronary artery disease
+
+s/p anterior MI 2082, LAD PTCA 2082. Cath 90% RCA, occluded OM2 2082. Echo 2087 EF =67%, no WMA (previously had apical dyskinesis). R/I'd for NSTEMI (TnT 1.35) in setting of 4 U GI Bleed (11/92), complicated by CHF. Last LDL 59 on lovastatin.
+
+
+
+Osteoarthritis
+
+Severe DJD of bilat shoulder -limited abduction 80 degrees. No significant symptoms. Seen by Dr. Etheridge in past.
+
+
+
+Diabetes mellitus
+
+Dx 7/88, on low dose glucophage with excellent control- d/c'd 10/91 when HbA1C all wnl. Urine alb slightly high at 71 (8/94). HbA1C up to 8.0%- started on glyburide. Last check 6.7%
+
+
+
+Active Medications
+
+
+
+aspirin 81mg po qd
+
+atenolol 100mg po qd
+
+furosemide 20 mg po 2-3 tabs daily
+
+glyburide 1.25mg po qd take with breakfast or first meal
+
+lisinopril 2.5 mg po qd
+
+lovastatin 20mg po qpm take with food
+
+multivitamins 
+
+nitroglycerin 0.3mg AS DIRECTED
+
+
+
+Social history
+
+	
+
+  Married, 4 daughters from previous marriage. 3 sons each killed in separate MVA. Former smoker quit 20 years ago, (+) EtOH. 11 grandchildren, 9 GGC
+
+
+
+Procedures and Immunizations 
+
+Influenza vaccine 
+
+ Received 11/95 MLL
+
+
+
+Review of systems
+
+	
+
+  As above, no abdominal pain, no urinary complaints. No complaints of constipation or rectal pain. No BRBPR. Nocturia x 1-2. Rest negative in detail.
+
+
+
+Physical Exam
+
+Blood pressure 124/70  
+
+Pulse 68  irregular
+
+Weight 136  
+
+General appearance   Elderly man appears well
+
+Neck   carotids 1+, JVP 8 cm, no nodes, thyroid non palpable
+
+Chest   CTA except right greater than left basilar crackles
+
+Cor   RRR, normal s1, wide split s2, no murmur
+
+Abdomen   soft NT no masses
+
+Extrem   No edema, radial pulses 2+, popliteal/DP 1+, DJD at base of 1st MC right
+
+
+
+Selected recent labs
+
+	
+
+  EKG- AF at 68, new RBBB, LAH. 
+
+CMP/CBC/HbA1C
+
+Urine for albumin
+
+
+
+Assessment and plan
+
+	
+
+  1. AF: recurrence of his AF, but no significant CHF and no symptoms to suggest active ischemia. He is already rate controlled on beta blocker. Decision to anti-coagulate is not easy. On one hand, he is a very functional man. On the other hand, he is 88, walks with a cane for balance, and is not very fond of frequent doctors visits. Discussed EKG findings and anticoagulation with Dr. Youmans, his cardiologist. Dr. Youmans will see patient next week. 
+
+2. CAD/CHF: Stable- Continue ASA/BB/ACEI/statin. BP OK. 
+
+3. DM: HbA1C normal on low dose glyburide. (+) microalb- on ACEI- check again today. 
+
+4. PUD: no recent bleeding. No symptoms. 
+
+5. HCM: Flushot 11/95. Declines c-scope (last 2087). 
+
+
+
+Disposition
+
+RTC 3 months 
+
+
+
+-William Eggleston, MD pager #40547
+
+
+
+Signed electronically by  William Eggleston, MD
+
+Document Status: Final
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2096-03-16" TYPE="DATE" comment="" />
+<LOCATION id="P1" start="62" end="84" text="MISSOULA CLINIC CENTER" TYPE="HOSPITAL" comment="" />
+<AGE id="P2" start="111" end="113" text="88" TYPE="AGE" comment="" />
+<DATE id="P3" start="841" end="845" text="2082" TYPE="DATE" comment="" />
+<DATE id="P4" start="856" end="860" text="2082" TYPE="DATE" comment="" />
+<DATE id="P5" start="889" end="893" text="2082" TYPE="DATE" comment="" />
+<DATE id="P6" start="900" end="904" text="2087" TYPE="DATE" comment="" />
+<DATE id="P7" start="1013" end="1018" text="11/92" TYPE="DATE" comment="" />
+<NAME id="P8" start="1184" end="1193" text="Etheridge" TYPE="DOCTOR" comment="" />
+<DATE id="P9" start="1228" end="1232" text="7/88" TYPE="DATE" comment="" />
+<DATE id="P10" start="1287" end="1292" text="10/91" TYPE="DATE" comment="" />
+<DATE id="P11" start="1344" end="1348" text="8/94" TYPE="DATE" comment="" />
+<DATE id="P12" start="1916" end="1921" text="11/95" TYPE="DATE" comment="" />
+<ID id="P13" start="1922" end="1925" text="MLL" TYPE="IDNUM" comment="" />
+<AGE id="P14" start="2883" end="2885" text="88" TYPE="AGE" comment="" />
+<NAME id="P15" start="3019" end="3026" text="Youmans" TYPE="DOCTOR" comment="" />
+<NAME id="P16" start="3050" end="3057" text="Youmans" TYPE="DOCTOR" comment="" />
+<DATE id="P17" start="3292" end="3297" text="11/95" TYPE="DATE" comment="" />
+<DATE id="P18" start="3322" end="3326" text="2087" TYPE="DATE" comment="" />
+<NAME id="P19" start="3364" end="3381" text="William Eggleston" TYPE="DOCTOR" comment="" />
+<CONTACT id="P20" start="3393" end="3398" text="40547" TYPE="PHONE" comment="" />
+<NAME id="P21" start="3428" end="3445" text="William Eggleston" TYPE="DOCTOR" comment="" />
+</TAGS>
+</deIdi2b2>

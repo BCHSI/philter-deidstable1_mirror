@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2078-08-20
+
+New office visit
+
+
+
+
+
+
+
+Referring Physician:
+
+Dr. Ebert
+
+BMC
+
+
+
+
+
+PCP:
+
+Dr.Bryan Edmondson
+
+BMC
+
+
+
+CHIEF PAIN COMPLAINT:  "I have pain in the back radiating down my legs." 
+
+ 
+
+PAIN HISTORY:  The patient's pain started spontaneously about two years ago.  It is located in the lower back, radiating to the back of the legs, to the level of the knees.  The pain is brought on by walking and made better by stopping or sitting down.  Bending over forward also helps the pain.  There is no numbness or weakness associated with the pain.  The pain is better at night than during the day.  The patient has separate pain complaint, which is burning pain in her feet, is worse at night than during the day.  Patient denies bowel or bladder changes. The patient has tried Celebrex, Vioxx and Motrin but has not found any relief for her pain.  She currently does not take any pain medications.  She denies a history of heartburn, gastric or duodenal ulcers or GI bleeds.  She has trouble falling asleep and staying asleep because of the burning pain in her feet. She is being referred to us by Dr. Ebert from Neurosurgery after an MRI scan showed spinal stenosis at L5-S1 and at L4-5 as well as spondylolithiasis between L4 and L5.  She had been reluctant to undergo surgery and was therefore referred to see if epidural steroid injections could help.  
+
+ 
+
+PAST MEDICAL HISTORY:  Diabetes, hypertension, coronary artery disease with myocardial infarction four years ago.   
+
+PAST SURGICAL HISTORY:  Coronary stent placement times two in December 2074.  
+
+ 
+
+CURRENT MEDICATIONS:  Metformin 500 mg q. day, Monopril 40 mg q.  day, baby aspirin 81 mg q. day,  HCTZ 12.5 mg q. day, Norvasc 5 mg q. day and Pravachol 20 mg q. day.   
+
+
+
+Social History:  She does not smoke, does smoke, does not drink and does not use drugs.  She came from Bermuda four years ago.  She is married and retired.  
+
+ 
+
+Allergies: NKDA
+
+
+
+Review of systems:
+
+Constitutional:  	Denies fever, recent weight change, fatigue, or anxiety.
+
+
+
+Neurological:	   	Denies confusion, double vision, light-headedness.
+
+
+
+HEENT:	   	No symptoms.  
+
+
+
+Respiratory:	  	 Non-smoker.  No dyspnea, bronchospasm, cough, COPD.  
+
+
+
+Cardiac:	 	 No, palpitations, syncope.
+
+
+
+Gastrointestinal:	Denies N & V, heartburn, constipation, diarrhea, bleeding.
+
+
+
+Renal:			No history of renal problems.   No dysuria, urgency or frequency. 
+
+
+
+Skin:			No recent changes.
+
+
+
+Musculoskeletal: 	Denies muscle pain, positive for leg cramps cramps, arthritis. 
+
+
+
+Hematologic:              Pt denies spontaneous nose bleeds or easy bruising.                                                                                    
+
+
+
+
+
+
+
+
+
+
+
+
+
+Physical examination:
+
+
+
+
+
+Vital signs
+
+BP 145/60 ,P 56 ,VAS SCORE 8/10 
+
+
+
+
+
+HEENT: 	Normal.  
+
+Lungs: 	CTA (B)
+
+Heart: 	RRR, S1, S2, no murmurs
+
+Abdomen: 	Soft, non-tender, bowel sounds present
+
+Extremities: 	No cyanosis, clubbing or edema.
+
+
+
+ 
+
+Targeted examination showed an age appropriate woman in no apparent distress.  Mental Status:  She was fully awake and alert.  Her mood was appropriate.  There was mild sensory loss in a stocking distribution over the lets as well as in a glove distribution over the hands.  There was no frank allodynia of the feet.  Patellar and ankle reflexes were retained.  Toe response was flexor.  The patient could walk, including heel and toe walk.  There was no pain on straight leg raising.  There was no local tenderness over the back, however, a moderate degree of muscle spasm over the lower back.  
+
+ 
+
+IMPRESSION:  
+
+ 
+
+1.  Spinal stenosis.  
+
+2.  Diabetic neuropathy.  
+
+ 
+
+PLAN:  
+
+ 
+
+1.  Start Neurontin with a target dose of 300 mg t.i.d. for now.  If tolerated, we will increase to 600 mg t.i.d.  
+
+ 
+
+2.  One week after Neurontin, start Zanaflex 2 mg p.o. q.h.s. to be titrate up to 4 mg after one week.  
+
+ 
+
+3.  Lumbar epidural steroid injection at L4-5 or L5-S1.  If treatment with injections is unsuccessful, we will ask the patient to be reevaluate by Neurosurgery.  
+
+ 
+
+ 
+
+Ila Easter, M.D.  
+
+
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2078-08-20" TYPE="DATE" comment="" />
+<NAME id="P1" start="78" end="83" text="Ebert" TYPE="DOCTOR" comment="" />
+<LOCATION id="P2" start="85" end="88" text="BMC" TYPE="HOSPITAL" comment="" />
+<NAME id="P3" start="103" end="118" text="Bryan Edmondson" TYPE="DOCTOR" comment="" />
+<LOCATION id="P4" start="120" end="123" text="BMC" TYPE="HOSPITAL" comment="" />
+<NAME id="P5" start="1116" end="1121" text="Ebert" TYPE="DOCTOR" comment="" />
+<DATE id="P6" start="1556" end="1569" text="December 2074" TYPE="DATE" comment="" />
+<LOCATION id="P7" start="1854" end="1861" text="Bermuda" TYPE="COUNTRY" comment="" />
+<NAME id="P8" start="4030" end="4040" text="Ila Easter" TYPE="DOCTOR" comment="" />
+</TAGS>
+</deIdi2b2>

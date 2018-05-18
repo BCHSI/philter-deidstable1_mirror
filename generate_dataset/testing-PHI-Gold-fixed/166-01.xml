@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2095-02-06
+
+
+
+
+
+
+
+
+
+PATIENT NAME:  MEYER, OSCAR;    MRN:  2771447
+
+Dictated on:  02/06/2095 by VICTOR M. ZUBIA, M.D.
+
+
+
+
+
+Oncology CONSULTATION NOTE:
+
+
+
+DATE OF CONSULTATION:
+
+
+
+DIAGNOSIS:  T2b, NX, M0 Gleason 4+3=7 adenocarcinoma of the prostate.
+
+
+
+HISTORY:  Mr. Meyar is a delightful patient referred to me by Dr. Osiel Mckee.  His PSA in 2093 was 3.8, early this year 6.3, and on repeat 7.1.  Abnormality was noted on digital rectal exam.  He has very little in the way of voiding symptoms with a good stream, no dribbling, nor any frequency.  He does still have his erections, though they are not as good as they used to be.  The erections are still an important issue with him.  Dr. Mckee performed a transrectal ultrasound that showed a 13 cc prostate.  He took 12 biopsy cores and all 12 demonstrated prostate cancer.  In 4 it was Gleason 6 and in the remainder Gleason 7.  Many cores had a predominant Gleason 4 pattern.  Many of the cores were heavily involved with 40% involvement or more.  Mr. Mercado has a CT scan and a pelvic MRI scheduled for next week.
+
+
+
+PAST MEDICAL HISTORY:
+
+1.	Diabetes.
+
+2.	Nephrolithiasis status post lithotripsy.
+
+3.	Tonsillectomy.
+
+4.	Right inguinal hernia repair.
+
+5.	Inflammatory bowel disease.
+
+
+
+CURRENT MEDICATIONS:  Glipizide, metformin, and Avandia.
+
+
+
+DRUG ALLERGIES:  None known.
+
+
+
+SOCIAL HISTORY:  His father was diagnosed with prostate cancer in his late 70s, but he did not die from his disease.
+
+
+
+SOCIAL HISTORY:  He works as a Web Developer in Audiovox.  He is married and came with his wife to the appointment today.  He has no children.  He is a former smoker and occasional drinker.
+
+
+
+
+
+PHYSICAL EXAM:
+
+No anemia, jaundice, cyanosis, or clubbing
+
+No gynecomastia
+
+Respiration comfortable
+
+No neurologic abnormalities in the arms or legs
+
+No skeletal deformity or tenderness
+
+Head, eyes, ears, and nose normal 
+
+Abdomen soft with no hepatomegaly, splenomegaly, nor any additional masses.
+
+No hernias.
+
+Normal penis, scrotum, and testes.
+
+Rectum: no mural lesion. Stool guaiac negative
+
+Prostate is small.  The entire right side of his gland is taken up with tumor.
+
+
+
+IMPRESSION AND PLAN:  Mr. Meyer is a young man with a significant and quite bulky prostate cancer.  I certainly do not think active surveillance is an option for him, which is a shame, as that was his preference.  Left untreated, I think he will be in deep trouble at some stage over the next few years.  His second choice for treatment is prostate brachytherapy but again I believe his disease is too extensive for this and brachytherapy would represent significant under treatment.
+
+
+
+On balance, my preference for him is either to have a radical prostatectomy, perhaps followed by postoperative radiation or alternatively, if he wishes to avoid surgery and he does, for him to have high-dose external radiation in conjunction with neoadjuvant and concomitant androgen deprivation.  While I think he will recover good voiding function after either of these treatment combinations his sex life is under threat and he is aware of this.  We will defer the final decision next week until he has had his scans.  Obviously, should they show extensive extracapsular disease then surgery will be off the table, if they show nodal disease the same is true and we will be thinking in terms of long-term androgen deprivation.  Hopefully neither of these scenarios will occur.
+
+
+
+
+
+
+
+
+
+Victor M. Zubia, M.D.
+
+
+
+cc:
+
+Osiel U. Mckee, M.D.
+
+Urology, Shelby Community Hospital
+
+
+
+Oscar Nagel, M.D.
+
+1502 Maple Street
+
+rm 929
+
+Kalaheo, AL
+
+
+
+
+
+VZ/78916
+
+HT/148-8151
+
+D:  02/06/2095
+
+T:  02/07/2095
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2095-02-06" TYPE="DATE" comment="" />
+<NAME id="P1" start="51" end="63" text="MEYER, OSCAR" TYPE="PATIENT" comment="" />
+<ID id="P2" start="74" end="81" text="2771447" TYPE="MEDICALRECORD" comment="" />
+<DATE id="P3" start="97" end="107" text="02/06/2095" TYPE="DATE" comment="" />
+<NAME id="P4" start="111" end="126" text="VICTOR M. ZUBIA" TYPE="DOCTOR" comment="" />
+<NAME id="P6" start="281" end="286" text="Meyar" TYPE="PATIENT" comment="" />
+<NAME id="P7" start="333" end="344" text="Osiel Mckee" TYPE="DOCTOR" comment="" />
+<DATE id="P8" start="358" end="362" text="2093" TYPE="DATE" comment="" />
+<NAME id="P9" start="705" end="710" text="Mckee" TYPE="DOCTOR" comment="" />
+<NAME id="P10" start="1022" end="1029" text="Mercado" TYPE="PATIENT" comment="" />
+<AGE id="P11" start="1425" end="1428" text="70s" TYPE="AGE" comment="" />
+<PROFESSION id="P12" start="1501" end="1514" text="Web Developer" TYPE="PROFESSION" comment="" />
+<LOCATION id="P13" start="1518" end="1526" text="Audiovox" TYPE="ORGANIZATION" comment="" />
+<NAME id="P14" start="2171" end="2176" text="Meyer" TYPE="PATIENT" comment="" />
+<NAME id="P15" start="3421" end="3436" text="Victor M. Zubia" TYPE="DOCTOR" comment="" />
+<NAME id="P16" start="3451" end="3465" text="Osiel U. Mckee" TYPE="DOCTOR" comment="" />
+<LOCATION id="P17" start="3482" end="3507" text="Shelby Community Hospital" TYPE="HOSPITAL" comment="" />
+<NAME id="P18" start="3511" end="3522" text="Oscar Nagel" TYPE="DOCTOR" comment="" />
+<LOCATION id="P19" start="3530" end="3547" text="1502 Maple Street" TYPE="STREET" comment="" />
+<LOCATION id="P21" start="3557" end="3564" text="Kalaheo" TYPE="CITY" comment="" />
+<LOCATION id="P22" start="3566" end="3568" text="AL" TYPE="STATE" comment="" />
+<NAME id="P23" start="3574" end="3576" text="VZ" TYPE="DOCTOR" comment="" />
+<CONTACT id="P24" start="3577" end="3582" text="78916" TYPE="PHONE" comment="" />
+<NAME id="P25" start="3584" end="3586" text="HT" TYPE="DOCTOR" comment="" />
+<CONTACT id="P26" start="3587" end="3595" text="148-8151" TYPE="PHONE" comment="" />
+<DATE id="P27" start="3601" end="3611" text="02/06/2095" TYPE="DATE" comment="" />
+<DATE id="P28" start="3617" end="3627" text="02/07/2095" TYPE="DATE" comment="" />
+</TAGS>
+</deIdi2b2>

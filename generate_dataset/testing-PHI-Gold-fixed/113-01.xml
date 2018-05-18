@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2087-02-21
+
+                     DAMERON EMERGENCY DEPT VISIT
+
+ 
+
+VALENZUELA,BRIAN   036-89-96-4                     VISIT DATE: 02/21/87
+
+The patient was seen by me in the emergency department on 02/21/87 
+
+with the resident.  The resident's notes were reviewed and the 
+
+patient interviewed was examined by me.  The patient's complete 
+
+history is limited by change in mental status and multiple 
+
+sclerosis.  The patient was transferred from an Ellijay home.
+
+PRESENTING COMPLAINT:  Nausea and vomiting.
+
+HISTORY OF PRESENTING COMPLAINT:  The patient is a 49-year-old with 
+
+nausea and vomiting for the past 24 hours, rigid abdomen and no 
+
+bowel sounds.  He has had some feculent emesis over the last day.  
+
+REVIEW OF SYSTEMS:  No fevers or chills, no bright red blood per 
+
+rectum or melena but did have liquid stool earlier today.  
+
+PAST MEDICAL HISTORY:  Hypertension, multiple sclerosis and anemia. 
+
+PHYSICAL EXAMINATION:  GENERAL:  The patient is awake.  LUNGS:  
+
+Scattered rhonchi, otherwise clear.  HEART:  Regular rate and 
+
+rhythm.  ABDOMEN:  Distended with absent bowel sounds, nontender.  
+
+NEUROLOGICAL:  Nonfocal.  
+
+LABORATORY EVALUATION:  Remarkable for a glucose of 100, BUN 13, 
+
+creatinine 0.6, sodium 141, potassium 3.9, chloride 108, bicarb 25, 
+
+lipase 144, calcium 9.4.  White count 10.4, hematocrit 41, platelet 
+
+count 250.  KUB reviewed by me shows distended small bowel and 
+
+large bowel consistent with a large bowel obstruction versus an 
+
+ileus.  
+
+THERAPY RENDERED/COURSE IN ED:  A nasogastric tube was placed. 
+
+CONSULTATIONS (including PCP):  Surgery.  
+
+FINAL DIAGNOSIS:  Large bowel obstruction.  
+
+DISPOSITION (including condition upon discharge):  The patient will 
+
+be admitted.  Surgery was consulted.  The patient was admitted in 
+
+stable condition. 
+
+___________________________________                    GJ089/08607 
+
+HAROLD OSBORNE, M.D.       HO97                         D:02/21/87 
+
+                                                       T:02/21/87 
+
+Dictated by:  HAROLD OSBORNE, M.D.       HO97 
+
+ ******** Not reviewed by Attending Physician ********
+
+
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2087-02-21" TYPE="DATE" comment="" />
+<LOCATION id="P1" start="49" end="56" text="DAMERON" TYPE="HOSPITAL" comment="" />
+<NAME id="P2" start="82" end="98" text="VALENZUELA,BRIAN" TYPE="PATIENT" comment="" />
+<ID id="P3" start="101" end="112" text="036-89-96-4" TYPE="MEDICALRECORD" comment="" />
+<DATE id="P4" start="145" end="153" text="02/21/87" TYPE="DATE" comment="" />
+<DATE id="P5" start="213" end="221" text="02/21/87" TYPE="DATE" comment="" />
+<LOCATION id="P6" start="464" end="471" text="Ellijay" TYPE="CITY" comment="" />
+<AGE id="P7" start="575" end="577" text="49" TYPE="AGE" comment="" />
+<ID id="P8" start="1870" end="1881" text="GJ089/08607" TYPE="IDNUM" comment="" />
+<NAME id="P9" start="1884" end="1898" text="HAROLD OSBORNE" TYPE="DOCTOR" comment="" />
+<NAME id="P10" start="1911" end="1915" text="HO97" TYPE="USERNAME" comment="" />
+<DATE id="P11" start="1942" end="1950" text="02/21/87" TYPE="DATE" comment="" />
+<DATE id="P12" start="2010" end="2018" text="02/21/87" TYPE="DATE" comment="" />
+<NAME id="P13" start="2035" end="2049" text="HAROLD OSBORNE" TYPE="DOCTOR" comment="" />
+<NAME id="P14" start="2062" end="2066" text="HO97" TYPE="USERNAME" comment="" />
+</TAGS>
+</deIdi2b2>

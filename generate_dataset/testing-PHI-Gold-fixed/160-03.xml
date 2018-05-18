@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2070-11-04
+
+Neurology EW Resident Consult
+
+
+
+ID/CC: 59 RHF decreasing visual acuity
+
+
+
+
+
+HPI: Ms Uher was doing well until 8/70 when she she was noted to have several "staring spells." At the same time she had increased gait instability leading to admission to SLMC. A head MRI was reportedly normal. She improved and was discharged without treatment or diagnosis. At that time she also noticed subtle decline in visual acuity and eye exam confirmed this. She was told that this was caused by her diabetes. Her vision continued to worsen and she was treated with laser OS. Over the past month her balance has worsened nad her vision has continued to deteriorate. She reports severe HA in 8/70 but none recently. She was seen by ophtalmology at SGAH and noted to have optic disc swelling, cotton wool spots and hemorrhages. She was sent to CCH EW for evaluation.
+
+
+
+
+
+ROS:She c/o painful dysesthesia and weakness BLE (lonstanding). She denies HA, tinnitus, vertigo, numbness, fever, chills, cough, nausea, vomiting, chest pain, palpitations, shortness of breath, heartburn, constipation, diarrhea, dysuria, incontinence, or rash.
+
+
+
+
+
+PMH:
+
+ear infection spring 2069 requiring IV abx (?mastoiditis)
+
+type 1 DM x 38 year {retinopathy, nephropathy, neuropathy
+
+arthritis, tendonitis, capsulitis
+
+hypothyroidism
+
+hypercholesterolemia
+
+
+
+MED:
+
+Insulin NPH 12U qam and 9U qpm
+
+Insulin Reg SS
+
+levothyroxine 200 mcg qd
+
+Epogen 3x/wk
+
+
+
+ALL: NKDA
+
+
+
+
+
+SH: Retired, lives alone in Cape Cod, denies tobacco and alcohol
+
+
+
+
+
+FH: type 1 DM
+
+
+
+
+
+VS: T 98.8  HR 86  BP 157/94  RR 16
+
+
+
+
+
+PE:  Genl 	WD WN WF mildly agitated NAD
+
+HEENT 	AT/NC, MMM no lesions
+
+Neck 	Supple, no thyromegaly, no LAN, no bruits
+
+Chest 	CTA B
+
+CVS 	RRR no MGR
+
+ABD 	ND, +BS, NT, no masses, no hepatosplenomegaly
+
+EXT 	b/l olecranon nodules, swollen fingers, no edema, distal pulses full, no rashes or petechiae
+
+Rectal 	deferred
+
+       Neuro
+
+  MS:	disorganized thought (s/p ativan), speech fluent, flat affect
+
+  CN: 	I--not tested; II,III--pupils pharmacologically dilated right sluggishly reactive and left non-reactive, VFF by confrontation, b/l optic disc swelling with small hemorrhages and cotton wool spots; III,IV,VI--EOMI, no ptosis; V--sensation intact to LT/PP, masseters strong symmetrically; VII--face symmetric without weakness; VIII--hears finger rub; IX,X--voice normal, palate elevates symmetrically; XI--SCM/trapezii 5/5; XII--tongue protrudes midline, no atrophy or fasciculations
+
+  Motor:	normal bulk and tone, no tremor, rigidity or bradykinesia, no pronator drift.strength:
+
+                  Sh abd
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2070-11-04" TYPE="DATE" comment="" />
+<AGE id="P1" start="68" end="70" text="59" TYPE="AGE" comment="" />
+<NAME id="P2" start="113" end="117" text="Uher" TYPE="PATIENT" comment="" />
+<DATE id="P3" start="139" end="143" text="8/70" TYPE="DATE" comment="" />
+<LOCATION id="P4" start="277" end="281" text="SLMC" TYPE="HOSPITAL" comment="" />
+<DATE id="P5" start="704" end="708" text="8/70" TYPE="DATE" comment="" />
+<LOCATION id="P6" start="760" end="764" text="SGAH" TYPE="HOSPITAL" comment="" />
+<LOCATION id="P7" start="855" end="858" text="CCH" TYPE="HOSPITAL" comment="" />
+<DATE id="P8" start="1170" end="1181" text="spring 2069" TYPE="DATE" comment="" />
+<LOCATION id="P9" start="1488" end="1496" text="Cape Cod" TYPE="LOCATION-OTHER" comment="" />
+</TAGS>
+</deIdi2b2>

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2090-04-30
+
+EDVISIT^83288425^PAUL, MAE^04/30/90^CORTES, ODESSA
+
+The patient was seen in conjunction with resident, Dr. Peacock. 
+
+Resident's note was reviewed.  The patient was seen and examined
+
+by me.  Please see the resident's note for details of the
+
+patient's past medical, social, family history, review of
+
+systems, and physical exam.
+
+CHIEF COMPLAINT:  Bleeding fistula.
+
+HISTORY OF PRESENT ILLNESS:  This is a 78-year-old woman with
+
+end-stage renal disease, on hemodialysis, who is here with
+
+bleeding of her left upper arm AV fistula that she uses for
+
+dialysis that started today at dialysis.  When the patient pulled
+
+up her sleeve, she scratched herself and it began to bleed. 
+
+Blood pressure is 112/60.  The bleeding can be controlled with
+
+compression and so she presented to the Emergency Department
+
+where she was seen by the Internal Medicine for repair.
+
+PAST MEDICAL HISTORY:  The patient has a history of severe aortic
+
+stenosis with 0.7 cm greater diameter, mitral regurg and
+
+tricuspid regurg, end-stage renal disease on hemodialysis, PVD,
+
+foot drop, anemia, sciatica, left thigh pain, hyperlipidemia,
+
+secondary hyperparathyroidism, hemorrhoids, coronary artery
+
+disease status post non-ST elevation MI, CHF with an EF of
+
+35-40%.
+
+PAST SURGICAL HISTORY:  Includes a TAH, appendectomy, cataract
+
+surgery, ovarian cyst removal.
+
+SOCIAL HISTORY:  Never smoked, does not drink or use drugs.  She
+
+is retired, lives with her daughter who is a surgeon.
+
+FAMILY HISTORY:  Shows an extensive vascular history.
+
+REVIEW OF SYSTEMS:  Otherwise, negative.
+
+PHYSICAL EXAMINATION:  She is afebrile, normal and stable vital
+
+signs.  She has bilaterally faintly scattered rales on chest
+
+examination and she has a small laceration on the left arm over
+
+the fistula with an excoriation and this squirting blood would
+
+not controlled with pressure.
+
+LABORATORY DATA:  CBC is normal with a hematocrit of 43.  Chem-7
+
+is otherwise normal.  Coags reveal an INR of 1.4.  Chest x-ray
+
+shows no acute disease.
+
+EMERGENCY DEPARTMENT COURSE:  She was seen by surgery who repair
+
+her fistula.  She is due to go to dialysis now and due to sickle
+
+nature of her disease, I think it is best that she keep her
+
+dialysis appointment and so she is transferred from here with her
+
+daughter to the EHCC Dialysis Unit to undergo full dialysis.
+
+PRIMARY DIAGNOSES:  Bleeding aVF and end-stage renal disease.
+
+DISPOSITION:  She is discharged in satisfactory condition.
+
+______________________________
+
+CORTES, ODESSA M.D.
+
+D: 04/30/90
+
+T: 04/30/90
+
+Dictated By: CORTES, ODESSA
+
+eScription document:5-52221754 FVQtwry
+
+ ******** Not reviewed by Attending Physician ********
+
+
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2090-04-30" TYPE="DATE" comment="" />
+<ID id="P1" start="36" end="44" text="83288425" TYPE="MEDICALRECORD" comment="" />
+<NAME id="P2" start="45" end="54" text="PAUL, MAE" TYPE="PATIENT" comment="" />
+<DATE id="P3" start="55" end="63" text="04/30/90" TYPE="DATE" comment="" />
+<NAME id="P4" start="64" end="78" text="CORTES, ODESSA" TYPE="DOCTOR" comment="" />
+<NAME id="P5" start="135" end="142" text="Peacock" TYPE="DOCTOR" comment="" />
+<AGE id="P6" start="435" end="437" text="78" TYPE="AGE" comment="" />
+<PROFESSION id="P8" start="1482" end="1489" text="surgeon" TYPE="PROFESSION" comment="" />
+<LOCATION id="P9" start="2307" end="2311" text="EHCC" TYPE="HOSPITAL" comment="" />
+<NAME id="P10" start="2508" end="2522" text="CORTES, ODESSA" TYPE="DOCTOR" comment="" />
+<DATE id="P11" start="2532" end="2540" text="04/30/90" TYPE="DATE" comment="" />
+<DATE id="P12" start="2545" end="2553" text="04/30/90" TYPE="DATE" comment="" />
+<NAME id="P13" start="2568" end="2582" text="CORTES, ODESSA" TYPE="DOCTOR" comment="" />
+<ID id="P14" start="2604" end="2622" text="5-52221754 FVQtwry" TYPE="IDNUM" comment="" />
+</TAGS>
+</deIdi2b2>

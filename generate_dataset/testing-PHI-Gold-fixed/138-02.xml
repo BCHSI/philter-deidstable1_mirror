@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2076-03-29
+
+
+
+
+
+
+Shelby Dental Care Center
+1048 Oldham Lane              PRESTON, FRANCES
+Cozad, OK  53952                    05850080
+(060) 107-3378                     03/29/2076
+
+
+
+
+HISTORY OF PRESENT ILLNESS:  The patient is a 51-year-old woman who comes in for followup after a recent 2-hour glucose tolerance test and other medical problems.
+
+
+PROBLEMS:
+1.  Diabetes mellitus.  Her 2-hours value was 286.  No significant polyuria or polydipsia.
+2.  Hyperlipidemia.  She has not begun on Zocor.  No muscle aches.
+3.  Hypertension.  No chest pain, shortness of breath, dizziness.
+
+
+MEDICATIONS:  
+1.  Aspirin 81 mg p.o. daily.
+2.  Hydrochlorothiazide 25 mg p.o. daily.
+3.  Lisinopril 10 mg p.o. daily.
+4.  Norvasc 10 mg daily.
+5.  Simvastatin 20 mg nightly.
+
+
+REVIEW OF SYMPTOMS:  No significant weight change, febrile signs or symptoms, headache, blurred vision, tinnitus, cough, shortness of breath, nausea, abdominal pain, nightsweats, diarrhea, dysuria, polyuria, skin rash, bruising, joint pain, or focal weakness.
+
+
+PHYSICAL EXAMINATION:  The patient is in no acute distress.  Blood pressure 138/92, weight 217 pounds, heart rate 72 and regular, BMI 37.9.  Chest:  Clear to percussion and auscultation.  Extremities:  No edema.
+
+
+ASSESSMENT AND PLAN:
+1.  Diabetes mellitus.  The patient will return to spend time with a diabetic educator, Brizeida Xuan.  Referred for nutrition and ophthalmology evaluation.  A1c and urine for microalbuminuria ordered.  Metformin extended release 500 mg p.o. daily will be initiated.
+2.  Hyperlipidemia.  On treatment.
+3.  Hypertension.  Will increase lisinopril to 20 mg p.o. daily.
+4.  Obesity.  She has lost several pounds about which I congratulated her.  Encouraged her to do more and again drew attention to the relationship between this problem and her other medical problems.
+
+
+
+
+______________________________
+Louis P Barron, M.D., M.Sc.
+
+
+
+
+
+
+
+
+
+
+eScription document:0-3309412 MEeScription
+
+
+
+
+
+
+DD: 03/29/76
+DT: 03/30/76
+DV: 03/29/76
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2076-03-29" TYPE="DATE" comment="" />
+<LOCATION id="P1" start="33" end="58" text="Shelby Dental Care Center" TYPE="HOSPITAL" comment="" />
+<LOCATION id="P2" start="59" end="75" text="1048 Oldham Lane" TYPE="STREET" comment="" />
+<NAME id="P3" start="89" end="105" text="PRESTON, FRANCES" TYPE="PATIENT" comment="" />
+<LOCATION id="P4" start="106" end="111" text="Cozad" TYPE="CITY" comment="" />
+<LOCATION id="P5" start="113" end="115" text="OK" TYPE="STATE" comment="" />
+<LOCATION id="P6" start="117" end="122" text="53952" TYPE="ZIP" comment="" />
+<ID id="P7" start="142" end="150" text="05850080" TYPE="MEDICALRECORD" comment="" />
+<CONTACT id="P8" start="151" end="165" text="(060) 107-3378" TYPE="PHONE" comment="" />
+<DATE id="P9" start="186" end="196" text="03/29/2076" TYPE="DATE" comment="" />
+<AGE id="P10" start="247" end="249" text="51" TYPE="AGE" comment="" />
+<NAME id="P11" start="1365" end="1378" text="Brizeida Xuan" TYPE="DOCTOR" comment="" />
+<NAME id="P12" start="1879" end="1893" text="Louis P Barron" TYPE="DOCTOR" comment="" />
+<ID id="P13" start="1937" end="1946" text="0-3309412" TYPE="IDNUM" comment="" />
+<DATE id="P14" start="1970" end="1978" text="03/29/76" TYPE="DATE" comment="" />
+<DATE id="P15" start="1983" end="1991" text="03/30/76" TYPE="DATE" comment="" />
+<DATE id="P16" start="1996" end="2004" text="03/29/76" TYPE="DATE" comment="" />
+</TAGS>
+</deIdi2b2>

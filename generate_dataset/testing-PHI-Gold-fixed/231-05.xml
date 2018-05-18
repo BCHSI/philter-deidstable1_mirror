@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2098-10-11
+
+
+	CARDIOLOGY
+	
+
+	COQUILLE VALLEY HOSPITAL
+	
+
+
+	Reason for visit:
+   45 y o seamstress with h/o CAD, renal transplant, CVA, here for cardiology FU after having been inactivated from pancreas transplant list.
+
+
+	Interval History:
+        Ms. Fagan notes that she is doing very well.   She does not have any chest pain and only rare dyspnea.   She has not had any dizziness and lightheadedness.
+     She had previously been on the CVH pancreas transplant list and had full cardiac workup including recent dobutamine echo which revealed normal LV function and no ischemia.   However, there was concern about her extensive visceral and iliac vascular calcification by CT which rendered her high surgical risk.    She is understandably upset about this reclassification and is here today for an overview of her cardiac status.
+
+
+	Past medical history:
+   IDDM for many years for which she is on an insulin pump.   She now also has a continuous glucometer as she has had a h/o recurrent hypoglycemic episodes
+CAD -   s/p PCI LAD 8/94 with subsequent DES to mid RCA and restent proximal edge of LAD stent 9/94.   12/94 RCA stenting.   Repeat RCA stenting 2/96.   70% OMB2 detected.   Subsequent cath no change.
+No ischemia by 9/98 dobutamine Echo
+Small anteroapical defect with partial reperfusion by 8/97 nuclear, unchanged
+LVEF 75%
+h/o CHF
+s/p renal transplant with Cr 1.1-1.2
+Hypercholesterolemia
+h/o L temporal-occipital CVA 2093 with subsequent agraphia and inability to read which has resolved.
+Diabetic retinopathy
+s/p R wrist fx 2/96
+s/p L foot fx with surgery 5/97 for nonhealing and wound infection
+
+	
+
+	Changes to Allergies
+	
+reglan - reaction: GI Intolerance [reviewed]
+
+
+	Family history:
+   Mother  with HTN, cancerdiabetes.   Father afib.   Grandmother CVA.   
+
+
+	Social history:
+   The patient is single and lives with her parents.  She is a Patternmaker at the Ion Media Networks in Erwin.
+
+
+	Review of systems:
+   No fever, chills or sweats.   No nausea vomiting or diarrhea.   No cough or respiratory sxs.   No abdominal pain.   No headaches or neurologic sxs.   Remainder of ros negative except as described in HPI. 
+
+Physical examination:
+	
+-BMI: 24.2  Normal, low risk
+-Pulse: 73  
+-resp. rate: 12  
+-height: 66.25  in.
+-weight: 151  lbs.
+-General:   Well-appearing middle aged white female in no apparent distress.   Skin is warm and dry.  HEENT examination is within normal limits.  Neck is without jugular venous distention.  Carotids are 2  bilaterally without bruits.  There is no lymphadenopathy.  Lungs are clear without wheezes or rhonchi.  Cardiac exam reveals a nondisplaced PMI S1-S2 regular rhythm with no murmur, rub or gallop.  Abdomen is soft and nontender with positive bowel sounds.  Extremities are without peripheral edema.  Distal pulses are 2   bilaterally.  There is no clubbing or cyanosis.  Neuro exam is grossly nonfocal. NS
+-BP: 106  66 (l)
+
+
+	EKG:
+   NSR at 73.   LVH by voltage.  Septal infarct - age indeterminate.   No change compared with 7/11/98.
+
+Selected recent labs:
+	 Lipid/Thyroid
+Date     
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2098-10-11" TYPE="DATE" comment="" />
+<LOCATION id="P1" start="45" end="69" text="COQUILLE VALLEY HOSPITAL" TYPE="HOSPITAL" comment="" />
+<AGE id="P2" start="96" end="98" text="45" TYPE="AGE" comment="" />
+<PROFESSION id="P3" start="103" end="113" text="seamstress" TYPE="PROFESSION" comment="" />
+<NAME id="P4" start="268" end="273" text="Fagan" TYPE="PATIENT" comment="" />
+<LOCATION id="P5" start="456" end="459" text="CVH" TYPE="HOSPITAL" comment="" />
+<DATE id="P6" start="1050" end="1054" text="8/94" TYPE="DATE" comment="" />
+<DATE id="P7" start="1125" end="1129" text="9/94" TYPE="DATE" comment="" />
+<DATE id="P8" start="1133" end="1138" text="12/94" TYPE="DATE" comment="" />
+<DATE id="P9" start="1175" end="1179" text="2/96" TYPE="DATE" comment="" />
+<DATE id="P10" start="1246" end="1250" text="9/98" TYPE="DATE" comment="" />
+<DATE id="P11" start="1321" end="1325" text="8/97" TYPE="DATE" comment="" />
+<DATE id="P12" start="1449" end="1453" text="2093" TYPE="DATE" comment="" />
+<DATE id="P13" start="1557" end="1561" text="2/96" TYPE="DATE" comment="" />
+<DATE id="P14" start="1589" end="1593" text="5/97" TYPE="DATE" comment="" />
+<PROFESSION id="P15" start="1877" end="1889" text="Patternmaker" TYPE="PROFESSION" comment="" />
+<LOCATION id="P16" start="1897" end="1915" text="Ion Media Networks" TYPE="ORGANIZATION" comment="" />
+<LOCATION id="P17" start="1919" end="1924" text="Erwin" TYPE="CITY" comment="" />
+<DATE id="P18" start="3011" end="3018" text="7/11/98" TYPE="DATE" comment="" />
+</TAGS>
+</deIdi2b2>

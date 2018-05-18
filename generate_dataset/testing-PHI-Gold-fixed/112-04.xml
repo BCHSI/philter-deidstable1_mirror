@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2060-08-05
+
+     5 August 2060
+
+
+
+
+
+Quatrell Swanson, MD
+
+Division of Cardiology
+
+Barney Convalescent Hospital
+
+
+
+Re:	Clarence H. HESS
+
+	BCH 643-65-59-5
+
+
+
+Dear Dr. Swanson:
+
+
+
+I had the pleasure of caring for Clarence Hess at BCH 08/04-03/07.  He is a 54-year-old man with obesity, dyslipidemia and hypertension, S/P dual-chamber pacemaker placement by Dr. Una Trujillo in February, 2060.  He complained of fatigue and exertional throat tightness and a nuclear stress test in June, 2060, revealed apical ischemia and an ejection fraction of 70 percent.  Cardiac catheterization performed by Dr. Leslie Campbell on 08/04/60 via the right radial artery revealed a right dominant system, a tight lesion in the proximal LAD, and no other focally occlusive disease.  He received a 3mm stent, postdilated to 3.5mm, with an excellent angiographic result.  
+
+
+
+He spent an uneventful night without complaints, ambulating and voiding without difficulty.  His right wrist was stable, and his hand warm and well perfused.  Morning labs included a BUN of 16, creatinine 0.9, negative cardiac enzymes, hematocrit 36.4, platelets 238,000, cholesterol 182, HDL 37, LDL 91 and triglycerides 269.  He was discharged home on aspirin, 325mg po qd; Plavix, 75mg po qd, to be continued for at least six months according to the research trial protocol; atenolol, 50mg po qd; Lipitor, 80mg po qd; Prilosec, 20mg po qd; Proventil, two puffs qid; and sublingual nitroglycerin, prn chest pain.  We've asked him to see you in the next couple of weeks, and to call if he has questions before then.  He also will follow up with the research staff per protocol guidelines.  Thank you for allowing us to participate in his care.  Please don't hesitate to call with questions.
+
+
+
+Sincerely,
+
+
+
+
+
+
+
+Brittany Witt, MD
+
+BW/brown
+
+cc:	Robert Y. Gordon, MD, 301 Fairhaven Road, Olney, OH 23751
+
+	Una Trujillo, MD, BCH Cardiology
+
+DS:    08/05/60
+
+DD:   08/05/60
+
+DT:   08/2150
+
+ 
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2060-08-05" TYPE="DATE" comment="" />
+<DATE id="P1" start="33" end="46" text="5 August 2060" TYPE="DATE" comment="" />
+<NAME id="P2" start="52" end="68" text="Quatrell Swanson" TYPE="DOCTOR" comment="" />
+<LOCATION id="P3" start="98" end="126" text="Barney Convalescent Hospital" TYPE="HOSPITAL" comment="" />
+<NAME id="P4" start="134" end="150" text="Clarence H. HESS" TYPE="PATIENT" comment="" />
+<LOCATION id="P5" start="153" end="156" text="BCH" TYPE="HOSPITAL" comment="" />
+<ID id="P6" start="157" end="168" text="643-65-59-5" TYPE="MEDICALRECORD" comment="" />
+<NAME id="P7" start="181" end="188" text="Swanson" TYPE="DOCTOR" comment="" />
+<NAME id="P8" start="226" end="239" text="Clarence Hess" TYPE="PATIENT" comment="" />
+<LOCATION id="P9" start="243" end="246" text="BCH" TYPE="HOSPITAL" comment="" />
+<DATE id="P10" start="247" end="252" text="08/04" TYPE="DATE" comment="" />
+<DATE id="P11" start="253" end="258" text="03/07" TYPE="DATE" comment="" />
+<AGE id="P12" start="269" end="271" text="54" TYPE="AGE" comment="" />
+<NAME id="P13" start="374" end="386" text="Una Trujillo" TYPE="DOCTOR" comment="" />
+<DATE id="P14" start="390" end="404" text="February, 2060" TYPE="DATE" comment="" />
+<DATE id="P15" start="493" end="503" text="June, 2060" TYPE="DATE" comment="" />
+<NAME id="P16" start="612" end="627" text="Leslie Campbell" TYPE="DOCTOR" comment="" />
+<DATE id="P17" start="631" end="639" text="08/04/60" TYPE="DATE" comment="" />
+<NAME id="P18" start="1783" end="1796" text="Brittany Witt" TYPE="DOCTOR" comment="" />
+<NAME id="P19" start="1802" end="1804" text="BW" TYPE="DOCTOR" comment="" />
+<NAME id="P20" start="1805" end="1810" text="brown" TYPE="DOCTOR" comment="" />
+<NAME id="P21" start="1816" end="1832" text="Robert Y. Gordon" TYPE="DOCTOR" comment="" />
+<LOCATION id="P22" start="1838" end="1856" text="301 Fairhaven Road" TYPE="STREET" comment="" />
+<LOCATION id="P23" start="1858" end="1863" text="Olney" TYPE="CITY" comment="" />
+<LOCATION id="P24" start="1865" end="1867" text="OH" TYPE="STATE" comment="" />
+<LOCATION id="P25" start="1868" end="1873" text="23751" TYPE="ZIP" comment="" />
+<NAME id="P26" start="1876" end="1888" text="Una Trujillo" TYPE="DOCTOR" comment="" />
+<LOCATION id="P27" start="1894" end="1897" text="BCH" TYPE="HOSPITAL" comment="" />
+<DATE id="P28" start="1917" end="1925" text="08/05/60" TYPE="DATE" comment="" />
+<DATE id="P29" start="1933" end="1941" text="08/05/60" TYPE="DATE" comment="" />
+<DATE id="P30" start="1949" end="1956" text="08/2150" TYPE="DATE" comment="" />
+</TAGS>
+</deIdi2b2>

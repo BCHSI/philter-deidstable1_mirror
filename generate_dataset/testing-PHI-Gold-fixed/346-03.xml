@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2088-02-18
+
+
+
+Reason for Visit
+
+Mr. Oshea is here for f/u of diabetes, other issues.  We increased his 70/30 insulin from 30 to 35U BID last month.  He has been keeping track of sugars at least BID since then.  He still has the majority of sugars in the low 200 range, some in the 300's, a few in the 100's.  Interestingly, his fasting sugars are for the most part higher than his daytime sugars.  He has not been adhering to a good diabetes diet - he enjoys a blueberry muffin from RR Donnelley daily.  His daughter-in-law who is also my patient has told me that he eats anything he wants and all the wrong things.  I addressed this issue w/ Mr. Oshea.  He says he tries, but he enjoys these things and feels he doesn't have much else in life to enjoy.  He is worried about his remaining vision.  He was told by Dr. Villagomez that the pressure in his L eye was unusually high.  She wants to see him back again this month for another exam and wants him to bring his eye drops.  He also is having trouble sleeping.  He never had a great sleep pattern since he worked as a Senior Manager of Broadcasting and was up at all hours.  He has no trouble falling asleep, but wakes up about 2 a.m. every morning and can't fall back asleep.  He does take naps in the afternoon at times.
+
+
+
+Problems
+
+      H/O Cerebrovascular accident    : unclear when; pt describes as mild stroke; was started on dipyrimadole at that time by neurologist.
+
+      Diabetes mellitus
+
+      Hypertension
+
+      Glaucoma
+
+      Visual impairment    : pt legally blind
+
+      Retinopathy    : s/p multiple laser surg; legally blind
+
+      Benign prostatic hypertrophy    : followed by Dr. Landers
+
+
+
+Medications
+
+      Artificial Tears   2 DROP OS TID 
+
+      TRAZODONE   50MG TABLET take 1 Tablet(s) PO QHS PRN insomnia 
+
+      Timolol Maleate 0.5%   2 DROP OU BID 
+
+      Insulin 70/30 Human   35 UNITS SC BID 
+
+      DIPYRIDAMOLE   75MG TABLET take 2 Tablet(s) PO TID 
+
+      Enalapril Maleate   20MG TABLET take 1 Tablet(s) PO BID x 90 days
+
+      Metoprolol Tartrate   50MG TABLET take 1 Tablet(s) PO BID x 90 days
+
+      Lipitor (ATORVASTATIN)   10MG TABLET take 1 Tablet(s) PO QD 
+
+      Ambien (ZOLPIDEM Tartrate)   5 MG (5MG TABLET take 1) PO QHS PRN insomnia 
+
+      Proscar (FINASTERIDE)   5 MG (5MG TABLET take 1) PO QD 
+
+      Flomax (TAMSULOSIN)   0.4 MG (0.4MG CAP.SR 24H take 1) PO QD 
+
+
+
+Allergies
+
+      NKA
+
+
+
+Social History
+
+language: English
+
+living: w/ son and his wife; pt's wife passed away; moved here from NY in 12/2084
+
+work: retired Senior Manager of Broadcasting
+
+tobacco: 2 ppd x 24 yrs; quit age 39
+
+EtOH:  remote hx heavy use; quit age 39
+
+drug: none
+
+sexual: not active
+
+domestic violence: neg
+
+
+
+Review of Systems
+
+ Denies headache, visual change, confusion, focal weakness or paresthesias; denies chest pain, sob, change in exercise tolerance, pedal edema, orthopnea; denies symptoms of hypoglycemia; does have frequent urination, some urinary incontinence despite meds.
+
+
+
+Vital Signs
+
+      BLOOD PRESSURE   124/60 
+
+      PULSE   72 
+
+      WEIGHT   238 lb
+
+
+
+Physical Exam
+
+Gen: obese man, NAD, appears tired today
+
+HEENT: PERRL, EOM intact, oral mucosa moist, no lesions
+
+Neck: supple, no LAN, no masses
+
+Lungs: clear bilat
+
+CV: RRR, nl S1, S2, no M/R/G
+
+Extrem: no edema; radial and p.t. pulses 2+ bilat
+
+
+
+Assessment and Plan
+
+75 y.o. man w/ DM type 2, HTN, hyperlipidemia, BPH, legally blind, still w/ elevated blood sugars.
+
+1) DM: emphasized to pt the importance of diet in controlling blood sugar; he says he will make an honest attempt to do better; will recheck HbA1c in April; he will continue to monitor blood sugars at home; has appt w/ Dr. Villagomez of MEDIQUIK this month, is up to date w/ podiatry.
+
+
+
+2) hyperlipidemia: will recheck fasting lipids in April; continue lipitor.
+
+
+
+3) HTN: good control today; continue enalapril, metoprolol.
+
+
+
+4) BPH: followed by Dr. Landers; has f/u w/ him later this year.
+
+
+
+5) insomnia: early morning waking difficult to treat w/ a pill; despite my discussion w/ pt regarding this, he would like to try Ambien.  Will give some for short term use.
+
+
+
+RTC in 3 mos for f/u, sooner prn.
+
+
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2088-02-18" TYPE="DATE" comment="" />
+<NAME id="P1" start="52" end="57" text="Oshea" TYPE="PATIENT" comment="" />
+<LOCATION id="P2" start="499" end="511" text="RR Donnelley" TYPE="ORGANIZATION" comment="" />
+<NAME id="P3" start="663" end="668" text="Oshea" TYPE="PATIENT" comment="" />
+<NAME id="P4" start="833" end="843" text="Villagomez" TYPE="DOCTOR" comment="" />
+<PROFESSION id="P5" start="1088" end="1118" text="Senior Manager of Broadcasting" TYPE="PROFESSION" comment="" />
+<NAME id="P6" start="1674" end="1681" text="Landers" TYPE="DOCTOR" comment="" />
+<LOCATION id="P7" start="2517" end="2519" text="NY" TYPE="STATE" comment="" />
+<DATE id="P8" start="2523" end="2530" text="12/2084" TYPE="DATE" comment="" />
+<PROFESSION id="P9" start="2546" end="2576" text="Senior Manager of Broadcasting" TYPE="PROFESSION" comment="" />
+<AGE id="P10" start="2612" end="2614" text="39" TYPE="AGE" comment="" />
+<AGE id="P11" start="2653" end="2655" text="39" TYPE="AGE" comment="" />
+<AGE id="P12" start="3354" end="3356" text="75" TYPE="AGE" comment="" />
+<DATE id="P13" start="3604" end="3609" text="April" TYPE="DATE" comment="" />
+<NAME id="P14" start="3677" end="3687" text="Villagomez" TYPE="DOCTOR" comment="" />
+<LOCATION id="P15" start="3691" end="3699" text="MEDIQUIK" TYPE="HOSPITAL" comment="" />
+<DATE id="P16" start="3792" end="3797" text="April" TYPE="DATE" comment="" />
+<NAME id="P17" start="3907" end="3914" text="Landers" TYPE="DOCTOR" comment="" />
+</TAGS>
+</deIdi2b2>

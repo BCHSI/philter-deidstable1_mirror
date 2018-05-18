@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2071-04-14
+
+Patient Name: XUEREB, JAQUANTE;  MRN: 1344351
+
+Dictated on: 04/27/2071 by LILLIAN STEELE, N.P., PH.D. 
+
+
+
+ 
+
+Mr. Xuereb returns to clinic for evaluation and management of recurrent ulcerations on the hypertrophic scar tissue along the medial aspect of the right lower extremity.  
+
+ 
+
+Today, on physical examination, the wound bed measured 1 cm x 0.7 cm.  The wound bed was covered with yellow biofilm, which was debrided.  The underlying wound bed contained moist red tissue with a few drops of bloody drainage.  The margin was clear.  
+
+ 
+
+IMPRESSION:  There has been epithelialization of the wound along the medial aspect of the right knee.  There has been no further disruption of the epithelium overlying the hypertrophic scar tissue.   
+
+
+
+PLAN:  We will continue with dressing changes every two to three days per the following protocol: spray the wound with AllClenz wound cleanser followed by irrigation with normal saline 30 cc x 3; apply skin protectant to the periwound margin, Panafil paste 1/8" thick to the wound bed, gauze dampened with normal saline (cut-to-fit), covered with DuoDerm secured with Medipore tape.  
+
+ 
+
+Mr. Xuereb will return to clinic in two weeks.  
+
+ 
+
+__________________________ 
+
+Lillian Steele, N.P., Ph.D.  
+
+ 
+
+DD:04/27/2071 
+
+DT:04/28/2071 
+
+FJ:801734    :77 
+
+ 
+
+
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2071-04-14" TYPE="DATE" comment="" />
+<NAME id="P1" start="42" end="58" text="XUEREB, JAQUANTE" TYPE="PATIENT" comment="" />
+<ID id="P2" start="66" end="73" text="1344351" TYPE="MEDICALRECORD" comment="" />
+<DATE id="P3" start="88" end="98" text="04/27/2071" TYPE="DATE" comment="" />
+<NAME id="P4" start="102" end="116" text="LILLIAN STEELE" TYPE="DOCTOR" comment="" />
+<NAME id="P5" start="141" end="147" text="Xuereb" TYPE="PATIENT" comment="" />
+<NAME id="P6" start="1167" end="1173" text="Xuereb" TYPE="PATIENT" comment="" />
+<NAME id="P7" start="1245" end="1259" text="Lillian Steele" TYPE="DOCTOR" comment="" />
+<DATE id="P8" start="1282" end="1292" text="04/27/2071" TYPE="DATE" comment="" />
+<DATE id="P9" start="1298" end="1308" text="04/28/2071" TYPE="DATE" comment="" />
+<ID id="P10" start="1311" end="1327" text="FJ:801734    :77" TYPE="IDNUM" comment="" />
+</TAGS>
+</deIdi2b2>

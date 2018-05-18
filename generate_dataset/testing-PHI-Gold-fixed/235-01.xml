@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2082-06-29
+
+Narrative History
+
+   The patient is here today for the following issues:
+
+   1.  Patient is scheduled for gastric bypass surgery July 22nd.  She is leaving for vacation.  She wants to make sure she is cleared for her surgery
+
+   2.  Patient completed Vit. D supplementation and her new VIT D level is 49 (up from 9).
+
+   3.  Patient complaining of persistent chest pain - she saw Dr. Uzzell who feels she is cleared for surgery from a cardiac perspective.
+
+   4.  Patient has persistednt recurrent LE edema.
+
+   5.  She complaining of occasional shortness of breath and has a pulmonary appointment in July prior to her surgery.
+
+   6.  Patient saw Dr. Newkirk who is still awaiting some bloodwork but feels she is cleared for surgery.  Her hct most recently was 35.6
+
+   7. OSA - feels she does awake in the middle of the night with sob.
+
+   8.  Patient gets an occasional leg cramp on the right - question related to LBP.  K+ normal on June 23rd.  Will follow up after surgery.  No weakness or numbness.
+
+Problems
+
+      Diabetes mellitus
+
+
+
+      S/P Abortion   SPONTANEOUS 4/80 
+
+
+
+      Chlamydia   CERVICITIS-TREATED 
+
+
+
+      H/O Abnormal pap test
+
+
+
+      Positive PPD   NEG CXR 
+
+
+
+      PARONYCHIAL INFECTION    LEFT HAND 78 
+
+
+
+      Ectopic pregnancy   74 
+
+
+
+      Coronary artery disease
+
+
+
+      Anemia
+
+
+
+      Shortness of breath
+
+
+
+      Hypertension
+
+
+
+      Gastroesophageal reflux disease
+
+
+
+      Elevated cholesterol
+
+
+
+      Hyperthyroidism
+
+
+
+      Obesity
+
+Review of Systems
+
+   Unless mentioned in the history above the following ROS were asked and are negative:  Constitutional,Respiratory, Cardiac, GI (above), Heme (above), Endocrine, GYN, Musculoskeletal, Psych, and Neuro.  
+
+Medications
+
+      ATENOLOL     100MG  1 Tablet(s) PO QD   
+
+
+
+      ASA (ACETYLSALICYLIC ACID)     325MG  1 Tablet(s) PO QD  
+
+
+
+      LIPITOR (ATORVASTATIN)     20MG  1 Tablet(s) PO QD  
+
+
+
+      INSULIN 70/30 (HUMAN)   SEE BELOW     SC 5ID   
+
+
+
+      IMDUR (ISOSORBIDE MONONIT.(SR))     30MG  1 Tablet(s) PO QD  
+
+
+
+      NEXIUM (ESOMEPRAZOLE)     40MG  1 Capsule(s) PO BID  
+
+
+
+      KLONOPIN (CLONAZEPAM)     0.5MG  1 Tablet(s) PO TID   
+
+
+
+      ZESTRIL (LISINOPRIL)     5MG  1 Tablet(s) PO QD   
+
+
+
+      ZANTAC (RANITIDINE HCL)     300MG  1 Tablet(s) PO QD  
+
+
+
+      VITAMIN D (ERGOCALCIFEROL)   50000 U     IM q72 HOURS  36 day(s) 
+
+
+
+      MECLIZINE HCL     25MG  1 Tablet(s) PO TID  7 day(s) 
+
+Allergies
+
+      NKDA      
+
+Physical Exam
+
+   120/80
+
+   GENERAL: 	obese female
+
+   EXT:		No edema
+
+   
+
+   
+
+   LABS reviewed.
+
+Assessment and Plan
+
+   1.  Gastric Bypass - Will proceed to preop evaluation and hopeful surgery on July 22nd.  Dr. Rivers will be consulted to assist with sugar management. 
+
+   2.  Vit D deficiency - Corrected with Vit D supplementation.  
+
+   3. LE edema will likely improve with weight loss.  Follow up after surgery.
+
+   4. CAD - followed by Dr. Uzzell
+
+   5. shortness of breath - Likely mostly secondary to deconditioning and weight but will be evaluated by pulmonary.
+
+   6. OSA - sees pulmonary in July.
+
+    appointment time 35 minutes - Discussed with patient at lenght surgery and what to expect after.  She seems motivated to lose weight.
+
+
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2082-06-29" TYPE="DATE" comment="" />
+<DATE id="P1" start="158" end="167" text="July 22nd" TYPE="DATE" comment="" />
+<NAME id="P2" start="413" end="419" text="Uzzell" TYPE="DOCTOR" comment="" />
+<DATE id="P3" start="630" end="634" text="July" TYPE="DATE" comment="" />
+<NAME id="P4" start="681" end="688" text="Newkirk" TYPE="DOCTOR" comment="" />
+<DATE id="P5" start="966" end="975" text="June 23rd" TYPE="DATE" comment="" />
+<DATE id="P6" start="1105" end="1109" text="4/80" TYPE="DATE" comment="" />
+<DATE id="P7" start="1260" end="1262" text="78" TYPE="DATE" comment="" />
+<DATE id="P8" start="1293" end="1295" text="74" TYPE="DATE" comment="" />
+<DATE id="P9" start="2674" end="2683" text="July 22nd" TYPE="DATE" comment="" />
+<NAME id="P10" start="2690" end="2696" text="Rivers" TYPE="DOCTOR" comment="" />
+<NAME id="P11" start="2925" end="2931" text="Uzzell" TYPE="DOCTOR" comment="" />
+<DATE id="P12" start="3081" end="3085" text="July" TYPE="DATE" comment="" />
+</TAGS>
+</deIdi2b2>
