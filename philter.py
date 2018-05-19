@@ -202,9 +202,10 @@ class Philter:
             
             for m in matches:
                 #if filename == './data/i2b2_notes_updated/373-04.txt':
-                # if '810 86 43' in m.group():
-                #     print(self.patterns***REMOVED***pattern_index***REMOVED******REMOVED***"title"***REMOVED***)
-                #     print(m.group())
+                # if self.patterns***REMOVED***pattern_index***REMOVED******REMOVED***"title"***REMOVED*** == "YYYY/MM-YYYY/MM":
+                # # if '810 86 43' in m.group():
+                # #     print(self.patterns***REMOVED***pattern_index***REMOVED******REMOVED***"title"***REMOVED***)
+                # print(m.group())
                 
                 coord_map.add_extend(filename, m.start(), m.start()+len(m.group()))
         
@@ -513,6 +514,7 @@ class Philter:
             for i,pattern in enumerate(self.patterns):
                 coord_map = pattern***REMOVED***"coordinate_map"***REMOVED***
                 exclude = pattern***REMOVED***"exclude"***REMOVED***
+                # self.patterns***REMOVED***pattern_index***REMOVED******REMOVED***"title"***REMOVED***
 
                 for start,stop in coord_map.filecoords(filename):
                     if exclude:
