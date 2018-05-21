@@ -53,25 +53,25 @@ def getcategory(summary, anno_path):
 					FN_dict['False Positives'].append(word)
 				if word_category == 'n':
 					FN_dict['Name FN'].append(word)
-					print(word, phi_context)
+					# print(word, phi_context)
 				if word_category == 'l':
 					FN_dict['Location FN'].append(word)
-					print(word, phi_context)
+					# print(word, phi_context)
 				if word_category == 'd':
 					FN_dict['Date FN'].append(word)
-					print(word, phi_context)
+					# print(word, phi_context)
 				if word_category == 'c':
 					FN_dict['Contact FN'].append(word)
-					print(word, phi_context)
+					# print(word, phi_context)
 				if word_category == 'i':
 					FN_dict['ID FN'].append(word)
-					print(word, phi_context)
+					# print(word, phi_context)
 				if word_category == 'a':
 					FN_dict['Age FN'].append(word)
-					print(word, phi_context)
+					# print(word, phi_context)
 				if word_category == 'o':
 					FN_dict['Other FN'].append(word)
-					print(word, phi_context)		        
+					# print(word, phi_context)		        
 
 	return FN_dict
 
