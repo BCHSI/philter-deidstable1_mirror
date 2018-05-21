@@ -34,7 +34,7 @@ python3 /media/DataHD/r_phi_corpus/kathleen/de-id_stable1/philter_whitelist.py -
 python3 /media/DataHD/r_phi_corpus/kathleen/de-id_stable1/philter_eval.py -p /media/DataHD/r_phi_corpus/kathleen/de-id_stable1/data/ucsf_results_whitelist/ -a /media/DataHD/philter-annotations/pooneh/pooneh-done/ -o /media/DataHD/r_phi_corpus/kathleen/ucsf_eval_whitelist/
 
 # 3. Run false negative script
-python3 /media/DataHD/r_phi_corpus/kathleen/de-id_stable1/getFNcategory_updated.py
+python3 /media/DataHD/r_phi_corpus/kathleen/de-id_stable1/getFNcategory_fred.py
 # The script will ask you to input the path to the summary dictionary:
 /media/DataHD/r_phi_corpus/kathleen/ucsf_eval_whitelist/summary_dict.pkl
 # ...and for the path to the directory containing the annotation files

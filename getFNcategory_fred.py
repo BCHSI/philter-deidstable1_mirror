@@ -75,8 +75,9 @@ def main():
     with open('FN_category.pkl', 'wb') as fout:
         pickle.dump(FN_category, fout)
 
-    with open('FN_dict.pkl', 'wb') as fout:
-        pickle.dump(FN_dict, fout)
+    out_path = summary_path.split("summary_dict.pkl")[0] + 'FN_dict.json'
+    with open('FN_dict.json', 'w') as fout:
+        json.dump(FN_dict, fout)
 
 
 if __name__ == "__main__":
