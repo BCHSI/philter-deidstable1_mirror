@@ -48,7 +48,7 @@ def comparison(filename, file1path, file2path):
     with open(file1path, 'r', errors = 'ignore') as fin:
         phi_reduced_note = fin.read()
 
-    with open(filepath2, 'rb') as fin:
+    with open(file2path, 'rb') as fin:
         annotation_note = pickle.load(fin)
 
 

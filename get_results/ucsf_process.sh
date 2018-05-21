@@ -7,7 +7,7 @@
 philter -i /media/DataHD/philter-annotations/pooneh/input_notes/ -o /media/DataHD/r_phi_corpus/kathleen/de-id_stable1/data/ucsf_results/ -r -p 32
 
 # 2. Run evaluation script on de-identified ucsf notes
-python3 /media/DataHD/r_phi_corpus/kathleen/de-id_stable1/philter_eval_updated.py -p /media/DataHD/r_phi_corpus/kathleen/de-id_stable1/data/ucsf_results/ -a /media/DataHD/philter-annotations/pooneh/pooneh-done/ -o /media/DataHD/r_phi_corpus/kathleen/ucsf_eval/
+python3 /media/DataHD/r_phi_corpus/kathleen/de-id_stable1/philter_eval_updated2.py -p /media/DataHD/r_phi_corpus/kathleen/de-id_stable1/data/ucsf_results/ -a /media/DataHD/philter-annotations/pooneh/pooneh-done/ -o /media/DataHD/r_phi_corpus/kathleen/ucsf_eval/
 
 # 3. Run whitelist-only philter on i2b2 dataset
 python3 /media/DataHD/r_phi_corpus/kathleen/de-id_stable1/getFNcategory_updated.py
