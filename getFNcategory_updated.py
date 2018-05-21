@@ -81,8 +81,8 @@ def main():
 		summary = pickle.load(fin)
 	anno_path = input("where are annotations?>")
 	FN_dict = getcategory(summary, anno_path)
-
-	with open('FN_dict.json', 'w') as fout:
+	out_path = summary_path.split("summary_dict.pkl")[0] + 'FN_dict.json'
+	with open(out_path, 'w') as fout:
 		json.dump(FN_dict, fout)
 
 
