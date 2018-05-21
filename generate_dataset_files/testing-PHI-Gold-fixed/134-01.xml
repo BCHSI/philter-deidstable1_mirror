@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2088-01-20
+
+
+
+PCC Internal Medicine PRIMARY CARE
+
+630 Poliquin Drive, 642
+
+Asmara, PA  96931
+
+
+
+RE:		Jarvis, Amador
+
+PCC#:		090-73-07
+
+
+
+January 20, 2088
+
+
+
+Reason for visit:  Mr. Jarvis comes to follow up on his hypertension, hyperglycemia, renal insufficiency and elevated PSA.  
+
+
+
+HISTORY OF PRESENT ILLNESS:  He has seen Dr. Jose Quirk and a prostate biopsy has been recommended.  This is scheduled for next week and Mr. Jarvis is quite anxious about it.  
+
+
+
+He began the Captopril and HCTZ (? or Maxide) and has noted good blood pressure control as checked at BH.  At first he developed a considerable cough but in the last two weeks this has largely resolved.  He states that the cough is productive of thick phlegm and may reflect a respiratory infection rather than the Captopril itself.  His blood sugars when checked at home have averaged between the 140 to 150 range fasting.  On one occasion a three hour postprandial was 170.  
+
+
+
+He has had no attacks of gout or gout like arthritis in the past six weeks and is quite pleased about this. 
+
+
+
+He has continued actively managing production and is planning a trip to Italy next month.  
+
+
+
+PHYSICAL EXAMINATION:  On examination today he looks well and comfortable.  His blood pressure is 140/76 right arm sitting with regular pulse of 68.  His weight is 173 (stable).  
+
+
+
+IMPRESSION:  Doing reasonably well on the new blood pressure program.  Since the cough is resolving it would seem reasonable to continue the present program.  
+
+
+
+We will look forward to seeing the results of the prostate biopsy and we will check glucose and glycosylated hemoglobin today.  He will return in four months for follow up.  
+
+
+
+
+
+Orvell Oliver, M.D. 
+
+Labs:  Hemolyzed sample shows K of 6.0.  Will check re HCTZ vs Maxide.  If the latter, will change it.
+
+O
+
+
+
+Plasma Sodium           138                      135-145        mmol/L
+
+Plasma Potassium        6.0       H              3.4-4.8        mmol/L
+
+  Result Text:
+
+     HEMOLYZED
+
+Plasma Chloride         98        L              100-108        mmol/L
+
+Plasma Carbon Dioxide   25.9                     24.0-30.0      mmol/L
+
+Plasma Urea Nitrogen    29        H              8-25           mg/dl
+
+Plasma Creatinine       2.1       H              0.6-1.5        mg/dl
+
+Plasma Glucose          167       H              70-110         mg/dl
+
+Transaminase-SGOT       26                       10-40          U/L
+
+
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2088-01-20" TYPE="DATE" comment="" />
+<LOCATION id="P1" start="30" end="33" text="PCC" TYPE="HOSPITAL" comment="" />
+<LOCATION id="P3" start="66" end="84" text="630 Poliquin Drive" TYPE="STREET" comment="" />
+<LOCATION id="P5" start="91" end="97" text="Asmara" TYPE="CITY" comment="" />
+<LOCATION id="P6" start="99" end="101" text="PA" TYPE="STATE" comment="" />
+<LOCATION id="P7" start="103" end="108" text="96931" TYPE="ZIP" comment="" />
+<NAME id="P8" start="117" end="131" text="Jarvis, Amador" TYPE="PATIENT" comment="" />
+<LOCATION id="P9" start="133" end="136" text="PCC" TYPE="HOSPITAL" comment="" />
+<ID id="P10" start="140" end="149" text="090-73-07" TYPE="MEDICALRECORD" comment="" />
+<DATE id="P11" start="153" end="169" text="January 20, 2088" TYPE="DATE" comment="" />
+<NAME id="P12" start="196" end="202" text="Jarvis" TYPE="PATIENT" comment="" />
+<NAME id="P13" start="346" end="356" text="Jose Quirk" TYPE="DOCTOR" comment="" />
+<NAME id="P14" start="442" end="448" text="Jarvis" TYPE="PATIENT" comment="" />
+<LOCATION id="P15" start="583" end="585" text="BH" TYPE="HOSPITAL" comment="" />
+<PROFESSION id="P16" start="1100" end="1119" text="managing production" TYPE="PROFESSION" comment="" />
+<LOCATION id="P17" start="1146" end="1151" text="Italy" TYPE="COUNTRY" comment="" />
+<NAME id="P18" start="1695" end="1708" text="Orvell Oliver" TYPE="DOCTOR" comment="" />
+<NAME id="P19" start="1821" end="1822" text="O" TYPE="DOCTOR" comment="" />
+</TAGS>
+</deIdi2b2>

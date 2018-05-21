@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2097-01-30
+
+                     ST VINCENT EMERGENCY DEPT VISIT
+ 
+LAU,HELEN M.   544-41-32-1              VISIT DATE: 01/30/97
+PRESENTING COMPLAINT:  Chest pain and shortness of breath. 
+HISTORY OF PRESENTING COMPLAINT:  This is a lady who has a history 
+of a coronary artery bypass graft in September of 2096, who 
+presents complaining of chest pain.  The patient describes it as 
+being sharp and stabbing.  It was associated with some diaphoresis. 
+She states that this pain is similar to her angina, however, it is 
+more frequent and persistent.  She has no fever, no chills, no 
+cough, no vomiting, no diarrhea, no abdominal pain, and no urinary 
+symptoms. 
+PAST MEDICAL HISTORY:  Past medical history is significant for 
+hypertension, coronary artery disease, insulin dependent diabetes, 
+chronic renal insufficiency, breast cancer, depression, mitral 
+valve replacement, and hypothyroidism. 
+MEDICATIONS:  Medications are multiple and are on the chart. 
+ALLERGIES:  No known drug allergies. 
+SOCIAL HISTORY AND FAMILY HISTORY:  The patient never smoked. 
+PHYSICAL EXAMINATION:  The patient was afebrile and vital signs 
+were stable.  This is a well-developed, well-nourished female who 
+was alert and oriented times three.  Heent examination was 
+normocephalic, atraumatic.  Neck was soft and supple with no 
+jugular venous distention.  Mouth and throat normal with well 
+hydrated, moist mucosa.  Conjunctiva was clear.  Sclera were 
+anicteric.  Heart had a regular rate and rhythm.  Lungs were clear. 
+Abdomen was non-tender and non-distended.  The patient had no 
+hepatosplenomegaly.  Extremities showed no clubbing, cyanosis or 
+edema.  Rectal was heme negative. 
+LABORATORY EVALUATION:  EKG showed first degree AV block, no acute 
+ischemic changes.  Chest x-ray showed mild pleural effusion.  White 
+count was 9.7.  Hematocrit was 28.  CPK and troponin were negative. 
+Electrolytes were normal for her.  BUN and creatinine were 32 and 
+1.2. 
+THERAPY RENDERED/COURSE IN ED:  Nursing notes were reviewed.  The 
+patient was seen with the resident physician, Dr. Nix, and I 
+agree with his note.  Please see chart. 
+FINAL DIAGNOSIS:  Unstable angina. 
+DISPOSITION (including condition upon discharge):  The patient will 
+be admitted.  Condition at this time is satisfactory. 
+___________________________________                    MG040/1987 
+VIRGIL HARRELL, M.D.  VH79                                D:02/12/97 
+                                                       T:02/13/97 
+Dictated by:  VIRGIL HARRELL, M.D.  VH79 
+ ******** Not reviewed by Attending Physician ********
+
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2097-01-30" TYPE="DATE" comment="" />
+<LOCATION id="P1" start="49" end="59" text="ST VINCENT" TYPE="HOSPITAL" comment="" />
+<NAME id="P2" start="83" end="95" text="LAU,HELEN M." TYPE="PATIENT" comment="" />
+<ID id="P3" start="98" end="109" text="544-41-32-1" TYPE="MEDICALRECORD" comment="" />
+<DATE id="P4" start="135" end="143" text="01/30/97" TYPE="DATE" comment="" />
+<DATE id="P5" start="309" end="326" text="September of 2096" TYPE="DATE" comment="" />
+<NAME id="P6" start="2086" end="2089" text="Nix" TYPE="DOCTOR" comment="" />
+<ID id="P7" start="2354" end="2364" text="MG040/1987" TYPE="IDNUM" comment="" />
+<NAME id="P8" start="2366" end="2380" text="VIRGIL HARRELL" TYPE="DOCTOR" comment="" />
+<NAME id="P9" start="2388" end="2392" text="VH79" TYPE="USERNAME" comment="" />
+<DATE id="P10" start="2426" end="2434" text="02/12/97" TYPE="DATE" comment="" />
+<DATE id="P11" start="2493" end="2501" text="02/13/97" TYPE="DATE" comment="" />
+<NAME id="P12" start="2517" end="2531" text="VIRGIL HARRELL" TYPE="DOCTOR" comment="" />
+<NAME id="P13" start="2539" end="2543" text="VH79" TYPE="USERNAME" comment="" />
+</TAGS>
+</deIdi2b2>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2090-09-28
+
+
+
+
+
+
+UHRICH, KARSON
+45630268
+09/28/2090
+
+
+
+
+DATE OF ADMISSION:  09/27/2090
+
+
+PRIMARY CARE PHYSICIAN:
+Roger L. Albright, M.D.
+Columbia Kingwood Medical Center
+57 Wood St, Q6-24
+North Andover, KY  41454
+
+
+HISTORY OF PRESENT ILLNESS:  Ms. Uhrich is a 73-year-old woman with past medical history notable for hypertension and dyslipidemia, but no coronary artery disease who presents with a three-day history of progressive weakness and lightheadedness.  The history is obtained in Spanish from the patient and through her daughter who assisted with translation.  In general, she has apparently been doing well with no episodes of chest discomfort or exertional dyspnea until roughly three days ago when she has began to notice episodic problems with walking even short distances before she feels as though she might pass out.  The episodes have occurred multiple times per day and after a particularly severe episode this morning, she brought her mother to the emergency department for evaluation.  There have been no syncopal episodes and no complaints of palpitations, orthopnea, PND, or lower extremity edema.  The patient has not had symptoms like this before and has been chronically treated with atenolol for hypertension for many years.
+
+
+Her only cardiovascular evaluation has been with adenosine MIBI in 2085, which revealed normal systolic function and no evidence for ischemia.
+
+
+PAST MEDICAL HISTORY:  Notable for hypertension, hypercholesterolemia, gastritis, and osteoarthritis.  She also carries the diagnosis of diabetes mellitus but is not currently treated for this.
+
+
+MEDICATIONS ON ADMISSION:  Included amitriptyline 25 mg at bedtime, aspirin 81 mg daily, atenolol 25 mg daily, Lipitor 10 mg at bedtime, hydrochlorothiazide/lisinopril 25/20 one tablet daily, loratadine 10 mg daily, and Protonix 40 mg daily.
+
+
+She developed gastrointestinal irritation with higher doses of aspirin.
+
+
+SOCIAL AND FAMILY HISTORY:  As noted in the housestaff notes.
+
+
+PHYSICAL EXAMINATION:  In the Emergency Department, her heart rate is 38 beats per minute and her blood pressure is 110/70 mmHg.  Her venous pressures are low and there are BLANK waves present every other beat.  The chest is clear to auscultation and percussion bilaterally.  Cardiovascular exam reveals bradycardia with normal S1, wide physiologically split S2, and an audible S4.  There is no murmur.  The abdomen is soft and nontender.  The liver is not palpably enlarged.  The extremities are warm without edema.
+
+
+Electrocardiogram reveals sinus rhythm with 2:1 AV block and right bundle-branch block.  There is left axis deviation consistent with left anterior fascicular block.
+
+
+There is no response of her heart rate to mild calisthenics in the bed.
+
+
+Laboratories are notable for normal BUN to creatinine ratio of 23/1.2 with a potassium of 4.1 and a hematocrit of 35%.  Initial cardiac biomarkers were negative.
+
+
+In summary, Karson Uhrich is a 73-year-old woman with hypertension and dyslipidemia who presents with a three-day history of presyncope and weakness in the context of a new diagnosis of 2:1 AV block.  Review of previous electrocardiograms reveals no right bundle-branch block and left anterior fascicular block and of late this represents progression of her underlying conduction system disease.  We will proceed to permanent temporary pacemaker implantation for backup support and will arrange electrophysiologic consultation for permanent pacemaker implantation.  There is no history to suggest an ischemic syndrome, so I did not think additional pharmacologic stress test is necessary.  Her beta-blocker will be held overnight in addition to her amitriptyline to see if this facilitates recovery of her AV nodal function.  Overall, I think this likely represents infra-hisian block and a pacemaker should be curative therapy.  Additional plans will be dictated by her clinical course.
+
+
+
+
+______________________________
+Xavier Alvin Kaufman, MD
+
+
+
+
+
+
+
+
+
+
+eScription document:3-6100190 IFFocus
+
+
+CC: Owen Quentin-Xiong M.D.
+Columbia Kingwood Medical
+35 Wood St
+North Andover, KY 41454
+
+
+
+
+DD: 09/28/90
+DT: 09/28/90
+DV: 09/28/90
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2090-09-28" TYPE="DATE" comment="" />
+<NAME id="P1" start="33" end="47" text="UHRICH, KARSON" TYPE="PATIENT" comment="" />
+<ID id="P2" start="48" end="56" text="45630268" TYPE="MEDICALRECORD" comment="" />
+<DATE id="P3" start="57" end="67" text="09/28/2090" TYPE="DATE" comment="" />
+<DATE id="P4" start="92" end="102" text="09/27/2090" TYPE="DATE" comment="" />
+<NAME id="P5" start="129" end="146" text="Roger L. Albright" TYPE="DOCTOR" comment="" />
+<LOCATION id="P6" start="153" end="185" text="Columbia Kingwood Medical Center" TYPE="HOSPITAL" comment="" />
+<LOCATION id="P7" start="186" end="196" text="57 Wood St" TYPE="STREET" comment="" />
+<LOCATION id="P9" start="204" end="217" text="North Andover" TYPE="CITY" comment="" />
+<LOCATION id="P10" start="219" end="221" text="KY" TYPE="STATE" comment="" />
+<LOCATION id="P11" start="223" end="228" text="41454" TYPE="ZIP" comment="" />
+<NAME id="P12" start="264" end="270" text="Uhrich" TYPE="PATIENT" comment="" />
+<AGE id="P13" start="276" end="278" text="73" TYPE="AGE" comment="" />
+<DATE id="P14" start="1337" end="1341" text="2085" TYPE="DATE" comment="" />
+<NAME id="P15" start="2930" end="2943" text="Karson Uhrich" TYPE="PATIENT" comment="" />
+<AGE id="P16" start="2949" end="2951" text="73" TYPE="AGE" comment="" />
+<NAME id="P17" start="3941" end="3961" text="Xavier Alvin Kaufman" TYPE="DOCTOR" comment="" />
+<ID id="P18" start="3996" end="4005" text="3-6100190" TYPE="IDNUM" comment="" />
+<NAME id="P19" start="4020" end="4038" text="Owen Quentin-Xiong" TYPE="DOCTOR" comment="" />
+<LOCATION id="P20" start="4044" end="4069" text="Columbia Kingwood Medical" TYPE="HOSPITAL" comment="" />
+<LOCATION id="P21" start="4070" end="4080" text="35 Wood St" TYPE="STREET" comment="" />
+<LOCATION id="P22" start="4081" end="4094" text="North Andover" TYPE="CITY" comment="" />
+<LOCATION id="P23" start="4096" end="4098" text="KY" TYPE="STATE" comment="" />
+<LOCATION id="P24" start="4099" end="4104" text="41454" TYPE="ZIP" comment="" />
+<DATE id="P25" start="4113" end="4121" text="09/28/90" TYPE="DATE" comment="" />
+<DATE id="P26" start="4126" end="4134" text="09/28/90" TYPE="DATE" comment="" />
+<DATE id="P27" start="4139" end="4147" text="09/28/90" TYPE="DATE" comment="" />
+</TAGS>
+</deIdi2b2>

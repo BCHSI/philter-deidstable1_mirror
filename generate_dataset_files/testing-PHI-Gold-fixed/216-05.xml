@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2104-09-23
+
+
+Patient: MARVINYANDELL,GRACE   [ 90468071(BHC) ]  FDate of Visit: 09/23/2104
+
+
+
+
+Dear Dr. Mcfarland:
+
+
+I had the pleasure of seeing Mrs. Marvinyandell at the Cardiac Laboratory in follow-up of her exertional dyspnea.
+
+
+As you know, she is a pleasant 82 yo woman with h/o asthma, recurrent DVT on coumadin, breast cancer s/p lumpectomy + chemo and radiation therapy 30 years ago with resultant mild radiation fibrosis - now with recurrence in the contralateral breast, DM, HTN, HLP, anemia and hypothyroidism who is being evaluated at the CL for exertional dyspnea since 2102 when she fell and suffered a compression fracture. Her other respirtory-related symtpoms include orthopnea and intermittent wheezing with seasonal allergies. She has no chest pain, PND or LE edema.
+
+
+Her work-up to date has revealed a mixed restrictive and (mild) obstructive ventilatory deficit which was attributed to kyphosis and radiation fibrosis + asthma respectively. She has had a negative cardiac stress test.
+
+
+PMH as above
+
+
+Meds: synthroid, labetalol, norvasc, glipizide, coumadin, erythropoetin, pravastatin, ultram, albuterol, pentasa
+
+
+Allergies: PCN, cephalosporins, vancomysin, shellfish
+
+
+SH: no tobacco ever. She is a professional tool maker. She has a dog
+FH: asthma, CAD, DM, HTN
+
+
+ROS: as per HPI, otherwise negative in detail
+
+
+EXAM:
+HR 88, BP 135/60, 98% RA, Wt 146lb
+OP clear
+Lungs CTAB
+Heart RRR
+Abdomen soft NTND
+1+ LE edema, no clubbing
+
+
+Marvinyandell,Grace 
+Date:  09/23/04
+                          Broadwater Health Center                          Pulmonary Function Laboratory                 14 A Street  Watseka, Arkansas 19842                    Phone: (091)920-5569  Fax: (251)628-xxxx                  Medical Director: Yvonne X. Olmstead, M.D.
+     Name:          MARVINYANDELL,GRACE MRN:                90468071     Date of Birth: 05/24/22             Date of Test        09/23/04     Gender:        Female               Location:           Chest Lab      Height:        65  in               Referring Physician: Weller,Mark     Weight:        145  lb              Attending Physician: KNOX,KEITH D     Race:          Black                Technician:         MT572     Resp.Diagnosis: 786.09              Study Status:       Final
+SPIROMETRY (BTPS)                  Predicted     Pre-BD          Post-BD       Percent                  Range                                            Change                   Mean  95% CI  Actual  %Pred     Actual %PredFVC        (Lts)   2.33   1.65   1.38     59   1.38     59      0FEV1       (Lts)   1.67   1.11   1.02     61   1.08     65      6FEV6       (Lts)   1.97   1.25   1.38     70   1.38     70      0FEV1/FVC     (%)     73     64     74    101     78    107      5FEV1/FEV6    (%)     78     69     74     95     78    100      5FEF25_75   (L/s)   1.23   0.09   0.71     58   0.94     76     32PEFR       (L/s)   3.88   1.81   4.95    128   4.62    119     -7FET       (Secs)                 6.67          7.64            15
+
+
+PHYSICIAN INTERPRETATIONFEV1 and FVC are reduced, FEV1/FVC is normal. There was not a significantresponse to inhaled bronchodilator. The reduced FVC is consistent with arestrictive deficit. Suggest lung volumes if clinically indicated. Since6/03/04, the FEV1 and FVC have not changed.
+
+
+
+
+
+
+
+
+IMPRESSION AND RECOMMENDATIONS: DOE is likely multifactorial. It may be beneficial to separate cardiac from pulmonary limitatio from deconditioning and I recommended a cardio-pulmonary exercise test to the patient, to which she agreed. In addition, as previously discussed, she would benefit from pulmonary rehab. Finally, I am not sure how much asthma is contributing to the picture. There was no response to brnonchodialtor today and the patient does not feel any help from it either. I told her that she does not need to use albuterol if it doesn't help her. I've requested RAST allergy testing to further investigate the possiblity of allergic asthma. We will not do the methacholine challange testing due to patient's already deacreased FEV1 (due to restriction) as it might be dangerous to precipitate bronchoconstriciton in the setting of an already limited reserve.
+
+
+Seen and d/w Dr. Weller
+
+
+
+
+
+
+____________________________________
+Xavier U. Mahoney, M.D.
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2104-09-23" TYPE="DATE" comment="" />
+<NAME id="P1" start="38" end="57" text="MARVINYANDELL,GRACE" TYPE="PATIENT" comment="" />
+<ID id="P2" start="62" end="70" text="90468071" TYPE="MEDICALRECORD" comment="" />
+<LOCATION id="P3" start="71" end="74" text="BHC" TYPE="HOSPITAL" comment="" />
+<DATE id="P4" start="95" end="105" text="09/23/2104" TYPE="DATE" comment="" />
+<NAME id="P5" start="119" end="128" text="Mcfarland" TYPE="DOCTOR" comment="" />
+<NAME id="P6" start="166" end="179" text="Marvinyandell" TYPE="PATIENT" comment="" />
+<AGE id="P8" start="279" end="281" text="82" TYPE="AGE" comment="" />
+<DATE id="P10" start="599" end="603" text="2102" TYPE="DATE" comment="" />
+<PROFESSION id="P11" start="1254" end="1264" text="tool maker" TYPE="PROFESSION" comment="" />
+<NAME id="P12" start="1471" end="1490" text="Marvinyandell,Grace" TYPE="PATIENT" comment="" />
+<DATE id="P13" start="1499" end="1507" text="09/23/04" TYPE="DATE" comment="" />
+<LOCATION id="P14" start="1534" end="1558" text="Broadwater Health Center" TYPE="HOSPITAL" comment="" />
+<LOCATION id="P15" start="1630" end="1641" text="14 A Street" TYPE="STREET" comment="" />
+<LOCATION id="P16" start="1643" end="1650" text="Watseka" TYPE="CITY" comment="" />
+<LOCATION id="P17" start="1652" end="1660" text="Arkansas" TYPE="STATE" comment="" />
+<LOCATION id="P18" start="1661" end="1666" text="19842" TYPE="ZIP" comment="" />
+<CONTACT id="P19" start="1693" end="1706" text="(091)920-5569" TYPE="PHONE" comment="" />
+<CONTACT id="P20" start="1713" end="1726" text="(251)628-xxxx" TYPE="FAX" comment="" />
+<NAME id="P21" start="1762" end="1780" text="Yvonne X. Olmstead" TYPE="DOCTOR" comment="" />
+<NAME id="P22" start="1807" end="1826" text="MARVINYANDELL,GRACE" TYPE="PATIENT" comment="" />
+<ID id="P23" start="1847" end="1855" text="90468071" TYPE="MEDICALRECORD" comment="" />
+<DATE id="P24" start="1875" end="1883" text="05/24/22" TYPE="DATE" comment="" />
+<DATE id="P25" start="1916" end="1924" text="09/23/04" TYPE="DATE" comment="" />
+<NAME id="P27" start="2057" end="2068" text="Weller,Mark" TYPE="DOCTOR" comment="" />
+<NAME id="P28" start="2130" end="2142" text="KNOX,KEITH D" TYPE="DOCTOR" comment="" />
+<NAME id="P29" start="2203" end="2208" text="MT572" TYPE="USERNAME" comment="" />
+<DATE id="P30" start="3261" end="3268" text="6/03/04" TYPE="DATE" comment="" />
+<NAME id="P31" start="4206" end="4212" text="Weller" TYPE="DOCTOR" comment="" />
+<NAME id="P32" start="4256" end="4273" text="Xavier U. Mahoney" TYPE="DOCTOR" comment="" />
+</TAGS>
+</deIdi2b2>

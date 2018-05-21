@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2095-09-19
+
+Chief Complaint	
+
+Cardiac Access Admission Note
+
+Russell P Urban
+
+# 472 20 64
+
+
+
+9/19/95
+
+
+
+Mr Urban is admitted s/p PTCA/stent x 2 (Cyphers) to his LCX today
+
+
+
+History of Present Illness	
+
+     This 52 yo gentleman has known CAD dating back to an MI in 7/93. He underwent RCA stenting at that time, jailing the RV marginal with sluggish flow afterward. Post MI ECHO showed EF of 36% w/diffuse HK.
+
+     He underwent f/u ETT w/imaging in 8/93 which showed a small fixed inferior defect with considerable residual viable myocardium and no evidence of ischemia. EF at that time was 51%. He has done reasonably well since then.
+
+    In late spring, Mr Urban noted some chest tightness and SOB similar in quality to his prior angina, but markedly less severe, which occurred with exertion. He had a repeat ETT 7/31/95. EKG was positive for ischemia. Imaging showed a defect that was c/w ischemia. His meds were adjsuted, but his symptoms have persisted.
+
+    Today he presented for elective cath +/- via SDA. Cath showed his RCA to be totally occluded, with 2 LCX lesions. His LCX was stented with 2 cyphers (3.5 x13 and 3 x 23) with good results. He was put on reopro and transferred to Cardiology where he arrived pain free and in no distress. 
+
+
+
+Past Medical History	
+
+CAD
+
+s/p IMI, RCA stent x 2 2093
+
+Cardiomyopathy
+
+CHF
+
+Hyperlipidemia
+
+Hypertension
+
+OSA
+
+
+
+Allergies	
+
+NKDA
+
+
+
+Social History	
+
+Married, lives with wife
+
+Works in Borders
+
+
+
+Habits	
+
+ETOH: occasional social
+
+Smoking: 45 pkyr hx, none for 2 yrs
+
+Caffeine: 2-3 cups in am daily
+
+Diet: low fat, low chol, NAS
+
+Exercise: was walking regularly until symptoms recurred
+
+
+
+Family History	
+
+Father with MI x3 at early age
+
+
+
+Medications	
+
+At Home:
+
+
+
+ASA 81 mg QD
+
+Lisinopril 10 mg QD
+
+Coreg 6.25 mg BID
+
+Lasix 20 mg QD
+
+Lipitor 80 mg qPM
+
+Klonipin 1 mg qPM
+
+
+
+
+
+Physical Exam	
+
+Height: 73
+
+Weight: 182
+
+
+
+VS: 90-110/60's, 50-60
+
+Monitor: SR
+
+
+
+Gen: well appearing caucasian male in NAD
+
+
+
+Neuro: alert, oriented x 3, speech clear and articulate. CN II-XII intact. Strength 5/5 BUE- lower extremities not tested d/t activity limitations 
+
+
+
+Neck: supple, thyroid midline without nodularity. JVP flat, no HJR. Carotid pulses 2+, no bruits. No appreciable adenopathy
+
+
+
+Cardiac: regular S1, S2, no S3/S4, no m/r/g. PMI not displaced
+
+
+
+Resp: clear anteriorly
+
+
+
+Abd: soft, non-tender/non-distended. No HSM/masses/bruits. Bowel sounds in all quads
+
+
+
+Ext: right femoral sheath in place. No hematoma/ooze/bruit. Pulses 2+ DP/PT, no c/c/e. 
+
+
+
+
+
+Review of Systems	
+
+Negative in detail except as noted above
+
+
+
+Lab Test	
+
+Labs:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+EKG:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Disposition and Plans	
+
+Impression: 52 yo w/+ FH, prior MI, s/p RCA stents, now w/recurrent angina and + ETT
+
+
+
+Plan:
+
+
+
+1. Cardiac: HR, BP well controlled. Lipids were somewhat elevated in recent past- lipitor inc to 80 mg QD- will repeat in am with LFT's and add zetia tonite for better risk modification. Increase ASA to 325 mg QD and add plavix 75 mg QD indefinitely. He is at high risk of progressive disease given his early RCA ISR. Continue reopro as ordered. Remove sheaths once PTT normalizes. Ambulate once activity restrictions lifted.
+
+     Continue heart healthy diet, exercise, meds as ordered. Weigh daily, strict I&O given hx CHF after his MI. LP(a) was 24 last draw- Dr Orozco will consider adding niaspan after evaluating effect of zetia/lipitor in clinic. 
+
+
+
+Further plans per Dr Ness/Dr Orozco
+
+
+
+
+
+
+
+Rose Kang, MS, NP-C
+
+b 28961
+
+
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2095-09-19" TYPE="DATE" comment="" />
+<NAME id="P1" start="77" end="92" text="Russell P Urban" TYPE="PATIENT" comment="" />
+<ID id="P2" start="96" end="105" text="472 20 64" TYPE="MEDICALRECORD" comment="" />
+<DATE id="P3" start="109" end="116" text="9/19/95" TYPE="DATE" comment="" />
+<NAME id="P4" start="123" end="128" text="Urban" TYPE="PATIENT" comment="" />
+<AGE id="P5" start="229" end="231" text="52" TYPE="AGE" comment="" />
+<DATE id="P6" start="283" end="287" text="7/93" TYPE="DATE" comment="" />
+<DATE id="P7" start="467" end="471" text="8/93" TYPE="DATE" comment="" />
+<DATE id="P8" start="667" end="673" text="spring" TYPE="DATE" comment="" />
+<NAME id="P9" start="678" end="683" text="Urban" TYPE="PATIENT" comment="" />
+<DATE id="P10" start="835" end="842" text="7/31/95" TYPE="DATE" comment="" />
+<DATE id="P12" start="1326" end="1330" text="2093" TYPE="DATE" comment="" />
+<LOCATION id="P13" start="1462" end="1469" text="Borders" TYPE="ORGANIZATION" comment="" />
+<AGE id="P14" start="2690" end="2692" text="52" TYPE="AGE" comment="" />
+<NAME id="P15" start="3341" end="3347" text="Orozco" TYPE="DOCTOR" comment="" />
+<NAME id="P16" start="3454" end="3458" text="Ness" TYPE="DOCTOR" comment="" />
+<NAME id="P17" start="3462" end="3468" text="Orozco" TYPE="DOCTOR" comment="" />
+<NAME id="P18" start="3476" end="3485" text="Rose Kang" TYPE="DOCTOR" comment="" />
+<CONTACT id="P19" start="3499" end="3504" text="28961" TYPE="PHONE" comment="" />
+</TAGS>
+</deIdi2b2>

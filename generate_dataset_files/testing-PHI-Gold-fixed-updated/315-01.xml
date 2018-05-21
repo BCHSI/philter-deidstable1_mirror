@@ -1,0 +1,195 @@
+<?xml version='1.0' encoding='utf8'?>
+<deIdi2b2>
+<TEXT>
+
+
+Record date: 2121-03-31
+
+Kern Medical Center
+
+Preadmission Testing Area
+
+Department of Internal Medicine
+
+Preanesthetic Assessment
+
+
+
+Tina L. Purcell, M.D.
+
+Associate Medical Director
+
+
+March 31, 2121
+
+
+
+Medical Record Number:  4698877 Isabella T. Valle
+
+
+
+Procedure:  The patient is a 53 year old female scheduled for parathyroidectomy.  Surgery is scheduled on 4/03/21.
+
+
+
+Chief Complaint &amp; Present Illness:  hyperparathyroidism-parathormone level &gt; 900-resulting in spontaneous fractures.  Patient had previous semi total parathyroidectomy in 2112.
+
+
+
+Past Surgical History:  Prior surgery includes: ' 09 TAH-BSO;' 10 parathyroidectomy;' 13 renal transplant recipient; '18 left nephrectomy-easy mask and intubation; ventral hernia repair; AV fistulas x2-general anesthesia without any known problems
+
+
+
+Family History:  There is no family history of adverse reactions to general anesthesia.
+
+
+
+Medications:  Neoral, Lasix 40 mg, Norvasc 5 mg b.i.d., Lipitor 20 mg b.i.d., Cellcept 50 mg q.i.d., Bactrim, Estrotab, prednisone 10 mg, Epogen, iron, insulin NPH 45 units plus regular 10 units in a.m.
+
+Allergies:  none
+
+
+
+Social History:
+
+	Smoking:  none
+
+	Alcohol use:  rare
+
+	Substance Abuse:  none
+
+	Allergen Exposure within 3 Months(blood products/pregnancy): none
+
+
+
+Review of Systems:  
+
+
+
+HEENT:  negative
+
+Cardiovascular:  hypertension; patient usually walks one mile per day and climbs one flight of stairs without any angina or shortness of breath
+
+Respiratory: negative
+
+Renal:  polycystic renal disease diagnosed 15 years ago resulting in renal transplant 2/13 and now renal failure with elevated creatinine 5.3-no dialysis at present
+
+Hepatobiliary: negative
+
+Neurological: negative
+
+Gastrointestinal: no reflux
+
+Hematological:  bruises easily, anemia-last hematocrit 31 percent but has been as low as 19 within the last year 
+
+Endocrine/metabolic: diabetes treated with insulin-blood sugar 190
+
+Musculoskeletal/Skin: recent infection in left foot fourth toe; left hip deterioration causing pain
+
+Psychiatric: negative
+
+Obstetrical:  negative
+
+
+
+Vital Signs:
+
+
+
+	BP:  152/87 mm Hg
+
+	P:  88 bpm
+
+	Resp:  20 rpm
+
+	SaO2:  97%
+
+	Temp:  97.7 degrees F
+
+	Ht:  66 inches
+
+	Wt:  158.8 pounds
+
+
+
+Exam:
+
+
+
+HEEN&amp;T:  good range of motion, no bruits
+
+Airway:  Mallampatti Class II
+
+Teeth:  dentures
+
+Lungs:  clear to auscultation bilaterally
+
+Heart:  regular rhythm, no murmurs
+
+
+
+Assessment:  
+
+ASA Physical Status III-53 year old female with history of polycystic disease in renal failure status post renal transplant.  Patient has elevated parathormone level with resultant  spontaneous fractures.  EKG today shows normal sinus rhythm with biphasic T-wave in V4 and inverted T-wave in V5, V6.  Discussed patient with Dr. Uren-T-wave changes are new since 1/21. He will order a preoperative stress test.
+
+
+
+Plan:
+
+
+
+	Proposed Anesthetic: general endotracheal anesthesia
+
+	Monitors:  standard
+
+	Pain Management:  PCA
+
+	Autologous blood:  none
+
+	Premedication:  STRESS steroids
+
+	Usual Medications:  in a.m. of surgery
+
+	Medications to be held on day of surgery:  Lipitor D/C'd today
+
+	Diabetic medications:  NPH 24 units in a.m.-no regular insulin
+
+	NSAIDS:  D/C'd
+
+	Aspirin:  none
+
+	NPO: after midnight
+
+
+
+Ancillary Studies:  EKG-normal sinus rhythm, possible lateral ischemia-official reading pending
+
+
+
+
+
+
+
+________________________________________   
+
+Tina Purcell, M.D.
+
+
+
+
+
+</TEXT>
+<TAGS>
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2121-03-31" />
+<LOCATION TYPE="HOSPITAL" comment="" end="47" id="P1" start="28" text="Kern Medical Center" />
+<NAME TYPE="DOCTOR" comment="" end="152" id="P3" start="137" text="Tina L. Purcell" />
+<DATE TYPE="DATE" comment="" end="203" id="P4" start="189" text="March 31, 2121" />
+<ID TYPE="MEDICALRECORD" comment="" end="238" id="P5" start="231" text="4698877" />
+<NAME TYPE="PATIENT" comment="" end="256" id="P6" start="239" text="Isabella T. Valle" />
+<DATE TYPE="DATE" comment="" end="373" id="P8" start="366" text="4/03/21" />
+<DATE TYPE="DATE" comment="" end="1574" id="P14" start="1570" text="2/13" />
+<NAME TYPE="DOCTOR" comment="" end="2730" id="P16" start="2726" text="Uren" />
+<DATE TYPE="DATE" comment="" end="2764" id="P17" start="2760" text="1/21" />
+<NAME TYPE="DOCTOR" comment="" end="3370" id="P18" start="3358" text="Tina Purcell" />
+</TAGS>
+</deIdi2b2>

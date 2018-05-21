@@ -1,0 +1,120 @@
+<?xml version='1.0' encoding='utf8'?>
+<deIdi2b2>
+<TEXT>
+
+
+Record date: 2083-10-14
+
+79 YO  male for f/u of blood pressure.  Patient is now living in Newton House in Blacksburg with Wllie Falk as his coordinator(856 241 8283). Mr. ramey enjoys living there and enjoys the meals.
+
+his only complaint is of left inguinal discomfort which is worse at night. doesn't lift objects but still it is bothersome.
+
+
+
+
+
+--------------Problems----------
+
+
+
+Mental retardation  
+
+Hypertension  
+
+Anemia  
+
+Benign prostatic hypertrophy  
+
+H/O peptic ulcer disease  DX. BY UPPER ENDOSCOPY IN 2069.
+
+
+
+
+
+--------------Medications----------
+
+ATENOLOL   25MG 1 Tablet(s) PO QD  
+
+
+
+
+
+
+
+--------------Allergies----------
+
+
+
+HCTZ (HYDROCHLOROTHIAZIDE)   HYPONATREMIA
+
+
+
+
+
+--------------Vital Signs----------
+
+bp 160/80 pulse 60
+
+lungs: clear
+
+cor:RRRs1s2
+
+abd: soft and nontender
+
+left ingunal region there is a bulge about 5 cm.
+
+ext: no edema
+
+
+
+a/p
+
+probably inguinal hernia that is symptomatic.  will therefore refer to dr. nunley from surgery for eval.  discussed this with his coordinator.
+
+
+
+htn:  add lisinopril 5 mg qd and recheck in three months.
+
+
+
+
+
+--------------Health Maint----------
+
+
+
+Influenza Vaccine   10/14/2083  GIVEN IM TO LEFT DELTOID       
+
+Rectal exam   01/29/2083         
+
+Pneumovax   01/29/2083      Done   
+
+UA-Protein   02/28/80   1+      
+
+HBA1C   10/31/2082   6.00      
+
+
+
+_______________________________________
+
+Xavier U. Combs, M.D.
+
+
+
+</TEXT>
+<TAGS>
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2083-10-14" />
+<LOCATION TYPE="HOSPITAL" comment="" end="105" id="P2" start="93" text="Newton House" />
+<LOCATION TYPE="CITY" comment="" end="119" id="P3" start="109" text="Blacksburg" />
+<NAME TYPE="DOCTOR" comment="" end="135" id="P4" start="125" text="Wllie Falk" />
+<CONTACT TYPE="PHONE" comment="" end="167" id="P5" start="155" text="856 241 8283" />
+<NAME TYPE="PATIENT" comment="" end="179" id="P6" start="174" text="ramey" />
+<NAME TYPE="DOCTOR" comment="" end="957" id="P8" start="951" text="nunley" />
+<DATE TYPE="DATE" comment="" end="1155" id="P9" start="1145" text="10/14/2083" />
+<DATE TYPE="DATE" comment="" end="1214" id="P10" start="1204" text="01/29/2083" />
+<DATE TYPE="DATE" comment="" end="1247" id="P11" start="1237" text="01/29/2083" />
+<DATE TYPE="DATE" comment="" end="1283" id="P12" start="1275" text="02/28/80" />
+<DATE TYPE="DATE" comment="" end="1314" id="P13" start="1304" text="10/31/2082" />
+<NAME TYPE="DOCTOR" comment="" end="1387" id="P14" start="1372" text="Xavier U. Combs" />
+</TAGS>
+</deIdi2b2>

@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2078-06-18
+
+ 
+
+
+
+NEUROLOGY JUNIOR ADMIT/CONSULT NOTE
+
+
+
+CC   slurred speech, L hand tingling
+
+
+
+HPI
+
+50 yo RHM  presents after episode of L hand tingling and slurred speech. He was in his usual state of health when he woke up at 8 am. At around 10 am he told his son that he was not feeling well and went to bed. He reports that his speech was normal at that time. At 11:30 his wife called him and his speech was slurred. He was able to say real words but they were slurred and almost unintelligible. He also had L hand tingling. The slurred speech and tingling resolved at 12:15 pm. He denies weakness, diplopia, difficulty swallowing, headache, vertigo, chest pain, palpitations.
+
+
+
+One week ago, while he was on vacation in Chincoteague, he had a transient episode of slurred speech. He reports that as he was walking to the bathroom, he suddenly felt lightheaded and fell. He had slurred speech and difficulty standing up but no focal weakness. The episode lasted minutes.
+
+
+
+PMH
+
+HTN
+
+hypercholesterolemia
+
+DM
+
+sleep apnea
+
+s/p cholecystectomy
+
+TTE 11/77 - mildly dilated LA, mod LVH, EF 66%
+
+
+
+MEDS
+
+ASA 325
+
+Zestril 40
+
+HCTZ 25
+
+Atenolol 100
+
+Hytrin 2 bid
+
+glucophage 1000 
+
+Norvasc 10
+
+Atrovent
+
+
+
+ALL	nkda
+
+
+
+FAM HX
+
+Parents with hypertension, father with strokes
+
+
+
+SOCIAL HX
+
+Married. No smoking.
+
+	
+
+PE
+
+VITALS  P70	BP150/80	O2 sat 98% 2L
+
+GENERAL NAD
+
+HEENT MMM
+
+NECK no bruits
+
+CHEST CTAB
+
+CV RRR no mrg
+
+ABDO soft ND NT
+
+EXT no edema
+
+NEURO
+
+MS:  Alert, oriented. Speech fluent without paraphasic errors. Can name, repeat and follow commands. 
+
+
+
+CN:
+
+Pupils equal, round, reactive to light 
+
+Visual fields full to double simultaneous quadrantic visual confrontation.
+
+EOMI s nystagmus
+
+Facial sensation in V1-V3 intact bilaterally to light touch and pin.
+
+Face movement symmetrical.
+
+Hearing intact to fingerrub
+
+No dysphonia. Palate elevates symmetrically.
+
+Tongue and palate midline, no fasciculations.
+
+Shoulder shrug equal bilaterally 5/5.
+
+
+
+Motor:	normal bulk and tone, no tremor,  no drift, leads with L arm on orbiting
+
+	Del	Bic	Tri	WE	WF      FE	FF	  IO        HF	 HE	KF	 KE	DF	PF			
+
+L	5	5	5	5	5	5	5	5	5	5	5	5	5	5	
+
+R	5	5	5	5	5	5	5	5	5	5	5	5	5	5	
+
+Coord:	normal finger to nose, heel to shin
+
+Sens:	normal light touch, pinprick, vibration
+
+Reflexes: 2+ c downgoing toes
+
+     
+
+
+
+LABS
+
+NA        	135       	          	          	          	          
+
+K         	3.1(L)    	          	          	          	          
+
+CL        	99(L)     	          	          	          	          
+
+CO2       	27.5      	          	          	          	          
+
+BUN       	27(H)     	          	          	          	          
+
+CRE       	1.4       	          	          	          	          
+
+GLU       	368(H)    	          	          	          	          
+
+
+
+WBC       	11.5(H)   	          	          	          	          
+
+HCT       	42.2      	          	          	          	          
+
+MCV       	84        	          	          	          	          
+
+PLT       	226       	
+
+          	          	          	          
+
+PT        	12.9      	          	          	          	          
+
+PTT       	21.8(L)   	          	          	          	          
+
+
+
+STUDIES
+
+Head CT/CTA prelim read negative
+
+MRI prelim read - L insular infarct
+
+
+
+A/P
+
+50 yo RHM with 45 minute episode of dysarthria and L hand tingling, now asymptomatic with normal neurologic exam.
+
+
+
+1) Neuro
+
+- admit to RDA neurology
+
+- continue ASA
+
+- TTE, Holter
+
+- continue HCTZ, atenolol, Norvasc
+
+
+
+2) Renal 
+
+- has Cr 1.4, was on glucophage, received contrast --> will need IVF
+
+
+
+3) DM
+
+- SSI, hold glucophage
+
+
+
+4) Pulm 
+
+- prn nebs
+
+
+
+5) Proph
+
+- nexium, fragmin
+
+
+
+
+
+
+
+Davine Malone, MD 5-4328
+
+Pioneer Neurology Resident
+
+
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2078-06-18" TYPE="DATE" comment="" />
+<AGE id="P1" start="117" end="119" text="50" TYPE="AGE" comment="" />
+<LOCATION id="P2" start="743" end="755" text="Chincoteague" TYPE="CITY" comment="" />
+<DATE id="P3" start="1070" end="1075" text="11/77" TYPE="DATE" comment="" />
+<AGE id="P4" start="3291" end="3293" text="50" TYPE="AGE" comment="" />
+<NAME id="P5" start="3688" end="3701" text="Davine Malone" TYPE="DOCTOR" comment="" />
+<CONTACT id="P6" start="3706" end="3712" text="5-4328" TYPE="PHONE" comment="" />
+<LOCATION id="P7" start="3714" end="3721" text="Pioneer" TYPE="HOSPITAL" comment="" />
+</TAGS>
+</deIdi2b2>

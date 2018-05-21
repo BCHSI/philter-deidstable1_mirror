@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2076-06-22
+
+
+
+Reason for Visit
+
+   Francesca is a 74 y/o woman here for evaluation of HTN,cardiac and DM treatment. 
+
+
+
+
+
+Problems
+
+      DM
+
+      HTN
+
+      Hysterectomy
+
+      Coronary artery disease    : CABG-9/74
+
+
+
+Medications
+
+      Ntg 1/150 (NITROGLYCERIN 1/150 (0.4 Mg))   1 TAB SL x1 
+
+      Asa (ACETYLSALICYLIC Acid)   81MG TABLET take 1 Tablet(s) PO QD 
+
+      Humulin N   UNITS  SC QAM and before bed , 20 units AM, 30 units HS
+
+      FUROSEMIDE   80 MG (80MG TABLET take 1) PO BID 
+
+      CAPTOPRIL   25MG TABLET  PO TID x 30 days
+
+      Lipitor (ATORVASTATIN)   20 MG (20MG TABLET take 1) PO QHS 
+
+      Plavix (CLOPIDOGREL)   75 MG (75MG TABLET take 1) PO QD x 14 days
+
+      Toprol Xl (METOPROLOL Succinate Extended Release)   100MG TAB.SR 24H  PO QD x 14 days
+
+
+
+Allergies
+
+      NKA
+
+
+
+Narrative History
+
+Takes meds. No SEs.  Nocturia x 1 ; polys-0  ;  
+
+Eyes- no complaints. Last exam -none.  Feet- no pain, numbness, burning. Cor- No chest pain.  No SOB.  No  palpitations.  When gets up from bed, has lighthead.  No PND.  No orthopnea.  No claudication.  No edema.  
+
+GI- No nausea.  No  vomitting. No  dyspepsia.  No  reflux.  No abdo pain.  No diarrhea.  No constipation.  No melena.  No BRBPR.
+
+Neuro- No headache.  No vision change.  NO  hearing change.  No numbness.  No  tingling.  No loss of strength. No seizures.  No loss of balance.
+
+ETOH/drugs-  no 
+
+Cigs- no
+
+Diet-no
+
+Exercise-no
+
+Home glu- machine not working well.
+
+Hypoglycemia-no
+
+Other complaints-no
+
+Sleep- ok.  
+
+Not depressed.
+
+
+
+
+
+Vital Signs
+
+      BLOOD PRESSURE   146/84 
+
+      PULSE   80 
+
+      WEIGHT   143.5 lb
+
+
+
+Exam
+
+NAD,WD,WN
+
+Eyes- conj & sclera not injected EOMI,PERLA
+
+M&T- lips and gums unremarkable.  Moist no erythema; no exudate; no lesions
+
+Neck- supple. No JVD. No bruit. No LAN. No thyromegaly
+
+Cor- reg rhyhm. S1S2 normal. No gallop. No rub. NO murmer.
+
+Pulm- NO accessory muscle use. Percussion- normal. Palpation-normal. Auscultation-clear. 
+
+Abdo- normal BS;soft with no HSM. No mass. No tenderness
+
+Ext/ feet: no edema; DP Pulses absent. Skin intact. Monofilament absent.
+
+
+
+
+
+Results
+
+05/26/2076 NA 142,  K 3.6 (#),  CL 100,  CO2 34 (*),  BUN 13,  CRE 1.3,  EGFR 43 [1],  GLU 93 (#)
+
+[1] RESULT COMMENT: 
+
+(Abnormal if 
+
+
+
+Assessment
+
+DM- poor control
+
+Asymp CAD
+
+HTN- elevted today but has been fine.
+
+
+
+
+
+Disposition and Plans
+
+Cont meds but increase PM insulin to 30 units.
+
+RTC 3 month or PRN.
+
+
+
+______________________________
+
+Armando Brian Nettles, M.D.
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2076-06-22" TYPE="DATE" comment="" />
+<NAME id="P1" start="51" end="60" text="Francesca" TYPE="PATIENT" comment="" />
+<AGE id="P2" start="66" end="68" text="74" TYPE="AGE" comment="" />
+<DATE id="P3" start="229" end="233" text="9/74" TYPE="DATE" comment="" />
+<DATE id="P4" start="2125" end="2135" text="05/26/2076" TYPE="DATE" comment="" />
+<NAME id="P5" start="2473" end="2494" text="Armando Brian Nettles" TYPE="DOCTOR" comment="" />
+</TAGS>
+</deIdi2b2>

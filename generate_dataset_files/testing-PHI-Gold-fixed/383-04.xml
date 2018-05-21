@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2120-01-20
+
+
+
+Visit Note
+
+Patient Name:  WERNER, BRIAN U                       MRN:  4097229
+Dictated Date:  01/20/2120                        Dictated by:  Taniya Xing, M.D.
+
+Date of Visit:  01/20/2120
+
+
+Bryan returns for followup of cerebrovascular disease. A lot has happened since I last saw him in 10/2119. A CTA revealed severe stenosis of his left ICA. He is status post bilateral carotid endarterectomies and also has known vertebral disease with a history of a left occipital stroke. He subsequently was referred to Dr. Mccarthy and was scheduled to undergo left ICA stent placement in December. In November 1 morning after going to the bathroom he developed sudden onset of vertigo. His wife called 911. He continued to have positional vertigo in the emergency room such that if he sat up he would become very vertiginous and off balance but if he laid with his eyes closed. He felt better. He was found to be orthostatic and his symptoms improved according to the chart by the next day though according to the patient, it took a couple of days for his symptoms to improve significantly. An MRI of the brain was unrevealing for ischemia. Although he significantly improved he still feels &#34;a little off balance&#34;.  He is fine when he is sitting but he notes when he stands up he just &#34;feels off&#34;.  He does not feel acutely vertiginous and does not have any sense of movement but does not feel as steady as he used to on his feet. He has seen Guy in physical therapy and is working on balance therapy. He subsequently did undergo left ICA stent placement on 12/22/2119 without any complication. There was no worsening of his sense of imbalance or no new neurologic symptoms. Also of note, I neglected to mention above, that when he became acutely vertiginous in November there were no other accompanying symptoms. He was discharged after his left carotid endarterectomy on Plavix as well as aspirin that he had been on prior to his admission. He also was switched while in the hospital from hydrochlorothiazide to Inderal for blood pressure control although he was orthostatic sitting up.  Lying down he was hypertensive. He has had no new neurologic symptoms since his discharge from NDMG after his carotid endarterectomy on 12/22/2119. 
+
+CURRENT MEDICATIONS: Aspirin, gemfibrozil, nifedipine, Plavix, propranolol, ranitidine. 
+
+PHYSICAL EXAMINATION: Pleasant, healthy-appearing 74-year-old male. Blood pressure 160/90 sitting, standing 155/90. Cranial nerve examination notable for right homonymous hemianopsia. Auscultation of the neck: Unremarkable. No bruits. There are bilateral CEA scars. Motor examination: No drift. Power 5/5 throughout. Fine finger movements intact. In the lower extremities. Power 5/5 on the right. The left he is status post left knee fusion. The left iliopsoas and dorsiflexion are full strength. His gait shows left limp due to knee fusion, but he appears steady. DTRs 1+ throughout. 
+
+DATA: MRI of the brain in 11/2119 shows chronic left occipital lobe infarct otherwise unremarkable. CTA of the head and neck 11/14/2119 showed stable left PCA territory chronic infarct with encephalomalacia and nonspecific periventricular white matter hypoattenuation as previously described. CTA of the head showed stable moderate stenosis of the left supraclinoid ICA. Stable occlusion or near occlusion of the left vertebral artery at the dural penetration to the take off of the PICA. There is reconstruction of contrast in the distal aspect. There is moderate stenosis of the distal left interdural vertebral artery with severe stenosis at the left vertebrobasilar junction and also unchanged.  Stable moderate to severe stenosis within the right intradural vertebral artery.  Mild areas of stenosis within the basilar artery and left T1 and T2 segments also unchanged. A CTA of the neck shows a short segment of severe stenosis of the proximal left ICA, which is stable since the most recent study.  The right carotid artery demonstrates no significant stenosis. Dominant right vertebral artery with hypoplastic left vertebral artery demonstrates moderate stenosis at its origin and diffuse areas of moderate stenosis of the throughout unchanged. Mild to moderate right subclavian artery stenosis just proximal to the vertebral artery take off unchanged. Multiple thyroid nodules as described since most recent study. New ground glass nodule in the lower lobe the right lung, which is likely inflammatory in nature. Followup chest x-ray 11/14/2119 was unremarkable. Cardiac ultrasound shows evidence of a PFO, which is now noted following performance of Valsalva maneuver not previously noted.  In 09/2113 Holter monitor was unremarkable. 
+
+IMPRESSION: A 74-year-old male with long-standing cerebrovascular disease and history notable for left occipital lobe infarct with vertebrobasilar disease as described above, status post bilateral carotid endarterectomies with recent restenosis on the left treated with stenting in 12/2119.  He has been doing well considering. 
+
+The cause of his episode of vertigo and imbalance is unclear.  It is difficulty to tease out whether or not this was a posterior circulation TIA versus small stroke not detected on MRI versus vasovagal etiology. He checks out well today and I do not find any new findings on examination and his walking is steady though subjectively he feels he is not quite back to baseline. Agree with Plavix added to his aspirin dose after his carotid stent placement. His blood pressure is a little high today. He will be following up with Dr. Kinney in 2 weeks. Recommended that he continue to work with Guy on vestibular therapy. 
+
+Followup with me in 3 months. 
+
+
+___________________________
+Taniya Xing, M.D.
+
+
+cc:
+
+
+DD: 01/20/2120 11:05:58
+TD: 01/21/2120 07:49:40
+TR: 7038300
+BackJob ID:  6183328
+VoiceJob ID:  62867896
+
+
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2120-01-20" TYPE="DATE" comment="" />
+<NAME id="P1" start="57" end="72" text="WERNER, BRIAN U" TYPE="PATIENT" comment="" />
+<ID id="P2" start="101" end="108" text="4097229" TYPE="MEDICALRECORD" comment="" />
+<DATE id="P3" start="125" end="135" text="01/20/2120" TYPE="DATE" comment="" />
+<NAME id="P4" start="173" end="184" text="Taniya Xing" TYPE="DOCTOR" comment="" />
+<DATE id="P5" start="208" end="218" text="01/20/2120" TYPE="DATE" comment="" />
+<NAME id="P6" start="221" end="226" text="Bryan" TYPE="PATIENT" comment="" />
+<DATE id="P7" start="319" end="326" text="10/2119" TYPE="DATE" comment="" />
+<NAME id="P8" start="545" end="553" text="Mccarthy" TYPE="DOCTOR" comment="" />
+<DATE id="P9" start="611" end="619" text="December" TYPE="DATE" comment="" />
+<DATE id="P10" start="624" end="632" text="November" TYPE="DATE" comment="" />
+<NAME id="P11" start="1482" end="1485" text="Guy" TYPE="DOCTOR" comment="" />
+<DATE id="P12" start="1597" end="1607" text="12/22/2119" TYPE="DATE" comment="" />
+<DATE id="P13" start="1801" end="1809" text="November" TYPE="DATE" comment="" />
+<LOCATION id="P14" start="2224" end="2228" text="NDMG" TYPE="HOSPITAL" comment="" />
+<DATE id="P15" start="2265" end="2275" text="12/22/2119" TYPE="DATE" comment="" />
+<AGE id="P16" start="2419" end="2421" text="74" TYPE="AGE" comment="" />
+<DATE id="P17" start="2982" end="2989" text="11/2119" TYPE="DATE" comment="" />
+<DATE id="P18" start="3081" end="3091" text="11/14/2119" TYPE="DATE" comment="" />
+<DATE id="P19" start="4499" end="4509" text="11/14/2119" TYPE="DATE" comment="" />
+<DATE id="P20" start="4660" end="4667" text="09/2113" TYPE="DATE" comment="" />
+<AGE id="P21" start="4717" end="4719" text="74" TYPE="AGE" comment="" />
+<DATE id="P22" start="4985" end="4992" text="12/2119" TYPE="DATE" comment="" />
+<NAME id="P23" start="5564" end="5570" text="Kinney" TYPE="DOCTOR" comment="" />
+<NAME id="P24" start="5625" end="5628" text="Guy" TYPE="DOCTOR" comment="" />
+<NAME id="P25" start="5715" end="5726" text="Taniya Xing" TYPE="DOCTOR" comment="" />
+<DATE id="P26" start="5745" end="5755" text="01/20/2120" TYPE="DATE" comment="" />
+<DATE id="P27" start="5769" end="5779" text="01/21/2120" TYPE="DATE" comment="" />
+<ID id="P28" start="5793" end="5800" text="7038300" TYPE="IDNUM" comment="" />
+<ID id="P29" start="5814" end="5821" text="6183328" TYPE="IDNUM" comment="" />
+<ID id="P30" start="5836" end="5844" text="62867896" TYPE="IDNUM" comment="" />
+</TAGS>
+</deIdi2b2>

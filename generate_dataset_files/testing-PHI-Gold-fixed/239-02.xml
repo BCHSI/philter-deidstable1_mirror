@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2067-08-02
+
+60 year old gentleman presents for follow-up of right lower extremity foot ulcer.  It would appear that two weeks prior, the patient sustained a burn to the right lower extremity while walking on a hot sandy beach.  He has been followed regularly by a podiatrist Dr. Sanchez, who has attempted debridement of lesion.  He also asked that the patient receive vancomycin at the time of his dialysis.
+
+In the setting of four compliance and poor wound healing, the patient was admitted for 48 hours to the Northport Veterans Hospital.  Records are not immediately available but it would appear that he received intravenous antibiotics at that time.  He was discharged without clear follow-up.
+
+The patient presents to my office with his foot unwrapped and undressed.  He has been ambulating on the wound.  He reports that it appears less red and has less drainage than at his initial presentation.  He reports no pain.
+
+Having spoken with his podiatrist, it would appear that the patient has been noncompliant with leg elevation and dressing overall.
+
+
+Review of systems is otherwise negative.  
+
+Past Medical History:
+
+Neuropathy 
+Nephropathy : cr. 2.6. 3.3 gm proteinuria. Currently on hemodialysis
+Hyperlipidemia 
+Hypertension 
+Obesity 
+Diabetes mellitus : type 2
+Noncompliance : poor compliance
+Basal cell carcinoma : carcinoma of skin left cheek
+Lower extremity ulcer : DIABETIC FOOT ULCER. L Foot
+Abscess : Rt shin 2062Back: 11/64. S/P I&D
+Mitral valve insufficiency : severe, with cardiomyopathy and EF 36%
+Colonic polyps : tubulovillious adenoma 11/65. Needs repeat scope 11/66
+FH Uncoded Information:
+	 Comments: Noncontributory
+ 
+
+Allergies
+NKA 
+
+Medications
+Aspirin BUFFERED 325MG TABLET take 1 Tablet(s) PO QD 
+Nephrocaps 1 CAPSULE PO QD x 90 days
+Ca ACETATE (CALCIUM ACETATE ( 1 TABLET=667 MG)) 1334 MG (667MG TABLET take 2) PO TID x 30 days, take with meals; if snack inbetween meals take one extra pill
+Lipitor (ATORVASTATIN) 80 MG (80MG TABLET take 1) PO QD 
+Zetia (EZETIMIBE) 10 MG (10MG TABLET take 1) PO QD 
+Toprol XL (METOPROLOL SUCCINATE EXTENDED RELEASE) 100 MG (100MG TAB.SR 24H take 1) PO QD 
+Lisinopril 40 MG (40MG TABLET take 1) PO QD , Evening Qpm
+Insulin 70/30 (HUMAN) Variable (70-30 U/ML VIAL ) SC , 45 am, Pm 
+
+Physical exam: In no acute distress.  Blood pressure is 100/58.  Weight is 236.  Pulse is 70 and regular.HEENT: Pupils equal round reactive to light.  Extraocular motions intact.  Oropharynx moist without erythema or exudate.  Neck: Supple without JVD, lymphadenopathy, or thyromegaly.  Chest: Clear to auscultation bilaterally without wheezes or rhonchi or rhales.  Cardiac: Regular rate and rhythm, normal S1 and S2 without murmurs rubs or gallops.  Extremities: Right lower extremity with a 1.6 cm x 1.6 cm black eschar to be great toe.  Lesion is soft.  It is unclear if there is significant tracking beneath the surface.  A 3 cm x 2 cm flat based ulcer with surrounding callus formation is noted to be ball of the right foot with some granulation and no drainage.  A collar is noted.  No surrounding erythema is appreciated.  Dorsalis pedis and posterior tibial pulses are palpable but clearly diminished.
+
+Assessment and plan: This is a 60 year old gentleman with multiple medical issues including end-stage renal disease my for regurgitation, congestive heart failure, severe peripheral neuropathy, diabetes.  Present in with two large altars to the right lower extremity.  He is status post hospitalization and some debridement and appears to have had little overall improvement in clinical status.  I will proceed with an aggressive outpatient treatment plan however I suspect that he will need inpatient admission once again if significant improvement is not rapidly obtained.  A referral has been made to the Island Medical Center wound clinic for this Tuesday.  Visiting nurse has been arranged for his home for wound care in the interim.  He is advised to avoid all weight-bearing and to keep his foot dressed at all times.  I have explained to the patient that he is at risk of amputation of at least his right great toe should his healing not improve.
+
+With regards to his other medical issues, he continues on dialysis.  I have asked for a hemoglobin A1c and fasting cholesterol to be drawn at the time of his dialysis tomorrow.  I'll see the patient on Tuesday.  
+
+His blood pressure is appropriately controlled and he is no stigmata of congestive heart failure
+
+At today's visit, the patient's wound was dressed and cleaned the our nursing staff
+
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2067-08-02" TYPE="DATE" comment="" />
+<AGE id="P1" start="28" end="30" text="60" TYPE="AGE" comment="" />
+<NAME id="P2" start="295" end="302" text="Sanchez" TYPE="DOCTOR" comment="" />
+<LOCATION id="P3" start="529" end="556" text="Northport Veterans Hospital" TYPE="HOSPITAL" comment="" />
+<DATE id="P4" start="1444" end="1448" text="2062" TYPE="DATE" comment="" />
+<DATE id="P5" start="1454" end="1459" text="11/64" TYPE="DATE" comment="" />
+<DATE id="P6" start="1577" end="1582" text="11/65" TYPE="DATE" comment="" />
+<DATE id="P7" start="1603" end="1608" text="11/66" TYPE="DATE" comment="" />
+<AGE id="P8" start="3208" end="3210" text="60" TYPE="AGE" comment="" />
+<LOCATION id="P9" start="3785" end="3806" text="Island Medical Center" TYPE="HOSPITAL" comment="" />
+<DATE id="P10" start="3829" end="3836" text="Tuesday" TYPE="DATE" comment="" />
+<DATE id="P11" start="4335" end="4342" text="Tuesday" TYPE="DATE" comment="" />
+</TAGS>
+</deIdi2b2>

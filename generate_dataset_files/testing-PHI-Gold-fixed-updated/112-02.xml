@@ -1,0 +1,92 @@
+<?xml version='1.0' encoding='utf8'?>
+<deIdi2b2>
+<TEXT>
+
+
+Record date: 2060-02-26
+
+
+BCH Cardiovascular Division
+CVD R12
+86 Cote Avenue                                      HESS, CLARENCE
+Pinehurst, OH 19792                                           64365595
+(680) 317-3494                                           02/26/60
+
+
+Yariel Law, M.D.
+Wheatland Memorial Nursing Home/Bangdung Office
+870 Newburgh Street
+Pinehurst, OH  35594
+
+Dear Dr. Law:
+
+I had the pleasure of seeing Mr. Hess in followup in Cardiology today.  As you know, he is a 53-year-old gentleman who underwent implantation of a permanent pacemaker on 02/11/60 for presyncope and pauses on Holter monitoring.  His past medical history is significant for hyperlipidemia, gastroesophageal reflux disease, and asthma.  Prior to his pacemaker placement, an exercise stress test was performed because of his history of exertional chest pain.  He was able to exercise for 8 minutes and 4 seconds.  The test was terminated for 7/10 substernal chest pain, but no hypotension and no overt EKG changes were noted, so we proceeded with the pacemaker implant.  Since the implant Mr. Hess describes that his intermittent symptoms of lightheadedness and shortness of breath have vanished, however, he has noticed that he is sleeping less well and occasionally has nocturnal palpitations, which potentially could represent pacing from his pacemaker.
+
+Interrogation today of his Medtronic Kappa QQ 626 pacemaker reveals that his underlying rhythm is sinus tachycardia with intact AV conduction.  His estimated battery longevity is 89 months.  The atrial impedance is 569 ohms, the ventricular impedance is 529 ohms.  The P-wave is 5.6 mV.  The R-wave is 31.3 mV.  The threshold in the atrium is 0.75 V at 0.4 mV, and the threshold in the ventricle is 0.75 V at 0.4 msec.
+
+In summary, Mr. Hess is doing extremely well after his pacemaker placement.  His pacemaker incision is extremely well healed.  There is no sign of erythema or hematoma.  However, his sinus tachycardia is mildly perplexing.  Looking at his heart rate histogram, it appears that this sinus rates have varied from 80-120 beats per minute for the most part aside from some low heart rate that potentially are nocturnal.  I have performed some pacing maneuvers today in clinic to attempt to determine whether the mechanism of his current tachycardia is sinus and it appears that this is sinus tachycardia.  For this reason, I have performed a TSH today, which is normal, however, I suggest to you that potentially a cursory endocrine workup and potentially a repeat echocardiogram at your facility might be indicated.  I am available to discuss these findings with you at any time.  I plan to see Mr. Hess in followup in three months' time, and if any issues arise in the interim, please do not hesitate to contact me.
+
+Sincerely,
+
+
+
+
+
+______________________________
+Una Trujillo, MD
+
+
+Dictated By: Una Trujillo
+
+
+eScription document:9-1748355 UFFocus
+
+
+CC: Robert Yousif Gordon MD
+803 FAIRHAVEN ROAD
+OLNEY, OH 23751
+
+DD: 02/27/60
+DT: 02/27/60
+DV: 02/26/60
+
+
+
+</TEXT>
+<TAGS>
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2060-02-26" />
+<LOCATION TYPE="STREET" comment="" end="79" id="P3" start="65" text="86 Cote Avenue" />
+<NAME TYPE="PATIENT" comment="" end="131" id="P4" start="117" text="HESS, CLARENCE" />
+<LOCATION TYPE="CITY" comment="" end="141" id="P5" start="132" text="Pinehurst" />
+<LOCATION TYPE="STATE" comment="" end="145" id="P6" start="143" text="OH" />
+<LOCATION TYPE="ZIP" comment="" end="151" id="P7" start="146" text="19792" />
+<ID TYPE="MEDICALRECORD" comment="" end="202" id="P8" start="194" text="64365595" />
+<CONTACT TYPE="PHONE" comment="" end="217" id="P9" start="203" text="(680) 317-3494" />
+<DATE TYPE="DATE" comment="" end="268" id="P10" start="260" text="02/26/60" />
+<NAME TYPE="DOCTOR" comment="" end="281" id="P11" start="271" text="Yariel Law" />
+<LOCATION TYPE="HOSPITAL" comment="" end="319" id="P12" start="288" text="Wheatland Memorial Nursing Home" />
+<LOCATION TYPE="CITY" comment="" end="328" id="P13" start="320" text="Bangdung" />
+<LOCATION TYPE="STREET" comment="" end="355" id="P14" start="336" text="870 Newburgh Street" />
+<LOCATION TYPE="CITY" comment="" end="365" id="P15" start="356" text="Pinehurst" />
+<LOCATION TYPE="STATE" comment="" end="369" id="P16" start="367" text="OH" />
+<LOCATION TYPE="ZIP" comment="" end="376" id="P17" start="371" text="35594" />
+<NAME TYPE="DOCTOR" comment="" end="390" id="P18" start="387" text="Law" />
+<NAME TYPE="PATIENT" comment="" end="430" id="P19" start="426" text="Hess" />
+<DATE TYPE="DATE" comment="" end="571" id="P22" start="563" text="02/11/60" />
+<NAME TYPE="PATIENT" comment="" end="1086" id="P23" start="1082" text="Hess" />
+<ID TYPE="DEVICE" comment="" end="1396" id="P24" start="1390" text="QQ 626" />
+<NAME TYPE="PATIENT" comment="" end="1787" id="P25" start="1783" text="Hess" />
+<NAME TYPE="PATIENT" comment="" end="2667" id="P26" start="2663" text="Hess" />
+<NAME TYPE="DOCTOR" comment="" end="2841" id="P27" start="2829" text="Una Trujillo" />
+<NAME TYPE="DOCTOR" comment="" end="2873" id="P28" start="2861" text="Una Trujillo" />
+<ID TYPE="IDNUM" comment="" end="2905" id="P29" start="2896" text="9-1748355" />
+<NAME TYPE="DOCTOR" comment="" end="2940" id="P30" start="2920" text="Robert Yousif Gordon" />
+<LOCATION TYPE="STREET" comment="" end="2962" id="P31" start="2944" text="803 FAIRHAVEN ROAD" />
+<LOCATION TYPE="CITY" comment="" end="2968" id="P32" start="2963" text="OLNEY" />
+<LOCATION TYPE="STATE" comment="" end="2972" id="P33" start="2970" text="OH" />
+<LOCATION TYPE="ZIP" comment="" end="2978" id="P34" start="2973" text="23751" />
+<DATE TYPE="DATE" comment="" end="2992" id="P35" start="2984" text="02/27/60" />
+<DATE TYPE="DATE" comment="" end="3005" id="P36" start="2997" text="02/27/60" />
+<DATE TYPE="DATE" comment="" end="3018" id="P37" start="3010" text="02/26/60" />
+</TAGS>
+</deIdi2b2>

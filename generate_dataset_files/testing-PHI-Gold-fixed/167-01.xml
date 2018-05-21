@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2078-10-13
+
+                     CDH EMERGENCY DEPT VISIT
+ 
+YARBROUGH,IRENE   810-86-43-7                        VISIT DATE: 10/13/78
+PRESENTING COMPLAINT and HISTORY OF PRESENTING COMPLAINT:  The 
+patient is a 54-year-old female seen by Dr. Paulson and also by the 
+Oncology service.  Briefly, this is a 54-year-old female with a 
+known mass in her vagina, who presents now with vaginal bleeding. 
+The patient was seen earlier yesterday by the Oncology service, 
+and is scheduled to have surgery for the mass to be removed, but 
+she developed significant vaginal bleeding and presented to the 
+Emergency Department today.  She is otherwise healthy.  Her first 
+time seen in the Emergency Department or seen by Oncology was two 
+weeks ago for increased bleeding.  She was diagnosed at the time 
+with a necrotic fibroid, and was confirmed by studies to have a 
+large fibroid at that time.  She now presents with increasing 
+weakness and light-headedness and more bleeding. 
+THERAPY RENDERED/COURSE IN ED:  In the Emergency Department, an IV 
+was started, and laboratory studies sent, including CBC, 
+electrolytes, PT/PTT, and she was also typed and crossed and a 
+urinalysis sent.  A chest x-ray and EKG were sent.  The patient was 
+made n.p.o.  She is a preoperative patient.  Her initial hematocrit 
+here was 23.  A full note was written by the Oncology service, 
+and she is currently admitted to that service. 
+FINAL DIAGNOSIS:  Vaginal bleeding with necrotic leiomyoma. 
+DISPOSITION (including condition on discharge):  As above.  The 
+patient's condition on admission is stable. 
+___________________________________                    CQ774/2253 
+TRISTAN O. XAVIER, M.D.  TX12                             D:10/13/78 
+                                                       T:10/13/78 
+Dictated by:  TRISTAN O. XAVIER, M.D.  TX12 
+ ******** Not reviewed by Attending Physician ********
+
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2078-10-13" TYPE="DATE" comment="" />
+<LOCATION id="P1" start="49" end="52" text="CDH" TYPE="HOSPITAL" comment="" />
+<NAME id="P2" start="76" end="91" text="YARBROUGH,IRENE" TYPE="PATIENT" comment="" />
+<ID id="P3" start="94" end="105" text="810-86-43-7" TYPE="MEDICALRECORD" comment="" />
+<DATE id="P4" start="141" end="149" text="10/13/78" TYPE="DATE" comment="" />
+<AGE id="P5" start="227" end="229" text="54" TYPE="AGE" comment="" />
+<NAME id="P6" start="258" end="265" text="Paulson" TYPE="DOCTOR" comment="" />
+<AGE id="P8" start="321" end="323" text="54" TYPE="AGE" comment="" />
+<ID id="P11" start="1655" end="1665" text="CQ774/2253" TYPE="IDNUM" comment="" />
+<NAME id="P12" start="1667" end="1684" text="TRISTAN O. XAVIER" TYPE="DOCTOR" comment="" />
+<NAME id="P13" start="1692" end="1696" text="TX12" TYPE="USERNAME" comment="" />
+<DATE id="P14" start="1727" end="1735" text="10/13/78" TYPE="DATE" comment="" />
+<DATE id="P15" start="1794" end="1802" text="10/13/78" TYPE="DATE" comment="" />
+<NAME id="P16" start="1818" end="1835" text="TRISTAN O. XAVIER" TYPE="DOCTOR" comment="" />
+<NAME id="P17" start="1843" end="1847" text="TX12" TYPE="USERNAME" comment="" />
+</TAGS>
+</deIdi2b2>

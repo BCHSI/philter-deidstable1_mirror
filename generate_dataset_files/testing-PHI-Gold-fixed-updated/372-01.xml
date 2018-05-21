@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='utf8'?>
+<deIdi2b2>
+<TEXT>
+
+
+Record date: 2120-10-23
+
+Patient Name: FLAHERTY, XAVIER;  MRN: 1935081
+Dictated on: 10/23/2120 by ROSITA KO, M.D. 
+
+ 
+The patient is a 72-year-old male, paraplegic, referred for evaluation of recurrent bladder infections.  The patient has persistent presence of bacteria in his urine and there is a concern that he might have a persistent source of infection.  The patient denies fevers, chills, sweats, decrease in energy, loss of appetite, pain in the lower abdomen or penile discharge.  He reports there is some soreness around the meatus, which he attributes to self-catheterizing he is required to do 3 times a day.  He is well educated in terms of cleaning around the side and the appropriate way to do self-catheterization.   
+PAST MEDICAL HISTORY:  Diabetes, hypertension, paraplegia secondary to unclear disk problems in 2107, right hip ulcer with trochanteric osteomyelitis in December 2118, treated with Unasyn x6 weeks and debridement and surgical flap, sacral decubiti in 2119 treated with Unasyn x6 weeks, local debridement healing by secondary intention.  No history of kidney stones.   
+SOCIAL:  Ex-tobacco use 2-3 packs per day, quit 25 years. Alcohol prior heavy use, quit 25 years.  Lives alone.  Prior work included Heavy-Duty Equipment Mechanic, Ironworker, as well as Electric Appliance Servicer.  
+ 
+ALLERGIES:  No known drug allergies.  
+ 
+MEDICATIONS:  Blood pressure medication, name unknown. Metformin.  Note, patient had been on Bactrim prophylaxis over the spring.   
+PHYSICAL EXAMINATION:  Blood pressure 150/100, heart rate 100, temperature 97.9.  In general, vigorous, well-appearing man in wheelchair.  Awake and alert.  HEENT, sclerae anicteric.  Conjunctivae noninjected.  Neck supple.  No significant lymphadenopathy.  Chest, clear to auscultation bilaterally.  Cardiac, regular rate and rhythm.  No murmurs.  Abdomen benign.  Extremities, warm and well perfused.  No edema.  
+ 
+IMPRESSION:  Presence of bacteria in static urine within the bladder is not necessarily diagnostic as infection given patient's lack of symptoms and likely reflects colonization.   
+PLAN:  Would not treat patient with antibiotics unless he develops signs or symptoms of infection such as fevers, chills, sweats, elevated white blood cell count, pain in the suprapubic area or decreased energy.  
+ 
+_________________________ 
+Rosita Ko, M.D.  
+ 
+DD:10/23/2120 
+DT:10/24/2120 
+AO:29724     :0269
+ 
+
+
+
+
+</TEXT>
+<TAGS>
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2120-10-23" />
+<NAME TYPE="PATIENT" comment="" end="58" id="P1" start="42" text="FLAHERTY, XAVIER" />
+<ID TYPE="MEDICALRECORD" comment="" end="73" id="P2" start="66" text="1935081" />
+<DATE TYPE="DATE" comment="" end="97" id="P3" start="87" text="10/23/2120" />
+<NAME TYPE="DOCTOR" comment="" end="110" id="P4" start="101" text="ROSITA KO" />
+<DATE TYPE="DATE" comment="" end="903" id="P7" start="890" text="December 2118" />
+<NAME TYPE="DOCTOR" comment="" end="2352" id="P13" start="2343" text="Rosita Ko" />
+<DATE TYPE="DATE" comment="" end="2376" id="P14" start="2366" text="10/23/2120" />
+<DATE TYPE="DATE" comment="" end="2391" id="P15" start="2381" text="10/24/2120" />
+<ID TYPE="IDNUM" comment="" end="2411" id="P16" start="2393" text="AO:29724     :0269" />
+</TAGS>
+</deIdi2b2>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2074-09-03
+
+
+HSP Cardiovascular Division
+CVD MR8
+99 Fitzpatrick Circle                                      SERGIO-STEVEN, FRANCESCA
+Adrian, TN 13467                                           80780896
+(433) 758-3431                                           09/03/74
+
+
+REFERRING PHYSICIAN:  Armando Newton, M.D.
+
+Mrs. Francesca Sergio-Steven is a 72-year-old Hispanic female who presents with a new-onset acute MI.  She has no known prior manifestations of coronary disease, but has a long history of insulin-dependent diabetes mellitus and hypertension.  She had been in her usual state of health until about 2 weeks ago, when she began to have episodes of chest discomfort.  She has only had two such episodes until the morning of admission, when she developed severe episode of chest pain at rest associated with shortness of breath.  She presented to the emergency room here where she was found to have new-onset ST-segment elevation in the inferior leads with a coving morphology involving the lateral leads as well.  There was also poor R-wave progression V1 through V3.  She was taken urgently to the cardiac catheterization laboratory, where she was found to have a markedly elevated wedge pressure at 30 mmHg with a normal cardiac index and blood pressure.  She had mid inferior wall and lateral wall akinesis initially with 3+ mitral regurgitation.  There was severe diffuse coronary disease with diffuse LAD disease and total occlusion of the proximal circumflex.  The right coronary artery was small with a 70% proximal stenosis.  The occluded circumflex was crossed with a wire and was stented with a Cypher drug-eluting stent.  She had an excellent result with the wedge also decreasing to 20 mmHg.  She had an estimated 70% ejection fraction despite the inferior and lateral akinesis.  Cardiac index was 2.5 with SVR of 1739.  She was then brought to the coronary care unit for further evaluation.
+
+Her past medical history is notable for hypertension for which she takes lisinopril 40 mg q.d. and atenolol 50 mg q.d.  She also has insulin-dependent diabetes mellitus and takes insulin.  Past medical history is also notable for a hysterectomy.
+
+Social history is notable for no cigarette or alcohol use.  She is from Paraguay and has recently arrived in this country.
+
+Review of systems show no fever, chills, nausea, or vomiting.
+
+On exam, she is comfortable with a blood pressure initially 160/80 with a heart rate of 70 and regular.  Followup pressure 125/80 with a heart rate of 72 beats per minute.  Head and neck were unremarkable.  Chest is clear.  Cardiac exam shows no jugular venous distention at 30 degrees.  PMI is normal.  S1 and S2 were normal with a physiological split.  There is an S4 and a 1/6 systolic ejection murmur as well as a 1 to 2/6 holosystolic murmur and mitral regurgitation at the left lower sternal border.  There is no S3.  Abdominal exam was unremarkable without organomegaly.  Bowel sounds are normal.  Extremities showed no edema or cyanosis.  Calf site is clean without bruits.  Distal pulse is decreased but palpable.
+
+Her resting 12-lead electrocardiogram shows evidence of her evolving inferolateral MI.
+
+Other lab values included creatinine 1.0 with normal electrolytes, hematocrit is 44.4%, white blood cell count 3.8 with platelets 322,000.  Liver function tests are normal.
+
+A portable chest x-ray shows pulmonary edema.
+
+Mrs. Sergio-Steven clearly has evidence of an inferoposterior MI initially with a very high filling pressure and pulmonary edema and mitral regurgitation.  She has had her circumflex, which is a very large vessel, well treated now with a drug-eluting stent, and her wedge has come down, and her mitral regurgitation is substantially improved.
+
+At this point, we will bring her to the coronary care unit for careful management with aspirin, Plavix, heparin, continue the Integrilin, as well as Lasix and nitrates.  We will plan to initiate afterload reduction as soon as tolerated, and also plan beta-blockade to limit her myocardial oxygen demands.  She certainly has co-existent quite substantial coronary disease including primarily the right coronary artery degree and to some degree the LAD.  At this point, if she were to have developed recurrent ischemia, we would proceed to consideration of bypass surgery.
+
+
+
+
+
+______________________________
+Yakov Ferris, MD
+
+
+Dictated By: Yakov Ferris
+
+
+eScription document:5-4672574 BFFocus
+
+
+
+DD: 09/03/74
+DT: 09/03/74
+DV: 09/03/74
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2074-09-03" TYPE="DATE" comment="" />
+<LOCATION id="P1" start="29" end="32" text="HSP" TYPE="HOSPITAL" comment="" />
+<LOCATION id="P3" start="65" end="86" text="99 Fitzpatrick Circle" TYPE="STREET" comment="" />
+<NAME id="P4" start="124" end="148" text="SERGIO-STEVEN, FRANCESCA" TYPE="PATIENT" comment="" />
+<LOCATION id="P5" start="149" end="155" text="Adrian" TYPE="CITY" comment="" />
+<LOCATION id="P6" start="157" end="159" text="TN" TYPE="STATE" comment="" />
+<LOCATION id="P7" start="160" end="165" text="13467" TYPE="ZIP" comment="" />
+<ID id="P8" start="208" end="216" text="80780896" TYPE="MEDICALRECORD" comment="" />
+<CONTACT id="P9" start="217" end="231" text="(433) 758-3431" TYPE="PHONE" comment="" />
+<DATE id="P10" start="274" end="282" text="09/03/74" TYPE="DATE" comment="" />
+<NAME id="P11" start="307" end="321" text="Armando Newton" TYPE="DOCTOR" comment="" />
+<NAME id="P12" start="334" end="357" text="Francesca Sergio-Steven" TYPE="PATIENT" comment="" />
+<AGE id="P13" start="363" end="365" text="72" TYPE="AGE" comment="" />
+<LOCATION id="P14" start="2249" end="2257" text="Paraguay" TYPE="COUNTRY" comment="" />
+<NAME id="P15" start="3402" end="3415" text="Sergio-Steven" TYPE="PATIENT" comment="" />
+<NAME id="P16" start="4348" end="4360" text="Yakov Ferris" TYPE="DOCTOR" comment="" />
+<NAME id="P17" start="4380" end="4392" text="Yakov Ferris" TYPE="DOCTOR" comment="" />
+<ID id="P18" start="4415" end="4424" text="5-4672574" TYPE="IDNUM" comment="" />
+<DATE id="P19" start="4440" end="4448" text="09/03/74" TYPE="DATE" comment="" />
+<DATE id="P20" start="4453" end="4461" text="09/03/74" TYPE="DATE" comment="" />
+<DATE id="P21" start="4466" end="4474" text="09/03/74" TYPE="DATE" comment="" />
+</TAGS>
+</deIdi2b2>

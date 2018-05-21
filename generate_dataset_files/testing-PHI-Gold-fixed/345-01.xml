@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2072-11-25
+
+                     RGH EMERGENCY DEPT VISIT
+
+ 
+
+MULLINS,DOLORES U   728-41-92-0               VISIT DATE: 01/24/73
+
+This patient was seen, interviewed and examined by myself as well 
+
+as Dr. Hawkins whose note I reviewed and with which I agree.
+
+HISTORY OF PRESENTING COMPLAINT:  This is a 70-year-old female who 
+
+presents with inability to control her left arm and left leg.  The 
+
+patient had onset of her symptoms approximately two hours prior to 
+
+arrival.  The patient denies any change in sensation but she 
+
+definitely did notice weakness with decreased ability to control 
+
+her left side extremities.  The patient states that her left arm 
+
+control was regained after approximately one or two hours.  Her 
+
+left leg control is better but still is not back to baseline.  
+
+Review of systems, family history and social history as per the 
+
+resident's note.
+
+PAST MEDICAL HISTORY:  Insulin-dependent diabetes mellitus, 
+
+hypertension.
+
+MEDICATIONS:  Insulin, Diltiazem, labetalol.
+
+ALLERGIES:  TETANUS.
+
+PHYSICAL EXAMINATION:  This is a well-developed, well-nourished 
+
+female, in mild distress, appears concerned.  Temperature is 96.9 
+
+degrees, pulse 65, respiratory rate of 18, blood pressure is 
+
+163/104.  Repeat blood pressure is 174/80.  Oxygen saturation is 
+
+97% on room air.  HEENT:  Normocephalic, atraumatic.  Pupils are 
+
+equally round and reactive to light and accommodation.  Extraocular 
+
+motions are intact.  No nystagmus.  NECK:  Supple with full range 
+
+of motion.  2+ carotids, no bruits.  CARDIAC:  Regular rate and 
+
+rhythm.  EXTREMITIES:  No clubbing, cyanosis or edema.  Extremities 
+
+are nontender to palpation throughout.  NEURO:  Alert, oriented x 
+
+3.  Follows commands, appropriate.  Cranial nerves II-XII are 
+
+intact.  There is 5/5 motor strength in individual motor group 
+
+testing of the upper extremities and lower extremities bilaterally. 
+
+The patient is unable to stand without assistance.  Comprehension 
+
+is within normal limits.  Further details of the physical 
+
+examination are as per the resident's note.
+
+LABORATORY EVALUATION:  Labs are significant for a glucose of 162, 
+
+BUN of 20, creatinine 1.3, sodium 145, potassium 4.2, chloride 108, 
+
+bicarb 26, calcium 9.4.  White count is 8.1, hematocrit 39.0, 
+
+platelets 341.  A UA shows no blood, no leucocyte esterase, no 
+
+ketones.  Head CT shows no acute intracranial abnormality and mild 
+
+involutional changes.  EKG shows a sinus rhythm at 57 beats per 
+
+minute with non-specific T wave changes.  This is compared to an 
+
+EKG from 2068 and was found to be without significant change.
+
+THERAPY RENDERED/COURSE IN ED:  The patient was seen and evaluated 
+
+in the Emergency Department with labs and studies obtained as 
+
+documented above.  The initial concerns were for a focal seizure 
+
+versus a TIA.  The patient was hypertensive on her arrival and, 
+
+therefore, received labetalol for improved blood pressure control 
+
+and the Neurology Service was consulted early in the patient's 
+
+care.  The patient does not have any evidence of focal motor group 
+
+weakness at this time, nor sensation changes.  The patient will 
+
+require admission to the Neurology Service for further workup of 
+
+her seizure versus TIA.
+
+FINAL DIAGNOSIS:  TIA.
+
+DISPOSITION (including condition upon discharge):  The patient is 
+
+admitted to the hospital in satisfactory condition.
+
+___________________________________                    OH527/2519 
+
+YULIANNA ELKINS, M.D.   YE96                            D:01/24/73 
+
+                                                       T:01/24/73 
+
+Dictated by:  YULIANNA ELKINS, M.D.   YE96 
+
+ ******** Not reviewed by Attending Physician ********
+
+
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2072-11-25" TYPE="DATE" comment="" />
+<LOCATION id="P1" start="49" end="52" text="RGH" TYPE="HOSPITAL" comment="" />
+<NAME id="P2" start="78" end="95" text="MULLINS,DOLORES U" TYPE="PATIENT" comment="" />
+<ID id="P3" start="98" end="109" text="728-41-92-0" TYPE="MEDICALRECORD" comment="" />
+<DATE id="P4" start="136" end="144" text="01/24/73" TYPE="DATE" comment="" />
+<NAME id="P5" start="221" end="228" text="Hawkins" TYPE="DOCTOR" comment="" />
+<AGE id="P6" start="320" end="322" text="70" TYPE="AGE" comment="" />
+<DATE id="P7" start="2564" end="2568" text="2068" TYPE="DATE" comment="" />
+<ID id="P8" start="3444" end="3454" text="OH527/2519" TYPE="IDNUM" comment="" />
+<NAME id="P9" start="3457" end="3472" text="YULIANNA ELKINS" TYPE="DOCTOR" comment="" />
+<NAME id="P10" start="3481" end="3485" text="YE96" TYPE="USERNAME" comment="" />
+<DATE id="P11" start="3515" end="3523" text="01/24/73" TYPE="DATE" comment="" />
+<DATE id="P12" start="3583" end="3591" text="01/24/73" TYPE="DATE" comment="" />
+<NAME id="P13" start="3608" end="3623" text="YULIANNA ELKINS" TYPE="DOCTOR" comment="" />
+<NAME id="P14" start="3632" end="3636" text="YE96" TYPE="USERNAME" comment="" />
+</TAGS>
+</deIdi2b2>

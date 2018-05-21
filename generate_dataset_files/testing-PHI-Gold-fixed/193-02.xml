@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2094-03-06
+
+                                                       Patient Name: FOUST,FAY  [ 50294530(LHCC) ] 
+
+                                                         Date of Visit: 03/06/2094
+
+
+
+
+
+Problems
+
+      HTN
+
+
+
+History of Present Illness
+
+Doing well. Working hard on diet and exercise to control her htn and mild hyperglycemia.  She is paying $98./month for hyzaar and would like to try something else.  No cp/sob/abdominal pain.
+
+
+
+Past Medical History
+
+See problem list
+
+
+
+Medications
+
+      AZITHROMYCIN   250MG TABLET take 1 Tablet(s) PO QD x 5 days, 2 tablets po today and 1 eachday thereafter
+
+      Nifedipine (EXTENDED Release)   60 MG (60MG TABLET  take 1) PO QD 
+
+
+
+Allergies
+
+      Penicillin G Benzathine Long Acting    - Dizziness, 
+
+      Fleet's Phosphosoda    - Did not tolerate, 
+
+
+
+Family History
+
+No significant family history.
+
+
+
+Social History
+
+She is the mother of Tania Foust and mother-in-law of Willie Spencer, classmates of mine from UC Davis.  She is retired as a health policy consultant.  Emigrated from Hungary in the 2060's.  No tob, rare etoh.  No dv, walks for exercise. 
+
+
+
+Review of Systems
+
+cough, ST, sore in her mouth.  Otherwise as above and negative.
+
+
+
+Vital Signs
+
+      BLOOD PRESSURE   148/76 
+
+      PULSE   68 
+
+      WEIGHT   120 lb
+
+
+
+Physical Exam
+
+      General Appearance
+
+Well appearing in NAD
+
+      Skin
+
+Skin is without appreciable lesions
+
+      HEENT
+
+EOMI.  PERRLA.  OP benign, notable for a couple of cold sores.
+
+      Neck
+
+Supple with no lympadenopathy or thyromegaly.  Carotids are 2+ and equal without bruits.
+
+      Nodes/Lymphatic
+
+No axillary or supraclavicular lan.
+
+      Breast
+
+Breast exam is without masses, dimpling, retraction.  No nipple d/c noted.
+
+      Chest
+
+Lungs are clear to ascultation
+
+      Cor/Cardiac
+
+Regular rate and rhythm without m/r/g.  Normal S1 and S2
+
+      Abdomen
+
+Soft, nt/nd s hsm.  No guarding or rebound tenderness.
+
+      Extremity
+
+Without c/c/e
+
+      Neurological
+
+Intact
+
+
+
+Disposition and Plans
+
+1.   HTN - bp adequately controlled.  Check labs.  Continue Hyzaar until it's gone.  Then we will try nifedipine 60 mg to be more cost effective.  She will come in for a bp check.  Has not tolerated lisinopril or atenolol in the past. 
+
+
+
+2.  Sugar and trigs - Recheck today.  She has been working on her nutrition as well. Check A1C.
+
+
+
+3.  HM is up to date.  Follow up with me in 6 months or as needed.  Due for mammo in 3/94 and we will schedule.
+
+
+
+______________________________
+
+Bethany Kristin Downs, M.D.
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2094-03-06" TYPE="DATE" comment="" />
+<NAME id="P1" start="97" end="106" text="FOUST,FAY" TYPE="PATIENT" comment="" />
+<ID id="P2" start="110" end="118" text="50294530" TYPE="MEDICALRECORD" comment="" />
+<LOCATION id="P3" start="119" end="123" text="LHCC" TYPE="HOSPITAL" comment="" />
+<DATE id="P4" start="201" end="211" text="03/06/2094" TYPE="DATE" comment="" />
+<NAME id="P5" start="916" end="927" text="Tania Foust" TYPE="PATIENT" comment="" />
+<NAME id="P6" start="949" end="963" text="Willie Spencer" TYPE="PATIENT" comment="" />
+<LOCATION id="P7" start="989" end="997" text="UC Davis" TYPE="ORGANIZATION" comment="" />
+<PROFESSION id="P8" start="1020" end="1044" text="health policy consultant" TYPE="PROFESSION" comment="" />
+<LOCATION id="P9" start="1062" end="1069" text="Hungary" TYPE="COUNTRY" comment="" />
+<DATE id="P10" start="1077" end="1083" text="2060's" TYPE="DATE" comment="" />
+<DATE id="P11" start="2455" end="2459" text="3/94" TYPE="DATE" comment="" />
+<NAME id="P12" start="2517" end="2538" text="Bethany Kristin Downs" TYPE="DOCTOR" comment="" />
+</TAGS>
+</deIdi2b2>

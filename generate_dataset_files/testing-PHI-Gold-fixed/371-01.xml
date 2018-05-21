@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2074-11-11
+
+                     LEPROSARIUM EMERGENCY DEPT VISIT
+
+ 
+
+OLIVIER,OZELL   337-67-25-9              VISIT DATE: 11/11/74
+
+Resident history reviewed, patient interviewed and examined by me. 
+
+PRESENTING COMPLAINT:  Cough.
+
+HISTORY OF PRESENTING COMPLAINT:  This is a 67-year-old woman from 
+
+South Korea who has been in Canada for one year, translated by her 
+
+son.  She has had a cough for three days, which is white, and then 
+
+turned to yellow productive sputum.  She has mild shortness of 
+
+breath, chronic dyspnea on exertion, and chest pain only with 
+
+coughing.  The patient has no fever, no chills, no nausea, no 
+
+vomiting.  Positive coryza, cough, and sore throat.  She has been 
+
+self-treating with amoxicillin for two days.
+
+REVIEW OF SYSTEMS:  See HPI.
+
+PAST MEDICAL HISTORY:  Hypertension, hypothyroidism, obstructive 
+
+sleep apnea.  Surgical history is positive for cholecystectomy.
+
+MEDICATIONS:  Synthroid, Amoxil, hydrochlorothiazide.
+
+ALLERGIES:  Penicillin; she had urticaria.
+
+SOCIAL HISTORY AND FAMILY HISTORY:  Social history is negative for 
+
+tobacco, ETOH, intravenous drug abuse.  She lives with family.  
+
+Family history is cancer. 
+
+PHYSICAL EXAMINATION:  Vital signs are stable at 98, 83, 17, 
+
+162/67, and 94%.  GENERAL:  This patient is awake, alert, and 
+
+oriented, well-nourished, well-developed, in no distress.  HEENT:  
+
+Pupils are equal, round, reactive to light and accommodation.  
+
+Extraocular muscles are intact.  Oropharynx has no enlarged tonsils 
+
+and no exudate.  NECK:  Supple.   RESPIRATORY:  No respiratory 
+
+distress.  She has bi-basilar crackles.  CARDIOVASCULAR:  Regular 
+
+rate and rhythm.  S1, S2.  ABDOMEN:  Soft, non-tender.  
+
+EXTREMITIES:  No clubbing, cyanosis, or edema.  NEUROPSYCHIATRIC:  
+
+Alert and oriented x 3.  
+
+THERAPY RENDERED/COURSE IN ED:  The patient will be discharged on a 
+
+Z-pak and is to follow up with the Lakeview Clinic.
+
+FINAL DIAGNOSIS:  Bronchitis.
+
+DISPOSITION (including condition upon discharge):  The patient was 
+
+discharged home in satisfactory condition. 
+
+___________________________________                    OK878/13176 
+
+ROXANNE SPEARS, M.D.  RS40                             D:11/11/74 
+
+                                                       T:11/12/74 
+
+Dictated by:  ROXANNE SPEARS, M.D.  RS40 
+
+ ******** Not reviewed by Attending Physician ********
+
+
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2074-11-11" TYPE="DATE" comment="" />
+<LOCATION id="P1" start="49" end="60" text="LEPROSARIUM" TYPE="HOSPITAL" comment="" />
+<NAME id="P2" start="86" end="99" text="OLIVIER,OZELL" TYPE="PATIENT" comment="" />
+<ID id="P3" start="102" end="113" text="337-67-25-9" TYPE="MEDICALRECORD" comment="" />
+<DATE id="P4" start="139" end="147" text="11/11/74" TYPE="DATE" comment="" />
+<AGE id="P5" start="293" end="295" text="67" TYPE="AGE" comment="" />
+<LOCATION id="P6" start="318" end="329" text="South Korea" TYPE="COUNTRY" comment="" />
+<LOCATION id="P7" start="346" end="352" text="Canada" TYPE="COUNTRY" comment="" />
+<LOCATION id="P8" start="1910" end="1925" text="Lakeview Clinic" TYPE="HOSPITAL" comment="" />
+<ID id="P9" start="2128" end="2139" text="OK878/13176" TYPE="IDNUM" comment="" />
+<NAME id="P10" start="2142" end="2156" text="ROXANNE SPEARS" TYPE="DOCTOR" comment="" />
+<NAME id="P11" start="2164" end="2168" text="RS40" TYPE="USERNAME" comment="" />
+<DATE id="P12" start="2199" end="2207" text="11/11/74" TYPE="DATE" comment="" />
+<DATE id="P13" start="2267" end="2275" text="11/12/74" TYPE="DATE" comment="" />
+<NAME id="P14" start="2292" end="2306" text="ROXANNE SPEARS" TYPE="DOCTOR" comment="" />
+<NAME id="P15" start="2314" end="2318" text="RS40" TYPE="USERNAME" comment="" />
+</TAGS>
+</deIdi2b2>

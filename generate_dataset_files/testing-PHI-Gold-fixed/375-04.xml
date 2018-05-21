@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2158-06-08
+
+
+
+
+-------------
+            Parkinson's Clinic             
+Trumbull Memorial Hospital - Corcoran District Hospital    (315) 433-0039 
+
+                                  Office Visit                                  
+
+
+Chief Complaint:  Increased falling
+
+History of Present Illness:  C/O increased falling. His legs buckling
+underneath him. He has occasional dizzyness. Denies angino, or sob. He does not
+use a walker. He arrived today in a wheel chair. They both state he leans
+forward and the he falls.
+
+Medications:  atenolol 25 mg: 1 tab po qd;  pyridoxine 100 mg: 1 tab po qd; 
+Sinemet 25/100: 2 tab po qid, 7:30A, 12, 5, 9P;  Sinemet 25/100: 1.5 tab po
+qid;  glyburide 2.5 mg: 1 tab po qd;  Zocor 10 mg: 0.5 tab po qhs;  gabapentin
+100 mg: 1 tab po bid;  folic acid 1 mg: 1 tab po qd;  Pletal 100 mg: 1 tab po
+bid;  pyridoxine 50 mg: 1 tab po qd;  metformin 850 mg: 1 tab po tid;  ASA 81
+mg: 1 tab po qd;  prazosin 4 mg: 1 tab po qd;  Lisinopril 2.5 mg: 1 tab po qd; 
+Zantac 150 mg: 1 tab po qhs.
+
+Allergies:   NKDA.
+
+Review of Systems:   The following systems reviews were contributory: endocrine
+[pertinent positives:  diabetes mellitus]; cardiovascular [pertinent positives:
+ hypertension, occasional light headed ness; pertinent negatives:  chest pain
+with exertion, chest pain at rest, dyspnea on exertion, peripheral edema];
+gastrointestinal [pertinent positives:  diarrhea] and urinary tract [pertinent
+positives:  nocturia, urgency].     The following systems reviews were
+noncontributory: general; psychological and musculoskeletal.
+
+General Examination
+-------------------------------
+
+6/08/2158 1:31 pm:  In his right arm,  his blood pressure was 100/42 and  his
+pulse was 60 per minute  when lying; his blood pressure was 80/40 and  his
+pulse was 64 rrr per minute  when sitting.  The orthostatic change was
+symptomatic.  He appeared well-nourished and well-groomed.
+6/08/2158 1:36 pm:  In his right arm,  his blood pressure was 90/40 when
+sitting.
+
+Rating Scales:
+UPDRS Subscale III (Motor Examination):  Subscale total score was 22 out of
+108.  This subscale was completed while the patient was ON.
+
+Tremor at rest was rated on a 0 to 4 scale (with 0 being absent): 0 in the
+face, 0 in the right upper extremity, 0 in the left upper extremity, 0 in the
+right lower extremity, 0 in the left lower extremity,.
+
+Action or postural tremor of the hands was rated on a 0 to 4 scale (with 0
+being absent): 0 in the right upper extremity, 0 in the left upper extremity,.
+
+Rigidity was rated on a 0 to 4 scale (with 0 being absent): 1 in the right
+upper extremity, 1 in the left upper extremity, 1 in the right lower extremity,
+1 in the left lower extremity,.
+
+The following movements were rated on a 0 to 4 scale (with 0 being normal): 
+    Finger Taps: 1 in the right upper extremity, 1 in the left upper extremity;
+    Hand movements: 1 in the right upper extremity, 1 in the left upper
+extremity;
+    Rapid alternating hand movements: 1 in the right upper extremity, 1 in the
+left upper extremity;
+    Leg agility: 1 in the right lower extremity, 2 in the left lower extremity.
+
+Each of the following was rated on a 0-4 scale (with 0 being normal):
+    Speech:  1 (slight loss of expression, diction and/or volume);
+    Facial expression:  1 (minimal hypomimia; could be normal 'pokerface');
+    Arising from a chair:  1 (slow or may need more than one attempt);
+    Posture:  1 (not quite erect, slightly stooped posture; could be normal for
+older person);
+    Gait:  2 (walks with difficulty but requires little or no assistance; may
+have some festination, short steps, or propulsion);
+    Postural stability:  1 (retropulsion, but recovers unaided);
+    Body bradykinesia and hypokinesia:  2 (mild degree of slowness & poverty of
+movement that is definitely abnormal; alternatively, some reduced amplitude).
+
+Assessment:  
+  1.  Parkinson's Disease:  Parkinson with decline in strength and endurance.
+It is possible that the added  Sinemet is causing a decrease in his blood
+pressure. I made a referral to Mary Darnell PT here at TMH. In addition Dr
+Edward Nguyen felt a slight reduction of the Sinemet to 1.5 tab QID may help his
+blood pressure with out changing his motor ability. RTC 1 month Dr Edward Nguyen
+and 2 months Genevieve Noland, NP
+
+
+Recommendations:
+
+Medication given:
+  Sinemet 25/100: 2 tab po qid.
+
+
+Medication changes included:
+   Stopped:
+  pyridoxine 50 mg: 1 tab po qd;
+
+  Sinemet 25/100: 1.5 tab po qid.
+
+   Started:
+  6/08/2158 Sinemet 25/100: 1.5 tab po qid.
+
+This patient's history, physical examination, assessment and recommendations
+were completed by  Genevieve Noland, NP. 
+
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2158-06-08" TYPE="DATE" comment="" />
+<LOCATION id="P2" start="89" end="115" text="Trumbull Memorial Hospital" TYPE="HOSPITAL" comment="" />
+<LOCATION id="P3" start="118" end="144" text="Corcoran District Hospital" TYPE="HOSPITAL" comment="" />
+<CONTACT id="P4" start="148" end="162" text="(315) 433-0039" TYPE="PHONE" comment="" />
+<DATE id="P5" start="1632" end="1641" text="6/08/2158" TYPE="DATE" comment="" />
+<DATE id="P6" start="1915" end="1924" text="6/08/2158" TYPE="DATE" comment="" />
+<NAME id="P7" start="4054" end="4066" text="Mary Darnell" TYPE="DOCTOR" comment="" />
+<LOCATION id="P8" start="4078" end="4081" text="TMH" TYPE="HOSPITAL" comment="" />
+<NAME id="P9" start="4098" end="4111" text="Edward Nguyen" TYPE="DOCTOR" comment="" />
+<NAME id="P10" start="4246" end="4259" text="Edward Nguyen" TYPE="DOCTOR" comment="" />
+<NAME id="P11" start="4273" end="4289" text="Genevieve Noland" TYPE="DOCTOR" comment="" />
+<DATE id="P12" start="4490" end="4499" text="6/08/2158" TYPE="DATE" comment="" />
+<NAME id="P13" start="4629" end="4645" text="Genevieve Noland" TYPE="DOCTOR" comment="" />
+</TAGS>
+</deIdi2b2>

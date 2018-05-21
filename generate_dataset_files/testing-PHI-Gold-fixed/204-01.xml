@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2134-11-09
+
+ CCU Resident Transfer Note
+
+Patient Name:  George Quinn
+MR# 7924118
+Date of admission: November 09, 2134
+PCP:  Michael Quakenbush
+Fellow:  Unknown Ivory
+Attending: Inglis
+Code Status: FULL
+
+Contact: Wife, Tammy Quinn 746-313-1881
+
+Please see admit note for details of patients presentation. 
+
+Briefly, Pt is a 59 yo man with the following CV risk factors: smoker, HTN who presents with L sided chest pain and found to have inf STEMI no w s/p baremetal stent x 3 placement awaiting repeat catherization for L Circ PCI.
+
+CCU course by problem:
+
+Cardiac Ischemia     Pt presented with L sided Chest pain, EKG showed 2-3 mm STE in I, aVL and STD in V4-6.  Cardiac catherization showed tight LCx lesion (no intervention), distal RCA thrombotic lesion with 2 distal PLV that were ballooned and 3 bare metal stents:  1 in distal RCA distal (vision 3.5 x15) and prox and distal PLV (minivision).  Post cath he was chest pain free with resolution of his STE.  At cath, he was loaded with plavix at cath and received integrillin.  Post procedure he was B blocked with lopressor (HR in 50   s), given ASA, plavix, and lipitor 80, and started on captopril.   Presently, plan (per cardiology) is for repeat cath for PCI of L circ.   LDL was 84, on 80 mg QD lipitor.  Pt expressed desire to quit smoking     smoking cessation consult pending.
+
+Cardiac Pump     Echo done on 11/08 showed an EF of 54% with no RV or LV dysfunction, no WMA and no valvular abnormalities.  Pt did not demonstrate evidence of volume overload.     he was hemodynamically stable.
+
+Cardiac Rhythym     Pt had junctional rhythym precatherization with no further episodes.  Currently sinus bradycardia     well tolerated.
+
+Medications on admission: 
+
+Motrin 800 tid
+Lisinopril 20 qd
+Vit B12 injections
+
+Medications on Transfer:
+
+Lipitor 80 mg QD
+ASA 325 mg QD
+Plavix 75 mg QD
+Lovenox 30 mg BID
+Lopressor 12.5 TID
+Captopril 6.25 TID
+
+Colace
+Senna
+Nexium
+
+Allergies: NKDA
+ 
+Exam:   Hemodynamically stable, please see today   s progress note for exam.  
+
+
+
+_________________________________
+Eric Donovan, MD PhD PGY 2
+Pager #36472
+
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2134-11-09" TYPE="DATE" comment="" />
+<NAME id="P1" start="72" end="84" text="George Quinn" TYPE="PATIENT" comment="" />
+<ID id="P2" start="89" end="96" text="7924118" TYPE="MEDICALRECORD" comment="" />
+<DATE id="P3" start="116" end="133" text="November 09, 2134" TYPE="DATE" comment="" />
+<NAME id="P4" start="140" end="158" text="Michael Quakenbush" TYPE="DOCTOR" comment="" />
+<NAME id="P5" start="168" end="181" text="Unknown Ivory" TYPE="DOCTOR" comment="" />
+<NAME id="P6" start="193" end="199" text="Inglis" TYPE="DOCTOR" comment="" />
+<NAME id="P7" start="234" end="245" text="Tammy Quinn" TYPE="PATIENT" comment="" />
+<CONTACT id="P8" start="246" end="258" text="746-313-1881" TYPE="PHONE" comment="" />
+<AGE id="P9" start="339" end="341" text="59" TYPE="AGE" comment="" />
+<DATE id="P10" start="1389" end="1394" text="11/08" TYPE="DATE" comment="" />
+<NAME id="P11" start="2076" end="2088" text="Eric Donovan" TYPE="DOCTOR" comment="" />
+<CONTACT id="P12" start="2110" end="2115" text="36472" TYPE="PHONE" comment="" />
+</TAGS>
+</deIdi2b2>

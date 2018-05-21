@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2129-08-20
+
+						July 06, 2129
+
+
+
+
+
+
+
+
+
+Robert Trejo, M.D.
+
+17 Unicorn Way
+
+Suite 353
+
+Chickasha, NC 75156
+
+
+
+						RE:  Tyler Pearson
+
+					                    WMC#727-19-02
+
+
+
+Dear Doctor Trejo:
+
+
+
+I had the pleasure of seeing our mutual patient, Mr. Tyler Pearson, in follow up evaluation in our vascular surgery clinic here today.  As you will remember he recently underwent right carotid endarterectomy with Dacron patch angioplasty after treatment of a severe underlying pneumonia.  He returns today reporting that he is doing well from a neurologic standpoint.  He has had no focal, motor, sensory deficits, and no amaurosis fugax.  A follow up duplex examination performed in our vascular laboratory reveals mild right ICA disease after his carotid endarterectomy with moderate left ICA stenosis which should be followed over time.  
+
+
+
+Assessment and plan:  Overall, I am extremely pleased with Mr. Pearson's outcome given his high risk pulmonary status.  It would be prudent to see him again in follow up evaluation in six months' time with a repeat carotid duplex examination.  I would be happy to assist in the management of this or any of your other patients as you deem necessary in the future.  Thank you again for allowing me to assist in his care.  If I can be of any further assistance, please feel free to contact either myself or one of my partners directly.
+
+
+
+						Sincerely,
+
+
+
+
+
+
+
+						Steven E. Land, M.D.
+
+
+
+SEL:kerns
+
+
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2129-08-20" TYPE="DATE" comment="" />
+<DATE id="P1" start="34" end="47" text="July 06, 2129" TYPE="DATE" comment="" />
+<NAME id="P2" start="57" end="69" text="Robert Trejo" TYPE="DOCTOR" comment="" />
+<LOCATION id="P3" start="77" end="91" text="17 Unicorn Way" TYPE="STREET" comment="" />
+<LOCATION id="P5" start="104" end="113" text="Chickasha" TYPE="CITY" comment="" />
+<LOCATION id="P6" start="115" end="117" text="NC" TYPE="STATE" comment="" />
+<LOCATION id="P7" start="118" end="123" text="75156" TYPE="ZIP" comment="" />
+<NAME id="P8" start="138" end="151" text="Tyler Pearson" TYPE="PATIENT" comment="" />
+<LOCATION id="P9" start="178" end="181" text="WMC" TYPE="HOSPITAL" comment="" />
+<ID id="P10" start="182" end="191" text="727-19-02" TYPE="MEDICALRECORD" comment="" />
+<NAME id="P11" start="207" end="212" text="Trejo" TYPE="DOCTOR" comment="" />
+<NAME id="P12" start="270" end="283" text="Tyler Pearson" TYPE="PATIENT" comment="" />
+<NAME id="P13" start="925" end="932" text="Pearson" TYPE="PATIENT" comment="" />
+<NAME id="P14" start="1429" end="1443" text="Steven E. Land" TYPE="DOCTOR" comment="" />
+<NAME id="P15" start="1453" end="1456" text="SEL" TYPE="DOCTOR" comment="" />
+<NAME id="P16" start="1457" end="1462" text="kerns" TYPE="DOCTOR" comment="" />
+</TAGS>
+</deIdi2b2>

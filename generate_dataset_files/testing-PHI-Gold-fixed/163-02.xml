@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2083-06-29
+
+
+
+Fairview Lakes Regional Medical Center
+
+64 Tara Boulevard
+
+ASB II, 9st Xloor                                         GERALD, MARION
+
+Cedar Hill Lakes, KY 99249                                      48967301
+
+(290) 680-0790                                           06/29/83
+
+
+
+
+
+Xochil Higgins, M.D.
+
+091 Keith Street
+Antioch, KY 71287
+
+
+
+Dear Dr. Higgins,
+
+
+
+Marion Gerald will be seeing you sometime in September for primary
+
+care.  I was seeing her for various rheumatologic issues.  She
+
+comes in today with ongoing pain in the left side of her face. 
+
+Actually, upon exam, she clearly simply has left TMJ.  She has
+
+been told this by ENT and I reinforced to her that that is what
+
+she has and she will go ahead with a dental visit that she had
+
+planned.  However, she has other medical problems which I will
+
+deal with until she sees you.  At her last visit, there was a
+
+question of PMR and she had "25 shots" of steroids but I have not
+
+given her steroids and she has done reasonably well.  However,
+
+she does have a history of a recent mild anemia but has diabetes,
+
+hypertension and hypercholesterolemia and medications include
+
+metformin, verapamil 250 b.i.d., Avapro 150 q.d., Pravachol 20
+
+q.d., Bumex, Bentyl, Prilosec and Allegra.
+
+
+
+Physical examination today reveals left TMJ pain which reproduces
+
+her pain.  She had had no lymphadenopathy or thyromegaly.  HEENT
+
+was otherwise unremarkable.  I obtained blood studies which
+
+revealed a blood sugar of 208, abnormal LFTs with an AST of 62
+
+and ALT of 58, normal ferritin B12 and folic acid, TSH of 8.8
+
+with thyroid antibodies pending, urine microalbumin/creatinine of
+
+14.5 and a CBC which had anemia with a hematocrit of 32.9.  A1c
+
+pending.  A protein electrophoresis is pending and urinalysis did
+
+not reveal proteinuria or sediment.  HBsAG and HCV are pending as
+
+well.
+
+
+
+I will be in touch with her regarding these results.  I was
+
+wondering if you could see her sooner than September because of
+
+these abnormalities outlined.  Thanks for letting me participate
+
+in her care.
+
+
+
+Sincerely yours,
+
+
+
+Dictated By: Miguel Ames
+
+
+
+
+
+
+
+
+
+
+
+______________________________
+
+Miguel Ames, M.D.
+
+
+
+
+
+eScription document:6-0391514 ZB
+
+
+
+
+
+
+
+DD: 06/30/83
+
+DT: 07/01/83
+
+DV: 06/30/83
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2083-06-29" TYPE="DATE" comment="" />
+<LOCATION id="P1" start="30" end="68" text="Fairview Lakes Regional Medical Center" TYPE="HOSPITAL" comment="" />
+<LOCATION id="P2" start="70" end="87" text="64 Tara Boulevard" TYPE="STREET" comment="" />
+<NAME id="P4" start="147" end="161" text="GERALD, MARION" TYPE="PATIENT" comment="" />
+<LOCATION id="P5" start="163" end="179" text="Cedar Hill Lakes" TYPE="CITY" comment="" />
+<LOCATION id="P6" start="181" end="183" text="KY" TYPE="STATE" comment="" />
+<LOCATION id="P7" start="184" end="189" text="99249" TYPE="ZIP" comment="" />
+<ID id="P8" start="227" end="235" text="48967301" TYPE="MEDICALRECORD" comment="" />
+<CONTACT id="P9" start="237" end="251" text="(290) 680-0790" TYPE="PHONE" comment="" />
+<DATE id="P10" start="294" end="302" text="06/29/83" TYPE="DATE" comment="" />
+<NAME id="P11" start="308" end="322" text="Xochil Higgins" TYPE="DOCTOR" comment="" />
+<LOCATION id="P12" start="330" end="346" text="091 Keith Street" TYPE="STREET" comment="" />
+<LOCATION id="P13" start="347" end="354" text="Antioch" TYPE="CITY" comment="" />
+<LOCATION id="P14" start="356" end="358" text="KY" TYPE="STATE" comment="" />
+<LOCATION id="P15" start="359" end="364" text="71287" TYPE="ZIP" comment="" />
+<NAME id="P16" start="377" end="384" text="Higgins" TYPE="DOCTOR" comment="" />
+<NAME id="P17" start="389" end="402" text="Marion Gerald" TYPE="PATIENT" comment="" />
+<DATE id="P18" start="434" end="443" text="September" TYPE="DATE" comment="" />
+<DATE id="P19" start="1977" end="1986" text="September" TYPE="DATE" comment="" />
+<NAME id="P20" start="2114" end="2125" text="Miguel Ames" TYPE="DOCTOR" comment="" />
+<NAME id="P21" start="2169" end="2180" text="Miguel Ames" TYPE="DOCTOR" comment="" />
+<ID id="P22" start="2212" end="2224" text="6-0391514 ZB" TYPE="IDNUM" comment="" />
+<DATE id="P23" start="2236" end="2244" text="06/30/83" TYPE="DATE" comment="" />
+<DATE id="P24" start="2250" end="2258" text="07/01/83" TYPE="DATE" comment="" />
+<DATE id="P25" start="2264" end="2272" text="06/30/83" TYPE="DATE" comment="" />
+</TAGS>
+</deIdi2b2>

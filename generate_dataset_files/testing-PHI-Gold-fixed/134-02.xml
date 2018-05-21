@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2089-05-11
+
+                                                       Patient Name: JARVIS,AMADOR [ MRN: 0907307PCC ]
+
+                                                         Date of Visit: 05/11/2089
+
+
+
+
+
+REASON FOR VISIT:  Mr. Jarvis comes for a regular 6-month followup 
+visit.
+
+HISTORY OF PRESENT ILLNESS:  He has been feeling extremely well without 
+any illness or any unpleasant symptoms.  He is working hard as a production manager, and he will have some time off this spring.  He and his wife are 
+planning a trip to Italy and Greece, and following this, they will spend mostly 
+long weekends in New Mexico.
+
+He has not had shortness of breath, orthopnea, or edema.  The pains in his hips 
+and legs have not been bothering him.  When he tests his blood glucose level, he 
+gets results that range between 170 and 120.  He has not been specifically 
+exercising, but does try to park his car at some distance from shops and stores 
+and walk the intervening distance.  He continues on 1/2 tablet of atenolol 50 mg 
+per day along with 1 Hyzaar tablet per day.  Otherwise, the review of systems is 
+unremarkable.
+
+PHYSICAL EXAMINATION:  He looks cheerful and fit.  Blood pressure in the 
+right arm, sitting 140/86 with regular pulse 64.  Chest is clear to P&A.  Heart 
+sounds are very faint, but appear normal with normal rate and rhythm.  Neck 
+veins are not distended.  Abdomen is nontender.  Extremities have good dorsalis 
+pedis pulses.  Sensation in feet is intact to light touch and vibration.
+
+IMPRESSION:  Very stable with regards to hypertension.  He remains 
+moderately hyperglycemic.  He has an appointment to be followed by the 
+urologist, Dr. Jose Quirk, in the next month for his elevated prostatic-
+specific antigen (the prostate biopsy showed intraepithelial neoplasia   
+considered only a risk factor).
+
+PLAN:  We will check the usual laboratory work, and we will let him know when 
+the results are available.  He should return in 6 months.
+
+
+
+
+Orvell Oliver, M.D.
+
+
+Test Description        Result    Abnormal Flag  Ref. Range     Ref. Units
+
+
+
+Plasma Sodium           140                      135-145        mmol/L
+
+Plasma Potassium        4.7                      3.4-4.8        mmol/L
+
+Plasma Chloride         103                      100-108        mmol/L
+
+Plasma Carbon Dioxide   25.0                     24.0-30.0      mmol/L
+
+Calcium                 9.0                      8.5-10.5       mg/dl
+
+Plasma Urea Nitrogen    39        H              8-25           mg/dl
+
+Plasma Creatinine       2.4       H              0.6-1.5        mg/dl
+
+Plasma Glucose          244       H              70-110         mg/dl
+
+Cholesterol             245                                     mg/dl
+
+
+
+Test Description        Result    Abnormal Flag  Ref. Range     Ref. Units
+
+
+
+Hemoglobin A1C          7.70      H              3.80-6.40      %
+
+Calc Mean Bld Glucose   171                                     mg%
+
+
+
+Mr Jarvis: The glucose when you were here was 244 and the average calclated from the HbA1c is 171; despite your efforts and exercise and diet.  I think it would be wise to start on a low dose of a glucose-lowering medicine, glipizide (Glucotrol).  I would start on 1/2 of a 5 mg pill twice a day and continue checking your blood sugar levels from time to time.  If they stay a bit up, then increase to one whole pill (5 mg) twice a day.  Then we will see how that effects the blood sugar.  I don't think this will interfere with your trip.  Call me in a week to tell me how it is going.
+
+
+
+Best wishes,
+
+O
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2089-05-11" TYPE="DATE" comment="" />
+<NAME id="P1" start="97" end="110" text="JARVIS,AMADOR" TYPE="PATIENT" comment="" />
+<ID id="P2" start="118" end="125" text="0907307" TYPE="MEDICALRECORD" comment="" />
+<LOCATION id="P3" start="125" end="128" text="PCC" TYPE="HOSPITAL" comment="" />
+<DATE id="P4" start="204" end="214" text="05/11/2089" TYPE="DATE" comment="" />
+<NAME id="P5" start="243" end="249" text="Jarvis" TYPE="PATIENT" comment="" />
+<PROFESSION id="P6" start="434" end="452" text="production manager" TYPE="PROFESSION" comment="" />
+<DATE id="P7" start="490" end="496" text="spring" TYPE="DATE" comment="" />
+<LOCATION id="P8" start="539" end="544" text="Italy" TYPE="COUNTRY" comment="" />
+<LOCATION id="P9" start="549" end="555" text="Greece" TYPE="COUNTRY" comment="" />
+<LOCATION id="P10" start="618" end="628" text="New Mexico" TYPE="STATE" comment="" />
+<NAME id="P11" start="1672" end="1682" text="Jose Quirk" TYPE="DOCTOR" comment="" />
+<NAME id="P12" start="1978" end="1991" text="Orvell Oliver" TYPE="DOCTOR" comment="" />
+<NAME id="P13" start="2942" end="2948" text="Jarvis" TYPE="PATIENT" comment="" />
+<NAME id="P14" start="3543" end="3544" text="O" TYPE="DOCTOR" comment="" />
+</TAGS>
+</deIdi2b2>

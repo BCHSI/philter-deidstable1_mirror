@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2074-01-22
+
+                     AASC EMERGENCY DEPT VISIT
+ 
+QUIJANO,BAYLEE   853-62-51-4                    VISIT DATE: 01/22/74
+HISTORY OF PRESENTING COMPLAINT:  The patient is a very pleasant 50 
+year old woman with a history of hypertension, on atenolol, 
+hydrochlorothiazide, triamterene who presents to the Emergency 
+Department complaining of subjective fevers, myalgias and cough. 
+REVIEW OF SYSTEMS:  Negative for headache, neck pain, chest pain, 
+shortness of breath, dyspnea on exertion, abdominal pain, fevers or 
+chills. 
+PHYSICAL EXAMINATION:  Afebrile.  Vital signs are normal. 
+Normocephalic, atraumatic.  Neck:  Supple.  JVD to approximately 7 
+cm.  Chest has bibasilar faint crackles that do not clear with 
+cough.  Abdomen is soft, obese.  Heart:  Regular rate and rhythm. 
+Extremities:  1+ non-pitting edema versus obesity. 
+LABORATORY EVALUATION:  Chest x-ray with bilateral inferior lobe 
+infiltrates with cephalization consistent with mild to moderate 
+CHF, no effusions.  EKG with LVH, no ST elevations, T wave 
+inversions or evidence of acute ischemia. 
+ASSESSMENT/PLAN:  New onset CHF, setting in a probable URI. 
+DISPOSITION (including condition upon discharge):  I will admit to 
+Medical Service for workup of CHF, rule out MI, echocardiogram. 
+The patient is admitted in good condition. 
+___________________________________                    ZW011/0863 
+DAVID ZHU, M.D.  DZ0                                D:01/22/74 
+                                                       T:01/22/74 
+Dictated by:  DAVID ZHU, M.D.  DZ0 
+ ******** Not reviewed by Attending Physician ********
+
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2074-01-22" TYPE="DATE" comment="" />
+<LOCATION id="P1" start="49" end="53" text="AASC" TYPE="HOSPITAL" comment="" />
+<NAME id="P2" start="77" end="91" text="QUIJANO,BAYLEE" TYPE="PATIENT" comment="" />
+<ID id="P3" start="94" end="105" text="853-62-51-4" TYPE="MEDICALRECORD" comment="" />
+<DATE id="P4" start="137" end="145" text="01/22/74" TYPE="DATE" comment="" />
+<AGE id="P5" start="211" end="213" text="50" TYPE="AGE" comment="" />
+<ID id="P6" start="1388" end="1398" text="ZW011/0863" TYPE="IDNUM" comment="" />
+<NAME id="P7" start="1400" end="1409" text="DAVID ZHU" TYPE="DOCTOR" comment="" />
+<NAME id="P8" start="1417" end="1420" text="DZ0" TYPE="USERNAME" comment="" />
+<DATE id="P9" start="1454" end="1462" text="01/22/74" TYPE="DATE" comment="" />
+<DATE id="P10" start="1521" end="1529" text="01/22/74" TYPE="DATE" comment="" />
+<NAME id="P11" start="1545" end="1554" text="DAVID ZHU" TYPE="DOCTOR" comment="" />
+<NAME id="P12" start="1562" end="1565" text="DZ0" TYPE="USERNAME" comment="" />
+</TAGS>
+</deIdi2b2>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2096-02-15
+
+                     ST VINCENT EMERGENCY DEPT VISIT
+ 
+LAU,HELEN M.   544-41-32-1              VISIT DATE: 02/15/96
+PRESENTING COMPLAINT:  Syncope.  History and Physical reviewed.
+Patient examined with the Medicine Resident and medical student.
+HISTORY OF PRESENTING COMPLAINT:  Briefly, this is a 68 year old
+female with a history of coronary artery disease and syncope in the
+past who presents with two syncopal episodes today while in the
+Orthopedic Clinic.  The patient was in the Orthopedic Clinic having
+her trigger finger evaluated and had a digital block done with
+Lidocaine.  As she was walking out of the Clinic, she slumped to
+the chair, hit her head on the table and was out for a few minutes.
+Patient felt a pressure like sensation in the left chest with
+radiation to the neck, some shortness of breath and diaphoresis
+immediately preceding the event.  When patient came to was slightly
+disoriented and approximately five minutes later felt the same
+light headedness and again lost consciousness while sitting in the
+chair.  Patient had no fever, chills or recent illness.
+Past Medical History, Current Medications, Social History,
+Allergies all per Resident's note.
+REVIEW OF SYSTEMS:  Per HPI, otherwise negative.
+PHYSICAL EXAMINATION:  Patient's temperature was 98.2; Pulse 62;
+Blood Pressure 163/89; Respirations 20; Oxygen saturation 97%.
+General: Well developed elderly female in no apparent distress
+sitting on the gurney.  HEENT: Is unremarkable.  Neck: Supple.
+Chest: Is clear.  Heart: Is regular rate and rhythm.  Abdomen: Is
+soft, nontender.  Extremities: No clubbing, cyanosis or edema.
+Neurologic exam: Patient is alert and oriented x three, cranial
+nerves are intact, motor 5/5, sensation intact throughout.
+LABORATORY EVALUATION:  EKG shows normal sinus rhythm with no acute
+changes.  CPK was 98, troponin pending.  Other labs were
+unremarkable.
+FINAL DIAGNOSIS:  Syncopal episode with chest pressure.
+DISPOSITION (including condition upon discharge):  Patient will be
+admitted to the Hospital for rule out MI, Short Stay Unit, for
+further work up and care.
+Condition on admission stable.
+___________________________________                    XD305/7899
+IVAN UHER, M.D.  IU67                                D:02/15/96
+                                                       T:02/15/96
+Dictated by:  IVAN UHER, M.D.  IU67
+ ******** Approved but not reviewed by Attending Provider ********
+
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2096-02-15" TYPE="DATE" comment="" />
+<LOCATION id="P1" start="49" end="59" text="ST VINCENT" TYPE="HOSPITAL" comment="" />
+<NAME id="P2" start="83" end="95" text="LAU,HELEN M." TYPE="PATIENT" comment="" />
+<ID id="P3" start="98" end="109" text="544-41-32-1" TYPE="MEDICALRECORD" comment="" />
+<DATE id="P4" start="135" end="143" text="02/15/96" TYPE="DATE" comment="" />
+<AGE id="P5" start="326" end="328" text="68" TYPE="AGE" comment="" />
+<ID id="P6" start="2200" end="2210" text="XD305/7899" TYPE="IDNUM" comment="" />
+<NAME id="P7" start="2211" end="2220" text="IVAN UHER" TYPE="DOCTOR" comment="" />
+<NAME id="P8" start="2228" end="2232" text="IU67" TYPE="USERNAME" comment="" />
+<DATE id="P9" start="2266" end="2274" text="02/15/96" TYPE="DATE" comment="" />
+<DATE id="P10" start="2332" end="2340" text="02/15/96" TYPE="DATE" comment="" />
+<NAME id="P11" start="2355" end="2364" text="IVAN UHER" TYPE="DOCTOR" comment="" />
+<NAME id="P12" start="2372" end="2376" text="IU67" TYPE="USERNAME" comment="" />
+</TAGS>
+</deIdi2b2>

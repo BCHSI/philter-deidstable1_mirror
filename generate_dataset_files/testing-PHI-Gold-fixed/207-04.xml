@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2082-08-19
+
+EDVISIT^55931516^Orta, Phil^08/19/82^IP, INDIGO JOHN
+
+The patient was interviewed and examined by the resident.  He 
+
+was also interviewed and examined by me.  Resident's note
+
+reviewed by me.  The patient's medical management was discussed
+
+with the resident.
+
+CHIEF COMPLAINT:  Chest pain.
+
+HISTORY OF PRESENT ILLNESS:  The patient is a 59-year-old male
+
+who presents to Mamaroneck Health Emergency Department on
+
+08/19/2082.  He has history of coronary artery disease and status
+
+post cardiac catheterization in 2062, now presents with dyspnea
+
+on exertion worsening during throughout this week.  No PND, no
+
+pedal edema, no fevers or chills, no nausea or vomiting, no chest
+
+pain, no dysuria, no dyspnea at rest, and no pleuritic chest
+
+pain.
+
+PAST MEDICAL HISTORY:  Hypertension and coronary disease; has had
+
+a negative stress test in 2080.
+
+SOCIAL HISTORY:  Past tobacco use, occasional ETOH, no IV drug
+
+abuse.  He is unemployed and lives alone.
+
+SURGICAL HISTORY AND FAMILY HISTORY:  Noncontributory.
+
+REVIEW OF SYSTEMS, MEDICATIONS, AND ALLERGIES:  As noted in the
+
+patient's chart.
+
+PHYSICAL EXAMINATION:  The patient is awake and alert, in no
+
+acute distress.  Temperature 97, pulse 63, respiratory rate 20,
+
+blood pressure 134/64, and O2 sat 98% on room air.  HEENT: 
+
+Atraumatic.  ENT, normal inspection.  Pharynx is normal.  Neck is
+
+supple and nontender.  Respiratory exam:  Chest wall is
+
+nontender, normal breath sounds bilaterally.  Cardiac exam: 
+
+Regular rate and rhythm, no murmur, normal pulses throughout. 
+
+Abdomen is soft and nontender.  Skin is warm, dry, and intact. 
+
+No lesions or rashes.  Extremities are nontender.  No clubbing,
+
+cyanosis, or edema.  Neurologic exam: Cranial nerves II-XII
+
+intact bilaterally.  No motor or sensory deficits.  The patient
+
+has a foot drop on the left.
+
+LABORATORY DATA:  Significant for white count of 6.3, hematocrit
+
+39.9, sodium 136, potassium 4.9, chloride 102, bicarbonate 26,
+
+BUN 17, creatinine 1.1, and glucose is 73.  First troponin is
+
+less than assay.  The patient has a CK of 1028; has persistent
+
+elevated high CKs.  UA is negative.  Urine tox negative.  EKG
+
+shows first-degree AV block, sinus rhythm, otherwise no acute
+
+ST-T wave changes.  Chest x-ray is negative.
+
+PRIMARY DIAGNOSIS:  Dyspnea on exertion, concern for this being a
+
+ ******** Not reviewed by Attending Physician ********
+
+coronary artery disease history.
+
+DISPOSITION:  The patient is being admitted to ED Observation for
+
+rule out MI by enzymes and for exercise stress test.  I reviewed
+
+and confirmed the findings with Dr. Irizarry who is the resident
+
+taking care of the patient with me.
+
+______________________________
+
+IP, INDIGO JOHN M.D.
+
+D: 08/19/82
+
+T: 08/19/82
+
+Dictated By: IP, INDIGO JOHN
+
+eScription document:2-6098361 BFFocus
+
+
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2082-08-19" TYPE="DATE" comment="" />
+<ID id="P1" start="36" end="44" text="55931516" TYPE="MEDICALRECORD" comment="" />
+<NAME id="P2" start="45" end="55" text="Orta, Phil" TYPE="PATIENT" comment="" />
+<DATE id="P3" start="56" end="64" text="08/19/82" TYPE="DATE" comment="" />
+<NAME id="P4" start="65" end="80" text="IP, INDIGO JOHN" TYPE="DOCTOR" comment="" />
+<AGE id="P5" start="367" end="369" text="59" TYPE="AGE" comment="" />
+<LOCATION id="P6" start="401" end="418" text="Mamaroneck Health" TYPE="HOSPITAL" comment="" />
+<DATE id="P7" start="444" end="454" text="08/19/2082" TYPE="DATE" comment="" />
+<DATE id="P8" start="543" end="547" text="2062" TYPE="DATE" comment="" />
+<DATE id="P9" start="869" end="873" text="2080" TYPE="DATE" comment="" />
+<NAME id="P10" start="2601" end="2609" text="Irizarry" TYPE="DOCTOR" comment="" />
+<NAME id="P11" start="2700" end="2715" text="IP, INDIGO JOHN" TYPE="DOCTOR" comment="" />
+<DATE id="P12" start="2725" end="2733" text="08/19/82" TYPE="DATE" comment="" />
+<DATE id="P13" start="2738" end="2746" text="08/19/82" TYPE="DATE" comment="" />
+<NAME id="P14" start="2761" end="2776" text="IP, INDIGO JOHN" TYPE="DOCTOR" comment="" />
+<ID id="P15" start="2798" end="2807" text="2-6098361" TYPE="IDNUM" comment="" />
+</TAGS>
+</deIdi2b2>

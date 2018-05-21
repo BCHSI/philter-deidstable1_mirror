@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2094-10-26
+
+
+Saint John Valley Health Center
+157 Peterborough Place                                        KIM JR, DOUGLAS
+Sulphur, AR 26822                            20163512
+(426) 819-5183                                            10/26/94
+
+
+CHIEF COMPLAINT:  Followup of atrial fibrillation and recent lab
+results.
+
+HISTORY OF PRESENT ILLNESS:  A 54 year old male with history of
+paroxysmal atrial fibrillation, borderline diabetes, and
+borderline hypertension who presents back to clinic for followup.
+ He reports that he has been feeling generally well.  He reports
+that he feels like he is in sinus today.  He denies any chest
+pain, shortness of breath, palpitations, or edema.  I reviewed
+with him his lab results from 10/14/2094, which were remarkable
+for a total cholesterol of 242, HDL of 33, triglyceride level of
+549, hemoglobin A1c of 9.8, and INR of 1.0.  The patient denies
+any symptoms of hyperglycemia or hypoglycemia.
+
+MEDICATIONS:  None.
+
+ALLERGIES:  Penicillin.
+
+SOCIAL HISTORY:  The patient is smoking 2 packs per day.
+
+PHYSICAL EXAMINATION:  Vital signs:  Weight 193 pounds, blood
+pressure 140/98, pulse 92 and regular.  Well-developed,
+well-nourished male in no acute distress.  HEENT:  Anicteric
+sclerae, oropharynx clear.  Neck:  Supple, no JVD.  Lungs:  Clear
+to auscultation bilaterally.  Cardiovascular exam:  Regular rate
+and rhythm, S1, S2 normal, no murmur.  Abdomen:  Soft, nontender,
+nondistended, normal bowel sounds.  Extremities:  No cyanosis,
+clubbing, or edema.
+
+ASSESSMENT AND PLAN
+1.  Paroxysmal atrial fibrillation.  EKG done today showing
+normal sinus rhythm at 96 beats per minute with normal intervals,
+flat T-waves in leads III, aVF, V5, and V6.  No ST changes.  Will
+refer to cardiology regarding whether to anticoagulate him.  Will
+treat today with Ecotrin 325 mg p.o. q.d.
+2.  History of borderline diabetes.  Last hemoglobin A1c was 9.8.
+ Will treat with Glucophage 500 mg p.o. q.a.m.  Dietary
+recommendations given.  We will schedule for a nursing educator
+and nutritionist appointment.  Home fingerstick monitoring as
+directed.
+3.  Hypertension.  Elevated diastolic blood pressure.  Will treat
+with lisinopril 10 mg p.o. day, #30 tablets dispensed with 2
+refills.  Will follow.
+4.  Smoking cessation counseling given.  Will follow.
+
+
+______________________________
+QUEST J. QUEENAN, M.D.
+
+eScription document:2-320209
+
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2094-10-26" TYPE="DATE" comment="" />
+<LOCATION id="P1" start="29" end="60" text="Saint John Valley Health Center" TYPE="HOSPITAL" comment="" />
+<LOCATION id="P2" start="61" end="83" text="157 Peterborough Place" TYPE="STREET" comment="" />
+<NAME id="P3" start="123" end="138" text="KIM JR, DOUGLAS" TYPE="PATIENT" comment="" />
+<LOCATION id="P4" start="139" end="146" text="Sulphur" TYPE="CITY" comment="" />
+<LOCATION id="P5" start="148" end="150" text="AR" TYPE="STATE" comment="" />
+<LOCATION id="P6" start="151" end="156" text="26822" TYPE="ZIP" comment="" />
+<ID id="P7" start="184" end="192" text="20163512" TYPE="MEDICALRECORD" comment="" />
+<CONTACT id="P8" start="193" end="207" text="(426) 819-5183" TYPE="PHONE" comment="" />
+<DATE id="P9" start="251" end="259" text="10/26/94" TYPE="DATE" comment="" />
+<AGE id="P10" start="368" end="370" text="54" TYPE="AGE" comment="" />
+<DATE id="P11" start="744" end="754" text="10/14/2094" TYPE="DATE" comment="" />
+<NAME id="P12" start="2334" end="2350" text="QUEST J. QUEENAN" TYPE="DOCTOR" comment="" />
+<ID id="P13" start="2378" end="2386" text="2-320209" TYPE="IDNUM" comment="" />
+</TAGS>
+</deIdi2b2>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2078-05-08
+
+
+ED Surgery Consult                 Date/Time: 5/8/78   4:56PM
+****************************************************
+Name:  Hendricks, Hannah
+MRN# 75322175
+Resident: Xavier G. England, MD, EdM
+Attending: Dr. Hunter Ishikawa
+****************************************************
+CC: Bleeding from groin wound
+HPI: Ms. Hendricks is a 52yoF with a history of PVD and non-healing wounds of the LLE s/p redo left femoral-tibial bypass with arm vein on 5/3/78 who was discharged to home yesterday and now returns after she noted a gush of blood from her left groin wound while coughing earlier today.  She was doing well until this morning when she coughed and immediately noted that her left pant leg was soaked with blood from the left groin down the left leg.  When she took off her pants there was no active bleeding from the wound and she denies any light-headedness or dizziness.  There has been no further bleeding from the wound and she is otherwise without complaints.  
+PMHx: PVD, HTN, Hypercholesterolemia
+PSHx: Right fem-pop bypass 2066, Left fem-dp bypass 2066, redo left fem-pt bypass 5/3/78.
+Meds: Tylenol, ASA, Vitamin C, Atenolol, Lipitor, Colace, Folic Acid, Lactulose, Milk of Magnesia, Oxycodone, Valsartan
+All: Percocet-&gt;nausea
+SHx: Denies any recent etoh/ivda/tob
+
+
+PE: 98.7 78    134/72     12      100% on RA
+General: No distress
+HEENT: NCAT
+Chest: CTAB
+Heart: RRR, no mrg
+Abdomen:  soft, NT/NE
+Extremities: RUE wound healing well without erythema/warmth/tenderness.  Left groin wound with small mobile collection at cephalad portion of wound.  No obvious bleeding.  
+Pulses: Biphasic dp/pt on LLE
+
+
+Labs:   CBC: Pending
+            
+Imaging: 
+LLE U/S at bedside: 3x2 cm simple fluid collection at cephalad portion of groin wound.
+
+
+Assessment/Plan: 
+- 52yoF s/p recent redo left fem-tib bypass with right arm vein with single episode of bleeding from left groin wound.  This likely represents extrusion of a postoperative hematoma.  There is currently no evidence of active bleeding from the wound.  A CBC should be obtained in the ED to ensure that her hct is stable and she can then d/c home.  She will follow up with Dr. Ishikawa at her scheduled postop visit.  Should the bleeding persist or return she should return to the ER or the clinic for a vascular U/S to assess for a pseudoaneurysm or AV fistula. 
+
+
+D/W Dr. Casey Iacono (Surgery Fellow), who agrees with assessment and plan.
+
+
+Thanks,
+
+
+
+
+Xavier G. England, MD, EdM      #15725
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2078-05-08" TYPE="DATE" comment="" />
+<DATE id="P1" start="75" end="81" text="5/8/78" TYPE="DATE" comment="" />
+<NAME id="P2" start="151" end="168" text="Hendricks, Hannah" TYPE="PATIENT" comment="" />
+<ID id="P3" start="174" end="182" text="75322175" TYPE="MEDICALRECORD" comment="" />
+<NAME id="P4" start="193" end="210" text="Xavier G. England" TYPE="DOCTOR" comment="" />
+<NAME id="P5" start="235" end="250" text="Hunter Ishikawa" TYPE="DOCTOR" comment="" />
+<NAME id="P6" start="343" end="352" text="Hendricks" TYPE="PATIENT" comment="" />
+<AGE id="P7" start="358" end="360" text="52" TYPE="AGE" comment="" />
+<DATE id="P8" start="473" end="479" text="5/3/78" TYPE="DATE" comment="" />
+<DATE id="P9" start="1064" end="1068" text="2066" TYPE="DATE" comment="" />
+<DATE id="P10" start="1089" end="1093" text="2066" TYPE="DATE" comment="" />
+<DATE id="P11" start="1119" end="1125" text="5/3/78" TYPE="DATE" comment="" />
+<AGE id="P12" start="1800" end="1802" text="52" TYPE="AGE" comment="" />
+<NAME id="P13" start="2172" end="2180" text="Ishikawa" TYPE="DOCTOR" comment="" />
+<NAME id="P14" start="2369" end="2381" text="Casey Iacono" TYPE="DOCTOR" comment="" />
+<NAME id="P16" start="2451" end="2468" text="Xavier G. England" TYPE="DOCTOR" comment="" />
+<CONTACT id="P17" start="2484" end="2489" text="15725" TYPE="PHONE" comment="" />
+</TAGS>
+</deIdi2b2>

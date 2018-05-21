@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2062-10-30
+
+54 yo male from Kazakhstan here for f/u of GI mucor.  Briefly, he was admitted 6/20/62 with DKA and MSSA bacteremia.  He was found to have perirectal abscess s/p CT-guided drains as well as L hip infected prosthesis and abscess s/p removal and drainage in OR on 7/07 and by IR 7/22, both sites positive for MSSA.  Hospital course c/b GIB and was found to have free air with perforated duodenum s/p ex-lap 6/22, gastrectomy with partial large bowel resection, splenectomy and primary anastamosis, with path positive for mucormycosis without clean margins.  He also had VRE/klebsiella LUQ abscess s/p IR drainage.  
+
+He was initially treated with nafcillin and ambisome, but developed maculopapular rash on chest and arms thought to be secondary to nafcillin.  So he was switched to vanco/ambisome/linezolid/meropenem/amikacin for LUQ abscess.  After 6 weeks of high-dose ambisome, he was taken back to OR on 7/31 for re-exploration and was found to have some more necrosis around his esophageal-jejunostomy site that surgeons "scooped out" as much as they could, but were not able to get clean margins because of difficult anatomic restrictions. 
+Given the inability to completely en-bloc resect Mr. Ethridge's GI mucor despite a long-trial of Ambisome, he was started on an investigational drug, posaconazole, provided by Emcor on a compassionate use basis.  This has had 50% success of curing mucor as salvage therapy in small trials.  He was started on this drug on 8/28/62 and has tolerated it well despite some nausea, diarrhea.  
+
+He has been at EDUCARE-FARGO reports increase in strength and improved ability to bear weight on his hip.  He walks with a walker.  He had repeat CT abd/pelvix 10/26 which showed no intraabdominal collection and stable L hip collection.  He had abd drains removed 3 weeks ago but continues to have L hip drain, without much output.  He was started on TPN 1 week ago due to maltrition, despite po intake.  He has been trying to eat, but reports some nausea and diarrhea, especially after he eats and since starting posaconazole.  He reports good glycemic control.  He denies fevers/abd pain/nightsweats/chills/visual changes/HA/melena/cough/SOB.
+
+PMHx:
+
+DM
+
+GI mucor
+
+s/p total gastrectomy, esophagojejunostomy, distal pancreatectomy, transverse colectomy 6/62
+
+s/p splenectomy
+
+s/p L THR 3 years ago
+
+L hip MSSA abscess s/p resection of arthroplasty and drainage
+
+perirectal abscess
+
+VRE/klebsiella LUQ (subdiaphragmatic and esophageal hiatal) abscess
+
+CRI
+
+HTN
+
+anemia
+
+neg HIV 7/62
+
+
+
+
+
+Meds:
+
+posaconazole 200 po QID (liquid)
+
+amlodipine 5 qd
+
+metoprolol 50 tid
+
+clonidine 0.3 mg qweek
+
+niferex
+
+epogen 30,000U SQ qweek
+
+insulin CZI
+
+
+
+All: nafcillin-- rash
+
+
+
+SH: immigrated to UKRAINE 10 years ago, no relatives here, all in Kazakhstan, single, lived in Alva previously
+
+
+
+Habits: no EtOH/cig/IVDU
+
+
+
+FHx: NC
+
+
+
+PE: 96.3, 60, 102/60, 16
+
+HEENT: o/p clear, no cervical LAD, neck FROM, mild icterus in sclera
+
+Lungs: CTA
+
+CV: rr, s1 and s2, no m/r/g
+
+Abd: soft, NT/ND, +BS, abd incisions well-healed
+
+Ext: L hip drain in place, limited ROM on L hip but improved
+
+Skin: no rash
+
+
+
+EKG: QT 363, no acute changes
+
+
+
+Imp:
+
+54 yo male with DM s/p long hospital course for DKA, multiple infections in hip and abd, and GI mucor s/p resection x2, but with residual disease.  Currently on posaconazole and tolerating well, but does have significant nausea, somewhat controlled with zofran.  Diarrhea can be a component posaconazole side effect, or due to dumping syndrome.
+
+
+
+Plan:
+
+1) continue posaconazole
+
+2) need to have ortho f/u to evaluate L hip collection
+
+3) RTC in 1 month 12/04/62 at 10am to f/u for posaconazole.  Will need EKG again at EDUCARE-FARGO before transfer here.
+
+
+
+Mr. Ethridge seen and examined with Dr. Roberts.  He is very slowly improving in terms of strength, no doubt in part due to nocturnal TPN.  Hard to tease out the cause of his nausea, although anatomic reasons are as likely as medication side effects.  On balance, if his labs are ok, I'd favor continuing the posaconazole given most recent OR findings.  ECG without QTc prolongation.  Abdomen is bening.  Left hip still sore, but more and more stable.  
+
+
+
+Brandon Gaines, MD
+
+
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2062-10-30" TYPE="DATE" comment="" />
+<AGE id="P1" start="28" end="30" text="54" TYPE="AGE" comment="" />
+<LOCATION id="P2" start="44" end="54" text="Kazakhstan" TYPE="COUNTRY" comment="" />
+<DATE id="P3" start="107" end="114" text="6/20/62" TYPE="DATE" comment="" />
+<DATE id="P4" start="290" end="294" text="7/07" TYPE="DATE" comment="" />
+<DATE id="P5" start="305" end="309" text="7/22" TYPE="DATE" comment="" />
+<DATE id="P6" start="433" end="437" text="6/22" TYPE="DATE" comment="" />
+<DATE id="P7" start="935" end="939" text="7/31" TYPE="DATE" comment="" />
+<NAME id="P8" start="1227" end="1235" text="Ethridge" TYPE="PATIENT" comment="" />
+<LOCATION id="P9" start="1350" end="1355" text="Emcor" TYPE="ORGANIZATION" comment="" />
+<DATE id="P10" start="1496" end="1503" text="8/28/62" TYPE="DATE" comment="" />
+<LOCATION id="P11" start="1579" end="1592" text="EDUCARE-FARGO" TYPE="HOSPITAL" comment="" />
+<DATE id="P12" start="1724" end="1729" text="10/26" TYPE="DATE" comment="" />
+<DATE id="P13" start="2319" end="2323" text="6/62" TYPE="DATE" comment="" />
+<DATE id="P14" start="2543" end="2547" text="7/62" TYPE="DATE" comment="" />
+<LOCATION id="P15" start="2746" end="2753" text="UKRAINE" TYPE="COUNTRY" comment="" />
+<LOCATION id="P16" start="2794" end="2804" text="Kazakhstan" TYPE="COUNTRY" comment="" />
+<LOCATION id="P17" start="2823" end="2827" text="Alva" TYPE="CITY" comment="" />
+<AGE id="P18" start="3186" end="3188" text="54" TYPE="AGE" comment="" />
+<DATE id="P19" start="3641" end="3649" text="12/04/62" TYPE="DATE" comment="" />
+<LOCATION id="P20" start="3707" end="3720" text="EDUCARE-FARGO" TYPE="HOSPITAL" comment="" />
+<NAME id="P21" start="3750" end="3758" text="Ethridge" TYPE="PATIENT" comment="" />
+<NAME id="P22" start="3786" end="3793" text="Roberts" TYPE="DOCTOR" comment="" />
+<NAME id="P23" start="4203" end="4217" text="Brandon Gaines" TYPE="DOCTOR" comment="" />
+</TAGS>
+</deIdi2b2>

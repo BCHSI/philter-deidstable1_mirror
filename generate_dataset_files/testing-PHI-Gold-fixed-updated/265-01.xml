@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='utf8'?>
+<deIdi2b2>
+<TEXT>
+
+
+Record date: 2067-06-18
+                     JELLICO EMERGENCY DEPT VISIT
+ 
+FOY,KEONTE H.   732-35-79-0                   VISIT DATE: 06/18/67
+PRESENTING COMPLAINT and HISTORY OF PRESENTING COMPLAINT:  This 
+patient was evaluated in conjunction with a resident.  Briefly, the 
+history is as follows:  This patient is a 54-year-old black male 
+with a history of insulin-dependent diabetes mellitus, who presents 
+with acute, severe substernal chest pain.  This pain began 
+approximately five hours prior to presentation, but accelerated 
+within the previous one to two hours.  It is accompanied by 
+diaphoresis, but not by shortness of breath or nausea.  The patient 
+does have a history of prior CVAs, but no history of previously 
+documented cardiac disease. 
+PHYSICAL EXAMINATION:  On physical examination, the patient is in 
+acute, severe distress.  He is diaphoretic and somewhat pale.  The 
+vital signs are as recorded in the Nurses' Notes but are stable 
+initially.  The HEENT examination shows the sclerae to be 
+anicteric.  The oropharynx is somewhat dry.  The neck is supple, 
+without venous distention.  The breath sounds are clear 
+bilaterally.  The heart shows a regular rate and rhythm with 
+somewhat distant tones, without discrete murmur.  The abdomen is 
+slightly obese and soft throughout, without tenderness.  The 
+extremities show no discoloration or edema. 
+LABORATORY EVALUATION:  The electrocardiogram shows an acute 
+anterior myocardial infarction.  Other laboratory studies are 
+pending at this time.  A chest x-ray has been obtained, though it 
+has not been processed at the time of this dictation. 
+THERAPY RENDERED/COURSE IN ED:  The patient was treated with 
+aspirin and nitroglycerin en route.  He was started on a 
+nitroglycerin drip, which was incrementally increased to 80 
+micrograms per minute.  He was given morphine sulfate in 2 mg 
+increments to a total of 10 mg.  He was given 5000 units of 
+intravenous heparin.  He was given 2.5 mg of intravenous Lopressor. 
+The Cardiology Service is here with the patient and he is being 
+taken to the Cardiac Catheterization Laboratory for immediate 
+angioplasty. 
+FINAL DIAGNOSIS:  Myocardial infarction. 
+DISPOSITION (including condition upon discharge):  As above. 
+Please see the handwritten record for further details. 
+___________________________________                    HA304/1577 
+EDGAR BELTRAN, M.D.  EB83                                D:06/18/67 
+                                                       T:06/18/67 
+Dictated by:  EDGAR BELTRAN, M.D.  EB83 
+ ******** Not reviewed by Attending Physician ********
+
+
+
+
+</TEXT>
+<TAGS>
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2067-06-18" />
+<LOCATION TYPE="HOSPITAL" comment="" end="55" id="P1" start="48" text="JELLICO" />
+<NAME TYPE="PATIENT" comment="" end="92" id="P2" start="79" text="FOY,KEONTE H." />
+<ID TYPE="MEDICALRECORD" comment="" end="106" id="P3" start="95" text="732-35-79-0" />
+<DATE TYPE="DATE" comment="" end="145" id="P4" start="137" text="06/18/67" />
+<ID TYPE="IDNUM" comment="" end="2369" id="P6" start="2359" text="HA304/1577" />
+<NAME TYPE="DOCTOR" comment="" end="2384" id="P7" start="2371" text="EDGAR BELTRAN" />
+<NAME TYPE="USERNAME" comment="" end="2396" id="P8" start="2392" text="EB83" />
+<DATE TYPE="DATE" comment="" end="2438" id="P9" start="2430" text="06/18/67" />
+<DATE TYPE="DATE" comment="" end="2505" id="P10" start="2497" text="06/18/67" />
+<NAME TYPE="DOCTOR" comment="" end="2534" id="P11" start="2521" text="EDGAR BELTRAN" />
+<NAME TYPE="USERNAME" comment="" end="2546" id="P12" start="2542" text="EB83" />
+</TAGS>
+</deIdi2b2>

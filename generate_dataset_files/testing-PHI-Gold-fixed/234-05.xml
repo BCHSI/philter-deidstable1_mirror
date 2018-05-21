@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2077-03-31
+
+EDVISIT^80780896^SERGIO STEVEN, FRANCESCA^03/31/77^DELACRUZ, ARMANDO
+
+I evaluated this patient independently and concur with findings
+
+as noted on the medical record, supervised the care as provided
+
+by the residents in the Emergency Department.
+
+CHIEF COMPLAINT:  In brief, this is a 74-year-old female with
+
+complaint of worsening renal function.
+
+HISTORY OF PRESENT ILLNESS:  This patient is a 74-year-old female
+
+with a history of hypertension, diabetes of type 2, and diabetic
+
+neuropathy, followed by her primary care physician, Dr. Nettles
+
+and has had worsening a diabetic control and poor p.o. intake. 
+
+The patient has had switched recently captopril dosing and also
+
+insulin dosing per Dr. Nettles. She has been eating and drinking
+
+well and has no specific complaints of fever, chills, nausea,
+
+vomiting, diarrhea, or additional symptoms.
+
+PAST MEDICAL HISTORY:  Hypertension, diabetes,
+
+hypercholesterolemia, and diabetic neuropathy.
+
+SOCIAL HISTORY:  Negative for drugs, alcohol, or tobacco.
+
+FAMILY HISTORY:  Noncontributory.
+
+PAST SURGICAL HISTORY:  CABG in 09/2074 and pacemaker placement.
+
+REVIEW OF SYSTEMS:  Significant for complaint of worsening renal
+
+function but no additional symptoms.  All other systems are
+
+reviewed and are negative as noted on the medical record.
+
+MEDICATIONS:  Numerous.  Please see the medical record.
+
+ALLERGIES:  None.
+
+PHYSICAL EXAMINATION:  Awake, alert, and oriented female in no
+
+apparent distress.  Vital signs are as noted in the medical
+
+record.  I examined this patient, and agree with physical exam
+
+findings as noted on the medical record.  Please refer to the
+
+chart.
+
+ASSESSMENT AND MEDICAL DECISION MAKING:  This is a 74-year-old
+
+female with worsening prerenal azotemia; probably dehydration,
+
+and worsening renal function and noted to have BUN in the 50 and
+
+creatinine of 2.4.
+
+PLAN:  We discussed this case with her physician, Dr. Nettles who
+
+suggest Benson admission, discuss this with Benson.  They
+
+will agree to accept the patient for IV hydration and following
+
+the renal function.
+
+PRIMARY DIAGNOSIS:  Dehydration.
+
+SECONDARY DIAGNOSIS:  Acute renal insufficiency.
+
+THIRD DIAGNOSIS:  Diabetes mellitus.
+
+______________________________
+
+DELACRUZ, ARMANDO M.D.
+
+D: 03/31/77
+
+T: 03/31/77
+
+Dictated By: DELACRUZ, ARMANDO
+
+eScription document:6-0689198 BFFocus
+
+ ******** Not reviewed by Attending Physician ********
+
+
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2077-03-31" TYPE="DATE" comment="" />
+<ID id="P1" start="36" end="44" text="80780896" TYPE="MEDICALRECORD" comment="" />
+<NAME id="P2" start="45" end="69" text="SERGIO STEVEN, FRANCESCA" TYPE="PATIENT" comment="" />
+<DATE id="P3" start="70" end="78" text="03/31/77" TYPE="DATE" comment="" />
+<NAME id="P4" start="79" end="96" text="DELACRUZ, ARMANDO" TYPE="DOCTOR" comment="" />
+<AGE id="P5" start="313" end="315" text="74" TYPE="AGE" comment="" />
+<AGE id="P6" start="425" end="427" text="74" TYPE="AGE" comment="" />
+<NAME id="P7" start="567" end="574" text="Nettles" TYPE="DOCTOR" comment="" />
+<NAME id="P8" start="729" end="736" text="Nettles" TYPE="DOCTOR" comment="" />
+<DATE id="P9" start="1102" end="1109" text="09/2074" TYPE="DATE" comment="" />
+<AGE id="P10" start="1709" end="1711" text="74" TYPE="AGE" comment="" />
+<NAME id="P11" start="1926" end="1933" text="Nettles" TYPE="DOCTOR" comment="" />
+<LOCATION id="P12" start="1947" end="1953" text="Benson" TYPE="HOSPITAL" comment="" />
+<LOCATION id="P13" start="1983" end="1989" text="Benson" TYPE="HOSPITAL" comment="" />
+<NAME id="P14" start="2238" end="2255" text="DELACRUZ, ARMANDO" TYPE="DOCTOR" comment="" />
+<DATE id="P15" start="2265" end="2273" text="03/31/77" TYPE="DATE" comment="" />
+<DATE id="P16" start="2278" end="2286" text="03/31/77" TYPE="DATE" comment="" />
+<NAME id="P17" start="2301" end="2318" text="DELACRUZ, ARMANDO" TYPE="DOCTOR" comment="" />
+<ID id="P18" start="2340" end="2349" text="6-0689198" TYPE="IDNUM" comment="" />
+</TAGS>
+</deIdi2b2>

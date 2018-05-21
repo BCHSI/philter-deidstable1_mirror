@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2091-03-30
+
+
+ORLH
+58 Kessler Farm Drive                                        NICHOLAS-XAVIER, FRED
+White Hall, MN 76715                                      65856594
+(959) 149-6104                                           03/30/91
+
+
+CHIEF COMPLAINT:  Mr. Nicholas Xavier is a 73-year-old man who
+returns to the Orlando Regional today for a quick follow up on his
+left foot ulceration.
+
+CURRENT MEDICATIONS:  Glucovance 5/500 mg b.i.d. and Actos 30 mg
+q.d.
+
+HISTORY OF PRESENT ILLNESS:  The ulceration has not significantly
+changed, but there are no new signs of infection.  He has been
+taking Keflex 500 mg t.i.d. for the last seven days.  He denies
+fever and his blood glucose levels have started to improve a
+little bit.  His fingerstick blood sugar today is 145.
+
+He has an appointment in Vascular Surgery in two days.  I have
+asked him that it is extremely important for him to keep that
+appointment for the evaluation of this ulceration and his
+vascular status.  I have also reviewed with him that he may need
+to be hospitalized if a vascular procedure is recommended.
+
+Unfortunately, he does not have an appointment with Podiatry
+until the end of this month.
+
+ASSESSMENT AND PLAN:  He will be seen by me again in a few days
+after he is seen in Vascular Surgery.  In the meantime, he will
+continue with all his medications.  I have given him a
+prescription for Zocor 20 mg q.d. since the pharmacy could not
+give him Lipitor that I had prescribed.
+
+
+______________________________
+Billy Vanpelt, M.D.
+
+eScription document:3-9348364
+DD: 03/30/91
+DT: 03/31/91
+DV: 03/30/91
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2091-03-30" TYPE="DATE" comment="" />
+<LOCATION id="P1" start="29" end="33" text="ORLH" TYPE="HOSPITAL" comment="" />
+<LOCATION id="P2" start="34" end="55" text="58 Kessler Farm Drive" TYPE="STREET" comment="" />
+<NAME id="P3" start="95" end="116" text="NICHOLAS-XAVIER, FRED" TYPE="PATIENT" comment="" />
+<LOCATION id="P4" start="117" end="127" text="White Hall" TYPE="CITY" comment="" />
+<LOCATION id="P5" start="129" end="131" text="MN" TYPE="STATE" comment="" />
+<LOCATION id="P6" start="132" end="137" text="76715" TYPE="ZIP" comment="" />
+<ID id="P7" start="175" end="183" text="65856594" TYPE="MEDICALRECORD" comment="" />
+<CONTACT id="P8" start="184" end="198" text="(959) 149-6104" TYPE="PHONE" comment="" />
+<DATE id="P9" start="241" end="249" text="03/30/91" TYPE="DATE" comment="" />
+<NAME id="P10" start="274" end="289" text="Nicholas Xavier" TYPE="PATIENT" comment="" />
+<AGE id="P11" start="295" end="297" text="73" TYPE="AGE" comment="" />
+<LOCATION id="P12" start="330" end="346" text="Orlando Regional" TYPE="HOSPITAL" comment="" />
+<NAME id="P13" start="1504" end="1517" text="Billy Vanpelt" TYPE="DOCTOR" comment="" />
+<ID id="P14" start="1545" end="1554" text="3-9348364" TYPE="IDNUM" comment="" />
+<DATE id="P15" start="1559" end="1567" text="03/30/91" TYPE="DATE" comment="" />
+<DATE id="P16" start="1572" end="1580" text="03/31/91" TYPE="DATE" comment="" />
+<DATE id="P17" start="1585" end="1593" text="03/30/91" TYPE="DATE" comment="" />
+</TAGS>
+</deIdi2b2>

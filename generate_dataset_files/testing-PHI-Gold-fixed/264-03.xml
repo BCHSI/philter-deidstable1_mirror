@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2090-07-15
+
+EDVISIT^24152563^Pierre, Eden^07/15/90^MCCARTY, QUINTON
+
+Seen with Dr. Feliciano.  The past medical history, social
+
+history, family history, review of systems, medications, and
+
+allergies were reviewed and confirmed.  Please see resident's
+
+note for further details.  I had interviewed and examined the
+
+patient myself.
+
+HISTORY OF PRESENT ILLNESS:  Briefly, this is a 75-year-old
+
+female with a known history of CAD, status post MI, EF of 10 to
+
+15% with an AICD placement.  Also, history of CHF and
+
+hyperparathyroidism.  She presents with complaints of shortness
+
+of breath for the past 3 hours with some epigastric discomfort. 
+
+She denies fever, chills, or cough.  She has had some abdominal
+
+and chest discomfort.  She may be from 1 year ago showing no
+
+reversible ischemia but a previous catheterization showing no
+
+disease.
+
+SOCIAL HISTORY:  She lives with her family.  She is a former
+
+smoker.
+
+REVIEW OF SYSTEMS:  Otherwise, negative.
+
+MEDICATIONS:  She takes albuterol, Lipitor, captopril, digoxin,
+
+Levoxyl, Lasix, and Coumadin.
+
+ALLERGIES:  Has allergies to morphine.
+
+PHYSICAL EXAMINATION:  She is afebrile, heart rate111, blood
+
+pressure 105/7118, and oxygen saturation 100% on 4 liters.  She
+
+is awake, alert, and in moderate distress.  HEENT: 
+
+Normocephalic, atraumatic.  Pupils:  Equal, round and reactive to
+
+light.  Sclerae are anicteric.  Neck is supple and nontender. 
+
+Chest is with bibasilar crackles.  Cardiovascular exam: 
+
+Irregularly irregular with a 2/6 systolic murmur at the left
+
+upper sternal border.  Abdomen is soft and nontender.  Skin is
+
+warm and dry.  Extremities without clubbing, cyanosis, or edema. 
+
+Neurological:  Alert and oriented.  Cranial nerves II through XII
+
+are intact.  There are no motor or sensory deficits.
+
+Initial cardiogram showing numerous PVCs with occasional negative
+
+complex is consistent with her previous EKG with the appearance
+
+of likely atrial fibrillation.  After some diuresis and a beta
+
+blockade, she has slowed down to the 90s from the 130s and
+
+appeared to have normal sinus rhythm with frequent PVCs.  Her
+
+chest film shows some mild CHF, and she was started on heparin.
+
+LABORATORY DATA:  Sodium 134, glucose 178.  Normal extending
+
+chemistries.  CK of 115 with an MB of 2.  Digoxin level is 0.8. 
+
+TSH is 8.8.  Troponin is less than assay.  White count is 7.5,
+
+hematocrit 42, and platelets 238,000.  INR 2.1.  Heparin was not
+
+initiated as she was already anticoagulated, but she did receive
+
+diuresis.  She is admitted in stable condition.
+
+CLINICAL IMPRESSION:  Unstable angina with frequent PVCs.  Her
+
+cardiology consultation is pending at this time.
+
+______________________________
+
+MCCARTY, QUINTON M.D.
+
+D: 07/16/90
+
+T: 07/16/90
+
+Dictated By: MCCARTY, QUINTON
+
+eScription document:1-6926631 BFFocus
+
+******** Not reviewed by Attending Physician ********
+
+
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2090-07-15" TYPE="DATE" comment="" />
+<ID id="P1" start="36" end="44" text="24152563" TYPE="MEDICALRECORD" comment="" />
+<NAME id="P2" start="45" end="57" text="Pierre, Eden" TYPE="PATIENT" comment="" />
+<DATE id="P3" start="58" end="66" text="07/15/90" TYPE="DATE" comment="" />
+<NAME id="P4" start="67" end="83" text="MCCARTY, QUINTON" TYPE="DOCTOR" comment="" />
+<NAME id="P5" start="99" end="108" text="Feliciano" TYPE="DOCTOR" comment="" />
+<AGE id="P6" start="398" end="400" text="75" TYPE="AGE" comment="" />
+<NAME id="P7" start="2697" end="2713" text="MCCARTY, QUINTON" TYPE="DOCTOR" comment="" />
+<DATE id="P8" start="2723" end="2731" text="07/16/90" TYPE="DATE" comment="" />
+<DATE id="P9" start="2736" end="2744" text="07/16/90" TYPE="DATE" comment="" />
+<NAME id="P10" start="2759" end="2775" text="MCCARTY, QUINTON" TYPE="DOCTOR" comment="" />
+<ID id="P11" start="2797" end="2806" text="1-6926631" TYPE="IDNUM" comment="" />
+</TAGS>
+</deIdi2b2>

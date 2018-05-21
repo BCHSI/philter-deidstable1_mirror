@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2084-06-15
+
+
+
+PATIENT: Patrick Gillespie
+MRN: 2571454
+ADMIT DATE: 6/13/84
+TRANSFER DATE: 6/15/84
+ATTN: Wright
+
+
+
+
+Reason for admission/transfer: aflutter starting on sotalol
+
+
+HPI
+Please see admission note for full details.
+
+
+In brief, this is a 54 y/o M hx neurofibromatosis, Hodgkin's lymphoma s/p chemo/XRT in the 70s, DMII (A1c 6.5 in 03/84), HTN, obesity and new diagnosis of Afib, recently discharged from the Mediquik 2 days prior to readmission 6/13 where he was being treated for AF w/ RVR.  His toprol was increased from 100mg dily to 100mg BID at that time. Prior w/u w/ fairly nl TTE and nl TSH. Now returned for his third admission with AF w/ RVR, rates into the 140s. He is considerably symptomatic with the AF w/ palpitations, lightheadedness, dyspnea, and diaphoresis. HD stable. He has been on increasing doses of Toprol without effect given this is his third admission. 
+
+
+MEDICAL HISTORY
+NIDDM 
+HTN
+HL
+Neurofibromatosis
+Pectus excavatum
+H/o Hodgkin's disease - diagnosed in 2070; s/p XRT, chemo (bleomycin, adriamycin, vincristine, DTIC), and surgical resection; oncologist Dr. Bass at MAC
+
+
+ALLERGIES: IV contrast
+
+
+For social history/ family history/ meds on admission please see admission note. 
+
+
+HOSPITAL COURSE: 
+
+
+PAF/ Flutter: In the Ed, he had been given IV lopressor 5mg  w/ 25mg PO lopressor w/o improvement and then was given 10mg IV dilt which brought HR down to 90s. He was also given 0.5mg digoxin for possible dig load. Given he was failing on Toprol 100mg BID his medications were switched to diltiazem 60mg q6hr to see if a different drug class might help. Cardiology/ EP was consulted for the possibility of ablation given this was his third admission and he is so symptomatic. EP decided to start the patient on sotalol 80-mg BID with the plan to increase sotalol to 120mg BID on 6/15 if Qtc remains stable ( &lt;500 msec). He is planned to received 5 doses of sotalol prior to dispo and if he remained in aflutter through 6/15 is to get DCCV on 6/16. He received his first and only dose in the pm 6/14. Overnight he was bradycardic into the 40s while sleeping. He had a 3.5 second pause however on telemetry. His heart rates have ranged from 45-60 in AFlutter. BPs 90s systolic. Per EP, as pt asleep, will con't sotalol. He is on coumadin for anticoagulation. INR goal 2-3. EP(Dr. Moody= fellow) and cards (PRM wright) are following. 
+
+
+PUMP: echo 04/84 which demonstrated an elongated LA sLVH, EF 61%, tr TR, RSVP 41, RV nl. On ACEI. 
+
+
+PULM: CXR in ED with pulm edema. Given 20mg PO lasix x1 for gentle diuresis. On 1 L O2 as of am 6/15 and lasix 10mg Iv x 1 again this am 6/15. Felt to be related to his AF. He does have a h/o repeated PNAs. On xopenex, flovent. 
+
+
+FEN: Mild hyperK in the ED to 5.3. Received 30g kayexelate. Normalized. NPO at midnight 6/15 for possibel DCCV if still planned by E. 
+
+
+Isabella Glenn Mathews, MD MSc,
+Pager 43771
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2084-06-15" TYPE="DATE" comment="" />
+<NAME id="P1" start="39" end="56" text="Patrick Gillespie" TYPE="PATIENT" comment="" />
+<ID id="P2" start="62" end="69" text="2571454" TYPE="MEDICALRECORD" comment="" />
+<DATE id="P3" start="82" end="89" text="6/13/84" TYPE="DATE" comment="" />
+<DATE id="P4" start="105" end="112" text="6/15/84" TYPE="DATE" comment="" />
+<NAME id="P5" start="119" end="125" text="Wright" TYPE="DOCTOR" comment="" />
+<AGE id="P6" start="262" end="264" text="54" TYPE="AGE" comment="" />
+<DATE id="P7" start="333" end="336" text="70s" TYPE="DATE" comment="" />
+<DATE id="P8" start="355" end="360" text="03/84" TYPE="DATE" comment="" />
+<LOCATION id="P9" start="432" end="440" text="Mediquik" TYPE="HOSPITAL" comment="" />
+<DATE id="P10" start="469" end="473" text="6/13" TYPE="DATE" comment="" />
+<DATE id="P11" start="1009" end="1013" text="2070" TYPE="DATE" comment="" />
+<NAME id="P12" start="1113" end="1117" text="Bass" TYPE="DOCTOR" comment="" />
+<LOCATION id="P13" start="1121" end="1124" text="MAC" TYPE="HOSPITAL" comment="" />
+<DATE id="P14" start="1835" end="1839" text="6/15" TYPE="DATE" comment="" />
+<DATE id="P15" start="1978" end="1982" text="6/15" TYPE="DATE" comment="" />
+<DATE id="P16" start="2001" end="2005" text="6/16" TYPE="DATE" comment="" />
+<DATE id="P17" start="2053" end="2057" text="6/14" TYPE="DATE" comment="" />
+<NAME id="P18" start="2337" end="2342" text="Moody" TYPE="DOCTOR" comment="" />
+<LOCATION id="P19" start="2363" end="2366" text="PRM" TYPE="HOSPITAL" comment="" />
+<NAME id="P20" start="2367" end="2373" text="wright" TYPE="DOCTOR" comment="" />
+<DATE id="P21" start="2404" end="2409" text="04/84" TYPE="DATE" comment="" />
+<DATE id="P22" start="2590" end="2594" text="6/15" TYPE="DATE" comment="" />
+<DATE id="P23" start="2631" end="2635" text="6/15" TYPE="DATE" comment="" />
+<DATE id="P24" start="2813" end="2817" text="6/15" TYPE="DATE" comment="" />
+<NAME id="P25" start="2862" end="2884" text="Isabella Glenn Mathews" TYPE="DOCTOR" comment="" />
+<CONTACT id="P26" start="2900" end="2905" text="43771" TYPE="PHONE" comment="" />
+</TAGS>
+</deIdi2b2>

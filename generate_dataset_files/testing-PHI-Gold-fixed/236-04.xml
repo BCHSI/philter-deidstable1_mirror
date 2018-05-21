@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2071-01-12
+Problems	    
+
+IDDM	      
+
+COR ART DIS	      
+
+MI	      
+
+PORPHYRIA	      
+
+PAST SMOKER QUIT 2061;  1/2 PPD X 15 YEARS	      
+
+S/P SURGERY LEFT HAND, REPAIR DUPYTRENS CONTRACTURE	      
+
+
+
+History of Present Illness	
+
+Jennifer comes in doing well.
+
+
+
+She has had little chest pain and has required few nitros.  No chest pain at rest or shortness of breath.
+
+
+
+She continues to have significant discomfort from her DM neuropathy.  She has been taking neurontin and has noticed an improvement in this, but the pain does continue to be problematic.  She saw Pearline Rush in neurology who felt that she was not likely to be having seizures, but planned an EEG and MRI to r/o any structural disease.
+
+
+
+Seen in GYN for embx which was negative for hyperplasia.  Has not had her period for 3 months.
+
+
+
+Seen in ED with a tick bite.  No rashes or joint symptoms.
+
+
+
+Past Medical History	
+
+See problem list
+
+
+
+Medications	    
+
+TYLENOL	    PO PRN
+
+ASPIRIN	 81MG PO QD
+
+*   HUMULOG	 Variable  qid
+
+CELEXA (CITALOPRAM)	 40MG 1 Tablet(s) PO QD
+
+SYNALAR 0.025% CREAM (FLUOCINOLONE 0.025%...	  TOP BID
+
+FLONASE (FLUTICASONE NASAL SPRAY)	 2SPRAY INH each nostril qd
+
+IMDUR (ISOSORBIDE MONONIT.(SR))	 60MG 1 Tablet(s) PO QD
+
+NPH INSULIN	 25UNITS/3units SC QAM/qpm
+
+LOPRESSOR	 25MG PO QD
+
+TNG 0.4 MG (NITROGLYCERIN 1/150 (0.4 MG))	 1TAB SL Q5 MIN X 3
+
+NEURONTIN (GABAPENTIN)	 300MG 2 Capsule(s) PO TID
+
+PRAVACHOL (PRAVASTATIN)	 40MG 1 Tablet(s) PO QHS
+
+PLAVIX (CLOPIDOGREL)	 75MG PO QD
+
+NEXIUM (ESOMEPRAZOLE)	 20MG PO QD
+
+
+
+Allergies	    
+
+TEGRETOL (CARBAMAZEPINE)	 porphyria
+
+ELAVIL (AMITRIPTYLINE HCL)	 porphyria
+
+Morphine	 Rash
+
+VARIEGATE PORPHYRIA	 CHECK LONGMONT FOR LIST OF DRUGS;  INCLUDES SULFA,BARBITUATES, MEPROBAMATE, VALPROATE, GRISEOFULVIN, ERGOTS, STEROIDS
+
+
+
+Family History	
+
+Mother, sister, brother, nephew DM
+
+Mother Porphyria
+
+Sister Porphyria
+
+
+
+Social History	
+
+Formerly worked as an Transport Operations Supervisor.  Married with 1 son.  No tob.  No etoh.
+
+
+
+Review of Systems	
+
+No sob/worsening cp
+
+
+
+
+
+Vital Signs	    
+
+Blood Pressure:	 128/68   
+
+Weight:	 107   Pounds
+
+
+
+Physical Exam	  
+
+
+
+Disposition and Plans	
+
+1.  CAD - Follow closely.  Continue current regimen.
+
+2.  DM - poor control.  Very brittle. Recently seen by Dr. Nelson.
+
+3.  Cholesterol - last LDL <100.  Pravachol increased to 40mg.
+
+4.  Menorrhagia - currently not an issue.
+
+5.  DM neuropathy - will increase neurontin to 600 mg tid.
+
+6.  HM up to date
+
+
+
+Return to Clinic in 4  months.
+
+
+
+cc:  John Koontz, MD; Timothy Quarterman, MD
+
+
+
+
+
+______________________________                              
+
+
+
+Wanda Andrea Koontz, M.D.
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2071-01-12" TYPE="DATE" comment="" />
+<DATE id="P1" start="121" end="125" text="2061" TYPE="DATE" comment="" />
+<NAME id="P2" start="246" end="254" text="Jennifer" TYPE="PATIENT" comment="" />
+<NAME id="P3" start="583" end="596" text="Pearline Rush" TYPE="DOCTOR" comment="" />
+<LOCATION id="P4" start="1671" end="1679" text="LONGMONT" TYPE="HOSPITAL" comment="" />
+<PROFESSION id="P5" start="1916" end="1947" text="Transport Operations Supervisor" TYPE="PROFESSION" comment="" />
+<NAME id="P6" start="2265" end="2271" text="Nelson" TYPE="DOCTOR" comment="" />
+<NAME id="P7" start="2501" end="2512" text="John Koontz" TYPE="DOCTOR" comment="" />
+<NAME id="P8" start="2518" end="2536" text="Timothy Quarterman" TYPE="DOCTOR" comment="" />
+<NAME id="P9" start="2610" end="2629" text="Wanda Andrea Koontz" TYPE="DOCTOR" comment="" />
+</TAGS>
+</deIdi2b2>

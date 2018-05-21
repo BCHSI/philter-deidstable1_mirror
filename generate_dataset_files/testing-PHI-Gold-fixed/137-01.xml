@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2068-03-31
+
+
+
+
+
+
+Eudowood Services Physician Group
+807 Williams Ct              MOODY, JOHNNY
+Hyderabad, WI  62297                    76324418
+547-598-7353                     03/31/2068
+
+
+
+
+HISTORY OF PRESENT ILLNESS:  This 58-year-old white male comes to the office for followup regarding his recent chest pain.
+
+
+Chest pain.  The patient was in his usual state of compensated health, but approximately one month ago after clearing significance note from his driveway, the patient started to note some anterior chest discomfort.  He has a long history of coronary artery disease and this includes angioplasty and coronary artery bypass grafting in 2065.  The pain did not radiate up to his neck or arm, but when the pain persisted even after returning from Blountstown, he went to Roper Hospital North two days ago because of his chest discomfort to see his cardiologist.  He was admitted to the hospital, had a cardiac catheterization, which according to the patient did not show any specific lesion.  The doctors felt that he did not have a myocardial infarction, but that in fact his abnormality was due to a chest wall/muscular type syndrome.  He was discharged on anti-inflammatory medicine and the patient had noted that when he took the aspirin over the past month, his discomfort was improved.  The patient states that he had the chest x-rays at the hospital and in fact also had a CT scan, which did not show any pulmonary embolism.  It also did not show any dissecting aneurysm according to the patient.
+
+
+Left renal lesion.  As part of his routine workup, the patient did have a CT scan and this identified some left kidney mass possibly on this scan.  The patient denies specifically any flank pain or any bleeding and he has no recent weight loss.  I spoke to the patient at length about this matter and he will consult with Dr. Jung, the urologist at Roper Hospital North.
+
+
+Diabetes mellitus type 2.  The patient remains on his usual medicines and according to him, his hemoglobin A1c and blood sugars have remained fairly satisfactory.
+
+
+Obstructive sleep apnea.  The patient does not use his mask and I cautioned him to get back using that, as this may have an effect on his coronary artery disease.
+
+
+Abnormal liver function tests, has been present for many years and previously was thought to be due to a fatty liver.
+
+
+Elevated blood pressure.  The patient was noted in the hospital to have elevated blood pressures despite his medicine and he was asked to increase his Norvasc from 5 mg to 10 mg per day.
+
+
+Gastroesophageal reflux.  The patient feels well on Zantac.
+
+
+REVIEW OF SYSTEMS:  Reveals no specific headaches.  He denies any trouble with his ears, nose or throat.  He has no chronic cough or coughing blood.  He denies any nausea, vomiting, black or bloody stool.  He has no burning on urination.
+
+
+PHYSICAL EXAMINATION:  Revealed a pleasant white male in no acute distress.  His blood pressure was 130/90, pulse was 60 and weight 207 pounds.  Head, ears, eyes, nose and throat were normal.  The neck showed no thyroid nodes or tenderness.  The chest did show a healed coronary artery bypass graft scar, but he did have chest wall discomfort to palpation in the costochondral area on the left.  The lungs were clear to percussion and auscultation.  Heart showed a regular sinus rhythm.  Abdomen is soft.  No liver or spleen was felt.  Extremities showed no cyanosis, clubbing or edema.  Neurologically, the patient was alert.
+
+
+The patient was also sent to the office for evaluation because of his kidney function and the use of the scan during the CT scanning and use of the diet.
+
+
+The patient was therefore ordered to have routine laboratory test including complete blood count, CBC, chem profile, lipid profile, urinalysis and I did a hemoglobin A1c because of his history of diabetes.
+
+
+1.  Chest pain, probably due to chest wall rather than coronary artery disease according to the patient's history.
+2.  New discovery of left renal mass to consult with Urology, Dr. Jung.
+3.  Renal function to be rechecked secondary to his CT scanning and history of diabetes with Glucophage, which he has restarted.
+4.  Status post coronary artery bypass graft.
+5.  Abnormal LFTs by history.
+6.  Diabetes mellitus.
+7.  Obstructive sleep apnea.
+
+
+Will follow up with the patient by phone tomorrow regarding his lab tests and also he will consult with Dr. Jung and has a followup appointment with me for comprehensive exam in one to two months.
+
+
+
+
+______________________________
+Todd Brandt, M.D.
+
+
+
+
+
+
+
+
+
+
+eScription document:0-0901410 CSSten Tel
+
+
+
+
+
+
+DD: 03/31/68
+DT: 03/31/68
+DV: 03/31/68
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2068-03-31" TYPE="DATE" comment="" />
+<LOCATION id="P1" start="33" end="50" text="Eudowood Services" TYPE="HOSPITAL" comment="" />
+<LOCATION id="P2" start="67" end="82" text="807 Williams Ct" TYPE="STREET" comment="" />
+<NAME id="P3" start="96" end="109" text="MOODY, JOHNNY" TYPE="PATIENT" comment="" />
+<LOCATION id="P4" start="110" end="119" text="Hyderabad" TYPE="CITY" comment="" />
+<LOCATION id="P5" start="121" end="123" text="WI" TYPE="STATE" comment="" />
+<LOCATION id="P6" start="125" end="130" text="62297" TYPE="ZIP" comment="" />
+<ID id="P7" start="150" end="158" text="76324418" TYPE="MEDICALRECORD" comment="" />
+<CONTACT id="P8" start="159" end="171" text="547-598-7353" TYPE="PHONE" comment="" />
+<DATE id="P9" start="192" end="202" text="03/31/2068" TYPE="DATE" comment="" />
+<AGE id="P10" start="241" end="243" text="58" TYPE="AGE" comment="" />
+<DATE id="P11" start="666" end="670" text="2065" TYPE="DATE" comment="" />
+<LOCATION id="P12" start="775" end="786" text="Blountstown" TYPE="CITY" comment="" />
+<LOCATION id="P13" start="799" end="819" text="Roper Hospital North" TYPE="HOSPITAL" comment="" />
+<NAME id="P14" start="1860" end="1864" text="Jung" TYPE="DOCTOR" comment="" />
+<LOCATION id="P15" start="1883" end="1903" text="Roper Hospital North" TYPE="HOSPITAL" comment="" />
+<NAME id="P16" start="4022" end="4026" text="Jung" TYPE="DOCTOR" comment="" />
+<NAME id="P17" start="4395" end="4399" text="Jung" TYPE="DOCTOR" comment="" />
+<NAME id="P18" start="4519" end="4530" text="Todd Brandt" TYPE="DOCTOR" comment="" />
+<ID id="P19" start="4567" end="4576" text="0-0901410" TYPE="IDNUM" comment="" />
+<DATE id="P20" start="4598" end="4606" text="03/31/68" TYPE="DATE" comment="" />
+<DATE id="P21" start="4611" end="4619" text="03/31/68" TYPE="DATE" comment="" />
+<DATE id="P22" start="4624" end="4632" text="03/31/68" TYPE="DATE" comment="" />
+</TAGS>
+</deIdi2b2>

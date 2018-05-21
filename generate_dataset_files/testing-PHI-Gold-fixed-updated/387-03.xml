@@ -1,0 +1,92 @@
+<?xml version='1.0' encoding='utf8'?>
+<deIdi2b2>
+<TEXT>
+
+
+Record date: 2084-06-09
+
+
+Medicine Attending Admit Note
+
+
+June 9, 2084 
+1340 h
+
+
+I interviewed and examined the patient on rounds this morning with Dr. Lilly and with Team E and we reviewed the relevant data and discussed the case in detail.  I agree with the findings and recommendations in Dr. Lilly's note, with any small exceptions or points of emphasis noted below.  Please refer to it for details of HPI, PMH, medications and allergies, family and social history, laboratory and other data, and ROS.  I would only add/emphasize the following:
+
+
+
+Mr. Gillespie is a 53 year-old man with medical history that includes: 
+
+h/p Hodgkin&amp;#8217;s lymphoma, 2070-2071, treated with local resection, bleomycin, adriamycin, and other agents, XRT to a wide chest field 
+Atrial fibrillation - diagnosed in 3/84; on warfarin, metoprolol 
+Pectus excavatum &amp;#8211; repair failed as a child 
+Pneumonia several times in the past 
+Central obesity &amp;#8211; weighs about 315#, down from a high of 360# 
+Type II diabetes mellitus, last A1C 6.4, on metformin only, 1000 mg BID 
+Hypertension, on lisinopril 10 mg, Toprol XL 
+Elevated lipids - on statin 
+Neurofibromatosis (Soft tissue mass in right apex noted on 3/84 CT may be neurogenic tumor.) 
+Kidney stones 
+Patent foramen ovale
+
+
+He presents with dyspnea, orthopnea, and palpitations as described by Dr. Lilly, and was found to be in atrial fibrillation/flutter with rapid ventricular response.  He has improved with heart rate control.  
+
+
+Exam
+VS - as noted
+General - pleasant obese white man with severe pectus deformity.  Breathing with abdominal muscles tensed on expiration.  
+CV - heart with regular rhythm, normal S1, prominent S2, and no murmurs, rubs, or gallops
+Lungs - clear
+Abdomen - obese
+Extremities - minimal edema
+
+
+Data  - reviewed in detail and are as in Dr. Lilly's note.  Bicarb 31, BNP 2050, WBC 15, INR 3.1.
+
+
+
+
+Impression:  Poorly tolerated atrial fibrillation/flutter with RVR, needing better rate control.  Given the severe pectus deformity as well as his history of lung-toxic chemotherapy drugs and XRT, he may have some restrictive lung disease that would limit his cardiopulmonary reserve.  I would not be surprised if he additionally has obstructive lung disease, given the "belly breathing" and the wheezing he had last admission.  
+
+
+Recommendations:  
+
+Increase metoprolol dose.  May need Toprol XL 100 BID.  Best to maximize utility of BB prior to adding other agents.
+
+Filter all IVs (PFO)
+PFTs and Pulmonology consult as an outpatient
+Balance of plan per Dr. Lilly.
+
+
+
+
+
+
+Peter Wiggins, MD, PhD
+pager 32089
+
+
+
+
+
+
+
+</TEXT>
+<TAGS>
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2084-06-09" />
+<DATE TYPE="DATE" comment="" end="73" id="P1" start="61" text="June 9, 2084" />
+<NAME TYPE="DOCTOR" comment="" end="160" id="P2" start="155" text="Lilly" />
+<NAME TYPE="DOCTOR" comment="" end="304" id="P3" start="299" text="Lilly" />
+<NAME TYPE="PATIENT" comment="" end="568" id="P4" start="559" text="Gillespie" />
+<DATE TYPE="DATE" comment="" end="806" id="P8" start="802" text="3/84" />
+<DATE TYPE="DATE" comment="" end="1201" id="P9" start="1197" text="3/84" />
+<NAME TYPE="DOCTOR" comment="" end="1349" id="P10" start="1344" text="Lilly" />
+<NAME TYPE="DOCTOR" comment="" end="1823" id="P11" start="1818" text="Lilly" />
+<NAME TYPE="DOCTOR" comment="" end="2541" id="P12" start="2536" text="Lilly" />
+<NAME TYPE="DOCTOR" comment="" end="2562" id="P13" start="2549" text="Peter Wiggins" />
+<CONTACT TYPE="PHONE" comment="" end="2583" id="P14" start="2578" text="32089" />
+</TAGS>
+</deIdi2b2>

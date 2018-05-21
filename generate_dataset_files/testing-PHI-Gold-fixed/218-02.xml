@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2093-10-29
+
+
+
+
+
+INTERNAL MEDICINE ASSOCIATES
+
+MISSOULA CLINIC CENTER
+
+
+
+Reason for visit   86 year old man h/o type 2 DM, CAD s/p peptic ulcer bleed and MI 11/92.
+
+
+
+History of present illness   Doing well- no complains of dyspnea unless he is "doing a lot." Able to walk up stairs without symptoms. Weight is up to 129 at home, no orthopnea, PND, ankle swelling. He wakes up at night several times with nocturia or restlessness. 
+
+
+
+Major Problems
+
+Coronary artery disease
+
+s/p anterior MI 2082, LAD PTCA 2082. Cath 90% RCA, occluded OM2 2082. Echo 2087 EF =67%, no WMA (previously had apical dyskinesis). R/I'd for NSTEMI (TnT 1.35) in setting of 4 U GI Bleed (11/92), complicated by CHF. 
+
+Diabetes mellitus
+
+Dx 7/88, on low dose glucophage with excellent control- d/c'd 10/91 when HbA1C all wnl. Urine alb slightly high at 36 (10/92). After MI, HbA1C inc to 7.9% (12/92), now down to 6.8%. Lately he has not been adherent to diet (ice cream, cake, etc).
+
+
+
+Other Problems
+
+Myocardial infarction (anterior wall) - Inactivated
+
+see CAD
+
+Patient fall - Inactivated
+
+
+
+
+
+Active Medications
+
+
+
+atenolol 100mg po qd
+
+aspirin 81mg po qd
+
+furosemide 20 mg po 2-3 tabs daily
+
+lisinopril 2.5 mg po qd
+
+nitroglycerin 0.3mg AS DIRECTED
+
+multivitamins
+
+Lipitor 10mg po qd
+
+lidocaine 5% ointment apply to rectum 4x daily prn
+
+
+
+Family history   No cancer, one sister living age 84, 2 other sisters in late 80's- one in Oklahoma, one in New Hamp.. .
+
+
+
+Social history   Married, 4 daughters from previous marriage. 3 sons each killed in separate MVA. Former smoker quit 20 years ago, (+) EtOH. 11 grandchildren, 8 GGC
+
+
+
+Review of systems   As above, no abdominal pain, no N/V. No complaints of constipation or rectal pain. No BRBPR. Urination as above.
+
+
+
+Physical examination
+
+Pulse 64  
+
+Blood pressure 130/68  
+
+Weight 129  
+
+Neck   carotids 1+, JVP 6 cm, no nodes, thyroid non palpable
+
+Chest   CTA, except few crackles L > R
+
+Cor   RRR, normal s1, split s2, no murmur
+
+Abdomen   soft NT
+
+Extrem   1+ edema, radial pulses 2+, popliteal/DP 1+, DJD at base of 1st MC right
+
+
+
+Assessment and plan   1. CAD: s/p MI, CHF seems well controlled at this time. Class II. Continue furosemide at 40 mg po qd. Call with increased weight. Continue BB, statin, ACEI and ASA. Last LDL 55 (10/92)- check again today.
+
+2. PUD: s/p Rx for H. pylori, completed 4 weeks of PPI. Resolved
+
+3. DM: HbA1C 6.8%, no meds- check today. Needs to adhere to diet.
+
+4. HCM: Fluvax when available, did not want c-scope. 
+
+
+
+Selected recent labs   CMP/Chol/CBC/HbA1C
+
+
+
+Disposition
+
+RTC 3 months  
+
+
+
+Signed electronically by Eggleston, William on Jan 31, 2094     
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2093-10-29" TYPE="DATE" comment="" />
+<LOCATION id="P1" start="62" end="84" text="MISSOULA CLINIC CENTER" TYPE="HOSPITAL" comment="" />
+<AGE id="P2" start="107" end="109" text="86" TYPE="AGE" comment="" />
+<DATE id="P3" start="172" end="177" text="11/92" TYPE="DATE" comment="" />
+<DATE id="P4" start="507" end="511" text="2082" TYPE="DATE" comment="" />
+<DATE id="P5" start="522" end="526" text="2082" TYPE="DATE" comment="" />
+<DATE id="P6" start="555" end="559" text="2082" TYPE="DATE" comment="" />
+<DATE id="P7" start="566" end="570" text="2087" TYPE="DATE" comment="" />
+<DATE id="P8" start="679" end="684" text="11/92" TYPE="DATE" comment="" />
+<DATE id="P9" start="731" end="735" text="7/88" TYPE="DATE" comment="" />
+<DATE id="P10" start="790" end="795" text="10/91" TYPE="DATE" comment="" />
+<DATE id="P11" start="847" end="852" text="10/92" TYPE="DATE" comment="" />
+<DATE id="P12" start="884" end="889" text="12/92" TYPE="DATE" comment="" />
+<AGE id="P13" start="1384" end="1386" text="84" TYPE="AGE" comment="" />
+<AGE id="P14" start="1412" end="1416" text="80's" TYPE="AGE" comment="" />
+<LOCATION id="P15" start="1425" end="1433" text="Oklahoma" TYPE="STATE" comment="" />
+<LOCATION id="P16" start="1442" end="1451" text="New Hamp." TYPE="STATE" comment="" />
+<DATE id="P17" start="2284" end="2289" text="10/92" TYPE="DATE" comment="" />
+<NAME id="P18" start="2603" end="2621" text="Eggleston, William" TYPE="DOCTOR" comment="" />
+<DATE id="P19" start="2625" end="2637" text="Jan 31, 2094" TYPE="DATE" comment="" />
+</TAGS>
+</deIdi2b2>

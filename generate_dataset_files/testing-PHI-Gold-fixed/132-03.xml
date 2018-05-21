@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2074-06-20
+
+
+HHH Cardiovascular Division
+CVD Rm 5
+89 Buck St                                      JORGENSON, VIVIANLEE
+Sioux City, FL 76546                                           47190847
+(179) 732-8159                                           06/20/74
+
+
+Charles F. Van, M.D.
+66 Kessler Farm Drive, Puite #9488
+Jordan, FL  83712
+
+
+Dear Dr. Van:
+
+I had the pleasure of participating in the care of VivianLee Jorgenson during her recent hospitalization at Goulds Hospital.  This lovely 67-year-old female ended up having no discernable coronary artery disease on catheterization.  At the time of the cath, her pulmonary capillary wedge pressure was 12.  During the course of her hospitalization, we noted as well that she had had runs of nonsustained VT and asked our EP colleagues to comment on the appropriateness of an ICD.  They felt that this could certainly be rediscussed in the future, but at the present time, there was no compelling indication for her to receive an ICD.
+
+Her medications at discharge include Lipitor 20 mg p.o. q.d., digoxin 0.25 mg p.o. q.d., captopril 50 mg p.o. t.i.d., Lasix 40 mg p.o. b.i.d., enteric-coated aspirin 81 mg p.o. q.d., Nexium 20 mg p.o. q.d., Synthroid 300 mcg p.o. q.d., Aldactone 25 mg p.o. q.d., Coreg 25 mg p.o. b.i.d., and Norvasc 5 mg p.o. q.d.
+
+It has been a delight to participate in the care of this lovely woman.  If there is any questions or issues, please feel free to call.
+
+Sincerely,
+
+
+
+
+
+______________________________
+Vickie Frank-Jarvis, M.D.
+
+
+Dictated By: Vickie Frank-Jarvis
+
+
+eScription document:9-9294537 RFFocus
+
+
+
+DD: 06/20/74
+DT: 06/20/74
+DV: 06/20/74
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2074-06-20" TYPE="DATE" comment="" />
+<LOCATION id="P1" start="29" end="32" text="HHH" TYPE="HOSPITAL" comment="" />
+<LOCATION id="P3" start="66" end="76" text="89 Buck St" TYPE="STREET" comment="" />
+<NAME id="P4" start="114" end="134" text="JORGENSON, VIVIANLEE" TYPE="PATIENT" comment="" />
+<LOCATION id="P5" start="135" end="145" text="Sioux City" TYPE="CITY" comment="" />
+<LOCATION id="P6" start="147" end="149" text="FL" TYPE="STATE" comment="" />
+<LOCATION id="P7" start="150" end="155" text="76546" TYPE="ZIP" comment="" />
+<ID id="P8" start="198" end="206" text="47190847" TYPE="MEDICALRECORD" comment="" />
+<CONTACT id="P9" start="207" end="221" text="(179) 732-8159" TYPE="PHONE" comment="" />
+<DATE id="P10" start="264" end="272" text="06/20/74" TYPE="DATE" comment="" />
+<NAME id="P11" start="275" end="289" text="Charles F. Van" TYPE="DOCTOR" comment="" />
+<LOCATION id="P12" start="296" end="317" text="66 Kessler Farm Drive" TYPE="STREET" comment="" />
+<LOCATION id="P14" start="331" end="337" text="Jordan" TYPE="CITY" comment="" />
+<LOCATION id="P15" start="339" end="341" text="FL" TYPE="STATE" comment="" />
+<LOCATION id="P16" start="343" end="348" text="83712" TYPE="ZIP" comment="" />
+<NAME id="P17" start="360" end="363" text="Van" TYPE="DOCTOR" comment="" />
+<NAME id="P18" start="417" end="436" text="VivianLee Jorgenson" TYPE="PATIENT" comment="" />
+<LOCATION id="P19" start="474" end="489" text="Goulds Hospital" TYPE="HOSPITAL" comment="" />
+<AGE id="P20" start="504" end="506" text="67" TYPE="AGE" comment="" />
+<NAME id="P21" start="1499" end="1518" text="Vickie Frank-Jarvis" TYPE="DOCTOR" comment="" />
+<NAME id="P22" start="1540" end="1559" text="Vickie Frank-Jarvis" TYPE="DOCTOR" comment="" />
+<ID id="P23" start="1582" end="1591" text="9-9294537" TYPE="IDNUM" comment="" />
+<DATE id="P24" start="1607" end="1615" text="06/20/74" TYPE="DATE" comment="" />
+<DATE id="P25" start="1620" end="1628" text="06/20/74" TYPE="DATE" comment="" />
+<DATE id="P26" start="1633" end="1641" text="06/20/74" TYPE="DATE" comment="" />
+</TAGS>
+</deIdi2b2>

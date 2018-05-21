@@ -1,0 +1,129 @@
+<?xml version='1.0' encoding='utf8'?>
+<deIdi2b2>
+<TEXT>
+
+
+Record date: 2096-02-13
+
+Saint John Valley Health Center
+
+707 Newburgh Street
+
+Sulphur, AR. 26822
+
+859-168-0145
+
+
+
+CC: f/up of RLE ulcerations
+
+
+
+HPI: 55 yo male with f/up for RLE ulcerations reporting
+
+a temp this past Wednesday AM to 101.2.  Started Keflex
+
+at home because he had some and took for 2 days.
+
+Also, reports FS's have been above 200.
+
+Changing dressings as directed. 
+
+
+
+================ Problems ================
+
+Smoking          
+
+S/P R knee surgery x 3          
+
+S/P tonsillectomy          
+
+Hypertension          
+
+H/O +PPD in '70's, treated for 1 yr          
+
+diabetes mellitus          type 2
+
+Hypertriglyceridemia          
+
+H/O paroxysmal afib          
+
+VNA 171-311-7974          
+
+
+
+================ Medications ================
+
+ATENOLOL 50MG 1 Tablet(s) PO QAM
+
+COUMADIN (WARFARIN SODIUM) 5MG 1 Tablet(s) PO QPM
+
+ECASA (ASPIRIN ENTERIC COATED) 81MG 1 Tablet(s) PO QD
+
+GLUCOPHAGE (METFORMIN) 850MG 1 Tablet(s) PO BID
+
+GLYBURIDE 1.25MG 1 Tablet(s) PO QD
+
+LISINOPRIL 20MG 1 Tablet(s) PO QD
+
+PERCOCET    (OXYCODONE+APAP) 325-5MG 1 Tablet(s) PO BID PRN pain
+
+SERAX (OXAZEPAM) 15MG 1 Tablet(s) PO QHS PRN insomnia
+
+
+
+================ Allergies ================
+
+Penicillins          Unknown          
+
+
+
+PEx: VS: Wt 196, BP 130/86, T 99.2, P 76 regular
+
+WDWN male in NAD.  HEENT: anicteric sclerae.  
+
+Neck: supple, no JVD.  
+
+Lungs: CTA.  CV: Irregularly irregular 
+
+Abd: soft, NT/ND, nl BS.  
+
+Ext: slow healing ulcers on RLE with ongoing mild surrounding
+
+erythema
+
+
+
+A/P:
+
+1. RLE ulcerations, slow to heal, ongoing dressing changes
+
+as directed.  Will continue Keflex 500 mg QID x 1 more week.
+
+Percocet 5/325 1 tab po qhs-BID PRN pain
+
+2. DM, increase Glyburide to 2.5 mg po qd as directed.
+
+Follow home FS as directed.
+
+
+
+Quijada, M.D.
+
+
+
+</TEXT>
+<TAGS>
+<DATE TYPE="DATE" comment="" end="26" id="P0" start="16" text="2096-02-13" />
+<LOCATION TYPE="HOSPITAL" comment="" end="59" id="P1" start="28" text="Saint John Valley Health Center" />
+<LOCATION TYPE="STREET" comment="" end="80" id="P2" start="61" text="707 Newburgh Street" />
+<LOCATION TYPE="CITY" comment="" end="89" id="P3" start="82" text="Sulphur" />
+<LOCATION TYPE="STATE" comment="" end="93" id="P4" start="91" text="AR" />
+<LOCATION TYPE="ZIP" comment="" end="100" id="P5" start="95" text="26822" />
+<CONTACT TYPE="PHONE" comment="" end="114" id="P6" start="102" text="859-168-0145" />
+<DATE TYPE="DATE" comment="" end="557" id="P9" start="552" text="'70's" />
+<CONTACT TYPE="PHONE" comment="" end="701" id="P10" start="689" text="171-311-7974" />
+<NAME TYPE="DOCTOR" comment="" end="1763" id="P11" start="1756" text="Quijada" />
+</TAGS>
+</deIdi2b2>

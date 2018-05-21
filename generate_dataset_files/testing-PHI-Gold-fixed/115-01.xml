@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2107-10-24
+
+TOOLE COUNTY HOSPITAL
+Cardiology
+871 Westerdale Drive                           Werner, Nancy
+West Liberty, AL 54854                       2-05-09
+ 
+ 
+ 
+Routine Visit
+ 
+Taking Diabeta 10 b.i.d. as well as other medications and has now added 
+Pravachol 40 mg. at bedtime.  She is tolerating the Pravachol well.  
+Blood sugars at home, morning and at bedtime, are in the 130-155 range.  
+No side effects of the medication.  No evidence of hypoglycemia.  No 
+polyuria, polydipsia.  Trying to walk on a treadmill inside the house 20 
+minutes at a time several times a week.  Trying to watch diet.
+ 
+Physical Exam:  Blood pressure:  150/86, 148/84.  Pulse 78.  PERRL.  
+Carotids 1+, no bruits.  No peripheral edema.
+ 
+Assessment:  Blood pressure adequately controlled.  Sounds like diabetes 
+is moderately well controlled.  Check hemoglobin A1 today.  She will 
+call me for these results in 10 days.  Adjust Diabeta if necessary.  
+Return here in three months.  
+ 
+ 
+ 
+ 
+ 
+_________________________
+Paul D. Quaglia, M.D.
+ 
+mzy:KX:7901
+DD:2-15-09
+
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2107-10-24" TYPE="DATE" comment="" />
+<LOCATION id="P1" start="28" end="49" text="TOOLE COUNTY HOSPITAL" TYPE="HOSPITAL" comment="" />
+<LOCATION id="P3" start="61" end="81" text="871 Westerdale Drive" TYPE="STREET" comment="" />
+<NAME id="P4" start="108" end="121" text="Werner, Nancy" TYPE="PATIENT" comment="" />
+<LOCATION id="P5" start="122" end="134" text="West Liberty" TYPE="CITY" comment="" />
+<LOCATION id="P6" start="136" end="138" text="AL" TYPE="STATE" comment="" />
+<LOCATION id="P7" start="139" end="144" text="54854" TYPE="ZIP" comment="" />
+<DATE id="P8" start="167" end="174" text="2-05-09" TYPE="DATE" comment="" />
+<NAME id="P9" start="1022" end="1037" text="Paul D. Quaglia" TYPE="DOCTOR" comment="" />
+<ID id="P10" start="1046" end="1057" text="mzy:KX:7901" TYPE="IDNUM" comment="" />
+<DATE id="P11" start="1061" end="1068" text="2-15-09" TYPE="DATE" comment="" />
+</TAGS>
+</deIdi2b2>

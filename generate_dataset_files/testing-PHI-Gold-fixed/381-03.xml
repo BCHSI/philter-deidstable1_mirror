@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2092-12-26
+
+
+Diabetes CONSULT REPORT
+
+
+
+CC    
+Asked by Dr. Katz to see the patient for assistance with management of hyperglycemia.
+
+
+HPI   
+This is a 50 year old male patient with a history of type 1 diabetes diagnosed 40 years ago at an age of 10. Pt was initially treated with insulin and has been requiring insulin since diagnosis. Pt was started on an insulin pump in 2079. Current basal rates are 0.6 units from 12am-6am, 0.7 units from 6am to 6:30pm and then 0.6 units at 6:30pm again. Pt uses a carb ratio of 10:1. Pt cannot recall her correction factor as it is programmed into her pump. Monitors her blood glucoses at least 4 times per day and reports variable glucoses for 70-&gt;200. Reports hypoglycemic episodes 1-2 times per week and she is usually symptomatic with glucoses of 70. Reports that she was admitted to the hospital about one month ago with DKA. States that she had flu-like symptoms and severe vomiting and was admitted ot Ames Pathology Center for treatment. Had never had DKA before. Pt reports complications associated with diabetes. Reports retinopathy and has had several laster surgeries. Reports nephropathy as well as an episode of renal failure related to a hospitalization this summer. Reports peripheral neuropathy as well as peripheral vascular disease, including non-healing ulcers that have lead to right TMA. 
+
+
+Patient is admitted for stenosis of right bypass graft stenosis and is going to the cath lab for angiogram shortly. Currently receiving D5W with 150 meq of Bicarb at 125 ccs/hr for renal protection. 
+BG today (with IV fluid infusing): 230 (4am), 271 (9am), and 195 (11am - prior to leaving for cath) 
+BG 12/25: 152 (1pm), 196 (6pm), 172 (8pm)
+Pt is using her insulin pump. 
+ 
+Allergies
+Erythromycins - rash 
+Sulfa - rash
+Aspirin - rash
+
+
+
+
+Medications             
+Diabetes medications at home included: Insulin pump, see HPI
+Diabetes medications now include: Insulin pump
+
+
+Problems
+Anemia 
+Anxiety 
+Deep venous thrombosis 
+Depression 
+Hypothyroidism 
+Palpitations 
+Right TMA
+Let ankle fracture
+                        
+FHX
+No history of hormonal disorders in any family members 
+                  
+SHX and Habits
+Non-smoker
+ 
+ROS 
+Patient is post-operative. 
+
+
+Physical Examination
+General:  Patient is in no apparent distress.  
+Vitals: BP 110/60, HR 99, Temp 
+HENT: Inspection reveals no abnormalities. 
+Eyes:  Conjunctivae, sclera and lids are normal. No icterus. 
+Respiratory:  Assessment of respiratory effort reveals even respirations without use of accessory muscles
+Skin: No skin rash, warm and dry skin.  No acanthosis nigricans.
+Neurological Examination: Alert and oriented to person, place, time, and situation. Grossly nonfocal exam.
+Psychiatric: Mood and affect appropriate to situation.
+Extremity exam: No pedal edema, right foot with bandage.
+
+
+Lab Results
+12/25/2092 NA 136,  K 4.5,  CL 107,  CO2 22 (*),  BUN 52 (*),  CRE 2.11 (*),  EGFR 25,  GLU 212 (*)12/02/2092 HGBA1C 9.0 (H)12/25/2092 WBC 6.55,  RBC 4.34 (#),  HGB 10.5 (*#),  HCT 33.5 (*#),  MCV 77.2 (*#),  MCH 24.2 (*),  MCHC 31.4 (*),  PLT 302 (#) 
+Assessment 
+T1DM - Uncontrolled. Pt appears alert, oriented and confident to use her insulin pump in the hospital. Pt is able to verbalize her insulin doses and states that she would prefer to continue with pump use. Suspect that IV fluids are contributing to hyperglycemia, therefore reluctant to change insulin doses since IV fluids will likely stop later today. While in procedure, will need to monitor blood glucoses more closely, but anticipate that pump can continue as programmed. 
+
+
+Recommendations
+1. Continue with insulin pump. Instructed pt that she must:
+       a. report all pre-meal bolus doses to the RN so that it can be documented on the 
+       flow sheet.
+       b. have blood glucoses checked as ordered using the hospital approved glucose meter. 
+       c. alert RN if she feel uncomfortable using insulin pump. RN should page HO and/or diabetes dept 
+       immediately for orders for SC insulin. 
+       d. agree to discontinue insulin pump and start SC insulin if deemed necessary by house staff. 
+Pt agrees to all of the above. 
+ 
+2. Monitor blood glucoses at least before all meals and at bedtime. Please also check blood glucoses with any symptoms of hypoglycemia or at pt's request. Be sure to record these values on the daily flow sheet. 
+ 
+3. For procedure today, I spoke with Kathryn Kincaid and asked that blood glucoses be monitored hourly while in cath lab unless BG is less than 140. If BG less than 140, monitor blood glucoses every 30 minutes. Treat BG less than 80 with 1/2 amp D50 and continue to monitor as described above. Do not remove insulin pump. Page 5-8112 with any concerns during the procedure. 
+ 
+Diabetes dept will continue to monitor. Please page 5-8112 with any questions or concerns. Thank you.
+ 
+ 
+________________________
+Faye Easley, NP
+       
+             
+
+
+
+
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2092-12-26" TYPE="DATE" comment="" />
+<NAME id="P2" start="76" end="80" text="Katz" TYPE="DOCTOR" comment="" />
+<AGE id="P3" start="168" end="170" text="50" TYPE="AGE" comment="" />
+<AGE id="P4" start="263" end="265" text="10" TYPE="AGE" comment="" />
+<DATE id="P5" start="390" end="394" text="2079" TYPE="DATE" comment="" />
+<LOCATION id="P6" start="968" end="989" text="Ames Pathology Center" TYPE="HOSPITAL" comment="" />
+<DATE id="P7" start="1676" end="1681" text="12/25" TYPE="DATE" comment="" />
+<DATE id="P8" start="2846" end="2856" text="12/25/2092" TYPE="DATE" comment="" />
+<DATE id="P9" start="2945" end="2955" text="12/02/2092" TYPE="DATE" comment="" />
+<DATE id="P10" start="2970" end="2980" text="12/25/2092" TYPE="DATE" comment="" />
+<NAME id="P12" start="4406" end="4421" text="Kathryn Kincaid" TYPE="DOCTOR" comment="" />
+<CONTACT id="P13" start="4696" end="4702" text="5-8112" TYPE="PHONE" comment="" />
+<CONTACT id="P15" start="4798" end="4804" text="5-8112" TYPE="PHONE" comment="" />
+<NAME id="P16" start="4877" end="4888" text="Faye Easley" TYPE="DOCTOR" comment="" />
+</TAGS>
+</deIdi2b2>

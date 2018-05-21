@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2096-07-19
+
+                     ST VINCENT EMERGENCY DEPT VISIT
+ 
+LAU,HELEN M.   544-41-32-1              VISIT DATE: 07/19/96
+The patient was seen by me and Dr. Foust 07-19-96 at 8:30 a.m. 
+PRESENTING COMPLAINT and HISTORY OF PRESENTING COMPLAINT:  The 
+patient is a 67-year-old black female complaining of substernal 
+chest pain times one hour while at the Pain Clinic this a.m.  The 
+complaints are presently resolved.  The patient states she was 
+being seen in the Pain Clinic for back pain, and developed the 
+sudden onset of substernal chest pain associated with shortness of 
+breath, nausea, vomiting, and diaphoresis, as well as syncope. 
+The patient states the pain was a 10/10, worse than normal angina, 
+and also reports one episodes of hematemesis this a.m., with a 
+small amount of red blood in the vomitus.  The patient denies 
+abdominal pain, weakness, or any other complaints. 
+PAST MEDICAL HISTORY:  Positive for angina.  Positive 
+catheterization approximately two years ago, with 30-40% lesions. 
+Also, history of insulin-dependent diabetes mellitus and spinal 
+stenosis. 
+CARDIAC RISK FACTORS:  Hypertension, increased cholesterol, 
+diabetes mellitus. 
+MEDICATIONS:  Metoprolol, lovastatin, Macrodantin, Motrin, insulin 
+70/30, nitroglycerin, and aspirin. 
+PHYSICAL EXAMINATION:  This is a well-developed, well-nourished 
+female lying on the stretcher, presently without complaints.  The 
+blood pressure is 194/88, the pulse 90, the respirations 16, and 
+the O2 saturation 97% on 2 liters per nasal cannula.  The HEENT 
+examination reveals a normocephalic, atraumatic head.  The pupils 
+are equal and reactive, and the extraocular movements are intact. 
+The chest shows positive bibasilar rales and is otherwise clear. 
+The abdomen is obese and soft, with positive bowel sounds.  The 
+heart has a regular rate and rhythm.  The extremities are without 
+cyanosis, clubbing, or edema.  The rectal examination is 
+guaiac-negative.  On Neurologic Examination, the patient is alert 
+and oriented times two (could not give the exact date); otherwise, 
+no focality. 
+LABORATORY EVALUATION:  The EKG shows a sinus rhythm unchanged from 
+previous EKGs, with a normal interpretation and no signs of acute 
+ischemia. 
+THERAPY RENDERED/COURSE IN ED:  The patient is admitted to the 
+hospital for rule out MI.  Aspirin is given.  Further work-up as 
+per the inpatient Medicine team.  The patient was admitted in 
+stable condition at 11:15 a.m. 
+FINAL DIAGNOSIS:  Rule out myocardial infarction (MI). 
+DISPOSITION (including condition upon discharge):  As above.  The 
+condition on admission is stable. 
+___________________________________                    OX540/6976 
+MARY LUND, M.D.  ML82                               D:07/19/96 
+                                                       T:07/19/96 
+Dictated by:  MARY LUND, M.D.  ML82 
+
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2096-07-19" TYPE="DATE" comment="" />
+<LOCATION id="P1" start="49" end="59" text="ST VINCENT" TYPE="HOSPITAL" comment="" />
+<NAME id="P2" start="83" end="95" text="LAU,HELEN M." TYPE="PATIENT" comment="" />
+<ID id="P3" start="98" end="109" text="544-41-32-1" TYPE="MEDICALRECORD" comment="" />
+<DATE id="P4" start="135" end="143" text="07/19/96" TYPE="DATE" comment="" />
+<NAME id="P5" start="179" end="184" text="Foust" TYPE="DOCTOR" comment="" />
+<DATE id="P6" start="185" end="193" text="07-19-96" TYPE="DATE" comment="" />
+<AGE id="P7" start="285" end="287" text="67" TYPE="AGE" comment="" />
+<ID id="P8" start="2681" end="2691" text="OX540/6976" TYPE="IDNUM" comment="" />
+<NAME id="P9" start="2693" end="2702" text="MARY LUND" TYPE="DOCTOR" comment="" />
+<NAME id="P10" start="2710" end="2714" text="ML82" TYPE="USERNAME" comment="" />
+<DATE id="P11" start="2747" end="2755" text="07/19/96" TYPE="DATE" comment="" />
+<DATE id="P12" start="2814" end="2822" text="07/19/96" TYPE="DATE" comment="" />
+<NAME id="P13" start="2838" end="2847" text="MARY LUND" TYPE="DOCTOR" comment="" />
+<NAME id="P14" start="2855" end="2859" text="ML82" TYPE="USERNAME" comment="" />
+</TAGS>
+</deIdi2b2>

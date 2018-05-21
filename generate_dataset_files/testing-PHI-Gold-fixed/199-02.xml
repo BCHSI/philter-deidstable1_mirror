@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2084-12-16
+
+FOREST HOSPITAL PHYSICIAN GROUP
+Vincent Y. Keyes, M.D.
+315 Westchester Dr                           Lara, Uriah
+Avra Valley, GA 12442                       62115644
+(708) 670-7983                                12-16-84
+ 
+ 
+ 
+HPI:  Uriah called requesting to be seen urgently.  He has not been 
+feeling well.  He has not slept for several days.  He has had a flutter 
+sensation in his chest occasionally.  He has been short of breath with 
+some exertion.  He has had no chest discomfort.  He has had tingling 
+sensations.  He also feels not himself when he lays down.  When he sits 
+up, he feels better.  He says his head feels full and dizzy.  He does 
+not feel the room spin around or feel himself spin around.  He has been 
+flying every other day.  He has had no chest pain or edema.  His ankle 
+also is still quite a problem and bothersome and he is having some hip 
+discomfort related to favoring the right ankle.
+ 
+PHYSICAL EXAMINATION:  Weight is 197.  Pulse 68 and regular.  Blood 
+pressure is 140/90 supine, 138/88 sitting, 138/88 standing.  The pulse 
+remains 68.  The head, eyes, ears, nose, and throat are normal, fundi 
+normal, ears normal.  The neck is supple; there is no adenopathy.  The 
+lungs are clear.  Heart: regular.  Abdomen: soft.  Extremities: no 
+edema.  EKG done today reveals normal sinus rhythm; Q, III, and AVF 
+which is unchanged.  This cardiogram is unchanged from July 2084.  
+Holter monitor will be done as well as blood screening today.
+ 
+IMPRESSION:  Palpitation and light-headedness, question dysrhythmia, 
+question inner ear dysfunction from frequent flying.
+ 
+MEDICATIONS:  Antivert 12.5 t.i.d.
+ 
+PLAN:
+1.   Holter monitor.
+2.   Blood screening including electrolytes.
+3.   Depending on lipids today (was 327), we will start atorvastatin 20 
+     mg once daily.  Prescription is given to him today with 
+     instructions to take 1 at evening meal and to have blood tested 
+     again in 6 weeks.  A lab request is given to patient.  He is told 
+     to hold off taking the medication until he hears from me about his 
+     blood test.
+4.   Further workup based on lab testing and Holter monitor and how 
+     patient feels in the next week.
+ 
+ 
+ 
+______________________________
+Vincent Y. Keyes, M.D.
+ 
+BI:YD:0043
+DD:12-16-84
+DT:12-16-84
+DV:12-16-84
+ ******** Approved but not reviewed by Attending Provider ********
+
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2084-12-16" TYPE="DATE" comment="" />
+<LOCATION id="P1" start="28" end="43" text="FOREST HOSPITAL" TYPE="HOSPITAL" comment="" />
+<NAME id="P2" start="60" end="76" text="Vincent Y. Keyes" TYPE="DOCTOR" comment="" />
+<LOCATION id="P3" start="83" end="101" text="315 Westchester Dr" TYPE="STREET" comment="" />
+<NAME id="P4" start="128" end="139" text="Lara, Uriah" TYPE="PATIENT" comment="" />
+<LOCATION id="P5" start="140" end="151" text="Avra Valley" TYPE="CITY" comment="" />
+<LOCATION id="P6" start="153" end="155" text="GA" TYPE="STATE" comment="" />
+<LOCATION id="P7" start="156" end="161" text="12442" TYPE="ZIP" comment="" />
+<ID id="P8" start="184" end="192" text="62115644" TYPE="MEDICALRECORD" comment="" />
+<CONTACT id="P9" start="193" end="207" text="(708) 670-7983" TYPE="PHONE" comment="" />
+<DATE id="P10" start="239" end="247" text="12-16-84" TYPE="DATE" comment="" />
+<NAME id="P11" start="260" end="265" text="Uriah" TYPE="PATIENT" comment="" />
+<DATE id="P12" start="1425" end="1434" text="July 2084" TYPE="DATE" comment="" />
+<NAME id="P13" start="2246" end="2262" text="Vincent Y. Keyes" TYPE="DOCTOR" comment="" />
+<ID id="P14" start="2271" end="2281" text="BI:YD:0043" TYPE="IDNUM" comment="" />
+<DATE id="P15" start="2285" end="2293" text="12-16-84" TYPE="DATE" comment="" />
+<DATE id="P16" start="2297" end="2305" text="12-16-84" TYPE="DATE" comment="" />
+<DATE id="P17" start="2309" end="2317" text="12-16-84" TYPE="DATE" comment="" />
+</TAGS>
+</deIdi2b2>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2070-01-08
+
+                     FSH EMERGENCY DEPT VISIT
+ 
+CHANDLER,JESSICA   748-80-38-0                       VISIT DATE: 01/08/70
+HISTORY OF PRESENTING COMPLAINT:  The patient was seen and 
+evaluated by Dr. Wooten.  Please see Dr. Wooten's note.  The 
+patient is a 41 year old morbidly obese diabetic female with two 
+days of shortness of breath and cough, productive of some whitish 
+sputum.  She has had no chest pain, no nausea, no vomiting. 
+Minimal diaphoresis.  She has had a fever.  No urinary symptoms. 
+She does have chronic renal insufficiency, COPD, CHF and diabetes. 
+PAST MEDICAL HISTORY:  As above plus status post coronary artery 
+bypass grafting. 
+MEDICATIONS:  Lasix, Prilosec, Cozaar, aspirin, Paxil, Flovent, 
+albuterol and Nephrocaps. 
+ALLERGIES:  No known drug allergies. 
+SOCIAL HISTORY:  A non-smoker. 
+PHYSICAL EXAMINATION:  An obese female, mild acute distress. 
+Temperature 101 degrees.  Heart has a regular rate and rhythm. 
+Lungs:  Diffuse rhonchi throughout with bibasilar rales.  The 
+abdomen is obese, soft.  Neurologic exam is non-focal. 
+LABORATORY EVALUATION:  Chest x-ray shows a poor inspiratory 
+effort, no obvious infiltrate, perhaps some hazy infiltrates.  EKG 
+is unchanged.  Labs:  Unable to obtain at this time. 
+THERAPY RENDERED/COURSE IN ED:  The patient was seen and evaluated. 
+Chest x-ray was obtained.  The patient has an IV established but 
+were unable to draw labs.  Under my direct supervision and with 
+some attempts by me, multiple attempts are made at the 
+infraclavicular and supraclavicular left and right subclavian vein 
+without success.  The groins bilateral have damp, moist exudate and 
+the neck anatomy is difficult to assess.  We are unable to 
+establish a line.  She has a chest x-ray for rule out of 
+pneumothorax or hemothorax and she will need an arterial stick for 
+blood draws. 
+IMPRESSION:  Hypoxia, possible pneumonia and a facial abscess. 
+PLAN:  Admission. 
+DISPOSITION (including condition upon discharge):  Condition on 
+admission is stable. 
+___________________________________                    RJ446/0820 
+RONNIE HUFFMAN, M.D.  RH31                       D:01/08/70 
+                                                       T:01/09/70 
+Dictated by:  RONNIE HUFFMAN, M.D.  RH31 
+ ******** Not reviewed by Attending Physician ********
+
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2070-01-08" TYPE="DATE" comment="" />
+<LOCATION id="P1" start="49" end="52" text="FSH" TYPE="HOSPITAL" comment="" />
+<NAME id="P2" start="76" end="92" text="CHANDLER,JESSICA" TYPE="PATIENT" comment="" />
+<ID id="P3" start="95" end="106" text="748-80-38-0" TYPE="MEDICALRECORD" comment="" />
+<DATE id="P4" start="141" end="149" text="01/08/70" TYPE="DATE" comment="" />
+<NAME id="P5" start="227" end="233" text="Wooten" TYPE="DOCTOR" comment="" />
+<NAME id="P6" start="251" end="257" text="Wooten" TYPE="DOCTOR" comment="" />
+<AGE id="P7" start="285" end="287" text="41" TYPE="AGE" comment="" />
+<ID id="P8" start="2093" end="2103" text="RJ446/0820" TYPE="IDNUM" comment="" />
+<NAME id="P9" start="2105" end="2119" text="RONNIE HUFFMAN" TYPE="DOCTOR" comment="" />
+<NAME id="P10" start="2127" end="2131" text="RH31" TYPE="USERNAME" comment="" />
+<DATE id="P11" start="2156" end="2164" text="01/08/70" TYPE="DATE" comment="" />
+<DATE id="P12" start="2223" end="2231" text="01/09/70" TYPE="DATE" comment="" />
+<NAME id="P13" start="2247" end="2261" text="RONNIE HUFFMAN" TYPE="DOCTOR" comment="" />
+<NAME id="P14" start="2269" end="2273" text="RH31" TYPE="USERNAME" comment="" />
+</TAGS>
+</deIdi2b2>
