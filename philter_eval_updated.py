@@ -46,109 +46,109 @@ file2path = '../../philter-annotations/pooneh/pooneh-done/10263233_phi_reduced.a
 
 def comparison(filename, file1path, file2path):
 
-summary_dict = {}
-output = ''
+    summary_dict = {}
+    output = ''
 
-with open(file1path, 'r', errors = 'ignore') as fin:
-    phi_reduced_note = fin.read()
-
-
-
-with open(file2path, 'rb') as fin:
-    annotation_note = pickle.load(fin)
+    with open(file1path, 'r', errors = 'ignore') as fin:
+        phi_reduced_note = fin.read()
 
 
-# Begin Step 1
-annot_list = [word[0] for word in annotation_note if (word[1] == '0' or word[1] == '2')and word[0] != '']
-phi_list = [word[0] for word in annotation_note if word[1] != '0' and word[1] != '2' and word[0] != '']
-phi_labels = [word[1] for word in annotation_note if word[1] != '0' and word[1] != '2' and word[0] != '']
 
-anno_text = ' '.join(annot_list)
-anno_text = re.sub(r'[\/\-\:\~\_\=\*]', ' ', anno_text)
-annot_list = anno_text.split(' ')
-annot_list = [word for word in annot_list if word != '']
-for i in range(len(annot_list)):
-    if annot_list[i][-1] in punctuation:
-        annot_list[i] = annot_list[i][:-1]
-        # for j in range(len(annot_list[i])-2, 0 ,-1):
-           # if annot_list[i][j] not in punctuation:
-               # annot_list[i] = annot_list[i][:j+1]
-               # break
+    with open(file2path, 'rb') as fin:
+        annotation_note = pickle.load(fin)
 
-#print(annot_list)
-# Begin Step 2
-# get a list of sentences within the note , returns a list of lists  [[sent1],[sent2]] 
-phi_reduced_sentences = sent_tokenize(phi_reduced_note)
-# get a list of words within each sentence, returns a list of lists [[sent1_word1, sent1_word2, etc],[sent2_word1, sent2_word2, etc] ]
-phi_reduced_words = [word_tokenize(sent) for sent in phi_reduced_sentences]
-# a list of all words from the phi_reduced note: [word1, word2, etc]
-phi_reduced_list = [word for sent in phi_reduced_words for word in sent if word not in punctuation]
-phi_r_list = [word for word in phi_reduced_list if '**PHI' not in word]
-phi_reduced_text = ' '.join(phi_r_list)
-phi_reduced_text = re.sub(r'[\/\-\:\~\_\=\*]', ' ', phi_reduced_text)
-phi_r_list = phi_reduced_text.split(' ')
-phi_r_list = [word for word in phi_r_list if word != '']
-for i in range(len(phi_r_list)):
-    if phi_r_list[i][-1] in punctuation:
-         phi_r_list[i] = phi_r_list[i][:-1]
-           # for j in range(len(phi_r_list[i])-2, 0 ,-1):
-           # if phi_r_list[i][j] not in punctuation:
-              # phi_r_list[i] = phi_r_list[i][:j+1]
-               # break
 
-#print(phi_r_list)
-# Begin Step 3
-filtered_count = [word[0] for word in annotation_note if word[1] != '0' and word[1] != '2' and word[0] != '']
+    # Begin Step 1
+    annot_list = [word[0] for word in annotation_note if (word[1] == '0' or word[1] == '2')and word[0] != '']
+    phi_list = [word[0] for word in annotation_note if word[1] != '0' and word[1] != '2' and word[0] != '']
+    phi_labels = [word[1] for word in annotation_note if word[1] != '0' and word[1] != '2' and word[0] != '']
 
-filtered_count = len(filtered_count)
-summary_dict['false_positive'] = []
-summary_dict['false_negative'] = []
-#print(filtered_count)
-#print(annot_list)
+    anno_text = ' '.join(annot_list)
+    anno_text = re.sub(r'[\/\-\:\~\_\=\*]', ' ', anno_text)
+    annot_list = anno_text.split(' ')
+    annot_list = [word for word in annot_list if word != '']
+    for i in range(len(annot_list)):
+        if annot_list[i][-1] in punctuation:
+            annot_list[i] = annot_list[i][:-1]
+            # for j in range(len(annot_list[i])-2, 0 ,-1):
+               # if annot_list[i][j] not in punctuation:
+                   # annot_list[i] = annot_list[i][:j+1]
+                   # break
 
-# marker_and_word are a string, eg "+ word" or "- word"
-# + means that the word appears in the first list but not in the second list
-# - means that the word appears in the second list but not in the first list
-# marker_and_word[2] is the first character of the word. 
-for word_index, marker_and_word in enumerate(ndiff(phi_r_list, annot_list)):
-    if marker_and_word[0] == '+' and re.findall(r'\w+', marker_and_word[2:]) != []:
-        summary_dict['false_positive'].append(marker_and_word[2:])
-        #print(marker_and_word[2:])
-    elif marker_and_word[0] == '-' and re.findall(r'\w+', marker_and_word[2:]) != []:
-        # Find FN tag
+    #print(annot_list)
+    # Begin Step 2
+    # get a list of sentences within the note , returns a list of lists  [[sent1],[sent2]] 
+    phi_reduced_sentences = sent_tokenize(phi_reduced_note)
+    # get a list of words within each sentence, returns a list of lists [[sent1_word1, sent1_word2, etc],[sent2_word1, sent2_word2, etc] ]
+    phi_reduced_words = [word_tokenize(sent) for sent in phi_reduced_sentences]
+    # a list of all words from the phi_reduced note: [word1, word2, etc]
+    phi_reduced_list = [word for sent in phi_reduced_words for word in sent if word not in punctuation]
+    phi_r_list = [word for word in phi_reduced_list if '**PHI' not in word]
+    phi_reduced_text = ' '.join(phi_r_list)
+    phi_reduced_text = re.sub(r'[\/\-\:\~\_\=\*]', ' ', phi_reduced_text)
+    phi_r_list = phi_reduced_text.split(' ')
+    phi_r_list = [word for word in phi_r_list if word != '']
+    for i in range(len(phi_r_list)):
+        if phi_r_list[i][-1] in punctuation:
+             phi_r_list[i] = phi_r_list[i][:-1]
+               # for j in range(len(phi_r_list[i])-2, 0 ,-1):
+               # if phi_r_list[i][j] not in punctuation:
+                  # phi_r_list[i] = phi_r_list[i][:j+1]
+                   # break
 
-        summary_dict['false_negative'].append(marker_and_word[2:])
-if filtered_count == 0:
-    true_positive = 0
-else:
-    true_positive = filtered_count-len(summary_dict['false_negative'])
+    #print(phi_r_list)
+    # Begin Step 3
+    filtered_count = [word[0] for word in annotation_note if word[1] != '0' and word[1] != '2' and word[0] != '']
 
-summary_dict['true_positive'] = true_positive
-if true_positive < 0:
+    filtered_count = len(filtered_count)
     summary_dict['false_positive'] = []
     summary_dict['false_negative'] = []
-    summary_dict['true_positive'] = 'Need to check'
+    #print(filtered_count)
+    #print(annot_list)
 
-    '''
-    output = 'Note: ' + filename + '\n'
-    output += "Script filtered: " + str(filtered_count) + '\n'
-    output += "True positive: " + str(true_positive) + '\n'
-    output += "False Positive: " + ' '.join(summary_dict['false_positive']) + '\n'
-    output += "FP number: " + str(len(summary_dict['false_positive'])) + '\n'
-    output += "False Negative: " + ' '.join(summary_dict['false_negative']) + '\n'
-    output += "FN number: " + str(len(summary_dict['false_negative'])) + '\n'
-    if true_positive == 0 and len(summary_dict['false_negative']) == 0:
-        output += "Recall: N/A\n"
+    # marker_and_word are a string, eg "+ word" or "- word"
+    # + means that the word appears in the first list but not in the second list
+    # - means that the word appears in the second list but not in the first list
+    # marker_and_word[2] is the first character of the word. 
+    for word_index, marker_and_word in enumerate(ndiff(phi_r_list, annot_list)):
+        if marker_and_word[0] == '+' and re.findall(r'\w+', marker_and_word[2:]) != []:
+            summary_dict['false_positive'].append(marker_and_word[2:])
+            #print(marker_and_word[2:])
+        elif marker_and_word[0] == '-' and re.findall(r'\w+', marker_and_word[2:]) != []:
+            # Find FN tag
+
+            summary_dict['false_negative'].append(marker_and_word[2:])
+    if filtered_count == 0:
+        true_positive = 0
     else:
-        output += "Recall: {:.2%}".format(true_positive/(true_positive+len(summary_dict['false_negative']))) + '\n'
-    if true_positive == 0 and len(summary_dict['false_positive']) == 0:
-        output += "Precision: N/A\n"
-    else:
-        output += "Precision: {:.2%}".format(true_positive/(true_positive+len(summary_dict['false_positive']))) + '\n'
-    output += '\n'
-    '''
-    #print(summary_dict)
-    return summary_dict
+        true_positive = filtered_count-len(summary_dict['false_negative'])
+
+    summary_dict['true_positive'] = true_positive
+    if true_positive < 0:
+        summary_dict['false_positive'] = []
+        summary_dict['false_negative'] = []
+        summary_dict['true_positive'] = 'Need to check'
+
+        '''
+        output = 'Note: ' + filename + '\n'
+        output += "Script filtered: " + str(filtered_count) + '\n'
+        output += "True positive: " + str(true_positive) + '\n'
+        output += "False Positive: " + ' '.join(summary_dict['false_positive']) + '\n'
+        output += "FP number: " + str(len(summary_dict['false_positive'])) + '\n'
+        output += "False Negative: " + ' '.join(summary_dict['false_negative']) + '\n'
+        output += "FN number: " + str(len(summary_dict['false_negative'])) + '\n'
+        if true_positive == 0 and len(summary_dict['false_negative']) == 0:
+            output += "Recall: N/A\n"
+        else:
+            output += "Recall: {:.2%}".format(true_positive/(true_positive+len(summary_dict['false_negative']))) + '\n'
+        if true_positive == 0 and len(summary_dict['false_positive']) == 0:
+            output += "Precision: N/A\n"
+        else:
+            output += "Precision: {:.2%}".format(true_positive/(true_positive+len(summary_dict['false_positive']))) + '\n'
+        output += '\n'
+        '''
+        #print(summary_dict)
+        return summary_dict
 
 
 def main():
