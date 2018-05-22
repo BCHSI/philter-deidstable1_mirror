@@ -1519,16 +1519,13 @@ class Philter:
                     phi_tag = current_list_context***REMOVED***1***REMOVED***
                     pos_tag = current_list_context***REMOVED***2***REMOVED***
                     fn_context = current_list_context***REMOVED***3***REMOVED***.replace("\n"," ")
-                    #Context
-                    if current_list_context not in fn_tags_condensed_list_context:                      
-                        fn_tags_condensed_list_context.append(current_list_context)
-                        key_name = "uniq" + str(context_counter)
-                        fn_tags_condensed_context***REMOVED***key_name***REMOVED*** = ***REMOVED***word, phi_tag, pos_tag, fn_context, 1***REMOVED***
-                        context_counter += 1
-                    else:
-                        uniq_id_index = fn_tags_condensed_list_context.index(current_list_context)
-                        uniq_id = "uniq" + str(uniq_id_index)
-                        fn_tags_condensed_context***REMOVED***uniq_id***REMOVED******REMOVED***4***REMOVED*** += 1
+                    
+                    # Context: add each occurrence with corresponding filename                    
+                    fn_tags_condensed_list_context.append(current_list_context)
+                    key_name = "uniq" + str(context_counter)
+                    filename = fn.split('/')***REMOVED***-1***REMOVED***
+                    fn_tags_condensed_context***REMOVED***key_name***REMOVED*** = ***REMOVED***word, phi_tag, pos_tag, fn_context, filename***REMOVED***
+                    context_counter += 1
 
                     # No context
                     if current_list_nocontext not in fn_tags_condensed_list:   
@@ -1556,8 +1553,8 @@ class Philter:
             fp_tags_condensed_list = ***REMOVED******REMOVED***
 
             # Keep track of how many distinct combinations we've added to each list
-            context_counter = 0
             nocontext_counter = 0
+            context_counter = 0
             for fp in fp_tags:
                 file_dict = fp_tags***REMOVED***fp***REMOVED*** 
                 for subfile in file_dict:
@@ -1568,16 +1565,12 @@ class Philter:
                     pos_tag = current_list_context***REMOVED***1***REMOVED***
                     fp_context = current_list_context***REMOVED***2***REMOVED***.replace("\n"," ")
 
-                    # Context
-                    if current_list_context not in fp_tags_condensed_list_context:
-                        fp_tags_condensed_list_context.append(current_list_context)
-                        key_name = "uniq" + str(context_counter)
-                        fp_tags_condensed_context***REMOVED***key_name***REMOVED*** = ***REMOVED***word, pos_tag, fp_context, 1***REMOVED***
-                        context_counter += 1
-                    else:
-                        uniq_id_index = fp_tags_condensed_list_context.index(current_list_context)
-                        uniq_id = "uniq" + str(uniq_id_index)
-                        fp_tags_condensed_context***REMOVED***uniq_id***REMOVED******REMOVED***3***REMOVED*** += 1          
+                    # Context: add each occurrence with corresponding filename
+                    fp_tags_condensed_list_context.append(current_list_context)
+                    key_name = "uniq" + str(context_counter)
+                    filename = fp.split('/')***REMOVED***-1***REMOVED***
+                    fp_tags_condensed_context***REMOVED***key_name***REMOVED*** = ***REMOVED***word, pos_tag, fp_context, filename***REMOVED***
+                    context_counter += 1
 
                     # No Context
                     if current_list_nocontext not in fp_tags_condensed_list:
@@ -1597,13 +1590,13 @@ class Philter:
                 # print(fn_tags_condensed_context)
                 for key in fn_tags_condensed_context:
                     current_list = fn_tags_condensed_context***REMOVED***key***REMOVED***
-                    fn_file.write(key + "|" + current_list***REMOVED***0***REMOVED*** + "|" + current_list***REMOVED***1***REMOVED*** + "|" + current_list***REMOVED***2***REMOVED*** + "|" + current_list***REMOVED***3***REMOVED*** + "|" + str(current_list***REMOVED***4***REMOVED***)+"\n")
+                    fn_file.write(key + "|" + current_list***REMOVED***0***REMOVED*** + "|" + current_list***REMOVED***1***REMOVED*** + "|" + current_list***REMOVED***2***REMOVED*** + "|" + current_list***REMOVED***3***REMOVED*** + "|" + current_list***REMOVED***4***REMOVED***+"\n")
             
             with open(fp_tags_context, "w") as fp_file:
-                fp_file.write("key" + "|" + "note_word" + "|" + "pos_tag" + "|" + "context" + "|" + "occurrences"+"\n")
+                fp_file.write("key" + "|" + "note_word" + "|" + "pos_tag" + "|" + "context" + "|" + "filename"+"\n")
                 for key in fp_tags_condensed_context:
                     current_list = fp_tags_condensed_context***REMOVED***key***REMOVED***
-                    fp_file.write(key + "|" + current_list***REMOVED***0***REMOVED*** + "|" + current_list***REMOVED***1***REMOVED***  + "|" +  current_list***REMOVED***2***REMOVED*** + "|" + str(current_list***REMOVED***3***REMOVED***)+"\n")
+                    fp_file.write(key + "|" + current_list***REMOVED***0***REMOVED*** + "|" + current_list***REMOVED***1***REMOVED***  + "|" +  current_list***REMOVED***2***REMOVED*** + "|" + current_list***REMOVED***3***REMOVED***+"\n")
 
             # No context
             with open(fn_tags_nocontext, "w") as fn_file:
@@ -1613,7 +1606,7 @@ class Philter:
                     fn_file.write(key + "|" + current_list***REMOVED***0***REMOVED*** + "|" + current_list***REMOVED***1***REMOVED*** + "|" + current_list***REMOVED***2***REMOVED*** + "|" + str(current_list***REMOVED***3***REMOVED***)+"\n")
             
             with open(fp_tags_nocontext, "w") as fp_file:
-                fp_file.write("key" + "|" + "note_word" + "|" + "pos_tag" + "|" + "occurrences"+"\n")
+                fp_file.write("key" + "|" + "note_word" + "|" + "pos_tag" + "|" + "filename"+"\n")
                 for key in fp_tags_condensed:
                     current_list = fp_tags_condensed***REMOVED***key***REMOVED***
                     fp_file.write(key + "|" + current_list***REMOVED***0***REMOVED*** + "|" + current_list***REMOVED***1***REMOVED***  + "|" +  str(current_list***REMOVED***2***REMOVED***)+"\n")            
