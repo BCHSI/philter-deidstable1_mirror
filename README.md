@@ -58,8 +58,11 @@ Arguments:
 - ("-o", "--output")= Path to the directory where your updated/edited annotated note will be saved.
 - ("-r", "--random") = Have Philter pick a random file from the input directory that has not already been annotated. Recommend. 
 
-**philter**
+**philter (for Windows Users)**
 ``` philter -i ./raw_notes_dir -r -o dir_to_write_to -p 32```
+
+**philter (for Mac Users)**
+``` philter -i ./raw_notes_dir -o dir_to_write_to -m False```
 
 Arguments:
 
@@ -69,6 +72,7 @@ Arguments:
 - ("-w", "--whitelist") = Path to the whitelist, the default is phireducer/whitelist.pkl
 - ("-n", "--name") = The key word of the output file name, the default is *_phi_reduced.txt.
 - ("-p", "--process") = The number of processes to run simultaneously, the default is 1.
+- ("-m", "--multi") = Whether to run in multi-threaded mode or not, default is true. Note this often breaks on OS-X sytems.
 
 **eval.py**
 ```phi-eval -p dir_containing_phi_notes -a dir_annotated_pkl.ano -o output_path```
