@@ -40,7 +40,7 @@ def isolate_phi(xml_folder):
 isolate_phi(xml_folder)
 
 #save our data
-json.dump(phi, open("phi_notes_updated.json", "w"), indent=4)
+json.dump(phi, open("phi/phi_notes_updated.json", "w"), indent=4)
 
 NOTES_FOLDER = "../data/i2b2_notes_updated/"
 ANNO_FOLDER = "../data/i2b2_anno_updated/"
