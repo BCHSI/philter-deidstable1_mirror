@@ -1320,7 +1320,7 @@ class Philter:
                         phi_count = unigram_dict[key][0]
                         non_phi_count = unigram_dict[key][1]
                         f.write(word + ',' + str(phi_count) + ',' + str(non_phi_count) + '\n')
-                with open('./data/phi/bigranm_freq_table.csv','w') as f:
+                with open('./data/phi/bigram_freq_table.csv','w') as f:
                     f.write('bigram,phi_count,non-phi_count\n')
                     for key in bigram_dict:
                         term = key
