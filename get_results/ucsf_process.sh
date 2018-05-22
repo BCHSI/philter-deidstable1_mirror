@@ -68,5 +68,14 @@ python3 /media/DataHD/r_phi_corpus/kathleen/de-id_stable1/philter_eval.py -p /me
 nohup python3 /media/DataHD/r_phi_corpus/kathleen/de-id_stable1/philter_2.0.py -i /media/DataHD/philter-annotations/pooneh/input_notes/ -o /media/DataHD/r_phi_corpus/kathleen/philter_2.0_results -r -p 32 > philter_1.3_out.txt 2>&1 &
 python3 /media/DataHD/r_phi_corpus/kathleen/de-id_stable1/philter_eval.py -p /media/DataHD/r_phi_corpus/kathleen/philter_2.0_results -a /media/DataHD/philter-annotations/pooneh/pooneh-done/ -o /media/DataHD/r_phi_corpus/kathleen/philter_2.0_eval/
 
+# philteroct19
+nohup python3 /media/DataHD/r_phi_corpus/kathleen/de-id_stable1/philter_oct19.py -i /media/DataHD/philter-annotations/pooneh/input_notes/ -o /media/DataHD/r_phi_corpus/kathleen/philter_oct19_results -r -p 32 > philter_oct19_out.txt 2>&1 &
+python3 /media/DataHD/r_phi_corpus/kathleen/de-id_stable1/philter_eval.py -p /media/DataHD/r_phi_corpus/kathleen/philter_oct19_results -a /media/DataHD/philter-annotations/pooneh/pooneh-done/ -o /media/DataHD/r_phi_corpus/kathleen/philter_oct19_eval/
+
+
+
+
+
+
 
 
