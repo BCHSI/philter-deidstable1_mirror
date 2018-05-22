@@ -39,3 +39,31 @@ python3 /media/DataHD/r_phi_corpus/kathleen/de-id_stable1/getFNcategory_fred.py
 /media/DataHD/r_phi_corpus/kathleen/ucsf_eval_whitelist/summary_dict.pkl
 # ...and for the path to the directory containing the annotation files
 /media/DataHD/philter-annotations/pooneh/pooneh-done
+
+
+# installed
+python3 /media/DataHD/r_phi_corpus/kathleen/de-id_stable1/philter_eval.py -p /media/DataHD/philter-annotations/pooneh/philtered_notes -a /media/DataHD/philter-annotations/pooneh/pooneh-done/ -o /media/DataHD/r_phi_corpus/kathleen/ucsf_eval/
+
+# installed
+python3 /media/DataHD/r_phi_corpus/kathleen/de-id_stable1/philter_eval.py -p /media/DataHD/r_phi_corpus/kathleen/de-id_stable1/data/ucsf_results/ -a /media/DataHD/philter-annotations/pooneh/pooneh-done/ -o /media/DataHD/r_phi_corpus/kathleen/eval_test_new/
+
+# philter1.0
+nohup python3 /media/DataHD/r_phi_corpus/kathleen/de-id_stable1/philter_1.0.py -i /media/DataHD/philter-annotations/pooneh/input_notes/ -o /media/DataHD/r_phi_corpus/kathleen/philter_1.0_results -r -p 8 > philter_1.0_out.txt 2>&1 &
+python3 /media/DataHD/r_phi_corpus/kathleen/de-id_stable1/philter_eval.py -p /media/DataHD/r_phi_corpus/kathleen/philter_1.0_results -a /media/DataHD/philter-annotations/pooneh/pooneh-done/ -o /media/DataHD/r_phi_corpus/kathleen/philter_1.0_eval/
+
+
+# philter1.1
+nohup python3 /media/DataHD/r_phi_corpus/kathleen/de-id_stable1/philter_1.1.py -i /media/DataHD/philter-annotations/pooneh/input_notes/ -o /media/DataHD/r_phi_corpus/kathleen/philter_1.1_results -r -p 8 > philter_1.1_out.txt 2>&1 &
+python3 /media/DataHD/r_phi_corpus/kathleen/de-id_stable1/philter_eval.py -p /media/DataHD/r_phi_corpus/kathleen/philter_1.1_results -a /media/DataHD/philter-annotations/pooneh/pooneh-done/ -o /media/DataHD/r_phi_corpus/kathleen/philter_1.1_eval/
+
+# philter1.2
+nohup python3 /media/DataHD/r_phi_corpus/kathleen/de-id_stable1/philter_1.2.py -i /media/DataHD/philter-annotations/pooneh/input_notes/ -o /media/DataHD/r_phi_corpus/kathleen/philter_1.2_results -r -p 8 > philter_1.2_out.txt 2>&1 &
+python3 /media/DataHD/r_phi_corpus/kathleen/de-id_stable1/philter_eval.py -p /media/DataHD/r_phi_corpus/kathleen/philter_1.2_results -a /media/DataHD/philter-annotations/pooneh/pooneh-done/ -o /media/DataHD/r_phi_corpus/kathleen/philter_1.2_eval/
+
+# philter1.
+nohup python3 /media/DataHD/r_phi_corpus/kathleen/de-id_stable1/philter_1.3.py -i /media/DataHD/philter-annotations/pooneh/input_notes/ -o /media/DataHD/r_phi_corpus/kathleen/philter_1.3_results -r -p 8 > philter_1.3_out.txt 2>&1 &
+python3 /media/DataHD/r_phi_corpus/kathleen/de-id_stable1/philter_eval.py -p /media/DataHD/r_phi_corpus/kathleen/philter_1.3_results -a /media/DataHD/philter-annotations/pooneh/pooneh-done/ -o /media/DataHD/r_phi_corpus/kathleen/philter_1.3_eval/
+
+
+
+

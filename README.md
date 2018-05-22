@@ -43,7 +43,8 @@ You can learn more about the model at the [spacy model documentation]("https://s
 
 Note for Windows Users: This command must be run with admin previleges because it will create a *short-cut link* that let's you load a model by name.
 
-
+Note for Mac Users: If an OSError is generated when running philter, the *short-cut link* may need to be set manually with the following command:
+``` sudo ln -s /Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/en_core_web_sm /usr/local/lib/python3.6/site-packages/spacy/data/en```
 
 # Run
 
