@@ -671,7 +671,6 @@ def main():
     try:
         if args.multi:
             results_list = [r.get() for r in results]
-        results_list = [r.get() for r in results]
         total_records, phi_containing_records = zip(*results_list)
         total_records = sum(total_records)
         phi_containing_records = sum(phi_containing_records)
