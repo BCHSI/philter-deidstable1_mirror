@@ -1461,7 +1461,7 @@ class Philter:
 
             # pretty print category recalls
             category_data.sort(key=lambda x: float(x***REMOVED***1***REMOVED******REMOVED***:-1***REMOVED***),reverse=True)
-            sorted_category_data = ***REMOVED******REMOVED***"Tag","Recall","TPs","FNs"***REMOVED******REMOVED***
+            sorted_category_data = ***REMOVED******REMOVED***"Category","Recall","TPs","FNs"***REMOVED******REMOVED***
             for item in category_data:
                 sorted_category_data.append(item)
 
@@ -1586,7 +1586,7 @@ class Philter:
             # Write FN and FP results to outfolder
             # Conext
             with open(fn_tags_context, "w") as fn_file:
-                fn_file.write("key" + "|" + "note_word" + "|" + "phi_tag" + "|" + "pos_tag" + "|" + "context" + "|" + "occurrences"+"\n")
+                fn_file.write("key" + "|" + "note_word" + "|" + "phi_tag" + "|" + "pos_tag" + "|" + "context" + "|" + "filename"+"\n")
                 # print(fn_tags_condensed_context)
                 for key in fn_tags_condensed_context:
                     current_list = fn_tags_condensed_context***REMOVED***key***REMOVED***
