@@ -645,9 +645,9 @@ def main():
     filepath = os.path.join(foutpath,'filter_summary.txt')
     with open(filepath, 'w') as fout:
         fout.write("")
+    
     # start multiprocess
     pool = Pool(processes=process_number)
-
     results_list = []
     filter_time = time.time()
     if args.multi == True:
@@ -655,18 +655,18 @@ def main():
         # apply_async() allows a worker to begin a new task before other works have completed their current task
         if os.path.isdir(finpath):
             if args.recursive:
-                results = [pool.apply_async(filter_task, (f,)+(whitelist, foutpath, key_name)) for f in glob.glob   (finpath+"/**/*.txt", recursive=True)]
+                results = [pool.apply_async(filter_task, (f,)+(whitelist, blacklist, foutpath, key_name, NumPhilter)) for f in glob.glob   (finpath+"/**/*.txt", recursive=True)]
             else:
-                results = [pool.apply_async(filter_task, (f,)+(whitelist, foutpath, key_name)) for f in glob.glob   (finpath+"/*.txt")]
+                results = [pool.apply_async(filter_task, (f,)+(whitelist, blacklist, foutpath, key_name, NumPhilter)) for f in glob.glob   (finpath+"/*.txt")]
         else:
-            results = [pool.apply_async(filter_task, (f,)+(whitelist, foutpath, key_name)) for f in glob.glob(  finpath)]
+            results = [pool.apply_async(filter_task, (f,)+(whitelist, blacklist, foutpath, key_name, NumPhilter)) for f in glob.glob(  finpath)]
     else:
         print("Multithreaded mode OFF")
         #async create our processes to be run
         for root, dirs, files in os.walk(finpath):
             for f in files:
                 #processes.append(multiprocessing.Process(target=filter_task, args=(root+"/"+f, whitelist, foutpath, key_name, output)))
-                results_list.append(filter_task(root+"/"+f, whitelist, foutpath, key_name))
+                results_list.append(filter_task(root+"/"+f, whitelist, blacklist, foutpath, key_name, NumPhilter))
 
     try:
         if args.multi:

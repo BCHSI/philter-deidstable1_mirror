@@ -10,7 +10,7 @@ python3 /media/DataHD/r_phi_corpus/kathleen/de-id_stable1/philter_2.0.py -i /med
 python3 /media/DataHD/r_phi_corpus/kathleen/de-id_stable1/philter_eval.py -p /media/DataHD/r_phi_corpus/kathleen/de-id_stable1/data/philter_2.0_results/ -a /media/DataHD/philter-annotations/pooneh/pooneh-done/ -o /media/DataHD/r_phi_corpus/kathleen/philter_2.0_eval/
 
 # 3. Run false negative script
-python3 /media/DataHD/r_phi_corpus/kathleen/de-id_stable1/getFNcategory_mit.py
+python3 /media/DataHD/r_phi_corpus/kathleen/de-id_stable1/getFNcategory_kathleen.py
 # The script will ask you to input the path to the summary dictionary:
 /media/DataHD/r_phi_corpus/kathleen/philter_2.0_eval/summary_dict.pkl
 # ...and for the path to the directory containing the annotation files
