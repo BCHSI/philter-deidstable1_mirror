@@ -20,7 +20,7 @@ def getcategory(summary, anno_path, fn_correction_path):
 
 
     FN_dict = {'Name FNs':[], 'Location FNs':[], 'Date FNs':[], 'Contact FNs':[], 'ID FNs':[], 'Age(>90) FNs':[], 'Not PHI':[]}
-    
+
     category_dict = {'0':'Not PHI','o':'Not PHI',
                      'n':'Name FNs', 'l':'Location FNs', 'd':'Date FNs',
                      'c':'Contact FNs', 'i':'ID FNs', 'a':'Age(>90) FNs'}
@@ -148,8 +148,7 @@ def main():
     FN_dict = getcategory(summary, anno_path, fn_correction_path)
     
     for subdict in FN_dict:
-        print(subdict)
-        print(len(FN_dict[subdict]))
+        print(subdict + ": " str(len(FN_dict[subdict])))
     
     out_path = summary_path.split("summary_dict.pkl")[0] + 'FN_dict.json'  
 
