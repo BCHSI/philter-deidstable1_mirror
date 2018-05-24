@@ -16,11 +16,7 @@ def getcategory(summary, anno_path):
     '''
     # summary_path = 'summary_dict.pkl'
     # anno_path = '/media/DataHD/philter-annotations/pooneh/pooneh-done'
-    summary_path = sys.argv[1]
-    with open(summary_path, 'rb') as fin:
-        summary = pickle.load(fin)
-    anno_path = sys.argv[2]
-    fn_correction_path = sys.argv[3]
+
 
     FN_dict = {'Name FNs':[], 'Location FNs':[], 'Date FNs':[], 'Contact FNs':[], 'ID FNs':[], 'Age(>90) FNs':[], 'Not PHI':[],
                 'True Negatives':[], 'True Positives':[], 'False Positives':[]}
@@ -140,12 +136,16 @@ def getcategory(summary, anno_path):
 
 
 def main():
-
+    summary_path = sys.argv[1]
+    
+    with open(summary_path, 'rb') as fin:
+        summary = pickle.load(fin)
+    
+    anno_path = sys.argv[2]
+    
+    fn_correction_path = sys.argv[3]
     FN_dict = getcategory(summary, anno_path)
 
     with open('FN_dict.pkl', 'wb') as fout:
         pickle.dump(FN_dict, fout)
 
-
-if __name__ == "__main__":
-    main()
