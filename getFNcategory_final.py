@@ -156,3 +156,5 @@ def main():
     with open(out_path, 'wb') as fout:
         pickle.dump(FN_dict, fout)
 
+if __name__ == "__main__":
+    main()

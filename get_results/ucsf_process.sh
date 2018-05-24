@@ -10,20 +10,13 @@ python3 /media/DataHD/r_phi_corpus/kathleen/de-id_stable1/philter_2.0.py -i /med
 python3 /media/DataHD/r_phi_corpus/kathleen/de-id_stable1/philter_eval.py -p /media/DataHD/r_phi_corpus/kathleen/de-id_stable1/data/philter_2.0_results/ -a /media/DataHD/philter-annotations/pooneh/pooneh-done/ -o /media/DataHD/r_phi_corpus/kathleen/philter_2.0_eval/
 
 # 3. Run false negative script
-python3 /media/DataHD/r_phi_corpus/kathleen/de-id_stable1/getFNcategory_kathleen.py
+python3 /media/DataHD/r_phi_corpus/kathleen/de-id_stable1/getFNcategory_final.py /media/DataHD/r_phi_corpus/kathleen/philter_2.0_eval/summary_dict.pkl /media/DataHD/philter-annotations/pooneh/pooneh-done /media/DataHD/r_phi_corpus/kathleen/philter_2.0_eval/fn_categories_ucsf_philter2.csv
 # The script will ask you to input the path to the summary dictionary:
 /media/DataHD/r_phi_corpus/kathleen/philter_2.0_eval/summary_dict.pkl
 # ...and for the path to the directory containing the annotation files
 /media/DataHD/philter-annotations/pooneh/pooneh-done
 
 # Results json file is outputted to the same directory that the summary file is located in
-# To visualize FN categories, enter these commands into the terminal within the resuls directory:
-python3
-import json
-results = json.loads(open("FN_dict.json").read())
-for subdict in results:
-	print(subdict)
-	print(len(results[subdict]))
 
 
 ##### Whitelist only ######
