@@ -145,7 +145,7 @@ def main():
     anno_path = sys.argv[2]
     
     fn_correction_path = sys.argv[3]
-    FN_dict = getcategory(summary, anno_path)
+    FN_dict = getcategory(summary, anno_path, fn_correction_path)
     
     for subdict in FN_dict:
         print(subdict)
