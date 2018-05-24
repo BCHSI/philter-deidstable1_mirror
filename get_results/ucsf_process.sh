@@ -17,6 +17,11 @@ python3 /media/DataHD/r_phi_corpus/kathleen/de-id_stable1/philter_eval.py -p /me
 # Recall: 96.96%
 # Precision: 74.80%
 
+# 2a. Run get_unlabeled_fns script to gather phi without a category label, and manually annotate category (including non-phi, if you don't agree with original annotation)
+# This will not create any output files bit rather output the 
+# Create 2-column csv (word, category) containing all annotations, and upload to eval folder
+python3 /media/DataHD/r_phi_corpus/kathleen/de-id_stable1/get_unlabeled_fns.py /media/DataHD/r_phi_corpus/kathleen/philter_2.0_eval/summary_dict.pkl /media/DataHD/philter-annotations/pooneh/pooneh-done
+
 # 3. Run false negative script
 python3 /media/DataHD/r_phi_corpus/kathleen/de-id_stable1/getFNcategory_final.py /media/DataHD/r_phi_corpus/kathleen/philter_2.0_eval/summary_dict.pkl /media/DataHD/philter-annotations/pooneh/pooneh-done /media/DataHD/r_phi_corpus/kathleen/philter_2.0_eval/fn_categories_ucsf_philter2.csv
 
@@ -86,6 +91,10 @@ python /media/DataHD/r_phi_corpus/kathleen/mit_deid/MIT_process2.py
 
 # 10. Run eval script on phi-reduced notes
 python3 /media/DataHD/r_phi_corpus/kathleen/de-id_stable1/philter_eval.py -p /media/DataHD/r_phi_corpus/kathleen/mit_deid/mit_reduced -a /media/DataHD/philter-annotations/pooneh/pooneh-done/ -o /media/DataHD/r_phi_corpus/kathleen/mit_deid/mit_eval
+
+# 10a. Run get_unlabeled_fns script to gather phi without a category label, and manually annotate category (including non-phi, if you don't agree with original annotation)
+# Create 2-column csv (word, category) containing all annotations, and upload to eval folder
+python3 /media/DataHD/r_phi_corpus/kathleen/de-id_stable1/get_unlabeled_fns.py /media/DataHD/r_phi_corpus/kathleen/mit_deid/mit_eval/summary_dict.pkl /media/DataHD/philter-annotations/pooneh/pooneh-done
 
 # 11. Run FN categorization script on MIT notes
 python3 /media/DataHD/r_phi_corpus/kathleen/de-id_stable1/getFNcategory_final.py /media/DataHD/r_phi_corpus/kathleen/mit_deid/mit_eval/summary_dict.pkl /media/DataHD/philter-annotations/pooneh/pooneh-done/ /media/DataHD/r_phi_corpus/kathleen/mit_deid/mit_eval/fn_categories_mit.csv
