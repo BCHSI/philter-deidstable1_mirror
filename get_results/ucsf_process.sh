@@ -63,5 +63,41 @@ python3 /media/DataHD/r_phi_corpus/kathleen/de-id_stable1/philter_eval.py -p /me
 # Precision: 43.28%
 
 
+######### MIT Tool ##########
+
+# 8. Run MIT de-id tool on UCSF 200
+perl /media/DataHD/r_phi_corpus/kathleen/mit_deid/deid-1.1/deid.pl id /media/DataHD/r_phi_corpus/kathleen/mit_deid/deid-1.1/deid.config
+
+# Expected output:
+# Num of true positives = 0
+
+# Num of false positives = 4777
+
+# Num of false negatives = 39
+
+# Sensitivity/Recall = 0
+
+# PPV/Specificity = 0
+
+# 9. Run processing sript on output, so notes can be evaluated
+python /media/DataHD/r_phi_corpus/kathleen/mit_deid/MIT_process2.py
+'/media/DataHD/r_phi_corpus/kathleen/mit_deid/deid-1.1/id.res'
+'/media/DataHD/r_phi_corpus/kathleen/mit_deid/mit_reduced'
+
+# 10. Run eval script on phi-reduced notes
+python3 /media/DataHD/r_phi_corpus/kathleen/de-id_stable1/philter_eval.py -p /media/DataHD/r_phi_corpus/kathleen/mit_deid/mit_reduced -a /media/DataHD/philter-annotations/pooneh/pooneh-done/ -o /media/DataHD/r_phi_corpus/kathleen/mit_deid/mit_eval
+
+# 11. Run FN categorization script on MIT notes
+python3 /media/DataHD/r_phi_corpus/kathleen/de-id_stable1/getFNcategory_final.py /media/DataHD/r_phi_corpus/kathleen/mit_deid/mit_eval/summary_dict.pkl /media/DataHD/philter-annotations/pooneh/pooneh-done/ /media/DataHD/r_phi_corpus/kathleen/mit_deid/mit_eval/fn_categories_mit.csv
+
+# Expected results:
+# ID FNs: 203
+# Not PHI: 131
+# Date FNs: 326
+# Age(>90) FNs: 0
+# Location FNs: 263
+# Contact FNs: 46
+# Name FNs: 137
+
 
 
