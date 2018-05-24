@@ -5,7 +5,7 @@ import sys
 import json
 
 
-def getcategory(summary, anno_path):
+def getcategory(summary, anno_path, fn_correction_path):
     '''
     return FN's category
     input:
