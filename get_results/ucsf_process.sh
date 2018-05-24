@@ -21,20 +21,21 @@ python3 /media/DataHD/r_phi_corpus/kathleen/de-id_stable1/philter_eval.py -p /me
 python3 /media/DataHD/r_phi_corpus/kathleen/de-id_stable1/getFNcategory_final.py /media/DataHD/r_phi_corpus/kathleen/philter_2.0_eval/summary_dict.pkl /media/DataHD/philter-annotations/pooneh/pooneh-done /media/DataHD/r_phi_corpus/kathleen/philter_2.0_eval/fn_categories_ucsf_philter2.csv
 
 # Expected output:
-# Not PHI: 13
+# Not PHI: 16
 # Age(>90) FNs: 0
-# Date FNs: 81
-# Contact FNs: 22
+# Contact FNs: 18
+# Date FNs: 46
+# Name FNs: 94
+# Location FNs: 72
 # ID FNs: 2
-# Name FNs: 93
-# Location FNs: 71
 
-
+# NOT PHI count will be subtracted from total number of FNs. The sum of all categories may also be slightly different than results from #2, due to outdated eval script
 ##### Whitelist only ######
-# 1. Run the whitelist-only scrpt on the UCSF 200
+
+# 4. Run the whitelist-only scrpt on the UCSF 200
 python3 /media/DataHD/r_phi_corpus/kathleen/de-id_stable1/philter_whitelist.py -i /media/DataHD/philter-annotations/pooneh/input_notes/ -o /media/DataHD/r_phi_corpus/kathleen/ucsf_results_whitelist/ -r -p 32
 
-# 2. Run evaluation script on de-identified ucsf notes
+# 5. Run evaluation script on de-identified ucsf notes
 python3 /media/DataHD/r_phi_corpus/kathleen/de-id_stable1/philter_eval.py -p /media/DataHD/r_phi_corpus/kathleen/ucsf_results_whitelist/ -a /media/DataHD/philter-annotations/pooneh/pooneh-done/ -o /media/DataHD/r_phi_corpus/kathleen/ucsf_eval_whitelist/
 
 # Expected results:
@@ -47,10 +48,10 @@ python3 /media/DataHD/r_phi_corpus/kathleen/de-id_stable1/philter_eval.py -p /me
 
 
 ##### Whitelist + Regex ######
-# 1. Run the whitelist-only scrpt on the UCSF 200
+# 6. Run the whitelist-only scrpt on the UCSF 200
 python3 /media/DataHD/r_phi_corpus/kathleen/de-id_stable1/philter_whitelist_regex.py -i /media/DataHD/philter-annotations/pooneh/input_notes/ -o /media/DataHD/r_phi_corpus/kathleen/ucsf_results_whitelist_regex/ -r -p 32
 
-# 2. Run evaluation script on de-identified ucsf notes
+# 7. Run evaluation script on de-identified ucsf notes
 python3 /media/DataHD/r_phi_corpus/kathleen/de-id_stable1/philter_eval.py -p /media/DataHD/r_phi_corpus/kathleen/ucsf_results_whitelist_regex/ -a /media/DataHD/philter-annotations/pooneh/pooneh-done/ -o /media/DataHD/r_phi_corpus/kathleen/ucsf_eval_whitelist_regex/
 
 # Expected results:

@@ -1,0 +1,4632 @@
+Note: 201-05_phi_reduced
+True positive: 62
+False Positive: lightheadiness glypizide Esomesoprazole MGR Lang VFFC shrugs XII 4 5 4 5 5 5 5 5 Babinski RDW 59 Head NIHSS Head TCDs SBP ROMI Glypizide Winchendon
+FP number: 27
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 69.66%
+
+Note: 165-04_phi_reduced
+True positive: 265
+False Positive: nonradiating TPG Twave PE MSO4 Asa QHS Neurontin MSO4 SR O2sat 5 5 Babinskis 4.00 5.20 RDW 11.5 14.5 Diff Eos Diff Eos 11.3 13.3 1.001 1.035 TDM 17 RADIOLOGY Chest Ab Chest ASA pheo AB SSIR Prophy prophy
+FP number: 39
+False Negative: 4
+FN number: 1
+Recall: 99.62%
+Precision: 87.17%
+
+Note: 340-01_phi_reduced
+True positive: 46
+False Positive: CAROLYN BAILEY AL CHB CAROLYN BAILEY AL CHB
+FP number: 8
+False Negative: CP FO 3549
+FN number: 3
+Recall: 93.88%
+Precision: 85.19%
+
+Note: 192-01_phi_reduced
+True positive: 30
+False Positive: FCH Short D
+FP number: 3
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 90.91%
+
+Note: 312-04_phi_reduced
+True positive: 52
+False Positive: Khazakhstani IJ McLaren mucomycosis Nafcillin Remeron QHS 20 MG 20MG CAPSULE QHS AC OpenMarket McLaren PERL XII 5 5 13.5 17.5 RDW 11.5 14.5 Chemistry Plasma Sodium mmol L Plasma mmol L Plasma mmol L Plasma Carbon Plasma Plasma Plasma Glucose Parathyroid No TWIs Kazakhstani IJ Contine CaCarbonate
+FP number: 48
+False Negative: 24th
+FN number: 1
+Recall: 98.11%
+Precision: 52.00%
+
+Note: 386-01_phi_reduced
+True positive: 9
+False Positive: passanger Hasn relif LOTENSIN 2PUFFS QHS QHS 1000MG midline Strenght 5 5 Prescr Accucheck
+FP number: 14
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 39.13%
+
+Note: 168-04_phi_reduced
+True positive: 43
+False Positive: q.3h Lac Hydrin Iod VFF Trapezii 5 5 XII fashion.When antigravity Jaw Coord Magnesium Globulin 55 mg dl Studies TWF MgSO4 insuff
+FP number: 22
+False Negative: Mon
+FN number: 1
+Recall: 97.73%
+Precision: 66.15%
+
+Note: 137-01_phi_reduced
+True positive: 34
+False Positive: Eudowood WI Roper CT CT Roper CT CT CSSten
+FP number: 9
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 79.07%
+
+Note: 371-04_phi_reduced
+True positive: 21
+False Positive: dCHF OXYCODONE+APAP QHS BIW 40 MG 40MG CAPSULE 100MCG 500MG 5ML TAB 500MG 200 TAB Chelates Gadolinuim MMPs hjr Repeat metfromin bipsy 2 2
+FP number: 24
+False Negative: oct 12 Ferrara
+FN number: 3
+Recall: 87.50%
+Precision: 46.67%
+
+Note: 202-02_phi_reduced
+True positive: 65
+False Positive: Broome NE Tikosyn DFFocus Koenen Collins NE
+FP number: 7
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 90.28%
+
+Note: 216-01_phi_reduced
+True positive: 28
+False Positive: Bystanders D
+FP number: 2
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 93.33%
+
+Note: 166-03_phi_reduced
+True positive: 22
+False Positive: SSCP SSCP snow palps TnI Nitropaste 1 2 WPH Elidel Zolpidem QHS Maalox Audiovox BrightPoint Cigs O2sat MMs Neck No no Abd Ext no Plasma Sodium Plasma Plasma Plasma meq L Plasma Plasma Plasma Glucose LIPIP TnI WPH glucose Hct 13.5 17.5 RDW 11.5 14.5 13.2 10.3 TWF No Nitropaste Integrilin no no No WMAs FSBGs nephroprotection Ppx
+FP number: 58
+False Negative: Whittaker Whittaker
+FN number: 2
+Recall: 91.67%
+Precision: 27.50%
+
+Note: 372-03_phi_reduced
+True positive: 68
+False Positive: CROSS decibutus SBP decibutus Xanax T8 T12 UTI 's 1.5ppd*20yrs S2 CNII XII 5 5 glypizide HemA1C opthamologist SBP decibutus Zanax
+FP number: 21
+False Negative: 1.5ppd 20yrs
+FN number: 2
+Recall: 97.14%
+Precision: 76.40%
+
+Note: 311-03_phi_reduced
+True positive: 27
+False Positive: EDVISIT complains
+FP number: 2
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 93.10%
+
+Note: 349-02_phi_reduced
+True positive: 10
+False Positive: RTKR Advair Diskus QHS 1000MG QHS HgA1C CPE
+FP number: 8
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 55.56%
+
+Note: 382-02_phi_reduced
+True positive: 13
+False Positive: I ronchi fibrosism noderate teh multigfactorial HgA1c toset
+FP number: 8
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 61.90%
+
+Note: 234-03_phi_reduced
+True positive: 25
+False Positive: EDVISIT of V TACH 3 6
+FP number: 6
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 80.65%
+
+Note: 344-02_phi_reduced
+True positive: 29
+False Positive: 7 10 Tenovate Bupropron D
+FP number: 5
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 85.29%
+
+Note: 196-02_phi_reduced
+True positive: 39
+False Positive: NV Evans NV I CSSten
+FP number: 5
+False Negative: Sheehan
+FN number: 1
+Recall: 97.50%
+Precision: 88.64%
+
+Note: 116-04_phi_reduced
+True positive: 36
+False Positive: ME complains DD DT
+FP number: 4
+False Negative: Earnest Earnest Earnest RH KU
+FN number: 5
+Recall: 87.80%
+Precision: 90.00%
+
+Note: 239-03_phi_reduced
+True positive: 20
+False Positive: Eureka Hospital NephrologistHyperlipidemia tripothyNoncompliance L FootAbscess DMitral LGF SO2 A+O DATAEKG PCXR Head hpfUA hpfUA 13.5 17.5 cmmPLT dlMagnesium Pyuria
+FP number: 20
+False Negative: ULYSSES
+FN number: 1
+Recall: 95.24%
+Precision: 50.00%
+
+Note: 211-05_phi_reduced
+True positive: 30
+False Positive: sctivity
+FP number: 1
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 96.77%
+
+Note: 237-04_phi_reduced
+True positive: 34
+False Positive: BEAUREGARD I SVG OM1 occl Assurant Atacand Metroprolol tab Married andCAD Best MIBI.2 Rutherford endarterectomy.3 BMH.4
+FP number: 16
+False Negative: Fuchs Fuchs
+FN number: 2
+Recall: 94.44%
+Precision: 68.00%
+
+Note: 118-03_phi_reduced
+True positive: 18
+False Positive: spincterotomy Abdo
+FP number: 2
+False Negative: Ochs
+FN number: 1
+Recall: 94.74%
+Precision: 90.00%
+
+Note: 130-05_phi_reduced
+True positive: 25
+False Positive: EDVISIT squirting EHCC
+FP number: 3
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 89.29%
+
+Note: 268-01_phi_reduced
+True positive: 19
+False Positive: Phoenix HDH CASHD EMTs Chrysler I HDH P44 48 R16 VFFtC 5 5 Tandems RDW Phoenix
+FP number: 16
+False Negative: Riddle
+FN number: 1
+Recall: 95.00%
+Precision: 54.29%
+
+Note: 206-01_phi_reduced
+True positive: 22
+False Positive: elev QHS nocturia ronchi 2 2 May
+FP number: 7
+False Negative: Lima
+FN number: 1
+Recall: 95.65%
+Precision: 75.86%
+
+Note: 212-02_phi_reduced
+True positive: 12
+False Positive: FERNANDO visitLantus qhs
+FP number: 3
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 80.00%
+
+Note: 115-03_phi_reduced
+True positive: 23
+False Positive: EDVISIT I interviewed Ihle bases
+FP number: 5
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 82.14%
+
+Note: 265-01_phi_reduced
+True positive: 25
+False Positive: JELLICO CVAs D
+FP number: 3
+False Negative: FOY
+FN number: 1
+Recall: 96.15%
+Precision: 89.29%
+
+Note: 264-04_phi_reduced
+True positive: 23
+False Positive: EDVISIT 3 6
+FP number: 3
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 88.46%
+
+Note: 207-04_phi_reduced
+True positive: 25
+False Positive: EDVISIT Mamaroneck Chest XII CKs Chest
+FP number: 6
+False Negative: INDIGO IP INDIGO IP INDIGO
+FN number: 5
+Recall: 83.33%
+Precision: 80.65%
+
+Note: 163-05_phi_reduced
+True positive: 6
+False Positive: Anemia Temperomandibular Fibromyalgia TAB .5
+FP number: 5
+False Negative: Marion New Year 's
+FN number: 4
+Recall: 60.00%
+Precision: 54.55%
+
+Note: 319-05_phi_reduced
+True positive: 14
+False Positive: NCHCT MDp
+FP number: 2
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 87.50%
+
+Note: 269-04_phi_reduced
+True positive: 16
+False Positive: Intro insulinSS Fam Hx percoset hematemasis dyuria gallup STTW nephrop Chest
+FP number: 11
+False Negative: Springer
+FN number: 1
+Recall: 94.12%
+Precision: 59.26%
+
+Note: 314-05_phi_reduced
+True positive: 77
+False Positive: Martha Washington MN I Eddie Bauer QHS AC QHS TAB 20 MG 20MG CAPSULE TAB.SR 42 UMN 5 5 CEREB Lenox Qpt
+FP number: 22
+False Negative: Galena Galena
+FN number: 2
+Recall: 97.47%
+Precision: 77.78%
+
+Note: 236-01_phi_reduced
+True positive: 51
+False Positive: CGI CGI O'clock INDIANOLA
+FP number: 4
+False Negative: Light WV AV 8176
+FN number: 4
+Recall: 92.73%
+Precision: 92.73%
+
+Note: 204-03_phi_reduced
+True positive: 41
+False Positive: PERDUE ditsal Minivision MPHR muscolskeletal Hyperlipideimia TGs
+FP number: 7
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 85.42%
+
+Note: 160-02_phi_reduced
+True positive: 24
+False Positive: 
+FP number: 0
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 100.00%
+
+Note: 379-02_phi_reduced
+True positive: 37
+False Positive: BAYONNE AZ 10.4 7.9 500mg
+FP number: 5
+False Negative: jaeger
+FN number: 1
+Recall: 97.37%
+Precision: 88.10%
+
+Note: 267-03_phi_reduced
+True positive: 27
+False Positive: D
+FP number: 1
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 96.43%
+
+Note: 117-01_phi_reduced
+True positive: 25
+False Positive: Patoprazol RHCM Hemoglobin
+FP number: 3
+False Negative: Kimberly I Kidd KI espinoza nolen
+FN number: 6
+Recall: 80.65%
+Precision: 89.29%
+
+Note: 317-02_phi_reduced
+True positive: 26
+False Positive: PSHx Tylenol
+FP number: 2
+False Negative: England England
+FN number: 2
+Recall: 92.86%
+Precision: 92.86%
+
+Note: 209-03_phi_reduced
+True positive: 16
+False Positive: levoflox AC Thirteen cxray chance
+FP number: 5
+False Negative: Clifton Forge
+FN number: 2
+Recall: 88.89%
+Precision: 76.19%
+
+Note: 374-02_phi_reduced
+True positive: 62
+False Positive: HOUSTON Klonopin 1 2 Remeron Lipitor Klonopin 1 2 qhs Lipitor 1 2
+FP number: 13
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 82.67%
+
+Note: 384-03_phi_reduced
+True positive: 46
+False Positive: Kingwood Q6 24 KY Kingwood KY
+FP number: 6
+False Negative: Xavier
+FN number: 1
+Recall: 97.87%
+Precision: 88.46%
+
+Note: 232-02_phi_reduced
+True positive: 38
+False Positive: Cdif decub NGH Had LLQ hematemsis LVSF NGH maalox wrr distn LLQ small R effn URR Kt V EDW addtl Cefeopime
+FP number: 21
+False Negative: 97 8
+FN number: 2
+Recall: 95.00%
+Precision: 64.41%
+
+Note: 135-03_phi_reduced
+True positive: 34
+False Positive: Date endarectomy PHH 2 2 FEV1 FVC angiodyplasia +HIT sqcm nml Duoneb 0.5 3 Fosamax 1 3 2 6 Isoenz Isoenz Magnesium 1.001 1.035 4.00 5.20 RDW 11.5 14.5 Diff Impr 2 2 addion TEDS
+FP number: 35
+False Negative: Dodd 0 4
+FN number: 3
+Recall: 91.89%
+Precision: 49.28%
+
+Note: 217-04_phi_reduced
+True positive: 63
+False Positive: polydipsia.Review prox collat prot lipitor20 H40 L98 4.3diabetes center.Impotence todayClaudication managment vodkas GI evid On AllergiesPenicillins Angiodema HypotensionGLYBURIDE MaintCholesterol Microalbumin MedicationsAlbuterol CAP.SR CAP.SRFolic PKG 5MGX2 210G PKG UnitLipitor TABLET QHS Tablet Tablet TABLET Tablet 1000MG TABLET QHS Tablet 325 MG ACETAMINOPHEN TAB 5MG 325MG TABLET Tablet 20 MG 20MG TABLET Tablet TABLET Tablet Toprol TAB.SR Tablet TABLET Tablet Lipitor.2 CT.4 today.5
+FP number: 61
+False Negative: 64 67 2 2066Dyspepsia 8 67Macular
+FN number: 6
+Recall: 91.30%
+Precision: 50.81%
+
+Note: 389-03_phi_reduced
+True positive: 86
+False Positive: WMC Guaifenasin Loratidine Civil T96.1 P93 O2sat ronchi nls1s2 5 5 bPO2 bPCO2 IJ EGDT
+FP number: 15
+False Negative: Pack
+FN number: 1
+Recall: 98.85%
+Precision: 85.15%
+
+Note: 342-03_phi_reduced
+True positive: 17
+False Positive: grandaughter Interesetd 1 2 Metoprolol QHS QSunday Oscal TAB Lipitor QHS PEERL ksin Continue Metroprolol counselour Continue
+FP number: 17
+False Negative: Georgia Upshaw
+FN number: 2
+Recall: 89.47%
+Precision: 50.00%
+
+Note: 190-03_phi_reduced
+True positive: 37
+False Positive: ORLH MN Orlando Feratab nocturia Xeroform
+FP number: 6
+False Negative: Utter
+FN number: 1
+Recall: 97.37%
+Precision: 86.05%
+
+Note: 138-03_phi_reduced
+True positive: 34
+False Positive: OK York Conway York Conway M.Sc MEeScription
+FP number: 7
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 82.93%
+
+Note: 136-04_phi_reduced
+True positive: 22
+False Positive: Dunn Attending D51 smith Asa QHS Topamax MMdry rhonci amy STTW 183 Consider D5NS Pain D5NS
+FP number: 16
+False Negative: A Jaeger Land Ritter A Jaeger
+FN number: 6
+Recall: 78.57%
+Precision: 57.89%
+
+Note: 370-01_phi_reduced
+True positive: 11
+False Positive: 
+FP number: 0
+False Negative: Espinal
+FN number: 1
+Recall: 91.67%
+Precision: 100.00%
+
+Note: 313-01_phi_reduced
+True positive: 34
+False Positive: 
+FP number: 0
+False Negative: Rutledge Rutledge 29th Ulysses PX 4740
+FN number: 6
+Recall: 85.00%
+Precision: 100.00%
+
+Note: 387-04_phi_reduced
+True positive: 40
+False Positive: ATTN aflutter dilt q6hr aflutter DCCV AFlutter sLVH RSVP PNAs hyperK kayexelate possibel DCCV by E MSc
+FP number: 17
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 70.18%
+
+Note: 169-01_phi_reduced
+True positive: 15
+False Positive: FWH
+FP number: 1
+False Negative: Quince
+FN number: 1
+Recall: 93.75%
+Precision: 93.75%
+
+Note: 231-05_phi_reduced
+True positive: 24
+False Positive: COQUILLE restent OMB2
+FP number: 3
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 88.89%
+
+Note: 219-03_phi_reduced
+True positive: 32
+False Positive: Notre NV Claritan 1 6 AFFocus
+FP number: 6
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 84.21%
+
+Note: 341-04_phi_reduced
+True positive: 75
+False Positive: Harton Harton +AMA Multiple Acetaminophen Q2H Aluminum Magnesium Maalox Heartburn Ipratropium Inhaler Q2H Magnesium Metoprolol QHS Odt Zofran Odt TAB QHS 3 6 louder midline LLQ XII 4 5 RDW bases multiple TWIs Continue RDW PRBCs Continue Continue Continue
+FP number: 39
+False Negative: Thomson
+FN number: 1
+Recall: 98.68%
+Precision: 65.79%
+
+Note: 113-02_phi_reduced
+True positive: 22
+False Positive: DAMERON D
+FP number: 2
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 91.67%
+
+Note: 193-04_phi_reduced
+True positive: 24
+False Positive: EDVISIT Chest chest Neck x4
+FP number: 5
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 82.76%
+
+Note: 164-01_phi_reduced
+True positive: 16
+False Positive: CHH
+FP number: 1
+False Negative: Xavier
+FN number: 1
+Recall: 94.12%
+Precision: 94.12%
+
+Note: 214-03_phi_reduced
+True positive: 17
+False Positive: Atmore complains
+FP number: 2
+False Negative: 72 City
+FN number: 2
+Recall: 89.47%
+Precision: 89.47%
+
+Note: 214-04_phi_reduced
+True positive: 27
+False Positive: angin inspite HGBHA1C 1000MG TAB.SR TAB.SR TAB TAB SUBL Q2H medialaspect pennis Hommans HGBA1C Dr echymosis
+FP number: 16
+False Negative: 71 City
+FN number: 2
+Recall: 93.10%
+Precision: 62.79%
+
+Note: 193-03_phi_reduced
+True positive: 26
+False Positive: EDVISIT Hematocrit
+FP number: 2
+False Negative: MILTON MILTON MILTON
+FN number: 3
+Recall: 89.66%
+Precision: 92.86%
+
+Note: 113-05_phi_reduced
+True positive: 23
+False Positive: UTIs WBM UTIs Acetaminophen Bisacodyl calcitrate AC Lacri QHS Latulose Metroprol TAB Tolteroidine Long QHS bPO2 bPCO2 UBASEX CO2 PL RDW ATYPS BROWN UROBI SQHI OCAST HCAST CRYS EPIS 83 18 20 97 Abd decub XII verban ceftaz decub hyernatremia Contine netcar
+FP number: 42
+False Negative: 03689964Date
+FN number: 1
+Recall: 95.83%
+Precision: 35.38%
+
+Note: 341-03_phi_reduced
+True positive: 42
+False Positive: CT A PET tranaminitis B2MG Repeat FVC FEV1 FVC TAB TAB Metoprolol senilus Neck bases RSB louder XII AMY RDW UROBI HCAST SQHI
+FP number: 23
+False Negative: 97
+FN number: 1
+Recall: 97.67%
+Precision: 64.62%
+
+Note: 219-04_phi_reduced
+True positive: 33
+False Positive: Notre NV
+FP number: 2
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 94.29%
+
+Note: 231-02_phi_reduced
+True positive: 75
+False Positive: COQUILLE PMHR dyskinesis made needs IMN Plts transplant .she qhs qhs
+FP number: 11
+False Negative: 2094 Ernst sundays sundays
+FN number: 4
+Recall: 94.94%
+Precision: 87.21%
+
+Note: 387-03_phi_reduced
+True positive: 19
+False Positive: 2070 2071 May IVs
+FP number: 4
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 82.61%
+
+Note: 136-03_phi_reduced
+True positive: 23
+False Positive: EDVISIT I D
+FP number: 3
+False Negative: CB
+FN number: 1
+Recall: 95.83%
+Precision: 88.46%
+
+Note: 138-04_phi_reduced
+True positive: 48
+False Positive: OK Weston York Cabrini arthralgias 2 6
+FP number: 7
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 87.27%
+
+Note: 110-02_phi_reduced
+True positive: 12
+False Positive: S
+FP number: 1
+False Negative: GPP
+FN number: 1
+Recall: 92.31%
+Precision: 92.31%
+
+Note: 190-04_phi_reduced
+True positive: 35
+False Positive: ORLH MN Orlando Glucovance
+FP number: 4
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 89.74%
+
+Note: 342-04_phi_reduced
+True positive: 26
+False Positive: glucemeter 1 2 QSundayAM Oscal TAB QHS Metoprolol QHS Continue Metroprolol Continue Continue Continue lipir Continue
+FP number: 16
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 61.90%
+
+Note: 389-04_phi_reduced
+True positive: 15
+False Positive: WMC Ross Advair Diskus QHS Bactrim Civil Plasma mmol L Plasma mmol L Plasma mmol L Plasma Carbon mmol L Plasma meq L Plasma Plasma Plasma Glucose 13.5 17.5 RDW 11.5 14.5 10.3 13.2 Diff Ross Beeper
+FP number: 37
+False Negative: Norwood
+FN number: 1
+Recall: 93.75%
+Precision: 28.85%
+
+Note: 217-03_phi_reduced
+True positive: 82
+False Positive: lipitor20 TGs chck Metoprolol Arthrotec Angiodema policing hyperlipdemia Ox4 EOMs ball 5 5 lipitor20 ball ball 279 Microalbumin Hct
+FP number: 19
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 81.19%
+
+Note: 167-01_phi_reduced
+True positive: 28
+False Positive: D
+FP number: 1
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 96.55%
+
+Note: 373-01_phi_reduced
+True positive: 11
+False Positive: lymphadenopaty a R supraclav Toxicities arrythmias Musculoskeletal 40000
+FP number: 8
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 57.89%
+
+Note: 135-04_phi_reduced
+True positive: 82
+False Positive: S P redoMVR atNorth overdiuresis qwk 3 6 2 6 Legend N Meas FVC 1.68 3.04 N FEV1 FVC FIVC 1.68 3.04 FEF50 FIF50 Meas 1.58 3.7 1.68 3.04 Meas 11.86 25.16 11.86 25.16 BTPS 2.49 5.13 Meas Elev FEV1 FVC FVC euvolemic Niferex HandiHaler qhs Nexium qhs
+FP number: 48
+False Negative: Eagle Pass 1 1 1 1 2
+FN number: 7
+Recall: 92.13%
+Precision: 63.08%
+
+Note: 310-01_phi_reduced
+True positive: 25
+False Positive: EDVISIT
+FP number: 1
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 96.15%
+
+Note: 384-04_phi_reduced
+True positive: 57
+False Positive: KY QHS TAB 20MG 25MG TAB TAB.SR TAB.SR QHS 40 MG 40MG TABLET QHS 2 1 heartblock nocturia Hemoglobin Adviced Results 103 8 9.7 LDLCAL 34 HGBA1C MALB MALB 11.8 UTIME UTIME RANDOM U UCRE
+FP number: 35
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 61.96%
+
+Note: 374-05_phi_reduced
+True positive: 42
+False Positive: alloderm NBNB midline alloderm qafternoon qafternoon qsupper Abd cmmHCT 4.00 5.20 cummMCV flMCH 11.5 14.5 Diff ManualPoly mm3Absolute PRESENTAniso Potassium dlPhosphorus dlMagnesium dlPlasma dlGlobulin U LTransaminase U LAmylase LTransaminase U LLipase Abd Pelv
+FP number: 33
+False Negative: Norma 4
+FN number: 2
+Recall: 95.45%
+Precision: 56.00%
+
+Note: 235-01_phi_reduced
+True positive: 17
+False Positive: bloodwork 50000 q72 Gastric
+FP number: 4
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 80.95%
+
+Note: 209-04_phi_reduced
+True positive: 184
+False Positive: Asbesosis fluctulance XII Range Units Date 13.5 17.5 RDW 11.5 14.5 Eos 1.001 1.035 Cellulitis
+FP number: 15
+False Negative: Flint Epstein
+FN number: 2
+Recall: 98.92%
+Precision: 92.46%
+
+Note: 317-05_phi_reduced
+True positive: 25
+False Positive: EDVISIT tib
+FP number: 2
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 92.59%
+
+Note: 267-04_phi_reduced
+True positive: 29
+False Positive: D
+FP number: 1
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 96.67%
+
+Note: 379-05_phi_reduced
+True positive: 295
+False Positive: Strokes Willis WNWD Anicteric VFF Trapezii 5 5 XII midline plant L 5 5 5 5 5 5 5 5 R 2 3 2 3 2 1 3 Tri BR Pat sim Coord FNF on L HKS Bilirubin Bilirubin 13.5 18.0 RDW 11.4 14.1 LIPOa Bilirubin 1.003 1.035 Sed Sed Amorph Willis Willis SBP
+FP number: 54
+False Negative: Quale
+FN number: 1
+Recall: 99.66%
+Precision: 84.53%
+
+Note: 160-05_phi_reduced
+True positive: 24
+False Positive: EDVISIT DNH Renax XII ward
+FP number: 5
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 82.76%
+
+Note: 238-01_phi_reduced
+True positive: 10
+False Positive: Dr spondylolithiasis two 8 10 frank
+FP number: 6
+False Negative: Easter
+FN number: 1
+Recall: 90.91%
+Precision: 62.50%
+
+Note: 204-04_phi_reduced
+True positive: 46
+False Positive: PERDUE Minivision mphr pkdp 6 10 persistance ECGs brady 7.3 brady NSSTTWA AMY
+FP number: 13
+False Negative: Valley
+FN number: 1
+Recall: 97.87%
+Precision: 77.97%
+
+Note: 314-02_phi_reduced
+True positive: 41
+False Positive: MN nocturia 8.4 1 2 midline
+FP number: 6
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 87.23%
+
+Note: 377-02_phi_reduced
+True positive: 45
+False Positive: ATCH QHS QHS TAB QHS 1 2 Status nocturia TIAs Mallampatti Radials CNII EOMs CNVIII XII Status IVPCA ATCH QHS QHS TAB QHS APRN FNP
+FP number: 25
+False Negative: Quick QUICK RICO U QUICK RICO U
+FN number: 7
+Recall: 86.54%
+Precision: 64.29%
+
+Note: 119-01_phi_reduced
+True positive: 33
+False Positive: PCIS Allina Hinckley
+FP number: 3
+False Negative: OM UL 7550
+FN number: 3
+Recall: 91.67%
+Precision: 91.67%
+
+Note: 269-03_phi_reduced
+True positive: 46
+False Positive: ANTONIO 1 6 2 6 NSTTWA VA
+FP number: 7
+False Negative: Jr
+FN number: 1
+Recall: 97.87%
+Precision: 86.79%
+
+Note: 319-02_phi_reduced
+True positive: 5
+False Positive: palps 1 2
+FP number: 3
+False Negative: Whittaker
+FN number: 1
+Recall: 83.33%
+Precision: 62.50%
+
+Note: 163-02_phi_reduced
+True positive: 45
+False Positive: Fairview ASB II 9st Xloor KY KY microalbumin
+FP number: 8
+False Negative: Ames Ames
+FN number: 2
+Recall: 95.74%
+Precision: 84.91%
+
+Note: 207-03_phi_reduced
+True positive: 15
+False Positive: 2 Neuro intestity Depresion Ambien QHS Isoloated
+FP number: 7
+False Negative: 3 17
+FN number: 2
+Recall: 88.24%
+Precision: 68.18%
+
+Note: 114-01_phi_reduced
+True positive: 32
+False Positive: synrdrome Gilmore A HCH 1 3 3 VFFTC 5 5 Coord FNF HKS
+FP number: 13
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 71.11%
+
+Note: 264-03_phi_reduced
+True positive: 24
+False Positive: EDVISIT rate111 2 6 XII
+FP number: 5
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 82.76%
+
+Note: 195-02_phi_reduced
+True positive: 20
+False Positive: chance
+FP number: 1
+False Negative: AE JP 5824
+FN number: 3
+Recall: 86.96%
+Precision: 95.24%
+
+Note: 115-04_phi_reduced
+True positive: 85
+False Positive: PENDER Hyperuricemia Kohs brady Hyperuricemia RVL Abnormal Mamm qhs Demadex qhs Mirapex tab.qhs.prn 1 2 1 2 Demadex tab.qhs.prn Mirapex qhs ROMI DFCI SCD Averages Endocr cerumin 11.1 32 Fe+ Microalb
+FP number: 31
+False Negative: 5435 11
+FN number: 2
+Recall: 97.70%
+Precision: 73.28%
+
+Note: 347-02_phi_reduced
+True positive: 46
+False Positive: Cookson SC 167 160 141 Richwood Continue Continue
+FP number: 8
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 85.19%
+
+Note: 130-02_phi_reduced
+True positive: 54
+False Positive: forh Saturations SBP 2 2 Pravachol Norvasc Fam Hx DMM AAOX3 AMY Heme norvac kayexcelate Proph
+FP number: 16
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 77.14%
+
+Note: 198-02_phi_reduced
+True positive: 93
+False Positive: debilitating Pletal OHAs q.5 Effexor XR landscaper nocturia H20 LLSB BUEs Doppler U S Perham AVBs BBBs AVBs BBBs Perham Hct LMCA LVSP Fluoroscopy Jude AngioSeal and R PFA ostial L PFA distal L TPT Abbott Xpert Palmaz Fluoroscopy PVRs proximal L PFA Effexor CPKs E Orthopaedic
+FP number: 47
+False Negative: City Erb Chicago Chicago Chicago
+FN number: 5
+Recall: 94.90%
+Precision: 66.43%
+
+Note: 118-04_phi_reduced
+True positive: 39
+False Positive: Garner Attending Montebello Montebello psudocyst QHS SOPH
+FP number: 7
+False Negative: Xing
+FN number: 1
+Recall: 97.50%
+Precision: 84.78%
+
+Note: 237-03_phi_reduced
+True positive: 34
+False Positive: BEAUREGARD Assurant LEE presyncopal calcified.1 Infrapop TPT occl Assurant Atacand Metroprolol tab qhs LEE inplace Januvia Hga1c Mirtazepine
+FP number: 18
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 65.38%
+
+Note: 381-02_phi_reduced
+True positive: 89
+False Positive: NOTE.GCC I+D Achilles brown bypas I+D Achilles brown Acetaminophen650 TAB Clonazepam0.5 Clonazepam0.25 Hcl175 Acid1 QHS Sodium250 Omeprazole40 Liquid2 QHS TAB Trazodone200 QHS Sodium5 q6hrs SocHx FamHx 97.4 HR 96 122BP 120 136 50 72RR +normal LYMP GNRs PFA PFA
+FP number: 39
+False Negative: Katz
+FN number: 1
+Recall: 98.89%
+Precision: 69.53%
+
+Note: 205-01_phi_reduced
+True positive: 57
+False Positive: Sibley Sibley Sibley insufficiency plan
+FP number: 5
+False Negative: denny
+FN number: 1
+Recall: 98.28%
+Precision: 91.94%
+
+Note: 211-02_phi_reduced
+True positive: 45
+False Positive: IM 270 MT WRH I Central Park Pixel Imports Registered Nurse 1 2 Unfortunatley
+FP number: 14
+False Negative: Toledo
+FN number: 1
+Recall: 97.83%
+Precision: 76.27%
+
+Note: 239-04_phi_reduced
+True positive: 122
+False Positive: NotePt prompting Neuropathy hemodialysisHyperlipidemia complianceBasal L FootAbscess DMitral Hepatin Nephocaps Chad JVOP gLUNG wheezeABD erythema.NEURO XII 5 5 TIBC RETIC HCVAB CKs Recs HgA1c M.D.Pager
+FP number: 25
+False Negative: Ulysses 0937884Date
+FN number: 2
+Recall: 98.39%
+Precision: 82.99%
+
+Note: 266-01_phi_reduced
+True positive: 66
+False Positive: PER ACETAMINOPHEN W 30 300MG ORGINAL BRIGHTPOINT KINGWOOD CKMC
+FP number: 9
+False Negative: emmons emmons rosenberg stephens stephens rosenberg rosenberg
+FN number: 7
+Recall: 90.41%
+Precision: 88.00%
+
+Note: 116-03_phi_reduced
+True positive: 23
+False Positive: D
+FP number: 1
+False Negative: BRANCH EARNEST Whittaker
+FN number: 3
+Recall: 88.46%
+Precision: 95.83%
+
+Note: 196-05_phi_reduced
+True positive: 24
+False Positive: 3 5 RWMA Tekturna Aldomet QHS ACETAMIN TAB 50000 50000 1000MG QHS 20 MG 20MG CAPSULE TAB.SR TAB.SR HDC ophthalomology
+FP number: 20
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 54.55%
+
+Note: 208-01_phi_reduced
+True positive: 11
+False Positive: 5.9 mobilitiy QHS OSCAL+D 1TABLE ACETAMINOPHEN L154 70 Abd optho q6hrs senekot 37
+FP number: 13
+False Negative: T
+FN number: 1
+Recall: 91.67%
+Precision: 45.83%
+
+Note: 234-04_phi_reduced
+True positive: 12
+False Positive: CABG TAB Lipitor QHS Toprol Xl SEs Nocturia vomitting Cigs PERLA M rhyhm Abdo K 3.6 Asymp
+FP number: 17
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 41.38%
+
+Note: 311-04_phi_reduced
+True positive: 24
+False Positive: EDOBS I 3 10 2 6
+FP number: 6
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 80.00%
+
+Note: 385-01_phi_reduced
+True positive: 33
+False Positive: Beckley 6 10 RR12 scleralicterus 2 6 BARH ER HFFocus
+FP number: 10
+False Negative: 040 West Yawn
+FN number: 3
+Recall: 91.67%
+Precision: 76.74%
+
+Note: 372-04_phi_reduced
+True positive: 22
+False Positive: Manamana Manamana WARD 2 2 Tmax ward RR20 T97.1 unasyn +rhinorrhea 2 2 tab IADLs T98 HR94 BP134 63 RR12 SaO299 1 3 S1+S2 nml CVAT +warmth .5 RDW UROBI STUDIES midline q12 Unasyn q6 Zosyn AC+HS Fragmin
+FP number: 38
+False Negative: Ring
+FN number: 1
+Recall: 95.65%
+Precision: 36.67%
+
+Note: 134-01_phi_reduced
+True positive: 23
+False Positive: 642 PA Maxide Maxide Plasma mmol L Plasma Potassium Plasma mmol L Plasma mmol L Plasma Plasma Plasma Glucose
+FP number: 19
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 54.76%
+
+Note: 388-01_phi_reduced
+True positive: 22
+False Positive: 1 2 1 2
+FP number: 4
+False Negative: 11 70 11 70 6 05 DG WA 1749
+FN number: 9
+Recall: 70.97%
+Precision: 84.62%
+
+Note: 166-04_phi_reduced
+True positive: 34
+False Positive: WESTBROOK HPI WPH Dx1 patentw Audiovox 1 6 managnement recs
+FP number: 10
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 77.27%
+
+Note: 191-01_phi_reduced
+True positive: 19
+False Positive: hyperchoseterolemia Status jaudice TIAs Heme Onc EOMs Mallampatti midline XII Status IVPCA
+FP number: 12
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 61.29%
+
+Note: 139-01_phi_reduced
+True positive: 27
+False Positive: MOLLY STARK AMED P7 anterospondylolisthesis 1 1 TCDs brad Nonspecific
+FP number: 10
+False Negative: Qazi FN forbes
+FN number: 3
+Recall: 90.00%
+Precision: 72.97%
+
+Note: 343-01_phi_reduced
+True positive: 26
+False Positive: John AR No
+FP number: 3
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 89.66%
+
+Note: 371-03_phi_reduced
+True positive: 12
+False Positive: Uncoded BIW QHS 40 MG 40MG CAPSULE 100MCG OXYCODONE+APAP QHS Adds complains amts ronchi Extrems 1 3 malb
+FP number: 18
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 40.00%
+
+Note: 168-03_phi_reduced
+True positive: 99
+False Positive: DM1 Sipher Alina 8 10 SSC admission.ECG DM1 Hyperhomocystinemia PPD shampo Buproprion BS +ecchymosis unil Upper Upper Upper CONCLUSIONS Aaxis +45 +RAD msecs msecs msecs ECGs Post.Wall Prox Prox Prox Prox +PPD OOB
+FP number: 33
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 75.00%
+
+Note: 218-01_phi_reduced
+True positive: 25
+False Positive: 8 10 RR12 MPHR supraclav XII Magnesium Globulin units L Lipase Isoenz Isoenz 13.5 17.5 RDW 11.5 14.5 Superstat 11.1 13.1 Superstat 1.001 1.035 13.5 17.5 RDW 11.5 14.5 bases gound UGIB UGIB UGIB Hct pRBCs TVI UGIB telmetry
+FP number: 39
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 39.06%
+
+Note: 312-03_phi_reduced
+True positive: 124
+False Positive: complains gastroesophagojejunostomy Nafcillin Remeron XII 5 5 CCOM RDW PROTSF PROTCF PROTCA Susceptibilities Vanco calcitrol Fragmin
+FP number: 16
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 88.57%
+
+Note: 262-02_phi_reduced
+True positive: 14
+False Positive: Legion Neligh Neligh Legion Neligh Legion Legion nocturia mellitus.good documet eETT etiol
+FP number: 12
+False Negative: Olivo IN
+FN number: 2
+Recall: 87.50%
+Precision: 53.85%
+
+Note: 165-03_phi_reduced
+True positive: 15
+False Positive: complains Babinski nocturia
+FP number: 3
+False Negative: RX
+FN number: 1
+Recall: 93.75%
+Precision: 83.33%
+
+Note: 201-02_phi_reduced
+True positive: 43
+False Positive: Duluth Hermantown Dr Dr D50 bicard recs admiodarone SBP Duluth dil Metoprolol Toprol Xl XII 6 6 SBP CHADS hypotention metofrmin AC MSc
+FP number: 23
+False Negative: EDGE
+FN number: 1
+Recall: 97.73%
+Precision: 65.15%
+
+Note: 215-01_phi_reduced
+True positive: 5
+False Positive: SUST QHS Tachcardia ToprolXL controll Recc FBGs frequ
+FP number: 8
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 38.46%
+
+Note: 260-01_phi_reduced
+True positive: 42
+False Positive: shovelling 1000MG palps Urocit 182 120.5 HOLLY Range Microalbumin HOLLY Range Random Brinker Facebook Neg infs Neg Delnor neg Neg skel Neg Neg Abd LSKK Hchol
+FP number: 26
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 61.76%
+
+Note: 138-05_phi_reduced
+True positive: 39
+False Positive: OK I
+FP number: 2
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 95.12%
+
+Note: 110-03_phi_reduced
+True positive: 19
+False Positive: 2 2 RDW Rhythm Prophy Zantac EHMS
+FP number: 7
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 73.08%
+
+Note: 190-05_phi_reduced
+True positive: 64
+False Positive: Orlando MN M.D.DD
+FP number: 3
+False Negative: Fred Fred piper
+FN number: 3
+Recall: 95.52%
+Precision: 95.52%
+
+Note: 203-01_phi_reduced
+True positive: 65
+False Positive: X4 NEDH SUFFERED Recheck RECONSIDERS PCIS '80 Nocturia Genito
+FP number: 9
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 87.84%
+
+Note: 217-02_phi_reduced
+True positive: 3
+False Positive: Prents Deneis TGs negaitve Metoprolol Angiodema Ox4 controleld
+FP number: 8
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 27.27%
+
+Note: 232-04_phi_reduced
+True positive: 68
+False Positive: MERCED DNI Santa Rosa DNI After frank Levi 2 2 2 2 2 2 2 2 2 2 NGH Hcl Labetalol Hcl Gelcap TAB AC QHS AC Hcl QHS AC Wheatland Wheatland x 40s RR O2Sat Abdominal INFUND CONCLUSIONS frank SBP 2 2 PAML NGH DNI
+FP number: 46
+False Negative: Sally M W F M W F Sally
+FN number: 8
+Recall: 89.47%
+Precision: 59.65%
+
+Note: 341-02_phi_reduced
+True positive: 68
+False Positive: Nonsmoker stairwell nocturia bases RUSB gallops TIBC RETIC 354 EKG Nocturia Arthralgias May
+FP number: 13
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 83.95%
+
+Note: 193-02_phi_reduced
+True positive: 14
+False Positive: LHCC Long Phosphosoda Davis lympadenopathy Cor Continue Hyzaar
+FP number: 8
+False Negative: FAY Tania Downs
+FN number: 3
+Recall: 82.35%
+Precision: 63.64%
+
+Note: 113-04_phi_reduced
+True positive: 22
+False Positive: EDVISIT WBM
+FP number: 2
+False Negative: DAWN DAWN DAWN
+FN number: 3
+Recall: 88.00%
+Precision: 91.67%
+
+Note: 387-02_phi_reduced
+True positive: 30
+False Positive: Ward Calvary Calvary SBP fxn Chest Metformin Rare 5 5 May CHADS2 FSG metformin ADA
+FP number: 15
+False Negative: Marion
+FN number: 1
+Recall: 96.77%
+Precision: 66.67%
+
+Note: 219-05_phi_reduced
+True positive: 32
+False Positive: Notre NV M.Sc CSSten
+FP number: 4
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 88.89%
+
+Note: 231-03_phi_reduced
+True positive: 31
+False Positive: Resident 2 2 sten LADt prox 5 40 qdayEpogen BS Serologies
+FP number: 11
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 73.81%
+
+Note: 136-02_phi_reduced
+True positive: 21
+False Positive: complains MSO4 3 Abdominal QHS RXN SO2 JV BS LLQ XII Babinski Magnesium Globulin 4.00 5.20 RDW 11.5 14.5 11.1 13.1 Diff BCX Abd Pelvic LLQ May Follow Follow Apprecate
+FP number: 30
+False Negative: 4 Vernon Ewing
+FN number: 3
+Recall: 87.50%
+Precision: 41.18%
+
+Note: 314-03_phi_reduced
+True positive: 8
+False Positive: standopoint pspcid Chest Cor Musc Skel 1 2
+FP number: 8
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 50.00%
+
+Note: 269-02_phi_reduced
+True positive: 22
+False Positive: an E coli May Christiana
+FP number: 5
+False Negative: talbot
+FN number: 1
+Recall: 95.65%
+Precision: 81.48%
+
+Note: 377-03_phi_reduced
+True positive: 49
+False Positive: GSV propatent propatent TAB Rad PVRs Plasma mmol L Plasma mmol L Plasma mmol L Plasma Carbon mmol L Plasma meq L Plasma Plasma Plasma Glucose 4.00 5.20 RDW 11.5 14.5 10.3 13.2 Glucose Bili 1.001 1.035 LENI PTFE GSV propatent PVRs ATCH
+FP number: 43
+False Negative: Quick 4 Link
+FN number: 3
+Recall: 94.23%
+Precision: 53.26%
+
+Note: 163-03_phi_reduced
+True positive: 49
+False Positive: Westwing Place Nursing Home KY By
+FP number: 6
+False Negative: Valley
+FN number: 1
+Recall: 98.00%
+Precision: 89.09%
+
+Note: 207-02_phi_reduced
+True positive: 29
+False Positive: nitros D
+FP number: 2
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 93.55%
+
+Note: 213-01_phi_reduced
+True positive: 29
+False Positive: GREEN D
+FP number: 2
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 93.55%
+
+Note: 319-03_phi_reduced
+True positive: 17
+False Positive: MIMA dLDL rice
+FP number: 3
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 85.00%
+
+Note: 264-02_phi_reduced
+True positive: 32
+False Positive: ASAD .01 Guzmans D
+FP number: 4
+False Negative: PIERRE
+FN number: 1
+Recall: 96.97%
+Precision: 88.89%
+
+Note: 132-01_phi_reduced
+True positive: 62
+False Positive: Villa FL Lake Park 2 Amy 2 6 3
+FP number: 9
+False Negative: Carina Imperial PI
+FN number: 3
+Recall: 95.38%
+Precision: 87.32%
+
+Note: 348-01_phi_reduced
+True positive: 9
+False Positive: Lotrisone Clotri Asa 1 2 Nasal QHS QHS FitSport FitSport amytriptiline and A Cor amytriptiline
+FP number: 15
+False Negative: Vidal
+FN number: 1
+Recall: 90.00%
+Precision: 37.50%
+
+Note: 374-04_phi_reduced
+True positive: 16
+False Positive: 
+FP number: 0
+False Negative: Norma Xi
+FN number: 2
+Recall: 88.89%
+Precision: 100.00%
+
+Note: 383-01_phi_reduced
+True positive: 9
+False Positive: XII 5 5 MGR NDMG
+FP number: 5
+False Negative: Werner EP
+FN number: 2
+Recall: 81.82%
+Precision: 64.29%
+
+Note: 317-04_phi_reduced
+True positive: 42
+False Positive: Q3H FSglucose XII 5 5 PROX chem7 MANAMANA SQH
+FP number: 9
+False Negative: Shea Morehead
+FN number: 2
+Recall: 95.45%
+Precision: 82.35%
+
+Note: 345-01_phi_reduced
+True positive: 27
+False Positive: XII 5 5 Head D
+FP number: 5
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 84.38%
+
+Note: 379-04_phi_reduced
+True positive: 19
+False Positive: AZ Park Nicollet barrium QHS QHS TAB QHS P70 PEERL Abd barrium
+FP number: 12
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 61.29%
+
+Note: 197-01_phi_reduced
+True positive: 35
+False Positive: Milford NMH I Tenormin IV V I I
+FP number: 8
+False Negative: Juneau South WK 4653
+FN number: 4
+Recall: 89.74%
+Precision: 81.40%
+
+Note: 160-04_phi_reduced
+True positive: 29
+False Positive: Long IN Sel Terre weeks STeScription
+FP number: 6
+False Negative: Sean
+FN number: 1
+Recall: 96.67%
+Precision: 82.86%
+
+Note: 211-03_phi_reduced
+True positive: 32
+False Positive: IM 270 MT I
+FP number: 4
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 88.89%
+
+Note: 161-01_phi_reduced
+True positive: 35
+False Positive: ME you you you
+FP number: 4
+False Negative: SRH valdovinos
+FN number: 2
+Recall: 94.59%
+Precision: 89.74%
+
+Note: 378-01_phi_reduced
+True positive: 16
+False Positive: Glynase Citracal
+FP number: 2
+False Negative: Kuhn KL utz
+FN number: 3
+Recall: 84.21%
+Precision: 88.89%
+
+Note: 344-04_phi_reduced
+True positive: 16
+False Positive: consulted.to max sycope Extraocular 5 5 Delt Hamst TibAnt Recs PGY3
+FP number: 11
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 59.26%
+
+Note: 116-02_phi_reduced
+True positive: 39
+False Positive: ME complains DD DT DV
+FP number: 5
+False Negative: Earnest Earnest Earnest
+FN number: 3
+Recall: 92.86%
+Precision: 88.64%
+
+Note: 196-04_phi_reduced
+True positive: 29
+False Positive: QHS ACETAMIN TAB 50000 50000 1000MG QHS 20 MG 20MG CAPSULE TAB.SR TAB.SR
+FP number: 13
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 69.05%
+
+Note: 382-04_phi_reduced
+True positive: 28
+False Positive: streaking Accolate AC QHS QAC Pulmozyme Notary marnier marajuana Activia CDIC flowsheet synercid zosyn tobra ceft zosyn tobra S ceftaz zosyn tobra Ceftaz FSBS AC HgA1c TBD PA C pulmozyme
+FP number: 30
+False Negative: 12 12 84 2 4 2084 10 6 82 8 13 82
+FN number: 12
+Recall: 70.00%
+Precision: 48.28%
+
+Note: 316-01_phi_reduced
+True positive: 81
+False Positive: Evergreen Court Hospital MN Wells Wells bases SCL70 polysonography
+FP number: 9
+False Negative: ray 0
+FN number: 2
+Recall: 97.59%
+Precision: 90.00%
+
+Note: 234-05_phi_reduced
+True positive: 29
+False Positive: EDVISIT I Benson Benson
+FP number: 4
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 87.88%
+
+Note: 375-01_phi_reduced
+True positive: 41
+False Positive: WV WV 9 10 8 9 10 Babinski Hoffman EFFocus
+FP number: 10
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 80.39%
+
+Note: 349-04_phi_reduced
+True positive: 13
+False Positive: Parsons till neuropaty fsbs Advair Diskus QHS LL 's A P HgA1c Elev
+FP number: 13
+False Negative: Vernal 29
+FN number: 2
+Recall: 86.67%
+Precision: 50.00%
+
+Note: 347-03_phi_reduced
+True positive: 36
+False Positive: Cookson SC Joseph
+FP number: 3
+False Negative: Christmas
+FN number: 1
+Recall: 97.30%
+Precision: 92.31%
+
+Note: 195-03_phi_reduced
+True positive: 309
+False Positive: 9 10 6 7 10 2V CABG LSVG Bristol uncooridiation schrapnel 4 5 13.5 17.5 RDW 11.5 14.5 11.3 13.3 1.001 1.035 urin Cannabino Head DWI yoM ROMI SHH
+FP number: 29
+False Negative: Xavier
+FN number: 1
+Recall: 99.68%
+Precision: 91.42%
+
+Note: 130-03_phi_reduced
+True positive: 47
+False Positive: Ravenna RMC TN Overbrook Hectorol
+FP number: 5
+False Negative: Turlock Pecos Pecos Turlock Pecos Pecos
+FN number: 6
+Recall: 88.68%
+Precision: 90.38%
+
+Note: 198-03_phi_reduced
+True positive: 24
+False Positive: LSFA iliacs LIIA LSFA RIIA LSAF Xpert Palmaz REIA Nitrodur cryoplasty LSFA LSFA tibeo divis constrast dialy dialy dialy LSFA
+FP number: 20
+False Negative: Fall 77
+FN number: 2
+Recall: 92.31%
+Precision: 54.55%
+
+Note: 118-05_phi_reduced
+True positive: 64
+False Positive: CARDIOLOGY PARK NICOLLET Judes bactermeia dyas Bactrim 2 6 Judes Bactrim Continue Bactrim Ww Bactrim
+FP number: 15
+False Negative: Infant Nickel Infant Nickel
+FN number: 4
+Recall: 94.12%
+Precision: 81.01%
+
+Note: 381-03_phi_reduced
+True positive: 23
+False Positive: summer D5W HGBA1C T1DM 1 2 D50
+FP number: 7
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 76.67%
+
+Note: 237-02_phi_reduced
+True positive: 35
+False Positive: BEAUREGARD Suite 185 NC I liberty Best
+FP number: 7
+False Negative: Bogalusa Fair
+FN number: 2
+Recall: 94.59%
+Precision: 83.33%
+
+Note: 371-02_phi_reduced
+True positive: 6
+False Positive: Lakeview wiht compressionl CELECOXIB Levothyroxine Sodium 125MCG OXYCODONE+APAP qwk BP144 76 bases Hemoglobin tash iPTH ischmia Neurosurg loss.She
+FP number: 18
+False Negative: march 2076
+FN number: 2
+Recall: 75.00%
+Precision: 25.00%
+
+Note: 312-02_phi_reduced
+True positive: 173
+False Positive: arteriovenous gastroesophagojejunostomy Nafcillin remeron qhs trazadone niferex calcitrol maalox XII 5 5 Range Units Date 13.5 17.5 RDW 11.5 14.5 Eos 1.001 1.035 UpperExt U S arteriovenous calcitrol Chestnut Lodge Sanitarium
+FP number: 31
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 84.80%
+
+Note: 168-02_phi_reduced
+True positive: 19
+False Positive: AUSTIN Durkan Phalen
+FP number: 3
+False Negative: kiser
+FN number: 1
+Recall: 95.00%
+Precision: 86.36%
+
+Note: 112-01_phi_reduced
+True positive: 28
+False Positive: Short D
+FP number: 2
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 93.33%
+
+Note: 262-03_phi_reduced
+True positive: 37
+False Positive: 53 02Q ALH Sa02 Hydral YPZ ALH ALH TCVs Wilson NASH 100MCG QHS RRLA 5 5 Magnesium Globulin units L Lipase Isoenz 4.00 5.20 RDW 11.5 14.5 Superstat 11.1 13.1 Superstat Superstat 1.001 1.035 HEAD CT cisterns sttw ALH MAX MAX 11096 No CONCLUSIONS ALH ant.sep LVID mid.sep inf.sep PWT IVS inf.pos IVS pos.lat CORONARIES INFUND IMPRESSIONS Mallory Wilson Immunostains ductopenia NASH Euvolemic hypoaldo SBP UTIs
+FP number: 66
+False Negative: Olivo Ng 4
+FN number: 3
+Recall: 92.50%
+Precision: 35.92%
+
+Note: 165-02_phi_reduced
+True positive: 13
+False Positive: DENA
+FP number: 1
+False Negative: RX xiang
+FN number: 2
+Recall: 86.67%
+Precision: 92.86%
+
+Note: 201-03_phi_reduced
+True positive: 24
+False Positive: GRIFFIN Midline York NTproBNP Omega3
+FP number: 5
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 82.76%
+
+Note: 311-05_phi_reduced
+True positive: 23
+False Positive: EDVISIT Neck XII
+FP number: 3
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 88.46%
+
+Note: 233-01_phi_reduced
+True positive: 42
+False Positive: Donnellson Dear I 2 TN
+FP number: 5
+False Negative: Pickett Pickett Pickett Pickett Pickett
+FN number: 5
+Recall: 89.36%
+Precision: 89.36%
+
+Note: 111-01_phi_reduced
+True positive: 24
+False Positive: RIDGE D
+FP number: 2
+False Negative: FILBERT BRIGHT FILBERT BRIGHT
+FN number: 4
+Recall: 85.71%
+Precision: 92.31%
+
+Note: 202-03_phi_reduced
+True positive: 72
+False Positive: Suite 975 NE Myoview 50 bases frank HFFocus Koenen Collins NE
+FP number: 11
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 86.75%
+
+Note: 166-02_phi_reduced
+True positive: 23
+False Positive: IMRT CONSIDERATIONS IMRT nocturia
+FP number: 4
+False Negative: Ulysses
+FN number: 1
+Recall: 95.83%
+Precision: 85.19%
+
+Note: 372-02_phi_reduced
+True positive: 63
+False Positive: CROSS Xanax T8 T12 1.5ppd*20yrs S2 HemA1C opthamologist Zanax
+FP number: 9
+False Negative: 1.5ppd 20yrs Downs Downs
+FN number: 4
+Recall: 94.03%
+Precision: 87.50%
+
+Note: 311-02_phi_reduced
+True positive: 18
+False Positive: EDVISIT Babinski
+FP number: 2
+False Negative: G VERNAL GAY G VERNAL GAY G VERNAL
+FN number: 8
+Recall: 69.23%
+Precision: 90.00%
+
+Note: 201-04_phi_reduced
+True positive: 68
+False Positive: Tailored crummy Insulin QHS purchaser Pleasant Distant Restart Continue MvO3 Continue FSBS qAC Insufficieny Follow Cr Fragmin
+FP number: 17
+False Negative: Edge Gloucester Lake
+FN number: 3
+Recall: 95.77%
+Precision: 80.00%
+
+Note: 262-04_phi_reduced
+True positive: 24
+False Positive: LEGION NEUROCRITICAL IVH RHW LSW SBP SBP Flowsheet 70 SR SBP Titrateable AC TBB D5NS D5NS BTT plegic Head IVH AEDs SBP HOB AEDs AEDs SBP Cr renoprotection Fsg q2h Prophy VAP
+FP number: 32
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 42.86%
+
+Note: 230-01_phi_reduced
+True positive: 16
+False Positive: Norvasc NitroDur Afebrile Afeb
+FP number: 4
+False Negative: Ulysses
+FN number: 1
+Recall: 94.12%
+Precision: 80.00%
+
+Note: 371-05_phi_reduced
+True positive: 16
+False Positive: MMPs lidoderm TAB 500MG 200 CELECOXIB 100MCG Lidoderm 500MG 5ML OXYCODONE+APAP 20 MG 20MG CAPSULE TAB QHS Chelates Gadolinuim MMPs hjr Repeat bipsy 2 2
+FP number: 25
+False Negative: oct 12 Ferrara
+FN number: 3
+Recall: 84.21%
+Precision: 39.02%
+
+Note: 381-04_phi_reduced
+True positive: 33
+False Positive: Consult Consult RFC Altadena probenicid GCCfor GPCs Trazadone Neurontin Abd erythem Q24H
+FP number: 12
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 73.33%
+
+Note: 315-01_phi_reduced
+True positive: 21
+False Positive: Estrotab Musculoskeletal HEEN Mallampatti III 53 T Lipitor D
+FP number: 9
+False Negative: Valle Tina
+FN number: 2
+Recall: 91.30%
+Precision: 70.00%
+
+Note: 376-01_phi_reduced
+True positive: 54
+False Positive: lamenictomy A myleogram optho spondylothis HYDROCLOROTH BIw QHS 1CAPSULE
+FP number: 9
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 85.71%
+
+Note: 118-02_phi_reduced
+True positive: 33
+False Positive: NSPCM nebs Rantidine HC03 Amy Trigs ANTHROPMETRICS ABW Kg Kcal Kg Range Kg Kcal Kg Kcals Kcal Kcal Kg HICKMAN PORTCATH BCNSP
+FP number: 22
+False Negative: Irish
+FN number: 1
+Recall: 97.06%
+Precision: 60.00%
+
+Note: 198-04_phi_reduced
+True positive: 34
+False Positive: SFAs MPHR plaquing Aroto patetn iliacs Cryoplasty angioplastyof Cryoplasty colonosocpy tab Colazal Effexor XR .15 .02 .44 trifurction
+FP number: 18
+False Negative: Kahn Kahn
+FN number: 2
+Recall: 94.44%
+Precision: 65.38%
+
+Note: 130-04_phi_reduced
+True positive: 87
+False Positive: Emmons neuroapthy EHCC Noticed 10 10 dildaudid QSun QHS QHS TAB.SR TAB.SR QHS TAB.SR deathSH drugsADMISSION RUSB +BSEXTREM 5 5 94 1.9 0.4 RDW 23 Ordering Provider 23 Ordering Provider EHCC
+FP number: 31
+False Negative: 82 38
+FN number: 2
+Recall: 97.75%
+Precision: 73.73%
+
+Note: 318-01_phi_reduced
+True positive: 32
+False Positive: Trinity RI TRMC
+FP number: 3
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 91.43%
+
+Note: 162-01_phi_reduced
+True positive: 23
+False Positive: Briggs Stratton PIPs MCPs
+FP number: 4
+False Negative: FK SK 3696
+FN number: 3
+Recall: 88.46%
+Precision: 85.19%
+
+Note: 212-03_phi_reduced
+True positive: 103
+False Positive: FERNANDO Ventricular lyts Abd colonoscopist Ventricular CCH Alz Baker X4 SFH seb Plasma Glucose Plasma Alert
+FP number: 16
+False Negative: 82 5519v Xa
+FN number: 3
+Recall: 97.17%
+Precision: 86.55%
+
+Note: 115-02_phi_reduced
+True positive: 30
+False Positive: Annes AL 2
+FP number: 3
+False Negative: Whitman
+FN number: 1
+Recall: 96.77%
+Precision: 90.91%
+
+Note: 347-04_phi_reduced
+True positive: 58
+False Positive: SJMH bifurcation no in B ECAs Lbif Rbif cross XALATAN 100MCG VFFTC wording one MBA
+FP number: 15
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 79.45%
+
+Note: 349-03_phi_reduced
+True positive: 17
+False Positive: Parsons percoset ADA Advair Diskus 1000MG 20 MG 20MG CAPSULE QHS QHS 15lbs 2.5mos T97 3 5 strenght Resume Neurontin HGA1C
+FP number: 21
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 44.74%
+
+Note: 234-02_phi_reduced
+True positive: 10
+False Positive: CABG Nystatin MOUTHWASH QHS QHS 40 MG 40MG TABLET TAB glu80 lighthead vomitting rhyhm Abdo DM.CAD AbnormalCMP
+FP number: 17
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 37.04%
+
+Note: 382-03_phi_reduced
+True positive: 21
+False Positive: Reviwe Accolate Plaretase qac Notary galss marnier marajuana CDIC flowsheet Ceftaz pulmozyme FSBS AC HgA1c TBD PA C
+FP number: 18
+False Negative: Haas
+FN number: 1
+Recall: 95.45%
+Precision: 53.85%
+
+Note: 196-03_phi_reduced
+True positive: 26
+False Positive: Harmon ACETAMIN TAB 1000MG QHS 20 MG 20MG TABLET HDC
+FP number: 10
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 72.22%
+
+Note: 116-05_phi_reduced
+True positive: 25
+False Positive: D
+FP number: 1
+False Negative: BRANCH EARNEST
+FN number: 2
+Recall: 92.59%
+Precision: 96.15%
+
+Note: 344-03_phi_reduced
+True positive: 25
+False Positive: EDVISIT Head
+FP number: 2
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 92.59%
+
+Note: 239-02_phi_reduced
+True positive: 10
+False Positive: Northport Uncoded TAB.SR ball
+FP number: 4
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 71.43%
+
+Note: 211-04_phi_reduced
+True positive: 24
+False Positive: Cyphers x13 reopro pkyr Klonipin XII 5 5 BUE HJR tonite Dr MS NP C b
+FP number: 16
+False Negative: Urban Urban Urban
+FN number: 3
+Recall: 88.89%
+Precision: 60.00%
+
+Note: 204-02_phi_reduced
+True positive: 36
+False Positive: **The Perdue EDIS Perdue EDIS PFSHx PFSHx Neck Musculoskeletal Dr UGI EDOU
+FP number: 12
+False Negative: The '34
+FN number: 2
+Recall: 94.74%
+Precision: 75.00%
+
+Note: 210-01_phi_reduced
+True positive: 12
+False Positive: 13 13 Reordered
+FP number: 3
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 80.00%
+
+Note: 160-03_phi_reduced
+True positive: 8
+False Positive: SLMC ophtalmology SGAH CCH Genl MGR Neuro VFF trapezii 5 5 XII midline drift.strength
+FP number: 14
+False Negative: 2069
+FN number: 1
+Recall: 88.89%
+Precision: 36.36%
+
+Note: 267-02_phi_reduced
+True positive: 28
+False Positive: 10 10 D
+FP number: 3
+False Negative: LUND LUND
+FN number: 2
+Recall: 93.33%
+Precision: 90.32%
+
+Note: 379-03_phi_reduced
+True positive: 25
+False Positive: Avenida 5 5 3 5 D
+FP number: 6
+False Negative: VIOLA VIOLA
+FN number: 2
+Recall: 92.59%
+Precision: 80.65%
+
+Note: 209-02_phi_reduced
+True positive: 41
+False Positive: Unfortunatley Opthalmology Dr Opthamology hypoglycenia P Quanify Continue Neurontin Neurontin ifsf hypokensis P R lucunar continue flexsig ARTERY aremote Thirteen nocturia IN A WHEECHAIR ASCULTATION BROWN Genito XII V L iliosoas 3 5 3 5 dorsoflexion 3 5 MAXAIR NEURONTIN AMOD flexsig Opthalmology Opthalmology 265
+FP number: 45
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 47.67%
+
+Note: 317-03_phi_reduced
+True positive: 26
+False Positive: Guite 299 WI
+FP number: 3
+False Negative: Shea
+FN number: 1
+Recall: 96.30%
+Precision: 89.66%
+
+Note: 374-03_phi_reduced
+True positive: 155
+False Positive: Bayne Jones Noom TAB agorophobia Respironics Obese.Distended Plasma Plasma Potassium Plasma Plasma Creatine Creatine Plasma Plasma Plasma Glucose Glucose Hyaline Abdominal
+FP number: 21
+False Negative: NORMA
+FN number: 1
+Recall: 99.36%
+Precision: 88.07%
+
+Note: 194-01_phi_reduced
+True positive: 17
+False Positive: Name AC T97.4 Resistene Retried BJ 2 6 Ext R 5 5 2 2 13.5 17.5 RDW 11.5 14.5 Magnesium 1.001 1.035 brady insufficieny RSSI Dispo Name
+FP number: 27
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 38.64%
+
+Note: 346-01_phi_reduced
+True positive: 5
+False Positive: Metoprolol QHS claucoma CPE
+FP number: 4
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 55.56%
+
+Note: 319-04_phi_reduced
+True positive: 26
+False Positive: EDVISIT MIMAIMA Rocephin
+FP number: 3
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 89.66%
+
+Note: 163-04_phi_reduced
+True positive: 42
+False Positive: Westwing Place Nursing Home KY By
+FP number: 6
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 87.50%
+
+Note: 131-01_phi_reduced
+True positive: 92
+False Positive: DARDANELLE 98 PRMHR SHOWED COUPLETS WEEKS ABNL REDISCUSSED RBS 2 1 Educare Pullman ER IN TOFUS FRANCIS alot VN
+FP number: 19
+False Negative: 3 3 82 83 4 22 2088 1 88 XIAN NEW
+FN number: 11
+Recall: 89.32%
+Precision: 82.88%
+
+Note: 199-01_phi_reduced
+True positive: 36
+False Positive: GA Airlines PIPs MCPs
+FP number: 4
+False Negative: Brit Brit Levin BU 1592
+FN number: 5
+Recall: 87.80%
+Precision: 90.00%
+
+Note: 380-01_phi_reduced
+True positive: 43
+False Positive: MS Tracy complains 3 4 4 5 3 5 interflow hypercholesterol VSSten
+FP number: 12
+False Negative: Castle Rock
+FN number: 2
+Recall: 95.56%
+Precision: 78.18%
+
+Note: 314-04_phi_reduced
+True positive: 41
+False Positive: T1N0M0 Hyperlipidemia Lang Mimics trapezeii 5 5 XII midline BUEs BUE RDW IMAGING Mulitple T12 L1 Old unmasking SBP Resend
+FP number: 20
+False Negative: Ly
+FN number: 1
+Recall: 97.62%
+Precision: 67.21%
+
+Note: 136-05_phi_reduced
+True positive: 16
+False Positive: smith Musculoskel smith PAML Insulin Nph Insulin QHS Topamax BP 134 60R 125 55L P RUSB Endorses Plasma mmol L Plasma mmol L Plasma mmol L Plasma Carbon mmol L Plasma Plasma Plasma Plasma Glucose 4.00 5.20 Superstat 10.8 13.4 Superstat Superstat NPH AC+HS mucormyst
+FP number: 45
+False Negative: Whitehouse 4 Lindsay
+FN number: 3
+Recall: 84.21%
+Precision: 26.23%
+
+Note: 231-04_phi_reduced
+True positive: 40
+False Positive: COQUILLE MPHR Ripley Head PCIs 5 40 EEGs 2 6 RSB canulization Crit Plts PCIs 10 80
+FP number: 17
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 70.18%
+
+Note: 219-02_phi_reduced
+True positive: 3
+False Positive: 
+FP number: 0
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 100.00%
+
+Note: 113-03_phi_reduced
+True positive: 24
+False Positive: EDVISIT I resistant E coli
+FP number: 5
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 82.76%
+
+Note: 193-05_phi_reduced
+True positive: 85
+False Positive: A1 49 MO RDW TIBC Long I complains 2 6
+FP number: 10
+False Negative: FAY Fay
+FN number: 2
+Recall: 97.70%
+Precision: 89.47%
+
+Note: 263-01_phi_reduced
+True positive: 26
+False Positive: DOUGLAS D
+FP number: 2
+False Negative: DODD
+FN number: 1
+Recall: 96.30%
+Precision: 92.86%
+
+Note: 341-05_phi_reduced
+True positive: 42
+False Positive: out E coli Sa02 Breast electropheresis TAB Insulin Megace QHS TAB Niferex Ondansetron Odt Zofran Odt Acetaminophen TAB Ingham Sa02 USBs XII Baseline Cr 15.5 gt 25.1 lt 252 Baseline Hct Abd IPMN Abd LLQ bacteremia doesn pRBCs Hct verapimil Hct INRs baseline FSG QAC Pboots
+FP number: 46
+False Negative: Wilhelm
+FN number: 1
+Recall: 97.67%
+Precision: 47.73%
+
+Note: 200-01_phi_reduced
+True positive: 32
+False Positive: Griffin adenoCa FNA pT2N1 5FU LCV TAB TAB 1 2 TAB QHS 40 MG 40MG CAPSULE 1 2 intermit arrythmias intermit Toxicities Esophagitis T2N1
+FP number: 24
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 57.14%
+
+Note: 214-02_phi_reduced
+True positive: 21
+False Positive: I Wyandot 2 6
+FP number: 4
+False Negative: 01 City
+FN number: 2
+Recall: 91.30%
+Precision: 84.00%
+
+Note: 232-03_phi_reduced
+True positive: 48
+False Positive: abdo adenoca Mild LVSF TIDAlbuterol prnCalcium Gelcap TIDCholestyramine BIDLisinopril QDNephrocaps QDOmeprazole BIDOndansetron Non Non prnAcetaminophen prnInsulin AC TIDAcetylsalicylic QDInsulin QHSAmlodipine QPMHydralazine illicitr H+N elft added.murmurs rubs abse Abdo SNT odema Results 10.1 22 aPO2 0.5 297 ESKD K iPTH complaince AVG prsentation D10W
+FP number: 43
+False Negative: 97
+FN number: 1
+Recall: 97.96%
+Precision: 52.75%
+
+Note: 384-02_phi_reduced
+True positive: 23
+False Positive: EDVISIT gallops streaking
+FP number: 3
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 88.46%
+
+Note: 135-02_phi_reduced
+True positive: 40
+False Positive: PHH 2 2 FEV1 FVC angiodyplasia NMH bases 2 6 Musculoskeletal XII Carbamazepime Kerley B +JVD continue ROMI Continue Continue Continue OOB Continue Continue Continue Consult
+FP number: 26
+False Negative: Kern
+FN number: 1
+Recall: 97.56%
+Precision: 60.61%
+
+Note: 389-02_phi_reduced
+True positive: 27
+False Positive: J8845I Turner VGH PCPs WMC BP95 55 172 79 RR24 36 O2sat nebs dness BPR Loratidine qhs O2SAT NHSM AMY RDW q6 nebs PROPHY
+FP number: 24
+False Negative: Yale Land North
+FN number: 3
+Recall: 90.00%
+Precision: 52.94%
+
+Note: 190-02_phi_reduced
+True positive: 29
+False Positive: ORLANDO
+FP number: 1
+False Negative: FRED Utter JB PH 2186
+FN number: 5
+Recall: 85.29%
+Precision: 96.67%
+
+Note: 110-04_phi_reduced
+True positive: 16
+False Positive: QHS Vicodin Es TAB thicker wiht
+FP number: 6
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 72.73%
+
+Note: 138-02_phi_reduced
+True positive: 33
+False Positive: OK M.Sc MEeScription
+FP number: 3
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 91.67%
+
+Note: 342-02_phi_reduced
+True positive: 24
+False Positive: CVAs otherone EMTs retird Metoprolol MC Musculoskeletal Celebrex PEERL hyperhemia accesory midline Strenght 5 5 goog undesrtood regulalry CBCm Metroprolol Start weigth Strokes Check counselour beggining start QHS start Start BDT Celebre check BDT
+FP number: 34
+False Negative: Georgia Upshaw
+FN number: 2
+Recall: 92.31%
+Precision: 41.38%
+
+Note: 199-04_phi_reduced
+True positive: 39
+False Positive: 704F Ref trazedone Afebrile PERLA crit
+FP number: 6
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 86.67%
+
+Note: 119-02_phi_reduced
+True positive: 11
+False Positive: 
+FP number: 0
+False Negative: Om Geiger
+FN number: 2
+Recall: 84.62%
+Precision: 100.00%
+
+Note: 131-04_phi_reduced
+True positive: 24
+False Positive: Consult yom 2 1.5 IDDM2 Cell Carcinoma Bursitis Cell Carcinoma SMOH QHS QHS A+OX3 Multiple 2 6 bases 13.5 17.5 RDW 11.5 14.5 Diff
+FP number: 24
+False Negative: New Stone
+FN number: 2
+Recall: 92.31%
+Precision: 50.00%
+
+Note: 377-01_phi_reduced
+True positive: 43
+False Positive: Doraville HI ATCH Dear Pletal HI
+FP number: 6
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 87.76%
+
+Note: 314-01_phi_reduced
+True positive: 52
+False Positive: TR1 MN Lenox MN MBBS TFFocus MN
+FP number: 7
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 88.14%
+
+Note: 380-04_phi_reduced
+True positive: 25
+False Positive: EDVISIT I
+FP number: 2
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 92.59%
+
+Note: 236-05_phi_reduced
+True positive: 51
+False Positive: LUH ER8 TN Barton TN 1 6 2 6 GFFocus TN
+FP number: 11
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 82.26%
+
+Note: 346-04_phi_reduced
+True positive: 68
+False Positive: Attendings Procter dipyrimadole QHS Metoprolol QHS York Ivdu UCREAT RDW UASquamous Nasal waxing RPR B12 IVFs DNI Nexium Fragmin
+FP number: 19
+False Negative: Petty Queen Petty
+FN number: 3
+Recall: 95.77%
+Precision: 78.16%
+
+Note: 194-04_phi_reduced
+True positive: 8
+False Positive: OAKS Oakcrest 2 6 Nonspecific
+FP number: 5
+False Negative: Xavier
+FN number: 1
+Recall: 88.89%
+Precision: 61.54%
+
+Note: 114-02_phi_reduced
+True positive: 26
+False Positive: 
+FP number: 0
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 100.00%
+
+Note: 163-01_phi_reduced
+True positive: 45
+False Positive: KY Barr
+FP number: 2
+False Negative: Ames
+FN number: 1
+Recall: 97.83%
+Precision: 95.74%
+
+Note: 213-03_phi_reduced
+True positive: 28
+False Positive: GOH complains XII 50 26.6 24
+FP number: 6
+False Negative: LI12 LI12
+FN number: 2
+Recall: 93.33%
+Precision: 82.35%
+
+Note: 319-01_phi_reduced
+True positive: 48
+False Positive: MIMA Suite Z MS Marshfield Marshfield CFFocus hypertension.Hx elev dperession
+FP number: 10
+False Negative: Drive Wills
+FN number: 2
+Recall: 96.00%
+Precision: 82.76%
+
+Note: 383-03_phi_reduced
+True positive: 27
+False Positive: midcalf FMH AVSS TML BUE BUE
+FP number: 6
+False Negative: WERNER Sayre
+FN number: 2
+Recall: 93.10%
+Precision: 81.82%
+
+Note: 235-02_phi_reduced
+True positive: 8
+False Positive: Klonipin dealth SLNTG Lipitor BIMAN klonipin klonipin FSBS Continue
+FP number: 9
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 47.06%
+
+Note: 132-03_phi_reduced
+True positive: 47
+False Positive: FL Puite 9488 FL I Goulds RFFocus
+FP number: 7
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 87.04%
+
+Note: 348-03_phi_reduced
+True positive: 9
+False Positive: Asthma 1 2 Nasal QHS QHS
+FP number: 6
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 60.00%
+
+Note: 238-02_phi_reduced
+True positive: 27
+False Positive: BROADLAWNS HTN.yesterday dau betalol Appt
+FP number: 5
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 84.38%
+
+Note: 210-04_phi_reduced
+True positive: 61
+False Positive: Chest Pain chest and L chest WY x7yrs PEERL brady bilt Chest Pain Continue AC+HS AC HBVcAB HBVsAg HBVsAb x4 HBVsAb continue WY Continue continue QHS Ppx fragmin
+FP number: 28
+False Negative: Albright 12 68
+FN number: 3
+Recall: 95.31%
+Precision: 68.54%
+
+Note: 345-03_phi_reduced
+True positive: 23
+False Positive: EDVISIT hypercholesteremia HHMR
+FP number: 3
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 88.46%
+
+Note: 197-03_phi_reduced
+True positive: 15
+False Positive: 
+FP number: 0
+False Negative: wynn
+FN number: 1
+Recall: 93.75%
+Precision: 100.00%
+
+Note: 203-03_phi_reduced
+True positive: 53
+False Positive: divertic CMCAD Massillon CT
+FP number: 4
+False Negative: winter 90 Opal Opal harris
+FN number: 5
+Recall: 91.38%
+Precision: 92.98%
+
+Note: 167-02_phi_reduced
+True positive: 49
+False Positive: Callaway AL pace .18 .08 liberty
+FP number: 6
+False Negative: 7 xing
+FN number: 2
+Recall: 96.08%
+Precision: 89.09%
+
+Note: 260-03_phi_reduced
+True positive: 32
+False Positive: NY 2 6
+FP number: 3
+False Negative: Irving
+FN number: 1
+Recall: 96.97%
+Precision: 91.43%
+
+Note: 110-01_phi_reduced
+True positive: 18
+False Positive: 
+FP number: 0
+False Negative: holmes
+FN number: 1
+Recall: 94.74%
+Precision: 100.00%
+
+Note: 310-02_phi_reduced
+True positive: 87
+False Positive: MANAMANA KCGH nocturia MDS Peri TOXO VitB d+1 Vusulfan zoran ompeprazole Activision Rockefeller MDS Storting Capitol O2sat AAOx3 hickman 1 3BGLUC ATYPS GALACT FINALIZED silhoutte Hickman blasto Expectorated
+FP number: 28
+False Negative: 2Y Tina Xian Newport Muscat Tina Xian
+FN number: 7
+Recall: 92.55%
+Precision: 75.65%
+
+Note: 373-02_phi_reduced
+True positive: 28
+False Positive: lyphocyte Tobacco Non non non AAOx3 Plts Cardiogram
+FP number: 8
+False Negative: Eggers Seminole Byers
+FN number: 3
+Recall: 90.32%
+Precision: 77.78%
+
+Note: 263-04_phi_reduced
+True positive: 26
+False Positive: EDVISIT Douglas Babinski
+FP number: 3
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 89.66%
+
+Note: 200-04_phi_reduced
+True positive: 72
+False Positive: T2N1 T2N1M0 IMRT 4D USOH Griffin 4.0x3.5x0.8 TAB TAB 1 2 TAB TAB.SR 20 MG CAPSULE Reclast 4MG 5ML Radi Amer. Restaging T2N1M0 GA
+FP number: 24
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 75.00%
+
+Note: 164-05_phi_reduced
+True positive: 46
+False Positive: QHS q8 pulse64 RRRs1s2 nocturia 155 Hct
+FP number: 7
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 86.79%
+
+Note: 231-01_phi_reduced
+True positive: 29
+False Positive: COQUILLE PMHR dyskinesis IMN Crit Plts musomyst
+FP number: 7
+False Negative: Ernst
+FN number: 1
+Recall: 96.67%
+Precision: 80.56%
+
+Note: 218-02_phi_reduced
+True positive: 21
+False Positive: MISSOULA complains nocturia dyskinesis Hamp. GGC MC Continue Fluvax
+FP number: 9
+False Negative: Eggleston
+FN number: 1
+Recall: 95.45%
+Precision: 70.00%
+
+Note: 215-02_phi_reduced
+True positive: 16
+False Positive: HWS NTI HWS distantR x2Pneumonia Brown CADPGP MGF d90 CVAM b66 DMS b74 DMSon b93D b94 due22D pap24 UTPro QHS SUST congetsion stating
+FP number: 23
+False Negative: 4 19h Fran 38 48
+FN number: 5
+Recall: 76.19%
+Precision: 41.03%
+
+Note: 201-01_phi_reduced
+True positive: 15
+False Positive: 7 10 integrilin Tobacco Justice AAOX3 XII 5 5 Plasma Sodium mmol L Plasma Potassium mmol L Plasma mmol L Plasma Magnesium meq L Plasma Plasma Plasma Glucose Globulin 13.5 17.5 RDW 11.5 14.5 11.3 13.3 Diff prox integrilin Rhythm D Pump
+FP number: 42
+False Negative: Lake
+FN number: 1
+Recall: 93.75%
+Precision: 26.32%
+
+Note: 112-03_phi_reduced
+True positive: 42
+False Positive: WMNH OH I 7 10 Wheatland ohms ohms perplexing NCHC UFFocus
+FP number: 11
+False Negative: CLARENCE CTE 226 Una
+FN number: 4
+Recall: 91.30%
+Precision: 79.25%
+
+Note: 262-01_phi_reduced
+True positive: 9
+False Positive: complains Permpro Musculoskeletal hypopit Heme Onc HEEN Mallampatti IVPCA
+FP number: 9
+False Negative: I
+FN number: 1
+Recall: 90.00%
+Precision: 50.00%
+
+Note: 134-02_phi_reduced
+True positive: 14
+False Positive: 1 2 Plasma mmol L Plasma Potassium mmol L Plasma mmol L Plasma Plasma Plasma Plasma Glucose Hemoglobin Glucose wise glucose 1 2 Best
+FP number: 24
+False Negative: O
+FN number: 1
+Recall: 93.33%
+Precision: 36.84%
+
+Note: 385-02_phi_reduced
+True positive: 59
+False Positive: Counsult Bellaire Interop cartiledge rescess cartiledge LGIB requip rxn RUSB x4 XII 11.8 14.6 Grauer
+FP number: 15
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 79.73%
+
+Note: 233-03_phi_reduced
+True positive: 32
+False Positive: EASLEY Easley EASLEY
+FP number: 3
+False Negative: Romano LL OB 6245
+FN number: 4
+Recall: 88.89%
+Precision: 91.43%
+
+Note: 343-02_phi_reduced
+True positive: 29
+False Positive: ESRP D
+FP number: 2
+False Negative: SHERRY SHERRY
+FN number: 2
+Recall: 93.55%
+Precision: 93.55%
+
+Note: 111-04_phi_reduced
+True positive: 24
+False Positive: EDVISIT 8 10
+FP number: 3
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 88.89%
+
+Note: 191-02_phi_reduced
+True positive: 95
+False Positive: ATTG CPKs PTFE 2 2 decanulation sxn +cougn Tube Nebs Zaroxyln Regland 10,000 U TIW Silvidine Magnesium Bilirubin Bilirubin units L Lipase 9.8 L 13.5 17.5 RDW 11.5 14.5 Superstat 18.3 H 11.1 13.1 Superstat Superstat Magnesium Globulin Bilirubin Bilirubin Isoenzy HONC Nebs NPGT TFs Madison infxn Baseline Cre osms Ophtho Proph
+FP number: 52
+False Negative: Old
+FN number: 1
+Recall: 98.96%
+Precision: 64.63%
+
+Note: 139-02_phi_reduced
+True positive: 12
+False Positive: Saw cox CVAT lowereing Ibupfofen Vicodan HMC
+FP number: 7
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 63.16%
+
+Note: 216-05_phi_reduced
+True positive: 41
+False Positive: FDate I respirtory vancomysin Broadwater Arkansas Black Resp.Diagnosis Status BTPS PredFVC Lts Lts Lts 0FEV1 FVC 5FEV1 FEV6 32PEFR INTERPRETATIONFEV1 FVC FEV1 FVC significantresponse FVC Since FVC limitatio possiblity challange bronchoconstriciton
+FP number: 31
+False Negative: 251 628 xxxx Olmstead
+FN number: 4
+Recall: 91.11%
+Precision: 56.94%
+
+Note: 388-02_phi_reduced
+True positive: 38
+False Positive: CLINIC Walk in clinic NE p.o
+FP number: 6
+False Negative: GV arreola 06 278 08 37
+FN number: 6
+Recall: 86.36%
+Precision: 86.36%
+
+Note: 378-03_phi_reduced
+True positive: 31
+False Positive: 5 4 5 glynase XII
+FP number: 5
+False Negative: DT 2617 6415
+FN number: 3
+Recall: 91.18%
+Precision: 86.11%
+
+Note: 266-02_phi_reduced
+True positive: 84
+False Positive: stermotomy Musc Skel 5 5 ADA Step ORGINAL BRIGHTPOINT KINGWOOD CKMC
+FP number: 11
+False Negative: um um rosenberg rosenberg rosenberg stephens stephens rosenberg rosenberg rosenberg
+FN number: 10
+Recall: 89.36%
+Precision: 88.42%
+
+Note: 211-01_phi_reduced
+True positive: 18
+False Positive: 8 10 SLTNG 1 2 CCU5 brady tachyarrythmia nonbreather A0 LVIDd ant.sep LVIDs mid.sep PWT inf.sep IVS IVS inf.pos pos.lat CORONARIES hypercoag Bblocker FamHx signific SocHx HRB Fragmin Musculoskeltal CRFs Fragmin
+FP number: 31
+False Negative: Urban Citrus
+FN number: 2
+Recall: 90.00%
+Precision: 36.73%
+
+Note: 205-02_phi_reduced
+True positive: 25
+False Positive: 
+FP number: 0
+False Negative: RH31 RH31
+FN number: 2
+Recall: 92.59%
+Precision: 100.00%
+
+Note: 161-03_phi_reduced
+True positive: 26
+False Positive: AllClenz Panafil 1 8 Medipore
+FP number: 5
+False Negative: FJ 77
+FN number: 2
+Recall: 92.86%
+Precision: 83.87%
+
+Note: 375-03_phi_reduced
+True positive: 26
+False Positive: TRUMBULL Trumbull Alexandria TMH Alexandria Corcoran AC Corcoran AC QHS QHS nocturia Discloses May cogwheeling complains AC AC QHS QHS InactivatedCC
+FP number: 21
+False Negative: Big Rapids
+FN number: 2
+Recall: 92.86%
+Precision: 55.32%
+
+Note: 316-03_phi_reduced
+True positive: 3
+False Positive: control.Also zaroxylyn summer +PPD laser constip Heme bases murm enlarg evid
+FP number: 11
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 21.43%
+
+Note: 208-02_phi_reduced
+True positive: 11
+False Positive: ophtho QHS ACETAMINOPHEN OSCAL+D 1TABLE Abd
+FP number: 6
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 64.71%
+
+Note: 162-04_phi_reduced
+True positive: 18
+False Positive: complains complains 2PUFFS 4PUFFS 2PUFFS 2PUFFS 220MCG van 80 Seatbelts BPBPR dypareunia dLDL K
+FP number: 14
+False Negative: 2076Chief
+FN number: 1
+Recall: 94.74%
+Precision: 56.25%
+
+Note: 318-04_phi_reduced
+True positive: 31
+False Positive: Trinity RI M.Sc MEeScription
+FP number: 4
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 88.57%
+
+Note: 347-01_phi_reduced
+True positive: 19
+False Positive: Bailey Faith Bailey Klonopin 2 6 5 5 D
+FP number: 9
+False Negative: DARLING IM IM
+FN number: 3
+Recall: 86.36%
+Precision: 67.86%
+
+Note: 195-01_phi_reduced
+True positive: 17
+False Positive: Humbert Humbert Tenormin
+FP number: 3
+False Negative: KZ 9636
+FN number: 2
+Recall: 89.47%
+Precision: 85.00%
+
+Note: 315-04_phi_reduced
+True positive: 20
+False Positive: Dr husban Suffered Head packt CaCO3 BS 4.00 5.20 RDW 11.5 14.5 11.1 13.1 Diff Absolute Absolute Absolute Absolute Absolute Magnesium Head Keppra specrtrum Abd
+FP number: 25
+False Negative: Valle 4
+FN number: 2
+Recall: 90.91%
+Precision: 44.44%
+
+Note: 381-01_phi_reduced
+True positive: 24
+False Positive: EDVISIT midline 3 6
+FP number: 4
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 85.71%
+
+Note: 130-01_phi_reduced
+True positive: 40
+False Positive: PFSH EHCC Nonsmoker t.i.d q.i.d Mathematician 4 6 LLQ 3 4 EHCC
+FP number: 12
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 76.92%
+
+Note: 198-01_phi_reduced
+True positive: 9
+False Positive: Wolfe amitrypiline qhs Genl WM MGR VFF trapezii 5 5 XII midline
+FP number: 12
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 42.86%
+
+Note: 376-04_phi_reduced
+True positive: 27
+False Positive: Freeman 2 3 10 TAB Insulin Nph Insulin Nph QHS lympadenopathy A+Ox3 XII Plasma mmol L Plasma mmol L Plasma mmol L Plasma mmol L Plasma meq L Plasma Plasma Plasma Glucose 13.5 17.5 RDW 11.5 14.5 Diff No of C diff NPH
+FP number: 43
+False Negative: Bell
+FN number: 1
+Recall: 96.43%
+Precision: 38.57%
+
+Note: 376-03_phi_reduced
+True positive: 28
+False Positive: fragmin 25UNITS QHS 1CAPSULE HYDROCLOROTH
+FP number: 5
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 84.85%
+
+Note: 268-02_phi_reduced
+True positive: 28
+False Positive: HOLDEN nocturia Exedrin Estynil Clarinex QHS Accucheck
+FP number: 7
+False Negative: Riddle
+FN number: 1
+Recall: 96.55%
+Precision: 80.00%
+
+Note: 315-03_phi_reduced
+True positive: 20
+False Positive: KMC PCKD USOH Calcitol Mesnest Med Hx PCKD Hx +BSs withraw Achilles
+FP number: 12
+False Negative: Valle
+FN number: 1
+Recall: 95.24%
+Precision: 62.50%
+
+Note: 265-02_phi_reduced
+True positive: 34
+False Positive: JELLICO D
+FP number: 2
+False Negative: FOY
+FN number: 1
+Recall: 97.14%
+Precision: 94.44%
+
+Note: 318-03_phi_reduced
+True positive: 32
+False Positive: Trinity RI M.Sc
+FP number: 3
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 91.43%
+
+Note: 162-03_phi_reduced
+True positive: 24
+False Positive: AASC D
+FP number: 2
+False Negative: DE O DE
+FN number: 3
+Recall: 88.89%
+Precision: 92.31%
+
+Note: 212-01_phi_reduced
+True positive: 22
+False Positive: FERNANDO Ventricular lyts Ventricular CCH 1 2 Alz baker precussion
+FP number: 10
+False Negative: Xa
+FN number: 1
+Recall: 95.65%
+Precision: 68.75%
+
+Note: 206-02_phi_reduced
+True positive: 33
+False Positive: Follow Up integrullin TAB Nocturia cvat Exts 2 2 May
+FP number: 10
+False Negative: 74
+FN number: 1
+Recall: 97.06%
+Precision: 76.74%
+
+Note: 316-04_phi_reduced
+True positive: 7
+False Positive: managementAlso tab zaroxylyn again.we +PPD ++fatigue NOaches laser constip Heme bases insuff zaroxy elig May heme
+FP number: 16
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 30.43%
+
+Note: 382-01_phi_reduced
+True positive: 15
+False Positive: orgs HSH Pancreacarb Accolate Prandin qac Vit E Vit K Protoniz Azithro +left OTW XII 5 5 +paresthesias Continue recs Pulm continue azithro continue disdiadochokinesis Continue
+FP number: 26
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 36.59%
+
+Note: 349-01_phi_reduced
+True positive: 43
+False Positive: Suite 20 IA D50 midline
+FP number: 5
+False Negative: IL
+FN number: 1
+Recall: 97.73%
+Precision: 89.58%
+
+Note: 375-04_phi_reduced
+True positive: 25
+False Positive: Trumbull Corcoran Pletal nocturia hypomimia 'pokerface TMH tab
+FP number: 8
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 75.76%
+
+Note: 161-04_phi_reduced
+True positive: 17
+False Positive: attmp respone Include Plasma mmol L Plasma mmol L Plasma mmol L Plasma meq L Plasma Plasma Plasma Glucose FIO2 L mmol L Glucose 13.5 17.5 RDW 11.5 14.5 11.3 13.3 diruesis Iscenmia Prophy Full
+FP number: 35
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 32.69%
+
+Note: 196-01_phi_reduced
+True positive: 9
+False Positive: HDC TChol auth ACETAMIN TAB QHS ACETAMINOPHEN W TAB auth rec 's Montefiore
+FP number: 13
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 40.91%
+
+Note: 344-01_phi_reduced
+True positive: 28
+False Positive: Chest chest Accolate Chest Chest D
+FP number: 6
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 82.35%
+
+Note: 378-04_phi_reduced
+True positive: 45
+False Positive: Kingsley finosopril Abd Plasma Sodium mmol L Plasma Potassium mmol L Plasma mmol L Plasma Plasma Plasma Plasma Glucose 4.00 5.20 RDW 11.5 14.5 Diff 1.005 1.035 Albumin Glucose Bili Head chage levoquin
+FP number: 33
+False Negative: 1 66 1 66 4
+FN number: 5
+Recall: 90.00%
+Precision: 57.69%
+
+Note: 388-05_phi_reduced
+True positive: 11
+False Positive: Dr Ghanna I Nitrofurantoin TAB Nph Q48H Onetocuh Abd reccur
+FP number: 10
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 52.38%
+
+Note: 216-02_phi_reduced
+True positive: 54
+False Positive: Gibson Rafael Mount 10 10 8 10 Bacteremia Rafael MSRH A locationo GCH persitent abnl 2 2 2 2 bacteremia Rafael 11.6 35.5 PRBCs TIAs 2086 2100 UTIs 2 2 TIAs Niferex q6hours q8hrs XII 4 5 4 5 Rafael T10 T11 abnl Rafael mngmt MSRH GCH IR q4hours MRIs Rafael 2 2 bacteremia Rafael
+FP number: 55
+False Negative: Anchorage 11
+FN number: 2
+Recall: 96.43%
+Precision: 49.54%
+
+Note: 202-01_phi_reduced
+True positive: 40
+False Positive: NE ECI I ECI SCMHC ECI Angioseal Tikosyn NE
+FP number: 9
+False Negative: BAR
+FN number: 1
+Recall: 97.56%
+Precision: 81.63%
+
+Note: 139-05_phi_reduced
+True positive: 98
+False Positive: PCP TAB Q5 Neurontin QHS Lipitor QHS Sesta ishemia Pain ARTERY acetaminophen Ultr Kidney UROBI HCAST SQHI
+FP number: 17
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 85.22%
+
+Note: 111-03_phi_reduced
+True positive: 29
+False Positive: Ridge NV gauge Weiss Depo
+FP number: 5
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 85.29%
+
+Note: 233-04_phi_reduced
+True positive: 24
+False Positive: DONELLSON D
+FP number: 2
+False Negative: PICKETT
+FN number: 1
+Recall: 96.00%
+Precision: 92.31%
+
+Note: 385-05_phi_reduced
+True positive: 15
+False Positive: QMC Pacemaker Hyperlipidemia Hyperlipidemia Pacemaker TAB.SR QHS TAB Nitroquick TAB Requip Toprol Xl TAB.SR QHS QHS middler XII QMC ER QMC
+FP number: 21
+False Negative: West
+FN number: 1
+Recall: 93.75%
+Precision: 41.67%
+
+Note: 134-05_phi_reduced
+True positive: 49
+False Positive: PRIMGHAR snow max Prandin BRB MAE HGBA1C Continue
+FP number: 8
+False Negative: Whittaker Whittaker
+FN number: 2
+Recall: 96.08%
+Precision: 85.96%
+
+Note: 112-04_phi_reduced
+True positive: 52
+False Positive: I OH
+FP number: 2
+False Negative: Clarence BW brown
+FN number: 3
+Recall: 94.55%
+Precision: 96.30%
+
+Note: 192-02_phi_reduced
+True positive: 32
+False Positive: Floyd CO Floyd CO
+FP number: 4
+False Negative: pina
+FN number: 1
+Recall: 96.97%
+Precision: 88.89%
+
+Note: 340-02_phi_reduced
+True positive: 35
+False Positive: Carolyn Bailey AL Schroder 8 10 Norvasc Skelaxin rhonci examOn Norvasc SFFocus
+FP number: 12
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 74.47%
+
+Note: 215-05_phi_reduced
+True positive: 68
+False Positive: ELKHORN Aden PCW PCW Aden PCW Althought PSHx Lipitor QHS w PR .22 PBH HGBA1C FEV1 VC Diltiazem qtt D5W Lipitor QHS
+FP number: 22
+False Negative: You
+FN number: 1
+Recall: 98.55%
+Precision: 75.56%
+
+Note: 137-02_phi_reduced
+True positive: 36
+False Positive: Eudowood WI Jay Rappahannock CSSten
+FP number: 5
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 87.80%
+
+Note: 218-05_phi_reduced
+True positive: 65
+False Positive: Tlake Washington bases SBP 19 his ABD MICU AMY 196 bases Mallory Weiss Cross resuscitated7
+FP number: 15
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 81.25%
+
+Note: 230-03_phi_reduced
+True positive: 24
+False Positive: yom NWB Carotid Ipatropium
+FP number: 4
+False Negative: Ulysses Ulysses
+FN number: 2
+Recall: 92.31%
+Precision: 85.71%
+
+Note: 386-02_phi_reduced
+True positive: 38
+False Positive: Chilton VT Hemoglobin 6.5
+FP number: 4
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 90.48%
+
+Note: 169-02_phi_reduced
+True positive: 9
+False Positive: Calorie Needs HbAIC SMBG needs LDN
+FP number: 6
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 60.00%
+
+Note: 313-02_phi_reduced
+True positive: 22
+False Positive: PROMPTCAREIMA malb opthalmology PSHx PGynHx SAB1 TAB2 NKAD PERLA May opthalmology procadia
+FP number: 12
+False Negative: Xen
+FN number: 1
+Recall: 95.65%
+Precision: 64.71%
+
+Note: 370-02_phi_reduced
+True positive: 31
+False Positive: Nondistended XII 5 5 D
+FP number: 5
+False Negative: ELDER ELDER
+FN number: 2
+Recall: 93.94%
+Precision: 86.11%
+
+Note: 164-02_phi_reduced
+True positive: 18
+False Positive: CHH nocturia q6
+FP number: 3
+False Negative: Xavier
+FN number: 1
+Recall: 94.74%
+Precision: 85.71%
+
+Note: 200-03_phi_reduced
+True positive: 52
+False Positive: GA 195 1138 GA 30 TR BackJob VoiceJob
+FP number: 8
+False Negative: Vincent
+FN number: 1
+Recall: 98.11%
+Precision: 86.67%
+
+Note: 113-01_phi_reduced
+True positive: 29
+False Positive: DAMERON interviewed D
+FP number: 3
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 90.62%
+
+Note: 263-03_phi_reduced
+True positive: 26
+False Positive: EDVISIT o'clock Non Q non
+FP number: 5
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 83.87%
+
+Note: 373-05_phi_reduced
+True positive: 35
+False Positive: T2m PMNs Craftperson Acetaminophen TAB Insulin Nph Insulin Nph QHS Labetalol Hcl QHS Magnesium XII 5 5 Achilles RDW No Scooped 2 2 T2m 2 2 DVTs Cont Norvasc hydralazin Cont Cont NPH OBR MDMedicine PGY1
+FP number: 36
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 49.30%
+
+Note: 232-01_phi_reduced
+True positive: 9
+False Positive: mangement dlMagnesium U LTransaminase U LAmylase LTransaminase U LLipase cmmHCT 4.00 5.20 cummMCV flMCH 11.5 14.5 mm3Absolute 1 4
+FP number: 19
+False Negative: 4
+FN number: 1
+Recall: 90.00%
+Precision: 32.14%
+
+Note: 260-04_phi_reduced
+True positive: 32
+False Positive: R20s Tn Mucomyst Tgl DCCV TIBC 1000MG TAB TAB Urocit P72 R18 AAOx3 CNII XII RDW 2 2 +troponin BACTEREMIA
+FP number: 20
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 61.54%
+
+Note: 203-04_phi_reduced
+True positive: 33
+False Positive: Massillon NSVT CCGH DISPOSITION Massillon Cardiology Service CT
+FP number: 8
+False Negative: Mexico kurtz
+FN number: 2
+Recall: 94.29%
+Precision: 80.49%
+
+Note: 197-04_phi_reduced
+True positive: 19
+False Positive: laser Nephropathy Neuropathy MGF Chest gallops 3 6 Impressions
+FP number: 9
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 67.86%
+
+Note: 117-02_phi_reduced
+True positive: 45
+False Positive: Hinds Correctol Livostmo Status Musculoskeletal Heme Onc HEEN Mallampatti XII 5 5 Status IVPCA Correctol Correctol
+FP number: 16
+False Negative: Wynn Xian Wynn
+FN number: 3
+Recall: 93.75%
+Precision: 73.77%
+
+Note: 379-01_phi_reduced
+True positive: 21
+False Positive: I Dubuque Gynocology Mitchell Flagler complains interossei 1 5 1 5 1 5 1 5 2 5 2 5 1 5 2 4 2 4 AFO DOGC Flagler
+FP number: 28
+False Negative: Winn
+FN number: 1
+Recall: 95.45%
+Precision: 42.86%
+
+Note: 345-04_phi_reduced
+True positive: 29
+False Positive: EDVISIT I Riverton
+FP number: 3
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 90.62%
+
+Note: 210-03_phi_reduced
+True positive: 90
+False Positive: Microalbumin Tols Addictions fol negativeNEURO maintenence qdfracture TABLET TABLET Tablet TABLET Tablet SupplyPlavix TABLET Tablet TABLET QHS psychSIMVASTATIN TABLET QHS Tablet NonSmokerHealth Hct Microalbumin 181 lbAGE PMIGI HSMSKIN seatbelts2 Shoudler
+FP number: 30
+False Negative: St 63Hepatitis
+FN number: 2
+Recall: 97.83%
+Precision: 75.00%
+
+Note: 160-01_phi_reduced
+True positive: 37
+False Positive: 
+FP number: 0
+False Negative: Ing
+FN number: 1
+Recall: 97.37%
+Precision: 100.00%
+
+Note: 374-01_phi_reduced
+True positive: 47
+False Positive: Houston Dear complains Remeron klor cups dystaxias dystaxias apeture Respironics Houston Respironics
+FP number: 12
+False Negative: RS 1305
+FN number: 2
+Recall: 95.92%
+Precision: 79.66%
+
+Note: 348-04_phi_reduced
+True positive: 10
+False Positive: Lipitor Nasal QHS Lipitor 1 2 QHS liefstyle and A Cor ophtho
+FP number: 12
+False Negative: Vidal
+FN number: 1
+Recall: 90.91%
+Precision: 45.45%
+
+Note: 132-04_phi_reduced
+True positive: 96
+False Positive: QHS 125MCG TAB 150MCG bases extremiteis RWP ResultsDate RDW ALYMP A AMONO A AEOS ABASO A eitiology AFR
+FP number: 18
+False Negative: Nix
+FN number: 1
+Recall: 98.97%
+Precision: 84.21%
+
+Note: 235-05_phi_reduced
+True positive: 9
+False Positive: PCIs
+FP number: 1
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 90.00%
+
+Note: 317-01_phi_reduced
+True positive: 47
+False Positive: WI 2 6 wise WI
+FP number: 5
+False Negative: Ishikawa Baird
+FN number: 2
+Recall: 95.92%
+Precision: 90.38%
+
+Note: 383-04_phi_reduced
+True positive: 51
+False Positive: 1 NDMG 5 5 5 5 40 TR BackJob VoiceJob
+FP number: 10
+False Negative: WERNER Guy Guy
+FN number: 3
+Recall: 94.44%
+Precision: 83.61%
+
+Note: 213-04_phi_reduced
+True positive: 26
+False Positive: GREEN bases Nondistended D
+FP number: 4
+False Negative: OLMSTEAD OLMSTEAD
+FN number: 2
+Recall: 92.86%
+Precision: 86.67%
+
+Note: 194-03_phi_reduced
+True positive: 76
+False Positive: Ward upchucking Artifical 3 6 A+Ox3 RDW SQHI dV2 2 2 Proph
+FP number: 12
+False Negative: 04.15.94 Ehlers Ring Ring
+FN number: 4
+Recall: 95.00%
+Precision: 86.36%
+
+Note: 346-03_phi_reduced
+True positive: 13
+False Positive: from RR Donnelley dipyrimadole QHS Timolol Metoprolol Lipitor QHS CAP.SR
+FP number: 10
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 56.52%
+
+Note: 236-02_phi_reduced
+True positive: 60
+False Positive: Barton Dear Barton 2 CZI .12 .06 .36 3 Kearney TN
+FP number: 11
+False Negative: Light riggs Veal
+FN number: 3
+Recall: 95.24%
+Precision: 84.51%
+
+Note: 380-03_phi_reduced
+True positive: 39
+False Positive: hiperpigmentation hiperpigmentation Amiling Interactve microabuminuria hiperpigmentation hiperpigmentation Amiling Interactve microabuminuria
+FP number: 10
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 79.59%
+
+Note: 131-03_phi_reduced
+True positive: 27
+False Positive: weeks 1 2 VMC VMC Mother Labrinythitis colonscopy XII 5 5 BUE HJR Cor Irreg Irreg 2 6 Folgard QHS Continue Cardiazem Continue Norvasc SBP continue NaHCO3 Long regimine continue APRN
+FP number: 31
+False Negative: Florence
+FN number: 1
+Recall: 96.43%
+Precision: 46.55%
+
+Note: 119-05_phi_reduced
+True positive: 6
+False Positive: Asa QHS Med retenetion Angina Cr Squam
+FP number: 7
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 46.15%
+
+Note: 199-03_phi_reduced
+True positive: 23
+False Positive: EDVISIT midline 4 6 bases
+FP number: 5
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 82.14%
+
+Note: 234-01_phi_reduced
+True positive: 38
+False Positive: MR8 TN 1 6 2 6 Integrilin
+FP number: 7
+False Negative: Ferris Ferris
+FN number: 2
+Recall: 95.00%
+Precision: 84.44%
+
+Note: 239-01_phi_reduced
+True positive: 20
+False Positive: adenoMibi dysnpnea Neuorologic TAB.SR SYRIN Lipitor Qpm thryomegaly RDW
+FP number: 9
+False Negative: Ulysses
+FN number: 1
+Recall: 95.24%
+Precision: 68.97%
+
+Note: 161-05_phi_reduced
+True positive: 35
+False Positive: attmp respone Chem7 prox CNI Pump TBB 1.0 L Rhythm Resp CXRs May Proph
+FP number: 14
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 71.43%
+
+Note: 378-05_phi_reduced
+True positive: 34
+False Positive: assistence incont Ceftriaxonew 137MCG SUSPDR JTUBE 500MG 5ML Angiodema Angiodema mumurs decbus Superpubic Flags Bili 1.001 1.035 Hyaline superpublic cathere Prophy fragmin
+FP number: 22
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 60.71%
+
+Note: 266-04_phi_reduced
+True positive: 90
+False Positive: Musc Skel 5 5 INF2 ORGINAL BRIGHTPOINT KINGWOOD CKMC
+FP number: 9
+False Negative: rosenberg rosenberg rosenberg rosenberg rosenberg rosenberg rosenberg rosenberg um um emmons emmons rosenberg rosenberg
+FN number: 14
+Recall: 86.54%
+Precision: 90.91%
+
+Note: 118-01_phi_reduced
+True positive: 15
+False Positive: Ward HL L Achilles tardus 13.5 17.5 RDW 11.5 14.5 10.3 13.2 Echo fxn Max brady Echo doesn Cont
+FP number: 19
+False Negative: City Yuan
+FN number: 2
+Recall: 88.24%
+Precision: 44.12%
+
+Note: 268-03_phi_reduced
+True positive: 34
+False Positive: HOLDEN nocturia discomfort.No Isordil Clarinex 1 2 QHS Accucheck rfl Fluzone
+FP number: 11
+False Negative: Riddle
+FN number: 1
+Recall: 97.14%
+Precision: 75.56%
+
+Note: 376-02_phi_reduced
+True positive: 37
+False Positive: lamenictomy A myleogram 1CAPSULE QHS HYDROCLOROTH
+FP number: 6
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 86.05%
+
+Note: 315-02_phi_reduced
+True positive: 14
+False Positive: PCKD groginess 40 pm for Head '13 Hypercholesteremia KMC FOV TML TPZ 5 5 B MAE 5 5 Babinski 's Fischer Hunt Hess Fischer D W
+FP number: 26
+False Negative: VALLE
+FN number: 1
+Recall: 93.33%
+Precision: 35.00%
+
+Note: 115-01_phi_reduced
+True positive: 21
+False Positive: TOOLE AL
+FP number: 2
+False Negative: KX 7901
+FN number: 2
+Recall: 91.30%
+Precision: 91.30%
+
+Note: 265-03_phi_reduced
+True positive: 27
+False Positive: Jellico Accu D50 Jellico XII 5 5 Cerebella D
+FP number: 9
+False Negative: FOY
+FN number: 1
+Recall: 96.43%
+Precision: 75.00%
+
+Note: 162-02_phi_reduced
+True positive: 25
+False Positive: AASC D
+FP number: 2
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 92.59%
+
+Note: 206-03_phi_reduced
+True positive: 12
+False Positive: TFMC TAB Spectazole QHS Exts AC
+FP number: 6
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 66.67%
+
+Note: 318-02_phi_reduced
+True positive: 23
+False Positive: Sanford Sanford 13.5 18.0 um3 uug RDW LYMP 11.8 14.6 URR Kt V
+FP number: 13
+False Negative: S T Mount Airy Mount Airy Quin
+FN number: 7
+Recall: 76.67%
+Precision: 63.89%
+
+Note: 340-03_phi_reduced
+True positive: 38
+False Positive: Carolyn Bailey AL Hemoglobin 7.2 164 Carolyn hga1c
+FP number: 8
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 82.61%
+
+Note: 112-05_phi_reduced
+True positive: 29
+False Positive: AFFocus
+FP number: 1
+False Negative: CLARENCE
+FN number: 1
+Recall: 96.67%
+Precision: 96.67%
+
+Note: 192-03_phi_reduced
+True positive: 6
+False Positive: 100 MG LOSART TAB 100 MG LOSART TAB HASBRO WM SC Diltiazem MALB Diltiazem
+FP number: 14
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 30.00%
+
+Note: 215-04_phi_reduced
+True positive: 13
+False Positive: CPE frrom talerance furhter UAMLB Optho HWS NTI
+FP number: 8
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 61.90%
+
+Note: 137-03_phi_reduced
+True positive: 108
+False Positive: RH RHNThe JHThe CpapNo CPAPElevated LipitorHCT todayCreat todayGerd Vicodan ItchingMedications Asa May CAP.SR CAP.SRFolic QHS TAB TAB Hcl smokingReview 130 70PULSE 70WEIGHT +bowel A+Ox3 XII focal.Assessment doneM CreMicroalbumin elsewherePodiatry NEGComplete doneVitamin D 25 HYDROXY D D2+D3 BARRY SEPneumovax DoneZostavax aboutCholesterol 163Orders
+FP number: 41
+False Negative: COLLEGE STATION
+FN number: 2
+Recall: 98.18%
+Precision: 72.48%
+
+Note: 386-03_phi_reduced
+True positive: 17
+False Positive: Lipitpr ono bosniak bosniak o'clock QHS TAB PRNNot QHS QHS weigth BBlockers Recomm Restart QHS Chedck
+FP number: 16
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 51.52%
+
+Note: 218-04_phi_reduced
+True positive: 42
+False Positive: Zloor Noom dyskinesis Hct lovastatin GGC Nocturia Hct No Head Chest May
+FP number: 12
+False Negative: Eggleston Pine Bluff
+FN number: 3
+Recall: 93.33%
+Precision: 77.78%
+
+Note: 230-02_phi_reduced
+True positive: 21
+False Positive: WM Nitro WM
+FP number: 3
+False Negative: Ulysses
+FN number: 1
+Recall: 95.45%
+Precision: 87.50%
+
+Note: 216-03_phi_reduced
+True positive: 34
+False Positive: GCH GCH d'cd Donperdon Bun Cr May
+FP number: 7
+False Negative: O2
+FN number: 1
+Recall: 97.14%
+Precision: 82.93%
+
+Note: 166-01_phi_reduced
+True positive: 41
+False Positive: Audiovox rm 929 AL D
+FP number: 5
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 89.13%
+
+Note: 388-04_phi_reduced
+True positive: 4
+False Positive: bo fup Symtpoms TAB Onetocuh Abd Anxxiety
+FP number: 7
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 36.36%
+
+Note: 343-04_phi_reduced
+True positive: 29
+False Positive: John H O +PPD '70 H O 1000MG 20 MG 20MG TABLET TAB CHEW QHS
+FP number: 15
+False Negative: Street Sulphur Quijada
+FN number: 3
+Recall: 90.62%
+Precision: 65.91%
+
+Note: 139-04_phi_reduced
+True positive: 13
+False Positive: Miller Salonpas weeks
+FP number: 3
+False Negative: Qazi HW warren
+FN number: 3
+Recall: 81.25%
+Precision: 81.25%
+
+Note: 191-04_phi_reduced
+True positive: 3
+False Positive: Asa Doxycycline GTUBE GTUBE 1 2 Nexium hga1c
+FP number: 8
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 27.27%
+
+Note: 111-02_phi_reduced
+True positive: 23
+False Positive: RIDGE D
+FP number: 2
+False Negative: UPSHAW UPSHAW
+FN number: 2
+Recall: 92.00%
+Precision: 92.00%
+
+Note: 385-04_phi_reduced
+True positive: 28
+False Positive: EDVISIT I Hematocrit
+FP number: 3
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 90.32%
+
+Note: 311-01_phi_reduced
+True positive: 25
+False Positive: ZHH Chest chest CHEST Chest Chest D
+FP number: 7
+False Negative: INDIANA
+FN number: 1
+Recall: 96.15%
+Precision: 78.12%
+
+Note: 233-05_phi_reduced
+True positive: 22
+False Positive: EDVISIT
+FP number: 1
+False Negative: RICO RICO
+FN number: 2
+Recall: 91.67%
+Precision: 95.65%
+
+Note: 134-04_phi_reduced
+True positive: 35
+False Positive: USOH snow P59 BP112 63 Losart TAB Prandin QHS AAox3 RDW brady TWF Ischemia integrilin kayexolate Rhythm
+FP number: 17
+False Negative: 12 11 12 11 12 11
+FN number: 6
+Recall: 85.37%
+Precision: 67.31%
+
+Note: 372-01_phi_reduced
+True positive: 26
+False Positive: Unasyn x6 decubiti Unasyn x6 Ironworker Servicer
+FP number: 7
+False Negative: KO AO 0269
+FN number: 3
+Recall: 89.66%
+Precision: 78.79%
+
+Note: 135-01_phi_reduced
+True positive: 57
+False Positive: FEV1 FVC O2NC FEV1 FVC Fosamax Enemas 1000U hr Laxis Fosamax Plasma Sodium mmol L Plasma Potassium mmol L Plasma mmol L Plasma meq L Plasma Plasma FIO2 L .30 1.14 1.30 4.00 5.20 RDW 11.5 14.5 14.2 H 11.1 13.1 HYPOATTENUATING nebs DC'ed Coumadin
+FP number: 45
+False Negative: 1 4
+FN number: 2
+Recall: 96.61%
+Precision: 55.88%
+
+Note: 373-04_phi_reduced
+True positive: 147
+False Positive: Duchesne Thoracic Metoprolol QHS QHS Glucovance tab 143 799.3 1 2 Microalbumin 239.8 Craftperson HSLives Abdo Results theresult 1.21 theresult 1.5 PEND RDW 14.0 RDW 14.0 PEND 0 PEND 0.00 PEND None PEND 27.3 6.5 UROBI HCAST 50 SQHI NEGATIVE RadiologyStudy Chest ViewsAccession FinalExam FinalType Chest ViewsDate M.D.HISTORY chest Kerley B bases thoracic Kerley B CAP Monitor Alert Monitor alert
+FP number: 60
+False Negative: Dodd Bates Byers 20 2087 1.21.02 19 2087 Urban
+FN number: 9
+Recall: 94.23%
+Precision: 71.01%
+
+Note: 384-01_phi_reduced
+True positive: 23
+False Positive: CKMC Nonsmoker D
+FP number: 3
+False Negative: NIX NIX
+FN number: 2
+Recall: 92.00%
+Precision: 88.46%
+
+Note: 310-04_phi_reduced
+True positive: 81
+False Positive: HSCT MDS HSCT ofr cosntriction paraflu adnevorus 3 100.0 100.5 MDS TOXO Cellulitis QHS Vitamin D Pravaastatin Vitamin Activision Rockefeller Storting Acropolis bases NGTD Paraflu CHEST MDS BMT eospinophila HepA
+FP number: 30
+False Negative: Riddle Newport Muscat
+FN number: 3
+Recall: 96.43%
+Precision: 72.97%
+
+Note: 342-01_phi_reduced
+True positive: 22
+False Positive: EDVISIT I
+FP number: 2
+False Negative: IP IP
+FN number: 2
+Recall: 91.67%
+Precision: 91.67%
+
+Note: 190-01_phi_reduced
+True positive: 28
+False Positive: ORLANDO fempop ORLANDO
+FP number: 3
+False Negative: Fred Fred TF 8839
+FN number: 4
+Recall: 87.50%
+Precision: 90.32%
+
+Note: 260-05_phi_reduced
+True positive: 32
+False Positive: Richard bactermia LMCA plque XII Continue Continue Continue Metformin Continue
+FP number: 10
+False Negative: Guatemala City
+FN number: 2
+Recall: 94.12%
+Precision: 76.19%
+
+Note: 138-01_phi_reduced
+True positive: 31
+False Positive: OK alot M.Sc MEeScription
+FP number: 4
+False Negative: Big Pine Key
+FN number: 3
+Recall: 91.18%
+Precision: 88.57%
+
+Note: 167-04_phi_reduced
+True positive: 26
+False Positive: NIGHTFLOAT 5 6 10 8 10 QHS qhs XII RDW AMONO A AEOS A ABASO A possibilty
+FP number: 17
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 60.47%
+
+Note: 203-05_phi_reduced
+True positive: 38
+False Positive: Unasyn Crit Crit PTOT SEMACIAN Continue continue Crit
+FP number: 8
+False Negative: Opal howell
+FN number: 2
+Recall: 95.00%
+Precision: 82.61%
+
+Note: 389-01_phi_reduced
+True positive: 25
+False Positive: Suite 353 NC WMC I
+FP number: 5
+False Negative: Land kerns
+FN number: 2
+Recall: 92.59%
+Precision: 83.33%
+
+Note: 313-03_phi_reduced
+True positive: 30
+False Positive: hasnt Glaucoma Ranitidine QHS QHS Timolol Xalatan 1 6 Abd mcalb Cont Zantac Galucoma Optho
+FP number: 15
+False Negative: 8 69much
+FN number: 2
+Recall: 93.75%
+Precision: 66.67%
+
+Note: 169-03_phi_reduced
+True positive: 9
+False Positive: P70 BP150 80 ABDO Visual visual 5 5 KE PF L 5 5 5 5 5 5 5 5 5 5 5 5 5 5 R 5 5 5 5 5 5 5 5 5 5 5 5 5 5 Coord Head Proph fragmin
+FP number: 44
+False Negative: Chincoteague
+FN number: 1
+Recall: 90.00%
+Precision: 16.98%
+
+Note: 219-01_phi_reduced
+True positive: 71
+False Positive: Notre NV 1 3 Whitehead 2 .08 .42 NDNH Monmouth 3 Laurel NV
+FP number: 13
+False Negative: Matt Street Casper 33182William
+FN number: 4
+Recall: 94.67%
+Precision: 84.52%
+
+Note: 370-03_phi_reduced
+True positive: 19
+False Positive: 
+FP number: 0
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 100.00%
+
+Note: 164-03_phi_reduced
+True positive: 29
+False Positive: Newton RRRs1s2 Maint
+FP number: 3
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 90.62%
+
+Note: 214-01_phi_reduced
+True positive: 102
+False Positive: Results POC POC 112 HGBA1C discribed ward 1 2 exercise.3 regurgitation.4 thisexam HGBA1C nocturia Hazing difuse weith difuse 101 167 Manufaturer SanDisk M Microalbumin 111
+FP number: 25
+False Negative: 31 2096 30 City City V
+FN number: 6
+Recall: 94.44%
+Precision: 80.31%
+
+Note: 200-02_phi_reduced
+True positive: 28
+False Positive: 5 FU LCV Diagnosis Griffin adenoCa FNA pT2N1 5FU LCV TAB TAB 1 2 TAB QHS TAB.SR 40 MG 40MG CAPSULE 5MG 5ML AC 1 2 intermit arrythmias intermit Toxicities Esophagitis 5 FU LCV 5 FU LCV
+FP number: 37
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 43.08%
+
+Note: 263-02_phi_reduced
+True positive: 25
+False Positive: DOUGLAS Lipitor Christus Spohn D
+FP number: 5
+False Negative: DODD PELLETIER PELLETIER
+FN number: 3
+Recall: 89.29%
+Precision: 83.33%
+
+Note: 346-02_phi_reduced
+True positive: 23
+False Positive: MGH urinatingHistory Metoprolol QHS Insulin Insulin Nph EtOHism Strictures Hernia Epididymus Martinsville
+FP number: 12
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 65.71%
+
+Note: 114-04_phi_reduced
+True positive: 29
+False Positive: 2 2 midline rhonci XII CHADS2 dilt Afebrile PGY1
+FP number: 9
+False Negative: Irish
+FN number: 1
+Recall: 96.67%
+Precision: 76.32%
+
+Note: 194-02_phi_reduced
+True positive: 33
+False Positive: MSIII Mary Head Twave leftover Trusopt Resistene nocturia 2 3 Cor 2 6 XII 5 5 132 99 18 Iso Rads Neck Hct Carotid carotid Carotid ROMI Carotid Continue Cr Continue Optho Continue Truopt I wtih
+FP number: 36
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 47.83%
+
+Note: 380-02_phi_reduced
+True positive: 19
+False Positive: FNF
+FP number: 1
+False Negative: Queen
+FN number: 1
+Recall: 95.00%
+Precision: 95.00%
+
+Note: 236-03_phi_reduced
+True positive: 35
+False Positive: Barton TN sub.q sub.q CZI .12 .08 .34
+FP number: 8
+False Negative: quintal
+FN number: 1
+Recall: 97.22%
+Precision: 81.40%
+
+Note: 131-02_phi_reduced
+True positive: 115
+False Positive: sten dil RWMA Cedars ER DARDANELLE 98 PRMHR SHOWED COUPLETS WEEKS ABNL REDISCUSSED RBS 2 1 1 2 IN FRANCIS SSC alot Genito Urinary Normal TAB
+FP number: 26
+False Negative: 3 3 82 83 4 22 2088 1 88 XIAN NEW
+FN number: 11
+Recall: 91.27%
+Precision: 81.56%
+
+Note: 119-04_phi_reduced
+True positive: 7
+False Positive: squam QHS Angina Med retenetion Angina Squam
+FP number: 7
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 50.00%
+
+Note: 199-02_phi_reduced
+True positive: 34
+False Positive: GA
+FP number: 1
+False Negative: Keyes Keyes BI YD 0043
+FN number: 5
+Recall: 87.18%
+Precision: 97.14%
+
+Note: 267-01_phi_reduced
+True positive: 26
+False Positive: 5 5 Short D
+FP number: 4
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 86.67%
+
+Note: 197-05_phi_reduced
+True positive: 14
+False Positive: Chlropropamiden Mulitvitamins Soma Abd AbdAorta RArm RRatio LRatio RPVR LPVR .62 .37 IMPRESSIONS
+FP number: 13
+False Negative: Kinder
+FN number: 1
+Recall: 93.33%
+Precision: 51.85%
+
+Note: 210-02_phi_reduced
+True positive: 6
+False Positive: Tegaderm
+FP number: 1
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 85.71%
+
+Note: 204-01_phi_reduced
+True positive: 22
+False Positive: catherization catherization x15 prox minivision integrillin precatherization
+FP number: 7
+False Negative: Unknown Inglis
+FN number: 2
+Recall: 91.67%
+Precision: 75.86%
+
+Note: 238-04_phi_reduced
+True positive: 60
+False Positive: BROADLAWNS presycope significnat 1 2 1 2 Trusopt HGBA1C significnat inferobasal 1 2 1 2 Trusopt Status
+FP number: 17
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 77.92%
+
+Note: 132-05_phi_reduced
+True positive: 25
+False Positive: EDVISIT I
+FP number: 2
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 92.59%
+
+Note: 348-05_phi_reduced
+True positive: 5
+False Positive: Glucovance 1 2 Nasal Glucovance Lipitor Diskus Diskus QHS Cor C.diff
+FP number: 11
+False Negative: Urso Vidal
+FN number: 2
+Recall: 71.43%
+Precision: 31.25%
+
+Note: 383-05_phi_reduced
+True positive: 8
+False Positive: CPE symptoms.Review RashLISINOPRIL coughATORVASTATIN SupplyFlovent 110MCG AER W ADAP QDNiacin QHS Osteoathritis p L CEALung R USG RetiredMarital marriedChildren Etoh.Sexually NC.Vital 122 62PULSE 72WEIGHT NADSkin ClearHEENT clearNeck LN'sAxillae ACor RRRAbd HSMExt R Dupuytrens.Neuro intactAssessment lipids3 levitra6 helps.7 Stable8 follow9 check10 Hlth maint mnth
+FP number: 43
+False Negative: 12 19Goiter
+FN number: 2
+Recall: 80.00%
+Precision: 15.69%
+
+Note: 209-01_phi_reduced
+True positive: 36
+False Positive: Carrizoza WI I Sutton .1 Creamery midline 2 5 3 5 3 5 3 5 5 5 anticholesterol Sutton Family Care Dopplers Sutton Family Care
+FP number: 25
+False Negative: AL 0138 855
+FN number: 3
+Recall: 92.31%
+Precision: 59.02%
+
+Note: 235-04_phi_reduced
+True positive: 11
+False Positive: IPMI STT
+FP number: 2
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 84.62%
+
+Note: 235-03_phi_reduced
+True positive: 9
+False Positive: HgA1C Ectopic Anemia Natalcare 220 HgA1C
+FP number: 6
+False Negative: Laplace Uri
+FN number: 2
+Recall: 81.82%
+Precision: 60.00%
+
+Note: 383-02_phi_reduced
+True positive: 16
+False Positive: Flonase Osteoathritis
+FP number: 2
+False Negative: Werner
+FN number: 1
+Recall: 94.12%
+Precision: 88.89%
+
+Note: 348-02_phi_reduced
+True positive: 7
+False Positive: Lotrisone Clotri Asa 1 2 Nasal QHS QHS Ac Ac and A Cor lestion dyzide
+FP number: 15
+False Negative: Judd Vidal
+FN number: 2
+Recall: 77.78%
+Precision: 31.82%
+
+Note: 132-02_phi_reduced
+True positive: 56
+False Positive: Jeanes FL 1.65 calciums 131I
+FP number: 5
+False Negative: Vincent BF cooley Vincent
+FN number: 4
+Recall: 93.33%
+Precision: 91.80%
+
+Note: 238-03_phi_reduced
+True positive: 8
+False Positive: BROADLAWNS Continue QHS
+FP number: 3
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 72.73%
+
+Note: 197-02_phi_reduced
+True positive: 34
+False Positive: NMH NMH Dr Lymph lymph Lymph
+FP number: 6
+False Negative: CQ
+FN number: 1
+Recall: 97.14%
+Precision: 85.00%
+
+Note: 345-02_phi_reduced
+True positive: 46
+False Positive: 78Q 47 4 FSG orthpnea 2 2 HHMR Lovastatin Diltiazem Novolin qhs Diltiazem SR qhs 2 6 RUSB bases Heberdin PIPs MTPs MTPs 5 5 TIBC HGBA1C N76 DVTs DVTs Recs MS4 x
+FP number: 33
+False Negative: Dolores U Ito Unknown
+FN number: 4
+Recall: 92.00%
+Precision: 58.23%
+
+Note: 199-05_phi_reduced
+True positive: 53
+False Positive: Mary Cardiology Suite 780 GA GA Dear VPBs 120 MEeScription
+FP number: 10
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 84.13%
+
+Note: 119-03_phi_reduced
+True positive: 10
+False Positive: 
+FP number: 0
+False Negative: Om Geiger
+FN number: 2
+Recall: 83.33%
+Precision: 100.00%
+
+Note: 269-01_phi_reduced
+True positive: 26
+False Positive: Max EOMs JVP6
+FP number: 3
+False Negative: GE
+FN number: 1
+Recall: 96.30%
+Precision: 89.66%
+
+Note: 131-05_phi_reduced
+True positive: 32
+False Positive: VICTOR Victor BUL 773 MN CryoMAZE Casco midline bases midline 1 6 1 6 Lipitor Wayne Best
+FP number: 17
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 65.31%
+
+Note: 236-04_phi_reduced
+True positive: 14
+False Positive: 1 2 DUPYTRENS embx HUMULOG 2SPRAY 25UNITS 3units Q5 QHS LONGMONT BARBITUATES ERGOTS
+FP number: 13
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 51.85%
+
+Note: 194-05_phi_reduced
+True positive: 12
+False Positive: OAKS 2 6
+FP number: 3
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 80.00%
+
+Note: 114-03_phi_reduced
+True positive: 39
+False Positive: RADIOLOGY Chest
+FP number: 2
+False Negative: CI 7153
+FN number: 2
+Recall: 95.12%
+Precision: 95.12%
+
+Note: 264-01_phi_reduced
+True positive: 24
+False Positive: D
+FP number: 1
+False Negative: PIERRE PIERRE PIERRE
+FN number: 3
+Recall: 88.89%
+Precision: 96.00%
+
+Note: 213-02_phi_reduced
+True positive: 58
+False Positive: Oaks MD Dear 2 Leake MD M.D Leake MD
+FP number: 9
+False Negative: \tolbert M.D
+FN number: 2
+Recall: 96.67%
+Precision: 86.57%
+
+Note: 207-01_phi_reduced
+True positive: 42
+False Positive: MAMARONECK LBH LBH LBH LBH managment syms cardiacs SMA 20 Mamaroneck LBH
+FP number: 12
+False Negative: LF XS 4181
+FN number: 3
+Recall: 93.33%
+Precision: 77.78%
+
+Note: 263-05_phi_reduced
+True positive: 24
+False Positive: EDVISIT I
+FP number: 2
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 92.31%
+
+Note: 193-01_phi_reduced
+True positive: 13
+False Positive: 1CAPSULE Davis lympadenopathy Nye
+FP number: 4
+False Negative: Tania Downs
+FN number: 2
+Recall: 86.67%
+Precision: 76.47%
+
+Note: 341-01_phi_reduced
+True positive: 26
+False Positive: buckle Babinskis
+FP number: 2
+False Negative: 423
+FN number: 1
+Recall: 96.30%
+Precision: 92.86%
+
+Note: 164-04_phi_reduced
+True positive: 10
+False Positive: RRRs1s2
+FP number: 1
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 90.91%
+
+Note: 370-04_phi_reduced
+True positive: 25
+False Positive: EDVISIT
+FP number: 1
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 96.15%
+
+Note: 136-01_phi_reduced
+True positive: 11
+False Positive: nocturia ADA
+FP number: 2
+False Negative: AJ yeung updegraff
+FN number: 3
+Recall: 78.57%
+Precision: 84.62%
+
+Note: 169-04_phi_reduced
+True positive: 12
+False Positive: WASHINGTON USOH MPHR SCD A+W WM Short H20 ausculation yom
+FP number: 10
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 54.55%
+
+Note: 387-01_phi_reduced
+True positive: 18
+False Positive: nocturia CVAT Noncontrast KUB.The bases
+FP number: 5
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 78.26%
+
+Note: 313-04_phi_reduced
+True positive: 46
+False Positive: Glaucoma Ranitidine QHS QHS Timolol Xalatan HGA1C A P glaucoma HGA1C poq poq Cont Zantac Glaucoma Optho HGA1C
+FP number: 18
+False Negative: RUTLEDGE
+FN number: 1
+Recall: 97.87%
+Precision: 71.88%
+
+Note: 217-01_phi_reduced
+True positive: 15
+False Positive: Brady Brady Brady achey hemorrrhage Brady
+FP number: 6
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 71.43%
+
+Note: 203-02_phi_reduced
+True positive: 55
+False Positive: 2 nocturia 3 2 6 brown
+FP number: 6
+False Negative: 89 Opal Opal valle
+FN number: 4
+Recall: 93.22%
+Precision: 90.16%
+
+Note: 167-03_phi_reduced
+True positive: 31
+False Positive: D
+FP number: 1
+False Negative: PETTY PETTY
+FN number: 2
+Recall: 93.94%
+Precision: 96.88%
+
+Note: 260-02_phi_reduced
+True positive: 54
+False Positive: 1000MG Urocit QHS TAB Urocit K Hchol 164 M 120.5 HOLLY Range 142 104 Microalbumin HOLLY Range Random Hct Abd LSKK Hchol
+FP number: 22
+False Negative: Xavier
+FN number: 1
+Recall: 98.18%
+Precision: 71.05%
+
+Note: 310-03_phi_reduced
+True positive: 25
+False Positive: EDVISIT
+FP number: 1
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 96.15%
+
+Note: 373-03_phi_reduced
+True positive: 16
+False Positive: TAB 500MG 200 CAP.SR Glucovance Metoprolol Tab QHS Maint Craftperson Alcohol nocturia Neck L Breast Chest Musc Skel Dec dysmmetria Bilat Babinski 2 6 MSE glycohgb NICS
+FP number: 27
+False Negative: Seminole Dodd
+FN number: 2
+Recall: 88.89%
+Precision: 37.21%
+
+Note: 134-03_phi_reduced
+True positive: 67
+False Positive: Hyperexpanded sortness skel Diaphragms Losart TAB VHS VHS by 179 M r.arm Brewster 131 165 Microalbumin
+FP number: 16
+False Negative: O
+FN number: 1
+Recall: 98.53%
+Precision: 80.72%
+
+Note: 233-02_phi_reduced
+True positive: 24
+False Positive: DONELLSON 2 6 D
+FP number: 4
+False Negative: PICKETT
+FN number: 1
+Recall: 96.00%
+Precision: 85.71%
+
+Note: 385-03_phi_reduced
+True positive: 31
+False Positive: Beckley
+FP number: 1
+False Negative: 315 West Yawn
+FN number: 3
+Recall: 91.18%
+Precision: 96.88%
+
+Note: 191-03_phi_reduced
+True positive: 45
+False Positive: MICU Noticed uPRBCs Vfib MICU Angioectasia thrmobectomy 8 138 50 8 5 5 5 Flags Globulin Bilirubin Bilirubin units L Lipase Flow FIO2 L 1.14 1.30 7.7 L 13.5 17.5 RDW 11.5 14.5 35.9 H 11.1 13.1 Diff Absolute Absolute Absolute Absolute Absolute RDW Lambl excresence components.The Miller Grade vasculopath CKs Holdng IJ PRBCs
+FP number: 54
+False Negative: Lord 1
+FN number: 2
+Recall: 95.74%
+Precision: 45.45%
+
+Note: 139-03_phi_reduced
+True positive: 20
+False Positive: stifling Complains AC
+FP number: 3
+False Negative: HW warren
+FN number: 2
+Recall: 90.91%
+Precision: 86.96%
+
+Note: 343-03_phi_reduced
+True positive: 12
+False Positive: John H O +PPD '70 OXYCODONE+APAP 325 5MG QHS
+FP number: 9
+False Negative: Street Sulphur Quijada
+FN number: 3
+Recall: 80.00%
+Precision: 57.14%
+
+Note: 388-03_phi_reduced
+True positive: 43
+False Positive: NE Hemoglobin Hemoglobin 0.05 NFFocus
+FP number: 5
+False Negative: 's
+FN number: 1
+Recall: 97.73%
+Precision: 89.58%
+
+Note: 216-04_phi_reduced
+True positive: 329
+False Positive: TIAs DVTs 16 Acetaminophen TAB TAB TAB SUBL Motillium Q6hours Orthostatics XII 5 5 Magnesium Bilirubin Bilirubin Globulin Lipase Bilirubin Bilirubin NOTDEF NOTDEF NOTDEF 4.00 5.20 RDW 11.5 14.5 Absolute Neutrophil 10.3 13.2 Chest Willis IMPRESSIONS bases Continue Continue Ucx F U guiac F U continue continue continue continue continue
+FP number: 50
+False Negative: 4
+FN number: 1
+Recall: 99.70%
+Precision: 86.81%
+
+Note: 168-01_phi_reduced
+True positive: 31
+False Positive: Stephens Zaroxylin 11.5 platelets Musculoskeletal HEEN Mallampatti
+FP number: 7
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 81.58%
+
+Note: 218-03_phi_reduced
+True positive: 23
+False Positive: MISSOULA acetaminophen dyskinesis lovastatin GGC Nocturia MC microalb Flushot
+FP number: 9
+False Negative: MLL
+FN number: 1
+Recall: 95.83%
+Precision: 71.88%
+
+Note: 386-04_phi_reduced
+True positive: 21
+False Positive: shopulder o'clock QHS QHS QHS Q72H QHS QHS PEERL AllMed Recomm QHS
+FP number: 12
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 63.64%
+
+Note: 312-01_phi_reduced
+True positive: 32
+False Positive: Emcor pelvix maltrition niferex CZI
+FP number: 5
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 86.49%
+
+Note: 371-01_phi_reduced
+True positive: 25
+False Positive: Lakeview D
+FP number: 2
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 92.59%
+
+Note: 137-04_phi_reduced
+True positive: 29
+False Positive: Roper NorthProblems NON marg Roper P RH RNHHe JHThe CpapHe CPAPElevated Vicodan ItchingMedications May CAP.SR CAP.SRFolic QHS 90 TAB TAB Hcl smokingReview 134 70PULSE 60WEIGHT +bowel A+Ox3 XII focal.Assessment repeat 1.19 repeat 37.5
+FP number: 33
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 46.77%
+
+Note: 165-01_phi_reduced
+True positive: 17
+False Positive: 
+FP number: 0
+False Negative: RX mcbride richardson
+FN number: 3
+Recall: 85.00%
+Precision: 100.00%
+
+Note: 215-03_phi_reduced
+True positive: 38
+False Positive: Elkhorn NPH 10 U 15 10 PSTD 2090 2092 Metformin Cartia Tobacco Non non AAOx3 Plts RDW Cardiogram euvolemia ACE I Urine Urine Eos attg attg UCx Cartia RSVP
+FP number: 29
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 56.72%
+
+Note: 192-04_phi_reduced
+True positive: 50
+False Positive: Blain CO Floyd
+FP number: 3
+False Negative: Regan
+FN number: 1
+Recall: 98.04%
+Precision: 94.34%
+
+Note: 112-02_phi_reduced
+True positive: 55
+False Positive: OH Wheatland OH I 7 10 ohms ohms UFFocus OH
+FP number: 10
+False Negative: 626 Una Una
+FN number: 3
+Recall: 94.83%
+Precision: 84.62%
+
+Note: 340-04_phi_reduced
+True positive: 14
+False Positive: amilodipine nocturia Lipitor Glucotrol Xl Xl Cortisporin rhonci cortisporun amilodipine
+FP number: 10
+False Negative: XIA JEAN
+FN number: 2
+Recall: 87.50%
+Precision: 58.33%
+
+Note: 206-04_phi_reduced
+True positive: 8
+False Positive: BRENNAN Halls
+FP number: 2
+False Negative: Doss
+FN number: 1
+Recall: 88.89%
+Precision: 80.00%
+
+Note: 162-05_phi_reduced
+True positive: 23
+False Positive: AASC D
+FP number: 2
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 92.00%
+
+Note: 265-04_phi_reduced
+True positive: 34
+False Positive: JELLICO Jellico OH disconcerting cardioprotection
+FP number: 5
+False Negative: Foy Foy isenberg 74 585 40 00
+FN number: 7
+Recall: 82.93%
+Precision: 87.18%
+
+Note: 237-01_phi_reduced
+True positive: 38
+False Positive: BEAUREGARD quicker Atacand Lipitor Discloses Atacand Lipitor
+FP number: 7
+False Negative: College Station Guy
+FN number: 3
+Recall: 92.68%
+Precision: 84.44%
+
+Note: 268-04_phi_reduced
+True positive: 49
+False Positive: HOLDEN pace clarinex discomfort.No pancreatitis.Plavix Accucheck Clarinex Isordil 1 2 QHS Clarinex x10d
+FP number: 13
+False Negative: Riddle
+FN number: 1
+Recall: 98.00%
+Precision: 79.03%
+
+Note: 266-03_phi_reduced
+True positive: 89
+False Positive: Welbutrin depession stermotomy Musc Skel 5 5 glucovance 5 500 ADA Step ORGINAL BRIGHTPOINT KINGWOOD CKMC
+FP number: 16
+False Negative: rosenberg rosenberg rosenberg rosenberg emmons emmons um um rosenberg rosenberg rosenberg rosenberg
+FN number: 12
+Recall: 88.12%
+Precision: 84.76%
+
+Note: 116-01_phi_reduced
+True positive: 25
+False Positive: D
+FP number: 1
+False Negative: BRANCH EARNEST
+FN number: 2
+Recall: 92.59%
+Precision: 96.15%
+
+Note: 378-02_phi_reduced
+True positive: 12
+False Positive: Roxicet Roxicet Roxicet Roxicet Vicodin Vicodin
+FP number: 6
+False Negative: SU utz rankin
+FN number: 3
+Recall: 80.00%
+Precision: 66.67%
+
+Note: 205-03_phi_reduced
+True positive: 40
+False Positive: 2nd Floor SD Sibley
+FP number: 4
+False Negative: naranjo
+FN number: 1
+Recall: 97.56%
+Precision: 90.91%
+
+Note: 161-02_phi_reduced
+True positive: 39
+False Positive: ME I Rosa you you PTFE chance ME
+FP number: 8
+False Negative: SH
+FN number: 1
+Recall: 97.50%
+Precision: 82.98%
+
+Note: 375-02_phi_reduced
+True positive: 34
+False Positive: QHS QHS QHS XII 5 5 FNF Rhomberg WV WV
+FP number: 10
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 77.27%
+
+Note: 208-03_phi_reduced
+True positive: 12
+False Positive: QHS Oscal+d 1TABLE ACETAMINOPHEN Asa P72 Abd
+FP number: 7
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 63.16%
+
+Note: 316-02_phi_reduced
+True positive: 25
+False Positive: MARY D
+FP number: 2
+False Negative: 
+FN number: 0
+Recall: 100.00%
+Precision: 92.59%
+
+514 notes have been evaulated.
+True Positive in all notes: 18420
+False Positive in all notes: 6192
+False Negative in all notes: 760
+Recall: 96.04%
+Precision: 74.84%
