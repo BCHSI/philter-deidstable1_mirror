@@ -5,18 +5,6 @@ import json
 
 
 
-    '''
-    return FN's category
-    input:
-    summary: dict[filename: dict[false_negative, false_positive, ture_positive]]
-    anno_path: path to the annotation files
-    output:
-    FN_category: list["FN type"]
-    FN_dict: dict[type:[FNs]]
-    '''
-    # summary_path = 'summary_dict.pkl'
-    # anno_path = '/media/DataHD/philter-annotations/pooneh/pooneh-done'
-
 summary_path = sys.argv[1]
 
 with open(summary_path, 'rb') as fin:
