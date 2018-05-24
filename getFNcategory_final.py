@@ -149,7 +149,7 @@ def main():
     
     for subdict in FN_dict:
         print(subdict)
-        print(len(results[subdict]))
+        print(len(FN_dict[subdict]))
     
     out_path = summary_path.split("summary_dict.pkl")[0] + 'FN_dict.json'  
 
