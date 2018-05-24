@@ -148,7 +148,7 @@ def main():
     FN_dict = getcategory(summary, anno_path, fn_correction_path)
     
     for subdict in FN_dict:
-        print(subdict + ": " str(len(FN_dict[subdict])))
+        print(subdict + ": " + str(len(FN_dict[subdict])))
     
     out_path = summary_path.split("summary_dict.pkl")[0] + 'FN_dict.json'  
 
