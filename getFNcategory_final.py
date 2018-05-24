@@ -84,7 +84,7 @@ def getcategory(summary, anno_path, fn_correction_path):
                     # Get TNs
                     if (annotation[1] == '0' or annotation[1] == '2') and annotation[0] not in FP_list:
                         TN_list.append(annotation[0])
-
+    print("phi_count: " + str(phi_counter))
             
             # FN_dict['True Negatives'] = FN_dict['True Negatives'] + TN_list    
             # FN_dict['True Positives'] = FN_dict['True Positives'] + TP_list
@@ -98,7 +98,7 @@ def getcategory(summary, anno_path, fn_correction_path):
     #print('False Negatives:',len(FN_dict['False Negatives']))
 
     return FN_dict
-    print(phi_counter)
+
 
         # Get 
 
