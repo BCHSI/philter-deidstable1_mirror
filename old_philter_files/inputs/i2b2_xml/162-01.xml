@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2068-02-04
+
+ASSOCIATED ARTHRITIS SPECIALISTS CENTER            Quijano, Baylee
+                                              2-03-68
+ 
+ 
+ 
+Identification:  Patient is a 53-year old markedly obese female 
+complaining of bilateral weight knee pain.  She denies any morning 
+stiffness, any jelling phenomena.  She has had no trauma or effusions in 
+the knee.  She had noted on x-ray many years ago that she had had a 
+chipped bone in the right knee and some mild osteoarthritis but it has 
+bothered her only intermittently until this year.  Last year she did go 
+to Briggs Stratton and dropped to 270 lb. at which point her knees felt 
+better, but currently she is back up to over 300 lb. and at her height 
+of 5 ft. 1 in., she is in pain.  She has not visited a physician.  She 
+has no internist who currently checks on her general medical health, but 
+she does report that the occasional Advil she takes does produce some 
+dyspepsia.  She has no history of gout, no history of psoriasis, no 
+history of pseudogout or any rash, alopecia, headaches, shoulder or hip 
+discomfort.  She does not complain of back pain but does have difficult 
+walking 50 yards because of the knee pain.
+ 
+Allergies:  None.
+ 
+Medications:  Occasional Advil.
+ 
+Past Surgical History:  Cholecystectomy 2064.  Two c-sections.
+ 
+Past Medical History:  Negative for hypertension, diabetes, cancer, 
+stroke, tuberculosis, hepatitis, asthma, heart disease.
+ 
+Family History:  Mother is alive and well with no medical problems.  
+Father is alive and well with no medical problems.  She has 12 siblings.  
+One sibling died of pneumonia at a young age.  Another sibling has 
+asthma.
+ 
+Physical Examination;  She is a markedly obese female, no apparent 
+distress.  She is 5 ft. 1 in. and weighs 304 lb.  Examination of joints:  
+No evidence of active synovitis or pain in her DIPs, PIPs, MCPs, wrists, 
+elbows, shoulders.  Bilateral hips are limited in internal external 
+rotation but not because of pain-- due to obesity, bilateral knees have 
+crepitus, but no warmth or swelling.  There is some pain at extremes of 
+flexion on the left of 110 degrees.  Ankles and toes within normal 
+limits.  Please note above in the clinical history that she does not 
+complain of back pain but does have difficult walking 50 yards because 
+of the knee pain.  The blood pressure could not be taken secondary to 
+the fact that the large blood pressure 
+cuff did not fit around her right arm. 
+ 
+Impression:  
+ 
+1.   Probable bilateral osteoarthritis.  I will obtain plain films and 
+     have prescribed Disalcid 3 gm. a day p.r.n.   GI and renal side 
+     effects explained.
+                                              2-03-68
+ 
+ 
+ 
+2.   We discussed seriously the need for weight loss.  She will be 
+     referred to the nutritionist to get on a weight loss program.  She 
+     will seriously entertain a weight loss program.  Patient will 
+     return in a few months unless she has any further problems.
+ 
+3.   I have referred her to an Internal Medicine doctor for health maintenance since 
+     she does not have one as yet.
+ 
+ 
+ 
+ 
+_________________________
+Ada R. Kruger, M.D.
+ 
+FK:SK:3696
+DD:2-03-68
+DT:2-05-68
+DV:2-03-68
+
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2068-02-04" TYPE="DATE" comment="" />
+<LOCATION id="P1" start="28" end="67" text="ASSOCIATED ARTHRITIS SPECIALISTS CENTER" TYPE="HOSPITAL" comment="" />
+<NAME id="P2" start="79" end="94" text="Quijano, Baylee" TYPE="PATIENT" comment="" />
+<DATE id="P3" start="141" end="148" text="2-03-68" TYPE="DATE" comment="" />
+<AGE id="P4" start="185" end="187" text="53" TYPE="AGE" comment="" />
+<LOCATION id="P5" start="579" end="594" text="Briggs Stratton" TYPE="ORGANIZATION" comment="" />
+<DATE id="P6" start="1292" end="1296" text="2064" TYPE="DATE" comment="" />
+<DATE id="P7" start="2690" end="2697" text="2-03-68" TYPE="DATE" comment="" />
+<NAME id="P9" start="3135" end="3148" text="Ada R. Kruger" TYPE="DOCTOR" comment="" />
+<NAME id="P10" start="3157" end="3159" text="FK" TYPE="DOCTOR" comment="" />
+<NAME id="P11" start="3160" end="3162" text="SK" TYPE="DOCTOR" comment="" />
+<ID id="P12" start="3163" end="3167" text="3696" TYPE="IDNUM" comment="" />
+<DATE id="P13" start="3171" end="3178" text="2-03-68" TYPE="DATE" comment="" />
+<DATE id="P14" start="3182" end="3189" text="2-05-68" TYPE="DATE" comment="" />
+<DATE id="P15" start="3193" end="3200" text="2-03-68" TYPE="DATE" comment="" />
+</TAGS>
+</deIdi2b2>

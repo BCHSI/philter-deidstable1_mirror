@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2086-12-30
+
+ORLANDO REGIONAL                                NICHOLAS-XAVIER, FRED 
+                                              65856594
+                                              1-3-87
+ 
+ 
+ 
+Mr. Xavier is a 73 year old diabetic who was followed this evening by a 
+telephone conversation.  
+ 
+ALLERGIES: Patient has no known drug allergies. 
+ 
+CURRENT MEDICATIONS: insulin 15 units q.a.m.  
+ 
+Patient is being followed at home and also in the Surgical Clinic here.  
+ 
+HPI: Was seen in walk-in clinic on 12-27-86 with a chief complaint of a sore 
+left fourth toe.  Blood sugar at that time was noted to be 348 and he 
+denied being on any medication for some time.  Patient was referred to 
+Surgical Clinic and is being followed there.  Patient was also placed on 
+insulin 15mg q.a.m. and diabetic teaching was begun on Thursday, December 
+30th.  I am calling the patient this evening.  His granddaughter stated that 
+his blood sugars had been running in the a.m. between 107 to as high as 
+216.  At noon time they have been running in the 322 to 384 range and in 
+the evening from the 141 to 250 range.  At this time tonight it was 
+decided to change his insulin to Humulin 70/30, 20 units SC q.a.m.  
+Instructions were given to his granddaughter and patient will be followed 
+via telephone on Thursday evening of this week.  Patient will also attend 
+the diabetic support group to be held on Thursday, January 6th.  His 
+granddaughter was instructed that if there were any problems she was to 
+call the emergency number or the Clinic at once.  
+ 
+ 
+ 
+________________________________
+Ximena Utter, R.N.C.                                                  
+ 
+JB:PH:2186                                                              
+DD:1-3-87                                                               
+DT:1-05-87                                                              
+DV:1-3-87                                                               
+
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2086-12-30" TYPE="DATE" comment="" />
+<LOCATION id="P1" start="28" end="44" text="ORLANDO REGIONAL" TYPE="HOSPITAL" comment="" />
+<NAME id="P2" start="76" end="97" text="NICHOLAS-XAVIER, FRED" TYPE="PATIENT" comment="" />
+<ID id="P3" start="145" end="153" text="65856594" TYPE="MEDICALRECORD" comment="" />
+<DATE id="P4" start="200" end="206" text="1-3-87" TYPE="DATE" comment="" />
+<NAME id="P5" start="217" end="223" text="Xavier" TYPE="PATIENT" comment="" />
+<AGE id="P6" start="229" end="231" text="73" TYPE="AGE" comment="" />
+<DATE id="P7" start="525" end="533" text="12-27-86" TYPE="DATE" comment="" />
+<DATE id="P8" start="840" end="864" text="Thursday, December 30th" TYPE="DATE" comment="" />
+<DATE id="P9" start="1315" end="1323" text="Thursday" TYPE="DATE" comment="" />
+<DATE id="P10" start="1414" end="1435" text="Thursday, January 6th" TYPE="DATE" comment="" />
+<NAME id="P11" start="1606" end="1618" text="Ximena Utter" TYPE="DOCTOR" comment="" />
+<ID id="P12" start="1679" end="1689" text="JB:PH:2186" TYPE="IDNUM" comment="" />
+<DATE id="P13" start="1755" end="1761" text="1-3-87" TYPE="DATE" comment="" />
+<DATE id="P14" start="1828" end="1835" text="1-05-87" TYPE="DATE" comment="" />
+<DATE id="P15" start="1901" end="1907" text="1-3-87" TYPE="DATE" comment="" />
+</TAGS>
+</deIdi2b2>

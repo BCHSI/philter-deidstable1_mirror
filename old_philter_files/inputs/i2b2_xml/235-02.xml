@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2083-03-08
+
+Narrative History	
+
+The patient is here today for the following issues:
+
+1. Patient's father recently died - massive MI.  Klonipin has been helping patient at night.  She tried it during the day but too sleepy.
+
+2.  She has had persistent chest pain and sob since Father's dealth.  She tried SLNTG without improvement.  HAs have also returned.  
+
+        Pain not worse with exertion.  
+
+        3.  Patient asking about IUD removal.
+
+        4.  Patient has lost 90 pounds so far.  Appetite is down and smaller portions.  
+
+        5. Diabetes - Dr. Rivers started glucophage 825 BID but she doesn't take it all the time.
+
+       6.  She admits to not taking her lipitor - worrries it had some effect on her vision.
+
+
+
+Problems
+
+Diabetes mellitus 
+
+S/P Abortion : SPONTANEOUS 4/80
+
+Chlamydia : CERVICITIS-TREATED
+
+H/O Abnormal pap test : '76 S/P COLPOSCOPY IN PAST; RECENT PAP NORMAL
+
+Positive PPD : NEG CXR
+
+PARONYCHIAL INFECTION : LEFT HAND 78
+
+Ectopic pregnancy : 74
+
+Coronary artery disease 
+
+Anemia 
+
+Shortness of breath 
+
+Hypertension 
+
+Gastroesophageal reflux disease 
+
+Elevated cholesterol 
+
+Hyperthyroidism 
+
+Obesity 
+
+
+
+
+
+Medications
+
+ATENOLOL 100MG, 1 Tablet(s) PO QD
+
+Asa (ACETYLSALICYLIC Acid) 325MG, 1 Tablet(s) PO QD
+
+Klonopin (CLONAZEPAM) 0.5MG, 1 Tablet(s) PO TID
+
+Lipitor (ATORVASTATIN) 20MG, 1 Tablet(s) PO QD
+
+Imdur (ISOSORBIDE MONONIT.(SR)) 30MG, 1 Tablet(s) PO QD
+
+Nexium (ESOMEPRAZOLE) 40MG, 1 Capsule(s) PO QD 
+
+
+
+
+
+Allergies
+
+NKDA 
+
+
+
+
+
+Review of Systems	
+
+Unless mentioned in the history above the following ROS were asked and are negative:  Constitutional, Respiratory, Cardiac, GI, Endocrine, GYN, Musculoskeletal, Psych - no SI.  
+
+Vital signs
+
+BP 120/75, Wt 228 lb 
+
+
+
+
+
+
+
+Physical Exam	
+
+108/70
+
+GENERAL: 	Healthy appearing overweight female
+
+NECK:	            No thyromegaly, no nodes
+
+CHEST	            Clear lungs, NL frame
+
+COR:		RRR, NL S1S2, no murmur, rubs, or gallops.
+
+                        BIMAN c no adnexal masses, no CMT
+
+EXT:		No edema
+
+NEURO:           NL MS, NL gait
+
+
+
+Labs reviewed
+
+EKG done and unchanged from 8/82
+
+Assessment and Plan	
+
+1.  Chest pain, Headaches and shortness of breath - No evidence of USA.  All likely secondary to anxiety and grief over father's death.  Patient reassured.  Will continue cardiac medications.  Return to cardiac rehab on Thursday.  Will add .5mg klonipin during the day as needed.  Continue 1mg klonipin at night.  Patient declines psychotherapy.   Also, will restart nexium as some of chest pain may be recurrence of reflux.
+
+2.   DM - Encouraged patient to take glucophage as prescribed.  She is worried she will always have DM.  Discussed with patient importance of controlling BSs now and losing remaining weight.  She will continue to monitor home FSBS.
+
+3.  Obesity - Impressive 90 pound weight loss.  Patient very encourage.  Continue with smaller meals.
+
+         4.  Hyperlipidemia - Patient will restart lipitor.  Follow up fasting cholesterol and SGOT.
+
+        5. CAD - Continue Imdur, aspirin and lipitor.  Cardiac rehab.  Follow up if new chest pain.
+
+        6. IUD - Discussed briefly.  Stressed importance of no pregnancies with CAD.  She wants to rediscuss at end of year.
+
+        7.  History of hyperthyroidism - Recheck. 
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2083-03-08" TYPE="DATE" comment="" />
+<NAME id="P1" start="579" end="585" text="Rivers" TYPE="DOCTOR" comment="" />
+<DATE id="P2" start="805" end="809" text="4/80" TYPE="DATE" comment="" />
+<DATE id="P3" start="867" end="870" text="'76" TYPE="DATE" comment="" />
+<DATE id="P4" start="972" end="974" text="78" TYPE="DATE" comment="" />
+<DATE id="P5" start="996" end="998" text="74" TYPE="DATE" comment="" />
+<DATE id="P6" start="2091" end="2095" text="8/82" TYPE="DATE" comment="" />
+<DATE id="P7" start="2339" end="2347" text="Thursday" TYPE="DATE" comment="" />
+</TAGS>
+</deIdi2b2>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2069-11-18
+
+
+Mr Gallegos comes into clinic to follow-up on his multiple medical problems:
+
+
+EtOH : last drink 4/27/63
+Hepatitis C 
+Htn 
+H/O hepatitis B : 15 years ago after episode of jaundice with HCV two years ago
+H/O drug abuse : IV drug user stopped heroin 2 years ago-methadone 95 mg per day.
+fracture : thumb age 47
+Hernia repair : bilateral inguinal hernia repair 
+Obesity 
+abnormal SPEP : could be from Hep C but needs fol esp in light of periph neuropathy - repeat in 4 mos (1/67)
+
+Type 2 diabetes/insulin
+
+
+He is accompanied by his wife.  He states that he stopped using insulin.  He stopped for the past month.  His blood sugars run low of 95 to a high of 160 fasting, after meals 120 to 180.  He has not had an eye exam as of yet.  His hemoglobin A1c was 13% in June.  His urine is negative for protein.
+He also continues in his methadone maintenance program on 95 mg per day.  He is substance free.  He has a history of hepatitis C.  No abdominal pain, nausea or vomiting.  No change in bowel movements.  He did not have his ultrasound.
+He smokes one pack of cigarettes per day.
+He notes that over the past month, specifically over the past two weeks he has had dyspnea on exertion and chest pain with exertion.  He notes that the chest pain is substernal.  It stops with rest.  He feels slightly weak when the chest pain occurs.  He denies any palpitations or presyncope.
+He has no other complaints.
+
+
+Exam:
+Vital Signs
+BP 126/78, Wt 212 lb
+
+  Recheck blood pressure 140/90.  Heart rate regular 72.  Normal S1 and S2.  No murmurs rubs gallops.
+Lungs clear bilaterally.
+Lower extremities no edema.
+Weight stable.
+ECG: Flip T waves in 2, 3, aVF, no ST elevation or depression.
+
+
+Assessment and plan:
+1.  Question unstable angina: Patient not presently with chest pain in the office however his history is concerning.  His ECG is abnormal.  I have reviewed this with Dr. Fenton who agrees.  I have made the recommendation to patient to go to the emergency unit for cardiac evaluation, stressed to him that type 2 diabetes sometimes masks chest pain.  He is a strong positive family history of CAD, father died age 49.  Brother may have CAD.  Patient did not agree with my recommendation at first however after speaking to brother and wife again, he agreed to go to emergency unit for evaluation tonight.  He was sent via ALS ambulance in stable condition.
+2.  Type 2 diabetes: Patient has stopped insulin.  Blood sugar is slightly on the high side.  Have recheck hemoglobin A1c.  was 13% in June.  No proteinuria.  Will readdress after hospitalization.  He needs ophthalmology exam.
+3.  Hypertension: Recheck post hospitalization.  Patient has not been taking Lopressor as prescribed.
+4.  Hepatitis C: Have checked LFTs/amylase.  Reordered abdominal ultrasound.
+Patient to return to clinic in one to two weeks.
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2069-11-18" TYPE="DATE" comment="" />
+<NAME id="P1" start="32" end="40" text="Gallegos" TYPE="PATIENT" comment="" />
+<DATE id="P2" start="126" end="133" text="4/27/63" TYPE="DATE" comment="" />
+<AGE id="P3" start="335" end="337" text="47" TYPE="AGE" comment="" />
+<DATE id="P4" start="500" end="504" text="1/67" TYPE="DATE" comment="" />
+<DATE id="P5" start="790" end="794" text="June" TYPE="DATE" comment="" />
+<NAME id="P6" start="1898" end="1904" text="Fenton" TYPE="DOCTOR" comment="" />
+<AGE id="P7" start="2141" end="2143" text="49" TYPE="AGE" comment="" />
+<DATE id="P8" start="2518" end="2522" text="June" TYPE="DATE" comment="" />
+</TAGS>
+</deIdi2b2>

@@ -1,0 +1,319 @@
+
+
+
+Record date: 2094-02-04
+
+BMC  NEUROLOGY ED NOTE							Date: 2/04/2094
+
+Name:	  Nancy-Jasmine, Nikkolas
+
+MR#:	69331181
+
+
+
+CC:	 1 week of improving dysarthria, dysphagia, and vertigo, and persistent difficulty walking, comes in today for medication refill and gait instability
+
+HPI:	68yo RHM with HTN, NIDDM, 2 prior strokes (8/91 5/93) who after running out of his medications in Honduras woke up 7 days ago with dysarthria, dysphagia, and rotatory vertigo. He had a L thalamocapsular infarct in 8/2091 with R residual hemiparesis, and a R thalamocapsular infarct 5/93 with subsequent residual dysarthria. During his May hospitalization he had dysphagia for which he briefly received tube feeds before graduating to POs. He went to Honduras approximately 3 months ago, and ran out of many of his medications in the last 2 weeks, including plavix, lopressor, and metformin. He self-d/c'd zestril for new nausea that he felt was related. Since symptom onset 7 days ago, patient has noted slow improvement in both dysarthria and dysphagia. He continues to note vertigo present sitting, worse standing, and absent supine. He has had difficulty ambulating as well, despite the use of his tripod cane, and his children have helped him at home. He returned from Honduras 3 days ago to refill his medications and get his symptoms evaluated. ROS notable for poor vision bilaterally, worse on the L per patient. Pt denied diplopia, trouble chewing, numbness of face, tinnitus. No HA, F/C, V, CP/pressure, SOB, heartburn, constipation, diarrhea, dysuria. 
+
+Of note, admission FSBG was 353.
+
+
+
+PMH: HTN
+
+	NIDDM
+
+	Strokes as above. MRA 5/93 showed multifocal stenoses of Circle of Willis with vertebrobasilar insufficiency
+
+	Positive PPD
+
+
+
+MEDS: ASA 325mg QD, plavix 75 qd (out), lopressor 75 bid (out), zestril 30 qd (self-d/c'd), norvasc 10, metformin 850 qd (out), Avandia 4 qd, Zoloft 25 qd, Zocor 20 qd (unclear if taking), Zantac 150 bid
+
+ALL: NKDA
+
+SH:  	Tob: no	EtOH: no	Street drugs: no
+
+Honduran immigrant. 9 children, 8 live with pt in America. 
+
+FH: CAD and HTN	
+
+
+
+VS:  		T: 98.8	BP: 218/112       	P: 68	RR: 18	O2 sat: 96% 		
+
+
+
+General:	WNWD, NAD, somewhat unkempt
+
+HEENT:	Anicteric, MMM without lesions, OP clear
+
+Neck:		Supple, No LAD, no carotid bruits, no thyromegaly
+
+CV:		RRR  s1s2  no m/r/g
+
+Resp:		CTAB   no r/w/r
+
+Abd:		+BS    Soft/NT/ND    no HSM/masses
+
+Ext:		No C/C/E, Distal pulses intact
+
+Skin:		No rashes, petechiae
+
+
+
+MS:		A&O x 3, following commands
+
+Speech fluent w/o paraphasic errors
+
+No evidence of neglect with visual or tactile stimulation
+
+CN:	I     not tested, II,III     PERRL, VFF by confrontation; III,IV,VI     EOMI, no nystagmus (supine, sitting, standing), no ptosis;  V- sensation intact to LT/PP, masseters strong symmetrically; VII     L NLF flattening; VIII     hears finger snap; IX,X     voice with mild lingual dysarthria, palate elevates symmetrically, gag & swallow intact; XI     SCM/Trapezii 5/5 B; XII     tongue protrudes midline, no atrophy or fasciculations. Vertigo not precipitated on standing.
+
+Motor:	nl bulk and tone, no tremor, rigidity or bradykinesia. No pronator drift.
+
+	D	Bi	Tri	WF	WE	DI	Grip	Hip flex	knee/ext	flex	dors   plant     
+
+        L	5	5	5	5	5	5	5	5	5	5	5	5		
+
+        R	2	3	2	3	2	1	3	4	4	4	0	0		
+
+DTRs:	Bi	Tri	BR	Pat	Ach	Plantar	
+
+        L	2	2	2	2	2	up
+
+        R	3	3	3	2	2	down
+
+Sensory:	LT, vibration, temperature, pinprick intact. Stereognosis & double sim stim is normal.
+
+Coord:	finger tap rapid on L, cannot do on R, FNF intact on L.  HKS intact, foot tap rapid on L, impaired on R.
+
+Gait:	Unable to stand with legs together and eyes open, retropulsing.  Gait unstable, falling back.
+
+
+
+Labs:	
+
+  Lytes/Renal/Glucose
+
+    Sodium                 142   136-142 mmol/L     02/04/94 15:15     144( ) 05/05/93 06:20
+
+    Potassium              4.5   3.5-5.0 mmol/L     02/04/94 15:15     5.4( ) 04/28/93 11:05
+
+    Chloride               107   98-108 mmol/L      02/04/94 15:15     110( ) 05/05/93 06:20
+
+    Carbon Dioxide          26   23-32 mmol/L       02/04/94 15:15      21( ) 05/04/93 08:38
+
+    Blood Urea Nitro         9   9-25 mg/dL         02/04/94 15:15
+
+    Creatinine             1.1   0.7-1.3 mg/dL      02/04/94 15:15
+
+    Glucose                195 # 54-118 mg/dL       02/04/94 15:15    195( #) 02/04/94 15:15
+
+    Anion Gap                9   3-15 mmol/L        02/04/94 15:15
+
+  General Chemistries
+
+    Calcium               10.3   8.8-10.5 mg/dL     02/04/94 15:15    10.7( ) 01/25/92 14:30
+
+    Phosphorus             3.3   2.4-5.0 mg/dL      04/28/93 11:05
+
+    Magnesium              2.0   1.8-2.5 mg/dL      05/05/93 06:20     1.5( ) 04/28/93 11:05
+
+    Total Bilirubin        0.3#  0.2-1.2 mg/dL      07/08/93 14:58    0.1( #) 04/28/93 11:05
+
+    Total Protein          6.7   6.0-8.0 g/dL       07/08/93 14:58
+
+    Albumin                3.9   3.7-5.4 g/dL       07/08/93 14:58
+
+    Globulin               2.8   2.0-4.0 g/dL       07/08/93 14:58
+
+    Amylase                 32   20-70 U/L          02/04/94 15:15
+
+    Lipase                  51   3-60 U/L           07/08/93 14:58
+
+  Liver Function Tests
+
+    ALT (SGPT)              10   7-52 U/L           07/08/93 14:58       6( ) 01/25/92 14:30
+
+    AST (SGOT)              14   9-30 U/L           07/08/93 14:58
+
+    Alkaline Phospha        39   36-118 U/L         07/08/93 14:58
+
+    Total Bilirubin        0.3#  0.2-1.2 mg/dL      07/08/93 14:58    0.1( #) 04/28/93 11:05
+
+
+
+Hematology
+
+  Complete Blood Count
+
+    WBC                   8.05   4-10 K/uL          02/04/94 15:15
+
+    HCT                   45.5#  40-54 %            02/04/94 15:15    38.8( ) 07/08/93 14:58
+
+    HGB                   14.9#  13.5-18.0 g/dL     02/04/94 15:15    13.1( ) 07/08/93 14:58
+
+    RBC                   5.40#  4.5-6.4 M/uL       02/04/94 15:15
+
+    PLT                    390#  150-450 K/uL       02/04/94 15:15
+
+    MCV                   84.2   80-95 um3          02/04/94 15:15
+
+    MCH                   27.6   27-32 uug          02/04/94 15:15
+
+    MCHC                  32.8   32-36 g/dL         02/04/94 15:15
+
+    RDW                   14.1   10-14.5            02/04/94 15:15    15.2( ) 07/08/93 14:58
+
+  Blood Differential %
+
+    Neutrophils - Au      57.6   48-76              02/04/94 15:15
+
+    Lymphocytes - Au      34.9   18-41              02/04/94 15:15
+
+    Monocytes - Auto       5.3   2.5-8.5            02/04/94 15:15
+
+    Eosinophils - Au       1.9   0-5                02/04/94 15:15
+
+    Basophils - Auto       0.3   0-1.5              02/04/94 15:15
+
+  Blood Diff - Absolute
+
+    Abs Neuts Auto        4.63   1.9-7.6            02/04/94 15:15
+
+    Abs Lymphs Auto       2.81   0.8-4.1            02/04/94 15:15
+
+    Abs Monos Auto        0.43   .10-0.8            02/04/94 15:15
+
+    Abs EOS Auto          0.15   0-0.5              02/04/94 15:15
+
+    Abs Basos Auto        0.02   0.00-0.15          02/04/94 15:15
+
+  
+
+  Hematology Miscellaneous
+
+    HGB A1C                8.3   4.4-6.3 %          07/08/93 14:58     8.3( ) 07/08/93 14:58
+
+
+
+Coagulation
+
+  Routine Coagulation
+
+    PT                    13.1   11.4-14.1 sec      02/04/94 15:15
+
+    PT-INR                 1.0   0.9-1.1            02/04/94 15:15
+
+    PTT                   26.3   23.8-36.6 sec      02/04/94 15:15
+
+Prior: 
+
+Lipid Tests
+
+    Cholesterol            236   140-240 mg/dL      05/01/93 12:12
+
+    Triglycerides          187   35-150 mg/dL       05/01/93 12:12     187( ) 05/01/93 12:12
+
+    HDL                     38   40-60 mg/dL        05/01/93 12:12      38( ) 05/01/93 12:12
+
+    Calculated LDL         161   50-160 mg/dL       05/01/93 12:12     161( ) 05/01/93 12:12
+
+    VLDL                    37   mg/dL              05/01/93 12:12
+
+  Chemistry Miscellaneous
+
+    HOMOCYSTEINE          12.5   4.5-12.4 umol/L    04/30/93 06:47    12.5( ) 04/30/93 06:47
+
+    LIPOa                   67   0-30 mg/dL         04/30/93 06:47      67( ) 04/30/93 06:47
+
+
+
+Urinalysis
+
+  Urinalysis
+
+    Color               YELLOW                      02/04/94 13:53
+
+    Glucose - UA            3+   0-0                02/04/94 13:53
+
+    Bilirubin              NEG                      02/04/94 13:53
+
+    Ketones                NEG                      02/04/94 13:53
+
+    Specific Gravity     1.023   1.003-1.035        02/04/94 13:53
+
+    Occult Blood           NEG                      02/04/94 13:53
+
+    pH                     5.5   4.5-8.0            02/04/94 13:53
+
+    Protein                 TR                      02/04/94 13:53
+
+    Urobilinogen           NEG                      02/04/94 13:53
+
+    Nitrites               NEG                      02/04/94 13:53
+
+    WBC Screen             NEG                      02/04/94 13:53
+
+    Casts                  NEG                      02/04/94 13:53
+
+    RBC - Urine Sed        NEG   0-2                02/04/94 13:53
+
+    WBC - Urine Sed        NEG   0-4                02/04/94 13:53
+
+    Bacteria               NEG                      02/04/94 13:53
+
+    Mucous                 NEG                      02/04/94 13:53
+
+    Squamous Cells         NEG                      02/04/94 13:53
+
+    Crystals               NEG                      02/04/94 13:53
+
+    Amorph Crystals        NEG                      02/04/94 13:53
+
+    Other/Comments         NEG                      02/04/94 13:53
+
+ 
+
+CXR: clear
+
+CT head: bilateral thalamocapsular infarcts
+
+CTA: pending	
+
+MRI/MRA:	pending
+
+Assessment: 68yo RHM with history of bilateral thalamocapsular infarcts and multifocal stenoses of vessels of Circle of Willis, with prior symptoms of dysarthria, dysphagia, and gait instability, here in the setting of medication noncompliance, hypertensive and hyperglycemic, with 1 week of recurrent symptoms. Exam notable for absence of vertigo or nystagmus, as well as retropulsing stance and gait. Hyperglycemia and hypertension may well be exacerbating patient's prior deficits. However, cannot rule out possibility of a subacute infarct in the setting of plavix and antihypertensive discontinuation.
+
+Plan:   
+
+-     Check CTA to assess Circle of Willis
+
+Check MRI brain stroke protocol
+
+Control HTN, goal SBP ~160-180
+
+Control hyperglycemia
+
+If stroke present, admit to Neurology.
+
+R/O MI
+
+
+
+Discussed with Dr. Costello.
+
+ 
+
+Thank you for this interesting consult.
+
+ 								_____________________________
+
+									Peter Quale, IJ6   pgr 20951
+
+
+
+
+

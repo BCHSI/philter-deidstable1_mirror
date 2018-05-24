@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2089-12-07
+
+
+
+
+ENT
+72 Chablis Court              UPSHUR, IRENE
+Argentine, NV  57431                    78197017
+--------                     12/07/2089
+
+
+Steven Short, M.D.
+Evans Memorial Hospital
+745 Morgan Street
+Sag Harbor, NV  62945
+
+Dear Dr. Short:
+
+I did see Irene Upshur for a followup today.  As you know, I did see her back in September where she was diagnosed with possible right-sided eustachian tube dysfunction.  Her blood sugars have been under reasonably good control, 88 and then 300.  She reports that her hearing has continued to fluctuate.  When questioned, she reports that she only used the nose spray twice since I did prescribe it.
+
+On examination today, she otherwise appears well.  Ears are unremarkable.  Her eardrums are intact.  She has no tympanosclerosis or cholesteatoma.  Her gait is normal.  There is no nystagmus.
+
+An audiogram done today does show a sloping high frequency sensorineural hearing loss, which is symmetric.  Her discrimination scores are 100% in the right ear and 100% in the left ear.
+
+Assessment:  Mild ear fullness with dysequilibrium and blockage.
+
+Plan:  She does take multiple medications.  It continues to be very unclear to me what her underlying causality is.  I would like her to use the nasal spray more consistently.  If she does fail this and this is not eustachian tube dysfunction, I would consider her to have endolymphatic hydrops.  This would respond hopefully to a diuretic and potassium supplementation.  However, she has taken multiple medications currently for both blood pressure including atenolol, Cozaar, Lasix, and verapamil.  I would need to clear to switch herself ??____?? therapy, I would like to see her back after consistent trial of the corticosteroid spray topically.
+
+Sincerely,
+
+
+______________________________
+Edward T Sheehan, M.D.
+
+
+
+
+
+eScription document:2-3083608 CSSten Tel
+
+
+
+DD: 01/21/90
+DT: 01/21/90
+DV: 12/07/89
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2089-12-07" TYPE="DATE" comment="" />
+<LOCATION id="P2" start="35" end="51" text="72 Chablis Court" TYPE="STREET" comment="" />
+<NAME id="P3" start="65" end="78" text="UPSHUR, IRENE" TYPE="PATIENT" comment="" />
+<LOCATION id="P4" start="79" end="88" text="Argentine" TYPE="CITY" comment="" />
+<LOCATION id="P5" start="90" end="92" text="NV" TYPE="STATE" comment="" />
+<LOCATION id="P6" start="94" end="99" text="57431" TYPE="ZIP" comment="" />
+<ID id="P7" start="119" end="127" text="78197017" TYPE="MEDICALRECORD" comment="" />
+<DATE id="P8" start="157" end="167" text="12/07/2089" TYPE="DATE" comment="" />
+<NAME id="P9" start="170" end="182" text="Steven Short" TYPE="DOCTOR" comment="" />
+<LOCATION id="P10" start="189" end="212" text="Evans Memorial Hospital" TYPE="HOSPITAL" comment="" />
+<LOCATION id="P11" start="213" end="230" text="745 Morgan Street" TYPE="STREET" comment="" />
+<LOCATION id="P12" start="231" end="241" text="Sag Harbor" TYPE="CITY" comment="" />
+<LOCATION id="P13" start="243" end="245" text="NV" TYPE="STATE" comment="" />
+<LOCATION id="P14" start="247" end="252" text="62945" TYPE="ZIP" comment="" />
+<NAME id="P15" start="263" end="268" text="Short" TYPE="DOCTOR" comment="" />
+<NAME id="P16" start="281" end="293" text="Irene Upshur" TYPE="PATIENT" comment="" />
+<DATE id="P17" start="352" end="361" text="September" TYPE="DATE" comment="" />
+<NAME id="P18" start="1813" end="1829" text="Edward T Sheehan" TYPE="DOCTOR" comment="" />
+<ID id="P19" start="1861" end="1870" text="2-3083608" TYPE="IDNUM" comment="" />
+<DATE id="P20" start="1889" end="1897" text="01/21/90" TYPE="DATE" comment="" />
+<DATE id="P21" start="1902" end="1910" text="01/21/90" TYPE="DATE" comment="" />
+<DATE id="P22" start="1915" end="1923" text="12/07/89" TYPE="DATE" comment="" />
+</TAGS>
+</deIdi2b2>

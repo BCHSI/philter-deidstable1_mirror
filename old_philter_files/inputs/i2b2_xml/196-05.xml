@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2091-03-13
+
+
+CC: f/up of DM, HTN, and anemia management
+
+
+HPI: 62 yo female who presents back to clinic after recent visit with Dr. Robbie-Reid
+and referred for GI endoscopy for anemia.  3/5 Hct 32.1, Hgb 10.6.  Dry wt reportedly 184-186 lbs. 
+1/11 Echo with no RWMA's, LV nl, EF 60-65%.  Denies any SOB or DOE beyond her baseline.  
+No CP.  Seen by Renal and started on Tekturna (Aliskiren) which she has but has not started.
+Ran out of Cozaar which she has not had approved.  Off Aldomet also.  No headaches.  
+Denies any symptoms of hyperglycemia or hypoglycemia.
+Mood decreased at times given her family problems with her husband.
+
+
+
+Problems
+Menopause at age 52 
+H/O R sided sciatica 
+H/O pneumonia 1/2082 
+S/P vocal cord cyst removal 
+S/P cholecystectomy 
+S/P C section x 2 
+Diabetes mellitus type 2 : onset 2067
+Severe nonproliferative diabetic retinopathy with severe macular edema 
+H/O pyelonephritis 
+1/16/88 cardiac MIBI with summed stress score of 0 but evidence of extensive calcified coronary plaque burden with coronary calcium score of 715 
+Hypertension 
+Depression 
+7/23/88 R shoulder arthroscopy 
+4/20/89 lumbar CT : No stenosis or disc herniation, mild deg changes of the lower lumbar spine as described with a possible tiny lateral disc protrusion on the L at L3-L4.
+
+CAD s/p RCA stent placement 11/2090
+
+
+
+Medications
+Aliskiren 150 MG PO QD
+Amitriptyline HCL 25 MG (25MG TABLET Take 1) PO QHS PRN neuropathic pain , for pain - para el dolor #30 Tablet(s)
+Cozaar (LOSARTAN) 100MG TABLET Take 1 PO QD #30 Tablet(s), ran out
+Darvocet N 100 (PROPOXYPHENE NAP/ACETAMIN... 1 TAB PO BID PRN pain - dolor #60 Tablet(s)
+Ecasa (ASPIRIN ENTERIC COATED) 325 MG (325MG TABLET Take 1) PO QD #30 Tablet(s)
+Ergocalciferol 50000 UNITS (50000 UNIT CAPSULE Take 1) PO QWEEK #1 Month(s) Supply
+Lantus (INSULIN GLARGINE) 88 UNITS SC QAM #1 Month(s) Supply
+Lasix (FUROSEMIDE) 80 MG (40MG TABLET Take 2) PO QD #1 Month(s) Supply
+Lipitor (ATORVASTATIN) 80 MG (80MG TABLET Take 1) PO QD #30 Tablet(s)
+Neurontin (GABAPENTIN) 300 MG (300MG CAPSULE Take 1) PO BID #60 Tablet(s)
+Niaspan (NICOTINIC ACID SUSTAINED RELEASE) 1000 MG (1000MG TABLET SA Take 1) PO QHS #90 Tablet(s)
+Nifedipine (EXTENDED RELEASE) 90 MG (90MG TABLET Take 1) PO QPM x 30 days #30 Tablet(s)
+Paxil (PAROXETINE) 20MG TABLET Take 1 Tablet(s) PO QD #30 Tablet(s)
+Plavix (CLOPIDOGREL) 75 MG (75MG TABLET Take 1) PO QD #30 Tablet(s)
+Prilosec (OMEPRAZOLE) 20 MG (20MG CAPSULE DR Take 1) PO QD , before eating #30 Capsule(s)
+Toprol XL (METOPROLOL SUCCINATE EXTENDED RELEASE) 200 MG (200MG TAB.SR 24H Take 1) PO QD #30 TAB.SR
+
+
+
+
+
+Allergies
+NKA 
+
+
+PEx: Vital Signs: BP 144/61, P 66, Wt 193 lbs
+WDWN older female in NAD.  
+HEENT: anicteric sclerae  
+Neck: supple, no JVD.  
+Lungs: CTA.  
+CV: RRR, s1s2, nl, II/VI SEM at LSB
+Abd: soft, NT  
+Ext: no c/c/bil 1+ edema.  
+
+
+A/P:
+1. HTN/CHF.  BP elevated in setting of not having started her new medication Aliskiren, 
+ongoing f/up as scheduled.  Ongoing telemonitoring service.
+Dietary and exercise rec's reviewed.
+
+2. DM, still not controlled but stable, A1C 8.8, Lantus 88 units as directed 
+and dietary rec's reviewed, follow, seen by HDC ophthalomology on 1/19/91.
+
+3. Anemia, scheduled for GI endoscopy, following.
+4. Depression, stable, counseling given.
+
+
+Singh, M.D.
+
+
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2091-03-13" TYPE="DATE" comment="" />
+<AGE id="P1" start="79" end="81" text="62" TYPE="AGE" comment="" />
+<NAME id="P2" start="148" end="159" text="Robbie-Reid" TYPE="DOCTOR" comment="" />
+<DATE id="P3" start="260" end="264" text="1/11" TYPE="DATE" comment="" />
+<AGE id="P4" start="680" end="682" text="52" TYPE="AGE" comment="" />
+<DATE id="P5" start="720" end="726" text="1/2082" TYPE="DATE" comment="" />
+<DATE id="P6" start="830" end="834" text="2067" TYPE="DATE" comment="" />
+<DATE id="P7" start="927" end="934" text="1/16/88" TYPE="DATE" comment="" />
+<DATE id="P8" start="1099" end="1106" text="7/23/88" TYPE="DATE" comment="" />
+<DATE id="P9" start="1131" end="1138" text="4/20/89" TYPE="DATE" comment="" />
+<DATE id="P10" start="1332" end="1339" text="11/2090" TYPE="DATE" comment="" />
+<LOCATION id="P11" start="3156" end="3159" text="HDC" TYPE="HOSPITAL" comment="" />
+<DATE id="P12" start="3178" end="3185" text="1/19/91" TYPE="DATE" comment="" />
+<NAME id="P13" start="3281" end="3286" text="Singh" TYPE="DOCTOR" comment="" />
+</TAGS>
+</deIdi2b2>

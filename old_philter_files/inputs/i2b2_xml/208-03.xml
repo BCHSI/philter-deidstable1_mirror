@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2068-04-06
+
+                                                       Patient Name: BARRERA,MARY U [ 45167459(SLO) ] 
+
+                                                         Date of Visit: 04/06/2068
+
+
+
+
+
+Chief Complaint
+
+ The patient presents for care of recent fall, HTN, DM and hyperlipidemia.
+
+
+
+History of Present Illness
+
+88F with CAD, DM, HTN, hyperlipidemia and LE pain. 
+
+
+
+Not seen in ~10 mos. Feels generally well until fall 6d ago. Pt unclear as to reasons of fall but confident that she didn't blackout or feel faint. Pt thinks she may have slipped. was not using walker at home. was able to get up immediately afterwards and felt fine until soreness set in the next AM. She now reports improving bruise on her head, LBP and L toe pain.  
+
+
+
+Pt lives in assisted living facility where meals are prepared for her, etc. 
+
+
+
+Pt does c/o R sided hip and leg pain that worsens when she walks. No LE swelling. No numbness or weakness.
+
+
+
+Reports taking all the meds she's been prescribed but doesn't know names.
+
+
+
+Medications
+
+      ATENOLOL   100 MG PO QD 
+
+      HCTZ   50 MG PO QD 
+
+      LISINOPRIL   40 MG PO QD 
+
+      ZOCOR   20 MG PO QHS 
+
+      Norvasc (AMLODIPINE)    10MG TABLET take 1 Tablet(s) PO QD 
+
+      Oscal+d (CALCIUM Carbonate + Vit D(1TABLE...    500 MG PO BID 
+
+      Tylenol (ACETAMINOPHEN)    500MG CAPSULE take 1 Capsule(s) PO Q4H PRN knee pain 
+
+      Kcl Slow Rel.    10MEQ TABLET CR take 2 Tablet(s) PO QD 
+
+      Asa (ACETYLSALICYLIC Acid)    81MG TABLET take 1 Tablet(s) PO QD 
+
+
+
+Physical Exam
+
+WDWN frail F, NAD
+
+157# 114/64 P72 R12
+
+HEENT: NC. 1 cm hematoma on occiput; slightly tender.
+
+Chest: CTA/P
+
+Back: no focal tenderness; SLR slightly positive on R
+
+Cor: RRR, S1, S2, No MRG
+
+Abd: Soft, NT. +BS. No HSM
+
+Ext: No C/C/E; reflexes trace or absent bilaterally
+
+Romberg positive
+
+
+
+Assessment
+
+1. s/p fall - likely due to mechanical fall, possibly due to deconditioning, weakness and poor balance. will ask PT to do home safety eval and make recommendations
+
+2. R hip/leg pain - likely sciatica and/or hip OA. check L/S films to r/o compression fx and hip films; refer for home PT
+
+3. DM - check A1C and chem panel
+
+4. HTN - check chem panel
+
+5. Lipids - check lipids
+
+6. Med adherence - pt to bring in meds to all visits.
+
+
+
+The patient will f/u with me in  6-8  weeks, or sooner prn.
+
+______________________________
+
+Tracy T. Xenakis, M.D.
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2068-04-06" TYPE="DATE" comment="" />
+<NAME id="P1" start="97" end="111" text="BARRERA,MARY U" TYPE="PATIENT" comment="" />
+<ID id="P2" start="114" end="122" text="45167459" TYPE="MEDICALRECORD" comment="" />
+<LOCATION id="P3" start="123" end="126" text="SLO" TYPE="HOSPITAL" comment="" />
+<DATE id="P4" start="204" end="214" text="04/06/2068" TYPE="DATE" comment="" />
+<AGE id="P5" start="343" end="345" text="88" TYPE="AGE" comment="" />
+<NAME id="P6" start="2378" end="2394" text="Tracy T. Xenakis" TYPE="DOCTOR" comment="" />
+</TAGS>
+</deIdi2b2>

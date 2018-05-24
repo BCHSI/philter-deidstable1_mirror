@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2155-07-11
+
+
+
+July 11, 2155
+
+
+
+Name:	Olive, Xavier		
+
+MRN: 26690002
+
+
+
+Mr. Olive was seen with Dr. Innis in general neurology clinic on 07/11/55.   Dr. Innis was present for or performed all salient aspects of the history and physical exam and together we discussed with the patient the work-up and treatment plan. 
+
+
+
+Return visit.
+
+Mr. Olive is a 71y old RHM, with Idiopathic Parkinson's disease. He was started on Sinemet 25/100mg tid with significant improvement in his balance & gait & rest tremor. However there were still periods of shuffling & stumbling especially going down slope. He also complained of persistant fatigue in his legs. We started him on Amantadine 100mg tid during his last visit. He did not tolerate it well & complained of dizziness especially when he goes out, even with reduced dose of 100mg bid. He has discontinued it since then.
+
+He is tolerating Sinemet well, no hallucinations, on-off phenomenon. He does not notice any wearing off of the effect prior to next dose. No dyskinesias.
+
+No new Neurological symptoms. He still has poor balance but his posture is much improved.
+
+PMHx: 
+
+HTN
+
+Hyperlipidemia
+
+DM type-2
+
+PVD
+
+BPH
+
+H/O colon cancer, s/p partial colectomy
+
+H/O throat surgery in past, does not know the details
+
+Medications at Home:
+
+Sinemet 25/100mg bid.
+
+Simvastatin 10mg QHS
+
+Ranitidine 150mg QHS
+
+Metformin 850mg tid
+
+Lisinopril 2.5mg QD
+
+Gabapentin 100mg bid
+
+Folic acid 1mg QD
+
+Atenolol 25mg QD
+
+Glyburide 2.5mg QD
+
+Bupropion 150mg QD
+
+Ferrous gluconate 325mg TID
+
+Terazosin 4mg QHS
+
+Pyridoxine 50mg QD
+
+Plavix 75mg QD
+
+Allergies: NKDA
+
+Limited physical Exam:
+
+Neuro: 
+
+MS: Alert, oriented, appropriately interactive. Follows all commands. Speech is fluent without paraphasic errors. Voice is hypophonic. Facial expression is flat.
+
+CN II-XII:  Visual fields full to confrontation; PERRLA 3.5 => 3.0; no ptosis; no nystagmus, no hypometric saccades, full EOMI, no restriction of upgaze; sensation on face normal bilaterally, no facial asymmetry; reduced spontaneous blinking of eyes; good smile; good cheek puff; tongue and palate midline; grossly normal hearing; good shoulder shrug and head turn.
+
+Motor:  normal bulk, axial rigidity present. Mild cogwheel rigidity, R>L at rest. No rest tremor. No drift.  Strength 5/5 throughout including: biceps, triceps, brachioradialis, finger flexor and extension, hip, knee and ankle flex and extensions. No bradykinesia.
+
+Sensation:  Decreased to touch, temperature and pin prick bilaterally in feet. Vibration reduced in toes. JP sense normal bilaterally. 
+
+Cerebellar:  Good FNF, rapid alternating movements
+
+Gait/Stance:  Gait is wide based with mild stooped posture, slightly unsteady but no festination noted today. Decreased arm swing noted while walking. Not able to tandem.   Rhomberg negative. Able to rise and sit without assistance.
+
+
+
+Assessment and Plan: 71y old RHM, with early idiopathic Parkinson's disease. No evidence of restricted up gaze (PSP), or parkinson-plus syndrome at this time. He had a good response to Sinemet but still has persistent fatigue & periods of festination. Recommend increasing Sinemet to 37.5/150mg tid 7am, 12noon, & 5pm. Wife will give me a call in 2wks to let me know his progress.
+
+
+
+Follow up in Neurology clinic in 3mths. Patient & family can contact me in interim with any concerns.
+
+
+
+Thank you very much for allowing me to participate in the care of this patient.
+
+
+
+Sincerely,
+
+
+
+___________________________________
+
+Isabella Edmond, M.D.
+
+Resident in Neurology
+
+Pager #: 98768
+
+CC:
+
+Michael Ulrey MD
+
+24 WOOD ST
+
+SYDNEY, WV 65157
+
+
+
+Ximena Keane
+
+46 Marshall Street
+
+Conneaut Lake, WV: 85486
+
+
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2155-07-11" TYPE="DATE" comment="" />
+<DATE id="P1" start="30" end="43" text="July 11, 2155" TYPE="DATE" comment="" />
+<NAME id="P2" start="53" end="66" text="Olive, Xavier" TYPE="PATIENT" comment="" />
+<ID id="P3" start="75" end="83" text="26690002" TYPE="MEDICALRECORD" comment="" />
+<NAME id="P4" start="91" end="96" text="Olive" TYPE="PATIENT" comment="" />
+<NAME id="P5" start="115" end="120" text="Innis" TYPE="DOCTOR" comment="" />
+<DATE id="P6" start="152" end="160" text="07/11/55" TYPE="DATE" comment="" />
+<NAME id="P7" start="168" end="173" text="Innis" TYPE="DOCTOR" comment="" />
+<NAME id="P8" start="354" end="359" text="Olive" TYPE="PATIENT" comment="" />
+<AGE id="P9" start="365" end="367" text="71" TYPE="AGE" comment="" />
+<AGE id="P10" start="2877" end="2879" text="71" TYPE="AGE" comment="" />
+<NAME id="P11" start="3479" end="3494" text="Isabella Edmond" TYPE="DOCTOR" comment="" />
+<CONTACT id="P12" start="3534" end="3539" text="98768" TYPE="PHONE" comment="" />
+<NAME id="P13" start="3546" end="3559" text="Michael Ulrey" TYPE="DOCTOR" comment="" />
+<LOCATION id="P14" start="3564" end="3574" text="24 WOOD ST" TYPE="STREET" comment="" />
+<LOCATION id="P15" start="3576" end="3582" text="SYDNEY" TYPE="CITY" comment="" />
+<LOCATION id="P16" start="3584" end="3586" text="WV" TYPE="STATE" comment="" />
+<LOCATION id="P17" start="3587" end="3592" text="65157" TYPE="ZIP" comment="" />
+<NAME id="P18" start="3596" end="3608" text="Ximena Keane" TYPE="DOCTOR" comment="" />
+<LOCATION id="P19" start="3610" end="3628" text="46 Marshall Street" TYPE="STREET" comment="" />
+<LOCATION id="P20" start="3630" end="3643" text="Conneaut Lake" TYPE="CITY" comment="" />
+<LOCATION id="P21" start="3645" end="3647" text="WV" TYPE="STATE" comment="" />
+<LOCATION id="P22" start="3649" end="3654" text="85486" TYPE="ZIP" comment="" />
+</TAGS>
+</deIdi2b2>

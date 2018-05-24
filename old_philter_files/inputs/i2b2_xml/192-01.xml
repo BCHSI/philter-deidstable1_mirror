@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2086-05-25
+
+                     FCH EMERGENCY DEPT VISIT
+ 
+TANNER,YUL M.   099-04-65-0                VISIT DATE: 05/25/86
+I saw this patient May 25 with the SAR and the attending from the 
+Short-stay Unit. 
+PRESENTING COMPLAINT:  Polyuria, fatigue. 
+HISTORY OF PRESENTING COMPLAINT:  This 50 year old man was referred 
+in by Dr. Locke covering for Dr. Tirado for polyuria and fatigue. 
+His last recorded fasting blood sugar was 185.  He has come week 
+from a trip for one week and he did follow his diet, but had 
+continued increasing polyuria, polydipsia, blurring of vision and 
+weakness. 
+PAST MEDICAL HISTORY:  Renal insufficiency and "incipient type II 
+diabetes" for which he had been following a strict diet. 
+PHYSICAL EXAMINATION:  Unremarkable except for a chronic 
+strabismus. 
+LABORATORY EVALUATION:  Laboratory studies included a blood glucose 
+of 709, an anion gap of 23 and elevated beta hydroxybutyrate. 
+THERAPY RENDERED/COURSE IN ED:  He was begun on intravenous fluids 
+and intravenous insulin, and arrangements were made to go to a 
+step-down unit on an insulin drip. 
+FINAL DIAGNOSIS:  New onset diabetes. 
+DISPOSITION (including condition upon discharge):  Admitted to 
+hospital, condition satisfactory. 
+___________________________________                    HU019/45662 
+MAX URIARTE, M.D.       MU11                          D:05/25/86 
+                                                       T:05/25/86 
+Dictated by:  MAX URIARTE, M.D.       MU11 
+
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2086-05-25" TYPE="DATE" comment="" />
+<LOCATION id="P1" start="49" end="52" text="FCH" TYPE="HOSPITAL" comment="" />
+<NAME id="P2" start="76" end="89" text="TANNER,YUL M." TYPE="PATIENT" comment="" />
+<ID id="P3" start="92" end="103" text="099-04-65-0" TYPE="MEDICALRECORD" comment="" />
+<DATE id="P4" start="131" end="139" text="05/25/86" TYPE="DATE" comment="" />
+<DATE id="P5" start="159" end="165" text="May 25" TYPE="DATE" comment="" />
+<AGE id="P6" start="307" end="309" text="50" TYPE="AGE" comment="" />
+<NAME id="P7" start="347" end="352" text="Locke" TYPE="DOCTOR" comment="" />
+<NAME id="P8" start="370" end="376" text="Tirado" TYPE="DOCTOR" comment="" />
+<ID id="P9" start="1299" end="1310" text="HU019/45662" TYPE="IDNUM" comment="" />
+<NAME id="P10" start="1312" end="1323" text="MAX URIARTE" TYPE="DOCTOR" comment="" />
+<NAME id="P11" start="1336" end="1340" text="MU11" TYPE="USERNAME" comment="" />
+<DATE id="P12" start="1368" end="1376" text="05/25/86" TYPE="DATE" comment="" />
+<DATE id="P13" start="1435" end="1443" text="05/25/86" TYPE="DATE" comment="" />
+<NAME id="P14" start="1459" end="1470" text="MAX URIARTE" TYPE="DOCTOR" comment="" />
+<NAME id="P15" start="1483" end="1487" text="MU11" TYPE="USERNAME" comment="" />
+</TAGS>
+</deIdi2b2>

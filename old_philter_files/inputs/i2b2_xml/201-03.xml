@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2082-10-22
+
+
+	CARDIOLOGY
+	
+
+	GRIFFIN NURSING CENTER
+	
+
+
+	Reason for visit:
+    
+
+
+	Interval History:
+   Mr. Xayavong is a 61-year-old gentleman with history of CAD, anterior STEMI 2077, stents x 2 to LAD, four stents since then, last 2080, diabetes, CHF, unknown EF with EF of 25%, and hypertension currently under pre cardiac transplant evaluation. In 5/82 he had BiV ICD placement as well as left heart catheterization, which showed multivessel disease higher risk for CABG. 
+   He was hospitalised in 6/82 after he presented with ~3 days of nonspecific symptoms of fatigue, nausea, and poor sleep. He was in Afib at that point of time and had elevated NT- proBNP.  His medications were adjusted. He was discharged from the hospital class III stage C to D
+   He denies chest pain, shortness of breath, PND, orthopnea, palpitations, or syncope. No ICD discharges reported. He denies any lightheadedness or dizziness He does note a queasy sensation in the stomach on and off. 
+
+
+	
+
+
+	Past medical history:
+   CAD, history of STEMI in 2077, eight stents including LAD, at least x 2, BiV ICD placement , last cath at OCH showed multivessel disease, BiV ICD, DDD St. Jude, 05/13/2081, CHF, diabetes, hypertension, former smoker.
+
+	
+
+	Changes to Allergies
+	
+NKA: No Known Allergies - reaction: [reviewed]
+
+
+	Family history:
+   Significant for heart disease in both mother's and father's side, but no early CAD in the first-degree relatives, hypertension and hyperlipidemia in both sides.
+
+
+	Social history:
+   He is a retired purchasing agent, quit smoking a few years ago, had smoked one pack per day.  He has used no alcohol or illicit drug use, a very supportive family.
+
+
+	Review of systems:
+   Negative, otherwise as stated above
+
+Physical examination:
+	
+-BMI:   
+-Pulse: 66  
+-weight: 221  lbs.
+-Neuro:   Grossly intact.
+-Extremities:   No edema, 1+ pulses bilaterally.
+-Abdomen:   Soft without hepatosplenomegaly, bruits
+-Cardiac:   Apical impulse laterally displaced, RRR, S1/S2, 2+ MR murmur, 1+ TR ateral PMI.
+-Chest:   Clear to auscultation.
+-Neck:   JVP is approximately 8 cm.  His neck is supple without thyromegaly.  Carotids are brisk without bruits.
+-Heent:   Normocephalic.  Atraumatic.  Clear oral cavity.  Midline thyroid.
+-Skin:   No rashes, anicteric
+-General:   He is a well-appearing gentleman in no acute distress.
+-BP: 82/50  
+
+
+	EKG:
+   V-paced rhythm @66bpm, Left axis Deviation, QTc-517.
+
+Selected recent labs:
+	 Pending
+	
+
+
+	Impression:
+   61 year old man with Stage C New York Heart Association class III heart failure.
+   Patient is scheduled for a right heart cath in 11/82.
+ His NTproBNP is high, but since he is medically optimized we cannot further titrate his therapies.
+		Medication List
+		
+
+				CONFIRMED
+
+		- ACETYLSALICYLIC ACID (ASPIRIN)  81 PO QAM
+
+		- Aldactone  12.5 MG PO daily
+
+		- esomeprazole  40 MG PO daily
+
+		- Fish oil  000mg 1200mg po
+
+		- glipizide  20 MG PO BID BEFORE BREAKFAST AND BEFORE SUPPER
+
+		- Lasix  40 MG PO daily
+
+		- lisinopril  5mg po daily
+
+		- Toprol XL  12.5 MG PO daily
+
+		- warfarin  5 MG PO QPM
+
+			------------------------------------------------------------
+
+				REMOVED
+
+		- Omega3  1200 MG PO BID
+
+
+	
+	
+
+	
+Crystal Perez, MD
+
+	
+Quintin D. Quesada, MD pager #15657
+
+	
+Signed electronically by  Crystal Perez, MD; Quintin D. Quesada, MD
+Document Status: Final
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2082-10-22" TYPE="DATE" comment="" />
+<LOCATION id="P1" start="45" end="67" text="GRIFFIN NURSING CENTER" TYPE="HOSPITAL" comment="" />
+<NAME id="P2" start="124" end="132" text="Xayavong" TYPE="PATIENT" comment="" />
+<AGE id="P3" start="138" end="140" text="61" TYPE="AGE" comment="" />
+<DATE id="P4" start="196" end="200" text="2077" TYPE="DATE" comment="" />
+<DATE id="P5" start="250" end="254" text="2080" TYPE="DATE" comment="" />
+<DATE id="P6" start="369" end="373" text="5/82" TYPE="DATE" comment="" />
+<DATE id="P7" start="520" end="524" text="6/82" TYPE="DATE" comment="" />
+<DATE id="P8" start="1050" end="1054" text="2077" TYPE="DATE" comment="" />
+<LOCATION id="P9" start="1131" end="1134" text="OCH" TYPE="HOSPITAL" comment="" />
+<DATE id="P10" start="1186" end="1196" text="05/13/2081" TYPE="DATE" comment="" />
+<PROFESSION id="P11" start="1538" end="1554" text="purchasing agent" TYPE="PROFESSION" comment="" />
+<AGE id="P12" start="2481" end="2483" text="61" TYPE="AGE" comment="" />
+<DATE id="P13" start="2612" end="2617" text="11/82" TYPE="DATE" comment="" />
+<NAME id="P14" start="3196" end="3209" text="Crystal Perez" TYPE="DOCTOR" comment="" />
+<NAME id="P15" start="3217" end="3235" text="Quintin D. Quesada" TYPE="DOCTOR" comment="" />
+<CONTACT id="P16" start="3247" end="3252" text="15657" TYPE="PHONE" comment="" />
+<NAME id="P17" start="3282" end="3295" text="Crystal Perez" TYPE="DOCTOR" comment="" />
+<NAME id="P18" start="3301" end="3319" text="Quintin D. Quesada" TYPE="DOCTOR" comment="" />
+</TAGS>
+</deIdi2b2>

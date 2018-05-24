@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2093-04-13
+
+
+	CARDIOLOGY
+	
+
+	BEAUREGARD MEMORIAL HOSPITAL	
+
+Steven N Cooper M.D. 
+8 Riverview Avenue, Suite 185
+,
+College Station, NC 22169
+
+Dear Dr. Cooper:
+
+  I had the pleasure of seeing your patient, Christian Mullen today in the office in followup for his peripheral artery disease, as well as his coronary disease.  I permanently follow him for PAD, as I know he follows with Dr. Fernandes for his coronary disease.
+
+Regarding his peripheral disease, he is status post left common femoral endarterectomy, performed at my request by Dr. Fredrick Xa couple of years ago.  This alleviated some of his left leg claudication, though he still has some residual symptoms in that left calf.  The right calf is what bothers him more, with symptoms that are earlier in onset.  They occurred about 100 yards of walking on the flat.  While Chris is affected by this, it does not preclude him from doing his usual activities of daily living.  He also continues to travel (on his way to Bogalusa with Brad Fair, his partner, next week), and also continues to work actively.  The biggest problem with his claudication is that it prevents him from being physically active enough to lose enough weight.  As he says, he put on about 80 pounds after his coronary bypass graft in 2082, and he has had trouble losing the weight. He is considering weight reduction surgery, but has not made a decision about this yet.  He is struggling with the decision.
+
+I would support him either way in this regard, encouraging him to lose weight however he can do so.
+
+In terms of his lower extremities, his exam demonstrates diminished pulses (absent to palpation) in both ankles, but they are audible by Doppler.  Both feet are well perfused, with good capillary refill.  He has no ulcers or gangrene.
+
+From a cardiac standpoint, Chris is doing well.  He denies significant dyspnea or chest discomfort, although he is limited in terms of walking because of his legs.  It has been 11 years since his bypass operation, and I think it would be reasonable to do a stress test on him to make certain that there is no evidence of silent ischemia.  While this might be controversial, as to whether to do a stress test or not, my own gut feeling is that it is probably the right time in this patient with significant risk factors and limitations on the basis of his lower extremity disease.  He requests specifically we do this study here, so I will take the liberty of ordering an adenosine MIBI, and certainly will forward you the results.
+
+Otherwise, Chris is doing great.  We will continue to work on risk factor modification and I will see him again in six months.  We will also order an exercise ABI and duplex of his lower extremities to assess where we stand at the present time.  If his symptoms progress to the point where they are more disabling, then we would consider further evaluation.  Otherwise, as long as his symptoms remain stable and his lifestyle is not terribly limited, we will continue the same.
+
+
+	Other Data:
+   I saw him today with Vernon Galvan, one of my cardiovascular fellows, who have written a detailed note. We will send this along to you as well.
+
+Thanks again.
+
+Best personal regards,
+
+	
+
+	
+
+	
+Guyton Nunes MD
+
+	
+cc: Nathan   Fernandes M.D.; Vernon X Galvan M.D.;  V 
+
+	
+Signed electronically by  Guyton Nunes, MD
+Document Status: Final
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2093-04-13" TYPE="DATE" comment="" />
+<LOCATION id="P1" start="45" end="73" text="BEAUREGARD MEMORIAL HOSPITAL" TYPE="HOSPITAL" comment="" />
+<NAME id="P2" start="76" end="91" text="Steven N Cooper" TYPE="DOCTOR" comment="" />
+<LOCATION id="P3" start="98" end="116" text="8 Riverview Avenue" TYPE="STREET" comment="" />
+<LOCATION id="P5" start="130" end="145" text="College Station" TYPE="CITY" comment="" />
+<LOCATION id="P6" start="147" end="149" text="NC" TYPE="STATE" comment="" />
+<LOCATION id="P7" start="150" end="155" text="22169" TYPE="ZIP" comment="" />
+<NAME id="P8" start="166" end="172" text="Cooper" TYPE="DOCTOR" comment="" />
+<NAME id="P9" start="220" end="236" text="Christian Mullen" TYPE="PATIENT" comment="" />
+<NAME id="P10" start="402" end="411" text="Fernandes" TYPE="DOCTOR" comment="" />
+<NAME id="P11" start="558" end="569" text="Fredrick Xa" TYPE="DOCTOR" comment="" />
+<NAME id="P12" start="850" end="855" text="Chris" TYPE="PATIENT" comment="" />
+<LOCATION id="P13" start="995" end="1003" text="Bogalusa" TYPE="CITY" comment="" />
+<NAME id="P14" start="1009" end="1018" text="Brad Fair" TYPE="PATIENT" comment="" />
+<DATE id="P15" start="1282" end="1286" text="2082" TYPE="DATE" comment="" />
+<NAME id="P16" start="1820" end="1825" text="Chris" TYPE="PATIENT" comment="" />
+<NAME id="P17" start="2536" end="2541" text="Chris" TYPE="PATIENT" comment="" />
+<NAME id="P18" start="3042" end="3055" text="Vernon Galvan" TYPE="DOCTOR" comment="" />
+<NAME id="P19" start="3213" end="3225" text="Guyton Nunes" TYPE="DOCTOR" comment="" />
+<NAME id="P20" start="3236" end="3254" text="Nathan   Fernandes" TYPE="DOCTOR" comment="" />
+<NAME id="P21" start="3261" end="3276" text="Vernon X Galvan" TYPE="DOCTOR" comment="" />
+<NAME id="P22" start="3316" end="3328" text="Guyton Nunes" TYPE="DOCTOR" comment="" />
+</TAGS>
+</deIdi2b2>

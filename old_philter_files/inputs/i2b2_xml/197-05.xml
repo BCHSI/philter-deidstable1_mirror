@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2098-12-23
+
+
+
+
+
+  
+
+
+
+Vascular Surgery Consult- Kinder
+
+DATE: 12/23/2098
+
+ATTENDING: Quiring
+
+PT:  Emery, Donn
+
+MR#: 0595726
+
+Presentation:  Bilateral lower extremity ulceration
+
+HPI:  This is a 89yo female s/p CABG, AVR 8 days ago who presents with bilateral ulceration for the past six month. He also c/o bilateral intermittent claudication of calf and thighs with claudication distance of one block. He denies any trauma or ulceration. 
+
+Risk Factors
+
+1.	Hypertension 
+
+2.	Hypercholesterolemia
+
+3.	Ex-heavy smoker
+
+4.	NIDDM
+
+5.	CAD
+
+
+
+PMHx:  
+
+1.	As above
+
+2.	GERD
+
+3.	TURP
+
+4.	Nephrolithiasis
+
+5.	Macular degeneration
+
+6.	Pulmonary fibrosis
+
+7.	Pulmonary nodule
+
+8.	Depression
+
+9.	Polyneuropathy
+
+
+
+  Medications:
+
+1.	Aspirin 81 mg qd
+
+2.	Atenolol 50 mg bid 
+
+3.	Chlropropamiden 100 mg bid
+
+4.	Cozaar 50 mg bid
+
+5.	Metformin 1000 mg bid
+
+6.	Hytrin 30 mg qd
+
+7.	Lasix 20 mg qd
+
+8.	Mevacor 10 mg qhs
+
+9.	Loratadine 10 mg qd
+
+10.	Glucosamine
+
+11.	Mulitvitamins
+
+12.	Soma/Ultram prn
+
+
+
+Allergies: Sulfa(causes rash)
+
+Social History: Recently widowed, lives with daughter, former heavy tobacco use/no ETOH, formerly worked as a Finance manager, with frequent exposure to occupational hazards, including asbestos
+
+
+
+VS:  T=99.2, PR=82,  BP=110/54, RR=19, 96% (RA)
+
+PE: HEENT: NC/AT, PERRL, nonicteric.  
+
+Neck:  	supple, NT, full ROM, 2+ carotids w/o bruits, no LAD. JVP 7cm
+
+Lungs:  CTAB; no crackles, no wheezes
+
+Cardio:  RRR; normal S1, S2, no murmurs or crackes
+
+Abd:  	Soft, non-tender 
+
+PV:  	
+
+Ext: Pulses:  Brachial      Radial       Femoral        Popliteal        PT        DP
+
+Right:            2+              2+            2+   		1+	       0	       0		
+
+Left:	        2+		2+             2+		1+                0	       0
+
+Bilateral  heel ulcerations approx 5x4 on right and 4x4 on left covered with eschar. Bilateral +3 edema extending to mid calf. Chronic ischemic changes
+
+LENIs:
+
+DOPPLER SIGNAL                       PULSES
+
+        DP          PT               AbdAorta Femoral Auscultation POP DP  PT
+
+ Left:  weak        weak                      1                    0   0   0
+
+ Right: weak        weak                      1                    0   0   0
+
+
+
+BP RArm:  80/50LArm:  81/49
+
+
+
+LOCATION    Right    Left              RRatio   LRatio  RPVR    LPVR
+
+ THIGH      70       60                0.86     0.74
+
+ CALF       60       55                0.74     0.68
+
+ ANKLE      50       30                0.62     0.37
+
+
+
+BP P Exercise:
+
+MWT  minutes  seconds   RATE:  MPH Grade: 10%
+
+
+
+SYMPTOMS:
+
+deferred- ulcers
+
+
+
+FINDINGS
+
+
+
+Ankle-brachial indices, segmental systolic pressures, and pulse volume
+
+recordings are obtained at rest.
+
+
+
+RIGHT:  ABI is .62.  Waveforms and pressures demonstrate SFA, popliteal,
+
+and/or tibial vessel disease.  Perfusion is poor to the digit level.
+
+
+
+LEFT:  ABI is .37.  Waveforms and pressures demonstrate iliac, SFA, popliteal,
+
+and/or tibial vessel disease.  Perfusion is poor to the ankle, TM, and digit
+
+levels.
+
+
+
+Of note, multiple attempts were made to obtain toe pressures, however, this
+
+proved to be technically impossible due to patient's constant twitching.
+
+
+
+IMPRESSIONS:
+
+1. RIGHT SFA, POPLITEAL AND/OR TIBIAL VESSEL DISEASE, WITH MODERATE ABI
+
+REDUCTION, AND POOR DIGITAL PERFUSION
+
+2. LEFT ILIAC, SFA, POPLITEAL AND/OR TIBIAL VESSEL DISEASE, WITH SEVERE ABI
+
+REDUCTION, AND POOR PERFUSION TO THE ANKLE, TM, AND TOE LEVELS
+
+3. TECHNICALLY UNABLE TO OBTAIN TOE PRESSURES
+
+
+
+
+
+A/P:  This is a 85yo male s/p AVR, CABG with chronic pressure ulcerations at his soles bilaterally secondary to proximal disease. Recommend foot elevation when at rest, heel protection, specially-fitted shoes. 
+
+Will D/W Dr. Quiring  for endovascular intervention.
+
+
+
+
+
+
+
+________________
+
+Vicki Oneil, M.D
+
+Vascular Junior
+
+#90148
+
+
+
+
+
+
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2098-12-23" TYPE="DATE" comment="" />
+<NAME id="P1" start="64" end="70" text="Kinder" TYPE="DOCTOR" comment="" />
+<DATE id="P2" start="78" end="88" text="12/23/2098" TYPE="DATE" comment="" />
+<NAME id="P3" start="101" end="108" text="Quiring" TYPE="DOCTOR" comment="" />
+<NAME id="P4" start="115" end="126" text="Emery, Donn" TYPE="PATIENT" comment="" />
+<ID id="P5" start="133" end="140" text="0595726" TYPE="MEDICALRECORD" comment="" />
+<AGE id="P6" start="211" end="213" text="89" TYPE="AGE" comment="" />
+<PROFESSION id="P7" start="1143" end="1158" text="Finance manager" TYPE="PROFESSION" comment="" />
+<AGE id="P8" start="3474" end="3476" text="85" TYPE="AGE" comment="" />
+<NAME id="P9" start="3683" end="3690" text="Quiring" TYPE="DOCTOR" comment="" />
+<NAME id="P10" start="3748" end="3759" text="Vicki Oneil" TYPE="DOCTOR" comment="" />
+<CONTACT id="P11" start="3784" end="3789" text="90148" TYPE="PHONE" comment="" />
+</TAGS>
+</deIdi2b2>

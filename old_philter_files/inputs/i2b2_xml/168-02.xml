@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2073-03-25
+
+
+THE SPECIALTY HOSPITAL OF AUSTIN
+
+CLINIC NOTE 
+
+Victor Lujan
+SMH#:  018-92-33
+March 25, 2073
+
+
+DIAGNOSIS:
+
+Bilateral hand numbness and pain, recurrent carpal tunnel syndrome.
+
+SUBJECTIVE:
+
+The patient is a 54-year-old right-hand dominant male with multiple medical problems including diabetes mellitus and renal failure requiring hemodialysis, who was has had bilateral hand numbness for several years, but getting worse within the last year or so.  The patient states that he has had past carpal tunnel release and trigger finger release of the bilateral hand and the symptoms that he is feeling now is somewhat similar 2-10 years ago appearance of symptoms.
+
+PAST MEDICAL HISTORY:
+
+Hypertension, diabetes mellitus, and chronic renal failure.
+
+PAST SURGICAL HISTORY:
+
+Bilateral eye surgeries, right shoulder surgeries, and bilateral carpal tunnel surgery as mentioned above.
+
+CURRENT MEDICATIONS:
+
+Multiple antibiotics including isoniazid, doxycycline, insulin, Cardura, Glucophage, Elavil, and Biaxin.  Please note that the patient is hepatitis C positive and hepatitis B positive.
+
+PHYSICAL EXAMINATION:
+
+On today s examination, the patient was noted to have a fairly long carpal tunnel scar on bilateral hands extending all the way to the volar wrist level.  Long finger and right index finger scar at the base at the MP joint level is noted, the fourth trigger release, which was performed in 2062 as well.  The patient has rather stiff fingers overall with inability to fully flex the fingers all the way to the thumb space.  There is no locking or triggering, but fairly extensive stiffness involving the flexor tendon was noted.  Durkan s test was positive and Phalen s test was positive as well.  However, abductor pollicis brevis function is intact.  Other examination demonstrated some noticeable decrease in size of the muscle with some prominence of the vasculature on the radial side of the left hand, but otherwise normal examination.
+
+IMPRESSION:
+
+As above.
+
+PLAN:
+
+My recommendation is that patient undergo very vigorous assessment for the median nerve function.  In addition to this, I would like to actually consider providing him with the stretching exercises and flexion exercises as well as passive range of motion of the fingers.  It may be a little to early to consider this option until he returns with the result of EMG nerve conduction study.
+
+
+
+
+Vance-Ernest Yamasaki, M.D.
+Orthopaedics 
+
+
+VEY/kiser		59-56557099.doc
+
+cc:	Harold Elliott, M.D.
+
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2073-03-25" TYPE="DATE" comment="" />
+<LOCATION id="P1" start="29" end="61" text="THE SPECIALTY HOSPITAL OF AUSTIN" TYPE="HOSPITAL" comment="" />
+<NAME id="P2" start="77" end="89" text="Victor Lujan" TYPE="PATIENT" comment="" />
+<LOCATION id="P3" start="90" end="93" text="SMH" TYPE="HOSPITAL" comment="" />
+<ID id="P4" start="97" end="106" text="018-92-33" TYPE="MEDICALRECORD" comment="" />
+<DATE id="P5" start="107" end="121" text="March 25, 2073" TYPE="DATE" comment="" />
+<AGE id="P6" start="235" end="237" text="54" TYPE="AGE" comment="" />
+<DATE id="P7" start="1427" end="1431" text="2062" TYPE="DATE" comment="" />
+<NAME id="P8" start="2403" end="2424" text="Vance-Ernest Yamasaki" TYPE="DOCTOR" comment="" />
+<NAME id="P9" start="2447" end="2450" text="VEY" TYPE="DOCTOR" comment="" />
+<NAME id="P10" start="2451" end="2456" text="kiser" TYPE="DOCTOR" comment="" />
+<ID id="P11" start="2458" end="2469" text="59-56557099" TYPE="IDNUM" comment="" />
+<NAME id="P12" start="2479" end="2493" text="Harold Elliott" TYPE="DOCTOR" comment="" />
+</TAGS>
+</deIdi2b2>

@@ -1,0 +1,450 @@
+
+
+
+Record date: 2083-07-21
+
+
+
+
+
+CCU Admission Note
+
+
+
+PATIENT: Brandon Xayavong
+
+MRN: 7826250
+
+DATE: 7/21/83
+
+TIME: 4:00pm
+
+PCP: Ernest Edge, MD
+
+ATTENDING PHYSICIAN: Ashlei Tyson, MD
+
+CONTACT INFO: Elisha (wife) - 968-774-6381 
+
+
+
+REASON FOR ADMISSION
+
+Tailored therapy
+
+
+
+HISTORY OF THE PRESENT ILLNESS
+
+Mr. Xayavong is a 62 year old man with a history of CAD (s/p STEMI and multiple stents), CHF (s/p BiV ICD, class D and stage III), DM, and CRI who was admitted for tailored therapy after a routine RHC demonstrated elevated filling pressures.
+
+
+
+Mr. Xayavong has a primary cardiologist (Dr. Marshall) in Gloucester and has received much medical care at Oregon City Hospital.  He has been followed by Dr. Ashlei Tyson for the possibility of cardiac transplantation and has intermittently been admitted to GNC.  He was admitted to GNC from 6/13/82 to 6/19/82 after being found to be in atrial fibrillation with hypotension, fatigue, and nausea; this was 2 weeks after the placement of his BiV ICD.  He converted to sinus rhythm after amiodarone was administered, but developed a marked transaminitis.  Due to elevated filling pressures (PCWP 23), he required IV Lasix for diuresis.  He was felt to be a poor candidate for CABG given the degree of heart failure, so transplantation was instead pursued.  He was also admitted to GNC from 11/10/82 through 11/13/82 after again being found with elevated filling pressures after complaining of fatigue (PCWP 37); he received a PA line and required a Lasix drip and IV nitroprusside.  At the time of discharge, his reported dry weight was 206 lbs.
+
+
+
+He came for a scheduled right-sided heart catheterization today as he has had increasing complaint of fatigue.  He reports that he has been feeling &#8220;lousy,&#8221; that his appetite has been &#8220;crummy,&#8221; and that he is &#8220;feeling real tired.&#8221;  He feels that these symptoms have been relatively severe but unchanged for the past 2 years.  He denies overt shortness of breath, but essentially fatigues very easily with physical exertion, and has been requiring multiple naps a day.  He states that he has been careful with his diet (both fluid and salt intake) without any changes, and that he has been entirely compliant with his medications.  Of note, his cardiologist attempted to change him from Toprol XL to Coreg several months ago, and that seems to have made him feel worse.  He continues to urinate to his home Lasix dosing.  He denies any sensation of chest pain or chest pressure, and denies chest palpitations or sensation of fluttering; he states clearly that he could tell when his heart was in an abnormal rhythm in 6/72.  He says that his pacemaker was &#8220;checked&#8221; last week and that he was told he didn&#8217;t have any &#8220;episodes.&#8221;  He believes that he has been putting on weight recently, and reports that his baseline weight is ~225 lbs.  He denies recent fevers or chills.  He has no complaint of leg swelling.
+
+
+
+PAST MEDICAL/SURGICAL HISTORY
+
+CAD
+
+
+STEMI 2077 s/p 2 stents to the LAD (done at GNC)
+ 
+Reports 2 other MI&#8217;s (2079 and 2080, treated at OCH)
+ 
+Reportedly s/p ~8 stents in total after various interventions
+ 
+Per report, multi-vessel disease &#8220;difficult for CABG&#8221; 5/82
+
+CHF
+
+
+
+BiV ICD placement DDD 5/13/2082
+ 
+Class D, Stage III
+
+Diabetes
+
+
+Chronic Renal Insufficiency
+
+
+
+h/o Latent Tuberculosis
+
+
+
+s/p Toe Amputation x2
+
+
+Last one was taken off several months ago secondary to infection
+
+s/p Fused L Ankle
+
+
+
+RECENT DIAGNOSTIC STUDIES
+
+Cardiac Catheterization (10/30/77)
+
+Dominance: Right
+
+
+
+Left Main: The left main coronary artery is of moderate length, intermediate
+
+sized vessel. It bifurcates into the LAD and LCX coronary arteries. Left main coronary artery is normal.
+
+
+
+LAD: The Proximal LAD has a diffuse, irregular, and thrombotic 90 % stenosis in its proximal third.  D1 has a focal 90 % stenosis in its ostium.  The Ramus has a focal 95 % stenosis in its ostium. Both the D1 and Ramus side branches arise from the thrombotic proximal LAD segment.
+
+
+
+Left Circumflex: The left circumflex coronary artery is moderate sized vessel, which gives origin to two obtuse marginal arteries. The artery contains only minimal irregularities.
+
+
+
+RCA: The right coronary artery is a large vessel. The artery contains only
+
+minimal irregularities.
+
+
+
+TTE (6/15/82)
+
+Moderate MR with e/o elevated LA pressure.  Dilated LV with severe diffuse hypokinesis (with some preservation of mid-septal, inferior, and lateral segments).  EF 19%.  Moderate TR.  RVSP 64 mmHg.  Dilated RV with diffuse hypokinesis.
+
+
+
+Thallium Myocardial Imaging (6/17/82)
+
+       The myocardial scans show apical and distal inferior infarction. The
+
+       remainder of the myocardium is viable. Distal anterior ischemia was
+
+       present at rest.
+
+
+
+RHC (11/10/82)
+
+      RA 9, RV 68/7, PA 70/38, PCWP 37, CO 4.9
+
+
+
+RHC (6/9/83)
+
+RA 10, RV 55/15, PA 52/23, PCWP 23, CO 5.8 (Thermo), CI 2.62
+
+
+
+RHC (7/21/83)
+
+      Baseline:
+
+RA 8, RV 68/8, PA 68/33 (44), PCWP 27 (prominent V waves to 43)
+
+CO 4.7, CI 2.07
+
+s/p Nitro 100mcg IV:
+
+      PA 53/20 (34), PCWP 16
+
+
+
+MEDICATIONS ON ADMISSION
+
+  1. Acetylsalicylic Acid (Aspirin) 81 MG PO QD
+
+  2. Calcium Citrate 630 MG PO BID
+
+
+
+3. Carvedilol 3.125 MG PO QD
+
+
+
+4. Cholecalciferol (Vitamin D3) 1000 UNITS PO QD
+
+  5. Diazepam (Valium) 5 MG PO prn
+
+  6. Esomeprazole (Nexium) 40 MG PO QD
+
+  7. Furosemide (Lasix) 40 MG PO QD
+
+  8. Glipizide 20 MG PO BID
+
+  9. Insulin Glargine (Lantus) 24 UNITS SC QHS
+
+
+10. Lisinopril 5 MG PO QD
+
+
+11. Omega-3-Fatty Acids (Fish Oil Capsule) 1200 MG PO QD
+
+
+12. Spironolactone (Aldactone) 12.5 MG PO QD
+
+
+13. Warfarin Sodium Alternate PO QPM
+
+      5mg Mon, Wed, Fri, Sat
+
+      2.5mg Tue, Thu, Sun
+
+
+
+ALLERGIES/ADVERSE REACTIONS 
+
+Digoxin &#8211; General Intolerance
+
+
+
+FAMILY HISTORY
+
+Multiple siblings have diabetes, and 2 passed away from complications in their 50's.  His father died at 65 from Alzheimer&#8217;s disease, and his mother at 50 from an unspecified cancer.  No other known family members with heart disease.
+
+
+
+SOCIAL HISTORY
+
+Presently lives in Lake Pocotopaug with wife and son Brandon.  Used to be goods purchaser for 34 years.  He has a ~60 pack-year smoking history, but has since quit.  Last drink of EtOH was 1.5 years ago.
+
+
+
+PHYSICAL EXAMINATION 
+
+Vitals &#8211;
+
+      T 97.7, HR 75, BP 108/72, RR 99% RA
+
+      PA 74/34 (49), CVP 9, MvO2 73
+
+General &#8211; 
+
+      Pleasant man in no distress, resting comfortably in bed.
+
+Skin &#8211; 
+
+      No rashes.
+
+HEENT &#8211; 
+
+      Pupils equal and reactive.  Benign oropharynx.
+
+Neck &#8211; 
+
+      Supple.  R PA catheter in place.
+
+Pulmonary &#8211;
+
+      Decreased air movement.  Mild crackles at the R base.
+
+Cardiac &#8211; 
+
+      Distant. S1 + S2.
+
+Abdomen &#8211; 
+
+      Soft, non-tender, and non-distended.  Active bowel sounds.
+
+Extremity &#8211; 
+
+      Warm.  1st and 2nd toe amputated.  No other skin breakdown between the digits.
+
+Mental status &#8211; 
+
+      Alert.
+
+Neurology &#8211; 
+
+      No gross neurological deficits.
+
+
+
+LABORATORIES
+
+CBC
+
+      WBC 7.2, Hct 38.6, Plt 210
+
+
+
+Chemistries
+
+      Na 137, K 4.2, Cl 99, CO2 28.8, BUN 29, Cr 1.24 (EGFR&gt;60), Glu 102, AG 9
+
+      Ca 10.0, Phos 2.9, Mg 1.5
+
+
+
+Blood Gas
+
+      MvO2 73
+
+
+
+Coagulation
+
+      PT 16.6, INR 1.4, PTT 30.9
+
+
+
+MICROBIOLOGY
+
+N/A
+
+
+
+RADIOLOGICAL STUDIES
+
+CXR (7/21/83)
+
+      No evidence for pneumothorax.
+
+      
+
+Clear lungs.
+
+
+
+EKG
+
+Atrial-sensed, ventricularly-paced rhythm.  No changes compared to 4/2083.
+
+
+
+ASSESSMENT AND PLAN
+
+62 yo M with a history of CAD (s/p STEMI and multiple stents), CHF (s/p BiV ICD, class D and stage III), DM, and CRI who was admitted for tailored therapy after a routine RHC demonstrated elevated filling pressures.
+
+
+
+# CV Pump
+
+Class III, Stage D heart failure without a clear precipitant leading to recent progressive decline; has been compliant with medications and diet, no evidence of recent arrhythmia, and no signs of active infection.  Has been failing current medical regimen, and is presently listed for heart transplantation.  Last TTE with an EF of 19%.
+
+[] Restart Coumadin at home doses (alternating between 5mg and 2.5mg)
+
+[] Repeat TTE
+
+
+
+Preload:
+
+Wedge pressures elevated (27 mmHg), and will require more aggressive diuresis.  Goal of PCWP &lt; 20.
+
+[] Bumex 1mg IV x1
+
+
+- Further boluses if not responsive
+
+
+
+Afterload:
+
+Calculated SVR is ~1300.  MAPs do not have a lot of room for further afterload reduction.  
+
+[] Change from lisinopril 5mg qD to captopril 12.5mg TID
+
+
+- Titrate as BP allows
+
+[] Continue Coreg 3.125mg qD and Spironolactone 12.5mg qD
+
+
+
+Inotropy:
+
+Based on RHC, CO 4.7, CI 2.07, and MvO3 is 73.  No present indication for inotropic agents.
+
+
+
+# CV Ischemia
+
+No acute clinical changes and completely asymptomatic presently.  EKG with V-paced pattern not meeting criteria for acute ST segment changes.  Continue with medical management.  Will check fasting lipids; does not appear to have been on statin previously, so will start simvastatin and await lipid results.
+
+[] ASA 81 qD
+
+[] Fish Oil
+
+[] Start simvastatin 40mg PO qD
+
+
+
+# CV Rhythm
+
+Trial-sensed, ventricularly-paced rhythm which is sinus in origin.  No evidence of tachyarrhythmias clinically, and per his report, recent interrogation of his device also did not reveal arrhythmias.
+
+[] Monitor on telemetry
+
+
+
+# Diabetes Mellitus
+
+Will recheck A1c.  On an unusual dose of BID Glipizide and long-acting insulin, but independently verified with both the patient and his wife.
+
+[] Lantus 24U qPM
+
+[] Glipizide 20mg BID
+
+[] ISS and FSBS qAC and qHS
+
+[] f/u A1c
+
+
+
+# Chronic Renal Insufficieny
+
+Recent baseline appears to be ~1.3-1.5; admitted with Cr of 1.24.  No active issues.
+
+[] Follow Cr
+
+
+
+# FEN
+
+[] Low Cholesterol, Low Saturated Fat, No Added Salt, Fluid Restriction of 2000cc
+
+
+
+# PROPHYLAXIS
+
+GI: Omeprazole
+
+DVT: Fragmin
+
+BOWEL: None
+
+
+
+# LINES/TUBES
+
+R PA line at 50cm.
+
+
+
+# CODE:
+
+Presumed FULL.
+
+
+
+
+
+__________________________________
+
+Carl Ison, MD
+
+Internal Medicine, PGY-2
+Pager #24779
+
+
+
+

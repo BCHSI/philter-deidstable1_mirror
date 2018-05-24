@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2092-08-30
+
+
+
+
+
+NAME:     Yager, Becky
+
+MRN:      0887181
+
+
+
+Becka returns for follow-up of painful neuropathy. She showed me a foot ulcer
+
+that she has had since early August. In fact, this was debrided on August 9 by Dr.
+
+Noyes and was found to contain Staph aureus sensitive to oxacillin and Bactrim.
+
+She was treated with Augmentin for 2 weeks with little improvement. She has not
+
+had any fever. She continues on her chronic pain medications and Percocet. 
+
+
+
+On exam, the second toe on the right foot is severely swollen and red. There is an
+
+ulcer which looks quite deep on the medial aspect of the toe. I had Dr. Drew
+
+take a look at her foot who agreed that she should be seen in the emergency room. 
+
+
+
+IMPRESSION:  Cellulitis/right toe ulcer - Persistent infection and unresponsiveness
+
+to 2-week course of Augmentin raise concern of underlying osteomyelitis. Rebecca
+
+was referred into the emergency room for further evaluation. She also was given a
+
+new prescription for her Percocet #100. I will see her in follow-up in 1 month. 
+
+
+
+Rowena Xanders, M.D.
+
+
+
+RX/mcbride/richardson
+
+
+
+cc:  Georgia Xing, M.D. 
+
+
+
+
+
+
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2092-08-30" TYPE="DATE" comment="" />
+<NAME id="P1" start="42" end="54" text="Yager, Becky" TYPE="PATIENT" comment="" />
+<ID id="P2" start="66" end="73" text="0887181" TYPE="MEDICALRECORD" comment="" />
+<NAME id="P3" start="77" end="82" text="Becka" TYPE="PATIENT" comment="" />
+<DATE id="P4" start="185" end="191" text="August" TYPE="DATE" comment="" />
+<DATE id="P5" start="223" end="231" text="August 9" TYPE="DATE" comment="" />
+<NAME id="P6" start="240" end="245" text="Noyes" TYPE="DOCTOR" comment="" />
+<NAME id="P7" start="637" end="641" text="Drew" TYPE="DOCTOR" comment="" />
+<NAME id="P8" start="887" end="894" text="Rebecca" TYPE="PATIENT" comment="" />
+<NAME id="P9" start="1063" end="1077" text="Rowena Xanders" TYPE="DOCTOR" comment="" />
+<NAME id="P10" start="1087" end="1089" text="RX" TYPE="DOCTOR" comment="" />
+<NAME id="P11" start="1090" end="1097" text="mcbride" TYPE="DOCTOR" comment="" />
+<NAME id="P12" start="1098" end="1108" text="richardson" TYPE="DOCTOR" comment="" />
+<NAME id="P13" start="1117" end="1129" text="Georgia Xing" TYPE="DOCTOR" comment="" />
+</TAGS>
+</deIdi2b2>

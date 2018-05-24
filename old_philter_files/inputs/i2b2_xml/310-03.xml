@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2074-12-21
+
+EDVISIT^98044905^WARE, VINCENT^12/21/74^VILLA, SCOTT
+
+CHIEF COMPLAINT:  Dyspnea on exertion.
+
+HISTORY OF PRESENT ILLNESS:  Mr. Ware is a 67-year-old man with
+
+a history of diabetes and myelodysplastic syndrome, status post
+
+stem cell transplant who presents to the Emergency Department
+
+with a 2 to 3 week history of increasing exertional dyspnea.  The
+
+patient denies chest pain, palpitations, or syncope but does
+
+complain of bilateral lower extremity edema times several weeks. 
+
+The patient has been worked up for the symptoms as an outpatient
+
+and placed on Lasix for the past 2 weeks and had an
+
+echocardiogram today, which was remarkable for atrial
+
+fibrillation.  The patient was sent to the Emergency Department
+
+for further evaluation.  Please see the written record for
+
+further details.
+
+PAST MEDICAL HISTORY:  Insulin-dependent diabetes,
+
+myelodysplastic syndrome, status post stem cell transplant.
+
+PAST SURGICAL HISTORY:  Basal cell resection.
+
+SOCIAL HISTORY:  The patient denies smoking, alcohol, or illicit
+
+drug use.
+
+MEDICATIONS:  Lasix, vitamin D, Lantus, and acyclovir.
+
+ALLERGIES:  No known drug allergies.
+
+PHYSICAL EXAMINATION:  I have examined the patient and agree with
+
+the physical as documented.  Of note, the patient is awake and
+
+alert, in no acute distress.  Vitals:  Temperature is 96.9, pulse
+
+is 100 to 128, respiratory rate of 18, blood pressure is 118/70,
+
+and oxygen saturation is 96%.  Lungs:  Clear bilaterally with no
+
+rales, rhonchi, or wheezing.  Cardiovascular exam:  Irregularly
+
+irregular rhythm.  Normal S1 and S2.  No murmurs.  Abdomen:  Soft
+
+with no tenderness, guarding, or rebound.  Extremity exam:  The
+
+patient has bilateral lower extremity 2+ pitting edema, left
+
+greater than right.  No calf tenderness.
+
+MEDICAL DECISION MAKING AND EMERGENCY DEPARTMENT COURSE:  Mr.
+
+Ware is a 67-year-old man with diabetes and a 2-week history of
+
+increasing dyspnea on exertion.  His chest x-ray did not
+
+demonstrate pulmonary edema, but was significant for bilateral
+
+pleural effusions.  The patient's EKG demonstrated a flutter with
+
+a ventricular rate of 121 with inferolateral T-wave inversions. 
+
+The patient was given IV and p.o. Cardizem with control of the
+
+ventricular rate.  At the time of this dictation, the patient's
+
+laboratory data are not available.  The plan is to admit the
+
+patient to the hospital for further management.
+
+PRIMARY DIAGNOSIS:  New onset AFib.
+
+DISPOSITION:  Admission.
+
+CONDITION UPON ADMISSION:  Good.
+
+______________________________
+
+VILLA, SCOTT M.D.
+
+D: 12/21/74
+
+T: 12/21/74
+
+Dictated By: VILLA, SCOTT
+
+eScription document:7-5753770 BFFocus
+
+ ******** Not reviewed by Attending Physician ********
+
+
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2074-12-21" TYPE="DATE" comment="" />
+<ID id="P1" start="36" end="44" text="98044905" TYPE="MEDICALRECORD" comment="" />
+<NAME id="P2" start="45" end="58" text="WARE, VINCENT" TYPE="PATIENT" comment="" />
+<DATE id="P3" start="59" end="67" text="12/21/74" TYPE="DATE" comment="" />
+<NAME id="P4" start="68" end="80" text="VILLA, SCOTT" TYPE="DOCTOR" comment="" />
+<NAME id="P5" start="155" end="159" text="Ware" TYPE="PATIENT" comment="" />
+<AGE id="P6" start="165" end="167" text="67" TYPE="AGE" comment="" />
+<NAME id="P7" start="1853" end="1857" text="Ware" TYPE="PATIENT" comment="" />
+<AGE id="P8" start="1863" end="1865" text="67" TYPE="AGE" comment="" />
+<NAME id="P9" start="2542" end="2554" text="VILLA, SCOTT" TYPE="DOCTOR" comment="" />
+<DATE id="P10" start="2564" end="2572" text="12/21/74" TYPE="DATE" comment="" />
+<DATE id="P11" start="2577" end="2585" text="12/21/74" TYPE="DATE" comment="" />
+<NAME id="P12" start="2600" end="2612" text="VILLA, SCOTT" TYPE="DOCTOR" comment="" />
+<ID id="P13" start="2634" end="2643" text="7-5753770" TYPE="IDNUM" comment="" />
+</TAGS>
+</deIdi2b2>

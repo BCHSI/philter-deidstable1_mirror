@@ -1,0 +1,98 @@
+
+
+
+Record date: 2069-10-07
+
+IMC Odem IM Attending Medicine Consult NotePt: Ulysses OgradyIMC # 0937884Date: 10/07/69  Time: 12:15pmPCP: Paul Jaramillo, MD  Pager # 52666 
+ 
+HPI: Asked to see patient by surgical team in consultation for is multiple medical issues. I have served as his PCP for eight years. Pt seen and examined. Case discussed in detail . This is a 62 y/o male with multiple medical issues last admitted in September for increased falls, found to have a small stroke in addition to his likely vascular dementia. Readmitted last week in the setting of Purulent L foot ulcer/ S/P debridement and later TMA. He has a long history well documented in the electronic medical record which is notable for poor compliance with medication and follow-up. At baseline, patient has declined further cardiology workup for his severe mitral regurgitation and cardiomyopathy, has declined treatment for his hyperlipidemia and takes his blood pressure medications with less than 25% compliance. At the time of his last admission, he was actually admitted to a nursing home with plans for long term placement.
+
+
+The patient's wound has currently not been closed. He has a vac dressing in place. He has been attending dialysis per schedule of nephrology. Current hospital course has been complicated by increased agitation and last evening, self limited substernal chest pain and dyspnea. This resolved spontaneously. He has also been intermittently refusing his medications and has been attempting to ambulate.
+
+
+This AM.  the patient actually denies ever experiencing chest pain. He also only recalls his foot pain with repeated prompting. He denies any pain, dyspnea
+
+
+ROS otherwise negative.,  
+Past Medical History:
+
+Neuropathy Nephropathy : cr. 2.6. 3.3 gm proteinuria. Currently on hemodialysisHyperlipidemia Hypertension Obesity Diabetes mellitus : type 2Noncompliance : poor complianceBasal cell carcinoma : carcinoma of skin left cheekLower extremity ulcer : DIABETIC FOOT ULCER. L FootAbscess : Rt shin 2062 Back: 11/64. S/P I&amp;DMitral valve insufficiency : severe, with cardiomyopathy and EF 36%Colonic polyps : tubulovillious adenoma 11/65.  
+ CAD: cath in 2066 showed occluded mid LAD with collaterals.  Stress test showed mid-distal anterior wall and apical ischemia.  - Cardiomyopathy with EF=36%, severe mitral regurg not on any SBE ppx
+
+
+
+Medications:
+As prescribed:Olanzapine 5mg BID
+SQ Hepatin
+Toprol XL, 50mg
+Lisinopril 40mg po qd
+Vancomycin: dosed at dialysis
+RISS
+Oxycodone prn
+Simvastatin
+Levofloxacin
+Fluoxetine
+Nephocaps
+Calcium acetate.
+
+
+Allergies: NKDA
+
+Social History/FH per Surgical notes. Pt is a nonsmoker. No ETOH or Drug use hx. Formerly lived with daughter. Emigrated to tajikistan many years prior but still primarily speaks Chad.
+Examination:
+Modestly confused but not agitated. Does recognize PCP. Does not know date or time. Does not clearly know why he is hospitalized.
+
+
+VITALS:  99.0   hr 80-101 R   BP  150/76 .GEN&#8217;L    NAD, AO X 2 (&#8220;Superior Memorial Hospital)HEENT   MMM, no scleral icterus, no pale conjunctiva. No roth spots. NECK     supple, no thyromegaly, no LAD, no carotid bruits. + 10cm JVOP Heart:     RRR, no m/r/gLUNG:  Bibasilar crackles. No wheezeABD:      Soft, non-tender, obese, NABS. No HSM. No masses, no rebound. EXT:     RLE in Vac dressing. Wound open without surrounding erythema.NEURO: AO x 3; alert; CN II-XII grossly intact; Motor: 5/5 B UE/LE; sensation dinished to light tough, proprioception. Full neurologic eval per neurology assessment  Data: Date/Time         NA             K              CL             CO2            10/07/2069        136            4.4            100            24.5           10/07/2069        138            4.7            100            26.4           10/06/2069        136            4.7            99 (L)         26.6           10/06/2069        136            4.2            98 (L)         
+
+
+Date/Time         BUN            CRE            EGFR           GLU            10/07/2069        35 (H)         6.64 (H)       9 [1]          124 (H)        10/07/2069        35 (H)         6.38 (H)       9 [2]          106            10/06/2069        34 (H)         6.33 (H)       10 [3]         141 (H)        
+
+
+Date/Time         ANION          10/07/2069        12             10/07/2069        12             10/06/2069        10             
+Date/Time         CA             PHOS           MG             ALB            10/07/2069        8.5            5.0 (H)        2.0            3.0 (L)        10/07/2069        8.5            4.8 (H)        2.0                           10/06/2069        8.7                                                         10/06/2069        8.4 (L)        4.0            2.0            3.4            
+Date/Time         25 OH-VITD     10/02/2069        23 (L)[13]     Date/Time         CK             CK-MB          CKMBRI         TROP-T         10/07/2069        25 (L)         2.7            SEE DETAIL[14] 0.07           10/06/2069        32 (L)         2.8            SEE DETAIL[15] 0.08           Date/Time         FE             TIBC           FER            10/02/2069        23 (L)         156 (L)        501 (H)        Date/Time         PTH            10/02/2069        66 (H)         
+Date/Time         WBC            RBC            HGB            HCT            10/07/2069        13.9 (H)       3.42 (L)       9.7 (L)        29.4 (L)       10/07/2069        16.4 (H)       3.34 (L)       9.6 (L)        29.2 (L)       10/06/2069        14.6 (H)       3.58 (L)       10.0 (L)       31.2 (L)       
+Date/Time         MCV            MCH            MCHC           PLT            10/07/2069        86             28.2           32.9           372            10/07/2069        88             28.8           32.9           372            10/06/2069        87             28.0           32.1           
+
+
+
+
+Date/Time         RETIC          10/02/2069        1.6            Date/Time         PT             PT-INR         PTT            10/07/2069        17.6 (H)       1.6            30.6           10/01/2069        17.3 (H)       1.6            29.2 [21]      Date/Time         HBV-SAB        HBV-SAG        HCVAB          10/02/2069        EQUIVOCAL      Non-Reactive   Non-Reactive   Date/Time         VANC           TR-VANC        10/07/2069        13.2 [22]                     10/04/2069        38.6 [23]                     
+
+
+  Specimen Type:     BLOOD CULTURE
+    Few POLYS, Few MONONUCLEAR CELLS, Abundant GRAM NEGATIVE RODS, Rare LARGE GRAM    POSITIVE RODS  Wound Culture - Final    Reported: 06-Oct-69 14:55    Specimen received from OR    Abundant KLEBSIELLA PNEUMONIAE      RAPID MIC METHOD      Antibiotic                      Interpretation      ----------------------------------------------      Amikacin                        Susceptible         Ampicillin                      Resistant           Aztreonam                       Susceptible         Cefazolin                       Susceptible         Cefepime                        Susceptible         Ceftriaxone                     Susceptible         Ciprofloxacin                   Susceptible         Gentamicin                      Susceptible         Levofloxacin                    Susceptible         Piperacillin                    Resistant           Trimethoprim/Sulfamethoxazole   Susceptible       Abundant PSEUDOMONAS AERUGINOSA      DISK METHOD      Antibiotic                Interpretation      ----------------------------------------      Aztreonam                 Susceptible         Cefepime                  Susceptible         Gentamicin                Susceptible         Levofloxacin              Susceptible         Piperacillin/Tazobactam   Susceptible         Ticarcillin               Susceptible         Tobramycin                Susceptible       Abundant MORGANELLA MORGANII SUBSPECIES MORGANII      RAPID MIC METHOD      Antibiotic                      Interpretation      ----------------------------------------------      Amikacin                        Susceptible         Ampicillin                      Resistant           Aztreonam                       Susceptible         Cefazolin                       Resistant           Cefepime                        Susceptible         Ceftriaxone                     Susceptible         Ciprofloxacin                   Susceptible         Gentamicin                      Susceptible         Levofloxacin                    Susceptible         Piperacillin                    Susceptible         Trimethoprim/Sulfamethoxazole   Susceptible     Anaerobic Culture - Preliminary    Reported: 06-Oct-69 11:48    Specimen received from OR    NO ANAEROBES ISOLATED SO FAR 
+
+
+
+
+ 
+EKG: NSR @ 90, incomplete RBBB, L anterior fascicular block; QTC 495 ms.
+
+
+Assessment/Plan
+ In summary,62 y/o male with multiple medical issues as outlined in this and many other notes. Presenting with necrotic foot infection, polymicrobial. S/P Rt TMA. Mildly delerious and certainly off from a baseline that was tenuous to start.
+
+
+By issue:
+
+
+1) CAD: The patient does have CAD, MR and cardiomyopathy that are really not amenable to intervention, given patient noncompliance. The best goal at present is going to be continued medical management. If BP allows, could increase toprol XL, although I suspect that this will not be an option. In addition, would aim to keep even at dialysis.
+
+
+Certainly, cycle CKs and troponin and follow sx. I will defer to Dr. Shah, but I don't see clear benefit for cardiac cath, especially as we are not going to proceed to valve repair at this juncture.  If he were to become more compliant, this might be another consideration and as he is now a CT resident, perhaps this will be a future consideration.
+
+
+2) Delirium: He does have a very tenuous baseline and has significant vascular dementia to start. He is off of this baseline, likely reflecting sundowning, medications and underlying metabolic processes. Please d/c medications that might be contributing to sx. Fluoxetine can be held for now as it was only started 3 weeks prior. Might hold ranitidine as well.  Haldol is d/cd in the setting of his prolonged QTc. Currently on olanzapine. Would continue to follow QTc closely and would d/c this med as well is still prolonged. Please send urine culture and surveillance blood cultures.
+
+
+3) Infection: Appreciate excellent surgical management of patient's wound. Levofloxacin has been d/cd  2nd to concerns for altered mental status. All bacteria are sensitive to aztreonam so perhaps this would be a reasonable alternative. Would seek ID input to the end. Wound care per vascular with plans for D/C when stable and return for closure in the future. 
+4) ESRD: Patient HAD dialysis today . Recs per nephrology
+3) DM: HgA1c was at target. Please cover as needed with RISS for now. 5) Competency: certainly not able to make informed decisions at this time. Please confirm that his daughter is his HCP. Would try to use a Chadian interpreter and not daughters if at all possible.
+ Thanks,   
+____________________________________Paul Anthony Jaramillo, M.D.Pager # 52666.Sheila Strong to cover for Thursday and Friday
+
+
+

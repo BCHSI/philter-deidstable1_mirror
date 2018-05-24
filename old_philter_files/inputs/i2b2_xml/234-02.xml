@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2074-12-09
+
+Francesca is a 72 y/o woman here for f/u abnormal lab tests done 11/21.  Feels ok.
+
+Problems
+
+DM 
+
+HTN 
+
+Hysterectomy 
+
+Coronary artery disease : CABG-9/74 
+
+
+
+
+
+Medications
+
+Colace (DOCUSATE SODIUM) 100 MG (100MG TABLET take 1) PO BID 
+
+Nystatin SUSPENSION (MOUTHWASH) 5 ML SWISH & SPIT QID 
+
+Lisinopril 40 MG PO QD 
+
+Lantus (INSULIN GLARGINE) 30 UNITS SC QHS 
+
+Lipitor (ATORVASTATIN) 10 MG (10MG TABLET take 1) PO QHS 
+
+Protonix (PANTOPRAZOLE) 40 MG (40MG TABLET DR take 1) PO QD 
+
+Amiodarone 400 MG (200MG TABLET take 2) PO BID 
+
+Furosemide 80 MG (80MG TABLET take 1) PO BID 
+
+Ntg 1/150 (NITROGLYCERIN 1/150 (0.4 MG)) 1 TAB SL x1 
+
+Plavix (CLOPIDOGREL) 75 MG (75MG TABLET take 1) PO QD 
+
+Mg OXIDE (MAGNESIUM OXIDE ) 800 MG (400MG TABLET take 2) PO BID 
+
+Toprol XL (METOPROLOL SUCCINATE EXTENDED RELEASE) 100MG TAB.SR 24H PO QD 
+
+Asa (ACETYLSALICYLIC ACID) 81MG TABLET take 1 Tablet(s) PO QD 
+
+
+
+
+
+Allergies
+
+NKA 
+
+
+
+Takes meds. Home glu80-300. The more she eats the lower her blood sugar.  
+
+Endocrine: No polydipsia, polyuria, polyphagia, weight change, sweats,heat intolerance.
+
+Cor- No chest pain.  No SOB.  No  palpitations.  No lighthead.  No PND.  No orthopnea.  No claudication.  No edema.  
+
+Pulm- No cough.  No wheeze. No SOB.
+
+GI- No nausea.  No  vomitting. No  dyspepsia.  No  reflux.  No abdo pain.  No diarrhea.  No constipation.  No melena.  No BRBPR.
+
+GU- no hematuria; no dysuria;  no frequency; no urgency; no incontinence. no vaginal dc or itch. No dyspareunia. No abnormal bleeding. 
+
+Constitutional: No weight loss.  No fevers.  NO chills.  NO  night sweats.  No  fatigue.  NO pain.
+
+Going to Paraguay 12/13 for 3 months. 
+
+Vital Signs
+
+BP 126/78, P 68, Wt 133 lb
+
+WD,WN,NAD.
+
+M&T- lips and gums unremarkable. Good dentition. Moist; no erythema; no exudate; no lesions
+
+Neck- supple.  No JVD.  No bruit.  No LAN.  No thyromegaly
+
+Pulm-  NO accessory muscle use. Percussion- normal.  Palpation-normal. Auscultation-clear.
+
+Cor- reg rhyhm. S1S2 normal. No gallop.  No rub.  NO murmer.
+
+Abdo- normal BS;soft with no HSM.  No mass.  No tenderness
+
+Ext- skin intact. DP-trace. NO edema. Monofilament intact.
+
+
+
+ASS: DM.CAD. AbnormalCMP.
+
+
+
+P- Repeat CMP. Information given for her MD in DR. f/u when she returns in 3-4 months. 
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2074-12-09" TYPE="DATE" comment="" />
+<NAME id="P1" start="28" end="37" text="Francesca" TYPE="PATIENT" comment="" />
+<AGE id="P2" start="43" end="45" text="72" TYPE="AGE" comment="" />
+<DATE id="P3" start="93" end="98" text="11/21" TYPE="DATE" comment="" />
+<DATE id="P4" start="179" end="183" text="9/74" TYPE="DATE" comment="" />
+<LOCATION id="P5" start="1644" end="1652" text="Paraguay" TYPE="COUNTRY" comment="" />
+<DATE id="P6" start="1653" end="1658" text="12/13" TYPE="DATE" comment="" />
+</TAGS>
+</deIdi2b2>

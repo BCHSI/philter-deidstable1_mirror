@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2146-02-20
+
+
+
+Olga comes in for f/u, accomapanied by her daughter. She was admitted to MEDIQUIK in 12/45 for inability to walk secondary to R leg weakness; transferred to Parsons Hospital in Vernal on 1/7 till1/29. She loved it there. She had EMG while there which revealed R femoral neuropaty, with 6 mo rpt test recommended. She wears a brace most of the time, and walks with aid of walker. She was with her daughter initially upon d/c, and now at her own home alone for past 10 days. MAnaging okay. Received PT few times a week. VNA d/c'd. Wants to be able to drive again.
+Has some mobility in R leg, but not much.
+Notes swelling L dorsum foot.
+Meds were reviewed today. She ran out of lisinopril and cozaar (started in rehab) couple wks ago. She does not take HCTZ daily secondary to urinary frequency. Her metformin was d/c'd, secondary to low fsbs reads in am in 30's.
+Her zocor was stopped in hospital.
+She needs refills today.
+She has remained off cigarettes!!
+
+
+Problems
+Hypertension 
+Diabetes mellitus type 2 
+Hyperlipidemia 
+Chronic obstructive pulmonary disease 
+Depression 
+Degenerative joint disease : s/p R TKR 11/44 
+Transient ischemic attack 
+Insomnia 
+
+
+
+
+Allergies 
+NKA 
+
+
+
+Medications 
+Advair Diskus 500/50 (FLUTICASONE Propionate/salmeterol 500/50) 1 PUFF INH BID 
+ALPRAZOLAM 0.25 MG (0.25MG TABLET take 1) PO QD 
+GABAPENTIN 600 MG (600MG TABLET take 1) PO BID 
+LISINOPRIL 60 MG (40MG TABLET take 1) PO QD 
+Lopressor (METOPROLOL Tartrate) 50 MG (50MG TABLET take 1) PO BID x 30 days 
+PAROXETINE 40 MG (40MG TABLET take 1) PO QD x 30 days 
+Plavix (CLOPIDOGREL) 75 MG (75MG TABLET take 1) PO QD 
+TRAZODONE 150 MG (150MG TABLET take 1) PO QHS 
+Verapamil Sustained Release 120 MG (120MG TABLET SA take 1) PO QD x 30 days 
+HCTZ 25mg qd
+
+
+PE:
+Vital Signs
+BLOOD PRESSURE 130/80 
+PULSE 68 
+RESPIRATORY RATE 17 
+TEMPERATURE 97.0 F 
+Pt in NAD, appears well
+Neck - no bruits
+Chest - clear without wheezes
+Cor -RRR, nlS1S2
+Ext - trace edema LL's
+
+
+A/P:
+1. HTN - stable on metoprolol and verapamil alone.
+d/c HCTZ.
+d/c cozaar.
+2. DM - check HgA1c; off meds.
+3. Elev CHol - check lipids today. Resume zocor.
+4. Leg edema  - use lasix 20mg prn.
+5. R femoral neuropathy - cont PT.
+6. COPD - stable.
+6. f/u 2 months.
+
+
+J. Orellana MD
+
+
+
+
+ 
+
+
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2146-02-20" TYPE="DATE" comment="" />
+<NAME id="P1" start="30" end="34" text="Olga" TYPE="PATIENT" comment="" />
+<LOCATION id="P2" start="103" end="111" text="MEDIQUIK" TYPE="HOSPITAL" comment="" />
+<DATE id="P3" start="115" end="120" text="12/45" TYPE="DATE" comment="" />
+<LOCATION id="P4" start="187" end="203" text="Parsons Hospital" TYPE="HOSPITAL" comment="" />
+<LOCATION id="P5" start="207" end="213" text="Vernal" TYPE="CITY" comment="" />
+<DATE id="P6" start="217" end="220" text="1/7" TYPE="DATE" comment="" />
+<DATE id="P7" start="225" end="229" text="1/29" TYPE="DATE" comment="" />
+<DATE id="P8" start="1142" end="1147" text="11/44" TYPE="DATE" comment="" />
+<NAME id="P9" start="2239" end="2250" text="J. Orellana" TYPE="DOCTOR" comment="" />
+</TAGS>
+</deIdi2b2>

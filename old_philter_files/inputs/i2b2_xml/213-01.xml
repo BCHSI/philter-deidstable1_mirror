@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2065-07-29
+
+                     GREEN EMERGENCY DEPT VISIT
+
+ 
+
+WAGNER,LONNIE   097-87-37-2                  VISIT DATE: 07/29/65
+
+The patient was interviewed and examined by me and Dr. Chase.  
+
+Please see the note for full details.
+
+HISTORY OF PRESENTING COMPLAINT:  This patient is a very pleasant 
+
+gentleman accompanied by his wife who gives most of the history 
+
+complaining of bleeding in the right groin.  He is status post 
+
+catheterization and stent approximately two weeks.  He was recently 
+
+discharged from rehabilitation and at home his wife found the right 
+
+groin to be soaked in blood.  The patient's wife also noticed some 
+
+swelling at the site.  He has had no fevers and no chills.  He has 
+
+recently been diagnosed with myelodysplastic syndrome with white 
+
+counts in the 30's.
+
+REVIEW OF SYSTEMS:  Review of systems is notable for bleeding only. 
+
+He denies any abdominal pain.  He denies any fever or chills.  No 
+
+neurologic complaints.  No distal neurovascular complaints either.
+
+PAST MEDICAL HISTORY:  The patient's past medical history is 
+
+notable for diabetes, hypertension as well as cerebrovascular 
+
+accident, gastrointestinal bleed and myelodysplasia.  Surgeries and 
+
+procedures are as above.
+
+MEDICATIONS:  The patient's medications include Plavix and aspirin.
+
+ALLERGIES:  The patient has no allergies. 
+
+SOCIAL HISTORY AND FAMILY HISTORY:  No current tobacco or ethyl 
+
+alcohol.  He lives at home with his wife.  He has VNA services 
+
+although they are not coming tomorrow.
+
+PHYSICAL EXAMINATION:  I agree with the physical examination as 
+
+documented.  GENERAL:  The patient is an awake, alert, pleasant 
+
+male in no apparent distress.  VITAL SIGNS:  Temperature 96, pulse 
+
+56, respiratory rate 20, blood pressure 97/49, oxygen saturation 
+
+96%.  EXTREMITIES:  The right groin shows a slightly tender area 
+
+with a little bit of ooze but dried blood.  No active bleeding 
+
+right now.  Distally he has popliteal pulses.  He has bilateral 
+
+dopplerable dorsalis pedis and posterior tibial pulses.  He has 
+
+full range of motion and denies any numbness.  
+
+LABORATORY EVALUATION:  Basic laboratory studies here show a 
+
+hematocrit of 28 and a white count of 43.  His white count is up 
+
+from a baseline of about 33.  His baseline hematocrit is 30.  His 
+
+platelets are 291.  His right groin ultrasound is negative for 
+
+pseudoaneurysm or AV fistula.
+
+THERAPY RENDERED/COURSE IN ED:  The patient is being sent home.  We 
+
+are arranging VNA to follow up tomorrow.
+
+CONSULTATIONS (including PCP):  The patient's primary care 
+
+physician was called for coverage for Dr. Duong.
+
+FINAL DIAGNOSIS:  Bleeding right groin after catheterization, 
+
+resolved.
+
+DISPOSITION (including condition upon discharge):  The patient was 
+
+discharged in stable condition.
+
+___________________________________                    NU604/29497 
+
+AMANDA A. VAUGHT, M.D.     AV55                      D:07/29/65 
+
+                                                       T:07/29/65 
+
+Dictated by:  AMANDA A. VAUGHT, M.D.     AV55 
+
+ ******** Not reviewed by Attending Physician ********
+
+
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2065-07-29" TYPE="DATE" comment="" />
+<LOCATION id="P1" start="49" end="54" text="GREEN" TYPE="HOSPITAL" comment="" />
+<NAME id="P2" start="80" end="93" text="WAGNER,LONNIE" TYPE="PATIENT" comment="" />
+<ID id="P3" start="96" end="107" text="097-87-37-2" TYPE="MEDICALRECORD" comment="" />
+<DATE id="P4" start="137" end="145" text="07/29/65" TYPE="DATE" comment="" />
+<NAME id="P5" start="202" end="207" text="Chase" TYPE="DOCTOR" comment="" />
+<NAME id="P6" start="2619" end="2624" text="Duong" TYPE="DOCTOR" comment="" />
+<ID id="P7" start="2859" end="2870" text="NU604/29497" TYPE="IDNUM" comment="" />
+<NAME id="P8" start="2873" end="2889" text="AMANDA A. VAUGHT" TYPE="DOCTOR" comment="" />
+<NAME id="P9" start="2900" end="2904" text="AV55" TYPE="USERNAME" comment="" />
+<DATE id="P10" start="2928" end="2936" text="07/29/65" TYPE="DATE" comment="" />
+<DATE id="P11" start="2996" end="3004" text="07/29/65" TYPE="DATE" comment="" />
+<NAME id="P12" start="3021" end="3037" text="AMANDA A. VAUGHT" TYPE="DOCTOR" comment="" />
+<NAME id="P13" start="3048" end="3052" text="AV55" TYPE="USERNAME" comment="" />
+</TAGS>
+</deIdi2b2>

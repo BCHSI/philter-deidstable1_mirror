@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2064-10-05
+
+                     DONELLSON EMERGENCY DEPT VISIT
+
+ 
+
+PICKETT,SHILPA   129-53-47-3                  VISIT DATE: 10/05/64
+
+Please see the resident's handwritten note for additional complete 
+
+details.  I also saw the patient to supervise the resident's care. 
+
+PRESENTING COMPLAINT: Chest pain. 
+
+HISTORY OF PRESENTING COMPLAINT: A 73-year-old woman with known 
+
+coronary disease with cardiac catheterization and three-vessel 
+
+disease in 2062, and a positive exercise tolerance test in 2063. 
+
+She was with relatively stable symptoms until early this morning 
+
+when she had increase in chest tightness and dyspnea on exertion. 
+
+She has actually been stuttering on and off for 18-24 hours, and 
+
+she came to the emergency department in the earl morning hours for 
+
+evaluation of this problem.  She is presently pain free after 
+
+having received nitrates in the emergency department. 
+
+SOCIAL HISTORY AND FAMILY HISTORY: Noted on handwritten emergency 
+
+department record. 
+
+PHYSICAL EXAMINATION: GENERAL: Patient is presently comfortable in 
+
+no respiratory distress.  HEART: No murmurs or gallops.  Pulses are 
+
+equal and symmetric.  LUNGS: Clear to auscultation bilaterally. 
+
+LABORATORY EVALUATION: Electrocardiogram shows left bundle branch 
+
+pattern which is old.  Her cardiac markers are positive for 
+
+troponin I of 0.32. 
+
+FINAL DIAGNOSIS: Acute coronary insufficiency. 
+
+DISPOSITION (including condition upon discharge): Patient is 
+
+presently comfortable and will be admitted to cardiology service. 
+
+___________________________________                    LR676/41602 
+
+ADAM OLDHAM, M.D.   AO66                             D:10/05/64 
+
+                                                       T:10/05/64 
+
+Dictated by:  ADAM OLDHAM, M.D.   AO66 
+
+ ******** Not reviewed by Attending Physician ********
+
+
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2064-10-05" TYPE="DATE" comment="" />
+<LOCATION id="P1" start="49" end="58" text="DONELLSON" TYPE="HOSPITAL" comment="" />
+<NAME id="P2" start="84" end="98" text="PICKETT,SHILPA" TYPE="PATIENT" comment="" />
+<ID id="P3" start="101" end="112" text="129-53-47-3" TYPE="MEDICALRECORD" comment="" />
+<DATE id="P4" start="142" end="150" text="10/05/64" TYPE="DATE" comment="" />
+<AGE id="P5" start="361" end="363" text="73" TYPE="AGE" comment="" />
+<DATE id="P6" start="468" end="472" text="2062" TYPE="DATE" comment="" />
+<DATE id="P7" start="516" end="520" text="2063" TYPE="DATE" comment="" />
+<ID id="P8" start="1596" end="1607" text="LR676/41602" TYPE="IDNUM" comment="" />
+<NAME id="P9" start="1610" end="1621" text="ADAM OLDHAM" TYPE="DOCTOR" comment="" />
+<NAME id="P10" start="1630" end="1634" text="AO66" TYPE="USERNAME" comment="" />
+<DATE id="P11" start="1665" end="1673" text="10/05/64" TYPE="DATE" comment="" />
+<DATE id="P12" start="1733" end="1741" text="10/05/64" TYPE="DATE" comment="" />
+<NAME id="P13" start="1758" end="1769" text="ADAM OLDHAM" TYPE="DOCTOR" comment="" />
+<NAME id="P14" start="1778" end="1782" text="AO66" TYPE="USERNAME" comment="" />
+</TAGS>
+</deIdi2b2>

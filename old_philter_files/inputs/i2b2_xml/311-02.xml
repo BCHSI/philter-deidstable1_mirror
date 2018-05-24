@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2086-06-29
+
+EDVISIT^43294739^Finney, Indiana^06/29/86^GAY, G. VERNAL
+
+HISTORY OF PRESENT ILLNESS:  This patient is a 48-year-old female
+
+who presents to Zucker Hillside Hospital Department of
+
+Emergency Medicine with complaints of chest pain.  She was
+
+admitted to ED Observation Unit, after having no acute findings
+
+on EKG and a normal set of cardiac enzymes.  Awake, alert, and in
+
+no acute distress.  Vital signs in the ED this a.m. were grossly
+
+within normal limits.  No chest pain this a.m.
+
+PHYSICAL EXAMINATION:  HEENT:  Normocephalic, atraumatic.  Pupils
+
+equal, round, and reactive.  Fundi benign.  Neck:  Supple.  Chest
+
+is clear to auscultation and percussion.  No rales, wheezes, or
+
+rhonchi.  Heart notes a normal S1, S2, no S3, S4, no murmur. 
+
+Abdomen is benign, soft, nontender, no masses, guarding, rebound,
+
+or organomegaly.  Extremities:  Grossly within normal limits. 
+
+Neurologic:  Awake, alert, able to follow commands.  Negative
+
+Babinski.
+
+She had a second set of cardiac enzymes done in the observation
+
+portion of the ED, which were negative.
+
+PLAN:  Do ETT this a.m.  If negative, to home to be followed by
+
+her PMD, to return to the Emergency Department at Zucker Hillside Hospital if her problems persist or worsen.
+
+______________________________
+
+GAY, G. VERNAL M.D.
+
+D: 06/30/86
+
+T: 06/30/86
+
+Dictated By: GAY, G. VERNAL
+
+eScription document:3-9073761 BFFocus
+
+******** Not reviewed by Attending Physician ********
+
+
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2086-06-29" TYPE="DATE" comment="" />
+<ID id="P1" start="36" end="44" text="43294739" TYPE="MEDICALRECORD" comment="" />
+<NAME id="P2" start="45" end="60" text="Finney, Indiana" TYPE="PATIENT" comment="" />
+<DATE id="P3" start="61" end="69" text="06/29/86" TYPE="DATE" comment="" />
+<NAME id="P4" start="70" end="84" text="GAY, G. VERNAL" TYPE="DOCTOR" comment="" />
+<AGE id="P5" start="133" end="135" text="48" TYPE="AGE" comment="" />
+<LOCATION id="P6" start="169" end="193" text="Zucker Hillside Hospital" TYPE="HOSPITAL" comment="" />
+<LOCATION id="P7" start="1203" end="1227" text="Zucker Hillside Hospital" TYPE="HOSPITAL" comment="" />
+<NAME id="P8" start="1296" end="1310" text="GAY, G. VERNAL" TYPE="DOCTOR" comment="" />
+<DATE id="P9" start="1320" end="1328" text="06/30/86" TYPE="DATE" comment="" />
+<DATE id="P10" start="1333" end="1341" text="06/30/86" TYPE="DATE" comment="" />
+<NAME id="P11" start="1356" end="1370" text="GAY, G. VERNAL" TYPE="DOCTOR" comment="" />
+<ID id="P12" start="1392" end="1401" text="3-9073761" TYPE="IDNUM" comment="" />
+</TAGS>
+</deIdi2b2>

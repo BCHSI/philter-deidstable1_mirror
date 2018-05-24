@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2092-12-27
+
+
+
+
+
+NAME:     Yager, Rebecca 
+
+MRN:      0887181 
+
+
+
+FOLLOW-UP VISIT  
+
+
+
+Patient returns for follow-up of painful neuropathy.  
+
+
+
+Since last seen, her Dilantin level came back at 18.8.  She feels her pain has been
+
+under relatively good control.  She has had a few falls since she was last seen all
+
+due to losing her balance or tripping.  No lightheadedness or vertigo preceding her
+
+falls.  She is trying to be more careful to avoid future falls by watching closely
+
+where she is walking.  
+
+
+
+She has no active infection at present.  She is scheduled for follow-up EMG nerve
+
+conduction studies in January.  
+
+
+
+ON EXAM:  She is her usual pleasant self.  Examination of the feet shows
+
+hammertoes, numerous bunions, some reddened calluses but no ulcers or open
+
+lesions.  There is vibratory loss to the ankles and absent ankle jerks bilaterally.  
+
+
+
+IMPRESSION:  Painful neuropathy with 10-year history of progressive symptoms. 
+
+Numerous previous work-ups for reversible causes of neuropathy have been
+
+negative.  I would like to have her be evaluated by Dr. Phyllis Brewer of
+
+Internal Medicine to see if she has any other ideas as to any additional work-up
+
+or treatment.  Of note, previously had a DENA panel for sensory neuropathy
+
+which was negative.  Rebecca was given a new prescription for Percocet #100.  I will
+
+see her in follow-up in two months. 
+
+
+
+
+
+
+
+Rowena Xanders, M. D. 
+
+RX/mcbride/xiang
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2092-12-27" TYPE="DATE" comment="" />
+<NAME id="P1" start="42" end="56" text="Yager, Rebecca" TYPE="PATIENT" comment="" />
+<ID id="P2" start="69" end="76" text="0887181" TYPE="MEDICALRECORD" comment="" />
+<DATE id="P3" start="631" end="638" text="January" TYPE="DATE" comment="" />
+<NAME id="P4" start="1094" end="1108" text="Phyllis Brewer" TYPE="DOCTOR" comment="" />
+<NAME id="P6" start="1292" end="1299" text="Rebecca" TYPE="PATIENT" comment="" />
+<NAME id="P7" start="1401" end="1415" text="Rowena Xanders" TYPE="DOCTOR" comment="" />
+<NAME id="P8" start="1425" end="1427" text="RX" TYPE="DOCTOR" comment="" />
+<NAME id="P9" start="1428" end="1435" text="mcbride" TYPE="DOCTOR" comment="" />
+<NAME id="P10" start="1436" end="1441" text="xiang" TYPE="DOCTOR" comment="" />
+</TAGS>
+</deIdi2b2>

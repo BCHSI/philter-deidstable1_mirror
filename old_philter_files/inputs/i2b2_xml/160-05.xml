@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2073-10-16
+
+EDVISIT^25816492^Uher, Olga^10/16/73^BALL, MILDRED
+
+The patient was seen in conjunction with resident Dr. Sharp. 
+
+The resident's note reviewed.  The patient was seen and examined
+
+by me.
+
+HISTORY OF PRESENT ILLNESS:  Briefly, this is a 62-year-old woman
+
+who has had decrease in mental status and activity since 3 days
+
+ago.  She has had some fevers off and on.  Temperature ranging
+
+between 100 and 101.3.  Her blood sugar has been 300-500.  She
+
+reports a decrease in energy.  She has end-stage renal disease on
+
+hemodialysis Sunday, Tuesday, and Thursday.  She had her dialysis
+
+today but has much less energy than usual.  She has a cough, no
+
+nausea, vomiting, or diarrhea, has constipation, takes lactulose,
+
+and has a normal bowel movement.  Last BM was Thursday evening. 
+
+This is a normal spacing of her usual bowel movements.  According
+
+to her visiting nurse, the urine looks dark.  Blood pressure is
+
+running in the low 100 in the last month.  Change in mental
+
+status for 5 days means that she is not as talkative as usually
+
+is.
+
+PAST MEDICAL HISTORY, SOCIAL HISTORY, AND REVIEW OF SYSTEMS: 
+
+Reviewed, confirmed, and notable for history of high cholesterol,
+
+arthritis, insulin-dependent diabetes, retinopathy, renal
+
+failure, foot ulcers, and hypothyroidism.
+
+SOCIAL HISTORY:  She was in an acute care facility as a nurse
+
+coming regularly.  The patient arrives to the hospital with a
+
+DNR/DNH order, which near the end of her visit once the family
+
+arrived, we got the information that this order has been and
+
+rescinded by the family in the past.  This is noted nowhere in
+
+her chart.
+
+REVIEW OF SYSTEMS:  Negative except as noted above.
+
+MEDICATIONS:  The patient takes methylphenidate, Ambien,
+
+Prilosec, Ultram, verapamil, PhosLo, Coumadin, Renax, Colace, and
+
+olanzapine.
+
+ALLERGIES:  She is allergic to NSAIDs.
+
+PHYSICAL EXAMINATION:  She has a fever of 100.3, pulse of 95,
+
+respirations 24, blood pressure 85/53, and saturating 90% on room
+
+air and 100% on 3 liters.  She has facial asymmetry which nurse
+
+believes is baseline.  Neck is supple and nontender.  She has no
+
+elevated JVP.  Respirations are bilateral basilar crackles with
+
+full inspiration effort.  Cardiovascular exam is regular rate and
+
+rhythm, tachycardic.  Abdomen exam is soft, nontender, no
+
+distention, and no organomegaly.  Skin is warm, dry, and intact. 
+
+No lesions or rashes.  She does have contractures on both lower
+
+extremities.  Neurologically, she is not oriented at all and
+
+cranial nerves II through XII are grossly intact.  There is no
+
+motor or sensory deficits.
+
+LABORATORY DATA:  Reveal white count of 6.8 and hematocrit of
+
+28.8.  Chemistry shows sodium 146, potassium 4.4, chloride 105,
+
+bicarbonate 29, BUN 36, creatinine 3.5, glucose 263, CK 281,
+
+CK-MB 7.5, and troponin 142.  Platelets is 17.6.  PNI 37.7 and
+
+INR 1.4.
+
+EKG, what is concerning is she has ST elevations approximately 2
+
+mm in leads II, III, and F, and V3 through V5.  There is no
+
+R-wave progression.  Chest x-ray showed mild pulmonary edema.
+
+ ******** Not reviewed by Attending Physician ********
+
+PRIMARY DIAGNOSIS:  Fever.
+
+SECONDARY DIAGNOSIS:  Possible sepsis.
+
+DISPOSITION:  She is admitted to the hospital having received
+
+ceftriaxone, vancomycin, and levofloxacin in the Emergency
+
+Department empirically.  She is admitted to the ward in stable
+
+condition.
+
+______________________________
+
+BALL, MILDRED M.D.
+
+D: 10/17/73
+
+T: 10/17/73
+
+Dictated By: BALL, MILDRED
+
+eScription document:8-2575360 BFFocus
+
+
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2073-10-16" TYPE="DATE" comment="" />
+<ID id="P1" start="36" end="44" text="25816492" TYPE="MEDICALRECORD" comment="" />
+<NAME id="P2" start="45" end="55" text="Uher, Olga" TYPE="PATIENT" comment="" />
+<DATE id="P3" start="56" end="64" text="10/16/73" TYPE="DATE" comment="" />
+<NAME id="P4" start="65" end="78" text="BALL, MILDRED" TYPE="DOCTOR" comment="" />
+<NAME id="P5" start="134" end="139" text="Sharp" TYPE="DOCTOR" comment="" />
+<AGE id="P6" start="265" end="267" text="62" TYPE="AGE" comment="" />
+<DATE id="P7" start="557" end="563" text="Sunday" TYPE="DATE" comment="" />
+<DATE id="P8" start="565" end="572" text="Tuesday" TYPE="DATE" comment="" />
+<DATE id="P9" start="578" end="586" text="Thursday" TYPE="DATE" comment="" />
+<DATE id="P10" start="789" end="797" text="Thursday" TYPE="DATE" comment="" />
+<NAME id="P11" start="3410" end="3423" text="BALL, MILDRED" TYPE="DOCTOR" comment="" />
+<DATE id="P12" start="3433" end="3441" text="10/17/73" TYPE="DATE" comment="" />
+<DATE id="P13" start="3446" end="3454" text="10/17/73" TYPE="DATE" comment="" />
+<NAME id="P14" start="3469" end="3482" text="BALL, MILDRED" TYPE="DOCTOR" comment="" />
+<ID id="P15" start="3504" end="3513" text="8-2575360" TYPE="IDNUM" comment="" />
+</TAGS>
+</deIdi2b2>

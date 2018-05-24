@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2071-01-30
+
+CARDIOLOGY
+
+BETHESDA MEMORIAL HOSPITAL
+
+
+
+Xavier T Huerta M.D. 
+
+BMH Health Associates
+
+583 Appaloosa Place
+
+CHESTERTOWN, NY 91987
+
+
+
+Dear Dr. Huerta:
+
+
+
+Reason for visit:
+
+   Today, I had the pleasure of seeing Irving Vera in Cardiology clinic. He is a former patient of Dr. Ilya Light. He is a 59-year-old man with diabetes type 2, hypertension, hypercholesterolemia, and mild coronary artery disease who had a brief episode of atrial flutter in 2069. He presented in 2069 with chest pain and rapid heart rate following snow shoveling. He was found to be in atrial flutter with a rapid ventricular response. He was cardioverted two days later and has remained in sinus rhythm since then. Echocardiogram performed on 02/22/2069 showed normal ejection fraction of 72%, borderline left atrium at 43 mm, and no significant valvular abnormalities. Stress test performed on 03/16/2069 showed 5 minutes of exercise, 7 METS, and a peak double product of 22, 000. He had no EKG changes, and a small mild posterobasilar defect suggestive of a very limited area of mild ischemia. The patient has been managed medically since then. He has used an event monitor and since then has not had any subsequent episodes of atrial flutter or fibrillation.
+
+
+
+The patient has been doing well over the past several months. Currently, he exercises once or twice a week by swimming 30 minutes in a pool. A few months ago, he was exercising almost everyday. His weight has been up and down. He does not complain of any chest pain, shortness of breath, or other symptoms. Occasionally in the morning when he takes his pulse, he notices a skipped beat. I have reassured him that this is not a cause for concern.
+
+
+
+Past medical history:
+
+   Diabetes, hypertension, hypercholesterolemia, atrial flutter as above, coronary artery disease as above, Bell's palsy with residual left eye tearing, kidney stones, and glaucoma.
+
+
+
+Current Medications:
+
+  lisinopril 20 mg QD
+
+ Glucophage 1 g BID
+
+ glyburide 10 mg BID
+
+ atenolol 50 mg QAM; Dir: and 25 mg QPM
+
+ Lopid 600 mg BID
+
+ allopurinol 300 mg QD
+
+ omeprazole 20 mg QD
+
+ aspirin 81 mg QD
+
+ Pravachol 80 mg QD
+
+ Avandia 8 mg QD
+
+
+
+Allergies:
+
+Penicillin allergy   Penicillin and erythromycin, causing rash.
+
+
+
+Family history:
+
+   Not significant for coronary artery disease.
+
+
+
+Social history:
+
+   Former tobacco user, works part time in securities.
+
+
+
+Review of systems:
+
+   As above, otherwise negative.
+
+
+
+Physical examination:
+
+-Pulse:   60
+
+-General:   Obese talkative man in no distress
+
+-Chest:   Lungs are clear bilaterally
+
+-Cardiac:   JVP is 7 cm with normal waveform.  PMI is discrete and nondisplaced.  Regular rate and rhythm with normal S1 and S2.  Soft 2/6 holosystolic murmur heard at the lower left sternal border
+
+-Abdomen:   Obese and tender
+
+-Extremities:   Have trace edema with chronic venous stasis changes
+
+
+
+Selected recent labs:
+
+   On 06/18/2070, total cholesterol 168, triglycerides 104, HDL 38, and LDL 109.  His Pravachol dose has been increased since this time.
+
+
+
+Assessment and plan:
+
+   This is a 59-year-old man with metabolic syndrome, diabetes type 2, hyperlipidemia, hypertension, obesity, and mild coronary artery disease that has been medically managed. He is doing well. He had an episode of atrial flutter for two days in 2069 but has not had any repeat episodes. He is currently not anticoagulated. Given new recommendations, his target LDL should be less than 70. He is due for a fasting lipid profile in one week. If his LDL is not below 70, then he should either be switched to Lipitor 80 mg day or Zetia should be added to his present regimen. He is slightly hypertensive today with a blood pressure of 140/75. The patient will check his blood pressure at home since he is somewhat anxious male. In the office today, if his blood pressure remains elevated, then I will increase his lisinopril to 30 mg a day. Otherwise, he is doing very well without any cardiac symptoms.
+
+
+
+Changes to Medications this visit
+
+lisinopril 20 mg   QD
+
+Glucophage 1 g   BID
+
+glyburide 10 mg   BID
+
+atenolol 50 mg   QAM and 25 mg QPM
+
+Lopid 600 mg   BID
+
+allopurinol 300 mg   QD
+
+omeprazole 20 mg   QD
+
+aspirin 81 mg   QD
+
+Pravachol 80 mg   QD
+
+Avandia 8 mg   QD
+
+
+
+Thank you for allowing me to participate in the care of this patient.  If you have any questions, please feel free to contact me.
+
+
+
+
+
+
+
+
+
+Steven Vega MD
+
+
+
+Signed electronically by   Steven  Vega MD  on  Feb 3, 2071     
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2071-01-30" TYPE="DATE" comment="" />
+<LOCATION id="P1" start="40" end="66" text="BETHESDA MEMORIAL HOSPITAL" TYPE="HOSPITAL" comment="" />
+<NAME id="P2" start="70" end="85" text="Xavier T Huerta" TYPE="DOCTOR" comment="" />
+<LOCATION id="P3" start="93" end="96" text="BMH" TYPE="HOSPITAL" comment="" />
+<LOCATION id="P5" start="116" end="135" text="583 Appaloosa Place" TYPE="STREET" comment="" />
+<LOCATION id="P6" start="137" end="148" text="CHESTERTOWN" TYPE="CITY" comment="" />
+<LOCATION id="P7" start="150" end="152" text="NY" TYPE="STATE" comment="" />
+<LOCATION id="P8" start="153" end="158" text="91987" TYPE="ZIP" comment="" />
+<NAME id="P9" start="171" end="177" text="Huerta" TYPE="DOCTOR" comment="" />
+<NAME id="P10" start="240" end="251" text="Irving Vera" TYPE="PATIENT" comment="" />
+<NAME id="P12" start="304" end="314" text="Ilya Light" TYPE="DOCTOR" comment="" />
+<AGE id="P13" start="324" end="326" text="59" TYPE="AGE" comment="" />
+<DATE id="P14" start="476" end="480" text="2069" TYPE="DATE" comment="" />
+<DATE id="P15" start="498" end="502" text="2069" TYPE="DATE" comment="" />
+<DATE id="P16" start="746" end="756" text="02/22/2069" TYPE="DATE" comment="" />
+<DATE id="P17" start="898" end="908" text="03/16/2069" TYPE="DATE" comment="" />
+<PROFESSION id="P18" start="2386" end="2396" text="securities" TYPE="PROFESSION" comment="" />
+<DATE id="P19" start="2910" end="2920" text="06/18/2070" TYPE="DATE" comment="" />
+<AGE id="P20" start="3079" end="3081" text="59" TYPE="AGE" comment="" />
+<DATE id="P21" start="3312" end="3316" text="2069" TYPE="DATE" comment="" />
+<NAME id="P22" start="4379" end="4390" text="Steven Vega" TYPE="DOCTOR" comment="" />
+<NAME id="P23" start="4424" end="4436" text="Steven  Vega" TYPE="DOCTOR" comment="" />
+<DATE id="P24" start="4445" end="4456" text="Feb 3, 2071" TYPE="DATE" comment="" />
+</TAGS>
+</deIdi2b2>

@@ -1,0 +1,289 @@
+
+
+
+Record date: 2067-08-07
+
+
+
+
+
+
+
+
+
+
+CHIEF COMPLAINT:  F/U DF
+
+
+
+HISTORY OF PRESENT ILLNESS: f/u CABG/CAD/DM
+
+
+
+feeling very well without intercurrent problems, though discouraged about wt gain and not exercsiing regularly
+
+
+
+still not smoking after 13 months!
+
+
+
+
+
+taking meds without difficulty or adverse effects
+
+
+
+checking feet daily; no CP, SOB orthop PND
+
+
+
+
+
+
+
+
+
+PAST MEDICAL HISTORY: Entered By:frye  On:03/13/2066 
+
+Endocrine disorders:  type II, non-insulin dependent diabetes mellitus.
+
+
+
+
+
+
+
+
+
+
+
+REVIEW OF SYSTEMS: Const: no fever, chills, sweats, weight change, or malaise
+
+
+
+
+
+CV: no chest pain, dyspnea on exertion or palpitations
+
+Resp: no SOB, no cough, no wheezing
+
+GI: no abdominal pain, no diarrhea, no constipation
+
+
+
+Musc: no back, shoulder, limb pain, no myalgias
+
+
+Skin: no rashes or pruritis
+
+
+
+Psych: not depressed or anxious
+
+
+
+.
+
+
+
+
+
+VITAL SIGNS: 
+
+Date/Time: 08/07/2067  04:17 PM  - rosenberg
+Respiration: 16 breaths/min 
+
+Pulse 1: 80 bpm 
+
+Blood Pressure 1: 130 / 80 mmHg 
+
+Weight: 202.00 lbs.
+
+
+
+
+
+
+
+EXAMINATION: 
+
+
+
+[Constitution]  - well nourished and developed.  
+
+[Eyes]  - conjunctivae clear, pupils equal, no discharge, 
+
+[ENMT] - Ears - ,  external ears normal.
+
+[ENMT] - Nose  no discharge. 
+
+[ENMT] - Throat - normal color and without tonsillar enlargement.
+
+[Neck] - supple no lymphadenopathy or thyromegaly. 
+
+[CV] - regular rate no murmurs, rubs or gallops, no heave; carotid and pedal pulses normal, no extremities edema.  No JVD. well healed stermotomy scar.
+
+[Respiratory] - clear, breath sounds bilaterally, no accessory muscle use.  
+
+[GI] - abdomen soft, no hepatosplenomegaly, no abnormal masses or hernias.  
+
+[Skin]- no significant rashes or other lesions.  
+
+[Musc/Skel] - normal tone, no edema
+
+[Neuro] - 5/5 gross motor strength, grossly normal coordination and gait
+
+[Psych] - alert and oriented for age, normal mood and affect
+
+
+
+
+
+
+
+IMPRESSION: 
+
+BP  well controlled,
+
+we discussed elevated HbA1c fro last visit of 8.3 and need for exercise
+
+otherwise, Excellent secondary prevention regmen
+
+RTC 3-4 mo
+
+
+
+
+
+
+
+
+
+ALLERGIES: 
+
+No Known Drug Allergies 04/17/2067 rosenberg
+
+
+
+
+MEDICATIONS: 
+
+wellbutrin sr 150mg 2 tabs po qd : 06/19/2067 - 03/25/2068 ACT : um
+
+   Script:  Amt: 60  Refill: 3 Date: 09/23/2067 : um
+
+
+
+HYDROCHLOROTHIAZIDE 25MG One PO qd : 09/06/2066 - 03/25/2068 ACT : rosenberg
+   Script:  Amt: 30  Refill: 3 Date: 11/20/2067 : rosenberg
+
+
+LIPITOR 10MG PO qd : 05/10/2066 - 04/15/2068 ACT : rosenberg
+   Script:  Amt:  QS  Refill: 1 Date: 11/20/2067 : rosenberg
+
+
+Glucophage 500mg one PO bid : 04/08/2065 - 11/12/2067 ACT : stephens
+
+   Script:  Amt: 60  Refill: 3 Date: 04/24/2067 : stephens
+
+
+
+ASPIRIN 325MG PO qd : 03/02/2065 - 03/30/2074 ACT : rosenberg
+
+
+multivitamin 1 po qd : 03/02/2065 - 03/30/2074 ACT : rosenberg
+
+
+LOPRESSOR 50MG qd : 03/02/2065 - 11/12/2067 ACT : rosenberg
+   Script:  Amt: 30  Refill: 3 Date: 10/26/2066 : rosenberg
+
+
+Glucophage 850MG BID - 01/29/2068 ACT : rosenberg
+
+
+
+
+
+
+IMMUNIZATIONS: 
+
+Infl 11/25/2065
+
+Pneu 11/25/2065
+
+
+
+PROBLEMS - CARE PLANS: 
+
+Problem: a. Adult symptom(s)
+
+Code: 414.00 Coronary Artery Disease
+
+Careplan: 
+
+
+
+RTC 3 mo
+
+
+
+secondary prevention counseling reinforced including wt loss, exercise, con't smoking cessation, medication adherence, diet, ASA, MVI
+
+Problem: a. Adult symptom(s)
+
+Code: 250.00 Diabetes Mellitus, Uncomplicated
+
+Careplan: 
+
+
+
+Diet:  ADA Step II
+
+ 
+
+Medications:  Glucophage - 850MG - BID.
+
+will recheck HbA1c next visit
+
+Patient Education:  
+
+1. diabetes teaching
+
+2. avoid concentrated sweets
+
+3. stress important of meticulous foot care and hygiene
+
+4. discuss importance of tight diabetes control, including potential complications of diabetes.
+
+ 
+
+Problem: a. Adult symptom(s)
+
+Code: 272.4 Hyperlipidemia
+
+Careplan: 
+
+
+
+Patient Education:  1. reduce dietary saturated fats to less than 10% total calories
+
+2. reduce weight
+
+3. restrict total fat to < 30% of total calories
+
+4. limit cholesterol to < 300 mg/d
+
+5. allow carbohydrates to account for 50-60% of calories. Substitute complex carbohydrates for saturated fats, increase intake of soluble fiber.
+
+ 
+
+
+
+
+
+
+THIS IS A COPY PRODUCED FOR THE LMR. THE ORGINAL IS STORED ON THE BRIGHTPOINT SERVER AT COLUMBIA KINGWOOD MEDICAL CENTER AND IN PRINT IN THE PATIENT'S CKMC PAPER RECORD.
+
+
+

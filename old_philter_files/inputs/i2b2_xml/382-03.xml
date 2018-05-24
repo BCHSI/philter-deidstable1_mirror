@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2084-12-07
+
+
+Pulmonary Service Admission Note
+Vicente Aguilar #98179909
+December 7, 2084
+
+
+HPI  51 y/o male with cystic fibrosis, pancreatic insufficency and CRI who was last admitted for cleanout in 1/2084 now presenting after being seen by Dr Mann as outpatient on long island with newly increased creatinine above baseline and to initiate cleanout. He notes he has been doing fairly well this last year. He was seen for a physical by his primary care physician Dr Haas on November 13th at which time he reports she told him he was doing well. Dr Mann followed up with her on his lab studies and results and called Mr Aguilar on friday alerting him to the change in his renal function. It was decided that he be admitted for renal work-up as well as initiating cleanout as he does his cleanouts yearly. He notes he has felt generally well with no increased cough or sputum, chest pain or tightness. He notes he has 'danced around' some cold symptoms earlier in the summer but has had none since. He denies any fevers or chills and notes he only gets sweats if he has a low blood sugar. He denies any N/V, diarrhea or constipation and has stable appetite. He notes stable weight of 185-186 lbs. He notes he has had erratic control of his blood sugar as he does at times 'forget' to give himself insulin. He does monitoe his BS four times per day. He denies any dysuria, hematuria or urgency. he does note frequency has increased over the year, he now urinates every few hours. He denies any sore throat or sinus pain, does have occasional mild congestion. 
+
+
+Reviwe of systems: he has a flu shot, denies sick contacts. notes his prostate exam at his PCP office was reported to be normal. denies reflux symptoms, does have feeling of pills "sticking' when he swallows them occasionally. 
+
+
+PMH:
+Cystic Fibrosis
+Pancreatic insufficiency
+CF related Diabetes Mellitus
+Hypertension
+Nephrotic syndrome (baseline creatinine 1.1), chart dx at CHB of GN, unclear source of dx
+Gout
+Cataracts
+
+
+Allergies: NKDA
+
+
+Medications:  
+Aspirin 81 mg po daily
+Colchicine 0.6 mg po daily
+Probenecid 250 mg po bid
+Azithromycin 500 mg po q thu/sat/Monday
+simvastatin 20 mg po qhs
+Cozaar 50 mg po BID
+Accolate 20 mg po bid
+Albuterol inh prn
+Plaretase 8000 6 tabs po qac/ snacks (what his pharmacy switched him to as pancrecarb not available)
+Protonix 40 mg po daily
+Lantus 12 u qhs
+Humalog scale ac
+
+
+FH/SH: lives on long island with partner of 4 years, she is a Notary. Works in shoe repair. Denies tobacco, usually drinks daily galss of grand marnier. notes prior daily marajuana smoking, now 3-4 times per month recently.
+
+
+PHYSICAL EXAM (in CDIC): 
+Vitals: see nursing flowsheet
+GEN:NAD. Pleaseant male. Nad.
+HEENT: PERRL, op moist, with no exudates, no sinus pain or tendernes, no LAN
+LUNGS: clear to auscultation bilaterally, no wheezes or rhonchi
+HEART:S1S2 reg, no m/g/r, rrr
+ABDOMEN:soft. NT/ND, active BS, no HSM
+EXT: trace digital clubbing b/l, trace b/l ankle edema
+NEURO:alert and oriented x 3, no focal deficits
+
+
+
+DATA (from CHB):
+-reported BUN/Cre from PCP office- 68/2.1
+-no other updated data
+
+
+Assessment/Plan:  Mr Aguilar is a 51 M with cystic fibrosis and hx of CRI who presents now with significant worsening of his renal function seen on outpatient labs as well as it having been nearly one year since prior cleanout. He is being admitted for initiation of cleanout and evaluation of renal dysfunction. He will be admitted to pulmonary PA service.
+
+
+1) Pulm/ID: Based on his past sputum culture studies from CHB and his renal function we will start him on Ceftaz at renal dose of 2g q24h and cipro 250 q12h. Have used aminoglycosides in the past but given his renal function will avoid these at this time. Will get a f/u CXR to compare to his study done last year to assess for any change. Will consult RT for Chest PT TID and discuss restarting hypertonic saline/pulmozyme. Will continue other pulmonary inhalers. 
+
+
+
+2)FEN/GI: Will maintain on high calorie, high protein CF diet and continue current regimen of vitamins and enzymes. Will get 
+Nutrition consult as patient has not been seen in quite some time. Will monitor bowels, currently stable.
+
+
+3) CV: history of HTN, will continue home cozaar and lisinopril for now but may consider alternative choices given renal dysfunction if needed. Will monitor vital signs.
+
+
+4) ENDO: CF related DM: will continue lantus and SSI and check FSBS AC/HS. Will send HgA1c given his report of erratic control at home.
+
+
+5) Rheum: Gouty arthritis has been stable, will contiue probenecid and celebrex 
+
+
+
+6) Renal: Recent BUN/creatinine as reported from his PCP is significantly elevated from his prior levels earlier this year. Patient has not been followed regularly by nephrology in the past. Unclear the exact nature of his renal dysfunction and the etiology of its worsening of late. Will send for renal ultrasound and send urine lytes, protein, creatinine and eosinophils to begin work-up and will consider renal consult.  Will start gentle IVF hydration overnight.
+
+
+7)Access: PICC line in IR today
+
+
+8)PPX: sc heparin , PPI
+
+
+9)Dispo: TBD
+
+
+______________________________________
+Francine Morales, PA-C
+68626
+
+
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2084-12-07" TYPE="DATE" comment="" />
+<NAME id="P1" start="62" end="77" text="Vicente Aguilar" TYPE="PATIENT" comment="" />
+<ID id="P2" start="79" end="87" text="98179909" TYPE="MEDICALRECORD" comment="" />
+<DATE id="P3" start="88" end="104" text="December 7, 2084" TYPE="DATE" comment="" />
+<AGE id="P4" start="112" end="114" text="51" TYPE="AGE" comment="" />
+<DATE id="P5" start="216" end="222" text="1/2084" TYPE="DATE" comment="" />
+<NAME id="P6" start="261" end="265" text="Mann" TYPE="DOCTOR" comment="" />
+<LOCATION id="P7" start="283" end="294" text="long island" TYPE="LOCATION-OTHER" comment="" />
+<NAME id="P8" start="483" end="487" text="Haas" TYPE="DOCTOR" comment="" />
+<DATE id="P9" start="491" end="504" text="November 13th" TYPE="DATE" comment="" />
+<NAME id="P10" start="565" end="569" text="Mann" TYPE="DOCTOR" comment="" />
+<NAME id="P11" start="636" end="643" text="Aguilar" TYPE="PATIENT" comment="" />
+<DATE id="P12" start="647" end="653" text="friday" TYPE="DATE" comment="" />
+<DATE id="P13" start="983" end="989" text="summer" TYPE="DATE" comment="" />
+<DATE id="P14" start="2134" end="2137" text="thu" TYPE="DATE" comment="" />
+<DATE id="P15" start="2138" end="2141" text="sat" TYPE="DATE" comment="" />
+<DATE id="P16" start="2142" end="2148" text="Monday" TYPE="DATE" comment="" />
+<LOCATION id="P17" start="2410" end="2421" text="long island" TYPE="LOCATION-OTHER" comment="" />
+<PROFESSION id="P18" start="2456" end="2462" text="Notary" TYPE="PROFESSION" comment="" />
+<PROFESSION id="P19" start="2473" end="2484" text="shoe repair" TYPE="PROFESSION" comment="" />
+<NAME id="P20" start="3127" end="3134" text="Aguilar" TYPE="PATIENT" comment="" />
+<AGE id="P21" start="3140" end="3142" text="51" TYPE="AGE" comment="" />
+<NAME id="P22" start="5146" end="5162" text="Francine Morales" TYPE="DOCTOR" comment="" />
+<CONTACT id="P23" start="5169" end="5174" text="68626" TYPE="PHONE" comment="" />
+</TAGS>
+</deIdi2b2>

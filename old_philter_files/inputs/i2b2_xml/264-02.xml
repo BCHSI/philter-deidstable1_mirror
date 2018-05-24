@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2089-03-28
+
+                     RHINELAND EMERGENCY DEPT VISIT
+
+ 
+
+PIERRE,EDEN   241-52-56-3                      VISIT DATE: 03/28/89
+
+The patient was interviewed and examined by myself with the 
+
+resident on 3/28/89.  Please see resident's note for full details.
+
+HISTORY OF PRESENTING COMPLAINT:  The patient is a female with 
+
+history of coronary artery disease, AICD, and cardiomyopathy who 
+
+comes in today with chest pain, onset iffy while she is walking, 
+
+substernal right anterior chest.  Went to sleep, had some shortness 
+
+of breath, no diaphoresis, nausea or dizziness.  Similar to this 
+
+pain in the past was her myocardial infarction.  She has chronic 
+
+risk factors of hypercholesterolemia, apparent menopausal, 
+
+echocardiogram on 9/87, 10 to 15% global hypokinesis.  
+
+Catheterization is left main disease, 50% ostial disease.           
+
+REVIEW OF SYSTEMS:  As in history of present illness but no recent 
+
+upper respiratory infection symptoms or orthopnea, or exercise 
+
+intolerance.    
+
+PAST MEDICAL HISTORY:  As above.  Surgery procedure:  ASAD 
+
+placement.   
+
+MEDICATIONS:  See nurses notes for details. 
+
+ALLERGIES:  See nurses notes for details. 
+
+SOCIAL HISTORY AND FAMILY HISTORY:  No tobacco or ETOH.  Lives with 
+
+family, accompanied by a friend tonight.  Family history:  
+
+Diabetes.  
+
+PHYSICAL EXAMINATION:  Alert and awake, pleasant female in no 
+
+apparent distress.  Agree with resident's documentation including 
+
+normal pulse, blood pressure 120/86, 02 sat 98%.  Clear lungs.  
+
+Heart is regular rate and rhythm.  Abdomen is soft.  Neuro:  Alert 
+
+and oriented x3.  No obvious cranial, or motor or sensory deficit.  
+
+LABORATORY EVALUATION:  Given her history of coronary artery 
+
+disease and her symptoms an electrocardiogram was unchanged.  
+
+Hematocrit is 37.  BUN and creatinine 19 and 1.  Liver function 
+
+tests are within normal limits.  CK 127, troponin .01.  
+
+Electrocardiogram, rhythm is paced, unchanged from priors.  Chest 
+
+x-ray is mild congestive heart failure compared to prior 
+
+examinations.    
+
+THERAPY RENDERED/COURSE IN ED:  Aspirin was given and she is chest 
+
+pain free currently.  Case was discussed with Guzmans Hospital 
+
+Cardiology.  Will try for an exercise tolerance test later on in 
+
+the afternoon.  Care was discussed with Dr. Rhodes.
+
+FINAL DIAGNOSIS:  Chest pain, rule out acute coronary syndrome.  
+
+DISPOSITION (including condition upon discharge):  Patient 
+
+currently in stable condition.  
+
+___________________________________                    ZP289/32887 
+
+FLORENCE F. CASEY, M.D.     FC44                      D:03/28/89 
+
+                                                       T:03/28/89 
+
+Dictated by:  FLORENCE F. CASEY, M.D.     FC44 
+
+ ******** Not reviewed by Attending Physician ********
+
+
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2089-03-28" TYPE="DATE" comment="" />
+<LOCATION id="P1" start="49" end="58" text="RHINELAND" TYPE="HOSPITAL" comment="" />
+<NAME id="P2" start="84" end="95" text="PIERRE,EDEN" TYPE="PATIENT" comment="" />
+<ID id="P3" start="98" end="109" text="241-52-56-3" TYPE="MEDICALRECORD" comment="" />
+<DATE id="P4" start="143" end="151" text="03/28/89" TYPE="DATE" comment="" />
+<DATE id="P5" start="227" end="234" text="3/28/89" TYPE="DATE" comment="" />
+<DATE id="P6" start="765" end="769" text="9/87" TYPE="DATE" comment="" />
+<LOCATION id="P7" start="2185" end="2201" text="Guzmans Hospital" TYPE="HOSPITAL" comment="" />
+<NAME id="P8" start="2315" end="2321" text="Rhodes" TYPE="DOCTOR" comment="" />
+<ID id="P9" start="2541" end="2552" text="ZP289/32887" TYPE="IDNUM" comment="" />
+<NAME id="P10" start="2555" end="2572" text="FLORENCE F. CASEY" TYPE="DOCTOR" comment="" />
+<NAME id="P11" start="2583" end="2587" text="FC44" TYPE="USERNAME" comment="" />
+<DATE id="P12" start="2611" end="2619" text="03/28/89" TYPE="DATE" comment="" />
+<DATE id="P13" start="2679" end="2687" text="03/28/89" TYPE="DATE" comment="" />
+<NAME id="P14" start="2704" end="2721" text="FLORENCE F. CASEY" TYPE="DOCTOR" comment="" />
+<NAME id="P15" start="2732" end="2736" text="FC44" TYPE="USERNAME" comment="" />
+</TAGS>
+</deIdi2b2>

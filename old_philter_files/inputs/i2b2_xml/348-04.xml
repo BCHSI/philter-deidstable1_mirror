@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2070-04-02
+
+
+
+Chief Complaint
+
+  1.  Feels pretty well.  She had the MOHS surgery on the left side of her face, it has gotten infected.
+
+2.  Her husband, Xin, has progressive dementia and that is difficult.
+
+
+
+
+
+Problems
+
+      Hypertension
+
+on atenolol and lisinopril
+
+      Insomnia
+
+much better recently
+
+      H/O cerebrovascular accident
+
+on aspirin and plavix
+
+      Basal cell carcinoma
+
+s/p MOHS surgery in 3/2070
+
+      Asthma
+
+well controlled with flovent and singulair.  She uses PRN albuterol
+
+      Hyperlipidemia
+
+on Lipitor
+
+      Diabetes mellitus type 2    : Started metformin 2069
+
+checking blood sugars at home.
+
+
+
+Medications
+
+      Asa (ACETYLSALICYLIC Acid)   325MG TABLET take 1 Tablet(s) PO QD 
+
+      Flonase (FLUTICASONE Nasal Spray)   1-2 SPRAY NAS QD 
+
+      Prilosec (OMEPRAZOLE)   20MG CAPSULE CR take 1 Capsule(s) PO QHS 
+
+      Albuterol Inhaler   2 PUFF INH Q4-6H PRN .cough , use with chamber
+
+      Flovent (FLUTICASONE Propionate)   44MCG AEROSOL take 2 Puff(s) INH BID 
+
+      Dyazide  (TRIAMTERENE 37.5 Mg/hctz 25 Mg)   1 CAPSULE PO QD 
+
+      Plavix (CLOPIDOGREL)   75 MG PO QD 
+
+      Lipitor (ATORVASTATIN)   10MG TABLET take 1 Tablet(s) PO QD 
+
+      Glucophage (METFORMIN)   500MG TABLET  PO BID 
+
+      ATENOLOL   100MG TABLET take 1 Tablet(s) PO BID , take 1/2 in morning and 1 in evening
+
+      Celexa (CITALOPRAM)   20MG TABLET take 1 Tablet(s) PO QD 
+
+      LISINOPRIL   20MG TABLET take 1 PO QD 
+
+      Singulair (MONTELUKAST)   10MG TABLET take 1 Tablet(s) PO QHS 
+
+      Allegra (FEXOFENADINE Hcl)   60MG CAPSULE take 1 Tablet(s) PO BID PRN  
+
+
+
+Allergies
+
+      Sulfa    - Unknown
+
+      Penicillins    - Unknown
+
+
+
+Social History
+
+    Marital status: married
+
+EtOH: none for many years
+
+Occupation: cashier, active in the community
+
+Exercise: active liefstyle
+
+
+
+Review of Systems
+
+ROS-no fever, chills, shortness of breath.  She has ongoing cough.
+
+
+
+Vital Signs
+
+      BLOOD PRESSURE   120/78 
+
+
+
+Exam
+
+ Chest-clear to P and A
+
+Cor-S1S2 normal no murmers, rubs or gallops
+
+Abd-soft, nontender, no hepatosplenomegaly
+
+Ext-no edema
+
+
+
+
+
+Disposition and Plans
+
+ 1.  Routine health-scheduled mammogram, colonoscopy.
+
+2. Type 2 DM-she will see Carolyn Delong, nutrition.  She will start doing home glucose monitoring.  Continue the metformin BID.  Check HbA1C today, she will schedule ophtho and podiatry apt for yearly check.
+
+3.  HTN is under excellent control.
+
+4.  Depression is controlled with celexa-she is sleeping better.
+
+5.  Asthma-controlled with singulair, flovent and albuterol.
+
+6.  Hyperlipidemia-check labs every 6 months.
+
+
+
+______________________________
+
+Othel  Vidal, M.D.
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2070-04-02" TYPE="DATE" comment="" />
+<NAME id="P1" start="170" end="173" text="Xin" TYPE="PATIENT" comment="" />
+<DATE id="P2" start="431" end="437" text="3/2070" TYPE="DATE" comment="" />
+<DATE id="P3" start="610" end="614" text="2069" TYPE="DATE" comment="" />
+<PROFESSION id="P4" start="1768" end="1775" text="cashier" TYPE="PROFESSION" comment="" />
+<NAME id="P5" start="2210" end="2224" text="Carolyn Delong" TYPE="DOCTOR" comment="" />
+<NAME id="P6" start="2640" end="2652" text="Othel  Vidal" TYPE="DOCTOR" comment="" />
+</TAGS>
+</deIdi2b2>

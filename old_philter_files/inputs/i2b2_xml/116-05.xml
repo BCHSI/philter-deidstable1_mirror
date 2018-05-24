@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2082-12-31
+
+                     AH EMERGENCY DEPT VISIT
+
+ 
+
+BRANCH,EARNEST   530-23-69-1                      VISIT DATE: 12/31/82
+
+This patient was seen primarily by Dr. Xavier Whittaker.  I also saw 
+
+the patient, reviewed the resident's note, and discussed evaluation 
+
+and plan. 
+
+PRESENTING COMPLAINT:  Shortness of breath and nausea.
+
+HISTORY OF PRESENTING COMPLAINT:  This 49-year-old man has been 
+
+complaining of shortness of breath for the last 24 hours.  He came 
+
+in complaining of that plus some nausea and was found to have a 
+
+highly elevated glucose and was sent over here.  The patient denies 
+
+any chest pain or pain any place else, but he does state that he 
+
+feels poorly.  Of note, on transport and on arrival here, his blood 
+
+sugar was noted to be greater than 600.  The patient does not 
+
+complain of blurry vision and does not complain of 
+
+light-headedness, just the nausea and the shortness of breath. 
+
+REVIEW OF SYSTEMS:  As per the resident's note. 
+
+PAST MEDICAL HISTORY:  Cardiomyopathy.  Otherwise, as per the 
+
+resident's note. 
+
+SOCIAL HISTORY AND FAMILY HISTORY:  As per the resident's note. 
+
+PHYSICAL EXAMINATION:  Significant findings include a pulse of 76, 
+
+respirations 22.  The patient appears to be in no acute distress.  
+
+The lungs display crackles bilaterally to the mid lung.  There is 
+
+jugular venous distention elevation to the angle of the jaw.  
+
+Cardiac examination is otherwise normal.  Abdominal examination is 
+
+within normal limits.  The patient has a colostomy.  The patient 
+
+has a left below-knee amputation and toe-digit-toe amputation on 
+
+the right side.  Otherwise, there are no musculoskeletal 
+
+abnormalities.  There are some decubitus ulcers which are stable.
+
+LABORATORY EVALUATION:  Laboratories are significant for a glucose 
+
+of 934, sodium 127, anion gap 17, bicarb 19, creatinine and BUN 5.8 
+
+and 37, hematocrit 30, which is not too different from his usual.  
+
+His pH is 7.42.  CK is 54, but troponin is 1.45.  Of note, however, 
+
+the patient does have renal conditions.  EKG shows new deep Qs in 
+
+2, 3, and F compared to one done a month ago.  Chest x-ray shows 
+
+some excess interstitial markings indicative of increased fluid.
+
+THERAPY RENDERED/COURSE IN ED:  This patient appears to have 
+
+congestive heart failure.  He may be having new cardiac event, 
+
+although after a consultation with the Integra Health
+
+cardiologist, he felt that perhaps this might not be a new event, 
+
+but rather due to axis deviation.  The patient is being treated for 
+
+his hyperglycemia and is being admitted.
+
+FINAL DIAGNOSES:
+
+1.  Rule out myocardial infarction.
+
+2.  Hyperglycemia.
+
+DISPOSITION (including condition upon discharge):  The patient was 
+
+admitted to the hospital in stable condition. 
+
+___________________________________                    ZI623/55469 
+
+FAITH GALINDO, M.D.       FG9                         D:12/31/82 
+
+                                                       T:12/31/82 
+
+Dictated by:  FAITH GALINDO, M.D.       FG9 
+
+ ******** Not reviewed by Attending Physician ********
+
+
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2082-12-31" TYPE="DATE" comment="" />
+<LOCATION id="P1" start="49" end="51" text="AH" TYPE="HOSPITAL" comment="" />
+<NAME id="P2" start="77" end="91" text="BRANCH,EARNEST" TYPE="PATIENT" comment="" />
+<ID id="P3" start="94" end="105" text="530-23-69-1" TYPE="MEDICALRECORD" comment="" />
+<DATE id="P4" start="139" end="147" text="12/31/82" TYPE="DATE" comment="" />
+<NAME id="P5" start="188" end="204" text="Xavier Whittaker" TYPE="DOCTOR" comment="" />
+<AGE id="P6" start="397" end="399" text="49" TYPE="AGE" comment="" />
+<LOCATION id="P7" start="2392" end="2406" text="Integra Health" TYPE="HOSPITAL" comment="" />
+<ID id="P8" start="2835" end="2846" text="ZI623/55469" TYPE="IDNUM" comment="" />
+<NAME id="P9" start="2849" end="2862" text="FAITH GALINDO" TYPE="DOCTOR" comment="" />
+<NAME id="P10" start="2875" end="2878" text="FG9" TYPE="USERNAME" comment="" />
+<DATE id="P11" start="2905" end="2913" text="12/31/82" TYPE="DATE" comment="" />
+<DATE id="P12" start="2973" end="2981" text="12/31/82" TYPE="DATE" comment="" />
+<NAME id="P13" start="2998" end="3011" text="FAITH GALINDO" TYPE="DOCTOR" comment="" />
+<NAME id="P14" start="3024" end="3027" text="FG9" TYPE="USERNAME" comment="" />
+</TAGS>
+</deIdi2b2>

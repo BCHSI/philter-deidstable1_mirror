@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2092-12-20
+
+
+
+
+
+
+
+TANNER, YUL
+
+09904650
+
+12/20/2092
+
+
+
+
+
+Harry Truong, M.D.
+
+Internal Medicine at Blain Hospital
+
+3648 Burgess St
+
+Fernley, CO  22653
+
+
+
+Dear Dr. Truong:
+
+
+
+We had the pleasure of caring for your patient, Mr. Yul Tanner, during his admission to the Floyd County Hospital from 12/19/2092 through 12/20/2092 for diagnostic catheterization.  As you recall, he is a 57-year-old man with a history of diabetes, hypertension, dyslipidemia, and obesity, who initially presented with chest discomfort on 12/09/2092.  Mr. Tanner ruled out for myocardial infarction at that time and underwent stress testing, which was positive.  He returns today for diagnostic catheterization.  Cardiac catheterization revealed noncritical coronary artery disease with an approximately 50% ostial right coronary artery lesion in a left dominant system.  The right femoral arteriotomy site was manually compressed without complication.  Mr. Tanner was admitted to the Cardiovascular Unit overnight for observation.  Overnight he did well, specifically, he denied any chest pain, shortness of breath, groin, or flank pain.  He remained hemodynamically stable, and was ambulating, eating, and voiding without difficulty.
+
+
+
+On examination, his cardiac exam revealed a regular rate and rhythm with normal S1 and S2.  Lungs were clear to auscultation throughout all lung fields.  His groin was soft and mildly tender with no hematoma and no bruit noted.  His lower extremities were warm and well perfused with intact distal pulses.
+
+
+
+His morning labs were significant for sodium of 142, potassium of 4.1, BUN of 18, creatinine of 1.  A CBC revealed a white blood cell count of 4.74, hematocrit of 31.6, and platelets of 304,000.  A fasting lipid panel revealed total cholesterol of 107, triglycerides of 130, HDL of 30, and LDL of 51.
+
+
+
+We are planning on discharging Mr. Tanner on the following medications, aspirin 81 mg daily, Lipitor 10 mg daily, diltiazem extended release 360 mg daily, Levoxyl 250 mcg daily, lisinopril 40 mg daily, NPH insulin 80 units subcutaneous daily, Avandia 4 mg daily, and metformin 850 mg twice daily to start on 12/21/2092.  We have asked that he follow up with you in the next one to two weeks, and to call with any questions or concerns before then.
+
+
+
+Thank you for allowing us to share in the care of your patient, Mr. Yul Tanner.  If you have any questions, please do not hesitate to contact us regarding his ongoing management.
+
+
+
+Sincerely,
+
+
+
+
+
+
+
+Rebecca Eason, MD
+
+
+
+
+
+
+
+
+
+Dictated by: Regan Montgomery, PA-C
+
+
+
+
+
+
+
+eScription document:3-2644464 IFFocus
+
+
+
+
+
+
+
+DD: 12/20/92
+
+DT: 12/20/92
+DV: 12/20/92
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2092-12-20" TYPE="DATE" comment="" />
+<NAME id="P1" start="34" end="45" text="TANNER, YUL" TYPE="PATIENT" comment="" />
+<ID id="P2" start="47" end="55" text="09904650" TYPE="MEDICALRECORD" comment="" />
+<DATE id="P3" start="57" end="67" text="12/20/2092" TYPE="DATE" comment="" />
+<NAME id="P4" start="73" end="85" text="Harry Truong" TYPE="DOCTOR" comment="" />
+<LOCATION id="P6" start="114" end="128" text="Blain Hospital" TYPE="HOSPITAL" comment="" />
+<LOCATION id="P7" start="130" end="145" text="3648 Burgess St" TYPE="STREET" comment="" />
+<LOCATION id="P8" start="147" end="154" text="Fernley" TYPE="CITY" comment="" />
+<LOCATION id="P9" start="156" end="158" text="CO" TYPE="STATE" comment="" />
+<LOCATION id="P10" start="160" end="165" text="22653" TYPE="ZIP" comment="" />
+<NAME id="P11" start="178" end="184" text="Truong" TYPE="DOCTOR" comment="" />
+<NAME id="P12" start="241" end="251" text="Yul Tanner" TYPE="PATIENT" comment="" />
+<LOCATION id="P13" start="281" end="302" text="Floyd County Hospital" TYPE="HOSPITAL" comment="" />
+<DATE id="P14" start="308" end="318" text="12/19/2092" TYPE="DATE" comment="" />
+<DATE id="P15" start="327" end="337" text="12/20/2092" TYPE="DATE" comment="" />
+<AGE id="P16" start="394" end="396" text="57" TYPE="AGE" comment="" />
+<DATE id="P17" start="528" end="538" text="12/09/2092" TYPE="DATE" comment="" />
+<NAME id="P18" start="545" end="551" text="Tanner" TYPE="PATIENT" comment="" />
+<NAME id="P19" start="947" end="953" text="Tanner" TYPE="PATIENT" comment="" />
+<NAME id="P21" start="1876" end="1882" text="Tanner" TYPE="PATIENT" comment="" />
+<DATE id="P22" start="2149" end="2159" text="12/21/2092" TYPE="DATE" comment="" />
+<NAME id="P23" start="2360" end="2370" text="Yul Tanner" TYPE="PATIENT" comment="" />
+<NAME id="P24" start="2492" end="2505" text="Rebecca Eason" TYPE="DOCTOR" comment="" />
+<NAME id="P25" start="2532" end="2548" text="Regan Montgomery" TYPE="DOCTOR" comment="" />
+<ID id="P26" start="2582" end="2591" text="3-2644464" TYPE="IDNUM" comment="" />
+<DATE id="P27" start="2611" end="2619" text="12/20/92" TYPE="DATE" comment="" />
+<DATE id="P28" start="2625" end="2633" text="12/20/92" TYPE="DATE" comment="" />
+<DATE id="P29" start="2638" end="2646" text="12/20/92" TYPE="DATE" comment="" />
+</TAGS>
+</deIdi2b2>

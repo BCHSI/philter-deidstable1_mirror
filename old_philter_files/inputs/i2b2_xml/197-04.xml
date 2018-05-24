@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2098-12-10
+
+
+
+	059-57-26
+
+	Emery, Donn
+
+
+
+December 10, 2098  Endocrine/Diabetes
+
+
+
+Present Illness:  
+
+Asked to see this 89 year old patient of Drs. Pina and Keefe, admitted with an acute exacerbation of congestive heart failure in the context of severe aortic stenosis and less attention to diet at the time of his wife's death last week. He is approaching probable AVR and ? CABG. 
+
+
+
+He has had diabetes since age 50. He was treated with diet initially, then chlorpropamide (100 mg bid at the time of admission) to which metformin (1000 mg bid at the time of admission) was added. His recent A1c was 6.5 %. He denies hypoglycemia and does not have hyponatremia. His creatinine is 1.5. He has never used insulin until this admission, when his oral agents were stopped and Lantus begun.
+
+Retinopathy:	Reports that he does have retinopathy, but lost vision OD to macular degeneration. He is followed by Dr. Valentine and Dr. Wilkes, and reports that he has had laser treatment by Dr. Valentine.
+
+Nephropathy:	BUN/Cr 42/1.5 
+
+Neuropathy:	Decreased sensation in feet and hands. Notes that he has had flat feet all of his life and does not recall any acute painful episode in L foot.
+
+Cardiac:	above
+
+Vascular:	No claudication
+
+
+
+Pre-op evaluation has included colonoscopy and EGD because of guaiac positive stool. An incidental bladder mass is suspected on the basis of pelvic CT and ? cystoscopy is also planned.
+
+
+
+Past Medical History:  
+
+Surgery:	Lymphoma - treated with surgery and radiation therapy in 2077 or so
+
+	TURP
+
+	Tonsillectomy
+
+Medical:	Hypertension
+
+	Anemia
+
+	Asbestosis
+
+	Pulmonary nodule
+
+	Pulmonary fibrosis
+
+	GERD
+
+	Nephrolithiasis
+
+	Depression
+
+Allergies:	?? Sulfa - he thinks that he has had sulfa since the time he was labeled with an allergy to it but cannot recall details.	
+
+
+
+Family History:  
+
+MGF had diabetes.
+
+
+
+Social History: 
+
+His wife died last week of Alzheimer's Disease, several months following a fall.
+
+He is a Financial Senior Manager. After the successful treatment of his lymphoma at about age 68, he went back to school to study sociology.
+
+
+
+Review of Systems: above
+
+Review of systems is otherwise negative.
+
+
+
+Physical Exam:	
+
+Delightful elderly man in no distress.
+
+BP:   148/59		P:   64, regular
+
+Wt:   165 by history, down from maximum of 235		Ht: 5' 10     by his estimate, down from 6' 1.5   
+
+HEENT:	Anicteric. 
+
+Fundi:	Not examined
+
+Carotids:	2+,= with softly transmitted murmur
+
+Chest:	cleat\retinopathy
+
+Heart:	Normal S1; single S2..  No gallops.  3/6 systolic ejection murmur
+
+Abdomen:	No hepatosplenomegaly. No masses. No tenderness. No palpable AAA. 
+
+Extremities:	1+ ankle edema. Pop 1-2+ R, 1+ L. No pedal pulses.  R foot has small plantar arch, but L has no arch and bony prominence in the location of plantar arch; there is also some deformity of the  L ankle.            
+
+Neurological:	AJ absent. 
+
+
+
+Impressions and Plan:	
+
+  	89 year old man with aortic stenosis, coronary artery disease, congestive heart failure and longstanding type 2 diabetes.
+
+  	His average control has apparently been good on the combination of chlorpropamide and metformin, although we cannot be sure of that in view of his anemia and the fact that he was not testing his glucose at home.
+
+  	Metformin is relatively contraindicated since his GRF is certainly diminished with creatinine 1.5 at age 89. 
+
+  	Lantus does not appear to be the right insulin for him. Would D/C it in favor of NPH 15 U in AM (watch carefully today since there is persistent Lantus effect). Check QID BS but cover with scale only before  breakfast and supper. I have not addressed the issue of long term insulin use with him, although it would be my first choice. Even at his age, I suspect that he would have no difficulty mastering it given his relatively youthful mind. Other alternatives would be sulfonylureas (if forced to use one, would choose glimepiride) and glitinides, for example repaglinide.
+
+
+
+Thanks. Will follow. 
+
+
+
+				Daniel M. Arce, M.D., Ph.D.
+
+
+
+
+
+      
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2098-12-10" TYPE="DATE" comment="" />
+<ID id="P1" start="31" end="40" text="059-57-26" TYPE="MEDICALRECORD" comment="" />
+<NAME id="P2" start="43" end="54" text="Emery, Donn" TYPE="PATIENT" comment="" />
+<DATE id="P3" start="58" end="75" text="December 10, 2098" TYPE="DATE" comment="" />
+<AGE id="P4" start="137" end="139" text="89" TYPE="AGE" comment="" />
+<NAME id="P5" start="165" end="169" text="Pina" TYPE="DOCTOR" comment="" />
+<NAME id="P6" start="174" end="179" text="Keefe" TYPE="DOCTOR" comment="" />
+<AGE id="P7" start="433" end="435" text="50" TYPE="AGE" comment="" />
+<NAME id="P8" start="923" end="932" text="Valentine" TYPE="DOCTOR" comment="" />
+<NAME id="P9" start="941" end="947" text="Wilkes" TYPE="DOCTOR" comment="" />
+<NAME id="P10" start="1000" end="1009" text="Valentine" TYPE="DOCTOR" comment="" />
+<DATE id="P11" start="1522" end="1526" text="2077" TYPE="DATE" comment="" />
+<PROFESSION id="P12" start="1965" end="1989" text="Financial Senior Manager" TYPE="PROFESSION" comment="" />
+<AGE id="P13" start="2051" end="2053" text="68" TYPE="AGE" comment="" />
+<AGE id="P15" start="2907" end="2909" text="89" TYPE="AGE" comment="" />
+<AGE id="P16" start="3354" end="3356" text="89" TYPE="AGE" comment="" />
+<NAME id="P17" start="3970" end="3984" text="Daniel M. Arce" TYPE="DOCTOR" comment="" />
+</TAGS>
+</deIdi2b2>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2064-08-28
+
+Patient Name: UMPHREY, FRANKIE;  MRN: 0942207
+Dictated on: 08/28/2064 by WHITNEY EASTERLING, M.D. 
+
+ 
+CHIEF COMPLAINT:  Falling and low back pain.  
+ 
+HISTORY OF PRESENT ILLNESS:  This is a 66 year old, right-handed female whose past medical history is significant for status post laminectomy at L3 to L5 in January of 2061.  The patient was in her usual state of health with some residual weakness from the stenosis and occasional buckling of her knees without loss of consciousness until 12/01 when she fell backwards.  There was no obvious leg buckling.  She said she just came off balance without loss of consciousness or dizziness or preceding lightheadedness.  Since then she has had several falls always when she is moving.   
+MEDICATIONS:  Her medications have included in the past Motrin 800 t.i.d. without significant effect on her low back pain.  Ultram q.i.d. was beneficial.  Neurontin 300 q.i.d. which was also beneficial without side effect and chondroitin sulfate which she feels has been very helpful without side effect.   
+REVIEW OF SYSTEMS:  She has bilateral dysesthesias, left sciatica to her ankle.  She has had weight loss without fevers, chills or night sweat.  She has had no retinopathy and she has a history of reflux and otherwise her cardiovascular, pulmonary, GI/GU and musculoskeletal review of systems are unremarkable.   
+PAST MEDICAL HISTORY:  Spinal stenosis with a laminectomy at L3, 4 and 5 in January of 2061.  She has had left knee arthroscopy.  She had mild spinal stenosis at T12 to L1, severe at L3/4 and 4/5 with bilateral foraminal disease.  She has had a ten year history of diabetes.  She has hypertension and hypothyroidism.   
+MEDICATIONS:  Synthroid, Premarin, glynase, glucophage, metoprolol and Effexor.  
+ 
+ALLERGIES:  No known drug allergies.  
+ 
+SOCIAL HISTORY:  She is married.  No history of tobacco or alcohol.  
+ 
+FAMILY HISTORY:  Positive for coronary artery disease, breast cancer and diabetes.  
+ 
+PHYSICAL EXAMINATION:  She is a well-appearing, well-nourished, 66 year old female.  Her mental state examination is normal.  Cranial nerves II through XII are intact.  Motor strength is significant for full strength in the upper extremities as well as the lower extremities.  Sensation is intact to all modalities with bilateral lower extremity dysesthesia reported subjectively.  DTR's are symmetric with downgoing toes bilaterally.  Coordination is intact with no axial or appendicular ataxia.   
+ASSESSMENT AND PLAN:  This is a 66 year old right-handed female with history of spinal stenosis status post decompression who has a history of falls.  We will obtain an MRI of her lumbosacral to evaluate that area for any recurrent pathology or new changes.  For her radicular pain will increase her Neurontin 400 q.i.d.  We would like to obtain EMG with nerve conduction studies of the lower extremities to evaluate possible need for reoperation.  The patient will return to clinic after these studies.  The patient was seen and evaluated and management was discussed with the attending.  
+ 
+ 
+_______________________________ 
+Whitney Easterling, M.D.  
+ 
+ 
+ 
+DD:08/28/2064 
+DT:08/29/2064 
+DT:2617      :6415
+ 
+
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2064-08-28" TYPE="DATE" comment="" />
+<NAME id="P1" start="42" end="58" text="UMPHREY, FRANKIE" TYPE="PATIENT" comment="" />
+<ID id="P2" start="66" end="73" text="0942207" TYPE="MEDICALRECORD" comment="" />
+<DATE id="P3" start="87" end="97" text="08/28/2064" TYPE="DATE" comment="" />
+<NAME id="P4" start="101" end="119" text="WHITNEY EASTERLING" TYPE="DOCTOR" comment="" />
+<AGE id="P5" start="218" end="220" text="66" TYPE="AGE" comment="" />
+<DATE id="P6" start="336" end="351" text="January of 2061" TYPE="DATE" comment="" />
+<DATE id="P7" start="518" end="523" text="12/01" TYPE="DATE" comment="" />
+<DATE id="P8" start="1460" end="1475" text="January of 2061" TYPE="DATE" comment="" />
+<AGE id="P9" start="2052" end="2054" text="66" TYPE="AGE" comment="" />
+<AGE id="P10" start="2520" end="2522" text="66" TYPE="AGE" comment="" />
+<NAME id="P11" start="3116" end="3134" text="Whitney Easterling" TYPE="DOCTOR" comment="" />
+<DATE id="P12" start="3152" end="3162" text="08/28/2064" TYPE="DATE" comment="" />
+<DATE id="P13" start="3167" end="3177" text="08/29/2064" TYPE="DATE" comment="" />
+<ID id="P14" start="3179" end="3197" text="DT:2617      :6415" TYPE="IDNUM" comment="" />
+</TAGS>
+</deIdi2b2>

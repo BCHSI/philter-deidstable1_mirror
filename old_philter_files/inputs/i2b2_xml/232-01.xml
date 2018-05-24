@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2097-06-09
+
+
+ 
+
+
+Renal Consult Note
+Quinton Delong,M.D.
+
+
+
+
+CC/ID: Asked to assit in the mangement of Lori Stevens with hypertension, nausea and vomiting.
+
+
+
+
+HISTORY OF PRESENT ILLNESS:
+
+
+
+She is a 62 year old lady with ESRD who has been admitted in the past with nausea, vomiting and severe hypertension. She was treated with BP medications. She has had a CT scan and is seen in dialysis. She is stable on dialysis currently.
+
+
+
+
+
+
+PAST MEDICAL HISTORY:
+
+1.       Diabetes Mellitus x many years.
+2.       History of hypertension x many years.
+3.       History of GI bleeding.
+4.       ESRD secondary to DM on HD x years. On HD Mon/Wed/Fri.
+5.       CAD s/p NSTEMI.
+6.       Meningitis in the past. ( Viral)
+      
+
+
+MEDICATIONS
+
+Unavailable
+
+
+SOCIAL HISTORY:
+
+
+Lives in Nursing Home.
+
+
+
+
+PHYSICAL EXAMINATION:
+
+
+
+
+BP: 159/70  P:  72   R:  16    T=97
+
+
+SKIN:  No rash
+HEENT: Anicteric
+NECK:  Supple. JVP= 6 cm
+CHEST: Left base crackles&gt; right
+COR:   S1 S2 
+ABD:   Benign. No HSM
+EXT: No edema
+
+
+
+
+Labs:
+
+
+Plasma Sodium                    136                       (135-145)      mmol/LPlasma Potassium                 3.9                       (3.4-4.8)      mmol/LPlasma Chloride                  91               L        (100-108)      mmol/LPlasma Carbon Dioxide            29.1                      (23.0-31.9)    mmol/LPlasma Anion GAP                 16               H        (3-15)         mmol/LCalcium                          10.0                      (8.5-10.5)     mg/dlPhosphorus                       4.6              H        (2.6-4.5)      mg/dlMagnesium                        2.0                       (1.4-2.0)      meq/LPlasma Urea Nitrogen             50               H        (8-25)         mg/dlPlasma Creatinine                3.93             H        (0.60-1.50)    mg/dleGFR                             12                                       mL/min/1.73m2Plasma Glucose                   132              H        (70-110)       mg/dlTotal Protein                    8.0                       (6.0-8.3)      g/dlAlbumin                          3.6                       (3.3-5.0)      g/dlGlobulin                         4.4              H        (2.6-4.1)      g/dlDirect Bilirubin                 0.2                       (0-0.4)        mg/dlTotal Bilirubin                  0.4                       (0.0-1.0)      mg/dlAlkaline Phosphatase             345              H        (30-100)       U/LTransaminase-SGPT                9                         (7-30)         U/LAmylase                          54                        (3-100)        units/LTransaminase-SGOT                19                        (9-32)         U/LLipase                           18                        (13-60)        U/L
+
+
+WBC                              15.9             H        (4.5-11.0)     th/cmmHCT                              39.0                      (36.0-46.0)    %HGB                              12.4                      (12.0-16.0)    gm/dlRBC                              4.39                      (4.00-5.20)    mil/cmmPLT                              558              H        (150-400)      th/cummMCV                              89                        (80-100)       flMCH                              28.2                      (26.0-34.0)    pg/rbcMCHC                             31.9                      (31.0-37.0)    g/dlRDW                              20.9             H        (11.5-14.5)    %Poly                             82               H        (40-70)        %Lymphs                           8                L        (22-44)        %Monos                            4                         (4-11)         %EOS                              6                         (0-8)          %Basos                            0                         (0-3)          %Absolute Neuts                   13.18            H        (1.8-7.7)      th/cmmAbsolute Lymphs                  1.20                      (1.0-4.8)      th/cmmAbsolute Monos                   0.58                      (0.2-1.2)      th/mm3Absolute EOS                     0.88             H        (0.1-0.3)      th/cmmAbsolute Basos                   0.02                      (0.0-0.3)      th/cmmAniso                            2+               H        (None)Hypo                             3+               H        (None)Macrocytes                       None                      (None)Microcytes                       1+               H        (None)
+     
+IMPRESSION:
+
+Ms. Stevens is a 64 year old lady with ESRD admitted with hypertension and nausea as well as vomiting. She was quite hypertensive and I would wonder about the effect of BP. She also looks fluid overloaded.
+
+
+PLAN:
+
+
+HD x 3 1/4 hours, 2 K, 2.5 Ca
+Negative 3 liters
+Needs Medication clarification and good BP control.      
+
+
+ Quinton Delong,M.D.
+
+
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2097-06-09" TYPE="DATE" comment="" />
+<NAME id="P1" start="52" end="66" text="Quinton Delong" TYPE="DOCTOR" comment="" />
+<NAME id="P2" start="118" end="130" text="Lori Stevens" TYPE="PATIENT" comment="" />
+<AGE id="P3" start="215" end="217" text="62" TYPE="AGE" comment="" />
+<DATE id="P4" start="645" end="648" text="Mon" TYPE="DATE" comment="" />
+<DATE id="P5" start="649" end="652" text="Wed" TYPE="DATE" comment="" />
+<DATE id="P6" start="653" end="656" text="Fri" TYPE="DATE" comment="" />
+<NAME id="P7" start="4534" end="4541" text="Stevens" TYPE="PATIENT" comment="" />
+<AGE id="P8" start="4547" end="4549" text="64" TYPE="AGE" comment="" />
+<NAME id="P9" start="4855" end="4869" text="Quinton Delong" TYPE="DOCTOR" comment="" />
+</TAGS>
+</deIdi2b2>

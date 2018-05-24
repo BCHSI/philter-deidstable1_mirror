@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2083-07-26
+
+
+
+
+
+INTERNAL MEDICINE ASSOCIATES
+
+SAN FERNANDO HOSPITAL
+
+
+
+Reason for visit   Annual Examination
+
+
+
+Problem List (reviewed)
+
+
+
+Diabetes mellitus MAJOR 
+
+Hypertension MAJOR 
+
+Myocardial infarction MAJOR STATUS POST
+
+Pleural effusion MAJOR 
+
+Weight loss MAJOR 
+
+Health maintenance MAJOR 
+
+Pulmonary embolism MAJOR 
+
+Torticollis 
+
+Blindness 
+
+Congestive heart failure 
+
+Chronic renal insufficiency 
+
+Ventricular tachyarrhythmia 
+
+
+
+Major Problems
+
+Diabetes mellitus
+
+
+
+Hypertension
+
+10/29/81 = cont in good range, 120/80. 
+
+P: Check lyts, CR today on diuretic.
+
+Myocardial infarction STATUS POST
+
+
+
+
+
+Other Problems
+
+Chronic renal insufficiency
+
+
+
+Ventricular tachyarrhythmia
+
+AICD. Dr. Lacy from CCH 7/26/83
+
+
+
+Active Medications
+
+
+
+nph insulin 8u hs dose will change--started 10/21 QTY:1 bottle Refills:3
+
+Insulin syringes ultra fine insulin syringe 100 U---1 box--of 100 refills 3
+
+Ecotrin 325mg PO QD
+
+Prinivil 20mg po qd
+
+Norvasc 5mg po qd
+
+Lipitor 10mg po qd
+
+vitamin e
+
+multivitamins
+
+Glucotrol xl 2.5mg po qd 2 tabs am 1 tab pm
+
+metoprolol 50 mg po 1/2 tid
+
+Lasix 20 mg po qd
+
+isosorbide dinitrate 10 mg po 1 tid
+
+digoxin 0.125 mg po qd
+
+folic acid 1 mg po qd
+
+One touch strips use bid #100 REFILL #12
+
+
+
+Change in therapies and Renewals
+
+nph insulin 8u  hs QTY:1 bottle Refills:3 Start: 10/5/2081 dose will change--started 10/21
+
+Insulin syringes   
+
+
+
+Family history   mother died of unclear reasons in 80's and father in 80's of Alz.
+
+
+
+Social history   Lives with sister, not married. Walks 2-3 miles/day. Retired baker
+
+
+Review of systems   No SOB, Gi or GU issues. Upset about Left abdominal mass (old AICD).
+
+
+
+Physical examination
+
+Pulse   70 and regular
+
+Blood pressure 120/70  
+
+Respiratory rate 16  
+
+Weight 160  
+
+General appearance   Well developed, well nourished, no acute distress.
+
+Chest   CTA B w/o c/w/r. No dullness to precussion, no egophony.
+
+Cor   Reg rate, no murmur
+
+Abdomen   NT/ND, no HSM. Normal active bowel sounds.
+
+Extrem   No clubbing, cyanosis; mild edema
+
+Rectal exam   guaiac negative, nl tone. Prostate without nodules and large size.
+
+Genitalia   descended testes bilaterally, no masses.
+
+
+
+Assessment and plan   Hypertension.  Good control on current medication
+
+Type 2 diabetes mellitus.  I urged to have an annual eye examination for his fasting blood sugar.  His fingerstick today is quite good.  We will check a hemoglobin A1c. AICD checked. Reviewed lipids.. BPH/PSA
+
+
+
+Disposition
+
+RTC 3 months
+
+
+
+Signed electronically by Gary O Xa MD on Aug 5, 2083     
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2083-07-26" TYPE="DATE" comment="" />
+<LOCATION id="P1" start="62" end="83" text="SAN FERNANDO HOSPITAL" TYPE="HOSPITAL" comment="" />
+<DATE id="P2" start="508" end="516" text="10/29/81" TYPE="DATE" comment="" />
+<NAME id="P3" start="712" end="716" text="Lacy" TYPE="DOCTOR" comment="" />
+<LOCATION id="P4" start="722" end="725" text="CCH" TYPE="HOSPITAL" comment="" />
+<DATE id="P5" start="726" end="733" text="7/26/83" TYPE="DATE" comment="" />
+<DATE id="P6" start="803" end="808" text="10/21" TYPE="DATE" comment="" />
+<DATE id="P7" start="1321" end="1330" text="10/5/2081" TYPE="DATE" comment="" />
+<DATE id="P8" start="1357" end="1362" text="10/21" TYPE="DATE" comment="" />
+<AGE id="P9" start="1438" end="1442" text="80's" TYPE="AGE" comment="" />
+<AGE id="P10" start="1457" end="1461" text="80's" TYPE="AGE" comment="" />
+<PROFESSION id="P11" start="1551" end="1556" text="baker" TYPE="PROFESSION" comment="" />
+<NAME id="P12" start="2500" end="2509" text="Gary O Xa" TYPE="DOCTOR" comment="" />
+<DATE id="P13" start="2516" end="2527" text="Aug 5, 2083" TYPE="DATE" comment="" />
+</TAGS>
+</deIdi2b2>

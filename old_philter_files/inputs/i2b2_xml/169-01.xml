@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2074-09-21
+
+MICHAEL NOLAND
+
+FWH Unit No:  233-87-20
+
+
+
+MINERAL SPRINGS CLINIC
+
+
+
+ADULT MEDICINE
+
+
+
+
+
+Date:  September 21, 2074
+
+
+
+46-year-old male presenting for follow up of his blood pressure. Since his last visit a month ago, he has been exercising, going out for walks every other day, compliant with medications. No new complaints for today. 
+
+
+
+PAST MEDICAL HISTORY:
+
+
+
+(1)	Obesity.
+
+(2)	Hypertension.
+
+(3)	History of glucose intolerance.
+
+(4)	Mild hyperlipidemia.
+
+
+
+MEDICATIONS: Lisinopril 40 mg q.d., Procardia XL 90 mg q.d. 
+
+
+
+PHYSICAL EXAMINATION: Blood pressure today initially 190/108. Subsequently, 170/110. Rest of exam was deferred as he had an exam a month ago. 
+
+
+
+ASSESSMENT & PLAN: 
+
+
+
+(1)	Hypertension. Outpatient readings support today's reading as the patient as an automatic blood pressure machine. Will add hydrochlorothiazide 25 mg q.d. and come back in 4 days. A recent urinalysis showed 1+ protein. He will come back to check an early AM urinalysis to reassess for presence of protein. Follow up at next visit.
+
+(2)	History of glucose intolerance. However, he had a normal fasting sugar of 104 and a hemoglobin A1C of 6.20. Mean glucose of 121. 
+
+(3)	History of mild hyperlipidemia. However, cholesterol now of 186, HDL 46, LDL 105. Cardiac risk ratio 4.0. Continue with weight loss. 
+
+
+
+Quince Ezell, M.D.
+
+
+
+QE/mcclain/newsom
+
+
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2074-09-21" TYPE="DATE" comment="" />
+<NAME id="P1" start="28" end="42" text="MICHAEL NOLAND" TYPE="PATIENT" comment="" />
+<LOCATION id="P2" start="44" end="47" text="FWH" TYPE="HOSPITAL" comment="" />
+<ID id="P3" start="58" end="67" text="233-87-20" TYPE="MEDICALRECORD" comment="" />
+<LOCATION id="P4" start="71" end="93" text="MINERAL SPRINGS CLINIC" TYPE="HOSPITAL" comment="" />
+<DATE id="P5" start="124" end="142" text="September 21, 2074" TYPE="DATE" comment="" />
+<AGE id="P6" start="146" end="148" text="46" TYPE="AGE" comment="" />
+<NAME id="P7" start="1333" end="1345" text="Quince Ezell" TYPE="DOCTOR" comment="" />
+<NAME id="P8" start="1355" end="1357" text="QE" TYPE="DOCTOR" comment="" />
+<NAME id="P9" start="1358" end="1365" text="mcclain" TYPE="DOCTOR" comment="" />
+<NAME id="P10" start="1366" end="1372" text="newsom" TYPE="DOCTOR" comment="" />
+</TAGS>
+</deIdi2b2>

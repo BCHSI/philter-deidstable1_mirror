@@ -184,49 +184,49 @@ def main():
                 processed_count += 1
                 if_update = True
         else:
-            reply = input('Please make sure all files are ready.'
-                        'Press Enter to process or others to quit.> ')
-            if reply == '':
-                if if_recursive:
-                    for f in glob.glob(file1path + "/**/*.txt", recursive=True):
-                        head, tail = os.path.split(f)
-                        filename = '.'.join(tail.split('.')[:-1])
-                        #if filename != '':
-                            # note_id = re.findall(r'\d+', tail)[0]
-                        phi_reduced_dict[filename] = f
-                        processed_count += 1
-                    for f in glob.glob(file2path + "/**/*.ano", recursive=True):
-                        head, tail = os.path.split(f)
-                        filename = '.'.join(tail.split('.')[:-1])
-                        #if re.findall(r'\d+', tail) != []:
-                        #    note_id = re.findall(r'\d+', tail)[0]
-                        annotation_dict[filename] = f
+            # reply = input('Please make sure all files are ready.'
+            #             'Press Enter to process or others to quit.> ')
+            # if reply == '':
+            if if_recursive:
+                for f in glob.glob(file1path + "/**/*.txt", recursive=True):
+                    head, tail = os.path.split(f)
+                    filename = '.'.join(tail.split('.')[:-1])
+                    #if filename != '':
+                        # note_id = re.findall(r'\d+', tail)[0]
+                    phi_reduced_dict[filename] = f
+                    processed_count += 1
+                for f in glob.glob(file2path + "/**/*.ano", recursive=True):
+                    head, tail = os.path.split(f)
+                    filename = '.'.join(tail.split('.')[:-1])
+                    #if re.findall(r'\d+', tail) != []:
+                    #    note_id = re.findall(r'\d+', tail)[0]
+                    annotation_dict[filename] = f
+            else:
+                for f in glob.glob(file1path + "/*.txt"):
+                    head, tail = os.path.split(f)
+                    filename = '.'.join(tail.split('.')[:-1])
+                    #if re.findall(r'\d+', tail) != []:
+                       # note_id = re.findall(r'\d+', tail)[0]
+                    phi_reduced_dict[filename] = f
+                    processed_count += 1
+                for f in glob.glob(file2path + "/*.ano"):
+                    head, tail = os.path.split(f)
+                    filename = '.'.join(tail.split('.')[:-1])
+                    #if re.findall(r'\d+', tail) != []:
+                    #    note_id = re.findall(r'\d+', tail)[0]
+                    annotation_dict[filename] = f
+
+            for i in phi_reduced_dict.keys():
+                if i in annotation_dict.keys():
+                    summary_dict = comparison(i, phi_reduced_dict[i], annotation_dict[i])
+                    summary_dict_all[i] = summary_dict
+                    summary_text += output
+                    if_update = True
                 else:
-                    for f in glob.glob(file1path + "/*.txt"):
-                        head, tail = os.path.split(f)
-                        filename = '.'.join(tail.split('.')[:-1])
-                        #if re.findall(r'\d+', tail) != []:
-                           # note_id = re.findall(r'\d+', tail)[0]
-                        phi_reduced_dict[filename] = f
-                        processed_count += 1
-                    for f in glob.glob(file2path + "/*.ano"):
-                        head, tail = os.path.split(f)
-                        filename = '.'.join(tail.split('.')[:-1])
-                        #if re.findall(r'\d+', tail) != []:
-                        #    note_id = re.findall(r'\d+', tail)[0]
-                        annotation_dict[filename] = f
+                    miss_file.append(phi_reduced_dict[i])
 
-                for i in phi_reduced_dict.keys():
-                    if i in annotation_dict.keys():
-                        summary_dict = comparison(i, phi_reduced_dict[i], annotation_dict[i])
-                        summary_dict_all[i] = summary_dict
-                        summary_text += output
-                        if_update = True
-                    else:
-                        miss_file.append(phi_reduced_dict[i])
-
-                with open(foutpath + "/summary_dict.pkl", 'wb') as fout:
-                    pickle.dump(summary_dict_all, fout)
+            with open(foutpath + "/summary_dict.pkl", 'wb') as fout:
+                pickle.dump(summary_dict_all, fout)
 
         print('{:d} out of {:d} phi reduced notes have been compared.'.format(processed_count-len(miss_file), processed_count))
         print('{} files have not found corresponding annotation as below.'.format(len(miss_file)))

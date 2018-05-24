@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2072-04-24
+
+Reason for Visit	
+
+Mr. Whitehead is here for FU of his many issues.
+
+
+
+
+
+Problems	  
+
+benign prostatic hypertrophy	      
+
+PSA was 2.9 in 8/69 and 3.2 in 8/70 and 3.0 in 2/72.   He has done well on flomax and now sees Dr. Pena.
+
+
+
+hyperlipidemia	      
+
+now on lipitor 40 mg qhs.  He has NIDDM and HTN.  His lipid profile from 4/71 showed a LDL of 103.  LFT were normal.  Will check lab  work and continue med.  
+
+Elevated blood sugar	      
+
+BS was 191 in 11/1/69 and was in similar range during his hospitalization in Montreal Medical.  He has been on meds for NIDDM.  He could not tolerate high dose of glucophage and has seen Dr. Lozano in diabetic unit.  His HBA1c was 7.5 in 6/71 and 7.6 in 9/71 on glyburide 5 mg bid and glucophage XR 500 mg qd.   He is on zestoretic.  Little rationale to check for microalbuminuria as he is already on ace-inh.  His lipids are controlled with diet and lipitor.  He has no neuropathic sx's and sees ophtho regularly.  
+
+HYPERTENSION	      
+
+Now on zestoretic 20/25 bid + atenolol 50 mg qd.  He has significant white coat component.  BP is again 145/80 and is lower at home.  Pulse is 70 but it again sped up when he was being examined.
+
+
+
+LOW BACK PAIN	      
+
+he had prolonged discogenic back pain in 1/2070 and could not get appt with NAMG orthopedic/back surgeon and went to Montreal Medical Center.  He underwent L4/5 lamenictomy in 2/2070.  He has persistent right-lower back pain and has seen Drs. Conley and Sheehan.  A myleogram done on 8/5/71 showed degenerative disc disease with moderate spinal stenosis at L4/5.  He continues to have chronic low back pain in the right hip and right anterior thigh.  He exercises regularly and has not benefitted from prior epidural injection.  Dr. Sheehan felt that pain may be from some instability vs scar tissue from prior surgery.  Fusion surgery was discussed but Mr. Whitehead is not too keen on it. [12/25/71]
+
+
+
+still has back pain but not ready for fusion surgery yet.
+
+
+
+Review of Systems	
+
+Otherwise negative.
+
+
+
+
+
+Vital Signs	    
+
+Pulse:	 70   Regular
+
+Weight:	 189   Pounds
+
+Blood Pressure:	 145/80   Left Arm
+
+
+
+Physical Exam	  
+
+Chest	
+
+clear
+
+Cor/Cardiac	
+
+s1s2 s4
+
+Abdomen	
+
+soft and  nontender, no masses or organomegaly, normal bowel sounds
+
+Extremity	
+
+no edema noted, pulses are 1+
+
+
+
+Medications	  
+
+MVI (MULTIVITAMINS)	 1CAPSULE PO QD
+
+ASPIRIN (ACETYLSALICYLIC ACID)	 81MG PO QD
+
+FLOMAX (TAMSULOSIN)	 0.4MG PO QD
+
+LIPITOR (ATORVASTATIN)	 40MG PO QHS
+
+ZESTORETIC 20-25 (LISINOPRIL/HYDROCLOROTH...	 20/25 PO QD
+
+GLUCOPHAGE XR (METFORMIN XR)	 500MG 1 Tablet(s) PO QD
+
+Prilosec SA	 20MG PO QD
+
+ATENOLOL	 50MG 1 Tablet(s) PO QD
+
+MICRONASE (GLYBURIDE)	 5MG 1 Tablet(s) PO BID
+
+
+
+Disposition and Plans	
+
+Follow-up in 9/72.  Will contact him with results of lab work.
+
+
+
+
+
+
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2072-04-24" TYPE="DATE" comment="" />
+<NAME id="P1" start="51" end="60" text="Whitehead" TYPE="PATIENT" comment="" />
+<DATE id="P2" start="166" end="170" text="8/69" TYPE="DATE" comment="" />
+<DATE id="P3" start="182" end="186" text="8/70" TYPE="DATE" comment="" />
+<DATE id="P4" start="198" end="202" text="2/72" TYPE="DATE" comment="" />
+<NAME id="P5" start="250" end="254" text="Pena" TYPE="DOCTOR" comment="" />
+<DATE id="P6" start="355" end="359" text="4/71" TYPE="DATE" comment="" />
+<DATE id="P7" start="485" end="492" text="11/1/69" TYPE="DATE" comment="" />
+<LOCATION id="P8" start="548" end="564" text="Montreal Medical" TYPE="HOSPITAL" comment="" />
+<NAME id="P9" start="662" end="668" text="Lozano" TYPE="DOCTOR" comment="" />
+<DATE id="P10" start="709" end="713" text="6/71" TYPE="DATE" comment="" />
+<DATE id="P11" start="725" end="729" text="9/71" TYPE="DATE" comment="" />
+<DATE id="P12" start="1271" end="1277" text="1/2070" TYPE="DATE" comment="" />
+<LOCATION id="P13" start="1306" end="1310" text="NAMG" TYPE="HOSPITAL" comment="" />
+<LOCATION id="P14" start="1347" end="1370" text="Montreal Medical Center" TYPE="HOSPITAL" comment="" />
+<DATE id="P15" start="1406" end="1412" text="2/2070" TYPE="DATE" comment="" />
+<NAME id="P16" start="1473" end="1479" text="Conley" TYPE="DOCTOR" comment="" />
+<NAME id="P17" start="1484" end="1491" text="Sheehan" TYPE="DOCTOR" comment="" />
+<DATE id="P18" start="1514" end="1520" text="8/5/71" TYPE="DATE" comment="" />
+<NAME id="P19" start="1763" end="1770" text="Sheehan" TYPE="DOCTOR" comment="" />
+<NAME id="P20" start="1888" end="1897" text="Whitehead" TYPE="PATIENT" comment="" />
+<DATE id="P21" start="1922" end="1930" text="12/25/71" TYPE="DATE" comment="" />
+<DATE id="P22" start="2749" end="2753" text="9/72" TYPE="DATE" comment="" />
+</TAGS>
+</deIdi2b2>

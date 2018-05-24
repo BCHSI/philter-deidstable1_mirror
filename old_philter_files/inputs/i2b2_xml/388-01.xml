@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2071-05-31
+
+Walk-in clinic                                Xian, Imogene
+
+                                              81376761
+
+                                              5-31-71
+
+ 
+
+ 
+
+HPI: Ms. Xian is a 74-year-old female who presented to clinic this 
+
+evening for follow up of her diabetes. Patient was last seen in clinic in 
+
+11-70 after which time she left for Ghana for the past six months. She 
+
+returned this past Friday but has since run out of insulin. She states 
+
+that she has been feeling well and has not had any problems but does not 
+
+know the amount of insulin that she has been taking. It has been 
+
+administered to her by a friend in Ghana. Our records show that when 
+
+she left Ghana she was on a 70/30 of Humulin, 20 units per day and 
+
+also 600mg of Rezulin and 20mg q.d. of Lipitor.
+
+ 
+
+REVIEW OF SYSTEMS: Review of systems is positive for insulin dependent 
+
+diabetes mellitus but other than that Ms. Xian is a fairly healthy woman. 
+
+ 
+
+PHYSICAL EXAMINATION: On physical exam this evening her pulse is 80. Blood 
+
+pressure was 152/80 in her left arm. Blood sugar was 262. It should be 
+
+noted that she has not had any insulin since Sunday. Her weight was 116 1/2 
+
+which reflects a 1/2 lb. weight loss since 11-70. Tonight her heart had a 
+
+regular rate and rhythm at 80. Her neck veins were flat. Her lungs were 
+
+clear to auscultation bilaterally and there was no evidence of peripheral 
+
+edema. 
+
+ 
+
+ASSESSMENT: Insulin dependent diabetes mellitus. 
+
+ 
+
+PLAN: LFTs, A1C, basic panel this evening. Glucotrol 10mg dispense No. 60 
+
+with 1 refill b.i.d. A VNA referral for medication management and patient 
+
+was instructed to return to the clinic on Saturday 6-05 for repeat blood 
+
+sugar and also to bring her glucometer at that time so that it could be 
+
+calibrated correctly. 
+
+ 
+
+ 
+
+________________________________
+
+Grace Vann, R.N.P.                                                  
+
+ 
+
+DG:WA:1749                                                              
+
+DD:5-31-71                                                               
+
+DT:6-1-71                                                               
+
+DV:5-31-71                                                               
+
+
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2071-05-31" TYPE="DATE" comment="" />
+<NAME id="P2" start="74" end="87" text="Xian, Imogene" TYPE="PATIENT" comment="" />
+<ID id="P3" start="135" end="143" text="81376761" TYPE="MEDICALRECORD" comment="" />
+<DATE id="P4" start="191" end="198" text="5-31-71" TYPE="DATE" comment="" />
+<NAME id="P5" start="215" end="219" text="Xian" TYPE="PATIENT" comment="" />
+<AGE id="P6" start="225" end="227" text="74" TYPE="AGE" comment="" />
+<DATE id="P8" start="351" end="356" text="11-70" TYPE="DATE" comment="" />
+<LOCATION id="P9" start="387" end="392" text="Ghana" TYPE="COUNTRY" comment="" />
+<DATE id="P10" start="443" end="449" text="Friday" TYPE="DATE" comment="" />
+<LOCATION id="P11" start="674" end="679" text="Ghana" TYPE="COUNTRY" comment="" />
+<LOCATION id="P12" start="719" end="724" text="Ghana" TYPE="COUNTRY" comment="" />
+<NAME id="P13" start="946" end="950" text="Xian" TYPE="PATIENT" comment="" />
+<DATE id="P14" start="1178" end="1184" text="Sunday" TYPE="DATE" comment="" />
+<DATE id="P15" start="1254" end="1259" text="11-70" TYPE="DATE" comment="" />
+<DATE id="P16" start="1697" end="1705" text="Saturday" TYPE="DATE" comment="" />
+<DATE id="P17" start="1706" end="1710" text="6-05" TYPE="DATE" comment="" />
+<NAME id="P18" start="1868" end="1878" text="Grace Vann" TYPE="DOCTOR" comment="" />
+<NAME id="P19" start="1941" end="1943" text="DG" TYPE="DOCTOR" comment="" />
+<NAME id="P20" start="1944" end="1946" text="WA" TYPE="DOCTOR" comment="" />
+<ID id="P21" start="1947" end="1951" text="1749" TYPE="IDNUM" comment="" />
+<DATE id="P22" start="2018" end="2025" text="5-31-71" TYPE="DATE" comment="" />
+<DATE id="P23" start="2093" end="2099" text="6-1-71" TYPE="DATE" comment="" />
+<DATE id="P24" start="2167" end="2174" text="5-31-71" TYPE="DATE" comment="" />
+</TAGS>
+</deIdi2b2>

@@ -178,73 +178,73 @@ def main():
                 summary_text += output
                 if_update = True
         else:
-            reply = input('Please make sure all files are ready.'
-                        'Press Enter to process or others to quit.> ')
-            if reply == '':
-                if if_recursive:
-                    for f in glob.glob(file1path + "/**/*.txt", recursive=True):
-                        head, tail = os.path.split(f)
-                        filename = '.'.join(tail.split('.')[:-1])
-                        #if filename != '':
-                            # note_id = re.findall(r'\d+', tail)[0]
-                        phi_reduced_dict[filename] = f
-                        processed_count += 1
-                    for f in glob.glob(file2path + "/**/*.ano", recursive=True):
-                        head, tail = os.path.split(f)
-                        filename = '.'.join(tail.split('.')[:-1])
-                        #if re.findall(r'\d+', tail) != []:
-                        #    note_id = re.findall(r'\d+', tail)[0]
-                        annotation_dict[filename] = f
-                else:
-                    for f in glob.glob(file1path + "/*.txt"):
-                        head, tail = os.path.split(f)
-                        filename = '.'.join(tail.split('.')[:-1])
-                        #if re.findall(r'\d+', tail) != []:
-                           # note_id = re.findall(r'\d+', tail)[0]
-                        phi_reduced_dict[filename] = f
-                        processed_count += 1
-                    for f in glob.glob(file2path + "/*.ano"):
-                        head, tail = os.path.split(f)
-                        filename = '.'.join(tail.split('.')[:-1])
-                        #if re.findall(r'\d+', tail) != []:
-                        #    note_id = re.findall(r'\d+', tail)[0]
-                        annotation_dict[filename] = f
-
-                for i in phi_reduced_dict.keys():
-                    if i in annotation_dict.keys():
-                        #print(phi_reduced_dict[i])
-                        #print(annotation_dict[i])
-                        summary_dict, output = comparison(i, phi_reduced_dict[i], annotation_dict[i], allpositive_dict)
-                        summary_dict_all[i] = summary_dict
-                        summary_text += output
-                        if_update = True
-                    else:
-                        miss_file.append(phi_reduced_dict[i])
-
-                print('{:d} out of {:d} phi reduced notes have been compared.'.format(processed_count-len(miss_file), processed_count))
-                print('{} files have not found corresponding annotation as below.'.format(len(miss_file)))
-                #print('\n'.join(miss_file)+'\n')
-                if processed_count != 0:
-                    for k,v in summary_dict_all.items():
-                        TP_all += v['true_positive']
-                        FP_all += len(v['false_positive'])
-                        FN_all += len(v['false_negative'])
-
-                    output = "{} notes have been evaulated.\n".format(processed_count-len(miss_file))
-                    output += "True Positive in all notes: " + str(TP_all) + '\n'
-                    output += "False Positive in all notes: " + str(FP_all) + '\n'
-                    output += "False Negative in all notes: " + str(FN_all) + '\n'
-                    if TP_all == 0 and FN_all == 0:
-                        output += "Recall: N/A\n"
-                    else:
-                        output += "Recall: {:.2%}".format(TP_all/(TP_all+FN_all)) + '\n'
-                    if TP_all == 0 and FP_all == 0:
-                        output += "Precision: N/A\n"
-                    else:
-                        output += "Precision: {:.2%}".format(TP_all/(TP_all+FP_all)) + '\n'
-                    summary_text += output
+            # reply = input('Please make sure all files are ready.'
+            #             'Press Enter to process or others to quit.> ')
+            # if reply == '':
+            if if_recursive:
+                for f in glob.glob(file1path + "/**/*.txt", recursive=True):
+                    head, tail = os.path.split(f)
+                    filename = '.'.join(tail.split('.')[:-1])
+                    #if filename != '':
+                        # note_id = re.findall(r'\d+', tail)[0]
+                    phi_reduced_dict[filename] = f
+                    processed_count += 1
+                for f in glob.glob(file2path + "/**/*.ano", recursive=True):
+                    head, tail = os.path.split(f)
+                    filename = '.'.join(tail.split('.')[:-1])
+                    #if re.findall(r'\d+', tail) != []:
+                    #    note_id = re.findall(r'\d+', tail)[0]
+                    annotation_dict[filename] = f
             else:
-                print("Please re-run the script after all the files are ok.")
+                for f in glob.glob(file1path + "/*.txt"):
+                    head, tail = os.path.split(f)
+                    filename = '.'.join(tail.split('.')[:-1])
+                    #if re.findall(r'\d+', tail) != []:
+                       # note_id = re.findall(r'\d+', tail)[0]
+                    phi_reduced_dict[filename] = f
+                    processed_count += 1
+                for f in glob.glob(file2path + "/*.ano"):
+                    head, tail = os.path.split(f)
+                    filename = '.'.join(tail.split('.')[:-1])
+                    #if re.findall(r'\d+', tail) != []:
+                    #    note_id = re.findall(r'\d+', tail)[0]
+                    annotation_dict[filename] = f
+
+            for i in phi_reduced_dict.keys():
+                if i in annotation_dict.keys():
+                    #print(phi_reduced_dict[i])
+                    #print(annotation_dict[i])
+                    summary_dict, output = comparison(i, phi_reduced_dict[i], annotation_dict[i], allpositive_dict)
+                    summary_dict_all[i] = summary_dict
+                    summary_text += output
+                    if_update = True
+                else:
+                    miss_file.append(phi_reduced_dict[i])
+
+            print('{:d} out of {:d} phi reduced notes have been compared.'.format(processed_count-len(miss_file), processed_count))
+            print('{} files have not found corresponding annotation as below.'.format(len(miss_file)))
+            #print('\n'.join(miss_file)+'\n')
+            if processed_count != 0:
+                for k,v in summary_dict_all.items():
+                    TP_all += v['true_positive']
+                    FP_all += len(v['false_positive'])
+                    FN_all += len(v['false_negative'])
+
+                output = "{} notes have been evaulated.\n".format(processed_count-len(miss_file))
+                output += "True Positive in all notes: " + str(TP_all) + '\n'
+                output += "False Positive in all notes: " + str(FP_all) + '\n'
+                output += "False Negative in all notes: " + str(FN_all) + '\n'
+                if TP_all == 0 and FN_all == 0:
+                    output += "Recall: N/A\n"
+                else:
+                    output += "Recall: {:.2%}".format(TP_all/(TP_all+FN_all)) + '\n'
+                if TP_all == 0 and FP_all == 0:
+                    output += "Precision: N/A\n"
+                else:
+                    output += "Precision: {:.2%}".format(TP_all/(TP_all+FP_all)) + '\n'
+                summary_text += output
+        # else:
+        #     print("Please re-run the script after all the files are ok.")
 
         print(output)
         if if_update:

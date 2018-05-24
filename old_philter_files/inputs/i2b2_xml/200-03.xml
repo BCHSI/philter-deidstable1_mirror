@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2171-09-20
+
+
+
+09/20/2171
+
+
+
+
+
+
+Dr. Charles Calhoun     
+479 Clairmoor Drive 
+Athina, GA 39341
+
+
+
+
+
+RE: HEATH, QUINTEN M
+      MRN: 8059475
+      DOB: 08/02/2095
+
+
+Dear Dr. Calhoun;
+
+
+We had the pleasure of seeing your patient Quinten Heath today in Internal Medicine in followup for osteoporosis and hypogonadism. 
+
+
+As you know Mr. Heat is a pleasant 76-year-old man with a history of esophageal cancer status post surgery in 2169, chemotherapy and radiation who had back pain prompting imaging that revealed several vertebral compression fractures and his BMD was consistent with osteoporosis with a T score of minus 4.2 in the lumbar spine and minus 2.3 in the femoral neck. 
+
+
+We. started zoledronic acid IV in 05/2171 that he tolerated fine. 
+
+
+In addition, we discovered primary hypogonadism with testosterone levels around 45 mg/dL and elevated FSH and LH levels. We started AndroGel therapy for testosterone replacement and appeared that he is taking every day.  He does not really feel any better or stronger with this medication. 
+
+
+PAST MEDICAL HISTORY: 
+1. Osteoporosis. 
+2. Hypogonadism. 
+3. History of esophageal cancer status post esophagectomy in 2169, adjuvant chemotherapy and radiation therapy. 
+4. Gastroesophageal reflux disease. 
+5. Hypertension. 
+6. Diabetes type 2. 
+7. Carotid artery disease, left. 
+8. Hypercholesterolemia. 
+9. Status post AAA repair in 2165. 
+10. Coronary artery disease with status post stent. 
+
+
+REVIEW OF SYSTEMS: He is anxious because he has some swallowing problems and fears that his esophageal disease is acting up and he is anticipating a CAT scan in a few days. 
+
+
+MEDICATIONS: Tricor, metoprolol, Prilosec, Lipitor, aspirin, Plavix, Isordil, Zoloft, vitamin C, Centrum Caltrate plus D 600 mg twice a day, zoledronic acid 4 mg IV once a year and AndroGel 5 grams once a day. 
+
+
+ALLERGIES: Tape. 
+
+
+SOCIAL HISTORY: He is married and has 3 children. 
+
+
+Vital signs: Blood pressure 118/48, pulse 68, weight 136 pounds. Height 5 feet 4 inches. 
+
+
+LABORATORY EVALUATION: His testosterone level on AndroGel is normal at 292 mg/dL (normal 195-1138) on 09/13/2171. His hematocrit is 39. It was 37 in 02/2171.. Platelets are 179,000. White count 4.8. 
+
+
+In summary, Mr. Heath is a 76-year-old man with osteoporosis and compression fractures probably secondary to hypogonadism and therapy for esophageal cancer. The cause of hypogonadism is probably the chemotherapy. I asked him again to see a urologist to rule out other causes of primary hypogonadism. 
+
+
+He will continue the current treatment with calcium, vitamin D, testosterone and antiresorptive therapy of his yearly zoledronic acid. 
+We will repeat a BMD in 2 years from now. 
+
+
+Please let me know if you have any questions. 
+
+
+Yours sincerely, 
+
+
+
+
+
+
+___________________________
+Vincent Voorhees, M.D.
+
+
+
+
+
+
+cc:
+Quinten Heath, 976 Clinton Street, Gardnerville Ranchos, GA 79269
+Dr. Quebedeaux
+Dr. Hendricks
+
+
+DD: 09/20/2171
+TD: 09/21/2171 16:37:30
+TR: 8190465
+BackJob ID:  326372
+VoiceJob ID:  91587262
+
+
+
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2171-09-20" TYPE="DATE" comment="" />
+<DATE id="P1" start="30" end="40" text="09/20/2171" TYPE="DATE" comment="" />
+<NAME id="P2" start="51" end="66" text="Charles Calhoun" TYPE="DOCTOR" comment="" />
+<LOCATION id="P3" start="72" end="91" text="479 Clairmoor Drive" TYPE="STREET" comment="" />
+<LOCATION id="P4" start="93" end="99" text="Athina" TYPE="CITY" comment="" />
+<LOCATION id="P5" start="101" end="103" text="GA" TYPE="STATE" comment="" />
+<LOCATION id="P6" start="104" end="109" text="39341" TYPE="ZIP" comment="" />
+<NAME id="P7" start="119" end="135" text="HEATH, QUINTEN M" TYPE="PATIENT" comment="" />
+<ID id="P8" start="147" end="154" text="8059475" TYPE="MEDICALRECORD" comment="" />
+<DATE id="P9" start="166" end="176" text="08/02/2095" TYPE="DATE" comment="" />
+<NAME id="P10" start="188" end="195" text="Calhoun" TYPE="DOCTOR" comment="" />
+<NAME id="P11" start="242" end="255" text="Quinten Heath" TYPE="PATIENT" comment="" />
+<NAME id="P13" start="349" end="353" text="Heat" TYPE="PATIENT" comment="" />
+<AGE id="P14" start="368" end="370" text="76" TYPE="AGE" comment="" />
+<DATE id="P15" start="443" end="447" text="2169" TYPE="DATE" comment="" />
+<DATE id="P16" start="731" end="738" text="05/2171" TYPE="DATE" comment="" />
+<DATE id="P17" start="1179" end="1183" text="2169" TYPE="DATE" comment="" />
+<DATE id="P18" start="1396" end="1400" text="2165" TYPE="DATE" comment="" />
+<DATE id="P19" start="2114" end="2124" text="09/13/2171" TYPE="DATE" comment="" />
+<DATE id="P20" start="2161" end="2168" text="02/2171" TYPE="DATE" comment="" />
+<NAME id="P21" start="2230" end="2235" text="Heath" TYPE="PATIENT" comment="" />
+<AGE id="P22" start="2241" end="2243" text="76" TYPE="AGE" comment="" />
+<NAME id="P23" start="2799" end="2815" text="Vincent Voorhees" TYPE="DOCTOR" comment="" />
+<NAME id="P24" start="2832" end="2845" text="Quinten Heath" TYPE="PATIENT" comment="" />
+<LOCATION id="P25" start="2847" end="2865" text="976 Clinton Street" TYPE="STREET" comment="" />
+<LOCATION id="P26" start="2867" end="2887" text="Gardnerville Ranchos" TYPE="CITY" comment="" />
+<LOCATION id="P27" start="2889" end="2891" text="GA" TYPE="STATE" comment="" />
+<LOCATION id="P28" start="2892" end="2897" text="79269" TYPE="ZIP" comment="" />
+<NAME id="P29" start="2902" end="2912" text="Quebedeaux" TYPE="DOCTOR" comment="" />
+<NAME id="P30" start="2917" end="2926" text="Hendricks" TYPE="DOCTOR" comment="" />
+<DATE id="P31" start="2933" end="2943" text="09/20/2171" TYPE="DATE" comment="" />
+<DATE id="P32" start="2948" end="2958" text="09/21/2171" TYPE="DATE" comment="" />
+<ID id="P33" start="2972" end="2979" text="8190465" TYPE="IDNUM" comment="" />
+<ID id="P34" start="2993" end="2999" text="326372" TYPE="IDNUM" comment="" />
+<ID id="P35" start="3014" end="3022" text="91587262" TYPE="IDNUM" comment="" />
+</TAGS>
+</deIdi2b2>
