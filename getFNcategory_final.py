@@ -2,6 +2,7 @@ import pickle
 import pandas as pd
 import os
 import sys
+import json
 
 
 def getcategory(summary, anno_path):
@@ -145,7 +146,13 @@ def main():
     
     fn_correction_path = sys.argv[3]
     FN_dict = getcategory(summary, anno_path)
+    
+    for subdict in FN_dict:
+        print(subdict)
+        print(len(results[subdict]))
+    
+    out_path = summary_path.split("summary_dict.pkl")[0] + 'FN_dict.json'  
 
-    with open('FN_dict.pkl', 'wb') as fout:
+    with open(out_path, 'wb') as fout:
         pickle.dump(FN_dict, fout)
 
