@@ -36,6 +36,7 @@ def getcategory(summary, anno_path, fn_correction_path):
         phi_category = category_dict[fn_label]
         FN_dict[phi_category].append(fn_unlabeled)
 
+    phi_counter = 0
     for (anno_file, results_dict) in summary.items():
         finpath = os.path.join(anno_path, anno_file + '.ano')
         # load annotation    
@@ -48,7 +49,7 @@ def getcategory(summary, anno_path, fn_correction_path):
             FP_list = results_dict['false_positive']  
             FN_list = results_dict['false_negative']
             
-
+            phi_counter += len(results_dict['false_negative'])
             # Get plain anno text
             anno_text = [item[0] for item in anno]
 
@@ -97,6 +98,7 @@ def getcategory(summary, anno_path, fn_correction_path):
     #print('False Negatives:',len(FN_dict['False Negatives']))
 
     return FN_dict
+    print(phi_counter)
 
         # Get 
 
