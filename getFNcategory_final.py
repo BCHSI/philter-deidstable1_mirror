@@ -19,8 +19,8 @@ def getcategory(summary, anno_path, fn_correction_path):
     # anno_path = '/media/DataHD/philter-annotations/pooneh/pooneh-done'
 
 
-    FN_dict = {'Name FNs':[], 'Location FNs':[], 'Date FNs':[], 'Contact FNs':[], 'ID FNs':[], 'Age(>90) FNs':[], 'Not PHI':[],
-                'True Negatives':[], 'True Positives':[], 'False Positives':[]}
+    FN_dict = {'Name FNs':[], 'Location FNs':[], 'Date FNs':[], 'Contact FNs':[], 'ID FNs':[], 'Age(>90) FNs':[], 'Not PHI':[]}
+    
     category_dict = {'0':'Not PHI','o':'Not PHI',
                      'n':'Name FNs', 'l':'Location FNs', 'd':'Date FNs',
                      'c':'Contact FNs', 'i':'ID FNs', 'a':'Age(>90) FNs'}
@@ -85,15 +85,15 @@ def getcategory(summary, anno_path, fn_correction_path):
                         TN_list.append(annotation[0])
 
             
-            FN_dict['True Negatives'] = FN_dict['True Negatives'] + TN_list    
-            FN_dict['True Positives'] = FN_dict['True Positives'] + TP_list
-            FN_dict['False Positives'] = FN_dict['False Positives'] + FP_list
+            # FN_dict['True Negatives'] = FN_dict['True Negatives'] + TN_list    
+            # FN_dict['True Positives'] = FN_dict['True Positives'] + TP_list
+            # FN_dict['False Positives'] = FN_dict['False Positives'] + FP_list
     
 
-    print('True Negatives:',len(FN_dict['True Negatives']))
-    print('True Positives:',len(FN_dict['True Positives']))
-    print('False Positives:',len(FN_dict['False Positives']))
-    print('False Negatives:',len(FN_dict['Name FNs'])+len(FN_dict['Location FNs'])+len(FN_dict['Date FNs'])+len(FN_dict['Contact FNs'])+len(FN_dict['ID FNs'])+len(FN_dict['Age(>90) FNs']))
+    # print('True Negatives:',len(FN_dict['True Negatives']))
+    # print('True Positives:',len(FN_dict['True Positives']))
+    # print('False Positives:',len(FN_dict['False Positives']))
+    # print('False Negatives:',len(FN_dict['Name FNs'])+len(FN_dict['Location FNs'])+len(FN_dict['Date FNs'])+len(FN_dict['Contact FNs'])+len(FN_dict['ID FNs'])+len(FN_dict['Age(>90) FNs']))
     #print('False Negatives:',len(FN_dict['False Negatives']))
 
     return FN_dict
