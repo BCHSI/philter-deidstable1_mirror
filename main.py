@@ -27,6 +27,9 @@ def main():
     ap.add_argument("-x", "--xml", default="./data/phi_notes.json",
                     help="Path to the json file that contains all xml data",
                     type=str)
+    ap.add_argument("-c", "--coords", default="./data/coordinates.json",
+                    help="Path to the json file that contains the coordinate map data",
+                    type=str)
     ap.add_argument("-d", "--debug", default=True,
                     help="When debug is true, will run our eval script and emit helpful messages",
                     type=bool)
@@ -67,6 +70,7 @@ def main():
         "anno_folder":args.anno,
         "filters":args.filters,
         "xml":args.xml,
+        "coords":args.coords,
         "stanford_ner_tagger": { 
             "classifier":args.stanfordner+"classifiers/english.all.3class.distsim.crf.ser.gz",
             "jar":args.stanfordner+"stanford-ner.jar",
