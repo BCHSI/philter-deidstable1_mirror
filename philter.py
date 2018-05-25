@@ -40,6 +40,11 @@ class Philter:
             if not os.path.exists(config***REMOVED***"anno_folder"***REMOVED***):
                 raise Exception("Filepath does not exist", config***REMOVED***"foutpath"***REMOVED***)
             self.anno_folder = config***REMOVED***"anno_folder"***REMOVED***
+        
+        if "coords" in config:
+            self.coords = config***REMOVED***"coords"***REMOVED***
+        else:
+            raise Exception("Coordinate outpath not undefined")
 
         if "outformat" in config:
             self.outformat = config***REMOVED***"outformat"***REMOVED***
@@ -203,9 +208,9 @@ class Philter:
             for m in matches:
                 #if filename == './data/i2b2_notes_updated/373-04.txt':
                 # if self.patterns***REMOVED***pattern_index***REMOVED******REMOVED***"title"***REMOVED*** == "YYYY/MM-YYYY/MM":
-                # # if '810 86 43' in m.group():
-                # #     print(self.patterns***REMOVED***pattern_index***REMOVED******REMOVED***"title"***REMOVED***)
-                # print(m.group())
+                # if 'NG' in m.group():
+                #     print(self.patterns***REMOVED***pattern_index***REMOVED******REMOVED***"title"***REMOVED***)
+                #     print(m.group())
                 
                 coord_map.add_extend(filename, m.start(), m.start()+len(m.group()))
         
@@ -550,7 +555,7 @@ class Philter:
                 
 
         if self.debug: #output our data for eval
-            json.dump(data, open("./data/coordinates.json", "w"), indent=4)
+            json.dump(data, open(self.coords, "w"), indent=4)
 
     # infilename needed for addressing maps
     def transform_text_asterisk(self, txt, infilename,
