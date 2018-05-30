@@ -1,1 +1,1 @@
-\b***REMOVED***a-zA-Z***REMOVED***+((\:|\;|\-)\d+){3,}(.+)?\b
+\b***REMOVED***a-zA-Z***REMOVED***+((\:|\;|\-)\d+){3,}?\b

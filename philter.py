@@ -208,9 +208,9 @@ class Philter:
             for m in matches:
                 #if filename == './data/i2b2_notes_updated/373-04.txt':
                 # if self.patterns***REMOVED***pattern_index***REMOVED******REMOVED***"title"***REMOVED*** == "YYYY/MM-YYYY/MM":
-                # if 'NG' in m.group():
-                #     print(self.patterns***REMOVED***pattern_index***REMOVED******REMOVED***"title"***REMOVED***)
-                #     print(m.group())
+                if '1.1' in m.group():
+                    print(self.patterns***REMOVED***pattern_index***REMOVED******REMOVED***"title"***REMOVED***)
+                    print(m.group())
                 
                 coord_map.add_extend(filename, m.start(), m.start()+len(m.group()))
         
@@ -1118,8 +1118,12 @@ class Philter:
 
                         # Loop through PHI list and compare ranges
                         for phi_item in phi_list:
-                            phi_start = phi_item***REMOVED***'start'***REMOVED***
-                            phi_end = phi_item***REMOVED***'end'***REMOVED***
+                            try:
+                                phi_start = phi_item***REMOVED***'start'***REMOVED***
+                                phi_end = phi_item***REMOVED***'end'***REMOVED***
+                            except KeyError:
+                                phi_start = phi_item***REMOVED***'spans'***REMOVED***.split('~')***REMOVED***0***REMOVED***
+                                phi_end = phi_item***REMOVED***'spans'***REMOVED***.split('~')***REMOVED***1***REMOVED***
                             if unigram_start in range(int(phi_start), int(phi_end)):
                                 # This word is PHI and hasn't been added to the dictionary yet
                                 if unigram_word not in unigram_dict:
