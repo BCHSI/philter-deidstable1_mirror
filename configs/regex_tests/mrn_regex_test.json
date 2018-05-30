@@ -14,11 +14,46 @@
 		"notes":"This should remove anything that matches order number ..."
 	},
 	{
+		"title":"specimen number",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/mrn_id/specimen_#.txt",
+		"notes":"This should remove anything that matches specimen number ..."
+	},
+	{
+		"title":"cassette_#",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/mrn_id/cassette_#.txt",
+		"notes":"This should remove anything that matches cassette_# ..."
+	},
+	{
+		"title":"# reviewed by",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/mrn_id/#_reviewed_by.txt",
+		"notes":"This should remove anything that matches # reviewed by ..."
+	},
+	{
+		"title":"account #",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/mrn_id/account_#.txt",
+		"notes":"This should remove anything that matches account #"
+	},
+	{
 		"title":"CCDDD_DDD",
 		"type":"regex",
 		"exclude":true,
 		"filepath":"filters/regex/mrn_id/CCDDD_DDD.txt",
 		"notes":"This should remove anything that matches NNDDD(anything)DDDD"
+	},
+	{
+		"title":"CDD_DDDD+",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/mrn_id/CDD_DDDD+.txt",
+		"notes":"This should remove anything that matches NCDD_DDDD+"
 	},
 	{
 		"title":"mixed 2",

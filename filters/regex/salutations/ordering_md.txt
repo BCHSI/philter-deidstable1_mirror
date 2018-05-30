@@ -1,0 +1,1 @@
+\b((?i)(ordering[ ]{1,2}md|radiologist)):[ ]{1,2}([A-Z][a-zA-Z]+(\,)([ ]{1,2})?[A-Z][a-zA-Z]+)\b

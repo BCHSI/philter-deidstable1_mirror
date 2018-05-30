@@ -1,6 +1,7 @@
 # Adds variables in to regex to create complex regex
 
 import os
+import json
 
 # Define regex variables
 
@@ -16,6 +17,14 @@ address_indicator = "alley|alley|ally|aly|anex|annex|annx|anx|apartment|apt|arca
 
 state_names = "(A|a)rizona|AZ|(V|v)irginia|VA|(M|m)innesota|MN|(A|a)laska|AK|(N|n)ew (Y|y)ork|NY|(T|t)exas|TX|(V|v)ermont|VT|(U|u)tah|UT|(N|n)ew (J|j)ersey|NJ|(N|n)orth (D|d)akota|ND|(S|s)outh (D|d)akota|SD|(M|m)issouri|MO|(W|w)ashington (D|d).(C|c).|(G|g)eorgia|GA|(M|m)assachusetts|MA|(P|p)uerto (R|r)ico|(M|m)ichigan|MI|(I|i)owa|IA|(N|n)orth (C|c)arolina|NC|(S|s)outh (C|c)arolina|SC|(N|n)evada|NV|(C|c)olorado|CO|(O|o)hio|OH|(H|h)awaii|HI|(N|n)ebraska|NE|(N|n)ew (H|h)ampshire|NH|(W|w)ashington|WA|(T|t)ennessee|TN|(A|a)rkansas|AK|(L|l)ouisiana|LA|(M|m)ississippi|MS|(O|o)regon|OR|(A|a)labama|AL|(W|w)yoming|WY|(W|w)isconsin|WI|(O|o)klahoma|OK|(F|f)lorida|FL|(R|r)hode (I|i)sland|RI|(I|i)ndiana|IN|(C|c)alifornia|CA|(K|k)ansas|KS|(D|d)elaware|DE|(M|m)aryland|(I|i)daho|ID|(P|p)ennsylvania|PA|(K|k)entucky|KY|(C|c)onnecticut|CT|(M|m)ontana|MT|(I|i)llinois|IL|(M|m)aine|ME"
 
+# Get blacklisted names
+names_blacklist = json.loads(open("../../filters/blacklists/names_blacklist_ssfirst.json").read())
+person_names = ''
+for key in names_blacklist:
+	person_names += key + '|'
+# Get rid of last pipe
+person_names = person_names[:-1]
+
 # Do folder walk and transform each file
 rootdir = '.'
 for subdir, dirs, files in os.walk(rootdir):
@@ -29,7 +38,8 @@ for subdir, dirs, files in os.walk(rootdir):
 			# Open file
 			regex = open(filepath,"r").read().strip()
 			# Replace variables
-			regex = regex.replace('"""+month_name+r"""', month_name).replace('"""+day_numbering+r"""', day_numbering).replace('"""+day_name+r"""', day_name).replace('"""+seasons+r"""', seasons).replace('"""+address_indicator+r"""',address_indicator).replace('"""+state_name+r"""', state_names)			# Write new file
+			regex = regex.replace('"""+month_name+r"""', month_name).replace('"""+day_numbering+r"""', day_numbering).replace('"""+day_name+r"""', day_name).replace('"""+seasons+r"""', seasons).replace('"""+address_indicator+r"""',address_indicator).replace('"""+state_name+r"""', state_names).replace('"""+person_name+r"""', person_names)		
+			# Write new file
 			with open(new_filepath, "w") as fin:
 				fin.write(regex)
 
