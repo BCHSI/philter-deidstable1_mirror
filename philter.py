@@ -44,7 +44,7 @@ class Philter:
         if "coords" in config:
             self.coords = config["coords"]
         else:
-            raise Exception("Coordinate outpath not undefined")
+            raise Exception("Coordinate outpath undefined")
 
         if "outformat" in config:
             self.outformat = config["outformat"]
@@ -116,6 +116,7 @@ class Philter:
                     raise Exception("Invalid filteype", pattern["filepath"], "must be of", regex_filetypes)
                 self.patterns[i]["data"] = self.precompile(pattern["filepath"])
                 #print(self.precompile(pattern["filepath"]))
+    
     def precompile(self, filepath):
         """ precompiles our regex to speed up pattern matching"""
         regex = open(filepath,"r").read().strip()
@@ -208,9 +209,9 @@ class Philter:
             for m in matches:
                 #if filename == './data/i2b2_notes_updated/373-04.txt':
                 # if self.patterns[pattern_index]["title"] == "YYYY/MM-YYYY/MM":
-                if '1.1' in m.group():
-                    print(self.patterns[pattern_index]["title"])
-                    print(m.group())
+                # if 'Wall' in m.group():
+                #     print(self.patterns[pattern_index]["title"])
+                #     print(m.group())
                 
                 coord_map.add_extend(filename, m.start(), m.start()+len(m.group()))
         
@@ -1022,7 +1023,7 @@ class Philter:
                 'Unclear':'Other'
                 }
                 
-                ucsf_include_tags = ['Date','Provider_Name','Phone_Fax','Patient_Name_or_Family_Member_Name','Patient_Address','Provider_Address_or_Location','Provider_Initials','Provider_Certificate_or_License','Patient_Medical_Record_Id','Patient_Account_Number','Patient_Social_Security_Number','Patient_Vehicle_or_Device_Id','Patient_Unique_Id','Email','URL_IP','Patient_Biometric_Id_or_Face_Photo','Patient_Certificate_or_License']
+                ucsf_include_tags = ['Date','Provider_Name','Phone_Fax','Patient_Name_or_Family_Member_Name','Patient_Address','Provider_Address_or_Location','Provider_Certificate_or_License','Patient_Medical_Record_Id','Patient_Account_Number','Patient_Social_Security_Number','Patient_Vehicle_or_Device_Id','Patient_Unique_Id','Email','URL_IP','Patient_Biometric_Id_or_Face_Photo','Patient_Certificate_or_License']
 
 
                 rp_summaries = {}
@@ -1045,7 +1046,7 @@ class Philter:
                 current_summary =  summary_coords['summary_by_file'][fn]
 
                 # Get corresponding info in phi_notes
-                note_name = fn.split('/')[3]
+                note_name = fn.split('/')[-1]
                 
                 try:
                     anno_name = note_name.split('.')[0] + ".xml"
