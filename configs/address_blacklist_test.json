@@ -7,6 +7,13 @@
 		"notes":"This should remove anything that looks like a full street address (numbers and words)"
 	},
 	{
+		"title":"number streetname extension?",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/addresses/num_streetname_extension?_transformed.txt",
+		"notes":"This should remove anything that looks like a street address (with a possible extension)"
+	},
+	{
 		"title":"city state zip",
 		"type":"regex",
 		"exclude":true,
@@ -21,13 +28,7 @@
 		"filepath":"filters/regex/addresses/city_zip_transformed.txt",
 		"notes":"This should remove anything that has a city name, followed by a zip code"
 	},
-	{
-		"title":"number streetname extension?",
-		"type":"regex",
-		"exclude":true,
-		"filepath":"filters/regex/addresses/num_streetname_extension?_transformed.txt",
-		"notes":"This should remove anything that looks like a street address (with a possible extension)"
-	},
+
 	{
 		"title":"lives in",
 		"type":"regex",
@@ -113,6 +114,20 @@
 		"notes":"This should remove anything with 'admitted to' followed by a proper noun"
 	},
 	{
+		"title":"box room",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/addresses/box_room_transformed.txt",
+		"notes":"This should remove anything that has pattern box # followed by room #"
+	},
+	{
+		"title":"room box",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/addresses/room_box_transformed.txt",
+		"notes":"This should remove anything that has pattern room # followed by box #"
+	},
+	{
 		"title":"Address Blacklist",
 		"type":"set",
 		"exclude":true,
@@ -120,13 +135,21 @@
 		"pos":***REMOVED***"NNP"***REMOVED***,
 		"notes":""
 	},
-	{
-    	"title":"No catchall",
-		"type":"regex",
-		"exclude":false,
-		"filepath":"filters/regex/catchall.txt",
-		"notes":"This should match anything, preventing the catchall"
-	}
+    {
+        "title":"Whitelist",
+        "type":"set",
+        "exclude":false,
+        "filepath":"filters/whitelists/whitelist_addback_100_unigram_ucsf1.json",
+        "pos":***REMOVED******REMOVED***,
+        "notes":"These are words we beleive are safe"
+    },
+    {
+        "title":"POS MATCHER",
+        "type":"pos_matcher",
+        "exclude":false,
+        "pos":***REMOVED***"CD"***REMOVED***,
+        "notes":"This will include any CDs that aren't included in earlier steps"
+    }
 ***REMOVED***
 
 

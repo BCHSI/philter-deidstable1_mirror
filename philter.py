@@ -44,7 +44,7 @@ class Philter:
         if "coords" in config:
             self.coords = config***REMOVED***"coords"***REMOVED***
         else:
-            raise Exception("Coordinate outpath not undefined")
+            raise Exception("Coordinate outpath undefined")
 
         if "outformat" in config:
             self.outformat = config***REMOVED***"outformat"***REMOVED***
@@ -116,6 +116,7 @@ class Philter:
                     raise Exception("Invalid filteype", pattern***REMOVED***"filepath"***REMOVED***, "must be of", regex_filetypes)
                 self.patterns***REMOVED***i***REMOVED******REMOVED***"data"***REMOVED*** = self.precompile(pattern***REMOVED***"filepath"***REMOVED***)
                 #print(self.precompile(pattern***REMOVED***"filepath"***REMOVED***))
+    
     def precompile(self, filepath):
         """ precompiles our regex to speed up pattern matching"""
         regex = open(filepath,"r").read().strip()
@@ -208,9 +209,9 @@ class Philter:
             for m in matches:
                 #if filename == './data/i2b2_notes_updated/373-04.txt':
                 # if self.patterns***REMOVED***pattern_index***REMOVED******REMOVED***"title"***REMOVED*** == "YYYY/MM-YYYY/MM":
-                if '1.1' in m.group():
-                    print(self.patterns***REMOVED***pattern_index***REMOVED******REMOVED***"title"***REMOVED***)
-                    print(m.group())
+                # if 'Wall' in m.group():
+                #     print(self.patterns***REMOVED***pattern_index***REMOVED******REMOVED***"title"***REMOVED***)
+                #     print(m.group())
                 
                 coord_map.add_extend(filename, m.start(), m.start()+len(m.group()))
         
@@ -1022,7 +1023,7 @@ class Philter:
                 'Unclear':'Other'
                 }
                 
-                ucsf_include_tags = ***REMOVED***'Date','Provider_Name','Phone_Fax','Patient_Name_or_Family_Member_Name','Patient_Address','Provider_Address_or_Location','Provider_Initials','Provider_Certificate_or_License','Patient_Medical_Record_Id','Patient_Account_Number','Patient_Social_Security_Number','Patient_Vehicle_or_Device_Id','Patient_Unique_Id','Email','URL_IP','Patient_Biometric_Id_or_Face_Photo','Patient_Certificate_or_License'***REMOVED***
+                ucsf_include_tags = ***REMOVED***'Date','Provider_Name','Phone_Fax','Patient_Name_or_Family_Member_Name','Patient_Address','Provider_Address_or_Location','Provider_Certificate_or_License','Patient_Medical_Record_Id','Patient_Account_Number','Patient_Social_Security_Number','Patient_Vehicle_or_Device_Id','Patient_Unique_Id','Email','URL_IP','Patient_Biometric_Id_or_Face_Photo','Patient_Certificate_or_License'***REMOVED***
 
 
                 rp_summaries = {}
@@ -1045,7 +1046,7 @@ class Philter:
                 current_summary =  summary_coords***REMOVED***'summary_by_file'***REMOVED******REMOVED***fn***REMOVED***
 
                 # Get corresponding info in phi_notes
-                note_name = fn.split('/')***REMOVED***3***REMOVED***
+                note_name = fn.split('/')***REMOVED***-1***REMOVED***
                 
                 try:
                     anno_name = note_name.split('.')***REMOVED***0***REMOVED*** + ".xml"

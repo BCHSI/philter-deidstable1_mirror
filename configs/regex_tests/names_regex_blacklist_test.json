@@ -1,12 +1,11 @@
 ***REMOVED***
-
     {
-        "title": "ordering md",
+        "title": "u_#_patient",
         "type": "regex",
         "exclude": true,
-        "filepath": "filters/regex/salutations/ordering_md.txt",
+        "filepath": "filters/regex/salutations/u_#_patient.txt",
         "note": ""
-    },
+    },    
     {
         "title": "salutations1",
         "type": "regex",
@@ -64,6 +63,13 @@
         "note": ""
     },
     {
+        "title": "ordering md",
+        "type": "regex",
+        "exclude": true,
+        "filepath": "filters/regex/salutations/ordering_md.txt",
+        "note": ""
+    },
+    {
         "title": "Names Blacklist",
         "type": "set",
         "exclude": true,
@@ -80,7 +86,7 @@
         "title":"Whitelist",
         "type":"set",
         "exclude":false,
-        "filepath":"filters/whitelists/whitelist_addback_100_updated.json",
+        "filepath":"filters/whitelists/whitelist_addback_100_unigram_ucsf1.json",
         "pos":***REMOVED******REMOVED***,
         "notes":"These are words we beleive are safe"
     },
