@@ -1,5 +1,12 @@
 [
 	{
+		"title":"endoscope",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/mrn_id/endoscope_model.txt",
+		"notes":"This should remove anything with pattern XXXXX endoscope"
+	},		
+	{
 		"title":"six or more digits",
 		"type":"regex",
 		"exclude":true,
@@ -166,7 +173,7 @@
 		"exclude":true,
 		"filepath":"filters/regex/mrn_id/ssn.txt",
 		"notes":"This should remove anything that matches XXX-XX-XXXX"
-	},		
+	},
 	{
     	"title":"No catchall",
 		"type":"regex",

@@ -209,7 +209,7 @@ class Philter:
             for m in matches:
                 #if filename == './data/i2b2_notes_updated/373-04.txt':
                 # if self.patterns[pattern_index]["title"] == "YYYY/MM-YYYY/MM":
-                # if 'Wall' in m.group():
+                # if '' in m.group():
                 #     print(self.patterns[pattern_index]["title"])
                 #     print(m.group())
                 

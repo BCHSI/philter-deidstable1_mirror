@@ -42,6 +42,13 @@
 		"notes":"This should remove anything with pattern pain"
 	},
 	{
+		"title":"endoscope safe",
+		"type":"regex",
+		"exclude":false,
+		"filepath":"filters/regex/safe/endoscope_model.txt",
+		"notes":"This should remove anything with pattern XXXXX endoscope"
+	},
+	{
 		"title":"YYYY/MM-YYYY/MM",
 		"type":"regex",
 		"exclude":true,
@@ -307,13 +314,6 @@
 		"filepath":"filters/regex/dates/month_name_transformed.txt",
 		"notes":"This should remove anything with pattern month_name"
 	},
-	{
-		"title":"endoscope",
-		"type":"regex",
-		"exclude":true,
-		"filepath":"filters/regex/mrn_id/endoscope_model.txt",
-		"notes":"This should remove anything with pattern XXXXX endoscope"
-	},	
 	{
 		"title":"six or more digits",
 		"type":"regex",
@@ -740,7 +740,7 @@
         "title": "Names Blacklist",
         "type": "set",
         "exclude": true,
-        "filepath": "filters/blacklists/names_blacklist_ssfirst.json",
+        "filepath": "../new_blacklists/ss_ucsf_names1.json",
         "pos": [
             "NNP",
             "NNS",
