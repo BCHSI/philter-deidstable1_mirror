@@ -1,0 +1,1 @@
+\b(***REMOVED***A-Z***REMOVED***{2}\-\d{4}***REMOVED***A-Z***REMOVED***{1,2}***REMOVED*** ***REMOVED***{1,2}endoscope|Pentax***REMOVED*** ***REMOVED***{1,2}***REMOVED***A-Z***REMOVED***{2}\-\d{4}***REMOVED***A-Z***REMOVED***{1,2})\b
