@@ -38,7 +38,7 @@ class Philter:
             self.foutpath = config***REMOVED***"foutpath"***REMOVED***
         if "anno_folder" in config:
             if not os.path.exists(config***REMOVED***"anno_folder"***REMOVED***):
-                raise Exception("Filepath does not exist", config***REMOVED***"foutpath"***REMOVED***)
+                raise Exception("Filepath does not exist", config***REMOVED***"anno_folder"***REMOVED***)
             self.anno_folder = config***REMOVED***"anno_folder"***REMOVED***
         
         if "coords" in config:
