@@ -1,4 +1,5 @@
 import argparse
+import distutils.util
 import re 
 import pickle
 from philter import Philter
@@ -32,16 +33,16 @@ def main():
                     type=str)
     ap.add_argument("-d", "--debug", default=True,
                     help="When debug is true, will run our eval script and emit helpful messages",
-                    type=bool)
+                    type=lambda x:bool(distutils.util.strtobool(x)))
     ap.add_argument("-e", "--errorcheck", default=True,
                     help="When errorcheck is true, will output helpful information about FNs and FPs",
-                    type=bool)
+                    type=lambda x:bool(distutils.util.strtobool(x)))
     ap.add_argument("-p", "--parallel", default=False,
                     help="When parallel is true, will suppress any print statements not wanted in terminal output",
                     type=bool)
     ap.add_argument("-t", "--freq_table", default=False,
                     help="When freqtable is true, will output a unigram/bigram frequency table of all note words and their PHI/non-PHI counts",
-                    type=bool) 
+                    type=lambda x:bool(distutils.util.strtobool(x))) 
     ap.add_argument("--stanfordner", default="/usr/local/stanford-ner/",
                     help="Path to Stanford NER, the default is /usr/local/stanford-ner/",
                     type=str)
@@ -50,7 +51,7 @@ def main():
                     type=str)
     ap.add_argument("--ucsfformat", default=False,
                     help="When ucsfformat is true, will adjust eval script for slightly different xml format",
-                    type=str)
+                    type=lambda x:bool(distutils.util.strtobool(x)))
 
 
     args = ap.parse_args()
