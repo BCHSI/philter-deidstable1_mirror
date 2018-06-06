@@ -517,30 +517,7 @@ class Philter:
                 output_shifted_dates.append(str(dt_plus_arbitrary).replace(" 00:00:00",""))
         return output_shifted_dates
 
-    def testing_date_shift(self,txt,include_map,exclude_map,infilename):
-        shift_dates_together=1
-        #possible_date_formats=***REMOVED***"February, 2060","2075-01-07","8/79","November","2020"***REMOVED***
-        #shifted_example_dates =self.shift_dates(shift_dates_together,possible_date_formats,verbose=0)
-        pre_shifted_dates = ***REMOVED******REMOVED***
-        shifted_example_dates = ***REMOVED******REMOVED***
-        for i in range(0, len(txt)):
-            if exclude_map.does_exist(infilename, i):
-                start,stop = exclude_map.get_coords(infilename,i)
-                #Note: this is assuming that exclude map is exclusively dates
-
-                exclude_map.remove(infilename,start,stop)
-                include_map.add_extend(infilename,start,stop)
-
-                dates_to_shift = txt***REMOVED***start:stop***REMOVED***
-                pre_shifted_dates.append(dates_to_shift)
-    
-        shifted_example_dates = (self.shift_dates(shift_dates_together,pre_shifted_dates,verbose=0))
-        print (pre_shifted_dates)
-        print ("shifted to: ")
-        print (shifted_example_dates)
-        print ("\n")
-        return include_map,exclude_map,pre_shifted_dates,shifted_example_dates
-
+ v
 
     def transform(self, 
             replacement=" **PHI** ",
