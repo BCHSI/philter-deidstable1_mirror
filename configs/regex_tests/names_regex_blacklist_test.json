@@ -73,7 +73,7 @@
         "title": "Names Blacklist",
         "type": "set",
         "exclude": true,
-        "filepath": "filters/blacklists/names_blacklist_ssfirst.json",
+        "filepath": "/data/muenzenk/new_blacklists/names_blacklist_060618.json",
         "pos": ***REMOVED***
             "NNP",
             "NNS",
