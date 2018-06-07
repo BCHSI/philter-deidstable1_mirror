@@ -24,6 +24,8 @@ class Philter:
             self.debug = config***REMOVED***"debug"***REMOVED***
         if "errorcheck" in config:
             self.errorcheck = config***REMOVED***"errorcheck"***REMOVED***
+        if "parallel" in config:
+            self.parallel = config***REMOVED***"parallel"***REMOVED***
         if "freq_table" in config:
             self.freq_table = config***REMOVED***"freq_table"***REMOVED***                       
         if "finpath" in config:
@@ -156,7 +158,7 @@ class Philter:
                 filename = root+f
 
                 if filename.split(".")***REMOVED***-1***REMOVED*** not in allowed_filetypes:
-                    if self.debug:
+                    if self.debug and self.parallel == False:
                         print("Skipping: ", filename)
                     continue                
                 #self.patterns***REMOVED***i***REMOVED******REMOVED***"coordinate_map"***REMOVED***.add_file(filename)
@@ -483,7 +485,7 @@ class Philter:
             **Anything not caught in these passes will be assumed to be PHI
         """
         
-        if self.debug:
+        if self.debug and self.parallel == False:
             print("RUNNING TRANSFORM")
 
         if not os.path.exists(in_path):
@@ -778,7 +780,7 @@ class Philter:
             raise Exception("False Negative Filepath does not exist", fn_output)
         if not os.path.exists(fp_output):
             raise Exception("False Positive Filepath does not exist", fp_output)
-        if self.debug:
+        if self.debug and self.parallel == False:
             print("RUNNING EVAL")
             
         
@@ -902,6 +904,7 @@ class Philter:
                 all_fp = all_fp + false_positives
                 all_fn = all_fn + false_negatives
 
+
                 # Create coordinate summaries
                 summary_coords***REMOVED***"summary_by_file"***REMOVED******REMOVED***philtered_filename***REMOVED*** = {"false_positives":false_positives_coords,"false_negatives":false_negatives_coords,"true_positives":true_positives_coords}
 
@@ -921,16 +924,12 @@ class Philter:
         else:
             retention = 0.0
         
-        if self.debug:
+        if self.debug and self.parallel == False:
             #save the phi we missed
             json.dump(summary, open(summary_output, "w"), indent=4)
             json.dump(all_fn, open(fn_output, "w"), indent=4)
             json.dump(all_fp, open(fp_output, "w"), indent=4)
             
-            total_phi_count = summary***REMOVED***"total_false_negatives"***REMOVED*** + summary***REMOVED***"total_true_positives"***REMOVED***
-            
-            print('\n')
-            print("Total PHI Count: ",total_phi_count)
             print('\n')
             print("true_negatives", summary***REMOVED***"total_true_negatives"***REMOVED***,"true_positives", summary***REMOVED***"total_true_positives"***REMOVED***, "false_negatives", summary***REMOVED***"total_false_negatives"***REMOVED***, "false_positives", summary***REMOVED***"total_false_positives"***REMOVED***)
             print('\n')
@@ -940,7 +939,7 @@ class Philter:
 
 
         ###################### Get phi tags #####################
-        if self.errorcheck:
+        if self.errorcheck and self.parallel == False:
             print('\n')
             print("RUNNING ERRORCHECK")
 
@@ -1622,6 +1621,20 @@ class Philter:
                     current_list = fp_tags_condensed***REMOVED***key***REMOVED***
                     fp_file.write(key + "|" + current_list***REMOVED***0***REMOVED*** + "|" + current_list***REMOVED***1***REMOVED***  + "|" +  str(current_list***REMOVED***2***REMOVED***)+"\n")            
             
+            if self.parallel:
+                # Get info on whitelist, blacklist, POS
+                patterns = json.loads(open(config***REMOVED***"filters"***REMOVED***, "r").read())
+                current_whitelist = ''
+                current_blacklist = ''
+                current_pos = ''
+                for config_dict in patterns:
+                    if config_dict***REMOVED***'type'***REMOVED*** == 'set' and config_dict***REMOVED***'exclude'***REMOVED*** == True:
+                        current_blacklist = config_dict***REMOVED***'filepath'***REMOVED***.split('/')***REMOVED***-1***REMOVED***.split('.')***REMOVED***0***REMOVED***
+                        current_pos = str(config_dict***REMOVED***'pos'***REMOVED***).replace(" ","")
+                    if config_dict***REMOVED***'type'***REMOVED*** == 'set' and config_dict***REMOVED***'exclude'***REMOVED*** == False:
+                        current_whitelist = config_dict***REMOVED***'filepath'***REMOVED***.split('/')***REMOVED***-1***REMOVED***.split('.')***REMOVED***0***REMOVED***
+                
+                print(current_whitelist + " " + current_blacklist + " " + current_pos + " " + "{:.2%}".format(names_recall) + " " + "{:.2%}".format(dates_recall) + " "+ "{:.2%}".format(ids_recall) + " "+ "{:.2%}".format(contact_recall) + " "+ "{:.2%}".format(location_recall) + " " + "{:.2%}".format(precision) + " " + "{:.2%}".format(retention))
     
     def getphi(self, 
             anno_folder="data/i2b2_anno/", 
@@ -1830,6 +1843,5 @@ class Philter:
 
         items.sort(key=lambda x: x***REMOVED***"count"***REMOVED***, reverse=True)
         json.dump(items, open(sorted_path, "w"), indent=4)
-
 
 
