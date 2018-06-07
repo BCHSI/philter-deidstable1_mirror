@@ -13,12 +13,6 @@ from nltk.tag.stanford import StanfordNERTagger
 import subprocess
 import numpy
 
-#adding for date shifting
-import dateutil.parser
-from datetime import datetime,timedelta
-import random
-from dateparser import parse
-
 
 class Philter:
     """ 
@@ -469,51 +463,6 @@ class Philter:
         for root, dirs, files in os.walk(folder):
             for filename in files:
                 yield root,filename
-    def generate_random_date(self):
-      now = datetime.now()
-      day = random.choice(range(1, 29))
-      month = random.choice(range(1, 24))
-      year = random.choice(range(1, 1000))
-      return day,month,year,now
-
-    def shift_dates(self,shift_dates_together,dates,verbose):
-        output_shifted_dates = ***REMOVED******REMOVED***
-        if shift_dates_together==1:
-            day,month,year,now = self.generate_random_date()
-            print ("shifting by " + str(day) + " days and by "+ str(month) + " months")
-        for date in dates:
-            dt = parse(date,settings={'PREFER_DAY_OF_MONTH': 'first'} ) #dateutil.parser.
-            if dt !=None:
-              # we know that it's incomplete if:
-              # this setting returns none:  settings={'STRICT_PARSING': True}
-              strict_parse = parse(date,settings={'STRICT_PARSING': True})
-
-              # Note: we can add parameters to this parsing
-              #        settings={'PREFER_DAY_OF_MONTH': 'last'} or 'first'
-              #        settings={'PREFER_DATES_FROM': 'future'} or 'past'
-
-              if shift_dates_together==0 :
-                day,month,year,now = self.generate_random_date()
-              
-              dt_actual = datetime(dt.year, dt.month, dt.day)
-              dt_plus_arbitrary = dt_actual+ timedelta(weeks=month*4,days=day)
-              
-              # we have to take into account if the input date isn't a fully specified date
-              if strict_parse == None or strict_parse.year != dt.year:
-                  is_strict_parse = 0
-                  output_string = ""
-                  if dt.month!=now.month:
-                    output_string += str(dt_plus_arbitrary.strftime('%B')) 
-                  if dt.year!=now.year:
-                    output_string += " " +str(dt_plus_arbitrary.year)
-                  if dt.day!=1:
-                    output_string += " " +str(dt_plus_arbitrary.day)
-                  output_shifted_dates.append(output_string.replace(" 00:00:00",""))
-              else:
-                output_shifted_dates.append(str(dt_plus_arbitrary).replace(" 00:00:00",""))
-        return output_shifted_dates
-
- v
 
     def transform(self, 
             replacement=" **PHI** ",
