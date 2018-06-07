@@ -36,6 +36,9 @@ def main():
     ap.add_argument("-e", "--errorcheck", default=True,
                     help="When errorcheck is true, will output helpful information about FNs and FPs",
                     type=bool)
+    ap.add_argument("-p", "--parallel", default=False,
+                    help="When parallel is true, will suppress any print statements not wanted in terminal output",
+                    type=bool)
     ap.add_argument("-t", "--freq_table", default=False,
                     help="When freqtable is true, will output a unigram/bigram frequency table of all note words and their PHI/non-PHI counts",
                     type=bool) 
@@ -58,6 +61,7 @@ def main():
     philter_config = {
         "debug":args.debug,
         "errorcheck":args.errorcheck,
+        "parallel":args.parallel, 
         "freq_table":args.freq_table,                   
         "finpath":args.input,
         "foutpath":args.output,

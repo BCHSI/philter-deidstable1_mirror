@@ -24,6 +24,8 @@ class Philter:
             self.debug = config["debug"]
         if "errorcheck" in config:
             self.errorcheck = config["errorcheck"]
+        if "parallel" in config:
+            self.parallel = config["parallel"]
         if "freq_table" in config:
             self.freq_table = config["freq_table"]                       
         if "finpath" in config:
@@ -156,7 +158,7 @@ class Philter:
                 filename = root+f
 
                 if filename.split(".")[-1] not in allowed_filetypes:
-                    if self.debug:
+                    if self.debug and self.parallel == False:
                         print("Skipping: ", filename)
                     continue                
                 #self.patterns[i]["coordinate_map"].add_file(filename)
@@ -483,7 +485,7 @@ class Philter:
             **Anything not caught in these passes will be assumed to be PHI
         """
         
-        if self.debug:
+        if self.debug and self.parallel == False:
             print("RUNNING TRANSFORM")
 
         if not os.path.exists(in_path):
@@ -778,7 +780,7 @@ class Philter:
             raise Exception("False Negative Filepath does not exist", fn_output)
         if not os.path.exists(fp_output):
             raise Exception("False Positive Filepath does not exist", fp_output)
-        if self.debug:
+        if self.debug and self.parallel == False:
             print("RUNNING EVAL")
             
         
@@ -902,6 +904,7 @@ class Philter:
                 all_fp = all_fp + false_positives
                 all_fn = all_fn + false_negatives
 
+
                 # Create coordinate summaries
                 summary_coords["summary_by_file"][philtered_filename] = {"false_positives":false_positives_coords,"false_negatives":false_negatives_coords,"true_positives":true_positives_coords}
 
@@ -921,16 +924,12 @@ class Philter:
         else:
             retention = 0.0
         
-        if self.debug:
+        if self.debug and self.parallel == False:
             #save the phi we missed
             json.dump(summary, open(summary_output, "w"), indent=4)
             json.dump(all_fn, open(fn_output, "w"), indent=4)
             json.dump(all_fp, open(fp_output, "w"), indent=4)
             
-            total_phi_count = summary["total_false_negatives"] + summary["total_true_positives"]
-            
-            print('\n')
-            print("Total PHI Count: ",total_phi_count)
             print('\n')
             print("true_negatives", summary["total_true_negatives"],"true_positives", summary["total_true_positives"], "false_negatives", summary["total_false_negatives"], "false_positives", summary["total_false_positives"])
             print('\n')
@@ -940,7 +939,7 @@ class Philter:
 
 
         ###################### Get phi tags #####################
-        if self.errorcheck:
+        if self.errorcheck and self.parallel == False:
             print('\n')
             print("RUNNING ERRORCHECK")
 
@@ -1622,6 +1621,20 @@ class Philter:
                     current_list = fp_tags_condensed[key]
                     fp_file.write(key + "|" + current_list[0] + "|" + current_list[1]  + "|" +  str(current_list[2])+"\n")            
             
+            if self.parallel:
+                # Get info on whitelist, blacklist, POS
+                patterns = json.loads(open(config["filters"], "r").read())
+                current_whitelist = ''
+                current_blacklist = ''
+                current_pos = ''
+                for config_dict in patterns:
+                    if config_dict['type'] == 'set' and config_dict['exclude'] == True:
+                        current_blacklist = config_dict['filepath'].split('/')[-1].split('.')[0]
+                        current_pos = str(config_dict['pos']).replace(" ","")
+                    if config_dict['type'] == 'set' and config_dict['exclude'] == False:
+                        current_whitelist = config_dict['filepath'].split('/')[-1].split('.')[0]
+                
+                print(current_whitelist + " " + current_blacklist + " " + current_pos + " " + "{:.2%}".format(names_recall) + " " + "{:.2%}".format(dates_recall) + " "+ "{:.2%}".format(ids_recall) + " "+ "{:.2%}".format(contact_recall) + " "+ "{:.2%}".format(location_recall) + " " + "{:.2%}".format(precision) + " " + "{:.2%}".format(retention))
     
     def getphi(self, 
             anno_folder="data/i2b2_anno/", 
@@ -1830,6 +1843,5 @@ class Philter:
 
         items.sort(key=lambda x: x["count"], reverse=True)
         json.dump(items, open(sorted_path, "w"), indent=4)
-
 
 
