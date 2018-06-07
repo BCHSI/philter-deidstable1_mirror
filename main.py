@@ -52,7 +52,7 @@ def main():
 
     args = ap.parse_args()
 
-    if args.debu:
+    if args.debug:
         print("RUNNING ", args.filters)
 
     philter_config = {
