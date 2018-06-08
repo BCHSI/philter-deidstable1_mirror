@@ -1,0 +1,1 @@
+\b([A-Z]{2}\-\d{4}([a-zA-Z]{1,2})?(\s?\-\d{2})?(?= endoscope)|((?<=(?i)the )|(?<=Pentax )|(?<=(?i)bronchoscope: ))[A-Z]{2}\-\d{4}([a-zA-Z]{1,2})?(\s?\-\d{2})?)\b

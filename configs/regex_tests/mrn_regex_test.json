@@ -1,10 +1,31 @@
 [
 	{
-		"title":"endoscope",
+		"title":"lot #",
 		"type":"regex",
 		"exclude":true,
-		"filepath":"filters/regex/mrn_id/endoscope_model.txt",
-		"notes":"This should remove anything with pattern XXXXX endoscope"
+		"filepath":"filters/regex/mrn_id/lot_#.txt",
+		"notes":"This should remove anything with pattern lot #"
+	},		
+	{
+		"title":"id verbose",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/mrn_id/id_verbose.txt",
+		"notes":"This should remove anything with pattern ID: XXXXX"
+	},		
+	{
+		"title":"activation code",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/mrn_id/activation_code.txt",
+		"notes":"This should remove anything with pattern activation code: XXXXX-XXXX-XXXXX"
+	},		
+	{
+		"title":"model number",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/mrn_id/model_number.txt",
+		"notes":"This should remove anything with pattern model number"
 	},		
 	{
 		"title":"six or more digits",
@@ -47,6 +68,20 @@
 		"exclude":true,
 		"filepath":"filters/regex/mrn_id/account_#.txt",
 		"notes":"This should remove anything that matches account #"
+	},
+	{
+		"title":"CCDDDD-D-CC",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/mrn_id/CCDDDD-D-CC.txt",
+		"notes":"This should remove anything that matches CCDDDD-D-CC"
+	},
+	{
+		"title":"DDCCCDDD",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/mrn_id/DDCCCDDD.txt",
+		"notes":"This should remove anything that matches DDCCCDDD"
 	},
 	{
 		"title":"CCDDD_DDD",
