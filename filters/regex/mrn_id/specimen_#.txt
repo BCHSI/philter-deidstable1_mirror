@@ -1,1 +1,1 @@
-\b(?i)(?<=specimen)***REMOVED*** ***REMOVED***{1,2}(no|\#)(\.)?(***REMOVED*** ***REMOVED***{1,2})?***REMOVED***a-zA-Z0-9***REMOVED***+\b
+\b(?i)(?<=specimen )(no|\#)(\.)?(***REMOVED*** ***REMOVED***{1,2})?***REMOVED***a-zA-Z0-9***REMOVED***+\b
