@@ -1,4 +1,5 @@
 import argparse
+import distutils.util
 import re 
 import pickle
 from philter import Philter
@@ -30,15 +31,15 @@ def main():
     ap.add_argument("-c", "--coords", default="./data/coordinates.json",
                     help="Path to the json file that contains the coordinate map data",
                     type=str)
-    ap.add_argument("-d", "--debug", default=True,
-                    help="When debug is true, will run our eval script and emit helpful messages",
-                    type=bool)
-    ap.add_argument("-e", "--errorcheck", default=True,
-                    help="When errorcheck is true, will output helpful information about FNs and FPs",
-                    type=bool)
+    ap.add_argument("-v", "--verbose", default=True,
+                    help="When verbose is true, will emit messages about script progress",
+                    type=lambda x:bool(distutils.util.strtobool(x)))
+    ap.add_argument("-e", "--run_eval", default=True,
+                    help="When run_eval is true, will run our eval script and emit summarized results to terminal",
+                    type=lambda x:bool(distutils.util.strtobool(x)))
     ap.add_argument("-t", "--freq_table", default=False,
                     help="When freqtable is true, will output a unigram/bigram frequency table of all note words and their PHI/non-PHI counts",
-                    type=bool) 
+                    type=lambda x:bool(distutils.util.strtobool(x))) 
     ap.add_argument("--stanfordner", default="/usr/local/stanford-ner/",
                     help="Path to Stanford NER, the default is /usr/local/stanford-ner/",
                     type=str)
@@ -47,17 +48,17 @@ def main():
                     type=str)
     ap.add_argument("--ucsfformat", default=False,
                     help="When ucsfformat is true, will adjust eval script for slightly different xml format",
-                    type=str)
+                    type=lambda x:bool(distutils.util.strtobool(x)))
 
 
     args = ap.parse_args()
 
-    if args.debug:
+    if args.verbose:
         print("RUNNING ", args.filters)
 
     philter_config = {
-        "debug":args.debug,
-        "errorcheck":args.errorcheck,
+        "verbose":args.verbose,
+        "run_eval":args.run_eval,
         "freq_table":args.freq_table,                   
         "finpath":args.input,
         "foutpath":args.output,
@@ -86,7 +87,7 @@ def main():
                        replacement="*")
 
     #evaluate the effectiveness
-    if (args.debug or args.errorcheck) and args.outputformat == "asterisk":
+    if args.run_eval and args.outputformat == "asterisk":
         filterer.eval(
             philter_config,
             in_path=args.output,
