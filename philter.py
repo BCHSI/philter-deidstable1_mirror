@@ -514,18 +514,22 @@ class Philter:
             for i,pattern in enumerate(self.patterns):
                 coord_map = pattern["coordinate_map"]
                 exclude = pattern["exclude"]
+                #print (pattern)
+                if "phi_type" in pattern:
+                    phi_type = pattern["phi_type"]
                 # self.patterns[pattern_index]["title"]
-
+                else:
+                    phi_type = "OTHER"
                 for start,stop in coord_map.filecoords(filename):
                     if exclude:
                         if not include_map.does_overlap(filename, start, stop):
                             exclude_map.add_extend(filename, start, stop)
-                            data[filename]["phi"].append({"start":start, "stop":stop, "word":txt[start:stop]})
+                            data[filename]["phi"].append({"start":start, "stop":stop, "word":txt[start:stop],"phi_type":phi_type}) # add new field phi_type
                     else:
                         if not exclude_map.does_overlap(filename, start, stop):
                             #print("include", start, stop, txt[start:stop])
                             include_map.add_extend(filename, start, stop)
-                            data[filename]["non-phi"].append({"start":start, "stop":stop, "word":txt[start:stop]})
+                            data[filename]["non-phi"].append({"start":start, "stop":stop, "word":txt[start:stop]}) 
                         else:
                             pass
                             #print("include overlapped", start, stop, txt[start:stop])
@@ -535,13 +539,10 @@ class Philter:
             outpathfbase = out_path + fbase
             if self.outformat == "asterisk":
                 with open(outpathfbase+".txt", "w", encoding='utf-8') as f:
-                    print (exclude_map.map)
-                    include_map,exclude_map,pre_shifted_dates,shifted_dates = self.testing_date_shift(txt,include_map,exclude_map,filename)
+                    #print (exclude_map.map)
                     contents = self.transform_text_asterisk(txt, filename, 
                                                             include_map,
                                                             exclude_map)
-                    for i in range(0,len(pre_shifted_dates)):
-                        contents = contents.replace(pre_shifted_dates[i],shifted_dates[i])
 
                     f.write(contents)
                     
@@ -596,10 +597,17 @@ class Philter:
         contents.append("]]></TEXT>\n")
         contents.append("<TAGS>\n")
         for i in range(len(tagdata['phi'])):
-            tagcategory = "OTHER" # TODO: replace with actual category
-            phitype = "OTHER" # TODO: replace with actual phi type
+            phi_type = tagdata['phi'][i]['phi_type']
+            tagcategory = phi_type
+
+            # if phi_type =="DATE":
+            #     tagcategory = phi_type
+            # elif phi_type =="AGE":
+            #     tagcategory = phi_type
+            # else:
+            #     tagcategory = phi_type
             contents.append("<")
-            contents.append(phitype)
+            contents.append(phi_type)
             contents.append(" id=\"P")
             contents.append(str(i))
             contents.append("\" start=\"")
@@ -609,7 +617,7 @@ class Philter:
             contents.append("\" text=\"")
             contents.append(tagdata['phi'][i]['word'])
             contents.append("\" TYPE=\"")
-            contents.append(phitype)
+            contents.append(phi_type)
             contents.append("\" comment=\"\" />\n")
         contents.append("</TAGS>\n")
         contents.append("</"+root+">\n")
