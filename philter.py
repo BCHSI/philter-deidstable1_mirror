@@ -514,18 +514,22 @@ class Philter:
             for i,pattern in enumerate(self.patterns):
                 coord_map = pattern***REMOVED***"coordinate_map"***REMOVED***
                 exclude = pattern***REMOVED***"exclude"***REMOVED***
+                #print (pattern)
+                if "phi_type" in pattern:
+                    phi_type = pattern***REMOVED***"phi_type"***REMOVED***
                 # self.patterns***REMOVED***pattern_index***REMOVED******REMOVED***"title"***REMOVED***
-
+                else:
+                    phi_type = "OTHER"
                 for start,stop in coord_map.filecoords(filename):
                     if exclude:
                         if not include_map.does_overlap(filename, start, stop):
                             exclude_map.add_extend(filename, start, stop)
-                            data***REMOVED***filename***REMOVED******REMOVED***"phi"***REMOVED***.append({"start":start, "stop":stop, "word":txt***REMOVED***start:stop***REMOVED***})
+                            data***REMOVED***filename***REMOVED******REMOVED***"phi"***REMOVED***.append({"start":start, "stop":stop, "word":txt***REMOVED***start:stop***REMOVED***,"phi_type":phi_type}) # add new field phi_type
                     else:
                         if not exclude_map.does_overlap(filename, start, stop):
                             #print("include", start, stop, txt***REMOVED***start:stop***REMOVED***)
                             include_map.add_extend(filename, start, stop)
-                            data***REMOVED***filename***REMOVED******REMOVED***"non-phi"***REMOVED***.append({"start":start, "stop":stop, "word":txt***REMOVED***start:stop***REMOVED***})
+                            data***REMOVED***filename***REMOVED******REMOVED***"non-phi"***REMOVED***.append({"start":start, "stop":stop, "word":txt***REMOVED***start:stop***REMOVED***}) 
                         else:
                             pass
                             #print("include overlapped", start, stop, txt***REMOVED***start:stop***REMOVED***)
@@ -535,13 +539,10 @@ class Philter:
             outpathfbase = out_path + fbase
             if self.outformat == "asterisk":
                 with open(outpathfbase+".txt", "w", encoding='utf-8') as f:
-                    print (exclude_map.map)
-                    include_map,exclude_map,pre_shifted_dates,shifted_dates = self.testing_date_shift(txt,include_map,exclude_map,filename)
+                    #print (exclude_map.map)
                     contents = self.transform_text_asterisk(txt, filename, 
                                                             include_map,
                                                             exclude_map)
-                    for i in range(0,len(pre_shifted_dates)):
-                        contents = contents.replace(pre_shifted_dates***REMOVED***i***REMOVED***,shifted_dates***REMOVED***i***REMOVED***)
 
                     f.write(contents)
                     
@@ -596,10 +597,17 @@ class Philter:
         contents.append("***REMOVED******REMOVED***></TEXT>\n")
         contents.append("<TAGS>\n")
         for i in range(len(tagdata***REMOVED***'phi'***REMOVED***)):
-            tagcategory = "OTHER" # TODO: replace with actual category
-            phitype = "OTHER" # TODO: replace with actual phi type
+            phi_type = tagdata***REMOVED***'phi'***REMOVED******REMOVED***i***REMOVED******REMOVED***'phi_type'***REMOVED***
+            tagcategory = phi_type
+
+            # if phi_type =="DATE":
+            #     tagcategory = phi_type
+            # elif phi_type =="AGE":
+            #     tagcategory = phi_type
+            # else:
+            #     tagcategory = phi_type
             contents.append("<")
-            contents.append(phitype)
+            contents.append(phi_type)
             contents.append(" id=\"P")
             contents.append(str(i))
             contents.append("\" start=\"")
@@ -609,7 +617,7 @@ class Philter:
             contents.append("\" text=\"")
             contents.append(tagdata***REMOVED***'phi'***REMOVED******REMOVED***i***REMOVED******REMOVED***'word'***REMOVED***)
             contents.append("\" TYPE=\"")
-            contents.append(phitype)
+            contents.append(phi_type)
             contents.append("\" comment=\"\" />\n")
         contents.append("</TAGS>\n")
         contents.append("</"+root+">\n")
