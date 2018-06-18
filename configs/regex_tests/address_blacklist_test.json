@@ -14,13 +14,33 @@
 		"notes":"This should remove anything that looks like a street address (with a possible extension)"
 	},
 	{
+		"title":"number streetname",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/addresses/num_streetname_transformed.txt",
+		"notes":"This should remove anything that looks like the begiing of a street address"
+	},
+	{
+		"title":"streetname floor number",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/addresses/streetname_floor_number_transformed.txt",
+		"notes":"This should remove anything that looks like a street address with a suite number extension"
+	},
+	{
+		"title":"number streetname noindicator suite",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/addresses/number_streetname_noindicator_suite_transformed.txt",
+		"notes":"This should remove anything that looks like a street address with a floor number extension"
+	},
+	{
 		"title":"city state zip",
 		"type":"regex",
 		"exclude":true,
 		"filepath":"filters/regex/addresses/city_state_zip_transformed.txt",
 		"notes":"This should remove anything that looks like a partial street address (city, state, zip"
 	},
-
 	{
 		"title":"city zip",
 		"type":"regex",
@@ -128,6 +148,41 @@
 		"notes":"This should remove anything that has pattern room # followed by box #"
 	},
 	{
+		"title":"floor box",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/addresses/floor_box_transformed.txt",
+		"notes":"This should remove anything that has pattern floor # followed by box #"
+	},
+	{
+		"title":"desk #",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/addresses/desk_#_transformed.txt",
+		"notes":"This should remove anything that has pattern desk #"
+	},
+	{
+		"title":"pharmacy #",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/addresses/pharmacy_#_transformed.txt",
+		"notes":"This should remove anything that has pattern pharmacy #"
+	},
+	{
+		"title":"at location",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/addresses/at_address_noindicator_transformed.txt",
+		"notes":"This should remove anything that has pattern at X"
+	},
+	{
+		"title":"waiting room",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/addresses/waiting_room_transformed.txt",
+		"notes":"This should remove anything that has pattern waiting room"
+	},
+	{
 		"title":"Address Blacklist",
 		"type":"set",
 		"exclude":true,
@@ -139,7 +194,7 @@
         "title":"Whitelist",
         "type":"set",
         "exclude":false,
-        "filepath":"filters/whitelists/whitelist_addback_100_unigram_ucsf1.json",
+        "filepath":"filters/whitelists/whitelist_061418.json",
         "pos":***REMOVED******REMOVED***,
         "notes":"These are words we beleive are safe"
     },

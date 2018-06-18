@@ -1,0 +1,1 @@
+\b((http(s)?:\/\/)?www\.***REMOVED***^\s***REMOVED***+|***REMOVED***^\s***REMOVED***+\.(com|org|gov|edu))\b

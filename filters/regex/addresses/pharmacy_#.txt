@@ -1,0 +1,1 @@
+\b***REMOVED***a-zA-Z***REMOVED***+\s((?i)(pharmacy|walgreens))\s#\d+\b

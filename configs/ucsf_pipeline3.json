@@ -299,7 +299,14 @@
 		"exclude":true,
 		"filepath":"filters/regex/dates/on_or_by_the_day_numbering_transformed.txt",
 		"notes":"This should remove anything with pattern on_or_by_the_day_numbering"
-	},		
+	},
+	{
+		"title":"as of date",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/dates/as_of_date.txt",
+		"notes":"This should remove anything with pattern as of d/d"
+	},	
 	{
 		"title":"month_name",
 		"type":"regex",
@@ -518,6 +525,20 @@
 		"notes":"This should remove anything that matches XXX-XX-XXXX"
 	},
 	{
+		"title":"url",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/contact/url.txt",
+		"notes":"This should remove anything that looks like a url"
+	},
+	{
+		"title":"call #",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/contact/call_#.txt",
+		"notes":"This should remove anything that matches call #: etc."
+	},
+	{
 		"title":"emails",
 		"type":"regex",
 		"exclude":true,
@@ -530,6 +551,13 @@
 		"exclude":true,
 		"filepath":"filters/regex/contact/xxx_xxx_xxxx.txt",
 		"notes":"This should remove anything that xxx.xxx.xxxx"
+	},
+	{
+		"title":"xxx_xxx_CCCC",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/contact/xxx_xxx_CCCC.txt",
+		"notes":"This should remove anything that xxx.xxx.CCCC+"
 	},
 	{
 		"title":"5 digit pager",

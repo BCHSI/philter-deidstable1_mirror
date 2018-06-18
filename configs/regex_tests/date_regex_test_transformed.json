@@ -258,7 +258,14 @@
 		"exclude":true,
 		"filepath":"filters/regex/dates/on_or_by_the_day_numbering_transformed.txt",
 		"notes":"This should remove anything with pattern on_or_by_the_day_numbering"
-	},		
+	},
+	{
+		"title":"as of date",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/dates/as_of_date.txt",
+		"notes":"This should remove anything with pattern as of d/d"
+	},	
 	{
 		"title":"month_name",
 		"type":"regex",
