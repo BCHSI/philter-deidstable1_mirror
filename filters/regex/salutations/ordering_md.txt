@@ -1,1 +1,1 @@
-\b((?i)(ordering[ ]{1,2}md|radiologist|reviewed[ ]{1,2}by)):[ ]{1,2}([A-Z][a-zA-Z]+(\,)?([ ]{1,2})?[A-Z][a-zA-Z]+([ ]{1,2}[A-Z])?)\b
+\b((?i)((?<=ordering\smd:\s)|(?<=radiologist:\s)|(?<=reviewed\sby:\s)))([A-Z][a-zA-Z]+(\,)?([ ]{1,2})?[A-Z][a-zA-Z]+([ ]{1,2}[A-Z])?)\b
