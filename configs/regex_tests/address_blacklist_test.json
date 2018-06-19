@@ -14,11 +14,25 @@
 		"notes":"This should remove anything that looks like a street address (with a possible extension)"
 	},
 	{
+		"title":"number streetname san",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/addresses/num_streetname_san_transformed.txt",
+		"notes":"This should remove anything that looks like the beginning of a street address followed by san (like san francsico)"
+	},
+	{
 		"title":"number streetname",
 		"type":"regex",
 		"exclude":true,
 		"filepath":"filters/regex/addresses/num_streetname_transformed.txt",
 		"notes":"This should remove anything that looks like the begiing of a street address"
+	},
+	{
+		"title":"street & street",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/addresses/street_&_street_transformed.txt",
+		"notes":"This should remove anything that looks like a street corner"
 	},
 	{
 		"title":"streetname floor number",
@@ -181,6 +195,20 @@
 		"exclude":true,
 		"filepath":"filters/regex/addresses/waiting_room_transformed.txt",
 		"notes":"This should remove anything that has pattern waiting room"
+	},
+	{
+		"title":"to state",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/addresses/to_state_transformed.txt",
+		"notes":"This should remove anything that has pattern to ***REMOVED***state name***REMOVED***"
+	},
+	{
+		"title":"on streetname",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/addresses/streetname_only_transformed.txt",
+		"notes":"This should remove anything that has pattern on ***REMOVED***street name***REMOVED***"
 	},
 	{
 		"title":"Address Blacklist",
