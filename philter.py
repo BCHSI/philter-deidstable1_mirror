@@ -1390,7 +1390,6 @@ class Philter:
 
                 overall_data.append(***REMOVED***tag,"{:.2%}".format(overall_recall_dict***REMOVED***recall_key***REMOVED***),str(rp_summaries***REMOVED***tp_key***REMOVED***),str(rp_summaries***REMOVED***fn_key***REMOVED***)***REMOVED***)
                 # print(tag + " Recall: " + "{:.2%}".format(overall_recall_dict***REMOVED***recall_key***REMOVED***) + " TP: " + str(rp_summaries***REMOVED***tp_key***REMOVED***) + " FN: " + str(rp_summaries***REMOVED***fn_key***REMOVED***))
-
         
         # ucsf
         
