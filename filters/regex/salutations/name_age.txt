@@ -1,0 +1,1 @@
+\b[A-Z][a-zA-Z]+(\s[A-Z][a-zA-Z]+)?(\s[A-Z][a-zA-Z]+)?((?=(?i)\sis\sa\s\d{1}\sy\.o)|(?=(?i)\sis\sa\s\d{2}\sy\.o))\b

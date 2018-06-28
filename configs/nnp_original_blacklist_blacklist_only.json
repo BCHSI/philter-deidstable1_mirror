@@ -1,0 +1,19 @@
+[   
+      {
+        "title": "Names Blacklist",
+        "type": "set",
+        "exclude": true,
+        "filepath": "/data/muenzenk/fp_analysis/blacklists/names_blacklist_sub_0_fps.json",
+        "pos": [
+            "NNP"
+        ],
+        "notes": "These are words we believe are not safe"
+    },
+    {
+        "title":"No catchall",
+        "type":"regex",
+        "exclude":false,
+        "filepath":"filters/regex/catchall.txt",
+        "notes":"False will turn off catchall, True will turn on catchll (default)"
+    }
+]

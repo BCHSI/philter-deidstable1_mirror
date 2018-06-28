@@ -1,0 +1,1 @@
+\b(?<=attending\s)[A-Z][a-zA-Z]+(\,)?[ ]{1,2}[A-Z][a-zA-Z]+\b

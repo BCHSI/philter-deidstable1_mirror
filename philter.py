@@ -205,11 +205,11 @@ class Philter:
             for m in matches:
                 #if filename == './data/i2b2_notes_updated/373-04.txt':
                 # if self.patterns[pattern_index]["title"] == "YYYY/MM-YYYY/MM":
-                # if 'a ' in m.group():
-                #     print(self.patterns[pattern_index]["title"])
-                #     print(m.group())
-                #     print(filename)
-                #     print('\n')
+                if 'present' in m.group():
+                    print(self.patterns[pattern_index]["title"])
+                    print(m.group())
+                    print(filename)
+                    print('\n')
                 
                 coord_map.add_extend(filename, m.start(), m.start()+len(m.group()))
         
@@ -1257,10 +1257,10 @@ class Philter:
                             # Get POS tag
                             pos_tag = cleaned_with_pos[str(start_coordinate_fn)][1]
                             
-                            # Get 15 characters surrounding FN on either side
+                            # Get 25 characters surrounding FN on either side
                             fn_context = ''
-                            context_start = start_coordinate_fn - 15
-                            context_end = start_coordinate_fn + len(false_negative) + 15
+                            context_start = start_coordinate_fn - 25
+                            context_end = start_coordinate_fn + len(false_negative) + 25
                             if context_start >= 0 and context_end <= len(text)-1:
                                 fn_context = text[context_start:context_end]
                             elif context_start >= 0 and context_end > len(text)-1:
@@ -1300,10 +1300,10 @@ class Philter:
 
                     pos_tag = pos_entry[1]
 
-                    # Get 15 characters surrounding FP on either side
+                    # Get 25 characters surrounding FP on either side
                     fp_context = ''
-                    context_start = start_coordinate_fp - 15
-                    context_end = start_coordinate_fp + len(false_positive) + 15
+                    context_start = start_coordinate_fp - 25
+                    context_end = start_coordinate_fp + len(false_positive) + 25
                     if context_start >= 0 and context_end <= len(text)-1:
                         fp_context = text[context_start:context_end]
                     elif context_start >= 0 and context_end > len(text)-1:

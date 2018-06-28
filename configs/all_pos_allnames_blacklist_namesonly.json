@@ -1,4 +1,4 @@
-[	
+[		
     {
         "title": "u_#_patient",
         "type": "regex",
@@ -80,9 +80,8 @@
         "title": "Names Blacklist",
         "type": "set",
         "exclude": true,
-        "filepath": "/data/muenzenk/fp_analysis/blacklists/names_blacklist_sub_0_fps.json",
+        "filepath": "/data/muenzenk/new_blacklists/ss_ucsf_names1.json",
         "pos": [
-            "NNP"
         ],
         "notes": "These are words we believe are not safe"
     },
@@ -101,6 +100,8 @@
 		"pos":["CD"],
 		"notes":"This will include any CDs that aren't included in earlier steps"
 	}
+
+
 ]
 
 
