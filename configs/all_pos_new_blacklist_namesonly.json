@@ -80,9 +80,8 @@
         "title": "Names Blacklist",
         "type": "set",
         "exclude": true,
-        "filepath": "/data/muenzenk/fp_analysis/blacklists/names_blacklist_sub_0_fps.json",
+        "filepath": "/data/muenzenk/new_blacklists/names_blacklist_061418_2.json",
         "pos": ***REMOVED***
-            "NNP"
         ***REMOVED***,
         "notes": "These are words we believe are not safe"
     },
@@ -101,6 +100,8 @@
 		"pos":***REMOVED***"CD"***REMOVED***,
 		"notes":"This will include any CDs that aren't included in earlier steps"
 	}
+
+
 ***REMOVED***
 
 
