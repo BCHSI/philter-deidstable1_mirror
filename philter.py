@@ -70,8 +70,8 @@ class Philter:
                 process = subprocess.Popen("cd generate_dataset && ./download_ner.sh".split(), stdout=subprocess.PIPE)
                 output, error = process.communicate()
             self.stanford_ner_tagger_classifier = config["stanford_ner_tagger"]["classifier"]
-            if not os.path.exists(config["stanford_ner_tagger"]["jar"]):
-                raise Exception("Filepath does not exist", config["stanford_ner_tagger"]["jar"])
+            #####if not os.path.exists(config["stanford_ner_tagger"]["jar"]):
+            #####    raise Exception("Filepath does not exist", config["stanford_ner_tagger"]["jar"])
             self.stanford_ner_tagger_jar = config["stanford_ner_tagger"]["jar"]
                 #we lazy load our tagger only if there's a corresponding pattern
 
@@ -96,10 +96,12 @@ class Philter:
         reserved_list = set(["data", "coordinate_map"])
 
         #first check that data is formatted, can be loaded etc. 
+        #print(self.patterns)
         for i,pattern in enumerate(self.patterns):
 
             if pattern["type"] in require_files and not os.path.exists(pattern["filepath"]):
                 raise Exception("Config filepath does not exist", pattern["filepath"])
+            #TODO: what does this do exactly?
             for k in reserved_list:
                 if k in pattern:
                     raise Exception("Error, Keyword is reserved", k, pattern)
@@ -150,6 +152,7 @@ class Philter:
         for i,pat in enumerate(self.patterns):
             self.patterns[i]["coordinate_map"] = CoordinateMap()
 
+        #TODO: what is the point of dirs (it's never used)?
         for root, dirs, files in os.walk(in_path):
             for f in files:
 
@@ -215,6 +218,7 @@ class Philter:
         
             self.patterns[pattern_index]["coordinate_map"] = coord_map
         
+        #TODO: what does the match all section do exactly? Why do we need it if it's matching everything? Can't we just discard the whole thing.
         #### MATCHALL ####
         elif regex == re.compile('.'):
          
@@ -292,10 +296,15 @@ class Philter:
         cleaned = []
         for item in lst:
             if len(item) > 0:
+                #TODO: if we are removing white space then how come we need to check if the resulting split is space?
+                #Nevermind. figured it out.
                 if item.isspace() == False:
+                    #TODO: why are we splitting what we already split before?
+                    #On a second thought, I think this is because we want to split by symbols also (and not only whitespace).
                     split_item = re.split("(\s+)", re.sub(pre_process, " ", item))
                     for elem in split_item:
                         if len(elem) > 0:
+                            #TODO: Shoudn't we check for whitespace here before adding? e,g, "the-school" gives: ['the', ' ', 'school']
                             cleaned.append(elem)
                 else:
                     cleaned.append(item)
@@ -311,6 +320,7 @@ class Philter:
             stop = start_coordinate + len(word)
 
             # This converts spaces into empty strings, so we know to skip forward to the next real word
+            #TODO: ^ converts spaces AND SYMBOLS into empty... right?
             word_clean = re.sub(r"[^a-zA-Z0-9]+", "", word.lower().strip())
             if len(word_clean) == 0:
                 #got a blank space or something without any characters or digits, move forward
@@ -515,6 +525,7 @@ class Philter:
             include_map = CoordinateMap()
 
             include_map.add_file(filename)
+            #TODO: why not just {for pattern in self.patterns: }
             for i,pattern in enumerate(self.patterns):
                 coord_map = pattern["coordinate_map"]
                 exclude = pattern["exclude"]
@@ -525,6 +536,7 @@ class Philter:
                         if not include_map.does_overlap(filename, start, stop):
                             exclude_map.add_extend(filename, start, stop)
                             data[filename]["phi"].append({"start":start, "stop":stop, "word":txt[start:stop]})
+                    #if include
                     else:
                         if not exclude_map.does_overlap(filename, start, stop):
                             #print("include", start, stop, txt[start:stop])
@@ -535,6 +547,7 @@ class Philter:
                             #print("include overlapped", start, stop, txt[start:stop])
 
             #now we transform the text
+            #TODO: why are diffrent ways of splitting file name being used si
             fbase, fext = os.path.splitext(f)
             outpathfbase = out_path + fbase
             if self.outformat == "asterisk":

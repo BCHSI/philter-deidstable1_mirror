@@ -53,6 +53,8 @@ def main():
 
     args = ap.parse_args()
 
+    #print(args)
+
     if args.verbose:
         print("RUNNING ", args.filters)
 
