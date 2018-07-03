@@ -518,7 +518,6 @@ class Philter:
             for i,pattern in enumerate(self.patterns):
                 coord_map = pattern["coordinate_map"]
                 exclude = pattern["exclude"]
-                #print (pattern)
                 if "phi_type" in pattern:
                     phi_type = pattern["phi_type"]
                 # self.patterns[pattern_index]["title"]
@@ -528,12 +527,12 @@ class Philter:
                     if exclude:
                         if not include_map.does_overlap(filename, start, stop):
                             exclude_map.add_extend(filename, start, stop)
-                            data[filename]["phi"].append({"start":start, "stop":stop, "word":txt[start:stop],"phi_type":phi_type}) # add new field phi_type
+                            data[filename]["phi"].append({"start":start, "stop":stop, "word":txt[start:stop],"phi_type":phi_type})
                     else:
                         if not exclude_map.does_overlap(filename, start, stop):
                             #print("include", start, stop, txt[start:stop])
                             include_map.add_extend(filename, start, stop)
-                            data[filename]["non-phi"].append({"start":start, "stop":stop, "word":txt[start:stop]}) 
+                            data[filename]["non-phi"].append({"start":start, "stop":stop, "word":txt[start:stop]})
                         else:
                             pass
                             #print("include overlapped", start, stop, txt[start:stop])
@@ -543,11 +542,9 @@ class Philter:
             outpathfbase = out_path + fbase
             if self.outformat == "asterisk":
                 with open(outpathfbase+".txt", "w", encoding='utf-8') as f:
-                    #print (exclude_map.map)
                     contents = self.transform_text_asterisk(txt, filename, 
                                                             include_map,
                                                             exclude_map)
-
                     f.write(contents)
                     
             elif self.outformat == "i2b2":
@@ -561,7 +558,6 @@ class Philter:
 
         if self.run_eval: #output our data for eval
             json.dump(data, open(self.coords, "w"), indent=4)
-
 
     # infilename needed for addressing maps
     def transform_text_asterisk(self, txt, infilename,
