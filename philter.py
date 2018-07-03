@@ -20,12 +20,10 @@ class Philter:
         can filter using whitelists, blacklists, regex's and POS
     """
     def __init__(self, config):
-        if "debug" in config:
-            self.debug = config["debug"]
-        if "errorcheck" in config:
-            self.errorcheck = config["errorcheck"]
-        if "parallel" in config:
-            self.parallel = config["parallel"]
+        if "verbose" in config:
+            self.verbose = config["verbose"]
+        if "run_eval" in config:
+            self.run_eval = config["run_eval"]
         if "freq_table" in config:
             self.freq_table = config["freq_table"]                       
         if "finpath" in config:
@@ -40,6 +38,11 @@ class Philter:
             if not os.path.exists(config["anno_folder"]):
                 raise Exception("Filepath does not exist", config["foutpath"])
             self.anno_folder = config["anno_folder"]
+        
+        if "coords" in config:
+            self.coords = config["coords"]
+        else:
+            raise Exception("Coordinate outpath undefined")
 
         if "outformat" in config:
             self.outformat = config["outformat"]
@@ -111,6 +114,7 @@ class Philter:
                     raise Exception("Invalid filteype", pattern["filepath"], "must be of", regex_filetypes)
                 self.patterns[i]["data"] = self.precompile(pattern["filepath"])
                 #print(self.precompile(pattern["filepath"]))
+    
     def precompile(self, filepath):
         """ precompiles our regex to speed up pattern matching"""
         regex = open(filepath,"r").read().strip()
@@ -152,7 +156,7 @@ class Philter:
                 filename = root+f
 
                 if filename.split(".")[-1] not in allowed_filetypes:
-                    if self.debug and self.parallel == False:
+                    if self.verbose:
                         print("Skipping: ", filename)
                     continue                
                 #self.patterns[i]["coordinate_map"].add_file(filename)
@@ -160,8 +164,6 @@ class Philter:
                 encoding = self.detect_encoding(filename)
                 txt = open(filename,"r", encoding=encoding['encoding']).read()
 
-                # if self.debug:
-                #     print("Transforming", pat)
 
                 for i,pat in enumerate(self.patterns):
                     if pat["type"] == "regex":
@@ -203,9 +205,11 @@ class Philter:
             for m in matches:
                 #if filename == './data/i2b2_notes_updated/373-04.txt':
                 # if self.patterns[pattern_index]["title"] == "YYYY/MM-YYYY/MM":
-                # # if '810 86 43' in m.group():
-                # #     print(self.patterns[pattern_index]["title"])
-                # print(m.group())
+                if 'present' in m.group():
+                    print(self.patterns[pattern_index]["title"])
+                    print(m.group())
+                    print(filename)
+                    print('\n')
                 
                 coord_map.add_extend(filename, m.start(), m.start()+len(m.group()))
         
@@ -479,7 +483,7 @@ class Philter:
             **Anything not caught in these passes will be assumed to be PHI
         """
         
-        if self.debug and self.parallel == False:
+        if self.verbose:
             print("RUNNING TRANSFORM")
 
         if not os.path.exists(in_path):
@@ -552,8 +556,8 @@ class Philter:
                                 self.outformat)
                 
 
-        if self.debug: #output our data for eval
-            json.dump(data, open("./data/coordinates.json", "w"), indent=4)
+        if self.run_eval: #output our data for eval
+            json.dump(data, open(self.coords, "w"), indent=4)
 
     # infilename needed for addressing maps
     def transform_text_asterisk(self, txt, infilename,
@@ -777,8 +781,8 @@ class Philter:
             raise Exception("False Negative Filepath does not exist", fn_output)
         if not os.path.exists(fp_output):
             raise Exception("False Positive Filepath does not exist", fp_output)
-        if self.debug and self.parallel == False:
-            print("RUNNING EVAL")
+
+        print("RUNNING EVAL")
             
         
         summary = {
@@ -921,720 +925,740 @@ class Philter:
         else:
             retention = 0.0
         
-        if self.debug and self.parallel == False:
-            #save the phi we missed
-            json.dump(summary, open(summary_output, "w"), indent=4)
-            json.dump(all_fn, open(fn_output, "w"), indent=4)
-            json.dump(all_fp, open(fp_output, "w"), indent=4)
-            
-            print('\n')
-            print("true_negatives", summary["total_true_negatives"],"true_positives", summary["total_true_positives"], "false_negatives", summary["total_false_negatives"], "false_positives", summary["total_false_positives"])
-            print('\n')
-            print("Global Recall: {:.2%}".format(recall))
-            print("Global Precision: {:.2%}".format(precision))
-            print("Global Retention: {:.2%}".format(retention))
+        ################# DETAILED EVAL ##################
+        #save the phi we missed
+        json.dump(summary, open(summary_output, "w"), indent=4)
+        json.dump(all_fn, open(fn_output, "w"), indent=4)
+        json.dump(all_fp, open(fp_output, "w"), indent=4)
+        
+        print('\n')
+        print("Uncorrected Results:")
+        print('\n')
+        print("TP:", summary["total_true_positives"],"FN:", summary["total_false_negatives"], "TN:", summary["total_true_negatives"], "FP:", summary["total_false_positives"])
+        print("Global Recall: {:.2%}".format(recall))
+        print("Global Precision: {:.2%}".format(precision))
+        print("Global Retention: {:.2%}".format(retention))
 
 
         ###################### Get phi tags #####################
-        if self.errorcheck and self.parallel == False:
-            print('\n')
-            print("RUNNING ERRORCHECK")
 
-        if self.errorcheck:
-            # Get xml summary
-            phi = self.xml
-            # Create dictionary to hold fn tags
-            fn_tags = {}
-            fp_tags = {}
+        print('\n')
+        print("RUNNING ERRORCHECK")
+
+        # Get xml summary
+        phi = self.xml
+        # Create dictionary to hold fn tags
+        fn_tags = {}
+        fp_tags = {}
+        
+        # Keep track of recall and precision for each category
+        phi_categories = ['Age','Contact','Date','ID','Location','Name','Other']
+        # i2b2:
+        if not self.ucsf_format:                
+            # Define tag list
+            i2b2_tags = ['DOCTOR','PATIENT','DATE','MEDICALRECORD','IDNUM','DEVICE','USERNAME','PHONE','EMAIL','FAX','CITY','STATE','ZIP','STREET','LOCATION-OTHER','HOSPITAL','AGE']
             
-            # Keep track of recall and precision for each category
-            phi_categories = ['Age','Contact','Date','ID','Location','Name','Other']
-            # i2b2:
-            if not self.ucsf_format:                
-                # Define tag list
-                i2b2_tags = ['DOCTOR','PATIENT','DATE','MEDICALRECORD','IDNUM','DEVICE','USERNAME','PHONE','EMAIL','FAX','CITY','STATE','ZIP','STREET','LOCATION-OTHER','HOSPITAL','AGE']
-                
-                i2b2_category_dict = {'DOCTOR':'Name',
-                'PATIENT':'Name',
-                'DATE':'Date',
-                'MEDICALRECORD':'ID',
-                'IDNUM':'ID',
-                'DEVICE':'ID',
-                'USERNAME':'Contact',
-                'PHONE':'Contact',
-                'EMAIL':'Contact',
-                'FAX':'Contact',
-                'CITY':'Location',
-                'STATE':'Location',
-                'ZIP':'Location',
-                'STREET':'Location',
-                'LOCATION-OTHER':'Location',
-                'HOSPITAL':'Location',
-                'AGE':'Age'
-                }
-                
-                i2b2_include_tags = ['DOCTOR','PATIENT','DATE','MEDICALRECORD','IDNUM','DEVICE','USERNAME','PHONE','EMAIL','FAX','CITY','STATE','ZIP','STREET','LOCATION-OTHER','HOSPITAL','AGE']
+            i2b2_category_dict = {'DOCTOR':'Name',
+            'PATIENT':'Name',
+            'DATE':'Date',
+            'MEDICALRECORD':'ID',
+            'IDNUM':'ID',
+            'DEVICE':'ID',
+            'USERNAME':'Contact',
+            'PHONE':'Contact',
+            'EMAIL':'Contact',
+            'FAX':'Contact',
+            'CITY':'Location',
+            'STATE':'Location',
+            'ZIP':'Location',
+            'STREET':'Location',
+            'LOCATION-OTHER':'Location',
+            'HOSPITAL':'Location',
+            'AGE':'Age'
+            }
+            
+            i2b2_include_tags = ['DOCTOR','PATIENT','DATE','MEDICALRECORD','IDNUM','DEVICE','USERNAME','PHONE','EMAIL','FAX','CITY','STATE','ZIP','STREET','LOCATION-OTHER','HOSPITAL','AGE']
 
 
-                rp_summaries = {}
-                for i in range(0,len(i2b2_tags)):
-                    tag = i2b2_tags[i]
-                    fn_key = tag + '_fns'
-                    tp_key = tag + '_tps'
-                    rp_summaries[fn_key] = 0
-                    rp_summaries[tp_key] = 0
+            rp_summaries = {}
+            for i in range(0,len(i2b2_tags)):
+                tag = i2b2_tags[i]
+                fn_key = tag + '_fns'
+                tp_key = tag + '_tps'
+                rp_summaries[fn_key] = 0
+                rp_summaries[tp_key] = 0
 
-            # ucsf:
-            if self.ucsf_format:
-                # Define tag list
-                ucsf_tags = ['Date','Provider_Name','Phone_Fax','Age','Patient_Name_or_Family_Member_Name','Patient_Address','Patient_Initials','Provider_Address_or_Location','Provider_Initials','Provider_Certificate_or_License','Patient_Medical_Record_Id','Patient_Account_Number','Patient_Social_Security_Number','Patient_Vehicle_or_Device_Id','Patient_Unique_Id','Diagnosis_Code_ICD_or_International','Procedure_or_Billing_Code','Medical_Department_Name','Email','URL_IP','Patient_Biometric_Id_or_Face_Photo','Patient_Language_Spoken','Patient_Place_Of_Work_or_Occupation','Patient_Certificate_or_License','Medical_Research_Study_Name_or_Number','Teaching_Institution_Name','Non_UCSF_Medical_Institution_Name','Medical_Institution_Abbreviation','Unclear']
-                
-                ucsf_category_dict = {'Date':'Date',
-                'Provider_Name':'Name',
-                'Phone_Fax':'Contact',
-                'Age':'Age',
-                'Patient_Name_or_Family_Member_Name':'Name',
-                'Patient_Address':'Location',
-                'Patient_Initials':'Name',
-                'Provider_Address_or_Location':'Location',
-                'Provider_Initials':'Name',
-                'Provider_Certificate_or_License':'ID',
-                'Patient_Medical_Record_Id':'ID',
-                'Patient_Account_Number':'ID',
-                'Patient_Social_Security_Number':'ID',
-                'Patient_Vehicle_or_Device_Id':'ID',
-                'Patient_Unique_Id':'ID',
-                'Diagnosis_Code_ICD_or_International':'ID',
-                'Procedure_or_Billing_Code':'ID',
-                'Medical_Department_Name':'Location',
-                'Email':'Contact',
-                'URL_IP':'Contact',
-                'Patient_Biometric_Id_or_Face_Photo':'ID',
-                'Patient_Language_Spoken':'Other',
-                'Patient_Place_Of_Work_or_Occupation':'Location',
-                'Patient_Certificate_or_License':'ID',
-                'Medical_Research_Study_Name_or_Number':'ID',
-                'Teaching_Institution_Name':'Location',
-                'Non_UCSF_Medical_Institution_Name':'Location',
-                'Medical_Institution_Abbreviation':'Location',
-                'Unclear':'Other'
-                }
-                
-                ucsf_include_tags = ['Date','Provider_Name','Phone_Fax','Patient_Name_or_Family_Member_Name','Patient_Address','Provider_Address_or_Location','Provider_Initials','Provider_Certificate_or_License','Patient_Medical_Record_Id','Patient_Account_Number','Patient_Social_Security_Number','Patient_Vehicle_or_Device_Id','Patient_Unique_Id','Email','URL_IP','Patient_Biometric_Id_or_Face_Photo','Patient_Certificate_or_License']
-
-
-                rp_summaries = {}
-                for i in range(0,len(ucsf_tags)):
-                    tag = ucsf_tags[i]
-                    fn_key = tag + '_fns'
-                    tp_key = tag + '_tps'
-                    rp_summaries[fn_key] = 0
-                    rp_summaries[tp_key] = 0
+        # ucsf:
+        if self.ucsf_format:
+            # Define tag list
+            ucsf_tags = ['Date','Provider_Name','Phone_Fax','Age','Patient_Name_or_Family_Member_Name','Patient_Address','Patient_Initials','Provider_Address_or_Location','Provider_Initials','Provider_Certificate_or_License','Patient_Medical_Record_Id','Patient_Account_Number','Patient_Social_Security_Number','Patient_Vehicle_or_Device_Id','Patient_Unique_Id','Diagnosis_Code_ICD_or_International','Procedure_or_Billing_Code','Medical_Department_Name','Email','URL_IP','Patient_Biometric_Id_or_Face_Photo','Patient_Language_Spoken','Patient_Place_Of_Work_or_Occupation','Patient_Certificate_or_License','Medical_Research_Study_Name_or_Number','Teaching_Institution_Name','Non_UCSF_Medical_Institution_Name','Medical_Institution_Abbreviation','Unclear']
+            
+            ucsf_category_dict = {'Date':'Date',
+            'Provider_Name':'Name',
+            'Phone_Fax':'Contact',
+            'Age':'Age',
+            'Patient_Name_or_Family_Member_Name':'Name',
+            'Patient_Address':'Location',
+            'Patient_Initials':'Name',
+            'Provider_Address_or_Location':'Location',
+            'Provider_Initials':'Name',
+            'Provider_Certificate_or_License':'ID',
+            'Patient_Medical_Record_Id':'ID',
+            'Patient_Account_Number':'ID',
+            'Patient_Social_Security_Number':'ID',
+            'Patient_Vehicle_or_Device_Id':'ID',
+            'Patient_Unique_Id':'ID',
+            'Diagnosis_Code_ICD_or_International':'ID',
+            'Procedure_or_Billing_Code':'ID',
+            'Medical_Department_Name':'Location',
+            'Email':'Contact',
+            'URL_IP':'Contact',
+            'Patient_Biometric_Id_or_Face_Photo':'ID',
+            'Patient_Language_Spoken':'Other',
+            'Patient_Place_Of_Work_or_Occupation':'Location',
+            'Patient_Certificate_or_License':'ID',
+            'Medical_Research_Study_Name_or_Number':'ID',
+            'Teaching_Institution_Name':'Location',
+            'Non_UCSF_Medical_Institution_Name':'Location',
+            'Medical_Institution_Abbreviation':'Location',
+            'Unclear':'Other'
+            }
+            
+            ucsf_include_tags = ['Date','Provider_Name','Phone_Fax','Patient_Name_or_Family_Member_Name','Patient_Address','Provider_Address_or_Location','Provider_Certificate_or_License','Patient_Medical_Record_Id','Patient_Account_Number','Patient_Social_Security_Number','Patient_Vehicle_or_Device_Id','Patient_Unique_Id','Email','URL_IP','Patient_Biometric_Id_or_Face_Photo','Patient_Certificate_or_License']
 
 
-            # Create dictionaries for unigram and bigram PHI/non-PHI frequencies
-            # Diciontary values look like: [phi_count, non-phi_count]
-            unigram_dict = {}
-            bigram_dict = {}
-
-            # Loop through all filenames in summary
-            for fn in summary_coords['summary_by_file']:
-                
-                current_summary =  summary_coords['summary_by_file'][fn]
-
-                # Get corresponding info in phi_notes
-                note_name = fn.split('/')[3]
-                
-                try:
-                    anno_name = note_name.split('.')[0] + ".xml"
-                    text = phi[anno_name]['text']
-                except KeyError:
-                    anno_name = note_name.split('.')[0] + ".txt.xml"
-                    text = phi[anno_name]['text']
-                    # except KeyError:
-                    #     anno_name = note_name.split('.')[0] + "_nounicode.txt.xml"
-                    #     text = phi[anno_name]['text']                       
-
-                lst = re.split("(\s+)", text)
-                cleaned = []
-                cleaned_coords = []
-                for item in lst:
-                    if len(item) > 0:
-                        if item.isspace() == False:
-                            split_item = re.split("(\s+)", re.sub(r"[^a-zA-Z0-9\.]", " ", item))
-                            for elem in split_item:
-                                if len(elem) > 0:
-                                    cleaned.append(elem)
-                        else:
-                            cleaned.append(item)
-                # if anno_name == '110-01.xml':
-                #     print(anno_name)
-                #     #print(cleaned)
-                #     print('Anno text:')
-                #     print(text)
-                
-                # Get coords for POS tags
-                start_coordinate = 0
-                pos_coords = []
-                for item in cleaned:
-                    pos_coords.append(start_coordinate)
-                    start_coordinate += len(item)
-
-                #print(pos_coords)
-                pos_list = nltk.pos_tag(cleaned)
+            rp_summaries = {}
+            for i in range(0,len(ucsf_tags)):
+                tag = ucsf_tags[i]
+                fn_key = tag + '_fns'
+                tp_key = tag + '_tps'
+                rp_summaries[fn_key] = 0
+                rp_summaries[tp_key] = 0
 
 
-                cleaned_with_pos = {}
-                for i in range(0,len(pos_list)):
-                    cleaned_with_pos[str(pos_coords[i])] = [pos_list[i][0], pos_list[i][1]]
+        # Create dictionaries for unigram and bigram PHI/non-PHI frequencies
+        # Diciontary values look like: [phi_count, non-phi_count]
+        unigram_dict = {}
+        bigram_dict = {}
 
-                ########## Get FN tags ##########
-                phi_list = phi[anno_name]['phi']
-                # print(cleaned)
-                # print(pos_coords)
+        # Loop through all filenames in summary
+        for fn in summary_coords['summary_by_file']:
+            
+            current_summary =  summary_coords['summary_by_file'][fn]
+
+            # Get corresponding info in phi_notes
+            note_name = fn.split('/')[-1]
+            
+            try:
+                anno_name = note_name.split('.')[0] + ".xml"
+                text = phi[anno_name]['text']
+            except KeyError:
+                anno_name = note_name.split('.')[0] + ".txt.xml"
+                text = phi[anno_name]['text']
+                # except KeyError:
+                #     anno_name = note_name.split('.')[0] + "_nounicode.txt.xml"
+                #     text = phi[anno_name]['text']                       
+
+            lst = re.split("(\s+)", text)
+            cleaned = []
+            cleaned_coords = []
+            for item in lst:
+                if len(item) > 0:
+                    if item.isspace() == False:
+                        split_item = re.split("(\s+)", re.sub(r"[^a-zA-Z0-9\.]", " ", item))
+                        for elem in split_item:
+                            if len(elem) > 0:
+                                cleaned.append(elem)
+                    else:
+                        cleaned.append(item)
+            # if anno_name == '110-01.xml':
+            #     print(anno_name)
+            #     #print(cleaned)
+            #     print('Anno text:')
+            #     print(text)
+            
+            # Get coords for POS tags
+            start_coordinate = 0
+            pos_coords = []
+            for item in cleaned:
+                pos_coords.append(start_coordinate)
+                start_coordinate += len(item)
+
+            #print(pos_coords)
+            pos_list = nltk.pos_tag(cleaned)
 
 
-                ######### Create unigram and bigram frequency tables #######
-                if self.freq_table:
+            cleaned_with_pos = {}
+            for i in range(0,len(pos_list)):
+                cleaned_with_pos[str(pos_coords[i])] = [pos_list[i][0], pos_list[i][1]]
 
-                    # Create separate cleaned list/coord list without spaces
-                    cleaned_nospaces = []
-                    coords_nospaces = []
-                    for i in range(0,len(cleaned)):
-                        if cleaned[i].isspace() == False:
-                            cleaned_nospaces.append(cleaned[i])
-                            coords_nospaces.append(pos_coords[i])
+            ########## Get FN tags ##########
+            phi_list = phi[anno_name]['phi']
+            # print(cleaned)
+            # print(pos_coords)
 
-                    # Loop through all single words and word pairs, and compare with PHI list
-                    for i in range(0,len(cleaned_nospaces)-1):
-                        #cleaned_nospaces[i]= word, coords_nospaces[i] = start coordinate
-                        unigram_word = cleaned_nospaces[i].replace('\n','').replace('\t','').replace(' ','').lower()
-                        bigram_word = " ".join([cleaned_nospaces[i].replace('\n','').replace('\t','').replace(' ','').lower(),cleaned_nospaces[i+1].replace('\n','').replace('\t','').replace(' ','').lower()])
-                        unigram_start = coords_nospaces[i]
-                        bigram_start1 = coords_nospaces[i]
-                        bigram_start2 = coords_nospaces[i+1]
 
-                        # Loop through PHI list and compare ranges
-                        for phi_item in phi_list:
+            ######### Create unigram and bigram frequency tables #######
+            if self.freq_table:
+
+                # Create separate cleaned list/coord list without spaces
+                cleaned_nospaces = []
+                coords_nospaces = []
+                for i in range(0,len(cleaned)):
+                    if cleaned[i].isspace() == False:
+                        cleaned_nospaces.append(cleaned[i])
+                        coords_nospaces.append(pos_coords[i])
+
+                # Loop through all single words and word pairs, and compare with PHI list
+                for i in range(0,len(cleaned_nospaces)-1):
+                    #cleaned_nospaces[i]= word, coords_nospaces[i] = start coordinate
+                    unigram_word = cleaned_nospaces[i].replace('\n','').replace('\t','').replace(' ','').lower()
+                    bigram_word = " ".join([cleaned_nospaces[i].replace('\n','').replace('\t','').replace(' ','').lower(),cleaned_nospaces[i+1].replace('\n','').replace('\t','').replace(' ','').lower()])
+                    unigram_start = coords_nospaces[i]
+                    bigram_start1 = coords_nospaces[i]
+                    bigram_start2 = coords_nospaces[i+1]
+
+                    # Loop through PHI list and compare ranges
+                    for phi_item in phi_list:
+                        try:
                             phi_start = phi_item['start']
                             phi_end = phi_item['end']
-                            if unigram_start in range(int(phi_start), int(phi_end)):
-                                # This word is PHI and hasn't been added to the dictionary yet
-                                if unigram_word not in unigram_dict:
-                                    unigram_dict[unigram_word] = [1, 0]
-                               # This word is PHI and has already been added to the dictionary
-                                else:
-                                    unigram_dict[unigram_word][0] += 1
+                        except KeyError:
+                            phi_start = phi_item['spans'].split('~')[0]
+                            phi_end = phi_item['spans'].split('~')[1]
+                        if unigram_start in range(int(phi_start), int(phi_end)):
+                            # This word is PHI and hasn't been added to the dictionary yet
+                            if unigram_word not in unigram_dict:
+                                unigram_dict[unigram_word] = [1, 0]
+                           # This word is PHI and has already been added to the dictionary
                             else:
-                                # This word is not PHI and hasn't been aded to the dictionary yet
-                                if unigram_word not in unigram_dict:
-                                    unigram_dict[unigram_word] = [0, 1]
-                               # This word is not PHI and has already been added to the dictionary
-                                else:
-                                    unigram_dict[unigram_word][1] += 1                               
-                            if bigram_start1 in range(int(phi_start), int(phi_end)) and bigram_start2 in range(int(phi_start), int(phi_end)):
-                                # This word is PHI and hasn't been added to the dictionary yet
-                                if bigram_word not in bigram_dict:
-                                    bigram_dict[bigram_word] = [1, 0]
-                               # This word is PHI and has already been added to the dictionary
-                                else:
-                                    bigram_dict[bigram_word][0] += 1                                
+                                unigram_dict[unigram_word][0] += 1
+                        else:
+                            # This word is not PHI and hasn't been aded to the dictionary yet
+                            if unigram_word not in unigram_dict:
+                                unigram_dict[unigram_word] = [0, 1]
+                           # This word is not PHI and has already been added to the dictionary
                             else:
-                                # This word is not PHI and hasn't been aded to the dictionary yet
-                                if bigram_word not in bigram_dict:
-                                    bigram_dict[bigram_word] = [0, 1]
-                               # This word is not PHI and has already been added to the dictionary
-                                else:
-                                    bigram_dict[bigram_word][1] += 1
+                                unigram_dict[unigram_word][1] += 1                               
+                        if bigram_start1 in range(int(phi_start), int(phi_end)) and bigram_start2 in range(int(phi_start), int(phi_end)):
+                            # This word is PHI and hasn't been added to the dictionary yet
+                            if bigram_word not in bigram_dict:
+                                bigram_dict[bigram_word] = [1, 0]
+                           # This word is PHI and has already been added to the dictionary
+                            else:
+                                bigram_dict[bigram_word][0] += 1                                
+                        else:
+                            # This word is not PHI and hasn't been aded to the dictionary yet
+                            if bigram_word not in bigram_dict:
+                                bigram_dict[bigram_word] = [0, 1]
+                           # This word is not PHI and has already been added to the dictionary
+                            else:
+                                bigram_dict[bigram_word][1] += 1
 
 
-                # Get tp counts per category
-                current_tps = current_summary['true_positives']
-                for word in current_tps:
+            # Get tp counts per category
+            current_tps = current_summary['true_positives']
+            for word in current_tps:
 
-                    start_coordinate_tp = word[1]
-                    for phi_item in phi_list:
+                start_coordinate_tp = word[1]
+                for phi_item in phi_list:
+                    if self.ucsf_format:
+                        phi_start = int(phi_item['spans'].split('~')[0])
+                        phi_end = int(phi_item['spans'].split('~')[1])                               
+                    else:
+                        phi_start = phi_item['start']
+                        phi_end = phi_item['end']
+                    phi_type = phi_item['TYPE']
+
+                    if not self.ucsf_format:
+                        for i in range(0,len(i2b2_tags)):
+                            tag = i2b2_tags[i]
+                            tp_key = tag + '_tps'
+                            if (start_coordinate_tp in range(int(phi_start), int(phi_end))) and (tag == phi_type):
+                                rp_summaries[tp_key] += 1
+                                                    
+                    #### ucsf
+                    if self.ucsf_format:
+                        for i in range(0,len(ucsf_tags)):
+                            tag = ucsf_tags[i]
+                            tp_key = tag + '_tps'
+                            if (start_coordinate_tp in range(int(phi_start), int(phi_end))) and (tag == phi_type):
+                                rp_summaries[tp_key] += 1
+
+            
+            # if anno_name == '110-01.xml':
+            # print(anno_name)
+            # print(cleaned_dict)
+            # print('\n')
+            
+
+            #### i2b2
+            if not self.ucsf_format:
+                fn_counter_dict = {}
+                for i in range(0,len(i2b2_tags)):
+                    tag = i2b2_tags[i]
+                    tag_fn_counter = tag + '_fn_counter'
+                    fn_counter_dict[tag_fn_counter] = 0
+            #### ucsf
+            if self.ucsf_format:
+                fn_counter_dict = {}
+                for i in range(0,len(ucsf_tags)):
+                    tag = ucsf_tags[i]
+                    tag_fn_counter = tag + '_fn_counter'
+                    fn_counter_dict[tag_fn_counter] = 0
+                          
+
+            fn_tag_summary = {}
+
+            if current_summary['false_negatives'] != [] and current_summary['false_negatives'] != [""]:              
+                counter = 0
+                current_fns = current_summary['false_negatives']
+             
+                for word in current_fns:
+                    counter += 1
+                    false_negative = word[0]
+                    start_coordinate_fn = word[1]
+                  
+                    for phi_item in phi_list:                           
+                        phi_text = phi_item['text']
+                        phi_type = phi_item['TYPE']
+                        phi_id = phi_item['id']
                         if self.ucsf_format:
                             phi_start = int(phi_item['spans'].split('~')[0])
                             phi_end = int(phi_item['spans'].split('~')[1])                               
                         else:
                             phi_start = phi_item['start']
                             phi_end = phi_item['end']
-                        phi_type = phi_item['TYPE']
 
+
+                        #### i2b2
                         if not self.ucsf_format:
                             for i in range(0,len(i2b2_tags)):
                                 tag = i2b2_tags[i]
-                                tp_key = tag + '_tps'
-                                if (start_coordinate_tp in range(int(phi_start), int(phi_end))) and (tag == phi_type):
-                                    rp_summaries[tp_key] += 1
-                                                        
+                                fn_key = tag + '_fns'
+                                tag_fn_counter = tag + '_fn_counter'
+                                if (start_coordinate_fn in range(int(phi_start), int(phi_end))) and phi_type == tag:
+                                    rp_summaries[fn_key] += 1
+                                    fn_counter_dict[tag_fn_counter] += 1
+
+                        
                         #### ucsf
                         if self.ucsf_format:
                             for i in range(0,len(ucsf_tags)):
                                 tag = ucsf_tags[i]
-                                tp_key = tag + '_tps'
-                                if (start_coordinate_tp in range(int(phi_start), int(phi_end))) and (tag == phi_type):
-                                    rp_summaries[tp_key] += 1
-
-                
-                # if anno_name == '110-01.xml':
-                # print(anno_name)
-                # print(cleaned_dict)
-                # print('\n')
-                
-
-                #### i2b2
-                if not self.ucsf_format:
-                    fn_counter_dict = {}
-                    for i in range(0,len(i2b2_tags)):
-                        tag = i2b2_tags[i]
-                        tag_fn_counter = tag + '_fn_counter'
-                        fn_counter_dict[tag_fn_counter] = 0
-                #### ucsf
-                if self.ucsf_format:
-                    fn_counter_dict = {}
-                    for i in range(0,len(ucsf_tags)):
-                        tag = ucsf_tags[i]
-                        tag_fn_counter = tag + '_fn_counter'
-                        fn_counter_dict[tag_fn_counter] = 0
-                              
-
-                fn_tag_summary = {}
-
-                if current_summary['false_negatives'] != [] and current_summary['false_negatives'] != [""]:              
-                    counter = 0
-                    current_fns = current_summary['false_negatives']
-                 
-                    for word in current_fns:
-                        counter += 1
-                        false_negative = word[0]
-                        start_coordinate_fn = word[1]
-                      
-                        for phi_item in phi_list:                           
-                            phi_text = phi_item['text']
-                            phi_type = phi_item['TYPE']
-                            phi_id = phi_item['id']
-                            if self.ucsf_format:
-                                phi_start = int(phi_item['spans'].split('~')[0])
-                                phi_end = int(phi_item['spans'].split('~')[1])                               
-                            else:
-                                phi_start = phi_item['start']
-                                phi_end = phi_item['end']
+                                fn_key = tag + '_fns'
+                                tag_fn_counter = tag + '_fn_counter'
+                                if (start_coordinate_fn in range(int(phi_start), int(phi_end))) and phi_type == tag:
+                                    rp_summaries[fn_key] += 1
+                                    fn_counter_dict[tag_fn_counter] += 1
 
 
-                            #### i2b2
-                            if not self.ucsf_format:
-                                for i in range(0,len(i2b2_tags)):
-                                    tag = i2b2_tags[i]
-                                    fn_key = tag + '_fns'
-                                    tag_fn_counter = tag + '_fn_counter'
-                                    if (start_coordinate_fn in range(int(phi_start), int(phi_end))) and phi_type == tag:
-                                        rp_summaries[fn_key] += 1
-                                        fn_counter_dict[tag_fn_counter] += 1
-
+                        # Find PHI match: fn in text, coord in range
+                        if start_coordinate_fn in range(int(phi_start), int(phi_end)):
+                            # Get PHI tag
+                            phi_tag = phi_type
+                            # Get POS tag
+                            pos_tag = cleaned_with_pos[str(start_coordinate_fn)][1]
                             
-                            #### ucsf
-                            if self.ucsf_format:
-                                for i in range(0,len(ucsf_tags)):
-                                    tag = ucsf_tags[i]
-                                    fn_key = tag + '_fns'
-                                    tag_fn_counter = tag + '_fn_counter'
-                                    if (start_coordinate_fn in range(int(phi_start), int(phi_end))) and phi_type == tag:
-                                        rp_summaries[fn_key] += 1
-                                        fn_counter_dict[tag_fn_counter] += 1
-
-
-                            # Find PHI match: fn in text, coord in range
-                            if start_coordinate_fn in range(int(phi_start), int(phi_end)):
-                                # Get PHI tag
-                                phi_tag = phi_type
-                                # Get POS tag
-                                pos_tag = cleaned_with_pos[str(start_coordinate_fn)][1]
-                                
-                                # Get 15 characters surrounding FN on either side
-                                fn_context = ''
-                                context_start = start_coordinate_fn - 15
-                                context_end = start_coordinate_fn + len(false_negative) + 15
-                                if context_start >= 0 and context_end <= len(text)-1:
-                                    fn_context = text[context_start:context_end]
-                                elif context_start >= 0 and context_end > len(text)-1:
-                                    fn_context = text[context_start:]
-                                else:
-                                    fn_context = text[:context_end]
-                                # if fn == './data/i2b2_results/137-03.txt':
-                                #     print(fn_context)                  
-                                
-                                # Get fn id, to distinguish betweem multiple entries
-                                fn_id = "N" + str(counter)
-                                ###### Create output dicitonary with id/word/pos/phi
-                                fn_tag_summary[fn_id] = [false_negative, phi_tag, pos_tag, fn_context]
-                                # if phi_tag == 'AGE':
-                                #     print(word)
-                
-
-                if fn_tag_summary != {}:
-                    fn_tags[fn] = fn_tag_summary
-
-
-
-                ####### Get FP tags #########
-                fp_tag_summary = {}
-                #print(cleaned_with_pos)
-                if current_summary['false_positives'] != [] and current_summary['false_positives'] != [""]:              
-
-                    current_fps = current_summary['false_positives']
-                    counter = 0
-                    #print(current_fps)
-                    for word in current_fps:
-                        counter += 1
-                        false_positive = word[0]
-                        start_coordinate_fp = word[1]
-                     
-                        pos_entry = cleaned_with_pos[str(start_coordinate_fp)]
-
-                        pos_tag = pos_entry[1]
-
-                        # Get 15 characters surrounding FP on either side
-                        fp_context = ''
-                        context_start = start_coordinate_fp - 15
-                        context_end = start_coordinate_fp + len(false_positive) + 15
-                        if context_start >= 0 and context_end <= len(text)-1:
-                            fp_context = text[context_start:context_end]
-                        elif context_start >= 0 and context_end > len(text)-1:
-                            fp_context = text[context_start:]
-                        else:
-                            fp_context = text[:context_end]
-
-
-                        fp_id = "P" + str(counter)
-                        fp_tag_summary[fp_id] = [false_positive, pos_tag, fp_context]
-
-                if fp_tag_summary != {}:
-                    fp_tags[fn] = fp_tag_summary
+                            # Get 25 characters surrounding FN on either side
+                            fn_context = ''
+                            context_start = start_coordinate_fn - 25
+                            context_end = start_coordinate_fn + len(false_negative) + 25
+                            if context_start >= 0 and context_end <= len(text)-1:
+                                fn_context = text[context_start:context_end]
+                            elif context_start >= 0 and context_end > len(text)-1:
+                                fn_context = text[context_start:]
+                            else:
+                                fn_context = text[:context_end]
+                            # if fn == './data/i2b2_results/137-03.txt':
+                            #     print(fn_context)                  
+                            
+                            # Get fn id, to distinguish betweem multiple entries
+                            fn_id = "N" + str(counter)
+                            ###### Create output dicitonary with id/word/pos/phi
+                            fn_tag_summary[fn_id] = [false_negative, phi_tag, pos_tag, fn_context]
+                            # if phi_tag == 'AGE':
+                            #     print(word)
             
-            # Create frequency table outputs
-            if self.freq_table:
-                # Unigram table
-                with open('./data/phi/unigram_freq_table.csv','w') as f:
-                    f.write('unigram,phi_count,non-phi_count\n')
-                    for key in unigram_dict:
-                        word = key
-                        phi_count = unigram_dict[key][0]
-                        non_phi_count = unigram_dict[key][1]
-                        f.write(word + ',' + str(phi_count) + ',' + str(non_phi_count) + '\n')
-                with open('./data/phi/bigranm_freq_table.csv','w') as f:
-                    f.write('bigram,phi_count,non-phi_count\n')
-                    for key in bigram_dict:
-                        term = key
-                        phi_count = bigram_dict[key][0]
-                        non_phi_count = bigram_dict[key][1]
-                        f.write(term + ',' + str(phi_count) + ',' + str(non_phi_count) + '\n')
 
-            # get specific recalls
-            # i2b2
-            overall_data = []
-            if not self.ucsf_format:
-                include_dict = {'fns':0,'tps':0}
-                category_dict = {}
-                for i in range(0,len(phi_categories)):
-                    category_tag = phi_categories[i]
-                    category_fns = category_tag + '_fns'
-                    category_tps = category_tag + '_tps'
-
-                    category_dict[category_fns] = 0
-                    category_dict[category_tps] = 0
-
-                overall_recall_dict = {}
-
-                for i in range(0,len(i2b2_tags)):
-                    tag = i2b2_tags[i]
-                    fn_key = tag + '_fns'
-                    tp_key = tag + '_tps'
-                    tag_fn_counter = tag + '_fn_counter'
-                    tag_cleaned_list = tag + '_cleaned'
-                    recall_key = tag + '_recall'
+            if fn_tag_summary != {}:
+                fn_tags[fn] = fn_tag_summary
 
 
-                    # Get info for overall include dict and category dict
-                    if tag in i2b2_include_tags:
-                        include_dict['fns'] += rp_summaries[fn_key]
-                        include_dict['tps'] += rp_summaries[tp_key]
 
-                        tag_category = i2b2_category_dict[tag]
-                        category_fns = tag_category + '_fns'
-                        category_tps = tag_category + '_tps'
+            ####### Get FP tags #########
+            fp_tag_summary = {}
+            #print(cleaned_with_pos)
+            if current_summary['false_positives'] != [] and current_summary['false_positives'] != [""]:              
 
-                        category_dict[category_fns] += rp_summaries[fn_key]
-                        category_dict[category_tps] += rp_summaries[tp_key]                    
+                current_fps = current_summary['false_positives']
+                counter = 0
+                #print(current_fps)
+                for word in current_fps:
+                    counter += 1
+                    false_positive = word[0]
+                    start_coordinate_fp = word[1]
+                 
+                    pos_entry = cleaned_with_pos[str(start_coordinate_fp)]
 
+                    pos_tag = pos_entry[1]
 
-                    if rp_summaries[fn_key] != 0:
-                        # if rp_summaries[tp_key] != 0 and (rp_summaries[tp_key]-rp_summaries[fn_key]) > 0:
-                        overall_recall_dict[recall_key] = rp_summaries[tp_key]/(rp_summaries[fn_key] + rp_summaries[tp_key])
-                        # else:
-                        #     overall_recall_dict[recall_key] = 0
+                    # Get 25 characters surrounding FP on either side
+                    fp_context = ''
+                    context_start = start_coordinate_fp - 25
+                    context_end = start_coordinate_fp + len(false_positive) + 25
+                    if context_start >= 0 and context_end <= len(text)-1:
+                        fp_context = text[context_start:context_end]
+                    elif context_start >= 0 and context_end > len(text)-1:
+                        fp_context = text[context_start:]
                     else:
-                        overall_recall_dict[recall_key] = 1
-                    
-                    overall_data.append([tag,"{:.2%}".format(overall_recall_dict[recall_key]),str(rp_summaries[tp_key]),str(rp_summaries[fn_key])])
-                    #print(tag + " Recall: " + "{:.2%}".format(overall_recall_dict[recall_key]) + " TP: " + str(rp_summaries[tp_key]) + " FN: " + str(rp_summaries[fn_key]))
-
-            
-            # ucsf
-            
-            if self.ucsf_format:
-                include_dict = {'fns':0,'tps':0}
-                category_dict = {}
-                for i in range(0,len(phi_categories)):
-                    category_tag = phi_categories[i]
-                    category_fns = category_tag + '_fns'
-                    category_tps = category_tag + '_tps'
-
-                    category_dict[category_fns] = 0
-                    category_dict[category_tps] = 0
-
-                overall_recall_dict = {}
-
-                
-                for i in range(0,len(ucsf_tags)):
-                    tag = ucsf_tags[i]
-                    fn_key = tag + '_fns'
-                    tp_key = tag + '_tps'
-                    tag_fn_counter = tag + '_fn_counter'
-                    tag_cleaned_list = tag + '_cleaned'
-                    recall_key = tag + '_recall'
+                        fp_context = text[:context_end]
 
 
-                    # Get info for overall include dict and category dict
-                    if tag in ucsf_include_tags:
-                        include_dict['fns'] += rp_summaries[fn_key]
-                        include_dict['tps'] += rp_summaries[tp_key]
+                    fp_id = "P" + str(counter)
+                    fp_tag_summary[fp_id] = [false_positive, pos_tag, fp_context]
 
-                        tag_category = ucsf_category_dict[tag]
-                        category_fns = tag_category + '_fns'
-                        category_tps = tag_category + '_tps'
+            if fp_tag_summary != {}:
+                fp_tags[fn] = fp_tag_summary
+        
+        # Create frequency table outputs
+        if self.freq_table:
+            # Unigram table
+            with open('./data/phi/unigram_freq_table.csv','w') as f:
+                f.write('unigram,phi_count,non-phi_count\n')
+                for key in unigram_dict:
+                    word = key
+                    phi_count = unigram_dict[key][0]
+                    non_phi_count = unigram_dict[key][1]
+                    f.write(word + ',' + str(phi_count) + ',' + str(non_phi_count) + '\n')
+            with open('./data/phi/bigram_freq_table.csv','w') as f:
+                f.write('bigram,phi_count,non-phi_count\n')
+                for key in bigram_dict:
+                    term = key
+                    phi_count = bigram_dict[key][0]
+                    non_phi_count = bigram_dict[key][1]
+                    f.write(term + ',' + str(phi_count) + ',' + str(non_phi_count) + '\n')
 
-                        category_dict[category_fns] += rp_summaries[fn_key]
-                        category_dict[category_tps] += rp_summaries[tp_key]                    
-
-
-                    if rp_summaries[fn_key] != 0:
-                        # if rp_summaries[tp_key] != 0 and (rp_summaries[tp_key]-rp_summaries[fn_key]) > 0:
-                        overall_recall_dict[recall_key] = rp_summaries[tp_key]/(rp_summaries[fn_key] + rp_summaries[tp_key])
-                        # else:
-                        #     overall_recall_dict[recall_key] = 0
-                    else:
-                        overall_recall_dict[recall_key] = 1
-
-                    overall_data.append([tag,"{:.2%}".format(overall_recall_dict[recall_key]),str(rp_summaries[tp_key]),str(rp_summaries[fn_key])])
-                    # print(tag + " Recall: " + "{:.2%}".format(overall_recall_dict[recall_key]) + " TP: " + str(rp_summaries[tp_key]) + " FN: " + str(rp_summaries[fn_key]))
-            
-            # pretty print tag recalls
-            overall_data.sort(key=lambda x: float(x[1][:-1]),reverse=True)
-            sorted_overall_data = [["Tag","Recall","TPs","FNs"]]
-            for item in overall_data:
-                sorted_overall_data.append(item)
-
-            print('\n')
-            print("Recall by Tag:")
-            col_width = max(len(word) for row in sorted_overall_data for word in row) + 2  # padding
-            for row in sorted_overall_data:
-                print("".join(word.ljust(col_width) for word in row))
-
-
-
-            # Get category recall
-            category_data = []
+        # get specific recalls
+        # i2b2
+        overall_data = []
+        if not self.ucsf_format:
+            include_dict = {'fns':0,'tps':0,'fps':summary["total_false_positives"],'tns':summary["total_true_negatives"]}
+            category_dict = {}
             for i in range(0,len(phi_categories)):
                 category_tag = phi_categories[i]
                 category_fns = category_tag + '_fns'
                 category_tps = category_tag + '_tps'
 
-                category_recall = 0
-                if category_dict[category_fns] != 0:
-                    # if category_dict[category_tps]!= 0 and (category_dict[category_tps]-category_dict[category_fns]) > 0:
-                    category_recall = category_dict[category_tps]/(category_dict[category_fns] + category_dict[category_tps])
-                    # else:
-                    #     category_recall = 0
-                else:
-                    category_recall = 1
-                category_data.append([category_tag,"{:.2%}".format(category_recall),str(category_dict[category_tps]),str(category_dict[category_fns])])
-                # print(category_tag + " Recall: " + "{:.2%}".format(category_recall) + " TP: " + str(category_dict[category_tps]) + " FN: " + str(category_dict[category_fns]))                 
-
-            # pretty print category recalls
-            category_data.sort(key=lambda x: float(x[1][:-1]),reverse=True)
-            sorted_category_data = [["Tag","Recall","TPs","FNs"]]
-            for item in category_data:
-                sorted_category_data.append(item)
-
-            print('\n')
-            print('Recall by PHI Category:')
-            col_width = max(len(word) for row in category_data for word in row) + 2  # padding
-            for row in sorted_category_data:
-                print("".join(word.ljust(col_width) for word in row))
-            
-            # Get corrected recall
-            corrected_recall = 0
-            if include_dict['fns'] != 0:
-                # if include_dict['tps'] != 0 and (include_dict['tps']-include_dict['fns']) > 0:
-                corrected_recall = include_dict['tps']/(include_dict['fns'] + include_dict['tps'])
-                # else:
-                #     corrected_recall = 0
-            else:
-                corrected_recall = 1
-
-            print('\n')
-            print("Corrected Overall Recall: " + "{:.2%}".format(corrected_recall) + " TP: " + str(include_dict['tps']) + " FN: " + str(include_dict['fns']))
-            print('\n')
+                category_dict[category_fns] = 0
+                category_dict[category_tps] = 0
 
 
+            overall_recall_dict = {}
+
+            for i in range(0,len(i2b2_tags)):
+                tag = i2b2_tags[i]
+                fn_key = tag + '_fns'
+                tp_key = tag + '_tps'
+                tag_fn_counter = tag + '_fn_counter'
+                tag_cleaned_list = tag + '_cleaned'
+                recall_key = tag + '_recall'
 
 
+                # Get info for overall include dict and category dict
+                if tag in i2b2_include_tags:
+                    include_dict['fns'] += rp_summaries[fn_key]
+                    include_dict['tps'] += rp_summaries[tp_key]
 
-            ######## Summarize FN results #########
-            
-            ##### With and without context #####
-            
-            # With context:
-            # Condensed tags will contain id, word, PHI tag, POS tag, occurrences
-            fn_tags_condensed_context = {}
-            # Stores lists that represent distinct groups of words, PHI and POS tags
-            fn_tags_condensed_list_context = []
-            
-            # No context:
-            # Condensed tags will contain id, word, PHI tag, POS tag, occurrences
-            fn_tags_condensed = {}
-            # Stores lists that represent distinct groups of words, PHI and POS tags
-            fn_tags_condensed_list = []
+                    tag_category = i2b2_category_dict[tag]
+                    category_fns = tag_category + '_fns'
+                    category_tps = tag_category + '_tps'
 
-            # Keep track of how many distinct combinations we've added to each list
-            context_counter = 0
-            nocontext_counter = 0
-
-            for fn in fn_tags:
-                file_dict = fn_tags[fn] 
-                for subfile in file_dict:
-                    current_list_context = file_dict[subfile]
-                    current_list_nocontext = current_list_context[:3]
-                    
-                    word = current_list_context[0]
-                    phi_tag = current_list_context[1]
-                    pos_tag = current_list_context[2]
-                    fn_context = current_list_context[3].replace("\n"," ")
-                    #Context
-                    if current_list_context not in fn_tags_condensed_list_context:                      
-                        fn_tags_condensed_list_context.append(current_list_context)
-                        key_name = "uniq" + str(context_counter)
-                        fn_tags_condensed_context[key_name] = [word, phi_tag, pos_tag, fn_context, 1]
-                        context_counter += 1
-                    else:
-                        uniq_id_index = fn_tags_condensed_list_context.index(current_list_context)
-                        uniq_id = "uniq" + str(uniq_id_index)
-                        fn_tags_condensed_context[uniq_id][4] += 1
-
-                    # No context
-                    if current_list_nocontext not in fn_tags_condensed_list:   
-                        fn_tags_condensed_list.append(current_list_nocontext)
-                        key_name = "uniq" + str(nocontext_counter)
-                        fn_tags_condensed[key_name] = [word, phi_tag, pos_tag, 1]
-                        nocontext_counter += 1
-                    else: 
-                        uniq_id_index = fn_tags_condensed_list.index(current_list_nocontext)
-                        uniq_id = "uniq" + str(uniq_id_index)
-                        fn_tags_condensed[uniq_id][3] += 1
-
-            ####### Summariz FP results #######
-
-            # With context
-            # Condensed tags will contain id, word, POS tag, occurrences
-            fp_tags_condensed_context = {}
-            # Stores lists that represent distinct groups of wordss and POS tags
-            fp_tags_condensed_list_context = []
-
-            # No context
-            # Condensed tags will contain id, word, POS tag, occurrences
-            fp_tags_condensed = {}
-            # Stores lists that represent distinct groups of wordss and POS tags
-            fp_tags_condensed_list = []
-
-            # Keep track of how many distinct combinations we've added to each list
-            context_counter = 0
-            nocontext_counter = 0
-            for fp in fp_tags:
-                file_dict = fp_tags[fp] 
-                for subfile in file_dict:
-                    current_list_context = file_dict[subfile]
-                    current_list_nocontext = current_list_context[:2]
-
-                    word = current_list_context[0]
-                    pos_tag = current_list_context[1]
-                    fp_context = current_list_context[2].replace("\n"," ")
-
-                    # Context
-                    if current_list_context not in fp_tags_condensed_list_context:
-                        fp_tags_condensed_list_context.append(current_list_context)
-                        key_name = "uniq" + str(context_counter)
-                        fp_tags_condensed_context[key_name] = [word, pos_tag, fp_context, 1]
-                        context_counter += 1
-                    else:
-                        uniq_id_index = fp_tags_condensed_list_context.index(current_list_context)
-                        uniq_id = "uniq" + str(uniq_id_index)
-                        fp_tags_condensed_context[uniq_id][3] += 1          
-
-                    # No Context
-                    if current_list_nocontext not in fp_tags_condensed_list:
-                        fp_tags_condensed_list.append(current_list_nocontext)
-                        key_name = "uniq" + str(nocontext_counter)
-                        fp_tags_condensed[key_name] = [word, pos_tag, 1]
-                        nocontext_counter += 1
-                    else:
-                        uniq_id_index = fp_tags_condensed_list.index(current_list_nocontext)
-                        uniq_id = "uniq" + str(uniq_id_index)
-                        fp_tags_condensed[uniq_id][2] += 1 
-
-            # Write FN and FP results to outfolder
-            # Conext
-            with open(fn_tags_context, "w") as fn_file:
-                fn_file.write("key" + "|" + "note_word" + "|" + "phi_tag" + "|" + "pos_tag" + "|" + "context" + "|" + "occurrences"+"\n")
-                # print(fn_tags_condensed_context)
-                for key in fn_tags_condensed_context:
-                    current_list = fn_tags_condensed_context[key]
-                    fn_file.write(key + "|" + current_list[0] + "|" + current_list[1] + "|" + current_list[2] + "|" + current_list[3] + "|" + str(current_list[4])+"\n")
-            
-            with open(fp_tags_context, "w") as fp_file:
-                fp_file.write("key" + "|" + "note_word" + "|" + "pos_tag" + "|" + "context" + "|" + "occurrences"+"\n")
-                for key in fp_tags_condensed_context:
-                    current_list = fp_tags_condensed_context[key]
-                    fp_file.write(key + "|" + current_list[0] + "|" + current_list[1]  + "|" +  current_list[2] + "|" + str(current_list[3])+"\n")
-
-            # No context
-            with open(fn_tags_nocontext, "w") as fn_file:
-                fn_file.write("key" + "|" + "note_word" + "|" + "phi_tag" + "|" + "pos_tag" + "|" + "occurrences"+"\n")
-                for key in fn_tags_condensed:
-                    current_list = fn_tags_condensed[key]
-                    fn_file.write(key + "|" + current_list[0] + "|" + current_list[1] + "|" + current_list[2] + "|" + str(current_list[3])+"\n")
-            
-            with open(fp_tags_nocontext, "w") as fp_file:
-                fp_file.write("key" + "|" + "note_word" + "|" + "pos_tag" + "|" + "occurrences"+"\n")
-                for key in fp_tags_condensed:
-                    current_list = fp_tags_condensed[key]
-                    fp_file.write(key + "|" + current_list[0] + "|" + current_list[1]  + "|" +  str(current_list[2])+"\n")            
-            
-            if self.parallel:
-                # Get info on whitelist, blacklist, POS
-                patterns = json.loads(open(config["filters"], "r").read())
-                current_whitelist = ''
-                current_blacklist = ''
-                current_pos = ''
-                for config_dict in patterns:
-                    if config_dict['type'] == 'set' and config_dict['exclude'] == True:
-                        current_blacklist = config_dict['filepath'].split('/')[-1].split('.')[0]
-                        current_pos = str(config_dict['pos']).replace(" ","")
-                    if config_dict['type'] == 'set' and config_dict['exclude'] == False:
-                        current_whitelist = config_dict['filepath'].split('/')[-1].split('.')[0]
+                    category_dict[category_fns] += rp_summaries[fn_key]
+                    category_dict[category_tps] += rp_summaries[tp_key]
                 
-                print(current_whitelist + " " + current_blacklist + " " + current_pos + " " + "{:.2%}".format(names_recall) + " " + "{:.2%}".format(dates_recall) + " "+ "{:.2%}".format(ids_recall) + " "+ "{:.2%}".format(contact_recall) + " "+ "{:.2%}".format(location_recall) + " " + "{:.2%}".format(precision) + " " + "{:.2%}".format(retention))
+                # Get additional TNs and FPs
+                if tag not in i2b2_include_tags:
+                    include_dict['tns'] += rp_summaries[fn_key]
+                    include_dict['fps'] += rp_summaries[tp_key]                 
+
+
+                if rp_summaries[fn_key] != 0:
+                    # if rp_summaries[tp_key] != 0 and (rp_summaries[tp_key]-rp_summaries[fn_key]) > 0:
+                    overall_recall_dict[recall_key] = rp_summaries[tp_key]/(rp_summaries[fn_key] + rp_summaries[tp_key])
+                    # else:
+                    #     overall_recall_dict[recall_key] = 0
+                else:
+                    overall_recall_dict[recall_key] = 1
+
+                overall_data.append([tag,"{:.2%}".format(overall_recall_dict[recall_key]),str(rp_summaries[tp_key]),str(rp_summaries[fn_key])])
+                # print(tag + " Recall: " + "{:.2%}".format(overall_recall_dict[recall_key]) + " TP: " + str(rp_summaries[tp_key]) + " FN: " + str(rp_summaries[fn_key]))
+        
+        # ucsf
+        
+        if self.ucsf_format:
+            include_dict = {'fns':0,'tps':0,'fps':summary["total_false_positives"],'tns':summary["total_true_negatives"]}
+            category_dict = {}
+            for i in range(0,len(phi_categories)):
+                category_tag = phi_categories[i]
+                category_fns = category_tag + '_fns'
+                category_tps = category_tag + '_tps'
+
+                category_dict[category_fns] = 0
+                category_dict[category_tps] = 0
+
+
+            overall_recall_dict = {}
+
+            for i in range(0,len(ucsf_tags)):
+                tag = ucsf_tags[i]
+                fn_key = tag + '_fns'
+                tp_key = tag + '_tps'
+                tag_fn_counter = tag + '_fn_counter'
+                tag_cleaned_list = tag + '_cleaned'
+                recall_key = tag + '_recall'
+
+
+                # Get info for overall include dict and category dict
+                if tag in ucsf_include_tags:
+                    include_dict['fns'] += rp_summaries[fn_key]
+                    include_dict['tps'] += rp_summaries[tp_key]
+
+                    tag_category = ucsf_category_dict[tag]
+                    category_fns = tag_category + '_fns'
+                    category_tps = tag_category + '_tps'
+
+                    category_dict[category_fns] += rp_summaries[fn_key]
+                    category_dict[category_tps] += rp_summaries[tp_key]
+                
+                # Get additional TNs and FPs
+                if tag not in ucsf_include_tags:
+                    include_dict['tns'] += rp_summaries[fn_key]
+                    include_dict['fps'] += rp_summaries[tp_key]                 
+
+
+                if rp_summaries[fn_key] != 0:
+                    # if rp_summaries[tp_key] != 0 and (rp_summaries[tp_key]-rp_summaries[fn_key]) > 0:
+                    overall_recall_dict[recall_key] = rp_summaries[tp_key]/(rp_summaries[fn_key] + rp_summaries[tp_key])
+                    # else:
+                    #     overall_recall_dict[recall_key] = 0
+                else:
+                    overall_recall_dict[recall_key] = 1
+
+                overall_data.append([tag,"{:.2%}".format(overall_recall_dict[recall_key]),str(rp_summaries[tp_key]),str(rp_summaries[fn_key])])
+                # print(tag + " Recall: " + "{:.2%}".format(overall_recall_dict[recall_key]) + " TP: " + str(rp_summaries[tp_key]) + " FN: " + str(rp_summaries[fn_key]))
+        
+        # pretty print tag recalls
+        overall_data.sort(key=lambda x: float(x[1][:-1]),reverse=True)
+        sorted_overall_data = [["Tag","Recall","TPs","FNs"]]
+        for item in overall_data:
+            sorted_overall_data.append(item)
+
+        print('\n')
+        print("Recall by Tag:")
+        col_width = max(len(word) for row in sorted_overall_data for word in row) + 2  # padding
+        for row in sorted_overall_data:
+            print("".join(word.ljust(col_width) for word in row))
+
+
+
+        # Get category recall
+        category_data = []
+        for i in range(0,len(phi_categories)):
+            category_tag = phi_categories[i]
+            category_fns = category_tag + '_fns'
+            category_tps = category_tag + '_tps'
+
+            category_recall = 0
+            if category_dict[category_fns] != 0:
+                # if category_dict[category_tps]!= 0 and (category_dict[category_tps]-category_dict[category_fns]) > 0:
+                category_recall = category_dict[category_tps]/(category_dict[category_fns] + category_dict[category_tps])
+                # else:
+                #     category_recall = 0
+            else:
+                category_recall = 1
+            category_data.append([category_tag,"{:.2%}".format(category_recall),str(category_dict[category_tps]),str(category_dict[category_fns])])
+            # print(category_tag + " Recall: " + "{:.2%}".format(category_recall) + " TP: " + str(category_dict[category_tps]) + " FN: " + str(category_dict[category_fns]))                 
+
+        # pretty print category recalls
+        category_data.sort(key=lambda x: float(x[1][:-1]),reverse=True)
+        sorted_category_data = [["Category","Recall","TPs","FNs"]]
+        for item in category_data:
+            sorted_category_data.append(item)
+
+        print('\n')
+        print('Recall by PHI Category:')
+        col_width = max(len(word) for row in category_data for word in row) + 2  # padding
+        for row in sorted_category_data:
+            print("".join(word.ljust(col_width) for word in row))
+        
+
+
+
+
+        ######### Get corrected recall, precision ##########
+
+
+        corrected_recall = 0
+        if include_dict['fns'] != 0:
+            # if include_dict['tps'] != 0 and (include_dict['tps']-include_dict['fns']) > 0:
+            corrected_recall = include_dict['tps']/(include_dict['fns'] + include_dict['tps'])
+            # else:
+            #     corrected_recall = 0
+        else:
+            corrected_recall = 1
+
+        corrected_precision = 0
+        if include_dict['fps'] != 0:
+            # if include_dict['tps'] != 0 and (include_dict['tps']-include_dict['fns']) > 0:
+            corrected_precision = include_dict['tps']/(include_dict['fps'] + include_dict['tps'])
+            # else:
+            #     corrected_recall = 0
+        else:
+            corrected_precision = 1
+
+        specificity = 0
+        if include_dict['fps'] != 0:
+            # if include_dict['tps'] != 0 and (include_dict['tps']-include_dict['fns']) > 0:
+            specificity = include_dict['tns']/(include_dict['fps'] + include_dict['tns'])
+            # else:
+            #     corrected_recall = 0
+        else:
+            specificity = 1
+
+        print('\n')
+        print("Corrected Results:")
+        print('\n')
+        print("cTP:",include_dict['tps'], "cFN:", include_dict['fns'], "cTN:", include_dict['tns'], "cFP:", include_dict['fps'])
+        print("Corrected Recall: " + "{:.2%}".format(corrected_recall))
+        print("Corrected Precision: " + "{:.2%}".format(corrected_precision))
+        print("Corrected Retention: " + "{:.2%}".format(specificity))
+        print('\n')
+
+
+
+        ######## Summarize FN results #########
+        
+        ##### With and without context #####
+        
+        # With context:
+        # Condensed tags will contain id, word, PHI tag, POS tag, occurrences
+        fn_tags_condensed_context = {}
+        # Stores lists that represent distinct groups of words, PHI and POS tags
+        fn_tags_condensed_list_context = []
+        
+        # No context:
+        # Condensed tags will contain id, word, PHI tag, POS tag, occurrences
+        fn_tags_condensed = {}
+        # Stores lists that represent distinct groups of words, PHI and POS tags
+        fn_tags_condensed_list = []
+
+        # Keep track of how many distinct combinations we've added to each list
+        context_counter = 0
+        nocontext_counter = 0
+
+        for fn in fn_tags:
+            file_dict = fn_tags[fn] 
+            for subfile in file_dict:
+                current_list_context = file_dict[subfile]
+                current_list_nocontext = current_list_context[:3]
+                
+                word = current_list_context[0]
+                phi_tag = current_list_context[1]
+                pos_tag = current_list_context[2]
+                fn_context = current_list_context[3].replace("\n"," ")
+                
+                # Context: add each occurrence with corresponding filename                    
+                fn_tags_condensed_list_context.append(current_list_context)
+                key_name = "uniq" + str(context_counter)
+                filename = fn.split('/')[-1]
+                fn_tags_condensed_context[key_name] = [word, phi_tag, pos_tag, fn_context, filename]
+                context_counter += 1
+
+                # No context
+                if current_list_nocontext not in fn_tags_condensed_list:   
+                    fn_tags_condensed_list.append(current_list_nocontext)
+                    key_name = "uniq" + str(nocontext_counter)
+                    fn_tags_condensed[key_name] = [word, phi_tag, pos_tag, 1]
+                    nocontext_counter += 1
+                else: 
+                    uniq_id_index = fn_tags_condensed_list.index(current_list_nocontext)
+                    uniq_id = "uniq" + str(uniq_id_index)
+                    fn_tags_condensed[uniq_id][3] += 1
+
+        ####### Summariz FP results #######
+
+        # With context
+        # Condensed tags will contain id, word, POS tag, occurrences
+        fp_tags_condensed_context = {}
+        # Stores lists that represent distinct groups of wordss and POS tags
+        fp_tags_condensed_list_context = []
+
+        # No context
+        # Condensed tags will contain id, word, POS tag, occurrences
+        fp_tags_condensed = {}
+        # Stores lists that represent distinct groups of wordss and POS tags
+        fp_tags_condensed_list = []
+
+        # Keep track of how many distinct combinations we've added to each list
+        nocontext_counter = 0
+        context_counter = 0
+        for fp in fp_tags:
+            file_dict = fp_tags[fp] 
+            for subfile in file_dict:
+                current_list_context = file_dict[subfile]
+                current_list_nocontext = current_list_context[:2]
+
+                word = current_list_context[0]
+                pos_tag = current_list_context[1]
+                fp_context = current_list_context[2].replace("\n"," ")
+
+                # Context: add each occurrence with corresponding filename
+                fp_tags_condensed_list_context.append(current_list_context)
+                key_name = "uniq" + str(context_counter)
+                filename = fp.split('/')[-1]
+                fp_tags_condensed_context[key_name] = [word, pos_tag, fp_context, filename]
+                context_counter += 1
+
+                # No Context
+                if current_list_nocontext not in fp_tags_condensed_list:
+                    fp_tags_condensed_list.append(current_list_nocontext)
+                    key_name = "uniq" + str(nocontext_counter)
+                    fp_tags_condensed[key_name] = [word, pos_tag, 1]
+                    nocontext_counter += 1
+                else:
+                    uniq_id_index = fp_tags_condensed_list.index(current_list_nocontext)
+                    uniq_id = "uniq" + str(uniq_id_index)
+                    fp_tags_condensed[uniq_id][2] += 1 
+
+        # Write FN and FP results to outfolder
+        # Conext
+        with open(fn_tags_context, "w") as fn_file:
+            fn_file.write("key" + "|" + "note_word" + "|" + "phi_tag" + "|" + "pos_tag" + "|" + "context" + "|" + "filename"+"\n")
+            # print(fn_tags_condensed_context)
+            for key in fn_tags_condensed_context:
+                current_list = fn_tags_condensed_context[key]
+                fn_file.write(key + "|" + current_list[0] + "|" + current_list[1] + "|" + current_list[2] + "|" + current_list[3] + "|" + current_list[4]+"\n")
+        
+        with open(fp_tags_context, "w") as fp_file:
+            fp_file.write("key" + "|" + "note_word" + "|" + "pos_tag" + "|" + "context" + "|" + "filename"+"\n")
+            for key in fp_tags_condensed_context:
+                current_list = fp_tags_condensed_context[key]
+                fp_file.write(key + "|" + current_list[0] + "|" + current_list[1]  + "|" +  current_list[2] + "|" + current_list[3]+"\n")
+
+        # No context
+        with open(fn_tags_nocontext, "w") as fn_file:
+            fn_file.write("key" + "|" + "note_word" + "|" + "phi_tag" + "|" + "pos_tag" + "|" + "occurrences"+"\n")
+            for key in fn_tags_condensed:
+                current_list = fn_tags_condensed[key]
+                fn_file.write(key + "|" + current_list[0] + "|" + current_list[1] + "|" + current_list[2] + "|" + str(current_list[3])+"\n")
+        
+        with open(fp_tags_nocontext, "w") as fp_file:
+            fp_file.write("key" + "|" + "note_word" + "|" + "pos_tag" + "|" + "filename"+"\n")
+            for key in fp_tags_condensed:
+                current_list = fp_tags_condensed[key]
+                fp_file.write(key + "|" + current_list[0] + "|" + current_list[1]  + "|" +  str(current_list[2])+"\n")            
+            
     
     def getphi(self, 
             anno_folder="data/i2b2_anno/", 
@@ -1654,7 +1678,7 @@ class Philter:
                 ],...
             }
         """
-        if self.debug:
+        if self.run_eval:
             print("getphi")
 
 
@@ -1805,7 +1829,7 @@ class Philter:
             string_char = this is what strings are replaced by
             any_char = this is what any random characters are replaced with
         """
-        if self.debug:
+        if self.run_eval:
             print("mapphi")
 
         d = json.load(open(phi_path, "r"))
@@ -1843,6 +1867,5 @@ class Philter:
 
         items.sort(key=lambda x: x["count"], reverse=True)
         json.dump(items, open(sorted_path, "w"), indent=4)
-
 
 

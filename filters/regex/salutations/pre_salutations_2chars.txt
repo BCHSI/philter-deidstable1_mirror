@@ -1,1 +1,1 @@
-(?<=Dr\s|DR\s|Mr\s|MR\s|Ms\s|MS\s)(([A-Z](\s|\.\s))?[A-Z]\'?[A-Z]?[\-aA-zZ]+(\s[A-Z]\'?[A-Z]?[\-aA-zZ]+)*)
+((?<=Dr\s|DR\s|Mr\s|MR\s|Ms\s|MS\s)|(?<=MD:\s))(([A-Z](\s|\.\s))?[A-Z]\'?[A-Z]?[\-aA-zZ]+(\,)?((\s)?[A-Z]\'?[A-Z]?[\-aA-zZ]+)*(\s[A-Z](\.)?)?)

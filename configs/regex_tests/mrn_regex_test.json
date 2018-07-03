@@ -1,5 +1,33 @@
 [
 	{
+		"title":"lot #",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/mrn_id/lot_#.txt",
+		"notes":"This should remove anything with pattern lot #"
+	},		
+	{
+		"title":"id verbose",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/mrn_id/id_verbose.txt",
+		"notes":"This should remove anything with pattern ID: XXXXX"
+	},		
+	{
+		"title":"activation code",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/mrn_id/activation_code.txt",
+		"notes":"This should remove anything with pattern activation code: XXXXX-XXXX-XXXXX"
+	},		
+	{
+		"title":"model number",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/mrn_id/model_number.txt",
+		"notes":"This should remove anything with pattern model number"
+	},		
+	{
 		"title":"six or more digits",
 		"type":"regex",
 		"exclude":true,
@@ -14,11 +42,60 @@
 		"notes":"This should remove anything that matches order number ..."
 	},
 	{
+		"title":"specimen number",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/mrn_id/specimen_#.txt",
+		"notes":"This should remove anything that matches specimen number ..."
+	},
+	{
+		"title":"cassette_#",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/mrn_id/cassette_#.txt",
+		"notes":"This should remove anything that matches cassette_# ..."
+	},
+	{
+		"title":"# reviewed by",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/mrn_id/#_reviewed_by.txt",
+		"notes":"This should remove anything that matches # reviewed by ..."
+	},
+	{
+		"title":"account #",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/mrn_id/account_#.txt",
+		"notes":"This should remove anything that matches account #"
+	},
+	{
+		"title":"CCDDDD-D-CC",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/mrn_id/CCDDDD-D-CC.txt",
+		"notes":"This should remove anything that matches CCDDDD-D-CC"
+	},
+	{
+		"title":"DDCCCDDD",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/mrn_id/DDCCCDDD.txt",
+		"notes":"This should remove anything that matches DDCCCDDD"
+	},
+	{
 		"title":"CCDDD_DDD",
 		"type":"regex",
 		"exclude":true,
 		"filepath":"filters/regex/mrn_id/CCDDD_DDD.txt",
 		"notes":"This should remove anything that matches NNDDD(anything)DDDD"
+	},
+	{
+		"title":"CDD_DDDD+",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/mrn_id/CDD_DDDD+.txt",
+		"notes":"This should remove anything that matches NCDD_DDDD+"
 	},
 	{
 		"title":"mixed 2",
@@ -131,7 +208,7 @@
 		"exclude":true,
 		"filepath":"filters/regex/mrn_id/ssn.txt",
 		"notes":"This should remove anything that matches XXX-XX-XXXX"
-	},		
+	},
 	{
     	"title":"No catchall",
 		"type":"regex",

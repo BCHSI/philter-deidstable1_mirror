@@ -45,7 +45,7 @@ def isolate_phi(xml_folder):
 isolate_phi(xml_folder)
 
 #save our data
-json.dump(phi, open("../data/phi_notes_ucsf.json", "w"), indent=4)
+json.dump(phi, open("../data/phi_notes_batch102_pass1.json", "w"), indent=4)
 
 NOTES_FOLDER = "../data/ucsf_notes/"
 ANNO_FOLDER = "../data/ucsf_anno/"
@@ -86,5 +86,4 @@ for fn in phi:
 
     with open(ANNO_FOLDER+fn.split(".")[0]+".txt", "w", encoding='utf-8') as anno_file:
         anno_file.write("".join(contents))
-
 

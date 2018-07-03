@@ -652,6 +652,13 @@
         "note": ""
     },
     {
+        "title": "names patterns",
+        "type": "regex",
+        "exclude": true,
+        "filepath": "filters/regex/salutations/name_patterns.txt",
+        "note": ""
+    },
+    {
         "title": "Names Blacklist",
         "type": "set",
         "exclude": true,

@@ -297,6 +297,13 @@
 		"phi_type":"DATE"
 	},		
 	{
+		"title":"as of date",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/dates/as_of_date.txt",
+		"notes":"This should remove anything with pattern as of d/d"
+	},	
+	{
 		"title":"month_name",
 		"type":"regex",
 		"exclude":true,
