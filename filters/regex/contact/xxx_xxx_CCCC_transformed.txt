@@ -1,0 +1,1 @@
+\b(\d\-)?(\d{3}\-)?\d{3}\-***REMOVED***a-zA-Z***REMOVED***+\b(\s***REMOVED***\***REMOVED***\(***REMOVED***\d{4}***REMOVED***\***REMOVED***\)***REMOVED***)?
