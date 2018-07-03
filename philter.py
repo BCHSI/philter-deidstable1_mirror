@@ -599,13 +599,6 @@ class Philter:
         for i in range(len(tagdata***REMOVED***'phi'***REMOVED***)):
             phi_type = tagdata***REMOVED***'phi'***REMOVED******REMOVED***i***REMOVED******REMOVED***'phi_type'***REMOVED***
             tagcategory = phi_type
-
-            # if phi_type =="DATE":
-            #     tagcategory = phi_type
-            # elif phi_type =="AGE":
-            #     tagcategory = phi_type
-            # else:
-            #     tagcategory = phi_type
             contents.append("<")
             contents.append(phi_type)
             contents.append(" id=\"P")
