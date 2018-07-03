@@ -1,13 +1,16 @@
+#!/usr/bin/python2.7
+
+
 # import libraries
 import sys,os
 sys.path
 sys.path.append('/usr/local/lib/python2.7/site-packages/')
 import pandas as pd
+import argparse
 
 #for reading in the xml i2b2 notes
 import xml.etree.ElementTree as ET
 import xmltodict
-#from yattag import indent
 
 #for date shifting
 import dateutil.parser
@@ -28,13 +31,13 @@ def extractXML(directory,filename,philter_or_i2b2):
 	return text,tags_dict,xmlstr
 
 def parse_xml_files(directory,output_directory,philter_or_i2b2):
-		# Loop through xml_files
 	cols = ["Document", "PHI_element", "Text", "Type","Comment"]
 	output_df = pd.DataFrame(columns = cols,index=None)
 	new_dict = dict()
 	filename_dates = {}
 	date_shift_log = pd.DataFrame()
-
+	
+	# Loop through xml_files
 	for filename in os.listdir(directory):
 		if filename.endswith(".xml") and "DS_Store" not in filename:
 
@@ -96,11 +99,7 @@ def get_date_shift(filename,filename_dates):
 
 	#join together re_id_pat with NOTE_INFO on Patient_id
 	notes_metadata = note_info.set_index('patient_ID').join(re_id_pat.set_index('patient_ID'))
-	# we now have columns: Patient_ID, note_csn_id, date_offset
-
 	metadata_mapping_dict = pd.Series(notes_metadata.date_offset.values,index=notes_metadata.note_csn_id).to_dict()
-	#create a dictionary_mapping[filename] = dateshift
-	#print metadata_mapping_dict
 
 	if file_prefix in metadata_mapping_dict:
 		dateshift = metadata_mapping_dict[file_prefix]
@@ -123,17 +122,9 @@ def shift_dates(filename_dates,filename,xmlstr,date,date_shift_log,verbose):
     now = datetime.now()
     time_delta = get_date_shift(filename,filename_dates)
     time_delta_str= str(time_delta).replace(", 0:00:00","")
-    dt = parse(date.replace("O2","02"),settings={'PREFER_DAY_OF_MONTH': 'first'} ) #dateutil.parser.
+    dt = parse(date.replace("O2","02"),settings={'PREFER_DAY_OF_MONTH': 'first'} )
     if dt !=None:
-      # we know that it's incomplete if:
-      # this setting returns none:  settings={'STRICT_PARSING': True}
       strict_parse = parse(date,settings={'STRICT_PARSING': True})
-
-      # Note: we can add parameters to this parsing
-      #        settings={'PREFER_DAY_OF_MONTH': 'last'} or 'first'
-      #        settings={'PREFER_DATES_FROM': 'future'} or 'past'
-
-
       dt_actual = datetime(dt.year, dt.month, dt.day)
       dt_plus_arbitrary = dt_actual+ time_delta
       
@@ -170,22 +161,30 @@ def replace_other_surrogate(xmlstr,text,phi_type):
 	return output_xml
 
 def main():
-	# read in i2b2 format notes
-	# apply date shift to PHI Tagged as Dates	
-	# replace all other PHI with ***PHItype***
-	# output files
+
+	parser = argparse.ArgumentParser(description=
+		"""This program will read in i2b2 or Philter XML formatted notes \n
+		Then apply date shifts to any phi tagged as a date. \n
+		Next it will replace all appropriate PHI with the respective PHI Tag \n 
+		Then it will output .txt files with the appropriate surrogates
+		""")
+
+	parser.add_argument("-i","--input_dir", default="data/i2b2_results", help="specifiy the input directory",
+                    type=str)
+	parser.add_argument("-o","--output_dir", default="data/surrogator_test/i2b2_results_output/", help="specifiy the output directory",
+                    type=str)
+	parser.add_argument("-f","--input_format", default="Philter", help="specifiy the input XML Format. This can either be deIdi2b2 or Philter.",
+                    type=str)
+
+	parsed = parser.parse_args()
+	directory = vars(parsed)["input_dir"]
+	output_directory = vars(parsed)["output_dir"]
+	philter_or_i2b2 = vars(parsed)["input_format"]
 
 # 	I2b2 annotations
 #	directory = "data/surrogator_test/testing-PHI-Gold-fixed"
 #	output_directory = "data/surrogator_test/testing-PHI-Gold-fixed-output/"
 #	philter_or_i2b2 = "deIdi2b2"
-
-
-# 	Philter output 
-	directory = "data/i2b2_results"
-	output_directory = "data/surrogator_test/i2b2_results_output/"
-	philter_or_i2b2 = "Philter"
-
 
 	parse_xml_files(directory,output_directory,philter_or_i2b2)
 
