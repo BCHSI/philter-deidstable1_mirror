@@ -2,58 +2,78 @@ import unittest
 import sys
 import os
 import filecmp
-
-sys.path.append('./')
-from src.philter.philter import Philter
-# from src.philter.coordinate_map import CoordinateMap
+from subprocess import call
+# sys.path.append('./')
 
 
 class TestPhilter(unittest.TestCase):
-    def remove_test_data(self):
-        #the current code remove all files while keeping the directory.
-        for f in os.listdir('./src/tests/test_result/'):
-            os.remove('./src/tests/test_result/' + f)
 
-    def test_blacklist(self):
+    def test_regex(self):
         # Add testing code here
-        # This is just an example:
-        philter_config = {
-            "verbose": False,
-            "run_eval": False,
-            "freq_table": False,
-            "finpath": './src/tests/test_data/',
-            "foutpath": './src/tests/test_result/',
-            "outformat": "asterisk",
-            "ucsfformat": False,
-            "anno_folder": './src/tests/test_anno/',
-            "filters": './src/tests/test_config/philter_alpha.json',
-            "xml": './src/tests/phi_notes.json',
-            "coords": './src/tests/coordinates.json',
-            "stanford_ner_tagger": {
-                "classifier": '/usr/local/stanford-ner/' + "classifiers/english.all.3class.distsim.crf.ser.gz",
-                "jar": '/usr/local/stanford-ner/' + "stanford-ner.jar",
-                "download": True,
-            }
-        }
+        script1 = sys.argv[1]
+        script2 = sys.argv[2]
 
+        if not os.path.exists("testtemp1"):
+            os.mkdir("testtemp1")
 
-        #TODO: call the scrip
-        #test_filterer = Philter(philter_config)
-        #test_filterer.map_coordinates(philter_config["finpath"])
-        #test_filterer.transform(in_path=philter_config["finpath"],
-        #                        out_path=philter_config["foutpath"],
-        #                        replacement="*")
-        res = filecmp.cmp(philter_config["foutpath"] + '110-01.txt', philter_config["anno_folder"] + '110-01.txt')
-        self.assertIs(res, True)
-        # self.remove_test_data()
+        if not os.path.exists("testtemp2"):
+            os.mkdir("testtemp2")
 
-    # def test_whitelist(self):
-    #     Add testing code here
-    #     self.assertEqual('foo'.upper(), 'FOO')
-    #
-    # def test_regex(self):
-    #     Add testing code here
-    #     self.assertEqual('foo'.upper(), 'FOO')
+        print ("################")
+        print ("TESTING REGEX CONFIGS")
+
+        # TODO: Modify the path to be the path of your testing data
+        regex_config_dir = './src/tests/test_config/test_regex_configs/'
+        test_data_dir = './src/tests/test_data/'
+        test_anno_dir = './src/tests/test_anno/'
+
+        for file in os.listdir(regex_config_dir):
+            if file.endswith('.json'):
+                if not os.path.exists("testtemp1"):
+                    os.mkdir("testtemp1")
+
+                if not os.path.exists("testtemp2"):
+                    os.mkdir("testtemp2")
+                print ("-------------------- REGEX CONFIG TESTING: " + file + ' ----------------------')
+                print("################")
+                print("RUNNING SCRIPT 1")
+                print("################")
+                call(["python3", script1, "-i=" + test_data_dir, "-a=" + test_anno_dir,
+                        "-o=./testtemp1/", "-f=" + regex_config_dir+ file, "-e=False"])
+                print("################")
+                print("RUNNING SCRIPT 2")
+                print("################")
+
+                call(["python3", script2, "-i=" + test_data_dir, "-a=" + test_anno_dir,
+                        "-o=./testtemp2/", "-f=" + regex_config_dir+ file, "-e=False"])
+
+                print("################")
+                print("TESTING OUTPUTS")
+                print("################")
+
+                directory = os.fsencode("testtemp1")
+
+                total_files = 0
+                different_files = 0
+                for f in os.listdir(directory):
+                    filename = os.fsdecode(f)
+                    if filename.endswith(".txt") and 'DS_Store.' not in filename:
+                        total_files += 1
+                        if not filecmp.cmp('testtemp1/' + filename, 'testtemp2/' + filename):
+                            print(filename + " doesn't match for config file: " + file)
+                            different_files += 1
+                    else:
+                        continue
+
+                print(str(total_files - different_files) + " tests have passed successfully for config file: " + file)
+                if different_files == 0:
+                    print("NO ERRORS FOUND")
+                else:
+                    print(str(different_files) + " TESTS HAVE FAILED.")
+
+                rmtree("./testtemp1/")
+                rmtree("./testtemp2/")
+                print("-------------------- FINISHED REGEX CONFIG TESTING: " + file + ' ----------------------')
 
 
 if __name__ == '__main__':
