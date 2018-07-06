@@ -161,6 +161,7 @@ def shift_dates(filename_dates,filename,xmlstr,date,date_shift_log,text_start,te
     return output_xml,date_shift_log
 
 def replace_other_surrogate(filename,xmlstr,text,phi_type,surrogate_log):
+
 	# replace anything else with ***PHItype***
 	if phi_type == "OTHER":
 		output_xml = xmlstr.replace(text,"***PHI***")
