@@ -295,7 +295,7 @@
 		"filepath":"filters/regex/dates/on_or_by_the_day_numbering_transformed.txt",
 		"notes":"This should remove anything with pattern on_or_by_the_day_numbering",
                 "phi_type":"DATE"
-	},
+	},		
 	{
 		"title":"as of date",
 		"type":"regex",
