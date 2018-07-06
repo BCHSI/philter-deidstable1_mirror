@@ -21,8 +21,7 @@ def extractXML(directory,filename):
 	tree = ET.parse(directory + '/'+ filename)
 	root = tree.getroot()
 	xmlstr = ET.tostring(root, encoding='utf8', method='xml')
-	#print xmlstr + "\n \n"
-	xml_dict = xmltodict.parse(xmlstr)***REMOVED***"deIdi2b2"***REMOVED***
+	xml_dict = xmltodict.parse(xmlstr)***REMOVED***"Philter"***REMOVED***
 	text = xml_dict***REMOVED***"TEXT"***REMOVED***
 	tags_dict = xml_dict***REMOVED***"TAGS"***REMOVED***
 	return text,tags_dict,xmlstr
@@ -42,7 +41,6 @@ def go_through_xml_files(directory,output_directory):
 
 		# re-indent
 			text,tags_dict,xmlstr = extractXML(directory,filename)
-		#print str(tags_dict) + '\n \n'
 
 			for key, value in tags_dict.iteritems():
 				# Note:  Value can be a list of like phi elements
@@ -50,7 +48,6 @@ def go_through_xml_files(directory,output_directory):
 
 				if isinstance(value, list):
 					for final_value in value:
-						# do checks
 						text = final_value***REMOVED***"@text"***REMOVED***
 						phi_type = final_value***REMOVED***"@TYPE"***REMOVED***
 
@@ -70,7 +67,7 @@ def go_through_xml_files(directory,output_directory):
 			
 			# here we write back out the updated XML File to a new directory
 			output_dir = output_directory+filename.replace(".xml",".txt")
-			output_xml_dict = xmltodict.parse(xmlstr)***REMOVED***"deIdi2b2"***REMOVED***
+			output_xml_dict = xmltodict.parse(xmlstr)***REMOVED***"Philter"***REMOVED***
 			output_text = output_xml_dict***REMOVED***"TEXT"***REMOVED***
 
 			with open(output_dir, "w") as text_file:
@@ -136,8 +133,10 @@ def shift_dates(filename_dates,filename,shift_dates_together,xmlstr,date,output_
 
 def replace_other_surrogate(xmlstr,text,phi_type):
 	# replace anything else with ***PHItype***
-
-	output_xml = xmlstr.replace(text,"***PHI***")
+	if phi_type == "OTHER":
+		output_xml = xmlstr.replace(text,"***PHI***")
+	else:
+		output_xml = xmlstr.replace(text,"***"+phi_type+"***")
 	return output_xml
 
 def main():
