@@ -5,7 +5,7 @@
 		"exclude":true,
 		"filepath":"filters/regex/addresses/full_street_address_transformed.txt",
 		"notes":"This should remove anything that looks like a full street address (numbers and words)"
-	},
+	},	
 	{
 		"title":"number streetname extension?",
 		"type":"regex",
@@ -76,6 +76,13 @@
 		"exclude":true,
 		"filepath":"filters/regex/addresses/city_state_transformed.txt",
 		"notes":"This should remove anything that has a city name, followed by a state name/abbrev"
+	},
+	{
+		"title":"in city",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/addresses/in_city_transformed.txt",
+		"notes":"This should remove anything that has a city name"
 	},
 	{
 		"title":"city",
@@ -211,6 +218,13 @@
 		"notes":"This should remove anything that has pattern on ***REMOVED***street name***REMOVED***"
 	},
 	{
+		"title":"box",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/addresses/box_transformed.txt",
+		"notes":"This should remove anything that has a box number"
+	},
+	{
 		"title":"Address Blacklist",
 		"type":"set",
 		"exclude":true,
@@ -222,7 +236,7 @@
         "title":"Whitelist",
         "type":"set",
         "exclude":false,
-        "filepath":"filters/whitelists/whitelist_061418.json",
+        "filepath":"/data/muenzenk/fp_analysis/white_black_diff_tests/whitelist_plus_fps-3.json",
         "pos":***REMOVED******REMOVED***,
         "notes":"These are words we beleive are safe"
     },
@@ -233,6 +247,7 @@
         "pos":***REMOVED***"CD"***REMOVED***,
         "notes":"This will include any CDs that aren't included in earlier steps"
     }
+
 ***REMOVED***
 
 

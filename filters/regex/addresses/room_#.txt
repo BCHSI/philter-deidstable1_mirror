@@ -1,0 +1,1 @@
+\b((?i)room(:)?\s***REMOVED***a-z***REMOVED***+\d+)\b
