@@ -49,31 +49,55 @@ def main():
     ap.add_argument("--ucsfformat", default=False,
                     help="When ucsfformat is true, will adjust eval script for slightly different xml format",
                     type=lambda x:bool(distutils.util.strtobool(x)))
-
+    ap.add_argument("--prod", default=False,
+                    help="When prod is true, this will run the script with output in i2b2 xml format without running the eval script",
+                    type=bool)
 
     args = ap.parse_args()
 
     if args.verbose:
         print("RUNNING ", args.filters)
 
-    philter_config = {
-        "verbose":args.verbose,
-        "run_eval":args.run_eval,
-        "freq_table":args.freq_table,                   
-        "finpath":args.input,
-        "foutpath":args.output,
-        "outformat":args.outputformat,
-        "ucsfformat":args.ucsfformat,
-        "anno_folder":args.anno,
-        "filters":args.filters,
-        "xml":args.xml,
-        "coords":args.coords,
-        "stanford_ner_tagger": { 
-            "classifier":args.stanfordner+"classifiers/english.all.3class.distsim.crf.ser.gz",
-            "jar":args.stanfordner+"stanford-ner.jar",
-            "download":True,
+    if args.prod:
+        philter_config = {
+            "verbose":False,
+            "run_eval":False,
+            "freq_table":args.freq_table,
+            "finpath":args.input,
+            "foutpath":args.output,
+            "outformat":"i2b2",
+            "ucsfformat":args.ucsfformat,
+            "anno_folder":args.anno,
+            "filters":"./configs/philter_alpha.json",
+            "xml":args.xml,
+            "coords":args.coords,
+            "stanford_ner_tagger": {
+                "classifier":args.stanfordner+"classifiers/english.all.3class.distsim.crf.ser.gz",
+                "jar":args.stanfordner+"stanford-ner.jar",
+                "download":True,
+            }
         }
-    }    
+
+
+    else:
+    	philter_config = {
+            "verbose":args.verbose,
+            "run_eval":args.run_eval,
+            "freq_table":args.freq_table,
+            "finpath":args.input,
+            "foutpath":args.output,
+            "outformat":args.outputformat,
+            "ucsfformat":args.ucsfformat,
+            "anno_folder":args.anno,
+            "filters":args.filters,
+            "xml":args.xml,
+            "coords":args.coords,
+            "stanford_ner_tagger": {
+                "classifier":args.stanfordner+"classifiers/english.all.3class.distsim.crf.ser.gz",
+                "jar":args.stanfordner+"stanford-ner.jar",
+                "download":True,
+            }
+        }
    
     filterer = Philter(philter_config)
 
