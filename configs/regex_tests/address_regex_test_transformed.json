@@ -50,6 +50,13 @@
 		"notes":"This should remove anything that has a city name, followed by a zip code"
 	},
 	{
+		"title":"in city",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/addresses/in_city_transformed.txt",
+		"notes":"This should remove anything that has a city name"
+	},
+	{
 		"title":"city",
 		"type":"regex",
 		"exclude":true,

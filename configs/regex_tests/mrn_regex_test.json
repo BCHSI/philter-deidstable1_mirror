@@ -1,5 +1,12 @@
 [
 	{
+		"title":"model number",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/mrn_id/model_number.txt",
+		"notes":"This should remove anything with pattern model number"
+	},
+	{
 		"title":"lot #",
 		"type":"regex",
 		"exclude":true,
@@ -19,14 +26,7 @@
 		"exclude":true,
 		"filepath":"filters/regex/mrn_id/activation_code.txt",
 		"notes":"This should remove anything with pattern activation code: XXXXX-XXXX-XXXXX"
-	},		
-	{
-		"title":"model number",
-		"type":"regex",
-		"exclude":true,
-		"filepath":"filters/regex/mrn_id/model_number.txt",
-		"notes":"This should remove anything with pattern model number"
-	},		
+	},				
 	{
 		"title":"six or more digits",
 		"type":"regex",

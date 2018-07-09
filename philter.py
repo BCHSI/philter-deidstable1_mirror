@@ -180,7 +180,7 @@ class Philter:
                         raise Exception("Error, pattern type not supported: ", pat["type"])
 
         #clear out any data to save ram
-        for i,pat in enumerate(self.patterns):
+        for i,pat in enumerate(self .patterns):
             if "data" in pat:
                 del self.patterns[i]["data"]
 
@@ -205,11 +205,11 @@ class Philter:
             for m in matches:
                 #if filename == './data/i2b2_notes_updated/373-04.txt':
                 # if self.patterns[pattern_index]["title"] == "YYYY/MM-YYYY/MM":
-                if 'present' in m.group():
-                    print(self.patterns[pattern_index]["title"])
-                    print(m.group())
-                    print(filename)
-                    print('\n')
+                # if 'and' in m.group() or 'AND' in m.group():
+                #     print(self.patterns[pattern_index]["title"])
+                #     print(m.group())
+                #     print(filename)
+                #     print('\n')
                 
                 coord_map.add_extend(filename, m.start(), m.start()+len(m.group()))
         
@@ -1082,6 +1082,7 @@ class Philter:
                 start_coordinate += len(item)
 
             #print(pos_coords)
+            
             pos_list = nltk.pos_tag(cleaned)
 
 
@@ -1206,6 +1207,7 @@ class Philter:
                           
 
             fn_tag_summary = {}
+            include_exclude_fns = ''
 
             if current_summary['false_negatives'] != [] and current_summary['false_negatives'] != [""]:              
                 counter = 0
@@ -1272,8 +1274,20 @@ class Philter:
                             
                             # Get fn id, to distinguish betweem multiple entries
                             fn_id = "N" + str(counter)
+                            
+                            # Get include or exclude
+                            if not self.ucsf_format:
+                                if phi_tag in i2b2_include_tags:
+                                    include_exclude_fns = 'include'
+                                else:
+                                    include_exclude_fns = 'exclude'
+                            if self.ucsf_format:
+                                if phi_tag in ucsf_include_tags:
+                                    include_exclude_fns = 'include'
+                                else:
+                                    include_exclude_fns = 'exclude'
                             ###### Create output dicitonary with id/word/pos/phi
-                            fn_tag_summary[fn_id] = [false_negative, phi_tag, pos_tag, fn_context]
+                            fn_tag_summary[fn_id] = [false_negative, phi_tag, pos_tag, fn_context, include_exclude_fns]
                             # if phi_tag == 'AGE':
                             #     print(word)
             
@@ -1285,6 +1299,7 @@ class Philter:
 
             ####### Get FP tags #########
             fp_tag_summary = {}
+            include_exclude_fps = ''
             #print(cleaned_with_pos)
             if current_summary['false_positives'] != [] and current_summary['false_positives'] != [""]:              
 
@@ -1313,6 +1328,8 @@ class Philter:
 
 
                     fp_id = "P" + str(counter)
+
+                    
                     fp_tag_summary[fp_id] = [false_positive, pos_tag, fp_context]
 
             if fp_tag_summary != {}:
@@ -1558,7 +1575,11 @@ class Philter:
             file_dict = fn_tags[fn] 
             for subfile in file_dict:
                 current_list_context = file_dict[subfile]
-                current_list_nocontext = current_list_context[:3]
+            ##############################
+                # print(current_list_context)
+                current_list_nocontext = current_list_context[:3] + [current_list_context[-1]]
+            ############################
+                # print(current_list_nocontext)
                 
                 word = current_list_context[0]
                 phi_tag = current_list_context[1]
@@ -1569,14 +1590,15 @@ class Philter:
                 fn_tags_condensed_list_context.append(current_list_context)
                 key_name = "uniq" + str(context_counter)
                 filename = fn.split('/')[-1]
-                fn_tags_condensed_context[key_name] = [word, phi_tag, pos_tag, fn_context, filename]
+                include_exclude = current_list_context[4]
+                fn_tags_condensed_context[key_name] = [word, phi_tag, pos_tag, fn_context, filename, include_exclude]
                 context_counter += 1
 
                 # No context
                 if current_list_nocontext not in fn_tags_condensed_list:   
                     fn_tags_condensed_list.append(current_list_nocontext)
                     key_name = "uniq" + str(nocontext_counter)
-                    fn_tags_condensed[key_name] = [word, phi_tag, pos_tag, 1]
+                    fn_tags_condensed[key_name] = [word, phi_tag, pos_tag, 1, include_exclude]
                     nocontext_counter += 1
                 else: 
                     uniq_id_index = fn_tags_condensed_list.index(current_list_nocontext)
@@ -1631,27 +1653,27 @@ class Philter:
         # Write FN and FP results to outfolder
         # Conext
         with open(fn_tags_context, "w") as fn_file:
-            fn_file.write("key" + "|" + "note_word" + "|" + "phi_tag" + "|" + "pos_tag" + "|" + "context" + "|" + "filename"+"\n")
+            fn_file.write("key" + "|" + "note_word" + "|" + "phi_tag" + "|" + "pos_tag" + "|" + "context" + "|" + "filename"+ "|" +"include_exclude" + "\n")
             # print(fn_tags_condensed_context)
             for key in fn_tags_condensed_context:
                 current_list = fn_tags_condensed_context[key]
-                fn_file.write(key + "|" + current_list[0] + "|" + current_list[1] + "|" + current_list[2] + "|" + current_list[3] + "|" + current_list[4]+"\n")
+                fn_file.write(key + "|" + current_list[0] + "|" + current_list[1] + "|" + current_list[2] + "|" + current_list[3] + "|" + current_list[4]+ "|" +current_list[5]+"\n")
         
         with open(fp_tags_context, "w") as fp_file:
             fp_file.write("key" + "|" + "note_word" + "|" + "pos_tag" + "|" + "context" + "|" + "filename"+"\n")
             for key in fp_tags_condensed_context:
                 current_list = fp_tags_condensed_context[key]
-                fp_file.write(key + "|" + current_list[0] + "|" + current_list[1]  + "|" +  current_list[2] + "|" + current_list[3]+"\n")
+                fp_file.write(key + "|" + current_list[0] + "|" + current_list[1]  + "|" +  current_list[2] + "|" + current_list[3]+ "\n")
 
         # No context
         with open(fn_tags_nocontext, "w") as fn_file:
-            fn_file.write("key" + "|" + "note_word" + "|" + "phi_tag" + "|" + "pos_tag" + "|" + "occurrences"+"\n")
+            fn_file.write("key" + "|" + "note_word" + "|" + "phi_tag" + "|" + "pos_tag" + "|" + "occurrences"+"|" +"include_exclude" + "\n")
             for key in fn_tags_condensed:
                 current_list = fn_tags_condensed[key]
-                fn_file.write(key + "|" + current_list[0] + "|" + current_list[1] + "|" + current_list[2] + "|" + str(current_list[3])+"\n")
+                fn_file.write(key + "|" + current_list[0] + "|" + current_list[1] + "|" + current_list[2] + "|" + str(current_list[3])+"|" + current_list[4]+"\n")
         
         with open(fp_tags_nocontext, "w") as fp_file:
-            fp_file.write("key" + "|" + "note_word" + "|" + "pos_tag" + "|" + "filename"+"\n")
+            fp_file.write("key" + "|" + "note_word" + "|" + "pos_tag" + "|" + "occurrences"+"\n")
             for key in fp_tags_condensed:
                 current_list = fp_tags_condensed[key]
                 fp_file.write(key + "|" + current_list[0] + "|" + current_list[1]  + "|" +  str(current_list[2])+"\n")            

@@ -1,0 +1,284 @@
+[	
+	{
+		"title":"YYYY/MM-YYYY/MM",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/dates/YYYY_MM-YYYY_MM_transformed.txt",
+		"notes":"This should remove anything with pattern YYYY/MM-YYYY/MM"
+	},
+	{
+		"title":"MM/DD/YY-MM/DD/YY",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/dates/MM_DD_YY-MM_DD_YY_transformed.txt",
+		"notes":"This should remove anything with pattern MM/DD/YY-MM/DD/YY"
+	},
+	{
+		"title":"MM/YYYY-MM/YYYY",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/dates/MM_YYYY-MM_YYYY_transformed.txt",
+		"notes":"This should remove anything with pattern MM/YYYY-MM/YYYY"
+	},
+	{
+		"title":"MM/YY-MM/YY",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/dates/MM_YY-MM_YY_transformed.txt",
+		"notes":"This should remove anything with pattern MM/YY-MM/YY"
+	},
+	{
+		"title":"MM/YYYY-MM/YYYY",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/dates/MM_YYYY-MM_YYYY_transformed.txt",
+		"notes":"This should remove anything with pattern MM/YYYY-MM/YYYY"
+	},
+	{
+		"title":"MM/DD-MM/DD",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/dates/MM_DD-MM_DD_transformed.txt",
+		"notes":"This should remove anything with pattern MM/DD-MM/DD"
+	},
+	{
+		"title":"DD/MM-DD/MM",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/dates/DD_MM-DD_MM_transformed.txt",
+		"notes":"This should remove anything with pattern DD/MM-DD/MM"
+	},
+	{
+		"title":"day_name_dd_month_name_yy",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/dates/day_name_dd_month_name_yy_transformed.txt",
+		"notes":"This should remove anything with pattern day_name_dd_month_name_yy"
+	},
+	{
+		"title":"day_name_month_name_dd_yy",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/dates/day_name_month_name_dd_yy_transformed.txt",
+		"notes":"This should remove anything with pattern day_name_month_name_dd_yy"
+	},
+	{
+		"title":"day_name_month_name_dd_yyyy",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/dates/day_name_month_name_dd_yyyy_transformed.txt",
+		"notes":"This should remove anything with pattern day_name_month_name_dd_yyyy"
+	},
+	{
+		"title":"day_name_dd_month_name_yyyy",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/dates/day_name_dd_month_name_yyyy_transformed.txt",
+		"notes":"This should remove anything with pattern day_name_dd_month_name_yyyy"
+	},
+	{
+		"title":"day_name_month_name_dd",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/dates/day_name_month_name_dd_transformed.txt",
+		"notes":"This should remove anything with pattern day_name_month_name_dd"
+	},
+	{
+		"title":"day_name_dd_month_name",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/dates/day_name_dd_month_name_transformed.txt",
+		"notes":"This should remove anything with pattern day_name_dd_month_name"
+	},
+	{
+		"title":"dd_month_name_yy",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/dates/dd_month_name_yy_transformed.txt",
+		"notes":"This should remove anything with pattern dd_month_name_yy"
+	},
+	{
+		"title":"dd_month_name_yyyy",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/dates/dd_month_name_yyyy_transformed.txt",
+		"notes":"This should remove anything with pattern dd_month_name_yyyy"
+	},
+	{
+		"title":"month_name_dd_yy",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/dates/month_name_dd_yy_transformed.txt",
+		"notes":"This should remove anything with pattern month_name_dd_yy"
+	},
+	{
+		"title":"month_name_dd_yyyy",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/dates/month_name_dd_yyyy_transformed.txt",
+		"notes":"This should remove anything with pattern month_name_dd_yyyy"
+	},
+	{
+		"title":"yy_month_name_dd",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/dates/yy_month_name_dd_transformed.txt",
+		"notes":"This should remove anything with pattern yy_month_name_dd"
+	},
+	{
+		"title":"yyyy_month_name_dd",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/dates/yyyy_month_name_dd_transformed.txt",
+		"notes":"This should remove anything with pattern yyyy_month_name_dd"
+	},
+	{
+		"title":"month_name_dd",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/dates/month_name_dd_transformed.txt",
+		"notes":"This should remove anything with pattern month_name_dd"
+	},
+	{
+		"title":"dd_mm_yy",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/dates/dd_mm_yy_transformed.txt",
+		"notes":"This should remove anything with pattern dd_mm_yy"
+	},
+	{
+		"title":"dd_mm_yyyy",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/dates/dd_mm_yyyy_transformed.txt",
+		"notes":"This should remove anything with pattern dd_mm_yyyy"
+	},
+	{
+		"title":"yy_mm_dd",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/dates/yy_mm_dd_transformed.txt",
+		"notes":"This should remove anything with pattern yy_mm_dd"
+	},
+	{
+		"title":"mm_dd_yy",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/dates/mm_dd_yy_transformed.txt",
+		"notes":"This should remove anything with pattern mm_dd_yy"
+	},
+	{
+		"title":"yyyy_mm_dd",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/dates/yyyy_mm_dd_transformed.txt",
+		"notes":"This should remove anything with pattern yyyy_mm_dd"
+	},
+	{
+		"title":"mm_dd_yyyy",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/dates/mm_dd_yyyy_transformed.txt",
+		"notes":"This should remove anything with pattern mm_dd_yyyy"
+	},
+	{
+		"title":"dd_mm",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/dates/dd_mm_transformed.txt",
+		"notes":"This should remove anything with pattern dd_mm"
+	},
+	{
+		"title":"mm_dd",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/dates/mm_dd_transformed.txt",
+		"notes":"This should remove anything with pattern mm_dd"
+	},
+	{
+		"title":"mm_yyyy",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/dates/mm_yyyy_transformed.txt",
+		"notes":"This should remove anything with pattern mm_yyyy"
+	},
+	{
+		"title":"mm_yy",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/dates/mm_yy_transformed.txt",
+		"notes":"This should remove anything with pattern mm_yy"
+	},
+	{
+		"title":"month_name_of_yy",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/dates/month_name_of_yy_transformed.txt",
+		"notes":"This should remove anything with pattern month_name_of_yy"
+	},
+	{
+		"title":"month_name_of_yyyy",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/dates/month_name_of_yyyy_transformed.txt",
+		"notes":"This should remove anything with pattern month_name_of_yyyy"
+	},
+	{
+		"title":"month_name_yy",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/dates/month_name_yy_transformed.txt",
+		"notes":"This should remove anything with pattern month_name_yy"
+	},
+	{
+		"title":"month_name_yyyy",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/dates/month_name_yyyy_transformed.txt",
+		"notes":"This should remove anything with pattern month_name_yyyy"
+	},
+	{
+		"title":"day_numbering_of_month",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/dates/day_numbering_of_month_transformed.txt",
+		"notes":"This should remove anything with pattern day_numbering_of_month"
+	},
+	{
+		"title":"month_name_xst_xnd_xth",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/dates/month_name_xst_xnd_xth_transformed.txt",
+		"notes":"This should remove anything with pattern month_name_xst_xnd_xth"
+	},
+	{
+		"title":"on_or_by_the_day_numbering",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/dates/on_or_by_the_day_numbering_transformed.txt",
+		"notes":"This should remove anything with pattern on_or_by_the_day_numbering"
+	},
+	{
+		"title":"as of date",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/dates/as_of_date.txt",
+		"notes":"This should remove anything with pattern as of d/d"
+	},	
+	{
+		"title":"month_name",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/dates/month_name_transformed.txt",
+		"notes":"This should remove anything with pattern month_name"
+	},
+	{
+    	"title":"No catchall",
+		"type":"regex",
+		"exclude":false,
+		"filepath":"filters/regex/catchall.txt",
+		"notes":"False will turn off catchall, True will turn on catchll (default)"
+	}
+
+
+]

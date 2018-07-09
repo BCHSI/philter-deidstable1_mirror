@@ -1,0 +1,35 @@
+    {
+        "title": "lived to x",
+        "type": "regex",
+        "exclude": true,
+        "filepath": "filters/regex/age/lived_to_x.txt",
+        "note": ""
+    },
+    {
+        "title": "x years old",
+        "type": "regex",
+        "exclude": true,
+        "filepath": "filters/regex/age/x_years_old.txt",
+        "note": ""
+    },
+    {
+        "title": "x year old",
+        "type": "regex",
+        "exclude": true,
+        "filepath": "filters/regex/age/x_year_old.txt",
+        "note": ""
+    },
+    {
+        "title": "age x",
+        "type": "regex",
+        "exclude": true,
+        "filepath": "filters/regex/age/age_x.txt",
+        "note": ""
+    },
+    {
+        "title": "x yo",
+        "type": "regex",
+        "exclude": true,
+        "filepath": "filters/regex/age/x_yo.txt",
+        "note": ""
+    },

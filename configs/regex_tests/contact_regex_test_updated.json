@@ -1,0 +1,53 @@
+[	
+	{
+		"title":"url",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/contact/url.txt",
+		"notes":"This should remove anything that looks like a url"
+	},
+	{
+		"title":"call #",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/contact/call_#.txt",
+		"notes":"This should remove anything that matches call #: etc."
+	},
+	{
+		"title":"emails",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/contact/email.txt",
+		"notes":"This should remove anything that looks like an email"
+	},
+	{
+		"title":"xxx_xxx_xxxx",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/contact/xxx_xxx_xxxx.txt",
+		"notes":"This should remove anything that xxx.xxx.xxxx"
+	},
+	{
+		"title":"xxx_xxx_CCCC",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/contact/xxx_xxx_CCCC.txt",
+		"notes":"This should remove anything that xxx.xxx.CCCC+"
+	},
+	{
+		"title":"5 digit pager",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/contact/pager.txt",
+		"notes":"This should remove anything that matches a pager number"
+	},
+	{
+    	"title":"No catchall",
+		"type":"regex",
+		"exclude":false,
+		"filepath":"filters/regex/catchall.txt",
+		"notes":"False will turn off catchall, True will turn on catchll (default)"
+	}
+
+
+]

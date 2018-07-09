@@ -1,0 +1,1 @@
+\b(?i)(((?<=mg\s)|(?<=g\s)|(?<=unit\s)|(?<=units\s)|(?<=tablet\s)|(?<=tablets\s))oral|oral\s(\d+x\s)?daily|bedtime)\b

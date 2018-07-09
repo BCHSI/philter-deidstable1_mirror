@@ -1,1 +1,1 @@
-\b(?i)\d+\shour(s)?\b
+\b(?i)(?<!\-)\d+\shour(s)?\b
