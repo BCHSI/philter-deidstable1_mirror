@@ -518,13 +518,16 @@ class Philter:
             for i,pattern in enumerate(self.patterns):
                 coord_map = pattern["coordinate_map"]
                 exclude = pattern["exclude"]
+                if "phi_type" in pattern:
+                    phi_type = pattern["phi_type"]
                 # self.patterns[pattern_index]["title"]
-
+                else:
+                    phi_type = "OTHER"
                 for start,stop in coord_map.filecoords(filename):
                     if exclude:
                         if not include_map.does_overlap(filename, start, stop):
                             exclude_map.add_extend(filename, start, stop)
-                            data[filename]["phi"].append({"start":start, "stop":stop, "word":txt[start:stop]})
+                            data[filename]["phi"].append({"start":start, "stop":stop, "word":txt[start:stop],"phi_type":phi_type})
                     else:
                         if not exclude_map.does_overlap(filename, start, stop):
                             #print("include", start, stop, txt[start:stop])
@@ -558,7 +561,7 @@ class Philter:
 
     # infilename needed for addressing maps
     def transform_text_asterisk(self, txt, infilename,
-                                include_map, exclude_map):
+                                include_map, exclude_map):       
         last_marker = 0
         current_chunk = []
         punctuation_matcher = re.compile(r"[^a-zA-Z0-9*]")
@@ -570,7 +573,7 @@ class Philter:
             if i < last_marker:
                 continue
             
-            if include_map.does_exist(infilename, i):
+            elif include_map.does_exist(infilename, i):
                 #add our preserved text
                 start,stop = include_map.get_coords(infilename, i)
                 contents.append(txt[start:stop])
@@ -594,10 +597,10 @@ class Philter:
         contents.append("]]></TEXT>\n")
         contents.append("<TAGS>\n")
         for i in range(len(tagdata['phi'])):
-            tagcategory = "OTHER" # TODO: replace with actual category
-            phitype = "OTHER" # TODO: replace with actual phi type
+            phi_type = tagdata['phi'][i]['phi_type']
+            tagcategory = phi_type
             contents.append("<")
-            contents.append(phitype)
+            contents.append(phi_type)
             contents.append(" id=\"P")
             contents.append(str(i))
             contents.append("\" start=\"")
@@ -607,7 +610,7 @@ class Philter:
             contents.append("\" text=\"")
             contents.append(tagdata['phi'][i]['word'])
             contents.append("\" TYPE=\"")
-            contents.append(phitype)
+            contents.append(phi_type)
             contents.append("\" comment=\"\" />\n")
         contents.append("</TAGS>\n")
         contents.append("</"+root+">\n")
