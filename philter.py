@@ -489,19 +489,26 @@ class Philter:
         if not os.path.exists(out_path):
             raise Exception("File output path does not exist", out_path)
 
-
-        #keeps a record of all phi coordinates and text
-        data = {}
+        # keeping a record of all phicoordinates and text for all files
+        # we only keep track of this if self.eval=True
+	if self.eval:
+            data_all_files = {}
 
         #create our final exclude and include maps, priority order
         for root,f in self.folder_walk(in_path):
 
+            #keeps a record of all phi coordinates and text for a given file
+            data = {}
+        
             filename = root+f
 
             encoding = self.detect_encoding(filename)
             txt = open(filename,"r", encoding=encoding***REMOVED***'encoding'***REMOVED***).read()
             #record we use to evaluate our effectiveness
-            data***REMOVED***filename***REMOVED*** = {"text":txt, "phi":***REMOVED******REMOVED***,"non-phi":***REMOVED******REMOVED***}
+            if self.eval:
+                data_all_files***REMOVED***filename***REMOVED*** = {"text":txt, "phi":***REMOVED******REMOVED***,"non-phi":***REMOVED******REMOVED***}
+            
+            data = {"text":txt, "phi":***REMOVED******REMOVED***,"non-phi":***REMOVED******REMOVED***}
 
             #create an intersection map of all coordinates we'll be removing
             exclude_map = CoordinateMap()
@@ -524,12 +531,16 @@ class Philter:
                     if exclude:
                         if not include_map.does_overlap(filename, start, stop):
                             exclude_map.add_extend(filename, start, stop)
-                            data***REMOVED***filename***REMOVED******REMOVED***"phi"***REMOVED***.append({"start":start, "stop":stop, "word":txt***REMOVED***start:stop***REMOVED***,"phi_type":phi_type})
+                            data***REMOVED***"phi"***REMOVED***.append({"start":start, "stop":stop, "word":txt***REMOVED***start:stop***REMOVED***,"phi_type":phi_type})
+                            if self.eval:
+                                data_all_files***REMOVED***"filename"***REMOVED******REMOVED***"phi"***REMOVED***.append({"start":start, "stop":stop, "word":txt***REMOVED***start:stop***REMOVED***,"phi_type":phi_type})
                     else:
                         if not exclude_map.does_overlap(filename, start, stop):
                             #print("include", start, stop, txt***REMOVED***start:stop***REMOVED***)
                             include_map.add_extend(filename, start, stop)
-                            data***REMOVED***filename***REMOVED******REMOVED***"non-phi"***REMOVED***.append({"start":start, "stop":stop, "word":txt***REMOVED***start:stop***REMOVED***})
+                            data***REMOVED***"non-phi"***REMOVED***.append({"start":start, "stop":stop, "word":txt***REMOVED***start:stop***REMOVED***})
+                            if self.eval:
+                                data_all_files***REMOVED***filename***REMOVED******REMOVED***"non-phi"***REMOVED***.append({"start":start, "stop":stop, "word":txt***REMOVED***start:stop***REMOVED***})
                         else:
                             pass
                             #print("include overlapped", start, stop, txt***REMOVED***start:stop***REMOVED***)
@@ -546,15 +557,14 @@ class Philter:
                     
             elif self.outformat == "i2b2":
                 with open(outpathfbase+".xml", "w") as f:
-                    contents = self.transform_text_i2b2(data***REMOVED***filename***REMOVED***)
+                    contents = self.transform_text_i2b2(data)
                     f.write(contents)
             else:
                 raise Exception("Outformat not supported: ",
-                                self.outformat)
-                
+                                self.outformat)        
 
         if self.run_eval: #output our data for eval
-            json.dump(data, open(self.coords, "w"), indent=4)
+            json.dump(data_all_files, open(self.coords, "w"), indent=4)
 
     # infilename needed for addressing maps
     def transform_text_asterisk(self, txt, infilename,
