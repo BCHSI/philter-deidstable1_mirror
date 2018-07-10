@@ -533,7 +533,7 @@ class Philter:
                             exclude_map.add_extend(filename, start, stop)
                             data***REMOVED***"phi"***REMOVED***.append({"start":start, "stop":stop, "word":txt***REMOVED***start:stop***REMOVED***,"phi_type":phi_type})
                             if self.eval:
-                                data_all_files***REMOVED***"filename"***REMOVED******REMOVED***"phi"***REMOVED***.append({"start":start, "stop":stop, "word":txt***REMOVED***start:stop***REMOVED***,"phi_type":phi_type})
+                                data_all_files***REMOVED***filename***REMOVED******REMOVED***"phi"***REMOVED***.append({"start":start, "stop":stop, "word":txt***REMOVED***start:stop***REMOVED***,"phi_type":phi_type})
                     else:
                         if not exclude_map.does_overlap(filename, start, stop):
                             #print("include", start, stop, txt***REMOVED***start:stop***REMOVED***)
