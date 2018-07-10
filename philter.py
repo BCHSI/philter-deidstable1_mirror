@@ -205,11 +205,11 @@ class Philter:
             for m in matches:
                 #if filename == './data/i2b2_notes_updated/373-04.txt':
                 # if self.patterns[pattern_index]["title"] == "YYYY/MM-YYYY/MM":
-                # if 'and' in m.group() or 'AND' in m.group():
-                #     print(self.patterns[pattern_index]["title"])
-                #     print(m.group())
-                #     print(filename)
-                #     print('\n')
+                if 'clinic' in m.group() or 'cards' in m.group():
+                    print(self.patterns[pattern_index]["title"])
+                    print(m.group())
+                    print(filename)
+                    print('\n')
                 
                 coord_map.add_extend(filename, m.start(), m.start()+len(m.group()))
         
