@@ -66,7 +66,6 @@ def main():
             "foutpath":args.output,
             "outformat":"i2b2",
             "filters":"./configs/philter_alpha.json",
-            "coords":args.coords
         }
 
 
