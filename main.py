@@ -51,7 +51,7 @@ def main():
                     type=lambda x:bool(distutils.util.strtobool(x)))
     ap.add_argument("--prod", default=False,
                     help="When prod is true, this will run the script with output in i2b2 xml format without running the eval script",
-                    type=bool)
+                    type=lambda x:bool(distutils.util.strtobool(x)))
 
     args = ap.parse_args()
 
@@ -62,20 +62,11 @@ def main():
         philter_config = {
             "verbose":False,
             "run_eval":False,
-            "freq_table":args.freq_table,
             "finpath":args.input,
             "foutpath":args.output,
             "outformat":"i2b2",
-            "ucsfformat":args.ucsfformat,
-            "anno_folder":args.anno,
             "filters":"./configs/philter_alpha.json",
-            "xml":args.xml,
-            "coords":args.coords,
-            "stanford_ner_tagger": {
-                "classifier":args.stanfordner+"classifiers/english.all.3class.distsim.crf.ser.gz",
-                "jar":args.stanfordner+"stanford-ner.jar",
-                "download":True,
-            }
+            "coords":args.coords
         }
 
 
@@ -102,13 +93,11 @@ def main():
     filterer = Philter(philter_config)
 
     #map any sets, pos and regex groups we have in our config
-    filterer.map_coordinates(in_path=args.input)
+    filterer.map_coordinates()
     
     #transform the data 
     #Priority order is maintained in the pattern list
-    filterer.transform(in_path=args.input,
-                       out_path=args.output,
-                       replacement="*")
+    filterer.transform()
 
     #evaluate the effectiveness
     if args.run_eval and args.outputformat == "asterisk":

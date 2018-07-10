@@ -41,8 +41,6 @@ class Philter:
         
         if "coords" in config:
             self.coords = config***REMOVED***"coords"***REMOVED***
-        else:
-            raise Exception("Coordinate outpath undefined")
 
         if "outformat" in config:
             self.outformat = config***REMOVED***"outformat"***REMOVED***
@@ -137,12 +135,12 @@ class Philter:
             raise Exception("Invalid filteype",filepath)
         return map_set
 
-    def map_coordinates(self, in_path="", allowed_filetypes=set(***REMOVED***"txt", "ano"***REMOVED***)):
+    def map_coordinates(self, allowed_filetypes=set(***REMOVED***"txt", "ano"***REMOVED***)):
         """ Runs the set, or regex on the input data 
             generating a coordinate map of hits given 
             (this performs a dry run on the data and doesn't transform)
         """
-
+        in_path = self.finpath
         if not os.path.exists(in_path):
             raise Exception("Filepath does not exist", in_path)
         
@@ -468,10 +466,7 @@ class Philter:
             for filename in files:
                 yield root,filename
 
-    def transform(self, 
-            replacement=" **PHI** ",
-            out_path="",
-            in_path=""):
+    def transform(self):
         """ transform
             turns input files into output PHI files 
             protected health information will be replaced by the replacement character
@@ -482,7 +477,9 @@ class Philter:
 
             **Anything not caught in these passes will be assumed to be PHI
         """
-        
+        in_path = self.finpath
+        out_path = self.foutpath
+
         if self.verbose:
             print("RUNNING TRANSFORM")
 
