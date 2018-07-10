@@ -518,13 +518,16 @@ class Philter:
             for i,pattern in enumerate(self.patterns):
                 coord_map = pattern***REMOVED***"coordinate_map"***REMOVED***
                 exclude = pattern***REMOVED***"exclude"***REMOVED***
+                if "phi_type" in pattern:
+                    phi_type = pattern***REMOVED***"phi_type"***REMOVED***
                 # self.patterns***REMOVED***pattern_index***REMOVED******REMOVED***"title"***REMOVED***
-
+                else:
+                    phi_type = "OTHER"
                 for start,stop in coord_map.filecoords(filename):
                     if exclude:
                         if not include_map.does_overlap(filename, start, stop):
                             exclude_map.add_extend(filename, start, stop)
-                            data***REMOVED***filename***REMOVED******REMOVED***"phi"***REMOVED***.append({"start":start, "stop":stop, "word":txt***REMOVED***start:stop***REMOVED***})
+                            data***REMOVED***filename***REMOVED******REMOVED***"phi"***REMOVED***.append({"start":start, "stop":stop, "word":txt***REMOVED***start:stop***REMOVED***,"phi_type":phi_type})
                     else:
                         if not exclude_map.does_overlap(filename, start, stop):
                             #print("include", start, stop, txt***REMOVED***start:stop***REMOVED***)
@@ -558,7 +561,7 @@ class Philter:
 
     # infilename needed for addressing maps
     def transform_text_asterisk(self, txt, infilename,
-                                include_map, exclude_map):
+                                include_map, exclude_map):       
         last_marker = 0
         current_chunk = ***REMOVED******REMOVED***
         punctuation_matcher = re.compile(r"***REMOVED***^a-zA-Z0-9****REMOVED***")
@@ -570,7 +573,7 @@ class Philter:
             if i < last_marker:
                 continue
             
-            if include_map.does_exist(infilename, i):
+            elif include_map.does_exist(infilename, i):
                 #add our preserved text
                 start,stop = include_map.get_coords(infilename, i)
                 contents.append(txt***REMOVED***start:stop***REMOVED***)
@@ -594,10 +597,10 @@ class Philter:
         contents.append("***REMOVED******REMOVED***></TEXT>\n")
         contents.append("<TAGS>\n")
         for i in range(len(tagdata***REMOVED***'phi'***REMOVED***)):
-            tagcategory = "OTHER" # TODO: replace with actual category
-            phitype = "OTHER" # TODO: replace with actual phi type
+            phi_type = tagdata***REMOVED***'phi'***REMOVED******REMOVED***i***REMOVED******REMOVED***'phi_type'***REMOVED***
+            tagcategory = phi_type
             contents.append("<")
-            contents.append(phitype)
+            contents.append(phi_type)
             contents.append(" id=\"P")
             contents.append(str(i))
             contents.append("\" start=\"")
@@ -607,7 +610,7 @@ class Philter:
             contents.append("\" text=\"")
             contents.append(tagdata***REMOVED***'phi'***REMOVED******REMOVED***i***REMOVED******REMOVED***'word'***REMOVED***)
             contents.append("\" TYPE=\"")
-            contents.append(phitype)
+            contents.append(phi_type)
             contents.append("\" comment=\"\" />\n")
         contents.append("</TAGS>\n")
         contents.append("</"+root+">\n")
