@@ -8,19 +8,19 @@ script1 = sys.argv[1]
 #script2 = sys.argv[2]
 
 BLACK_BOX_TESTS = "tests/black_box_examples"
-TEST_OUTPUT_DIR = "black_box/test_output"
+TEST_OUTPUT_DIR = "black_box/test_output/"
 
 
 def blackbox_test():
     #conf_dir = os.fsencode("black_box/confs")
     conf_dir = "black_box/confs"
-    print(0)
+    #print(0)
     for directory in os.listdir(conf_dir):
         #directory = os.fsdecode(directory)
         if not os.path.isdir(os.path.join(conf_dir, directory)):
-            print(directory)
+            #print(directory)
             continue
-        print("yes")
+        #print("yes")
         conf_file = os.path.join(conf_dir, directory, "conf.json")
         true_output = os.path.join(conf_dir, directory, "real_output")
 
