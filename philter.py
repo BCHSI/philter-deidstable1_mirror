@@ -581,7 +581,7 @@ class Philter:
             if i < last_marker:
                 continue
             
-            elif include_map.does_exist(infilename, i):
+            if include_map.does_exist(infilename, i):
                 #add our preserved text
                 start,stop = include_map.get_coords(infilename, i)
                 contents.append(txt[start:stop])
