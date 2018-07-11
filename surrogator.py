@@ -88,7 +88,8 @@ def parse_xml_files(directory,output_directory,philter_or_i2b2,write_surrogated_
 
 	date_shift_log.columns = ***REMOVED***"Filename", "start", "end", "Input Date", "Shifted Date","Time Delta"***REMOVED***
 	surrogate_log.columns = ***REMOVED***"filename", "text", "phi_type"***REMOVED***
-	problem_files_log.columns = ***REMOVED***"filename"***REMOVED***
+	if problem_files_log.empty==False:
+		problem_files_log.columns = ***REMOVED***"filename"***REMOVED***
 	return date_shift_log, surrogate_log, problem_files_log
 
 # date shift functions
@@ -249,7 +250,7 @@ def main():
                     type=bool)	
 	parser.add_argument("-e","--evaluation", default=True, help="This will run the evaluation comparing surrogated i2b2 with surrogated philter notes",
                     type=bool)	
-	parser.add_argument("-t","--test", default=True, help="This will run the test, using less files",
+	parser.add_argument("-t","--test", default=False, help="This will run the test, using less files",
                     type=bool)
 	parser.add_argument("-w","--write_surrogated_files", default=False, help="This will write the surrogated notes.",
                     type=bool)
@@ -266,15 +267,15 @@ def main():
 	test = vars(parsed)***REMOVED***"test"***REMOVED***
 
 	if test:
-		directory = "data/i2b2_results_test"
+		directory = "data/surrogator/test/philter_results_test/"
 		output_directory = "data/surrogator/test/philter_results_output_test/"
 		i2b2_directory = "data/surrogator/test/testing-PHI-Gold-fixed_test"
 		i2b2_output_directory = "data/surrogator/test/testing-PHI-Gold-fixed-output_test/"
-
+		write_surrogated_files = True
 
 	print "\nRunning Surrogator...\n"
 
-	if rerun_philter:
+	if rerun_philter or test:
 		print "Running Surrogator on philter notes..."
 		date_shift_log, surrogate_log,problem_files_log = parse_xml_files(directory,output_directory,"Philter",write_surrogated_files)
 		write_logs(output_directory,date_shift_log, surrogate_log,problem_files_log)
@@ -287,7 +288,7 @@ def main():
 			print "You have not run the surrogator with --rerun_philter=True yet. Please re-run with this parameter set to true"			
 
 
-	if rerun_i2b2:
+	if rerun_i2b2 or test:
 		print "\n\n____________________________________"
 		print "Running Surrogator on i2b2 notes..."
 		date_shift_log_i2b2, surrogate_log_i2b2,problem_files_log = parse_xml_files(i2b2_directory,i2b2_output_directory,"deIdi2b2",write_surrogated_files)

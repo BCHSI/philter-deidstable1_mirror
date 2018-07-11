@@ -491,7 +491,7 @@ class Philter:
 
         # keeping a record of all phicoordinates and text for all files
         # we only keep track of this if self.eval=True
-	if self.eval:
+        if self.eval:
             data_all_files = {}
 
         #create our final exclude and include maps, priority order
@@ -558,6 +558,7 @@ class Philter:
             elif self.outformat == "i2b2":
                 with open(outpathfbase+".xml", "w") as f:
                     contents = self.transform_text_i2b2(data)
+                    #print("writing contents to: " + outpathfbase+".xml")
                     f.write(contents)
             else:
                 raise Exception("Outformat not supported: ",
