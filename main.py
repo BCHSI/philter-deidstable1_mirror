@@ -54,20 +54,22 @@ def main():
                     type=lambda x:bool(distutils.util.strtobool(x)))
 
     args = ap.parse_args()
-
-    if args.verbose:
-        print("RUNNING ", args.filters)
+    run_eval = args.run_eval
+    verbose = args.verbose
 
     if args.prod:
+        run_eval = False
+        verbose = False
+        outputformat = "i2b2"
+        filters = "./configs/philter_alpha.json"
         philter_config = {
-            "verbose":False,
-            "run_eval":False,
+            "verbose":verbose,
+            "run_eval":run_eval,
             "finpath":args.input,
             "foutpath":args.output,
-            "outformat":"i2b2",
-            "filters":"./configs/philter_alpha.json",
+            "outformat":outputformat,
+            "filters":filters,
         }
-
 
     else:
     	philter_config = {
@@ -89,6 +91,9 @@ def main():
             }
         }
    
+    if verbose:
+        print("RUNNING ", filters)
+
     filterer = Philter(philter_config)
 
     #map any sets, pos and regex groups we have in our config
@@ -99,7 +104,7 @@ def main():
     filterer.transform()
 
     #evaluate the effectiveness
-    if args.run_eval and args.outputformat == "asterisk":
+    if run_eval and args.outputformat == "asterisk":
         filterer.eval(
             philter_config,
             in_path=args.output,
