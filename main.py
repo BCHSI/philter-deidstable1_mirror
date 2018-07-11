@@ -49,45 +49,62 @@ def main():
     ap.add_argument("--ucsfformat", default=False,
                     help="When ucsfformat is true, will adjust eval script for slightly different xml format",
                     type=lambda x:bool(distutils.util.strtobool(x)))
-
+    ap.add_argument("--prod", default=False,
+                    help="When prod is true, this will run the script with output in i2b2 xml format without running the eval script",
+                    type=lambda x:bool(distutils.util.strtobool(x)))
 
     args = ap.parse_args()
+    run_eval = args.run_eval
+    verbose = args.verbose
 
-    if args.verbose:
-        print("RUNNING ", args.filters)
-
-    philter_config = {
-        "verbose":args.verbose,
-        "run_eval":args.run_eval,
-        "freq_table":args.freq_table,                   
-        "finpath":args.input,
-        "foutpath":args.output,
-        "outformat":args.outputformat,
-        "ucsfformat":args.ucsfformat,
-        "anno_folder":args.anno,
-        "filters":args.filters,
-        "xml":args.xml,
-        "coords":args.coords,
-        "stanford_ner_tagger": { 
-            "classifier":args.stanfordner+"classifiers/english.all.3class.distsim.crf.ser.gz",
-            "jar":args.stanfordner+"stanford-ner.jar",
-            "download":True,
+    if args.prod:
+        run_eval = False
+        verbose = False
+        outputformat = "i2b2"
+        filters = "./configs/philter_alpha.json"
+        philter_config = {
+            "verbose":verbose,
+            "run_eval":run_eval,
+            "finpath":args.input,
+            "foutpath":args.output,
+            "outformat":outputformat,
+            "filters":filters,
         }
-    }    
+
+    else:
+    	philter_config = {
+            "verbose":args.verbose,
+            "run_eval":args.run_eval,
+            "freq_table":args.freq_table,
+            "finpath":args.input,
+            "foutpath":args.output,
+            "outformat":args.outputformat,
+            "ucsfformat":args.ucsfformat,
+            "anno_folder":args.anno,
+            "filters":args.filters,
+            "xml":args.xml,
+            "coords":args.coords,
+            "stanford_ner_tagger": {
+                "classifier":args.stanfordner+"classifiers/english.all.3class.distsim.crf.ser.gz",
+                "jar":args.stanfordner+"stanford-ner.jar",
+                "download":True,
+            }
+        }
    
+    if verbose:
+        print("RUNNING ", filters)
+
     filterer = Philter(philter_config)
 
     #map any sets, pos and regex groups we have in our config
-    filterer.map_coordinates(in_path=args.input)
+    filterer.map_coordinates()
     
     #transform the data 
     #Priority order is maintained in the pattern list
-    filterer.transform(in_path=args.input,
-                       out_path=args.output,
-                       replacement="*")
+    filterer.transform()
 
     #evaluate the effectiveness
-    if args.run_eval and args.outputformat == "asterisk":
+    if run_eval and args.outputformat == "asterisk":
         filterer.eval(
             philter_config,
             in_path=args.output,
