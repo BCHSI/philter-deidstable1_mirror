@@ -30,14 +30,13 @@ def extractXML(directory,filename,philter_or_i2b2):
 	tags_dict = xml_dict***REMOVED***"TAGS"***REMOVED***
 	return text,tags_dict,xmlstr
 
-def parse_xml_files(directory,output_directory,philter_or_i2b2,write_surrogated_files):
+def parse_xml_files(directory,output_directory,philter_or_i2b2,write_surrogated_files,problem_files_log):
 	cols = ***REMOVED***"Document", "PHI_element", "Text", "Type","Comment"***REMOVED***
 	output_df = pd.DataFrame(columns = cols,index=None)
 	new_dict = dict()
 	filename_dates = {}
 	date_shift_log = pd.DataFrame()
 	surrogate_log = pd.DataFrame()
-	problem_files_log = pd.DataFrame()
 	# Loop through xml_files
 	for filename in os.listdir(directory):
 		if filename.endswith(".xml") and "DS_Store" not in filename:
@@ -55,7 +54,7 @@ def parse_xml_files(directory,output_directory,philter_or_i2b2,write_surrogated_
 						text = final_value***REMOVED***"@text"***REMOVED***
 						phi_type = final_value***REMOVED***"@TYPE"***REMOVED***
 						if phi_type == "DATE": 
-							xmlstr,date_shift_log = shift_dates(filename_dates,filename,xmlstr,text,date_shift_log,text_start,text_end,verbose=0)
+							xmlstr,date_shift_log = shift_dates(filename_dates,filename,xmlstr,text,date_shift_log,text,text_start,text_end,verbose=0)
 						else:
 							xmlstr,surrogate_log = replace_other_surrogate(filename,xmlstr,text,phi_type,surrogate_log)								
 				else:
@@ -66,7 +65,7 @@ def parse_xml_files(directory,output_directory,philter_or_i2b2,write_surrogated_
 					text_end = final_value***REMOVED***"@end"***REMOVED***
 
 					if phi_type == "DATE":
-						xmlstr,date_shift_log = shift_dates(filename_dates,filename,xmlstr,text,date_shift_log,text_start,text_end,verbose=0)
+						xmlstr,date_shift_log = shift_dates(filename_dates,filename,xmlstr,text,date_shift_log,text,text_start,text_end,verbose=0)
 					else:
 						xmlstr,surrogate_log = replace_other_surrogate(filename,xmlstr,text,phi_type,surrogate_log)
 			
@@ -83,12 +82,13 @@ def parse_xml_files(directory,output_directory,philter_or_i2b2,write_surrogated_
 
 			except xmltodict.expat.ExpatError:
 				print "We cannot parse this XML"
-				problem_files_log = problem_files_log.append(***REMOVED***(filename)***REMOVED***)
+				problem_files_log = problem_files_log.append(***REMOVED***(filename,philter_or_i2b2)***REMOVED***)
 
 
-	date_shift_log.columns = ***REMOVED***"Filename", "start", "end", "Input Date", "Shifted Date","Time Delta"***REMOVED***
+	date_shift_log.columns = ***REMOVED***"Filename", "start", "end", "Input Date", "Shifted Date","Time Delta","date_context"***REMOVED***
 	surrogate_log.columns = ***REMOVED***"filename", "text", "phi_type"***REMOVED***
-	problem_files_log.columns = ***REMOVED***"filename"***REMOVED***
+	if problem_files_log.empty==False:
+		problem_files_log.columns = ***REMOVED***"filename","philter_or_i2b2"***REMOVED***
 	return date_shift_log, surrogate_log, problem_files_log
 
 # date shift functions
@@ -126,7 +126,10 @@ def lookup_date_shift(filename,filename_dates):
 
 	return time_delta
 
-def shift_dates(filename_dates,filename,xmlstr,date,date_shift_log,text_start,text_end,verbose):
+def shift_dates(filename_dates,filename,xmlstr,date,date_shift_log,text,text_start,text_end,verbose):
+    print text 
+    text_start = int(text_start)
+    text_end = int(text_end)
     now = datetime.now()
     time_delta = lookup_date_shift(filename,filename_dates)
     time_delta_str= str(time_delta).replace(", 0:00:00","")
@@ -147,16 +150,16 @@ def shift_dates(filename_dates,filename,xmlstr,date,date_shift_log,text_start,te
           if dt.day!=1:
             output_string += " " +str(dt_plus_arbitrary.day)
           output_shifted_date = output_string.replace(" 00:00:00","")
-          date_shift_log = date_shift_log.append(***REMOVED***(filename,text_start,text_end,date,output_shifted_date,time_delta_str)***REMOVED***)
+          date_shift_log = date_shift_log.append(***REMOVED***(filename,text_start,text_end,date,output_shifted_date,time_delta_str,text***REMOVED***text_start:text_end***REMOVED***)***REMOVED***)
           output_xml = xmlstr.replace(date,output_shifted_date + " ***REMOVED***SHIFTED DATE***REMOVED***")
 
       else:
         output_shifted_date = str(dt_plus_arbitrary).replace(" 00:00:00","")
-    	date_shift_log = date_shift_log.append(***REMOVED***(filename,text_start,text_end,date,output_shifted_date,time_delta_str)***REMOVED***)
+    	date_shift_log = date_shift_log.append(***REMOVED***(filename,text_start,text_end,date,output_shifted_date,time_delta_str,text***REMOVED***text_start:text_end***REMOVED***)***REMOVED***)
         output_xml = xmlstr.replace(date,output_shifted_date+ " ***REMOVED***SHIFTED DATE***REMOVED***")
     else:
         output_xml = xmlstr.replace(date,"cannot parse date")
-        date_shift_log = date_shift_log.append(***REMOVED***(filename,text_start,text_end,date,"cannot parse date",time_delta_str)***REMOVED***)
+        date_shift_log = date_shift_log.append(***REMOVED***(filename,text_start,text_end,date,"cannot parse date",time_delta_str,text***REMOVED***text_start:text_end***REMOVED***)***REMOVED***)
 
     return output_xml,date_shift_log
 
@@ -172,17 +175,14 @@ def replace_other_surrogate(filename,xmlstr,text,phi_type,surrogate_log):
 
 	return output_xml,surrogate_log
 
-def write_logs(output_directory,date_shift_log, surrogate_log,problem_files_log):
+def write_logs(output_directory,date_shift_log, surrogate_log):
 	print "\n______________________________________________"
-
 
 	date_shift_log.to_csv(output_directory + "/shifted_dates.csv", index=False)	
 	surrogate_log.to_csv(output_directory + "/surrogated_text.csv", index=False)
-	problem_files_log.to_csv(output_directory + "/failed_to_parse.csv", index=False)
 
 	print "\nWrote record of shifted dates here: "+ output_directory + "shifted_dates.csv"
-	print "Wrote record of surrogated text here: "+ output_directory + "surrogated_text.csv \n"
-	print "Wrote record of files that failed to parse: "+ output_directory + "failed_to_parse.csv \n"
+	print "Wrote record of surrogated text here: "+ output_directory + "surrogated_text.csv"
 
 
 def write_summary(date_shift_log,surrogate_log,output_directory):
@@ -199,13 +199,20 @@ def write_summary(date_shift_log,surrogate_log,output_directory):
 	print "\nCounts of text surrogated by phi_type:" 
 	print counts_by_phi_type
 
-def date_shift_evaluation(output_directory,date_shift_log_i2b2,date_shift_log):
+def date_shift_evaluation(output_directory,date_shift_log_i2b2,date_shift_log,problem_files_log):
 	
+
 	s1 = pd.merge(date_shift_log_i2b2, date_shift_log,indicator=True, how='outer', on=***REMOVED***'Filename','start','end','Input Date'***REMOVED***)
-	output_eval = s1***REMOVED******REMOVED***"Input Date","_merge"***REMOVED******REMOVED***
+	output_eval = s1***REMOVED******REMOVED***"Filename","Input Date","_merge"***REMOVED******REMOVED***
 	output_eval = output_eval.rename(index=str, columns={"_merge": "classification"})
 	output_eval***REMOVED***"classification"***REMOVED*** = output_eval***REMOVED***'classification'***REMOVED***.replace({'both': 'true positive','left_only': 'false positive', 'right_only': 'false negative'})
 	output_eval***REMOVED***"description"***REMOVED*** = output_eval***REMOVED***'classification'***REMOVED***.replace({'true positive':'appears in both i2b2 and philter','false positive':'appears in i2b2 notes only', 'false negative':'appears in philter notes only'})
+
+
+	if problem_files_log.empty == False:
+		problem_filenames = problem_files_log***REMOVED***'filename'***REMOVED***.tolist()
+		output_eval = output_eval.loc***REMOVED***~output_eval***REMOVED***'Filename'***REMOVED***.isin(problem_filenames)***REMOVED***
+
 
 	output_eval.to_csv(output_directory+"date_shift_eval.csv", index=False)
 
@@ -225,6 +232,7 @@ def date_shift_evaluation(output_directory,date_shift_log_i2b2,date_shift_log):
 	false_negatives = s1_false_negative
 	print "false negatives: " + str(false_negatives)
 	print "\nwriting out eval record to: " + output_directory + "date_shift_eval.csv"
+	print "\n______________________________________________\n"
 
 def main():
 
@@ -249,7 +257,7 @@ def main():
                     type=bool)	
 	parser.add_argument("-e","--evaluation", default=True, help="This will run the evaluation comparing surrogated i2b2 with surrogated philter notes",
                     type=bool)	
-	parser.add_argument("-t","--test", default=True, help="This will run the test, using less files",
+	parser.add_argument("-t","--test", default=False, help="This will run the test, using less files",
                     type=bool)
 	parser.add_argument("-w","--write_surrogated_files", default=False, help="This will write the surrogated notes.",
                     type=bool)
@@ -266,18 +274,20 @@ def main():
 	test = vars(parsed)***REMOVED***"test"***REMOVED***
 
 	if test:
-		directory = "data/i2b2_results_test"
+		directory = "data/surrogator/test/philter_results_test"
 		output_directory = "data/surrogator/test/philter_results_output_test/"
 		i2b2_directory = "data/surrogator/test/testing-PHI-Gold-fixed_test"
 		i2b2_output_directory = "data/surrogator/test/testing-PHI-Gold-fixed-output_test/"
-
+		write_surrogated_files = True
 
 	print "\nRunning Surrogator...\n"
 
-	if rerun_philter:
+	problem_files_log = pd.DataFrame()
+
+	if rerun_philter or test:
 		print "Running Surrogator on philter notes..."
-		date_shift_log, surrogate_log,problem_files_log = parse_xml_files(directory,output_directory,"Philter",write_surrogated_files)
-		write_logs(output_directory,date_shift_log, surrogate_log,problem_files_log)
+		date_shift_log, surrogate_log,problem_files_log = parse_xml_files(directory,output_directory,"Philter",write_surrogated_files,problem_files_log)
+		write_logs(output_directory,date_shift_log, surrogate_log)
 	else:
 		try:
 			print "Skipping re-running surrogator on philter notes. Reading from: \n    "+output_directory+"shifted_dates.csv"
@@ -287,11 +297,11 @@ def main():
 			print "You have not run the surrogator with --rerun_philter=True yet. Please re-run with this parameter set to true"			
 
 
-	if rerun_i2b2:
+	if rerun_i2b2 or test:
 		print "\n\n____________________________________"
 		print "Running Surrogator on i2b2 notes..."
-		date_shift_log_i2b2, surrogate_log_i2b2,problem_files_log = parse_xml_files(i2b2_directory,i2b2_output_directory,"deIdi2b2",write_surrogated_files)
-		write_logs(i2b2_output_directory,date_shift_log_i2b2, surrogate_log_i2b2,problem_files_log)
+		date_shift_log_i2b2, surrogate_log_i2b2,problem_files_log = parse_xml_files(i2b2_directory,i2b2_output_directory,"deIdi2b2",write_surrogated_files,problem_files_log)
+		write_logs(i2b2_output_directory,date_shift_log_i2b2, surrogate_log_i2b2)
 	else:
 		try:
 			print "Skipping re-running surrogator on i2b2 notes. Reading from: \n    "+i2b2_output_directory+"shifted_dates.csv"
@@ -300,6 +310,12 @@ def main():
 		except:
 			print "You have not run the surrogator with --rerun_i2b2=True yet. Please re-run with this parameter set to true"			
 
+	if (rerun_i2b2 and rerun_philter) or test:
+		problem_files_log.to_csv(output_directory + "/failed_to_parse.csv", index=False)
+		print "Wrote record of files that failed to parse: "+ output_directory + "failed_to_parse.csv \n"
+		date_shift_evaluation(output_directory,date_shift_log_i2b2,date_shift_log,problem_files_log)
+
+
 	if evaluation:
 		print "\nPhilter Notes:"
 		write_summary(date_shift_log,surrogate_log,output_directory)
@@ -307,8 +323,6 @@ def main():
 		print "\nI2B2 Notes"
 		write_summary(date_shift_log_i2b2,surrogate_log_i2b2,i2b2_output_directory)
 		
-		date_shift_evaluation(output_directory,date_shift_log_i2b2,date_shift_log)
-
 
 if __name__ == "__main__":
 	main()
