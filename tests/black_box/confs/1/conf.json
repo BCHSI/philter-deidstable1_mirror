@@ -6,6 +6,13 @@
 		"filepath":"../filters/blacklists/one_word.pkl",
 		"pos":[],
 		"notes":""
+	},
+	{
+    	"title":"No catchall",
+		"type":"regex",
+		"exclude":false,
+		"filepath":"../filters/regex/catchall.txt",
+		"notes":"This should match anything, preventing the catchall"
 	}
 		
 ]
