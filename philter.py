@@ -1,5 +1,5 @@
 
-import re
+import regex as re
 import json
 import os
 import nltk
@@ -205,7 +205,7 @@ class Philter:
             for m in matches:
                 #if filename == './data/i2b2_notes_updated/373-04.txt':
                 # if self.patterns***REMOVED***pattern_index***REMOVED******REMOVED***"title"***REMOVED*** == "YYYY/MM-YYYY/MM":
-                if 'clinic' in m.group() or 'cards' in m.group():
+                if 'insurance' in m.group() or 'PRENATAL' in m.group():
                     print(self.patterns***REMOVED***pattern_index***REMOVED******REMOVED***"title"***REMOVED***)
                     print(m.group())
                     print(filename)
@@ -573,7 +573,7 @@ class Philter:
             if i < last_marker:
                 continue
             
-            elif include_map.does_exist(infilename, i):
+            if include_map.does_exist(infilename, i):
                 #add our preserved text
                 start,stop = include_map.get_coords(infilename, i)
                 contents.append(txt***REMOVED***start:stop***REMOVED***)
