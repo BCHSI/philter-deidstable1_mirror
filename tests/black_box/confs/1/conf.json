@@ -1,0 +1,11 @@
+[
+	{
+		"title":"Blacklist Example",
+		"type":"set",
+		"exclude":true,
+		"filepath":"../filters/blacklists/one_word.pkl",
+		"pos":[],
+		"notes":""
+	}
+		
+]
