@@ -92,7 +92,8 @@ def main():
         }
    
     if verbose:
-        print("RUNNING ", filters)
+        print("RUNNING ", philter_config['filters'])
+
 
     filterer = Philter(philter_config)
 

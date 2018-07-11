@@ -1,5 +1,5 @@
 
-import regex as re
+import re
 import json
 import os
 import nltk
