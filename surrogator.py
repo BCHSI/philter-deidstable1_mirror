@@ -17,7 +17,7 @@ import dateutil.parser
 from datetime import datetime,timedelta
 import random
 from dateparser import parse
-
+import re
 
 # Extract XML
 def extractXML(directory,filename,philter_or_i2b2):
@@ -141,13 +141,60 @@ def get_context_around_date(date,text_start,text_end,note_text):
 
     return date_context
 
-def shift_dates(filename_dates,filename,xmlstr,date,date_shift_log,note_text,text_start,text_end,verbose):
+def precompile(filepath):
+    """ precompiles our regex to speed up pattern matching"""
+    regex = open(filepath,"r").read().strip()
+    return re.compile(regex)
 
+def parse_incomplete_date(date,time_delta):
+    dt = parse(date,settings={'PREFER_DAY_OF_MONTH': 'first'} )
+    now = datetime.now()
+    if dt !=None:
+      strict_parse = parse(date,settings={'STRICT_PARSING': True})
+      dt_actual = datetime(dt.year, dt.month, dt.day)
+      dt_plus_arbitrary = dt_actual+ time_delta
+
+      # we have to take into account if the input date isn't a fully specified date
+      if strict_parse == None or strict_parse.year != dt.year:
+          is_strict_parse = 0
+          output_string = ""
+          if dt.month!=now.month:
+              output_string += str(dt_plus_arbitrary.strftime('%B')) 
+          if dt.year!=now.year:
+              output_string += " " +str(dt_plus_arbitrary.year)
+          if dt.day!=1:
+              output_string += " " +str(dt_plus_arbitrary.day)
+          output_shifted_date = output_string.replace(" 00:00:00","")
+      else:
+          output_shifted_date = str(dt_plus_arbitrary).replace(" 00:00:00","")
+
+      return output_shifted_date
+
+def parse_date_ranges(date_range,time_delta):
+
+    list_of_date_range_regex = ***REMOVED***"filters/regex/dates/YYYY_MM-YYYY_MM_transformed.txt","filters/regex/dates/MM_DD_YY-MM_DD_YY_transformed.txt","filters/regex/dates/MM_YYYY-MM_YYYY_transformed.txt","filters/regex/dates/MM_YY-MM_YY_transformed.txt","filters/regex/dates/MM_YYYY-MM_YYYY_transformed.txt","filters/regex/dates/MM_DD-MM_DD_transformed.txt","filters/regex/dates/DD_MM-DD_MM_transformed.txt"***REMOVED***
+    print date_range
+    for filepath in list_of_date_range_regex:
+    	compiled_regex = precompile(filepath)
+
+        matches = compiled_regex.search(date_range)
+        if matches:
+            match = matches.group(0)
+            start_date_range = match.split("-")***REMOVED***0***REMOVED***
+            end_date_range = match.split("-")***REMOVED***1***REMOVED***
+            break
+
+    output_start_date = parse_incomplete_date(start_date_range,time_delta)
+    output_end_date = parse_incomplete_date(end_date_range,time_delta)
+
+    return start_date_range,end_date_range,output_start_date,output_end_date
+
+def shift_dates(filename_dates,filename,xmlstr,date,date_shift_log,note_text,text_start,text_end,verbose):
 
     date_context = get_context_around_date(date,text_start,text_end,note_text)
     now = datetime.now()
     time_delta = lookup_date_shift(filename,filename_dates)
-    time_delta_str= str(time_delta).replace(", 0:00:00","")
+    time_delta_str = str(time_delta).replace(", 0:00:00","")
     dt = parse(date,settings={'PREFER_DAY_OF_MONTH': 'first'} )
 
     if dt !=None and dt.year > 1900:
@@ -171,11 +218,22 @@ def shift_dates(filename_dates,filename,xmlstr,date,date_shift_log,note_text,tex
 
       else:
         output_shifted_date = str(dt_plus_arbitrary).replace(" 00:00:00","")
-    	date_shift_log = date_shift_log.append(***REMOVED***(filename,text_start,text_end,date,output_shifted_date,time_delta_str,date_context)***REMOVED***)
+        date_shift_log = date_shift_log.append(***REMOVED***(filename,text_start,text_end,date,output_shifted_date,time_delta_str,date_context)***REMOVED***)
         output_xml = xmlstr.replace(date,output_shifted_date+ " ***REMOVED***SHIFTED DATE***REMOVED***")
     else:
-        output_xml = xmlstr.replace(date,"cannot parse date")
-        date_shift_log = date_shift_log.append(***REMOVED***(filename,text_start,text_end,date,"cannot parse date",time_delta_str,date_context)***REMOVED***)
+        try:
+            start_date_range,end_date_range,start_dt_plus_arbitrary,end_dt_plus_arbitrary = parse_date_ranges(date,time_delta)
+
+            output_xml = xmlstr.replace(str(start_date_range),start_dt_plus_arbitrary+ " ***REMOVED***SHIFTED DATE***REMOVED***")
+            output_xml = xmlstr.replace(str(end_date_range),end_dt_plus_arbitrary+ " ***REMOVED***SHIFTED DATE***REMOVED***")
+            date_shift_log = date_shift_log.append(***REMOVED***(filename,text_start,text_end,start_date_range,start_dt_plus_arbitrary,time_delta_str,date_context)***REMOVED***)
+            date_shift_log = date_shift_log.append(***REMOVED***(filename,text_start,text_end,end_date_range,end_dt_plus_arbitrary,time_delta_str,date_context)***REMOVED***)
+            print start_date_range,end_date_range
+
+        except:
+            print "cannot parse date"
+            output_xml = xmlstr.replace(date,"cannot parse date")
+            date_shift_log = date_shift_log.append(***REMOVED***(filename,text_start,text_end,date,"cannot parse date",time_delta_str,date_context)***REMOVED***)
 
     return output_xml,date_shift_log
 
