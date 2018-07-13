@@ -13,11 +13,11 @@ You can test out surrogator by adding the following folders to the data/ directo
 - unzip notes metadata and move to data/notes_metadata/
 - unzip i2b2_data.zip and move to data/surrogator/testing-PHI-Gold-fixed/
 
-# Running Philter
+# Running Surrogator
 
 ## Running from command line
 
-###Testing Surrogator:
+###Testing Surrogator
 ```bash
 python surrogator.py -t True
 ```
@@ -40,7 +40,6 @@ python surrogator.py -rp True -ri True -w True
 This will use the default input and output directories for both Philter'ed and I2B2 notes. It will run the surrogator on both sets of notes, and compare the outputs to create the evaluation tables. 
 
 In addition to the outputted surrogated text files, there will be a number of log files produced:
-	```bash
 	philter_results_output/counts_by_phi_type.csv
 	philter_results_output/date_shift_eval.csv
 	philter_results_output/shifted_dates.csv
@@ -48,7 +47,7 @@ In addition to the outputted surrogated text files, there will be a number of lo
 	testing-PHI-Gold-fixed-output/counts_by_phi_type.csv
 	testing-PHI-Gold-fixed-output/shifted_dates.csv
 	testing-PHI-Gold-fixed-output/surrogated_text.csv
-	```
+
 You can view an output of the above log files in ***REMOVED***following google sheet***REMOVED***(https://docs.google.com/spreadsheets/d/1I_uhXq3qycbR06iI8qSKJbz_UEk9gu805yCPtMSz7Bc/edit#gid=412781496) :
 
 It contains all of the logs that are written out from surrogator for the most recent run over all of the I2B2 notes.
