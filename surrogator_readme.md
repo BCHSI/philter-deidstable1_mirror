@@ -17,12 +17,12 @@ You can test out surrogator by adding the following folders to the data/ directo
 
 ## Running from command line
 
-###Testing Surrogator
+### Testing Surrogator
 ```bash
 python surrogator.py -t True
 ```
 
-###Running Surrogator in Production Mode:
+### Running Surrogator in Production Mode:
 ```bash
 python surrogator.py -p True
 ```
@@ -31,7 +31,7 @@ This will use the default input directory "data/i2b2_results"
 and write the output surrogated notes into the directory "data/surrogator/philter_results_output/"
 
 
-###Running Surrogator on Philter'ed I2B2 XML Notes and I2B2 Tagged XML:
+### Running Surrogator on Philter'ed I2B2 XML Notes and I2B2 Tagged XML:
 
 ```bash
 python surrogator.py -rp True -ri True -w True
