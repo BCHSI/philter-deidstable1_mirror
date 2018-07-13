@@ -7,10 +7,17 @@
 		"notes":"This should remove anything that looks like a full street address (numbers and words)"
 	},
     {
-        "title":"hospital name",
+        "title":"hospital name 1",
         "type":"regex",
         "exclude":true,
-        "filepath":"filters/regex/organizations/nnp_hospital.txt",
+        "filepath":"filters/regex/addresses/hospital1.txt",
+        "notes":"This should remove anything the resembles a hospital name"
+    },
+    {
+        "title":"hospital name 2",
+        "type":"regex",
+        "exclude":true,
+        "filepath":"filters/regex/addresses/hospital2.txt",
         "notes":"This should remove anything the resembles a hospital name"
     },	
 	{

@@ -1,1 +1,1 @@
-\b(?i)(((?<=mg\s)|(?<=g\s)|(?<=unit\s)|(?<=units\s)|(?<=tablet\s)|(?<=tablets\s))oral|oral\s(\d+x\s)?daily|bedtime)\b
+\b(?i)(\d+\s(mg|g|unit|units|tablet|tablets)(\,)?\soral|oral\s(\d+x\s)?(daily|bedtime|cavity|instructions|take by mouth|take \d+))\b|\(Oral\)
