@@ -215,7 +215,6 @@ class Philter:
         
         #### MATCHALL/CATCHALL ####
         elif regex == re.compile('.'):
-         
             # Split note the same way we would split for set or POS matching
             matchall_list = re.split("(\s+)", text)
             matchall_list_cleaned = []
@@ -227,7 +226,8 @@ class Philter:
                             if len(elem) > 0:
                                 matchall_list_cleaned.append(elem)
                     else:
-                        matchall_list_cleaned.append(item)
+                        matchall_list_cleaned.append(item)          
+            
             start_coordinate = 0
             for word in matchall_list_cleaned:
                 start = start_coordinate
@@ -1268,7 +1268,6 @@ class Philter:
                     start_coordinate_fn = word[1]
                     # print(word, start_coordinate)
 
- ################################################################################################## 
                     # initialize list that will hold info on what matched what
                     filter_file_list_exclude = []
                     filter_file_list_include = []
@@ -1286,7 +1285,11 @@ class Philter:
                         # print(filter_path)
                         for start,stop in coord_map.filecoords(input_filename):
                             # print(start,stop,text[start:stop])
-                            if start_coordinate_fn in range(start,stop):
+                            # Find intersection between ranges
+                            word_range = set(range(start_coordinate_fn, start_coordinate_fn + len(false_negative)))
+                            filter_range = set(range(start, stop))
+                            intersection = word_range & filter_range
+                            if intersection != set():
                                 # print("********"+str(start_coordinate_fp)+"********")
                                 # print(false_positive)
                                 # Add this filter path to the list of things that filtered this word
@@ -1296,8 +1299,6 @@ class Philter:
                                     filter_file_list_include.append(filter_path)
 
 
-
- ################################################################################################## 
 
                     for phi_item in phi_list:                           
                         phi_text = phi_item['text']
@@ -1393,7 +1394,6 @@ class Philter:
                     start_coordinate_fp = word[1]
                     # print(word)
 
- ################################################################################################## 
                     # initialize list that will hold info on what matched what
                     filter_file_list_exclude = []
                     filter_file_list_include = []
@@ -1411,7 +1411,10 @@ class Philter:
                         # print(filter_path)
                         for start,stop in coord_map.filecoords(input_filename):
                             # print(start,stop,text[start:stop])
-                            if start_coordinate_fp in range(start,stop):
+                            word_range = set(range(start_coordinate_fp, start_coordinate_fp + len(false_positive)))
+                            filter_range = set(range(start, stop))
+                            intersection = word_range & filter_range
+                            if intersection != set():
                                 # print("********"+str(start_coordinate_fp)+"********")
                                 # print(false_positive)
                                 # Add this filter path to the list of things that filtered this word
@@ -1420,8 +1423,7 @@ class Philter:
                                 else:
                                     filter_file_list_include.append(filter_path)
 
- 
-  ##################################################################################################             
+            
                     pos_entry = cleaned_with_pos[str(start_coordinate_fp)]
 
                     pos_tag = pos_entry[1]
