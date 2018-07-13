@@ -203,21 +203,20 @@ class Philter:
             for m in matches:
                 #if filename == './data/i2b2_notes_updated/373-04.txt':
                 # if self.patterns***REMOVED***pattern_index***REMOVED******REMOVED***"title"***REMOVED*** == "YYYY/MM-YYYY/MM":
-                if 'insurance' in m.group() or 'PRENATAL' in m.group():
-                    print(self.patterns***REMOVED***pattern_index***REMOVED******REMOVED***"title"***REMOVED***)
-                    print(m.group())
-                    print(filename)
-                    print('\n')
+                # if 'Anal' in m.group() or 'CMS' in m.group() or 'Neoplasia' in m.group():
+                #     print(self.patterns***REMOVED***pattern_index***REMOVED******REMOVED***"title"***REMOVED***)
+                #     print(m.group())
+                #     print(filename)
+                #     print('\n')
                 
                 coord_map.add_extend(filename, m.start(), m.start()+len(m.group()))
         
             self.patterns***REMOVED***pattern_index***REMOVED******REMOVED***"coordinate_map"***REMOVED*** = coord_map
         
-        #### MATCHALL ####
+        #### MATCHALL/CATCHALL ####
         elif regex == re.compile('.'):
          
             # Split note the same way we would split for set or POS matching
-
             matchall_list = re.split("(\s+)", text)
             matchall_list_cleaned = ***REMOVED******REMOVED***
             for item in matchall_list:
@@ -229,7 +228,6 @@ class Philter:
                                 matchall_list_cleaned.append(elem)
                     else:
                         matchall_list_cleaned.append(item)
-
             start_coordinate = 0
             for word in matchall_list_cleaned:
                 start = start_coordinate
@@ -493,6 +491,7 @@ class Philter:
         # we only keep track of this if self.eval=True
         if self.eval:
             data_all_files = {}
+            filter_data_all_files = {}
 
         #create our final exclude and include maps, priority order
         for root,f in self.folder_walk(in_path):
@@ -519,31 +518,67 @@ class Philter:
             include_map = CoordinateMap()
 
             include_map.add_file(filename)
+
+
+
+            #create intersection maps for all phi types and add them to a dictionary containing all maps
+            phi_type_list = ***REMOVED***'DATE','Patient_Social_Security_Number','Email','Provider_Address_or_Location','Age','Name','OTHER'***REMOVED***
+            phi_type_dict = {}
+            for phi_type in phi_type_list:
+                phi_type_dict***REMOVED***phi_type***REMOVED*** = ***REMOVED***CoordinateMap()***REMOVED***
+                phi_type_dict***REMOVED***phi_type***REMOVED******REMOVED***0***REMOVED***.add_file(filename)
+
+            # create dictionary of coordinates matched by the current pattern
+            if self.eval:
+                filter_data_all_files***REMOVED***filename***REMOVED*** = {}
+            # print(self.patterns)
             for i,pattern in enumerate(self.patterns):
+                # print('\n',i, ':')
                 coord_map = pattern***REMOVED***"coordinate_map"***REMOVED***
                 exclude = pattern***REMOVED***"exclude"***REMOVED***
+                try:
+                    filter_path = pattern***REMOVED***"filepath"***REMOVED***
+                except KeyError:
+                    filter_path = pattern***REMOVED***"title"***REMOVED***
                 if "phi_type" in pattern:
                     phi_type = pattern***REMOVED***"phi_type"***REMOVED***
                 # self.patterns***REMOVED***pattern_index***REMOVED******REMOVED***"title"***REMOVED***
                 else:
                     phi_type = "OTHER"
+
                 for start,stop in coord_map.filecoords(filename):
                     if exclude:
                         if not include_map.does_overlap(filename, start, stop):
                             exclude_map.add_extend(filename, start, stop)
-                            data***REMOVED***"phi"***REMOVED***.append({"start":start, "stop":stop, "word":txt***REMOVED***start:stop***REMOVED***,"phi_type":phi_type})
-                            if self.eval:
-                                data_all_files***REMOVED***filename***REMOVED******REMOVED***"phi"***REMOVED***.append({"start":start, "stop":stop, "word":txt***REMOVED***start:stop***REMOVED***,"phi_type":phi_type})
+                            # if self.i2b2 format?
+                            phi_type_dict***REMOVED***phi_type***REMOVED******REMOVED***0***REMOVED***.add_extend(filename, start, stop)
+                            # print('\n')
+                            # for start, stop in phi_type_dict***REMOVED***phi_type***REMOVED******REMOVED***0***REMOVED***.filecoords(filename):
+                            #     print(start,stop, txt***REMOVED***start:stop***REMOVED***, filter_path)
+
+
                     else:
                         if not exclude_map.does_overlap(filename, start, stop):
                             #print("include", start, stop, txt***REMOVED***start:stop***REMOVED***)
                             include_map.add_extend(filename, start, stop)
-                            data***REMOVED***"non-phi"***REMOVED***.append({"start":start, "stop":stop, "word":txt***REMOVED***start:stop***REMOVED***})
+                            # if self.i2b2 format?
+                            data***REMOVED***"non-phi"***REMOVED***.append({"start":start, "stop":stop, "word":txt***REMOVED***start:stop***REMOVED***, "filepath":filter_path})
                             if self.eval:
-                                data_all_files***REMOVED***filename***REMOVED******REMOVED***"non-phi"***REMOVED***.append({"start":start, "stop":stop, "word":txt***REMOVED***start:stop***REMOVED***})
+                                data_all_files***REMOVED***filename***REMOVED******REMOVED***"non-phi"***REMOVED***.append({"start":start, "stop":stop, "word":txt***REMOVED***start:stop***REMOVED***, "filepath":filter_path})
+
                         else:
                             pass
                             #print("include overlapped", start, stop, txt***REMOVED***start:stop***REMOVED***)
+                
+            
+            # Add results of separate phi type maps to data
+            # if self.i2b2 format? 
+            for list_phi_type in phi_type_list:
+                for start,stop in phi_type_dict***REMOVED***list_phi_type***REMOVED******REMOVED***0***REMOVED***.filecoords(filename):
+                    data***REMOVED***"phi"***REMOVED***.append({"start":start, "stop":stop, "word":txt***REMOVED***start:stop***REMOVED***,"phi_type":list_phi_type, "filepath":filter_path})
+                    if self.eval:
+                        data_all_files***REMOVED***filename***REMOVED******REMOVED***"phi"***REMOVED***.append({"start":start, "stop":stop, "word":txt***REMOVED***start:stop***REMOVED***,"phi_type":list_phi_type, "filepath":filter_path})
+
 
             #now we transform the text
             fbase, fext = os.path.splitext(f)
@@ -563,7 +598,7 @@ class Philter:
             else:
                 raise Exception("Outformat not supported: ",
                                 self.outformat)        
-
+        # print(data_all_files)
         if self.run_eval: #output our data for eval
             json.dump(data_all_files, open(self.coords, "w"), indent=4)
 
@@ -1051,7 +1086,10 @@ class Philter:
 
         # Loop through all filenames in summary
         for fn in summary_coords***REMOVED***'summary_by_file'***REMOVED***:
-            
+            # print(self.patterns)
+            # get input notes filename (for filter analysis wit coordinatemap)
+            input_filename = self.finpath + os.path.basename(fn)
+
             current_summary =  summary_coords***REMOVED***'summary_by_file'***REMOVED******REMOVED***fn***REMOVED***
 
             # Get corresponding info in phi_notes
@@ -1219,7 +1257,7 @@ class Philter:
 
             fn_tag_summary = {}
             include_exclude_fns = ''
-
+            # print(self.patterns)
             if current_summary***REMOVED***'false_negatives'***REMOVED*** != ***REMOVED******REMOVED*** and current_summary***REMOVED***'false_negatives'***REMOVED*** != ***REMOVED***""***REMOVED***:              
                 counter = 0
                 current_fns = current_summary***REMOVED***'false_negatives'***REMOVED***
@@ -1228,7 +1266,39 @@ class Philter:
                     counter += 1
                     false_negative = word***REMOVED***0***REMOVED***
                     start_coordinate_fn = word***REMOVED***1***REMOVED***
-                  
+                    # print(word, start_coordinate)
+
+ ################################################################################################## 
+                    # initialize list that will hold info on what matched what
+                    filter_file_list_exclude = ***REMOVED******REMOVED***
+                    filter_file_list_include = ***REMOVED******REMOVED***
+                    # Loop through coorinate map objects and match patterns with FPs
+                    for i,pattern in enumerate(self.patterns):
+                        # print('\n',i, ':')
+
+                        coord_map = pattern***REMOVED***"coordinate_map"***REMOVED***
+                        exclude_include = pattern***REMOVED***"exclude"***REMOVED***
+                        try:
+                            filter_path = pattern***REMOVED***"filepath"***REMOVED***
+                        except KeyError:
+                            filter_path = pattern***REMOVED***"title"***REMOVED***
+                        # print('\n')
+                        # print(filter_path)
+                        for start,stop in coord_map.filecoords(input_filename):
+                            # print(start,stop,text***REMOVED***start:stop***REMOVED***)
+                            if start_coordinate_fn in range(start,stop):
+                                # print("********"+str(start_coordinate_fp)+"********")
+                                # print(false_positive)
+                                # Add this filter path to the list of things that filtered this word
+                                if exclude_include == True:
+                                    filter_file_list_exclude.append(filter_path)
+                                else:
+                                    filter_file_list_include.append(filter_path)
+
+
+
+ ################################################################################################## 
+
                     for phi_item in phi_list:                           
                         phi_text = phi_item***REMOVED***'text'***REMOVED***
                         phi_type = phi_item***REMOVED***'TYPE'***REMOVED***
@@ -1298,10 +1368,9 @@ class Philter:
                                 else:
                                     include_exclude_fns = 'exclude'
                             ###### Create output dicitonary with id/word/pos/phi
-                            fn_tag_summary***REMOVED***fn_id***REMOVED*** = ***REMOVED***false_negative, phi_tag, pos_tag, fn_context, include_exclude_fns***REMOVED***
+                            fn_tag_summary***REMOVED***fn_id***REMOVED*** = ***REMOVED***false_negative, phi_tag, pos_tag, fn_context, include_exclude_fns, filter_file_list_exclude, filter_file_list_include***REMOVED***
                             # if phi_tag == 'AGE':
                             #     print(word)
-            
 
             if fn_tag_summary != {}:
                 fn_tags***REMOVED***fn***REMOVED*** = fn_tag_summary
@@ -1312,6 +1381,7 @@ class Philter:
             fp_tag_summary = {}
             include_exclude_fps = ''
             #print(cleaned_with_pos)
+
             if current_summary***REMOVED***'false_positives'***REMOVED*** != ***REMOVED******REMOVED*** and current_summary***REMOVED***'false_positives'***REMOVED*** != ***REMOVED***""***REMOVED***:              
 
                 current_fps = current_summary***REMOVED***'false_positives'***REMOVED***
@@ -1321,7 +1391,37 @@ class Philter:
                     counter += 1
                     false_positive = word***REMOVED***0***REMOVED***
                     start_coordinate_fp = word***REMOVED***1***REMOVED***
-                 
+                    # print(word)
+
+ ################################################################################################## 
+                    # initialize list that will hold info on what matched what
+                    filter_file_list_exclude = ***REMOVED******REMOVED***
+                    filter_file_list_include = ***REMOVED******REMOVED***
+                    # Loop through coorinate map objects and match patterns with FPs
+                    for i,pattern in enumerate(self.patterns):
+                        # print('\n',i, ':')
+
+                        coord_map = pattern***REMOVED***"coordinate_map"***REMOVED***
+                        exclude_include = pattern***REMOVED***"exclude"***REMOVED***
+                        try:
+                            filter_path = pattern***REMOVED***"filepath"***REMOVED***
+                        except KeyError:
+                            filter_path = pattern***REMOVED***"title"***REMOVED***
+                        # print('\n')
+                        # print(filter_path)
+                        for start,stop in coord_map.filecoords(input_filename):
+                            # print(start,stop,text***REMOVED***start:stop***REMOVED***)
+                            if start_coordinate_fp in range(start,stop):
+                                # print("********"+str(start_coordinate_fp)+"********")
+                                # print(false_positive)
+                                # Add this filter path to the list of things that filtered this word
+                                if exclude_include == True:
+                                    filter_file_list_exclude.append(filter_path)
+                                else:
+                                    filter_file_list_include.append(filter_path)
+
+ 
+  ##################################################################################################             
                     pos_entry = cleaned_with_pos***REMOVED***str(start_coordinate_fp)***REMOVED***
 
                     pos_tag = pos_entry***REMOVED***1***REMOVED***
@@ -1341,7 +1441,7 @@ class Philter:
                     fp_id = "P" + str(counter)
 
                     
-                    fp_tag_summary***REMOVED***fp_id***REMOVED*** = ***REMOVED***false_positive, pos_tag, fp_context***REMOVED***
+                    fp_tag_summary***REMOVED***fp_id***REMOVED*** = ***REMOVED***false_positive, pos_tag, fp_context, filter_file_list_exclude, filter_file_list_include***REMOVED***
 
             if fp_tag_summary != {}:
                 fp_tags***REMOVED***fn***REMOVED*** = fp_tag_summary
@@ -1420,7 +1520,6 @@ class Philter:
                 # print(tag + " Recall: " + "{:.2%}".format(overall_recall_dict***REMOVED***recall_key***REMOVED***) + " TP: " + str(rp_summaries***REMOVED***tp_key***REMOVED***) + " FN: " + str(rp_summaries***REMOVED***fn_key***REMOVED***))
         
         # ucsf
-        
         if self.ucsf_format:
             include_dict = {'fns':0,'tps':0,'fps':summary***REMOVED***"total_false_positives"***REMOVED***,'tns':summary***REMOVED***"total_true_negatives"***REMOVED***}
             category_dict = {}
@@ -1581,35 +1680,35 @@ class Philter:
         # Keep track of how many distinct combinations we've added to each list
         context_counter = 0
         nocontext_counter = 0
-
         for fn in fn_tags:
             file_dict = fn_tags***REMOVED***fn***REMOVED*** 
             for subfile in file_dict:
                 current_list_context = file_dict***REMOVED***subfile***REMOVED***
             ##############################
                 # print(current_list_context)
-                current_list_nocontext = current_list_context***REMOVED***:3***REMOVED*** + ***REMOVED***current_list_context***REMOVED***-1***REMOVED******REMOVED***
+                current_list_nocontext = current_list_context***REMOVED***:3***REMOVED*** + ***REMOVED***current_list_context***REMOVED***-3***REMOVED******REMOVED*** + ***REMOVED***current_list_context***REMOVED***-2***REMOVED******REMOVED*** + ***REMOVED***current_list_context***REMOVED***-1***REMOVED******REMOVED***
             ############################
-                # print(current_list_nocontext)
                 
                 word = current_list_context***REMOVED***0***REMOVED***
                 phi_tag = current_list_context***REMOVED***1***REMOVED***
                 pos_tag = current_list_context***REMOVED***2***REMOVED***
                 fn_context = current_list_context***REMOVED***3***REMOVED***.replace("\n"," ")
+                filter_matches_exclude = current_list_context***REMOVED***5***REMOVED***
+                filter_matches_include = current_list_context***REMOVED***6***REMOVED***
                 
                 # Context: add each occurrence with corresponding filename                    
                 fn_tags_condensed_list_context.append(current_list_context)
                 key_name = "uniq" + str(context_counter)
                 filename = fn.split('/')***REMOVED***-1***REMOVED***
                 include_exclude = current_list_context***REMOVED***4***REMOVED***
-                fn_tags_condensed_context***REMOVED***key_name***REMOVED*** = ***REMOVED***word, phi_tag, pos_tag, fn_context, filename, include_exclude***REMOVED***
+                fn_tags_condensed_context***REMOVED***key_name***REMOVED*** = ***REMOVED***word, phi_tag, pos_tag, fn_context, filename, include_exclude, filter_matches_exclude, filter_matches_include***REMOVED***
                 context_counter += 1
 
                 # No context
                 if current_list_nocontext not in fn_tags_condensed_list:   
                     fn_tags_condensed_list.append(current_list_nocontext)
                     key_name = "uniq" + str(nocontext_counter)
-                    fn_tags_condensed***REMOVED***key_name***REMOVED*** = ***REMOVED***word, phi_tag, pos_tag, 1, include_exclude***REMOVED***
+                    fn_tags_condensed***REMOVED***key_name***REMOVED*** = ***REMOVED***word, phi_tag, pos_tag, 1, include_exclude, filter_matches_exclude, filter_matches_include***REMOVED***
                     nocontext_counter += 1
                 else: 
                     uniq_id_index = fn_tags_condensed_list.index(current_list_nocontext)
@@ -1637,57 +1736,60 @@ class Philter:
             file_dict = fp_tags***REMOVED***fp***REMOVED*** 
             for subfile in file_dict:
                 current_list_context = file_dict***REMOVED***subfile***REMOVED***
-                current_list_nocontext = current_list_context***REMOVED***:2***REMOVED***
+                current_list_nocontext = current_list_context***REMOVED***:2***REMOVED*** + ***REMOVED***current_list_context***REMOVED***3***REMOVED******REMOVED*** + ***REMOVED***current_list_context***REMOVED***4***REMOVED******REMOVED***
 
                 word = current_list_context***REMOVED***0***REMOVED***
                 pos_tag = current_list_context***REMOVED***1***REMOVED***
                 fp_context = current_list_context***REMOVED***2***REMOVED***.replace("\n"," ")
+                filter_matches_exclude = current_list_context***REMOVED***3***REMOVED***
+                filter_matches_include = current_list_context***REMOVED***4***REMOVED***
 
                 # Context: add each occurrence with corresponding filename
                 fp_tags_condensed_list_context.append(current_list_context)
                 key_name = "uniq" + str(context_counter)
                 filename = fp.split('/')***REMOVED***-1***REMOVED***
-                fp_tags_condensed_context***REMOVED***key_name***REMOVED*** = ***REMOVED***word, pos_tag, fp_context, filename***REMOVED***
+                fp_tags_condensed_context***REMOVED***key_name***REMOVED*** = ***REMOVED***word, pos_tag, fp_context, filename, filter_matches_exclude, filter_matches_include***REMOVED***
                 context_counter += 1
 
                 # No Context
                 if current_list_nocontext not in fp_tags_condensed_list:
                     fp_tags_condensed_list.append(current_list_nocontext)
                     key_name = "uniq" + str(nocontext_counter)
-                    fp_tags_condensed***REMOVED***key_name***REMOVED*** = ***REMOVED***word, pos_tag, 1***REMOVED***
+                    fp_tags_condensed***REMOVED***key_name***REMOVED*** = ***REMOVED***word, pos_tag, 1, filter_matches_exclude, filter_matches_include***REMOVED***
                     nocontext_counter += 1
                 else:
                     uniq_id_index = fp_tags_condensed_list.index(current_list_nocontext)
                     uniq_id = "uniq" + str(uniq_id_index)
-                    fp_tags_condensed***REMOVED***uniq_id***REMOVED******REMOVED***2***REMOVED*** += 1 
+                    fp_tags_condensed***REMOVED***uniq_id***REMOVED******REMOVED***2***REMOVED*** += 1
+
 
         # Write FN and FP results to outfolder
         # Conext
         with open(fn_tags_context, "w") as fn_file:
-            fn_file.write("key" + "|" + "note_word" + "|" + "phi_tag" + "|" + "pos_tag" + "|" + "context" + "|" + "filename"+ "|" +"include_exclude" + "\n")
+            fn_file.write("key" + "|" + "note_word" + "|" + "phi_tag" + "|" + "pos_tag" + "|" + "context" + "|" + "filename"+ "|" +"include_exclude" + "|" +"exclude_filters" + "|" +"include_filters" +"\n")
             # print(fn_tags_condensed_context)
             for key in fn_tags_condensed_context:
                 current_list = fn_tags_condensed_context***REMOVED***key***REMOVED***
-                fn_file.write(key + "|" + current_list***REMOVED***0***REMOVED*** + "|" + current_list***REMOVED***1***REMOVED*** + "|" + current_list***REMOVED***2***REMOVED*** + "|" + current_list***REMOVED***3***REMOVED*** + "|" + current_list***REMOVED***4***REMOVED***+ "|" +current_list***REMOVED***5***REMOVED***+"\n")
+                fn_file.write(key + "|" + current_list***REMOVED***0***REMOVED*** + "|" + current_list***REMOVED***1***REMOVED*** + "|" + current_list***REMOVED***2***REMOVED*** + "|" + current_list***REMOVED***3***REMOVED*** + "|" + current_list***REMOVED***4***REMOVED***+ "|" +current_list***REMOVED***5***REMOVED***+ "|" +str(current_list***REMOVED***6***REMOVED***) + "|" +str(current_list***REMOVED***7***REMOVED***) + "\n")
         
         with open(fp_tags_context, "w") as fp_file:
-            fp_file.write("key" + "|" + "note_word" + "|" + "pos_tag" + "|" + "context" + "|" + "filename"+"\n")
+            fp_file.write("key" + "|" + "note_word" + "|" + "pos_tag" + "|" + "context" + "|" + "filename"+ "|" +"exclude_filters" + "|" +"include_filters" +"\n")
             for key in fp_tags_condensed_context:
                 current_list = fp_tags_condensed_context***REMOVED***key***REMOVED***
-                fp_file.write(key + "|" + current_list***REMOVED***0***REMOVED*** + "|" + current_list***REMOVED***1***REMOVED***  + "|" +  current_list***REMOVED***2***REMOVED*** + "|" + current_list***REMOVED***3***REMOVED***+ "\n")
+                fp_file.write(key + "|" + current_list***REMOVED***0***REMOVED*** + "|" + current_list***REMOVED***1***REMOVED***  + "|" +  current_list***REMOVED***2***REMOVED*** + "|" + current_list***REMOVED***3***REMOVED***+ "|" + str(current_list***REMOVED***4***REMOVED***) + "|" + str(current_list***REMOVED***5***REMOVED***) +"\n")
 
         # No context
         with open(fn_tags_nocontext, "w") as fn_file:
-            fn_file.write("key" + "|" + "note_word" + "|" + "phi_tag" + "|" + "pos_tag" + "|" + "occurrences"+"|" +"include_exclude" + "\n")
+            fn_file.write("key" + "|" + "note_word" + "|" + "phi_tag" + "|" + "pos_tag" + "|" + "occurrences"+"|" +"include_exclude" + "|" +"exclude_filters" + "|" +"include_filters" + "\n")
             for key in fn_tags_condensed:
                 current_list = fn_tags_condensed***REMOVED***key***REMOVED***
-                fn_file.write(key + "|" + current_list***REMOVED***0***REMOVED*** + "|" + current_list***REMOVED***1***REMOVED*** + "|" + current_list***REMOVED***2***REMOVED*** + "|" + str(current_list***REMOVED***3***REMOVED***)+"|" + current_list***REMOVED***4***REMOVED***+"\n")
+                fn_file.write(key + "|" + current_list***REMOVED***0***REMOVED*** + "|" + current_list***REMOVED***1***REMOVED*** + "|" + current_list***REMOVED***2***REMOVED*** + "|" + str(current_list***REMOVED***3***REMOVED***)+"|" + current_list***REMOVED***4***REMOVED***+ "|" + str(current_list***REMOVED***5***REMOVED***)+ "|" + str(current_list***REMOVED***6***REMOVED***)+"\n")
         
         with open(fp_tags_nocontext, "w") as fp_file:
-            fp_file.write("key" + "|" + "note_word" + "|" + "pos_tag" + "|" + "occurrences"+"\n")
+            fp_file.write("key" + "|" + "note_word" + "|" + "pos_tag" + "|" + "occurrences"+ "|" +"exclude_filters" + "|" +"include_filters" + "\n")
             for key in fp_tags_condensed:
                 current_list = fp_tags_condensed***REMOVED***key***REMOVED***
-                fp_file.write(key + "|" + current_list***REMOVED***0***REMOVED*** + "|" + current_list***REMOVED***1***REMOVED***  + "|" +  str(current_list***REMOVED***2***REMOVED***)+"\n")            
+                fp_file.write(key + "|" + current_list***REMOVED***0***REMOVED*** + "|" + current_list***REMOVED***1***REMOVED***  + "|" +  str(current_list***REMOVED***2***REMOVED***)+ "|" + str(current_list***REMOVED***3***REMOVED***) + "|" + str(current_list***REMOVED***4***REMOVED***) +"\n")            
             
     
     def getphi(self, 
