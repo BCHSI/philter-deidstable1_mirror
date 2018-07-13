@@ -18,10 +18,14 @@ You can test out surrogator by adding the following folders to the data/ directo
 ## Running from command line
 
 ###Testing Surrogator:
-`python surrogator.py -t True`
+```bash
+python surrogator.py -t True
+```
 
 ###Running Surrogator in Production Mode:
-`python surrogator.py -p True`
+```bash
+python surrogator.py -p True
+```
 
 This will use the default input directory "data/i2b2_results"
 and write the output surrogated notes into the directory "data/surrogator/philter_results_output/"
@@ -29,12 +33,14 @@ and write the output surrogated notes into the directory "data/surrogator/philte
 
 ###Running Surrogator on Philter'ed I2B2 XML Notes and I2B2 Tagged XML:
 
-`python surrogator.py -rp True -ri True -w True`
+```bash
+python surrogator.py -rp True -ri True -w True
+```
 
 This will use the default input and output directories for both Philter'ed and I2B2 notes. It will run the surrogator on both sets of notes, and compare the outputs to create the evaluation tables. 
 
 In addition to the outputted surrogated text files, there will be a number of log files produced:
-	```
+	```bash
 	philter_results_output/counts_by_phi_type.csv
 	philter_results_output/date_shift_eval.csv
 	philter_results_output/shifted_dates.csv

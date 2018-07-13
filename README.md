@@ -13,7 +13,8 @@ see: [MIT LISCENCE](https://opensource.org/licenses/MIT)
 # Running Philter
 
 ## Production mode
-```python3 main.py -i "./data/i2b2_notes_test/" -o "./data/i2b2_results_test/" --prod=True
+```bash
+python3 main.py -i "./data/i2b2_notes_test/" -o "./data/i2b2_results_test/" --prod=True
 ```
 Notes - this production mode will avoid outputting unnecessary print statements, and will skip the evaluation steps
 
