@@ -1,1 +1,1 @@
-\b((?<=in\s)|(?<=IN\s)|(?<=at\s)|(?<=near\s)|(?<=from\s)|(?<=travel\sto\s)|(?<=visit\sto\s))([A-Z][a-zA-Z]+\s{1,4}[A-Z][a-zA-Z]+\s{1,4}[A-Z][a-zA-Z]+|[A-Z][a-zA-Z]+\s{1,4}[A-Z][a-zA-Z]+|[A-Z][a-zA-Z]+)\b
+\b((?<=\bin\s)|(?<=\bIN\s)|(?<=\bat\s)|(?<=\bnear\s)|(?<=\bfrom\s)|(?<=\btravel\sto\s)|(?<=\bvisit\sto\s))([A-Z]{1,3})\b
