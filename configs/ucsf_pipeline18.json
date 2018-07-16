@@ -875,13 +875,36 @@
         "filepath":"filters/regex/addresses/num_streetname_transformed.txt",
         "notes":"This should remove anything that looks like the begiing of a street address"
     },
+
     {
-        "title":"street & street",
+        "title":"corner of street & street",
         "type":"regex",
         "exclude":true,
-        "filepath":"filters/regex/addresses/street_&_street_transformed.txt",
+        "filepath":"filters/regex/addresses/corner_of_street_&_street_transformed.txt",
         "notes":"This should remove anything that looks like a street corner"
     },
+    {
+        "title":"street and street",
+        "type":"regex",
+        "exclude":true,
+        "filepath":"filters/regex/addresses/street_and_street_transformed.txt",
+        "notes":"This should remove anything that looks like a street corner"
+    },
+    {
+        "title":"at street number dash street",
+        "type":"regex",
+        "exclude":true,
+        "filepath":"filters/regex/addresses/at_street_number_dash_street_transformed.txt",
+        "notes":"This should remove anything that looks like a street corner"
+    },
+    {
+        "title":"at dash street",
+        "type":"regex",
+        "exclude":true,
+        "filepath":"filters/regex/addresses/at_street_dash_street_transformed.txt",
+        "notes":"This should remove anything that looks like a street corner"
+    },
+
     {
         "title":"streetname floor number",
         "type":"regex",
