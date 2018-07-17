@@ -1,0 +1,199 @@
+RUNNING  ./configs/philter_alpha.json
+3.536 <module>  main.py:1
+├─ 3.086 main  main.py:12
+│  ├─ 2.486 map_coordinates  philter.py:142
+│  │  ├─ 1.668 map_set  philter.py:276
+│  │  │  ├─ 1.347 pos_tag  nltk/tag/__init__.py:108
+│  │  │  │  ├─ 1.178 _pos_tag  nltk/tag/__init__.py:101
+│  │  │  │  │  └─ 1.178 tag  nltk/tag/perceptron.py:143
+│  │  │  │  │     ├─ 0.961 predict  nltk/tag/perceptron.py:48
+│  │  │  │  │     │  └─ 0.069 <lambda>  nltk/tag/perceptron.py:58
+│  │  │  │  │     └─ 0.160 _get_features  nltk/tag/perceptron.py:245
+│  │  │  │  │        └─ 0.123 add  nltk/tag/perceptron.py:250
+│  │  │  │  └─ 0.169 _get_tagger  nltk/tag/__init__.py:91
+│  │  │  │     └─ 0.169 __init__  nltk/tag/perceptron.py:132
+│  │  │  │        └─ 0.168 load  nltk/tag/perceptron.py:217
+│  │  │  │           └─ 0.168 load  nltk/data.py:754
+│  │  │  └─ 0.251 add_extend  coordinate_map.py:64
+│  │  │     └─ 0.247 max_overlap  coordinate_map.py:192
+│  │  ├─ 0.422 map_regex  philter.py:196
+│  │  └─ 0.382 map_pos  philter.py:352
+│  │     └─ 0.349 pos_tag  nltk/tag/__init__.py:108
+│  │        └─ 0.348 _pos_tag  nltk/tag/__init__.py:101
+│  │           └─ 0.348 tag  nltk/tag/perceptron.py:143
+│  │              ├─ 0.282 predict  nltk/tag/perceptron.py:48
+│  │              └─ 0.044 _get_features  nltk/tag/perceptron.py:245
+│  └─ 0.598 __init__  philter.py:21
+│     ├─ 0.532 init_patterns  philter.py:88
+│     │  ├─ 0.301 init_set  philter.py:125
+│     │  │  └─ 0.294 loads  json/__init__.py:302
+│     │  │     └─ 0.294 decode  json/decoder.py:334
+│     │  │        └─ 0.294 raw_decode  json/decoder.py:345
+│     │  └─ 0.223 precompile  philter.py:120
+│     │     └─ 0.206 compile  re.py:231
+│     │        └─ 0.206 _compile  re.py:286
+│     │           └─ 0.203 compile  sre_compile.py:557
+│     │              ├─ 0.121 parse  sre_parse.py:844
+│     │              │  └─ 0.120 _parse_sub  sre_parse.py:407
+│     │              │     └─ 0.120 _parse  sre_parse.py:470
+│     │              │        └─ 0.098 _parse_sub  sre_parse.py:407
+│     │              │           └─ 0.090 _parse  sre_parse.py:470
+│     │              │              └─ 0.037 _parse_sub  sre_parse.py:407
+│     │              └─ 0.079 _code  sre_compile.py:542
+│     │                 └─ 0.079 _compile  sre_compile.py:64
+│     │                    └─ 0.077 _compile  sre_compile.py:64
+│     │                       └─ 0.064 _compile  sre_compile.py:64
+│     └─ 0.048 loads  json/__init__.py:302
+│        └─ 0.048 decode  json/decoder.py:334
+│           └─ 0.048 raw_decode  json/decoder.py:345
+└─ 0.450 _find_and_load  <frozen importlib._bootstrap>:966
+   └─ 0.450 _find_and_load_unlocked  <frozen importlib._bootstrap>:936
+      └─ 0.449 _load_unlocked  <frozen importlib._bootstrap>:651
+         └─ 0.449 exec_module  <frozen importlib._bootstrap_external>:672
+            └─ 0.446 _call_with_frames_removed  <frozen importlib._bootstrap>:211
+               └─ 0.439 <module>  philter.py:1
+                  └─ 0.439 _find_and_load  <frozen importlib._bootstrap>:966
+                     └─ 0.439 _find_and_load_unlocked  <frozen importlib._bootstrap>:936
+                        └─ 0.422 _load_unlocked  <frozen importlib._bootstrap>:651
+                           └─ 0.422 exec_module  <frozen importlib._bootstrap_external>:672
+                              └─ 0.422 _call_with_frames_removed  <frozen importlib._bootstrap>:211
+                                 └─ 0.420 <module>  nltk/__init__.py:17
+                                    └─ 0.409 _find_and_load  <frozen importlib._bootstrap>:966
+                                       └─ 0.409 _find_and_load_unlocked  <frozen importlib._bootstrap>:936
+                                          └─ 0.407 _load_unlocked  <frozen importlib._bootstrap>:651
+                                             └─ 0.407 exec_module  <frozen importlib._bootstrap_external>:672
+                                                └─ 0.402 _call_with_frames_removed  <frozen importlib._bootstrap>:211
+                                                   ├─ 0.153 <module>  nltk/collocations.py:25
+                                                   │  └─ 0.153 _find_and_load  <frozen importlib._bootstrap>:966
+                                                   │     └─ 0.153 _find_and_load_unlocked  <frozen importlib._bootstrap>:936
+                                                   │        └─ 0.153 _load_unlocked  <frozen importlib._bootstrap>:651
+                                                   │           └─ 0.153 exec_module  <frozen importlib._bootstrap_external>:672
+                                                   │              └─ 0.151 _call_with_frames_removed  <frozen importlib._bootstrap>:211
+                                                   │                 ├─ 0.096 <module>  nltk/metrics/__init__.py:14
+                                                   │                 │  └─ 0.096 _find_and_load  <frozen importlib._bootstrap>:966
+                                                   │                 │     └─ 0.096 _find_and_load_unlocked  <frozen importlib._bootstrap>:936
+                                                   │                 │        └─ 0.094 _load_unlocked  <frozen importlib._bootstrap>:651
+                                                   │                 │           └─ 0.094 exec_module  <frozen importlib._bootstrap_external>:672
+                                                   │                 │              └─ 0.094 _call_with_frames_removed  <frozen importlib._bootstrap>:211
+                                                   │                 │                 └─ 0.091 <module>  nltk/metrics/segmentation.py:42
+                                                   │                 │                    └─ 0.091 _find_and_load  <frozen importlib._bootstrap>:966
+                                                   │                 │                       └─ 0.091 _find_and_load_unlocked  <frozen importlib._bootstrap>:936
+                                                   │                 │                          └─ 0.091 _load_unlocked  <frozen importlib._bootstrap>:651
+                                                   │                 │                             └─ 0.091 exec_module  <frozen importlib._bootstrap_external>:672
+                                                   │                 │                                └─ 0.091 _call_with_frames_removed  <frozen importlib._bootstrap>:211
+                                                   │                 │                                   └─ 0.091 <module>  numpy/__init__.py:106
+                                                   │                 │                                      └─ 0.089 _handle_fromlist  <frozen importlib._bootstrap>:997
+                                                   │                 │                                         └─ 0.087 _call_with_frames_removed  <frozen importlib._bootstrap>:211
+                                                   │                 │                                            └─ 0.087 _find_and_load  <frozen importlib._bootstrap>:966
+                                                   │                 │                                               └─ 0.087 _find_and_load_unlocked  <frozen importlib._bootstrap>:936
+                                                   │                 │                                                  └─ 0.087 _load_unlocked  <frozen importlib._bootstrap>:651
+                                                   │                 │                                                     └─ 0.087 exec_module  <frozen importlib._bootstrap_external>:672
+                                                   │                 │                                                        └─ 0.087 _call_with_frames_removed  <frozen importlib._bootstrap>:211
+                                                   │                 │                                                           └─ 0.069 <module>  numpy/add_newdocs.py:10
+                                                   │                 │                                                              └─ 0.067 _find_and_load  <frozen importlib._bootstrap>:966
+                                                   │                 │                                                                 └─ 0.067 _find_and_load_unlocked  <frozen importlib._bootstrap>:936
+                                                   │                 │                                                                    └─ 0.067 _load_unlocked  <frozen importlib._bootstrap>:651
+                                                   │                 │                                                                       └─ 0.067 exec_module  <frozen importlib._bootstrap_external>:672
+                                                   │                 │                                                                          └─ 0.066 _call_with_frames_removed  <frozen importlib._bootstrap>:211
+                                                   │                 │                                                                             └─ 0.066 <module>  numpy/lib/__init__.py:1
+                                                   │                 │                                                                                └─ 0.065 _find_and_load  <frozen importlib._bootstrap>:966
+                                                   │                 │                                                                                   └─ 0.065 _find_and_load_unlocked  <frozen importlib._bootstrap>:936
+                                                   │                 │                                                                                      └─ 0.062 _load_unlocked  <frozen importlib._bootstrap>:651
+                                                   │                 │                                                                                         └─ 0.062 exec_module  <frozen importlib._bootstrap_external>:672
+                                                   │                 │                                                                                            └─ 0.060 _call_with_frames_removed  <frozen importlib._bootstrap>:211
+                                                   │                 │                                                                                               └─ 0.052 <module>  numpy/lib/type_check.py:3
+                                                   │                 │                                                                                                  └─ 0.052 _find_and_load  <frozen importlib._bootstrap>:966
+                                                   │                 │                                                                                                     └─ 0.052 _find_and_load_unlocked  <frozen importlib._bootstrap>:936
+                                                   │                 │                                                                                                        └─ 0.052 _call_with_frames_removed  <frozen importlib._bootstrap>:211
+                                                   │                 │                                                                                                           └─ 0.052 _find_and_load  <frozen importlib._bootstrap>:966
+                                                   │                 │                                                                                                              └─ 0.052 _find_and_load_unlocked  <frozen importlib._bootstrap>:936
+                                                   │                 │                                                                                                                 └─ 0.052 _load_unlocked  <frozen importlib._bootstrap>:651
+                                                   │                 │                                                                                                                    └─ 0.052 exec_module  <frozen importlib._bootstrap_external>:672
+                                                   │                 │                                                                                                                       └─ 0.052 _call_with_frames_removed  <frozen importlib._bootstrap>:211
+                                                   │                 │                                                                                                                          └─ 0.052 <module>  numpy/core/__init__.py:1
+                                                   │                 │                                                                                                                             └─ 0.040 _handle_fromlist  <frozen importlib._bootstrap>:997
+                                                   │                 │                                                                                                                                └─ 0.040 _call_with_frames_removed  <frozen importlib._bootstrap>:211
+                                                   │                 │                                                                                                                                   └─ 0.040 _find_and_load  <frozen importlib._bootstrap>:966
+                                                   │                 │                                                                                                                                      └─ 0.040 _find_and_load_unlocked  <frozen importlib._bootstrap>:936
+                                                   │                 │                                                                                                                                         └─ 0.040 _load_unlocked  <frozen importlib._bootstrap>:651
+                                                   │                 └─ 0.055 <module>  nltk/util.py:7
+                                                   ├─ 0.094 <module>  nltk/chunk/__init__.py:153
+                                                   │  └─ 0.094 _find_and_load  <frozen importlib._bootstrap>:966
+                                                   │     └─ 0.094 _find_and_load_unlocked  <frozen importlib._bootstrap>:936
+                                                   │        └─ 0.094 _load_unlocked  <frozen importlib._bootstrap>:651
+                                                   │           └─ 0.094 exec_module  <frozen importlib._bootstrap_external>:672
+                                                   │              └─ 0.092 _call_with_frames_removed  <frozen importlib._bootstrap>:211
+                                                   │                 └─ 0.087 <module>  nltk/chunk/api.py:13
+                                                   │                    └─ 0.087 _find_and_load  <frozen importlib._bootstrap>:966
+                                                   │                       └─ 0.087 _find_and_load_unlocked  <frozen importlib._bootstrap>:936
+                                                   │                          └─ 0.085 _load_unlocked  <frozen importlib._bootstrap>:651
+                                                   │                             └─ 0.085 exec_module  <frozen importlib._bootstrap_external>:672
+                                                   │                                └─ 0.085 _call_with_frames_removed  <frozen importlib._bootstrap>:211
+                                                   │                                   └─ 0.082 <module>  nltk/parse/__init__.py:44
+                                                   │                                      └─ 0.082 _find_and_load  <frozen importlib._bootstrap>:966
+                                                   │                                         └─ 0.082 _find_and_load_unlocked  <frozen importlib._bootstrap>:936
+                                                   │                                            └─ 0.080 _load_unlocked  <frozen importlib._bootstrap>:651
+                                                   │                                               └─ 0.080 exec_module  <frozen importlib._bootstrap_external>:672
+                                                   │                                                  └─ 0.076 _call_with_frames_removed  <frozen importlib._bootstrap>:211
+                                                   │                                                     └─ 0.075 <module>  nltk/parse/corenlp.py:10
+                                                   │                                                        └─ 0.074 _find_and_load  <frozen importlib._bootstrap>:966
+                                                   │                                                           └─ 0.074 _find_and_load_unlocked  <frozen importlib._bootstrap>:936
+                                                   │                                                              └─ 0.074 _call_with_frames_removed  <frozen importlib._bootstrap>:211
+                                                   │                                                                 └─ 0.074 _find_and_load  <frozen importlib._bootstrap>:966
+                                                   │                                                                    └─ 0.074 _find_and_load_unlocked  <frozen importlib._bootstrap>:936
+                                                   │                                                                       └─ 0.074 _load_unlocked  <frozen importlib._bootstrap>:651
+                                                   │                                                                          └─ 0.074 exec_module  <frozen importlib._bootstrap_external>:672
+                                                   │                                                                             └─ 0.074 _call_with_frames_removed  <frozen importlib._bootstrap>:211
+                                                   │                                                                                └─ 0.074 <module>  nltk/tag/__init__.py:65
+                                                   │                                                                                   └─ 0.074 _find_and_load  <frozen importlib._bootstrap>:966
+                                                   │                                                                                      └─ 0.074 _find_and_load_unlocked  <frozen importlib._bootstrap>:936
+                                                   │                                                                                         └─ 0.071 _load_unlocked  <frozen importlib._bootstrap>:651
+                                                   │                                                                                            └─ 0.071 exec_module  <frozen importlib._bootstrap_external>:672
+                                                   │                                                                                               └─ 0.069 _call_with_frames_removed  <frozen importlib._bootstrap>:211
+                                                   │                                                                                                  └─ 0.064 <module>  nltk/tag/sequential.py:19
+                                                   │                                                                                                     └─ 0.063 _find_and_load  <frozen importlib._bootstrap>:966
+                                                   │                                                                                                        └─ 0.063 _find_and_load_unlocked  <frozen importlib._bootstrap>:936
+                                                   │                                                                                                           └─ 0.063 _load_unlocked  <frozen importlib._bootstrap>:651
+                                                   │                                                                                                              └─ 0.063 exec_module  <frozen importlib._bootstrap_external>:672
+                                                   │                                                                                                                 └─ 0.063 _call_with_frames_removed  <frozen importlib._bootstrap>:211
+                                                   │                                                                                                                    └─ 0.063 <module>  nltk/classify/__init__.py:83
+                                                   │                                                                                                                       └─ 0.063 _find_and_load  <frozen importlib._bootstrap>:966
+                                                   │                                                                                                                          └─ 0.063 _find_and_load_unlocked  <frozen importlib._bootstrap>:936
+                                                   │                                                                                                                             └─ 0.062 _load_unlocked  <frozen importlib._bootstrap>:651
+                                                   │                                                                                                                                └─ 0.060 exec_module  <frozen importlib._bootstrap_external>:672
+                                                   │                                                                                                                                   └─ 0.056 _call_with_frames_removed  <frozen importlib._bootstrap>:211
+                                                   │                                                                                                                                      └─ 0.043 <module>  nltk/classify/rte_classify.py:18
+                                                   │                                                                                                                                         └─ 0.043 _find_and_load  <frozen importlib._bootstrap>:966
+                                                   │                                                                                                                                            └─ 0.040 _find_and_load_unlocked  <frozen importlib._bootstrap>:936
+                                                   │                                                                                                                                               └─ 0.040 _load_unlocked  <frozen importlib._bootstrap>:651
+                                                   │                                                                                                                                                  └─ 0.040 exec_module  <frozen importlib._bootstrap_external>:672
+                                                   │                                                                                                                                                     └─ 0.038 _call_with_frames_removed  <frozen importlib._bootstrap>:211
+                                                   │                                                                                                                                                        └─ 0.038 <module>  nltk/tokenize/__init__.py:61
+                                                   │                                                                                                                                                           └─ 0.038 _find_and_load  <frozen importlib._bootstrap>:966
+                                                   │                                                                                                                                                              └─ 0.038 _find_and_load_unlocked  <frozen importlib._bootstrap>:936
+                                                   │                                                                                                                                                                 └─ 0.038 _load_unlocked  <frozen importlib._bootstrap>:651
+                                                   │                                                                                                                                                                    └─ 0.038 exec_module  <frozen importlib._bootstrap_external>:672
+                                                   ├─ 0.056 <module>  nltk/stem/__init__.py:22
+                                                   │  └─ 0.056 _find_and_load  <frozen importlib._bootstrap>:966
+                                                   │     └─ 0.056 _find_and_load_unlocked  <frozen importlib._bootstrap>:936
+                                                   │        └─ 0.056 _load_unlocked  <frozen importlib._bootstrap>:651
+                                                   │           └─ 0.054 exec_module  <frozen importlib._bootstrap_external>:672
+                                                   │              └─ 0.049 _call_with_frames_removed  <frozen importlib._bootstrap>:211
+                                                   │                 └─ 0.049 <module>  nltk/stem/snowball.py:25
+                                                   │                    └─ 0.048 _find_and_load  <frozen importlib._bootstrap>:966
+                                                   │                       └─ 0.048 _find_and_load_unlocked  <frozen importlib._bootstrap>:936
+                                                   │                          └─ 0.048 _load_unlocked  <frozen importlib._bootstrap>:651
+                                                   │                             └─ 0.048 exec_module  <frozen importlib._bootstrap_external>:672
+                                                   │                                └─ 0.048 _call_with_frames_removed  <frozen importlib._bootstrap>:211
+                                                   │                                   └─ 0.048 <module>  nltk/corpus/__init__.py:60
+                                                   │                                      └─ 0.048 _find_and_load  <frozen importlib._bootstrap>:966
+                                                   │                                         └─ 0.048 _find_and_load_unlocked  <frozen importlib._bootstrap>:936
+                                                   │                                            └─ 0.048 _load_unlocked  <frozen importlib._bootstrap>:651
+                                                   │                                               └─ 0.048 exec_module  <frozen importlib._bootstrap_external>:672
+                                                   │                                                  └─ 0.048 _call_with_frames_removed  <frozen importlib._bootstrap>:211
+                                                   │                                                     └─ 0.048 <module>  nltk/corpus/reader/__init__.py:54
+                                                   │                                                        └─ 0.048 _find_and_load  <frozen importlib._bootstrap>:966
+                                                   │                                                           └─ 0.047 _find_and_load_unlocked  <frozen importlib._bootstrap>:936
+                                                   │                                                              └─ 0.042 _load_unlocked  <frozen importlib._bootstrap>:651
+                                                   │                                                                 └─ 0.042 exec_module  <frozen importlib._bootstrap_external>:672
+                                                   └─ 0.036 <module>  nltk/internals.py:9
