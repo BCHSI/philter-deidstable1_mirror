@@ -14,6 +14,7 @@ WHITE_LIST_OUTPUT_DIR = "white_list/test_output/"
 WHITE_LIST_CONF_DIR = "white_list/confs"
 WHITE_LIST_DATA = "./white_list/data/"
 
+
 def black_list_test():
     for directory in os.listdir(BLACK_LIST_CONF_DIR):
         if not os.path.isdir(os.path.join(BLACK_LIST_CONF_DIR, directory)):
@@ -50,6 +51,25 @@ def white_list_test():
         dir_diff(true_output,WHITE_LIST_OUTPUT_DIR)
         rmtree(WHITE_LIST_OUTPUT_DIR)
 
+def new_script_test(new_script, config_path):
+    if not os.path.exists("testtemp1"):
+        os.mkdir("testtemp1")
+    if not os.path.exists("testtemp2"):
+        os.mkdir("testtemp2")
+    #run the current script
+    print("RUNNING SCRIPT 1")
+    call(["python3", script,"-i=../data/i2b2_notes/","-a=../data/i2b2_anno/",
+    "-o=./testtemp1/","-f="+config_path,"-e=False"])
+    #run the new script
+    print("RUNNING SCRIPT 2")
+    call(["python3", new_script,"-i=../data/i2b2_notes/","-a=../data/i2b2_anno/",
+    "-o=./testtemp2/","-f="+config_path,"-e=False"])
+    print("TESTING OUTPUTS")
+    #compare the output
+    dir_diff("testtemp1","testtemp2")
+    rmtree("./testtemp1/")
+    rmtree("./testtemp2/")
+
 def dir_diff(true_output, test_output):
     total_files = 0
     different_files = 0
@@ -75,11 +95,9 @@ if __name__=="__main__":
     black_list_test()
     print("Running whitelist tests:...")
     white_list_test()
+    
+    if len(sys.argv) > 2:
+        new_script = sys.argv[2]
+        print("Running new script tests:...")
+        new_script_test(new_script,"../configs/philter_alpha.json")
 
-#copy data
-#let congs = [conf1, conf2, conf3, ...]
-#for each congs:
-    #run first program on the data and store results in x1
-    #run second program on the data and store results in x2
-
-    #compare x1 and x2
