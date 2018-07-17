@@ -4,16 +4,21 @@ from subprocess import call,check_output
 import filecmp
 from shutil import rmtree
 
-script = sys.argv[1]
+script = os.path.abspath(sys.argv[1])
 
-BLACK_LIST_OUTPUT_DIR = "black_list/test_output/"
-BLACK_LIST_CONF_DIR = "black_list/confs"
-BLACK_LIST_DATA = "./black_list/data/"
+BLACK_LIST_OUTPUT_DIR = os.path.abspath("black_list/test_output/")+"/"
+BLACK_LIST_CONF_DIR = os.path.abspath("black_list/confs")+"/"
+BLACK_LIST_DATA = os.path.abspath("black_list/data/")+"/"
 
-WHITE_LIST_OUTPUT_DIR = "white_list/test_output/"
-WHITE_LIST_CONF_DIR = "white_list/confs"
-WHITE_LIST_DATA = "./white_list/data/"
+WHITE_LIST_OUTPUT_DIR = os.path.abspath("white_list/test_output/")+"/"
+WHITE_LIST_CONF_DIR = os.path.abspath("white_list/confs")+"/"
+WHITE_LIST_DATA = os.path.abspath("white_list/data/")+"/"
 
+SCRIPT_TEST_DATA = os.path.abspath("../data/i2b2_notes/")+"/"
+SCRIPT_TEST_TEMP_FOLDER_1 = os.path.abspath("./testtemp1/")+"/"
+SCRIPT_TEST_TEMP_FOLDER_2 = os.path.abspath("./testtemp2/")+"/"
+
+WORKING_DIR = os.getcwd()
 
 def black_list_test():
     for directory in os.listdir(BLACK_LIST_CONF_DIR):
@@ -25,11 +30,13 @@ def black_list_test():
         if not os.path.exists(BLACK_LIST_OUTPUT_DIR):
             os.mkdir(BLACK_LIST_OUTPUT_DIR)
         
+        
+        os.chdir(os.path.abspath(os.path.dirname(script)))
         call(["python3", script,"-i="+BLACK_LIST_DATA,"-a="+BLACK_LIST_DATA,
         "-o="+BLACK_LIST_OUTPUT_DIR,"-f="+conf_file,"-e=False"])
-
-        #a = input("please enter to continue")
+        os.chdir(WORKING_DIR)
         
+                
         dir_diff(true_output,BLACK_LIST_OUTPUT_DIR)
         rmtree(BLACK_LIST_OUTPUT_DIR)
 
@@ -42,33 +49,54 @@ def white_list_test():
 
         if not os.path.exists(WHITE_LIST_OUTPUT_DIR):
             os.mkdir(WHITE_LIST_OUTPUT_DIR)
-        
+
+        os.chdir(os.path.abspath(os.path.dirname(script)))
         call(["python3", script,"-i="+WHITE_LIST_DATA,"-a="+WHITE_LIST_DATA,
         "-o="+WHITE_LIST_OUTPUT_DIR,"-f="+conf_file,"-e=False"])
+        os.chdir(WORKING_DIR)
 
-        #a = input("please enter to continue")
         
         dir_diff(true_output,WHITE_LIST_OUTPUT_DIR)
         rmtree(WHITE_LIST_OUTPUT_DIR)
 
 def new_script_test(new_script, config_path):
-    if not os.path.exists("testtemp1"):
-        os.mkdir("testtemp1")
-    if not os.path.exists("testtemp2"):
-        os.mkdir("testtemp2")
+    if os.path.exists(SCRIPT_TEST_TEMP_FOLDER_1):
+        rmtree(SCRIPT_TEST_TEMP_FOLDER_1)
+    os.mkdir(SCRIPT_TEST_TEMP_FOLDER_1)
+    
+    if os.path.exists(SCRIPT_TEST_TEMP_FOLDER_2):
+        rmtree(SCRIPT_TEST_TEMP_FOLDER_2)
+    os.mkdir(SCRIPT_TEST_TEMP_FOLDER_2)
+    
+    absolute_config_path = os.path.abspath(conf_path)
+    absolute_script = os.path.abspath(script)
+    absolute_new_script = os.path.abspath(new_script)
+
+
     #run the current script
     print("RUNNING SCRIPT 1")
-    call(["python3", script,"-i=../data/i2b2_notes/","-a=../data/i2b2_anno/",
-    "-o=./testtemp1/","-f="+config_path,"-e=False"])
+
+    original_working_directory = os.getcwd()
+    os.chdir(os.path.abspath(".."))
+
+    call(["python3", absolute_script,"-i="+SCRIPT_TEST_DATA,"-a="+SCRIPT_TEST_DATA,
+    "-o="+SCRIPT_TEST_TEMP_FOLDER_1,"-f="+absolute_config_path,"-e=False"])
+    os.chdir(original_working_directory)
+
     #run the new script
+    
+    os.chdir(os.path.abspath(os.path.dirname(new_script)))
     print("RUNNING SCRIPT 2")
-    call(["python3", new_script,"-i=../data/i2b2_notes/","-a=../data/i2b2_anno/",
-    "-o=./testtemp2/","-f="+config_path,"-e=False"])
+    #call(["python3", new_script,"-i=../data/i2b2_notes/","-a=../data/i2b2_anno/",
+    #"-o=./testtemp2/","-f="+config_path,"-e=False"])
+    call(["python3", absolute_new_script,"-i="+SCRIPT_TEST_DATA,"-a="+SCRIPT_TEST_DATA,
+    "-o="+SCRIPT_TEST_TEMP_FOLDER_2,"-f="+absolute_config_path,"-e=False"])
+    os.chdir(original_working_directory)
     print("TESTING OUTPUTS")
     #compare the output
-    dir_diff("testtemp1","testtemp2")
-    rmtree("./testtemp1/")
-    rmtree("./testtemp2/")
+    dir_diff(SCRIPT_TEST_TEMP_FOLDER_1,SCRIPT_TEST_TEMP_FOLDER_2)
+    #rmtree(SCRIPT_TEST_TEMP_FOLDER_1)
+    #rmtree(SCRIPT_TEST_TEMP_FOLDER_2)
 
 def dir_diff(true_output, test_output):
     total_files = 0
@@ -98,6 +126,7 @@ if __name__=="__main__":
     
     if len(sys.argv) > 2:
         new_script = sys.argv[2]
+        conf_path = os.path.abspath("../configs/philter_alpha.json")
         print("Running new script tests:...")
-        new_script_test(new_script,"../configs/philter_alpha.json")
+        new_script_test(new_script,conf_path)
 

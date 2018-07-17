@@ -3,7 +3,7 @@
 		"title":"Blacklist Example",
 		"type":"set",
 		"exclude":true,
-		"filepath":"../filters/blacklists/one_word.pkl",
+		"filepath":"filters/blacklists/one_word.pkl",
 		"pos":[],
 		"notes":""
 	},
@@ -11,7 +11,7 @@
     	"title":"No catchall",
 		"type":"regex",
 		"exclude":false,
-		"filepath":"../filters/regex/catchall.txt",
+		"filepath":"filters/regex/catchall.txt",
 		"notes":"This should match anything, preventing the catchall"
 	}
 		
