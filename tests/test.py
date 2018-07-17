@@ -76,27 +76,21 @@ def new_script_test(new_script, config_path):
     #run the current script
     print("RUNNING SCRIPT 1")
 
-    original_working_directory = os.getcwd()
     os.chdir(os.path.abspath(".."))
-
-    call(["python3", absolute_script,"-i="+SCRIPT_TEST_DATA,"-a="+SCRIPT_TEST_DATA,
-    "-o="+SCRIPT_TEST_TEMP_FOLDER_1,"-f="+absolute_config_path,"-e=False"])
-    os.chdir(original_working_directory)
+    call(["python3", absolute_script,"-i="+SCRIPT_TEST_DATA,"-a="+SCRIPT_TEST_DATA,"-o="+SCRIPT_TEST_TEMP_FOLDER_1,"-f="+absolute_config_path,"-e=False"])
+    os.chdir(WORKING_DIR)
 
     #run the new script
     
     os.chdir(os.path.abspath(os.path.dirname(new_script)))
     print("RUNNING SCRIPT 2")
-    #call(["python3", new_script,"-i=../data/i2b2_notes/","-a=../data/i2b2_anno/",
-    #"-o=./testtemp2/","-f="+config_path,"-e=False"])
-    call(["python3", absolute_new_script,"-i="+SCRIPT_TEST_DATA,"-a="+SCRIPT_TEST_DATA,
-    "-o="+SCRIPT_TEST_TEMP_FOLDER_2,"-f="+absolute_config_path,"-e=False"])
-    os.chdir(original_working_directory)
+    call(["python3", absolute_new_script,"-i="+SCRIPT_TEST_DATA,"-a="+SCRIPT_TEST_DATA,"-o="+SCRIPT_TEST_TEMP_FOLDER_2,"-f="+absolute_config_path,"-e=False"])
+    os.chdir(WORKING_DIR)
+
     print("TESTING OUTPUTS")
     #compare the output
     dir_diff(SCRIPT_TEST_TEMP_FOLDER_1,SCRIPT_TEST_TEMP_FOLDER_2)
-    #rmtree(SCRIPT_TEST_TEMP_FOLDER_1)
-    #rmtree(SCRIPT_TEST_TEMP_FOLDER_2)
+
 
 def dir_diff(true_output, test_output):
     total_files = 0
