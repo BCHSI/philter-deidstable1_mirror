@@ -12,7 +12,7 @@ from coordinate_map import CoordinateMap
 from nltk.tag.stanford import StanfordNERTagger
 import subprocess
 import numpy
-
+from tqdm import tqdm
 
 class Philter:
     """ 
@@ -154,7 +154,7 @@ class Philter:
 
         #TODO: what is the point of dirs (it's never used)?
         for root, dirs, files in os.walk(in_path):
-            for f in files:
+            for f in tqdm(files):
 
                 filename = root+f
 
