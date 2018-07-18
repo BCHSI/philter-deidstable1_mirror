@@ -27,8 +27,9 @@ def black_list_test():
         conf_file = os.path.join(BLACK_LIST_CONF_DIR, directory, "conf.json")
         true_output = os.path.join(BLACK_LIST_CONF_DIR, directory, "real_output")
 
-        if not os.path.exists(BLACK_LIST_OUTPUT_DIR):
-            os.mkdir(BLACK_LIST_OUTPUT_DIR)
+        if os.path.exists(BLACK_LIST_OUTPUT_DIR):
+            rmtree(BLACK_LIST_OUTPUT_DIR)
+        os.mkdir(BLACK_LIST_OUTPUT_DIR)
         
         
         os.chdir(os.path.abspath(os.path.dirname(script)))
@@ -38,7 +39,7 @@ def black_list_test():
         
                 
         dir_diff(true_output,BLACK_LIST_OUTPUT_DIR)
-        rmtree(BLACK_LIST_OUTPUT_DIR)
+        #rmtree(BLACK_LIST_OUTPUT_DIR)
 
 def white_list_test():
     for directory in os.listdir(WHITE_LIST_CONF_DIR):
@@ -47,8 +48,9 @@ def white_list_test():
         conf_file = os.path.join(WHITE_LIST_CONF_DIR, directory, "conf.json")
         true_output = os.path.join(WHITE_LIST_CONF_DIR, directory, "real_output")
 
-        if not os.path.exists(WHITE_LIST_OUTPUT_DIR):
-            os.mkdir(WHITE_LIST_OUTPUT_DIR)
+        if os.path.exists(WHITE_LIST_OUTPUT_DIR):
+            rmtree(WHITE_LIST_OUTPUT_DIR)
+        os.mkdir(WHITE_LIST_OUTPUT_DIR)
 
         os.chdir(os.path.abspath(os.path.dirname(script)))
         call(["python3", script,"-i="+WHITE_LIST_DATA,"-a="+WHITE_LIST_DATA,
@@ -57,7 +59,7 @@ def white_list_test():
 
         
         dir_diff(true_output,WHITE_LIST_OUTPUT_DIR)
-        rmtree(WHITE_LIST_OUTPUT_DIR)
+        #rmtree(WHITE_LIST_OUTPUT_DIR)
 
 def new_script_test(new_script, config_path):
     if os.path.exists(SCRIPT_TEST_TEMP_FOLDER_1):
