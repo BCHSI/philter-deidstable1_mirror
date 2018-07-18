@@ -14,6 +14,10 @@ WHITE_LIST_OUTPUT_DIR = os.path.abspath("white_list/test_output/")+"/"
 WHITE_LIST_CONF_DIR = os.path.abspath("white_list/confs")+"/"
 WHITE_LIST_DATA = os.path.abspath("white_list/data/")+"/"
 
+REGEX_OUTPUT_DIR = os.path.abspath("regex/test_output/")+"/"
+REGEX_CONF_DIR = os.path.abspath("regex/confs")+"/"
+REGEX_DATA = os.path.abspath("regex/data/")+"/"
+
 SCRIPT_TEST_DATA = os.path.abspath("../data/i2b2_notes/")+"/"
 SCRIPT_TEST_TEMP_FOLDER_1 = os.path.abspath("./testtemp1/")+"/"
 SCRIPT_TEST_TEMP_FOLDER_2 = os.path.abspath("./testtemp2/")+"/"
@@ -59,6 +63,26 @@ def white_list_test():
 
         
         dir_diff(true_output,WHITE_LIST_OUTPUT_DIR)
+        #rmtree(WHITE_LIST_OUTPUT_DIR)
+
+def regex_test():
+    for directory in os.listdir(REGEX_CONF_DIR):
+        if not os.path.isdir(os.path.join(REGEX_CONF_DIR, directory)):
+            continue
+        conf_file = os.path.join(REGEX_CONF_DIR, directory, "conf.json")
+        true_output = os.path.join(REGEX_CONF_DIR, directory, "real_output")
+
+        if os.path.exists(REGEX_OUTPUT_DIR):
+            rmtree(REGEX_OUTPUT_DIR)
+        os.mkdir(REGEX_OUTPUT_DIR)
+
+        os.chdir(os.path.abspath(os.path.dirname(script)))
+        call(["python3", script,"-i="+REGEX_DATA,"-a="+REGEX_DATA,
+        "-o="+REGEX_OUTPUT_DIR,"-f="+conf_file,"-e=False"])
+        os.chdir(WORKING_DIR)
+
+        
+        dir_diff(true_output,REGEX_OUTPUT_DIR)
         #rmtree(WHITE_LIST_OUTPUT_DIR)
 
 def new_script_test(new_script, config_path):
@@ -115,10 +139,13 @@ def dir_diff(true_output, test_output):
         print(str(different_files)+ " TESTS HAVE FAILED.")
 
 if __name__=="__main__":
-    print("Running blacklist tests:...")
-    black_list_test()
-    print("Running whitelist tests:...")
-    white_list_test()
+    # print("Running blacklist tests:...")
+    # black_list_test()
+    # print("Running whitelist tests:...")
+    # white_list_test()
+
+    print("Running regex tests:...")
+    regex_test()
     
     if len(sys.argv) > 2:
         new_script = sys.argv[2]

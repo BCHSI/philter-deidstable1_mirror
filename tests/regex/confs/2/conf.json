@@ -1,0 +1,32 @@
+[
+
+	{
+		"title":"model number",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/mrn_id/model_number.txt",
+		"notes":"This should remove anything with pattern model number"
+	},
+  	{
+		"title":"mixed 3",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/mrn_id/mixed003.txt",
+		"notes":"This should remove anything that matches DDDDNNN"
+	},
+  	{
+    	"title":"No catchall",
+		"type":"regex",
+		"exclude":false,
+		"filepath":"./filters/regex/catchall.txt",
+		"notes":"This should match anything, preventing the catchall"
+	},
+     {
+		"title":"ED safe",
+		"type":"regex",
+		"exclude":false,
+		"filepath":"filters/regex/safe/ED_safe.txt",
+		"notes":"This should remove anything with pattern ED"
+	}
+
+]
