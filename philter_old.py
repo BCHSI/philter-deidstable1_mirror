@@ -14,8 +14,6 @@ import subprocess
 import numpy
 from tqdm import tqdm
 
-
-
 class Philter:
     """ 
         General text filtering class,
@@ -43,6 +41,8 @@ class Philter:
         
         if "coords" in config:
             self.coords = config["coords"]
+        else:
+            raise Exception("Coordinate outpath undefined")
 
         if "outformat" in config:
             self.outformat = config["outformat"]
@@ -70,8 +70,8 @@ class Philter:
                 process = subprocess.Popen("cd generate_dataset && ./download_ner.sh".split(), stdout=subprocess.PIPE)
                 output, error = process.communicate()
             self.stanford_ner_tagger_classifier = config["stanford_ner_tagger"]["classifier"]
-            if not os.path.exists(config["stanford_ner_tagger"]["jar"]):
-                raise Exception("Filepath does not exist", config["stanford_ner_tagger"]["jar"])
+            #####if not os.path.exists(config["stanford_ner_tagger"]["jar"]):
+            #####    raise Exception("Filepath does not exist", config["stanford_ner_tagger"]["jar"])
             self.stanford_ner_tagger_jar = config["stanford_ner_tagger"]["jar"]
                 #we lazy load our tagger only if there's a corresponding pattern
 
@@ -96,10 +96,12 @@ class Philter:
         reserved_list = set(["data", "coordinate_map"])
 
         #first check that data is formatted, can be loaded etc. 
+        #print(self.patterns)
         for i,pattern in enumerate(self.patterns):
 
             if pattern["type"] in require_files and not os.path.exists(pattern["filepath"]):
                 raise Exception("Config filepath does not exist", pattern["filepath"])
+            #TODO: what does this do exactly?
             for k in reserved_list:
                 if k in pattern:
                     raise Exception("Error, Keyword is reserved", k, pattern)
@@ -137,12 +139,12 @@ class Philter:
             raise Exception("Invalid filteype",filepath)
         return map_set
 
-    def map_coordinates(self, allowed_filetypes=set(["txt", "ano"])):
+    def map_coordinates(self, in_path="", allowed_filetypes=set(["txt", "ano"])):
         """ Runs the set, or regex on the input data 
             generating a coordinate map of hits given 
             (this performs a dry run on the data and doesn't transform)
         """
-        in_path = self.finpath
+
         if not os.path.exists(in_path):
             raise Exception("Filepath does not exist", in_path)
         
@@ -150,6 +152,7 @@ class Philter:
         for i,pat in enumerate(self.patterns):
             self.patterns[i]["coordinate_map"] = CoordinateMap()
 
+        #TODO: what is the point of dirs (it's never used)?
         for root, dirs, files in os.walk(in_path):
             for f in tqdm(files):
 
@@ -180,7 +183,7 @@ class Philter:
                         raise Exception("Error, pattern type not supported: ", pat["type"])
 
         #clear out any data to save ram
-        for i,pat in enumerate(self .patterns):
+        for i,pat in enumerate(self.patterns):
             if "data" in pat:
                 del self.patterns[i]["data"]
 
@@ -205,7 +208,7 @@ class Philter:
             for m in matches:
                 #if filename == './data/i2b2_notes_updated/373-04.txt':
                 # if self.patterns[pattern_index]["title"] == "YYYY/MM-YYYY/MM":
-                # if 'Anal' in m.group() or 'CMS' in m.group() or 'Neoplasia' in m.group():
+                # if 'a ' in m.group():
                 #     print(self.patterns[pattern_index]["title"])
                 #     print(m.group())
                 #     print(filename)
@@ -215,9 +218,12 @@ class Philter:
         
             self.patterns[pattern_index]["coordinate_map"] = coord_map
         
-        #### MATCHALL/CATCHALL ####
+        #TODO: what does the match all section do exactly? Why do we need it if it's matching everything? Can't we just discard the whole thing.
+        #### MATCHALL ####
         elif regex == re.compile('.'):
+         
             # Split note the same way we would split for set or POS matching
+
             matchall_list = re.split("(\s+)", text)
             matchall_list_cleaned = []
             for item in matchall_list:
@@ -228,8 +234,8 @@ class Philter:
                             if len(elem) > 0:
                                 matchall_list_cleaned.append(elem)
                     else:
-                        matchall_list_cleaned.append(item)          
-            
+                        matchall_list_cleaned.append(item)
+
             start_coordinate = 0
             for word in matchall_list_cleaned:
                 start = start_coordinate
@@ -290,10 +296,15 @@ class Philter:
         cleaned = []
         for item in lst:
             if len(item) > 0:
+                #TODO: if we are removing white space then how come we need to check if the resulting split is space?
+                #Nevermind. figured it out.
                 if item.isspace() == False:
+                    #TODO: why are we splitting what we already split before?
+                    #On a second thought, I think this is because we want to split by symbols also (and not only whitespace).
                     split_item = re.split("(\s+)", re.sub(pre_process, " ", item))
                     for elem in split_item:
                         if len(elem) > 0:
+                            #TODO: Shoudn't we check for whitespace here before adding? e,g, "the-school" gives: ['the', ' ', 'school']
                             cleaned.append(elem)
                 else:
                     cleaned.append(item)
@@ -309,6 +320,7 @@ class Philter:
             stop = start_coordinate + len(word)
 
             # This converts spaces into empty strings, so we know to skip forward to the next real word
+            #TODO: ^ converts spaces AND SYMBOLS into empty... right?
             word_clean = re.sub(r"[^a-zA-Z0-9]+", "", word.lower().strip())
             if len(word_clean) == 0:
                 #got a blank space or something without any characters or digits, move forward
@@ -466,7 +478,10 @@ class Philter:
             for filename in files:
                 yield root,filename
 
-    def transform(self):
+    def transform(self, 
+            replacement=" **PHI** ",
+            out_path="",
+            in_path=""):
         """ transform
             turns input files into output PHI files 
             protected health information will be replaced by the replacement character
@@ -477,9 +492,7 @@ class Philter:
 
             **Anything not caught in these passes will be assumed to be PHI
         """
-        in_path = self.finpath
-        out_path = self.foutpath
-
+        
         if self.verbose:
             print("RUNNING TRANSFORM")
 
@@ -489,27 +502,19 @@ class Philter:
         if not os.path.exists(out_path):
             raise Exception("File output path does not exist", out_path)
 
-        # keeping a record of all phicoordinates and text for all files
-        # we only keep track of this if self.eval=True
-        if self.eval:
-            data_all_files = {}
-            filter_data_all_files = {}
+
+        #keeps a record of all phi coordinates and text
+        data = {}
 
         #create our final exclude and include maps, priority order
         for root,f in self.folder_walk(in_path):
 
-            #keeps a record of all phi coordinates and text for a given file
-            data = {}
-        
             filename = root+f
 
             encoding = self.detect_encoding(filename)
             txt = open(filename,"r", encoding=encoding['encoding']).read()
             #record we use to evaluate our effectiveness
-            if self.eval:
-                data_all_files[filename] = {"text":txt, "phi":[],"non-phi":[]}
-            
-            data = {"text":txt, "phi":[],"non-phi":[]}
+            data[filename] = {"text":txt, "phi":[],"non-phi":[]}
 
             #create an intersection map of all coordinates we'll be removing
             exclude_map = CoordinateMap()
@@ -520,69 +525,29 @@ class Philter:
             include_map = CoordinateMap()
 
             include_map.add_file(filename)
-
-
-
-            #create intersection maps for all phi types and add them to a dictionary containing all maps
-            phi_type_list = ['DATE','Patient_Social_Security_Number','Email','Provider_Address_or_Location','Age','Name','OTHER']
-            phi_type_dict = {}
-            for phi_type in phi_type_list:
-                phi_type_dict[phi_type] = [CoordinateMap()]
-                phi_type_dict[phi_type][0].add_file(filename)
-
-            # create dictionary of coordinates matched by the current pattern
-            if self.eval:
-                filter_data_all_files[filename] = {}
-            # print(self.patterns)
+            #TODO: why not just {for pattern in self.patterns: }
             for i,pattern in enumerate(self.patterns):
-                # print('\n',i, ':')
                 coord_map = pattern["coordinate_map"]
                 exclude = pattern["exclude"]
-                try:
-                    filter_path = pattern["filepath"]
-                except KeyError:
-                    filter_path = pattern["title"]
-                if "phi_type" in pattern:
-                    phi_type = pattern["phi_type"]
                 # self.patterns[pattern_index]["title"]
-                else:
-                    phi_type = "OTHER"
 
                 for start,stop in coord_map.filecoords(filename):
                     if exclude:
                         if not include_map.does_overlap(filename, start, stop):
                             exclude_map.add_extend(filename, start, stop)
-                            # if self.i2b2 format?
-                            phi_type_dict[phi_type][0].add_extend(filename, start, stop)
-                            # print('\n')
-                            # for start, stop in phi_type_dict[phi_type][0].filecoords(filename):
-                            #     print(start,stop, txt[start:stop], filter_path)
-
-
+                            data[filename]["phi"].append({"start":start, "stop":stop, "word":txt[start:stop]})
+                    #if include
                     else:
                         if not exclude_map.does_overlap(filename, start, stop):
                             #print("include", start, stop, txt[start:stop])
                             include_map.add_extend(filename, start, stop)
-                            # if self.i2b2 format?
-                            data["non-phi"].append({"start":start, "stop":stop, "word":txt[start:stop], "filepath":filter_path})
-                            if self.eval:
-                                data_all_files[filename]["non-phi"].append({"start":start, "stop":stop, "word":txt[start:stop], "filepath":filter_path})
-
+                            data[filename]["non-phi"].append({"start":start, "stop":stop, "word":txt[start:stop]})
                         else:
                             pass
                             #print("include overlapped", start, stop, txt[start:stop])
-                
-            
-            # Add results of separate phi type maps to data
-            # if self.i2b2 format? 
-            for list_phi_type in phi_type_list:
-                for start,stop in phi_type_dict[list_phi_type][0].filecoords(filename):
-                    data["phi"].append({"start":start, "stop":stop, "word":txt[start:stop],"phi_type":list_phi_type, "filepath":filter_path})
-                    if self.eval:
-                        data_all_files[filename]["phi"].append({"start":start, "stop":stop, "word":txt[start:stop],"phi_type":list_phi_type, "filepath":filter_path})
-
 
             #now we transform the text
+            #TODO: why are diffrent ways of splitting file name being used si
             fbase, fext = os.path.splitext(f)
             outpathfbase = out_path + fbase
             if self.outformat == "asterisk":
@@ -594,19 +559,19 @@ class Philter:
                     
             elif self.outformat == "i2b2":
                 with open(outpathfbase+".xml", "w") as f:
-                    contents = self.transform_text_i2b2(data)
-                    #print("writing contents to: " + outpathfbase+".xml")
+                    contents = self.transform_text_i2b2(data[filename])
                     f.write(contents)
             else:
                 raise Exception("Outformat not supported: ",
-                                self.outformat)        
-        # print(data_all_files)
+                                self.outformat)
+                
+
         if self.run_eval: #output our data for eval
-            json.dump(data_all_files, open(self.coords, "w"), indent=4)
+            json.dump(data, open(self.coords, "w"), indent=4)
 
     # infilename needed for addressing maps
     def transform_text_asterisk(self, txt, infilename,
-                                include_map, exclude_map):       
+                                include_map, exclude_map):
         last_marker = 0
         current_chunk = []
         punctuation_matcher = re.compile(r"[^a-zA-Z0-9*]")
@@ -642,10 +607,10 @@ class Philter:
         contents.append("]]></TEXT>\n")
         contents.append("<TAGS>\n")
         for i in range(len(tagdata['phi'])):
-            phi_type = tagdata['phi'][i]['phi_type']
-            tagcategory = phi_type
+            tagcategory = "OTHER" # TODO: replace with actual category
+            phitype = "OTHER" # TODO: replace with actual phi type
             contents.append("<")
-            contents.append(phi_type)
+            contents.append(phitype)
             contents.append(" id=\"P")
             contents.append(str(i))
             contents.append("\" start=\"")
@@ -655,7 +620,7 @@ class Philter:
             contents.append("\" text=\"")
             contents.append(tagdata['phi'][i]['word'])
             contents.append("\" TYPE=\"")
-            contents.append(phi_type)
+            contents.append(phitype)
             contents.append("\" comment=\"\" />\n")
         contents.append("</TAGS>\n")
         contents.append("</"+root+">\n")
@@ -1088,10 +1053,7 @@ class Philter:
 
         # Loop through all filenames in summary
         for fn in summary_coords['summary_by_file']:
-            # print(self.patterns)
-            # get input notes filename (for filter analysis wit coordinatemap)
-            input_filename = self.finpath + os.path.basename(fn)
-
+            
             current_summary =  summary_coords['summary_by_file'][fn]
 
             # Get corresponding info in phi_notes
@@ -1133,7 +1095,6 @@ class Philter:
                 start_coordinate += len(item)
 
             #print(pos_coords)
-            
             pos_list = nltk.pos_tag(cleaned)
 
 
@@ -1258,8 +1219,7 @@ class Philter:
                           
 
             fn_tag_summary = {}
-            include_exclude_fns = ''
-            # print(self.patterns)
+
             if current_summary['false_negatives'] != [] and current_summary['false_negatives'] != [""]:              
                 counter = 0
                 current_fns = current_summary['false_negatives']
@@ -1268,40 +1228,7 @@ class Philter:
                     counter += 1
                     false_negative = word[0]
                     start_coordinate_fn = word[1]
-                    # print(word, start_coordinate)
-
-                    # initialize list that will hold info on what matched what
-                    filter_file_list_exclude = []
-                    filter_file_list_include = []
-                    # Loop through coorinate map objects and match patterns with FPs
-                    for i,pattern in enumerate(self.patterns):
-                        # print('\n',i, ':')
-
-                        coord_map = pattern["coordinate_map"]
-                        exclude_include = pattern["exclude"]
-                        try:
-                            filter_path = pattern["filepath"]
-                        except KeyError:
-                            filter_path = pattern["title"]
-                        # print('\n')
-                        # print(filter_path)
-                        for start,stop in coord_map.filecoords(input_filename):
-                            # print(start,stop,text[start:stop])
-                            # Find intersection between ranges
-                            word_range = set(range(start_coordinate_fn, start_coordinate_fn + len(false_negative)))
-                            filter_range = set(range(start, stop))
-                            intersection = word_range & filter_range
-                            if intersection != set():
-                                # print("********"+str(start_coordinate_fp)+"********")
-                                # print(false_positive)
-                                # Add this filter path to the list of things that filtered this word
-                                if exclude_include == True:
-                                    filter_file_list_exclude.append(filter_path)
-                                else:
-                                    filter_file_list_include.append(filter_path)
-
-
-
+                  
                     for phi_item in phi_list:                           
                         phi_text = phi_item['text']
                         phi_type = phi_item['TYPE']
@@ -1343,10 +1270,10 @@ class Philter:
                             # Get POS tag
                             pos_tag = cleaned_with_pos[str(start_coordinate_fn)][1]
                             
-                            # Get 25 characters surrounding FN on either side
+                            # Get 15 characters surrounding FN on either side
                             fn_context = ''
-                            context_start = start_coordinate_fn - 25
-                            context_end = start_coordinate_fn + len(false_negative) + 25
+                            context_start = start_coordinate_fn - 15
+                            context_end = start_coordinate_fn + len(false_negative) + 15
                             if context_start >= 0 and context_end <= len(text)-1:
                                 fn_context = text[context_start:context_end]
                             elif context_start >= 0 and context_end > len(text)-1:
@@ -1358,22 +1285,11 @@ class Philter:
                             
                             # Get fn id, to distinguish betweem multiple entries
                             fn_id = "N" + str(counter)
-                            
-                            # Get include or exclude
-                            if not self.ucsf_format:
-                                if phi_tag in i2b2_include_tags:
-                                    include_exclude_fns = 'include'
-                                else:
-                                    include_exclude_fns = 'exclude'
-                            if self.ucsf_format:
-                                if phi_tag in ucsf_include_tags:
-                                    include_exclude_fns = 'include'
-                                else:
-                                    include_exclude_fns = 'exclude'
                             ###### Create output dicitonary with id/word/pos/phi
-                            fn_tag_summary[fn_id] = [false_negative, phi_tag, pos_tag, fn_context, include_exclude_fns, filter_file_list_exclude, filter_file_list_include]
+                            fn_tag_summary[fn_id] = [false_negative, phi_tag, pos_tag, fn_context]
                             # if phi_tag == 'AGE':
                             #     print(word)
+            
 
             if fn_tag_summary != {}:
                 fn_tags[fn] = fn_tag_summary
@@ -1382,9 +1298,7 @@ class Philter:
 
             ####### Get FP tags #########
             fp_tag_summary = {}
-            include_exclude_fps = ''
             #print(cleaned_with_pos)
-
             if current_summary['false_positives'] != [] and current_summary['false_positives'] != [""]:              
 
                 current_fps = current_summary['false_positives']
@@ -1394,46 +1308,15 @@ class Philter:
                     counter += 1
                     false_positive = word[0]
                     start_coordinate_fp = word[1]
-                    # print(word)
-
-                    # initialize list that will hold info on what matched what
-                    filter_file_list_exclude = []
-                    filter_file_list_include = []
-                    # Loop through coorinate map objects and match patterns with FPs
-                    for i,pattern in enumerate(self.patterns):
-                        # print('\n',i, ':')
-
-                        coord_map = pattern["coordinate_map"]
-                        exclude_include = pattern["exclude"]
-                        try:
-                            filter_path = pattern["filepath"]
-                        except KeyError:
-                            filter_path = pattern["title"]
-                        # print('\n')
-                        # print(filter_path)
-                        for start,stop in coord_map.filecoords(input_filename):
-                            # print(start,stop,text[start:stop])
-                            word_range = set(range(start_coordinate_fp, start_coordinate_fp + len(false_positive)))
-                            filter_range = set(range(start, stop))
-                            intersection = word_range & filter_range
-                            if intersection != set():
-                                # print("********"+str(start_coordinate_fp)+"********")
-                                # print(false_positive)
-                                # Add this filter path to the list of things that filtered this word
-                                if exclude_include == True:
-                                    filter_file_list_exclude.append(filter_path)
-                                else:
-                                    filter_file_list_include.append(filter_path)
-
-            
+                 
                     pos_entry = cleaned_with_pos[str(start_coordinate_fp)]
 
                     pos_tag = pos_entry[1]
 
-                    # Get 25 characters surrounding FP on either side
+                    # Get 15 characters surrounding FP on either side
                     fp_context = ''
-                    context_start = start_coordinate_fp - 25
-                    context_end = start_coordinate_fp + len(false_positive) + 25
+                    context_start = start_coordinate_fp - 15
+                    context_end = start_coordinate_fp + len(false_positive) + 15
                     if context_start >= 0 and context_end <= len(text)-1:
                         fp_context = text[context_start:context_end]
                     elif context_start >= 0 and context_end > len(text)-1:
@@ -1443,9 +1326,7 @@ class Philter:
 
 
                     fp_id = "P" + str(counter)
-
-                    
-                    fp_tag_summary[fp_id] = [false_positive, pos_tag, fp_context, filter_file_list_exclude, filter_file_list_include]
+                    fp_tag_summary[fp_id] = [false_positive, pos_tag, fp_context]
 
             if fp_tag_summary != {}:
                 fp_tags[fn] = fp_tag_summary
@@ -1524,6 +1405,7 @@ class Philter:
                 # print(tag + " Recall: " + "{:.2%}".format(overall_recall_dict[recall_key]) + " TP: " + str(rp_summaries[tp_key]) + " FN: " + str(rp_summaries[fn_key]))
         
         # ucsf
+        
         if self.ucsf_format:
             include_dict = {'fns':0,'tps':0,'fps':summary["total_false_positives"],'tns':summary["total_true_negatives"]}
             category_dict = {}
@@ -1684,35 +1566,30 @@ class Philter:
         # Keep track of how many distinct combinations we've added to each list
         context_counter = 0
         nocontext_counter = 0
+
         for fn in fn_tags:
             file_dict = fn_tags[fn] 
             for subfile in file_dict:
                 current_list_context = file_dict[subfile]
-            ##############################
-                # print(current_list_context)
-                current_list_nocontext = current_list_context[:3] + [current_list_context[-3]] + [current_list_context[-2]] + [current_list_context[-1]]
-            ############################
+                current_list_nocontext = current_list_context[:3]
                 
                 word = current_list_context[0]
                 phi_tag = current_list_context[1]
                 pos_tag = current_list_context[2]
                 fn_context = current_list_context[3].replace("\n"," ")
-                filter_matches_exclude = current_list_context[5]
-                filter_matches_include = current_list_context[6]
                 
                 # Context: add each occurrence with corresponding filename                    
                 fn_tags_condensed_list_context.append(current_list_context)
                 key_name = "uniq" + str(context_counter)
                 filename = fn.split('/')[-1]
-                include_exclude = current_list_context[4]
-                fn_tags_condensed_context[key_name] = [word, phi_tag, pos_tag, fn_context, filename, include_exclude, filter_matches_exclude, filter_matches_include]
+                fn_tags_condensed_context[key_name] = [word, phi_tag, pos_tag, fn_context, filename]
                 context_counter += 1
 
                 # No context
                 if current_list_nocontext not in fn_tags_condensed_list:   
                     fn_tags_condensed_list.append(current_list_nocontext)
                     key_name = "uniq" + str(nocontext_counter)
-                    fn_tags_condensed[key_name] = [word, phi_tag, pos_tag, 1, include_exclude, filter_matches_exclude, filter_matches_include]
+                    fn_tags_condensed[key_name] = [word, phi_tag, pos_tag, 1]
                     nocontext_counter += 1
                 else: 
                     uniq_id_index = fn_tags_condensed_list.index(current_list_nocontext)
@@ -1740,60 +1617,57 @@ class Philter:
             file_dict = fp_tags[fp] 
             for subfile in file_dict:
                 current_list_context = file_dict[subfile]
-                current_list_nocontext = current_list_context[:2] + [current_list_context[3]] + [current_list_context[4]]
+                current_list_nocontext = current_list_context[:2]
 
                 word = current_list_context[0]
                 pos_tag = current_list_context[1]
                 fp_context = current_list_context[2].replace("\n"," ")
-                filter_matches_exclude = current_list_context[3]
-                filter_matches_include = current_list_context[4]
 
                 # Context: add each occurrence with corresponding filename
                 fp_tags_condensed_list_context.append(current_list_context)
                 key_name = "uniq" + str(context_counter)
                 filename = fp.split('/')[-1]
-                fp_tags_condensed_context[key_name] = [word, pos_tag, fp_context, filename, filter_matches_exclude, filter_matches_include]
+                fp_tags_condensed_context[key_name] = [word, pos_tag, fp_context, filename]
                 context_counter += 1
 
                 # No Context
                 if current_list_nocontext not in fp_tags_condensed_list:
                     fp_tags_condensed_list.append(current_list_nocontext)
                     key_name = "uniq" + str(nocontext_counter)
-                    fp_tags_condensed[key_name] = [word, pos_tag, 1, filter_matches_exclude, filter_matches_include]
+                    fp_tags_condensed[key_name] = [word, pos_tag, 1]
                     nocontext_counter += 1
                 else:
                     uniq_id_index = fp_tags_condensed_list.index(current_list_nocontext)
                     uniq_id = "uniq" + str(uniq_id_index)
-                    fp_tags_condensed[uniq_id][2] += 1
-
+                    fp_tags_condensed[uniq_id][2] += 1 
 
         # Write FN and FP results to outfolder
         # Conext
         with open(fn_tags_context, "w") as fn_file:
-            fn_file.write("key" + "|" + "note_word" + "|" + "phi_tag" + "|" + "pos_tag" + "|" + "context" + "|" + "filename"+ "|" +"include_exclude" + "|" +"exclude_filters" + "|" +"include_filters" +"\n")
+            fn_file.write("key" + "|" + "note_word" + "|" + "phi_tag" + "|" + "pos_tag" + "|" + "context" + "|" + "filename"+"\n")
             # print(fn_tags_condensed_context)
             for key in fn_tags_condensed_context:
                 current_list = fn_tags_condensed_context[key]
-                fn_file.write(key + "|" + current_list[0] + "|" + current_list[1] + "|" + current_list[2] + "|" + current_list[3] + "|" + current_list[4]+ "|" +current_list[5]+ "|" +str(current_list[6]) + "|" +str(current_list[7]) + "\n")
+                fn_file.write(key + "|" + current_list[0] + "|" + current_list[1] + "|" + current_list[2] + "|" + current_list[3] + "|" + current_list[4]+"\n")
         
         with open(fp_tags_context, "w") as fp_file:
-            fp_file.write("key" + "|" + "note_word" + "|" + "pos_tag" + "|" + "context" + "|" + "filename"+ "|" +"exclude_filters" + "|" +"include_filters" +"\n")
+            fp_file.write("key" + "|" + "note_word" + "|" + "pos_tag" + "|" + "context" + "|" + "filename"+"\n")
             for key in fp_tags_condensed_context:
                 current_list = fp_tags_condensed_context[key]
-                fp_file.write(key + "|" + current_list[0] + "|" + current_list[1]  + "|" +  current_list[2] + "|" + current_list[3]+ "|" + str(current_list[4]) + "|" + str(current_list[5]) +"\n")
+                fp_file.write(key + "|" + current_list[0] + "|" + current_list[1]  + "|" +  current_list[2] + "|" + current_list[3]+"\n")
 
         # No context
         with open(fn_tags_nocontext, "w") as fn_file:
-            fn_file.write("key" + "|" + "note_word" + "|" + "phi_tag" + "|" + "pos_tag" + "|" + "occurrences"+"|" +"include_exclude" + "|" +"exclude_filters" + "|" +"include_filters" + "\n")
+            fn_file.write("key" + "|" + "note_word" + "|" + "phi_tag" + "|" + "pos_tag" + "|" + "occurrences"+"\n")
             for key in fn_tags_condensed:
                 current_list = fn_tags_condensed[key]
-                fn_file.write(key + "|" + current_list[0] + "|" + current_list[1] + "|" + current_list[2] + "|" + str(current_list[3])+"|" + current_list[4]+ "|" + str(current_list[5])+ "|" + str(current_list[6])+"\n")
+                fn_file.write(key + "|" + current_list[0] + "|" + current_list[1] + "|" + current_list[2] + "|" + str(current_list[3])+"\n")
         
         with open(fp_tags_nocontext, "w") as fp_file:
-            fp_file.write("key" + "|" + "note_word" + "|" + "pos_tag" + "|" + "occurrences"+ "|" +"exclude_filters" + "|" +"include_filters" + "\n")
+            fp_file.write("key" + "|" + "note_word" + "|" + "pos_tag" + "|" + "filename"+"\n")
             for key in fp_tags_condensed:
                 current_list = fp_tags_condensed[key]
-                fp_file.write(key + "|" + current_list[0] + "|" + current_list[1]  + "|" +  str(current_list[2])+ "|" + str(current_list[3]) + "|" + str(current_list[4]) +"\n")            
+                fp_file.write(key + "|" + current_list[0] + "|" + current_list[1]  + "|" +  str(current_list[2])+"\n")            
             
     
     def getphi(self, 

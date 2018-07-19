@@ -40,6 +40,8 @@ def black_list_test():
         call(["python3", script,"-i="+BLACK_LIST_DATA,"-a="+BLACK_LIST_DATA,
         "-o="+BLACK_LIST_OUTPUT_DIR,"-f="+conf_file,"-e=False"])
         os.chdir(WORKING_DIR)
+
+        print(BLACK_LIST_OUTPUT_DIR)
         
                 
         dir_diff(true_output,BLACK_LIST_OUTPUT_DIR)
@@ -139,11 +141,10 @@ def dir_diff(true_output, test_output):
         print(str(different_files)+ " TESTS HAVE FAILED.")
 
 if __name__=="__main__":
-    # print("Running blacklist tests:...")
-    # black_list_test()
-    # print("Running whitelist tests:...")
-    # white_list_test()
-
+    print("Running blacklist tests:...")
+    black_list_test()
+    print("Running whitelist tests:...")
+    white_list_test()
     print("Running regex tests:...")
     regex_test()
     
