@@ -39,6 +39,22 @@ python surrogator.py -rp True -ri True -w True
 
 This will use the default input and output directories for both Philter'ed and I2B2 notes. It will run the surrogator on both sets of notes, and compare the outputs to create the evaluation tables. 
 
+### Overview of all command line arguments:
+```
+"-i","--input_dir", default="data/i2b2_results", help="specifiy the input directory",type=str
+"-o","--output_dir", default="data/surrogator/philter_results_output/", help="specifiy the output directory",type=str
+"-ii","--i2b2_input_dir", default="data/surrogator/testing-PHI-Gold-fixed", help="specifiy the input i2b2 directory",type=str
+"-io","--i2b2_output_dir", default="data/surrogator/testing-PHI-Gold-fixed-output/", help="specifiy the i2b2 output directory",type=str
+"-rp","--rerun_philter", default=False, help="This will re-run the philter surrogating. It takes a while, so default is false",type=bool
+"-ri","--rerun_i2b2", default=False, help="This will re-run the i2b2 gold standard surrogating. It takes a while, so default is false",type=bool	
+"-e","--evaluation", default=True, help="This will run the evaluation comparing surrogated i2b2 with surrogated philter notes",type=bool	
+"-t","--test", default=False, help="This will run the test, using less files",type=bool
+"-w","--write_surrogated_files", default=False, help="This will write the surrogated notes.",type=bool
+"-p","--prod", default=False, help="This will run the production mode, using only Philtered notes and not running evaluation",type=bool
+"-verbose","--verbose", default=True, help="This will output helpful print statements and surrogator logs, but also increase the runtime of the program",type=bool
+```
+
+### Log files:
 In addition to the outputted surrogated text files, there will be a number of log files produced:
 	philter_results_output/counts_by_phi_type.csv
 	philter_results_output/date_shift_eval.csv
