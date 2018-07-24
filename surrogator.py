@@ -32,7 +32,6 @@ def extractXML(directory,filename,philter_or_i2b2,verbose):
 	tags_dict = xml_dict["TAGS"]
 	return text,tags_dict,xmlstr
 
-
 def parse_xml_files(directory,output_directory,philter_or_i2b2,write_surrogated_files,problem_files_log,verbose):
 	"""This function 
 	1)  Loops through the files in the input directory, parses the XML files
@@ -96,10 +95,10 @@ def parse_xml_files(directory,output_directory,philter_or_i2b2,write_surrogated_
 					if verbose:
 						print ("output file: " + output_dir)
 
-			except xmltodict.expat.ExpatError:
+			except xmltodict.expat.ExpatError as xml_parse_error:
 				if verbose:
-					print ("We cannot parse this XML")
-				problem_files_log = problem_files_log.append({"filename":filename,"philter_or_i2b2":philter_or_i2b2},ignore_index=True)
+					print ("We cannot parse this XML: " + str( xml_parse_error))
+				problem_files_log = problem_files_log.append({"filename":filename,"philter_or_i2b2":philter_or_i2b2,"xml_parse_error":xml_parse_error},ignore_index=True)
 
 	if verbose:
 		date_shift_log.columns = ["Filename", "start", "end", "Input Date","Parsed Date", "Shifted Date","Time Delta","date_context"]
@@ -413,7 +412,7 @@ def main():
 
 	print ("\nRunning Surrogator...\n")
 
-	problem_files_log = pd.DataFrame(columns = ["filename","philter_or_i2b2"])
+	problem_files_log = pd.DataFrame(columns = ["filename","philter_or_i2b2","xml_parse_error"])
 
 	if rerun_philter or test:
 		print ("Running Surrogator on philter notes...")
