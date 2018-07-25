@@ -5,7 +5,7 @@
 		"exclude":false,
 		"filepath":"filters/blacklists/one_word.pkl",
 		"pos":[],
-		"notes":""
+		"notes":"removes all instances of john"
 	}
 		
 ]

@@ -6,17 +6,13 @@ from shutil import rmtree
 
 script = os.path.abspath(sys.argv[1])
 
-BLACK_LIST_OUTPUT_DIR = os.path.abspath("black_list/test_output/")+"/"
-BLACK_LIST_CONF_DIR = os.path.abspath("black_list/confs")+"/"
-BLACK_LIST_DATA = os.path.abspath("black_list/data/")+"/"
+GOLDEN_OUTPUT = "golden_output"
+PROGRAM_OUTPUT = "program_output"
+INPUT_DATA = "input_data"
 
-WHITE_LIST_OUTPUT_DIR = os.path.abspath("white_list/test_output/")+"/"
-WHITE_LIST_CONF_DIR = os.path.abspath("white_list/confs")+"/"
-WHITE_LIST_DATA = os.path.abspath("white_list/data/")+"/"
-
-REGEX_OUTPUT_DIR = os.path.abspath("regex/test_output/")+"/"
-REGEX_CONF_DIR = os.path.abspath("regex/confs")+"/"
-REGEX_DATA = os.path.abspath("regex/data/")+"/"
+BLACK_LIST_CONF_DIR = os.path.abspath("black_list")+"/"
+WHITE_LIST_CONF_DIR = os.path.abspath("white_list")+"/"
+REGEX_CONF_DIR = os.path.abspath("regex")+"/"
 
 SCRIPT_TEST_DATA = os.path.abspath("../data/i2b2_notes/")+"/"
 SCRIPT_TEST_TEMP_FOLDER_1 = os.path.abspath("./testtemp1/")+"/"
@@ -29,63 +25,66 @@ def black_list_test():
         if not os.path.isdir(os.path.join(BLACK_LIST_CONF_DIR, directory)):
             continue
         conf_file = os.path.join(BLACK_LIST_CONF_DIR, directory, "conf.json")
-        true_output = os.path.join(BLACK_LIST_CONF_DIR, directory, "real_output")
+        golden_output = os.path.join(BLACK_LIST_CONF_DIR, directory, GOLDEN_OUTPUT)+"/"
+        program_output = os.path.join(BLACK_LIST_CONF_DIR, directory, PROGRAM_OUTPUT)+"/"
+        input_data = os.path.join(BLACK_LIST_CONF_DIR, directory, INPUT_DATA)+"/"
 
-        if os.path.exists(BLACK_LIST_OUTPUT_DIR):
-            rmtree(BLACK_LIST_OUTPUT_DIR)
-        os.mkdir(BLACK_LIST_OUTPUT_DIR)
+        if os.path.exists(program_output):
+            rmtree(program_output)
+        os.mkdir(program_output)
         
         
         os.chdir(os.path.abspath(os.path.dirname(script)))
-        call(["python3", script,"-i="+BLACK_LIST_DATA,"-a="+BLACK_LIST_DATA,
-        "-o="+BLACK_LIST_OUTPUT_DIR,"-f="+conf_file,"-e=False"])
+        call(["python3", script,"-i="+input_data,"-a="+input_data,
+        "-o="+program_output,"-f="+conf_file,"-e=False"])
         os.chdir(WORKING_DIR)
-
-        print(BLACK_LIST_OUTPUT_DIR)
         
                 
-        dir_diff(true_output,BLACK_LIST_OUTPUT_DIR)
-        #rmtree(BLACK_LIST_OUTPUT_DIR)
+        dir_diff(golden_output,program_output)
 
 def white_list_test():
     for directory in os.listdir(WHITE_LIST_CONF_DIR):
         if not os.path.isdir(os.path.join(WHITE_LIST_CONF_DIR, directory)):
             continue
         conf_file = os.path.join(WHITE_LIST_CONF_DIR, directory, "conf.json")
-        true_output = os.path.join(WHITE_LIST_CONF_DIR, directory, "real_output")
+        golden_output = os.path.join(WHITE_LIST_CONF_DIR, directory, GOLDEN_OUTPUT)+"/"
+        program_output = os.path.join(WHITE_LIST_CONF_DIR, directory, PROGRAM_OUTPUT)+"/"
+        input_data = os.path.join(WHITE_LIST_CONF_DIR, directory, INPUT_DATA)+"/"
 
-        if os.path.exists(WHITE_LIST_OUTPUT_DIR):
-            rmtree(WHITE_LIST_OUTPUT_DIR)
-        os.mkdir(WHITE_LIST_OUTPUT_DIR)
-
-        os.chdir(os.path.abspath(os.path.dirname(script)))
-        call(["python3", script,"-i="+WHITE_LIST_DATA,"-a="+WHITE_LIST_DATA,
-        "-o="+WHITE_LIST_OUTPUT_DIR,"-f="+conf_file,"-e=False"])
-        os.chdir(WORKING_DIR)
-
+        if os.path.exists(program_output):
+            rmtree(program_output)
+        os.mkdir(program_output)
         
-        dir_diff(true_output,WHITE_LIST_OUTPUT_DIR)
-        #rmtree(WHITE_LIST_OUTPUT_DIR)
+        
+        os.chdir(os.path.abspath(os.path.dirname(script)))
+        call(["python3", script,"-i="+input_data,"-a="+input_data,
+        "-o="+program_output,"-f="+conf_file,"-e=False"])
+        os.chdir(WORKING_DIR)
+        
+                
+        dir_diff(golden_output,program_output)
 
 def regex_test():
     for directory in os.listdir(REGEX_CONF_DIR):
         if not os.path.isdir(os.path.join(REGEX_CONF_DIR, directory)):
             continue
         conf_file = os.path.join(REGEX_CONF_DIR, directory, "conf.json")
-        true_output = os.path.join(REGEX_CONF_DIR, directory, "real_output")
+        golden_output = os.path.join(REGEX_CONF_DIR, directory, GOLDEN_OUTPUT)+"/"
+        program_output = os.path.join(REGEX_CONF_DIR, directory, PROGRAM_OUTPUT)+"/"
+        input_data = os.path.join(REGEX_CONF_DIR, directory, INPUT_DATA)+"/"
 
-        if os.path.exists(REGEX_OUTPUT_DIR):
-            rmtree(REGEX_OUTPUT_DIR)
-        os.mkdir(REGEX_OUTPUT_DIR)
-
-        os.chdir(os.path.abspath(os.path.dirname(script)))
-        call(["python3", script,"-i="+REGEX_DATA,"-a="+REGEX_DATA,
-        "-o="+REGEX_OUTPUT_DIR,"-f="+conf_file,"-e=False"])
-        os.chdir(WORKING_DIR)
-
+        if os.path.exists(program_output):
+            rmtree(program_output)
+        os.mkdir(program_output)
         
-        dir_diff(true_output,REGEX_OUTPUT_DIR)
-        #rmtree(WHITE_LIST_OUTPUT_DIR)
+        
+        os.chdir(os.path.abspath(os.path.dirname(script)))
+        call(["python3", script,"-i="+input_data,"-a="+input_data,
+        "-o="+program_output,"-f="+conf_file,"-e=False"])
+        os.chdir(WORKING_DIR)
+        
+                
+        dir_diff(golden_output,program_output)
 
 def new_script_test(new_script, config_path):
     if os.path.exists(SCRIPT_TEST_TEMP_FOLDER_1):
@@ -143,10 +142,16 @@ def dir_diff(true_output, test_output):
 if __name__=="__main__":
     print("Running blacklist tests:...")
     black_list_test()
+    print("______________________________")
+
     print("Running whitelist tests:...")
     white_list_test()
+    print("______________________________")
+
     print("Running regex tests:...")
     regex_test()
+    print("______________________________")
+
     
     if len(sys.argv) > 2:
         new_script = sys.argv[2]
