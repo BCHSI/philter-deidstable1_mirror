@@ -31,7 +31,7 @@ This will use the default input directory "data/i2b2_results"
 and write the output surrogated notes into the directory "data/surrogator/philter_results_output/"
 
 
-### Running Surrogator on Philter'ed I2B2 XML Notes and I2B2 Tagged XML:
+### Running Surrogator on Auto Philter'ed XML Notes and Manually Annotated XML Notes:
 
 ```bash
 python surrogator.py -rp True -ri True -w True
