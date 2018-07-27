@@ -310,8 +310,8 @@ def date_shift_evaluation(output_directory,date_shift_log_i2b2,date_shift_log,pr
 	s1 = pd.merge(date_shift_log_i2b2, date_shift_log,indicator=True, how='outer', on=***REMOVED***'Filename','start','end','Input Date'***REMOVED***)
 	output_eval = s1***REMOVED******REMOVED***"Filename","Input Date","_merge"***REMOVED******REMOVED***
 	output_eval = output_eval.rename(index=str, columns={"_merge": "classification"})
-	output_eval***REMOVED***"classification"***REMOVED*** = output_eval***REMOVED***'classification'***REMOVED***.replace({'both': 'true positive','left_only': 'false positive', 'right_only': 'false negative'})
-	output_eval***REMOVED***"description"***REMOVED*** = output_eval***REMOVED***'classification'***REMOVED***.replace({'true positive':'appears in both i2b2 and philter','false positive':'appears in i2b2 notes only', 'false negative':'appears in philter notes only'})
+	output_eval***REMOVED***"classification"***REMOVED*** = output_eval***REMOVED***'classification'***REMOVED***.replace({'both': 'true positive','left_only': 'false negative', 'right_only': 'false positive'})
+	output_eval***REMOVED***"description"***REMOVED*** = output_eval***REMOVED***'classification'***REMOVED***.replace({'true positive':'appears in both i2b2 and philter','false positive':'appears in automatically philtered notes only', 'false negative':'appears in manually annotated notes only'})
 
 
 	if problem_files_log.empty == False:
@@ -330,12 +330,12 @@ def date_shift_evaluation(output_directory,date_shift_log_i2b2,date_shift_log,pr
 	# count of False positives (shows in actual only)
 	s1_false_positive = output_eval***REMOVED***output_eval***REMOVED***'classification'***REMOVED*** == "false positive"***REMOVED***.count()***REMOVED***"Input Date"***REMOVED***
 	false_positives = s1_false_positive
-	print ("false positives: " + str(false_positives))
+	print ("false positives (appears in manually annotated notes only): " + str(false_positives))
 
 	# count of False negative (shows in predicted only)
 	s1_false_negative = output_eval***REMOVED***output_eval***REMOVED***'classification'***REMOVED*** == "false negative"***REMOVED***.count()***REMOVED***"Input Date"***REMOVED***
 	false_negatives = s1_false_negative
-	print ("false negatives: " + str(false_negatives))
+	print ("false negatives: (appears in auto philtered notes only) " + str(false_negatives))
 	print ("\nwriting out eval record to: " + output_directory + "date_shift_eval.csv")
 	print ("\n______________________________________________\n")
 
@@ -352,15 +352,15 @@ def main():
                     type=str)
 	parser.add_argument("-o","--output_dir", default="data/surrogator/philter_results_output/", help="specifiy the output directory",
                     type=str)
-	parser.add_argument("-ii","--i2b2_input_dir", default="data/surrogator/testing-PHI-Gold-fixed", help="specifiy the input i2b2 directory",
+	parser.add_argument("-ii","--gold_anno_input_dir", default="data/surrogator/testing-PHI-Gold-fixed", help="specifiy the input gold manually annotated directory",
                     type=str)
-	parser.add_argument("-io","--i2b2_output_dir", default="data/surrogator/testing-PHI-Gold-fixed-output/", help="specifiy the i2b2 output directory",
+	parser.add_argument("-io","--gold_anno_output_dir", default="data/surrogator/testing-PHI-Gold-fixed-output/", help="specifiy the gold manually annotated output directory",
 		            type=str)
 	parser.add_argument("-rp","--rerun_philter", default=False, help="This will re-run the philter surrogating. It takes a while, so default is false",
                     type=bool)
-	parser.add_argument("-ri","--rerun_i2b2", default=False, help="This will re-run the i2b2 gold standard surrogating. It takes a while, so default is false",
+	parser.add_argument("-ri","--rerun_i2b2", default=False, help="This will re-run the manually annotated gold standard surrogating. It takes a while, so default is false",
                     type=bool)	
-	parser.add_argument("-e","--evaluation", default=True, help="This will run the evaluation comparing surrogated i2b2 with surrogated philter notes",
+	parser.add_argument("-e","--evaluation", default=True, help="This will run the evaluation comparing surrogated manually gold annotated with surrogated auto philter notes",
                     type=bool)	
 	parser.add_argument("-t","--test", default=False, help="This will run the test, using less files",
                     type=bool)
@@ -374,8 +374,8 @@ def main():
 	parsed = parser.parse_args()
 	directory = vars(parsed)***REMOVED***"input_dir"***REMOVED***
 	output_directory = vars(parsed)***REMOVED***"output_dir"***REMOVED***
-	i2b2_directory = vars(parsed)***REMOVED***"i2b2_input_dir"***REMOVED***
-	i2b2_output_directory = vars(parsed)***REMOVED***"i2b2_output_dir"***REMOVED***
+	gold_anno_directory = vars(parsed)***REMOVED***"gold_anno_input_dir"***REMOVED***
+	gold_anno_output_directory = vars(parsed)***REMOVED***"gold_anno_output_dir"***REMOVED***
 	rerun_i2b2 = vars(parsed)***REMOVED***"rerun_i2b2"***REMOVED***
 	rerun_philter = vars(parsed)***REMOVED***"rerun_philter"***REMOVED***
 	evaluation = vars(parsed)***REMOVED***"evaluation"***REMOVED***
@@ -388,8 +388,8 @@ def main():
 	if test:
 		directory = "data/surrogator/test/philter_results_test"
 		output_directory = "data/surrogator/test/philter_results_output_test/"
-		i2b2_directory = "data/surrogator/test/testing-PHI-Gold-fixed_test"
-		i2b2_output_directory = "data/surrogator/test/testing-PHI-Gold-fixed-output_test/"
+		gold_anno_directory = "data/surrogator/test/testing-PHI-Gold-fixed_test"
+		gold_anno_output_directory = "data/surrogator/test/testing-PHI-Gold-fixed-output_test/"
 		write_surrogated_files = True
 		verbose = True
 
@@ -405,10 +405,10 @@ def main():
 		raise Exception("directory does not exist", directory)
 	if not os.path.exists(output_directory):
 		raise Exception("output_directory does not exist", output_directory)
-	if not os.path.exists(i2b2_directory):
-		raise Exception("i2b2_directory does not exist", i2b2_directory)
-	if not os.path.exists(i2b2_output_directory):
-		raise Exception("i2b2_output_directory does not exist", i2b2_output_directory)
+	if not os.path.exists(gold_anno_directory):
+		raise Exception("gold_anno_directory does not exist", gold_anno_directory)
+	if not os.path.exists(gold_anno_directory):
+		raise Exception("gold_anno_directory does not exist", gold_anno_directory)
 
 	print ("\nRunning Surrogator...\n")
 
@@ -429,14 +429,14 @@ def main():
 
 	if rerun_i2b2 or test:
 		print ("Running Surrogator on i2b2 notes...\n")
-		date_shift_log_i2b2, surrogate_log_i2b2,problem_files_log = parse_xml_files(i2b2_directory,i2b2_output_directory,"deIdi2b2",write_surrogated_files,problem_files_log,verbose)
+		date_shift_log_i2b2, surrogate_log_i2b2,problem_files_log = parse_xml_files(gold_anno_directory,gold_anno_directory,"deIdi2b2",write_surrogated_files,problem_files_log,verbose)
 		if verbose:
-			write_logs(i2b2_output_directory,date_shift_log_i2b2, surrogate_log_i2b2)
+			write_logs(gold_anno_directory,date_shift_log_i2b2, surrogate_log_i2b2)
 	else:
 		try:
-			print ("Skipping re-running surrogator on i2b2 notes. Reading from: \n    "+i2b2_output_directory+"shifted_dates.csv")
-			surrogate_log_i2b2 = pd.read_csv(i2b2_output_directory+'surrogated_text.csv')
-			date_shift_log_i2b2 = pd.read_csv(i2b2_output_directory+'shifted_dates.csv')
+			print ("Skipping re-running surrogator on i2b2 notes. Reading from: \n    "+gold_anno_directory+"shifted_dates.csv")
+			surrogate_log_i2b2 = pd.read_csv(gold_anno_directory+'surrogated_text.csv')
+			date_shift_log_i2b2 = pd.read_csv(gold_anno_directory+'shifted_dates.csv')
 		except:
 			print ("You have not run the surrogator with --rerun_i2b2=True yet. Please re-run with this parameter set to true"			)
 
@@ -450,7 +450,7 @@ def main():
 		write_summary(date_shift_log,surrogate_log,output_directory)
 		print ("\n______________________________________________")
 		print ("\nI2B2 Notes")
-		write_summary(date_shift_log_i2b2,surrogate_log_i2b2,i2b2_output_directory)
+		write_summary(date_shift_log_i2b2,surrogate_log_i2b2,gold_anno_directory)
 		date_shift_evaluation(output_directory,date_shift_log_i2b2,date_shift_log,problem_files_log)
 
 if __name__ == "__main__":
