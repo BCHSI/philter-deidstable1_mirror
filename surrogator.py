@@ -307,11 +307,10 @@ def date_shift_evaluation(output_directory,date_shift_log_i2b2,date_shift_log,pr
     Saves a more granular file of all of these to output_directory
 	"""
 
-	s1 = pd.merge(date_shift_log_i2b2, date_shift_log,indicator=True, how='outer', on=***REMOVED***'Filename','start','end','Input Date'***REMOVED***)
-	output_eval = s1***REMOVED******REMOVED***"Filename","Input Date","_merge"***REMOVED******REMOVED***
+	output_eval = pd.merge(date_shift_log_i2b2, date_shift_log,indicator=True, how='outer', on=***REMOVED***'Filename','start','end','Input Date','Parsed Date','Shifted Date','Time Delta'***REMOVED***)
 	output_eval = output_eval.rename(index=str, columns={"_merge": "classification"})
 	output_eval***REMOVED***"classification"***REMOVED*** = output_eval***REMOVED***'classification'***REMOVED***.replace({'both': 'true positive','left_only': 'false negative', 'right_only': 'false positive'})
-	output_eval***REMOVED***"description"***REMOVED*** = output_eval***REMOVED***'classification'***REMOVED***.replace({'true positive':'appears in both i2b2 and philter','false positive':'appears in automatically philtered notes only', 'false negative':'appears in manually annotated notes only'})
+	output_eval***REMOVED***"description"***REMOVED*** = output_eval***REMOVED***'classification'***REMOVED***.replace({'true positive':'appears in both auto philtered and gold manually anno notes','false positive':'appears in auto philtered notes only', 'false negative':'appears in manually anno notes only'})
 
 
 	if problem_files_log.empty == False:
@@ -325,17 +324,17 @@ def date_shift_evaluation(output_directory,date_shift_log_i2b2,date_shift_log,pr
 	s1_true_positive = output_eval***REMOVED***output_eval***REMOVED***'classification'***REMOVED*** == "true positive"***REMOVED***.count()***REMOVED***"Input Date"***REMOVED***
 	true_positives = s1_true_positive
 	print ("\n______________________________________________")
-	print ("\nSummary Stats: \ntrue positives: " + str(true_positives))
+	print ("\nSummary Stats: \ntrue positives (appear in both gold manually anno and auto philtered notes): " + str(true_positives))
 
 	# count of False positives (shows in actual only)
 	s1_false_positive = output_eval***REMOVED***output_eval***REMOVED***'classification'***REMOVED*** == "false positive"***REMOVED***.count()***REMOVED***"Input Date"***REMOVED***
 	false_positives = s1_false_positive
-	print ("false positives (appears in manually annotated notes only): " + str(false_positives))
+	print ("false positives (appears in auto philter'd notes only): " + str(false_positives))
 
 	# count of False negative (shows in predicted only)
 	s1_false_negative = output_eval***REMOVED***output_eval***REMOVED***'classification'***REMOVED*** == "false negative"***REMOVED***.count()***REMOVED***"Input Date"***REMOVED***
 	false_negatives = s1_false_negative
-	print ("false negatives: (appears in auto philtered notes only) " + str(false_negatives))
+	print ("false negatives: (appears in manually anno notes only) " + str(false_negatives))
 	print ("\nwriting out eval record to: " + output_directory + "date_shift_eval.csv")
 	print ("\n______________________________________________\n")
 
@@ -407,8 +406,8 @@ def main():
 		raise Exception("output_directory does not exist", output_directory)
 	if not os.path.exists(gold_anno_directory):
 		raise Exception("gold_anno_directory does not exist", gold_anno_directory)
-	if not os.path.exists(gold_anno_directory):
-		raise Exception("gold_anno_directory does not exist", gold_anno_directory)
+	if not os.path.exists(gold_anno_output_directory):
+		raise Exception("gold_anno_output_directory does not exist", gold_anno_output_directory)
 
 	print ("\nRunning Surrogator...\n")
 
@@ -429,14 +428,14 @@ def main():
 
 	if rerun_i2b2 or test:
 		print ("Running Surrogator on i2b2 notes...\n")
-		date_shift_log_i2b2, surrogate_log_i2b2,problem_files_log = parse_xml_files(gold_anno_directory,gold_anno_directory,"deIdi2b2",write_surrogated_files,problem_files_log,verbose)
+		date_shift_log_i2b2, surrogate_log_i2b2,problem_files_log = parse_xml_files(gold_anno_directory,gold_anno_output_directory,"deIdi2b2",write_surrogated_files,problem_files_log,verbose)
 		if verbose:
-			write_logs(gold_anno_directory,date_shift_log_i2b2, surrogate_log_i2b2)
+			write_logs(gold_anno_output_directory,date_shift_log_i2b2, surrogate_log_i2b2)
 	else:
 		try:
-			print ("Skipping re-running surrogator on i2b2 notes. Reading from: \n    "+gold_anno_directory+"shifted_dates.csv")
-			surrogate_log_i2b2 = pd.read_csv(gold_anno_directory+'surrogated_text.csv')
-			date_shift_log_i2b2 = pd.read_csv(gold_anno_directory+'shifted_dates.csv')
+			print ("Skipping re-running surrogator on i2b2 notes. Reading from: \n    "+gold_anno_output_directory+"shifted_dates.csv")
+			surrogate_log_i2b2 = pd.read_csv(gold_anno_output_directory+'surrogated_text.csv')
+			date_shift_log_i2b2 = pd.read_csv(gold_anno_output_directory+'shifted_dates.csv')
 		except:
 			print ("You have not run the surrogator with --rerun_i2b2=True yet. Please re-run with this parameter set to true"			)
 
@@ -450,7 +449,7 @@ def main():
 		write_summary(date_shift_log,surrogate_log,output_directory)
 		print ("\n______________________________________________")
 		print ("\nI2B2 Notes")
-		write_summary(date_shift_log_i2b2,surrogate_log_i2b2,gold_anno_directory)
+		write_summary(date_shift_log_i2b2,surrogate_log_i2b2,gold_anno_output_directory)
 		date_shift_evaluation(output_directory,date_shift_log_i2b2,date_shift_log,problem_files_log)
 
 if __name__ == "__main__":
