@@ -7,6 +7,14 @@ We define three units to test Philter: blacklist, whitelist and regular expressi
 
 #### Run unit tests
 
+To run the tests just navigate to the tests/ directory type the following command:
+```
+python3 test.py <main_script_path>
+```
+For example:
+```
+python3 test.py ../main.py
+```
 #### Add your own test cases
 We created utilities for adding test cases so that you can use one or two command lines to add your own test cases easily. You also have the choice to delete the added test cases if the test cases are no longer needed. The utility also supports standard input for quick testing. 
 
