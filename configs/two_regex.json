@@ -1,0 +1,24 @@
+[
+	
+	{
+		"title":"two a's",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/mohamed_two_a.txt",
+		"notes":""
+    },
+    {
+		"title":"three a's",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/mohamed_three_a.txt",
+		"notes":""
+	},
+	{
+    	"title":"No catchall",
+		"type":"regex",
+		"exclude":false,
+		"filepath":"filters/regex/catchall.txt",
+		"notes":"This should match anything, preventing the catchall"
+	}
+]

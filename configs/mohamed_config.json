@@ -1,0 +1,25 @@
+[
+	
+	{
+		"title":"all numbers",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/mohamed_only_numbers.txt",
+		"notes":"This should keep all numbers"
+	},
+    {
+        "title": "Male/Female Blacklist",
+        "type": "set",
+        "exclude": true,
+        "filepath": "filters/blacklists/mohamed_black_list.json",
+        "pos": [],
+        "notes": "This should remove all instances of male and female."
+	},
+	{
+    	"title":"No catchall",
+		"type":"regex",
+		"exclude":false,
+		"filepath":"filters/regex/catchall.txt",
+		"notes":"This should match anything, preventing the catchall"
+	}
+]

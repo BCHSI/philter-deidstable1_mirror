@@ -110,3 +110,13 @@ venv.bak/
 # mypy
 .mypy_cache/./generate_dataset/phi_notes_ucsf.json
 generate_dataset_files
+tests/white_list/1/program_output/.DS_Store.txt
+tests/white_list/1/program_output/1.txt
+tests/regex/3/program_output/3.txt
+tests/regex/3/program_output/.DS_Store.txt
+tests/regex/2/program_output/2.txt
+tests/regex/2/program_output/.DS_Store.txt
+tests/regex/1/program_output/1.txt
+tests/regex/1/program_output/.DS_Store.txt
+tests/black_list/1/program_output/JohnHopkins is located in Baltimore..txt
+tests/black_list/1/program_output/1.txt

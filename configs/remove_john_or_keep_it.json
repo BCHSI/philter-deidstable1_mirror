@@ -1,0 +1,34 @@
+[
+    
+
+	{
+		"title":"keep what is after and",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/mohamed_word_after_and.txt",
+		"notes":""
+    },
+    {
+		"title":"whitelist for john",
+		"type":"set",
+        "exclude":false,
+        "pos": [],
+		"filepath":"filters/blacklists/one_word.pkl",
+		"notes":""
+    },
+    {
+		"title":"blacklist for john",
+		"type":"set",
+        "exclude":true,
+        "pos": [],
+		"filepath":"filters/blacklists/one_word.pkl",
+		"notes":""
+	},
+	{
+    	"title":"No catchall",
+		"type":"regex",
+		"exclude":false,
+		"filepath":"filters/regex/catchall.txt",
+		"notes":"This should match anything, preventing the catchall"
+	}
+]
