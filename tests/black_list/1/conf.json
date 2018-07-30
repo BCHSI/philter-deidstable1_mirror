@@ -1,0 +1,18 @@
+[
+	{
+		"title":"Blacklist Example",
+		"type":"set",
+		"exclude":true,
+		"filepath":"filters/blacklists/john.pkl",
+		"pos":[],
+		"notes":"remove all instances of 'john'"
+	},
+	{
+    	"title":"No catchall",
+		"type":"regex",
+		"exclude":false,
+		"filepath":"filters/regex/catchall.txt",
+		"notes":"This should match anything, preventing the catchall"
+	}
+		
+]

@@ -1,0 +1,11 @@
+[
+	{
+		"title":"Whitelist Example",
+		"type":"set",
+		"exclude":false,
+		"filepath":"filters/blacklists/john.pkl",
+		"pos":[],
+		"notes":"whitelist one word "
+	}
+		
+]

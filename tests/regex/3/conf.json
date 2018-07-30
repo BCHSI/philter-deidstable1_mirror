@@ -1,0 +1,25 @@
+[
+
+	{
+		"title":"lives in",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/addresses/lives_in.txt",
+		"notes":"This should remove anything with pattern lives in "
+	},
+  	{
+		"title":"in city",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/addresses/in_city.txt",
+		"notes":"This should remove anything with pattern lives in "
+	},
+
+  	{
+    	"title":"No catchall",
+		"type":"regex",
+		"exclude":false,
+		"filepath":"filters/regex/catchall.txt",
+		"notes":"This should match anything, preventing the catchall"
+	}
+]
