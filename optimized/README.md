@@ -4,7 +4,7 @@
 
 1. Avoid unnecessary calls to the POS tagger by `map_set()` and `map_pos()`.
 2. Avoid redundant tokenization in `map_set()` and `map_pos()`.
-3. Eliminate POS computation by storing the POS data offline (to a file) and just load them each time Philter is run.
+3. Eliminate POS computation by storing the POS data offline (to a file) and just load them each time Philter is run. If there are no pos files locally, philter will create them the first time you run it. The default directory for storing the pos files is `./data/pos_data`
 
 ### How to run?
 
