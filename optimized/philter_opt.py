@@ -93,6 +93,11 @@ class Philter:
         #create a memory for clean words
         #self.clean_words = {}
 
+        #create directory for pos data if it doesn't exist
+        pos_path = "./data/pos_data/"
+        if not os.path.isdir(pos_path):
+            os.mkdir(pos_path)
+
         #initialize our patterns
         self.init_patterns()
 
