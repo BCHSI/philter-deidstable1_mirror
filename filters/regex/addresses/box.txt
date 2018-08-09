@@ -1,1 +1,1 @@
-\b(?i)box\s\d+\b
+\b(?i)(p\.o\.\s)?box\s\d+\b

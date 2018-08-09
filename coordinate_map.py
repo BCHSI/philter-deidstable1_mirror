@@ -1,4 +1,6 @@
 import numpy
+import itertools
+import re
 
 class CoordinateMap:
 	""" 
@@ -103,6 +105,7 @@ class CoordinateMap:
 			# 	print(filename,start,stop,pattern)
 
 		return True, None
+
 
 	def remove(self, filename, start, stop):
 		""" Removes this coordinate pairing from the map, all_coords, and coord2pattern"""
@@ -211,6 +214,44 @@ class CoordinateMap:
 	def add_file(self, filename):
 		""" add our fileto map, may not have any coordinates"""
 		self.map[filename] = {}
+	
+	def get_complement(self, filename, text):
+		""" get the complementary coordinates of the input coordinate map (excluding punctuation)"""
+		
+		complement_coordinate_map = {}
+
+		current_map_coordinates = []
+		for start_key in self.map[filename]:
+			start = start_key
+			stop = self.map[filename][start_key]
+			current_map_coordinates += range(start,stop)
+
+		text_coordinates = list(range(0,len(text)))
+		complement_coordinates = list(set(text_coordinates) - set(current_map_coordinates))
+
+		# Remove punctuation from complement coordinates
+		punctuation_matcher = re.compile(r"[^a-zA-Z0-9*]")
+		for i in range(0, len(text)):
+			if punctuation_matcher.match(text[i]):
+				if i in complement_coordinates:
+					complement_coordinates.remove(i)
+		
+		# Group complement coordinates into ranges
+		def to_ranges(iterable):
+		    iterable = sorted(set(iterable))
+		    for key, group in itertools.groupby(enumerate(iterable), lambda t: t[1] - t[0]):
+		        group = list(group)
+		        yield group[0][1], group[-1][1]+1
+
+		complement_coordinate_ranges = list(to_ranges(complement_coordinates))
+
+		# Create complement dictionary
+		for tup in complement_coordinate_ranges:
+			start = tup[0]
+			stop = tup[1]
+			complement_coordinate_map[start] = stop
+
+		return complement_coordinate_map
 
 
 

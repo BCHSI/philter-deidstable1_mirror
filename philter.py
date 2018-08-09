@@ -24,6 +24,8 @@ class Philter:
             self.verbose = config["verbose"]
         if "run_eval" in config:
             self.run_eval = config["run_eval"]
+        if "dependent" in config:
+            self.dependent = config["dependent"]
         if "freq_table" in config:
             self.freq_table = config["freq_table"]                       
         if "finpath" in config:
@@ -86,7 +88,7 @@ class Philter:
     def init_patterns(self):
         """ given our input pattern config will load our sets and pre-compile our regex"""
 
-        known_pattern_types = set(["regex", "set", "stanford_ner", "pos_matcher", "match_all"])
+        known_pattern_types = set(["regex", "set", "regex_context","stanford_ner", "pos_matcher", "match_all"])
         require_files = set(["regex", "set"])
         require_pos = set(["pos_matcher"])
         set_filetypes = set(["pkl", "json"])
@@ -107,7 +109,11 @@ class Philter:
                 if pattern["filepath"].split(".")[-1] not in set_filetypes:
                     raise Exception("Invalid filteype", pattern["filepath"], "must be of", set_filetypes)
                 self.patterns[i]["data"] = self.init_set(pattern["filepath"])  
-            elif pattern["type"] == "regex":
+            if pattern["type"] == "regex":
+                if pattern["filepath"].split(".")[-1] not in regex_filetypes:
+                    raise Exception("Invalid filteype", pattern["filepath"], "must be of", regex_filetypes)
+                self.patterns[i]["data"] = self.precompile(pattern["filepath"])
+            elif pattern["type"] == "regex_context":
                 if pattern["filepath"].split(".")[-1] not in regex_filetypes:
                     raise Exception("Invalid filteype", pattern["filepath"], "must be of", regex_filetypes)
                 self.patterns[i]["data"] = self.precompile(pattern["filepath"])
@@ -162,12 +168,15 @@ class Philter:
                 encoding = self.detect_encoding(filename)
                 txt = open(filename,"r", encoding=encoding['encoding']).read()
 
+                #### Create inital self.exclude/include for file
 
                 for i,pat in enumerate(self.patterns):
                     if pat["type"] == "regex":
                         self.map_regex(filename=filename, text=txt, pattern_index=i)
                     elif pat["type"] == "set":
                         self.map_set(filename=filename, text=txt, pattern_index=i)
+                    elif pat["type"] == "regex_context":
+                        self.map_regex_context(filename=filename, text=txt, pattern_index=i)
                     elif pat["type"] == "stanford_ner":
                         self.map_ner(filename=filename, text=txt, pattern_index=i)
                     elif pat["type"] == "pos_matcher":
@@ -176,6 +185,10 @@ class Philter:
                         self.match_all(filename=filename, text=txt, pattern_index=i)
                     else:
                         raise Exception("Error, pattern type not supported: ", pat["type"])
+                    ###### 4. Update self.exclude/include
+
+                ##### 3. self.include/self.exclude --> for testing purposes (will disappear)
+                ##### 6. find complement - PHI --> add to exclude map (carved out of transform)
 
         #clear out any data to save ram
         for i,pat in enumerate(self .patterns):
@@ -203,7 +216,7 @@ class Philter:
             for m in matches:
                 #if filename == './data/i2b2_notes_updated/373-04.txt':
                 # if self.patterns[pattern_index]["title"] == "YYYY/MM-YYYY/MM":
-                # if 'Anal' in m.group() or 'CMS' in m.group() or 'Neoplasia' in m.group():
+                # if 'David' in m.group():
                 #     print(self.patterns[pattern_index]["title"])
                 #     print(m.group())
                 #     print(filename)
@@ -246,6 +259,156 @@ class Philter:
 
             self.patterns[pattern_index]["coordinate_map"] = coord_map
 
+
+    def create_full_include_exclude_map(self, filename=""):
+        
+
+        encoding = self.detect_encoding(filename)
+        txt = open(filename,"r", encoding=encoding['encoding']).read()
+        #record we use to evaluate our effectiveness   
+        
+        exclude_map = CoordinateMap()
+
+        exclude_map.add_file(filename)
+
+        #create an interestion map of all coordinates we'll be keeping
+        include_map = CoordinateMap()
+
+        include_map.add_file(filename)
+
+        for i,pattern in enumerate(self.patterns):
+            # print('\n',i, ':')
+            coord_map = pattern["coordinate_map"]
+            exclude = pattern["exclude"]
+            try:
+                filter_path = pattern["filepath"]
+            except KeyError:
+                filter_path = pattern["title"]
+
+
+            for start,stop in coord_map.filecoords(filename):
+                if exclude:
+                    if not include_map.does_overlap(filename, start, stop):
+                        exclude_map.add_extend(filename, start, stop)
+
+                else:
+                    if not exclude_map.does_overlap(filename, start, stop):
+
+                        include_map.add_extend(filename, start, stop)
+
+
+                    else:
+                        pass
+
+        # Return include map that does NOT include punctuation
+        return include_map
+
+
+    def map_regex_context(self, filename="", text="", pattern_index=-1,  pre_process= r"[^a-zA-Z0-9\.]"):
+        """ map_regex_context creates a coordinate map from combined regex + PHI coordinates 
+        of all previously mapped patterns
+        """
+        punctuation_matcher = re.compile(r"[^a-zA-Z0-9*]")
+
+        if not os.path.exists(filename):
+            raise Exception("Filepath does not exist", filename)
+
+        if pattern_index < 0 or pattern_index >= len(self.patterns):
+            raise Exception("Invalid pattern index: ", pattern_index, "pattern length", len(patterns))
+        
+        coord_map = self.patterns[pattern_index]["coordinate_map"]
+        regex = self.patterns[pattern_index]["data"]
+        context = self.patterns[pattern_index]["context"]
+
+        in_path = self.finpath
+        out_path = self.foutpath
+
+
+        if not os.path.exists(in_path):
+            raise Exception("File input path does not exist", in_path)
+        
+        if not os.path.exists(out_path):
+            raise Exception("File output path does not exist", out_path)
+
+
+        # 1. Get coordinates of all include and exclude mathches
+
+        current_include_map = self.create_full_include_exclude_map(filename)
+        
+        # Create complement map           
+        full_exclude_map = current_include_map.get_complement(filename, text)
+
+        punctuation_matcher = re.compile(r"[^a-zA-Z0-9*]")
+        # 2. Find all patterns expressions that match regular expression
+        matches = regex.finditer(text)
+        
+        for m in matches:
+            
+            # initialize phi_left and phi_right
+            phi_left = False
+            phi_right = False
+            
+            match_start = m.span()[0]
+            match_end = m.span()[1]
+
+            # PHI context left and right
+            phi_starts = []
+            phi_ends = []
+            for start in full_exclude_map:
+                phi_starts.append(start)
+                phi_ends.append(full_exclude_map[start])
+            
+            if match_start in phi_ends:
+                phi_left = True
+            
+            if match_end in phi_starts:
+                phi_right = True
+
+            # Get index of m.group()first alphanumeric character in match
+            tokenized_matches = []
+            match_text = m.group()
+            split_match = re.split("(\s+)", re.sub(pre_process, " ", match_text))
+
+            # Get all spans of tokenized match (because remove() function requires tokenized start coordinates)
+            coord_tracker = 0
+            for element in split_match:
+                if element != '':
+                    if not punctuation_matcher.match(element[0]):
+                        current_start = match_start + coord_tracker
+                        current_end = current_start + len(element)
+                        tokenized_matches.append((current_start, current_end))
+
+                        coord_tracker += len(element)
+                    else:
+                        coord_tracker += len(element)
+
+       
+            # Left only
+            if context == "left":
+                if phi_left == True and phi_right == False:
+                    for item in tokenized_matches:
+                        coord_map.add_extend(filename, item[0], item[1])
+
+            # Right only
+            elif context == "right":
+                if phi_right == True and phi_left == False:
+                    for item in tokenized_matches:
+                        coord_map.add_extend(filename, item[0], item[1])
+
+            # Left or right
+            elif context == "left_or_right":
+                if phi_right == True or phi_left == True:
+                    for item in tokenized_matches:
+                        coord_map.add_extend(filename, item[0], item[1])
+
+            # Left AND right
+            else:
+                if phi_right == True and phi_left == True:
+                    for item in tokenized_matches:
+                        coord_map.add_extend(filename, item[0], item[1])
+
+    
+        self.patterns[pattern_index]["coordinate_map"] = coord_map
 
 
     def match_all(self, filename="", text="", pattern_index=-1):
@@ -542,40 +705,64 @@ class Philter:
                     filter_path = pattern["title"]
                 if "phi_type" in pattern:
                     phi_type = pattern["phi_type"]
+
                 # self.patterns[pattern_index]["title"]
                 else:
                     phi_type = "OTHER"
-
+                
                 for start,stop in coord_map.filecoords(filename):
-                    if exclude:
-                        if not include_map.does_overlap(filename, start, stop):
-                            exclude_map.add_extend(filename, start, stop)
-                            # if self.i2b2 format?
-                            phi_type_dict[phi_type][0].add_extend(filename, start, stop)
-                            # print('\n')
-                            # for start, stop in phi_type_dict[phi_type][0].filecoords(filename):
-                            #     print(start,stop, txt[start:stop], filter_path)
 
+                    if pattern['type'] != 'regex_context':
+                        if exclude:
+                            if not include_map.does_overlap(filename, start, stop):
+                                exclude_map.add_extend(filename, start, stop)
+                                # if self.i2b2 format?
+                                phi_type_dict[phi_type][0].add_extend(filename, start, stop)
 
+                        else:
+                            if not exclude_map.does_overlap(filename, start, stop):
+                                #print("include", start, stop, txt[start:stop])
+                                include_map.add_extend(filename, start, stop)
+                                # if self.i2b2 format?
+                                data["non-phi"].append({"start":start, "stop":stop, "word":txt[start:stop], "filepath":filter_path})
+                                # include punctuation!
+                                if self.eval:
+                                    data_all_files[filename]["non-phi"].append({"start":start, "stop":stop, "word":txt[start:stop], "filepath":filter_path})
+
+                            else:
+                                pass
+                
+                    # Add regex_context to map
                     else:
-                        if not exclude_map.does_overlap(filename, start, stop):
-                            #print("include", start, stop, txt[start:stop])
+                        if exclude:
+                            exclude_map.add_extend(filename, start, stop)
+                            include_map.remove(filename, start, stop)
+                            phi_type_dict[phi_type][0].add_extend(filename, start, stop)
+                        else:
                             include_map.add_extend(filename, start, stop)
-                            # if self.i2b2 format?
+                            exclude_map.remove(filename, start, stop)
                             data["non-phi"].append({"start":start, "stop":stop, "word":txt[start:stop], "filepath":filter_path})
                             if self.eval:
                                 data_all_files[filename]["non-phi"].append({"start":start, "stop":stop, "word":txt[start:stop], "filepath":filter_path})
 
-                        else:
-                            pass
-                            #print("include overlapped", start, stop, txt[start:stop])
-                
-            
+
+
+                ### need another for loop over the text that matches punctuation --> add to non-PHI
+                ### find complement of non-PHI
+                ### at some point, need to combine unknown PHI and known PHI
+    
+    ### Create before!!!
+    # For loop over unknown (complement of non-PHI + punctuation)
+        # add additional tags if does not overlap with known PHI (complement - PHI)
+    ###
+
             # Add results of separate phi type maps to data
             # if self.i2b2 format? 
             for list_phi_type in phi_type_list:
                 for start,stop in phi_type_dict[list_phi_type][0].filecoords(filename):
                     data["phi"].append({"start":start, "stop":stop, "word":txt[start:stop],"phi_type":list_phi_type, "filepath":filter_path})
+                    # Needs to also include coordinates not marked as either exclude/include (complement of data non-PHI) 
+                    # Could add separate field to data for complement of include + punctuation
                     if self.eval:
                         data_all_files[filename]["phi"].append({"start":start, "stop":stop, "word":txt[start:stop],"phi_type":list_phi_type, "filepath":filter_path})
 
@@ -655,6 +842,9 @@ class Philter:
             contents.append("\" TYPE=\"")
             contents.append(phi_type)
             contents.append("\" comment=\"\" />\n")
+        
+
+        # for loop over complement - PHI, create additional tags (UNKNOWN)
         contents.append("</TAGS>\n")
         contents.append("</"+root+">\n")
         
@@ -825,7 +1015,8 @@ class Philter:
         if not os.path.exists(fp_output):
             raise Exception("False Positive Filepath does not exist", fp_output)
 
-        print("RUNNING EVAL")
+        if self.verbose:
+            print("RUNNING EVAL")
             
         
         summary = {
@@ -974,19 +1165,20 @@ class Philter:
         json.dump(all_fn, open(fn_output, "w"), indent=4)
         json.dump(all_fp, open(fp_output, "w"), indent=4)
         
-        print('\n')
-        print("Uncorrected Results:")
-        print('\n')
-        print("TP:", summary["total_true_positives"],"FN:", summary["total_false_negatives"], "TN:", summary["total_true_negatives"], "FP:", summary["total_false_positives"])
-        print("Global Recall: {:.2%}".format(recall))
-        print("Global Precision: {:.2%}".format(precision))
-        print("Global Retention: {:.2%}".format(retention))
+        if self.verbose:
+            print('\n')
+            print("Uncorrected Results:")
+            print('\n')
+            print("TP:", summary["total_true_positives"],"FN:", summary["total_false_negatives"], "TN:", summary["total_true_negatives"], "FP:", summary["total_false_positives"])
+            print("Global Recall: {:.2%}".format(recall))
+            print("Global Precision: {:.2%}".format(precision))
+            print("Global Retention: {:.2%}".format(retention))
 
 
         ###################### Get phi tags #####################
-
-        print('\n')
-        print("RUNNING ERRORCHECK")
+        if self.verbose:
+            print('\n')
+            print("RUNNING ERRORCHECK")
 
         # Get xml summary
         phi = self.xml
@@ -1067,7 +1259,7 @@ class Philter:
             'Unclear':'Other'
             }
             
-            ucsf_include_tags = ['Date','Provider_Name','Phone_Fax','Patient_Name_or_Family_Member_Name','Patient_Address','Provider_Address_or_Location','Provider_Certificate_or_License','Patient_Medical_Record_Id','Patient_Account_Number','Patient_Social_Security_Number','Patient_Vehicle_or_Device_Id','Patient_Unique_Id','Email','URL_IP','Patient_Biometric_Id_or_Face_Photo','Patient_Certificate_or_License']
+            ucsf_include_tags = ['Date','Provider_Name','Phone_Fax','Patient_Name_or_Family_Member_Name','Patient_Address','Provider_Address_or_Location','Provider_Certificate_or_License','Patient_Medical_Record_Id','Patient_Account_Number','Patient_Social_Security_Number','Patient_Vehicle_or_Device_Id','Patient_Unique_Id','Email','URL_IP','Patient_Biometric_Id_or_Face_Photo','Patient_Certificate_or_License','Age','Patient_Initials','Provider_Initials']
 
 
             rp_summaries = {}
@@ -1083,6 +1275,8 @@ class Philter:
         # Diciontary values look like: [phi_count, non-phi_count]
         unigram_dict = {}
         bigram_dict = {}
+        corrected_age_fns = 0
+
 
         # Loop through all filenames in summary
         for fn in summary_coords['summary_by_file']:
@@ -1205,6 +1399,7 @@ class Philter:
 
             # Get tp counts per category
             current_tps = current_summary['true_positives']
+
             for word in current_tps:
 
                 start_coordinate_tp = word[1]
@@ -1257,6 +1452,7 @@ class Philter:
 
             fn_tag_summary = {}
             include_exclude_fns = ''
+
             # print(self.patterns)
             if current_summary['false_negatives'] != [] and current_summary['false_negatives'] != [""]:              
                 counter = 0
@@ -1271,34 +1467,37 @@ class Philter:
                     # initialize list that will hold info on what matched what
                     filter_file_list_exclude = []
                     filter_file_list_include = []
-                    # Loop through coorinate map objects and match patterns with FPs
-                    for i,pattern in enumerate(self.patterns):
-                        # print('\n',i, ':')
 
-                        coord_map = pattern["coordinate_map"]
-                        exclude_include = pattern["exclude"]
-                        try:
-                            filter_path = pattern["filepath"]
-                        except KeyError:
-                            filter_path = pattern["title"]
-                        # print('\n')
-                        # print(filter_path)
-                        for start,stop in coord_map.filecoords(input_filename):
-                            # print(start,stop,text[start:stop])
-                            # Find intersection between ranges
-                            word_range = set(range(start_coordinate_fn, start_coordinate_fn + len(false_negative)))
-                            filter_range = set(range(start, stop))
-                            intersection = word_range & filter_range
-                            if intersection != set():
-                                # print("********"+str(start_coordinate_fp)+"********")
-                                # print(false_positive)
-                                # Add this filter path to the list of things that filtered this word
-                                if exclude_include == True:
-                                    filter_file_list_exclude.append(filter_path)
-                                else:
-                                    filter_file_list_include.append(filter_path)
+                    if self.dependent:
+                        # Loop through coorinate map objects and match patterns with FPs
+                        for i,pattern in enumerate(self.patterns):
+                            # print('\n',i, ':')
 
-
+                            coord_map = pattern["coordinate_map"]
+                            exclude_include = pattern["exclude"]
+                            try:
+                                filter_path = pattern["filepath"]
+                            except KeyError:
+                                filter_path = pattern["title"]
+                            # print('\n')
+                            # print(filter_path)
+                            for start,stop in coord_map.filecoords(input_filename):
+                                # print(start,stop,text[start:stop])
+                                # Find intersection between ranges
+                                word_range = set(range(start_coordinate_fn, start_coordinate_fn + len(false_negative)))
+                                filter_range = set(range(start, stop))
+                                intersection = word_range & filter_range
+                                if intersection != set():
+                                    # print("********"+str(start_coordinate_fp)+"********")
+                                    # print(false_positive)
+                                    # Add this filter path to the list of things that filtered this word
+                                    if exclude_include == True:
+                                        filter_file_list_exclude.append(filter_path)
+                                    else:
+                                        filter_file_list_include.append(filter_path)
+                    if self.dependent == False:
+                        filter_file_list_exclude.append('')
+                        filter_file_list_include.append('')
 
                     for phi_item in phi_list:                           
                         phi_text = phi_item['text']
@@ -1365,17 +1564,43 @@ class Philter:
                                     include_exclude_fns = 'exclude'
                             if self.ucsf_format:
                                 if phi_tag in ucsf_include_tags:
-                                    include_exclude_fns = 'include'
+                                    if phi_tag != 'Age':
+                                        include_exclude_fns = 'include'
+                                    # If age is over 90, include. Else, exclude
+                                    else:
+                                        fn_stripped = false_negative.replace('.','')
+                                        # Is the age an integer?
+                                        if fn_stripped.isdigit():
+                                            if int(fn_stripped) >= 90:
+                                                include_exclude_fns = 'include'
+                                                corrected_age_fns += 1
+                                                # print('Include (int): ',fn_stripped)
+                                            else:
+                                                include_exclude_fns = 'exclude'
+                                        # Is the age a string?
+                                        # Note that this won't catch all age FNs that are spelled ou
+                                        # i.e., only the 'ninety' in 'ninety-five' will be marked as include
+                                        # This won't affect our recall at all, but it will affect our precision a little
+                                        # We will manually need to subtract theses from our FPs and add to our TPs 
+                                        else:
+                                            if 'ninety' in fn_stripped:
+                                                include_exclude_fns = 'include'
+                                                corrected_age_fns += 1
+                                                # print('Include (str): ',fn_stripped)
+                                            else:
+                                                include_exclude_fns = 'exclude'
+                                        # print(include_exclude_fns,fn_stripped)
+
                                 else:
                                     include_exclude_fns = 'exclude'
                             ###### Create output dicitonary with id/word/pos/phi
+                            #print(include_exclude_fns,false_negative)
                             fn_tag_summary[fn_id] = [false_negative, phi_tag, pos_tag, fn_context, include_exclude_fns, filter_file_list_exclude, filter_file_list_include]
                             # if phi_tag == 'AGE':
                             #     print(word)
 
             if fn_tag_summary != {}:
                 fn_tags[fn] = fn_tag_summary
-
 
 
             ####### Get FP tags #########
@@ -1397,32 +1622,36 @@ class Philter:
                     # initialize list that will hold info on what matched what
                     filter_file_list_exclude = []
                     filter_file_list_include = []
-                    # Loop through coorinate map objects and match patterns with FPs
-                    for i,pattern in enumerate(self.patterns):
-                        # print('\n',i, ':')
+                    
+                    if self.dependent:
+                        # Loop through coorinate map objects and match patterns with FPs
+                        for i,pattern in enumerate(self.patterns):
+                            # print('\n',i, ':')
 
-                        coord_map = pattern["coordinate_map"]
-                        exclude_include = pattern["exclude"]
-                        try:
-                            filter_path = pattern["filepath"]
-                        except KeyError:
-                            filter_path = pattern["title"]
-                        # print('\n')
-                        # print(filter_path)
-                        for start,stop in coord_map.filecoords(input_filename):
-                            # print(start,stop,text[start:stop])
-                            word_range = set(range(start_coordinate_fp, start_coordinate_fp + len(false_positive)))
-                            filter_range = set(range(start, stop))
-                            intersection = word_range & filter_range
-                            if intersection != set():
-                                # print("********"+str(start_coordinate_fp)+"********")
-                                # print(false_positive)
-                                # Add this filter path to the list of things that filtered this word
-                                if exclude_include == True:
-                                    filter_file_list_exclude.append(filter_path)
-                                else:
-                                    filter_file_list_include.append(filter_path)
-
+                            coord_map = pattern["coordinate_map"]
+                            exclude_include = pattern["exclude"]
+                            try:
+                                filter_path = pattern["filepath"]
+                            except KeyError:
+                                filter_path = pattern["title"]
+                            # print('\n')
+                            # print(filter_path)
+                            for start,stop in coord_map.filecoords(input_filename):
+                                # print(start,stop,text[start:stop])
+                                word_range = set(range(start_coordinate_fp, start_coordinate_fp + len(false_positive)))
+                                filter_range = set(range(start, stop))
+                                intersection = word_range & filter_range
+                                if intersection != set():
+                                    # print("********"+str(start_coordinate_fp)+"********")
+                                    # print(false_positive)
+                                    # Add this filter path to the list of things that filtered this word
+                                    if exclude_include == True:
+                                        filter_file_list_exclude.append(filter_path)
+                                    else:
+                                        filter_file_list_include.append(filter_path)
+                    if self.dependent == False:
+                        filter_file_list_exclude.append('')
+                        filter_file_list_include.append('')
             
                     pos_entry = cleaned_with_pos[str(start_coordinate_fp)]
 
@@ -1447,7 +1676,7 @@ class Philter:
 
             if fp_tag_summary != {}:
                 fp_tags[fn] = fp_tag_summary
-        
+
         # Create frequency table outputs
         if self.freq_table:
             # Unigram table
@@ -1520,7 +1749,7 @@ class Philter:
 
                 overall_data.append([tag,"{:.2%}".format(overall_recall_dict[recall_key]),str(rp_summaries[tp_key]),str(rp_summaries[fn_key])])
                 # print(tag + " Recall: " + "{:.2%}".format(overall_recall_dict[recall_key]) + " TP: " + str(rp_summaries[tp_key]) + " FN: " + str(rp_summaries[fn_key]))
-        
+
         # ucsf
         if self.ucsf_format:
             include_dict = {'fns':0,'tps':0,'fps':summary["total_false_positives"],'tns':summary["total_true_negatives"]}
@@ -1547,15 +1776,28 @@ class Philter:
 
                 # Get info for overall include dict and category dict
                 if tag in ucsf_include_tags:
-                    include_dict['fns'] += rp_summaries[fn_key]
-                    include_dict['tps'] += rp_summaries[tp_key]
+                    if tag != 'Age':
+                        include_dict['fns'] += rp_summaries[fn_key]
+                        include_dict['tps'] += rp_summaries[tp_key]
 
-                    tag_category = ucsf_category_dict[tag]
-                    category_fns = tag_category + '_fns'
-                    category_tps = tag_category + '_tps'
+                        tag_category = ucsf_category_dict[tag]
+                        category_fns = tag_category + '_fns'
+                        category_tps = tag_category + '_tps'
 
-                    category_dict[category_fns] += rp_summaries[fn_key]
-                    category_dict[category_tps] += rp_summaries[tp_key]
+                        category_dict[category_fns] += rp_summaries[fn_key]
+                        category_dict[category_tps] += rp_summaries[tp_key]
+                    else:
+                        include_dict['fns'] += corrected_age_fns
+                        include_dict['tps'] += rp_summaries[tp_key]
+                        include_dict['tns'] += (rp_summaries[fn_key] - corrected_age_fns)
+
+                        tag_category = ucsf_category_dict[tag]
+                        category_fns = tag_category + '_fns'
+                        category_tps = tag_category + '_tps'
+
+                        category_dict[category_fns] += corrected_age_fns
+                        category_dict[category_tps] += rp_summaries[tp_key]
+
                 
                 # Get additional TNs and FPs
                 if tag not in ucsf_include_tags:
@@ -1580,11 +1822,12 @@ class Philter:
         for item in overall_data:
             sorted_overall_data.append(item)
 
-        print('\n')
-        print("Recall by Tag:")
-        col_width = max(len(word) for row in sorted_overall_data for word in row) + 2  # padding
-        for row in sorted_overall_data:
-            print("".join(word.ljust(col_width) for word in row))
+        if self.verbose:
+            print('\n')
+            print("Recall by Tag:")
+            col_width = max(len(word) for row in sorted_overall_data for word in row) + 2  # padding
+            for row in sorted_overall_data:
+                print("".join(word.ljust(col_width) for word in row))
 
 
 
@@ -1611,12 +1854,12 @@ class Philter:
         sorted_category_data = [["Category","Recall","TPs","FNs"]]
         for item in category_data:
             sorted_category_data.append(item)
-
-        print('\n')
-        print('Recall by PHI Category:')
-        col_width = max(len(word) for row in category_data for word in row) + 2  # padding
-        for row in sorted_category_data:
-            print("".join(word.ljust(col_width) for word in row))
+        if self.verbose:
+            print('\n')
+            print('Recall by PHI Category:')
+            col_width = max(len(word) for row in category_data for word in row) + 2  # padding
+            for row in sorted_category_data:
+                print("".join(word.ljust(col_width) for word in row))
         
 
 

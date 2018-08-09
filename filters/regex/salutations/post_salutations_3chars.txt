@@ -1,1 +1,1 @@
-\b([A-Z]\'?[A-Z]?[\-aA-zZ]+(\s[A-Z](.)?)?(\s[A-Z]\'?[A-Z]?[\-aA-zZ]+)*)(?=(\s|\,\s)M\.D|(\s|\,\s)MD\.|(\s|\,\s)N\.P|(\s|\,\s)NP\.|(\s|\,\s)D\.O|(\s|\,\s)DO\.|(\s|\,\s)R\.N|(\s|\,\s)RN\.|(\s|\,\s)MSN|(\s|\,\s)RNC)\b
+\b([A-Z]\'?[A-Z]?[\-aA-zZ]+(\s[A-Z](.)?)?(\s[A-Z]\'?[A-Z]?[\-aA-zZ]+)*)((\,)?\sJr\.)?(\,)?(?=\sM\.D\b|\sMD\.|\sN\.P\b|\sNP\.|\sD\.O\b|\sDO\.|\sR\.N\b|\sRN\.|\sMSN\b|\sRNC\b|\sDPM\b|\sLVN\b|\sSLP\b)
