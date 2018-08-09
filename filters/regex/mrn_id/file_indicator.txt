@@ -1,0 +1,1 @@
+\b(?i)((?<=file\s)|(?<=file:\s))***REMOVED***^\s***REMOVED***+\b

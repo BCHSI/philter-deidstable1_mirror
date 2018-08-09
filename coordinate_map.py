@@ -1,4 +1,6 @@
 import numpy
+import itertools
+import re
 
 class CoordinateMap:
 	""" 
@@ -103,6 +105,7 @@ class CoordinateMap:
 			# 	print(filename,start,stop,pattern)
 
 		return True, None
+
 
 	def remove(self, filename, start, stop):
 		""" Removes this coordinate pairing from the map, all_coords, and coord2pattern"""
@@ -211,6 +214,44 @@ class CoordinateMap:
 	def add_file(self, filename):
 		""" add our fileto map, may not have any coordinates"""
 		self.map***REMOVED***filename***REMOVED*** = {}
+	
+	def get_complement(self, filename, text):
+		""" get the complementary coordinates of the input coordinate map (excluding punctuation)"""
+		
+		complement_coordinate_map = {}
+
+		current_map_coordinates = ***REMOVED******REMOVED***
+		for start_key in self.map***REMOVED***filename***REMOVED***:
+			start = start_key
+			stop = self.map***REMOVED***filename***REMOVED******REMOVED***start_key***REMOVED***
+			current_map_coordinates += range(start,stop)
+
+		text_coordinates = list(range(0,len(text)))
+		complement_coordinates = list(set(text_coordinates) - set(current_map_coordinates))
+
+		# Remove punctuation from complement coordinates
+		punctuation_matcher = re.compile(r"***REMOVED***^a-zA-Z0-9****REMOVED***")
+		for i in range(0, len(text)):
+			if punctuation_matcher.match(text***REMOVED***i***REMOVED***):
+				if i in complement_coordinates:
+					complement_coordinates.remove(i)
+		
+		# Group complement coordinates into ranges
+		def to_ranges(iterable):
+		    iterable = sorted(set(iterable))
+		    for key, group in itertools.groupby(enumerate(iterable), lambda t: t***REMOVED***1***REMOVED*** - t***REMOVED***0***REMOVED***):
+		        group = list(group)
+		        yield group***REMOVED***0***REMOVED******REMOVED***1***REMOVED***, group***REMOVED***-1***REMOVED******REMOVED***1***REMOVED***+1
+
+		complement_coordinate_ranges = list(to_ranges(complement_coordinates))
+
+		# Create complement dictionary
+		for tup in complement_coordinate_ranges:
+			start = tup***REMOVED***0***REMOVED***
+			stop = tup***REMOVED***1***REMOVED***
+			complement_coordinate_map***REMOVED***start***REMOVED*** = stop
+
+		return complement_coordinate_map
 
 
 

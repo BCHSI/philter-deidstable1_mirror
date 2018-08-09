@@ -1,0 +1,1 @@
+(_){10,}\s***REMOVED***A-Z***REMOVED******REMOVED***a-zA-Z***REMOVED***+(\-***REMOVED***a-zA-Z***REMOVED***+)?(\,)?***REMOVED*** ***REMOVED***{1,2}***REMOVED***A-Z***REMOVED******REMOVED***a-zA-Z***REMOVED***+\b
