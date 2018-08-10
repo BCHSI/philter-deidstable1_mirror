@@ -47,7 +47,7 @@ class Philter:
         if "outformat" in config:
             self.outformat = config["outformat"]
         else:
-            raise Exception("Output format undefined")
+            self.outformat = "asterisk"
         
         if "ucsfformat" in config:
             self.ucsf_format = config["ucsfformat"]
