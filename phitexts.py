@@ -2,7 +2,7 @@ import os
 from chardet.universaldetector import UniversalDetector
 
 from philter import Philter
-
+from subs import Subs
 
 class Phitexts:
     """ container for texts, phi, attributes """
@@ -11,7 +11,9 @@ class Phitexts:
         self.inputdir  = inputdir
         self.filenames = ***REMOVED******REMOVED***
         self.texts     = {}
+        #coordinateMap()
         self.coords    = ***REMOVED******REMOVED***
+        #list of PHI types
         self.types     = ***REMOVED******REMOVED***
         self.norms     = ***REMOVED******REMOVED***
         self.subs      = ***REMOVED******REMOVED***
