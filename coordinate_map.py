@@ -216,7 +216,7 @@ class CoordinateMap:
 		self.map***REMOVED***filename***REMOVED*** = {}
 	
 	def get_complement(self, filename, text):
-		""" get the complementary coordinates of the input coordinate map (excluding punctuation)"""
+		""" get the complementary coordinates of the input coordinate map (excludes punctuation)"""
 		
 		complement_coordinate_map = {}
 
