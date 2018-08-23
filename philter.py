@@ -275,24 +275,20 @@ class Philter:
                 for i,pat in enumerate(self.patterns):
                     if pat["type"] == "regex":
                         self.map_regex(filename=filename, text=txt, pattern_index=i)
-                        self.get_exclude_include_maps(filename, pat, txt)
                     elif pat["type"] == "set":
                         self.map_set(filename=filename, text=txt, pattern_index=i)
-                        self.get_exclude_include_maps(filename, pat, txt)
                     elif pat["type"] == "regex_context":
                         self.map_regex_context(filename=filename, text=txt, pattern_index=i)
-                        self.get_exclude_include_maps(filename, pat, txt)
                     elif pat["type"] == "stanford_ner":
                         self.map_ner(filename=filename, text=txt, pattern_index=i)
-                        self.get_exclude_include_maps(filename, pat, txt)
                     elif pat["type"] == "pos_matcher":
                         self.map_pos(filename=filename, text=txt, pattern_index=i)
-                        self.get_exclude_include_maps(filename, pat, txt)
                     elif pat["type"] == "match_all":
                         self.match_all(filename=filename, text=txt, pattern_index=i)
-                        self.get_exclude_include_maps(filename, pat, txt)
                     else:
                         raise Exception("Error, pattern type not supported: ", pat["type"])
+                    self.get_exclude_include_maps(filename, pat, txt)
+
 
                 #create intersection maps for all phi types and add them to a dictionary containing all maps
 
@@ -304,6 +300,7 @@ class Philter:
             if "data" in pat:
                 del self.patterns[i]["data"]
 
+        return self.full_exclude_map
                 
     def map_regex(self, filename="", text="", pattern_index=-1, pre_process= r"[^a-zA-Z0-9\.]"):
         """ Creates a coordinate map from the pattern on this data
@@ -441,30 +438,10 @@ class Philter:
                     else:
                         coord_tracker += len(element)
 
-       
-            # Left only
-            if context == "left":
-                if phi_left == True and phi_right == False:
-                    for item in tokenized_matches:
-                        coord_map.add_extend(filename, item[0], item[1])
-
-            # Right only
-            elif context == "right":
-                if phi_right == True and phi_left == False:
-                    for item in tokenized_matches:
-                        coord_map.add_extend(filename, item[0], item[1])
-
-            # Left or right
-            elif context == "left_or_right":
-                if phi_right == True or phi_left == True:
-                    for item in tokenized_matches:
-                        coord_map.add_extend(filename, item[0], item[1])
-
-            # Left AND right
-            else:
-                if phi_right == True and phi_left == True:
-                    for item in tokenized_matches:
-                        coord_map.add_extend(filename, item[0], item[1])
+            ## Check for context, and add to coordinate map
+            if (context == "left" and (phi_left == True and phi_right == False)) or (context == "right" and (phi_right == True and phi_left == False)) or (context == "left_or_right" and (phi_right == True or phi_left == True)) or (context == "left_and_right" and (phi_right == True and phi_left == True)):
+                for item in tokenized_matches:
+                    coord_map.add_extend(filename, item[0], item[1])
 
     
         self.patterns[pattern_index]["coordinate_map"] = coord_map
