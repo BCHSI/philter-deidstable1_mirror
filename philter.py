@@ -275,24 +275,20 @@ class Philter:
                 for i,pat in enumerate(self.patterns):
                     if pat***REMOVED***"type"***REMOVED*** == "regex":
                         self.map_regex(filename=filename, text=txt, pattern_index=i)
-                        self.get_exclude_include_maps(filename, pat, txt)
                     elif pat***REMOVED***"type"***REMOVED*** == "set":
                         self.map_set(filename=filename, text=txt, pattern_index=i)
-                        self.get_exclude_include_maps(filename, pat, txt)
                     elif pat***REMOVED***"type"***REMOVED*** == "regex_context":
                         self.map_regex_context(filename=filename, text=txt, pattern_index=i)
-                        self.get_exclude_include_maps(filename, pat, txt)
                     elif pat***REMOVED***"type"***REMOVED*** == "stanford_ner":
                         self.map_ner(filename=filename, text=txt, pattern_index=i)
-                        self.get_exclude_include_maps(filename, pat, txt)
                     elif pat***REMOVED***"type"***REMOVED*** == "pos_matcher":
                         self.map_pos(filename=filename, text=txt, pattern_index=i)
-                        self.get_exclude_include_maps(filename, pat, txt)
                     elif pat***REMOVED***"type"***REMOVED*** == "match_all":
                         self.match_all(filename=filename, text=txt, pattern_index=i)
-                        self.get_exclude_include_maps(filename, pat, txt)
                     else:
                         raise Exception("Error, pattern type not supported: ", pat***REMOVED***"type"***REMOVED***)
+                    self.get_exclude_include_maps(filename, pat, txt)
+
 
                 #create intersection maps for all phi types and add them to a dictionary containing all maps
 
@@ -304,6 +300,7 @@ class Philter:
             if "data" in pat:
                 del self.patterns***REMOVED***i***REMOVED******REMOVED***"data"***REMOVED***
 
+        return self.full_exclude_map
                 
     def map_regex(self, filename="", text="", pattern_index=-1, pre_process= r"***REMOVED***^a-zA-Z0-9\.***REMOVED***"):
         """ Creates a coordinate map from the pattern on this data
@@ -441,30 +438,10 @@ class Philter:
                     else:
                         coord_tracker += len(element)
 
-       
-            # Left only
-            if context == "left":
-                if phi_left == True and phi_right == False:
-                    for item in tokenized_matches:
-                        coord_map.add_extend(filename, item***REMOVED***0***REMOVED***, item***REMOVED***1***REMOVED***)
-
-            # Right only
-            elif context == "right":
-                if phi_right == True and phi_left == False:
-                    for item in tokenized_matches:
-                        coord_map.add_extend(filename, item***REMOVED***0***REMOVED***, item***REMOVED***1***REMOVED***)
-
-            # Left or right
-            elif context == "left_or_right":
-                if phi_right == True or phi_left == True:
-                    for item in tokenized_matches:
-                        coord_map.add_extend(filename, item***REMOVED***0***REMOVED***, item***REMOVED***1***REMOVED***)
-
-            # Left AND right
-            else:
-                if phi_right == True and phi_left == True:
-                    for item in tokenized_matches:
-                        coord_map.add_extend(filename, item***REMOVED***0***REMOVED***, item***REMOVED***1***REMOVED***)
+            ## Check for context, and add to coordinate map
+            if (context == "left" and (phi_left == True and phi_right == False)) or (context == "right" and (phi_right == True and phi_left == False)) or (context == "left_or_right" and (phi_right == True or phi_left == True)) or (context == "left_and_right" and (phi_right == True and phi_left == True)):
+                for item in tokenized_matches:
+                    coord_map.add_extend(filename, item***REMOVED***0***REMOVED***, item***REMOVED***1***REMOVED***)
 
     
         self.patterns***REMOVED***pattern_index***REMOVED******REMOVED***"coordinate_map"***REMOVED*** = coord_map

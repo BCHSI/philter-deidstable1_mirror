@@ -1291,6 +1291,13 @@
 		"filepath":"filters/regex/dates/yyyy_month_name_dd_transformed.txt",
 		"notes":"This should remove anything with pattern yyyy_month_name_dd"
 	},
+    {
+        "title":"yyyy_month_name",
+        "type":"regex",
+        "exclude":true,
+        "filepath":"filters/regex/dates/yyyy_month_name_transformed.txt",
+        "notes":"This should remove anything with pattern yyyy_month_name"
+    },
 	{
 		"title":"month_name_dd",
 		"type":"regex",
@@ -1501,6 +1508,20 @@
 		"filepath":"filters/regex/mrn_id/account_#.txt",
 		"notes":"This should remove anything that matches account #"
 	},
+    {
+        "title":"accession #",
+        "type":"regex",
+        "exclude":true,
+        "filepath":"filters/regex/mrn_id/accession_#.txt",
+        "notes":"This should remove anything that matches accession #"
+    },
+    {
+        "title":"tape number",
+        "type":"regex",
+        "exclude":true,
+        "filepath":"filters/regex/mrn_id/tape_number.txt",
+        "notes":"This should remove anything that matches tape number"
+    },
 	{
 		"title":"CCDDDD-D-CC",
 		"type":"regex",
