@@ -94,7 +94,7 @@ class Philter:
         self.exclude_map = CoordinateMap()
 
         #create a memory for FULL exclude coordinate map (including non-whitelisted words)
-        self.full_exclude_map = CoordinateMap()
+        self.full_exclude_map = {}
 
         #create a memory for the list of known PHI types
         self.phi_type_list = ['DATE','Patient_Social_Security_Number','Email','Provider_Address_or_Location','Age','Name','OTHER']
@@ -293,7 +293,7 @@ class Philter:
                 #create intersection maps for all phi types and add them to a dictionary containing all maps
 
                 # get full exclude map (only updated either on-command by map_regex_context or at the very end of map_coordinates)
-                self.full_exclude_map = self.include_map.get_complement(filename, txt)
+                self.full_exclude_map[filename] = self.include_map.get_complement(filename, txt)
 
         #clear out any data to save ram
         for i,pat in enumerate(self .patterns):
@@ -757,7 +757,7 @@ class Philter:
             json.dump(self.data_all_files, open(self.coords, "w"), indent=4)
 
     # infilename needed for addressing maps
-    def transform_text_asterisk(self, txt, infilename):       
+    def transform_text_asterisk(self, txt, infilename):        
         last_marker = 0
         current_chunk = []
         punctuation_matcher = re.compile(r"[^a-zA-Z0-9*]")
