@@ -81,10 +81,96 @@ class Philter:
         #All coordinate maps stored here
         self.coordinate_maps = []
 
+        #create a memory for pos tags
+        self.pos_tags = {}
+
+        #create a memory for tokenized text
+        self.cleaned = {}
+
+        #create a memory for include coordinate map
+        self.include_map = CoordinateMap()
+
+        #create a memory for exclude coordinate map
+        self.exclude_map = CoordinateMap()
+
+        #create a memory for FULL exclude coordinate map (including non-whitelisted words)
+        self.full_exclude_map = {}
+
+        #create a memory for the list of known PHI types
+        self.phi_type_list = ['DATE','Patient_Social_Security_Number','Email','Provider_Address_or_Location','Age','Name','OTHER']
+        
+        #create a memory for the corrdinate maps of known PHI types    
+        self.phi_type_dict = {}
+        for phi_type in self.phi_type_list:
+            self.phi_type_dict[phi_type] = [CoordinateMap()]
+
+        #create a memory for stored coordinate data
+        self.data_all_files = {} 
+
+        #create a memory for clean words
+        #self.clean_words = {}
+
+        #create directory for pos data if it doesn't exist
+        pos_path = "./data/pos_data/"
+        if not os.path.isdir(pos_path):
+            os.mkdir(pos_path)
+
         #initialize our patterns
         self.init_patterns()
 
+    def get_pos(self, filename, cleaned, pos_path = "./data/pos_data/"):
+        filename = filename.split("/")[-1]
+        file_ = pos_path + filename
+        if filename not in self.pos_tags:
+            self.pos_tags = {}
+            if not os.path.isfile(file_):
+                with open(file_, 'wb') as f:
+                    tags = nltk.pos_tag(cleaned)
+                    pickle.dump(tags, f)
+                    return tags
+            else:
+                with open(file_, 'rb') as f:
+                    self.pos_tags[filename] = pickle.load(f)
 
+            #self.pos_tags[filename] = nltk.pos_tag(cleaned)
+        return self.pos_tags[filename]
+    #def get_pos_original(self, filename, cleaned):
+    #    if filename not in self.pos_tags:
+    #        self.pos_tags = {}
+    #        self.pos_tags[filename] = nltk.pos_tag(cleaned)
+    #    return self.pos_tags[filename]
+    
+    def get_clean(self, filename, text, pre_process= r"[^a-zA-Z0-9\.]"):
+        if filename not in self.cleaned:
+            self.cleaned = {}
+            # Use pre-process to split sentence by spaces AND symbols, while preserving spaces in the split list
+            lst = re.split("(\s+)", text)
+            cleaned = []
+            for item in lst:
+                if len(item) > 0:
+                    if item.isspace() == False:
+                        split_item = re.split("(\s+)", re.sub(pre_process, " ", item))
+                        for elem in split_item:
+                            if len(elem) > 0:
+                                cleaned.append(elem)
+                    else:
+                        cleaned.append(item)
+            self.cleaned[filename] = cleaned
+        return self.cleaned[filename]
+    #def get_clean_word(self, filename, word):
+    #    if filename not in self.cleaned:
+    #        self.clean_words = {}
+    #        self.clean_words[filename] = {}
+    #    if word not in self.clean_words[filename]:
+    #        self.clean_words[filename][word] = re.sub(r"[^a-zA-Z0-9]+", "", word.lower().strip())
+    #    return self.clean_words[filename][word]
+
+    #def get_clean_word2(self, filename, word):
+    #    return re.sub(r"[^a-zA-Z0-9]+", "", word.lower().strip())
+    #    if word not in self.clean_words:
+    #        self.clean_words[word] = re.sub(r"[^a-zA-Z0-9]+", "", word.lower().strip())
+    #    return self.clean_words[word]
+    
     def init_patterns(self):
         """ given our input pattern config will load our sets and pre-compile our regex"""
 
@@ -168,6 +254,22 @@ class Philter:
                 encoding = self.detect_encoding(filename)
                 txt = open(filename,"r", encoding=encoding['encoding']).read()
 
+                # Get full self.include/exclude map before transform
+                self.data_all_files[filename] = {"text":txt, "phi":[],"non-phi":[]}
+
+                #create an intersection map of all coordinates we'll be removing
+                self.exclude_map.add_file(filename)
+
+                #create an interestion map of all coordinates we'll be keeping
+                self.include_map.add_file(filename)
+
+                # add file to phi_type_dict
+                for phi_type in self.phi_type_list:
+                    self.phi_type_dict[phi_type][0].add_file(filename)
+
+                # initialize phi type
+                phi_type = "OTHER"
+
                 #### Create inital self.exclude/include for file
 
                 for i,pat in enumerate(self.patterns):
@@ -185,16 +287,20 @@ class Philter:
                         self.match_all(filename=filename, text=txt, pattern_index=i)
                     else:
                         raise Exception("Error, pattern type not supported: ", pat["type"])
-                    ###### 4. Update self.exclude/include
+                    self.get_exclude_include_maps(filename, pat, txt)
 
-                ##### 3. self.include/self.exclude --> for testing purposes (will disappear)
-                ##### 6. find complement - PHI --> add to exclude map (carved out of transform)
+
+                #create intersection maps for all phi types and add them to a dictionary containing all maps
+
+                # get full exclude map (only updated either on-command by map_regex_context or at the very end of map_coordinates)
+                self.full_exclude_map[filename] = self.include_map.get_complement(filename, txt)
 
         #clear out any data to save ram
         for i,pat in enumerate(self .patterns):
             if "data" in pat:
                 del self.patterns[i]["data"]
 
+        return self.full_exclude_map
                 
     def map_regex(self, filename="", text="", pattern_index=-1, pre_process= r"[^a-zA-Z0-9\.]"):
         """ Creates a coordinate map from the pattern on this data
@@ -214,13 +320,6 @@ class Philter:
             matches = regex.finditer(text)
             
             for m in matches:
-                #if filename == './data/i2b2_notes_updated/373-04.txt':
-                # if self.patterns[pattern_index]["title"] == "YYYY/MM-YYYY/MM":
-                # if 'David' in m.group():
-                #     print(self.patterns[pattern_index]["title"])
-                #     print(m.group())
-                #     print(filename)
-                #     print('\n')
                 
                 coord_map.add_extend(filename, m.start(), m.start()+len(m.group()))
         
@@ -240,7 +339,7 @@ class Philter:
                                 matchall_list_cleaned.append(elem)
                     else:
                         matchall_list_cleaned.append(item)          
-            
+
             start_coordinate = 0
             for word in matchall_list_cleaned:
                 start = start_coordinate
@@ -258,50 +357,6 @@ class Philter:
                 start_coordinate += len(word)
 
             self.patterns[pattern_index]["coordinate_map"] = coord_map
-
-
-    def create_full_include_exclude_map(self, filename=""):
-        
-
-        encoding = self.detect_encoding(filename)
-        txt = open(filename,"r", encoding=encoding['encoding']).read()
-        #record we use to evaluate our effectiveness   
-        
-        exclude_map = CoordinateMap()
-
-        exclude_map.add_file(filename)
-
-        #create an interestion map of all coordinates we'll be keeping
-        include_map = CoordinateMap()
-
-        include_map.add_file(filename)
-
-        for i,pattern in enumerate(self.patterns):
-            # print('\n',i, ':')
-            coord_map = pattern["coordinate_map"]
-            exclude = pattern["exclude"]
-            try:
-                filter_path = pattern["filepath"]
-            except KeyError:
-                filter_path = pattern["title"]
-
-
-            for start,stop in coord_map.filecoords(filename):
-                if exclude:
-                    if not include_map.does_overlap(filename, start, stop):
-                        exclude_map.add_extend(filename, start, stop)
-
-                else:
-                    if not exclude_map.does_overlap(filename, start, stop):
-
-                        include_map.add_extend(filename, start, stop)
-
-
-                    else:
-                        pass
-
-        # Return include map that does NOT include punctuation
-        return include_map
 
 
     def map_regex_context(self, filename="", text="", pattern_index=-1,  pre_process= r"[^a-zA-Z0-9\.]"):
@@ -333,9 +388,10 @@ class Philter:
 
         # 1. Get coordinates of all include and exclude mathches
 
-        current_include_map = self.create_full_include_exclude_map(filename)
+        # current_include_map = self.get_full_include_map(filename)
+        current_include_map = self.include_map
         
-        # Create complement map           
+        # Create complement exclude map (also excludes punctuation)      
         full_exclude_map = current_include_map.get_complement(filename, text)
 
         punctuation_matcher = re.compile(r"[^a-zA-Z0-9*]")
@@ -382,30 +438,10 @@ class Philter:
                     else:
                         coord_tracker += len(element)
 
-       
-            # Left only
-            if context == "left":
-                if phi_left == True and phi_right == False:
-                    for item in tokenized_matches:
-                        coord_map.add_extend(filename, item[0], item[1])
-
-            # Right only
-            elif context == "right":
-                if phi_right == True and phi_left == False:
-                    for item in tokenized_matches:
-                        coord_map.add_extend(filename, item[0], item[1])
-
-            # Left or right
-            elif context == "left_or_right":
-                if phi_right == True or phi_left == True:
-                    for item in tokenized_matches:
-                        coord_map.add_extend(filename, item[0], item[1])
-
-            # Left AND right
-            else:
-                if phi_right == True and phi_left == True:
-                    for item in tokenized_matches:
-                        coord_map.add_extend(filename, item[0], item[1])
+            ## Check for context, and add to coordinate map
+            if (context == "left" and (phi_left == True and phi_right == False)) or (context == "right" and (phi_right == True and phi_left == False)) or (context == "left_or_right" and (phi_right == True or phi_left == True)) or (context == "left_and_right" and (phi_right == True and phi_left == True)):
+                for item in tokenized_matches:
+                    coord_map.add_extend(filename, item[0], item[1])
 
     
         self.patterns[pattern_index]["coordinate_map"] = coord_map
@@ -446,20 +482,15 @@ class Philter:
         if len(pos_set) > 0:
             check_pos = True
 
-        # Use pre-process to split sentence by spaces AND symbols, while preserving spaces in the split list
-        lst = re.split("(\s+)", text)
-        cleaned = []
-        for item in lst:
-            if len(item) > 0:
-                if item.isspace() == False:
-                    split_item = re.split("(\s+)", re.sub(pre_process, " ", item))
-                    for elem in split_item:
-                        if len(elem) > 0:
-                            cleaned.append(elem)
-                else:
-                    cleaned.append(item)
+
+        cleaned = self.get_clean(filename,text)
+        if check_pos:
+            pos_list = self.get_pos(filename, cleaned)# pos_list = nltk.pos_tag(cleaned)
+        else:
+            pos_list = zip(cleaned,range(len(cleaned)))
 
         pos_list = nltk.pos_tag(cleaned)
+
         # if filename == './data/i2b2_notes/160-03.txt':
         #     print(pos_list)
         start_coordinate = 0
@@ -495,6 +526,7 @@ class Philter:
             start_coordinate += len(word)
 
         self.patterns[pattern_index]["coordinate_map"] = coord_map
+  
 
     def map_pos(self, filename="", text="", pattern_index=-1, pre_process= r"[^a-zA-Z0-9\.]"):
         """ Creates a coordinate mapping of words which match this part of speech (POS)"""
@@ -511,19 +543,10 @@ class Philter:
         pos_set = set(self.patterns[pattern_index]["pos"])
         
         # Use pre-process to split sentence by spaces AND symbols, while preserving spaces in the split list
-        lst = re.split("(\s+)", text)
-        cleaned = []
-        for item in lst:
-            if len(item) > 0:
-                if item.isspace() == False:
-                    split_item = re.split("(\s+)", re.sub(pre_process, " ", item))
-                    for elem in split_item:
-                        if len(elem) > 0:
-                            cleaned.append(elem)
-                else:
-                    cleaned.append(item)
 
-        pos_list = nltk.pos_tag(cleaned)
+        cleaned = self.get_clean(filename,text)
+
+        pos_list = self.get_pos(filename, cleaned)#pos_list = nltk.pos_tag(cleaned)
         # if filename == './data/i2b2_notes/160-03.txt':
         #     print(pos_list)
         start_coordinate = 0
@@ -532,6 +555,7 @@ class Philter:
             pos  = tup[1]
             start = start_coordinate
             stop = start_coordinate + len(word)
+            #word_clean = self.get_clean_word2(filename,word)
             word_clean = re.sub(r"[^a-zA-Z0-9]+", "", word.lower().strip())
             if len(word_clean) == 0:
                 #got a blank space or something without any characters or digits, move forward
@@ -627,6 +651,53 @@ class Philter:
             for filename in files:
                 yield root,filename
 
+    def get_exclude_include_maps(self, filename, pattern, txt):
+
+        coord_map = pattern["coordinate_map"]
+        exclude = pattern["exclude"]
+        try:
+            filter_path = pattern["filepath"]
+        except KeyError:
+            filter_path = pattern["title"]
+        if "phi_type" in pattern:
+            phi_type = pattern["phi_type"]
+
+        # self.patterns[pattern_index]["title"]
+        else:
+            phi_type = "OTHER"
+
+        for start,stop in coord_map.filecoords(filename):
+
+            if pattern['type'] != 'regex_context':
+                if exclude:
+                    if not self.include_map.does_overlap(filename, start, stop):
+                        self.exclude_map.add_extend(filename, start, stop)
+                        self.phi_type_dict[phi_type][0].add_extend(filename, start, stop)
+
+                else:
+                    if not self.exclude_map.does_overlap(filename, start, stop):
+                        self.include_map.add_extend(filename, start, stop)
+                        self.data_all_files[filename]["non-phi"].append({"start":start, "stop":stop, "word":txt[start:stop], "filepath":filter_path})
+
+                    else:
+                        pass
+        
+            # Add regex_context to map separately
+            else:
+                if exclude:
+                    self.exclude_map.add_extend(filename, start, stop)
+                    self.include_map.remove(filename, start, stop)
+                    self.phi_type_dict[phi_type][0].add_extend(filename, start, stop)
+                else:
+                    self.include_map.add_extend(filename, start, stop)
+                    self.exclude_map.remove(filename, start, stop)
+                    self.data_all_files[filename]["non-phi"].append({"start":start, "stop":stop, "word":txt[start:stop], "filepath":filter_path})
+
+            for list_phi_type in self.phi_type_list:
+                for start,stop in self.phi_type_dict[list_phi_type][0].filecoords(filename):
+                    self.data_all_files[filename]["phi"].append({"start":start, "stop":stop, "word":txt[start:stop],"phi_type":list_phi_type, "filepath":""})
+
+
     def transform(self):
         """ transform
             turns input files into output PHI files 
@@ -650,121 +721,18 @@ class Philter:
         if not os.path.exists(out_path):
             raise Exception("File output path does not exist", out_path)
 
-        # keeping a record of all phicoordinates and text for all files
-        # we only keep track of this if self.eval=True
-        if self.eval:
-            data_all_files = {}
-            filter_data_all_files = {}
 
         #create our final exclude and include maps, priority order
         for root,f in self.folder_walk(in_path):
 
             #keeps a record of all phi coordinates and text for a given file
-            data = {}
+            # data = {}
         
             filename = root+f
 
             encoding = self.detect_encoding(filename)
             txt = open(filename,"r", encoding=encoding['encoding']).read()
-            #record we use to evaluate our effectiveness
-            if self.eval:
-                data_all_files[filename] = {"text":txt, "phi":[],"non-phi":[]}
-            
-            data = {"text":txt, "phi":[],"non-phi":[]}
 
-            #create an intersection map of all coordinates we'll be removing
-            exclude_map = CoordinateMap()
-
-            exclude_map.add_file(filename)
-
-            #create an interestion map of all coordinates we'll be keeping
-            include_map = CoordinateMap()
-
-            include_map.add_file(filename)
-
-
-
-            #create intersection maps for all phi types and add them to a dictionary containing all maps
-            phi_type_list = ['DATE','Patient_Social_Security_Number','Email','Provider_Address_or_Location','Age','Name','OTHER']
-            phi_type_dict = {}
-            for phi_type in phi_type_list:
-                phi_type_dict[phi_type] = [CoordinateMap()]
-                phi_type_dict[phi_type][0].add_file(filename)
-
-            # create dictionary of coordinates matched by the current pattern
-            if self.eval:
-                filter_data_all_files[filename] = {}
-            # print(self.patterns)
-            for i,pattern in enumerate(self.patterns):
-                # print('\n',i, ':')
-                coord_map = pattern["coordinate_map"]
-                exclude = pattern["exclude"]
-                try:
-                    filter_path = pattern["filepath"]
-                except KeyError:
-                    filter_path = pattern["title"]
-                if "phi_type" in pattern:
-                    phi_type = pattern["phi_type"]
-
-                # self.patterns[pattern_index]["title"]
-                else:
-                    phi_type = "OTHER"
-                
-                for start,stop in coord_map.filecoords(filename):
-
-                    if pattern['type'] != 'regex_context':
-                        if exclude:
-                            if not include_map.does_overlap(filename, start, stop):
-                                exclude_map.add_extend(filename, start, stop)
-                                # if self.i2b2 format?
-                                phi_type_dict[phi_type][0].add_extend(filename, start, stop)
-
-                        else:
-                            if not exclude_map.does_overlap(filename, start, stop):
-                                #print("include", start, stop, txt[start:stop])
-                                include_map.add_extend(filename, start, stop)
-                                # if self.i2b2 format?
-                                data["non-phi"].append({"start":start, "stop":stop, "word":txt[start:stop], "filepath":filter_path})
-                                # include punctuation!
-                                if self.eval:
-                                    data_all_files[filename]["non-phi"].append({"start":start, "stop":stop, "word":txt[start:stop], "filepath":filter_path})
-
-                            else:
-                                pass
-                
-                    # Add regex_context to map
-                    else:
-                        if exclude:
-                            exclude_map.add_extend(filename, start, stop)
-                            include_map.remove(filename, start, stop)
-                            phi_type_dict[phi_type][0].add_extend(filename, start, stop)
-                        else:
-                            include_map.add_extend(filename, start, stop)
-                            exclude_map.remove(filename, start, stop)
-                            data["non-phi"].append({"start":start, "stop":stop, "word":txt[start:stop], "filepath":filter_path})
-                            if self.eval:
-                                data_all_files[filename]["non-phi"].append({"start":start, "stop":stop, "word":txt[start:stop], "filepath":filter_path})
-
-
-
-                ### need another for loop over the text that matches punctuation --> add to non-PHI
-                ### find complement of non-PHI
-                ### at some point, need to combine unknown PHI and known PHI
-    
-    ### Create before!!!
-    # For loop over unknown (complement of non-PHI + punctuation)
-        # add additional tags if does not overlap with known PHI (complement - PHI)
-    ###
-
-            # Add results of separate phi type maps to data
-            # if self.i2b2 format? 
-            for list_phi_type in phi_type_list:
-                for start,stop in phi_type_dict[list_phi_type][0].filecoords(filename):
-                    data["phi"].append({"start":start, "stop":stop, "word":txt[start:stop],"phi_type":list_phi_type, "filepath":filter_path})
-                    # Needs to also include coordinates not marked as either exclude/include (complement of data non-PHI) 
-                    # Could add separate field to data for complement of include + punctuation
-                    if self.eval:
-                        data_all_files[filename]["phi"].append({"start":start, "stop":stop, "word":txt[start:stop],"phi_type":list_phi_type, "filepath":filter_path})
 
 
             #now we transform the text
@@ -772,26 +740,24 @@ class Philter:
             outpathfbase = out_path + fbase
             if self.outformat == "asterisk":
                 with open(outpathfbase+".txt", "w", encoding='utf-8') as f:
-                    contents = self.transform_text_asterisk(txt, filename, 
-                                                            include_map,
-                                                            exclude_map)
+                    contents = self.transform_text_asterisk(txt, filename)
                     f.write(contents)
                     
             elif self.outformat == "i2b2":
                 with open(outpathfbase+".xml", "w") as f:
-                    contents = self.transform_text_i2b2(data)
+                    contents = self.transform_text_i2b2(self.data_all_files[filename])
                     #print("writing contents to: " + outpathfbase+".xml")
                     f.write(contents)
             else:
                 raise Exception("Outformat not supported: ",
                                 self.outformat)        
+
         # print(data_all_files)
         if self.run_eval: #output our data for eval
-            json.dump(data_all_files, open(self.coords, "w"), indent=4)
+            json.dump(self.data_all_files, open(self.coords, "w"), indent=4)
 
     # infilename needed for addressing maps
-    def transform_text_asterisk(self, txt, infilename,
-                                include_map, exclude_map):       
+    def transform_text_asterisk(self, txt, infilename):        
         last_marker = 0
         current_chunk = []
         punctuation_matcher = re.compile(r"[^a-zA-Z0-9*]")
@@ -803,9 +769,9 @@ class Philter:
             if i < last_marker:
                 continue
             
-            if include_map.does_exist(infilename, i):
+            if self.include_map.does_exist(infilename, i):
                 #add our preserved text
-                start,stop = include_map.get_coords(infilename, i)
+                start,stop = self.include_map.get_coords(infilename, i)
                 contents.append(txt[start:stop])
                 last_marker = stop
             elif punctuation_matcher.match(txt[i]):
@@ -986,8 +952,9 @@ class Philter:
 
     def eval(self,
         config,
+        note_path="./data/i2b2_notes/",
         anno_path="data/i2b2_anno/",
-        anno_suffix="_phi_reduced.ano", 
+        anno_suffix="_phi_reduced.ano",
         in_path="data/i2b2_results/",
         summary_output="data/phi/summary.json",
         phi_matcher=re.compile("\*+"),
@@ -1053,6 +1020,7 @@ class Philter:
                 true_negatives  = [] #non-phi we correctly identify
                 true_negatives_coords = []
 
+                original_filename = note_path+f
                 philtered_filename = root+f
                 anno_filename = anno_path+''.join(f.split(".")[0])+anno_suffix
 
@@ -1084,10 +1052,9 @@ class Philter:
                                     philtered_words_cleaned.append(elem)
                         else:
                             philtered_words_cleaned.append(item)
-                #print(len(philtered))
-                # if f == '167937985.txt':
-                #     print('Results text:')
-                #     print(philtered)
+                
+               # philtered_words_cleaned = self.get_clean(original_filename, philtered)
+
                 encoding2 = self.detect_encoding(anno_filename)
                 anno = open(anno_filename,"r").read()              
                 
@@ -1105,6 +1072,7 @@ class Philter:
                                     anno_words_cleaned.append(elem)
                         else:
                             anno_words_cleaned.append(item)
+                #anno_words_cleaned = self.get_clean(original_filename, anno)
                 # if f == '110-01.txt':
                 #     print(len(philtered_words_cleaned))
                 #     print(len(anno_words_cleaned))               
@@ -1311,6 +1279,7 @@ class Philter:
                                 cleaned.append(elem)
                     else:
                         cleaned.append(item)
+            #cleaned = self.get_clean(input_filename)
             # if anno_name == '110-01.xml':
             #     print(anno_name)
             #     #print(cleaned)

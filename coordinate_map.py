@@ -123,7 +123,7 @@ class CoordinateMap:
 	def scan(self):
 		""" does an inorder scan of the coordinates and their values"""
 		for fn in self.map:
-			coords = self.map[fn].keys()
+			coords = list(self.map[fn].keys())
 			coords.sort()
 			for coord in coords:
 				yield fn,coord,self.map[fn][coord]
@@ -216,7 +216,7 @@ class CoordinateMap:
 		self.map[filename] = {}
 	
 	def get_complement(self, filename, text):
-		""" get the complementary coordinates of the input coordinate map (excluding punctuation)"""
+		""" get the complementary coordinates of the input coordinate map (excludes punctuation)"""
 		
 		complement_coordinate_map = {}
 
