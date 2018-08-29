@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# To run: nohup ./bootstrap_2k_testing_082818.sh > 2k_testing_bootstrap_out.txt 2>&1 &
+
+
 # Define process checking function: checks number of running processes, and decreases the counter by 1 if 
 processcheck() {
 # Get number of whitelist processes
@@ -30,7 +33,7 @@ do
 		source_dir='/data/muenzenk/batch_data/philter_paper_testingbatch2k_20180802_updated'
 
 		# Make directories to hold inputs/outputs
-		bootstrap_dir='/data/muenzenk/batch_data/philter_paper_testingbatch2k_20180802_updated_tests/'$bootstrap_name
+		bootstrap_dir='/data/muenzenk/bootstrap_data/philter_paper_testingbatch2k_20180802_updated_tests/'$bootstrap_name
 		mkdir $bootstrap_dir
 		notes_dir=$bootstrap_dir'/ucsf_notes/'
 		mkdir $notes_dir
@@ -54,7 +57,7 @@ do
 	    	cp $source_dir'/ucsf_anno/'$filename_alone* $anno_dir
 		done < $bootstrap_file_list
 		# Run philter on these 100 notes in the background (provide option to limit number of cores)
-		nohup python3 main.py -f /data/muenzenk/de-id_stable1/configs/ucsf_pipeline_test_map_regex_context.json -a $anno_dir -x /data/muenzenk/batch_data/philter_paper_testingbatch2k_20180802_updated/phi_notes_test_batch20180802.json -i $notes_dir -o $results_dir -c $coord_path --ucsfformat True --stanfordner /data/muenzenk/stanford-ner/ > '/data/muenzenk/batch_data/philter_paper_testingbatch2k_20180802_updated_tests/results/'$bootstrap_name'_results.txt' 2>&1 &
+		nohup python3 main.py -f /data/muenzenk/de-id_stable1/configs/ucsf_pipeline_test_map_regex_context.json -a $anno_dir -x /data/muenzenk/batch_data/philter_paper_testingbatch2k_20180802_updated/phi_notes_test_batch20180802.json -i $notes_dir -o $results_dir -c $coord_path --ucsfformat True --stanfordner /data/muenzenk/stanford-ner/ > '/data/muenzenk/bootstrap_data/philter_paper_testingbatch2k_20180802_updated_tests/results/'$bootstrap_name'_results.txt' 2>&1 &
         counter=$((counter+1))
 
 	fi
