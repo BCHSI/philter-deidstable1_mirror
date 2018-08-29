@@ -31,6 +31,9 @@ def main():
     ap.add_argument("-c", "--coords", default="./data/coordinates.json",
                     help="Path to the json file that contains the coordinate map data",
                     type=str)
+    ap.add_argument("--eval_output", default="./data/phi/",
+                    help="Path to the directory that the detailed eval files will be outputted to",
+                    type=str)
     ap.add_argument("-v", "--verbose", default=True,
                     help="When verbose is true, will emit messages about script progress",
                     type=lambda x:bool(distutils.util.strtobool(x)))
@@ -88,6 +91,7 @@ def main():
             "filters":args.filters,
             "xml":args.xml,
             "coords":args.coords,
+            "eval_out":args.eval_output,
             "stanford_ner_tagger": {
                 "classifier":args.stanfordner+"classifiers/english.all.3class.distsim.crf.ser.gz",
                 "jar":args.stanfordner+"stanford-ner.jar",

@@ -43,6 +43,9 @@ class Philter:
         
         if "coords" in config:
             self.coords = config["coords"]
+        
+        if "eval_out" in config:
+            self.eval_outpath = config["eval_out"]
 
         if "outformat" in config:
             self.outformat = config["outformat"]
@@ -94,7 +97,7 @@ class Philter:
         self.exclude_map = CoordinateMap()
 
         #create a memory for FULL exclude coordinate map (including non-whitelisted words)
-        self.full_exclude_map = CoordinateMap()
+        self.full_exclude_map = {}
 
         #create a memory for the list of known PHI types
         self.phi_type_list = ['DATE','Patient_Social_Security_Number','Email','Provider_Address_or_Location','Age','Name','OTHER']
@@ -293,7 +296,7 @@ class Philter:
                 #create intersection maps for all phi types and add them to a dictionary containing all maps
 
                 # get full exclude map (only updated either on-command by map_regex_context or at the very end of map_coordinates)
-                self.full_exclude_map = self.include_map.get_complement(filename, txt)
+                self.full_exclude_map[filename] = self.include_map.get_complement(filename, txt)
 
         #clear out any data to save ram
         for i,pat in enumerate(self .patterns):
@@ -320,7 +323,7 @@ class Philter:
             matches = regex.finditer(text)
             
             for m in matches:
-                
+               
                 coord_map.add_extend(filename, m.start(), m.start()+len(m.group()))
         
             self.patterns[pattern_index]["coordinate_map"] = coord_map
@@ -1979,27 +1982,27 @@ class Philter:
 
         # Write FN and FP results to outfolder
         # Conext
-        with open(fn_tags_context, "w") as fn_file:
+        with open(self.eval_outpath + "fn_tags_context.txt", "w") as fn_file:
             fn_file.write("key" + "|" + "note_word" + "|" + "phi_tag" + "|" + "pos_tag" + "|" + "context" + "|" + "filename"+ "|" +"include_exclude" + "|" +"exclude_filters" + "|" +"include_filters" +"\n")
             # print(fn_tags_condensed_context)
             for key in fn_tags_condensed_context:
                 current_list = fn_tags_condensed_context[key]
                 fn_file.write(key + "|" + current_list[0] + "|" + current_list[1] + "|" + current_list[2] + "|" + current_list[3] + "|" + current_list[4]+ "|" +current_list[5]+ "|" +str(current_list[6]) + "|" +str(current_list[7]) + "\n")
         
-        with open(fp_tags_context, "w") as fp_file:
+        with open(self.eval_outpath + "fp_tags_context.txt", "w") as fp_file:
             fp_file.write("key" + "|" + "note_word" + "|" + "pos_tag" + "|" + "context" + "|" + "filename"+ "|" +"exclude_filters" + "|" +"include_filters" +"\n")
             for key in fp_tags_condensed_context:
                 current_list = fp_tags_condensed_context[key]
                 fp_file.write(key + "|" + current_list[0] + "|" + current_list[1]  + "|" +  current_list[2] + "|" + current_list[3]+ "|" + str(current_list[4]) + "|" + str(current_list[5]) +"\n")
 
         # No context
-        with open(fn_tags_nocontext, "w") as fn_file:
+        with open(self.eval_outpath + "fn_tags.txt", "w") as fn_file:
             fn_file.write("key" + "|" + "note_word" + "|" + "phi_tag" + "|" + "pos_tag" + "|" + "occurrences"+"|" +"include_exclude" + "|" +"exclude_filters" + "|" +"include_filters" + "\n")
             for key in fn_tags_condensed:
                 current_list = fn_tags_condensed[key]
                 fn_file.write(key + "|" + current_list[0] + "|" + current_list[1] + "|" + current_list[2] + "|" + str(current_list[3])+"|" + current_list[4]+ "|" + str(current_list[5])+ "|" + str(current_list[6])+"\n")
         
-        with open(fp_tags_nocontext, "w") as fp_file:
+        with open(self.eval_outpath + "fp_tags.txt", "w") as fp_file:
             fp_file.write("key" + "|" + "note_word" + "|" + "pos_tag" + "|" + "occurrences"+ "|" +"exclude_filters" + "|" +"include_filters" + "\n")
             for key in fp_tags_condensed:
                 current_list = fp_tags_condensed[key]
