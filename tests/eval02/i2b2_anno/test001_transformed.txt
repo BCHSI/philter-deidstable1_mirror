@@ -1,0 +1,1 @@
+This is a sentence which contains a date: **/*/**** and some other info like medicine, 20mg. Additionally it has a name: **. ******** and an address **** ********* ***, **. The other info shouldn't be removed.

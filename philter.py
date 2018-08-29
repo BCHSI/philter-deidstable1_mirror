@@ -43,6 +43,9 @@ class Philter:
         
         if "coords" in config:
             self.coords = config***REMOVED***"coords"***REMOVED***
+        
+        if "eval_out" in config:
+            self.eval_outpath = config***REMOVED***"eval_out"***REMOVED***
 
         if "outformat" in config:
             self.outformat = config***REMOVED***"outformat"***REMOVED***
@@ -94,7 +97,7 @@ class Philter:
         self.exclude_map = CoordinateMap()
 
         #create a memory for FULL exclude coordinate map (including non-whitelisted words)
-        self.full_exclude_map = CoordinateMap()
+        self.full_exclude_map = {}
 
         #create a memory for the list of known PHI types
         self.phi_type_list = ***REMOVED***'DATE','Patient_Social_Security_Number','Email','Provider_Address_or_Location','Age','Name','OTHER'***REMOVED***
@@ -293,7 +296,7 @@ class Philter:
                 #create intersection maps for all phi types and add them to a dictionary containing all maps
 
                 # get full exclude map (only updated either on-command by map_regex_context or at the very end of map_coordinates)
-                self.full_exclude_map = self.include_map.get_complement(filename, txt)
+                self.full_exclude_map***REMOVED***filename***REMOVED*** = self.include_map.get_complement(filename, txt)
 
         #clear out any data to save ram
         for i,pat in enumerate(self .patterns):
@@ -320,7 +323,7 @@ class Philter:
             matches = regex.finditer(text)
             
             for m in matches:
-                
+               
                 coord_map.add_extend(filename, m.start(), m.start()+len(m.group()))
         
             self.patterns***REMOVED***pattern_index***REMOVED******REMOVED***"coordinate_map"***REMOVED*** = coord_map
@@ -1979,27 +1982,27 @@ class Philter:
 
         # Write FN and FP results to outfolder
         # Conext
-        with open(fn_tags_context, "w") as fn_file:
+        with open(self.eval_outpath + "fn_tags_context.txt", "w") as fn_file:
             fn_file.write("key" + "|" + "note_word" + "|" + "phi_tag" + "|" + "pos_tag" + "|" + "context" + "|" + "filename"+ "|" +"include_exclude" + "|" +"exclude_filters" + "|" +"include_filters" +"\n")
             # print(fn_tags_condensed_context)
             for key in fn_tags_condensed_context:
                 current_list = fn_tags_condensed_context***REMOVED***key***REMOVED***
                 fn_file.write(key + "|" + current_list***REMOVED***0***REMOVED*** + "|" + current_list***REMOVED***1***REMOVED*** + "|" + current_list***REMOVED***2***REMOVED*** + "|" + current_list***REMOVED***3***REMOVED*** + "|" + current_list***REMOVED***4***REMOVED***+ "|" +current_list***REMOVED***5***REMOVED***+ "|" +str(current_list***REMOVED***6***REMOVED***) + "|" +str(current_list***REMOVED***7***REMOVED***) + "\n")
         
-        with open(fp_tags_context, "w") as fp_file:
+        with open(self.eval_outpath + "fp_tags_context.txt", "w") as fp_file:
             fp_file.write("key" + "|" + "note_word" + "|" + "pos_tag" + "|" + "context" + "|" + "filename"+ "|" +"exclude_filters" + "|" +"include_filters" +"\n")
             for key in fp_tags_condensed_context:
                 current_list = fp_tags_condensed_context***REMOVED***key***REMOVED***
                 fp_file.write(key + "|" + current_list***REMOVED***0***REMOVED*** + "|" + current_list***REMOVED***1***REMOVED***  + "|" +  current_list***REMOVED***2***REMOVED*** + "|" + current_list***REMOVED***3***REMOVED***+ "|" + str(current_list***REMOVED***4***REMOVED***) + "|" + str(current_list***REMOVED***5***REMOVED***) +"\n")
 
         # No context
-        with open(fn_tags_nocontext, "w") as fn_file:
+        with open(self.eval_outpath + "fn_tags.txt", "w") as fn_file:
             fn_file.write("key" + "|" + "note_word" + "|" + "phi_tag" + "|" + "pos_tag" + "|" + "occurrences"+"|" +"include_exclude" + "|" +"exclude_filters" + "|" +"include_filters" + "\n")
             for key in fn_tags_condensed:
                 current_list = fn_tags_condensed***REMOVED***key***REMOVED***
                 fn_file.write(key + "|" + current_list***REMOVED***0***REMOVED*** + "|" + current_list***REMOVED***1***REMOVED*** + "|" + current_list***REMOVED***2***REMOVED*** + "|" + str(current_list***REMOVED***3***REMOVED***)+"|" + current_list***REMOVED***4***REMOVED***+ "|" + str(current_list***REMOVED***5***REMOVED***)+ "|" + str(current_list***REMOVED***6***REMOVED***)+"\n")
         
-        with open(fp_tags_nocontext, "w") as fp_file:
+        with open(self.eval_outpath + "fp_tags.txt", "w") as fp_file:
             fp_file.write("key" + "|" + "note_word" + "|" + "pos_tag" + "|" + "occurrences"+ "|" +"exclude_filters" + "|" +"include_filters" + "\n")
             for key in fp_tags_condensed:
                 current_list = fp_tags_condensed***REMOVED***key***REMOVED***
