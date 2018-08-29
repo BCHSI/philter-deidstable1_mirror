@@ -760,7 +760,7 @@ class Philter:
             json.dump(self.data_all_files, open(self.coords, "w"), indent=4)
 
     # infilename needed for addressing maps
-    def transform_text_asterisk(self, txt, infilename):       
+    def transform_text_asterisk(self, txt, infilename):        
         last_marker = 0
         current_chunk = []
         punctuation_matcher = re.compile(r"[^a-zA-Z0-9*]")
