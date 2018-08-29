@@ -684,7 +684,8 @@ class Philter:
 
                     else:
                         pass
-        
+###########################       
+
             # Add regex_context to map separately
             else:
                 if exclude:
@@ -696,9 +697,11 @@ class Philter:
                     self.exclude_map.remove(filename, start, stop)
                     self.data_all_files***REMOVED***filename***REMOVED******REMOVED***"non-phi"***REMOVED***.append({"start":start, "stop":stop, "word":txt***REMOVED***start:stop***REMOVED***, "filepath":filter_path})
 
-            for list_phi_type in self.phi_type_list:
-                for start,stop in self.phi_type_dict***REMOVED***list_phi_type***REMOVED******REMOVED***0***REMOVED***.filecoords(filename):
-                    self.data_all_files***REMOVED***filename***REMOVED******REMOVED***"phi"***REMOVED***.append({"start":start, "stop":stop, "word":txt***REMOVED***start:stop***REMOVED***,"phi_type":list_phi_type, "filepath":""})
+###########################
+            
+        # dont' need to loop through all PHi types -- just current one
+        for start,stop in self.phi_type_dict***REMOVED***phi_type***REMOVED******REMOVED***0***REMOVED***.filecoords(filename):
+            self.data_all_files***REMOVED***filename***REMOVED******REMOVED***"phi"***REMOVED***.append({"start":start, "stop":stop, "word":txt***REMOVED***start:stop***REMOVED***,"phi_type":phi_type, "filepath":""})
 
 
     def transform(self):
