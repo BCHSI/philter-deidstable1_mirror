@@ -12,8 +12,6 @@ import sys
 import argparse
 
 
-
-
 def isolate_phi(xml_folder):
     #isolate all phi and data with coordinates
     #turn them into a json representation
@@ -94,8 +92,12 @@ def main():
         #create a coordinate mapping of all phi
         c = CoordinateMap()
         for p in phi[fn]["phi"]:
-            start = int(p["spans"].split("~")[0])
-            end = int(p["spans"].split("~")[1])
+            try:
+                start = int(p['start'])
+                end = int(p['end'])
+            except KeyError:
+                start = int(p['spans'].split('~')[0])
+                end = int(p['spans'].split('~')[1])
             c.add_extend(fn, start, end)
 
         contents = []
