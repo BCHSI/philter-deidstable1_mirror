@@ -67,14 +67,14 @@ def main():
         run_eval = False
         verbose = False
         outputformat = "i2b2"
-        filters = "./configs/philter_alpha.json"
+        # filters = "./configs/philter_alpha.json"
         philter_config = {
             "verbose":verbose,
             "run_eval":run_eval,
             "finpath":args.input,
             "foutpath":args.output,
             "outformat":outputformat,
-            "filters":filters,
+            "filters":args.filters,
         }
 
     else:
