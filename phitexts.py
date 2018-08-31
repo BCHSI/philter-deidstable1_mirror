@@ -2,6 +2,7 @@ import os
 from chardet.universaldetector import UniversalDetector
 import re
 from philter import Philter
+import json
 from subs import Subs
 
 class Phitexts:
@@ -27,8 +28,6 @@ class Phitexts:
         self.sub = Subs()
         self.filterer = None
 
-
-
     def _read_texts(self):
         if not self.inputdir:
             raise Exception("Input directory undefined: ", self.inputdir)
@@ -37,7 +36,7 @@ class Phitexts:
             for filename in files:
                 if not filename.endswith("txt"):
                     continue
-                filepath = root+filename
+                filepath = root + filename
                 self.filenames.append(filepath)
                 encoding = self._detect_encoding(filepath)
                 fhandle = open(filepath, "r", encoding=encoding***REMOVED***'encoding'***REMOVED***)
@@ -96,7 +95,6 @@ class Phitexts:
         # TODO: get normalized version for each detected phi
         # 1) get phi text given coords
         # 2) interpet/normalize phi given type
-        #self.norms = 
 
         for phi_type in self.types.keys():
             self.norms***REMOVED***phi_type***REMOVED*** = {}
@@ -104,8 +102,9 @@ class Phitexts:
             if phi_type == "DATE":
                 for filename, start, end in self.types***REMOVED***phi_type***REMOVED******REMOVED***0***REMOVED***.scan():
                     token = self.texts***REMOVED***filename***REMOVED******REMOVED***start:end***REMOVED***
-                    normalized_token = self.sub.parse_date(token)
-                    self.norms***REMOVED***phi_type***REMOVED*** ***REMOVED***(filename, start)***REMOVED*** = normalized_token 
+                    normalized_token = self.sub.parse_date(token)                  
+                    self.norms***REMOVED***phi_type***REMOVED*** ***REMOVED***(filename, start)***REMOVED*** = (normalized_token, end)
+                
             else:
                 continue
 
@@ -122,23 +121,20 @@ class Phitexts:
         if self.subs:
             return
 
-        # TODO: look up surrogate for normalized phi
-        # 1) look up surrogate map for current note key (TODO: where to get key from?)
-        # 2) use map to swap out normalized phi by map value
-        #    if no map value, use placeholder based on phi type, e.g. ***REMOVED******REMOVED***NAME***REMOVED******REMOVED***
-        #self.subs
-        
-        # Note: this is currently done in surrogator.shift_dates(), surrogator.parse_and_shift_date(), parse_date_ranges(), replace_other_surrogate()
 
         for phi_type in self.norms.keys():
             if phi_type == "DATE":
                 for filename, start in self.norms***REMOVED***phi_type***REMOVED***:
-                    normalized_token = self.norms***REMOVED***phi_type***REMOVED******REMOVED***filename, start***REMOVED***
+                    normalized_token = self.norms***REMOVED***phi_type***REMOVED******REMOVED***filename, start***REMOVED******REMOVED***0***REMOVED***
+                    end = self.norms***REMOVED***phi_type***REMOVED******REMOVED***filename, start***REMOVED******REMOVED***1***REMOVED***
+
+                    # Added for eval
                     if normalized_token is None:
+                        # self.eval_table***REMOVED***filename***REMOVED******REMOVED***start***REMOVED***.update({'sub':None})
                         continue
                     substitute_token = self.sub.date_to_string(self.sub.shift_date(normalized_token, 35))
-                    self.subs***REMOVED***(filename, start)***REMOVED*** = substitute_token
-
+                    # self.eval_table***REMOVED***filename***REMOVED******REMOVED***start***REMOVED***.update({'sub':substitute_token})
+                    self.subs***REMOVED***(filename, start)***REMOVED*** = (substitute_token, end)
             else:
                 continue
 
@@ -174,11 +170,14 @@ class Phitexts:
                 if i in exclude_dict:
                     start,stop = i, exclude_dict***REMOVED***i***REMOVED***
                     if (filename, start) in self.subs:
-                        substitute_token = self.subs***REMOVED***filename, start***REMOVED***
+                        substitute_token = self.subs***REMOVED***filename, start***REMOVED******REMOVED***0***REMOVED***
+                        end = self.subs***REMOVED***filename, start***REMOVED******REMOVED***1***REMOVED***
                         contents.append(substitute_token)
+                        last_marker = end
                     else:
                         contents.append("*****")
-                    last_marker = stop
+                        last_marker = stop
+                    
                 else:
                     contents.append(txt***REMOVED***i***REMOVED***)
 
@@ -225,9 +224,106 @@ class Phitexts:
 
         for filename in self.filenames:
             fbase, fext = os.path.splitext(filename)
+            fbase = fbase.split('/')***REMOVED***-1***REMOVED***
             filepath = outputdir + fbase + "_subs.txt"
             with open(filepath, "w", encoding='utf-8') as fhandle:
                 fhandle.write(self.textsout***REMOVED***filename***REMOVED***)
+    
+    def print_log(self, output_dir):
+        log_dir = os.path.join(output_dir, 'log/')
+        failed_dates_file = os.path.join(log_dir, 'failed_dates.json')
+        date_table_file = os.path.join(log_dir, 'parsed_dates.json')
+        phi_count_file = os.path.join(log_dir, 'phi_count.txt')
+        phi_marked_file = os.path.join(log_dir, 'phi_marked.json')
+
+        eval_table = {}
+        failed_date = {}
+        phi_table = {}
+
+
+        if os.path.isdir(log_dir ):
+            pass
+        else:
+            os.makedirs(log_dir)
+
+        # Write to file of raw dates, parsed dates and substituted dates
+        num_failed = 0
+        num_parsed = 0
+        # with open(date_table, 'w') as f_parsed, open(failed_dates, 'w') as f_failed:
+            # f_parsed.write('\t'.join(***REMOVED***'filename', 'start', 'end', 'raw', 'normalized', 'substituted'***REMOVED***))
+            # f_parsed.write('\n')
+            # f_failed.write('\t'.join(***REMOVED***'filename', 'start', 'end', 'raw'***REMOVED***))
+            # f_failed.write('\n')
+        for filename, start, end in self.types***REMOVED***'DATE'***REMOVED******REMOVED***0***REMOVED***.scan():
+            raw = self.texts***REMOVED***filename***REMOVED******REMOVED***start:end***REMOVED***
+            normalized_date = self.norms***REMOVED***'DATE'***REMOVED******REMOVED***(filename,start)***REMOVED******REMOVED***0***REMOVED***
+            if normalized_date is not None:
+                normalized_token = self.sub.date_to_string(normalized_date)
+                sub = self.subs***REMOVED***(filename,start)***REMOVED******REMOVED***0***REMOVED***
+                num_parsed += 1
+                if filename not in eval_table:
+                    eval_table***REMOVED***filename***REMOVED*** = ***REMOVED******REMOVED***
+                eval_table***REMOVED***filename***REMOVED***.append({'start':start, 'end':end, 'raw': raw, 'normalized': normalized_token, 'sub': sub})
+                    # f_parsed.write('\t'.join(***REMOVED***filename, str(start), str(end), raw, normalized_token, sub***REMOVED***))
+                    # f_parsed.write('\n')
+            else:
+                num_failed += 1
+                    # f_failed.write('\t'.join(***REMOVED***filename, str(start), str(end), raw.strip('\n')***REMOVED***))
+                    # f_failed.write('\n')
+                if filename not in failed_date:
+                        failed_date***REMOVED***filename***REMOVED*** = ***REMOVED******REMOVED***
+                failed_date***REMOVED***filename***REMOVED***.append({'start':start, 'end':end, 'raw': raw})
+
+        print ('Successfully parsed: ' + str(num_parsed) + ' dates.')
+        print ('Failed to parse: ' + str(num_failed) + ' dates.')
+                
+        # Count by phi_type, record PHI marked
+        phi_counter = {}
+        marked_phi = {}
+        with open(phi_count_file,'w') as f_count:
+            # f_marked.write('\t'.join(***REMOVED***'filename', 'start', 'end', 'word', 'phi_type', 'category'***REMOVED***))
+            # f_marked.write('\n')
+            for phi_type in self.types:
+                for filename, start, end in self.types***REMOVED***phi_type***REMOVED******REMOVED***0***REMOVED***.scan():
+                    if filename not in phi_table:
+                        phi_table***REMOVED***filename***REMOVED*** = ***REMOVED******REMOVED***
+                    word = self.texts***REMOVED***filename***REMOVED******REMOVED***start:end***REMOVED***
+                    phi_table***REMOVED***filename***REMOVED***.append({'start': start, 'end': end, 'word': word, 'type': phi_type})
+
+                    if phi_type not in phi_counter:
+                        phi_counter***REMOVED***phi_type***REMOVED*** = 0
+                    phi_counter***REMOVED***phi_type***REMOVED*** += 1
+
+                    
+                    # f_marked.write('\t'.join(***REMOVED***filename, str(start), str(end), word, phi_type***REMOVED***))
+                    # f_marked.write('\n')
+
+            for phi_type in phi_counter:
+                f_count.write('\t'.join(***REMOVED***phi_type, str(phi_counter***REMOVED***phi_type***REMOVED***)***REMOVED***))
+                f_count.write('\n')
+
+        # dump to json
+        with open (failed_dates_file, 'w') as f:
+            json.dump(failed_date, f)
+        with open(date_table_file, 'w') as f:
+            json.dump(eval_table, f)
+        with open(phi_marked_file, 'w') as f:
+            json.dump(phi_table, f)
+    
+
+
+
+            
+
+                    
+
+
+
+
+
+        
+
+
                 
 
         
