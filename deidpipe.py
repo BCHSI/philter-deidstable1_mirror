@@ -25,6 +25,9 @@ def get_args():
     ap.add_argument("-f", "--filters", default="./configs/philter_alpha.json",
                     help="Path to the config file, the default is ./configs/philter_alpha.json",
                     type=str)
+    ap.add_argument("-l", "--log", default=True,
+                    help="When this is true, the pipeline prints and saves log in a subdirectory in each output directory",
+                    type=lambda x:bool(distutils.util.strtobool(x)))
 
     return ap.parse_args()
 
@@ -60,6 +63,9 @@ def main():
     # saves output
     phitexts.save(args.output)
 
+    # print and save log 
+    if args.log:
+        phitexts.print_log(args.output)
 
     return EXIT_SUCCESS
 

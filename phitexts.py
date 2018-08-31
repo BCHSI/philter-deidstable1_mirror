@@ -2,6 +2,7 @@ import os
 from chardet.universaldetector import UniversalDetector
 import re
 from philter import Philter
+import json
 from subs import Subs
 
 class Phitexts:
@@ -27,8 +28,6 @@ class Phitexts:
         self.sub = Subs()
         self.filterer = None
 
-
-
     def _read_texts(self):
         if not self.inputdir:
             raise Exception("Input directory undefined: ", self.inputdir)
@@ -37,7 +36,7 @@ class Phitexts:
             for filename in files:
                 if not filename.endswith("txt"):
                     continue
-                filepath = root+filename
+                filepath = root + filename
                 self.filenames.append(filepath)
                 encoding = self._detect_encoding(filepath)
                 fhandle = open(filepath, "r", encoding=encoding['encoding'])
@@ -96,7 +95,6 @@ class Phitexts:
         # TODO: get normalized version for each detected phi
         # 1) get phi text given coords
         # 2) interpet/normalize phi given type
-        #self.norms = 
 
         for phi_type in self.types.keys():
             self.norms[phi_type] = {}
@@ -104,8 +102,9 @@ class Phitexts:
             if phi_type == "DATE":
                 for filename, start, end in self.types[phi_type][0].scan():
                     token = self.texts[filename][start:end]
-                    normalized_token = self.sub.parse_date(token)
-                    self.norms[phi_type] [(filename, start)] = normalized_token 
+                    normalized_token = self.sub.parse_date(token)                  
+                    self.norms[phi_type] [(filename, start)] = (normalized_token, end)
+                
             else:
                 continue
 
@@ -122,23 +121,20 @@ class Phitexts:
         if self.subs:
             return
 
-        # TODO: look up surrogate for normalized phi
-        # 1) look up surrogate map for current note key (TODO: where to get key from?)
-        # 2) use map to swap out normalized phi by map value
-        #    if no map value, use placeholder based on phi type, e.g. [[NAME]]
-        #self.subs
-        
-        # Note: this is currently done in surrogator.shift_dates(), surrogator.parse_and_shift_date(), parse_date_ranges(), replace_other_surrogate()
 
         for phi_type in self.norms.keys():
             if phi_type == "DATE":
                 for filename, start in self.norms[phi_type]:
-                    normalized_token = self.norms[phi_type][filename, start]
+                    normalized_token = self.norms[phi_type][filename, start][0]
+                    end = self.norms[phi_type][filename, start][1]
+
+                    # Added for eval
                     if normalized_token is None:
+                        # self.eval_table[filename][start].update({'sub':None})
                         continue
                     substitute_token = self.sub.date_to_string(self.sub.shift_date(normalized_token, 35))
-                    self.subs[(filename, start)] = substitute_token
-
+                    # self.eval_table[filename][start].update({'sub':substitute_token})
+                    self.subs[(filename, start)] = (substitute_token, end)
             else:
                 continue
 
@@ -174,11 +170,14 @@ class Phitexts:
                 if i in exclude_dict:
                     start,stop = i, exclude_dict[i]
                     if (filename, start) in self.subs:
-                        substitute_token = self.subs[filename, start]
+                        substitute_token = self.subs[filename, start][0]
+                        end = self.subs[filename, start][1]
                         contents.append(substitute_token)
+                        last_marker = end
                     else:
                         contents.append("*****")
-                    last_marker = stop
+                        last_marker = stop
+                    
                 else:
                     contents.append(txt[i])
 
@@ -225,9 +224,106 @@ class Phitexts:
 
         for filename in self.filenames:
             fbase, fext = os.path.splitext(filename)
+            fbase = fbase.split('/')[-1]
             filepath = outputdir + fbase + "_subs.txt"
             with open(filepath, "w", encoding='utf-8') as fhandle:
                 fhandle.write(self.textsout[filename])
+    
+    def print_log(self, output_dir):
+        log_dir = os.path.join(output_dir, 'log/')
+        failed_dates_file = os.path.join(log_dir, 'failed_dates.json')
+        date_table_file = os.path.join(log_dir, 'parsed_dates.json')
+        phi_count_file = os.path.join(log_dir, 'phi_count.txt')
+        phi_marked_file = os.path.join(log_dir, 'phi_marked.json')
+
+        eval_table = {}
+        failed_date = {}
+        phi_table = {}
+
+
+        if os.path.isdir(log_dir ):
+            pass
+        else:
+            os.makedirs(log_dir)
+
+        # Write to file of raw dates, parsed dates and substituted dates
+        num_failed = 0
+        num_parsed = 0
+        # with open(date_table, 'w') as f_parsed, open(failed_dates, 'w') as f_failed:
+            # f_parsed.write('\t'.join(['filename', 'start', 'end', 'raw', 'normalized', 'substituted']))
+            # f_parsed.write('\n')
+            # f_failed.write('\t'.join(['filename', 'start', 'end', 'raw']))
+            # f_failed.write('\n')
+        for filename, start, end in self.types['DATE'][0].scan():
+            raw = self.texts[filename][start:end]
+            normalized_date = self.norms['DATE'][(filename,start)][0]
+            if normalized_date is not None:
+                normalized_token = self.sub.date_to_string(normalized_date)
+                sub = self.subs[(filename,start)][0]
+                num_parsed += 1
+                if filename not in eval_table:
+                    eval_table[filename] = []
+                eval_table[filename].append({'start':start, 'end':end, 'raw': raw, 'normalized': normalized_token, 'sub': sub})
+                    # f_parsed.write('\t'.join([filename, str(start), str(end), raw, normalized_token, sub]))
+                    # f_parsed.write('\n')
+            else:
+                num_failed += 1
+                    # f_failed.write('\t'.join([filename, str(start), str(end), raw.strip('\n')]))
+                    # f_failed.write('\n')
+                if filename not in failed_date:
+                        failed_date[filename] = []
+                failed_date[filename].append({'start':start, 'end':end, 'raw': raw})
+
+        print ('Successfully parsed: ' + str(num_parsed) + ' dates.')
+        print ('Failed to parse: ' + str(num_failed) + ' dates.')
+                
+        # Count by phi_type, record PHI marked
+        phi_counter = {}
+        marked_phi = {}
+        with open(phi_count_file,'w') as f_count:
+            # f_marked.write('\t'.join(['filename', 'start', 'end', 'word', 'phi_type', 'category']))
+            # f_marked.write('\n')
+            for phi_type in self.types:
+                for filename, start, end in self.types[phi_type][0].scan():
+                    if filename not in phi_table:
+                        phi_table[filename] = []
+                    word = self.texts[filename][start:end]
+                    phi_table[filename].append({'start': start, 'end': end, 'word': word, 'type': phi_type})
+
+                    if phi_type not in phi_counter:
+                        phi_counter[phi_type] = 0
+                    phi_counter[phi_type] += 1
+
+                    
+                    # f_marked.write('\t'.join([filename, str(start), str(end), word, phi_type]))
+                    # f_marked.write('\n')
+
+            for phi_type in phi_counter:
+                f_count.write('\t'.join([phi_type, str(phi_counter[phi_type])]))
+                f_count.write('\n')
+
+        # dump to json
+        with open (failed_dates_file, 'w') as f:
+            json.dump(failed_date, f)
+        with open(date_table_file, 'w') as f:
+            json.dump(eval_table, f)
+        with open(phi_marked_file, 'w') as f:
+            json.dump(phi_table, f)
+    
+
+
+
+            
+
+                    
+
+
+
+
+
+        
+
+
                 
 
         
