@@ -211,6 +211,7 @@ class Philter:
     def precompile(self, filepath):
         """ precompiles our regex to speed up pattern matching"""
         regex = open(filepath,"r").read().strip()
+        # print(filepath)
         return re.compile(regex)
                
     def init_set(self, filepath):
@@ -297,6 +298,7 @@ class Philter:
 
                 # get full exclude map (only updated either on-command by map_regex_context or at the very end of map_coordinates)
                 self.full_exclude_map***REMOVED***filename***REMOVED*** = self.include_map.get_complement(filename, txt)
+                
                 for phi_type in self.phi_type_list:
                     for start,stop in self.phi_type_dict***REMOVED***phi_type***REMOVED******REMOVED***0***REMOVED***.filecoords(filename):
                         self.data_all_files***REMOVED***filename***REMOVED******REMOVED***"phi"***REMOVED***.append({"start":start, "stop":stop, "word":txt***REMOVED***start:stop***REMOVED***,"phi_type":phi_type, "filepath":""})
@@ -381,16 +383,6 @@ class Philter:
         coord_map = self.patterns***REMOVED***pattern_index***REMOVED******REMOVED***"coordinate_map"***REMOVED***
         regex = self.patterns***REMOVED***pattern_index***REMOVED******REMOVED***"data"***REMOVED***
         context = self.patterns***REMOVED***pattern_index***REMOVED******REMOVED***"context"***REMOVED***
-
-        in_path = self.finpath
-        out_path = self.foutpath
-
-
-        if not os.path.exists(in_path):
-            raise Exception("File input path does not exist", in_path)
-        
-        if not os.path.exists(out_path):
-            raise Exception("File output path does not exist", out_path)
 
 
         # 1. Get coordinates of all include and exclude mathches
@@ -969,8 +961,8 @@ class Philter:
         summary_output="data/phi/summary.json",
         phi_matcher=re.compile("\*+"),
         only_digits=False,
-        fn_output="data/phi/fn.json",
-        fp_output="data/phi/fp.json",
+        fn_output = "data/phi/fn.txt",
+        fp_output = "data/phi/fp.txt",
         fn_tags_context = "data/phi/fn_tags_context.txt",
         fp_tags_context = "data/phi/fp_tags_context.txt",
         fn_tags_nocontext = "data/phi/fn_tags.txt",
@@ -987,10 +979,10 @@ class Philter:
             raise Exception("Anno Filepath does not exist", anno_path)
         if not os.path.exists(in_path):
             raise Exception("Input Filepath does not exist", in_path)
-        if not os.path.exists(fn_output):
-            raise Exception("False Negative Filepath does not exist", fn_output)
-        if not os.path.exists(fp_output):
-            raise Exception("False Positive Filepath does not exist", fp_output)
+        # if not os.path.exists(fn_output):
+        #     raise Exception("False Negative Filepath does not exist", fn_output)
+        # if not os.path.exists(fp_output):
+        #     raise Exception("False Positive Filepath does not exist", fp_output)
 
         if self.verbose:
             print("RUNNING EVAL")
