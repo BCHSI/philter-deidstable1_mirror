@@ -1222,14 +1222,6 @@
         "notes":"This should remove anything that has a room number"
     },
     {
-        "title":"YYYY/MM-YYYY/MM",
-        "type":"regex",
-        "exclude":true,
-        "filepath":"filters/regex/dates/YYYY_MM-YYYY_MM_transformed.txt",
-        "notes":"This should remove anything with pattern YYYY/MM-YYYY/MM"
-
-[
-    {
         "title":"days safe",
         "type":"regex",
         "exclude":false,
@@ -1301,14 +1293,6 @@
         "exclude":true,
         "filepath":"filters/regex/dates/MM_YY-MM_YY_transformed.txt",
         "notes":"This should remove anything with pattern MM/YY-MM/YY",
-        "phi_type":"DATE"
-    },
-    {
-        "title":"MM/YYYY-MM/YYYY",
-        "type":"regex",
-        "exclude":true,
-        "filepath":"filters/regex/dates/MM_YYYY-MM_YYYY_transformed.txt",
-        "notes":"This should remove anything with pattern MM/YYYY-MM/YYYY",
         "phi_type":"DATE"
     },
     {
