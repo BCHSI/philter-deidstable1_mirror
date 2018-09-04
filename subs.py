@@ -4,12 +4,12 @@ import random
 from dateparser import parse
 import re
 import pandas as pd
+from collections import defaultdict
 
 class Subs:
-    def __init__(self):
+    def __init__(self,note_info_path = None, re_id_pat_path = None):
         #load shift table to a dictionary
-        #self.shift_table  = self._load_look_up_table()
-        pass
+        self.shift_table  = self._load_look_up_table(note_info_path,re_id_pat_path)
     
     def get_shift_amount(self,patient_id):
         return self.shift_table***REMOVED***patient_id***REMOVED***
@@ -55,9 +55,14 @@ class Subs:
                 input_date = str(dt).replace(" 00:00:00","")
     """
 
-    def _load_look_up_table(self,
-     note_info_path='data/notes_metadata/note_info.csv',
-     re_id_pat_path='data/notes_metadata/re_id_pat.csv'):
+    def _load_look_up_table(self,note_info_path,re_id_pat_path):
+
+        # note_info_path='data/notes_metadata/note_info.csv'
+        # re_id_pat_path='data/notes_metadata/re_id_pat.csv'
+
+        if note_info_path is None or re_id_pat_path is None:
+            return defaultdict(lambda:32)
+
 
         note_info = pd.read_csv(note_info_path)
         re_id_pat = pd.read_csv(re_id_pat_path)
