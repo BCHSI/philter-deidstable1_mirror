@@ -25,7 +25,7 @@ class Phitexts:
         self.textsout  = {}
 
         self._read_texts()
-        self.sub = Subs()
+        self.sub = Subs(note_info_path = None, re_id_pat_path = None)
         self.filterer = None
 
     def _read_texts(self):
@@ -132,7 +132,8 @@ class Phitexts:
                     if normalized_token is None:
                         # self.eval_table[filename][start].update({'sub':None})
                         continue
-                    substitute_token = self.sub.date_to_string(self.sub.shift_date(normalized_token, 35))
+                    #TODO: why don't we make the lookup by the filename instead of patient_id
+                    substitute_token = self.sub.date_to_string(self.sub.shift_date_pid(normalized_token, filename))
                     # self.eval_table[filename][start].update({'sub':substitute_token})
                     self.subs[(filename, start)] = (substitute_token, end)
             else:
