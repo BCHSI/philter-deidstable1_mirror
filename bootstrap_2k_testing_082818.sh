@@ -17,7 +17,7 @@ fi
 
 
 # Define max number of processes to use
-maxprocess=10
+maxprocess=25
 # Initialize process counter
 counter=0
 # Define number of notes to sample

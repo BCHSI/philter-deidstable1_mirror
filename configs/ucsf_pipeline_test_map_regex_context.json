@@ -953,6 +953,13 @@
         "notes":"This should remove anything that looks like a full street address (numbers and words)"
     },
     {
+        "title":"full street address with concatenated street indicator",
+        "type":"regex",
+        "exclude":true,
+        "filepath":"filters/regex/addresses/full_street_address_with_concatenated_indicator_transformed.txt",
+        "notes":""
+    },
+    {
         "title":"hospital name 1",
         "type":"regex",
         "exclude":true,
@@ -972,6 +979,13 @@
         "exclude":true,
         "filepath":"filters/regex/addresses/number_streetname_noindicator_suite_transformed.txt",
         "notes":"This should remove anything that looks like a street address with a floor number extension"
+    },
+    {
+        "title":"number streetname city state",
+        "type":"regex",
+        "exclude":true,
+        "filepath":"filters/regex/addresses/num_streetname_city_state_transformed.txt",
+        "notes":""
     },
     {
         "title":"number streetname extension?",
@@ -1926,6 +1940,13 @@
         "note": ""
     },
     {
+        "title": "patient mrn",
+        "type": "regex",
+        "exclude": true,
+        "filepath": "filters/regex/salutations/patient_mrn.txt",
+        "note": ""
+    },
+    {
         "title": "name_age",
         "type": "regex",
         "exclude": true,
@@ -2028,6 +2049,13 @@
         "type": "regex",
         "exclude": true,
         "filepath": "filters/regex/salutations/name_indicator.txt",
+        "note": ""
+    },
+    {
+        "title": "relative indicator",
+        "type": "regex",
+        "exclude": true,
+        "filepath": "filters/regex/salutations/relative_indicator.txt",
         "note": ""
     },
      {
