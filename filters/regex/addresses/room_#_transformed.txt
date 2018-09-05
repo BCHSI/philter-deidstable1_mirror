@@ -1,1 +1,1 @@
-\b((?i)room(:)?\s***REMOVED***a-z***REMOVED***+(\-)?\d+)\b
+\b((?i)***REMOVED***A-Z***REMOVED***\slevel(:)?\s)?((?i)room(:)?\s***REMOVED***a-z***REMOVED***+(\-)?\d+)\b

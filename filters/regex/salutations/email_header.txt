@@ -1,1 +1,1 @@
-((?<=\bCc\:\s|\bcc\:\s)|(?<=\bTo\:\s))((\")?***REMOVED***A-Z***REMOVED******REMOVED***a-zA-Z***REMOVED***+(\,)?\s***REMOVED***A-Z***REMOVED******REMOVED***a-zA-Z***REMOVED***+(\")?)
+((?<=\bCc\:\s|\bcc\:\s|\bRE\:\s)|(?<=\bTo\:\s)|(?<=\bRE\:)|(?<=\bRE\:\s{2})|(?<=\bRE\:\s{3})|(?<=\bRE\:\s{4}))((\")?***REMOVED***A-Z***REMOVED******REMOVED***a-zA-Z***REMOVED***+(\,)?(\-)?(\s***REMOVED***A-Z***REMOVED***\.)?(\s)?***REMOVED***A-Z***REMOVED******REMOVED***a-zA-Z***REMOVED***+(\")?)
