@@ -210,9 +210,13 @@ class Philter:
     
     def precompile(self, filepath):
         """ precompiles our regex to speed up pattern matching"""
-        regex = open(filepath,"r").read().strip()
-        # print(filepath)
-        return re.compile(regex)
+        #regex = open(filepath,"r").read()
+        for regex in open(filepath,"r"):
+            reg = regex.strip()
+            if not reg.startswith("#"):
+               print(reg)
+               reg_compile = re.compile(reg)
+        return reg_compile
                
     def init_set(self, filepath):
         """ loads a set of words, (must be a dictionary or set shape) returns result"""
