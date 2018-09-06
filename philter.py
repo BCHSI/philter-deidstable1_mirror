@@ -381,17 +381,6 @@ class Philter:
         regex = self.patterns***REMOVED***pattern_index***REMOVED******REMOVED***"data"***REMOVED***
         context = self.patterns***REMOVED***pattern_index***REMOVED******REMOVED***"context"***REMOVED***
 
-        in_path = self.finpath
-        out_path = self.foutpath
-
-
-        if not os.path.exists(in_path):
-            raise Exception("File input path does not exist", in_path)
-        
-        if not os.path.exists(out_path):
-            raise Exception("File output path does not exist", out_path)
-
-
         # 1. Get coordinates of all include and exclude mathches
 
         # current_include_map = self.get_full_include_map(filename)
