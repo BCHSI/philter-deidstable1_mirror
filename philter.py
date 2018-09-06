@@ -12,6 +12,8 @@ from coordinate_map import CoordinateMap
 from nltk.tag.stanford import StanfordNERTagger
 import subprocess
 import numpy
+import random
+import string
 
 
 class Philter:
@@ -114,14 +116,18 @@ class Philter:
         #self.clean_words = {}
 
         #create directory for pos data if it doesn't exist
-        pos_path = "./data/pos_data/"
-        if not os.path.isdir(pos_path):
-            os.mkdir(pos_path)
+        #pos_path = "./data/pos_data/"
+        self.pos_path = "./data/pos_data/" + self.random_string(10) + "/"
+        if not os.path.isdir(self.pos_path):
+            os.makedirs(self.pos_path)
 
         #initialize our patterns
         self.init_patterns()
 
-    def get_pos(self, filename, cleaned, pos_path = "./data/pos_data/"):
+    def random_string(self, length):
+        return ''.join(random.choice(string.ascii_letters) for m in range(length))
+    def get_pos(self, filename, cleaned):
+        pos_path = self.pos_path
         filename = filename.split("/")***REMOVED***-1***REMOVED***
         file_ = pos_path + filename
         if filename not in self.pos_tags:
@@ -329,7 +335,6 @@ class Philter:
             matches = regex.finditer(text)
             
             for m in matches:
-               
                 coord_map.add_extend(filename, m.start(), m.start()+len(m.group()))
         
             self.patterns***REMOVED***pattern_index***REMOVED******REMOVED***"coordinate_map"***REMOVED*** = coord_map
