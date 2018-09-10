@@ -117,6 +117,10 @@ def check_input(input, gold):
     elif os.path.isfile(input) and os.path.isdir(gold):
         return True, ''
 
+    elif os.path.isfile(input) and os.path.isfile(gold):
+        return True, ''
+    
+
 # increamentally add
 def add_stdin_test(mode, input, gold, conf_id):
     if mode == 'b':
