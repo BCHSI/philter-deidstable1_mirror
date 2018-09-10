@@ -7,13 +7,24 @@ import pandas as pd
 from collections import defaultdict
 import dask.dataframe as dd
 
+DEFAULT_SHIFT_VALUE = 32
 class Subs:
     def __init__(self,note_info_path = None, re_id_pat_path = None, note_keys = None):
         #load shift table to a dictionary
         self.shift_table  = self._load_look_up_table(note_info_path, re_id_pat_path, note_keys)
     
     def get_shift_amount(self,note_id):
-        return self.shift_table[note_id]
+        shift_amount = self.shift_table[note_id]
+
+        #if the shift amount is an int or can be converted to an int then return it.
+        try:
+            shift_amount = int(shift_amount)
+            return shift_amount
+        #if the shift amount is not int then print the data_offset and note_id values and return the DEFAULT_SHIFT_VALUE
+        except ValueError:
+            print("Error: date_offset is not an integer. date_offset=" + str(shift_amount)
+                 + ", note_id=" + str(note_id))
+        return DEFAULT_SHIFT_VALUE
 
     def shift_date(self, date, shift_amount):
         return date + timedelta(days=shift_amount) 
@@ -63,7 +74,7 @@ class Subs:
         # re_id_pat_path='data/notes_metadata/re_id_pat.csv'
 
         if note_info_path is None or re_id_pat_path is None:
-            return defaultdict(lambda:32)
+            return defaultdict(lambda:DEFAULT_SHIFT_VALUE)
 
 
         note_info = dd.read_csv(note_info_path, sep='\t', usecols=['patient_ID', 'note_key'])
