@@ -25,7 +25,7 @@ class Phitexts:
         self.textsout  = {}
 
         self._read_texts()
-        self.sub = Subs(note_info_path = None, re_id_pat_path = None)
+        self.subser = None
         self.filterer = None
 
     def _read_texts(self):
@@ -36,7 +36,7 @@ class Phitexts:
             for filename in files:
                 if not filename.endswith("txt"):
                     continue
-                filepath = root + filename
+                filepath = os.path.join(root, filename)
                 self.filenames.append(filepath)
                 encoding = self._detect_encoding(filepath)
                 fhandle = open(filepath, "r", encoding=encoding***REMOVED***'encoding'***REMOVED***)
@@ -102,7 +102,7 @@ class Phitexts:
             if phi_type == "DATE":
                 for filename, start, end in self.types***REMOVED***phi_type***REMOVED******REMOVED***0***REMOVED***.scan():
                     token = self.texts***REMOVED***filename***REMOVED******REMOVED***start:end***REMOVED***
-                    normalized_token = self.sub.parse_date(token)                  
+                    normalized_token = Subs.parse_date(token)                  
                     self.norms***REMOVED***phi_type***REMOVED*** ***REMOVED***(filename, start)***REMOVED*** = (normalized_token, end)
                 
             else:
@@ -115,12 +115,13 @@ class Phitexts:
 
         # Note: this is currently done in surrogator.shift_dates(), surrogator.parse_and_shift_date(), parse_date_ranges(), replace_other_surrogate()
         
-    def substitute_phi(self):
+    def substitute_phi(self, note_info_path = None, re_id_pat_path = None):
         assert self.norms, "No normalized PHI defined"
         
         if self.subs:
             return
 
+        self.subser = Subs(note_info_path, re_id_pat_path)
 
         for phi_type in self.norms.keys():
             if phi_type == "DATE":
@@ -133,7 +134,8 @@ class Phitexts:
                         # self.eval_table***REMOVED***filename***REMOVED******REMOVED***start***REMOVED***.update({'sub':None})
                         continue
                     #TODO: why don't we make the lookup by the filename instead of patient_id
-                    substitute_token = self.sub.date_to_string(self.sub.shift_date_pid(normalized_token, filename))
+                    note_key_ucsf = os.path.splitext(os.path.basename(filename).strip('0'))***REMOVED***0***REMOVED***
+                    substitute_token = self.subser.date_to_string(self.subser.shift_date_pid(normalized_token, note_key_ucsf))
                     # self.eval_table***REMOVED***filename***REMOVED******REMOVED***start***REMOVED***.update({'sub':substitute_token})
                     self.subs***REMOVED***(filename, start)***REMOVED*** = (substitute_token, end)
             else:

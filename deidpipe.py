@@ -25,6 +25,16 @@ def get_args():
     ap.add_argument("-f", "--filters", default="./configs/philter_alpha.json",
                     help="Path to the config file, the default is ./configs/philter_alpha.json",
                     type=str)
+    ap.add_argument("-n", "--note_info", default="./data/i2b2_meta/note_info.csv",
+                    help="Path to the csv file that contains the note meta data "
+                          + "with patient ID and note key, the default is "
+                          + "./data./i2b2_meta/note_info.csv",
+                    type=str)
+    ap.add_argument("-s", "--surrogate_info", default="./data/i2b2_meta/re_id_pat.csv",
+                    help="Path to the csv file that contains the surrogate info per "
+                          + "patient ID, the default is "
+                          + "./data./i2b2_meta/re_id_pat.csv",
+                    type=str)
     ap.add_argument("-l", "--log", default=True,
                     help="When this is true, the pipeline prints and saves log in a subdirectory in each output directory",
                     type=lambda x:bool(distutils.util.strtobool(x)))
@@ -55,7 +65,7 @@ def main():
         phitexts.normalize_phi()
         
         # looks-up surrogate and apply to normalized PHI
-        phitexts.substitute_phi()
+        phitexts.substitute_phi(args.note_info, args.surrogate_info)
 
     # transforms texts
     phitexts.transform()
