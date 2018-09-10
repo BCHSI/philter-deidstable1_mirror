@@ -100,20 +100,21 @@ def new_script_test(scrip1, script2, conf1, conf2, in_dir):
     absolute_conf2_path = os.path.abspath(conf2)
     absolute_script1 = os.path.abspath(script1)
     absolute_script2 = os.path.abspath(script2)
+    absolute_in_dir = os.path.abspath(in_dir)
 
 
     #run the current script
     print("RUNNING SCRIPT 1")
 
     os.chdir(os.path.abspath(".."))
-    call(["python3", absolute_script1,"-i="+in_dir,"-a="+in_dir,"-o="+SCRIPT_TEST_TEMP_FOLDER_1,"-f="+absolute_conf1_path,"-e=False"])
+    call(["python3", absolute_script1,"-i="+absolute_in_dir ,"-a="+absolute_in_dir ,"-o="+SCRIPT_TEST_TEMP_FOLDER_1,"-f="+absolute_conf1_path,"-e=False"])
     os.chdir(WORKING_DIR)
 
     #run the new script
     
     os.chdir(os.path.abspath(os.path.dirname(script2)))
     print("RUNNING SCRIPT 2")
-    call(["python3", absolute_script2,"-i="+in_dir,"-a="+in_dir,"-o="+SCRIPT_TEST_TEMP_FOLDER_2,"-f="+absolute_conf2_path,"-e=False"])
+    call(["python3", absolute_script2,"-i="+absolute_in_dir ,"-a="+absolute_in_dir ,"-o="+SCRIPT_TEST_TEMP_FOLDER_2,"-f="+absolute_conf2_path,"-e=False"])
     os.chdir(WORKING_DIR)
 
     print("TESTING OUTPUTS")
