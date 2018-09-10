@@ -11,16 +11,16 @@ class Subs:
         #load shift table to a dictionary
         self.shift_table  = self._load_look_up_table(note_info_path,re_id_pat_path)
     
-    def get_shift_amount(self,patient_id):
-        return self.shift_table[patient_id]
+    def get_shift_amount(self,note_id):
+        return self.shift_table[note_id]
 
     def shift_date(self, date, shift_amount):
         return date + timedelta(days=shift_amount) 
     
-    def shift_date_pid(self, date, patient_id):
-        return self.shift_date(date, self.get_shift_amount(patient_id))
+    def shift_date_pid(self, date, note_id):
+        return self.shift_date(date, self.get_shift_amount(note_id))
 
-    def parse_date(self, date_string):
+    def parse_date(date_string):
         date = parse(date_string, settings={'PREFER_DAY_OF_MONTH': 'first'} )
         return date
     
@@ -64,11 +64,11 @@ class Subs:
             return defaultdict(lambda:32)
 
 
-        note_info = pd.read_csv(note_info_path)
-        re_id_pat = pd.read_csv(re_id_pat_path)
+        note_info = pd.read_csv(note_info_path, sep='\t', usecols=['patient_ID', 'note_key'])
+        re_id_pat = pd.read_csv(re_id_pat_path, sep='\t', usecols=['PatientId', 'date_offset'])
 
         #join together re_id_pat with NOTE_INFO on Patient_id
-        joined_table = note_info.set_index('patient_ID').join(re_id_pat.set_index('patient_ID'))
-        id2offset = pd.Series(joined_table.date_offset.values,index=joined_table.index).to_dict()
+        joined_table = note_info.set_index('patient_ID').join(re_id_pat.set_index('PatientId'))
+        id2offset = pd.Series(joined_table.date_offset.values,index=joined_table.note_key).to_dict()
 
         return id2offset

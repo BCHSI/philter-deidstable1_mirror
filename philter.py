@@ -253,7 +253,7 @@ class Philter:
         for root, dirs, files in os.walk(in_path):
             for f in files:
 
-                filename = root+f
+                filename = os.path.join(root, f)
 
                 if filename.split(".")[-1] not in allowed_filetypes:
                     if self.verbose:
