@@ -2,20 +2,31 @@
 ## Unit Test
 We define three units to test Philter: blacklist, whitelist and regular expression. 
 
-### Testing structure
+### Easy version testing
+Easy version testing allows users to simply test if their newly editted script produces the same results as the old script does. The default configuration file used is philter_gamma.json and the default input data is i2b2_notes. To do this, run:
+```
+python3 test.py -m v script1.py script2.py
+```
+### User-specified input for version testing
+There may also be the case where users would like to apply different configurations on the two scripts and input data other than the default one. To do this, run:
+```
+python3 test.py -m v -s1 script1.py -s2 script2.py (-c1 conf1.json) (-c2 conf2.json) (-i input_data)
+```
+Note that arguments in parentheses are optional. If they are not specified, the default options will be enabled. 
+### Simply testing out outputs
+When users already have a set of output that they would like to run a quick comparison on, run the following command:
+```
+python3 test.py -m v -o1 output1 -o2 output2
+```
 
+### Run unit tests
 
-#### Run unit tests
+To run the tests just navigate to the tests/ directory type the following command, use -m to specify the testing mode ('w' for whitelist, 'b' for blacklist and 'r' for regular expresssion):
+```
+python3 test.py -m b script
+```
 
-To run the tests just navigate to the tests/ directory type the following command:
-```
-python3 test.py <main_script_path>
-```
-For example:
-```
-python3 test.py ../main.py
-```
-#### Add your own test cases
+## Add your own test cases
 We created utilities for adding test cases so that you can use one or two command lines to add your own test cases easily. You also have the choice to delete the added test cases if the test cases are no longer needed. The utility also supports standard input for quick testing. 
 
 1. Using existing configuration files

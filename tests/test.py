@@ -3,8 +3,9 @@ import sys
 from subprocess import call,check_output
 import filecmp
 from shutil import rmtree
+import argparse
 
-script = os.path.abspath(sys.argv***REMOVED***1***REMOVED***)
+script = os.path.abspath(sys.argv***REMOVED***3***REMOVED***)
 
 GOLDEN_OUTPUT = "golden_output"
 PROGRAM_OUTPUT = "program_output"
@@ -86,7 +87,7 @@ def regex_test():
                 
         dir_diff(golden_output,program_output)
 
-def new_script_test(new_script, config_path):
+def new_script_test(scrip1, script2, conf1, conf2, in_dir):
     if os.path.exists(SCRIPT_TEST_TEMP_FOLDER_1):
         rmtree(SCRIPT_TEST_TEMP_FOLDER_1)
     os.mkdir(SCRIPT_TEST_TEMP_FOLDER_1)
@@ -95,23 +96,24 @@ def new_script_test(new_script, config_path):
         rmtree(SCRIPT_TEST_TEMP_FOLDER_2)
     os.mkdir(SCRIPT_TEST_TEMP_FOLDER_2)
     
-    absolute_config_path = os.path.abspath(conf_path)
-    absolute_script = os.path.abspath(script)
-    absolute_new_script = os.path.abspath(new_script)
+    absolute_conf1_path = os.path.abspath(conf1)
+    absolute_conf2_path = os.path.abspath(conf2)
+    absolute_script1 = os.path.abspath(script1)
+    absolute_script2 = os.path.abspath(script2)
 
 
     #run the current script
     print("RUNNING SCRIPT 1")
 
     os.chdir(os.path.abspath(".."))
-    call(***REMOVED***"python3", absolute_script,"-i="+SCRIPT_TEST_DATA,"-a="+SCRIPT_TEST_DATA,"-o="+SCRIPT_TEST_TEMP_FOLDER_1,"-f="+absolute_config_path,"-e=False"***REMOVED***)
+    call(***REMOVED***"python3", absolute_script1,"-i="+in_dir,"-a="+in_dir,"-o="+SCRIPT_TEST_TEMP_FOLDER_1,"-f="+absolute_conf1_path,"-e=False"***REMOVED***)
     os.chdir(WORKING_DIR)
 
     #run the new script
     
-    os.chdir(os.path.abspath(os.path.dirname(new_script)))
+    os.chdir(os.path.abspath(os.path.dirname(script2)))
     print("RUNNING SCRIPT 2")
-    call(***REMOVED***"python3", absolute_new_script,"-i="+SCRIPT_TEST_DATA,"-a="+SCRIPT_TEST_DATA,"-o="+SCRIPT_TEST_TEMP_FOLDER_2,"-f="+absolute_config_path,"-e=False"***REMOVED***)
+    call(***REMOVED***"python3", absolute_script2,"-i="+in_dir,"-a="+in_dir,"-o="+SCRIPT_TEST_TEMP_FOLDER_2,"-f="+absolute_conf2_path,"-e=False"***REMOVED***)
     os.chdir(WORKING_DIR)
 
     print("TESTING OUTPUTS")
@@ -140,22 +142,77 @@ def dir_diff(true_output, test_output):
         print(str(different_files)+ " TESTS HAVE FAILED.")
 
 if __name__=="__main__":
-    print("Running blacklist tests:...")
-    black_list_test()
-    print("______________________________")
+    # version testing
+    if sys.argv***REMOVED***2***REMOVED*** == 'v':
+        # easy version testing - same default config & same default input
+        # python3 test.py -m v script1.py script2.py
+        if len(sys.argv) == 5:
+            script1 = sys.argv***REMOVED***3***REMOVED***
+            script2 = sys.argv***REMOVED***4***REMOVED***
+            conf_path = os.path.abspath("../configs/philter_gamma.json")
+            in_dir = os.path.abspath("../data/i2b2_notes/")
+            print("Running easy version testing:...")
+            new_script_test(script1, script2, conf_path, conf_path, in_dir)
+        # version testing on existing outputs
+        # python3 test.py -m v -o1 output1 -o2 output2
+        elif len(sys.argv) == 7:
+            help_str = """ Philter python3 test.py -i """
+            ap = argparse.ArgumentParser(description=help_str)
+            ap.add_argument("-m", "--mode", required=True, help="Three testing mode allowed: w, b, r, v.", type=str, choices=***REMOVED***'w','b','r', 'v'***REMOVED***,)
+            ap.add_argument("-o1", "--out1", required=True, help="path to configuration file for script 1", type=str)
+            ap.add_argument("-o2", "--out2", required=True, help="path to configuration file for script 2", type=str)
+            args = ap.parse_args()
+            output1 = args.out1
+            output2 = args.out2
+            print ('Running output checking:...')
+            dir_diff(output1, output2)
+        # version testing with user-specified configurations and inputs
+        # python3 test.py -m v -s1 script1.py -s2 script2.py (-c1 conf1.json) (-c2 conf2.json) (-i input_data)
+        # arguments in () are optional
+        else:
+            help_str = """ Philter python3 test.py -i """
+            ap = argparse.ArgumentParser(description=help_str)
+            ap.add_argument("-m", "--mode", required=True, help="Three testing mode allowed: w, b, r, v.", type=str, choices=***REMOVED***'w','b','r', 'v'***REMOVED***,)
+            ap.add_argument("-i", "--input", default = './data/i2b2_notes/', required=False, help="path to input testing data", type=str)
+            ap.add_argument("-c1", "--conf1", default = '../configs/philter_alpha.json', required=False, help="path to configuration file for script 1", type=str)
+            ap.add_argument("-c2", "--conf2", default = '../configs/philter_alpha.json',required=False, help="path to configuration file for script 2", type=str)
+            ap.add_argument("-s1", "--script1", required=True, help="path to script 1", type=str)
+            ap.add_argument("-s2", "--script2", required=True, help="path to script 2", type=str)
+            args = ap.parse_args()
 
-    print("Running whitelist tests:...")
-    white_list_test()
-    print("______________________________")
+            script1 = args.script1
+            script2 = args.script2
+            conf1 = args.conf1
+            conf2 = args.conf2
+            in_dir = args.input
+            print("Running user-specified version testing:...")
+            new_script_test(script1, script2, conf1, conf2, in_dir)
+    # python3 test.py -m b script
+    elif sys.argv***REMOVED***2***REMOVED*** == 'b':
+        print("Running blacklist tests:...")
+        black_list_test()
+        print("______________________________")
+    elif sys.argv***REMOVED***2***REMOVED*** == 'w':
+        print("Running whitelist tests:...")
+        white_list_test()
+        print("______________________________")
+    elif sys.argv***REMOVED***2***REMOVED*** == 'r':
+        print("Running regex tests:...")
+        regex_test()
+        print("______________________________")
 
-    print("Running regex tests:...")
-    regex_test()
-    print("______________________________")
+
+
+
+
+
+
+
+            
+
+
+
+
 
     
-    if len(sys.argv) > 2:
-        new_script = sys.argv***REMOVED***2***REMOVED***
-        conf_path = os.path.abspath("../configs/philter_alpha.json")
-        print("Running new script tests:...")
-        new_script_test(new_script,conf_path)
 
