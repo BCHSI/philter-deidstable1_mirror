@@ -263,7 +263,7 @@ class Phitexts:
             raw = self.texts[filename][start:end]
             normalized_date = self.norms['DATE'][(filename,start)][0]
             if normalized_date is not None:
-                normalized_token = self.sub.date_to_string(normalized_date)
+                normalized_token = self.subser.date_to_string(normalized_date)
                 sub = self.subs[(filename,start)][0]
                 num_parsed += 1
                 if filename not in eval_table:
