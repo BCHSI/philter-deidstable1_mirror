@@ -11,6 +11,7 @@ class Phitexts:
     def __init__(self, inputdir):
         self.inputdir  = inputdir
         self.filenames = ***REMOVED******REMOVED***
+        self.note_keys = ***REMOVED******REMOVED***
         #notes text
         self.texts     = {}
         #coordinates of PHI
@@ -42,6 +43,7 @@ class Phitexts:
                 fhandle = open(filepath, "r", encoding=encoding***REMOVED***'encoding'***REMOVED***)
                 self.texts***REMOVED***filepath***REMOVED*** = fhandle.read()
                 fhandle.close()
+        self.note_keys = ***REMOVED***os.path.splitext(os.path.basename(f).strip('0'))***REMOVED***0***REMOVED*** for f in self.filenames***REMOVED***
             
                 
     def _detect_encoding(self, fp):
@@ -121,7 +123,7 @@ class Phitexts:
         if self.subs:
             return
 
-        self.subser = Subs(note_info_path, re_id_pat_path)
+        self.subser = Subs(note_info_path, re_id_pat_path, self.note_keys)
 
         for phi_type in self.norms.keys():
             if phi_type == "DATE":
@@ -261,7 +263,7 @@ class Phitexts:
             raw = self.texts***REMOVED***filename***REMOVED******REMOVED***start:end***REMOVED***
             normalized_date = self.norms***REMOVED***'DATE'***REMOVED******REMOVED***(filename,start)***REMOVED******REMOVED***0***REMOVED***
             if normalized_date is not None:
-                normalized_token = self.sub.date_to_string(normalized_date)
+                normalized_token = self.subser.date_to_string(normalized_date)
                 sub = self.subs***REMOVED***(filename,start)***REMOVED******REMOVED***0***REMOVED***
                 num_parsed += 1
                 if filename not in eval_table:
