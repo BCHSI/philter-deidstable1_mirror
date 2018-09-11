@@ -21,68 +21,130 @@ SCRIPT_TEST_TEMP_FOLDER_2 = os.path.abspath("./testtemp2/")+"/"
 
 WORKING_DIR = os.getcwd()
 
-def black_list_test():
-    for directory in os.listdir(BLACK_LIST_CONF_DIR):
-        if not os.path.isdir(os.path.join(BLACK_LIST_CONF_DIR, directory)):
-            continue
-        conf_file = os.path.join(BLACK_LIST_CONF_DIR, directory, "conf.json")
-        golden_output = os.path.join(BLACK_LIST_CONF_DIR, directory, GOLDEN_OUTPUT)+"/"
-        program_output = os.path.join(BLACK_LIST_CONF_DIR, directory, PROGRAM_OUTPUT)+"/"
-        input_data = os.path.join(BLACK_LIST_CONF_DIR, directory, INPUT_DATA)+"/"
+def black_list_test(test_id=None, test_script=None):
+    if test_id:
+        print ("Running blacklist test: " + test_id)
+        test_dir = os.path.join(BLACK_LIST_CONF_DIR, test_id)
+
+        conf_file = os.path.join(test_dir, "conf.json")
+        golden_output = os.path.join(test_dir, GOLDEN_OUTPUT)+"/"
+        program_output = os.path.join(test_dir, PROGRAM_OUTPUT)+"/"
+        input_data = os.path.join(test_dir, INPUT_DATA)+"/"
 
         if os.path.exists(program_output):
             rmtree(program_output)
         os.mkdir(program_output)
-        
-        
-        os.chdir(os.path.abspath(os.path.dirname(script)))
-        call(["python3", script,"-i="+input_data,"-a="+input_data,
+            
+        test_script = os.path.abspath(test_script)
+        os.chdir(os.path.abspath(os.path.dirname(test_script)))
+        call(["python3", test_script,"-i="+input_data,"-a="+input_data,
         "-o="+program_output,"-f="+conf_file,"-e=False"])
-        os.chdir(WORKING_DIR)
-        
-                
+        os.chdir(WORKING_DIR)                   
         dir_diff(golden_output,program_output)
 
-def white_list_test():
-    for directory in os.listdir(WHITE_LIST_CONF_DIR):
-        if not os.path.isdir(os.path.join(WHITE_LIST_CONF_DIR, directory)):
-            continue
-        conf_file = os.path.join(WHITE_LIST_CONF_DIR, directory, "conf.json")
-        golden_output = os.path.join(WHITE_LIST_CONF_DIR, directory, GOLDEN_OUTPUT)+"/"
-        program_output = os.path.join(WHITE_LIST_CONF_DIR, directory, PROGRAM_OUTPUT)+"/"
-        input_data = os.path.join(WHITE_LIST_CONF_DIR, directory, INPUT_DATA)+"/"
+    else:
+        for directory in os.listdir(BLACK_LIST_CONF_DIR):
+            if not os.path.isdir(os.path.join(BLACK_LIST_CONF_DIR, directory)):
+                continue
+            conf_file = os.path.join(BLACK_LIST_CONF_DIR, directory, "conf.json")
+            golden_output = os.path.join(BLACK_LIST_CONF_DIR, directory, GOLDEN_OUTPUT)+"/"
+            program_output = os.path.join(BLACK_LIST_CONF_DIR, directory, PROGRAM_OUTPUT)+"/"
+            input_data = os.path.join(BLACK_LIST_CONF_DIR, directory, INPUT_DATA)+"/"
+
+            if os.path.exists(program_output):
+                rmtree(program_output)
+            os.mkdir(program_output)
+            
+            
+            os.chdir(os.path.abspath(os.path.dirname(script)))
+            # print (os.getcwd())
+            call(["python3", script,"-i="+input_data,"-a="+input_data,
+            "-o="+program_output,"-f="+conf_file,"-e=False"])
+            os.chdir(WORKING_DIR)
+            
+                    
+            dir_diff(golden_output,program_output)
+
+def white_list_test(test_id=None, test_script=None):
+    if test_id:
+        print ("Running whitelist test: " + test_id)
+        test_dir = os.path.join(WHITE_LIST_CONF_DIR, test_id)
+
+        conf_file = os.path.join(test_dir, "conf.json")
+        golden_output = os.path.join(test_dir, GOLDEN_OUTPUT)+"/"
+        program_output = os.path.join(test_dir, PROGRAM_OUTPUT)+"/"
+        input_data = os.path.join(test_dir, INPUT_DATA)+"/"
 
         if os.path.exists(program_output):
             rmtree(program_output)
         os.mkdir(program_output)
-        
-        
-        os.chdir(os.path.abspath(os.path.dirname(script)))
-        call(["python3", script,"-i="+input_data,"-a="+input_data,
+            
+        test_script = os.path.abspath(test_script)
+        os.chdir(os.path.abspath(os.path.dirname(test_script)))
+        call(["python3", test_script,"-i="+input_data,"-a="+input_data,
         "-o="+program_output,"-f="+conf_file,"-e=False"])
-        os.chdir(WORKING_DIR)
-        
-                
+        os.chdir(WORKING_DIR)                   
         dir_diff(golden_output,program_output)
+    else:
+        for directory in os.listdir(WHITE_LIST_CONF_DIR):
+            if not os.path.isdir(os.path.join(WHITE_LIST_CONF_DIR, directory)):
+                continue
+            conf_file = os.path.join(WHITE_LIST_CONF_DIR, directory, "conf.json")
+            golden_output = os.path.join(WHITE_LIST_CONF_DIR, directory, GOLDEN_OUTPUT)+"/"
+            program_output = os.path.join(WHITE_LIST_CONF_DIR, directory, PROGRAM_OUTPUT)+"/"
+            input_data = os.path.join(WHITE_LIST_CONF_DIR, directory, INPUT_DATA)+"/"
 
-def regex_test():
-    for directory in os.listdir(REGEX_CONF_DIR):
-        if not os.path.isdir(os.path.join(REGEX_CONF_DIR, directory)):
-            continue
-        conf_file = os.path.join(REGEX_CONF_DIR, directory, "conf.json")
-        golden_output = os.path.join(REGEX_CONF_DIR, directory, GOLDEN_OUTPUT)+"/"
-        program_output = os.path.join(REGEX_CONF_DIR, directory, PROGRAM_OUTPUT)+"/"
-        input_data = os.path.join(REGEX_CONF_DIR, directory, INPUT_DATA)+"/"
+            if os.path.exists(program_output):
+                rmtree(program_output)
+            os.mkdir(program_output)
+            
+            
+            os.chdir(os.path.abspath(os.path.dirname(script)))
+            call(["python3", script,"-i="+input_data,"-a="+input_data,
+            "-o="+program_output,"-f="+conf_file,"-e=False"])
+            os.chdir(WORKING_DIR)
+            
+                    
+            dir_diff(golden_output,program_output)
+
+def regex_test(test_id=None, test_script=None):
+    if test_id:
+        print ("Running blacklist test: " + test_id)
+        test_dir = os.path.join(REGEX_CONF_DIR, test_id)
+
+        conf_file = os.path.join(test_dir, "conf.json")
+        golden_output = os.path.join(test_dir, GOLDEN_OUTPUT)+"/"
+        program_output = os.path.join(test_dir, PROGRAM_OUTPUT)+"/"
+        input_data = os.path.join(test_dir, INPUT_DATA)+"/"
 
         if os.path.exists(program_output):
             rmtree(program_output)
         os.mkdir(program_output)
-        
-        
-        os.chdir(os.path.abspath(os.path.dirname(script)))
-        call(["python3", script,"-i="+input_data,"-a="+input_data,
+            
+        test_script = os.path.abspath(test_script)
+        os.chdir(os.path.abspath(os.path.dirname(test_script)))
+        call(["python3", test_script,"-i="+input_data,"-a="+input_data,
         "-o="+program_output,"-f="+conf_file,"-e=False"])
-        os.chdir(WORKING_DIR)
+        os.chdir(WORKING_DIR)                   
+        dir_diff(golden_output,program_output)
+    else:
+        for directory in os.listdir(REGEX_CONF_DIR):
+            if not os.path.isdir(os.path.join(REGEX_CONF_DIR, directory)):
+                continue
+            conf_file = os.path.join(REGEX_CONF_DIR, directory, "conf.json")
+            golden_output = os.path.join(REGEX_CONF_DIR, directory, GOLDEN_OUTPUT)+"/"
+            program_output = os.path.join(REGEX_CONF_DIR, directory, PROGRAM_OUTPUT)+"/"
+            input_data = os.path.join(REGEX_CONF_DIR, directory, INPUT_DATA)+"/"
+
+            if os.path.exists(program_output):
+                rmtree(program_output)
+            os.mkdir(program_output)
+            
+            
+            os.chdir(os.path.abspath(os.path.dirname(script)))
+            call(["python3", script,"-i="+input_data,"-a="+input_data,
+            "-o="+program_output,"-f="+conf_file,"-e=False"])
+            os.chdir(WORKING_DIR)
         
                 
         dir_diff(golden_output,program_output)
@@ -190,17 +252,64 @@ if __name__=="__main__":
             new_script_test(script1, script2, conf1, conf2, in_dir)
     # python3 test.py -m b script
     elif sys.argv[2] == 'b':
-        print("Running blacklist tests:...")
-        black_list_test()
-        print("______________________________")
+        # running all blacklist tests
+        if len(sys.argv) == 4:
+            print("Running all blacklist tests:...")
+            black_list_test()
+            print("______________________________")
+        # running only user-specified blacklist test case
+        # python3 test.py -m b -t ID -s script.py
+        elif len(sys.argv) == 7:
+            help_str = """ Philter python3 test.py -i """
+            ap = argparse.ArgumentParser(description=help_str)
+            ap.add_argument("-m", "--mode", required=True, help="Three testing mode allowed: w, b, r, v.", type=str, choices=['w','b','r', 'v'],)
+            ap.add_argument("-t", "--test_id", required=True, help="user-specified test ID", type=str)
+            ap.add_argument("-s", "--script", required=True, help="script for testing", type=str)
+            args = ap.parse_args()
+            test_id = args.test_id
+            script = args.script
+            black_list_test(test_id,script)
+            print("______________________________")
+            
+
     elif sys.argv[2] == 'w':
-        print("Running whitelist tests:...")
-        white_list_test()
-        print("______________________________")
+        # python3 test.py -m w script.py
+        if len(sys.argv) == 4:
+            print("Running all whitelist tests:...")
+            white_list_test()
+            print("______________________________")
+        # running only user-specified blacklist test case
+        # python3 test.py -m w -t ID -s script.py
+        elif len(sys.argv) == 7:
+            help_str = """ Philter python3 test.py -i """
+            ap = argparse.ArgumentParser(description=help_str)
+            ap.add_argument("-m", "--mode", required=True, help="Three testing mode allowed: w, b, r, v.", type=str, choices=['w','b','r', 'v'],)
+            ap.add_argument("-t", "--test_id", required=True, help="user-specified test ID", type=str)
+            ap.add_argument("-s", "--script", required=True, help="script for testing", type=str)
+            args = ap.parse_args()
+            test_id = args.test_id
+            script = args.script
+            white_list_test(test_id,script)
+            print("______________________________")
     elif sys.argv[2] == 'r':
-        print("Running regex tests:...")
-        regex_test()
-        print("______________________________")
+        # python3 test.py -m w script.py
+        if len(sys.argv) == 4:
+            print("Running all whitelist tests:...")
+            white_list_test()
+            print("______________________________")
+        # running only user-specified blacklist test case
+        # python3 test.py -m w -t ID -s script.py
+        elif len(sys.argv) == 7:
+            help_str = """ Philter python3 test.py -i """
+            ap = argparse.ArgumentParser(description=help_str)
+            ap.add_argument("-m", "--mode", required=True, help="Three testing mode allowed: w, b, r, v.", type=str, choices=['w','b','r', 'v'],)
+            ap.add_argument("-t", "--test_id", required=True, help="user-specified test ID", type=str)
+            ap.add_argument("-s", "--script", required=True, help="script for testing", type=str)
+            args = ap.parse_args()
+            test_id = args.test_id
+            script = args.script
+            regex_test(test_id,script)
+            print("______________________________")
 
 
 
