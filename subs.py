@@ -1,13 +1,12 @@
-import dateutil.parser
-from datetime import datetime,timedelta
 import random
-from dateparser import parse
 import re
 import pandas as pd
 from collections import defaultdict
 import dask.dataframe as dd
+from datetime2 import datetime2
 
 DEFAULT_SHIFT_VALUE = 32
+
 class Subs:
     def __init__(self,note_info_path = None, re_id_pat_path = None, note_keys = None):
         #load shift table to a dictionary
@@ -27,46 +26,18 @@ class Subs:
         return DEFAULT_SHIFT_VALUE
 
     def shift_date(self, date, shift_amount):
-        return date + timedelta(days=shift_amount) 
+        return date + shift_amount
     
     def shift_date_pid(self, date, note_id):
         return self.shift_date(date, self.get_shift_amount(note_id))
 
     @staticmethod
     def parse_date(date_string):
-        date = parse(date_string, settings={'PREFER_DAY_OF_MONTH': 'first'} )
+        date = datetime2.parse(date_string, settings={'PREFER_DAY_OF_MONTH': 'first'} )
         return date
-    
+
     def date_to_string(self, date):
-        return date.strftime("%m/%d/%Y")
-
-    """
-    def parse_date_2(self, date_string):
-        date = parse(date_string, settings={'PREFER_DAY_OF_MONTH': 'first'} )
-        today = datetime.now()
-        if parsed_date is not None:
-            date_strict = parse(parsed_date,settings={'STRICT_PARSING': True})
-
-            # we have to take into account if the input date isn't a fully specified date
-            #date parse implementation returns current month if month is not found
-            # and sets day to equal 1 if day is not found
-            if strict_parsed_date is None or strict_parsed_date.year != date.year:
-                if date.month != today.month:
-                    input_string += str(dt.strftime('%B')) 
-                    output_string += str(dt_plus_arbitrary.strftime('%B')) 
-                if dt.year!=now.year:
-                    input_string += " " +str(dt.year)
-                    output_string += " " +str(dt_plus_arbitrary.year)
-                if dt.day!=1:
-                    input_string += " " +str(dt.day)
-                    output_string += " " +str(dt_plus_arbitrary.day)
-                output_shifted_date = output_string.replace(" 00:00:00","")
-                input_date = input_string.replace(" 00:00:00","")
-
-            else:
-                output_shifted_date = str(dt_plus_arbitrary).replace(" 00:00:00","")
-                input_date = str(dt).replace(" 00:00:00","")
-    """
+        return date.to_string()
 
     def _load_look_up_table(self,note_info_path, re_id_pat_path, note_keys):
 
