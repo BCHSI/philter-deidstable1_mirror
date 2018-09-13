@@ -27,7 +27,7 @@ class Subs:
         return DEFAULT_SHIFT_VALUE
 
     def shift_date(self, date, shift_amount):
-        return date + timedelta(days=shift_amount) 
+        return date - timedelta(days=shift_amount) 
     
     def shift_date_pid(self, date, note_id):
         return self.shift_date(date, self.get_shift_amount(note_id))
