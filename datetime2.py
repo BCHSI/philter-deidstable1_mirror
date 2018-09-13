@@ -74,6 +74,16 @@ class datetime2(datetime.datetime):
                 missing_year = self.missing_year, missing_month = self.missing_month,
                 missing_day = self.missing_day)
 
+    def __sub__(self, other):
+        if isinstance(other, int):
+            other = datetime.timedelta(days=other)
+        tmp = datetime.datetime.__sub__(self, other)
+        return datetime2(tmp.year, tmp.month, tmp.day, date_string = self.date_string,
+                missing_year = self.missing_year, missing_month = self.missing_month,
+                missing_day = self.missing_day)
+
+
+
     def to_string(self):
         #month; month dd; month yyyy; mm/dd/yyyy;
         if self.missing_year and self.missing_day:
