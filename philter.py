@@ -14,6 +14,10 @@ import subprocess
 import numpy
 import random
 import string
+import spacy
+from nltk.tag import HunposTagger
+import time
+import shutil
 
 
 class Philter:
@@ -79,8 +83,17 @@ class Philter:
                 raise Exception("Filepath does not exist", config["stanford_ner_tagger"]["jar"])
             self.stanford_ner_tagger_jar = config["stanford_ner_tagger"]["jar"]
                 #we lazy load our tagger only if there's a corresponding pattern
+        if "pos" in config:
+            self.pos = config["pos"]
+        if "pos_eval" in config:
+            self.pos_eval = config["pos_eval"]
+        if self.pos == 'h':
+            print ("Using HUNPOS for POS tagging....")
+            self.ht = HunposTagger(path_to_model = '/Users/lhe1/Downloads/hunpos_version_no_data/en_wsj.model', path_to_bin = '/Users/lhe1/Downloads/hunpos_version_no_data/hunpos-tag')
 
-      
+        if self.pos == 's':
+            print ("Using Spacy for POS tagging....")
+        
         self.stanford_ner_tagger = None
 
         #All coordinate maps stored here
@@ -112,6 +125,10 @@ class Philter:
         #create a memory for stored coordinate data
         self.data_all_files = {} 
 
+        self.time_table = {}
+
+        self.pos_table = {}
+
         #create a memory for clean words
         #self.clean_words = {}
 
@@ -124,9 +141,12 @@ class Philter:
         #initialize our patterns
         self.init_patterns()
 
+        # write logs of pos-taggers
+
+
     def random_string(self, length):
         return ''.join(random.choice(string.ascii_letters) for m in range(length))
-    def get_pos(self, filename, cleaned):
+    def get_nltk_pos(self, filename, cleaned):
         pos_path = self.pos_path
         filename = filename.split("/")[-1]
         file_ = pos_path + filename
@@ -284,7 +304,11 @@ class Philter:
 
                 for i,pat in enumerate(self.patterns):
                     if pat["type"] == "regex":
+                        start = time.time()
                         self.map_regex(filename=filename, text=txt, pattern_index=i)
+                        end = time.time()
+                        regex_file = pat['filepath']
+                        self.time_table[regex_file] = end - start
                     elif pat["type"] == "set":
                         self.map_set(filename=filename, text=txt, pattern_index=i)
                     elif pat["type"] == "regex_context":
@@ -314,7 +338,9 @@ class Philter:
         for i,pat in enumerate(self .patterns):
             if "data" in pat:
                 del self.patterns[i]["data"]
-
+        # print (self.time_table)
+        if self.pos_eval:
+            self.pos_logs()
         return self.full_exclude_map
                 
     def map_regex(self, filename="", text="", pattern_index=-1, pre_process= r"[^a-zA-Z0-9\.]"):
@@ -464,7 +490,89 @@ class Philter:
         coord_map.add(filename, 0, len(text))
         print(0, len(text))
         self.patterns[pattern_index]["coordinate_map"] = coord_map
+    
+    def get_hun_pos(self, filename, text, pre_process= r"[^a-zA-Z0-9\.]"):
+        # HUNPOS don't accept newline characters - needs special handling
+        # For now I used 'z's to replace the newline characters, but looking for better strategies if possible.
+        lst = re.split("(\s+)", text)
+        cleaned = []
+        for item in lst:
+            if len(item) > 0:
+                if item.isspace() == False:
+                    split_item = re.split("(\s+)", re.sub(pre_process, " ", item))
+                    for elem in split_item:
+                        if "\n" not in elem:
+                            cleaned.append(elem)
+                        else:                               
+                            length = len(elem)
+                            new_str = ''
+                            for i in range(length):
+                                new_str = new_str + 'z'
+                            cleaned.append(new_str)
+                else:
+                    if "\n" not in item:
+                        cleaned.append(item)
+                    else:
+                        length = len(item)
+                        new_str = ''
+                        for i in range(length):
+                            new_str = new_str+'z'
+                        cleaned.append(new_str)
+        pos_path = self.pos_path
+        filename = filename.split("/")[-1]
+        file_ = pos_path + filename
+        if filename not in self.pos_tags:
+            self.pos_tags = {}
+            if not os.path.isfile(file_):
+                with open(file_, 'wb') as f:
+                    tags = self.ht.tag(cleaned)
+                    new_tags = []
+                    for tp in tags:
+                        if isinstance(tp[1], bytes):
+                            tag = tp[1].decode("utf-8") 
+                            new_tags.append((tp[0],tag))
+                        else:
+                            new_tags.append((tp[0],tp[1]))
+                    pickle.dump(new_tags, f)
+                    return new_tags
+            else:
+                with open(file_, 'rb') as f:
+                    self.pos_tags[filename] = pickle.load(f)
 
+            #self.pos_tags[filename] = nltk.pos_tag(cleaned)
+        
+        return self.pos_tags[filename]
+
+    def get_spacy_pos(self, filename, cleaned):
+        nlp = spacy.load('en', disable=['parser', 'ner'])
+        doc = nlp("".join(cleaned))
+        pos_list = []
+        for token in doc:
+            if token.text == ' ':
+                pass
+            else:
+                pos_list.append((token.text, token.tag_))
+            if '\n' in token.text:
+                pass
+            else:
+                pos_list.append((' ', 'None'))
+
+        pos_path = self.pos_path
+        filename = filename.split("/")[-1]
+        file_ = pos_path + filename
+        if filename not in self.pos_tags:
+            self.pos_tags = {}
+            if not os.path.isfile(file_):
+                with open(file_, 'wb') as f:
+                    tags = pos_list
+                    pickle.dump(tags, f)
+                    return tags
+            else:
+                with open(file_, 'rb') as f:
+                    self.pos_tags[filename] = pickle.load(f)
+
+            #self.pos_tags[filename] = nltk.pos_tag(cleaned)
+        return self.pos_tags[filename]
 
     def map_set(self, filename="", text="", pattern_index=-1,  pre_process= r"[^a-zA-Z0-9\.]"):
         """ Creates a coordinate mapping of words any words in this set"""
@@ -486,14 +594,27 @@ class Philter:
         if len(pos_set) > 0:
             check_pos = True
 
-
+        filter_title = self.patterns[pattern_index]["title"]
         cleaned = self.get_clean(filename,text)
         if check_pos:
-            pos_list = self.get_pos(filename, cleaned)# pos_list = nltk.pos_tag(cleaned)
+            # use NLTK
+            if self.pos == 'n':
+                pos_list = self.get_nltk_pos(filename, cleaned)# pos_list = nltk.pos_tag(cleaned)
+            # use HUNPOS
+            elif self.pos == 'h':
+                pos_list = self.get_hun_pos(filename, text)
+            elif self.pos == 's':
+                pos_list = self.get_spacy_pos(filename, cleaned)
+            
+            # constructing a dict for evaluating pos-tagger
+            if filter_title not in self.pos_table:
+                self.pos_table[filter_title] = {}
+            if filename not in self.pos_table[filter_title]:
+                self.pos_table[filter_title][filename] = {}
+            
         else:
             pos_list = zip(cleaned,range(len(cleaned)))
 
-        pos_list = nltk.pos_tag(cleaned)
 
         # if filename == './data/i2b2_notes/160-03.txt':
         #     print(pos_list)
@@ -511,25 +632,31 @@ class Philter:
                 start_coordinate += len(word)
                 continue
 
-            if check_pos == False or (check_pos == True and pos in pos_set):
-                # if word == 'exlap':
-                #     print(pos)
-                #     print(filename)
-                #     print(pos_set)
-                #     print(check_pos)
-
+            if check_pos == False or (check_pos == True and pos in pos_set):  
                 if word_clean in map_set or word in map_set:
                     coord_map.add_extend(filename, start, stop)
+                    # print (word, word_clean)
+                    # added for analyzing pos-taggers
+                    if check_pos:
+                        if pos not in self.pos_table[filter_title][filename]:
+                            self.pos_table[filter_title][filename][pos] = []
+                        if word_clean in map_set:
+                            self.pos_table[filter_title][filename][pos].append(word_clean)
+                        elif word in map_set:
+                            self.pos_table[filter_title][filename][pos].append(word)
+                    # print (word_clean, pos)
                     #print("FOUND: ",word, "COORD: ",  text[start:stop])
                 else:
                     #print("not in set: ",word, "COORD: ",  text[start:stop])
                     #print(word_clean)
                     pass
+
                     
             #advance our start coordinate
             start_coordinate += len(word)
 
         self.patterns[pattern_index]["coordinate_map"] = coord_map
+        
   
 
     def map_pos(self, filename="", text="", pattern_index=-1, pre_process= r"[^a-zA-Z0-9\.]"):
@@ -547,12 +674,22 @@ class Philter:
         pos_set = set(self.patterns[pattern_index]["pos"])
         
         # Use pre-process to split sentence by spaces AND symbols, while preserving spaces in the split list
-
+        # if "filepath" in self.patterns[pattern_index]:
+        filter_title = self.patterns[pattern_index]["title"]
         cleaned = self.get_clean(filename,text)
+        if self.pos == 'n':
+            pos_list = self.get_nltk_pos(filename, cleaned)#pos_list = nltk.pos_tag(cleaned)
+        elif self.pos == 'h':
+            pos_list = self.get_hun_pos(filename, text)
+        elif self.pos == 's':
+            pos_list = self.get_spacy_pos(filename,cleaned)
+        
+        # constructing a dict for evaluating pos-tagger
+        if filter_title not in self.pos_table:
+            self.pos_table[filter_title] = {}
+        if filename not in self.pos_table[filter_title]:
+            self.pos_table[filter_title][filename] = {}
 
-        pos_list = self.get_pos(filename, cleaned)#pos_list = nltk.pos_tag(cleaned)
-        # if filename == './data/i2b2_notes/160-03.txt':
-        #     print(pos_list)
         start_coordinate = 0
         for tup in pos_list:
             word = tup[0]
@@ -568,6 +705,11 @@ class Philter:
 
             if pos in pos_set:    
                 coord_map.add_extend(filename, start, stop)
+                # added for analyzing pos-taggers
+                if pos not in self.pos_table[filter_title][filename]:
+                    self.pos_table[filter_title][filename][pos] = []
+                self.pos_table[filter_title][filename][pos].append(word)
+
                 #print("FOUND: ",word,"POS",pos, "COORD: ",  text[start:stop])
                 
             #advance our start coordinate
@@ -654,6 +796,22 @@ class Philter:
         for root, dirs, files in os.walk(folder):
             for filename in files:
                 yield root,filename
+
+    def pos_logs(self):
+        output_path = self.foutpath 
+        pos_log_dir = os.path.join(output_path, 'pos_log')
+        log_file = os.path.join(pos_log_dir, 'pos_summary.json')
+        if os.path.isdir(pos_log_dir):
+            shutil.rmtree(pos_log_dir)
+
+        os.mkdir(pos_log_dir)
+        print ('POS-tagging log directory created')
+        log_file = os.path.join(pos_log_dir, 'pos_summary.json')
+        with open(log_file, 'w') as f:
+            json.dump(self.pos_table, f, indent=4, sort_keys=True)
+        
+             
+
 
     def get_exclude_include_maps(self, filename, pattern, txt):
 
@@ -747,6 +905,8 @@ class Philter:
             outpathfbase = out_path + fbase
             if self.outformat == "asterisk":
                 with open(outpathfbase+".txt", "w", encoding='utf-8') as f:
+                    if 'DS_Store' in filename:
+                        continue
                     contents = self.transform_text_asterisk(txt, filename)
                     f.write(contents)
                     

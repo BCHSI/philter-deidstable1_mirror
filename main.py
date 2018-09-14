@@ -58,6 +58,12 @@ def main():
     ap.add_argument("--prod", default=False,
                     help="When prod is true, this will run the script with output in i2b2 xml format without running the eval script",
                     type=lambda x:bool(distutils.util.strtobool(x)))
+    ap.add_argument("-p","--pos", default="n", 
+                    help="optional argument to specify a different POS-tagger: 'n' for NLTK, 'h' for HUNPOS and 's' for Spacy",
+                    type=str)
+    ap.add_argument("-pe","--pos_eval", default=True, 
+                    help="When pe is true, the script will write logs to pos-tagger eval directory for analysis",
+                    type=lambda x:bool(distutils.util.strtobool(x)))
 
     args = ap.parse_args()
     run_eval = args.run_eval
@@ -92,6 +98,8 @@ def main():
             "xml":args.xml,
             "coords":args.coords,
             "eval_out":args.eval_output,
+            "pos":args.pos,
+            "pos_eval":args.pos_eval,
             "stanford_ner_tagger": {
                 "classifier":args.stanfordner+"classifiers/english.all.3class.distsim.crf.ser.gz",
                 "jar":args.stanfordner+"stanford-ner.jar",
