@@ -4,7 +4,7 @@ DATE_1 = datetime.datetime(3000, 12, 12)
 DATE_2 = datetime.datetime(1000, 5, 5)
 
 """
-datetime2 is an extention to python's standard datetime. It can be used anywhere
+datetime2 is an extension to python's standard datetime. It can be used anywhere
 datetime.datetime is used since it inherits from datetime.datetime. The additional
 features that datetime2 provides that are:
 
@@ -18,7 +18,7 @@ features that datetime2 provides that are:
     >> datetime2.parse("13th of June").missing_day
     >> False
 
-3. A more flexible string output. The default datetime2 will change depending on missing parts in the object.
+3. Providing a more flexible string output. The default datetime2 string representation will change depending on missing parts in the object.
     >> datetime2.parse("13th of June").to_string()
     >> 'June 13'
     ------------
