@@ -79,19 +79,17 @@ class Philter:
                 raise Exception("Filepath does not exist", config["stanford_ner_tagger"]["jar"])
             self.stanford_ner_tagger_jar = config["stanford_ner_tagger"]["jar"]
                 #we lazy load our tagger only if there's a corresponding pattern
-
-        if "cachepos" in config:
-            self.cache_to_disk = False
-            self.pos_path = None
-            if config["cachepos"]:
-                self.cache_to_disk = True
-                self.pos_path = config["cachepos"]
-                if not os.path.isdir(self.pos_path):
-                    os.makedirs(self.pos_path)
-                
-            
         self.stanford_ner_tagger = None
 
+        if "cachepos" in config and config["cachepos"]:
+            self.cache_to_disk = True
+            self.pos_path = config["cachepos"]
+            if not os.path.isdir(self.pos_path):
+                os.makedirs(self.pos_path)
+        else:
+            self.cache_to_disk = False
+            self.pos_path = None 
+            
         #All coordinate maps stored here
         self.coordinate_maps = []
 
