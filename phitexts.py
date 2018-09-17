@@ -11,7 +11,7 @@ class Phitexts:
     def __init__(self, inputdir):
         self.inputdir  = inputdir
         self.filenames = []
-        self.note_keys = []
+        #self.note_keys = []
         #notes text
         self.texts     = {}
         #coordinates of PHI
@@ -43,7 +43,7 @@ class Phitexts:
                 fhandle = open(filepath, "r", encoding=encoding['encoding'])
                 self.texts[filepath] = fhandle.read()
                 fhandle.close()
-        self.note_keys = [os.path.splitext(os.path.basename(f).strip('0'))[0] for f in self.filenames]
+        #self.note_keys = [os.path.splitext(os.path.basename(f).strip('0'))[0] for f in self.filenames]
             
                 
     def _detect_encoding(self, fp):
@@ -117,13 +117,13 @@ class Phitexts:
 
         # Note: this is currently done in surrogator.shift_dates(), surrogator.parse_and_shift_date(), parse_date_ranges(), replace_other_surrogate()
         
-    def substitute_phi(self, note_info_path = None, re_id_pat_path = None):
+    def substitute_phi(self, look_up_table_path = None):
         assert self.norms, "No normalized PHI defined"
         
         if self.subs:
             return
 
-        self.subser = Subs(note_info_path, re_id_pat_path, self.note_keys)
+        self.subser = Subs(look_up_table_path)
 
         for phi_type in self.norms.keys():
             if phi_type == "DATE":
