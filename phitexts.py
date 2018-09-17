@@ -128,6 +128,9 @@ class Phitexts:
         for phi_type in self.norms.keys():
             if phi_type == "DATE":
                 for filename, start in self.norms***REMOVED***phi_type***REMOVED***:
+                    note_key_ucsf = os.path.splitext(os.path.basename(filename).strip('0'))***REMOVED***0***REMOVED***
+                    if not self.subser.has_shift_amount(note_key_ucsf):
+                        continue
                     normalized_token = self.norms***REMOVED***phi_type***REMOVED******REMOVED***filename, start***REMOVED******REMOVED***0***REMOVED***
                     end = self.norms***REMOVED***phi_type***REMOVED******REMOVED***filename, start***REMOVED******REMOVED***1***REMOVED***
 
@@ -135,7 +138,7 @@ class Phitexts:
                     if normalized_token is None:
                         # self.eval_table***REMOVED***filename***REMOVED******REMOVED***start***REMOVED***.update({'sub':None})
                         continue
-                    note_key_ucsf = os.path.splitext(os.path.basename(filename).strip('0'))***REMOVED***0***REMOVED***
+                    
                     substitute_token = self.subser.date_to_string(self.subser.shift_date_pid(normalized_token, note_key_ucsf))
                     # self.eval_table***REMOVED***filename***REMOVED******REMOVED***start***REMOVED***.update({'sub':substitute_token})
                     self.subs***REMOVED***(filename, start)***REMOVED*** = (substitute_token, end)
@@ -149,8 +152,10 @@ class Phitexts:
         if not self.coords:
             self.textsout = self.texts
             print("WARNING: No PHI coordinates defined: nothing to transform!")
-        else:
-            assert self.subs, "No surrogated PHI defined"
+
+        #Subs may be empty in the case where we do not have any date shifts to perform.
+        #else:
+        #    assert self.subs, "No surrogated PHI defined"
                 
         if self.textsout:
             return
