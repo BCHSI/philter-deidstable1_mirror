@@ -14,23 +14,23 @@ class Subs:
         self.shift_table  = self._load_look_up_table(look_up_table_path)
     
     def get_shift_amount(self,note_id):
-        shift_amount = self.shift_table***REMOVED***note_id***REMOVED***
-
-        #if the shift amount is an int or can be converted to an int then return it.
         try:
-            shift_amount = int(shift_amount)
-            return shift_amount
-        #if the shift amount is not int then print the data_offset and note_id values and return the DEFAULT_SHIFT_VALUE
-        except ValueError:
+            shift_amount = int(self.shift_table***REMOVED***note_id***REMOVED***)
+        except KeyError as err:
+            print("Key Error in shift_table {0}".format(err))
+            return DEFAULT_SHIFT_VALUE #TODO: return None or negative or NAN to indicate missing shift to upstream
+        except ValueError as err:
+            print("Value Error: {0}".format(err))
             print("Error: date_offset is not an integer. date_offset=" + str(shift_amount)
-                 + ", note_id=" + str(note_id))
-        return DEFAULT_SHIFT_VALUE
+                  + ", note_id=" + str(note_id))
+            return DEFAULT_SHIFT_VALUE
+        return shift_amount
 
     def shift_date(self, date, shift_amount):
-        return date + timedelta(days=shift_amount) 
+        return date - timedelta(days=shift_amount) 
     
     def shift_date_pid(self, date, note_id):
-        return self.shift_date(date, self.get_shift_amount(note_id))
+        return self.shift_date(date, self.get_shift_amount(note_id)) # TODO: check return value before shift
 
     @staticmethod
     def parse_date(date_string):
@@ -59,5 +59,6 @@ class Subs:
         #joined_table = joined_table***REMOVED***joined_table***REMOVED***"note_key"***REMOVED***.isin(note_keys)***REMOVED***.compute()
 
         id2offset = pd.Series(look_up_table.date_offset.values,index=look_up_table.note_key).to_dict()
+
 
         return id2offset
