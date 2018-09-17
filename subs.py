@@ -13,17 +13,24 @@ class Subs:
         #load shift table to a dictionary
         self.shift_table  = self._load_look_up_table(look_up_table_path)
     
+
+    def has_shift_amount(self, note_id):
+        return note_id in self.shift_table
     def get_shift_amount(self,note_id):
         try:
             shift_amount = int(self.shift_table[note_id])
+            if shift_amount == 0:
+                print("WARNING: shift amount for note_id: {0} is zero.".format(note_id))
         except KeyError as err:
             print("Key Error in shift_table {0}".format(err))
-            return DEFAULT_SHIFT_VALUE #TODO: return None or negative or NAN to indicate missing shift to upstream
+            return None
+            #return DEFAULT_SHIFT_VALUE #TODO: return None or negative or NAN to indicate missing shift to upstream
         except ValueError as err:
             print("Value Error: {0}".format(err))
             print("Error: date_offset is not an integer. date_offset=" + str(shift_amount)
                   + ", note_id=" + str(note_id))
-            return DEFAULT_SHIFT_VALUE
+            return None
+            #return DEFAULT_SHIFT_VALUE
         return shift_amount
 
     def shift_date(self, date, shift_amount):
@@ -47,7 +54,7 @@ class Subs:
         # "note_key | date_offset | deid_note_key | patient_ID"
 
         if look_up_table_path is None:
-            return defaultdict(lambda:DEFAULT_SHIFT_VALUE)
+            return {} #defaultdict(lambda:DEFAULT_SHIFT_VALUE)
 
 
         look_up_table = pd.read_csv(look_up_table_path, sep='\t', usecols=['note_key', 'date_offset'])
