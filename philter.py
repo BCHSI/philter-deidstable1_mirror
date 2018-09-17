@@ -80,7 +80,16 @@ class Philter:
             self.stanford_ner_tagger_jar = config["stanford_ner_tagger"]["jar"]
                 #we lazy load our tagger only if there's a corresponding pattern
 
-      
+        if "cachepos" in config:
+            self.cache_to_disk = False
+            self.pos_path = None
+            if config["cachepos"]:
+                self.cache_to_disk = True
+                self.pos_path = config["cachepos"]
+                if not os.path.isdir(self.pos_path):
+                    os.makedirs(self.pos_path)
+                
+            
         self.stanford_ner_tagger = None
 
         #All coordinate maps stored here
@@ -117,29 +126,35 @@ class Philter:
 
         #create directory for pos data if it doesn't exist
         #pos_path = "./data/pos_data/"
-        self.pos_path = "./data/pos_data/" + self.random_string(10) + "/"
-        if not os.path.isdir(self.pos_path):
-            os.makedirs(self.pos_path)
+        #self.pos_path = "./data/pos_data/" + self.random_string(10) + "/"
+
 
         #initialize our patterns
         self.init_patterns()
 
-    def random_string(self, length):
-        return ''.join(random.choice(string.ascii_letters) for m in range(length))
+
     def get_pos(self, filename, cleaned):
-        pos_path = self.pos_path
-        filename = filename.split("/")[-1]
-        file_ = pos_path + filename
-        if filename not in self.pos_tags:
-            self.pos_tags = {}
-            if not os.path.isfile(file_):
-                with open(file_, 'wb') as f:
-                    tags = nltk.pos_tag(cleaned)
-                    pickle.dump(tags, f)
-                    return tags
-            else:
-                with open(file_, 'rb') as f:
-                    self.pos_tags[filename] = pickle.load(f)
+        if self.cache_to_disk:
+            pos_path = self.pos_path
+            filename = filename.split("/")[-1]
+            file_ = pos_path + filename
+            if filename not in self.pos_tags:
+                self.pos_tags = {}
+                if not os.path.isfile(file_):
+                    with open(file_, 'wb') as f:
+                        tags = nltk.pos_tag(cleaned)
+                        pickle.dump(tags, f)
+                        return tags
+                else:
+                    with open(file_, 'rb') as f:
+                        self.pos_tags[filename] = pickle.load(f)
+        else:
+            if filename not in self.pos_tags:
+                self.pos_tags = {}
+                self.pos_tags[filename] = nltk.pos_tag(cleaned)
+            return self.pos_tags[filename]
+
+
 
             #self.pos_tags[filename] = nltk.pos_tag(cleaned)
         return self.pos_tags[filename]
