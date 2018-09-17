@@ -58,6 +58,9 @@ def main():
     ap.add_argument("--prod", default=False,
                     help="When prod is true, this will run the script with output in i2b2 xml format without running the eval script",
                     type=lambda x:bool(distutils.util.strtobool(x)))
+    ap.add_argument("--cachepos", default=None,
+                    help="Path to a directoy to store/load the pos data for all notes. If no path is specified then memory caching will be used.",
+                    type=str)
 
     args = ap.parse_args()
     run_eval = args.run_eval
@@ -75,6 +78,7 @@ def main():
             "foutpath":args.output,
             "outformat":outputformat,
             "filters":args.filters,
+            "cachepos":args.cachepos
         }
 
     else:
@@ -92,6 +96,7 @@ def main():
             "xml":args.xml,
             "coords":args.coords,
             "eval_out":args.eval_output,
+            "cachepos":args.cachepos,
             "stanford_ner_tagger": {
                 "classifier":args.stanfordner+"classifiers/english.all.3class.distsim.crf.ser.gz",
                 "jar":args.stanfordner+"stanford-ner.jar",
