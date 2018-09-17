@@ -135,7 +135,6 @@ class Phitexts:
                     if normalized_token is None:
                         # self.eval_table***REMOVED***filename***REMOVED******REMOVED***start***REMOVED***.update({'sub':None})
                         continue
-                    #TODO: why don't we make the lookup by the filename instead of patient_id
                     note_key_ucsf = os.path.splitext(os.path.basename(filename).strip('0'))***REMOVED***0***REMOVED***
                     substitute_token = self.subser.date_to_string(self.subser.shift_date_pid(normalized_token, note_key_ucsf))
                     # self.eval_table***REMOVED***filename***REMOVED******REMOVED***start***REMOVED***.update({'sub':substitute_token})
