@@ -130,6 +130,7 @@ class Phitexts:
                 for filename, start in self.norms***REMOVED***phi_type***REMOVED***:
                     note_key_ucsf = os.path.splitext(os.path.basename(filename).strip('0'))***REMOVED***0***REMOVED***
                     if not self.subser.has_shift_amount(note_key_ucsf):
+                        if __debug__: print("WARNING: no date shift found for file: " + filename)
                         continue
                     normalized_token = self.norms***REMOVED***phi_type***REMOVED******REMOVED***filename, start***REMOVED******REMOVED***0***REMOVED***
                     end = self.norms***REMOVED***phi_type***REMOVED******REMOVED***filename, start***REMOVED******REMOVED***1***REMOVED***

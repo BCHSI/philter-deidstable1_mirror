@@ -57,7 +57,7 @@ class Subs:
             return {} #defaultdict(lambda:DEFAULT_SHIFT_VALUE)
 
 
-        look_up_table = pd.read_csv(look_up_table_path, sep='\t', usecols=***REMOVED***'note_key', 'date_offset'***REMOVED***)
+        look_up_table = pd.read_csv(look_up_table_path, sep='\t', usecols=***REMOVED***'note_key', 'date_offset'***REMOVED***, dtype=str)
 
         
 
