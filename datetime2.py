@@ -1,3 +1,4 @@
+import re
 import dateparser
 import datetime
 DATE_1 = datetime.datetime(3000, 12, 12)
@@ -33,11 +34,12 @@ features that datetime2 provides that are:
 """
 class datetime2(datetime.datetime):
     def __new__(cls, year, month, day, date_string = None,
-                missing_year = None,missing_month = None, missing_day = None):
+                missing_year = None,missing_month = None, missing_day = None, missing_century = None):
         self = datetime.datetime.__new__(cls,year,month,day)
         self.missing_year = missing_year
         self.missing_month = missing_month
         self.missing_day = missing_day
+        self.missing_century = missing_century
         
         self.date_string = date_string
         return self
@@ -51,9 +53,10 @@ class datetime2(datetime.datetime):
         year = temp_date.year
         month = temp_date.month
         day = temp_date.day
-        missing_year, missing_month, missing_day = datetime2.missing_date_parts(date_string)
+        missing_year, missing_month, missing_day, missing_century = datetime2.missing_date_parts(date_string)
         return datetime2(year, month, day, date_string = date_string, 
-                         missing_year = missing_year, missing_month = missing_month, missing_day = missing_day)
+                         missing_year = missing_year, missing_month = missing_month, missing_day = missing_day,
+                         missing_century = missing_century)
     
     @staticmethod
     def missing_date_parts(date_string):
@@ -64,7 +67,17 @@ class datetime2(datetime.datetime):
         missing_month = parsed_date_1.month != parsed_date_2.month
         missing_year = parsed_date_1.year != parsed_date_2.year
 
-        return missing_year, missing_month, missing_day
+        missing_century = None
+
+        #experimental missing century detection
+        if not missing_year:
+            #if four consecutive digits (0-9) have been found in the date
+            if re.search(r'[0-9]{4}',date_string):
+                missing_century = False
+            else:
+                missing_century = True
+
+        return missing_year, missing_month, missing_day, missing_century
             
     def add_days(self, number_of_days):
         return self + number_of_days
@@ -101,8 +114,18 @@ class datetime2(datetime.datetime):
             #month dd
             return self.strftime("%B %d")
         elif self.missing_day:
-            #month yyyy
-            return self.strftime("%B %Y")
+            #month year
+            if self.missing_century:
+                #month yy
+                return self.strftime("%B %y")
+            else:
+                #month yyyy
+                return self.strftime("%B %Y")
         else:
-            #mm/dd/yyyy;
-            return self.strftime("%m/%d/%Y")
+            #mm/dd/yyyy
+            if self.missing_century:
+                #mm/dd/yy
+                return self.strftime("%m/%d/%y")
+            else:
+                #mm/dd/yyyy
+                return self.strftime("%m/%d/%Y")
