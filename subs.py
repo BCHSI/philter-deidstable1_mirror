@@ -32,7 +32,7 @@ class Subs:
         return shift_amount
 
     def shift_date(self, date, shift_amount):
-        return date - shift_amount
+        return date.subtract_days(shift_amount)
     
     def shift_date_pid(self, date, note_id):
         return self.shift_date(date, self.get_shift_amount(note_id)) # TODO: check return value before shift
