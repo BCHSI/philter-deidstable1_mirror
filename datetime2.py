@@ -66,7 +66,14 @@ class datetime2(datetime.datetime):
 
         return missing_year, missing_month, missing_day
             
+    def add_days(self, number_of_days):
+        return self + number_of_days
+
+    def subtract_days(self, number_of_days):
+        return self - number_of_days
+
     def __add__(self, other):
+        #if other is int then create a timedelta object with days=other
         if isinstance(other, int):
             other = datetime.timedelta(days=other)
         tmp = datetime.datetime.__add__(self, other)
@@ -75,6 +82,7 @@ class datetime2(datetime.datetime):
                 missing_day = self.missing_day)
 
     def __sub__(self, other):
+        #if other is int then create a timedelta object with days=other
         if isinstance(other, int):
             other = datetime.timedelta(days=other)
         tmp = datetime.datetime.__sub__(self, other)
