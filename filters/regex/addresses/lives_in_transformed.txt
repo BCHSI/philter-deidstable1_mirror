@@ -1,1 +1,2 @@
+# Regex	to match the city name that follows words lives	in or lives on
 \b(?<=lives\sin\s|lives\son\s)([a-zA-Z]+\s{1,4}[A-Z][a-zA-Z]+|[a-zA-Z]+)\b
