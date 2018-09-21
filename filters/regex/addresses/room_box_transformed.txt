@@ -1,1 +1,2 @@
+# Regex to capture the room number with letters - and numbers followed by comma and box number
 \b((?i)(room)?(:)?(***REMOVED*** ***REMOVED***{1,2})?***REMOVED***A-Z***REMOVED***(\-)?\d+(,)?***REMOVED*** ***REMOVED***{1,2}box(:)?***REMOVED*** ***REMOVED***{1,2}\d+)\b

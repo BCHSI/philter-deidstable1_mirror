@@ -1,1 +1,2 @@
+# Regex to capture the desk number after the word reception
 \b((?i)(reception\s)?desk)\s***REMOVED***a-zA-Z0-9***REMOVED***+\b

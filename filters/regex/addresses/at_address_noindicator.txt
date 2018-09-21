@@ -1,1 +1,5 @@
+# Regular expression to identify address of the a patient in the notes
+# Looks for single or multiple numeric values followed by space, single or multiple letters, one or more white space and multiple letters after the word at in the notes
+# Regex also ensures that the digits are not followed by the words bpm, ccs, cc, pm, am or noon
+# Regex finally does a negative lookahead for the pattern .m. to avoid capturing time as address
 \b(?<=at\s)(\d+)\s{1,4}(?!bpm\b)(?!ccs\b)(?!cc\b)(?!pm\b)(?!am\b)(?!noon\b)(***REMOVED***A-Z***REMOVED******REMOVED***a-zA-Z***REMOVED***+\s{1,4}***REMOVED***A-Z***REMOVED******REMOVED***a-zA-Z***REMOVED***+|***REMOVED***A-Z***REMOVED******REMOVED***a-zA-Z***REMOVED***+|***REMOVED***A-Z***REMOVED***)\b(?!\.m\.)
