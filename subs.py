@@ -23,14 +23,10 @@ class Subs:
                 print("WARNING: shift amount for note_id: {0} is zero.".format(note_id))
         except KeyError as err:
             print("Key Error in shift_table {0}".format(err))
-            return None
-            #return DEFAULT_SHIFT_VALUE #TODO: return None or negative or NAN to indicate missing shift to upstream
+            shift_amount = None
         except ValueError as err:
-            print("Value Error: {0}".format(err))
-            print("Error: date_offset is not an integer. date_offset=" + str(shift_amount)
-                  + ", note_id=" + str(note_id))
-            return None
-            #return DEFAULT_SHIFT_VALUE
+            print("Value Error: date_offset is not an integer for note_id=" + str(note_id) + "{0}".format(err))
+            shift_amount = None
         return shift_amount
 
     def shift_date(self, date, shift_amount):
@@ -57,8 +53,8 @@ class Subs:
             return {} #defaultdict(lambda:DEFAULT_SHIFT_VALUE)
 
 
-        look_up_table = pd.read_csv(look_up_table_path, sep='\t', usecols=['note_key', 'date_offset'], dtype=str)
-
+        look_up_table = dd.read_csv(look_up_table_path, sep='\t', usecols=['note_key', 'date_offset'], dtype=str)
+        look_up_table = look_up_table[~look_up_table["date_offset"].isnull()].compute()
         
 
         #join together re_id_pat with NOTE_INFO on Patient_id

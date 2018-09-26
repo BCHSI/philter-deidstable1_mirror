@@ -45,27 +45,34 @@ def main():
 
     # parses commandline arguments
     args = get_args()
-    
+    if __debug__: print("read args")
+ 
     # initializes texts container
     phitexts = Phitexts(args.input)
     
     # detect PHI coordinates
+    if __debug__: print("detecting PHI coordinates")
     phitexts.detect_phi(args.filters)
 
     if phitexts.coords:
         # detects PHI types
+        if __debug__: print("detecting PHI types")
         phitexts.detect_phi_types()
         
         # normalizes PHI
+        if __debug__: print("normalizing PHI")
         phitexts.normalize_phi()
         
         # looks-up surrogate and apply to normalized PHI
+        if __debug__: print("looking up surrogates")
         phitexts.substitute_phi(args.surrogate_info)
 
     # transforms texts
+    if __debug__: print("transforming texts")
     phitexts.transform()
 
     # saves output
+    if __debug__: print("saving de-identified texts")
     phitexts.save(args.output)
 
     # print and save log 
