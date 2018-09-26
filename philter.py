@@ -275,6 +275,7 @@ class Philter:
                 #self.patterns***REMOVED***i***REMOVED******REMOVED***"coordinate_map"***REMOVED***.add_file(filename)
 
                 encoding = self.detect_encoding(filename)
+                if __debug__: print("reading text from " + filename)
                 txt = open(filename,"r", encoding=encoding***REMOVED***'encoding'***REMOVED***).read()
 
                 # Get full self.include/exclude map before transform
@@ -345,6 +346,8 @@ class Philter:
 
         # All regexes except matchall
         if regex != re.compile('.'):
+            #if __debug__: print("map_regex(): searching for regex with index " + str(pattern_index))
+            #if __debug__ and pattern_index: print("map_regex(): regex is " + str(regex))
             matches = regex.finditer(text)
             
             for m in matches:
