@@ -60,22 +60,13 @@ class datetime2(datetime.datetime):
     
     @staticmethod
     def missing_date_parts(date_string):
-        parsed_date_1 = dateparser.parse(date_string, settings={'RELATIVE_BASE':DATE_1})
-        parsed_date_2 = dateparser.parse(date_string, settings={'RELATIVE_BASE':DATE_2})
+        parsed_date_1 = dateparser.parse(date_string, settings={'RELATIVE_BASE':DATE_1, 'PREFER_DATES_FROM':"future"})
+        parsed_date_2 = dateparser.parse(date_string, settings={'RELATIVE_BASE':DATE_2, 'PREFER_DATES_FROM':"past"})
 
         missing_day = parsed_date_1.day != parsed_date_2.day
         missing_month = parsed_date_1.month != parsed_date_2.month
-        missing_year = parsed_date_1.year != parsed_date_2.year
-
-        missing_century = None
-
-        #experimental missing century detection
-        if not missing_year:
-            #if four consecutive digits (0-9) have been found in the date
-            if re.search(r'[0-9]{4}',date_string):
-                missing_century = False
-            else:
-                missing_century = True
+        missing_year = parsed_date_1.year % 100 != parsed_date_2.year % 100
+        missing_century = (~missing_year and (parsed_date_1.year != parsed_date_2.year))
 
         return missing_year, missing_month, missing_day, missing_century
             
@@ -92,7 +83,7 @@ class datetime2(datetime.datetime):
         tmp = datetime.datetime.__add__(self, other)
         return datetime2(tmp.year, tmp.month, tmp.day, date_string = self.date_string,
                 missing_year = self.missing_year, missing_month = self.missing_month,
-                missing_day = self.missing_day)
+                missing_day = self.missing_day, missing_century = self.missing_century)
 
     def __sub__(self, other):
         #if other is int then create a timedelta object with days=other
@@ -101,7 +92,7 @@ class datetime2(datetime.datetime):
         tmp = datetime.datetime.__sub__(self, other)
         return datetime2(tmp.year, tmp.month, tmp.day, date_string = self.date_string,
                 missing_year = self.missing_year, missing_month = self.missing_month,
-                missing_day = self.missing_day)
+                missing_day = self.missing_day, missing_century = self.missing_century)
 
 
 
