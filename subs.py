@@ -1,11 +1,9 @@
-import dateutil.parser
-from datetime import datetime,timedelta
 import random
-from dateparser import parse
 import re
 import pandas as pd
 from collections import defaultdict
 import dask.dataframe as dd
+from datetime2 import datetime2
 
 DEFAULT_SHIFT_VALUE = 32
 class Subs:
@@ -30,18 +28,18 @@ class Subs:
         return shift_amount
 
     def shift_date(self, date, shift_amount):
-        return date - timedelta(days=shift_amount) 
+        return date.subtract_days(shift_amount)
     
     def shift_date_pid(self, date, note_id):
         return self.shift_date(date, self.get_shift_amount(note_id)) # TODO: check return value before shift
 
     @staticmethod
     def parse_date(date_string):
-        date = parse(date_string, settings={'PREFER_DAY_OF_MONTH': 'first'} )
+        date = datetime2.parse(date_string, settings={'PREFER_DAY_OF_MONTH': 'first'} )
         return date
     
     def date_to_string(self, date):
-        return date.strftime("%m/%d/%Y")
+        return date.to_string()
 
     def _load_look_up_table(self, look_up_table_path):
 
