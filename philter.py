@@ -90,7 +90,7 @@ class Philter:
         else:
             self.cache_to_disk = False
             self.pos_path = None 
-            
+
         #All coordinate maps stored here
         self.coordinate_maps = []
 
