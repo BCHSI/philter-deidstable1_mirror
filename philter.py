@@ -1,5 +1,6 @@
 
 import re
+import warnings
 import json
 import os
 import nltk
@@ -230,8 +231,16 @@ class Philter:
     def precompile(self, filepath):
         """ precompiles our regex to speed up pattern matching"""
         regex = open(filepath,"r").read().strip()
-        # print(filepath)
-        return re.compile(regex)
+        re_compiled = None
+        with warnings.catch_warnings(): #NOTE: this is not thread safe! but we want to print a more detailed warning message
+            warnings.simplefilter(action="error", category=FutureWarning) # in order to print a detailed message
+            try:
+                re_compiled = re.compile(regex)
+            except FutureWarning as warn:
+                print("FutureWarning: {0} in file ".format(warn) + filepath)
+                warnings.simplefilter(action="ignore", category=FutureWarning)
+                re_compiled = re.compile(regex) # assign nevertheless
+        return re_compiled
                
     def init_set(self, filepath):
         """ loads a set of words, (must be a dictionary or set shape) returns result"""
