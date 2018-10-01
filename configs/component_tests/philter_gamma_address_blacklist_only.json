@@ -1,0 +1,17 @@
+[    
+    {
+        "title":"Address Blacklist",
+        "type":"set",
+        "exclude":true,
+        "filepath":"filters/blacklists/updated_address_blacklist.json",
+        "pos":["NNP"],
+        "notes":""
+    },
+    {
+        "title":"No catchall",
+        "type":"regex",
+        "exclude":false,
+        "filepath":"filters/regex/catchall.txt",
+        "notes":"This should match anything, preventing the catchall"
+    }
+]
