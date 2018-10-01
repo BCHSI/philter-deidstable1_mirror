@@ -1,4 +1,5 @@
 import re
+import warnings
 import json
 import os
 import nltk
@@ -90,7 +91,11 @@ class Philter:
         else:
             self.cache_to_disk = False
             self.pos_path = None 
+<<<<<<< HEAD
             
+=======
+
+>>>>>>> 3696cf707668f45d63c6f9359eedde989a2eae0b
         #All coordinate maps stored here
         self.coordinate_maps = []
 
@@ -231,8 +236,16 @@ class Philter:
     def precompile(self, filepath):
         """ precompiles our regex to speed up pattern matching"""
         regex = open(filepath,"r").read().strip()
-        # print(filepath)
-        return re.compile(regex)
+        re_compiled = None
+        with warnings.catch_warnings(): #NOTE: this is not thread safe! but we want to print a more detailed warning message
+            warnings.simplefilter(action="error", category=FutureWarning) # in order to print a detailed message
+            try:
+                re_compiled = re.compile(regex)
+            except FutureWarning as warn:
+                print("FutureWarning: {0} in file ".format(warn) + filepath)
+                warnings.simplefilter(action="ignore", category=FutureWarning)
+                re_compiled = re.compile(regex) # assign nevertheless
+        return re_compiled
                
     def init_set(self, filepath):
         """ loads a set of words, (must be a dictionary or set shape) returns result"""
@@ -276,6 +289,7 @@ class Philter:
                 #self.patterns[i]["coordinate_map"].add_file(filename)
 
                 encoding = self.detect_encoding(filename)
+                if __debug__: print("reading text from " + filename)
                 txt = open(filename,"r", encoding=encoding['encoding']).read()
 
                 # Get full self.include/exclude map before transform
@@ -346,13 +360,18 @@ class Philter:
 
         # All regexes except matchall
         if regex != re.compile('.'):
+            #if __debug__: print("map_regex(): searching for regex with index " + str(pattern_index))
+            #if __debug__ and pattern_index: print("map_regex(): regex is " + str(regex))
             matches = regex.finditer(text)
             
             for m in matches:
+<<<<<<< HEAD
                 # print('\n')
                 # print('Title: ', self.patterns[pattern_index]['title'])
                 # print('Type: ', self.patterns[pattern_index]['exclude'])
                 # print(m)
+=======
+>>>>>>> 3696cf707668f45d63c6f9359eedde989a2eae0b
                 coord_map.add_extend(filename, m.start(), m.start()+len(m.group()))
         
             self.patterns[pattern_index]["coordinate_map"] = coord_map
