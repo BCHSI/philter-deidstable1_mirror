@@ -91,11 +91,7 @@ class Philter:
         else:
             self.cache_to_disk = False
             self.pos_path = None 
-<<<<<<< HEAD
-            
-=======
 
->>>>>>> 3696cf707668f45d63c6f9359eedde989a2eae0b
         #All coordinate maps stored here
         self.coordinate_maps = []
 
@@ -365,13 +361,7 @@ class Philter:
             matches = regex.finditer(text)
             
             for m in matches:
-<<<<<<< HEAD
-                # print('\n')
-                # print('Title: ', self.patterns[pattern_index]['title'])
-                # print('Type: ', self.patterns[pattern_index]['exclude'])
-                # print(m)
-=======
->>>>>>> 3696cf707668f45d63c6f9359eedde989a2eae0b
+
                 coord_map.add_extend(filename, m.start(), m.start()+len(m.group()))
         
             self.patterns[pattern_index]["coordinate_map"] = coord_map
