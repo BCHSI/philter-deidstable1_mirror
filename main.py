@@ -9,9 +9,7 @@ import json
 
 def main():
     # get input/output/filename
-    help_str = """ Philter 
-        python3 main.py -i 
-    """
+    help_str = """ Philter -- PHI filter for clinical notes """
     ap = argparse.ArgumentParser(description=help_str)
     ap.add_argument("-i", "--input", default="./data/i2b2_notes/",
                     help="Path to the directory or the file that contains the PHI note, the default is ./data/i2b2_notes/",
