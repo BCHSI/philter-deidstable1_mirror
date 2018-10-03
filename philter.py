@@ -286,7 +286,7 @@ class Philter:
 
                 encoding = self.detect_encoding(filename)
                 if __debug__: print("reading text from " + filename)
-                txt = open(filename,"r", encoding=encoding['encoding']).read()
+                txt = open(filename,"r", encoding=encoding['encoding'], errors='surrogateescape').read()
 
                 # Get full self.include/exclude map before transform
                 self.data_all_files[filename] = {"text":txt, "phi":[],"non-phi":[]}
@@ -773,12 +773,12 @@ class Philter:
             fbase, fext = os.path.splitext(f)
             outpathfbase = out_path + fbase
             if self.outformat == "asterisk":
-                with open(outpathfbase+".txt", "w", encoding='utf-8') as f:
+                with open(outpathfbase+".txt", "w", encoding='utf-8', errors='surrogateescape') as f:
                     contents = self.transform_text_asterisk(txt, filename)
                     f.write(contents)
                     
             elif self.outformat == "i2b2":
-                with open(outpathfbase+".xml", "w") as f:
+                with open(outpathfbase+".xml", "w", errors='xmlcharrefreplace') as f: #TODO: should we have an explicit encoding?
                     contents = self.transform_text_i2b2(self.data_all_files[filename])
                     #print("writing contents to: " + outpathfbase+".xml")
                     f.write(contents)
