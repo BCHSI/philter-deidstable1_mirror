@@ -40,7 +40,7 @@ class Phitexts:
                 filepath = os.path.join(root, filename)
                 self.filenames.append(filepath)
                 encoding = self._detect_encoding(filepath)
-                fhandle = open(filepath, "r", encoding=encoding***REMOVED***'encoding'***REMOVED***)
+                fhandle = open(filepath, "r", encoding=encoding***REMOVED***'encoding'***REMOVED***, errors='surrogateescape')
                 self.texts***REMOVED***filepath***REMOVED*** = fhandle.read()
                 fhandle.close()
         #self.note_keys = ***REMOVED***os.path.splitext(os.path.basename(f).strip('0'))***REMOVED***0***REMOVED*** for f in self.filenames***REMOVED***
@@ -51,6 +51,7 @@ class Phitexts:
             raise Exception("Filepath does not exist", fp)
 
         detector = UniversalDetector()
+        #detector.MINIMUM_THRESHOLD = 0.2
         with open(fp, "rb") as f:
             for line in f:
                 detector.feed(line)
@@ -194,7 +195,7 @@ class Phitexts:
             self.textsout***REMOVED***filename***REMOVED*** =  "".join(contents)
 
     def _transform_text(self, txt, infilename,
-                                include_map, exclude_map, subs):       
+                        include_map, exclude_map, subs):       
         last_marker = 0
         current_chunk = ***REMOVED******REMOVED***
         punctuation_matcher = re.compile(r"***REMOVED***^a-zA-Z0-9****REMOVED***")
@@ -236,7 +237,7 @@ class Phitexts:
             fbase, fext = os.path.splitext(filename)
             fbase = fbase.split('/')***REMOVED***-1***REMOVED***
             filepath = outputdir + fbase + "_subs.txt"
-            with open(filepath, "w", encoding='utf-8') as fhandle:
+            with open(filepath, "w", encoding='utf-8', errors='surrogateescape') as fhandle:
                 fhandle.write(self.textsout***REMOVED***filename***REMOVED***)
     
     def print_log(self, output_dir):
