@@ -119,7 +119,10 @@ class Philter:
             self.phi_type_dict[phi_type] = [CoordinateMap()]
 
         #create a memory for stored coordinate data
-        self.data_all_files = {} 
+        self.data_all_files = {}
+
+        #create a memory for pattern index, with titles
+        self.pattern_indexes = {}
 
         #create a memory for clean words
         #self.clean_words = {}
@@ -207,7 +210,7 @@ class Philter:
 
         #first check that data is formatted, can be loaded etc. 
         for i,pattern in enumerate(self.patterns):
-
+            self.pattern_indexes[pattern['title']] = i
             if pattern["type"] in require_files and not os.path.exists(pattern["filepath"]):
                 raise Exception("Config filepath does not exist", pattern["filepath"])
             for k in reserved_list:
@@ -404,6 +407,7 @@ class Philter:
         """ map_regex_context creates a coordinate map from combined regex + PHI coordinates 
         of all previously mapped patterns
         """
+
         punctuation_matcher = re.compile(r"[^a-zA-Z0-9*]")
 
         if not os.path.exists(filename):
@@ -415,15 +419,24 @@ class Philter:
         coord_map = self.patterns[pattern_index]["coordinate_map"]
         regex = self.patterns[pattern_index]["data"]
         context = self.patterns[pattern_index]["context"]
+        context_filter = self.patterns[pattern_index]["context_filter"]
+
+        # Get PHI coordinates
+        if context_filter == 'all':
+            # current_include_map = self.get_full_include_map(filename)
+            current_include_map = self.include_map
+            # Create complement exclude map (also excludes punctuation)      
+            full_exclude_map = current_include_map.get_complement(filename, text)
+
+        else:
+            context_filter_pattern_index = self.pattern_indexes[context_filter]
+            full_exclude_map_coordinates = self.patterns[context_filter_pattern_index]['coordinate_map']
+            full_exclude_map = {}
+            for start,stop in full_exclude_map_coordinates.filecoords(filename):
+                full_exclude_map[start] = stop
 
 
         # 1. Get coordinates of all include and exclude mathches
-
-        # current_include_map = self.get_full_include_map(filename)
-        current_include_map = self.include_map
-        
-        # Create complement exclude map (also excludes punctuation)      
-        full_exclude_map = current_include_map.get_complement(filename, text)
 
         punctuation_matcher = re.compile(r"[^a-zA-Z0-9*]")
         # 2. Find all patterns expressions that match regular expression
@@ -470,7 +483,7 @@ class Philter:
                         coord_tracker += len(element)
 
             ## Check for context, and add to coordinate map
-            if (context == "left" and (phi_left == True and phi_right == False)) or (context == "right" and (phi_right == True and phi_left == False)) or (context == "left_or_right" and (phi_right == True or phi_left == True)) or (context == "left_and_right" and (phi_right == True and phi_left == True)):
+            if (context == "left" and phi_left == True) or (context == "right" and phi_right == True) or (context == "left_or_right" and (phi_right == True or phi_left == True)) or (context == "left_and_right" and (phi_right == True and phi_left == True)):
                 for item in tokenized_matches:
                     coord_map.add_extend(filename, item[0], item[1])
 
