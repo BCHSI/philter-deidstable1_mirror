@@ -40,7 +40,7 @@ class Phitexts:
                 filepath = os.path.join(root, filename)
                 self.filenames.append(filepath)
                 encoding = self._detect_encoding(filepath)
-                fhandle = open(filepath, "r", encoding=encoding['encoding'])
+                fhandle = open(filepath, "r", encoding=encoding['encoding'], errors='surrogateescape')
                 self.texts[filepath] = fhandle.read()
                 fhandle.close()
         #self.note_keys = [os.path.splitext(os.path.basename(f).strip('0'))[0] for f in self.filenames]
@@ -51,6 +51,7 @@ class Phitexts:
             raise Exception("Filepath does not exist", fp)
 
         detector = UniversalDetector()
+        #detector.MINIMUM_THRESHOLD = 0.2
         with open(fp, "rb") as f:
             for line in f:
                 detector.feed(line)
@@ -194,7 +195,7 @@ class Phitexts:
             self.textsout[filename] =  "".join(contents)
 
     def _transform_text(self, txt, infilename,
-                                include_map, exclude_map, subs):       
+                        include_map, exclude_map, subs):       
         last_marker = 0
         current_chunk = []
         punctuation_matcher = re.compile(r"[^a-zA-Z0-9*]")
@@ -236,7 +237,7 @@ class Phitexts:
             fbase, fext = os.path.splitext(filename)
             fbase = fbase.split('/')[-1]
             filepath = outputdir + fbase + "_subs.txt"
-            with open(filepath, "w", encoding='utf-8') as fhandle:
+            with open(filepath, "w", encoding='utf-8', errors='surrogateescape') as fhandle:
                 fhandle.write(self.textsout[filename])
     
     def print_log(self, output_dir):
