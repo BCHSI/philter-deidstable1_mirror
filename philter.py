@@ -419,7 +419,11 @@ class Philter:
         coord_map = self.patterns***REMOVED***pattern_index***REMOVED******REMOVED***"coordinate_map"***REMOVED***
         regex = self.patterns***REMOVED***pattern_index***REMOVED******REMOVED***"data"***REMOVED***
         context = self.patterns***REMOVED***pattern_index***REMOVED******REMOVED***"context"***REMOVED***
-        context_filter = self.patterns***REMOVED***pattern_index***REMOVED******REMOVED***"context_filter"***REMOVED***
+        try:
+            context_filter = self.patterns***REMOVED***pattern_index***REMOVED******REMOVED***"context_filter"***REMOVED***
+        except KeyError:
+            warnings.warn("deprecated missing context_filter field in filter " + str(pattern_index) + " of type regex_context, assuming \'all\'", DeprecationWarning)
+            context_filter = 'all'
 
         # Get PHI coordinates
         if context_filter == 'all':
