@@ -1,1 +1,1 @@
-(\b\d\-)?(\b\d{3}\s?***REMOVED***\s\-\.***REMOVED***?\s?|\(\d{3}\)***REMOVED***\s\-\.***REMOVED***?\s?)?\b(***REMOVED***a-zA-Z***REMOVED***)?\d{3}***REMOVED***\s\-\.***REMOVED***(\d{3,4}|xxxx|xxx|\*\*\*\*|\*\*\*)
+(\b\d(\-|\s|\.))?(\b\d{3}\s?***REMOVED***\s\-\.***REMOVED***?\s?|\(\d{3}\)***REMOVED***\s\-\.***REMOVED***?\s?)?\b(***REMOVED***a-zA-Z***REMOVED***)?\d{3}***REMOVED***\s\-\.***REMOVED***(\d{3,4}|xxxx|xxx|\*\*\*\*|\*\*\*)(\/\d{4})?
