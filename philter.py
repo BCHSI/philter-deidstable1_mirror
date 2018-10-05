@@ -364,6 +364,9 @@ class Philter:
             matches = regex.finditer(text)
             
             for m in matches:
+                # print(m.group())
+                # print(self.patterns***REMOVED***pattern_index***REMOVED******REMOVED***'title'***REMOVED***)
+
 
                 coord_map.add_extend(filename, m.start(), m.start()+len(m.group()))
         
