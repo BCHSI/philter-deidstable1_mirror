@@ -2181,7 +2181,7 @@
         "title": "Firstnames Blacklist",
         "type": "set",
         "exclude": true,
-        "filepath": "/data/muenzenk/fp_analysis/firstnames_minus_fps.json",
+        "filepath": "filters/blacklists/firstnames_minus_fps.json",
         "pos": [
             "NNP"
         ],
@@ -2191,7 +2191,7 @@
         "title": "Lastnames Blacklist",
         "type": "set",
         "exclude": true,
-        "filepath": "/data/muenzenk/fp_analysis/lastnames_minus_fps.json",
+        "filepath": "filters/blacklists/lastnames_minus_fps.json",
         "pos": [
             "NNP"
         ],
@@ -2237,7 +2237,7 @@
         "title":"Whitelist 1",
         "type":"set",
         "exclude":false,
-        "filepath":"/data/muenzenk/add_fps_to_whitelist_091718/whitelist_plus_fps_091718_nonames.json",
+        "filepath":"/data/shared/ucsf_whitelists/whitelist_plus_fps_091718_nonames.json",
         "pos":[],
         "notes":"These are words we beleive are safe"
     },
