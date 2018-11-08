@@ -25,7 +25,13 @@ To run the tests just navigate to the tests/ directory type the following comman
 ```
 python3 test.py -m b script
 ```
-
+Note that the above command by default will run all test cases under the blacklist directory. 
+### User-specified test case
+To run a specific test case, run the following command specifying the ID of the test case using the -t flag:
+```
+python3 test.py -m w -t 2 -s ../main.py
+```
+This command runs test case 2 of whitelist. 
 ## Add your own test cases
 We created utilities for adding test cases so that you can use one or two command lines to add your own test cases easily. You also have the choice to delete the added test cases if the test cases are no longer needed. The utility also supports standard input for quick testing. 
 
