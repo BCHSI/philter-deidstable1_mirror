@@ -1,2 +1,1 @@
-# Regex to capture the desk number after the word reception in the notes
 \b((?i)(reception\s)?desk)\s[a-zA-Z0-9]+\b

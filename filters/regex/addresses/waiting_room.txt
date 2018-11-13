@@ -1,3 +1,1 @@
-# Regex to find waiting room numbers in the notes
-# Note the waiting room number can be a combination of letters and numbers
 \b(?i)waiting room [a-zA-Z0-9]+\b
