@@ -203,8 +203,6 @@ class Phitexts:
         #print(self.phi_type_dict) 
         self.types = self.phi_type_dict
 
-    def detect_known_phi(self,known_phi,coords):
-        
 
 
     def normalize_phi(self):
