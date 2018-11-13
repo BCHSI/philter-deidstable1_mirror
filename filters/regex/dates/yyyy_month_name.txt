@@ -1,1 +1,0 @@
-***REMOVED***^-/***REMOVED***\b\d{4}\s("""+month_name+r""")\b

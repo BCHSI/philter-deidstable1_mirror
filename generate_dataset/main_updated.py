@@ -8,17 +8,10 @@ from difflib import SequenceMatcher
 from chardet.universaldetector import UniversalDetector
 from coordinate_map import CoordinateMap
 import xml.etree.ElementTree as ET
-import sys
 
 
 
-# Where are the xml files?
-xml_folder = sys.argv***REMOVED***1***REMOVED***
-
-# What is the file basename?
-basename = xml_folder.split('/')***REMOVED***-2***REMOVED***.split('_xml')***REMOVED***0***REMOVED***
-print(basename)
-
+xml_folder = "./testing-PHI-Gold-fixed-updated/"
 
 phi = {} #fn --> {"text":"...", "phi":***REMOVED***{"type":"DATE"...}***REMOVED***}
 
@@ -47,13 +40,13 @@ def isolate_phi(xml_folder):
 isolate_phi(xml_folder)
 
 #save our data
-json.dump(phi, open("../data/" + basename + "_phi_notes.json", "w"), indent=4)
+json.dump(phi, open("phi/phi_notes_updated.json", "w"), indent=4)
 
-NOTES_FOLDER = "../data/" + basename + '_notes/'
-ANNO_FOLDER = "../data/" + basename + '_anno/'
-# PHI_FOLDER  = "../data/i2b2_phi/"
-# PHI_CONTEXT = "../data/i2b2_phi_context_updated/"
-# PHI_POS     = "../data/i2b2_phi_pos_updated/"
+NOTES_FOLDER = "../data/i2b2_notes_updated/"
+ANNO_FOLDER = "../data/i2b2_anno_updated/"
+PHI_FOLDER  = "../data/i2b2_phi/"
+PHI_CONTEXT = "../data/i2b2_phi_context_updated/"
+PHI_POS     = "../data/i2b2_phi_pos_updated/"
 
 #save our phi notes 
 for fn in phi:

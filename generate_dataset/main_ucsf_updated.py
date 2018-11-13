@@ -12,6 +12,8 @@ import sys
 import argparse
 
 
+
+
 def isolate_phi(xml_folder):
     #isolate all phi and data with coordinates
     #turn them into a json representation
@@ -81,6 +83,7 @@ def main():
     
     #save our phi notes 
     for fn in phi:
+
         #get text and remove any initial *'s from the raw notes
         txt = phi***REMOVED***fn***REMOVED******REMOVED***"text"***REMOVED***.replace("*", " ")
 
@@ -91,12 +94,8 @@ def main():
         #create a coordinate mapping of all phi
         c = CoordinateMap()
         for p in phi***REMOVED***fn***REMOVED******REMOVED***"phi"***REMOVED***:
-            try:
-                start = int(p***REMOVED***'start'***REMOVED***)
-                end = int(p***REMOVED***'end'***REMOVED***)
-            except KeyError:
-                start = int(p***REMOVED***'spans'***REMOVED***.split('~')***REMOVED***0***REMOVED***)
-                end = int(p***REMOVED***'spans'***REMOVED***.split('~')***REMOVED***1***REMOVED***)
+            start = int(p***REMOVED***"spans"***REMOVED***.split("~")***REMOVED***0***REMOVED***)
+            end = int(p***REMOVED***"spans"***REMOVED***.split("~")***REMOVED***1***REMOVED***)
             c.add_extend(fn, start, end)
 
         contents = ***REMOVED******REMOVED***
