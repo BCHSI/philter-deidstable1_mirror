@@ -1,5 +1,5 @@
-
 import re
+import warnings
 import json
 import os
 import nltk
@@ -12,6 +12,8 @@ from coordinate_map import CoordinateMap
 from nltk.tag.stanford import StanfordNERTagger
 import subprocess
 import numpy
+import random
+import string
 
 
 class Philter:
@@ -27,7 +29,9 @@ class Philter:
         if "dependent" in config:
             self.dependent = config***REMOVED***"dependent"***REMOVED***
         if "freq_table" in config:
-            self.freq_table = config***REMOVED***"freq_table"***REMOVED***                       
+            self.freq_table = config***REMOVED***"freq_table"***REMOVED***
+        if "initials" in config:
+            self.initials = config***REMOVED***"initials"***REMOVED***                     
         if "finpath" in config:
             if not os.path.exists(config***REMOVED***"finpath"***REMOVED***):
                 raise Exception("Filepath does not exist", config***REMOVED***"finpath"***REMOVED***)
@@ -77,9 +81,16 @@ class Philter:
                 raise Exception("Filepath does not exist", config***REMOVED***"stanford_ner_tagger"***REMOVED******REMOVED***"jar"***REMOVED***)
             self.stanford_ner_tagger_jar = config***REMOVED***"stanford_ner_tagger"***REMOVED******REMOVED***"jar"***REMOVED***
                 #we lazy load our tagger only if there's a corresponding pattern
-
-      
         self.stanford_ner_tagger = None
+
+        if "cachepos" in config and config***REMOVED***"cachepos"***REMOVED***:
+            self.cache_to_disk = True
+            self.pos_path = config***REMOVED***"cachepos"***REMOVED***
+            if not os.path.isdir(self.pos_path):
+                os.makedirs(self.pos_path)
+        else:
+            self.cache_to_disk = False
+            self.pos_path = None 
 
         #All coordinate maps stored here
         self.coordinate_maps = ***REMOVED******REMOVED***
@@ -108,32 +119,45 @@ class Philter:
             self.phi_type_dict***REMOVED***phi_type***REMOVED*** = ***REMOVED***CoordinateMap()***REMOVED***
 
         #create a memory for stored coordinate data
-        self.data_all_files = {} 
+        self.data_all_files = {}
+
+        #create a memory for pattern index, with titles
+        self.pattern_indexes = {}
 
         #create a memory for clean words
         #self.clean_words = {}
 
         #create directory for pos data if it doesn't exist
-        pos_path = "./data/pos_data/"
-        if not os.path.isdir(pos_path):
-            os.mkdir(pos_path)
+        #pos_path = "./data/pos_data/"
+        #self.pos_path = "./data/pos_data/" + self.random_string(10) + "/"
+
 
         #initialize our patterns
         self.init_patterns()
 
-    def get_pos(self, filename, cleaned, pos_path = "./data/pos_data/"):
-        filename = filename.split("/")***REMOVED***-1***REMOVED***
-        file_ = pos_path + filename
-        if filename not in self.pos_tags:
-            self.pos_tags = {}
-            if not os.path.isfile(file_):
-                with open(file_, 'wb') as f:
-                    tags = nltk.pos_tag(cleaned)
-                    pickle.dump(tags, f)
-                    return tags
-            else:
-                with open(file_, 'rb') as f:
-                    self.pos_tags***REMOVED***filename***REMOVED*** = pickle.load(f)
+
+    def get_pos(self, filename, cleaned):
+        if self.cache_to_disk:
+            pos_path = self.pos_path
+            filename = filename.split("/")***REMOVED***-1***REMOVED***
+            file_ = pos_path + filename
+            if filename not in self.pos_tags:
+                self.pos_tags = {}
+                if not os.path.isfile(file_):
+                    with open(file_, 'wb') as f:
+                        tags = nltk.pos_tag(cleaned)
+                        pickle.dump(tags, f)
+                        return tags
+                else:
+                    with open(file_, 'rb') as f:
+                        self.pos_tags***REMOVED***filename***REMOVED*** = pickle.load(f)
+        else:
+            if filename not in self.pos_tags:
+                self.pos_tags = {}
+                self.pos_tags***REMOVED***filename***REMOVED*** = nltk.pos_tag(cleaned)
+            return self.pos_tags***REMOVED***filename***REMOVED***
+
+
 
             #self.pos_tags***REMOVED***filename***REMOVED*** = nltk.pos_tag(cleaned)
         return self.pos_tags***REMOVED***filename***REMOVED***
@@ -143,7 +167,7 @@ class Philter:
     #        self.pos_tags***REMOVED***filename***REMOVED*** = nltk.pos_tag(cleaned)
     #    return self.pos_tags***REMOVED***filename***REMOVED***
     
-    def get_clean(self, filename, text, pre_process= r"***REMOVED***^a-zA-Z0-9\.***REMOVED***"):
+    def get_clean(self, filename, text, pre_process= r"***REMOVED***^a-zA-Z0-9***REMOVED***"):
         if filename not in self.cleaned:
             self.cleaned = {}
             # Use pre-process to split sentence by spaces AND symbols, while preserving spaces in the split list
@@ -186,7 +210,7 @@ class Philter:
 
         #first check that data is formatted, can be loaded etc. 
         for i,pattern in enumerate(self.patterns):
-
+            self.pattern_indexes***REMOVED***pattern***REMOVED***'title'***REMOVED******REMOVED*** = i
             if pattern***REMOVED***"type"***REMOVED*** in require_files and not os.path.exists(pattern***REMOVED***"filepath"***REMOVED***):
                 raise Exception("Config filepath does not exist", pattern***REMOVED***"filepath"***REMOVED***)
             for k in reserved_list:
@@ -251,7 +275,7 @@ class Philter:
         for root, dirs, files in os.walk(in_path):
             for f in files:
 
-                filename = root+f
+                filename = os.path.join(root, f)
 
                 if filename.split(".")***REMOVED***-1***REMOVED*** not in allowed_filetypes:
                     if self.verbose:
@@ -260,7 +284,8 @@ class Philter:
                 #self.patterns***REMOVED***i***REMOVED******REMOVED***"coordinate_map"***REMOVED***.add_file(filename)
 
                 encoding = self.detect_encoding(filename)
-                txt = open(filename,"r", encoding=encoding***REMOVED***'encoding'***REMOVED***).read()
+                if __debug__: print("reading text from " + filename)
+                txt = open(filename,"r", encoding=encoding***REMOVED***'encoding'***REMOVED***, errors='surrogateescape').read()
 
                 # Get full self.include/exclude map before transform
                 self.data_all_files***REMOVED***filename***REMOVED*** = {"text":txt, "phi":***REMOVED******REMOVED***,"non-phi":***REMOVED******REMOVED***}
@@ -315,7 +340,7 @@ class Philter:
 
         return self.full_exclude_map
                 
-    def map_regex(self, filename="", text="", pattern_index=-1, pre_process= r"***REMOVED***^a-zA-Z0-9\.***REMOVED***"):
+    def map_regex(self, filename="", text="", pattern_index=-1, pre_process= r"***REMOVED***^a-zA-Z0-9***REMOVED***"):
         """ Creates a coordinate map from the pattern on this data
             generating a coordinate map of hits given (dry run doesn't transform)
         """
@@ -330,10 +355,15 @@ class Philter:
 
         # All regexes except matchall
         if regex != re.compile('.'):
+            #if __debug__: print("map_regex(): searching for regex with index " + str(pattern_index))
+            #if __debug__ and pattern_index: print("map_regex(): regex is " + str(regex))
             matches = regex.finditer(text)
             
             for m in matches:
-               
+                # print(m.group())
+                # print(self.patterns***REMOVED***pattern_index***REMOVED******REMOVED***'title'***REMOVED***)
+
+
                 coord_map.add_extend(filename, m.start(), m.start()+len(m.group()))
         
             self.patterns***REMOVED***pattern_index***REMOVED******REMOVED***"coordinate_map"***REMOVED*** = coord_map
@@ -372,10 +402,11 @@ class Philter:
             self.patterns***REMOVED***pattern_index***REMOVED******REMOVED***"coordinate_map"***REMOVED*** = coord_map
 
 
-    def map_regex_context(self, filename="", text="", pattern_index=-1,  pre_process= r"***REMOVED***^a-zA-Z0-9\.***REMOVED***"):
+    def map_regex_context(self, filename="", text="", pattern_index=-1,  pre_process= r"***REMOVED***^a-zA-Z0-9***REMOVED***"):
         """ map_regex_context creates a coordinate map from combined regex + PHI coordinates 
         of all previously mapped patterns
         """
+
         punctuation_matcher = re.compile(r"***REMOVED***^a-zA-Z0-9****REMOVED***")
 
         if not os.path.exists(filename):
@@ -387,20 +418,33 @@ class Philter:
         coord_map = self.patterns***REMOVED***pattern_index***REMOVED******REMOVED***"coordinate_map"***REMOVED***
         regex = self.patterns***REMOVED***pattern_index***REMOVED******REMOVED***"data"***REMOVED***
         context = self.patterns***REMOVED***pattern_index***REMOVED******REMOVED***"context"***REMOVED***
+        try:
+            context_filter = self.patterns***REMOVED***pattern_index***REMOVED******REMOVED***"context_filter"***REMOVED***
+        except KeyError:
+            warnings.warn("deprecated missing context_filter field in filter " + str(pattern_index) + " of type regex_context, assuming \'all\'", DeprecationWarning)
+            context_filter = 'all'
+
+        # Get PHI coordinates
+        if context_filter == 'all':
+            # current_include_map = self.get_full_include_map(filename)
+            current_include_map = self.include_map
+            # Create complement exclude map (also excludes punctuation)      
+            full_exclude_map = current_include_map.get_complement(filename, text)
+
+        else:
+            context_filter_pattern_index = self.pattern_indexes***REMOVED***context_filter***REMOVED***
+            full_exclude_map_coordinates = self.patterns***REMOVED***context_filter_pattern_index***REMOVED******REMOVED***'coordinate_map'***REMOVED***
+            full_exclude_map = {}
+            for start,stop in full_exclude_map_coordinates.filecoords(filename):
+                full_exclude_map***REMOVED***start***REMOVED*** = stop
 
 
         # 1. Get coordinates of all include and exclude mathches
 
-        # current_include_map = self.get_full_include_map(filename)
-        current_include_map = self.include_map
-        
-        # Create complement exclude map (also excludes punctuation)      
-        full_exclude_map = current_include_map.get_complement(filename, text)
-
         punctuation_matcher = re.compile(r"***REMOVED***^a-zA-Z0-9****REMOVED***")
         # 2. Find all patterns expressions that match regular expression
         matches = regex.finditer(text)
-        
+        # print(full_exclud_map)
         for m in matches:
             
             # initialize phi_left and phi_right
@@ -442,7 +486,7 @@ class Philter:
                         coord_tracker += len(element)
 
             ## Check for context, and add to coordinate map
-            if (context == "left" and (phi_left == True and phi_right == False)) or (context == "right" and (phi_right == True and phi_left == False)) or (context == "left_or_right" and (phi_right == True or phi_left == True)) or (context == "left_and_right" and (phi_right == True and phi_left == True)):
+            if (context == "left" and phi_left == True) or (context == "right" and phi_right == True) or (context == "left_or_right" and (phi_right == True or phi_left == True)) or (context == "left_and_right" and (phi_right == True and phi_left == True)):
                 for item in tokenized_matches:
                     coord_map.add_extend(filename, item***REMOVED***0***REMOVED***, item***REMOVED***1***REMOVED***)
 
@@ -465,7 +509,7 @@ class Philter:
         self.patterns***REMOVED***pattern_index***REMOVED******REMOVED***"coordinate_map"***REMOVED*** = coord_map
 
 
-    def map_set(self, filename="", text="", pattern_index=-1,  pre_process= r"***REMOVED***^a-zA-Z0-9\.***REMOVED***"):
+    def map_set(self, filename="", text="", pattern_index=-1,  pre_process= r"***REMOVED***^a-zA-Z0-9***REMOVED***"):
         """ Creates a coordinate mapping of words any words in this set"""
         if not os.path.exists(filename):
             raise Exception("Filepath does not exist", filename)
@@ -531,7 +575,7 @@ class Philter:
         self.patterns***REMOVED***pattern_index***REMOVED******REMOVED***"coordinate_map"***REMOVED*** = coord_map
   
 
-    def map_pos(self, filename="", text="", pattern_index=-1, pre_process= r"***REMOVED***^a-zA-Z0-9\.***REMOVED***"):
+    def map_pos(self, filename="", text="", pattern_index=-1, pre_process= r"***REMOVED***^a-zA-Z0-9***REMOVED***"):
         """ Creates a coordinate mapping of words which match this part of speech (POS)"""
         if not os.path.exists(filename):
             raise Exception("Filepath does not exist", filename)
@@ -745,12 +789,12 @@ class Philter:
             fbase, fext = os.path.splitext(f)
             outpathfbase = out_path + fbase
             if self.outformat == "asterisk":
-                with open(outpathfbase+".txt", "w", encoding='utf-8') as f:
+                with open(outpathfbase+".txt", "w", encoding='utf-8', errors='surrogateescape') as f:
                     contents = self.transform_text_asterisk(txt, filename)
                     f.write(contents)
                     
             elif self.outformat == "i2b2":
-                with open(outpathfbase+".xml", "w") as f:
+                with open(outpathfbase+".xml", "w", errors='xmlcharrefreplace') as f: #TODO: should we have an explicit encoding?
                     contents = self.transform_text_i2b2(self.data_all_files***REMOVED***filename***REMOVED***)
                     #print("writing contents to: " + outpathfbase+".xml")
                     f.write(contents)
@@ -860,7 +904,7 @@ class Philter:
             note_lst, 
             anno_lst,
             filename,
-            punctuation_matcher=re.compile(r"***REMOVED***^a-zA-Z0-9*\.***REMOVED***"), 
+            punctuation_matcher=re.compile(r"***REMOVED***^a-zA-Z0-9****REMOVED***"), 
             text_matcher=re.compile(r"***REMOVED***a-zA-Z0-9***REMOVED***"), 
             phi_matcher=re.compile(r"\*+")):
         """ 
@@ -880,8 +924,8 @@ class Philter:
             ##### Get coordinates ######
             start = start_coordinate
             stop = start_coordinate + len(note_word)
-            note_word_stripped = re.sub(r"***REMOVED***^a-zA-Z0-9\*\.***REMOVED***+", "", note_word.strip())
-            anno_word_stripped = re.sub(r"***REMOVED***^a-zA-Z0-9\*\.***REMOVED***+", "", anno_word.strip())
+            note_word_stripped = re.sub(r"***REMOVED***^a-zA-Z0-9\****REMOVED***+", "", note_word.strip())
+            anno_word_stripped = re.sub(r"***REMOVED***^a-zA-Z0-9\****REMOVED***+", "", anno_word.strip())
             if len(note_word_stripped) == 0:
                 #got a blank space or something without any characters or digits, move forward
                 start_coordinate += len(note_word)
@@ -956,6 +1000,7 @@ class Philter:
             start_coordinate += len(note_word) 
 
 
+
     def eval(self,
         config,
         note_path="./data/i2b2_notes/",
@@ -973,7 +1018,7 @@ class Philter:
         fp_tags_nocontext = "data/phi/fp_tags.txt",
         pre_process=r":|\,|\-|\/|_|~", #characters we're going to strip from our notes to analyze against anno        
         pre_process2= r"***REMOVED***^a-zA-Z0-9***REMOVED***",
-        punctuation_matcher=re.compile(r"***REMOVED***^a-zA-Z0-9\*\.***REMOVED***")):
+        punctuation_matcher=re.compile(r"***REMOVED***^a-zA-Z0-9\****REMOVED***")):
         """ calculates the effectiveness of the philtering / extraction
 
             only_digits = <boolean> will constrain evaluation on philtering of only digit types
@@ -1187,7 +1232,8 @@ class Philter:
             }
             
             i2b2_include_tags = ***REMOVED***'DOCTOR','PATIENT','DATE','MEDICALRECORD','IDNUM','DEVICE','USERNAME','PHONE','EMAIL','FAX','CITY','STATE','ZIP','STREET','LOCATION-OTHER','HOSPITAL','AGE'***REMOVED***
-
+            i2b2_patient_tags = ***REMOVED***'PATIENT','DATE','MEDICALRECORD','IDNUM','DEVICE','USERNAME','PHONE','EMAIL','FAX','CITY','STATE','ZIP','STREET','LOCATION-OTHER','HOSPITAL','AGE'***REMOVED***
+            i2b2_provider_tags = ***REMOVED***'DOCTOR','DATE','USERNAME','PHONE','EMAIL','FAX','CITY','STATE','ZIP','STREET',"LOCATION-OTHER",'HOSPITAL'***REMOVED***
 
             rp_summaries = {}
             for i in range(0,len(i2b2_tags)):
@@ -1233,7 +1279,16 @@ class Philter:
             'Unclear':'Other'
             }
             
-            ucsf_include_tags = ***REMOVED***'Date','Provider_Name','Phone_Fax','Patient_Name_or_Family_Member_Name','Patient_Address','Provider_Address_or_Location','Provider_Certificate_or_License','Patient_Medical_Record_Id','Patient_Account_Number','Patient_Social_Security_Number','Patient_Vehicle_or_Device_Id','Patient_Unique_Id','Email','URL_IP','Patient_Biometric_Id_or_Face_Photo','Patient_Certificate_or_License','Age','Patient_Initials','Provider_Initials'***REMOVED***
+            if self.initials:
+                ucsf_include_tags = ***REMOVED***'Date','Provider_Name','Phone_Fax','Patient_Name_or_Family_Member_Name','Patient_Address','Provider_Address_or_Location','Provider_Certificate_or_License','Patient_Medical_Record_Id','Patient_Account_Number','Patient_Social_Security_Number','Patient_Vehicle_or_Device_Id','Patient_Unique_Id','Procedure_or_Billing_Code','Email','URL_IP','Patient_Biometric_Id_or_Face_Photo','Patient_Certificate_or_License','Age','Patient_Initials','Provider_Initials'***REMOVED***
+                ucsf_patient_tags = ***REMOVED***'Date','Phone_Fax','Age','Patient_Name_or_Family_Member_Name','Patient_Address','Patient_Initials','Patient_Medical_Record_Id','Patient_Account_Number','Patient_Social_Security_Number','Patient_Vehicle_or_Device_Id','Patient_Unique_Id','Email','URL_IP','Patient_Biometric_Id_or_Face_Photo','Patient_Certificate_or_License'***REMOVED***
+                ucsf_provider_tags = ***REMOVED***'Provider_Name','Phone_Fax','Provider_Address_or_Location','Provider_Initials','Provider_Certificate_or_License','Email','URL_IP'***REMOVED***
+
+            else:
+                ucsf_include_tags = ***REMOVED***'Date','Provider_Name','Phone_Fax','Patient_Name_or_Family_Member_Name','Patient_Address','Provider_Address_or_Location','Provider_Certificate_or_License','Patient_Medical_Record_Id','Patient_Account_Number','Patient_Social_Security_Number','Patient_Vehicle_or_Device_Id','Patient_Unique_Id','Procedure_or_Billing_Code','Email','URL_IP','Patient_Biometric_Id_or_Face_Photo','Patient_Certificate_or_License','Age'***REMOVED***
+                ucsf_patient_tags = ***REMOVED***'Date','Phone_Fax','Age','Patient_Name_or_Family_Member_Name','Patient_Address','Patient_Medical_Record_Id','Patient_Account_Number','Patient_Social_Security_Number','Patient_Vehicle_or_Device_Id','Patient_Unique_Id','Email','URL_IP','Patient_Biometric_Id_or_Face_Photo','Patient_Certificate_or_License'***REMOVED***
+                ucsf_provider_tags = ***REMOVED***'Provider_Name','Phone_Fax','Provider_Address_or_Location','Provider_Certificate_or_License','Email','URL_IP'***REMOVED***
+
 
 
             rp_summaries = {}
@@ -1279,7 +1334,7 @@ class Philter:
             for item in lst:
                 if len(item) > 0:
                     if item.isspace() == False:
-                        split_item = re.split("(\s+)", re.sub(r"***REMOVED***^a-zA-Z0-9\.***REMOVED***", " ", item))
+                        split_item = re.split("(\s+)", re.sub(r"***REMOVED***^a-zA-Z0-9***REMOVED***", " ", item))
                         for elem in split_item:
                             if len(elem) > 0:
                                 cleaned.append(elem)
@@ -1374,9 +1429,10 @@ class Philter:
 
             # Get tp counts per category
             current_tps = current_summary***REMOVED***'true_positives'***REMOVED***
+            # Initialize list to keep track of non-include tag FPs
+            additional_fps = ***REMOVED******REMOVED***
 
             for word in current_tps:
-
                 start_coordinate_tp = word***REMOVED***1***REMOVED***
                 for phi_item in phi_list:
                     if self.ucsf_format:
@@ -1386,6 +1442,8 @@ class Philter:
                         phi_start = phi_item***REMOVED***'start'***REMOVED***
                         phi_end = phi_item***REMOVED***'end'***REMOVED***
                     phi_type = phi_item***REMOVED***'TYPE'***REMOVED***
+                    phi_word = phi_item***REMOVED***'text'***REMOVED***
+
 
                     if not self.ucsf_format:
                         for i in range(0,len(i2b2_tags)):
@@ -1393,21 +1451,35 @@ class Philter:
                             tp_key = tag + '_tps'
                             if (start_coordinate_tp in range(int(phi_start), int(phi_end))) and (tag == phi_type):
                                 rp_summaries***REMOVED***tp_key***REMOVED*** += 1
-                                                    
+                        # Add these TPs to the FPs list of they are not in the include list
+                        if phi_type not in i2b2_include_tags:
+                            if (start_coordinate_tp in range(int(phi_start), int(phi_end))):
+                                additional_fps.append(***REMOVED***text***REMOVED***start_coordinate_tp:start_coordinate_tp + len(word***REMOVED***0***REMOVED***)***REMOVED***, start_coordinate_tp***REMOVED***)                                  
                     #### ucsf
                     if self.ucsf_format:
+                        if phi_type not in ucsf_include_tags:
+                            if (start_coordinate_tp in range(int(phi_start), int(phi_end))):
+                                additional_fps.append(***REMOVED***text***REMOVED***start_coordinate_tp:start_coordinate_tp + len(word***REMOVED***0***REMOVED***)***REMOVED***, start_coordinate_tp***REMOVED***)
+
                         for i in range(0,len(ucsf_tags)):
                             tag = ucsf_tags***REMOVED***i***REMOVED***
                             tp_key = tag + '_tps'
                             if (start_coordinate_tp in range(int(phi_start), int(phi_end))) and (tag == phi_type):
                                 rp_summaries***REMOVED***tp_key***REMOVED*** += 1
+                            # Add these TPs to the FPs list of they are not in the include list
+                            # elif (start_coordinate_tp in range(int(phi_start), int(phi_end))) and (tag == phi_type) and (tag not in ucsf_include_tags):
+                            #     print(phi_type)
+                            #     print(***REMOVED***cleaned_with_pos***REMOVED***str(phi_start)***REMOVED******REMOVED***0***REMOVED***, phi_start***REMOVED***)
+                            #     additional_fps.append(***REMOVED***cleaned_with_pos***REMOVED***str(phi_start)***REMOVED******REMOVED***0***REMOVED***, phi_start***REMOVED***)
+                            #     print('\n')
 
-            
+
+            # if additional_fps != ***REMOVED******REMOVED***:
+
             # if anno_name == '110-01.xml':
             # print(anno_name)
             # print(cleaned_dict)
             # print('\n')
-            
 
             #### i2b2
             if not self.ucsf_format:
@@ -1504,8 +1576,9 @@ class Philter:
                                 fn_key = tag + '_fns'
                                 tag_fn_counter = tag + '_fn_counter'
                                 if (start_coordinate_fn in range(int(phi_start), int(phi_end))) and phi_type == tag:
-                                    rp_summaries***REMOVED***fn_key***REMOVED*** += 1
-                                    fn_counter_dict***REMOVED***tag_fn_counter***REMOVED*** += 1
+                                    if tag != 'Age':
+                                        rp_summaries***REMOVED***fn_key***REMOVED*** += 1
+                                        fn_counter_dict***REMOVED***tag_fn_counter***REMOVED*** += 1
 
 
                         # Find PHI match: fn in text, coord in range
@@ -1582,10 +1655,8 @@ class Philter:
             fp_tag_summary = {}
             include_exclude_fps = ''
             #print(cleaned_with_pos)
-
-            if current_summary***REMOVED***'false_positives'***REMOVED*** != ***REMOVED******REMOVED*** and current_summary***REMOVED***'false_positives'***REMOVED*** != ***REMOVED***""***REMOVED***:              
-
-                current_fps = current_summary***REMOVED***'false_positives'***REMOVED***
+            current_fps = current_summary***REMOVED***'false_positives'***REMOVED*** + additional_fps
+            if current_fps != ***REMOVED******REMOVED*** and current_fps != ***REMOVED***""***REMOVED***:              
                 counter = 0
                 #print(current_fps)
                 for word in current_fps:
@@ -1675,6 +1746,9 @@ class Philter:
         overall_data = ***REMOVED******REMOVED***
         if not self.ucsf_format:
             include_dict = {'fns':0,'tps':0,'fps':summary***REMOVED***"total_false_positives"***REMOVED***,'tns':summary***REMOVED***"total_true_negatives"***REMOVED***}
+            patient_phi_dict = {'fns':0,'tps':0,'fps':summary***REMOVED***"total_false_positives"***REMOVED***,'tns':summary***REMOVED***"total_true_negatives"***REMOVED***}
+            provider_phi_dict = {'fns':0,'tps':0,'fps':summary***REMOVED***"total_false_positives"***REMOVED***,'tns':summary***REMOVED***"total_true_negatives"***REMOVED***}
+
             category_dict = {}
             for i in range(0,len(phi_categories)):
                 category_tag = phi_categories***REMOVED***i***REMOVED***
@@ -1701,6 +1775,13 @@ class Philter:
                     include_dict***REMOVED***'fns'***REMOVED*** += rp_summaries***REMOVED***fn_key***REMOVED***
                     include_dict***REMOVED***'tps'***REMOVED*** += rp_summaries***REMOVED***tp_key***REMOVED***
 
+                    if tag in i2b2_patient_tags:
+                        patient_phi_dict***REMOVED***'fns'***REMOVED*** += rp_summaries***REMOVED***fn_key***REMOVED***
+                        patient_phi_dict***REMOVED***'tps'***REMOVED*** += rp_summaries***REMOVED***tp_key***REMOVED***
+                    if tag in i2b2_provider_tags:
+                        provider_phi_dict***REMOVED***'fns'***REMOVED*** += rp_summaries***REMOVED***fn_key***REMOVED***
+                        provider_phi_dict***REMOVED***'tps'***REMOVED*** += rp_summaries***REMOVED***tp_key***REMOVED***
+
                     tag_category = i2b2_category_dict***REMOVED***tag***REMOVED***
                     category_fns = tag_category + '_fns'
                     category_tps = tag_category + '_tps'
@@ -1711,7 +1792,14 @@ class Philter:
                 # Get additional TNs and FPs
                 if tag not in i2b2_include_tags:
                     include_dict***REMOVED***'tns'***REMOVED*** += rp_summaries***REMOVED***fn_key***REMOVED***
-                    include_dict***REMOVED***'fps'***REMOVED*** += rp_summaries***REMOVED***tp_key***REMOVED***                 
+                    include_dict***REMOVED***'fps'***REMOVED*** += rp_summaries***REMOVED***tp_key***REMOVED***
+
+                    if tag in i2b2_patient_tags:
+                        patient_phi_dict***REMOVED***'tns'***REMOVED*** += rp_summaries***REMOVED***fn_key***REMOVED***
+                        patient_phi_dict***REMOVED***'fps'***REMOVED*** += rp_summaries***REMOVED***tp_key***REMOVED***   
+                    if tag in i2b2_provider_tags:
+                        provider_phi_dict***REMOVED***'tns'***REMOVED*** += rp_summaries***REMOVED***fn_key***REMOVED***
+                        provider_phi_dict***REMOVED***'fps'***REMOVED*** += rp_summaries***REMOVED***tp_key***REMOVED***          
 
 
                 if rp_summaries***REMOVED***fn_key***REMOVED*** != 0:
@@ -1728,6 +1816,10 @@ class Philter:
         # ucsf
         if self.ucsf_format:
             include_dict = {'fns':0,'tps':0,'fps':summary***REMOVED***"total_false_positives"***REMOVED***,'tns':summary***REMOVED***"total_true_negatives"***REMOVED***}
+            patient_phi_dict = {'fns':0,'tps':0,'fps':summary***REMOVED***"total_false_positives"***REMOVED***,'tns':summary***REMOVED***"total_true_negatives"***REMOVED***}
+            provider_phi_dict = {'fns':0,'tps':0,'fps':summary***REMOVED***"total_false_positives"***REMOVED***,'tns':summary***REMOVED***"total_true_negatives"***REMOVED***}
+
+
             category_dict = {}
             for i in range(0,len(phi_categories)):
                 category_tag = phi_categories***REMOVED***i***REMOVED***
@@ -1755,6 +1847,13 @@ class Philter:
                         include_dict***REMOVED***'fns'***REMOVED*** += rp_summaries***REMOVED***fn_key***REMOVED***
                         include_dict***REMOVED***'tps'***REMOVED*** += rp_summaries***REMOVED***tp_key***REMOVED***
 
+                        if tag in ucsf_patient_tags:
+                            patient_phi_dict***REMOVED***'fns'***REMOVED*** += rp_summaries***REMOVED***fn_key***REMOVED***
+                            patient_phi_dict***REMOVED***'tps'***REMOVED*** += rp_summaries***REMOVED***tp_key***REMOVED***
+                        if tag in ucsf_provider_tags:
+                            provider_phi_dict***REMOVED***'fns'***REMOVED*** += rp_summaries***REMOVED***fn_key***REMOVED***
+                            provider_phi_dict***REMOVED***'tps'***REMOVED*** += rp_summaries***REMOVED***tp_key***REMOVED***
+
                         tag_category = ucsf_category_dict***REMOVED***tag***REMOVED***
                         category_fns = tag_category + '_fns'
                         category_tps = tag_category + '_tps'
@@ -1765,6 +1864,15 @@ class Philter:
                         include_dict***REMOVED***'fns'***REMOVED*** += corrected_age_fns
                         include_dict***REMOVED***'tps'***REMOVED*** += rp_summaries***REMOVED***tp_key***REMOVED***
                         include_dict***REMOVED***'tns'***REMOVED*** += (rp_summaries***REMOVED***fn_key***REMOVED*** - corrected_age_fns)
+
+                        if tag in ucsf_patient_tags:
+                            patient_phi_dict***REMOVED***'fns'***REMOVED*** += corrected_age_fns
+                            patient_phi_dict***REMOVED***'tps'***REMOVED*** += rp_summaries***REMOVED***tp_key***REMOVED***
+                            patient_phi_dict***REMOVED***'tns'***REMOVED*** += (rp_summaries***REMOVED***fn_key***REMOVED*** - corrected_age_fns)
+                        if tag in ucsf_provider_tags:
+                            provider_phi_dict***REMOVED***'fns'***REMOVED*** += corrected_age_fns
+                            provider_phi_dict***REMOVED***'tps'***REMOVED*** += rp_summaries***REMOVED***tp_key***REMOVED***
+                            provider_phi_dict***REMOVED***'tns'***REMOVED*** += (rp_summaries***REMOVED***fn_key***REMOVED*** - corrected_age_fns)
 
                         tag_category = ucsf_category_dict***REMOVED***tag***REMOVED***
                         category_fns = tag_category + '_fns'
@@ -1777,7 +1885,14 @@ class Philter:
                 # Get additional TNs and FPs
                 if tag not in ucsf_include_tags:
                     include_dict***REMOVED***'tns'***REMOVED*** += rp_summaries***REMOVED***fn_key***REMOVED***
-                    include_dict***REMOVED***'fps'***REMOVED*** += rp_summaries***REMOVED***tp_key***REMOVED***                 
+                    include_dict***REMOVED***'fps'***REMOVED*** += rp_summaries***REMOVED***tp_key***REMOVED***
+                
+                    if tag in ucsf_patient_tags:
+                        patient_phi_dict***REMOVED***'tns'***REMOVED*** += rp_summaries***REMOVED***fn_key***REMOVED***
+                        patient_phi_dict***REMOVED***'fps'***REMOVED*** += rp_summaries***REMOVED***tp_key***REMOVED***   
+                    if tag in ucsf_provider_tags:
+                        provider_phi_dict***REMOVED***'tns'***REMOVED*** += rp_summaries***REMOVED***fn_key***REMOVED***
+                        provider_phi_dict***REMOVED***'fps'***REMOVED*** += rp_summaries***REMOVED***tp_key***REMOVED***  
 
 
                 if rp_summaries***REMOVED***fn_key***REMOVED*** != 0:
@@ -1787,8 +1902,11 @@ class Philter:
                     #     overall_recall_dict***REMOVED***recall_key***REMOVED*** = 0
                 else:
                     overall_recall_dict***REMOVED***recall_key***REMOVED*** = 1
-
-                overall_data.append(***REMOVED***tag,"{:.2%}".format(overall_recall_dict***REMOVED***recall_key***REMOVED***),str(rp_summaries***REMOVED***tp_key***REMOVED***),str(rp_summaries***REMOVED***fn_key***REMOVED***)***REMOVED***)
+                if tag == 'Age':
+                    overall_data.append(***REMOVED***tag,"{:.2%}".format(overall_recall_dict***REMOVED***recall_key***REMOVED***),str(rp_summaries***REMOVED***tp_key***REMOVED***),str(corrected_age_fns)***REMOVED***)
+                # print(tag + " Recall: " + "{:.2%}".format(overall_recall_dict***REMOVED***recall_key***REMOVED***) + " TP: " + str(rp_summaries***REMOVED***tp_key***REMOVED***) + " FN: " + str(rp_summaries***REMOVED***fn_key***REMOVED***))
+                else:
+                    overall_data.append(***REMOVED***tag,"{:.2%}".format(overall_recall_dict***REMOVED***recall_key***REMOVED***),str(rp_summaries***REMOVED***tp_key***REMOVED***),str(rp_summaries***REMOVED***fn_key***REMOVED***)***REMOVED***)
                 # print(tag + " Recall: " + "{:.2%}".format(overall_recall_dict***REMOVED***recall_key***REMOVED***) + " TP: " + str(rp_summaries***REMOVED***tp_key***REMOVED***) + " FN: " + str(rp_summaries***REMOVED***fn_key***REMOVED***))
         
         # pretty print tag recalls
@@ -1880,6 +1998,87 @@ class Philter:
         print('\n')
 
 
+        ######### Patient-only recall, precision ##########
+
+
+        patient_recall = 0
+        if patient_phi_dict***REMOVED***'fns'***REMOVED*** != 0:
+            # if include_dict***REMOVED***'tps'***REMOVED*** != 0 and (include_dict***REMOVED***'tps'***REMOVED***-include_dict***REMOVED***'fns'***REMOVED***) > 0:
+            patient_recall = patient_phi_dict***REMOVED***'tps'***REMOVED***/(patient_phi_dict***REMOVED***'fns'***REMOVED*** + patient_phi_dict***REMOVED***'tps'***REMOVED***)
+            # else:
+            #     corrected_recall = 0
+        else:
+            patient_recall = 1
+
+        patient_precision = 0
+        if patient_phi_dict***REMOVED***'fps'***REMOVED*** != 0:
+            # if include_dict***REMOVED***'tps'***REMOVED*** != 0 and (include_dict***REMOVED***'tps'***REMOVED***-include_dict***REMOVED***'fns'***REMOVED***) > 0:
+            patient_precision = patient_phi_dict***REMOVED***'tps'***REMOVED***/(patient_phi_dict***REMOVED***'fps'***REMOVED*** + patient_phi_dict***REMOVED***'tps'***REMOVED***)
+            # else:
+            #     corrected_recall = 0
+        else:
+            patient_precision = 1
+
+        patient_specificity = 0
+        if patient_phi_dict***REMOVED***'fps'***REMOVED*** != 0:
+            # if include_dict***REMOVED***'tps'***REMOVED*** != 0 and (include_dict***REMOVED***'tps'***REMOVED***-include_dict***REMOVED***'fns'***REMOVED***) > 0:
+            patient_specificity = patient_phi_dict***REMOVED***'tns'***REMOVED***/(patient_phi_dict***REMOVED***'fps'***REMOVED*** + patient_phi_dict***REMOVED***'tns'***REMOVED***)
+            # else:
+            #     corrected_recall = 0
+        else:
+            patient_specificity = 1
+
+        print('\n')
+        print("Patient-Only Results:")
+        print('\n')
+        print("cTP:",patient_phi_dict***REMOVED***'tps'***REMOVED***, "cFN:", patient_phi_dict***REMOVED***'fns'***REMOVED***, "cTN:", patient_phi_dict***REMOVED***'tns'***REMOVED***, "cFP:", patient_phi_dict***REMOVED***'fps'***REMOVED***)
+        print("Patient PHI Recall: " + "{:.2%}".format(patient_recall))
+        print("Precision: " + "{:.2%}".format(patient_precision))
+        print("Retention: " + "{:.2%}".format(patient_specificity))
+        print('\n')
+
+
+
+       ######### Provider-only recall, precision ##########
+
+
+        provider_recall = 0
+        if provider_phi_dict***REMOVED***'fns'***REMOVED*** != 0:
+            # if include_dict***REMOVED***'tps'***REMOVED*** != 0 and (include_dict***REMOVED***'tps'***REMOVED***-include_dict***REMOVED***'fns'***REMOVED***) > 0:
+            provider_recall = provider_phi_dict***REMOVED***'tps'***REMOVED***/(provider_phi_dict***REMOVED***'fns'***REMOVED*** + provider_phi_dict***REMOVED***'tps'***REMOVED***)
+            # else:
+            #     corrected_recall = 0
+        else:
+            patient_recall = 1
+
+        provider_precision = 0
+        if provider_phi_dict***REMOVED***'fps'***REMOVED*** != 0:
+            # if include_dict***REMOVED***'tps'***REMOVED*** != 0 and (include_dict***REMOVED***'tps'***REMOVED***-include_dict***REMOVED***'fns'***REMOVED***) > 0:
+            provider_precision = provider_phi_dict***REMOVED***'tps'***REMOVED***/(provider_phi_dict***REMOVED***'fps'***REMOVED*** + provider_phi_dict***REMOVED***'tps'***REMOVED***)
+            # else:
+            #     corrected_recall = 0
+        else:
+            patient_precision = 1
+
+        provider_specificity = 0
+        if provider_phi_dict***REMOVED***'fps'***REMOVED*** != 0:
+            # if include_dict***REMOVED***'tps'***REMOVED*** != 0 and (include_dict***REMOVED***'tps'***REMOVED***-include_dict***REMOVED***'fns'***REMOVED***) > 0:
+            provider_specificity = provider_phi_dict***REMOVED***'tns'***REMOVED***/(provider_phi_dict***REMOVED***'fps'***REMOVED*** + provider_phi_dict***REMOVED***'tns'***REMOVED***)
+            # else:
+            #     corrected_recall = 0
+        else:
+            provider_specificity = 1
+
+        print('\n')
+        print("Provider-Only Results:")
+        print('\n')
+        print("cTP:",provider_phi_dict***REMOVED***'tps'***REMOVED***, "cFN:", provider_phi_dict***REMOVED***'fns'***REMOVED***, "cTN:", provider_phi_dict***REMOVED***'tns'***REMOVED***, "cFP:", provider_phi_dict***REMOVED***'fps'***REMOVED***)
+        print("Provider PHI Recall: " + "{:.2%}".format(provider_recall))
+        print("Precision: " + "{:.2%}".format(provider_precision))
+        print("Retention: " + "{:.2%}".format(provider_specificity))
+        print('\n')
+
+
 
         ######## Summarize FN results #########
         
@@ -1953,7 +2152,7 @@ class Philter:
         nocontext_counter = 0
         context_counter = 0
         for fp in fp_tags:
-            file_dict = fp_tags***REMOVED***fp***REMOVED*** 
+            file_dict = fp_tags***REMOVED***fp***REMOVED***
             for subfile in file_dict:
                 current_list_context = file_dict***REMOVED***subfile***REMOVED***
                 current_list_nocontext = current_list_context***REMOVED***:2***REMOVED*** + ***REMOVED***current_list_context***REMOVED***3***REMOVED******REMOVED*** + ***REMOVED***current_list_context***REMOVED***4***REMOVED******REMOVED***
