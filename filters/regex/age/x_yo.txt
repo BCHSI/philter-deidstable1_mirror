@@ -1,4 +1,1 @@
-# Regular expression to identify age of the a deceased patient in the notes
-# Looks for numeric values either single or double digits following the pattern yo or y.o. in the notes
-# Note the regular expression performs case insensitive matching
 \b(?i)(***REMOVED***9***REMOVED******REMOVED***0-9***REMOVED***|***REMOVED***1***REMOVED******REMOVED***0-9***REMOVED******REMOVED***0-9***REMOVED***)(?=\syo\b|\sy\.o\.)
