@@ -1,2 +1,1 @@
-# Regex to find the email address in the notes
 [a-zA-Z0-9_.+-@\"]+@[a-zA-Z0-9-\:\]\[]+[a-zA-Z0-9-.]*

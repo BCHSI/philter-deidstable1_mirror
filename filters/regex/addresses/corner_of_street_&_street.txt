@@ -1,3 +1,1 @@
-# Regex to capture the location of the patient's address with respect to a street corner
-# Uses variables day_numbering and address_indicator to denote street with numbers in their name and streets with words like expressway, blvd, lane to denote its a street  
 \b(((?i)[a-z]+\s(of|at|from)(\sthe)?)\s)([A-Z][a-zA-Z]+|((?i)("""+day_numbering+r""")))((?i)\s("""+address_indicator+r"""))?\s&\s([A-Z][a-zA-Z]+|((?i)("""+day_numbering+r""")))((?i)\s("""+address_indicator+r"""))?\b

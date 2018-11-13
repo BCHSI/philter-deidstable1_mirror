@@ -1,2 +1,1 @@
-# Regex to capture street name with a number in it followed by the words San or SAN
 \b\d+\s[A-Z][a-zA-Z]+\s(San|SAN)\b
