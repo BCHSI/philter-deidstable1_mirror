@@ -15,6 +15,7 @@ class Phitexts:
     def __init__(self, inputdir):
         self.inputdir  = inputdir
         self.filenames = []
+        #self.note_keys = []
         #notes text
         self.texts     = {}
         #coordinates of PHI
@@ -30,7 +31,7 @@ class Phitexts:
 
 
         self._read_texts()
-        self.sub = Subs(note_info_path = None, re_id_pat_path = None)
+        self.subser = None
         self.filterer = None
 
     def _read_texts(self):
@@ -42,11 +43,13 @@ class Phitexts:
                 if not filename.endswith("txt"):
                     continue
                 filepath = root +  filename
+                
                 self.filenames.append(filepath)
                 encoding = self._detect_encoding(filepath)
-                fhandle = open(filepath, "r", encoding=encoding['encoding'])
+                fhandle = open(filepath, "r", encoding=encoding['encoding'], errors='surrogateescape')
                 self.texts[filepath] = fhandle.read()
                 fhandle.close()
+        #self.note_keys = [os.path.splitext(os.path.basename(f).strip('0'))[0] for f in self.filenames]
             
                 
     def _detect_encoding(self, fp):
@@ -54,6 +57,7 @@ class Phitexts:
             raise Exception("Filepath does not exist", fp)
 
         detector = UniversalDetector()
+        #detector.MINIMUM_THRESHOLD = 0.2
         with open(fp, "rb") as f:
             for line in f:
                 detector.feed(line)
@@ -124,7 +128,7 @@ class Phitexts:
             if phi_type == "DATE":
                 for filename, start, end in self.types[phi_type][0].scan():
                     token = self.texts[filename][start:end]
-                    normalized_token = self.sub.parse_date(token)                  
+                    normalized_token = Subs.parse_date(token)                  
                     self.norms[phi_type] [(filename, start)] = (normalized_token, end)
                 
             else:
@@ -137,15 +141,19 @@ class Phitexts:
 
         # Note: this is currently done in surrogator.shift_dates(), surrogator.parse_and_shift_date(), parse_date_ranges(), replace_other_surrogate()
         
-    def substitute_phi(self):
+    def substitute_phi(self, look_up_table_path = None):
         assert self.norms, "No normalized PHI defined"
         
         if self.subs:
             return
-
+          
         for phi_type in self.norms.keys():
             if phi_type == "DATE":
                 for filename, start in self.norms[phi_type]:
+                    note_key_ucsf = os.path.splitext(os.path.basename(filename).strip('0'))[0]
+                    if not self.subser.has_shift_amount(note_key_ucsf):
+                        if __debug__: print("WARNING: no date shift found for file: " + filename)
+                        continue
                     normalized_token = self.norms[phi_type][filename, start][0]
                     end = self.norms[phi_type][filename, start][1]
 
@@ -153,8 +161,8 @@ class Phitexts:
                     if normalized_token is None:
                         # self.eval_table[filename][start].update({'sub':None})
                         continue
-                    #TODO: why don't we make the lookup by the filename instead of patient_id
-                    substitute_token = self.sub.date_to_string(self.sub.shift_date_pid(normalized_token, filename))
+                    
+                    substitute_token = self.subser.date_to_string(self.subser.shift_date_pid(normalized_token, note_key_ucsf))
                     # self.eval_table[filename][start].update({'sub':substitute_token})
                     self.subs[(filename, start)] = (substitute_token, end)
             else:
@@ -167,8 +175,10 @@ class Phitexts:
         if not self.coords:
             self.textsout = self.texts
             print("WARNING: No PHI coordinates defined: nothing to transform!")
-        else:
-            assert self.subs, "No surrogated PHI defined"
+
+        #Subs may be empty in the case where we do not have any date shifts to perform.
+        #else:
+        #    assert self.subs, "No surrogated PHI defined"
                 
         if self.textsout:
             return
@@ -206,7 +216,7 @@ class Phitexts:
             self.textsout[filename] =  "".join(contents)
 
     def _transform_text(self, txt, infilename,
-                                include_map, exclude_map, subs):       
+                        include_map, exclude_map, subs):       
         last_marker = 0
         current_chunk = []
         punctuation_matcher = re.compile(r"[^a-zA-Z0-9*]")
@@ -248,7 +258,7 @@ class Phitexts:
             fbase, fext = os.path.splitext(filename)
             fbase = fbase.split('/')[-1]
             filepath = outputdir + fbase + "_subs.txt"
-            with open(filepath, "w", encoding='utf-8') as fhandle:
+            with open(filepath, "w", encoding='utf-8', errors='surrogateescape') as fhandle:
                 fhandle.write(self.textsout[filename])
     
     def print_log(self, output_dir):
@@ -275,8 +285,12 @@ class Phitexts:
             raw = self.texts[filename][start:end]
             normalized_date = self.norms['DATE'][(filename,start)][0]
             if normalized_date is not None:
-                normalized_token = self.sub.date_to_string(normalized_date)
-                sub = self.subs[(filename,start)][0]
+                normalized_token = self.subser.date_to_string(normalized_date)
+                note_key_ucsf = os.path.splitext(os.path.basename(filename).strip('0'))[0]
+                if not self.subser.has_shift_amount(note_key_ucsf):
+                     sub = None
+                else:
+                     sub = self.subs[(filename,start)][0]
                 num_parsed += 1
                 if filename not in eval_table:
                     eval_table[filename] = []

@@ -1,5 +1,6 @@
 #!/bin/bash
 # Run with: nohup ./bootstrap_random_batch2.sh > bootstrap_random_batch2_out.txt 2>&1 &
+
 # Define process checking function: checks number of running processes, and decreases the counter by 1 if 
 processcheck() {
 # Get number of whitelist processes
