@@ -424,20 +424,6 @@ class Philter:
             warnings.warn("deprecated missing context_filter field in filter " + str(pattern_index) + " of type regex_context, assuming \'all\'", DeprecationWarning)
             context_filter = 'all'
 
-        # Get PHI coordinates
-        if context_filter == 'all':
-            # current_include_map = self.get_full_include_map(filename)
-            current_include_map = self.include_map
-            # Create complement exclude map (also excludes punctuation)      
-            full_exclude_map = current_include_map.get_complement(filename, text)
-
-        else:
-            context_filter_pattern_index = self.pattern_indexes[context_filter]
-            full_exclude_map_coordinates = self.patterns[context_filter_pattern_index]['coordinate_map']
-            full_exclude_map = {}
-            for start,stop in full_exclude_map_coordinates.filecoords(filename):
-                full_exclude_map[start] = stop
-
 
         # 1. Get coordinates of all include and exclude mathches
 
