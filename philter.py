@@ -1529,7 +1529,6 @@ class Philter:
                     # if self.dependent == False:
                     #     filter_file_list_exclude.append('')
                     #     filter_file_list_include.append('')
-
                     for phi_item in phi_list:                           
                         phi_text = phi_item***REMOVED***'text'***REMOVED***
                         phi_type = phi_item***REMOVED***'TYPE'***REMOVED***
@@ -1653,35 +1652,35 @@ class Philter:
                     filter_file_list_exclude = ***REMOVED******REMOVED***
                     filter_file_list_include = ***REMOVED******REMOVED***
                     
-                    if self.dependent:
-                        # Loop through coorinate map objects and match patterns with FPs
-                        for i,pattern in enumerate(self.patterns):
-                            # print('\n',i, ':')
+                    # if self.dependent:
+                    # Loop through coorinate map objects and match patterns with FPs
+                    for i,pattern in enumerate(self.patterns):
+                        # print('\n',i, ':')
 
-                            coord_map = pattern***REMOVED***"coordinate_map"***REMOVED***
-                            exclude_include = pattern***REMOVED***"exclude"***REMOVED***
-                            try:
-                                filter_path = pattern***REMOVED***"filepath"***REMOVED***
-                            except KeyError:
-                                filter_path = pattern***REMOVED***"title"***REMOVED***
-                            # print('\n')
-                            # print(filter_path)
-                            for start,stop in coord_map.filecoords(input_filename):
-                                # print(start,stop,text***REMOVED***start:stop***REMOVED***)
-                                word_range = set(range(start_coordinate_fp, start_coordinate_fp + len(false_positive)))
-                                filter_range = set(range(start, stop))
-                                intersection = word_range & filter_range
-                                if intersection != set():
-                                    # print("********"+str(start_coordinate_fp)+"********")
-                                    # print(false_positive)
-                                    # Add this filter path to the list of things that filtered this word
-                                    if exclude_include == True:
-                                        filter_file_list_exclude.append(filter_path)
-                                    else:
-                                        filter_file_list_include.append(filter_path)
-                    if self.dependent == False:
-                        filter_file_list_exclude.append('')
-                        filter_file_list_include.append('')
+                        coord_map = pattern***REMOVED***"coordinate_map"***REMOVED***
+                        exclude_include = pattern***REMOVED***"exclude"***REMOVED***
+                        try:
+                            filter_path = pattern***REMOVED***"filepath"***REMOVED***
+                        except KeyError:
+                            filter_path = pattern***REMOVED***"title"***REMOVED***
+                        # print('\n')
+                        # print(filter_path)
+                        for start,stop in coord_map.filecoords(input_filename):
+                            # print(start,stop,text***REMOVED***start:stop***REMOVED***)
+                            word_range = set(range(start_coordinate_fp, start_coordinate_fp + len(false_positive)))
+                            filter_range = set(range(start, stop))
+                            intersection = word_range & filter_range
+                            if intersection != set():
+                                # print("********"+str(start_coordinate_fp)+"********")
+                                # print(false_positive)
+                                # Add this filter path to the list of things that filtered this word
+                                if exclude_include == True:
+                                    filter_file_list_exclude.append(filter_path)
+                                else:
+                                    filter_file_list_include.append(filter_path)
+                    # if self.dependent == False:
+                    #     filter_file_list_exclude.append('')
+                    #     filter_file_list_include.append('')
             
                     pos_entry = cleaned_with_pos***REMOVED***str(start_coordinate_fp)***REMOVED***
 
