@@ -1,1 +1,2 @@
+# Regex to remove anything that has a box number followed by a room number
 \b((?i)(suite|ste)?(\.)?([ ]{1,2})?\d+([ ]{1,2})?box(:)?[ ]{1,2}\d+(,)?[ ]{1,2}[A-Z](\-)?\d+)\b

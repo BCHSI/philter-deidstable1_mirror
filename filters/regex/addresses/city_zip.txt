@@ -1,1 +1,4 @@
+# Regex to match the zip code
+# This regex accounts for pager number in the notes and checkes to ensure it is not calssified as the zip code
+# It matches one or more alphabets, followed by one or more space, ',' or '.' followed by 5 digits
 \b(?!.*\bPager\b|.*\bPAGER\b|.*\bpager\b|.*\bpage\b|.*\bpgr\b|.*\bpg\b|.*\bMD\b)([a-zA-Z]+[ ]{1,4}[a-zA-Z]+|[a-zA-Z]+)(\:[ ]{1,4}|\,[ ]{1,4}|\.[ ]{1,4}|[ ]{1,4})[0-9]{5}(\-[0-9]{4})?\b

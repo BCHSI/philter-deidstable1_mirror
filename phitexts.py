@@ -509,3 +509,4 @@ class Phitexts:
         json.dump(total_summary, open(summary_file, "w"), indent=4)
         json.dump(summary_by_file, open(json_summary_by_file, "w"), indent=4)
         json.dump(summary_by_category, open(json_summary_by_category, "w"), indent=4)
+
