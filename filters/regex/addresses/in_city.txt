@@ -1,2 +1,1 @@
-# Regex to find any reference to a city in the notes other than in the address
 \b((?<=\bin\s)|(?<=\bIN\s)|(?<=\bat\s)|(?<=\bnear\s)|(?<=\bfrom\s)|(?<=\btravel\sto\s)|(?<=\bvisit\sto\s))((?!I\b)(?!II\b)(?!III\b)(?!NAD\b))(***REMOVED***A-Z***REMOVED******REMOVED***a-z***REMOVED***+\s***REMOVED***A-Z***REMOVED******REMOVED***a-z***REMOVED***+(\s***REMOVED***A-Z***REMOVED******REMOVED***a-z***REMOVED***+)?|(***REMOVED***A-Z***REMOVED***{2,3}))\b

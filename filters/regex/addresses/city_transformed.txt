@@ -1,3 +1,1 @@
-# Regex to remove the words before the word city or street in the notes
-# This captures name or the city or street 
 \b(***REMOVED***A-Z***REMOVED******REMOVED***a-zA-Z***REMOVED***+\s{1,4}***REMOVED***A-Z***REMOVED******REMOVED***a-zA-Z***REMOVED***+|***REMOVED***A-Z***REMOVED******REMOVED***a-zA-Z***REMOVED***+)\s{1,4}(City|CITY|Street|STREET)\b

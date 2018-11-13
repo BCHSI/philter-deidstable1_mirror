@@ -1,2 +1,1 @@
-# Regex to capture leve or room number in the notes
 \b((?i)***REMOVED***A-Z***REMOVED***\slevel(:)?\s)?((?i)room(:)?\s***REMOVED***a-z***REMOVED***+(\-)?\d+)\b
