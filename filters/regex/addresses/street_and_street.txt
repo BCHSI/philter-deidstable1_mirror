@@ -1,3 +1,2 @@
 # Regex for cases where there are addresses with multiple streets listed
-\b(***REMOVED***A-Z***REMOVED******REMOVED***a-zA-Z***REMOVED***+|((?i)***REMOVED***a-z***REMOVED***+\sof\s)?((?i)("""+day_numbering+r""")))((?i)\s("""+address_indicator+r"""))\s(and|near)\s(***REMOVED***A-Z***REMOVED******REMOVED***a-zA-Z***REMOVED***+|((?i)***REMOVED***a-z***REMOVED***+\sof\s)?((?i)("""+day_numbering+r""")))((?i)\s("""+address_indicator+r"""))\b
-
+\b(***REMOVED***A-Z***REMOVED******REMOVED***a-zA-Z***REMOVED***+|((?i)***REMOVED***a-z***REMOVED***+\sof\s)?((?i)(15th)))((?i)\s("""+address_indicator+r"""))\sand\s(***REMOVED***A-Z***REMOVED******REMOVED***a-zA-Z***REMOVED***+|((?i)***REMOVED***a-z***REMOVED***+\sof\s)?((?i)("""+day_numbering+r""")))((?i)\s("""+address_indicator+r"""))\b
