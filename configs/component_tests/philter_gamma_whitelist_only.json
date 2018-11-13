@@ -1,0 +1,17 @@
+[  
+    {
+        "title":"Whitelist 1",
+        "type":"set",
+        "exclude":false,
+        "filepath":"/data/muenzenk/add_fps_to_whitelist_091718/whitelist_plus_fps_091718.json",
+        "pos":[],
+        "notes":"These are words we beleive are safe"
+    },
+    {
+        "title":"POS MATCHER",
+        "type":"pos_matcher",
+        "exclude":false,
+        "pos":["CD"],
+        "notes":"This will include any CDs that aren't included in earlier steps"
+    }
+]
