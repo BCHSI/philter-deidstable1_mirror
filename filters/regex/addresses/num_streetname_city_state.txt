@@ -1,2 +1,1 @@
-#Regex to capture cases where there is a numbered street name followed by state
 (?<!(\/))(?<!(\stype\s))(?!\d+\s(mg|units|year|years|yrs|qd|bpm|refills|tab|tabs|day|days|cc|ccs|mmhg|po|puff|mm|amp)\s)\b(\d+)\s{1,4}(?!Dear\b)([A-Z]\s{1,4}[A-Z][a-zA-Z]+|[A-Z][a-zA-Z]+\s{1,4}[A-Z][a-zA-Z]+|[A-Z][a-zA-Z]+|[A-Z]|("""+day_numbering+r"""))\s{1,4}((?!(NT\,\sND|MR\,\sLA)\b)(([A-Z][a-zA-Z]+\s{1,4}[A-Z][a-zA-Z]+|[A-Z][a-zA-Z]+)(\,\s{1,4})("""+state_name+r""")))\b

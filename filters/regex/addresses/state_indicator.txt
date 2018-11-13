@@ -1,2 +1,1 @@
-# Regex to capture the word state in the notes followed by two letter abbreviation of the states
 \b(?i)(?!of\shealth)((?<=state\sof\s)|(?<=state:\s)|(?<=state\s))[A-Z]{2}\b

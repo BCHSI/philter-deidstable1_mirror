@@ -1,2 +1,1 @@
-# Regex to find the phone number after the keyword call:
 \b(?<=(?i)call: )\d+[\-\s]\d+([\-\s]\d+)?\b
