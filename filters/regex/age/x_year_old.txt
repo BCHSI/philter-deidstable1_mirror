@@ -1,4 +1,1 @@
-# Regular expression to identify age of the a patient in the notes
-# Looks for numeric values either single or double digits preceeding the words year old or yr old in the notes
-# Note that this regular expression has the ignore case notation 
 \b(?i)(***REMOVED***9***REMOVED******REMOVED***0-9***REMOVED***|***REMOVED***1***REMOVED******REMOVED***0-9***REMOVED******REMOVED***0-9***REMOVED***)(?=\syear old|\syr old)\b

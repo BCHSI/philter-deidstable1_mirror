@@ -1,3 +1,1 @@
-# Regex to find address with street number and floor numbers
-# Looks for the keyword floor, fl or flr
 \b(?i)(\d+)\s{1,4}(***REMOVED***A-Z***REMOVED******REMOVED***a-zA-Z***REMOVED***+\s{1,4}***REMOVED***A-Z***REMOVED******REMOVED***a-zA-Z***REMOVED***+|***REMOVED***A-Z***REMOVED******REMOVED***a-zA-Z***REMOVED***+|("""+day_numbering+r"""))(\:\s{1,4}|\,\s{1,4}|\.\s{1,4}|\s{1,4})(("""+address_indicator+r""")(\.)?)?(\:\s{1,4}|\,\s{1,4}|\.\s{1,4}|\;\s{1,4}|\s{1,4})(***REMOVED***a-z0-9***REMOVED***+\-)?***REMOVED***\(***REMOVED***?(("""+full_numbering+r""")|("""+day_numbering+r"""))\s(floor|fl|flr)***REMOVED***\)***REMOVED***?(***REMOVED***A-Z***REMOVED***\-\d+)?\b

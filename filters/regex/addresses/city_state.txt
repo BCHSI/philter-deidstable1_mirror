@@ -1,3 +1,1 @@
-# Regex to capture and remove the state in the address
-# The variable state_name has the list of 50 states and their two letter abbreviation
 \b(?!(NT\,\sND|MR\,\sLA)\b)((***REMOVED***A-Z***REMOVED******REMOVED***a-zA-Z***REMOVED***+\s{1,4}***REMOVED***A-Z***REMOVED******REMOVED***a-zA-Z***REMOVED***+|***REMOVED***A-Z***REMOVED******REMOVED***a-zA-Z***REMOVED***+)(\,\s{1,4})("""+state_name+r"""))\b
