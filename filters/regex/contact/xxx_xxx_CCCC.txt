@@ -1,1 +1,2 @@
+# Regex to capture phone numbers in the format 1-(3 digit number)-(3 digit number)-(4 letter word)
 (\b\d\-)?(\b\d{3}\-|[\[\(]\d{3}[\]\)]\s)?\b\d{3}\-[a-zA-Z]+\b(\s[\[\(]\d{4}[\]\)]|\-[a-zA-Z]+)?

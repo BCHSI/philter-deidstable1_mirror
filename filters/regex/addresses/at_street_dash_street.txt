@@ -1,1 +1,4 @@
+# Regex to capture street addresses that have a number at the street name and contains phrases like court, alley, blvd 
+# Regex does a case insensitive look up for the word at and the number and test following word at are captured as good matches
+# Note this regex uses variables to store the common street names and address indicators 
 \b(?<=(?i)at\s)([A-Z][a-zA-Z]+|((?i)("""+day_numbering+r""")))((?i)\s("""+address_indicator+r"""))\/([A-Z][a-zA-Z]+|((?i)("""+day_numbering+r""")))((?i)\s("""+address_indicator+r"""))\b

@@ -1,1 +1,2 @@
+# Regex to find any url in the notes
 \b((http(s)?:\/\/)?(www\.)?[^\s]+\.(com|org|gov|edu|net))(\/[^\s\\]+)?\b
