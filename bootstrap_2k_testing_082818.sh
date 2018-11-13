@@ -17,11 +17,11 @@ fi
 
 
 # Define max number of processes to use
-maxprocess=13
+maxprocess=25
 # Initialize process counter
 counter=0
 # Define number of notes to sample
-sample_size=1892
+sample_size=1934
 # Define number of bootstrap replications
 bootstrap_replications=100
 for (( i=1; i <= $bootstrap_replications; i=(($i+1))))
@@ -57,7 +57,7 @@ do
 	    	cp $source_dir'/ucsf_anno/'$filename_alone* $anno_dir
 		done < $bootstrap_file_list
 		# Run philter on these 100 notes in the background (provide option to limit number of cores)
-		nohup python3 main.py -f /data/muenzenk/de-id_stable1/configs/final_pipeline_tests/test_names_regex_context.json -a $anno_dir -x /data/muenzenk/batch_data/philter_paper_testingbatch2k_20180802_updated/phi_notes_test_batch20180802.json -i $notes_dir -o $results_dir -c $coord_path --ucsfformat True --stanfordner /data/muenzenk/stanford-ner/ --eval_output $bootstrap_dir'/' > '/data/muenzenk/bootstrap_data/philter_paper_testingbatch2k_20180802_updated_tests/results/'$bootstrap_name'_results.txt' 2>&1 &
+		nohup python3 main.py -f /data/muenzenk/de-id_stable1/configs/ucsf_pipeline_test_map_regex_context.json -a $anno_dir -x /data/muenzenk/batch_data/philter_paper_testingbatch2k_20180802_updated/phi_notes_test_batch20180802.json -i $notes_dir -o $results_dir -c $coord_path --ucsfformat True --stanfordner /data/muenzenk/stanford-ner/ --eval_output $bootstrap_dir'/' > '/data/muenzenk/bootstrap_data/philter_paper_testingbatch2k_20180802_updated_tests/results/'$bootstrap_name'_results.txt' 2>&1 &
         
         counter=$((counter+1))
 
