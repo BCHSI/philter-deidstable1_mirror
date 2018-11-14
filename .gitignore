@@ -2,8 +2,7 @@
 .DS_Store
 data/
 
-# Emacs backup files
-*~
+
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

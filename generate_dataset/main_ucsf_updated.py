@@ -81,6 +81,7 @@ def main():
     
     #save our phi notes 
     for fn in phi:
+
         #get text and remove any initial *'s from the raw notes
         txt = phi***REMOVED***fn***REMOVED******REMOVED***"text"***REMOVED***.replace("*", " ")
 
