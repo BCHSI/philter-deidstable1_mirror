@@ -1,12 +1,14 @@
 import os
 from chardet.universaldetector import UniversalDetector
 import re
-#from philter import Philter
 import json
 from subs import Subs
 from coordinate_map import CoordinateMap
 from lxml import etree as ET
 import xmltodict
+from philter import Philter
+import json
+from subs import Subs
 
 class Phitexts:
     """ container for texts, phi, attributes """
@@ -41,8 +43,6 @@ class Phitexts:
         for phi_type in self.phi_type_list:
             self.phi_type_dict[phi_type] = [CoordinateMap()]        
         self._read_xml()
-   
-
 
     def _read_texts(self):
         if not self.inputdir:
@@ -153,7 +153,8 @@ class Phitexts:
                    text_end = final_value["@spans"].split('~')[1]
                    self.xml_map.add(filename,text_start,text_end)
         return self.xml_map[filename]
-    '''        
+    ''' 
+       
     def _detect_encoding(self, fp):
         if not os.path.exists(fp):
             raise Exception("Filepath does not exist", fp)
@@ -202,8 +203,6 @@ class Phitexts:
             return
         #print(self.phi_type_dict) 
         self.types = self.phi_type_dict
-
-
 
     def normalize_phi(self):
         assert self.texts, "No texts defined"
