@@ -4,10 +4,9 @@
 import sys,os
 import pandas as pd
 import argparse
-import distutils.util
 from multiprocessing import Pool
 
-#for reading in the xml gold notes
+#for reading in the xml i2b2 notes
 import xml.etree.ElementTree as ET
 import xmltodict
 
@@ -20,25 +19,25 @@ import re
 
 
 # Extract XML
-def extractXML(directory,filename,philter_or_gold,verbose):
-	"""Extracts the annotated XML file from either philter or gold into text, and a dictionary of all tags """
+def extractXML(directory,filename,philter_or_i2b2,verbose):
+	"""Extracts the annotated XML file from either philter or i2b2 into text, and a dictionary of all tags """
 	if verbose:
 		print ("\ninput file: "+directory + '/'+ filename)
 	file_to_parse = os.path.join(directory, filename)
 	tree = ET.parse(file_to_parse)
 	root = tree.getroot()
 	xmlstr = ET.tostring(root, encoding='utf8', method='xml')
-	xml_dict = xmltodict.parse(xmlstr)***REMOVED***philter_or_gold***REMOVED***
+	xml_dict = xmltodict.parse(xmlstr)***REMOVED***philter_or_i2b2***REMOVED***
 	text = xml_dict***REMOVED***"TEXT"***REMOVED***
 	tags_dict = xml_dict***REMOVED***"TAGS"***REMOVED***
 	return text,tags_dict,xmlstr
 
-def parse_xml_files(directory,output_directory,philter_or_gold,write_surrogated_files,problem_files_log,verbose):
-	"""This function
+def parse_xml_files(directory,output_directory,philter_or_i2b2,write_surrogated_files,problem_files_log,verbose):
+	"""This function 
 	1)  Loops through the files in the input directory, parses the XML files
     	a)  For each file, we loop through the tag dictionary and apply appropriate date shifts, & surrogations
-
-    Outputs:
+	
+    Outputs: 
     de-identified text files written to output_directory.
     date_shift_log - a record of all of the date shifts we apply
     surrogate_log - a record of all of the surrogates we apply
@@ -56,48 +55,39 @@ def parse_xml_files(directory,output_directory,philter_or_gold,write_surrogated_
 	for filename in os.listdir(directory):
 		if filename.endswith(".xml") and "DS_Store" not in filename:
 
-			note_text,tags_dict,xmlstr = extractXML(directory,filename,philter_or_gold,verbose)
-			if not tags_dict:
-				continue
+			note_text,tags_dict,xmlstr = extractXML(directory,filename,philter_or_i2b2,verbose)
+
 			for key, value in tags_dict.items():
 				# Note:  Value can be a list of like phi elements
 				# 		or a dictionary of the metadata about a phi element
 
 				if isinstance(value, list):
 					for final_value in value:
-						if philter_or_gold == "PhilterUCSF":
-							text_start = final_value***REMOVED***"@spans"***REMOVED***.split('~')***REMOVED***0***REMOVED***
-							text_end = final_value***REMOVED***"@spans"***REMOVED***.split('~')***REMOVED***1***REMOVED***
-						else:
-							text_start = final_value***REMOVED***"@start"***REMOVED***
-							text_end = final_value***REMOVED***"@end"***REMOVED***
+						text_start = final_value***REMOVED***"@start"***REMOVED***
+						text_end = final_value***REMOVED***"@end"***REMOVED***
 						text = final_value***REMOVED***"@text"***REMOVED***
 						phi_type = final_value***REMOVED***"@TYPE"***REMOVED***
-						if phi_type == "DATE" or phi_type == "Date":
+						if phi_type == "DATE": 
 							xmlstr,date_shift_log = shift_dates(filename_dates,filename,xmlstr,text,date_shift_log,note_text,text_start,text_end,verbose)
 						else:
-							xmlstr,surrogate_log = replace_other_surrogate(filename,xmlstr,text,phi_type,surrogate_log,verbose)
+							xmlstr,surrogate_log = replace_other_surrogate(filename,xmlstr,text,phi_type,surrogate_log,verbose)								
 				else:
 					final_value = value
 					text = final_value***REMOVED***"@text"***REMOVED***
 					phi_type = final_value***REMOVED***"@TYPE"***REMOVED***
-					if philter_or_gold == "PhilterUCSF":
-						text_start = final_value***REMOVED***"@spans"***REMOVED***.split('~')***REMOVED***0***REMOVED***
-						text_end = final_value***REMOVED***"@spans"***REMOVED***.split('~')***REMOVED***1***REMOVED***
-					else:
-						text_start = final_value***REMOVED***"@start"***REMOVED***
-						text_end = final_value***REMOVED***"@end"***REMOVED***
+					text_start = final_value***REMOVED***"@start"***REMOVED***
+					text_end = final_value***REMOVED***"@end"***REMOVED***
 
-					if phi_type == "DATE" or phi_type == "Date":
+					if phi_type == "DATE":
 						xmlstr,date_shift_log = shift_dates(filename_dates,filename,xmlstr,text,date_shift_log,note_text,text_start,text_end,verbose)
 					else:
 						xmlstr,surrogate_log = replace_other_surrogate(filename,xmlstr,text,phi_type,surrogate_log,verbose)
-
+			
 			# here we write back out the updated XML File to a new directory
 			output_dir = output_directory+filename.replace(".xml",".txt")
 			try:
 				xmlstr = xmlstr.decode('utf-8', 'ignore')
-				output_xml_dict = xmltodict.parse(xmlstr)***REMOVED***philter_or_gold***REMOVED***
+				output_xml_dict = xmltodict.parse(xmlstr)***REMOVED***philter_or_i2b2***REMOVED***
 				output_text = output_xml_dict***REMOVED***"TEXT"***REMOVED***
 				if write_surrogated_files:
 					with open(output_dir, "w") as text_file:
@@ -108,7 +98,7 @@ def parse_xml_files(directory,output_directory,philter_or_gold,write_surrogated_
 			except xmltodict.expat.ExpatError as xml_parse_error:
 				if verbose:
 					print ("We cannot parse this XML: " + str( xml_parse_error))
-				problem_files_log = problem_files_log.append({"filename":filename,"philter_or_gold":philter_or_gold,"xml_parse_error":xml_parse_error},ignore_index=True)
+				problem_files_log = problem_files_log.append({"filename":filename,"philter_or_i2b2":philter_or_i2b2,"xml_parse_error":xml_parse_error},ignore_index=True)
 
 	if verbose:
 		date_shift_log.columns = ***REMOVED***"Filename", "start", "end", "Input Date","Parsed Date", "Shifted Date","Time Delta","date_context"***REMOVED***
@@ -144,7 +134,7 @@ def lookup_date_shift(filename,filename_dates):
 	else:
 		print ("metadata not found. generating random date_shift")
 
-		if filename not in filename_dates:
+		if filename not in filename_dates: 
 			day,month,year,now = generate_random_date()
 			filename_dates***REMOVED***filename***REMOVED*** = ***REMOVED***day,month,year,now***REMOVED***
 
@@ -157,7 +147,7 @@ def lookup_date_shift(filename,filename_dates):
 
 def get_context_around_date(date,text_start,text_end,note_text):
     """
-    This function finds the context around a date within the note.
+    This function finds the context around a date within the note. 
     It is used for logging & improving our date tagging/shifting
     """
     text_start = int(text_start)
@@ -201,8 +191,8 @@ def parse_and_shift_date(date,time_delta):
           output_string = ""
           input_string = ""
           if dt.month!=now.month:
-              input_string += str(dt.strftime('%B'))
-              output_string += str(dt_plus_arbitrary.strftime('%B'))
+              input_string += str(dt.strftime('%B')) 
+              output_string += str(dt_plus_arbitrary.strftime('%B')) 
           if dt.year!=now.year:
               input_string += " " +str(dt.year)
               output_string += " " +str(dt_plus_arbitrary.year)
@@ -220,7 +210,7 @@ def parse_and_shift_date(date,time_delta):
 
 def parse_date_ranges(date_range,time_delta):
     """
-    Philter currently has regex's that tag date ranges.
+    Philter currently has regex's that tag date ranges. 
     So, we must identify these and separately shift both elements of the daterange
     """
     list_of_date_range_regex = ***REMOVED***"filters/regex/dates/YYYY_MM-YYYY_MM_transformed.txt","filters/regex/dates/MM_DD_YY-MM_DD_YY_transformed.txt","filters/regex/dates/MM_YYYY-MM_YYYY_transformed.txt","filters/regex/dates/MM_YY-MM_YY_transformed.txt","filters/regex/dates/MM_YYYY-MM_YYYY_transformed.txt","filters/regex/dates/MM_DD-MM_DD_transformed.txt","filters/regex/dates/DD_MM-DD_MM_transformed.txt"***REMOVED***
@@ -248,7 +238,7 @@ def shift_dates(filename_dates,filename,xmlstr,date,date_shift_log,note_text,tex
     date_context = get_context_around_date(date,text_start,text_end,note_text)
     time_delta = lookup_date_shift(filename,filename_dates)
     time_delta_str = str(time_delta).replace(", 0:00:00","")
-
+    
     dt = parse(date,settings={'PREFER_DAY_OF_MONTH': 'first'} )
 
     if dt !=None and dt.year > 1900:
@@ -289,7 +279,7 @@ def write_logs(output_directory,date_shift_log, surrogate_log):
 	"""Writing logs of date shifts and surrogates to the specified output dir"""
 	print ("\n______________________________________________")
 
-	date_shift_log.to_csv(output_directory + "/shifted_dates.csv", index=False,sep="|")
+	date_shift_log.to_csv(output_directory + "/shifted_dates.csv", index=False,sep="|")	
 	surrogate_log.to_csv(output_directory + "/surrogated_text.csv", index=False,sep="|")
 
 	print ("\nWrote record of shifted dates here: "+ output_directory + "shifted_dates.csv")
@@ -311,17 +301,16 @@ def write_summary(date_shift_log,surrogate_log,output_directory):
 	print ("\nCounts of text surrogated by phi_type:" )
 	print (counts_by_phi_type)
 
-def date_shift_evaluation(output_directory,date_shift_log_gold,date_shift_log,problem_files_log):
+def date_shift_evaluation(output_directory,date_shift_log_i2b2,date_shift_log,problem_files_log):
 	"""
 	Prints( a summary of the true positives, false positives and false negatives)
     Saves a more granular file of all of these to output_directory
 	"""
 
-	s1 = pd.merge(date_shift_log_gold, date_shift_log,indicator=True, how='outer', on=***REMOVED***'Filename','start','end','Input Date'***REMOVED***)
-	output_eval = s1***REMOVED******REMOVED***"Filename","Input Date","_merge"***REMOVED******REMOVED***
+	output_eval = pd.merge(date_shift_log_i2b2, date_shift_log,indicator=True, how='outer', on=***REMOVED***'Filename','start','end','Input Date','Parsed Date','Shifted Date','Time Delta'***REMOVED***)
 	output_eval = output_eval.rename(index=str, columns={"_merge": "classification"})
-	output_eval***REMOVED***"classification"***REMOVED*** = output_eval***REMOVED***'classification'***REMOVED***.replace({'both': 'true positive','left_only': 'false positive', 'right_only': 'false negative'})
-	output_eval***REMOVED***"description"***REMOVED*** = output_eval***REMOVED***'classification'***REMOVED***.replace({'true positive':'appears in both gold and philter','false positive':'appears in gold notes only', 'false negative':'appears in philter notes only'})
+	output_eval***REMOVED***"classification"***REMOVED*** = output_eval***REMOVED***'classification'***REMOVED***.replace({'both': 'true positive','left_only': 'false negative', 'right_only': 'false positive'})
+	output_eval***REMOVED***"description"***REMOVED*** = output_eval***REMOVED***'classification'***REMOVED***.replace({'true positive':'appears in both auto philtered and gold manually anno notes','false positive':'appears in auto philtered notes only', 'false negative':'appears in manually anno notes only'})
 
 
 	if problem_files_log.empty == False:
@@ -335,79 +324,76 @@ def date_shift_evaluation(output_directory,date_shift_log_gold,date_shift_log,pr
 	s1_true_positive = output_eval***REMOVED***output_eval***REMOVED***'classification'***REMOVED*** == "true positive"***REMOVED***.count()***REMOVED***"Input Date"***REMOVED***
 	true_positives = s1_true_positive
 	print ("\n______________________________________________")
-	print ("\nSummary Stats: \ntrue positives: " + str(true_positives))
+	print ("\nSummary Stats: \ntrue positives (appear in both gold manually anno and auto philtered notes): " + str(true_positives))
 
 	# count of False positives (shows in actual only)
 	s1_false_positive = output_eval***REMOVED***output_eval***REMOVED***'classification'***REMOVED*** == "false positive"***REMOVED***.count()***REMOVED***"Input Date"***REMOVED***
 	false_positives = s1_false_positive
-	print ("false positives: " + str(false_positives))
+	print ("false positives (appears in auto philter'd notes only): " + str(false_positives))
 
 	# count of False negative (shows in predicted only)
 	s1_false_negative = output_eval***REMOVED***output_eval***REMOVED***'classification'***REMOVED*** == "false negative"***REMOVED***.count()***REMOVED***"Input Date"***REMOVED***
 	false_negatives = s1_false_negative
-	print ("false negatives: " + str(false_negatives))
+	print ("false negatives: (appears in manually anno notes only) " + str(false_negatives))
 	print ("\nwriting out eval record to: " + output_directory + "date_shift_eval.csv")
 	print ("\n______________________________________________\n")
 
 def main():
 
 	parser = argparse.ArgumentParser(description=
-		"""This program will read in gold or Philter XML formatted notes \n
+		"""This program will read in i2b2 or Philter XML formatted notes \n
 		Then apply date shifts to any phi tagged as a date. \n
-		Next it will replace all appropriate PHI with the respective PHI Tag \n
+		Next it will replace all appropriate PHI with the respective PHI Tag \n 
 		Then it will output .txt files with the appropriate surrogates
 		""")
 
-	parser.add_argument("-i","--input_dir", default="data/gold_results", help="specifiy the input directory",
+	parser.add_argument("-i","--input_dir", default="data/i2b2_results", help="specifiy the input directory",
                     type=str)
 	parser.add_argument("-o","--output_dir", default="data/surrogator/philter_results_output/", help="specifiy the output directory",
                     type=str)
-	parser.add_argument("-gi","--gold_input_dir", default="data/surrogator/testing-PHI-Gold-fixed", help="specifiy the input gold directory",
+	parser.add_argument("-ii","--gold_anno_input_dir", default="data/surrogator/testing-PHI-Gold-fixed", help="specifiy the input gold manually annotated directory",
                     type=str)
-	parser.add_argument("-go","--gold_output_dir", default="data/surrogator/testing-PHI-Gold-fixed-output/", help="specifiy the gold output directory",
+	parser.add_argument("-io","--gold_anno_output_dir", default="data/surrogator/testing-PHI-Gold-fixed-output/", help="specifiy the gold manually annotated output directory",
 		            type=str)
 	parser.add_argument("-rp","--rerun_philter", default=False, help="This will re-run the philter surrogating. It takes a while, so default is false",
-                    type=lambda x:bool(distutils.util.strtobool(x)))
-	parser.add_argument("-rg","--rerun_gold", default=False, help="This will re-run the gold (manually annotated) standard surrogating. It takes a while, so default is false",
-                    type=lambda x:bool(distutils.util.strtobool(x)))
-	parser.add_argument("-e","--evaluation", default=True, help="This will run the evaluation comparing surrogated gold with surrogated philter notes",
-                    type=lambda x:bool(distutils.util.strtobool(x)))
+                    type=bool)
+	parser.add_argument("-ri","--rerun_i2b2", default=False, help="This will re-run the manually annotated gold standard surrogating. It takes a while, so default is false",
+                    type=bool)	
+	parser.add_argument("-e","--evaluation", default=True, help="This will run the evaluation comparing surrogated manually gold annotated with surrogated auto philter notes",
+                    type=bool)	
 	parser.add_argument("-t","--test", default=False, help="This will run the test, using less files",
-                    type=lambda x:bool(distutils.util.strtobool(x)))
+                    type=bool)
 	parser.add_argument("-w","--write_surrogated_files", default=False, help="This will write the surrogated notes.",
-                    type=lambda x:bool(distutils.util.strtobool(x)))
+                    type=bool)
 	parser.add_argument("-p","--prod", default=False, help="This will run the production mode, using only Philtered notes and not running evaluation",
-                    type=lambda x:bool(distutils.util.strtobool(x)))
+                    type=bool)
 	parser.add_argument("-verbose","--verbose", default=True, help="This will output helpful print statements and surrogator logs, but also increase the runtime of the program",
-                    type=lambda x:bool(distutils.util.strtobool(x)))
-	parser.add_argument("-x","--xmldomain", default="PhilterUCSF", help="GOLD xml domain",
-			    type=str)
+                    type=bool)
 
 	parsed = parser.parse_args()
 	directory = vars(parsed)***REMOVED***"input_dir"***REMOVED***
 	output_directory = vars(parsed)***REMOVED***"output_dir"***REMOVED***
-	gold_directory = vars(parsed)***REMOVED***"gold_input_dir"***REMOVED***
-	gold_output_directory = vars(parsed)***REMOVED***"gold_output_dir"***REMOVED***
-	rerun_gold = vars(parsed)***REMOVED***"rerun_gold"***REMOVED***
+	gold_anno_directory = vars(parsed)***REMOVED***"gold_anno_input_dir"***REMOVED***
+	gold_anno_output_directory = vars(parsed)***REMOVED***"gold_anno_output_dir"***REMOVED***
+	rerun_i2b2 = vars(parsed)***REMOVED***"rerun_i2b2"***REMOVED***
 	rerun_philter = vars(parsed)***REMOVED***"rerun_philter"***REMOVED***
 	evaluation = vars(parsed)***REMOVED***"evaluation"***REMOVED***
 	write_surrogated_files = vars(parsed)***REMOVED***"write_surrogated_files"***REMOVED***
 	test = vars(parsed)***REMOVED***"test"***REMOVED***
 	prod = vars(parsed)***REMOVED***"prod"***REMOVED***
 	verbose = vars(parsed)***REMOVED***"verbose"***REMOVED***
-	gold_xmldomain = vars(parsed)***REMOVED***"xmldomain"***REMOVED***
 
 
 	if test:
 		directory = "data/surrogator/test/philter_results_test"
 		output_directory = "data/surrogator/test/philter_results_output_test/"
-		gold_directory = "data/surrogator/test/testing-PHI-Gold-fixed_test"
-		gold_output_directory = "data/surrogator/test/testing-PHI-Gold-fixed-output_test/"
+		gold_anno_directory = "data/surrogator/test/testing-PHI-Gold-fixed_test"
+		gold_anno_output_directory = "data/surrogator/test/testing-PHI-Gold-fixed-output_test/"
 		write_surrogated_files = True
 		verbose = True
 
 	if prod:
-		rerun_gold = False
+		rerun_i2b2 = False
 		rerun_philter = True
 		evaluation = False
 		write_surrogated_files = True
@@ -418,14 +404,14 @@ def main():
 		raise Exception("directory does not exist", directory)
 	if not os.path.exists(output_directory):
 		raise Exception("output_directory does not exist", output_directory)
-	if not os.path.exists(gold_directory):
-		raise Exception("gold_directory does not exist", gold_directory)
-	if not os.path.exists(gold_output_directory):
-		raise Exception("gold_output_directory does not exist", gold_output_directory)
+	if not os.path.exists(gold_anno_directory):
+		raise Exception("gold_anno_directory does not exist", gold_anno_directory)
+	if not os.path.exists(gold_anno_output_directory):
+		raise Exception("gold_anno_output_directory does not exist", gold_anno_output_directory)
 
 	print ("\nRunning Surrogator...\n")
 
-	problem_files_log = pd.DataFrame(columns = ***REMOVED***"filename","philter_or_gold","xml_parse_error"***REMOVED***)
+	problem_files_log = pd.DataFrame(columns = ***REMOVED***"filename","philter_or_i2b2","xml_parse_error"***REMOVED***)
 
 	if rerun_philter or test:
 		print ("Running Surrogator on philter notes...")
@@ -440,20 +426,20 @@ def main():
 		except:
 			print ("You have not run the surrogator with --rerun_philter=True yet. Please re-run with this parameter set to true"			)
 
-	if rerun_gold or test:
-		print ("Running Surrogator on gold notes...\n")
-		date_shift_log_gold, surrogate_log_gold,problem_files_log = parse_xml_files(gold_directory,gold_output_directory,gold_xmldomain,write_surrogated_files,problem_files_log,verbose)
+	if rerun_i2b2 or test:
+		print ("Running Surrogator on i2b2 notes...\n")
+		date_shift_log_i2b2, surrogate_log_i2b2,problem_files_log = parse_xml_files(gold_anno_directory,gold_anno_output_directory,"deIdi2b2",write_surrogated_files,problem_files_log,verbose)
 		if verbose:
-			write_logs(gold_output_directory,date_shift_log_gold, surrogate_log_gold)
+			write_logs(gold_anno_output_directory,date_shift_log_i2b2, surrogate_log_i2b2)
 	else:
 		try:
-			print ("Skipping re-running surrogator on gold notes. Reading from: \n    "+gold_output_directory+"shifted_dates.csv")
-			surrogate_log_gold = pd.read_csv(gold_output_directory+'surrogated_text.csv')
-			date_shift_log_gold = pd.read_csv(gold_output_directory+'shifted_dates.csv')
+			print ("Skipping re-running surrogator on i2b2 notes. Reading from: \n    "+gold_anno_output_directory+"shifted_dates.csv")
+			surrogate_log_i2b2 = pd.read_csv(gold_anno_output_directory+'surrogated_text.csv')
+			date_shift_log_i2b2 = pd.read_csv(gold_anno_output_directory+'shifted_dates.csv')
 		except:
-			print ("You have not run the surrogator with --rerun_gold=True yet. Please re-run with this parameter set to true"			)
+			print ("You have not run the surrogator with --rerun_i2b2=True yet. Please re-run with this parameter set to true"			)
 
-	if (rerun_gold and rerun_philter) or test:
+	if (rerun_i2b2 and rerun_philter) or test:
 		problem_files_log.to_csv(output_directory + "/failed_to_parse.csv", index=False,sep="|")
 		print ("Wrote record of files that failed to parse: "+ output_directory + "failed_to_parse.csv \n")
 
@@ -462,10 +448,9 @@ def main():
 		print ("\nPhilter Notes:")
 		write_summary(date_shift_log,surrogate_log,output_directory)
 		print ("\n______________________________________________")
-		print ("\nGOLD Notes")
-		write_summary(date_shift_log_gold,surrogate_log_gold,gold_output_directory)
-		date_shift_evaluation(output_directory,date_shift_log_gold,date_shift_log,problem_files_log)
-
+		print ("\nI2B2 Notes")
+		write_summary(date_shift_log_i2b2,surrogate_log_i2b2,gold_anno_output_directory)
+		date_shift_evaluation(output_directory,date_shift_log_i2b2,date_shift_log,problem_files_log)
 
 if __name__ == "__main__":
 	main()

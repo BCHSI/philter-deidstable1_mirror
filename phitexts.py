@@ -15,7 +15,6 @@ class Phitexts:
     def __init__(self, inputdir):
         self.inputdir  = inputdir
         self.filenames = ***REMOVED******REMOVED***
-        #self.note_keys = ***REMOVED******REMOVED***
         #notes text
         self.texts     = {}
         #coordinates of PHI
@@ -31,7 +30,7 @@ class Phitexts:
 
 
         self._read_texts()
-        self.subser = None
+        self.sub = Subs(note_info_path = None, re_id_pat_path = None)
         self.filterer = None
 
     def _read_texts(self):
@@ -43,13 +42,11 @@ class Phitexts:
                 if not filename.endswith("txt"):
                     continue
                 filepath = root +  filename
-                
                 self.filenames.append(filepath)
                 encoding = self._detect_encoding(filepath)
-                fhandle = open(filepath, "r", encoding=encoding***REMOVED***'encoding'***REMOVED***, errors='surrogateescape')
+                fhandle = open(filepath, "r", encoding=encoding***REMOVED***'encoding'***REMOVED***)
                 self.texts***REMOVED***filepath***REMOVED*** = fhandle.read()
                 fhandle.close()
-        #self.note_keys = ***REMOVED***os.path.splitext(os.path.basename(f).strip('0'))***REMOVED***0***REMOVED*** for f in self.filenames***REMOVED***
             
                 
     def _detect_encoding(self, fp):
@@ -57,7 +54,6 @@ class Phitexts:
             raise Exception("Filepath does not exist", fp)
 
         detector = UniversalDetector()
-        #detector.MINIMUM_THRESHOLD = 0.2
         with open(fp, "rb") as f:
             for line in f:
                 detector.feed(line)
@@ -128,7 +124,7 @@ class Phitexts:
             if phi_type == "DATE":
                 for filename, start, end in self.types***REMOVED***phi_type***REMOVED******REMOVED***0***REMOVED***.scan():
                     token = self.texts***REMOVED***filename***REMOVED******REMOVED***start:end***REMOVED***
-                    normalized_token = Subs.parse_date(token)                  
+                    normalized_token = self.sub.parse_date(token)                  
                     self.norms***REMOVED***phi_type***REMOVED*** ***REMOVED***(filename, start)***REMOVED*** = (normalized_token, end)
                 
             else:
@@ -141,19 +137,15 @@ class Phitexts:
 
         # Note: this is currently done in surrogator.shift_dates(), surrogator.parse_and_shift_date(), parse_date_ranges(), replace_other_surrogate()
         
-    def substitute_phi(self, look_up_table_path = None):
+    def substitute_phi(self):
         assert self.norms, "No normalized PHI defined"
         
         if self.subs:
             return
-          
+
         for phi_type in self.norms.keys():
             if phi_type == "DATE":
                 for filename, start in self.norms***REMOVED***phi_type***REMOVED***:
-                    note_key_ucsf = os.path.splitext(os.path.basename(filename).strip('0'))***REMOVED***0***REMOVED***
-                    if not self.subser.has_shift_amount(note_key_ucsf):
-                        if __debug__: print("WARNING: no date shift found for file: " + filename)
-                        continue
                     normalized_token = self.norms***REMOVED***phi_type***REMOVED******REMOVED***filename, start***REMOVED******REMOVED***0***REMOVED***
                     end = self.norms***REMOVED***phi_type***REMOVED******REMOVED***filename, start***REMOVED******REMOVED***1***REMOVED***
 
@@ -161,8 +153,8 @@ class Phitexts:
                     if normalized_token is None:
                         # self.eval_table***REMOVED***filename***REMOVED******REMOVED***start***REMOVED***.update({'sub':None})
                         continue
-                    
-                    substitute_token = self.subser.date_to_string(self.subser.shift_date_pid(normalized_token, note_key_ucsf))
+                    #TODO: why don't we make the lookup by the filename instead of patient_id
+                    substitute_token = self.sub.date_to_string(self.sub.shift_date_pid(normalized_token, filename))
                     # self.eval_table***REMOVED***filename***REMOVED******REMOVED***start***REMOVED***.update({'sub':substitute_token})
                     self.subs***REMOVED***(filename, start)***REMOVED*** = (substitute_token, end)
             else:
@@ -175,10 +167,8 @@ class Phitexts:
         if not self.coords:
             self.textsout = self.texts
             print("WARNING: No PHI coordinates defined: nothing to transform!")
-
-        #Subs may be empty in the case where we do not have any date shifts to perform.
-        #else:
-        #    assert self.subs, "No surrogated PHI defined"
+        else:
+            assert self.subs, "No surrogated PHI defined"
                 
         if self.textsout:
             return
@@ -216,7 +206,7 @@ class Phitexts:
             self.textsout***REMOVED***filename***REMOVED*** =  "".join(contents)
 
     def _transform_text(self, txt, infilename,
-                        include_map, exclude_map, subs):       
+                                include_map, exclude_map, subs):       
         last_marker = 0
         current_chunk = ***REMOVED******REMOVED***
         punctuation_matcher = re.compile(r"***REMOVED***^a-zA-Z0-9****REMOVED***")
@@ -258,7 +248,7 @@ class Phitexts:
             fbase, fext = os.path.splitext(filename)
             fbase = fbase.split('/')***REMOVED***-1***REMOVED***
             filepath = outputdir + fbase + "_subs.txt"
-            with open(filepath, "w", encoding='utf-8', errors='surrogateescape') as fhandle:
+            with open(filepath, "w", encoding='utf-8') as fhandle:
                 fhandle.write(self.textsout***REMOVED***filename***REMOVED***)
     
     def print_log(self, output_dir):
@@ -285,12 +275,8 @@ class Phitexts:
             raw = self.texts***REMOVED***filename***REMOVED******REMOVED***start:end***REMOVED***
             normalized_date = self.norms***REMOVED***'DATE'***REMOVED******REMOVED***(filename,start)***REMOVED******REMOVED***0***REMOVED***
             if normalized_date is not None:
-                normalized_token = self.subser.date_to_string(normalized_date)
-                note_key_ucsf = os.path.splitext(os.path.basename(filename).strip('0'))***REMOVED***0***REMOVED***
-                if not self.subser.has_shift_amount(note_key_ucsf):
-                     sub = None
-                else:
-                     sub = self.subs***REMOVED***(filename,start)***REMOVED******REMOVED***0***REMOVED***
+                normalized_token = self.sub.date_to_string(normalized_date)
+                sub = self.subs***REMOVED***(filename,start)***REMOVED******REMOVED***0***REMOVED***
                 num_parsed += 1
                 if filename not in eval_table:
                     eval_table***REMOVED***filename***REMOVED*** = ***REMOVED******REMOVED***
