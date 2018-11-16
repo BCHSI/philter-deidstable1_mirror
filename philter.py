@@ -234,7 +234,10 @@ class Philter:
     
     def precompile(self, filepath):
         """ precompiles our regex to speed up pattern matching"""
-        regex = open(filepath,"r").read().strip()
+        
+        for line in open(filepath,"r"):
+            if not line.strip().startswith("#"):
+               regex = line.strip()
         re_compiled = None
         with warnings.catch_warnings(): #NOTE: this is not thread safe! but we want to print a more detailed warning message
             warnings.simplefilter(action="error", category=FutureWarning) # in order to print a detailed message
