@@ -213,8 +213,21 @@ class Philter:
     
     def precompile(self, filepath):
         """ precompiles our regex to speed up pattern matching"""
-        regex = open(filepath,"r").read().strip()
-        return re.compile(regex)
+       
+        for line in open(filepath,"r"):
+            if not line.strip().startswith("#"):
+               regex = line.strip()
+        re_compiled = None
+        with warnings.catch_warnings(): #NOTE: this is not thread safe! but we want to print a more detailed warning message
+            warnings.simplefilter(action="error", category=FutureWarning) # in order to print a detailed message
+            try:
+                re_compiled = re.compile(regex)
+            except FutureWarning as warn:
+                print("FutureWarning: {0} in file ".format(warn) + filepath)
+                warnings.simplefilter(action="ignore", category=FutureWarning)
+                re_compiled = re.compile(regex) # assign nevertheless
+        return re_compiled
+
                
     def init_set(self, filepath):
         """ loads a set of words, (must be a dictionary or set shape) returns result"""
@@ -380,6 +393,25 @@ class Philter:
         coord_map = self.patterns[pattern_index]["coordinate_map"]
         regex = self.patterns[pattern_index]["data"]
         context = self.patterns[pattern_index]["context"]
+        try:
+            context_filter = self.patterns[pattern_index]["context_filter"]
+        except KeyError:
+            warnings.warn("deprecated missing context_filter field in filter " + str(pattern_index) + " of type regex_context, assuming \'all\'", DeprecationWarning)
+            context_filter = 'all'
+
+        # Get PHI coordinates
+        if context_filter == 'all':
+            # current_include_map = self.get_full_include_map(filename)
+            current_include_map = self.include_map
+            # Create complement exclude map (also excludes punctuation)      
+            full_exclude_map = current_include_map.get_complement(filename, text)
+
+        else:
+            context_filter_pattern_index = self.pattern_indexes[context_filter]
+            full_exclude_map_coordinates = self.patterns[context_filter_pattern_index]['coordinate_map']
+            full_exclude_map = {}
+            for start,stop in full_exclude_map_coordinates.filecoords(filename):
+                full_exclude_map[start] = stop
 
         # 1. Get coordinates of all include and exclude mathches
 

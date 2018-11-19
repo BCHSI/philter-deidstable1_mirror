@@ -1,7 +1,7 @@
 #!/usr/local/bin/python3
 import sys
 import argparse
-import distutils.util
+
 from phitexts import Phitexts
 
 
@@ -25,15 +25,14 @@ def get_args():
     ap.add_argument("-f", "--filters", default="./configs/philter_alpha.json",
                     help="Path to the config file, the default is ./configs/philter_alpha.json",
                     type=str)
-    ap.add_argument("-l", "--log", default= True,
+    ap.add_argument("-s", "--surrogate_info", default="./data/i2b2_meta/note_info_map.tsv",
+                    help="Path to the tsv file that contains the surrogate info per "
+                          + "note key, the default is "
+                          + "./data/i2b2_meta/note_info_map.tsv",
+                    type=str)
+    ap.add_argument("-l", "--log", default=True,
                     help="When this is true, the pipeline prints and saves log in a subdirectory in each output directory",
                     type=lambda x:bool(distutils.util.strtobool(x)))
-    ap.add_argument("-e", "--eval", default= False,
-                    help="When this is true, the pipeline computes and saves statistics in a subdirectory in each output directory",
-                    type=lambda x:bool(distutils.util.strtobool(x)))
-    ap.add_argument("-a", "--anno", default= './data/i2b2_xml',
-                    help="When this is true, the pipeline computes and saves statistics in a subdirectory in each output directory",
-                    type=str)
 
     return ap.parse_args()
 
@@ -72,9 +71,6 @@ def main():
     # print and save log 
     if args.log:
         phitexts.print_log(args.output)
-    # evaluate and print stats
-    if args.eval:
-        phitexts.eval(args.anno, args.input, args.output)
 
     return EXIT_SUCCESS
 
