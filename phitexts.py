@@ -34,7 +34,7 @@ class Phitexts:
         self.xml_map = CoordinateMap()
         self.full_xml_map = {}
         self._read_texts()
-        self.suber = None
+        self.subser = None
         self.filterer = None
         #create a memory for the list of known PHI types
         self.phi_type_list = ***REMOVED***'Date'***REMOVED***
