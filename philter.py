@@ -158,6 +158,9 @@ class Philter:
                 self.pos_tags = {}
                 self.pos_tags[filename] = nltk.pos_tag(cleaned)
             return self.pos_tags[filename]
+        
+             #self.pos_tags[filename] = nltk.pos_tag(cleaned)	
+        return self.pos_tags[filename]
     #def get_pos_original(self, filename, cleaned):
     #    if filename not in self.pos_tags:
     #        self.pos_tags = {}
