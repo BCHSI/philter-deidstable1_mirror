@@ -31,6 +31,9 @@ def main():
     ap.add_argument("-c", "--coords", default="./data/coordinates.json",
                     help="Path to the json file that contains the coordinate map data",
                     type=str)
+    ap.add_argument("--eval_output", default="./data/phi/",
+                    help="Path to the directory that the detailed eval files will be outputted to",
+                    type=str)
     ap.add_argument("-v", "--verbose", default=True,
                     help="When verbose is true, will emit messages about script progress",
                     type=lambda x:bool(distutils.util.strtobool(x)))
@@ -42,6 +45,9 @@ def main():
                     type=lambda x:bool(distutils.util.strtobool(x)))
     ap.add_argument("-t", "--freq_table", default=False,
                     help="When freqtable is true, will output a unigram/bigram frequency table of all note words and their PHI/non-PHI counts",
+                    type=lambda x:bool(distutils.util.strtobool(x)))
+    ap.add_argument("-n", "--initials", default=True,
+                    help="When initials is true, will include initials PHI in recall/precision calculations",
                     type=lambda x:bool(distutils.util.strtobool(x))) 
     ap.add_argument("--stanfordner", default="/usr/local/stanford-ner/",
                     help="Path to Stanford NER, the default is /usr/local/stanford-ner/",
@@ -55,6 +61,9 @@ def main():
     ap.add_argument("--prod", default=False,
                     help="When prod is true, this will run the script with output in i2b2 xml format without running the eval script",
                     type=lambda x:bool(distutils.util.strtobool(x)))
+    ap.add_argument("--cachepos", default=None,
+                    help="Path to a directoy to store/load the pos data for all notes. If no path is specified then memory caching will be used.",
+                    type=str)
 
     args = ap.parse_args()
     run_eval = args.run_eval
@@ -64,14 +73,15 @@ def main():
         run_eval = False
         verbose = False
         outputformat = "i2b2"
-        filters = "./configs/philter_alpha.json"
+        #filters = "./configs/philter_alpha.json"
         philter_config = {
             "verbose":verbose,
             "run_eval":run_eval,
             "finpath":args.input,
             "foutpath":args.output,
             "outformat":outputformat,
-            "filters":filters,
+            "filters":args.filters,
+            "cachepos":args.cachepos
         }
 
     else:
@@ -80,6 +90,7 @@ def main():
             "run_eval":args.run_eval,
             'dependent':args.dependent,
             "freq_table":args.freq_table,
+            "initials":args.initials,
             "finpath":args.input,
             "foutpath":args.output,
             "outformat":args.outputformat,
@@ -88,6 +99,8 @@ def main():
             "filters":args.filters,
             "xml":args.xml,
             "coords":args.coords,
+            "eval_out":args.eval_output,
+            "cachepos":args.cachepos,
             "stanford_ner_tagger": {
                 "classifier":args.stanfordner+"classifiers/english.all.3class.distsim.crf.ser.gz",
                 "jar":args.stanfordner+"stanford-ner.jar",
@@ -116,7 +129,7 @@ def main():
             pre_process=r":|\,|\-|\/|_|~", #characters we're going to strip from our notes to analyze against anno
             only_digits=False,
             pre_process2= r"[^a-zA-Z0-9]",
-            punctuation_matcher=re.compile(r"[^a-zA-Z0-9\*\.]"))
+            punctuation_matcher=re.compile(r"[^a-zA-Z0-9\*]"))
 
 # error analysis
         
