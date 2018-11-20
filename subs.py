@@ -16,7 +16,7 @@ class Subs:
     def has_shift_amount(self, note_id):
         return note_id in self.shift_table
     
-     def get_shift_amount(self,note_id):
+    def get_shift_amount(self,note_id):
         try:
             shift_amount = int(self.shift_table[note_id])
             if shift_amount == 0:
@@ -71,7 +71,7 @@ class Subs:
                 input_date = str(dt).replace(" 00:00:00","")
     """
 
-     def _load_look_up_table(self, look_up_table_path):
+    def _load_look_up_table(self, look_up_table_path):
         # note_info_path='data/notes_metadata/note_info.csv'
         # re_id_pat_path='data/notes_metadata/re_id_pat.csv'
         if look_up_table_path is None:

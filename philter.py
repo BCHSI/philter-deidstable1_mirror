@@ -1,4 +1,3 @@
-
 import re
 import warnings
 import json
@@ -15,6 +14,7 @@ import subprocess
 import numpy
 import random
 import string
+
 
 class Philter:
     """ 
@@ -47,7 +47,7 @@ class Philter:
         
         if "coords" in config:
             self.coords = config["coords"]
-            
+        
         if "eval_out" in config:
             self.eval_outpath = config["eval_out"]
 
@@ -80,7 +80,7 @@ class Philter:
             if not os.path.exists(config["stanford_ner_tagger"]["jar"]):
                 raise Exception("Filepath does not exist", config["stanford_ner_tagger"]["jar"])
             self.stanford_ner_tagger_jar = config["stanford_ner_tagger"]["jar"]
-                #we lazy load our tagger only if there's a corresponding pattern    
+                #we lazy load our tagger only if there's a corresponding pattern
         self.stanford_ner_tagger = None
 
         if "cachepos" in config and config["cachepos"]:
@@ -91,7 +91,7 @@ class Philter:
         else:
             self.cache_to_disk = False
             self.pos_path = None 
-            
+
         #All coordinate maps stored here
         self.coordinate_maps = []
 
@@ -119,25 +119,23 @@ class Philter:
             self.phi_type_dict[phi_type] = [CoordinateMap()]
 
         #create a memory for stored coordinate data
-        self.data_all_files = {} 
+        self.data_all_files = {}
 
-        #create a memory for pattern index, with titles	
+        #create a memory for pattern index, with titles
         self.pattern_indexes = {}
-        
+
         #create a memory for clean words
         #self.clean_words = {}
 
         #create directory for pos data if it doesn't exist
         #pos_path = "./data/pos_data/"
         #self.pos_path = "./data/pos_data/" + self.random_string(10) + "/"
-        #if not os.path.isdir(self.pos_path):
-        #    os.makedirs(self.pos_path)
+
 
         #initialize our patterns
         self.init_patterns()
 
-    def random_string(self, length):
-        return ''.join(random.choice(string.ascii_letters) for m in range(length))
+
     def get_pos(self, filename, cleaned):
         if self.cache_to_disk:
             pos_path = self.pos_path
@@ -158,8 +156,10 @@ class Philter:
                 self.pos_tags = {}
                 self.pos_tags[filename] = nltk.pos_tag(cleaned)
             return self.pos_tags[filename]
-        
-             #self.pos_tags[filename] = nltk.pos_tag(cleaned)	
+
+
+
+            #self.pos_tags[filename] = nltk.pos_tag(cleaned)
         return self.pos_tags[filename]
     #def get_pos_original(self, filename, cleaned):
     #    if filename not in self.pos_tags:
@@ -234,7 +234,7 @@ class Philter:
     
     def precompile(self, filepath):
         """ precompiles our regex to speed up pattern matching"""
-       
+        
         for line in open(filepath,"r"):
             if not line.strip().startswith("#"):
                regex = line.strip()
@@ -248,7 +248,6 @@ class Philter:
                 warnings.simplefilter(action="ignore", category=FutureWarning)
                 re_compiled = re.compile(regex) # assign nevertheless
         return re_compiled
-
                
     def init_set(self, filepath):
         """ loads a set of words, (must be a dictionary or set shape) returns result"""
@@ -335,9 +334,12 @@ class Philter:
 
                 # get full exclude map (only updated either on-command by map_regex_context or at the very end of map_coordinates)
                 self.full_exclude_map[filename] = self.include_map.get_complement(filename, txt)
-                for phi_type in self.phi_type_list:	
-                    for start,stop in self.phi_type_dict[phi_type][0].filecoords(filename):	
+                
+                for phi_type in self.phi_type_list:
+                    for start,stop in self.phi_type_dict[phi_type][0].filecoords(filename):
                         self.data_all_files[filename]["phi"].append({"start":start, "stop":stop, "word":txt[start:stop],"phi_type":phi_type, "filepath":""})
+
+
         #clear out any data to save ram
         for i,pat in enumerate(self .patterns):
             if "data" in pat:
@@ -360,10 +362,15 @@ class Philter:
 
         # All regexes except matchall
         if regex != re.compile('.'):
+            #if __debug__: print("map_regex(): searching for regex with index " + str(pattern_index))
+            #if __debug__ and pattern_index: print("map_regex(): regex is " + str(regex))
             matches = regex.finditer(text)
             
             for m in matches:
-                
+                # print(m.group())
+                # print(self.patterns[pattern_index]['title'])
+
+
                 coord_map.add_extend(filename, m.start(), m.start()+len(m.group()))
         
             self.patterns[pattern_index]["coordinate_map"] = coord_map
@@ -406,6 +413,7 @@ class Philter:
         """ map_regex_context creates a coordinate map from combined regex + PHI coordinates 
         of all previously mapped patterns
         """
+
         punctuation_matcher = re.compile(r"[^a-zA-Z0-9*]")
 
         if not os.path.exists(filename):
@@ -437,18 +445,13 @@ class Philter:
             for start,stop in full_exclude_map_coordinates.filecoords(filename):
                 full_exclude_map[start] = stop
 
-        # 1. Get coordinates of all include and exclude mathches
 
-        # current_include_map = self.get_full_include_map(filename)
-        current_include_map = self.include_map
-        
-        # Create complement exclude map (also excludes punctuation)      
-        full_exclude_map = current_include_map.get_complement(filename, text)
+        # 1. Get coordinates of all include and exclude mathches
 
         punctuation_matcher = re.compile(r"[^a-zA-Z0-9*]")
         # 2. Find all patterns expressions that match regular expression
         matches = regex.finditer(text)
-        
+        # print(full_exclud_map)
         for m in matches:
             
             # initialize phi_left and phi_right
@@ -732,7 +735,8 @@ class Philter:
 
                     else:
                         pass
-        
+###########################       
+
             # Add regex_context to map separately
             else:
                 if exclude:
@@ -744,10 +748,11 @@ class Philter:
                     self.exclude_map.remove(filename, start, stop)
                     self.data_all_files[filename]["non-phi"].append({"start":start, "stop":stop, "word":txt[start:stop], "filepath":filter_path})
 
-             # dont' need to loop through all PHi types -- just current one
-             # for start,stop in self.phi_type_dict[phi_type][0].filecoords(filename):
-             #     self.data_all_files[filename]["phi"].append({"start":start, "stop":stop, "word":txt[start:stop],"phi_type":phi_type, "filepath":""})
-
+###########################
+            
+        # dont' need to loop through all PHi types -- just current one
+        # for start,stop in self.phi_type_dict[phi_type][0].filecoords(filename):
+        #     self.data_all_files[filename]["phi"].append({"start":start, "stop":stop, "word":txt[start:stop],"phi_type":phi_type, "filepath":""})
 
 
     def transform(self):
@@ -796,7 +801,7 @@ class Philter:
                     f.write(contents)
                     
             elif self.outformat == "i2b2":
-                 with open(outpathfbase+".xml", "w", errors='xmlcharrefreplace') as f: #TODO: should we have an explicit encoding?
+                with open(outpathfbase+".xml", "w", errors='xmlcharrefreplace') as f: #TODO: should we have an explicit encoding?
                     contents = self.transform_text_i2b2(self.data_all_files[filename])
                     #print("writing contents to: " + outpathfbase+".xml")
                     f.write(contents)
@@ -1002,6 +1007,7 @@ class Philter:
             start_coordinate += len(note_word) 
 
 
+
     def eval(self,
         config,
         note_path="./data/i2b2_notes/",
@@ -1011,8 +1017,8 @@ class Philter:
         summary_output="data/phi/summary.json",
         phi_matcher=re.compile("\*+"),
         only_digits=False,
-        fn_output="data/phi/fn.txt",
-        fp_output="data/phi/fp.txt",
+        fn_output = "data/phi/fn.txt",
+        fp_output = "data/phi/fp.txt",
         fn_tags_context = "data/phi/fn_tags_context.txt",
         fp_tags_context = "data/phi/fp_tags_context.txt",
         fn_tags_nocontext = "data/phi/fn_tags.txt",
@@ -1030,9 +1036,9 @@ class Philter:
         if not os.path.exists(in_path):
             raise Exception("Input Filepath does not exist", in_path)
         # if not os.path.exists(fn_output):
-        #    raise Exception("False Negative Filepath does not exist", fn_output)
+        #     raise Exception("False Negative Filepath does not exist", fn_output)
         # if not os.path.exists(fp_output):
-        #    raise Exception("False Positive Filepath does not exist", fp_output)
+        #     raise Exception("False Positive Filepath does not exist", fp_output)
 
         if self.verbose:
             print("RUNNING EVAL")
@@ -1233,7 +1239,7 @@ class Philter:
             }
             
             i2b2_include_tags = ['DOCTOR','PATIENT','DATE','MEDICALRECORD','IDNUM','DEVICE','USERNAME','PHONE','EMAIL','FAX','CITY','STATE','ZIP','STREET','LOCATION-OTHER','HOSPITAL','AGE']
-            i2b2_patient_tags = ['PATIENT','DATE','MEDICALRECORD','IDNUM','DEVICE','USERNAME','PHONE','EMAIL','FAX','CITY','STATE','ZIP','STREET','LOCATION-OTHER','HOSPITAL','AGE']	
+            i2b2_patient_tags = ['PATIENT','DATE','MEDICALRECORD','IDNUM','DEVICE','USERNAME','PHONE','EMAIL','FAX','CITY','STATE','ZIP','STREET','LOCATION-OTHER','HOSPITAL','AGE']
             i2b2_provider_tags = ['DOCTOR','DATE','USERNAME','PHONE','EMAIL','FAX','CITY','STATE','ZIP','STREET',"LOCATION-OTHER",'HOSPITAL']
 
             rp_summaries = {}
@@ -1289,6 +1295,7 @@ class Philter:
                 ucsf_include_tags = ['Date','Provider_Name','Phone_Fax','Patient_Name_or_Family_Member_Name','Patient_Address','Provider_Address_or_Location','Provider_Certificate_or_License','Patient_Medical_Record_Id','Patient_Account_Number','Patient_Social_Security_Number','Patient_Vehicle_or_Device_Id','Patient_Unique_Id','Procedure_or_Billing_Code','Email','URL_IP','Patient_Biometric_Id_or_Face_Photo','Patient_Certificate_or_License','Age']
                 ucsf_patient_tags = ['Date','Phone_Fax','Age','Patient_Name_or_Family_Member_Name','Patient_Address','Patient_Medical_Record_Id','Patient_Account_Number','Patient_Social_Security_Number','Patient_Vehicle_or_Device_Id','Patient_Unique_Id','Email','URL_IP','Patient_Biometric_Id_or_Face_Photo','Patient_Certificate_or_License']
                 ucsf_provider_tags = ['Provider_Name','Phone_Fax','Provider_Address_or_Location','Provider_Certificate_or_License','Email','URL_IP']
+
 
 
             rp_summaries = {}
@@ -1429,10 +1436,10 @@ class Philter:
 
             # Get tp counts per category
             current_tps = current_summary['true_positives']
-            # Initialize list to keep track of non-include tag FPs	
+            # Initialize list to keep track of non-include tag FPs
             additional_fps = []
-            for word in current_tps:
 
+            for word in current_tps:
                 start_coordinate_tp = word[1]
                 for phi_item in phi_list:
                     if self.ucsf_format:
@@ -1443,35 +1450,43 @@ class Philter:
                         phi_end = phi_item['end']
                     phi_type = phi_item['TYPE']
                     phi_word = phi_item['text']
-                    
-                    
+
+
                     if not self.ucsf_format:
                         for i in range(0,len(i2b2_tags)):
                             tag = i2b2_tags[i]
                             tp_key = tag + '_tps'
                             if (start_coordinate_tp in range(int(phi_start), int(phi_end))) and (tag == phi_type):
                                 rp_summaries[tp_key] += 1
-                    # Add these TPs to the FPs list of they are not in the include list	                                                    
-                    if phi_type not in i2b2_include_tags:	
-                       if (start_coordinate_tp in range(int(phi_start), int(phi_end))):	
-                           additional_fps.append([text[start_coordinate_tp:start_coordinate_tp + len(word[0])], start_coordinate_tp])                                                                       
+                        # Add these TPs to the FPs list of they are not in the include list
+                        if phi_type not in i2b2_include_tags:
+                            if (start_coordinate_tp in range(int(phi_start), int(phi_end))):
+                                additional_fps.append([text[start_coordinate_tp:start_coordinate_tp + len(word[0])], start_coordinate_tp])                                  
                     #### ucsf
                     if self.ucsf_format:
-                        if phi_type not in ucsf_include_tags:	
-                            if (start_coordinate_tp in range(int(phi_start), int(phi_end))):	
+                        if phi_type not in ucsf_include_tags:
+                            if (start_coordinate_tp in range(int(phi_start), int(phi_end))):
                                 additional_fps.append([text[start_coordinate_tp:start_coordinate_tp + len(word[0])], start_coordinate_tp])
+
                         for i in range(0,len(ucsf_tags)):
                             tag = ucsf_tags[i]
                             tp_key = tag + '_tps'
                             if (start_coordinate_tp in range(int(phi_start), int(phi_end))) and (tag == phi_type):
                                 rp_summaries[tp_key] += 1
+                            # Add these TPs to the FPs list of they are not in the include list
+                            # elif (start_coordinate_tp in range(int(phi_start), int(phi_end))) and (tag == phi_type) and (tag not in ucsf_include_tags):
+                            #     print(phi_type)
+                            #     print([cleaned_with_pos[str(phi_start)][0], phi_start])
+                            #     additional_fps.append([cleaned_with_pos[str(phi_start)][0], phi_start])
+                            #     print('\n')
 
-            
+
+            # if additional_fps != []:
+
             # if anno_name == '110-01.xml':
             # print(anno_name)
             # print(cleaned_dict)
             # print('\n')
-            
 
             #### i2b2
             if not self.ucsf_format:
@@ -1569,8 +1584,8 @@ class Philter:
                                 tag_fn_counter = tag + '_fn_counter'
                                 if (start_coordinate_fn in range(int(phi_start), int(phi_end))) and phi_type == tag:
                                     if tag != 'Age':
-                                       rp_summaries[fn_key] += 1
-                                       fn_counter_dict[tag_fn_counter] += 1
+                                        rp_summaries[fn_key] += 1
+                                        fn_counter_dict[tag_fn_counter] += 1
 
 
                         # Find PHI match: fn in text, coord in range
@@ -1647,10 +1662,8 @@ class Philter:
             fp_tag_summary = {}
             include_exclude_fps = ''
             #print(cleaned_with_pos)
-
-            current_fps = current_summary['false_positives'] + additional_fps	
+            current_fps = current_summary['false_positives'] + additional_fps
             if current_fps != [] and current_fps != [""]:              
-
                 counter = 0
                 #print(current_fps)
                 for word in current_fps:
@@ -1740,8 +1753,9 @@ class Philter:
         overall_data = []
         if not self.ucsf_format:
             include_dict = {'fns':0,'tps':0,'fps':summary["total_false_positives"],'tns':summary["total_true_negatives"]}
-            patient_phi_dict = {'fns':0,'tps':0,'fps':summary["total_false_positives"],'tns':summary["total_true_negatives"]}	
+            patient_phi_dict = {'fns':0,'tps':0,'fps':summary["total_false_positives"],'tns':summary["total_true_negatives"]}
             provider_phi_dict = {'fns':0,'tps':0,'fps':summary["total_false_positives"],'tns':summary["total_true_negatives"]}
+
             category_dict = {}
             for i in range(0,len(phi_categories)):
                 category_tag = phi_categories[i]
@@ -1767,12 +1781,14 @@ class Philter:
                 if tag in i2b2_include_tags:
                     include_dict['fns'] += rp_summaries[fn_key]
                     include_dict['tps'] += rp_summaries[tp_key]
-                    if tag in i2b2_patient_tags:	
-                        patient_phi_dict['fns'] += rp_summaries[fn_key]	
-                        patient_phi_dict['tps'] += rp_summaries[tp_key]	
-                    if tag in i2b2_provider_tags:	
-                        provider_phi_dict['fns'] += rp_summaries[fn_key]	
+
+                    if tag in i2b2_patient_tags:
+                        patient_phi_dict['fns'] += rp_summaries[fn_key]
+                        patient_phi_dict['tps'] += rp_summaries[tp_key]
+                    if tag in i2b2_provider_tags:
+                        provider_phi_dict['fns'] += rp_summaries[fn_key]
                         provider_phi_dict['tps'] += rp_summaries[tp_key]
+
                     tag_category = i2b2_category_dict[tag]
                     category_fns = tag_category + '_fns'
                     category_tps = tag_category + '_tps'
@@ -1783,13 +1799,15 @@ class Philter:
                 # Get additional TNs and FPs
                 if tag not in i2b2_include_tags:
                     include_dict['tns'] += rp_summaries[fn_key]
-                    include_dict['fps'] += rp_summaries[tp_key]                              
-                    if tag in i2b2_patient_tags:	
-                        patient_phi_dict['tns'] += rp_summaries[fn_key]	
-                        patient_phi_dict['fps'] += rp_summaries[tp_key]   	
-                    if tag in i2b2_provider_tags:	
-                        provider_phi_dict['tns'] += rp_summaries[fn_key]	
+                    include_dict['fps'] += rp_summaries[tp_key]
+
+                    if tag in i2b2_patient_tags:
+                        patient_phi_dict['tns'] += rp_summaries[fn_key]
+                        patient_phi_dict['fps'] += rp_summaries[tp_key]   
+                    if tag in i2b2_provider_tags:
+                        provider_phi_dict['tns'] += rp_summaries[fn_key]
                         provider_phi_dict['fps'] += rp_summaries[tp_key]          
+
 
                 if rp_summaries[fn_key] != 0:
                     # if rp_summaries[tp_key] != 0 and (rp_summaries[tp_key]-rp_summaries[fn_key]) > 0:
@@ -1805,14 +1823,16 @@ class Philter:
         # ucsf
         if self.ucsf_format:
             include_dict = {'fns':0,'tps':0,'fps':summary["total_false_positives"],'tns':summary["total_true_negatives"]}
-            patient_phi_dict = {'fns':0,'tps':0,'fps':summary["total_false_positives"],'tns':summary["total_true_negatives"]}	
+            patient_phi_dict = {'fns':0,'tps':0,'fps':summary["total_false_positives"],'tns':summary["total_true_negatives"]}
             provider_phi_dict = {'fns':0,'tps':0,'fps':summary["total_false_positives"],'tns':summary["total_true_negatives"]}
+
+
             category_dict = {}
             for i in range(0,len(phi_categories)):
                 category_tag = phi_categories[i]
                 category_fns = category_tag + '_fns'
                 category_tps = category_tag + '_tps'
-            
+
                 category_dict[category_fns] = 0
                 category_dict[category_tps] = 0
 
@@ -1833,12 +1853,14 @@ class Philter:
                     if tag != 'Age':
                         include_dict['fns'] += rp_summaries[fn_key]
                         include_dict['tps'] += rp_summaries[tp_key]
-                        if tag in ucsf_patient_tags:	
-                            patient_phi_dict['fns'] += rp_summaries[fn_key]	
-                            patient_phi_dict['tps'] += rp_summaries[tp_key]	
-                        if tag in ucsf_provider_tags:	
-                            provider_phi_dict['fns'] += rp_summaries[fn_key]	
+
+                        if tag in ucsf_patient_tags:
+                            patient_phi_dict['fns'] += rp_summaries[fn_key]
+                            patient_phi_dict['tps'] += rp_summaries[tp_key]
+                        if tag in ucsf_provider_tags:
+                            provider_phi_dict['fns'] += rp_summaries[fn_key]
                             provider_phi_dict['tps'] += rp_summaries[tp_key]
+
                         tag_category = ucsf_category_dict[tag]
                         category_fns = tag_category + '_fns'
                         category_tps = tag_category + '_tps'
@@ -1849,14 +1871,16 @@ class Philter:
                         include_dict['fns'] += corrected_age_fns
                         include_dict['tps'] += rp_summaries[tp_key]
                         include_dict['tns'] += (rp_summaries[fn_key] - corrected_age_fns)
-                        if tag in ucsf_patient_tags:	
-                            patient_phi_dict['fns'] += corrected_age_fns	
-                            patient_phi_dict['tps'] += rp_summaries[tp_key]	
-                            patient_phi_dict['tns'] += (rp_summaries[fn_key] - corrected_age_fns)	
-                        if tag in ucsf_provider_tags:	
-                            provider_phi_dict['fns'] += corrected_age_fns	
-                            provider_phi_dict['tps'] += rp_summaries[tp_key]	
+
+                        if tag in ucsf_patient_tags:
+                            patient_phi_dict['fns'] += corrected_age_fns
+                            patient_phi_dict['tps'] += rp_summaries[tp_key]
+                            patient_phi_dict['tns'] += (rp_summaries[fn_key] - corrected_age_fns)
+                        if tag in ucsf_provider_tags:
+                            provider_phi_dict['fns'] += corrected_age_fns
+                            provider_phi_dict['tps'] += rp_summaries[tp_key]
                             provider_phi_dict['tns'] += (rp_summaries[fn_key] - corrected_age_fns)
+
                         tag_category = ucsf_category_dict[tag]
                         category_fns = tag_category + '_fns'
                         category_tps = tag_category + '_tps'
@@ -1868,13 +1892,15 @@ class Philter:
                 # Get additional TNs and FPs
                 if tag not in ucsf_include_tags:
                     include_dict['tns'] += rp_summaries[fn_key]
-                    include_dict['fps'] += rp_summaries[tp_key]                 
-                    if tag in ucsf_patient_tags:	
-                        patient_phi_dict['tns'] += rp_summaries[fn_key]	
-                        patient_phi_dict['fps'] += rp_summaries[tp_key]   	
-                    if tag in ucsf_provider_tags:	
-                        provider_phi_dict['tns'] += rp_summaries[fn_key]	
+                    include_dict['fps'] += rp_summaries[tp_key]
+                
+                    if tag in ucsf_patient_tags:
+                        patient_phi_dict['tns'] += rp_summaries[fn_key]
+                        patient_phi_dict['fps'] += rp_summaries[tp_key]   
+                    if tag in ucsf_provider_tags:
+                        provider_phi_dict['tns'] += rp_summaries[fn_key]
                         provider_phi_dict['fps'] += rp_summaries[tp_key]  
+
 
                 if rp_summaries[fn_key] != 0:
                     # if rp_summaries[tp_key] != 0 and (rp_summaries[tp_key]-rp_summaries[fn_key]) > 0:
@@ -1883,11 +1909,10 @@ class Philter:
                     #     overall_recall_dict[recall_key] = 0
                 else:
                     overall_recall_dict[recall_key] = 1
-
-                if tag == 'Age':	
-                    overall_data.append([tag,"{:.2%}".format(overall_recall_dict[recall_key]),str(rp_summaries[tp_key]),str(corrected_age_fns)])	                overall_data.append([tag,"{:.2%}".format(overall_recall_dict[recall_key]),str(rp_summaries[tp_key]),str(rp_summaries[fn_key])])
-                # print(tag + " Recall: " + "{:.2%}".format(overall_recall_dict[recall_key]) + " TP: " + str(rp_summaries[tp_key]) + " FN: " + str(rp_summaries[fn_key]))	
-                else:	
+                if tag == 'Age':
+                    overall_data.append([tag,"{:.2%}".format(overall_recall_dict[recall_key]),str(rp_summaries[tp_key]),str(corrected_age_fns)])
+                # print(tag + " Recall: " + "{:.2%}".format(overall_recall_dict[recall_key]) + " TP: " + str(rp_summaries[tp_key]) + " FN: " + str(rp_summaries[fn_key]))
+                else:
                     overall_data.append([tag,"{:.2%}".format(overall_recall_dict[recall_key]),str(rp_summaries[tp_key]),str(rp_summaries[fn_key])])
                 # print(tag + " Recall: " + "{:.2%}".format(overall_recall_dict[recall_key]) + " TP: " + str(rp_summaries[tp_key]) + " FN: " + str(rp_summaries[fn_key]))
         
@@ -1978,73 +2003,87 @@ class Philter:
         print("Corrected Precision: " + "{:.2%}".format(corrected_precision))
         print("Corrected Retention: " + "{:.2%}".format(specificity))
         print('\n')
-        
-        ######### Patient-only recall, precision ##########	
-        patient_recall = 0	
-        if patient_phi_dict['fns'] != 0:	
-            # if include_dict['tps'] != 0 and (include_dict['tps']-include_dict['fns']) > 0:	
-            patient_recall = patient_phi_dict['tps']/(patient_phi_dict['fns'] + patient_phi_dict['tps'])	
-            # else:	
-            #     corrected_recall = 0	
-        else:	
-            patient_recall = 1	
-         patient_precision = 0	
-        if patient_phi_dict['fps'] != 0:	
-            # if include_dict['tps'] != 0 and (include_dict['tps']-include_dict['fns']) > 0:	
-            patient_precision = patient_phi_dict['tps']/(patient_phi_dict['fps'] + patient_phi_dict['tps'])	
-            # else:	
-            #     corrected_recall = 0	
-        else:	
-            patient_precision = 1	
-         patient_specificity = 0	
-        if patient_phi_dict['fps'] != 0:	
-            # if include_dict['tps'] != 0 and (include_dict['tps']-include_dict['fns']) > 0:	
-            patient_specificity = patient_phi_dict['tns']/(patient_phi_dict['fps'] + patient_phi_dict['tns'])	
-            # else:	
-            #     corrected_recall = 0	
-        else:	
-            patient_specificity = 1	
-         print('\n')	
-        print("Patient-Only Results:")	
-        print('\n')	
-        print("cTP:",patient_phi_dict['tps'], "cFN:", patient_phi_dict['fns'], "cTN:", patient_phi_dict['tns'], "cFP:", patient_phi_dict['fps'])	
-        print("Patient PHI Recall: " + "{:.2%}".format(patient_recall))	
-        print("Precision: " + "{:.2%}".format(patient_precision))	
-        print("Retention: " + "{:.2%}".format(patient_specificity))	
-        print('\n')	
-        ######### Provider-only recall, precision ##########	
-        provider_recall = 0	
-        if provider_phi_dict['fns'] != 0:	
-            # if include_dict['tps'] != 0 and (include_dict['tps']-include_dict['fns']) > 0:	
-            provider_recall = provider_phi_dict['tps']/(provider_phi_dict['fns'] + provider_phi_dict['tps'])	
-            # else:	
-            #     corrected_recall = 0	
-        else:	
-            patient_recall = 1	
-         provider_precision = 0	
-        if provider_phi_dict['fps'] != 0:	
-            # if include_dict['tps'] != 0 and (include_dict['tps']-include_dict['fns']) > 0:	
-            provider_precision = provider_phi_dict['tps']/(provider_phi_dict['fps'] + provider_phi_dict['tps'])	
-            # else:	
-            #     corrected_recall = 0	
-        else:	
-            patient_precision = 1	
-         provider_specificity = 0	
-        if provider_phi_dict['fps'] != 0:	
-            # if include_dict['tps'] != 0 and (include_dict['tps']-include_dict['fns']) > 0:	
-            provider_specificity = provider_phi_dict['tns']/(provider_phi_dict['fps'] + provider_phi_dict['tns'])	
-            # else:	
-            #     corrected_recall = 0	
-        else:	
-            provider_specificity = 1	
-         print('\n')	
-        print("Provider-Only Results:")	
-        print('\n')	
-        print("cTP:",provider_phi_dict['tps'], "cFN:", provider_phi_dict['fns'], "cTN:", provider_phi_dict['tns'], "cFP:", provider_phi_dict['fps'])	
-        print("Provider PHI Recall: " + "{:.2%}".format(provider_recall))	
-        print("Precision: " + "{:.2%}".format(provider_precision))	
-        print("Retention: " + "{:.2%}".format(provider_specificity))	
-        print('\n')	
+
+
+        ######### Patient-only recall, precision ##########
+
+
+        patient_recall = 0
+        if patient_phi_dict['fns'] != 0:
+            # if include_dict['tps'] != 0 and (include_dict['tps']-include_dict['fns']) > 0:
+            patient_recall = patient_phi_dict['tps']/(patient_phi_dict['fns'] + patient_phi_dict['tps'])
+            # else:
+            #     corrected_recall = 0
+        else:
+            patient_recall = 1
+
+        patient_precision = 0
+        if patient_phi_dict['fps'] != 0:
+            # if include_dict['tps'] != 0 and (include_dict['tps']-include_dict['fns']) > 0:
+            patient_precision = patient_phi_dict['tps']/(patient_phi_dict['fps'] + patient_phi_dict['tps'])
+            # else:
+            #     corrected_recall = 0
+        else:
+            patient_precision = 1
+
+        patient_specificity = 0
+        if patient_phi_dict['fps'] != 0:
+            # if include_dict['tps'] != 0 and (include_dict['tps']-include_dict['fns']) > 0:
+            patient_specificity = patient_phi_dict['tns']/(patient_phi_dict['fps'] + patient_phi_dict['tns'])
+            # else:
+            #     corrected_recall = 0
+        else:
+            patient_specificity = 1
+
+        print('\n')
+        print("Patient-Only Results:")
+        print('\n')
+        print("cTP:",patient_phi_dict['tps'], "cFN:", patient_phi_dict['fns'], "cTN:", patient_phi_dict['tns'], "cFP:", patient_phi_dict['fps'])
+        print("Patient PHI Recall: " + "{:.2%}".format(patient_recall))
+        print("Precision: " + "{:.2%}".format(patient_precision))
+        print("Retention: " + "{:.2%}".format(patient_specificity))
+        print('\n')
+
+
+
+       ######### Provider-only recall, precision ##########
+
+
+        provider_recall = 0
+        if provider_phi_dict['fns'] != 0:
+            # if include_dict['tps'] != 0 and (include_dict['tps']-include_dict['fns']) > 0:
+            provider_recall = provider_phi_dict['tps']/(provider_phi_dict['fns'] + provider_phi_dict['tps'])
+            # else:
+            #     corrected_recall = 0
+        else:
+            patient_recall = 1
+
+        provider_precision = 0
+        if provider_phi_dict['fps'] != 0:
+            # if include_dict['tps'] != 0 and (include_dict['tps']-include_dict['fns']) > 0:
+            provider_precision = provider_phi_dict['tps']/(provider_phi_dict['fps'] + provider_phi_dict['tps'])
+            # else:
+            #     corrected_recall = 0
+        else:
+            patient_precision = 1
+
+        provider_specificity = 0
+        if provider_phi_dict['fps'] != 0:
+            # if include_dict['tps'] != 0 and (include_dict['tps']-include_dict['fns']) > 0:
+            provider_specificity = provider_phi_dict['tns']/(provider_phi_dict['fps'] + provider_phi_dict['tns'])
+            # else:
+            #     corrected_recall = 0
+        else:
+            provider_specificity = 1
+
+        print('\n')
+        print("Provider-Only Results:")
+        print('\n')
+        print("cTP:",provider_phi_dict['tps'], "cFN:", provider_phi_dict['fns'], "cTN:", provider_phi_dict['tns'], "cFP:", provider_phi_dict['fps'])
+        print("Provider PHI Recall: " + "{:.2%}".format(provider_recall))
+        print("Precision: " + "{:.2%}".format(provider_precision))
+        print("Retention: " + "{:.2%}".format(provider_specificity))
+        print('\n')
 
 
 
@@ -2120,7 +2159,7 @@ class Philter:
         nocontext_counter = 0
         context_counter = 0
         for fp in fp_tags:
-            file_dict = fp_tags[fp] 
+            file_dict = fp_tags[fp]
             for subfile in file_dict:
                 current_list_context = file_dict[subfile]
                 current_list_nocontext = current_list_context[:2] + [current_list_context[3]] + [current_list_context[4]]
