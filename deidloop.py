@@ -36,7 +36,8 @@ def runDeidChunck(unit, q):
         #Build path to notes, meta and output path
         srcFolder = r + '/'
         #srcFolder = os.path.join(r, d) + '/'
-        srcMeta = os.path.join(mtaBase, os.path.relpath(srcFolder, srcBase), "meta_data.txt")
+        srcMeta = os.path.join(mtaBase, os.path.relpath(srcFolder, srcBase),
+                               "meta_data.txt")
         dstFolder = os.path.join(dstBase, os.path.relpath(srcFolder, srcBase)) + '/'
 
         # Build output directory
@@ -70,14 +71,16 @@ def runDeidChunck(unit, q):
             try:
                 noteKey = filename.strip("0")[:-9]
                 deidNoteKey = noteKey2deidNoteKey[noteKey]
-                os.rename(dstFolder + filename, dstFolder + deidNoteKey + ".txt")
+                os.replace(dstFolder + filename, dstFolder + deidNoteKey
+                           + ".txt")
             # Toss if we dont
             except KeyError:
                 try:
                     os.remove(dstFolder + filename)
                 except IsADirectoryError:
                     # Remove log
-                    rmtree(dstFolder + filename)
+                    #rmtree(dstFolder + filename)
+                    pass
 
         # Print time elapsed for batch
         t = time.time() - t0
@@ -93,13 +96,8 @@ for unit in range(num_threads):
     worker.start()
 
 # Build queue
-#for i in [2]:
-#    for j in range(0,400):
-#        for k in range(0,10):
-#            enclosure_queue.put((i,j,k))
 for root, dirs, files in os.walk(srcBase):
     if not dirs: enclosure_queue.put(root)
-    #print(os.path.join(root,d)) 
         
 # Now wait for the queue to be empty, indicating that we have
 # processed all of the notes
