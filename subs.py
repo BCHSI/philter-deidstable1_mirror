@@ -6,6 +6,8 @@ import dask.dataframe as dd
 from datetime2 import datetime2
 
 DEFAULT_SHIFT_VALUE = 32
+DATE_REF = datetime2(2000, 2, 29)
+
 class Subs:
     def __init__(self, look_up_table_path = None):
         #load shift table to a dictionary
@@ -23,7 +25,8 @@ class Subs:
             print("Key Error in shift_table {0}".format(err))
             shift_amount = None
         except ValueError as err:
-            print("Value Error: date_offset is not an integer for note_id=" + str(note_id) + "{0}".format(err))
+            print("Value Error: date_offset is not an integer for note_id="
+                  + str(note_id) + "{0}".format(err))
             shift_amount = None
         return shift_amount
 
@@ -35,7 +38,9 @@ class Subs:
 
     @staticmethod
     def parse_date(date_string):
-        date = datetime2.parse(date_string, settings={'PREFER_DAY_OF_MONTH': 'first'} )
+        date = datetime2.parse(date_string,
+                               settings={'RELATIVE_BASE': DATE_REF,
+                                         'PREFER_DAY_OF_MONTH': 'first'})
         return date
     
     def date_to_string(self, date):
@@ -46,7 +51,13 @@ class Subs:
         if look_up_table_path is None:
             return {} #defaultdict(lambda:DEFAULT_SHIFT_VALUE)
 
-        look_up_table = pd.read_csv(look_up_table_path, sep='\t', index_col=False, usecols=***REMOVED***'note_key', 'date_offset'***REMOVED***, dtype=str)
+        try:
+            look_up_table = pd.read_csv(look_up_table_path, sep='\t', index_col=False, usecols=***REMOVED***'note_key', 'date_offset'***REMOVED***, dtype=str)
+        except pandas.errors.EmptyDataError as err:
+            print("Pandas Empty Data Error: " + look_up_table_path
+                  + " is empty {0}".format(err))
+            return {}
+        
         look_up_table = look_up_table***REMOVED***~look_up_table***REMOVED***"date_offset"***REMOVED***.isnull()***REMOVED*** #.compute()
 
         id2offset = pd.Series(look_up_table.date_offset.values, index=look_up_table.note_key).to_dict()
