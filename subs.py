@@ -3,10 +3,11 @@ import re
 import pandas as pd
 from collections import defaultdict
 import dask.dataframe as dd
+import datetime as dt
 from datetime2 import datetime2
 
 DEFAULT_SHIFT_VALUE = 32
-DATE_REF = datetime2(2000, 2, 29)
+DATE_REF = dt.datetime(2000, 2, 29)
 
 class Subs:
     def __init__(self, look_up_table_path = None):
