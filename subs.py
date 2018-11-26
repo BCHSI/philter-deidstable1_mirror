@@ -54,7 +54,7 @@ class Subs:
 
         try:
             look_up_table = pd.read_csv(look_up_table_path, sep='\t', index_col=False, usecols=***REMOVED***'note_key', 'date_offset'***REMOVED***, dtype=str)
-        except pandas.errors.EmptyDataError as err:
+        except pd.errors.EmptyDataError as err:
             print("Pandas Empty Data Error: " + look_up_table_path
                   + " is empty {0}".format(err))
             return {}
