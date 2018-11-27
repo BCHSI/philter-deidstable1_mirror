@@ -1,6 +1,7 @@
 #!/usr/local/bin/python3
 import sys
 import argparse
+import distutils.util
 
 from phitexts import Phitexts
 
