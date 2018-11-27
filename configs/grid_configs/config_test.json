@@ -1,0 +1,20 @@
+[
+    {
+        "title": "Names Blacklist",
+        "type": "set",
+        "exclude": true,
+        "filepath": "filters/blacklists/names_blacklist_allnames.json",
+        "pos": [
+            "NNP"
+        ],
+        "notes": "These are words we believe are not safe"
+    },
+    {
+        "title": "Whitelist",
+        "type": "set",
+        "exclude": false,
+        "filepath": "filters/whitelists/white_combined.json",
+        "pos": [],
+        "notes": "These are words we believe are safe"
+    }
+]

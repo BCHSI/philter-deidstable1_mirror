@@ -1,0 +1,221 @@
+[	
+	{
+		"title":"model number",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/mrn_id/model_number.txt",
+		"notes":"This should remove anything with pattern model number"
+	},
+	{
+		"title":"lot #",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/mrn_id/lot_#.txt",
+		"notes":"This should remove anything with pattern lot #"
+	},		
+	{
+		"title":"id verbose",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/mrn_id/id_verbose.txt",
+		"notes":"This should remove anything with pattern ID: XXXXX"
+	},		
+	{
+		"title":"activation code",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/mrn_id/activation_code.txt",
+		"notes":"This should remove anything with pattern activation code: XXXXX-XXXX-XXXXX"
+	},				
+	{
+		"title":"six or more digits",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/mrn_id/DDDDDD+.txt",
+		"notes":"This should remove anything that matches any number with 6 or more digits (15 limit is arbitrary)"
+	},
+	{
+		"title":"order number",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/mrn_id/order_number.txt",
+		"notes":"This should remove anything that matches order number ..."
+	},
+	{
+		"title":"specimen number",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/mrn_id/specimen_#.txt",
+		"notes":"This should remove anything that matches specimen number ..."
+	},
+	{
+		"title":"cassette_#",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/mrn_id/cassette_#.txt",
+		"notes":"This should remove anything that matches cassette_# ..."
+	},
+	{
+		"title":"# reviewed by",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/mrn_id/#_reviewed_by.txt",
+		"notes":"This should remove anything that matches # reviewed by ..."
+	},
+	{
+		"title":"account #",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/mrn_id/account_#.txt",
+		"notes":"This should remove anything that matches account #"
+	},
+	{
+		"title":"CCDDDD-D-CC",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/mrn_id/CCDDDD-D-CC.txt",
+		"notes":"This should remove anything that matches CCDDDD-D-CC"
+	},
+	{
+		"title":"DDCCCDDD",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/mrn_id/DDCCCDDD.txt",
+		"notes":"This should remove anything that matches DDCCCDDD"
+	},
+	{
+		"title":"CCDDD_DDD",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/mrn_id/CCDDD_DDD.txt",
+		"notes":"This should remove anything that matches NNDDD(anything)DDDD"
+	},
+	{
+		"title":"CDD_DDDD+",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/mrn_id/CDD_DDDD+.txt",
+		"notes":"This should remove anything that matches NCDD_DDDD+"
+	},
+	{
+		"title":"mixed 2",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/mrn_id/mixed002.txt",
+		"notes":"This should remove anything that matches NND"
+	},
+	{
+		"title":"mixed 3",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/mrn_id/mixed003.txt",
+		"notes":"This should remove anything that matches DDDDNNN"
+	},
+	{
+		"title":"mixed 4",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/mrn_id/mixed004.txt",
+		"notes":"This should remove anything that matches DDDN+"
+	},
+	{
+		"title":"mixed 5",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/mrn_id/mixed005.txt",
+		"notes":"This should remove anything that matches CDC"
+	},	
+	{
+		"title":"mixed 6",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/mrn_id/mixed006.txt",
+		"notes":"This should remove anything that matches CDDDC"
+	},
+	{
+		"title":"mixed 7",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/mrn_id/mixed007.txt",
+		"notes":"This should remove anything that matches a weird string of numbers/letters connected by colons etc"
+	},
+	{
+		"title":"mixed 8",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/mrn_id/mixed008.txt",
+		"notes":"This should remove anything that matches a (longer) weird string of numbers/letters connected by colons etc"
+	},
+	{
+		"title":"mixed 10",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/mrn_id/mixed_010_transformed.txt",
+		"notes":"This should remove anything with weird number/letter mashups"
+	},
+	{
+		"title":"CCCDDD",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/mrn_id/CCCDDD.txt",
+		"notes":"This should remove anything that matches CCCDDD"
+	},	
+	{
+		"title":"DDDDCDDDDD",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/mrn_id/DDDDCDDDDD.txt",
+		"notes":"This should remove anything that matches DDDDCDDDDD"
+	},
+	{
+		"title":"DDD-DD-DD",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/mrn_id/DDD-DD-DD.txt",
+		"notes":"This should remove anything that matches any number with pattern DDD-DD-DD"
+	},
+	{
+		"title":"DD-DD-DD-DD",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/mrn_id/DD-DD-DD-DD.txt",
+		"notes":"This should remove anything that matches any numbers separated by 3 dashes"
+	},	
+	{
+		"title":"DD-DDDDDC",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/mrn_id/DD-DDDDDC.txt",
+		"notes":"This should remove anything that matches any number with DD-DDDDDC"
+	},
+	{
+		"title":"****DC",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/mrn_id/blocked_DC.txt",
+		"notes":"This should remove anything that matches any blocked MRN number with last digits"
+	},
+	{
+		"title":"model and serial numbers",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/mrn_id/model_and_serial.txt",
+		"notes":"This should remove anything that matches a model or serial number pattern"
+	},
+	{
+		"title":"ssn only",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/mrn_id/ssn.txt",
+		"notes":"This should remove anything that matches XXX-XX-XXXX"
+	},
+	{
+    	"title":"No catchall",
+		"type":"regex",
+		"exclude":false,
+		"filepath":"filters/regex/catchall.txt",
+		"notes":"False will turn off catchall, True will turn on catchll (default)"
+	}
+
+
+]

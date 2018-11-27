@@ -1,0 +1,484 @@
+[
+    {
+        "title": "mrn_id1",
+        "type": "regex",
+        "exclude": true,
+        "filepath": "filters/regex/mrn_id/DDDDD+.txt",
+        "note": ""
+    },
+    {
+        "title": "mrn_id2",
+        "type": "regex",
+        "exclude": true,
+        "filepath": "filters/regex/mrn_id/mixed001.txt",
+        "note": ""
+    },
+    {
+        "title": "mrn_id3",
+        "type": "regex",
+        "exclude": true,
+        "filepath": "filters/regex/mrn_id/mixed002.txt",
+        "note": ""
+    },
+    {
+        "title": "mrn_id4",
+        "type": "regex",
+        "exclude": true,
+        "filepath": "filters/regex/mrn_id/mixed003.txt",
+        "note": ""
+    },
+    {
+        "title": "mrn_id5",
+        "type": "regex",
+        "exclude": true,
+        "filepath": "filters/regex/mrn_id/mixed004.txt",
+        "note": ""
+    },
+    {
+        "title": "mrn_id6",
+        "type": "regex",
+        "exclude": true,
+        "filepath": "filters/regex/mrn_id/mixed005.txt",
+        "note": ""
+    },
+    {
+        "title": "mrn_id7",
+        "type": "regex",
+        "exclude": true,
+        "filepath": "filters/regex/mrn_id/mixed006.txt",
+        "note": ""
+    },
+    {
+        "title": "mrn_id8",
+        "type": "regex",
+        "exclude": true,
+        "filepath": "filters/regex/mrn_id/CCCDDD.txt",
+        "note": ""
+    },
+    {
+        "title": "mrn_id9",
+        "type": "regex",
+        "exclude": true,
+        "filepath": "filters/regex/mrn_id/DDDDCDDDDD.txt",
+        "note": ""
+    },
+    {
+        "title": "mrn_id10",
+        "type": "regex",
+        "exclude": true,
+        "filepath": "filters/regex/mrn_id/DDD-DD-DD.txt",
+        "note": ""
+    },
+    {
+        "title": "mrn_id11",
+        "type": "regex",
+        "exclude": true,
+        "filepath": "filters/regex/mrn_id/DD-DD-DD-DD.txt",
+        "note": ""
+    },
+    {
+        "title": "mrn_id12",
+        "type": "regex",
+        "exclude": true,
+        "filepath": "filters/regex/mrn_id/DD-DDDDDC.txt",
+        "note": ""
+    },
+    {
+        "title": "mrn_id13",
+        "type": "regex",
+        "exclude": true,
+        "filepath": "filters/regex/mrn_id/blocked_DC.txt",
+        "note": ""
+    },
+    {
+        "title": "mrn_id14",
+        "type": "regex",
+        "exclude": true,
+        "filepath": "filters/regex/mrn_id/ssn.txt",
+        "note": ""
+    },
+    {
+        "title": "mrn_id15",
+        "type": "regex",
+        "exclude": true,
+        "filepath": "filters/regex/mrn_id/ssn_phone_fax.txt",
+        "note": ""
+    },
+    {
+        "title": "mrn_id16",
+        "type": "regex",
+        "exclude": true,
+        "filepath": "filters/regex/mrn_id/phone001.txt",
+        "note": ""
+    },
+    {
+        "title": "mrn_id17",
+        "type": "regex",
+        "exclude": true,
+        "filepath": "filters/regex/mrn_id/phone002.txt",
+        "note": ""
+    },
+    {
+        "title": "mrn_id18",
+        "type": "regex",
+        "exclude": true,
+        "filepath": "filters/regex/mrn_id/pager.txt",
+        "note": ""
+    },
+    {
+        "title": "emails1",
+        "type": "regex",
+        "exclude": true,
+        "filepath": "filters/regex/emails/email.txt",
+        "note": ""
+    },
+    {
+        "title": "dates1",
+        "type": "regex",
+        "exclude": true,
+        "filepath": "filters/regex/dates/YYYY_MM-YYYY_MM_transformed.txt",
+        "note": ""
+    },
+    {
+        "title": "dates2",
+        "type": "regex",
+        "exclude": true,
+        "filepath": "filters/regex/dates/MM_DD_YY-MM_DD_YY_transformed.txt",
+        "note": ""
+    },
+    {
+        "title": "dates3",
+        "type": "regex",
+        "exclude": true,
+        "filepath": "filters/regex/dates/MM_YYYY-MM_YYYY_transformed.txt",
+        "note": ""
+    },
+    {
+        "title": "dates4",
+        "type": "regex",
+        "exclude": true,
+        "filepath": "filters/regex/dates/MM_YY-MM_YY_transformed.txt",
+        "note": ""
+    },
+    {
+        "title": "dates5",
+        "type": "regex",
+        "exclude": true,
+        "filepath": "filters/regex/dates/MM_YYYY-MM_YYYY_transformed.txt",
+        "note": ""
+    },
+    {
+        "title": "dates6",
+        "type": "regex",
+        "exclude": true,
+        "filepath": "filters/regex/dates/MM_DD-MM_DD_transformed.txt",
+        "note": ""
+    },
+    {
+        "title": "dates7",
+        "type": "regex",
+        "exclude": true,
+        "filepath": "filters/regex/dates/DD_MM-DD_MM_transformed.txt",
+        "note": ""
+    },
+    {
+        "title": "dates8",
+        "type": "regex",
+        "exclude": true,
+        "filepath": "filters/regex/dates/day_name_dd_month_name_yy_transformed.txt",
+        "note": ""
+    },
+    {
+        "title": "dates9",
+        "type": "regex",
+        "exclude": true,
+        "filepath": "filters/regex/dates/day_name_month_name_dd_yy_transformed.txt",
+        "note": ""
+    },
+    {
+        "title": "dates10",
+        "type": "regex",
+        "exclude": true,
+        "filepath": "filters/regex/dates/day_name_month_name_dd_yyyy_transformed.txt",
+        "note": ""
+    },
+    {
+        "title": "dates11",
+        "type": "regex",
+        "exclude": true,
+        "filepath": "filters/regex/dates/day_name_dd_month_name_yyyy_transformed.txt",
+        "note": ""
+    },
+    {
+        "title": "dates12",
+        "type": "regex",
+        "exclude": true,
+        "filepath": "filters/regex/dates/day_name_month_name_dd_transformed.txt",
+        "note": ""
+    },
+    {
+        "title": "dates13",
+        "type": "regex",
+        "exclude": true,
+        "filepath": "filters/regex/dates/day_name_dd_month_name_transformed.txt",
+        "note": ""
+    },
+    {
+        "title": "dates14",
+        "type": "regex",
+        "exclude": true,
+        "filepath": "filters/regex/dates/dd_month_name_yy_transformed.txt",
+        "note": ""
+    },
+    {
+        "title": "dates15",
+        "type": "regex",
+        "exclude": true,
+        "filepath": "filters/regex/dates/dd_month_name_yyyy_transformed.txt",
+        "note": ""
+    },
+    {
+        "title": "dates16",
+        "type": "regex",
+        "exclude": true,
+        "filepath": "filters/regex/dates/month_name_dd_yy_transformed.txt",
+        "note": ""
+    },
+    {
+        "title": "dates17",
+        "type": "regex",
+        "exclude": true,
+        "filepath": "filters/regex/dates/month_name_dd_yyyy_transformed.txt",
+        "note": ""
+    },
+    {
+        "title": "dates18",
+        "type": "regex",
+        "exclude": true,
+        "filepath": "filters/regex/dates/yy_month_name_dd_transformed.txt",
+        "note": ""
+    },
+    {
+        "title": "dates19",
+        "type": "regex",
+        "exclude": true,
+        "filepath": "filters/regex/dates/yyyy_month_name_dd_transformed.txt",
+        "note": ""
+    },
+    {
+        "title": "dates20",
+        "type": "regex",
+        "exclude": true,
+        "filepath": "filters/regex/dates/month_name_dd_transformed.txt",
+        "note": ""
+    },
+    {
+        "title": "dates21",
+        "type": "regex",
+        "exclude": true,
+        "filepath": "filters/regex/dates/dd_mm_yy_transformed.txt",
+        "note": ""
+    },
+    {
+        "title": "dates22",
+        "type": "regex",
+        "exclude": true,
+        "filepath": "filters/regex/dates/dd_mm_yyyy_transformed.txt",
+        "note": ""
+    },
+    {
+        "title": "dates23",
+        "type": "regex",
+        "exclude": true,
+        "filepath": "filters/regex/dates/yy_mm_dd_transformed.txt",
+        "note": ""
+    },
+    {
+        "title": "dates24",
+        "type": "regex",
+        "exclude": true,
+        "filepath": "filters/regex/dates/mm_dd_yy_transformed.txt",
+        "note": ""
+    },
+    {
+        "title": "dates25",
+        "type": "regex",
+        "exclude": true,
+        "filepath": "filters/regex/dates/yyyy_mm_dd_transformed.txt",
+        "note": ""
+    },
+    {
+        "title": "dates26",
+        "type": "regex",
+        "exclude": true,
+        "filepath": "filters/regex/dates/mm_dd_yyyy_transformed.txt",
+        "note": ""
+    },
+    {
+        "title": "dates27",
+        "type": "regex",
+        "exclude": true,
+        "filepath": "filters/regex/dates/dd_mm_transformed.txt",
+        "note": ""
+    },
+    {
+        "title": "dates28",
+        "type": "regex",
+        "exclude": true,
+        "filepath": "filters/regex/dates/mm_dd_transformed.txt",
+        "note": ""
+    },
+    {
+        "title": "dates29",
+        "type": "regex",
+        "exclude": true,
+        "filepath": "filters/regex/dates/mm_yyyy_transformed.txt",
+        "note": ""
+    },
+    {
+        "title": "dates30",
+        "type": "regex",
+        "exclude": true,
+        "filepath": "filters/regex/dates/mm_yy_transformed.txt",
+        "note": ""
+    },
+    {
+        "title": "dates31",
+        "type": "regex",
+        "exclude": true,
+        "filepath": "filters/regex/dates/month_name_of_yy_transformed.txt",
+        "note": ""
+    },
+    {
+        "title": "dates32",
+        "type": "regex",
+        "exclude": true,
+        "filepath": "filters/regex/dates/month_name_of_yyyy_transformed.txt",
+        "note": ""
+    },
+    {
+        "title": "dates33",
+        "type": "regex",
+        "exclude": true,
+        "filepath": "filters/regex/dates/month_name_yy_transformed.txt",
+        "note": ""
+    },
+    {
+        "title": "dates34",
+        "type": "regex",
+        "exclude": true,
+        "filepath": "filters/regex/dates/month_name_yyyy_transformed.txt",
+        "note": ""
+    },
+    {
+        "title": "dates35",
+        "type": "regex",
+        "exclude": true,
+        "filepath": "filters/regex/dates/day_numbering_of_month_transformed.txt",
+        "note": ""
+    },
+    {
+        "title": "dates36",
+        "type": "regex",
+        "exclude": true,
+        "filepath": "filters/regex/dates/month_name_xst_xnd_xth_transformed.txt",
+        "note": ""
+    },
+    {
+        "title": "dates37",
+        "type": "regex",
+        "exclude": true,
+        "filepath": "filters/regex/dates/on_or_by_the_day_numbering_transformed.txt",
+        "note": ""
+    },
+    {
+        "title": "dates38",
+        "type": "regex",
+        "exclude": true,
+        "filepath": "filters/regex/dates/season_of_yy_transformed.txt",
+        "note": ""
+    },
+    {
+        "title": "dates39",
+        "type": "regex",
+        "exclude": true,
+        "filepath": "filters/regex/dates/season_of_yyyy_transformed.txt",
+        "note": ""
+    },
+    {
+        "title": "dates40",
+        "type": "regex",
+        "exclude": true,
+        "filepath": "filters/regex/dates/day_name_transformed.txt",
+        "note": ""
+    },
+    {
+        "title": "dates41",
+        "type": "regex",
+        "exclude": true,
+        "filepath": "filters/regex/dates/in_the_yy_transformed.txt",
+        "note": ""
+    },
+    {
+        "title": "dates42",
+        "type": "regex",
+        "exclude": true,
+        "filepath": "filters/regex/dates/in_yy_transformed.txt",
+        "note": ""
+    },
+    {
+        "title": "dates43",
+        "type": "regex",
+        "exclude": true,
+        "filepath": "filters/regex/dates/in_yyyy_transformed.txt",
+        "note": ""
+    },
+    {
+        "title": "dates44",
+        "type": "regex",
+        "exclude": true,
+        "filepath": "filters/regex/dates/month_name_transformed.txt",
+        "note": ""
+    },
+    {
+        "title": "salutations1",
+        "type": "regex",
+        "exclude": true,
+        "filepath": "filters/regex/salutations/pre_salutations.txt",
+        "note": ""
+    },
+    {
+        "title": "salutations2",
+        "type": "regex",
+        "exclude": true,
+        "filepath": "filters/regex/salutations/post_salutations.txt",
+        "note": ""
+    },
+    {
+        "title": "Names Blacklist",
+        "type": "set",
+        "exclude": true,
+        "filepath": "filters/blacklists/blacklist_100.json",
+        "pos": [
+            "JJ"
+        ],
+        "notes": "These are words we believe are not safe"
+    },
+    {
+        "title": "Whitelist",
+        "type": "set",
+        "exclude": false,
+        "filepath": "filters/whitelists/whitelist_W100_V100_N0.json",
+        "pos": [],
+        "notes": "These are words we believe are safe"
+    },
+    {
+        "title": "CD Matcher",
+        "type": "pos_matcher",
+        "exclude": false,
+        "pos": [
+            "CD"
+        ],
+        "notes": "This will include any CDs that arent included in earlier steps"
+    }
+]

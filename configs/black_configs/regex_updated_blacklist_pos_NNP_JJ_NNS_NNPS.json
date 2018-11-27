@@ -1,0 +1,57 @@
+[
+    {
+        "title": "salutations1",
+        "type": "regex",
+        "exclude": true,
+        "filepath": "filters/regex/salutations/pre_salutations_2chars.txt",
+        "note": ""
+    },
+    {
+        "title": "salutations2",
+        "type": "regex",
+        "exclude": true,
+        "filepath": "filters/regex/salutations/pre_salutations_3chars.txt",
+        "note": ""
+    },
+    {
+        "title": "salutations3",
+        "type": "regex",
+        "exclude": true,
+        "filepath": "filters/regex/salutations/pre_salutations_4chars.txt",
+        "note": ""
+    },
+    {
+        "title": "salutations4",
+        "type": "regex",
+        "exclude": true,
+        "filepath": "filters/regex/salutations/pre_salutations_5chars.txt",
+        "note": ""
+    },
+    {
+        "title": "salutations5",
+        "type": "regex",
+        "exclude": true,
+        "filepath": "filters/regex/salutations/post_salutations.txt",
+        "note": ""
+    },
+    {
+        "title": "Names Blacklist",
+        "type": "set",
+        "exclude": true,
+        "filepath": "filters/blacklists/updated_blacklist.json",
+        "pos": [
+            "NNP",
+            "JJ",
+            "NNS",
+            "NNPS"
+        ],
+        "notes": "These are words we believe are not safe"
+    },
+    {
+        "title": "No catchall",
+        "type": "regex",
+        "exclude": false,
+        "filepath": "filters/regex/catchall.txt",
+        "notes": "This will include any words that arent included in earlier steps"
+    }
+]

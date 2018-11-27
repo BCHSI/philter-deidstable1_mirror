@@ -11,7 +11,7 @@ import xml.etree.ElementTree as ET
 
 
 
-xml_folder = "./testing-PHI-Gold-fixed/"
+xml_folder = "./testing-PHI-Gold-fixed-updated/"
 
 phi = {} #fn --> {"text":"...", "phi":[{"type":"DATE"...}]}
 
@@ -40,7 +40,7 @@ def isolate_phi(xml_folder):
 isolate_phi(xml_folder)
 
 #save our data
-json.dump(phi, open("phi_notes.json", "w"), indent=4)
+json.dump(phi, open("./data/phi_notes.json", "w"), indent=4)
 
 NOTES_FOLDER = "data/i2b2_notes/"
 ANNO_FOLDER = "data/i2b2_anno/"

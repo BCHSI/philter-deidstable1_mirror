@@ -1,0 +1,34 @@
+[
+	
+	{
+		"title":"mixed 1",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/blake_regex/mixed001.txt",
+		"notes":"This should remove anything that matches NNDDD(anything)DDDD"
+	},
+	{
+		"title":"mixed 2",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/blake_regex/mixed002.txt",
+		"notes":"This should remove anything that matches NND"
+	},
+	{
+		"title":"mixed 3",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/blake_regex/mixed003.txt",
+		"notes":"This should remove anything that matches DDDDNNN"
+	},
+	{
+    	"title":"No catchall",
+		"type":"regex",
+		"exclude":false,
+		"filepath":"filters/regex/catchall.txt",
+		"notes":"This should match anything, preventing the catchall"
+	}
+
+]
+
+

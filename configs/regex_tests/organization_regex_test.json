@@ -1,0 +1,210 @@
+[	
+	{
+		"title":"[NNP] Hospital 26",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/organizations/nnp_obgyn_26chars.txt",
+		"notes":"This should remove anything with 1-2 proper nouns followed by a hospital indicator"
+	},
+	{
+		"title":"[NNP] Hospital 22",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/organizations/nnp_extended_care_22chars.txt",
+		"notes":"This should remove anything with 1-2 proper nouns followed by a hospital indicator"
+	},
+	{
+		"title":"[NNP] Hospital 20",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/organizations/nnp_emergency_department_20chars.txt",
+		"notes":"This should remove anything with 1-2 proper nouns followed by a hospital indicator"
+	},
+	{
+		"title":"[NNP] Hospital 18",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/organizations/nnp_community_hospital_18chars.txt",
+		"notes":"This should remove anything with 1-2 proper nouns followed by a hospital indicator"
+	},
+	{
+		"title":"[NNP] Hospital 17",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/organizations/nnp_memorial_hospital_17chars.txt",
+		"notes":"This should remove anything with 1-2 proper nouns followed by a hospital indicator"
+	},
+	{
+		"title":"[NNP] Hospital 16",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/organizations/nnp_gastroenterology_16chars.txt",
+		"notes":"This should remove anything with 1-2 proper nouns followed by a hospital indicator"
+	},
+	{
+		"title":"[NNP] Hospital 15",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/organizations/nnp_physician_group_15chars.txt",
+		"notes":"This should remove anything with 1-2 proper nouns followed by a hospital indicator"
+	},
+	{
+		"title":"[NNP] Hospital 14",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/organizations/nnp_medical_clinic_14chars.txt",
+		"notes":"This should remove anything with 1-2 proper nouns followed by a hospital indicator"
+	},
+	{
+		"title":"[NNP] Hospital 13",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/organizations/nnp_care_facility_13chars.txt",
+		"notes":"This should remove anything with 1-2 proper nouns followed by a hospital indicator"
+	},
+	{
+		"title":"[NNP] Hospital 12",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/organizations/nnp_microbiology_12chars.txt",
+		"notes":"This should remove anything with 1-2 proper nouns followed by a hospital indicator"
+	},
+	{
+		"title":"[NNP] Hospital 11",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/organizations/nnp_family_care_11chars.txt",
+		"notes":"This should remove anything with 1-2 proper nouns followed by a hospital indicator"
+	},
+	{
+		"title":"[NNP] Hospital 10",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/organizations/nnp_sanatorium_10chars.txt",
+		"notes":"This should remove anything with 1-2 proper nouns followed by a hospital indicator"
+	},
+	{
+		"title":"[NNP] Hospital 9",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/organizations/nnp_institute_9chars.txt",
+		"notes":"This should remove anything with 1-2 proper nouns followed by a hospital indicator"
+	},
+	{
+		"title":"[NNP] Hospital 8",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/organizations/nnp_hospital_8chars.txt",
+		"notes":"This should remove anything with 1-2 proper nouns followed by a hospital indicator"
+	},
+	{
+		"title":"[NNP] Hospital 7",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/organizations/nnp_surgery_7chars.txt",
+		"notes":"This should remove anything with 1-2 proper nouns followed by a hospital indicator"
+	},
+	{
+		"title":"[NNP] Hospital 6",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/organizations/nnp_clinic_6chars.txt",
+		"notes":"This should remove anything with 1-2 proper nouns followed by a hospital indicator"
+	},
+	{
+		"title":"[NNP] Hospital 5",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/organizations/nnp_rehab_5chars.txt",
+		"notes":"This should remove anything with 1-2 proper nouns followed by a hospital indicator"
+	},
+	{
+		"title":"[NNP] Hospital 4",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/organizations/nnp_care_4chars.txt",
+		"notes":"This should remove anything with 1-2 proper nouns followed by a hospital indicator"
+	},
+	{
+		"title":"[NNP] Hospital 3",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/organizations/nnp_lab_3chars.txt",
+		"notes":"This should remove anything with 1-2 proper nouns followed by a hospital indicator"
+	},
+	{
+		"title":"[NNP] Hospital 2",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/organizations/nnp_ed_2chars.txt",
+		"notes":"This should remove anything with 1-2 proper nouns followed by a hospital indicator"
+	},
+	{
+		"title":"hospitalized at",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/organizations/hospitalized_at_15chars.txt",
+		"notes":"This should remove anything with 'hospitalized at' followed by a proper noun"
+	},
+	{
+		"title":"admission from",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/organizations/admission_from_14chars.txt",
+		"notes":"This should remove anything with 'admission from' followed by a proper noun"
+	},
+	{
+		"title":"admitted from",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/organizations/admitted_from_hospital_13chars.txt",
+		"notes":"This should remove anything with 'admitted from' followed by a proper noun"
+	},
+	{
+		"title":"admission to",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/organizations/admission_to_hospital_12chars.txt",
+		"notes":"This should remove anything with 'admission to' followed by a proper noun"
+	},
+	{
+		"title":"admitted to 1",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/organizations/admitted_to_hospital_11chars.txt",
+		"notes":"This should remove anything with 'admitted to' followed by a proper noun"
+	},
+	{
+		"title":"brought to",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/organizations/brought_to_hospital_10chars.txt",
+		"notes":"This should remove anything with 'brought to' followed by a proper noun"
+	},
+	{
+		"title":"taken to",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/organizations/taken_to_hospital_8chars.txt",
+		"notes":"This should remove anything with 'taken to' followed by a proper noun"
+	},
+	{
+		"title":"admitted to 2",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/organizations/admitted_to_hospital_7chars.txt",
+		"notes":"This should remove anything with 'admitted to' followed by a proper noun"
+	},
+	{
+    	"title":"No catchall",
+		"type":"regex",
+		"exclude":false,
+		"filepath":"filters/regex/catchall.txt",
+		"notes":"This should match anything, preventing the catchall"
+	}
+]
+
+
+
+
+

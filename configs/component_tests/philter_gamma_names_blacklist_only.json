@@ -1,0 +1,19 @@
+[     
+      {
+        "title": "Names Blacklist",
+        "type": "set",
+        "exclude": true,
+        "filepath": "filters/blacklists/names_blacklist_sub_100_fps.json",
+        "pos": [
+            "NNP"
+        ],
+        "notes": "These are words we believe are not safe"
+    },
+    {
+        "title":"No catchall",
+        "type":"regex",
+        "exclude":false,
+        "filepath":"filters/regex/catchall.txt",
+        "notes":"This should match anything, preventing the catchall"
+    }
+]

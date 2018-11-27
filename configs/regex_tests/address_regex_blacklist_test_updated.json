@@ -1,0 +1,265 @@
+[	
+	{
+		"title":"full street address",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/addresses/full_street_address_transformed.txt",
+		"notes":"This should remove anything that looks like a full street address (numbers and words)"
+	},
+    {
+        "title":"hospital name 1",
+        "type":"regex",
+        "exclude":true,
+        "filepath":"filters/regex/addresses/hospital1.txt",
+        "notes":"This should remove anything the resembles a hospital name"
+    },
+    {
+        "title":"hospital name 2",
+        "type":"regex",
+        "exclude":true,
+        "filepath":"filters/regex/addresses/hospital2.txt",
+        "notes":"This should remove anything the resembles a hospital name"
+    },	
+	{
+		"title":"number streetname extension?",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/addresses/num_streetname_extension?_transformed.txt",
+		"notes":"This should remove anything that looks like a street address (with a possible extension)"
+	},
+	{
+		"title":"number streetname san",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/addresses/num_streetname_san_transformed.txt",
+		"notes":"This should remove anything that looks like the beginning of a street address followed by san (like san francsico)"
+	},
+	{
+		"title":"number streetname",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/addresses/num_streetname_transformed.txt",
+		"notes":"This should remove anything that looks like the begiing of a street address"
+	},
+	{
+		"title":"street & street",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/addresses/street_&_street_transformed.txt",
+		"notes":"This should remove anything that looks like a street corner"
+	},
+	{
+		"title":"streetname floor number",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/addresses/streetname_floor_number_transformed.txt",
+		"notes":"This should remove anything that looks like a street address with a suite number extension"
+	},
+	{
+		"title":"number streetname noindicator suite",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/addresses/number_streetname_noindicator_suite_transformed.txt",
+		"notes":"This should remove anything that looks like a street address with a floor number extension"
+	},
+	{
+		"title":"city state zip",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/addresses/city_state_zip_transformed.txt",
+		"notes":"This should remove anything that looks like a partial street address (city, state, zip"
+	},
+	{
+		"title":"city zip",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/addresses/city_zip_transformed.txt",
+		"notes":"This should remove anything that has a city name, followed by a zip code"
+	},
+
+	{
+		"title":"lives in",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/addresses/lives_in_transformed.txt",
+		"notes":"This should remove anything that matches pattern lives in/on"
+	},
+	{
+		"title":"city state",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/addresses/city_state_transformed.txt",
+		"notes":"This should remove anything that has a city name, followed by a state name/abbrev"
+	},
+	{
+		"title":"in city",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/addresses/in_city_transformed.txt",
+		"notes":"This should remove anything that has a city name"
+	},
+	{
+		"title":"city",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/addresses/city_transformed.txt",
+		"notes":"This should remove anything that matches pattern [name] [city]"
+	},
+	{
+		"title":"hospitalized at",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/organizations/hospitalized_at_15chars.txt",
+		"notes":"This should remove anything with 'hospitalized at' followed by a proper noun"
+	},
+	{
+		"title":"admission from",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/organizations/admission_from_14chars.txt",
+		"notes":"This should remove anything with 'admission from' followed by a proper noun"
+	},
+	{
+		"title":"admitted from",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/organizations/admitted_from_hospital_13chars.txt",
+		"notes":"This should remove anything with 'admitted from' followed by a proper noun"
+	},
+	{
+		"title":"admission to",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/organizations/admission_to_hospital_12chars.txt",
+		"notes":"This should remove anything with 'admission to' followed by a proper noun"
+	},
+	{
+		"title":"admitted to 1",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/organizations/admitted_to_hospital_11chars.txt",
+		"notes":"This should remove anything with 'admitted to' followed by a proper noun"
+	},
+	{
+		"title":"brought to",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/organizations/brought_to_hospital_10chars.txt",
+		"notes":"This should remove anything with 'brought to' followed by a proper noun"
+	},
+	{
+		"title":"taken to",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/organizations/taken_to_hospital_8chars.txt",
+		"notes":"This should remove anything with 'taken to' followed by a proper noun"
+	},
+	{
+		"title":"admitted to 2",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/organizations/admitted_to_hospital_7chars.txt",
+		"notes":"This should remove anything with 'admitted to' followed by a proper noun"
+	},
+	{
+		"title":"box room",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/addresses/box_room_transformed.txt",
+		"notes":"This should remove anything that has pattern box # followed by room #"
+	},
+	{
+		"title":"room box",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/addresses/room_box_transformed.txt",
+		"notes":"This should remove anything that has pattern room # followed by box #"
+	},
+	{
+		"title":"floor box",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/addresses/floor_box_transformed.txt",
+		"notes":"This should remove anything that has pattern floor # followed by box #"
+	},
+	{
+		"title":"desk #",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/addresses/desk_#_transformed.txt",
+		"notes":"This should remove anything that has pattern desk #"
+	},
+	{
+		"title":"pharmacy #",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/addresses/pharmacy_#_transformed.txt",
+		"notes":"This should remove anything that has pattern pharmacy #"
+	},
+	{
+		"title":"at location",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/addresses/at_address_noindicator_transformed.txt",
+		"notes":"This should remove anything that has pattern at X"
+	},
+	{
+		"title":"waiting room",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/addresses/waiting_room_transformed.txt",
+		"notes":"This should remove anything that has pattern waiting room"
+	},
+	{
+		"title":"to state",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/addresses/to_state_transformed.txt",
+		"notes":"This should remove anything that has pattern to [state name]"
+	},
+	{
+		"title":"on streetname",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/addresses/streetname_only_transformed.txt",
+		"notes":"This should remove anything that has pattern on [street name]"
+	},
+	{
+		"title":"box",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/addresses/box_transformed.txt",
+		"notes":"This should remove anything that has a box number"
+	},
+    {
+        "title":"room",
+        "type":"regex",
+        "exclude":true,
+        "filepath":"filters/regex/addresses/room_#_transformed.txt",
+        "notes":"This should remove anything that has a room number"
+    },
+	{
+		"title":"Address Blacklist",
+		"type":"set",
+		"exclude":true,
+		"filepath":"filters/blacklists/updated_address_blacklist.json",
+		"pos":["NNP"],
+		"notes":""
+	},
+    {
+        "title":"Whitelist",
+        "type":"set",
+        "exclude":false,
+        "filepath":"/data/muenzenk/fp_analysis/white_black_diff_tests/whitelist_plus_fps-3.json",
+        "pos":[],
+        "notes":"These are words we beleive are safe"
+    },
+    {
+        "title":"POS MATCHER",
+        "type":"pos_matcher",
+        "exclude":false,
+        "pos":["CD"],
+        "notes":"This will include any CDs that aren't included in earlier steps"
+    }
+
+]

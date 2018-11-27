@@ -1,0 +1,26 @@
+[
+	
+	{
+		"title":"YYYY/MM-YYYY/MM",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/dates/YYYY_MM-YYYY_MM.txt",
+		"notes":"This should remove anything with pattern YYYY/MM-YYYY/MM"
+	},
+	{
+		"title":"General Whitelist",
+		"type":"set",
+		"exclude":false,
+		"filepath":"filters/whitelists/whitelist.pkl",
+		"pos":[],
+		"notes":"These are words we beleive are safe"
+	},
+	{
+    	"title":"No catchall",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/catchall.txt",
+		"notes":"False will turn off catchall, True will turn on catchll (default)"
+	}
+
+]

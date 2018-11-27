@@ -1,0 +1,415 @@
+[
+	{
+		"title":"YYYY/MM-YYYY/MM",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/dates/YYYY_MM-YYYY_MM.txt",
+		"notes":"This should remove anything with pattern YYYY/MM-YYYY/MM"
+	},
+	{
+		"title":"MM/DD/YY-MM/DD/YY",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/dates/MM_DD_YY-MM_DD_YY.txt",
+		"notes":"This should remove anything with pattern MM/DD/YY-MM/DD/YY"
+	},
+	{
+		"title":"MM/YYYY-MM/YYYY",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/dates/MM_YYYY-MM_YYYY.txt",
+		"notes":"This should remove anything with pattern MM/YYYY-MM/YYYY"
+	},
+	{
+		"title":"MM/YY-MM/YY",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/dates/MM_YY-MM_YY.txt",
+		"notes":"This should remove anything with pattern MM/YY-MM/YY"
+	},
+	{
+		"title":"MM/YYYY-MM/YYYY",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/dates/MM_YYYY-MM_YYYY.txt",
+		"notes":"This should remove anything with pattern MM/YYYY-MM/YYYY"
+	},
+	{
+		"title":"MM/DD-MM/DD",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/dates/MM_DD-MM_DD.txt",
+		"notes":"This should remove anything with pattern MM/DD-MM/DD"
+	},
+	{
+		"title":"DD/MM-DD/MM",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/dates/DD_MM-DD_MM.txt",
+		"notes":"This should remove anything with pattern DD/MM-DD/MM"
+	},
+	{
+		"title":"day_name_dd_month_name_yy",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/dates/day_name_dd_month_name_yy.txt",
+		"notes":"This should remove anything with pattern day_name_dd_month_name_yy"
+	},
+	{
+		"title":"day_name_month_name_dd_yy",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/dates/day_name_month_name_dd_yy.txt",
+		"notes":"This should remove anything with pattern day_name_month_name_dd_yy"
+	},
+	{
+		"title":"day_name_month_name_dd_yyyy",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/dates/day_name_month_name_dd_yyyy.txt",
+		"notes":"This should remove anything with pattern day_name_month_name_dd_yyyy"
+	},
+	{
+		"title":"day_name_dd_month_name_yyyy",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/dates/day_name_dd_month_name_yyyy.txt",
+		"notes":"This should remove anything with pattern day_name_dd_month_name_yyyy"
+	},
+	{
+		"title":"day_name_month_name_dd",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/dates/day_name_month_name_dd.txt",
+		"notes":"This should remove anything with pattern day_name_month_name_dd"
+	},
+	{
+		"title":"day_name_dd_month_name",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/dates/day_name_dd_month_name.txt",
+		"notes":"This should remove anything with pattern day_name_dd_month_name"
+	},
+	{
+		"title":"dd_month_name_yy",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/dates/dd_month_name_yy.txt",
+		"notes":"This should remove anything with pattern dd_month_name_yy"
+	},
+	{
+		"title":"dd_month_name_yyyy",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/dates/dd_month_name_yyyy.txt",
+		"notes":"This should remove anything with pattern dd_month_name_yyyy"
+	},
+	{
+		"title":"month_name_dd_yy",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/dates/month_name_dd_yy.txt",
+		"notes":"This should remove anything with pattern month_name_dd_yy"
+	},
+	{
+		"title":"month_name_dd_yyyy",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/dates/month_name_dd_yyyy.txt",
+		"notes":"This should remove anything with pattern month_name_dd_yyyy"
+	},
+	{
+		"title":"yy_month_name_dd",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/dates/yy_month_name_dd.txt",
+		"notes":"This should remove anything with pattern yy_month_name_dd"
+	},
+	{
+		"title":"yyyy_month_name_dd",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/dates/yyyy_month_name_dd.txt",
+		"notes":"This should remove anything with pattern yyyy_month_name_dd"
+	},
+	{
+		"title":"month_name_dd",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/dates/month_name_dd.txt",
+		"notes":"This should remove anything with pattern month_name_dd"
+	},
+	{
+		"title":"dd_mm_yy",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/dates/dd_mm_yy.txt",
+		"notes":"This should remove anything with pattern dd_mm_yy"
+	},
+	{
+		"title":"dd_mm_yyyy",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/dates/dd_mm_yyyy.txt",
+		"notes":"This should remove anything with pattern dd_mm_yyyy"
+	},
+	{
+		"title":"yy_mm_dd",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/dates/yy_mm_dd.txt",
+		"notes":"This should remove anything with pattern yy_mm_dd"
+	},
+	{
+		"title":"mm_dd_yy",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/dates/mm_dd_yy.txt",
+		"notes":"This should remove anything with pattern mm_dd_yy"
+	},
+	{
+		"title":"yyyy_mm_dd",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/dates/yyyy_mm_dd.txt",
+		"notes":"This should remove anything with pattern yyyy_mm_dd"
+	},
+	{
+		"title":"mm_dd_yyyy",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/dates/mm_dd_yyyy.txt",
+		"notes":"This should remove anything with pattern mm_dd_yyyy"
+	},
+	{
+		"title":"dd_mm",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/dates/dd_mm.txt",
+		"notes":"This should remove anything with pattern dd_mm"
+	},
+	{
+		"title":"mm_dd",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/dates/mm_dd.txt",
+		"notes":"This should remove anything with pattern mm_dd"
+	},
+	{
+		"title":"mm_yyyy",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/dates/mm_yyyy.txt",
+		"notes":"This should remove anything with pattern mm_yyyy"
+	},
+	{
+		"title":"mm_yy",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/dates/mm_yy.txt",
+		"notes":"This should remove anything with pattern mm_yy"
+	},
+	{
+		"title":"month_name_of_yy",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/dates/month_name_of_yy.txt",
+		"notes":"This should remove anything with pattern month_name_of_yy"
+	},
+	{
+		"title":"month_name_of_yyyy",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/dates/month_name_of_yyyy.txt",
+		"notes":"This should remove anything with pattern month_name_of_yyyy"
+	},
+	{
+		"title":"month_name_yy",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/dates/month_name_yy.txt",
+		"notes":"This should remove anything with pattern month_name_yy"
+	},
+	{
+		"title":"month_name_yyyy",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/dates/month_name_yyyy.txt",
+		"notes":"This should remove anything with pattern month_name_yyyy"
+	},
+	{
+		"title":"day_numbering_of_month",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/dates/day_numbering_of_month.txt",
+		"notes":"This should remove anything with pattern day_numbering_of_month"
+	},
+	{
+		"title":"month_name_xst_xnd_xth",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/dates/month_name_xst_xnd_xth.txt",
+		"notes":"This should remove anything with pattern month_name_xst_xnd_xth"
+	},
+	{
+		"title":"on_or_by_the_day_numbering",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/dates/on_or_by_the_day_numbering.txt",
+		"notes":"This should remove anything with pattern on_or_by_the_day_numbering"
+	},		
+	{
+		"title":"season_of_yy",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/dates/season_of_yy.txt",
+		"notes":"This should remove anything with pattern season_of_yy"
+	},
+	{
+		"title":"season_of_yyyy",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/dates/season_of_yyyy.txt",
+		"notes":"This should remove anything with pattern season_of_yyyy"
+	},
+	{
+		"title":"day_name",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/dates/day_name.txt",
+		"notes":"This should remove anything with pattern day_name"
+	},
+	{
+		"title":"in_the_yy",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/dates/in_the_yy.txt",
+		"notes":"This should remove anything with pattern 'in the (late/early) yy'"
+	},
+	{
+		"title":"in_yy",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/dates/in_yy.txt",
+		"notes":"This should remove anything with pattern in_yy"
+	},
+	{
+		"title":"in_yyyy",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/dates/in_yyyy.txt",
+		"notes":"This should remove anything with pattern in_yyyy"
+	},
+	{
+		"title":"month_name",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/dates/month_name.txt",
+		"notes":"This should remove anything with pattern month_name"
+	},
+	{
+                "title":"emails",
+                "type":"regex",
+                "exclude":true,
+                "filepath":"filters/regex/emails/email.txt",
+                "notes":"This should remove anything that looks like an email"
+        },
+	{
+                "title":"mrn 1",
+                "type":"regex",
+                "exclude":true,
+                "filepath":"filters/regex/medical_records/mrn001.txt",
+                "notes":"This should remove anything that matches DDDDNDDDDD"
+        },
+        {
+                "title":"mixed 1",
+                "type":"regex",
+                "exclude":true,
+                "filepath":"filters/regex/medical_records/mixed001.txt",
+                "notes":"This should remove anything that matches NNDDD(anything)DDDD"
+        },
+        {
+                "title":"mixed 2",
+                "type":"regex",
+                "exclude":true,
+                "filepath":"filters/regex/medical_records/mixed002.txt",
+                "notes":"This should remove anything that matches NND"
+        },
+	{
+                "title":"mixed 3",
+                "type":"regex",
+                "exclude":true,
+                "filepath":"filters/regex/medical_records/mixed003.txt",
+                "notes":"This should remove anything that matches DDDDNNN"
+        },
+	{
+                "title":"ssn_phone_fax",
+                "type":"regex",
+                "exclude":true,
+                "filepath":"filters/regex/ssn_phone_fax/ssn_phone_fax.txt",
+                "notes":"XXX-XX-XXXX, XXX-XXX-XXXX, XXX-XXXXXXXX, etc."
+        },
+        {
+                "title":"blake phone regex",
+                "type":"regex",
+                "exclude":true,
+                "filepath":"filters/regex/ssn_phone_fax/phone001.txt",
+                "notes":"This should remove anything that matches a phone number"
+        },
+        {
+                "title":"second phone regex",
+                "type":"regex",
+                "exclude":true,
+                "filepath":"filters/regex/ssn_phone_fax/phone002.txt",
+                "notes":"This should remove anything that xxx.xxx.xxxx"
+        },
+	{
+                "title":"5 digit pager",
+                "type":"regex",
+                "exclude":true,
+                "filepath":"filters/regex/ssn_phone_fax/pager.txt",
+                "notes":"This should remove anything that matches a pager number"
+        },
+	{
+                "title":"Mr., Ms., etc.",
+                "type":"regex",
+                "exclude":true,
+                "filepath":"filters/regex/salutations/pre_salutations.txt",
+                "notes":"This should remove anything that matches Mr. [name], Ms. [name], etc."
+        },
+        {
+                "title":"M.D., N.P., etc.",
+                "type":"regex",
+                "exclude":true,
+                "filepath":"filters/regex/salutations/post_salutations.txt",
+                "notes":"This should remove anything that matches [name] M.D., etc."
+        },
+	{
+                "title":"Names Blacklist",
+                "type":"set",
+                "exclude":true,
+                "filepath":"filters/blacklists/names_blacklists/names_blacklist_allnames.json",
+                "pos":["NNP"],
+                "notes":"if word is NNP and in blacklist remove"
+        },
+	{
+                "title":"POS MATCHER",
+                "type":"pos_matcher",
+                "exclude":false,
+                "pos":["CD"],
+                "notes":"This will mark safe any CDs that arent included in earlier steps"
+        },
+	{
+    	"title":"No catchall",
+		"type":"regex",
+		"exclude":false,
+		"filepath":"filters/regex/catchall.txt",
+		"notes":"False will turn off catchall, True will turn on catchll (default)"
+	}
+
+
+]
+
+
+
+

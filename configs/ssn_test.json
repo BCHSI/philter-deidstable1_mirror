@@ -1,0 +1,14 @@
+
+[
+	
+	{
+		"title":"ssn_phone_fax",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/ssn_etc/ssn_phone_fax.txt",
+		"notes":"This should remove anything that matches XXX-XX-XXXX, XXX-XXX-XXXX, XXX-XXXXXXXX, etc."
+	}
+
+]
+
+

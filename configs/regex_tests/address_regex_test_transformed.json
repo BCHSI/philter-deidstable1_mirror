@@ -1,0 +1,84 @@
+[
+	
+	{
+		"title":"full street address",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/addresses/full_street_address_transformed.txt",
+		"notes":"This should remove anything that looks like a full street address (numbers and words)",
+		"phi_type":"Provider_Address_or_Location"
+	},
+	{
+		"title":"street number, street name, extension",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/addresses/num_streetname_extension?_transformed.txt",
+		"notes":"This should remove anything that looks like, eg. 15 First Street, Suite 5",
+		"phi_type":"Provider_Address_or_Location"
+	},
+	{
+		"title":"number streetname",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/addresses/num_streetname_transformed.txt",
+		"notes":"This should remove anything that looks like a street address (numbers and words)",
+		"phi_type":"Provider_Address_or_Location"
+	},
+	{
+		"title":"city state zip",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/addresses/city_state_zip_transformed.txt",
+		"notes":"This should remove anything that looks like a partial street address (city, state, zip",
+		"phi_type":"Provider_Address_or_Location"
+	},
+	{
+		"title":"ambiguous city state zip",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/addresses/ambiguous_city_state_zip_transformed.txt",
+		"notes":"This should remove anything that matches a city, state zip pattern with an ambiguous state name",
+		"phi_type":"Provider_Address_or_Location"
+	},
+	{
+		"title":"city state",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/addresses/city_state_transformed.txt",
+		"notes":"This should remove anything that has a city name, followed by a full or abbreviated state name",
+		"phi_type":"Provider_Address_or_Location"
+	},
+	{
+		"title":"city zip",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/addresses/city_zip_transformed.txt",
+		"notes":"This should remove anything that has a city name, followed by a zip code",
+		"phi_type":"Provider_Address_or_Location"
+	},
+	{
+		"title":"in city",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/addresses/in_city_transformed.txt",
+		"notes":"This should remove anything that has a city name"
+	},
+	{
+		"title":"city",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/addresses/city_transformed.txt",
+		"notes":"This should remove anything that has a city name",
+		"phi_type":"Provider_Address_or_Location"
+	},
+	{
+    	"title":"No catchall",
+		"type":"regex",
+		"exclude":false,
+		"filepath":"filters/regex/catchall.txt",
+		"notes":"This should match anything, preventing the catchall",
+		"phi_type":"Provider_Address_or_Location"
+	}
+
+
+]

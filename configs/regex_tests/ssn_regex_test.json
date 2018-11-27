@@ -1,0 +1,49 @@
+
+[
+
+	{
+		"title":"ssn only",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/ssn_phone_fax/ssn.txt",
+		"notes":"This should remove anything that matches XXX-XX-XXXX"
+	},
+	{
+		"title":"ssn_phone_fax",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/ssn_phone_fax/ssn_phone_fax.txt",
+		"notes":"This should remove anything that matches XXX-XX-XXXX, XXX-XXX-XXXX, XXX-XXXXXXXX, etc."
+	},
+	{
+		"title":"blake phone regex",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/ssn_phone_fax/phone001.txt",
+		"notes":"This should remove anything that matches a phone number"
+	},
+	{
+		"title":"second phone regex",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/ssn_phone_fax/phone002.txt",
+		"notes":"This should remove anything that xxx.xxx.xxxx"
+	},
+	{
+		"title":"5 digit pager",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/ssn_phone_fax/pager.txt",
+		"notes":"This should remove anything that matches a pager number"
+	},
+	{
+    	"title":"No catchall",
+		"type":"regex",
+		"exclude":false,
+		"filepath":"filters/regex/catchall.txt",
+		"notes":"This should match anything, preventing the catchall"
+	}
+
+]
+
+

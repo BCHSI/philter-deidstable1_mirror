@@ -1,0 +1,17 @@
+[  
+    {
+        "title":"Whitelist 1",
+        "type":"set",
+        "exclude":false,
+        "filepath":"filters/whitelists/whitelist_090618_nonames.json",
+        "pos":[],
+        "notes":"These are words we beleive are safe"
+    },
+    {
+        "title":"POS MATCHER",
+        "type":"pos_matcher",
+        "exclude":false,
+        "pos":["CD"],
+        "notes":"This will include any CDs that aren't included in earlier steps"
+    }
+]

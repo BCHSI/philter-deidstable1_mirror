@@ -1,0 +1,109 @@
+[		
+    {
+        "title": "u_#_patient",
+        "type": "regex",
+        "exclude": true,
+        "filepath": "filters/regex/salutations/u_#_patient.txt",
+        "note": ""
+    },    
+    {
+        "title": "salutations1",
+        "type": "regex",
+        "exclude": true,
+        "filepath": "filters/regex/salutations/pre_salutations_2chars.txt",
+        "note": ""
+    },
+    {
+        "title": "salutations2",
+        "type": "regex",
+        "exclude": true,
+        "filepath": "filters/regex/salutations/pre_salutations_3chars.txt",
+        "note": ""
+    },
+    {
+        "title": "salutations3",
+        "type": "regex",
+        "exclude": true,
+        "filepath": "filters/regex/salutations/pre_salutations_4chars.txt",
+        "note": ""
+    },
+    {
+        "title": "salutations4",
+        "type": "regex",
+        "exclude": true,
+        "filepath": "filters/regex/salutations/pre_salutations_5chars.txt",
+        "note": ""
+    },
+    {
+        "title": "salutations5",
+        "type": "regex",
+        "exclude": true,
+        "filepath": "filters/regex/salutations/post_salutations_2chars.txt",
+        "note": ""
+    },
+    {
+        "title": "salutations6",
+        "type": "regex",
+        "exclude": true,
+        "filepath": "filters/regex/salutations/post_salutations_3chars.txt",
+        "note": ""
+    },
+    {
+        "title": "salutations7",
+        "type": "regex",
+        "exclude": true,
+        "filepath": "filters/regex/salutations/post_salutations_4chars.txt",
+        "note": ""
+    },
+    {
+        "title": "names patterns",
+        "type": "regex",
+        "exclude": true,
+        "filepath": "filters/regex/salutations/name_patterns.txt",
+        "note": ""
+    },
+    {
+        "title": "ordering md",
+        "type": "regex",
+        "exclude": true,
+        "filepath": "filters/regex/salutations/ordering_md.txt",
+        "note": ""
+    },
+       {
+        "title": "name indicator",
+        "type": "regex",
+        "exclude": true,
+        "filepath": "filters/regex/salutations/name_indicator.txt",
+        "note": ""
+    },
+      {
+        "title": "Names Blacklist",
+        "type": "set",
+        "exclude": true,
+        "filepath": "/data/muenzenk/new_blacklists/names_blacklist_061418_1.json",
+        "pos": [
+        ],
+        "notes": "These are words we believe are not safe"
+    },
+	{
+        "title":"Whitelist",
+        "type":"set",
+        "exclude":false,
+        "filepath":"filters/whitelists/whitelist_061418.json",
+        "pos":[],
+        "notes":"These are words we beleive are safe"
+    },
+   	{
+		"title":"POS MATCHER",
+		"type":"pos_matcher",
+		"exclude":false,
+		"pos":["CD"],
+		"notes":"This will include any CDs that aren't included in earlier steps"
+	}
+
+
+]
+
+
+
+
