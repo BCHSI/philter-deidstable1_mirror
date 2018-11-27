@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2072-12-16
+
+
+MRN: 56817864
+
+CAROLYN HUNTINGTON BAILEY HEALTH CENTER
+468 Kristina Street                                Xia, Jean
+North East, AL 81699                       CHB9278143
+(687) 396-2722                                12-15-72
+
+
+CHIEF COMPLAINT: Ms. Xia is a 53 year old woman who comes in in 
+follow up. She notes that she is still having occasional sweats at 
+night. She is using the clonidine but she can't take it two times a day, 
+it makes her too sleepy, so she takes it about 3:30 towards the end of 
+her workday and then again before she goes to bed. She is having some 
+right lower back pain and otherwise is feeling well.
+
+REVIEW OF SYSTEMS: Negative except as noted. She is also taking the 
+Cozaar which she had been taking before. 
+
+She was called back in today as a result of labs which were done 
+recently which showed hemoglobin A1C of 8.7, an elevated urine 
+microalbuminuria and hypertension which needed follow up.
+
+PHYSICAL EXAMINATION: On exam today, she is well developed and well 
+nourished in no acute distress. Blood pressure 158/116, pulse 80, weight 
+166. Pupils are equal and equally reactive to light. Lids and 
+conjunctiva normal. Retinal fields normal. Disks sharp. Mouth and 
+pharynx without erythema or exudate. No adenopathy or tenderness in the 
+submandibular, cervical, posterior cervical, supraclavicular areas. 
+Heart sounds: S1, S2, with a II/VI systolic murmur heard best at the 
+right sternal border. No rub or gallop. Her chest was clear to 
+auscultation anteriorly and posteriorly with no rales, wheezes or 
+rhonchi. She was clear to percussion. She has normal bowel sounds. Her 
+abdomen was soft and nontender, no mass, organomegaly, and no guarding, 
+no rebound. Her extremities are without edema, cyanosis or clubbing. She 
+has no spine or flank tenderness. Her neck is supple, no bruits. Her 
+skin is essentially quite dry and itchy. She has multiple dark, 
+hyperpigmented, post-inflammatory scarring on her lower extremities. Her 
+mouth and pharynx are without erythema or exudate. 
+
+IMPRESSION/PLAN:
+1. Hypertension. Her blood pressure is really not well controlled. I 
+will add atenolol to her regimen 50mg PO q.d. She drinks one cup of 
+coffee a day and rarely has alcohol although she notes that she will 
+occasionally have one, a scotch, on Friday or Saturday. She does not do 
+drugs. She will return in three week for follow up of her blood 
+pressure and at that time for a physical exam for which she will be due. 
+
+2. Diabetes. The patient had been told in the past that she had diabetes 
+but she was told she did not need any sort of treatment for it. Her 
+creatinine was 0.8 last month and I explained to her that with her 
+elevated hemoglobin at 8.7 she needs treatment. We will start her on 
+Glucophage 500mg PO b.i.d. I expect we will need to increase this and if 
+she tolerates this she should increase it to 1000mg over the next week. 
+I also explained to her that if she does not eat or she is unable to eat 
+or if she is NPO she needs to stop taking this medication. I suggested 
+she actually take it with food to insure that she only takes when she is 
+eating. I gave her a referral to Ophthalmology and to Podiatry. She also 
+requested a glucometer machine and this was ordered for her along with 
+
+CAROLYN HUNTINGTON BAILEY HEALTH CENTER
+592 Kristina Street                                Xia, Jean
+North East, AL 81699                       CHB9278143
+(687) 396-2722                                12-16-72
+Page 2
+
+
+lancets, alcohol wipes and test strips and again she will return in two 
+weeks for follow up.
+
+
+______________________________
+Yolanda Osburn, M.D.
+
+CP:FO:3549 ; DD:12-16-72 ; DT:12-16-72 ; DV:12-16-72 
+
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2072-12-16" TYPE="DATE" comment="" />
+<ID id="P1" start="34" end="42" text="56817864" TYPE="MEDICALRECORD" comment="" />
+<LOCATION id="P2" start="44" end="83" text="CAROLYN HUNTINGTON BAILEY HEALTH CENTER" TYPE="HOSPITAL" comment="" />
+<LOCATION id="P3" start="84" end="103" text="468 Kristina Street" TYPE="STREET" comment="" />
+<NAME id="P4" start="135" end="144" text="Xia, Jean" TYPE="PATIENT" comment="" />
+<LOCATION id="P5" start="145" end="155" text="North East" TYPE="CITY" comment="" />
+<LOCATION id="P6" start="157" end="159" text="AL" TYPE="STATE" comment="" />
+<LOCATION id="P7" start="160" end="165" text="81699" TYPE="ZIP" comment="" />
+<LOCATION id="P8" start="188" end="191" text="CHB" TYPE="HOSPITAL" comment="" />
+<ID id="P9" start="191" end="198" text="9278143" TYPE="MEDICALRECORD" comment="" />
+<CONTACT id="P10" start="199" end="213" text="(687) 396-2722" TYPE="PHONE" comment="" />
+<DATE id="P11" start="245" end="253" text="12-15-72" TYPE="DATE" comment="" />
+<NAME id="P12" start="277" end="280" text="Xia" TYPE="PATIENT" comment="" />
+<AGE id="P13" start="286" end="288" text="53" TYPE="AGE" comment="" />
+<DATE id="P14" start="2320" end="2326" text="Friday" TYPE="DATE" comment="" />
+<DATE id="P15" start="2330" end="2338" text="Saturday" TYPE="DATE" comment="" />
+<LOCATION id="P16" start="3292" end="3331" text="CAROLYN HUNTINGTON BAILEY HEALTH CENTER" TYPE="HOSPITAL" comment="" />
+<LOCATION id="P17" start="3332" end="3351" text="592 Kristina Street" TYPE="STREET" comment="" />
+<NAME id="P18" start="3383" end="3392" text="Xia, Jean" TYPE="PATIENT" comment="" />
+<LOCATION id="P19" start="3393" end="3403" text="North East" TYPE="CITY" comment="" />
+<LOCATION id="P20" start="3405" end="3407" text="AL" TYPE="STATE" comment="" />
+<LOCATION id="P21" start="3408" end="3413" text="81699" TYPE="ZIP" comment="" />
+<LOCATION id="P22" start="3436" end="3439" text="CHB" TYPE="HOSPITAL" comment="" />
+<ID id="P23" start="3439" end="3446" text="9278143" TYPE="MEDICALRECORD" comment="" />
+<CONTACT id="P24" start="3447" end="3461" text="(687) 396-2722" TYPE="PHONE" comment="" />
+<DATE id="P25" start="3493" end="3501" text="12-16-72" TYPE="DATE" comment="" />
+<NAME id="P26" start="3638" end="3652" text="Yolanda Osburn" TYPE="DOCTOR" comment="" />
+<NAME id="P27" start="3660" end="3662" text="CP" TYPE="DOCTOR" comment="" />
+<NAME id="P28" start="3663" end="3665" text="FO" TYPE="DOCTOR" comment="" />
+<ID id="P29" start="3666" end="3670" text="3549" TYPE="IDNUM" comment="" />
+<DATE id="P30" start="3676" end="3684" text="12-16-72" TYPE="DATE" comment="" />
+<DATE id="P31" start="3690" end="3698" text="12-16-72" TYPE="DATE" comment="" />
+<DATE id="P32" start="3704" end="3712" text="12-16-72" TYPE="DATE" comment="" />
+</TAGS>
+</deIdi2b2>

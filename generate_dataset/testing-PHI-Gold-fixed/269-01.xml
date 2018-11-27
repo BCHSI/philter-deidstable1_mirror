@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2112-07-28
+
+
+  
+                        OFFICE VISIT
+                              
+  Dawson, Quinten
+  MR#:  4692758
+  July 28, 2112
+  
+  Return visit.
+  
+  Reason for visit:  A 71-year-old male for comprehensive eval/management of multiple
+  issues.
+  
+  Problems:  
+       1.   Diabetes:  Continues on oral agents since 2087.  A1C is below 7.0 at goal. No
+       hypoglycemia.  Fasting sugars less than 130 on balance.  Has regular follow up.
+       2.   Hypertension:  Blood pressure well controlled on valsartan.  Cardiac ultrasound
+       2111 with normal ejection fraction, no LVH and normal mitral regurg.  Continue
+       current program.
+       3.   Coronary artery disease:  Patient had mildly abnormal stress test with moderate
+       posterior ischemia in 2112. This was done due to exertional shortness of breath.
+       Those symptoms have essentially resolved. He has never used nitroglycerin.  He
+       has gone through the cardiac rehab program. Now put on beta blocker due to
+       patient's preference. No strong indication given. No MI or symptomatic angina.
+       4.   Hyperlipidemia:  Tight control of lipids achieved on Zocor.  LDL less than 100.
+       5.   Stroke: Status-post stroke 2111 with slurred speech and left facial droop.
+       Warfarin recommended for one year at that time for presumed cardiac embolus. 
+       Considered discontinuing this visit.  
+       6.   Anemia: Patient has had a mild hyperproliferative anemia.  Has been seen by Dr.
+       Barr.  This has remained stable.  Bone marrow biopsy nondiagnostic.
+       7.   Hypogonadism:  Patient has been evaluated by Dr. Dominique Stokes.  Placed on
+       AndroGel 2111.  Testosterone levels have improved.  Question if that has
+       improved his fatigue and anemia.
+  
+  Review of systems:  He does have sleep apnea on CPAP.  Has bilateral hearing loss on
+  audiogram. Has some peripheral edema on occasion.  Have recommended support
+  stockings.  Urinalysis today showed greater than 100 red blood cells and he said this was
+  due to penile trauma from tight shorts.  We will repeat this.  He did see blood that day. 
+  He has never seen it since.  He has multiple seborrheic keratoses including on his penis. 
+  He will see Field Crest Care Center.  Otherwise ROS is negative.  
+  
+  Family history:  Mother died of cancer in her 80's of unknown primary.  Father died of
+  stroke in his 80's.  
+  
+  Physical exam:  Weight was 197.  Baseline 190.  Max 210.  Goal 185.  Blood pressure
+  was 140/78.  Pulse 60.  Skin:  normal.  HEENT:  pupils equal and reactive to light. 
+  EOMs full. Fundi normal. Mouth clear.  Neck: JVP6.  Carotids 2+ without bruit.  Thyroid
+  normal.  Nodes:  none.  Chest:  clear lungs.  Cardiac:  S1 and S2 normal.  Grade II/VI 
+  Dawson, Quinten
+  MR#:  4692758
+  July 28, 2112
+  Page Two
+  
+  systolic murmur with mitral regurg.  Abdomen:  no mass or organomegaly.  Extremities: 
+  trace edema.  Pulses full.  Rectal:  mildly enlarged prostate without nodule.  Stool guaiac
+  negative.  
+  
+  Assessment:  Management of all medical problems as above.  Lab work updated
+  including PSA. Colorectal screening up to date with colonoscopy 2108/Dr. Wilkinson.
+  
+  Disposition:    Every four months, 12/12, comprehensive 8/13.  Labs in advance.
+  
+  
+  
+  Gerald Everhart, M.D.
+  Dictated/not read
+  GE/tierney
+  
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2112-07-28" TYPE="DATE" comment="" />
+<NAME id="P1" start="102" end="117" text="Dawson, Quinten" TYPE="PATIENT" comment="" />
+<ID id="P2" start="126" end="133" text="4692758" TYPE="MEDICALRECORD" comment="" />
+<DATE id="P3" start="136" end="149" text="July 28, 2112" TYPE="DATE" comment="" />
+<AGE id="P4" start="195" end="197" text="71" TYPE="AGE" comment="" />
+<DATE id="P5" start="339" end="343" text="2087" TYPE="DATE" comment="" />
+<DATE id="P6" start="561" end="565" text="2111" TYPE="DATE" comment="" />
+<DATE id="P7" start="785" end="789" text="2112" TYPE="DATE" comment="" />
+<DATE id="P8" start="1229" end="1233" text="2111" TYPE="DATE" comment="" />
+<NAME id="P9" start="1507" end="1511" text="Barr" TYPE="DOCTOR" comment="" />
+<NAME id="P10" start="1636" end="1652" text="Dominique Stokes" TYPE="DOCTOR" comment="" />
+<DATE id="P11" start="1681" end="1685" text="2111" TYPE="DATE" comment="" />
+<LOCATION id="P12" start="2245" end="2268" text="Field Crest Care Center" TYPE="HOSPITAL" comment="" />
+<AGE id="P13" start="2351" end="2355" text="80's" TYPE="AGE" comment="" />
+<AGE id="P14" start="2408" end="2412" text="80's" TYPE="AGE" comment="" />
+<NAME id="P15" start="2774" end="2789" text="Dawson, Quinten" TYPE="PATIENT" comment="" />
+<ID id="P16" start="2798" end="2805" text="4692758" TYPE="MEDICALRECORD" comment="" />
+<DATE id="P17" start="2808" end="2821" text="July 28, 2112" TYPE="DATE" comment="" />
+<DATE id="P18" start="3180" end="3184" text="2108" TYPE="DATE" comment="" />
+<NAME id="P19" start="3189" end="3198" text="Wilkinson" TYPE="DOCTOR" comment="" />
+<DATE id="P20" start="3240" end="3245" text="12/12" TYPE="DATE" comment="" />
+<DATE id="P21" start="3261" end="3265" text="8/13" TYPE="DATE" comment="" />
+<NAME id="P22" start="3296" end="3311" text="Gerald Everhart" TYPE="DOCTOR" comment="" />
+<NAME id="P23" start="3340" end="3342" text="GE" TYPE="DOCTOR" comment="" />
+<NAME id="P24" start="3343" end="3350" text="tierney" TYPE="DOCTOR" comment="" />
+</TAGS>
+</deIdi2b2>

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2089-03-11
+
+EDVISIT^89659991^MOSS, DEREK^03/11/89^GODFREY, XAVIER GEORGE
+
+I saw this patient with the resident, Dr. Louvinia Duvall.  Please
+
+see her note for further details.  I confirm that I have
+
+interviewed and examined the patient, reviewed the resident's
+
+documentation on the patient's chart, and discussed the
+
+evaluation, plan of care, and disposition with the patient.
+
+HISTORY OF PRESENT ILLNESS:  The patient is a 78-year-old male
+
+with a history of diabetes, hypertension, atrial fibrillation,
+
+congestive heart failure, prostate cancer, chronic renal
+
+insufficiency, and Parkinson disease previously hospitalized 2
+
+weeks prior for right lower extremity cellulitis, which he had a
+
+PICC line placed, and was discharged to home on vancomycin. 
+
+Since that time, he has had progressively increase in his
+
+creatinines despite decreasing doses of vancomycin.  He was
+
+concerned and requested that the patient to come in for a
+
+possible acute renal failure secondary to the antibiotic.  There
+
+is also concern that cellulitis had worsened, as the patient was
+
+experiencing increasing weakness.  He is denying currently any
+
+fevers, chills, or constitutional symptoms.  His baseline
+
+shortness of breath has been going on for months.  No GI
+
+complaints.  He has had a mild headache, but no visual changes,
+
+no focal motor or sensory loss.
+
+REVIEW OF SYSTEMS: The systems reviewed and found to be negative.
+
+MEDICATIONS:  He has a long list of medications Please see the
+
+chart.
+
+ALLERGIES:  Morphine.
+
+SOCIAL HISTORY:  Reviewed and found to be noncontributory.
+
+FAMILY HISTORY:  Reviewed and found to be noncontributory.
+
+PAST SURGICAL HISTORY:  Cholecystectomy and bilateral total hip
+
+replacement.
+
+PHYSICAL EXAMINATION:  He is awake, alert, nontoxic appearing,
+
+and in no acute distress.  Vital signs reviewed and found to be
+
+within normal limits.  Afebrile at 95.6.  HEENT exam is
+
+unremarkable.  Mucosal membranes are moist.  Neck is supple. 
+
+Lungs are clear bilaterally.  Heart is regular rate and rhythm,
+
+no murmurs or gallops.  Abdomen:  Soft, nondistended, and
+
+nontender with normoactive bowel sounds.  Skin is warm and dry. 
+
+Extremity exam:  He has right lower extremity cellulitis with 2
+
+small ulcerations and serosanguineous drainage is minimal.  No
+
+evidence of pus.  It is about where it was at the start based on
+
+the initial skin markings.
+
+LABORATORY DATA:  Hematocrit of 32.  However, his BUN has been
+
+150 and creatinine of 3.  This has significantly increased from
+
+his baseline of 1.8-2 he has had in the past.  Vancomycin level
+
+was sent.
+
+DIAGNOSIS:  Cellulitis with acute renal insufficiency most likely
+
+secondary to vancomycin.  This was discussed with his primary
+
+care provider.
+
+DISPOSITION:  He is admitted to the Medicine Service.
+
+______________________________
+
+GODFREY, XAVIER GEORGE MD
+
+D: 03/17/89
+
+T: 03/17/89
+
+Dictated By: GODFREY, XAVIER GEORGE
+
+eScription document:7-3638497 BFFocus
+
+ ******** Not reviewed by Attending Physician ********
+
+
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2089-03-11" TYPE="DATE" comment="" />
+<ID id="P1" start="36" end="44" text="89659991" TYPE="MEDICALRECORD" comment="" />
+<NAME id="P2" start="45" end="56" text="MOSS, DEREK" TYPE="PATIENT" comment="" />
+<DATE id="P3" start="57" end="65" text="03/11/89" TYPE="DATE" comment="" />
+<NAME id="P4" start="66" end="88" text="GODFREY, XAVIER GEORGE" TYPE="DOCTOR" comment="" />
+<NAME id="P5" start="132" end="147" text="Louvinia Duvall" TYPE="DOCTOR" comment="" />
+<AGE id="P6" start="443" end="445" text="78" TYPE="AGE" comment="" />
+<NAME id="P7" start="2826" end="2848" text="GODFREY, XAVIER GEORGE" TYPE="DOCTOR" comment="" />
+<DATE id="P8" start="2856" end="2864" text="03/17/89" TYPE="DATE" comment="" />
+<DATE id="P9" start="2869" end="2877" text="03/17/89" TYPE="DATE" comment="" />
+<NAME id="P10" start="2892" end="2914" text="GODFREY, XAVIER GEORGE" TYPE="DOCTOR" comment="" />
+<ID id="P11" start="2936" end="2945" text="7-3638497" TYPE="IDNUM" comment="" />
+</TAGS>
+</deIdi2b2>

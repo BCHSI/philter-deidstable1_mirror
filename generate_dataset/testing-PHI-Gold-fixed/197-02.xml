@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2096-12-29
+
+
+
+NMH GU
+
+Donn Emery
+NMH#:  059-57-26
+
+December 29, 2096
+
+INTERVAL HISTORY:
+
+He has been troubled by increasing shortness of breath, which Dr. Pina, the physician covering for Dr. Park, thought might be related to asbestosis.  He is to see her next on January 15, 2097. 
+
+REVIEW OF SYSTEMS:
+
+General:  Complaint of mild fatigue.  No fevers, chills, or change in appetite.
+HEENT:  No blurred vision, oral ulcers, lesions, thrush, neck swelling, neck stiffness, hoarseness.
+Pulmonary:  No cough, SOB, DOE, hemoptysis, wheezing. 
+Cardiac:  No chest pain, palpitations.
+Gastrointestinal:  No nausea, vomiting, diarrhea, constipation, or abdominal pain.  
+Urologic:  No dysuria, hematuria.
+Lymph Nodes:  No enlarged lymph nodes.
+Musculoskeletal:  No back pain, neck pain, leg pain, or arm pain.
+Hematologic:  No bruising, bleeding or clotting.
+Neurologic:  The neuropathy has become much worse, the left hand worse than the right.  He said that Dr. Pina thought that was likely secondary to his diabetes and made some changes in his medications.  He has had some moderately severe back pain.  
+
+REVIEW OF STUDIES:
+
+Blood studies on November 14, 2096 were satisfactory except for a BUN of 41 with a creatinine of 1.3.  I assume that that will be part of the checking up, which Dr. Pina will be doing.  A chest CT scan on December 22, 2096 showed no change in the small mediastinal nodes, but I will plan, just to be sure, to do a chest CT scan and an abdominal CT scan in six months.  If those studies are stable and satisfactory, I discussed with Mr. Emery the fact that I may not do scans subsequently given the absence of activity of lymphoma, the importance of his other medical conditions, and his advancing age.  
+
+PHYSICAL EXAMINATION:  
+
+Weight:  175 lb. with shoes.
+Blood Pressure:  I did not record a blood pressure, as it was above 160 and because of difficulties getting an accurate reading with a digital machine.  He is to have this checked by Dr. Pina.  
+Skin:  Normal.
+Lymph Nodes:  There was no cervical, axillary, or inguinal lymphadenopathy.  There is an abnormality in the medial left supraclavicular fossa unchanged from several previous examinations.
+Lungs:  Clear. 
+Heart:  Normal.
+Abdomen:  No masses or tenderness.
+Extremities:  No evidence of DVT.  No edema.
+Rectal Exam:  On rectal exam, the prostate was small, without abnormalities. 
+
+IMPRESSION:  
+
+He is having considerable difficulties, which relate both to physical issues described above and the fact that he is living alone.  His wife is in a care facility, which cares for individuals with Alzheimer s disease and this also has taken its toll on him overall.
+
+I will see him next in six months. 
+
+
+Connor Quincy, MD
+
+cc:	Patrick Park, MD
+	Dr. Pina 
+
+
+CQ/earley		65-77827705.doc
+
+Note:  The duration of this visit was 25 minutes with the majority of the time spent in counseling the patient, including a discussion of the current status of his condition.
+
+
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2096-12-29" TYPE="DATE" comment="" />
+<LOCATION id="P1" start="30" end="33" text="NMH" TYPE="HOSPITAL" comment="" />
+<NAME id="P2" start="38" end="48" text="Donn Emery" TYPE="PATIENT" comment="" />
+<LOCATION id="P3" start="49" end="52" text="NMH" TYPE="HOSPITAL" comment="" />
+<ID id="P4" start="56" end="65" text="059-57-26" TYPE="MEDICALRECORD" comment="" />
+<DATE id="P5" start="67" end="84" text="December 29, 2096" TYPE="DATE" comment="" />
+<NAME id="P6" start="171" end="175" text="Pina" TYPE="DOCTOR" comment="" />
+<NAME id="P7" start="208" end="212" text="Park" TYPE="DOCTOR" comment="" />
+<DATE id="P8" start="280" end="296" text="January 15, 2097" TYPE="DATE" comment="" />
+<NAME id="P9" start="972" end="976" text="Pina" TYPE="DOCTOR" comment="" />
+<DATE id="P10" start="1155" end="1172" text="November 14, 2096" TYPE="DATE" comment="" />
+<NAME id="P11" start="1303" end="1307" text="Pina" TYPE="DOCTOR" comment="" />
+<DATE id="P12" start="1343" end="1360" text="December 22, 2096" TYPE="DATE" comment="" />
+<NAME id="P13" start="1574" end="1579" text="Emery" TYPE="PATIENT" comment="" />
+<NAME id="P14" start="1984" end="1988" text="Pina" TYPE="DOCTOR" comment="" />
+<NAME id="P15" start="2706" end="2719" text="Connor Quincy" TYPE="DOCTOR" comment="" />
+<NAME id="P16" start="2729" end="2741" text="Patrick Park" TYPE="DOCTOR" comment="" />
+<NAME id="P17" start="2751" end="2755" text="Pina" TYPE="DOCTOR" comment="" />
+<NAME id="P18" start="2759" end="2761" text="CQ" TYPE="DOCTOR" comment="" />
+<NAME id="P19" start="2762" end="2768" text="earley" TYPE="DOCTOR" comment="" />
+<ID id="P20" start="2770" end="2781" text="65-77827705" TYPE="IDNUM" comment="" />
+</TAGS>
+</deIdi2b2>

@@ -15,7 +15,6 @@ import numpy
 import random
 import string
 
-
 class Philter:
     """ 
         General text filtering class,
@@ -31,7 +30,7 @@ class Philter:
         if "freq_table" in config:
             self.freq_table = config["freq_table"]
         if "initials" in config:
-            self.initials = config["initials"]                     
+            self.initials = config["initials"]   
         if "finpath" in config:
             if not os.path.exists(config["finpath"]):
                 raise Exception("Filepath does not exist", config["finpath"])
@@ -80,7 +79,7 @@ class Philter:
             if not os.path.exists(config["stanford_ner_tagger"]["jar"]):
                 raise Exception("Filepath does not exist", config["stanford_ner_tagger"]["jar"])
             self.stanford_ner_tagger_jar = config["stanford_ner_tagger"]["jar"]
-                #we lazy load our tagger only if there's a corresponding pattern
+        #we lazy load our tagger only if there's a corresponding pattern
         self.stanford_ner_tagger = None
 
         if "cachepos" in config and config["cachepos"]:
@@ -130,7 +129,6 @@ class Philter:
         #create directory for pos data if it doesn't exist
         #pos_path = "./data/pos_data/"
         #self.pos_path = "./data/pos_data/" + self.random_string(10) + "/"
-
 
         #initialize our patterns
         self.init_patterns()
@@ -258,7 +256,6 @@ class Philter:
                     map_set = pickle.load(pickle_file, encoding = 'latin1')
         elif filepath.endswith(".json"):
             map_set = json.loads(open(filepath, "r").read())
-
         else:
             raise Exception("Invalid filteype",filepath)
         return map_set
@@ -497,7 +494,6 @@ class Philter:
     
         self.patterns[pattern_index]["coordinate_map"] = coord_map
 
-
     def match_all(self, filename="", text="", pattern_index=-1):
         """ Simply maps to the entirety of the file """
         if not os.path.exists(filename):
@@ -532,7 +528,6 @@ class Philter:
             pos_set = set(self.patterns[pattern_index]["pos"])
         if len(pos_set) > 0:
             check_pos = True
-
 
         cleaned = self.get_clean(filename,text)
         if check_pos:
@@ -576,8 +571,7 @@ class Philter:
             #advance our start coordinate
             start_coordinate += len(word)
 
-        self.patterns[pattern_index]["coordinate_map"] = coord_map
-  
+        self.patterns[pattern_index]["coordinate_map"] = coord_map  
 
     def map_pos(self, filename="", text="", pattern_index=-1, pre_process= r"[^a-zA-Z0-9]"):
         """ Creates a coordinate mapping of words which match this part of speech (POS)"""
@@ -775,19 +769,16 @@ class Philter:
         if not os.path.exists(out_path):
             raise Exception("File output path does not exist", out_path)
 
-
         #create our final exclude and include maps, priority order
         for root,f in self.folder_walk(in_path):
 
             #keeps a record of all phi coordinates and text for a given file
             # data = {}
-        
+            
             filename = root+f
 
             encoding = self.detect_encoding(filename)
             txt = open(filename,"r", encoding=encoding['encoding']).read()
-
-
 
             #now we transform the text
             fbase, fext = os.path.splitext(f)
@@ -919,7 +910,6 @@ class Philter:
             classifications can be TP, FP, FN, TN 
             corresponding to True Positive, False Positive, False Negative and True Negative
         """
-        
         # print(filename)
         start_coordinate = 0
         for note_word, anno_word in list(zip(note_lst, anno_lst)):
@@ -935,15 +925,12 @@ class Philter:
                 start_coordinate += len(note_word)
                 continue
 
-            
             if phi_matcher.search(anno_word):
                 #this contains phi
                 
-                if note_word == anno_word:
-                    
+                if note_word == anno_word:                    
                     # print(note_word, anno_word,'TP')
                     yield "TP", note_word, start_coordinate
-
                 else:
                     if text_matcher.search(anno_word):
 
@@ -1055,7 +1042,7 @@ class Philter:
         summary_coords = {
             "summary_by_file":{}
         }
-
+        
         all_fn = []
         all_fp = []
 
@@ -1152,7 +1139,6 @@ class Philter:
                         elif c == "TN":
                             true_negatives.append(w)
                             true_negatives_coords.append([w,r])
-
                 #update summary
                 summary["summary_by_file"][philtered_filename] = {"false_positives":false_positives,"false_negatives":false_negatives, "num_false_negatives":len(false_negatives)}
                 summary["total_true_positives"] = summary["total_true_positives"] + len(true_positives)
@@ -2422,5 +2408,4 @@ class Philter:
 
         items.sort(key=lambda x: x["count"], reverse=True)
         json.dump(items, open(sorted_path, "w"), indent=4)
-
 

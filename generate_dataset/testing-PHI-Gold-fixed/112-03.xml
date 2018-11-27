@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2060-05-21
+
+
+
+
+
+
+
+HESS, CLARENCE
+
+64365595
+
+05/21/2060
+
+
+
+
+
+Robert Y. Gordon, M.D.
+
+WMNH Internal Medicine Olney
+
+494 Fairhaven Road
+
+Olney, OH  23751
+
+
+
+Dear Dr. Gordon:
+
+
+
+I had the pleasure of seeing Mr. Hess in followup in Cardiology today.  As you know, he is a 54-year-old gentleman who underwent implantation of a permanent pacemaker on 02/11/2060 for his presyncope and pauses on Holter monitoring.
+
+
+
+His past medical history is significant for hyperlipidemia, gastroesophageal reflux disease, and asthma.  Prior to his pacemaker placement, an exercise stress test was performed because of a history of exertional chest pain.  He was able to exercise for 8 minutes and 4 seconds.  The test was terminated for 7/10 substernal chest pain, but no hypotension or overt ECG changes were noted.  We proceeded to pacemaker implant and Mr. Hess has done well since that time.  He remarks that his intermittent symptoms of lightheadedness have resolved.  However, he occasionally still has nocturnal palpitations as well as occasional exertional chest discomfort.  He tells me that he underwent testing at Wheatland Memorial consisting of a stress test with MIBI imaging that perhaps showed an abnormality, though the report of this test is not available to me today for review.
+
+
+
+Interrogation today of his Medtronic Kappa CTE 226 pacemaker reveals that his underlying rhythm is sinus tachycardia with intact AV conduction.  The estimated longevity on the battery life is 95 months.  The atrial impedance is 544 ohms and the ventricular impedance is 519 ohms.  The P-wave in the atrium is 5.6 mV and the R-wave in the ventricle is 31 mV.  The threshold in the atrium is stable at 0.5 V at 0.4 msec, and the threshold in the ventricle is also stable at 0.5 V at 0.4 msec.
+
+
+
+In summary, the pacemaker appears to be working quite well.  However, Mr. Hess persists in a perplexing sinus tachycardia that has been present since his last pacemaker interrogation.  I have therefore ordered an echocardiogram to rule out any ill effects of the sinus tachycardia or any structural heart disease that may be causing the sinus tachycardia.  In addition, I have performed a 12-lead ECG, which appears to show sinus mechanism rather than an atrial tachycardia.  Today in the office, his sinus rate is 109 beats per minute with stable blood pressure.  Mr. Hess and I have checked thyroid studies in the recent past and those have been unremarkable.  
+
+
+
+I have discussed this case with Dr. Quatrell Swanson who has agreed to assist in Cardiology care for Mr. Hess in the near future, since Dr. Law is moving his practice to the NCHC.  I plan to see Mr. Hess in followup in three months' time for his pacemaker.  If any issues arise in the interim, please do not hesitate to contact me.
+
+
+
+Sincerely,
+
+
+
+
+
+______________________________
+
+Una Trujillo, MD
+
+
+
+
+
+
+
+
+
+
+
+eScription document:4-3989721 UFFocus transcriptionists
+
+
+
+
+
+
+
+DD: 06/02/60
+
+DT: 06/02/60
+
+DV: 05/21/60
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2060-05-21" TYPE="DATE" comment="" />
+<NAME id="P1" start="34" end="48" text="HESS, CLARENCE" TYPE="PATIENT" comment="" />
+<ID id="P2" start="50" end="58" text="64365595" TYPE="MEDICALRECORD" comment="" />
+<DATE id="P3" start="60" end="70" text="05/21/2060" TYPE="DATE" comment="" />
+<NAME id="P4" start="76" end="92" text="Robert Y. Gordon" TYPE="DOCTOR" comment="" />
+<LOCATION id="P5" start="100" end="104" text="WMNH" TYPE="HOSPITAL" comment="" />
+<LOCATION id="P6" start="123" end="128" text="Olney" TYPE="CITY" comment="" />
+<LOCATION id="P7" start="130" end="148" text="494 Fairhaven Road" TYPE="STREET" comment="" />
+<LOCATION id="P8" start="150" end="155" text="Olney" TYPE="CITY" comment="" />
+<LOCATION id="P9" start="157" end="159" text="OH" TYPE="STATE" comment="" />
+<LOCATION id="P10" start="161" end="166" text="23751" TYPE="ZIP" comment="" />
+<NAME id="P11" start="179" end="185" text="Gordon" TYPE="DOCTOR" comment="" />
+<NAME id="P12" start="223" end="227" text="Hess" TYPE="PATIENT" comment="" />
+<AGE id="P14" start="283" end="285" text="54" TYPE="AGE" comment="" />
+<DATE id="P15" start="360" end="370" text="02/11/2060" TYPE="DATE" comment="" />
+<NAME id="P16" start="857" end="861" text="Hess" TYPE="PATIENT" comment="" />
+<LOCATION id="P17" start="1122" end="1140" text="Wheatland Memorial" TYPE="HOSPITAL" comment="" />
+<ID id="P18" start="1341" end="1348" text="CTE 226" TYPE="DEVICE" comment="" />
+<NAME id="P19" start="1866" end="1870" text="Hess" TYPE="PATIENT" comment="" />
+<NAME id="P20" start="2361" end="2365" text="Hess" TYPE="PATIENT" comment="" />
+<NAME id="P21" start="2495" end="2511" text="Quatrell Swanson" TYPE="DOCTOR" comment="" />
+<NAME id="P22" start="2564" end="2568" text="Hess" TYPE="PATIENT" comment="" />
+<NAME id="P23" start="2599" end="2602" text="Law" TYPE="DOCTOR" comment="" />
+<LOCATION id="P24" start="2633" end="2637" text="NCHC" TYPE="HOSPITAL" comment="" />
+<NAME id="P25" start="2658" end="2662" text="Hess" TYPE="PATIENT" comment="" />
+<NAME id="P26" start="2842" end="2854" text="Una Trujillo" TYPE="DOCTOR" comment="" />
+<ID id="P27" start="2890" end="2899" text="4-3989721" TYPE="IDNUM" comment="" />
+<DATE id="P28" start="2937" end="2945" text="06/02/60" TYPE="DATE" comment="" />
+<DATE id="P29" start="2951" end="2959" text="06/02/60" TYPE="DATE" comment="" />
+<DATE id="P30" start="2965" end="2973" text="05/21/60" TYPE="DATE" comment="" />
+</TAGS>
+</deIdi2b2>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2091-12-28
+
+December 28, 2091
+
+
+
+
+
+
+
+Nikkolas Nancy-Jasmine
+
+693-31-18-1
+
+
+
+I saw Nikkolas Nancy-Jasmine today for evaluation concerning his stroke in August 2091.  The information available today is limited to his knowledge of the events.
+
+
+
+He is an 67-year-old Honduran man with a history of diabetes mellitus and HTN.  In August he suffered a stroke.  He reports that his speech was affected and that he developed severe right arm and leg weakness without sensory loss.  He recalls no problem with his vision.  He was hospitalized at Dubuque Obstetrics Gynocology Center.  He does no know the extent of the evaluation.  He was discharged on aspirin to Mitchell County Hospital.  He is now living at home with his wife and son with visiting nurse assistance.  His primary care physician is at Flagler Hospital.  He has severe residual weakness of the right arm and leg.  He also complains of dizziness and an abnormal numbness in his mouth.  The dizziness is worst in the morning.  He also notices a noise in his head when he sleeps.
+
+
+
+He has DM and HTN.  He is a nonsmoker.  I don't have cholesterol information.  There is no history of cardiac disease.  There is no history of alcohol abuse.
+
+
+
+He is currently taking aspirin, insulin, antihypertensive medication of some type and possibly a cholesterol lowering agent, although he is no sure of this.  He has no known allergies.
+
+
+
+He is aware of no significant family history.
+
+
+
+He is married.  He lives with his wife and 22-year-old son.  He came to america from Honduras in 2073.  He worked nights in construction until his stroke.
+
+
+
+Pulse 66, regular.  BP 186/110.  There are no cranial bruits.  The carotid pulses are full with no bruits.  The lungs are clear.  The heart is regular with no murmur.  The abdomen is benign.  The mental state is normal; he speaks Spanish and broken English.  He is able to name, repeat, and comprehend well.  His fluency in his native language is probably normal.  Cranial nerves are intact.  There is severe weakness of the right arm and leg: right interossei and finger flexors 1/5, finger extensors 0/5, biceps 1/5, triceps 0-1/5, deltoid 0-1/5.  (He tries to raise his arm proximally by elevating the shoulder.)  Right iliopsoas 2/5, quadriceps 2/5, hamstrings 1/5, distally 0/5.  The tone is only mildly increased.  Sensation is intact.  Reflexes are slghtly brisker in the right upper extremity (RUE 2+/4, LUE 2/4, knees 2+/4, ankles 2/4).  The right plantar response is mute; he withdraws the left.  Coordination is intact; weakness inhibits adequate testing on the right.  He wears a right AFO.  He can stand up from his wheelchair and bear weight maneuvering himself to the examining table, but he cannot walk unsupported.
+
+
+
+His examination is most consistent with a right equal arm and leg pure motor hemiparesis, sparing the face.  This was likely due to a lacunar infarction in the left basis pontis from small vessel occlusion.  He has major stroke risk factors, including DM, HTN, and probably hypercholesterolemia.  Currently his major needs are to establish good control of his blood pressure and to control other risk factors, including optimtal glucose control and likely medication for hyperlipidemia, and to continue physical and occupational therapy to maximize his functional status.
+
+
+
+To review the studies that were done to investigate his stroke in August, I will request the record of that hospitalization from DOGC.  I will also request his records from his physician at the Flagler Hospital.  He will certainly need an adjustment of his antihypertensive regimen.  He tells me that he is planning to see his PCP for this purpose.  I asked him to return here in a month to review this.
+
+
+
+
+
+Sincerely,
+
+
+
+
+
+
+
+Patrick Winn, M.D.
+
+
+
+
+
+
+
+
+
+
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2091-12-28" TYPE="DATE" comment="" />
+<DATE id="P1" start="28" end="45" text="December 28, 2091" TYPE="DATE" comment="" />
+<NAME id="P2" start="53" end="75" text="Nikkolas Nancy-Jasmine" TYPE="PATIENT" comment="" />
+<ID id="P3" start="77" end="88" text="693-31-18-1" TYPE="MEDICALRECORD" comment="" />
+<NAME id="P4" start="98" end="120" text="Nikkolas Nancy-Jasmine" TYPE="PATIENT" comment="" />
+<DATE id="P5" start="167" end="178" text="August 2091" TYPE="DATE" comment="" />
+<AGE id="P6" start="268" end="270" text="67" TYPE="AGE" comment="" />
+<LOCATION id="P7" start="280" end="288" text="Honduran" TYPE="COUNTRY" comment="" />
+<DATE id="P8" start="342" end="348" text="August" TYPE="DATE" comment="" />
+<LOCATION id="P9" start="554" end="590" text="Dubuque Obstetrics Gynocology Center" TYPE="HOSPITAL" comment="" />
+<LOCATION id="P10" start="672" end="696" text="Mitchell County Hospital" TYPE="HOSPITAL" comment="" />
+<LOCATION id="P11" start="812" end="828" text="Flagler Hospital" TYPE="HOSPITAL" comment="" />
+<AGE id="P12" start="1497" end="1499" text="22" TYPE="AGE" comment="" />
+<LOCATION id="P13" start="1526" end="1533" text="america" TYPE="COUNTRY" comment="" />
+<LOCATION id="P14" start="1539" end="1547" text="Honduras" TYPE="COUNTRY" comment="" />
+<DATE id="P15" start="1551" end="1555" text="2073" TYPE="DATE" comment="" />
+<PROFESSION id="P16" start="1578" end="1590" text="construction" TYPE="PROFESSION" comment="" />
+<LOCATION id="P17" start="1842" end="1849" text="Spanish" TYPE="COUNTRY" comment="" />
+<DATE id="P18" start="3388" end="3394" text="August" TYPE="DATE" comment="" />
+<LOCATION id="P19" start="3451" end="3455" text="DOGC" TYPE="HOSPITAL" comment="" />
+<LOCATION id="P20" start="3516" end="3532" text="Flagler Hospital" TYPE="HOSPITAL" comment="" />
+<NAME id="P21" start="3749" end="3761" text="Patrick Winn" TYPE="DOCTOR" comment="" />
+</TAGS>
+</deIdi2b2>

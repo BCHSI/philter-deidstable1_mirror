@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2089-10-02
+
+
+ORLH
+79 Kessler Farm Drive                                        Nicholas-Xavier, Fred
+White Hall, MN 76715                                      65856594
+(959) 149-6104                                           10/02/89
+
+
+HISTORY OF PRESENT ILLNESS: Mr. Nicholas Xavier is a
+76-year-old male who presented to Orlando Regional this
+evening for diabetes followup.  He denies any known drug
+allergies and at present, he is taking Feratab 300 mg
+t.i.d., Motrin 600 mg q.8h. p.r.n., Benadryl 50 mg q.h.s.
+p.r.n., Zestril 5 mg q.d., glyburide 2.5 mg q.d., and
+aspirin 325 mg q.o.d.  The patient has been followed fairly
+frequently in the clinic recently for diabetic foot ulcers
+on his right foot, between his 4th and 5th toe.  This
+evening, he presents with worsening ulcers in that area and
+also a new ulcer between his 3rd and 4th toes.  It has not
+improved with good skin care and application of bacitracin;
+in fact, it has worsened.
+
+REVIEW OF SYSTEMS: He denies any bleeding with brushing of
+his teeth.  He denies any palpitations or chest pain.  He
+denies any shortness of breath or cough.  He denies any
+nausea, vomiting, diarrhea, or constipation.  He states that
+his bowel movements have become darkened secondary to his
+iron intake.  He denies any symptoms of frequency or
+nocturia, no burning, itching, or pain with urination.  He
+states that he has occasional elbow pain, which is relieved
+with Motrin.
+
+PHYSICAL EXAMINATION: His temperature is 97.8 degrees, his
+pulse is 88, his blood pressure is 135/65, weight is 141
+pounds, and his random blood sugar is 159.  He states that
+he did not take his medication today.  His heart has a
+regular rate and rhythm at 88.  Lungs are clear to
+auscultation bilaterally.  There are bruises noted on his
+right hand and left upper arm, but he states that both of
+these were related to trauma.  Examination of his feet
+revealed his toes to be more reddened and somewhat shiny,
+shinier than previous visits.  They were cool to touch.  On
+his right foot, there was a new dime-sized blister on the
+4th toe, and the toe that bordered his 3rd toe, and on the
+other side.  There was an increase in the size on the toe
+ulcer and also on the ulcer on his 5th toe.  Scant amount of
+drainage was noted from the toe areas.  Mr. Nicholas Xavier
+is vigilant with his foot care and has been so.  This is
+definite worsening of his symptoms.  Posterior tibial pulses
+are present.
+
+ASSESSMENT
+1. Noninsulin-dependent diabetes mellitus.
+2. Diabetic foot ulcers on 4th toe, both sides, and 5th toe.
+
+PLAN: Arterial vascular studies with Doppler imaging to be
+done.  Referral to surgical clinic for evaluation of his
+ulcers.  He was given a prescription for Xeroform gauze to
+be used twice daily and dressing changes were explained to
+him.  He was instructed to return to clinic in one month for
+followup.
+
+
+______________________________
+Ximena Utter, NP
+
+
+CC:
+
+eScription document:0-927126 PQ  Focus
+
+DD: 10/02/89
+DT: 10/03/89
+DV: 10/02/89
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2089-10-02" TYPE="DATE" comment="" />
+<LOCATION id="P1" start="29" end="33" text="ORLH" TYPE="HOSPITAL" comment="" />
+<LOCATION id="P2" start="34" end="55" text="79 Kessler Farm Drive" TYPE="STREET" comment="" />
+<NAME id="P3" start="95" end="116" text="Nicholas-Xavier, Fred" TYPE="PATIENT" comment="" />
+<LOCATION id="P4" start="117" end="127" text="White Hall" TYPE="CITY" comment="" />
+<LOCATION id="P5" start="129" end="131" text="MN" TYPE="STATE" comment="" />
+<LOCATION id="P6" start="132" end="137" text="76715" TYPE="ZIP" comment="" />
+<ID id="P7" start="175" end="183" text="65856594" TYPE="MEDICALRECORD" comment="" />
+<CONTACT id="P8" start="184" end="198" text="(959) 149-6104" TYPE="PHONE" comment="" />
+<DATE id="P9" start="241" end="249" text="10/02/89" TYPE="DATE" comment="" />
+<NAME id="P10" start="284" end="299" text="Nicholas Xavier" TYPE="PATIENT" comment="" />
+<AGE id="P11" start="305" end="307" text="76" TYPE="AGE" comment="" />
+<LOCATION id="P12" start="339" end="355" text="Orlando Regional" TYPE="HOSPITAL" comment="" />
+<NAME id="P13" start="2291" end="2306" text="Nicholas Xavier" TYPE="PATIENT" comment="" />
+<NAME id="P14" start="2893" end="2905" text="Ximena Utter" TYPE="DOCTOR" comment="" />
+<ID id="P15" start="2937" end="2948" text="0-927126 PQ" TYPE="IDNUM" comment="" />
+<DATE id="P16" start="2961" end="2969" text="10/02/89" TYPE="DATE" comment="" />
+<DATE id="P17" start="2974" end="2982" text="10/03/89" TYPE="DATE" comment="" />
+<DATE id="P18" start="2987" end="2995" text="10/02/89" TYPE="DATE" comment="" />
+</TAGS>
+</deIdi2b2>

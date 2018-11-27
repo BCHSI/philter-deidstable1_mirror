@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2067-07-28
+
+                     JELLICO EMERGENCY DEPT VISIT
+ 
+FOY,KEONTE H.   732-35-79-0                   VISIT DATE: 07/28/67
+PRESENTING COMPLAINT:  Chest pain. 
+HISTORY OF PRESENTING COMPLAINT:  The patient was seen in the 
+emergency department with Dr. Holden.  History was reviewed with Dr. 
+Holden and patient.  Briefly, this is a 59 year old gentleman with a 
+past medical history positive for insulin dependent diabetes, CVA, 
+peptic ulcer disease, who presented to the emergency department 
+with acute substernal chest pain radiating to the left arm, 
+positive diaphoresis and shortness of breath, three or four 
+episodes in the last few hours, the last episode lasting 20 
+minutes. 
+REVIEW OF SYSTEMS:  As documented by Dr. Holden. 
+PAST MEDICAL HISTORY:  As documented by Dr. Holden. 
+MEDICATIONS:  As documented by Dr. Holden. 
+ALLERGIES:  As documented by Dr. Holden. 
+SOCIAL HISTORY AND FAMILY HISTORY:  As documented by Dr. Holden. 
+PHYSICAL EXAMINATION:  No acute distress.  Blood pressure is 
+120/100, pulse 100 and regular, respirations 16, afebrile, O2 sat 
+on room air 97%.  Negative HEENT.  Patent airway.  Neck:  Supple, 
+no JVD, nodes or bruits.  Lungs:  Clear, equal breath sounds. 
+Heart:  Regular rate, no murmur.  No chest wall tenderness. 
+Abdomen:  Soft, positive bowel sounds.  Extremities:  No 
+deformities.  Guaiac negative.  Neurologic:  Alert, nonfocal.  The 
+rest of the examination is unremarkable. 
+LABORATORY EVALUATION:  Electrolytes, BUN and creatinine were 
+within normal limits.  Glucose of 26.  CBC negative.  CK 75, 
+troponin 0.  EKG shows hyperacute T wave in V1 and V2. 
+THERAPY RENDERED/COURSE IN ED:  In the emergency department, the 
+patient was treated with IV Heparin, Nitroglycerin, aspirin. 
+Symptoms improved markedly, and he was transferred to the Cardiac 
+Service for further evaluation and treatment. 
+FINAL DIAGNOSIS:  Chest pain, rule out M.I. 
+DISPOSITION (including condition upon discharge):  Total time was 2 
+hours.  Condition on admission stable. 
+___________________________________                    MF916/9742 
+TAYLOR E. INNIS, M.D.  TI56                            D:07/28/67 
+                                                       T:07/28/67 
+Dictated by:  TAYLOR E. INNIS, M.D.  TI56 
+ ******** Not reviewed by Attending Physician ********
+
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2067-07-28" TYPE="DATE" comment="" />
+<LOCATION id="P1" start="49" end="56" text="JELLICO" TYPE="HOSPITAL" comment="" />
+<NAME id="P2" start="80" end="93" text="FOY,KEONTE H." TYPE="PATIENT" comment="" />
+<ID id="P3" start="96" end="107" text="732-35-79-0" TYPE="MEDICALRECORD" comment="" />
+<DATE id="P4" start="138" end="146" text="07/28/67" TYPE="DATE" comment="" />
+<NAME id="P5" start="276" end="282" text="Holden" TYPE="DOCTOR" comment="" />
+<NAME id="P6" start="316" end="322" text="Holden" TYPE="DOCTOR" comment="" />
+<AGE id="P7" start="356" end="358" text="59" TYPE="AGE" comment="" />
+<NAME id="P8" start="753" end="759" text="Holden" TYPE="DOCTOR" comment="" />
+<NAME id="P9" start="806" end="812" text="Holden" TYPE="DOCTOR" comment="" />
+<NAME id="P10" start="850" end="856" text="Holden" TYPE="DOCTOR" comment="" />
+<NAME id="P11" start="892" end="898" text="Holden" TYPE="DOCTOR" comment="" />
+<NAME id="P12" start="958" end="964" text="Holden" TYPE="DOCTOR" comment="" />
+<ID id="P13" start="2087" end="2097" text="MF916/9742" TYPE="IDNUM" comment="" />
+<NAME id="P14" start="2099" end="2114" text="TAYLOR E. INNIS" TYPE="DOCTOR" comment="" />
+<NAME id="P15" start="2122" end="2126" text="TI56" TYPE="USERNAME" comment="" />
+<DATE id="P16" start="2156" end="2164" text="07/28/67" TYPE="DATE" comment="" />
+<DATE id="P17" start="2223" end="2231" text="07/28/67" TYPE="DATE" comment="" />
+<NAME id="P18" start="2247" end="2262" text="TAYLOR E. INNIS" TYPE="DOCTOR" comment="" />
+<NAME id="P19" start="2270" end="2274" text="TI56" TYPE="USERNAME" comment="" />
+</TAGS>
+</deIdi2b2>

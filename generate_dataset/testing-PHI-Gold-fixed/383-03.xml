@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2119-12-22
+
+Radiology H&amp;P
+Pt: WERNER, Brian U
+MRN: 4097229
+Date: 12/22/2119     10:56h
+
+
+CC: elective left carotid artery stent placement
+HPI: 73yo RHM with h/o left PCA stroke (residual right partial visual field cut) and h/o bilateral carotid endarterectomies having recurrent stenosis of left ICA here for elective left ICA stent placement.  He is noted on CTA head/neck on 11/14/19 to have a 'bovine' variant left common carotid artery takeoff (origin of the left CCA from the proximal innominate artery - anatomic variant) for access considerations.
+
+
+ROS: very mild chronic cough, denies f/c/n/v, denies CP or palpitations, denies SOB or abd pain, no recent loss of weight or appetite problems.
+
+
+PMH/PSH: 
+- s/p left CEA 2112
+, s/p right CEA 2114 
+- h/o left PCA stroke 2112
+- h/o vertigo
+- HTN / HL
+- s/p LLE surgery for fracture related to motorcycle accident in 2068 (cannot bend left knee)
+- GERD
+- osteoarthritis
+- h/o elevated transaminases
+- s/p biopsy on 8mm macule of left midcalf (lentigo vs early junctional nevus) in 2116
+- s/p left inguinal hernia repair 2111
+- s/p surgical trigger finger release of left hand Dupuytren's contracture of middle finger
+- question of COPD on inhalers prn, with smoking history (quit smoking in 2100s)
+
+
+MEDICATIONS:
+ASA 325mg daily (took dose this AM)
+Plavix 75mg daily (started &gt;10days ago, took dose this AM)
+Albuterol 2puffs QID prn SOB/wheeze
+Flovent 110mcg inh bid prn SOB/wheeze
+Nifedipine ER 60mg daily
+Niacin ER 500mg qhs
+Ranitidine 150mg BID
+MVI 1tab daily
+
+
+ALLERGIES/ADR:
+Penicillin (rash)
+Lisinopril (cough)
+Atorvastatin (elevated transaminases, myalgias)
+
+
+FMH/SH: father with lung cancer, mother with stroke, brother with strokes in age 50s; ~1ppd since teens, quit smoking in 2100's; rare EtOH; retired mailman; lives with wife Javonna Werner 026-003-5757 or 631-133-0409 in Sayre (KY).
+
+
+EXAM:
+AVSS per report
+Awake/alert, fully oriented x3, appropriately conversant
+PERRL / EOMI, right visual field cut in far lateral right visual field past approximately 60-degrees (right homonymous hemianopsia)
+Face sensation to LT in b/l V123, masseters strong b/l, face strength full b/l, hearing to finger rub b/l
+Voice clear with UML/TML, SCM &amp; shoulder shrugs full strength b/l
+No pronator drift, full strength in BUE/BLE to resistance testing except minimal bending ROM of left knee joint related to old LLE injury from motorcycle accident s/p surgery 2068, gait with LLE limp related to minimal left knee bending
+Sensation to LT in distal BUE/BLE
+Cardiac: S1S2, no murmurs noted
+Lungs: clear to auscultation bilaterally
+Abdomen: soft, NT/ND
+
+
+
+
+A/P:   73yo RHM with h/o left PCA stroke (residual right partial visual field cut) and h/o bilateral carotid endarterectomies having recurrent stenosis of left ICA here for elective left ICA stent placement.  He is noted on CTA head/neck on 11/14/19 to have a 'bovine' variant left common carotid artery takeoff (origin of the left CCA from the proximal innominate artery - anatomic variant) for access considerations.
+
+
+     - Consent with discussion of potential benefits/risks &amp; alternatives discussed with opportunity for questions provided.
+
+
+_____________________________________
+Victor Donovan, MD   (Radiology Fellow)
+Discussed with Dr Landen Mccarthy
+
+
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2119-12-22" TYPE="DATE" comment="" />
+<NAME id="P2" start="50" end="65" text="WERNER, Brian U" TYPE="PATIENT" comment="" />
+<ID id="P3" start="71" end="78" text="4097229" TYPE="MEDICALRECORD" comment="" />
+<DATE id="P4" start="85" end="95" text="12/22/2119" TYPE="DATE" comment="" />
+<AGE id="P5" start="163" end="165" text="73" TYPE="AGE" comment="" />
+<DATE id="P6" start="397" end="405" text="11/14/19" TYPE="DATE" comment="" />
+<DATE id="P7" start="748" end="752" text="2112" TYPE="DATE" comment="" />
+<DATE id="P8" start="769" end="773" text="2114" TYPE="DATE" comment="" />
+<DATE id="P9" start="797" end="801" text="2112" TYPE="DATE" comment="" />
+<DATE id="P10" start="892" end="896" text="2068" TYPE="DATE" comment="" />
+<DATE id="P11" start="1056" end="1060" text="2116" TYPE="DATE" comment="" />
+<DATE id="P12" start="1095" end="1099" text="2111" TYPE="DATE" comment="" />
+<DATE id="P13" start="1266" end="1271" text="2100s" TYPE="DATE" comment="" />
+<AGE id="P14" start="1726" end="1729" text="50s" TYPE="AGE" comment="" />
+<DATE id="P15" start="1766" end="1772" text="2100's" TYPE="DATE" comment="" />
+<PROFESSION id="P16" start="1793" end="1800" text="mailman" TYPE="PROFESSION" comment="" />
+<NAME id="P17" start="1818" end="1832" text="Javonna Werner" TYPE="PATIENT" comment="" />
+<CONTACT id="P18" start="1833" end="1845" text="026-003-5757" TYPE="PHONE" comment="" />
+<CONTACT id="P19" start="1849" end="1861" text="631-133-0409" TYPE="PHONE" comment="" />
+<LOCATION id="P20" start="1865" end="1870" text="Sayre" TYPE="CITY" comment="" />
+<LOCATION id="P21" start="1872" end="1874" text="KY" TYPE="STATE" comment="" />
+<DATE id="P22" start="2441" end="2445" text="2068" TYPE="DATE" comment="" />
+<AGE id="P23" start="2642" end="2644" text="73" TYPE="AGE" comment="" />
+<DATE id="P24" start="2876" end="2884" text="11/14/19" TYPE="DATE" comment="" />
+<NAME id="P25" start="3225" end="3239" text="Victor Donovan" TYPE="DOCTOR" comment="" />
+<NAME id="P27" start="3283" end="3298" text="Landen Mccarthy" TYPE="DOCTOR" comment="" />
+</TAGS>
+</deIdi2b2>

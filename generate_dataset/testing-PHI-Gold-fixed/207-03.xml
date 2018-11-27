@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2081-04-21
+
+58 yo male here for f/u of his various medical issues:
+
+1)CV: admitted 2/81 w/atypical CP (similar admission in recent past). Ruled out. MIBI w/small fixed defect ant/lat wall. EF 61% w/out WMA. Statin changed to Zetia for elevated CK (2412). Last lipid panel 3/17 chol 184, trig 281, HDL 31, LDL 97, VLDL 56. Also continues on Plavix and ASA (for prior stroke), lisinopril.
+
+Will recheck CK and lipid panel.
+
+
+
+2) Neuro: CT 2080 old infarct R caudate region. MRI confirmed R caudate lesion, other small vessel dz (small foci infarcts basal ganglia, few foci increased signal intestity subcortical white matter.) Neuro testing recently showed mild deficits in attention, processing; intellectual capacity superior range. Per Dr. Sims (stroke clinic), lesions on imaging could explain memory problems and slurred speech. Pt continuing on ASA and Plavix. Also Zetia as above.
+
+
+
+3) Depresion: Pt continues on 100 Zoloft (had incr to 200 per pt request but made him "feel funny").  Pt referred to psych, upcoming appt. Ambien QHS.
+
+
+
+3) LFT's: Isoloated Elevated AST (3/18 193, 3/17 62). Will check hep C. and recheck LFT's.
+
+
+
+4) Pilonidal cyst: see separate note dated today.
+
+
+
+5) Health maintenance: Lipids: see above. Sigmoidoscopy 1/20 normal
+
+
+
+6) HTN: stable. Continue lisinopril
+
+
+
+
+
+_____________________________________________
+
+Quiana Lou Qu, M.D.
+
+
+
+
+
+
+
+
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2081-04-21" TYPE="DATE" comment="" />
+<AGE id="P1" start="28" end="30" text="58" TYPE="AGE" comment="" />
+<DATE id="P2" start="99" end="103" text="2/81" TYPE="DATE" comment="" />
+<DATE id="P3" start="288" end="292" text="3/17" TYPE="DATE" comment="" />
+<DATE id="P4" start="453" end="457" text="2080" TYPE="DATE" comment="" />
+<NAME id="P5" start="757" end="761" text="Sims" TYPE="DOCTOR" comment="" />
+<DATE id="P6" start="1093" end="1097" text="3/18" TYPE="DATE" comment="" />
+<DATE id="P7" start="1103" end="1107" text="3/17" TYPE="DATE" comment="" />
+<DATE id="P8" start="1262" end="1266" text="1/20" TYPE="DATE" comment="" />
+<NAME id="P9" start="1365" end="1378" text="Quiana Lou Qu" TYPE="DOCTOR" comment="" />
+</TAGS>
+</deIdi2b2>

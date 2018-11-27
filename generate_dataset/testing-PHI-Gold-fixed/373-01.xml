@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2081-01-05
+
+Reason for Visit: 72 yo M with Stage 3B lymphocyte depleted Hodgkin's who presents for cycle 3B of ABVD chemotherapy.
+
+
+
+Oncology History: 
+
+
+
+Mr. Jimenez developed fevers, drenching night sweats, and a 15 pound weight loss in September of 2080.  He was admitted to LCH on 10/11/80 at which point a fever workup was negative but CT scans revealed bulky lymphadenopaty in his neck and abdomen as well as splenomegaly.  He underwent an excitional biopsy of a R supraclav node which was positive for lymphocyte depleted HD.  A gallium scan and a PET scan were negative except for the biopsy site. He was started on ABVD chemotherapy prior to discharge.  He has tolerated chemotherapy well, receiving 5 days of G-CSF with each half-cycle of chemotherapy.
+
+
+
+Interval History: 
+
+
+
+Tolerated cycle 3A of chemotherapy well.  He has had no F/C/N/V/SOB.  He has had a mild increase in his level of fatigue.  He continues to go to the library daily.  He continues to have pain in the R side of his chest as he has had for the past month.
+
+
+
+PMH: 
+
+
+
+Diabetes mellitus
+
+Hyperplastic colonic polyp and internal hemorrhoids
+
+Lacunar CVA in 3/78 for which he is maintained on coumadin
+
+50-70% occlusion of R ICA
+
+HTN
+
+Hypercholesterolemia
+
+
+
+FH/SH: 
+
+
+
+Father had colon Ca age 74.  Mother died age 89.  Sister had breast cancer age 78.
+
+Pt lives alone and has 2 daughters who live nearby on the same street.  Former Computer and Network Operator.  Smoked 1 PPD x 20 years, but stopped many years ago.  Occ EtOH.
+
+
+
+ROS-Toxicities: 
+
+
+
+General: No weight loss, fatigue, fevers, chills, change in appetite
+
+Respiratory: No cough, SOB, DOE, hemoptysis, wheezing
+
+HEENT: No neck swelling, neck stiffness, hoarseness
+
+Cardiac: No chest pain, palpitations, arrythmias, valve disease
+
+Gastrointestinal: No nausea, vomiting, diarrhea, constipation, bleeding
+
+Neurologic: No seizures, headache, weakness, numbness/tingling
+
+Lymph nodes: No enlarged lymph nodes
+
+Musculoskeletal: No back pain, neck pain, leg pain, arm pain
+
+Urologic: No hematuria, dysuria, or obstruction
+
+Endocrine: No adrenal, thyroid or parathyroid disease
+
+Hematologic: No bruising, clotting, bleeding
+
+
+
+
+
+MEDICATIONS
+
+
+
+GLYBURIDE   5MG  1 Tablet(s) PO BID 
+
+IRON SULFATE (FERROUS SULFATE)   325MG  1 Tablet(s) PO TID 
+
+COUMADIN (WARFARIN SODIUM)   7.5MG  1 Tablet(s) PO QPM 
+
+PRINIVIL (LISINOPRIL)   10MG  1 Tablet(s) PO QD 
+
+FOLATE (FOLIC ACID)   1MG  1 Tablet(s) PO QD 
+
+PROCRIT (EPOETIN ALFA) 40000 U     SC QWEEK 
+
+ZANTAC (RANITIDINE HCL)   150MG  1 Tablet(s) PO BID 
+
+
+
+
+
+ALLERGY: NKDA    
+
+
+
+Physical Examination: 
+
+
+
+VSS AF-PS=1
+
+Neck: no nodes palpable
+
+HEENT: No thrush or mucositis
+
+Skin: no rash
+
+Ext: without edema, clubbing
+
+Cor: S1 S2
+
+Chest: clear lungs
+
+Abdomen: soft, NT no HSM
+
+Nodes: neg cerv, sc
+
+Neuro: grossly non-focal
+
+Portacath site: no erythema, tenderness
+
+
+
+Assessment and Plan: 
+
+
+
+72 yo M with lymphocyte depleted HD, at least stage IIIB who presents to clinic today for cycle 3B of ABVD chemotherapy.  He continues to tolerate his therapy well.  He will be treated today with Adriamycin 25 mg/m2, bleomycin 10 U/m2, vinblastine 6 mg/m2, and dacarbazine 375 mg/m2. 
+
+He will take neupogen 480 ucg SC QD for the next 5 days starting tomorrow.
+
+His DLCO was checked prior to his 3rd cycle of chemotherapy and was 93% predicted.  It will be rechecked prior to his 5th cycle of chemotherapy.
+
+We will continue to check his INR as he looks for a new PCP.
+
+He has an elevated glucose and he admitted to a very poor diet.  He agreed to improve his diabetic diet and refused meeting with a dietician.
+
+
+
+cc: 
+
+
+
+
+
+
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2081-01-05" TYPE="DATE" comment="" />
+<AGE id="P1" start="46" end="48" text="72" TYPE="AGE" comment="" />
+<NAME id="P2" start="175" end="182" text="Jimenez" TYPE="PATIENT" comment="" />
+<DATE id="P3" start="255" end="272" text="September of 2080" TYPE="DATE" comment="" />
+<LOCATION id="P4" start="294" end="297" text="LCH" TYPE="HOSPITAL" comment="" />
+<DATE id="P5" start="301" end="309" text="10/11/80" TYPE="DATE" comment="" />
+<LOCATION id="P6" start="949" end="960" text="the library" TYPE="ORGANIZATION" comment="" />
+<DATE id="P7" start="1155" end="1159" text="3/78" TYPE="DATE" comment="" />
+<AGE id="P8" start="1291" end="1293" text="74" TYPE="AGE" comment="" />
+<AGE id="P9" start="1312" end="1314" text="89" TYPE="AGE" comment="" />
+<AGE id="P10" start="1346" end="1348" text="78" TYPE="AGE" comment="" />
+<PROFESSION id="P11" start="1430" end="1459" text="Computer and Network Operator" TYPE="PROFESSION" comment="" />
+<AGE id="P12" start="2889" end="2891" text="72" TYPE="AGE" comment="" />
+</TAGS>
+</deIdi2b2>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2096-10-04
+
+Graydon Harold Jean, MD 
+Nevada Hospital
+Internal Medicine 72 Dan Chan
+Angels City, NH 31731
+
+
+Dear Dr. Jean:
+
+
+
+
+ 
+
+Your patient Henry Oswaldo was seen today by myself at the Atmore Community Hospital today following coronary artery bypass on August 15, 2096 .  He has had a relatively unremarkable recovery with out complication.  Today,  Mr. Oswaldo  looks and feels well, and complains of no issues.    On examination, the lungs are clear, cardiac rate and rhythm are normal. The  incision is healing very nicely.   
+
+
+Chest radiograph reveals normal findings.  EKG shows no acute changes and is basically normal.  His rate is mildly elevated today despite being on a beta blocker. 
+
+
+Patient education was completed with respect to:  medication review, weight restriction/lifting/activities, cardiac rehabilitation.
+
+
+Overall, I am quite pleased with progress.   He has increased activity and should plan to enroll in cardiac rehabilitation in a few weeks.  He  seems to be making an excellent recovery from surgery.  
+
+
+Thank you for the privilege of participating in the care of this very nice gentleman.  I am confident the surgery will afford  significant and lasting benefit and relief from symptoms of angina .  I would consider increasing his Toprol dose, but will leave this to your discretion if his rate remains elevated in follow-up. I am releasing  him to your care.  We would be happy to see him at any time in the future, if you should so desire.  
+
+
+
+With warm regards,  
+
+
+Sincerely yours,
+
+
+
+
+
+
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2096-10-04" TYPE="DATE" comment="" />
+<NAME id="P1" start="28" end="47" text="Graydon Harold Jean" TYPE="DOCTOR" comment="" />
+<LOCATION id="P2" start="53" end="68" text="Nevada Hospital" TYPE="HOSPITAL" comment="" />
+<LOCATION id="P4" start="87" end="98" text="72 Dan Chan" TYPE="STREET" comment="" />
+<LOCATION id="P5" start="99" end="110" text="Angels City" TYPE="CITY" comment="" />
+<LOCATION id="P6" start="112" end="114" text="NH" TYPE="STATE" comment="" />
+<LOCATION id="P7" start="115" end="120" text="31731" TYPE="ZIP" comment="" />
+<NAME id="P8" start="132" end="136" text="Jean" TYPE="DOCTOR" comment="" />
+<NAME id="P9" start="158" end="171" text="Henry Oswaldo" TYPE="PATIENT" comment="" />
+<LOCATION id="P10" start="204" end="229" text="Atmore Community Hospital" TYPE="HOSPITAL" comment="" />
+<DATE id="P11" start="272" end="287" text="August 15, 2096" TYPE="DATE" comment="" />
+<NAME id="P12" start="373" end="380" text="Oswaldo" TYPE="PATIENT" comment="" />
+</TAGS>
+</deIdi2b2>

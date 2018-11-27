@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2114-09-25
+
+
+
+
+
+
+
+NAME:    Werner, Brian 
+
+MRN:      4097229
+
+
+
+Last week he had a right carotid endarterectomy. Initially, he had some hoarseness. It
+
+went away but now it has returned. He did have a period of 100.4 while at home and
+
+has felt a little chilled. He is still hoarse today. He feels a little achy in the joints.
+
+
+
+Medications
+
+Albuterol INHALER 1-2 PUFF INH QID PRN , Take as directed 
+
+Zestril (LISINOPRIL) 30MG TABLET take 1 Tablet(s) PO QD 
+
+Lipitor (ATORVASTATIN) 10MG TABLET take 1 Tablet(s) PO QD 
+
+Hctz (HYDROCHLOROTHIAZIDE) 12.5MG CAPSULE take 1 Capsule(s) PO QD , THIS WAS FAXED TO YOU ON 5/8/14
+
+Coumadin (WARFARIN SODIUM) 5MG TABLET take 1.5 Tablet(s) PO QPM 
+
+Salsalate 750MG TABLET take 1 Tablet(s) PO BID PRN 
+
+Flonase NASAL SPRAY (FLUTICASONE NASAL SPRAY) 1-2 SPRAY (50MCG SPRAY ) NAS BID 
+
+
+
+Problems
+
+Hypertension 
+
+Osteoathritis 
+
+Gastroesophageal reflux disease 
+
+Diverticulitis 
+
+Cerebrovascular accident : L cerebellar 2112, s/p L CEA
+
+Lung nodule : Repeat chest CT 10/14. 
+
+
+
+Allergies
+
+Penicillins - Rash, 
+
+Penicillins - Rash 
+
+
+
+Vital Signs
+
+BP 140/78, P 76, Temp 98.1 F
+
+
+
+On exam, he is hoarse. Temperature is 98.1, however. Throat is clear. His right CEA
+
+is clean. Heart: Regular rate and rhythm, no murmurs, gallops or rubs. Lungs clear.  
+
+
+
+ASSESSMENT AND PLAN:  
+
+
+
+(1)  Bronchitis/laryngitis. Chest x-ray today is clear. I elected to go ahead and treat
+
+     him with doxycycline 100 mg b.i.d. for the next 10 days. He does have
+
+     follow-up with his neurosurgeon in the next 10 days or so.
+
+
+
+(2)  Health maintenance. Double check on LFTs and A1c since his LFTs and blood
+
+     sugars were up in the hospital. Also check a CBC.
+
+ 
+
+ 
+
+Thomas D. Kinney, M.D.
+
+
+
+TDK/gillis/dougherty
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2114-09-25" TYPE="DATE" comment="" />
+<NAME id="P1" start="43" end="56" text="Werner, Brian" TYPE="PATIENT" comment="" />
+<ID id="P2" start="69" end="76" text="4097229" TYPE="MEDICALRECORD" comment="" />
+<DATE id="P3" start="630" end="636" text="5/8/14" TYPE="DATE" comment="" />
+<DATE id="P4" start="972" end="976" text="2112" TYPE="DATE" comment="" />
+<DATE id="P5" start="1019" end="1024" text="10/14" TYPE="DATE" comment="" />
+<NAME id="P6" start="1705" end="1721" text="Thomas D. Kinney" TYPE="DOCTOR" comment="" />
+<NAME id="P7" start="1731" end="1734" text="TDK" TYPE="USERNAME" comment="" />
+<NAME id="P8" start="1735" end="1741" text="gillis" TYPE="DOCTOR" comment="" />
+<NAME id="P9" start="1742" end="1751" text="dougherty" TYPE="DOCTOR" comment="" />
+</TAGS>
+</deIdi2b2>

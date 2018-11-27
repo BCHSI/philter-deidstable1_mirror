@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2080-06-04
+
+EDVISIT^72841920^MULLINS, DOLORES^06/04/80^KROLL, OLIVIA
+
+The patient was seen in conjunction with the PA.  This is a
+
+shared visit.  I confirm I have interviewed and examined the
+
+patient.
+
+CHIEF COMPLAINT:  Rule out CVA.
+
+HISTORY OF PRESENT ILLNESS:  Briefly, this is a 70-year-old
+
+female with hypertension, hypercholesteremia, and diabetes who
+
+was found by a neighbor at approximately 9:30 this morning,
+
+nonverbal with right-sided facial droop.  The patient was seated
+
+in the chair upon EMS arrival.  Per the neighbor who had returned
+
+from vacation, went up to check on her and found her this way,
+
+nonverbal, seated in a chair, but consciousness.  Per EMS, the
+
+patient was responding to commands, able to stand, had symmetric
+
+handgrips, unknown when she was last seen normal.  Per the
+
+neighbor, the patient's baseline is alert and oriented. 
+
+Fingerstick in the field was 179.
+
+PAST MEDICAL HISTORY:  As stated per HPI and written chart.
+
+SOCIAL HISTORY:  Unknown.
+
+FAMILY HISTORY:  Unknown.
+
+REVIEW OF SYSTEMS:  Limited secondary to the patient's medical
+
+condition and severity.
+
+MEDICATIONS:  Per medication list.
+
+ALLERGIES:  Tetanus per old medical records.
+
+PHYSICAL EXAMINATION:  Blood pressure 216/76, pulse is 68, and O2
+
+saturation 99%.  HEENT:  Atraumatic with left pupil defect. 
+
+Lungs:  Equal and bilateral.  Cardiovascular:  S1 and S2. 
+
+Abdomen:  Soft and nontender.  Skin:  Intact, warm, and dry. 
+
+Neurologic:  Right-sided facial droop, bilateral hand grip. 
+
+Normal plantar flexion able to sit up, and following commands.
+
+IMAGING STUDIED:  EKG normal sinus, no acute ST segment
+
+elevation.
+
+LABORATORY DATA:  Chemistries are remarkable for creatinine of
+
+2.8, sodium and chloride pending.  Bicarbonate of 22.  CK 256
+
+with a MB of 4, troponin negative.  No white count, hematocrit of
+
+34, and platelets of 410,000.  INR 1.1.  UA showed 3+ protein, no
+
+leukocyte esterase, nitrites.
+
+EMERGENCY DEPARTMENT COURSE:  Upon the patient's arrival in
+
+Emergency Department, Stroke team was paged, underwent a stat
+
+head CT, which showed no bleed, but a question of a hypodensity. 
+
+The patient sent her for an urgent MRI/MRA and will be admitted
+
+to the Neurology Service.
+
+PRIMARY DIAGNOSIS:  CVA.
+
+SECONDARY DIAGNOSES:  Diabetes and hypertension.
+
+DISPOSITION:  Plan for admission to Neurology Service.
+
+Please see written chart and nurse's note.  Old HHMR records
+
+reviewed.
+
+______________________________
+
+KROLL, OLIVIA M.D.
+
+D: 06/04/80
+
+T: 06/04/80
+
+Dictated By: KROLL, OLIVIA
+
+eScription document:7-1892564 BFFocus
+
+ ******** Not reviewed by Attending Physician ********
+
+
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2080-06-04" TYPE="DATE" comment="" />
+<ID id="P1" start="36" end="44" text="72841920" TYPE="MEDICALRECORD" comment="" />
+<NAME id="P2" start="45" end="61" text="MULLINS, DOLORES" TYPE="PATIENT" comment="" />
+<DATE id="P3" start="62" end="70" text="06/04/80" TYPE="DATE" comment="" />
+<NAME id="P4" start="71" end="84" text="KROLL, OLIVIA" TYPE="DOCTOR" comment="" />
+<AGE id="P5" start="300" end="302" text="70" TYPE="AGE" comment="" />
+<LOCATION id="P6" start="2406" end="2410" text="HHMR" TYPE="HOSPITAL" comment="" />
+<NAME id="P7" start="2463" end="2476" text="KROLL, OLIVIA" TYPE="DOCTOR" comment="" />
+<DATE id="P8" start="2486" end="2494" text="06/04/80" TYPE="DATE" comment="" />
+<DATE id="P9" start="2499" end="2507" text="06/04/80" TYPE="DATE" comment="" />
+<NAME id="P10" start="2522" end="2535" text="KROLL, OLIVIA" TYPE="DOCTOR" comment="" />
+<ID id="P11" start="2557" end="2566" text="7-1892564" TYPE="IDNUM" comment="" />
+</TAGS>
+</deIdi2b2>

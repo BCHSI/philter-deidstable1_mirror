@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2093-06-12
+
+
+Dutch
+19 Tamworth Place                                        TRENT, SHIRLEY
+Galena, MN 64864                                      99210914
+(676) 312-7662                                           06/12/93
+
+
+HISTORY OF PRESENT ILLNESS:  Ms. Trent is 69, a pleasant lady who is now a widow well known to me for her insulin-dependent diabetes and her poor compliance with treatment.  In the past, she also has experienced upper GI bleeding due to a peptic ulcer and has undergone cholecystectomy as well as lobectomy for carcinoma of the lung.
+
+CURRENT MEDICATIONS:  Humulin N 25 units in the morning.  She is supposed to be using 28 units in the morning and 8 units in the evening depending on blood sugars.  She also has been prescribed an ACE inhibitor and a beta blocker, which she has neglected to take.  Her last visit to the practice was in September of last year.
+
+At the time of her last visit, I referred to vascular surgery because of claudication of the right leg.  She underwent a femoral public TL bypass in December and did well postoperatively.  She was discharged on simvastatin, Plavix, as well as atenolol and lisinopril.  She abandoned all tablets on her own and did not come for her followup appointment with us.  Today, she tells me that claudication in the right leg has disappeared completely but during the past two months, she has begun noticing pain in the left leg after 10-15 minutes of walking which forces her to stop.  An arteriogram carried out in September of last year showed mild diffuse disease involving the left common iliac, external iliac, and common femoral arteries.  She did not have symptoms on the left side at the time.
+
+The patient denies chest pain, palpitation, shortness of breath, orthopnea, and ankle edema.  Prior to her bypass surgery on the right leg, she underwent a Persantine MIBI which showed only 1 mm ST depressions and was considered not diagnostic.
+
+Ms. Trent has experienced some polyuria and mild polydipsia and has two times nocturia.  She denies dysuria.  The last hemoglobin A1c was 8.4 in September of last year.  At that time, her serum cholesterol was 238, HDL was 59, and triglycerides were 263.
+
+PHYSICAL EXAMINATION:  Today, she is pleasant and talkative.  Her weight is 127-1/2 pounds, blood pressure 180/76, and heart rate is 96.  Oxygen saturation 100% on room air.  Random fingerstick glucose is 202.  Extraocular movements are full.  The thyroid is not enlarged.  The neck veins are flat.  The chest is clear to auscultation.  The breasts are free of masses.  There is no axillary lymphadenopathy.  The heart sounds are regular.  There are no rubs or gallops.  There is a midline abdominal scar which corresponds to an old operation for peptic ulcer.  There is also a right upper quadrant cholecystectomy scar which is surrounded by a mass, which has been present in the past that probably represents fibrosis under the scar.  No other masses are palpable.  The lower extremities are free of edema.  I do not palpate the pulse except in the dorsalis pedis area of the right side, but there are no trophic changes and the skin is warm and pink.
+
+ASSESSMENT AND PLAN:  A 69-year-old widow lady with moderately controlled insulin-dependent diabetes and hyperlipidemia.  She has not been compliant with her medications.  She has suffered from peripheral vascular disease and claudication in the past underwent a bypass surgery on the right lower extremity in October of last year.  She now has mild symptoms of claudication on the left.  She continues to consume three or four beers a day.  The relationship to her vascular atherosclerosis is not clear.  Liver function in the past has been normal and she does not have significant proteinuria.  Today, I have repeated her hemoglobin A1c, comprehensive panel, CBC, and urine analysis.  I have spent 20 minutes speaking to her and to her daughter concerning the importance of compliance and explaining the rationale for the lisinopril.  I have prescribed Lipitor 10 mg p.o. q.d., lisinopril 10 mg p.o. q.d., and enteric-coated aspirin 81 mg p.o. q.d. She is also to take a multivitamin q.d.  I will see her again after the above test results to decide whether we need to adjust her medications.  I have increased her insulin to 28 units every morning.  She will come to see the nurse practitioner in three days' time to learn how to use a glucometer and to review diabetes care.  An electrocardiogram will be obtained and a consultation will be arranged with vascular surgery concerning the claudication now on the left leg.
+
+
+
+
+
+______________________________
+Rose Irvin-Ly, M.D.
+
+
+Dictated By: Rose Irvin-Ly
+
+
+eScription document:0-2524422 EMSSten Tel
+
+
+
+DD: 06/12/93
+DT: 06/13/93
+DV: 06/12/93
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2093-06-12" TYPE="DATE" comment="" />
+<LOCATION id="P1" start="29" end="34" text="Dutch" TYPE="COUNTRY" comment="" />
+<LOCATION id="P2" start="35" end="52" text="19 Tamworth Place" TYPE="STREET" comment="" />
+<NAME id="P3" start="92" end="106" text="TRENT, SHIRLEY" TYPE="PATIENT" comment="" />
+<LOCATION id="P4" start="107" end="113" text="Galena" TYPE="CITY" comment="" />
+<LOCATION id="P5" start="115" end="117" text="MN" TYPE="STATE" comment="" />
+<LOCATION id="P6" start="118" end="123" text="64864" TYPE="ZIP" comment="" />
+<ID id="P7" start="161" end="169" text="99210914" TYPE="MEDICALRECORD" comment="" />
+<CONTACT id="P8" start="170" end="184" text="(676) 312-7662" TYPE="PHONE" comment="" />
+<DATE id="P9" start="227" end="235" text="06/12/93" TYPE="DATE" comment="" />
+<NAME id="P10" start="271" end="276" text="Trent" TYPE="PATIENT" comment="" />
+<AGE id="P11" start="280" end="282" text="69" TYPE="AGE" comment="" />
+<DATE id="P12" start="876" end="885" text="September" TYPE="DATE" comment="" />
+<DATE id="P13" start="1050" end="1058" text="December" TYPE="DATE" comment="" />
+<DATE id="P14" start="1509" end="1518" text="September" TYPE="DATE" comment="" />
+<NAME id="P15" start="1946" end="1951" text="Trent" TYPE="PATIENT" comment="" />
+<DATE id="P16" start="2087" end="2096" text="September" TYPE="DATE" comment="" />
+<AGE id="P17" start="3177" end="3179" text="69" TYPE="AGE" comment="" />
+<DATE id="P18" start="3463" end="3470" text="October" TYPE="DATE" comment="" />
+<NAME id="P19" start="4614" end="4627" text="Rose Irvin-Ly" TYPE="DOCTOR" comment="" />
+<NAME id="P20" start="4649" end="4662" text="Rose Irvin-Ly" TYPE="DOCTOR" comment="" />
+<ID id="P21" start="4685" end="4694" text="0-2524422" TYPE="IDNUM" comment="" />
+<DATE id="P22" start="4714" end="4722" text="06/12/93" TYPE="DATE" comment="" />
+<DATE id="P23" start="4727" end="4735" text="06/13/93" TYPE="DATE" comment="" />
+<DATE id="P24" start="4740" end="4748" text="06/12/93" TYPE="DATE" comment="" />
+</TAGS>
+</deIdi2b2>

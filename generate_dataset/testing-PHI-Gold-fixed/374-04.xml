@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2134-01-05
+
+
+
+ 
+                                                                                                      698-77-76
+
+                                                                                                      Mckee, Norma
+
+
+
+January 5, 2134  Endocrine/Diabetes
+
+
+
+Present Illness:  
+
+Ms. Mckee thinks that she will be discharged today. If so, we must be confident that she is able to draw up and inject insulin reliably. She will also needs prescriptions for metformin, 
+insulin syringes (give her 1 cc syringes), NPH and Regular insulins. She apparently has glucose testing material at home. Will start with the following regimen, in addition to metformin 500 mg bid. She will follow up with her PCP, 
+Dr. Robert Xenakis.
+
+
+
+Before Breakfast:
+
+
+
+NPH        30 Units
+
+
+
+Regular      8 Units                  Blood Sugar under 101
+
+                10 Units                  101-150
+
+                12 Units                  151-200
+
+                14 Units                  201-250
+
+                16 Units                  251-300
+
+                18 Units                  301-350
+
+                20 Units                  351-400
+
+                22 Units                  Over 400
+
+
+
+
+
+Before Supper:
+
+
+
+Regular      8 Units                  Blood Sugar under 101
+
+                10 Units                  101-150
+
+                12 Units                  151-200
+
+                14 Units                  201-250
+
+                16 Units                  251-300
+
+                18 Units                  301-350
+
+                20 Units                  351-400
+
+
+
+&#183;         This is only an initial set of guidelines. The doses will have to be adjusted based on experience, diet, exercise, and illness.
+
+&#183;         Goal is to have blood sugars before meals in the 90-130 range and blood sugars at bedtime in the 110-140 range.
+
+&#183;         Check blood sugars initially before meals and at bedtime each day. Record the times, blood sugars, insulin doses and all food on the sheets provided and bring these sheets to your medical appointments.
+
+&#183;         Call Dr. Xenakis&#8217;s office for any blood sugars under 70, or any symptoms of hypoglycemia (low blood sugars).
+
+&#183;         Also call if blood sugars are often over 180.
+
+
+
+
+
+                                                                                    Elliot N. Xi, M.D., Ph.D.
+
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2134-01-05" TYPE="DATE" comment="" />
+<ID id="P1" start="134" end="143" text="698-77-76" TYPE="MEDICALRECORD" comment="" />
+<NAME id="P2" start="247" end="259" text="Mckee, Norma" TYPE="PATIENT" comment="" />
+<DATE id="P3" start="263" end="278" text="January 5, 2134" TYPE="DATE" comment="" />
+<NAME id="P4" start="326" end="331" text="Mckee" TYPE="PATIENT" comment="" />
+<NAME id="P5" start="745" end="759" text="Robert Xenakis" TYPE="DOCTOR" comment="" />
+<NAME id="P6" start="2132" end="2139" text="Xenakis" TYPE="DOCTOR" comment="" />
+<NAME id="P7" start="2389" end="2401" text="Elliot N. Xi" TYPE="DOCTOR" comment="" />
+</TAGS>
+</deIdi2b2>

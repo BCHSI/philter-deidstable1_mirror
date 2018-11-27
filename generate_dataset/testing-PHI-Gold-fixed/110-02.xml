@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2075-01-07
+
+
+
+
+
+NAME:    Villegas, Yosef  
+
+MRN:      8249813
+
+
+
+S:   Here for follow up of his colonic polyps.  He wants to know the results from
+
+     them.  He is not taking hydrochlorothiazide and is curious about his blood
+
+     pressure.  He said he has cut his alcohol back to 6 pack once a week.  He
+
+     has cut back his cigarettes to one time per week.  He does say he has had
+
+     some problems with his memory recently, although no other manifestations
+
+     of dementia and no difficulty with ADLs.  He says he uses Viagra
+
+     occasionally and it works for him.
+
+
+
+O:   Well-appearing male. Blood pressure 142/74.  Chest clear.  COR: No
+
+     murmur.
+
+
+
+A:   (1)  Alcohol excess discussed.  I told him to cut it out entirely.
+
+     (2)  Cigarette smoking.  Discussed.
+
+     (3)  Hypertension. Under good control.
+
+     (4)  Elevated lipids.  Will check FLP.
+
+     (5)  Worried about dementia. Will check B12, TSH, RPR for now.
+
+     (6)  Status-post knee replacement.  Gets occasional Vicodin from his
+
+          orthopedist.  Says he wanted 8 Percocet for the next month or two
+
+          that he will take on rare occasions when his pain is more severe, and I
+
+          did give him 8 Percocet.
+
+
+
+P:   Follow up with Dr. Hobbs in 3 months.
+
+
+
+  
+
+Gilbert P. Perez, M.D.
+
+
+
+GPP/church/olinger
+
+
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2075-01-07" TYPE="DATE" comment="" />
+<NAME id="P1" start="41" end="56" text="Villegas, Yosef" TYPE="PATIENT" comment="" />
+<ID id="P2" start="70" end="77" text="8249813" TYPE="MEDICALRECORD" comment="" />
+<NAME id="P3" start="1258" end="1263" text="Hobbs" TYPE="DOCTOR" comment="" />
+<NAME id="P4" start="1284" end="1300" text="Gilbert P. Perez" TYPE="DOCTOR" comment="" />
+<NAME id="P5" start="1310" end="1313" text="GPP" TYPE="DOCTOR" comment="" />
+<NAME id="P6" start="1314" end="1320" text="church" TYPE="DOCTOR" comment="" />
+<NAME id="P7" start="1321" end="1328" text="olinger" TYPE="DOCTOR" comment="" />
+</TAGS>
+</deIdi2b2>

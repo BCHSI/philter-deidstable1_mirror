@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2078-03-11
+
+EDVISIT^30921467^FONSECA, LINDA^03/11/78^ULLOA, CHRISTOPHER
+
+I have interviewed and examined the patient, reviewed the
+
+resident's documentation, and concur except as noted.
+
+HISTORY OF PRESENT ILLNESS:  This is a 61-year-old female who
+
+presents complaining of chest pain and lightheadedness for the
+
+past 4 days.  The patient has a medical history remarkable for
+
+breast cancer, status post mastectomy and node dissection, which
+
+have given her chronic left axillary pain.  The patient states
+
+that this chest pain that she felt is distinct and is
+
+nonexertional.  It is associated with increased fatigue and
+
+shortness of breath associated with it.  Today, states that the
+
+dyspnea resolved after being given oxygen in the ambulance en
+
+route and called her primary care physician who told her to come
+
+to the Emergency Department.
+
+PAST MEDICAL HISTORY:  Remarkable for diabetes and
+
+hypercholesterolemia.
+
+OTHER MEDICAL HISTORY, SURGICAL HISTORY, SOCIAL HISTORY, FAMILY
+
+HISTORY, REVIEW OF SYSTEMS, MEDICATIONS, AND ALLERGIES:  As
+
+noted.  The patient is an active smoker.
+
+PHYSICAL EXAMINATION:  In the Emergency Department, the patient
+
+is awake and alert, nontoxic appearing, afebrile, with stable
+
+vital signs.  HEENT:  Atraumatic, normocephalic.  Oropharynx
+
+clear, moist mucous membranes.  Neck:  Supple, without
+
+meningismus or midline tenderness.  Respirations clear with no
+
+rhonchi, rales, or wheezes.  Cardiovascular:  Regular rate
+
+without murmurs, rubs, or gallops.  Abdomen:  Soft, nontender,
+
+without rebound or guarding.  Skin is warm, well perfused without
+
+petechiae or lesions.  There is no edema, no calf or thigh
+
+tenderness, no CVA tenderness.  Neurologically, she is alert and
+
+oriented x3, normal mood and affect.  No cranial nerve
+
+abnormalities.  No sensory or motor deficits.
+
+LABORATORY DATA:  The patient had an unremarkable CBC and
+
+chemistry panel with flat enzymes and normal coags.  EKG was
+
+sinus with no ectopy, interpreted as normal, chest x-ray, which
+
+showed postoperative changes but no infiltrate or edema in this
+
+patient with nonvertiginous lightheadedness and chest discomfort
+
+in the context of shortness of breath and generalized malaise.
+
+PLAN:  Plan is for admission, serial enzymes, and risk
+
+stratification.
+
+ ******** Not reviewed by Attending Physician ********
+
+DISPOSITION:  The patient is admitted.
+
+______________________________
+
+ULLOA, CHRISTOPHER 
+
+D: 03/13/78
+
+T: 03/13/78
+
+Dictated By: ULLOA, CHRISTOPHER
+
+eScription document:7-3872310 CB
+
+
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2078-03-11" TYPE="DATE" comment="" />
+<ID id="P1" start="36" end="44" text="30921467" TYPE="MEDICALRECORD" comment="" />
+<NAME id="P2" start="45" end="59" text="FONSECA, LINDA" TYPE="PATIENT" comment="" />
+<DATE id="P3" start="60" end="68" text="03/11/78" TYPE="DATE" comment="" />
+<NAME id="P4" start="69" end="87" text="ULLOA, CHRISTOPHER" TYPE="DOCTOR" comment="" />
+<AGE id="P5" start="242" end="244" text="61" TYPE="AGE" comment="" />
+<NAME id="P6" start="2419" end="2437" text="ULLOA, CHRISTOPHER" TYPE="DOCTOR" comment="" />
+<DATE id="P7" start="2443" end="2451" text="03/13/78" TYPE="DATE" comment="" />
+<DATE id="P8" start="2456" end="2464" text="03/13/78" TYPE="DATE" comment="" />
+<NAME id="P9" start="2479" end="2497" text="ULLOA, CHRISTOPHER" TYPE="DOCTOR" comment="" />
+<ID id="P10" start="2519" end="2531" text="7-3872310 CB" TYPE="IDNUM" comment="" />
+</TAGS>
+</deIdi2b2>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2063-12-13
+
+
+
+
+NAME:     Umphrey, Tammy 
+MRN:       0942207
+
+The patient is here as a walk-in.  Her spouse is present.
+
+Patient says she is status post a fall this past Monday at home.  Says that she seems
+to have lost her balance while opening a door at home.  Denies prodromal
+symptoms including shortness of breath, dizziness, or palpitations.  There was no
+loss of consciousness.  Patient was seen in the emergency room that day for trauma
+to the head.  Had a negative CT of her head and had an x-ray of her pelvis, as she
+complained of some hip pain.  Both studies were negative.  Patient was then sent
+home with Roxicet.  Patient was seen in the walk-in clinic at CPI yesterday, after
+noticing a swollen tongue and some difficulty swallowing.  Patient was immediately
+told to stop both her Roxicet and Monopril and was treated for angioedema with
+Zantac and Claritin.  Today patient has no further throat tightness or tongue
+swelling.  She is, however, uncomfortable continuing the Effexor for unclear
+reasons and wants to stop it.
+
+Patient is also complaining of severe low back pain, which she says has persisted
+since her fall on Monday.  Did not have an x-ray of the area.  Says it is very painful
+to sit.  Roxicet was not helping.  She is off her Ultram as well.
+
+PHYSICAL EXAM:  WD/overweight female in NAD.  Vital signs as per LMR,
+WNL.  Weight 213 pounds. 
+
+Lungs - clear bilateral breath sounds.  Cor - RRR, S1, S2, without murmur or S3
+noted.  Back - slightly bent gait.  Tenderness over lower sacrum.  No asymmetry or
+obvious deformity.  
+
+X-ray of sacrum 12/13/63 - could not see fracture as per my reading.
+
+ASSESSMENT AND PLAN:  
+
+(1)  Angioedema.  Agree that most likely culprits are Roxicet since it was started
+     only two days ago, and ACE inhibitors which have been associated with
+     angioedema.  Currently on Lopressor and Dyazide, patient's blood pressure
+     is WNL.  So will follow for now.
+
+(2)  Low back pain.  Reviewed the possibility of a coccygeal fracture for which
+     treatment would not be any different than pain management and a donut
+     pillow.  Patient was given a prescription for the pillow.  She was told to look
+     out for signs of nerve compression and to go to the ER if she experienced
+     any perianal numbness or incontinence.  Will notify patient by phone if x-ray
+     shows a fracture. 
+
+(3)  Depression.  Did not feel I was able to speak freely in front of the patient's
+     spouse.  Had been put on the Effexor by Dr. Zeman.  Advised patient to let
+     her psychiatrist know that we are tapering her off of the Effexor.  Will take
+     25 mg q.o.d. for the next week.  
+
+(4)  Pain control.  Will switch from Vicodin to Vicodin ES 1 q. 6 as needed. 
+     Knows to go to ER if experiences any symptoms consistent with angioedema.
+
+Return to clinic in approximately one month.
+
+
+
+Susan Ullom, M.D.
+
+SU/utz/rankin
+ 
+
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2063-12-13" TYPE="DATE" comment="" />
+<NAME id="P1" start="41" end="55" text="Umphrey, Tammy" TYPE="PATIENT" comment="" />
+<ID id="P2" start="68" end="75" text="0942207" TYPE="MEDICALRECORD" comment="" />
+<DATE id="P3" start="185" end="191" text="Monday" TYPE="DATE" comment="" />
+<LOCATION id="P4" start="686" end="689" text="CPI" TYPE="HOSPITAL" comment="" />
+<DATE id="P5" start="1155" end="1161" text="Monday" TYPE="DATE" comment="" />
+<DATE id="P6" start="1589" end="1597" text="12/13/63" TYPE="DATE" comment="" />
+<NAME id="P7" start="2503" end="2508" text="Zeman" TYPE="DOCTOR" comment="" />
+<NAME id="P8" start="2863" end="2874" text="Susan Ullom" TYPE="DOCTOR" comment="" />
+<NAME id="P9" start="2882" end="2884" text="SU" TYPE="DOCTOR" comment="" />
+<NAME id="P10" start="2885" end="2888" text="utz" TYPE="DOCTOR" comment="" />
+<NAME id="P11" start="2889" end="2895" text="rankin" TYPE="DOCTOR" comment="" />
+</TAGS>
+</deIdi2b2>

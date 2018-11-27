@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2114-11-26
+
+ 
+ 
+ 
+ 
+ 
+November 26, 2114 
+ 
+ 
+ 
+ 
+ 
+Wanda Flaherty, M.D.
+Saint Annes Hospital
+98 Greeley Street
+Sturgis, AL 52345
+ 
+ 
+Re: Nancy Werner
+    MRN 57274347
+ 
+ 
+Dear Wanda:
+ 
+Nancy Werner is doing better than the last time I saw her in May
+in that the triglycerides have decreased to 460, pretty much where
+they had usually been.  The LDL is now quite low at 93 but the HDL
+has declined to 34.  All in all, the results are compatible with
+better glucose control and the action of Atorvastatin 10 mg is
+likely responsible for the very low LDL but on the other hand
+discontinuation of the gemfibrozil probably lowered the HDL.  The
+effect on triglycerides of the low dose of the Atorvastatin is
+minimal and overall the triglyceride lowering effect is overrated
+except at the high dose of 80 mg.  Even at 80 mg Atorvastatin could
+not compare to the fibrates in the triglyceride lowering action.
+ 
+Her current medications are Atorvastatin 10 mg, Lopressor 25 mg,
+Procardia 60 mg b.i.d., Capoten 50 mg t.i.d., and  Insulin 22 units
+A.M.
+ 
+Labs: Cholesterol 220, TG. 460, HDL 34, LDL 93.
+ 
+Blood pressure is 120/80.
+ 
+I restarted the Gemfibrozil, 600 mg b.i.d. and left her on the
+Atorvastatin 10 mg.  Although I don't expect any side effects with
+this low dose of Atorvastatin and Gemfibrozil I warned Mrs. Werner
+and her husband that if she should have generalized muscle aches or
+weakness she should contact us and discontinue medication. 
+I think that aggressive therapy is warranted in Mrs. Werner.
+ 
+ 
+ 
+page 2
+Nancy Werner
+November 26, 2114 
+ 
+ 
+ 
+Please feel free to call or e-mail me if you have questions. 
+ 
+Best Wishes.
+ 
+ 
+Sincerely,
+ 
+ 
+ 
+ 
+Isaac Q. Whitman, M.D. 
+ 
+/quiggle
+ 
+ ******** Approved but not reviewed by Attending Provider ********
+
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2114-11-26" TYPE="DATE" comment="" />
+<DATE id="P1" start="38" end="55" text="November 26, 2114" TYPE="DATE" comment="" />
+<NAME id="P2" start="67" end="81" text="Wanda Flaherty" TYPE="DOCTOR" comment="" />
+<LOCATION id="P3" start="88" end="108" text="Saint Annes Hospital" TYPE="HOSPITAL" comment="" />
+<LOCATION id="P4" start="109" end="126" text="98 Greeley Street" TYPE="STREET" comment="" />
+<LOCATION id="P5" start="127" end="134" text="Sturgis" TYPE="CITY" comment="" />
+<LOCATION id="P6" start="136" end="138" text="AL" TYPE="STATE" comment="" />
+<LOCATION id="P7" start="139" end="144" text="52345" TYPE="ZIP" comment="" />
+<NAME id="P8" start="153" end="165" text="Nancy Werner" TYPE="PATIENT" comment="" />
+<ID id="P9" start="174" end="182" text="57274347" TYPE="MEDICALRECORD" comment="" />
+<NAME id="P10" start="192" end="197" text="Wanda" TYPE="DOCTOR" comment="" />
+<NAME id="P11" start="201" end="213" text="Nancy Werner" TYPE="PATIENT" comment="" />
+<DATE id="P12" start="262" end="265" text="May" TYPE="DATE" comment="" />
+<NAME id="P13" start="1328" end="1334" text="Werner" TYPE="PATIENT" comment="" />
+<NAME id="P14" start="1516" end="1522" text="Werner" TYPE="PATIENT" comment="" />
+<NAME id="P15" start="1537" end="1549" text="Nancy Werner" TYPE="PATIENT" comment="" />
+<DATE id="P16" start="1550" end="1567" text="November 26, 2114" TYPE="DATE" comment="" />
+<NAME id="P17" start="1675" end="1691" text="Isaac Q. Whitman" TYPE="DOCTOR" comment="" />
+<NAME id="P18" start="1702" end="1709" text="quiggle" TYPE="DOCTOR" comment="" />
+</TAGS>
+</deIdi2b2>

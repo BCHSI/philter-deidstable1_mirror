@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2093-07-03
+
+Nathan D. Akins, MD, MPH
+
+BMC Internal Medicine Associates
+
+96 Hassell Brook Road
+
+Daytona Highridge Estates, AZ 39757
+
+(742) 270-8900
+
+
+
+CC: Follow-up from Stroke
+
+
+
+69 yo man with HTN, DM, CVA in 5/93 underwent rehab and is now living at home comes in for follow-up care. He is under the care of Park Nicollet Clinic. I have recently refilled all of his medication. He has no complaints today. He denies F, C, N, V, CP, SOB, abd pain, B/B changes, HA and feels he is getting along well at home. His family helps him greatly. He underwent PT and OT.
+
+
+
+His home care nurse wants a modified barrium swallow to see if he can be advanced off of thick liquids to solids. He only recently began taking TID metoprolol. He reports no problems with his medication.
+
+
+
+
+
+MEDICATIONS
+
+
+
+AVANDIA (ROSIGLITAZONE) 4 MG     PO QD 
+
+ZOLOFT (SERTRALINE)   50MG  1 Tablet(s) PO QD 
+
+EC ASA (ASPIRIN ENTERIC COATED)   325MG  1 Tablet(s) PO QD 
+
+GLUCOPHAGE (METFORMIN)   850MG  1 Tablet(s) PO qam  
+
+NORVASC (AMLODIPINE)   10MG  1 Tablet(s) PO QHS  
+
+ZESTRIL (LISINOPRIL)   5MG  1 Tablet(s) PO QD  
+
+GLUCOPHAGE (METFORMIN)   500MG  1 Tablet(s) PO qpm  
+
+COLACE (DOCUSATE SODIUM)   100MG  1 Capsule(s) PO BID 
+
+ZOCOR (SIMVASTATIN)   20MG  1 Tablet(s) PO QHS 
+
+PLAVIX (CLOPIDOGREL) 75 MG     PO QD 
+
+SENNA TABLETS 2 TAB     PO QHS 
+
+LOPRESSOR (METOPROLOL TARTRATE)   50MG  1 Tablet(s) PO TID 
+
+
+
+
+
+
+
+
+
+PE: 
+
+Gen: WDWN in NAD in wheelchair.
+
+VS: BP 140/85  P70
+
+HEENT: EOMI, PEERL, OP nl, conjunctiva pink, sclera anicteric.
+
+Neck: Supple, no lymphadenopathy
+
+Lungs: CTA B
+
+CV: RRR no M, r, g.
+
+Abd: Soft. NABS, NTND, no HSM
+
+Ext: No c/c/e
+
+Neuro: Right hemiparesis.
+
+
+
+
+
+A/P:
+
+
+
+1.  s/p CVA: although he has a dense residual deficit. He is getting along relatively well at home. ASA, plavix. Consider additional PT/OT if not receiving at home. Ordered modified barrium swallow in hopes of advancing to solids.
+
+
+
+2. HTN: elevated pressure today, especially given DM. If remains elevated at next visit would intensify regimen. Metoprolol 50 tid, zestril 5 qd, norvasc 10 qhs.
+
+
+
+3. DM: Sugars have been in 100-200 range. Again, will intensify at next visit if remain elevated now that he is on a stable regimen. Metformin 500 qpm, rosiglitazone 4 qd. Needs A1C at next visit.
+
+
+
+4. Chol: on zocor 20 qhs. Will need to re-check fasting cholesterol at next visit.
+
+
+
+5. Depression: Zoloft 50 qd.
+
+
+
+6. HCM: Deferred
+
+
+
+- f/u with me in 1 month.
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2093-07-03" TYPE="DATE" comment="" />
+<NAME id="P1" start="28" end="43" text="Nathan D. Akins" TYPE="DOCTOR" comment="" />
+<LOCATION id="P2" start="54" end="57" text="BMC" TYPE="HOSPITAL" comment="" />
+<LOCATION id="P3" start="88" end="109" text="96 Hassell Brook Road" TYPE="STREET" comment="" />
+<LOCATION id="P4" start="111" end="136" text="Daytona Highridge Estates" TYPE="CITY" comment="" />
+<LOCATION id="P5" start="138" end="140" text="AZ" TYPE="STATE" comment="" />
+<LOCATION id="P6" start="141" end="146" text="39757" TYPE="ZIP" comment="" />
+<CONTACT id="P7" start="148" end="162" text="(742) 270-8900" TYPE="PHONE" comment="" />
+<AGE id="P8" start="195" end="197" text="69" TYPE="AGE" comment="" />
+<DATE id="P9" start="226" end="230" text="5/93" TYPE="DATE" comment="" />
+<LOCATION id="P10" start="326" end="346" text="Park Nicollet Clinic" TYPE="HOSPITAL" comment="" />
+</TAGS>
+</deIdi2b2>

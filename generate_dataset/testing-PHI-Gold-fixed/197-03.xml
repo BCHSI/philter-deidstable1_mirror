@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2098-11-04
+
+
+
+
+
+
+
+NAME:    Emmery, Donn S. 
+
+MRN:     0595726 
+
+
+
+Patient presents today for nail care. It is an initial visit for him with me. He had seen
+
+Dr. Noah Velazquez back in July of this year.  
+
+
+
+PAST MEDICAL HISTORY: Multiple and complex, consistent of hypertension,
+
+diabetes, macular degeneration, aortic stenosis, lymphoma, anemia, polyneuropathy,
+
+positive ANA nuclear bodies, pulmonary fibrosis, asbestosis, history of SOB, GERD.
+
+
+
+MEDICATIONS: Multiple meds per the LMR. 
+
+
+
+ALLERGIES: Sulfa medications - urticaria.
+
+
+
+PAST SURGICAL HISTORY: Tonsillectomy, removal of nephrolithiasis, TURP,
+
+electrocardiograms, carpal tunnel syndrome.
+
+
+
+PEDAL EXAM: Pulses are diminished bilaterally, absent digital hair growth, cool
+
+atrophic skin. Sensorium appears intact. Orthopedically speaking, he has a severe pes
+
+planus deformity bilaterally with forefoot abductus and collapse of the medial column,
+
+left greater than right. Dermatologically speaking, there are no callosities. His nails
+
+are grossly dystrophic and elongated. They were all trimmed. There were no signs of
+
+infection. Web spaces were clean, dry and intact. 
+
+
+
+ASSESSMENT: Patient with peripheral vascular disease. I recommended regular nail
+
+care approximately every 2-3 months. I answered all of his questions. He was
+
+reappointed as stated.
+
+ 
+
+
+
+
+
+
+
+Noah X. Nagle, DPM
+
+
+
+NXN/wynn/draper
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2098-11-04" TYPE="DATE" comment="" />
+<NAME id="P1" start="43" end="58" text="Emmery, Donn S." TYPE="PATIENT" comment="" />
+<ID id="P2" start="70" end="77" text="0595726" TYPE="MEDICALRECORD" comment="" />
+<NAME id="P3" start="177" end="191" text="Noah Velazquez" TYPE="DOCTOR" comment="" />
+<DATE id="P4" start="200" end="204" text="July" TYPE="DATE" comment="" />
+<NAME id="P5" start="1353" end="1366" text="Noah X. Nagle" TYPE="DOCTOR" comment="" />
+<NAME id="P6" start="1375" end="1378" text="NXN" TYPE="DOCTOR" comment="" />
+<NAME id="P7" start="1379" end="1383" text="wynn" TYPE="DOCTOR" comment="" />
+<NAME id="P8" start="1384" end="1390" text="draper" TYPE="DOCTOR" comment="" />
+</TAGS>
+</deIdi2b2>

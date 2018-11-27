@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2064-08-03
+
+Brady Rural for Dr. Fallon
+
+
+
+66 y.o. man, new to the Brady Rural Health Clinic, here today for sore throat, earache x 2 days.
+
+
+
+
+
+PMH: 
+
+
+
+ 1. Hypercholesterolemia.
+
+ 2.  Hiatal hernia, which was diagnosed at least 10 years ago.
+
+ 3.  Ulcers diagnosed about 4-5 years ago.
+
+ 4.  Arthritis.
+
+ 5. CAD, s/p imi x 2, '61 Brady, cardiologist Dr. Yingling
+
+       ett mibi 9/2062: prior posterobasal infarction without evidence
+
+  of ischemia
+
+
+
+ MEDICATIONS ON ADMISSION:
+
+ 1.  Lopressor 12.5 BID.
+
+ 2.  Aspirin 325 QD.
+
+ 3.  Folic acid 1 mg. QD.
+
+ 4.  Lopid 600 mg. QD.
+
+ 5.  Lipitor 40 mg. QD.
+
+ 6.  Protonix QD.
+
+ 
+
+ ALLERGIES:  Penicillin causes swelling.  Erythromycin causes hives, and IV
+
+ dye causes convulsions.
+
+
+
+SH: ex-tob, quit '61,  no etoh, disabled Immigration Officer  (disability is cad)
+
+
+
+ROS: achey joints today only, no fever or chills
+
+
+
+
+
+Family Hx: brother with cancer (lung), smoker
+
+
+
+Exam:
+
+BP 116/70, T 98.7
+
+well appearing, 
+
+TM's clear, anicteric sclera, OP clear, neck supple
+
+CV: rrr, no m/r/g
+
+Chest: cta bilat, spine nt
+
+Ext: no leg edema, no splinter hemorrrhage
+
+
+
+
+
+Data:
+
+lft's 5/2064 wnl
+
+
+
+A/P
+
+1. Pharyngitis: no sign of strep infection, no ulcers. Possible allergies, no sign of bronchitis.
+
+recommend Cepacol throat lozenges prn pain, tums at bedtime in case acid reflux, to EW if chest pressure, chest pain or n/v/abd pains.
+
+
+
+2. Cough: clear exam, recommend conservative treatment with fluids, Possible allergies. Use A/C, call if fever, productive phlegm. 
+
+
+
+3. CAD: stable by history. f/u with Dr. Fallon for new PCP visit Oct '64 (previously followed at Internal Medicine in Brady Rural).
+
+
+
+4. hyperlipidemia: stable, lft's reassuring. Pt to stop med and call office if muscle aches persist for several days or if intolerant to meds. LFT's at that time.
+
+
+
+_____________________________________________
+
+Bryan Y. Hill, M.D.
+
+
+
+
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2064-08-03" TYPE="DATE" comment="" />
+<LOCATION id="P1" start="28" end="39" text="Brady Rural" TYPE="HOSPITAL" comment="" />
+<NAME id="P2" start="48" end="54" text="Fallon" TYPE="DOCTOR" comment="" />
+<AGE id="P3" start="58" end="60" text="66" TYPE="AGE" comment="" />
+<LOCATION id="P4" start="82" end="107" text="Brady Rural Health Clinic" TYPE="HOSPITAL" comment="" />
+<DATE id="P5" start="343" end="346" text="'61" TYPE="DATE" comment="" />
+<LOCATION id="P6" start="347" end="352" text="Brady" TYPE="HOSPITAL" comment="" />
+<NAME id="P7" start="371" end="379" text="Yingling" TYPE="DOCTOR" comment="" />
+<DATE id="P8" start="397" end="403" text="9/2062" TYPE="DATE" comment="" />
+<DATE id="P9" start="766" end="769" text="'61" TYPE="DATE" comment="" />
+<PROFESSION id="P10" start="790" end="810" text="Immigration Officer " TYPE="PROFESSION" comment="" />
+<DATE id="P11" start="1142" end="1148" text="5/2064" TYPE="DATE" comment="" />
+<NAME id="P12" start="1573" end="1579" text="Fallon" TYPE="DOCTOR" comment="" />
+<DATE id="P13" start="1598" end="1605" text="Oct '64" TYPE="DATE" comment="" />
+<LOCATION id="P15" start="1651" end="1662" text="Brady Rural" TYPE="HOSPITAL" comment="" />
+<NAME id="P16" start="1881" end="1894" text="Bryan Y. Hill" TYPE="DOCTOR" comment="" />
+</TAGS>
+</deIdi2b2>

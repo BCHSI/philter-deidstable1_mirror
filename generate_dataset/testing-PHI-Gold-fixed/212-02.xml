@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2084-07-30
+
+
+
+INTERNAL MEDICINE ASSOCIATES
+SAN FERNANDO HOSPITAL
+
+Reason for visit
+	
+  tc to review blood sugars and insulin titration
+
+History of present illness
+	
+  S pt says he started Lantus 10 units at bedtime on 7/21/84 and his blood sugars have been am fastings a range of 114-213 and pm 180-270. 
+
+Changes to Medications this visitLantus 16 units  sc qhs - change. (QTY:3-month supply Refills:3) do not mix with other insulins in same syringe 
+
+Assessment and plan
+	
+  P I will increase his Lantus to 16 units at HS according to insulin titration algorithm and will call him in 1 week to further review blood sugars and titrate his insulin dose.
+
+Disposition
+
+
+Ximena M. Gillespie, RN
+
+Signed electronically by  Ximena M. Gillespie, RN
+Document Status: Final
+
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2084-07-30" TYPE="DATE" comment="" />
+<LOCATION id="P1" start="59" end="80" text="SAN FERNANDO HOSPITAL" TYPE="HOSPITAL" comment="" />
+<DATE id="P2" start="234" end="241" text="7/21/84" TYPE="DATE" comment="" />
+<NAME id="P3" start="685" end="704" text="Ximena M. Gillespie" TYPE="DOCTOR" comment="" />
+<NAME id="P4" start="736" end="755" text="Ximena M. Gillespie" TYPE="DOCTOR" comment="" />
+</TAGS>
+</deIdi2b2>

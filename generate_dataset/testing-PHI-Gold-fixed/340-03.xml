@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2077-01-22
+
+
+
+Carolyn Huntington Bailey Health Center
+
+592 Kristina Street                                        XIA, JEAN
+
+North East, AL 81699                            58269151
+
+(375) 512-0897                                            01/22/77
+
+
+
+
+
+HISTORY OF PRESENT ILLNESS:  Ms. Xia is a 57-year-old woman who comes in for evaluation of treatment of diabetes and hypertension, reporting that for the last 3 days she has had trouble with her vision, her blood pressure has been high.  She has been having a lot of headaches.  She has had pain in her right thumb that goes to her right lateral side area.  She has been having hot flashes but no fevers, sweats or chills.  Her sugars have been okay in the 99-120 range, the highest was about 135-140.  She does not really understand why she is feeling so bad with these headaches and other problems.
+
+
+
+REVIEW OF SYSTEMS:  Conducted in detail and was otherwise negative.
+
+
+
+MEDICATIONS:  She has not taken any medications for the last two days.  She does have her diabetes medications but no blood pressure medication.  She usually takes Cozaar 100 daily, Glucophage 1000 b.i.d., Glucotrol XL 5 daily, Lipitor 20 daily, Norvasc 10 daily.  She has not been needing Nexium of late.
+
+
+
+ALLERGIES:  Clonidine caused sleepiness and codeine rash.
+
+
+
+SOCIAL HISTORY:  She does not smoke or use street drugs.  She does have a little bit of white wine when she has guests on occasion.
+
+
+
+PHYSICAL EXAMINATION:  On exam, well developed, well nourished, no acute distress.  Blood pressure 152/120, pulse 76, temperature 97.2, weight 166.  Pleasant, articulate in English, she appears comfortable.  Pupils equal, equally reactive to light.  Retinal fields have sharp disks.  Mouth and pharynx without erythema or exudate, no adenopathy or tenderness in the submandibular, cervical, posterior cervical, supraclavicular areas.  Thyroid nontender, non-nodular.  Neck supple, no spine or flank tenderness.  No bruits, no stridor.  Heart sounds S1, S2, regular rate and rhythm, no murmur, rub or gallop.  Chest is clear to auscultation anteriorly and posteriorly with no rales, wheezes or rhonchi.  She is clear to percussion.  Normal bowel sounds.  Abdomen soft, nontender, no mass, organomegaly, no guarding, no rebound.  Extremities are without edema, cyanosis or clubbing, no calf tenderness.  Sensation is intact to microfilament testing bilaterally on her feet.  Pedal pulses are present.  Feet are warm.  There is no rash, maceration, or lesion on her feet.
+
+
+
+LABORATORY DATA:  Hemoglobin A1c from October was 7.2.  LDL from last May was 164.
+
+
+
+IMPRESSION AND PLAN:
+
+1.  Diabetes.  Her diabetes has been near goal.  We will recheck glucose, hemoglobin A1c, UA, and microalbuminuria and see how she is doing today.
+
+2.  Elevated cholesterol.  Her cholesterol was nowhere near our target of 100.  She is on an increased Lipitor.  We will check cholesterol, see how she is doing at this point, and an OT, PT to make sure she is tolerating the medication.
+
+3.  Hypertension.  All of her symptoms today are most likely due to her hypertension.  I explained at great length that the reason for all of her symptoms is the fact she stopped taking her medication.  She seemed surprised that it would have such an immediate and strong effect and I explained to her that it does.  She has to take her medication every day.  I told her she had to leave the Carolyn Huntington right now, go immediately to the drugstore to pick up the medication and she said she would do that.  I also asked her to return next week so we can recheck her blood pressure and make sure it is controlled.
+
+4.  Health maintenance.  I will schedule her for a mammogram.
+
+5.  Colonic adenoma from 11/2076.  She will need follow-up colonoscopy every three years per GI.
+
+
+
+hga1c 6.9, ldl 86, letter to pt
+
+
+
+
+
+
+
+______________________________
+
+Yolanda Osburn, M.D.
+
+
+
+
+
+Dictated By: Yolanda Osburn
+
+
+
+
+
+eScription document:9-2062651 EMSSten Tel
+
+
+
+
+
+
+
+DD: 01/23/77
+
+DT: 01/24/77
+
+DV: 01/22/77
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2077-01-22" TYPE="DATE" comment="" />
+<LOCATION id="P1" start="30" end="69" text="Carolyn Huntington Bailey Health Center" TYPE="HOSPITAL" comment="" />
+<LOCATION id="P2" start="71" end="90" text="592 Kristina Street" TYPE="STREET" comment="" />
+<NAME id="P3" start="130" end="139" text="XIA, JEAN" TYPE="PATIENT" comment="" />
+<LOCATION id="P4" start="141" end="151" text="North East" TYPE="CITY" comment="" />
+<LOCATION id="P5" start="153" end="155" text="AL" TYPE="STATE" comment="" />
+<LOCATION id="P6" start="156" end="161" text="81699" TYPE="ZIP" comment="" />
+<ID id="P7" start="189" end="197" text="58269151" TYPE="MEDICALRECORD" comment="" />
+<CONTACT id="P8" start="199" end="213" text="(375) 512-0897" TYPE="PHONE" comment="" />
+<DATE id="P9" start="257" end="265" text="01/22/77" TYPE="DATE" comment="" />
+<NAME id="P10" start="304" end="307" text="Xia" TYPE="PATIENT" comment="" />
+<AGE id="P11" start="313" end="315" text="57" TYPE="AGE" comment="" />
+<DATE id="P12" start="2561" end="2568" text="October" TYPE="DATE" comment="" />
+<DATE id="P13" start="2593" end="2596" text="May" TYPE="DATE" comment="" />
+<LOCATION id="P14" start="3409" end="3427" text="Carolyn Huntington" TYPE="HOSPITAL" comment="" />
+<DATE id="P15" start="3725" end="3732" text="11/2076" TYPE="DATE" comment="" />
+<NAME id="P16" start="3871" end="3885" text="Yolanda Osburn" TYPE="DOCTOR" comment="" />
+<NAME id="P17" start="3910" end="3924" text="Yolanda Osburn" TYPE="DOCTOR" comment="" />
+<ID id="P18" start="3950" end="3959" text="9-2062651" TYPE="IDNUM" comment="" />
+<DATE id="P19" start="3983" end="3991" text="01/23/77" TYPE="DATE" comment="" />
+<DATE id="P20" start="3997" end="4005" text="01/24/77" TYPE="DATE" comment="" />
+<DATE id="P21" start="4011" end="4019" text="01/22/77" TYPE="DATE" comment="" />
+</TAGS>
+</deIdi2b2>

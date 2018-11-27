@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2078-05-31
+
+VASCULAR SURGERY H&P
+Ulysses Richard
+8913196
+May 31, 2078
+
+Service: 	Mosley
+Attending:	Snyder
+Fellow:	Allison
+Senior:		Fulton
+Junior:		Benitez
+
+Mr Richard is an 85 year old gentleman with a long-standing history of peripheral vascular disease who presents with progressive rest pain and ischemic ulceration of his right foot. He underwent angiography, but no lesions amenable to percutaneous intervention were identified. He presents now in anticipation of a distal bypass procedure.
+
+PMH:	CAD
+	HTN
+	CRI (Cr 1.8 at baseline)
+	DM
+	PVD s/p left fem-pop (failed) and redo left fem-pop-peroneal
+	CAS s/p endarterectomy
+	CHF
+	Atrial Fibrillation
+	Nephrolithiasis
+	Spinal Stenosis
+
+Meds:	Norvasc 10
+	Glyburide 10 BID
+	Labetalol 200 BID
+	Lisinopril 10 BID
+	ASA 325
+	Plavix 75
+	Doxazosin 4
+	Aciphex 20 BID
+	Zocor 20
+	NitroDur 0.2mg/hr
+	Ativan 0.5 PRN
+	Lasix 40 PRN
+	Vicodin PRN
+	Tylenol PRN
+	Zantac PRN
+	Coumadin
+
+Allergies: ASA
+SH: never smoked, widower
+PE: Afebrile	75SR	132/52	94% RA
+NAD
+Chest CTAB
+Heart Irreg, II/VI SEM
+Abd soft
+RLE with ischemic, but clean ulceration.
+LLE warm without lesions
+Vasc:	Car	Rad	Fem	Pop	DP	PT
+R	2+	2+	1+	-	-	-
+L	2+	2+	2+	1+	D	1+
+
+EKG Afeb
+PVR pulsatile on L, flat on R
+CXR No acute processes
+
+Impression: RLE limb ischemia
+Plan: 	OR in AM for Fem-distal bypass
+	IV Heparin overnight
+	Consent obtained
+
+Richard Benitez, MD, MPH
+Resident in Surgery
+
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2078-05-31" TYPE="DATE" comment="" />
+<NAME id="P1" start="49" end="64" text="Ulysses Richard" TYPE="PATIENT" comment="" />
+<ID id="P2" start="65" end="72" text="8913196" TYPE="MEDICALRECORD" comment="" />
+<DATE id="P3" start="73" end="85" text="May 31, 2078" TYPE="DATE" comment="" />
+<NAME id="P4" start="97" end="103" text="Mosley" TYPE="DOCTOR" comment="" />
+<NAME id="P5" start="115" end="121" text="Snyder" TYPE="DOCTOR" comment="" />
+<NAME id="P6" start="130" end="137" text="Allison" TYPE="DOCTOR" comment="" />
+<NAME id="P7" start="147" end="153" text="Fulton" TYPE="DOCTOR" comment="" />
+<NAME id="P8" start="163" end="170" text="Benitez" TYPE="DOCTOR" comment="" />
+<NAME id="P9" start="175" end="182" text="Richard" TYPE="PATIENT" comment="" />
+<AGE id="P10" start="189" end="191" text="85" TYPE="AGE" comment="" />
+<NAME id="P11" start="1357" end="1372" text="Richard Benitez" TYPE="DOCTOR" comment="" />
+</TAGS>
+</deIdi2b2>

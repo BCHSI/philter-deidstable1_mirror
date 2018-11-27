@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2085-10-30
+
+
+
+Narrative History
+
+The patient is here today for the following issues:
+
+1. Patient is pregnant.  No bleeding or cramping.  Followed by Dr. Kilgore.  She did not intend to get pregnant again but would like to keep this pregnancy.  2.  Labs in past indicated hyperthyroidism. This is being followed by endocrine. No palpitations. 
+
+3.  DM - Has not been taking insulin since birth of son.  HgA1C >10.  She will be seen by Endocrine today.
+
+4.  Followed by Dr. Uzzell for CAD.  No chest pain.   On atenolol, aspirin and imdur.
+
+
+
+Problems
+
+      Diabetes mellitus
+
+      S/P Abortion    : SPONTANEOUS 4/80
+
+      Chlamydia    : CERVICITIS-TREATED
+
+      H/O Abnormal pap test    : '76 S/P COLPOSCOPY IN PAST; RECENT PAP NORMAL
+
+      Positive PPD    : NEG CXR
+
+      PARONYCHIAL INFECTION     : LEFT HAND 78
+
+      Ectopic pregnancy    : 74
+
+      Coronary artery disease
+
+      Anemia
+
+      Shortness of breath
+
+      Hypertension
+
+      Gastroesophageal reflux disease
+
+      Elevated cholesterol
+
+      Hyperthyroidism
+
+      Obesity
+
+
+
+Review of Systems
+
+Unless mentioned in the history above the following ROS were asked and are negative:  Constitutional, Respiratory, Cardiac, GI, Endocrine,  Musculoskeletal.  
+
+
+
+Medications
+
+      Asa (ACETYLSALICYLIC Acid)    325MG TABLET take 1 Tablet(s) PO QD 
+
+      Natalcare Plus    1TAB   PO qd 
+
+      ATENOLOL   100MG TABLET take 1 Tablet(s) PO QD 
+
+      Imdur (ISOSORBIDE MONONIT.(SR))    30MG TABLET CR 24HR take 1 Tablet(s) PO QD 
+
+
+
+Allergies
+
+      NKA
+
+
+
+Social History
+
+NP in Laplace - waiting for researcher job.
+
+Son born in 2085 name Uri, older child
+
+
+
+Vital Signs
+
+      BLOOD PRESSURE   122/70 
+
+      WEIGHT   220 lb
+
+      AGE   32y5.7m 
+
+
+
+Physical Exam
+
+GENERAL: 	Healthy appearing
+
+Labs reviewed.
+
+
+
+Assessment and Plan
+
+1.  Pregnancy - Counseled patient- especially on need to control sugars.  Limited weight gain.  She will discuss with ob and cardiology when to stop aspirin.  She will likely be induced early.
+
+2.  Hyperthyroidism - Denies symptoms- repeat today  Follow up with Dr. Kirkpatrick.
+
+3.  DM - Followed by diabetes clinic.  HgA1C> 10 .  Will need to restart insulin - counseled. 
+
+4. CAD - On atenolol, asa, imdur. Followed by Dr. Uzzell.
+
+25 minutes spent with the patient - the majority counseling on above.
+
+
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2085-10-30" TYPE="DATE" comment="" />
+<NAME id="P1" start="169" end="176" text="Kilgore" TYPE="DOCTOR" comment="" />
+<NAME id="P2" start="488" end="494" text="Uzzell" TYPE="DOCTOR" comment="" />
+<DATE id="P3" start="628" end="632" text="4/80" TYPE="DATE" comment="" />
+<DATE id="P4" start="708" end="711" text="'76" TYPE="DATE" comment="" />
+<DATE id="P5" start="832" end="834" text="78" TYPE="DATE" comment="" />
+<DATE id="P6" start="865" end="867" text="74" TYPE="DATE" comment="" />
+<PROFESSION id="P7" start="1558" end="1560" text="NP" TYPE="PROFESSION" comment="" />
+<LOCATION id="P8" start="1564" end="1571" text="Laplace" TYPE="CITY" comment="" />
+<PROFESSION id="P9" start="1586" end="1596" text="researcher" TYPE="PROFESSION" comment="" />
+<DATE id="P10" start="1615" end="1619" text="2085" TYPE="DATE" comment="" />
+<NAME id="P11" start="1625" end="1628" text="Uri" TYPE="PATIENT" comment="" />
+<AGE id="P12" start="1725" end="1732" text="32y5.7m" TYPE="AGE" comment="" />
+<NAME id="P13" start="2086" end="2097" text="Kirkpatrick" TYPE="DOCTOR" comment="" />
+<NAME id="P14" start="2246" end="2252" text="Uzzell" TYPE="DOCTOR" comment="" />
+</TAGS>
+</deIdi2b2>

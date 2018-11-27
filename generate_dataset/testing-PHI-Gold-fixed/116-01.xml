@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2081-06-22
+
+                     AH EMERGENCY DEPT VISIT
+ 
+BRANCH,EARNEST   530-23-69-1                      VISIT DATE: 06/22/81
+HISTORY OF PRESENTING COMPLAINT:  This patient was examined and 
+treated in conjunction with a resident.  Briefly, the history is as 
+follows:  The patient is a 47 year old male with end stage renal 
+disease on hemodialysis who was referred for abdominal discomfort 
+and fever.  His abdominal discomfort had begun within the preceding 
+24 hours and had gradually worsened.  He had pain in the left lower 
+quadrant radiating to the rectal area.  He did have one diarrheal 
+bowel movement.  He specifically denied bleeding. 
+PHYSICAL EXAMINATION:  GENERAL APPEARANCE:  The patient was awake 
+and alert, although somewhat sluggish and apparently uncomfortable. 
+VITAL SIGNS:  Blood pressure was 177/90, pulse 117, initial 
+temperature 103.3, respiratory rate 20.  HEENT:  Pupils were equal. 
+Sclerae were anicteric.  The oropharynx showed normal architecture. 
+NECK:  Supple.  CARDIOVASCULAR:  Regular rate and rhythm.  LUNGS: 
+The breath sounds were essentially clear.  ABDOMEN:  There was mild 
+to moderate diffuse tenderness.  No definite mass can be 
+appreciated.  Bowel sounds were diminished.  RECTAL:  Stool is 
+guaiac-negative, per the resident's examination.  EXTREMITIES: 
+Examination of the left thigh showed slight drainage at a recent 
+surgical incision site. 
+LABORATORY EVALUATION:  Electrolytes showed sodium 139, potassium 
+4.3, chloride 99, CO2 27, BUN 12, creatinine 2.2, glucose 230. 
+White blood cell count was 30,000, hematocrit 38.  Chest x-ray 
+showed no definite infiltrate.  Abdominal x-ray showed dilated 
+loops of small bowel.  EKG showed no change from previous tracings. 
+THERAPY RENDERED/COURSE IN ED:  The assessment and plan were 
+reviewed with the resident. 
+FINAL DIAGNOSIS:  I confirm the provisional diagnosis of abdominal 
+pain with question of deep venous thrombosis versus sepsis from as 
+yet unidentified source. 
+DISPOSITION (including condition upon discharge):  The care plan 
+was reviewed.  The patient was started on antibiotics and 
+ultimately admitted to the hospital for definitive evaluation and 
+further care. 
+___________________________________                    RD883/1008 
+FRANK E. BENDER, M.D.  FB25                             D:07/25/81 
+                                                       T:07/25/81 
+Dictated by:  FRANK E. BENDER, M.D.  FB25 
+ ******** Not reviewed by Attending Physician ********
+
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2081-06-22" TYPE="DATE" comment="" />
+<LOCATION id="P1" start="49" end="51" text="AH" TYPE="HOSPITAL" comment="" />
+<NAME id="P2" start="75" end="89" text="BRANCH,EARNEST" TYPE="PATIENT" comment="" />
+<ID id="P3" start="92" end="103" text="530-23-69-1" TYPE="MEDICALRECORD" comment="" />
+<DATE id="P4" start="137" end="145" text="06/22/81" TYPE="DATE" comment="" />
+<AGE id="P5" start="307" end="309" text="47" TYPE="AGE" comment="" />
+<ID id="P6" start="2260" end="2270" text="RD883/1008" TYPE="IDNUM" comment="" />
+<NAME id="P7" start="2272" end="2287" text="FRANK E. BENDER" TYPE="DOCTOR" comment="" />
+<NAME id="P8" start="2295" end="2299" text="FB25" TYPE="USERNAME" comment="" />
+<DATE id="P9" start="2330" end="2338" text="07/25/81" TYPE="DATE" comment="" />
+<DATE id="P10" start="2397" end="2405" text="07/25/81" TYPE="DATE" comment="" />
+<NAME id="P11" start="2421" end="2436" text="FRANK E. BENDER" TYPE="DOCTOR" comment="" />
+<NAME id="P12" start="2444" end="2448" text="FB25" TYPE="USERNAME" comment="" />
+</TAGS>
+</deIdi2b2>

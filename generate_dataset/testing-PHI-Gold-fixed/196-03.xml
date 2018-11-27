@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2090-01-03
+
+
+CC: f/up of HTN &amp; DM management
+
+
+HPI: 61 yo female who presents back to clinic having an upcoming eye appt again
+at Harmon Doctors Clinic 1/12/90.  Most recent A1C 8.5  6/15/89, being followed at MS.
+Denies any symptoms of hyperglycemia or hypoglycemia.  Denies any CP, increased
+SOB beyond her baseline, or headaches.  Has had intermittent exacerbations of her
+chronic back, shoulder, and knees pains.
+
+
+Problems
+Menopause at age 52 
+H/O R sided sciatica 
+H/O pneumonia 1/2082 
+S/P vocal cord cyst removal 
+S/P cholecystectomy 
+S/P C section x 2 
+Diabetes since '67 
+Severe nonproliferative diabetic retinopathy with severe macular edema 
+H/O pyelonephritis 
+1/16/88 cardiac MIBI with summed stress score of 0 but evidence of extensive calcified coronary plaque burden with coronary calcium score of 715 
+Hypertension 
+Depression 
+7/23/88 R shoulder arthroscopy 
+4/20/89 lumbar CT : No stenosis or disc herniation, mild deg changes of the lower lumbar spine as described with a possible tiny lateral disc protrusion on the L at L3-L4.
+
+ 
+Medications
+Atenolol 100 MG (100MG TABLET take 1) PO QD 
+Cozaar (LOSARTAN) 100MG TABLET take 1 PO QD 
+Darvocet N 100 (PROPOXYPHENE NAP/ACETAMIN... 1 TAB PO BID PRN pain 
+Ecasa (ASPIRIN ENTERIC COATED) 81MG TABLET EC take 1 Tablet(s) PO QD 
+Glucophage (METFORMIN) 1000MG TABLET PO BID 
+Lantus (INSULIN GLARGINE) 84 UNITS SC QAM 
+Lasix (FUROSEMIDE) 60 MG (20MG TABLET take 3) PO QD , 3 tablets daily - 3 tabletas diarias
+Lipitor (ATORVASTATIN) 10 MG (10MG TABLET take 1) PO QD 
+Neurontin (GABAPENTIN) 400 MG (400MG CAPSULE take 1) PO QHS 
+Paxil (PAROXETINE) 20MG TABLET take 1 Tablet(s) PO QD 
+Prilosec OTC (OMEPRAZOLE OTC) 20 MG (20MG TABLET DR take 1) PO QD 
+Verapamil SUSTAINED RELEASE 120 MG (120MG TABLET SA take 1) PO QD 
+
+
+Allergies
+NKA 
+PEx: VS: Wt 196, BP 130/71, p 62
+WDWN older female in NAD.  
+HEENT: anicteric sclerae  
+Neck: supple, no JVD.  
+Lungs: CTA.  
+CV: RRR, s1s2, nl, II/VI SEM at LSB
+Abd: soft, NT  
+Ext: no c/c/bil trace edema.  No foot ulcerations.
+
+
+A/P:
+1. HTN.  Stable, no change in regimen.
+Dietary and exercise rec's reviewed.
+2. DM.  A1C today 7.9 (improved from 8.5 in 6/2089),
+No change in regimen, being followed at MS. 
+Dietary and exercise rec's reviewed.
+Home FS monitoring as directed.
+3. Scheduled for f/up of diabetic retinopathy 1/12/90 at HDC.
+
+
+
+Singh, M.D.
+
+
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2090-01-03" TYPE="DATE" comment="" />
+<AGE id="P1" start="72" end="74" text="61" TYPE="AGE" comment="" />
+<LOCATION id="P2" start="150" end="171" text="Harmon Doctors Clinic" TYPE="HOSPITAL" comment="" />
+<DATE id="P3" start="172" end="179" text="1/12/90" TYPE="DATE" comment="" />
+<DATE id="P4" start="203" end="210" text="6/15/89" TYPE="DATE" comment="" />
+<LOCATION id="P5" start="230" end="232" text="MS" TYPE="HOSPITAL" comment="" />
+<AGE id="P6" start="465" end="467" text="52" TYPE="AGE" comment="" />
+<DATE id="P7" start="505" end="511" text="1/2082" TYPE="DATE" comment="" />
+<DATE id="P8" start="597" end="600" text="'67" TYPE="DATE" comment="" />
+<DATE id="P9" start="694" end="701" text="1/16/88" TYPE="DATE" comment="" />
+<DATE id="P10" start="866" end="873" text="7/23/88" TYPE="DATE" comment="" />
+<DATE id="P11" start="898" end="905" text="4/20/89" TYPE="DATE" comment="" />
+<DATE id="P12" start="2172" end="2178" text="6/2089" TYPE="DATE" comment="" />
+<LOCATION id="P13" start="2221" end="2223" text="MS" TYPE="HOSPITAL" comment="" />
+<DATE id="P14" start="2341" end="2348" text="1/12/90" TYPE="DATE" comment="" />
+<LOCATION id="P15" start="2352" end="2355" text="HDC" TYPE="HOSPITAL" comment="" />
+<NAME id="P16" start="2360" end="2365" text="Singh" TYPE="DOCTOR" comment="" />
+</TAGS>
+</deIdi2b2>
