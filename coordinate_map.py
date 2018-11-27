@@ -65,8 +65,6 @@ class CoordinateMap:
 		"""  adds a new coordinate to the coordinate map
 			if overlaps with another, will extend to the larger size
 		"""
-		# if filename == "./data/i2b2_notes/167-02.txt":
-		
 		if self.debug:
 			print("add_extend", start, stop)
 
@@ -155,7 +153,6 @@ class CoordinateMap:
 
 	def does_overlap(self, filename, start, stop):
 		""" Check if this coordinate overlaps with any existing range"""
-
 		ranges = ***REMOVED***list(range(key,self.map***REMOVED***filename***REMOVED******REMOVED***key***REMOVED***+1)) for key in self.map***REMOVED***filename***REMOVED******REMOVED***
 		all_coords = ***REMOVED***item for sublist in ranges for item in sublist***REMOVED***
 		#removing all_coords implementation until we write some tests
@@ -252,7 +249,4 @@ class CoordinateMap:
 			complement_coordinate_map***REMOVED***start***REMOVED*** = stop
 
 		return complement_coordinate_map
-
-
-
 
