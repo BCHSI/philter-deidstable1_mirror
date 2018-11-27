@@ -1,0 +1,1 @@
+\b(?!((H|h)(((B|b)|(G|g))|(G|g)(B|b))(A|a)1(C|c)))(***REMOVED***a-zA-Z***REMOVED***{2,}(\:)?\d+(\:)?***REMOVED***a-zA-Z***REMOVED***+)\b

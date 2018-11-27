@@ -1,0 +1,1 @@
+\b(?!(NT\,\sND|MR\,\sLA)\b)((***REMOVED***A-Z***REMOVED******REMOVED***a-zA-Z***REMOVED***+\s{1,4}***REMOVED***A-Z***REMOVED******REMOVED***a-zA-Z***REMOVED***+|***REMOVED***A-Z***REMOVED******REMOVED***a-zA-Z***REMOVED***+)(\,\s{1,4})("""+state_name+r"""))\b

@@ -1,0 +1,1 @@
+\b(***REMOVED***A-Z***REMOVED***\'?***REMOVED***A-Z***REMOVED***?***REMOVED***\-aA-zZ***REMOVED***+(\s***REMOVED***A-Z***REMOVED***(.)?)?(\s***REMOVED***A-Z***REMOVED***\'?***REMOVED***A-Z***REMOVED***?***REMOVED***\-aA-zZ***REMOVED***+)*)(?=(\s|\,\s)M\.D|M\.D\.|MD\.|MD|N\.P|N\.P\.|NP\.|NP|D\.O|D\.O\.|DO\.|DO|R\.N|R\.N\.|RN\.|RN)\b

@@ -1,0 +1,1 @@
+\b***REMOVED***A-Z***REMOVED******REMOVED***a-zA-Z***REMOVED***+((\s|\-)***REMOVED***A-Z***REMOVED******REMOVED***a-zA-Z***REMOVED***+)?((\s|\-)***REMOVED***A-Z***REMOVED******REMOVED***a-zA-Z***REMOVED***+)?(?=\sHospital|\sHOSPITAL|\sFacility|\sFACILITY|\sMemorial|\sMEMORIAL|\sRegional|\sREGIONAL)\b

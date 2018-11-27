@@ -1,0 +1,1 @@
+\b(?!QTY|qty|RF|rf|RFL|rfl|Rf)(***REMOVED***a-zA-Z***REMOVED***{2,3}\:)?***REMOVED***a-zA-Z***REMOVED***{2,3}(\:\d+(***REMOVED*** ***REMOVED***+)?){1,}\b

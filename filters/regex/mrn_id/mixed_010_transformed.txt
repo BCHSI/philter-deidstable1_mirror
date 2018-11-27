@@ -1,0 +1,1 @@
+\b(\d+***REMOVED***a-zA-Z***REMOVED***+\d+***REMOVED***a-zA-Z***REMOVED***+(\d+)?(***REMOVED***a-zA-Z***REMOVED***+)?){1,}\b

@@ -1,0 +1,1 @@
+\b(((?i)***REMOVED***a-z***REMOVED***+\s(of|at|from)(\sthe)?)\s)(***REMOVED***A-Z***REMOVED******REMOVED***a-zA-Z***REMOVED***+|((?i)("""+day_numbering+r""")))((?i)\s("""+address_indicator+r"""))?\s&\s(***REMOVED***A-Z***REMOVED******REMOVED***a-zA-Z***REMOVED***+|((?i)("""+day_numbering+r""")))((?i)\s("""+address_indicator+r"""))?\b

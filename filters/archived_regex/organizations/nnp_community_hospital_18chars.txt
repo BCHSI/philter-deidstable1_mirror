@@ -1,0 +1,1 @@
+\b***REMOVED***A-Z***REMOVED******REMOVED***a-zA-Z***REMOVED***+((\s|\-)***REMOVED***A-Z***REMOVED******REMOVED***a-zA-Z***REMOVED***+)?((\s|\-)***REMOVED***A-Z***REMOVED******REMOVED***a-zA-Z***REMOVED***+)?(?=\sCommunity Hospital|\sCOMMUNITY HOSPITAL|\sInfectious Disease|\sINFECTIOUS DISEASE|\sDental Care Center|\sDENTAL CARE CENTER|\sArrhythmia Service|\sARRHYTHMIA SERVICE)\b

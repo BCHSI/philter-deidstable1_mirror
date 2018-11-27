@@ -1,0 +1,1 @@
+\b***REMOVED***A-Z***REMOVED******REMOVED***a-zA-Z***REMOVED***+((\s|\-)***REMOVED***A-Z***REMOVED******REMOVED***a-zA-Z***REMOVED***+)?((\s|\-)***REMOVED***A-Z***REMOVED******REMOVED***a-zA-Z***REMOVED***+)?(?=\sGastroenterology|GASTROENTEROLOGY|\sPathology Center|\sPATHOLOGY CENTER)\b
