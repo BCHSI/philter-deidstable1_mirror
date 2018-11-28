@@ -71,7 +71,7 @@ def main():
         
         # looks-up surrogate and apply to normalized PHI
         if __debug__: print("looking up surrogates")
-        phitexts.substitute_phi()
+        phitexts.substitute_phi(args.surrogate_info)
 
     # transforms texts
     if __debug__: print("transforming texts")
