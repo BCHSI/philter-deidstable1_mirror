@@ -85,7 +85,7 @@ def parse_xml_files(directory,output_directory,philter_or_gold,write_surrogated_
 					text_start = final_value["@start"]
 					text_end = final_value["@end"]
 
-					if phi_type == "DATE":
+					if phi_type == "DATE" or phi_type == "Date":
 						xmlstr,date_shift_log = shift_dates(filename_dates,filename,xmlstr,text,date_shift_log,note_text,text_start,text_end,verbose)
 					else:
 						xmlstr,surrogate_log = replace_other_surrogate(filename,xmlstr,text,phi_type,surrogate_log,verbose)
@@ -405,7 +405,7 @@ def main():
 		verbose = True
 
 	if prod:
-		rerun_i2b2 = False
+		rerun_gold = False
 		rerun_philter = True
 		evaluation = False
 		write_surrogated_files = True
