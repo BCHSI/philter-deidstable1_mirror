@@ -58,6 +58,10 @@ class Subs:
             print("Pandas Empty Data Error: " + look_up_table_path
                   + " is empty {0}".format(err))
             return {}
+        except ValueError as err:
+            print("Value Error: " + look_up_table_path
+                  + " is invalid {0}".format(err))
+            return {}
         
         look_up_table = look_up_table***REMOVED***~look_up_table***REMOVED***"date_offset"***REMOVED***.isnull()***REMOVED*** #.compute()
 
