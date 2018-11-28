@@ -9,6 +9,7 @@ import xmltodict
 from philter import Philter
 import json
 from subs import Subs
+import string
 
 class Phitexts:
     """ container for texts, phi, attributes """
@@ -95,8 +96,6 @@ class Phitexts:
                tags_dict = None
                print(filename)
             if tags_dict is not None:
-
-                
                for key, value in tags_dict.items():
               # Note:  Value can be a list of like phi elements
               #               or a dictionary of the metadata about a phi element
@@ -170,6 +169,27 @@ class Phitexts:
                     break
             detector.close()
         return detector.result
+
+
+    def _get_clean(self, text, punctuation_matcher=re.compile(r"***REMOVED***^a-zA-Z0-9\*\/***REMOVED***")):
+
+            # Use pre-process to split sentence by spaces AND symbols, while preserving spaces in the split list
+        # print (text)
+        lst = re.split("(\s+)", text)
+        cleaned = ***REMOVED******REMOVED***
+        for item in lst:
+            if len(item) > 0:
+                if item.isspace() == False:
+                    split_item = re.split("(\s+)", re.sub(punctuation_matcher, "", item))
+                    for elem in split_item:
+                        if len(elem) > 0:
+                                cleaned.append(elem)
+                                # print (elem)
+                # else:
+                #     cleaned.append(item)
+        return cleaned
+
+
 
 
     def detect_phi(self, filters="./configs/philter_alpha.json"):
@@ -465,36 +485,49 @@ class Phitexts:
 
         for root, dirs, files in os.walk(anno_dir):
             for filename in files:
+                #print(root)
                 if not filename.endswith("xml"):
                     continue                
-                filepath = os.path.join(root, filename)
+                #filepath = os.path.join(root, filename)
+                filepath = os.path.join(anno_dir, filename)
                 # change here: what will the input format be?
                 file_id = in_dir + filename.split('.')***REMOVED***0***REMOVED*** + '.txt'
                 tree = ET.parse(filepath)
                 root = tree.getroot()
                 xmlstr = ET.tostring(root, encoding='utf8', method='xml')
-                xml_dict = xmltodict.parse(xmlstr)***REMOVED***'deIdi2b2'***REMOVED***
+                xml_dict = xmltodict.parse(xmlstr)***REMOVED***'PhilterUCSF'***REMOVED***
+                check_tags = root.find('TAGS')
                 text = xml_dict***REMOVED***"TEXT"***REMOVED***
-                tags_dict = xml_dict***REMOVED***"TAGS"***REMOVED***
+                if check_tags is not None:
+                   tags_dict = xml_dict***REMOVED***"TAGS"***REMOVED***
+                else:
+                   tags_dict = None
+
                 if file_id  not in gold_phi:
                    gold_phi***REMOVED***file_id***REMOVED*** = {}
                 # the existence of puncs in text makes the end index inaccurate - only use start index as the key
-                for key, value in tags_dict.items():
-                    if isinstance(value, list):
-                        for final_value in value:
-                            start = int(final_value***REMOVED***"@start"***REMOVED***)
-                            end = int(final_value***REMOVED***"@end"***REMOVED***)
-                            text = final_value***REMOVED***"@text"***REMOVED***.translate(translator)
-                            phi_type = final_value***REMOVED***"@TYPE"***REMOVED***
-                            gold_phi***REMOVED***file_id***REMOVED***.update({start:***REMOVED***end,phi_type,text***REMOVED***})
+                if tags_dict is not None: 
 
-                    else:
-                        final_value = value
-                        start = int(final_value***REMOVED***"@start"***REMOVED***)
-                        end = int(final_value***REMOVED***"@end"***REMOVED***)
-                        text = final_value***REMOVED***"@text"***REMOVED***.translate(translator)
-                        phi_type = final_value***REMOVED***"@TYPE"***REMOVED***
-                        gold_phi***REMOVED***file_id***REMOVED***.update({start:***REMOVED***end, phi_type, text***REMOVED***})
+                   for key, value in tags_dict.items():
+                       if isinstance(value, list):
+                          for final_value in value:
+                              #start = int(final_value***REMOVED***"@start"***REMOVED***)
+                              #end = int(final_value***REMOVED***"@end"***REMOVED***)
+                              start = int(final_value***REMOVED***"@spans"***REMOVED***.split('~')***REMOVED***0***REMOVED***)
+                              end = int(final_value***REMOVED***"@spans"***REMOVED***.split('~')***REMOVED***1***REMOVED***)
+                              text = final_value***REMOVED***"@text"***REMOVED***.translate(translator)
+                              phi_type = final_value***REMOVED***"@TYPE"***REMOVED***
+                              gold_phi***REMOVED***file_id***REMOVED***.update({start:***REMOVED***end,phi_type,text***REMOVED***})
+
+                       else:
+                          final_value = value
+                          #start = int(final_value***REMOVED***"@start"***REMOVED***)
+                          start = int(final_value***REMOVED***"@spans"***REMOVED***.split('~')***REMOVED***0***REMOVED***)
+                          #end = int(final_value***REMOVED***"@end"***REMOVED***)
+                          end = int(final_value***REMOVED***"@spans"***REMOVED***.split('~')***REMOVED***1***REMOVED***)
+                          text = final_value***REMOVED***"@text"***REMOVED***.translate(translator)
+                          phi_type = final_value***REMOVED***"@TYPE"***REMOVED***
+                          gold_phi***REMOVED***file_id***REMOVED***.update({start:***REMOVED***end, phi_type, text***REMOVED***})
        
         # converting self.types to an easier accessible data structure
         eval_table = {}
@@ -503,6 +536,7 @@ class Phitexts:
         for phi_type in self.types:
             for filename, start, end in self.types***REMOVED***phi_type***REMOVED******REMOVED***0***REMOVED***.scan():
                 word = self.texts***REMOVED***filename***REMOVED******REMOVED***start:end***REMOVED***.translate(translator)
+                #print(filename + "\t" + str(start) + "\t" + str(end) +"\t" + word)
                 if filename not in phi_table:
                     phi_table***REMOVED***filename***REMOVED*** = {}
                 phi_table***REMOVED***filename***REMOVED***.update({start:***REMOVED***end, phi_type, word***REMOVED***})
@@ -517,8 +551,10 @@ class Phitexts:
                 gold_end = gold_phi***REMOVED***filename***REMOVED******REMOVED***start***REMOVED******REMOVED***0***REMOVED***
                 gold_type = gold_phi***REMOVED***filename***REMOVED******REMOVED***start***REMOVED******REMOVED***1***REMOVED***
                 gold_word = gold_phi***REMOVED***filename***REMOVED******REMOVED***start***REMOVED******REMOVED***2***REMOVED***
+                #print(filename + "\t" + gold_start + "\t" + gold_end +"\t" + gold_word)
                 # remove phi from text to form the non_phi_set
                 text = text.replace(gold_word, '')
+                
                 if filename in phi_table:
                     # is phi and is caught -> TP
                     if gold_start in phi_table***REMOVED***filename***REMOVED***:
@@ -529,6 +565,7 @@ class Phitexts:
                             eval_table***REMOVED***filename***REMOVED******REMOVED***'tp'***REMOVED******REMOVED***gold_type***REMOVED***.append(word)
                     # is phi but not caught -> FN
                     else:
+                        #print("fn" + filename + "\t" + gold_start + "\t" + gold_end +"\t" + gold_word)
                         # word = phi_table***REMOVED***filename***REMOVED******REMOVED***gold_start***REMOVED******REMOVED***2***REMOVED***
                         if gold_type not in eval_table***REMOVED***filename***REMOVED******REMOVED***'fn'***REMOVED***:
                             eval_table***REMOVED***filename***REMOVED******REMOVED***'fn'***REMOVED******REMOVED***gold_type***REMOVED*** = ***REMOVED******REMOVED***
@@ -537,7 +574,6 @@ class Phitexts:
                     print (filename + ' not processed by philter or check filename!')
                     continue
             non_phi***REMOVED***filename***REMOVED*** = self._get_clean(text)
-
         for filename in phi_table:
             if filename in gold_phi:
                 if filename not in eval_table:
@@ -546,9 +582,10 @@ class Phitexts:
                     end = phi_table***REMOVED***filename***REMOVED******REMOVED***start***REMOVED******REMOVED***0***REMOVED***
                     phi_type = phi_table***REMOVED***filename***REMOVED******REMOVED***start***REMOVED******REMOVED***1***REMOVED***
                     word = phi_table***REMOVED***filename***REMOVED******REMOVED***start***REMOVED******REMOVED***2***REMOVED***
-                    # print (word)
+                    #print (""+"\t"+word + "\t" + str(start))
                     # word caught but is not phi -> FP
-                    if start not in gold_phi:
+                    if start not in gold_phi***REMOVED***filename***REMOVED***:
+                        #print ("fp" + "\t" + filename + "\t" + word + "\t" + str(start))
                         if phi_type not in eval_table***REMOVED***filename***REMOVED******REMOVED***'fp'***REMOVED***:
                             eval_table***REMOVED***filename***REMOVED******REMOVED***'fp'***REMOVED******REMOVED***phi_type***REMOVED*** = ***REMOVED******REMOVED***
                             eval_table***REMOVED***filename***REMOVED******REMOVED***'fp'***REMOVED******REMOVED***phi_type***REMOVED***.append(word)
@@ -603,14 +640,26 @@ class Phitexts:
                 summary_by_category***REMOVED***phi_type***REMOVED******REMOVED***'fn'***REMOVED***.append(eval_table***REMOVED***filename***REMOVED******REMOVED***'fn'***REMOVED******REMOVED***phi_type***REMOVED***)
             tn = len(eval_table***REMOVED***filename***REMOVED******REMOVED***'tn'***REMOVED***)
             total_tn += tn
-            precision = tp / (tp + fp)
-            recall = tp / (tp + fn)
+            try:  
+               precision = tp / (tp + fp)
+            except ZeroDivisionError:
+               precision = 0
+            try:  
+               recall = tp / (tp + fn)
+            except ZeroDivisionError:
+               recall = 0
             summary_by_file***REMOVED***filename***REMOVED***.update({'tp':tp, 'fp': fp, 'fn':fn, 'tn':tn, 'recall':recall,'precision':precision})
             # summary_by_category***REMOVED***filename***REMOVED***.update({'tp':tp, 'fp': fp, 'fn':fn, 'tn':tn, 'recall':recall,'precision':precision})
         
-       
-        total_precision = total_tp / (total_tp + total_fp)
-        total_recall = total_tp / (total_tp + total_fn)
+        try:
+           total_precision = total_tp / (total_tp + total_fp)
+        except ZeroDivisionError:
+           total_precision = 0     
+
+        try:
+           total_recall = total_tp / (total_tp + total_fn)
+        except ZeroDivisionError:
+           total_recall = 0
         total_summary = {'tp':total_tp, 'tn':total_tn, 'fp':total_fp, 'fn':total_fn, 'precision':total_precision, 'recall':total_recall}
         json.dump(total_summary, open(summary_file, "w"), indent=4)
         json.dump(summary_by_file, open(json_summary_by_file, "w"), indent=4)
