@@ -368,8 +368,6 @@ def main():
 		    type=str)
 	parser.add_argument("-rp","--rerun_philter", default=False, help="This will re-run the philter surrogating. It takes a while, so default is false",
                     type=lambda x:bool(distutils.util.strtobool(x)))
-	parser.add_argument("-ri","--rerun_i2b2", default=False, help="This will re-run the manually annotated gold standard surrogating. It takes a while, so default is false",
-                    type=bool)
 	parser.add_argument("-rg","--rerun_gold", default=False, help="This will re-run the gold (manually annotated) standard surrogating. It takes a while, so default is false",
 		    type=lambda x:bool(distutils.util.strtobool(x)))
 	parser.add_argument("-e","--evaluation", default=True, help="This will run the evaluation comparing surrogated gold with surrogated philter notes",
