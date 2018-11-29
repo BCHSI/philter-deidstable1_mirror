@@ -82,8 +82,12 @@ def parse_xml_files(directory,output_directory,philter_or_gold,write_surrogated_
 					final_value = value
 					text = final_value["@text"]
 					phi_type = final_value["@TYPE"]
-					text_start = final_value["@start"]
-					text_end = final_value["@end"]
+					if philter_or_gold == "PhilterUCSF":
+						text_start = final_value["@spans"].split('~')[0]
+						text_end = final_value["@spans"].split('~')[1]
+					else:
+						text_start = final_value["@start"]
+						text_end = final_value["@end"]
 
 					if phi_type == "DATE" or phi_type == "Date":
 						xmlstr,date_shift_log = shift_dates(filename_dates,filename,xmlstr,text,date_shift_log,note_text,text_start,text_end,verbose)
