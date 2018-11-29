@@ -43,42 +43,11 @@ class Subs:
     def date_to_string(self, date):
         return date.to_string()
 
-    """
-    def parse_date_2(self, date_string):
-        date = parse(date_string, settings={'PREFER_DAY_OF_MONTH': 'first'} )
-        today = datetime.now()
-        if parsed_date is not None:
-            date_strict = parse(parsed_date,settings={'STRICT_PARSING': True})
-
-            # we have to take into account if the input date isn't a fully specified date
-            #date parse implementation returns current month if month is not found
-            # and sets day to equal 1 if day is not found
-            if strict_parsed_date is None or strict_parsed_date.year != date.year:
-                if date.month != today.month:
-                    input_string += str(dt.strftime('%B')) 
-                    output_string += str(dt_plus_arbitrary.strftime('%B')) 
-                if dt.year!=now.year:
-                    input_string += " " +str(dt.year)
-                    output_string += " " +str(dt_plus_arbitrary.year)
-                if dt.day!=1:
-                    input_string += " " +str(dt.day)
-                    output_string += " " +str(dt_plus_arbitrary.day)
-                output_shifted_date = output_string.replace(" 00:00:00","")
-                input_date = input_string.replace(" 00:00:00","")
-
-            else:
-                output_shifted_date = str(dt_plus_arbitrary).replace(" 00:00:00","")
-                input_date = str(dt).replace(" 00:00:00","")
-    """
-
     def _load_look_up_table(self, look_up_table_path):
-        # note_info_path='data/notes_metadata/note_info.csv'
-        # re_id_pat_path='data/notes_metadata/re_id_pat.csv'
         if look_up_table_path is None:
             return {} #defaultdict(lambda:DEFAULT_SHIFT_VALUE)
         look_up_table = pd.read_csv(look_up_table_path, sep='\t', index_col=False, usecols=['note_key', 'date_offset'], dtype=str)
         look_up_table = look_up_table[~look_up_table["date_offset"].isnull()]
-        #.compute()
         id2offset = pd.Series(look_up_table.date_offset.values, index=look_up_table.note_key).to_dict()
         
         return id2offset
