@@ -35,7 +35,16 @@ class Subs:
         return date.subtract_days(shift_amount)
     
     def shift_date_pid(self, date, note_id):
-        return self.shift_date(date, self.get_shift_amount(note_id)) # TODO: check return value before shift
+        shifted_date = None
+        shift = self.get_shift_amount(note_id)
+        if shift is None:
+            return None
+        try:
+            shifted_date = self.shift_date(date, shift)
+        except OverflowError as err:
+            print("Overflow Error: cannot shift date \"" + date.to_string()
+                  + "\" with shift " + str(shift) + " {0}".format(err))
+        return shift_dated
 
     @staticmethod
     def parse_date(date_string):
