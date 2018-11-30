@@ -69,16 +69,24 @@ class Philter:
             self.xml = json.loads(open(config***REMOVED***"xml"***REMOVED***, "r", encoding='utf-8').read())
 
         if "stanford_ner_tagger" in config:
-            if not os.path.exists(config***REMOVED***"stanford_ner_tagger"***REMOVED******REMOVED***"classifier"***REMOVED***) and config***REMOVED***"stanford_ner_tagger"***REMOVED******REMOVED***"download"***REMOVED*** == False:
-                raise Exception("Filepath does not exist", config***REMOVED***"stanford_ner_tagger"***REMOVED******REMOVED***"classifier"***REMOVED***)
-            else:
-                #download the ner data
-                process = subprocess.Popen("cd generate_dataset && ./download_ner.sh".split(), stdout=subprocess.PIPE)
-                output, error = process.communicate()
-            self.stanford_ner_tagger_classifier = config***REMOVED***"stanford_ner_tagger"***REMOVED******REMOVED***"classifier"***REMOVED***
-            if not os.path.exists(config***REMOVED***"stanford_ner_tagger"***REMOVED******REMOVED***"jar"***REMOVED***):
-                raise Exception("Filepath does not exist", config***REMOVED***"stanford_ner_tagger"***REMOVED******REMOVED***"jar"***REMOVED***)
-            self.stanford_ner_tagger_jar = config***REMOVED***"stanford_ner_tagger"***REMOVED******REMOVED***"jar"***REMOVED***
+            try:
+                if (not os.path.exists(config***REMOVED***"stanford_ner_tagger"***REMOVED***
+                                       ***REMOVED***"classifier"***REMOVED***)
+                    and config***REMOVED***"stanford_ner_tagger"***REMOVED******REMOVED***"download"***REMOVED*** == False):
+                    raise Exception("Filepath does not exist",
+                                    config***REMOVED***"stanford_ner_tagger"***REMOVED******REMOVED***"classifier"***REMOVED***)
+                else:
+                    #download the ner data
+                    process = subprocess.Popen("cd generate_dataset && ./download_ner.sh".split(), stdout=subprocess.PIPE)
+                    output, error = process.communicate()
+                self.stanford_ner_tagger_classifier = config***REMOVED***"stanford_ner_tagger"***REMOVED******REMOVED***"classifier"***REMOVED***
+                if not os.path.exists(config***REMOVED***"stanford_ner_tagger"***REMOVED******REMOVED***"jar"***REMOVED***):
+                    raise Exception("Filepath does not exist",
+                                    config***REMOVED***"stanford_ner_tagger"***REMOVED******REMOVED***"jar"***REMOVED***)
+                self.stanford_ner_tagger_jar = config***REMOVED***"stanford_ner_tagger"***REMOVED******REMOVED***"jar"***REMOVED***
+            except Exception as err:
+                if __debug__: print("WARNING: Stanford NER tagger "
+                                    + "Exception: {0}".format(err))
         #we lazy load our tagger only if there's a corresponding pattern
         self.stanford_ner_tagger = None
 
