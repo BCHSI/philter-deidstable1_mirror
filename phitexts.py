@@ -269,9 +269,9 @@ class Phitexts:
         for phi_type in self.norms.keys():
             if phi_type == "DATE" or phi_type == "Date":
                 for filename, start in self.norms[phi_type]:
-                    note_key_ucsf = os.path.splitext(os.path.basename(filename).strip('0'))[0]	
-                    if not self.subser.has_shift_amount(note_key_ucsf):	
-                        if __debug__: print("WARNING: no date shift found for file: " + filename)	
+                    note_key_ucsf = os.path.splitext(os.path.basename(filename).strip('0'))[0]
+                    if not self.subser.has_shift_amount(note_key_ucsf):
+                        if __debug__: print("WARNING: no date shift found for: " + filename)
                         continue
                     normalized_token = self.norms[phi_type][filename, start][0]
                     end = self.norms[phi_type][filename, start][1]
@@ -280,7 +280,14 @@ class Phitexts:
                     if normalized_token is None:
                         # self.eval_table[filename][start].update({'sub':None})
                         continue
-                    substitute_token = self.subser.date_to_string(self.subser.shift_date_pid(normalized_token, note_key_ucsf))
+
+                    shifted_date = self.subser.shift_date_pid(normalized_token,
+                                                              note_key_ucsf)
+                    if shifted_date is None:
+                        if __debug__: print("WARNING: cannot shift date in: "
+                                            + filename)
+                        continue
+                    substitute_token = self.subser.date_to_string(shifted_date)
                     # self.eval_table[filename][start].update({'sub':substitute_token})
                     self.subs[(filename, start)] = (substitute_token, end)
             else:

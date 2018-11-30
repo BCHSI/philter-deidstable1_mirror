@@ -1,8 +1,8 @@
 import re
 import dateparser
 import datetime
-DATE_1 = datetime.datetime(3000, 12, 12)
-DATE_2 = datetime.datetime(1000, 5, 5)
+DATE_1 = datetime.datetime(3004, 12, 12)
+DATE_2 = datetime.datetime(1004, 5, 5)
 
 """
 datetime2 is an extension to python's standard datetime. It can be used anywhere
@@ -47,26 +47,60 @@ class datetime2(datetime.datetime):
     
     @staticmethod
     def parse(date_string, *args, **kwargs):
-        temp_date = dateparser.parse(date_string, *args, **kwargs)
-        if temp_date is None:
+        try:
+            temp_date = dateparser.parse(date_string, *args, **kwargs)
+            if temp_date is None:
+                raise ValueError("parser returned None")
+            missing_year, missing_month, missing_day, missing_century = datetime2.missing_date_parts(date_string)
+        except ValueError as err:
+            if __debug__: print("WARNING: cannot parse date \"" + date_string
+                                + "\" Value Error: {0}".format(err))
+            return None
+        except OverflowError as err:
+            if __debug__: print("WARNING: cannot parse date \"" + date_string
+                                + "\" Overflow Error: {0}".format(err))
             return None
         year = temp_date.year
         month = temp_date.month
         day = temp_date.day
-        missing_year, missing_month, missing_day, missing_century = datetime2.missing_date_parts(date_string)
         return datetime2(year, month, day, date_string = date_string, 
-                         missing_year = missing_year, missing_month = missing_month, missing_day = missing_day,
+                         missing_year = missing_year,
+                         missing_month = missing_month,
+                         missing_day = missing_day,
                          missing_century = missing_century)
     
     @staticmethod
     def missing_date_parts(date_string):
-        parsed_date_1 = dateparser.parse(date_string, settings={'RELATIVE_BASE':DATE_1, 'PREFER_DATES_FROM':"future"})
-        parsed_date_2 = dateparser.parse(date_string, settings={'RELATIVE_BASE':DATE_2, 'PREFER_DATES_FROM':"past"})
-
+        missing_day = False
+        missing_month = False
+        missing_year = False
+        missing_century = False
+        try:
+            parsed_date_1 = dateparser.parse(date_string,
+                                             settings={'RELATIVE_BASE':DATE_1,
+                                                       'PREFER_DATES_FROM':"past"})
+            if parsed_date_1 is None:
+                raise ValueError("parser returned None")
+            parsed_date_2 = dateparser.parse(date_string,
+                                             settings={'RELATIVE_BASE':DATE_2,
+                                                       'PREFER_DATES_FROM':"past"})
+        except ValueError as err:
+            raise ValueError("cannot parse date \"" + date_string
+                             + "\" {0}".format(err))
+        if parsed_date_2 is None:
+            print("WARNING: experimental date encountered \""
+                  + date_string + "\"")
+            missing_century = True
+            parsed_date_2 = dateparser.parse(date_string,
+                                             settings={'RELATIVE_BASE':DATE_2,
+                                                       'PREFER_DATES_FROM':"future"})
+            
         missing_day = parsed_date_1.day != parsed_date_2.day
         missing_month = parsed_date_1.month != parsed_date_2.month
         missing_year = parsed_date_1.year % 100 != parsed_date_2.year % 100
-        missing_century = (~missing_year and (parsed_date_1.year != parsed_date_2.year))
+        missing_century = missing_century or (~missing_year
+                                              and (parsed_date_1.year
+                                                   != parsed_date_2.year))
 
         return missing_year, missing_month, missing_day, missing_century
             
@@ -81,20 +115,24 @@ class datetime2(datetime.datetime):
         if isinstance(other, int):
             other = datetime.timedelta(days=other)
         tmp = datetime.datetime.__add__(self, other)
-        return datetime2(tmp.year, tmp.month, tmp.day, date_string = self.date_string,
-                missing_year = self.missing_year, missing_month = self.missing_month,
-                missing_day = self.missing_day, missing_century = self.missing_century)
+        return datetime2(tmp.year, tmp.month, tmp.day,
+                         date_string = self.date_string,
+                         missing_year = self.missing_year,
+                         missing_month = self.missing_month,
+                         missing_day = self.missing_day,
+                         missing_century = self.missing_century)
 
     def __sub__(self, other):
         #if other is int then create a timedelta object with days=other
         if isinstance(other, int):
             other = datetime.timedelta(days=other)
         tmp = datetime.datetime.__sub__(self, other)
-        return datetime2(tmp.year, tmp.month, tmp.day, date_string = self.date_string,
-                missing_year = self.missing_year, missing_month = self.missing_month,
-                missing_day = self.missing_day, missing_century = self.missing_century)
-
-
+        return datetime2(tmp.year, tmp.month, tmp.day,
+                         date_string = self.date_string,
+                         missing_year = self.missing_year,
+                         missing_month = self.missing_month,
+                         missing_day = self.missing_day,
+                         missing_century = self.missing_century)
 
     def to_string(self):
         #month; month dd; month yyyy; mm/dd/yyyy;

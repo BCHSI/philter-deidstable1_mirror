@@ -67,43 +67,41 @@ def main():
     run_eval = args.run_eval
     verbose = args.verbose
 
+    philter_config = {}
+    
     if args.prod:
         run_eval = False
         verbose = False
         outputformat = "i2b2"
         # filters = "./configs/philter_alpha.json"
-        philter_config = {
-            "verbose":verbose,
-            "run_eval":run_eval,
-            "finpath":args.input,
-            "foutpath":args.output,
-            "outformat":outputformat,
-            "filters":args.filters,
-            "cachepos":args.cachepos
-        }
-
+        philter_config["verbose"] = verbose
+        philter_config["run_eval"] = run_eval
+        philter_config["finpath"] = args.input
+        philter_config["foutpath"] = args.output
+        philter_config["outformat"] = outputformat
+        philter_config["filters"] = args.filters
+        philter_config["cachepos"] = args.cachepos
     else:
-    	philter_config = {
-            "verbose":args.verbose,
-            "run_eval":args.run_eval,
-            'dependent':args.dependent,
-            "freq_table":args.freq_table,
-            "initials":args.initials,
-            "finpath":args.input,
-            "foutpath":args.output,
-            "outformat":args.outputformat,
-            "ucsfformat":args.ucsfformat,
-            "anno_folder":args.anno,
-            "filters":args.filters,
-            "xml":args.xml,
-            "coords":args.coords,
-            "eval_out":args.eval_output,	
-            "cachepos":args.cachepos,
-            "stanford_ner_tagger": {
-                "classifier":args.stanfordner+"classifiers/english.all.3class.distsim.crf.ser.gz",
-                "jar":args.stanfordner+"stanford-ner.jar",
-                "download":True,
-            }
+        philter_config["verbose"] = args.verbose
+        philter_config["run_eval"] = args.run_eval
+        if philter_config["run_eval"]:
+            philter_config["xml"] = args.xml
+            philter_config["ucsfformat"] = args.ucsfformat
+            philter_config["anno_folder"] = args.anno
+            philter_config["eval_out"] = args.eval_output
+            philter_config["dependent"] = args.dependent
+            philter_config["coords"] = args.coords
+            philter_config["freq_table"] = args.freq_table
+            philter_config["initials"] = args.initials
+        philter_config["finpath"] = args.input
+        philter_config["foutpath"] = args.output
+        philter_config["outformat"] = args.outputformat
+        philter_config["filters"] = args.filters
+        philter_config["cachepos"] = args.cachepos
+        philter_config["stanford_ner_tagger"] = {
+            "classifier":args.stanfordner+"classifiers/english.all.3class.distsim.crf.ser.gz",
+            "jar":args.stanfordner+"stanford-ner.jar",
+            "download":True,
         }
    
     if verbose:

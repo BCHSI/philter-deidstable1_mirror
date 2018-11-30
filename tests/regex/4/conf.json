@@ -1,0 +1,16 @@
+[ 
+    {  
+        "title": "salutations6",
+        "type": "regex",
+        "exclude": true,
+        "filepath": "filters/regex/salutations/post_salutations_3chars.txt",
+        "note": ""
+    },
+    {
+    	"title":"No catchall",
+	"type":"regex",
+	"exclude":false,
+	"filepath":"filters/regex/catchall.txt",
+	"notes":"This should match anything, preventing the catchall"
+    }
+]
