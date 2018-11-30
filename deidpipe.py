@@ -44,6 +44,11 @@ def get_args():
     return ap.parse_args()
 
 
+def __init__(self):
+    self.csv_summary = ***REMOVED******REMOVED***
+    self.filenames = ***REMOVED******REMOVED***
+
+
 def main():
 
     # assumes notes have been shredded into subdirectories such as
@@ -78,6 +83,10 @@ def main():
     if __debug__: print("transforming texts")
     phitexts.transform()
 
+    # no subs text transformation
+    if __debug__: print("transforming texts without subs")
+    phitexts.simple_transform()
+
     # saves output
     if __debug__: print("saving de-identified texts")
     phitexts.save(args.output)
@@ -85,6 +94,7 @@ def main():
     # print and save log 
     if args.log:
         phitexts.print_log(args.output)
+
     if args.eval:
         phitexts.eval(args.anno, args.input, args.output)
 
