@@ -38,7 +38,7 @@ class Phitexts:
         self.subser = None
         self.filterer = None
         #create a memory for the list of known PHI types
-        self.phi_type_list = ***REMOVED***'Date'***REMOVED***
+        self.phi_type_list = ***REMOVED***'DATE','ID','NAME','CONTACT','AGE>=90','NAME','OTHER','LOCATION'***REMOVED***
         self.phi_type_dict = {}
         for phi_type in self.phi_type_list:
             self.phi_type_dict***REMOVED***phi_type***REMOVED*** = ***REMOVED***CoordinateMap()***REMOVED***        
