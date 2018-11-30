@@ -45,7 +45,7 @@ def main():
                     type=lambda x:bool(distutils.util.strtobool(x)))
     ap.add_argument("-t", "--freq_table", default=False,
                     help="When freqtable is true, will output a unigram/bigram frequency table of all note words and their PHI/non-PHI counts",
-                    type=lambda x:bool(distutils.util.strtobool(x))) 
+                    type=lambda x:bool(distutils.util.strtobool(x)))
     ap.add_argument("-n", "--initials", default=True,
                     help="When initials is true, will include initials PHI in recall/precision calculations",
                     type=lambda x:bool(distutils.util.strtobool(x))) 
@@ -73,7 +73,7 @@ def main():
         run_eval = False
         verbose = False
         outputformat = "i2b2"
-        # filters = "./configs/philter_alpha.json"
+        #filters = "./configs/philter_alpha.json"
         philter_config = {
             "verbose":verbose,
             "run_eval":run_eval,

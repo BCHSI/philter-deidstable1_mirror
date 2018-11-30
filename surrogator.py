@@ -57,8 +57,9 @@ def parse_xml_files(directory,output_directory,philter_or_gold,write_surrogated_
 		if filename.endswith(".xml") and "DS_Store" not in filename:
 
 			note_text,tags_dict,xmlstr = extractXML(directory,filename,philter_or_gold,verbose)
-			if not tags_dict:
+			if not tags_dict:	
 				continue
+
 			for key, value in tags_dict.items():
 				# Note:  Value can be a list of like phi elements
 				# 		or a dictionary of the metadata about a phi element
@@ -73,10 +74,10 @@ def parse_xml_files(directory,output_directory,philter_or_gold,write_surrogated_
 							text_end = final_value***REMOVED***"@end"***REMOVED***
 						text = final_value***REMOVED***"@text"***REMOVED***
 						phi_type = final_value***REMOVED***"@TYPE"***REMOVED***
-						if phi_type == "DATE" or phi_type == "Date":
+						if phi_type == "DATE" or phi_type == "Date": 
 							xmlstr,date_shift_log = shift_dates(filename_dates,filename,xmlstr,text,date_shift_log,note_text,text_start,text_end,verbose)
 						else:
-							xmlstr,surrogate_log = replace_other_surrogate(filename,xmlstr,text,phi_type,surrogate_log,verbose)
+							xmlstr,surrogate_log = replace_other_surrogate(filename,xmlstr,text,phi_type,surrogate_log,verbose)								
 				else:
 					final_value = value
 					text = final_value***REMOVED***"@text"***REMOVED***
@@ -92,7 +93,7 @@ def parse_xml_files(directory,output_directory,philter_or_gold,write_surrogated_
 						xmlstr,date_shift_log = shift_dates(filename_dates,filename,xmlstr,text,date_shift_log,note_text,text_start,text_end,verbose)
 					else:
 						xmlstr,surrogate_log = replace_other_surrogate(filename,xmlstr,text,phi_type,surrogate_log,verbose)
-
+			
 			# here we write back out the updated XML File to a new directory
 			output_dir = output_directory+filename.replace(".xml",".txt")
 			try:
@@ -316,8 +317,7 @@ def date_shift_evaluation(output_directory,date_shift_log_gold,date_shift_log,pr
 	Prints( a summary of the true positives, false positives and false negatives)
     Saves a more granular file of all of these to output_directory
 	"""
-
-	s1 = pd.merge(date_shift_log_gold, date_shift_log,indicator=True, how='outer', on=***REMOVED***'Filename','start','end','Input Date'***REMOVED***)
+        s1 = pd.merge(date_shift_log_gold, date_shift_log,indicator=True, how='outer', on=***REMOVED***'Filename','start','end','Input Date'***REMOVED***)
 	output_eval = s1***REMOVED******REMOVED***"Filename","Input Date","_merge"***REMOVED******REMOVED***
 	output_eval = output_eval.rename(index=str, columns={"_merge": "classification"})
 	output_eval***REMOVED***"classification"***REMOVED*** = output_eval***REMOVED***'classification'***REMOVED***.replace({'both': 'true positive','left_only': 'false positive', 'right_only': 'false negative'})
@@ -336,7 +336,7 @@ def date_shift_evaluation(output_directory,date_shift_log_gold,date_shift_log,pr
 	true_positives = s1_true_positive
 	print ("\n______________________________________________")
 	print ("\nSummary Stats: \ntrue positives: " + str(true_positives))
-
+	
 	# count of False positives (shows in actual only)
 	s1_false_positive = output_eval***REMOVED***output_eval***REMOVED***'classification'***REMOVED*** == "false positive"***REMOVED***.count()***REMOVED***"Input Date"***REMOVED***
 	false_positives = s1_false_positive
@@ -354,7 +354,7 @@ def main():
 	parser = argparse.ArgumentParser(description=
 		"""This program will read in gold or Philter XML formatted notes \n
 		Then apply date shifts to any phi tagged as a date. \n
-		Next it will replace all appropriate PHI with the respective PHI Tag \n
+		Next it will replace all appropriate PHI with the respective PHI Tag \n 
 		Then it will output .txt files with the appropriate surrogates
 		""")
 
@@ -363,13 +363,13 @@ def main():
 	parser.add_argument("-o","--output_dir", default="data/surrogator/philter_results_output/", help="specifiy the output directory",
                     type=str)
 	parser.add_argument("-gi","--gold_input_dir", default="data/surrogator/testing-PHI-Gold-fixed", help="specifiy the input gold directory",
-                    type=str)
+		    type=str)
 	parser.add_argument("-go","--gold_output_dir", default="data/surrogator/testing-PHI-Gold-fixed-output/", help="specifiy the gold output directory",
-		            type=str)
+		    type=str)
 	parser.add_argument("-rp","--rerun_philter", default=False, help="This will re-run the philter surrogating. It takes a while, so default is false",
                     type=lambda x:bool(distutils.util.strtobool(x)))
 	parser.add_argument("-rg","--rerun_gold", default=False, help="This will re-run the gold (manually annotated) standard surrogating. It takes a while, so default is false",
-                    type=lambda x:bool(distutils.util.strtobool(x)))
+		    type=lambda x:bool(distutils.util.strtobool(x)))
 	parser.add_argument("-e","--evaluation", default=True, help="This will run the evaluation comparing surrogated gold with surrogated philter notes",
                     type=lambda x:bool(distutils.util.strtobool(x)))
 	parser.add_argument("-t","--test", default=False, help="This will run the test, using less files",
@@ -380,8 +380,8 @@ def main():
                     type=lambda x:bool(distutils.util.strtobool(x)))
 	parser.add_argument("-verbose","--verbose", default=True, help="This will output helpful print statements and surrogator logs, but also increase the runtime of the program",
                     type=lambda x:bool(distutils.util.strtobool(x)))
-	parser.add_argument("-x","--xmldomain", default="PhilterUCSF", help="GOLD xml domain",
-			    type=str)
+	parser.add_argument("-x","--xmldomain", default="PhilterUCSF", help="GOLD xml domain",	
+	            type=str)
 
 	parsed = parser.parse_args()
 	directory = vars(parsed)***REMOVED***"input_dir"***REMOVED***
@@ -465,7 +465,6 @@ def main():
 		print ("\nGOLD Notes")
 		write_summary(date_shift_log_gold,surrogate_log_gold,gold_output_directory)
 		date_shift_evaluation(output_directory,date_shift_log_gold,date_shift_log,problem_files_log)
-
-
+		
 if __name__ == "__main__":
 	main()

@@ -110,7 +110,7 @@ def main():
 	new_dict = dict()
 
 	for filename in os.listdir(directory):
-		print("\nfilename is: " + filename)
+		print("\nfilename is: " + filename) 
 
 	# example for year
 	#filename = "113-02.xml"
@@ -140,16 +140,16 @@ def main():
 
 					if phi_type == "DATE": 
 						xmlstr = fix_dates(xmlstr,text)
-					# elif phi_type == "NAME" or phi_type == "DOCTOR":
-					# 	xmlstr = remove_abbrevs(xmlstr,text,phi_type)	
+				        # elif phi_type == "NAME" or phi_type == "DOCTOR":
+					#	xmlstr = remove_abbrevs(xmlstr,text,phi_type)	
 					# elif phi_type == "ID":
-					# 	xmlstr = remove_ids(xmlstr,text)	
+					#	xmlstr = remove_ids(xmlstr,text)	
 					elif phi_type == "COUNTRY":
 						xmlstr = remove_countries(xmlstr,text,phi_type)	
 					elif phi_type == "AGE":
 						xmlstr = remove_age_under_90(xmlstr,text,phi_type,filename)
 					# elif phi_type == "HOSPITAL":
-					# 	xmlstr = remove_hospitals(xmlstr,text,phi_type)								
+					#	xmlstr = remove_hospitals(xmlstr,text,phi_type)								
 			else:
 				final_value = value
 				text = final_value***REMOVED***"@text"***REMOVED***
@@ -158,15 +158,15 @@ def main():
 				if phi_type == "DATE":
 					xmlstr = fix_dates(xmlstr,text)
 				# elif phi_type == "NAME" or phi_type == "DOCTOR":
-				# 	xmlstr = remove_abbrevs(xmlstr,text,phi_type)
+				#	xmlstr = remove_abbrevs(xmlstr,text,phi_type)
 				# elif phi_type == "ID":
-				# 		xmlstr = remove_ids(xmlstr,text)
+				#		xmlstr = remove_ids(xmlstr,text)
 				elif phi_type == "COUNTRY":
 					xmlstr = remove_countries(xmlstr,text,phi_type)	
 				elif phi_type == "AGE":
 					xmlstr = remove_age_under_90(xmlstr,text,phi_type,filename)
 				# elif phi_type == "HOSPITAL":
-				# 	xmlstr = remove_hospitals(xmlstr,text,phi_type)	
+				#	xmlstr = remove_hospitals(xmlstr,text,phi_type)	
 		
 		# here we write back out the updated XML File to a new directory
 		output_dir = "updated_annotations_i2b2/"+filename
