@@ -44,7 +44,7 @@ class Subs:
         except OverflowError as err:
             print("Overflow Error: cannot shift date \"" + date.to_string()
                   + "\" with shift " + str(shift) + " {0}".format(err))
-        return shift_dated
+        return shifted_date
 
     @staticmethod
     def parse_date(date_string):
