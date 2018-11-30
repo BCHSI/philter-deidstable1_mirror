@@ -32,7 +32,8 @@ def get_args():
                           + "./data/i2b2_meta/note_info_map.tsv",
                     type=str)
     ap.add_argument("-l", "--log", default=True,
-                    help="When this is true, the pipeline prints and saves log in a subdirectory in each output directory",
+                    help="When this is true, the pipeline prints and saves log in a subdirectory in each output directory."
+                          + "Summary logs for all processed files will also be saved in the parent directory of all outputs",
                     type=lambda x:bool(distutils.util.strtobool(x)))
     ap.add_argument("-e", "--eval", default= False,
                     help="When this is true, the pipeline computes and saves statistics in a subdirectory in each output directory",
@@ -43,10 +44,6 @@ def get_args():
 
     return ap.parse_args()
 
-
-def __init__(self):
-    self.csv_summary = []
-    self.filenames = []
 
 
 def main():
@@ -94,6 +91,7 @@ def main():
     # print and save log 
     if args.log:
         phitexts.print_log(args.output)
+        phitexts.get_current_summary(args.output)
 
     if args.eval:
         phitexts.eval(args.anno, args.input, args.output)
