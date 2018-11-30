@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2081-07-07
+
+July 8, 2081
+ 
+Francis Xayarath, M.D.
+Integra Health Center
+487 Jackson Street
+La Grulla, ME 21614
+ 
+RE:  Branche, Earnest
+MRN: 53023691
+ 
+Dear Dr. Xayarath:
+ 
+Your patient Mr. Earnest
+Branche returned to the
+office today for a follow
+up visit.  As you know,
+Mr. Branche underwent a
+left femoral to posterior
+tibial bypass one month
+ago followed by
+amputation of a
+gangrenous first toe.
+After being discharged
+from our service he was
+readmitted to the Medical
+Service with a severe
+case of C. difficile
+colitis.  Ultimately this
+resolved and he was
+discharged.  Today he
+reports that the diarrhea
+has again resumed and he
+was placed back on an
+oral antibiotic
+yesterday.  He complains
+of only mild incisional
+discomfort in his left
+leg.
+ 
+On examination, there is
+a strong pulse easily
+palpated over the left
+lower extremity bypass
+graft.  The old right
+lower extremity bypass
+graft was also palpable.
+The left foot itself is
+warm.  The great toe
+incision site, however,
+has developed necrotic
+tissue all along the
+incision, which was
+sharply debrided to clean
+margins.  This will now
+need to be treated as an
+open wound.  The calf
+portion of the left lower
+extremity incision also
+has a narrow zone of
+superficial skin slough
+which was gently
+debrided.  The graft is
+not exposed and there are
+no deep wounds in the
+leg.
+ 
+Mr. Branche's left lower
+extremity bypass graft is
+functioning well.
+However, he will require
+significant ongoing wound
+care for the immediate
+future.  Daily dressing
+changes will be arranged
+with visiting nurse
+services.  We plan to
+follow him closely and an
+appointment was given for
+two weeks.
+ 
+Thanks again for allowing
+us to participate in the
+care of this delightful
+and challenging patient
+and please don't hesitate
+to contact me at any time
+if I can
+RE:  Branche, Earnest
+MRN: 53023691
+7-8-81
+Page 2
+ 
+ 
+ 
+be of further assistance.
+ 
+Sincerely,
+ 
+ 
+Luis J. Nicholas, M.D.
+ 
+NU:UJ:4653/DD:7-8-81/DT:7-13-81/DV:7-8-81
+ ******** Not reviewed by Attending Physician ********
+
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2081-07-07" TYPE="DATE" comment="" />
+<DATE id="P1" start="28" end="40" text="July 8, 2081" TYPE="DATE" comment="" />
+<NAME id="P2" start="43" end="59" text="Francis Xayarath" TYPE="DOCTOR" comment="" />
+<LOCATION id="P3" start="66" end="87" text="Integra Health Center" TYPE="HOSPITAL" comment="" />
+<LOCATION id="P4" start="88" end="106" text="487 Jackson Street" TYPE="STREET" comment="" />
+<LOCATION id="P5" start="107" end="116" text="La Grulla" TYPE="CITY" comment="" />
+<LOCATION id="P6" start="118" end="120" text="ME" TYPE="STATE" comment="" />
+<LOCATION id="P7" start="121" end="126" text="21614" TYPE="ZIP" comment="" />
+<NAME id="P8" start="134" end="150" text="Branche, Earnest" TYPE="PATIENT" comment="" />
+<ID id="P9" start="156" end="164" text="53023691" TYPE="MEDICALRECORD" comment="" />
+<NAME id="P10" start="176" end="184" text="Xayarath" TYPE="DOCTOR" comment="" />
+<NAME id="P11" start="205" end="220" text="EarnestBranche" TYPE="PATIENT" comment="" />
+<NAME id="P12" start="291" end="298" text="Branche" TYPE="PATIENT" comment="" />
+<NAME id="P13" start="1355" end="1362" text="Branche" TYPE="PATIENT" comment="" />
+<NAME id="P14" start="1815" end="1831" text="Branche, Earnest" TYPE="PATIENT" comment="" />
+<ID id="P15" start="1837" end="1845" text="53023691" TYPE="MEDICALRECORD" comment="" />
+<DATE id="P16" start="1846" end="1852" text="7-8-81" TYPE="DATE" comment="" />
+<NAME id="P17" start="1909" end="1925" text="Luis J. Nicholas" TYPE="DOCTOR" comment="" />
+<ID id="P18" start="1934" end="1944" text="NU:UJ:4653" TYPE="IDNUM" comment="" />
+<DATE id="P19" start="1948" end="1954" text="7-8-81" TYPE="DATE" comment="" />
+<DATE id="P20" start="1958" end="1965" text="7-13-81" TYPE="DATE" comment="" />
+<DATE id="P21" start="1969" end="1975" text="7-8-81" TYPE="DATE" comment="" />
+</TAGS>
+</deIdi2b2>

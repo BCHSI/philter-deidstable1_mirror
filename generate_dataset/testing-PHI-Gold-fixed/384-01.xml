@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2082-06-29
+
+                     CKMC EMERGENCY DEPT VISIT
+ 
+UHRICH,KARSON   456-30-26-8                 VISIT DATE: 06/29/82
+The patient was seen and evaluated with the medical intern, I agree 
+with the medical intern's note. 
+PRESENTING COMPLAINT:  The patient is a 65-year-old female with a 
+history of hypertension, hypercholesterolemia, depression, H 
+pylori, gastric reflux with increasing back pain and epigastric 
+pain. 
+HISTORY OF PRESENTING COMPLAINT:  She says over the last couple of 
+days it is unrelieved with food but not exacerbated by food.  She 
+occasionally has a pressure in her epigastrium, no radiation to her 
+neck, chest, no shortness of breath, no palpitations, no 
+diaphoresis, no vomiting, no hematochezia, or melena but she has 
+had increased frequency of her BM to three or four a day.  No 
+dysuria or urgency.  She describes the pain as constant. 
+PAST MEDICAL HISTORY:  Hypertension, hypercholesterolemia, GERD. 
+MEDICATIONS:  Tetracycline, Prilosec, Ativan, atenolol, Zestril. 
+ALLERGIES:  Aspirin which causes upset stomach. 
+SOCIAL HISTORY AND FAMILY HISTORY:  Nonsmoker. 
+PHYSICAL EXAMINATION:  Temperature 98.1, pulse 92, respiratory rate 
+16, blood pressure 196/84.  Skin:  Warm and dry.  She is 
+well-developed, well-nourished female in no distress.  Pupils are 
+equal, round, reactive light.  Extraocular movements are full. 
+Sinuses nontender.  Oropharynx clear.  Nasopharynx clear.  Neck: 
+Supple, full range of motion.  There is no JVD.  Heart:  Regular 
+rate and rhythm without murmur.  Abdomen is soft.  Lungs are clear. 
+Extremities:  There is no clubbing, cyanosis, or edema.  Rectal 
+exam is nontender with brown, trace guaiac positive stool. 
+Neurologic exam is nonfocal. 
+LABORATORY EVALUATION:  Patient had a white count of 7.5, 
+hemoglobin of 14, platelet count of 259.  Electrolytes are normal. 
+Amylase and lipase are 71 and 204 respectively.  H pylori IgA is 
+positive from previous studies.  CK is 72, troponin is 0.  Chest 
+x-ray is reviewed with Radiologist and is normal.  EKG shows normal 
+sinus rhythm with some T wave flattening in the inferior lateral 
+leads. 
+THERAPY RENDERED/COURSE IN ED:  Patient was seen, given aspirin, 
+Lopressor, and nitroglycerin.  If her pain doesn't resolve with and 
+a GI cocktail she will be admitted to the Observation Unit.  Because 
+ of the concern that her pain goes to her back, she has a CT scan 
+to rule out aortic dissection which is reviewed with the 
+Radiologist and is negative. 
+FINAL DIAGNOSIS:  Atypical chest pain, perhaps consistent with 
+angina. 
+DISPOSITION (including condition upon discharge):  Condition at 
+this time is stable. 
+___________________________________                    DM972/9882 
+URIEL NIX, M.D.     UN49                    D:06/29/82 
+                                                       T:06/29/82 
+Dictated by:  URIEL NIX, M.D.     UN49 
+ ******** Not reviewed by Attending Physician ********
+
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2082-06-29" TYPE="DATE" comment="" />
+<LOCATION id="P1" start="49" end="53" text="CKMC" TYPE="HOSPITAL" comment="" />
+<NAME id="P2" start="77" end="90" text="UHRICH,KARSON" TYPE="PATIENT" comment="" />
+<ID id="P3" start="93" end="104" text="456-30-26-8" TYPE="MEDICALRECORD" comment="" />
+<DATE id="P4" start="133" end="141" text="06/29/82" TYPE="DATE" comment="" />
+<AGE id="P5" start="284" end="286" text="65" TYPE="AGE" comment="" />
+<ID id="P7" start="2714" end="2724" text="DM972/9882" TYPE="IDNUM" comment="" />
+<NAME id="P8" start="2726" end="2735" text="URIEL NIX" TYPE="DOCTOR" comment="" />
+<NAME id="P9" start="2746" end="2750" text="UN49" TYPE="USERNAME" comment="" />
+<DATE id="P10" start="2772" end="2780" text="06/29/82" TYPE="DATE" comment="" />
+<DATE id="P11" start="2839" end="2847" text="06/29/82" TYPE="DATE" comment="" />
+<NAME id="P12" start="2863" end="2872" text="URIEL NIX" TYPE="DOCTOR" comment="" />
+<NAME id="P13" start="2883" end="2887" text="UN49" TYPE="USERNAME" comment="" />
+</TAGS>
+</deIdi2b2>

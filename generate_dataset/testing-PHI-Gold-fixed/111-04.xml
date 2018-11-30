@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2090-02-14
+
+EDVISIT^56040785^OROZCO, KYLE^02/14/90^CHANEY, QUENTIN
+CHIEF COMPLAINT:  Chest pain.
+
+I confirm that I have interviewed and examined the patient,
+
+reviewed the resident's documentation on the patient's chart, and
+
+discussed the evaluation, plan of care, and disposition with the
+
+patient.
+
+HISTORY OF PRESENT ILLNESS:  In essence, this is a pleasant
+
+65-year-old male with known history of CAD who presents
+
+complaining of some chest discomfort that began tonight while
+
+walking, took 2 nitro and the pain got better.  Then, had a
+
+repeat episode relived by nitro again.  Picked up by EMS.  Given
+
+aspirin as well.  He describes the pain as 8/10, sharp, left
+
+sided, substernal, and deep.  No diaphoresis, no nausea, no
+
+vomiting, and some shortness of breath associated with it.
+
+PAST MEDICAL HISTORY:  Hypertension, diabetes, CAD, and
+
+peripheral vascular disease.
+
+SOCIAL HISTORY:  He is a past smoker, occasional drinker.  Lives
+
+with family.
+
+FAMILY HISTORY:  Noncontributory.
+
+PAST SURGICAL HISTORY:  Angioplasty with multiple stents and an
+
+A-fem bypass in 2074.
+
+REVIEW OF SYSTEMS:  Per HPI.
+
+ALLERGIES:  Does not have any allergies.
+
+MEDICATIONS:  He is on multiple medications which include Plavix,
+
+Zocor, aspirin, Norvasc, enalapril, NovoLog, Lasix, Neurontin,
+
+and Lantus.
+
+PHYSICAL EXAMINATION:  Pulse of 90, respirations 16, blood
+
+pressure 186/56, oxygen saturation 97%, and temperature is 97.4. 
+
+HEENT is atraumatic, normal to inspection, normal pharynx.  Neck
+
+is supple.  Lungs are clear.  Cardiovascular:  Regular rate and
+
+rhythm with no murmurs or gallops.  Abdomen is soft, nontender
+
+with no organomegaly or masses.  Skin is warm, dry, and intact.
+
+LABORATORY DATA:  White count 6.8, hematocrit 34.1, and platelet
+
+count of 229,000.  BUN 45, creatinine 1.7 up from 1.3, and
+
+glucose 420.  Cardiac enzymes were negative.  INR is 1.  EKG
+
+shows no acute ST-T changes.  Chest x-ray was normal.
+
+EMERGENCY DEPARTMENT COURSE:  At this time, we have spoken with
+
+the patient's primary physician and given the patient's cardiac
+
+history, his hypertension, and worsening kidney function, we
+
+believe that he will be better served as an inpatient.
+
+PRIMARY DIAGNOSIS:  Chest pain, rule out acute coronary syndrome.
+
+DISPOSITION:  Admit to hospital.
+
+CONDITION:  Stable
+
+______________________________
+
+CHANEY, QUENTIN M.D.
+
+D: 02/15/90
+
+T: 02/15/90
+
+Dictated By: CHANEY, QUENTIN
+eScription document:7-9617124 SJZvdbs
+
+ ******** Not reviewed by Attending Physician ********
+
+
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2090-02-14" TYPE="DATE" comment="" />
+<ID id="P1" start="36" end="44" text="56040785" TYPE="MEDICALRECORD" comment="" />
+<NAME id="P2" start="45" end="57" text="OROZCO, KYLE" TYPE="PATIENT" comment="" />
+<DATE id="P3" start="58" end="66" text="02/14/90" TYPE="DATE" comment="" />
+<NAME id="P4" start="67" end="82" text="CHANEY, QUENTIN" TYPE="DOCTOR" comment="" />
+<AGE id="P5" start="379" end="381" text="65" TYPE="AGE" comment="" />
+<DATE id="P6" start="1092" end="1096" text="2074" TYPE="DATE" comment="" />
+<NAME id="P7" start="2346" end="2361" text="CHANEY, QUENTIN" TYPE="DOCTOR" comment="" />
+<DATE id="P8" start="2371" end="2379" text="02/15/90" TYPE="DATE" comment="" />
+<DATE id="P9" start="2384" end="2392" text="02/15/90" TYPE="DATE" comment="" />
+<NAME id="P10" start="2407" end="2422" text="CHANEY, QUENTIN" TYPE="DOCTOR" comment="" />
+<ID id="P11" start="2443" end="2460" text="7-9617124 SJZvdbs" TYPE="IDNUM" comment="" />
+</TAGS>
+</deIdi2b2>

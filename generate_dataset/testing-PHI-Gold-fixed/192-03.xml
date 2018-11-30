@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2088-03-26
+
+Mr. Tanner RTC to discuss diabetes, BP, weight, lipids.
+
+
+
+HPI: He has been overweight for some time, and was found to have DM II about two years ago. I had treated him with:
+
+GLYBURIDE  5MG PO BID
+
+METFORMIN  500MG PO TID
+
+LISINOPRIL  40MG PO QD
+
+DILTIAZEM CD  180MG PO QD
+
+HCTZ  12.5MG PO QD
+
+
+
+however he enrolled in a study, and when it was over he was put on:
+
+
+
+DILTIAZEM CD 180 MG     PO QD 
+
+HYZAAR (25 MG/100 MG) (HCTZ 25MG   LOSART... 1 TAB     PO QD 
+
+
+
+When I found his A1c to be 8.7%, I added back 5 mg QD of glyburide which he has been taking for < 1 month. He feels well. He says he's lost 10 lbs. since his last visit (262 lbs. on 2/26 - 263 lbs. today) but he's interested in a weight loss program.
+
+
+
+MEDICATIONS
+
+DILTIAZEM CD 180 MG     PO QD 
+
+HYZAAR (25 MG/100 MG) (HCTZ 25MG   LOSART... 1 TAB     PO QD 
+
+GLYBURIDE 5 MG     PO QD  
+
+
+
+ALLERGIES
+
+NKDA  NONE  
+
+
+
+SH: single, Ground Transit Operators Supervisor at HASBRO.
+
+
+
+Habits: no cigarettes, drugs or alcohol;
+
+
+
+ROS: denies weight change, fever, chills, fatigue, blurry vision, chest pains, palpitations, dyspnea, cough, abdominal pain, nausea, vomiting, change in bowel/bladder habits, joint pain, dizziness, exanthem, edema. No concerns about pain, functional status or nutritional status.
+
+
+
+PE notable for:
+
+Well nourished well appearing obese WM;
+
+VITAL SIGNS
+
+BLOOD PRESSURE  152/84
+
+PULSE  68
+
+WEIGHT  263
+
+HEENT: sclera clear white OU, EOMI, ear canals and TMs wnl AU; oropharynx without lesions.
+
+LN: No palpable neck or SC LN;
+
+Cardiac: RRR, rate   68 , no extra sounds
+
+Resp.: good air movement, no accessory muscle use, no adventitious sounds
+
+
+
+Plan:
+
+1. by his account DM control is still poor, which is not surprising since he previously required 10 mg of glyburide and 1500 mg of metformin per day. For now I will increase glyburide to 5 mg BID.
+
+2. also poor BP control for a diabetic. Increasing Diltiazem to 240 mg QD. It's unfortunate that he was taken off lisinopril.
+
+3. MALB has improved but is still high; reports suggest Diltiazem might help with this.
+
+4. discussed necessity for weight loss for DM, BP, lipids.
+
+5. RTC 1 month.
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2088-03-26" TYPE="DATE" comment="" />
+<NAME id="P1" start="32" end="38" text="Tanner" TYPE="PATIENT" comment="" />
+<DATE id="P2" start="675" end="679" text="2/26" TYPE="DATE" comment="" />
+<PROFESSION id="P3" start="924" end="959" text="Ground Transit Operators Supervisor" TYPE="PROFESSION" comment="" />
+<LOCATION id="P4" start="963" end="969" text="HASBRO" TYPE="ORGANIZATION" comment="" />
+</TAGS>
+</deIdi2b2>

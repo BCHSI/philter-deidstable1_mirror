@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2062-07-29
+
+                     DONELLSON EMERGENCY DEPT VISIT
+ 
+PICKETT,SHILPA   129-53-47-3                  VISIT DATE: 07/29/62
+PRESENTING COMPLAINT:  Syncope. 
+HISTORY OF PRESENTING COMPLAINT:  Seventy-year-old female with 
+diabetes, hypertension, coronary artery disease complaining about 
+syncopal episode today.  The patient states that over the last 
+couple of weeks she has had increased chest palpitations and two 
+weeks ago was given an event monitor which he has intermittently 
+worn saying it is difficult to wear during the heat wave.  This 
+a.m. the patient had a syncopal episode while watching a 
+disagreement between her two grandchildren.  The patient states had 
+no chest pain, dizziness, nausea, or vomiting.  The patient fell to 
+the floor and awoke, denies incontinence or tongue biting. 
+PAST MEDICAL HISTORY:  Hypertension, diabetes, coronary artery 
+disease, CVA. 
+MEDICATIONS:  Aspirin, Lasix, Lopressor, Isordil, insulin, 
+lisinopril, Colace, nitroglycerin sublingual, Cisapride, Prilosec. 
+ALLERGIES:  No known drug allergies. 
+PHYSICAL EXAMINATION:  Well developed, well nourished female with a 
+Glasgow Coma Scale of 15.  HEENT normocephalic, atraumatic.  Neck 
+supple without spinal tenderness.  Heart regular rate and rhythm, 
+positive 2/6 systolic ejection murmur.  Chest is clear.  Abdomen is 
+soft, nontender, positive bowel sounds.  Extremities without 
+clubbing, cyanosis or edema.  Neuro alert and oriented times three, 
+good motor strength throughout, sensory intact, no focality. 
+FINAL DIAGNOSIS:  Syncopal episode most likely cardiac in origin. 
+DISPOSITION (including condition upon discharge):  Will admit to 
+monitor and rule out for MI.  The patient was admitted in stable 
+condition. 
+___________________________________                    IE615/5791 
+LINDA ANDREWS, M.D.  LA06                               D:07/29/62 
+                                                       T:07/30/62 
+Dictated by:  LINDA ANDREWS, M.D.  LA06 
+ ******** Not reviewed by Attending Physician ********
+
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2062-07-29" TYPE="DATE" comment="" />
+<LOCATION id="P1" start="49" end="58" text="DONELLSON" TYPE="HOSPITAL" comment="" />
+<NAME id="P2" start="82" end="96" text="PICKETT,SHILPA" TYPE="PATIENT" comment="" />
+<ID id="P3" start="99" end="110" text="129-53-47-3" TYPE="MEDICALRECORD" comment="" />
+<DATE id="P4" start="140" end="148" text="07/29/62" TYPE="DATE" comment="" />
+<AGE id="P5" start="216" end="223" text="Seventy" TYPE="AGE" comment="" />
+<ID id="P6" start="1806" end="1816" text="IE615/5791" TYPE="IDNUM" comment="" />
+<NAME id="P7" start="1818" end="1831" text="LINDA ANDREWS" TYPE="DOCTOR" comment="" />
+<NAME id="P8" start="1839" end="1843" text="LA06" TYPE="USERNAME" comment="" />
+<DATE id="P9" start="1876" end="1884" text="07/29/62" TYPE="DATE" comment="" />
+<DATE id="P10" start="1943" end="1951" text="07/30/62" TYPE="DATE" comment="" />
+<NAME id="P11" start="1967" end="1980" text="LINDA ANDREWS" TYPE="DOCTOR" comment="" />
+<NAME id="P12" start="1988" end="1992" text="LA06" TYPE="USERNAME" comment="" />
+</TAGS>
+</deIdi2b2>

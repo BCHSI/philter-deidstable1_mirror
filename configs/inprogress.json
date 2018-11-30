@@ -20,7 +20,6 @@
 		"filepath":"filters/regex/catchall.txt",
 		"notes":"This should match anything, preventing the catchall"
 	}
-    
 ]
 
 

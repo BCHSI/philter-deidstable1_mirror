@@ -9,7 +9,7 @@ import json
 
 def main():
     # get input/output/filename
-    help_str = """ Philter -- PHI filter for clinical notes """
+   help_str = """ Philter -- PHI filter for clinical notes """
     ap = argparse.ArgumentParser(description=help_str)
     ap.add_argument("-i", "--input", default="./data/i2b2_notes/",
                     help="Path to the directory or the file that contains the PHI note, the default is ./data/i2b2_notes/",
@@ -29,8 +29,8 @@ def main():
     ap.add_argument("-c", "--coords", default="./data/coordinates.json",
                     help="Path to the json file that contains the coordinate map data",
                     type=str)
-    ap.add_argument("--eval_output", default="./data/phi/",
-                    help="Path to the directory that the detailed eval files will be outputted to",
+    ap.add_argument("--eval_output", default="./data/phi/",	
+                    help="Path to the directory that the detailed eval files will be outputted to",	
                     type=str)
     ap.add_argument("-v", "--verbose", default=True,
                     help="When verbose is true, will emit messages about script progress",
@@ -43,10 +43,10 @@ def main():
                     type=lambda x:bool(distutils.util.strtobool(x)))
     ap.add_argument("-t", "--freq_table", default=False,
                     help="When freqtable is true, will output a unigram/bigram frequency table of all note words and their PHI/non-PHI counts",
-                    type=lambda x:bool(distutils.util.strtobool(x))) 
-    ap.add_argument("-n", "--initials", default=True,
-                    help="When initials is true, will include initials PHI in recall/precision calculations",
-                    type=lambda x:bool(distutils.util.strtobool(x))) 
+                    type=lambda x:bool(distutils.util.strtobool(x)))
+    ap.add_argument("-n", "--initials", default=True,	
+                    help="When initials is true, will include initials PHI in recall/precision calculations",	
+                    type=lambda x:bool(distutils.util.strtobool(x)))
     ap.add_argument("--stanfordner", default="/usr/local/stanford-ner/",
                     help="Path to Stanford NER, the default is /usr/local/stanford-ner/",
                     type=str)
@@ -59,8 +59,8 @@ def main():
     ap.add_argument("--prod", default=False,
                     help="When prod is true, this will run the script with output in i2b2 xml format without running the eval script",
                     type=lambda x:bool(distutils.util.strtobool(x)))
-    ap.add_argument("--cachepos", default=None,
-                    help="Path to a directoy to store/load the pos data for all notes. If no path is specified then memory caching will be used.",
+    ap.add_argument("--cachepos", default=None,	
+                    help="Path to a directoy to store/load the pos data for all notes. If no path is specified then memory caching will be used.",	
                     type=str)
 
     args = ap.parse_args()
@@ -125,9 +125,9 @@ def main():
             in_path=args.output,
             anno_path=args.anno,
             anno_suffix=".txt",
-            fn_output = "data/phi/fn.txt",
-            fp_output = "data/phi/fp.txt",
             summary_output="./data/phi/summary.json",
+            fn_output="data/phi/fn.txt",
+            fp_output="data/phi/fp.txt",
             phi_matcher=re.compile("\*+"),
             pre_process=r":|\,|\-|\/|_|~", #characters we're going to strip from our notes to analyze against anno
             only_digits=False,
@@ -138,3 +138,4 @@ def main():
         
 if __name__ == "__main__":
     main()
+    

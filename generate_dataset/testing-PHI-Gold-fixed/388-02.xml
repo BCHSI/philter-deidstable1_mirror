@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2072-07-30
+
+
+
+
+SCHLESWIG COUNTY CLINIC
+Walk-in clinic
+24 Weld St
+Grandview, NE  13472
+
+Xian, Imogene
+64187177
+07/30/72
+
+CHIEF COMPLAINT:  Ms. Xian is a 75-year-old female who presented 
+to the walk-in clinic this evening as a walk-in with a chief 
+complaint of bilateral foot pain especially in the toe area, and 
+she says that this has been going on for approximately two 
+months.
+
+ALLERGIES:  She denies any known drug allergies.
+
+MEDICATIONS:  At present, she is taking Glucophage 500 mg one 
+p.o. q.a.m, two p.o. q.p.m., Avandia 2 mg one p.o. q.a.m., Plavix 
+75 mg one p.o. q.d., glipizide 5 mg two p.o. q.a.m., and two p.o. 
+q.p.m., and Lipitor 20 mg q.d.
+
+REVIEW OF SYSTEMS:  The patient states that she has had constant 
+pain in her toes and at times with a feeling of tingling.  
+Otherwise, she states she has been feeling well.  She denies any 
+chest pain or heart palpitation.  She denies any shortness of 
+breath.  She denies any nausea, vomiting or diarrhea.  She denies 
+any frequency, dysuria or thirst.  She has a history of non-
+insulin-dependent diabetes at this time.
+
+PHYSICAL EXAMINATION:  Her temperature was 98.5 degrees p.o., her 
+pulse was 80, her blood pressure was 118/60 in her right arm.  
+Her weight was 117 pounds, which reflects a one-pound weight loss 
+since her last visit.  Her blood sugar, which was random, was 
+159, her last meal being at 12 noon.  Her son, who accompanied 
+her states that it is questionable whether she is taking her 
+medications as instructed and voiced an interest in having his 
+mother take insulin, which she has taken in the past.  Her heart 
+had a regular rate and rhythm at 80.  There was no evidence of 
+any peripheral edema.  Examination of her toes revealed presence 
+of some tinea interdigitally.
+
+ASSESSMENT:
+1.  Non-insulin-dependent diabetes mellitus, moderate control.
+2.  Tinea pedis.
+
+PLAN:  Medication refills were given for Glucotrol 5 mg dispensed 
+No. 120 with two refills, two p.o. q.a.m., two p.o. q.p.m., 
+Glucophage 500 mg No. 90 one p.o. q.a.m., two p.o. q.p.m., and 
+Avandia 2 mg No. 30 with two refills one p.o. q.a.m., and a new 
+prescription for Lotrimin AF 1% cream dispensed 12 g with one 
+refill, apply to the affected area b.i.d. for up to four weeks.
+
+
+
+
+Xian, Imogene
+64187177
+07/30/72
+Page 2
+
+The patient has an appointment scheduled with her primary care 
+provider Dr. Paul Shaw for 8/16/72, and was advised to 
+keep that appointment.
+
+
+
+Grace Vann, N.P.
+
+GV:arreola:06:278:08;37-60093.doc;DD:07/30/72;DT:08/01/72;DV:07/30/72;
+
+
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2072-07-30" TYPE="DATE" comment="" />
+<LOCATION id="P1" start="31" end="54" text="SCHLESWIG COUNTY CLINIC" TYPE="HOSPITAL" comment="" />
+<LOCATION id="P3" start="70" end="80" text="24 Weld St" TYPE="STREET" comment="" />
+<LOCATION id="P4" start="81" end="90" text="Grandview" TYPE="CITY" comment="" />
+<LOCATION id="P5" start="92" end="94" text="NE" TYPE="STATE" comment="" />
+<LOCATION id="P6" start="96" end="101" text="13472" TYPE="ZIP" comment="" />
+<NAME id="P7" start="103" end="116" text="Xian, Imogene" TYPE="PATIENT" comment="" />
+<ID id="P8" start="117" end="125" text="64187177" TYPE="MEDICALRECORD" comment="" />
+<DATE id="P9" start="126" end="134" text="07/30/72" TYPE="DATE" comment="" />
+<NAME id="P10" start="158" end="162" text="Xian" TYPE="PATIENT" comment="" />
+<AGE id="P11" start="168" end="170" text="75" TYPE="AGE" comment="" />
+<NAME id="P13" start="2262" end="2275" text="Xian, Imogene" TYPE="PATIENT" comment="" />
+<ID id="P14" start="2276" end="2284" text="64187177" TYPE="MEDICALRECORD" comment="" />
+<DATE id="P15" start="2285" end="2293" text="07/30/72" TYPE="DATE" comment="" />
+<NAME id="P16" start="2379" end="2388" text="Paul Shaw" TYPE="DOCTOR" comment="" />
+<DATE id="P17" start="2393" end="2400" text="8/16/72" TYPE="DATE" comment="" />
+<NAME id="P18" start="2448" end="2458" text="Grace Vann" TYPE="DOCTOR" comment="" />
+<NAME id="P19" start="2466" end="2468" text="GV" TYPE="DOCTOR" comment="" />
+<NAME id="P20" start="2469" end="2476" text="arreola" TYPE="DOCTOR" comment="" />
+<ID id="P21" start="2477" end="2486" text="06:278:08" TYPE="IDNUM" comment="" />
+<ID id="P22" start="2487" end="2495" text="37-60093" TYPE="IDNUM" comment="" />
+<DATE id="P23" start="2503" end="2511" text="07/30/72" TYPE="DATE" comment="" />
+<DATE id="P24" start="2515" end="2523" text="08/01/72" TYPE="DATE" comment="" />
+<DATE id="P25" start="2527" end="2535" text="07/30/72" TYPE="DATE" comment="" />
+</TAGS>
+</deIdi2b2>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2082-10-30
+
+COLIN RAMEY
+
+CHH Unit No:  433-88-47
+
+
+
+MISSOURI PACIFIC HOSPITAL
+
+
+
+ADULT MEDICINE
+
+
+
+
+
+Date:  October 30, 2082
+
+
+
+78-year-old male who comes in for follow-up of his high blood pressure.  He denies having any chest pain, any shortness of breath, or any difficulty sleeping at night.  His brother-in-law lives with him.  He reports no change in Mr. Ramey at all and no concerns. 
+
+
+
+PAST MEDICAL HISTORY:  
+
+
+
+(1)	Mental retardation.
+
+(2)	Hypertension.
+
+(3)	A history of anemia.
+
+(4)	BPH.
+
+(5)	History of peptic ulcer disease diagnosed by upper endoscopy in 2069.
+
+
+
+MEDICATIONS:  Hydrochlorothiazide 25 mg q.d. and atenolol 25 mg q.d. 
+
+
+
+ALLERGIES TO MEDICATION: None.
+
+
+
+SOCIAL HISTORY:  He doesn't smoke.
+
+
+
+PHYSICAL EXAM:  Weight 147, unchanged.  Blood pressure 140/70.  Pulse 72.  Lungs clear.  No crackles or wheezing.  Cardiac - Regular rate and rhythm.  S1, S2.  His abdomen is soft, nontender.  Extremities - trace edema at the ankles.
+
+
+
+ASSESSMENT AND PLAN:  
+
+
+
+(1)	Hypertension, which appears to be stable. Continue present regimen.  Will check a potassium, BUN and creatinine.
+
+(2)	History of normocytic anemia.  His last hematocrit in 2080 was at 38, normal MCV.  At his next visit he will need a recheck of this as well as of B12 level. 
+
+(3)	History of borderline sugars, although his glucose today is 105.  
+
+(4)	Routine health maintenance.  Flu vaccine given to his left deltoid IM.  He will need Hemoccult cards at his next visit.  Follow up in 6 months or sooner as needed.
+
+
+
+
+
+Xavier Combs, M.D.
+
+XC/olivas/finn
+
+
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2082-10-30" TYPE="DATE" comment="" />
+<NAME id="P1" start="28" end="39" text="COLIN RAMEY" TYPE="PATIENT" comment="" />
+<LOCATION id="P2" start="41" end="44" text="CHH" TYPE="HOSPITAL" comment="" />
+<ID id="P3" start="55" end="64" text="433-88-47" TYPE="MEDICALRECORD" comment="" />
+<LOCATION id="P4" start="68" end="93" text="MISSOURI PACIFIC HOSPITAL" TYPE="HOSPITAL" comment="" />
+<DATE id="P5" start="124" end="140" text="October 30, 2082" TYPE="DATE" comment="" />
+<AGE id="P6" start="144" end="146" text="78" TYPE="AGE" comment="" />
+<NAME id="P7" start="377" end="382" text="Ramey" TYPE="PATIENT" comment="" />
+<DATE id="P8" start="586" end="590" text="2069" TYPE="DATE" comment="" />
+<DATE id="P9" start="1179" end="1183" text="2080" TYPE="DATE" comment="" />
+<NAME id="P10" start="1529" end="1541" text="Xavier Combs" TYPE="DOCTOR" comment="" />
+<NAME id="P11" start="1549" end="1551" text="XC" TYPE="DOCTOR" comment="" />
+<NAME id="P12" start="1552" end="1558" text="olivas" TYPE="DOCTOR" comment="" />
+<NAME id="P13" start="1559" end="1563" text="finn" TYPE="DOCTOR" comment="" />
+</TAGS>
+</deIdi2b2>

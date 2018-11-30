@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2092-05-24
+
+
+
+
+BAYONNE MEDICAL CENTER
+Internal Medicine
+15 Hassell Brook Road
+Daytona Highridge Estates, AZ  39757
+
+							Nancy-Jasmine, Nikkolas 
+							69331181
+							05/24/92 
+
+
+The patient is a 67-year-old man with hypertension, diabetes, and 
+history of recent stroke who comes in for follow up and for 
+evaluation of positive PPD.
+
+HISTORY OF PRESENT ILLNESS:  He was being evaluated for day 
+program and in the course of this had a PPD placed which was 
+positive.  He has no history of prior TB testing.  He has had no 
+chest pain, shortness of breath, cough, fever, chills, weight 
+loss or night sweats.  He has had no known exposure to TB.  
+
+He is being treated for hypertension which has been difficult to 
+control but seems recently to be doing quite well on a 
+combination of HCTZ 12.5mg, metoprolol 50mg b.i.d., Norvasc 10mg 
+PO q.d., Zestril 20mg PO q.d.  Today's blood pressure was 
+terrific at 128/70.  
+
+He has diabetes and his hemoglobin A1C came down from 10.4 in 
+February to 7.9 in May.  He had been started in February on 
+Glucophage 500mg PO b.i.d. and seems to e tolerating it quite 
+well.  
+
+He did have a stroke in August 2091 with right-sided hemiparesis.  
+He is able to walk to the bathroom with a cane but otherwise uses 
+a wheelchair.  He had a form for me to complete for a day program 
+listing his typical functioning.
+
+PHYSICAL EXAMINATION:  He is a well-developed, well-nourished, 
+pleasant man.  Weight was not done.  Blood pressure 128/70.  
+HEENT: throat clear.  Neck supple, no adenopathy or thyromegaly.  
+No carotid bruits.  No JVD.  Heart: no murmurs.  Lungs are clear.  
+Extremities: no edema.  Neuro: he has weakness in the right leg 
+and arm. 
+
+ASSESSMENT AND PLAN:
+1. 	Positive PPD.  At the time of this dictation, his chest x-ray 
+came back and is completely normal.  Given his age and unknown 
+duration of his positive PPD, will not treat.  
+2. 	Hypertension.  Doing well on current combination of 
+medications.
+3. 	Diabetes, doing much better since he started Glucophage.  At 
+his next visit, I will need to confirm when his last eye 
+appointment was.  
+4. 	Status post CVA.  He seems to be functioning well. 
+
+
+
+Nena Quiambao, M.D.
+
+NQ:jaeger; 80-55488880.doc; DD: 5/27/92; DT: 5/28/92; DV: 5/24/92 
+
+
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2092-05-24" TYPE="DATE" comment="" />
+<LOCATION id="P1" start="31" end="53" text="BAYONNE MEDICAL CENTER" TYPE="HOSPITAL" comment="" />
+<LOCATION id="P3" start="72" end="93" text="15 Hassell Brook Road" TYPE="STREET" comment="" />
+<LOCATION id="P4" start="94" end="119" text="Daytona Highridge Estates" TYPE="CITY" comment="" />
+<LOCATION id="P5" start="121" end="123" text="AZ" TYPE="STATE" comment="" />
+<LOCATION id="P6" start="125" end="130" text="39757" TYPE="ZIP" comment="" />
+<NAME id="P7" start="139" end="162" text="Nancy-Jasmine, Nikkolas" TYPE="PATIENT" comment="" />
+<ID id="P8" start="171" end="179" text="69331181" TYPE="MEDICALRECORD" comment="" />
+<DATE id="P9" start="187" end="195" text="05/24/92" TYPE="DATE" comment="" />
+<AGE id="P10" start="216" end="218" text="67" TYPE="AGE" comment="" />
+<DATE id="P11" start="1003" end="1011" text="February" TYPE="DATE" comment="" />
+<DATE id="P12" start="1022" end="1025" text="May" TYPE="DATE" comment="" />
+<DATE id="P13" start="1051" end="1059" text="February" TYPE="DATE" comment="" />
+<DATE id="P14" start="1160" end="1171" text="August 2091" TYPE="DATE" comment="" />
+<NAME id="P15" start="2181" end="2194" text="Nena Quiambao" TYPE="DOCTOR" comment="" />
+<NAME id="P16" start="2202" end="2204" text="NQ" TYPE="DOCTOR" comment="" />
+<NAME id="P17" start="2205" end="2211" text="jaeger" TYPE="DOCTOR" comment="" />
+<ID id="P18" start="2213" end="2224" text="80-55488880" TYPE="IDNUM" comment="" />
+<DATE id="P19" start="2234" end="2241" text="5/27/92" TYPE="DATE" comment="" />
+<DATE id="P20" start="2247" end="2254" text="5/28/92" TYPE="DATE" comment="" />
+<DATE id="P21" start="2260" end="2267" text="5/24/92" TYPE="DATE" comment="" />
+</TAGS>
+</deIdi2b2>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2080-03-09
+
+
+
+
+
+
+Notre Dame Nursing Home
+6250 Madera Circle              POTTS, WILLIAM
+Hyannis, NV  21113                    10916758
+(391) 643-6925                     03/09/2080
+
+
+
+
+HISTORY OF PRESENT ILLNESS:  Mr. Potts is a 65-year-old male who comes in for followup of chronic kidney disease and other medical problems.
+1.  Chronic kidney disease.  Creatinine stable at 1.42.  He is on no ACE inhibitor.
+2.  Borderline diabetes mellitus.  He is not currently treated.  However, A1c recently 6.6.
+3.  Low HDL.  Recent fasting lipid analysis showed total cholesterol 121, triglycerides 74, LDL 85, and HDL 21.
+4.  History of prostate cancer.  PSA less than assay.
+
+
+MEDICATIONS:  Albuterol q.i.d. p.r.n., atenolol 50 mg p.o. daily, diltiazem 180 mg p.o. daily, Flomax 0.8 mg daily, Flonase 2 sprays b.i.d., folic acid 2 mg b.i.d., Lipitor 40 mg p.o. daily, Plavix 75 mg p.o. daily, and TriCor 200 mg p.o. daily.
+
+REVIEW OF SYMPTOMS:  No significant weight change, febrile signs or symptoms, headache, blurred vision, tinnitus, chest pain, cough, shortness of breath, nausea, abdominal pain, nightsweats, diarrhea, dysuria, polyuria, skin rash, bruising, joint pain, or focal weakness.  
+
+
+PHYSICAL EXAMINATION:  The patient is in no acute distress.  Blood pressure 100/60, weight 226 pounds, heart rate 68 and regular.  Chest:  Clear to percussion and auscultation.  Extremities:  No edema.
+
+
+ASSESSMENT AND PLAN:
+1.  Chronic kidney disease.  This remains stable.  However, he should be on an ACE inhibitor.  I will initiate lisinopril 10 mg p.o. daily, substituted for diltiazem.
+2.  Borderline glucose tolerance.  The patient will return for 2 hour glucose tolerance test.
+3.  Low HDL.  Remains quite low in the setting of coronary artery disease despite treatment.  We will continue TriCor.
+4.  History of prostate cancer.  No evidence of recurrence.
+5.  Hypertension.  Good control.  Substitute lisinopril for diltiazem as noted above.
+
+
+
+
+______________________________
+Matthew H Wyatt, M.D., M.Sc.
+
+
+
+
+
+
+
+
+
+
+eScription document:6-0114243 CSSten Tel
+
+
+
+
+
+
+DD: 03/09/80
+DT: 03/09/80
+DV: 03/09/80
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2080-03-09" TYPE="DATE" comment="" />
+<LOCATION id="P1" start="33" end="56" text="Notre Dame Nursing Home" TYPE="HOSPITAL" comment="" />
+<LOCATION id="P2" start="57" end="75" text="6250 Madera Circle" TYPE="STREET" comment="" />
+<NAME id="P3" start="89" end="103" text="POTTS, WILLIAM" TYPE="PATIENT" comment="" />
+<LOCATION id="P4" start="104" end="111" text="Hyannis" TYPE="CITY" comment="" />
+<LOCATION id="P5" start="113" end="115" text="NV" TYPE="STATE" comment="" />
+<LOCATION id="P6" start="117" end="122" text="21113" TYPE="ZIP" comment="" />
+<ID id="P7" start="142" end="150" text="10916758" TYPE="MEDICALRECORD" comment="" />
+<CONTACT id="P8" start="151" end="165" text="(391) 643-6925" TYPE="PHONE" comment="" />
+<DATE id="P9" start="186" end="196" text="03/09/2080" TYPE="DATE" comment="" />
+<NAME id="P10" start="234" end="239" text="Potts" TYPE="PATIENT" comment="" />
+<AGE id="P11" start="245" end="247" text="65" TYPE="AGE" comment="" />
+<NAME id="P12" start="1995" end="2010" text="Matthew H Wyatt" TYPE="DOCTOR" comment="" />
+<ID id="P13" start="2054" end="2063" text="6-0114243" TYPE="IDNUM" comment="" />
+<DATE id="P14" start="2085" end="2093" text="03/09/80" TYPE="DATE" comment="" />
+<DATE id="P15" start="2098" end="2106" text="03/09/80" TYPE="DATE" comment="" />
+<DATE id="P16" start="2111" end="2119" text="03/09/80" TYPE="DATE" comment="" />
+</TAGS>
+</deIdi2b2>

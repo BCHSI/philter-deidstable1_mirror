@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2080-09-20
+
+EDVISIT^35093053^Dodd, Steven^09/20/80^FARMER, F. KELLY
+
+TIME OF DICTATION:  6:40 a.m.
+
+HISTORY OF PRESENT ILLNESS:  This patient is a 65-year-old male
+
+who presents to Douglas Community Hospital Department of
+
+Emergency Medicine with complaints of chest pain.  The chest pain
+
+is midsternal pressure type in sensation and not associated with
+
+nausea or vomiting.  He is awake and alert in the ED and noted to
+
+be in mild distress.  This patient is a morbidly obese male and
+
+weighs approximately 400 pounds.  The resident's note was
+
+reviewed.  The patient was interviewed.  The patient was examined
+
+by me.  I concur with the workup and evaluation of the patient in
+
+the ED.  For more detailed note on this patient, please review
+
+the resident's note.  Please review the resident's note for past
+
+medical history, surgical history, review of systems,
+
+medications, allergies, family history, and social history.
+
+PHYSICAL EXAMINATION:  HEENT:  Normocephalic, atraumatic.  Pupils
+
+were equal, round, and reactive.  Fundi were benign.  Neck was
+
+supple.  Chest was clear to auscultation and percussion.  I noted
+
+no rales, wheezes, or rhonchi.  Heart noted a normal S1, S2.  No
+
+S3, S4.  No murmur.  Abdomen was protruding.  It was nontender. 
+
+I noted no masses or guarding.  His extremities were positive for
+
+1+ pitting edema.  Neurologically, he was awake, alert, and able
+
+to follow all commands.  Negative Babinski.
+
+LABORATORY DATA:  He had a white count of 7 and hematocrit of 34.
+
+ Normal serum electrolytes except for a creatinine of 4.6 with a
+
+BUN of 57 as well as a glucose of 213 and as well as sodium of
+
+130.  His troponin I was 0.69.  His CK was 140.  His CK-MB was
+
+6.4.  His PT was 15, PTT was 34, and INR was 1.1.
+
+Chest x-ray noted increased markings but not consistent with
+
+congestive failure.  His EKG noted a normal sinus rhythm with a
+
+nonspecific interventricular block.
+
+DIAGNOSTIC IMPRESSION IN THE EMERGENCY DEPARTMENT:  Acute
+
+coronary syndrome.
+
+The patient had an IV placed.  He was given Lopressor, heparin,
+
+and morphine for his chest pain, and admitted to the Internal
+
+Medicine Service for further workup and evaluation of his chest
+
+pain.
+
+______________________________
+
+FARMER, F. KELLY M.D.
+
+D: 09/21/80
+
+T: 09/21/80
+
+Dictated By: FARMER, F. KELLY
+
+eScription document:7-5881990 BFFocus
+
+******** Not reviewed by Attending Physician ********
+
+
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2080-09-20" TYPE="DATE" comment="" />
+<ID id="P1" start="36" end="44" text="35093053" TYPE="MEDICALRECORD" comment="" />
+<NAME id="P2" start="45" end="57" text="Dodd, Steven" TYPE="PATIENT" comment="" />
+<DATE id="P3" start="58" end="66" text="09/20/80" TYPE="DATE" comment="" />
+<NAME id="P4" start="67" end="83" text="FARMER, F. KELLY" TYPE="DOCTOR" comment="" />
+<AGE id="P5" start="163" end="165" text="65" TYPE="AGE" comment="" />
+<LOCATION id="P6" start="197" end="223" text="Douglas Community Hospital" TYPE="HOSPITAL" comment="" />
+<NAME id="P7" start="2238" end="2254" text="FARMER, F. KELLY" TYPE="DOCTOR" comment="" />
+<DATE id="P8" start="2264" end="2272" text="09/21/80" TYPE="DATE" comment="" />
+<DATE id="P9" start="2277" end="2285" text="09/21/80" TYPE="DATE" comment="" />
+<NAME id="P10" start="2300" end="2316" text="FARMER, F. KELLY" TYPE="DOCTOR" comment="" />
+<ID id="P11" start="2338" end="2347" text="7-5881990" TYPE="IDNUM" comment="" />
+</TAGS>
+</deIdi2b2>

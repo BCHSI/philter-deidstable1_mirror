@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2079-04-22
+
+
+
+
+INTERNAL MEDICINE ASSOCIATES
+
+BROADLAWNS MEDICAL CENTER
+
+
+
+Reason for visit   elevated B/P
+
+
+
+History of present illness   Seen in ER for HTN.yesterday  224/105
+
+Per dau TX w/ IV lopressor x 4 doses, betalol & NTG
+
+Today B/P 210/90 this AM
+
+Meds not changed.
+
+No ha, no chest pain, no SOB, no blurred vision.
+
+
+
+Change in therapies and Renewals
+
+Norvasc 5mg po qd QTY:30 Refills:3 Start: 3/12/2075
+
+
+
+Assessment and plan   HTN 
+
+Discussed w/ Dr Edmondson by phone.
+
+Will add Norvasc 5 mg qd
+
+Advised family.
+
+Called to  pharm
+
+
+
+Disposition
+
+Appt w/ Dr Edmondson 4/28/79
+
+
+
+Addendum
+
+			
+
+I was present during key portions of the evaluation of the patient and agree with Noreen Dotson's findings and plan as written.
+
+Bryan Edmondson
+
+
+
+Signed electronically by Noreen O Dotson RN on Apr 22, 2079     Bryan  Edmondson MD on Aug 20, 2079     
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2079-04-22" TYPE="DATE" comment="" />
+<LOCATION id="P1" start="61" end="86" text="BROADLAWNS MEDICAL CENTER" TYPE="HOSPITAL" comment="" />
+<DATE id="P2" start="419" end="428" text="3/12/2075" TYPE="DATE" comment="" />
+<NAME id="P3" start="476" end="485" text="Edmondson" TYPE="DOCTOR" comment="" />
+<NAME id="P4" start="584" end="593" text="Edmondson" TYPE="DOCTOR" comment="" />
+<DATE id="P5" start="594" end="601" text="4/28/79" TYPE="DATE" comment="" />
+<NAME id="P6" start="702" end="715" text="Noreen Dotson" TYPE="DOCTOR" comment="" />
+<NAME id="P7" start="749" end="764" text="Bryan Edmondson" TYPE="DOCTOR" comment="" />
+<NAME id="P8" start="793" end="808" text="Noreen O Dotson" TYPE="DOCTOR" comment="" />
+<DATE id="P9" start="815" end="827" text="Apr 22, 2079" TYPE="DATE" comment="" />
+<NAME id="P10" start="832" end="848" text="Bryan  Edmondson" TYPE="DOCTOR" comment="" />
+<DATE id="P11" start="855" end="867" text="Aug 20, 2079" TYPE="DATE" comment="" />
+</TAGS>
+</deIdi2b2>

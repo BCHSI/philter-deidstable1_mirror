@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2082-01-28
+
+             				
+
+ Critical care 					 
+
+
+
+
+
+PULMONARY FELLOW ADMIT NOTE
+
+
+
+
+
+Reason for Admission: focal neurologic deficits
+
+
+
+HPI: 48 yo man with CF, HTN, GERD, spinal stenosis, DM, CF arthropathy, h/o crypto meningitis and h/o left UE paresthesias who presented to Sheffield Care Center 1/26 with complaints of sudden-onset right hand paresthesias, followed by left sided weakness and left sided visual deficits. Also with frontal-occipital headache during this time. He presented to the Sheffield Center ED, and shortly after he was seen his left sided weakness resolved, although his visual field deficits and right hand paresthesia as well as his headache had remained. He denies F/C/N/V. No neck stiffness. 
+
+
+
+He had a noncontrast head CT which was negative for any acute process per radiology read.  He had an LP with 2 WBC, 2 RBC, glucose 98, protein 84, appeared clear. Gram stain with no orgs, rare polys.  ESR 44, crypto ag pending.  He was transferred to HSH because Sheffield Center does not have an MRI machine.
+
+
+
+He says that his pulmonary status has been stable, and produces a moderate amount of yellow sputum. He does not do chest PT at home. He has a h/o mild sinusitis, but he says that it hasn't been bothering him lately. He has been having normal bowel movements with no difficulties with constipation.
+
+
+
+PMH: 
+
+CF
+
+HTN
+
+GERD
+
+Gout
+
+Spinal stenosis (2062)
+
+CF induced DM
+
+CF arthropathy
+
+Crypto meningitis 2062
+
+Nephrotic syndrome
+
+Bilateral cataracts
+
+ 
+
+Current Meds: 
+
+Lasix 20 bid
+
+Advair 250/50 bid
+
+ASA 81 qd
+
+Albuterol prn
+
+Pancreacarb 8 tabs with meals, 3-5 w/snacks
+
+Colchicine 0.5mg qd
+
+Cozaar 50qd
+
+Zestril 40mg qd
+
+Accolate 20mg bid
+
+Prandin 2-4 mg tid qac
+
+Vit E and D
+
+Celebrex 100mg qd
+
+Vit K 5mg 3x/wk
+
+Protoniz 40mg qd
+
+Azithro 500 3x/wk
+
+Probenecid 250mg bid
+
+
+
+Allergies: NKDA
+
+
+
+Family History: mother died of Hodgkins dz at 33. Father with CVA, HTN, sister with CF
+
+
+
+Social History: 
+
+Occupation/exposures: shoe repairer
+
+Smoking: no tobacco, +occasional marijuana. Occasional alcohol.
+
+ 
+
+Physical Exam:
+
+Vitals:  T 97.9, HR 78, BP 118/68, RR 20, 99% RA
+
+Gen:  comfortable in NAD
+
+HEENT/neck:  OP clear, PERRL, EOMI, no nuchal rigidity
+
+Lungs/chest:  diminished breath sounds bilaterally, no crackles or wheezes
+
+Heart:  RRR no murmurs
+
+Abd:  soft nt/nd +BS
+
+Extr:  no edema
+
+Neuro: +left unilateral left-sided hemianopsia. OTW CN II-XII intact. 5/5 strength throughout, normal sensation, normal cerebellar exam, normal gait.  +paresthesias in right hand in a glove distribution.
+
+
+
+Lab: pending
+
+
+
+Imaging: pending
+
+
+
+Impression: 48 yo man with CF, CF-induced DM, and HTN, who presented to an outside hospital with focal neuro changes of unclear etiology, but concerning for a CVA.  
+
+
+
+Recommendations: 
+
+1.	Neuro: Would get a brain MRI/MRA to further evaluate.  After the MRI is done, would get a neurology consult in the morning.  Continue ASA, BP control in the meantime.  Patient may need a repeat LP depending on neuro consult recs.
+
+2.	Pulm: CF appears stable. Would continue his outpatient Advair, albuterol, azithro.
+
+3.	GI: continue enzymes, vitamins. High calorie, high protein CF diet.
+
+4.	Endo: monitor blood glucose.
+
+
+
+
+
+
+
+
+
+ 
+
+______________________
+
+Quiana Titus, M.D.
+
+Critical care Fellow
+
+Pager: 33911
+
+
+
+Lung Transplant Attending Note:
+
+
+
+I have seen and examined the patient with Dr. Titus and I agree with her evaluation and plan as outlined above.  Mr. Aguilar is a 48 yo man with h/o CF with mild pulmonary disease, who presented to an OSH on 1/26 with sudden onset of right upper ext paresthesias, followed by a loss of left visual field, diplopia, and left sided weakness.  The patient denies incontinence but had some gait instability related to weakness.  The patient was evaluated at the OSH with non-contrast head CT and L/P which were significant only for elevated CSF protein.  Currently symptoms have resolved other than persistent occipital headache which began with the onset of the other symptoms, as well as unilateral hemianopsia in the left eye evident on exam.  Exam also notable for disdiadochokinesis, otherwise neurologic exam non-focal.  Lung exam notable for diminished BS but no wheezes or crackles.  DDX for above includes ischemic process, though symptoms appear to be multi-focal, vs. mononeuritis multiplex related to inflammatory process.  Less likely is mass lesion leading to above symptoms, or meningeal process.  We plan to obtain CNS MRI, neuro consult.  Will await MRI findings prior to pursuing further serologic work-up.  Continue maintenance medications for CF.
+
+
+
+_______________________
+
+Debra F. Mullen, MD
+
+      
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2082-01-28" TYPE="DATE" comment="" />
+<AGE id="P2" start="163" end="165" text="48" TYPE="AGE" comment="" />
+<LOCATION id="P3" start="298" end="319" text="Sheffield Care Center" TYPE="HOSPITAL" comment="" />
+<DATE id="P4" start="320" end="324" text="1/26" TYPE="DATE" comment="" />
+<LOCATION id="P5" start="521" end="537" text="Sheffield Center" TYPE="HOSPITAL" comment="" />
+<LOCATION id="P6" start="999" end="1002" text="HSH" TYPE="HOSPITAL" comment="" />
+<LOCATION id="P7" start="1011" end="1027" text="Sheffield Center" TYPE="HOSPITAL" comment="" />
+<DATE id="P8" start="1407" end="1411" text="2062" TYPE="DATE" comment="" />
+<DATE id="P9" start="1463" end="1467" text="2062" TYPE="DATE" comment="" />
+<AGE id="P10" start="1902" end="1904" text="33" TYPE="AGE" comment="" />
+<PROFESSION id="P11" start="1986" end="1999" text="shoe repairer" TYPE="PROFESSION" comment="" />
+<AGE id="P12" start="2611" end="2613" text="48" TYPE="AGE" comment="" />
+<NAME id="P13" start="3248" end="3260" text="Quiana Titus" TYPE="DOCTOR" comment="" />
+<CONTACT id="P15" start="3297" end="3302" text="33911" TYPE="PHONE" comment="" />
+<NAME id="P16" start="3387" end="3392" text="Titus" TYPE="DOCTOR" comment="" />
+<NAME id="P17" start="3458" end="3465" text="Aguilar" TYPE="PATIENT" comment="" />
+<AGE id="P18" start="3471" end="3473" text="48" TYPE="AGE" comment="" />
+<DATE id="P19" start="3549" end="3553" text="1/26" TYPE="DATE" comment="" />
+<NAME id="P20" start="4632" end="4647" text="Debra F. Mullen" TYPE="DOCTOR" comment="" />
+</TAGS>
+</deIdi2b2>

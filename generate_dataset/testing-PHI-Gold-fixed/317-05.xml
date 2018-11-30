@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2079-08-04
+
+EDVISIT^75322175^HENDRICKS, HANNAH^08/04/79^FAULKNER, GABRIAL
+
+CHIEF COMPLAINT:  Lower extremity cellulitis.
+
+HISTORY OF PRESENT ILLNESS:  This is a 53-year-old diabetic
+
+vasculopathic with a history of multiple lower extremity arterial
+
+bypass who comes in today with bilateral lower extremity
+
+cellulitis, has diagnosed by her PCP.  She was recently treated
+
+at an outside hospital for bilateral lower extremity cellulitis,
+
+had a 2-day hospital stay, and was discharged home on Keflex. 
+
+She felt that she did have some improvement but over the past 48
+
+hours has had worsening erythema in lower extremities.  She has
+
+also been having some emesis, myalgias and fatigue, but has not
+
+had any hematemesis, abdominal pain, constipation, diarrhea, or
+
+other symptomatology.  She has also not noticed any urinary
+
+symptoms of frequency.
+
+PAST MEDICAL HISTORY:  Peripheral vascular disease, hypertension,
+
+hyperlipidemia, and diabetes.
+
+PAST SURGICAL HISTORY:  Amputation to the left second, third and
+
+fifth toes, bilateral fem-pop bypasses right in 2061, left in
+
+2066 and anterior tibial bypass graft in 05/2078.
+
+SOCIAL HISTORY:  The patient works as a Senior Manager of Broadcasting and denies
+
+tobacco, alcohol, or drugs.
+
+PHYSICAL EXAMINATION:  Blood pressure 146/66, pulse 98,
+
+respiratory rate 20, temperature 101.2, and O2 saturation 99% on
+
+room air.  General:  This is a well-appearing woman in no
+
+apparent distress.  Respiratory:  Clear to auscultation
+
+bilaterally, no rales, rhonchi, or wheezes.  Cardiovascular: 
+
+Regular rate and rhythm, no murmurs, rubs, or gallops.  GI:  The
+
+abdomen is soft.  The patient does have insulin pump in place,
+
+but has no erythema or fluctuance over the pump.  Skin is warm,
+
+dry, and intact with the exception of the left lower extremity,
+
+which is erythematous, warm and slightly swollen compared to the
+
+right lower extremity.  This erythema stops at the ankle and does
+
+not extend up above the knee.  The patient also has an open
+
+chronic nonhealing wound on the plantar surface of her left foot
+
+as well.  There is no erythema surrounding this wound Neurologic:
+
+ Awake, alert, and oriented x3 except for some decreased
+
+sensation in her left foot, which is chronic.
+
+EMERGENCY DEPARTMENT COURSE:  The patient was seen and evaluated
+
+by me and the resident.  I confirm that I have seen and evaluated
+
+the patient, reviewed the resident's documentation on the
+
+patient's chart, and discussed the evaluation, plan of care, and
+
+disposition with the patient as well as the resident.
+
+The patient had a CBC and metabolic panel.  CBC showed white
+
+count of 14 with shift.  LFTs were within normal limits.  X-ray
+
+of her left foot showed no osteomyelitis seen on x-ray and x-ray
+
+of her tib-fib continued to show no osteomyelitis.  Given the
+
+erythema and swelling, I was concerned about a cellulitis in this
+
+vasculopathic who was also diabetic and so we gave her a 1 g of
+
+vancomycin (especially given the fact that she has failed
+
+outpatient therapy with oral antibiotics) and we are admitting
+
+her to the Medicine Service for cellulitis.  The patient's
+
+erythema and swelling does not extend to her foot and would be
+
+extremely atypical for a DVT.  We also notified the Internal Medicine resident of the patient's admission to Medicine as she is
+
+followed closely by Surgery and this notification was
+
+made at 8:30 p.m.
+
+Given the fact that she does not have osteomyelitis at this point
+
+we have not discussed the PICC line and given the fact that she
+
+does not have any ____ abnormalities, I did not believe that she
+
+needs pressors or aggressive hydration and we are starting her on
+
+maintenance fluids, antibiotics, and admitting her to the
+
+hospital.
+
+DIAGNOSIS:  Left lower extremity cellulitis.
+
+CONDITION:  Stable.
+
+DISPOSITION:  Admit to hospital.
+
+______________________________
+
+FAULKNER, GABRIAL MD
+
+D: 08/05/79
+
+T: 08/05/79
+
+Dictated By: FAULKNER, GABRIAL
+
+eScription document:7-11192535 BFFocus
+
+ ******** Not reviewed by Attending Physician ********
+
+
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2079-08-04" TYPE="DATE" comment="" />
+<ID id="P1" start="36" end="44" text="75322175" TYPE="MEDICALRECORD" comment="" />
+<NAME id="P2" start="45" end="62" text="HENDRICKS, HANNAH" TYPE="PATIENT" comment="" />
+<DATE id="P3" start="63" end="71" text="08/04/79" TYPE="DATE" comment="" />
+<NAME id="P4" start="72" end="89" text="FAULKNER, GABRIAL" TYPE="DOCTOR" comment="" />
+<AGE id="P5" start="177" end="179" text="53" TYPE="AGE" comment="" />
+<DATE id="P6" start="1077" end="1081" text="2061" TYPE="DATE" comment="" />
+<DATE id="P7" start="1092" end="1096" text="2066" TYPE="DATE" comment="" />
+<DATE id="P8" start="1133" end="1140" text="05/2078" TYPE="DATE" comment="" />
+<PROFESSION id="P9" start="1183" end="1213" text="Senior Manager of Broadcasting" TYPE="PROFESSION" comment="" />
+<NAME id="P12" start="3868" end="3885" text="FAULKNER, GABRIAL" TYPE="DOCTOR" comment="" />
+<DATE id="P13" start="3893" end="3901" text="08/05/79" TYPE="DATE" comment="" />
+<DATE id="P14" start="3906" end="3914" text="08/05/79" TYPE="DATE" comment="" />
+<NAME id="P15" start="3929" end="3946" text="FAULKNER, GABRIAL" TYPE="DOCTOR" comment="" />
+<ID id="P16" start="3968" end="3978" text="7-11192535" TYPE="IDNUM" comment="" />
+</TAGS>
+</deIdi2b2>

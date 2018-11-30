@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2080-07-19
+
+EDVISIT^72841920^MULLINS, DOLORES^07/19/80^TAVARES, IDRIS
+
+I saw this patient with Dr. Xavier Palacios.  I confirm that I have
+
+interviewed and examined the patient, reviewed the resident's
+
+documentation on the patient's chart, and discussed the
+
+evaluation, plan of care, and disposition with the patient. 
+
+Please see the resident's note for further details.
+
+CHIEF COMPLAINT:  Fast heart rate.
+
+HISTORY OF PRESENT ILLNESS:  The patient is a 78-year-old female
+
+with history of a left MCA stroke, atrial fibrillation,
+
+hypertension, diabetes, and renal insufficiency who was
+
+transferred from Southwest Montana Radiology for atrial
+
+fibrillation with rapid ventricular response.  The patient has
+
+been in Southwest Montana for the last several weeks.  During her
+
+rehabilitation stay, the patient was noted to have sinus
+
+bradycardia and sinus pauses.  The patient's metoprolol was
+
+stopped.  The patient was previously on metoprolol 6.25 mg every
+
+6 hours.  The patient was noted to have atrial fibrillation with
+
+rapid ventricular response on exam this morning.  The patient is
+
+followed by Dr. Octavia Xue of Heritage Hospital Cardiology. 
+
+Given the difficulty that Southwest Montana has had ____
+
+the patient's atrial fibrillation, the patient was transferred
+
+here to Riverton General Hospital for further management and
+
+further placement.  The patient is asymptomatic.  The patient
+
+denies any chest pain or shortness of breath.  The patient denies
+
+any lightheadedness.  The patient has no other complaints.
+
+PHYSICAL EXAMINATION:  The patient's vital signs revealed the
+
+following:  Temperature is 96.4, heart rate of 79, respiratory
+
+rate of 18, blood pressure is 112/63, and oxygen saturations at
+
+100% on room air.  The patient's oxygen saturation was
+
+interpreted as normal.  General:  No acute distress, pleasant,
+
+and multiple family members at bedside.  HEENT:  The patient's
+
+head was normocephalic.  Mucous membranes were dry.  Posterior
+
+oropharynx was clear.  Neck:  Supple.  No carotid bruits.  No
+
+JVD.  Respiratory:  Clear to auscultation bilaterally.  No focal
+
+rhonchi, rales, or wheezes.  Cardiovascular:  Irregularly
+
+irregular, tachycardic.  No gross murmurs, rubs, or gallops were
+
+appreciated.  GI:  Abdomen:  Soft.  No rebound or guarding. 
+
+Minimal suprapubic tenderness to palpation.  G-tube in place. 
+
+Rectal exam:  Deferred.  GU exam:  Deferred.  Skin:  Warm and
+
+dry.  No rash or lesions were noted.  Back:  No costovertebral
+
+angle tenderness.  Extremities:  Warm and well perfused.  Lower
+
+extremity pitting edema rising up to the knees.  No palpable
+
+cords.  Neurologic:  The patient was alert and oriented.  The
+
+patient moved all 4 extremities with fair strength.  The patient
+
+did have a right facial droop.  I did not ambulate the patient.
+
+INITIAL IMPRESSION AND PLAN:  The patient is a 78-year-old female
+
+with history of atrial fibrillation, and recent left MCA stroke
+
+who was transferred from Southwest Montana for management
+
+of her atrial fibrillation with rapid ventricular response.  The
+
+patient is hemodynamically stable at this time.  The patient is
+
+asymptomatic.  The patient will need rate control and will need
+
+to be admitted to Heritage Hospital Cardiology.
+
+EMERGENCY DEPARTMENT COURSE:  Upon arrival to the Emergency
+
+Department, the patient had history and physical exam performed. 
+
+The patient then had 12-lead EKG performed.  The patient's
+
+12-lead EKG was notable for atrial fibrillation with rapid
+
+ventricular response.  The patient did have some nonspecific ST-T
+
+changes when compared to her prior EKG.  The patient's laboratory
+
+studies so far has been largely unremarkable.  The patient's
+
+first set of cardiac markers were negative.  The patient's
+
+complete blood count was notable for an elevated white blood cell
+
+count of 10.8.  The patient's hematocrit of 33.2.  The patient's
+
+platelets were somewhat elevated at 560,000.  The patient's
+
+portable chest x-ray has been ordered and results of the
+
+patient's portable chest x-ray are still pending at this time. 
+
+The case was then discussed with the Heritage Hospital
+
+cardiologist on call.  The patient ____ will be admitted to
+
+Heritage Hospital Cardiology and to a monitor bed.  I did try to
+
+page Dr. Octavia Xue to let her know about the patient's
+
+admission to Heritage Hospital Cardiology.  The patient and
+
+patient's family were in agreement with the plan.  The patient
+
+was started on metoprolol down her G-tube.  The patient had a
+
+good response to the metoprolol.  The patient was given
+
+metoprolol 6.25 mg.
+
+PRIMARY DIAGNOSES:
+
+1.  Atrial fibrillation with rapid ventricular response.
+
+2.  History of a left MCA stroke.
+
+DISPOSITION:  The patient was admitted to Heritage Hospital
+
+Cardiology.
+
+CONDITION AT TIME OF DISPOSITION:  Stable and satisfactory.
+
+______________________________
+
+TAVARES, IDRIS M.D.
+
+D: 07/19/80
+
+T: 07/19/80
+
+Dictated By: TAVARES, IDRIS
+
+eScription document:4-5337537 BFFocus
+
+ ******** Not reviewed by Attending Physician ********
+
+
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2080-07-19" TYPE="DATE" comment="" />
+<ID id="P1" start="36" end="44" text="72841920" TYPE="MEDICALRECORD" comment="" />
+<NAME id="P2" start="45" end="61" text="MULLINS, DOLORES" TYPE="PATIENT" comment="" />
+<DATE id="P3" start="62" end="70" text="07/19/80" TYPE="DATE" comment="" />
+<NAME id="P4" start="71" end="85" text="TAVARES, IDRIS" TYPE="DOCTOR" comment="" />
+<NAME id="P5" start="115" end="130" text="Xavier Palacios" TYPE="DOCTOR" comment="" />
+<AGE id="P6" start="473" end="475" text="78" TYPE="AGE" comment="" />
+<LOCATION id="P7" start="624" end="651" text="Southwest Montana Radiology" TYPE="HOSPITAL" comment="" />
+<LOCATION id="P8" start="736" end="753" text="Southwest Montana" TYPE="HOSPITAL" comment="" />
+<NAME id="P9" start="1128" end="1139" text="Octavia Xue" TYPE="DOCTOR" comment="" />
+<LOCATION id="P10" start="1143" end="1160" text="Heritage Hospital" TYPE="HOSPITAL" comment="" />
+<LOCATION id="P11" start="1201" end="1218" text="Southwest Montana" TYPE="HOSPITAL" comment="" />
+<LOCATION id="P12" start="1305" end="1330" text="Riverton General Hospital" TYPE="HOSPITAL" comment="" />
+<AGE id="P13" start="2864" end="2866" text="78" TYPE="AGE" comment="" />
+<LOCATION id="P14" start="2974" end="2991" text="Southwest Montana" TYPE="HOSPITAL" comment="" />
+<LOCATION id="P15" start="3222" end="3239" text="Heritage Hospital" TYPE="HOSPITAL" comment="" />
+<LOCATION id="P16" start="4111" end="4128" text="Heritage Hospital" TYPE="HOSPITAL" comment="" />
+<LOCATION id="P17" start="4191" end="4208" text="Heritage Hospital" TYPE="HOSPITAL" comment="" />
+<NAME id="P18" start="4266" end="4277" text="Octavia Xue" TYPE="DOCTOR" comment="" />
+<LOCATION id="P19" start="4328" end="4345" text="Heritage Hospital" TYPE="HOSPITAL" comment="" />
+<LOCATION id="P20" start="4736" end="4753" text="Heritage Hospital" TYPE="HOSPITAL" comment="" />
+<NAME id="P21" start="4861" end="4875" text="TAVARES, IDRIS" TYPE="DOCTOR" comment="" />
+<DATE id="P22" start="4885" end="4893" text="07/19/80" TYPE="DATE" comment="" />
+<DATE id="P23" start="4898" end="4906" text="07/19/80" TYPE="DATE" comment="" />
+<NAME id="P24" start="4921" end="4935" text="TAVARES, IDRIS" TYPE="DOCTOR" comment="" />
+<ID id="P25" start="4957" end="4966" text="4-5337537" TYPE="IDNUM" comment="" />
+</TAGS>
+</deIdi2b2>

@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2114-04-07
+
+      07 April, 2114
+
+RENAL CONSULTATION NOTE
+
+Dawson, Quinten W
+
+SAH  # 469 27 58
+
+
+
+Intro:	73 yo male s/p CABG with progressive acute renal failure.	
+
+
+
+Present Illness and Past Med Hx:
+
+1)	 Renal failure 
+
+a)	Baseline chronic renal failure
+
+i)	Creat 1.2 to 1.4 range, 1.5 on admission
+
+ii)	History of DM
+
+iii)	Preop urine negative for albumin and blood.
+
+b)	Progressive renal failure
+
+i)	Gradual rise in creatinine to 2.7
+
+ii)	Non oliguric, making ~ 1 liter /day
+
+2)	CAD 
+
+a)	Cath
+
+i)	Occluded RCA, subtotal circumflex and 95% LAD and 90% stenosis of first diagonal
+
+ii)	EF preserved at 55%
+
+b)	CABG 
+
+i)	Off pump
+
+ii)	X 4 vessels LIMA
+
+iii)	Post op CPK to 594 and troponin to 0.53.
+
+3)	DM type 2
+
+4)	Hyperlipidemia
+
+5)	Hypertension
+
+6)	S/p CVA 7/2111 with residual word finding difficulty and mild facial droop.
+
+7)	Obstructive sleep apnea - uses home CPAP.
+
+8)	Diverticulosis
+
+9)	BPH  -  reports that he was in the process of getting this addressed when he developed symptoms of his CAD.
+
+10)	Peripheral neuropathy
+
+11)	Osteoarthritis
+
+12)	S/p cholecystectomy
+
+
+
+Meds: 	Albuterol
+
+	ASA 325
+
+	Celexa 40
+
+	Plavix 75
+
+	Nexium 20 bid
+
+	Furosemide 40 bid
+
+	Motrin 500 tid
+
+	Regular insulinSS q 6
+
+	Metoprolol 12.5 bid
+
+	KCL 20 qd
+
+	Zocor 40 qd
+
+
+
+Allergies: NKDA
+
+Soc Hx:  Smoking: quit in 2066;   EtOH: 1 glass of wine a day;      Divorced.  Works in mapping.
+
+Fam Hx: NC
+
+ROS:  Chest pain and shortness of breath with walking to the bathroom relieved by percoset and rest.
+
+Denies cough, hemoptysis, chest pain, orthopnea, pnd, rhinitis, nausea, vomiting,  hematemasis, melena, hematochezia, ocular problem, sinusitis, dyuria, urgency, hematuria, trouble voiding, skin rash, arthritis .
+
+
+
+Exam:	Uncomfortable appearing 
+
+BP: 128/60     P: 80   R: 20    96% on 2 liters        AFEBRILE
+
+SKIN:  benign
+
+HEENT: anicteric, sclera clear
+
+NECK:  Supple, no adenopathy, no thyromegaly
+
+CHEST: few rales
+
+COR:   distant heart sounds.  Without gallup or rub.
+
+ABD:   positive bowel sounds, mildly distended, minimally tender.
+
+EXT: 1+ edema
+
+
+
+Urine -  PVR of ~225 cc
+
+	
+
+Labs:	Na 140, K 4.6, Cl 103, HCO3 28.1, BUN 60, Creat 2.7
+
+	Amylase 330   (32) 
+
+	WBC 7.1, Hct 26.1, Plt 91
+
+	UA dip with trace protein and negative blood
+
+		Micro with many hyaline and few granular casts.
+
+	EKG sinus at 77
+
+		Non specific STTW changes, minimal change from other post op EKGs.
+
+	
+
+Impression: 
+
+1)	Renal failure
+
+a.	Chronic component
+
+i.	Suggestive of early DM nephrop
+
+ii.	Baseline 1.4
+
+b.	Acute component
+
+i.	Prerenal component with pancreatitis
+
+ii.	No major ATN
+
+iii.	? obstructive component 
+
+1.	now with increased urine output after Foley catheter.
+
+2)	Pancreatitis
+
+a.	Amylase up today
+
+3)	Chest pain
+
+a.	With exertion - too bathroom.
+
+b.	With shortness of breath
+
+c.	Incisional with movement vs ? ischemic
+
+	
+
+Rec/Plan:	
+
+1)	Foley catheter overnight
+
+2)	Urine for Na and creat.
+
+3)	Flomax for 24 hours prior to removing Foley with voiding trial
+
+4)	Serial Amylase
+
+5)	Serial cardiac enzymes
+
+6)	Lasix prn.  - now seems to be diuresing reasonably.
+
+7)	EKG with recurrent chest symptoms.
+
+
+
+
+
+
+
+	Uriel Y. Springer
+
+
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2114-04-07" TYPE="DATE" comment="" />
+<DATE id="P1" start="34" end="48" text="07 April, 2114" TYPE="DATE" comment="" />
+<NAME id="P2" start="75" end="92" text="Dawson, Quinten W" TYPE="PATIENT" comment="" />
+<LOCATION id="P3" start="94" end="97" text="SAH" TYPE="HOSPITAL" comment="" />
+<ID id="P4" start="101" end="110" text="469 27 58" TYPE="MEDICALRECORD" comment="" />
+<AGE id="P5" start="121" end="123" text="73" TYPE="AGE" comment="" />
+<DATE id="P6" start="776" end="782" text="7/2111" TYPE="DATE" comment="" />
+<DATE id="P7" start="1318" end="1322" text="2066" TYPE="DATE" comment="" />
+<PROFESSION id="P8" start="1380" end="1387" text="mapping" TYPE="PROFESSION" comment="" />
+<NAME id="P9" start="3113" end="3130" text="Uriel Y. Springer" TYPE="DOCTOR" comment="" />
+</TAGS>
+</deIdi2b2>

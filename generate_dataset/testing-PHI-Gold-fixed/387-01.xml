@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2081-03-22
+
+Chief Complaint of:  Nephrolithiasis
+
+
+
+2/28/81 cysto, left stent, ESWL,meatal dilatation
+
+
+
+History of Present Illness:  50 yo male here for removal of his stent.   He denies fevers, nausea, chest pain, shortness of breadth (at baseline), and vomiting.  Voiding symptoms:  hesitancy, intermittency, nocturia x1 3/week, no frequency, and intermittent urgency.  Reports erectile dysfunction-difficulty maintaining erections.
+
+                     
+
+Past Medical History:  NIDDM, neurofibromatosis, Hodgkins disease-chemo and XRT (bleomycin, adriamycin, vincristine, DTIC)
+
+
+
+Past Surgical History:  left axillary biopsy, pectus excavatum, neck surgery
+
+
+
+Medications: metformin, urocit K, ibuprofen PRN
+
+
+
+Allergies: he reports an allergy to contrast in the past but did well with his last CT scan.
+
+
+
+Social History:
+
+Single
+
+Does not smoke
+
+No alcohol use
+
+Retired from dc comics
+
+
+
+Family Hx: 
+
+No history of stones
+
+Mother - died of sarcoma
+
+Father -died of an MI
+
+Sister with ITP
+
+
+
+Review of Systems: 
+
+No interval change
+
+
+
+Genitourinary Review of Systems
+
+No Kidney stones in the past
+
+No Urinary tract infections
+
+No Sexually transmitted diseases		
+
+
+
+Physical Examination:
+
+General Examination:
+
+Vital Signs:
+
+Morbid obesity
+
+BP 154/82
+
+cor RRR
+
+lung CTAB
+
+abd soft 
+
+No CVAT
+
+LE no calf tenderness
+
+
+
+cystoscopy
+
+Patient was placed in the supine  position and prepped and draped in the standard sterile fashion.  Lidocaine jelly was inserted into the meatus for local anaesthesia.  A flexible cystoscope was inserted into the meatus.  The urethra was without lesions.  The lateral lobes of the prostate coapted at the midline.  The stent was identified and using alligator forceps the distal portion was grasped.  It was removed intact.  The patient tolerated the procedure and was discharged from the clinic after receiving ciprofloxacin.
+
+
+
+Laboratory Values:
+
+An independent review of a urinalysis shows:
+
+                          No WBC's
+
+                          +  RBC's
+
+                          No Glucose
+
+                          No Protein
+
+                          Nitrite Negative
+
+                          pH  7.0
+
+
+
+Abdomen Single                 22-Mar-2081 
+
+REPORT:
+
+	History: As above.
+
+	Comparison:Noncontrast CT abdomen and pelvis 3/14/81.
+
+	Findings:
+
+	There is a left ureteral stent.  Tiny residual stones seen on
+
+	prior CT are not identified on this KUB.The bowel gas pattern is
+
+	nonobstructive.      The bones are unremarkable in appearance. The
+
+	visualized lung bases are unremarkable.
+
+IMPRESSION:
+
+	LEFT URETERAL STENT.  NO ABNORMAL CALCIFICATIONS IDENTIFIED.
+
+		
+
+	
+
+Impression:  50 yo male treated for a 1.1 cm symptomatic left renal stone.   His post-operative KUB does not show any calcifications.  The stent was removed intact without difficulty.   He is to have a follow up CT in June with and without contrast for further evaluation of a renal lesion seen on a previous CT scan.  He did have a post-operative CT that showed a subcapsular hematoma for which his blood pressure will be followed.   That study also showed the stone which is no longer visualized on todays KUB.  The imaging in June will again assess his stone burden.
+
+        
+
+Plan:   
+
+1  CT abd/pelvis I-/I+ in June
+
+
+
+Follow Up:  in June
+
+
+
+Patricia Barajas, MD
+
+Urology- Gila Regional Hospital
+
+
+
+
+
+Please note: This email may contain confidential patient information which is legally protected by patient-physician privilege.  If you are not the intended recipient, you are hereby notified that any disclosure, copying, or distribution of this information is strictly prohibited by law.  If you have received this communication in error, please notify us by telephone at once and destroy any electronic or paper copies.  We apologize for any inconvenience.
+
+
+
+
+
+cc:
+
+
+
+
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2081-03-22" TYPE="DATE" comment="" />
+<DATE id="P1" start="68" end="75" text="2/28/81" TYPE="DATE" comment="" />
+<AGE id="P2" start="150" end="152" text="50" TYPE="AGE" comment="" />
+<LOCATION id="P3" start="899" end="908" text="dc comics" TYPE="ORGANIZATION" comment="" />
+<DATE id="P4" start="2207" end="2218" text="22-Mar-2081" TYPE="DATE" comment="" />
+<DATE id="P5" start="2297" end="2304" text="3/14/81" TYPE="DATE" comment="" />
+<AGE id="P6" start="2657" end="2659" text="50" TYPE="AGE" comment="" />
+<DATE id="P7" start="2862" end="2866" text="June" TYPE="DATE" comment="" />
+<DATE id="P8" start="3173" end="3177" text="June" TYPE="DATE" comment="" />
+<DATE id="P9" start="3261" end="3265" text="June" TYPE="DATE" comment="" />
+<DATE id="P10" start="3284" end="3288" text="June" TYPE="DATE" comment="" />
+<NAME id="P11" start="3292" end="3308" text="Patricia Barajas" TYPE="DOCTOR" comment="" />
+<LOCATION id="P13" start="3323" end="3345" text="Gila Regional Hospital" TYPE="HOSPITAL" comment="" />
+</TAGS>
+</deIdi2b2>

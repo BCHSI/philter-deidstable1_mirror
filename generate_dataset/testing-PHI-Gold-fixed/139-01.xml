@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2094-05-20
+
+ZELDA UPHAM
+
+SMC Unit No:  
+
+
+
+MOLLY STARK HOSPITAL
+
+
+
+ADULT MEDICINE
+
+
+
+
+
+Date:  May 20, 2094
+
+
+
+70-year-old female, first visit to MSH AMED. 
+
+
+
+MEDICATIONS:  Ibuprofen 800 mg 1 p.o. b.i.d., has taken for years. Self-d/c'd meclizine, unclear status on H2 blocker.
+
+
+
+ALLERGIES: Percocet, codeine, sulfa.
+
+
+
+PMH: Includes fibromyalgia with chronic pain, osteoarthritis, recurrent vertigo, cervical spondylosis, lumbar spondylosis, carpal tunnel syndrome, myofascial pain, dizziness, syncope, chest pain of unclear etiology, sinusitis, DJD. Status post laminectomy 2062. 
+
+
+
+S:	70-year-old female accompanied by daughter, Qazi, here to initiate primary care closer to home. Previously followed by Dr. Faust, but daughter needs closer PCP. In addition, patient followed in arthritis clinic by Dr. Solomon and has received injections per patient report from severe muscle spasms of both arms. Also seen by pain clinic. Main issue is continued lower back pain and primary care. Of concern is patient reveals an unclear history of chest pain which was thought to be arthritis, but is accompanied by episodes of syncope, witnessed in a grocery store. Patient has not had to her knowledge a cardiac workup for this. Also had some vascular studies done at that time and was told they were normal. The patient is unclear on status of recent pelvic exam. GYN - G7, P7, still with uterus but not sexually active. Denies any change in bowels. Denies any change in appetite. 
+
+
+
+The patient has been complaining of animals crawling across her chest. States she used a cream for 1 week with resolution but now feels the animals are back, and she has been using a pesticide agent which sounds like a Kwell agent to resolve these. 
+
+
+
+Recent testing - L-spine films confirm grade 2 anterospondylolisthesis L4-L5 with disc space changes at L1-L2. Negative allergy testing. 1/1 immune globulin testing significant for an IgG of 15/40 and positive ANA at 1:40 and 1:60. MRI of spine 12/93 shows degenerative changes of lumbar spine. No evidence of disc herniation or canal stenosis. 11/92 - Paranasal sinus films show no evidence of sinusitis. Mammo 3/94 WNL. Carotid ultrasound done 12/93 shows minimal disease of right and left carotid bifurcations. TCDs 12/93 suggest a stenosis of the left vertebral artery with an RVA WNL. Velocity suggests a mild stenosis. EKG 12/93 shows sinus brad with an LAE. No other significant changes. Nonspecific ST changes. 
+
+
+
+O:	HEENT - Unremarkable. Skin - No obvious sign of rash or infection where she states the animals are present. CV - BP is 170/88. RR at 60. No murmurs, gallops, rubs present. Lungs - Clear to P&A. B12 was 331. Attempted Pap smear. External genitalia unremarkable. Vaginal introitus is very small. Patient got very cold and clammy and nervous throughout the tried Pap smear; so Pap smear attempt was terminated at that time. Consent was obtained to conduct Pap smear. Lungs - Clear to P&A. 
+
+
+
+A/P:	(1)	Dizziness of unclear etiology. Neuro consult had been done when the patient was hospitalized, and meclizine has not been of any benefit. Will refer patient to Vascular to ascertain whether the TCD findings are related. 
+
+
+
+(2)	Report of syncope. Will obtain stress test.
+
+
+
+(3)	Chronic NSAID usage. Add ranitidine HCL 150 mg to 1 p.o. q.h.s. to regime. Patient will follow up with Dr. Helen Whitehead as  her new PCP.
+
+
+
+
+
+Frieda Nadeau, RN, ANP
+
+
+
+FN/warren/forbes
+
+
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2094-05-20" TYPE="DATE" comment="" />
+<NAME id="P1" start="28" end="39" text="ZELDA UPHAM" TYPE="PATIENT" comment="" />
+<LOCATION id="P2" start="41" end="44" text="SMC" TYPE="HOSPITAL" comment="" />
+<LOCATION id="P3" start="59" end="79" text="MOLLY STARK HOSPITAL" TYPE="HOSPITAL" comment="" />
+<DATE id="P4" start="110" end="122" text="May 20, 2094" TYPE="DATE" comment="" />
+<AGE id="P5" start="126" end="128" text="70" TYPE="AGE" comment="" />
+<LOCATION id="P6" start="161" end="164" text="MSH" TYPE="HOSPITAL" comment="" />
+<DATE id="P7" start="593" end="597" text="2062" TYPE="DATE" comment="" />
+<AGE id="P8" start="606" end="608" text="70" TYPE="AGE" comment="" />
+<NAME id="P9" start="650" end="654" text="Qazi" TYPE="PATIENT" comment="" />
+<NAME id="P10" start="729" end="734" text="Faust" TYPE="DOCTOR" comment="" />
+<NAME id="P11" start="824" end="831" text="Solomon" TYPE="DOCTOR" comment="" />
+<DATE id="P12" start="1993" end="1998" text="12/93" TYPE="DATE" comment="" />
+<DATE id="P13" start="2093" end="2098" text="11/92" TYPE="DATE" comment="" />
+<DATE id="P14" start="2160" end="2164" text="3/94" TYPE="DATE" comment="" />
+<DATE id="P15" start="2194" end="2199" text="12/93" TYPE="DATE" comment="" />
+<DATE id="P16" start="2267" end="2272" text="12/93" TYPE="DATE" comment="" />
+<DATE id="P17" start="2377" end="2382" text="12/93" TYPE="DATE" comment="" />
+<NAME id="P18" start="3358" end="3373" text="Helen Whitehead" TYPE="DOCTOR" comment="" />
+<NAME id="P19" start="3396" end="3409" text="Frieda Nadeau" TYPE="DOCTOR" comment="" />
+<NAME id="P20" start="3422" end="3424" text="FN" TYPE="DOCTOR" comment="" />
+<NAME id="P21" start="3425" end="3431" text="warren" TYPE="DOCTOR" comment="" />
+<NAME id="P22" start="3432" end="3438" text="forbes" TYPE="DOCTOR" comment="" />
+</TAGS>
+</deIdi2b2>

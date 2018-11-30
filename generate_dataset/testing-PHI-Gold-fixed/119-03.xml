@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2090-07-16
+
+
+
+
+NAME:    Curtis, Om 
+MRN:     7682941
+   
+He is feeling great.  He is all done with his radiation to the left axilla for metastatic
+squamous cell cancer.  He is following closely with the radiation oncologist and the
+medical oncologist.  He is seeing them both later this month.  He has had no
+problems with chest pains or shortness of breath.  All in all, things are going well.
+
+PHYSICAL EXAM:  On exam, no acute distress.  Lungs are clear.  Heart is regular
+rate and rhythm.  No murmurs, gallops or rubs.  He does have some skin
+discoloration around the left axilla but I feel no mass.  He has a well-healed incision. 
+There is no hair noted in or around the axilla.  Extremities with no edema.
+
+ASSESSMENT AND PLAN:  
+
+(1)  CAD/hypertension/diabetes mellitus.  This is stable.  Check glycosylated
+     hemoglobin. 
+
+(2)  Metastatic squamous cell cancer.  He is being followed closely by Oncology for
+     this.  Follow-up with me in the spring.
+
+William V. Geiger, M.D.
+
+WVG/xin/quilici
+
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2090-07-16" TYPE="DATE" comment="" />
+<NAME id="P1" start="40" end="50" text="Curtis, Om" TYPE="PATIENT" comment="" />
+<ID id="P2" start="61" end="68" text="7682941" TYPE="MEDICALRECORD" comment="" />
+<DATE id="P3" start="972" end="978" text="spring" TYPE="DATE" comment="" />
+<NAME id="P4" start="981" end="998" text="William V. Geiger" TYPE="DOCTOR" comment="" />
+<NAME id="P5" start="1006" end="1009" text="WVG" TYPE="DOCTOR" comment="" />
+<NAME id="P6" start="1010" end="1013" text="xin" TYPE="DOCTOR" comment="" />
+<NAME id="P7" start="1014" end="1021" text="quilici" TYPE="DOCTOR" comment="" />
+</TAGS>
+</deIdi2b2>

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2095-12-14
+
+EDVISIT^50294530^FOUST, FAY^12/14/95^FISHER, CARRIE
+The patient was seen in conjunction with Dr. Dickerson.  I confirm
+
+that I have interviewed and examined the patient, reviewed the
+
+resident's documentation on the patient's chart, discussed the
+
+evaluation, plan of care, and disposition with the patient.
+
+CHIEF COMPLAINT:  Chest tightness.
+
+HISTORY OF PRESENT ILLNESS:  Briefly, a 65-year-old female with
+
+hypertension and atypical chest pain who comes in with bilateral
+
+chest tightness since 11:00 a.m. and stated that she feels very
+
+lousy after taking her meds and daily has been getting chest
+
+tightness since her discharge recently in which she was admitted
+
+for weakness and hypertensive urgency.  The patient stated that
+
+she feels like a "dead mouse."  She admits to some headache,
+
+dizziness and continued chest discomfort despite medications. 
+
+She had a negative MIBI and neurological workup and has had
+
+significant adjustment for hypertensive medications.  Initial
+
+blood pressure is 239/99 upon arrival.
+
+PAST MEDICAL HISTORY:  Hypertension and reflux.
+
+SOCIAL HISTORY:  She lives with family.  No tobacco, drugs or
+
+alcohol.
+
+REVIEW OF SYSTEMS:  As documented per written chart.
+
+MEDICATIONS:  As per medication list.
+
+ALLERGIES:  Penicillin.
+
+PHYSICAL EXAMINATION:  Afebrile.  Vital signs stable except for
+
+high blood pressure.  Awake and alert female, in some obvious
+
+mild discomfort.  HEENT:  Atraumatic and normocephalic.  Neck: 
+
+Soft and supple.  Lungs:  Clear.  Abdomen is soft, nontender, and
+
+nondistended.  Skin:  Intact, warm, and dry.  Neurologic:  Alert,
+
+oriented, and moving extremities x4.
+
+EMERGENCY DEPARTMENT COURSE:  IV placed.  Labs sent.  EKG is
+
+done.  The patient concerned for hypertensive urgency given the
+
+chest pressure and dizziness.  We will give ____ 10 mg IV given
+
+the significantly elevated systolic despite compliance with her
+
+hypertensive medication regime to include lisinopril, Toprol-XL,
+
+hydrochlorothiazide, nifedipine, and apparently had a hard time
+
+with blood pressure control in hospital as well.  I spoke with
+
+PCP coverage.  Given the patient's symptoms and degree of change
+
+of medications, we would admit for further titration of
+
+hypertensive medications in addition, with cycle enzymes.  The
+
+patient understands and agrees with plan.
+
+PRIMARY DIAGNOSIS:  Hypertensive urgency.
+
+DISPOSITION:  Admit to ____.
+
+______________________________
+
+FISHER, CARRIE M.D.
+
+D: 12/15/95
+
+T: 12/15/95
+
+Dictated By: FISHER, CARRIE
+eScription document:5-4132381 BFFocus
+
+ ******** Not reviewed by Attending Physician ********
+
+
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2095-12-14" TYPE="DATE" comment="" />
+<ID id="P1" start="36" end="44" text="50294530" TYPE="MEDICALRECORD" comment="" />
+<NAME id="P2" start="45" end="55" text="FOUST, FAY" TYPE="PATIENT" comment="" />
+<DATE id="P3" start="56" end="64" text="12/14/95" TYPE="DATE" comment="" />
+<NAME id="P4" start="65" end="79" text="FISHER, CARRIE" TYPE="DOCTOR" comment="" />
+<NAME id="P5" start="125" end="134" text="Dickerson" TYPE="DOCTOR" comment="" />
+<AGE id="P6" start="413" end="415" text="65" TYPE="AGE" comment="" />
+<NAME id="P7" start="2444" end="2458" text="FISHER, CARRIE" TYPE="DOCTOR" comment="" />
+<DATE id="P8" start="2468" end="2476" text="12/15/95" TYPE="DATE" comment="" />
+<DATE id="P9" start="2481" end="2489" text="12/15/95" TYPE="DATE" comment="" />
+<NAME id="P10" start="2504" end="2518" text="FISHER, CARRIE" TYPE="DOCTOR" comment="" />
+<ID id="P11" start="2539" end="2548" text="5-4132381" TYPE="IDNUM" comment="" />
+</TAGS>
+</deIdi2b2>

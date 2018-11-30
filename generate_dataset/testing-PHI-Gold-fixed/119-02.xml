@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2089-08-24
+
+
+
+
+
+NAME:     Curtis, Om
+
+MRN:      7682941
+
+
+
+He is feeling quite fine today.  He has no specific problems to being to my
+
+attention.  He says that he is having no problems with chest pains whatsoever and
+
+that includes with exertion.  His breathing has been fine as well.  No shortness of
+
+breath.  Otherwise he denies any abdominal pains, joint pains, bowel or bladder
+
+difficulties.  The remainder of the review of systems is negative in detail.  
+
+
+
+PHYSICAL EXAM:  On exam, he looks well.  Skin is clear.  HEENT - PERRLA. 
+
+EOMI.  TMs and throat clear.  Neck supple.  No thyromegaly.  No
+
+lymphadenopathy.  Lungs are clear.  Heart is regular rate and rhythm.  No
+
+murmurs, gallops or rubs.  Abdomen is soft and nontender.  No masses.  No HSM. 
+
+Extremities with no edema.  Neurologically fully intact.
+
+
+
+ASSESSMENT AND PLAN:  
+
+
+
+(1)  Angina/hypertension/hyperlipidemia.  He is doing quite well and very stable. 
+
+     Since his cholesterol was in such great shape just a few months ago, no need
+
+     to recheck here today. 
+
+
+
+(2)  Bladder stone.  He had this dealt with by Dr. Gomes of Urology.
+
+
+
+(3)  Diabetes mellitus.  Very stable.  Check glycosylated hemoglobin.  He is up to
+
+     date on his eye exams.  Follow-up with me in three months.
+
+
+
+William V. Geiger, M.D.
+
+
+
+WVG/xin/quilici
+
+
+
+
+
+
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2089-08-24" TYPE="DATE" comment="" />
+<NAME id="P1" start="42" end="52" text="Curtis, Om" TYPE="PATIENT" comment="" />
+<ID id="P2" start="64" end="71" text="7682941" TYPE="MEDICALRECORD" comment="" />
+<NAME id="P3" start="1115" end="1120" text="Gomes" TYPE="DOCTOR" comment="" />
+<NAME id="P4" start="1287" end="1304" text="William V. Geiger" TYPE="DOCTOR" comment="" />
+<NAME id="P5" start="1314" end="1317" text="WVG" TYPE="DOCTOR" comment="" />
+<NAME id="P6" start="1318" end="1321" text="xin" TYPE="DOCTOR" comment="" />
+<NAME id="P7" start="1322" end="1329" text="quilici" TYPE="DOCTOR" comment="" />
+</TAGS>
+</deIdi2b2>

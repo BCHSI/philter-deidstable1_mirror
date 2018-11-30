@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2068-12-22
+
+                     Jellico EMERGENCY DEPT VISIT
+ 
+FOY,KEONTE H.   732-35-79-0                   VISIT DATE: 12/22/68
+The patient was seen by me and examined. 
+HISTORY OF PRESENTING COMPLAINT:  Briefly, the history is as 
+follows:  the patient is a 60-year-old black male with past medical 
+history significant for insulin dependent diabetes mellitus, 
+coronary artery disease, status post a myocardial infarction, 
+status post cerebrovascular accident who now presents for 
+evaluation of syncope.  The patient states that this PM he had an 
+episode where he experienced nausea, dizziness and weakness.  He 
+also states that he developed left sided substernal chest pressure 
+which was non-radiating.  He states that he took one sublingual 
+nitroglycerin with relief of his discomfort.  He states that after 
+about 10 minutes he had a brief syncopal episode lasting 20-30 
+seconds.  He states that it was witnessed by his wife and it was 
+non-observed seizure activity, incontinence, or post ictal 
+confusion.  He states that the episode occurred while he was 
+walking to the bathroom.  He does remember falling to the floor, 
+but denies any trauma.  He specifically denies any headache, neck 
+pain, chest pain, shortness of breath, abdominal pain, or focal 
+numbness or weakness.  The patient was found by paramedics awake, 
+alert, oriented x 3.  An Accu-Chek in the field revealed a blood 
+sugar of 30 and the patient was treated with 1 amp of D50.  He was 
+subsequently transferred to Jellico Community Hospital Emergency 
+Department for further evaluation and management. 
+REVIEW OF SYSTEMS:  Review of systems is as noted above. 
+PAST MEDICAL HISTORY: Past medical history is as noted above. 
+MEDICATIONS:  Current medications are significant for atenolol, 
+Axid, nitroglycerin, Coumadin and insulin. 
+ALLERGIES:  He has a known drug allergy to zocor. 
+SOCIAL HISTORY AND FAMILY HISTORY:  Social history is significant 
+for the patient stop smoking approximately one year ago.  He denies 
+alcohol use. 
+PHYSICAL EXAMINATION:  GENERAL EXAMINATION:  Well-developed, 
+well-nourished, well-appearing male in no acute distress.  VITAL 
+SIGNS:  Temperature 100.3, blood pressure 110/65, pulse 84, 
+respiratory rate 18 and oxygen saturation is 96% on room air. 
+HEAD, EYES, EARS, NOSE AND THROAT EXAMINATION: Normocephalic and 
+atraumatic.  Mucous membranes are moist without lesions.  NECK 
+EXAMINATION:  The neck is supple, non-tender with full range of 
+motion and no JVD.  LUNGS:  Lungs are clear to auscultation. 
+CARDIOVASCULAR EXAMINATION:  Heart has a regular rate and rhythm. 
+ABDOMINAL EXAMINATION:  Abdomen is soft, non-tender and 
+non-distended.  PELVIC EXAMINATION:  Pelvis is stable.  BACK 
+EXAMINATION:  Back has no costovertebral angle tenderness.  No 
+midline, thoracic, lumbar, and sacral spine tenderness. 
+EXTREMITIES:  Extremities are atraumatic, full range of motion with 
+no clubbing, cyanosis, or edema.  No calf tenderness and negative 
+Homan's signs.  NEUROLOGIC EXAMINATION:  Awake, alert and oriented 
+x 3.  Speech is clear, fluent and articulate.  Cranial nerves 
+II-XII intact.  Motor is 5/5.  Reflexes are 2+ with downgoing toes. 
+Cerebella, finger to nose intact.  Gait was not tested. 
+LABORATORY EVALUATION:  CBC, white blood cell count 15, hematocrit 
+44, and platelets 346. SMA 7 notable for a blood sugar of 264, 
+creatine phosphokinase 42, cardiac troponin I 0.0 and INR of 3.6. 
+ELECTROCARDIOGRAM:  Electrocardiogram revealed a normal sinus 
+rhythm at a rate of 86 with right bundle branch block and 
+nonspecific T wave changes. 
+CHEST X-RAY: Chest x-ray is pending. 
+THERAPY RENDERED/COURSE IN ED:  The patient will be admitted to the 
+Medical Service for further evaluation and management.  His primary 
+care physician, Dr. Hooper was notified and agreed with the 
+management and plan. 
+CONSULTATIONS (including PCP):  His primary care physician, Dr. 
+Hooper. 
+FINAL DIAGNOSIS: 
+1.  Syncope, rule out myocardial infarction. 
+2.  Hypoglycemia, resolved. 
+DISPOSITION (including condition upon discharge):  The patient was 
+admitted to the hospital in satisfactory condition. 
+___________________________________                    PD770/9096 
+KYLE TEAGUE, M.D.       KT24                        D:12/23/68 
+                                                       T:12/23/68 
+Dictated by:  KYLE TEAGUE, M.D.       KT24 
+ ******** Not reviewed by Attending Physician ********
+
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2068-12-22" TYPE="DATE" comment="" />
+<LOCATION id="P1" start="49" end="56" text="Jellico" TYPE="HOSPITAL" comment="" />
+<NAME id="P2" start="80" end="93" text="FOY,KEONTE H." TYPE="PATIENT" comment="" />
+<ID id="P3" start="96" end="107" text="732-35-79-0" TYPE="MEDICALRECORD" comment="" />
+<DATE id="P4" start="138" end="146" text="12/22/68" TYPE="DATE" comment="" />
+<AGE id="P5" start="278" end="280" text="60" TYPE="AGE" comment="" />
+<LOCATION id="P6" start="1517" end="1543" text="Jellico Community Hospital" TYPE="HOSPITAL" comment="" />
+<NAME id="P7" start="3792" end="3798" text="Hooper" TYPE="DOCTOR" comment="" />
+<NAME id="P8" start="3920" end="3926" text="Hooper" TYPE="DOCTOR" comment="" />
+<ID id="P9" start="4198" end="4208" text="PD770/9096" TYPE="IDNUM" comment="" />
+<NAME id="P10" start="4210" end="4221" text="KYLE TEAGUE" TYPE="DOCTOR" comment="" />
+<NAME id="P11" start="4234" end="4238" text="KT24" TYPE="USERNAME" comment="" />
+<DATE id="P12" start="4264" end="4272" text="12/23/68" TYPE="DATE" comment="" />
+<DATE id="P13" start="4331" end="4339" text="12/23/68" TYPE="DATE" comment="" />
+<NAME id="P14" start="4355" end="4366" text="KYLE TEAGUE" TYPE="DOCTOR" comment="" />
+<NAME id="P15" start="4379" end="4383" text="KT24" TYPE="USERNAME" comment="" />
+</TAGS>
+</deIdi2b2>

@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2135-02-23
+
+**The source of this note is the Perdue Emergency Dept. Information System. All updates should originate in EDIS.**
+
+Perdue Medical Center
+
+Emergency Department Record - Observation Unit
+
+
+
+EDIS Note Status:  Signed
+
+
+
+Patient: QUINN SR, GEORGE             MRN: 7924118        DOB:  6/12/2075     Sex: M
+
+Registration Date/Time: 2/23/2135 1:50:00 PM
+
+
+
+
+
+ED OBS Note
+
+
+
+
+
+Admission Note
+
+Chief Complaint
+
+CP, R/O MI
+
+HPI
+
+59 y.o. male followed by PMC Cardiologist Jan Ivory, is 3 months s/p stents, p/w c/c dull, aching chest pain which is NOT exertional.   He took NTG and this > no change.   He is certain were assocaited with post-meals. He is certai that  his sx are now differnt than those he recalls prior to his acute intervention/ stents.   Currently no SOB. Some relief with antacids.
+
+PFSHx/ROS
+
+CAD , stents.  Hx DVT. HTN , elev lipids. Former smoker, quit 11/34  .
+
+Meds
+
+ASA, Metoprolol, Lisinopril , Atorvastatin
+
+Allergy
+
+NKA
+
+
+
+ROS
+
+Constitutional
+
+See HPI.
+
+Chest/Respiratory
+
+See HPI.
+
+Cardiovascular
+
+See HPI.
+
+GI/Abdominal
+
+See HPI.
+
+
+
+ROS and PFSHx as noted above and in the ED record for this encounter.
+
+All other systems otherwise negative.
+
+
+
+PE
+
+Constitutional
+
+Patient is awake. Patient is alert. Patient is oriented x3.
+
+Neck
+
+Carotid bruits are absent.
+
+Chest/Respiratory
+
+Thorax is non-tender.  The lungs are clear to auscultation bilaterally.
+
+Cardiovascular
+
+Heart is regular rate and rhythm.
+
+GI/Abdomen
+
+Obese abdomen,
+
+Musculoskeletal
+
+Trace non-pitting edema.
+
+Skin
+
+Evidence of changes c/w chronic venous insufficiency.
+
+Neurologic
+
+Patient is alert and oriented x 3.
+
+Psychiatric
+
+Patient is non delusional.
+
+
+
+Consults
+
+Consults
+
+On site = Dr.Ivory, Cardiology
+
+
+
+Testing Results
+
+X-ray Interpretation
+
+No acute process .
+
+Medical Decision Making/Plan
+
+59 y.o. w/ known CAD, current hx suggest UGI in etiology . ETT is planned and pending . Will dispo  on an H2 or PPI if Stress Test WNL
+
+
+
+This note has been electronically signed by MARGIE  ECHOLS, NP 3/1/2135 8:00:12 AM
+
+
+
+
+
+
+
+Clinical staff documenting in the ED note include:
+
+
+
+Other Providers
+
+
+
+MARGIE  ECHOLS, NP
+
+Attending Note
+
+Attending MD Notes
+
+Pt has hx of CAD s/p stenting in Nov '34.  Presents with chest ache. EKG no acute change 2 sets of markers neg will be admitted to the EDOU for ETT.  for I have examined the patient and discussed with the Nurse Practitioner the patient's care and agree with the plan.
+
+
+
+This note has been electronically signed by Henry X. Shelton, MD 2/23/2135 3:35:26 PM
+
+
+
+
+
+
+
+Clinical staff documenting in the ED note include:
+
+
+
+Attending/Nurse Practitioners(s)
+
+
+
+Henry X. Shelton, MD
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2135-02-23" TYPE="DATE" comment="" />
+<LOCATION id="P1" start="61" end="67" text="Perdue" TYPE="HOSPITAL" comment="" />
+<LOCATION id="P2" start="145" end="166" text="Perdue Medical Center" TYPE="HOSPITAL" comment="" />
+<NAME id="P3" start="256" end="272" text="QUINN SR, GEORGE" TYPE="PATIENT" comment="" />
+<ID id="P4" start="290" end="297" text="7924118" TYPE="MEDICALRECORD" comment="" />
+<DATE id="P5" start="311" end="320" text="6/12/2075" TYPE="DATE" comment="" />
+<DATE id="P6" start="357" end="366" text="2/23/2135" TYPE="DATE" comment="" />
+<AGE id="P7" start="450" end="452" text="59" TYPE="AGE" comment="" />
+<LOCATION id="P8" start="475" end="478" text="PMC" TYPE="HOSPITAL" comment="" />
+<NAME id="P9" start="492" end="501" text="Jan Ivory" TYPE="DOCTOR" comment="" />
+<DATE id="P10" start="896" end="901" text="11/34" TYPE="DATE" comment="" />
+<NAME id="P11" start="1710" end="1715" text="Ivory" TYPE="DOCTOR" comment="" />
+<AGE id="P12" start="1820" end="1822" text="59" TYPE="AGE" comment="" />
+<NAME id="P13" start="2002" end="2016" text="MARGIE  ECHOLS" TYPE="DOCTOR" comment="" />
+<DATE id="P14" start="2021" end="2029" text="3/1/2135" TYPE="DATE" comment="" />
+<NAME id="P15" start="2121" end="2135" text="MARGIE  ECHOLS" TYPE="DOCTOR" comment="" />
+<DATE id="P16" start="2210" end="2217" text="Nov '34" TYPE="DATE" comment="" />
+<NAME id="P17" start="2492" end="2508" text="Henry X. Shelton" TYPE="DOCTOR" comment="" />
+<DATE id="P18" start="2513" end="2522" text="2/23/2135" TYPE="DATE" comment="" />
+<NAME id="P19" start="2631" end="2647" text="Henry X. Shelton" TYPE="DOCTOR" comment="" />
+</TAGS>
+</deIdi2b2>

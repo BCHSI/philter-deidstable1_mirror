@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2089-11-05
+
+EDOBS^43294739^FINNEY, INDIANA^11/04/89^YEAGER, HAROLD
+
+I saw this patient with Dr. Sawyer.  I confirm that I have
+
+interviewed and examined the patient, reviewed the resident's
+
+documentation on the patient's chart, and discussed the
+
+evaluation, plan of care, and disposition with the patient.
+
+CHIEF COMPLAINT:  Heart is racing.
+
+HISTORY OF PRESENT ILLNESS:  The patient is a 52-year-old female
+
+with history of diabetes mellitus type 2 and sarcoid, who
+
+presents with onset one hour prior to admission of left arm
+
+pressure and heart racing.  The patient denies shortness of
+
+breath.  She has no nausea, vomiting, and no fevers or chills. 
+
+She says that she has occasionally had these symptoms in the
+
+past, they have already stopped on their own.  Tonight, they
+
+lasted for approximately 30 minutes prior to calling EMS.  En
+
+route EMS took 12-lead ECG showing a rate of 150, suspected a
+
+flutter and was given 20 mg diltiazem by EMS with no response. 
+
+She describes feeling in her left arm as dull pain, it is 3/10,
+
+and it has not made better or worse by anything.
+
+PAST MEDICAL HISTORY:  Please see paper chart.
+
+SOCIAL HISTORY:  Please see paper chart.
+
+REVIEW OF SYSTEMS:  Please see paper chart.
+
+MEDICATIONS:  Please see paper chart.
+
+ALLERGIES:  Please see paper chart.
+
+PAST SURGICAL HISTORY:  None.
+
+FAMILY HISTORY:  Reviewed and noncontributory.
+
+PHYSICAL EXAMINATION:  A middle-aged African-American woman,
+
+awake, alert, and in mild distress.  Exam limited by obesity. 
+
+Exam is significant for neck; normal to inspection, supple,
+
+nontender, and unable to appreciate JVP.  Respiratory:  No
+
+distress.  Chest:  Nontender and normal breath sounds. 
+
+Cardiovascular:  Tachycardic at 115 and regular and 2/6 systolic
+
+ejection murmur, no gallop, and no friction rub.  Abdomen:  Soft,
+
+nontender, no organomegaly, and no masses, otherwise, as
+
+documented on the paper chart.
+
+IMAGING STUDIES:  ECG shows a flutter at 150 beats per minute in
+
+ECG #1.  ECG final shows a sinus rhythm at approximately 60 beats
+
+per minute with no signs of ischemia.
+
+IMPRESSION:  The patient is a 52-year-old female with a history
+
+of occasional brief palpitations now with one hour of continuous
+
+palpitations and ECG consistent with atrial flutter.  She was
+
+given 20 mg of diltiazem IV by EMS.  In the Emergency Department,
+
+she was given 20 mg without significant response, followed by 40
+
+mg ID and was achieved a good response.  As the patient required
+
+a significant amount of diltiazem to slow her rate and convert
+
+her and she is also feeling somewhat nervous, we will keep her in
+
+the Observation Unit overnight.  She should get an oral dose of
+
+diltiazem overnight.  She should get cardiac monitoring in the
+
+morning.
+
+PLAN:  To discuss with KEKELA Cardiology and obtain consultation as
+
+to possible discharge on beta-blockers versus calcium channel
+
+blockers.  If the patient does not have a new symptoms she would
+
+be stable for discharge in the morning.
+
+PRIMARY DIAGNOSIS:  Atrial flutter with rapid ventricular
+
+response.
+
+SECONDARY DIAGNOSIS:  Left arm pain.
+
+CRITICAL CARE TIME:  35 minutes.
+
+______________________________
+
+YEAGER, HAROLD M.D.
+
+D: 11/05/89
+
+T: 11/05/89
+
+Dictated By: YEAGER, HAROLD
+
+eScription document:0-6602107 BFFocus
+
+ ******** Not reviewed by Attending Physician ********
+
+
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2089-11-05" TYPE="DATE" comment="" />
+<ID id="P1" start="34" end="42" text="43294739" TYPE="MEDICALRECORD" comment="" />
+<NAME id="P2" start="43" end="58" text="FINNEY, INDIANA" TYPE="PATIENT" comment="" />
+<DATE id="P3" start="59" end="67" text="11/04/89" TYPE="DATE" comment="" />
+<NAME id="P4" start="68" end="82" text="YEAGER, HAROLD" TYPE="DOCTOR" comment="" />
+<NAME id="P5" start="112" end="118" text="Sawyer" TYPE="DOCTOR" comment="" />
+<AGE id="P6" start="407" end="409" text="52" TYPE="AGE" comment="" />
+<AGE id="P7" start="2122" end="2124" text="52" TYPE="AGE" comment="" />
+<LOCATION id="P8" start="2778" end="2784" text="KEKELA" TYPE="HOSPITAL" comment="" />
+<NAME id="P9" start="3168" end="3182" text="YEAGER, HAROLD" TYPE="DOCTOR" comment="" />
+<DATE id="P10" start="3192" end="3200" text="11/05/89" TYPE="DATE" comment="" />
+<DATE id="P11" start="3205" end="3213" text="11/05/89" TYPE="DATE" comment="" />
+<NAME id="P12" start="3228" end="3242" text="YEAGER, HAROLD" TYPE="DOCTOR" comment="" />
+<ID id="P13" start="3264" end="3273" text="0-6602107" TYPE="IDNUM" comment="" />
+</TAGS>
+</deIdi2b2>

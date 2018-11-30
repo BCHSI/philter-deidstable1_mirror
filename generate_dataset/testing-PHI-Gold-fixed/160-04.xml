@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2071-06-26
+
+
+Long Prairie Memorial Hospital
+94 Aspen Court                                        Uher, Olga
+Chilton, IN 26297                                      25816492
+(606) 846-1043                                           06/26/71
+
+
+HISTORY OF PRESENT ILLNESS:  The patient has a
+new apartment.  She is actually in the process of moving. 
+She recognizes that she is improving, and is very excited
+about the fact that, during the course of the week, she went
+out to Sel de la Terre, and also went through a movie with her
+friend.  
+
+Her sugars are still not well controlled.  She has been
+liberalizing her diet, which I thought was appropriate.  I
+did increase her morning insulin to 20 units of 30/70, and
+suggested that she change from five units of NPH at bedtime
+to 8 units of 30-70, taken with her supper, to try to give
+her a little better coverage for her evening meal.  I wrote
+a note to the nurse to actuate this change.  They actually
+called me later in the evening, on page, and I discussed
+this with them, at length, at that time, including the
+rationale for this change.
+
+She is not having any exertional or other chest pain.  No
+orthopnea, PND or peripheral edema.
+
+PHYSICAL EXAMINATION:  Blood pressure is 135/80.  Heart rate
+68 and regular.  Respirations 14.  Venous pressure 3.  Clear
+chest.  S4, no S3.  No retrosternal dullness or rub.  She
+has only a trace of ankle edema.
+
+IMPRESSION AND PLAN:  Her verbal skills have improved.  She
+got very nervous when I tried to test her cognitive skills,
+and was able to give me the days of the week forward, but
+not backwards.  I did not push her beyond that.  I did tell
+her that we would need to check her TSH in a couple weeks'
+time, to see if last increment had returned her to a
+euthyroid state.
+
+
+______________________________
+Sean Ugalde, M.D.
+
+
+eScription document:7-829452 STeScription
+
+DD: 06/27/71
+DT: 06/27/71
+DV: 06/26/71
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2071-06-26" TYPE="DATE" comment="" />
+<LOCATION id="P1" start="29" end="59" text="Long Prairie Memorial Hospital" TYPE="HOSPITAL" comment="" />
+<LOCATION id="P2" start="60" end="74" text="94 Aspen Court" TYPE="STREET" comment="" />
+<NAME id="P3" start="114" end="124" text="Uher, Olga" TYPE="PATIENT" comment="" />
+<LOCATION id="P4" start="125" end="132" text="Chilton" TYPE="CITY" comment="" />
+<LOCATION id="P5" start="134" end="136" text="IN" TYPE="STATE" comment="" />
+<LOCATION id="P6" start="137" end="142" text="26297" TYPE="ZIP" comment="" />
+<ID id="P7" start="180" end="188" text="25816492" TYPE="MEDICALRECORD" comment="" />
+<CONTACT id="P8" start="189" end="203" text="(606) 846-1043" TYPE="PHONE" comment="" />
+<DATE id="P9" start="246" end="254" text="06/26/71" TYPE="DATE" comment="" />
+<LOCATION id="P10" start="489" end="504" text="Sel de la Terre" TYPE="ORGANIZATION" comment="" />
+<NAME id="P11" start="1817" end="1828" text="Sean Ugalde" TYPE="DOCTOR" comment="" />
+<ID id="P12" start="1857" end="1865" text="7-829452" TYPE="IDNUM" comment="" />
+<DATE id="P13" start="1884" end="1892" text="06/27/71" TYPE="DATE" comment="" />
+<DATE id="P14" start="1897" end="1905" text="06/27/71" TYPE="DATE" comment="" />
+<DATE id="P15" start="1910" end="1918" text="06/26/71" TYPE="DATE" comment="" />
+</TAGS>
+</deIdi2b2>

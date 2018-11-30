@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2095-08-21
+
+                     Bailey EMERGENCY DEPT VISIT
+
+ 
+
+DARLING,BETTY   785-67-87-3
+
+Resident history reviewed, the patient seen, interviewed, and 
+
+examined by me.
+
+HISTORY OF PRESENTING COMPLAINT:  Briefly, the history is as 
+
+follows:  The patient is a 75-year-old white female with past 
+
+medical history significant for throat cancer, status post 
+
+radiation therapy; breast cancer, status post multiple 
+
+lumpectomies; non-insulin dependent diabetes mellitus, 
+
+hypothyroidism, hypertension, and peripheral vascular disease with 
+
+bilateral carotid stenosis - status post right carotid 
+
+endarterectomy, who was seen earlier today at Faith Hospital 
+
+after an episode of word finding difficulty associated with acute 
+
+vision loss in her left eye while riding as a passenger in a car.  
+
+The event was witnessed and reportedly there was severe word 
+
+finding difficulty.  The patient was transferred to the Bailey Memorial Hospital Emergency Department for further evaluation and 
+
+management.  On arrival, she states her symptoms have largely 
+
+resolved.  Evaluation at the outside facility included a head CT 
+
+which reportedly revealed no events of acute hemorrhage.  Prior to 
+
+transfer, she was treated with aspirin.  
+
+REVIEW OF SYSTEMS:  All systems reviewed are negative except per 
+
+HPI. 
+
+PAST MEDICAL HISTORY:  As noted above.
+
+MEDICATIONS:  Klonopin, Glyburide, Coumadin, meclozine, Timoptic 
+
+ophthalmic drops, Zestril, Celebrex, and Synthroid.
+
+ALLERGIES:  No known drug allergies. 
+
+SOCIAL HISTORY AND FAMILY HISTORY:  The patient denies tobacco, 
+
+alcohol, or any history of illicit drug use.  She presently lives 
+
+alone.  Family history is only notable for a sister with breast 
+
+cancer. 
+
+PHYSICAL EXAMINATION:  Well-developed, well-nourished, 
+
+well-appearing female who appears in no acute distress.  VITAL 
+
+SIGNS:  Temperature 96, blood pressure 167/84, pulse 92, 
+
+respiratory rate 18, O2 saturations 100% on room air.  HEENT:  
+
+Normocephalic, atraumatic.  Pupils equal, round, and reactive to 
+
+light.  Extraocular muscles intact.  Funduscopic exam reveals sharp 
+
+disks bilaterally.  NECK:  Supple.  LUNGS:  Clear to auscultation. 
+
+HEART:  Regular rate and rhythm with a 2/6 systolic murmur at the 
+
+left sternal border.  ABDOMEN:  Soft, nontender, nondistended.  
+
+NEURO:  Awake, alert, and oriented x 3.  Speech clear and fluent 
+
+and well articulated.  Motor 5/5 and symmetric throughout.  
+
+Reflexes 2+ with downgoing toes.  Cerebellar:  Finger-to-nose 
+
+intact.  Gait not tested.  
+
+LABORATORY EVALUATION:  SMA-7 notable for glucose of 124.  CBC:  
+
+White count 8.2, hematocrit 36.3, platelets 379.  Coagulation 
+
+profile notable for an INR of 2.0.  Urinalysis benign.  EKG:  
+
+Normal sinus rhythm at a rate of 70 with nonspecific T-wave 
+
+changes. 
+
+THERAPY RENDERED/COURSE IN ED:  She is currently awaiting 
+
+evaluation with an MRI and MR angiogram of the head and neck. 
+
+CONSULTATIONS (including PCP):  The patient was seen in 
+
+consultation by Neurology.  
+
+FINAL DIAGNOSIS:  Transient ischemic attack vs. cerebrovascular 
+
+accident.
+
+DISPOSITION (including condition upon discharge):  The patient will 
+
+be admitted to the Neurology Service for further evaluation and 
+
+management.  The patient is currently in stable condition.  
+
+___________________________________                    YA226/51903 
+
+OMAR IM, M.D.       OI23                        D:08/21/95 
+
+                                                       T:08/21/95 
+
+Dictated by:  OMAR IM, M.D.       OI23 
+
+ ******** Not reviewed by Attending Physician ********
+
+
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2095-08-21" TYPE="DATE" comment="" />
+<LOCATION id="P1" start="49" end="55" text="Bailey" TYPE="HOSPITAL" comment="" />
+<NAME id="P2" start="81" end="94" text="DARLING,BETTY" TYPE="PATIENT" comment="" />
+<ID id="P3" start="97" end="108" text="785-67-87-3" TYPE="MEDICALRECORD" comment="" />
+<AGE id="P4" start="281" end="283" text="75" TYPE="AGE" comment="" />
+<LOCATION id="P5" start="665" end="679" text="Faith Hospital" TYPE="HOSPITAL" comment="" />
+<LOCATION id="P6" start="938" end="962" text="Bailey Memorial Hospital" TYPE="HOSPITAL" comment="" />
+<ID id="P7" start="3357" end="3368" text="YA226/51903" TYPE="IDNUM" comment="" />
+<NAME id="P8" start="3371" end="3378" text="OMAR IM" TYPE="DOCTOR" comment="" />
+<NAME id="P9" start="3391" end="3395" text="OI23" TYPE="USERNAME" comment="" />
+<DATE id="P10" start="3421" end="3429" text="08/21/95" TYPE="DATE" comment="" />
+<DATE id="P11" start="3489" end="3497" text="08/21/95" TYPE="DATE" comment="" />
+<NAME id="P12" start="3514" end="3521" text="OMAR IM" TYPE="DOCTOR" comment="" />
+<NAME id="P13" start="3534" end="3538" text="OI23" TYPE="USERNAME" comment="" />
+</TAGS>
+</deIdi2b2>

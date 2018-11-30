@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2096-08-02
+
+Graydon Harold Jean, MD 
+Nevada Hospital
+Internal Medicine 01 Dan Chan
+Angels City, NH 31731
+
+
+Dear Gray:
+
+
+
+
+ 
+
+I had the pleasure of seeing your patient Mr. Henry Oswaldo in clinic today. As you know, he is a 78-year-old gentleman with diabetes who was hospitalized at 06/28/2096 in Quito with any acute coronary syndrome with anterior myocardial infarction.  I am seeing him on your request to evaluate him for possible coronary artery bypass surgery.  I have reviewed his records and I have summarized the findings.   
+
+
+
+The patient denies having had symptoms of angina until his recent visit to Quiti.  At that time in June he had several days of very sharp chest tightness and diaphoresis that were prolonged.  He then presented to the Merlin Clinic in Quuto. He was found to have an anterior myocardial infarction and underwent catheterization there that showed a critical stenosis of the LAD ( sequential lesions 95 and 99%), first OM(90%) and his right ( dominant vessel with an 80% proximal and then 90%  distal). An LV gram showed an EF of 55% with just mild mitral regurgitation.  An echo performed here at the Wyandot was consistent. 
+
+
+
+Since he has returned to America several weeks ago, he has only had one episode of his chest discomfort, which occurred when he was getting rushed to come to the clinic. Since then, he has had no further episodes. 
+
+
+ROS: Denies PND, orthopnea, symptoms of TIA, stroke, lightheaded, or syncope. He does get some pain in his right leg with exertion.
+
+
+PMH: Diabetes, hypertension, hypercholesterolemia,  stroke (numbness in his right hand and leg, but that had predominantly resolved).
+
+
+Meds: aspirin 81 mg a day, clopidogrel 75 mg a day, bisoprolol 5 mg once a day, ranitidine 300 mg a day, atorvastatin 40 mg a day, metformin 1000 mg b.i.d., and Imdur 20 mg in the morning and 10 in the evening. This is an Equadorian formulation.
+
+
+SHx:
+He does not drink, nor smoke.
+
+
+FHx:  Cancer of the prostate and a mother who died of cancer at 60. Brother who is diabetic and the other who had cancer of the prostate.
+
+
+
+On exam, he looks well. His heart rate is in the 64. His blood pressure was 115/70. His carotids were 2+ with normal upstrokes and no bruits. His jugular venous pressures were not elevated. His chest was clear to auscultation. His cardiac exam revealed a  2/6 holosystolic murmur at the apex. His abdomen was soft. Extremities were warm and well perfused with good femoral and distal pulses. Neurological exam is grossly normal without focal deficit.
+
+
+
+
+
+In summary, Mr. Oswaldo is a very nice Spanish speaking 78-year-old gentleman with diabetes and a significant 3-vessel disease. He is likely best suited for CABG and I spent a significant amount of time explaining why stenting his situation would be less satisfactory.  I will obtain a screening duplex ultrasound of his carotids to assess this risk prior to proceeding.
+
+
+
+With warm regards,  
+
+
+Sincerely yours,
+
+
+
+
+
+
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2096-08-02" TYPE="DATE" comment="" />
+<NAME id="P1" start="28" end="47" text="Graydon Harold Jean" TYPE="DOCTOR" comment="" />
+<LOCATION id="P2" start="53" end="68" text="Nevada Hospital" TYPE="HOSPITAL" comment="" />
+<LOCATION id="P4" start="87" end="98" text="01 Dan Chan" TYPE="STREET" comment="" />
+<LOCATION id="P5" start="99" end="110" text="Angels City" TYPE="CITY" comment="" />
+<LOCATION id="P6" start="112" end="114" text="NH" TYPE="STATE" comment="" />
+<LOCATION id="P7" start="115" end="120" text="31731" TYPE="ZIP" comment="" />
+<NAME id="P8" start="128" end="132" text="Gray" TYPE="DOCTOR" comment="" />
+<NAME id="P9" start="187" end="200" text="Henry Oswaldo" TYPE="PATIENT" comment="" />
+<AGE id="P10" start="239" end="241" text="78" TYPE="AGE" comment="" />
+<DATE id="P11" start="299" end="309" text="06/28/2096" TYPE="DATE" comment="" />
+<LOCATION id="P12" start="313" end="318" text="Quito" TYPE="CITY" comment="" />
+<LOCATION id="P13" start="629" end="634" text="Quiti" TYPE="CITY" comment="" />
+<DATE id="P14" start="653" end="657" text="June" TYPE="DATE" comment="" />
+<LOCATION id="P15" start="771" end="784" text="Merlin Clinic" TYPE="HOSPITAL" comment="" />
+<LOCATION id="P16" start="788" end="793" text="Quuto" TYPE="CITY" comment="" />
+<LOCATION id="P17" start="1152" end="1159" text="Wyandot" TYPE="HOSPITAL" comment="" />
+<LOCATION id="P18" start="1205" end="1212" text="America" TYPE="COUNTRY" comment="" />
+<LOCATION id="P19" start="1889" end="1899" text="Equadorian" TYPE="COUNTRY" comment="" />
+<AGE id="P20" start="2016" end="2018" text="60" TYPE="AGE" comment="" />
+<NAME id="P21" start="2565" end="2572" text="Oswaldo" TYPE="PATIENT" comment="" />
+<AGE id="P22" start="2605" end="2607" text="78" TYPE="AGE" comment="" />
+</TAGS>
+</deIdi2b2>

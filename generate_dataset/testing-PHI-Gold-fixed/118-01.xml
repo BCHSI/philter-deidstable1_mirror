@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2117-03-10
+
+ 
+SDU Admission
+
+PATIENT:    Usrey, Anthony
+MR:      6444877
+ADMIT DATE:  March 10, 2117  
+CODE STATUS:  Full
+ATTENDING:   Dr. Updyke (Ward)
+PCP:   Iacono, Cruz
+
+CC:   syncope, AS
+
+HPI:  
+54 y/o Columbian speaking male with HTN, HL who was in Columbia and had syncopal episode 2 days ago after climbing 4 flights of stairs. There are conflicting stories of his prodrome   some notes mention that his syncope was precipitated by chest pain, however he denies this and only reports some dyspnea and fatigue as he was climbing the stairs.  He believes he was unconscious for a few minutes. On waking up, he reported some nausea and vomiting.  He was taken to a hospital in Columbia where he had EKG changes and CK was 308 and troponin was 0.19.  Echo at the OSH in Columbia was showed AS with peak AV gradient 62, mean 38. Valve size was not commented upon. He was offered surgery however he elected to come back to America and now presents to the ER.  He has been asymptomatic since this episode and presently denies chest pain, dizziness, SOB, palpitations.  Denies any history of syncope in past. Denies history of seizures in past.
+
+ER: 97.6, 77, 161/84, 20, 97% on RA. Got ASA, lopressor 25.
+
+PMH:
+HTN
+HL
+L Achilles repair
+L Medial mensical repair
+
+MEDS:
+Lisinopril 20mg PO QD
+Lipitor 40mg PO QD
+
+In Columbia was started on the following but is not taking:
+Propranolol 10mg PO TID
+Diovan
+Asa 81mg PO QD
+Simvastatin
+Enoxaparin 70mg BID
+
+ALLERGIES: NKDA
+ 
+SOCIAL HISTORY:   
+No tobacco, Occ Etoh, Spanish speaking, originally from Columbia, Divorced lives alone in Johnson City. Works for Pilgrim's Pride.
+
+FAMILY HISTORY:   Brother-MI in 50s
+
+PHYSICAL EXAM
+VITALS:   98.2 59, 145/88, 16, 98%
+Gen: awake, alert, NAD
+HEENT: EOMI
+OP: OP Clear
+Neck: No JVD, murmur radiated to B carotids, No LAD,    parvus carotids   , no tardus
+CV: RRR nl s1 s2 harsh III/VI SEM heard throughout  precordium, no LV heave
+Pulm: CTA B
+Abd: + b.s, NT, ND, soft
+Ext: 1+ DP, no edema
+Neuro: grossly intact
+
+LABS:  
+   Chemistry :
+Sodium (Stat Lab)                137                       (135-145)      mmol/L
+Potassium (Stat Lab)             4.5                       (3.4-4.8)      mmol/L
+Chloride (Stat Lab)              106                       (100-108)      mmol/L
+CO2 (Stat Lab)                   24.8                      (23.0-31.9)    mmol/L
+BUN (Stat Lab)                   17                        (8-25)         mg/dl
+Creatinine (Stat Lab)            1.0                       (0.6-1.5)      mg/dl
+Glucose (Stat Lab)               101                       (70-110)       mg/dl
+
+   Hematology:  
+WBC                              7.7                       (4.5-11.0)     th/cmm
+HCT                              37.7             L        (41.0-53.0)    %
+HGB                              13.0             L        (13.5-17.5)    gm/dl
+RBC                              4.22             L        (4.50-5.90)    mil/cmm
+PLT                              185                       (150-350)      th/cumm
+MCV                              89                        (80-100)       fl
+MCH                              30.8                      (26.0-34.0)    pg/rbc
+MCHC                             34.5                      (31.0-37.0)    g/dl
+RDW                              13.6                      (11.5-14.5)    %
+PT                               12.4                      (10.3-13.2)    sec
+PT-INR                           1.1
+APTT                             26.6                      (22.1-34.0)    sec
+
+  Cardiac
+Creatine Kinase Isoenzymes       NEGATIVE                  (NEG)
+Troponin-I                       NEGATIVE                  (NEG)
+
+   Echo: 
+At OSH in Columbia:  LVH, nl fxn, AV calcified. Max gradient 62, mean 38mmHg. Mild Aortic regurg.
+
+   EKG: 
+Sinus brady at 55 bpm, nl axis, 1st degree AV block, STD/TWI in I, II, III, aVF, V5, V6. LVH pattern w/ J pt elevation in V1-V3.  
+
+ASSESSMENT & PLAN
+54 y/o Spanish speaking male with HTN, HL presents to PNC after syncopal episode 2 days ago and was found to have AS at OSH.  Mean gradient of 38mmHg indicates moderate disease.  Prognosis after syncopal episode due to AS is 3 years.
+
+AS:  Monitor for syncope, CHF, ischemia
+Repeat Echo to assess valve area, gradients
+Afterload reduction--start on ACE
+Cont statin, check lipid panel
+Avoid nitrates, diuretics
+His symptomatic AS warrants w/u for AVR
+Ischemia: EKG changes c/w LVH although doesn   t quite LVH meet criteria. Did have + enzymes at OSH, although denies hx of chest pain. Positive biomarkers ? due to coronary insufficiency in the setting of AS.
+Cont ASA, lipitor
+Cycle enzymes
+Will likely need coronary angiography before AVR
+Hyperlipidemia
+Lipitor
+Prophylaxis
+Nexium
+Enoxaparin
+Code
+Full
+
+__________________________________
+Jennifer Yuan, MD 67404
+
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2117-03-10" TYPE="DATE" comment="" />
+<NAME id="P1" start="57" end="71" text="Usrey, Anthony" TYPE="PATIENT" comment="" />
+<ID id="P2" start="81" end="88" text="6444877" TYPE="MEDICALRECORD" comment="" />
+<DATE id="P3" start="102" end="116" text="March 10, 2117" TYPE="DATE" comment="" />
+<NAME id="P4" start="155" end="161" text="Updyke" TYPE="DOCTOR" comment="" />
+<NAME id="P5" start="176" end="188" text="Iacono, Cruz" TYPE="DOCTOR" comment="" />
+<AGE id="P6" start="216" end="218" text="54" TYPE="AGE" comment="" />
+<LOCATION id="P7" start="223" end="232" text="Columbian" TYPE="COUNTRY" comment="" />
+<LOCATION id="P8" start="271" end="279" text="Columbia" TYPE="COUNTRY" comment="" />
+<LOCATION id="P9" start="698" end="706" text="Columbia" TYPE="COUNTRY" comment="" />
+<LOCATION id="P10" start="790" end="798" text="Columbia" TYPE="COUNTRY" comment="" />
+<LOCATION id="P11" start="941" end="948" text="America" TYPE="COUNTRY" comment="" />
+<LOCATION id="P12" start="1330" end="1338" text="Columbia" TYPE="COUNTRY" comment="" />
+<LOCATION id="P13" start="1559" end="1567" text="Columbia" TYPE="COUNTRY" comment="" />
+<LOCATION id="P14" start="1593" end="1605" text="Johnson City" TYPE="CITY" comment="" />
+<LOCATION id="P15" start="1617" end="1632" text="Pilgrim's Pride" TYPE="ORGANIZATION" comment="" />
+<AGE id="P16" start="1667" end="1670" text="50s" TYPE="AGE" comment="" />
+<LOCATION id="P17" start="3686" end="3694" text="Columbia" TYPE="COUNTRY" comment="" />
+<AGE id="P18" start="3934" end="3936" text="54" TYPE="AGE" comment="" />
+<LOCATION id="P19" start="3988" end="3991" text="PNC" TYPE="HOSPITAL" comment="" />
+<NAME id="P20" start="4773" end="4786" text="Jennifer Yuan" TYPE="DOCTOR" comment="" />
+<CONTACT id="P21" start="4791" end="4796" text="67404" TYPE="PHONE" comment="" />
+</TAGS>
+</deIdi2b2>

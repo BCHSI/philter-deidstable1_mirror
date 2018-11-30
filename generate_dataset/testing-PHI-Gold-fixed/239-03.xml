@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2069-04-16
+
+
+
+Patient Name: OGRADY,ULYSSES [ 0937884(IMC) ] Date of Visit: 04/16/2069
+
+
+
+
+
+
+Renal Staff
+
+
+Patient seen and examined on dialysis. Agree with details per Fellow Note. 62 year old man referred to ED after missing dialysis yesterday and noted to be mentally confused. On presentation he was hyperkalemic to 7.4. He has been evaluated in ED setting with negative head CT and LP. Family reports h/o poor compliance and self care deficit.
+PMH/PSH:ESRD, presumed from HTN/DM, TTS, LUE AVF; initiated dialysis in 2067; has left arm AVF; HD at Eureka Springs Hospital - Dr Allan Jester is attending NephrologistHyperlipidemia Hypertension Obesity Diabetes mellitus : type 2, with tripothyNoncompliance Basal cell carcinoma : carcinoma of skin left cheekLower extremity ulcer : DIABETIC FOOT ULCER. L FootAbscess : Rt shin 2062Back: 11/64. S/P I&amp;DMitral valve insufficiency : severe, with cardiomyopathy and EF 36%Colonic polyps : tubulovillious adenoma 11/65. Needs repeat scope 11/66
+
+Medications
+Insulin variable dosing
+Reportedly not taking other meds
+
+
+SOCIAL
+Lives in De Soto with Wife and Daughter
+
+
+ROS
+As detailed. He also has been c/o dizziness and weakness after dialysis, which was the main reason he refused to go for HD yesterday. No additional hx is available, no known sick contact per wife. When he was in ED, he was noted to have LGF 100.4, hypertensive and tachycardic. He is waiting for head CT and possible LP.
+ 
+EXAM
+T 100.4, P 110, BP 150/80, R 26, SO2 94%(4L)
+NAD, limited cooperation with exam, A+O x2
+CV: tachy/reg, no rubs
+CHEST: CTA ant
+ABD: soft, NT/ND/NABS
+EXT: 1+ edema
+Neuro: nonfocal-limited exam
+
+DATAEKG is not available for review, but no acute ischemic changes and no widened QRS/peaked T wave per ED.
+PCXR: poor penetration, but no acute process
+Head CT       IMPRESSION:
+
+1. No hemorrhage, mass lesion, or evidence of acute territorial
+infarction.
+
+2. Extensive nonspecific periventricular, deep, and subcortical
+white matter changes are likely sequela from chronic
+microangiopathic disease.
+
+3. Old lacunar infarctions in the left caudate head and right
+caudate-anterior corona radiata.
+Evaluation for acute ischemia is limited in the areas of extensive
+white matter disease. Brain MRI with diffusion-weighted imaging
+is more sensitive in assessing for acute ischemia and should be
+obtained as clinically indicated.
+UA-SED-RBC                       20-50                     (0-2)          /hpfUA-SED-WBC                       5-10                      (0-2)          /hpfUA-SED-Bacteria                  Many                      (NEG)          /hpf
+WBC                              20.7             H        (4.5-11.0)     th/cmmHCT                              33.6             L        (41.0-53.0)    %HGB                              11.3             L        (13.5-17.5)    gm/dlRBC                              3.77             L        (4.50-5.90)    mil/cmmPLT                              239                       (150-400)      th/cumm
+Plasma Sodium                    133              L        (135-145)      mmol/LPlasma Potassium                 7.4              H        (3.4-4.8)      mmol/L Plasma Chloride                  94               L        (100-108)      mmol/LPlasma Carbon Dioxide            18.1             L        (23.0-31.9)    mmol/LPlasma Anion GAP                 21               H        (3-15)         mmol/LCalcium                          9.6                       (8.5-10.5)     mg/dlPhosphorus                       7.3              H        (2.6-4.5)      mg/dlMagnesium                        2.2              H        (1.4-2.0)      meq/LPlasma Urea Nitrogen             68               H        (8-25)         mg/dlPlasma Creatinine                9.18             H        (0.60-1.50)    mg/dlAlbumin                          4.6                       (3.3-5.0)      g/dlDirect Bilirubin                 0.5              H        (0-0.4)        mg/dlTotal Bilirubin                  1.1              H        (0.0-1.0)      mg/dlA+P
+1. ESRD, with hyperkalemia
+2. AMS, found down s/p LP with results pending and extensive CNS white matter changes
+3. Medical noncompliance
+4. Leukocytosis with infected leg ulcer and ? cellulitis
+5. Pyuria
+ 
+- Dialysis 3 hrs 1K, 2.5Ca
+- UF 2L
+- AVF access
+- Hold Epogen today
+- F/U LP results
+- Blood Cultures on dialysis; wound culture, urine culture
+- Vancomycin 1g post dialysis; Levofloxacin 500mg qod
+- cycle cardiac enzymes
+- Review outpatient medication regimen
+
+
+
+
+____________________________________
+Kenneth DUSTIN Mcdaniel, M.D.
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2069-04-16" TYPE="DATE" comment="" />
+<NAME id="P1" start="44" end="58" text="OGRADY,ULYSSES" TYPE="PATIENT" comment="" />
+<ID id="P2" start="61" end="68" text="0937884" TYPE="MEDICALRECORD" comment="" />
+<LOCATION id="P3" start="69" end="72" text="IMC" TYPE="HOSPITAL" comment="" />
+<DATE id="P4" start="91" end="101" text="04/16/2069" TYPE="DATE" comment="" />
+<AGE id="P5" start="197" end="199" text="62" TYPE="AGE" comment="" />
+<DATE id="P6" start="536" end="540" text="2067" TYPE="DATE" comment="" />
+<LOCATION id="P7" start="566" end="589" text="Eureka Springs Hospital" TYPE="HOSPITAL" comment="" />
+<NAME id="P8" start="595" end="607" text="Allan Jester" TYPE="DOCTOR" comment="" />
+<DATE id="P9" start="844" end="848" text="2062" TYPE="DATE" comment="" />
+<DATE id="P10" start="854" end="859" text="11/64" TYPE="DATE" comment="" />
+<DATE id="P11" start="979" end="984" text="11/65" TYPE="DATE" comment="" />
+<DATE id="P12" start="1005" end="1010" text="11/66" TYPE="DATE" comment="" />
+<LOCATION id="P13" start="1099" end="1106" text="De Soto" TYPE="CITY" comment="" />
+<NAME id="P14" start="4558" end="4581" text="Kenneth DUSTIN Mcdaniel" TYPE="DOCTOR" comment="" />
+</TAGS>
+</deIdi2b2>

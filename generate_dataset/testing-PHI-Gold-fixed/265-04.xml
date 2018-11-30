@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2070-06-15
+
+
+
+
+JELLICO COMMUNITY HOSPITAL
+Jellico Internal Medicine Associates
+44 Brigham St
+Elwood, OH  49817
+
+Foy, Keonte
+73235790
+06/15/70
+
+HISTORY OF PRESENT ILLNESS:  This pleasant 62-year-old African American 
+gentleman returns to my clinic today for follow-up of diabetes, status 
+post MI, hyperlipidemia, and hypertension.
+
+1.  He brings in his blood sugar values with him today.  These are 
+improved since his last visit, and somewhat more believable ranging from 
+128 to 195, predominantly higher in the evenings more than the mornings 
+ranging from 150 to 190.  He is currently on a somewhat odd regime of 6 
+units of insulin regular twice a day, with a large 24 units of insulin 
+at night, and 14 units insulin in the morning.  He has not had any 
+further hypoglycemic attacks, is having no nocturnal awakening, and 
+seems to be sticking more to the diet.  He has however gained some 
+weight, which is a little disconcerting.  He does attend a podiatrist 
+and is doing well from that perspective.  He is to return to the 
+ophthalmologist for further diabetic screening later on in the year.  He 
+missed his last nutrition appointment and is not interested in further 
+follow-up with nutrition at this time.
+2.  Cardiovascular.  He is on atorvastatin 20 mg for hyperglyceridemia, 
+atenolol 25 mg, and aspirin.  Further question regarding his stroke back 
+in 2061 shows that this presents with confusional episode with 
+unsteadiness, resolving after approximately 36 hours, and he was found 
+to have a hole in his heart at that time.  He was eventually stopped off 
+Coumadin in 2063, but had a recurrent episode at that time and he was 
+put on Coumadin for life at that point.  He had an aborted myocardial 
+infarction in 2067.  He has had no chest pain in the interim, has good 
+exercise tolerance with walking, although, he can only run about 50 
+yards before getting very short of breath.  He has no orthopnea or PND.  
+He has no chest pain or use of sublingual nitro.
+3.  Health maintenance.  We discussed screening colonoscopy versus 
+flexible sigmoidoscopy and the relative benefit of each of those.  He 
+has agreed to proceed with colonoscopy, and I have instructed him stop 
+his Coumadin and aspirin five days before the test and to have an INR 
+checked on the day prior to the test.  This will be scheduled by our 
+secretary.  He will restart the Coumadin after the colonoscopy at his 
+standard dose and titrate up slowly.
+
+CURRENT MEDICATIONS:  Include aspirin, atenolol, insulin, Coumadin, and 
+Lipitor.
+
+
+
+
+
+
+
+
+Foy, Keonte
+73235790
+06/15/70
+Page 2
+
+PHYSICAL EXAMINATION:  His blood pressure is 148/82.  He is tachycardic 
+at 98 beats per minute.  Examination of his eyes shows persistent left-
+sided cataract.  Examination of the heart and lungs was normal.  The 
+abdominal examination is also normal.  His injection sites were clean 
+and without erythema.  There is no evidence of peripheral neuropathy and 
+his feet appeared well.
+
+We spent some time today talking about diabetes education again, 
+including appropriate foods, drinks, and what items to avoid.
+
+PLAN:
+1.  Supplied educational materials regarding diabetes management, 
+including calorie counting, weight loss, information about hypoglycemia 
+and hyperglycemia, and diabetic eye care.
+2.  I have increased insulin in the mornings from 14 to 16 units and 
+left the other doses as is.
+3.  I have increased the atenolol from 25 mg to 50 mg for hypertension 
+and cardioprotection with the tachycardia.
+4.  We will check cholesterol, hemoglobin A1c, CBC, and chem-7.
+5.  I have scheduled an elective outpatient colonoscopy as detailed 
+above for colorectal cancer screening.
+6.  Return to see in a week's time, understands.  He can discuss any 
+management issues regarding his insulin doses or others anytime.
+
+
+
+Yale Jordan, M.D.
+
+YJ:isenberg:74:585:40;00-10142.doc;DD:06/15/70;DT:06/16/70;DV:06/15/70
+
+
+
+========================== Preceptor's Note ==========================
+
+
+
+62 year old man with dm and vascular disease.  He is starting to improve his self-care of dm and last a1c was 8.2  Blood sugars mostly less than 250.  Increased am insulin and will increase atenolol from 25--->50 mg for a bp of 150/88.  
+
+
+
+______________________________                              
+
+
+
+Cochran, Patricia Hannah, M.D.
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2070-06-15" TYPE="DATE" comment="" />
+<LOCATION id="P1" start="31" end="57" text="JELLICO COMMUNITY HOSPITAL" TYPE="HOSPITAL" comment="" />
+<LOCATION id="P2" start="58" end="65" text="Jellico" TYPE="HOSPITAL" comment="" />
+<LOCATION id="P3" start="95" end="108" text="44 Brigham St" TYPE="STREET" comment="" />
+<LOCATION id="P4" start="109" end="115" text="Elwood" TYPE="CITY" comment="" />
+<LOCATION id="P5" start="117" end="119" text="OH" TYPE="STATE" comment="" />
+<LOCATION id="P6" start="121" end="126" text="49817" TYPE="ZIP" comment="" />
+<NAME id="P7" start="128" end="139" text="Foy, Keonte" TYPE="PATIENT" comment="" />
+<ID id="P8" start="140" end="148" text="73235790" TYPE="MEDICALRECORD" comment="" />
+<DATE id="P9" start="149" end="157" text="06/15/70" TYPE="DATE" comment="" />
+<AGE id="P10" start="202" end="204" text="62" TYPE="AGE" comment="" />
+<DATE id="P11" start="1385" end="1389" text="2061" TYPE="DATE" comment="" />
+<DATE id="P12" start="1604" end="1608" text="2063" TYPE="DATE" comment="" />
+<DATE id="P13" start="1748" end="1752" text="2067" TYPE="DATE" comment="" />
+<NAME id="P14" start="2549" end="2560" text="Foy, Keonte" TYPE="PATIENT" comment="" />
+<ID id="P15" start="2561" end="2569" text="73235790" TYPE="MEDICALRECORD" comment="" />
+<DATE id="P16" start="2570" end="2578" text="06/15/70" TYPE="DATE" comment="" />
+<NAME id="P17" start="3812" end="3823" text="Yale Jordan" TYPE="DOCTOR" comment="" />
+<NAME id="P18" start="3831" end="3833" text="YJ" TYPE="DOCTOR" comment="" />
+<NAME id="P19" start="3834" end="3842" text="isenberg" TYPE="DOCTOR" comment="" />
+<ID id="P20" start="3843" end="3852" text="74:585:40" TYPE="IDNUM" comment="" />
+<ID id="P21" start="3853" end="3861" text="00-10142" TYPE="IDNUM" comment="" />
+<DATE id="P22" start="3869" end="3877" text="06/15/70" TYPE="DATE" comment="" />
+<DATE id="P23" start="3881" end="3889" text="06/16/70" TYPE="DATE" comment="" />
+<DATE id="P24" start="3893" end="3901" text="06/15/70" TYPE="DATE" comment="" />
+<AGE id="P25" start="3979" end="3981" text="62" TYPE="AGE" comment="" />
+<NAME id="P26" start="4284" end="4308" text="Cochran, Patricia Hannah" TYPE="DOCTOR" comment="" />
+</TAGS>
+</deIdi2b2>

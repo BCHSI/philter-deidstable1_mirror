@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2132-10-01
+
+Personal Data and Overall Health	
+
+75 year old right handed man with pure motor hemiparesis synrdrome on right from L IC stroke in 6/32.
+
+
+
+History of Present Illness	
+
+Mr. Slater comes to the stroke clinic today for an initial visit and second opinion for left-sided weakness starting in 6/25/32. He was golfing at the time, and suddenly developed weakness with no sensory changes. The weakness involved the face, arm and leg on the left side only. He went to Gilmore Hospital, where they checked his blood pressure, and found it to be 220/140 (per his report). A CT scan was performed, and he was informed that it was normal. He became frustrated with the ER there and signed out AMA. He went to the HCH at Easton 2 days later, his BP was still elevated, and they started him on clonidine. They attempted to arrange for a renal angiogram to work up his hypertension, but he declined. No further stroke/TIA workup was performed.
+
+
+
+He comes to me for a second opinion regarding his workup. His weakness has greatly improved, but not back to normal. He has never had sensory changes, and no speech difficulties, anosognosia, neglect, or gait instability. He did have "flashing lights in both eyes" for fifteen minutes at the onset of the symptoms on the golf course, but none since then. He has never had transient monocular blindness, diplopia, or suddenly blurry vision.
+
+
+
+Past Medical History	
+
+Hypertension.
+
+He is being worked up for possible renal artery stenosis. 
+
+He has not had his cholesterol checked.
+
+
+
+Medications	    
+
+PROPRANOLOL (PROPRANOLOL HCL)	 40MG PO BID Start Date: 10/1/32
+
+HCTZ (HYDROCHLOROTHIAZIDE)	 12.5MG PO QD Start Date: 10/1/32
+
+CLONIDINE HCL	 0.2MG PO BID Start Date: 10/1/32
+
+ZESTRIL (LISINOPRIL)	 40MG PO QD Start Date: 10/1/32
+
+ASA (ACETYLSALICYLIC ACID)	 81MG PO QD Start Date: 10/1/32
+
+
+
+Allergies	  
+
+NKDA	      
+
+
+
+Social History	
+
+lives in Avenal. Retired journalist. Widowed.
+
+quit smoking in June, former 1 ppd x 60 years.
+
+EtOH: couple of drinks 1-2 times per week.
+
+
+
+Family History	
+
+HTN in mother, aunt. 
+
+Father died of cancer. 
+
+No stroke
+
+
+
+Review of Systems	
+
+denies chest pain, SOB, palpitations.
+
+
+
+
+
+Exam	
+
+HEENT: NC/AT, O/P clear. Neck supple, no bruits.
+
+Lungs: CTA bilaterally.    CV: RRR, no M/R/G. 
+
+Abd: soft, NT/ND, + BS.    EXT: no CCE
+
+Neuro: A, Ox3. Speech fluent, non-dysarthric. Naming, repetition intact. STM 3/3 at 5 min. Follows 3-step R/L commands. 
+
+CN: VFFTC, EOMI without nystagmus. PERRL     
+
+facial sensation, symmetry and strength intact. Hearing intact bilaterally. Palate moves symmetrically. SCM strength full bilaterally. Tongue midline. 
+
+Motor: nl bulk and tone. Power 5/5 throughout. No drift.
+
+Sensation: intact to LT, PP, temp, vib, PS throughout. 
+
+Coord: nl FNF, HKS bilaterally. Gait normal-based, good toe, heel and tandem walk. 
+
+DTR's: 2 throughout, toes downgoing.
+
+
+
+Plan	
+
+I have reviewed Mr. Slater's CT scan, and he has a lacunar infarct of the left posterior internal capsule, which explains his pure motor hemiparesis syndrome. I have counseled him that most likely the best treatment for this type of stroke is to control his hypertension, and to use antiplatelet agents. I have asked that he increase his dose of ASA to 325 mg per day.
+
+
+
+In addition, he needs a work up. I have arranged for him to have CNIS, 24 hour Holter monitoring, and TTE with bubble study. Additionally, we should check fasting lipids. 
+
+
+
+He wishes to have a PCP at FPC, and I have requested that he have the next available appointment with Dr. Harry Tolliver of the cardiology department, who could also be instrumental in adjusting his hypertension meds. 
+
+
+
+He will return to clinic in 2-3 months, and is to page me immediately with any new symptoms or concerns. 
+
+
+
+CC	
+
+Dr. Harry Tolliver, FPC cardiology unit.
+
+
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2132-10-01" TYPE="DATE" comment="" />
+<AGE id="P1" start="63" end="65" text="75" TYPE="AGE" comment="" />
+<DATE id="P2" start="159" end="163" text="6/32" TYPE="DATE" comment="" />
+<NAME id="P3" start="201" end="207" text="Slater" TYPE="PATIENT" comment="" />
+<DATE id="P4" start="317" end="324" text="6/25/32" TYPE="DATE" comment="" />
+<LOCATION id="P5" start="489" end="505" text="Gilmore Hospital" TYPE="HOSPITAL" comment="" />
+<LOCATION id="P6" start="730" end="733" text="HCH" TYPE="HOSPITAL" comment="" />
+<LOCATION id="P7" start="737" end="743" text="Easton" TYPE="CITY" comment="" />
+<DATE id="P8" start="1618" end="1625" text="10/1/32" TYPE="DATE" comment="" />
+<DATE id="P9" start="1680" end="1687" text="10/1/32" TYPE="DATE" comment="" />
+<DATE id="P10" start="1729" end="1736" text="10/1/32" TYPE="DATE" comment="" />
+<DATE id="P11" start="1783" end="1790" text="10/1/32" TYPE="DATE" comment="" />
+<DATE id="P12" start="1843" end="1850" text="10/1/32" TYPE="DATE" comment="" />
+<LOCATION id="P13" start="1909" end="1915" text="Avenal" TYPE="CITY" comment="" />
+<PROFESSION id="P14" start="1925" end="1935" text="journalist" TYPE="PROFESSION" comment="" />
+<DATE id="P15" start="1963" end="1967" text="June" TYPE="DATE" comment="" />
+<NAME id="P16" start="2916" end="2922" text="Slater" TYPE="PATIENT" comment="" />
+<LOCATION id="P17" start="3470" end="3473" text="FPC" TYPE="HOSPITAL" comment="" />
+<NAME id="P18" start="3549" end="3563" text="Harry Tolliver" TYPE="DOCTOR" comment="" />
+<NAME id="P19" start="3783" end="3797" text="Harry Tolliver" TYPE="DOCTOR" comment="" />
+<LOCATION id="P20" start="3799" end="3802" text="FPC" TYPE="HOSPITAL" comment="" />
+</TAGS>
+</deIdi2b2>

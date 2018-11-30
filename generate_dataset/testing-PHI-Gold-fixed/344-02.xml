@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2099-02-01
+
+                     KEKELA EMERGENCY DEPT VISIT
+
+ 
+
+LEON,MAURICE   436-34-21-1                 VISIT DATE: 02/01/99
+
+Resident history reviewed, patient seen and examined by me. 
+
+PRESENTING COMPLAINT:  Chest pain.
+
+HISTORY OF PRESENTING COMPLAINT:  This patient is a 45-year-old 
+
+black male who now presents for evaluation of chest pain.  The 
+
+patient states he has had intermittent left-sided chest pain for 
+
+the past several weeks.  He states he had a more prolonged episode 
+
+of substernal chest pressure today while driving.  He states the 
+
+pain radiated down his left arm and he did experience a mild amount 
+
+of associated shortness of breath and diaphoresis.  He denies any 
+
+nausea, vomiting, palpitations, light-headedness or syncope.  On 
+
+arrival he states the pain is approximately 7/10 in intensity.  He 
+
+denies any prior history of coronary artery disease, pulmonary 
+
+embolus or deep venous thrombosis.  His cardiac risk factors 
+
+include history of hypertension and hypercholesterolemia.  He also 
+
+denies any chest wall trauma or any recent upper respiratory 
+
+infection symptoms, cough, fever or chills.
+
+REVIEW OF SYSTEMS:  Negative except per HPI.
+
+PAST MEDICAL HISTORY:  Significant for hypertension, asthma and 
+
+hypercholesterolemia.
+
+MEDICATIONS:  Tenovate, albuterol MDI, Azmacort MDI, adalat.
+
+ALLERGIES:  Bupropron which causes pruritus.
+
+SOCIAL HISTORY AND FAMILY HISTORY:  He is adopted and does not know 
+
+his family history.  The patient is a former smoker who quit 
+
+approximately one year ago.  The patient is a former smoker with an 
+
+approximately 15-pack-year history.  He states he quit one year 
+
+ago.  He does admit to heavy drinking, approximately 3-4 drinks per 
+
+day.  He has no prior history of illicit drug use and currently 
+
+lives with his family.
+
+PHYSICAL EXAMINATION:  GENERAL:  This is a well-developed, 
+
+well-nourished, slightly anxious appearing male who appears in 
+
+otherwise no acute distress.  VITAL SIGNS:  Temperature is 96.2, 
+
+blood pressure 142/96, pulse 108, respiratory rate 20, oxygen 
+
+saturation 96% on room air.  HEENT:  Mucous membranes are moist 
+
+without lesions.  NECK:  Supple without jugular venous distention.  
+
+LUNGS:  Clear to auscultation.  HEART:  Tachycardic, regular rate 
+
+and rhythm without gallops, murmurs or rubs.  ABDOMEN:  Soft, 
+
+nontender, nondistended.  EXTREMITIES:  No clubbing, cyanosis or 
+
+edema.  No calf tenderness.  Negative Homan's sign.  NEURO:  Awake, 
+
+alert, oriented x 3.  Nonfocal.
+
+LABORATORY EVALUATION:  CBC, white count 6.2, hematocrit 45, 
+
+platelets 210.  SMA-7 notable for a bicarb of 19.  D-dimer is 
+
+pending.  CPK 134, cardiac troponin I 0.00, coagulation profile is 
+
+normal.  Electrocardiogram shows normal sinus rhythm at a rate of 
+
+93 with nonspecific T wave changes.  No significant change compared 
+
+with prior tracing dated May 01, 2099.  Chest x-ray reveals no 
+
+acute disease.
+
+THERAPY RENDERED/COURSE IN ED:  The patient was treated with 
+
+aspirin, nitroglycerin and morphine with relief of his pain and 
+
+remained hemodynamically stable.
+
+CONSULTATIONS (including PCP):  The patient's primary care 
+
+physician, Dr. Greene was notified and agrees with the management 
+
+plan.
+
+FINAL DIAGNOSIS:  Atypical chest pain.
+
+DISPOSITION (including condition upon discharge):  The patient was 
+
+admitted to emergency department observation under low risk for 
+
+cardiac ischemia protocol and is currently awaiting evaluation with 
+
+an exercise stress test as well as results of D-dimer to evaluate 
+
+for the remote possibility of pulmonary embolism.  The patient is 
+
+currently in stable condition. 
+
+___________________________________                    CL893/2080 
+
+MAX RHODES, M.D.       MR75                        D:02/01/99 
+
+                                                       T:02/01/99 
+
+Dictated by:  MAX RHODES, M.D.       MR75 
+
+ ******** Not reviewed by Attending Physician ********
+
+
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2099-02-01" TYPE="DATE" comment="" />
+<LOCATION id="P1" start="49" end="55" text="KEKELA" TYPE="HOSPITAL" comment="" />
+<NAME id="P2" start="81" end="93" text="LEON,MAURICE" TYPE="PATIENT" comment="" />
+<ID id="P3" start="96" end="107" text="436-34-21-1" TYPE="MEDICALRECORD" comment="" />
+<DATE id="P4" start="136" end="144" text="02/01/99" TYPE="DATE" comment="" />
+<AGE id="P5" start="296" end="298" text="45" TYPE="AGE" comment="" />
+<DATE id="P6" start="2883" end="2895" text="May 01, 2099" TYPE="DATE" comment="" />
+<NAME id="P7" start="3178" end="3184" text="Greene" TYPE="DOCTOR" comment="" />
+<ID id="P8" start="3707" end="3717" text="CL893/2080" TYPE="IDNUM" comment="" />
+<NAME id="P9" start="3720" end="3730" text="MAX RHODES" TYPE="DOCTOR" comment="" />
+<NAME id="P10" start="3743" end="3747" text="MR75" TYPE="USERNAME" comment="" />
+<DATE id="P11" start="3773" end="3781" text="02/01/99" TYPE="DATE" comment="" />
+<DATE id="P12" start="3841" end="3849" text="02/01/99" TYPE="DATE" comment="" />
+<NAME id="P13" start="3866" end="3876" text="MAX RHODES" TYPE="DOCTOR" comment="" />
+<NAME id="P14" start="3889" end="3893" text="MR75" TYPE="USERNAME" comment="" />
+</TAGS>
+</deIdi2b2>

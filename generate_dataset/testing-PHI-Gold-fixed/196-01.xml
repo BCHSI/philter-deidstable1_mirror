@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<deIdi2b2>
+<TEXT><![CDATA[
+
+
+Record date: 2088-01-06
+
+CC: f/up of HTN and DM management
+
+
+
+HPI: 59 yo female who presents back to clinic with her
+
+daughter reporting that she needs medical clearance for
+
+eye surgery and cardiac testing had been ordered at HDC
+
+but she was unable to go.  Denies any CP.  DOE at baseline.
+
+Brings in her machine log showing FS's in AM 101-238
+
+with most values in 100's.  FS's in PM 92-235.  Reports
+
+no symptoms of hyperglycemia except fatigue.  Ongoing
+
+numbness and tingling in her LE's.  11/25 A1C 9.1, TChol 232.
+
+Has been started on Lipitor 10 mg po qd and Vit D 50,000
+
+1 cap weekly by Dr. Yap at MS.  Glyburide
+
+increased to BID.  Reports injecting insulin daily as directed.
+
+No prior auth yet for her Cozaar which she is now out of.
+
+
+
+================ Problems ================
+
+Menopause at age 52          
+
+H/O R sided sciatica          
+
+H/O pneumonia 1/2082          
+
+S/P vocal cord cyst removal          
+
+S/P cholecystectomy          
+
+S/P C section x 2          
+
+Diabetes since '67          
+
+Severe nonproliferative diabetic retinopathy with severe macular edema          
+
+H/O pyelonephritis          
+
+
+
+================ Medications ================
+
+ATENOLOL 100 MG (100MG TABLET  take 1  ) PO  QD 
+
+COZAAR (LOSARTAN)   100MG TABLET  take 1  PO  QD 
+
+DARVOCET N 100 (PROPOXYPHENE NAP/ACETAMIN... 1 TAB   PO  BID PRN pain
+
+ECASA (ASPIRIN ENTERIC COATED)   81MG TABLET EC       take 1 Tablet(s) PO  QD 
+
+GLYBURIDE 5 MG (5MG TABLET  take 1  ) PO  BID 
+
+IBUPROFEN 600 MG (600MG TABLET  take 1  ) PO  BID PRN 
+
+LANTUS (INSULIN GLARGINE) 84 UNITS   SC  QAM 
+
+LASIX (FUROSEMIDE) 20 MG (20MG TABLET  take 1  ) PO  QD 
+
+LIPITOR (ATORVASTATIN) 10 MG (10MG TABLET  take 1  ) PO  QD 
+
+NORTRIPTYLINE (NORTRIPTYLINE HCL) 25 MG (25MG CAPSULE  take 1  ) PO  QHS 
+
+PAXIL (PAROXETINE)   20MG TABLET    take 1 Tablet(s) PO  QD 
+
+PROTONIX (PANTOPRAZOLE) 40 MG    PO  QD 
+
+TYLENOL #2 (ACETAMINOPHEN W/CODEINE 15MG) 1 TAB   PO  BID 
+
+
+
+================ Allergies ================
+
+NKA: 				
+
+
+
+PEx: VS: Wt 183, BP 145/84, P 64 regular, T 98.8
+
+WDWN older female in NAD.  HEENT: anicteric sclerae  
+
+Neck: supple, no JVD.  
+
+Lungs: CTA.  CV: RRR, s1s2, nl, II/VI SEM at LSB  
+
+Abd: soft, NT  
+
+Ext: no c/c/1+ bil edema.  No foot ulcerations.
+
+
+
+EKG: NSR at 63, 0.16/0.12/0.47, +RBBB
+
+
+
+A/P:
+
+1. HTN.  Mildly elevated in setting of not having Cozaar.
+
+Prior auth requested, will use Norvasc 2.5 mg po qd
+
+in addition to Lasix and Atenolol until Cozaar approved,
+
+samples given to patient.  Dietary and exercise rec's reviewed.
+
+2. DM, stable, Glyburide increased at MS.  Dietary rec's
+
+reviewed.
+
+3. r/o CAD, patient unable to run given chronic joint pains
+
+and diabetic neuropathy, will schedule for pharmacologic
+
+stress MIBI for presurgical cardiac clearance.  Will follow.
+
+f/up appt given.
+
+4. Diabetic neuropathy, worsening, f/up at Montefiore Springs.
+
+
+
+Singh, M.D.
+
+
+
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="16" end="26" text="2088-01-06" TYPE="DATE" comment="" />
+<AGE id="P1" start="70" end="72" text="59" TYPE="AGE" comment="" />
+<LOCATION id="P2" start="230" end="233" text="HDC" TYPE="HOSPITAL" comment="" />
+<DATE id="P3" start="498" end="503" text="11/25" TYPE="DATE" comment="" />
+<NAME id="P4" start="603" end="606" text="Yap" TYPE="DOCTOR" comment="" />
+<LOCATION id="P5" start="610" end="612" text="MS" TYPE="HOSPITAL" comment="" />
+<AGE id="P6" start="813" end="815" text="52" TYPE="AGE" comment="" />
+<DATE id="P7" start="873" end="879" text="1/2082" TYPE="DATE" comment="" />
+<DATE id="P8" start="1005" end="1008" text="'67" TYPE="DATE" comment="" />
+<LOCATION id="P9" start="2573" end="2575" text="MS" TYPE="HOSPITAL" comment="" />
+<LOCATION id="P10" start="2846" end="2864" text="Montefiore Springs" TYPE="HOSPITAL" comment="" />
+<NAME id="P11" start="2869" end="2874" text="Singh" TYPE="DOCTOR" comment="" />
+</TAGS>
+</deIdi2b2>
