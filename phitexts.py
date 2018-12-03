@@ -185,20 +185,7 @@ class Phitexts:
             return
 
         self.types = self.filterer.phi_type_dict
-    '''
-    def detect_xml_phi_types(self):
-        assert self.texts, "No texts defined"
-        assert self.coords, "No PHI coordinates defined"
-        #create a memory for the list of known PHI types
-        phi_type_list = []
-        phi_type_dict = {}
-        for phi_type in phi_type_list:
-            phi_type_dict[phi_type] = [CoordinateMap()]   
-        if self.types:
-            return
-        
-        self.types = self.phi_type_dict
-    '''
+    
 
     def normalize_phi(self):
         assert self.texts, "No texts defined"
