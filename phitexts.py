@@ -600,16 +600,18 @@ class Phitexts:
 
         # File size
         total_kb_processed = sum(self.summary_info['filesize'])/1000
-        average_file_size = numpy.mean(self.summary_info['filesize'])
-        stdev_file_size = numpy.std(self.summary_info['filesize'])
+        median_file_size = numpy.median(self.summary_info['filesize'])
+        q2pt5_size,q97pt5_size = numpy.percentile(self.summary_info['filesize'],[2.5,97.5])
 
         # Total tokens
-        average_tokens = numpy.mean(self.summary_info['total_tokens'])
-        stdev_tokens = numpy.std(self.summary_info['total_tokens'])
+        total_tokens = numpy.sum(self.summary_info['total_tokens'])
+        median_tokens = numpy.median(self.summary_info['total_tokens'])
+        q2pt5_tokens,q97pt5_tokens = numpy.percentile(self.summary_info['total_tokens'],[2.5,97.5])
 
         # Total PHI tokens
-        average_phi_tokens = numpy.mean(self.summary_info['phi_tokens'])
-        stdev_phi_tokens = numpy.std(self.summary_info['phi_tokens'])
+        total_phi_tokens = numpy.sum(self.summary_info['phi_tokens'])
+        median_phi_tokens = numpy.median(self.summary_info['phi_tokens'])
+        q2pt5_phi_tokens,q97pt5_phi_tokens = numpy.percentile(self.summary_info['phi_tokens'],[2.5,97.5])
 
         # Normalization
         successful_normalization = sum(self.summary_info['successful_normalized'])
@@ -622,10 +624,12 @@ class Phitexts:
         with open(batch_summary_file, "w") as f:
             f.write("TOTAL NOTES PROCESSED: "+str(number_of_notes)+'\n')
             f.write("TOTAL KB PROCESSED: "+str("%.2f"%total_kb_processed)+'\n')
+            f.write("TOTAL TOKENS PROCESSED: "+str(total_tokens)+'\n')
+            f.write("TOTAL PHI TOKENS PROCESSED: "+str(total_phi_tokens)+'\n')
             f.write('\n')
-            f.write("AVERAGE FILESIZE (BYTES): "+str("%.2f"%average_file_size)+" (+/-"+str("%.2f"%stdev_file_size)+')'+'\n')
-            f.write("AVERAGE TOTAL TOKENS PER NOTE: "+str("%.2f"%average_tokens)+" (+/-"+str("%.2f"%stdev_tokens)+')'+'\n')
-            f.write("AVERAGE PHI TOKENS PER NOTE: "+str("%.2f"%average_phi_tokens)+" (+/-"+str("%.2f"%stdev_phi_tokens)+')'+'\n')
+            f.write("MEDIAN FILESIZE (BYTES): "+str(median_file_size)+" (95% Percentile: "+str("%.2f"%q2pt5_size)+'-'+str("%.2f"%q97pt5_size)+')'+'\n')
+            f.write("MEDIAN TOKENS PER NOTE: "+str(median_tokens)+" (95% Percentile: "+str("%.2f"%q2pt5_tokens)+'-'+str("%.2f"%q97pt5_tokens)+')'+'\n')
+            f.write("MEDIAN PHI TOKENS PER NOTE: "+str(median_phi_tokens)+" (95% Percentile: "+str("%.2f"%q2pt5_phi_tokens)+'-'+str("%.2f"%q97pt5_phi_tokens)+')'+'\n')
             f.write('\n')
             f.write("DATES SUCCESSFULLY NORMALIZED: "+str(successful_normalization)+'\n')
             f.write("DATES FAILED TO NORMALIZE: "+str(failed_normalization)+'\n')
