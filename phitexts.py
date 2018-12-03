@@ -453,11 +453,6 @@ class Phitexts:
         else:
             os.makedirs(log_dir)
         
-        # # Overall logs
-        # if os.path.isdir(master_log_dir):
-        #     pass
-        # else:
-        #     os.makedirs(master_log_dir)
 
         # Write to file of raw dates, parsed dates and substituted dates
         num_failed = 0
@@ -649,56 +644,6 @@ class Phitexts:
         # Location PHI
         # ID PHI
         # Other PHI
-        
-        
-    def get_current_summary(self, output_dir):
-        
-        master_log_dir = '/'.join(output_dir.split('/')***REMOVED***:-2***REMOVED***)+'/log/'
-        #Path to csv summary of all files
-        csv_summary_filepath = master_log_dir+'deidpipe_summary_allfiles.csv'
-        #Path to txt summary of all files combined
-        text_summary_filepath = master_log_dir+'deidpipe_summary_combined.txt'
-
-
-        summary = pandas.read_csv(csv_summary_filepath)
-        # Batch size (all)
-        number_of_notes = len(summary)
-
-        # File size
-        total_kb_processed = sum(summary***REMOVED***'file_size'***REMOVED***)/1000
-        average_file_size = numpy.mean(summary***REMOVED***'file_size'***REMOVED***)
-        stdev_file_size = numpy.std(summary***REMOVED***'file_size'***REMOVED***)
-
-        # Total tokens
-        average_tokens = numpy.mean(summary***REMOVED***'total_tokens'***REMOVED***)
-        stdev_tokens = numpy.std(summary***REMOVED***'total_tokens'***REMOVED***)
-
-        # Total PHI tokens
-        average_phi_tokens = numpy.mean(summary***REMOVED***'phi_tokens'***REMOVED***)
-        stdev_phi_tokens = numpy.std(summary***REMOVED***'phi_tokens'***REMOVED***)
-
-        # Normalization
-        successful_normalization = sum(summary***REMOVED***'successfully_normalized'***REMOVED***)
-        failed_normalization = sum(summary***REMOVED***'failed_normalized'***REMOVED***)
-
-        # Surrogation
-        successful_surrogation = sum(summary***REMOVED***'successfully_surrogated'***REMOVED***)
-        failed_surrogation = sum(summary***REMOVED***'failed_surrogated'***REMOVED***)
-
-
-        with open(text_summary_filepath, "w") as f:
-            f.write("TOTAL NOTES PROCESSED: "+str(number_of_notes)+'\n')
-            f.write("TOTAL KB PROCESSED: "+str("%.2f"%total_kb_processed)+'\n')
-            f.write('\n')
-            f.write("AVERAGE FILESIZE (BYTES): "+str("%.2f"%average_file_size)+" (+/-"+str("%.2f"%stdev_file_size)+')'+'\n')
-            f.write("AVERAGE TOTAL TOKENS PER NOTE: "+str("%.2f"%average_tokens)+" (+/-"+str("%.2f"%stdev_tokens)+')'+'\n')
-            f.write("AVERAGE PHI TOKENS PER NOTE: "+str("%.2f"%average_phi_tokens)+" (+/-"+str("%.2f"%stdev_phi_tokens)+')'+'\n')
-            f.write('\n')
-            f.write("DATES SUCCESSFULLY NORMALIZED: "+str(successful_normalization)+'\n')
-            f.write("DATES FAILED TO NORMALIZE: "+str(failed_normalization)+'\n')
-            f.write("DATES SUCCESSFULLY SURROGATED: "+str(successful_surrogation)+'\n')
-            f.write("DATES FAILED TO SURROGATE: "+str(failed_surrogation)+'\n')
-
 
 
     def eval(self, anno_dir, in_dir, output_dir):
