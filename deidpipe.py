@@ -34,11 +34,14 @@ def get_args():
     ap.add_argument("-l", "--log", default=True,
                     help="When this is true, the pipeline prints and saves log in a subdirectory in each output directory",
                     type=lambda x:bool(distutils.util.strtobool(x)))
-    ap.add_argument("-e", "--eval", default= False,
+    ap.add_argument("-e", "--eval", default=False,
                     help="When this is true, the pipeline computes and saves statistics in a subdirectory in each output directory",
                     type=lambda x:bool(distutils.util.strtobool(x)))
-    ap.add_argument("-a", "--anno", default= './data/i2b2_xml',
+    ap.add_argument("-a", "--anno", default='./data/i2b2_xml',
                     help="When this is true, the pipeline computes and saves statistics in a subdirectory in each output directory",
+                    type=str)
+    ap.add_argument("-x", "--xml", default=False,
+                    help="When this is true, the pipeline looks for xml files in the input directory and extracts the PHI information from the xml tags without running philter",
                     type=str)
 
     return ap.parse_args()
@@ -55,16 +58,20 @@ def main():
     if __debug__: print("read args")
     
     # initializes texts container
-    phitexts = Phitexts(args.input)
+    phitexts = Phitexts(args.input,args.xml)
     
     # detect PHI coordinates
     if __debug__: print("detecting PHI coordinates")
-    phitexts.detect_phi(args.filters)
+    if args.xml:
+       phitexts.detect_xml_phi()       
+    else:
+       phitexts.detect_phi(args.filters)
 
     if phitexts.coords:
         # detects PHI types
         if __debug__: print("detecting PHI types")
-        phitexts.detect_phi_types()
+        if not args.xml:
+           phitexts.detect_phi_types()
         
         # normalizes PHI
         if __debug__: print("normalizing PHI")

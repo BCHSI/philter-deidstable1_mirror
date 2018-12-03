@@ -14,7 +14,7 @@ import string
 class Phitexts:
     """ container for texts, phi, attributes """
 
-    def __init__(self, inputdir):
+    def __init__(self, inputdir, xml=False):
         self.inputdir  = inputdir
         self.filenames = ***REMOVED******REMOVED***
         #notes text
@@ -29,20 +29,10 @@ class Phitexts:
         self.subs      = {}
         #de-id notes
         self.textsout  = {}
-        #All coordinate maps stored here
-        self.coordinate_maps = ***REMOVED******REMOVED***
-        #create a memory for exclude coordinate map
-        self.xml_map = CoordinateMap()
-        self.full_xml_map = {}
-        self._read_texts()
+        if not xml:
+           self._read_texts()
         self.subser = None
         self.filterer = None
-        #create a memory for the list of known PHI types
-        self.phi_type_list = ***REMOVED***'Date'***REMOVED***
-        self.phi_type_dict = {}
-        for phi_type in self.phi_type_list:
-            self.phi_type_dict***REMOVED***phi_type***REMOVED*** = ***REMOVED***CoordinateMap()***REMOVED***        
-        self._read_xml()
 
     def _read_texts(self):
         if not self.inputdir:
@@ -61,40 +51,43 @@ class Phitexts:
                 self.texts***REMOVED***filepath***REMOVED*** = fhandle.read()
                 fhandle.close()
 
-        #self.note_keys = ***REMOVED***os.path.splitext(os.path.basename(f).strip('0'))***REMOVED***0***REMOVED*** for f in self.filenames***REMOVED***
 
 
-    def _read_xml(self):
-        
-        if not self.inputdir:
-            raise Exception("Input directory undefined: ", self.inputdir) 
-        for filename in os.listdir(self.inputdir):
+    def __read_xml_into_coordinateMap(self,inputdir):
+        xml_map = CoordinateMap()
+        full_xml_map = {}
+        phi_type_list = ***REMOVED******REMOVED***
+        phi_type_dict = {}
+        xml_texts = {}
+        xml_filenames = ***REMOVED******REMOVED***
+
+        if not inputdir:
+            raise Exception("Input directory undefined: ", inputdir) 
+        for filename in os.listdir(inputdir):
             xml_coordinate_map = {}
             if not filename.endswith("xml"):
                continue
                
             philter_or_gold = 'PhilterUCSF' 
-            filepath = os.path.join(self.inputdir, filename)
+            filepath = os.path.join(inputdir, filename)
             #print(filepath)           
-            self.filenames.append(filepath)
+            xml_filenames.append(filepath)
             encoding = self._detect_encoding(filepath)
             fhandle = open(filepath, "r", encoding=encoding***REMOVED***'encoding'***REMOVED***)
             input_xml = fhandle.read() 
-            #print(input_xml)
             tree = ET.parse(filepath)
             root = tree.getroot()
             xmlstr = ET.tostring(root, encoding='utf8', method='xml')
-            self.texts***REMOVED***filepath***REMOVED*** = root.find('TEXT').text
+            xml_texts***REMOVED***filepath***REMOVED*** = root.find('TEXT').text
             xml_dict = xmltodict.parse(xmlstr)***REMOVED***philter_or_gold***REMOVED***
             check_tags = root.find('TAGS')
                        
  
-            self.xml_map.add_file(filepath)
+            xml_map.add_file(filepath)
             if check_tags is not None:
                tags_dict = xml_dict***REMOVED***"TAGS"***REMOVED***            
             else:
                tags_dict = None
-               print(filename)
             if tags_dict is not None:
                for key, value in tags_dict.items():
               # Note:  Value can be a list of like phi elements
@@ -106,13 +99,12 @@ class Phitexts:
                           philter_text = final_value***REMOVED***"@text"***REMOVED***
                           xml_phi_type = final_value***REMOVED***"@TYPE"***REMOVED***
                           xml_coordinate_map***REMOVED***int(text_start)***REMOVED*** = int(text_end)  
-                          if xml_phi_type not in self.phi_type_list:
-                              #print(xml_phi_type)
-                              self.phi_type_list.append(xml_phi_type)
-                          for phi_type in self.phi_type_list:
-                              if phi_type not in self.phi_type_dict:
-                                 self.phi_type_dict***REMOVED***phi_type***REMOVED*** = ***REMOVED***CoordinateMap()***REMOVED***
-                              self.phi_type_dict***REMOVED***phi_type***REMOVED******REMOVED***0***REMOVED***.add_file(filepath)
+                          if xml_phi_type not in phi_type_list:
+                              phi_type_list.append(xml_phi_type)
+                          for phi_type in phi_type_list:
+                              if phi_type not in phi_type_dict:
+                                 phi_type_dict***REMOVED***phi_type***REMOVED*** = ***REMOVED***CoordinateMap()***REMOVED***
+                              phi_type_dict***REMOVED***phi_type***REMOVED******REMOVED***0***REMOVED***.add_file(filepath)
                    else:
                        final_value = value
                        text = final_value***REMOVED***"@text"***REMOVED***
@@ -120,42 +112,16 @@ class Phitexts:
                        text_start = final_value***REMOVED***"@spans"***REMOVED***.split('~')***REMOVED***0***REMOVED***
                        text_end = final_value***REMOVED***"@spans"***REMOVED***.split('~')***REMOVED***1***REMOVED***
                        xml_coordinate_map***REMOVED***int(text_start)***REMOVED*** = int(text_end)
-                       if xml_phi_type not in self.phi_type_list:
-                             self.phi_type_list.append(xml_phi_type)
-                       for phi_type in self.phi_type_list:
-                           if phi_type not in self.phi_type_dict:
-                                 self.phi_type_dict***REMOVED***phi_type***REMOVED*** = ***REMOVED***CoordinateMap()***REMOVED***
-                           self.phi_type_dict***REMOVED***phi_type***REMOVED******REMOVED***0***REMOVED***.add_file(filepath)
+                       if xml_phi_type not in phi_type_list:
+                           phi_type_list.append(xml_phi_type)
+                       for phi_type in phi_type_list:
+                           if phi_type not in phi_type_dict:
+                                 phi_type_dict***REMOVED***phi_type***REMOVED*** = ***REMOVED***CoordinateMap()***REMOVED***
+                           phi_type_dict***REMOVED***phi_type***REMOVED******REMOVED***0***REMOVED***.add_file(filepath)
                       
-            self.full_xml_map***REMOVED***filepath***REMOVED*** = xml_coordinate_map
-            self.coords = self.full_xml_map
+            full_xml_map***REMOVED***filepath***REMOVED*** = xml_coordinate_map
             fhandle.close()
-        #print(self.full_xml_map) 
-        return self.full_xml_map
- 
-
-    '''
-    def _extract_coordinates(self,filename,tags_dict):
-        if tags_dict is not None:
-           for key, value in tags_dict.items():
-              # Note:  Value can be a list of like phi elements
-              #               or a dictionary of the metadata about a phi element
-               if isinstance(value, list):
-                  for final_value in value:
-                      text_start = final_value***REMOVED***"@spans"***REMOVED***.split('~')***REMOVED***0***REMOVED*** 
-                      text_end = final_value***REMOVED***"@spans"***REMOVED***.split('~')***REMOVED***1***REMOVED***
-                      philter_text = final_value***REMOVED***"@text"***REMOVED***
-                      phi_type = final_value***REMOVED***"@TYPE"***REMOVED***
-                      self.xml_map.add(filename,text_start,text_end)
-               else:
-                   final_value = value
-                   text = final_value***REMOVED***"@text"***REMOVED***
-                   phi_type = final_value***REMOVED***"@TYPE"***REMOVED***
-                   text_start = final_value***REMOVED***"@spans"***REMOVED***.split('~')***REMOVED***0***REMOVED***
-                   text_end = final_value***REMOVED***"@spans"***REMOVED***.split('~')***REMOVED***1***REMOVED***
-                   self.xml_map.add(filename,text_start,text_end)
-        return self.xml_map***REMOVED***filename***REMOVED***
-    ''' 
+        return full_xml_map, phi_type_dict, xml_texts, xml_filenames
        
     def _detect_encoding(self, fp):
         if not os.path.exists(fp):
@@ -189,8 +155,10 @@ class Phitexts:
                 #     cleaned.append(item)
         return cleaned
 
-
-
+    def detect_xml_phi(self):
+        if self.coords:
+           return
+        self.coords, self.types, self.texts, self.filenames = self.__read_xml_into_coordinateMap(self.inputdir) 
 
     def detect_phi(self, filters="./configs/philter_alpha.json"):
         assert self.texts, "No texts defined"
@@ -217,15 +185,20 @@ class Phitexts:
             return
 
         self.types = self.filterer.phi_type_dict
-
+    '''
     def detect_xml_phi_types(self):
         assert self.texts, "No texts defined"
         assert self.coords, "No PHI coordinates defined"
-
+        #create a memory for the list of known PHI types
+        phi_type_list = ***REMOVED******REMOVED***
+        phi_type_dict = {}
+        for phi_type in phi_type_list:
+            phi_type_dict***REMOVED***phi_type***REMOVED*** = ***REMOVED***CoordinateMap()***REMOVED***   
         if self.types:
             return
-        #print(self.phi_type_dict) 
+        
         self.types = self.phi_type_dict
+    '''
 
     def normalize_phi(self):
         assert self.texts, "No texts defined"
@@ -468,6 +441,9 @@ class Phitexts:
     
     def eval(self, anno_dir, in_dir, output_dir):
         # preserve these two puncs so that dates are complete
+
+        ### TO DO: eval should be using read_xml_into_coordinateMap for reading the xml
+        ######### Create a get function to get Lu's data structure given the coordinate maps
         s = string.punctuation.replace('/','')
         s = s.replace('-', '')
         translator = str.maketrans('', '', s)
