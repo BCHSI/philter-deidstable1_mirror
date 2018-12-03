@@ -91,7 +91,7 @@ def main():
     # print and save log 
     if args.log:
         phitexts.print_log(args.output)
-        phitexts.get_current_summary(args.output)
+        #phitexts.get_current_summary(args.output)
 
     if args.eval:
         phitexts.eval(args.anno, args.input, args.output)

@@ -425,7 +425,7 @@ class Phitexts:
     
     def print_log(self, output_dir):
         log_dir = os.path.join(output_dir, 'log/')
-        master_log_dir = '/'.join(output_dir.split('/')***REMOVED***:-2***REMOVED***)+'/log/'
+        #master_log_dir = '/'.join(output_dir.split('/')***REMOVED***:-2***REMOVED***)+'/log/'
 
         failed_dates_file = os.path.join(log_dir, 'failed_dates.json')
         date_table_file = os.path.join(log_dir, 'parsed_dates.json')
@@ -434,7 +434,7 @@ class Phitexts:
         batch_summary_file = os.path.join(log_dir, 'batch_summary.txt')
 
         #Path to csv summary of all files
-        csv_summary_filepath = master_log_dir+'deidpipe_summary_allfiles.csv'
+        csv_summary_filepath = log_dir+'detailed_batch_summary.csv'
 
 
 
@@ -453,11 +453,11 @@ class Phitexts:
         else:
             os.makedirs(log_dir)
         
-        # Overall logs
-        if os.path.isdir(master_log_dir):
-            pass
-        else:
-            os.makedirs(master_log_dir)
+        # # Overall logs
+        # if os.path.isdir(master_log_dir):
+        #     pass
+        # else:
+        #     os.makedirs(master_log_dir)
 
         # Write to file of raw dates, parsed dates and substituted dates
         num_failed = 0
@@ -621,6 +621,7 @@ class Phitexts:
         successful_surrogation = sum(self.summary_info***REMOVED***'successful_surrogated'***REMOVED***)
         failed_surrogation = sum(self.summary_info***REMOVED***'failed_surrogated'***REMOVED***)
 
+        # Create text summary for the current batch
         with open(batch_summary_file, "w") as f:
             f.write("TOTAL NOTES PROCESSED: "+str(number_of_notes)+'\n')
             f.write("TOTAL KB PROCESSED: "+str("%.2f"%total_kb_processed)+'\n')
@@ -636,6 +637,10 @@ class Phitexts:
             f.write("DATES SUCCESSFULLY SURROGATED: "+str(successful_surrogation)+'\n')
             f.write("DATES FAILED TO SURROGATE: "+str(failed_surrogation)+'\n')   
         
+        
+        # Create detailed csv for the current batch
+
+
         # Todo: add PHI type counts to summary
         # Name PHI
         # Date PHI
