@@ -453,11 +453,6 @@ class Phitexts:
         else:
             os.makedirs(log_dir)
         
-        # # Overall logs
-        # if os.path.isdir(master_log_dir):
-        #     pass
-        # else:
-        #     os.makedirs(master_log_dir)
 
         # Write to file of raw dates, parsed dates and substituted dates
         num_failed = 0
@@ -649,56 +644,6 @@ class Phitexts:
         # Location PHI
         # ID PHI
         # Other PHI
-        
-        
-    def get_current_summary(self, output_dir):
-        
-        master_log_dir = '/'.join(output_dir.split('/')[:-2])+'/log/'
-        #Path to csv summary of all files
-        csv_summary_filepath = master_log_dir+'deidpipe_summary_allfiles.csv'
-        #Path to txt summary of all files combined
-        text_summary_filepath = master_log_dir+'deidpipe_summary_combined.txt'
-
-
-        summary = pandas.read_csv(csv_summary_filepath)
-        # Batch size (all)
-        number_of_notes = len(summary)
-
-        # File size
-        total_kb_processed = sum(summary['file_size'])/1000
-        average_file_size = numpy.mean(summary['file_size'])
-        stdev_file_size = numpy.std(summary['file_size'])
-
-        # Total tokens
-        average_tokens = numpy.mean(summary['total_tokens'])
-        stdev_tokens = numpy.std(summary['total_tokens'])
-
-        # Total PHI tokens
-        average_phi_tokens = numpy.mean(summary['phi_tokens'])
-        stdev_phi_tokens = numpy.std(summary['phi_tokens'])
-
-        # Normalization
-        successful_normalization = sum(summary['successfully_normalized'])
-        failed_normalization = sum(summary['failed_normalized'])
-
-        # Surrogation
-        successful_surrogation = sum(summary['successfully_surrogated'])
-        failed_surrogation = sum(summary['failed_surrogated'])
-
-
-        with open(text_summary_filepath, "w") as f:
-            f.write("TOTAL NOTES PROCESSED: "+str(number_of_notes)+'\n')
-            f.write("TOTAL KB PROCESSED: "+str("%.2f"%total_kb_processed)+'\n')
-            f.write('\n')
-            f.write("AVERAGE FILESIZE (BYTES): "+str("%.2f"%average_file_size)+" (+/-"+str("%.2f"%stdev_file_size)+')'+'\n')
-            f.write("AVERAGE TOTAL TOKENS PER NOTE: "+str("%.2f"%average_tokens)+" (+/-"+str("%.2f"%stdev_tokens)+')'+'\n')
-            f.write("AVERAGE PHI TOKENS PER NOTE: "+str("%.2f"%average_phi_tokens)+" (+/-"+str("%.2f"%stdev_phi_tokens)+')'+'\n')
-            f.write('\n')
-            f.write("DATES SUCCESSFULLY NORMALIZED: "+str(successful_normalization)+'\n')
-            f.write("DATES FAILED TO NORMALIZE: "+str(failed_normalization)+'\n')
-            f.write("DATES SUCCESSFULLY SURROGATED: "+str(successful_surrogation)+'\n')
-            f.write("DATES FAILED TO SURROGATE: "+str(failed_surrogation)+'\n')
-
 
 
     def eval(self, anno_dir, in_dir, output_dir):
