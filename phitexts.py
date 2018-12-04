@@ -266,8 +266,6 @@ class Phitexts:
         # e.g. change phi type to OTHER?
         # or scramble?
         # or use self.norms="unknown <type>" with <type>=self.types
-
-        # Note: this is currently done in surrogator.shift_dates(), surrogator.parse_and_shift_date(), parse_date_ranges(), replace_other_surrogate()
         
     def substitute_phi(self, look_up_table_path = None):
         assert self.norms, "No normalized PHI defined"
@@ -411,16 +409,23 @@ class Phitexts:
         return "".join(contents)
 
 
-    def save(self, outputdir):
+    def save(self, outputdir, suf="_subs", ext="txt",
+             use_deid_note_key=False):
         assert self.textsout, "Cannot save text: output not ready"
-        if not outputdir:
-            raise Exception("Output directory undefined: ", outputdir)
+        assert outputdir, "Cannot save text: output directory undefined"
 
         for filename in self.filenames:
-            fbase, fext = os.path.splitext(filename)
-            fbase = fbase.split('/')[-1]
-            filepath = outputdir + fbase + "_subs.txt"
-            with open(filepath, "w", encoding='utf-8', errors='surrogateescape') as fhandle:
+            fbase = os.path.splitext(os.path.basename(filename))[0]
+            if use_deid_note_key:
+                note_key_ucsf = fbase.lstrip('0')
+                if not self.subser.has_deid_note_key(note_key_ucsf):
+                    if __debug__: print("WARNING: no deid note key found for "
+                                        + filename)
+                    continue
+                fbase = self.subser.get_deid_note_key(note_key_ucsf)
+            filepath = os.path.join(outputdir, fbase + suf + "." + ext)
+            with open(filepath, "w", encoding='utf-8',
+                      errors='surrogateescape') as fhandle:
                 fhandle.write(self.textsout[filename])
     
     def print_log(self, output_dir):
