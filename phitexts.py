@@ -273,6 +273,7 @@ class Phitexts:
                     if not self.subser.has_shift_amount(note_key_ucsf):
                         if __debug__: print("WARNING: no date shift found for: " + filename)
                         continue
+                    
                     normalized_token = self.norms***REMOVED***phi_type***REMOVED******REMOVED***filename, start***REMOVED******REMOVED***0***REMOVED***
                     end = self.norms***REMOVED***phi_type***REMOVED******REMOVED***filename, start***REMOVED******REMOVED***1***REMOVED***
 
@@ -280,13 +281,21 @@ class Phitexts:
                     if normalized_token is None:
                         # self.eval_table***REMOVED***filename***REMOVED******REMOVED***start***REMOVED***.update({'sub':None})
                         continue
+                    
+                    try:
+                        shifted_date = self.subser.shift_date_pid(normalized_token,
+                                                                  note_key_ucsf)
+                    except NameError as err:
+                        print("Name Error: unknown note key "
+                              + str(note_key_ucsf) + " for note " + filename
+                              + ": {0}".format(err))
+                        continue
 
-                    shifted_date = self.subser.shift_date_pid(normalized_token,
-                                                              note_key_ucsf)
                     if shifted_date is None:
                         if __debug__: print("WARNING: cannot shift date in: "
                                             + filename)
                         continue
+                    
                     substitute_token = self.subser.date_to_string(shifted_date)
                     # self.eval_table***REMOVED***filename***REMOVED******REMOVED***start***REMOVED***.update({'sub':substitute_token})
                     self.subs***REMOVED***(filename, start)***REMOVED*** = (substitute_token, end)
