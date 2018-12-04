@@ -31,6 +31,9 @@ def get_args():
                           + "note key, the default is "
                           + "./data/i2b2_meta/note_info_map.tsv",
                     type=str)
+    ap.add_argument("-d", "--deid_filename", default=True,
+                    help="When this is true, the pipeline saves the de-identified output using de-identified note ids for the filenames",
+                    type=lambda x:bool(distutils.util.strtobool(x)))
     ap.add_argument("-l", "--log", default=True,
                     help="When this is true, the pipeline prints and saves log in a subdirectory in each output directory",
                     type=lambda x:bool(distutils.util.strtobool(x)))
@@ -80,7 +83,8 @@ def main():
 
     # saves output
     if __debug__: print("saving de-identified texts")
-    phitexts.save(args.output)
+    phitexts.save(args.output, use_deid_note_key=args.deid_filename,
+                  suf="", ext="txt")
 
     # print and save log 
     if args.log:
