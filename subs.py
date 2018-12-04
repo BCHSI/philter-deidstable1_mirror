@@ -85,11 +85,11 @@ class Subs:
         except pd.errors.EmptyDataError as err:
             print("Pandas Empty Data Error: " + look_up_table_path
                   + " is empty {0}".format(err))
-            return {}
+            return {}, {}
         except ValueError as err:
             print("Value Error: " + look_up_table_path
                   + " is invalid {0}".format(err))
-            return {}
+            return {}, {}
         
         offset_table = look_up_table[~look_up_table["date_offset"].isnull()]
         deid_table = look_up_table[~look_up_table["deid_note_key"].isnull()]
