@@ -34,7 +34,8 @@ features that datetime2 provides that are:
 """
 class datetime2(datetime.datetime):
     def __new__(cls, year, month, day, date_string = None,
-                missing_year = None,missing_month = None, missing_day = None, missing_century = None):
+                missing_year = None, missing_month = None,
+                missing_day = None, missing_century = None):
         self = datetime.datetime.__new__(cls,year,month,day)
         self.missing_year = missing_year
         self.missing_month = missing_month
@@ -87,9 +88,10 @@ class datetime2(datetime.datetime):
         except ValueError as err:
             raise ValueError("cannot parse date \"" + date_string
                              + "\" {0}".format(err))
-        if parsed_date_2 is None:
-            print("WARNING: experimental date encountered \""
-                  + date_string + "\"")
+        if parsed_date_2 is None: # handles dates like "02-29-00"
+            if parsed_date_1 != datetime.datetime(2000, 2, 29):
+                print("WARNING: unknown date encountered \""
+                      + date_string + "\"")
             missing_century = True
             parsed_date_2 = dateparser.parse(date_string,
                                              settings={'RELATIVE_BASE':DATE_2,
