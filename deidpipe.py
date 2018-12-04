@@ -31,9 +31,11 @@ def get_args():
                           + "note key, the default is "
                           + "./data/i2b2_meta/note_info_map.tsv",
                     type=str)
+    ap.add_argument("-d", "--deid_filename", default=True,
+                    help="When this is true, the pipeline saves the de-identified output using de-identified note ids for the filenames",
+                    type=lambda x:bool(distutils.util.strtobool(x)))
     ap.add_argument("-l", "--log", default=True,
-                    help="When this is true, the pipeline prints and saves log in a subdirectory in each output directory."
-                          + "Summary logs for all processed files will also be saved in the parent directory of all outputs",
+                    help="When this is true, the pipeline prints and saves log in a subdirectory in each output directory",
                     type=lambda x:bool(distutils.util.strtobool(x)))
     ap.add_argument("-e", "--eval", default= False,
                     help="When this is true, the pipeline computes and saves statistics in a subdirectory in each output directory",
@@ -43,7 +45,6 @@ def get_args():
                     type=str)
 
     return ap.parse_args()
-
 
 
 def main():
@@ -79,19 +80,16 @@ def main():
     # transforms texts
     if __debug__: print("transforming texts")
     phitexts.transform()
-
-    # no subs text transformation
-    if __debug__: print("transforming texts without subs")
     phitexts.simple_transform()
 
     # saves output
     if __debug__: print("saving de-identified texts")
-    phitexts.save(args.output)
+    phitexts.save(args.output, use_deid_note_key=args.deid_filename,
+                  suf="", ext="txt")
 
     # print and save log 
     if args.log:
         phitexts.print_log(args.output)
-
     if args.eval:
         phitexts.eval(args.anno, args.input, args.output)
 
