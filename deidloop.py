@@ -62,7 +62,7 @@ def runDeidChunck(unit, q):
 
         # Print time elapsed for batch
         t = time.time() - t0
-        print(dstFolder + ": " + str(t) + " seconds")
+        print(str(unit) + " " + dstFolder + ": " + str(t) + " seconds")
 
         q.task_done()
 

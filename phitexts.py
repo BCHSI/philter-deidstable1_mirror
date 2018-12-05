@@ -17,7 +17,7 @@ import numpy
 class Phitexts:
     """ container for texts, phi, attributes """
 
-    def __init__(self, inputdir):
+    def __init__(self, inputdir, xml=False):
         self.inputdir  = inputdir
         self.filenames = ***REMOVED******REMOVED***
         #notes text
@@ -32,28 +32,10 @@ class Phitexts:
         self.subs      = {}
         #de-id notes
         self.textsout  = {}
-        #no subs de-id notes
-        self.textsout_nosubs  = {}
-        #total_phi_counts
-        self.total_phi_counts  = {}
-        #parse info
-        self.parse_info = {}
-        #parse info
-        self.summary_info = {'filesize':***REMOVED******REMOVED***,'total_tokens':***REMOVED******REMOVED***,'phi_tokens':***REMOVED******REMOVED***,'successful_normalized':***REMOVED******REMOVED***,'failed_normalized':***REMOVED******REMOVED***,'successful_surrogated':***REMOVED******REMOVED***,'failed_surrogated':***REMOVED******REMOVED***}
-        #All coordinate maps stored here
-        self.coordinate_maps = ***REMOVED******REMOVED***
-        #create a memory for exclude coordinate map
-        self.xml_map = CoordinateMap()
-        self.full_xml_map = {}
-        self._read_texts()
+        if not xml:
+           self._read_texts()
         self.subser = None
         self.filterer = None
-        #create a memory for the list of known PHI types
-        self.phi_type_list = ***REMOVED***'DATE','ID','NAME','CONTACT','AGE>=90','NAME','OTHER','LOCATION'***REMOVED***
-        self.phi_type_dict = {}
-        for phi_type in self.phi_type_list:
-            self.phi_type_dict***REMOVED***phi_type***REMOVED*** = ***REMOVED***CoordinateMap()***REMOVED***        
-        self._read_xml()
 
     def _read_texts(self):
         if not self.inputdir:
@@ -72,40 +54,43 @@ class Phitexts:
                 self.texts***REMOVED***filepath***REMOVED*** = fhandle.read()
                 fhandle.close()
 
-        #self.note_keys = ***REMOVED***os.path.splitext(os.path.basename(f).strip('0'))***REMOVED***0***REMOVED*** for f in self.filenames***REMOVED***
 
 
-    def _read_xml(self):
-        
-        if not self.inputdir:
-            raise Exception("Input directory undefined: ", self.inputdir) 
-        for filename in os.listdir(self.inputdir):
+    def __read_xml_into_coordinateMap(self,inputdir):
+        xml_map = CoordinateMap()
+        full_xml_map = {}
+        phi_type_list = ***REMOVED******REMOVED***
+        phi_type_dict = {}
+        xml_texts = {}
+        xml_filenames = ***REMOVED******REMOVED***
+
+        if not inputdir:
+            raise Exception("Input directory undefined: ", inputdir) 
+        for filename in os.listdir(inputdir):
             xml_coordinate_map = {}
             if not filename.endswith("xml"):
                continue
                
             philter_or_gold = 'PhilterUCSF' 
-            filepath = os.path.join(self.inputdir, filename)
+            filepath = os.path.join(inputdir, filename)
             #print(filepath)           
-            self.filenames.append(filepath)
+            xml_filenames.append(filepath)
             encoding = self._detect_encoding(filepath)
             fhandle = open(filepath, "r", encoding=encoding***REMOVED***'encoding'***REMOVED***)
             input_xml = fhandle.read() 
-            #print(input_xml)
             tree = ET.parse(filepath)
             root = tree.getroot()
             xmlstr = ET.tostring(root, encoding='utf8', method='xml')
-            self.texts***REMOVED***filepath***REMOVED*** = root.find('TEXT').text
+            xml_texts***REMOVED***filepath***REMOVED*** = root.find('TEXT').text
             xml_dict = xmltodict.parse(xmlstr)***REMOVED***philter_or_gold***REMOVED***
             check_tags = root.find('TAGS')
                        
  
-            self.xml_map.add_file(filepath)
+            xml_map.add_file(filepath)
             if check_tags is not None:
                tags_dict = xml_dict***REMOVED***"TAGS"***REMOVED***            
             else:
                tags_dict = None
-               print(filename)
             if tags_dict is not None:
                for key, value in tags_dict.items():
               # Note:  Value can be a list of like phi elements
@@ -117,13 +102,12 @@ class Phitexts:
                           philter_text = final_value***REMOVED***"@text"***REMOVED***
                           xml_phi_type = final_value***REMOVED***"@TYPE"***REMOVED***
                           xml_coordinate_map***REMOVED***int(text_start)***REMOVED*** = int(text_end)  
-                          if xml_phi_type not in self.phi_type_list:
-                              #print(xml_phi_type)
-                              self.phi_type_list.append(xml_phi_type)
-                          for phi_type in self.phi_type_list:
-                              if phi_type not in self.phi_type_dict:
-                                 self.phi_type_dict***REMOVED***phi_type***REMOVED*** = ***REMOVED***CoordinateMap()***REMOVED***
-                              self.phi_type_dict***REMOVED***phi_type***REMOVED******REMOVED***0***REMOVED***.add_file(filepath)
+                          if xml_phi_type not in phi_type_list:
+                              phi_type_list.append(xml_phi_type)
+                          for phi_type in phi_type_list:
+                              if phi_type not in phi_type_dict:
+                                 phi_type_dict***REMOVED***phi_type***REMOVED*** = ***REMOVED***CoordinateMap()***REMOVED***
+                              phi_type_dict***REMOVED***phi_type***REMOVED******REMOVED***0***REMOVED***.add_file(filepath)
                    else:
                        final_value = value
                        text = final_value***REMOVED***"@text"***REMOVED***
@@ -131,42 +115,16 @@ class Phitexts:
                        text_start = final_value***REMOVED***"@spans"***REMOVED***.split('~')***REMOVED***0***REMOVED***
                        text_end = final_value***REMOVED***"@spans"***REMOVED***.split('~')***REMOVED***1***REMOVED***
                        xml_coordinate_map***REMOVED***int(text_start)***REMOVED*** = int(text_end)
-                       if xml_phi_type not in self.phi_type_list:
-                             self.phi_type_list.append(xml_phi_type)
-                       for phi_type in self.phi_type_list:
-                           if phi_type not in self.phi_type_dict:
-                                 self.phi_type_dict***REMOVED***phi_type***REMOVED*** = ***REMOVED***CoordinateMap()***REMOVED***
-                           self.phi_type_dict***REMOVED***phi_type***REMOVED******REMOVED***0***REMOVED***.add_file(filepath)
+                       if xml_phi_type not in phi_type_list:
+                           phi_type_list.append(xml_phi_type)
+                       for phi_type in phi_type_list:
+                           if phi_type not in phi_type_dict:
+                                 phi_type_dict***REMOVED***phi_type***REMOVED*** = ***REMOVED***CoordinateMap()***REMOVED***
+                           phi_type_dict***REMOVED***phi_type***REMOVED******REMOVED***0***REMOVED***.add_file(filepath)
                       
-            self.full_xml_map***REMOVED***filepath***REMOVED*** = xml_coordinate_map
-            self.coords = self.full_xml_map
+            full_xml_map***REMOVED***filepath***REMOVED*** = xml_coordinate_map
             fhandle.close()
-        #print(self.full_xml_map) 
-        return self.full_xml_map
- 
-
-    '''
-    def _extract_coordinates(self,filename,tags_dict):
-        if tags_dict is not None:
-           for key, value in tags_dict.items():
-              # Note:  Value can be a list of like phi elements
-              #               or a dictionary of the metadata about a phi element
-               if isinstance(value, list):
-                  for final_value in value:
-                      text_start = final_value***REMOVED***"@spans"***REMOVED***.split('~')***REMOVED***0***REMOVED*** 
-                      text_end = final_value***REMOVED***"@spans"***REMOVED***.split('~')***REMOVED***1***REMOVED***
-                      philter_text = final_value***REMOVED***"@text"***REMOVED***
-                      phi_type = final_value***REMOVED***"@TYPE"***REMOVED***
-                      self.xml_map.add(filename,text_start,text_end)
-               else:
-                   final_value = value
-                   text = final_value***REMOVED***"@text"***REMOVED***
-                   phi_type = final_value***REMOVED***"@TYPE"***REMOVED***
-                   text_start = final_value***REMOVED***"@spans"***REMOVED***.split('~')***REMOVED***0***REMOVED***
-                   text_end = final_value***REMOVED***"@spans"***REMOVED***.split('~')***REMOVED***1***REMOVED***
-                   self.xml_map.add(filename,text_start,text_end)
-        return self.xml_map***REMOVED***filename***REMOVED***
-    ''' 
+        return full_xml_map, phi_type_dict, xml_texts, xml_filenames
        
     def _detect_encoding(self, fp):
         if not os.path.exists(fp):
@@ -200,8 +158,10 @@ class Phitexts:
                 #     cleaned.append(item)
         return cleaned
 
-
-
+    def detect_xml_phi(self):
+        if self.coords:
+           return
+        self.coords, self.types, self.texts, self.filenames = self.__read_xml_into_coordinateMap(self.inputdir) 
 
     def detect_phi(self, filters="./configs/philter_alpha.json"):
         assert self.texts, "No texts defined"
@@ -228,15 +188,7 @@ class Phitexts:
             return
 
         self.types = self.filterer.phi_type_dict
-
-    def detect_xml_phi_types(self):
-        assert self.texts, "No texts defined"
-        assert self.coords, "No PHI coordinates defined"
-
-        if self.types:
-            return
-        #print(self.phi_type_dict) 
-        self.types = self.phi_type_dict
+    
 
     def normalize_phi(self):
         assert self.texts, "No texts defined"
@@ -266,6 +218,8 @@ class Phitexts:
         # e.g. change phi type to OTHER?
         # or scramble?
         # or use self.norms="unknown <type>" with <type>=self.types
+
+        # Note: see also surrogator.shift_dates(), surrogator.parse_and_shift_date(), parse_date_ranges(), replace_other_surrogate()
         
     def substitute_phi(self, look_up_table_path = None):
         assert self.norms, "No normalized PHI defined"
@@ -282,6 +236,7 @@ class Phitexts:
                     if not self.subser.has_shift_amount(note_key_ucsf):
                         if __debug__: print("WARNING: no date shift found for: " + filename)
                         continue
+                    
                     normalized_token = self.norms***REMOVED***phi_type***REMOVED******REMOVED***filename, start***REMOVED******REMOVED***0***REMOVED***
                     end = self.norms***REMOVED***phi_type***REMOVED******REMOVED***filename, start***REMOVED******REMOVED***1***REMOVED***
 
@@ -289,13 +244,21 @@ class Phitexts:
                     if normalized_token is None:
                         # self.eval_table***REMOVED***filename***REMOVED******REMOVED***start***REMOVED***.update({'sub':None})
                         continue
+                    
+                    try:
+                        shifted_date = self.subser.shift_date_pid(normalized_token,
+                                                                  note_key_ucsf)
+                    except NameError as err:
+                        print("Name Error: unknown note key "
+                              + str(note_key_ucsf) + " for note " + filename
+                              + ": {0}".format(err))
+                        continue
 
-                    shifted_date = self.subser.shift_date_pid(normalized_token,
-                                                              note_key_ucsf)
                     if shifted_date is None:
                         if __debug__: print("WARNING: cannot shift date in: "
                                             + filename)
                         continue
+                    
                     substitute_token = self.subser.date_to_string(shifted_date)
                     # self.eval_table***REMOVED***filename***REMOVED******REMOVED***start***REMOVED***.update({'sub':substitute_token})
                     self.subs***REMOVED***(filename, start)***REMOVED*** = (substitute_token, end)
@@ -348,19 +311,17 @@ class Phitexts:
 
             self.textsout***REMOVED***filename***REMOVED*** =  "".join(contents)
     
-    def simple_transform(self):
+    def _get_obscured_texts(self, symbol='*'):
         assert self.texts, "No texts defined"
 
         if not self.coords:
-            self.textsout_nosubs = self.texts
-            print("WARNING: No PHI coordinates defined: nothing to transform!")
-                
-        if self.textsout_nosubs:
-            return
+            texts_obscured = self.texts
+            print("WARNING: No PHI coordinates defined: nothing to obscure!")
+        
+        if texts_obscured:
+            return texts_obscured
         
         for filename in self.filenames:
-            
-            last_marker = 0
 
             txt = self.texts***REMOVED***filename***REMOVED***
             exclude_dict = self.coords***REMOVED***filename***REMOVED***
@@ -369,45 +330,13 @@ class Phitexts:
             contents = ***REMOVED******REMOVED***
             for i in range(0, len(txt)):     
                 if i in exclude_dict:
-                    contents.append("*")    
+                    contents.append(symbol)    
                 else:
                     contents.append(txt***REMOVED***i***REMOVED***)
 
-            self.textsout_nosubs***REMOVED***filename***REMOVED*** =  "".join(contents)     
+            texts_obscured***REMOVED***filename***REMOVED*** =  "".join(contents)
 
-    def _transform_text(self, txt, infilename,
-                        include_map, exclude_map, subs):       
-        last_marker = 0
-        current_chunk = ***REMOVED******REMOVED***
-        punctuation_matcher = re.compile(r"***REMOVED***^a-zA-Z0-9****REMOVED***")
-
-        #read the text by character, any non-punc non-overlaps will be replaced
-        contents = ***REMOVED******REMOVED***
-        for i in range(0, len(txt)):
-
-            if i < last_marker:
-                continue
-            
-            if include_map.does_exist(infilename, i):
-                #add our preserved text
-                start,stop = include_map.get_coords(infilename, i)
-                contents.append(txt***REMOVED***start:stop***REMOVED***)
-                last_marker = stop
-            elif exclude_map.does_exist(infilename, i):
-                #print(infilename)
-                #print(i)
-                start,stop = exclude_map.get_coords(infilename, i)
-                if (infilename, start, stop) in subs:
-                    contents.append(subs***REMOVED***(infilename, start, stop)***REMOVED***)
-                else:
-                    contents.append("*")
-            elif punctuation_matcher.match(txt***REMOVED***i***REMOVED***):
-                contents.append(txt***REMOVED***i***REMOVED***)
-            else:
-                contents.append("*")
-
-        return "".join(contents)
-
+        return texts_obscured
 
     def save(self, outputdir, suf="_subs", ext="txt",
              use_deid_note_key=False):
@@ -549,7 +478,11 @@ class Phitexts:
             with open(csv_summary_filepath,'w') as f:
                 file_header = 'filename'+','+'file_size'+','+'total_tokens'+','+'phi_tokens'+','+'successfully_normalized'+','+'failed_normalized'+','+'successfully_surrogated'+','+'failed_surrogated'+'\n'
                 f.write(file_header)
+
+        summary_info = {'filesize':***REMOVED******REMOVED***,'total_tokens':***REMOVED******REMOVED***,'phi_tokens':***REMOVED******REMOVED***,'successful_normalized':***REMOVED******REMOVED***,'failed_normalized':***REMOVED******REMOVED***,'successful_surrogated':***REMOVED******REMOVED***,'failed_surrogated':***REMOVED******REMOVED***}
         
+        texts_obscured = self._get_obscured_texts() # needed for phi_tokens
+                
         ### CSV of summary per file ####
         # 1. Filename
         for filename in self.filenames:
@@ -561,7 +494,8 @@ class Phitexts:
             total_tokens = self.filterer.cleaned***REMOVED***filename***REMOVED******REMOVED***1***REMOVED***
             
             # Number of PHI tokens
-            phi_tokens = self.filterer.get_clean_filtered(filename,self.textsout_nosubs***REMOVED***filename***REMOVED***)***REMOVED***1***REMOVED***
+            phi_tokens = self.filterer.get_clean_filtered(filename,
+                                                          texts_obscured***REMOVED***filename***REMOVED***)***REMOVED***1***REMOVED***
             
             successful_normalized = 0
             failed_normalized = 0
@@ -583,40 +517,40 @@ class Phitexts:
                 new_line = filename + ',' + str(filesize) + ',' + str(total_tokens) + ',' + str(phi_tokens) + ',' + str(successful_normalized) + ',' + str(failed_normalized) + ',' + str(successful_surrogated) + ',' + str(failed_surrogated) + '\n'
                 f.write(new_line)
                      
-            self.summary_info***REMOVED***'filesize'***REMOVED***.append(filesize)
-            self.summary_info***REMOVED***'total_tokens'***REMOVED***.append(total_tokens)
-            self.summary_info***REMOVED***'phi_tokens'***REMOVED***.append(phi_tokens)
-            self.summary_info***REMOVED***'successful_normalized'***REMOVED***.append(successful_normalized)
-            self.summary_info***REMOVED***'failed_normalized'***REMOVED***.append(failed_normalized)
-            self.summary_info***REMOVED***'successful_surrogated'***REMOVED***.append(successful_surrogated)
-            self.summary_info***REMOVED***'failed_surrogated'***REMOVED***.append(failed_surrogated)
+            summary_info***REMOVED***'filesize'***REMOVED***.append(filesize)
+            summary_info***REMOVED***'total_tokens'***REMOVED***.append(total_tokens)
+            summary_info***REMOVED***'phi_tokens'***REMOVED***.append(phi_tokens)
+            summary_info***REMOVED***'successful_normalized'***REMOVED***.append(successful_normalized)
+            summary_info***REMOVED***'failed_normalized'***REMOVED***.append(failed_normalized)
+            summary_info***REMOVED***'successful_surrogated'***REMOVED***.append(successful_surrogated)
+            summary_info***REMOVED***'failed_surrogated'***REMOVED***.append(failed_surrogated)
         
         # Summarize current batch
         # Batch size (all)
-        number_of_notes = len(self.summary_info)
+        number_of_notes = len(summary_info)
 
         # File size
-        total_kb_processed = sum(self.summary_info***REMOVED***'filesize'***REMOVED***)/1000
-        median_file_size = numpy.median(self.summary_info***REMOVED***'filesize'***REMOVED***)
-        q2pt5_size,q97pt5_size = numpy.percentile(self.summary_info***REMOVED***'filesize'***REMOVED***,***REMOVED***2.5,97.5***REMOVED***)
+        total_kb_processed = sum(summary_info***REMOVED***'filesize'***REMOVED***)/1000
+        median_file_size = numpy.median(summary_info***REMOVED***'filesize'***REMOVED***)
+        q2pt5_size,q97pt5_size = numpy.percentile(summary_info***REMOVED***'filesize'***REMOVED***,***REMOVED***2.5,97.5***REMOVED***)
 
         # Total tokens
-        total_tokens = numpy.sum(self.summary_info***REMOVED***'total_tokens'***REMOVED***)
-        median_tokens = numpy.median(self.summary_info***REMOVED***'total_tokens'***REMOVED***)
-        q2pt5_tokens,q97pt5_tokens = numpy.percentile(self.summary_info***REMOVED***'total_tokens'***REMOVED***,***REMOVED***2.5,97.5***REMOVED***)
+        total_tokens = numpy.sum(summary_info***REMOVED***'total_tokens'***REMOVED***)
+        median_tokens = numpy.median(summary_info***REMOVED***'total_tokens'***REMOVED***)
+        q2pt5_tokens,q97pt5_tokens = numpy.percentile(summary_info***REMOVED***'total_tokens'***REMOVED***,***REMOVED***2.5,97.5***REMOVED***)
 
         # Total PHI tokens
-        total_phi_tokens = numpy.sum(self.summary_info***REMOVED***'phi_tokens'***REMOVED***)
-        median_phi_tokens = numpy.median(self.summary_info***REMOVED***'phi_tokens'***REMOVED***)
-        q2pt5_phi_tokens,q97pt5_phi_tokens = numpy.percentile(self.summary_info***REMOVED***'phi_tokens'***REMOVED***,***REMOVED***2.5,97.5***REMOVED***)
+        total_phi_tokens = numpy.sum(summary_info***REMOVED***'phi_tokens'***REMOVED***)
+        median_phi_tokens = numpy.median(summary_info***REMOVED***'phi_tokens'***REMOVED***)
+        q2pt5_phi_tokens,q97pt5_phi_tokens = numpy.percentile(summary_info***REMOVED***'phi_tokens'***REMOVED***,***REMOVED***2.5,97.5***REMOVED***)
 
         # Normalization
-        successful_normalization = sum(self.summary_info***REMOVED***'successful_normalized'***REMOVED***)
-        failed_normalization = sum(self.summary_info***REMOVED***'failed_normalized'***REMOVED***)
+        successful_normalization = sum(summary_info***REMOVED***'successful_normalized'***REMOVED***)
+        failed_normalization = sum(summary_info***REMOVED***'failed_normalized'***REMOVED***)
 
         # Surrogation
-        successful_surrogation = sum(self.summary_info***REMOVED***'successful_surrogated'***REMOVED***)
-        failed_surrogation = sum(self.summary_info***REMOVED***'failed_surrogated'***REMOVED***)
+        successful_surrogation = sum(summary_info***REMOVED***'successful_surrogated'***REMOVED***)
+        failed_surrogation = sum(summary_info***REMOVED***'failed_surrogated'***REMOVED***)
 
         # Create text summary for the current batch
         with open(batch_summary_file, "w") as f:
@@ -647,6 +581,9 @@ class Phitexts:
 
     def eval(self, anno_dir, in_dir, output_dir):
         # preserve these two puncs so that dates are complete
+
+        ### TO DO: eval should be using read_xml_into_coordinateMap for reading the xml
+        ######### Create a get function to get Lu's data structure given the coordinate maps
         s = string.punctuation.replace('/','')
         s = s.replace('-', '')
         translator = str.maketrans('', '', s)
