@@ -12,22 +12,36 @@ DATE_REF = dt.datetime(2000, 2, 29)
 class Subs:
     def __init__(self, look_up_table_path = None):
         #load shift table to a dictionary
-        self.shift_table  = self._load_look_up_table(look_up_table_path)        
-     
+        self.shift_table, self.deid_note_key_table = self._load_look_up_table(look_up_table_path)
+    
     def has_shift_amount(self, note_id):
         return note_id in self.shift_table
     
-    def get_shift_amount(self,note_id):
+    def has_deid_note_key(self, note_id):
+        return note_id in self.deid_note_key_table
+    
+    def get_deid_note_key(self, note_id):
+        try:
+            deid_note_key = self.deid_note_key_table***REMOVED***note_id***REMOVED***
+        except KeyError as err:
+            print("Key Error in deid_note_key_table for note " + str(note_id)
+                  + ": {0}".format(err))
+            deid_note_key = None
+        return deid_note_key
+    
+    def get_shift_amount(self, note_id):
         try:
             shift_amount = int(self.shift_table***REMOVED***note_id***REMOVED***)
             if shift_amount == 0:
-                print("WARNING: shift amount for note_id: {0} is zero.".format(note_id))
+                print("WARNING: shift amount for note " + str(note_id)
+                      + " is zero.")
         except KeyError as err:
-            print("Key Error in shift_table {0}".format(err))
+            print("Key Error in shift_table for note " + str(note_id)
+                  + ": {0}".format(err))
             shift_amount = None
         except ValueError as err:
-            print("Value Error: date_offset is not an integer for note_id="
-                  + str(note_id) + "{0}".format(err))
+            print("Value Error: date_offset is not an integer for note "
+                  + str(note_id) + ": {0}".format(err))
             shift_amount = None
         return shift_amount
     
@@ -42,8 +56,10 @@ class Subs:
         try:
             shifted_date = self.shift_date(date, shift)
         except OverflowError as err:
-            print("Overflow Error: cannot shift date \"" + date.to_string()
-                  + "\" with shift " + str(shift) + " {0}".format(err))
+            print("Overflow Error: cannot shift date \""
+                  + date.to_string(debug=True) + "\" with shift " + str(shift)
+                  + " in note " + str(node_id)
+                  + ": {0}".format(err))
         return shifted_date
       
     @staticmethod
@@ -61,19 +77,27 @@ class Subs:
             return {} #defaultdict(lambda:DEFAULT_SHIFT_VALUE)
 
         try:
-            look_up_table = pd.read_csv(look_up_table_path, sep='\t', index_col=False, usecols=***REMOVED***'note_key', 'date_offset'***REMOVED***, dtype=str)
+            look_up_table = pd.read_csv(look_up_table_path, sep='\t',
+                                        index_col=False,
+                                        usecols=***REMOVED***'note_key', 'date_offset',
+                                                 'deid_note_key'***REMOVED***,
+                                        dtype=str)
         except pd.errors.EmptyDataError as err:
             print("Pandas Empty Data Error: " + look_up_table_path
                   + " is empty {0}".format(err))
-            return {}
+            return {}, {}
         except ValueError as err:
             print("Value Error: " + look_up_table_path
                   + " is invalid {0}".format(err))
-            return {}
+            return {}, {}
         
-        look_up_table = look_up_table***REMOVED***~look_up_table***REMOVED***"date_offset"***REMOVED***.isnull()***REMOVED***
-        id2offset = pd.Series(look_up_table.date_offset.values, index=look_up_table.note_key).to_dict()
+        offset_table = look_up_table***REMOVED***~look_up_table***REMOVED***"date_offset"***REMOVED***.isnull()***REMOVED***
+        deid_table = look_up_table***REMOVED***~look_up_table***REMOVED***"deid_note_key"***REMOVED***.isnull()***REMOVED***
+        id2offset = pd.Series(offset_table.date_offset.values,
+                              index=offset_table.note_key).to_dict()
+        id2deid = pd.Series(deid_table.deid_note_key.values,
+                            index=deid_table.note_key).to_dict()
         
-        return id2offset
+        return id2offset, id2deid
         
         

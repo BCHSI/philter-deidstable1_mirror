@@ -51,40 +51,14 @@ def runDeidChunck(unit, q):
         call(***REMOVED***"python3", "-O", "deidpipe.py", 
               "-i", srcFolder, 
               "-o", dstFolder, 
-              "-s", srcMeta, 
+              "-s", srcMeta,
+              "-d", "True",
               "-f", "configs/philter_delta.json",
               "-l", "False"***REMOVED***)
 
-        # Rename files (Keep if we have meta, otherwise toss--also toss log)
-        # Also create map between note_key and deid_note_key
-        mfile = open(srcMeta)
-        head = mfile.readline()
-        noteKey2deidNoteKey = dict()
-        for line in mfile:
-            line = line.split("\t")
-            noteKey2deidNoteKey***REMOVED***line***REMOVED***0***REMOVED******REMOVED*** = line***REMOVED***2***REMOVED***
-
-        # Iterate through output files
-        filenames = os.listdir(dstFolder)
-        for filename in filenames:
-            # Keep if we have meta in dict
-            try:
-                noteKey = filename.strip("0")***REMOVED***:-9***REMOVED***
-                deidNoteKey = noteKey2deidNoteKey***REMOVED***noteKey***REMOVED***
-                os.replace(dstFolder + filename, dstFolder + deidNoteKey
-                           + ".txt")
-            # Toss if we dont
-            except KeyError:
-                try:
-                    os.remove(dstFolder + filename)
-                except IsADirectoryError:
-                    # Remove log
-                    #rmtree(dstFolder + filename)
-                    pass
-
         # Print time elapsed for batch
         t = time.time() - t0
-        print(dstFolder + ": " + str(t) + " seconds")
+        print(str(unit) + " " + dstFolder + ": " + str(t) + " seconds")
 
         q.task_done()
 

@@ -216,7 +216,7 @@ class Phitexts:
         # or scramble?
         # or use self.norms="unknown <type>" with <type>=self.types
 
-        # Note: this is currently done in surrogator.shift_dates(), surrogator.parse_and_shift_date(), parse_date_ranges(), replace_other_surrogate()
+        # Note: see also surrogator.shift_dates(), surrogator.parse_and_shift_date(), parse_date_ranges(), replace_other_surrogate()
         
     def substitute_phi(self, look_up_table_path = None):
         assert self.norms, "No normalized PHI defined"
@@ -233,6 +233,7 @@ class Phitexts:
                     if not self.subser.has_shift_amount(note_key_ucsf):
                         if __debug__: print("WARNING: no date shift found for: " + filename)
                         continue
+                    
                     normalized_token = self.norms***REMOVED***phi_type***REMOVED******REMOVED***filename, start***REMOVED******REMOVED***0***REMOVED***
                     end = self.norms***REMOVED***phi_type***REMOVED******REMOVED***filename, start***REMOVED******REMOVED***1***REMOVED***
 
@@ -240,13 +241,21 @@ class Phitexts:
                     if normalized_token is None:
                         # self.eval_table***REMOVED***filename***REMOVED******REMOVED***start***REMOVED***.update({'sub':None})
                         continue
+                    
+                    try:
+                        shifted_date = self.subser.shift_date_pid(normalized_token,
+                                                                  note_key_ucsf)
+                    except NameError as err:
+                        print("Name Error: unknown note key "
+                              + str(note_key_ucsf) + " for note " + filename
+                              + ": {0}".format(err))
+                        continue
 
-                    shifted_date = self.subser.shift_date_pid(normalized_token,
-                                                              note_key_ucsf)
                     if shifted_date is None:
                         if __debug__: print("WARNING: cannot shift date in: "
                                             + filename)
                         continue
+                    
                     substitute_token = self.subser.date_to_string(shifted_date)
                     # self.eval_table***REMOVED***filename***REMOVED******REMOVED***start***REMOVED***.update({'sub':substitute_token})
                     self.subs***REMOVED***(filename, start)***REMOVED*** = (substitute_token, end)
@@ -333,16 +342,23 @@ class Phitexts:
         return "".join(contents)
 
 
-    def save(self, outputdir):
+    def save(self, outputdir, suf="_subs", ext="txt",
+             use_deid_note_key=False):
         assert self.textsout, "Cannot save text: output not ready"
-        if not outputdir:
-            raise Exception("Output directory undefined: ", outputdir)
+        assert outputdir, "Cannot save text: output directory undefined"
 
         for filename in self.filenames:
-            fbase, fext = os.path.splitext(filename)
-            fbase = fbase.split('/')***REMOVED***-1***REMOVED***
-            filepath = outputdir + fbase + "_subs.txt"
-            with open(filepath, "w", encoding='utf-8', errors='surrogateescape') as fhandle:
+            fbase = os.path.splitext(os.path.basename(filename))***REMOVED***0***REMOVED***
+            if use_deid_note_key:
+                note_key_ucsf = fbase.lstrip('0')
+                if not self.subser.has_deid_note_key(note_key_ucsf):
+                    if __debug__: print("WARNING: no deid note key found for "
+                                        + filename)
+                    continue
+                fbase = self.subser.get_deid_note_key(note_key_ucsf)
+            filepath = os.path.join(outputdir, fbase + suf + "." + ext)
+            with open(filepath, "w", encoding='utf-8',
+                      errors='surrogateescape') as fhandle:
                 fhandle.write(self.textsout***REMOVED***filename***REMOVED***)
     
     def print_log(self, output_dir):
