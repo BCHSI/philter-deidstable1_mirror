@@ -50,7 +50,8 @@ class Phitexts:
 
                 self.filenames.append(filepath)
                 encoding = self._detect_encoding(filepath)
-                fhandle = open(filepath, "r", encoding=encoding['encoding'], errors='surrogateescape')
+                fhandle = open(filepath, "r", encoding=encoding['encoding'],
+                               errors='surrogateescape')
                 self.texts[filepath] = fhandle.read()
                 fhandle.close()
 
@@ -208,7 +209,7 @@ class Phitexts:
             if phi_type == "DATE" or phi_type == "Date":
                 for filename, start, end in self.types[phi_type][0].scan():
                     token = self.texts[filename][start:end]
-                    normalized_token = Subs.parse_date(token)                 
+                    normalized_token = Subs.parse_date(token)
                     self.norms[phi_type] [(filename, start)] = (normalized_token, end)
                 
             else:
@@ -245,18 +246,12 @@ class Phitexts:
                         # self.eval_table[filename][start].update({'sub':None})
                         continue
                     
-                    try:
-                        shifted_date = self.subser.shift_date_pid(normalized_token,
-                                                                  note_key_ucsf)
-                    except NameError as err:
-                        print("Name Error: unknown note key "
-                              + str(note_key_ucsf) + " for note " + filename
-                              + ": {0}".format(err))
-                        continue
-
+                    shifted_date = self.subser.shift_date_pid(normalized_token,
+                                                              note_key_ucsf)
                     if shifted_date is None:
-                        if __debug__: print("WARNING: cannot shift date in: "
-                                            + filename)
+                        if __debug__: print("WARNING: cannot shift date "
+                                            + normalized_token.get_raw_string()
+                                            + " in: " + filename)
                         continue
                     
                     substitute_token = self.subser.date_to_string(shifted_date)
@@ -410,15 +405,15 @@ class Phitexts:
                 note_key_ucsf = os.path.splitext(os.path.basename(filename).strip('0'))[0]
                 
                 # Successfully surrogated:
-                if not self.subser.has_shift_amount(note_key_ucsf):
-                    # Add 1 to unsuccessfuly surrogated dates:
-                     sub = None	
-                     parse_info[filename]['fail_sub'] += 1
-                # Unsuccessfully surrogated:
-                else:
+                if (filename, start) in self.subs:
                     # Add 1 to successfuly surrogated dates:	
                      sub = self.subs[(filename,start)][0]
                      parse_info[filename]['success_sub'] += 1
+                # Unsuccessfully surrogated:
+                else:
+                    # Add 1 to unsuccessfuly surrogated dates:
+                     sub = None	
+                     parse_info[filename]['fail_sub'] += 1
 
                 eval_table[filename].append({'start':start, 'end':end, 'raw': raw, 'normalized': normalized_token, 'sub': sub})
                     # f_parsed.write('\t'.join([filename, str(start), str(end), raw, normalized_token, sub]))
