@@ -317,8 +317,6 @@ class Phitexts:
         if not self.coords:
             texts_obscured = self.texts
             print("WARNING: No PHI coordinates defined: nothing to obscure!")
-        
-        if texts_obscured:
             return texts_obscured
         
         for filename in self.filenames:
