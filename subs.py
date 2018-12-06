@@ -99,5 +99,3 @@ class Subs:
                             index=deid_table.note_key).to_dict()
         
         return id2offset, id2deid
-        
-        

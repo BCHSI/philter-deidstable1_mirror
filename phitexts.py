@@ -1,4 +1,5 @@
 import os
+import os.path
 from chardet.universaldetector import UniversalDetector
 import re
 import json
@@ -10,6 +11,8 @@ from philter import Philter
 import json
 from subs import Subs
 import string
+import pandas
+import numpy
 
 class Phitexts:
     """ container for texts, phi, attributes """
@@ -40,7 +43,7 @@ class Phitexts:
 
         for root, dirs, files in os.walk(self.inputdir):
             for filename in files:
-                if not filename.endswith("txt"):
+                if (not filename.endswith("txt")) or 'meta_data' in filename:
                     continue
 
                 filepath = os.path.join(root, filename)
@@ -307,40 +310,32 @@ class Phitexts:
                     contents.append(txt[i])
 
             self.textsout[filename] =  "".join(contents)
+    
+    def _get_obscured_texts(self, symbol='*'):
+        assert self.texts, "No texts defined"
 
-    def _transform_text(self, txt, infilename,
-                        include_map, exclude_map, subs):       
-        last_marker = 0
-        current_chunk = []
-        punctuation_matcher = re.compile(r"[^a-zA-Z0-9*]")
+        if not self.coords:
+            texts_obscured = self.texts
+            print("WARNING: No PHI coordinates defined: nothing to obscure!")
+            return texts_obscured
 
-        #read the text by character, any non-punc non-overlaps will be replaced
-        contents = []
-        for i in range(0, len(txt)):
+        texts_obscured = {}
+        for filename in self.filenames:
 
-            if i < last_marker:
-                continue
-            
-            if include_map.does_exist(infilename, i):
-                #add our preserved text
-                start,stop = include_map.get_coords(infilename, i)
-                contents.append(txt[start:stop])
-                last_marker = stop
-            elif exclude_map.does_exist(infilename, i):
-                #print(infilename)
-                #print(i)
-                start,stop = exclude_map.get_coords(infilename, i)
-                if (infilename, start, stop) in subs:
-                    contents.append(subs[(infilename, start, stop)])
+            txt = self.texts[filename]
+            exclude_dict = self.coords[filename]
+
+            #read the text by character, any non-punc non-overlaps will be replaced
+            contents = []
+            for i in range(0, len(txt)):     
+                if i in exclude_dict:
+                    contents.append(symbol)    
                 else:
-                    contents.append("*")
-            elif punctuation_matcher.match(txt[i]):
-                contents.append(txt[i])
-            else:
-                contents.append("*")
+                    contents.append(txt[i])
 
-        return "".join(contents)
+            texts_obscured[filename] =  "".join(contents)
 
+        return texts_obscured
 
     def save(self, outputdir, suf="_subs", ext="txt",
              use_deid_note_key=False):
@@ -363,23 +358,31 @@ class Phitexts:
     
     def print_log(self, output_dir):
         log_dir = os.path.join(output_dir, 'log/')
+
         failed_dates_file = os.path.join(log_dir, 'failed_dates.json')
         date_table_file = os.path.join(log_dir, 'parsed_dates.json')
         phi_count_file = os.path.join(log_dir, 'phi_count.txt')
         phi_marked_file = os.path.join(log_dir, 'phi_marked.json')
+        batch_summary_file = os.path.join(log_dir, 'batch_summary.txt')
+
+        #Path to csv summary of all files
+        csv_summary_filepath = log_dir+'detailed_batch_summary.csv'
 
         eval_table = {}
         failed_date = {}
         phi_table = {}
+        parse_info = {}
         if 'DATE' in self.types:
             phi_type = 'DATE'
         elif 'Date' in self.types:
             phi_type = 'Date'
 
-        if os.path.isdir(log_dir ):
+        # Per-batch logs
+        if os.path.isdir(log_dir):
             pass
         else:
             os.makedirs(log_dir)
+        
 
         # Write to file of raw dates, parsed dates and substituted dates
         num_failed = 0
@@ -392,21 +395,38 @@ class Phitexts:
         for filename, start, end in self.types[phi_type][0].scan():
             raw = self.texts[filename][start:end]
             normalized_date = self.norms[phi_type][(filename,start)][0]
+            
+            if filename not in parse_info:
+                parse_info[filename] = {'success_norm':0,'fail_norm':0,'success_sub':0,'fail_sub':0}
+            if filename not in eval_table:
+                eval_table[filename] = []
+
             if normalized_date is not None:
+                # Add 1 to successfully normalized dates
+                num_parsed += 1
+                parse_info[filename]['success_norm'] += 1
+                
                 normalized_token = self.subser.date_to_string(normalized_date)
                 note_key_ucsf = os.path.splitext(os.path.basename(filename).strip('0'))[0]
-                if not self.subser.has_shift_amount(note_key_ucsf):	
+                
+                # Successfully surrogated:
+                if not self.subser.has_shift_amount(note_key_ucsf):
+                    # Add 1 to unsuccessfuly surrogated dates:
                      sub = None	
-                else:	
+                     parse_info[filename]['fail_sub'] += 1
+                # Unsuccessfully surrogated:
+                else:
+                    # Add 1 to successfuly surrogated dates:	
                      sub = self.subs[(filename,start)][0]
-                num_parsed += 1
-                if filename not in eval_table:
-                    eval_table[filename] = []
+                     parse_info[filename]['success_sub'] += 1
+
                 eval_table[filename].append({'start':start, 'end':end, 'raw': raw, 'normalized': normalized_token, 'sub': sub})
                     # f_parsed.write('\t'.join([filename, str(start), str(end), raw, normalized_token, sub]))
                     # f_parsed.write('\n')
             else:
+                # Add 1 to unsuccessfuly normazlied dates:
                 num_failed += 1
+                parse_info[filename]['fail_norm'] += 1
                     # f_failed.write('\t'.join([filename, str(start), str(end), raw.strip('\n')]))
                     # f_failed.write('\n')
                 if filename not in failed_date:
@@ -422,6 +442,7 @@ class Phitexts:
         with open(phi_count_file,'w') as f_count:
             # f_marked.write('\t'.join(['filename', 'start', 'end', 'word', 'phi_type', 'category']))
             # f_marked.write('\n')
+
             for phi_type in self.types:
                 for filename, start, end in self.types[phi_type][0].scan():
                     if filename not in phi_table:
@@ -448,7 +469,115 @@ class Phitexts:
             json.dump(eval_table, f)
         with open(phi_marked_file, 'w') as f:
             json.dump(phi_table, f)
-    
+
+
+        # If the summary csv file doesn't exist yet, create it and add file headers
+        # Csv summary is one directory above all input directories
+        if not os.path.isfile(csv_summary_filepath):
+            with open(csv_summary_filepath,'w') as f:
+                file_header = 'filename'+','+'file_size'+','+'total_tokens'+','+'phi_tokens'+','+'successfully_normalized'+','+'failed_normalized'+','+'successfully_surrogated'+','+'failed_surrogated'+'\n'
+                f.write(file_header)
+
+        summary_info = {'filesize':[],'total_tokens':[],'phi_tokens':[],'successful_normalized':[],'failed_normalized':[],'successful_surrogated':[],'failed_surrogated':[]}
+        
+        texts_obscured = self._get_obscured_texts() # needed for phi_tokens
+                
+        ### CSV of summary per file ####
+        # 1. Filename
+        for filename in self.filenames:
+
+            # File size in bytes
+            filesize = os.path.getsize(filename)
+            
+            # Number of total tokens
+            total_tokens = self.filterer.cleaned[filename][1]
+            
+            # Number of PHI tokens
+            phi_tokens = self.filterer.get_clean_filtered(filename,
+                                                          texts_obscured[filename])[1]
+            
+            successful_normalized = 0
+            failed_normalized = 0
+            successful_surrogated = 0
+            failed_surrogated = 0
+
+            if filename in parse_info:
+                # Successfully normalized dates
+                successful_normalized = parse_info[filename]['success_norm']
+                # Unsuccessfully normalized dates
+                failed_normalized = parse_info[filename]['fail_norm']
+                # Successfully normalized dates
+                successful_surrogated = parse_info[filename]['success_sub']
+                # Unsuccessfully normalized dates
+                failed_surrogated = parse_info[filename]['fail_sub']
+            
+            # Add to master list for all files          
+            with open(csv_summary_filepath,'a') as f:
+                new_line = filename + ',' + str(filesize) + ',' + str(total_tokens) + ',' + str(phi_tokens) + ',' + str(successful_normalized) + ',' + str(failed_normalized) + ',' + str(successful_surrogated) + ',' + str(failed_surrogated) + '\n'
+                f.write(new_line)
+                     
+            summary_info['filesize'].append(filesize)
+            summary_info['total_tokens'].append(total_tokens)
+            summary_info['phi_tokens'].append(phi_tokens)
+            summary_info['successful_normalized'].append(successful_normalized)
+            summary_info['failed_normalized'].append(failed_normalized)
+            summary_info['successful_surrogated'].append(successful_surrogated)
+            summary_info['failed_surrogated'].append(failed_surrogated)
+        
+        # Summarize current batch
+        # Batch size (all)
+        number_of_notes = len(summary_info)
+
+        # File size
+        total_kb_processed = sum(summary_info['filesize'])/1000
+        median_file_size = numpy.median(summary_info['filesize'])
+        q2pt5_size,q97pt5_size = numpy.percentile(summary_info['filesize'],[2.5,97.5])
+
+        # Total tokens
+        total_tokens = numpy.sum(summary_info['total_tokens'])
+        median_tokens = numpy.median(summary_info['total_tokens'])
+        q2pt5_tokens,q97pt5_tokens = numpy.percentile(summary_info['total_tokens'],[2.5,97.5])
+
+        # Total PHI tokens
+        total_phi_tokens = numpy.sum(summary_info['phi_tokens'])
+        median_phi_tokens = numpy.median(summary_info['phi_tokens'])
+        q2pt5_phi_tokens,q97pt5_phi_tokens = numpy.percentile(summary_info['phi_tokens'],[2.5,97.5])
+
+        # Normalization
+        successful_normalization = sum(summary_info['successful_normalized'])
+        failed_normalization = sum(summary_info['failed_normalized'])
+
+        # Surrogation
+        successful_surrogation = sum(summary_info['successful_surrogated'])
+        failed_surrogation = sum(summary_info['failed_surrogated'])
+
+        # Create text summary for the current batch
+        with open(batch_summary_file, "w") as f:
+            f.write("TOTAL NOTES PROCESSED: "+str(number_of_notes)+'\n')
+            f.write("TOTAL KB PROCESSED: "+str("%.2f"%total_kb_processed)+'\n')
+            f.write("TOTAL TOKENS PROCESSED: "+str(total_tokens)+'\n')
+            f.write("TOTAL PHI TOKENS PROCESSED: "+str(total_phi_tokens)+'\n')
+            f.write('\n')
+            f.write("MEDIAN FILESIZE (BYTES): "+str(median_file_size)+" (95% Percentile: "+str("%.2f"%q2pt5_size)+'-'+str("%.2f"%q97pt5_size)+')'+'\n')
+            f.write("MEDIAN TOKENS PER NOTE: "+str(median_tokens)+" (95% Percentile: "+str("%.2f"%q2pt5_tokens)+'-'+str("%.2f"%q97pt5_tokens)+')'+'\n')
+            f.write("MEDIAN PHI TOKENS PER NOTE: "+str(median_phi_tokens)+" (95% Percentile: "+str("%.2f"%q2pt5_phi_tokens)+'-'+str("%.2f"%q97pt5_phi_tokens)+')'+'\n')
+            f.write('\n')
+            f.write("DATES SUCCESSFULLY NORMALIZED: "+str(successful_normalization)+'\n')
+            f.write("DATES FAILED TO NORMALIZE: "+str(failed_normalization)+'\n')
+            f.write("DATES SUCCESSFULLY SURROGATED: "+str(successful_surrogation)+'\n')
+            f.write("DATES FAILED TO SURROGATE: "+str(failed_surrogation)+'\n')   
+        
+
+        # Todo: add PHI type counts to summary
+        # Name PHI
+        # Date PHI
+        # Age>=90 PHI
+        # Contact PHI
+        # Location PHI
+        # ID PHI
+        # Other PHI
+
+
     def eval(self, anno_dir, in_dir, output_dir):
         # preserve these two puncs so that dates are complete
 
