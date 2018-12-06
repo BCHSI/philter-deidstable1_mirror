@@ -318,7 +318,8 @@ class Phitexts:
             texts_obscured = self.texts
             print("WARNING: No PHI coordinates defined: nothing to obscure!")
             return texts_obscured
-        
+
+        texts_obscured = {}
         for filename in self.filenames:
 
             txt = self.texts***REMOVED***filename***REMOVED***
