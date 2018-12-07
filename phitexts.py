@@ -428,8 +428,9 @@ class Phitexts:
                         failed_date[filename] = []
                 failed_date[filename].append({'start':start, 'end':end, 'raw': raw})
 
-        print ('Successfully parsed: ' + str(num_parsed) + ' dates.')
-        print ('Failed to parse: ' + str(num_failed) + ' dates.')
+        if __debug__:
+            print ('Successfully parsed: ' + str(num_parsed) + ' dates.')
+            print ('Failed to parse: ' + str(num_failed) + ' dates.')
                 
         # Count by phi_type, record PHI marked
         phi_counter = {}
