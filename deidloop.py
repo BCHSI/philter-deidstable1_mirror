@@ -3,6 +3,9 @@ Code to script multithread instances of deidipipe.py
 It creates a queue of directories. Each thread processes a directory.
 It copies the structure of the input in a new location, and renames files.
 """
+import sys
+import argparse
+import distutils.util
 from queue import Queue
 from threading import Thread
 from subprocess import call
@@ -14,45 +17,33 @@ import csv
 import os
 
 
-# Set up some global variables
-num_threads = 14
-enclosure_queue = Queue()
-srcBase = "/data/muenzenk/log_enhancements/log_test_environment/input/"
-dstBase = "/data/muenzenk/log_enhancements/log_test_environment/output/"
-mtaBase = "/data/muenzenk/log_enhancements/log_test_environment/input/"
-
-
 def get_args():
     # gets input/output/filename
     help_str = """De-identify and surrogate all text files in a set of folders using threads"""
     
     ap = argparse.ArgumentParser(description=help_str)
 
-    ap.add_argument("-i", "--input",
-                    help="Path to the file that contains the list of folders"
-                    + " with clinical notes",
-                    type=str)
-    ap.add_argument("-o", "--output",
-                    help="Path to the file that contains the list of output"
-                    + " folders to save PHI-reduced notes"
-                    + " (must be equal length to input folder list)",
-                    type=str)
-    ap.add_argument("-s", "--surrogate_info"
-                    help="Path to the file that that contains the list of"
-                    + " surrogate info / meta data files per note key"
-                    + " (must be equal length to input folder list)",
+    ap.add_argument("--imofile",
+                    help="Path to the file that contains the list of input"
+                    + " folders, metafiles, output folders",
                     type=str)
     ap.add_argument("-t", "--threads", default=1,
                     help="Number of parallel threads, the default is 1",
                     type=int)
-    ap.add_argument("--superlog", default=False, #TODO: move to master script
-                    help="When this is true, the pipeline prints and saves a super log in base directory combining logs of each output directory",
-                    type=lambda x:bool(distutils.util.strtobool(x)))
+    ap.add_argument("--philter",
+                    help="Path to Philter program files like deidpipe.py",
+                    type=str)
+    ap.add_argument("--superlog", 
+                    help="Path to the folder for the super log."
+                    + " When this is set, the pipeline prints and saves a"
+                    + " super log in a subfolder log of the set folder"
+                    + " combining logs of each output directory",
+                    type=str)
 
     return ap.parse_args()
 
 
-def runDeidChunck(unit, q):
+def runDeidChunck(unit, q, philterFolder):
     """
     Function to instruct a thread to deid a directory.
     INPUTS:
@@ -64,15 +55,7 @@ def runDeidChunck(unit, q):
         t0 = time.time()
 
         # Tuple to determine path
-        #i,j,k = q.get()
-        r = q.get()
-
-        #Build path to notes, meta and output path
-        srcFolder = r + '/'
-        #srcFolder = os.path.join(r, d) + '/'
-        srcMeta = os.path.join(mtaBase, os.path.relpath(srcFolder, srcBase),
-                               "meta_data.txt")
-        dstFolder = os.path.join(dstBase, os.path.relpath(srcFolder, srcBase)) + '/'
+        srcFolder, srcMeta, dstFolder = q.get()
 
         # Build output directory
         os.makedirs(dstFolder, exist_ok=True)
@@ -88,7 +71,8 @@ def runDeidChunck(unit, q):
               "-s", srcMeta,
               "-d", "True", 
               "-f", "configs/philter_delta.json",
-              "-l", "True"***REMOVED***)
+              "-l", "True"***REMOVED***,
+             cwd=philterFolder)
 
 
         # Print time elapsed for batch
@@ -98,13 +82,14 @@ def runDeidChunck(unit, q):
         q.task_done()
 
 
-def get_super_log(all_logs, output_dir):
+def get_super_log(all_logs, super_log_dir):
     
-    super_log_dir = '/'.join(output_dir.split('/')***REMOVED***:-2***REMOVED***)+'/log/'
     #Path to csv summary of all files
-    csv_summary_filepath = super_log_dir+'deidpipe_superlog_detailed.csv'
+    csv_summary_filepath = os.path.join(super_log_dir,
+                                        'deidpipe_superlog_detailed.csv')
     #Path to txt summary of all files combined
-    text_summary_filepath = super_log_dir+'deidpipe_superlog_summary.txt'
+    text_summary_filepath = os.path.join(super_log_dir,
+                                         'deidpipe_superlog_summary.txt')
 
     os.makedirs(super_log_dir, exist_ok=True)
 
@@ -166,19 +151,27 @@ def get_super_log(all_logs, output_dir):
         f.write("DATES SUCCESSFULLY SURROGATED: "+str(successful_surrogation)+'\n')
         f.write("DATES FAILED TO SURROGATE: "+str(failed_surrogation)+'\n')  
 
+        
 def main():
+    enclosure_queue = Queue()
     
     args = get_args()
+    print("read args")
     
     # Set up some threads to fetch the enclosures (each thread deids a directory)
+    print("starting {0} worker threads".format(args.threads))
     for unit in range(args.threads):
-        worker = Thread(target=runDeidChunck, args=(unit, enclosure_queue,))
+        worker = Thread(target=runDeidChunck,
+                        args=(unit, enclosure_queue,
+                              os.path.dirname(args.philter),))
         worker.setDaemon(True)
         worker.start()
 
     # Build queue
-    for root, dirs, files in os.walk(srcBase):
-        if not dirs: enclosure_queue.put(root)
+    with open(args.imofile, 'r') as imo:
+        for line in imo:
+            idir, mfile, odir = line.split()
+            enclosure_queue.put(***REMOVED***idir, mfile, odir***REMOVED***)
     
     # Now wait for the queue to be empty, indicating that we have
     # processed all of the notes
@@ -187,20 +180,19 @@ def main():
     print('*** Done')
 
     if args.superlog:
-        # Once all the directories have been processed, create a superlog that combines
-        # all logs in each output directory
-
+        # Once all the directories have been processed,
+        # create a superlog that combines all logs in each output directory
         all_logs = ***REMOVED******REMOVED***
-        for (dirpath, dirnames, filenames) in os.walk(dstBase):
-            for filename in filenames:
-                if filename == 'detailed_batch_summary.csv':
-                    all_logs.append(os.sep.join(***REMOVED***dirpath, filename***REMOVED***))
+        with open(args.imofile, 'r') as imo:
+            for line in imo:
+                idir, mfile, odir = line.split()
+                all_logs.append(os.path.join(odir, "log",
+                                             "detailed_batch_summary.csv"))
 
         # Create super log of batch summaries
         if all_logs != ***REMOVED******REMOVED***:
-            get_super_log(all_logs,dstBase)
+            get_super_log(all_logs, os.path.join(args.superlog, "log"))
 
-    
     return 0
 
 if __name__ == "__main__":
