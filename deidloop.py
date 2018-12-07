@@ -21,6 +21,37 @@ srcBase = "/data/muenzenk/log_enhancements/log_test_environment/input/"
 dstBase = "/data/muenzenk/log_enhancements/log_test_environment/output/"
 mtaBase = "/data/muenzenk/log_enhancements/log_test_environment/input/"
 
+
+def get_args():
+    # gets input/output/filename
+    help_str = """De-identify and surrogate all text files in a set of folders using threads"""
+    
+    ap = argparse.ArgumentParser(description=help_str)
+
+    ap.add_argument("-i", "--input",
+                    help="Path to the file that contains the list of folders"
+                    + " with clinical notes",
+                    type=str)
+    ap.add_argument("-o", "--output",
+                    help="Path to the file that contains the list of output"
+                    + " folders to save PHI-reduced notes"
+                    + " (must be equal length to input folder list)",
+                    type=str)
+    ap.add_argument("-s", "--surrogate_info"
+                    help="Path to the file that that contains the list of"
+                    + " surrogate info / meta data files per note key"
+                    + " (must be equal length to input folder list)",
+                    type=str)
+    ap.add_argument("-t", "--threads", default=1,
+                    help="Number of parallel threads, the default is 1",
+                    type=int)
+    ap.add_argument("--superlog", default=False, #TODO: move to master script
+                    help="When this is true, the pipeline prints and saves a super log in base directory combining logs of each output directory",
+                    type=lambda x:bool(distutils.util.strtobool(x)))
+
+    return ap.parse_args()
+
+
 def runDeidChunck(unit, q):
     """
     Function to instruct a thread to deid a directory.
@@ -135,37 +166,45 @@ def get_super_log(all_logs, output_dir):
         f.write("DATES SUCCESSFULLY SURROGATED: "+str(successful_surrogation)+'\n')
         f.write("DATES FAILED TO SURROGATE: "+str(failed_surrogation)+'\n')  
 
+def main():
+    
+    args = get_args()
+    
+    # Set up some threads to fetch the enclosures (each thread deids a directory)
+    for unit in range(args.threads):
+        worker = Thread(target=runDeidChunck, args=(unit, enclosure_queue,))
+        worker.setDaemon(True)
+        worker.start()
 
-# Set up some threads to fetch the enclosures (each thread deids a directory)
-for unit in range(num_threads):
-    worker = Thread(target=runDeidChunck, args=(unit, enclosure_queue,))
-    worker.setDaemon(True)
-    worker.start()
+    # Build queue
+    for root, dirs, files in os.walk(srcBase):
+        if not dirs: enclosure_queue.put(root)
+    
+    # Now wait for the queue to be empty, indicating that we have
+    # processed all of the notes
+    print('*** Main thread waiting')
+    enclosure_queue.join()
+    print('*** Done')
 
-# Build queue
-for root, dirs, files in os.walk(srcBase):
-    if not dirs: enclosure_queue.put(root)
-        
-# Now wait for the queue to be empty, indicating that we have
-# processed all of the notes
-print('*** Main thread waiting')
-enclosure_queue.join()
-print('*** Done')
+    if args.superlog:
+        # Once all the directories have been processed, create a superlog that combines
+        # all logs in each output directory
 
-# Once all the directories have been processed, create a superlog that combines
-# all logs in each output directory
+        all_logs = ***REMOVED******REMOVED***
+        for (dirpath, dirnames, filenames) in os.walk(dstBase):
+            for filename in filenames:
+                if filename == 'detailed_batch_summary.csv':
+                    all_logs.append(os.sep.join(***REMOVED***dirpath, filename***REMOVED***))
 
-all_logs = ***REMOVED******REMOVED***
-for (dirpath, dirnames, filenames) in os.walk(dstBase):
-    for filename in filenames:
-        if filename == 'detailed_batch_summary.csv':
-            all_logs.append(os.sep.join(***REMOVED***dirpath, filename***REMOVED***))
+        # Create super log of batch summaries
+        if all_logs != ***REMOVED******REMOVED***:
+            get_super_log(all_logs,dstBase)
 
-# Create super log of batch summaries
-if all_logs != ***REMOVED******REMOVED***:
-    get_super_log(all_logs,dstBase)
+    
+    return 0
 
-
+if __name__ == "__main__":
+    sys.exit(main())
 
 
 

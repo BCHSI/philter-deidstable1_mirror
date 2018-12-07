@@ -9,9 +9,9 @@ servers = {'MCWLDEIDLAP701.ucsfmedicalcenter.org':24,
            'qcdeidlap703.ucsfmedicalcenter.org':14}#,
            #'qcdeidlap705.ucsfmedicalcenter.org':14}
 
-srcBase = "/data/notes/shredded_notes/000/000/"
-dstBase = "/data/deid_notes_20180328/000/000/"
-mtaBase = "/data/notes/meta_data_20180328/000/000/"
+srcBase = "/data/notes/shredded_notes/000/000/000/"
+dstBase = "/data/deid_notes_20180328/000/000/000/"
+mtaBase = "/data/notes/meta_data_20180328/000/000/000/"
 wrkDir = "/data/schenkg/" #dstBase
 
 # list all subdirs in srcBase
@@ -66,12 +66,13 @@ for url, nthreads in servers.items():
     with open(chunks_dstFolders_fname***REMOVED***url***REMOVED***, 'w') as cf:
         cf.write('\n'.join(chunk_dstFolders))
         cf.write('\n')
-    os.system("scp {0} {1} {2} {3}@{4}:{5}".format(chunks_srcFolders_fname***REMOVED***url***REMOVED***, chunks_srcMetafiles_fname***REMOVED***url***REMOVED***, chunks_dstFolders_fname***REMOVED***url***REMOVED***,
-                                                   username, url, wrkDir))
+    # os.system("scp {0} {1} {2} {3}@{4}:{5}".format(chunks_srcFolders_fname***REMOVED***url***REMOVED***, chunks_srcMetafiles_fname***REMOVED***url***REMOVED***, chunks_dstFolders_fname***REMOVED***url***REMOVED***,
+    #                                                username, url, wrkDir))
     
 # ssh into each server and pass respective subdirs chunk to deidloop
 for url, nthreads in servers.items():
-    call(***REMOVED***"ssh {0}@{1}".format(username, url).split(), "/usr/bin/time nice python3 /data/schenkg/deidloop.py {0} {1}{2} {1}{3} {1}{4} > /data/schenkg/deid000.out 2>&1 &".format(nthreads, wrkDir, chunks_srcFolders_fname***REMOVED***url***REMOVED***, chunks_srcMetafiles_fname***REMOVED***url***REMOVED***, chunks_dstFolders_fname***REMOVED***url***REMOVED***).split() ***REMOVED***)
-
+    commandline = "ssh {0}@{1} ".format(username, url) + "echo \"/usr/bin/time nice python3 {2}deidloop.py {1} {2}{3} {2}{4} {2}{5} > {2}stdouterr_{0}.txt 2>&1 &\"".format(url.split('.')***REMOVED***0***REMOVED***, nthreads, wrkDir, chunks_srcFolders_fname***REMOVED***url***REMOVED***, chunks_srcMetafiles_fname***REMOVED***url***REMOVED***, chunks_dstFolders_fname***REMOVED***url***REMOVED***)
+    print(commandline)
+    call(commandline.split())
 
 # rsync deid'd notes back to master (or sync across servers)
