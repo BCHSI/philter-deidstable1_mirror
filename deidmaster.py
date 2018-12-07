@@ -10,17 +10,25 @@ servers = {'MCWLDEIDLAP701.ucsfmedicalcenter.org':24,
            'qcdeidlap705.ucsfmedicalcenter.org':14}
 
 srcBase = "/data/notes/shredded_notes/"
+srcList = "/data/shared/dir_list_shredded_notes.txt"
 dstBase = "/data/schenkg/deid_notes_20180328_ttt/"
 mtaBase = "/data/notes/meta_data_20180328/"
 wrkDir = "/data/schenkg/pipeline/" #dstBase
 
 # list all subdirs in srcBase
 srcFolders = []
-print("walking through {0} (this can take a couple of minutes)".format(srcBase))
-for root, dirs, files in os.walk(srcBase):
-    if not dirs:
-        srcFolders.append(os.path.join(root, '')) # adds trailing slash
-        #print("found dir {0}".format(root))
+if not srcList: # slow
+    print("walking through {0} (this can take a couple of minutes)".format(srcBase))
+    for root, dirs, files in os.walk(srcBase):
+        if not dirs:
+            srcFolders.append(os.path.join(root, '')) # adds trailing slash
+            #print("found dir {0}".format(root))
+else:
+    print("reading folder list from " + srcList)
+    with open(srcList, 'r') as sl:
+        for line in sl:
+            srcFolders.append(os.path.join(line.strip(), ''))
+
     
 # shuffle subdirs list to balance out across servers
 print("shuffling {0} found subdirs".format(len(srcFolders)))
@@ -29,8 +37,8 @@ random.shuffle(srcFolders)
 
 srcMetafiles = []
 dstFolders = []
-print("creating metafiles list in " + mtaBase
-      + " and output subdirs list in " +  dstBase)
+print("creating metafiles list from " + mtaBase
+      + " and output subdirs list from " +  dstBase)
 for srcFolder in srcFolders:
     srcMetafiles.append(os.path.join(mtaBase, os.path.relpath(srcFolder,
                                                               srcBase),
