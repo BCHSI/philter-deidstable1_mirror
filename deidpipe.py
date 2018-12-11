@@ -31,6 +31,9 @@ def get_args():
                           + "note key, the default is "
                           + "./data/i2b2_meta/note_info_map.tsv",
                     type=str)
+    ap.add_argument("-k", "--knownphi",
+                    help="Path to the known phi file, if path to file is absent knownPHI module does not execute",
+                    type=str)
     ap.add_argument("-l", "--log", default=True,
                     help="When this is true, the pipeline prints and saves log in a subdirectory in each output directory",
                     type=lambda x:bool(distutils.util.strtobool(x)))
@@ -63,6 +66,7 @@ def main():
     # detect PHI coordinates
     if __debug__: print("detecting PHI coordinates")
     if args.xml:
+       if __debug__: print("Generating coordinate map from xml")
        phitexts.detect_xml_phi()       
     else:
        phitexts.detect_phi(args.filters)
@@ -72,7 +76,12 @@ def main():
         if __debug__: print("detecting PHI types")
         if not args.xml:
            phitexts.detect_phi_types()
-        
+       
+        # detect known phi
+        if args.knownphi:
+           if __debug__: print("Identifying known phi")
+           phitexts.detect_known_phi(args.knownphi)
+ 
         # normalizes PHI
         if __debug__: print("normalizing PHI")
         phitexts.normalize_phi()
