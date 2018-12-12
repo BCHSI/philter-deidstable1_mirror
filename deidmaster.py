@@ -11,39 +11,32 @@ servers = {'MCWLDEIDLAP701.ucsfmedicalcenter.org':24,
            'qcdeidlap703.ucsfmedicalcenter.org':14,
            'qcdeidlap705.ucsfmedicalcenter.org':14}
 
-srcBase = "/data/notes/shredded_notes/"
-srcList = "/data/shared/dir_list_shredded_notes.txt"
-dstBase = "/data/schenkg/deid_notes_20180328_ttt/"
-mtaBase = "/data/notes/meta_data_20180328/"
-wrkDir = "/data/schenkg/pipeline/" #dstBase
-
-
 
 def get_args():
     # gets input/output/filename
-    help_str = """De-identify and surrogate all text files in a set of folders ditributed to servers via ssh and deidloop"""
+    help_str = """De-identify and surrogate all text files in a set of folders distributed to servers via ssh. Calls deidloop.py"""
     
     ap = argparse.ArgumentParser(description=help_str)
 
-    ap.add_argument("--username",
+    ap.add_argument("--username", required=True,
                     help="The username used to ssh into the servers",
                     type=str)
-    ap.add_argument("--philter",
+    ap.add_argument("--philter", required=True,
                     help="Path to Philter program files like deidpipe.py",
                     type=str)
-    ap.add_argument("-i", "--input", 
+    ap.add_argument("-i", "--input", required=True,
                     help="Path to the file or directory that contains the list"
                     + " of input folders",
                     type=str)
-    ap.add_argument("-o", "--output", 
+    ap.add_argument("-o", "--output", required=True,
                     help="Path to the directory that the output notes are"
                     + " written to",
                     type=str)
-    ap.add_argument("-s", "--surrogate", 
+    ap.add_argument("-s", "--surrogate", required=True,
                     help="Path to the directory that contains the metafiles"
                     + " (must have the same sub directory structure as input)",
                     type=str)
-    ap.add_argument("--superlog", 
+    ap.add_argument("--superlog", required=True,
                     help="Path to the folder for the super log."
                     + " When this is set, the pipeline prints and saves a"
                     + " super log in a subfolder log of the set folder"
@@ -83,7 +76,7 @@ def _shuffle_src_folders(srcFolders):
 def _list_metafiles_and_dst_folders(srcFolders, mtaBase, dstBase, srcBase=None):
     srcMetafiles = []
     dstFolders = []
-    if not srcBase: srcBase = os.path.commonpath(srcFolders)
+    if not srcBase: srcBase = os.path.dirname(os.path.commonprefix(srcFolders)) # use os.path.commonpath(srcFolders) if you have python 3.5 or higher
     print("creating metafiles list from " + mtaBase
           + " and output subdirs list from " +  dstBase)
     for srcFolder in srcFolders:
@@ -93,26 +86,26 @@ def _list_metafiles_and_dst_folders(srcFolders, mtaBase, dstBase, srcBase=None):
         dstFolders.append(os.path.join(dstBase, os.path.relpath(srcFolder,
                                                                 srcBase),
                                        ''))
-    return srcMetaFiles, dstFolders
+    return srcMetafiles, dstFolders
 
 def create_imo_lists(srcPath, mtaBase, dstBase):
     if os.path.isdir(srcPath):
-        srcFolders = walk_src_folders(srcPath)
+        srcFolders = _walk_src_folders(srcPath)
         srcBase = srcPath
     elif os.path.isfile(srcPath):
-        srcFolders = read_src_folders(srcPath)
-        srcBase = os.path.commonpath(srcFolders)
+        srcFolders = _read_src_folders(srcPath)
+        srcBase = os.path.dirname(os.path.commonprefix(srcFolders)) # use os.path.commonpath(srcFolders) if you have python 3.5 or higher
     else:
         return None
 
-    srcFolders = shuffle_src_folders(srcFolders)
-    srcMetaFiles, dstFolders = list_metafiles_and_dst_fodlers(srcFolders,
-                                                              mtaBase, dstBase,
-                                                              srcBase)
+    srcFolders = _shuffle_src_folders(srcFolders)
+    srcMetaFiles, dstFolders = _list_metafiles_and_dst_folders(srcFolders,
+                                                               mtaBase, dstBase,
+                                                               srcBase)
     return srcFolders, srcMetaFiles, dstFolders
     
-def write_chunk_files(servers, srcFolders, srcMetaFiles, dstFolders,
-                      prefix="chunk_", extension="csv")
+def write_chunk_files(servers, srcFolders, srcMetafiles, dstFolders,
+                      prefix="chunk_", extension="csv"):
     # split into chunks based on number_of_servers
     # & number_of_threads_per_each_server
     total_threads = sum(servers.values())
@@ -147,7 +140,7 @@ def scp_chunk_files(servers, username, wrkDir, chunks_fname):
         os.system("scp {0} {1}@{2}:{3}".format(chunks_fname[url], username,
                                                url, wrkDir))
 
-def send_jobs(servers, username, wrkDir, chunks_fname, logBase)
+def send_jobs(servers, username, wrkDir, chunks_fname, logBase):
     # ssh into each server and pass respective subdirs chunk to deidloop
     for url, nthreads in servers.items():
         commandline = ("ssh {0}@{1}".format(username, url)
