@@ -45,7 +45,10 @@ def get_args():
                     type=str)
     ap.add_argument("-x", "--xml", default=False,
                     help="When this is true, the pipeline looks for xml files in the input directory and extracts the PHI information from the xml tags without running philter",
-                    type=str)
+                    type=lambda x:bool(distutils.util.strtobool(x)))
+    ap.add_argument("-v", "--verbose", action='store_true',
+                    help="When verbose is set,"
+                         + " will emit messages about script progress")
 
     return ap.parse_args()
 
@@ -68,7 +71,7 @@ def main():
     if args.xml:
        phitexts.detect_xml_phi()       
     else:
-       phitexts.detect_phi(args.filters)
+       phitexts.detect_phi(args.filters, verbose=args.verbose)
 
     if phitexts.coords:
         # detects PHI types
