@@ -164,14 +164,14 @@ class Phitexts:
            return
         self.coords, self.types, self.texts, self.filenames = self.__read_xml_into_coordinateMap(self.inputdir) 
 
-    def detect_phi(self, filters="./configs/philter_alpha.json"):
+    def detect_phi(self, filters="./configs/philter_alpha.json", verbose=False):
         assert self.texts, "No texts defined"
         
         if self.coords:
             return
         
         philter_config = {
-            "verbose":False,
+            "verbose":verbose,
             "run_eval":False,
             "finpath":self.inputdir,
             "filters":filters,

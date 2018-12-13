@@ -400,8 +400,11 @@ class Philter:
 
         # All regexes except matchall
         if regex != re.compile('.'):
-            #if __debug__: print("map_regex(): searching for regex with index " + str(pattern_index))
-            #if __debug__ and pattern_index: print("map_regex(): regex is " + str(regex))
+            if __debug__ and self.verbose:
+                print("map_regex(): searching for regex with index "
+                      + str(pattern_index))
+            if __debug__ and self.verbose and pattern_index:
+                print("map_regex(): regex is " + str(regex))
             matches = regex.finditer(text)
             
             for m in matches:
