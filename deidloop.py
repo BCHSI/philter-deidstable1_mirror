@@ -63,6 +63,7 @@ def runDeidChunck(unit, q, philterFolder):
         print(str(unit) + " src: " + srcFolder)
         print(str(unit) + " met: " + srcMeta)
         print(str(unit) + " dst: " + dstFolder)
+        print(str(unit) + " cwd: " + philterFolder)
 
         # Run Deid (would be better to interface directly)
         call(***REMOVED***"python3", "-O", "deidpipe.py", 

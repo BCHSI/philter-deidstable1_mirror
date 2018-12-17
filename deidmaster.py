@@ -5,11 +5,14 @@ import os
 import random
 from math import ceil
 from subprocess import call
+from collections import OrderedDict
 
-servers = {'MCWLDEIDLAP701.ucsfmedicalcenter.org':24,
-           'qcdeidlap702.ucsfmedicalcenter.org':14,
-           'qcdeidlap703.ucsfmedicalcenter.org':14,
-           'qcdeidlap705.ucsfmedicalcenter.org':14}
+# using OrderedDict for reproducability
+servers = OrderedDict(***REMOVED***('MCWLDEIDLAP701.ucsfmedicalcenter.org',24),
+                       ('qcdeidlap702.ucsfmedicalcenter.org',14),
+                       ('qcdeidlap703.ucsfmedicalcenter.org',14),
+                       ('qcdeidlap705.ucsfmedicalcenter.org',14)***REMOVED***)
+random.seed(10101) #fix seed for reproducibility 
 
 
 def get_args():
@@ -69,7 +72,6 @@ def _walk_src_folders(srcBase):
 def _shuffle_src_folders(srcFolders):
     # shuffle subdirs list to balance out across servers
     print("shuffling {0} found subdirs".format(len(srcFolders)))
-    random.seed(10101) #fix seed for reproducibility 
     random.shuffle(srcFolders)
     return srcFolders
 
