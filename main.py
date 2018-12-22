@@ -113,7 +113,6 @@ def main():
     #map any sets, pos and regex groups we have in our config
     filterer.map_coordinates()
 
-    
     #transform the data 
     #Priority order is maintained in the pattern list
     filterer.transform()
@@ -134,8 +133,33 @@ def main():
             pre_process2= r"[^a-zA-Z0-9]",
             punctuation_matcher=re.compile(r"[^a-zA-Z0-9\*]"))
 
+    # Create regex time profile if __debug__
+    if __debug__:
+        regex_time_profile_path = 'data/regex_time_profile.csv'
+        
+        # Create header stirng to add to profiling file
+        header_string = 'filename'
+        for regex_name in filterer.regex_name_list:
+            header_string += (',' + str(regex_name))
+
+        header_string += '\n'
+
+        with open(regex_time_profile_path,'w') as f:
+            f.write(header_string)
+            for file in filterer.overall_regex_time_profile:
+                current_profile_string = file
+                for profile_data in filterer.overall_regex_time_profile[file]:
+                    current_profile_string += (',' + str(profile_data))
+                current_profile_string += '\n'
+                f.write(current_profile_string)
+
 # error analysis
         
 if __name__ == "__main__":
     main()
+
+
+
+
+
     
