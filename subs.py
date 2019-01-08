@@ -55,11 +55,12 @@ class Subs:
         try:
             shifted_date = self.shift_date(date, shift)
         except OverflowError as err:
-            print("Overflow Error: cannot shift date \""
-                  + date.to_string(debug=True) + " pretty: " + date.to_string()
-                  + "\" with shift " + str(shift)
-                  + " in note " + str(note_id)
-                  + ": {0}".format(err))
+            if __debug__: print("WARNING: cannot shift date \""
+                                + date.to_string(debug=True)
+                                + " pretty: " + date.to_string()
+                                + "\" with shift " + str(shift)
+                                + " in note " + str(note_id)
+                                + " Overflow Error: {0}".format(err))
         return shifted_date
       
     @staticmethod

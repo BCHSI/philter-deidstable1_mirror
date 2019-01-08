@@ -100,8 +100,11 @@ def get_super_log(all_logs, super_log_dir):
             file_header = 'filename'+','+'file_size'+','+'total_tokens'+','+'phi_tokens'+','+'successfully_normalized'+','+'failed_normalized'+','+'successfully_surrogated'+','+'failed_surrogated'+'\n'
             f.write(file_header)
     
-    # Append conents of all summaries to this file
+    # Append contents of all summaries to this file
     for log_file in all_logs:
+        if not os.path.exists(log_file):
+            print("log file missing: " + log_file)
+            continue
         with open(log_file,'r') as f:
             with open(csv_summary_filepath,'a') as f1:
                 next(f) # skip header line

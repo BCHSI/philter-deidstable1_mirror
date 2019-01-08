@@ -61,6 +61,10 @@ class datetime2(datetime.datetime):
             if __debug__: print("WARNING: cannot parse date \"" + date_string
                                 + "\" Overflow Error: {0}".format(err))
             return None
+        except TypeError as err:
+            if __debug__: print("WARNING: cannot parse date \"" + date_string
+                                + "\" Type Error: {0}".format(err))
+            return None
         year = temp_date.year
         month = temp_date.month
         day = temp_date.day
