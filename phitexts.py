@@ -333,19 +333,26 @@ class Phitexts:
         return texts_obscured
 
     def save(self, outputdir, suf="_subs", ext="txt",
-             use_deid_note_key=False):
+             use_deid_note_key=False, create_subdirs=False):
         assert self.textsout, "Cannot save text: output not ready"
         assert outputdir, "Cannot save text: output directory undefined"
 
         for filename in self.filenames:
             fbase = os.path.splitext(os.path.basename(filename))[0]
-            if use_deid_note_key:
+            if use_deid_note_key: # name files according to deid note key
                 note_key_ucsf = fbase.lstrip('0')
                 if not self.subser.has_deid_note_key(note_key_ucsf):
                     if __debug__: print("WARNING: no deid note key found for "
                                         + filename)
                     continue
                 fbase = self.subser.get_deid_note_key(note_key_ucsf)
+            if create_subdirs: # assume outputdir is parent and create subdirs
+                               # from 14 hexadec digits long deid note keys
+                duo_1 = fbase[:2]
+                trio_2 = fbase[2:5]
+                trio_3 = fbase[5:8]
+                trio_4 = fbase[8:11]
+                fbase = os.path.join(duo_1, trio_2, trio_3, trio_4, fbase)
             filepath = os.path.join(outputdir, fbase + suf + "." + ext)
             with open(filepath, "w", encoding='utf-8',
                       errors='surrogateescape') as fhandle:
@@ -361,7 +368,8 @@ class Phitexts:
         batch_summary_file = os.path.join(log_dir, 'batch_summary.txt')
 
         #Path to csv summary of all files
-        csv_summary_filepath = log_dir+'detailed_batch_summary.csv'
+        csv_summary_filepath = os.path.join(log_dir,
+                                            'detailed_batch_summary.csv')
 
         eval_table = {}
         failed_date = {}
