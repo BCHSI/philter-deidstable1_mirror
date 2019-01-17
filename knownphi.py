@@ -37,14 +37,25 @@ class Knownphi:
                if note_key2knownphi_dict[knownphi] == file_note_key:
                   
                   start = self.texts[key].find(str(knownphi))
-                  stop = len(str(knownphi))
+                  stop = start + len(str(knownphi))
                   if start != -1:
-                     print("Found a Known PHI!" + str(knownphi) + ":" +file_note_key)
-                     self.add_knownphi(key, file_note_key, start, stop)
+                     #print("Found a Known PHI!" + str(knownphi) + ":" +file_note_key)
+                     self.add_knownphi(key, file_note_key, start, stop, knownphi)
        return self.coords, self.phi_types
 
+   def update_phi_type(self,filename, file_note_key, start, stop):
+       ''' Update the phi_type with new phi_types from known phi '''
+       knownphitype_dict = pd.Series(self.knownphitable.phi_type.values, index=self.knownphitable.clean_value).to_dict()
+       print(knownphitype_dict)
+       for types in knownphitype_dict:
+           print(types)
+           if types not in self.phi_types:
+              self.phi_types[types] = [CoordinateMap()]
+           print("types updated:" + types)
+           self.phi_types[types][0].add_extend(filename,int(start),int(end))
+   
 
-   def add_knownphi(self, filename, file_note_key, start, stop):
+   def add_knownphi(self, filename, file_note_key, start, stop, knownphi):
        ''' adds a new coordinate to the self.coords dict
                  This always rejects any overlapping hits '''
 
@@ -54,20 +65,29 @@ class Knownphi:
              if stop > self.coords[filename][start]:
                 print("KnownPHI: Extending the philter PHI coordinates!")
                 self.coords[filename][start] = stop
-                self.update_phi_type(filename, file_note_key, start, stop)
+                #self.update_phi_type(filename, file_note_key, start, stop)
+                types = self.knownphitable.loc[self.knownphitable['clean_value'] == knownphi, 'phi_type'].iloc[0]
+                if types not in self.phi_types:
+                   self.phi_types[types] = [CoordinateMap()]
+                   print("New phi_type inserted into self.types")
+                print("types updated:" + types)
+                self.phi_types[types][0].add_extend(filename,int(start),int(stop))
+
           else:
              ''' Add the coordinates as a newly identified PHI'''
              print("Updating coords with new known PHI" + filename)
+             print(filename + "\t" + str(start) + "\t" + str(stop) + "\t" + knownphi) 
              self.coords[filename][start] = stop
-             self.update_phi_type(filename, file_note_key, start, stop)
+             types = self.knownphitable.loc[self.knownphitable['clean_value'] == knownphi, 'phi_type'].iloc[0]
+             
+             if types not in self.phi_types:
+                self.phi_types[types] = [CoordinateMap()]
+                print("New phi_type inserted into self.types")
+              
+             print("types updated:" + types)
+             self.phi_types[types][0].add_extend(filename,int(start),int(stop))
+             for filename,start,stop in self.phi_types[types][0].scan():
+                 print(types+ "\t" + filename + "\t" + str(start) + "\t" +str(stop)) 
+             #self.update_phi_type(filename, file_note_key, start, stop)
    
-   def update_phi_type(self,filename, file_note_key, start, stop):
-       ''' Update the phi_type with new phi_types from known phi '''
-       knownphitype_dict = pd.Series(self.knownphitable.phi_type.values, index=self.knownphitable.clean_value).to_dict()
-       for types in knownphitype_dict:
-           if knownphitype_dict[types] == file_note_key:       
-              if types not in self.phi_types:
-                 self.phi_types[types] = [CoordinateMap()]
-       
-              self.phi_types[types][0].add_extend(filename,int(start),int(end))       
 
