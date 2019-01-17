@@ -8,7 +8,6 @@ from coordinate_map import CoordinateMap
 from lxml import etree as ET
 import xmltodict
 from philter import Philter
-import json
 from subs import Subs
 import string
 import pandas
@@ -143,20 +142,20 @@ class Phitexts:
         return detector.result
 
 
-    def _get_clean(self, text, punctuation_matcher=re.compile(r"[^a-zA-Z0-9\*\/]")):
+    def _get_clean(self, text, punctuation_matcher=re.compile(r"[^a-zA-Z0-9]")):
 
             # Use pre-process to split sentence by spaces AND symbols, while preserving spaces in the split list
-        lst = re.split("(\s+)", text)
+        #lst = re.split("[(\s+)/-]", text)
+        lst = re.findall(r"[\w']+",text)
         cleaned = []
         for item in lst:
             if len(item) > 0:
                 if item.isspace() == False:
-                    split_item = re.split("(\s+)", re.sub(punctuation_matcher, "", item))
+                    split_item = re.split("(\s+)", re.sub(punctuation_matcher, " ", item))
                     for elem in split_item:
                         if len(elem) > 0:
-                                cleaned.append(elem)
-                                # print (elem)
-                # else:
+                           cleaned.append(elem)
+                #else:
                 #     cleaned.append(item)
         return cleaned
 
@@ -190,7 +189,7 @@ class Phitexts:
         if self.types:
             return
         self.types = self.filterer.phi_type_dict
-
+        
     def detect_known_phi(self, knownphifile = "./data/knownphi.txt"):
         assert self.coords, "No PHI coordinates defined"
         assert self.texts, "No texts defined"
@@ -293,6 +292,8 @@ class Phitexts:
             exclude_dict = self.coords[filename]
             #read the text by character, any non-punc non-overlaps will be replaced
             contents = []
+            #print(filename)
+            #print(exclude_dict)
             for i in range(0, len(txt)):
 
                 if i < last_marker:
@@ -590,29 +591,79 @@ class Phitexts:
         # Other PHI
 
 
+    def tokenize_philter_phi(self, filename):
+        exclude_dict = self.coords[filename]
+        print(filename)
+        s = string.punctuation.replace('/','')
+        s = s.replace('-', '')
+        s = s.replace(',', '')
+        translator = str.maketrans('', '', s)
+        updated_dict = {}
+        for i in exclude_dict:
+            start, end = i, exclude_dict[i] 
+            word = self.texts[filename][start:end].translate(translator)
+            word = word.replace(',','')
+            word_split = self._get_clean(word)
+            for i in range(len(word_split)):
+                if i > 0:
+                   token_start = start + word.find(word_split[i]) 
+                else:
+                   token_start = start
+                token_end = token_start + len(word_split[i])
+                updated_dict.update({token_start:token_end})
+        return updated_dict
+    
+
+
+    def eval_start_match(self, start, input_dict):
+          
+        if start in input_dict:
+           return True
+        else:
+           return False 
+ 
+    def eval_overlap_match(self, start, end, input_dict, dict_type):
+        for input_dict_start in input_dict:
+            if dict_type == "gold":
+               input_dict_end = input_dict[input_dict_start][0]
+            else:
+               input_dict_end = input_dict[input_dict_start]
+            if input_dict_end >= end and start >= input_dict_start:
+               return True
+        return False       
+                             
+ 
     def eval(self, anno_dir, in_dir, output_dir):
         # preserve these two puncs so that dates are complete
 
         ### TO DO: eval should be using read_xml_into_coordinateMap for reading the xml
         ######### Create a get function to get Lu's data structure given the coordinate maps
+        
         s = string.punctuation.replace('/','')
         s = s.replace('-', '')
         translator = str.maketrans('', '', s)
-
+        
+        include_tags = {'Age','Diagnosis_Code_ICD_or_International','Medical4_Department_Name','Patient_Language_Spoken','Patient_Place_Of_Work_or_Occupation','Medical_Research_Study_Name_or_Number','Teaching_Institution_Name','Non_UCSF_Medical_Institution_Name','Medical_Institution_Abbreviation', 'Unclear'}
         gold_phi = {}
         eval_dir = os.path.join(output_dir, 'eval/')
         summary_file = os.path.join(eval_dir, 'summary.json')
         json_summary_by_file = os.path.join(eval_dir, 'summary_by_file.json')
         json_summary_by_category = os.path.join(eval_dir, 'summary_by_category.json')
-
         if os.path.isdir(eval_dir):
             pass
         else:
-            os.makedirs(eval_dir)
+            os.makedirs(eval_dir)       
+
+
+        text_fp_file = open(os.path.join(eval_dir,'fp.txt'),"w+")
+        text_tp_file = open(os.path.join(eval_dir,'tp.txt'),"w+")
+        text_fn_file = open(os.path.join(eval_dir,'fn.txt'),"w+")
+        text_tn_file = open(os.path.join(eval_dir,'tn.txt'),"w+")
+
+
 
         for root, dirs, files in os.walk(anno_dir):
             for filename in files:
-                #print(root)
                 if not filename.endswith("xml"):
                     continue                
                 #filepath = os.path.join(root, filename)
@@ -624,7 +675,7 @@ class Phitexts:
                 xmlstr = ET.tostring(root, encoding='utf8', method='xml')
                 xml_dict = xmltodict.parse(xmlstr)['PhilterUCSF']
                 check_tags = root.find('TAGS')
-                text = xml_dict["TEXT"]
+                full_text = xml_dict["TEXT"]
                 if check_tags is not None:
                    tags_dict = xml_dict["TAGS"]
                 else:
@@ -644,7 +695,20 @@ class Phitexts:
                               end = int(final_value["@spans"].split('~')[1])
                               text = final_value["@text"].translate(translator)
                               phi_type = final_value["@TYPE"]
-                              gold_phi[file_id].update({start:[end,phi_type,text]})
+                              text_split = self._get_clean(text)
+                              for i in range(len(text_split)):
+                                 if i > 0:
+                                    prev_token_start = token_start
+                                    token_start = full_text.find(text_split[i],token_end)
+                                    if token_start is -1:
+                                       token_start = prev_token_start
+                                 else:
+                                    token_start = full_text.find(text_split[i],start)
+                                    if token_start is -1:
+                                       token_start = start
+                                 token_end = token_start + len(text_split[i])
+                                 gold_phi[file_id].update({token_start:[token_end,phi_type,text_split[i]]}) 
+                                 
 
                        else:
                           final_value = value
@@ -654,72 +718,90 @@ class Phitexts:
                           end = int(final_value["@spans"].split('~')[1])
                           text = final_value["@text"].translate(translator)
                           phi_type = final_value["@TYPE"]
-                          gold_phi[file_id].update({start:[end, phi_type, text]})
-       
+                          text_split = self._get_clean(text)
+                          for i in range(len(text_split)):
+                             if i > 0:
+                                prev_token_start = token_start
+                                prev_token_end = token_end
+                                token_start = full_text.find(text_split[i],token_end)
+                                token_end = token_start + len(text_split[i])
+                                if token_start is -1:
+                                   token_start = prev_token_start
+                                   token_end = prev_token_end + len(text_split[i])  
+                             else:
+                                 token_start = full_text.find(text_split[i],start)
+                                 if token_start is -1:
+                                    token_start = start
+                                 token_end = token_start + len(text_split[i])                   
+                             gold_phi[file_id].update({token_start:[token_end,phi_type,text_split[i]]}) 
         # converting self.types to an easier accessible data structure
         eval_table = {}
         phi_table = {}
         non_phi = {}
-        for phi_type in self.types:
-            for filename, start, end in self.types[phi_type][0].scan():
-                word = self.texts[filename][start:end].translate(translator)
-                #print(filename + "\t" + str(start) + "\t" + str(end) +"\t" + word)
-                if filename not in phi_table:
-                    phi_table[filename] = {}
-                phi_table[filename].update({start:[end, phi_type, word]})
         for filename in gold_phi:
             if filename not in eval_table:
                 eval_table[filename] = {'fp':{},'tp':{},'fn':{},'tn':{}}
             # each ele contains an annotated phi
             # token_set = self._get_clean(self.texts[filename])
             text = self.texts[filename]
+            #exclude_dict = self.coords[filename]
+            exclude_dict = self.tokenize_philter_phi(filename)
             for start in gold_phi[filename]:
                 gold_start = start
                 gold_end = gold_phi[filename][start][0]
                 gold_type = gold_phi[filename][start][1]
                 gold_word = gold_phi[filename][start][2]
-                #print(filename + "\t" + gold_start + "\t" + gold_end +"\t" + gold_word)
                 # remove phi from text to form the non_phi_set
                 text = text.replace(gold_word, '')
-                
-                if filename in phi_table:
-                    # is phi and is caught -> TP
-                    if gold_start in phi_table[filename]:
-                        word = phi_table[filename][gold_start][2]
-                        if word == gold_word:
-                            if gold_type not in eval_table[filename]['tp']:
-                                eval_table[filename]['tp'][gold_type] = []
-                            eval_table[filename]['tp'][gold_type].append(word)
-                    # is phi but not caught -> FN
-                    else:
-                        #print("fn" + filename + "\t" + gold_start + "\t" + gold_end +"\t" + gold_word)
-                        # word = phi_table[filename][gold_start][2]
-                        if gold_type not in eval_table[filename]['fn']:
-                            eval_table[filename]['fn'][gold_type] = []
-                        eval_table[filename]['fn'][gold_type].append(gold_word)
+                if filename in self.coords:
+                   if self.eval_start_match(gold_start,exclude_dict):
+                      if gold_type not in eval_table[filename]['tp']:
+                         eval_table[filename]['tp'][gold_type] = []
+                      eval_table[filename]['tp'][gold_type].append(gold_word)
+                   elif self.eval_overlap_match(gold_start,gold_end,exclude_dict,'philter'):
+                      if gold_type not in eval_table[filename]['tp']:
+                         eval_table[filename]['tp'][gold_type] = []
+                      eval_table[filename]['tp'][gold_type].append(gold_word)
+                   else:
+                      if gold_type not in eval_table[filename]['fn']:
+                         eval_table[filename]['fn'][gold_type] = []
+                      eval_table[filename]['fn'][gold_type].append(gold_word)
                 else:
                     print (filename + ' not processed by philter or check filename!')
                     continue
             non_phi[filename] = self._get_clean(text)
-        for filename in phi_table:
+        
+        for filename in self.coords:
+            exclude_dict = self.tokenize_philter_phi(filename)            
+            gold_dict = gold_phi[filename]
             if filename in gold_phi:
-                if filename not in eval_table:
-                    eval_table[filename] = {'fp':{},'tp':{},'fn':{},'tn':[]}
-                for start in phi_table[filename]:
-                    end = phi_table[filename][start][0]
-                    phi_type = phi_table[filename][start][1]
-                    word = phi_table[filename][start][2]
-                    #print (""+"\t"+word + "\t" + str(start))
-                    # word caught but is not phi -> FP
-                    if start not in gold_phi[filename]:
-                        #print ("fp" + "\t" + filename + "\t" + word + "\t" + str(start))
-                        if phi_type not in eval_table[filename]['fp']:
-                            eval_table[filename]['fp'][phi_type] = []
-                            eval_table[filename]['fp'][phi_type].append(word)
-                            if word in non_phi[filename]:
-                                non_phi[filename].remove(word)
+               if filename not in eval_table:
+                  eval_table[filename] = {'fp':{},'tp':{},'fn':{},'tn':[]}
+               for start in exclude_dict:
+                   end = exclude_dict[start]
+                   ptype = 'OTHER'
+                   word = self.texts[filename][start:end].translate(translator) 
+                   for phi_type in self.types:
+                       for fname, st, ed in self.types[phi_type][0].scan():
+                           if fname == filename:
+                              if st == start:
+                                 ptype = phi_type        
+                   if not self.eval_start_match(start,gold_dict):
+                      if not self.eval_overlap_match(start,end,gold_dict,'gold'):
+                         if ptype not in eval_table[filename]['fp']:
+                            eval_table[filename]['fp'][ptype] = []
+                         eval_table[filename]['fp'][ptype].append(word)  
+                         if word in non_phi[filename]:
+                            non_phi[filename].remove(word)
+                      else:
+                         if ptype not in eval_table[filename]['tp']:
+                            eval_table[filename]['tp'][ptype] = []
+                         eval_table[filename]['tp'][ptype].append(word)
+                         if word in non_phi[filename]:
+                            non_phi[filename].remove(word)
+                    
             else:
-                print (filename + ' not found!')
+               print (filename + ' not found!')
         # the rest is all TN
         for filename in non_phi:
             if filename not in eval_table:
@@ -728,7 +810,6 @@ class Phitexts:
 
         summary_by_category = {}
         summary_by_file = {}
-
         total_tp = 0
         total_fn = 0
         total_tn = 0
@@ -742,31 +823,63 @@ class Phitexts:
             if filename not in summary_by_file:
                 summary_by_file[filename] = {}
             for phi_type in eval_table[filename]['tp']:
-                tp += len(eval_table[filename]['tp'][phi_type])
-                total_tp += tp
-                if phi_type not in summary_by_category:
-                    summary_by_category[phi_type] = {}
-                if 'tp' not in summary_by_category[phi_type]:
-                    summary_by_category[phi_type]['tp'] = []
-                summary_by_category[phi_type]['tp'].append(eval_table[filename]['tp'][phi_type])
+                if phi_type not in include_tags:
+                   tp += len(eval_table[filename]['tp'][phi_type])
+                   total_tp += len(eval_table[filename]['tp'][phi_type])
+                   if phi_type not in summary_by_category:
+                      summary_by_category[phi_type] = {}
+                   if 'tp' not in summary_by_category[phi_type]:
+                      summary_by_category[phi_type]['tp'] = []
+                   summary_by_category[phi_type]['tp'].append(eval_table[filename]['tp'][phi_type])
+                   text_tp_file.write('\n'+filename+'\t' + phi_type + '\t')
+                   tp_to_file = ('\n' + filename +'\t'+ phi_type + '\t').join(eval_table[filename]["tp"][phi_type])
+                   text_tp_file.write(tp_to_file)
+                else:
+                   fp += len(eval_table[filename]['tp'][phi_type])
+                   total_fp += len(eval_table[filename]['tp'][phi_type])
+                   if phi_type not in summary_by_category:
+                      summary_by_category[phi_type] = {}
+                   if 'fp' not in summary_by_category[phi_type]:
+                      summary_by_category[phi_type]['fp'] = []
+                   summary_by_category[phi_type]['fp'].append(eval_table[filename]['tp'][phi_type]) 
+                   text_fp_file.write('\n'+filename+ '\t'+ phi_type + '\t')
+                   fp_to_file = ('\n'+ filename + '\t'+ phi_type + '\t').join(eval_table[filename]["tp"][phi_type]) 
+                   text_fp_file.write(fp_to_file)
             for phi_type in eval_table[filename]['fp']:
                 fp += len(eval_table[filename]['fp'][phi_type])
-                total_fp += fp
+                total_fp += len(eval_table[filename]['fp'][phi_type])
                 if phi_type not in summary_by_category:
                     summary_by_category[phi_type] = {}
                 if 'fp' not in summary_by_category[phi_type]:
                     summary_by_category[phi_type]['fp'] = []
                 summary_by_category[phi_type]['fp'].append(eval_table[filename]['fp'][phi_type])
+                text_fp_file.write('\n'+ filename + '\t'+ phi_type + '\t')
+                fp_to_file = ('\n' + filename + '\t'+ phi_type + '\t').join(eval_table[filename]["fp"][phi_type])
+                text_fp_file.write(fp_to_file)
             for phi_type in eval_table[filename]['fn']:
-                fn += len(eval_table[filename]['fn'][phi_type])
-                total_fn += fn
-                if phi_type not in summary_by_category:
-                    summary_by_category[phi_type] = {}
-                if 'fn' not in summary_by_category[phi_type]:
-                    summary_by_category[phi_type]['fn'] = []
-                summary_by_category[phi_type]['fn'].append(eval_table[filename]['fn'][phi_type])
-            tn = len(eval_table[filename]['tn'])
-            total_tn += tn
+                if phi_type not in include_tags:
+                   fn += len(eval_table[filename]['fn'][phi_type])
+                   total_fn += len(eval_table[filename]['fn'][phi_type])
+                   if phi_type not in summary_by_category:
+                      summary_by_category[phi_type] = {}
+                   if 'fn' not in summary_by_category[phi_type]:
+                      summary_by_category[phi_type]['fn'] = []
+                   summary_by_category[phi_type]['fn'].append(eval_table[filename]['fn'][phi_type])
+                   text_fn_file.write('\n'+ filename + '\t'+ phi_type + '\t')
+                   fn_to_file = ('\n'+ filename + '\t'+ phi_type + '\t').join(eval_table[filename]["fn"][phi_type])
+                   text_fn_file.write(fn_to_file)
+                else:
+                   tn += len(eval_table[filename]['fn'][phi_type])
+                   total_tn += len(eval_table[filename]['fn'][phi_type])
+                   text_tn_file.write('\n'+ filename + '\t'+ phi_type + '\t')
+                   tn_to_file = ('\n' + filename + '\t'+ phi_type + '\t').join(eval_table[filename]["fn"][phi_type])
+                   text_tn_file.write(tn_to_file)
+            tn += len(eval_table[filename]['tn'])
+            total_tn += len(eval_table[filename]['tn'])
+            text_tn_file.write('\n'+ filename + '\t'+ phi_type + '\t') 
+            tn_to_file = ('\n' + filename + '\t'+ phi_type + '\t').join(eval_table[filename]["tn"])
+            text_tn_file.write(tn_to_file) 
+             
             try:  
                precision = tp / (tp + fp)
             except ZeroDivisionError:
@@ -791,7 +904,7 @@ class Phitexts:
         json.dump(total_summary, open(summary_file, "w"), indent=4)
         json.dump(summary_by_file, open(json_summary_by_file, "w"), indent=4)
         json.dump(summary_by_category, open(json_summary_by_category, "w"), indent=4)
-
+        
 
 
             
