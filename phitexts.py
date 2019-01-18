@@ -693,7 +693,8 @@ class Phitexts:
                               #end = int(final_value["@end"])
                               start = int(final_value["@spans"].split('~')[0])
                               end = int(final_value["@spans"].split('~')[1])
-                              text = final_value["@text"].translate(translator)
+                              text = final_value["@text"].replace('.',' ')
+                              text = text.translate(translator)
                               phi_type = final_value["@TYPE"]
                               text_split = self._get_clean(text)
                               for i in range(len(text_split)):
@@ -716,7 +717,8 @@ class Phitexts:
                           start = int(final_value["@spans"].split('~')[0])
                           #end = int(final_value["@end"])
                           end = int(final_value["@spans"].split('~')[1])
-                          text = final_value["@text"].translate(translator)
+                          text = final_value["@text"].replace('.',' ')
+                          text = text.translate(translator)
                           phi_type = final_value["@TYPE"]
                           text_split = self._get_clean(text)
                           for i in range(len(text_split)):
@@ -746,6 +748,7 @@ class Phitexts:
             text = self.texts[filename]
             #exclude_dict = self.coords[filename]
             exclude_dict = self.tokenize_philter_phi(filename)
+            #print(exclude_dict)
             for start in gold_phi[filename]:
                 gold_start = start
                 gold_end = gold_phi[filename][start][0]
@@ -763,6 +766,7 @@ class Phitexts:
                          eval_table[filename]['tp'][gold_type] = []
                       eval_table[filename]['tp'][gold_type].append(gold_word)
                    else:
+                      #print(str(gold_start)+ "\t" + str(gold_end) + "\t" + gold_word)
                       if gold_type not in eval_table[filename]['fn']:
                          eval_table[filename]['fn'][gold_type] = []
                       eval_table[filename]['fn'][gold_type].append(gold_word)
@@ -774,6 +778,7 @@ class Phitexts:
         for filename in self.coords:
             exclude_dict = self.tokenize_philter_phi(filename)            
             gold_dict = gold_phi[filename]
+            #print(gold_dict)
             if filename in gold_phi:
                if filename not in eval_table:
                   eval_table[filename] = {'fp':{},'tp':{},'fn':{},'tn':[]}
@@ -788,6 +793,7 @@ class Phitexts:
                                  ptype = phi_type        
                    if not self.eval_start_match(start,gold_dict):
                       if not self.eval_overlap_match(start,end,gold_dict,'gold'):
+                         #print(str(start) + "\t" + str(end) + "\t" + word)
                          if ptype not in eval_table[filename]['fp']:
                             eval_table[filename]['fp'][ptype] = []
                          eval_table[filename]['fp'][ptype].append(word)  
