@@ -542,7 +542,8 @@ class Phitexts:
                               #end = int(final_value***REMOVED***"@end"***REMOVED***)
                               start = int(final_value***REMOVED***"@spans"***REMOVED***.split('~')***REMOVED***0***REMOVED***)
                               end = int(final_value***REMOVED***"@spans"***REMOVED***.split('~')***REMOVED***1***REMOVED***)
-                              text = final_value***REMOVED***"@text"***REMOVED***.translate(translator)
+                              text = final_value***REMOVED***"@text"***REMOVED***.replace('.',' ')
+                              text = text.translate(translator)
                               phi_type = final_value***REMOVED***"@TYPE"***REMOVED***
                               text_split = self._get_clean(text)
                               for i in range(len(text_split)):
@@ -565,7 +566,8 @@ class Phitexts:
                           start = int(final_value***REMOVED***"@spans"***REMOVED***.split('~')***REMOVED***0***REMOVED***)
                           #end = int(final_value***REMOVED***"@end"***REMOVED***)
                           end = int(final_value***REMOVED***"@spans"***REMOVED***.split('~')***REMOVED***1***REMOVED***)
-                          text = final_value***REMOVED***"@text"***REMOVED***.translate(translator)
+                          text = final_value***REMOVED***"@text"***REMOVED***.replace('.',' ')
+                          text = text.translate(translator)
                           phi_type = final_value***REMOVED***"@TYPE"***REMOVED***
                           text_split = self._get_clean(text)
                           for i in range(len(text_split)):
@@ -595,6 +597,7 @@ class Phitexts:
             text = self.texts***REMOVED***filename***REMOVED***
             #exclude_dict = self.coords***REMOVED***filename***REMOVED***
             exclude_dict = self.tokenize_philter_phi(filename)
+            #print(exclude_dict)
             for start in gold_phi***REMOVED***filename***REMOVED***:
                 gold_start = start
                 gold_end = gold_phi***REMOVED***filename***REMOVED******REMOVED***start***REMOVED******REMOVED***0***REMOVED***
@@ -612,6 +615,7 @@ class Phitexts:
                          eval_table***REMOVED***filename***REMOVED******REMOVED***'tp'***REMOVED******REMOVED***gold_type***REMOVED*** = ***REMOVED******REMOVED***
                       eval_table***REMOVED***filename***REMOVED******REMOVED***'tp'***REMOVED******REMOVED***gold_type***REMOVED***.append(gold_word)
                    else:
+                      #print(str(gold_start)+ "\t" + str(gold_end) + "\t" + gold_word)
                       if gold_type not in eval_table***REMOVED***filename***REMOVED******REMOVED***'fn'***REMOVED***:
                          eval_table***REMOVED***filename***REMOVED******REMOVED***'fn'***REMOVED******REMOVED***gold_type***REMOVED*** = ***REMOVED******REMOVED***
                       eval_table***REMOVED***filename***REMOVED******REMOVED***'fn'***REMOVED******REMOVED***gold_type***REMOVED***.append(gold_word)
@@ -623,6 +627,7 @@ class Phitexts:
         for filename in self.coords:
             exclude_dict = self.tokenize_philter_phi(filename)            
             gold_dict = gold_phi***REMOVED***filename***REMOVED***
+            #print(gold_dict)
             if filename in gold_phi:
                if filename not in eval_table:
                   eval_table***REMOVED***filename***REMOVED*** = {'fp':{},'tp':{},'fn':{},'tn':***REMOVED******REMOVED***}
@@ -637,6 +642,7 @@ class Phitexts:
                                  ptype = phi_type        
                    if not self.eval_start_match(start,gold_dict):
                       if not self.eval_overlap_match(start,end,gold_dict,'gold'):
+                         #print(str(start) + "\t" + str(end) + "\t" + word)
                          if ptype not in eval_table***REMOVED***filename***REMOVED******REMOVED***'fp'***REMOVED***:
                             eval_table***REMOVED***filename***REMOVED******REMOVED***'fp'***REMOVED******REMOVED***ptype***REMOVED*** = ***REMOVED******REMOVED***
                          eval_table***REMOVED***filename***REMOVED******REMOVED***'fp'***REMOVED******REMOVED***ptype***REMOVED***.append(word)  
