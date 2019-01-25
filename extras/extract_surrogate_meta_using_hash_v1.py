@@ -1,6 +1,7 @@
 #############################
 #Program Usage:
 ## Python3 extract_using_hash_v1.py <file with the list of directory to traverse> <META 58M file>
+### Note: This script assumes the META file you provide it has four columns in it in the order note_key, date_offset, patient_id and deid_note_key
 ############################
 import sys
 
