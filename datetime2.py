@@ -1,7 +1,7 @@
 import re
 import dateparser
 import datetime
-DATE_1 = datetime.datetime(3004, 12, 12)
+DATE_1 = datetime.datetime(3008, 12, 12)
 DATE_2 = datetime.datetime(1004, 5, 5)
 
 """
@@ -34,7 +34,8 @@ features that datetime2 provides that are:
 """
 class datetime2(datetime.datetime):
     def __new__(cls, year, month, day, date_string = None,
-                missing_year = None,missing_month = None, missing_day = None, missing_century = None):
+                missing_year = None, missing_month = None,
+                missing_day = None, missing_century = None):
         self = datetime.datetime.__new__(cls,year,month,day)
         self.missing_year = missing_year
         self.missing_month = missing_month
@@ -59,6 +60,10 @@ class datetime2(datetime.datetime):
         except OverflowError as err:
             if __debug__: print("WARNING: cannot parse date \"" + date_string
                                 + "\" Overflow Error: {0}".format(err))
+            return None
+        except TypeError as err:
+            if __debug__: print("WARNING: cannot parse date \"" + date_string
+                                + "\" Type Error: {0}".format(err))
             return None
         year = temp_date.year
         month = temp_date.month
@@ -87,21 +92,21 @@ class datetime2(datetime.datetime):
         except ValueError as err:
             raise ValueError("cannot parse date \"" + date_string
                              + "\" {0}".format(err))
-        if parsed_date_2 is None:
-            print("WARNING: experimental date encountered \""
-                  + date_string + "\"")
+        if parsed_date_2 is None: # handles dates like "02-29-00"
+            if parsed_date_1 != datetime.datetime(2000, 2, 29):
+                print("WARNING: unknown date encountered \""
+                      + date_string + "\"")
             missing_century = True
             parsed_date_2 = dateparser.parse(date_string,
                                              settings={'RELATIVE_BASE':DATE_2,
                                                        'PREFER_DATES_FROM':"future"})
-            
+        
         missing_day = parsed_date_1.day != parsed_date_2.day
         missing_month = parsed_date_1.month != parsed_date_2.month
         missing_year = parsed_date_1.year % 100 != parsed_date_2.year % 100
         missing_century = missing_century or (~missing_year
                                               and (parsed_date_1.year
                                                    != parsed_date_2.year))
-
         return missing_year, missing_month, missing_day, missing_century
             
     def add_days(self, number_of_days):
@@ -134,27 +139,49 @@ class datetime2(datetime.datetime):
                          missing_day = self.missing_day,
                          missing_century = self.missing_century)
 
-    def to_string(self):
+    def get_raw_string(self):
+        return self.date_string
+    
+    def to_string(self, debug=False):
+        if debug: date_string = (self.date_string + " (internal: "
+                                 + self.strftime("%m/%d/%Y") + " missing ")
+        
         #month; month dd; month yyyy; mm/dd/yyyy;
         if self.missing_year and self.missing_day:
             #only month
-            return self.strftime("%B")
+            if debug: date_string += "year, day)"
+            else: date_string = self.strftime("%B")
         elif self.missing_year:
             #month dd
-            return self.strftime("%B %d")
+            if debug: date_string += "year)"
+            else: date_string = self.strftime("%B %d")
+        elif self.missing_day and self.missing_month:
+            #year
+            if self.missing_century:
+                #yy
+                if debug: date_string += "century, month, day)"
+                else: date_string = self.strftime("%y")
+            else:
+                #yyyy
+                if debug: date_string += "month, day)"
+                else: date_string = self.strftime("%Y")
         elif self.missing_day:
             #month year
             if self.missing_century:
                 #month yy
-                return self.strftime("%B %y")
+                if debug: date_string += "century, day)"
+                else: date_string = self.strftime("%B %y")
             else:
                 #month yyyy
-                return self.strftime("%B %Y")
+                if debug: date_string += "day)"
+                else: date_string = self.strftime("%B %Y")
+        elif self.missing_century:
+            #mm/dd/yy
+            if debug: date_string += "century)"
+            else: date_string = self.strftime("%m/%d/%y")
         else:
             #mm/dd/yyyy
-            if self.missing_century:
-                #mm/dd/yy
-                return self.strftime("%m/%d/%y")
-            else:
-                #mm/dd/yyyy
-                return self.strftime("%m/%d/%Y")
+            if debug: date_string += "nothing)"
+            else: date_string = self.strftime("%m/%d/%Y")
+
+        return date_string

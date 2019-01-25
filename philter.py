@@ -108,6 +108,9 @@ class Philter:
         #create a memory for tokenized text
         self.cleaned = {}
 
+        #create a memory for tokenized anno text
+        self.clean_filtered = {}
+
         #create a memory for include coordinate map
         self.include_map = CoordinateMap()
 
@@ -118,7 +121,7 @@ class Philter:
         self.full_exclude_map = {}
 
         #create a memory for the list of known PHI types
-        self.phi_type_list = ***REMOVED***'DATE','Patient_Social_Security_Number','Email','Provider_Address_or_Location','Age','Name','OTHER'***REMOVED***
+        self.phi_type_list = ***REMOVED***'DATE','ID','NAME','CONTACT','AGE>=90','NAME','OTHER','LOCATION'***REMOVED***
         
         #create a memory for the corrdinate maps of known PHI types    
         self.phi_type_dict = {}
@@ -130,6 +133,10 @@ class Philter:
 
         #create a memory for pattern index, with titles
         self.pattern_indexes = {}
+
+        #create a memory for token counts per note
+        self.token_data = {}
+
 
         #create a memory for clean words
         #self.clean_words = {}
@@ -174,8 +181,9 @@ class Philter:
     #    return self.pos_tags***REMOVED***filename***REMOVED***
     
     def get_clean(self, filename, text, pre_process= r"***REMOVED***^a-zA-Z0-9***REMOVED***"):
+        tokens = 0
         if filename not in self.cleaned:
-            self.cleaned = {}
+            self.cleaned***REMOVED***filename***REMOVED*** = {}
             # Use pre-process to split sentence by spaces AND symbols, while preserving spaces in the split list
             lst = re.split("(\s+)", text)
             cleaned = ***REMOVED******REMOVED***
@@ -186,10 +194,32 @@ class Philter:
                         for elem in split_item:
                             if len(elem) > 0:
                                 cleaned.append(elem)
+                                tokens += 1
                     else:
                         cleaned.append(item)
-            self.cleaned***REMOVED***filename***REMOVED*** = cleaned
+            self.cleaned***REMOVED***filename***REMOVED*** = (cleaned,tokens)
         return self.cleaned***REMOVED***filename***REMOVED***
+
+    def get_clean_filtered(self, filename, text, pre_process= r"***REMOVED***^a-zA-Z0-9\****REMOVED***", phi_matcher=re.compile(r"\*+")):
+        phi_tokens = 0
+        if filename not in self.clean_filtered:
+            self.clean_filtered***REMOVED***filename***REMOVED*** = {}
+            # Use pre-process to split sentence by spaces AND symbols, while preserving spaces in the split list
+            lst = re.split("(\s+)", text)
+            clean_filtered = ***REMOVED******REMOVED***
+            for item in lst:
+                if len(item) > 0:
+                    if item.isspace() == False:
+                        split_item = re.split("(\s+)", re.sub(pre_process, " ", item))
+                        for elem in split_item:
+                            if len(elem) > 0:
+                                clean_filtered.append(elem)
+                                if phi_matcher.search(elem):
+                                    phi_tokens += 1
+                    else:
+                        clean_filtered.append(item)
+            self.clean_filtered***REMOVED***filename***REMOVED*** = (clean_filtered,phi_tokens)
+        return self.clean_filtered***REMOVED***filename***REMOVED***
     #def get_clean_word(self, filename, word):
     #    if filename not in self.cleaned:
     #        self.clean_words = {}
@@ -289,7 +319,7 @@ class Philter:
 
                 filename = os.path.join(root, f)
 
-                if filename.split(".")***REMOVED***-1***REMOVED*** not in allowed_filetypes:
+                if (filename.split(".")***REMOVED***-1***REMOVED*** not in allowed_filetypes) or 'meta_data' in filename:
                     if self.verbose:
                         print("Skipping: ", filename)
                     continue                
@@ -311,6 +341,9 @@ class Philter:
                 # add file to phi_type_dict
                 for phi_type in self.phi_type_list:
                     self.phi_type_dict***REMOVED***phi_type***REMOVED******REMOVED***0***REMOVED***.add_file(filename)
+
+                # Add total tokens to token dictionary
+                # self.token_data***REMOVED***filename***REMOVED*** = 
 
                 # initialize phi type
                 phi_type = "OTHER"
@@ -367,8 +400,11 @@ class Philter:
 
         # All regexes except matchall
         if regex != re.compile('.'):
-            #if __debug__: print("map_regex(): searching for regex with index " + str(pattern_index))
-            #if __debug__ and pattern_index: print("map_regex(): regex is " + str(regex))
+            if __debug__ and self.verbose:
+                print("map_regex(): searching for regex with index "
+                      + str(pattern_index))
+            if __debug__ and self.verbose and pattern_index:
+                print("map_regex(): regex is " + str(regex))
             matches = regex.finditer(text)
             
             for m in matches:
@@ -540,7 +576,7 @@ class Philter:
         if len(pos_set) > 0:
             check_pos = True
 
-        cleaned = self.get_clean(filename,text)
+        cleaned = self.get_clean(filename,text)***REMOVED***0***REMOVED***
         if check_pos:
             pos_list = self.get_pos(filename, cleaned)# pos_list = nltk.pos_tag(cleaned)
         else:
@@ -600,7 +636,7 @@ class Philter:
         
         # Use pre-process to split sentence by spaces AND symbols, while preserving spaces in the split list
 
-        cleaned = self.get_clean(filename,text)
+        cleaned = self.get_clean(filename,text)***REMOVED***0***REMOVED***
 
         pos_list = self.get_pos(filename, cleaned)#pos_list = nltk.pos_tag(cleaned)
         # if filename == './data/i2b2_notes/160-03.txt':
@@ -1111,24 +1147,8 @@ class Philter:
                 encoding2 = self.detect_encoding(anno_filename)
                 anno = open(anno_filename,"r").read()              
                 
-                anno_words = re.split("(\s+)", anno)
-                # if f == '110-01.txt':
-                #     print(anno_words)
-                #     print(len("".join(anno_words)))
-                anno_words_cleaned = ***REMOVED******REMOVED***
-                for item in anno_words:
-                    if len(item) > 0:
-                        if item.isspace() == False:
-                            split_item = re.split("(\s+)", re.sub(punctuation_matcher, " ", item))
-                            for elem in split_item:
-                                if len(elem) > 0:
-                                    anno_words_cleaned.append(elem)
-                        else:
-                            anno_words_cleaned.append(item)
-                #anno_words_cleaned = self.get_clean(original_filename, anno)
-                # if f == '110-01.txt':
-                #     print(len(philtered_words_cleaned))
-                #     print(len(anno_words_cleaned))               
+                anno_words_cleaned = self.get_clean_filtered(anno_filename, anno)***REMOVED***0***REMOVED***
+           
                 for c,w,r in self.seq_eval(philtered_words_cleaned, anno_words_cleaned, f):
 
                     # Double check that we aren't adding blank spaces or single punctionation characters to our lists
