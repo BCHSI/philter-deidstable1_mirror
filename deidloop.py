@@ -3,22 +3,46 @@ Code to script multithread instances of deidipipe.py
 It creates a queue of directories. Each thread processes a directory.
 It copies the structure of the input in a new location, and renames files.
 """
+import sys
+import argparse
+import distutils.util
 from queue import Queue
 from threading import Thread
 from subprocess import call
 import time
 from shutil import rmtree
+import pandas
+import numpy
 import os
+from logger import get_super_log
+
+def get_args():
+    # gets input/output/filename
+    help_str = """De-identify and surrogate all text files in a set of folders using threads"""
+    
+    ap = argparse.ArgumentParser(description=help_str)
+
+    ap.add_argument("--imofile",
+                    help="Path to the file that contains the list of input"
+                    + " folders, metafiles, output folders",
+                    type=str)
+    ap.add_argument("-t", "--threads", default=1,
+                    help="Number of parallel threads, the default is 1",
+                    type=int)
+    ap.add_argument("--philter",
+                    help="Path to Philter program files like deidpipe.py",
+                    type=str)
+    ap.add_argument("--superlog", 
+                    help="Path to the folder for the super log."
+                    + " When this is set, the pipeline prints and saves a"
+                    + " super log in a subfolder log of the set folder"
+                    + " combining logs of each output directory",
+                    type=str)
+
+    return ap.parse_args()
 
 
-# Set up some global variables
-num_threads = 14
-enclosure_queue = Queue()
-srcBase = "/data/notes/shredded_notes/000/"
-dstBase = "/data/schenkg/deid_notes_20180328/000/"
-mtaBase = "/data/notes/meta_data_20180328/000/"
-
-def runDeidChunck(unit, q):
+def runDeidChunck(unit, q, philterFolder):
     """
     Function to instruct a thread to deid a directory.
     INPUTS:
@@ -30,15 +54,7 @@ def runDeidChunck(unit, q):
         t0 = time.time()
 
         # Tuple to determine path
-        #i,j,k = q.get()
-        r = q.get()
-
-        #Build path to notes, meta and output path
-        srcFolder = r + '/'
-        #srcFolder = os.path.join(r, d) + '/'
-        srcMeta = os.path.join(mtaBase, os.path.relpath(srcFolder, srcBase),
-                               "meta_data.txt")
-        dstFolder = os.path.join(dstBase, os.path.relpath(srcFolder, srcBase)) + '/'
+        srcFolder, srcMeta, dstFolder = q.get()
 
         # Build output directory
         os.makedirs(dstFolder, exist_ok=True)
@@ -46,61 +62,72 @@ def runDeidChunck(unit, q):
         print(str(unit) + " src: " + srcFolder)
         print(str(unit) + " met: " + srcMeta)
         print(str(unit) + " dst: " + dstFolder)
+        print(str(unit) + " cwd: " + philterFolder)
 
         # Run Deid (would be better to interface directly)
         call(["python3", "-O", "deidpipe.py", 
               "-i", srcFolder, 
               "-o", dstFolder, 
-              "-s", srcMeta, 
+              "-s", srcMeta,
+              "-d", "True", 
               "-f", "configs/philter_delta.json",
-              "-l", "False"])
+              "-l", "True"],
+             cwd=philterFolder)
 
-        # Rename files (Keep if we have meta, otherwise toss--also toss log)
-        # Also create map between note_key and deid_note_key
-        mfile = open(srcMeta)
-        head = mfile.readline()
-        noteKey2deidNoteKey = dict()
-        for line in mfile:
-            line = line.split("\t")
-            noteKey2deidNoteKey[line[0]] = line[2]
-
-        # Iterate through output files
-        filenames = os.listdir(dstFolder)
-        for filename in filenames:
-            # Keep if we have meta in dict
-            try:
-                noteKey = filename.strip("0")[:-9]
-                deidNoteKey = noteKey2deidNoteKey[noteKey]
-                os.replace(dstFolder + filename, dstFolder + deidNoteKey
-                           + ".txt")
-            # Toss if we dont
-            except KeyError:
-                try:
-                    os.remove(dstFolder + filename)
-                except IsADirectoryError:
-                    # Remove log
-                    #rmtree(dstFolder + filename)
-                    pass
 
         # Print time elapsed for batch
         t = time.time() - t0
-        print(dstFolder + ": " + str(t) + " seconds")
+        print(str(unit) + " " + dstFolder + ": " + str(t) + " seconds")
 
         q.task_done()
 
 
-# Set up some threads to fetch the enclosures (each thread deids a directory)
-for unit in range(num_threads):
-    worker = Thread(target=runDeidChunck, args=(unit, enclosure_queue,))
-    worker.setDaemon(True)
-    worker.start()
+def main():
+    enclosure_queue = Queue()
+    
+    args = get_args()
+    print("read args")
+    
+    # Set up some threads to fetch the enclosures (each thread deids a directory)
+    print("starting {0} worker threads".format(args.threads))
+    for unit in range(args.threads):
+        worker = Thread(target=runDeidChunck,
+                        args=(unit, enclosure_queue,
+                              os.path.dirname(args.philter),))
+        worker.setDaemon(True)
+        worker.start()
 
-# Build queue
-for root, dirs, files in os.walk(srcBase):
-    if not dirs: enclosure_queue.put(root)
-        
-# Now wait for the queue to be empty, indicating that we have
-# processed all of the notes
-print('*** Main thread waiting')
-enclosure_queue.join()
-print('*** Done')
+    # Build queue
+    with open(args.imofile, 'r') as imo:
+        for line in imo:
+            idir, mfile, odir = line.split()
+            enclosure_queue.put([idir, mfile, odir])
+    
+    # Now wait for the queue to be empty, indicating that we have
+    # processed all of the notes
+    print('*** Main thread waiting')
+    enclosure_queue.join()
+    print('*** Done')
+
+    if args.superlog:
+        # Once all the directories have been processed,
+        # create a superlog that combines all logs in each output directory
+        all_logs = []
+        with open(args.imofile, 'r') as imo:
+            for line in imo:
+                idir, mfile, odir = line.split()
+                all_logs.append(os.path.join(odir, "log",
+                                             "detailed_batch_summary.csv"))
+
+        # Create super log of batch summaries
+        if all_logs != []:
+            get_super_log(all_logs, os.path.join(args.superlog, "log"))
+
+    return 0
+
+if __name__ == "__main__":
+    sys.exit(main())
+
+
+
+
