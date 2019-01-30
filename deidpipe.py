@@ -109,7 +109,7 @@ def main():
     if args.log:
         phitexts.print_log(args.output)
     if args.eval:
-        phitexts.eval(args.anno, args.input, args.output)
+        phitexts.eval(args.anno, args.output)
 
     return EXIT_SUCCESS
 
