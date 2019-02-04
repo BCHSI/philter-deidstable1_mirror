@@ -59,7 +59,7 @@ def check_existing_phi(filename,note_text, tag_dict,philter_start, philter_end):
                   text_end = final_value***REMOVED***"@spans"***REMOVED***.split('~')***REMOVED***1***REMOVED***
                   philter_text = final_value***REMOVED***"@text"***REMOVED***
                   phi_type = final_value***REMOVED***"@TYPE"***REMOVED***
-                  if phi_type == "DATE" or phi_type == "Date":
+                  if phi_type == "DATE" or phi_type == "Date" or phi_type == "HOLIDAYS":
                      #print(philter_start +'\t' + text_start + '\t' + philter_end + '\t' + text_end)
                      if int(philter_start) >= int(text_start) and int(philter_end) <= int(text_end):                      
                          existing_phi_value = True                      
@@ -76,7 +76,7 @@ def check_existing_phi(filename,note_text, tag_dict,philter_start, philter_end):
                phi_type = final_value***REMOVED***"@TYPE"***REMOVED***
                text_start = final_value***REMOVED***"@spans"***REMOVED***.split('~')***REMOVED***0***REMOVED***
                text_end = final_value***REMOVED***"@spans"***REMOVED***.split('~')***REMOVED***1***REMOVED***
-               if phi_type == "DATE" or phi_type == "Date":
+               if phi_type == "DATE" or phi_type == "Date" or phi_type == "HOLIDAYS":
                   if ((philter_start >= text_start) & (philter_start <= text_end)):       
                      existing_phi_value = True
     return existing_phi_value
@@ -96,94 +96,76 @@ def update_xml_head(note_text,tags_dict):
         contents_head.append("<TAGS>\n")
         return "".join(contents_head)
 
+def contents_append(tags_dict,phi_type,input_type,count,count_h):
+        contents.append("<")
+        contents.append(phi_type)
+        if phi_type == "DATE" or phi_type == "Date":
+           contents.append(" id=\"D")
+           contents.append(str(count))
+           count = count + 1
+        elif phi_type == "HOLIDAYS":
+           contents.append(" id=\"H")
+           contents.append(str(count_h))
+           count_h = count_h + 1
+        else:
+           contents.append(" id=\"")
+           contents.append(str(tags_dict***REMOVED***"@id"***REMOVED***))
+        contents.append("\" spans=\"")
+        if input_type == "Gold":        
+           contents.append(str(tags_dict***REMOVED***"@spans"***REMOVED***))
+        else:
+           contents.append(str(tags_dict***REMOVED***"@start"***REMOVED***))
+           contents.append("~")
+           contents.append(str(tags_dict***REMOVED***"@end"***REMOVED***))
+        contents.append("\" text=\"")
+        contents.append(str(tags_dict***REMOVED***"@text"***REMOVED***))
+        contents.append("\" TYPE=\"")
+        contents.append(phi_type)
+        contents.append("\" comment=\"\" />\n")
+        return count,count_h,contents
 
 def update_xml_tags(tags_dict,final_value):
         """ Creates the tags string to append to the updated xml output file. Note the function merges a new PHI identified by philter to the existing annotated PHI and modifies the tag ID to be sequential while merging """
         count = 0 
+        count_h = 0
         if tags_dict is not None:
-          #print(philter_tags_dict)
-           
+           i = 0
            inserted = False 
            for key, value in tags_dict.items():
+               i = i+1
               # Note:  Value can be a list of like phi elements
               #               or a dictionary of the metadata about a phi element
-           
-                   
                if isinstance(value, list):
                   for tag_value in value:  
                       phi_type = tag_value***REMOVED***"@TYPE"***REMOVED*** 
                       tagcategory = phi_type
-                      #print(tag_value***REMOVED***"@spans"***REMOVED***.split('~')***REMOVED***0***REMOVED*** + '\t' + final_value***REMOVED***"@start"***REMOVED*** + '\t' + str(inserted))
-                      if ((int(tag_value***REMOVED***"@spans"***REMOVED***.split('~')***REMOVED***0***REMOVED***) >= int(final_value***REMOVED***"@start"***REMOVED***)) and not inserted):
-                          contents.append("<")
-                          contents.append("Date")
-                          contents.append(" id=\"D")
-                          contents.append(str(count))
-                          count = count + 1
-                          contents.append("\" spans=\"")
-                          contents.append(str(final_value***REMOVED***"@start"***REMOVED***))
-                          contents.append("~")
-                          contents.append(str(final_value***REMOVED***"@end"***REMOVED***))
-                          contents.append("\" text=\"")
-                          contents.append(str(final_value***REMOVED***"@text"***REMOVED***))
-                          contents.append("\" TYPE=\"")
-                          contents.append("Date")
-                          contents.append("\" comment=\"\" />\n")
+                      
+                      if int(tag_value***REMOVED***"@spans"***REMOVED***.split('~')***REMOVED***0***REMOVED***) >= int(final_value***REMOVED***"@start"***REMOVED***):
+                        if not inserted:
+                          count,count_h,contents = contents_append(final_value, final_value***REMOVED***"@TYPE"***REMOVED***, "Philter", count,count_h)
                           inserted = True
-
-                          contents.append("<")
-                          contents.append(phi_type)
-                          if phi_type == "DATE" or phi_type == "Date":
-                             contents.append(" id=\"D")
-                             contents.append(str(count))
-                             count = count + 1
-                          else:
-                             contents.append(" id=\"")
-                             contents.append(str(tag_value***REMOVED***"@id"***REMOVED***))
-                          contents.append("\" spans=\"")
-                          contents.append(str(tag_value***REMOVED***"@spans"***REMOVED***))
-                          contents.append("\" text=\"")
-                          contents.append(str(tag_value***REMOVED***"@text"***REMOVED***))
-                          contents.append("\" TYPE=\"")
-                          contents.append(phi_type)
-                          contents.append("\" comment=\"\" />\n")                          
-
-                      else:   
-                          contents.append("<")
-                          contents.append(phi_type)
-                          if phi_type == "DATE" or phi_type == "Date": 
-                             contents.append(" id=\"D")
-                             contents.append(str(count))
-                             count = count + 1
-                          else:
-                             contents.append(" id=\"")
-                             contents.append(str(tag_value***REMOVED***"@id"***REMOVED***))
-                          contents.append("\" spans=\"")
-                          contents.append(str(tag_value***REMOVED***"@spans"***REMOVED***))
-                          contents.append("\" text=\"")
-                          contents.append(str(tag_value***REMOVED***"@text"***REMOVED***))
-                          contents.append("\" TYPE=\"")
-                          contents.append(phi_type)
-                          contents.append("\" comment=\"\" />\n")
-        
+                        count,count_h,contents = contents_append(tag_value,phi_type, "Gold", count,count_h) 
+                       
+                      elif (int(tag_value***REMOVED***"@spans"***REMOVED***.split('~')***REMOVED***0***REMOVED***) < int(final_value***REMOVED***"@start"***REMOVED***)):   
+                        count,count_h,contents = contents_append(tag_value,phi_type, "Gold", count,count_h)
+                      
+                      if not inserted and i == len(tags_dict)-1:
+                         inserted = True
+                         count,count_h,contents = contents_append(final_value, final_value***REMOVED***"@TYPE"***REMOVED***, "Philter", count,count_h)
+               else:
+                  if int(value***REMOVED***"@spans"***REMOVED***.split('~')***REMOVED***0***REMOVED***) >= int(final_value***REMOVED***"@start"***REMOVED***):
+                     if not inserted:
+                        count,count_h,contents = contents_append(final_value, final_value***REMOVED***"@TYPE"***REMOVED***, "Philter", count,count_h)
+                        inserted = True
+                     count,count_h,contents = contents_append(value,value***REMOVED***"@TYPE"***REMOVED***, "Gold", count,count_h)
+                  elif (int(value***REMOVED***"@spans"***REMOVED***.split('~')***REMOVED***0***REMOVED***) < int(final_value***REMOVED***"@start"***REMOVED***)):
+                     count,count_h,contents = contents_append(value,value***REMOVED***"@TYPE"***REMOVED***, "Gold", count,count_h)
+                  if not inserted and i == len(tags_dict)-1:
+                     count,count_h,contents = contents_append(final_value, final_value***REMOVED***"@TYPE"***REMOVED***, "Philter", count,count_h)
+                     inserted = True
         else:
-            contents.append("<")
-            contents.append("Date")
-            contents.append(" id=\"D")
-            contents.append(str(count))
-            count = count + 1
-            contents.append("\" spans=\"")
-            contents.append(str(final_value***REMOVED***"@start"***REMOVED***))
-            contents.append("~")
-            contents.append(str(final_value***REMOVED***"@end"***REMOVED***))
-            contents.append("\" text=\"")
-            contents.append(str(final_value***REMOVED***"@text"***REMOVED***))
-            contents.append("\" TYPE=\"")
-            contents.append("Date")
-            contents.append("\" comment=\"\" />\n")
-
-
-
+            count,count_h,contents = contents_append(final_value, final_value***REMOVED***"@TYPE"***REMOVED***, "Philter", count,count_h)
+            inserted = True
         return contents
 
 
@@ -230,7 +212,7 @@ for filename in os.listdir(xml_dir):
                      text_end = final_value***REMOVED***"@end"***REMOVED***
                      philter_text = final_value***REMOVED***"@text"***REMOVED***
                      philter_phi_type = final_value***REMOVED***"@TYPE"***REMOVED***
-                     if philter_phi_type == "DATE" or philter_phi_type == "Date":
+                     if philter_phi_type == "DATE" or philter_phi_type == "Date" or phi_type == "HOLIDAYS":
                         existing_phi_new_val = check_existing_phi(filename,note_text, tags_dict, text_start, text_end)
                         if existing_phi_new_val:
                            #_type == "DATE" or phi_type == "Date":
@@ -242,7 +224,7 @@ for filename in os.listdir(xml_dir):
                   phi_type = final_value***REMOVED***"@TYPE"***REMOVED***
                   text_start = final_value***REMOVED***"@start"***REMOVED***
                   text_end = final_value***REMOVED***"@end"***REMOVED***
-                  if phi_type == "DATE" or phi_type == "Date":
+                  if phi_type == "DATE" or phi_type == "Date" or phi_type == "HOLIDAYS":
                      existing_phi_new_val = check_existing_phi(filename,note_text, tags_dict, text_start, text_end)
                      if existing_phi_new_val:
                         existing_phi.add(final_value***REMOVED***"@id"***REMOVED***)
