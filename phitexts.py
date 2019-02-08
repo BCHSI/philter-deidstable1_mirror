@@ -361,7 +361,7 @@ class Phitexts:
         log_dir = os.path.join(output_dir, 'log/')
         failed_dates_file = os.path.join(log_dir, 'failed_dates.json')
         date_table_file = os.path.join(log_dir, 'parsed_dates.json')
-        phi_count_file = os.path.join(log_dir, 'phi_count.txt')
+        phi_count_file = os.path.join(log_dir, 'phi_count.log')
         phi_marked_file = os.path.join(log_dir, 'phi_marked.json')
 
         eval_table = {}
@@ -445,7 +445,7 @@ class Phitexts:
         with open(phi_marked_file, 'w') as f:
             json.dump(phi_table, f)
 
-    def _get_phi_tokens(phi):
+    def _get_phi_tokens(self,phi):
         tokens = {}
         phi_split = self._get_clean(phi)
         offset = 0
@@ -456,17 +456,17 @@ class Phitexts:
                 continue
             token_start = phi.find(item_stripped, offset)
             if token_start is -1:
-                raise Exception("EROOR: cannot find token \"{0}\" in \"{1}\" starting at {2} in file {3}".format(item, word, start, filename))
-            token_start += start
+                raise Exception("ERROR: cannot find token \"{0}\" in \"{1}\" starting at {2} in file {3}".format(item, phi, offset))
             token_stop = token_start + len(item_stripped)
             offset += len(item)
             tokens.update({token_start:[token_stop,item_stripped]})
         return tokens
 
-    def _get_phi_type(filename, start, stop):
+    def _get_phi_type(self, filename, start, stop):
         for phi_type in self.types.keys():
-            if start,stop in self.types[phi_type][0].filecoords(filename):
-                return phi_type
+            for begin,end in self.types[phi_type][0].filecoords(filename):
+                if start == begin:
+                    return phi_type
             #for begin,end  in self.types[phi_type][0].filecoords(filename):
             #    if begin <= start and stop <= end:
             #        return phi_type
@@ -475,20 +475,21 @@ class Phitexts:
     def _tokenize_philter_phi(self, filename):
         exclude_dict = self.coords[filename]
         #print(filename)
-        #s = string.punctuation.replace('/','')
-        #s = s.replace('-', '')
-        #s = s.replace(',', '')
-        #translator = str.maketrans('', '', s)
         updated_dict = {}
         for i in exclude_dict:
             start, end = i, exclude_dict[i]
-            phi_type = _get_phi_type(filename, start, end)
-            word = self.texts[filename][start:end]#.translate(translator)
-            #word = word.replace(',','')
-            tokens = _get_phi_tokens(word)
-            for token_start in tokens:
-                token_stop = tokens[token_start][0]
-                token = tokens[token_start][1]
+            phi_type = self._get_phi_type(filename, start, end)
+            word = self.texts[filename][start:end]
+            
+            try:
+                tokens = self._get_phi_tokens(word)
+            except Exception as err:
+                raise Exception("ERROR: cannot get tokens in \"{0}\" starting at {1} in file {2}: {3}".format(word, start, filename, err))
+            
+            for tstart in tokens:
+                token_start = tstart + start
+                token_stop = tokens[tstart][0] + start
+                token = tokens[tstart][1]
                 updated_dict.update({token_start:[token_stop, phi_type, token]})
         return updated_dict
     
@@ -510,22 +511,99 @@ class Phitexts:
             if input_dict_end >= end and start >= input_dict_start:
                return True
         return False       
+            
+    def _get_sub_tokens(self, token1, token2):
+        
+        if token1['stop'] < token2['start']: # tokens do not overlap
+            return None
 
-    def _get_gold_phi(anno_dir):
+        subtokens1 = {}
+        subtokens2 = {}
+        left = {}
+        middle = {}
+        right = {}
+        
+        # looks for dangling beginning
+        if token1['start'] <= token2['start']: # token1 has dangling beginning
+            left['start'] = token1['start']
+            left['length'] = token2['start'] - token1['start']
+            left['stop'] = token2['start'] - 1
+            left['phitype'] = token1['phitype']
+            left['token'] = token1['token'][0:['length']]
+            subtokens1.append({left['start']:[left['stop'], left['phitype'],
+                                              left['token']]})
+        elif token1['start'] > token2['start']: # token2 has dangling beginning
+            left['start'] = token2['start']
+            left['length'] = token1['start'] - token2['start']
+            left['stop'] = token1['start'] - 1
+            left['phitype'] = token2['phitype']
+            left['token'] = token2['token'][0:['length']]
+            subtokens2.append({left['start']:[left['stop'], left['phitype'],
+                                              left['token']]})
+        elif token1['start'] > token2['start']: # token2 has dangling 
+        else: # tokens have the same start
+            left['start'] = token1['start']
+            left['length'] = 0
+            left['stop'] = token1['start'] - 1
+            left['phitype'] = None
+            left['token'] = ""
+
+        # looks for middle portion
+        middle['start'] = left['stop'] + 1
+        middle['length'] = right['start'] - middle['start']
+        middle['stop'] = right['start'] - 1
+        middle['phitype'] = (token1['phitype'], token2['phitype'])
+        middle['token'] = token1['token'][left['length']:left['length']+middle['length']]
+        if not middle['token'] == token2['token'][left['length']:left['length']+middle['length']]:
+            raise Exception("ERROR: string mismatch in tokens: \"{0}\" and \"{1}\"".format(token1['token'], token2['token']))
+
+        subtokens1.append({middle['start']:[middle['stop'], middle['phitype'],
+                                            middle['token']]})
+        subtokens2.append({middle['start']:[middle['stop'], middle['phitype'],
+                                            middle['token']]})
+
+        # looks for dangling end
+        if token1['stop'] < token2['stop']: # token2 has dangling end
+            right['start'] = token1['stop'] + 1
+            right['length'] = token2['stop'] - token1['stop']
+            right['stop'] = token2['stop']
+            right['phitype'] = token2['phitype']
+            right['token'] = token2['token'][-right['length']:]
+            subtokens2.append({right['start']:[right['stop'], right['phitype'],
+                                               right['token']]})
+        elif token2['stop'] < token1['stop']: # token1 has dangling end
+            right['start'] = token2['stop'] + 1
+            right['length'] = token1['stop'] - token2['stop']
+            right['stop'] = token1['stop']
+            right['phitype'] = token1['phitype']
+            right['token'] = token1['token'][-right['length']:]
+            subtokens1.append({right['start']:[right['stop'], right['phitype'],
+                                               right['token']]})
+        else: # tokens have the same end
+            right['start'] = token1['stop'] + 1
+            right['length'] = 0
+            right['stop'] = token1['stop']
+            right['phitype'] = None
+            right['token'] = ""
+
+        return subtokens1, subtokens2
+    
+    def _get_gold_phi(self, anno_dir):
         gold_phi = {}
         for root, dirs, files in os.walk(anno_dir):
             for filename in files:
                 if not filename.endswith("xml"):
-                    continue                
+                    continue
+                print("root: " + str(root) + " filename: " + str(filename))
                 filepath = os.path.join(root, filename)
                 #filepath = os.path.join(anno_dir, filename)
                 # change here: what will the input format be?
                 file_id = self.inputdir + filename.split('.')[0] + '.txt'
                 tree = ET.parse(filepath)
-                root = tree.getroot()
-                xmlstr = ET.tostring(root, encoding='utf8', method='xml')
+                rt = tree.getroot()
+                xmlstr = ET.tostring(rt, encoding='utf8', method='xml')
                 xml_dict = xmltodict.parse(xmlstr)['PhilterUCSF']
-                check_tags = root.find('TAGS')
+                check_tags = rt.find('TAGS')
                 full_text = xml_dict["TEXT"]
                 if check_tags is not None:
                    tags_dict = xml_dict["TAGS"]
@@ -537,54 +615,86 @@ class Phitexts:
                 # the existence of puncs in text makes the end index inaccurate - only use start index as the key
                 if tags_dict is not None: 
 
-                   for key, value in tags_dict.items():
-                       if not isinstance(value, list):
-                           value = [value]
+                    for key, value in tags_dict.items():
+                        if not isinstance(value, list):
+                            value = [value]
                         for final_value in value:
                             start = int(final_value["@spans"].split('~')[0])
                             end = int(final_value["@spans"].split('~')[1])
-                            text = final_value["@text"]#.replace('.',' ')
-                            #text = text.translate(translator)
+                            text = final_value["@text"]
                             phi_type = final_value["@TYPE"]
-                            tokens = _get_phi_tokens(text)
-                            for token_start in tokens:
-                                token_stop = tokens[token_start][0]
-                                token = tokens[token_start][1]
+
+                            try:
+                                tokens = self._get_phi_tokens(text)
+                            except Exception as err:
+                                raise Exception("EROOR: cannot get tokens in \"{0}\" starting at {1} in file {2}: {3}".format(text, start, filename, err))
+            
+                            for tstart in tokens:
+                                token_start = tstart + start
+                                token_stop = tokens[tstart][0] + start
+                                token = tokens[tstart][1]
                                 gold_phi[file_id].update({token_start:[token_stop,
                                                                        phi_type,
                                                                        token]})
         return gold_phi
+
+    def _get_philter_phi(self, filenames):
+        philter_phi = {}
+        for filename in filenames:
+            philter_phi[filename] = self._tokenize_philter_phi(filename)
+        return philter_phi
+
+    def _update_with_sub_tokens(gold_phi, philter_phi):
+        gold = {}
+        philter = {}
+        for filename in gold_phi:
+            for gstart in gold_phi[filename]:
+                gold['start'] = gstart
+                gold['stop'] = gold_phi[filename][start][0]
+                gold['phitype'] = gold_phi[filename][start][1]
+                gold['token'] = gold_phi[filename][start][2]
+                for pstart in philter_phi(filename):
+                    philter['start'] = pstart
+                    philter['stop'] = philter_phi[filename][start][0]
+                    philter['phitype'] = philter_phi[filename][start][1]
+                    philter['token'] = philter_phi[filename][start][2]
+                    subtokens = self._get_sub_tokens(gold, philter)
+                    if subtokens is None:
+                        continue
+                    for st in subtoken[0]:
+                        gold_phi[filename].update({st['start']:[st['stop'],
+                                                                st['phitype'],
+                                                                st['token']]})
+                    for st in subtoken[1]:
+                        philter_phi[filename].update({st['start']:[st['stop'],
+                                                                   st['phitype'],
+                                                                   st['token']]})
+        
     
- 
     def eval(self, anno_dir, output_dir):
         # preserve these two puncs so that dates are complete
 
         ### TO DO: eval should be using read_xml_into_coordinateMap for reading the xml
         ######### Create a get function to get Lu's data structure given the coordinate maps
         
-        #s = string.punctuation.replace('/','')
-        #s = s.replace('-', '')
-        #translator = str.maketrans('', '', s)
-        
         include_tags = {'Age','Diagnosis_Code_ICD_or_International','Medical4_Department_Name','Patient_Language_Spoken','Patient_Place_Of_Work_or_Occupation','Medical_Research_Study_Name_or_Number','Teaching_Institution_Name','Non_UCSF_Medical_Institution_Name','Medical_Institution_Abbreviation', 'Unclear'}
         eval_dir = os.path.join(output_dir, 'eval/')
         summary_file = os.path.join(eval_dir, 'summary.json')
         json_summary_by_file = os.path.join(eval_dir, 'summary_by_file.json')
         json_summary_by_category = os.path.join(eval_dir, 'summary_by_category.json')
-        if os.path.isdir(eval_dir):
-            pass
-        else:
+        if not os.path.isdir(eval_dir):
             os.makedirs(eval_dir)       
 
 
-        text_fp_file = open(os.path.join(eval_dir,'fp.txt'),"w+")
-        text_tp_file = open(os.path.join(eval_dir,'tp.txt'),"w+")
-        text_fn_file = open(os.path.join(eval_dir,'fn.txt'),"w+")
-        text_tn_file = open(os.path.join(eval_dir,'tn.txt'),"w+")
+        text_fp_file = open(os.path.join(eval_dir,'fp.eval'),"w+")
+        text_tp_file = open(os.path.join(eval_dir,'tp.eval'),"w+")
+        text_fn_file = open(os.path.join(eval_dir,'fn.eval'),"w+")
+        text_tn_file = open(os.path.join(eval_dir,'tn.eval'),"w+")
 
 
-        # gets GOLD phi
-        gold_phi = _get_gold_phi(anno_dir)
+        gold_phi = self._get_gold_phi(anno_dir)
+        philter_phi = self._get_philter_phi(gold_phi.keys())
+        self._update_with_sub_tokens(gold_phi, philter_phi)
                                  
         # converting self.types to an easier accessible data structure
         eval_table = {}
@@ -597,7 +707,7 @@ class Phitexts:
             # token_set = self._get_clean(self.texts[filename])
             text = self.texts[filename]
             #exclude_dict = self.coords[filename]
-            exclude_dict = self.tokenize_philter_phi(filename)
+            exclude_dict = self._tokenize_philter_phi(filename)
             #print(exclude_dict)
             for start in gold_phi[filename]:
                 gold_start = start
@@ -626,7 +736,7 @@ class Phitexts:
             non_phi[filename] = self._get_clean(text)
         
         for filename in self.coords:
-            exclude_dict = self.tokenize_philter_phi(filename)            
+            exclude_dict = self._tokenize_philter_phi(filename)            
             gold_dict = gold_phi[filename]
             #print(gold_dict)
             if filename in gold_phi:
