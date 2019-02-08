@@ -377,7 +377,7 @@ class Phitexts:
 
         failed_dates_file = os.path.join(log_dir, 'failed_dates.json')
         date_table_file = os.path.join(log_dir, 'parsed_dates.json')
-        phi_count_file = os.path.join(log_dir, 'phi_count.txt')
+        phi_count_file = os.path.join(log_dir, 'phi_count.log')
         phi_marked_file = os.path.join(log_dir, 'phi_marked.json')
         batch_summary_file = os.path.join(log_dir, 'batch_summary.txt')
 
@@ -596,7 +596,7 @@ class Phitexts:
         # Other PHI
 
 
-    def _get_phi_tokens(phi):
+    def _get_phi_tokens(self,phi):
         tokens = {}
         phi_split = self._get_clean(phi)
         offset = 0
@@ -607,17 +607,17 @@ class Phitexts:
                 continue
             token_start = phi.find(item_stripped, offset)
             if token_start is -1:
-                raise Exception("EROOR: cannot find token \"{0}\" in \"{1}\" starting at {2} in file {3}".format(item, word, start, filename))
-            token_start += start
+                raise Exception("ERROR: cannot find token \"{0}\" in \"{1}\" starting at {2} in file {3}".format(item, phi, offset))
             token_stop = token_start + len(item_stripped)
             offset += len(item)
             tokens.update({token_start:***REMOVED***token_stop,item_stripped***REMOVED***})
         return tokens
 
-    def _get_phi_type(filename, start, stop):
+    def _get_phi_type(self, filename, start, stop):
         for phi_type in self.types.keys():
-            if start,stop in self.types***REMOVED***phi_type***REMOVED******REMOVED***0***REMOVED***.filecoords(filename):
-                return phi_type
+            for begin,end in self.types***REMOVED***phi_type***REMOVED******REMOVED***0***REMOVED***.filecoords(filename):
+                if start == begin:
+                    return phi_type
             #for begin,end  in self.types***REMOVED***phi_type***REMOVED******REMOVED***0***REMOVED***.filecoords(filename):
             #    if begin <= start and stop <= end:
             #        return phi_type
@@ -626,20 +626,21 @@ class Phitexts:
     def _tokenize_philter_phi(self, filename):
         exclude_dict = self.coords***REMOVED***filename***REMOVED***
         #print(filename)
-        #s = string.punctuation.replace('/','')
-        #s = s.replace('-', '')
-        #s = s.replace(',', '')
-        #translator = str.maketrans('', '', s)
         updated_dict = {}
         for i in exclude_dict:
             start, end = i, exclude_dict***REMOVED***i***REMOVED***
-            phi_type = _get_phi_type(filename, start, end)
-            word = self.texts***REMOVED***filename***REMOVED******REMOVED***start:end***REMOVED***#.translate(translator)
-            #word = word.replace(',','')
-            tokens = _get_phi_tokens(word)
-            for token_start in tokens:
-                token_stop = tokens***REMOVED***token_start***REMOVED******REMOVED***0***REMOVED***
-                token = tokens***REMOVED***token_start***REMOVED******REMOVED***1***REMOVED***
+            phi_type = self._get_phi_type(filename, start, end)
+            word = self.texts***REMOVED***filename***REMOVED******REMOVED***start:end***REMOVED***
+            
+            try:
+                tokens = self._get_phi_tokens(word)
+            except Exception as err:
+                raise Exception("ERROR: cannot get tokens in \"{0}\" starting at {1} in file {2}: {3}".format(word, start, filename, err))
+            
+            for tstart in tokens:
+                token_start = tstart + start
+                token_stop = tokens***REMOVED***tstart***REMOVED******REMOVED***0***REMOVED*** + start
+                token = tokens***REMOVED***tstart***REMOVED******REMOVED***1***REMOVED***
                 updated_dict.update({token_start:***REMOVED***token_stop, phi_type, token***REMOVED***})
         return updated_dict
     
@@ -661,22 +662,99 @@ class Phitexts:
             if input_dict_end >= end and start >= input_dict_start:
                return True
         return False       
+            
+    def _get_sub_tokens(self, token1, token2):
+        
+        if token1***REMOVED***'stop'***REMOVED*** < token2***REMOVED***'start'***REMOVED***: # tokens do not overlap
+            return None
 
-    def _get_gold_phi(anno_dir):
+        subtokens1 = {}
+        subtokens2 = {}
+        left = {}
+        middle = {}
+        right = {}
+        
+        # looks for dangling beginning
+        if token1***REMOVED***'start'***REMOVED*** <= token2***REMOVED***'start'***REMOVED***: # token1 has dangling beginning
+            left***REMOVED***'start'***REMOVED*** = token1***REMOVED***'start'***REMOVED***
+            left***REMOVED***'length'***REMOVED*** = token2***REMOVED***'start'***REMOVED*** - token1***REMOVED***'start'***REMOVED***
+            left***REMOVED***'stop'***REMOVED*** = token2***REMOVED***'start'***REMOVED*** - 1
+            left***REMOVED***'phitype'***REMOVED*** = token1***REMOVED***'phitype'***REMOVED***
+            left***REMOVED***'token'***REMOVED*** = token1***REMOVED***'token'***REMOVED******REMOVED***0:***REMOVED***'length'***REMOVED******REMOVED***
+            subtokens1.append({left***REMOVED***'start'***REMOVED***:***REMOVED***left***REMOVED***'stop'***REMOVED***, left***REMOVED***'phitype'***REMOVED***,
+                                              left***REMOVED***'token'***REMOVED******REMOVED***})
+        elif token1***REMOVED***'start'***REMOVED*** > token2***REMOVED***'start'***REMOVED***: # token2 has dangling beginning
+            left***REMOVED***'start'***REMOVED*** = token2***REMOVED***'start'***REMOVED***
+            left***REMOVED***'length'***REMOVED*** = token1***REMOVED***'start'***REMOVED*** - token2***REMOVED***'start'***REMOVED***
+            left***REMOVED***'stop'***REMOVED*** = token1***REMOVED***'start'***REMOVED*** - 1
+            left***REMOVED***'phitype'***REMOVED*** = token2***REMOVED***'phitype'***REMOVED***
+            left***REMOVED***'token'***REMOVED*** = token2***REMOVED***'token'***REMOVED******REMOVED***0:***REMOVED***'length'***REMOVED******REMOVED***
+            subtokens2.append({left***REMOVED***'start'***REMOVED***:***REMOVED***left***REMOVED***'stop'***REMOVED***, left***REMOVED***'phitype'***REMOVED***,
+                                              left***REMOVED***'token'***REMOVED******REMOVED***})
+        elif token1***REMOVED***'start'***REMOVED*** > token2***REMOVED***'start'***REMOVED***: # token2 has dangling 
+        else: # tokens have the same start
+            left***REMOVED***'start'***REMOVED*** = token1***REMOVED***'start'***REMOVED***
+            left***REMOVED***'length'***REMOVED*** = 0
+            left***REMOVED***'stop'***REMOVED*** = token1***REMOVED***'start'***REMOVED*** - 1
+            left***REMOVED***'phitype'***REMOVED*** = None
+            left***REMOVED***'token'***REMOVED*** = ""
+
+        # looks for middle portion
+        middle***REMOVED***'start'***REMOVED*** = left***REMOVED***'stop'***REMOVED*** + 1
+        middle***REMOVED***'length'***REMOVED*** = right***REMOVED***'start'***REMOVED*** - middle***REMOVED***'start'***REMOVED***
+        middle***REMOVED***'stop'***REMOVED*** = right***REMOVED***'start'***REMOVED*** - 1
+        middle***REMOVED***'phitype'***REMOVED*** = (token1***REMOVED***'phitype'***REMOVED***, token2***REMOVED***'phitype'***REMOVED***)
+        middle***REMOVED***'token'***REMOVED*** = token1***REMOVED***'token'***REMOVED******REMOVED***left***REMOVED***'length'***REMOVED***:left***REMOVED***'length'***REMOVED***+middle***REMOVED***'length'***REMOVED******REMOVED***
+        if not middle***REMOVED***'token'***REMOVED*** == token2***REMOVED***'token'***REMOVED******REMOVED***left***REMOVED***'length'***REMOVED***:left***REMOVED***'length'***REMOVED***+middle***REMOVED***'length'***REMOVED******REMOVED***:
+            raise Exception("ERROR: string mismatch in tokens: \"{0}\" and \"{1}\"".format(token1***REMOVED***'token'***REMOVED***, token2***REMOVED***'token'***REMOVED***))
+
+        subtokens1.append({middle***REMOVED***'start'***REMOVED***:***REMOVED***middle***REMOVED***'stop'***REMOVED***, middle***REMOVED***'phitype'***REMOVED***,
+                                            middle***REMOVED***'token'***REMOVED******REMOVED***})
+        subtokens2.append({middle***REMOVED***'start'***REMOVED***:***REMOVED***middle***REMOVED***'stop'***REMOVED***, middle***REMOVED***'phitype'***REMOVED***,
+                                            middle***REMOVED***'token'***REMOVED******REMOVED***})
+
+        # looks for dangling end
+        if token1***REMOVED***'stop'***REMOVED*** < token2***REMOVED***'stop'***REMOVED***: # token2 has dangling end
+            right***REMOVED***'start'***REMOVED*** = token1***REMOVED***'stop'***REMOVED*** + 1
+            right***REMOVED***'length'***REMOVED*** = token2***REMOVED***'stop'***REMOVED*** - token1***REMOVED***'stop'***REMOVED***
+            right***REMOVED***'stop'***REMOVED*** = token2***REMOVED***'stop'***REMOVED***
+            right***REMOVED***'phitype'***REMOVED*** = token2***REMOVED***'phitype'***REMOVED***
+            right***REMOVED***'token'***REMOVED*** = token2***REMOVED***'token'***REMOVED******REMOVED***-right***REMOVED***'length'***REMOVED***:***REMOVED***
+            subtokens2.append({right***REMOVED***'start'***REMOVED***:***REMOVED***right***REMOVED***'stop'***REMOVED***, right***REMOVED***'phitype'***REMOVED***,
+                                               right***REMOVED***'token'***REMOVED******REMOVED***})
+        elif token2***REMOVED***'stop'***REMOVED*** < token1***REMOVED***'stop'***REMOVED***: # token1 has dangling end
+            right***REMOVED***'start'***REMOVED*** = token2***REMOVED***'stop'***REMOVED*** + 1
+            right***REMOVED***'length'***REMOVED*** = token1***REMOVED***'stop'***REMOVED*** - token2***REMOVED***'stop'***REMOVED***
+            right***REMOVED***'stop'***REMOVED*** = token1***REMOVED***'stop'***REMOVED***
+            right***REMOVED***'phitype'***REMOVED*** = token1***REMOVED***'phitype'***REMOVED***
+            right***REMOVED***'token'***REMOVED*** = token1***REMOVED***'token'***REMOVED******REMOVED***-right***REMOVED***'length'***REMOVED***:***REMOVED***
+            subtokens1.append({right***REMOVED***'start'***REMOVED***:***REMOVED***right***REMOVED***'stop'***REMOVED***, right***REMOVED***'phitype'***REMOVED***,
+                                               right***REMOVED***'token'***REMOVED******REMOVED***})
+        else: # tokens have the same end
+            right***REMOVED***'start'***REMOVED*** = token1***REMOVED***'stop'***REMOVED*** + 1
+            right***REMOVED***'length'***REMOVED*** = 0
+            right***REMOVED***'stop'***REMOVED*** = token1***REMOVED***'stop'***REMOVED***
+            right***REMOVED***'phitype'***REMOVED*** = None
+            right***REMOVED***'token'***REMOVED*** = ""
+
+        return subtokens1, subtokens2
+    
+    def _get_gold_phi(self, anno_dir):
         gold_phi = {}
         for root, dirs, files in os.walk(anno_dir):
             for filename in files:
                 if not filename.endswith("xml"):
-                    continue                
+                    continue
+                print("root: " + str(root) + " filename: " + str(filename))
                 filepath = os.path.join(root, filename)
                 #filepath = os.path.join(anno_dir, filename)
                 # change here: what will the input format be?
                 file_id = self.inputdir + filename.split('.')***REMOVED***0***REMOVED*** + '.txt'
                 tree = ET.parse(filepath)
-                root = tree.getroot()
-                xmlstr = ET.tostring(root, encoding='utf8', method='xml')
+                rt = tree.getroot()
+                xmlstr = ET.tostring(rt, encoding='utf8', method='xml')
                 xml_dict = xmltodict.parse(xmlstr)***REMOVED***'PhilterUCSF'***REMOVED***
-                check_tags = root.find('TAGS')
+                check_tags = rt.find('TAGS')
                 full_text = xml_dict***REMOVED***"TEXT"***REMOVED***
                 if check_tags is not None:
                    tags_dict = xml_dict***REMOVED***"TAGS"***REMOVED***
@@ -688,54 +766,86 @@ class Phitexts:
                 # the existence of puncs in text makes the end index inaccurate - only use start index as the key
                 if tags_dict is not None: 
 
-                   for key, value in tags_dict.items():
-                       if not isinstance(value, list):
-                           value = ***REMOVED***value***REMOVED***
+                    for key, value in tags_dict.items():
+                        if not isinstance(value, list):
+                            value = ***REMOVED***value***REMOVED***
                         for final_value in value:
                             start = int(final_value***REMOVED***"@spans"***REMOVED***.split('~')***REMOVED***0***REMOVED***)
                             end = int(final_value***REMOVED***"@spans"***REMOVED***.split('~')***REMOVED***1***REMOVED***)
-                            text = final_value***REMOVED***"@text"***REMOVED***#.replace('.',' ')
-                            #text = text.translate(translator)
+                            text = final_value***REMOVED***"@text"***REMOVED***
                             phi_type = final_value***REMOVED***"@TYPE"***REMOVED***
-                            tokens = _get_phi_tokens(text)
-                            for token_start in tokens:
-                                token_stop = tokens***REMOVED***token_start***REMOVED******REMOVED***0***REMOVED***
-                                token = tokens***REMOVED***token_start***REMOVED******REMOVED***1***REMOVED***
+
+                            try:
+                                tokens = self._get_phi_tokens(text)
+                            except Exception as err:
+                                raise Exception("EROOR: cannot get tokens in \"{0}\" starting at {1} in file {2}: {3}".format(text, start, filename, err))
+            
+                            for tstart in tokens:
+                                token_start = tstart + start
+                                token_stop = tokens***REMOVED***tstart***REMOVED******REMOVED***0***REMOVED*** + start
+                                token = tokens***REMOVED***tstart***REMOVED******REMOVED***1***REMOVED***
                                 gold_phi***REMOVED***file_id***REMOVED***.update({token_start:***REMOVED***token_stop,
                                                                        phi_type,
                                                                        token***REMOVED***})
         return gold_phi
+
+    def _get_philter_phi(self, filenames):
+        philter_phi = {}
+        for filename in filenames:
+            philter_phi***REMOVED***filename***REMOVED*** = self._tokenize_philter_phi(filename)
+        return philter_phi
+
+    def _update_with_sub_tokens(gold_phi, philter_phi):
+        gold = {}
+        philter = {}
+        for filename in gold_phi:
+            for gstart in gold_phi***REMOVED***filename***REMOVED***:
+                gold***REMOVED***'start'***REMOVED*** = gstart
+                gold***REMOVED***'stop'***REMOVED*** = gold_phi***REMOVED***filename***REMOVED******REMOVED***start***REMOVED******REMOVED***0***REMOVED***
+                gold***REMOVED***'phitype'***REMOVED*** = gold_phi***REMOVED***filename***REMOVED******REMOVED***start***REMOVED******REMOVED***1***REMOVED***
+                gold***REMOVED***'token'***REMOVED*** = gold_phi***REMOVED***filename***REMOVED******REMOVED***start***REMOVED******REMOVED***2***REMOVED***
+                for pstart in philter_phi(filename):
+                    philter***REMOVED***'start'***REMOVED*** = pstart
+                    philter***REMOVED***'stop'***REMOVED*** = philter_phi***REMOVED***filename***REMOVED******REMOVED***start***REMOVED******REMOVED***0***REMOVED***
+                    philter***REMOVED***'phitype'***REMOVED*** = philter_phi***REMOVED***filename***REMOVED******REMOVED***start***REMOVED******REMOVED***1***REMOVED***
+                    philter***REMOVED***'token'***REMOVED*** = philter_phi***REMOVED***filename***REMOVED******REMOVED***start***REMOVED******REMOVED***2***REMOVED***
+                    subtokens = self._get_sub_tokens(gold, philter)
+                    if subtokens is None:
+                        continue
+                    for st in subtoken***REMOVED***0***REMOVED***:
+                        gold_phi***REMOVED***filename***REMOVED***.update({st***REMOVED***'start'***REMOVED***:***REMOVED***st***REMOVED***'stop'***REMOVED***,
+                                                                st***REMOVED***'phitype'***REMOVED***,
+                                                                st***REMOVED***'token'***REMOVED******REMOVED***})
+                    for st in subtoken***REMOVED***1***REMOVED***:
+                        philter_phi***REMOVED***filename***REMOVED***.update({st***REMOVED***'start'***REMOVED***:***REMOVED***st***REMOVED***'stop'***REMOVED***,
+                                                                   st***REMOVED***'phitype'***REMOVED***,
+                                                                   st***REMOVED***'token'***REMOVED******REMOVED***})
+        
     
- 
     def eval(self, anno_dir, output_dir):
         # preserve these two puncs so that dates are complete
 
         ### TO DO: eval should be using read_xml_into_coordinateMap for reading the xml
         ######### Create a get function to get Lu's data structure given the coordinate maps
         
-        #s = string.punctuation.replace('/','')
-        #s = s.replace('-', '')
-        #translator = str.maketrans('', '', s)
-        
         include_tags = {'Age','Diagnosis_Code_ICD_or_International','Medical4_Department_Name','Patient_Language_Spoken','Patient_Place_Of_Work_or_Occupation','Medical_Research_Study_Name_or_Number','Teaching_Institution_Name','Non_UCSF_Medical_Institution_Name','Medical_Institution_Abbreviation', 'Unclear'}
         eval_dir = os.path.join(output_dir, 'eval/')
         summary_file = os.path.join(eval_dir, 'summary.json')
         json_summary_by_file = os.path.join(eval_dir, 'summary_by_file.json')
         json_summary_by_category = os.path.join(eval_dir, 'summary_by_category.json')
-        if os.path.isdir(eval_dir):
-            pass
-        else:
+        if not os.path.isdir(eval_dir):
             os.makedirs(eval_dir)       
 
 
-        text_fp_file = open(os.path.join(eval_dir,'fp.txt'),"w+")
-        text_tp_file = open(os.path.join(eval_dir,'tp.txt'),"w+")
-        text_fn_file = open(os.path.join(eval_dir,'fn.txt'),"w+")
-        text_tn_file = open(os.path.join(eval_dir,'tn.txt'),"w+")
+        text_fp_file = open(os.path.join(eval_dir,'fp.eval'),"w+")
+        text_tp_file = open(os.path.join(eval_dir,'tp.eval'),"w+")
+        text_fn_file = open(os.path.join(eval_dir,'fn.eval'),"w+")
+        text_tn_file = open(os.path.join(eval_dir,'tn.eval'),"w+")
 
 
-        # gets GOLD phi
-        gold_phi = _get_gold_phi(anno_dir)
+        gold_phi = self._get_gold_phi(anno_dir)
+        philter_phi = self._get_philter_phi(gold_phi.keys())
+        self._update_with_sub_tokens(gold_phi, philter_phi)
                                  
         # converting self.types to an easier accessible data structure
         eval_table = {}
@@ -748,7 +858,7 @@ class Phitexts:
             # token_set = self._get_clean(self.texts***REMOVED***filename***REMOVED***)
             text = self.texts***REMOVED***filename***REMOVED***
             #exclude_dict = self.coords***REMOVED***filename***REMOVED***
-            exclude_dict = self.tokenize_philter_phi(filename)
+            exclude_dict = self._tokenize_philter_phi(filename)
             #print(exclude_dict)
             for start in gold_phi***REMOVED***filename***REMOVED***:
                 gold_start = start
@@ -777,7 +887,7 @@ class Phitexts:
             non_phi***REMOVED***filename***REMOVED*** = self._get_clean(text)
         
         for filename in self.coords:
-            exclude_dict = self.tokenize_philter_phi(filename)            
+            exclude_dict = self._tokenize_philter_phi(filename)            
             gold_dict = gold_phi***REMOVED***filename***REMOVED***
             #print(gold_dict)
             if filename in gold_phi:
