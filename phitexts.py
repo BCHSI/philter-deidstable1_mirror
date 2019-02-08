@@ -218,7 +218,8 @@ class Phitexts:
                for filename, start, end in self.types***REMOVED***phi_type***REMOVED******REMOVED***0***REMOVED***.scan():
                     token = self.texts***REMOVED***filename***REMOVED******REMOVED***start:end***REMOVED***
                     normalized_token = Subs.parse_date(token)
-                    self.norms***REMOVED***phi_type***REMOVED*** ***REMOVED***(filename, start)***REMOVED*** = (normalized_token, end)
+                    self.norms***REMOVED***phi_type***REMOVED******REMOVED***(filename, start)***REMOVED*** = (normalized_token,
+                                                               end)
             else:
                 continue
 
@@ -414,7 +415,8 @@ class Phitexts:
             normalized_date = self.norms***REMOVED***phi_type***REMOVED******REMOVED***(filename,start)***REMOVED******REMOVED***0***REMOVED***
             
             if filename not in parse_info:
-                parse_info***REMOVED***filename***REMOVED*** = {'success_norm':0,'fail_norm':0,'success_sub':0,'fail_sub':0}
+                parse_info***REMOVED***filename***REMOVED*** = {'success_norm':0,'fail_norm':0,
+                                        'success_sub':0,'fail_sub':0}
             if filename not in eval_table:
                 eval_table***REMOVED***filename***REMOVED*** = ***REMOVED******REMOVED***
 
@@ -437,7 +439,10 @@ class Phitexts:
                      sub = None	
                      parse_info***REMOVED***filename***REMOVED******REMOVED***'fail_sub'***REMOVED*** += 1
 
-                eval_table***REMOVED***filename***REMOVED***.append({'start':start, 'end':end, 'raw': raw, 'normalized': normalized_token, 'sub': sub})
+                eval_table***REMOVED***filename***REMOVED***.append({'start':start, 'end':end,
+                                             'raw': raw,
+                                             'normalized': normalized_token,
+                                             'sub': sub})
                     # f_parsed.write('\t'.join(***REMOVED***filename, str(start), str(end), raw, normalized_token, sub***REMOVED***))
                     # f_parsed.write('\n')
             else:
@@ -448,7 +453,8 @@ class Phitexts:
                     # f_failed.write('\n')
                 if filename not in failed_date:
                         failed_date***REMOVED***filename***REMOVED*** = ***REMOVED******REMOVED***
-                failed_date***REMOVED***filename***REMOVED***.append({'start':start, 'end':end, 'raw': raw})
+                failed_date***REMOVED***filename***REMOVED***.append({'start':start, 'end':end,
+                                              'raw': raw})
 
         if __debug__:
             print ('Successfully parsed: ' + str(num_parsed) + ' dates.')
@@ -466,7 +472,8 @@ class Phitexts:
                     if filename not in phi_table:
                         phi_table***REMOVED***filename***REMOVED*** = ***REMOVED******REMOVED***
                     word = self.texts***REMOVED***filename***REMOVED******REMOVED***start:end***REMOVED***
-                    phi_table***REMOVED***filename***REMOVED***.append({'start': start, 'end': end, 'word': word, 'type': phi_type})
+                    phi_table***REMOVED***filename***REMOVED***.append({'start': start, 'end': end,
+                                                'word': word, 'type': phi_type})
 
                     if phi_type not in phi_counter:
                         phi_counter***REMOVED***phi_type***REMOVED*** = 0
@@ -948,156 +955,110 @@ class Phitexts:
                                                gold_sets, philter_sets)
         falsenegatives_sets = self._get_fn_sets(gold_sets, philter_sets)
         
-        # converting self.types to an easier accessible data structure
-        eval_table = {}
-        phi_table = {}
-        non_phi = {}
-        for filename in gold_phi:
-            if filename not in eval_table:
-                eval_table***REMOVED***filename***REMOVED*** = {'fp':{},'tp':{},'fn':{},'tn':{}}
-            # each ele contains an annotated phi
-            # token_set = self._get_clean(self.texts***REMOVED***filename***REMOVED***)
-            text = self.texts***REMOVED***filename***REMOVED***
-            #exclude_dict = self.coords***REMOVED***filename***REMOVED***
-            exclude_dict = self._tokenize_philter_phi(filename)
-            #print(exclude_dict)
-            for start in gold_phi***REMOVED***filename***REMOVED***:
-                gold_start = start
-                gold_end = gold_phi***REMOVED***filename***REMOVED******REMOVED***start***REMOVED******REMOVED***0***REMOVED***
-                gold_type = gold_phi***REMOVED***filename***REMOVED******REMOVED***start***REMOVED******REMOVED***1***REMOVED***
-                gold_word = gold_phi***REMOVED***filename***REMOVED******REMOVED***start***REMOVED******REMOVED***2***REMOVED***
-                # remove phi from text to form the non_phi_set
-                text = text.replace(gold_word, '')
-                if filename in self.coords:
-                   if self.eval_start_match(gold_start,exclude_dict):
-                      if gold_type not in eval_table***REMOVED***filename***REMOVED******REMOVED***'tp'***REMOVED***:
-                         eval_table***REMOVED***filename***REMOVED******REMOVED***'tp'***REMOVED******REMOVED***gold_type***REMOVED*** = ***REMOVED******REMOVED***
-                      eval_table***REMOVED***filename***REMOVED******REMOVED***'tp'***REMOVED******REMOVED***gold_type***REMOVED***.append(gold_word)
-                   elif self.eval_overlap_match(gold_start,gold_end,exclude_dict,'philter'):
-                      if gold_type not in eval_table***REMOVED***filename***REMOVED******REMOVED***'tp'***REMOVED***:
-                         eval_table***REMOVED***filename***REMOVED******REMOVED***'tp'***REMOVED******REMOVED***gold_type***REMOVED*** = ***REMOVED******REMOVED***
-                      eval_table***REMOVED***filename***REMOVED******REMOVED***'tp'***REMOVED******REMOVED***gold_type***REMOVED***.append(gold_word)
-                   else:
-                      #print(str(gold_start)+ "\t" + str(gold_end) + "\t" + gold_word)
-                      if gold_type not in eval_table***REMOVED***filename***REMOVED******REMOVED***'fn'***REMOVED***:
-                         eval_table***REMOVED***filename***REMOVED******REMOVED***'fn'***REMOVED******REMOVED***gold_type***REMOVED*** = ***REMOVED******REMOVED***
-                      eval_table***REMOVED***filename***REMOVED******REMOVED***'fn'***REMOVED******REMOVED***gold_type***REMOVED***.append(gold_word)
-                else:
-                    print (filename + ' not processed by philter or check filename!')
-                    continue
-            non_phi***REMOVED***filename***REMOVED*** = self._get_clean(text)
+        # # converting self.types to an easier accessible data structure
+        # eval_table = {}
+        # phi_table = {}
+        # non_phi = {}
+        # for filename in gold_phi:
+        #     if filename not in eval_table:
+        #         eval_table***REMOVED***filename***REMOVED*** = {'fp':{},'tp':{},'fn':{},'tn':{}}
+        #     # each ele contains an annotated phi
+        #     # token_set = self._get_clean(self.texts***REMOVED***filename***REMOVED***)
+        #     text = self.texts***REMOVED***filename***REMOVED***
+        #     #exclude_dict = self.coords***REMOVED***filename***REMOVED***
+        #     exclude_dict = self._tokenize_philter_phi(filename)
+        #     #print(exclude_dict)
+        #     for start in gold_phi***REMOVED***filename***REMOVED***:
+        #         gold_start = start
+        #         gold_end = gold_phi***REMOVED***filename***REMOVED******REMOVED***start***REMOVED******REMOVED***0***REMOVED***
+        #         gold_type = gold_phi***REMOVED***filename***REMOVED******REMOVED***start***REMOVED******REMOVED***1***REMOVED***
+        #         gold_word = gold_phi***REMOVED***filename***REMOVED******REMOVED***start***REMOVED******REMOVED***2***REMOVED***
+        #         # remove phi from text to form the non_phi_set
+        #         text = text.replace(gold_word, '')
+        #         if filename in self.coords:
+        #            if self.eval_start_match(gold_start,exclude_dict):
+        #               if gold_type not in eval_table***REMOVED***filename***REMOVED******REMOVED***'tp'***REMOVED***:
+        #                  eval_table***REMOVED***filename***REMOVED******REMOVED***'tp'***REMOVED******REMOVED***gold_type***REMOVED*** = ***REMOVED******REMOVED***
+        #               eval_table***REMOVED***filename***REMOVED******REMOVED***'tp'***REMOVED******REMOVED***gold_type***REMOVED***.append(gold_word)
+        #            elif self.eval_overlap_match(gold_start,gold_end,exclude_dict,'philter'):
+        #               if gold_type not in eval_table***REMOVED***filename***REMOVED******REMOVED***'tp'***REMOVED***:
+        #                  eval_table***REMOVED***filename***REMOVED******REMOVED***'tp'***REMOVED******REMOVED***gold_type***REMOVED*** = ***REMOVED******REMOVED***
+        #               eval_table***REMOVED***filename***REMOVED******REMOVED***'tp'***REMOVED******REMOVED***gold_type***REMOVED***.append(gold_word)
+        #            else:
+        #               #print(str(gold_start)+ "\t" + str(gold_end) + "\t" + gold_word)
+        #               if gold_type not in eval_table***REMOVED***filename***REMOVED******REMOVED***'fn'***REMOVED***:
+        #                  eval_table***REMOVED***filename***REMOVED******REMOVED***'fn'***REMOVED******REMOVED***gold_type***REMOVED*** = ***REMOVED******REMOVED***
+        #               eval_table***REMOVED***filename***REMOVED******REMOVED***'fn'***REMOVED******REMOVED***gold_type***REMOVED***.append(gold_word)
+        #         else:
+        #             print (filename + ' not processed by philter or check filename!')
+        #             continue
+        #     non_phi***REMOVED***filename***REMOVED*** = self._get_clean(text)
         
-        for filename in self.coords:
-            exclude_dict = self._tokenize_philter_phi(filename)            
-            gold_dict = gold_phi***REMOVED***filename***REMOVED***
-            #print(gold_dict)
-            if filename in gold_phi:
-               if filename not in eval_table:
-                  eval_table***REMOVED***filename***REMOVED*** = {'fp':{},'tp':{},'fn':{},'tn':***REMOVED******REMOVED***}
-               for start in exclude_dict:
-                   end = exclude_dict***REMOVED***start***REMOVED***
-                   ptype = 'OTHER'
-                   word = self.texts***REMOVED***filename***REMOVED******REMOVED***start:end***REMOVED***.translate(translator) 
-                   for phi_type in self.types:
-                       for fname, st, ed in self.types***REMOVED***phi_type***REMOVED******REMOVED***0***REMOVED***.scan():
-                           if fname == filename:
-                              if st == start:
-                                 ptype = phi_type        
-                   if not self.eval_start_match(start,gold_dict):
-                      if not self.eval_overlap_match(start,end,gold_dict,'gold'):
-                         #print(str(start) + "\t" + str(end) + "\t" + word)
-                         if ptype not in eval_table***REMOVED***filename***REMOVED******REMOVED***'fp'***REMOVED***:
-                            eval_table***REMOVED***filename***REMOVED******REMOVED***'fp'***REMOVED******REMOVED***ptype***REMOVED*** = ***REMOVED******REMOVED***
-                         eval_table***REMOVED***filename***REMOVED******REMOVED***'fp'***REMOVED******REMOVED***ptype***REMOVED***.append(word)  
-                         if word in non_phi***REMOVED***filename***REMOVED***:
-                            non_phi***REMOVED***filename***REMOVED***.remove(word)
-                      else:
-                         if ptype not in eval_table***REMOVED***filename***REMOVED******REMOVED***'tp'***REMOVED***:
-                            eval_table***REMOVED***filename***REMOVED******REMOVED***'tp'***REMOVED******REMOVED***ptype***REMOVED*** = ***REMOVED******REMOVED***
-                         eval_table***REMOVED***filename***REMOVED******REMOVED***'tp'***REMOVED******REMOVED***ptype***REMOVED***.append(word)
-                         if word in non_phi***REMOVED***filename***REMOVED***:
-                            non_phi***REMOVED***filename***REMOVED***.remove(word)
+        # for filename in self.coords:
+        #     exclude_dict = self._tokenize_philter_phi(filename)            
+        #     gold_dict = gold_phi***REMOVED***filename***REMOVED***
+        #     #print(gold_dict)
+        #     if filename in gold_phi:
+        #        if filename not in eval_table:
+        #           eval_table***REMOVED***filename***REMOVED*** = {'fp':{},'tp':{},'fn':{},'tn':***REMOVED******REMOVED***}
+        #        for start in exclude_dict:
+        #            end = exclude_dict***REMOVED***start***REMOVED***
+        #            ptype = 'OTHER'
+        #            word = self.texts***REMOVED***filename***REMOVED******REMOVED***start:end***REMOVED***.translate(translator) 
+        #            for phi_type in self.types:
+        #                for fname, st, ed in self.types***REMOVED***phi_type***REMOVED******REMOVED***0***REMOVED***.scan():
+        #                    if fname == filename:
+        #                       if st == start:
+        #                          ptype = phi_type        
+        #            if not self.eval_start_match(start,gold_dict):
+        #               if not self.eval_overlap_match(start,end,gold_dict,'gold'):
+        #                  #print(str(start) + "\t" + str(end) + "\t" + word)
+        #                  if ptype not in eval_table***REMOVED***filename***REMOVED******REMOVED***'fp'***REMOVED***:
+        #                     eval_table***REMOVED***filename***REMOVED******REMOVED***'fp'***REMOVED******REMOVED***ptype***REMOVED*** = ***REMOVED******REMOVED***
+        #                  eval_table***REMOVED***filename***REMOVED******REMOVED***'fp'***REMOVED******REMOVED***ptype***REMOVED***.append(word)  
+        #                  if word in non_phi***REMOVED***filename***REMOVED***:
+        #                     non_phi***REMOVED***filename***REMOVED***.remove(word)
+        #               else:
+        #                  if ptype not in eval_table***REMOVED***filename***REMOVED******REMOVED***'tp'***REMOVED***:
+        #                     eval_table***REMOVED***filename***REMOVED******REMOVED***'tp'***REMOVED******REMOVED***ptype***REMOVED*** = ***REMOVED******REMOVED***
+        #                  eval_table***REMOVED***filename***REMOVED******REMOVED***'tp'***REMOVED******REMOVED***ptype***REMOVED***.append(word)
+        #                  if word in non_phi***REMOVED***filename***REMOVED***:
+        #                     non_phi***REMOVED***filename***REMOVED***.remove(word)
                     
-            else:
-               print (filename + ' not found!')
-        # the rest is all TN
-        for filename in non_phi:
-            if filename not in eval_table:
-                eval_table***REMOVED***filename***REMOVED*** = {'fp':{},'tp':{},'fn':{},'tn':{}}
-            eval_table***REMOVED***filename***REMOVED******REMOVED***'tn'***REMOVED*** = non_phi***REMOVED***filename***REMOVED***
+        #     else:
+        #        print (filename + ' not found!')
+        # # the rest is all TN
+        # for filename in non_phi:
+        #     if filename not in eval_table:
+        #         eval_table***REMOVED***filename***REMOVED*** = {'fp':{},'tp':{},'fn':{},'tn':{}}
+        #     eval_table***REMOVED***filename***REMOVED******REMOVED***'tn'***REMOVED*** = non_phi***REMOVED***filename***REMOVED***
+
 
         summary_by_category = {}
         summary_by_file = {}
         total_tp = 0
-        total_fn = 0
-        total_tn = 0
         total_fp = 0
-        for filename in eval_table:
-            # file-level counters
-            tp = 0
-            fn = 0
-            tn = 0
-            fp = 0
+        total_tn = 0
+        total_fn = 0
+        for filename in self.filenames:
             if filename not in summary_by_file:
                 summary_by_file***REMOVED***filename***REMOVED*** = {}
-            for phi_type in eval_table***REMOVED***filename***REMOVED******REMOVED***'tp'***REMOVED***:
-                if phi_type not in include_tags:
-                   tp += len(eval_table***REMOVED***filename***REMOVED******REMOVED***'tp'***REMOVED******REMOVED***phi_type***REMOVED***)
-                   total_tp += len(eval_table***REMOVED***filename***REMOVED******REMOVED***'tp'***REMOVED******REMOVED***phi_type***REMOVED***)
-                   if phi_type not in summary_by_category:
-                      summary_by_category***REMOVED***phi_type***REMOVED*** = {}
-                   if 'tp' not in summary_by_category***REMOVED***phi_type***REMOVED***:
-                      summary_by_category***REMOVED***phi_type***REMOVED******REMOVED***'tp'***REMOVED*** = ***REMOVED******REMOVED***
-                   summary_by_category***REMOVED***phi_type***REMOVED******REMOVED***'tp'***REMOVED***.append(eval_table***REMOVED***filename***REMOVED******REMOVED***'tp'***REMOVED******REMOVED***phi_type***REMOVED***)
-                   text_tp_file.write('\n'+filename+'\t' + phi_type + '\t')
-                   tp_to_file = ('\n' + filename +'\t'+ phi_type + '\t').join(eval_table***REMOVED***filename***REMOVED******REMOVED***"tp"***REMOVED******REMOVED***phi_type***REMOVED***)
-                   text_tp_file.write(tp_to_file)
-                else:
-                   fp += len(eval_table***REMOVED***filename***REMOVED******REMOVED***'tp'***REMOVED******REMOVED***phi_type***REMOVED***)
-                   total_fp += len(eval_table***REMOVED***filename***REMOVED******REMOVED***'tp'***REMOVED******REMOVED***phi_type***REMOVED***)
-                   if phi_type not in summary_by_category:
-                      summary_by_category***REMOVED***phi_type***REMOVED*** = {}
-                   if 'fp' not in summary_by_category***REMOVED***phi_type***REMOVED***:
-                      summary_by_category***REMOVED***phi_type***REMOVED******REMOVED***'fp'***REMOVED*** = ***REMOVED******REMOVED***
-                   summary_by_category***REMOVED***phi_type***REMOVED******REMOVED***'fp'***REMOVED***.append(eval_table***REMOVED***filename***REMOVED******REMOVED***'tp'***REMOVED******REMOVED***phi_type***REMOVED***) 
-                   text_fp_file.write('\n'+filename+ '\t'+ phi_type + '\t')
-                   fp_to_file = ('\n'+ filename + '\t'+ phi_type + '\t').join(eval_table***REMOVED***filename***REMOVED******REMOVED***"tp"***REMOVED******REMOVED***phi_type***REMOVED***) 
-                   text_fp_file.write(fp_to_file)
-            for phi_type in eval_table***REMOVED***filename***REMOVED******REMOVED***'fp'***REMOVED***:
-                fp += len(eval_table***REMOVED***filename***REMOVED******REMOVED***'fp'***REMOVED******REMOVED***phi_type***REMOVED***)
-                total_fp += len(eval_table***REMOVED***filename***REMOVED******REMOVED***'fp'***REMOVED******REMOVED***phi_type***REMOVED***)
-                if phi_type not in summary_by_category:
-                    summary_by_category***REMOVED***phi_type***REMOVED*** = {}
-                if 'fp' not in summary_by_category***REMOVED***phi_type***REMOVED***:
-                    summary_by_category***REMOVED***phi_type***REMOVED******REMOVED***'fp'***REMOVED*** = ***REMOVED******REMOVED***
-                summary_by_category***REMOVED***phi_type***REMOVED******REMOVED***'fp'***REMOVED***.append(eval_table***REMOVED***filename***REMOVED******REMOVED***'fp'***REMOVED******REMOVED***phi_type***REMOVED***)
-                text_fp_file.write('\n'+ filename + '\t'+ phi_type + '\t')
-                fp_to_file = ('\n' + filename + '\t'+ phi_type + '\t').join(eval_table***REMOVED***filename***REMOVED******REMOVED***"fp"***REMOVED******REMOVED***phi_type***REMOVED***)
-                text_fp_file.write(fp_to_file)
-            for phi_type in eval_table***REMOVED***filename***REMOVED******REMOVED***'fn'***REMOVED***:
-                if phi_type not in include_tags:
-                   fn += len(eval_table***REMOVED***filename***REMOVED******REMOVED***'fn'***REMOVED******REMOVED***phi_type***REMOVED***)
-                   total_fn += len(eval_table***REMOVED***filename***REMOVED******REMOVED***'fn'***REMOVED******REMOVED***phi_type***REMOVED***)
-                   if phi_type not in summary_by_category:
-                      summary_by_category***REMOVED***phi_type***REMOVED*** = {}
-                   if 'fn' not in summary_by_category***REMOVED***phi_type***REMOVED***:
-                      summary_by_category***REMOVED***phi_type***REMOVED******REMOVED***'fn'***REMOVED*** = ***REMOVED******REMOVED***
-                   summary_by_category***REMOVED***phi_type***REMOVED******REMOVED***'fn'***REMOVED***.append(eval_table***REMOVED***filename***REMOVED******REMOVED***'fn'***REMOVED******REMOVED***phi_type***REMOVED***)
-                   text_fn_file.write('\n'+ filename + '\t'+ phi_type + '\t')
-                   fn_to_file = ('\n'+ filename + '\t'+ phi_type + '\t').join(eval_table***REMOVED***filename***REMOVED******REMOVED***"fn"***REMOVED******REMOVED***phi_type***REMOVED***)
-                   text_fn_file.write(fn_to_file)
-                else:
-                   tn += len(eval_table***REMOVED***filename***REMOVED******REMOVED***'fn'***REMOVED******REMOVED***phi_type***REMOVED***)
-                   total_tn += len(eval_table***REMOVED***filename***REMOVED******REMOVED***'fn'***REMOVED******REMOVED***phi_type***REMOVED***)
-                   text_tn_file.write('\n'+ filename + '\t'+ phi_type + '\t')
-                   tn_to_file = ('\n' + filename + '\t'+ phi_type + '\t').join(eval_table***REMOVED***filename***REMOVED******REMOVED***"fn"***REMOVED******REMOVED***phi_type***REMOVED***)
-                   text_tn_file.write(tn_to_file)
-            tn += len(eval_table***REMOVED***filename***REMOVED******REMOVED***'tn'***REMOVED***)
-            total_tn += len(eval_table***REMOVED***filename***REMOVED******REMOVED***'tn'***REMOVED***)
-            text_tn_file.write('\n'+ filename + '\t'+ phi_type + '\t') 
-            tn_to_file = ('\n' + filename + '\t'+ phi_type + '\t').join(eval_table***REMOVED***filename***REMOVED******REMOVED***"tn"***REMOVED***)
-            text_tn_file.write(tn_to_file) 
-             
+                
+            # file-level counters
+            tp = (len(truepositives_sets***REMOVED***filename***REMOVED***) if filename in
+                  truepositives_sets else 0)
+            fp = (len(falsepositives_sets***REMOVED***filename***REMOVED***) if filename in
+                  falsepositives_sets else 0)
+            tn = (len(truenegatives_sets***REMOVED***filename***REMOVED***) if filename in
+                  truenegatives_sets else 0)
+            fn = (len(falsenegatives_sets***REMOVED***filename***REMOVED***) if filename in
+                  falsenegatives_sets else 0)
+            
+            total_tp += tp
+            total_fp += fp
+            total_tn += tn
+            total_fn += fn
+              
             try:  
                precision = tp / (tp + fp)
             except ZeroDivisionError:
@@ -1106,22 +1067,124 @@ class Phitexts:
                recall = tp / (tp + fn)
             except ZeroDivisionError:
                recall = 0
-            summary_by_file***REMOVED***filename***REMOVED***.update({'tp':tp, 'fp': fp, 'fn':fn, 'tn':tn, 'recall':recall,'precision':precision})
-            # summary_by_category***REMOVED***filename***REMOVED***.update({'tp':tp, 'fp': fp, 'fn':fn, 'tn':tn, 'recall':recall,'precision':precision})
+            summary_by_file***REMOVED***filename***REMOVED***.update({'tp':tp, 'fp': fp,
+                                              'fn':fn, 'tn':tn,
+                                              'recall':recall,
+                                              'precision':precision})
         
         try:
            total_precision = total_tp / (total_tp + total_fp)
         except ZeroDivisionError:
            total_precision = 0     
-
         try:
            total_recall = total_tp / (total_tp + total_fn)
         except ZeroDivisionError:
            total_recall = 0
-        total_summary = {'tp':total_tp, 'tn':total_tn, 'fp':total_fp, 'fn':total_fn, 'precision':total_precision, 'recall':total_recall}
+        total_summary = {'tp':total_tp, 'fp':total_fp,
+                         'tn':total_tn, 'fn':total_fn,
+                         'precision':total_precision, 'recall':total_recall}
         json.dump(total_summary, open(summary_file, "w"), indent=4)
         json.dump(summary_by_file, open(json_summary_by_file, "w"), indent=4)
-        json.dump(summary_by_category, open(json_summary_by_category, "w"), indent=4)
+
+
+
+        
+        # summary_by_category = {}
+        # summary_by_file = {}
+        # total_tp = 0
+        # total_fn = 0
+        # total_tn = 0
+        # total_fp = 0
+        # for filename in eval_table:
+        #     # file-level counters
+        #     tp = 0
+        #     fn = 0
+        #     tn = 0
+        #     fp = 0
+        #     if filename not in summary_by_file:
+        #         summary_by_file***REMOVED***filename***REMOVED*** = {}
+        #     for phi_type in eval_table***REMOVED***filename***REMOVED******REMOVED***'tp'***REMOVED***:
+        #         if phi_type not in include_tags:
+        #            tp += len(eval_table***REMOVED***filename***REMOVED******REMOVED***'tp'***REMOVED******REMOVED***phi_type***REMOVED***)
+        #            total_tp += len(eval_table***REMOVED***filename***REMOVED******REMOVED***'tp'***REMOVED******REMOVED***phi_type***REMOVED***)
+        #            if phi_type not in summary_by_category:
+        #               summary_by_category***REMOVED***phi_type***REMOVED*** = {}
+        #            if 'tp' not in summary_by_category***REMOVED***phi_type***REMOVED***:
+        #               summary_by_category***REMOVED***phi_type***REMOVED******REMOVED***'tp'***REMOVED*** = ***REMOVED******REMOVED***
+        #            summary_by_category***REMOVED***phi_type***REMOVED******REMOVED***'tp'***REMOVED***.append(eval_table***REMOVED***filename***REMOVED******REMOVED***'tp'***REMOVED******REMOVED***phi_type***REMOVED***)
+        #            text_tp_file.write('\n'+filename+'\t' + phi_type + '\t')
+        #            tp_to_file = ('\n' + filename +'\t'+ phi_type + '\t').join(eval_table***REMOVED***filename***REMOVED******REMOVED***"tp"***REMOVED******REMOVED***phi_type***REMOVED***)
+        #            text_tp_file.write(tp_to_file)
+        #         else:
+        #            fp += len(eval_table***REMOVED***filename***REMOVED******REMOVED***'tp'***REMOVED******REMOVED***phi_type***REMOVED***)
+        #            total_fp += len(eval_table***REMOVED***filename***REMOVED******REMOVED***'tp'***REMOVED******REMOVED***phi_type***REMOVED***)
+        #            if phi_type not in summary_by_category:
+        #               summary_by_category***REMOVED***phi_type***REMOVED*** = {}
+        #            if 'fp' not in summary_by_category***REMOVED***phi_type***REMOVED***:
+        #               summary_by_category***REMOVED***phi_type***REMOVED******REMOVED***'fp'***REMOVED*** = ***REMOVED******REMOVED***
+        #            summary_by_category***REMOVED***phi_type***REMOVED******REMOVED***'fp'***REMOVED***.append(eval_table***REMOVED***filename***REMOVED******REMOVED***'tp'***REMOVED******REMOVED***phi_type***REMOVED***) 
+        #            text_fp_file.write('\n'+filename+ '\t'+ phi_type + '\t')
+        #            fp_to_file = ('\n'+ filename + '\t'+ phi_type + '\t').join(eval_table***REMOVED***filename***REMOVED******REMOVED***"tp"***REMOVED******REMOVED***phi_type***REMOVED***) 
+        #            text_fp_file.write(fp_to_file)
+        #     for phi_type in eval_table***REMOVED***filename***REMOVED******REMOVED***'fp'***REMOVED***:
+        #         fp += len(eval_table***REMOVED***filename***REMOVED******REMOVED***'fp'***REMOVED******REMOVED***phi_type***REMOVED***)
+        #         total_fp += len(eval_table***REMOVED***filename***REMOVED******REMOVED***'fp'***REMOVED******REMOVED***phi_type***REMOVED***)
+        #         if phi_type not in summary_by_category:
+        #             summary_by_category***REMOVED***phi_type***REMOVED*** = {}
+        #         if 'fp' not in summary_by_category***REMOVED***phi_type***REMOVED***:
+        #             summary_by_category***REMOVED***phi_type***REMOVED******REMOVED***'fp'***REMOVED*** = ***REMOVED******REMOVED***
+        #         summary_by_category***REMOVED***phi_type***REMOVED******REMOVED***'fp'***REMOVED***.append(eval_table***REMOVED***filename***REMOVED******REMOVED***'fp'***REMOVED******REMOVED***phi_type***REMOVED***)
+        #         text_fp_file.write('\n'+ filename + '\t'+ phi_type + '\t')
+        #         fp_to_file = ('\n' + filename + '\t'+ phi_type + '\t').join(eval_table***REMOVED***filename***REMOVED******REMOVED***"fp"***REMOVED******REMOVED***phi_type***REMOVED***)
+        #         text_fp_file.write(fp_to_file)
+        #     for phi_type in eval_table***REMOVED***filename***REMOVED******REMOVED***'fn'***REMOVED***:
+        #         if phi_type not in include_tags:
+        #            fn += len(eval_table***REMOVED***filename***REMOVED******REMOVED***'fn'***REMOVED******REMOVED***phi_type***REMOVED***)
+        #            total_fn += len(eval_table***REMOVED***filename***REMOVED******REMOVED***'fn'***REMOVED******REMOVED***phi_type***REMOVED***)
+        #            if phi_type not in summary_by_category:
+        #               summary_by_category***REMOVED***phi_type***REMOVED*** = {}
+        #            if 'fn' not in summary_by_category***REMOVED***phi_type***REMOVED***:
+        #               summary_by_category***REMOVED***phi_type***REMOVED******REMOVED***'fn'***REMOVED*** = ***REMOVED******REMOVED***
+        #            summary_by_category***REMOVED***phi_type***REMOVED******REMOVED***'fn'***REMOVED***.append(eval_table***REMOVED***filename***REMOVED******REMOVED***'fn'***REMOVED******REMOVED***phi_type***REMOVED***)
+        #            text_fn_file.write('\n'+ filename + '\t'+ phi_type + '\t')
+        #            fn_to_file = ('\n'+ filename + '\t'+ phi_type + '\t').join(eval_table***REMOVED***filename***REMOVED******REMOVED***"fn"***REMOVED******REMOVED***phi_type***REMOVED***)
+        #            text_fn_file.write(fn_to_file)
+        #         else:
+        #            tn += len(eval_table***REMOVED***filename***REMOVED******REMOVED***'fn'***REMOVED******REMOVED***phi_type***REMOVED***)
+        #            total_tn += len(eval_table***REMOVED***filename***REMOVED******REMOVED***'fn'***REMOVED******REMOVED***phi_type***REMOVED***)
+        #            text_tn_file.write('\n'+ filename + '\t'+ phi_type + '\t')
+        #            tn_to_file = ('\n' + filename + '\t'+ phi_type + '\t').join(eval_table***REMOVED***filename***REMOVED******REMOVED***"fn"***REMOVED******REMOVED***phi_type***REMOVED***)
+        #            text_tn_file.write(tn_to_file)
+        #     tn += len(eval_table***REMOVED***filename***REMOVED******REMOVED***'tn'***REMOVED***)
+        #     total_tn += len(eval_table***REMOVED***filename***REMOVED******REMOVED***'tn'***REMOVED***)
+        #     text_tn_file.write('\n'+ filename + '\t'+ phi_type + '\t') 
+        #     tn_to_file = ('\n' + filename + '\t'+ phi_type + '\t').join(eval_table***REMOVED***filename***REMOVED******REMOVED***"tn"***REMOVED***)
+        #     text_tn_file.write(tn_to_file) 
+             
+        #     try:  
+        #        precision = tp / (tp + fp)
+        #     except ZeroDivisionError:
+        #        precision = 0
+        #     try:  
+        #        recall = tp / (tp + fn)
+        #     except ZeroDivisionError:
+        #        recall = 0
+        #     summary_by_file***REMOVED***filename***REMOVED***.update({'tp':tp, 'fp': fp, 'fn':fn, 'tn':tn, 'recall':recall,'precision':precision})
+        #     # summary_by_category***REMOVED***filename***REMOVED***.update({'tp':tp, 'fp': fp, 'fn':fn, 'tn':tn, 'recall':recall,'precision':precision})
+        
+        # try:
+        #    total_precision = total_tp / (total_tp + total_fp)
+        # except ZeroDivisionError:
+        #    total_precision = 0     
+
+        # try:
+        #    total_recall = total_tp / (total_tp + total_fn)
+        # except ZeroDivisionError:
+        #    total_recall = 0
+        # total_summary = {'tp':total_tp, 'tn':total_tn, 'fp':total_fp, 'fn':total_fn, 'precision':total_precision, 'recall':total_recall}
+        # json.dump(total_summary, open(summary_file, "w"), indent=4)
+        # json.dump(summary_by_file, open(json_summary_by_file, "w"), indent=4)
+        # json.dump(summary_by_category, open(json_summary_by_category, "w"), indent=4)
         
 
 
