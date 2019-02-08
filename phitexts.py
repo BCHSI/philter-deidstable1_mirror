@@ -520,7 +520,8 @@ class Phitexts:
             
     def _get_sub_tokens(self, token1, token2):
         
-        if token1['stop'] < token2['start']: # tokens do not overlap
+        if (token1['stop'] < token2['start']
+            or token1['start'] > token2['stop']): # tokens do not overlap
             return None
 
         subtokens1 = {}
@@ -533,59 +534,34 @@ class Phitexts:
         tk2_has_type = True if 'phitype' in token2 else False
         
         # looks for dangling beginning
-        if token1['start'] <= token2['start']: # token1 has dangling beginning
+        if token1['start'] < token2['start']: # token1 has dangling beginning
             left['start'] = token1['start']
             left['length'] = token2['start'] - token1['start']
             left['stop'] = token2['start'] - 1
-            left['token'] = token1['token'][0:['length']]
+            left['token'] = token1['token'][0:left['length']]
             if tk1_has_type:
                 left['phitype'] = token1['phitype']
-                subtokens1.append({left['start']:[left['stop'], left['phitype'],
+                subtokens1.update({left['start']:[left['stop'], left['phitype'],
                                                   left['token']]})
             else:
-                subtokens1.append({left['start']:[left['stop'], left['token']]})
+                subtokens1.update({left['start']:[left['stop'], left['token']]})
         elif token1['start'] > token2['start']: # token2 has dangling beginning
             left['start'] = token2['start']
             left['length'] = token1['start'] - token2['start']
             left['stop'] = token1['start'] - 1
-            left['token'] = token2['token'][0:['length']]
+            left['token'] = token2['token'][0:left['length']]
             if tk2_has_type:
                 left['phitype'] = token2['phitype']
-                subtokens2.append({left['start']:[left['stop'], left['phitype'],
+                subtokens2.update({left['start']:[left['stop'], left['phitype'],
                                                   left['token']]})
             else:
-                subtokens2.append({left['start']:[left['stop'], left['token']]})
+                subtokens2.update({left['start']:[left['stop'], left['token']]})
         else: # tokens have the same start
             left['start'] = token1['start']
             left['length'] = 0
             left['stop'] = token1['start'] - 1
             left['phitype'] = None
             left['token'] = ""
-
-        # looks for middle portion
-        middle['start'] = left['stop'] + 1
-        middle['length'] = right['start'] - middle['start']
-        middle['stop'] = right['start'] - 1
-        middle['token'] = token1['token'][left['length']:left['length']+middle['length']]
-        if not middle['token'] == token2['token'][left['length']:left['length']+middle['length']]:
-            raise Exception("ERROR: string mismatch in tokens: \"{0}\" and \"{1}\"".format(token1['token'], token2['token']))
-
-        if tk1_has_type:
-            middle['phitype'] = token1['phitype']
-            subtokens1.append({middle['start']:[middle['stop'],
-                                                middle['phitype'],
-                                                middle['token']]})
-        else:
-            subtokens1.append({middle['start']:[middle['stop'],
-                                                middle['token']]})
-        if tk2_has_type:
-            middle['phitype'] = token2['phitype']
-            subtokens2.append({middle['start']:[middle['stop'],
-                                                middle['phitype'],
-                                                middle['token']]})
-        else:
-            subtokens2.append({middle['start']:[middle['stop'],
-                                                middle['token']]})
 
         # looks for dangling end
         if token1['stop'] < token2['stop']: # token2 has dangling end
@@ -595,11 +571,11 @@ class Phitexts:
             right['token'] = token2['token'][-right['length']:]
             if tk2_has_type:
                 right['phitype'] = token2['phitype']
-                subtokens2.append({right['start']:[right['stop'],
+                subtokens2.update({right['start']:[right['stop'],
                                                    right['phitype'],
                                                    right['token']]})
             else:
-                subtokens2.append({right['start']:[right['stop'],
+                subtokens2.update({right['start']:[right['stop'],
                                                    right['token']]})
         elif token2['stop'] < token1['stop']: # token1 has dangling end
             right['start'] = token2['stop'] + 1
@@ -608,11 +584,11 @@ class Phitexts:
             right['token'] = token1['token'][-right['length']:]
             if tk1_has_type:
                 right['phitype'] = token1['phitype']
-                subtokens1.append({right['start']:[right['stop'],
+                subtokens1.update({right['start']:[right['stop'],
                                                    right['phitype'],
                                                    right['token']]})
             else:
-                subtokens1.append({right['start']:[right['stop'],
+                subtokens1.update({right['start']:[right['stop'],
                                                    right['token']]})
         else: # tokens have the same end
             right['start'] = token1['stop'] + 1
@@ -620,6 +596,44 @@ class Phitexts:
             right['stop'] = token1['stop']
             right['phitype'] = None
             right['token'] = ""
+
+        # looks for middle portion
+        middle['start'] = left['stop'] + 1
+        middle['stop'] = right['start'] - 1
+        middle['length'] = middle['stop'] - middle['start']
+        if left['start'] == token1['start']:
+            middle['token'] = token1['token'][left['length']:left['length']+middle['length']]
+            othertoken = token2
+        else:
+            middle['token'] = token2['token'][left['length']:left['length']+middle['length']]
+            othertoken = token1
+        if not middle['token'] == othertoken['token'][0:middle['length']]:
+            if __debug__: print(str(left),str(middle),str(right))
+            raise Exception("ERROR: string mismatch: \"" + middle['token']
+                            + "\" != \""
+                            +  othertoken['token'][0:middle['length']]
+                            + "\" in tokens: \""
+                            + token1['token'] + "\" (" + str(token1['start'])
+                            + "-" + str(token1['stop']) + ") and \""
+                            + token2['token'] + "\" (" + str(token2['start'])
+                            + "-" + str(token2['stop']) + ")")
+
+        if tk1_has_type:
+            middle['phitype'] = token1['phitype']
+            subtokens1.update({middle['start']:[middle['stop'],
+                                                middle['phitype'],
+                                                middle['token']]})
+        else:
+            subtokens1.update({middle['start']:[middle['stop'],
+                                                middle['token']]})
+        if tk2_has_type:
+            middle['phitype'] = token2['phitype']
+            subtokens2.update({middle['start']:[middle['stop'],
+                                                middle['phitype'],
+                                                middle['token']]})
+        else:
+            subtokens2.update({middle['start']:[middle['stop'],
+                                                middle['token']]})
 
         return subtokens1, subtokens2
     
@@ -683,81 +697,95 @@ class Phitexts:
         gold = {}
         philter = {}
         for filename in gold_phi:
-            for gstart in gold_phi[filename]:
+            gphi = gold_phi[filename].copy()
+            pphi = philter_phi[filename].copy()
+            for gstart in gphi:
                 gold['start'] = gstart
-                gold['stop'] = gold_phi[filename][gstart][0]
-                gold['phitype'] = gold_phi[filename][gstart][1]
-                gold['token'] = gold_phi[filename][gstart][2]
-                for pstart in philter_phi[filename]:
+                gold['stop'] = gphi[gstart][0]
+                gold['phitype'] = gphi[gstart][1]
+                gold['token'] = gphi[gstart][2]
+                for pstart in pphi:
                     philter['start'] = pstart
-                    philter['stop'] = philter_phi[filename][pstart][0]
-                    philter['phitype'] = philter_phi[filename][pstart][1]
-                    philter['token'] = philter_phi[filename][pstart][2]
+                    philter['stop'] = pphi[pstart][0]
+                    philter['phitype'] = pphi[pstart][1]
+                    philter['token'] = pphi[pstart][2]
                     subtokens = self._get_sub_tokens(gold, philter)
                     if subtokens is None:
                         continue
-                    for st in subtoken[0]:
-                        gold_phi[filename].update({st['start']:[st['stop'],
-                                                                st['phitype'],
-                                                                st['token']]})
-                    for st in subtoken[1]:
-                        philter_phi[filename].update({st['start']:[st['stop'],
-                                                                   st['phitype'],
-                                                                   st['token']]})
-        
-    def _create_phi_sets(self, phi_tokens):
-        phi_sets = {}
-        for filename in phi_tokens:
-            phi_sets[filename] = set()
-            for start in phi_tokens[filename]:
-                pstart = start
-                pstop = phi_tokens[filename][start][0]
-                ptype = phi_tokens[filename][start][1] # ignored
-                ptoken = phi_tokens[filename][start][2]
-                phi_sets[filename].update({pstart:[pstop,ptoken]})
-        return phi_sets
-
-    def _get_tp_sets(self, gold_sets, philter_sets):
-        tp_sets = {}
-        for filename in gold_sets:
-            tp_sets[filename] = gold_sets[filename] & philter_sets[filename]
-        return tp_sets
-                                          
-    def _get_fp_sets(self, gold_sets, philter_sets):
-        fp_sets = {}
-        for filename in gold_sets:
-            fp_sets[filename] = philter_sets[filename] - gold_sets[filename]
-        return fp_sets
+                    for st in subtokens[0]:
+                        start = st
+                        stop = subtokens[0][st][0]
+                        phitype = subtokens[0][st][1]
+                        token = subtokens[0][st][2]
+                        gold_phi[filename].update({start:[stop, phitype,
+                                                          token]})
+                    for st in subtokens[1]:
+                        start = st
+                        stop = subtokens[1][st][0]
+                        phitype = subtokens[1][st][1]
+                        token = subtokens[1][st][2]
+                        philter_phi[filename].update({start:[stop, phitype,
+                                                             token]})
     
-    def _get_tn_sets(self, full_sets, gold_sets, philter_sets):
-        tn_sets = {}
-        for filename in gold_sets:
-            tn_sets[filename] = (full_sets[filename]
-                                 - gold_sets[filename] - philter_sets[filename])
-        return tn_sets
+    def _get_tp_dicts(self, gold_dicts, philter_dicts):
+        tp_dicts = {}
+        for filename in gold_dicts:
+            tp_dicts[filename] = {}
+            keys = gold_dicts[filename].keys() & philter_dicts[filename].keys()
+            for k in keys:
+                tp_dicts[filename].update({k:gold_dicts[filename][k]})
+        return tp_dicts
+    
+    def _get_fp_dicts(self, gold_dicts, philter_dicts):
+        fp_dicts = {}
+        for filename in gold_dicts:
+            fp_dicts[filename] = {}
+            keys = philter_dicts[filename].keys() - gold_dicts[filename].keys()
+            for k in keys:
+                fp_dicts[filename].update({k:philter_dicts[filename][k]})
+        return fp_dicts
+    
+    def _get_tn_dicts(self, full_dicts, gold_dicts, philter_dicts):
+        tn_dicts = {}
+        for filename in gold_dicts:
+            tn_dicts[filename] = {}
+            keys = (full_dicts[filename].keys() - gold_dicts[filename].keys()
+                    - philter_dicts[filename].keys())
+            for k in keys:
+                tn_dicts[filename].update({k:full_dicts[filename][k]})
+        return tn_dicts
+    
+    def _get_fn_dicts(self, gold_dicts, philter_dicts):
+        fn_dicts = {}
+        for filename in gold_dicts:
+            fn_dicts[filename] = {}
+            keys = gold_dicts[filename].keys() - philter_dicts[filename].keys()
+            for k in keys:
+                fn_dicts[filename].update({k:gold_dicts[filename][k]})
+        return fn_dicts
 
-    def _get_fn_sets(self, gold_sets, philter_sets):
-        fn_sets = {}
-        for filename in gold_sets:
-            fn_sets[filename] = gold_sets[filename] - philter_sets[filename]
-        return fn_sets
-
-    def _sub_tokenize(self, fulltext_sets, phi_sets):
-        for filename in fulltext_sets:
-            for fstart in fulltext_sets[filename]:
+    def _sub_tokenize(self, fulltext_dicts, phi_dicts):
+        ftoken = {}
+        phi = {}
+        for filename in fulltext_dicts:
+            ftdict = fulltext_dicts[filename].copy()
+            pdict = phi_dicts[filename].copy()
+            for fstart in ftdict:
                 ftoken['start'] = fstart
-                ftoken['stop'] = fulltext_sets[filename][fstart][0]
-                ftoken['token'] = fulltext_sets[filename][fstart][1]
-                for pstart in phi_sets[filename]:
+                ftoken['stop'] = ftdict[fstart][0]
+                ftoken['token'] = ftdict[fstart][1]
+                for pstart in pdict:
                     phi['start'] = pstart
-                    phi['stop'] = philter_phi[filename][pstart][0]
-                    phi['token'] = philter_phi[filename][pstart][1]
+                    phi['stop'] = pdict[pstart][0]
+                    phi['token'] = pdict[pstart][2]
                     subtokens = self._get_sub_tokens(ftoken, phi)
                     if subtokens is None:
                         continue
-                    for st in subtoken[0]:
-                        fulltext_sets[filename].update({st['start']:[st['stop'],
-                                                                     st['token']]})
+                    for st in subtokens[0]:
+                        start = st
+                        stop = subtokens[0][st][0]
+                        token = subtokens[0][st][1]
+                        fulltext_dicts[filename].update({start:[stop, token]})
     
     def _get_fulltext_sets(self, gold_sets, philter_sets):
         fulltext_sets = {}
@@ -767,6 +795,15 @@ class Phitexts:
         self._sub_tokenize(fulltext_sets, gold_sets)
         self._sub_tokenize(fulltext_sets, philter_sets)
         return fulltext_sets
+                                          
+    def _get_fulltext_dicts(self, gold_dicts, philter_dicts):
+        fulltext_dicts = {}
+        for filename in gold_dicts:
+            fulltext_dicts[filename] = self._get_tokens(self.texts[filename])
+                                          
+        self._sub_tokenize(fulltext_dicts, gold_dicts)
+        self._sub_tokenize(fulltext_dicts, philter_dicts)
+        return fulltext_dicts
                                           
     def eval(self, anno_dir, output_dir):
         # preserve these two puncs so that dates are complete
@@ -789,19 +826,16 @@ class Phitexts:
         text_tn_file = open(os.path.join(eval_dir,'tn.eval'),"w+")
 
 
-        gold_phi = self._get_gold_phi(anno_dir)
-        philter_phi = self._get_philter_phi(gold_phi.keys())
-        self._update_with_sub_tokens(gold_phi, philter_phi)
-        gold_sets = self._create_phi_sets(gold_phi)
-        philter_sets = self._create_phi_sets(philter_phi)
-        full_clean = self._get_tokens()
-        full_sets = self._sub_tokenize(full_clean, gold_sets, philter_sets)
+        gold_dicts = self._get_gold_phi(anno_dir)
+        philter_dicts = self._get_philter_phi(gold_dicts.keys())
+        self._update_with_sub_tokens(gold_dicts, philter_dicts)
+        fulltext_dicts = self._get_fulltext_dicts(gold_dicts, philter_dicts)
 
-        truepositives_sets = self._get_tp_sets(gold_sets, philter_sets)
-        falsepositives_sets = self._get_fp_sets(gold_sets, philter_sets)
-        truenegatives_sets = self._get_tn_sets(fulltext_sets,
-                                               gold_sets, philter_sets)
-        falsenegatives_sets = self._get_fn_sets(gold_sets, philter_sets)
+        truepositives_dicts = self._get_tp_dicts(gold_dicts, philter_dicts)
+        falsepositives_dicts = self._get_fp_dicts(gold_dicts, philter_dicts)
+        truenegatives_dicts = self._get_tn_dicts(fulltext_dicts,
+                                                 gold_dicts, philter_dicts)
+        falsenegatives_dicts = self._get_fn_dicts(gold_dicts, philter_dicts)
         
         # # converting self.types to an easier accessible data structure
         # eval_table = {}
@@ -893,14 +927,14 @@ class Phitexts:
                 summary_by_file[filename] = {}
                 
             # file-level counters
-            tp = (len(truepositives_sets[filename]) if filename in
-                  truepositives_sets else 0)
-            fp = (len(falsepositives_sets[filename]) if filename in
-                  falsepositives_sets else 0)
-            tn = (len(truenegatives_sets[filename]) if filename in
-                  truenegatives_sets else 0)
-            fn = (len(falsenegatives_sets[filename]) if filename in
-                  falsenegatives_sets else 0)
+            tp = (len(truepositives_dicts[filename]) if filename in
+                  truepositives_dicts else 0)
+            fp = (len(falsepositives_dicts[filename]) if filename in
+                  falsepositives_dicts else 0)
+            tn = (len(truenegatives_dicts[filename]) if filename in
+                  truenegatives_dicts else 0)
+            fn = (len(falsenegatives_dicts[filename]) if filename in
+                  falsenegatives_dicts else 0)
             
             total_tp += tp
             total_fp += fp
@@ -916,7 +950,7 @@ class Phitexts:
             except ZeroDivisionError:
                recall = 0
             summary_by_file[filename].update({'tp':tp, 'fp': fp,
-                                              'fn':fn, 'tn':tn,
+                                              'tn':tn, 'fn':fn,
                                               'recall':recall,
                                               'precision':precision})
         
