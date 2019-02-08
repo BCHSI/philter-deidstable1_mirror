@@ -218,7 +218,8 @@ class Phitexts:
                for filename, start, end in self.types[phi_type][0].scan():
                     token = self.texts[filename][start:end]
                     normalized_token = Subs.parse_date(token)
-                    self.norms[phi_type] [(filename, start)] = (normalized_token, end)
+                    self.norms[phi_type][(filename, start)] = (normalized_token,
+                                                               end)
             else:
                 continue
 
@@ -414,7 +415,8 @@ class Phitexts:
             normalized_date = self.norms[phi_type][(filename,start)][0]
             
             if filename not in parse_info:
-                parse_info[filename] = {'success_norm':0,'fail_norm':0,'success_sub':0,'fail_sub':0}
+                parse_info[filename] = {'success_norm':0,'fail_norm':0,
+                                        'success_sub':0,'fail_sub':0}
             if filename not in eval_table:
                 eval_table[filename] = []
 
@@ -437,7 +439,10 @@ class Phitexts:
                      sub = None	
                      parse_info[filename]['fail_sub'] += 1
 
-                eval_table[filename].append({'start':start, 'end':end, 'raw': raw, 'normalized': normalized_token, 'sub': sub})
+                eval_table[filename].append({'start':start, 'end':end,
+                                             'raw': raw,
+                                             'normalized': normalized_token,
+                                             'sub': sub})
                     # f_parsed.write('\t'.join([filename, str(start), str(end), raw, normalized_token, sub]))
                     # f_parsed.write('\n')
             else:
@@ -448,7 +453,8 @@ class Phitexts:
                     # f_failed.write('\n')
                 if filename not in failed_date:
                         failed_date[filename] = []
-                failed_date[filename].append({'start':start, 'end':end, 'raw': raw})
+                failed_date[filename].append({'start':start, 'end':end,
+                                              'raw': raw})
 
         if __debug__:
             print ('Successfully parsed: ' + str(num_parsed) + ' dates.')
@@ -466,7 +472,8 @@ class Phitexts:
                     if filename not in phi_table:
                         phi_table[filename] = []
                     word = self.texts[filename][start:end]
-                    phi_table[filename].append({'start': start, 'end': end, 'word': word, 'type': phi_type})
+                    phi_table[filename].append({'start': start, 'end': end,
+                                                'word': word, 'type': phi_type})
 
                     if phi_type not in phi_counter:
                         phi_counter[phi_type] = 0
@@ -948,156 +955,110 @@ class Phitexts:
                                                gold_sets, philter_sets)
         falsenegatives_sets = self._get_fn_sets(gold_sets, philter_sets)
         
-        # converting self.types to an easier accessible data structure
-        eval_table = {}
-        phi_table = {}
-        non_phi = {}
-        for filename in gold_phi:
-            if filename not in eval_table:
-                eval_table[filename] = {'fp':{},'tp':{},'fn':{},'tn':{}}
-            # each ele contains an annotated phi
-            # token_set = self._get_clean(self.texts[filename])
-            text = self.texts[filename]
-            #exclude_dict = self.coords[filename]
-            exclude_dict = self._tokenize_philter_phi(filename)
-            #print(exclude_dict)
-            for start in gold_phi[filename]:
-                gold_start = start
-                gold_end = gold_phi[filename][start][0]
-                gold_type = gold_phi[filename][start][1]
-                gold_word = gold_phi[filename][start][2]
-                # remove phi from text to form the non_phi_set
-                text = text.replace(gold_word, '')
-                if filename in self.coords:
-                   if self.eval_start_match(gold_start,exclude_dict):
-                      if gold_type not in eval_table[filename]['tp']:
-                         eval_table[filename]['tp'][gold_type] = []
-                      eval_table[filename]['tp'][gold_type].append(gold_word)
-                   elif self.eval_overlap_match(gold_start,gold_end,exclude_dict,'philter'):
-                      if gold_type not in eval_table[filename]['tp']:
-                         eval_table[filename]['tp'][gold_type] = []
-                      eval_table[filename]['tp'][gold_type].append(gold_word)
-                   else:
-                      #print(str(gold_start)+ "\t" + str(gold_end) + "\t" + gold_word)
-                      if gold_type not in eval_table[filename]['fn']:
-                         eval_table[filename]['fn'][gold_type] = []
-                      eval_table[filename]['fn'][gold_type].append(gold_word)
-                else:
-                    print (filename + ' not processed by philter or check filename!')
-                    continue
-            non_phi[filename] = self._get_clean(text)
+        # # converting self.types to an easier accessible data structure
+        # eval_table = {}
+        # phi_table = {}
+        # non_phi = {}
+        # for filename in gold_phi:
+        #     if filename not in eval_table:
+        #         eval_table[filename] = {'fp':{},'tp':{},'fn':{},'tn':{}}
+        #     # each ele contains an annotated phi
+        #     # token_set = self._get_clean(self.texts[filename])
+        #     text = self.texts[filename]
+        #     #exclude_dict = self.coords[filename]
+        #     exclude_dict = self._tokenize_philter_phi(filename)
+        #     #print(exclude_dict)
+        #     for start in gold_phi[filename]:
+        #         gold_start = start
+        #         gold_end = gold_phi[filename][start][0]
+        #         gold_type = gold_phi[filename][start][1]
+        #         gold_word = gold_phi[filename][start][2]
+        #         # remove phi from text to form the non_phi_set
+        #         text = text.replace(gold_word, '')
+        #         if filename in self.coords:
+        #            if self.eval_start_match(gold_start,exclude_dict):
+        #               if gold_type not in eval_table[filename]['tp']:
+        #                  eval_table[filename]['tp'][gold_type] = []
+        #               eval_table[filename]['tp'][gold_type].append(gold_word)
+        #            elif self.eval_overlap_match(gold_start,gold_end,exclude_dict,'philter'):
+        #               if gold_type not in eval_table[filename]['tp']:
+        #                  eval_table[filename]['tp'][gold_type] = []
+        #               eval_table[filename]['tp'][gold_type].append(gold_word)
+        #            else:
+        #               #print(str(gold_start)+ "\t" + str(gold_end) + "\t" + gold_word)
+        #               if gold_type not in eval_table[filename]['fn']:
+        #                  eval_table[filename]['fn'][gold_type] = []
+        #               eval_table[filename]['fn'][gold_type].append(gold_word)
+        #         else:
+        #             print (filename + ' not processed by philter or check filename!')
+        #             continue
+        #     non_phi[filename] = self._get_clean(text)
         
-        for filename in self.coords:
-            exclude_dict = self._tokenize_philter_phi(filename)            
-            gold_dict = gold_phi[filename]
-            #print(gold_dict)
-            if filename in gold_phi:
-               if filename not in eval_table:
-                  eval_table[filename] = {'fp':{},'tp':{},'fn':{},'tn':[]}
-               for start in exclude_dict:
-                   end = exclude_dict[start]
-                   ptype = 'OTHER'
-                   word = self.texts[filename][start:end].translate(translator) 
-                   for phi_type in self.types:
-                       for fname, st, ed in self.types[phi_type][0].scan():
-                           if fname == filename:
-                              if st == start:
-                                 ptype = phi_type        
-                   if not self.eval_start_match(start,gold_dict):
-                      if not self.eval_overlap_match(start,end,gold_dict,'gold'):
-                         #print(str(start) + "\t" + str(end) + "\t" + word)
-                         if ptype not in eval_table[filename]['fp']:
-                            eval_table[filename]['fp'][ptype] = []
-                         eval_table[filename]['fp'][ptype].append(word)  
-                         if word in non_phi[filename]:
-                            non_phi[filename].remove(word)
-                      else:
-                         if ptype not in eval_table[filename]['tp']:
-                            eval_table[filename]['tp'][ptype] = []
-                         eval_table[filename]['tp'][ptype].append(word)
-                         if word in non_phi[filename]:
-                            non_phi[filename].remove(word)
+        # for filename in self.coords:
+        #     exclude_dict = self._tokenize_philter_phi(filename)            
+        #     gold_dict = gold_phi[filename]
+        #     #print(gold_dict)
+        #     if filename in gold_phi:
+        #        if filename not in eval_table:
+        #           eval_table[filename] = {'fp':{},'tp':{},'fn':{},'tn':[]}
+        #        for start in exclude_dict:
+        #            end = exclude_dict[start]
+        #            ptype = 'OTHER'
+        #            word = self.texts[filename][start:end].translate(translator) 
+        #            for phi_type in self.types:
+        #                for fname, st, ed in self.types[phi_type][0].scan():
+        #                    if fname == filename:
+        #                       if st == start:
+        #                          ptype = phi_type        
+        #            if not self.eval_start_match(start,gold_dict):
+        #               if not self.eval_overlap_match(start,end,gold_dict,'gold'):
+        #                  #print(str(start) + "\t" + str(end) + "\t" + word)
+        #                  if ptype not in eval_table[filename]['fp']:
+        #                     eval_table[filename]['fp'][ptype] = []
+        #                  eval_table[filename]['fp'][ptype].append(word)  
+        #                  if word in non_phi[filename]:
+        #                     non_phi[filename].remove(word)
+        #               else:
+        #                  if ptype not in eval_table[filename]['tp']:
+        #                     eval_table[filename]['tp'][ptype] = []
+        #                  eval_table[filename]['tp'][ptype].append(word)
+        #                  if word in non_phi[filename]:
+        #                     non_phi[filename].remove(word)
                     
-            else:
-               print (filename + ' not found!')
-        # the rest is all TN
-        for filename in non_phi:
-            if filename not in eval_table:
-                eval_table[filename] = {'fp':{},'tp':{},'fn':{},'tn':{}}
-            eval_table[filename]['tn'] = non_phi[filename]
+        #     else:
+        #        print (filename + ' not found!')
+        # # the rest is all TN
+        # for filename in non_phi:
+        #     if filename not in eval_table:
+        #         eval_table[filename] = {'fp':{},'tp':{},'fn':{},'tn':{}}
+        #     eval_table[filename]['tn'] = non_phi[filename]
+
 
         summary_by_category = {}
         summary_by_file = {}
         total_tp = 0
-        total_fn = 0
-        total_tn = 0
         total_fp = 0
-        for filename in eval_table:
-            # file-level counters
-            tp = 0
-            fn = 0
-            tn = 0
-            fp = 0
+        total_tn = 0
+        total_fn = 0
+        for filename in self.filenames:
             if filename not in summary_by_file:
                 summary_by_file[filename] = {}
-            for phi_type in eval_table[filename]['tp']:
-                if phi_type not in include_tags:
-                   tp += len(eval_table[filename]['tp'][phi_type])
-                   total_tp += len(eval_table[filename]['tp'][phi_type])
-                   if phi_type not in summary_by_category:
-                      summary_by_category[phi_type] = {}
-                   if 'tp' not in summary_by_category[phi_type]:
-                      summary_by_category[phi_type]['tp'] = []
-                   summary_by_category[phi_type]['tp'].append(eval_table[filename]['tp'][phi_type])
-                   text_tp_file.write('\n'+filename+'\t' + phi_type + '\t')
-                   tp_to_file = ('\n' + filename +'\t'+ phi_type + '\t').join(eval_table[filename]["tp"][phi_type])
-                   text_tp_file.write(tp_to_file)
-                else:
-                   fp += len(eval_table[filename]['tp'][phi_type])
-                   total_fp += len(eval_table[filename]['tp'][phi_type])
-                   if phi_type not in summary_by_category:
-                      summary_by_category[phi_type] = {}
-                   if 'fp' not in summary_by_category[phi_type]:
-                      summary_by_category[phi_type]['fp'] = []
-                   summary_by_category[phi_type]['fp'].append(eval_table[filename]['tp'][phi_type]) 
-                   text_fp_file.write('\n'+filename+ '\t'+ phi_type + '\t')
-                   fp_to_file = ('\n'+ filename + '\t'+ phi_type + '\t').join(eval_table[filename]["tp"][phi_type]) 
-                   text_fp_file.write(fp_to_file)
-            for phi_type in eval_table[filename]['fp']:
-                fp += len(eval_table[filename]['fp'][phi_type])
-                total_fp += len(eval_table[filename]['fp'][phi_type])
-                if phi_type not in summary_by_category:
-                    summary_by_category[phi_type] = {}
-                if 'fp' not in summary_by_category[phi_type]:
-                    summary_by_category[phi_type]['fp'] = []
-                summary_by_category[phi_type]['fp'].append(eval_table[filename]['fp'][phi_type])
-                text_fp_file.write('\n'+ filename + '\t'+ phi_type + '\t')
-                fp_to_file = ('\n' + filename + '\t'+ phi_type + '\t').join(eval_table[filename]["fp"][phi_type])
-                text_fp_file.write(fp_to_file)
-            for phi_type in eval_table[filename]['fn']:
-                if phi_type not in include_tags:
-                   fn += len(eval_table[filename]['fn'][phi_type])
-                   total_fn += len(eval_table[filename]['fn'][phi_type])
-                   if phi_type not in summary_by_category:
-                      summary_by_category[phi_type] = {}
-                   if 'fn' not in summary_by_category[phi_type]:
-                      summary_by_category[phi_type]['fn'] = []
-                   summary_by_category[phi_type]['fn'].append(eval_table[filename]['fn'][phi_type])
-                   text_fn_file.write('\n'+ filename + '\t'+ phi_type + '\t')
-                   fn_to_file = ('\n'+ filename + '\t'+ phi_type + '\t').join(eval_table[filename]["fn"][phi_type])
-                   text_fn_file.write(fn_to_file)
-                else:
-                   tn += len(eval_table[filename]['fn'][phi_type])
-                   total_tn += len(eval_table[filename]['fn'][phi_type])
-                   text_tn_file.write('\n'+ filename + '\t'+ phi_type + '\t')
-                   tn_to_file = ('\n' + filename + '\t'+ phi_type + '\t').join(eval_table[filename]["fn"][phi_type])
-                   text_tn_file.write(tn_to_file)
-            tn += len(eval_table[filename]['tn'])
-            total_tn += len(eval_table[filename]['tn'])
-            text_tn_file.write('\n'+ filename + '\t'+ phi_type + '\t') 
-            tn_to_file = ('\n' + filename + '\t'+ phi_type + '\t').join(eval_table[filename]["tn"])
-            text_tn_file.write(tn_to_file) 
-             
+                
+            # file-level counters
+            tp = (len(truepositives_sets[filename]) if filename in
+                  truepositives_sets else 0)
+            fp = (len(falsepositives_sets[filename]) if filename in
+                  falsepositives_sets else 0)
+            tn = (len(truenegatives_sets[filename]) if filename in
+                  truenegatives_sets else 0)
+            fn = (len(falsenegatives_sets[filename]) if filename in
+                  falsenegatives_sets else 0)
+            
+            total_tp += tp
+            total_fp += fp
+            total_tn += tn
+            total_fn += fn
+              
             try:  
                precision = tp / (tp + fp)
             except ZeroDivisionError:
@@ -1106,22 +1067,124 @@ class Phitexts:
                recall = tp / (tp + fn)
             except ZeroDivisionError:
                recall = 0
-            summary_by_file[filename].update({'tp':tp, 'fp': fp, 'fn':fn, 'tn':tn, 'recall':recall,'precision':precision})
-            # summary_by_category[filename].update({'tp':tp, 'fp': fp, 'fn':fn, 'tn':tn, 'recall':recall,'precision':precision})
+            summary_by_file[filename].update({'tp':tp, 'fp': fp,
+                                              'fn':fn, 'tn':tn,
+                                              'recall':recall,
+                                              'precision':precision})
         
         try:
            total_precision = total_tp / (total_tp + total_fp)
         except ZeroDivisionError:
            total_precision = 0     
-
         try:
            total_recall = total_tp / (total_tp + total_fn)
         except ZeroDivisionError:
            total_recall = 0
-        total_summary = {'tp':total_tp, 'tn':total_tn, 'fp':total_fp, 'fn':total_fn, 'precision':total_precision, 'recall':total_recall}
+        total_summary = {'tp':total_tp, 'fp':total_fp,
+                         'tn':total_tn, 'fn':total_fn,
+                         'precision':total_precision, 'recall':total_recall}
         json.dump(total_summary, open(summary_file, "w"), indent=4)
         json.dump(summary_by_file, open(json_summary_by_file, "w"), indent=4)
-        json.dump(summary_by_category, open(json_summary_by_category, "w"), indent=4)
+
+
+
+        
+        # summary_by_category = {}
+        # summary_by_file = {}
+        # total_tp = 0
+        # total_fn = 0
+        # total_tn = 0
+        # total_fp = 0
+        # for filename in eval_table:
+        #     # file-level counters
+        #     tp = 0
+        #     fn = 0
+        #     tn = 0
+        #     fp = 0
+        #     if filename not in summary_by_file:
+        #         summary_by_file[filename] = {}
+        #     for phi_type in eval_table[filename]['tp']:
+        #         if phi_type not in include_tags:
+        #            tp += len(eval_table[filename]['tp'][phi_type])
+        #            total_tp += len(eval_table[filename]['tp'][phi_type])
+        #            if phi_type not in summary_by_category:
+        #               summary_by_category[phi_type] = {}
+        #            if 'tp' not in summary_by_category[phi_type]:
+        #               summary_by_category[phi_type]['tp'] = []
+        #            summary_by_category[phi_type]['tp'].append(eval_table[filename]['tp'][phi_type])
+        #            text_tp_file.write('\n'+filename+'\t' + phi_type + '\t')
+        #            tp_to_file = ('\n' + filename +'\t'+ phi_type + '\t').join(eval_table[filename]["tp"][phi_type])
+        #            text_tp_file.write(tp_to_file)
+        #         else:
+        #            fp += len(eval_table[filename]['tp'][phi_type])
+        #            total_fp += len(eval_table[filename]['tp'][phi_type])
+        #            if phi_type not in summary_by_category:
+        #               summary_by_category[phi_type] = {}
+        #            if 'fp' not in summary_by_category[phi_type]:
+        #               summary_by_category[phi_type]['fp'] = []
+        #            summary_by_category[phi_type]['fp'].append(eval_table[filename]['tp'][phi_type]) 
+        #            text_fp_file.write('\n'+filename+ '\t'+ phi_type + '\t')
+        #            fp_to_file = ('\n'+ filename + '\t'+ phi_type + '\t').join(eval_table[filename]["tp"][phi_type]) 
+        #            text_fp_file.write(fp_to_file)
+        #     for phi_type in eval_table[filename]['fp']:
+        #         fp += len(eval_table[filename]['fp'][phi_type])
+        #         total_fp += len(eval_table[filename]['fp'][phi_type])
+        #         if phi_type not in summary_by_category:
+        #             summary_by_category[phi_type] = {}
+        #         if 'fp' not in summary_by_category[phi_type]:
+        #             summary_by_category[phi_type]['fp'] = []
+        #         summary_by_category[phi_type]['fp'].append(eval_table[filename]['fp'][phi_type])
+        #         text_fp_file.write('\n'+ filename + '\t'+ phi_type + '\t')
+        #         fp_to_file = ('\n' + filename + '\t'+ phi_type + '\t').join(eval_table[filename]["fp"][phi_type])
+        #         text_fp_file.write(fp_to_file)
+        #     for phi_type in eval_table[filename]['fn']:
+        #         if phi_type not in include_tags:
+        #            fn += len(eval_table[filename]['fn'][phi_type])
+        #            total_fn += len(eval_table[filename]['fn'][phi_type])
+        #            if phi_type not in summary_by_category:
+        #               summary_by_category[phi_type] = {}
+        #            if 'fn' not in summary_by_category[phi_type]:
+        #               summary_by_category[phi_type]['fn'] = []
+        #            summary_by_category[phi_type]['fn'].append(eval_table[filename]['fn'][phi_type])
+        #            text_fn_file.write('\n'+ filename + '\t'+ phi_type + '\t')
+        #            fn_to_file = ('\n'+ filename + '\t'+ phi_type + '\t').join(eval_table[filename]["fn"][phi_type])
+        #            text_fn_file.write(fn_to_file)
+        #         else:
+        #            tn += len(eval_table[filename]['fn'][phi_type])
+        #            total_tn += len(eval_table[filename]['fn'][phi_type])
+        #            text_tn_file.write('\n'+ filename + '\t'+ phi_type + '\t')
+        #            tn_to_file = ('\n' + filename + '\t'+ phi_type + '\t').join(eval_table[filename]["fn"][phi_type])
+        #            text_tn_file.write(tn_to_file)
+        #     tn += len(eval_table[filename]['tn'])
+        #     total_tn += len(eval_table[filename]['tn'])
+        #     text_tn_file.write('\n'+ filename + '\t'+ phi_type + '\t') 
+        #     tn_to_file = ('\n' + filename + '\t'+ phi_type + '\t').join(eval_table[filename]["tn"])
+        #     text_tn_file.write(tn_to_file) 
+             
+        #     try:  
+        #        precision = tp / (tp + fp)
+        #     except ZeroDivisionError:
+        #        precision = 0
+        #     try:  
+        #        recall = tp / (tp + fn)
+        #     except ZeroDivisionError:
+        #        recall = 0
+        #     summary_by_file[filename].update({'tp':tp, 'fp': fp, 'fn':fn, 'tn':tn, 'recall':recall,'precision':precision})
+        #     # summary_by_category[filename].update({'tp':tp, 'fp': fp, 'fn':fn, 'tn':tn, 'recall':recall,'precision':precision})
+        
+        # try:
+        #    total_precision = total_tp / (total_tp + total_fp)
+        # except ZeroDivisionError:
+        #    total_precision = 0     
+
+        # try:
+        #    total_recall = total_tp / (total_tp + total_fn)
+        # except ZeroDivisionError:
+        #    total_recall = 0
+        # total_summary = {'tp':total_tp, 'tn':total_tn, 'fp':total_fp, 'fn':total_fn, 'precision':total_precision, 'recall':total_recall}
+        # json.dump(total_summary, open(summary_file, "w"), indent=4)
+        # json.dump(summary_by_file, open(json_summary_by_file, "w"), indent=4)
+        # json.dump(summary_by_category, open(json_summary_by_category, "w"), indent=4)
         
 
 
