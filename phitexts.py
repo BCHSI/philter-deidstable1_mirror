@@ -968,7 +968,8 @@ class Phitexts:
         eval_dir = os.path.join(output_dir, 'eval/')
         summary_file = os.path.join(eval_dir, 'summary.json')
         json_summary_by_file = os.path.join(eval_dir, 'summary_by_file.json')
-        json_summary_by_category = os.path.join(eval_dir, 'summary_by_category.json')
+        json_summary_by_category = os.path.join(eval_dir,
+                                                'summary_by_category.json')
         if not os.path.isdir(eval_dir):
             os.makedirs(eval_dir)       
 
@@ -1038,6 +1039,12 @@ class Phitexts:
                 text_tp_file.write('\n' + filename + '\t' + str(phi_type)
                                    + '\t' + token
                                    + '\t' + str(start) + '\t' + str(stop))
+                if phi_type not in summary_by_category:
+                    summary_by_category[phi_type] = {}
+                if 'tp' not in summary_by_category[phi_type]:
+                    summary_by_category[phi_type]['tp'] = []
+                summary_by_category[phi_type]['tp'].append(token)
+                
             for st in falsepositives_dicts[filename]:
                 start = st
                 stop = falsepositives_dicts[filename][st][0]
@@ -1046,6 +1053,12 @@ class Phitexts:
                 text_fp_file.write('\n' + filename + '\t' + str(phi_type)
                                    + '\t' + token
                                    + '\t' + str(start) + '\t' + str(stop))
+                if phi_type not in summary_by_category:
+                    summary_by_category[phi_type] = {}
+                if 'fp' not in summary_by_category[phi_type]:
+                    summary_by_category[phi_type]['fp'] = []
+                summary_by_category[phi_type]['fp'].append(token)
+                
             for st in truenegatives_dicts[filename]:
                 start = st
                 stop = truenegatives_dicts[filename][st][0]
@@ -1054,6 +1067,14 @@ class Phitexts:
                 text_tn_file.write('\n' + filename + '\t' + str(phi_type)
                                    + '\t' + token
                                    + '\t' + str(start) + '\t' + str(stop))
+                # this is not phi and produces too much output
+                # uncomment for debugging
+                # if phi_type not in summary_by_category:
+                #     summary_by_category[phi_type] = {}
+                # if 'tn' not in summary_by_category[phi_type]:
+                #     summary_by_category[phi_type]['tn'] = []
+                # summary_by_category[phi_type]['tn'].append(token)
+                
             for st in falsenegatives_dicts[filename]:
                 start = st
                 stop = falsenegatives_dicts[filename][st][0]
@@ -1062,8 +1083,11 @@ class Phitexts:
                 text_fn_file.write('\n' + filename + '\t' + str(phi_type)
                                    + '\t' + token
                                    + '\t' + str(start) + '\t' + str(stop))
-            
-            
+                if phi_type not in summary_by_category:
+                    summary_by_category[phi_type] = {}
+                if 'fn' not in summary_by_category[phi_type]:
+                    summary_by_category[phi_type]['fn'] = []
+                summary_by_category[phi_type]['fn'].append(token)     
         
         try:
            total_precision = total_tp / (total_tp + total_fp)
@@ -1078,6 +1102,8 @@ class Phitexts:
                          'precision':total_precision, 'recall':total_recall}
         json.dump(total_summary, open(summary_file, "w"), indent=4)
         json.dump(summary_by_file, open(json_summary_by_file, "w"), indent=4)
+        json.dump(summary_by_category, open(json_summary_by_category, "w"),
+                  indent=4)
 
         text_tp_file.close()
         text_fp_file.close()
