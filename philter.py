@@ -1010,10 +1010,13 @@ class Philter:
         anno_suffix="_phi_reduced.ano",
         in_path="data/i2b2_results/",
         summary_output="data/phi/summary.json",
+        summary_coords_output="data/phi/summary_coords.json",
         phi_matcher=re.compile("\*+"),
         only_digits=False,
         fn_output = "data/phi/fn.txt",
         fp_output = "data/phi/fp.txt",
+        tn_output = "data/phi/tn.txt",
+        tp_output = "data/phi/tp.txt",
         fn_tags_context = "data/phi/fn_tags_context.txt",
         fp_tags_context = "data/phi/fp_tags_context.txt",
         fn_tags_nocontext = "data/phi/fn_tags.txt",
@@ -1056,6 +1059,8 @@ class Philter:
         
         all_fn = []
         all_fp = []
+        all_tn = []
+        all_tp = []
 
         for root, dirs, files in os.walk(in_path):
 
@@ -1151,17 +1156,19 @@ class Philter:
                             true_negatives.append(w)
                             true_negatives_coords.append([w,r])
                 #update summary
-                summary["summary_by_file"][philtered_filename] = {"false_positives":false_positives,"false_negatives":false_negatives, "num_false_negatives":len(false_negatives)}
+                summary["summary_by_file"][philtered_filename] = {"false_positives":false_positives, "false_negatives":false_negatives, "true_negatives":true_negatives, "num_false_negatives":len(false_negatives), "num_false_positives":len(false_positives), "num_true_positives":len(true_positives), "num_true_negatives":len(true_negatives)}
                 summary["total_true_positives"] = summary["total_true_positives"] + len(true_positives)
                 summary["total_false_positives"] = summary["total_false_positives"] + len(false_positives)
                 summary["total_false_negatives"] = summary["total_false_negatives"] + len(false_negatives)
                 summary["total_true_negatives"] = summary["total_true_negatives"] + len(true_negatives)
+                all_tn = all_tn + true_negatives
                 all_fp = all_fp + false_positives
                 all_fn = all_fn + false_negatives
+                all_tp = all_tp + true_positives
 
 
                 # Create coordinate summaries
-                summary_coords["summary_by_file"][philtered_filename] = {"false_positives":false_positives_coords,"false_negatives":false_negatives_coords,"true_positives":true_positives_coords}
+                summary_coords["summary_by_file"][philtered_filename] = {"false_positives":false_positives_coords,"false_negatives":false_negatives_coords,"true_positives":true_positives_coords,"true_negatives":true_negatives_coords}
 
 
         if summary["total_true_positives"]+summary["total_false_negatives"] > 0:
@@ -1182,8 +1189,11 @@ class Philter:
         ################# DETAILED EVAL ##################
         #save the phi we missed
         json.dump(summary, open(summary_output, "w"), indent=4)
+        json.dump(summary_coords, open(summary_coords_output, "w"), indent=4)
         json.dump(all_fn, open(fn_output, "w"), indent=4)
         json.dump(all_fp, open(fp_output, "w"), indent=4)
+        json.dump(all_tn, open(tn_output, "w"), indent=4)
+        json.dump(all_tp, open(tp_output, "w"), indent=4)
         
         if self.verbose:
             print('\n')
