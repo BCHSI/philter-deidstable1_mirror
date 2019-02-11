@@ -454,6 +454,7 @@ class Phitexts:
     def _get_tokens(self, string):
         tokens = {}
         str_split = self._get_clean(string)
+                
         offset = 0
         for item in str_split:
             item_stripped = item.strip()
@@ -463,9 +464,10 @@ class Phitexts:
             token_start = string.find(item_stripped, offset)
             if token_start is -1:
                 raise Exception("ERROR: cannot find token \"{0}\" in \"{1}\" starting at {2} in file {3}".format(item, string, offset))
-            token_stop = token_start + len(item_stripped)
-            offset += len(item)
+            token_stop = token_start + len(item_stripped) - 1
+            offset = token_stop + 1
             tokens.update({token_start:***REMOVED***token_stop,item_stripped***REMOVED***})
+    
         return tokens
 
     def _get_phi_type(self, filename, start, stop):
@@ -473,14 +475,10 @@ class Phitexts:
             for begin,end in self.types***REMOVED***phi_type***REMOVED******REMOVED***0***REMOVED***.filecoords(filename):
                 if start == begin:
                     return phi_type
-            #for begin,end  in self.types***REMOVED***phi_type***REMOVED******REMOVED***0***REMOVED***.filecoords(filename):
-            #    if begin <= start and stop <= end:
-            #        return phi_type
         return None
     
     def _tokenize_philter_phi(self, filename):
         exclude_dict = self.coords***REMOVED***filename***REMOVED***
-        #print(filename)
         updated_dict = {}
         for i in exclude_dict:
             start, end = i, exclude_dict***REMOVED***i***REMOVED***
@@ -532,7 +530,7 @@ class Phitexts:
 
         tk1_has_type = True if 'phitype' in token1 else False
         tk2_has_type = True if 'phitype' in token2 else False
-        
+
         # looks for dangling beginning
         if token1***REMOVED***'start'***REMOVED*** < token2***REMOVED***'start'***REMOVED***: # token1 has dangling beginning
             left***REMOVED***'start'***REMOVED*** = token1***REMOVED***'start'***REMOVED***
@@ -600,7 +598,7 @@ class Phitexts:
         # looks for middle portion
         middle***REMOVED***'start'***REMOVED*** = left***REMOVED***'stop'***REMOVED*** + 1
         middle***REMOVED***'stop'***REMOVED*** = right***REMOVED***'start'***REMOVED*** - 1
-        middle***REMOVED***'length'***REMOVED*** = middle***REMOVED***'stop'***REMOVED*** - middle***REMOVED***'start'***REMOVED***
+        middle***REMOVED***'length'***REMOVED*** = middle***REMOVED***'stop'***REMOVED*** - middle***REMOVED***'start'***REMOVED*** + 1
         if left***REMOVED***'start'***REMOVED*** == token1***REMOVED***'start'***REMOVED***:
             middle***REMOVED***'token'***REMOVED*** = token1***REMOVED***'token'***REMOVED******REMOVED***left***REMOVED***'length'***REMOVED***:left***REMOVED***'length'***REMOVED***+middle***REMOVED***'length'***REMOVED******REMOVED***
             othertoken = token2
@@ -645,7 +643,6 @@ class Phitexts:
                     continue
                 print("root: " + str(root) + " filename: " + str(filename))
                 filepath = os.path.join(root, filename)
-                #filepath = os.path.join(anno_dir, filename)
                 # change here: what will the input format be?
                 file_id = self.inputdir + filename.split('.')***REMOVED***0***REMOVED*** + '.txt'
                 tree = ET.parse(filepath)
@@ -787,22 +784,14 @@ class Phitexts:
                         token = subtokens***REMOVED***0***REMOVED******REMOVED***st***REMOVED******REMOVED***1***REMOVED***
                         fulltext_dicts***REMOVED***filename***REMOVED***.update({start:***REMOVED***stop, token***REMOVED***})
     
-    def _get_fulltext_sets(self, gold_sets, philter_sets):
-        fulltext_sets = {}
-        for filename in gold_sets:
-            fulltext_sets***REMOVED***filename***REMOVED*** = self._get_tokens(self.texts***REMOVED***filename***REMOVED***)
-                                          
-        self._sub_tokenize(fulltext_sets, gold_sets)
-        self._sub_tokenize(fulltext_sets, philter_sets)
-        return fulltext_sets
-                                          
     def _get_fulltext_dicts(self, gold_dicts, philter_dicts):
         fulltext_dicts = {}
         for filename in gold_dicts:
             fulltext_dicts***REMOVED***filename***REMOVED*** = self._get_tokens(self.texts***REMOVED***filename***REMOVED***)
-                                          
+                
         self._sub_tokenize(fulltext_dicts, gold_dicts)
         self._sub_tokenize(fulltext_dicts, philter_dicts)
+        
         return fulltext_dicts
                                           
     def eval(self, anno_dir, output_dir):
@@ -836,85 +825,6 @@ class Phitexts:
         truenegatives_dicts = self._get_tn_dicts(fulltext_dicts,
                                                  gold_dicts, philter_dicts)
         falsenegatives_dicts = self._get_fn_dicts(gold_dicts, philter_dicts)
-        
-        # # converting self.types to an easier accessible data structure
-        # eval_table = {}
-        # phi_table = {}
-        # non_phi = {}
-        # for filename in gold_phi:
-        #     if filename not in eval_table:
-        #         eval_table***REMOVED***filename***REMOVED*** = {'fp':{},'tp':{},'fn':{},'tn':{}}
-        #     # each ele contains an annotated phi
-        #     # token_set = self._get_clean(self.texts***REMOVED***filename***REMOVED***)
-        #     text = self.texts***REMOVED***filename***REMOVED***
-        #     #exclude_dict = self.coords***REMOVED***filename***REMOVED***
-        #     exclude_dict = self._tokenize_philter_phi(filename)
-        #     #print(exclude_dict)
-        #     for start in gold_phi***REMOVED***filename***REMOVED***:
-        #         gold_start = start
-        #         gold_end = gold_phi***REMOVED***filename***REMOVED******REMOVED***start***REMOVED******REMOVED***0***REMOVED***
-        #         gold_type = gold_phi***REMOVED***filename***REMOVED******REMOVED***start***REMOVED******REMOVED***1***REMOVED***
-        #         gold_word = gold_phi***REMOVED***filename***REMOVED******REMOVED***start***REMOVED******REMOVED***2***REMOVED***
-        #         # remove phi from text to form the non_phi_set
-        #         text = text.replace(gold_word, '')
-        #         if filename in self.coords:
-        #            if self.eval_start_match(gold_start,exclude_dict):
-        #               if gold_type not in eval_table***REMOVED***filename***REMOVED******REMOVED***'tp'***REMOVED***:
-        #                  eval_table***REMOVED***filename***REMOVED******REMOVED***'tp'***REMOVED******REMOVED***gold_type***REMOVED*** = ***REMOVED******REMOVED***
-        #               eval_table***REMOVED***filename***REMOVED******REMOVED***'tp'***REMOVED******REMOVED***gold_type***REMOVED***.append(gold_word)
-        #            elif self.eval_overlap_match(gold_start,gold_end,exclude_dict,'philter'):
-        #               if gold_type not in eval_table***REMOVED***filename***REMOVED******REMOVED***'tp'***REMOVED***:
-        #                  eval_table***REMOVED***filename***REMOVED******REMOVED***'tp'***REMOVED******REMOVED***gold_type***REMOVED*** = ***REMOVED******REMOVED***
-        #               eval_table***REMOVED***filename***REMOVED******REMOVED***'tp'***REMOVED******REMOVED***gold_type***REMOVED***.append(gold_word)
-        #            else:
-        #               #print(str(gold_start)+ "\t" + str(gold_end) + "\t" + gold_word)
-        #               if gold_type not in eval_table***REMOVED***filename***REMOVED******REMOVED***'fn'***REMOVED***:
-        #                  eval_table***REMOVED***filename***REMOVED******REMOVED***'fn'***REMOVED******REMOVED***gold_type***REMOVED*** = ***REMOVED******REMOVED***
-        #               eval_table***REMOVED***filename***REMOVED******REMOVED***'fn'***REMOVED******REMOVED***gold_type***REMOVED***.append(gold_word)
-        #         else:
-        #             print (filename + ' not processed by philter or check filename!')
-        #             continue
-        #     non_phi***REMOVED***filename***REMOVED*** = self._get_clean(text)
-        
-        # for filename in self.coords:
-        #     exclude_dict = self._tokenize_philter_phi(filename)            
-        #     gold_dict = gold_phi***REMOVED***filename***REMOVED***
-        #     #print(gold_dict)
-        #     if filename in gold_phi:
-        #        if filename not in eval_table:
-        #           eval_table***REMOVED***filename***REMOVED*** = {'fp':{},'tp':{},'fn':{},'tn':***REMOVED******REMOVED***}
-        #        for start in exclude_dict:
-        #            end = exclude_dict***REMOVED***start***REMOVED***
-        #            ptype = 'OTHER'
-        #            word = self.texts***REMOVED***filename***REMOVED******REMOVED***start:end***REMOVED***.translate(translator) 
-        #            for phi_type in self.types:
-        #                for fname, st, ed in self.types***REMOVED***phi_type***REMOVED******REMOVED***0***REMOVED***.scan():
-        #                    if fname == filename:
-        #                       if st == start:
-        #                          ptype = phi_type        
-        #            if not self.eval_start_match(start,gold_dict):
-        #               if not self.eval_overlap_match(start,end,gold_dict,'gold'):
-        #                  #print(str(start) + "\t" + str(end) + "\t" + word)
-        #                  if ptype not in eval_table***REMOVED***filename***REMOVED******REMOVED***'fp'***REMOVED***:
-        #                     eval_table***REMOVED***filename***REMOVED******REMOVED***'fp'***REMOVED******REMOVED***ptype***REMOVED*** = ***REMOVED******REMOVED***
-        #                  eval_table***REMOVED***filename***REMOVED******REMOVED***'fp'***REMOVED******REMOVED***ptype***REMOVED***.append(word)  
-        #                  if word in non_phi***REMOVED***filename***REMOVED***:
-        #                     non_phi***REMOVED***filename***REMOVED***.remove(word)
-        #               else:
-        #                  if ptype not in eval_table***REMOVED***filename***REMOVED******REMOVED***'tp'***REMOVED***:
-        #                     eval_table***REMOVED***filename***REMOVED******REMOVED***'tp'***REMOVED******REMOVED***ptype***REMOVED*** = ***REMOVED******REMOVED***
-        #                  eval_table***REMOVED***filename***REMOVED******REMOVED***'tp'***REMOVED******REMOVED***ptype***REMOVED***.append(word)
-        #                  if word in non_phi***REMOVED***filename***REMOVED***:
-        #                     non_phi***REMOVED***filename***REMOVED***.remove(word)
-                    
-        #     else:
-        #        print (filename + ' not found!')
-        # # the rest is all TN
-        # for filename in non_phi:
-        #     if filename not in eval_table:
-        #         eval_table***REMOVED***filename***REMOVED*** = {'fp':{},'tp':{},'fn':{},'tn':{}}
-        #     eval_table***REMOVED***filename***REMOVED******REMOVED***'tn'***REMOVED*** = non_phi***REMOVED***filename***REMOVED***
-
 
         summary_by_category = {}
         summary_by_file = {}
@@ -953,6 +863,42 @@ class Phitexts:
                                               'tn':tn, 'fn':fn,
                                               'recall':recall,
                                               'precision':precision})
+
+            
+            for st in truepositives_dicts***REMOVED***filename***REMOVED***:
+                start = st
+                stop = truepositives_dicts***REMOVED***filename***REMOVED******REMOVED***st***REMOVED******REMOVED***0***REMOVED***
+                phi_type = truepositives_dicts***REMOVED***filename***REMOVED******REMOVED***st***REMOVED******REMOVED***1***REMOVED***
+                token = truepositives_dicts***REMOVED***filename***REMOVED******REMOVED***st***REMOVED******REMOVED***2***REMOVED***
+                text_tp_file.write('\n' + filename + '\t' + str(phi_type)
+                                   + '\t' + token
+                                   + '\t' + str(start) + '\t' + str(stop))
+            for st in falsepositives_dicts***REMOVED***filename***REMOVED***:
+                start = st
+                stop = falsepositives_dicts***REMOVED***filename***REMOVED******REMOVED***st***REMOVED******REMOVED***0***REMOVED***
+                phi_type = falsepositives_dicts***REMOVED***filename***REMOVED******REMOVED***st***REMOVED******REMOVED***1***REMOVED***
+                token = falsepositives_dicts***REMOVED***filename***REMOVED******REMOVED***st***REMOVED******REMOVED***2***REMOVED***
+                text_fp_file.write('\n' + filename + '\t' + str(phi_type)
+                                   + '\t' + token
+                                   + '\t' + str(start) + '\t' + str(stop))
+            for st in truenegatives_dicts***REMOVED***filename***REMOVED***:
+                start = st
+                stop = truenegatives_dicts***REMOVED***filename***REMOVED******REMOVED***st***REMOVED******REMOVED***0***REMOVED***
+                phi_type = None
+                token = truenegatives_dicts***REMOVED***filename***REMOVED******REMOVED***st***REMOVED******REMOVED***1***REMOVED***
+                text_tn_file.write('\n' + filename + '\t' + str(phi_type)
+                                   + '\t' + token
+                                   + '\t' + str(start) + '\t' + str(stop))
+            for st in falsenegatives_dicts***REMOVED***filename***REMOVED***:
+                start = st
+                stop = falsenegatives_dicts***REMOVED***filename***REMOVED******REMOVED***st***REMOVED******REMOVED***0***REMOVED***
+                phi_type = falsenegatives_dicts***REMOVED***filename***REMOVED******REMOVED***st***REMOVED******REMOVED***1***REMOVED***
+                token = falsenegatives_dicts***REMOVED***filename***REMOVED******REMOVED***st***REMOVED******REMOVED***2***REMOVED***
+                text_fn_file.write('\n' + filename + '\t' + str(phi_type)
+                                   + '\t' + token
+                                   + '\t' + str(start) + '\t' + str(stop))
+            
+            
         
         try:
            total_precision = total_tp / (total_tp + total_fp)
@@ -968,7 +914,11 @@ class Phitexts:
         json.dump(total_summary, open(summary_file, "w"), indent=4)
         json.dump(summary_by_file, open(json_summary_by_file, "w"), indent=4)
 
-
+        text_tp_file.close()
+        text_fp_file.close()
+        text_tn_file.close()
+        text_fn_file.close()
+        
 
         
         # summary_by_category = {}
