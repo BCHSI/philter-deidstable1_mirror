@@ -451,6 +451,7 @@ class Phitexts:
         with open(phi_marked_file, 'w') as f:
             json.dump(phi_table, f)
 
+    # tokenizes a string
     def _get_tokens(self, string):
         tokens = {}
         str_split = self._get_clean(string)
@@ -473,10 +474,11 @@ class Phitexts:
     def _get_phi_type(self, filename, start, stop):
         for phi_type in self.types.keys():
             for begin,end in self.types[phi_type][0].filecoords(filename):
-                if start == begin:
+                if start == begin: # TODO: extend this to an include match?
                     return phi_type
         return None
-    
+
+    # creates dictionary with tokens tagged by Philter
     def _tokenize_philter_phi(self, filename):
         exclude_dict = self.coords[filename]
         updated_dict = {}
@@ -499,23 +501,24 @@ class Phitexts:
     
 
 
-    def eval_start_match(self, start, input_dict):
+    # def eval_start_match(self, start, input_dict):
           
-        if start in input_dict:
-           return True
-        else:
-           return False 
+    #     if start in input_dict:
+    #        return True
+    #     else:
+    #        return False 
  
-    def eval_overlap_match(self, start, end, input_dict, dict_type):
-        for input_dict_start in input_dict:
-            if dict_type == "gold":
-               input_dict_end = input_dict[input_dict_start][0]
-            else:
-               input_dict_end = input_dict[input_dict_start]
-            if input_dict_end >= end and start >= input_dict_start:
-               return True
-        return False       
-            
+    # def eval_overlap_match(self, start, end, input_dict, dict_type):
+    #     for input_dict_start in input_dict:
+    #         if dict_type == "gold":
+    #            input_dict_end = input_dict[input_dict_start][0]
+    #         else:
+    #            input_dict_end = input_dict[input_dict_start]
+    #         if input_dict_end >= end and start >= input_dict_start:
+    #            return True
+    #     return False       
+
+    # returns the left, middle and right parts of possible overlaps
     def _get_sub_tokens(self, token1, token2):
         
         if (token1['stop'] < token2['start']
@@ -635,6 +638,7 @@ class Phitexts:
 
         return subtokens1, subtokens2
     
+    # creates a dictionary of tokens found in XML files
     def _get_gold_phi(self, anno_dir):
         gold_phi = {}
         for root, dirs, files in os.walk(anno_dir):
@@ -684,12 +688,14 @@ class Phitexts:
                                                                        token]})
         return gold_phi
 
+    # creates a dictionary of tokens found in Philter
     def _get_philter_phi(self, filenames):
         philter_phi = {}
         for filename in filenames:
             philter_phi[filename] = self._tokenize_philter_phi(filename)
         return philter_phi
-    
+
+    # subtokenizes gold and philter tokens with the respective other coords 
     def _update_with_sub_tokens(self, gold_phi, philter_phi):
         gold = {}
         philter = {}
@@ -723,7 +729,8 @@ class Phitexts:
                         token = subtokens[1][st][2]
                         philter_phi[filename].update({start:[stop, phitype,
                                                              token]})
-    
+
+    # true positives (tokens in gold and philter)
     def _get_tp_dicts(self, gold_dicts, philter_dicts):
         tp_dicts = {}
         for filename in gold_dicts:
@@ -732,7 +739,8 @@ class Phitexts:
             for k in keys:
                 tp_dicts[filename].update({k:gold_dicts[filename][k]})
         return tp_dicts
-    
+
+    # false positives (tokens in philter but not in gold)
     def _get_fp_dicts(self, gold_dicts, philter_dicts):
         fp_dicts = {}
         for filename in gold_dicts:
@@ -741,7 +749,8 @@ class Phitexts:
             for k in keys:
                 fp_dicts[filename].update({k:philter_dicts[filename][k]})
         return fp_dicts
-    
+
+    # true negatives (tokens not tagged)
     def _get_tn_dicts(self, full_dicts, gold_dicts, philter_dicts):
         tn_dicts = {}
         for filename in gold_dicts:
@@ -751,7 +760,8 @@ class Phitexts:
             for k in keys:
                 tn_dicts[filename].update({k:full_dicts[filename][k]})
         return tn_dicts
-    
+
+    # false negatives (tokens in gold but not in philter)
     def _get_fn_dicts(self, gold_dicts, philter_dicts):
         fn_dicts = {}
         for filename in gold_dicts:
@@ -761,6 +771,7 @@ class Phitexts:
                 fn_dicts[filename].update({k:gold_dicts[filename][k]})
         return fn_dicts
 
+    # subtokenizes full texts tokens with phi coordinates
     def _sub_tokenize(self, fulltext_dicts, phi_dicts):
         ftoken = {}
         phi = {}
@@ -783,7 +794,8 @@ class Phitexts:
                         stop = subtokens[0][st][0]
                         token = subtokens[0][st][1]
                         fulltext_dicts[filename].update({start:[stop, token]})
-    
+
+    # returns the tokenized full texts with subtokenization 
     def _get_fulltext_dicts(self, gold_dicts, philter_dicts):
         fulltext_dicts = {}
         for filename in gold_dicts:
@@ -814,12 +826,13 @@ class Phitexts:
         text_fn_file = open(os.path.join(eval_dir,'fn.eval'),"w+")
         text_tn_file = open(os.path.join(eval_dir,'tn.eval'),"w+")
 
-
+        # gathers full text tokens, gold and philter tokens
         gold_dicts = self._get_gold_phi(anno_dir)
         philter_dicts = self._get_philter_phi(gold_dicts.keys())
         self._update_with_sub_tokens(gold_dicts, philter_dicts)
         fulltext_dicts = self._get_fulltext_dicts(gold_dicts, philter_dicts)
 
+        # our core eval metrics
         truepositives_dicts = self._get_tp_dicts(gold_dicts, philter_dicts)
         falsepositives_dicts = self._get_fp_dicts(gold_dicts, philter_dicts)
         truenegatives_dicts = self._get_tn_dicts(fulltext_dicts,
@@ -859,11 +872,11 @@ class Phitexts:
                recall = tp / (tp + fn)
             except ZeroDivisionError:
                recall = 0
+            
             summary_by_file[filename].update({'tp':tp, 'fp': fp,
                                               'tn':tn, 'fn':fn,
                                               'recall':recall,
                                               'precision':precision})
-
             
             for st in truepositives_dicts[filename]:
                 start = st
