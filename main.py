@@ -126,8 +126,11 @@ def main():
             anno_path=args.anno,
             anno_suffix=".txt",
             summary_output="./data/phi/summary.json",
+            summary_coords_output="./data/phi/summary_coords.json",
             fn_output="data/phi/fn.txt",
             fp_output="data/phi/fp.txt",
+            tn_output="data/phi/tn.txt",
+            tp_output="data/phi/tp.txt",
             phi_matcher=re.compile("\*+"),
             pre_process=r":|\,|\-|\/|_|~", #characters we're going to strip from our notes to analyze against anno
             only_digits=False,
