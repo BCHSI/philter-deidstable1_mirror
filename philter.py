@@ -15,6 +15,8 @@ import numpy
 import random
 import string
 
+from constants import *
+
 class Philter:
     """ 
         General text filtering class,
@@ -1237,98 +1239,23 @@ class Philter:
         fp_tags = {}
         
         # Keep track of recall and precision for each category
-        phi_categories = ['Age','Contact','Date','ID','Location','Name','Other']
-        # i2b2:
-        if not self.ucsf_format:                
-            # Define tag list
-            i2b2_tags = ['DOCTOR','PATIENT','DATE','MEDICALRECORD','IDNUM','DEVICE','USERNAME','PHONE','EMAIL','FAX','CITY','STATE','ZIP','STREET','LOCATION-OTHER','HOSPITAL','AGE']
-            
-            i2b2_category_dict = {'DOCTOR':'Name',
-            'PATIENT':'Name',
-            'DATE':'Date',
-            'MEDICALRECORD':'ID',
-            'IDNUM':'ID',
-            'DEVICE':'ID',
-            'USERNAME':'Contact',
-            'PHONE':'Contact',
-            'EMAIL':'Contact',
-            'FAX':'Contact',
-            'CITY':'Location',
-            'STATE':'Location',
-            'ZIP':'Location',
-            'STREET':'Location',
-            'LOCATION-OTHER':'Location',
-            'HOSPITAL':'Location',
-            'AGE':'Age'
-            }
-            
-            i2b2_include_tags = ['DOCTOR','PATIENT','DATE','MEDICALRECORD','IDNUM','DEVICE','USERNAME','PHONE','EMAIL','FAX','CITY','STATE','ZIP','STREET','LOCATION-OTHER','HOSPITAL','AGE']
-            i2b2_patient_tags = ['PATIENT','DATE','MEDICALRECORD','IDNUM','DEVICE','USERNAME','PHONE','EMAIL','FAX','CITY','STATE','ZIP','STREET','LOCATION-OTHER','HOSPITAL','AGE']
-            i2b2_provider_tags = ['DOCTOR','DATE','USERNAME','PHONE','EMAIL','FAX','CITY','STATE','ZIP','STREET',"LOCATION-OTHER",'HOSPITAL']
+        if not self.ucsf_format: # i2b2 format
+            gold_tags = i2b2_tags
+        else: # ucsf format
+            gold_tags = ucsf_tags
+            if not self.initials:
+                ucsf_include_tags.remove('Patient_Initials')
+                ucsf_include_tags.remove('Provider_Initials')
+                ucsf_patient_tags.remove('Patient_Initials')
+                ucsf_provider_tags.remove('Provider_Initials')
 
-            rp_summaries = {}
-            for i in range(0,len(i2b2_tags)):
-                tag = i2b2_tags[i]
-                fn_key = tag + '_fns'
-                tp_key = tag + '_tps'
-                rp_summaries[fn_key] = 0
-                rp_summaries[tp_key] = 0
-
-        # ucsf:
-        if self.ucsf_format:
-            # Define tag list
-            ucsf_tags = ['Date','Provider_Name','Phone_Fax','Age','Patient_Name_or_Family_Member_Name','Patient_Address','Patient_Initials','Provider_Address_or_Location','Provider_Initials','Provider_Certificate_or_License','Patient_Medical_Record_Id','Patient_Account_Number','Patient_Social_Security_Number','Patient_Vehicle_or_Device_Id','Patient_Unique_Id','Diagnosis_Code_ICD_or_International','Procedure_or_Billing_Code','Medical_Department_Name','Email','URL_IP','Patient_Biometric_Id_or_Face_Photo','Patient_Language_Spoken','Patient_Place_Of_Work_or_Occupation','Patient_Certificate_or_License','Medical_Research_Study_Name_or_Number','Teaching_Institution_Name','Non_UCSF_Medical_Institution_Name','Medical_Institution_Abbreviation','Unclear']
-            
-            ucsf_category_dict = {'Date':'Date',
-            'Provider_Name':'Name',
-            'Phone_Fax':'Contact',
-            'Age':'Age',
-            'Patient_Name_or_Family_Member_Name':'Name',
-            'Patient_Address':'Location',
-            'Patient_Initials':'Name',
-            'Provider_Address_or_Location':'Location',
-            'Provider_Initials':'Name',
-            'Provider_Certificate_or_License':'ID',
-            'Patient_Medical_Record_Id':'ID',
-            'Patient_Account_Number':'ID',
-            'Patient_Social_Security_Number':'ID',
-            'Patient_Vehicle_or_Device_Id':'ID',
-            'Patient_Unique_Id':'ID',
-            'Diagnosis_Code_ICD_or_International':'ID',
-            'Procedure_or_Billing_Code':'ID',
-            'Medical_Department_Name':'Location',
-            'Email':'Contact',
-            'URL_IP':'Contact',
-            'Patient_Biometric_Id_or_Face_Photo':'ID',
-            'Patient_Language_Spoken':'Other',
-            'Patient_Place_Of_Work_or_Occupation':'Location',
-            'Patient_Certificate_or_License':'ID',
-            'Medical_Research_Study_Name_or_Number':'ID',
-            'Teaching_Institution_Name':'Location',
-            'Non_UCSF_Medical_Institution_Name':'Location',
-            'Medical_Institution_Abbreviation':'Location',
-            'Unclear':'Other'
-            }
-            
-            if self.initials:
-                ucsf_include_tags = ['Date','Provider_Name','Phone_Fax','Patient_Name_or_Family_Member_Name','Patient_Address','Provider_Address_or_Location','Provider_Certificate_or_License','Patient_Medical_Record_Id','Patient_Account_Number','Patient_Social_Security_Number','Patient_Vehicle_or_Device_Id','Patient_Unique_Id','Procedure_or_Billing_Code','Email','URL_IP','Patient_Biometric_Id_or_Face_Photo','Patient_Certificate_or_License','Age','Patient_Initials','Provider_Initials']
-                ucsf_patient_tags = ['Date','Phone_Fax','Age','Patient_Name_or_Family_Member_Name','Patient_Address','Patient_Initials','Patient_Medical_Record_Id','Patient_Account_Number','Patient_Social_Security_Number','Patient_Vehicle_or_Device_Id','Patient_Unique_Id','Email','URL_IP','Patient_Biometric_Id_or_Face_Photo','Patient_Certificate_or_License']
-                ucsf_provider_tags = ['Provider_Name','Phone_Fax','Provider_Address_or_Location','Provider_Initials','Provider_Certificate_or_License','Email','URL_IP']
-
-            else:
-                ucsf_include_tags = ['Date','Provider_Name','Phone_Fax','Patient_Name_or_Family_Member_Name','Patient_Address','Provider_Address_or_Location','Provider_Certificate_or_License','Patient_Medical_Record_Id','Patient_Account_Number','Patient_Social_Security_Number','Patient_Vehicle_or_Device_Id','Patient_Unique_Id','Procedure_or_Billing_Code','Email','URL_IP','Patient_Biometric_Id_or_Face_Photo','Patient_Certificate_or_License','Age']
-                ucsf_patient_tags = ['Date','Phone_Fax','Age','Patient_Name_or_Family_Member_Name','Patient_Address','Patient_Medical_Record_Id','Patient_Account_Number','Patient_Social_Security_Number','Patient_Vehicle_or_Device_Id','Patient_Unique_Id','Email','URL_IP','Patient_Biometric_Id_or_Face_Photo','Patient_Certificate_or_License']
-                ucsf_provider_tags = ['Provider_Name','Phone_Fax','Provider_Address_or_Location','Provider_Certificate_or_License','Email','URL_IP']
-
-
-
-            rp_summaries = {}
-            for i in range(0,len(ucsf_tags)):
-                tag = ucsf_tags[i]
-                fn_key = tag + '_fns'
-                tp_key = tag + '_tps'
-                rp_summaries[fn_key] = 0
-                rp_summaries[tp_key] = 0
+        rp_summaries = {}
+        for i in range(0,len(gold_tags)):
+            tag = gold_tags[i]
+            fn_key = tag + '_fns'
+            tp_key = tag + '_tps'
+            rp_summaries[fn_key] = 0
+            rp_summaries[tp_key] = 0
 
 
         # Create dictionaries for unigram and bigram PHI/non-PHI frequencies
