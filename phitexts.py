@@ -13,6 +13,7 @@ import string
 import pandas
 import numpy
 from knownphi import Knownphi
+from constants import *
 
 class Phitexts:
     """ container for texts, phi, attributes """
@@ -380,7 +381,7 @@ class Phitexts:
         date_table_file = os.path.join(log_dir, 'parsed_dates.json')
         phi_count_file = os.path.join(log_dir, 'phi_count.log')
         phi_marked_file = os.path.join(log_dir, 'phi_marked.json')
-        batch_summary_file = os.path.join(log_dir, 'batch_summary.txt')
+        batch_summary_file = os.path.join(log_dir, 'batch_summary.log')
 
         #Path to csv summary of all files
         csv_summary_filepath = os.path.join(log_dir,
@@ -578,19 +579,31 @@ class Phitexts:
 
         # Create text summary for the current batch
         with open(batch_summary_file, "w") as f:
-            f.write("TOTAL NOTES PROCESSED: "+str(number_of_notes)+'\n')
-            f.write("TOTAL KB PROCESSED: "+str("%.2f"%total_kb_processed)+'\n')
-            f.write("TOTAL TOKENS PROCESSED: "+str(total_tokens)+'\n')
-            f.write("TOTAL PHI TOKENS PROCESSED: "+str(total_phi_tokens)+'\n')
+            f.write("TOTAL NOTES PROCESSED: " + str(number_of_notes) + '\n')
+            f.write("TOTAL KB PROCESSED: " + str("%.2f"%total_kb_processed)
+                    + '\n')
+            f.write("TOTAL TOKENS PROCESSED: " + str(total_tokens) + '\n')
+            f.write("TOTAL PHI TOKENS PROCESSED: " + str(total_phi_tokens)
+                    + '\n')
             f.write('\n')
-            f.write("MEDIAN FILESIZE (BYTES): "+str(median_file_size)+" (95% Percentile: "+str("%.2f"%q2pt5_size)+'-'+str("%.2f"%q97pt5_size)+')'+'\n')
-            f.write("MEDIAN TOKENS PER NOTE: "+str(median_tokens)+" (95% Percentile: "+str("%.2f"%q2pt5_tokens)+'-'+str("%.2f"%q97pt5_tokens)+')'+'\n')
-            f.write("MEDIAN PHI TOKENS PER NOTE: "+str(median_phi_tokens)+" (95% Percentile: "+str("%.2f"%q2pt5_phi_tokens)+'-'+str("%.2f"%q97pt5_phi_tokens)+')'+'\n')
+            f.write("MEDIAN FILESIZE (BYTES): " + str(median_file_size)
+                    + " (95% Percentile: " + str("%.2f"%q2pt5_size) + '-'
+                    + str("%.2f"%q97pt5_size) + ')' + '\n')
+            f.write("MEDIAN TOKENS PER NOTE: " + str(median_tokens)
+                    + " (95% Percentile: " + str("%.2f"%q2pt5_tokens) + '-'
+                    + str("%.2f"%q97pt5_tokens) + ')' + '\n')
+            f.write("MEDIAN PHI TOKENS PER NOTE: " + str(median_phi_tokens)
+                    + " (95% Percentile: " + str("%.2f"%q2pt5_phi_tokens) + '-'
+                    + str("%.2f"%q97pt5_phi_tokens) + ')' + '\n')
             f.write('\n')
-            f.write("DATES SUCCESSFULLY NORMALIZED: "+str(successful_normalization)+'\n')
-            f.write("DATES FAILED TO NORMALIZE: "+str(failed_normalization)+'\n')
-            f.write("DATES SUCCESSFULLY SURROGATED: "+str(successful_surrogation)+'\n')
-            f.write("DATES FAILED TO SURROGATE: "+str(failed_surrogation)+'\n')   
+            f.write("DATES SUCCESSFULLY NORMALIZED: "
+                    + str(successful_normalization) + '\n')
+            f.write("DATES FAILED TO NORMALIZE: " + str(failed_normalization)
+                    + '\n')
+            f.write("DATES SUCCESSFULLY SURROGATED: "
+                    + str(successful_surrogation) + '\n')
+            f.write("DATES FAILED TO SURROGATE: " + str(failed_surrogation)
+                    + '\n')   
         
 
         # Todo: add PHI type counts to summary
@@ -650,25 +663,6 @@ class Phitexts:
                 token = tokens***REMOVED***tstart***REMOVED******REMOVED***1***REMOVED***
                 updated_dict.update({token_start:***REMOVED***token_stop, phi_type, token***REMOVED***})
         return updated_dict
-    
-
-
-    # def eval_start_match(self, start, input_dict):
-          
-    #     if start in input_dict:
-    #        return True
-    #     else:
-    #        return False 
- 
-    # def eval_overlap_match(self, start, end, input_dict, dict_type):
-    #     for input_dict_start in input_dict:
-    #         if dict_type == "gold":
-    #            input_dict_end = input_dict***REMOVED***input_dict_start***REMOVED******REMOVED***0***REMOVED***
-    #         else:
-    #            input_dict_end = input_dict***REMOVED***input_dict_start***REMOVED***
-    #         if input_dict_end >= end and start >= input_dict_start:
-    #            return True
-    #     return False       
 
     # returns the left, middle and right parts of possible overlaps
     def _get_sub_tokens(self, token1, token2):
@@ -959,12 +953,7 @@ class Phitexts:
         return fulltext_dicts
                                           
     def eval(self, anno_dir, output_dir):
-        # preserve these two puncs so that dates are complete
-
-        ### TO DO: eval should be using read_xml_into_coordinateMap for reading the xml
-        ######### Create a get function to get Lu's data structure given the coordinate maps
         
-        include_tags = {'Age','Diagnosis_Code_ICD_or_International','Medical4_Department_Name','Patient_Language_Spoken','Patient_Place_Of_Work_or_Occupation','Medical_Research_Study_Name_or_Number','Teaching_Institution_Name','Non_UCSF_Medical_Institution_Name','Medical_Institution_Abbreviation', 'Unclear'}
         eval_dir = os.path.join(output_dir, 'eval/')
         summary_file = os.path.join(eval_dir, 'summary.json')
         json_summary_by_file = os.path.join(eval_dir, 'summary_by_file.json')
@@ -998,6 +987,10 @@ class Phitexts:
         total_fp = 0
         total_tn = 0
         total_fn = 0
+        total_ctp = 0
+        total_cfp = 0
+        total_ctn = 0
+        total_cfn = 0
         for filename in self.filenames:
             if filename not in summary_by_file:
                 summary_by_file***REMOVED***filename***REMOVED*** = {}
@@ -1011,25 +1004,12 @@ class Phitexts:
                   truenegatives_dicts else 0)
             fn = (len(falsenegatives_dicts***REMOVED***filename***REMOVED***) if filename in
                   falsenegatives_dicts else 0)
-            
-            total_tp += tp
-            total_fp += fp
-            total_tn += tn
-            total_fn += fn
-              
-            try:  
-               precision = tp / (tp + fp)
-            except ZeroDivisionError:
-               precision = 0
-            try:  
-               recall = tp / (tp + fn)
-            except ZeroDivisionError:
-               recall = 0
-            
-            summary_by_file***REMOVED***filename***REMOVED***.update({'tp':tp, 'fp': fp,
-                                              'tn':tn, 'fn':fn,
-                                              'recall':recall,
-                                              'precision':precision})
+
+            # counts corrected for included phitype
+            ctp = 0
+            cfp = 0
+            ctn = 0
+            cfn = 0
             
             for st in truepositives_dicts***REMOVED***filename***REMOVED***:
                 start = st
@@ -1039,12 +1019,18 @@ class Phitexts:
                 text_tp_file.write('\n' + filename + '\t' + str(phi_type)
                                    + '\t' + token
                                    + '\t' + str(start) + '\t' + str(stop))
+                
                 if phi_type not in summary_by_category:
                     summary_by_category***REMOVED***phi_type***REMOVED*** = {}
                 if 'tp' not in summary_by_category***REMOVED***phi_type***REMOVED***:
                     summary_by_category***REMOVED***phi_type***REMOVED******REMOVED***'tp'***REMOVED*** = ***REMOVED******REMOVED***
                 summary_by_category***REMOVED***phi_type***REMOVED******REMOVED***'tp'***REMOVED***.append(token)
                 
+                if phi_type in ucsf_include_tags:
+                    ctp += 1
+                else:
+                    cfp += 1
+                    
             for st in falsepositives_dicts***REMOVED***filename***REMOVED***:
                 start = st
                 stop = falsepositives_dicts***REMOVED***filename***REMOVED******REMOVED***st***REMOVED******REMOVED***0***REMOVED***
@@ -1053,11 +1039,14 @@ class Phitexts:
                 text_fp_file.write('\n' + filename + '\t' + str(phi_type)
                                    + '\t' + token
                                    + '\t' + str(start) + '\t' + str(stop))
+                
                 if phi_type not in summary_by_category:
                     summary_by_category***REMOVED***phi_type***REMOVED*** = {}
                 if 'fp' not in summary_by_category***REMOVED***phi_type***REMOVED***:
                     summary_by_category***REMOVED***phi_type***REMOVED******REMOVED***'fp'***REMOVED*** = ***REMOVED******REMOVED***
                 summary_by_category***REMOVED***phi_type***REMOVED******REMOVED***'fp'***REMOVED***.append(token)
+
+                cfp += 1
                 
             for st in truenegatives_dicts***REMOVED***filename***REMOVED***:
                 start = st
@@ -1074,6 +1063,8 @@ class Phitexts:
                 # if 'tn' not in summary_by_category***REMOVED***phi_type***REMOVED***:
                 #     summary_by_category***REMOVED***phi_type***REMOVED******REMOVED***'tn'***REMOVED*** = ***REMOVED******REMOVED***
                 # summary_by_category***REMOVED***phi_type***REMOVED******REMOVED***'tn'***REMOVED***.append(token)
+
+                ctn += 1
                 
             for st in falsenegatives_dicts***REMOVED***filename***REMOVED***:
                 start = st
@@ -1083,23 +1074,110 @@ class Phitexts:
                 text_fn_file.write('\n' + filename + '\t' + str(phi_type)
                                    + '\t' + token
                                    + '\t' + str(start) + '\t' + str(stop))
+                
                 if phi_type not in summary_by_category:
                     summary_by_category***REMOVED***phi_type***REMOVED*** = {}
                 if 'fn' not in summary_by_category***REMOVED***phi_type***REMOVED***:
                     summary_by_category***REMOVED***phi_type***REMOVED******REMOVED***'fn'***REMOVED*** = ***REMOVED******REMOVED***
-                summary_by_category***REMOVED***phi_type***REMOVED******REMOVED***'fn'***REMOVED***.append(token)     
+                summary_by_category***REMOVED***phi_type***REMOVED******REMOVED***'fn'***REMOVED***.append(token)
+                
+                if phi_type in ucsf_include_tags:
+                    if phi_type == 'Age':
+                        if token.isdigit():
+                            if int(token) >= 90:
+                                cfn += 1
+                            else:
+                                ctn += 1
+                        else:
+                            if 'ninety' in token:
+                                cfn +=1
+                            else:
+                                ctn += 1
+                    else:
+                        cfn += 1
+                else:
+                    ctn += 1
+            
+            total_tp += tp
+            total_fp += fp
+            total_tn += tn
+            total_fn += fn
+            
+            total_ctp += ctp
+            total_cfp += cfp
+            total_ctn += ctn
+            total_cfn += cfn
+            
+            try:
+               precision = tp / (tp + fp)
+            except ZeroDivisionError:
+               precision = 0
+            try:
+               recall = tp / (tp + fn)
+            except ZeroDivisionError:
+               recall = 0
+            try:
+               retention = tn / (tn + fp)
+            except ZeroDivisionError:
+               retention = 0
+            
+            try:
+               cprecision = ctp / (ctp + cfp)
+            except ZeroDivisionError:
+               cprecision = 0
+            try:
+               crecall = ctp / (ctp + cfn)
+            except ZeroDivisionError:
+               crecall = 0
+            try:
+               cretention = ctn / (ctn + cfp)
+            except ZeroDivisionError:
+               cretention = 0
+            
+            summary_by_file***REMOVED***filename***REMOVED***.update({'tp':tp, 'fp':fp,
+                                              'tn':tn, 'fn':fn,
+                                              'recall':recall,
+                                              'precision':precision,
+                                              'retention':retention})
+            summary_by_file***REMOVED***filename***REMOVED***.update({'ctp':ctp, 'cfp':cfp,
+                                              'ctn':ctn, 'cfn':cfn,
+                                              'crecall':crecall,
+                                              'cprecision':cprecision,
+                                              'cretention':cretention})
         
         try:
            total_precision = total_tp / (total_tp + total_fp)
         except ZeroDivisionError:
-           total_precision = 0     
+           total_precision = 0
         try:
            total_recall = total_tp / (total_tp + total_fn)
         except ZeroDivisionError:
            total_recall = 0
+        try:
+           total_retention = total_tn / (total_tn + total_fp)
+        except ZeroDivisionError:
+           total_retention = 0
+        try:
+           total_cprecision = total_ctp / (total_ctp + total_cfp)
+        except ZeroDivisionError:
+           total_cprecision = 0
+        try:
+           total_crecall = total_ctp / (total_ctp + total_cfn)
+        except ZeroDivisionError:
+           total_crecall = 0
+        try:
+           total_cretention = total_ctn / (total_ctn + total_cfp)
+        except ZeroDivisionError:
+           total_cretention = 0
         total_summary = {'tp':total_tp, 'fp':total_fp,
                          'tn':total_tn, 'fn':total_fn,
-                         'precision':total_precision, 'recall':total_recall}
+                         'precision':total_precision, 'recall':total_recall,
+                         'retention':total_retention,
+                         'ctp':total_ctp, 'cfp':total_cfp,
+                         'ctn':total_ctn, 'cfn':total_cfn,
+                         'cprecision':total_cprecision, 'crecall':total_crecall,
+                         'cretention':total_cretention}
+
         json.dump(total_summary, open(summary_file, "w"), indent=4)
         json.dump(summary_by_file, open(json_summary_by_file, "w"), indent=4)
         json.dump(summary_by_category, open(json_summary_by_category, "w"),
@@ -1109,119 +1187,3 @@ class Phitexts:
         text_fp_file.close()
         text_tn_file.close()
         text_fn_file.close()
-        
-
-        
-        # summary_by_category = {}
-        # summary_by_file = {}
-        # total_tp = 0
-        # total_fn = 0
-        # total_tn = 0
-        # total_fp = 0
-        # for filename in eval_table:
-        #     # file-level counters
-        #     tp = 0
-        #     fn = 0
-        #     tn = 0
-        #     fp = 0
-        #     if filename not in summary_by_file:
-        #         summary_by_file***REMOVED***filename***REMOVED*** = {}
-        #     for phi_type in eval_table***REMOVED***filename***REMOVED******REMOVED***'tp'***REMOVED***:
-        #         if phi_type not in include_tags:
-        #            tp += len(eval_table***REMOVED***filename***REMOVED******REMOVED***'tp'***REMOVED******REMOVED***phi_type***REMOVED***)
-        #            total_tp += len(eval_table***REMOVED***filename***REMOVED******REMOVED***'tp'***REMOVED******REMOVED***phi_type***REMOVED***)
-        #            if phi_type not in summary_by_category:
-        #               summary_by_category***REMOVED***phi_type***REMOVED*** = {}
-        #            if 'tp' not in summary_by_category***REMOVED***phi_type***REMOVED***:
-        #               summary_by_category***REMOVED***phi_type***REMOVED******REMOVED***'tp'***REMOVED*** = ***REMOVED******REMOVED***
-        #            summary_by_category***REMOVED***phi_type***REMOVED******REMOVED***'tp'***REMOVED***.append(eval_table***REMOVED***filename***REMOVED******REMOVED***'tp'***REMOVED******REMOVED***phi_type***REMOVED***)
-        #            text_tp_file.write('\n'+filename+'\t' + phi_type + '\t')
-        #            tp_to_file = ('\n' + filename +'\t'+ phi_type + '\t').join(eval_table***REMOVED***filename***REMOVED******REMOVED***"tp"***REMOVED******REMOVED***phi_type***REMOVED***)
-        #            text_tp_file.write(tp_to_file)
-        #         else:
-        #            fp += len(eval_table***REMOVED***filename***REMOVED******REMOVED***'tp'***REMOVED******REMOVED***phi_type***REMOVED***)
-        #            total_fp += len(eval_table***REMOVED***filename***REMOVED******REMOVED***'tp'***REMOVED******REMOVED***phi_type***REMOVED***)
-        #            if phi_type not in summary_by_category:
-        #               summary_by_category***REMOVED***phi_type***REMOVED*** = {}
-        #            if 'fp' not in summary_by_category***REMOVED***phi_type***REMOVED***:
-        #               summary_by_category***REMOVED***phi_type***REMOVED******REMOVED***'fp'***REMOVED*** = ***REMOVED******REMOVED***
-        #            summary_by_category***REMOVED***phi_type***REMOVED******REMOVED***'fp'***REMOVED***.append(eval_table***REMOVED***filename***REMOVED******REMOVED***'tp'***REMOVED******REMOVED***phi_type***REMOVED***) 
-        #            text_fp_file.write('\n'+filename+ '\t'+ phi_type + '\t')
-        #            fp_to_file = ('\n'+ filename + '\t'+ phi_type + '\t').join(eval_table***REMOVED***filename***REMOVED******REMOVED***"tp"***REMOVED******REMOVED***phi_type***REMOVED***) 
-        #            text_fp_file.write(fp_to_file)
-        #     for phi_type in eval_table***REMOVED***filename***REMOVED******REMOVED***'fp'***REMOVED***:
-        #         fp += len(eval_table***REMOVED***filename***REMOVED******REMOVED***'fp'***REMOVED******REMOVED***phi_type***REMOVED***)
-        #         total_fp += len(eval_table***REMOVED***filename***REMOVED******REMOVED***'fp'***REMOVED******REMOVED***phi_type***REMOVED***)
-        #         if phi_type not in summary_by_category:
-        #             summary_by_category***REMOVED***phi_type***REMOVED*** = {}
-        #         if 'fp' not in summary_by_category***REMOVED***phi_type***REMOVED***:
-        #             summary_by_category***REMOVED***phi_type***REMOVED******REMOVED***'fp'***REMOVED*** = ***REMOVED******REMOVED***
-        #         summary_by_category***REMOVED***phi_type***REMOVED******REMOVED***'fp'***REMOVED***.append(eval_table***REMOVED***filename***REMOVED******REMOVED***'fp'***REMOVED******REMOVED***phi_type***REMOVED***)
-        #         text_fp_file.write('\n'+ filename + '\t'+ phi_type + '\t')
-        #         fp_to_file = ('\n' + filename + '\t'+ phi_type + '\t').join(eval_table***REMOVED***filename***REMOVED******REMOVED***"fp"***REMOVED******REMOVED***phi_type***REMOVED***)
-        #         text_fp_file.write(fp_to_file)
-        #     for phi_type in eval_table***REMOVED***filename***REMOVED******REMOVED***'fn'***REMOVED***:
-        #         if phi_type not in include_tags:
-        #            fn += len(eval_table***REMOVED***filename***REMOVED******REMOVED***'fn'***REMOVED******REMOVED***phi_type***REMOVED***)
-        #            total_fn += len(eval_table***REMOVED***filename***REMOVED******REMOVED***'fn'***REMOVED******REMOVED***phi_type***REMOVED***)
-        #            if phi_type not in summary_by_category:
-        #               summary_by_category***REMOVED***phi_type***REMOVED*** = {}
-        #            if 'fn' not in summary_by_category***REMOVED***phi_type***REMOVED***:
-        #               summary_by_category***REMOVED***phi_type***REMOVED******REMOVED***'fn'***REMOVED*** = ***REMOVED******REMOVED***
-        #            summary_by_category***REMOVED***phi_type***REMOVED******REMOVED***'fn'***REMOVED***.append(eval_table***REMOVED***filename***REMOVED******REMOVED***'fn'***REMOVED******REMOVED***phi_type***REMOVED***)
-        #            text_fn_file.write('\n'+ filename + '\t'+ phi_type + '\t')
-        #            fn_to_file = ('\n'+ filename + '\t'+ phi_type + '\t').join(eval_table***REMOVED***filename***REMOVED******REMOVED***"fn"***REMOVED******REMOVED***phi_type***REMOVED***)
-        #            text_fn_file.write(fn_to_file)
-        #         else:
-        #            tn += len(eval_table***REMOVED***filename***REMOVED******REMOVED***'fn'***REMOVED******REMOVED***phi_type***REMOVED***)
-        #            total_tn += len(eval_table***REMOVED***filename***REMOVED******REMOVED***'fn'***REMOVED******REMOVED***phi_type***REMOVED***)
-        #            text_tn_file.write('\n'+ filename + '\t'+ phi_type + '\t')
-        #            tn_to_file = ('\n' + filename + '\t'+ phi_type + '\t').join(eval_table***REMOVED***filename***REMOVED******REMOVED***"fn"***REMOVED******REMOVED***phi_type***REMOVED***)
-        #            text_tn_file.write(tn_to_file)
-        #     tn += len(eval_table***REMOVED***filename***REMOVED******REMOVED***'tn'***REMOVED***)
-        #     total_tn += len(eval_table***REMOVED***filename***REMOVED******REMOVED***'tn'***REMOVED***)
-        #     text_tn_file.write('\n'+ filename + '\t'+ phi_type + '\t') 
-        #     tn_to_file = ('\n' + filename + '\t'+ phi_type + '\t').join(eval_table***REMOVED***filename***REMOVED******REMOVED***"tn"***REMOVED***)
-        #     text_tn_file.write(tn_to_file) 
-             
-        #     try:  
-        #        precision = tp / (tp + fp)
-        #     except ZeroDivisionError:
-        #        precision = 0
-        #     try:  
-        #        recall = tp / (tp + fn)
-        #     except ZeroDivisionError:
-        #        recall = 0
-        #     summary_by_file***REMOVED***filename***REMOVED***.update({'tp':tp, 'fp': fp, 'fn':fn, 'tn':tn, 'recall':recall,'precision':precision})
-        #     # summary_by_category***REMOVED***filename***REMOVED***.update({'tp':tp, 'fp': fp, 'fn':fn, 'tn':tn, 'recall':recall,'precision':precision})
-        
-        # try:
-        #    total_precision = total_tp / (total_tp + total_fp)
-        # except ZeroDivisionError:
-        #    total_precision = 0     
-
-        # try:
-        #    total_recall = total_tp / (total_tp + total_fn)
-        # except ZeroDivisionError:
-        #    total_recall = 0
-        # total_summary = {'tp':total_tp, 'tn':total_tn, 'fp':total_fp, 'fn':total_fn, 'precision':total_precision, 'recall':total_recall}
-        # json.dump(total_summary, open(summary_file, "w"), indent=4)
-        # json.dump(summary_by_file, open(json_summary_by_file, "w"), indent=4)
-        # json.dump(summary_by_category, open(json_summary_by_category, "w"), indent=4)
-        
-
-
-            
-
-                    
-
-
-
-
-
-        
-
-
-                
-
-        
