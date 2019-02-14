@@ -24,7 +24,7 @@ class Phitexts:
         #notes text
         self.texts     = {}
         #coordinates of PHI
-        self.coords    = {}  
+        self.coords    = {}
         #list of PHI types
         self.types     = {}
         #normalized PHI
@@ -175,8 +175,7 @@ class Phitexts:
             "verbose":verbose,
             "run_eval":False,
             "finpath":self.inputdir,
-            "filters":filters#,
-            #"outformat":"asterisk"
+            "filters":filters
         }
 
         self.filterer = Philter(philter_config)
@@ -216,7 +215,7 @@ class Phitexts:
             self.norms***REMOVED***phi_type***REMOVED*** = {}
         for phi_type in self.types.keys():
             if phi_type == "DATE" or phi_type == "Date":
-               for filename, start, end in self.types***REMOVED***phi_type***REMOVED******REMOVED***0***REMOVED***.scan():
+                for filename, start, end in self.types***REMOVED***phi_type***REMOVED******REMOVED***0***REMOVED***.scan():
                     token = self.texts***REMOVED***filename***REMOVED******REMOVED***start:end***REMOVED***
                     normalized_token = Subs.parse_date(token)
                     self.norms***REMOVED***phi_type***REMOVED******REMOVED***(filename, start)***REMOVED*** = (normalized_token,
