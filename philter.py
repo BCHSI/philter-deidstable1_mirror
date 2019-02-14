@@ -15,6 +15,8 @@ import numpy
 import random
 import string
 
+from constants import *
+
 class Philter:
     """ 
         General text filtering class,
@@ -1046,10 +1048,13 @@ class Philter:
         anno_suffix="_phi_reduced.ano",
         in_path="data/i2b2_results/",
         summary_output="data/phi/summary.json",
+        summary_coords_output="data/phi/summary_coords.json",
         phi_matcher=re.compile("\*+"),
         only_digits=False,
         fn_output = "data/phi/fn.txt",
         fp_output = "data/phi/fp.txt",
+        tn_output = "data/phi/tn.txt",
+        tp_output = "data/phi/tp.txt",
         fn_tags_context = "data/phi/fn_tags_context.txt",
         fp_tags_context = "data/phi/fp_tags_context.txt",
         fn_tags_nocontext = "data/phi/fn_tags.txt",
@@ -1092,6 +1097,8 @@ class Philter:
         
         all_fn = ***REMOVED******REMOVED***
         all_fp = ***REMOVED******REMOVED***
+        all_tn = ***REMOVED******REMOVED***
+        all_tp = ***REMOVED******REMOVED***
 
         for root, dirs, files in os.walk(in_path):
 
@@ -1171,17 +1178,19 @@ class Philter:
                             true_negatives.append(w)
                             true_negatives_coords.append(***REMOVED***w,r***REMOVED***)
                 #update summary
-                summary***REMOVED***"summary_by_file"***REMOVED******REMOVED***philtered_filename***REMOVED*** = {"false_positives":false_positives,"false_negatives":false_negatives, "num_false_negatives":len(false_negatives)}
+                summary***REMOVED***"summary_by_file"***REMOVED******REMOVED***philtered_filename***REMOVED*** = {"false_positives":false_positives, "false_negatives":false_negatives, "true_negatives":true_negatives, "num_false_negatives":len(false_negatives), "num_false_positives":len(false_positives), "num_true_positives":len(true_positives), "num_true_negatives":len(true_negatives)}
                 summary***REMOVED***"total_true_positives"***REMOVED*** = summary***REMOVED***"total_true_positives"***REMOVED*** + len(true_positives)
                 summary***REMOVED***"total_false_positives"***REMOVED*** = summary***REMOVED***"total_false_positives"***REMOVED*** + len(false_positives)
                 summary***REMOVED***"total_false_negatives"***REMOVED*** = summary***REMOVED***"total_false_negatives"***REMOVED*** + len(false_negatives)
                 summary***REMOVED***"total_true_negatives"***REMOVED*** = summary***REMOVED***"total_true_negatives"***REMOVED*** + len(true_negatives)
+                all_tn = all_tn + true_negatives
                 all_fp = all_fp + false_positives
                 all_fn = all_fn + false_negatives
+                all_tp = all_tp + true_positives
 
 
                 # Create coordinate summaries
-                summary_coords***REMOVED***"summary_by_file"***REMOVED******REMOVED***philtered_filename***REMOVED*** = {"false_positives":false_positives_coords,"false_negatives":false_negatives_coords,"true_positives":true_positives_coords}
+                summary_coords***REMOVED***"summary_by_file"***REMOVED******REMOVED***philtered_filename***REMOVED*** = {"false_positives":false_positives_coords,"false_negatives":false_negatives_coords,"true_positives":true_positives_coords,"true_negatives":true_negatives_coords}
 
 
         if summary***REMOVED***"total_true_positives"***REMOVED***+summary***REMOVED***"total_false_negatives"***REMOVED*** > 0:
@@ -1202,8 +1211,11 @@ class Philter:
         ################# DETAILED EVAL ##################
         #save the phi we missed
         json.dump(summary, open(summary_output, "w"), indent=4)
+        json.dump(summary_coords, open(summary_coords_output, "w"), indent=4)
         json.dump(all_fn, open(fn_output, "w"), indent=4)
         json.dump(all_fp, open(fp_output, "w"), indent=4)
+        json.dump(all_tn, open(tn_output, "w"), indent=4)
+        json.dump(all_tp, open(tp_output, "w"), indent=4)
         
         if self.verbose:
             print('\n')
@@ -1227,98 +1239,23 @@ class Philter:
         fp_tags = {}
         
         # Keep track of recall and precision for each category
-        phi_categories = ***REMOVED***'Age','Contact','Date','ID','Location','Name','Other'***REMOVED***
-        # i2b2:
-        if not self.ucsf_format:                
-            # Define tag list
-            i2b2_tags = ***REMOVED***'DOCTOR','PATIENT','DATE','MEDICALRECORD','IDNUM','DEVICE','USERNAME','PHONE','EMAIL','FAX','CITY','STATE','ZIP','STREET','LOCATION-OTHER','HOSPITAL','AGE'***REMOVED***
-            
-            i2b2_category_dict = {'DOCTOR':'Name',
-            'PATIENT':'Name',
-            'DATE':'Date',
-            'MEDICALRECORD':'ID',
-            'IDNUM':'ID',
-            'DEVICE':'ID',
-            'USERNAME':'Contact',
-            'PHONE':'Contact',
-            'EMAIL':'Contact',
-            'FAX':'Contact',
-            'CITY':'Location',
-            'STATE':'Location',
-            'ZIP':'Location',
-            'STREET':'Location',
-            'LOCATION-OTHER':'Location',
-            'HOSPITAL':'Location',
-            'AGE':'Age'
-            }
-            
-            i2b2_include_tags = ***REMOVED***'DOCTOR','PATIENT','DATE','MEDICALRECORD','IDNUM','DEVICE','USERNAME','PHONE','EMAIL','FAX','CITY','STATE','ZIP','STREET','LOCATION-OTHER','HOSPITAL','AGE'***REMOVED***
-            i2b2_patient_tags = ***REMOVED***'PATIENT','DATE','MEDICALRECORD','IDNUM','DEVICE','USERNAME','PHONE','EMAIL','FAX','CITY','STATE','ZIP','STREET','LOCATION-OTHER','HOSPITAL','AGE'***REMOVED***
-            i2b2_provider_tags = ***REMOVED***'DOCTOR','DATE','USERNAME','PHONE','EMAIL','FAX','CITY','STATE','ZIP','STREET',"LOCATION-OTHER",'HOSPITAL'***REMOVED***
+        if not self.ucsf_format: # i2b2 format
+            gold_tags = i2b2_tags
+        else: # ucsf format
+            gold_tags = ucsf_tags
+            if not self.initials:
+                ucsf_include_tags.remove('Patient_Initials')
+                ucsf_include_tags.remove('Provider_Initials')
+                ucsf_patient_tags.remove('Patient_Initials')
+                ucsf_provider_tags.remove('Provider_Initials')
 
-            rp_summaries = {}
-            for i in range(0,len(i2b2_tags)):
-                tag = i2b2_tags***REMOVED***i***REMOVED***
-                fn_key = tag + '_fns'
-                tp_key = tag + '_tps'
-                rp_summaries***REMOVED***fn_key***REMOVED*** = 0
-                rp_summaries***REMOVED***tp_key***REMOVED*** = 0
-
-        # ucsf:
-        if self.ucsf_format:
-            # Define tag list
-            ucsf_tags = ***REMOVED***'Date','Provider_Name','Phone_Fax','Age','Patient_Name_or_Family_Member_Name','Patient_Address','Patient_Initials','Provider_Address_or_Location','Provider_Initials','Provider_Certificate_or_License','Patient_Medical_Record_Id','Patient_Account_Number','Patient_Social_Security_Number','Patient_Vehicle_or_Device_Id','Patient_Unique_Id','Diagnosis_Code_ICD_or_International','Procedure_or_Billing_Code','Medical_Department_Name','Email','URL_IP','Patient_Biometric_Id_or_Face_Photo','Patient_Language_Spoken','Patient_Place_Of_Work_or_Occupation','Patient_Certificate_or_License','Medical_Research_Study_Name_or_Number','Teaching_Institution_Name','Non_UCSF_Medical_Institution_Name','Medical_Institution_Abbreviation','Unclear'***REMOVED***
-            
-            ucsf_category_dict = {'Date':'Date',
-            'Provider_Name':'Name',
-            'Phone_Fax':'Contact',
-            'Age':'Age',
-            'Patient_Name_or_Family_Member_Name':'Name',
-            'Patient_Address':'Location',
-            'Patient_Initials':'Name',
-            'Provider_Address_or_Location':'Location',
-            'Provider_Initials':'Name',
-            'Provider_Certificate_or_License':'ID',
-            'Patient_Medical_Record_Id':'ID',
-            'Patient_Account_Number':'ID',
-            'Patient_Social_Security_Number':'ID',
-            'Patient_Vehicle_or_Device_Id':'ID',
-            'Patient_Unique_Id':'ID',
-            'Diagnosis_Code_ICD_or_International':'ID',
-            'Procedure_or_Billing_Code':'ID',
-            'Medical_Department_Name':'Location',
-            'Email':'Contact',
-            'URL_IP':'Contact',
-            'Patient_Biometric_Id_or_Face_Photo':'ID',
-            'Patient_Language_Spoken':'Other',
-            'Patient_Place_Of_Work_or_Occupation':'Location',
-            'Patient_Certificate_or_License':'ID',
-            'Medical_Research_Study_Name_or_Number':'ID',
-            'Teaching_Institution_Name':'Location',
-            'Non_UCSF_Medical_Institution_Name':'Location',
-            'Medical_Institution_Abbreviation':'Location',
-            'Unclear':'Other'
-            }
-            
-            if self.initials:
-                ucsf_include_tags = ***REMOVED***'Date','Provider_Name','Phone_Fax','Patient_Name_or_Family_Member_Name','Patient_Address','Provider_Address_or_Location','Provider_Certificate_or_License','Patient_Medical_Record_Id','Patient_Account_Number','Patient_Social_Security_Number','Patient_Vehicle_or_Device_Id','Patient_Unique_Id','Procedure_or_Billing_Code','Email','URL_IP','Patient_Biometric_Id_or_Face_Photo','Patient_Certificate_or_License','Age','Patient_Initials','Provider_Initials'***REMOVED***
-                ucsf_patient_tags = ***REMOVED***'Date','Phone_Fax','Age','Patient_Name_or_Family_Member_Name','Patient_Address','Patient_Initials','Patient_Medical_Record_Id','Patient_Account_Number','Patient_Social_Security_Number','Patient_Vehicle_or_Device_Id','Patient_Unique_Id','Email','URL_IP','Patient_Biometric_Id_or_Face_Photo','Patient_Certificate_or_License'***REMOVED***
-                ucsf_provider_tags = ***REMOVED***'Provider_Name','Phone_Fax','Provider_Address_or_Location','Provider_Initials','Provider_Certificate_or_License','Email','URL_IP'***REMOVED***
-
-            else:
-                ucsf_include_tags = ***REMOVED***'Date','Provider_Name','Phone_Fax','Patient_Name_or_Family_Member_Name','Patient_Address','Provider_Address_or_Location','Provider_Certificate_or_License','Patient_Medical_Record_Id','Patient_Account_Number','Patient_Social_Security_Number','Patient_Vehicle_or_Device_Id','Patient_Unique_Id','Procedure_or_Billing_Code','Email','URL_IP','Patient_Biometric_Id_or_Face_Photo','Patient_Certificate_or_License','Age'***REMOVED***
-                ucsf_patient_tags = ***REMOVED***'Date','Phone_Fax','Age','Patient_Name_or_Family_Member_Name','Patient_Address','Patient_Medical_Record_Id','Patient_Account_Number','Patient_Social_Security_Number','Patient_Vehicle_or_Device_Id','Patient_Unique_Id','Email','URL_IP','Patient_Biometric_Id_or_Face_Photo','Patient_Certificate_or_License'***REMOVED***
-                ucsf_provider_tags = ***REMOVED***'Provider_Name','Phone_Fax','Provider_Address_or_Location','Provider_Certificate_or_License','Email','URL_IP'***REMOVED***
-
-
-
-            rp_summaries = {}
-            for i in range(0,len(ucsf_tags)):
-                tag = ucsf_tags***REMOVED***i***REMOVED***
-                fn_key = tag + '_fns'
-                tp_key = tag + '_tps'
-                rp_summaries***REMOVED***fn_key***REMOVED*** = 0
-                rp_summaries***REMOVED***tp_key***REMOVED*** = 0
+        rp_summaries = {}
+        for i in range(0,len(gold_tags)):
+            tag = gold_tags***REMOVED***i***REMOVED***
+            fn_key = tag + '_fns'
+            tp_key = tag + '_tps'
+            rp_summaries***REMOVED***fn_key***REMOVED*** = 0
+            rp_summaries***REMOVED***tp_key***REMOVED*** = 0
 
 
         # Create dictionaries for unigram and bigram PHI/non-PHI frequencies
