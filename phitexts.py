@@ -8,11 +8,12 @@ from coordinate_map import CoordinateMap
 from lxml import etree as ET
 import xmltodict
 from philter import Philter
-import json
 from subs import Subs
 import string
 import pandas
 import numpy
+from knownphi import Knownphi
+from constants import *
 
 class Phitexts:
     """ container for texts, phi, attributes """
@@ -58,10 +59,11 @@ class Phitexts:
 
 
     def __read_xml_into_coordinateMap(self,inputdir):
-        xml_map = CoordinateMap()
         full_xml_map = {}
-        phi_type_list = []
+        phi_type_list = ['Provider_Name','Date','DATE','Patient_Social_Security_Number','Email','Provider_Address_or_Location','Age','Name','OTHER']
         phi_type_dict = {}
+        for phi_type in phi_type_list:
+            phi_type_dict[phi_type] = [CoordinateMap()]
         xml_texts = {}
         xml_filenames = []
 
@@ -71,23 +73,21 @@ class Phitexts:
             xml_coordinate_map = {}
             if not filename.endswith("xml"):
                continue
-               
-            philter_or_gold = 'PhilterUCSF' 
             filepath = os.path.join(inputdir, filename)
-            #print(filepath)           
-            xml_filenames.append(filepath)
+            filename = (filename.replace('_utf8','')).replace('.txt','')   
+            philter_or_gold = 'PhilterUCSF' 
+            xml_filenames.append(filename)
             encoding = self._detect_encoding(filepath)
             fhandle = open(filepath, "r", encoding=encoding['encoding'])
             input_xml = fhandle.read() 
             tree = ET.parse(filepath)
             root = tree.getroot()
             xmlstr = ET.tostring(root, encoding='utf8', method='xml')
-            xml_texts[filepath] = root.find('TEXT').text
+            xml_texts[filename] = root.find('TEXT').text
             xml_dict = xmltodict.parse(xmlstr)[philter_or_gold]
             check_tags = root.find('TAGS')
                        
  
-            xml_map.add_file(filepath)
             if check_tags is not None:
                tags_dict = xml_dict["TAGS"]            
             else:
@@ -108,7 +108,9 @@ class Phitexts:
                           for phi_type in phi_type_list:
                               if phi_type not in phi_type_dict:
                                  phi_type_dict[phi_type] = [CoordinateMap()]
-                              phi_type_dict[phi_type][0].add_file(filepath)
+                          
+                          #phi_type_dict[xml_phi_type][0].add_file(filename)
+                          phi_type_dict[xml_phi_type][0].add_extend(filename,int(text_start),int(text_end))
                    else:
                        final_value = value
                        text = final_value["@text"]
@@ -121,9 +123,9 @@ class Phitexts:
                        for phi_type in phi_type_list:
                            if phi_type not in phi_type_dict:
                                  phi_type_dict[phi_type] = [CoordinateMap()]
-                           phi_type_dict[phi_type][0].add_file(filepath)
-                      
-            full_xml_map[filepath] = xml_coordinate_map
+                       #phi_type_dict[xml_phi_type][0].add_file(filename)
+                       phi_type_dict[xml_phi_type][0].add_extend(filename,int(text_start),int(text_end))
+            full_xml_map[filename] = xml_coordinate_map
             fhandle.close()
         return full_xml_map, phi_type_dict, xml_texts, xml_filenames
        
@@ -141,21 +143,20 @@ class Phitexts:
         return detector.result
 
 
-    def _get_clean(self, text, punctuation_matcher=re.compile(r"[^a-zA-Z0-9\*\/]")):
+    def _get_clean(self, text, punctuation_matcher=re.compile(r"[^a-zA-Z0-9]")):
 
             # Use pre-process to split sentence by spaces AND symbols, while preserving spaces in the split list
-        # print (text)
-        lst = re.split("(\s+)", text)
+        #lst = re.split("[(\s+)/-]", text)
+        lst = re.findall(r"[\w']+",text)
         cleaned = []
         for item in lst:
             if len(item) > 0:
                 if item.isspace() == False:
-                    split_item = re.split("(\s+)", re.sub(punctuation_matcher, "", item))
+                    split_item = re.split("(\s+)", re.sub(punctuation_matcher, " ", item))
                     for elem in split_item:
                         if len(elem) > 0:
-                                cleaned.append(elem)
-                                # print (elem)
-                # else:
+                           cleaned.append(elem)
+                #else:
                 #     cleaned.append(item)
         return cleaned
 
@@ -174,12 +175,12 @@ class Phitexts:
             "verbose":verbose,
             "run_eval":False,
             "finpath":self.inputdir,
-            "filters":filters,
-            "outformat":"asterisk"
+            "filters":filters
         }
 
         self.filterer = Philter(philter_config)
         self.coords = self.filterer.map_coordinates()
+
 
     def detect_phi_types(self):
         assert self.texts, "No texts defined"
@@ -187,9 +188,16 @@ class Phitexts:
         
         if self.types:
             return
-
         self.types = self.filterer.phi_type_dict
-    
+        
+    def detect_known_phi(self, knownphifile = "./data/knownphi.txt"):
+        assert self.coords, "No PHI coordinates defined"
+        assert self.texts, "No texts defined"
+        assert self.types, "No PHI types defined"
+
+        self.knownphi = Knownphi(knownphifile, self.coords, self.texts, self.types)
+        self.coords, self.types = self.knownphi.update_coordinatemap()
+
 
     def normalize_phi(self):
         assert self.texts, "No texts defined"
@@ -210,8 +218,8 @@ class Phitexts:
                 for filename, start, end in self.types[phi_type][0].scan():
                     token = self.texts[filename][start:end]
                     normalized_token = Subs.parse_date(token)
-                    self.norms[phi_type] [(filename, start)] = (normalized_token, end)
-                
+                    self.norms[phi_type][(filename, start)] = (normalized_token,
+                                                               end)
             else:
                 continue
 
@@ -232,10 +240,15 @@ class Phitexts:
 
         for phi_type in self.norms.keys():
             if phi_type == "DATE" or phi_type == "Date":
+                if __debug__: nodateshiftlist = []
                 for filename, start in self.norms[phi_type]:
                     note_key_ucsf = os.path.splitext(os.path.basename(filename).strip('0'))[0]
                     if not self.subser.has_shift_amount(note_key_ucsf):
-                        if __debug__: print("WARNING: no date shift found for: " + filename)
+                        if __debug__:
+                            if filename not in nodateshiftlist:
+                                print("WARNING: no date shift found for: "
+                                      + filename)
+                                nodateshiftlist.append(filename)
                         continue
                     
                     normalized_token = self.norms[phi_type][filename, start][0]
@@ -248,6 +261,7 @@ class Phitexts:
                     
                     shifted_date = self.subser.shift_date_pid(normalized_token,
                                                               note_key_ucsf)
+
                     if shifted_date is None:
                         if __debug__: print("WARNING: cannot shift date "
                                             + normalized_token.get_raw_string()
@@ -282,9 +296,10 @@ class Phitexts:
             #punctuation_matcher = re.compile(r"[^a-zA-Z0-9*]")
             txt = self.texts[filename]
             exclude_dict = self.coords[filename]
-
             #read the text by character, any non-punc non-overlaps will be replaced
             contents = []
+            #print(filename)
+            #print(exclude_dict)
             for i in range(0, len(txt)):
 
                 if i < last_marker:
@@ -363,9 +378,9 @@ class Phitexts:
 
         failed_dates_file = os.path.join(log_dir, 'failed_dates.json')
         date_table_file = os.path.join(log_dir, 'parsed_dates.json')
-        phi_count_file = os.path.join(log_dir, 'phi_count.txt')
+        phi_count_file = os.path.join(log_dir, 'phi_count.log')
         phi_marked_file = os.path.join(log_dir, 'phi_marked.json')
-        batch_summary_file = os.path.join(log_dir, 'batch_summary.txt')
+        batch_summary_file = os.path.join(log_dir, 'batch_summary.log')
 
         #Path to csv summary of all files
         csv_summary_filepath = os.path.join(log_dir,
@@ -400,7 +415,8 @@ class Phitexts:
             normalized_date = self.norms[phi_type][(filename,start)][0]
             
             if filename not in parse_info:
-                parse_info[filename] = {'success_norm':0,'fail_norm':0,'success_sub':0,'fail_sub':0}
+                parse_info[filename] = {'success_norm':0,'fail_norm':0,
+                                        'success_sub':0,'fail_sub':0}
             if filename not in eval_table:
                 eval_table[filename] = []
 
@@ -423,7 +439,10 @@ class Phitexts:
                      sub = None	
                      parse_info[filename]['fail_sub'] += 1
 
-                eval_table[filename].append({'start':start, 'end':end, 'raw': raw, 'normalized': normalized_token, 'sub': sub})
+                eval_table[filename].append({'start':start, 'end':end,
+                                             'raw': raw,
+                                             'normalized': normalized_token,
+                                             'sub': sub})
                     # f_parsed.write('\t'.join([filename, str(start), str(end), raw, normalized_token, sub]))
                     # f_parsed.write('\n')
             else:
@@ -434,7 +453,8 @@ class Phitexts:
                     # f_failed.write('\n')
                 if filename not in failed_date:
                         failed_date[filename] = []
-                failed_date[filename].append({'start':start, 'end':end, 'raw': raw})
+                failed_date[filename].append({'start':start, 'end':end,
+                                              'raw': raw})
 
         if __debug__:
             print ('Successfully parsed: ' + str(num_parsed) + ' dates.')
@@ -452,7 +472,8 @@ class Phitexts:
                     if filename not in phi_table:
                         phi_table[filename] = []
                     word = self.texts[filename][start:end]
-                    phi_table[filename].append({'start': start, 'end': end, 'word': word, 'type': phi_type})
+                    phi_table[filename].append({'start': start, 'end': end,
+                                                'word': word, 'type': phi_type})
 
                     if phi_type not in phi_counter:
                         phi_counter[phi_type] = 0
@@ -557,19 +578,31 @@ class Phitexts:
 
         # Create text summary for the current batch
         with open(batch_summary_file, "w") as f:
-            f.write("TOTAL NOTES PROCESSED: "+str(number_of_notes)+'\n')
-            f.write("TOTAL KB PROCESSED: "+str("%.2f"%total_kb_processed)+'\n')
-            f.write("TOTAL TOKENS PROCESSED: "+str(total_tokens)+'\n')
-            f.write("TOTAL PHI TOKENS PROCESSED: "+str(total_phi_tokens)+'\n')
+            f.write("TOTAL NOTES PROCESSED: " + str(number_of_notes) + '\n')
+            f.write("TOTAL KB PROCESSED: " + str("%.2f"%total_kb_processed)
+                    + '\n')
+            f.write("TOTAL TOKENS PROCESSED: " + str(total_tokens) + '\n')
+            f.write("TOTAL PHI TOKENS PROCESSED: " + str(total_phi_tokens)
+                    + '\n')
             f.write('\n')
-            f.write("MEDIAN FILESIZE (BYTES): "+str(median_file_size)+" (95% Percentile: "+str("%.2f"%q2pt5_size)+'-'+str("%.2f"%q97pt5_size)+')'+'\n')
-            f.write("MEDIAN TOKENS PER NOTE: "+str(median_tokens)+" (95% Percentile: "+str("%.2f"%q2pt5_tokens)+'-'+str("%.2f"%q97pt5_tokens)+')'+'\n')
-            f.write("MEDIAN PHI TOKENS PER NOTE: "+str(median_phi_tokens)+" (95% Percentile: "+str("%.2f"%q2pt5_phi_tokens)+'-'+str("%.2f"%q97pt5_phi_tokens)+')'+'\n')
+            f.write("MEDIAN FILESIZE (BYTES): " + str(median_file_size)
+                    + " (95% Percentile: " + str("%.2f"%q2pt5_size) + '-'
+                    + str("%.2f"%q97pt5_size) + ')' + '\n')
+            f.write("MEDIAN TOKENS PER NOTE: " + str(median_tokens)
+                    + " (95% Percentile: " + str("%.2f"%q2pt5_tokens) + '-'
+                    + str("%.2f"%q97pt5_tokens) + ')' + '\n')
+            f.write("MEDIAN PHI TOKENS PER NOTE: " + str(median_phi_tokens)
+                    + " (95% Percentile: " + str("%.2f"%q2pt5_phi_tokens) + '-'
+                    + str("%.2f"%q97pt5_phi_tokens) + ')' + '\n')
             f.write('\n')
-            f.write("DATES SUCCESSFULLY NORMALIZED: "+str(successful_normalization)+'\n')
-            f.write("DATES FAILED TO NORMALIZE: "+str(failed_normalization)+'\n')
-            f.write("DATES SUCCESSFULLY SURROGATED: "+str(successful_surrogation)+'\n')
-            f.write("DATES FAILED TO SURROGATE: "+str(failed_surrogation)+'\n')   
+            f.write("DATES SUCCESSFULLY NORMALIZED: "
+                    + str(successful_normalization) + '\n')
+            f.write("DATES FAILED TO NORMALIZE: " + str(failed_normalization)
+                    + '\n')
+            f.write("DATES SUCCESSFULLY SURROGATED: "
+                    + str(successful_surrogation) + '\n')
+            f.write("DATES FAILED TO SURROGATE: " + str(failed_surrogation)
+                    + '\n')   
         
 
         # Todo: add PHI type counts to summary
@@ -582,41 +615,191 @@ class Phitexts:
         # Other PHI
 
 
-    def eval(self, anno_dir, in_dir, output_dir):
-        # preserve these two puncs so that dates are complete
+    # tokenizes a string
+    def _get_tokens(self, string):
+        tokens = {}
+        str_split = self._get_clean(string)
+                
+        offset = 0
+        for item in str_split:
+            item_stripped = item.strip()
+            if len(item_stripped) is 0:
+                offset += len(item)
+                continue
+            token_start = string.find(item_stripped, offset)
+            if token_start is -1:
+                raise Exception("ERROR: cannot find token \"{0}\" in \"{1}\" starting at {2} in file {3}".format(item, string, offset))
+            token_stop = token_start + len(item_stripped) - 1
+            offset = token_stop + 1
+            tokens.update({token_start:[token_stop,item_stripped]})
+    
+        return tokens
 
-        ### TO DO: eval should be using read_xml_into_coordinateMap for reading the xml
-        ######### Create a get function to get Lu's data structure given the coordinate maps
-        s = string.punctuation.replace('/','')
-        s = s.replace('-', '')
-        translator = str.maketrans('', '', s)
+    def _get_phi_type(self, filename, start, stop):
+        for phi_type in self.types.keys():
+            for begin,end in self.types[phi_type][0].filecoords(filename):
+                if start == begin: # TODO: extend this to an include match?
+                    return phi_type
+        return None
 
-        gold_phi = {}
-        eval_dir = os.path.join(output_dir, 'eval/')
-        summary_file = os.path.join(eval_dir, 'summary.json')
-        json_summary_by_file = os.path.join(eval_dir, 'summary_by_file.json')
-        json_summary_by_category = os.path.join(eval_dir, 'summary_by_category.json')
+    # creates dictionary with tokens tagged by Philter
+    def _tokenize_philter_phi(self, filename):
+        exclude_dict = self.coords[filename]
+        updated_dict = {}
+        for i in exclude_dict:
+            start, end = i, exclude_dict[i]
+            phi_type = self._get_phi_type(filename, start, end)
+            word = self.texts[filename][start:end]
+            
+            try:
+                tokens = self._get_tokens(word)
+            except Exception as err:
+                raise Exception("ERROR: cannot get tokens in \"{0}\" starting at {1} in file {2}: {3}".format(word, start, filename, err))
+            
+            for tstart in tokens:
+                token_start = tstart + start
+                token_stop = tokens[tstart][0] + start
+                token = tokens[tstart][1]
+                updated_dict.update({token_start:[token_stop, phi_type, token]})
+        return updated_dict
 
-        if os.path.isdir(eval_dir):
-            pass
+    # returns the left, middle and right parts of possible overlaps
+    def _get_sub_tokens(self, token1, token2):
+        
+        if (token1['stop'] < token2['start']
+            or token1['start'] > token2['stop']): # tokens do not overlap
+            return None
+
+        subtokens1 = {}
+        subtokens2 = {}
+        left = {}
+        middle = {}
+        right = {}
+
+        tk1_has_type = True if 'phitype' in token1 else False
+        tk2_has_type = True if 'phitype' in token2 else False
+
+        # looks for dangling beginning
+        if token1['start'] < token2['start']: # token1 has dangling beginning
+            left['start'] = token1['start']
+            left['length'] = token2['start'] - token1['start']
+            left['stop'] = token2['start'] - 1
+            left['token'] = token1['token'][0:left['length']]
+            if tk1_has_type:
+                left['phitype'] = token1['phitype']
+                subtokens1.update({left['start']:[left['stop'], left['phitype'],
+                                                  left['token']]})
+            else:
+                subtokens1.update({left['start']:[left['stop'], left['token']]})
+        elif token1['start'] > token2['start']: # token2 has dangling beginning
+            left['start'] = token2['start']
+            left['length'] = token1['start'] - token2['start']
+            left['stop'] = token1['start'] - 1
+            left['token'] = token2['token'][0:left['length']]
+            if tk2_has_type:
+                left['phitype'] = token2['phitype']
+                subtokens2.update({left['start']:[left['stop'], left['phitype'],
+                                                  left['token']]})
+            else:
+                subtokens2.update({left['start']:[left['stop'], left['token']]})
+        else: # tokens have the same start
+            left['start'] = token1['start']
+            left['length'] = 0
+            left['stop'] = token1['start'] - 1
+            left['phitype'] = None
+            left['token'] = ""
+
+        # looks for dangling end
+        if token1['stop'] < token2['stop']: # token2 has dangling end
+            right['start'] = token1['stop'] + 1
+            right['length'] = token2['stop'] - token1['stop']
+            right['stop'] = token2['stop']
+            right['token'] = token2['token'][-right['length']:]
+            if tk2_has_type:
+                right['phitype'] = token2['phitype']
+                subtokens2.update({right['start']:[right['stop'],
+                                                   right['phitype'],
+                                                   right['token']]})
+            else:
+                subtokens2.update({right['start']:[right['stop'],
+                                                   right['token']]})
+        elif token2['stop'] < token1['stop']: # token1 has dangling end
+            right['start'] = token2['stop'] + 1
+            right['length'] = token1['stop'] - token2['stop']
+            right['stop'] = token1['stop']
+            right['token'] = token1['token'][-right['length']:]
+            if tk1_has_type:
+                right['phitype'] = token1['phitype']
+                subtokens1.update({right['start']:[right['stop'],
+                                                   right['phitype'],
+                                                   right['token']]})
+            else:
+                subtokens1.update({right['start']:[right['stop'],
+                                                   right['token']]})
+        else: # tokens have the same end
+            right['start'] = token1['stop'] + 1
+            right['length'] = 0
+            right['stop'] = token1['stop']
+            right['phitype'] = None
+            right['token'] = ""
+
+        # looks for middle portion
+        middle['start'] = left['stop'] + 1
+        middle['stop'] = right['start'] - 1
+        middle['length'] = middle['stop'] - middle['start'] + 1
+        if left['start'] == token1['start']:
+            middle['token'] = token1['token'][left['length']:left['length']+middle['length']]
+            othertoken = token2
         else:
-            os.makedirs(eval_dir)
+            middle['token'] = token2['token'][left['length']:left['length']+middle['length']]
+            othertoken = token1
+        if not middle['token'] == othertoken['token'][0:middle['length']]:
+            if __debug__: print(str(left),str(middle),str(right))
+            raise Exception("ERROR: string mismatch: \"" + middle['token']
+                            + "\" != \""
+                            +  othertoken['token'][0:middle['length']]
+                            + "\" in tokens: \""
+                            + token1['token'] + "\" (" + str(token1['start'])
+                            + "-" + str(token1['stop']) + ") and \""
+                            + token2['token'] + "\" (" + str(token2['start'])
+                            + "-" + str(token2['stop']) + ")")
 
+        if tk1_has_type:
+            middle['phitype'] = token1['phitype']
+            subtokens1.update({middle['start']:[middle['stop'],
+                                                middle['phitype'],
+                                                middle['token']]})
+        else:
+            subtokens1.update({middle['start']:[middle['stop'],
+                                                middle['token']]})
+        if tk2_has_type:
+            middle['phitype'] = token2['phitype']
+            subtokens2.update({middle['start']:[middle['stop'],
+                                                middle['phitype'],
+                                                middle['token']]})
+        else:
+            subtokens2.update({middle['start']:[middle['stop'],
+                                                middle['token']]})
+
+        return subtokens1, subtokens2
+    
+    # creates a dictionary of tokens found in XML files
+    def _get_gold_phi(self, anno_dir):
+        gold_phi = {}
         for root, dirs, files in os.walk(anno_dir):
             for filename in files:
-                #print(root)
                 if not filename.endswith("xml"):
-                    continue                
-                #filepath = os.path.join(root, filename)
-                filepath = os.path.join(anno_dir, filename)
+                    continue
+                print("root: " + str(root) + " filename: " + str(filename))
+                filepath = os.path.join(root, filename)
                 # change here: what will the input format be?
-                file_id = in_dir + filename.split('.')[0] + '.txt'
+                file_id = self.inputdir + filename.split('.')[0] + '.txt'
                 tree = ET.parse(filepath)
-                root = tree.getroot()
-                xmlstr = ET.tostring(root, encoding='utf8', method='xml')
+                rt = tree.getroot()
+                xmlstr = ET.tostring(rt, encoding='utf8', method='xml')
                 xml_dict = xmltodict.parse(xmlstr)['PhilterUCSF']
-                check_tags = root.find('TAGS')
-                text = xml_dict["TEXT"]
+                check_tags = rt.find('TAGS')
+                full_text = xml_dict["TEXT"]
                 if check_tags is not None:
                    tags_dict = xml_dict["TAGS"]
                 else:
@@ -627,176 +810,379 @@ class Phitexts:
                 # the existence of puncs in text makes the end index inaccurate - only use start index as the key
                 if tags_dict is not None: 
 
-                   for key, value in tags_dict.items():
-                       if isinstance(value, list):
-                          for final_value in value:
-                              #start = int(final_value["@start"])
-                              #end = int(final_value["@end"])
-                              start = int(final_value["@spans"].split('~')[0])
-                              end = int(final_value["@spans"].split('~')[1])
-                              text = final_value["@text"].translate(translator)
-                              phi_type = final_value["@TYPE"]
-                              gold_phi[file_id].update({start:[end,phi_type,text]})
+                    for key, value in tags_dict.items():
+                        if not isinstance(value, list):
+                            value = [value]
+                        for final_value in value:
+                            start = int(final_value["@spans"].split('~')[0])
+                            end = int(final_value["@spans"].split('~')[1])
+                            text = final_value["@text"]
+                            phi_type = final_value["@TYPE"]
 
-                       else:
-                          final_value = value
-                          #start = int(final_value["@start"])
-                          start = int(final_value["@spans"].split('~')[0])
-                          #end = int(final_value["@end"])
-                          end = int(final_value["@spans"].split('~')[1])
-                          text = final_value["@text"].translate(translator)
-                          phi_type = final_value["@TYPE"]
-                          gold_phi[file_id].update({start:[end, phi_type, text]})
-       
-        # converting self.types to an easier accessible data structure
-        eval_table = {}
-        phi_table = {}
-        non_phi = {}
-        for phi_type in self.types:
-            for filename, start, end in self.types[phi_type][0].scan():
-                word = self.texts[filename][start:end].translate(translator)
-                #print(filename + "\t" + str(start) + "\t" + str(end) +"\t" + word)
-                if filename not in phi_table:
-                    phi_table[filename] = {}
-                phi_table[filename].update({start:[end, phi_type, word]})
+                            try:
+                                tokens = self._get_tokens(text)
+                            except Exception as err:
+                                raise Exception("EROOR: cannot get tokens in \"{0}\" starting at {1} in file {2}: {3}".format(text, start, filename, err))
+            
+                            for tstart in tokens:
+                                token_start = tstart + start
+                                token_stop = tokens[tstart][0] + start
+                                token = tokens[tstart][1]
+                                gold_phi[file_id].update({token_start:[token_stop,
+                                                                       phi_type,
+                                                                       token]})
+        return gold_phi
+
+    # creates a dictionary of tokens found in Philter
+    def _get_philter_phi(self, filenames):
+        philter_phi = {}
+        for filename in filenames:
+            philter_phi[filename] = self._tokenize_philter_phi(filename)
+        return philter_phi
+
+    # subtokenizes gold and philter tokens with the respective other coords 
+    def _update_with_sub_tokens(self, gold_phi, philter_phi):
+        gold = {}
+        philter = {}
         for filename in gold_phi:
-            if filename not in eval_table:
-                eval_table[filename] = {'fp':{},'tp':{},'fn':{},'tn':{}}
-            # each ele contains an annotated phi
-            # token_set = self._get_clean(self.texts[filename])
-            text = self.texts[filename]
-            for start in gold_phi[filename]:
-                gold_start = start
-                gold_end = gold_phi[filename][start][0]
-                gold_type = gold_phi[filename][start][1]
-                gold_word = gold_phi[filename][start][2]
-                #print(filename + "\t" + gold_start + "\t" + gold_end +"\t" + gold_word)
-                # remove phi from text to form the non_phi_set
-                text = text.replace(gold_word, '')
+            gphi = gold_phi[filename].copy()
+            pphi = philter_phi[filename].copy()
+            for gstart in gphi:
+                gold['start'] = gstart
+                gold['stop'] = gphi[gstart][0]
+                gold['phitype'] = gphi[gstart][1]
+                gold['token'] = gphi[gstart][2]
+                for pstart in pphi:
+                    philter['start'] = pstart
+                    philter['stop'] = pphi[pstart][0]
+                    philter['phitype'] = pphi[pstart][1]
+                    philter['token'] = pphi[pstart][2]
+                    subtokens = self._get_sub_tokens(gold, philter)
+                    if subtokens is None:
+                        continue
+                    for st in subtokens[0]:
+                        start = st
+                        stop = subtokens[0][st][0]
+                        phitype = subtokens[0][st][1]
+                        token = subtokens[0][st][2]
+                        gold_phi[filename].update({start:[stop, phitype,
+                                                          token]})
+                    for st in subtokens[1]:
+                        start = st
+                        stop = subtokens[1][st][0]
+                        phitype = subtokens[1][st][1]
+                        token = subtokens[1][st][2]
+                        philter_phi[filename].update({start:[stop, phitype,
+                                                             token]})
+
+    # true positives (tokens in gold and philter)
+    def _get_tp_dicts(self, gold_dicts, philter_dicts):
+        tp_dicts = {}
+        for filename in gold_dicts:
+            tp_dicts[filename] = {}
+            keys = gold_dicts[filename].keys() & philter_dicts[filename].keys()
+            for k in keys:
+                tp_dicts[filename].update({k:gold_dicts[filename][k]})
+        return tp_dicts
+
+    # false positives (tokens in philter but not in gold)
+    def _get_fp_dicts(self, gold_dicts, philter_dicts):
+        fp_dicts = {}
+        for filename in gold_dicts:
+            fp_dicts[filename] = {}
+            keys = philter_dicts[filename].keys() - gold_dicts[filename].keys()
+            for k in keys:
+                fp_dicts[filename].update({k:philter_dicts[filename][k]})
+        return fp_dicts
+
+    # true negatives (tokens not tagged)
+    def _get_tn_dicts(self, full_dicts, gold_dicts, philter_dicts):
+        tn_dicts = {}
+        for filename in gold_dicts:
+            tn_dicts[filename] = {}
+            keys = (full_dicts[filename].keys() - gold_dicts[filename].keys()
+                    - philter_dicts[filename].keys())
+            for k in keys:
+                tn_dicts[filename].update({k:full_dicts[filename][k]})
+        return tn_dicts
+
+    # false negatives (tokens in gold but not in philter)
+    def _get_fn_dicts(self, gold_dicts, philter_dicts):
+        fn_dicts = {}
+        for filename in gold_dicts:
+            fn_dicts[filename] = {}
+            keys = gold_dicts[filename].keys() - philter_dicts[filename].keys()
+            for k in keys:
+                fn_dicts[filename].update({k:gold_dicts[filename][k]})
+        return fn_dicts
+
+    # subtokenizes full texts tokens with phi coordinates
+    def _sub_tokenize(self, fulltext_dicts, phi_dicts):
+        ftoken = {}
+        phi = {}
+        for filename in fulltext_dicts:
+            ftdict = fulltext_dicts[filename].copy()
+            pdict = phi_dicts[filename].copy()
+            for fstart in ftdict:
+                ftoken['start'] = fstart
+                ftoken['stop'] = ftdict[fstart][0]
+                ftoken['token'] = ftdict[fstart][1]
+                for pstart in pdict:
+                    phi['start'] = pstart
+                    phi['stop'] = pdict[pstart][0]
+                    phi['token'] = pdict[pstart][2]
+                    subtokens = self._get_sub_tokens(ftoken, phi)
+                    if subtokens is None:
+                        continue
+                    for st in subtokens[0]:
+                        start = st
+                        stop = subtokens[0][st][0]
+                        token = subtokens[0][st][1]
+                        fulltext_dicts[filename].update({start:[stop, token]})
+
+    # returns the tokenized full texts with subtokenization 
+    def _get_fulltext_dicts(self, gold_dicts, philter_dicts):
+        fulltext_dicts = {}
+        for filename in gold_dicts:
+            fulltext_dicts[filename] = self._get_tokens(self.texts[filename])
                 
-                if filename in phi_table:
-                    # is phi and is caught -> TP
-                    if gold_start in phi_table[filename]:
-                        word = phi_table[filename][gold_start][2]
-                        if word == gold_word:
-                            if gold_type not in eval_table[filename]['tp']:
-                                eval_table[filename]['tp'][gold_type] = []
-                            eval_table[filename]['tp'][gold_type].append(word)
-                    # is phi but not caught -> FN
-                    else:
-                        #print("fn" + filename + "\t" + gold_start + "\t" + gold_end +"\t" + gold_word)
-                        # word = phi_table[filename][gold_start][2]
-                        if gold_type not in eval_table[filename]['fn']:
-                            eval_table[filename]['fn'][gold_type] = []
-                        eval_table[filename]['fn'][gold_type].append(gold_word)
-                else:
-                    print (filename + ' not processed by philter or check filename!')
-                    continue
-            non_phi[filename] = self._get_clean(text)
-        for filename in phi_table:
-            if filename in gold_phi:
-                if filename not in eval_table:
-                    eval_table[filename] = {'fp':{},'tp':{},'fn':{},'tn':[]}
-                for start in phi_table[filename]:
-                    end = phi_table[filename][start][0]
-                    phi_type = phi_table[filename][start][1]
-                    word = phi_table[filename][start][2]
-                    #print (""+"\t"+word + "\t" + str(start))
-                    # word caught but is not phi -> FP
-                    if start not in gold_phi[filename]:
-                        #print ("fp" + "\t" + filename + "\t" + word + "\t" + str(start))
-                        if phi_type not in eval_table[filename]['fp']:
-                            eval_table[filename]['fp'][phi_type] = []
-                            eval_table[filename]['fp'][phi_type].append(word)
-                            if word in non_phi[filename]:
-                                non_phi[filename].remove(word)
-            else:
-                print (filename + ' not found!')
-        # the rest is all TN
-        for filename in non_phi:
-            if filename not in eval_table:
-                eval_table[filename] = {'fp':{},'tp':{},'fn':{},'tn':{}}
-            eval_table[filename]['tn'] = non_phi[filename]
+        self._sub_tokenize(fulltext_dicts, gold_dicts)
+        self._sub_tokenize(fulltext_dicts, philter_dicts)
+        
+        return fulltext_dicts
+                                          
+    def eval(self, anno_dir, output_dir):
+        
+        eval_dir = os.path.join(output_dir, 'eval/')
+        summary_file = os.path.join(eval_dir, 'summary.json')
+        json_summary_by_file = os.path.join(eval_dir, 'summary_by_file.json')
+        json_summary_by_category = os.path.join(eval_dir,
+                                                'summary_by_category.json')
+        if not os.path.isdir(eval_dir):
+            os.makedirs(eval_dir)       
+
+
+        text_fp_file = open(os.path.join(eval_dir,'fp.eval'),"w+")
+        text_tp_file = open(os.path.join(eval_dir,'tp.eval'),"w+")
+        text_fn_file = open(os.path.join(eval_dir,'fn.eval'),"w+")
+        text_tn_file = open(os.path.join(eval_dir,'tn.eval'),"w+")
+
+        # gathers full text tokens, gold and philter tokens
+        gold_dicts = self._get_gold_phi(anno_dir)
+        philter_dicts = self._get_philter_phi(gold_dicts.keys())
+        self._update_with_sub_tokens(gold_dicts, philter_dicts)
+        fulltext_dicts = self._get_fulltext_dicts(gold_dicts, philter_dicts)
+
+        # our core eval metrics
+        truepositives_dicts = self._get_tp_dicts(gold_dicts, philter_dicts)
+        falsepositives_dicts = self._get_fp_dicts(gold_dicts, philter_dicts)
+        truenegatives_dicts = self._get_tn_dicts(fulltext_dicts,
+                                                 gold_dicts, philter_dicts)
+        falsenegatives_dicts = self._get_fn_dicts(gold_dicts, philter_dicts)
 
         summary_by_category = {}
         summary_by_file = {}
-
         total_tp = 0
-        total_fn = 0
-        total_tn = 0
         total_fp = 0
-        for filename in eval_table:
-            # file-level counters
-            tp = 0
-            fn = 0
-            tn = 0
-            fp = 0
+        total_tn = 0
+        total_fn = 0
+        total_ctp = 0
+        total_cfp = 0
+        total_ctn = 0
+        total_cfn = 0
+        for filename in self.filenames:
             if filename not in summary_by_file:
                 summary_by_file[filename] = {}
-            for phi_type in eval_table[filename]['tp']:
-                tp += len(eval_table[filename]['tp'][phi_type])
-                total_tp += tp
+                
+            # file-level counters
+            tp = (len(truepositives_dicts[filename]) if filename in
+                  truepositives_dicts else 0)
+            fp = (len(falsepositives_dicts[filename]) if filename in
+                  falsepositives_dicts else 0)
+            tn = (len(truenegatives_dicts[filename]) if filename in
+                  truenegatives_dicts else 0)
+            fn = (len(falsenegatives_dicts[filename]) if filename in
+                  falsenegatives_dicts else 0)
+
+            # counts corrected for included phitype
+            ctp = 0
+            cfp = 0
+            ctn = 0
+            cfn = 0
+            
+            for st in truepositives_dicts[filename]:
+                start = st
+                stop = truepositives_dicts[filename][st][0]
+                phi_type = truepositives_dicts[filename][st][1]
+                token = truepositives_dicts[filename][st][2]
+                text_tp_file.write('\n' + filename + '\t' + str(phi_type)
+                                   + '\t' + token
+                                   + '\t' + str(start) + '\t' + str(stop))
+                
                 if phi_type not in summary_by_category:
                     summary_by_category[phi_type] = {}
                 if 'tp' not in summary_by_category[phi_type]:
                     summary_by_category[phi_type]['tp'] = []
-                summary_by_category[phi_type]['tp'].append(eval_table[filename]['tp'][phi_type])
-            for phi_type in eval_table[filename]['fp']:
-                fp += len(eval_table[filename]['fp'][phi_type])
-                total_fp += fp
+                summary_by_category[phi_type]['tp'].append(token)
+                
+                if phi_type in ucsf_include_tags:
+                    ctp += 1
+                else:
+                    cfp += 1
+                    
+            for st in falsepositives_dicts[filename]:
+                start = st
+                stop = falsepositives_dicts[filename][st][0]
+                phi_type = falsepositives_dicts[filename][st][1]
+                token = falsepositives_dicts[filename][st][2]
+                text_fp_file.write('\n' + filename + '\t' + str(phi_type)
+                                   + '\t' + token
+                                   + '\t' + str(start) + '\t' + str(stop))
+                
                 if phi_type not in summary_by_category:
                     summary_by_category[phi_type] = {}
                 if 'fp' not in summary_by_category[phi_type]:
                     summary_by_category[phi_type]['fp'] = []
-                summary_by_category[phi_type]['fp'].append(eval_table[filename]['fp'][phi_type])
-            for phi_type in eval_table[filename]['fn']:
-                tp += len(eval_table[filename]['fn'][phi_type])
-                total_tp += tp
+                summary_by_category[phi_type]['fp'].append(token)
+
+                cfp += 1
+                
+            for st in truenegatives_dicts[filename]:
+                start = st
+                stop = truenegatives_dicts[filename][st][0]
+                phi_type = None
+                token = truenegatives_dicts[filename][st][1]
+                text_tn_file.write('\n' + filename + '\t' + str(phi_type)
+                                   + '\t' + token
+                                   + '\t' + str(start) + '\t' + str(stop))
+                # this is not phi and produces too much output
+                # uncomment for debugging
+                # if phi_type not in summary_by_category:
+                #     summary_by_category[phi_type] = {}
+                # if 'tn' not in summary_by_category[phi_type]:
+                #     summary_by_category[phi_type]['tn'] = []
+                # summary_by_category[phi_type]['tn'].append(token)
+
+                ctn += 1
+                
+            for st in falsenegatives_dicts[filename]:
+                start = st
+                stop = falsenegatives_dicts[filename][st][0]
+                phi_type = falsenegatives_dicts[filename][st][1]
+                token = falsenegatives_dicts[filename][st][2]
+                text_fn_file.write('\n' + filename + '\t' + str(phi_type)
+                                   + '\t' + token
+                                   + '\t' + str(start) + '\t' + str(stop))
+                
                 if phi_type not in summary_by_category:
                     summary_by_category[phi_type] = {}
                 if 'fn' not in summary_by_category[phi_type]:
                     summary_by_category[phi_type]['fn'] = []
-                summary_by_category[phi_type]['fn'].append(eval_table[filename]['fn'][phi_type])
-            tn = len(eval_table[filename]['tn'])
+                summary_by_category[phi_type]['fn'].append(token)
+                
+                if phi_type in ucsf_include_tags:
+                    if phi_type == 'Age':
+                        if token.isdigit():
+                            if int(token) >= 90:
+                                cfn += 1
+                            else:
+                                ctn += 1
+                        else:
+                            if 'ninety' in token:
+                                cfn +=1
+                            else:
+                                ctn += 1
+                    else:
+                        cfn += 1
+                else:
+                    ctn += 1
+            
+            total_tp += tp
+            total_fp += fp
             total_tn += tn
-            try:  
+            total_fn += fn
+            
+            total_ctp += ctp
+            total_cfp += cfp
+            total_ctn += ctn
+            total_cfn += cfn
+            
+            try:
                precision = tp / (tp + fp)
             except ZeroDivisionError:
                precision = 0
-            try:  
+            try:
                recall = tp / (tp + fn)
             except ZeroDivisionError:
                recall = 0
-            summary_by_file[filename].update({'tp':tp, 'fp': fp, 'fn':fn, 'tn':tn, 'recall':recall,'precision':precision})
-            # summary_by_category[filename].update({'tp':tp, 'fp': fp, 'fn':fn, 'tn':tn, 'recall':recall,'precision':precision})
+            try:
+               retention = tn / (tn + fp)
+            except ZeroDivisionError:
+               retention = 0
+            
+            try:
+               cprecision = ctp / (ctp + cfp)
+            except ZeroDivisionError:
+               cprecision = 0
+            try:
+               crecall = ctp / (ctp + cfn)
+            except ZeroDivisionError:
+               crecall = 0
+            try:
+               cretention = ctn / (ctn + cfp)
+            except ZeroDivisionError:
+               cretention = 0
+            
+            summary_by_file[filename].update({'tp':tp, 'fp':fp,
+                                              'tn':tn, 'fn':fn,
+                                              'recall':recall,
+                                              'precision':precision,
+                                              'retention':retention})
+            summary_by_file[filename].update({'ctp':ctp, 'cfp':cfp,
+                                              'ctn':ctn, 'cfn':cfn,
+                                              'crecall':crecall,
+                                              'cprecision':cprecision,
+                                              'cretention':cretention})
         
         try:
            total_precision = total_tp / (total_tp + total_fp)
         except ZeroDivisionError:
-           total_precision = 0     
-
+           total_precision = 0
         try:
            total_recall = total_tp / (total_tp + total_fn)
         except ZeroDivisionError:
            total_recall = 0
-        total_summary = {'tp':total_tp, 'tn':total_tn, 'fp':total_fp, 'fn':total_fn, 'precision':total_precision, 'recall':total_recall}
+        try:
+           total_retention = total_tn / (total_tn + total_fp)
+        except ZeroDivisionError:
+           total_retention = 0
+        try:
+           total_cprecision = total_ctp / (total_ctp + total_cfp)
+        except ZeroDivisionError:
+           total_cprecision = 0
+        try:
+           total_crecall = total_ctp / (total_ctp + total_cfn)
+        except ZeroDivisionError:
+           total_crecall = 0
+        try:
+           total_cretention = total_ctn / (total_ctn + total_cfp)
+        except ZeroDivisionError:
+           total_cretention = 0
+        total_summary = {'tp':total_tp, 'fp':total_fp,
+                         'tn':total_tn, 'fn':total_fn,
+                         'precision':total_precision, 'recall':total_recall,
+                         'retention':total_retention,
+                         'ctp':total_ctp, 'cfp':total_cfp,
+                         'ctn':total_ctn, 'cfn':total_cfn,
+                         'cprecision':total_cprecision, 'crecall':total_crecall,
+                         'cretention':total_cretention}
+
         json.dump(total_summary, open(summary_file, "w"), indent=4)
         json.dump(summary_by_file, open(json_summary_by_file, "w"), indent=4)
-        json.dump(summary_by_category, open(json_summary_by_category, "w"), indent=4)
+        json.dump(summary_by_category, open(json_summary_by_category, "w"),
+                  indent=4)
 
-
-
-            
-
-                    
-
-
-
-
-
-        
-
-
-                
-
-        
+        text_tp_file.close()
+        text_fp_file.close()
+        text_tn_file.close()
+        text_fn_file.close()
