@@ -242,7 +242,8 @@ class Phitexts:
             if phi_type == "DATE" or phi_type == "Date":
                 if __debug__: nodateshiftlist = []
                 for filename, start in self.norms[phi_type]:
-                    note_key_ucsf = os.path.splitext(os.path.basename(filename).strip('0'))[0]
+                    fbase = os.path.splitext(os.path.basename(filename))[0]
+                    note_key_ucsf = fbase.lstrip('0').replace("_utf8", "")
                     if not self.subser.has_shift_amount(note_key_ucsf):
                         if __debug__:
                             if filename not in nodateshiftlist:
@@ -353,7 +354,7 @@ class Phitexts:
         assert outputdir, "Cannot save text: output directory undefined"
 
         for filename in self.filenames:
-            fbase = os.path.splitext(os.path.basename(filename))[0]
+            fbase = os.path.splitext(os.path.basename(filename))[0].replace("_utf8", "")
             if use_deid_note_key: # name files according to deid note key
                 note_key_ucsf = fbase.lstrip('0')
                 if not self.subser.has_deid_note_key(note_key_ucsf):
@@ -790,7 +791,6 @@ class Phitexts:
             for filename in files:
                 if not filename.endswith("xml"):
                     continue
-                print("root: " + str(root) + " filename: " + str(filename))
                 filepath = os.path.join(root, filename)
                 # change here: what will the input format be?
                 file_id = self.inputdir + filename.split('.')[0] + '.txt'
