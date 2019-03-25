@@ -157,24 +157,20 @@ class Philter:
             filename = filename.split("/")[-1]
             file_ = pos_path + filename
             if filename not in self.pos_tags:
-                self.pos_tags = {}
-                if not os.path.isfile(file_):
-                    with open(file_, 'wb') as f:
+                self.pos_tags[filename] = {}
+            if not os.path.isfile(file_):
+                   with open(file_, 'wb') as f:
                         tags = nltk.pos_tag(cleaned)
                         pickle.dump(tags, f)
                         return tags
-                else:
-                    with open(file_, 'rb') as f:
+            else:
+                   with open(file_, 'rb') as f:
                         self.pos_tags[filename] = pickle.load(f)
         else:
             if filename not in self.pos_tags:
-                self.pos_tags = {}
-                self.pos_tags[filename] = nltk.pos_tag(cleaned)
+                self.pos_tags[filename] = {}
+            self.pos_tags[filename] = nltk.pos_tag(cleaned)
             return self.pos_tags[filename]
-
-
-
-            #self.pos_tags[filename] = nltk.pos_tag(cleaned)
         return self.pos_tags[filename]
     #def get_pos_original(self, filename, cleaned):
     #    if filename not in self.pos_tags:
@@ -584,7 +580,7 @@ class Philter:
         else:
             pos_list = zip(cleaned,range(len(cleaned)))
 
-        pos_list = nltk.pos_tag(cleaned)
+        #pos_list = nltk.pos_tag(cleaned)
 
         # if filename == './data/i2b2_notes/160-03.txt':
         #     print(pos_list)

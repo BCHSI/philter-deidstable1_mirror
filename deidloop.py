@@ -54,7 +54,7 @@ def runDeidChunck(unit, q, philterFolder):
         t0 = time.time()
 
         # Tuple to determine path
-        srcFolder, srcMeta, dstFolder = q.get()
+        srcFolder, srcMeta, dstFolder, kpfile = q.get()
 
         # Build output directory
         os.makedirs(dstFolder, exist_ok=True)
@@ -71,6 +71,7 @@ def runDeidChunck(unit, q, philterFolder):
               "-s", srcMeta,
               "-d", "True", 
               "-f", "configs/philter_delta.json",
+              "-k", kpfile,
               "-l", "True"],
              cwd=philterFolder)
 
@@ -100,8 +101,8 @@ def main():
     # Build queue
     with open(args.imofile, 'r') as imo:
         for line in imo:
-            idir, mfile, odir = line.split()
-            enclosure_queue.put([idir, mfile, odir])
+            idir, mfile, odir, kpfile = line.split()
+            enclosure_queue.put([idir, mfile, odir, kpfile])
     
     # Now wait for the queue to be empty, indicating that we have
     # processed all of the notes
