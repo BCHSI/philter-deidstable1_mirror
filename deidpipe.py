@@ -35,7 +35,7 @@ def get_args():
                     help="When this is true, the pipeline saves the de-identified output using de-identified note ids for the filenames",
                     type=lambda x:bool(distutils.util.strtobool(x)))
     ap.add_argument("-k", "--knownphi",
-                    help="Path to the known phi file, if path to file is absent knownPHI module does not execute",
+                    help="Path to the known phi file, if path to file is absent knownPHI module does not execute default folder path is set to ./data",
                     type=str)
     ap.add_argument("-l", "--log", default=True,
                     help="When this is true, the pipeline prints and saves log in a subdirectory in each output directory",
@@ -107,7 +107,7 @@ def main():
 
     # print and save log 
     if args.log:
-        phitexts.print_log(args.output)
+        phitexts.print_log(args.output,args.knownphi,args.xml)
     if args.eval:
         phitexts.eval(args.anno, args.output)
 
