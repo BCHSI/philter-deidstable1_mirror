@@ -163,24 +163,7 @@ class Phitexts:
                     break
             detector.close()
         return detector.result
-    '''
-    def _get_clean(self, text, punctuation_matcher=re.compile(r"***REMOVED***^a-zA-Z0-9***REMOVED***")):
 
-            # Use pre-process to split sentence by spaces AND symbols, while preserving spaces in the split list
-        #lst = re.split("***REMOVED***(\s+)/-***REMOVED***", text)
-        lst = re.findall(r"***REMOVED***\w'***REMOVED***+",text)
-        cleaned = ***REMOVED******REMOVED***
-        for item in lst:
-            if len(item) > 0:
-                if item.isspace() == False:
-                    split_item = re.split("(\s+)", re.sub(punctuation_matcher, " ", item))
-                    for elem in split_item:
-                        if len(elem) > 0:
-                           cleaned.append(elem)
-                #else:
-                #     cleaned.append(item)
-        return cleaned
-    '''
     def detect_xml_phi(self):
         if self.coords:
            return
@@ -474,9 +457,8 @@ class Phitexts:
                     # f_failed.write('\n')
                 if filename not in failed_date:
                         failed_date***REMOVED***filename***REMOVED*** = ***REMOVED******REMOVED***
-                failed_date***REMOVED***filename***REMOVED***.append({'start':start, 'end':end,
-        
-                                      'raw': raw})
+                failed_date***REMOVED***filename***REMOVED***.append({'start':start, 'end':end,        
+                                              'raw': raw})
 
         if __debug__:
             print ('Successfully parsed: ' + str(num_parsed) + ' dates.')
