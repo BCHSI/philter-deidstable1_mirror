@@ -3,6 +3,7 @@ import pandas as pd
 from coordinate_map import CoordinateMap
 import re
 from philter import Philter
+from textmethods import get_tokens
 import nltk 
 class Knownphi:
 
@@ -28,45 +29,7 @@ class Knownphi:
             raise Exception("Input known phi file is undefined: ", self.knownphifile)
        knownphi_table = pd.read_csv(self.knownphifile, sep='\t', index_col=False, usecols=***REMOVED***'patient_ID', 'phi_type', 'clean_value', 'note_key'***REMOVED***, dtype=str)
        return knownphi_table  
-   @staticmethod 
-   def _get_clean(text, punctuation_matcher=re.compile(r"***REMOVED***^a-zA-Z0-9***REMOVED***")):
 
-            # Use pre-process to split sentence by spaces AND symbols, while preserving spaces in the split list
-        #lst = re.split("***REMOVED***(\s+)/-***REMOVED***", text)
-        lst = re.findall(r"***REMOVED***\w'***REMOVED***+",text)
-        cleaned = ***REMOVED******REMOVED***
-        for item in lst:
-            if len(item) > 0:
-                if item.isspace() == False:
-                    split_item = re.split("(\s+)", re.sub(punctuation_matcher, " ", item))
-                    for elem in split_item:
-                        if len(elem) > 0:
-                           cleaned.append(elem)
-                #else:
-                #     cleaned.append(item)
-        return cleaned
-   
-   # tokenizes a string
-   @staticmethod
-   def _get_tokens(string):
-       tokens = {}
-       str_split = Knownphi._get_clean(string)
-               
-       offset = 0
-       for item in str_split:
-           item_stripped = item.strip()
-           if len(item_stripped) is 0:
-               offset += len(item)
-               continue
-           token_start = string.find(item_stripped, offset)
-           if token_start is -1:
-               raise Exception("ERROR: cannot find token \"{0}\" in \"{1}\" starting at {2} in file {3}".format(item, string, offset))
-           token_stop = token_start + len(item_stripped) - 1
-           offset = token_stop + 1
-           tokens.update({token_start:***REMOVED***token_stop,item_stripped***REMOVED***})
-   
-       return tokens
-   
    def get_postag(self, kp_start, kp):
         for item in self.postags:
            start_coordinate = 0           
@@ -96,7 +59,7 @@ class Knownphi:
        file_note_key = ""
        note_key2knownphi_dict = pd.Series(self.knownphitable.note_key.values, index=self.knownphitable.clean_value).to_dict()
        for key in self.texts:
-           tokenize = Knownphi._get_tokens(self.texts***REMOVED***key***REMOVED***)
+           tokenize = get_tokens(self.texts***REMOVED***key***REMOVED***)
            for elem in key.split('/'):
                if (elem.find('.txt') != -1) or (elem.find('.xml') != -1):
                    elem = elem.replace('\n','')
