@@ -13,6 +13,7 @@ import pandas
 import numpy
 from knownphi import Knownphi
 from constants import *
+from textmethods import get_clean
 
 class Phitexts:
     """ container for texts, phi, attributes """
@@ -24,6 +25,7 @@ class Phitexts:
         self.texts     = {}
         #coordinates of PHI
         self.coords    = {}
+        #parts of speech
         self.pos = {}
         #list of PHI types
         self.types     = {}
@@ -58,10 +60,9 @@ class Phitexts:
                 self.texts[filepath] = fhandle.read()
                 fhandle.close()
 
-
     def _get_xml_tokens(self,string,text,start):
-        tokens = {}
-        str_split = Knownphi._get_clean(string)    
+        tokens = {} 
+        str_split = get_clean(string)
         offset = start
         for item in str_split:
             item_stripped = item.strip()
@@ -78,9 +79,6 @@ class Phitexts:
     
         return tokens
 
-
-
-
     def __read_xml_into_coordinateMap(self,inputdir):
         full_xml_map = {}
         phi_type_list = ['Provider_Name','Date','DATE','Patient_Social_Security_Number','Email','Provider_Address_or_Location','Age','Name','OTHER']
@@ -93,12 +91,10 @@ class Phitexts:
         if not inputdir:
             raise Exception("Input directory undefined: ", inputdir) 
         for filename in os.listdir(inputdir):
-            #xml_filenames.append(filename)
             xml_coordinate_map = {}
             if not filename.endswith("xml"):
                continue
             filepath = os.path.join(inputdir, filename)
-            #filename = (filename.replace('_utf8','')).replace('.txt','')   
             philter_or_gold = 'PhilterUCSF' 
             xml_filenames.append(filepath)
             encoding = self._detect_encoding(filepath)
@@ -547,8 +543,8 @@ class Phitexts:
             # File size in bytes
             filesize = os.path.getsize(filename)
             
-            if xml:
-               total_tokens = len(Knownphi._get_clean(self.texts[filename])) 
+            if xml: 
+               total_tokens = len(get_clean(self.texts[filename])) 
                phi_tokens = len(self.coords[filename])
             else:
                # Number of total tokens
@@ -649,28 +645,6 @@ class Phitexts:
         # ID PHI
         # Other PHI
 
-    '''
-    # tokenizes a string
-    @staticmethod
-    def _get_tokens(string):
-        tokens = {}
-        str_split = self._get_clean(string)
-                
-        offset = 0
-        for item in str_split:
-            item_stripped = item.strip()
-            if len(item_stripped) is 0:
-                offset += len(item)
-                continue
-            token_start = string.find(item_stripped, offset)
-            if token_start is -1:
-                raise Exception("ERROR: cannot find token \"{0}\" in \"{1}\" starting at {2} in file {3}".format(item, string, offset))
-            token_stop = token_start + len(item_stripped) - 1
-            offset = token_stop + 1
-            tokens.update({token_start:[token_stop,item_stripped]})
-    
-        return tokens
-    '''
     def _get_phi_type(self, filename, start, stop):
         for phi_type in self.types.keys():
             for begin,end in self.types[phi_type][0].filecoords(filename):
@@ -688,7 +662,7 @@ class Phitexts:
             word = self.texts[filename][start:end]
             
             try:
-                tokens = Knownphi._get_tokens(word)
+                tokens = get_tokens(word)
             except Exception as err:
                 raise Exception("ERROR: cannot get tokens in \"{0}\" starting at {1} in file {2}: {3}".format(word, start, filename, err))
             
@@ -856,7 +830,7 @@ class Phitexts:
                             phi_type = final_value["@TYPE"]
 
                             try:
-                                tokens = Knownphi._get_tokens(text)
+                                tokens = get_tokens(text)
                             except Exception as err:
                                 raise Exception("EROOR: cannot get tokens in \"{0}\" starting at {1} in file {2}: {3}".format(text, start, filename, err))
             
@@ -980,7 +954,7 @@ class Phitexts:
     def _get_fulltext_dicts(self, gold_dicts, philter_dicts):
         fulltext_dicts = {}
         for filename in gold_dicts:
-            fulltext_dicts[filename] = Knownphi._get_tokens(self.texts[filename])
+            fulltext_dicts[filename] = get_tokens(self.texts[filename])
                 
         self._sub_tokenize(fulltext_dicts, gold_dicts)
         self._sub_tokenize(fulltext_dicts, philter_dicts)
