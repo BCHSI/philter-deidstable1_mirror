@@ -41,10 +41,12 @@ def get_args():
                     help="When this is true, the pipeline prints and saves log in a subdirectory in each output directory",
                     type=lambda x:bool(distutils.util.strtobool(x)))
     ap.add_argument("-e", "--eval", default=False,
-                    help="When this is true, the pipeline computes and saves statistics in a subdirectory in each output directory",
+                    help="When this is true, the pipeline computes and saves statistics in a subdirectory in each output directory (see option -a)",
                     type=lambda x:bool(distutils.util.strtobool(x)))
     ap.add_argument("-a", "--anno", default='./data/i2b2_xml',
-                    help="When this is true, the pipeline computes and saves statistics in a subdirectory in each output directory",
+                    help="Path to the directory or the file that contains the PHI annotation,"
+                         + " the default is ./data/i2b2_xml/"
+                         + " (needs option -e True)",
                     type=str)
     ap.add_argument("-x", "--xml", default=False,
                     help="When this is true, the pipeline looks for xml files in the input directory and extracts the PHI information from the xml tags without running philter",
