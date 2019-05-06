@@ -13,7 +13,7 @@ import pandas
 import numpy
 from knownphi import Knownphi
 from constants import *
-from textmethods import get_clean
+from textmethods import get_clean, get_tokens
 
 class Phitexts:
     """ container for texts, phi, attributes """
