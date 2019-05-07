@@ -179,7 +179,8 @@ class Phitexts:
             "verbose":verbose,
             "run_eval":False,
             "finpath":self.inputdir,
-            "filters":filters
+            "filters":filters,
+            "time_profile":False
         }
 
         self.filterer = Philter(philter_config)
