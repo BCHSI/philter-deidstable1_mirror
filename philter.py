@@ -14,7 +14,7 @@ import subprocess
 import numpy
 import random
 import string
-
+import pandas as pd
 from constants import *
 
 class Philter:
@@ -64,7 +64,21 @@ class Philter:
             if not os.path.exists(config***REMOVED***"filters"***REMOVED***):
                 raise Exception("Filepath does not exist", config***REMOVED***"filters"***REMOVED***)
             self.patterns = json.loads(open(config***REMOVED***"filters"***REMOVED***, "r").read())
+            #print(self.patterns)
 
+        if "namesprobe" in config:
+            if not os.path.exists(config***REMOVED***"namesprobe"***REMOVED***):
+                raise Exception("Filepath does not exist", config***REMOVED***"namesprobe"***REMOVED***)
+            dynamic_blacklist = {"exclude": True,
+                                 "notes": "These are known phi that are not safe",
+                                 "filepath": config***REMOVED***"namesprobe"***REMOVED***,
+                                 "phi_type": "PROBE",
+                                 "pos": ***REMOVED***'NNP'***REMOVED***,
+                                 "type":"dynamic_set",
+                                 "title": "Dynamic Blacklist"}
+            self.patterns.append(dynamic_blacklist) 
+
+        
         if "xml" in config:
             if not os.path.exists(config***REMOVED***"xml"***REMOVED***):
                 raise Exception("Filepath does not exist", config***REMOVED***"xml"***REMOVED***)
@@ -123,7 +137,7 @@ class Philter:
         self.full_exclude_map = {}
 
         #create a memory for the list of known PHI types
-        self.phi_type_list = ***REMOVED***'DATE','ID','NAME','CONTACT','AGE>=90','NAME','OTHER','LOCATION'***REMOVED***
+        self.phi_type_list = ***REMOVED***'DATE','ID','NAME','CONTACT','AGE>=90','NAME','OTHER','LOCATION','PROBE'***REMOVED***
         
         #create a memory for the corrdinate maps of known PHI types    
         self.phi_type_dict = {}
@@ -235,10 +249,10 @@ class Philter:
     def init_patterns(self):
         """ given our input pattern config will load our sets and pre-compile our regex"""
 
-        known_pattern_types = set(***REMOVED***"regex", "set", "regex_context","stanford_ner", "pos_matcher", "match_all"***REMOVED***)
+        known_pattern_types = set(***REMOVED***"regex", "set", "dynamic_set", "regex_context","stanford_ner", "pos_matcher", "match_all"***REMOVED***)
         require_files = set(***REMOVED***"regex", "set"***REMOVED***)
         require_pos = set(***REMOVED***"pos_matcher"***REMOVED***)
-        set_filetypes = set(***REMOVED***"pkl", "json"***REMOVED***)
+        set_filetypes = set(***REMOVED***"pkl", "json","txt"***REMOVED***)
         regex_filetypes = set(***REMOVED***"txt"***REMOVED***)
         reserved_list = set(***REMOVED***"data", "coordinate_map"***REMOVED***)
 
@@ -253,6 +267,10 @@ class Philter:
             if pattern***REMOVED***"type"***REMOVED*** not in known_pattern_types:
                 raise Exception("Pattern type is unknown", pattern***REMOVED***"type"***REMOVED***)
             if pattern***REMOVED***"type"***REMOVED*** == "set":
+                if pattern***REMOVED***"filepath"***REMOVED***.split(".")***REMOVED***-1***REMOVED*** not in set_filetypes:
+                    raise Exception("Invalid filteype", pattern***REMOVED***"filepath"***REMOVED***, "must be of", set_filetypes)
+                self.patterns***REMOVED***i***REMOVED******REMOVED***"data"***REMOVED*** = self.init_set(pattern***REMOVED***"filepath"***REMOVED***) 
+            if pattern***REMOVED***"type"***REMOVED*** == "dynamic_set":
                 if pattern***REMOVED***"filepath"***REMOVED***.split(".")***REMOVED***-1***REMOVED*** not in set_filetypes:
                     raise Exception("Invalid filteype", pattern***REMOVED***"filepath"***REMOVED***, "must be of", set_filetypes)
                 self.patterns***REMOVED***i***REMOVED******REMOVED***"data"***REMOVED*** = self.init_set(pattern***REMOVED***"filepath"***REMOVED***)  
@@ -295,6 +313,21 @@ class Philter:
                     map_set = pickle.load(pickle_file, encoding = 'latin1')
         elif filepath.endswith(".json"):
             map_set = json.loads(open(filepath, "r").read())
+        elif filepath.endswith(".txt"):
+            try:
+                probes_file = pd.read_csv(filepath, sep='\t', index_col=False, usecols=***REMOVED***'clean_value','phi_type','note_key'***REMOVED***,dtype=str)
+                names_probes = probes_file.loc***REMOVED***(probes_file***REMOVED***'phi_type'***REMOVED*** == 'lname') | (probes_file***REMOVED***'phi_type'***REMOVED*** == 'fname')***REMOVED***
+            
+            except pd.errors.EmptyDataError as err:
+                print("Pandas Empty Data Error: " + filepath
+                       + " is empty {0}".format(err))
+                return {}, {}
+            except ValueError as err:
+                print("Value Error: " + filepath
+                       + " is invalid {0}".format(err))
+                return {}, {}
+            
+            map_set = dict(zip(names_probes***REMOVED***'clean_value'***REMOVED***, names_probes***REMOVED***'note_key'***REMOVED***)) 
         else:
             raise Exception("Invalid filteype",filepath)
         return map_set
@@ -351,6 +384,8 @@ class Philter:
                 for i,pat in enumerate(self.patterns):
                     if pat***REMOVED***"type"***REMOVED*** == "regex":
                         self.map_regex(filename=filename, text=txt, pattern_index=i)
+                    elif pat***REMOVED***"type"***REMOVED*** == "dynamic_set":
+                        self.map_set(filename=filename, text=txt, pattern_index=i)
                     elif pat***REMOVED***"type"***REMOVED*** == "set":
                         self.map_set(filename=filename, text=txt, pattern_index=i)
                     elif pat***REMOVED***"type"***REMOVED*** == "regex_context":
@@ -561,8 +596,22 @@ class Philter:
 
         if pattern_index < 0 or pattern_index >= len(self.patterns):
             raise Exception("Invalid pattern index: ", pattern_index, "pattern length", len(patterns))
-
-        map_set = self.patterns***REMOVED***pattern_index***REMOVED******REMOVED***"data"***REMOVED***
+        
+        if self.patterns***REMOVED***pattern_index***REMOVED******REMOVED***"type"***REMOVED*** == "dynamic_set":
+           map_set = {}
+           if (filename.find('.txt') != -1) or (filename.find('.xml') != -1):
+                   file_note_key = os.path.basename(filename).replace('\n','')
+                   file_note_key = file_note_key.replace('.txt','')
+                   file_note_key = file_note_key.lstrip('0')
+                   file_note_key = file_note_key.replace('.xml','')
+                   file_note_key = file_note_key.replace('_utf8','')
+                   note_key = file_note_key
+                   for key in self.patterns***REMOVED***pattern_index***REMOVED******REMOVED***"data"***REMOVED***:
+                       if self.patterns***REMOVED***pattern_index***REMOVED******REMOVED***"data"***REMOVED******REMOVED***key***REMOVED*** == note_key:            
+                          map_set***REMOVED***key***REMOVED*** = self.patterns***REMOVED***pattern_index***REMOVED******REMOVED***"data"***REMOVED******REMOVED***key***REMOVED***
+                   #print(map_set)
+        else:
+            map_set = self.patterns***REMOVED***pattern_index***REMOVED******REMOVED***"data"***REMOVED***
         coord_map = self.patterns***REMOVED***pattern_index***REMOVED******REMOVED***"coordinate_map"***REMOVED***
         
         #get part of speech we will be sending through this set
@@ -607,7 +656,7 @@ class Philter:
 
                 if word_clean in map_set or word in map_set:
                     coord_map.add_extend(filename, start, stop)
-                    #print("FOUND: ",word, "COORD: ",  text***REMOVED***start:stop***REMOVED***)
+                    #print("FOUND: ",word, "COORD: ",  str(start), ":", str(stop))
                 else:
                     #print("not in set: ",word, "COORD: ",  text***REMOVED***start:stop***REMOVED***)
                     #print(word_clean)
