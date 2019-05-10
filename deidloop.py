@@ -116,7 +116,7 @@ def main():
         all_logs = []
         with open(args.imofile, 'r') as imo:
             for line in imo:
-                idir, mfile, odir = line.split()
+                idir, mfile, odir, kpfile = line.split()
                 all_logs.append(os.path.join(odir, "log",
                                              "detailed_batch_summary.csv"))
 
