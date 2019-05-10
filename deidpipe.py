@@ -33,8 +33,8 @@ def get_args():
     ap.add_argument("-d", "--deid_filename", default=True,
                     help="When this is true, the pipeline saves the de-identified output using de-identified note ids for the filenames",
                     type=lambda x:bool(distutils.util.strtobool(x)))
-    ap.add_argument("-k", "--knownphi",
-                    help="Path to the known phi file, if path to file is absent knownPHI module does not execute default folder path is set to ./data",
+    ap.add_argument("-k", "--dynamic_blacklist",
+                    help="Path to the probes file, if path to file is absent dynamic blacklist does not get generated",
                     type=str)
     ap.add_argument("-l", "--log", default=True,
                     help="When this is true, the pipeline prints and saves log in a subdirectory in each output directory",
@@ -76,19 +76,24 @@ def main():
        if __debug__: print("Generating coordinate map from xml")
        phitexts.detect_xml_phi()       
     else:
-       phitexts.detect_phi(args.filters, verbose=args.verbose)
+        if args.dynamic_blacklist:
+           phitexts.detect_phi(args.filters, args.dynamic_blacklist, verbose=args.verbose)
+        else:
+           phitexts.detect_phi(args.filters, verbose=args.verbose)
 
     if phitexts.coords:
         # detects PHI types
         if __debug__: print("detecting PHI types")
         if not args.xml:
            phitexts.detect_phi_types()
-       
+
+        '''
         # detect known phi
         if args.knownphi:
            if __debug__: print("Identifying known phi")
            phitexts.detect_known_phi(args.knownphi)
- 
+        '''
+
         # normalizes PHI
         if __debug__: print("normalizing PHI")
         phitexts.normalize_phi()
@@ -113,7 +118,7 @@ def main():
 
     # print and save log 
     if args.log:
-        phitexts.print_log(args.output,args.knownphi,args.xml)
+        phitexts.print_log(args.output,args.xml)
     if args.eval:
         phitexts.eval(args.anno, args.output)
 
