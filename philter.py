@@ -14,7 +14,7 @@ import subprocess
 import numpy
 import random
 import string
-
+import pandas as pd
 from constants import *
 
 class Philter:
@@ -64,7 +64,21 @@ class Philter:
             if not os.path.exists(config["filters"]):
                 raise Exception("Filepath does not exist", config["filters"])
             self.patterns = json.loads(open(config["filters"], "r").read())
+            #print(self.patterns)
 
+        if "namesprobe" in config:
+            if not os.path.exists(config["namesprobe"]):
+                raise Exception("Filepath does not exist", config["namesprobe"])
+            dynamic_blacklist = {"exclude": True,
+                                 "notes": "These are known phi that are not safe",
+                                 "filepath": config["namesprobe"],
+                                 "phi_type": "PROBE",
+                                 "pos": ['NNP'],
+                                 "type":"dynamic_set",
+                                 "title": "Dynamic Blacklist"}
+            self.patterns.append(dynamic_blacklist) 
+
+        
         if "xml" in config:
             if not os.path.exists(config["xml"]):
                 raise Exception("Filepath does not exist", config["xml"])
@@ -123,7 +137,7 @@ class Philter:
         self.full_exclude_map = {}
 
         #create a memory for the list of known PHI types
-        self.phi_type_list = ['DATE','ID','NAME','CONTACT','AGE>=90','NAME','OTHER','LOCATION']
+        self.phi_type_list = ['DATE','ID','NAME','CONTACT','AGE>=90','NAME','OTHER','LOCATION','PROBE']
         
         #create a memory for the corrdinate maps of known PHI types    
         self.phi_type_dict = {}
@@ -235,10 +249,10 @@ class Philter:
     def init_patterns(self):
         """ given our input pattern config will load our sets and pre-compile our regex"""
 
-        known_pattern_types = set(["regex", "set", "regex_context","stanford_ner", "pos_matcher", "match_all"])
+        known_pattern_types = set(["regex", "set", "dynamic_set", "regex_context","stanford_ner", "pos_matcher", "match_all"])
         require_files = set(["regex", "set"])
         require_pos = set(["pos_matcher"])
-        set_filetypes = set(["pkl", "json"])
+        set_filetypes = set(["pkl", "json","txt"])
         regex_filetypes = set(["txt"])
         reserved_list = set(["data", "coordinate_map"])
 
@@ -253,6 +267,10 @@ class Philter:
             if pattern["type"] not in known_pattern_types:
                 raise Exception("Pattern type is unknown", pattern["type"])
             if pattern["type"] == "set":
+                if pattern["filepath"].split(".")[-1] not in set_filetypes:
+                    raise Exception("Invalid filteype", pattern["filepath"], "must be of", set_filetypes)
+                self.patterns[i]["data"] = self.init_set(pattern["filepath"]) 
+            if pattern["type"] == "dynamic_set":
                 if pattern["filepath"].split(".")[-1] not in set_filetypes:
                     raise Exception("Invalid filteype", pattern["filepath"], "must be of", set_filetypes)
                 self.patterns[i]["data"] = self.init_set(pattern["filepath"])  
@@ -295,6 +313,21 @@ class Philter:
                     map_set = pickle.load(pickle_file, encoding = 'latin1')
         elif filepath.endswith(".json"):
             map_set = json.loads(open(filepath, "r").read())
+        elif filepath.endswith(".txt"):
+            try:
+                probes_file = pd.read_csv(filepath, sep='\t', index_col=False, usecols=['clean_value','phi_type','note_key'],dtype=str)
+                names_probes = probes_file.loc[(probes_file['phi_type'] == 'lname') | (probes_file['phi_type'] == 'fname')]
+            
+            except pd.errors.EmptyDataError as err:
+                print("Pandas Empty Data Error: " + filepath
+                       + " is empty {0}".format(err))
+                return {}, {}
+            except ValueError as err:
+                print("Value Error: " + filepath
+                       + " is invalid {0}".format(err))
+                return {}, {}
+            
+            map_set = dict(zip(names_probes['clean_value'], names_probes['note_key'])) 
         else:
             raise Exception("Invalid filteype",filepath)
         return map_set
@@ -351,6 +384,8 @@ class Philter:
                 for i,pat in enumerate(self.patterns):
                     if pat["type"] == "regex":
                         self.map_regex(filename=filename, text=txt, pattern_index=i)
+                    elif pat["type"] == "dynamic_set":
+                        self.map_set(filename=filename, text=txt, pattern_index=i)
                     elif pat["type"] == "set":
                         self.map_set(filename=filename, text=txt, pattern_index=i)
                     elif pat["type"] == "regex_context":
@@ -561,8 +596,22 @@ class Philter:
 
         if pattern_index < 0 or pattern_index >= len(self.patterns):
             raise Exception("Invalid pattern index: ", pattern_index, "pattern length", len(patterns))
-
-        map_set = self.patterns[pattern_index]["data"]
+        
+        if self.patterns[pattern_index]["type"] == "dynamic_set":
+           map_set = {}
+           if (filename.find('.txt') != -1) or (filename.find('.xml') != -1):
+                   file_note_key = os.path.basename(filename).replace('\n','')
+                   file_note_key = file_note_key.replace('.txt','')
+                   file_note_key = file_note_key.lstrip('0')
+                   file_note_key = file_note_key.replace('.xml','')
+                   file_note_key = file_note_key.replace('_utf8','')
+                   note_key = file_note_key
+                   for key in self.patterns[pattern_index]["data"]:
+                       if self.patterns[pattern_index]["data"][key] == note_key:            
+                          map_set[key] = self.patterns[pattern_index]["data"][key]
+                   #print(map_set)
+        else:
+            map_set = self.patterns[pattern_index]["data"]
         coord_map = self.patterns[pattern_index]["coordinate_map"]
         
         #get part of speech we will be sending through this set
@@ -607,7 +656,7 @@ class Philter:
 
                 if word_clean in map_set or word in map_set:
                     coord_map.add_extend(filename, start, stop)
-                    #print("FOUND: ",word, "COORD: ",  text[start:stop])
+                    #print("FOUND: ",word, "COORD: ",  str(start), ":", str(stop))
                 else:
                     #print("not in set: ",word, "COORD: ",  text[start:stop])
                     #print(word_clean)
