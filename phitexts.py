@@ -565,7 +565,7 @@ class Phitexts:
         
         # Summarize current batch
         # Batch size (all)
-        number_of_notes = len(summary_info)
+        number_of_notes = len(self.filenames)
 
         # File size
         total_kb_processed = sum(summary_info***REMOVED***'filesize'***REMOVED***)/1000
