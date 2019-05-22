@@ -116,7 +116,7 @@ def main():
         all_logs = ***REMOVED******REMOVED***
         with open(args.imofile, 'r') as imo:
             for line in imo:
-                idir, mfile, odir = line.split()
+                idir, mfile, odir, kpfile = line.split()
                 all_logs.append(os.path.join(odir, "log",
                                              "detailed_batch_summary.csv"))
 
@@ -128,7 +128,6 @@ def main():
 
 if __name__ == "__main__":
     sys.exit(main())
-
 
 
 
