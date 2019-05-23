@@ -126,7 +126,7 @@ class Philter:
         self.full_exclude_map = {}
 
         #create a memory for the list of known PHI types
-        self.phi_type_list = ['DATE','ID','NAME','CONTACT','AGE>=90','NAME','OTHER','LOCATION']
+        self.phi_type_list = ['DATE','ID','NAME','CONTACT','AGE>=90','NAME','OTHER','LOCATION', 'HOLIDAYS']
         
         #create a memory for the corrdinate maps of known PHI types    
         self.phi_type_dict = {}
