@@ -33,7 +33,9 @@ def get_super_log(all_logs, super_log_dir):
     #Path to txt summary of all files combined
     text_summary_filepath = os.path.join(super_log_dir,
                                          'deidpipe_superlog_summary.txt')
-
+    #Path to knownphi superlog
+    knownphi_filepath = os.path.join(super_log_dir,
+                                         'knownphi_superlog.log')
     os.makedirs(super_log_dir, exist_ok=True)
 
     # Create aggregated summary file
@@ -42,6 +44,13 @@ def get_super_log(all_logs, super_log_dir):
             file_header = 'filename'+','+'file_size'+','+'total_tokens'+','+'phi_tokens'+','+'successfully_normalized'+','+'failed_normalized'+','+'successfully_surrogated'+','+'failed_surrogated'+'\n'
             f.write(file_header)
     
+
+    # Create aggregated knownphi file
+    if not os.path.isfile(knownphi_filepath):
+        with open(knownphi_filepath,'w') as f:
+            file_header = 'filename' + "\t" + 'start' + "\t" + 'stop' + "\t" + 'knownphi_token' + "\t" + 'context' + "\t" + 'pos' + "\n"
+            f.write(file_header)
+
     # Append contents of all summaries to this file
     for log_file in all_logs:
         if not os.path.exists(log_file):
@@ -49,9 +58,14 @@ def get_super_log(all_logs, super_log_dir):
             continue
         with open(log_file,'r') as f:
             with open(csv_summary_filepath,'a') as f1:
-                next(f) # skip header line
-                for line in f:
-                    f1.write(line)
+                with open(knownphi_filepath, 'a') as f2:
+                    next(f) # skip header line
+                    if 'known_phi.log' in log_file:
+                        for line in f:
+                            f2.write(line)
+                    else:
+                        for line in f:
+                            f1.write(line)
 
     summary = pandas.read_csv(csv_summary_filepath)
 

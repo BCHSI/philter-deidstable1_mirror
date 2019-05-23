@@ -499,8 +499,10 @@ class Phitexts:
             json.dump(eval_table, f)
         with open(phi_marked_file, 'w') as f:
             json.dump(phi_table, f)
-        if kp: 
-           with open(known_phi_file,'w') as f:
+        if kp:
+            with open(known_phi_file,'w') as f:
+                file_header = 'filename' + "\t" + 'start' + "\t" + 'stop' + "\t" + 'knownphi_token' + "\t" + 'context' + "\t" + 'pos' + "\n"
+                f.write(file_header)
                 for filename in self.known_phi:
                     known_phi_dict = self.known_phi***REMOVED***filename***REMOVED***
                     for i in known_phi_dict:
