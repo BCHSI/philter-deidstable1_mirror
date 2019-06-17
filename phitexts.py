@@ -41,7 +41,6 @@ class Phitexts:
         #de-id notes
         self.textsout  = {}
         #known phi
-        #self.known_phi = {}
         if not xml:
            self._read_texts()
         self.subser = None
@@ -200,7 +199,6 @@ class Phitexts:
         if self.types:
             return
         self.types = self.filterer.phi_type_dict
-    
 
     '''    
     def detect_known_phi(self, knownphifile = "./data/knownphi_data.txt"):
@@ -386,7 +384,29 @@ class Phitexts:
                       errors='surrogateescape') as fhandle:
                 fhandle.write(self.textsout***REMOVED***filename***REMOVED***)
     
-    def print_log(self, output_dir, xml):
+    def get_phi_type_per_token(self):
+       phi_types_per_token = {}
+       for phi_type in self.types: 
+           for filename, start, end in self.types***REMOVED***phi_type***REMOVED******REMOVED***0***REMOVED***.scan():
+               all_tokens = get_tokens(self.texts***REMOVED***filename***REMOVED***)
+               if filename not in phi_types_per_token:
+                  phi_types_per_token***REMOVED***filename***REMOVED*** = {}
+               for token_start in all_tokens:    
+                   if token_start not in phi_types_per_token***REMOVED***filename***REMOVED***:
+                      phi_types_per_token***REMOVED***filename***REMOVED******REMOVED***token_start***REMOVED*** = {}
+                   token_end = all_tokens***REMOVED***token_start***REMOVED******REMOVED***0***REMOVED***
+                   if token_end not in phi_types_per_token***REMOVED***filename***REMOVED******REMOVED***token_start***REMOVED***:
+                      phi_types_per_token***REMOVED***filename***REMOVED******REMOVED***token_start***REMOVED******REMOVED***token_end***REMOVED*** = ***REMOVED******REMOVED***
+                   if token_start == start:
+                      if phi_type not in phi_types_per_token***REMOVED***filename***REMOVED******REMOVED***token_start***REMOVED******REMOVED***token_end***REMOVED***:
+                         phi_types_per_token***REMOVED***filename***REMOVED******REMOVED***token_start***REMOVED******REMOVED***token_end***REMOVED***.append(phi_type)
+                   elif (token_start > start) and (token_end <= end):
+                      if phi_type not in phi_types_per_token***REMOVED***filename***REMOVED******REMOVED***token_start***REMOVED******REMOVED***token_end***REMOVED***:
+                         phi_types_per_token***REMOVED***filename***REMOVED******REMOVED***token_start***REMOVED******REMOVED***token_end***REMOVED***.append(phi_type)
+       return phi_types_per_token
+
+
+    def print_log(self, output_dir,kp, xml):
         log_dir = os.path.join(output_dir, 'log/')
 
         failed_dates_file = os.path.join(log_dir, 'failed_dates.json')
@@ -396,9 +416,10 @@ class Phitexts:
         batch_summary_file = os.path.join(log_dir, 'batch_summary.log')
         #known_phi_file = os.path.join(log_dir,'known_phi.log')
         #Path to csv summary of all files
+
         csv_summary_filepath = os.path.join(log_dir,
                                             'detailed_batch_summary.csv')
-
+        dynamic_blacklist_filepath = os.path.join(log_dir,'dynamic_blacklist_summary.csv')
         eval_table = {}
         failed_date = {}
         phi_table = {}
@@ -437,21 +458,21 @@ class Phitexts:
                 # Add 1 to successfully normalized dates
                 num_parsed += 1
                 parse_info***REMOVED***filename***REMOVED******REMOVED***'success_norm'***REMOVED*** += 1
-                
                 normalized_token = Subs.date_to_string(normalized_date)
                 note_key_ucsf = os.path.splitext(os.path.basename(filename).strip('0'))***REMOVED***0***REMOVED***
-                
-                # Successfully surrogated:
-                if (filename, start) in self.subs:
-                    # Add 1 to successfuly surrogated dates:	
-                     sub = self.subs***REMOVED***(filename,start)***REMOVED******REMOVED***0***REMOVED***
-                     parse_info***REMOVED***filename***REMOVED******REMOVED***'success_sub'***REMOVED*** += 1
-                # Unsuccessfully surrogated:
+                if self.subs: 
+                   # Successfully surrogated:
+                   if (filename, start) in self.subs:
+                      # Add 1 to successfuly surrogated dates:	
+                      sub = self.subs***REMOVED***(filename,start)***REMOVED******REMOVED***0***REMOVED***
+                      parse_info***REMOVED***filename***REMOVED******REMOVED***'success_sub'***REMOVED*** += 1
+                   # Unsuccessfully surrogated:
+                   else:
+                       # Add 1 to unsuccessfuly surrogated dates:
+                       sub = None	
+                       parse_info***REMOVED***filename***REMOVED******REMOVED***'fail_sub'***REMOVED*** += 1
                 else:
-                    # Add 1 to unsuccessfuly surrogated dates:
-                     sub = None	
-                     parse_info***REMOVED***filename***REMOVED******REMOVED***'fail_sub'***REMOVED*** += 1
-
+                    sub = None
                 eval_table***REMOVED***filename***REMOVED***.append({'start':start, 'end':end,
                                              'raw': raw,
                                              'normalized': normalized_token,
@@ -530,6 +551,7 @@ class Phitexts:
                 
         ### CSV of summary per file ####
         # 1. Filename
+            #print(filename)
         for filename in self.filenames:
 
             # File size in bytes
@@ -627,6 +649,24 @@ class Phitexts:
             f.write("DATES FAILED TO SURROGATE: " + str(failed_surrogation)
                     + '\n')   
         
+        if kp:
+           phi_type_per_token = self.get_phi_type_per_token()
+           with open(dynamic_blacklist_filepath,'w+') as f:
+               for filename in phi_type_per_token: 
+                   for start in phi_type_per_token***REMOVED***filename***REMOVED***:
+                       for end in phi_type_per_token***REMOVED***filename***REMOVED******REMOVED***start***REMOVED***:
+                           if len(phi_type_per_token***REMOVED***filename***REMOVED******REMOVED***start***REMOVED******REMOVED***end***REMOVED***) == 1 and 'PROBE' in phi_type_per_token***REMOVED***filename***REMOVED******REMOVED***start***REMOVED******REMOVED***end***REMOVED***:
+                               flank_start = int(start) - 10
+                               flank_end = int(end) + 10
+                               if (flank_start < 0):
+                                  flank_start = 1
+                               if len(self.texts***REMOVED***filename***REMOVED***)<flank_end:
+                                  flank_end = len(self.texts***REMOVED***filename***REMOVED***)
+                               context = self.texts***REMOVED***filename***REMOVED******REMOVED***flank_start:flank_end***REMOVED***
+                               word = self.texts***REMOVED***filename***REMOVED******REMOVED***start:end***REMOVED***
+                               f.write(filename + "\t" + str(start) + "\t" + str(end) + "\t" + word + "\t" + context.replace('\n',' ') + "\t" + ','.join(phi_type_per_token***REMOVED***filename***REMOVED******REMOVED***start***REMOVED******REMOVED***end***REMOVED***)+"\n")
+
+    
 
         # Todo: add PHI type counts to summary
         # Name PHI

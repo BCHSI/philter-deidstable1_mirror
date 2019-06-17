@@ -118,7 +118,7 @@ def main():
 
     # print and save log 
     if args.log:
-        phitexts.print_log(args.output,args.xml)
+        phitexts.print_log(args.output,args.dynamic_blacklist,args.xml)
     if args.eval:
         phitexts.eval(args.anno, args.output)
 
