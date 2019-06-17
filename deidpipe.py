@@ -26,7 +26,7 @@ def get_args():
     ap.add_argument("-f", "--filters", default="./configs/philter_alpha.json",
                     help="Path to the config file, the default is ./configs/philter_alpha.json",
                     type=str)
-    ap.add_argument("-s", "--surrogate_info", default="./data/i2b2_meta/note_info_map.tsv",
+    ap.add_argument("-s", "--surrogate_info", default=False,
                     help="Path to the tsv file that contains the surrogate info per "
                           + "note key, the default is "
                           + "./data/i2b2_meta/note_info_map.tsv",
@@ -99,7 +99,10 @@ def main():
         
         # looks-up surrogate and apply to normalized PHI
         if __debug__: print("looking up surrogates")
-        phitexts.substitute_phi(args.surrogate_info)
+        if args.surrogate_info:
+           phitexts.substitute_phi(args.surrogate_info)
+        else:
+           args.deid_filename = False   
 
     # transforms texts
     if __debug__: print("transforming texts")
@@ -112,7 +115,7 @@ def main():
 
     # print and save log 
     if args.log:
-        phitexts.print_log(args.output,args.xml)
+        phitexts.print_log(args.output,args.dynamic_blacklist,args.xml)
     if args.eval:
         phitexts.eval(args.anno, args.output)
 

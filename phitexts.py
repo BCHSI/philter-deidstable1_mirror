@@ -41,7 +41,6 @@ class Phitexts:
         #de-id notes
         self.textsout  = {}
         #known phi
-        #self.known_phi = {}
         if not xml:
            self._read_texts()
         self.subser = None
@@ -208,7 +207,6 @@ class Phitexts:
         if self.types:
             return
         self.types = self.filterer.phi_type_dict
-    
 
     '''    
     def detect_known_phi(self, knownphifile = "./data/knownphi_data.txt"):
@@ -394,7 +392,29 @@ class Phitexts:
                       errors='surrogateescape') as fhandle:
                 fhandle.write(self.textsout[filename])
     
-    def print_log(self, output_dir, xml):
+    def get_phi_type_per_token(self):
+       phi_types_per_token = {}
+       for phi_type in self.types: 
+           for filename, start, end in self.types[phi_type][0].scan():
+               all_tokens = get_tokens(self.texts[filename])
+               if filename not in phi_types_per_token:
+                  phi_types_per_token[filename] = {}
+               for token_start in all_tokens:    
+                   if token_start not in phi_types_per_token[filename]:
+                      phi_types_per_token[filename][token_start] = {}
+                   token_end = all_tokens[token_start][0]
+                   if token_end not in phi_types_per_token[filename][token_start]:
+                      phi_types_per_token[filename][token_start][token_end] = []
+                   if token_start == start:
+                      if phi_type not in phi_types_per_token[filename][token_start][token_end]:
+                         phi_types_per_token[filename][token_start][token_end].append(phi_type)
+                   elif (token_start > start) and (token_end <= end):
+                      if phi_type not in phi_types_per_token[filename][token_start][token_end]:
+                         phi_types_per_token[filename][token_start][token_end].append(phi_type)
+       return phi_types_per_token
+
+
+    def print_log(self, output_dir,kp, xml):
         log_dir = os.path.join(output_dir, 'log/')
 
         failed_dates_file = os.path.join(log_dir, 'failed_dates.json')
@@ -404,9 +424,10 @@ class Phitexts:
         batch_summary_file = os.path.join(log_dir, 'batch_summary.log')
         #known_phi_file = os.path.join(log_dir,'known_phi.log')
         #Path to csv summary of all files
+
         csv_summary_filepath = os.path.join(log_dir,
                                             'detailed_batch_summary.csv')
-
+        dynamic_blacklist_filepath = os.path.join(log_dir,'dynamic_blacklist_summary.csv')
         eval_table = {}
         failed_date = {}
         phi_table = {}
@@ -445,21 +466,21 @@ class Phitexts:
                 # Add 1 to successfully normalized dates
                 num_parsed += 1
                 parse_info[filename]['success_norm'] += 1
-                
-                normalized_token = self.subser.date_to_string(normalized_date)
+                normalized_token = Subs.date_to_string(normalized_date)
                 note_key_ucsf = os.path.splitext(os.path.basename(filename).strip('0'))[0]
-                
-                # Successfully surrogated:
-                if (filename, start) in self.subs:
-                    # Add 1 to successfuly surrogated dates:	
-                     sub = self.subs[(filename,start)][0]
-                     parse_info[filename]['success_sub'] += 1
-                # Unsuccessfully surrogated:
+                if self.subs: 
+                   # Successfully surrogated:
+                   if (filename, start) in self.subs:
+                      # Add 1 to successfuly surrogated dates:	
+                      sub = self.subs[(filename,start)][0]
+                      parse_info[filename]['success_sub'] += 1
+                   # Unsuccessfully surrogated:
+                   else:
+                       # Add 1 to unsuccessfuly surrogated dates:
+                       sub = None	
+                       parse_info[filename]['fail_sub'] += 1
                 else:
-                    # Add 1 to unsuccessfuly surrogated dates:
-                     sub = None	
-                     parse_info[filename]['fail_sub'] += 1
-
+                    sub = None
                 eval_table[filename].append({'start':start, 'end':end,
                                              'raw': raw,
                                              'normalized': normalized_token,
@@ -538,6 +559,7 @@ class Phitexts:
                 
         ### CSV of summary per file ####
         # 1. Filename
+            #print(filename)
         for filename in self.filenames:
 
             # File size in bytes
@@ -635,6 +657,24 @@ class Phitexts:
             f.write("DATES FAILED TO SURROGATE: " + str(failed_surrogation)
                     + '\n')   
         
+        if kp:
+           phi_type_per_token = self.get_phi_type_per_token()
+           with open(dynamic_blacklist_filepath,'w+') as f:
+               for filename in phi_type_per_token: 
+                   for start in phi_type_per_token[filename]:
+                       for end in phi_type_per_token[filename][start]:
+                           if len(phi_type_per_token[filename][start][end]) == 1 and 'PROBE' in phi_type_per_token[filename][start][end]:
+                               flank_start = int(start) - 10
+                               flank_end = int(end) + 10
+                               if (flank_start < 0):
+                                  flank_start = 1
+                               if len(self.texts[filename])<flank_end:
+                                  flank_end = len(self.texts[filename])
+                               context = self.texts[filename][flank_start:flank_end]
+                               word = self.texts[filename][start:end]
+                               f.write(filename + "\t" + str(start) + "\t" + str(end) + "\t" + word + "\t" + context.replace('\n',' ') + "\t" + ','.join(phi_type_per_token[filename][start][end])+"\n")
+
+    
 
         # Todo: add PHI type counts to summary
         # Name PHI
