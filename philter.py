@@ -14,6 +14,7 @@ import subprocess
 import numpy
 import random
 import string
+from textmethods import get_clean, get_tokens
 import pandas as pd
 from constants import *
 
@@ -68,16 +69,17 @@ class Philter:
 
         if "namesprobe" in config:
             if not os.path.exists(config["namesprobe"]):
-                raise Exception("Filepath does not exist", config["namesprobe"])
-            dynamic_blacklist = {"exclude": True,
+               raise Exception("Filepath does not exist", config["namesprobe"])
+            dynamic_blacklist = {
                                  "notes": "These are known phi that are not safe",
                                  "filepath": config["namesprobe"],
                                  "phi_type": "PROBE",
-                                 "pos": ['NNP'],
+                                 "exclude": True,
+                                 "pos": ["NNP"
+                                        ],
                                  "type":"dynamic_set",
                                  "title": "Dynamic Blacklist"}
             self.patterns.append(dynamic_blacklist) 
-
         
         if "xml" in config:
             if not os.path.exists(config["xml"]):
@@ -137,7 +139,7 @@ class Philter:
         self.full_exclude_map = {}
 
         #create a memory for the list of known PHI types
-        self.phi_type_list = ['DATE','ID','NAME','CONTACT','AGE>=90','NAME','OTHER','LOCATION','PROBE']
+        self.phi_type_list = ['HOLIDAYS','DATE','ID','NAME','CONTACT','AGE>=90','NAME','OTHER','LOCATION','PROBE']
         
         #create a memory for the corrdinate maps of known PHI types    
         self.phi_type_dict = {}
@@ -255,7 +257,6 @@ class Philter:
         set_filetypes = set(["pkl", "json","txt"])
         regex_filetypes = set(["txt"])
         reserved_list = set(["data", "coordinate_map"])
-
         #first check that data is formatted, can be loaded etc. 
         for i,pattern in enumerate(self.patterns):
             self.pattern_indexes[pattern['title']] = i
@@ -368,11 +369,10 @@ class Philter:
 
                 #create an interestion map of all coordinates we'll be keeping
                 self.include_map.add_file(filename)
-
                 # add file to phi_type_dict
                 for phi_type in self.phi_type_list:
                     self.phi_type_dict[phi_type][0].add_file(filename)
-
+                    
                 # Add total tokens to token dictionary
                 # self.token_data[filename] = 
 
@@ -585,7 +585,6 @@ class Philter:
         coord_map = self.patterns[pattern_index]["coordinate_map"]
         #add the entire length of the file
         coord_map.add(filename, 0, len(text))
-        print(0, len(text))
         self.patterns[pattern_index]["coordinate_map"] = coord_map
 
 
@@ -598,7 +597,9 @@ class Philter:
             raise Exception("Invalid pattern index: ", pattern_index, "pattern length", len(patterns))
         
         if self.patterns[pattern_index]["type"] == "dynamic_set":
+           self.patterns[pattern_index]["exclude"] = True
            map_set = {}
+           pos_set = set(self.patterns[pattern_index]["pos"])
            if (filename.find('.txt') != -1) or (filename.find('.xml') != -1):
                    file_note_key = os.path.basename(filename).replace('\n','')
                    file_note_key = file_note_key.replace('.txt','')
@@ -607,9 +608,11 @@ class Philter:
                    file_note_key = file_note_key.replace('_utf8','')
                    note_key = file_note_key
                    for key in self.patterns[pattern_index]["data"]:
+                       
                        if self.patterns[pattern_index]["data"][key] == note_key:            
-                          map_set[key] = self.patterns[pattern_index]["data"][key]
-                   #print(map_set)
+                          key_clean = re.sub(r"[^a-zA-Z0-9]+", "", str(key).lower().strip()) 
+                          map_set[key_clean] = self.patterns[pattern_index]["data"][key]
+                          #map_set[key_clean] = 1
         else:
             map_set = self.patterns[pattern_index]["data"]
         coord_map = self.patterns[pattern_index]["coordinate_map"]
@@ -622,7 +625,6 @@ class Philter:
             pos_set = set(self.patterns[pattern_index]["pos"])
         if len(pos_set) > 0:
             check_pos = True
-
         cleaned = self.get_clean(filename,text)[0]
         if check_pos:
             pos_list = self.get_pos(filename, cleaned)# pos_list = nltk.pos_tag(cleaned)
@@ -633,38 +635,36 @@ class Philter:
 
         # if filename == './data/i2b2_notes/160-03.txt':
         #     print(pos_list)
+        #print(map_set)
+        #print(pos_list)
         start_coordinate = 0
         for tup in pos_list:
             word = tup[0]
             pos  = tup[1]
             start = start_coordinate
             stop = start_coordinate + len(word)
-
             # This converts spaces into empty strings, so we know to skip forward to the next real word
             word_clean = re.sub(r"[^a-zA-Z0-9]+", "", word.lower().strip())
             if len(word_clean) == 0:
                 #got a blank space or something without any characters or digits, move forward
                 start_coordinate += len(word)
                 continue
-
             if check_pos == False or (check_pos == True and pos in pos_set):
                 # if word == 'exlap':
                 #     print(pos)
                 #     print(filename)
                 #     print(pos_set)
                 #     print(check_pos)
-
-                if word_clean in map_set or word in map_set:
-                    coord_map.add_extend(filename, start, stop)
+               
+               if word_clean in map_set or word in map_set:
+                  coord_map.add_extend(filename, start, stop)
                     #print("FOUND: ",word, "COORD: ",  str(start), ":", str(stop))
-                else:
+               else:
                     #print("not in set: ",word, "COORD: ",  text[start:stop])
-                    #print(word_clean)
                     pass
                     
             #advance our start coordinate
             start_coordinate += len(word)
-
         self.patterns[pattern_index]["coordinate_map"] = coord_map  
 
     def map_pos(self, filename="", text="", pattern_index=-1, pre_process= r"[^a-zA-Z0-9]"):
@@ -791,7 +791,7 @@ class Philter:
                 yield root,filename
 
     def get_exclude_include_maps(self, filename, pattern, txt):
-
+        texts = {}
         coord_map = pattern["coordinate_map"]
         exclude = pattern["exclude"]
         try:
@@ -800,19 +800,17 @@ class Philter:
             filter_path = pattern["title"]
         if "phi_type" in pattern:
             phi_type = pattern["phi_type"]
-
-        # self.patterns[pattern_index]["title"]
         else:
             phi_type = "OTHER"
-
+        fhandle = open(filename, "r", 
+                               errors='surrogateescape')
+        texts[filename] = fhandle.read()
         for start,stop in coord_map.filecoords(filename):
-
-            if pattern['type'] != 'regex_context':
-                if exclude:
+            if pattern['type'] != 'regex_context' and pattern['type'] != 'dynamic_set':
+                if exclude or exclude == "True":
                     if not self.include_map.does_overlap(filename, start, stop):
                         self.exclude_map.add_extend(filename, start, stop)
                         self.phi_type_dict[phi_type][0].add_extend(filename, start, stop)
-
                 else:
                     if not self.exclude_map.does_overlap(filename, start, stop):
                         self.include_map.add_extend(filename, start, stop)
@@ -828,11 +826,11 @@ class Philter:
                     self.exclude_map.add_extend(filename, start, stop)
                     self.include_map.remove(filename, start, stop)
                     self.phi_type_dict[phi_type][0].add_extend(filename, start, stop)
+                    #print(filename + "\t" + phi_type + "\t" + str(start) + "\t" + str(stop))
                 else:
                     self.include_map.add_extend(filename, start, stop)
                     self.exclude_map.remove(filename, start, stop)
                     self.data_all_files[filename]["non-phi"].append({"start":start, "stop":stop, "word":txt[start:stop], "filepath":filter_path})
-
 ###########################
             
         # dont' need to loop through all PHi types -- just current one
