@@ -69,8 +69,9 @@ class Subs:
                                settings={'RELATIVE_BASE': DATE_REF,
                                          'PREFER_DAY_OF_MONTH': 'first'})
         return date
-    
-    def date_to_string(self, date):
+
+    @staticmethod
+    def date_to_string(date):
         return date.to_string()
 
     def _load_look_up_table(self, look_up_table_path):
