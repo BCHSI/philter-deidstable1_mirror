@@ -79,6 +79,16 @@ class Phitexts:
     
         return tokens
 
+    def _get_tag_start_stop(self, tag_line):
+        if "@spans" in tag_line.keys():
+            start, stop = final_value***REMOVED***"@spans"***REMOVED***.split('~')
+        elif "@start" and  "@end" in tag_line.keys():
+            start = tag_line***REMOVED***"@start"***REMOVED***
+            stop  = tag_line***REMOVED***"@end"***REMOVED***
+        else:
+            raise Exception("ERROR: cannot read tag_line: {0}".format(tag_line))
+        return int(start), int(stop)
+    
     def __read_xml_into_coordinateMap(self,inputdir):
         full_xml_map = {}
         phi_type_list = ***REMOVED***'Provider_Name','Date','DATE','Patient_Social_Security_Number','Email','Provider_Address_or_Location','Age','Name','OTHER'***REMOVED***
@@ -95,7 +105,6 @@ class Phitexts:
             if not filename.endswith("xml"):
                continue
             filepath = os.path.join(inputdir, filename)
-            philter_or_gold = 'PhilterUCSF' 
             xml_filenames.append(filepath)
             encoding = self._detect_encoding(filepath)
             fhandle = open(filepath, "r", encoding=encoding***REMOVED***'encoding'***REMOVED***)
@@ -104,49 +113,32 @@ class Phitexts:
             root = tree.getroot()
             xmlstr = ET.tostring(root, encoding='utf8', method='xml')
             xml_texts***REMOVED***filepath***REMOVED*** = root.find('TEXT').text
-            xml_dict = xmltodict.parse(xmlstr)***REMOVED***philter_or_gold***REMOVED***
+            xml_dict = xmltodict.parse(xmlstr)
+            xml_dict = next(iter(xml_dict.values()))
             check_tags = root.find('TAGS')
                        
  
             if check_tags is not None:
-               tags_dict = xml_dict***REMOVED***"TAGS"***REMOVED***            
+                tags_dict = xml_dict***REMOVED***"TAGS"***REMOVED***            
             else:
-               tags_dict = None
+                tags_dict = None
             if tags_dict is not None:
-               for key, value in tags_dict.items():
-              # Note:  Value can be a list of like phi elements
-              #               or a dictionary of the metadata about a phi element
-                   if isinstance(value, list):
-                      for final_value in value:
-                          text_start = final_value***REMOVED***"@spans"***REMOVED***.split('~')***REMOVED***0***REMOVED*** 
-                          text_end = final_value***REMOVED***"@spans"***REMOVED***.split('~')***REMOVED***1***REMOVED***
-                          philter_text = final_value***REMOVED***"@text"***REMOVED***
-                          xml_phi_type = final_value***REMOVED***"@TYPE"***REMOVED***
-                          xml_coordinate_map.update(self._get_xml_tokens(philter_text, xml_texts***REMOVED***filepath***REMOVED***,int(text_start)))
-                          #xml_coordinate_map***REMOVED***int(text_start)***REMOVED*** = int(text_end)  
-                          if xml_phi_type not in phi_type_list:
-                              phi_type_list.append(xml_phi_type)
-                          for phi_type in phi_type_list:
-                              if phi_type not in phi_type_dict:
-                                 phi_type_dict***REMOVED***phi_type***REMOVED*** = ***REMOVED***CoordinateMap()***REMOVED***
-                          
-                          #phi_type_dict***REMOVED***xml_phi_type***REMOVED******REMOVED***0***REMOVED***.add_file(filename)
-                          phi_type_dict***REMOVED***xml_phi_type***REMOVED******REMOVED***0***REMOVED***.add_extend(filepath,int(text_start),int(text_end))
-                   else:
-                       final_value = value
-                       text = final_value***REMOVED***"@text"***REMOVED***
-                       xml_phi_type = final_value***REMOVED***"@TYPE"***REMOVED***
-                       text_start = final_value***REMOVED***"@spans"***REMOVED***.split('~')***REMOVED***0***REMOVED***
-                       text_end = final_value***REMOVED***"@spans"***REMOVED***.split('~')***REMOVED***1***REMOVED***
-                       xml_coordinate_map.update(self._get_xml_tokens(text, xml_texts***REMOVED***filepath***REMOVED***,int(text_start)))
-                       #xml_coordinate_map***REMOVED***int(text_start)***REMOVED*** = int(text_end)
-                       if xml_phi_type not in phi_type_list:
-                           phi_type_list.append(xml_phi_type)
-                       for phi_type in phi_type_list:
-                           if phi_type not in phi_type_dict:
-                                 phi_type_dict***REMOVED***phi_type***REMOVED*** = ***REMOVED***CoordinateMap()***REMOVED***
-                       #phi_type_dict***REMOVED***xml_phi_type***REMOVED******REMOVED***0***REMOVED***.add_file(filename)
-                       phi_type_dict***REMOVED***xml_phi_type***REMOVED******REMOVED***0***REMOVED***.add_extend(filepath,int(text_start),int(text_end))
+                for key, value in tags_dict.items():
+                # Note:  Value can be a list of like phi elements
+                #        or a dictionary of the metadata about a phi element
+                    if not isinstance(value, list):
+                        value = ***REMOVED***value***REMOVED***
+                    for final_value in value:
+                        text_start, text_end = self._get_tag_start_stop(final_value)
+                        philter_text = final_value***REMOVED***"@text"***REMOVED***
+                        xml_phi_type = final_value***REMOVED***"@TYPE"***REMOVED***
+                        xml_coordinate_map.update(self._get_xml_tokens(philter_text, xml_texts***REMOVED***filepath***REMOVED***,int(text_start))) 
+                        if xml_phi_type not in phi_type_list:
+                            phi_type_list.append(xml_phi_type)
+                        for phi_type in phi_type_list:
+                            if phi_type not in phi_type_dict:
+                                phi_type_dict***REMOVED***phi_type***REMOVED*** = ***REMOVED***CoordinateMap()***REMOVED***
+                        phi_type_dict***REMOVED***xml_phi_type***REMOVED******REMOVED***0***REMOVED***.add_extend(filepath,int(text_start),int(text_end))
             full_xml_map***REMOVED***filepath***REMOVED*** = xml_coordinate_map
             fhandle.close()
         return full_xml_map, phi_type_dict, xml_texts, xml_filenames
@@ -429,7 +421,7 @@ class Phitexts:
                 num_parsed += 1
                 parse_info***REMOVED***filename***REMOVED******REMOVED***'success_norm'***REMOVED*** += 1
                 
-                normalized_token = self.subser.date_to_string(normalized_date)
+                normalized_token = Subs.date_to_string(normalized_date)
                 note_key_ucsf = os.path.splitext(os.path.basename(filename).strip('0'))***REMOVED***0***REMOVED***
                 
                 # Successfully surrogated:
@@ -789,7 +781,8 @@ class Phitexts:
                 tree = ET.parse(filepath)
                 rt = tree.getroot()
                 xmlstr = ET.tostring(rt, encoding='utf8', method='xml')
-                xml_dict = xmltodict.parse(xmlstr)***REMOVED***'PhilterUCSF'***REMOVED***
+                xml_dict = xmltodict.parse(xmlstr)
+                xml_dict = next(iter(xml_dict.values()))
                 check_tags = rt.find('TAGS')
                 full_text = xml_dict***REMOVED***"TEXT"***REMOVED***
                 if check_tags is not None:
@@ -806,8 +799,8 @@ class Phitexts:
                         if not isinstance(value, list):
                             value = ***REMOVED***value***REMOVED***
                         for final_value in value:
-                            start = int(final_value***REMOVED***"@spans"***REMOVED***.split('~')***REMOVED***0***REMOVED***)
-                            end = int(final_value***REMOVED***"@spans"***REMOVED***.split('~')***REMOVED***1***REMOVED***)
+#                            print("final_value: " + )
+                            start, end = self._get_tag_start_stop(final_value)
                             text = final_value***REMOVED***"@text"***REMOVED***
                             phi_type = final_value***REMOVED***"@TYPE"***REMOVED***
 
