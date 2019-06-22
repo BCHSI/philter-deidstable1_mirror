@@ -54,8 +54,10 @@ def runDeidChunck(unit, q, philterFolder):
         t0 = time.time()
 
         # Tuple to determine path
-        srcFolder, srcMeta, dstFolder, kpfile = q.get()
-
+        if len(q.get()) == 4:
+           srcFolder, srcMeta, dstFolder, kpfile = q.get()
+        else:
+           srcFolder, srcMeta, dstFolder = q.get()
         # Build output directory
         os.makedirs(dstFolder, exist_ok=True)
 
@@ -65,23 +67,35 @@ def runDeidChunck(unit, q, philterFolder):
         print(str(unit) + " cwd: " + philterFolder)
 
         # Run Deid (would be better to interface directly)
-        call(***REMOVED***"python3", "-O", "deidpipe.py", 
-              "-i", srcFolder, 
-              "-o", dstFolder, 
-              "-s", srcMeta,
-              "-d", "True", 
-              "-f", "configs/philter_delta.json",
-              "-k", kpfile,
-              "-l", "True"***REMOVED***,
-             cwd=philterFolder)
-
+        try:
+           kpfile
+        except NameError:
+           kpfile = None
+        if kpfile is None:
+           call(***REMOVED***"python3", "-O", "deidpipe.py", 
+                 "-i", srcFolder, 
+                 "-o", dstFolder, 
+                 "-s", srcMeta,
+                 "-d", "True", 
+                 "-f", "configs/philter_delta_holidays_added_dynamic_blklist.json",
+                 "-l", "True"***REMOVED***,
+                 cwd=philterFolder)
+        else:
+            call(***REMOVED***"python3", "-O", "deidpipe.py",
+                 "-i", srcFolder,
+                 "-o", dstFolder,
+                 "-s", srcMeta,
+                 "-d", "True",
+                 "-f", "configs/philter_delta_holidays_added_dynamic_blklist.json",
+                 "-k", kpfile,
+                 "-l", "True"***REMOVED***,
+                 cwd=philterFolder)
 
         # Print time elapsed for batch
         t = time.time() - t0
         print(str(unit) + " " + dstFolder + ": " + str(t) + " seconds")
 
         q.task_done()
-
 
 def main():
     enclosure_queue = Queue()
@@ -101,9 +115,13 @@ def main():
     # Build queue
     with open(args.imofile, 'r') as imo:
         for line in imo:
-            idir, mfile, odir, kpfile = line.split()
-            enclosure_queue.put(***REMOVED***idir, mfile, odir, kpfile***REMOVED***)
-    
+            parts = line.split()
+            if len(parts) > 3:
+               idir, mfile, odir, kpfile = line.split()
+               enclosure_queue.put(***REMOVED***idir, mfile, odir, kpfile***REMOVED***)
+            else:
+               idir, mfile, odir = line.split()
+               enclosure_queue.put(***REMOVED***idir, mfile, odir***REMOVED***)
     # Now wait for the queue to be empty, indicating that we have
     # processed all of the notes
     print('*** Main thread waiting')
@@ -116,7 +134,12 @@ def main():
         all_logs = ***REMOVED******REMOVED***
         with open(args.imofile, 'r') as imo:
             for line in imo:
-                idir, mfile, odir = line.split()
+                parts = line.split()
+                if len(parts) > 3:
+                   idir, mfile, odir, kpfile = line.split()
+                else:
+                   idir, mfile, odir = line.split()
+
                 all_logs.append(os.path.join(odir, "log",
                                              "detailed_batch_summary.csv"))
 
