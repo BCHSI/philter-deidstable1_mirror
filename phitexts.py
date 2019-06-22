@@ -11,9 +11,14 @@ from subs import Subs
 import string
 import pandas
 import numpy
-from knownphi import Knownphi
+#from knownphi import Knownphi
 from constants import *
-from textmethods import get_clean
+from textmethods import get_clean, get_tokens
+import time
+
+import memory_profiler
+#import sys
+#sys.stdout = LogFile('memory_profile_log')
 
 class Phitexts:
     """ container for texts, phi, attributes """
@@ -36,7 +41,6 @@ class Phitexts:
         #de-id notes
         self.textsout  = {}
         #known phi
-        self.known_phi = {}
         if not xml:
            self._read_texts()
         self.subser = None
@@ -79,6 +83,16 @@ class Phitexts:
     
         return tokens
 
+    def _get_tag_start_stop(self, tag_line):
+        if "@spans" in tag_line.keys():
+            start, stop = final_value["@spans"].split('~')
+        elif "@start" and  "@end" in tag_line.keys():
+            start = tag_line["@start"]
+            stop  = tag_line["@end"]
+        else:
+            raise Exception("ERROR: cannot read tag_line: {0}".format(tag_line))
+        return int(start), int(stop)
+    
     def __read_xml_into_coordinateMap(self,inputdir):
         full_xml_map = {}
         phi_type_list = ['Provider_Name','Date','DATE','Patient_Social_Security_Number','Email','Provider_Address_or_Location','Age','Name','OTHER']
@@ -95,7 +109,6 @@ class Phitexts:
             if not filename.endswith("xml"):
                continue
             filepath = os.path.join(inputdir, filename)
-            philter_or_gold = 'PhilterUCSF' 
             xml_filenames.append(filepath)
             encoding = self._detect_encoding(filepath)
             fhandle = open(filepath, "r", encoding=encoding['encoding'])
@@ -104,49 +117,32 @@ class Phitexts:
             root = tree.getroot()
             xmlstr = ET.tostring(root, encoding='utf8', method='xml')
             xml_texts[filepath] = root.find('TEXT').text
-            xml_dict = xmltodict.parse(xmlstr)[philter_or_gold]
+            xml_dict = xmltodict.parse(xmlstr)
+            xml_dict = next(iter(xml_dict.values()))
             check_tags = root.find('TAGS')
                        
  
             if check_tags is not None:
-               tags_dict = xml_dict["TAGS"]            
+                tags_dict = xml_dict["TAGS"]            
             else:
-               tags_dict = None
+                tags_dict = None
             if tags_dict is not None:
-               for key, value in tags_dict.items():
-              # Note:  Value can be a list of like phi elements
-              #               or a dictionary of the metadata about a phi element
-                   if isinstance(value, list):
-                      for final_value in value:
-                          text_start = final_value["@spans"].split('~')[0] 
-                          text_end = final_value["@spans"].split('~')[1]
-                          philter_text = final_value["@text"]
-                          xml_phi_type = final_value["@TYPE"]
-                          xml_coordinate_map.update(self._get_xml_tokens(philter_text, xml_texts[filepath],int(text_start)))
-                          #xml_coordinate_map[int(text_start)] = int(text_end)  
-                          if xml_phi_type not in phi_type_list:
-                              phi_type_list.append(xml_phi_type)
-                          for phi_type in phi_type_list:
-                              if phi_type not in phi_type_dict:
-                                 phi_type_dict[phi_type] = [CoordinateMap()]
-                          
-                          #phi_type_dict[xml_phi_type][0].add_file(filename)
-                          phi_type_dict[xml_phi_type][0].add_extend(filepath,int(text_start),int(text_end))
-                   else:
-                       final_value = value
-                       text = final_value["@text"]
-                       xml_phi_type = final_value["@TYPE"]
-                       text_start = final_value["@spans"].split('~')[0]
-                       text_end = final_value["@spans"].split('~')[1]
-                       xml_coordinate_map.update(self._get_xml_tokens(text, xml_texts[filepath],int(text_start)))
-                       #xml_coordinate_map[int(text_start)] = int(text_end)
-                       if xml_phi_type not in phi_type_list:
-                           phi_type_list.append(xml_phi_type)
-                       for phi_type in phi_type_list:
-                           if phi_type not in phi_type_dict:
-                                 phi_type_dict[phi_type] = [CoordinateMap()]
-                       #phi_type_dict[xml_phi_type][0].add_file(filename)
-                       phi_type_dict[xml_phi_type][0].add_extend(filepath,int(text_start),int(text_end))
+                for key, value in tags_dict.items():
+                # Note:  Value can be a list of like phi elements
+                #        or a dictionary of the metadata about a phi element
+                    if not isinstance(value, list):
+                        value = [value]
+                    for final_value in value:
+                        text_start, text_end = self._get_tag_start_stop(final_value)
+                        philter_text = final_value["@text"]
+                        xml_phi_type = final_value["@TYPE"]
+                        xml_coordinate_map.update(self._get_xml_tokens(philter_text, xml_texts[filepath],int(text_start))) 
+                        if xml_phi_type not in phi_type_list:
+                            phi_type_list.append(xml_phi_type)
+                        for phi_type in phi_type_list:
+                            if phi_type not in phi_type_dict:
+                                phi_type_dict[phi_type] = [CoordinateMap()]
+                        phi_type_dict[xml_phi_type][0].add_extend(filepath,int(text_start),int(text_end))
             full_xml_map[filepath] = xml_coordinate_map
             fhandle.close()
         return full_xml_map, phi_type_dict, xml_texts, xml_filenames
@@ -169,24 +165,34 @@ class Phitexts:
            return
         self.coords, self.types, self.texts, self.filenames = self.__read_xml_into_coordinateMap(self.inputdir) 
 
-    def detect_phi(self, filters="./configs/philter_alpha.json", verbose=False):
+    #@profile
+    def detect_phi(self, filters="./configs/philter_alpha.json", namesprobefile=None, verbose=False):
         assert self.texts, "No texts defined"
-        
+
         if self.coords:
             return
         
-        philter_config = {
-            "verbose":verbose,
-            "run_eval":False,
-            "finpath":self.inputdir,
-            "filters":filters,
-            "time_profile":False
-        }
+        if namesprobefile:
+            philter_config = {
+               "verbose":verbose,
+               "run_eval":False,
+               "finpath":self.inputdir,
+               "filters":filters,
+               "namesprobe":namesprobefile
+            }
+
+        else:
+            philter_config = {
+               "verbose":verbose,
+               "run_eval":False,
+               "finpath":self.inputdir,
+               "filters":filters,
+            }
 
         self.filterer = Philter(philter_config)
         self.coords = self.filterer.map_coordinates()
         self.pos = self.filterer.pos_tags
-
+    
     def detect_phi_types(self):
         assert self.texts, "No texts defined"
         assert self.coords, "No PHI coordinates defined"
@@ -194,7 +200,8 @@ class Phitexts:
         if self.types:
             return
         self.types = self.filterer.phi_type_dict
-        
+
+    '''    
     def detect_known_phi(self, knownphifile = "./data/knownphi_data.txt"):
         assert self.coords, "No PHI coordinates defined"
         assert self.texts, "No texts defined"
@@ -202,7 +209,7 @@ class Phitexts:
 
         self.knownphi = Knownphi(knownphifile, self.coords, self.texts, self.types,self.pos)
         self.coords, self.types, self.known_phi = self.knownphi.update_coordinatemap()
-
+    '''
 
     def normalize_phi(self):
         assert self.texts, "No texts defined"
@@ -378,7 +385,29 @@ class Phitexts:
                       errors='surrogateescape') as fhandle:
                 fhandle.write(self.textsout[filename])
     
-    def print_log(self, output_dir, kp, xml):
+    def get_phi_type_per_token(self):
+       phi_types_per_token = {}
+       for phi_type in self.types: 
+           for filename, start, end in self.types[phi_type][0].scan():
+               all_tokens = get_tokens(self.texts[filename])
+               if filename not in phi_types_per_token:
+                  phi_types_per_token[filename] = {}
+               for token_start in all_tokens:    
+                   if token_start not in phi_types_per_token[filename]:
+                      phi_types_per_token[filename][token_start] = {}
+                   token_end = all_tokens[token_start][0]
+                   if token_end not in phi_types_per_token[filename][token_start]:
+                      phi_types_per_token[filename][token_start][token_end] = []
+                   if token_start == start:
+                      if phi_type not in phi_types_per_token[filename][token_start][token_end]:
+                         phi_types_per_token[filename][token_start][token_end].append(phi_type)
+                   elif (token_start > start) and (token_end <= end):
+                      if phi_type not in phi_types_per_token[filename][token_start][token_end]:
+                         phi_types_per_token[filename][token_start][token_end].append(phi_type)
+       return phi_types_per_token
+
+
+    def print_log(self, output_dir,kp, xml):
         log_dir = os.path.join(output_dir, 'log/')
 
         failed_dates_file = os.path.join(log_dir, 'failed_dates.json')
@@ -386,11 +415,12 @@ class Phitexts:
         phi_count_file = os.path.join(log_dir, 'phi_count.log')
         phi_marked_file = os.path.join(log_dir, 'phi_marked.json')
         batch_summary_file = os.path.join(log_dir, 'batch_summary.log')
-        known_phi_file = os.path.join(log_dir,'known_phi.log')
+        #known_phi_file = os.path.join(log_dir,'known_phi.log')
         #Path to csv summary of all files
+
         csv_summary_filepath = os.path.join(log_dir,
                                             'detailed_batch_summary.csv')
-
+        dynamic_blacklist_filepath = os.path.join(log_dir,'dynamic_blacklist_summary.csv')
         eval_table = {}
         failed_date = {}
         phi_table = {}
@@ -429,21 +459,21 @@ class Phitexts:
                 # Add 1 to successfully normalized dates
                 num_parsed += 1
                 parse_info[filename]['success_norm'] += 1
-                
-                normalized_token = self.subser.date_to_string(normalized_date)
+                normalized_token = Subs.date_to_string(normalized_date)
                 note_key_ucsf = os.path.splitext(os.path.basename(filename).strip('0'))[0]
-                
-                # Successfully surrogated:
-                if (filename, start) in self.subs:
-                    # Add 1 to successfuly surrogated dates:	
-                     sub = self.subs[(filename,start)][0]
-                     parse_info[filename]['success_sub'] += 1
-                # Unsuccessfully surrogated:
+                if self.subs: 
+                   # Successfully surrogated:
+                   if (filename, start) in self.subs:
+                      # Add 1 to successfuly surrogated dates:	
+                      sub = self.subs[(filename,start)][0]
+                      parse_info[filename]['success_sub'] += 1
+                   # Unsuccessfully surrogated:
+                   else:
+                       # Add 1 to unsuccessfuly surrogated dates:
+                       sub = None	
+                       parse_info[filename]['fail_sub'] += 1
                 else:
-                    # Add 1 to unsuccessfuly surrogated dates:
-                     sub = None	
-                     parse_info[filename]['fail_sub'] += 1
-
+                    sub = None
                 eval_table[filename].append({'start':start, 'end':end,
                                              'raw': raw,
                                              'normalized': normalized_token,
@@ -499,17 +529,16 @@ class Phitexts:
             json.dump(eval_table, f)
         with open(phi_marked_file, 'w') as f:
             json.dump(phi_table, f)
-        if kp:
-            with open(known_phi_file,'w') as f:
-                file_header = 'filename' + "\t" + 'start' + "\t" + 'stop' + "\t" + 'knownphi_token' + "\t" + 'context' + "\t" + 'pos' + "\n"
-                f.write(file_header)
+        '''
+        if kp: 
+           with open(known_phi_file,'w') as f:
                 for filename in self.known_phi:
                     known_phi_dict = self.known_phi[filename]
                     for i in known_phi_dict:
                         start = i
                         stop, knownphi, context, pos = known_phi_dict[i]
                         f.write(filename+"\t"+str(start) +"\t" + str(stop) + "\t" + knownphi + "\t" + context + "\t" + pos + "\n") 
-
+        '''
         # If the summary csv file doesn't exist yet, create it and add file headers
         # Csv summary is one directory above all input directories
         if not os.path.isfile(csv_summary_filepath):
@@ -523,6 +552,7 @@ class Phitexts:
                 
         ### CSV of summary per file ####
         # 1. Filename
+            #print(filename)
         for filename in self.filenames:
 
             # File size in bytes
@@ -568,7 +598,7 @@ class Phitexts:
         
         # Summarize current batch
         # Batch size (all)
-        number_of_notes = len(summary_info)
+        number_of_notes = len(self.filenames)
 
         # File size
         total_kb_processed = sum(summary_info['filesize'])/1000
@@ -620,6 +650,24 @@ class Phitexts:
             f.write("DATES FAILED TO SURROGATE: " + str(failed_surrogation)
                     + '\n')   
         
+        if kp:
+           phi_type_per_token = self.get_phi_type_per_token()
+           with open(dynamic_blacklist_filepath,'w+') as f:
+               for filename in phi_type_per_token: 
+                   for start in phi_type_per_token[filename]:
+                       for end in phi_type_per_token[filename][start]:
+                           if len(phi_type_per_token[filename][start][end]) == 1 and 'PROBE' in phi_type_per_token[filename][start][end]:
+                               flank_start = int(start) - 10
+                               flank_end = int(end) + 10
+                               if (flank_start < 0):
+                                  flank_start = 1
+                               if len(self.texts[filename])<flank_end:
+                                  flank_end = len(self.texts[filename])
+                               context = self.texts[filename][flank_start:flank_end]
+                               word = self.texts[filename][start:end]
+                               f.write(filename + "\t" + str(start) + "\t" + str(end) + "\t" + word + "\t" + context.replace('\n',' ') + "\t" + ','.join(phi_type_per_token[filename][start][end])+"\n")
+
+    
 
         # Todo: add PHI type counts to summary
         # Name PHI
@@ -792,7 +840,8 @@ class Phitexts:
                 tree = ET.parse(filepath)
                 rt = tree.getroot()
                 xmlstr = ET.tostring(rt, encoding='utf8', method='xml')
-                xml_dict = xmltodict.parse(xmlstr)['PhilterUCSF']
+                xml_dict = xmltodict.parse(xmlstr)
+                xml_dict = next(iter(xml_dict.values()))
                 check_tags = rt.find('TAGS')
                 full_text = xml_dict["TEXT"]
                 if check_tags is not None:
@@ -809,8 +858,8 @@ class Phitexts:
                         if not isinstance(value, list):
                             value = [value]
                         for final_value in value:
-                            start = int(final_value["@spans"].split('~')[0])
-                            end = int(final_value["@spans"].split('~')[1])
+#                            print("final_value: " + )
+                            start, end = self._get_tag_start_stop(final_value)
                             text = final_value["@text"]
                             phi_type = final_value["@TYPE"]
 
