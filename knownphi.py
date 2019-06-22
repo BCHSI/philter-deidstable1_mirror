@@ -57,7 +57,13 @@ class Knownphi:
        ''' Updates self.coords with known phi identified data'''
        
        file_note_key = ""
-       note_key2knownphi_dict = pd.Series(self.knownphitable.note_key.values, index=self.knownphitable.clean_value).to_dict()
+       #mini_table = self.knownphitable.loc[self.knownphitable['note_key'] == 'i22861140']
+       #print(mini_table)
+       #note_key2knownphi_dict = pd.Series(self.knownphitable.note_key.values, index=self.knownphitable.clean_value).to_dict()
+       # print(pd.Series(self.knownphitable.note_key.values, index=self.knownphitable.clean_value))
+       # print(note_key2knownphi_dict['Wall'])
+       # print(note_key2knownphi_dict['WALL'])
+       # print(note_key2knownphi_dict['Brent D'])
        for key in self.texts:
            tokenize = get_tokens(self.texts[key])
            for elem in key.split('/'):
@@ -67,14 +73,20 @@ class Knownphi:
                    elem = elem.lstrip('0')
                    elem = elem.replace('.xml','')
                    elem = elem.replace('_utf8','')
-                   file_note_key = elem  
+                   file_note_key = elem
+           # Kathleen's workaround
+           mini_table = self.knownphitable.loc[self.knownphitable['note_key'] == file_note_key]
+           note_key2knownphi_dict = pd.Series(mini_table.note_key.values, index=mini_table.clean_value).to_dict()
+           #print(mini_table)
+           #print(note_key2knownphi_dict)
            for knownphi in note_key2knownphi_dict:
-               if note_key2knownphi_dict[knownphi] == file_note_key:
+               #if note_key2knownphi_dict[knownphi] == file_note_key:
+                  #print(note_key2knownphi_dict[knownphi], file_note_key, knownphi)
                   #for start in tokenize:
                   #     if knownphi.lower() == tokenize[start][1].lower():
                         #stop = tokenize[start][0]
                         #print("Found a Known PHI!" + str(knownphi) + ":" +file_note_key)
-                  self.add_knownphi(key, file_note_key, tokenize, knownphi)
+                self.add_knownphi(key, file_note_key, tokenize, knownphi)
        return self.coords, self.phi_types, self.known_phi
 
    def update_phi_type(self,filename, file_note_key, start, stop):
@@ -140,7 +152,7 @@ class Knownphi:
                              flank_start = 1
                            if len(self.texts[filename])<flank_end:
                               flank_end = len(self.texts[filename])
-                           context = self.texts[filename][flank_start:flank_end]
+                           context = self.texts[filename][flank_start:flank_end].replace('\n',' ').replace('\t',' ')
                            pos = self.get_postag(int(start),knownphi)
                            self.known_phi[filename].update({int(start):[int(stop),knownphi,context,pos]})
                            self.phi_types[types][0].add_extend(filename,int(start),int(stop))               

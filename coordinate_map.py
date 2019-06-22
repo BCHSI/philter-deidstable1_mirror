@@ -1,6 +1,7 @@
 import numpy
 import itertools
 import re
+import collections
 
 class CoordinateMap:
 	""" 
@@ -23,21 +24,21 @@ class CoordinateMap:
 		allowing us to easily check if these coordinates have been matched yet
 
 		"""
-		self.map = {}
-		self.coord2pattern = {} 
+		self.map = collections.OrderedDict()
+		self.coord2pattern = collections.OrderedDict()
 		self.pattern = pattern
 		self.debug = debug
-		self.all_coords = {} 
+		self.all_coords = collections.OrderedDict()
 
 	def add(self, filename, start, stop, overlap=False, pattern=""):
 		"""  adds a new coordinate to the coordinate map
 			 if overlap is false, this will reject any overlapping hits (usually from multiple regex scan runs)
 		"""
 		if filename not in self.map:
-			self.map[filename] = {}
+			self.map[filename] = collections.OrderedDict()
 
 		if filename not in self.all_coords:
-			self.all_coords[filename] = {}
+			self.all_coords[filename] = collections.OrderedDict()
 
 		if overlap == False:
 			if self.does_overlap(filename, start, stop):
@@ -56,7 +57,7 @@ class CoordinateMap:
 	def add_pattern(self, filename, start, stop, pattern):
 		""" adds this pattern to this start coord """
 		if filename not in self.coord2pattern:
-			self.coord2pattern[filename] = {}
+			self.coord2pattern[filename] = collections.OrderedDict()
 		if start not in self.coord2pattern[filename]:
 			self.coord2pattern[filename][start] = []
 		self.coord2pattern[filename][start].append(pattern)
@@ -69,7 +70,7 @@ class CoordinateMap:
 			print("add_extend", start, stop)
 
 		if filename not in self.map:
-			self.map[filename] = {}
+			self.map[filename] = collections.OrderedDict()
 		overlaps = self.max_overlap(filename, start, stop)
 		# if filename == "./data/i2b2_notes/167-02.txt":
 		# 	print(self.map)
@@ -94,9 +95,12 @@ class CoordinateMap:
 			# 	print(filename,start,stop,pattern)
 		else:
 			clear_overlaps(filename, overlaps)
-			#greater than 1 overlap, by default this is sorted because of scan order
-			o1 = overlaps[0]
-			o2 = overlaps[-1]
+			# #greater than 1 overlap, by default this is sorted because of scan order
+			# o1 = overlaps[0]
+			# o2 = overlaps[-1]
+			# modified max length choosing order
+			o1 = overlaps[-1]
+			o2 = overlaps[0]
 			self.add(filename,o2["new_start"], o1["new_stop"],pattern=pattern, overlap=True)
 			# if filename == "./data/i2b2_notes/167-02.txt":
 			# 	print("Multiple overlaps:")			
@@ -210,12 +214,12 @@ class CoordinateMap:
 
 	def add_file(self, filename):
 		""" add our fileto map, may not have any coordinates"""
-		self.map[filename] = {}
+		self.map[filename] = collections.OrderedDict()
 	
 	def get_complement(self, filename, text):
 		""" get the complementary coordinates of the input coordinate map (excludes punctuation)"""
 		
-		complement_coordinate_map = {}
+		complement_coordinate_map = collections.OrderedDict()
 
 		current_map_coordinates = []
 		for start_key in self.map[filename]:
@@ -249,4 +253,3 @@ class CoordinateMap:
 			complement_coordinate_map[start] = stop
 
 		return complement_coordinate_map
-

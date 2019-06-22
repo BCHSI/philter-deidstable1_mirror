@@ -14,6 +14,7 @@ import subprocess
 import numpy
 import random
 import string
+import time
 from textmethods import get_clean, get_tokens
 import pandas as pd
 from constants import *
@@ -30,6 +31,8 @@ class Philter:
             self.run_eval = config["run_eval"]
         if "dependent" in config:
             self.dependent = config["dependent"]
+        if "time_profile" in config:
+            self.time_profile = config["time_profile"]
         if "freq_table" in config:
             self.freq_table = config["freq_table"]
         if "initials" in config:
@@ -153,7 +156,14 @@ class Philter:
         self.pattern_indexes = {}
 
         #create a memory for token counts per note
+        #keys are filename, values are lists of time measurements (order same as regex_name_list below)
         self.token_data = {}
+
+        #create a memory for regex time profiling if time profile flag is true
+        if self.time_profile:
+            self.regex_name_list = []
+            self.current_regex_time_profile = []
+            self.overall_regex_time_profile = {}
 
 
         #create a memory for clean words
@@ -373,6 +383,10 @@ class Philter:
                 for phi_type in self.phi_type_list:
                     self.phi_type_dict[phi_type][0].add_file(filename)
                     
+                # create empty list for this file's regex profiling data
+                if self.time_profile:
+                    self.current_regex_time_profile = []
+
                 # Add total tokens to token dictionary
                 # self.token_data[filename] = 
 
@@ -400,6 +414,9 @@ class Philter:
                         raise Exception("Error, pattern type not supported: ", pat["type"])
                     self.get_exclude_include_maps(filename, pat, txt)
 
+                if self.time_profile:
+                    # Add the filename's time profile to larger list
+                    self.overall_regex_time_profile[filename] = self.current_regex_time_profile
 
                 #create intersection maps for all phi types and add them to a dictionary containing all maps
 
@@ -430,17 +447,29 @@ class Philter:
             raise Exception("Invalid pattern index: ", pattern_index, "pattern length", len(patterns))
         coord_map = self.patterns[pattern_index]["coordinate_map"]
         regex = self.patterns[pattern_index]["data"]
+        regex_name = os.path.basename(self.patterns[pattern_index]['filepath'])
+
 
         # All regexes except matchall
         if regex != re.compile('.'):
+            
+            # Add regex name to list if it isn't already in the list
+            if self.time_profile:
+                if regex_name not in self.regex_name_list:
+                    self.regex_name_list.append(regex_name)
+                # start timer
+                start_time = time.time()
             if __debug__ and self.verbose:
                 print("map_regex(): searching for regex with index "
                       + str(pattern_index))
             if __debug__ and self.verbose and pattern_index:
                 print("map_regex(): regex is " + str(regex))
+            
             matches = regex.finditer(text)
             
+            match_count = 0
             for m in matches:
+                match_count += 1
                 # print(m.group())
                 # print(self.patterns[pattern_index]['title'])
 
@@ -448,6 +477,13 @@ class Philter:
                 coord_map.add_extend(filename, m.start(), m.start()+len(m.group()))
         
             self.patterns[pattern_index]["coordinate_map"] = coord_map
+        
+        if self.time_profile:
+            elapsed_time = time.time() - start_time
+            if match_count > 0:
+                elapsed_time = (elapsed_time/match_count)
+            # Add time to current regex time profile
+            self.current_regex_time_profile.append(elapsed_time)
         
         #### MATCHALL/CATCHALL ####
         elif regex == re.compile('.'):
@@ -498,6 +534,7 @@ class Philter:
         
         coord_map = self.patterns[pattern_index]["coordinate_map"]
         regex = self.patterns[pattern_index]["data"]
+        regex_name = os.path.basename(self.patterns[pattern_index]['filepath'])
         context = self.patterns[pattern_index]["context"]
         try:
             context_filter = self.patterns[pattern_index]["context_filter"]
@@ -524,9 +561,20 @@ class Philter:
 
         punctuation_matcher = re.compile(r"[^a-zA-Z0-9*]")
         # 2. Find all patterns expressions that match regular expression
+        
+        # Keep track of time for regex time profiling
+        # Add regex name to list if it isn't already in the list
+        if self.time_profile:
+            if regex_name not in self.regex_name_list:
+                self.regex_name_list.append(regex_name)
+            # Start timer
+            start_time = time.time()
+
         matches = regex.finditer(text)
         # print(full_exclud_map)
+        match_count = 0
         for m in matches:
+            match_count += 1
             
             # initialize phi_left and phi_right
             phi_left = False
@@ -571,7 +619,15 @@ class Philter:
                 for item in tokenized_matches:
                     coord_map.add_extend(filename, item[0], item[1])
 
-    
+
+        # Stop time for time profiling
+        if self.time_profile:
+            elapsed_time = time.time() - start_time
+            if match_count > 0:
+                elapsed_time = (elapsed_time/match_count)
+            self.current_regex_time_profile.append(elapsed_time)
+
+
         self.patterns[pattern_index]["coordinate_map"] = coord_map
 
     def match_all(self, filename="", text="", pattern_index=-1):

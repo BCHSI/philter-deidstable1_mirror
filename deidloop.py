@@ -142,7 +142,9 @@ def main():
 
                 all_logs.append(os.path.join(odir, "log",
                                              "detailed_batch_summary.csv"))
-
+                all_logs.append(os.path.join(odir, "log",
+                                             "known_phi.log"))
+        
         # Create super log of batch summaries
         if all_logs != []:
             get_super_log(all_logs, os.path.join(args.superlog, "log"))
@@ -151,7 +153,6 @@ def main():
 
 if __name__ == "__main__":
     sys.exit(main())
-
 
 
 
