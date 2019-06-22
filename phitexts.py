@@ -171,6 +171,7 @@ class Phitexts:
 
         if self.coords:
             return
+        
         if namesprobefile:
             philter_config = {
                "verbose":verbose,
@@ -186,7 +187,7 @@ class Phitexts:
                "run_eval":False,
                "finpath":self.inputdir,
                "filters":filters,
-            }  
+            }
 
         self.filterer = Philter(philter_config)
         self.coords = self.filterer.map_coordinates()

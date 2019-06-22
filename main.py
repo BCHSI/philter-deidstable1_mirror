@@ -5,6 +5,9 @@ import pickle
 from philter import Philter
 import gzip
 import json
+import pyprof2calltree
+import cProfile
+from pyprof2calltree import convert, visualize
 
 
 def main():
@@ -59,6 +62,9 @@ def main():
     ap.add_argument("--prod", default=False,
                     help="When prod is true, this will run the script with output in i2b2 xml format without running the eval script",
                     type=lambda x:bool(distutils.util.strtobool(x)))
+    ap.add_argument("--time_profile", default=False,
+                    help="When time_profile is true, this will return information regarding philter process time",
+                    type=lambda x:bool(distutils.util.strtobool(x)))
     ap.add_argument("--cachepos", default=None,	
                     help="Path to a directoy to store/load the pos data for all notes. If no path is specified then memory caching will be used.",	
                     type=str)
@@ -97,6 +103,7 @@ def main():
         philter_config***REMOVED***"foutpath"***REMOVED*** = args.output
         philter_config***REMOVED***"outformat"***REMOVED*** = args.outputformat
         philter_config***REMOVED***"filters"***REMOVED*** = args.filters
+        philter_config***REMOVED***"time_profile"***REMOVED*** = args.time_profile
         philter_config***REMOVED***"cachepos"***REMOVED*** = args.cachepos
         philter_config***REMOVED***"stanford_ner_tagger"***REMOVED*** = {
             "classifier":args.stanfordner+"classifiers/english.all.3class.distsim.crf.ser.gz",
@@ -136,6 +143,31 @@ def main():
             only_digits=False,
             pre_process2= r"***REMOVED***^a-zA-Z0-9***REMOVED***",
             punctuation_matcher=re.compile(r"***REMOVED***^a-zA-Z0-9\****REMOVED***"))
+
+
+
+    if args.time_profile:
+
+        #pr.print_stats(sort='time')
+
+        # Create detailed regex time profile
+        regex_time_profile_path = 'data/regex_time_profile.csv'
+        
+        # Create header stirng to add to profiling file
+        header_string = 'filename'
+        for regex_name in filterer.regex_name_list:
+            header_string += (',' + str(regex_name))
+
+        header_string += '\n'
+
+        with open(regex_time_profile_path,'w') as f:
+            f.write(header_string)
+            for file in filterer.overall_regex_time_profile:
+                current_profile_string = file
+                for profile_data in filterer.overall_regex_time_profile***REMOVED***file***REMOVED***:
+                    current_profile_string += (',' + str(profile_data))
+                current_profile_string += '\n'
+                f.write(current_profile_string)
 
 # error analysis
         
