@@ -26,10 +26,9 @@ def get_args():
     ap.add_argument("-f", "--filters", default="./configs/philter_alpha.json",
                     help="Path to the config file, the default is ./configs/philter_alpha.json",
                     type=str)
-    ap.add_argument("-s", "--surrogate_info", default="./data/i2b2_meta/note_info_map.tsv",
-                    help="Path to the tsv file that contains the surrogate info per "
-                          + "note key, the default is "
-                          + "./data/i2b2_meta/note_info_map.tsv",
+    ap.add_argument("-s", "--surrogate_info", 
+                    help="Path to the tsv file that contains the surrogate info"
+                          + " per note key",
                     type=str)
     ap.add_argument("-d", "--deid_filename", default=True,
                     help="When this is true, the pipeline saves the de-identified output using de-identified note ids for the filenames",
@@ -95,8 +94,9 @@ def main():
         phitexts.normalize_phi()
         
         # looks-up surrogate and apply to normalized PHI
-        if __debug__: print("looking up surrogates")
-        phitexts.substitute_phi(args.surrogate_info)
+        if args.surrogate_info:
+            if __debug__: print("looking up surrogates")
+            phitexts.substitute_phi(args.surrogate_info)
 
     # transforms texts
     if __debug__: print("transforming texts")
@@ -104,6 +104,10 @@ def main():
 
     # saves output
     if __debug__: print("saving de-identified texts")
+    if args.deid_filename and not args.surrogate_info:
+        print("WARNING: no surrogate info provided, saving output with "
+              + "identified note key")
+        args.deid_filename=False
     phitexts.save(args.output, use_deid_note_key=args.deid_filename,
                   suf="", ext="txt")
 

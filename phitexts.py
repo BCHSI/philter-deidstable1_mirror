@@ -79,6 +79,16 @@ class Phitexts:
     
         return tokens
 
+    def _get_tag_start_stop(self, tag_line):
+        if "@spans" in tag_line.keys():
+            start, stop = final_value["@spans"].split('~')
+        elif "@start" and  "@end" in tag_line.keys():
+            start = tag_line["@start"]
+            stop  = tag_line["@end"]
+        else:
+            raise Exception("ERROR: cannot read tag_line: {0}".format(tag_line))
+        return int(start), int(stop)
+    
     def __read_xml_into_coordinateMap(self,inputdir):
         full_xml_map = {}
         phi_type_list = ['Provider_Name','Date','DATE','Patient_Social_Security_Number','Email','Provider_Address_or_Location','Age','Name','OTHER']
@@ -95,7 +105,6 @@ class Phitexts:
             if not filename.endswith("xml"):
                continue
             filepath = os.path.join(inputdir, filename)
-            philter_or_gold = 'PhilterUCSF' 
             xml_filenames.append(filepath)
             encoding = self._detect_encoding(filepath)
             fhandle = open(filepath, "r", encoding=encoding['encoding'])
@@ -104,49 +113,32 @@ class Phitexts:
             root = tree.getroot()
             xmlstr = ET.tostring(root, encoding='utf8', method='xml')
             xml_texts[filepath] = root.find('TEXT').text
-            xml_dict = xmltodict.parse(xmlstr)[philter_or_gold]
+            xml_dict = xmltodict.parse(xmlstr)
+            xml_dict = next(iter(xml_dict.values()))
             check_tags = root.find('TAGS')
                        
  
             if check_tags is not None:
-               tags_dict = xml_dict["TAGS"]            
+                tags_dict = xml_dict["TAGS"]            
             else:
-               tags_dict = None
+                tags_dict = None
             if tags_dict is not None:
-               for key, value in tags_dict.items():
-              # Note:  Value can be a list of like phi elements
-              #               or a dictionary of the metadata about a phi element
-                   if isinstance(value, list):
-                      for final_value in value:
-                          text_start = final_value["@spans"].split('~')[0] 
-                          text_end = final_value["@spans"].split('~')[1]
-                          philter_text = final_value["@text"]
-                          xml_phi_type = final_value["@TYPE"]
-                          xml_coordinate_map.update(self._get_xml_tokens(philter_text, xml_texts[filepath],int(text_start)))
-                          #xml_coordinate_map[int(text_start)] = int(text_end)  
-                          if xml_phi_type not in phi_type_list:
-                              phi_type_list.append(xml_phi_type)
-                          for phi_type in phi_type_list:
-                              if phi_type not in phi_type_dict:
-                                 phi_type_dict[phi_type] = [CoordinateMap()]
-                          
-                          #phi_type_dict[xml_phi_type][0].add_file(filename)
-                          phi_type_dict[xml_phi_type][0].add_extend(filepath,int(text_start),int(text_end))
-                   else:
-                       final_value = value
-                       text = final_value["@text"]
-                       xml_phi_type = final_value["@TYPE"]
-                       text_start = final_value["@spans"].split('~')[0]
-                       text_end = final_value["@spans"].split('~')[1]
-                       xml_coordinate_map.update(self._get_xml_tokens(text, xml_texts[filepath],int(text_start)))
-                       #xml_coordinate_map[int(text_start)] = int(text_end)
-                       if xml_phi_type not in phi_type_list:
-                           phi_type_list.append(xml_phi_type)
-                       for phi_type in phi_type_list:
-                           if phi_type not in phi_type_dict:
-                                 phi_type_dict[phi_type] = [CoordinateMap()]
-                       #phi_type_dict[xml_phi_type][0].add_file(filename)
-                       phi_type_dict[xml_phi_type][0].add_extend(filepath,int(text_start),int(text_end))
+                for key, value in tags_dict.items():
+                # Note:  Value can be a list of like phi elements
+                #        or a dictionary of the metadata about a phi element
+                    if not isinstance(value, list):
+                        value = [value]
+                    for final_value in value:
+                        text_start, text_end = self._get_tag_start_stop(final_value)
+                        philter_text = final_value["@text"]
+                        xml_phi_type = final_value["@TYPE"]
+                        xml_coordinate_map.update(self._get_xml_tokens(philter_text, xml_texts[filepath],int(text_start))) 
+                        if xml_phi_type not in phi_type_list:
+                            phi_type_list.append(xml_phi_type)
+                        for phi_type in phi_type_list:
+                            if phi_type not in phi_type_dict:
+                                phi_type_dict[phi_type] = [CoordinateMap()]
+                        phi_type_dict[xml_phi_type][0].add_extend(filepath,int(text_start),int(text_end))
             full_xml_map[filepath] = xml_coordinate_map
             fhandle.close()
         return full_xml_map, phi_type_dict, xml_texts, xml_filenames
@@ -429,7 +421,7 @@ class Phitexts:
                 num_parsed += 1
                 parse_info[filename]['success_norm'] += 1
                 
-                normalized_token = self.subser.date_to_string(normalized_date)
+                normalized_token = Subs.date_to_string(normalized_date)
                 note_key_ucsf = os.path.splitext(os.path.basename(filename).strip('0'))[0]
                 
                 # Successfully surrogated:
@@ -789,7 +781,8 @@ class Phitexts:
                 tree = ET.parse(filepath)
                 rt = tree.getroot()
                 xmlstr = ET.tostring(rt, encoding='utf8', method='xml')
-                xml_dict = xmltodict.parse(xmlstr)['PhilterUCSF']
+                xml_dict = xmltodict.parse(xmlstr)
+                xml_dict = next(iter(xml_dict.values()))
                 check_tags = rt.find('TAGS')
                 full_text = xml_dict["TEXT"]
                 if check_tags is not None:
@@ -806,8 +799,8 @@ class Phitexts:
                         if not isinstance(value, list):
                             value = [value]
                         for final_value in value:
-                            start = int(final_value["@spans"].split('~')[0])
-                            end = int(final_value["@spans"].split('~')[1])
+#                            print("final_value: " + )
+                            start, end = self._get_tag_start_stop(final_value)
                             text = final_value["@text"]
                             phi_type = final_value["@TYPE"]
 
