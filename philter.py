@@ -33,6 +33,8 @@ class Philter:
             self.dependent = config***REMOVED***"dependent"***REMOVED***
         if "time_profile" in config:
             self.time_profile = config***REMOVED***"time_profile"***REMOVED***
+        else :
+            self.time_profile = False
         if "freq_table" in config:
             self.freq_table = config***REMOVED***"freq_table"***REMOVED***
         if "initials" in config:
