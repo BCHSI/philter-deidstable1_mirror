@@ -285,11 +285,11 @@ class Philter:
                 self.patterns[i]["data"] = self.init_set(pattern["filepath"]) 
             if pattern["type"] == "dynamic_set":
                 if pattern["filepath"].split(".")[-1] not in set_filetypes:
-                    raise Exception("Invalid filteype", pattern["filepath"], "must be of", set_filetypes)
+                    raise Exception("Invalid filetype", pattern["filepath"], "must be of", set_filetypes)
                 self.patterns[i]["data"] = self.init_set(pattern["filepath"])  
             if pattern["type"] == "regex":
                 if pattern["filepath"].split(".")[-1] not in regex_filetypes:
-                    raise Exception("Invalid filteype", pattern["filepath"], "must be of", regex_filetypes)
+                    raise Exception("Invalid filetype", pattern["filepath"], "must be of", regex_filetypes)
                 self.patterns[i]["data"] = self.precompile(pattern["filepath"])
             elif pattern["type"] == "regex_context":
                 if pattern["filepath"].split(".")[-1] not in regex_filetypes:
@@ -328,7 +328,7 @@ class Philter:
             map_set = json.loads(open(filepath, "r").read())
         elif filepath.endswith(".txt"):
             try:
-                probes_file = pd.read_csv(filepath, sep='\t', index_col=False, usecols=['clean_value','phi_type','note_key'],dtype=str)
+                probes_file = pd.read_csv(filepath, sep='\t', index_col=False, usecols=['value','phi_type','note_key'], dtype=str, encoding='latin-1')
                 names_probes = probes_file.loc[(probes_file['phi_type'] == 'lname') | (probes_file['phi_type'] == 'fname')]
             
             except pd.errors.EmptyDataError as err:
@@ -340,7 +340,7 @@ class Philter:
                        + " is invalid {0}".format(err))
                 return {}, {}
             
-            map_set = dict(zip(names_probes['clean_value'], names_probes['note_key'])) 
+            map_set = dict(zip(names_probes['value'], names_probes['note_key'])) 
         else:
             raise Exception("Invalid filteype",filepath)
         return map_set
@@ -666,7 +666,6 @@ class Philter:
                    file_note_key = file_note_key.replace('_utf8','')
                    note_key = file_note_key
                    for key in self.patterns[pattern_index]["data"]:
-                       
                        if self.patterns[pattern_index]["data"][key] == note_key:            
                           key_clean = re.sub(r"[^a-zA-Z0-9]+", "", str(key).lower().strip()) 
                           map_set[key_clean] = self.patterns[pattern_index]["data"][key]
