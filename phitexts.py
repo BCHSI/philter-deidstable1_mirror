@@ -11,14 +11,10 @@ from subs import Subs
 import string
 import pandas
 import numpy
-#from knownphi import Knownphi
 from constants import *
 from textmethods import get_clean, get_tokens
 import time
 
-import memory_profiler
-#import sys
-#sys.stdout = LogFile('memory_profile_log')
 
 class Phitexts:
     """ container for texts, phi, attributes """
@@ -200,16 +196,6 @@ class Phitexts:
         if self.types:
             return
         self.types = self.filterer.phi_type_dict
-
-    '''    
-    def detect_known_phi(self, knownphifile = "./data/knownphi_data.txt"):
-        assert self.coords, "No PHI coordinates defined"
-        assert self.texts, "No texts defined"
-        assert self.types, "No PHI types defined"
-
-        self.knownphi = Knownphi(knownphifile, self.coords, self.texts, self.types,self.pos)
-        self.coords, self.types, self.known_phi = self.knownphi.update_coordinatemap()
-    '''
 
     def normalize_phi(self):
         assert self.texts, "No texts defined"
@@ -415,12 +401,12 @@ class Phitexts:
         phi_count_file = os.path.join(log_dir, 'phi_count.log')
         phi_marked_file = os.path.join(log_dir, 'phi_marked.json')
         batch_summary_file = os.path.join(log_dir, 'batch_summary.log')
-        #known_phi_file = os.path.join(log_dir,'known_phi.log')
+        
         #Path to csv summary of all files
-
         csv_summary_filepath = os.path.join(log_dir,
                                             'detailed_batch_summary.csv')
-        dynamic_blacklist_filepath = os.path.join(log_dir,'dynamic_blacklist_summary.csv')
+        dynamic_blacklist_filepath = os.path.join(log_dir,
+                                                  'dynamic_blacklist_summary.csv')
         eval_table = {}
         failed_date = {}
         phi_table = {}
@@ -529,16 +515,7 @@ class Phitexts:
             json.dump(eval_table, f)
         with open(phi_marked_file, 'w') as f:
             json.dump(phi_table, f)
-        '''
-        if kp: 
-           with open(known_phi_file,'w') as f:
-                for filename in self.known_phi:
-                    known_phi_dict = self.known_phi***REMOVED***filename***REMOVED***
-                    for i in known_phi_dict:
-                        start = i
-                        stop, knownphi, context, pos = known_phi_dict***REMOVED***i***REMOVED***
-                        f.write(filename+"\t"+str(start) +"\t" + str(stop) + "\t" + knownphi + "\t" + context + "\t" + pos + "\n") 
-        '''
+        
         # If the summary csv file doesn't exist yet, create it and add file headers
         # Csv summary is one directory above all input directories
         if not os.path.isfile(csv_summary_filepath):

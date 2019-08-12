@@ -24,13 +24,17 @@ def get_args():
 
     ap.add_argument("--imofile",
                     help="Path to the file that contains the list of input"
-                    + " folders, metafiles, output folders",
+                    + " folders, metafiles, output folders, ***REMOVED***knownphifiles***REMOVED***",
                     type=str)
     ap.add_argument("-t", "--threads", default=1,
                     help="Number of parallel threads, the default is 1",
                     type=int)
     ap.add_argument("--philter",
                     help="Path to Philter program files like deidpipe.py",
+                    type=str)
+    ap.add_argument("-f", "--filters", default="configs/philter_zeta.json",
+                    help="Path to the config file,"
+                    + " the default is configs/philter_zeta.json",
                     type=str)
     ap.add_argument("--superlog", 
                     help="Path to the folder for the super log."
@@ -42,7 +46,7 @@ def get_args():
     return ap.parse_args()
 
 
-def runDeidChunck(unit, q, philterFolder):
+def runDeidChunck(unit, q, philterFolder, configfile):
     """
     Function to instruct a thread to deid a directory.
     INPUTS:
@@ -54,10 +58,13 @@ def runDeidChunck(unit, q, philterFolder):
         t0 = time.time()
 
         # Tuple to determine path
-        if len(q.get()) == 4:
-           srcFolder, srcMeta, dstFolder, kpfile = q.get()
+        imok = q.get()
+        srcFolder, srcMeta, dstFolder = imok***REMOVED***:3***REMOVED***
+        if len(imok) >= 4:
+           kpfile = imok***REMOVED***3***REMOVED***
         else:
-           srcFolder, srcMeta, dstFolder = q.get()
+            kpfile = None
+        
         # Build output directory
         os.makedirs(dstFolder, exist_ok=True)
 
@@ -67,17 +74,13 @@ def runDeidChunck(unit, q, philterFolder):
         print(str(unit) + " cwd: " + philterFolder)
 
         # Run Deid (would be better to interface directly)
-        try:
-           kpfile
-        except NameError:
-           kpfile = None
         if kpfile is None:
            call(***REMOVED***"python3", "-O", "deidpipe.py", 
                  "-i", srcFolder, 
                  "-o", dstFolder, 
                  "-s", srcMeta,
                  "-d", "True", 
-                 "-f", "configs/philter_delta_holidays_added_dynamic_blklist.json",
+                 "-f", configfile,
                  "-l", "True"***REMOVED***,
                  cwd=philterFolder)
         else:
@@ -86,7 +89,7 @@ def runDeidChunck(unit, q, philterFolder):
                  "-o", dstFolder,
                  "-s", srcMeta,
                  "-d", "True",
-                 "-f", "configs/philter_delta_holidays_added_dynamic_blklist.json",
+                 "-f", configfile,
                  "-k", kpfile,
                  "-l", "True"***REMOVED***,
                  cwd=philterFolder)
@@ -108,7 +111,7 @@ def main():
     for unit in range(args.threads):
         worker = Thread(target=runDeidChunck,
                         args=(unit, enclosure_queue,
-                              os.path.dirname(args.philter),))
+                              os.path.dirname(args.philter), args.filters,))
         worker.setDaemon(True)
         worker.start()
 
@@ -135,15 +138,12 @@ def main():
         with open(args.imofile, 'r') as imo:
             for line in imo:
                 parts = line.split()
-                if len(parts) > 3:
-                   idir, mfile, odir, kpfile = line.split()
-                else:
-                   idir, mfile, odir = line.split()
+                odir = parts***REMOVED***2***REMOVED***
 
                 all_logs.append(os.path.join(odir, "log",
                                              "detailed_batch_summary.csv"))
                 all_logs.append(os.path.join(odir, "log",
-                                             "known_phi.log"))
+                                             "dynamic_blacklist_summary.log"))
         
         # Create super log of batch summaries
         if all_logs != ***REMOVED******REMOVED***:
