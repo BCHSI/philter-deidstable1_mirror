@@ -75,24 +75,17 @@ def main():
     if args.xml:
        if __debug__: print("Generating coordinate map from xml")
        phitexts.detect_xml_phi()       
+    elif args.dynamic_blacklist:
+        phitexts.detect_phi(args.filters, args.dynamic_blacklist,
+                            verbose=args.verbose)
     else:
-        if args.dynamic_blacklist:
-           phitexts.detect_phi(args.filters, args.dynamic_blacklist, verbose=args.verbose)
-        else:
-           phitexts.detect_phi(args.filters, verbose=args.verbose)
+        phitexts.detect_phi(args.filters, verbose=args.verbose)
 
     if phitexts.coords:
         # detects PHI types
         if __debug__: print("detecting PHI types")
         if not args.xml:
            phitexts.detect_phi_types()
-
-        '''
-        # detect known phi
-        if args.knownphi:
-           if __debug__: print("Identifying known phi")
-           phitexts.detect_known_phi(args.knownphi)
-        '''
 
         # normalizes PHI
         if __debug__: print("normalizing PHI")
@@ -118,7 +111,7 @@ def main():
 
     # print and save log 
     if args.log:
-        phitexts.print_log(args.output,args.dynamic_blacklist,args.xml)
+        phitexts.print_log(args.output, args.dynamic_blacklist, args.xml)
     if args.eval:
         phitexts.eval(args.anno, args.output)
 

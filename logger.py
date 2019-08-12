@@ -33,9 +33,9 @@ def get_super_log(all_logs, super_log_dir):
     #Path to txt summary of all files combined
     text_summary_filepath = os.path.join(super_log_dir,
                                          'deidpipe_superlog_summary.txt')
-    #Path to knownphi superlog
-    knownphi_filepath = os.path.join(super_log_dir,
-                                         'knownphi_superlog.log')
+    #Path to dynamic blacklist superlog
+    dynamic_blacklist_filepath = os.path.join(super_log_dir,
+                                              'dynamic_blacklist_superlog.log')
     os.makedirs(super_log_dir, exist_ok=True)
 
     # Create aggregated summary file
@@ -56,16 +56,19 @@ def get_super_log(all_logs, super_log_dir):
         if not os.path.exists(log_file):
             print("log file missing: " + log_file)
             continue
+        
+        if 'dynamic_blacklist_summary.log' in log_file:
+            fpath = dynamic_blacklist_filepath
+        elif 'detailed_batch_summary.log' in log_file:
+            fpath = csv_summary_filepath
+        else:
+            raise Exception("Unknown logfile: ", log_file)
+
         with open(log_file,'r') as f:
-            with open(csv_summary_filepath,'a') as f1:
-                with open(knownphi_filepath, 'a') as f2:
-                    next(f) # skip header line
-                    if 'known_phi.log' in log_file:
-                        for line in f:
-                            f2.write(line)
-                    else:
-                        for line in f:
-                            f1.write(line)
+            next(f) # skip header line
+            with open(fpath,'a') as f1:
+                for line in f:
+                    f1.write(line)
 
     summary = pandas.read_csv(csv_summary_filepath)
 
