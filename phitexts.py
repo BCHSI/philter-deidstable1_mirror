@@ -629,7 +629,8 @@ class Phitexts:
         
         if kp:
            phi_type_per_token = self.get_phi_type_per_token()
-           with open(dynamic_blacklist_filepath,'w+') as f:
+           with open(dynamic_blacklist_filepath, 'w+',
+                     errors='surrogateescape') as f:
                for filename in phi_type_per_token: 
                    for start in phi_type_per_token[filename]:
                        for end in phi_type_per_token[filename][start]:
@@ -642,7 +643,10 @@ class Phitexts:
                                   flank_end = len(self.texts[filename])
                                context = self.texts[filename][flank_start:flank_end]
                                word = self.texts[filename][start:end]
-                               f.write(filename + "\t" + str(start) + "\t" + str(end) + "\t" + word + "\t" + context.replace('\n',' ') + "\t" + ','.join(phi_type_per_token[filename][start][end])+"\n")
+                               f.write(filename + "\t" + str(start)
+                                       + "\t" + str(end) + "\t" + word
+                                       + "\t" + context.replace('\n',' ').replace('\t',' ')
+                                       + "\t" + ','.join(phi_type_per_token[filename][start][end])+"\n")
 
     
 

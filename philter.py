@@ -848,7 +848,6 @@ class Philter:
                 yield root,filename
 
     def get_exclude_include_maps(self, filename, pattern, txt):
-        texts = {}
         coord_map = pattern["coordinate_map"]
         exclude = pattern["exclude"]
         try:
@@ -859,9 +858,6 @@ class Philter:
             phi_type = pattern["phi_type"]
         else:
             phi_type = "OTHER"
-        fhandle = open(filename, "r", 
-                               errors='surrogateescape')
-        texts[filename] = fhandle.read()
         for start,stop in coord_map.filecoords(filename):
             if pattern['type'] != 'regex_context' and pattern['type'] != 'dynamic_set':
                 if exclude or exclude == "True":

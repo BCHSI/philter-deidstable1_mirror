@@ -35,7 +35,7 @@ def get_super_log(all_logs, super_log_dir):
                                          'deidpipe_superlog_summary.txt')
     #Path to dynamic blacklist superlog
     dynamic_blacklist_filepath = os.path.join(super_log_dir,
-                                              'dynamic_blacklist_superlog.log')
+                                              'dynamic_blacklist_superlog.csv')
     os.makedirs(super_log_dir, exist_ok=True)
 
     # Create aggregated summary file
@@ -45,10 +45,10 @@ def get_super_log(all_logs, super_log_dir):
             f.write(file_header)
     
 
-    # Create aggregated knownphi file
-    if not os.path.isfile(knownphi_filepath):
-        with open(knownphi_filepath,'w') as f:
-            file_header = 'filename' + "\t" + 'start' + "\t" + 'stop' + "\t" + 'knownphi_token' + "\t" + 'context' + "\t" + 'pos' + "\n"
+    # Create aggregated dynamic blacklist file
+    if not os.path.isfile(dynamic_blacklist_filepath):
+        with open(dynamic_blacklist_filepath,'w') as f:
+            file_header = 'filename' + "\t" + 'start' + "\t" + 'stop' + "\t" + 'knownphi_token' + "\t" + 'context' + "\t" + 'phi_type' + "\n"
             f.write(file_header)
 
     # Append contents of all summaries to this file
@@ -57,9 +57,9 @@ def get_super_log(all_logs, super_log_dir):
             print("log file missing: " + log_file)
             continue
         
-        if 'dynamic_blacklist_summary.log' in log_file:
+        if 'dynamic_blacklist_summary.csv' in log_file:
             fpath = dynamic_blacklist_filepath
-        elif 'detailed_batch_summary.log' in log_file:
+        elif 'detailed_batch_summary.csv' in log_file:
             fpath = csv_summary_filepath
         else:
             raise Exception("Unknown logfile: ", log_file)
