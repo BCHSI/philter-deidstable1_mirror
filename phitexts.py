@@ -81,7 +81,7 @@ class Phitexts:
 
     def _get_tag_start_stop(self, tag_line):
         if "@spans" in tag_line.keys():
-            start, stop = final_value***REMOVED***"@spans"***REMOVED***.split('~')
+            start, stop = tag_line***REMOVED***"@spans"***REMOVED***.split('~')
         elif "@start" and  "@end" in tag_line.keys():
             start = tag_line***REMOVED***"@start"***REMOVED***
             stop  = tag_line***REMOVED***"@end"***REMOVED***
