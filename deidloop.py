@@ -14,7 +14,7 @@ from shutil import rmtree
 import pandas
 import numpy
 import os
-from logger import get_super_log
+from logger import get_super_log, create_log_files_list
 
 def get_args():
     # gets input/output/filename
@@ -134,16 +134,7 @@ def main():
     if args.superlog:
         # Once all the directories have been processed,
         # create a superlog that combines all logs in each output directory
-        all_logs = []
-        with open(args.imofile, 'r') as imo:
-            for line in imo:
-                parts = line.split()
-                odir = parts[2]
-
-                all_logs.append(os.path.join(odir, "log",
-                                             "detailed_batch_summary.csv"))
-                all_logs.append(os.path.join(odir, "log",
-                                             "dynamic_blacklist_summary.log"))
+        all_logs = create_log_files_list(args.imofile)
         
         # Create super log of batch summaries
         if all_logs != []:
