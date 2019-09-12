@@ -40,15 +40,24 @@ def get_super_log(all_logs, super_log_dir):
 
     # Create aggregated summary file
     if not os.path.isfile(csv_summary_filepath):
-        with open(csv_summary_filepath,'w') as f:
-            file_header = 'filename'+','+'file_size'+','+'total_tokens'+','+'phi_tokens'+','+'successfully_normalized'+','+'failed_normalized'+','+'successfully_surrogated'+','+'failed_surrogated'+'\n'
+        with open(csv_summary_filepath, 'w',
+                  errors='surrogateescape') as f:
+            file_header = ('filename' + ',' + 'file_size' + ','
+                           + 'total_tokens' + ',' + 'phi_tokens' + ','
+                           + 'successfully_normalized' + ','
+                           + 'failed_normalized' + ','
+                           + 'successfully_surrogated' + ','
+                           + 'failed_surrogated' + '\n')
             f.write(file_header)
     
 
     # Create aggregated dynamic blacklist file
     if not os.path.isfile(dynamic_blacklist_filepath):
-        with open(dynamic_blacklist_filepath,'w') as f:
-            file_header = 'filename' + "\t" + 'start' + "\t" + 'stop' + "\t" + 'knownphi_token' + "\t" + 'context' + "\t" + 'phi_type' + "\n"
+        with open(dynamic_blacklist_filepath, 'w',
+                  errors='surrogateescape') as f:
+            file_header = ('filename' + "\t" + 'start' + "\t" + 'stop' + "\t"
+                           + 'knownphi_token' + "\t" + 'context' + "\t"
+                           + 'phi_type' + "\n")
             f.write(file_header)
 
     # Append contents of all summaries to this file
@@ -64,9 +73,9 @@ def get_super_log(all_logs, super_log_dir):
         else:
             raise Exception("Unknown logfile: ", log_file)
 
-        with open(log_file,'r') as f:
-            next(f) # skip header line
-            with open(fpath,'a') as f1:
+        with open(log_file, 'r', errors='surrogateescape') as f:
+            next(f, None) # skip header line
+            with open(fpath, 'a', errors='surrogateescape') as f1:
                 for line in f:
                     f1.write(line)
 
@@ -115,6 +124,20 @@ def get_super_log(all_logs, super_log_dir):
         f.write("DATES FAILED TO SURROGATE: "+str(failed_surrogation)+'\n')  
 
 
+def create_log_files_list(imofile):
+    all_logs = ***REMOVED******REMOVED***
+    with open(imofile, 'r') as imo:
+        for line in imo:
+            parts = line.split()
+            odir = parts***REMOVED***2***REMOVED***
+            
+            all_logs.append(os.path.join(odir, "log",
+                                         "detailed_batch_summary.csv"))
+            all_logs.append(os.path.join(odir, "log",
+                                         "dynamic_blacklist_summary.csv"))
+            
+    return all_logs
+        
 def main():
         
     args = get_args()
@@ -122,12 +145,7 @@ def main():
     if args.superlog:
         # Once all the directories have been processed,
         # create a superlog that combines all logs in each output directory
-        all_logs = ***REMOVED******REMOVED***
-        with open(args.imofile, 'r') as imo:
-            for line in imo:
-                idir, mfile, odir = line.split()
-                all_logs.append(os.path.join(odir, "log",
-                                             "detailed_batch_summary.csv"))
+        all_logs  = create_log_files_list(args.imofile)
 
         # Create super log of batch summaries
         if all_logs != ***REMOVED******REMOVED***:
