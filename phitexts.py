@@ -642,7 +642,7 @@ class Phitexts:
                                if len(self.texts***REMOVED***filename***REMOVED***)<flank_end:
                                   flank_end = len(self.texts***REMOVED***filename***REMOVED***)
                                context = self.texts***REMOVED***filename***REMOVED******REMOVED***flank_start:flank_end***REMOVED***
-                               word = self.texts***REMOVED***filename***REMOVED******REMOVED***start:end***REMOVED***
+                               word = self.texts***REMOVED***filename***REMOVED******REMOVED***start:end+1***REMOVED***
                                f.write(filename + "\t" + str(start)
                                        + "\t" + str(end) + "\t" + word
                                        + "\t" + context.replace('\n',' ').replace('\t',' ')
