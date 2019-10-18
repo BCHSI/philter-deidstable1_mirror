@@ -665,6 +665,7 @@ class Philter:
                    file_note_key = file_note_key.replace('.xml','')
                    file_note_key = file_note_key.replace('_utf8','')
                    note_key = file_note_key
+
                    for key in self.patterns[pattern_index]["data"]:
                        if self.patterns[pattern_index]["data"][key] == note_key:            
                           key_clean = re.sub(r"[^a-zA-Z0-9]+", "", str(key).lower().strip()) 
