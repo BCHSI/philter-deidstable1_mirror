@@ -659,17 +659,20 @@ class Philter:
            map_set = {}
            pos_set = set(self.patterns[pattern_index]["pos"])
            if (filename.find('.txt') != -1) or (filename.find('.xml') != -1):
-                   file_note_key = os.path.basename(filename).replace('\n','')
-                   file_note_key = file_note_key.replace('.txt','')
-                   file_note_key = file_note_key.lstrip('0')
-                   file_note_key = file_note_key.replace('.xml','')
-                   file_note_key = file_note_key.replace('_utf8','')
-                   note_key = file_note_key
-                   for key in self.patterns[pattern_index]["data"]:
-                       if self.patterns[pattern_index]["data"][key] == note_key:            
-                          key_clean = re.sub(r"[^a-zA-Z0-9]+", "", str(key).lower().strip()) 
-                          map_set[key_clean] = self.patterns[pattern_index]["data"][key]
-                          #map_set[key_clean] = 1
+               file_note_key = os.path.basename(filename).replace('\n','')
+               file_note_key = file_note_key.replace('.txt','')
+               file_note_key = file_note_key.lstrip('0')
+               file_note_key = file_note_key.replace('.xml','')
+               file_note_key = file_note_key.replace('_utf8','')
+               note_key = file_note_key
+               for probe in self.patterns[pattern_index]["data"]:
+                   if self.patterns[pattern_index]["data"][probe] == note_key:
+                       probe_clean = get_clean(probe)
+                       for pc in probe_clean:
+                           prb = re.sub(r"[^a-zA-Z0-9]+", "",
+                                        str(pc).lower().strip()) 
+                           map_set[prb] = self.patterns[pattern_index]["data"][probe]
+                           #map_set[prb] = 1
         else:
             map_set = self.patterns[pattern_index]["data"]
         coord_map = self.patterns[pattern_index]["coordinate_map"]
