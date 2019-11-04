@@ -340,7 +340,17 @@ class Philter:
                        + " is invalid {0}".format(err))
                 return {}, {}
             
-            map_set = dict(zip(names_probes['value'], names_probes['note_key'])) 
+            # Make change here: need to make ditionary of lists
+            map_set = {}
+            for index, row in names_probes.iterrows():
+                value = row['value']
+                note_key = row['note_key']
+                if value in map_set:
+                    map_set[value].append(note_key)
+                else:
+                    map_set[value] = [note_key]
+
+            #map_set = dict(zip(names_probes['value'], names_probes['note_key'])) 
         else:
             raise Exception("Invalid filteype",filepath)
         return map_set
@@ -667,9 +677,12 @@ class Philter:
                    note_key = file_note_key
 
                    for key in self.patterns[pattern_index]["data"]:
-                       if self.patterns[pattern_index]["data"][key] == note_key:            
+                       if note_key in self.patterns[pattern_index]["data"][key]: 
+                          print(self.patterns[pattern_index]["data"][key]) 
+                          print('key found')       
                           key_clean = re.sub(r"[^a-zA-Z0-9]+", "", str(key).lower().strip()) 
                           map_set[key_clean] = self.patterns[pattern_index]["data"][key]
+                          #print(filename)
                           #map_set[key_clean] = 1
         else:
             map_set = self.patterns[pattern_index]["data"]

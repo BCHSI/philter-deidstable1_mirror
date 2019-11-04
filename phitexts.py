@@ -635,6 +635,8 @@ class Phitexts:
                    for start in phi_type_per_token[filename]:
                        for end in phi_type_per_token[filename][start]:
                            if len(phi_type_per_token[filename][start][end]) == 1 and 'PROBE' in phi_type_per_token[filename][start][end]:
+                               #print('Knownphi found: ',filename)
+                               #print('\n')
                                flank_start = int(start) - 10
                                flank_end = int(end) + 10
                                if (flank_start < 0):
