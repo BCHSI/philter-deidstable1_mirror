@@ -635,6 +635,8 @@ class Phitexts:
                    for start in phi_type_per_token***REMOVED***filename***REMOVED***:
                        for end in phi_type_per_token***REMOVED***filename***REMOVED******REMOVED***start***REMOVED***:
                            if len(phi_type_per_token***REMOVED***filename***REMOVED******REMOVED***start***REMOVED******REMOVED***end***REMOVED***) == 1 and 'PROBE' in phi_type_per_token***REMOVED***filename***REMOVED******REMOVED***start***REMOVED******REMOVED***end***REMOVED***:
+                               #print('Knownphi found: ',filename)
+                               #print('\n')
                                flank_start = int(start) - 10
                                flank_end = int(end) + 10
                                if (flank_start < 0):
@@ -642,7 +644,7 @@ class Phitexts:
                                if len(self.texts***REMOVED***filename***REMOVED***)<flank_end:
                                   flank_end = len(self.texts***REMOVED***filename***REMOVED***)
                                context = self.texts***REMOVED***filename***REMOVED******REMOVED***flank_start:flank_end***REMOVED***
-                               word = self.texts***REMOVED***filename***REMOVED******REMOVED***start:end***REMOVED***
+                               word = self.texts***REMOVED***filename***REMOVED******REMOVED***start:end+1***REMOVED***
                                f.write(filename + "\t" + str(start)
                                        + "\t" + str(end) + "\t" + word
                                        + "\t" + context.replace('\n',' ').replace('\t',' ')

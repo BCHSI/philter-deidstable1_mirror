@@ -340,7 +340,17 @@ class Philter:
                        + " is invalid {0}".format(err))
                 return {}, {}
             
-            map_set = dict(zip(names_probes***REMOVED***'value'***REMOVED***, names_probes***REMOVED***'note_key'***REMOVED***)) 
+            # Make change here: need to make ditionary of lists
+            map_set = {}
+            for index, row in names_probes.iterrows():
+                value = row***REMOVED***'value'***REMOVED***
+                note_key = row***REMOVED***'note_key'***REMOVED***
+                if value in map_set:
+                    map_set***REMOVED***value***REMOVED***.append(note_key)
+                else:
+                    map_set***REMOVED***value***REMOVED*** = ***REMOVED***note_key***REMOVED***
+
+            #map_set = dict(zip(names_probes***REMOVED***'value'***REMOVED***, names_probes***REMOVED***'note_key'***REMOVED***)) 
         else:
             raise Exception("Invalid filteype",filepath)
         return map_set
@@ -665,10 +675,14 @@ class Philter:
                    file_note_key = file_note_key.replace('.xml','')
                    file_note_key = file_note_key.replace('_utf8','')
                    note_key = file_note_key
+                   # Issue: dictionary of dynamic blacklist words also not in list format (only showing single note key per word)
                    for key in self.patterns***REMOVED***pattern_index***REMOVED******REMOVED***"data"***REMOVED***:
-                       if self.patterns***REMOVED***pattern_index***REMOVED******REMOVED***"data"***REMOVED******REMOVED***key***REMOVED*** == note_key:            
+                       if note_key in self.patterns***REMOVED***pattern_index***REMOVED******REMOVED***"data"***REMOVED******REMOVED***key***REMOVED***: 
+                          print(self.patterns***REMOVED***pattern_index***REMOVED******REMOVED***"data"***REMOVED******REMOVED***key***REMOVED***) 
+                          print('key found')       
                           key_clean = re.sub(r"***REMOVED***^a-zA-Z0-9***REMOVED***+", "", str(key).lower().strip()) 
                           map_set***REMOVED***key_clean***REMOVED*** = self.patterns***REMOVED***pattern_index***REMOVED******REMOVED***"data"***REMOVED******REMOVED***key***REMOVED***
+                          #print(filename)
                           #map_set***REMOVED***key_clean***REMOVED*** = 1
         else:
             map_set = self.patterns***REMOVED***pattern_index***REMOVED******REMOVED***"data"***REMOVED***
