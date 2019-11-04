@@ -677,9 +677,7 @@ class Philter:
                    note_key = file_note_key
 
                    for key in self.patterns[pattern_index]["data"]:
-                       if note_key in self.patterns[pattern_index]["data"][key]: 
-                          print(self.patterns[pattern_index]["data"][key]) 
-                          print('key found')       
+                       if note_key in self.patterns[pattern_index]["data"][key]:      
                           key_clean = re.sub(r"[^a-zA-Z0-9]+", "", str(key).lower().strip()) 
                           map_set[key_clean] = self.patterns[pattern_index]["data"][key]
                           #print(filename)
