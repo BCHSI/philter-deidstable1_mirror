@@ -56,19 +56,19 @@ def get_super_log(all_logs, super_log_dir):
         if not os.path.exists(log_file):
             print("log file missing: " + log_file)
             continue
-        
-        if 'dynamic_blacklist_summary.csv' in log_file:
-            fpath = dynamic_blacklist_filepath
-        elif 'detailed_batch_summary.csv' in log_file:
-            fpath = csv_summary_filepath
-        else:
-            raise Exception("Unknown logfile: ", log_file)
-
         with open(log_file,'r') as f:
-            next(f) # skip header line
-            with open(fpath,'a') as f1:
-                for line in f:
-                    f1.write(line)
+            with open(csv_summary_filepath,'a') as f1:
+                with open(dynamic_blacklist_filepath, 'a') as f2:
+                    # Check if current log file is empty
+                    if not os.stat(log_file).st_size == 0:
+                        next(f) # skip header line
+                        if 'dynamic_blacklist_summary.csv' in log_file:
+                            for line in f:
+                                f2.write(line)
+                        else:
+                            for line in f:
+                                f1.write(line)
+                                
 
     summary = pandas.read_csv(csv_summary_filepath)
 

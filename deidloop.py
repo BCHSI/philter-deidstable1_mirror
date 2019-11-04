@@ -68,10 +68,10 @@ def runDeidChunck(unit, q, philterFolder, configfile):
         # Build output directory
         os.makedirs(dstFolder, exist_ok=True)
 
-        print(str(unit) + " src: " + srcFolder)
-        print(str(unit) + " met: " + srcMeta)
-        print(str(unit) + " dst: " + dstFolder)
-        print(str(unit) + " cwd: " + philterFolder)
+        #print(str(unit) + " src: " + srcFolder)
+        #print(str(unit) + " met: " + srcMeta)
+        #print(str(unit) + " dst: " + dstFolder)
+        #print(str(unit) + " cwd: " + philterFolder)
 
         # Run Deid (would be better to interface directly)
         if kpfile is None:
@@ -96,7 +96,7 @@ def runDeidChunck(unit, q, philterFolder, configfile):
 
         # Print time elapsed for batch
         t = time.time() - t0
-        print(str(unit) + " " + dstFolder + ": " + str(t) + " seconds")
+        #print(str(unit) + " " + dstFolder + ": " + str(t) + " seconds")
 
         q.task_done()
 
@@ -143,7 +143,7 @@ def main():
                 all_logs.append(os.path.join(odir, "log",
                                              "detailed_batch_summary.csv"))
                 all_logs.append(os.path.join(odir, "log",
-                                             "dynamic_blacklist_summary.log"))
+                                             "dynamic_blacklist_summary.csv"))
         
         # Create super log of batch summaries
         if all_logs != []:
