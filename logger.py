@@ -65,7 +65,6 @@ def get_super_log(all_logs, super_log_dir):
         if not os.path.exists(log_file):
             print("log file missing: " + log_file)
             continue
-
         with open(log_file,'r') as f:
             with open(csv_summary_filepath,'a') as f1:
                 with open(dynamic_blacklist_filepath, 'a') as f2:
@@ -78,7 +77,6 @@ def get_super_log(all_logs, super_log_dir):
                         else:
                             for line in f:
                                 f1.write(line)
-
 
     summary = pandas.read_csv(csv_summary_filepath)
 
