@@ -676,6 +676,7 @@ class Philter:
                    file_note_key = file_note_key.replace('_utf8','')
                    note_key = file_note_key
 
+                   # Issue: dictionary of dynamic blacklist words also not in list format (only showing single note key per word)
                    for key in self.patterns[pattern_index]["data"]:
                        if note_key in self.patterns[pattern_index]["data"][key]:      
                           key_clean = re.sub(r"[^a-zA-Z0-9]+", "", str(key).lower().strip()) 
