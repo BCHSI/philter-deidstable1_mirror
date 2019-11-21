@@ -134,20 +134,7 @@ def main():
     if args.superlog:
         # Once all the directories have been processed,
         # create a superlog that combines all logs in each output directory
-        all_logs = []
-        with open(args.imofile, 'r') as imo:
-            for line in imo:
-                parts = line.split()
-                if len(parts) > 3:
-                   idir, mfile, odir, kpfile = line.split()
-                else:
-                   idir, mfile, odir = line.split()
-
-                all_logs.append(os.path.join(odir, "log",
-                                             "detailed_batch_summary.csv"))
-                all_logs.append(os.path.join(odir, "log",
-                                             "dynamic_blacklist_summary.csv"))
-
+        all_logs = create_log_files_list(args.imofile)
         
         # Create super log of batch summaries
         if all_logs != []:

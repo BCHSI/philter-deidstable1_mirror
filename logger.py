@@ -124,16 +124,19 @@ def get_super_log(all_logs, super_log_dir):
 
 
 def create_log_files_list(imofile):
-    all_logs = []
-    with open(imofile, 'r') as imo:
-        for line in imo:
-            parts = line.split()
-            odir = parts[2]
-            
-            all_logs.append(os.path.join(odir, "log",
-                                         "detailed_batch_summary.csv"))
-            all_logs.append(os.path.join(odir, "log",
-                                         "dynamic_blacklist_summary.csv"))
+        all_logs = []
+        with open(args.imofile, 'r') as imo:
+            for line in imo:
+                parts = line.split()
+                if len(parts) > 3:
+                   idir, mfile, odir, kpfile = line.split()
+                else:
+                   idir, mfile, odir = line.split()
+
+                all_logs.append(os.path.join(odir, "log",
+                                             "detailed_batch_summary.csv"))
+                all_logs.append(os.path.join(odir, "log",
+                                             "dynamic_blacklist_summary.csv"))
             
     return all_logs
         
