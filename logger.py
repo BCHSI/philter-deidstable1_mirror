@@ -21,7 +21,6 @@ def get_args():
                     + " super log in a subfolder log of the set folder"
                     + " combining logs of each output directory",
                     type=str)
-    
     return ap.parse_args()
 
 
@@ -134,9 +133,9 @@ def create_log_files_list(imofile):
                 idir, mfile, odir = line.split()
 
             all_logs.append(os.path.join(odir, "log",
-                                             "detailed_batch_summary.csv"))
+                                         "detailed_batch_summary.csv"))
             all_logs.append(os.path.join(odir, "log",
-                                             "dynamic_blacklist_summary.csv"))
+                                         "dynamic_blacklist_summary.csv"))
     
     return all_logs
         
