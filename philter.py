@@ -200,11 +200,6 @@ class Philter:
             self.pos_tags[filename] = nltk.pos_tag(cleaned)
             return self.pos_tags[filename]
         return self.pos_tags[filename]
-    #def get_pos_original(self, filename, cleaned):
-    #    if filename not in self.pos_tags:
-    #        self.pos_tags = {}
-    #        self.pos_tags[filename] = nltk.pos_tag(cleaned)
-    #    return self.pos_tags[filename]
     
     def get_clean(self, filename, text, pre_process= r"[^a-zA-Z0-9]"):
         tokens = 0
@@ -246,19 +241,6 @@ class Philter:
                         clean_filtered.append(item)
             self.clean_filtered[filename] = (clean_filtered,phi_tokens)
         return self.clean_filtered[filename]
-    #def get_clean_word(self, filename, word):
-    #    if filename not in self.cleaned:
-    #        self.clean_words = {}
-    #        self.clean_words[filename] = {}
-    #    if word not in self.clean_words[filename]:
-    #        self.clean_words[filename][word] = re.sub(r"[^a-zA-Z0-9]+", "", word.lower().strip())
-    #    return self.clean_words[filename][word]
-
-    #def get_clean_word2(self, filename, word):
-    #    return re.sub(r"[^a-zA-Z0-9]+", "", word.lower().strip())
-    #    if word not in self.clean_words:
-    #        self.clean_words[word] = re.sub(r"[^a-zA-Z0-9]+", "", word.lower().strip())
-    #    return self.clean_words[word]
     
     def init_patterns(self):
         """ given our input pattern config will load our sets and pre-compile our regex"""
@@ -340,7 +322,16 @@ class Philter:
                        + " is invalid {0}".format(err))
                 return {}, {}
             
-            map_set = dict(zip(names_probes['value'], names_probes['note_key'])) 
+            # need to make ditionary of lists
+            map_set = {}
+            for index, row in names_probes.iterrows():
+                value = row['value']
+                note_key = row['note_key']
+                if value in map_set:
+                    map_set[value].append(note_key)
+                else:
+                    map_set[value] = [note_key]
+
         else:
             raise Exception("Invalid filteype",filepath)
         return map_set
@@ -367,7 +358,6 @@ class Philter:
                     if self.verbose:
                         print("Skipping: ", filename)
                     continue                
-                #self.patterns[i]["coordinate_map"].add_file(filename)
 
                 encoding = self.detect_encoding(filename)
                 if __debug__: print("reading text from " + filename)
@@ -388,9 +378,6 @@ class Philter:
                 # create empty list for this file's regex profiling data
                 if self.time_profile:
                     self.current_regex_time_profile = []
-
-                # Add total tokens to token dictionary
-                # self.token_data[filename] = 
 
                 # initialize phi type
                 phi_type = "OTHER"
@@ -472,10 +459,6 @@ class Philter:
             match_count = 0
             for m in matches:
                 match_count += 1
-                # print(m.group())
-                # print(self.patterns[pattern_index]['title'])
-
-
                 coord_map.add_extend(filename, m.start(), m.start()+len(m.group()))
         
             self.patterns[pattern_index]["coordinate_map"] = coord_map
@@ -573,7 +556,6 @@ class Philter:
             start_time = time.time()
 
         matches = regex.finditer(text)
-        # print(full_exclud_map)
         match_count = 0
         for m in matches:
             match_count += 1
@@ -665,11 +647,12 @@ class Philter:
                    file_note_key = file_note_key.replace('.xml','')
                    file_note_key = file_note_key.replace('_utf8','')
                    note_key = file_note_key
+
                    for key in self.patterns[pattern_index]["data"]:
-                       if self.patterns[pattern_index]["data"][key] == note_key:            
+                       if note_key in self.patterns[pattern_index]["data"][key]:      
                           key_clean = re.sub(r"[^a-zA-Z0-9]+", "", str(key).lower().strip()) 
                           map_set[key_clean] = self.patterns[pattern_index]["data"][key]
-                          #map_set[key_clean] = 1
+                        
         else:
             map_set = self.patterns[pattern_index]["data"]
         coord_map = self.patterns[pattern_index]["coordinate_map"]
@@ -688,12 +671,6 @@ class Philter:
         else:
             pos_list = zip(cleaned,range(len(cleaned)))
 
-        #pos_list = nltk.pos_tag(cleaned)
-
-        # if filename == './data/i2b2_notes/160-03.txt':
-        #     print(pos_list)
-        #print(map_set)
-        #print(pos_list)
         start_coordinate = 0
         for tup in pos_list:
             word = tup[0]
@@ -706,18 +683,10 @@ class Philter:
                 #got a blank space or something without any characters or digits, move forward
                 start_coordinate += len(word)
                 continue
-            if check_pos == False or (check_pos == True and pos in pos_set):
-                # if word == 'exlap':
-                #     print(pos)
-                #     print(filename)
-                #     print(pos_set)
-                #     print(check_pos)
-               
+            if check_pos == False or (check_pos == True and pos in pos_set):               
                if word_clean in map_set or word in map_set:
                   coord_map.add_extend(filename, start, stop)
-                    #print("FOUND: ",word, "COORD: ",  str(start), ":", str(stop))
                else:
-                    #print("not in set: ",word, "COORD: ",  text[start:stop])
                     pass
                     
             #advance our start coordinate
@@ -743,15 +712,12 @@ class Philter:
         cleaned = self.get_clean(filename,text)[0]
 
         pos_list = self.get_pos(filename, cleaned)#pos_list = nltk.pos_tag(cleaned)
-        # if filename == './data/i2b2_notes/160-03.txt':
-        #     print(pos_list)
         start_coordinate = 0
         for tup in pos_list:
             word = tup[0]
             pos  = tup[1]
             start = start_coordinate
             stop = start_coordinate + len(word)
-            #word_clean = self.get_clean_word2(filename,word)
             word_clean = re.sub(r"[^a-zA-Z0-9]+", "", word.lower().strip())
             if len(word_clean) == 0:
                 #got a blank space or something without any characters or digits, move forward
@@ -760,7 +726,6 @@ class Philter:
 
             if pos in pos_set:    
                 coord_map.add_extend(filename, start, stop)
-                #print("FOUND: ",word,"POS",pos, "COORD: ",  text[start:stop])
                 
             #advance our start coordinate
             start_coordinate += len(word)
@@ -870,8 +835,7 @@ class Philter:
                         self.data_all_files[filename]["non-phi"].append({"start":start, "stop":stop, "word":txt[start:stop], "filepath":filter_path})
 
                     else:
-                        pass
-###########################       
+                        pass 
 
             # Add regex_context to map separately
             else:
@@ -884,12 +848,6 @@ class Philter:
                     self.include_map.add_extend(filename, start, stop)
                     self.exclude_map.remove(filename, start, stop)
                     self.data_all_files[filename]["non-phi"].append({"start":start, "stop":stop, "word":txt[start:stop], "filepath":filter_path})
-###########################
-            
-        # dont' need to loop through all PHi types -- just current one
-        # for start,stop in self.phi_type_dict[phi_type][0].filecoords(filename):
-        #     self.data_all_files[filename]["phi"].append({"start":start, "stop":stop, "word":txt[start:stop],"phi_type":phi_type, "filepath":""})
-
 
     def transform(self):
         """ transform
@@ -916,10 +874,7 @@ class Philter:
 
         #create our final exclude and include maps, priority order
         for root,f in self.folder_walk(in_path):
-
-            #keeps a record of all phi coordinates and text for a given file
-            # data = {}
-            
+            #keeps a record of all phi coordinates and text for a given file            
             filename = root+f
 
             encoding = self.detect_encoding(filename)
@@ -936,13 +891,11 @@ class Philter:
             elif self.outformat == "i2b2":
                 with open(outpathfbase+".xml", "w", errors='xmlcharrefreplace') as f: #TODO: should we have an explicit encoding?
                     contents = self.transform_text_i2b2(self.data_all_files[filename])
-                    #print("writing contents to: " + outpathfbase+".xml")
                     f.write(contents)
             else:
                 raise Exception("Outformat not supported: ",
                                 self.outformat)        
 
-        # print(data_all_files)
         if self.run_eval: #output our data for eval
             json.dump(self.data_all_files, open(self.coords, "w"), indent=4)
 
@@ -1055,11 +1008,9 @@ class Philter:
             classifications can be TP, FP, FN, TN 
             corresponding to True Positive, False Positive, False Negative and True Negative
         """
-        # print(filename)
         start_coordinate = 0
         for note_word, anno_word in list(zip(note_lst, anno_lst)):
 
-            #print(note_word, anno_word)
             ##### Get coordinates ######
             start = start_coordinate
             stop = start_coordinate + len(note_word)
@@ -1073,13 +1024,10 @@ class Philter:
             if phi_matcher.search(anno_word):
                 #this contains phi
                 
-                if note_word == anno_word:                    
-                    # print(note_word, anno_word,'TP')
+                if note_word == anno_word:               
                     yield "TP", note_word, start_coordinate
                 else:
                     if text_matcher.search(anno_word):
-
-                        #print("COMPLEX", note_word, anno_word)
 
                         #this is a complex edge case, 
                         #the phi annotation has some characters *'ed, and some not, 
@@ -1126,10 +1074,8 @@ class Philter:
                 if note_word.isspace() == False:
                     #this isn't phi
                     if note_word == anno_word:
-                        #print(note_word, anno_word, "TN")
                         yield "TN", note_word, start_coordinate
                     else:
-                        #print(note_word, anno_word, "FP")
                         yield "FP", anno_word, start_coordinate
 
             #advance our start coordinate
@@ -1167,10 +1113,6 @@ class Philter:
             raise Exception("Anno Filepath does not exist", anno_path)
         if not os.path.exists(in_path):
             raise Exception("Input Filepath does not exist", in_path)
-        # if not os.path.exists(fn_output):
-        #     raise Exception("False Negative Filepath does not exist", fn_output)
-        # if not os.path.exists(fp_output):
-        #     raise Exception("False Positive Filepath does not exist", fp_output)
 
         if self.verbose:
             print("RUNNING EVAL")
@@ -1216,14 +1158,10 @@ class Philter:
                 philtered_filename = root+f
                 anno_filename = anno_path+''.join(f.split(".")[0])+anno_suffix
 
-                # if len(anno_suffix) > 0:
-                #     anno_filename = anno_folder+f.split(".")[0]+anno_suffix
-
                 if not os.path.exists(philtered_filename):
                     raise Exception("FILE DOESNT EXIST", philtered_filename)
                 
                 if not os.path.exists(anno_filename):
-                    #print("FILE DOESNT EXIST", anno_filename)
                     continue
 
                 encoding1 = self.detect_encoding(philtered_filename)
@@ -1231,9 +1169,6 @@ class Philter:
                 
                           
                 philtered_words = re.split("(\s+)", philtered)
-                # if f == '110-01.txt':
-                #     print(philtered_words)
-                #     print(len("".join(philtered_words)))
                 philtered_words_cleaned = []
                 for item in philtered_words:
                     if len(item) > 0:
@@ -1245,8 +1180,6 @@ class Philter:
                         else:
                             philtered_words_cleaned.append(item)
                 
-               # philtered_words_cleaned = self.get_clean(original_filename, philtered)
-
                 encoding2 = self.detect_encoding(anno_filename)
                 anno = open(anno_filename,"r").read()              
                 
@@ -1260,10 +1193,6 @@ class Philter:
                         if c == "FP":
                             false_positives.append(w)
                             false_positives_coords.append([w,r])
-                            # if w == "she" or w == "no" or w == "he" or w == "increased" or w == "wave" or w == "In" or w == "AS":
-                            #     print(w)
-                            #     print(f)
-
                         elif c == "FN":
                             false_negatives.append(w)
                             false_negatives_coords.append([w,r])
@@ -1284,10 +1213,8 @@ class Philter:
                 all_fn = all_fn + false_negatives
                 all_tp = all_tp + true_positives
 
-
                 # Create coordinate summaries
                 summary_coords["summary_by_file"][philtered_filename] = {"false_positives":false_positives_coords,"false_negatives":false_negatives_coords,"true_positives":true_positives_coords,"true_negatives":true_negatives_coords}
-
 
         if summary["total_true_positives"]+summary["total_false_negatives"] > 0:
             recall = summary["total_true_positives"]/(summary["total_true_positives"]+summary["total_false_negatives"])
@@ -1363,7 +1290,6 @@ class Philter:
 
         # Loop through all filenames in summary
         for fn in summary_coords['summary_by_file']:
-            # print(self.patterns)
             # get input notes filename (for filter analysis wit coordinatemap)
             input_filename = self.finpath + os.path.basename(fn)
 
@@ -1377,10 +1303,7 @@ class Philter:
                 text = phi[anno_name]['text']
             except KeyError:
                 anno_name = note_name.split('.')[0] + ".txt.xml"
-                text = phi[anno_name]['text']
-                # except KeyError:
-                #     anno_name = note_name.split('.')[0] + "_nounicode.txt.xml"
-                #     text = phi[anno_name]['text']                       
+                text = phi[anno_name]['text']                    
 
             lst = re.split("(\s+)", text)
             cleaned = []
@@ -1394,12 +1317,6 @@ class Philter:
                                 cleaned.append(elem)
                     else:
                         cleaned.append(item)
-            #cleaned = self.get_clean(input_filename)
-            # if anno_name == '110-01.xml':
-            #     print(anno_name)
-            #     #print(cleaned)
-            #     print('Anno text:')
-            #     print(text)
             
             # Get coords for POS tags
             start_coordinate = 0
@@ -1407,11 +1324,8 @@ class Philter:
             for item in cleaned:
                 pos_coords.append(start_coordinate)
                 start_coordinate += len(item)
-
-            #print(pos_coords)
             
             pos_list = nltk.pos_tag(cleaned)
-
 
             cleaned_with_pos = {}
             for i in range(0,len(pos_list)):
@@ -1419,9 +1333,6 @@ class Philter:
 
             ########## Get FN tags ##########
             phi_list = phi[anno_name]['phi']
-            # print(cleaned)
-            # print(pos_coords)
-
 
             ######### Create unigram and bigram frequency tables #######
             if self.freq_table:
@@ -1498,7 +1409,6 @@ class Philter:
                     phi_type = phi_item['TYPE']
                     phi_word = phi_item['text']
 
-
                     if not self.ucsf_format:
                         for i in range(0,len(i2b2_tags)):
                             tag = i2b2_tags[i]
@@ -1520,21 +1430,7 @@ class Philter:
                             tp_key = tag + '_tps'
                             if (start_coordinate_tp in range(int(phi_start), int(phi_end))) and (tag == phi_type):
                                 rp_summaries[tp_key] += 1
-                            # Add these TPs to the FPs list of they are not in the include list
-                            # elif (start_coordinate_tp in range(int(phi_start), int(phi_end))) and (tag == phi_type) and (tag not in ucsf_include_tags):
-                            #     print(phi_type)
-                            #     print([cleaned_with_pos[str(phi_start)][0], phi_start])
-                            #     additional_fps.append([cleaned_with_pos[str(phi_start)][0], phi_start])
-                            #     print('\n')
-
-
-            # if additional_fps != []:
-
-            # if anno_name == '110-01.xml':
-            # print(anno_name)
-            # print(cleaned_dict)
-            # print('\n')
-
+                            
             #### i2b2
             if not self.ucsf_format:
                 fn_counter_dict = {}
@@ -1563,7 +1459,6 @@ class Philter:
                     counter += 1
                     false_negative = word[0]
                     start_coordinate_fn = word[1]
-                    # print(word, start_coordinate)
 
                     # initialize list that will hold info on what matched what
                     filter_file_list_exclude = []
@@ -1572,7 +1467,6 @@ class Philter:
                     if self.dependent:
                         # Loop through coorinate map objects and match patterns with FPs
                         for i,pattern in enumerate(self.patterns):
-                            # print('\n',i, ':')
 
                             coord_map = pattern["coordinate_map"]
                             exclude_include = pattern["exclude"]
@@ -1580,17 +1474,12 @@ class Philter:
                                 filter_path = pattern["filepath"]
                             except KeyError:
                                 filter_path = pattern["title"]
-                            # print('\n')
-                            # print(filter_path)
                             for start,stop in coord_map.filecoords(input_filename):
-                                # print(start,stop,text[start:stop])
                                 # Find intersection between ranges
                                 word_range = set(range(start_coordinate_fn, start_coordinate_fn + len(false_negative)))
                                 filter_range = set(range(start, stop))
                                 intersection = word_range & filter_range
                                 if intersection != set():
-                                    # print("********"+str(start_coordinate_fp)+"********")
-                                    # print(false_positive)
                                     # Add this filter path to the list of things that filtered this word
                                     if exclude_include == True:
                                         filter_file_list_exclude.append(filter_path)
@@ -1651,9 +1540,7 @@ class Philter:
                             elif context_start >= 0 and context_end > len(text)-1:
                                 fn_context = text[context_start:]
                             else:
-                                fn_context = text[:context_end]
-                            # if fn == './data/i2b2_results/137-03.txt':
-                            #     print(fn_context)                  
+                                fn_context = text[:context_end]  
                             
                             # Get fn id, to distinguish betweem multiple entries
                             fn_id = "N" + str(counter)
@@ -1676,7 +1563,6 @@ class Philter:
                                             if int(fn_stripped) >= 90:
                                                 include_exclude_fns = 'include'
                                                 corrected_age_fns += 1
-                                                # print('Include (int): ',fn_stripped)
                                             else:
                                                 include_exclude_fns = 'exclude'
                                         # Is the age a string?
@@ -1688,18 +1574,13 @@ class Philter:
                                             if 'ninety' in fn_stripped:
                                                 include_exclude_fns = 'include'
                                                 corrected_age_fns += 1
-                                                # print('Include (str): ',fn_stripped)
                                             else:
                                                 include_exclude_fns = 'exclude'
-                                        # print(include_exclude_fns,fn_stripped)
 
                                 else:
                                     include_exclude_fns = 'exclude'
                             ###### Create output dicitonary with id/word/pos/phi
-                            #print(include_exclude_fns,false_negative)
                             fn_tag_summary[fn_id] = [false_negative, phi_tag, pos_tag, fn_context, include_exclude_fns, filter_file_list_exclude, filter_file_list_include]
-                            # if phi_tag == 'AGE':
-                            #     print(word)
 
             if fn_tag_summary != {}:
                 fn_tags[fn] = fn_tag_summary
@@ -1708,16 +1589,13 @@ class Philter:
             ####### Get FP tags #########
             fp_tag_summary = {}
             include_exclude_fps = ''
-            #print(cleaned_with_pos)
             current_fps = current_summary['false_positives'] + additional_fps
             if current_fps != [] and current_fps != [""]:              
                 counter = 0
-                #print(current_fps)
                 for word in current_fps:
                     counter += 1
                     false_positive = word[0]
                     start_coordinate_fp = word[1]
-                    # print(word)
 
                     # initialize list that will hold info on what matched what
                     filter_file_list_exclude = []
@@ -1726,7 +1604,6 @@ class Philter:
                     if self.dependent:
                         # Loop through coorinate map objects and match patterns with FPs
                         for i,pattern in enumerate(self.patterns):
-                            # print('\n',i, ':')
 
                             coord_map = pattern["coordinate_map"]
                             exclude_include = pattern["exclude"]
@@ -1734,16 +1611,12 @@ class Philter:
                                 filter_path = pattern["filepath"]
                             except KeyError:
                                 filter_path = pattern["title"]
-                            # print('\n')
-                            # print(filter_path)
                             for start,stop in coord_map.filecoords(input_filename):
                                 # print(start,stop,text[start:stop])
                                 word_range = set(range(start_coordinate_fp, start_coordinate_fp + len(false_positive)))
                                 filter_range = set(range(start, stop))
                                 intersection = word_range & filter_range
                                 if intersection != set():
-                                    # print("********"+str(start_coordinate_fp)+"********")
-                                    # print(false_positive)
                                     # Add this filter path to the list of things that filtered this word
                                     if exclude_include == True:
                                         filter_file_list_exclude.append(filter_path)
@@ -1857,15 +1730,11 @@ class Philter:
 
 
                 if rp_summaries[fn_key] != 0:
-                    # if rp_summaries[tp_key] != 0 and (rp_summaries[tp_key]-rp_summaries[fn_key]) > 0:
-                    overall_recall_dict[recall_key] = rp_summaries[tp_key]/(rp_summaries[fn_key] + rp_summaries[tp_key])
-                    # else:
-                    #     overall_recall_dict[recall_key] = 0
+                    overall_recall_dict[recall_key] = rp_summaries[tp_key]/(rp_summaries[fn_key] + rp_summaries[tp_key]
                 else:
                     overall_recall_dict[recall_key] = 1
 
                 overall_data.append([tag,"{:.2%}".format(overall_recall_dict[recall_key]),str(rp_summaries[tp_key]),str(rp_summaries[fn_key])])
-                # print(tag + " Recall: " + "{:.2%}".format(overall_recall_dict[recall_key]) + " TP: " + str(rp_summaries[tp_key]) + " FN: " + str(rp_summaries[fn_key]))
 
         # ucsf
         if self.ucsf_format:
@@ -1950,19 +1819,14 @@ class Philter:
 
 
                 if rp_summaries[fn_key] != 0:
-                    # if rp_summaries[tp_key] != 0 and (rp_summaries[tp_key]-rp_summaries[fn_key]) > 0:
                     overall_recall_dict[recall_key] = rp_summaries[tp_key]/(rp_summaries[fn_key] + rp_summaries[tp_key])
-                    # else:
-                    #     overall_recall_dict[recall_key] = 0
                 else:
                     overall_recall_dict[recall_key] = 1
                 if tag == 'Age':
                     overall_data.append([tag,"{:.2%}".format(overall_recall_dict[recall_key]),str(rp_summaries[tp_key]),str(corrected_age_fns)])
-                # print(tag + " Recall: " + "{:.2%}".format(overall_recall_dict[recall_key]) + " TP: " + str(rp_summaries[tp_key]) + " FN: " + str(rp_summaries[fn_key]))
                 else:
                     overall_data.append([tag,"{:.2%}".format(overall_recall_dict[recall_key]),str(rp_summaries[tp_key]),str(rp_summaries[fn_key])])
-                # print(tag + " Recall: " + "{:.2%}".format(overall_recall_dict[recall_key]) + " TP: " + str(rp_summaries[tp_key]) + " FN: " + str(rp_summaries[fn_key]))
-        
+     
         # pretty print tag recalls
         overall_data.sort(key=lambda x: float(x[1][:-1]),reverse=True)
         sorted_overall_data = [["Tag","Recall","TPs","FNs"]]
@@ -1987,14 +1851,10 @@ class Philter:
 
             category_recall = 0
             if category_dict[category_fns] != 0:
-                # if category_dict[category_tps]!= 0 and (category_dict[category_tps]-category_dict[category_fns]) > 0:
                 category_recall = category_dict[category_tps]/(category_dict[category_fns] + category_dict[category_tps])
-                # else:
-                #     category_recall = 0
             else:
                 category_recall = 1
             category_data.append([category_tag,"{:.2%}".format(category_recall),str(category_dict[category_tps]),str(category_dict[category_fns])])
-            # print(category_tag + " Recall: " + "{:.2%}".format(category_recall) + " TP: " + str(category_dict[category_tps]) + " FN: " + str(category_dict[category_fns]))                 
 
         # pretty print category recalls
         category_data.sort(key=lambda x: float(x[1][:-1]),reverse=True)
@@ -2017,28 +1877,19 @@ class Philter:
 
         corrected_recall = 0
         if include_dict['fns'] != 0:
-            # if include_dict['tps'] != 0 and (include_dict['tps']-include_dict['fns']) > 0:
             corrected_recall = include_dict['tps']/(include_dict['fns'] + include_dict['tps'])
-            # else:
-            #     corrected_recall = 0
         else:
             corrected_recall = 1
 
         corrected_precision = 0
         if include_dict['fps'] != 0:
-            # if include_dict['tps'] != 0 and (include_dict['tps']-include_dict['fns']) > 0:
             corrected_precision = include_dict['tps']/(include_dict['fps'] + include_dict['tps'])
-            # else:
-            #     corrected_recall = 0
         else:
             corrected_precision = 1
 
         specificity = 0
         if include_dict['fps'] != 0:
-            # if include_dict['tps'] != 0 and (include_dict['tps']-include_dict['fns']) > 0:
             specificity = include_dict['tns']/(include_dict['fps'] + include_dict['tns'])
-            # else:
-            #     corrected_recall = 0
         else:
             specificity = 1
 
@@ -2057,28 +1908,19 @@ class Philter:
 
         patient_recall = 0
         if patient_phi_dict['fns'] != 0:
-            # if include_dict['tps'] != 0 and (include_dict['tps']-include_dict['fns']) > 0:
             patient_recall = patient_phi_dict['tps']/(patient_phi_dict['fns'] + patient_phi_dict['tps'])
-            # else:
-            #     corrected_recall = 0
         else:
             patient_recall = 1
 
         patient_precision = 0
         if patient_phi_dict['fps'] != 0:
-            # if include_dict['tps'] != 0 and (include_dict['tps']-include_dict['fns']) > 0:
             patient_precision = patient_phi_dict['tps']/(patient_phi_dict['fps'] + patient_phi_dict['tps'])
-            # else:
-            #     corrected_recall = 0
         else:
             patient_precision = 1
 
         patient_specificity = 0
         if patient_phi_dict['fps'] != 0:
-            # if include_dict['tps'] != 0 and (include_dict['tps']-include_dict['fns']) > 0:
             patient_specificity = patient_phi_dict['tns']/(patient_phi_dict['fps'] + patient_phi_dict['tns'])
-            # else:
-            #     corrected_recall = 0
         else:
             patient_specificity = 1
 
@@ -2098,28 +1940,19 @@ class Philter:
 
         provider_recall = 0
         if provider_phi_dict['fns'] != 0:
-            # if include_dict['tps'] != 0 and (include_dict['tps']-include_dict['fns']) > 0:
             provider_recall = provider_phi_dict['tps']/(provider_phi_dict['fns'] + provider_phi_dict['tps'])
-            # else:
-            #     corrected_recall = 0
         else:
             patient_recall = 1
 
         provider_precision = 0
         if provider_phi_dict['fps'] != 0:
-            # if include_dict['tps'] != 0 and (include_dict['tps']-include_dict['fns']) > 0:
             provider_precision = provider_phi_dict['tps']/(provider_phi_dict['fps'] + provider_phi_dict['tps'])
-            # else:
-            #     corrected_recall = 0
         else:
             patient_precision = 1
 
         provider_specificity = 0
         if provider_phi_dict['fps'] != 0:
-            # if include_dict['tps'] != 0 and (include_dict['tps']-include_dict['fns']) > 0:
             provider_specificity = provider_phi_dict['tns']/(provider_phi_dict['fps'] + provider_phi_dict['tns'])
-            # else:
-            #     corrected_recall = 0
         else:
             provider_specificity = 1
 
@@ -2158,7 +1991,6 @@ class Philter:
             for subfile in file_dict:
                 current_list_context = file_dict[subfile]
             ##############################
-                # print(current_list_context)
                 current_list_nocontext = current_list_context[:3] + [current_list_context[-3]] + [current_list_context[-2]] + [current_list_context[-1]]
             ############################
                 
@@ -2240,7 +2072,6 @@ class Philter:
         # Conext
         with open(self.eval_outpath + "fn_tags_context.txt", "w") as fn_file:
             fn_file.write("key" + "|" + "note_word" + "|" + "phi_tag" + "|" + "pos_tag" + "|" + "context" + "|" + "filename"+ "|" +"include_exclude" + "|" +"exclude_filters" + "|" +"include_filters" +"\n")
-            # print(fn_tags_condensed_context)
             for key in fn_tags_condensed_context:
                 current_list = fn_tags_condensed_context[key]
                 fn_file.write(key + "|" + current_list[0] + "|" + current_list[1] + "|" + current_list[2] + "|" + current_list[3] + "|" + current_list[4]+ "|" +current_list[5]+ "|" +str(current_list[6]) + "|" +str(current_list[7]) + "\n")
