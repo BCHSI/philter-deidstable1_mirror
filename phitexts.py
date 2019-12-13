@@ -72,7 +72,7 @@ class Phitexts:
             token_start = text.find(item_stripped, offset)
             if token_start is -1:
                raise Exception("ERROR: cannot find token \"{0}\" in \"{1}\" starting at {2} in file {3}".format(item, string, offset))
-            #print(item +"\t" + str(token_start) + "\t" + str(len(item_stripped)))
+
             token_stop = int(token_start) + int(len(item_stripped)) - 1 
             offset = token_stop + 1
             tokens.update({token_start:token_stop})
@@ -296,8 +296,7 @@ class Phitexts:
             exclude_dict = self.coords***REMOVED***filename***REMOVED***
             #read the text by character, any non-punc non-overlaps will be replaced
             contents = ***REMOVED******REMOVED***
-            #print(filename)
-            #print(exclude_dict)
+
             for i in range(0, len(txt)):
 
                 if i < last_marker:
@@ -529,7 +528,6 @@ class Phitexts:
                 
         ### CSV of summary per file ####
         # 1. Filename
-            #print(filename)
         for filename in self.filenames:
 
             # File size in bytes
@@ -635,6 +633,7 @@ class Phitexts:
                    for start in phi_type_per_token***REMOVED***filename***REMOVED***:
                        for end in phi_type_per_token***REMOVED***filename***REMOVED******REMOVED***start***REMOVED***:
                            if len(phi_type_per_token***REMOVED***filename***REMOVED******REMOVED***start***REMOVED******REMOVED***end***REMOVED***) == 1 and 'PROBE' in phi_type_per_token***REMOVED***filename***REMOVED******REMOVED***start***REMOVED******REMOVED***end***REMOVED***:
+
                                flank_start = int(start) - 10
                                flank_end = int(end) + 10
                                if (flank_start < 0):
@@ -642,7 +641,7 @@ class Phitexts:
                                if len(self.texts***REMOVED***filename***REMOVED***)<flank_end:
                                   flank_end = len(self.texts***REMOVED***filename***REMOVED***)
                                context = self.texts***REMOVED***filename***REMOVED******REMOVED***flank_start:flank_end***REMOVED***
-                               word = self.texts***REMOVED***filename***REMOVED******REMOVED***start:end***REMOVED***
+                               word = self.texts***REMOVED***filename***REMOVED******REMOVED***start:end+1***REMOVED***
                                f.write(filename + "\t" + str(start)
                                        + "\t" + str(end) + "\t" + word
                                        + "\t" + context.replace('\n',' ').replace('\t',' ')
@@ -814,7 +813,6 @@ class Phitexts:
             for filename in files:
                 if not filename.endswith("xml"):
                     continue
-                #print("root: " + str(root) + " filename: " + str(filename))
                 filepath = os.path.join(root, filename)
                 # change here: what will the input format be?
                 file_id = self.inputdir + filename.split('.')***REMOVED***0***REMOVED*** + '.txt'
@@ -839,7 +837,6 @@ class Phitexts:
                         if not isinstance(value, list):
                             value = ***REMOVED***value***REMOVED***
                         for final_value in value:
-#                            print("final_value: " + )
                             start, end = self._get_tag_start_stop(final_value)
                             text = final_value***REMOVED***"@text"***REMOVED***
                             phi_type = final_value***REMOVED***"@TYPE"***REMOVED***
