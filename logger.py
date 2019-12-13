@@ -21,6 +21,7 @@ def get_args():
                     + " super log in a subfolder log of the set folder"
                     + " combining logs of each output directory",
                     type=str)
+    
     return ap.parse_args()
 
 
@@ -47,8 +48,7 @@ def get_super_log(all_logs, super_log_dir):
                            + 'failed_normalized' + ','
                            + 'successfully_surrogated' + ','
                            + 'failed_surrogated' + '\n')
-            f.write(file_header)
-    
+            f.write(file_header)    
 
     # Create aggregated dynamic blacklist file
     if not os.path.isfile(dynamic_blacklist_filepath):
@@ -78,7 +78,6 @@ def get_super_log(all_logs, super_log_dir):
                 for line in f:
                     f1.write(line)
 
-
     summary = pandas.read_csv(csv_summary_filepath)
 
     # Batch size (all)
@@ -107,7 +106,6 @@ def get_super_log(all_logs, super_log_dir):
     successful_surrogation = sum(summary['successfully_surrogated'])
     failed_surrogation = sum(summary['failed_surrogated'])
 
-
     with open(text_summary_filepath, "w") as f:
         f.write("TOTAL NOTES PROCESSED: "+str(number_of_notes)+'\n')
         f.write("TOTAL KB PROCESSED: "+str("%.2f"%total_kb_processed)+'\n')
@@ -129,18 +127,16 @@ def create_log_files_list(imofile):
     with open(imofile, 'r') as imo:
         for line in imo:
             parts = line.split()
-            if len(parts) > 3:
-                idir, mfile, odir, kpfile = line.split()
-            else:
-                idir, mfile, odir = line.split()
-
+            odir = parts[2]
+            
             all_logs.append(os.path.join(odir, "log",
                                          "detailed_batch_summary.csv"))
             all_logs.append(os.path.join(odir, "log",
                                          "dynamic_blacklist_summary.csv"))
     
     return all_logs
-        
+
+
 def main():
         
     args = get_args()
