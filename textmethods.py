@@ -16,21 +16,21 @@ def get_clean(text, punctuation_matcher=re.compile(r"***REMOVED***^a-zA-Z0-9***R
     return cleaned
 
 
-def get_tokens(string):
+def get_tokens(string, text=None, start=0):
     tokens = {}
     str_split = get_clean(string)
     
-    offset = 0
+    offset = start
+    if not text: text = string
     for item in str_split:
         item_stripped = item.strip()
         if len(item_stripped) is 0:
             offset += len(item)
             continue
-        token_start = string.find(item_stripped, offset)
+        token_start = text.find(item_stripped, offset)
         if token_start is -1:
             raise Exception("ERROR: cannot find token \"{0}\" ".format(item)
-                            + "in \"{1}\" starting at {2}".format(string,
-                                                                  offset))
+                            + "in \"{1}\" starting at {2}".format(text, offset))
         token_stop = token_start + len(item_stripped) - 1
         offset = token_stop + 1
         tokens.update({token_start:***REMOVED***token_stop,item_stripped***REMOVED***})
