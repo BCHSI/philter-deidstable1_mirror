@@ -61,21 +61,12 @@ class Phitexts:
                 fhandle.close()
 
     def _get_xml_tokens(self,string,text,start):
-        tokens = {} 
-        str_split = get_clean(string)
-        offset = start
-        for item in str_split:
-            item_stripped = item.strip()
-            if len(item_stripped) is 0:
-                offset += len(item)
-                continue
-            token_start = text.find(item_stripped, offset)
-            if token_start is -1:
-               raise Exception("ERROR: cannot find token \"{0}\" in \"{1}\" starting at {2} in file {3}".format(item, string, offset))
-
-            token_stop = int(token_start) + int(len(item_stripped)) - 1 
-            offset = token_stop + 1
-            tokens.update({token_start:token_stop})
+        tokens = {}
+        
+        tkns = get_tokens(string, text, start)
+        for tk_start in tkns:
+            tk_stop = tkns[tk_start][0]
+            tokens.update({tk_start:tk_stop})
     
         return tokens
 
