@@ -21,7 +21,7 @@ def get_args():
                     + " super log in a subfolder log of the set folder"
                     + " combining logs of each output directory",
                     type=str)
-
+    
     return ap.parse_args()
 
 
@@ -48,8 +48,7 @@ def get_super_log(all_logs, super_log_dir):
                            + 'failed_normalized' + ','
                            + 'successfully_surrogated' + ','
                            + 'failed_surrogated' + '\n')
-            f.write(file_header)
-    
+            f.write(file_header)    
 
     # Create aggregated dynamic blacklist file
     if not os.path.isfile(dynamic_blacklist_filepath):
@@ -107,7 +106,6 @@ def get_super_log(all_logs, super_log_dir):
     successful_surrogation = sum(summary***REMOVED***'successfully_surrogated'***REMOVED***)
     failed_surrogation = sum(summary***REMOVED***'failed_surrogated'***REMOVED***)
 
-
     with open(text_summary_filepath, "w") as f:
         f.write("TOTAL NOTES PROCESSED: "+str(number_of_notes)+'\n')
         f.write("TOTAL KB PROCESSED: "+str("%.2f"%total_kb_processed)+'\n')
@@ -135,9 +133,10 @@ def create_log_files_list(imofile):
                                          "detailed_batch_summary.csv"))
             all_logs.append(os.path.join(odir, "log",
                                          "dynamic_blacklist_summary.csv"))
-            
+    
     return all_logs
-        
+
+
 def main():
         
     args = get_args()
