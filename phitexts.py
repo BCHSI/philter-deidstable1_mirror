@@ -287,8 +287,7 @@ class Phitexts:
             exclude_dict = self.coords[filename]
             #read the text by character, any non-punc non-overlaps will be replaced
             contents = []
-            #print(filename)
-            #print(exclude_dict)
+
             for i in range(0, len(txt)):
 
                 if i < last_marker:
@@ -520,7 +519,6 @@ class Phitexts:
                 
         ### CSV of summary per file ####
         # 1. Filename
-            #print(filename)
         for filename in self.filenames:
 
             # File size in bytes
@@ -626,6 +624,7 @@ class Phitexts:
                    for start in phi_type_per_token[filename]:
                        for end in phi_type_per_token[filename][start]:
                            if len(phi_type_per_token[filename][start][end]) == 1 and 'PROBE' in phi_type_per_token[filename][start][end]:
+
                                flank_start = int(start) - 10
                                flank_end = int(end) + 10
                                if (flank_start < 0):
@@ -633,7 +632,7 @@ class Phitexts:
                                if len(self.texts[filename])<flank_end:
                                   flank_end = len(self.texts[filename])
                                context = self.texts[filename][flank_start:flank_end]
-                               word = self.texts[filename][start:end]
+                               word = self.texts[filename][start:end+1]
                                f.write(filename + "\t" + str(start)
                                        + "\t" + str(end) + "\t" + word
                                        + "\t" + context.replace('\n',' ').replace('\t',' ')
@@ -805,7 +804,6 @@ class Phitexts:
             for filename in files:
                 if not filename.endswith("xml"):
                     continue
-                #print("root: " + str(root) + " filename: " + str(filename))
                 filepath = os.path.join(root, filename)
                 # change here: what will the input format be?
                 file_id = self.inputdir + filename.split('.')[0] + '.txt'
@@ -830,7 +828,6 @@ class Phitexts:
                         if not isinstance(value, list):
                             value = [value]
                         for final_value in value:
-#                            print("final_value: " + )
                             start, end = self._get_tag_start_stop(final_value)
                             text = final_value["@text"]
                             phi_type = final_value["@TYPE"]

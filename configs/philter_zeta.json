@@ -2287,7 +2287,7 @@
         "exclude": true,
         "filepath": "filters/regex/ucsf_regex/ucsf_sf.txt",
         "note": "",
-        "phi_type":"NAME"
+        "phi_type":"LOCATION"
     },
     {
         "title": "ucsf bay area",
@@ -2295,7 +2295,7 @@
         "exclude": true,
         "filepath": "filters/regex/ucsf_regex/ucsf_bay_area.txt",
         "note": "",
-        "phi_type":"NAME"
+        "phi_type":"LOCATION"
     },
     {
         "title": "ucsf neighborhoods",
@@ -2303,7 +2303,7 @@
         "exclude": true,
         "filepath": "filters/regex/ucsf_regex/ucsf_neighborhoods.txt",
         "note": "",
-        "phi_type":"NAME"
+        "phi_type":"LOCATION"
     },
     {
         "title":"month_name",
