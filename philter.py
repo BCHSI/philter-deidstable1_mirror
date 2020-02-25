@@ -196,9 +196,7 @@ class Philter:
                         self.pos_tags***REMOVED***filename***REMOVED*** = pickle.load(f)
         else:
             if filename not in self.pos_tags:
-                self.pos_tags***REMOVED***filename***REMOVED*** = {}
-            self.pos_tags***REMOVED***filename***REMOVED*** = nltk.pos_tag(cleaned)
-            return self.pos_tags***REMOVED***filename***REMOVED***
+                self.pos_tags***REMOVED***filename***REMOVED*** = nltk.pos_tag(cleaned)
         return self.pos_tags***REMOVED***filename***REMOVED***
     
     def get_clean(self, filename, text, pre_process= r"***REMOVED***^a-zA-Z0-9***REMOVED***"):
@@ -637,9 +635,8 @@ class Philter:
             raise Exception("Invalid pattern index: ", pattern_index, "pattern length", len(patterns))
         
         if self.patterns***REMOVED***pattern_index***REMOVED******REMOVED***"type"***REMOVED*** == "dynamic_set":
-            self.patterns***REMOVED***pattern_index***REMOVED******REMOVED***"exclude"***REMOVED*** = True
+            # create map_set for current note
             map_set = {}
-            pos_set = set(self.patterns***REMOVED***pattern_index***REMOVED******REMOVED***"pos"***REMOVED***)
             if (filename.find('.txt') != -1) or (filename.find('.xml') != -1):
                 file_note_key = os.path.basename(filename).replace('\n','')
                 file_note_key = file_note_key.replace('.txt','')
@@ -660,15 +657,14 @@ class Philter:
         
         #get part of speech we will be sending through this set
         #note, if this is empty we will put all parts of speech through the set
+        cleaned = self.get_clean(filename,text)***REMOVED***0***REMOVED***
         check_pos = False
         pos_set = set(***REMOVED******REMOVED***)
         if "pos" in self.patterns***REMOVED***pattern_index***REMOVED***:
             pos_set = set(self.patterns***REMOVED***pattern_index***REMOVED******REMOVED***"pos"***REMOVED***)
         if len(pos_set) > 0:
             check_pos = True
-        cleaned = self.get_clean(filename,text)***REMOVED***0***REMOVED***
-        if check_pos:
-            pos_list = self.get_pos(filename, cleaned)# pos_list = nltk.pos_tag(cleaned)
+            pos_list = self.get_pos(filename, cleaned)
         else:
             pos_list = zip(cleaned,range(len(cleaned)))
 
