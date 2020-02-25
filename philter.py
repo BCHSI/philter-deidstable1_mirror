@@ -196,9 +196,7 @@ class Philter:
                         self.pos_tags[filename] = pickle.load(f)
         else:
             if filename not in self.pos_tags:
-                self.pos_tags[filename] = {}
-            self.pos_tags[filename] = nltk.pos_tag(cleaned)
-            return self.pos_tags[filename]
+                self.pos_tags[filename] = nltk.pos_tag(cleaned)
         return self.pos_tags[filename]
     
     def get_clean(self, filename, text, pre_process= r"[^a-zA-Z0-9]"):
@@ -637,9 +635,8 @@ class Philter:
             raise Exception("Invalid pattern index: ", pattern_index, "pattern length", len(patterns))
         
         if self.patterns[pattern_index]["type"] == "dynamic_set":
-            self.patterns[pattern_index]["exclude"] = True
+            # create map_set for current note
             map_set = {}
-            pos_set = set(self.patterns[pattern_index]["pos"])
             if (filename.find('.txt') != -1) or (filename.find('.xml') != -1):
                 file_note_key = os.path.basename(filename).replace('\n','')
                 file_note_key = file_note_key.replace('.txt','')
@@ -660,15 +657,14 @@ class Philter:
         
         #get part of speech we will be sending through this set
         #note, if this is empty we will put all parts of speech through the set
+        cleaned = self.get_clean(filename,text)[0]
         check_pos = False
         pos_set = set([])
         if "pos" in self.patterns[pattern_index]:
             pos_set = set(self.patterns[pattern_index]["pos"])
         if len(pos_set) > 0:
             check_pos = True
-        cleaned = self.get_clean(filename,text)[0]
-        if check_pos:
-            pos_list = self.get_pos(filename, cleaned)# pos_list = nltk.pos_tag(cleaned)
+            pos_list = self.get_pos(filename, cleaned)
         else:
             pos_list = zip(cleaned,range(len(cleaned)))
 
