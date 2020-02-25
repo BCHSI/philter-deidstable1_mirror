@@ -645,7 +645,7 @@ class Philter:
                 file_note_key = file_note_key.replace('_utf8','')
                 note_key = file_note_key
                 for probe in self.patterns***REMOVED***pattern_index***REMOVED******REMOVED***"data"***REMOVED***:
-                    if self.patterns***REMOVED***pattern_index***REMOVED******REMOVED***"data"***REMOVED******REMOVED***probe***REMOVED*** == note_key:
+                    if note_key in self.patterns***REMOVED***pattern_index***REMOVED******REMOVED***"data"***REMOVED******REMOVED***probe***REMOVED***:
                         probe_clean = get_clean(probe)
                         for pc in probe_clean:
                             prb = re.sub(r"***REMOVED***^a-zA-Z0-9***REMOVED***+", "",
