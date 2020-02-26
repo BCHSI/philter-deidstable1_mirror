@@ -310,7 +310,7 @@ class Philter:
             map_set = json.loads(open(filepath, "r").read())
         elif filepath.endswith(".txt"):
             try:
-                probes_file = pd.read_csv(filepath, sep='\t', index_col=False, usecols=['value','phi_type','note_key'], dtype=str, encoding='latin-1')
+                probes_file = pd.read_csv(filepath, sep='\t', index_col=False, usecols=['patient_ID','phi_type','clean_value','note_key'], dtype=str, encoding='latin-1')
                 names_probes = probes_file.loc[(probes_file['phi_type'] == 'lname') | (probes_file['phi_type'] == 'fname')]
             
             except pd.errors.EmptyDataError as err:
@@ -325,7 +325,7 @@ class Philter:
             # need to make ditionary of lists
             map_set = {}
             for index, row in names_probes.iterrows():
-                value = row['value']
+                value = row['clean_value']
                 note_key = row['note_key']
                 if value in map_set:
                     map_set[value].append(note_key)
@@ -1730,7 +1730,7 @@ class Philter:
 
 
                 if rp_summaries[fn_key] != 0:
-                    overall_recall_dict[recall_key] = rp_summaries[tp_key]/(rp_summaries[fn_key] + rp_summaries[tp_key]
+                    overall_recall_dict[recall_key] = rp_summaries[tp_key]/(rp_summaries[fn_key] + rp_summaries[tp_key])
                 else:
                     overall_recall_dict[recall_key] = 1
 
