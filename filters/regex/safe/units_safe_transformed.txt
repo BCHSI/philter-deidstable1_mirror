@@ -1,1 +1,1 @@
-\b(?i)\d{5,}(***REMOVED*** ***REMOVED***{1,2})?(u|units|unit)\b
+\b(?i)(?<!U #: )(?<!MRN:  )(?<!MRN: )\d{5,}(***REMOVED*** ***REMOVED***{1,2})?(?!u\#)(?!unit\#)(?!units\#)(?!u\/s)(?!u\/a)(u|units|unit)\b
