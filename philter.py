@@ -1727,7 +1727,7 @@ class Philter:
 
 
                 if rp_summaries[fn_key] != 0:
-                    overall_recall_dict[recall_key] = rp_summaries[tp_key]/(rp_summaries[fn_key] + rp_summaries[tp_key]
+                    overall_recall_dict[recall_key] = rp_summaries[tp_key] / (rp_summaries[fn_key] + rp_summaries[tp_key])
                 else:
                     overall_recall_dict[recall_key] = 1
 
