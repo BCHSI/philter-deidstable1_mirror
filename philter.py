@@ -1727,7 +1727,7 @@ class Philter:
 
 
                 if rp_summaries***REMOVED***fn_key***REMOVED*** != 0:
-                    overall_recall_dict***REMOVED***recall_key***REMOVED*** = rp_summaries***REMOVED***tp_key***REMOVED***/(rp_summaries***REMOVED***fn_key***REMOVED*** + rp_summaries***REMOVED***tp_key***REMOVED***
+                    overall_recall_dict***REMOVED***recall_key***REMOVED*** = rp_summaries***REMOVED***tp_key***REMOVED*** / (rp_summaries***REMOVED***fn_key***REMOVED*** + rp_summaries***REMOVED***tp_key***REMOVED***)
                 else:
                     overall_recall_dict***REMOVED***recall_key***REMOVED*** = 1
 

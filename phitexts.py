@@ -65,7 +65,7 @@ class Phitexts:
         
         tkns = get_tokens(string, text, start)
         for tk_start in tkns:
-            tk_stop = tkns***REMOVED***tk_start***REMOVED******REMOVED***0***REMOVED***
+            tk_stop = tkns***REMOVED***tk_start***REMOVED******REMOVED***0***REMOVED*** + 1
             tokens.update({tk_start:tk_stop})
     
         return tokens
