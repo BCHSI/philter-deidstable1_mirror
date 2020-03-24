@@ -1,4 +1,4 @@
-***REMOVED***    
+***REMOVED***  
    {
         "title":"ucsf apex safe",
         "type":"regex",
@@ -561,13 +561,6 @@
         "notes":"This should remove anything with pattern found"
     },
     {
-        "title":"GI safe",
-        "type":"regex",
-        "exclude":false,
-        "filepath":"filters/regex/safe/GI_safe.txt",
-        "notes":"This should remove anything with pattern GI"
-    },
-    {
         "title":"go safe",
         "type":"regex",
         "exclude":false,
@@ -834,13 +827,6 @@
         "notes":"This should remove anything with pattern x pounds"
     },
     {
-        "title":"re safe",
-        "type":"regex",
-        "exclude":false,
-        "filepath":"filters/regex/safe/re_safe.txt",
-        "notes":"This should remove anything with pattern re"
-    },
-    {
         "title":"ROS safe",
         "type":"regex",
         "exclude":false,
@@ -944,69 +930,86 @@
         "exclude": false,
         "filepath": "filters/regex/safe/smoking_safe.txt",
         "note": ""
-    }, 
+    },     
     {
         "title":"full street address",
         "type":"regex",
         "exclude":true,
         "filepath":"filters/regex/addresses/full_street_address_transformed.txt",
-        "notes":"This should remove anything that looks like a full street address (numbers and words)"
+        "notes":"This should remove anything that looks like a full street address (numbers and words)",
+        "phi_type":"LOCATION"
     },
     {
         "title":"full street address with concatenated street indicator",
         "type":"regex",
         "exclude":true,
         "filepath":"filters/regex/addresses/full_street_address_with_concatenated_indicator_transformed.txt",
-        "notes":""
+        "notes":"",
+        "phi_type":"LOCATION"
+    },
+    {
+        "title":"number streetname city",
+        "type":"regex",
+        "exclude":true,
+        "filepath":"filters/regex/addresses/num_streetname_city_transformed.txt",
+        "notes":"",
+        "phi_type":"LOCATION"
     },
     {
         "title":"hospital name 1",
         "type":"regex",
         "exclude":true,
         "filepath":"filters/regex/addresses/hospital1.txt",
-        "notes":"This should remove anything the resembles a hospital name"
+        "notes":"This should remove anything the resembles a hospital name",
+        "phi_type":"LOCATION"
     },
     {
         "title":"hospital name 2",
         "type":"regex",
         "exclude":true,
         "filepath":"filters/regex/addresses/hospital2.txt",
-        "notes":"This should remove anything the resembles a hospital name"
+        "notes":"This should remove anything the resembles a hospital name",
+        "phi_type":"LOCATION"
     },  
     {
         "title":"number streetname noindicator suite",
         "type":"regex",
         "exclude":true,
         "filepath":"filters/regex/addresses/number_streetname_noindicator_suite_transformed.txt",
-        "notes":"This should remove anything that looks like a street address with a floor number extension"
+        "notes":"This should remove anything that looks like a street address with a floor number extension",
+        "phi_type":"LOCATION"
     },
     {
         "title":"number streetname city state",
         "type":"regex",
         "exclude":true,
         "filepath":"filters/regex/addresses/num_streetname_city_state_transformed.txt",
-        "notes":""
+        "notes":"",
+        "phi_type":"LOCATION"
     },
     {
         "title":"number streetname extension?",
         "type":"regex",
         "exclude":true,
         "filepath":"filters/regex/addresses/num_streetname_extension_transformed.txt",
-        "notes":"This should remove anything that looks like a street address (with a possible extension)"
+        "notes":"This should remove anything that looks like a street address (with a possible extension)",
+        "phi_type":"LOCATION"
     },
     {
         "title":"number streetname san",
         "type":"regex",
         "exclude":true,
         "filepath":"filters/regex/addresses/num_streetname_san_transformed.txt",
-        "notes":"This should remove anything that looks like the beginning of a street address followed by san (like san francsico)"
+        "notes":"This should remove anything that looks like the beginning of a street address followed by san (like san francsico)",
+        "phi_type":"LOCATION"
     },
     {
         "title":"number streetname",
         "type":"regex",
         "exclude":true,
         "filepath":"filters/regex/addresses/num_streetname_transformed.txt",
-        "notes":"This should remove anything that looks like the begiing of a street address"
+        "notes":"This should remove anything that looks like the begiing of a street address",
+        "phi_type":"LOCATION"
     },
 
     {
@@ -1014,35 +1017,40 @@
         "type":"regex",
         "exclude":true,
         "filepath":"filters/regex/addresses/corner_of_street_&_street_transformed.txt",
-        "notes":"This should remove anything that looks like a street corner"
+        "notes":"This should remove anything that looks like a street corner",
+        "phi_type":"LOCATION"
     },
     {
         "title":"street and street",
         "type":"regex",
         "exclude":true,
         "filepath":"filters/regex/addresses/street_and_street_transformed.txt",
-        "notes":"This should remove anything that looks like a street corner"
+        "notes":"This should remove anything that looks like a street corner",
+        "phi_type":"LOCATION"
     },
     {
         "title":"at street number dash street",
         "type":"regex",
         "exclude":true,
         "filepath":"filters/regex/addresses/at_street_number_dash_street_transformed.txt",
-        "notes":"This should remove anything that looks like a street corner"
+        "notes":"This should remove anything that looks like a street corner",
+        "phi_type":"LOCATION"
     },
     {
         "title":"at dash street",
         "type":"regex",
         "exclude":true,
         "filepath":"filters/regex/addresses/at_street_dash_street_transformed.txt",
-        "notes":"This should remove anything that looks like a street corner"
+        "notes":"This should remove anything that looks like a street corner",
+        "phi_type":"LOCATION"
     },
     {
         "title":"short street name",
         "type":"regex",
         "exclude":true,
         "filepath":"filters/regex/addresses/short_street_name_transformed.txt",
-        "notes":""
+        "notes":"",
+        "phi_type":"LOCATION"
     },
 
     {
@@ -1050,21 +1058,24 @@
         "type":"regex",
         "exclude":true,
         "filepath":"filters/regex/addresses/streetname_floor_number_transformed.txt",
-        "notes":"This should remove anything that looks like a street address with a suite number extension"
+        "notes":"This should remove anything that looks like a street address with a suite number extension",
+        "phi_type":"LOCATION"
     },
     {
         "title":"city state zip",
         "type":"regex",
         "exclude":true,
         "filepath":"filters/regex/addresses/city_state_zip_transformed.txt",
-        "notes":"This should remove anything that looks like a partial street address (city, state, zip"
+        "notes":"This should remove anything that looks like a partial street address (city, state, zip",
+        "phi_type":"LOCATION"
     },
     {
         "title":"city zip",
         "type":"regex",
         "exclude":true,
         "filepath":"filters/regex/addresses/city_zip_transformed.txt",
-        "notes":"This should remove anything that has a city name, followed by a zip code"
+        "notes":"This should remove anything that has a city name, followed by a zip code",
+        "phi_type":"LOCATION"
     },
 
     {
@@ -1072,211 +1083,210 @@
         "type":"regex",
         "exclude":true,
         "filepath":"filters/regex/addresses/lives_in_transformed.txt",
-        "notes":"This should remove anything that matches pattern lives in/on"
+        "notes":"This should remove anything that matches pattern lives in/on",
+        "phi_type":"LOCATION"
     },
     {
         "title":"city state",
         "type":"regex",
         "exclude":true,
         "filepath":"filters/regex/addresses/city_state_transformed.txt",
-        "notes":"This should remove anything that has a city name, followed by a state name/abbrev"
+        "notes":"This should remove anything that has a city name, followed by a state name/abbrev",
+        "phi_type":"LOCATION"
+    },
+    {
+        "title":"county name",
+        "type":"regex",
+        "exclude":true,
+        "filepath":"filters/regex/addresses/county_name_transformed.txt",
+        "notes":"",
+        "phi_type":"LOCATION"
     },
     {
         "title":"in city",
         "type":"regex",
         "exclude":true,
         "filepath":"filters/regex/addresses/in_city_transformed.txt",
-        "notes":"This should remove anything that has a city name"
+        "notes":"This should remove anything that has a city name",
+        "phi_type":"LOCATION"
     },
     {
         "title":"city",
         "type":"regex",
         "exclude":true,
         "filepath":"filters/regex/addresses/city_transformed.txt",
-        "notes":"This should remove anything that matches pattern ***REMOVED***name***REMOVED*** ***REMOVED***city***REMOVED***"
+        "notes":"This should remove anything that matches pattern ***REMOVED***name***REMOVED*** ***REMOVED***city***REMOVED***",
+        "phi_type":"LOCATION"
     },
     {
         "title":"hospitalized at",
         "type":"regex",
         "exclude":true,
         "filepath":"filters/regex/organizations/hospitalized_at_15chars.txt",
-        "notes":"This should remove anything with 'hospitalized at' followed by a proper noun"
+        "notes":"This should remove anything with 'hospitalized at' followed by a proper noun",
+        "phi_type":"LOCATION"
     },
     {
         "title":"admission from",
         "type":"regex",
         "exclude":true,
         "filepath":"filters/regex/organizations/admission_from_14chars.txt",
-        "notes":"This should remove anything with 'admission from' followed by a proper noun"
+        "notes":"This should remove anything with 'admission from' followed by a proper noun",
+        "phi_type":"LOCATION"
     },
     {
         "title":"admitted from",
         "type":"regex",
         "exclude":true,
         "filepath":"filters/regex/organizations/admitted_from_hospital_13chars.txt",
-        "notes":"This should remove anything with 'admitted from' followed by a proper noun"
+        "notes":"This should remove anything with 'admitted from' followed by a proper noun",
+        "phi_type":"LOCATION"
     },
     {
         "title":"admission to",
         "type":"regex",
         "exclude":true,
         "filepath":"filters/regex/organizations/admission_to_hospital_12chars.txt",
-        "notes":"This should remove anything with 'admission to' followed by a proper noun"
+        "notes":"This should remove anything with 'admission to' followed by a proper noun",
+        "phi_type":"LOCATION"
     },
     {
         "title":"admitted to 1",
         "type":"regex",
         "exclude":true,
         "filepath":"filters/regex/organizations/admitted_to_hospital_11chars.txt",
-        "notes":"This should remove anything with 'admitted to' followed by a proper noun"
+        "notes":"This should remove anything with 'admitted to' followed by a proper noun",
+        "phi_type":"LOCATION"
     },
     {
         "title":"brought to",
         "type":"regex",
         "exclude":true,
         "filepath":"filters/regex/organizations/brought_to_hospital_10chars.txt",
-        "notes":"This should remove anything with 'brought to' followed by a proper noun"
+        "notes":"This should remove anything with 'brought to' followed by a proper noun",
+        "phi_type":"LOCATION"
     },
     {
         "title":"taken to",
         "type":"regex",
         "exclude":true,
         "filepath":"filters/regex/organizations/taken_to_hospital_8chars.txt",
-        "notes":"This should remove anything with 'taken to' followed by a proper noun"
+        "notes":"This should remove anything with 'taken to' followed by a proper noun",
+        "phi_type":"LOCATION"
     },
     {
         "title":"admitted to 2",
         "type":"regex",
         "exclude":true,
         "filepath":"filters/regex/organizations/admitted_to_hospital_7chars.txt",
-        "notes":"This should remove anything with 'admitted to' followed by a proper noun"
+        "notes":"This should remove anything with 'admitted to' followed by a proper noun",
+        "phi_type":"LOCATION"
     },
     {
         "title":"box room",
         "type":"regex",
         "exclude":true,
         "filepath":"filters/regex/addresses/box_room_transformed.txt",
-        "notes":"This should remove anything that has pattern box # followed by room #"
+        "notes":"This should remove anything that has pattern box # followed by room #",
+        "phi_type":"LOCATION"
     },
     {
         "title":"room box",
         "type":"regex",
         "exclude":true,
         "filepath":"filters/regex/addresses/room_box_transformed.txt",
-        "notes":"This should remove anything that has pattern room # followed by box #"
+        "notes":"This should remove anything that has pattern room # followed by box #",
+        "phi_type":"LOCATION"
     },
     {
         "title":"floor box",
         "type":"regex",
         "exclude":true,
         "filepath":"filters/regex/addresses/floor_box_transformed.txt",
-        "notes":"This should remove anything that has pattern floor # followed by box #"
+        "notes":"This should remove anything that has pattern floor # followed by box #",
+        "phi_type":"LOCATION"
     },
     {
         "title":"desk #",
         "type":"regex",
         "exclude":true,
         "filepath":"filters/regex/addresses/desk_#_transformed.txt",
-        "notes":"This should remove anything that has pattern desk #"
+        "notes":"This should remove anything that has pattern desk #",
+        "phi_type":"LOCATION"
     },
     {
         "title":"pharmacy #",
         "type":"regex",
         "exclude":true,
         "filepath":"filters/regex/addresses/pharmacy_#_transformed.txt",
-        "notes":"This should remove anything that has pattern pharmacy #"
+        "notes":"This should remove anything that has pattern pharmacy #",
+        "phi_type":"LOCATION"
     },
     {
         "title":"at location",
         "type":"regex",
         "exclude":true,
         "filepath":"filters/regex/addresses/at_address_noindicator_transformed.txt",
-        "notes":"This should remove anything that has pattern at X"
+        "notes":"This should remove anything that has pattern at X",
+        "phi_type":"LOCATION"
+    },
+    {
+        "title":"number cardinal direction",
+        "type":"regex",
+        "exclude":true,
+        "filepath":"filters/regex/addresses/number_cardinal_direction_transformed.txt",
+        "notes":"",
+        "phi_type":"LOCATION"
     },
     {
         "title":"waiting room",
         "type":"regex",
         "exclude":true,
         "filepath":"filters/regex/addresses/waiting_room_transformed.txt",
-        "notes":"This should remove anything that has pattern waiting room"
+        "notes":"This should remove anything that has pattern waiting room",
+        "phi_type":"LOCATION"
     },
     {
         "title":"to state",
         "type":"regex",
         "exclude":true,
         "filepath":"filters/regex/addresses/to_state_transformed.txt",
-        "notes":"This should remove anything that has pattern to ***REMOVED***state name***REMOVED***"
+        "notes":"This should remove anything that has pattern to ***REMOVED***state name***REMOVED***",
+        "phi_type":"LOCATION"
     },
     {
         "title":"state indicator",
         "type":"regex",
         "exclude":true,
         "filepath":"filters/regex/addresses/state_indicator_transformed.txt",
-        "notes":"This should remove anything that has pattern to ***REMOVED***state name***REMOVED***"
+        "notes":"This should remove anything that has pattern to ***REMOVED***state name***REMOVED***",
+        "phi_type":"LOCATION"
     },
     {
         "title":"on streetname",
         "type":"regex",
         "exclude":true,
         "filepath":"filters/regex/addresses/streetname_only_transformed.txt",
-        "notes":"This should remove anything that has pattern on ***REMOVED***street name***REMOVED***"
+        "notes":"This should remove anything that has pattern on ***REMOVED***street name***REMOVED***",
+        "phi_type":"LOCATION"
     },
     {
         "title":"box",
         "type":"regex",
         "exclude":true,
         "filepath":"filters/regex/addresses/box_transformed.txt",
-        "notes":"This should remove anything that has a box number"
+        "notes":"This should remove anything that has a box number",
+        "phi_type":"LOCATION"
     },
     {
         "title":"room",
         "type":"regex",
         "exclude":true,
         "filepath":"filters/regex/addresses/room_#_transformed.txt",
-        "notes":"This should remove anything that has a room number"
+        "notes":"This should remove anything that has a room number",
+        "phi_type":"LOCATION"
     },
-    {
-        "title":"days safe",
-        "type":"regex",
-        "exclude":false,
-        "filepath":"filters/regex/safe/days_safe.txt",
-        "notes":"This should remove anything with pattern XX days"
-    },
-    {
-        "title":"male safe",
-        "type":"regex",
-        "exclude":false,
-        "filepath":"filters/regex/safe/male_safe.txt",
-        "notes":"This should remove anything with pattern year old male"
-    },
-    {
-        "title":"bp safe",
-        "type":"regex",
-        "exclude":false,
-        "filepath":"filters/regex/safe/bp_safe.txt",
-        "notes":"This should remove anything with pattern bp"
-    },
-    {
-        "title":"units safe",
-        "type":"regex",
-        "exclude":false,
-        "filepath":"filters/regex/safe/units_safe.txt",
-        "notes":"This should remove anything with pattern unit"
-    },
-    {
-        "title":"tablet safe",
-        "type":"regex",
-        "exclude":false,
-        "filepath":"filters/regex/safe/tablet_safe.txt",
-        "notes":"This should remove anything with pattern tablet"
-    },
-    {
-        "title":"pain safe",
-        "type":"regex",
-        "exclude":false,
-        "filepath":"filters/regex/safe/pain_safe.txt",
-        "notes":"This should remove anything with pattern pain"
-    },
+
     {
         "title":"YYYY/MM-YYYY/MM",
         "type":"regex",
@@ -1390,6 +1400,14 @@
         "phi_type":"DATE"
     },
     {
+        "title":"dd_month_name",
+        "type":"regex",
+        "exclude":true,
+        "filepath":"filters/regex/dates/dd_month_name_transformed.txt",
+        "notes":"",
+        "phi_type":"DATE"
+    },
+    {
         "title":"month_name_dd_yy",
         "type":"regex",
         "exclude":true,
@@ -1438,11 +1456,19 @@
         "phi_type":"DATE"
     },
     {
-        "title":"dd_mm_yy",
+        "title":"month_name",
         "type":"regex",
         "exclude":true,
-        "filepath":"filters/regex/dates/dd_mm_yy_transformed.txt",
-        "notes":"This should remove anything with pattern dd_mm_yy",
+        "filepath":"filters/regex/dates/month_name_transformed.txt",
+        "notes":"This should remove anything with pattern month_name",
+        "phi_type":"DATE"
+    },
+    {
+        "title":"ddmonth_nameyyyy.txt",
+        "type":"regex",
+        "exclude":true,
+        "filepath":"filters/regex/dates/ddmonth_nameyyyy_transformed.txt",
+        "notes":"",
         "phi_type":"DATE"
     },
     {
@@ -1451,6 +1477,22 @@
         "exclude":true,
         "filepath":"filters/regex/dates/dd_mm_yyyy_transformed.txt",
         "notes":"This should remove anything with pattern dd_mm_yyyy",
+        "phi_type":"DATE"
+    },
+    {
+        "title":"mm_dd_yyyy",
+        "type":"regex",
+        "exclude":true,
+        "filepath":"filters/regex/dates/mm_dd_yyyy_transformed.txt",
+        "notes":"This should remove anything with pattern mm_dd_yyyy",
+        "phi_type":"DATE"
+    },
+    {
+        "title":"dd_mm_yy",
+        "type":"regex",
+        "exclude":true,
+        "filepath":"filters/regex/dates/dd_mm_yy_transformed.txt",
+        "notes":"This should remove anything with pattern dd_mm_yy",
         "phi_type":"DATE"
     },
     {
@@ -1475,14 +1517,6 @@
         "exclude":true,
         "filepath":"filters/regex/dates/yyyy_mm_dd_transformed.txt",
         "notes":"This should remove anything with pattern yyyy_mm_dd",
-        "phi_type":"DATE"
-    },
-    {
-        "title":"mm_dd_yyyy",
-        "type":"regex",
-        "exclude":true,
-        "filepath":"filters/regex/dates/mm_dd_yyyy_transformed.txt",
-        "notes":"This should remove anything with pattern mm_dd_yyyy",
         "phi_type":"DATE"
     },
     {
@@ -1582,6 +1616,696 @@
         "phi_type":"DATE"
     },  
     {
+        "title":"season of yyyy",
+        "type":"regex",
+        "exclude":true,
+        "filepath":"filters/regex/dates/season_of_yyyy_transformed.txt",
+        "notes":"",
+        "phi_type":"DATE"
+    }, 
+    {
+        "title":"season of yy",
+        "type":"regex",
+        "exclude":true,
+        "filepath":"filters/regex/dates/season_of_yy_transformed.txt",
+        "notes":"",
+        "phi_type":"DATE"
+    },
+    {
+        "title":"holidays",
+        "type":"regex",
+        "exclude":true,
+        "filepath":"filters/regex/dates/holidays_transformed.txt",
+        "notes":"This should remove anything with pattern holidays",
+        "pos":***REMOVED***"NNP"***REMOVED***, 
+        "phi_type":"HOLIDAYS",
+        "comment":"Holidays"
+    }, 
+    {
+        "title":"model number",
+        "type":"regex",
+        "exclude":true,
+        "filepath":"filters/regex/mrn_id/model_number.txt",
+        "notes":"This should remove anything with pattern model number",
+        "phi_type":"ID"
+    },
+    {
+        "title":"lot #",
+        "type":"regex",
+        "exclude":true,
+        "filepath":"filters/regex/mrn_id/lot_#.txt",
+        "notes":"This should remove anything with pattern lot #",
+        "phi_type":"ID"
+    },      
+    {
+        "title":"id verbose",
+        "type":"regex",
+        "exclude":true,
+        "filepath":"filters/regex/mrn_id/id_verbose.txt",
+        "notes":"This should remove anything with pattern ID: XXXXX",
+        "phi_type":"ID"
+    },      
+    {
+        "title":"activation code",
+        "type":"regex",
+        "exclude":true,
+        "filepath":"filters/regex/mrn_id/activation_code.txt",
+        "notes":"This should remove anything with pattern activation code: XXXXX-XXXX-XXXXX",
+        "phi_type":"ID"
+    },              
+    {
+        "title":"six or more digits",
+        "type":"regex",
+        "exclude":true,
+        "filepath":"filters/regex/mrn_id/DDDDDD+.txt",
+        "notes":"This should remove anything that matches any number with 6 or more digits (15 limit is arbitrary)",
+        "phi_type":"ID"
+    },
+    {
+        "title":"order number",
+        "type":"regex",
+        "exclude":true,
+        "filepath":"filters/regex/mrn_id/order_number.txt",
+        "notes":"This should remove anything that matches order number ...",
+        "phi_type":"ID"
+    },
+    {
+        "title":"specimen number",
+        "type":"regex",
+        "exclude":true,
+        "filepath":"filters/regex/mrn_id/specimen_#.txt",
+        "notes":"This should remove anything that matches specimen number ...",
+        "phi_type":"ID"
+    },
+    {
+        "title":"cassette_#",
+        "type":"regex",
+        "exclude":true,
+        "filepath":"filters/regex/mrn_id/cassette_#.txt",
+        "notes":"This should remove anything that matches cassette_# ...",
+        "phi_type":"ID"
+    },
+    {
+        "title":"# reviewed by",
+        "type":"regex",
+        "exclude":true,
+        "filepath":"filters/regex/mrn_id/#_reviewed_by.txt",
+        "notes":"This should remove anything that matches # reviewed by ...",
+        "phi_type":"ID"
+    },
+    {
+        "title":"account #",
+        "type":"regex",
+        "exclude":true,
+        "filepath":"filters/regex/mrn_id/account_#.txt",
+        "notes":"This should remove anything that matches account #",
+        "phi_type":"ID"
+    },
+    {
+        "title":"accession #",
+        "type":"regex",
+        "exclude":true,
+        "filepath":"filters/regex/mrn_id/accession_#.txt",
+        "notes":"This should remove anything that matches accession #",
+        "phi_type":"ID"
+    },
+    {
+        "title":"tape number",
+        "type":"regex",
+        "exclude":true,
+        "filepath":"filters/regex/mrn_id/tape_number.txt",
+        "notes":"This should remove anything that matches tape number",
+        "phi_type":"ID"
+    },
+    {
+        "title":"CCC-DD-DDDDD",
+        "type":"regex",
+        "exclude":true,
+        "filepath":"filters/regex/mrn_id/CCC-DD-DDDDD.txt",
+        "notes":"",
+        "phi_type":"ID"
+    },
+    {
+        "title":"CCDDDD-D-CC",
+        "type":"regex",
+        "exclude":true,
+        "filepath":"filters/regex/mrn_id/CCDDDD-D-CC.txt",
+        "notes":"This should remove anything that matches CCDDDD-D-CC",
+        "phi_type":"ID"
+    },
+    {
+        "title":"DDCCCDDD",
+        "type":"regex",
+        "exclude":true,
+        "filepath":"filters/regex/mrn_id/DDCCCDDD.txt",
+        "notes":"This should remove anything that matches DDCCCDDD",
+        "phi_type":"ID"
+    },
+    {
+        "title":"CCDDD_DDD",
+        "type":"regex",
+        "exclude":true,
+        "filepath":"filters/regex/mrn_id/CCDDD_DDD.txt",
+        "notes":"This should remove anything that matches NNDDD(anything)DDDD",
+        "phi_type":"ID"
+    },
+    {
+        "title":"DDDD_DDDD-DD",
+        "type":"regex",
+        "exclude":true,
+        "filepath":"filters/regex/mrn_id/DDDD_DDDD-DD.txt",
+        "notes":"",
+        "phi_type":"ID"
+    },
+    {
+        "title":"DDDD_DDD",
+        "type":"regex",
+        "exclude":true,
+        "filepath":"filters/regex/mrn_id/DDDD_DDD.txt",
+        "notes":"This should remove anything that matches DDDD-DDD",
+        "phi_type":"ID"
+    },
+    {
+        "title":"CDD_DDDD+",
+        "type":"regex",
+        "exclude":true,
+        "filepath":"filters/regex/mrn_id/CDD_DDDD+.txt",
+        "notes":"This should remove anything that matches NCDD_DDDD+",
+        "phi_type":"ID"
+    },
+    {
+        "title":"mixed 2",
+        "type":"regex",
+        "exclude":true,
+        "filepath":"filters/regex/mrn_id/mixed002.txt",
+        "notes":"This should remove anything that matches NND",
+        "phi_type":"ID"
+    },
+    {
+        "title":"mixed 3",
+        "type":"regex",
+        "exclude":true,
+        "filepath":"filters/regex/mrn_id/mixed003.txt",
+        "notes":"This should remove anything that matches DDDDNNN",
+        "phi_type":"ID"
+    },
+    {
+        "title":"mixed 4",
+        "type":"regex",
+        "exclude":true,
+        "filepath":"filters/regex/mrn_id/mixed004.txt",
+        "notes":"This should remove anything that matches DDDN+",
+        "phi_type":"ID"
+    },
+    {
+        "title":"mixed 5",
+        "type":"regex",
+        "exclude":true,
+        "filepath":"filters/regex/mrn_id/mixed005.txt",
+        "notes":"This should remove anything that matches CDC",
+        "phi_type":"ID"
+    },  
+    {
+        "title":"mixed 6",
+        "type":"regex",
+        "exclude":true,
+        "filepath":"filters/regex/mrn_id/mixed006.txt",
+        "notes":"This should remove anything that matches CDDDC",
+        "phi_type":"ID"
+    },
+    {
+        "title":"mixed 7",
+        "type":"regex",
+        "exclude":true,
+        "filepath":"filters/regex/mrn_id/mixed007.txt",
+        "notes":"This should remove anything that matches a weird string of numbers/letters connected by colons etc",
+        "phi_type":"ID"
+    },
+    {
+        "title":"mixed 8",
+        "type":"regex",
+        "exclude":true,
+        "filepath":"filters/regex/mrn_id/mixed008.txt",
+        "notes":"This should remove anything that matches a (longer) weird string of numbers/letters connected by colons etc",
+        "phi_type":"ID"
+    },
+    {
+        "title":"mixed 10",
+        "type":"regex",
+        "exclude":true,
+        "filepath":"filters/regex/mrn_id/mixed_010_transformed.txt",
+        "notes":"This should remove anything with weird number/letter mashups",
+        "phi_type":"ID"
+    },
+    {
+        "title":"CCCDDD",
+        "type":"regex",
+        "exclude":true,
+        "filepath":"filters/regex/mrn_id/CCCDDD.txt",
+        "notes":"This should remove anything that matches CCCDDD",
+        "phi_type":"ID"
+    },  
+    {
+        "title":"visit code",
+        "type":"regex",
+        "exclude":true,
+        "filepath":"filters/regex/mrn_id/visit_code.txt",
+        "notes":"",
+        "phi_type":"ID"
+    },  
+    {
+        "title":"DDDDCDDDDD",
+        "type":"regex",
+        "exclude":true,
+        "filepath":"filters/regex/mrn_id/DDDDCDDDDD.txt",
+        "notes":"This should remove anything that matches DDDDCDDDDD",
+        "phi_type":"ID"
+    },
+    {
+        "title":"DDD-DD-DD",
+        "type":"regex",
+        "exclude":true,
+        "filepath":"filters/regex/mrn_id/DDD-DD-DD.txt",
+        "notes":"This should remove anything that matches any number with pattern DDD-DD-DD",
+        "phi_type":"ID"
+    },
+    {
+        "title":"DD-DD-DD-DD",
+        "type":"regex",
+        "exclude":true,
+        "filepath":"filters/regex/mrn_id/DD-DD-DD-DD.txt",
+        "notes":"This should remove anything that matches any numbers separated by 3 dashes",
+        "phi_type":"ID"
+    },  
+    {
+        "title":"DD-DDDDDC",
+        "type":"regex",
+        "exclude":true,
+        "filepath":"filters/regex/mrn_id/DD-DDDDDC.txt",
+        "notes":"This should remove anything that matches any number with DD-DDDDDC",
+        "phi_type":"ID"
+    },
+    {
+        "title":"DD-CDD-DDDD",
+        "type":"regex",
+        "exclude":true,
+        "filepath":"filters/regex/mrn_id/DD-CDD-DDDD.txt",
+        "notes":"",
+        "phi_type":"ID"
+    },
+    {
+        "title":"****DC",
+        "type":"regex",
+        "exclude":true,
+        "filepath":"filters/regex/mrn_id/blocked_DC.txt",
+        "notes":"This should remove anything that matches any blocked MRN number with last digits",
+        "phi_type":"ID"
+    },
+    {
+        "title":"model and serial numbers",
+        "type":"regex",
+        "exclude":true,
+        "filepath":"filters/regex/mrn_id/model_and_serial.txt",
+        "notes":"This should remove anything that matches a model or serial number pattern",
+        "phi_type":"ID"
+    },
+    {
+        "title":"ssn only",
+        "type":"regex",
+        "exclude":true,
+        "filepath":"filters/regex/mrn_id/ssn.txt",
+        "notes":"This should remove anything that matches XXX-XX-XXXX",
+        "phi_type":"ID"
+    },
+    {
+        "title":"file indicator",
+        "type":"regex",
+        "exclude":true,
+        "filepath":"filters/regex/mrn_id/file_indicator.txt",
+        "notes":"This should remove anything that matches XXX-XX-XXXX",
+        "phi_type":"ID"
+    },
+    {
+        "title":"url",
+        "type":"regex",
+        "exclude":true,
+        "filepath":"filters/regex/contact/url.txt",
+        "notes":"This should remove anything that looks like a url",
+        "phi_type":"CONTACT"
+    },
+    {
+        "title":"call #",
+        "type":"regex",
+        "exclude":true,
+        "filepath":"filters/regex/contact/call_#.txt",
+        "notes":"This should remove anything that matches call #: etc.",
+        "phi_type":"CONTACT"
+    },
+    {
+        "title":"emails",
+        "type":"regex",
+        "exclude":true,
+        "filepath":"filters/regex/contact/email.txt",
+        "notes":"This should remove anything that looks like an email",
+        "phi_type":"CONTACT"
+    },
+    {
+        "title":"xxx_xxx_xxxx",
+        "type":"regex",
+        "exclude":true,
+        "filepath":"filters/regex/contact/xxx_xxx_xxxx.txt",
+        "notes":"This should remove anything that xxx.xxx.xxxx",
+        "phi_type":"CONTACT"
+    },
+    {
+        "title":"xxx_xxx_CCCC",
+        "type":"regex",
+        "exclude":true,
+        "filepath":"filters/regex/contact/xxx_xxx_CCCC.txt",
+        "notes":"This should remove anything that xxx.xxx.CCCC+",
+        "phi_type":"CONTACT"
+    },
+    {
+        "title":"5 digit pager",
+        "type":"regex",
+        "exclude":true,
+        "filepath":"filters/regex/contact/pager.txt",
+        "notes":"This should remove anything that matches a pager number",
+        "phi_type":"CONTACT"
+    },
+    {
+        "title": "lived to x",
+        "type": "regex",
+        "exclude": true,
+        "filepath": "filters/regex/age/lived_to_x.txt",
+        "note": "",
+        "phi_type":"AGE>=90"
+    },
+    {
+        "title": "x years old",
+        "type": "regex",
+        "exclude": true,
+        "filepath": "filters/regex/age/x_years_old.txt",
+        "note": "",
+        "phi_type":"AGE>=90"
+    },
+    {
+        "title": "x year old",
+        "type": "regex",
+        "exclude": true,
+        "filepath": "filters/regex/age/x_year_old.txt",
+        "note": "",
+        "phi_type":"AGE>=90"
+    },
+    {
+        "title": "age x",
+        "type": "regex",
+        "exclude": true,
+        "filepath": "filters/regex/age/age_x.txt",
+        "note": "",
+        "phi_type":"AGE>=90"
+    },
+    {
+        "title": "x yo",
+        "type": "regex",
+        "exclude": true,
+        "filepath": "filters/regex/age/x_yo.txt",
+        "note": "",
+        "phi_type":"AGE>=90"
+    },
+      {
+        "title": "confirmed by name",
+        "type": "regex",
+        "exclude": true,
+        "filepath": "filters/regex/salutations/confirmed_by_name.txt",
+        "note": "",
+        "phi_type":"NAME"
+    },  
+      {
+        "title": "editor name",
+        "type": "regex",
+        "exclude": true,
+        "filepath": "filters/regex/salutations/editor_name.txt",
+        "note": "",
+        "phi_type":"NAME"
+    }, 
+      {
+        "title": "code status name",
+        "type": "regex",
+        "exclude": true,
+        "filepath": "filters/regex/salutations/code_status_name.txt",
+        "note": "",
+        "phi_type":"NAME"
+    },  
+  {
+        "title": "attending",
+        "type": "regex",
+        "exclude": true,
+        "filepath": "filters/regex/salutations/attending.txt",
+        "note": "",
+        "phi_type":"NAME"
+    },
+    {
+        "title": "u_#_patient",
+        "type": "regex",
+        "exclude": true,
+        "filepath": "filters/regex/salutations/u_#_patient.txt",
+        "note": "",
+        "phi_type":"NAME"
+    },
+    {
+        "title": "patient mrn",
+        "type": "regex",
+        "exclude": true,
+        "filepath": "filters/regex/salutations/patient_mrn.txt",
+        "note": "",
+        "phi_type":"NAME"
+    },
+    {
+        "title": "name_age",
+        "type": "regex",
+        "exclude": true,
+        "filepath": "filters/regex/salutations/name_age.txt",
+        "note": "",
+        "phi_type":"NAME"
+    },
+    {
+        "title": "patient/provider",
+        "type": "regex",
+        "exclude": true,
+        "filepath": "filters/regex/salutations/patient_provider.txt",
+        "note": "",
+        "phi_type":"NAME"
+    },
+    {
+        "title": "patient summary",
+        "type": "regex",
+        "exclude": true,
+        "filepath": "filters/regex/salutations/patient_summary.txt",
+        "note": "",
+        "phi_type":"NAME"
+    },
+    {
+        "title": "wrote",
+        "type": "regex",
+        "exclude": true,
+        "filepath": "filters/regex/salutations/wrote.txt",
+        "note": "",
+        "phi_type":"NAME"
+    },     
+    {
+        "title": "salutations1",
+        "type": "regex",
+        "exclude": true,
+        "filepath": "filters/regex/salutations/pre_salutations_2chars.txt",
+        "note": "",
+        "phi_type":"NAME"
+    },
+    {
+        "title": "salutations2",
+        "type": "regex",
+        "exclude": true,
+        "filepath": "filters/regex/salutations/pre_salutations_3chars.txt",
+        "note": "",
+        "phi_type":"NAME"
+    },
+    {
+        "title": "salutations3",
+        "type": "regex",
+        "exclude": true,
+        "filepath": "filters/regex/salutations/pre_salutations_4chars.txt",
+        "note": "",
+        "phi_type":"NAME"
+    },
+    {
+        "title": "salutations4",
+        "type": "regex",
+        "exclude": true,
+        "filepath": "filters/regex/salutations/pre_salutations_5chars.txt",
+        "note": "",
+        "phi_type":"NAME"
+    },
+    {
+        "title": "Md PhD",
+        "type": "regex",
+        "exclude": true,
+        "filepath": "filters/regex/salutations/md_phd.txt",
+        "note": "",
+        "phi_type":"NAME"
+    },
+    {
+        "title": "salutations5",
+        "type": "regex",
+        "exclude": true,
+        "filepath": "filters/regex/salutations/post_salutations_2chars.txt",
+        "note": "",
+        "phi_type":"NAME"
+    },
+    {
+        "title": "salutations6",
+        "type": "regex",
+        "exclude": true,
+        "filepath": "filters/regex/salutations/post_salutations_3chars.txt",
+        "note": "",
+        "phi_type":"NAME"
+    },
+    {
+        "title": "salutations7",
+        "type": "regex",
+        "exclude": true,
+        "filepath": "filters/regex/salutations/post_salutations_4chars.txt",
+        "note": "",
+        "phi_type":"NAME"
+    },
+    {
+        "title": "names patterns",
+        "type": "regex",
+        "exclude": true,
+        "filepath": "filters/regex/salutations/name_patterns.txt",
+        "note": "",
+        "phi_type":"NAME"
+    },
+    {
+        "title": "ordering md",
+        "type": "regex",
+        "exclude": true,
+        "filepath": "filters/regex/salutations/ordering_md.txt",
+        "note": "",
+        "phi_type":"NAME"
+    },
+       {
+        "title": "name indicator",
+        "type": "regex",
+        "exclude": true,
+        "filepath": "filters/regex/salutations/name_indicator.txt",
+        "note": "",
+        "phi_type":"NAME"
+    },
+    {
+        "title": "relative indicator",
+        "type": "regex",
+        "exclude": true,
+        "filepath": "filters/regex/salutations/relative_indicator.txt",
+        "note": "",
+        "phi_type":"NAME"
+    },
+     {
+        "title": "dr ambiguous",
+        "type": "regex",
+        "exclude": true,
+        "filepath": "filters/regex/salutations/dr_ambiguous.txt",
+        "note": "",
+        "phi_type":"NAME"
+    },
+     {
+        "title": "dash doctor",
+        "type": "regex",
+        "exclude": true,
+        "filepath": "filters/regex/salutations/dash_doctor.txt",
+        "note": "________doctor name",
+        "phi_type":"NAME"
+    },
+     {
+        "title": "patient present",
+        "type": "regex",
+        "exclude": true,
+        "filepath": "filters/regex/salutations/patient_present.txt",
+        "note": "",
+        "phi_type":"NAME"
+    },
+     {
+        "title": "patient measurements",
+        "type": "regex",
+        "exclude": true,
+        "filepath": "filters/regex/salutations/patient_measurements.txt",
+        "note": "",
+        "phi_type":"NAME"
+    },
+     {
+        "title": "patholigist",
+        "type": "regex",
+        "exclude": true,
+        "filepath": "filters/regex/salutations/pathologist.txt",
+        "note": "",
+        "phi_type":"NAME"
+    },
+     {
+        "title": "email header",
+        "type": "regex",
+        "exclude": true,
+        "filepath": "filters/regex/salutations/email_header.txt",
+        "note": "",
+        "phi_type":"NAME"
+    },
+       {
+        "title": "by doctor number",
+        "type": "regex",
+        "exclude": true,
+        "filepath": "filters/regex/salutations/by_doctor_number.txt",
+        "note": "",
+        "phi_type":"NAME"
+    },
+       {
+        "title": "sent note to",
+        "type": "regex",
+        "exclude": true,
+        "filepath": "filters/regex/salutations/sent_note_to.txt",
+        "note": "",
+        "phi_type":"NAME"
+    },
+       {
+        "title": "sincerely",
+        "type": "regex",
+        "exclude": true,
+        "filepath": "filters/regex/salutations/sincerely.txt",
+        "note": "",
+        "phi_type":"NAME"
+    },
+       {
+        "title": "ucsf SF",
+        "type": "regex",
+        "exclude": true,
+        "filepath": "filters/regex/ucsf_regex/ucsf_sf.txt",
+        "note": "",
+        "phi_type":"LOCATION"
+    },
+    {
+        "title": "ucsf bay area",
+        "type": "regex",
+        "exclude": true,
+        "filepath": "filters/regex/ucsf_regex/ucsf_bay_area.txt",
+        "note": "",
+        "phi_type":"LOCATION"
+    },
+    {
+        "title": "ucsf neighborhoods",
+        "type": "regex",
+        "exclude": true,
+        "filepath": "filters/regex/ucsf_regex/ucsf_neighborhoods.txt",
+        "note": "",
+        "phi_type":"LOCATION"
+    },
+    {
         "title":"month_name",
         "type":"regex",
         "exclude":true,
@@ -1589,592 +2313,73 @@
         "notes":"This should remove anything with pattern month_name",
         "phi_type":"DATE"
     },
-    {
-        "title":"model number",
-        "type":"regex",
-        "exclude":true,
-        "filepath":"filters/regex/mrn_id/model_number.txt",
-        "notes":"This should remove anything with pattern model number"
-    },
-    {
-        "title":"lot #",
-        "type":"regex",
-        "exclude":true,
-        "filepath":"filters/regex/mrn_id/lot_#.txt",
-        "notes":"This should remove anything with pattern lot #"
-    },      
-    {
-        "title":"id verbose",
-        "type":"regex",
-        "exclude":true,
-        "filepath":"filters/regex/mrn_id/id_verbose.txt",
-        "notes":"This should remove anything with pattern ID: XXXXX"
-    },      
-    {
-        "title":"activation code",
-        "type":"regex",
-        "exclude":true,
-        "filepath":"filters/regex/mrn_id/activation_code.txt",
-        "notes":"This should remove anything with pattern activation code: XXXXX-XXXX-XXXXX"
-    },              
-    {
-        "title":"six or more digits",
-        "type":"regex",
-        "exclude":true,
-        "filepath":"filters/regex/mrn_id/DDDDDD+.txt",
-        "notes":"This should remove anything that matches any number with 6 or more digits (15 limit is arbitrary)"
-    },
-    {
-        "title":"order number",
-        "type":"regex",
-        "exclude":true,
-        "filepath":"filters/regex/mrn_id/order_number.txt",
-        "notes":"This should remove anything that matches order number ..."
-    },
-    {
-        "title":"specimen number",
-        "type":"regex",
-        "exclude":true,
-        "filepath":"filters/regex/mrn_id/specimen_#.txt",
-        "notes":"This should remove anything that matches specimen number ..."
-    },
-    {
-        "title":"cassette_#",
-        "type":"regex",
-        "exclude":true,
-        "filepath":"filters/regex/mrn_id/cassette_#.txt",
-        "notes":"This should remove anything that matches cassette_# ..."
-    },
-    {
-        "title":"# reviewed by",
-        "type":"regex",
-        "exclude":true,
-        "filepath":"filters/regex/mrn_id/#_reviewed_by.txt",
-        "notes":"This should remove anything that matches # reviewed by ..."
-    },
-    {
-        "title":"account #",
-        "type":"regex",
-        "exclude":true,
-        "filepath":"filters/regex/mrn_id/account_#.txt",
-        "notes":"This should remove anything that matches account #"
-    },
-    {
-        "title":"accession #",
-        "type":"regex",
-        "exclude":true,
-        "filepath":"filters/regex/mrn_id/accession_#.txt",
-        "notes":"This should remove anything that matches accession #"
-    },
-    {
-        "title":"tape number",
-        "type":"regex",
-        "exclude":true,
-        "filepath":"filters/regex/mrn_id/tape_number.txt",
-        "notes":"This should remove anything that matches tape number"
-    },
-    {
-        "title":"CCDDDD-D-CC",
-        "type":"regex",
-        "exclude":true,
-        "filepath":"filters/regex/mrn_id/CCDDDD-D-CC.txt",
-        "notes":"This should remove anything that matches CCDDDD-D-CC"
-    },
-    {
-        "title":"DDCCCDDD",
-        "type":"regex",
-        "exclude":true,
-        "filepath":"filters/regex/mrn_id/DDCCCDDD.txt",
-        "notes":"This should remove anything that matches DDCCCDDD"
-    },
-    {
-        "title":"CCDDD_DDD",
-        "type":"regex",
-        "exclude":true,
-        "filepath":"filters/regex/mrn_id/CCDDD_DDD.txt",
-        "notes":"This should remove anything that matches NNDDD(anything)DDDD"
-    },
-    {
-        "title":"DDDD_DDD",
-        "type":"regex",
-        "exclude":true,
-        "filepath":"filters/regex/mrn_id/DDDD_DDD.txt",
-        "notes":"This should remove anything that matches DDDD-DDD"
-    },
-    {
-        "title":"CDD_DDDD+",
-        "type":"regex",
-        "exclude":true,
-        "filepath":"filters/regex/mrn_id/CDD_DDDD+.txt",
-        "notes":"This should remove anything that matches NCDD_DDDD+"
-    },
-    {
-        "title":"mixed 2",
-        "type":"regex",
-        "exclude":true,
-        "filepath":"filters/regex/mrn_id/mixed002.txt",
-        "notes":"This should remove anything that matches NND"
-    },
-    {
-        "title":"mixed 3",
-        "type":"regex",
-        "exclude":true,
-        "filepath":"filters/regex/mrn_id/mixed003.txt",
-        "notes":"This should remove anything that matches DDDDNNN"
-    },
-    {
-        "title":"mixed 4",
-        "type":"regex",
-        "exclude":true,
-        "filepath":"filters/regex/mrn_id/mixed004.txt",
-        "notes":"This should remove anything that matches DDDN+"
-    },
-    {
-        "title":"mixed 5",
-        "type":"regex",
-        "exclude":true,
-        "filepath":"filters/regex/mrn_id/mixed005.txt",
-        "notes":"This should remove anything that matches CDC"
-    },  
-    {
-        "title":"mixed 6",
-        "type":"regex",
-        "exclude":true,
-        "filepath":"filters/regex/mrn_id/mixed006.txt",
-        "notes":"This should remove anything that matches CDDDC"
-    },
-    {
-        "title":"mixed 7",
-        "type":"regex",
-        "exclude":true,
-        "filepath":"filters/regex/mrn_id/mixed007.txt",
-        "notes":"This should remove anything that matches a weird string of numbers/letters connected by colons etc"
-    },
-    {
-        "title":"mixed 8",
-        "type":"regex",
-        "exclude":true,
-        "filepath":"filters/regex/mrn_id/mixed008.txt",
-        "notes":"This should remove anything that matches a (longer) weird string of numbers/letters connected by colons etc"
-    },
-    {
-        "title":"mixed 10",
-        "type":"regex",
-        "exclude":true,
-        "filepath":"filters/regex/mrn_id/mixed_010_transformed.txt",
-        "notes":"This should remove anything with weird number/letter mashups"
-    },
-    {
-        "title":"CCCDDD",
-        "type":"regex",
-        "exclude":true,
-        "filepath":"filters/regex/mrn_id/CCCDDD.txt",
-        "notes":"This should remove anything that matches CCCDDD"
-    },  
-    {
-        "title":"DDDDCDDDDD",
-        "type":"regex",
-        "exclude":true,
-        "filepath":"filters/regex/mrn_id/DDDDCDDDDD.txt",
-        "notes":"This should remove anything that matches DDDDCDDDDD"
-    },
-    {
-        "title":"DDD-DD-DD",
-        "type":"regex",
-        "exclude":true,
-        "filepath":"filters/regex/mrn_id/DDD-DD-DD.txt",
-        "notes":"This should remove anything that matches any number with pattern DDD-DD-DD"
-    },
-    {
-        "title":"DD-DD-DD-DD",
-        "type":"regex",
-        "exclude":true,
-        "filepath":"filters/regex/mrn_id/DD-DD-DD-DD.txt",
-        "notes":"This should remove anything that matches any numbers separated by 3 dashes"
-    },  
-    {
-        "title":"DD-DDDDDC",
-        "type":"regex",
-        "exclude":true,
-        "filepath":"filters/regex/mrn_id/DD-DDDDDC.txt",
-        "notes":"This should remove anything that matches any number with DD-DDDDDC"
-    },
-    {
-        "title":"****DC",
-        "type":"regex",
-        "exclude":true,
-        "filepath":"filters/regex/mrn_id/blocked_DC.txt",
-        "notes":"This should remove anything that matches any blocked MRN number with last digits"
-    },
-    {
-        "title":"model and serial numbers",
-        "type":"regex",
-        "exclude":true,
-        "filepath":"filters/regex/mrn_id/model_and_serial.txt",
-        "notes":"This should remove anything that matches a model or serial number pattern"
-    },
-    {
-        "title":"ssn only",
-        "type":"regex",
-        "exclude":true,
-        "filepath":"filters/regex/mrn_id/ssn.txt",
-        "notes":"This should remove anything that matches XXX-XX-XXXX"
-    },
-    {
-        "title":"file indicator",
-        "type":"regex",
-        "exclude":true,
-        "filepath":"filters/regex/mrn_id/file_indicator.txt",
-        "notes":"This should remove anything that matches XXX-XX-XXXX"
-    },
-    {
-        "title":"url",
-        "type":"regex",
-        "exclude":true,
-        "filepath":"filters/regex/contact/url.txt",
-        "notes":"This should remove anything that looks like a url"
-    },
-    {
-        "title":"call #",
-        "type":"regex",
-        "exclude":true,
-        "filepath":"filters/regex/contact/call_#.txt",
-        "notes":"This should remove anything that matches call #: etc."
-    },
-    {
-        "title":"emails",
-        "type":"regex",
-        "exclude":true,
-        "filepath":"filters/regex/contact/email.txt",
-        "notes":"This should remove anything that looks like an email"
-    },
-    {
-        "title":"xxx_xxx_xxxx",
-        "type":"regex",
-        "exclude":true,
-        "filepath":"filters/regex/contact/xxx_xxx_xxxx.txt",
-        "notes":"This should remove anything that xxx.xxx.xxxx"
-    },
-    {
-        "title":"xxx_xxx_CCCC",
-        "type":"regex",
-        "exclude":true,
-        "filepath":"filters/regex/contact/xxx_xxx_CCCC.txt",
-        "notes":"This should remove anything that xxx.xxx.CCCC+"
-    },
-    {
-        "title":"5 digit pager",
-        "type":"regex",
-        "exclude":true,
-        "filepath":"filters/regex/contact/pager.txt",
-        "notes":"This should remove anything that matches a pager number"
-    },
-    {
-        "title": "lived to x",
-        "type": "regex",
-        "exclude": true,
-        "filepath": "filters/regex/age/lived_to_x.txt",
-        "note": ""
-    },
-    {
-        "title": "x years old",
-        "type": "regex",
-        "exclude": true,
-        "filepath": "filters/regex/age/x_years_old.txt",
-        "note": ""
-    },
-    {
-        "title": "x year old",
-        "type": "regex",
-        "exclude": true,
-        "filepath": "filters/regex/age/x_year_old.txt",
-        "note": ""
-    },
-    {
-        "title": "age x",
-        "type": "regex",
-        "exclude": true,
-        "filepath": "filters/regex/age/age_x.txt",
-        "note": ""
-    },
-    {
-        "title": "x yo",
-        "type": "regex",
-        "exclude": true,
-        "filepath": "filters/regex/age/x_yo.txt",
-        "note": ""
-    },
       {
-        "title": "confirmed by name",
-        "type": "regex",
-        "exclude": true,
-        "filepath": "filters/regex/salutations/confirmed_by_name.txt",
-        "note": ""
-    },  
-      {
-        "title": "editor name",
-        "type": "regex",
-        "exclude": true,
-        "filepath": "filters/regex/salutations/editor_name.txt",
-        "note": ""
-    }, 
-      {
-        "title": "code status name",
-        "type": "regex",
-        "exclude": true,
-        "filepath": "filters/regex/salutations/code_status_name.txt",
-        "note": ""
-    },  
-  {
-        "title": "attending",
-        "type": "regex",
-        "exclude": true,
-        "filepath": "filters/regex/salutations/attending.txt",
-        "note": ""
-    },
-    {
-        "title": "u_#_patient",
-        "type": "regex",
-        "exclude": true,
-        "filepath": "filters/regex/salutations/u_#_patient.txt",
-        "note": ""
-    },
-    {
-        "title": "patient mrn",
-        "type": "regex",
-        "exclude": true,
-        "filepath": "filters/regex/salutations/patient_mrn.txt",
-        "note": ""
-    },
-    {
-        "title": "name_age",
-        "type": "regex",
-        "exclude": true,
-        "filepath": "filters/regex/salutations/name_age.txt",
-        "note": ""
-    },
-    {
-        "title": "patient/provider",
-        "type": "regex",
-        "exclude": true,
-        "filepath": "filters/regex/salutations/patient_provider.txt",
-        "note": ""
-    },
-    {
-        "title": "patient summary",
-        "type": "regex",
-        "exclude": true,
-        "filepath": "filters/regex/salutations/patient_summary.txt",
-        "note": ""
-    },
-    {
-        "title": "wrote",
-        "type": "regex",
-        "exclude": true,
-        "filepath": "filters/regex/salutations/wrote.txt",
-        "note": ""
-    },     
-    {
-        "title": "salutations1",
-        "type": "regex",
-        "exclude": true,
-        "filepath": "filters/regex/salutations/pre_salutations_2chars.txt",
-        "note": ""
-    },
-    {
-        "title": "salutations2",
-        "type": "regex",
-        "exclude": true,
-        "filepath": "filters/regex/salutations/pre_salutations_3chars.txt",
-        "note": ""
-    },
-    {
-        "title": "salutations3",
-        "type": "regex",
-        "exclude": true,
-        "filepath": "filters/regex/salutations/pre_salutations_4chars.txt",
-        "note": ""
-    },
-    {
-        "title": "salutations4",
-        "type": "regex",
-        "exclude": true,
-        "filepath": "filters/regex/salutations/pre_salutations_5chars.txt",
-        "note": ""
-    },
-    {
-        "title": "Md PhD",
-        "type": "regex",
-        "exclude": true,
-        "filepath": "filters/regex/salutations/md_phd.txt",
-        "note": ""
-    },
-    {
-        "title": "salutations5",
-        "type": "regex",
-        "exclude": true,
-        "filepath": "filters/regex/salutations/post_salutations_2chars.txt",
-        "note": ""
-    },
-    {
-        "title": "salutations6",
-        "type": "regex",
-        "exclude": true,
-        "filepath": "filters/regex/salutations/post_salutations_3chars.txt",
-        "note": ""
-    },
-    {
-        "title": "salutations7",
-        "type": "regex",
-        "exclude": true,
-        "filepath": "filters/regex/salutations/post_salutations_4chars.txt",
-        "note": ""
-    },
-    {
-        "title": "names patterns",
-        "type": "regex",
-        "exclude": true,
-        "filepath": "filters/regex/salutations/name_patterns.txt",
-        "note": ""
-    },
-    {
-        "title": "ordering md",
-        "type": "regex",
-        "exclude": true,
-        "filepath": "filters/regex/salutations/ordering_md.txt",
-        "note": ""
-    },
-       {
-        "title": "name indicator",
-        "type": "regex",
-        "exclude": true,
-        "filepath": "filters/regex/salutations/name_indicator.txt",
-        "note": ""
-    },
-    {
-        "title": "relative indicator",
-        "type": "regex",
-        "exclude": true,
-        "filepath": "filters/regex/salutations/relative_indicator.txt",
-        "note": ""
-    },
-     {
-        "title": "dr ambiguous",
-        "type": "regex",
-        "exclude": true,
-        "filepath": "filters/regex/salutations/dr_ambiguous.txt",
-        "note": ""
-    },
-     {
-        "title": "dash doctor",
-        "type": "regex",
-        "exclude": true,
-        "filepath": "filters/regex/salutations/dash_doctor.txt",
-        "note": "________doctor name"
-    },
-     {
-        "title": "patient present",
-        "type": "regex",
-        "exclude": true,
-        "filepath": "filters/regex/salutations/patient_present.txt",
-        "note": ""
-    },
-     {
-        "title": "patient measurements",
-        "type": "regex",
-        "exclude": true,
-        "filepath": "filters/regex/salutations/patient_measurements.txt",
-        "note": ""
-    },
-     {
-        "title": "patholigist",
-        "type": "regex",
-        "exclude": true,
-        "filepath": "filters/regex/salutations/pathologist.txt",
-        "note": ""
-    },
-     {
-        "title": "email header",
-        "type": "regex",
-        "exclude": true,
-        "filepath": "filters/regex/salutations/email_header.txt",
-        "note": ""
-    },
-       {
-        "title": "by doctor number",
-        "type": "regex",
-        "exclude": true,
-        "filepath": "filters/regex/salutations/by_doctor_number.txt",
-        "note": ""
-    },
-       {
-        "title": "sent note to",
-        "type": "regex",
-        "exclude": true,
-        "filepath": "filters/regex/salutations/sent_note_to.txt",
-        "note": ""
-    },
-       {
-        "title": "ucsf SF",
-        "type": "regex",
-        "exclude": true,
-        "filepath": "filters/regex/ucsf_regex/ucsf_sf.txt",
-        "note": ""
-    },
-    {
-        "title": "ucsf bay area",
-        "type": "regex",
-        "exclude": true,
-        "filepath": "filters/regex/ucsf_regex/ucsf_bay_area.txt",
-        "note": ""
-    },
-    {
-        "title": "ucsf neighborhoods",
-        "type": "regex",
-        "exclude": true,
-        "filepath": "filters/regex/ucsf_regex/ucsf_neighborhoods.txt",
-        "note": ""
-    },
-
-      {
-        "title": "Names Blacklist",
+        "title": "Firstnames Blacklist",
         "type": "set",
         "exclude": true,
-        "filepath": "filters/blacklists/names_blacklist_sub_100_fps.json",
+        "filepath": "filters/blacklists/firstnames_minus_fps.json",
         "pos": ***REMOVED***
             "NNP"
         ***REMOVED***,
-        "notes": "These are words we believe are not safe"
+        "notes": "These are words we believe are not safe",
+        "phi_type":"NAME"
+    },
+      {
+        "title": "Lastnames Blacklist",
+        "type": "set",
+        "exclude": true,
+        "filepath": "filters/blacklists/lastnames_minus_fps.json",
+        "pos": ***REMOVED***
+            "NNP"
+        ***REMOVED***,
+        "notes": "These are words we believe are not safe",
+        "phi_type":"NAME"
     },
     {
-        "title":"Address Blacklist",
-        "type":"set",
+        "title":"Find Names 1",
+        "type":"regex_context",
         "exclude":true,
-        "filepath":"filters/blacklists/updated_address_blacklist.json",
-        "pos":***REMOVED***"NNP"***REMOVED***,
-        "notes":""
+        "filepath":"filters/regex_context/names_regex_context1.txt",
+        "context":"right",
+        "context_filter":"Firstnames Blacklist",
+        "notes":"",
+        "phi_type":"NAME"
+    },
+    {
+        "title":"Find Names 2",
+        "type":"regex_context",
+        "exclude":true,
+        "filepath":"filters/regex_context/names_regex_context2.txt",
+        "context":"left",
+        "context_filter":"Firstnames Blacklist",
+        "notes":"",
+        "phi_type":"NAME"
+    },
+    {
+        "title":"Find Names 3",
+        "type":"regex_context",
+        "exclude":true,
+        "filepath":"filters/regex_context/names_regex_context3.txt",
+        "context":"left",
+        "context_filter":"Firstnames Blacklist",
+        "notes":"",
+        "phi_type":"NAME"
+    },
+    {
+        "title":"Find Names 4",
+        "type":"regex_context",
+        "exclude":true,
+        "filepath":"filters/regex_context/names_regex_context4.txt",
+        "context":"left",
+        "context_filter":"Firstnames Blacklist",
+        "notes":"",
+        "phi_type":"NAME"
     },
     {
         "title":"Whitelist 1",
         "type":"set",
         "exclude":false,
-        "filepath":"filters/whitelists/whitelist_plus_fps-3_cleaned.json",
-        "pos":***REMOVED******REMOVED***,
-        "notes":"These are words we beleive are safe"
-    },
-    {
-        "title":"Whitelist 2",
-        "type":"set",
-        "exclude":false,
-        "filepath":"filters/whitelists/manual_add_words_whitelist.json",
-        "pos":***REMOVED******REMOVED***,
-        "notes":"These are words we beleive are safe"
-    },
-    {
-        "title":"Whitelist 3",
-        "type":"set",
-        "exclude":false,
-        "filepath":"filters/whitelists/manual_add_numeric_whitelist.json",
+        "filepath":"/data/shared/ucsf_whitelists/whitelist_plus_fps_091718_nonames.json",
         "pos":***REMOVED******REMOVED***,
         "notes":"These are words we beleive are safe"
     },
@@ -2191,12 +2396,9 @@
         "exclude":true,
         "filepath":"filters/regex_context/initials.txt",
         "context":"left_or_right",
-        "notes":""
+        "context_filter":"all",
+        "notes":"",
+        "phi_type":"NAME"
     }
 
-
 ***REMOVED***
-
-
-
-

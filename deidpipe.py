@@ -122,19 +122,11 @@ def main_mongo(args, db=None ,mongo=None):
                             verbose=args.verbose)
     else:
        phitexts.detect_phi(args.filters, verbose=args.verbose)
-
     if phitexts.coords:
-        # detects PHI types
-        if __debug__: print("detecting PHI types")
         if not args.xml:
-           phitexts.detect_phi_types()
-
-        '''
-        # detect known phi
-        if args.knownphi:
-           if __debug__: print("Identifying known phi")
-           phitexts.detect_known_phi(args.knownphi)
-        '''
+            # detects PHI types
+            if __debug__: print("detecting PHI types")
+            phitexts.detect_phi_types()
 
         # normalizes PHI
         

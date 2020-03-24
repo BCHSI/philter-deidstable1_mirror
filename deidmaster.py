@@ -39,6 +39,10 @@ def get_args():
                     help="Path to the directory that contains the metafiles"
                     + " (must have the same sub directory structure as input)",
                     type=str)
+    ap.add_argument("-k", "--knownphi", required=True,
+                    help="Path to the directory that contains the probesfiles"
+                    + " (must have the same sub directory structure as input)",
+                    type=str)
     ap.add_argument("--superlog", required=True,
                     help="Path to the folder for the super log."
                     + " When this is set, the pipeline prints and saves a"
@@ -75,9 +79,11 @@ def _shuffle_src_folders(srcFolders):
     random.shuffle(srcFolders)
     return srcFolders
 
-def _list_metafiles_and_dst_folders(srcFolders, mtaBase, dstBase, srcBase=None):
+def _list_mfiles_dfolders_kpfiles(srcFolders, mtaBase, dstBase, kpBase,
+                                  srcBase=None):
     srcMetafiles = ***REMOVED******REMOVED***
     dstFolders = ***REMOVED******REMOVED***
+    kPhifiles = ***REMOVED******REMOVED***
     if not srcBase: srcBase = os.path.dirname(os.path.commonprefix(srcFolders)) # use os.path.commonpath(srcFolders) if you have python 3.5 or higher
     print("creating metafiles list from " + mtaBase
           + " and output subdirs list from " +  dstBase)
@@ -88,9 +94,12 @@ def _list_metafiles_and_dst_folders(srcFolders, mtaBase, dstBase, srcBase=None):
         dstFolders.append(os.path.join(dstBase, os.path.relpath(srcFolder,
                                                                 srcBase),
                                        ''))
-    return srcMetafiles, dstFolders
+        kPhifiles.append(os.path.join(kpBase, os.path.relpath(srcFolder,
+                                                              srcBase),
+                                         "knownphi_data_dana_value.txt"))
+    return srcMetafiles, dstFolders, kPhifiles
 
-def create_imo_lists(srcPath, mtaBase, dstBase):
+def create_imok_lists(srcPath, mtaBase, dstBase, kpBase):
     if os.path.isdir(srcPath):
         srcFolders = _walk_src_folders(srcPath)
         srcBase = srcPath
@@ -101,12 +110,14 @@ def create_imo_lists(srcPath, mtaBase, dstBase):
         return None
 
     srcFolders = _shuffle_src_folders(srcFolders)
-    srcMetaFiles, dstFolders = _list_metafiles_and_dst_folders(srcFolders,
-                                                               mtaBase, dstBase,
-                                                               srcBase)
-    return srcFolders, srcMetaFiles, dstFolders
+    metaFiles, dstFolders, kpFiles = _list_mfiles_dfolders_kpfiles(srcFolders,
+                                                                   mtaBase,
+                                                                   dstBase,
+                                                                   kpBase,
+                                                                   srcBase)
+    return srcFolders, metaFiles, dstFolders, kpFiles
     
-def write_chunk_files(servers, srcFolders, srcMetafiles, dstFolders,
+def write_chunk_files(servers, srcFolders, srcMetafiles, dstFolders, kPhifiles,
                       prefix="chunk_", extension="csv"):
     # split into chunks based on number_of_servers
     # & number_of_threads_per_each_server
@@ -117,22 +128,25 @@ def write_chunk_files(servers, srcFolders, srcMetafiles, dstFolders,
     for url, nthreads in servers.items():
         subdirs_fraction = nthreads / total_threads
         chunk_len.append(ceil(subdirs_fraction * len(srcFolders)))
-
+        print("tothreads: {0} nthreads: {1} frac: {2} lenF: {3} lenC: {4}".format(total_threads, nthreads, subdirs_fraction, len(srcFolders), len(chunk_len)))
         if len(chunk_len) > 1:
             start = end
         else:
             start = 0
         end = sum(chunk_len***REMOVED***:-1***REMOVED***) + chunk_len***REMOVED***-1***REMOVED***
-
+        print("start: {0} end: {1}".format(start, end))
         chunk_srcFolders = srcFolders***REMOVED***start:end***REMOVED***
         chunk_srcMetafiles = srcMetafiles***REMOVED***start:end***REMOVED***
         chunk_dstFolders = dstFolders***REMOVED***start:end***REMOVED***
+        chunk_kPhifiles = kPhifiles***REMOVED***start:end***REMOVED***
         
         chunks_fname***REMOVED***url***REMOVED*** = prefix + url.split('.')***REMOVED***0***REMOVED*** + "." + extension
         with open(chunks_fname***REMOVED***url***REMOVED***, 'w') as cf:
-            for idir, mfile, odir in zip(chunk_srcFolders, chunk_srcMetafiles,
-                                         chunk_dstFolders):
-                cf.write("{0} {1} {2}\n".format(idir, mfile, odir))
+            for idir, mfile, odir, kfile in zip(chunk_srcFolders,
+                                                chunk_srcMetafiles,
+                                                chunk_dstFolders,
+                                                chunk_kPhifiles):
+                cf.write("{0} {1} {2} {3}\n".format(idir, mfile, odir, kfile))
                 
     return chunks_fname
 
@@ -166,11 +180,11 @@ def main():
 
     args = get_args()
 
-    srcFolders, srcMetaFiles, dstFolders = create_imo_lists(args.input,
-                                                            args.surrogate,
-                                                            args.output)
-    chunks_fname = write_chunk_files(servers,
-                                     srcFolders, srcMetaFiles, dstFolders)
+    sdirs, mfiles, ddirs, kfiles = create_imok_lists(args.input,
+                                                     args.surrogate,
+                                                     args.output,
+                                                     args.knownphi)
+    chunks_fname = write_chunk_files(servers, sdirs, mfiles, ddirs, kfiles)
     
     scp_chunk_files(servers, args.username, args.philterfolder, chunks_fname)
     send_jobs(servers, args.username, args.philterfolder, chunks_fname, args.superlog)
