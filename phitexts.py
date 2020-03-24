@@ -14,13 +14,24 @@ import numpy
 from constants import *
 from textmethods import get_clean, get_tokens
 import time
+from pymongo import MongoClient
+from pymongo.errors import ConnectionFailure
+import bson
+import sys
+import pandas as pd
+from datetime import datetime
+import socket
+import datetime
+
 
 
 class Phitexts:
     """ container for texts, phi, attributes """
 
-    def __init__(self, inputdir, xml=False):
+    def __init__(self, inputdir = None, xml = False, batch = None, db = None, mongo = None):
         self.inputdir  = inputdir
+        self.db = db
+        self.mongo = mongo
         self.filenames = []
         #notes text
         self.texts     = {}
@@ -36,11 +47,24 @@ class Phitexts:
         self.subs      = {}
         #de-id notes
         self.textsout  = {}
+        self.batch = batch
         #known phi
-        if not xml:
+        self.known_phi = {}
+        if not xml and not mongo:
            self._read_texts()
+        if mongo is not None:
+           if batch is not None:
+              self._read_mongo(mongo,batch)
         self.subser = None
         self.filterer = None
+
+    def get_mongo_handle(self, mongo):
+        client = MongoClient(mongo["client"],username=mongo["username"],password=mongo["password"])
+        try:
+          db = client[mongo['db']]
+        except:
+          print("Mongo Server not available")
+        return db
 
     def _read_texts(self):
         if not self.inputdir:
@@ -59,6 +83,62 @@ class Phitexts:
                                errors='surrogateescape')
                 self.texts[filepath] = fhandle.read()
                 fhandle.close()
+
+    def _read_mongo(self, mongo, batch):
+        db = self.db
+        chunk_collection = db[mongo['collection_chunk']]
+        meta_status = db[mongo['collection_status']]
+        raw_note_text = db[mongo['collection_raw_note_text']]
+        meta_in = db[mongo['collection_meta_data']] 
+        server = socket.gethostname() + ".ucsfmedicalcenter.org" 
+        # list_of_mongo_ids = meta_status.find({"note_key_status": {"$in": ['Add','Update']}})
+        #list_of_mongo_ids = chunk_collection.find({"batch": batch, "url":server.lower()},{"_id": 1})
+        try:
+           '''
+           to_philter = chunk_collection.aggregate([{"$match":{"$and":[{"url": server.lower()},{"batch": batch}]}},
+                                                    {"$lookup": {"from": 'raw_note_text', "localField": "_id", "foreignField": "_id", "as": "get_text"}},
+                                                    {"$unwind": {"path": "$get_text"}},
+                                                    {"$lookup": {"from": 'probes', "localField": "patient_ID", "foreignField": "person_id", "as": "prb"}},
+                                                    {"$unwind":"$prb"},
+                                                    {"$project": {"_id": 1, "patient_ID": 1, "raw_note_text": "$get_text.raw_note_text", "probes_lname": "$prb.lname", "probes_fname": "$prb.fname"}}])
+        '''
+           to_philter = chunk_collection.aggregate([{"$match":{"$and":[{"url": server.lower()},{"batch": batch}]}},
+                                                    {"$lookup": {"from": 'raw_note_text', "localField": "_id", "foreignField": "_id", "as": "get_text"}},
+                                                    {"$unwind": {"path": "$get_text"}},
+                                                    {"$project": {"_id": 1, "patient_ID": 1, "raw_note_text": "$get_text.raw_note_text"}}])
+           probes_name = chunk_collection.aggregate([{"$match":{"$and":[{"url": server.lower()},{"batch": batch}]}},
+                                                    {"$lookup": {"from": 'probes', "localField": "patient_ID", "foreignField": "person_id", "as": "prb"}},
+                                                    {"$unwind":"$prb"},
+                                                    {"$project": {"_id": 1, "patient_ID": 1, "probes_lname": "$prb.lname", "probes_fname": "$prb.fname"}}])
+        except pymongo.errors.OperationFailure as e:
+           print(e.code)
+           print(e.details)
+        probes_list = list(probes_name)
+        for philter in list(to_philter):
+           self.filenames.append(philter['_id'])
+           self.texts[philter['_id']] = philter['raw_note_text']
+           if mongo['known_phi'] == True:
+              probes = []
+              for prb in probes_list:
+                  if philter['_id'] == prb['_id']:
+                     if 'probes_lname' in prb and 'probes_fname' in prb: 
+                        probes = prb['probes_lname'] + prb['probes_fname']
+                     elif 'probes_lname' in prb and 'probes_fname' not in prb:
+                        probes = prb['probes_lname']
+                     elif 'probes_lname' not in prb and 'probes_fname' in prb:
+                        probes = prb['probes_fname']
+                     break;
+              self.known_phi[philter['_id']] = probes
+
+        print("Text read")
+        '''
+        for doc in list_of_mongo_ids:
+            note_text = raw_note_text.find_one({"_id": doc['_id']},{"raw_note_text": 1})
+            self.filenames.append(note_text["_id"])
+            self.texts[note_text["_id"]] = note_text["raw_note_text"]
+            if kp:
+        '''    
+
 
     def _get_xml_tokens(self,string,text,start):
         tokens = {}
@@ -155,10 +235,20 @@ class Phitexts:
     #@profile
     def detect_phi(self, filters="./configs/philter_alpha.json", namesprobefile=None, verbose=False):
         assert self.texts, "No texts defined"
-
         if self.coords:
             return
-        
+
+        philter_config = {}
+        philter_config["verbose"] = verbose
+        philter_config["run_eval"] = False
+        philter_config["filters"] = filters 
+        if namesprobefile:     
+           philter_config["namesprobe"] = namesprobefile
+        if self.known_phi:
+           philter_config["known_phi"] = self.known_phi
+        philter_config["phi_text"] = self.texts
+        philter_config["filenames"] = self.filenames
+        ''' 
         if namesprobefile:
             philter_config = {
                "verbose":verbose,
@@ -175,11 +265,13 @@ class Phitexts:
                "finpath":self.inputdir,
                "filters":filters,
             }
-
+        '''
+        print("Initializing Philter") 
         self.filterer = Philter(philter_config)
         self.coords = self.filterer.map_coordinates()
+        print("Coordinates Identified")
         self.pos = self.filterer.pos_tags
-    
+        print("Pos_tags identified") 
     def detect_phi_types(self):
         assert self.texts, "No texts defined"
         assert self.coords, "No PHI coordinates defined"
@@ -219,19 +311,19 @@ class Phitexts:
 
         # Note: see also surrogator.shift_dates(), surrogator.parse_and_shift_date(), parse_date_ranges(), replace_other_surrogate()
         
-    def substitute_phi(self, look_up_table_path = None):
+    def substitute_phi(self, look_up_table_path = None, db = None):
         assert self.norms, "No normalized PHI defined"
-        
         if self.subs:
             return
-
-        self.subser = Subs(look_up_table_path)
-
+        self.subser = Subs(self.filenames, look_up_table_path, db)
         for phi_type in self.norms.keys():
             if phi_type == "DATE" or phi_type == "Date":
                 if __debug__: nodateshiftlist = []
                 for filename, start in self.norms[phi_type]:
-                    note_key_ucsf = os.path.splitext(os.path.basename(filename).strip('0'))[0].replace("_utf8","").replace(".txt","").replace(".xml","")
+                    if bson.objectid.ObjectId.is_valid(filename):
+                       note_key_ucsf = filename
+                    else:
+                       note_key_ucsf = os.path.splitext(os.path.basename(filename).strip('0'))[0].replace("_utf8","").replace(".txt","").replace(".xml","")
                     if not self.subser.has_shift_amount(note_key_ucsf):
                         if __debug__:
                             if filename not in nodateshiftlist:
@@ -360,7 +452,32 @@ class Phitexts:
             with open(filepath, "w", encoding='utf-8',
                       errors='surrogateescape') as fhandle:
                 fhandle.write(self.textsout[filename])
+   
+    def save_mongo(self,mongo):
+        assert self.textsout, "Cannot save text: output not ready"
+        try:
+          db = self.db
+          collection_meta_in = db[mongo['collection_meta_data']]
+          collection_deid_text = db[mongo['collection_deid_note_text']]
+        except:
+          print("Mongo Server not available")
+
+
+        philtered_text = []
+
+        for files in self.textsout:
+            philtered = {'_id': files, 'deid_note_text': self.textsout[files]}
+            philtered_text.append(philtered)
+
+        try:
+           collection_deid_text.delete_many({'_id': {'$in': self.filenames}})
+           collection_deid_text.insert_many(philtered_text)
+           collection_meta_in.update_many({'_id': {'$in': self.filenames}},{'$set': { "redact_date": datetime.datetime.now(), "philter_version": mongo['philter_version']}})
+        except:
+           print("Error while saving deidentified files into Mongo")
     
+
+
     def get_phi_type_per_token(self):
        phi_types_per_token = {}
        for phi_type in self.types: 
@@ -383,20 +500,11 @@ class Phitexts:
        return phi_types_per_token
 
 
-    def print_log(self, output_dir,kp, xml):
-        log_dir = os.path.join(output_dir, 'log/')
-
-        failed_dates_file = os.path.join(log_dir, 'failed_dates.json')
-        date_table_file = os.path.join(log_dir, 'parsed_dates.json')
-        phi_count_file = os.path.join(log_dir, 'phi_count.log')
-        phi_marked_file = os.path.join(log_dir, 'phi_marked.json')
-        batch_summary_file = os.path.join(log_dir, 'batch_summary.log')
-        
-        #Path to csv summary of all files
-        csv_summary_filepath = os.path.join(log_dir,
-                                            'detailed_batch_summary.csv')
-        dynamic_blacklist_filepath = os.path.join(log_dir,
-                                                  'dynamic_blacklist_summary.csv')
+    def print_log(self, kp, mongo, xml):
+        phi_count_df = pd.DataFrame(columns=['Phi_type','Count'])
+        batch_summary_df = pd.DataFrame(columns=['Title','values']) 
+        csv_summary_df = pd.DataFrame(columns=['filename','batch','file_size','total_tokens','phi_tokens','successfully_normalized','failed_normalized','successfully_surrogated','failed_surrogated'])
+        dynamic_blacklist_df = pd.DataFrame(columns=['filename','batch','start','end','probe','context','phi_type'])        
         eval_table = {}
         failed_date = {}
         phi_table = {}
@@ -405,13 +513,6 @@ class Phitexts:
             phi_type = 'DATE'
         elif 'Date' in self.types:
             phi_type = 'Date'
-
-        # Per-batch logs
-        if os.path.isdir(log_dir):
-            pass
-        else:
-            os.makedirs(log_dir)
-        
 
         # Write to file of raw dates, parsed dates and substituted dates
         num_failed = 0
@@ -424,19 +525,19 @@ class Phitexts:
         for filename, start, end in self.types[phi_type][0].scan():
             raw = self.texts[filename][start:end]
             normalized_date = self.norms[phi_type][(filename,start)][0]
-            
+            filename = str(filename) 
             if filename not in parse_info:
                 parse_info[filename] = {'success_norm':0,'fail_norm':0,
                                         'success_sub':0,'fail_sub':0}
             if filename not in eval_table:
-                eval_table[filename] = []
+               eval_table[filename] = []
 
             if normalized_date is not None:
                 # Add 1 to successfully normalized dates
                 num_parsed += 1
                 parse_info[filename]['success_norm'] += 1
                 normalized_token = Subs.date_to_string(normalized_date)
-                note_key_ucsf = os.path.splitext(os.path.basename(filename).strip('0'))[0]
+                #note_key_ucsf = os.path.splitext(os.path.basename(filename).strip('0'))[0]
                 if self.subs: 
                    # Successfully surrogated:
                    if (filename, start) in self.subs:
@@ -462,6 +563,7 @@ class Phitexts:
                 parse_info[filename]['fail_norm'] += 1
                     # f_failed.write('\t'.join([filename, str(start), str(end), raw.strip('\n')]))
                     # f_failed.write('\n')
+                filename = str(filename)
                 if filename not in failed_date:
                         failed_date[filename] = []
                 failed_date[filename].append({'start':start, 'end':end,        
@@ -474,44 +576,30 @@ class Phitexts:
         # Count by phi_type, record PHI marked
         phi_counter = {}
         marked_phi = {}
-        with open(phi_count_file,'w') as f_count:
+        #with open(phi_count_file,'w') as f_count:
             # f_marked.write('\t'.join(['filename', 'start', 'end', 'word', 'phi_type', 'category']))
             # f_marked.write('\n')
 
-            for phi_type in self.types:
-                for filename, start, end in self.types[phi_type][0].scan():
-                    if filename not in phi_table:
-                        phi_table[filename] = []
-                    word = self.texts[filename][start:end]
-                    phi_table[filename].append({'start': start, 'end': end,
-                                                'word': word, 'type': phi_type})
+        for phi_type in self.types:
+            for filename, start, end in self.types[phi_type][0].scan():
+                fname = str(filename)
+                if filename not in phi_table:
+                   phi_table[fname] = []
+                word = self.texts[filename][start:end]
+                phi_table[fname].append({'start': start, 'end': end,
+                                            'word': word, 'type': phi_type})
 
-                    if phi_type not in phi_counter:
-                        phi_counter[phi_type] = 0
-                    phi_counter[phi_type] += 1
+                if phi_type not in phi_counter:
+                    phi_counter[phi_type] = 0
+                phi_counter[phi_type] += 1
 
                     
-                    # f_marked.write('\t'.join([filename, str(start), str(end), word, phi_type]))
-                    # f_marked.write('\n')
+                # f_marked.write('\t'.join([filename, str(start), str(end), word, phi_type]))
+                # f_marked.write('\n')
 
-            for phi_type in phi_counter:
-                f_count.write('\t'.join([phi_type, str(phi_counter[phi_type])]))
-                f_count.write('\n')
-
-        # dump to json
-        with open (failed_dates_file, 'w') as f:
-            json.dump(failed_date, f)
-        with open(date_table_file, 'w') as f:
-            json.dump(eval_table, f)
-        with open(phi_marked_file, 'w') as f:
-            json.dump(phi_table, f)
-        
-        # If the summary csv file doesn't exist yet, create it and add file headers
-        # Csv summary is one directory above all input directories
-        if not os.path.isfile(csv_summary_filepath):
-            with open(csv_summary_filepath,'w') as f:
-                file_header = 'filename'+','+'file_size'+','+'total_tokens'+','+'phi_tokens'+','+'successfully_normalized'+','+'failed_normalized'+','+'successfully_surrogated'+','+'failed_surrogated'+'\n'
-                f.write(file_header)
+        for phi_type in phi_counter:
+            phi_count_df = phi_count_df.append({'Phi_type': phi_type, 'Count': str(phi_counter[phi_type])},ignore_index=True)
+       
 
         summary_info = {'filesize':[],'total_tokens':[],'phi_tokens':[],'successful_normalized':[],'failed_normalized':[],'successful_surrogated':[],'failed_surrogated':[]}
         
@@ -522,7 +610,10 @@ class Phitexts:
         for filename in self.filenames:
 
             # File size in bytes
-            filesize = os.path.getsize(filename)
+            if isinstance(filename, (bson.objectid.ObjectId)):
+               filesize = sys.getsizeof(self.texts[filename])
+            else: 
+               filesize = os.path.getsize(filename)
             
             if xml: 
                total_tokens = len(get_clean(self.texts[filename])) 
@@ -538,7 +629,7 @@ class Phitexts:
             failed_normalized = 0
             successful_surrogated = 0
             failed_surrogated = 0
-
+            filename = str(filename)
             if filename in parse_info:
                 # Successfully normalized dates
                 successful_normalized = parse_info[filename]['success_norm']
@@ -549,11 +640,8 @@ class Phitexts:
                 # Unsuccessfully normalized dates
                 failed_surrogated = parse_info[filename]['fail_sub']
             
-            # Add to master list for all files          
-            with open(csv_summary_filepath,'a') as f:
-                new_line = filename + ',' + str(filesize) + ',' + str(total_tokens) + ',' + str(phi_tokens) + ',' + str(successful_normalized) + ',' + str(failed_normalized) + ',' + str(successful_surrogated) + ',' + str(failed_surrogated) + '\n'
-                f.write(new_line)
-                     
+            csv_summary_df = csv_summary_df.append(pd.Series([filename,self.batch,str(filesize),str(total_tokens),str(phi_tokens),str(successful_normalized),str(failed_normalized),str(successful_surrogated),str(failed_surrogated)],index=csv_summary_df.columns),ignore_index=True)           
+          
             summary_info['filesize'].append(filesize)
             summary_info['total_tokens'].append(total_tokens)
             summary_info['phi_tokens'].append(phi_tokens)
@@ -561,7 +649,6 @@ class Phitexts:
             summary_info['failed_normalized'].append(failed_normalized)
             summary_info['successful_surrogated'].append(successful_surrogated)
             summary_info['failed_surrogated'].append(failed_surrogated)
-        
         # Summarize current batch
         # Batch size (all)
         number_of_notes = len(self.filenames)
@@ -589,56 +676,42 @@ class Phitexts:
         failed_surrogation = sum(summary_info['failed_surrogated'])
 
         # Create text summary for the current batch
-        with open(batch_summary_file, "w") as f:
-            f.write("TOTAL NOTES PROCESSED: " + str(number_of_notes) + '\n')
-            f.write("TOTAL KB PROCESSED: " + str("%.2f"%total_kb_processed)
-                    + '\n')
-            f.write("TOTAL TOKENS PROCESSED: " + str(total_tokens) + '\n')
-            f.write("TOTAL PHI TOKENS PROCESSED: " + str(total_phi_tokens)
-                    + '\n')
-            f.write('\n')
-            f.write("MEDIAN FILESIZE (BYTES): " + str(median_file_size)
-                    + " (95% Percentile: " + str("%.2f"%q2pt5_size) + '-'
-                    + str("%.2f"%q97pt5_size) + ')' + '\n')
-            f.write("MEDIAN TOKENS PER NOTE: " + str(median_tokens)
-                    + " (95% Percentile: " + str("%.2f"%q2pt5_tokens) + '-'
-                    + str("%.2f"%q97pt5_tokens) + ')' + '\n')
-            f.write("MEDIAN PHI TOKENS PER NOTE: " + str(median_phi_tokens)
-                    + " (95% Percentile: " + str("%.2f"%q2pt5_phi_tokens) + '-'
-                    + str("%.2f"%q97pt5_phi_tokens) + ')' + '\n')
-            f.write('\n')
-            f.write("DATES SUCCESSFULLY NORMALIZED: "
-                    + str(successful_normalization) + '\n')
-            f.write("DATES FAILED TO NORMALIZE: " + str(failed_normalization)
-                    + '\n')
-            f.write("DATES SUCCESSFULLY SURROGATED: "
-                    + str(successful_surrogation) + '\n')
-            f.write("DATES FAILED TO SURROGATE: " + str(failed_surrogation)
-                    + '\n')   
-        
-        if kp:
+        batch_summary_df = batch_summary_df.append({'Title': 'TOTAL NOTES PROCESSED','values': str(number_of_notes)},ignore_index=True)
+        batch_summary_df = batch_summary_df.append({'Title': 'TOTAL KB PROCESSED','values': str("%.2f"%total_kb_processed)},ignore_index=True)
+        batch_summary_df = batch_summary_df.append({'Title': 'TOTAL TOKENS PROCESSED','values': str(total_tokens)},ignore_index=True)
+        batch_summary_df = batch_summary_df.append({'Title': 'TOTAL PHI TOKENS PROCESSED','values': str(total_phi_tokens)},ignore_index=True)
+        batch_summary_df = batch_summary_df.append({'Title': 'MEDIAN FILESIZE (BYTES)','values': str(median_file_size)},ignore_index=True)
+        median_file_95_per = str("%.2f"%q2pt5_size) + '-' + str("%.2f"%q97pt5_size)
+        batch_summary_df = batch_summary_df.append({'Title': 'MEDIAN FILESIZE (95% Percentile)','values': median_file_95_per},ignore_index=True) 
+        batch_summary_df = batch_summary_df.append({'Title': 'MEDIAN TOKENS PER NOTE','values': str(median_tokens)},ignore_index=True) 
+        median_tok_95_per = str("%.2f"%q2pt5_tokens) + '-' + str("%.2f"%q97pt5_tokens)
+        batch_summary_df = batch_summary_df.append({'Title': 'MEDIAN TOKEN (95% Percentile)','values': median_tok_95_per},ignore_index=True)
+        batch_summary_df = batch_summary_df.append({'Title': 'MEDIAN PHI TOKENS PER NOTE','values': str(median_phi_tokens)},ignore_index=True)    
+        median_phi_tok_95_per = str("%.2f"%q2pt5_phi_tokens) + '-' + str("%.2f"%q97pt5_phi_tokens)
+        batch_summary_df = batch_summary_df.append({'Title': 'MEDIAN PHI TOKENS (95% Percentile)','values': median_phi_tok_95_per},ignore_index=True)
+        batch_summary_df = batch_summary_df.append({'Title': 'DATES SUCCESSFULLY NORMALIZED','values': str(successful_normalization)},ignore_index=True)
+        batch_summary_df = batch_summary_df.append({'Title': 'DATES FAILED TO NORMALIZE','values': str(failed_normalization)},ignore_index=True)
+        batch_summary_df = batch_summary_df.append({'Title': 'DATES SUCCESSFULLY SURROGATED','values': str(successful_surrogation)},ignore_index=True)
+        batch_summary_df = batch_summary_df.append({'Title': 'DATES FAILED TO SURROGATE','values': str(failed_surrogation)},ignore_index=True)
+        if kp or mongo is not None:
            phi_type_per_token = self.get_phi_type_per_token()
-           with open(dynamic_blacklist_filepath, 'w+',
-                     errors='surrogateescape') as f:
-               for filename in phi_type_per_token: 
-                   for start in phi_type_per_token[filename]:
-                       for end in phi_type_per_token[filename][start]:
-                           if len(phi_type_per_token[filename][start][end]) == 1 and 'PROBE' in phi_type_per_token[filename][start][end]:
 
-                               flank_start = int(start) - 10
-                               flank_end = int(end) + 10
-                               if (flank_start < 0):
-                                  flank_start = 1
-                               if len(self.texts[filename])<flank_end:
-                                  flank_end = len(self.texts[filename])
-                               context = self.texts[filename][flank_start:flank_end]
-                               word = self.texts[filename][start:end+1]
-                               f.write(filename + "\t" + str(start)
-                                       + "\t" + str(end) + "\t" + word
-                                       + "\t" + context.replace('\n',' ').replace('\t',' ')
-                                       + "\t" + ','.join(phi_type_per_token[filename][start][end])+"\n")
+           for filename in phi_type_per_token: 
+               for start in phi_type_per_token[filename]:
+                   for end in phi_type_per_token[filename][start]:
+                       if len(phi_type_per_token[filename][start][end]) == 1 and 'PROBE' in phi_type_per_token[filename][start][end]:
+                           flank_start = int(start) - 10
+                           flank_end = int(end) + 10
+                           if (flank_start < 0):
+                              flank_start = 1
+                           if len(self.texts[filename])<flank_end:
+                              flank_end = len(self.texts[filename])
+                           context = self.texts[filename][flank_start:flank_end]
+                           word = self.texts[filename][start:end]
+                           #f.write(filename + "\t" + str(start) + "\t" + str(end) + "\t" + word + "\t" + context.replace('\n',' ') + "\t" + ','.join(phi_type_per_token[filename][start][end])+"\n")
+                           dynamic_blacklist_df = dynamic_blacklist_df.append(pd.Series([filename,self.batch,str(start),str(end),word,context.replace('\n',' '),','.join(phi_type_per_token[filename][start][end])], index=dynamic_blacklist_df.columns),ignore_index=True)
 
-    
+        return failed_date,eval_table,phi_table,phi_count_df,csv_summary_df,batch_summary_df,dynamic_blacklist_df
 
         # Todo: add PHI type counts to summary
         # Name PHI
@@ -649,6 +722,90 @@ class Phitexts:
         # ID PHI
         # Other PHI
 
+    def save_log(self,output_dir,failed_date,eval_table,phi_table,phi_count_df,csv_summary_df,batch_summary_df,dynamic_blacklist_df):
+        log_dir = os.path.join(output_dir, 'log/')
+        # Per-batch logs
+        if os.path.isdir(log_dir):
+            pass
+        else:
+            os.makedirs(log_dir)
+        failed_dates_file = os.path.join(log_dir, 'failed_dates.json')
+        date_table_file = os.path.join(log_dir, 'parsed_dates.json')
+        phi_count_file = os.path.join(log_dir, 'phi_count.log')
+        phi_marked_file = os.path.join(log_dir, 'phi_marked.json')
+        batch_summary_file = os.path.join(log_dir, 'batch_summary.log')
+        #Path to csv summary of all files
+        csv_summary_filepath = os.path.join(log_dir,
+                                            'detailed_batch_summary.csv')
+        dynamic_blacklist_filepath = os.path.join(log_dir,'dynamic_blacklist_summary.csv')             
+        with open (failed_dates_file, 'w') as f:
+            json.dump(failed_date, f)
+        with open(date_table_file, 'w') as f:
+            json.dump(eval_table, f)
+        with open(phi_marked_file, 'w') as f:
+            json.dump(phi_table, f)
+        phi_count_export = phi_count_df.to_csv(phi_count_file, index=None, header=True,sep = '\t')
+        csv_summary_export = csv_summary_df.to_csv(csv_summary_filepath, index=None, header=True,sep = '\t')
+        batch_summary_export = batch_summary_df.to_csv(batch_summary_file, index=None, header=True,sep = '\t')
+        if not dynamic_blacklist_df.empty:
+           dynamic_blacklist_export = dynamic_blacklist_df.to_csv(dynamic_blacklist_filepath, index=None, header=True,sep = '\t')
+
+    def mongo_save_log(self,mongo,failed_date,eval_table,phi_table,phi_count_df,csv_summary_df,batch_summary_df,dynamic_blacklist_df):
+        print("In mongo save log")
+        try:
+          db = self.db          
+          collection_log_batch_summary = db[mongo['collection_log_batch_summary']]
+          collection_detailed_batch_summary = db[mongo['collection_log_detailed_batch_summary']]
+          collection_log_batch_phi_count = db[mongo['collection_log_batch_phi_count']]
+          collection_log_dynamic_blacklist = db[mongo['collection_log_dynamic_blacklist']]
+          collection_log_failed_dates = db[mongo['collection_log_failed_dates']] 
+          collection_log_parsed_dates = db[mongo['collection_log_parsed_dates']]
+          collection_log_phi_marked = db[mongo['collection_log_phi_marked']]
+        except:
+          print("Mongo Server not available")    
+        batch_summary = dict(zip(batch_summary_df['Title'],batch_summary_df['values']))
+        batch_summary['Batch']  = self.batch
+        if collection_log_batch_summary.find_one({"Batch": self.batch}) is None:
+           max_run_num = 1
+        else:
+           max_run = collection_log_batch_summary.find({"Batch": self.batch},{"_id":0,"Run":1}).sort([("Run", -1)]).limit(1)
+           for run in max_run:
+               max_run_num = run['Run'] + 1
+        phi_count = dict(zip(phi_count_df['Phi_type'],phi_count_df['Count']))
+        phi_count['Batch'] = self.batch
+        phi_count['Run'] = max_run_num
+        batch_summary['Run'] = max_run_num
+        collection_log_batch_summary.insert(batch_summary)
+        collection_log_batch_phi_count.insert(phi_count)        
+        
+        #csv_summary_df.rename(columns = {'filename': '_id'}, inplace = True)
+        csv_summary_df['Run'] = max_run_num
+        detailed_batch_summary = csv_summary_df.to_dict(orient='records')
+        collection_detailed_batch_summary.insert(detailed_batch_summary)        
+        if not dynamic_blacklist_df.empty:
+           #dynamic_blacklist_df.rename(columns = {'filename': '_id'}, inplace = True)
+           dynamic_blacklist_df['Run'] = max_run_num
+           dynamic_blacklist = dynamic_blacklist_df.to_dict(orient='records')
+           collection_log_dynamic_blacklist.insert(dynamic_blacklist)
+        
+        if bool(failed_date):
+           failed_date['Batch'] = self.batch
+           failed_date['Run'] = max_run_num
+           collection_log_failed_dates.insert(failed_date)
+
+        if bool(eval_table):
+           eval_table['Batch'] = self.batch
+           eval_table['Run'] = max_run_num
+           collection_log_parsed_dates.insert(eval_table)
+
+        if bool(phi_table):
+           phi_table['Batch'] = self.batch
+           phi_table['Run'] = max_run_num
+           collection_log_phi_marked.insert(phi_table)
+
+
+
+ 
     def _get_phi_type(self, filename, start, stop):
         for phi_type in self.types.keys():
             for begin,end in self.types[phi_type][0].filecoords(filename):
