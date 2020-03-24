@@ -25,6 +25,9 @@ class Philter:
         can filter using whitelists, blacklists, regex's and POS
     """
     def __init__(self, config):
+        self.filenames = ***REMOVED******REMOVED***
+        self.texts    = {}
+        self.known_phi = {}
         if "verbose" in config:
             self.verbose = config***REMOVED***"verbose"***REMOVED***
         if "run_eval" in config:
@@ -43,6 +46,15 @@ class Philter:
             if not os.path.exists(config***REMOVED***"finpath"***REMOVED***):
                 raise Exception("Filepath does not exist", config***REMOVED***"finpath"***REMOVED***)
             self.finpath = config***REMOVED***"finpath"***REMOVED***
+            self.texts = _read_texts()
+        if "phi_text" in config:
+            self.texts = config***REMOVED***"phi_text"***REMOVED***
+            if "filenames" in config:
+               self.filenames = config***REMOVED***"filenames"***REMOVED***
+            else:
+               raise Exception("Object with list of filenames not provided")
+        if "known_phi" in config:
+            self.known_phi = config***REMOVED***"known_phi"***REMOVED***
         if "foutpath" in config:
             if not os.path.exists(config***REMOVED***"foutpath"***REMOVED***):
                 raise Exception("Filepath does not exist", config***REMOVED***"foutpath"***REMOVED***)
@@ -71,8 +83,10 @@ class Philter:
                 raise Exception("Filepath does not exist", config***REMOVED***"filters"***REMOVED***)
             self.patterns = json.loads(open(config***REMOVED***"filters"***REMOVED***, "r").read())
             #print(self.patterns)
+        if ("known_phi" in config) and ("namesprobe" in config):
+           raise Exception ("Both mongo probes collection and a probes file provided. Please remove one and try again.")
 
-        if "namesprobe" in config:
+        if ("namesprobe" in config) and ("known_phi" not in config):
             if not os.path.exists(config***REMOVED***"namesprobe"***REMOVED***):
                raise Exception("Filepath does not exist", config***REMOVED***"namesprobe"***REMOVED***)
             dynamic_blacklist = {
@@ -85,7 +99,18 @@ class Philter:
                                  "type":"dynamic_set",
                                  "title": "Dynamic Blacklist"}
             self.patterns.append(dynamic_blacklist) 
-        
+        if ("namesprobe" not in config) and ("known_phi" in config):
+            dynamic_blacklist = {
+                                 "notes": "These are known phi that are not safe",
+                                 "filepath": "Mongo.mongo",
+                                 "phi_type": "PROBE",
+                                 "exclude": True,
+                                 "pos": ***REMOVED***"NNP"
+                                        ***REMOVED***,
+                                 "type":"dynamic_set",
+                                 "title": "Dynamic Blacklist"}
+            self.patterns.append(dynamic_blacklist)
+
         if "xml" in config:
             if not os.path.exists(config***REMOVED***"xml"***REMOVED***):
                 raise Exception("Filepath does not exist", config***REMOVED***"xml"***REMOVED***)
@@ -179,6 +204,25 @@ class Philter:
         self.init_patterns()
 
 
+    def _read_texts(self):
+        if not self.finpath:
+            raise Exception("Input directory undefined: ", self.finpath)
+
+        for root, dirs, files in os.walk(self.finpath):
+            for filename in files:
+                if (not filename.endswith("txt")) or 'meta_data' in filename:
+                    continue
+
+                filepath = os.path.join(root, filename)
+
+                self.filenames.append(filepath)
+                encoding = self._detect_encoding(filepath)
+                fhandle = open(filepath, "r", encoding=encoding***REMOVED***'encoding'***REMOVED***,
+                               errors='surrogateescape')
+                self.texts***REMOVED***filepath***REMOVED*** = fhandle.read()
+                fhandle.close()
+
+
     def get_pos(self, filename, cleaned):
         if self.cache_to_disk:
             pos_path = self.pos_path
@@ -246,7 +290,7 @@ class Philter:
         known_pattern_types = set(***REMOVED***"regex", "set", "dynamic_set", "regex_context","stanford_ner", "pos_matcher", "match_all"***REMOVED***)
         require_files = set(***REMOVED***"regex", "set"***REMOVED***)
         require_pos = set(***REMOVED***"pos_matcher"***REMOVED***)
-        set_filetypes = set(***REMOVED***"pkl", "json","txt"***REMOVED***)
+        set_filetypes = set(***REMOVED***"pkl", "json","txt","mongo"***REMOVED***)
         regex_filetypes = set(***REMOVED***"txt"***REMOVED***)
         reserved_list = set(***REMOVED***"data", "coordinate_map"***REMOVED***)
         #first check that data is formatted, can be loaded etc. 
@@ -329,7 +373,8 @@ class Philter:
                     map_set***REMOVED***value***REMOVED***.append(note_key)
                 else:
                     map_set***REMOVED***value***REMOVED*** = ***REMOVED***note_key***REMOVED***
-
+        elif filepath.endswith(".mongo"):
+             map_set = self.known_phi
         else:
             raise Exception("Invalid filteype",filepath)
         return map_set
@@ -339,97 +384,89 @@ class Philter:
             generating a coordinate map of hits given 
             (this performs a dry run on the data and doesn't transform)
         """
-        in_path = self.finpath
-        if not os.path.exists(in_path):
-            raise Exception("Filepath does not exist", in_path)
-        
+
+
         #create coordinate maps for each pattern
         for i,pat in enumerate(self.patterns):
             self.patterns***REMOVED***i***REMOVED******REMOVED***"coordinate_map"***REMOVED*** = CoordinateMap()
+        for filename in self.filenames:
+   
 
-        for root, dirs, files in os.walk(in_path):
-            for f in files:
+            txt = self.texts***REMOVED***filename***REMOVED***
 
-                filename = os.path.join(root, f)
+            # Get full self.include/exclude map before transform
+            self.data_all_files***REMOVED***filename***REMOVED*** = {"text":txt, "phi":***REMOVED******REMOVED***,"non-phi":***REMOVED******REMOVED***}
 
-                if (filename.split(".")***REMOVED***-1***REMOVED*** not in allowed_filetypes) or 'meta_data' in filename:
-                    if self.verbose:
-                        print("Skipping: ", filename)
-                    continue                
 
-                encoding = self.detect_encoding(filename)
-                if __debug__: print("reading text from " + filename)
-                txt = open(filename,"r", encoding=encoding***REMOVED***'encoding'***REMOVED***, errors='surrogateescape').read()
+            #create an intersection map of all coordinates we'll be removing
+            self.exclude_map.add_file(filename)
 
-                # Get full self.include/exclude map before transform
-                self.data_all_files***REMOVED***filename***REMOVED*** = {"text":txt, "phi":***REMOVED******REMOVED***,"non-phi":***REMOVED******REMOVED***}
+            #create an interestion map of all coordinates we'll be keeping
+            self.include_map.add_file(filename)
+            # add file to phi_type_dict
+            for phi_type in self.phi_type_list:
+                self.phi_type_dict***REMOVED***phi_type***REMOVED******REMOVED***0***REMOVED***.add_file(filename)
 
-                #create an intersection map of all coordinates we'll be removing
-                self.exclude_map.add_file(filename)
+            # create empty list for this file's regex profiling data
+            if self.time_profile:
+               self.current_regex_time_profile = ***REMOVED******REMOVED***
 
-                #create an interestion map of all coordinates we'll be keeping
-                self.include_map.add_file(filename)
-                # add file to phi_type_dict
-                for phi_type in self.phi_type_list:
-                    self.phi_type_dict***REMOVED***phi_type***REMOVED******REMOVED***0***REMOVED***.add_file(filename)
-                    
-                # create empty list for this file's regex profiling data
-                if self.time_profile:
-                    self.current_regex_time_profile = ***REMOVED******REMOVED***
-
-                # initialize phi type
-                phi_type = "OTHER"
-
-                #### Create inital self.exclude/include for file
-
-                for i,pat in enumerate(self.patterns):
-                    if pat***REMOVED***"type"***REMOVED*** == "regex":
-                        self.map_regex(filename=filename, text=txt, pattern_index=i)
-                    elif pat***REMOVED***"type"***REMOVED*** == "dynamic_set":
-                        self.map_set(filename=filename, text=txt, pattern_index=i)
-                    elif pat***REMOVED***"type"***REMOVED*** == "set":
-                        self.map_set(filename=filename, text=txt, pattern_index=i)
-                    elif pat***REMOVED***"type"***REMOVED*** == "regex_context":
-                        self.map_regex_context(filename=filename, text=txt, pattern_index=i)
-                    elif pat***REMOVED***"type"***REMOVED*** == "stanford_ner":
-                        self.map_ner(filename=filename, text=txt, pattern_index=i)
-                    elif pat***REMOVED***"type"***REMOVED*** == "pos_matcher":
-                        self.map_pos(filename=filename, text=txt, pattern_index=i)
-                    elif pat***REMOVED***"type"***REMOVED*** == "match_all":
-                        self.match_all(filename=filename, text=txt, pattern_index=i)
-                    else:
-                        raise Exception("Error, pattern type not supported: ", pat***REMOVED***"type"***REMOVED***)
-                    self.get_exclude_include_maps(filename, pat, txt)
-
-                if self.time_profile:
-                    # Add the filename's time profile to larger list
-                    self.overall_regex_time_profile***REMOVED***filename***REMOVED*** = self.current_regex_time_profile
-
-                #create intersection maps for all phi types and add them to a dictionary containing all maps
-
-                # get full exclude map (only updated either on-command by map_regex_context or at the very end of map_coordinates)
-                self.full_exclude_map***REMOVED***filename***REMOVED*** = self.include_map.get_complement(filename, txt)
+            # Add total tokens to token dictionary
+            # self.token_data***REMOVED***filename***REMOVED*** = 
                 
-                for phi_type in self.phi_type_list:
-                    for start,stop in self.phi_type_dict***REMOVED***phi_type***REMOVED******REMOVED***0***REMOVED***.filecoords(filename):
-                        self.data_all_files***REMOVED***filename***REMOVED******REMOVED***"phi"***REMOVED***.append({"start":start, "stop":stop, "word":txt***REMOVED***start:stop***REMOVED***,"phi_type":phi_type, "filepath":""})
+            # initialize phi type
+            phi_type = "OTHER"
+
+            #### Create inital self.exclude/include for file
+
+            for i,pat in enumerate(self.patterns):
+                if pat***REMOVED***"type"***REMOVED*** == "regex":
+                    self.map_regex(filename=filename, text=txt, pattern_index=i)
+                elif pat***REMOVED***"type"***REMOVED*** == "dynamic_set":
+                    self.map_set(filename=filename, text=txt, pattern_index=i)
+                elif pat***REMOVED***"type"***REMOVED*** == "set":
+                    self.map_set(filename=filename, text=txt, pattern_index=i)
+                elif pat***REMOVED***"type"***REMOVED*** == "regex_context":
+                    self.map_regex_context(filename=filename, text=txt, pattern_index=i)
+                elif pat***REMOVED***"type"***REMOVED*** == "stanford_ner":
+                    self.map_ner(filename=filename, text=txt, pattern_index=i)
+                elif pat***REMOVED***"type"***REMOVED*** == "pos_matcher":
+                    self.map_pos(filename=filename, text=txt, pattern_index=i)
+                elif pat***REMOVED***"type"***REMOVED*** == "match_all":
+                    self.match_all(filename=filename, text=txt, pattern_index=i)
+                else:
+                    raise Exception("Error, pattern type not supported: ", pat***REMOVED***"type"***REMOVED***)
+                self.get_exclude_include_maps(filename, pat, txt)
+
+            if self.time_profile:
+                # Add the filename's time profile to larger list
+                self.overall_regex_time_profile***REMOVED***filename***REMOVED*** = self.current_regex_time_profile
+
+            #create intersection maps for all phi types and add them to a dictionary containing all maps
+
+            # get full exclude map (only updated either on-command by map_regex_context or at the very end of map_coordinates)
+            self.full_exclude_map***REMOVED***filename***REMOVED*** = self.include_map.get_complement(filename, txt)
+                
+            for phi_type in self.phi_type_list:
+                for start,stop in self.phi_type_dict***REMOVED***phi_type***REMOVED******REMOVED***0***REMOVED***.filecoords(filename):
+                    self.data_all_files***REMOVED***filename***REMOVED******REMOVED***"phi"***REMOVED***.append({"start":start, "stop":stop, "word":txt***REMOVED***start:stop***REMOVED***,"phi_type":phi_type, "filepath":""})
 
 
         #clear out any data to save ram
         for i,pat in enumerate(self .patterns):
             if "data" in pat:
                 del self.patterns***REMOVED***i***REMOVED******REMOVED***"data"***REMOVED***
-
+        print("Map_coordinates done") 
         return self.full_exclude_map
                 
     def map_regex(self, filename="", text="", pattern_index=-1, pre_process= r"***REMOVED***^a-zA-Z0-9***REMOVED***"):
         """ Creates a coordinate map from the pattern on this data
             generating a coordinate map of hits given (dry run doesn't transform)
         """
-
+        '''
         if not os.path.exists(filename):
             raise Exception("Filepath does not exist", filename)
-
+        '''
         if pattern_index < 0 or pattern_index >= len(self.patterns):
             raise Exception("Invalid pattern index: ", pattern_index, "pattern length", len(patterns))
         coord_map = self.patterns***REMOVED***pattern_index***REMOVED******REMOVED***"coordinate_map"***REMOVED***
@@ -508,10 +545,10 @@ class Philter:
         """
 
         punctuation_matcher = re.compile(r"***REMOVED***^a-zA-Z0-9****REMOVED***")
-
+        '''
         if not os.path.exists(filename):
             raise Exception("Filepath does not exist", filename)
-
+        '''
         if pattern_index < 0 or pattern_index >= len(self.patterns):
             raise Exception("Invalid pattern index: ", pattern_index, "pattern length", len(patterns))
         
@@ -614,9 +651,10 @@ class Philter:
 
     def match_all(self, filename="", text="", pattern_index=-1):
         """ Simply maps to the entirety of the file """
+        ''' 
         if not os.path.exists(filename):
             raise Exception("Filepath does not exist", filename)
-
+        '''
         if pattern_index < 0 or pattern_index >= len(self.patterns):
             raise Exception("Invalid pattern index: ", pattern_index, "pattern length", len(patterns))
 
@@ -628,29 +666,34 @@ class Philter:
 
     def map_set(self, filename="", text="", pattern_index=-1,  pre_process= r"***REMOVED***^a-zA-Z0-9***REMOVED***"):
         """ Creates a coordinate mapping of words any words in this set"""
+        '''
         if not os.path.exists(filename):
             raise Exception("Filepath does not exist", filename)
-
+        '''
         if pattern_index < 0 or pattern_index >= len(self.patterns):
             raise Exception("Invalid pattern index: ", pattern_index, "pattern length", len(patterns))
         
         if self.patterns***REMOVED***pattern_index***REMOVED******REMOVED***"type"***REMOVED*** == "dynamic_set":
-            # create map_set for current note
             map_set = {}
-            if (filename.find('.txt') != -1) or (filename.find('.xml') != -1):
-                file_note_key = os.path.basename(filename).replace('\n','')
-                file_note_key = file_note_key.replace('.txt','')
-                file_note_key = file_note_key.lstrip('0')
-                file_note_key = file_note_key.replace('.xml','')
-                file_note_key = file_note_key.replace('_utf8','')
-                note_key = file_note_key
-                for probe in self.patterns***REMOVED***pattern_index***REMOVED******REMOVED***"data"***REMOVED***:
-                    if note_key in self.patterns***REMOVED***pattern_index***REMOVED******REMOVED***"data"***REMOVED******REMOVED***probe***REMOVED***:
-                        probe_clean = get_clean(probe)
-                        for pc in probe_clean:
-                            prb = re.sub(r"***REMOVED***^a-zA-Z0-9***REMOVED***+", "",
-                                         str(pc).lower().strip()) 
-                            map_set***REMOVED***prb***REMOVED*** = self.patterns***REMOVED***pattern_index***REMOVED******REMOVED***"data"***REMOVED******REMOVED***probe***REMOVED***
+            pos_set = set(self.patterns***REMOVED***pattern_index***REMOVED******REMOVED***"pos"***REMOVED***)
+            if self.known_phi:
+               for probe in self.known_phi***REMOVED***filename***REMOVED***:
+                   probe_clean = re.sub(r"***REMOVED***^a-zA-Z0-9***REMOVED***+", "", str(probe).lower().strip())
+                   map_set***REMOVED***probe_clean***REMOVED*** = filename  
+            elif (filename.find('.txt') != -1) or (filename.find('.xml') != -1):
+                   file_note_key = os.path.basename(filename).replace('\n','')
+                   file_note_key = file_note_key.replace('.txt','')
+                   file_note_key = file_note_key.lstrip('0')
+                   file_note_key = file_note_key.replace('.xml','')
+                   file_note_key = file_note_key.replace('_utf8','')
+                   note_key = file_note_key
+                   for probe in self.patterns***REMOVED***pattern_index***REMOVED******REMOVED***"data"***REMOVED***:
+                      if note_key in self.patterns***REMOVED***pattern_index***REMOVED******REMOVED***"data"***REMOVED******REMOVED***probe***REMOVED***:
+                          probe_clean = get_clean(probe)
+                          for pc in probe_clean:
+                              prb = re.sub(r"***REMOVED***^a-zA-Z0-9***REMOVED***+", "",
+                                           str(pc).lower().strip()) 
+                              map_set***REMOVED***prb***REMOVED*** = self.patterns***REMOVED***pattern_index***REMOVED******REMOVED***"data"***REMOVED******REMOVED***probe***REMOVED***
         else:
             map_set = self.patterns***REMOVED***pattern_index***REMOVED******REMOVED***"data"***REMOVED***
         coord_map = self.patterns***REMOVED***pattern_index***REMOVED******REMOVED***"coordinate_map"***REMOVED***
@@ -692,9 +735,10 @@ class Philter:
 
     def map_pos(self, filename="", text="", pattern_index=-1, pre_process= r"***REMOVED***^a-zA-Z0-9***REMOVED***"):
         """ Creates a coordinate mapping of words which match this part of speech (POS)"""
+        '''
         if not os.path.exists(filename):
             raise Exception("Filepath does not exist", filename)
-
+        '''
         if pattern_index < 0 or pattern_index >= len(self.patterns):
             raise Exception("Invalid pattern index: ", pattern_index, "pattern length", len(patterns))
 
@@ -731,10 +775,10 @@ class Philter:
 
     def map_ner(self, filename="", text="", pattern_index=-1, pre_process= r"***REMOVED***^a-zA-Z0-9***REMOVED***+"):
         """ map NER tagging"""
-      
+        '''    
         if not os.path.exists(filename):
             raise Exception("Filepath does not exist", filename)
-
+        '''
         if pattern_index < 0 or pattern_index >= len(self.patterns):
             raise Exception("Invalid pattern index: ", pattern_index, "pattern length", len(patterns))
 
@@ -820,6 +864,7 @@ class Philter:
             phi_type = pattern***REMOVED***"phi_type"***REMOVED***
         else:
             phi_type = "OTHER"
+
         for start,stop in coord_map.filecoords(filename):
             if pattern***REMOVED***'type'***REMOVED*** != 'regex_context' and pattern***REMOVED***'type'***REMOVED*** != 'dynamic_set':
                 if exclude or exclude == "True":
