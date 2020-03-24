@@ -151,13 +151,13 @@ def send_jobs(servers, username, wrkDir, chunks_fname, logBase):
                        + os.path.join(wrkDir, "deidloop.py")
                        + " -t {0} ".format(nthreads)
                        + " --imofile " + os.path.join(wrkDir, chunks_fname[url])
-                       + " --philter " + wrkDir
+                       + " --philterfolder" + wrkDir
                        + " --superlog " + logBase
                        + " > " + os.path.join(wrkDir, "stdouterr_"
                                               + url.split('.')[0] + ".txt")
                        + " 2>&1 &")
         print(commandline)
-        call(commandline.split())
+        #call(commandline.split())
 
 # rsync deid'd notes back to master (or sync across servers)
 
@@ -172,8 +172,8 @@ def main():
     chunks_fname = write_chunk_files(servers,
                                      srcFolders, srcMetaFiles, dstFolders)
     
-    scp_chunk_files(servers, args.username, args.philter, chunks_fname)
-    send_jobs(servers, args.username, args.philter, chunks_fname, args.superlog)
+    scp_chunk_files(servers, args.username, args.philterfolder, chunks_fname)
+    send_jobs(servers, args.username, args.philterfolder, chunks_fname, args.superlog)
     
     return 0
 

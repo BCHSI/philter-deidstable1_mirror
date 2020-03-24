@@ -3,16 +3,32 @@ import re
 import pandas as pd
 from collections import defaultdict
 import datetime as dt
+import types
 from datetime2 import datetime2
+import pymongo
+from pymongo.errors import ConnectionFailure
+import os
+import pprint
+import json
+from pymongo import MongoClient
 
 DEFAULT_SHIFT_VALUE = 32
 DATE_REF = dt.datetime(2000, 2, 29)
 
 class Subs:
-    def __init__(self, look_up_table_path = None):
+    def __init__(self, filenames, look_up_table_path = None, db = None):
         #load shift table to a dictionary
-        self.shift_table, self.deid_note_key_table = self._load_look_up_table(look_up_table_path)
+        if type(look_up_table_path) is dict:
+           if db is None:
+              print("In Subs. Expecting a mongo handel. None provided.")
+              quit()
+           else:
+              self.db = db
+           self.shift_table, self.deid_note_key_table = self._load_look_up_mongo(filenames,look_up_table_path)
+        else:   
+           self.shift_table, self.deid_note_key_table = self._load_look_up_table(look_up_table_path)
     
+ 
     def has_shift_amount(self, note_id):
         return note_id in self.shift_table
     
@@ -99,5 +115,46 @@ class Subs:
                               index=offset_table.note_key).to_dict()
         id2deid = pd.Series(deid_table.deid_note_key.values,
                             index=deid_table.note_key).to_dict()
-        
         return id2offset, id2deid
+
+    def _load_look_up_mongo(self, filenames, mongo):
+        try:
+           db = self.db
+           collection = db[mongo['collection_meta_data']]
+        except:
+           print("Cannot connect to Mongo Database note_info_map")
+        id2offset = {}
+        id2deid = {}
+        #print(collection.find_one({"note_key":note_key},{"_id":0,"note_key":1, "deid_date_offset_cdw":1,"patient_ID":1,"deid_note_key":1}))
+        surrogate_info = collection.find({"_id": {"$in": filenames}},{"_id":1,"deid_date_offset_cdw":1,"deid_note_key":1})
+                
+        for filename in list(surrogate_info):
+           id2offset[filename['_id']]  = filename["deid_date_offset_cdw"]
+           id2deid[filename['_id']] = filename["deid_note_key"]        
+
+        return id2offset, id2deid
+        '''
+        try:
+            look_up_table = pd.read_csv(look_up_table_path, sep='\t',
+                                        index_col=False,
+                                        usecols=['note_key', 'date_offset',
+                                                 'deid_note_key'],
+                                        dtype=str)
+        except pd.errors.EmptyDataError as err:
+            print("Pandas Empty Data Error: " + look_up_table_path
+                  + " is empty {0}".format(err))
+            return {}, {}
+        except ValueError as err:
+            print("Value Error: " + look_up_table_path
+                  + " is invalid {0}".format(err))
+            return {}, {}
+
+        offset_table = look_up_table[~look_up_table["date_offset"].isnull()]
+        deid_table = look_up_table[~look_up_table["deid_note_key"].isnull()]
+        id2offset = pd.Series(offset_table.date_offset.values,
+                              index=offset_table.note_key).to_dict()
+        id2deid = pd.Series(deid_table.deid_note_key.values,
+                            index=deid_table.note_key).to_dict()
+
+        return id2offset, id2deid
+        '''

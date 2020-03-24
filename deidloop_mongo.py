@@ -1,7 +1,6 @@
 """
 Code to script multithread instances of deidipipe.py
 It creates a queue of directories. Each thread processes a directory.
-It copies the structure of the input in a new location, and renames files.
 """
 import sys
 import argparse
@@ -15,6 +14,11 @@ import pandas
 import numpy
 import os
 from logger import get_super_log
+import json
+import socket
+from pymongo import MongoClient
+from deidpipe import main_mongo
+from argparse import Namespace
 
 def get_args():
     # gets input/output/filename
@@ -22,113 +26,112 @@ def get_args():
     
     ap = argparse.ArgumentParser(description=help_str)
 
-    ap.add_argument("--imofile",
-                    help="Path to the file that contains the list of input"
-                    + " folders, metafiles, output folders",
+    ap.add_argument("--mongofile",
+                    help="Path to the mongo config file",
                     type=str)
     ap.add_argument("-t", "--threads", default=1,
                     help="Number of parallel threads, the default is 1",
                     type=int)
-    ap.add_argument("--philter",
-                    help="Path to Philter program files like deidpipe.py",
+    ap.add_argument("--philterconfig",
+                    help="Path to Philter program config files like philter_delta.json",
                     type=str)
-    ap.add_argument("--superlog", 
-                    help="Path to the folder for the super log."
+
+    ap.add_argument("--philter", 
+                    help="Path to philter scripts",
+                    type=str)
+
+    ap.add_argument("--superlog",
+                    help="True or False option."
                     + " When this is set, the pipeline prints and saves a"
-                    + " super log in a subfolder log of the set folder"
-                    + " combining logs of each output directory",
+                    + " super log in mongo"
+                    + " combining logs of each batch",
                     type=str)
 
     return ap.parse_args()
 
+def read_mongo_config(mongofile):
+    if not os.path.exists(mongofile):
+       raise Exception("Filepath does not exist", mongofile)
+    mongo_details = json.loads(open(mongofile,"r").read())
+    return mongo_details    
 
-def runDeidChunck(unit, q, philterFolder):
+def get_mongo_handle(mongo):
+    client = MongoClient(mongo["client"],username=mongo["username"],password=mongo["password"])
+    print(client)
+    try:
+        db = client[mongo['db']] 
+    except:
+        print("Mongo Server not available")
+    return db
+
+
+def get_batch(db, mongo):
+    collection_chunk = db[mongo['collection_chunk']]
+    
+    server = socket.gethostname() + ".ucsfmedicalcenter.org"
+    batch = collection_chunk.distinct('batch',{'url': server.lower()})
+    return batch
+
+def runDeidChunck(unit, q, philterFolder, philterConfig, dbConfig, db, mongo):
     """
     Function to instruct a thread to deid a directory.
     INPUTS:
         unit: Thread ID
         q: Tuple used to determine path to directory.
     """
-    print(philterFolder)
+    print(type(db))
     while True:
         # time for run
         t0 = time.time()
+        batch = q.get()
+        call(["/data/radhakrishnanl/deidproj/bin/python3", "-O", "deidpipe.py",
+              "-m", dbConfig,
+              "-f", os.path.join(philterConfig),
+              "-b", str(batch),
+              "-l", "True"],
+              cwd=philterFolder)
 
-        # Tuple to determine path
-        if len(q.get()) == 4:
-           srcFolder, srcMeta, dstFolder, kpfile = q.get()
-        else:
-           srcFolder, srcMeta, dstFolder = q.get()
-        # Build output directory
-        os.makedirs(dstFolder, exist_ok=True)
 
-        print(str(unit) + " src: " + srcFolder)
-        print(str(unit) + " met: " + srcMeta)
-        print(str(unit) + " dst: " + dstFolder)
-        print(str(unit) + " cwd: " + philterFolder)
-
-        # Run Deid (would be better to interface directly)
-        try:
-           kpfile
-        except NameError:
-           kpfile = None
-        if kpfile is None:
-           call(["python3", "-O", "deidpipe.py", 
-                 "-i", srcFolder, 
-                 "-o", dstFolder, 
-                 "-s", srcMeta,
-                 "-d", "True", 
-                 "-f", "configs/philter_delta_holidays_added.json",
-                 "-l", "True"],
-                 cwd=philterFolder)
-        else:
-            call(["python3", "-O", "deidpipe.py",
-                 "-i", srcFolder,
-                 "-o", dstFolder,
-                 "-s", srcMeta,
-                 "-d", "True",
-                 "-f", "configs/philter_delta_holidays_added.json",
-                 "-k", kpfile,
-                 "-l", "True"],
-                 cwd=philterFolder)
-
+        '''
+        args = Namespace(anno='./data/i2b2_xml', batch=q.get(), deid_filename=True, dynamic_blacklist= None, eval=False, filters=philterConfig, input=None, log=True, mongodb=dbConfig, output=None, surrogate_info=None, verbose=False, xml=False)
+        main_mongo(args, db, mongo)
+        '''
         # Print time elapsed for batch
         t = time.time() - t0
-        print(str(unit) + " " + dstFolder + ": " + str(t) + " seconds")
-
+        print(str(unit) + " " +"batch"+ ": " + str(t) + " seconds")
         q.task_done()
 
 def main():
     enclosure_queue = Queue()
-    
+
     args = get_args()
     print("read args")
-    
     # Set up some threads to fetch the enclosures (each thread deids a directory)
     print("starting {0} worker threads".format(args.threads))
+    mongo = read_mongo_config(args.mongofile)
+    db = get_mongo_handle(mongo)
+    print("In deidloop " + args.mongofile + " " + os.path.join(args.philter))
     for unit in range(args.threads):
         worker = Thread(target=runDeidChunck,
                         args=(unit, enclosure_queue,
-                              os.path.dirname(args.philter),))
+                              os.path.join(args.philter), args.philterconfig, args.mongofile, db, mongo))
+
         worker.setDaemon(True)
         worker.start()
 
+
+    list_of_batch_to_process = get_batch(db, mongo)    
+    
     # Build queue
-    with open(args.imofile, 'r') as imo:
-        for line in imo:
-            parts = line.split()
-            if len(parts) > 3:
-               idir, mfile, odir, kpfile = line.split()
-               enclosure_queue.put([idir, mfile, odir, kpfile])
-            else:
-               idir, mfile, odir = line.split()
-               enclosure_queue.put([idir, mfile, odir])
+    for batch in list_of_batch_to_process:
+       enclosure_queue.put(batch)
+
     # Now wait for the queue to be empty, indicating that we have
     # processed all of the notes
     print('*** Main thread waiting')
     enclosure_queue.join()
     print('*** Done')
-
+    '''
     if args.superlog:
         # Once all the directories have been processed,
         # create a superlog that combines all logs in each output directory
@@ -145,15 +148,11 @@ def main():
                                              "detailed_batch_summary.csv"))
                 all_logs.append(os.path.join(odir, "log",
                                              "known_phi.log"))
-        
+
         # Create super log of batch summaries
         if all_logs != []:
             get_super_log(all_logs, os.path.join(args.superlog, "log"))
-
+    '''
     return 0
-
 if __name__ == "__main__":
     sys.exit(main())
-
-
-
