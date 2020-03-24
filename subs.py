@@ -133,28 +133,4 @@ class Subs:
            id2deid[filename['_id']] = filename["deid_note_key"]        
 
         return id2offset, id2deid
-        '''
-        try:
-            look_up_table = pd.read_csv(look_up_table_path, sep='\t',
-                                        index_col=False,
-                                        usecols=['note_key', 'date_offset',
-                                                 'deid_note_key'],
-                                        dtype=str)
-        except pd.errors.EmptyDataError as err:
-            print("Pandas Empty Data Error: " + look_up_table_path
-                  + " is empty {0}".format(err))
-            return {}, {}
-        except ValueError as err:
-            print("Value Error: " + look_up_table_path
-                  + " is invalid {0}".format(err))
-            return {}, {}
-
-        offset_table = look_up_table[~look_up_table["date_offset"].isnull()]
-        deid_table = look_up_table[~look_up_table["deid_note_key"].isnull()]
-        id2offset = pd.Series(offset_table.date_offset.values,
-                              index=offset_table.note_key).to_dict()
-        id2deid = pd.Series(deid_table.deid_note_key.values,
-                            index=deid_table.note_key).to_dict()
-
-        return id2offset, id2deid
-        '''
+       

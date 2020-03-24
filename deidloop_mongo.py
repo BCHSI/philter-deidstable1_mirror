@@ -91,7 +91,7 @@ def runDeidChunck(unit, q, philterFolder, philterConfig, dbConfig, db, mongo):
               "-l", "True"],
               cwd=philterFolder)
 
-
+        #To do fix threading issues while calling the function
         '''
         args = Namespace(anno='./data/i2b2_xml', batch=q.get(), deid_filename=True, dynamic_blacklist= None, eval=False, filters=philterConfig, input=None, log=True, mongodb=dbConfig, output=None, surrogate_info=None, verbose=False, xml=False)
         main_mongo(args, db, mongo)
@@ -106,6 +106,7 @@ def main():
 
     args = get_args()
     print("read args")
+
     # Set up some threads to fetch the enclosures (each thread deids a directory)
     print("starting {0} worker threads".format(args.threads))
     mongo = read_mongo_config(args.mongofile)
@@ -131,28 +132,7 @@ def main():
     print('*** Main thread waiting')
     enclosure_queue.join()
     print('*** Done')
-    '''
-    if args.superlog:
-        # Once all the directories have been processed,
-        # create a superlog that combines all logs in each output directory
-        all_logs = []
-        with open(args.imofile, 'r') as imo:
-            for line in imo:
-                parts = line.split()
-                if len(parts) > 3:
-                   idir, mfile, odir, kpfile = line.split()
-                else:
-                   idir, mfile, odir = line.split()
 
-                all_logs.append(os.path.join(odir, "log",
-                                             "detailed_batch_summary.csv"))
-                all_logs.append(os.path.join(odir, "log",
-                                             "known_phi.log"))
-
-        # Create super log of batch summaries
-        if all_logs != []:
-            get_super_log(all_logs, os.path.join(args.superlog, "log"))
-    '''
     return 0
 if __name__ == "__main__":
     sys.exit(main())

@@ -396,18 +396,14 @@ class Philter:
             generating a coordinate map of hits given 
             (this performs a dry run on the data and doesn't transform)
         """
-        print("In map coordinates") 
+
+
         #create coordinate maps for each pattern
         for i,pat in enumerate(self.patterns):
             self.patterns[i]["coordinate_map"] = CoordinateMap()
         for filename in self.filenames:
-            '''
-            if (filename.split(".")[-1] not in allowed_filetypes) or 'meta_data' in filename:
-                if self.verbose:
-                     print("Skipping: ", filename)
-                continue
-            '''                
-            #self.patterns[i]["coordinate_map"].add_file(filename)
+   
+
             txt = self.texts[filename]
 
             # Get full self.include/exclude map before transform
@@ -453,6 +449,7 @@ class Philter:
                 else:
                     raise Exception("Error, pattern type not supported: ", pat["type"])
                 self.get_exclude_include_maps(filename, pat, txt)
+
             if self.time_profile:
                 # Add the filename's time profile to larger list
                 self.overall_regex_time_profile[filename] = self.current_regex_time_profile

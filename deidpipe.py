@@ -117,7 +117,7 @@ def main_mongo(args, db=None ,mongo=None):
        if __debug__: print("Generating coordinate map from xml")
        phitexts.detect_xml_phi()       
     elif args.dynamic_blacklist:
-       print("In detect phi with dynamic blacklist file")
+
        phitexts.detect_phi(args.filters, args.dynamic_blacklist,
                             verbose=args.verbose)
     else:
