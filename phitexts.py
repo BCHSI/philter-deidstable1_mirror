@@ -11,7 +11,6 @@ from subs import Subs
 import string
 import pandas
 import numpy
-#from knownphi import Knownphi
 from constants import *
 from textmethods import get_clean, get_tokens
 import time
@@ -23,9 +22,8 @@ import pandas as pd
 from datetime import datetime
 import socket
 import datetime
-#import memory_profiler
-#import sys
-#sys.stdout = LogFile('memory_profile_log')
+
+
 
 class Phitexts:
     """ container for texts, phi, attributes """
@@ -143,27 +141,18 @@ class Phitexts:
 
 
     def _get_xml_tokens(self,string,text,start):
-        tokens = {} 
-        str_split = get_clean(string)
-        offset = start
-        for item in str_split:
-            item_stripped = item.strip()
-            if len(item_stripped) is 0:
-                offset += len(item)
-                continue
-            token_start = text.find(item_stripped, offset)
-            if token_start is -1:
-               raise Exception("ERROR: cannot find token \"{0}\" in \"{1}\" starting at {2} in file {3}".format(item, string, offset))
-            #print(item +"\t" + str(token_start) + "\t" + str(len(item_stripped)))
-            token_stop = int(token_start) + int(len(item_stripped)) - 1 
-            offset = token_stop + 1
-            tokens.update({token_start:token_stop})
+        tokens = {}
+        
+        tkns = get_tokens(string, text, start)
+        for tk_start in tkns:
+            tk_stop = tkns[tk_start][0] + 1
+            tokens.update({tk_start:tk_stop})
     
         return tokens
 
     def _get_tag_start_stop(self, tag_line):
         if "@spans" in tag_line.keys():
-            start, stop = final_value["@spans"].split('~')
+            start, stop = tag_line["@spans"].split('~')
         elif "@start" and  "@end" in tag_line.keys():
             start = tag_line["@start"]
             stop  = tag_line["@end"]
@@ -291,16 +280,6 @@ class Phitexts:
             return
         self.types = self.filterer.phi_type_dict
 
-    '''    
-    def detect_known_phi(self, knownphifile = "./data/knownphi_data.txt"):
-        assert self.coords, "No PHI coordinates defined"
-        assert self.texts, "No texts defined"
-        assert self.types, "No PHI types defined"
-
-        self.knownphi = Knownphi(knownphifile, self.coords, self.texts, self.types,self.pos)
-        self.coords, self.types, self.known_phi = self.knownphi.update_coordinatemap()
-    '''
-
     def normalize_phi(self):
         assert self.texts, "No texts defined"
         assert self.coords, "No PHI coordinates defined"
@@ -400,8 +379,7 @@ class Phitexts:
             exclude_dict = self.coords[filename]
             #read the text by character, any non-punc non-overlaps will be replaced
             contents = []
-            #print(filename)
-            #print(exclude_dict)
+
             for i in range(0, len(txt)):
 
                 if i < last_marker:
@@ -527,7 +505,6 @@ class Phitexts:
         batch_summary_df = pd.DataFrame(columns=['Title','values']) 
         csv_summary_df = pd.DataFrame(columns=['filename','batch','file_size','total_tokens','phi_tokens','successfully_normalized','failed_normalized','successfully_surrogated','failed_surrogated'])
         dynamic_blacklist_df = pd.DataFrame(columns=['filename','batch','start','end','probe','context','phi_type'])        
-
         eval_table = {}
         failed_date = {}
         phi_table = {}
@@ -621,10 +598,8 @@ class Phitexts:
                 # f_marked.write('\n')
 
         for phi_type in phi_counter:
-            #f_count.write('\t'.join([phi_type, str(phi_counter[phi_type])]))
-            #f_count.write('\n')
             phi_count_df = phi_count_df.append({'Phi_type': phi_type, 'Count': str(phi_counter[phi_type])},ignore_index=True)
-        
+       
 
         summary_info = {'filesize':[],'total_tokens':[],'phi_tokens':[],'successful_normalized':[],'failed_normalized':[],'successful_surrogated':[],'failed_surrogated':[]}
         
@@ -632,7 +607,6 @@ class Phitexts:
                 
         ### CSV of summary per file ####
         # 1. Filename
-            #print(filename)
         for filename in self.filenames:
 
             # File size in bytes
@@ -721,7 +695,7 @@ class Phitexts:
         batch_summary_df = batch_summary_df.append({'Title': 'DATES FAILED TO SURROGATE','values': str(failed_surrogation)},ignore_index=True)
         if kp or mongo is not None:
            phi_type_per_token = self.get_phi_type_per_token()
-           #with open(dynamic_blacklist_filepath,'w+') as f:
+
            for filename in phi_type_per_token: 
                for start in phi_type_per_token[filename]:
                    for end in phi_type_per_token[filename][start]:
@@ -738,6 +712,7 @@ class Phitexts:
                            dynamic_blacklist_df = dynamic_blacklist_df.append(pd.Series([filename,self.batch,str(start),str(end),word,context.replace('\n',' '),','.join(phi_type_per_token[filename][start][end])], index=dynamic_blacklist_df.columns),ignore_index=True)
 
         return failed_date,eval_table,phi_table,phi_count_df,csv_summary_df,batch_summary_df,dynamic_blacklist_df
+
         # Todo: add PHI type counts to summary
         # Name PHI
         # Date PHI
@@ -986,7 +961,6 @@ class Phitexts:
             for filename in files:
                 if not filename.endswith("xml"):
                     continue
-                #print("root: " + str(root) + " filename: " + str(filename))
                 filepath = os.path.join(root, filename)
                 # change here: what will the input format be?
                 file_id = self.inputdir + filename.split('.')[0] + '.txt'
@@ -1011,7 +985,6 @@ class Phitexts:
                         if not isinstance(value, list):
                             value = [value]
                         for final_value in value:
-#                            print("final_value: " + )
                             start, end = self._get_tag_start_stop(final_value)
                             text = final_value["@text"]
                             phi_type = final_value["@TYPE"]
