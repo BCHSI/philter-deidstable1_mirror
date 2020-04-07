@@ -290,7 +290,7 @@ class Philter:
         known_pattern_types = set(["regex", "set", "dynamic_set", "regex_context","stanford_ner", "pos_matcher", "match_all"])
         require_files = set(["regex", "set"])
         require_pos = set(["pos_matcher"])
-        set_filetypes = set(["pkl", "json","txt","mongo"])
+        set_filetypes = set(["pkl", "json", "txt", "mongo"])
         regex_filetypes = set(["txt"])
         reserved_list = set(["data", "coordinate_map"])
         #first check that data is formatted, can be loaded etc. 
@@ -303,23 +303,14 @@ class Philter:
                     raise Exception("Error, Keyword is reserved", k, pattern)
             if pattern["type"] not in known_pattern_types:
                 raise Exception("Pattern type is unknown", pattern["type"])
-            if pattern["type"] == "set":
-                if pattern["filepath"].split(".")[-1] not in set_filetypes:
-                    raise Exception("Invalid filteype", pattern["filepath"], "must be of", set_filetypes)
-                self.patterns[i]["data"] = self.init_set(pattern["filepath"]) 
-            if pattern["type"] == "dynamic_set":
+            if pattern["type"] == "set" or pattern["type"] == "dynamic_set":
                 if pattern["filepath"].split(".")[-1] not in set_filetypes:
                     raise Exception("Invalid filetype", pattern["filepath"], "must be of", set_filetypes)
                 self.patterns[i]["data"] = self.init_set(pattern["filepath"])  
-            if pattern["type"] == "regex":
-                if pattern["filepath"].split(".")[-1] not in regex_filetypes:
-                    raise Exception("Invalid filetype", pattern["filepath"], "must be of", regex_filetypes)
-                self.patterns[i]["data"] = self.precompile(pattern["filepath"])
-            elif pattern["type"] == "regex_context":
+            if pattern["type"] == "regex" or pattern["type"] == "regex_context":
                 if pattern["filepath"].split(".")[-1] not in regex_filetypes:
                     raise Exception("Invalid filteype", pattern["filepath"], "must be of", regex_filetypes)
                 self.patterns[i]["data"] = self.precompile(pattern["filepath"])
-                #print(self.precompile(pattern["filepath"]))
     
     def precompile(self, filepath):
         """ precompiles our regex to speed up pattern matching"""
@@ -350,11 +341,10 @@ class Philter:
                     map_set = pickle.load(pickle_file, encoding = 'latin1')
         elif filepath.endswith(".json"):
             map_set = json.loads(open(filepath, "r").read())
-        elif filepath.endswith(".txt"):
+        elif filepath.endswith(".txt"): # dynamic set
             try:
                 probes_file = pd.read_csv(filepath, sep='\t', index_col=False, usecols=['value','phi_type','note_key'], dtype=str, encoding='latin-1')
                 names_probes = probes_file.loc[(probes_file['phi_type'] == 'lname') | (probes_file['phi_type'] == 'fname')]
-            
             except pd.errors.EmptyDataError as err:
                 print("Pandas Empty Data Error: " + filepath
                        + " is empty {0}".format(err))
@@ -365,7 +355,6 @@ class Philter:
                 return {}, {}
             
             # need to make ditionary of lists
-            map_set = {}
             for index, row in names_probes.iterrows():
                 value = row['value']
                 note_key = row['note_key']
@@ -666,16 +655,11 @@ class Philter:
 
     def map_set(self, filename="", text="", pattern_index=-1,  pre_process= r"[^a-zA-Z0-9]"):
         """ Creates a coordinate mapping of words any words in this set"""
-        '''
-        if not os.path.exists(filename):
-            raise Exception("Filepath does not exist", filename)
-        '''
         if pattern_index < 0 or pattern_index >= len(self.patterns):
             raise Exception("Invalid pattern index: ", pattern_index, "pattern length", len(patterns))
         
         if self.patterns[pattern_index]["type"] == "dynamic_set":
             map_set = {}
-            pos_set = set(self.patterns[pattern_index]["pos"])
             if self.known_phi:
                for probe in self.known_phi[filename]:
                    probe_clean = re.sub(r"[^a-zA-Z0-9]+", "", str(probe).lower().strip())
