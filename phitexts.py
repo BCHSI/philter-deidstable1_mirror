@@ -91,17 +91,8 @@ class Phitexts:
         raw_note_text = db***REMOVED***mongo***REMOVED***'collection_raw_note_text'***REMOVED******REMOVED***
         meta_in = db***REMOVED***mongo***REMOVED***'collection_meta_data'***REMOVED******REMOVED*** 
         server = socket.gethostname() + ".ucsfmedicalcenter.org" 
-        # list_of_mongo_ids = meta_status.find({"note_key_status": {"$in": ***REMOVED***'Add','Update'***REMOVED***}})
-        #list_of_mongo_ids = chunk_collection.find({"batch": batch, "url":server.lower()},{"_id": 1})
+        
         try:
-           '''
-           to_philter = chunk_collection.aggregate(***REMOVED***{"$match":{"$and":***REMOVED***{"url": server.lower()},{"batch": batch}***REMOVED***}},
-                                                    {"$lookup": {"from": 'raw_note_text', "localField": "_id", "foreignField": "_id", "as": "get_text"}},
-                                                    {"$unwind": {"path": "$get_text"}},
-                                                    {"$lookup": {"from": 'probes', "localField": "patient_ID", "foreignField": "person_id", "as": "prb"}},
-                                                    {"$unwind":"$prb"},
-                                                    {"$project": {"_id": 1, "patient_ID": 1, "raw_note_text": "$get_text.raw_note_text", "probes_lname": "$prb.lname", "probes_fname": "$prb.fname"}}***REMOVED***)
-        '''
            to_philter = chunk_collection.aggregate(***REMOVED***{"$match":{"$and":***REMOVED***{"url": server.lower()},{"batch": batch}***REMOVED***}},
                                                     {"$lookup": {"from": 'raw_note_text', "localField": "_id", "foreignField": "_id", "as": "get_text"}},
                                                     {"$unwind": {"path": "$get_text"}},
@@ -113,6 +104,7 @@ class Phitexts:
         except pymongo.errors.OperationFailure as e:
            print(e.code)
            print(e.details)
+           
         probes_list = list(probes_name)
         for philter in list(to_philter):
            self.filenames.append(philter***REMOVED***'_id'***REMOVED***)
@@ -131,14 +123,6 @@ class Phitexts:
               self.known_phi***REMOVED***philter***REMOVED***'_id'***REMOVED******REMOVED*** = probes
 
         print("Text read")
-        '''
-        for doc in list_of_mongo_ids:
-            note_text = raw_note_text.find_one({"_id": doc***REMOVED***'_id'***REMOVED***},{"raw_note_text": 1})
-            self.filenames.append(note_text***REMOVED***"_id"***REMOVED***)
-            self.texts***REMOVED***note_text***REMOVED***"_id"***REMOVED******REMOVED*** = note_text***REMOVED***"raw_note_text"***REMOVED***
-            if kp:
-        '''    
-
 
     def _get_xml_tokens(self,string,text,start):
         tokens = {}
