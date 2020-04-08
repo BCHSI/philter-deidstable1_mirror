@@ -91,17 +91,8 @@ class Phitexts:
         raw_note_text = db[mongo['collection_raw_note_text']]
         meta_in = db[mongo['collection_meta_data']] 
         server = socket.gethostname() + ".ucsfmedicalcenter.org" 
-        # list_of_mongo_ids = meta_status.find({"note_key_status": {"$in": ['Add','Update']}})
-        #list_of_mongo_ids = chunk_collection.find({"batch": batch, "url":server.lower()},{"_id": 1})
+        
         try:
-           '''
-           to_philter = chunk_collection.aggregate([{"$match":{"$and":[{"url": server.lower()},{"batch": batch}]}},
-                                                    {"$lookup": {"from": 'raw_note_text', "localField": "_id", "foreignField": "_id", "as": "get_text"}},
-                                                    {"$unwind": {"path": "$get_text"}},
-                                                    {"$lookup": {"from": 'probes', "localField": "patient_ID", "foreignField": "person_id", "as": "prb"}},
-                                                    {"$unwind":"$prb"},
-                                                    {"$project": {"_id": 1, "patient_ID": 1, "raw_note_text": "$get_text.raw_note_text", "probes_lname": "$prb.lname", "probes_fname": "$prb.fname"}}])
-        '''
            to_philter = chunk_collection.aggregate([{"$match":{"$and":[{"url": server.lower()},{"batch": batch}]}},
                                                     {"$lookup": {"from": 'raw_note_text', "localField": "_id", "foreignField": "_id", "as": "get_text"}},
                                                     {"$unwind": {"path": "$get_text"}},
@@ -113,6 +104,7 @@ class Phitexts:
         except pymongo.errors.OperationFailure as e:
            print(e.code)
            print(e.details)
+           
         probes_list = list(probes_name)
         for philter in list(to_philter):
            self.filenames.append(philter['_id'])
@@ -131,14 +123,6 @@ class Phitexts:
               self.known_phi[philter['_id']] = probes
 
         print("Text read")
-        '''
-        for doc in list_of_mongo_ids:
-            note_text = raw_note_text.find_one({"_id": doc['_id']},{"raw_note_text": 1})
-            self.filenames.append(note_text["_id"])
-            self.texts[note_text["_id"]] = note_text["raw_note_text"]
-            if kp:
-        '''    
-
 
     def _get_xml_tokens(self,string,text,start):
         tokens = {}
