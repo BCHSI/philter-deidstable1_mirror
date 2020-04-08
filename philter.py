@@ -661,23 +661,26 @@ class Philter:
         if self.patterns***REMOVED***pattern_index***REMOVED******REMOVED***"type"***REMOVED*** == "dynamic_set":
             map_set = {}
             if self.known_phi:
-               for probe in self.known_phi***REMOVED***filename***REMOVED***:
-                   probe_clean = re.sub(r"***REMOVED***^a-zA-Z0-9***REMOVED***+", "", str(probe).lower().strip())
-                   map_set***REMOVED***probe_clean***REMOVED*** = filename  
+                for probe in self.known_phi***REMOVED***filename***REMOVED***:
+                    probe_clean = get_clean(probe)
+                        for pc in probe_clean:
+                            prb = re.sub(r"***REMOVED***^a-zA-Z0-9***REMOVED***+", "",
+                                         str(pc).lower().strip()) 
+                            map_set***REMOVED***prb***REMOVED*** = filename
             elif (filename.find('.txt') != -1) or (filename.find('.xml') != -1):
-                   file_note_key = os.path.basename(filename).replace('\n','')
-                   file_note_key = file_note_key.replace('.txt','')
-                   file_note_key = file_note_key.lstrip('0')
-                   file_note_key = file_note_key.replace('.xml','')
-                   file_note_key = file_note_key.replace('_utf8','')
-                   note_key = file_note_key
-                   for probe in self.patterns***REMOVED***pattern_index***REMOVED******REMOVED***"data"***REMOVED***:
-                      if note_key in self.patterns***REMOVED***pattern_index***REMOVED******REMOVED***"data"***REMOVED******REMOVED***probe***REMOVED***:
-                          probe_clean = get_clean(probe)
-                          for pc in probe_clean:
-                              prb = re.sub(r"***REMOVED***^a-zA-Z0-9***REMOVED***+", "",
-                                           str(pc).lower().strip()) 
-                              map_set***REMOVED***prb***REMOVED*** = self.patterns***REMOVED***pattern_index***REMOVED******REMOVED***"data"***REMOVED******REMOVED***probe***REMOVED***
+                file_note_key = os.path.basename(filename).replace('\n','')
+                file_note_key = file_note_key.replace('.txt','')
+                file_note_key = file_note_key.lstrip('0')
+                file_note_key = file_note_key.replace('.xml','')
+                file_note_key = file_note_key.replace('_utf8','')
+                note_key = file_note_key
+                for probe in self.patterns***REMOVED***pattern_index***REMOVED******REMOVED***"data"***REMOVED***:
+                    if note_key in self.patterns***REMOVED***pattern_index***REMOVED******REMOVED***"data"***REMOVED******REMOVED***probe***REMOVED***:
+                        probe_clean = get_clean(probe)
+                        for pc in probe_clean:
+                            prb = re.sub(r"***REMOVED***^a-zA-Z0-9***REMOVED***+", "",
+                                         str(pc).lower().strip()) 
+                            map_set***REMOVED***prb***REMOVED*** = self.patterns***REMOVED***pattern_index***REMOVED******REMOVED***"data"***REMOVED******REMOVED***probe***REMOVED***
         else:
             map_set = self.patterns***REMOVED***pattern_index***REMOVED******REMOVED***"data"***REMOVED***
         coord_map = self.patterns***REMOVED***pattern_index***REMOVED******REMOVED***"coordinate_map"***REMOVED***
