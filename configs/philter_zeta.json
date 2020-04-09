@@ -1986,6 +1986,14 @@
         "phi_type":"CONTACT"
     },
     {
+        "title":"foreign_#",
+        "type":"regex",
+        "exclude":true,
+        "filepath":"filters/regex/contact/foreign_#.txt",
+        "notes":"This should remove anything that is a foreign phone #",
+        "phi_type":"CONTACT"
+    },
+    {
         "title":"5 digit pager",
         "type":"regex",
         "exclude":true,
