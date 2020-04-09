@@ -1,1 +1,1 @@
-\b(?i)(?<!U #: )(?<!MRN:  )(?<!MRN: )\d{5,}(***REMOVED*** ***REMOVED***{1,2})?(?!u\#)(?!unit\#)(?!units\#)(?!u\/s)(?!u\/a)(u|units|unit)\b
+\b(?i)(?<!U #: )(?<!MRN:  )(?<!AARP#:  )(?<!AARP#: )(?<!MRN: )(?<!CIM # )(?<!***REMOVED***A-Z***REMOVED***{2}  )(?<!***REMOVED***A-Z***REMOVED***{2} )\d{5,}(***REMOVED*** ***REMOVED***{1,2})?(?!u\#)(?!unit\#)(?!units\#)(?!u\/s)(?!u\/a)(u|units|unit)\b(?! ***REMOVED***A-Z***REMOVED***\b)(?! \d\b)

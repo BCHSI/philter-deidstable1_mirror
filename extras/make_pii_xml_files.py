@@ -24,7 +24,8 @@ def create_xml(i, pii, meta, deid_path, text_path, xml_sample_path, output_dir, 
 	new_filepath = copy_and_normalize_note(full_text_path, text_key, note_output_dir)
 
 	# Get search string from csv
-	search_string = str(pii.loc***REMOVED***i, "word_found"***REMOVED***)
+	search_string = str(pii.loc***REMOVED***i, "word_found"***REMOVED***).replace('+','\+').replace('(','\(').replace(')','\)').replace('^','\^').replace('$','\$').replace('.','\.').replace('|','\|').replace('?','\?').replace('*','\*').replace('***REMOVED***','\***REMOVED***').replace('***REMOVED***','\***REMOVED***').replace('{','\{').replace('}','\}')
+
 	search_pattern = re.compile(search_string)
 
 	# Get phi tag from csv
