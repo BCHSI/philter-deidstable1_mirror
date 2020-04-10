@@ -663,10 +663,10 @@ class Philter:
             if self.known_phi:
                 for probe in self.known_phi***REMOVED***filename***REMOVED***:
                     probe_clean = get_clean(probe)
-                        for pc in probe_clean:
-                            prb = re.sub(r"***REMOVED***^a-zA-Z0-9***REMOVED***+", "",
-                                         str(pc).lower().strip()) 
-                            map_set***REMOVED***prb***REMOVED*** = filename
+                    for pc in probe_clean:
+                        prb = re.sub(r"***REMOVED***^a-zA-Z0-9***REMOVED***+", "",
+                                     str(pc).lower().strip()) 
+                        map_set***REMOVED***prb***REMOVED*** = filename
             elif (filename.find('.txt') != -1) or (filename.find('.xml') != -1):
                 file_note_key = os.path.basename(filename).replace('\n','')
                 file_note_key = file_note_key.replace('.txt','')
