@@ -32,6 +32,14 @@ def get_args():
      ap.add_argument("--mongo", required=True,
                     help="Mongo config file",
                     type=str)
+     ap.add_argument("--superlog", required=False, default=False,
+                    help="True or False flag to let the program know if it needs to store superlog in mongo."
+                    + " When this is set, the pipeline saves the"
+                    + " super log in a log_super_log collection"
+                    + " combining logs of each batch",
+                    type=lambda x:bool(distutils.util.strtobool(x)))
+
+     return ap.parse_args()
 
 def send_jobs(servers, username, wrkDir, configfile, mongofile, suplog):
     # ssh into each server and pass respective subdirs chunk to deidloop
