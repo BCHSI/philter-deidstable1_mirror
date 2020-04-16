@@ -19,25 +19,24 @@ def isolate_phi(xml_folder):
     for root_dir, dirs, files in os.walk(xml_folder):
         for f in files:
             print(root_dir+f)
-            file = open(root_dir+f, 'r', encoding='utf-8', errors='surrogateescape')
-            #with open(root_dir+f, 'r', encoding='utf-8', errors='surrogateescape') as file:
-            tree = ET.parse(file)
-            root = tree.getroot()
+            with open(root_dir+f, 'r', encoding='utf-8', errors='surrogateescape') as file:
+                tree = ET.parse(file)
+                root = tree.getroot()
 
-            text = ""
-            phi_list = ***REMOVED******REMOVED***
+                text = ""
+                phi_list = ***REMOVED******REMOVED***
 
-            for child in root:
-                if child.tag == "TEXT":
-                    text = child.text
-                    # if f == '167937985.txt.xml':
-                    #     print(text)
-                    #print (child.tag, child.attrib, child.text)
-                if child.tag == "TAGS":
-                    for t in child:
-                        phi_list.append(t.attrib)
-                        #print(t.tag, t.attrib, t.text)
-            phi***REMOVED***f***REMOVED*** = {"text":text, "phi":phi_list}
+                for child in root:
+                    if child.tag == "TEXT":
+                        text = child.text
+                        # if f == '167937985.txt.xml':
+                        #     print(text)
+                        #print (child.tag, child.attrib, child.text)
+                    if child.tag == "TAGS":
+                        for t in child:
+                            phi_list.append(t.attrib)
+                            #print(t.tag, t.attrib, t.text)
+                phi***REMOVED***f***REMOVED*** = {"text":text, "phi":phi_list}
     return phi
 
 def main():
