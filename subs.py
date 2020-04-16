@@ -83,7 +83,6 @@ class Subs:
                                         index_col=False,
                                         usecols=['note_key', 'date_offset',
                                                  'deid_note_key'],
-                                                 
                                         dtype=str)
         except pd.errors.EmptyDataError as err:
             print("Pandas Empty Data Error: " + look_up_table_path
