@@ -310,7 +310,9 @@ class Philter:
             map_set = json.loads(open(filepath, "r").read())
         elif filepath.endswith(".txt"):
             try:
-                probes_file = pd.read_csv(filepath, sep='\t', index_col=False, usecols=['patient_ID','phi_type','clean_value','note_key'], dtype=str, encoding='latin-1')
+                # Alternate value column name:
+                #probes_file = pd.read_csv(filepath, sep='\t', index_col=False, usecols=['patient_ID','phi_type','clean_value','note_key'], dtype=str, encoding='latin-1')
+                probes_file = pd.read_csv(filepath, sep='\t', index_col=False, usecols=['patient_ID','phi_type','value','note_key'], dtype=str, encoding='latin-1')
                 names_probes = probes_file.loc[(probes_file['phi_type'] == 'lname') | (probes_file['phi_type'] == 'fname')]
             
             except pd.errors.EmptyDataError as err:
@@ -325,7 +327,9 @@ class Philter:
             # need to make ditionary of lists
             map_set = {}
             for index, row in names_probes.iterrows():
-                value = row['clean_value']
+                # Alternate value column name:
+                #value = row['clean_value']
+                value = row['value']
                 note_key = row['note_key']
                 if value in map_set:
                     map_set[value].append(note_key)
