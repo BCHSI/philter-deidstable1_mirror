@@ -110,7 +110,17 @@ class Philter:
                                  "type":"dynamic_set",
                                  "title": "Dynamic Blacklist"}
             self.patterns.append(dynamic_blacklist)
-
+            dynamic_blacklist_context = {
+                                        "title":"Find Initials",
+                                        "type":"regex_context",
+                                        "exclude":True,
+                                        "filepath":"filters/regex_context/initials.txt",
+                                        "context":"left",
+                                        "context_filter":"all",
+                                        "notes":"",
+                                        "phi_type":"NAME"
+                                        }
+            self.patterns.append(dynamic_blacklist_context)
         if "xml" in config:
             if not os.path.exists(config["xml"]):
                 raise Exception("Filepath does not exist", config["xml"])
@@ -358,10 +368,11 @@ class Philter:
             for index, row in names_probes.iterrows():
                 value = row['value']
                 note_key = row['note_key']
-                if value in map_set:
-                    map_set[value].append(note_key)
-                else:
-                    map_set[value] = [note_key]
+                if str(value) != 'nan': 
+                   if value in map_set:
+                       map_set[value].append(note_key)
+                   else:
+                       map_set[value] = [note_key]
         elif filepath.endswith(".mongo"):
              map_set = self.known_phi
         else:
@@ -678,9 +689,11 @@ class Philter:
                     if note_key in self.patterns[pattern_index]["data"][probe]:
                         probe_clean = get_clean(probe)
                         for pc in probe_clean:
-                            prb = re.sub(r"[^a-zA-Z0-9]+", "",
-                                         str(pc).lower().strip()) 
-                            map_set[prb] = self.patterns[pattern_index]["data"][probe]
+                            if len(pc) > 1:
+                               if pc not in ['MD','md','pt','no']:
+                                  prb = re.sub(r"[^a-zA-Z0-9]+", "",
+                                             str(pc).lower().strip()) 
+                                  map_set[prb] = self.patterns[pattern_index]["data"][probe]
         else:
             map_set = self.patterns[pattern_index]["data"]
         coord_map = self.patterns[pattern_index]["coordinate_map"]
