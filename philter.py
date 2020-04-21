@@ -110,7 +110,17 @@ class Philter:
                                  "type":"dynamic_set",
                                  "title": "Dynamic Blacklist"}
             self.patterns.append(dynamic_blacklist)
-
+            dynamic_blacklist_context = {
+                                        "title":"Find Initials",
+                                        "type":"regex_context",
+                                        "exclude":True,
+                                        "filepath":"filters/regex_context/initials.txt",
+                                        "context":"left",
+                                        "context_filter":"all",
+                                        "notes":"",
+                                        "phi_type":"NAME"
+                                        }
+            self.patterns.append(dynamic_blacklist_context)
         if "xml" in config:
             if not os.path.exists(config***REMOVED***"xml"***REMOVED***):
                 raise Exception("Filepath does not exist", config***REMOVED***"xml"***REMOVED***)
@@ -358,10 +368,11 @@ class Philter:
             for index, row in names_probes.iterrows():
                 value = row***REMOVED***'value'***REMOVED***
                 note_key = row***REMOVED***'note_key'***REMOVED***
-                if value in map_set:
-                    map_set***REMOVED***value***REMOVED***.append(note_key)
-                else:
-                    map_set***REMOVED***value***REMOVED*** = ***REMOVED***note_key***REMOVED***
+                if str(value) != 'nan': 
+                   if value in map_set:
+                       map_set***REMOVED***value***REMOVED***.append(note_key)
+                   else:
+                       map_set***REMOVED***value***REMOVED*** = ***REMOVED***note_key***REMOVED***
         elif filepath.endswith(".mongo"):
              map_set = self.known_phi
         else:
@@ -678,9 +689,11 @@ class Philter:
                     if note_key in self.patterns***REMOVED***pattern_index***REMOVED******REMOVED***"data"***REMOVED******REMOVED***probe***REMOVED***:
                         probe_clean = get_clean(probe)
                         for pc in probe_clean:
-                            prb = re.sub(r"***REMOVED***^a-zA-Z0-9***REMOVED***+", "",
-                                         str(pc).lower().strip()) 
-                            map_set***REMOVED***prb***REMOVED*** = self.patterns***REMOVED***pattern_index***REMOVED******REMOVED***"data"***REMOVED******REMOVED***probe***REMOVED***
+                            if len(pc) > 1:
+                               if pc not in ***REMOVED***'MD','md','pt','no'***REMOVED***:
+                                  prb = re.sub(r"***REMOVED***^a-zA-Z0-9***REMOVED***+", "",
+                                             str(pc).lower().strip()) 
+                                  map_set***REMOVED***prb***REMOVED*** = self.patterns***REMOVED***pattern_index***REMOVED******REMOVED***"data"***REMOVED******REMOVED***probe***REMOVED***
         else:
             map_set = self.patterns***REMOVED***pattern_index***REMOVED******REMOVED***"data"***REMOVED***
         coord_map = self.patterns***REMOVED***pattern_index***REMOVED******REMOVED***"coordinate_map"***REMOVED***
