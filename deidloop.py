@@ -53,6 +53,7 @@ def runDeidChunck(unit, q, philterFolder, configfile):
         unit: Thread ID
         q: Tuple used to determine path to directory.
     """
+    print(philterFolder)
     while True:
         # time for run
         t0 = time.time()
