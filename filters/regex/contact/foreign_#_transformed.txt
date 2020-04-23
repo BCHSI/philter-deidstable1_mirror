@@ -1,0 +1,2 @@
+# Regex to find foreign phone numbers
+\+(\s)?\d{2}\s\d\s\d{2}\s\d{2}\s\d{2}\s\d{2}\b

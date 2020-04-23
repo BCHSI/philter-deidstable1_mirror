@@ -18,7 +18,8 @@ def isolate_phi(xml_folder):
     phi = {} #fn --> {"text":"...", "phi":[{"type":"DATE"...}]}
     for root_dir, dirs, files in os.walk(xml_folder):
         for f in files:
-            with open(root_dir+f, 'r', encoding='latin1') as file:
+            print(root_dir+f)
+            with open(root_dir+f, 'r', encoding='utf-8', errors='surrogateescape') as file:
                 tree = ET.parse(file)
                 root = tree.getroot()
 
