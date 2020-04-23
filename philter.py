@@ -343,7 +343,9 @@ class Philter:
             map_set = json.loads(open(filepath, "r").read())
         elif filepath.endswith(".txt"): # dynamic set
             try:
-                probes_file = pd.read_csv(filepath, sep='\t', index_col=False, usecols=***REMOVED***'value','phi_type','note_key'***REMOVED***, dtype=str, encoding='latin-1')
+                # Alternate value column name:
+                #probes_file = pd.read_csv(filepath, sep='\t', index_col=False, usecols=***REMOVED***'patient_ID','phi_type','clean_value','note_key'***REMOVED***, dtype=str, encoding='latin-1')
+                probes_file = pd.read_csv(filepath, sep='\t', index_col=False, usecols=***REMOVED***'patient_ID','phi_type','value','note_key'***REMOVED***, dtype=str, encoding='latin-1')
                 names_probes = probes_file.loc***REMOVED***(probes_file***REMOVED***'phi_type'***REMOVED*** == 'lname') | (probes_file***REMOVED***'phi_type'***REMOVED*** == 'fname')***REMOVED***
             except pd.errors.EmptyDataError as err:
                 print("Pandas Empty Data Error: " + filepath
@@ -356,6 +358,8 @@ class Philter:
             
             # need to make ditionary of lists
             for index, row in names_probes.iterrows():
+                # Alternate value column name:
+                #value = row***REMOVED***'clean_value'***REMOVED***
                 value = row***REMOVED***'value'***REMOVED***
                 note_key = row***REMOVED***'note_key'***REMOVED***
                 if value in map_set:
@@ -1759,7 +1763,9 @@ class Philter:
 
 
                 if rp_summaries***REMOVED***fn_key***REMOVED*** != 0:
+
                     overall_recall_dict***REMOVED***recall_key***REMOVED*** = rp_summaries***REMOVED***tp_key***REMOVED*** / (rp_summaries***REMOVED***fn_key***REMOVED*** + rp_summaries***REMOVED***tp_key***REMOVED***)
+
                 else:
                     overall_recall_dict***REMOVED***recall_key***REMOVED*** = 1
 

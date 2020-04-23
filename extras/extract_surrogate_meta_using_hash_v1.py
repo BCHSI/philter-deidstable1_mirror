@@ -32,6 +32,7 @@ for dirline in dirfile:
     for line in kfile:
         line = line.replace('\n','')
         line = line.replace('.txt','')
+        line = line.replace('_utf8','')
         line = line.lstrip('0')
         keepers.add(line)
     kfile.close()
