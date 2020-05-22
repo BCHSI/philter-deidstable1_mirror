@@ -99,7 +99,6 @@ class Philter:
                                  "type":"dynamic_set",
                                  "title": "Dynamic Blacklist"}
             self.patterns.append(dynamic_blacklist)
-
         if ("namesprobe" not in config) and ("known_phi" in config):
             dynamic_blacklist = {
                                  "notes": "These are known phi that are not safe",
@@ -126,7 +125,6 @@ class Philter:
                                         "phi_type":"PROBE"
                                         }
             self.patterns.append(dynamic_blacklist_context)
-
 
         if "xml" in config:
             if not os.path.exists(config***REMOVED***"xml"***REMOVED***):
@@ -702,7 +700,7 @@ class Philter:
                         probe_clean = get_clean(probe)
                         for pc in probe_clean:
                             prb = re.sub(r"***REMOVED***^a-zA-Z0-9***REMOVED***+", "",
-                                             str(pc).lower().strip())
+                                             str(pc).lower().strip()) 
                             if (len(prb) > 1) and (prb not in ***REMOVED***'md','pt','no','of','none','medical','pathology','patient','study'***REMOVED***):
                                   map_set***REMOVED***prb***REMOVED*** = self.patterns***REMOVED***pattern_index***REMOVED******REMOVED***"data"***REMOVED******REMOVED***probe***REMOVED***
                             # If single character or in list of "safe" words, add to list of context probes
