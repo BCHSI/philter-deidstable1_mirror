@@ -98,7 +98,8 @@ class Philter:
                                         ],
                                  "type":"dynamic_set",
                                  "title": "Dynamic Blacklist"}
-            self.patterns.append(dynamic_blacklist) 
+            self.patterns.append(dynamic_blacklist)
+
         if ("namesprobe" not in config) and ("known_phi" in config):
             dynamic_blacklist = {
                                  "notes": "These are known phi that are not safe",
@@ -110,17 +111,23 @@ class Philter:
                                  "type":"dynamic_set",
                                  "title": "Dynamic Blacklist"}
             self.patterns.append(dynamic_blacklist)
+
+        if ("namesprobe" in config) or ("known_phi" in config):
+            self.use_probe_regex_context = True
             dynamic_blacklist_context = {
-                                        "title":"Find Initials",
+                                        "title":"Probes Regex Context",
+                                        "notes": "This regex marks selected probes as PHI if they have neighboring PHI tokens",
                                         "type":"regex_context",
                                         "exclude":True,
-                                        "filepath":"filters/regex_context/initials.txt",
-                                        "context":"left",
+                                        "filepath":"filters/regex_context/probes_regex_context.txt",
+                                        "context":"left_or_right",
                                         "context_filter":"all",
                                         "notes":"",
-                                        "phi_type":"NAME"
+                                        "phi_type":"PROBE"
                                         }
             self.patterns.append(dynamic_blacklist_context)
+
+
         if "xml" in config:
             if not os.path.exists(config["xml"]):
                 raise Exception("Filepath does not exist", config["xml"])
@@ -411,6 +418,10 @@ class Philter:
             if self.time_profile:
                self.current_regex_time_profile = []
 
+            # Reset probe_regex_context, if knownphi or namesprobe
+            if self.use_probe_regex_context:
+                self.patterns[-1]['data'] = re.compile('(?i)(\\s+)?\\b("""+probe+r""")\\b(\\s+)?')
+
             # Add total tokens to token dictionary
             # self.token_data[filename] = 
                 
@@ -676,7 +687,7 @@ class Philter:
                     probe_clean = get_clean(probe)
                     for pc in probe_clean:
                         prb = re.sub(r"[^a-zA-Z0-9]+", "",
-                                     str(pc).lower().strip()) 
+                                     str(pc).lower().strip())
                         map_set[prb] = filename
             elif (filename.find('.txt') != -1) or (filename.find('.xml') != -1):
                 file_note_key = os.path.basename(filename).replace('\n','')
@@ -685,19 +696,28 @@ class Philter:
                 file_note_key = file_note_key.replace('.xml','')
                 file_note_key = file_note_key.replace('_utf8','')
                 note_key = file_note_key
+                context_probes = []
                 for probe in self.patterns[pattern_index]["data"]:
                     if note_key in self.patterns[pattern_index]["data"][probe]:
                         probe_clean = get_clean(probe)
                         for pc in probe_clean:
-                            if len(pc) > 1:
-                               if pc not in ['MD','md','pt','no']:
-                                  prb = re.sub(r"[^a-zA-Z0-9]+", "",
-                                             str(pc).lower().strip()) 
+                            prb = re.sub(r"[^a-zA-Z0-9]+", "",
+                                             str(pc).lower().strip())
+                            if (len(prb) > 1) and (prb not in ['md','pt','no','of','none','medical','pathology','patient','study']):
                                   map_set[prb] = self.patterns[pattern_index]["data"][probe]
+                            # If single character or in list of "safe" words, add to list of context probes
+                            else:
+                                if prb.isdigit() == False:
+                                    context_probes.append(prb)
+                
+                # Substitute probes into probes_regex_context
+                if len(context_probes) > 0:
+                    regex_string = self.patterns[-1]['data'].pattern.replace('"""+probe+r"""', '|'.join(context_probes))
+                    self.patterns[-1]['data'] = re.compile(regex_string)
         else:
             map_set = self.patterns[pattern_index]["data"]
         coord_map = self.patterns[pattern_index]["coordinate_map"]
-        
+
         #get part of speech we will be sending through this set
         #note, if this is empty we will put all parts of speech through the set
         cleaned = self.get_clean(filename,text)[0]

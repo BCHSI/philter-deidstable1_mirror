@@ -691,7 +691,7 @@ class Phitexts:
                            if len(self.texts[filename])<flank_end:
                               flank_end = len(self.texts[filename])
                            context = self.texts[filename][flank_start:flank_end]
-                           word = self.texts[filename][start:end]
+                           word = self.texts[filename][start:end+1]
                            #f.write(filename + "\t" + str(start) + "\t" + str(end) + "\t" + word + "\t" + context.replace('\n',' ') + "\t" + ','.join(phi_type_per_token[filename][start][end])+"\n")
                            dynamic_blacklist_df = dynamic_blacklist_df.append(pd.Series([filename,self.batch,str(start),str(end),word,context.replace('\n',' '),','.join(phi_type_per_token[filename][start][end])], index=dynamic_blacklist_df.columns),ignore_index=True)
 
