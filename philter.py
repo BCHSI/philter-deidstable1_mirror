@@ -84,34 +84,27 @@ class Philter:
             self.patterns = json.loads(open(config["filters"], "r").read())
             #print(self.patterns)
         if ("known_phi" in config) and ("namesprobe" in config):
-           raise Exception ("Both mongo probes collection and a probes file provided. Please remove one and try again.")
-
-        if ("namesprobe" in config) and ("known_phi" not in config):
-            if not os.path.exists(config["namesprobe"]):
-               raise Exception("Filepath does not exist", config["namesprobe"])
-            dynamic_blacklist = {
-                                 "notes": "These are known phi that are not safe",
-                                 "filepath": config["namesprobe"],
-                                 "phi_type": "PROBE",
-                                 "exclude": True,
-                                 "pos": ["NNP"
-                                        ],
-                                 "type":"dynamic_set",
-                                 "title": "Dynamic Blacklist"}
-            self.patterns.append(dynamic_blacklist)
-        if ("namesprobe" not in config) and ("known_phi" in config):
-            dynamic_blacklist = {
-                                 "notes": "These are known phi that are not safe",
-                                 "filepath": "Mongo.mongo",
-                                 "phi_type": "PROBE",
-                                 "exclude": True,
-                                 "pos": ["NNP"
-                                        ],
-                                 "type":"dynamic_set",
-                                 "title": "Dynamic Blacklist"}
-            self.patterns.append(dynamic_blacklist)
+            raise Exception ("Both mongo probes collection and a probes file provided. Please remove one and try again.")
 
         if ("namesprobe" in config) or ("known_phi" in config):
+            dynamic_blacklist = {
+                                 "notes": "These are known phi that are not safe",
+                                 "filepath": "",
+                                 "phi_type": "PROBE",
+                                 "exclude": True,
+                                 "pos": ["NNP"
+                                        ],
+                                 "type":"dynamic_set",
+                                 "title": "Dynamic Blacklist"}
+            if ("namesprobe" in config):
+                if not os.path.exists(config["namesprobe"]):
+                    raise Exception("Filepath does not exist",
+                                    config["namesprobe"])
+                dynamic_blacklist["filepath"] = config["namesprobe"]
+            elif ("known_phi" in config):
+                dynamic_blacklist["filepath"] = "Mongo.mongo"
+            self.patterns.append(dynamic_blacklist)
+
             self.use_probe_regex_context = True
             dynamic_blacklist_context = {
                                         "title":"Probes Regex Context",
@@ -121,7 +114,6 @@ class Philter:
                                         "filepath":"filters/regex_context/probes_regex_context.txt",
                                         "context":"left_or_right",
                                         "context_filter":"all",
-                                        "notes":"",
                                         "phi_type":"PROBE"
                                         }
             self.patterns.append(dynamic_blacklist_context)

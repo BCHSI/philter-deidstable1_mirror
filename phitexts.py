@@ -232,30 +232,14 @@ class Phitexts:
            philter_config["known_phi"] = self.known_phi
         philter_config["phi_text"] = self.texts
         philter_config["filenames"] = self.filenames
-        ''' 
-        if namesprobefile:
-            philter_config = {
-               "verbose":verbose,
-               "run_eval":False,
-               "finpath":self.inputdir,
-               "filters":filters,
-               "namesprobe":namesprobefile
-            }
 
-        else:
-            philter_config = {
-               "verbose":verbose,
-               "run_eval":False,
-               "finpath":self.inputdir,
-               "filters":filters,
-            }
-        '''
         print("Initializing Philter") 
         self.filterer = Philter(philter_config)
         self.coords = self.filterer.map_coordinates()
         print("Coordinates Identified")
         self.pos = self.filterer.pos_tags
-        print("Pos_tags identified") 
+        print("Pos_tags identified")
+
     def detect_phi_types(self):
         assert self.texts, "No texts defined"
         assert self.coords, "No PHI coordinates defined"
