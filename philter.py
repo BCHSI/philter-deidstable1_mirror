@@ -371,6 +371,8 @@ class Philter:
             
             # need to make ditionary of lists
             for index, row in names_probes.iterrows():
+                # Alternate value column name:
+                #value = row['clean_value']
                 value = row['value']
                 note_key = row['note_key']
                 if value in map_set:
@@ -1795,7 +1797,9 @@ class Philter:
 
 
                 if rp_summaries[fn_key] != 0:
+
                     overall_recall_dict[recall_key] = rp_summaries[tp_key] / (rp_summaries[fn_key] + rp_summaries[tp_key])
+
                 else:
                     overall_recall_dict[recall_key] = 1
 
