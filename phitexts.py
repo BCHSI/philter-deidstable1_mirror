@@ -232,30 +232,14 @@ class Phitexts:
            philter_config***REMOVED***"known_phi"***REMOVED*** = self.known_phi
         philter_config***REMOVED***"phi_text"***REMOVED*** = self.texts
         philter_config***REMOVED***"filenames"***REMOVED*** = self.filenames
-        ''' 
-        if namesprobefile:
-            philter_config = {
-               "verbose":verbose,
-               "run_eval":False,
-               "finpath":self.inputdir,
-               "filters":filters,
-               "namesprobe":namesprobefile
-            }
 
-        else:
-            philter_config = {
-               "verbose":verbose,
-               "run_eval":False,
-               "finpath":self.inputdir,
-               "filters":filters,
-            }
-        '''
         print("Initializing Philter") 
         self.filterer = Philter(philter_config)
         self.coords = self.filterer.map_coordinates()
         print("Coordinates Identified")
         self.pos = self.filterer.pos_tags
-        print("Pos_tags identified") 
+        print("Pos_tags identified")
+
     def detect_phi_types(self):
         assert self.texts, "No texts defined"
         assert self.coords, "No PHI coordinates defined"
@@ -691,10 +675,9 @@ class Phitexts:
                            if len(self.texts***REMOVED***filename***REMOVED***)<flank_end:
                               flank_end = len(self.texts***REMOVED***filename***REMOVED***)
                            context = self.texts***REMOVED***filename***REMOVED******REMOVED***flank_start:flank_end***REMOVED***
-                           word = self.texts***REMOVED***filename***REMOVED******REMOVED***start:end***REMOVED***
+                           word = self.texts***REMOVED***filename***REMOVED******REMOVED***start:end+1***REMOVED***
                            #f.write(filename + "\t" + str(start) + "\t" + str(end) + "\t" + word + "\t" + context.replace('\n',' ') + "\t" + ','.join(phi_type_per_token***REMOVED***filename***REMOVED******REMOVED***start***REMOVED******REMOVED***end***REMOVED***)+"\n")
-                           dynamic_blacklist_df = dynamic_blacklist_df.append(pd.Series(***REMOVED***filename,self.batch,str(start),str(end),word,context.replace('\n',' '),','.join(phi_type_per_token***REMOVED***filename***REMOVED******REMOVED***start***REMOVED******REMOVED***end***REMOVED***)***REMOVED***, index=dynamic_blacklist_df.columns),ignore_index=True)
-
+                           dynamic_blacklist_df = dynamic_blacklist_df.append(pd.Series(***REMOVED***filename,self.batch,str(start),str(end),word,context.replace('\n',' '),','.join(phi_type_per_token***REMOVED***filename***REMOVED******REMOVED***start***REMOVED******REMOVED***end***REMOVED***)***REMOVED***, index=dynamic_blacklist_df.columns),ignore_index=True)               
         return failed_date,eval_table,phi_table,phi_count_df,csv_summary_df,batch_summary_df,dynamic_blacklist_df
 
         # Todo: add PHI type counts to summary
