@@ -413,7 +413,8 @@ class Philter:
             file_note_key = file_note_key.replace('_utf8','')
             note_key = file_note_key
             pat_idx_dynbl = self.pattern_indexes["Dynamic Blacklist"]
-            for probe in self.patterns[pat_idx]["dyndata"]:
+            context_probes = []
+            for probe in self.patterns[pat_idx_dynbl]["dyndata"]:
                 if note_key in self.patterns[pat_idx_dynbl]["dyndata"][probe]:
                     probe_clean = get_clean(probe)
                     for pc in probe_clean:
@@ -421,7 +422,7 @@ class Philter:
                                      str(pc).lower().strip())
                         if ((include_singles or len(prb) > 1)
                             and (include_nonames or prb not in nonames)):
-                            map_set[prb] = self.patterns[pat_idx_dynbl]["data"][probe]
+                            map_set[prb] = self.patterns[pat_idx_dynbl]["dyndata"][probe]
                         # If single character or in list of nonames,
                         # add to list of context probes
                         else:
@@ -468,8 +469,7 @@ class Philter:
 
             # update dynamic patterns for current note
             if self.dynamic:
-                self._update_dyanmic_patterns(filename=filename)
-
+                self._update_dynamic_patterns(filename=filename)
             # initialize phi type
             phi_type = "OTHER"
 
@@ -891,7 +891,7 @@ class Philter:
             phi_type = "OTHER"
 
         for start,stop in coord_map.filecoords(filename):
-            if pattern['type'] != 'regex_context' and pattern['type'] != 'dynamic_set':
+            if pattern['type'] != 'regex_context' and pattern['type'] != 'dynamic_set' and pattern['type'] != 'dynamic_regex_context':
                 if exclude or exclude == "True":
                     if not self.include_map.does_overlap(filename, start, stop):
                         self.exclude_map.add_extend(filename, start, stop)
