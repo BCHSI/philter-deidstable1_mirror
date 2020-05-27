@@ -677,8 +677,7 @@ class Phitexts:
                            context = self.texts***REMOVED***filename***REMOVED******REMOVED***flank_start:flank_end***REMOVED***
                            word = self.texts***REMOVED***filename***REMOVED******REMOVED***start:end+1***REMOVED***
                            #f.write(filename + "\t" + str(start) + "\t" + str(end) + "\t" + word + "\t" + context.replace('\n',' ') + "\t" + ','.join(phi_type_per_token***REMOVED***filename***REMOVED******REMOVED***start***REMOVED******REMOVED***end***REMOVED***)+"\n")
-                           dynamic_blacklist_df = dynamic_blacklist_df.append(pd.Series(***REMOVED***filename,self.batch,str(start),str(end),word,context.replace('\n',' '),','.join(phi_type_per_token***REMOVED***filename***REMOVED******REMOVED***start***REMOVED******REMOVED***end***REMOVED***)***REMOVED***, index=dynamic_blacklist_df.columns),ignore_index=True)
-
+                           dynamic_blacklist_df = dynamic_blacklist_df.append(pd.Series(***REMOVED***filename,self.batch,str(start),str(end),word,context.replace('\n',' '),','.join(phi_type_per_token***REMOVED***filename***REMOVED******REMOVED***start***REMOVED******REMOVED***end***REMOVED***)***REMOVED***, index=dynamic_blacklist_df.columns),ignore_index=True)               
         return failed_date,eval_table,phi_table,phi_count_df,csv_summary_df,batch_summary_df,dynamic_blacklist_df
 
         # Todo: add PHI type counts to summary

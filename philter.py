@@ -413,7 +413,8 @@ class Philter:
             file_note_key = file_note_key.replace('_utf8','')
             note_key = file_note_key
             pat_idx_dynbl = self.pattern_indexes***REMOVED***"Dynamic Blacklist"***REMOVED***
-            for probe in self.patterns***REMOVED***pat_idx***REMOVED******REMOVED***"dyndata"***REMOVED***:
+            context_probes = ***REMOVED******REMOVED***
+            for probe in self.patterns***REMOVED***pat_idx_dynbl***REMOVED******REMOVED***"dyndata"***REMOVED***:
                 if note_key in self.patterns***REMOVED***pat_idx_dynbl***REMOVED******REMOVED***"dyndata"***REMOVED******REMOVED***probe***REMOVED***:
                     probe_clean = get_clean(probe)
                     for pc in probe_clean:
@@ -421,7 +422,7 @@ class Philter:
                                      str(pc).lower().strip())
                         if ((include_singles or len(prb) > 1)
                             and (include_nonames or prb not in nonames)):
-                            map_set***REMOVED***prb***REMOVED*** = self.patterns***REMOVED***pat_idx_dynbl***REMOVED******REMOVED***"data"***REMOVED******REMOVED***probe***REMOVED***
+                            map_set***REMOVED***prb***REMOVED*** = self.patterns***REMOVED***pat_idx_dynbl***REMOVED******REMOVED***"dyndata"***REMOVED******REMOVED***probe***REMOVED***
                         # If single character or in list of nonames,
                         # add to list of context probes
                         else:
@@ -468,8 +469,7 @@ class Philter:
 
             # update dynamic patterns for current note
             if self.dynamic:
-                self._update_dyanmic_patterns(filename=filename)
-
+                self._update_dynamic_patterns(filename=filename)
             # initialize phi type
             phi_type = "OTHER"
 
@@ -891,7 +891,7 @@ class Philter:
             phi_type = "OTHER"
 
         for start,stop in coord_map.filecoords(filename):
-            if pattern***REMOVED***'type'***REMOVED*** != 'regex_context' and pattern***REMOVED***'type'***REMOVED*** != 'dynamic_set':
+            if pattern***REMOVED***'type'***REMOVED*** != 'regex_context' and pattern***REMOVED***'type'***REMOVED*** != 'dynamic_set' and pattern***REMOVED***'type'***REMOVED*** != 'dynamic_regex_context':
                 if exclude or exclude == "True":
                     if not self.include_map.does_overlap(filename, start, stop):
                         self.exclude_map.add_extend(filename, start, stop)
