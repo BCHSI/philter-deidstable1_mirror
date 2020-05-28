@@ -60,6 +60,9 @@ def get_args():
     ap.add_argument("-b", "--batch",
                     help="Batch number to process",
                     type=str)
+    ap.add_argument("--refdate",
+                    help="Reference date for shifting dates (for patients > 90 y.o.)",
+                    type=str)
     return ap.parse_args()
 
 
@@ -135,13 +138,15 @@ def main_mongo(args, db=None ,mongo=None):
         
         # looks-up surrogate and apply to normalized PHI
         if mongo is not None:
-           if args.surrogate_info:
-              print("WARNING: Surrogate meta file and mongodb were passed as arguments. Ignoring surrogate meta file and using mongodb")
-           if __debug__: print("looking up surrogates")
-           phitexts.substitute_phi(mongo, db) 
+            if args.surrogate_info:
+                print("WARNING: Surrogate meta file and mongodb were passed as arguments. Ignoring surrogate meta file and using mongodb")
+            if __debug__: print("looking up surrogates")
+            phitexts.substitute_phi(look_up_table_path=mongo, db=db,
+                                    ref_date=args.refdate) 
         elif args.surrogate_info:
             if __debug__: print("looking up surrogates")
-            phitexts.substitute_phi(args.surrogate_info)
+            phitexts.substitute_phi(look_up_table_path=args.surrogate_info,
+                                    ref_date=args.refdate)
 
     # transforms texts
     if __debug__: print("transforming texts")
