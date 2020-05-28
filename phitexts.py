@@ -256,7 +256,7 @@ class Phitexts:
         if self.norms:
             return
 
-        # TODO: get normalized version for each detected phi
+        # Generally, get normalized version for each detected phi
         # 1) get phi text given coords
         # 2) interpet/normalize phi given type
 
@@ -279,11 +279,12 @@ class Phitexts:
 
         # Note: see also surrogator.shift_dates(), surrogator.parse_and_shift_date(), parse_date_ranges(), replace_other_surrogate()
         
-    def substitute_phi(self, look_up_table_path = None, db = None):
+    def substitute_phi(self, look_up_table_path = None, db = None,
+                       ref_date = None):
         assert self.norms, "No normalized PHI defined"
         if self.subs:
             return
-        self.subser = Subs(self.filenames, look_up_table_path, db)
+        self.subser = Subs(self.filenames, look_up_table_path, db, ref_date)
         for phi_type in self.norms.keys():
             if phi_type == "DATE" or phi_type == "Date":
                 if __debug__: nodateshiftlist = ***REMOVED******REMOVED***
