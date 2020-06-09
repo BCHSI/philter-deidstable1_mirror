@@ -108,12 +108,6 @@ class datetime2(datetime.datetime):
                                               and (parsed_date_1.year
                                                    != parsed_date_2.year))
         return missing_year, missing_month, missing_day, missing_century
-            
-    def add_years(self, number_of_years):
-        return self + datetime.timedelta(years=number_of_years)
-    
-    def subtract_years(self, number_of_years):
-        return self - datetime.timedelta(years=number_of_years)
     
     def add_days(self, number_of_days):
         return self + number_of_days

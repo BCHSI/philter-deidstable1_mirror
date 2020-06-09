@@ -21,32 +21,24 @@ class Subs:
         #load shift/surrogate table to dictionaries
         if type(look_up_table_path) is dict:
            if db is None:
-              print("In Subs. Expecting a mongo handle. None provided.")
-              quit()
+              raise ValueError("Expecting a mongo handle. None provided.")
            else:
               self.db = db
-           xwalk_tables = self._load_look_up_mongo(filenames,
-                                                   look_up_table_path)
+           self.xwalk = self._load_look_up_mongo(filenames, look_up_table_path)
         else:   
-           xwalk_tables = self._load_look_up_table(look_up_table_path)
-
-        self.shift_table = xwalk_tables***REMOVED***0***REMOVED***
-        self.deid_note_key_table = xwalk_tables***REMOVED***1***REMOVED***
-        self.dob_table = xwalk_tables***REMOVED***2***REMOVED***
-        self.deid_dob_table = xwalk_tables***REMOVED***3***REMOVED***
-        self.deid_91_bday_table = xwalk_tables***REMOVED***4***REMOVED***
+           self.xwalk = self._load_look_up_table(look_up_table_path)
 
         self.ref_date = self.parse_date(ref_date)
 
     def has_shift_amount(self, note_id):
-        return note_id in self.shift_table
+        return note_id in self.xwalk***REMOVED***"offset"***REMOVED***
     
     def has_deid_note_key(self, note_id):
-        return note_id in self.deid_note_key_table
+        return note_id in self.xwalk***REMOVED***"deidnotekey"***REMOVED***
     
     def get_deid_note_key(self, note_id):
         try:
-            deid_note_key = self.deid_note_key_table***REMOVED***note_id***REMOVED***
+            deid_note_key = self.xwalk***REMOVED***"deidnotekey"***REMOVED******REMOVED***note_id***REMOVED***
         except KeyError as err:
             print("Key Error in deid_note_key_table for note " + str(note_id)
                   + ": {0}".format(err))
@@ -55,7 +47,7 @@ class Subs:
 
     def get_dob(self, note_id):
         try:
-            dob = self.parse_date(self.dob_table***REMOVED***note_id***REMOVED***)
+            dob = self.parse_date(self.xwalk***REMOVED***"dob"***REMOVED******REMOVED***note_id***REMOVED***)
         except KeyError as err:
             print("Key Error in dob_table for note " + str(note_id)
                   + ": {0}".format(err))
@@ -64,28 +56,28 @@ class Subs:
 
     def get_deid_dob(self, note_id):
         try:
-            deid_dob = self.parse_date(self.deid_dob_table***REMOVED***note_id***REMOVED***)
+            deid_dob = self.parse_date(self.xwalk***REMOVED***"deiddob"***REMOVED******REMOVED***note_id***REMOVED***)
         except KeyError as err:
             print("Key Error in deid_dob_table for note " + str(note_id)
                   + ": {0}".format(err))
             deid_dob = None
         return deid_dob
 
-    def get_deid_91_bday(self, note_id):
+    def get_deid_91_bdate(self, note_id):
         try:
-            deid_91_bday = self.parse_date(self.deid_91_bday_table***REMOVED***note_id***REMOVED***)
+            deid_91_bdate = self.parse_date(self.xwalk***REMOVED***"deid91bdate"***REMOVED******REMOVED***note_id***REMOVED***)
         except KeyError as err:
-            print("Key Error in deid_91_bday_table for note " + str(note_id)
+            print("Key Error in xwalk deid91bdate for note " + str(note_id)
                   + ": {0}".format(err))
-            deid_91_bday = None
-        return deid_91_bday
+            deid_91_bdate = None
+        return deid_91_bdate
 
     def get_ref_date(self):
         return self.ref_date
     
     def get_shift_amount(self, note_id):
         try:
-            shift_amount = int(self.shift_table***REMOVED***note_id***REMOVED***)
+            shift_amount = int(self.xwalk***REMOVED***"offset"***REMOVED******REMOVED***note_id***REMOVED***)
             if shift_amount == 0:
                 print("WARNING: shift amount for note " + str(note_id)
                       + " is zero.")
@@ -134,13 +126,12 @@ class Subs:
                                 + " Overflow Error: {0}".format(err))
 
         dob = self.get_dob(note_id)
-        print("Date: \"" + date.to_string(debug=True)
-              + " pretty: " + date.to_string()
-              + "\" DOB: \"" + dob.to_string(debug=True)
-              + " pretty: " + dob.to_string()
-              + "\" in note " + str(note_id))
+        # print("Date: \"" + date.to_string(debug=True)
+        #       + " pretty: " + date.to_string()
+        #       + "\" DOB: \"" + dob.to_string(debug=True)
+        #       + " pretty: " + dob.to_string()
+        #       + "\" in note " + str(note_id))
         if date == dob:
-            print("date equals dob")
             shifted_date = self.shift_dob_pid(date, note_id)
             
         # not yet implemented in Deid CDW
@@ -150,7 +141,7 @@ class Subs:
 
     def shift_dob_pid(self, dob, note_id):
         shift = self.get_shift_amount(note_id)
-        deid_bday91 = self.get_deid_91_bday(note_id)
+        deid_bday91 = self.get_deid_91_bdate(note_id)
         if shift is None or dob is None or deid_bday91 is None:
             if __debug__: print("WARNING: cannot find birth date info"
                                 + " for note " + str(note_id))
@@ -213,13 +204,14 @@ class Subs:
         return date.to_string()
 
     def _load_look_up_table(self, look_up_table_path):
+        notekey2id = {}
         id2offset = {}
-        id2deid = {}
+        id2deidnotekey = {}
         id2dob = {}
         id2deiddob = {}
         id2deid91bdate = {}
         if look_up_table_path is None:
-            return {}, {}, {}, {}, {}  #defaultdict(lambda:DEFAULT_SHIFT_VALUE)
+            return {}  #defaultdict(lambda:DEFAULT_SHIFT_VALUE)
 
         try:
             look_up_table = pd.read_csv(look_up_table_path, sep='\t',
@@ -237,34 +229,34 @@ class Subs:
         except pd.errors.EmptyDataError as err:
             print("Pandas Empty Data Error: " + look_up_table_path
                   + " is empty {0}".format(err))
-            return {}, {}, {}, {}, {}
+            return {}
         except ValueError as err:
             print("Value Error: " + look_up_table_path
                   + " is invalid {0}".format(err))
-            return {}, {}, {}, {}, {}
+            return {}
 
         if "date_offset" in look_up_table.keys():
             offset_table = look_up_table***REMOVED***~look_up_table***REMOVED***"date_offset"***REMOVED***.isnull()***REMOVED***
-            id2offset = pd.Series(offset_table.date_offset.values,
-                                  index=offset_table.note_key).to_dict()
+            notekey2id***REMOVED***"offset"***REMOVED*** = pd.Series(offset_table.date_offset.values,
+                                          index=offset_table.note_key).to_dict()
         if "deid_note_key" in look_up_table.keys():
             deid_table = look_up_table***REMOVED***~look_up_table***REMOVED***"deid_note_key"***REMOVED***.isnull()***REMOVED***
-            id2deid = pd.Series(deid_table.deid_note_key.values,
-                                index=deid_table.note_key).to_dict()
+            notekey2id***REMOVED***"deidnotekey"***REMOVED*** = pd.Series(deid_table.deid_note_key.values,
+                                                  index=deid_table.note_key).to_dict()
         if "BirthDate" in look_up_table.keys():
             dob_table = look_up_table***REMOVED***~look_up_table***REMOVED***"BirthDate"***REMOVED***.isnull()***REMOVED***
-            id2dob = pd.Series(dob_table.BirthDate.values,
-                               index=dob_table.note_key).to_dict()
+            notekey2id***REMOVED***"dob"***REMOVED*** = pd.Series(dob_table.BirthDate.values,
+                                          index=dob_table.note_key).to_dict()
         if "Deid_BirthDate" in look_up_table.keys():
             deid_dob_table = look_up_table***REMOVED***~look_up_table***REMOVED***"Deid_BirthDate"***REMOVED***.isnull()***REMOVED***
-            id2deiddob = pd.Series(deid_dob_table.Deid_BirthDate.values,
-                                   index=deid_dob_table.note_key).to_dict()
+            notekey2id***REMOVED***"deiddob"***REMOVED*** = pd.Series(deid_dob_table.Deid_BirthDate.values,
+                                              index=deid_dob_table.note_key).to_dict()
         if "deid_turns_91_date" in look_up_table.keys():
             deid_91_bdate_table = look_up_table***REMOVED***~look_up_table***REMOVED***"deid_turns_91_date"***REMOVED***.isnull()***REMOVED***
-            id2deid91bdate = pd.Series(deid_91_bdate_table.deid_turns_91_date.values,
-                                      index=deid_91_bdate_table.note_key).to_dict()
+            notekey2id***REMOVED***"deid91bdate"***REMOVED*** = pd.Series(deid_91_bdate_table.deid_turns_91_date.values,
+                                                  index=deid_91_bdate_table.note_key).to_dict()
  
-        return id2offset, id2deid, id2dob, id2deiddob, id2deid91bdate
+        return notekey2id
 
     def _load_look_up_mongo(self, filenames, mongo):
         try:
@@ -272,11 +264,12 @@ class Subs:
            collection = db***REMOVED***mongo***REMOVED***'collection_meta_data'***REMOVED******REMOVED***
         except:
            print("Cannot connect to Mongo Database note_info_map")
+        notekey2id = {}
         id2offset = {}
-        id2deid = {}
+        id2deidnotekey = {}
         id2dob = {}
         id2deiddob = {}
-        id2deid91bday = {}
+        id2deid91bdate = {}
         #print(collection.find_one({"note_key":note_key},{"_id":0,"note_key":1, "deid_date_offset_cdw":1,"patient_ID":1,"deid_note_key":1}))
         surrogate_info = collection.find({"_id": {"$in": filenames}},
                                          {"_id":1, "deid_date_offset_cdw":1,
@@ -286,9 +279,11 @@ class Subs:
 
         for filename in list(surrogate_info):
            id2offset***REMOVED***filename***REMOVED***'_id'***REMOVED******REMOVED***  = filename***REMOVED***"deid_date_offset_cdw"***REMOVED***
-           id2deid***REMOVED***filename***REMOVED***'_id'***REMOVED******REMOVED*** = filename***REMOVED***"deid_note_key"***REMOVED***        
+           id2deidnotekey***REMOVED***filename***REMOVED***'_id'***REMOVED******REMOVED*** = filename***REMOVED***"deid_note_key"***REMOVED***        
            id2dob***REMOVED***filename***REMOVED***'_id'***REMOVED******REMOVED*** = filename***REMOVED***"BirthDate"***REMOVED***
            id2deiddob***REMOVED***filename***REMOVED***'_id'***REMOVED******REMOVED*** = filename***REMOVED***"Deid_BirthDate"***REMOVED***
-           id2deid91bday***REMOVED***filename***REMOVED***'_id'***REMOVED******REMOVED*** = filename***REMOVED***"deid_turns_91_date"***REMOVED***
-
-        return id2offset, id2deid, id2dob, id2deiddob, id2deid91bday
+           id2deid91bdate***REMOVED***filename***REMOVED***'_id'***REMOVED******REMOVED*** = filename***REMOVED***"deid_turns_91_date"***REMOVED***
+        notekey2id = {"offset":id2offset, "deidnotekey":id2deidnotekey,
+                      "dob":id2dob, "deiddob":id2deiddob,
+                      "deid91bdate":id2deid91bdate}
+        return notekey2id
