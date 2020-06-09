@@ -145,9 +145,27 @@ class datetime2(datetime.datetime):
                          missing_day = self.missing_day,
                          missing_century = self.missing_century)
 
+    def __eq__(self, other): #ignores anything missing 
+        missing = {"year":False,"month":False,"day":False,"century":False}
+        if self.missing_year or other.missing_year:
+            missing***REMOVED***"year"***REMOVED*** = True
+        if self.missing_month or other.missing_month:
+            missing***REMOVED***"month"***REMOVED*** = True
+        if self.missing_day or other.missing_day:
+            missing***REMOVED***"day"***REMOVED*** = True
+        if self.missing_century or other.missing_century:
+            missing***REMOVED***"century"***REMOVED*** = True
+        if ((missing***REMOVED***"month"***REMOVED*** or self.month == other.month)
+            and (missing***REMOVED***"day"***REMOVED*** or self.day == other.day)
+            and (missing***REMOVED***"year"***REMOVED***
+                 or (missing***REMOVED***"century"***REMOVED*** and self.year%100 == other.year%100)
+                 or self.year == other.year)):
+            return True
+        return False
+
     def get_raw_string(self):
         return self.date_string
-    
+
     def to_string(self, debug=False):
         if debug: date_string = (self.date_string + " (internal: "
                                  + self.strftime("%m/%d/%Y") + " missing ")
