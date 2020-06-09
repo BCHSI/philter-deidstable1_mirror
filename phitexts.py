@@ -309,8 +309,10 @@ class Phitexts:
                         # self.eval_table***REMOVED***filename***REMOVED******REMOVED***start***REMOVED***.update({'sub':None})
                         continue
                     
-                    shifted_date = self.subser.shift_date_pid(normalized_token,
-                                                              note_key_ucsf)
+                    # shifted_date = self.subser.shift_date_pid(normalized_token,
+                    #                                           note_key_ucsf)
+                    shifted_date = self.subser.shift_date_wrt_dob(normalized_token,
+                                                                  note_key_ucsf)
 
                     if shifted_date is None:
                         if __debug__: print("WARNING: cannot shift date "

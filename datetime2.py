@@ -132,7 +132,7 @@ class datetime2(datetime.datetime):
                          missing_month = self.missing_month,
                          missing_day = self.missing_day,
                          missing_century = self.missing_century)
-
+    #FIX: may not work if other is of type datetime
     def __sub__(self, other):
         #if other is int then create a timedelta object with days=other
         if isinstance(other, int):
