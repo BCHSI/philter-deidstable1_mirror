@@ -249,7 +249,8 @@ class Philter:
             for item in lst:
                 if len(item) > 0:
                     if item.isspace() == False:
-                        split_item = re.split("(\s+)", re.sub(pre_process, " ", item))
+                        split_item = re.split("(\s+)", re.sub(pre_process,
+                                                              " ", item))
                         for elem in split_item:
                             if len(elem) > 0:
                                 cleaned.append(elem)
@@ -259,7 +260,9 @@ class Philter:
             self.cleaned[filename] = (cleaned,tokens)
         return self.cleaned[filename]
 
-    def get_clean_filtered(self, filename, text, pre_process= r"[^a-zA-Z0-9\*]", phi_matcher=re.compile(r"\*+")):
+    def get_clean_filtered(self, filename, text,
+                           pre_process= r"[^a-zA-Z0-9\*]",
+                           phi_matcher=re.compile(r"\*+")):
         phi_tokens = 0
         if filename not in self.clean_filtered:
             self.clean_filtered[filename] = {}
@@ -269,7 +272,8 @@ class Philter:
             for item in lst:
                 if len(item) > 0:
                     if item.isspace() == False:
-                        split_item = re.split("(\s+)", re.sub(pre_process, " ", item))
+                        split_item = re.split("(\s+)", re.sub(pre_process,
+                                                              " ", item))
                         for elem in split_item:
                             if len(elem) > 0:
                                 clean_filtered.append(elem)
@@ -294,8 +298,10 @@ class Philter:
         #first check that data is formatted, can be loaded etc. 
         for i,pattern in enumerate(self.patterns):
             self.pattern_indexes[pattern['title']] = i
-            if pattern["type"] in require_files and not os.path.exists(pattern["filepath"]):
-                raise Exception("Config filepath does not exist", pattern["filepath"])
+            if (pattern["type"] in require_files
+                and not os.path.exists(pattern["filepath"])):
+                raise Exception("Config filepath does not exist",
+                                pattern["filepath"])
             for k in reserved_list:
                 if k in pattern:
                     raise Exception("Error, Keyword is reserved", k, pattern)
@@ -321,7 +327,7 @@ class Philter:
                 if pattern["filepath"].split(".")[-1] not in regex_filetypes:
                     raise Exception("Invalid filteype", pattern["filepath"],
                                     "must be of", regex_filetypes)
-                self.patterns[i]["data"] = {}
+                self.patterns[i]["data"] = None
                 self.patterns[i]["dyndata"] = self.precompile(pattern["filepath"])
     
     def precompile(self, filepath):
@@ -391,6 +397,7 @@ class Philter:
         nonames = ['md', 'pt', 'no', 'of', 'none', 'medical', 'pathology',
                    'patient', 'study', 'nan']
         map_set = {}
+        context_probes = []
         if self.known_phi:
             for probe in self.known_phi[filename]:
                 probe_clean = get_clean(probe)
@@ -413,7 +420,6 @@ class Philter:
             file_note_key = file_note_key.replace('_utf8','')
             note_key = file_note_key
             pat_idx_dynbl = self.pattern_indexes["Dynamic Blacklist"]
-            context_probes = []
             for probe in self.patterns[pat_idx_dynbl]["dyndata"]:
                 if note_key in self.patterns[pat_idx_dynbl]["dyndata"][probe]:
                     probe_clean = get_clean(probe)
@@ -434,7 +440,9 @@ class Philter:
         # Substitute probes into probes_regex_context
         if len(context_probes) > 0:
             pat_idx_prbregx = self.pattern_indexes["Probes Regex Context"]
-            regex_string = self.patterns[pat_idx_prbregx]['dyndata'].pattern.replace('"""+probe+r"""', '|'.join(context_probes))
+            rgx = self.patterns[pat_idx_prbregx]['dyndata'].pattern
+            regex_string = rgx.replace('"""+probe+r"""',
+                                       '|'.join(context_probes))
             self.patterns[pat_idx_prbregx]['data'] = re.compile(regex_string)
 
 
@@ -607,6 +615,7 @@ class Philter:
         
         coord_map = self.patterns[pattern_index]["coordinate_map"]
         regex = self.patterns[pattern_index]["data"]
+        if regex == None: return # nothing to match
         regex_name = os.path.basename(self.patterns[pattern_index]['filepath'])
         context = self.patterns[pattern_index]["context"]
         try:
@@ -748,10 +757,10 @@ class Philter:
                 #got a blank space or something without any characters or digits, move forward
                 start_coordinate += len(word)
                 continue
-            if check_pos == False or (check_pos == True and pos in pos_set):               
-               if word_clean in map_set or word in map_set:
-                  coord_map.add_extend(filename, start, stop)
-               else:
+            if check_pos == False or (check_pos == True and pos in pos_set):
+                if word_clean in map_set or word in map_set:
+                    coord_map.add_extend(filename, start, stop)
+                else:
                     pass
             #advance our start coordinate
             start_coordinate += len(word)

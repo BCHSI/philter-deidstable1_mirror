@@ -36,7 +36,7 @@ class Subs:
         self.deid_dob_table = xwalk_tables[3]
         self.deid_91_bday_table = xwalk_tables[4]
 
-        self.ref_date = ref_date
+        self.ref_date = self.parse_date(ref_date)
 
     def has_shift_amount(self, note_id):
         return note_id in self.shift_table
@@ -55,7 +55,7 @@ class Subs:
 
     def get_dob(self, note_id):
         try:
-            dob = self.dob_table[note_id]
+            dob = self.parse_date(self.dob_table[note_id])
         except KeyError as err:
             print("Key Error in dob_table for note " + str(note_id)
                   + ": {0}".format(err))
@@ -64,7 +64,7 @@ class Subs:
 
     def get_deid_dob(self, note_id):
         try:
-            deid_dob = self.deid_dob_table[note_id]
+            deid_dob = self.parse_date(self.deid_dob_table[note_id])
         except KeyError as err:
             print("Key Error in deid_dob_table for note " + str(note_id)
                   + ": {0}".format(err))
@@ -73,7 +73,7 @@ class Subs:
 
     def get_deid_91_bday(self, note_id):
         try:
-            deid_91_bday = self.deid_91_bday_table[note_id]
+            deid_91_bday = self.parse_date(self.deid_91_bday_table[note_id])
         except KeyError as err:
             print("Key Error in deid_91_bday_table for note " + str(note_id)
                   + ": {0}".format(err))
@@ -134,7 +134,13 @@ class Subs:
                                 + " Overflow Error: {0}".format(err))
 
         dob = self.get_dob(note_id)
+        print("Date: \"" + date.to_string(debug=True)
+              + " pretty: " + date.to_string()
+              + "\" DOB: \"" + dob.to_string(debug=True)
+              + " pretty: " + dob.to_string()
+              + "\" in note " + str(note_id))
         if date == dob: # TODO: handle partial dates such as "was born in Feb 1929" -> are date:"02/1929" and dob:"02/13/1929" equal?, may have to be implemented in datetime2.py
+            print("date equals dob")
             shifted_date = self.shift_dob_pid(date, note_id)
             
         # not yet implemented in Deid CDW
@@ -160,16 +166,30 @@ class Subs:
                                 + " Overflow Error: {0}".format(err))
 
         reference = self.ref_date # today or the date of Notes extraction 
-        
         #if reference – shifted_dob < 90 years:
         if reference >= deid_bday91: # the patient is older than 90:
+            days_from_bday = (dt.datetime(year = reference.year,
+                                          month = reference.month,
+                                          day = reference.day)
+                              - dt.datetime(year = reference.year,
+                                            month =  shifted_dob.month,
+                                            day = shifted_dob.day)).days
+            if days_from_bday < 0:
+                shifted_byear = reference.year - 91
+            else:
+                shifted_byear = reference.year - 90
             #ninety_shift = year[ reference – dob_shifted ] – 90
-            ninety_shift = deid_bday91 - reference + 1
-            print("ninety_shift: " + ninety_shift.to_string(debug=True))
-            shifted_dob = shifted_dob + ninety_shift.year
+            #ninety_shift = reference - deid_bday91 + 1
+            ninety_shift = (dt.datetime(year = shifted_byear,
+                                        month = shifted_dob.month,
+                                        day = shifted_dob.day)
+                            - dt.datetime(year = shifted_dob.year,
+                                          month =  shifted_dob.month,
+                                          day = shifted_dob.day))
+            shifted_dob = shifted_dob + ninety_shift
 
         # perhaps good to implement some consistency checks with metadata
-        deid_bdate = self.get_deid_BirthDate(note_id)
+        deid_bdate = self.get_deid_dob(note_id)
         if deid_bdate is not None and shifted_dob != deid_bdate:
             if __debug__: print("WARNING: shifted date of birth \""
                                 + shifted_dob.to_string(debug=True)
@@ -193,8 +213,13 @@ class Subs:
         return date.to_string()
 
     def _load_look_up_table(self, look_up_table_path):
+        id2offset = {}
+        id2deid = {}
+        id2dob = {}
+        id2deiddob = {}
+        id2deid91bdate = {}
         if look_up_table_path is None:
-            return {} #defaultdict(lambda:DEFAULT_SHIFT_VALUE)
+            return {}, {}, {}, {}, {}  #defaultdict(lambda:DEFAULT_SHIFT_VALUE)
 
         try:
             look_up_table = pd.read_csv(look_up_table_path, sep='\t',
@@ -212,28 +237,34 @@ class Subs:
         except pd.errors.EmptyDataError as err:
             print("Pandas Empty Data Error: " + look_up_table_path
                   + " is empty {0}".format(err))
-            return {}, {}
+            return {}, {}, {}, {}, {}
         except ValueError as err:
             print("Value Error: " + look_up_table_path
                   + " is invalid {0}".format(err))
-            return {}, {}
-        
-        offset_table = look_up_table[~look_up_table["date_offset"].isnull()]
-        deid_table = look_up_table[~look_up_table["deid_note_key"].isnull()]
-        dob_table = look_up_table[~look_up_table["BirthDate"].isnull()]
-        deid_dob_table = look_up_table[~look_up_table["Deid_BirthDate"].isnull()]
-        deid_91_bday_table = look_up_table[~look_up_table["deid_turns_91_date"].isnull()]
-        id2offset = pd.Series(offset_table.date_offset.values,
-                              index=offset_table.note_key).to_dict()
-        id2deid = pd.Series(deid_table.deid_note_key.values,
-                            index=deid_table.note_key).to_dict()
-        id2dob = pd.Series(dob_table.BirthDate.values,
-                           index=dob_table.note_key).to_dict()
-        id2deiddob = pd.Series(deid_dob_table.Deid_BirthDate.values,
-                               index=deid_dob_table.note_key).to_dict()
-        id2deid91bday = pd.Series(deid_91_bday_table.deid_turns_91_date.values,
-                                  index=deid_91_bday_table.note_key).to_dict()
-        return id2offset, id2deid, id2dob, id2deiddob, id2deid91bday
+            return {}, {}, {}, {}, {}
+
+        if "date_offset" in look_up_table.keys():
+            offset_table = look_up_table[~look_up_table["date_offset"].isnull()]
+            id2offset = pd.Series(offset_table.date_offset.values,
+                                  index=offset_table.note_key).to_dict()
+        if "deid_note_key" in look_up_table.keys():
+            deid_table = look_up_table[~look_up_table["deid_note_key"].isnull()]
+            id2deid = pd.Series(deid_table.deid_note_key.values,
+                                index=deid_table.note_key).to_dict()
+        if "BirthDate" in look_up_table.keys():
+            dob_table = look_up_table[~look_up_table["BirthDate"].isnull()]
+            id2dob = pd.Series(dob_table.BirthDate.values,
+                               index=dob_table.note_key).to_dict()
+        if "Deid_BirthDate" in look_up_table.keys():
+            deid_dob_table = look_up_table[~look_up_table["Deid_BirthDate"].isnull()]
+            id2deiddob = pd.Series(deid_dob_table.Deid_BirthDate.values,
+                                   index=deid_dob_table.note_key).to_dict()
+        if "deid_turns_91_date" in look_up_table.keys():
+            deid_91_bdate_table = look_up_table[~look_up_table["deid_turns_91_date"].isnull()]
+            id2deid91bdate = pd.Series(deid_91_bdate_table.deid_turns_91_date.values,
+                                      index=deid_91_bdate_table.note_key).to_dict()
+ 
+        return id2offset, id2deid, id2dob, id2deiddob, id2deid91bdate
 
     def _load_look_up_mongo(self, filenames, mongo):
         try:
