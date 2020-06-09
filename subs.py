@@ -139,7 +139,7 @@ class Subs:
               + "\" DOB: \"" + dob.to_string(debug=True)
               + " pretty: " + dob.to_string()
               + "\" in note " + str(note_id))
-        if date == dob: # TODO: handle partial dates such as "was born in Feb 1929" -> are date:"02/1929" and dob:"02/13/1929" equal?, may have to be implemented in datetime2.py
+        if date == dob:
             print("date equals dob")
             shifted_date = self.shift_dob_pid(date, note_id)
             
