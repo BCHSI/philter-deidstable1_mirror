@@ -269,6 +269,13 @@ class Phitexts:
                     normalized_token = Subs.parse_date(token)
                     self.norms[phi_type][(filename, start)] = (normalized_token,
                                                                end)
+            elif (phi_type == "AGE" or phi_type == "Age"
+                  or phi_type == "AGE>=90" or phi_type == "Age>=90"):
+                for filename, start, end in self.types[phi_type][0].scan():
+                    token = self.texts[filename][start:end]
+                    normalized_token = Subs.parse_age(token)
+                    self.norms[phi_type][(filename, start)] = (normalized_token,
+                                                               end)
             else:
                 continue
 
@@ -322,6 +329,35 @@ class Phitexts:
                     
                     substitute_token = self.subser.date_to_string(shifted_date)
                     # self.eval_table[filename][start].update({'sub':substitute_token})
+                    self.subs[(filename, start)] = (substitute_token, end)
+            elif (phi_type == "AGE" or phi_type == "Age"
+                  or phi_type == "AGE>=90" or phi_type == "Age>=90"):
+                for filename, start in self.norms[phi_type]:
+                    if bson.objectid.ObjectId.is_valid(filename):
+                       note_key_ucsf = filename
+                    else:
+                       note_key_ucsf = os.path.splitext(os.path.basename(filename).strip('0'))[0].replace("_utf8","").replace(".txt","").replace(".xml","")
+
+                    normalized_token = self.norms[phi_type][filename, start][0]
+                    end = self.norms[phi_type][filename, start][1]
+
+                    # Added for eval
+                    if normalized_token is None:
+                        # self.eval_table[filename][start].update({'sub':None})
+                        continue
+
+                    reference = self.subser.get_ref_date()
+                    deid_bday91 = self.subser.get_deid_91_bdate(note_key_ucsf)
+                    if not deid_bday91:
+                        if __debug__:
+                            print("WARNING: no 91st birth day found for: "
+                                  + filename)
+                        continue
+                    
+                    if reference >= deid_bday91: # the patient is older than 90:
+                        substitute_token = "*****AGE*****" # TODO: only scrape ages >90 and <deid_dob for 90plus patients
+                    else:
+                        substitute_token = normalized_token
                     self.subs[(filename, start)] = (substitute_token, end)
             else:
                 continue
