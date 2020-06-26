@@ -357,7 +357,7 @@ class Phitexts:
                     if reference >= deid_bday91: # the patient is older than 90:
                         substitute_token = "*****AGE*****" # TODO: only scrape ages >90 and <deid_dob for 90plus patients
                     else:
-                        substitute_token = normalized_token
+                        substitute_token = str(normalized_token)
                     self.subs***REMOVED***(filename, start)***REMOVED*** = (substitute_token, end)
             else:
                 continue
