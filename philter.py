@@ -422,18 +422,19 @@ class Philter:
             pat_idx_dynbl = self.pattern_indexes***REMOVED***"Dynamic Blacklist"***REMOVED***
             for probe in self.patterns***REMOVED***pat_idx_dynbl***REMOVED******REMOVED***"dyndata"***REMOVED***:
                 if note_key in self.patterns***REMOVED***pat_idx_dynbl***REMOVED******REMOVED***"dyndata"***REMOVED******REMOVED***probe***REMOVED***:
-                    probe_clean = get_clean(probe)
-                    for pc in probe_clean:
-                        prb = re.sub(r"***REMOVED***^a-zA-Z0-9***REMOVED***+", "",
-                                     str(pc).lower().strip())
-                        if ((include_singles or len(prb) > 1)
-                            and (include_nonames or prb not in nonames)):
-                            map_set***REMOVED***prb***REMOVED*** = self.patterns***REMOVED***pat_idx_dynbl***REMOVED******REMOVED***"dyndata"***REMOVED******REMOVED***probe***REMOVED***
-                        # If single character or in list of nonames,
-                        # add to list of context probes
-                        else:
-                            if prb.isdigit() == False:
-                                context_probes.append(prb)
+                    if type(probe) == 'str':
+                        probe_clean = get_clean(probe)
+                        for pc in probe_clean:
+                            prb = re.sub(r"***REMOVED***^a-zA-Z0-9***REMOVED***+", "",
+                                         str(pc).lower().strip())
+                            if ((include_singles or len(prb) > 1)
+                                and (include_nonames or prb not in nonames)):
+                                map_set***REMOVED***prb***REMOVED*** = self.patterns***REMOVED***pat_idx_dynbl***REMOVED******REMOVED***"dyndata"***REMOVED******REMOVED***probe***REMOVED***
+                            # If single character or in list of nonames,
+                            # add to list of context probes
+                            else:
+                                if prb.isdigit() == False:
+                                    context_probes.append(prb)
 
         self.patterns***REMOVED***pat_idx_dynbl***REMOVED******REMOVED***"data"***REMOVED*** = map_set
 
@@ -458,6 +459,7 @@ class Philter:
         for filename in self.filenames:
 
             txt = self.texts***REMOVED***filename***REMOVED***
+            print(filename)
 
             # Get full self.include/exclude map before transform
             self.data_all_files***REMOVED***filename***REMOVED*** = {"text":txt, "phi":***REMOVED******REMOVED***, "non-phi":***REMOVED******REMOVED***}
