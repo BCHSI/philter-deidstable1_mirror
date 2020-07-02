@@ -191,7 +191,19 @@ class Subs:
                                 + deid_bdate.to_string(debug=True)
                                 + " pretty: " + deid_bdate.to_string())
         return shifted_dob
-            
+
+    
+    @staticmethod
+    def parse_age(age_string):
+        try:
+            print("parsing age: " + age_string)
+            age = int(age_string)
+        except ValueError as err:
+            print("ValueError: \"" + age_string
+                  + "\" is invalid age: {0}".format(err))
+            return None
+        return age
+    
     @staticmethod
     def parse_date(date_string):
         date = datetime2.parse(date_string,
