@@ -422,18 +422,19 @@ class Philter:
             pat_idx_dynbl = self.pattern_indexes["Dynamic Blacklist"]
             for probe in self.patterns[pat_idx_dynbl]["dyndata"]:
                 if note_key in self.patterns[pat_idx_dynbl]["dyndata"][probe]:
-                    probe_clean = get_clean(probe)
-                    for pc in probe_clean:
-                        prb = re.sub(r"[^a-zA-Z0-9]+", "",
-                                     str(pc).lower().strip())
-                        if ((include_singles or len(prb) > 1)
-                            and (include_nonames or prb not in nonames)):
-                            map_set[prb] = self.patterns[pat_idx_dynbl]["dyndata"][probe]
-                        # If single character or in list of nonames,
-                        # add to list of context probes
-                        else:
-                            if prb.isdigit() == False:
-                                context_probes.append(prb)
+                    if type(probe) == 'str':
+                        probe_clean = get_clean(probe)
+                        for pc in probe_clean:
+                            prb = re.sub(r"[^a-zA-Z0-9]+", "",
+                                         str(pc).lower().strip())
+                            if ((include_singles or len(prb) > 1)
+                                and (include_nonames or prb not in nonames)):
+                                map_set[prb] = self.patterns[pat_idx_dynbl]["dyndata"][probe]
+                            # If single character or in list of nonames,
+                            # add to list of context probes
+                            else:
+                                if prb.isdigit() == False:
+                                    context_probes.append(prb)
 
         self.patterns[pat_idx_dynbl]["data"] = map_set
 
@@ -458,6 +459,7 @@ class Philter:
         for filename in self.filenames:
 
             txt = self.texts[filename]
+            print(filename)
 
             # Get full self.include/exclude map before transform
             self.data_all_files[filename] = {"text":txt, "phi":[], "non-phi":[]}

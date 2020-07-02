@@ -78,7 +78,7 @@ for dirline in dirfile:
         line  = line.replace('.0','')
         key= line.split('\t')
         # Modification for current meta indices, 5/21/20, KM
-        meta[key[0]] = key[2]
+        meta[key[0]] = key[]
     print(mpath+" meta data loaded into hash")
 
     keepers = create_batch_dict(dirline)

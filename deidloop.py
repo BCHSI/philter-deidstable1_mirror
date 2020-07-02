@@ -15,6 +15,7 @@ import pandas
 import numpy
 import os
 from logger import get_super_log, create_log_files_list
+from datetime import date
 
 def get_args():
     # gets input/output/filename
@@ -82,7 +83,8 @@ def runDeidChunck(unit, q, philterFolder, configfile):
                  "-s", srcMeta,
                  "-d", "True", 
                  "-f", configfile,
-                 "-l", "True"],
+                 "-l", "True",
+                 "-r", str(date.today())],
                  cwd=philterFolder)
         else:
             call(["python3", "-O", "deidpipe.py",
@@ -92,7 +94,8 @@ def runDeidChunck(unit, q, philterFolder, configfile):
                  "-d", "True",
                  "-f", configfile,
                  "-k", kpfile,
-                 "-l", "True"],
+                 "-l", "True",
+                 "-r", str(date.today())],
                  cwd=philterFolder)
 
         # Print time elapsed for batch
