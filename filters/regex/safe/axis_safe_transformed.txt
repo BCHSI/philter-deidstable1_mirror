@@ -1,1 +1,0 @@
-\b(?i)(cylinder|right|left)\saxis\b

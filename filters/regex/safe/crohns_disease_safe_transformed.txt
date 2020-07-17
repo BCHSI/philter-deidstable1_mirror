@@ -1,1 +1,0 @@
-\b(?i)crohn\'s\sdisease\b

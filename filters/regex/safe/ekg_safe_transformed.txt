@@ -1,1 +1,0 @@
-\bEKG\s&\sRhythm\b

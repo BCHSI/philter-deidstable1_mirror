@@ -1,1 +1,0 @@
-\b(?i)(?!\d{3}\-\d{4}\sl\/m)((?<!\/)(?<!U #: )(?<!MRN:  )(?<!MRN: )(?<![A-Z]{2}  )(?<![A-Z]{2} )(?<!\d{3}\-)(?<!\(\d{3}\)\s)\d+(\.\d+)?(\-\d+(\.\d+)?)?\s(?!ml\/bed\b)((kilo)?grams|g|mg|l|ml|cup|cm|mm|mmhg|mcg|milliseconds))\b

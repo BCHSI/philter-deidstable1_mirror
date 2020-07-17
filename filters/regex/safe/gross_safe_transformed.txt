@@ -1,1 +1,0 @@
-\b(?i)gross\s(description|per)\b
