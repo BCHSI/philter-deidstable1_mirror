@@ -1,0 +1,608 @@
+./data/mimic_exnotes/original-notes//D006A1B2EBD998.txt:6:CV: SEE CAREVUE FOR DETAILED VS, GTTS, INTERVENTIONS. ST, FREQUENT PVC'S ON ARRIVAL FROM OR - K 3.2, REPLEATED. LR BOLUSES GIVEN FOR LOW CVP 7-8. B/P LABILE, NTG/NEO OFF & ON. DECOMPENSATED WITH COUGHING. CI >2 BY THERMODILUTION. EPICARDIAL WIRES ATTACHED, OFF D/T TACHYCARDIA. WIRES NOT TESTED D/T TACHYCARDIA. CT WITH SANG. DRAINAGE, NO CLOTS. LEFT LEG IN ACE WRAP. LOWER LEG WITH PRESSURE DRESSING - SATURATED/INTACT. JP DRAIN WITH SANG DRAINAGE. DP/PT PULSES WEAK BUT PALPABLE. HEMODYNAMICALLY TOLERATING LEFT SIDE POSITION BEST.
+./data/mimic_exnotes/original-notes//D0169B0126A961.txt:13:2.  INCREASE ACE INHIBITOR DOSAGE AS PT CAN TOLERATE.
+./data/mimic_exnotes/original-notes//D01807D6BD2A7A.txt:69:   5. Angioedema from ACE inhibitors, shrimp.
+./data/mimic_exnotes/original-notes//D01807D6BD2A7A.txt:218:   ACE/[**Last Name (un) **] secondary to angioedema.
+./data/mimic_exnotes/original-notes//D01B97B2523F96.txt:168:   end stage renal disease would likely benefit from ACE inhibitor.
+./data/mimic_exnotes/original-notes//D01B97B2523F96.txt:170:   - consider ACE-I
+./data/mimic_exnotes/original-notes//D01B97B2523F96.txt:175:   - consider starting ACE inhibitor once improvement in access, given
+./data/mimic_exnotes/original-notes//D024032E217335.txt:177:   -          already on failure regimen of ACE-I, carvedilol, and lasix
+./data/mimic_exnotes/original-notes//D024032E217335.txt:213:   - medical management with ASA, beta-blocker, ACE-inhibitor, CCB,
+./data/mimic_exnotes/original-notes//D024997CE84B34.txt:100:   wrapped in ACE wrap by plastics
+./data/mimic_exnotes/original-notes//D033D983EEDD8E.txt:34:A/[**Name (NI) **] PT CURRENTLY TOLERATING NIPRIDE WEAN AND INCREASE IN ACE.
+./data/mimic_exnotes/original-notes//D033D983EEDD8E.txt:39:INCREASE ACE AS TOLERATED.
+./data/mimic_exnotes/original-notes//D0351586713BD1.txt:218:hydralazine. His ACE-I and metoprolol were titrated up which he
+./data/mimic_exnotes/original-notes//D0351586713BD1.txt:226:subsequently started on and ACE-I and metoprolol. He was
+./data/mimic_exnotes/original-notes//D0351586713BD1.txt:228:by discharge. He was continued on ACE-I, BB, Lasix, and digoxin
+./data/mimic_exnotes/original-notes//D045CC48AAF094.txt:794:PLACE WITH GENTLE ACE WRAP OR TAPE.
+./data/mimic_exnotes/original-notes//D048E309C60ECD.txt:105:from ACE inhibitors and continued on the negative fluid
+./data/mimic_exnotes/original-notes//D04A7405721144.txt:174:   Extremities: Right: Absent, Left: Absent, legs wrapped in ACE bandages
+./data/mimic_exnotes/original-notes//D08077EEA550D0.txt:2:  PT REMAINS SEDATED ON PROPOFOL-MOVES HEAD WHEN LIGHTENS. ALKYLOSIS SOMEWHAT BETTER,SATS GOOD. CI REMAINS WELL ABOVE 2; MILRINONE DOWN TO .25 AS PER DR. [**Last Name (STitle) **]. PT NOW SOMEWHAT HYPOTENSIVE; NTG HAS BEEN OFF FOR SEVERAL HOURS. LEVO REMAINS .05. IABP 1:1. NO DIURESIS (THOUGH ADEQUATE U/O) FROM 20 LASIX; GIVEN 40MG 45MIN AGO WITH 2 MORE PC'S. U/O STARTING TO DROP. WEIGHT UP 17 KG. PT SEEMS LESS [**Last Name (STitle) **] THIS AM. CT DRG ONLY MOD. LABS IMPROVED THIS AM; EXCEPT BS-UP TO 244-INSULIN GTT UP TO 8U. THORACIC TEAM MADE ROUNDS THIS AM-PT NOW RECEIVING ANOTHER 2 PC'S FOR HCT 23. VASCULAR BY-TEAM TO MAKE ROUNDS AND TAKE DOWN ACE WRAP. DAUGHTER CALLED THIS AM AND GIVEN UPDATE.
+./data/mimic_exnotes/original-notes//D08282186077F0.txt:92:CK(CPK)-116 ALK PHOS-60 TOT BILI-0.5
+./data/mimic_exnotes/original-notes//D08282186077F0.txt:202:Betablocker was continued; ACE-I was restarted on [**9-25**] (after
+./data/mimic_exnotes/original-notes//D08282186077F0.txt:207:Beta-blocker, ACE-I, Statin.
+./data/mimic_exnotes/original-notes//D0833E92134161.txt:15:SKIN: [**Location (un) **] COLLAR ADJUSTED BY ORTHO TO ACHEIVE LESS PRESSURE ON HER CHIN. AREA ON CHIN THAT WAS DEBRIDED TODAY HAS DSD W/ SM AMT BLOODY DNGE. BACKSIDE INTACT AND SUTURE LINES ON ABD AND HEAD ARE CLEAN AND DRY. LUE ACE WRAP CHANGED BY ORTHO AND PROM TO LUE DONE.
+./data/mimic_exnotes/original-notes//D09EFDBC2954E1.txt:212:   bilaterally; lower legs wrapped in ACE bandages. Multiple small
+./data/mimic_exnotes/original-notes//D0B05F78A1F607.txt:198:   on lopressor, statin, ACE-I, ASA. HR and BP stable on regimen.
+./data/mimic_exnotes/original-notes//D0B7A719BD3BDD.txt:14:course of her admission since we started her on ACE inhibitor
+./data/mimic_exnotes/original-notes//D0B7A719BD3BDD.txt:57:discharge has been changed from ACE inhibitor to Losartan,
+./data/mimic_exnotes/original-notes//D0BE24D3B9FCB0.txt:159:   include ACE/Lasix, possibly due to BP lability & autonomic dysfunctn
+./data/mimic_exnotes/original-notes//D0BE24D3B9FCB0.txt:161:   -consider restarting ACE, BB, spirinolactone, lasix as outpt
+./data/mimic_exnotes/original-notes//D0C35281F09C12.txt:24:   elevated, wrapped in ACE and with (+) Doppler pulses at flap site on
+./data/mimic_exnotes/original-notes//D0CB374C0D48F2.txt:16:INTEG: SKIN ON BACK INTACT. BLE LESS EDEMATOUS THAN PREVIOUS SHIFTS, HOWEVER FEET ARE STILL LARGELY EDEMATOUS. SKIN ON BLE SCALY AND LEATHER-LIKE IN APPEARANCE. LEGS AND FEET WRAPPED IN ACE WRAPS. ALLEVYN DSG ON ABRASION ON COCCYX INTACT. DSG TO SMALL ABRASION ON LLL CHANGED THIS SHIFT, DSD TO GREAT TOE ON RIGHT FOOT CHANGED THIS SHIFT.
+./data/mimic_exnotes/original-notes//D0D74D453C1454.txt:6:CV:  BP NOW 137/69 AFTER RECEIVING LOPRESSOR PO 50 MG.  HR 82 WITH OCC PVC.  PACER INTACT IN RIGHT SC.  DRESSING INTACT.  WILL OCC DROP HR TO 52 (PACER RATE 50).  RIGHT ARM DVT, RIGHT ARM COOL, ACE WRAP REMOVED BY VASCULAR MD.  UNABLE TO DRAW AM LABS DUE TO POOR ACCESS.  [**3-20**]+, GENERALIZED PITTING EDEMA NOTED.
+./data/mimic_exnotes/original-notes//D0D9BB5FC4D6BC.txt:216:   -          Would benefit from ACE inhibitor once over acute illness
+./data/mimic_exnotes/original-notes//D0E2608BA89D8F.txt:175:   -uptitrate ACE, BB for afterload reduction as BP allows
+./data/mimic_exnotes/original-notes//D0F6B46DED2DB6.txt:228:   end stage renal disease would likely benefit from ACE inhibitor.
+./data/mimic_exnotes/original-notes//D0F6B46DED2DB6.txt:230:   - consider ACE-I
+./data/mimic_exnotes/original-notes//D0F6B46DED2DB6.txt:235:   - consider starting ACE inhibitor once improvement in access, given
+./data/mimic_exnotes/original-notes//D0F822C19AD68F.txt:25:A/[**Name (NI) **] PT S/P SUCCESSFUL STENT LCX C/B BRADYCARDIA- CURRENTLY TOLERATING INCREASE IN ACE/B BLOCKERS
+./data/mimic_exnotes/original-notes//D0FD3017DBF7D0.txt:167:   in ESR from 55 to 109, treating for presumptive osteomyelitis. Continue
+./data/mimic_exnotes/original-notes//D0FD3017DBF7D0.txt:168:   Vanc/Ceftaz for a two-week course and monitor ESR, unless plastics
+./data/mimic_exnotes/original-notes//D0FD3017DBF7D0.txt:169:   plans definitive surgical intervention. If ESR persists high, discuss
+./data/mimic_exnotes/original-notes//D10087DDED6084.txt:306:continued on home dose of lasix. She was started on ACE-I,
+./data/mimic_exnotes/original-notes//D115B935E1E104.txt:4:CV: HAVING BP > 160'S AT TIMES BUT MOSTLY IN THE 140'S ON CURRENT ACE INHIBITOR AND BETA BLOCKER.  HR 60'S SR NO VEA NOTED. R AND L GROINS REMAIN INTACT WITH PRESSURE DRESSINGS, R GROIN WITH STABLE ECCYMOSIS.
+./data/mimic_exnotes/original-notes//D115B935E1E104.txt:10:P: CONT TO ASSESS NEURO, FOLLOW BP/HR ? INCREASE IN ACE INHIBITOR
+./data/mimic_exnotes/original-notes//D1192ED5D68C99.txt:158:   - holding ACE, BB, and lasix, to be restarted once fluid status
+./data/mimic_exnotes/original-notes//D12ED9BE510466.txt:167:   - Continue ACE-I, BB, statin, ASA 81mg daily
+./data/mimic_exnotes/original-notes//D13EAFBEBEAED9.txt:154:   -uptitrate ACE, BB for afterload reduction as BP allows
+./data/mimic_exnotes/original-notes//D14CEF3F96E3FC.txt:169:   - Continue ACE-I, BB, statin, ASA 81mg daily
+./data/mimic_exnotes/original-notes//D15BB8FE205A58.txt:4:    LUNG SOUNDS CLEAR, BREATHING UNLABORED WITH HUMIDIFIED FACE MASK.  SP02 100% ON 0.40 FI02.  RIGHT LOWER EXTREMITY IN ACE WRAP, OOZING MODERATE AMOUNTS SANG FLUID.  RIGHT LOWER EXT REMAINS IN KNEE IMMOBILIZER.  PATIENT CURRENTLY NPO, BLOOD GLUCOSES STABLE ON 2.5 UNITS/HOUR OF INSULIN.
+./data/mimic_exnotes/original-notes//D15C396A0832C4.txt:2:O: PT RETURNED FROM OR AT 4:30PM S/P ORIF L TIBIA, R RADIUS, R ULNAR AND REPAIR OF L 3RD, 4TH AND 5TH METACARPAL. BUE SPLINTED AND ACE WRAPPED. LLE ACE WRAPPED W/ BRACE ON. SL HYPOTENSIVE DURING CASE W/ SM NEO REQUIREMENT. PT RECEIVED ABT 4.5L FLUID, 2U PRBCS AND 1 BAG PLTS DURING PROCEDURE. U/O 470 W/ EBL 750CC. ACIDOTIC IN OR REQUIRING 1 AMP BICARB. RETURNED FROM OR PARALYZED AND SEDATED W/ STABLE VS.
+./data/mimic_exnotes/original-notes//D15C396A0832C4.txt:21:SKIN: BUE WRAPPED IN ACE, D&I. HANDS COOL AND PALE BUT W/ NL CAP REFILL. LLE WRAPPED IN ACE W/ [**Doctor Last Name **] BRACE IN PLACE. OOZING BLOODY DNGE FROM KNEE AREA. CPM PLACED ON PERIODICALLY. L FOOT COOL AND PALE W/ NL CAP REFILL. UNABLE TO [**Last Name (un) 294**] PULSES (CONSISTENT W/ PREOP EXAM).
+./data/mimic_exnotes/original-notes//D165F6AF76749A.txt:142:medication was changed to Hydralazine from ACE inhibitor
+./data/mimic_exnotes/original-notes//D1670CDA5F4729.txt:183:   # Hyperkalemia: unclear if this is primary from ARF & ACE versus
+./data/mimic_exnotes/original-notes//D1670CDA5F4729.txt:203:   # Acute renal failure: likely due to ACE & lasix.  [**Month (only) 8**] develop ATN
+./data/mimic_exnotes/original-notes//D171AA94637224.txt:146:   - holding ACE, BB, and lasix, to be restarted once fluid status
+./data/mimic_exnotes/original-notes//D17415D2B7E203.txt:4:CV: TELE 100% V.PACED A RATE OF 92, [** **] AND CAPTURING APPOPRRIATELY. PT REMAINS ON A DOPAMINE INFUSION AT 5MCG/KG/MIN BP 114/37. LEFT FEMORAL ALINE IN PLACE WITH DISTAL PULSES PRESENT WITH DOPPLER.  RIGHT FINGERS DUSKY WRAPPED WITH AN ACE WRAP IN A CAST. L FINGERS WITH INTEMITTENT DUSKINESS BRISK CAPILLARY REFILL.
+./data/mimic_exnotes/original-notes//D1829428AB8CF8.txt:11:SKIN: RIGHT LEG WRAPPED IN ACE BANDAGE, WITH SMALL AMT OLD DRIED BLOOD, KNEE IMOBLIZER INPLACE. PT HAS [**Name (NI) 6973**] DRAIN IN PLACE W/ SMALL AMT S/S DRAINAGE. SCROTOM AND PENIS SWOLLEN AND BRUISED.
+./data/mimic_exnotes/original-notes//D188612E935A3A.txt:145:   - Holding  BB and ACE-I in the setting of ongoing hypotension
+./data/mimic_exnotes/original-notes//D188612E935A3A.txt:165:   - Would benefit from ACE inhibition
+./data/mimic_exnotes/original-notes//D18FE7559F0B13.txt:240:   # Hyperkalemia: resolved.  Thought to be primary from ARF & ACE given
+./data/mimic_exnotes/original-notes//D19993ADA1001E.txt:125:[**2107-8-12**] 05:06PM   ALT(SGPT)-17 AST(SGOT)-37 CK(CPK)-188 ALK
+./data/mimic_exnotes/original-notes//D19993ADA1001E.txt:157:patient on metoprolol, plavix, statin, ACE-i, ASA. While in the
+./data/mimic_exnotes/original-notes//D1A66E65058D77.txt:167:[**2101-7-5**] 09:25PM BLOOD ESR-68*
+./data/mimic_exnotes/original-notes//D1A66E65058D77.txt:319:mutational analysis re: EGFR, KRAS mutations, etc.
+./data/mimic_exnotes/original-notes//D1A86C843D87A5.txt:207:UOP.  In the setting of [**Last Name (un) **] ACE-inhibitor, HCTZ and metformin
+./data/mimic_exnotes/original-notes//D1AA6C0D62AE91.txt:133:    - Would start ACE inhibitor for HF management if pt tolerates, though
+./data/mimic_exnotes/original-notes//D1AA6C0D62AE91.txt:143:   - Would benefit from ACE inhibition.
+./data/mimic_exnotes/original-notes//D1B3FBDBF738B4.txt:212:# CHF: Patient has preserved EF, not currently on ACE-I, BB, or
+./data/mimic_exnotes/original-notes//D1B51143D3A177.txt:141:   # cardiomyopathy: hold ACE-I, BB [**2-7**] to recent hypotension, infection.
+./data/mimic_exnotes/original-notes//D1B97C51E926A8.txt:35:   Cont on home regimen of ACE-I, BB, [**Last Name (LF) 4844**], [**First Name3 (LF) 369**], statin, and lasix, EKG
+./data/mimic_exnotes/original-notes//D1C1035EC4A268.txt:7:CARD--SWAN CATH NOT WEDGING.  PAP'S 39-40/14-19, CVP 15, CO 4.24, CI 2.02, SVR 1377. RIGHT RAD ALINE, BP 130-140'S/ HR 70-80'S SR NO ECTOPY NOTED.  MILD EXTREMITY EDEMA.  BOTH LEGS WRAPPED IN ACE WRAPS AND ELEVATED. DP PULSES BY DOPPLER ONLY.
+./data/mimic_exnotes/original-notes//D1C21315E61EE6.txt:133:    - Would start ACE inhibitor for HF management if pt tolerates, though
+./data/mimic_exnotes/original-notes//D1C21315E61EE6.txt:143:   - Would benefit from ACE inhibition.
+./data/mimic_exnotes/original-notes//D1C6A9D589E842.txt:156:diuresis. Patient's blood pressure was controlled with ACE-I,
+./data/mimic_exnotes/original-notes//D1C6A9D589E842.txt:167:maintained on ASA, BB, ACE-I, Statin and plavix, and her blood
+./data/mimic_exnotes/original-notes//D1DBC3540BE0E4.txt:235:   - Hold on plavix, heparin gtt, ACE-I, BB given hypotension and concern
+./data/mimic_exnotes/original-notes//D1E2554891AC61.txt:170:   - Continue ACE-I, BB, statin, ASA 81mg daily
+./data/mimic_exnotes/original-notes//D1EF4A6B552B05.txt:7:80 Y/O F, S/P RECENT FALL COMPLICATED BY LARGE LEG HEMATOMA REQUIRING DRAINAGE& VAC DRESSING. CAME IN WITH HYPERKALEMIA IN THE SETTING OF ARF &  ANEMIA.ARF & HYPERKALEMIA RESOLVED( THOUGHT [**1-5**] NSAID,ACE-I, FUROSEMIDE USE).LT LEG HEMATOMA EVACUATED,THEN WASHOUT & DEBRIDEMENT DONE BY PLASTICA IN OR FOLLOWED BY VAC DRESSING. HCT 19 ON ADM, RECEIVED ~ 9 UNITS & HAS BEEN MAINTAINED STEADY HCT IN 21-27.5 RANGE.? HEMORRHOIDAL BLEED AS PER GI, NO EGD/[**Last Name (un) **] WAS DONE.WAS TRANSFERRED TO THE FLOOR WHERE SHE HAS A TRANSFUSION REACTION TO A UNIT OF BLOOD BUT WAS STABLE.
+./data/mimic_exnotes/original-notes//D1F0C09ACD1F95.txt:11:ORTHO: WOUND W/ DSD /ACE WRAP, IN KNEE IMMOBLIZER AS PER ORTHO.CPM MACHINE IN ROOM. JP DRAINED 150CC SEROSANGUINOUS DRAINAGE .+PP CSM WNL.
+./data/mimic_exnotes/original-notes//D1F913FC67784C.txt:162:   - [**Month (only) 51**] benefit from ACE-consider low dose captopril today as a trial
+./data/mimic_exnotes/original-notes//D21B0B08B1D1F6.txt:138:- hold ACE-I, CCB given recent hypotension;
+./data/mimic_exnotes/original-notes//D22871548EF340.txt:6:    ORTHO RIGHT ARM REMAINS IN SPLINT POS PULSE LEFT LEG IN ACE WRAP POS PULE GOOD CAP REFIL
+./data/mimic_exnotes/original-notes//D229D5191E7614.txt:21:Skin: Head wrapped in ACE around surgical sites. Bilateral eye incisions red with scant serosanguenous drainage. Both eyes have hematomas. Face remarkably swollen. Otherwise skin intact.
+./data/mimic_exnotes/original-notes//D22B847EB1D57E.txt:166:   -uptitrate ACE, BB for afterload reduction as BP allows
+./data/mimic_exnotes/original-notes//D22FA07F93A31A.txt:5:Neuro:  AAOx3, MAE. L leg in ACE wrap. Pupils reactive at 2mm. Dilaudid 0.50 mg iv x 2 doses for incisional pain given. OOB to chair briefly, but unable to tolerate due to increased dizziness.
+./data/mimic_exnotes/original-notes//D253E245A13F97.txt:225:Wrap you legs in ACE wraps and keep them elevated as much as
+./data/mimic_exnotes/original-notes//D2579904A3528C.txt:162:   -uptitrate ACE, BB for afterload reduction as BP allows
+./data/mimic_exnotes/original-notes//D259D2F094BA7A.txt:264:   - hold ACE-I, BB [**2-7**] hypotension, infection.
+./data/mimic_exnotes/original-notes//D2650EBDE41812.txt:240:   # Hyperkalemia: resolved.  Thought to be primary from ARF & ACE given
+./data/mimic_exnotes/original-notes//D275266C2C2BEA.txt:152:   - continue optimal medical management w/ ASA, BB, statin, ACE-I
+./data/mimic_exnotes/original-notes//D275266C2C2BEA.txt:161:   - continue home meds: HCTZ, BB, ACE-I, CCB
+./data/mimic_exnotes/original-notes//D27B87B67A3E15.txt:191:   -          already on failure regimen of ACE-I, carvedilol, and lasix
+./data/mimic_exnotes/original-notes//D27B87B67A3E15.txt:226:   - medical management with ASA, beta-blocker, ACE-inhibitor, CCB,
+./data/mimic_exnotes/original-notes//D29012A290A434.txt:2:    PATIENT ADMITTED FROM OR AFTER REIMPLANTATION OF LEFT 3RD, 4TH, & 5TH DIGITS WITH VEIN HARVEST FROM RIGHT FOOT.  PATIENT SOMNULENT ON ARRIVAL, BUT APPEARS ORIENTED.  GIVEN DILAUDID FOR PATIENT WITH ADEQUATE RELIEF, AWAITING PCA.  SLIGHTLY TACHYCARDIC ON ARRIVAL DUE TO NAUSEA/VOMITING.  HEART RATE NOW 80'S NORMAL SINUS AND NAUSEA RESOLVED AFTER ZOFRAN.  SEE FLOWSHEET FOR ALL OTHER VITALS.  LUNG SOUNDS CLEAR, RESP RATE ~ 10 AND BREATHING UNLABORED.  LEFT HAND WRAPPED IN ACE AND ELEVATED ON PILLOW.  3RD, 4TH, & 5TH DIGITS PINK IN COLOR (UNABLE TO MOVE DUE TO PINS IN PLACE).  RIGHT FOOT WITH STERI-STRIPS INTACT, + LOWER EXTREMITY PULSES.  PLAN TO CHECK LEFT HAND/FINGER COLORATION HOURLY.  ASSESS PAIN CONTROL WITH DILAUDID PCA.
+./data/mimic_exnotes/original-notes//D290C9804E1B95.txt:241:   - Hold on plavix, heparin gtt, ACE-I, BB given hypotension and concern
+./data/mimic_exnotes/original-notes//D2A3A0C8E85306.txt:215:   - Hold on plavix, heparin gtt, ACE-I, BB given hypotension and concern
+./data/mimic_exnotes/original-notes//D2A61854C3F103.txt:9:SKIN: CHEST WITH DSD'S CDI, RIGHT LEG ACE CDI, CT DSD'S CDI, RIGHT NARES WITH NOSE BLEED FROM OR DID NEED TO CHANGE NOSE PACKING X3 FOR SATURATION, BLEEDING IS SLOWING DOWN.
+./data/mimic_exnotes/original-notes//D2B563AB50E442.txt:167:   -uptitrate ACE, BB for afterload reduction as BP allows
+./data/mimic_exnotes/original-notes//D2B69AE9F95B4C.txt:72:Ext: 2+ edema to thighs, legs wrapped in ACE bandages.
+./data/mimic_exnotes/original-notes//D2BDBC6993FFEC.txt:132:wrap in ACE wrap and re-apply splint.
+./data/mimic_exnotes/original-notes//D2D410DAB990E1.txt:291:continued on BB, ACE-I, ASA was resumed on [**8-11**]. Repeat ECHO was
+./data/mimic_exnotes/original-notes//D2D410DAB990E1.txt:317:stroke. He was continued on BB & ACE-I, BP goal 120-160. Per
+./data/mimic_exnotes/original-notes//D2D727DDF5545A.txt:113:   - continue BB, ACE, ASA, statin, imdur to maximize treatment of known
+./data/mimic_exnotes/original-notes//D2D727DDF5545A.txt:137:   # Hypertension: Patient on ACE, BB at home. BP is well controlled
+./data/mimic_exnotes/original-notes//D2E2EDA56BC520.txt:164:   -uptitrate ACE, BB for afterload reduction as BP allows
+./data/mimic_exnotes/original-notes//D2E6CAC651181E.txt:175:   -uptitrate ACE, BB for afterload reduction as BP allows
+./data/mimic_exnotes/original-notes//D2F63312132A08.txt:89:CK(CPK)-82 ALK PHOS-68 TOT BILI-0.3
+./data/mimic_exnotes/original-notes//D2F63312132A08.txt:134:smaller doses of ACE, Beta and Spi, but we leave this up to Dr.
+./data/mimic_exnotes/original-notes//D2F6A2BCD56E31.txt:186:   on lopressor, statin, ACE-I, ASA. HR and BP stable on regimen.
+./data/mimic_exnotes/original-notes//D2FD10567CA10D.txt:171:   include ACE/Lasix, possibly due to BP lability & autonomic dysfunctn
+./data/mimic_exnotes/original-notes//D2FD10567CA10D.txt:173:   -consider restarting ACE, BB, spirinolactone, lasix as outpt
+./data/mimic_exnotes/original-notes//D304494BC5E3DE.txt:175:   Cardiovascular: Full anticoagulation, Beta-blocker, ACE inhibitor
+./data/mimic_exnotes/original-notes//D304D81845E8D5.txt:186:   - hold ACE-I, BB [**2-7**] hypotension, infection.
+./data/mimic_exnotes/original-notes//D30C78FFD265ED.txt:212:   bilaterally; lower legs wrapped in ACE bandages. Multiple small
+./data/mimic_exnotes/original-notes//D32D5CB0E9EF96.txt:232:   - Hold on plavix, heparin gtt, ACE-I, BB after discussion with Cards
+./data/mimic_exnotes/original-notes//D331C62D8194ED.txt:230:rituximab or an anti-IL6 [**Doctor Last Name 360**]; cyclophosphamide only for severe
+./data/mimic_exnotes/original-notes//D336BC22BA7891.txt:42:   and fluocinonide, wrapped legs in ACE bandage, left glute open to air.
+./data/mimic_exnotes/original-notes//D3482327938874.txt:179:   - hold ACE-I, BB, CCB given recent hypotension; will restart once more
+./data/mimic_exnotes/original-notes//D34EAA827737D2.txt:33:SKIN: 0.5CM OPEN LAC ON NOSE SUTURED BY TRAUMA. R FEMUR DSG WRAPPED IN ACE AND OOZING SM-MOD SEROSANG DNGE. L LEG DSG D&I. CHIN LAC COVERED W/ BACITRACIN AND DSD. SKIN UNDER COLLAR INTACT. BACKSIDE INTACT.
+./data/mimic_exnotes/original-notes//D34F83C32C92B7.txt:184:   - [**Month (only) 51**] benefit from ACE-I later
+./data/mimic_exnotes/original-notes//D3591A957FB9D7.txt:6:*Allergies:  ASA, Hydralazine, ACE-Inhibitors, Diovan
+./data/mimic_exnotes/original-notes//D359B1BDAF11A8.txt:51:ALLERGIES:  The patient has a cough from ACE INHIBITOR.
+./data/mimic_exnotes/original-notes//D35F8D7577BCA0.txt:183:-metoprolol, ACE-inhibitor, ASA were started. statin was held
+./data/mimic_exnotes/original-notes//D368E4C9FCA7BA.txt:119:   - will plan on adding BB and ACE-I following aggressive diuresis
+./data/mimic_exnotes/original-notes//D368E4C9FCA7BA.txt:134:   - Would benefit from ACE inhibition.
+./data/mimic_exnotes/original-notes//D3702CD0CACBC0.txt:167:   - continue ACE-I, lasix and spironolactone
+./data/mimic_exnotes/original-notes//D3702CD0CACBC0.txt:170:   - continue ACE-I, BB, aspirin
+./data/mimic_exnotes/original-notes//D3702CD0CACBC0.txt:174:   - continue ACE-I, BB
+./data/mimic_exnotes/original-notes//D376E4BE68E72D.txt:38:Skin/Access: RUE wrapped in ACE bandage & splinted, waiting to go to OR for washout & ORIF of R humerus fx. Sm lac to R middle finger, no drainage noted. Otherwise skin cool, dry & intact. LSC CVL w/ trauma line wnl, L AC PIV intact, L radial A-line wnl- occasionally dampens, requires repositioning of wrist & occ flushing.
+./data/mimic_exnotes/original-notes//D393151FFC12CF.txt:2: in ACE , not removed this a.m. d/t pt instability and  agitation.
+./data/mimic_exnotes/original-notes//D3995597FDFD78.txt:166:   pressure from ACE inhibitor.
+./data/mimic_exnotes/original-notes//D3995597FDFD78.txt:168:   uptitration if ACE-I as needed
+./data/mimic_exnotes/original-notes//D3995597FDFD78.txt:169:   - continue outpatient ACE inhibitor at current dose, will increase as
+./data/mimic_exnotes/original-notes//D3995597FDFD78.txt:175:   - continue ACE inhibitor
+./data/mimic_exnotes/original-notes//D3995597FDFD78.txt:185:   - ACE inhibitor at outpatient dose, monitor creatinine
+./data/mimic_exnotes/original-notes//D3995597FDFD78.txt:250:   RENAL ARTERY STENOSIS- Avoid ACE-I, discuss renal artery stenting
+./data/mimic_exnotes/original-notes//D39A729BA42482.txt:7:   On ACE for 5 yrs. No known new exposure.
+./data/mimic_exnotes/original-notes//D39A729BA42482.txt:109:   74 yr old male with angioedema, likely from ACE inhibitor. Other
+./data/mimic_exnotes/original-notes//D39AB5C7E13731.txt:117:   - continue low dose ACE, BB, ASA, statin
+./data/mimic_exnotes/original-notes//D3AE483318A5F0.txt:1:NSG TRANSFER NOTE TRANSFERRED TO [**Hospital1 41**] FROM OSH [**12-4**] FALL OCCURRED [**12-2**] HE LANDED ON BACK WITH LOC ACCORDING TO PATIENT CT HEAD POSITIVE FOR SUBACUTE RT SIDED FRONTOPARIETAL  SUBDURAL HEMATOMA. HE WAS ON COUMADIN FOR CHRONIC AFIB.  PT ALSO SUSTAINED L ANKLE FX THAT WAS WRAPPED IN ACE PRESENTLY NOT.  HE WAS TRANSFERRED TO [**Hospital1 41**] REPEAT CT SHOWED LAYERED BLOOD POSITIONING  HE WAS TAKEN TO OR [**12-5**] FOR DRAINAGE OF SDH WITH BURR HOLE PLACEMENT.  POST OP COURSE UNREMARKABLE EXCEPT INCREASE HR 120-130 TX WITH IV LOPRESSOR.  MS  WAXES AND WANES WITH LT SIDED UE DROOP
+./data/mimic_exnotes/original-notes//D3B3053F29648D.txt:15:SKIN: PT RIGHT LEG WRAPPED IN ACE BANDAGE W/ SMALL AMT OLD BLOOD NOTED ON BACK OF BANDAGE. KNEE IMOBLIZER ON. HEMOVAC DREESING INTACT W/ SMALL AMT S/S DRAINAGE.
+./data/mimic_exnotes/original-notes//D3B8BB84DA80F1.txt:244:   - Hold on plavix, heparin gtt, ACE-I, BB given hypotension and concern
+./data/mimic_exnotes/original-notes//D3BA2E606119E1.txt:148:   # cardiomyopathy: hold ACE-I, BB [**2-7**] to recent hypotension, infection.
+./data/mimic_exnotes/original-notes//D3C59772BBACAC.txt:154:   NSTEMI:  EF is down with new WMA.  might benefit from ACE, but will
+./data/mimic_exnotes/original-notes//D3CBD395E3B6E8.txt:5:CV: The pt is [**Name (NI) 5882**], EKG waveform is a NSR c no ectopy.  Palpable distal peripheral pulses noted.  +3 RLE edema noted.  ABP and NBP values have fairly approximated o/[**Name7 (MD) 5883**] MD's changed the pt's RLE fasciotomy wound dressing @ 21:00 and reported no major changes in wound characteristics.  Wound wrapped in ACE wrap, wound continues to
+./data/mimic_exnotes/original-notes//D3F3D9CBB13ED5.txt:19:BUE WRAPPED IN ACE WRAPS W/ NO DNGE AND SPLINTED. LUE W/ ULNAR PULSE, NO RADIAL PULSE, FINGERS COOL W/ SLOW CSM. RUE W/ DOPPLERABLE PULSES, WARM W/ ADEQUATE CSM. BLE W/DOPPLERABLE PULSES AND ADEQUATE CSM.  PT HAS STAGE 2 DECUB ON COCCYX COVERED W/ ALLEVYN DSG APPLIED. PT PLACED ON TRIFLEX ROTATING AIR BED TO PROTECT SKIN AND LUNGS.
+./data/mimic_exnotes/original-notes//D3F94D45D2C044.txt:98:   with angioedema.  Patient is on ACE-I so this is possible cause
+./data/mimic_exnotes/original-notes//D3F94D45D2C044.txt:108:   # CAD s/p MI s/p CABG:  on ASA, Isosorbide, Statin and ACE-I at home.
+./data/mimic_exnotes/original-notes//D3F94D45D2C044.txt:111:   - hold ACE-I given Angioedema, confirm if filled at pharmacy
+./data/mimic_exnotes/original-notes//D3F94D45D2C044.txt:113:   # HTN: on ACE-I, Isosorbide
+./data/mimic_exnotes/original-notes//D3F94D45D2C044.txt:114:   - hold ACE-I
+./data/mimic_exnotes/original-notes//D418F44AA95831.txt:29:SKIN: FORHEAD W/ABRASION-RED->SCANT SEROUS DRAINAGE - OTA. R EYE W/BRUISING <ALSO HAS HAD PREVIOUS EYE SURGERY>. L HAND W/BRUISE - RLE NOW W/EX-FIX APPLIANCE WRAPPED IN ACE BANDAGE - SM AMT SEROUS DRAINAGE NOTED ON PRIMARY DSG. PER FAMILY, PT NOTED TO HAVE "POOR CIRCULATION" AND HANDS/FEET ARE MOTTLED AND/OR "DISCOLORED" AT BASELINE.
+./data/mimic_exnotes/original-notes//D4240AB50F0009.txt:174:   -uptitrate ACE, BB for afterload reduction as BP allows
+./data/mimic_exnotes/original-notes//D425E8F5914056.txt:164:   -uptitrate ACE, BB for afterload reduction as BP allows
+./data/mimic_exnotes/original-notes//D44606D591DEE7.txt:25:   ACE inhibitor.  He was seen in clinic on [**4-25**] and he was started on
+./data/mimic_exnotes/original-notes//D44606D591DEE7.txt:245:   # Hyperkalemia: unclear if this is primary from ARF & ACE versus
+./data/mimic_exnotes/original-notes//D44606D591DEE7.txt:265:   # Acute renal failure: likely due to ACE & lasix.  [**Month (only) 8**] develop ATN
+./data/mimic_exnotes/original-notes//D459FA4BCC3095.txt:184:   -uptitrate ACE, BB for afterload reduction as BP allows
+./data/mimic_exnotes/original-notes//D4643EE2A1B8C0.txt:169:   end stage renal disease would likely benefit from ACE inhibitor.
+./data/mimic_exnotes/original-notes//D4643EE2A1B8C0.txt:171:   - consider ACE-I
+./data/mimic_exnotes/original-notes//D4643EE2A1B8C0.txt:176:   - consider starting ACE inhibitor once improvement in access, given
+./data/mimic_exnotes/original-notes//D468B96D4BB03D.txt:216:   -          Would benefit from ACE inhibitor once over acute illness
+./data/mimic_exnotes/original-notes//D46DACD0CC0571.txt:18:SKIN: LLE IN ACE WRAP AND REMAINS ELEVATED W/ GD CSM. NO DNGE THROUGH DSG. JP W/ SOME SEROSANG DNGE.  LUE WRAPPED IN PILLOW AND REMAINS ELEVATED W/ GD CSM. SM AMT BLOODY DNGE. HEMOVAC W/ MINIMAL DNGE.
+./data/mimic_exnotes/original-notes//D4757DB970F300.txt:68:   5. Angioedema from ACE inhibitors, shrimp.
+./data/mimic_exnotes/original-notes//D4757DB970F300.txt:217:   ACE/[**Last Name (un) **] secondary to angioedema.
+./data/mimic_exnotes/original-notes//D479D353647DCE.txt:4:PT [**Name (NI) 256**] AND AFEBRILE WITH TMAX 100.5 AXIALLRY AND SBP BELOW 150 WITH HR 75-100 NSR -ST.  PT WITH + MANDIBULAR GRAFT PULSES (DOPPLER), +DP/PT, +CAPILLARY REFILL AND WARM EXTREMITIES; NECK PENROSE DRAIN WITH SMALL AMOUNTS OF SERSANG DRAINAGE OUT OVERNOC AND JP'S WITH SMALL AMOUNTS (NECK WITH SMALL AMOUNT SOF SEROSANG AND ARM JOP WITH SCANT AMOUNT SOUT).  SUTURES REMAIN CDI- CLEANED WITH 1/2 STRENGTH HYDROGEN PEROXIDE AND NS WITH BACITRACIN AND NO SIGNS OF INFECTION NOTED.  LEFT ARM IN ACE BANDAGE AND SLING AND NOTED+CSM IN THUMB AND +CAP REFILL.  LEFT UPPER LEG GRAFT SITE APPEARS PINK AND DRAINING SMALL AMOUNTS OF SEROSANG DRAINAGE- TRANSPARENT DSG CDI.  PT C/O DRY MOUTH OVERNOC AND PER DR. [**Name (NI) **] PT WAS [**Name (NI) **] A FEW ICE CHIPS AS WELL HUMIDIFIED 02 WAS STARTED TO HELP WITH DRY [**Name (NI) 3136**] PT CLAIMED THAT THE DRY MOUTH WAS CAUSING HIM TO HAVE DIFFICULTY BREATHING, DR. [**Last Name (STitle) **] CAME TO INSPECT- NO STRIDOR NOTED AND HOB WAS KEPT AT 35 DEGREES OR HIGHER AND PT WAS [**Name (NI) **] SWABS AND ICE CHIPS.  PT 95-100% 02 SATS DURING TEH NOC AND HUMIDIFIED 02 PLACED PURELY FOR THE HUMIDIFYING EFFECTS AND PT TOLERATING [**Name (NI) 1076**] LS CKEAR THROUGHOUT AND INTO BASES; PT WITH GOOD COUGH BUT NOT EXPECTORATING.  MOUTH CARE [**Name (NI) **] REGULARLY THROUGHOUT THE NOC.  DURING THE EVENING OT HAD SOME DRY HEAVING AND EXTREME NAUSEA- [**Name (NI) **] 10MG COMPAZINE AND PT WITH NO MORE COMPLAINTS TRHOUGHOUT THE NOC AND SLEPT WELL; TUBEFEEDING HAD BEEN HELD FOR THAT REASON, SO TEHY WERE STARTED AT MIDNIGHT WITH NO COMPLAINTS POST START FROM PATIENT (TF AT 30 CURRENTLY AND TO E INCREASED Q 4 HOURS UNTIL GOAL AT 80CC/HR).  ABD +BS X4, SOFT WITH NO NOTED DISTENTION.  GLUCOSE LVELS DIFFICULT TO CONTROL OVERNOC AMND INSULIN GTT TITRATED BETWEEN 1 AND 6 UNITS/HR- DR. [**Last Name (STitle) **] AWARE- AS WBC COUNT SAME AS DAY BEFORE GLUCOSE LEVELS NOT D/T INFECTION- ? REASON; PT [**Month (only) 12**] NEED TO BE RE-STARTED IN NHP AND LANTUS TODAY AS RECEIVING TUBEFEEDS. COTN TO MONITOR LABS, VS, I/O'S, PULSES, SUPPORT FOR WIFE, ?TRANSFER TO FLOOR, START ORIGINAL INSULIN REGIMIN.
+./data/mimic_exnotes/original-notes//D48F48859C8473.txt:149:   # cardiomyopathy: hold ACE-I, BB [**2-7**] to recent hypotension, infection.
+./data/mimic_exnotes/original-notes//D4ACA709391751.txt:178:   - continue BB, ACE, ASA, statin, imdur to maximize treatment of known
+./data/mimic_exnotes/original-notes//D4ACA709391751.txt:199:   # Hypertension: Patient on ACE, BB at home. Appears well-controlled on
+./data/mimic_exnotes/original-notes//D4BABD42259961.txt:168:   include ACE/Lasix, possibly due to BP lability & autonomic dysfunctn
+./data/mimic_exnotes/original-notes//D4BABD42259961.txt:170:   -consider restarting ACE, BB, spirinolactone, lasix as outpt
+./data/mimic_exnotes/original-notes//D4BB3B86E66F1C.txt:153:   # cardiomyopathy: hold ACE-I, BB [**2-7**] hypotension, infection.
+./data/mimic_exnotes/original-notes//D4BC984A07EAAD.txt:250:#) Cardiomyopathy: Cont ACE-I, BB, and lasix
+./data/mimic_exnotes/original-notes//D4C06553B5682D.txt:16:Integ: No rash, R FA xeroform drsg [**Name5 (PTitle) **] to [**Name5 (PTitle) 7274**] and wrapped in ACE bandage, site pink in color,no drainage.
+./data/mimic_exnotes/original-notes//D4C654CE7BA317.txt:117:EXTREMITIES: RLE is wrapped in ACE bandage; LLE with 1+ DP and
+./data/mimic_exnotes/original-notes//D4C654CE7BA317.txt:133:EXTREMITIES: RLE is wrapped in ACE bandage, fascotomy sites
+./data/mimic_exnotes/original-notes//D4C778C5BC08E4.txt:148:   - continue optimal medical management w/ ASA, BB, statin, ACE-I
+./data/mimic_exnotes/original-notes//D4C778C5BC08E4.txt:157:   - continue home meds: HCTZ, BB, ACE-I, CCB
+./data/mimic_exnotes/original-notes//D4C8AAA7A82781.txt:190:   Cardiovascular: Aspirin, Beta-blocker, ACE-inhibitor  Statin
+./data/mimic_exnotes/original-notes//D4D25657C9DFFE.txt:8:CV:  HR 83-89 NSR, RBBB and LAH on 12 lead ECG.  BP 108-129/73-80.  IV NTG @ 0.92 mcg/kg/min--to wean to off to give more room for dialysis.  Heparin @ 1000 units/hour, PTT PND.  Right foot pulses dopplerable.  L foot wrapped in ACE.
+./data/mimic_exnotes/original-notes//D4E09D1A6F0CD2.txt:36:   LLE in ACE wrap. Ortho came by again today, removed ACE. Recommended to
+./data/mimic_exnotes/original-notes//D4E09D1A6F0CD2.txt:38:   foot wrapped in ACE to reduce edema.
+./data/mimic_exnotes/original-notes//D4E09D1A6F0CD2.txt:44:   pillows, in multipodus boot, with left foot only wrapped in ACE to help
+./data/mimic_exnotes/original-notes//D4E32EDB705AA9.txt:240:was 40 %. Patient is on ACE, BB at home. Doses reduced to
+./data/mimic_exnotes/original-notes//D4E90D1C1D9BF4.txt:153:   - uptitrate ACE, BB for afterload reduction as BP allows
+./data/mimic_exnotes/original-notes//D4F30BC4DF6068.txt:112:   - continue BB, ACE, ASA, statin, imdur to maximize treatment of known
+./data/mimic_exnotes/original-notes//D4F30BC4DF6068.txt:132:   # Hypertension: Patient on ACE, BB at home. BP is well controlled
+./data/mimic_exnotes/original-notes//D4F7F2EC23EE68.txt:165:   # ARF: Slightly worse today, likely from ACE added on
+./data/mimic_exnotes/original-notes//D5098DF98AC604.txt:144:   - Holding  BB and ACE-I in the setting of ongoing hypotension
+./data/mimic_exnotes/original-notes//D5098DF98AC604.txt:164:   - Would benefit from ACE inhibition
+./data/mimic_exnotes/original-notes//D50C8985AB7B24.txt:166:edema bilaterally; lower legs wrapped in ACE bandages. Multiple
+./data/mimic_exnotes/original-notes//D50E7D662EC4E2.txt:4: Reason: s/p liver transplant 3 months ago with rise in ALK PHOS and
+./data/mimic_exnotes/original-notes//D50E7D662EC4E2.txt:9:  s/p liver transplant 3 months ago with rise in ALK PHOS and AST. Please do
+./data/mimic_exnotes/original-notes//D51F4FBB3F0ADB.txt:169:   lopressor, statin, ACE-I, ASA. HR and BP stable on regimen.
+./data/mimic_exnotes/original-notes//D525FD896014AD.txt:230:   # Hyperkalemia: resolved.  Thought to be primary from ARF & ACE given
+./data/mimic_exnotes/original-notes//D52AC12861E723.txt:138:[**2124-6-13**]: AST 41 ALT 62  ALK PO4 241  T. Bili:  1.0
+./data/mimic_exnotes/original-notes//D543AAE63C8E51.txt:11:PLAN: SOCIAL WORKER WAS IN YESTERDAY TO TALK TO PT. PT NEEDS TO DECIDE IF SHE WILL REMAIN IN [**Location (un) **] FOR TREATMENT OR RETURN TO WASINGTON DC. PLAN IS TO START AN ACE TODAY TO BETTER CONTROL B/P IN PT.
+./data/mimic_exnotes/original-notes//D54E5BF5CCB437.txt:239:   - Hold on plavix, heparin gtt, ACE-I, BB given hypotension and concern
+./data/mimic_exnotes/original-notes//D54F7811BA48AB.txt:169:   - Continue ACE-I, BB, statin, ASA 81mg daily
+./data/mimic_exnotes/original-notes//D554C4EDDE2450.txt:162:   # cardiomyopathy: hold ACE-I, BB [**2-7**] hypotension, infection.
+./data/mimic_exnotes/original-notes//D556858B186789.txt:128:was started on ASA, BB, ACE-I, Statin, Plavix, s/p Aggrastat x
+./data/mimic_exnotes/original-notes//D5605E55AC70A2.txt:9:SKIN: RIGHT LEG INCISION COVERED WITH DSD. INNER THIGH PORTION OF INCISION WITH SM AMT SUPERFICIAL NECROSIS (VASCULAR TEAM AWARE). DRAINS SM AMT SEROSANG FLUID. STUMP PORTION OF INCISION WITH OLD HEMATOMA. SOME STAPLES REMOVED BY VASCULAR [**Doctor First Name **], OLD BLOODY DRG FROM SITE. TO BE PACKED WITH WET TO DRY DSG [**Hospital1 **]. LEG WRAPPED TIGHTLY IN ACE BANDAGE AND WITH KNEE IMMOBILIZER AAT.
+./data/mimic_exnotes/original-notes//D5770423A40052.txt:228:   end stage renal disease would likely benefit from ACE inhibitor.
+./data/mimic_exnotes/original-notes//D5770423A40052.txt:230:   - consider ACE-I
+./data/mimic_exnotes/original-notes//D5770423A40052.txt:235:   - consider starting ACE inhibitor once improvement in access, given
+./data/mimic_exnotes/original-notes//D57B163291D8A2.txt:180:   # Hyperkalemia: unclear if this is primary from ARF & ACE versus
+./data/mimic_exnotes/original-notes//D57B163291D8A2.txt:200:   # Acute renal failure: likely due to ACE & lasix.  [**Month (only) 8**] develop ATN
+./data/mimic_exnotes/original-notes//D57C7DFC6BA949.txt:196:# Hypertension: Patient on ACE, BB at home. As per above, these
+./data/mimic_exnotes/original-notes//D58D2C69EE6592.txt:18:SKIN: BILATERAL  LOWER LEG INCISION [**Doctor Last Name **] APPROXIMATED MINIMAL ERYTHEMA/EDEMA. PROTECTED WITH DSD AND WRAPED IN ACE WRAP.  LEFT LOWER LEG SECURED WITH BIVALAVE FOR LEFT MALLEOLAR FRACTURE.
+./data/mimic_exnotes/original-notes//D595FD88245E5A.txt:145:   - continue ACE-I, and spironolactone
+./data/mimic_exnotes/original-notes//D595FD88245E5A.txt:148:   - continue ACE-I, BB, aspirin
+./data/mimic_exnotes/original-notes//D595FD88245E5A.txt:151:   - continue ACE-I, BB
+./data/mimic_exnotes/original-notes//D59EF77A612D56.txt:212:   bilaterally; lower legs wrapped in ACE bandages. Multiple small
+./data/mimic_exnotes/original-notes//D5A1CADF185E9D.txt:217:   Cardiovascular: Aspirin, Statins, Cont ACE-Inh, Plavix
+./data/mimic_exnotes/original-notes//D5A7004355A9B2.txt:215:   - Hold on plavix, heparin gtt, ACE-I, BB given hypotension and concern
+./data/mimic_exnotes/original-notes//D5AD0CDD267FEA.txt:16:SKIN=STAPLES IN RIGHT HEAD. DSD INTACT. OLD CHEST TUBE SITE ON LEFT SIDE APPROXIMATED. LEFT LEFT WITH STAPLES AND WRAPPED IN ACE. DSG CHANGED X 2. OOZING SEROUS FLUID. OLD PIN SITES COVERED WITH DSD. OOZING SEROUS FLUID.
+./data/mimic_exnotes/original-notes//D5B12F19452948.txt:170:   - Continue ACE-I, BB, statin, ASA 81mg daily
+./data/mimic_exnotes/original-notes//D5B28A5903DFE3.txt:167:# CAD - Continued ASA, statin. Not on ACE-I, BBlocker secondary
+./data/mimic_exnotes/original-notes//D5B3E461DBD898.txt:16:INTEG:  DUODERM TO COCCYX IS SECURE.  BILATERAL EXTREMITIES WRAPPED IN ACE BANDAGES.
+./data/mimic_exnotes/original-notes//D5CF37FAE92286.txt:98:EXT: Wrapped in ACE bandage
+./data/mimic_exnotes/original-notes//D5CF37FAE92286.txt:292:anticoagulation, ACE wraps, elevation, and monitoring.
+./data/mimic_exnotes/original-notes//D5CF37FAE92286.txt:364:by his thrombocytopenia and his pressure from the ACE wraps used
+./data/mimic_exnotes/original-notes//D5CF37FAE92286.txt:376:- continue xeroform, kerlex, ACE bandage
+./data/mimic_exnotes/original-notes//D5D171FF931A45.txt:188:   - cont BB, ACE-I, ASA
+./data/mimic_exnotes/original-notes//D5D171FF931A45.txt:193:   - cont BB, ACE-I, ASA
+./data/mimic_exnotes/original-notes//D5D171FF931A45.txt:205:   # Hypertension: cont BB, ACE-I
+./data/mimic_exnotes/original-notes//D5E427B64481C9.txt:162:   Cardiomyopathy: Cont ACE-I, BB, and lasix
+./data/mimic_exnotes/original-notes//D5F015D21B11B0.txt:31:   SEEN BY PODIATRY ,DSD CHANGED ,ADAPTIC ,SOFT SORB,KLING,WRAPPED I ACE
+./data/mimic_exnotes/original-notes//D5F015D21B11B0.txt:37:   KEEP LEGS WRAPPED IN ACE TO DECREASE SWELLING ,MED FOR PAIN PRN AND
+./data/mimic_exnotes/original-notes//D5FA0885A684D6.txt:42:   and fluocinonide, wrapped legs in ACE bandage, left glute open to air.
+./data/mimic_exnotes/original-notes//D5FC40AE9F08AA.txt:3:> LRG HEMATOMA NOTED ON BACK OF HEAD FROM FALL AT OSH, LT LEG IN ACE WRAP [** **], OTHERWISE INTACT.
+./data/mimic_exnotes/original-notes//D60AEEF067BF2D.txt:130: Patient was continued on [**Last Name (Titles) **], ACE-I, BB, statin, diuretics, and
+./data/mimic_exnotes/original-notes//D60AEEF067BF2D.txt:134:# HYPERTENSION:  Patient was continued on ACE-I, BB, diuretics,
+./data/mimic_exnotes/original-notes//D60D70A86FFBBE.txt:70:ALL: ACE-I, Clindamycin, Lorazepam, Warfarin ?
+./data/mimic_exnotes/original-notes//D60FAA6E84F731.txt:192:   -- might consider changing from ACE I (afterload reduction) to a CCB or
+./data/mimic_exnotes/original-notes//D610FAD8189D7C.txt:5:ALLERGIES: SHRIMP, EGGS, ACE-INHIBITORS, CEFALOSPORINS.
+./data/mimic_exnotes/original-notes//D6185FF2E97227.txt:161:   end stage renal disease would likely benefit from ACE inhibitor.
+./data/mimic_exnotes/original-notes//D6185FF2E97227.txt:163:   - consider ACE-I
+./data/mimic_exnotes/original-notes//D6185FF2E97227.txt:168:   - consider starting ACE inhibitor once improvement in access, given
+./data/mimic_exnotes/original-notes//D63005168D83BD.txt:14:   Allergies: Codeine/Valium/Morphine/oxycodone-N&V, PCN-rash, ACE-^K+,
+./data/mimic_exnotes/original-notes//D632C3776BC3D5.txt:187:   - Hold BB, ACE-I, ASA, and [**Last Name (STitle) **] pending stabilization of GI bleed
+./data/mimic_exnotes/original-notes//D637902DB40A06.txt:228:   -          Would benefit from ACE inhibitor once over acute illness
+./data/mimic_exnotes/original-notes//D637D93F1507B9.txt:98:[**2173-9-15**] ALT(SGPT)-22 AST(SGOT)-26 LD(LDH)-243 CK(CPK)-113 ALK
+./data/mimic_exnotes/original-notes//D637D93F1507B9.txt:158:[**2173-9-27**] 08:45AM BLOOD ESR-85*
+./data/mimic_exnotes/original-notes//D637D93F1507B9.txt:165:angioedema from ACE/[**Last Name (un) **] vs. history of multiple intubations.
+./data/mimic_exnotes/original-notes//D638646CAC722B.txt:9:INTEGUMENTARY:  EXP LAP INCISION SUTURED, CLEAN AND DRY, OPEN TO AIR. LUE LACERATION PINK, SCANT AMT SERO-SANGUINOUS DRAINAGE, TRANSPARENT DSG. L ARM ABRASION GRAFTED IN OR FROM R THIGH SKIN GRAFT, ARM WRAPPED IN ACE WRAP.  R THIGH GRAFT SITE PINK,  WEEPING SERO-SANGUINOUS FLUID.
+./data/mimic_exnotes/original-notes//D63ACE14EE5E02.txt:183:Daily. Restarted Beta-Blocker, ACE-I. Continue Atorvastatin 80mg
+./data/mimic_exnotes/original-notes//D640774806110F.txt:5:   LEFT LEG AMPUTATION SITE WRAPPED IN ACE WRAP. OOZING FROM SITE SANGUINES DRAINAGE IN MODERATE AMOUNTS. DRESSING REINFORCED. NO DRAINS PRESENT.
+./data/mimic_exnotes/original-notes//D647320C628BD1.txt:294:   -- might consider changing from ACE I (afterload reduction) to a CCB or
+./data/mimic_exnotes/original-notes//D6568F50B02FE0.txt:12:NEURO: Pt lightly sedated on 5mcg/kg/min of propofol for comfort/tolerance of ETT- gradually being weaned in preparation for extubation. Pt alert while off sedation, asleep/lightly sedated for majority of night, follows commands inconsistently, nods/shakes head to simple questions, lifts BUE, moves BLE on bed. Pt denies [**Month/Day (1) **] discomfort while at rest- given 0.5-1mg dilaudid prior to turning pt. Pt s/p ORIF of R femur/acetabular/patella fxs. [**Month/Day (1) **] wrapped in ACE bandage, knee immobilizer in place, waiting for [**Doctor Last Name 742**] brace. Cont to follow R posterior hip dislocation precautions- keep [**Doctor Last Name **] locked in external traction x6 wks per ortho. [**Doctor Last Name **] non-weight bearing. C-collar intact, continue to maintain cervical spine precautions for C1/C2 fx.
+./data/mimic_exnotes/original-notes//D656A6B21D8F06.txt:186:   -uptitrate ACE, BB for afterload reduction as BP allows
+./data/mimic_exnotes/original-notes//D659DF72028AF6.txt:160:   - [**Month (only) 51**] benefit from ACE-I later
+./data/mimic_exnotes/original-notes//D66534838BA074.txt:119:   - hold ACE-I, BB, CCB given recent hypotension; will restart once more
+./data/mimic_exnotes/original-notes//D668378C4397F1.txt:143:   - Holding  BB and ACE-I in the setting of ongoing hypotension
+./data/mimic_exnotes/original-notes//D668378C4397F1.txt:163:   - Would benefit from ACE inhibition
+./data/mimic_exnotes/original-notes//D66EF48073B63B.txt:215:   - Hold on plavix, heparin gtt, ACE-I, BB given hypotension and concern
+./data/mimic_exnotes/original-notes//D6706FD3AAA807.txt:172:   -uptitrate ACE, BB for afterload reduction as BP allows
+./data/mimic_exnotes/original-notes//D67937342B6C0F.txt:241:   -          Would benefit from ACE inhibitor once over acute illness
+./data/mimic_exnotes/original-notes//D67BD02259551B.txt:187:#. Hypertension: Patient on ACE-Inhibitor, HCTZ, and metoprolol
+./data/mimic_exnotes/original-notes//D694604837793A.txt:212:   bilaterally; lower legs wrapped in ACE bandages. Multiple small
+./data/mimic_exnotes/original-notes//D69A3595082167.txt:21:SKIN: LEFT UPPER TORSO & ARM W/HEMATOMA. OUTLINED. MICU AWARE HEMATOMA APPEARS TO BE EXTENDING. FIRM TO TOUCH, WRAPPED IN ACE BANDAGE. LEFT HAND EDEMATOUS. RIGHT LOWER ARM W/HEMATOMA, ALSO MARKED.
+./data/mimic_exnotes/original-notes//D6A04E8E0CAFFE.txt:85:# hypertension: on ACE-inhibitors, Lopressor as an outpt.
+./data/mimic_exnotes/original-notes//D6A7DBF0C717B1.txt:144:   - Holding  BB and ACE-I in the setting of ongoing hypotension
+./data/mimic_exnotes/original-notes//D6A7DBF0C717B1.txt:164:   - Would benefit from ACE inhibition
+./data/mimic_exnotes/original-notes//D6BF32A19E8757.txt:207:   - Follow-up ACE-I, IGE, anti-GBM
+./data/mimic_exnotes/original-notes//D6C12D2F0861EB.txt:72:   tear covered with xeroform, ABD, and wrapped in ACE. Leg elevated on 2
+./data/mimic_exnotes/original-notes//D6C12D2F0861EB.txt:76:   Leg remains elevated and in ACE. Swelling possibly decreasing slightly.
+./data/mimic_exnotes/original-notes//D6C12D2F0861EB.txt:79:   Close monitoring LLE. Cont with ACE and elevation.
+./data/mimic_exnotes/original-notes//D6C23BEAC530F2.txt:141:   - Holding  BB and ACE-I in the setting of ongoing hypotension
+./data/mimic_exnotes/original-notes//D6C23BEAC530F2.txt:161:   - Would benefit from ACE inhibition
+./data/mimic_exnotes/original-notes//D6C47B24846426.txt:184:   - hold ACE-I, BB [**2-7**] hypotension, infection.
+./data/mimic_exnotes/original-notes//D6C9762A188E05.txt:190:   - [**Month (only) 51**] benefit from ACE-I later
+./data/mimic_exnotes/original-notes//D6CCC713E5B3DD.txt:245:   # Hyperkalemia: resolved.  Thought to be primary from ARF & ACE given
+./data/mimic_exnotes/original-notes//D6D16C9FB0BD52.txt:14:WOUNDS: RIGHT LOWER LEG WITH CONTIUNED BLOOD COLLECTION. SURGERY CALLED AND UPDATED ON INCREASING HEMATOMA. SURGERY ASPIRATED 50CC DARK RED BLOOD. 4X4S, CURLEX AND ACE PLACED BY MD (SEE MD NOTES).
+./data/mimic_exnotes/original-notes//D6D6DC74E3C319.txt:3:46yo man w/HIV dialted CM s/p AMI [**12-7**] w/ stent to LAD, requiring IABP and vasopressor support post cath. LV EF 10-15%, large non-mobile LV apical thrombus. CI improving w/ milrinone and lasix, IABP d/c'd [**12-11**]. Lasix and milrinone off [**12-15**] after successful titration of ACE-I, BB and Dig. D/c'd to Fa6a [**12-15**] @ 1600 and re-admitted [**12-16**] @ [**2101**] for hypotension requiring dopamine, levophed and vasopressin (briefly). Spkied temp to 104, all cultures negative. [**12-17**] pt had generalized TC seizure of unknown origin (head CT neg x2, LP negative), was intubated for airway protection and marked acidosis (lactate 15, pH 7.08). Pa cath re-inserted and found to be in cardiogenic shock (CI 1.7), started milrinone and diuresed as tolerated w/ improving hemodynamics. Extubated [**12-19**].
+./data/mimic_exnotes/original-notes//D6DAD13F4F8B89.txt:152:   -uptitrate ACE, BB for afterload reduction as BP allows
+./data/mimic_exnotes/original-notes//D6EC12504E1C79.txt:3:CV- SR, no vea HR 79-95. ABPs 108-150/60s-70s. No change in ACE/BB. Conts on SC heparin for R CFV thrombus. Afternoon HCT 28.2, no further blood clots/ bleeding from mouth. +DP/PTs, A-line sharp, R IJ intact.
+./data/mimic_exnotes/original-notes//D6ED7DB4144E13.txt:178:   lopressor, statin, ACE-I, ASA. HR and BP stable. Currently on Lopressor
+./data/mimic_exnotes/original-notes//D6F06E229301AB.txt:183:   -          Beta-blocker, ACE inhibitor held given low BP
+./data/mimic_exnotes/original-notes//D6F4992D036769.txt:35:   Cont on home regimen of ACE-I, BB, [**Last Name (LF) 4844**], [**First Name3 (LF) 369**], statin, and lasix, EKG
+./data/mimic_exnotes/original-notes//D70092B677DBDB.txt:15:skin:  sternal/mediastinal sites C/D.  right leg wrapped in ACE- C/D.
+./data/mimic_exnotes/original-notes//D7102687544F66.txt:187:stable and tolerating low dose BB, ACE-I, ASA, statin and
+./data/mimic_exnotes/original-notes//D72A8467B8CF38.txt:7:LEFT LEG WRAPPED IN ACE BANDAGE. NO C/O PAIN. ECCHYMOSIS PERSISTS. SUTURE TO BE REMOVED TOMORROW. + PULSES. LEG WARM.
+./data/mimic_exnotes/original-notes//D731656DF54C37.txt:49:5. Angioedema from ACE inhibitors, shrimp.
+./data/mimic_exnotes/original-notes//D731656DF54C37.txt:84:[**2114-12-23**] 06:00AM   ALT(SGPT)-10 AST(SGOT)-21 CK(CPK)-108 ALK
+./data/mimic_exnotes/original-notes//D731656DF54C37.txt:185:documented history of ACE/[**Last Name (un) **] angioedema, possible reaction to
+./data/mimic_exnotes/original-notes//D7376C9FD2EB54.txt:161:[**2122-6-29**]: AST 64 ALT 36 ALK PO4 79 TBili 1.3
+./data/mimic_exnotes/original-notes//D74FFC7B15888F.txt:157:   -uptitrate ACE, BB for afterload reduction as BP allows
+./data/mimic_exnotes/original-notes//D7502D0B492C25.txt:12:   for flu, holding BB and ACE-I, HD every other day. HD today
+./data/mimic_exnotes/original-notes//D7552EDCD8A608.txt:212:   bilaterally; lower legs wrapped in ACE bandages. Multiple small
+./data/mimic_exnotes/original-notes//D75B60894CF926.txt:141:   - Continue on ACE inbitor, beta blocker
+./data/mimic_exnotes/original-notes//D75B60894CF926.txt:152:   - Continue ACE, BB as tolerated
+./data/mimic_exnotes/original-notes//D76A7919EDA37D.txt:31:secondary to gentamicin-induced acute tubular necrosis. Her ACE
+./data/mimic_exnotes/original-notes//D76A7919EDA37D.txt:164:On ACE, BB, and lasix, her blood pressures were 90s/50s or palp.
+./data/mimic_exnotes/original-notes//D76F3B2D20FE18.txt:123:   will get most improvement in blood pressure from ACE inhibitor.
+./data/mimic_exnotes/original-notes//D76F3B2D20FE18.txt:125:   uptitration if ACE-I as needed
+./data/mimic_exnotes/original-notes//D76F3B2D20FE18.txt:126:   - hold outpatient ACE inhibitor for now as per cardiology fellow, will
+./data/mimic_exnotes/original-notes//D76F3B2D20FE18.txt:142:   - ACE inhibitor at outpatient dose, will hold for now as per cardiology
+./data/mimic_exnotes/original-notes//D774FB8FBCD175.txt:206:   - Follow-up ACE-I, IGE, anti-GBM
+./data/mimic_exnotes/original-notes//D78EEF4F9B4307.txt:25:   ACE inhibitor.  He was seen in clinic on [**4-25**] and he was started on
+./data/mimic_exnotes/original-notes//D78EEF4F9B4307.txt:245:   # Hyperkalemia: unclear if this is primary from ARF & ACE versus
+./data/mimic_exnotes/original-notes//D78EEF4F9B4307.txt:265:   # Acute renal failure: likely due to ACE & lasix.  [**Month (only) 8**] develop ATN
+./data/mimic_exnotes/original-notes//D79A840E2F5642.txt:30:   SEEN BY PODIATRY ,DSD CHANGED ,ADAPTIC ,SOFT SORB,KLING,WRAPPED I ACE
+./data/mimic_exnotes/original-notes//D79A840E2F5642.txt:35:   KEEP LEGS WRAPPED IN ACE TO DECREASE SWELLING ,MED FOR PAIN PRN AND
+./data/mimic_exnotes/original-notes//D7A64996374A28.txt:143:--[**Month (only) 116**] ultimately benefit from ACE-i, but holding off b/c of AS
+./data/mimic_exnotes/original-notes//D7B215A79B4D64.txt:233:   -          Would benefit from ACE inhibitor once over acute illness
+./data/mimic_exnotes/original-notes//D7B6951DCA9C7A.txt:5:MADE TO TAKE TO OR FOR I&D L. ELBOW WHICH WAS DONE [**7-26**] @ 1600. OR UNEVENTFUL. PENROSE DRAIN PLACED IN L. ELBOW & WRAPPED IN ACE WRAP WHICH IS D&I. L. ARM ELEVATED ON PILLOW.
+./data/mimic_exnotes/original-notes//D7B6951DCA9C7A.txt:22:PAIN: C/O BACK PAIN->MEDICATED WITH PERCOCET 1 TAB PO WITH GOOD EFFECT. L. ARM ELEVATED ON PILLOW. ACE WRAP DSG D&I. NO PAIN ASSOCIATED WITH L. ARM.
+./data/mimic_exnotes/original-notes//D7B86C86255ACD.txt:69:   Left leg wrapped in ACE; no pneumoboots present.
+./data/mimic_exnotes/original-notes//D7BA4B0BA641E0.txt:2:PT RETURNED FROM OR AFTER HAVING A FASCIOTOMY AND EVACUATION OF HEMATOMA WITH CARPAL TUNNEL RELEASE OF RIGHT FOREARM. PT RETURNED VENTED ON PROPOFOL DRIP WHICH WAS D/C'D ON ARRIVAL TO MICU. RIGHT ARM WRAPPED IN ACE BANDAGE. ORDERS NOT TO CHANGE DRESSING ONLY TO REINFORCE AND PLASTICS WILL BE BY TO DO DRESSING CHANGE. PT RECEIVED ONE LITER OF LR IN OR.
+./data/mimic_exnotes/original-notes//D7BA4B0BA641E0.txt:16:SKIN: PT HAS SURGICAL RIGHT ARM WHICH IS CURRENTLY WRAPPED IN AN ACE BANDAGE WHICH IS DRAINING LRG AMT'S OF SEROSANGUENOUS DRAINAGE. BANDAGE REINFORCED, ONLY TO BE CHANGED BY SURGICAL TEAM OR PLASTICS.
+./data/mimic_exnotes/original-notes//D7BB31B3CD7C5E.txt:141:   - Holding  BB and ACE-I in the setting of ongoing hypotension
+./data/mimic_exnotes/original-notes//D7BB31B3CD7C5E.txt:161:   - Would benefit from ACE inhibition
+./data/mimic_exnotes/original-notes//D7C43CE7C3FC5A.txt:116:   - continue ACE-I, and spironolactone
+./data/mimic_exnotes/original-notes//D7C43CE7C3FC5A.txt:120:   - continue ACE-I, BB, aspirin
+./data/mimic_exnotes/original-notes//D7C43CE7C3FC5A.txt:124:   - continue ACE-I, BB
+./data/mimic_exnotes/original-notes//D7CD2A83D9FE80.txt:175:   in ACE wrap and elevated.
+./data/mimic_exnotes/original-notes//D7D7E0DE9A5B57.txt:162:   -uptitrate ACE, BB for afterload reduction as BP allows
+./data/mimic_exnotes/original-notes//D7DBCEB4D4A16C.txt:233:benefit from ACE more given diabetes.
+./data/mimic_exnotes/original-notes//D7DDB2B04E643D.txt:184:   -uptitrate ACE, BB for afterload reduction as BP allows
+./data/mimic_exnotes/original-notes//D7E3BE470D9923.txt:35:   Cont on home regimen of ACE-I, BB, [**Last Name (LF) 4844**], [**First Name3 (LF) 369**], statin, and lasix, EKG
+./data/mimic_exnotes/original-notes//D7E49545DDABAD.txt:116:   - continue low dose ACE, BB, ASA, statin
+./data/mimic_exnotes/original-notes//D7E783485588D6.txt:162:   -uptitrate ACE, BB for afterload reduction as BP allows
+./data/mimic_exnotes/original-notes//D80764165BC93A.txt:123:monitoring. Beta-blocker, ACE-Inhibitor, aspirin, and statin
+./data/mimic_exnotes/original-notes//D80A5316CAC704.txt:5:CV: Telemetry w/ HR 60s-70s SR, no ectopy noted. ABP 110s-120s/70s- Aline D/C'd. Of note, ABP 20pts HIGHER than NIBP. NIBP 89-100s /60s-70s.  IV heparin D/C'd @ 0800 as INR therapeutic @ 2.4.  On coumadin 2.5mg QHS.  Tolerating ACE-I, BB.  Pedal pulses palp. +CSM. K+3.4 repleted w/ 40 mEq KCL IV. On sliding scale. ECHO [**1-4**]: EF 40-50%, [**11-22**]+MR, [**11-22**]+TR, mod PA HTN, hypokinetic apex/septum.
+./data/mimic_exnotes/original-notes//D80F2C4E17EC30.txt:204:   # ARF: Slightly worse today, likely from ACE added on
+./data/mimic_exnotes/original-notes//D81446AF9C70D5.txt:196:ACE-i.  CXR showed improved pleural effusions and persisting LLL
+./data/mimic_exnotes/original-notes//D81446AF9C70D5.txt:209:UTI.  Elevated WBC, and ESR 135, presumed osteomyelitis in
+./data/mimic_exnotes/original-notes//D81446AF9C70D5.txt:230:with ASA, statin, BB, ACE-i, ISDN & hydralazine. Pt. evaluated
+./data/mimic_exnotes/original-notes//D81446AF9C70D5.txt:235:likely secondary to RAS.  Continue medical mgmt. with ACE-i, BB,
+./data/mimic_exnotes/original-notes//D81446AF9C70D5.txt:251:ACE-i.
+./data/mimic_exnotes/original-notes//D82185552B449C.txt:9:SKIN: R. HIP IN ACE DRSNG, REINFORCED, WAS SATURATED WITH SM. AMNT OF SEROUS SECRETIONS.
+./data/mimic_exnotes/original-notes//D821C8AE4A449B.txt:166:   pressure from ACE inhibitor.
+./data/mimic_exnotes/original-notes//D821C8AE4A449B.txt:168:   uptitration if ACE-I as needed
+./data/mimic_exnotes/original-notes//D821C8AE4A449B.txt:169:   - continue outpatient ACE inhibitor at current dose, will increase as
+./data/mimic_exnotes/original-notes//D821C8AE4A449B.txt:175:   - continue ACE inhibitor
+./data/mimic_exnotes/original-notes//D821C8AE4A449B.txt:185:   - ACE inhibitor at outpatient dose, monitor creatinine
+./data/mimic_exnotes/original-notes//D8282D22D720E9.txt:4:CV: TELE V.PACED FOR CHB, AWAITING PACER.  PT STARTED ON NITRO GTT PER READIOLOGIES RECOMMENDATION TO ASSIST IN THE PERFUSION OF THE RIGHT HAND.  3RD, 4TH AND 5TH FINGER DUSKY IN NATURE, PT [**Name (NI) 3932**] A FASCIOTOMY THIS AFTERNOON, [**Name (NI) 3210**], PT WITH SLOW CAP. REFILL RANGING 4-7 SECONDS, FINGERS ARE COOL TO TOUCH, AND DRESSING IS WITH AN ACE WRAP AND [**Name (NI) **], PT GRIMACES WHEN TOUCHING OR MOVING R ARM, R ARM IS ELEVATED AND KEPT WARM WITH WARM BLANKETS. L RADIAL ARTERY REMAINS WITH AN ALINE, THAT SITE HAS AN ULNAR PULSE PRESENT AND BRISK CAPILLARY REFILL TO FINGER TIPS. NITRO GTT IS OFF AT THIS TIME FOR BP < 120.
+./data/mimic_exnotes/original-notes//D83196275D6F5A.txt:23:   LLE in ACE wrap. Ortho came by again today, removed ACE. Recommended to
+./data/mimic_exnotes/original-notes//D83196275D6F5A.txt:25:   foot wrapped in ACE to reduce edema.
+./data/mimic_exnotes/original-notes//D83196275D6F5A.txt:31:   pillows, in multipodus boot, with left foot only wrapped in ACE to help
+./data/mimic_exnotes/original-notes//D84ACF41CA7DA7.txt:284:   - hold ACE, BB in setting of hypotension
+./data/mimic_exnotes/original-notes//D84E8E3A9A6C1E.txt:7:BOTH LEGS IN ACE-BANDAGES WITH KRYO PACKS IN PLACE.
+./data/mimic_exnotes/original-notes//D8659C0B9B9DC7.txt:69:   Left leg wrapped in ACE; no pneumoboots present.
+./data/mimic_exnotes/original-notes//D87A7609EF72F5.txt:217:   bilaterally; lower legs wrapped in ACE bandages. Multiple small
+./data/mimic_exnotes/original-notes//D887C1DBD10EAC.txt:4:SIGNIFICANT EVENTS POST MICU ADMISSION:  DUE TO INCREASING SOB,  PT HAD ELECTIVE INTUBATION ON [**7-17**] AFTER BIPAP TRIALS.  SWAN GANZ INSERTION, DIURETIC THERAPY AND INCREASE OF ACE INHIBITORS DUE TO HEART FAILURE AND PULMONARY HYPERTENSION ON [**8-4**].  ALL ANTIBIOTIC THERAPY DC'D ON [**7-17**] AND DIAGNOSTICS OF RECTAL US AND CT ABD DONE IN ORDER TO DX IF PT HAS ENDOCARDITIS VS PERITONEAL ABSCESS CAUSING INFECTION PROCESS.  DIAGNOSTICS WERE SIGNIFICANT FOR A POCKET OF FLUID ALTHOUGH THE SIZE OF THIS COULD NOT BE DETERMINED DUE TO PT'S ABD GIRTH.  [**7-18**] TEE DONE.  SIGNIFICANT FOR VEGETATION ON THE AV, DILATED AND HYOKINETIC- CT CONSULTED.  UROLOGY CONSLUTED ON [**7-18**]- EXAMINATION OF PERINEUM WOUND UNREMARKABLE.  [**7-18**] THORACENTESIS DONE- APPR. 1500 CC OF FLUID REMOVED FROM EFFUSION.
+./data/mimic_exnotes/original-notes//D887C1DBD10EAC.txt:8:CV:  S1 AND S2 AS PER AUSCULTATION.  DISTANT HEART SOUNDS.  HR 80-90'S, NSR WITH OCCASSIONAL PVC'S NOTED.  SBP > OR = TO 100 WITH NO HYPER OR HYPOTENSIVE CRISIS NOTED. PT WILL HAVE RECEIVED A TOTAL OF 100MEQ OF K FOR THE SHIFT.  PLEASE SEE CAREVUE AS NEEDED FOR LAB VALUES.  PALPABLE PULSES TO BILATERAL DORSALIS AND RADIALS NOTED.  GENERALIZED EDEMA NOTED.  SWAN GANZ IS SECURE AND PATENT.  SECURED AT 60CM AND ABLE TO OBTAIN GOOD WEDGE [**Location (un) **].  SYSTOLIC PAP 60-80'S, DIASTOLIC 30-40'S. CVP 15-18. ABLE TO TOLERATE INCREASES IN ACE INHIBITOR DOSAGES.  PTT ELEVATED AT 105.  LOVENOX THERAPY DC'D.
+./data/mimic_exnotes/original-notes//D88BC6CA44675F.txt:168:   -uptitrate ACE, BB for afterload reduction as BP allows
+./data/mimic_exnotes/original-notes//D88C615FEBCC44.txt:57:elevation of RLE, and ACE wrap.
+./data/mimic_exnotes/original-notes//D88C615FEBCC44.txt:217:The RLE was elevated and wrapped in ACE.  He was then sent to
+./data/mimic_exnotes/original-notes//D894ACE934CDF7.txt:58:Ext: LLE in ACE and knee immobilizer, DP palp bilat
+./data/mimic_exnotes/original-notes//D8A21E7910703B.txt:3:t dx with necrotizing fascitis to [** **]. Has had mult I&Ds/washouts to [** **] in past, with fasciotomies & vac dsg. Pt to OR wed. [**8-3**] for partial closure of fasciotomy sites. Arm wrapped in ACE bandage, moderate amt of s/s output draining through bandage. ? to OR today for washout/dsg change of [**Month/Year (2) **] if team does not believe pt will tolerate procedure at bedside. Pt has other mult impaired skin sites- skin tear/pin holes from mult attempts to place aline to LUE, drainage bag applied to arm for collection of s/s output. Pt continues to have rash on torso, back, posterior extremities & now BLE- sarna lotion applied prn, rash becomes more pronounced and red when pt febrile.
+./data/mimic_exnotes/original-notes//D8ABF018582C72.txt:180:   Cardiovascular: Aspirin, Beta-blocker, ACE, on BP well controlled but
+./data/mimic_exnotes/original-notes//D8BA6A80B25AFF.txt:205:12.5mg [**Hospital1 **] as tolerated. Attempt at ACE held due to CRI. Serial
+./data/mimic_exnotes/original-notes//D8BF15FBD81DE6.txt:182:   - Continue ACE-I, BB, statin, ASA 81mg daily
+./data/mimic_exnotes/original-notes//D8C57172BD79A7.txt:16:INTEG:  RT HIP- WRAPPED IN ACE BANDAGE, RT KNEE IMMOBILIZER.  BANDAGES ARE SECURE AND PATENT.
+./data/mimic_exnotes/original-notes//D8C77C168F3D84.txt:217:   Cardiovascular: Aspirin, Statins, Cont ACE-Inh, Plavix
+./data/mimic_exnotes/original-notes//D8C9CFDA0F9FED.txt:215:   - Hold on plavix, heparin gtt, ACE-I, BB given hypotension and concern
+./data/mimic_exnotes/original-notes//D8CECE2F0B1645.txt:144:the floor. Likely would have benefited from ACE-I; however as
+./data/mimic_exnotes/original-notes//D8CECE2F0B1645.txt:145:was NPO, ACE-I not started.
+./data/mimic_exnotes/original-notes//D8DF32B74F3562.txt:79:   wrapped in ACE wraps.
+./data/mimic_exnotes/original-notes//D8E9D96CDBF72B.txt:157:   ACE, BB. Continue albuterol/atrovent prn. Okay to transfer to floor
+./data/mimic_exnotes/original-notes//D8EC271A542502.txt:4:ALLERGIES: ASA, HYDRALAZINE, ACE-INHOBS, AND DIOVAN
+./data/mimic_exnotes/original-notes//D8F023655F5F94.txt:168:   - Continue ACE-I, BB, statin, ASA 81mg daily
+./data/mimic_exnotes/original-notes//D8F6E84B5AE0B3.txt:245:   - hold ACE, BB in setting of hypotension
+./data/mimic_exnotes/original-notes//D9017F0DD61831.txt:154:   # CAD: Stable. Hold BB, ACE-I, ASA, and plavix pending stabilization of
+./data/mimic_exnotes/original-notes//D9080E92F2FA46.txt:20:INTEG: SKIN WARM AND DRY, COLOR NORMAL FOR RACE. BLE VERY EDEMATOUS, SKIN LEATHER-LIKE/SCALY IN APPEARANCE. WRAPPED LEGS AND FEET IN ACE WRAP PER DR. [**First Name (STitle) **]. ALLEVYN DSG ON COCCYX INTACT, DSG TO R GREAT TOE INTACT AND SMALL DSD ON LEFT LEG INTACT. NO SIGNS OF BREAKDOWN TO BACK.
+./data/mimic_exnotes/original-notes//D90E46231C5EBD.txt:133:   - [**Month (only) 51**] benefit from ACE-I later
+./data/mimic_exnotes/original-notes//D91F62E996BC14.txt:171:   - Hold BB, ACE-I, ASA, and plavix pending stabilization of GI bleed
+./data/mimic_exnotes/original-notes//D92715FDCE18F5.txt:143:   # HTN: ACE-I, BB.
+./data/mimic_exnotes/original-notes//D93862D6B3C4E8.txt:187:   # Hyperkalemia: resolved.  Thought to be primary from ARF & ACE given
+./data/mimic_exnotes/original-notes//D9401D4D3DB671.txt:166:   -uptitrate ACE, BB for afterload reduction as BP allows
+./data/mimic_exnotes/original-notes//D9408BBA3C6E5C.txt:186:   - hold ACE-I, BB [**2-7**] hypotension, infection.
+./data/mimic_exnotes/original-notes//D94450CFA10D8B.txt:111:   - hold ACE-I, BB, CCB given recent hypotension; will restart once more
+./data/mimic_exnotes/original-notes//D952E83DB776CA.txt:20:A/P:47 yo transfered from floor for CHF management. Swaned and found to have surprisingly low filling pressure with good CO. Treated with Lasix IVP with good result. Later that night found to have decreased CO/CI with unchanged PADs and CVPs. CO/CI unresponsive to increase in ACE therapy and Nipride gtt started.
+./data/mimic_exnotes/original-notes//D958A9E305EBA8.txt:183:   - Continue ACE-I, BB, statin, ASA 81mg daily
+./data/mimic_exnotes/original-notes//D95CF71733933E.txt:12:   for flu, holding BB and ACE-I, HD every other day.
+./data/mimic_exnotes/original-notes//D95FC2D56F3F78.txt:161:   - [**Month (only) 51**] benefit from ACE-I later
+./data/mimic_exnotes/original-notes//D96305019B3A3E.txt:193:   - Continue ACE-I, BB, statin, ASA 81mg daily
+./data/mimic_exnotes/original-notes//D96BA50A61A639.txt:15:skin- LLE faciotomy site wraped in ACE. no drainage outside dressing. Left Ct dsg changed.
+./data/mimic_exnotes/original-notes//D977F85435FA1E.txt:124:   will get most improvement in blood pressure from ACE inhibitor.
+./data/mimic_exnotes/original-notes//D977F85435FA1E.txt:138:   - ACE inhibitor at outpatient dose
+./data/mimic_exnotes/original-notes//D999342AEDD8CC.txt:228:   - Continue on ACE inbitor, beta blocker
+./data/mimic_exnotes/original-notes//D999342AEDD8CC.txt:239:   - Continue ACE, BB as tolerated
+./data/mimic_exnotes/original-notes//D9A01120BFA829.txt:27:   increase in ACE-I.
+./data/mimic_exnotes/original-notes//D9A09A8A6B5465.txt:252:   - hold ACE, BB in setting of hypotension
+./data/mimic_exnotes/original-notes//D9A54CD93426E9.txt:132:with heparin, ACE-I, Bblocker, asa, plavix, statin, integrillin
+./data/mimic_exnotes/original-notes//D9AE701C4C752E.txt:163:   -uptitrate ACE, BB for afterload reduction as BP allows
+./data/mimic_exnotes/original-notes//D9B38F29CDB3C2.txt:3:MAP DROPS TO LESS THAN 60. CHECK WITH TEAM RE: AM ACE/B BLOCKER DOSES.
+./data/mimic_exnotes/original-notes//D9B3F10209653F.txt:2:    PATIENT ARRIVED FROM [**Location 313**] ~ 12AM.  IMMEDIATELY COMPLAINING OF RIGHT FOOT/THIGH PAIN RATING "[**11-23**]", ENCOURAGED TO USE DILAUDID PCA.  PATIENT NOW STATING PAIN LEVEL IMPROVED AFTER APPROPRIATE USE OF PCA, REPOSITIONING OF RIGHT LEG, AND PO REGIMEN (SEE MED SHEETS) RESUMED.  RIGHT THIGH WITH WOUND VAC DRAINING SMALL AMOUNT SEROUS FLUID.  THIGH ALSO WRAPPED IN ACE, OOZING SMALL AMOUNTS SEROSANG DRAINAGE.  RIGHT FOOT IN CAST.  TOES WARM, + SENSATION, + MOVEMENT.
+./data/mimic_exnotes/original-notes//D9BAC2CD73B931.txt:33:LOWER EXTREMITIES WRAPPED IN ACE WRAP AND RT ARM WRAPPED AS WELL.
+./data/mimic_exnotes/original-notes//D9C9FE6DDEBC01.txt:180:   of pneumonia. Hold BB, ACE-I, ASA, and plavix pending stabilization of
+./data/mimic_exnotes/original-notes//D9CE5F88911F40.txt:240:   - Hold on plavix, heparin gtt, ACE-I, BB given hypotension and concern
+./data/mimic_exnotes/original-notes//D9D3A20BBF3C85.txt:160:   Cardiomyopathy - will reinstitute cardiac regimen today: ACE, BB. Can
+./data/mimic_exnotes/original-notes//D9D4631155B4C6.txt:10:STERNAL STAPLES INTACT. R ARM REMAINS WRAPPED IN GAUZE, SUPPORTED ON SPLINT AND WRAPPED IN ACE. R FINGERS PINK WITH GOOD CAPILLARY REFILL. TIPS OF R DIGITS #2,3,4,5 REMAIN BLACK. NAILBEDS OF THE R DIGITS #3,4,5 REMAIN BLACK. DISTAL L FINGERS DUSKY. ARMS REMAIN IN DEPENDENT POSITION AND WRAPPED IN A BLANCKET. HEELS ECHHYMOTIC. WAFFLE BOOTS ON AND REMOVED AND REAPPLIED EARLIER THIS SHIFT. CONTINUES WITH THIRD SPACING OF FLUID BELOW HER WAIST. REDNESS AT HER COCCYX, DUODERM APPLIED.
+./data/mimic_exnotes/original-notes//D9DEEFB3438D99.txt:110:ALK PHOS-87 AMYLASE-53 TOT BILI-0.3
+./data/mimic_exnotes/original-notes//D9DEEFB3438D99.txt:171:(including ACE, Beta-blocker), and as she is now CMO,
+./data/mimic_exnotes/original-notes//D9E181F9B17BCA.txt:6:CV: NSR with no ectopy, HR 70-80's, SBP's 110-120's. Continues on ACE, Beta-blocker, and digitalis with no increase in doses today.
+./data/mimic_exnotes/original-notes//D9EBC5B0865BED.txt:141:   - Holding  BB and ACE-I in the setting of ongoing hypotension
+./data/mimic_exnotes/original-notes//D9EBC5B0865BED.txt:161:   - Would benefit from ACE inhibition
+./data/mimic_exnotes/original-notes//D9F208F4157B54.txt:330:80s. He was started on [**Month/Year (2) **], BB, Statin, ACE-I. Hep gtt was held
+./data/mimic_exnotes/original-notes//D9F208F4157B54.txt:379:from previous admission. Held ACE-I initially in setting of
+./data/mimic_exnotes/original-notes//D9F208F4157B54.txt:382:of ACE-I. Pt received mucomyst and precath hydration x2 to
+./data/mimic_exnotes/original-notes//D9F208F4157B54.txt:405:BB, Hydral, ACE-I, Amlodipine. On last day of admission BP meds
+./data/mimic_exnotes/original-notes//D9F5EE8C9871FD.txt:3:O-NEURO ALERT ORIENTED, MAE, FOLLOWS COMMANDS, [**Name (NI) 1254**], PURPOSEFUL, PT C/O "FEEL LIKE MY LEGS ARE GOING TO EXPLODE" W/ DECREASED SENSATION, ORTHO IN TO EVAL ACE WRAPS TAKEN OFF PT STATES RELIEF. PT C/O FEELING ANXIOUS AND NERVOUS PT [**Name (NI) **] W/ 1 MG ATIVAN IV W/ GOOD EFFECT. IV DILAUDID PCA W/ GOOD EFFECT PT USING [**Name (NI) 7157**]. LOGROLL PRECAUTIONS, CCOLLAR AT ALL TIMES, TLS FILMS DONE THIS PM AWAITING RESULTS.
+./data/mimic_exnotes/original-notes//DA046E805A3EC5.txt:15:   drainage.  LE pulses by Doppler.  Right UE in ACE wrap, ulnar pulse by
+./data/mimic_exnotes/original-notes//DA0D12E337BC61.txt:183:   Cardiovascular: Aspirin, Beta-blocker, ACE, Post-op hypertension on
+./data/mimic_exnotes/original-notes//DA0D12E337BC61.txt:187:   while titrating ACE and start Lopressor as well.
+./data/mimic_exnotes/original-notes//DA12BE98A38329.txt:18:A/P; CONTINUES TO DIURESES CONTACT PT PCP/CARDIOLOGIST RE ACE INHIBITORS PT DOES HAVE SOME SIDE EFFECTS WITH BETABLOCKERS.
+./data/mimic_exnotes/original-notes//DA15ABAB1D598F.txt:235:   - Hold on plavix, heparin gtt, ACE-I, BB given hypotension and concern
+./data/mimic_exnotes/original-notes//DA17509E3114FC.txt:246:   - hold ACE, BB in setting of hypotension
+./data/mimic_exnotes/original-notes//DA19D086FB2817.txt:36:SKIN: BACKSIDE INTACT. LLE W/ EX FIX IN PLACE AND WRAPPED IN ACE WRAP. PT ALSO HAS FACIOTMIES W/ ALL 4 COMPARTMENTS OPEN. PT HAS 2 SPONGE VAC
+./data/mimic_exnotes/original-notes//DA23F03183EC2B.txt:5:Skin:  Intact. PIV x 2, a-line, triple lumen. Incisions CDI. Right leg rewrapped in ACE after cleaning.
+./data/mimic_exnotes/original-notes//DA2B560305209F.txt:145:to infection and increase HR).  Remained stable on ACE-I,
+./data/mimic_exnotes/original-notes//DA310FED7B61D1.txt:15:SKIN: MULTIPLE ABRASIONS, HEALING WELL, L.ARM IN ACE DSD, INTACT, L.HIP DONOR SITE IS DRAINNING SM AMNT S/S -COVERED WITH ABD PAD
+./data/mimic_exnotes/original-notes//DA34C771413C53.txt:149:   # cardiomyopathy: hold ACE-I, BB [**2-7**] to recent hypotension, infection.
+./data/mimic_exnotes/original-notes//DA372C586BDC63.txt:11:SKIN: MEDISTINAL DRESSING D&I, RIGHT LEG DREESING WRAPPED IN ACE BANDAGE. SKIN INTACT.
+./data/mimic_exnotes/original-notes//DA530F628AB2D8.txt:106:   74 yr old male with angioedema, likely from ACE inhibitor. Other
+./data/mimic_exnotes/original-notes//DA530F628AB2D8.txt:109: likley from ACE. no signs of stridor. Lisinopril d/c'd.
+./data/mimic_exnotes/original-notes//DA5CAC27CF7AE9.txt:18:SKIN: Multiple areas of breakdown and irritation noted. LE's wrapped in ACE bandages, and not assessed fully , L buttock w/ [**Last Name (un) **]-size decub and several skin tears from tape around it. Duoderm placed. Quarter size wound to L of ostomy is beefy red w/ small amt of serosang drng, New w->d dsg placed.
+./data/mimic_exnotes/original-notes//DA611F3040BF28.txt:4:[**Name (NI) 249**] PT HR 88-130 DEPENDING ON PAIN AND HOW AWKE HE IS, B/P TENDS TO BE ELEVATED WITH PAIN, 150 SYSTOLIC WHEN ASLEEP. PT RT HAND IS WARM WITH PULSES IN FINGERS BY DOPPLER AND CAP REFIL IS GOOD. , ARM IS ELEVATED ON 2 PILLOWS, AND WRAPPED IN PILLOW. L ARM ELEVATED AND DSG INTACT, FINGERS ARE WARM, RT LEG IN ACE TOES ARE WARM. B/P BEING TAKEN ON L LEG. PT CONT ON HEPARIN AT 100, LAST PTT 59, AND ONE PENDING. IVF INFUSING AT 100CC HR, DEXTRAN AT 30.
+./data/mimic_exnotes/original-notes//DA767E4F31E447.txt:37:CONTINUE TO ATTEMPT TO CONTROL HEMODYNAMICS- ? LOW DOSE B BLOCKER AND LOW DOSE ACE IV UNTIL PT NO LONGER NPO OR NG ACCESS OBTAINED TO GIVE PO MEDS.
+./data/mimic_exnotes/original-notes//DA767E4F31E447.txt:38:CONTINUE  NATRECOR/LASIX AS NEEDED/ACE TO UNLOAD IN ATTEMPTS TO TAKE OFF CPAP TODAY
+./data/mimic_exnotes/original-notes//DA7BA9DAE2BD7B.txt:240:   - Hold on plavix, heparin gtt, ACE-I, BB given hypotension and concern
+./data/mimic_exnotes/original-notes//DA8388EDAF8872.txt:14:   Allergies: Codeine/Valium/Morphine/oxycodone-N&V, PCN-rash, ACE-^K+,
+./data/mimic_exnotes/original-notes//DA863329366A03.txt:2:PT. 52 Y/O MALE ADMIT TO OSH ON [**4-7**] W/C/O 4DAYS DYSPNEA/ N/V AND ABD. DISCOMFORT. PT. FOUND TO BE IN PULM. EDEMA AND CARDIAC ENZYMES W/+TROP SUGGESTIVE OF MI. TX. TX. W/LASIX, HEP. GTT.ASA.ACE-I, LOPRESSOR, CLOPIDOGREL, & SIMVISTATIN. TTE W/30% EF AND SEVERE INF./POST./LATERAL AK/HK. AT OSH PT. W/RECURRENT SYMPTOMS AS ON PRESENTATION SO TRANSFERRED TO [**Hospital1 95**] FOR CATH. NOW S/P PLACEMENT (L)CIRCUMFLEX STENT. OVER/[**Name (NI) **] PT. W/ REMOVAL SHEATH FROM (R)GROIN, SITE D&I, NO HEMATOMA, PULSES PALPABLE, AND EXTREM. WARM & DRY. BEING TX. AS POST CATH. ON CONT. INTEGRILLIN GTT. RUNNING @ 2 MCG/K/MIN X18HRS. CONT. ON ASA, CLOPIDOGREL, ATORVASTATIN, LOPRESSOR AND CAPTOPRIL. WILL START DIURESIS THIS AM. PT. ALSO W/DENTAL ABSCESS BEING TX. PRIOR TO ADMIT W/ABX. WHICH CONT. BLD. CX X1 SENT OVER/[**Name (NI) **] AND SECOND SET TO BE OBTAINED.
+./data/mimic_exnotes/original-notes//DAC25745C426B0.txt:199:   - hold ACE-I, BB [**2-7**] hypotension, infection.
+./data/mimic_exnotes/original-notes//DAC683593B79F0.txt:107:Ext: LE wrapped in ACE bandages, 2 small non-helaing ulcers on
+./data/mimic_exnotes/original-notes//DAC861F08FBFB1.txt:217:   -          Would benefit from ACE inhibitor once over acute illness
+./data/mimic_exnotes/original-notes//DAD0698423108A.txt:183:   - Hold BB, ACE-I, ASA, and plavix pending stabilization of GI bleed
+./data/mimic_exnotes/original-notes//DAD833F0069301.txt:156:arrhythmias noted.  Discharged on ASA, ACE-i, Beta blocker, and
+./data/mimic_exnotes/original-notes//DADDB43C406876.txt:20:PLAN: [**Name (NI) **] ABX FOR PNA. CONSIDER ACE IF PT CONTINUES TO BE HYPERTENSIVE. SPEECH & SWALLOW IN NEAR FUTURE. [**Name (NI) **] ICU SUPPORTIVE CARE.
+./data/mimic_exnotes/original-notes//DADFDE4D3E01EB.txt:14:LUE wet-dry NS packing changed. Old packing stained with yellow/green cloudy drainage! Plan to change arm packing [**Hospital1 **] per vascular team. No dsg changes to L leg. L leg bka remains wrapped in ACE and immobilized with splint.
+./data/mimic_exnotes/original-notes//DAE3B5953AB992.txt:156:   -uptitrate ACE, BB for afterload reduction as BP allows
+./data/mimic_exnotes/original-notes//DAE88D4DCD27CE.txt:211:   - Hold BB and ACE-I given hypotension
+./data/mimic_exnotes/original-notes//DAE88D4DCD27CE.txt:218:   - Hold BB, ACE-I, Lasix as above
+./data/mimic_exnotes/original-notes//DB00B0BED5595A.txt:175:   -uptitrate ACE, BB for afterload reduction as BP allows
+./data/mimic_exnotes/original-notes//DB0170D320EBE3.txt:4:CV--PT REMAINS IN AFIB WITH VPACED BEATS, AND RARE TO OCCAS PVC'S. BP 85-90'S/. NEW STAGE 2 PRESSURE SORE NOTED ON BACK OF HEAD, OTHERWISE LEGS REMAINS WRAPPED IN ACE WRAPS WITH ADAPTIC DSG. ABD VAC DSG WITH REDDNESS AROUND EDGES OF WOUND, OTHERWISE C/D/I.
+./data/mimic_exnotes/original-notes//DB063DD3D97898.txt:261:be globally stable.  She will likely benefit from ACE-inhibitor
+./data/mimic_exnotes/original-notes//DB063DD3D97898.txt:288:-Consider ACE/[**Last Name (un) **] therapy when renal function stabilizes
+./data/mimic_exnotes/original-notes//DB094691F5D051.txt:160:   of pneumonia. Hold BB, ACE-I, ASA, and plavix pending stabilization of
+./data/mimic_exnotes/original-notes//DB0E966C77DA28.txt:93:ext: R knee wrapped in ACE bandage.  1+ non-pitting edema bilat
+./data/mimic_exnotes/original-notes//DB1013AB67CB4C.txt:156:   -uptitrate ACE, BB for afterload reduction as BP allows
+./data/mimic_exnotes/original-notes//DB18809DAC3453.txt:30:WITHOUT DIFFICULTY.  ACE INHIBITOR CAUSES SWELLING, ALTHOUGH
+./data/mimic_exnotes/original-notes//DB18809DAC3453.txt:31:THE PATIENT IS ON AN ACE INHIBITOR AT THE PRESENT TIME AND
+./data/mimic_exnotes/original-notes//DB2C525D12A178.txt:183:   -          Beta-blocker, ACE inhibitor held given low BP
+./data/mimic_exnotes/original-notes//DB3078C8BB6BEF.txt:3: Reason: PT WITH HIV, HBV, CHRONIC ELEVATION IN ALK. PHOSPAHATES CHECK FOR CBD DILATATION AND HYDRO
+./data/mimic_exnotes/original-notes//DB501FDCC806C5.txt:112:   - continue BB, ACE, ASA, statin, imdur to maximize treatment of known
+./data/mimic_exnotes/original-notes//DB501FDCC806C5.txt:132:   # Hypertension: Patient on ACE, BB at home. BP is well controlled
+./data/mimic_exnotes/original-notes//DB540DDD6F0DFB.txt:291:leg in ACE bandage, which was continued during hospitalization.
+./data/mimic_exnotes/original-notes//DB576473771F91.txt:195:   Cardiomyopathy: Cont ACE-I, BB, and lasix
+./data/mimic_exnotes/original-notes//DB67B69C2C2026.txt:166:   - Continue ACE-I, BB, statin, ASA 81mg daily
+./data/mimic_exnotes/original-notes//DB6CAF8D2BD74E.txt:19:SKIN: HEAD INCISION WELL APPROXIMATED WITH STERISTRIPS/SUTURES MINIMAL OLD SEROSANG STAINING. RIGHT LOWER ARM LAC WITH SUTURES OTA WELL APPROIMATED NO DRAINAGE. SKIN BENEATH C-COLLAR INTACT, BACK-BUTTOCKS INTACT. LEFT LOWER LEG WITH SOFT TISSUE CONTUSION SECURED IN ACE WRAP AND SPLINT.
+./data/mimic_exnotes/original-notes//DB81271480DC76.txt:73:Vanc (staph epidermis)- f/u culture neg/ESR neg.
+./data/mimic_exnotes/original-notes//DB81271480DC76.txt:124:ESR 30  CRP 60
+./data/mimic_exnotes/original-notes//DB81271480DC76.txt:318:-cont BB, ACE-i held
+./data/mimic_exnotes/original-notes//DB81271480DC76.txt:330:HTN: resumed BB (on higher dose at home). Holding ACE-I, BPs ar
+./data/mimic_exnotes/original-notes//DB839FEFF0F255.txt:162:   -uptitrate ACE, BB for afterload reduction as BP allows
+./data/mimic_exnotes/original-notes//DB8A595115B372.txt:176:   -          Beta-blocker, ACE inhibitor held given low BP
+./data/mimic_exnotes/original-notes//DB8D043E5028D4.txt:159:   of pneumonia. Hold BB, ACE-I, ASA, and plavix pending stabilization of
+./data/mimic_exnotes/original-notes//DB95B18CA99B33.txt:166:   Cardiomyopathy: Cont ACE-I, BB, and lasix
+./data/mimic_exnotes/original-notes//DB9A888321CDD9.txt:126:   - holding ACE, BB, and lasix, to be restarted once fluid status
+./data/mimic_exnotes/original-notes//DBAAF01A729BAE.txt:132:[**2112-2-23**] 10:50AM   ALT(SGPT)-17 AST(SGOT)-26 CK(CPK)-74 ALK
+./data/mimic_exnotes/original-notes//DBAAF01A729BAE.txt:232:with ACE-i, BB and lasix gtt. On the day of discharge, he
+./data/mimic_exnotes/original-notes//DBAD3BDFA32D2E.txt:25:P: Start Natrecor. COnt with ACE, Beta Blocker. Place NGT for meds. Follow hemodynamics. ?re-try HD tomorrow.
+./data/mimic_exnotes/original-notes//DBBBFAC6415338.txt:108:Lipitor, beta-blocker and ACE-I were continued.  She was taken
+./data/mimic_exnotes/original-notes//DBBBFAC6415338.txt:112:Beta-blocker, ACE-I, and Plavix for 12 months.
+./data/mimic_exnotes/original-notes//DBBC5138C0BABC.txt:9:SKIN:  LEFT FOOT IN ACE WRAP, CHANGED BY PODIATRY THIS AM.  WILL CONTINUE [**Hospital1 **] ACETIC ACID DRESSING CHANGES.
+./data/mimic_exnotes/original-notes//DBC870682B9097.txt:3: Reason: ACUTE RISE IN ALK PHOS, EVAL HEPATIC BLOOD FLOW
+./data/mimic_exnotes/original-notes//DBC90A9FBC3720.txt:7:SKIN: LLE staples small serosang drainage dsd changed RUE remains in ACE wrap per vascular.
+./data/mimic_exnotes/original-notes//DBD8D8A7AE53B4.txt:236:   -          Would benefit from ACE inhibitor once over acute illness
+./data/mimic_exnotes/original-notes//DBE407252B7CE5.txt:9:   Allergies: Codeine/Valium/Morphine/oxycodone-N&V, PCN-rash, ACE-^K+,
+./data/mimic_exnotes/original-notes//DBEA4720A601C6.txt:246:daily, plavix 75mg daily, simvastatin, and metoprolol.  ACE
+./data/mimic_exnotes/original-notes//DBEA4720A601C6.txt:262:CKD.  Patient will likely benefit from an ACE inhibitor, though
+./data/mimic_exnotes/original-notes//DBEA4720A601C6.txt:272:anti-hypertensive regimen.  [**Month (only) 116**] benefit from ACE inhibitor,
+./data/mimic_exnotes/original-notes//DBEA4720A601C6.txt:281:benefit from ACE inhibitor.
+./data/mimic_exnotes/original-notes//DBEA6C474AF8F2.txt:172:   -hold ACE, BB for now per above
+./data/mimic_exnotes/original-notes//DBFA428F734073.txt:6:P: Await further cx data; US-guided diagnostic paracentesis planned; ? further diuresis; ? initiate ACE-inhibitors, BB's; ? wean and extubate; keep family informed; routine ICU care and monitoring; SW consult.
+./data/mimic_exnotes/original-notes//DC16F8DBFEAE38.txt:241:   -          Would benefit from ACE inhibitor once over acute illness
+./data/mimic_exnotes/original-notes//DC1A74E46CB4B4.txt:148:   # cardiomyopathy: hold ACE-I, BB [**2-7**] to recent hypotension, infection.
+./data/mimic_exnotes/original-notes//DCEFAB57E5BD80.txt:68:   5. Angioedema from ACE inhibitors, shrimp.
+./data/mimic_exnotes/original-notes//DCEFAB57E5BD80.txt:217:   ACE/[**Last Name (un) **] secondary to angioedema.
+./data/mimic_exnotes/original-notes//DCF48D7D417C6F.txt:178:   lopressor, statin, ACE-I, ASA. HR and BP stable. Currently on Lopressor
+./data/mimic_exnotes/original-notes//DCF51C48E19B68.txt:169:   lopressor, statin, ACE-I, ASA. HR and BP stable on regimen.
+./data/mimic_exnotes/original-notes//DCF6637FF8379D.txt:129:EXTREMITIES - R LE wrapped in ACE bandage w/ 2 wound vacs in
+./data/mimic_exnotes/original-notes//DCFB710AC179D0.txt:105:[**2191-1-25**] 01:03PM   ALT(SGPT)-27 AST(SGOT)-55* LD(LDH)-430* ALK
+./data/mimic_exnotes/original-notes//DCFB710AC179D0.txt:155:# cardiomyopathy: held ACE-I, BB, digoxin [**2-7**] hypotension,
+./data/mimic_exnotes/original-notes//DD069A912F15AE.txt:68:   Extremities: LLE in ACE bandage wrap, erythema unchanged.
+./data/mimic_exnotes/original-notes//DD2054FD8C12B1.txt:38:   LLE in ACE wrap. Ortho came by again today, removed ACE. Recommended to
+./data/mimic_exnotes/original-notes//DD2054FD8C12B1.txt:40:   foot wrapped in ACE to reduce edema.
+./data/mimic_exnotes/original-notes//DD2054FD8C12B1.txt:46:   pillows, in multipodus boot, with left foot only wrapped in ACE to help
+./data/mimic_exnotes/original-notes//DD22F5FF90EE76.txt:3:CV--REMAINS TACHYCARDIC 110-130'S ST NO ECTOPY NOTED.  BP REMAINS STABLE 100-140'S/ VIA ALINE.  TRACE EDEMA IN HANDS NOTED.  PT 8-9L (+) FOR THIS SHIFT.  PT CURRENTLY ON D51/2 NS AT 250CC/HR X2 L AND RECEIVING 1L NS BOLUS DUE TO OLIGURIA.  CVP 10-19. SVO2 VIA PRESEPT CATH 75-81%.  K AND PHOS REPLETED THIS SHIFT.  CHEM 10 PANEL BEING SENT Q3. ORTHO BY THIS AM AND CHANGED DSG ON RIGHT KNEE, INCISION CURRENTLY HAS WICK WITH AQUFOR AND DSD APPLIED, RIGHT LEG TO BE WRAPPED IN ACE WRAPS TOES TO MID THIGH AND DSG'S ARE NOT TO BE ROUTINELY CHANGED.  NO PLANS FOR FURTHER DEBRIDEMENT/WASHOUT IN OR TODAY, MAYBE IN NEXT FEW DAYS AS PT [**Name (NI) 10486**] IMPROVE.  PHONE CALL AND FAX RECIEVED FROM [**Hospital6 **] PT WITH (+) BLD CX'S FOR STAPH AUREOUS, TEAM AWARE. TMAX 102 MED WITH TYLENOL 650MG PR WITH DECREASE IN TEMP TO 100.  PT DIAPHORETIC AND FLUSHED WITH FEVER.
+./data/mimic_exnotes/original-notes//DD2767B925F096.txt:248:Lower extremities are wrapped in ACE bandages. He has been given
+./data/mimic_exnotes/original-notes//DD2E897F6D1AC5.txt:154:   - holding ACE, BB, and lasix, to be restarted once fluid status
+./data/mimic_exnotes/original-notes//DD32D5ED70052C.txt:211:   - Hold BB and ACE-I given hypotension
+./data/mimic_exnotes/original-notes//DD32D5ED70052C.txt:218:   - Hold BB, ACE-I, Lasix as above
+./data/mimic_exnotes/original-notes//DD36AB202B1181.txt:148:   - Holding  BB and ACE-I in the setting of ongoing hypotension
+./data/mimic_exnotes/original-notes//DD36AB202B1181.txt:168:   - Would benefit from ACE inhibition
+./data/mimic_exnotes/original-notes//DD45EE527006B0.txt:5:CV:MHR SR 80S, AS LOW AS 60S SR AFTER INCREASED DOSE OF LOPRESSOR TO 37.5MG. CPK AND TROP ELEVATION YESTERDAY. CPK DOWN TO 373/36%. PT W/O OUT FURTHER EPISODES OF CP. TOLERATING CAPTOPRIL AT 6.25MG, BP W/ ROOM FOR INCREASE IN ACE. PERIPHERAL PULSES BY [**Last Name (un) **]. LEFT RAD ALINE POSITIONAL AND NOT SUTURED INPLACE. D/C ALINE TODAY.
+./data/mimic_exnotes/original-notes//DD589F64283EA1.txt:118:   - continue low dose ACE, BB, ASA, statin
+./data/mimic_exnotes/original-notes//DD598F9115E77D.txt:4:CV: NO VT NOTED TODAY. RESTARTED ON AN ACE INHIBITOR AND TOL. WELL. AROUND 17PM PT. C/O LEFT SIDE PAIN (PINCHING) UNDER LEFT AXILLA. EKG DONE. NO CHANGES. HO TO EXAMINE PT.
+./data/mimic_exnotes/original-notes//DD5DADCE6476C1.txt:141:   - Continue on ACE inbitor, beta blocker
+./data/mimic_exnotes/original-notes//DD5DADCE6476C1.txt:152:   - Continue ACE, BB as tolerated
+./data/mimic_exnotes/original-notes//DD5F93791B0E66.txt:236:   -          Would benefit from ACE inhibitor once over acute illness
+./data/mimic_exnotes/original-notes//DD6126481BD5BD.txt:201:   # ARF: Slightly worse today, likely from ACE added on
+./data/mimic_exnotes/original-notes//DD63342E98AF57.txt:60:L forearm wrapped in ACE/sterile gauze; amputated L hand wrapped
+./data/mimic_exnotes/original-notes//DD7C6CF0BD3A5E.txt:240:   - Hold on plavix, heparin gtt, ACE-I, BB given hypotension and concern
+./data/mimic_exnotes/original-notes//DD911CB781B1C0.txt:175:   -uptitrate ACE, BB for afterload reduction as BP allows
+./data/mimic_exnotes/original-notes//DD9E1885A27682.txt:27:   increase in ACE-I.
+./data/mimic_exnotes/original-notes//DDA5530B05A77B.txt:141:   - Continue on ACE inbitor, beta blocker
+./data/mimic_exnotes/original-notes//DDA5530B05A77B.txt:152:   - Continue ACE, BB as tolerated
+./data/mimic_exnotes/original-notes//DDA8E9F4CF94DA.txt:218:   -          Would benefit from ACE inhibitor once over acute illness
+./data/mimic_exnotes/original-notes//DDAB6896DD33B9.txt:64:7) Hyperkalemia from ACE-inhibitor
+./data/mimic_exnotes/original-notes//DDB7EB8A3E1A13.txt:30:   SEEN BY PODIATRY ,DSD CHANGED ,ADAPTIC ,SOFT SORB,KLING,WRAPPED I ACE
+./data/mimic_exnotes/original-notes//DDB7EB8A3E1A13.txt:35:   KEEP LEGS WRAPPED IN ACE TO DECREASE SWELLING ,MED FOR PAIN PRN AND
+./data/mimic_exnotes/original-notes//DDBC4B5B642C4E.txt:284:   - hold ACE, BB in setting of hypotension
+./data/mimic_exnotes/original-notes//DDD3CB78281041.txt:5:SKIN: STERNUM WITH TRANSPARENT DSD, RIGHT LEG ACE WRAP, CT SITE WITH TRANPARENT DSD, ALL SITES ARE C.D.I.
+./data/mimic_exnotes/original-notes//DDD6C240AFA968.txt:69:   Left leg wrapped in ACE; no pneumoboots present.
+./data/mimic_exnotes/original-notes//DDDA96DFF48700.txt:166:   in ESR from 55 to 109, will treat for presumptive osteomyelitis.
+./data/mimic_exnotes/original-notes//DDDA96DFF48700.txt:168:   - Cont Vanc/Ceftaz  -- monitor for ESR trend, consider empiric 2 week
+./data/mimic_exnotes/original-notes//DDE9B99CD020D3.txt:179:   - hold ACE-I, BB [**2-7**] hypotension, infection.
+./data/mimic_exnotes/original-notes//DDEA96DA43E9A8.txt:187:   - Continue ACE-I, BB, statin, ASA 81mg daily
+./data/mimic_exnotes/original-notes//DDEC3C38B20E6F.txt:24:   elevated, wrapped in ACE and with (+) Doppler pulses at flap site on
+./data/mimic_exnotes/original-notes//DDF1C2FE2DE40F.txt:171:   - Continue ACE-I, BB, statin, ASA 81mg daily
+./data/mimic_exnotes/original-notes//DDF7F5FD74A4EC.txt:9:SKIN: L ARM WRAPPED IN ACE BANDAGE. TOLD BY MD THAT A SMALL PORTION OF WOUND REMAINS OPEN. ABDOMINAL WOUND PINK WITH NO DRAINAGE OPEN TO AIR.
+./data/mimic_exnotes/original-notes//DDFC2AFFCF7BC3.txt:166:   pressure from ACE inhibitor.
+./data/mimic_exnotes/original-notes//DDFC2AFFCF7BC3.txt:168:   uptitration if ACE-I as needed
+./data/mimic_exnotes/original-notes//DDFC2AFFCF7BC3.txt:169:   - continue outpatient ACE inhibitor at current dose, will increase as
+./data/mimic_exnotes/original-notes//DDFC2AFFCF7BC3.txt:175:   - continue ACE inhibitor
+./data/mimic_exnotes/original-notes//DDFC2AFFCF7BC3.txt:185:   - ACE inhibitor at outpatient dose, monitor creatinine
+./data/mimic_exnotes/original-notes//DDFC2AFFCF7BC3.txt:250:   RENAL ARTERY STENOSIS- Avoid ACE-I, discuss renal artery stenting
+./data/mimic_exnotes/original-notes//DDFC2AFFCF7BC3.txt:264:   ACE inhibitor.
+./data/mimic_exnotes/original-notes//DDFCB1BE8278C1.txt:14:Skin: Bilat. legs wrapped in ACE bandages + knee immobilizers. Bandages C/D/I.
+./data/mimic_exnotes/original-notes//DE042730D6E54E.txt:7:   On ACE for 5 yrs. No known new exposure.
+./data/mimic_exnotes/original-notes//DE042730D6E54E.txt:109:   74 yr old male with angioedema, likely from ACE inhibitor. Other
+./data/mimic_exnotes/original-notes//DE062A017D91ED.txt:25:   ACE inhibitor.  He was seen in clinic on [**4-25**] and he was started on
+./data/mimic_exnotes/original-notes//DE062A017D91ED.txt:245:   # Hyperkalemia: unclear if this is primary from ARF & ACE versus
+./data/mimic_exnotes/original-notes//DE062A017D91ED.txt:265:   # Acute renal failure: likely due to ACE & lasix.  [**Month (only) 8**] develop ATN
+./data/mimic_exnotes/original-notes//DE0F9C2FCB815C.txt:2:NSR, NO ECTOPY. A PACED AT 80 FOR CO/BP SUPPORT AS NEEDED. SVO2 60-70S. LABILE BP/CO DEPENDING ON VOLUME STATUS. CI >2 WITH VOLUME. EXTREMIES WARM. DP PULSES EASILY PALPATED. LARGE VARICOSE VEINS VISABLE R LEG. L LEG REMAINS WRAPPED IN ACE.
+./data/mimic_exnotes/original-notes//DE162BCD3D40C7.txt:3:CV   HR 60-70'S...SINUS ....SBP 130-140'S/60'S..TOLERATING INCREASE IN ACE INHIB...REMAINS ON IV NTG AT 40 MCGS
+./data/mimic_exnotes/original-notes//DE2EE971498EC3.txt:148:- Discharged on ACE, BB and CCB dosing, monitor.
+./data/mimic_exnotes/original-notes//DE2EE971498EC3.txt:204:- Dishcarged on BB, statin, ACE.
+./data/mimic_exnotes/original-notes//DE42D59664A771.txt:189:   -hold ACE, BB for now per above
+./data/mimic_exnotes/original-notes//DE49CB81632327.txt:1:CV:  SR/ST high 90's-100's, isolated dip to 60's; SBP generally 100's-120's but rare dips to 90's and rise to 150's, PAD 9-22, CVP 12-17; 2a/2v wires attached and pacer set at 60, however, not checked r/to HR; BP supported with Levo currently at 0.01mcg/kg/min->attempt to wean further resulted in drop in pressure and so this rate has been maintained; CO>7/CI>2.6 by TD; Right pedal pulse by doppler, LLE s/p amputation->stump wrapped in ACE; CT draining SS with no air leak or crepitus; lytes pending
+./data/mimic_exnotes/original-notes//DE528D5229BDDC.txt:17:ORTHO-TO OR FOR ORIF OF LEFT WRIST. LEFT WRIST IN ACE WRAP, C/D/I. +CSM TO FINGERS. BRISK CAP [**Last Name (un) 7800**]. HEMOVAC IN PLACE WITH SCANT SEROUSSANG DRG. WRIST ELEVATED ON PILLOWS.
+./data/mimic_exnotes/original-notes//DE5E3C85B3959B.txt:42:   and fluocinonide, wrapped legs in ACE bandage, left glute open to air.
+./data/mimic_exnotes/original-notes//DE60A8E9CC9ADC.txt:231:   -          Would benefit from ACE inhibitor once over acute illness
+./data/mimic_exnotes/original-notes//DE6C3684A27A43.txt:9:SKIN: DUODERM TO COCCYX REMAINS INTACT. RLE WOUND WITH SUTURES INTACT. SEROUS DRG FROM UPPER THIGH AREA, SEROSANG FROM BOTTOM OF STUMP. SM ? NECROTIC SKIN AREA AT LOWER, INNER THIGH. DR. [**Last Name (STitle) 6041**] AND DR [**Last Name (STitle) **] IN TO WITTNESS.  [**Last Name (LF) 6041**], [**First Name3 (LF) **] NOT WRAP WOUND IN ACE BANDAGE OR KNEE IMMOBILIZER.
+./data/mimic_exnotes/original-notes//DE9A9AD8918241.txt:18:[**Doctor First Name **]-RIGHT ARM IN ACE WRAP. FLAP CHECK SITE X2  MONITORED Q 1HR. + PULSE VIA DOPPLER. FINGERS SL COOL, PINK. GOOD CAP REFILL. + MOVEMENT OF FINGERS. PT WITH SKIN GRAFT DONOR SITES IN BILAT THIGHS, DSG INTACT. PT WITH BILAT LOWER LEG SURAL NERVE DONOR SITE, DSG INTACT. HEAD/FACIAL DSG CHANGED BY MD. SITES CLEAN. DSG INTACT. LAT DORSI DSG C/D/I. JP X2 WITH SEROUSSANG DRG.
+./data/mimic_exnotes/original-notes//DEA5A2427B2FBA.txt:168:   - Continue ACE-I, BB, statin, ASA 81mg daily
+./data/mimic_exnotes/original-notes//DEA9B5B3F41A9A.txt:162:   -uptitrate ACE, BB for afterload reduction as BP allows
+./data/mimic_exnotes/original-notes//DEB1B49A7E2100.txt:122:   - continue ACE-I, lasix and spironolactone
+./data/mimic_exnotes/original-notes//DEB1B49A7E2100.txt:125:   - continue ACE-I, BB, aspirin
+./data/mimic_exnotes/original-notes//DEB1B49A7E2100.txt:129:   - continue ACE-I, BB
+./data/mimic_exnotes/original-notes//DEBD518385DD52.txt:144:   # cardiomyopathy: hold ACE-I, BB [**2-7**] to recent hypotension, infection.
+./data/mimic_exnotes/original-notes//DEC2999C3DCD22.txt:170:   - Continue ACE-I, BB, statin, ASA 81mg daily
+./data/mimic_exnotes/original-notes//DEC492B9267716.txt:101:in ACE bandages
+./data/mimic_exnotes/original-notes//DECFA61787BB4E.txt:8:CVS: NSR to ST, no ectopy. HR 96-116, NIBP 110-143/44-57, CVP 6-12. Presep catheter, SvO2 46-58, SQI [**3-5**]- ? accuracy of SvO2. Tmax 100. + palpable pedal pulses, +[**1-4**] pedal edema. RLE warm & mottled, LLE warm & flushed- edematous, wrapped in ACE bandage & elevated. Heparin & pboots prophylaxis.
+./data/mimic_exnotes/original-notes//DECFA61787BB4E.txt:18:Access/Skin: RIJ CVL w/ presep catheter & LLP PIV. Cellulitic & edematous LLE, wrapped w/ ACE bandage & elevated. MRI of LLE scheduled asap.
+./data/mimic_exnotes/original-notes//DEDE42BF14D380.txt:6:CV: HEART RYTHM MAINLY REG HR 80S-90S, EPISODE OF RAPID AFIB 105, EKG SHOWS ST. PT REMAINS FLUID OVERLOAD/ LOS: POS 61/2LITERS. HYPOTENSION MAKES IT DIFFICULT TO DIURISE. LASIX GTT INITIATED 5-10MG/HR/KEEP MAP>55/WILL USE PRESSORS IF MAP<55 SUSTAINED FOR 20-30MIN. PRESENTLY, BP 80S-90S/MAP/60-70S. LASIX GTT:6MG/HR. UOP 45-100CC/HR. GOAL NEG 20-40CC/HR. NEG 132CC THIS HR. ANASARCA, ACE WRAP APPLIED TO LOWER EXTREMITIES. K:3.4/RPLETED WITH 40MEQ KCL THIS AM. HYPERNATREMIA/NA:146/FREE H20 150CC 6X/DAY/ TO INCREASE TO 200CC Q4HR POST MN.
+./data/mimic_exnotes/original-notes//DEDE42BF14D380.txt:16:SKIN: WARM AND DRY. MULTIPLE ABRASION AND SKIN TEARS IN UPPER AND LOWER EXTREMITIES. EDEMATOUS/ LOWER EXTREMITIES IN ACE WRAP BANDAGES. EYE, MOUTH AND BACK CARE DONE. LOWER EXT STIFFNESS/PT CONS FOR ROM.
+./data/mimic_exnotes/original-notes//DEDFD47854E7DA.txt:186:   - Hold BB, ACE-I, ASA, and plavix pending stabilization of GI bleed
+./data/mimic_exnotes/original-notes//DEE9E97BBA8A67.txt:174:   Cardiovascular: Full anticoagulation, Beta-blocker, ACE inhibitor
+./data/mimic_exnotes/original-notes//DEE9F7FE80D35A.txt:129:    - Would start ACE inhibitor for HF management if pt tolerates, though
+./data/mimic_exnotes/original-notes//DEE9F7FE80D35A.txt:139:   - Would benefit from ACE inhibition.
+./data/mimic_exnotes/original-notes//DEED49B8A03EF8.txt:19:SKIN: RASH TO BACK/BUTTOCKS UNCHANGED-MONITORING. LUE & LLE IN ACE WRAP - ELEVATED ON PILLOWS, PULSES PALPABLE AND BRISK CAP REFILL NOTED - NO DRAINAGE. VENT DRAIN INSERTION SITE INTACT/WNL, CRANIOTOMY INC W/STAPLES SECURELY IN PLACE/INTACT.
+./data/mimic_exnotes/original-notes//DEF2CC574FB764.txt:192:   -- might consider changing from ACE I (afterload reduction) to a CCB or
+./data/mimic_exnotes/original-notes//DEF6599F1D84F1.txt:188:   # Hyperkalemia: resolved.  Thought to be primary from ARF & ACE given
+./data/mimic_exnotes/original-notes//DEFC41FB2ADCA6.txt:165:[**2121-12-24**] 11:48AM BLOOD ESR-55*
+./data/mimic_exnotes/original-notes//DEFC41FB2ADCA6.txt:166:[**2122-1-4**] 04:07AM BLOOD ESR-109*
+./data/mimic_exnotes/original-notes//DEFC41FB2ADCA6.txt:263:ulcer. Given rise in ESR from 55 to 109, were are treating for
+./data/mimic_exnotes/original-notes//DEFC41FB2ADCA6.txt:266:ESR. If ESR persists high, discuss continuation of antibiotics
+./data/mimic_exnotes/original-notes//DF0460C1DC4C27.txt:240:   -          Would benefit from ACE inhibitor once over acute illness
+./data/mimic_exnotes/original-notes//DF0754FD3B20B1.txt:1:[**Age over 90 **] y.o. female s/p right hip pinning, fx of right humerus not fixed yet. PACU overnight, ICU this morning. Pt has had very stable morning. NSR, no ectopy.  Some ST elevation in lead II, EKG done, compared to previous ones, unchanged from earlier. SBP stable 120-150's. Pt has received anti-hypertensive meds today. 4L/NC, good sats. Strong cough, sounds congested but does not raise any sputum. Right arm bruised, extremely tender. Right leg in ACE wrap. Right IJ triple lumen. Oriented, pt still very sleepy, wakens with loud verbal and physical stimuli. Swallowing fine. MAE, very weakly. Granddaughter called this morning, no family in today.
+./data/mimic_exnotes/original-notes//DF0C56702F4CEA.txt:249:# CHF- EF 40% (from [**4-12**] TTE). Continued on ACE-I, Lasix prn.
+./data/mimic_exnotes/original-notes//DF0CC5882F7A7F.txt:47:   L leg in ACE splint, elevated to reduce swelling, closely monitoring
+./data/mimic_exnotes/original-notes//DF228E8B2C51B2.txt:14:   Allergies: Codeine/Valium/Morphine/oxycodone-N&V, PCN-rash, ACE-^K+,
+./data/mimic_exnotes/original-notes//DF25FF462DA198.txt:6:NEURO: A&O X3 SHARP AND COMMUNICATIVE [**Name (NI) **] PRESENT AND PAST DETAILS. MAE AND FOLLOWS COMMANDS. PEARL 3MM BILAT. PT TAKEN FOR CTA AND PRELIMINARY RESULTS INDICATE L SUPERFICIAL TEMPORAL ARTERY PSEUDOANEURYSM. HEAD WRAPPED IN TIGHT ACE. REMAINS IN C-SPINE COLLAR.
+./data/mimic_exnotes/original-notes//DF25FF462DA198.txt:25:SKIN: CONTUSION OVER L EYE PURPLE AND SWOLLEN. WRAPPED IN ACE D/T ? PSEUDOANEURYSM. UNCHANGED IN SIZE OVERNOC. SKIN INTACT.
+./data/mimic_exnotes/original-notes//DF26B1B783E1EA.txt:176:   -          Beta-blocker, ACE inhibitor held given low BP
+./data/mimic_exnotes/original-notes//DF2FB886D7C53D.txt:192:   -          Would benefit from ACE inhibitor once over acute illness
+./data/mimic_exnotes/original-notes//DF33AA77CAA95D.txt:133:    - Would start ACE inhibitor for HF management if pt tolerates, though
+./data/mimic_exnotes/original-notes//DF33AA77CAA95D.txt:143:   - Would benefit from ACE inhibition.
+./data/mimic_exnotes/original-notes//DF4FA09DBEF222.txt:12:SKIN: NO BREAKS ON BACKSIDE. PT'S RIGHT FOOT DRESSED IN ACE BANDAGE WHICH HAS SERROSANG DRAINAGE ON IT, BUT IT IS SLOWING DOWN. CIRCULATION GOOD IN BOTH FEET AND WARM TO TOUCH.
+./data/mimic_exnotes/original-notes//DF5B8D02E55644.txt:162:   -uptitrate ACE, BB for afterload reduction as BP allows
+./data/mimic_exnotes/original-notes//DF6DD8C356AF34.txt:156:   #. Hx of hypertension: On home ACE, BB
+./data/mimic_exnotes/original-notes//DF6DD8C356AF34.txt:158:   - increase ACE inhibitor for any added anti-hypertensive effect, given
+./data/mimic_exnotes/original-notes//DF77685007C471.txt:244:   - Hold on plavix, heparin gtt, ACE-I, BB given hypotension and concern
+./data/mimic_exnotes/original-notes//DF7EFE30F620A2.txt:24:   elevated, wrapped in ACE and with (+) Doppler pulses at flap site on
+./data/mimic_exnotes/original-notes//DF8192C355B2D2.txt:12:CV: Sinus rhythm with no ectopy noted. Palpable or dopplerable distal pulses; suprisingly easier to doppler pulses in RLE compared with LLE; vascular surgery resident [**Doctor Last Name 1357**] aware. Pneumoboot to LLE only. RLE compartments to palpation are compressable but is wrapped in ACE. Right triple lumen CVL from OSH site normal. CVP 11.
+./data/mimic_exnotes/original-notes//DF8192C355B2D2.txt:22:Skin: Midline abdominal incision covered with DSD clean and dry. RLQ GSW DSD clean and dry. RLE fasciotomy wrapped in ACE, moderate amounts serosanguneous drainage.
+./data/mimic_exnotes/original-notes//DFA165522352D6.txt:178:3) Cardiomyopahty: Asymptomatic, continue BB, ACE-I, ASA, Statin
+./data/mimic_exnotes/original-notes//DFA21BE434FA5A.txt:164:   optimize B-Blocker/ACE-I, Statin/ASA. PWs DC today.
+./data/mimic_exnotes/original-notes//DFA94EB2D3DF69.txt:175:   #. Hx of hypertension: On home ACE, BB
+./data/mimic_exnotes/original-notes//DFA94EB2D3DF69.txt:177:   - increase ACE inhibitor for any added anti-hypertensive effect, given
+./data/mimic_exnotes/original-notes//DFAAE4712AB40B.txt:184:   -hold ACE, BB for now per above
+./data/mimic_exnotes/original-notes//DFAF913F2E43B9.txt:130:   had increase in ACE on [**3-21**].
+./data/mimic_exnotes/original-notes//DFAF913F2E43B9.txt:133:   (d/t Abx), AIN (bland u/a, urine eos pending), ACE nephropathy less
+./data/mimic_exnotes/original-notes//DFB2116F6D554C.txt:5:CV: HTN AND ON NIPRIDE UP TO 3.0 MCG/KG/MIN. RESTARTED ACE INHIBITOR AND GIVEN 20MG HYDRALAZINE AND NIPRIDE IS WEANING NOW AT 0.5MCG/KG/MIN. HR 50'S TO 65 NSR, NO ECTOPY. AMIODARONE RESTARTED AND WILL RESTART B BLOCKER THIS EVE.  FEET ARE WARM TO TOUCH W/ DOPPLERABLE PULSES.
+./data/mimic_exnotes/original-notes//DFB2116F6D554C.txt:20:SKIN: R LE WRAPPED IN ACE AND INTACT. NO SKIN BREAKDOWN NOTED.
+./data/mimic_exnotes/original-notes//DFB95E93B39C8B.txt:175:   -uptitrate ACE, BB for afterload reduction as BP allows
+./data/mimic_exnotes/original-notes//DFD4E32130C7A1.txt:15:SKIN:  Left lower leg started to ooze large amount old serosanginous blood. [**Last Name (NamePattern4) **], NP in to see pt, expelled more old blood. Leg wrapped in ACE wrap.
+./data/mimic_exnotes/original-notes//DFE4F292D2A947.txt:12:Skin: Intact. Large hematoma to left groin, soft. R leg wrapped in ACE.
+./data/mimic_exnotes/original-notes//DFF3E2C14AEF80.txt:52:   [**Doctor First Name 1205**] negative, Ro and La negative, ACE level normal, neuromyelitis IgG
+./data/mimic_exnotes/original-notes//DFF3E2C14AEF80.txt:53:   negative, ESR 70, CRP 66.8.  Ultimately
+./data/mimic_exnotes/original-notes//DFF3E2C14AEF80.txt:217:   presently, not on ACE or lasix at home (unclear why not, EF <55%), will
+./data/mimic_exnotes/original-notes//DFF3E2C14AEF80.txt:219:   - consider restarting ACE, BB, spirinolactone, lasix as outpt.
+./data/mimic_exnotes/original-notes//DFF92A807AFD84.txt:206:from ACE inhibitor use, hyperglycemia and low insulin state,

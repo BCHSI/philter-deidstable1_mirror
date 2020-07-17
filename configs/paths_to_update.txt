@@ -1,0 +1,576 @@
+(deidproj) NUS11097-10-pauburk:philter-ucsf-new pauburk$ python3 deidpipe.py -i ./data/i2b2_notes/
+read args
+In no args.mongo
+detecting PHI coordinates
+Initializing Philter
+Traceback (most recent call last):
+  File "deidpipe.py", line 178, in <module>
+    sys.exit(main())
+  File "deidpipe.py", line 105, in main
+    main_mongo(args)
+  File "deidpipe.py", line 124, in main_mongo
+    phitexts.detect_phi(args.filters, verbose=args.verbose)
+  File "/Volumes/HD-PATU3/UCSF Bakar internship/git-fork/philter-ucsf-new/phitexts.py", line 254, in detect_phi
+    self.filterer = Philter(philter_config)
+  File "/Volumes/HD-PATU3/UCSF Bakar internship/git-fork/philter-ucsf-new/philter.py", line 204, in __init__
+    self.init_patterns()
+  File "/Volumes/HD-PATU3/UCSF Bakar internship/git-fork/philter-ucsf-new/philter.py", line 300, in init_patterns
+    raise Exception("Config filepath does not exist", pattern["filepath"])
+Exception: ('Config filepath does not exist', 'filters/regex/dates/dd_mm_yy_transformed.txt')
+(deidproj) NUS11097-10-pauburk:philter-ucsf-new pauburk$ python3 deidpipe.py -i ./data/i2b2_notes/
+read args
+In no args.mongo
+detecting PHI coordinates
+Initializing Philter
+Traceback (most recent call last):
+  File "deidpipe.py", line 178, in <module>
+    sys.exit(main())
+  File "deidpipe.py", line 105, in main
+    main_mongo(args)
+  File "deidpipe.py", line 124, in main_mongo
+    phitexts.detect_phi(args.filters, verbose=args.verbose)
+  File "/Volumes/HD-PATU3/UCSF Bakar internship/git-fork/philter-ucsf-new/phitexts.py", line 254, in detect_phi
+    self.filterer = Philter(philter_config)
+  File "/Volumes/HD-PATU3/UCSF Bakar internship/git-fork/philter-ucsf-new/philter.py", line 204, in __init__
+    self.init_patterns()
+  File "/Volumes/HD-PATU3/UCSF Bakar internship/git-fork/philter-ucsf-new/philter.py", line 300, in init_patterns
+    raise Exception("Config filepath does not exist", pattern["filepath"])
+Exception: ('Config filepath does not exist', 'filters/regex/dates/dd_mm_yy_transformed.txt')
+(deidproj) NUS11097-10-pauburk:philter-ucsf-new pauburk$ python3 deidpipe.py -i ./data/i2b2_notes/ -c ./configs/philter_zeta.json
+usage: deidpipe.py [-h] [-i INPUT] [-o OUTPUT] [-f FILTERS]
+                   [-s SURROGATE_INFO] [-d DEID_FILENAME]
+                   [-k DYNAMIC_BLACKLIST] [-m MONGODB] [-l LOG] [-e EVAL]
+                   [-a ANNO] [-x XML] [-v] [-b BATCH]
+deidpipe.py: error: unrecognized arguments: -c ./configs/philter_zeta.json
+(deidproj) NUS11097-10-pauburk:philter-ucsf-new pauburk$ python3 deidpipe.py -i ./data/i2b2_notes/ -f ./configs/philter_zeta.json
+read args
+In no args.mongo
+detecting PHI coordinates
+Initializing Philter
+Traceback (most recent call last):
+  File "deidpipe.py", line 178, in <module>
+    sys.exit(main())
+  File "deidpipe.py", line 105, in main
+    main_mongo(args)
+  File "deidpipe.py", line 124, in main_mongo
+    phitexts.detect_phi(args.filters, verbose=args.verbose)
+  File "/Volumes/HD-PATU3/UCSF Bakar internship/git-fork/philter-ucsf-new/phitexts.py", line 254, in detect_phi
+    self.filterer = Philter(philter_config)
+  File "/Volumes/HD-PATU3/UCSF Bakar internship/git-fork/philter-ucsf-new/philter.py", line 204, in __init__
+    self.init_patterns()
+  File "/Volumes/HD-PATU3/UCSF Bakar internship/git-fork/philter-ucsf-new/philter.py", line 300, in init_patterns
+    raise Exception("Config filepath does not exist", pattern["filepath"])
+Exception: ('Config filepath does not exist', 'filters/regex/addresses/num_streetname_san_transformed.txt')
+(deidproj) NUS11097-10-pauburk:philter-ucsf-new pauburk$ python3 deidpipe.py -i ./data/i2b2_notes/ -f ./configs/philter_zeta.json
+read args
+In no args.mongo
+detecting PHI coordinates
+Initializing Philter
+Traceback (most recent call last):
+  File "deidpipe.py", line 178, in <module>
+    sys.exit(main())
+  File "deidpipe.py", line 105, in main
+    main_mongo(args)
+  File "deidpipe.py", line 124, in main_mongo
+    phitexts.detect_phi(args.filters, verbose=args.verbose)
+  File "/Volumes/HD-PATU3/UCSF Bakar internship/git-fork/philter-ucsf-new/phitexts.py", line 254, in detect_phi
+    self.filterer = Philter(philter_config)
+  File "/Volumes/HD-PATU3/UCSF Bakar internship/git-fork/philter-ucsf-new/philter.py", line 204, in __init__
+    self.init_patterns()
+  File "/Volumes/HD-PATU3/UCSF Bakar internship/git-fork/philter-ucsf-new/philter.py", line 300, in init_patterns
+    raise Exception("Config filepath does not exist", pattern["filepath"])
+Exception: ('Config filepath does not exist', 'filters/regex/addresses/city_zip_transformed.txt')
+(deidproj) NUS11097-10-pauburk:philter-ucsf-new pauburk$ python3 deidpipe.py -i ./data/i2b2_notes/ -f ./configs/philter_zeta.json
+read args
+In no args.mongo
+detecting PHI coordinates
+Initializing Philter
+Traceback (most recent call last):
+  File "deidpipe.py", line 178, in <module>
+    sys.exit(main())
+  File "deidpipe.py", line 105, in main
+    main_mongo(args)
+  File "deidpipe.py", line 124, in main_mongo
+    phitexts.detect_phi(args.filters, verbose=args.verbose)
+  File "/Volumes/HD-PATU3/UCSF Bakar internship/git-fork/philter-ucsf-new/phitexts.py", line 254, in detect_phi
+    self.filterer = Philter(philter_config)
+  File "/Volumes/HD-PATU3/UCSF Bakar internship/git-fork/philter-ucsf-new/philter.py", line 204, in __init__
+    self.init_patterns()
+  File "/Volumes/HD-PATU3/UCSF Bakar internship/git-fork/philter-ucsf-new/philter.py", line 300, in init_patterns
+    raise Exception("Config filepath does not exist", pattern["filepath"])
+Exception: ('Config filepath does not exist', 'filters/regex/addresses/lives_in_transformed.txt')
+(deidproj) NUS11097-10-pauburk:philter-ucsf-new pauburk$ python3 deidpipe.py -i ./data/i2b2_notes/ -f ./configs/philter_zeta.json
+read args
+In no args.mongo
+detecting PHI coordinates
+Initializing Philter
+Traceback (most recent call last):
+  File "deidpipe.py", line 178, in <module>
+    sys.exit(main())
+  File "deidpipe.py", line 105, in main
+    main_mongo(args)
+  File "deidpipe.py", line 124, in main_mongo
+    phitexts.detect_phi(args.filters, verbose=args.verbose)
+  File "/Volumes/HD-PATU3/UCSF Bakar internship/git-fork/philter-ucsf-new/phitexts.py", line 254, in detect_phi
+    self.filterer = Philter(philter_config)
+  File "/Volumes/HD-PATU3/UCSF Bakar internship/git-fork/philter-ucsf-new/philter.py", line 204, in __init__
+    self.init_patterns()
+  File "/Volumes/HD-PATU3/UCSF Bakar internship/git-fork/philter-ucsf-new/philter.py", line 300, in init_patterns
+    raise Exception("Config filepath does not exist", pattern["filepath"])
+Exception: ('Config filepath does not exist', 'filters/regex/addresses/county_name_transformed.txt')
+(deidproj) NUS11097-10-pauburk:philter-ucsf-new pauburk$ python3 deidpipe.py -i ./data/i2b2_notes/ -f ./configs/philter_zeta.json
+read args
+In no args.mongo
+detecting PHI coordinates
+Initializing Philter
+Traceback (most recent call last):
+  File "deidpipe.py", line 178, in <module>
+    sys.exit(main())
+  File "deidpipe.py", line 105, in main
+    main_mongo(args)
+  File "deidpipe.py", line 124, in main_mongo
+    phitexts.detect_phi(args.filters, verbose=args.verbose)
+  File "/Volumes/HD-PATU3/UCSF Bakar internship/git-fork/philter-ucsf-new/phitexts.py", line 254, in detect_phi
+    self.filterer = Philter(philter_config)
+  File "/Volumes/HD-PATU3/UCSF Bakar internship/git-fork/philter-ucsf-new/philter.py", line 204, in __init__
+    self.init_patterns()
+  File "/Volumes/HD-PATU3/UCSF Bakar internship/git-fork/philter-ucsf-new/philter.py", line 300, in init_patterns
+    raise Exception("Config filepath does not exist", pattern["filepath"])
+Exception: ('Config filepath does not exist', 'filters/regex/addresses/in_city_transformed.txt')
+(deidproj) NUS11097-10-pauburk:philter-ucsf-new pauburk$ python3 deidpipe.py -i ./data/i2b2_notes/ -f ./configs/philter_zeta.json
+read args
+In no args.mongo
+detecting PHI coordinates
+Initializing Philter
+Traceback (most recent call last):
+  File "deidpipe.py", line 178, in <module>
+    sys.exit(main())
+  File "deidpipe.py", line 105, in main
+    main_mongo(args)
+  File "deidpipe.py", line 124, in main_mongo
+    phitexts.detect_phi(args.filters, verbose=args.verbose)
+  File "/Volumes/HD-PATU3/UCSF Bakar internship/git-fork/philter-ucsf-new/phitexts.py", line 254, in detect_phi
+    self.filterer = Philter(philter_config)
+  File "/Volumes/HD-PATU3/UCSF Bakar internship/git-fork/philter-ucsf-new/philter.py", line 204, in __init__
+    self.init_patterns()
+  File "/Volumes/HD-PATU3/UCSF Bakar internship/git-fork/philter-ucsf-new/philter.py", line 300, in init_patterns
+    raise Exception("Config filepath does not exist", pattern["filepath"])
+Exception: ('Config filepath does not exist', 'filters/regex/addresses/city_transformed.txt')
+(deidproj) NUS11097-10-pauburk:philter-ucsf-new pauburk$ python3 deidpipe.py -i ./data/i2b2_notes/ -f ./configs/philter_zeta.json
+read args
+In no args.mongo
+detecting PHI coordinates
+Initializing Philter
+Traceback (most recent call last):
+  File "deidpipe.py", line 178, in <module>
+    sys.exit(main())
+  File "deidpipe.py", line 105, in main
+    main_mongo(args)
+  File "deidpipe.py", line 124, in main_mongo
+    phitexts.detect_phi(args.filters, verbose=args.verbose)
+  File "/Volumes/HD-PATU3/UCSF Bakar internship/git-fork/philter-ucsf-new/phitexts.py", line 254, in detect_phi
+    self.filterer = Philter(philter_config)
+  File "/Volumes/HD-PATU3/UCSF Bakar internship/git-fork/philter-ucsf-new/philter.py", line 204, in __init__
+    self.init_patterns()
+  File "/Volumes/HD-PATU3/UCSF Bakar internship/git-fork/philter-ucsf-new/philter.py", line 300, in init_patterns
+    raise Exception("Config filepath does not exist", pattern["filepath"])
+Exception: ('Config filepath does not exist', 'filters/regex/addresses/box_room_transformed.txt')
+(deidproj) NUS11097-10-pauburk:philter-ucsf-new pauburk$ python3 deidpipe.py -i ./data/i2b2_notes/ -f ./configs/philter_zeta.json
+read args
+In no args.mongo
+detecting PHI coordinates
+Initializing Philter
+Traceback (most recent call last):
+  File "deidpipe.py", line 178, in <module>
+    sys.exit(main())
+  File "deidpipe.py", line 105, in main
+    main_mongo(args)
+  File "deidpipe.py", line 124, in main_mongo
+    phitexts.detect_phi(args.filters, verbose=args.verbose)
+  File "/Volumes/HD-PATU3/UCSF Bakar internship/git-fork/philter-ucsf-new/phitexts.py", line 254, in detect_phi
+    self.filterer = Philter(philter_config)
+  File "/Volumes/HD-PATU3/UCSF Bakar internship/git-fork/philter-ucsf-new/philter.py", line 204, in __init__
+    self.init_patterns()
+  File "/Volumes/HD-PATU3/UCSF Bakar internship/git-fork/philter-ucsf-new/philter.py", line 300, in init_patterns
+    raise Exception("Config filepath does not exist", pattern["filepath"])
+Exception: ('Config filepath does not exist', 'filters/regex/addresses/room_box_transformed.txt')
+(deidproj) NUS11097-10-pauburk:philter-ucsf-new pauburk$ python3 deidpipe.py -i ./data/i2b2_notes/ -f ./configs/philter_zeta.json
+read args
+In no args.mongo
+detecting PHI coordinates
+Initializing Philter
+Traceback (most recent call last):
+  File "deidpipe.py", line 178, in <module>
+    sys.exit(main())
+  File "deidpipe.py", line 105, in main
+    main_mongo(args)
+  File "deidpipe.py", line 124, in main_mongo
+    phitexts.detect_phi(args.filters, verbose=args.verbose)
+  File "/Volumes/HD-PATU3/UCSF Bakar internship/git-fork/philter-ucsf-new/phitexts.py", line 254, in detect_phi
+    self.filterer = Philter(philter_config)
+  File "/Volumes/HD-PATU3/UCSF Bakar internship/git-fork/philter-ucsf-new/philter.py", line 204, in __init__
+    self.init_patterns()
+  File "/Volumes/HD-PATU3/UCSF Bakar internship/git-fork/philter-ucsf-new/philter.py", line 300, in init_patterns
+    raise Exception("Config filepath does not exist", pattern["filepath"])
+Exception: ('Config filepath does not exist', 'filters/regex/addresses/floor_box_transformed.txt')
+(deidproj) NUS11097-10-pauburk:philter-ucsf-new pauburk$ python3 deidpipe.py -i ./data/i2b2_notes/ -f ./configs/philter_zeta.json
+read args
+In no args.mongo
+detecting PHI coordinates
+Initializing Philter
+Traceback (most recent call last):
+  File "deidpipe.py", line 178, in <module>
+    sys.exit(main())
+  File "deidpipe.py", line 105, in main
+    main_mongo(args)
+  File "deidpipe.py", line 124, in main_mongo
+    phitexts.detect_phi(args.filters, verbose=args.verbose)
+  File "/Volumes/HD-PATU3/UCSF Bakar internship/git-fork/philter-ucsf-new/phitexts.py", line 254, in detect_phi
+    self.filterer = Philter(philter_config)
+  File "/Volumes/HD-PATU3/UCSF Bakar internship/git-fork/philter-ucsf-new/philter.py", line 204, in __init__
+    self.init_patterns()
+  File "/Volumes/HD-PATU3/UCSF Bakar internship/git-fork/philter-ucsf-new/philter.py", line 300, in init_patterns
+    raise Exception("Config filepath does not exist", pattern["filepath"])
+Exception: ('Config filepath does not exist', 'filters/regex/addresses/desk_#_transformed.txt')
+(deidproj) NUS11097-10-pauburk:philter-ucsf-new pauburk$ python3 deidpipe.py -i ./data/i2b2_notes/ -f ./configs/philter_zeta.json
+read args
+In no args.mongo
+detecting PHI coordinates
+Initializing Philter
+Traceback (most recent call last):
+  File "deidpipe.py", line 178, in <module>
+    sys.exit(main())
+  File "deidpipe.py", line 105, in main
+    main_mongo(args)
+  File "deidpipe.py", line 124, in main_mongo
+    phitexts.detect_phi(args.filters, verbose=args.verbose)
+  File "/Volumes/HD-PATU3/UCSF Bakar internship/git-fork/philter-ucsf-new/phitexts.py", line 254, in detect_phi
+    self.filterer = Philter(philter_config)
+  File "/Volumes/HD-PATU3/UCSF Bakar internship/git-fork/philter-ucsf-new/philter.py", line 204, in __init__
+    self.init_patterns()
+  File "/Volumes/HD-PATU3/UCSF Bakar internship/git-fork/philter-ucsf-new/philter.py", line 300, in init_patterns
+    raise Exception("Config filepath does not exist", pattern["filepath"])
+Exception: ('Config filepath does not exist', 'filters/regex/addresses/pharmacy_#_transformed.txt')
+(deidproj) NUS11097-10-pauburk:philter-ucsf-new pauburk$ python3 deidpipe.py -i ./data/i2b2_notes/ -f ./configs/philter_zeta.json
+read args
+In no args.mongo
+detecting PHI coordinates
+Initializing Philter
+Traceback (most recent call last):
+  File "deidpipe.py", line 178, in <module>
+    sys.exit(main())
+  File "deidpipe.py", line 105, in main
+    main_mongo(args)
+  File "deidpipe.py", line 124, in main_mongo
+    phitexts.detect_phi(args.filters, verbose=args.verbose)
+  File "/Volumes/HD-PATU3/UCSF Bakar internship/git-fork/philter-ucsf-new/phitexts.py", line 254, in detect_phi
+    self.filterer = Philter(philter_config)
+  File "/Volumes/HD-PATU3/UCSF Bakar internship/git-fork/philter-ucsf-new/philter.py", line 204, in __init__
+    self.init_patterns()
+  File "/Volumes/HD-PATU3/UCSF Bakar internship/git-fork/philter-ucsf-new/philter.py", line 300, in init_patterns
+    raise Exception("Config filepath does not exist", pattern["filepath"])
+Exception: ('Config filepath does not exist', 'filters/regex/addresses/at_address_noindicator_transformed.txt')
+(deidproj) NUS11097-10-pauburk:philter-ucsf-new pauburk$ python3 deidpipe.py -i ./data/i2b2_notes/ -f ./configs/philter_zeta.json
+read args
+In no args.mongo
+detecting PHI coordinates
+Initializing Philter
+Traceback (most recent call last):
+  File "deidpipe.py", line 178, in <module>
+    sys.exit(main())
+  File "deidpipe.py", line 105, in main
+    main_mongo(args)
+  File "deidpipe.py", line 124, in main_mongo
+    phitexts.detect_phi(args.filters, verbose=args.verbose)
+  File "/Volumes/HD-PATU3/UCSF Bakar internship/git-fork/philter-ucsf-new/phitexts.py", line 254, in detect_phi
+    self.filterer = Philter(philter_config)
+  File "/Volumes/HD-PATU3/UCSF Bakar internship/git-fork/philter-ucsf-new/philter.py", line 204, in __init__
+    self.init_patterns()
+  File "/Volumes/HD-PATU3/UCSF Bakar internship/git-fork/philter-ucsf-new/philter.py", line 300, in init_patterns
+    raise Exception("Config filepath does not exist", pattern["filepath"])
+Exception: ('Config filepath does not exist', 'filters/regex/addresses/number_cardinal_direction_transformed.txt')
+(deidproj) NUS11097-10-pauburk:philter-ucsf-new pauburk$ python3 deidpipe.py -i ./data/i2b2_notes/ -f ./configs/philter_zeta.json
+read args
+In no args.mongo
+detecting PHI coordinates
+Initializing Philter
+Traceback (most recent call last):
+  File "deidpipe.py", line 178, in <module>
+    sys.exit(main())
+  File "deidpipe.py", line 105, in main
+    main_mongo(args)
+  File "deidpipe.py", line 124, in main_mongo
+    phitexts.detect_phi(args.filters, verbose=args.verbose)
+  File "/Volumes/HD-PATU3/UCSF Bakar internship/git-fork/philter-ucsf-new/phitexts.py", line 254, in detect_phi
+    self.filterer = Philter(philter_config)
+  File "/Volumes/HD-PATU3/UCSF Bakar internship/git-fork/philter-ucsf-new/philter.py", line 204, in __init__
+    self.init_patterns()
+  File "/Volumes/HD-PATU3/UCSF Bakar internship/git-fork/philter-ucsf-new/philter.py", line 300, in init_patterns
+    raise Exception("Config filepath does not exist", pattern["filepath"])
+Exception: ('Config filepath does not exist', 'filters/regex/addresses/waiting_room_transformed.txt')
+(deidproj) NUS11097-10-pauburk:philter-ucsf-new pauburk$ python3 deidpipe.py -i ./data/i2b2_notes/ -f ./configs/philter_zeta.json
+read args
+In no args.mongo
+detecting PHI coordinates
+Initializing Philter
+Traceback (most recent call last):
+  File "deidpipe.py", line 178, in <module>
+    sys.exit(main())
+  File "deidpipe.py", line 105, in main
+    main_mongo(args)
+  File "deidpipe.py", line 124, in main_mongo
+    phitexts.detect_phi(args.filters, verbose=args.verbose)
+  File "/Volumes/HD-PATU3/UCSF Bakar internship/git-fork/philter-ucsf-new/phitexts.py", line 254, in detect_phi
+    self.filterer = Philter(philter_config)
+  File "/Volumes/HD-PATU3/UCSF Bakar internship/git-fork/philter-ucsf-new/philter.py", line 204, in __init__
+    self.init_patterns()
+  File "/Volumes/HD-PATU3/UCSF Bakar internship/git-fork/philter-ucsf-new/philter.py", line 300, in init_patterns
+    raise Exception("Config filepath does not exist", pattern["filepath"])
+Exception: ('Config filepath does not exist', 'filters/regex/addresses/state_indicator_transformed.txt')
+(deidproj) NUS11097-10-pauburk:philter-ucsf-new pauburk$ python3 deidpipe.py -i ./data/i2b2_notes/ -f ./configs/philter_zeta.json
+read args
+In no args.mongo
+detecting PHI coordinates
+Initializing Philter
+Traceback (most recent call last):
+  File "deidpipe.py", line 178, in <module>
+    sys.exit(main())
+  File "deidpipe.py", line 105, in main
+    main_mongo(args)
+  File "deidpipe.py", line 124, in main_mongo
+    phitexts.detect_phi(args.filters, verbose=args.verbose)
+  File "/Volumes/HD-PATU3/UCSF Bakar internship/git-fork/philter-ucsf-new/phitexts.py", line 254, in detect_phi
+    self.filterer = Philter(philter_config)
+  File "/Volumes/HD-PATU3/UCSF Bakar internship/git-fork/philter-ucsf-new/philter.py", line 204, in __init__
+    self.init_patterns()
+  File "/Volumes/HD-PATU3/UCSF Bakar internship/git-fork/philter-ucsf-new/philter.py", line 300, in init_patterns
+    raise Exception("Config filepath does not exist", pattern["filepath"])
+Exception: ('Config filepath does not exist', 'filters/regex/addresses/box_transformed.txt')
+(deidproj) NUS11097-10-pauburk:philter-ucsf-new pauburk$ python3 deidpipe.py -i ./data/i2b2_notes/ -f ./configs/philter_zeta.json
+read args
+In no args.mongo
+detecting PHI coordinates
+Initializing Philter
+Traceback (most recent call last):
+  File "deidpipe.py", line 178, in <module>
+    sys.exit(main())
+  File "deidpipe.py", line 105, in main
+    main_mongo(args)
+  File "deidpipe.py", line 124, in main_mongo
+    phitexts.detect_phi(args.filters, verbose=args.verbose)
+  File "/Volumes/HD-PATU3/UCSF Bakar internship/git-fork/philter-ucsf-new/phitexts.py", line 254, in detect_phi
+    self.filterer = Philter(philter_config)
+  File "/Volumes/HD-PATU3/UCSF Bakar internship/git-fork/philter-ucsf-new/philter.py", line 204, in __init__
+    self.init_patterns()
+  File "/Volumes/HD-PATU3/UCSF Bakar internship/git-fork/philter-ucsf-new/philter.py", line 300, in init_patterns
+    raise Exception("Config filepath does not exist", pattern["filepath"])
+Exception: ('Config filepath does not exist', 'filters/regex/addresses/room_#_transformed.txt')
+(deidproj) NUS11097-10-pauburk:philter-ucsf-new pauburk$ python3 deidpipe.py -i ./data/i2b2_notes/ -f ./configs/philter_zeta.json
+read args
+In no args.mongo
+detecting PHI coordinates
+Initializing Philter
+Traceback (most recent call last):
+  File "deidpipe.py", line 178, in <module>
+    sys.exit(main())
+  File "deidpipe.py", line 105, in main
+    main_mongo(args)
+  File "deidpipe.py", line 124, in main_mongo
+    phitexts.detect_phi(args.filters, verbose=args.verbose)
+  File "/Volumes/HD-PATU3/UCSF Bakar internship/git-fork/philter-ucsf-new/phitexts.py", line 254, in detect_phi
+    self.filterer = Philter(philter_config)
+  File "/Volumes/HD-PATU3/UCSF Bakar internship/git-fork/philter-ucsf-new/philter.py", line 204, in __init__
+    self.init_patterns()
+  File "/Volumes/HD-PATU3/UCSF Bakar internship/git-fork/philter-ucsf-new/philter.py", line 300, in init_patterns
+    raise Exception("Config filepath does not exist", pattern["filepath"])
+Exception: ('Config filepath does not exist', 'filters/regex/dates/dd_month_name_transformed.txt')
+(deidproj) NUS11097-10-pauburk:philter-ucsf-new pauburk$ python3 deidpipe.py -i ./data/i2b2_notes/ -f ./configs/philter_zeta.json
+read args
+In no args.mongo
+detecting PHI coordinates
+Initializing Philter
+Traceback (most recent call last):
+  File "deidpipe.py", line 178, in <module>
+    sys.exit(main())
+  File "deidpipe.py", line 105, in main
+    main_mongo(args)
+  File "deidpipe.py", line 124, in main_mongo
+    phitexts.detect_phi(args.filters, verbose=args.verbose)
+  File "/Volumes/HD-PATU3/UCSF Bakar internship/git-fork/philter-ucsf-new/phitexts.py", line 254, in detect_phi
+    self.filterer = Philter(philter_config)
+  File "/Volumes/HD-PATU3/UCSF Bakar internship/git-fork/philter-ucsf-new/philter.py", line 204, in __init__
+    self.init_patterns()
+  File "/Volumes/HD-PATU3/UCSF Bakar internship/git-fork/philter-ucsf-new/philter.py", line 300, in init_patterns
+    raise Exception("Config filepath does not exist", pattern["filepath"])
+Exception: ('Config filepath does not exist', 'filters/regex/dates/dd_mm_yyyy_transformed.txt')
+(deidproj) NUS11097-10-pauburk:philter-ucsf-new pauburk$ python3 deidpipe.py -i ./data/i2b2_notes/ -f ./configs/philter_zeta.json
+read args
+In no args.mongo
+detecting PHI coordinates
+Initializing Philter
+Traceback (most recent call last):
+  File "deidpipe.py", line 178, in <module>
+    sys.exit(main())
+  File "deidpipe.py", line 105, in main
+    main_mongo(args)
+  File "deidpipe.py", line 124, in main_mongo
+    phitexts.detect_phi(args.filters, verbose=args.verbose)
+  File "/Volumes/HD-PATU3/UCSF Bakar internship/git-fork/philter-ucsf-new/phitexts.py", line 254, in detect_phi
+    self.filterer = Philter(philter_config)
+  File "/Volumes/HD-PATU3/UCSF Bakar internship/git-fork/philter-ucsf-new/philter.py", line 204, in __init__
+    self.init_patterns()
+  File "/Volumes/HD-PATU3/UCSF Bakar internship/git-fork/philter-ucsf-new/philter.py", line 300, in init_patterns
+    raise Exception("Config filepath does not exist", pattern["filepath"])
+Exception: ('Config filepath does not exist', 'filters/regex/dates/mm_dd_yyyy_transformed.txt')
+(deidproj) NUS11097-10-pauburk:philter-ucsf-new pauburk$ python3 deidpipe.py -i ./data/i2b2_notes/ -f ./configs/philter_zeta.json
+read args
+In no args.mongo
+detecting PHI coordinates
+Initializing Philter
+Traceback (most recent call last):
+  File "deidpipe.py", line 178, in <module>
+    sys.exit(main())
+  File "deidpipe.py", line 105, in main
+    main_mongo(args)
+  File "deidpipe.py", line 124, in main_mongo
+    phitexts.detect_phi(args.filters, verbose=args.verbose)
+  File "/Volumes/HD-PATU3/UCSF Bakar internship/git-fork/philter-ucsf-new/phitexts.py", line 254, in detect_phi
+    self.filterer = Philter(philter_config)
+  File "/Volumes/HD-PATU3/UCSF Bakar internship/git-fork/philter-ucsf-new/philter.py", line 204, in __init__
+    self.init_patterns()
+  File "/Volumes/HD-PATU3/UCSF Bakar internship/git-fork/philter-ucsf-new/philter.py", line 300, in init_patterns
+    raise Exception("Config filepath does not exist", pattern["filepath"])
+Exception: ('Config filepath does not exist', 'filters/regex/dates/yy_mm_dd_transformed.txt')
+(deidproj) NUS11097-10-pauburk:philter-ucsf-new pauburk$ python3 deidpipe.py -i ./data/i2b2_notes/ -f ./configs/philter_zeta.json
+read args
+In no args.mongo
+detecting PHI coordinates
+Initializing Philter
+Traceback (most recent call last):
+  File "deidpipe.py", line 178, in <module>
+    sys.exit(main())
+  File "deidpipe.py", line 105, in main
+    main_mongo(args)
+  File "deidpipe.py", line 124, in main_mongo
+    phitexts.detect_phi(args.filters, verbose=args.verbose)
+  File "/Volumes/HD-PATU3/UCSF Bakar internship/git-fork/philter-ucsf-new/phitexts.py", line 254, in detect_phi
+    self.filterer = Philter(philter_config)
+  File "/Volumes/HD-PATU3/UCSF Bakar internship/git-fork/philter-ucsf-new/philter.py", line 204, in __init__
+    self.init_patterns()
+  File "/Volumes/HD-PATU3/UCSF Bakar internship/git-fork/philter-ucsf-new/philter.py", line 300, in init_patterns
+    raise Exception("Config filepath does not exist", pattern["filepath"])
+Exception: ('Config filepath does not exist', 'filters/regex/dates/mm_dd_yy_transformed.txt')
+(deidproj) NUS11097-10-pauburk:philter-ucsf-new pauburk$ python3 deidpipe.py -i ./data/i2b2_notes/ -f ./configs/philter_zeta.json
+read args
+In no args.mongo
+detecting PHI coordinates
+Initializing Philter
+Traceback (most recent call last):
+  File "deidpipe.py", line 178, in <module>
+    sys.exit(main())
+  File "deidpipe.py", line 105, in main
+    main_mongo(args)
+  File "deidpipe.py", line 124, in main_mongo
+    phitexts.detect_phi(args.filters, verbose=args.verbose)
+  File "/Volumes/HD-PATU3/UCSF Bakar internship/git-fork/philter-ucsf-new/phitexts.py", line 254, in detect_phi
+    self.filterer = Philter(philter_config)
+  File "/Volumes/HD-PATU3/UCSF Bakar internship/git-fork/philter-ucsf-new/philter.py", line 204, in __init__
+    self.init_patterns()
+  File "/Volumes/HD-PATU3/UCSF Bakar internship/git-fork/philter-ucsf-new/philter.py", line 300, in init_patterns
+    raise Exception("Config filepath does not exist", pattern["filepath"])
+Exception: ('Config filepath does not exist', 'filters/regex/dates/yyyy_mm_dd_transformed.txt')
+(deidproj) NUS11097-10-pauburk:philter-ucsf-new pauburk$ python3 deidpipe.py -i ./data/i2b2_notes/ -f ./configs/philter_zeta.json
+read args
+In no args.mongo
+detecting PHI coordinates
+Initializing Philter
+Traceback (most recent call last):
+  File "deidpipe.py", line 178, in <module>
+    sys.exit(main())
+  File "deidpipe.py", line 105, in main
+    main_mongo(args)
+  File "deidpipe.py", line 124, in main_mongo
+    phitexts.detect_phi(args.filters, verbose=args.verbose)
+  File "/Volumes/HD-PATU3/UCSF Bakar internship/git-fork/philter-ucsf-new/phitexts.py", line 254, in detect_phi
+    self.filterer = Philter(philter_config)
+  File "/Volumes/HD-PATU3/UCSF Bakar internship/git-fork/philter-ucsf-new/philter.py", line 204, in __init__
+    self.init_patterns()
+  File "/Volumes/HD-PATU3/UCSF Bakar internship/git-fork/philter-ucsf-new/philter.py", line 300, in init_patterns
+    raise Exception("Config filepath does not exist", pattern["filepath"])
+Exception: ('Config filepath does not exist', 'filters/regex/dates/mm_yyyy_transformed.txt')
+(deidproj) NUS11097-10-pauburk:philter-ucsf-new pauburk$ python3 deidpipe.py -i ./data/i2b2_notes/ -f ./configs/philter_zeta.json
+read args
+In no args.mongo
+detecting PHI coordinates
+Initializing Philter
+Traceback (most recent call last):
+  File "deidpipe.py", line 178, in <module>
+    sys.exit(main())
+  File "deidpipe.py", line 105, in main
+    main_mongo(args)
+  File "deidpipe.py", line 124, in main_mongo
+    phitexts.detect_phi(args.filters, verbose=args.verbose)
+  File "/Volumes/HD-PATU3/UCSF Bakar internship/git-fork/philter-ucsf-new/phitexts.py", line 254, in detect_phi
+    self.filterer = Philter(philter_config)
+  File "/Volumes/HD-PATU3/UCSF Bakar internship/git-fork/philter-ucsf-new/philter.py", line 204, in __init__
+    self.init_patterns()
+  File "/Volumes/HD-PATU3/UCSF Bakar internship/git-fork/philter-ucsf-new/philter.py", line 300, in init_patterns
+    raise Exception("Config filepath does not exist", pattern["filepath"])
+Exception: ('Config filepath does not exist', 'filters/regex/dates/dd_mm_transformed.txt')
+(deidproj) NUS11097-10-pauburk:philter-ucsf-new pauburk$ python3 deidpipe.py -i ./data/i2b2_notes/ -f ./configs/philter_zeta.json
+read args
+In no args.mongo
+detecting PHI coordinates
+Initializing Philter
+Traceback (most recent call last):
+  File "deidpipe.py", line 178, in <module>
+    sys.exit(main())
+  File "deidpipe.py", line 105, in main
+    main_mongo(args)
+  File "deidpipe.py", line 124, in main_mongo
+    phitexts.detect_phi(args.filters, verbose=args.verbose)
+  File "/Volumes/HD-PATU3/UCSF Bakar internship/git-fork/philter-ucsf-new/phitexts.py", line 254, in detect_phi
+    self.filterer = Philter(philter_config)
+  File "/Volumes/HD-PATU3/UCSF Bakar internship/git-fork/philter-ucsf-new/philter.py", line 204, in __init__
+    self.init_patterns()
+  File "/Volumes/HD-PATU3/UCSF Bakar internship/git-fork/philter-ucsf-new/philter.py", line 300, in init_patterns
+    raise Exception("Config filepath does not exist", pattern["filepath"])
+Exception: ('Config filepath does not exist', 'filters/regex/dates/mm_dd_transformed.txt')
+(deidproj) NUS11097-10-pauburk:philter-ucsf-new pauburk$ python3 deidpipe.py -i ./data/i2b2_notes/ -f ./configs/philter_zeta.json
+read args
+In no args.mongo
+detecting PHI coordinates
+Initializing Philter
+Traceback (most recent call last):
+  File "deidpipe.py", line 178, in <module>
+    sys.exit(main())
+  File "deidpipe.py", line 105, in main
+    main_mongo(args)
+  File "deidpipe.py", line 124, in main_mongo
+    phitexts.detect_phi(args.filters, verbose=args.verbose)
+  File "/Volumes/HD-PATU3/UCSF Bakar internship/git-fork/philter-ucsf-new/phitexts.py", line 254, in detect_phi
+    self.filterer = Philter(philter_config)
+  File "/Volumes/HD-PATU3/UCSF Bakar internship/git-fork/philter-ucsf-new/philter.py", line 204, in __init__
+    self.init_patterns()
+  File "/Volumes/HD-PATU3/UCSF Bakar internship/git-fork/philter-ucsf-new/philter.py", line 300, in init_patterns
+    raise Exception("Config filepath does not exist", pattern["filepath"])
+Exception: ('Config filepath does not exist', 'filters/regex/dates/mm_yy_transformed.txt')
+(deidproj) NUS11097-10-pauburk:philter-ucsf-new pauburk$ python3 deidpipe.py -i ./data/i2b2_notes/ -f ./configs/philter_zeta.json
+read args
+In no args.mongo
+detecting PHI coordinates
+Initializing Philter
+Traceback (most recent call last):
+  File "deidpipe.py", line 178, in <module>
+    sys.exit(main())
+  File "deidpipe.py", line 105, in main
+    main_mongo(args)
+  File "deidpipe.py", line 124, in main_mongo
+    phitexts.detect_phi(args.filters, verbose=args.verbose)
+  File "/Volumes/HD-PATU3/UCSF Bakar internship/git-fork/philter-ucsf-new/phitexts.py", line 254, in detect_phi
+    self.filterer = Philter(philter_config)
+  File "/Volumes/HD-PATU3/UCSF Bakar internship/git-fork/philter-ucsf-new/philter.py", line 204, in __init__
+    self.init_patterns()
+  File "/Volumes/HD-PATU3/UCSF Bakar internship/git-fork/philter-ucsf-new/philter.py", line 300, in init_patterns
+    raise Exception("Config filepath does not exist", pattern["filepath"])
+Exception: ('Config filepath does not exist', 'filters/regex/mrn_id/mixed_010.txt')

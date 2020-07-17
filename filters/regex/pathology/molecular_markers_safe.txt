@@ -1,0 +1,1 @@
+\b(("""+gene_symbols+r""")([I\-0-9]+)?[\s\-](expression|Expression|EXPRESSION|expressed|Expressed|EXPRESSED))\b

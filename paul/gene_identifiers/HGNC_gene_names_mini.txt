@@ -1,0 +1,99 @@
+HGNC ID	Status	Approved symbol	Approved name	Alias symbol	Previous name	Alias name	Previous symbol	Ensembl gene ID	Vega gene ID	NCBI gene ID	UCSC gene ID	IMGT gene symbol
+HGNC:5	Approved	A1BG	alpha-1-B glycoprotein					ENSG00000121410	OTTHUMG00000183507	1	uc002qsd.5
+HGNC:37133	Approved	A1BG-AS1	A1BG antisense RNA 1	FLJ23569	non-protein coding RNA 181		NCRNA00181	ENSG00000268895	OTTHUMG00000183508	503538	uc002qse.3
+HGNC:37133	Approved	A1BG-AS1	A1BG antisense RNA 1	FLJ23569	non-protein coding RNA 181		A1BGAS	ENSG00000268895	OTTHUMG00000183508	503538	uc002qse.3
+HGNC:37133	Approved	A1BG-AS1	A1BG antisense RNA 1	FLJ23569	non-protein coding RNA 181		A1BG-AS	ENSG00000268895	OTTHUMG00000183508	503538	uc002qse.3
+HGNC:37133	Approved	A1BG-AS1	A1BG antisense RNA 1	FLJ23569	A1BG antisense RNA (non-protein coding)		NCRNA00181	ENSG00000268895	OTTHUMG00000183508	503538	uc002qse.3
+HGNC:37133	Approved	A1BG-AS1	A1BG antisense RNA 1	FLJ23569	A1BG antisense RNA (non-protein coding)		A1BGAS	ENSG00000268895	OTTHUMG00000183508	503538	uc002qse.3
+HGNC:37133	Approved	A1BG-AS1	A1BG antisense RNA 1	FLJ23569	A1BG antisense RNA (non-protein coding)		A1BG-AS	ENSG00000268895	OTTHUMG00000183508	503538	uc002qse.3
+HGNC:37133	Approved	A1BG-AS1	A1BG antisense RNA 1	FLJ23569	A1BG antisense RNA 1 (non-protein coding)		NCRNA00181	ENSG00000268895	OTTHUMG00000183508	503538	uc002qse.3
+HGNC:37133	Approved	A1BG-AS1	A1BG antisense RNA 1	FLJ23569	A1BG antisense RNA 1 (non-protein coding)		A1BGAS	ENSG00000268895	OTTHUMG00000183508	503538	uc002qse.3
+HGNC:37133	Approved	A1BG-AS1	A1BG antisense RNA 1	FLJ23569	A1BG antisense RNA 1 (non-protein coding)		A1BG-AS	ENSG00000268895	OTTHUMG00000183508	503538	uc002qse.3
+HGNC:24086	Approved	A1CF	APOBEC1 complementation factor	ACF				ENSG00000148584	OTTHUMG00000018240	29974	uc057tgv.1
+HGNC:24086	Approved	A1CF	APOBEC1 complementation factor	ASP				ENSG00000148584	OTTHUMG00000018240	29974	uc057tgv.1
+HGNC:24086	Approved	A1CF	APOBEC1 complementation factor	ACF64				ENSG00000148584	OTTHUMG00000018240	29974	uc057tgv.1
+HGNC:24086	Approved	A1CF	APOBEC1 complementation factor	ACF65				ENSG00000148584	OTTHUMG00000018240	29974	uc057tgv.1
+HGNC:24086	Approved	A1CF	APOBEC1 complementation factor	APOBEC1CF				ENSG00000148584	OTTHUMG00000018240	29974	uc057tgv.1
+HGNC:7	Approved	A2M	alpha-2-macroglobulin	FWP007				ENSG00000175899	OTTHUMG00000150267	2	uc001qvk.2
+HGNC:7	Approved	A2M	alpha-2-macroglobulin	S863-7				ENSG00000175899	OTTHUMG00000150267	2	uc001qvk.2
+HGNC:7	Approved	A2M	alpha-2-macroglobulin	CPAMD5				ENSG00000175899	OTTHUMG00000150267	2	uc001qvk.2
+HGNC:27057	Approved	A2M-AS1	A2M antisense RNA 1		A2M antisense RNA 1 (non-protein coding)			ENSG00000245105	OTTHUMG00000168289	144571	uc009zgj.2
+HGNC:27057	Approved	A2M-AS1	A2M antisense RNA 1		A2M antisense RNA 1			ENSG00000245105	OTTHUMG00000168289	144571	uc009zgj.2
+HGNC:23336	Approved	A2ML1	alpha-2-macroglobulin like 1	FLJ25179	C3 and PZP-like, alpha-2-macroglobulin domain containing 9		CPAMD9	ENSG00000166535	OTTHUMG00000128499	144568	uc001quz.6
+HGNC:23336	Approved	A2ML1	alpha-2-macroglobulin like 1	p170	C3 and PZP-like, alpha-2-macroglobulin domain containing 9		CPAMD9	ENSG00000166535	OTTHUMG00000128499	144568	uc001quz.6
+HGNC:41022	Approved	A2ML1-AS1	A2ML1 antisense RNA 1		A2ML1 antisense RNA 1 (non-protein coding)			ENSG00000256661	OTTHUMG00000168273	100874108	uc058kxy.1
+HGNC:41523	Approved	A2ML1-AS2	A2ML1 antisense RNA 2		A2ML1 antisense RNA 2 (non-protein coding)			ENSG00000256904	OTTHUMG00000168274	106478979	uc058kyb.1
+HGNC:8	Approved	A2MP1	alpha-2-macroglobulin pseudogene 1		alpha-2-macroglobulin pseudogene		A2MP	ENSG00000256069	OTTHUMG00000168334	3
+HGNC:30005	Approved	A3GALT2	alpha 1,3-galactosyltransferase 2	IGBS3S	alpha 1,3-galactosyltransferase 2, pseudogene	iGb3 synthase	A3GALT2P	ENSG00000184389	OTTHUMG00000004125	127550	uc031plq.1
+HGNC:30005	Approved	A3GALT2	alpha 1,3-galactosyltransferase 2	IGB3S	alpha 1,3-galactosyltransferase 2, pseudogene	iGb3 synthase	A3GALT2P	ENSG00000184389	OTTHUMG00000004125	127550	uc031plq.1
+HGNC:30005	Approved	A3GALT2	alpha 1,3-galactosyltransferase 2	IGBS3S	alpha 1,3-galactosyltransferase 2, pseudogene	isoglobotriaosylceramide synthase	A3GALT2P	ENSG00000184389	OTTHUMG00000004125	127550	uc031plq.1
+HGNC:30005	Approved	A3GALT2	alpha 1,3-galactosyltransferase 2	IGB3S	alpha 1,3-galactosyltransferase 2, pseudogene	isoglobotriaosylceramide synthase	A3GALT2P	ENSG00000184389	OTTHUMG00000004125	127550	uc031plq.1
+HGNC:18149	Approved	A4GALT	alpha 1,4-galactosyltransferase (P blood group)	A14GALT	alpha 1,4-galactosyltransferase (globotriaosylceramide synthase, P blood group)	Gb3 synthase	P1	ENSG00000128274	OTTHUMG00000150744	53947	uc062ewl.1
+HGNC:18149	Approved	A4GALT	alpha 1,4-galactosyltransferase (P blood group)	A14GALT	P one antigen (P blood group)	Gb3 synthase	P1	ENSG00000128274	OTTHUMG00000150744	53947	uc062ewl.1
+HGNC:18149	Approved	A4GALT	alpha 1,4-galactosyltransferase (P blood group)	Gb3S	alpha 1,4-galactosyltransferase (globotriaosylceramide synthase, P blood group)	Gb3 synthase	P1	ENSG00000128274	OTTHUMG00000150744	53947	uc062ewl.1
+HGNC:18149	Approved	A4GALT	alpha 1,4-galactosyltransferase (P blood group)	Gb3S	P one antigen (P blood group)	Gb3 synthase	P1	ENSG00000128274	OTTHUMG00000150744	53947	uc062ewl.1
+HGNC:18149	Approved	A4GALT	alpha 1,4-galactosyltransferase (P blood group)	P(k)	alpha 1,4-galactosyltransferase (globotriaosylceramide synthase, P blood group)	Gb3 synthase	P1	ENSG00000128274	OTTHUMG00000150744	53947	uc062ewl.1
+HGNC:18149	Approved	A4GALT	alpha 1,4-galactosyltransferase (P blood group)	P(k)	P one antigen (P blood group)	Gb3 synthase	P1	ENSG00000128274	OTTHUMG00000150744	53947	uc062ewl.1
+HGNC:18149	Approved	A4GALT	alpha 1,4-galactosyltransferase (P blood group)	A14GALT	alpha 1,4-galactosyltransferase (globotriaosylceramide synthase, P blood group)	CD77 synthase	P1	ENSG00000128274	OTTHUMG00000150744	53947	uc062ewl.1
+HGNC:18149	Approved	A4GALT	alpha 1,4-galactosyltransferase (P blood group)	A14GALT	P one antigen (P blood group)	CD77 synthase	P1	ENSG00000128274	OTTHUMG00000150744	53947	uc062ewl.1
+HGNC:18149	Approved	A4GALT	alpha 1,4-galactosyltransferase (P blood group)	Gb3S	alpha 1,4-galactosyltransferase (globotriaosylceramide synthase, P blood group)	CD77 synthase	P1	ENSG00000128274	OTTHUMG00000150744	53947	uc062ewl.1
+HGNC:18149	Approved	A4GALT	alpha 1,4-galactosyltransferase (P blood group)	Gb3S	P one antigen (P blood group)	CD77 synthase	P1	ENSG00000128274	OTTHUMG00000150744	53947	uc062ewl.1
+HGNC:18149	Approved	A4GALT	alpha 1,4-galactosyltransferase (P blood group)	P(k)	alpha 1,4-galactosyltransferase (globotriaosylceramide synthase, P blood group)	CD77 synthase	P1	ENSG00000128274	OTTHUMG00000150744	53947	uc062ewl.1
+HGNC:18149	Approved	A4GALT	alpha 1,4-galactosyltransferase (P blood group)	P(k)	P one antigen (P blood group)	CD77 synthase	P1	ENSG00000128274	OTTHUMG00000150744	53947	uc062ewl.1
+HGNC:18149	Approved	A4GALT	alpha 1,4-galactosyltransferase (P blood group)	A14GALT	alpha 1,4-galactosyltransferase (globotriaosylceramide synthase, P blood group)	globotriaosylceramide synthase	P1	ENSG00000128274	OTTHUMG00000150744	53947	uc062ewl.1
+HGNC:18149	Approved	A4GALT	alpha 1,4-galactosyltransferase (P blood group)	A14GALT	P one antigen (P blood group)	globotriaosylceramide synthase	P1	ENSG00000128274	OTTHUMG00000150744	53947	uc062ewl.1
+HGNC:18149	Approved	A4GALT	alpha 1,4-galactosyltransferase (P blood group)	Gb3S	alpha 1,4-galactosyltransferase (globotriaosylceramide synthase, P blood group)	globotriaosylceramide synthase	P1	ENSG00000128274	OTTHUMG00000150744	53947	uc062ewl.1
+HGNC:18149	Approved	A4GALT	alpha 1,4-galactosyltransferase (P blood group)	Gb3S	P one antigen (P blood group)	globotriaosylceramide synthase	P1	ENSG00000128274	OTTHUMG00000150744	53947	uc062ewl.1
+HGNC:18149	Approved	A4GALT	alpha 1,4-galactosyltransferase (P blood group)	P(k)	alpha 1,4-galactosyltransferase (globotriaosylceramide synthase, P blood group)	globotriaosylceramide synthase	P1	ENSG00000128274	OTTHUMG00000150744	53947	uc062ewl.1
+HGNC:18149	Approved	A4GALT	alpha 1,4-galactosyltransferase (P blood group)	P(k)	P one antigen (P blood group)	globotriaosylceramide synthase	P1	ENSG00000128274	OTTHUMG00000150744	53947	uc062ewl.1
+HGNC:18149	Approved	A4GALT	alpha 1,4-galactosyltransferase (P blood group)	A14GALT	alpha 1,4-galactosyltransferase (globotriaosylceramide synthase, P blood group)	lactosylceramide 4-alpha-galactosyltransferase	P1	ENSG00000128274	OTTHUMG00000150744	53947	uc062ewl.1
+HGNC:18149	Approved	A4GALT	alpha 1,4-galactosyltransferase (P blood group)	A14GALT	P one antigen (P blood group)	lactosylceramide 4-alpha-galactosyltransferase	P1	ENSG00000128274	OTTHUMG00000150744	53947	uc062ewl.1
+HGNC:18149	Approved	A4GALT	alpha 1,4-galactosyltransferase (P blood group)	Gb3S	alpha 1,4-galactosyltransferase (globotriaosylceramide synthase, P blood group)	lactosylceramide 4-alpha-galactosyltransferase	P1	ENSG00000128274	OTTHUMG00000150744	53947	uc062ewl.1
+HGNC:18149	Approved	A4GALT	alpha 1,4-galactosyltransferase (P blood group)	Gb3S	P one antigen (P blood group)	lactosylceramide 4-alpha-galactosyltransferase	P1	ENSG00000128274	OTTHUMG00000150744	53947	uc062ewl.1
+HGNC:18149	Approved	A4GALT	alpha 1,4-galactosyltransferase (P blood group)	P(k)	alpha 1,4-galactosyltransferase (globotriaosylceramide synthase, P blood group)	lactosylceramide 4-alpha-galactosyltransferase	P1	ENSG00000128274	OTTHUMG00000150744	53947	uc062ewl.1
+HGNC:18149	Approved	A4GALT	alpha 1,4-galactosyltransferase (P blood group)	P(k)	P one antigen (P blood group)	lactosylceramide 4-alpha-galactosyltransferase	P1	ENSG00000128274	OTTHUMG00000150744	53947	uc062ewl.1
+HGNC:17968	Approved	A4GNT	alpha-1,4-N-acetylglucosaminyltransferase	alpha4GnT				ENSG00000118017	OTTHUMG00000159820	51146	uc003ers.2
+HGNC:1	Entry Withdrawn	A12M1	adenovirus-12 chromosome modification site 1C
+HGNC:2	Entry Withdrawn	A12M2	adenovirus-12 chromosome modification site 1A
+HGNC:3	Entry Withdrawn	A12M3	adenovirus-12 chromosome modification site 1B
+HGNC:4	Entry Withdrawn	A12M4	adenovirus-12 chromosome modification site 17
+HGNC:13666	Approved	AAAS	aladin WD repeat nucleoporin		achalasia, adrenocortical insufficiency, alacrimia (Allgrove, triple-A)	aladin		ENSG00000094914	OTTHUMG00000169729	8086	uc001scr.5
+HGNC:13666	Approved	AAAS	aladin WD repeat nucleoporin		achalasia, adrenocortical insufficiency, alacrimia	aladin		ENSG00000094914	OTTHUMG00000169729	8086	uc001scr.5
+HGNC:13666	Approved	AAAS	aladin WD repeat nucleoporin		achalasia, adrenocortical insufficiency, alacrimia (Allgrove, triple-A)	Allgrove, triple-A		ENSG00000094914	OTTHUMG00000169729	8086	uc001scr.5
+HGNC:13666	Approved	AAAS	aladin WD repeat nucleoporin		achalasia, adrenocortical insufficiency, alacrimia	Allgrove, triple-A		ENSG00000094914	OTTHUMG00000169729	8086	uc001scr.5
+HGNC:13666	Approved	AAAS	aladin WD repeat nucleoporin		achalasia, adrenocortical insufficiency, alacrimia (Allgrove, triple-A)	adracalin		ENSG00000094914	OTTHUMG00000169729	8086	uc001scr.5
+HGNC:13666	Approved	AAAS	aladin WD repeat nucleoporin		achalasia, adrenocortical insufficiency, alacrimia	adracalin		ENSG00000094914	OTTHUMG00000169729	8086	uc001scr.5
+HGNC:12	Entry Withdrawn	AABT	amino acid transport, beta
+HGNC:21298	Approved	AACS	acetoacetyl-CoA synthetase	FLJ12389		acyl-CoA synthetase family member 1		ENSG00000081760	OTTHUMG00000168550	65985	uc001uhc.4
+HGNC:21298	Approved	AACS	acetoacetyl-CoA synthetase	SUR-5		acyl-CoA synthetase family member 1		ENSG00000081760	OTTHUMG00000168550	65985	uc001uhc.4
+HGNC:21298	Approved	AACS	acetoacetyl-CoA synthetase	ACSF1		acyl-CoA synthetase family member 1		ENSG00000081760	OTTHUMG00000168550	65985	uc001uhc.4
+HGNC:18226	Approved	AACSP1	acetoacetyl-CoA synthetase pseudogene 1		acetoacetyl-CoA synthetase-like		AACSL	ENSG00000250420	OTTHUMG00000163584	729522
+HGNC:17	Approved	AADAC	arylacetamide deacetylase	DAC	arylacetamide deacetylase (esterase)			ENSG00000114771	OTTHUMG00000159876	13	uc003eze.4
+HGNC:17	Approved	AADAC	arylacetamide deacetylase	CES5A1	arylacetamide deacetylase (esterase)			ENSG00000114771	OTTHUMG00000159876	13	uc003eze.4
+HGNC:24427	Approved	AADACL2	arylacetamide deacetylase like 2	MGC72001				ENSG00000197953	OTTHUMG00000155914	344752	uc003ezc.4
+HGNC:50301	Approved	AADACL2-AS1	AADACL2 antisense RNA 1					ENSG00000242908	OTTHUMG00000159877	101928142
+HGNC:32037	Approved	AADACL3	arylacetamide deacetylase like 3	OTTHUMG00000001887				ENSG00000188984	OTTHUMG00000001887	126767	uc057ckc.1
+HGNC:32038	Approved	AADACL4	arylacetamide deacetylase like 4	OTTHUMG00000001889				ENSG00000204518	OTTHUMG00000001889	343066	uc001auf.3
+HGNC:50305	Approved	AADACP1	arylacetamide deacetylase pseudogene 1					ENSG00000240602	OTTHUMG00000159879	201651
+HGNC:17929	Approved	AADAT	aminoadipate aminotransferase	KATII		kynurenine aminotransferase II		ENSG00000109576	OTTHUMG00000160912	51166	uc032udw.1
+HGNC:17929	Approved	AADAT	aminoadipate aminotransferase	KAT2		kynurenine aminotransferase II		ENSG00000109576	OTTHUMG00000160912	51166	uc032udw.1
+HGNC:17929	Approved	AADAT	aminoadipate aminotransferase	KYAT2		kynurenine aminotransferase II		ENSG00000109576	OTTHUMG00000160912	51166	uc032udw.1
+HGNC:17929	Approved	AADAT	aminoadipate aminotransferase	KATII		L kynurenine/alpha aminoadipate aminotransferase		ENSG00000109576	OTTHUMG00000160912	51166	uc032udw.1
+HGNC:17929	Approved	AADAT	aminoadipate aminotransferase	KAT2		L kynurenine/alpha aminoadipate aminotransferase		ENSG00000109576	OTTHUMG00000160912	51166	uc032udw.1
+HGNC:17929	Approved	AADAT	aminoadipate aminotransferase	KYAT2		L kynurenine/alpha aminoadipate aminotransferase		ENSG00000109576	OTTHUMG00000160912	51166	uc032udw.1
+HGNC:25662	Approved	AAGAB	alpha and gamma adaptin binding protein	FLJ11506				ENSG00000103591	OTTHUMG00000172246	79719	uc002aqk.6
+HGNC:25662	Approved	AAGAB	alpha and gamma adaptin binding protein	p34				ENSG00000103591	OTTHUMG00000172246	79719	uc002aqk.6
+HGNC:19679	Approved	AAK1	AP2 associated kinase 1	KIAA1048				ENSG00000115977	OTTHUMG00000129648	22848	uc002sfp.3
+HGNC:19679	Approved	AAK1	AP2 associated kinase 1	DKFZp686K16132				ENSG00000115977	OTTHUMG00000129648	22848	uc002sfp.3
+HGNC:30205	Approved	AAMDC	adipogenesis associated Mth938 domain containing	PTD015	chromosome 11 open reading frame 67		C11orf67	ENSG00000087884	OTTHUMG00000166651	28971	uc058fuq.1
+HGNC:30205	Approved	AAMDC	adipogenesis associated Mth938 domain containing	FLJ21035	chromosome 11 open reading frame 67		C11orf67	ENSG00000087884	OTTHUMG00000166651	28971	uc058fuq.1
+HGNC:30205	Approved	AAMDC	adipogenesis associated Mth938 domain containing	CK067	chromosome 11 open reading frame 67		C11orf67	ENSG00000087884	OTTHUMG00000166651	28971	uc058fuq.1
+HGNC:18	Approved	AAMP	angio associated migratory cell protein					ENSG00000127837	OTTHUMG00000155202	14	uc002vhk.4
+HGNC:19	Approved	AANAT	aralkylamine N-acetyltransferase	SNAT	arylalkylamine N-acetyltransferase	serotonin N-acetyltransferase		ENSG00000129673	OTTHUMG00000180179	15	uc002jro.4
+HGNC:15886	Approved	AAR2	AAR2 splicing factor	bA234K24.2	chromosome 20 open reading frame 4		C20orf4	ENSG00000131043	OTTHUMG00000032380	25980	uc002xfc.4
+HGNC:15886	Approved	AAR2	AAR2 splicing factor	bA234K24.2	AAR2 splicing factor homolog (S. cerevisiae)		C20orf4	ENSG00000131043	OTTHUMG00000032380	25980	uc002xfc.4
+HGNC:15886	Approved	AAR2	AAR2 splicing factor	bA234K24.2	AAR2 splicing factor homolog		C20orf4	ENSG00000131043	OTTHUMG00000032380	25980	uc002xfc.4
+HGNC:33842	Approved	AARD	alanine and arginine rich domain containing protein	LOC441376	chromosome 8 open reading frame 85	Alanine and arginine-rich domain-containing protein	C8orf85	ENSG00000205002	OTTHUMG00000164961	441376	uc003yof.4
+HGNC:20	Approved	AARS1	alanyl-tRNA synthetase 1	CMT2N	alanyl-tRNA synthetase	alanine tRNA ligase 1, cytoplasmic	AARS	ENSG00000090861	OTTHUMG00000177042	16	uc002eyn.2
+HGNC:20	Approved	AARS1	alanyl-tRNA synthetase 1	AlaRS	alanyl-tRNA synthetase	alanine tRNA ligase 1, cytoplasmic	AARS	ENSG00000090861	OTTHUMG00000177042	16	uc002eyn.2
+HGNC:49894	Approved	AARS1P1	alanyl-tRNA synthetase 1 pseudogene 1		alanyl-tRNA synthetase pseudogene 1		AARSP1	ENSG00000249038	OTTHUMG00000161188	106480683
