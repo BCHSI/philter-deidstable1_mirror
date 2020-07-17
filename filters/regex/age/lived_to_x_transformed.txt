@@ -1,1 +1,0 @@
-\b(?<=lived to\s|LIVED TO\s)(***REMOVED***9***REMOVED******REMOVED***0-9***REMOVED***|***REMOVED***1***REMOVED******REMOVED***0-9***REMOVED******REMOVED***0-9***REMOVED***)\b

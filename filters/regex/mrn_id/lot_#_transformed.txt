@@ -1,1 +1,0 @@
-\b((?i)lot #\s?(: )?)***REMOVED***a-zA-Z0-9***REMOVED***+(\-***REMOVED***a-zA-Z0-9***REMOVED***+)?\b

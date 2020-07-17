@@ -1,1 +1,0 @@
-\b(?i)(your|the)\schild\b

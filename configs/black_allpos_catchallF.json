@@ -1,19 +1,17 @@
 ***REMOVED***
-
-	{
-		"title":"Blacklist",
-		"type":"set",
-		"exclude":true,
-		"filepath":"filters/blacklists/names_blacklist_allnames.json",
-		"pos":***REMOVED******REMOVED***,
-		"notes":"Names blacklist"
-	},	
-	{	
-    	"title":"No catchall",
-		"type":"regex",
-		"exclude":false,
-		"filepath":"filters/regex/catchall.txt",
-		"notes":"This should match anything, preventing the catchall"
-	}
-
+    {
+        "title": "Blacklist",
+        "type": "set",
+        "exclude": true,
+        "filepath": "filters/blacklists/names_blacklist_allnames.json",
+        "pos": ***REMOVED******REMOVED***,
+        "notes": "Names blacklist"
+    },
+    {
+        "title": "No catchall",
+        "type": "regex",
+        "exclude": false,
+        "filepath": "filters/regex/catchall.txt",
+        "notes": "This should match anything, preventing the catchall"
+    }
 ***REMOVED***

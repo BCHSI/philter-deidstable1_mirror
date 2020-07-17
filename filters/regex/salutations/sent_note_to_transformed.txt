@@ -1,1 +1,0 @@
-\b(?i)(?<=sent\snote\sto\s)***REMOVED***A-Z***REMOVED******REMOVED***a-zA-Z***REMOVED***+(\sat\s***REMOVED***A-Z***REMOVED******REMOVED***a-zA-Z***REMOVED***+)?\b

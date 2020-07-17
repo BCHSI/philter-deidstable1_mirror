@@ -1,1 +1,0 @@
-\b(?i)(?!of\shealth)((?<=state\sof\s)|(?<=state:\s)|(?<=state\s))***REMOVED***A-Z***REMOVED***{2}\b

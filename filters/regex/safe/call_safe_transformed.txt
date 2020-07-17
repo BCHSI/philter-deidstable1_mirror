@@ -1,1 +1,0 @@
-\b(?i)(call\s(the|from|back|about|for|your|me)|(please|to|phone)\scall)\b

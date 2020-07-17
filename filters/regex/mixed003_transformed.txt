@@ -1,1 +1,0 @@
-\b\d{4,}***REMOVED***a-zA-Z***REMOVED***{3,}\b

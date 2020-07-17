@@ -1,1 +1,0 @@
-(\d+***REMOVED***.***REMOVED***{1}\d+|\d+|\d+\s{1})(***REMOVED***mM***REMOVED******REMOVED***gG***REMOVED***)\s

@@ -1,19 +1,19 @@
 ***REMOVED***
-	
-	{
-		"title":"Combined Whitelist",
-		"type":"set",
-		"exclude":false,
-		"filepath":"filters/whitelists/white_combined.json",
-		"pos":***REMOVED***"NNP"***REMOVED***,
-		"notes":"This is the results of full whitelist - blacklist"
-	},
-	{	
-    	"title":"No catchall",
-		"type":"regex",
-		"exclude":true,
-		"filepath":"filters/regex/catchall.txt",
-		"notes":"This should match anything, preventing the catchall"
-	}
-
+    {
+        "title": "Combined Whitelist",
+        "type": "set",
+        "exclude": false,
+        "filepath": "filters/whitelists/white_combined.json",
+        "pos": ***REMOVED***
+            "NNP"
+        ***REMOVED***,
+        "notes": "This is the results of full whitelist - blacklist"
+    },
+    {
+        "title": "No catchall",
+        "type": "regex",
+        "exclude": true,
+        "filepath": "filters/regex/catchall.txt",
+        "notes": "This should match anything, preventing the catchall"
+    }
 ***REMOVED***

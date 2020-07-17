@@ -1,1 +1,0 @@
-\b((?<=(?i)confirmed\sby\s)|(?<=(?i)called\sby\s)|(?<=(?i)signed\sby\:\s)|(?<=(?i)printed\sby\s)|(?<=(?i)copied\sby\s)|(?<=(?i)performed\sby:\s))***REMOVED***A-Z***REMOVED******REMOVED***a-zA-Z***REMOVED***+(\s***REMOVED***A-Z***REMOVED***{1,2}(\.)?)?(\,)?(\s)?***REMOVED***A-Z***REMOVED******REMOVED***a-zA-Z***REMOVED***+(\s***REMOVED***A-Z***REMOVED***{1,2}(\.)?)?\b(\s\(\d+\))?

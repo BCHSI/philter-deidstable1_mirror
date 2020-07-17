@@ -1,1 +1,0 @@
-(?i)(?<!\/)(?<!age\s)(?<!age:\s)(?<!U #: )(?<!MRN:  )(?<!MRN: )(?<!\d{3}\-)\b(in\s)?\d+((\-|\sto\s)\d+)?\s(second(s)?|minute(s)?|day(s)|week(s)|month(s)|year(s)|times)\b(?!\savenue)(?!\save)(?!\sroad)(?!\sroute)(?!\sstreet)(?!\sstrt)(?!\sst)(?!\sstr)(?!\sstreets)

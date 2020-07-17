@@ -1,1 +1,0 @@
-\b(?<=(?i)editor\s)***REMOVED***A-Z***REMOVED******REMOVED***a-zA-Z***REMOVED***+(\,)?\s***REMOVED***A-Z***REMOVED******REMOVED***a-zA-Z***REMOVED***+\s\(\d+\)

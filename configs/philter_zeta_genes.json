@@ -14,6 +14,42 @@
         "notes": "This should remove anything with pattern MyChart"
     },
     {
+        "title": "gene symbols safe",
+        "type": "regex",
+        "exclude": false,
+        "filepath": "filters/regex/gene_symbols/gene_symbols_safe_03_transformed.txt",
+        "notes": "This should remove anything that matches a gene symbol"
+    },
+    {
+        "title": "staging terms safe",
+        "type": "set",
+        "exclude": false,
+        "filepath": "filters/whitelists/whitelist_staging_terms.json",
+        "pos": ***REMOVED******REMOVED***,
+        "notes": "These are words we beleive are safe"
+    },
+    {
+        "title": "cassette numbers safe",
+        "type": "regex",
+        "exclude": false,
+        "filepath": "filters/regex/pathology/cassette_numbers_safe.txt",
+        "notes": "This should remove anything that matches a cassette or slide number"
+    },
+    {
+        "title": "lymph nodes safe",
+        "type": "regex",
+        "exclude": false,
+        "filepath": "filters/regex/pathology/lymph_nodes_safe.txt",
+        "notes": "This should remove anything that matches a lymph node"
+    },
+    {
+        "title": "molecular markers safe",
+        "type": "regex",
+        "exclude": false,
+        "filepath": "filters/regex/pathology/molecular_markers_safe_transformed.txt",
+        "notes": "This should remove anything that matches a molecular marker"
+    },
+    {
         "title": "hospital safe",
         "type": "regex",
         "exclude": false,
@@ -1627,6 +1663,18 @@
         "phi_type": "DATE"
     },
     {
+        "title": "holidays",
+        "type": "regex",
+        "exclude": true,
+        "filepath": "filters/regex/dates/holidays_transformed.txt",
+        "notes": "This should remove anything with pattern holidays",
+        "pos": ***REMOVED***
+            "NNP"
+        ***REMOVED***,
+        "phi_type": "HOLIDAYS",
+        "comment": "Holidays"
+    },
+    {
         "title": "model number",
         "type": "regex",
         "exclude": true,
@@ -2272,7 +2320,7 @@
         "exclude": true,
         "filepath": "filters/regex/ucsf_regex/ucsf_sf.txt",
         "note": "",
-        "phi_type": "NAME"
+        "phi_type": "LOCATION"
     },
     {
         "title": "ucsf bay area",
@@ -2280,7 +2328,7 @@
         "exclude": true,
         "filepath": "filters/regex/ucsf_regex/ucsf_bay_area.txt",
         "note": "",
-        "phi_type": "NAME"
+        "phi_type": "LOCATION"
     },
     {
         "title": "ucsf neighborhoods",
@@ -2288,7 +2336,7 @@
         "exclude": true,
         "filepath": "filters/regex/ucsf_regex/ucsf_neighborhoods.txt",
         "note": "",
-        "phi_type": "NAME"
+        "phi_type": "LOCATION"
     },
     {
         "title": "month_name",
@@ -2365,6 +2413,14 @@
         "type": "set",
         "exclude": false,
         "filepath": "/data/shared/ucsf_whitelists/whitelist_plus_fps_091718_nonames.json",
+        "pos": ***REMOVED******REMOVED***,
+        "notes": "These are words we beleive are safe"
+    },
+    {
+        "title": "Gene symbols whitelist",
+        "type": "set",
+        "exclude": false,
+        "filepath": "filters/whitelists/whitelist_gene_symbols.json",
         "pos": ***REMOVED******REMOVED***,
         "notes": "These are words we beleive are safe"
     },
