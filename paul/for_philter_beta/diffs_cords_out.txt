@@ -1,0 +1,27 @@
+File name : './data/mimic_exnotes/original-notes/D15C396A0832C4.txt'
+Tag ***REMOVED***start, stop, word, phi-type***REMOVED*** : ***REMOVED***703 704 'W' 'OTHER'***REMOVED***
+
+File name : './data/mimic_exnotes/original-notes/D34EAA827737D2.txt'
+Tag ***REMOVED***start, stop, word, phi-type***REMOVED*** : ***REMOVED***1823 1824 'W' 'OTHER'***REMOVED***
+
+File name : './data/mimic_exnotes/original-notes/D34EAA827737D2.txt'
+Tag ***REMOVED***start, stop, word, phi-type***REMOVED*** : ***REMOVED***1830 1832 'IN' 'OTHER'***REMOVED***
+
+File name : './data/mimic_exnotes/original-notes/D4C06553B5682D.txt'
+Tag ***REMOVED***start, stop, word, phi-type***REMOVED*** : ***REMOVED***1180 1182 'ND' 'OTHER'***REMOVED***
+
+File name : './data/mimic_exnotes/original-notes/D638646CAC722B.txt'
+Tag ***REMOVED***start, stop, word, phi-type***REMOVED*** : ***REMOVED***1238 1240 'TO' 'OTHER'***REMOVED***
+
+File name : './data/mimic_exnotes/original-notes/D887C1DBD10EAC.txt'
+Tag ***REMOVED***start, stop, word, phi-type***REMOVED*** : ***REMOVED***2705 2707 'IS' 'OTHER'***REMOVED***
+
+File name : './data/mimic_exnotes/original-notes/DE162BCD3D40C7.txt'
+Tag ***REMOVED***start, stop, word, phi-type***REMOVED*** : ***REMOVED***380 382 'GI' 'OTHER'***REMOVED***
+
+File name : './data/mimic_exnotes/original-notes/DFB2116F6D554C.txt'
+Tag ***REMOVED***start, stop, word, phi-type***REMOVED*** : ***REMOVED***1041 1043 'IN' 'OTHER'***REMOVED***
+
+File name : './data/mimic_exnotes/original-notes/DFB2116F6D554C.txt'
+Tag ***REMOVED***start, stop, word, phi-type***REMOVED*** : ***REMOVED***1280 1282 'OF' 'OTHER'***REMOVED***
+
