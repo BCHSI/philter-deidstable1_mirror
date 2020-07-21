@@ -1,1 +1,1 @@
-\b((?i)[A-Z]\slevel(:)?\s)?((?i)room(:)?\s[a-z]+(\-)?\d+)\b
+(?i)\b((([A-Z]\s)?(level|lvl|floor|flr|fl|story|stry):?\s+[A-Z]?-?\d+\s)?(room|rm|suite|ste|apartment|aptment|apt)s?(\s+(number|num|nm)\.?)?:?(\,?\s+(and\s)?[A-Z]?-?\d+)+)\b

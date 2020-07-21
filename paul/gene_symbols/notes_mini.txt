@@ -1,0 +1,1000 @@
+"ROW_ID","SUBJECT_ID","HADM_ID","CHARTDATE","CHARTTIME","STORETIME","CATEGORY","DESCRIPTION","CGID","ISERROR","TEXT"
+174,22532,167853,2151-08-04,,,"Discharge summary","Report",,,"Admission Date:  [**2151-7-16**]       Discharge Date:  [**2151-8-4**]
+
+
+Service:
+ADDENDUM:
+
+RADIOLOGIC STUDIES:  Radiologic studies also included a chest
+CT, which confirmed cavitary lesions in the left lung apex
+consistent with infectious process/tuberculosis.  This also
+moderate-sized left pleural effusion.
+
+HEAD CT:  Head CT showed no intracranial hemorrhage or mass
+effect, but old infarction consistent with past medical
+history.
+
+ABDOMINAL CT:  Abdominal CT showed lesions of
+T10 and sacrum most likely secondary to osteoporosis. These can
+be followed by repeat imaging as an outpatient.
+
+
+
+                            [**First Name8 (NamePattern2) **] [**First Name4 (NamePattern1) 1775**] [**Last Name (NamePattern1) **], M.D.  [**MD Number(1) 1776**]
+
+Dictated By:[**Hospital 1807**]
+MEDQUIST36
+
+D:  [**2151-8-5**]  12:11
+T:  [**2151-8-5**]  12:21
+JOB#:  [**Job Number 1808**]
+"
+175,13702,107527,2118-06-14,,,"Discharge summary","Report",,,"Admission Date:  [**2118-6-2**]       Discharge Date:  [**2118-6-14**]
+
+Date of Birth:                    Sex:  F
+
+Service:  MICU and then to [**Doctor Last Name **] Medicine
+
+HISTORY OF PRESENT ILLNESS:  This is an 81-year-old female
+with a history of emphysema (not on home O2), who presents
+with three days of shortness of breath thought by her primary
+care doctor to be a COPD flare.  Two days prior to admission,
+she was started on a prednisone taper and one day prior to
+admission she required oxygen at home in order to maintain
+oxygen saturation greater than 90%.  She has also been on
+levofloxacin and nebulizers, and was not getting better, and
+presented to the [**Hospital1 18**] Emergency Room.
+
+In the [**Hospital3 **] Emergency Room, her oxygen saturation was
+100% on CPAP.  She was not able to be weaned off of this
+despite nebulizer treatment and Solu-Medrol 125 mg IV x2.
+
+Review of systems is negative for the following:  Fevers,
+chills, nausea, vomiting, night sweats, change in weight,
+gastrointestinal complaints, neurologic changes, rashes,
+palpitations, orthopnea.  Is positive for the following:
+Chest pressure occasionally with shortness of breath with
+exertion, some shortness of breath that is positionally
+related, but is improved with nebulizer treatment.
+
+PAST MEDICAL HISTORY:
+1. COPD.  Last pulmonary function tests in [**2117-11-3**]
+demonstrated a FVC of 52% of predicted, a FEV1 of 54% of
+predicted, a MMF of 23% of predicted, and a FEV1:FVC ratio of
+67% of predicted, that does not improve with bronchodilator
+treatment.  The FVC, however, does significantly improve with
+bronchodilator treatment consistent with her known reversible
+air flow obstruction in addition to an underlying restrictive
+ventilatory defect.  The patient has never been on home
+oxygen prior to this recent episode.  She has never been on
+steroid taper or been intubated in the past.
+2. Lacunar CVA.  MRI of the head in [**2114-11-4**]
+demonstrates ""mild degree of multiple small foci of high T2
+signal within the white matter of both cerebral hemispheres
+as well as the pons, in the latter region predominantly to
+the right of midline.  The abnormalities, while nonspecific
+in etiology, are most likely secondary to chronic
+microvascular infarction.  There is no mass, lesion, shift of
+the normal midline strictures or hydrocephalus.  The major
+vascular flow patterns are preserved.  There is moderate
+right maxillary, moderate bilateral ethmoid, mild left
+maxillary, minimal right sphenoid, and frontal sinus mucosal
+thickening.  These abnormalities could represent an allergic
+or some other type of inflammatory process.  Additionally
+noted is a moderately enlarged subtotally empty sella
+turcica"".
+3. Angina:  Most recent stress test was in [**2118-1-3**]
+going for four minutes with a rate pressure product of
+10,000, 64% of maximum predicted heart rate without evidence
+of ischemic EKG changes or symptoms.  The imaging portion of
+the study demonstrated no evidence of myocardial ischemia and
+a calculated ejection fraction of 84%.  The patient denies
+angina at rest and gets angina with walking a few blocks.
+Are alleviated by sublingual nitroglycerin.
+4. Hypothyroidism on Synthroid.
+5. Depression on Lexapro.
+6. Motor vehicle accident with head injury approximately 10
+years ago.
+
+MEDICATIONS ON ADMISSION:
+1. Hydrochlorothiazide 25 q.d.
+2. Prednisone 60 mg, 50 mg, 40 mg, 20 mg.
+3. Levofloxacin 500 mg q.d.
+4. Imdur 60 mg q.d.
+5. Synthroid 75 mcg q.d.
+6. Pulmicort nebulizer b.i.d.
+7. Albuterol nebulizer q.4. prn.
+8. Lexapro 10 mg q.d.
+9. Protonix 40 mg q.d.
+10. Aspirin 81 mg q.d.
+
+ALLERGIES:  Norvasc leads to lightheadedness and headache.
+
+FAMILY HISTORY:  Noncontributory.
+
+SOCIAL HISTORY:  Lives with her husband, Dr. [**Known lastname 1809**] an
+eminent Pediatric Neurologist at [**Hospital3 1810**].  The
+patient is a prior smoker, but has not smoked in over 10
+years.  She has no known alcohol use and she is a full code.
+
+PHYSICAL EXAM AT TIME OF ADMISSION:  Blood pressure 142/76,
+heart rate 100 and regular, respirations at 17-21, and 97%
+axillary temperature.  She was saturating at 100% on CPAP
+with dry mucous membranes.  An elderly female in no apparent
+distress.  Pupils are equal, round, and reactive to light and
+accommodation.  Extraocular movements are intact.  Oropharynx
+difficult to assess due to CPAP machine.  No evidence of
+jugular venous pressure, however, the strap from the CPAP
+machine obscures the neck exam.  Cranial nerves II through
+XII are grossly intact.  Neck is supple without
+lymphadenopathy.  Heart exam:  Tachycardic, regular, obscured
+by loud bilateral wheezing with increase in the expiratory
+phase as well as profuse scattered rhonchi throughout the
+lung fields.  Positive bowel sounds, soft, nontender,
+nondistended, obese, no masses.  Mild edema of the lower
+extremities without clubbing or cyanosis, no rashes.  There
+is a right hand hematoma.  Strength is assessed as [**5-9**] in the
+lower extremities, [**5-9**] in the upper extremities with a normal
+mental status and cognition.
+
+LABORATORY STUDIES:  White count 19, hematocrit 41, platelets
+300.  Chem-7:  127, 3.6, 88, 29, 17, 0.6, 143.  Troponin was
+negative.  CKs were negative times three.  Initial blood gas
+showed a pH of 7.4, pO2 of 66, pCO2 of 54.
+
+Chest x-ray demonstrates a moderate sized hiatal hernia,
+segmental atelectasis, left lower lobe infiltrate versus
+segmental atelectasis.
+
+EKG shows normal sinus rhythm at 113 beats per minute, normal
+axis, no evidence of ST-T wave changes.
+
+BRIEF SUMMARY OF HOSPITAL COURSE:
+1. COPD/dyspnea/pneumonia:  The patient was initially placed
+on an aggressive steroid taper and admitted to the Medical
+Intensive Care Unit due to her difficulty with oxygenation
+despite CPAP machine.  She was also given nebulizer
+treatments q.4h. as well as chest PT.  The nebulizers were
+increased to q.1h. due to the fact that she continued to have
+labored breathing.
+
+Due to persistent respiratory failure and labored breathing,
+the patient was intubated on [**2118-6-7**] in order to improve
+oxygenation, ventilation, and ability to suction.  A
+bronchoscopy was performed on [**2118-6-7**], which demonstrated
+marked narrowing of the airways with expiration consistent
+with tracheomalacia.
+
+On [**2118-6-9**], two silicone stents were placed, one in the left
+main stem (12 x 25 and one in the trachea 16 x 40) by Dr.
+[**First Name (STitle) **] [**Name (STitle) **] under rigid bronchoscopy with general anesthesia.
+
+On [**2118-6-11**], the patient was extubated to a cool mist shovel
+mask and her oxygen was titrated down to 2 liters nasal
+cannula at which time she was transferred to the medical
+floor.  On the medical floor, the steroids were weaned to off
+on [**2118-6-14**], and the patient was saturating at 97% on 2
+liters, 92% on room air.
+
+On [**2118-6-14**], the patient was seen again by the Interventional
+Pulmonology service, who agreed that she looked much improved
+and recommended that she go to pulmonary rehabilitation with
+followup within six weeks' time status post placement of
+stents in respiratory failure.
+
+2. Cardiovascular:  The patient was ruled out for a MI.  She
+did have another episode on the medical floor of chest pain,
+which showed no evidence of EKG changes and negative
+troponin, negative CKs x3.  She was continued on aspirin,
+Imdur, and diltiazem for rate control per her outpatient
+regimen.
+
+3. Hypertension:  She was maintained on diltiazem and
+hydrochlorothiazide with adequate blood pressure control and
+normalization of electrolytes.
+
+4. Hematuria:  The patient had intermittent hematuria likely
+secondary to Foley placement.  The Foley catheter was
+discontinued on [**2118-6-14**].  She had serial urinalyses, which
+were all negative for signs of infection.
+
+5. Hyperglycemia:  Patient was placed on insulin-sliding
+scale due to hyperglycemia, which was steroid induced.  This
+worked quite well and her glucose came back to normal levels
+once the steroids were tapered to off.
+
+6. Leukocytosis:  Patient did have a profound leukocytosis of
+20 to 22 during much of her hospital course.  As the steroids
+were tapered to off, her white blood cell count on [**2118-6-14**]
+was 15,000.  It was felt that the leukocytosis was secondary
+to both steroids as well as question of a left lower lobe
+pneumonia.
+
+7. For the left lower lobe pneumonia, the patient had
+initially received a course of levofloxacin 500 p.o. q.d.
+from [**2118-6-4**] to [**2118-6-10**].  This was restarted on [**2118-6-12**]
+for an additional seven day course given the fact that she
+still had the leukocytosis and still had marked rales at the
+left lower lobe.
+
+8. Hypothyroidism:  The patient was continued on outpatient
+medical regimen.
+
+9. Depression:  The patient was continued on Lexapro per
+outpatient regimen.  It is recommended that she follow up
+with a therapist as an outpatient due to the fact that she
+did have a blunted affect throughout much of the hospital
+course, and did appear clinically to be depressed.
+
+10. Prophylaxis:  She was maintained on proton-pump inhibitor
+with subQ Heparin.
+
+11. Sore throat:  The patient did have a sore throat for much
+of the hospital course post extubation.  This was treated
+with Cepacol lozenges as well as KBL liquid (a solution
+containing Kaopectate, Bismuth, and lidocaine) at bedtime.
+
+12. Communication/code status:  The patient was full code
+throughout her hospital course, and communication was
+maintained with the patient and her husband.
+
+13. Muscle weakness:  The patient did have profound muscle
+weakness and was evaluated by Physical Therapy, and was found
+to have impaired functional mobility, impaired
+musculoskeletal performance, impaired gas exchange, impaired
+endurance, impaired ventilation, and needed help with supine
+to sit.  However, she was able to tolerate sitting in a chair
+for approximately one hour.
+
+On motor exam, her flexors and extensors of the lower
+extremities were [**4-8**] at the knee, [**4-8**] at the ankle, [**4-8**] at
+the elbows, and [**4-8**] hips.  It was felt that this weakness was
+most likely due to a combination of steroid myopathy as well
+as muscle atrophy secondary to deconditioning after a
+prolonged hospital course.
+
+14. Speech/swallow:  The patient had a Speech and Swallow
+evaluation showing no evidence of dysphagia, no evidence of
+vocal cord damage status post tracheal stent placement.
+
+DISCHARGE CONDITION:  The patient was able to oxygenate on
+room air at 93% at the time of discharge.  She was profoundly
+weak, but was no longer tachycardic and had a normal blood
+pressure.  Her respirations were much improved albeit with
+transmitted upper airway sounds.
+
+DISCHARGE STATUS:  The patient will be discharged to [**Hospital1 **]
+for both pulmonary and physical rehabilitation.
+
+DISCHARGE MEDICATIONS:
+1. Levothyroxine 75 mcg p.o. q.d.
+2. Citalopram 10 mg p.o. q.d.
+3. Aspirin 81 mg p.o. q.d.
+4. Fluticasone 110 mcg two puffs inhaled b.i.d.
+5. Salmeterol Diskus one inhalation b.i.d.
+6. Acetaminophen 325-650 mg p.o. q.4-6h. prn.
+7. Ipratropium bromide MDI two puffs inhaled q.2h. prn.
+8. Albuterol 1-2 puffs inhaled q.2h. prn.
+9. Zolpidem tartrate 5 mg p.o. q.h.s. prn.
+10. Isosorbide dinitrate 10 mg p.o. t.i.d.
+11. Diltiazem 60 mg p.o. q.i.d.
+12. Pantoprazole 40 mg p.o. q.24h.
+13. Trazodone 25 mg p.o. q.h.s. prn.
+14. SubQ Heparin 5000 units subcutaneous b.i.d. until such
+time that the patient is able to get out of bed twice a day.
+15. Cepacol lozenges q.2h. prn.
+16. Levofloxacin 500 mg p.o. q.d. for a seven day course to
+be completed on [**2118-6-21**].
+17. Kaopectate/Benadryl/lidocaine 5 mL p.o. b.i.d. prn, not
+to be given around mealtimes for concern of dysphagia induced
+by lidocaine.
+18. Lorazepam 0.5-2 mg IV q.6h. prn.
+
+FOLLOW-UP PLANS:  The patient is recommended to followup with
+Dr. [**First Name4 (NamePattern1) **] [**Last Name (NamePattern1) 1407**], [**Telephone/Fax (1) 1408**] within two weeks of leaving
+of the hospital.  She is also recommended to followup with
+the Interventional Pulmonary service for followup status post
+stent placement.  She is also recommended to followup with a
+neurologist if her muscle weakness does not improve within
+one week on physical therapy with concern for steroid-induced
+myopathy.
+
+FINAL DIAGNOSES:
+1. Tracheomalacia status post tracheal and left main stem
+bronchial stent placement.
+2. Hypertension.
+3. Hypothyroidism.
+4. Restrictive lung defect.
+5. Depression.
+
+
+                     DR.[**Last Name (STitle) **],[**First Name3 (LF) **] 12-207
+
+
+Dictated By:[**Last Name (NamePattern1) 1811**]
+MEDQUIST36
+
+D:  [**2118-6-14**]  11:30
+T:  [**2118-6-14**]  11:33
+JOB#:  [**Job Number 1812**]
+"
+176,13702,167118,2119-05-25,,,"Discharge summary","Report",,,"Admission Date:  [**2119-5-4**]              Discharge Date:   [**2119-5-25**]
+
+
+Service: CARDIOTHORACIC
+
+Allergies:
+Amlodipine
+
+Attending:[**Last Name (NamePattern1) 1561**]
+Chief Complaint:
+81 yo F smoker w/ COPD, severe TBM, s/p tracheobronchoplasty [**5-5**]
+s/p perc trach [**5-13**]
+
+Major Surgical or Invasive Procedure:
+bronchoscopy 3/31,4/2,3,[**6-12**], [**5-17**], [**5-19**]
+s/p trachealplasty [**5-5**]
+percutaneous tracheostomy [**5-13**] after failed extubation
+down size trach on [**5-25**] to size 6 cuffless
+
+
+History of Present Illness:
+This 81 year old woman has a history of COPD. Over the past five
+
+years she has had progressive difficulties with her breathing.
+In
+[**2118-6-4**] she was admitted to [**Hospital1 18**] for respiratory failure
+due
+to a COPD exacerbation. Due to persistent hypoxemia, she
+required
+intubation and a eventual bronchoscopy on [**2118-6-9**] revealed marked
+
+narrowing of the airways on expiration consistent with
+tracheomalacia.
+She subsequently underwent placement of two
+silicone stents, one in the left main stem and one in the
+trachea. During the admission the patient had complaints of
+chest
+pain and ruled out for an MI. She was subsequently discharged to
+
+[**Hospital1 **] for physical and pulmonary rehab. Repeat bronchoscopy
+on
+[**2118-8-1**] revealed granulation tissue at the distal right lateral
+wall of the tracheal stent. There was significant malacia of the
+
+peripheral and central airways with complete collapse of the
+airways on coughing and forced expiration. Small nodules were
+also noted on the vocal cords. She has noticed improvement in
+her
+respiratory status, but most recently has been in discussion
+with Dr. [**First Name4 (NamePattern1) 951**] [**Last Name (NamePattern1) 952**] regarding possible tracheobronchial plasty
+
+with mesh. Tracheal stents d/c [**2119-4-19**] in anticipation of
+surgery.
+In terms of symptoms, she describes many years of intermittent
+chest pain that she describes as left sided and occurring at any
+
+time. Currently, she notices it about three times a week, and
+states that it seems to resolve after three nitroglycerin.
+She currently is dependent on oxygen and wears 1.5-2 liters
+around the clock. She has frequent coughing and brings up ""dark
+sputum"".
+
+
+
+Past Medical History:
+COPD flare [**6-7**] s/p intubation, s/p distal tracheal to Left Main
+Stem stents placed [**2118-6-9**]. Stents d/c'd [**2119-4-19**], CAD w/ atypical
+angina (LAD 30%, RCA 30%, EF 63%), ^chol, hypothyroidism, htn,
+hiatal hernia, lacunar CVA, s/p ped struck -> head injury & rib
+fx, depression
+PMH:
+COPD, s/p admit [**6-7**] for exacerbation requiring intubation
+tracheobronchomalacia, s/p bronchial stenting
+Large hiatal hernia
+Lacunar CVA
+Hypothyroidism by records in CCC, although patient denies and is
+
+not taking any medication
+Depression
+MVA, s/p head injury approximately 10 years ago
+Hypertension
+Hysterectomy
+
+
+Social History:
+Social History: The patient is married and worked as a clinical
+psychologist. Her husband is a pediatric neurologist at
+[**Hospital3 **]. They have several children, one of which is
+
+a nurse.
+
+
+Family History:
+Family History: (+) FHx CAD; Father with an MI in his 40's, died
+
+of a CVA at age 59
+
+
+Physical Exam:
+Admit H+P
+General-lovely 81 yr old feamle in NAD.
+Neuro- intermittently anxious, MAE, PERRLA, L eye ptosis,
+symetrical smile, gossly intact.
+HEENT-PERRLA, sclera anicteric, pharynx- no exud or erythema
+Resp-clear upper, diffuse ronchi, intermit exp wheezes
+Cor- RRR, No M, R, G
+Abd- soft, NT, ND, no masses. Slight protrusion at area of
+hiatal hernia
+Ext- no edema or clubbing
+
+Brief Hospital Course:
+82 y/o female admitted [**2119-5-4**] for consideration of
+tracheoplasty.
+Bronchoscopy done [**5-4**] confirming severe TBM. Underwent
+tracheoplasty [**5-5**], complicated by resp failure d/t mucous
+plugging, hypoxia requiring re-intubation resulting in prolonged
+ICU and hospital course. Also developed right upper extrem DVT
+from mid line.
+
+Pain- Epidural accidently d/c'd POD#1, pt briefly used dilaudid
+PCA intermittently w/ fair pain control. Pt required
+re-intubation for resp failure d/t secretions and PCA d/c at
+that time. Propofol for sedation while intubated. Sedation d/c'd
+[**5-12**] for weaning trial w/ ETT- failed trial. Trach [**5-13**]-weaning
+efforts as below. Minimal c/o pain since [**5-13**]. Presently pain
+free.
+
+Neuro- Initially intact- post op aggitation, inhibiting weaning
+efforts [**5-16**]. Psych eval [**5-18**]-Started on zyprexa and ativan w/
+improvement in anxiety. Presently A+Ox3- cooperative and lovely.
+
+Resp- Extubated POD#2 then required re-intub  [**5-7**] for hypoxia
+d/t poor cough and mucous plugging. SIMV/PS alt w/CMV at night
+x4-5d, with CPAP attempts during day.
+Bronchoscopy qd [**Date range (1) 1813**] for secretion management. Bronch [**5-9**]
+revealed swollen epiglottis, bronch [**5-10**] - good leak w/ ETT cuff
+deflated. Bronch [**5-13**] for eval/trach placement. Last bronch [**5-19**]
+w/ min secretions present, sputum sent.
+[**5-13**] perc trach done(#8 Portex- cuffed low pressure maintained to
+preserve tracheoplasty site). [**5-13**] CPAP15/peep5 initiated post
+trach placement. Weaning ongoing.  [**Date range (1) 1814**]- Aggressive weaning
+w/ increasing episodes of CPAP, progressing to Trach Mask.
+[**2033-5-20**]-Trach mask overnight w/ no episodes of SOB, or
+hemodynamic instability. Trach changed to #6 portex- capped and
+[**Last Name (un) 1815**] well x48hrs on 2LNP. productive cough. Aggressive PT as
+well w/ OOB > chair [**Hospital1 **]-tid to total 4-6hr qd. Ambulation
+~100-120 ft [**5-22**] w/ PT assist.
+
+ID- Vancomycin started post-op for graft prophylaxis. Fever
+spike [**2119-5-8**] w/ BAl & sputum sent> + MRSA. Vanco cont to [**4-7**]
+weeks post trachealplasty. Fever low grade [**5-12**], [**5-15**]> cultured-
+no new results. [**5-19**]- WBC 20.8 .
+
+Cardiac-Hypertension controlled w/ hydralazine IV, then d/c and
+cont controlled. HR 65-75 NSR. Avoiding B Blockers. Lasix 20mg
+IV qd.
+[**5-15**]- RUE redness and swelling at site of midline, RUE DVT by
+ultrasound, midline d/c; heparin gtt started and therapeutic
+range monitored. [**5-22**]  changed to Lovenox sq [**Hospital1 **]. Coags in good
+control [**5-23**] (48.2/13.8/1.2)
+Access- R midline placed [**2119-5-9**] for access- clotted [**2119-5-15**] and
+d/c'd.  RUE redness and swelling and DVT via ultrasound. [**5-15**]- L
+brachial PICC line placed- TPN resumed.
+
+GI-Large hiatal hernia- unable to place enteral feeding tube at
+bedside or underfluoro. Re-attempt [**5-17**] by EGD doboff tube
+placed distal esophagus, dislodged in 12hours and removed.
+
+Nutrition- PPN/TPN initiated [**2119-5-8**]- [**2119-5-25**]. PICC placed
+[**2119-5-15**]. Speech and Swallow eval [**5-22**]- rec change trach form #8
+to #6 Portex to allow improved epiglotis and oropharyngeal
+movement to assist w/ swallowing. Then re-eval.  Trach changed
+[**5-23**] to #6 cuffless portex trach. Passed repeat swallow eval and
+[**Last Name (un) 1815**] diet of regular solids w/ thin liquids- CHIN TUCK to
+swallow thin liquids. Give meds whole w/ apple sauce. WOULD
+RECOMMEND repeat video swallow eval in [**8-17**] days to possibly
+eliminate chin tuck- see page 3 referral.
+
+Endo- Hypothyroid, maintained on levoxyl.
+
+Muscu/Skel- OOB> chair 4-6hours/day, PT consulting.
+
+
+Medications on Admission:
+advair 250/50"", atrovent, imdur 60', lasix 40', lexapro 20',
+lipitor 10', prilosec 20', mucinex 600"", synthroid 75', detrol
+LA 4', ambien 5', trazadone 75', melatonin prn
+
+Discharge Medications:
+1. Albuterol Sulfate 0.083 % Solution Sig: One (1)  Inhalation
+Q6H (every 6 hours) as needed for wheezing.
+2. Ipratropium Bromide 0.02 % Solution Sig: One (1)  Inhalation
+Q6H (every 6 hours) as needed for wheezing.
+3. Fluticasone-Salmeterol 250-50 mcg/Dose Disk with Device Sig:
+One (1) Disk with Device Inhalation [**Hospital1 **] (2 times a day).
+4. Albuterol 90 mcg/Actuation Aerosol Sig: 1-2 Puffs Inhalation
+Q6H (every 6 hours) as needed.
+5. Ipratropium Bromide 18 mcg/Actuation Aerosol Sig: Two (2)
+Puff Inhalation QID (4 times a day).
+6. Acetaminophen 325 mg Tablet Sig: 1-2 Tablets PO Q4-6H (every
+4 to 6 hours) as needed.
+7. Sodium Chloride 0.65 % Aerosol, Spray Sig: [**2-5**] Sprays Nasal
+QID (4 times a day) as needed.
+8. Camphor-Menthol 0.5-0.5 % Lotion Sig: One (1) Appl Topical
+TID (3 times a day) as needed.
+9. Enoxaparin Sodium 60 mg/0.6mL Syringe Sig: One (1)
+Subcutaneous Q12H (every 12 hours).
+10. Trazodone HCl 50 mg Tablet Sig: 1.5 Tablets PO HS (at
+bedtime) as needed.
+11. Escitalopram Oxalate 10 mg Tablet Sig: Two (2) Tablet PO
+DAILY (Daily).
+12. Nystatin 100,000 unit/g Cream Sig: One (1) Appl Topical  [**Hospital1 **]
+(2 times a day).
+13. Pantoprazole Sodium 40 mg Tablet, Delayed Release (E.C.)
+Sig: One (1) Tablet, Delayed Release (E.C.) PO Q24H (every 24
+hours).
+14. Tolterodine Tartrate 2 mg Tablet Sig: One (1) Tablet PO BID
+(2 times a day).
+15. Levothyroxine Sodium 75 mcg Tablet Sig: One (1) Tablet PO
+DAILY (Daily).
+16. Heparin Lock Flush (Porcine) 100 unit/mL Syringe Sig: One
+(1) ML Intravenous  DAILY (Daily) as needed.
+
+
+Discharge Disposition:
+Extended Care
+
+Facility:
+[**Hospital3 7**] & Rehab Center - [**Hospital1 8**]
+
+Discharge Diagnosis:
+COPD, Coronary Artery Disease/atypical angina (LAD 30%, RCA 30%,
+EF 63%), hypercholesterolemia, hypothyroidism, Hypertension,
+hiatal hernia, Cerebral Vascular Accident,s/p Motor Vehicle
+Colision-> head injury & rib fracture.
+TBM- s/p tracheoplasty.
+
+
+Discharge Condition:
+good
+
+Discharge Instructions:
+please update Dr.[**Name (NI) 1816**] [**Telephone/Fax (1) 170**] office for:  fever,
+shortness of breath, chest pain , productive cough or if you
+have any questions or concerns.
+
+
+Completed by:[**2119-5-25**]"
+177,13702,196489,2124-08-18,,,"Discharge summary","Report",,,"Admission Date:  [**2124-7-21**]              Discharge Date:   [**2124-8-18**]
+
+
+Service: MEDICINE
+
+Allergies:
+Amlodipine
+
+Attending:[**First Name3 (LF) 898**]
+Chief Complaint:
+COPD exacerbation/Shortness of Breath
+
+Major Surgical or Invasive Procedure:
+Intubation
+arterial line placement
+PICC line placement
+Esophagogastroduodenoscopy
+
+
+History of Present Illness:
+87 yo F with h/o CHF, COPD on 5 L oxygen at baseline,
+tracheobronchomalacia s/p stent, presents with acute dyspnea
+over several days, and lethargy. This morning patient developed
+an acute worsening in dyspnea, and called EMS. EMS found patient
+tachypnic at saturating 90% on 5L. Patient was noted to be
+tripoding. She was given a nebulizer and brought to the ER.
+.
+According the patient's husband, she was experiencing symptoms
+consistent with prior COPD flares. Apparently patient was
+without cough, chest pain, fevers, chills, orthopnea, PND,
+dysuria, diarrhea, confusion and neck pain. Her husband is a
+physician and gave her a dose of levaquin this morning.
+.
+In the ED, patient was saturating 96% on NRB. CXR did not reveal
+any consolidation. Per report EKG was unremarkable. Laboratory
+evaluation revealed a leukocytosis if 14 and lactate of 2.2.
+Patient received combivent nebs, solumedrol 125 mg IV x1,
+aspirin 325 mg po x1. Mg sulfate 2 g IV x1, azithromycin 500 mg
+IVx1, levofloxacin 750 mg IVx1, and Cefrtiaxone 1g IVx1. Patient
+became tachpnic so was trialed on non-invasive ventilation but
+became hypotensive to systolics of 80, so noninvasive was
+removed and patient did well on NRB and nebulizers for about 2
+hours. At that time patient became agitated, hypoxic to 87% and
+tachypnic to the 40s, so patient was intubated. Post intubation
+ABG was 7.3/60/88/31. Propafol was switched to
+fentanyl/midazolam for hypotension to the 80s. Received 2L of
+NS. On transfer, patient VS were 102, 87/33, 100% on 60% 450 x
+18 PEEP 5. Patient has peripheral access x2.
+.
+In the ICU, patient appeared comfortable.
+
+Review of sytems:
+limited due to patient sedation
+
+
+Past Medical History:
+# COPD flare FEV1 40% in [**2120**], on 5L oxygen, s/p intubation
+[**6-6**], s/p distal tracheal to Left Main Stem stents placed
+[**2118-6-9**]. Stents d/c'd [**2119-4-19**]. Tracheobronchoplasty performed [**6-6**], [**2119**]
+# CAD w/ atypical angina (cath [**2119**] - LAD 30%, RCA 30%, EF 63%)
+# Dyslipidemia
+# Hypothyroidism,
+# Hypertension
+# Hiatal hernia,
+# lacunar CVA,
+# s/p ped struck -> head injury & rib fx,
+# depression
+
+Social History:
+The patient is married and worked as a clinical
+psychologist. Her husband is a pediatric neurologist at
+[**Hospital3 **]. They have several children, one of which is
+a nurse. [**First Name (Titles) 1817**] [**Last Name (Titles) 1818**] with 40 pack years, quit 5 years ago.
+Social ethanol user. No history of IVDU, but remote history of
+marijuana use.
+
+Family History:
+(+) FHx CAD; Father with an MI in his 40's, died
+of a CVA at age 59
+
+Physical Exam:
+On admission
+Vitals: T: BP: 116/46 P: 92 O2: 100%
+TV 60% 450 x 18 PEEP 5
+General: Intubated, sedated, no apparent discomfort
+HEENT: Sclera anicteric, MMM, oropharynx clear
+Neck: supple, JVP not elevated, no LAD
+Lungs: crackles bases bilaterally
+CV: Regular rate and rhythm, normal S1 + S2, no murmurs, rubs,
+gallops
+Abdomen: soft, non-tender, non-distended, bowel sounds present,
+no rebound tenderness or guarding, no organomegaly
+GU: no foley
+Ext: warm, well perfused, 2+ pulses, no clubbing, cyanosis or
+edema
+
+
+Pertinent Results:
+Initial Labs
+[**2124-7-21**] 10:55AM BLOOD WBC-14.1*# RBC-4.20# Hgb-12.6# Hct-39.1#
+MCV-93 MCH-30.1 MCHC-32.3 RDW-12.6 Plt Ct-319
+[**2124-7-21**] 10:55AM BLOOD Neuts-93.9* Lymphs-4.4* Monos-1.3*
+Eos-0.2 Baso-0.2
+[**2124-7-22**] 03:50AM BLOOD PT-11.0 PTT-28.7 INR(PT)-0.9
+[**2124-7-21**] 10:55AM BLOOD Glucose-168* UreaN-13 Creat-0.8 Na-140
+K-3.5 Cl-92* HCO3-36* AnGap-16
+[**2124-7-22**] 03:50AM BLOOD Calcium-8.8 Phos-3.4 Mg-2.1
+
+Cardiac Biomarkers
+[**2124-7-21**] 10:55AM BLOOD CK(CPK)-321* cTropnT-0.02*
+[**2124-7-21**] 06:25PM BLOOD CK(CPK)-345* CK-MB-14* MB Indx-4.1
+cTropnT-0.01
+[**2124-7-22**] 03:50AM BLOOD CK(CPK)-845* CK-MB-15* MB Indx-1.8
+cTropnT-0.01
+[**2124-7-22**] 12:04PM BLOOD CK(CPK)-1030* CK-MB-15* MB Indx-1.5
+cTropnT-0.01
+[**2124-7-23**] 03:15AM BLOOD CK(CPK)-530* CK-MB-9 cTropnT-0.01
+proBNP-2535*
+
+CXR ([**2124-7-21**]) - IMPRESSION: Hiatal hernia, otherwise
+unremarkable. Limited exam.
+
+Echo ([**2124-7-24**]) - There is mild symmetric left ventricular
+hypertrophy with normal cavity size and regional/global systolic
+function (LVEF>55%). The estimated cardiac index is normal
+(>=2.5L/min/m2). Tissue Doppler imaging suggests an increased
+left ventricular filling pressure (PCWP>18mmHg). Right
+ventricular chamber size is normal. with normal free wall
+contractility. The aortic valve leaflets (3) are mildly
+thickened but aortic stenosis is not present. No aortic
+regurgitation is seen. The mitral valve leaflets are mildly
+thickened. There is no mitral valve prolapse. Mild (1+) mitral
+regurgitation is seen. The tricuspid valve leaflets are mildly
+thickened. There is moderate pulmonary artery systolic
+hypertension. There is an anterior space which most likely
+represents a prominent fat pad.
+IMPRESSION: Normal biventricular systolic function. Moderate
+pulmonary artery systolic hypertension.
+
+CXR ([**2124-8-5**]) - Kyphotic positioning. Compared with one day
+earlier and allowing for technical differences, the right-sided
+effusion may be slightly larger. Otherwise, no significant
+change is detected. Again seen is retrocardiac opacity
+consistent with left lower lobe collapse and/or consolidation
+and a small left effusion. As noted, a right effusion is again
+seen, possibly slightly larger on the current examination, with
+underlying collapse and/or consolidation. Doubt CHF.
+Degenerative changes of the thoracic spine are noted.
+
+Cardiac Enzymes [**2124-8-12**]: Trop<0.01
+                [**2124-8-13**]: Trop 0.03
+                [**2124-8-14**]: Trop 0.02
+
+LABS AT DISCHARGE:
+
+[**2124-8-16**] 05:40AM BLOOD WBC-9.5 RBC-3.08* Hgb-9.6* Hct-28.3*
+MCV-92 MCH-31.2 MCHC-33.9 RDW-13.5 Plt Ct-360
+[**2124-8-16**] 05:40AM BLOOD PT-10.4 PTT-22.8 INR(PT)-0.8*
+[**2124-8-17**] 05:30AM BLOOD Glucose-114* UreaN-18 Creat-0.8 Na-142
+K-3.5 Cl-101 HCO3-36* AnGap-9
+[**2124-8-16**] 05:40AM BLOOD Calcium-8.9 Phos-2.8 Mg-2.3
+[**2124-8-16**] 05:40AM BLOOD TSH-0.87
+
+Brief Hospital Course:
+87 yo F with h/o CHF, COPD on 5 L oxygen at baseline,
+tracheobronchomalacia s/p stent, presents with acute dyspnea
+over several days, no s/p intubation for hypercarbic respiratory
+failure.
+
+# Hypercarbic respiratory failure: Presents with dyspnea, but no
+clear cough or fevers. Per report, patient felt like this with
+prior COPD exacerbations. Leukocytosis supports possible
+pneumonia, but history and CXR not entirely consistent with
+this. EKG with signs of demand, but ROMI negative. Sputum gram
+stain unremarkable, but respitatory viral culture grew
+parainfluenze type 3 on [**7-24**]. Patient was initially managed on
+solumedrol 60 mg IV Q8H, and was eventually tapered. With no
+evidence of pneumonia on CXR and sputum gram stain, antibiotics
+were stopped [**7-25**]. Beta-agonists and anticholinergics were
+continued around the clock. TTE revealed mild symmetric lvh with
+normal ef, increased pcwp (>18mmHg), Normal RV, and moderate
+pulmonary artery systolic hypertension. On [**7-26**], bronchoscopy
+revealed collapsible, unremarkable airways. Patient had
+difficulty weaning from the vent, and would become
+interimittenty hypertensive to SBP 200s and tachypnic to the
+50s. Patient was extubatied on [**7-27**] after passing SBT 0/5, but
+required re-intubation 30 minutes later for worsening
+secretions, lack of gag reflex, and tachypnea to the 50s. Of
+note, on [**8-1**], the patient was found to have MRSA growing in
+sputum samples. Although it was felt that this likely
+represented colonization as opposed to true infection, the
+patient was started on a course of vancomycin (which was stopped
+after 5 days). After multiple discussions between the patient's
+family and the ICU team, the patient's PCP, [**Name10 (NameIs) **] the palliative
+care service, the patient's family ultimately decided that she
+would not want a tracheostomy. On [**2124-8-3**], extubation was pursued
+again and was successful. After extubation, her respiratory
+status improved and she was ultimately called out to the medical
+floor. On the floor she was progressively weaned to 2LNC with
+nebs (better than her baseline 5L @home). Because of clinical
+exams revealing mild volume overload, she was intermittently
+diuresed. She also experienced intermittent shortness of breath
+with tachypnea but this was thought to be the result of attacks
+of anxiety with tachypnea. After receiving prn morphine, her
+breathing status would typically improve. A steroid taper was
+begun. The patient should continue prednisone 30 mg daily for 3
+more days, then 20 mg daily for 4 days, then 10 mg daily for 4
+days, then 5 mg daily for 4 days, then stop.
+.
+# Upper GI bleeding: On [**7-22**], patient had coffee grounds from OG
+tube. Lavage for approx 600ccs with clearance. GI perfomred EGD
+which revealed esophagitis, ulcers and blood in the stomach
+body, D2 diverticulum and large hiatal hernia. H pylori was
+negative. Patient was continued on IV PPI, with plan for repeat
+EGD in 8 weeks, and upper GI series once clinically improved
+given abnormal anatomy on EGD. Her hematocrit remained stable
+with no further episodes of upper GI bleeding throughout the
+patient's hospitalization. On the floor she was switched to PO
+pantoprazole twice daily. Aspirin was held.
+.
+# Weakness: The patient was found to have generalized weakness
+at the end of her hospitalization. Neurology was consulted and
+they felt it was likely due to a combination of steroid myopathy
+and deconditioning from her prolonged bedbound status. A TSH was
+checked which was normal. They recommended pulmonary and
+physical rehab.
+.
+# CAD: History of LAD and RCA stenosis on Cath, but no stents.
+Continued statin and beta blocker, but held aspirin for GI
+bleeding (see above)
+.
+# Nutrition: Unable to pass NG without direct visualization due
+to hiatal hernia. IR guided post pyloric NG tube was placed on
+[**7-26**] for TFs and po medications. NG tube was pulled when patient
+was extubated on [**2124-8-3**]. Speech and swallow were consulted
+following the patient's extubation and she was eventually moved
+to soft solids and thin liquids with 1:1 supervision.
+
+# Goals of care: PCP [**Last Name (NamePattern4) **]. [**Last Name (STitle) 1407**] was very involved in discussions
+regarding patient's code status. Palliative care also followed
+along with the patient. Ultimately, at the time of the patient's
+extubation on [**2124-8-3**], it was decided that the patient would be
+DNR/DNI (although this was later change). The patient's family
+felt that she would not want a tracheostomy. It was decided that
+she would not be reintubated and that, if her respiratory status
+were to worsen after intubation, care would be focused on
+comfort. However, her status improved in the MICU and on the
+floor and it was then decided that she would remain DNR with
+intubation (but no tracheostomy) if her breathing deteriorated.
+After several days with stable or improved overall clinical
+status, she was deemed suitable for rehabilitation. At the timem
+of discharge, the patient's code status was do not resuscitate,
+okay to intubate.
+
+Medications on Admission:
+# Omeprazole 20 mg daily
+# Furosemide 20 mg daily
+# Toprol XL 50 mg daily
+# Lipitor 20 mg daily
+# Folic Acid 1 mg daily
+# Centrum daily
+# Diovan 80 mg daily
+# Trazodone 75-100 mg qhs
+# Melatonin 3 mg qhs
+# [**Doctor Last Name 1819**] Aspirin 325 mg daily
+# Albuterol neb prn
+# Duoneb prn
+# Advair 250/50 [**Hospital1 **]
+# Zolpidem 2.5 mg qhs prn
+# Synthroid 100 mcg daily
+# Lexapro 20 mg daily
+
+
+Discharge Medications:
+1. Metoprolol Succinate 50 mg Tablet Sustained Release 24 hr
+Sig: One (1) Tablet Sustained Release 24 hr PO once a day.
+2. Atorvastatin 20 mg Tablet Sig: One (1) Tablet PO DAILY
+(Daily).
+3. Folic Acid 1 mg Tablet Sig: One (1) Tablet PO DAILY (Daily).
+
+4. Multivitamin     Tablet Sig: One (1) Tablet PO DAILY (Daily).
+
+5. Trazodone 50 mg Tablet Sig: One (1) Tablet PO at bedtime as
+needed for insomnia.
+6. Melatonin 3 mg Tablet Sig: One (1) Tablet PO at bedtime.
+7. Valsartan 160 mg Tablet Sig: 1.5 Tablets PO once a day.
+8. Albuterol Sulfate 2.5 mg /3 mL (0.083 %) Solution for
+Nebulization Sig: One (1) neb Inhalation every 4-6 hours as
+needed for shortness of breath or wheezing.
+9. DuoNeb 0.5 mg-3 mg(2.5 mg base)/3 mL Solution for
+Nebulization Sig: One (1) neb Inhalation every six (6) hours as
+needed for shortness of breath or wheezing.
+10. Fluticasone-Salmeterol 250-50 mcg/Dose Disk with Device Sig:
+One (1) puff Inhalation twice a day.
+11. Escitalopram 10 mg Tablet Sig: Two (2) Tablet PO DAILY
+(Daily).
+12. Levothyroxine 100 mcg Tablet Sig: One (1) Tablet PO DAILY
+(Daily).
+13. Prednisone 20 mg Tablet Sig: One (1) Tablet PO daily () for
+4 days: Start after 3 days of 30 mg daily.
+14. Prednisone 10 mg Tablet Sig: One (1) Tablet PO daily () for
+4 days: Start after 4 days of 20 mg daily.
+15. Prednisone 5 mg Tablet Sig: One (1) Tablet PO daily () for 4
+days: Start after 4 days of 10 mg daily.
+16. Hydrochlorothiazide 12.5 mg Capsule Sig: One (1) Capsule PO
+DAILY (Daily).
+17. Pantoprazole 40 mg Tablet, Delayed Release (E.C.) Sig: One
+(1) Tablet, Delayed Release (E.C.) PO twice a day.
+18. Morphine 10 mg/5 mL Solution Sig: Five (5) mg PO every four
+(4) hours as needed for respiratory discomfort: Hold for
+oversedation or RR<12.
+19. Prednisone 10 mg Tablet Sig: Three (3) Tablet PO once a day
+for 3 days.
+20. Colace 100 mg Capsule Sig: One (1) Capsule PO twice a day.
+21. Senna 8.6 mg Tablet Sig: One (1) Tablet PO twice a day as
+needed for constipation.
+22. Humalog insulin sliding scale
+Please use attached Humalog insulin sliding scale while on
+steroids.
+
+
+Discharge Disposition:
+Extended Care
+
+Facility:
+[**Location 1820**] center at [**Location (un) 1821**]
+
+Discharge Diagnosis:
+Primary:
+1. Chronic Obstructive Pulmonary Disease Exacerbation
+2. Respiratory failure with intubation
+3. Upper gastrointestinal bleed/Peptic Ulcer Disease
+4. Hypertension
+5. Anxiety
+
+Secondary:
+1. Coronary Artery Disease
+2. Hypothyroidism
+
+
+Discharge Condition:
+Mental Status: Confused - sometimes.
+Level of Consciousness: Alert and interactive.
+Activity Status: Out of Bed with assistance to chair or
+wheelchair.
+
+
+Discharge Instructions:
+You were admitted to the hospital with shortness of breath and
+respiratory failure and lethargy. In the emergency department,
+you were breathing very fast and a breathing tube was inserted
+into your airway to help you breathe. You were admitted to the
+intensive care unit. There, you were managed with steroids and
+antibiotics and the tube was eventually removed from your
+airway, allowing you to breathe on your own. You also underwent
+bronchoscopy which looked at the inside of your airways.
+.
+During your time in the intensive care unit, you developed a
+gastrointestinal bleed. A tube was placed into your stomach and
+you underwent an endoscopic procedure to look at your esophagus
+and stomach. This showed inflammation in your esophagusand
+ulcers in your stomach.
+.
+You should continue to use nasal oxygen by nasal cannula as
+needed. You should continue the steroid taper as instructed. You
+should call your doctor or return to the emergency room if you
+have increasing difficulty breathing or shortness of breath,
+wheezing, chest pain, blood in your stool or vomiting blood.
+.
+There are some changes in your medications.
+START pantoprazole 40 mg twice daily and STOP omeprazole
+START hydrochlorothiazide
+START prednisone, taking 30 mg for 3 days, then 20 mg for 4
+days, then 10 mg for 4 days, then 5 mg for 4 days, then stop.
+START colace and senna as needed for constipation
+Can use morphine to alleviate symptoms of respiratory discomfort
+STOP furosemide
+STOP zolpidem
+STOP aspirin
+INCREASE Diovan to 240 mg daily
+DECREASE trazodone to 50 mg daily
+.
+Follow up as indicated below.
+
+Followup Instructions:
+You have an appointment to follow up with Dr. [**Last Name (STitle) 1407**], your
+primary care physician, [**Name10 (NameIs) **] [**8-29**] at 1pm. His address is [**Location (un) 1822**], [**Apartment Address(1) 1823**], [**Location (un) **],[**Numeric Identifier 1700**]. The phone is
+[**Telephone/Fax (1) 1408**].
+
+You have an appointment to follow up with Dr. [**First Name4 (NamePattern1) **] [**Last Name (NamePattern1) 174**] in
+the  [**Hospital **] clinic on [**8-30**] at 3pm in the [**Hospital Unit Name 1824**] at [**Hospital1 18**] on the [**Location (un) 453**]. Their phone number is
+[**Telephone/Fax (1) 463**].
+
+Department: DIV. OF GASTROENTEROLOGY
+When: WEDNESDAY [**2124-8-30**] at 3:00 PM
+With: [**First Name4 (NamePattern1) 1386**] [**Last Name (NamePattern1) **], MD [**Telephone/Fax (1) 463**]
+Building: Ra [**Hospital Unit Name 1825**] ([**Hospital Ward Name 1826**]/[**Hospital Ward Name 1827**] Complex) [**Location (un) **]
+Campus: EAST     Best Parking: Main Garage
+
+
+
+"
+178,26880,135453,2162-03-25,,,"Discharge summary","Report",,,"Admission Date:  [**2162-3-3**]              Discharge Date:   [**2162-3-25**]
+
+Date of Birth:  [**2080-1-4**]             Sex:   M
+
+Service: MEDICINE
+
+Allergies:
+Patient recorded as having No Known Allergies to Drugs
+
+Attending:[**First Name3 (LF) 1828**]
+Chief Complaint:
+Mr. [**Known lastname 1829**] was seen at [**Hospital1 18**] after a mechanical fall from
+a height of 10 feet.  CT scan noted unstable fracture of C6-7 &
+posterior elements.
+
+Major Surgical or Invasive Procedure:
+1. Anterior cervical osteotomy, C6-C7, with decompression and
+excision of ossification of the posterior longitudinal ligament.
+2. Anterior cervical deformity correction.
+3. Interbody reconstruction.
+4. Anterior cervical fusion, C5-C6-C7.
+5. Plate instrumentation, C5-C6-C7.
+6. Cervical laminectomy C6-C7, T1.
+7. Posterior cervical arthrodesis C4-T1.
+8. Cervical instrumentation C4-T1.
+9. Arthrodesis augmentation with autograft, allograft and
+demineralized bone matrix.
+
+
+History of Present Illness:
