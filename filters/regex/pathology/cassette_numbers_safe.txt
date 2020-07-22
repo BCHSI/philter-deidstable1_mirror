@@ -1,1 +1,1 @@
-***REMOVED***A-Z***REMOVED******REMOVED***1-9***REMOVED******REMOVED***0-9***REMOVED***?(\s?-\s?***REMOVED***A-Z***REMOVED******REMOVED***1-9***REMOVED******REMOVED***0-9***REMOVED***?)?***REMOVED***\:\,\s***REMOVED***
+((\n\s*)|(\b(cassette|Cassette|CASSETTE|slide|Slide|SLIDE)((\s+(number|Number|NUMBER|num|Num|NUM|nm|Nm|NM)\.?)?***REMOVED***sS***REMOVED***?\s+)))(***REMOVED***A-Z***REMOVED******REMOVED***1-9***REMOVED******REMOVED***0-9***REMOVED***?(\s?-\s?***REMOVED***A-Z***REMOVED******REMOVED***1-9***REMOVED******REMOVED***0-9***REMOVED***?)?:?((\,|(\s+and))\s?)?)+
