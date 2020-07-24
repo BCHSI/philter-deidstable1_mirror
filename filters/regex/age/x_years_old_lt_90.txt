@@ -1,0 +1,1 @@
+\b([0-9]|[1-8][0-9])(?=\syears old|\sYEARS OLD)\b

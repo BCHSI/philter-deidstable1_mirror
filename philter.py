@@ -174,7 +174,7 @@ class Philter:
 
         #create a memory for the list of known PHI types
         self.phi_type_list = ['HOLIDAYS', 'DATE', 'ID', 'NAME', 'CONTACT',
-                              'AGE>=90', 'OTHER', 'LOCATION', 'PROBE']
+                              'AGE>=90', 'AGE<90', 'OTHER', 'LOCATION', 'PROBE']
         
         #create a memory for the corrdinate maps of known PHI types    
         self.phi_type_dict = {}
