@@ -60,6 +60,7 @@ def get_args():
     ap.add_argument("-b", "--batch",
                     help="Batch number to process",
                     type=str)
+    # TODO: move over to deidloop or master
     ap.add_argument("-r", "--refdate",
                     help="Reference date for shifting dates (for patients > 90 y.o.)",
                     type=str)

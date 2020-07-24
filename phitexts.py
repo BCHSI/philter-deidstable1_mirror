@@ -269,7 +269,7 @@ class Phitexts:
                     normalized_token = Subs.parse_date(token)
                     self.norms***REMOVED***phi_type***REMOVED******REMOVED***(filename, start)***REMOVED*** = (normalized_token,
                                                                end)
-            elif (phi_type == "AGE" or phi_type == "Age"
+            elif (phi_type == "AGE<90" or phi_type == "Age<90"
                   or phi_type == "AGE>=90" or phi_type == "Age>=90"):
                 for filename, start, end in self.types***REMOVED***phi_type***REMOVED******REMOVED***0***REMOVED***.scan():
                     token = self.texts***REMOVED***filename***REMOVED******REMOVED***start:end***REMOVED***
@@ -330,7 +330,7 @@ class Phitexts:
                     substitute_token = self.subser.date_to_string(shifted_date)
                     # self.eval_table***REMOVED***filename***REMOVED******REMOVED***start***REMOVED***.update({'sub':substitute_token})
                     self.subs***REMOVED***(filename, start)***REMOVED*** = (substitute_token, end)
-            elif (phi_type == "AGE" or phi_type == "Age"
+            elif (phi_type == "AGE<90" or phi_type == "Age<90"
                   or phi_type == "AGE>=90" or phi_type == "Age>=90"):
                 for filename, start in self.norms***REMOVED***phi_type***REMOVED***:
                     if bson.objectid.ObjectId.is_valid(filename):
@@ -356,6 +356,7 @@ class Phitexts:
                     
                     if reference >= deid_bday91: # the patient is older than 90:
                         substitute_token = "*****AGE*****" # TODO: only scrape ages >90 and <deid_dob for 90plus patients
+                     
                     else:
                         substitute_token = str(normalized_token)
                     self.subs***REMOVED***(filename, start)***REMOVED*** = (substitute_token, end)

@@ -43,11 +43,14 @@ def get_args():
                     + " super log in a subfolder log of the set folder"
                     + " combining logs of each output directory",
                     type=str)
+    ap.add_argument("-r", "--refdate", default=str(date.today()),
+                    help="Reference date for shifting dates (for patients > 90 y.o.)",
+                    type=str)
 
     return ap.parse_args()
 
 
-def runDeidChunck(unit, q, philterFolder, configfile):
+def runDeidChunck(unit, q, philterFolder, configfile, refdate):
     """
     Function to instruct a thread to deid a directory.
     INPUTS:
@@ -84,7 +87,7 @@ def runDeidChunck(unit, q, philterFolder, configfile):
                  "-d", "True", 
                  "-f", configfile,
                  "-l", "True",
-                 "-r", str(date.today())***REMOVED***,
+                 "-r", refdate***REMOVED***,
                  cwd=philterFolder)
         else:
             call(***REMOVED***"python3", "-O", "deidpipe.py",
@@ -95,7 +98,7 @@ def runDeidChunck(unit, q, philterFolder, configfile):
                  "-f", configfile,
                  "-k", kpfile,
                  "-l", "True",
-                 "-r", str(date.today())***REMOVED***,
+                 "-r", refdate***REMOVED***,
                  cwd=philterFolder)
 
         # Print time elapsed for batch
@@ -109,13 +112,14 @@ def main():
     
     args = get_args()
     print("read args")
+    print("using refdate:", args.refdate)
     
     # Set up some threads to fetch the enclosures (each thread deids a directory)
     print("starting {0} worker threads".format(args.threads))
     for unit in range(args.threads):
         worker = Thread(target=runDeidChunck,
                         args=(unit, enclosure_queue,
-                              os.path.dirname(args.philter), args.filters,))
+                              os.path.dirname(args.philter), args.filters, args.refdate, ))
         worker.setDaemon(True)
         worker.start()
 

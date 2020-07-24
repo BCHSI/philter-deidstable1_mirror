@@ -140,8 +140,10 @@ class Subs:
         return shifted_date
 
     def shift_dob_pid(self, dob, note_id):
+        #
         shift = self.get_shift_amount(note_id)
         deid_bday91 = self.get_deid_91_bdate(note_id)
+
         if shift is None or dob is None or deid_bday91 is None:
             if __debug__: print("WARNING: cannot find birth date info"
                                 + " for note " + str(note_id))
@@ -156,9 +158,18 @@ class Subs:
                                 + " for note " + str(note_id)
                                 + " Overflow Error: {0}".format(err))
 
-        reference = self.ref_date # today or the date of Notes extraction 
+        reference = self.ref_date # today or the date of Notes extraction
+
+        shifted_age = ((dt.datetime(year = reference.year,
+                              month = reference.month,
+                              day = reference.day)
+                  - dt.datetime(year = shifted_dob.year,
+                                month =  shifted_dob.month,
+                                day = shifted_dob.day)).days)/365.25
+
         #if reference – shifted_dob < 90 years:
-        if reference >= deid_bday91: # the patient is older than 90:
+        if shifted_age >= 91: # the patient is older than 90:
+            print("older than 90")
             days_from_bday = (dt.datetime(year = reference.year,
                                           month = reference.month,
                                           day = reference.day)
@@ -179,6 +190,16 @@ class Subs:
                                           day = shifted_dob.day))
             shifted_dob = shifted_dob + ninety_shift
 
+            # general goal is to transform all ages >=91 --> 90
+            # for now, just use reference date and not death date
+            # Things to look out for:
+                # leap years (before, on, after)
+                # 2000, maybe 2020?
+                # check around 91st bdays
+                # what if ref date is before date of birth
+                # try some extreme values
+
+
         # perhaps good to implement some consistency checks with metadata
         deid_bdate = self.get_deid_dob(note_id)
         if deid_bdate is not None and shifted_dob != deid_bdate:
@@ -190,6 +211,25 @@ class Subs:
                                 + " not equal to deid_BirthDate in meta data \""
                                 + deid_bdate.to_string(debug=True)
                                 + " pretty: " + deid_bdate.to_string())
+
+        # Birthdate shift checks
+        original_age = ((dt.datetime(year = reference.year,
+                              month = reference.month,
+                              day = reference.day)
+                  - dt.datetime(year = dob.year,
+                                month =  dob.month,
+                                day = dob.day)).days)/365.25
+
+        shifted_age = ((dt.datetime(year = reference.year,
+                              month = reference.month,
+                              day = reference.day)
+                  - dt.datetime(year = shifted_dob.year,
+                                month =  shifted_dob.month,
+                                day = shifted_dob.day)).days)/365.25
+        print("Original age:", original_age)
+        print("Shifted age:", shifted_age)
+        print("Shifted bday 91:", deid_bday91)
+        print()
         return shifted_dob
 
     
