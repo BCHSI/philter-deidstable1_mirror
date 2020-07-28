@@ -105,7 +105,6 @@ def main():
        #for batch in collection_chunk.distinct('batch'):
        main_mongo(args,db,mongo)
     else:
-       print("In no args.mongo")
        main_mongo(args)
 
 def main_mongo(args, db=None ,mongo=None):  

@@ -82,9 +82,9 @@ class Philter:
             if not os.path.exists(config["filters"]):
                 raise Exception("Filepath does not exist", config["filters"])
             self.patterns = json.loads(open(config["filters"], "r").read())
-            #print(self.patterns)
             if ("known_phi" in config) and ("namesprobe" in config):
                 raise Exception ("Both mongo probes collection and a probes file provided. Please remove one and try again.")
+            self.dynamic = False
             if ("namesprobe" in config) or ("known_phi" in config):
                 self.dynamic = True
                 dynamic_blacklist = {
@@ -460,7 +460,6 @@ class Philter:
         for filename in self.filenames:
 
             txt = self.texts[filename]
-            print(filename)
 
             # Get full self.include/exclude map before transform
             self.data_all_files[filename] = {"text":txt, "phi":[], "non-phi":[]}
@@ -527,7 +526,6 @@ class Philter:
         for i,pat in enumerate(self .patterns):
             if "data" in pat:
                 del self.patterns[i]["data"]
-        print("Map_coordinates done") 
         return self.full_exclude_map
                 
     def map_regex(self, filename="", text="", pattern_index=-1, pre_process= r"[^a-zA-Z0-9]"):
