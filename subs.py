@@ -13,7 +13,7 @@ import json
 from pymongo import MongoClient
 
 DEFAULT_SHIFT_VALUE = 32
-DATE_REF = dt.datetime(2000, 2, 29)
+DATE_REF = dt.datetime(2000, 2, 29) # do not change this!!!!
 
 class Subs:
     def __init__(self, filenames, look_up_table_path = None, db = None,
@@ -126,11 +126,6 @@ class Subs:
                                 + " Overflow Error: {0}".format(err))
 
         dob = self.get_dob(note_id)
-        # print("Date: \"" + date.to_string(debug=True)
-        #       + " pretty: " + date.to_string()
-        #       + "\" DOB: \"" + dob.to_string(debug=True)
-        #       + " pretty: " + dob.to_string()
-        #       + "\" in note " + str(note_id))
         if date == dob:
             shifted_date = self.shift_dob_pid(date, note_id)
             
@@ -160,16 +155,11 @@ class Subs:
 
         reference = self.ref_date # today or the date of Notes extraction
 
-        shifted_age = ((dt.datetime(year = reference.year,
-                              month = reference.month,
-                              day = reference.day)
-                  - dt.datetime(year = shifted_dob.year,
-                                month =  shifted_dob.month,
-                                day = shifted_dob.day)).days)/365.25
-
-        #if reference – shifted_dob < 90 years:
+        shifted_bday91 = dt.datetime(year = shifted_dob.year + 91,
+                                     month =  shifted_dob.month,
+                                     day = shifted_dob.day)
+        shifted_age = self._age(shifted_dob)
         if shifted_age >= 91: # the patient is older than 90:
-            print("older than 90")
             days_from_bday = (dt.datetime(year = reference.year,
                                           month = reference.month,
                                           day = reference.day)
@@ -180,8 +170,6 @@ class Subs:
                 shifted_byear = reference.year - 91
             else:
                 shifted_byear = reference.year - 90
-            #ninety_shift = year***REMOVED*** reference – dob_shifted ***REMOVED*** – 90
-            #ninety_shift = reference - deid_bday91 + 1
             ninety_shift = (dt.datetime(year = shifted_byear,
                                         month = shifted_dob.month,
                                         day = shifted_dob.day)
@@ -203,40 +191,39 @@ class Subs:
         # perhaps good to implement some consistency checks with metadata
         deid_bdate = self.get_deid_dob(note_id)
         if deid_bdate is not None and shifted_dob != deid_bdate:
-            if __debug__: print("WARNING: shifted date of birth \""
-                                + shifted_dob.to_string(debug=True)
-                                + " pretty: " + shifted_dob.to_string()
-                                + "\" with shift " + str(shift)
-                                + " for note " + str(note_id)
-                                + " not equal to deid_BirthDate in meta data \""
-                                + deid_bdate.to_string(debug=True)
-                                + " pretty: " + deid_bdate.to_string())
+            if __debug__:
+                print("WARNING: shifted date of birth "
+                      + shifted_dob.to_string()
+                      + " with shift -" + str(shift) + " days"
+                      + " for note " + str(note_id)
+                      + " not equal to deid_BirthDate in meta data "
+                      + deid_bdate.to_string() + ".")
+                if (shifted_dob.day == deid_bdate.day
+                    and shifted_dob.month == deid_bdate.month):
+                    print("WARNING: Reference date " + str(reference)
+                          + " not equal to date of ETL?")
 
-        # Birthdate shift checks
-        original_age = ((dt.datetime(year = reference.year,
-                              month = reference.month,
-                              day = reference.day)
-                  - dt.datetime(year = dob.year,
-                                month =  dob.month,
-                                day = dob.day)).days)/365.25
-
-        shifted_age = ((dt.datetime(year = reference.year,
-                              month = reference.month,
-                              day = reference.day)
-                  - dt.datetime(year = shifted_dob.year,
-                                month =  shifted_dob.month,
-                                day = shifted_dob.day)).days)/365.25
-        print("Original age:", original_age)
-        print("Shifted age:", shifted_age)
-        print("Shifted bday 91:", deid_bday91)
-        print()
         return shifted_dob
 
+    def _age(self, dob): # integer age on reference date
+        age = self.ref_date.year - dob.year
+        days_from_bday = (dt.datetime(year = self.ref_date.year,
+                                      month = self.ref_date.month,
+                                      day = self.ref_date.day)
+                          - dt.datetime(year = self.ref_date.year,
+                                        month =  dob.month,
+                                        day = dob.day)).days
+        if days_from_bday < 0:
+            age -= 1
+        return age
+
+    def shifted_age_pid(self, note_id):
+        shifted_dob = self.shift_date_pid(self.get_dob(note_id), note_id)
+        return self._age(shifted_dob)
     
     @staticmethod
     def parse_age(age_string):
         try:
-            print("parsing age: " + age_string)
             age = int(age_string)
         except ValueError as err:
             print("ValueError: \"" + age_string
@@ -271,6 +258,7 @@ class Subs:
                                         usecols=(lambda x:
                                                  x in ***REMOVED***'note_key',
                                                        'date_offset',
+                                                       'deid_date_offset_cdw',
                                                        'deid_note_key',
                                                        'BirthDate',
                                                        'Deid_BirthDate',
@@ -290,6 +278,10 @@ class Subs:
         if "date_offset" in look_up_table.keys():
             offset_table = look_up_table***REMOVED***~look_up_table***REMOVED***"date_offset"***REMOVED***.isnull()***REMOVED***
             notekey2id***REMOVED***"offset"***REMOVED*** = pd.Series(offset_table.date_offset.values,
+                                          index=offset_table.note_key).to_dict()
+        elif "deid_date_offset_cdw" in look_up_table.keys():
+            offset_table = look_up_table***REMOVED***~look_up_table***REMOVED***"deid_date_offset_cdw"***REMOVED***.isnull()***REMOVED***
+            notekey2id***REMOVED***"offset"***REMOVED*** = pd.Series(offset_table.deid_date_offset_cdw.values,
                                           index=offset_table.note_key).to_dict()
         if "deid_note_key" in look_up_table.keys():
             deid_table = look_up_table***REMOVED***~look_up_table***REMOVED***"deid_note_key"***REMOVED***.isnull()***REMOVED***

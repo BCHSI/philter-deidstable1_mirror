@@ -227,18 +227,14 @@ class Phitexts:
         philter_config***REMOVED***"run_eval"***REMOVED*** = False
         philter_config***REMOVED***"filters"***REMOVED*** = filters 
         if namesprobefile:     
-           philter_config***REMOVED***"namesprobe"***REMOVED*** = namesprobefile
+            philter_config***REMOVED***"namesprobe"***REMOVED*** = namesprobefile
         if self.known_phi:
-           philter_config***REMOVED***"known_phi"***REMOVED*** = self.known_phi
+            philter_config***REMOVED***"known_phi"***REMOVED*** = self.known_phi
         philter_config***REMOVED***"phi_text"***REMOVED*** = self.texts
         philter_config***REMOVED***"filenames"***REMOVED*** = self.filenames
 
-        print("Initializing Philter") 
         self.filterer = Philter(philter_config)
         self.coords = self.filterer.map_coordinates()
-        print("Coordinates Identified")
-        self.pos = self.filterer.pos_tags
-        print("Pos_tags identified")
 
     def detect_phi_types(self):
         assert self.texts, "No texts defined"
@@ -316,8 +312,6 @@ class Phitexts:
                         # self.eval_table***REMOVED***filename***REMOVED******REMOVED***start***REMOVED***.update({'sub':None})
                         continue
                     
-                    # shifted_date = self.subser.shift_date_pid(normalized_token,
-                    #                                           note_key_ucsf)
                     shifted_date = self.subser.shift_date_wrt_dob(normalized_token,
                                                                   note_key_ucsf)
 
@@ -346,17 +340,9 @@ class Phitexts:
                         # self.eval_table***REMOVED***filename***REMOVED******REMOVED***start***REMOVED***.update({'sub':None})
                         continue
 
-                    reference = self.subser.get_ref_date()
-                    deid_bday91 = self.subser.get_deid_91_bdate(note_key_ucsf)
-                    if not deid_bday91:
-                        if __debug__:
-                            print("WARNING: no 91st birth day found for: "
-                                  + filename)
-                        continue
-                    
-                    if reference >= deid_bday91: # the patient is older than 90:
+                    current_age_s = self.subser.shifted_age_pid(note_key_ucsf)
+                    if current_age_s >= 91: # the patient is older than 90:
                         substitute_token = "*****AGE*****" # TODO: only scrape ages >90 and <deid_dob for 90plus patients
-                     
                     else:
                         substitute_token = str(normalized_token)
                     self.subs***REMOVED***(filename, start)***REMOVED*** = (substitute_token, end)
