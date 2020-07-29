@@ -1,17 +1,20 @@
 [
-    {
-        "title": "Test Whitelist",
-        "type": "set",
-        "exclude": false,
-        "filepath": "filters/whitelists/whitelist_names_100.json",
-        "pos": [],
-        "notes": "These are words we beleive are safe"
-    },
-    {
-        "title": "Match all",
-        "type": "regex",
-        "exclude": true,
-        "filepath": "filters/regex/catchall.txt",
-        "notes": "exclude false keeps all tokens not yet labeled, true filters all remaining tokens"
-    }
+	
+{
+                "title":"Test Whitelist",
+                "type":"set",
+                "exclude":false,
+                "filepath":"filters/whitelists/whitelist_names_100.json",
+                "pos":[],
+                "notes":"These are words we beleive are safe"
+        },
+{
+                "title":"Match all",
+                "type":"regex",
+                "exclude":true,
+                "filepath":"filters/regex/catchall.txt",
+                "notes":"exclude false keeps all tokens not yet labeled, true filters all remaining tokens"
+        }
 ]
+
+

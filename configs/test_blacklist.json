@@ -1,10 +1,12 @@
 [
-    {
-        "title": "Names Blacklist",
-        "type": "set",
-        "exclude": true,
-        "filepath": "filters/blacklists/names_blacklist_common.pkl",
-        "pos": [],
-        "notes": ""
-    }
+	{
+		"title":"Names Blacklist",
+		"type":"set",
+		"exclude":true,
+		"filepath":"filters/blacklists/names_blacklist_common.pkl",
+		"pos":[],
+		"notes":""
+	}
 ]
+
+

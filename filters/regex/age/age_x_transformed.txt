@@ -1,0 +1,3 @@
+# Regular expression to identify age of a person in the notes
+# Looks for numeric values either single or double digits following the word age or AGE in the notes
+(?i)\b((?<=age\s)|(?<=age:\s)|(?<=age:\s\s))([9][0-9]|[1][0-9][0-9])\b

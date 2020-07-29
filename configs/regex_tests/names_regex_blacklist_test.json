@@ -5,7 +5,7 @@
         "exclude": true,
         "filepath": "filters/regex/salutations/u_#_patient.txt",
         "note": ""
-    },
+    },    
     {
         "title": "salutations1",
         "type": "regex",
@@ -90,20 +90,19 @@
         "notes": "These are words we believe are not safe"
     },
     {
-        "title": "Whitelist",
-        "type": "set",
-        "exclude": false,
-        "filepath": "/data/muenzenk/new_blacklists/whitelist_addback_100_unigram_ucsf2.json",
-        "pos": [],
-        "notes": "These are words we beleive are safe"
+        "title":"Whitelist",
+        "type":"set",
+        "exclude":false,
+        "filepath":"/data/muenzenk/new_blacklists/whitelist_addback_100_unigram_ucsf2.json",
+        "pos":[],
+        "notes":"These are words we beleive are safe"
     },
     {
-        "title": "POS MATCHER",
-        "type": "pos_matcher",
-        "exclude": false,
-        "pos": [
-            "CD"
-        ],
-        "notes": "This will include any CDs that aren't included in earlier steps"
+        "title":"POS MATCHER",
+        "type":"pos_matcher",
+        "exclude":false,
+        "pos":["CD"],
+        "notes":"This will include any CDs that aren't included in earlier steps"
     }
+
 ]

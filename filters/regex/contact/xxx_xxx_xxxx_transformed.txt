@@ -1,0 +1,3 @@
+# Regex to find 10 digit phone number separated by -
+# This also captures cases where the last 4 digits are x or *
+(\b\d(\-|\s|\.))?(\b\d{3}\s?[\s\-\.]?\s?|\(\d{3}\)[\s\-\.]?\s?)?\b([a-zA-Z])?\d{3,4}[\s\-\.](\d{3,4}|xxxx|xxx|\*\*\*\*|\*\*\*)(\/\d{4})?

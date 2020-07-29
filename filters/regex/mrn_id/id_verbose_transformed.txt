@@ -1,0 +1,1 @@
+\b((?<=(?i)id: )|(?<=(?i)id#: )|(?<=(?i)AARP#:  )|(?<=(?i)AARP#: )|(?<=(?i)CIM # )|(?<=(?i)subscriber info: ))[a-zA-Z0-9]+\b

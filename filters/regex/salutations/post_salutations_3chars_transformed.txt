@@ -1,0 +1,1 @@
+\b[A-Z]\'?\.?\s?[A-Z]?[\-aA-zZ]?\,?(\sJr\.)?(?=\sM\.D\b|\sMD\.|\sN\.P\b|\sNP\.|\sD\.O\b|\sDO\.|\sR\.N\b|\sRN\.|\sMSN\b|\sRNC\b|\sDPM\b|\sLVN\b|\sSLP\b|\sJr\.)

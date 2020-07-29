@@ -18,7 +18,7 @@ def pull_paths(inputfile):
 
             # check that file ends in .json
             if '.json' in file:
-                print(file)
+
                 new_file_text = []
 
                 filepath = os.path.join(root, file)
