@@ -9,7 +9,6 @@
 - ```filters/regex/transform_gene_symbols.py``` (modified version of ```transform_regex.py``` to transform gene symbols)
 - ```filters/regex/transform_pathology.py``` (modified version of ```transform_regex.py``` to transform pathology terms)
 - ```filters/whitelists/whitelist_gene_symbols.json``` (whitelist of gene symbols)
-- ```filters/whitelists/whitelist_genes_and_patho_terms.json``` (whitelist of gene symbols plus some common pathology terms which were provided by Dima (Dmytro) Lituiev)
 - ```filters/whitelists/whitelist_staging_terms.json``` (whitelist of staging terms)
 - ```generate_dataset/staging_terms.txt``` (the .txt list of staging terms used to create a .json whitelist)
 - ```generate_dataset/symbols.txt``` (obsolete—the .txt list of gene symbols used to create a .json whitelist. The updated script ```HGNC_symbols_to_json.py``` doesn't require transformation from .txt to .json)
@@ -49,7 +48,7 @@ Changed ```filters/regex/addresses/room_#.txt``` from
 ```
 to
 ```
-    (?i)\b(((([A-Z]\s)?(level|lvl|floor|flr|fl|story|stry):?\s+[A-Z]?-?\d+\,?\s)?(room|rm|suite|ste|apartment|aptment|apt)s?(\s(number|num|nm)\.?)?:?(\,?\s(and\s)?[A-Z]?-?\d+)+)|(((room|rm|suite|ste|apartment|aptment|apt)s?(\s(number|num|nm)\.?)?:?(\,?\s(and\s)?[A-Z]?-?\d+)+)(\,?\s([A-Z]\s)?(level|lvl|floor|flr|fl|story|stry):?\s+[A-Z]?-?\d+)?))\b
+    (?i)\b((([A-Z]\s)?(level|lvl|floor|flr|fl|story|stry):?\s+[A-Z]?-?\d+\s)?(room|rm|suite|ste|apartment|aptment|apt)s?(\s+(number|num|nm)\.?)?:?(\,?\s+(and\s)?[A-Z]?-?\d+)+)\b
 ```
 
 ---

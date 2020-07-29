@@ -1,7 +1,3 @@
-To add
-- figures?
-- next steps
-
 # Who am I and what I worked on
 I'm Paul, a high school summer intern who worked remotely at the UCSF Bakar Computational Health Sciences Institute in summer 2020 on Philter. Philter is a clinical de-identification software which removes protected health information (phi) from clinical notes to make the data in the notes more readily available to the scientific community. I worked on implementing whitelists and safe regexes for gene symbols and pathology terms to address the issue of Philter obscuring these symbols and terms. Gene symbols and pathology terms (eg. BRCA1) were obscured by Philter because the values have similarities to person names.
 
@@ -11,15 +7,8 @@ However, upon closer examination and testing, I discovered that multiple regular
 
 I also worked with David, my fellow summer intern, a little (it was his project) to create the correct xml annotations for the MIMIC notes. I only provided some advice and tested his results. The reason why I'm mentioning it is because having correct annotations is crucial to testing any sort of thing with Philter—they allow Philter to evaluate its performance. The annotations are in xml format, and contain for each phi in the clinical note the phi type, the actual value, the start and stop indices of the value(s), and an ID. For example, Philter, reading this annotation file, can identify actual phi it obscured (true positives), which values it obscured but were actually safe (false positives), etc, and calculate metrics about its performance. I needed annotations for my test set of notes in order to determine how much the whitelists/safe regexes helped.
 
-If some of my scripts are confusing, check out [details_on_scripts.md](https://github.com/pauliwog/philter-ucsf/blob/master/paul/details_on_scripts.md).
-
-Here is [my change-log](https://github.com/pauliwog/philter-ucsf/blob/master/paul/CHANGE_LOG.md) which should have everything I added or modified.
-
-If you are curious and want to see what I did every day, you can check out [this google doc](https://docs.google.com/document/d/1R0CZyHlFhXny1KTAiDswyUyNCPmuKjYGK685wO2t_ug/edit?usp=sharing) with more of my planning and notes.
-
-If any questions arise about my documentation, code, or really anything, feel free to email me at burke.invent@gmail.com (not a link it's just blue for some reason).
-
-And if for some reason you have access to my documentation but not my git repo, email me and I'll add you as a collaborator!
+If some of my scripts are confusing, check out [details_on_scripts.md](https://github.com/pauliwog/philter-ucsf/blob/master/paul/details_on_scripts.md)!
+And here is [the change-log](https://github.com/pauliwog/philter-ucsf/blob/master/paul/CHANGE-LOG.md) which should have everything I added or modified.
 
 # What I did
 
@@ -33,8 +22,8 @@ And if for some reason you have access to my documentation but not my git repo, 
 1. Found, downloaded, extracted, and converted a list of gene symbols to create a whitelist.
 2. Made a list of the most common gene symbols, then searched for and copied MIMIC notes containing a common gene symbol to use as a test set of notes for evaluating the whitelist.
 3. Ran these MIMIC notes through Philter (without the whitelist), compared before and after to find obscured gene symbols, then separated the notes with the obscured gene symbols.
-    - If I ran Philter on a note and it obscured the gene symbol(s) in that note, then running Philter with the whitelist would hopefully rescue those symbols.
-    - Whether Philter rescued the symbols or not would tell me how well the whitelist was working.
+    - If I ran Philter on a note and it obscured the gene symbol(s) in that note, then running Philter with the whitelist would hopefully un-obscure those symbols.
+    - Whether Philter un-obscured the symbols or not would tell me how well the whitelist was working.
 4. Downloaded and set up newest version of Philter because the beta version was buggy when using xml annotations.
 5. Realized a big problem with the whitelist approach and created a safe regex to catch gene symbols before they got obscured.
 6. Merged my code with new latest version of Philter, then ran MIMIC notes with annotations through Philter, with and without the whitelist and regexes and determined that the whitelist + safe regexes did work (after a couple modifications) and did not impact recall! I then sent my code off to get tested on UCSF data.
@@ -45,17 +34,6 @@ And if for some reason you have access to my documentation but not my git repo, 
 3. Tested on MIMIC notes. Even though the notes didn't have the pathology terms I was trying to rescue, I could use the MIMIC notes to refine my regexes and make sure they didn't catch non-pathology terms.
 4. Sent my code off to get tested on UCSF data.
 5. Edit/modify my safe regexes/whitelists, test on UCSF data, rinse and repeat.
-
-**Required libraries**
-1. ```argparse``` to provide run-time options so user doesn't have to change variables in the script.
-2. ```time``` to time how long scripts take to run.
-3. ```pandas``` for using dataframes for a bunch of things.
-4. ```os``` for interacting with files.
-5. ```shutil``` also for interacting with files.
-6. ```re``` for lots of things, generally extracting information.
-7. ```json``` for reading and writing json files.
-8. ```etree from lxml``` for extracting text between xml tags (extract_from_xml.py).
-9. ```json_normalize from pandas.io.json``` to unpack nested json.
 
 
 ## A closer look at the setup
@@ -94,7 +72,7 @@ When I installed Philter-Zeta, it came with a virtual environment, but it didn't
 ```bash
    for file in `cat ./path/to/outputfile.txt`; do cp "$file" ./dir/where/you/want/the/files/containing/the/gene/symbols/to/go/ ; done
 ```
-3. After this was done, I ended up with ~20,000 notes, and running 20,000 notes through Philter all at once would take weeks on my laptop (and I didn't have enough memory anyway), so I created a short script ([batch.py](https://github.com/pauliwog/philter-ucsf/blob/master/paul/scripts/batch.py)) which took the notes and batched them into folders containing a variable number of notes each (I chose 1,000). I then ran these folders through original Philter (without the whitelist) five at a time. There's a reverse script to unbatch files which I created as well, [unbatch.py](https://github.com/pauliwog/philter-ucsf/blob/master/paul/scripts/unbatch.py). Here's the basic command I used to run Philter-Beta.
+3. After this was done, I ended up with ~20,000 notes, and running 20,000 notes through Philter all at once would take weeks on my laptop (and I didn't have enough memory anyway), so I created a short script ([batch.py](https://github.com/pauliwog/philter-ucsf/blob/master/paul/other_scripts/batch.py)) which took the notes and batched them into folders containing a variable number of notes each (I chose 1,000). I then ran these folders through original Philter (without the whitelist) five at a time. There's a reverse script to unbatch files which I created as well, [unbatch.py](https://github.com/pauliwog/philter-ucsf/blob/master/paul/other_scripts/unbatch.py). Here's the basic command I used to run Philter-Beta.
 ```bash
    python3 main.py -i ./path/to/input/dir/ -a ./path/to/anno/dir/ -o ./path/to/output/dir/ -f ./path/to/configfile.json -c ./path/to/coordsfile.json -e False > ./path/to/outputfile.txt
 ```
@@ -102,7 +80,7 @@ When I installed Philter-Zeta, it came with a virtual environment, but it didn't
 ```bash
    grep -n -r -w -f common_symbols.txt ./dir/with/files/ > ./path/to/anotheroutputfile.txt
 ```
-5. Using my script ([find_obscured_symbols.py](https://github.com/pauliwog/philter-ucsf/blob/master/paul/scripts/find_obscured_symbols.py)) and the grep search from the previous step, I went through all the MIMIC notes I had annotated looking for notes containing obscured gene symbols. My script also has an option to copy the notes containing the symbols to a new directory, which I used. More details on the script can be found inside it (click the link above). _Original_ means the notes which are not annotated. _Annotated_ means the notes which have been run through Philter and have phi obscured with asterisks.
+5. Using my script ([find_obscured_symbols.py](https://github.com/pauliwog/philter-ucsf/blob/master/paul/other_scripts/find_obscured_symbols.py)) and the grep search from the previous step, I went through all the MIMIC notes I had annotated looking for notes containing obscured gene symbols. My script also has an option to copy the notes containing the symbols to a new directory, which I used. More details on the script can be found inside it (click the link above). _Original_ means the notes which are not annotated. _Annotated_ means the notes which have been run through Philter and have phi obscured with asterisks.
 ```bash
    python3 find_obscured_symbols.py -o ./path/to/dir/with/original/notes/ -a ./path/to/dir/with/annotated/notes/ -g ./path/to/grep/output/file/from/step/four.txt -s ./path/to/list/of/common_symbols.txt -c copy -d ./path/to/dir/where/notes/will/be/copied/to/
 ```

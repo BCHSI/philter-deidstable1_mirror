@@ -6,7 +6,7 @@ import json
 # Define regex variables
 
 # Get gene symbols from json whitelist
-symbols_json = json.loads(open("../whitelists/whitelist_genes_and_patho_terms.json").read())
+symbols_json = json.loads(open("../whitelists/whitelist_gene_symbols.json").read())
 gene_symbols = ''
 for key in symbols_json:
 	gene_symbols += key + '|'
@@ -29,20 +29,20 @@ for root, dirs, files in os.walk(rootdir):
             new_filepath = os.path.join(root, new_file_name)
 
             # Open file
-            regex = open(filepath, "r").read().strip()
+            #regex = open(filepath, "r").read().strip()
 
             # replace variable in regex with complex list
-            if '"""+gene_symbols+r"""' in regex:
-                regex = regex.replace('"""+gene_symbols+r"""',gene_symbols)
-                # Write new file
-                with open(new_filepath, "w") as fout:
-                    fout.write(regex)
+            #if '"""+gene_symbols+r"""' in regex:
+            #    regex = regex.replace('"""+gene_symbols+r"""',gene_symbols)
+            #    # Write new file
+            #    with open(new_filepath, "w") as fout:
+            #        fout.write(regex)
 
             # delete duplicate  "_transform" files
-            # if os.path.isfile(new_filepath):
-            #     og_file = open(filepath).read().strip()
-            #     transformed_file = open(new_filepath).read().strip()
-            #
-            #     if og_file == transformed_file:
-            #         os.remove(new_filepath)
-            #         print("Removed %s" % (new_filepath))
+            if os.path.isfile(new_filepath):
+               og_file = open(filepath).read().strip()
+               transformed_file = open(new_filepath).read().strip()
+            
+               if og_file == transformed_file:
+                     os.remove(new_filepath)
+                     print("Removed %s" % (new_filepath))
