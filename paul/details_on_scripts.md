@@ -1,18 +1,17 @@
 # Details on my scripts
 1. ```paul/gene_symbols/HGNC_symbols_to_json.py```
 2. ```paul/gene_symbols/notes_mini_create.py```
-3. ```paul/scripts/batch.py```
-4. ```paul/scripts/unbatch.py```
-5. ```paul/scripts/cleanup_verbose_out.py```
-6. ```paul/scripts/compare_results.py```
-7. ```paul/scripts/extract_from_xml.py```
-8. ```paul/scripts/find_obscured_symbols.py```
-9. ```paul/scripts/find_rescued_symbols.py```
+3. ```paul/other_scripts/batch.py```
+4. ```paul/other_scripts/unbatch.py```
+5. ```paul/other_scripts/cleanup_verbose_out.py```
+6. ```paul/other_scripts/compare_results.py```
+7. ```paul/other_scripts/extract_from_xml.py```
+8. ```paul/other_scripts/find_obscured_symbols.py```
+9. ```paul/other_scripts/find_unobscured_symbols.py```
 10. ```paul/for_philter_beta/diffs_coords.py```
 11. ```paul/for_philter_beta/get_stats.py```
-12. ```paul/pathology/get_new_terms.py```
-13. ```filters/regex/transform_gene_symbols.py```
-14. ```filters/regex/transform_pathology_terms.py```
+12. ```filters/regex/transform_gene_symbols.py```
+13. ```filters/regex/transform_pathology_terms.py```
 ---
 #### ```HGNC_symbols_to_json.py```
 This script parses the HGNC download of gene identifiers and outputs a .json file containing every approved, alias, and previous gene symbol to use as a whitelist. The script uses regular expressions to extract the gene identifiers, and is tailored to parse a specific HGNC download.
@@ -61,7 +60,7 @@ This script compares two sets of notes, original vs. annotated, to figure out wh
    grep -n -r -w -f common_symbols.txt ./dir/with/files/ > ./path/to/outputfile.txt
 ```
 
-#### ```find_rescued_symbols.py```
+#### ```find_unobscured_symbols.py```
 This script compares two sets of notes, annotated without modifications vs. with modifications (in my case, without whitelists and safe regexes vs. with), to find the gene symbols which got rescued by the modifications. It will output the symbol, file path, line number, and context for each un-obscured symbol.
 - ```-o```: the path to the dir containing the annotated notes _without_ modifications
 - ```-a```: the path to the dir containing the annotated notes _with_ modifications
@@ -77,13 +76,6 @@ This script is for the beta version of Philter. It will read in the coordinates.
 This script is also for the beta version of Philter, and it too reads the coordinates.json files from two different Philter runs. However, it will extract the "phi types" and the "non-phi filepaths", and output how many of each exist (for example, I used this to see how many times the gene symbols whitelist got used).
 - ```-og```: the path to the coords.json file for the 1st (original) Philter run
 - ```-wl```: the path to the coords.json file for the 2nd (for me whitelisted) Philter run
-
-#### ```get_new_terms.py```
-This script reads in two .tsv files (```stains_hgnc.tsv``` and ```stains_umls.tsv```), containing common pathology terms provided by Dima (Dmytro) Lituiev and appends all terms which match ```***REMOVED***A-Z0-9\-***REMOVED***``` to the current gene symbols whitelist (creating a new json file of course).
-- ```-f1```: the path to the first .tsv file
-- ```-f2```: the path to the second .tsv file
-- ```-wl```: the path to the current gene symbols whitelist
-- ```-f```: the format of the whitelist (options are "json" or "txt")
 
 #### ```transform_gene_symbols.py```
 This script searches all the regexes in the ```filters/regex``` directory and replaces any instances of ```"""+gene_symbols+r"""``` with the list of gene symbols I created. So instead of editing a regex with 2,000 lines of gene symbols, I can instead just have ```"""+gene_symbols+r"""``` in my regex and replace that once I'm done.
