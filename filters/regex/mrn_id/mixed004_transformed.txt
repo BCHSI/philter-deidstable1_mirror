@@ -1,0 +1,1 @@
+\b(?!QTY|qty|RF|rf|RFL|rfl|Rf|SaO|SpO|MvO|SAO|FEV|FIO|FIF|fiO|FiO|FEF|HCO|MSO|PCO|AOx)***REMOVED***a-zA-Z***REMOVED***{3}(\:)?\d+\b

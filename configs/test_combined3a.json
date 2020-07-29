@@ -1,29 +1,29 @@
 ***REMOVED***
-    {
-        "title": "Combined Whitelist",
-        "type": "set",
-        "exclude": false,
-        "filepath": "filters/whitelists/white_combined.json",
-        "pos": ***REMOVED***
-            "NNP"
-        ***REMOVED***,
-        "notes": "This is the results of full whitelist - blacklist"
-    },
-    {
-        "title": "Blacklist",
-        "type": "set",
-        "exclude": true,
-        "filepath": "filters/blacklists/names_blacklist_allnames.json",
-        "pos": ***REMOVED***
-            "NNP"
-        ***REMOVED***,
-        "notes": "Names blacklist"
-    },
-    {
-        "title": "No catchall",
-        "type": "regex",
-        "exclude": false,
-        "filepath": "filters/regex/catchall.txt",
-        "notes": "This should match anything, preventing the catchall"
-    }
+
+	{
+		"title":"Combined Whitelist",
+		"type":"set",
+		"exclude":false,
+		"filepath":"filters/whitelists/white_combined.json",
+		"pos":***REMOVED***"NNP"***REMOVED***,
+		"notes":"This is the results of full whitelist - blacklist"
+	},
+	{
+		"title":"Blacklist",
+		"type":"set",
+		"exclude":true,
+		"filepath":"filters/blacklists/names_blacklist_allnames.json",
+		"pos":***REMOVED***"NNP"***REMOVED***,
+		"notes":"Names blacklist"
+	},
+	{	
+    	"title":"No catchall",
+		"type":"regex",
+		"exclude":false,
+		"filepath":"filters/regex/catchall.txt",
+		"notes":"This should match anything, preventing the catchall"
+	}
+
+
+
 ***REMOVED***
