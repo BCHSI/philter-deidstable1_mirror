@@ -1,3 +1,0 @@
-total phi tags	24097
-"OTHER"	15422
-"DATE"	8675
