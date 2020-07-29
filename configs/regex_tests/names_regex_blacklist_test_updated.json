@@ -1,26 +1,26 @@
-***REMOVED***     
-      {
+***REMOVED***
+    {
         "title": "confirmed by name",
         "type": "regex",
         "exclude": true,
         "filepath": "filters/regex/salutations/confirmed_by_name.txt",
         "note": ""
-    },  
-      {
+    },
+    {
         "title": "editor name",
         "type": "regex",
         "exclude": true,
         "filepath": "filters/regex/salutations/editor_name.txt",
         "note": ""
-    }, 
-      {
+    },
+    {
         "title": "code status name",
         "type": "regex",
         "exclude": true,
         "filepath": "filters/regex/salutations/code_status_name.txt",
         "note": ""
-    }, 	
-  {
+    },
+    {
         "title": "attending",
         "type": "regex",
         "exclude": true,
@@ -54,7 +54,7 @@
         "exclude": true,
         "filepath": "filters/regex/salutations/wrote.txt",
         "note": ""
-    },     
+    },
     {
         "title": "salutations1",
         "type": "regex",
@@ -118,14 +118,14 @@
         "filepath": "filters/regex/salutations/ordering_md.txt",
         "note": ""
     },
-       {
+    {
         "title": "name indicator",
         "type": "regex",
         "exclude": true,
         "filepath": "filters/regex/salutations/name_indicator.txt",
         "note": ""
     },
-      {
+    {
         "title": "Names Blacklist",
         "type": "set",
         "exclude": true,
@@ -136,20 +136,20 @@
         "notes": "These are words we believe are not safe"
     },
     {
-        "title":"Whitelist",
-        "type":"set",
-        "exclude":false,
-        "filepath":"/data/muenzenk/fp_analysis/white_black_diff_tests/whitelist_plus_fps-3.json",
-        "pos":***REMOVED******REMOVED***,
-        "notes":"These are words we beleive are safe"
+        "title": "Whitelist",
+        "type": "set",
+        "exclude": false,
+        "filepath": "/data/muenzenk/fp_analysis/white_black_diff_tests/whitelist_plus_fps-3.json",
+        "pos": ***REMOVED******REMOVED***,
+        "notes": "These are words we beleive are safe"
     },
     {
-        "title":"POS MATCHER",
-        "type":"pos_matcher",
-        "exclude":false,
-        "pos":***REMOVED***"CD"***REMOVED***,
-        "notes":"This will include any CDs that aren't included in earlier steps"
+        "title": "POS MATCHER",
+        "type": "pos_matcher",
+        "exclude": false,
+        "pos": ***REMOVED***
+            "CD"
+        ***REMOVED***,
+        "notes": "This will include any CDs that aren't included in earlier steps"
     }
-
-
 ***REMOVED***

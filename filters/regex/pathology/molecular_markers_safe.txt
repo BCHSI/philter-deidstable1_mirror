@@ -1,0 +1,1 @@
+\b(("""+gene_symbols+r""")(***REMOVED***I\-0-9***REMOVED***+)?***REMOVED***\s\-***REMOVED***(expression|Expression|EXPRESSION|expressed|Expressed|EXPRESSED))\b

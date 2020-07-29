@@ -1,4 +1,4 @@
-***REMOVED***    
+***REMOVED***
     {
         "title": "lived to x",
         "type": "regex",
@@ -35,11 +35,10 @@
         "note": ""
     },
     {
-        "title":"No catchall",
-        "type":"regex",
-        "exclude":false,
-        "filepath":"filters/regex/catchall.txt",
-        "notes":"False will turn off catchall, True will turn on catchll (default)"
+        "title": "No catchall",
+        "type": "regex",
+        "exclude": false,
+        "filepath": "filters/regex/catchall.txt",
+        "notes": "False will turn off catchall, True will turn on catchll (default)"
     }
-
 ***REMOVED***

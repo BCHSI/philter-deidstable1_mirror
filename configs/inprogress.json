@@ -1,25 +1,23 @@
 ***REMOVED***
-	{
-		"title":"Date Regex K1",
-		"type":"regex",
-		"exclude":true,
-		"filepath":"filters/regex/date001.txt",
-		"notes":"Complicated dates regex"
-	},
     {
-	    "title":"Date Regex K2",
-	    "type":"regex",
-	    "exclude":true,
-	    "filepath":"filters/regex/date002.txt",
-	    "notes":"Other date regex"
+        "title": "Date Regex K1",
+        "type": "regex",
+        "exclude": true,
+        "filepath": "filters/regex/date001.txt",
+        "notes": "Complicated dates regex"
     },
     {
-    	"title":"No catchall",
-		"type":"regex",
-		"exclude":false,
-		"filepath":"filters/regex/catchall.txt",
-		"notes":"This should match anything, preventing the catchall"
-	}
+        "title": "Date Regex K2",
+        "type": "regex",
+        "exclude": true,
+        "filepath": "filters/regex/date002.txt",
+        "notes": "Other date regex"
+    },
+    {
+        "title": "No catchall",
+        "type": "regex",
+        "exclude": false,
+        "filepath": "filters/regex/catchall.txt",
+        "notes": "This should match anything, preventing the catchall"
+    }
 ***REMOVED***
-
-
