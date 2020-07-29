@@ -1,0 +1,321 @@
+
+
+Word: 'BB'
+Filepath: './data/MIMIC/faked_notes/without_tags/102.txt'
+Tag [start, stop, word, phi-type]: '{'start': 5256, 'end': 5258, 'word': 'BB', 'type': 'NAME'}'
+Match in context: 'ic range of 2-8.\n # cardiomyopathy: hold ACE-I, BB 2-7 to recent hypotension, infection.\n - Contin'
+
+Word: 'BB'
+Filepath: './data/MIMIC/faked_notes/without_tags/117.txt'
+Tag [start, stop, word, phi-type]: '{'start': 4986, 'end': 4988, 'word': 'BB', 'type': 'NAME'}'
+Match in context: 'd transfuse FFP.\n # cardiomyopathy: hold ACE-I, BB 2-7 to recent hypotension, infection.\n - Hold d'
+
+Word: 'BB'
+Filepath: './data/MIMIC/faked_notes/without_tags/120.txt'
+Tag [start, stop, word, phi-type]: '{'start': 5102, 'end': 5104, 'word': 'BB', 'type': 'NAME'}'
+Match in context: 'ntibiotics.\n .\n # cardiomyopathy: hold ACE-I, BB 2-7 hypotension, infection.\n - Hold dig 2-7 ARF'
+
+Word: 'Beta'
+Filepath: './data/MIMIC/faked_notes/without_tags/125.txt'
+Tag [start, stop, word, phi-type]: '{'start': 5904, 'end': 5908, 'word': 'Beta', 'type': 'NAME'}'
+Match in context: 'keppra level pending\n Cardiovascular: Aspirin, Beta-blocker, ACE-inhibitor Statin\n Pulmonary: Trac'
+
+Word: 'BB'
+Filepath: './data/MIMIC/faked_notes/without_tags/140.txt'
+Tag [start, stop, word, phi-type]: '{'start': 5688, 'end': 5690, 'word': 'BB', 'type': 'NAME'}'
+Match in context: 'to be\n cardiac in origin.\n - Continue ACE-I, BB, statin, ASA 81mg daily\n .\n # Rhythm: Curren'
+
+Word: 'BB'
+Filepath: './data/MIMIC/faked_notes/without_tags/141.txt'
+Tag [start, stop, word, phi-type]: '{'start': 5975, 'end': 5977, 'word': 'BB', 'type': 'NAME'}'
+Match in context: 'ntibiotics.\n .\n # cardiomyopathy: hold ACE-I, BB 2-7 hypotension, infection.\n - Hold dig 2-7 ARF'
+
+Word: 'BB'
+Filepath: './data/MIMIC/faked_notes/without_tags/148.txt'
+Tag [start, stop, word, phi-type]: '{'start': 4652, 'end': 4654, 'word': 'BB', 'type': 'NAME'}'
+Match in context: 'agement per her cardiologist\n - continue ACE-I, BB, aspirin\n - review OMR to find out why patient'
+
+Word: 'BB'
+Filepath: './data/MIMIC/faked_notes/without_tags/148.txt'
+Tag [start, stop, word, phi-type]: '{'start': 4783, 'end': 4785, 'word': 'BB', 'type': 'NAME'}'
+Match in context: 's well controlled overnight.\n - continue ACE-I, BB\n # DM 2:\n - FS QID and HISS\n # Hypothyroidi'
+
+Word: 'BB'
+Filepath: './data/MIMIC/faked_notes/without_tags/153.txt'
+Tag [start, stop, word, phi-type]: '{'start': 5613, 'end': 5615, 'word': 'BB', 'type': 'NAME'}'
+Match in context: 'to be\n cardiac in origin.\n - Continue ACE-I, BB, statin, ASA 81mg daily\n .\n # Rhythm: Curren'
+
+Word: 'BB'
+Filepath: './data/MIMIC/faked_notes/without_tags/162.txt'
+Tag [start, stop, word, phi-type]: '{'start': 5059, 'end': 5061, 'word': 'BB', 'type': 'NAME'}'
+Match in context: 'ilure diet.\n Patient was continued on ASA, ACE-I, BB, statin, diuretics, and\nimdur. She was given las'
+
+Word: 'BB'
+Filepath: './data/MIMIC/faked_notes/without_tags/162.txt'
+Tag [start, stop, word, phi-type]: '{'start': 5263, 'end': 5265, 'word': 'BB', 'type': 'NAME'}'
+Match in context: '# HYPERTENSION: Patient was continued on ACE-I, BB, diuretics,\nand lasix.\n.\n# DM2, uncontrolled with'
+
+Word: 'Blocker'
+Filepath: './data/MIMIC/faked_notes/without_tags/172.txt'
+Tag [start, stop, word, phi-type]: '{'start': 6345, 'end': 6352, 'word': 'Blocker', 'type': 'NAME'}'
+Match in context: 'ix 75 mg forever, ASA 325mg\nDaily. Restarted Beta-Blocker, ACE-I. Continue Atorvastatin 80mg\nDaily.\n.\n#. Bi'
+
+Word: 'BB'
+Filepath: './data/MIMIC/faked_notes/without_tags/178.txt'
+Tag [start, stop, word, phi-type]: '{'start': 3812, 'end': 3814, 'word': 'BB', 'type': 'NAME'}'
+Match in context: 'stent in 2186\n - hold aspirin\n - hold ACE-I, BB, CCB given recent hypotension; will restart once'
+
+Word: 'BB'
+Filepath: './data/MIMIC/faked_notes/without_tags/191.txt'
+Tag [start, stop, word, phi-type]: '{'start': 5878, 'end': 5880, 'word': 'BB', 'type': 'NAME'}'
+Match in context: 'only mildy hypervolemic on exam.\n - hold ACE-I, BB 2-7 hypotension, infection.\n - hold off on diur'
+
+Word: 'BB'
+Filepath: './data/MIMIC/faked_notes/without_tags/195.txt'
+Tag [start, stop, word, phi-type]: '{'start': 303, 'end': 305, 'word': 'BB', 'type': 'NAME'}'
+Match in context: 'ne off 12-15 after successful titration of ACE-I, BB and Dig. D/c&apos;d to Fa6a 12-15 @ 1600 and re-a'
+
+Word: 'Beta'
+Filepath: './data/MIMIC/faked_notes/without_tags/199.txt'
+Tag [start, stop, word, phi-type]: '{'start': 6162, 'end': 6166, 'word': 'Beta', 'type': 'NAME'}'
+Match in context: 'Continue simvastatin, ASA\n - Beta-blocker, ACE inhibitor held given low BP\n # PAF'
+
+Word: 'BB'
+Filepath: './data/MIMIC/faked_notes/without_tags/200.txt'
+Tag [start, stop, word, phi-type]: '{'start': 2184, 'end': 2186, 'word': 'BB', 'type': 'NAME'}'
+Match in context: 'CP.\n Action:\n Cont on home regimen of ACE-I, BB, Felix, Jeremiah Kaylee, Daniel Julian Mccarty, s'
+
+Word: 'BB'
+Filepath: './data/MIMIC/faked_notes/without_tags/221.txt'
+Tag [start, stop, word, phi-type]: '{'start': 3466, 'end': 3468, 'word': 'BB', 'type': 'NAME'}'
+Match in context: 'agement per her cardiologist\n - continue ACE-I, BB, aspirin\n - review OMR to find out why patient'
+
+Word: 'BB'
+Filepath: './data/MIMIC/faked_notes/without_tags/221.txt'
+Tag [start, stop, word, phi-type]: '{'start': 3604, 'end': 3606, 'word': 'BB', 'type': 'NAME'}'
+Match in context: 'slightly elevated in 130-140\n - continue ACE-I, BB\n .\n # DM 2:\n - FS QID and HISS\n .\n # Hy'
+
+Word: 'BB'
+Filepath: './data/MIMIC/faked_notes/without_tags/226.txt'
+Tag [start, stop, word, phi-type]: '{'start': 2199, 'end': 2201, 'word': 'BB', 'type': 'NAME'}'
+Match in context: 'o CP\n Action:\n Cont on home regimen of ACE-I, BB, Goodman, Alexa Jacob, Isaiah Christian Tucker, s'
+
+Word: 'Beta'
+Filepath: './data/MIMIC/faked_notes/without_tags/229.txt'
+Tag [start, stop, word, phi-type]: '{'start': 3450, 'end': 3454, 'word': 'Beta', 'type': 'NAME'}'
+Match in context: 'step down unit for further telemetry\nmonitoring. Beta-blocker, ACE-Inhibitor, aspirin, and statin\nwere'
+
+Word: 'BB'
+Filepath: './data/MIMIC/faked_notes/without_tags/232.txt'
+Tag [start, stop, word, phi-type]: '{'start': 9574, 'end': 9576, 'word': 'BB', 'type': 'NAME'}'
+Match in context: 'ndary to RAS. Continue medical mgmt. with ACE-i, BB,\nhydralazine and ISDN. Will not intervene on RAS'
+
+Word: 'BB'
+Filepath: './data/MIMIC/faked_notes/without_tags/248.txt'
+Tag [start, stop, word, phi-type]: '{'start': 5901, 'end': 5903, 'word': 'BB', 'type': 'NAME'}'
+Match in context: 'interventions\n performed.\n - Continue ACE-I, BB, statin, ASA 81mg daily\n .\n # Rhythm: Curren'
+
+Word: 'BB'
+Filepath: './data/MIMIC/faked_notes/without_tags/256.txt'
+Tag [start, stop, word, phi-type]: '{'start': 5582, 'end': 5584, 'word': 'BB', 'type': 'NAME'}'
+Match in context: 'to be\n cardiac in origin.\n - Continue ACE-I, BB, statin, ASA 81mg daily\n .\n # Rhythm: Curren'
+
+Word: 'BB'
+Filepath: './data/MIMIC/faked_notes/without_tags/265.txt'
+Tag [start, stop, word, phi-type]: '{'start': 5875, 'end': 5877, 'word': 'BB', 'type': 'NAME'}'
+Match in context: 'only mildy hypervolemic on exam.\n - hold ACE-I, BB 2-7 hypotension, infection.\n - hold off on diur'
+
+Word: 'BB'
+Filepath: './data/MIMIC/faked_notes/without_tags/266.txt'
+Tag [start, stop, word, phi-type]: '{'start': 3354, 'end': 3356, 'word': 'BB', 'type': 'NAME'}'
+Match in context: 'stent in 2186\n - hold aspirin\n - hold ACE-I, BB, CCB given recent hypotension; will restart once'
+
+Word: 'BB'
+Filepath: './data/MIMIC/faked_notes/without_tags/268.txt'
+Tag [start, stop, word, phi-type]: '{'start': 5913, 'end': 5915, 'word': 'BB', 'type': 'NAME'}'
+Match in context: 'interventions\n performed.\n - Continue ACE-I, BB, statin, ASA 81mg daily\n .\n # Rhythm: Curren'
+
+Word: 'BB'
+Filepath: './data/MIMIC/faked_notes/without_tags/271.txt'
+Tag [start, stop, word, phi-type]: '{'start': 6587, 'end': 6589, 'word': 'BB', 'type': 'NAME'}'
+Match in context: 'interventions\n performed.\n - Continue ACE-I, BB, statin, ASA 81mg daily\n .\n # Rhythm: Curren'
+
+Word: 'BB'
+Filepath: './data/MIMIC/faked_notes/without_tags/29.txt'
+Tag [start, stop, word, phi-type]: '{'start': 5526, 'end': 5528, 'word': 'BB', 'type': 'NAME'}'
+Match in context: 'ormed. No active chest pain.\n - Continue ACE-I, BB, statin, ASA 81mg daily\n .\n # Rhythm: Curren'
+
+Word: 'BB'
+Filepath: './data/MIMIC/faked_notes/without_tags/300.txt'
+Tag [start, stop, word, phi-type]: '{'start': 4975, 'end': 4977, 'word': 'BB', 'type': 'NAME'}'
+Match in context: 'd transfuse FFP.\n # cardiomyopathy: hold ACE-I, BB 2-7 to recent hypotension, infection.\n - Hold d'
+
+Word: 'IV'
+Filepath: './data/MIMIC/faked_notes/without_tags/305.txt'
+Tag [start, stop, word, phi-type]: '{'start': 1734, 'end': 1736, 'word': 'IV', 'type': 'NAME'}'
+Match in context: 'MODYNAMICS- ? LOW DOSE B BLOCKER AND LOW DOSE ACE IV UNTIL PT NO LONGER NPO OR NG ACCESS OBTAINED TO G'
+
+Word: 'BB'
+Filepath: './data/MIMIC/faked_notes/without_tags/309.txt'
+Tag [start, stop, word, phi-type]: '{'start': 6606, 'end': 6608, 'word': 'BB', 'type': 'NAME'}'
+Match in context: 'only mildy hypervolemic on exam.\n - hold ACE-I, BB 2-7 hypotension, infection.\n - hold off on diur'
+
+Word: 'BB'
+Filepath: './data/MIMIC/faked_notes/without_tags/31.txt'
+Tag [start, stop, word, phi-type]: '{'start': 5689, 'end': 5691, 'word': 'BB', 'type': 'NAME'}'
+Match in context: 'to be\n cardiac in origin.\n - Continue ACE-I, BB, statin, ASA 81mg daily\n .\n # Rhythm: Curren'
+
+Word: 'Beta'
+Filepath: './data/MIMIC/faked_notes/without_tags/313.txt'
+Tag [start, stop, word, phi-type]: '{'start': 5801, 'end': 5805, 'word': 'Beta', 'type': 'NAME'}'
+Match in context: 'no\narrhythmias noted. Discharged on ASA, ACE-i, Beta blocker, and\nplavix. Patient elected to follow-u'
+
+Word: 'Beta'
+Filepath: './data/MIMIC/faked_notes/without_tags/325.txt'
+Tag [start, stop, word, phi-type]: '{'start': 6162, 'end': 6166, 'word': 'Beta', 'type': 'NAME'}'
+Match in context: 'Continue simvastatin, ASA\n - Beta-blocker, ACE inhibitor held given low BP\n # PAF'
+
+Word: 'BB'
+Filepath: './data/MIMIC/faked_notes/without_tags/330.txt'
+Tag [start, stop, word, phi-type]: '{'start': 5411, 'end': 5413, 'word': 'BB', 'type': 'NAME'}'
+Match in context: 'ormed. No active chest pain.\n - Continue ACE-I, BB, statin, ASA 81mg daily\n .\n # Rhythm: Curren'
+
+Word: 'Beta'
+Filepath: './data/MIMIC/faked_notes/without_tags/334.txt'
+Tag [start, stop, word, phi-type]: '{'start': 6189, 'end': 6193, 'word': 'Beta', 'type': 'NAME'}'
+Match in context: 'Continue simvastatin, ASA\n - Beta-blocker, ACE inhibitor held given low BP\n # PAF'
+
+Word: 'BB'
+Filepath: './data/MIMIC/faked_notes/without_tags/338.txt'
+Tag [start, stop, word, phi-type]: '{'start': 9456, 'end': 9458, 'word': 'BB', 'type': 'NAME'}'
+Match in context: 'EF, afterload reduction was achieved\nwith ACE-i, BB and lasix gtt. On the day of discharge, he\nappear'
+
+Word: 'BB'
+Filepath: './data/MIMIC/faked_notes/without_tags/350.txt'
+Tag [start, stop, word, phi-type]: '{'start': 5269, 'end': 5271, 'word': 'BB', 'type': 'NAME'}'
+Match in context: 'ic range of 2-8.\n # cardiomyopathy: hold ACE-I, BB 2-7 to recent hypotension, infection.\n - Contin'
+
+Word: 'BB'
+Filepath: './data/MIMIC/faked_notes/without_tags/355.txt'
+Tag [start, stop, word, phi-type]: '{'start': 5740, 'end': 5742, 'word': 'BB', 'type': 'NAME'}'
+Match in context: 'drome is required.\n\n# cardiomyopathy: held ACE-I, BB, digoxin 2-7 hypotension,\ninfection.\n\n# ARF: like'
+
+Word: 'BB'
+Filepath: './data/MIMIC/faked_notes/without_tags/381.txt'
+Tag [start, stop, word, phi-type]: '{'start': 5774, 'end': 5776, 'word': 'BB', 'type': 'NAME'}'
+Match in context: 'only mildy hypervolemic on exam.\n - hold ACE-I, BB 2-7 hypotension, infection.\n - hold off on diur'
+
+Word: 'BB'
+Filepath: './data/MIMIC/faked_notes/without_tags/382.txt'
+Tag [start, stop, word, phi-type]: '{'start': 6222, 'end': 6224, 'word': 'BB', 'type': 'NAME'}'
+Match in context: 'to be\n cardiac in origin.\n - Continue ACE-I, BB, statin, ASA 81mg daily\n .\n # Rhythm: Curren'
+
+Word: 'BB'
+Filepath: './data/MIMIC/faked_notes/without_tags/384.txt'
+Tag [start, stop, word, phi-type]: '{'start': 5680, 'end': 5682, 'word': 'BB', 'type': 'NAME'}'
+Match in context: 'ormed. No active chest pain.\n - Continue ACE-I, BB, statin, ASA 81mg daily\n .\n # Rhythm: Curren'
+
+Word: 'BB'
+Filepath: './data/MIMIC/faked_notes/without_tags/400.txt'
+Tag [start, stop, word, phi-type]: '{'start': 5554, 'end': 5556, 'word': 'BB', 'type': 'NAME'}'
+Match in context: 'to be\n cardiac in origin.\n - Continue ACE-I, BB, statin, ASA 81mg daily\n .\n # Rhythm: Curren'
+
+Word: 'BB'
+Filepath: './data/MIMIC/faked_notes/without_tags/402.txt'
+Tag [start, stop, word, phi-type]: '{'start': 3677, 'end': 3679, 'word': 'BB', 'type': 'NAME'}'
+Match in context: 'agement per her cardiologist\n - continue ACE-I, BB, aspirin\n - unclear why pt is not on statin'
+
+Word: 'BB'
+Filepath: './data/MIMIC/faked_notes/without_tags/402.txt'
+Tag [start, stop, word, phi-type]: '{'start': 3796, 'end': 3798, 'word': 'BB', 'type': 'NAME'}'
+Match in context: 'slightly elevated in 130-140\n - continue ACE-I, BB\n .\n # DM 2:\n - FS QID and HISS\n .\n # Hy'
+
+Word: 'BB'
+Filepath: './data/MIMIC/faked_notes/without_tags/403.txt'
+Tag [start, stop, word, phi-type]: '{'start': 5067, 'end': 5069, 'word': 'BB', 'type': 'NAME'}'
+Match in context: 'ic range of 2-8.\n # cardiomyopathy: hold ACE-I, BB 2-7 to recent hypotension, infection.\n - Contin'
+
+Word: 'BB'
+Filepath: './data/MIMIC/faked_notes/without_tags/404.txt'
+Tag [start, stop, word, phi-type]: '{'start': 5683, 'end': 5685, 'word': 'BB', 'type': 'NAME'}'
+Match in context: 'to be\n cardiac in origin.\n - Continue ACE-I, BB, statin, ASA 81mg daily\n .\n # Rhythm: Curren'
+
+Word: 'Beta'
+Filepath: './data/MIMIC/faked_notes/without_tags/409.txt'
+Tag [start, stop, word, phi-type]: '{'start': 5756, 'end': 5760, 'word': 'Beta', 'type': 'NAME'}'
+Match in context: 'ntrolled\n Cardiovascular: Full anticoagulation, Beta-blocker, ACE inhibitor\n Pulmonary: OOB/IS enco'
+
+Word: '2101-6-22'
+Filepath: './data/MIMIC/faked_notes/without_tags/42.txt'
+Tag [start, stop, word, phi-type]: '{'start': 1694, 'end': 1703, 'word': '2101-6-22', 'type': 'DATE'}'
+Match in context: 'ears to arise from the posterior\nelements of C2. 2101-6-22 CT/Head at Health Alliance MRI center\nthat showe'
+
+Word: 'Beta'
+Filepath: './data/MIMIC/faked_notes/without_tags/421.txt'
+Tag [start, stop, word, phi-type]: '{'start': 6189, 'end': 6193, 'word': 'Beta', 'type': 'NAME'}'
+Match in context: 'Continue simvastatin, ASA\n - Beta-blocker, ACE inhibitor held given low BP\n # PAF'
+
+Word: 'BB'
+Filepath: './data/MIMIC/faked_notes/without_tags/45.txt'
+Tag [start, stop, word, phi-type]: '{'start': 8635, 'end': 8637, 'word': 'BB', 'type': 'NAME'}'
+Match in context: 'Patient has preserved EF, not currently on ACE-I, BB, or\nstatin. Does not appear grossly overloaded on'
+
+Word: 'BB'
+Filepath: './data/MIMIC/faked_notes/without_tags/46.txt'
+Tag [start, stop, word, phi-type]: '{'start': 4845, 'end': 4847, 'word': 'BB', 'type': 'NAME'}'
+Match in context: 'd transfuse FFP.\n # cardiomyopathy: hold ACE-I, BB 2-7 to recent hypotension, infection.\n - Hold d'
+
+Word: 'BB'
+Filepath: './data/MIMIC/faked_notes/without_tags/47.txt'
+Tag [start, stop, word, phi-type]: '{'start': 2193, 'end': 2195, 'word': 'BB', 'type': 'NAME'}'
+Match in context: 'CP.\n Action:\n Cont on home regimen of ACE-I, BB, Camila Stella Brown, S., statin, and lasix, EKG'
+
+Word: 'BB'
+Filepath: './data/MIMIC/faked_notes/without_tags/52.txt'
+Tag [start, stop, word, phi-type]: '{'start': 5616, 'end': 5618, 'word': 'BB', 'type': 'NAME'}'
+Match in context: 'to be\n cardiac in origin.\n - Continue ACE-I, BB, statin, ASA 81mg daily\n .\n # Rhythm: Curren'
+
+Word: 'BB'
+Filepath: './data/MIMIC/faked_notes/without_tags/62.txt'
+Tag [start, stop, word, phi-type]: '{'start': 10841, 'end': 10843, 'word': 'BB', 'type': 'NAME'}'
+Match in context: 'only mildy hypervolemic on exam.\n - hold ACE-I, BB 2-7 hypotension, infection.\n - hold off on diur'
+
+Word: 'BB'
+Filepath: './data/MIMIC/faked_notes/without_tags/7.txt'
+Tag [start, stop, word, phi-type]: '{'start': 8910, 'end': 8912, 'word': 'BB', 'type': 'NAME'}'
+Match in context: '9% on RA\nby discharge. He was continued on ACE-I, BB, Lasix, and digoxin\non discharge\n.\n3. Afib: TEE r'
+
+Word: 'Beta'
+Filepath: './data/MIMIC/faked_notes/without_tags/80.txt'
+Tag [start, stop, word, phi-type]: '{'start': 5764, 'end': 5768, 'word': 'Beta', 'type': 'NAME'}'
+Match in context: 'ntrolled\n Cardiovascular: Full anticoagulation, Beta-blocker, ACE inhibitor\n Pulmonary:\n Gastroint'
+
+Word: 'BB'
+Filepath: './data/MIMIC/faked_notes/without_tags/81.txt'
+Tag [start, stop, word, phi-type]: '{'start': 5868, 'end': 5870, 'word': 'BB', 'type': 'NAME'}'
+Match in context: 'only mildy hypervolemic on exam.\n - hold ACE-I, BB 2-7 hypotension, infection.\n - hold off on diur'
+
+Word: 'BB'
+Filepath: './data/MIMIC/faked_notes/without_tags/86.txt'
+Tag [start, stop, word, phi-type]: '{'start': 6474, 'end': 6476, 'word': 'BB', 'type': 'NAME'}'
+Match in context: 'stent in 2186\n - hold aspirin\n - hold ACE-I, BB, CCB given recent hypotension; will restart once'
+
+Word: 'BB'
+Filepath: './data/MIMIC/faked_notes/without_tags/93.txt'
+Tag [start, stop, word, phi-type]: '{'start': 7433, 'end': 7435, 'word': 'BB', 'type': 'NAME'}'
+Match in context: 'agement per her cardiologist\n - continue ACE-I, BB, aspirin\n - unclear why pt is not on statin'
+
+Word: 'BB'
+Filepath: './data/MIMIC/faked_notes/without_tags/93.txt'
+Tag [start, stop, word, phi-type]: '{'start': 7552, 'end': 7554, 'word': 'BB', 'type': 'NAME'}'
+Match in context: 'slightly elevated in 130-140\n - continue ACE-I, BB\n .\n # DM 2:\n - FS QID and HISS\n .\n # Hy'
+
+Word: 'AS'
+Filepath: './data/MIMIC/faked_notes/without_tags/1.txt'
+Tag [start, stop, word, phi-type]: '{'start': 348, 'end': 350, 'word': 'AS', 'type': 'NAME'}'
+Match in context: 'NUE TO DIURESE.\n2. INCREASE ACE INHIBITOR DOSAGE AS PT CAN TOLERATE.\n3. POSSIBLE BRONCH.\n4. ALINE I'
+
+Word: 'BB'
+Filepath: './data/MIMIC/faked_notes/without_tags/348.txt'
+Tag [start, stop, word, phi-type]: '{'start': 1026, 'end': 1028, 'word': 'BB', 'type': 'NAME'}'
+Match in context: 'd; ? further diuresis; ? initiate ACE-inhibitors, BB&apos;s; ? wean and extubate; keep family informed'

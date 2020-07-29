@@ -1,0 +1,10 @@
+True positives in dir1 and not dir2:
+
+No differences exist.
+
+
+True positives in dir2 and not dir1:
+
+filepath: './data/MIMIC/faked_notes/without_tags/0.txt', phi_type: 'None', match: 'EXTRATAG', start: '0', stop: '3', match in context: '', 
+
+filepath: './data/MIMIC/faked_notes/without_tags/0.txt', phi_type: 'None', match: 'PAUL', start: '0', stop: '3', match in context: '', 

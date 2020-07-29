@@ -276,70 +276,70 @@
         "title": "dates21",
         "type": "regex",
         "exclude": true,
-        "filepath": "filters/regex/dates/dd_mm_yy_transformed.txt",
+        "filepath": "filters/regex/dates/dd_mm_yy.txt",
         "note": ""
     },
     {
         "title": "dates22",
         "type": "regex",
         "exclude": true,
-        "filepath": "filters/regex/dates/dd_mm_yyyy_transformed.txt",
+        "filepath": "filters/regex/dates/dd_mm_yyyy.txt",
         "note": ""
     },
     {
         "title": "dates23",
         "type": "regex",
         "exclude": true,
-        "filepath": "filters/regex/dates/yy_mm_dd_transformed.txt",
+        "filepath": "filters/regex/dates/yy_mm_dd.txt",
         "note": ""
     },
     {
         "title": "dates24",
         "type": "regex",
         "exclude": true,
-        "filepath": "filters/regex/dates/mm_dd_yy_transformed.txt",
+        "filepath": "filters/regex/dates/mm_dd_yy.txt",
         "note": ""
     },
     {
         "title": "dates25",
         "type": "regex",
         "exclude": true,
-        "filepath": "filters/regex/dates/yyyy_mm_dd_transformed.txt",
+        "filepath": "filters/regex/dates/yyyy_mm_dd.txt",
         "note": ""
     },
     {
         "title": "dates26",
         "type": "regex",
         "exclude": true,
-        "filepath": "filters/regex/dates/mm_dd_yyyy_transformed.txt",
+        "filepath": "filters/regex/dates/mm_dd_yyyy.txt",
         "note": ""
     },
     {
         "title": "dates27",
         "type": "regex",
         "exclude": true,
-        "filepath": "filters/regex/dates/dd_mm_transformed.txt",
+        "filepath": "filters/regex/dates/dd_mm.txt",
         "note": ""
     },
     {
         "title": "dates28",
         "type": "regex",
         "exclude": true,
-        "filepath": "filters/regex/dates/mm_dd_transformed.txt",
+        "filepath": "filters/regex/dates/mm_dd.txt",
         "note": ""
     },
     {
         "title": "dates29",
         "type": "regex",
         "exclude": true,
-        "filepath": "filters/regex/dates/mm_yyyy_transformed.txt",
+        "filepath": "filters/regex/dates/mm_yyyy.txt",
         "note": ""
     },
     {
         "title": "dates30",
         "type": "regex",
         "exclude": true,
-        "filepath": "filters/regex/dates/mm_yy_transformed.txt",
+        "filepath": "filters/regex/dates/mm_yy.txt",
         "note": ""
     },
     {

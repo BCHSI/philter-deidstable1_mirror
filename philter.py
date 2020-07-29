@@ -28,6 +28,7 @@ class Philter:
         self.filenames = []
         self.texts    = {}
         self.known_phi = {}
+        self.dynamic = False
         if "verbose" in config:
             self.verbose = config["verbose"]
         if "run_eval" in config:
@@ -550,7 +551,8 @@ class Philter:
             for m in matches:
                 match_count += 1
                 coord_map.add_extend(filename, m.start(), m.start()+len(m.group()))
-        
+                if __debug__ and self.verbose:
+                   print(m) 
             self.patterns[pattern_index]["coordinate_map"] = coord_map
         
         if self.time_profile:

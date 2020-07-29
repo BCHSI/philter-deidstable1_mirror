@@ -1,0 +1,1034 @@
+CUI	preferred_text	alias_text	AUI	STT	ISPREF	SAB	TTY
+C0001109	Acid phosphatase (substance)	Acid phosphatase	A2922314	VC	Y	SNOMEDCT_US	PT
+C0001109	Acid phosphatase (substance)	Acid phosphomonoesterase	A2922315	PF	Y	SNOMEDCT_US	SY
+C0001109	Acid phosphatase (substance)	ACP - Acid phosphatase	A3088915	PF	Y	SNOMEDCT_US	SY
+C0001109	Acid phosphatase (substance)	Acid phosphatase (substance)	A3436863	PF	Y	SNOMEDCT_US	FN
+C0001185	Acridine orange stain (substance)	Acridine orange	A3881529	VC	Y	SNOMEDCT_US	SY
+C0001185	Acridine orange stain (substance)	Euchrysine	A3020071	PF	N	SNOMEDCT_US	SY
+C0001185	Acridine orange stain (substance)	Acridine orange stain	A22944631	PF	N	SNOMEDCT_US	OAP
+C0001185	Acridine orange stain (substance)	Acridine orange stain	A3883828	PF	Y	SNOMEDCT_US	PT
+C0001185	Acridine orange stain (substance)	Basic orange 14	A3799292	PF	Y	SNOMEDCT_US	SY
+C0001185	Acridine orange stain (substance)	Acridine orange stain (substance)	A22908937	PF	N	SNOMEDCT_US	OAF
+C0001185	Acridine orange stain (substance)	Acridine orange stain (substance)	A3887467	PF	Y	SNOMEDCT_US	FN
+C0001185	Acridine orange stain (substance)	Acridine orange (substance)	A4987998	PF	Y	SNOMEDCT_US	OF
+C0001483	Family Adenoviridae (organism)	Adenovirus	A22926809	VO	N	SNOMEDCT_US	OAS
+C0001483	Family Adenoviridae (organism)	Adenovirus	A22950729	VO	N	SNOMEDCT_US	OAP
+C0001483	Family Adenoviridae (organism)	Adenovirus, NOS	A4770601	VO	N	SNOMEDCT_US	IS
+C0001483	Family Adenoviridae (organism)	Adenoviridae	A11738144	PF	N	SNOMEDCT_US	PT
+C0001483	Family Adenoviridae (organism)	Adenoviridae	A22924727	PF	N	SNOMEDCT_US	OAS
+C0001483	Family Adenoviridae (organism)	Adenovirus group	A22990169	PF	N	SNOMEDCT_US	OAS
+C0001483	Family Adenoviridae (organism)	Adenovirus group	A11731445	PF	Y	SNOMEDCT_US	SY
+C0001483	Family Adenoviridae (organism)	Adenovirus group, NOS	A4770600	VO	N	SNOMEDCT_US	IS
+C0001483	Family Adenoviridae (organism)	Family: Adenovirus	A22936705	PF	N	SNOMEDCT_US	OAS
+C0001483	Family Adenoviridae (organism)	Family: Adenovirus	A30240838	PF	N	SNOMEDCT_US	IS
+C0001483	Family Adenoviridae (organism)	Adenovirus (organism)	A22840771	PF	Y	SNOMEDCT_US	OAF
+C0001483	Family Adenoviridae (organism)	Family Adenoviridae (organism)	A11729288	PF	Y	SNOMEDCT_US	FN
+C0001483	Family Adenoviridae (organism)	Family Adenoviridae	A11733730	PF	Y	SNOMEDCT_US	SY
+C0001655	Adrenocorticotropic hormone (substance)	Corticotropin	A2880214	PF	N	SNOMEDCT_US	SY
+C0001655	Adrenocorticotropic hormone (substance)	Corticotrophin	A2880212	VO	N	SNOMEDCT_US	SY
+C0001655	Adrenocorticotropic hormone (substance)	Corticotrophins	A22855934	VO	N	SNOMEDCT_US	OAP
+C0001655	Adrenocorticotropic hormone (substance)	Corticotropins	A22841032	VO	Y	SNOMEDCT_US	OAS
+C0001655	Adrenocorticotropic hormone (substance)	ACTH	A29554518	PF	N	SNOMEDCT_US	IS
+C0001655	Adrenocorticotropic hormone (substance)	Adrenocorticotropic hormone	A2989605	VC	Y	SNOMEDCT_US	PT
+C0001655	Adrenocorticotropic hormone (substance)	Adrenocorticotrophic hormone	A3092775	VO	Y	SNOMEDCT_US	SY
+C0001655	Adrenocorticotropic hormone (substance)	Adrenocorticotropin	A2878168	PF	N	SNOMEDCT_US	SY
+C0001655	Adrenocorticotropic hormone (substance)	ACTH preparation	A29549452	PF	N	SNOMEDCT_US	OAS
+C0001655	Adrenocorticotropic hormone (substance)	Adrenocorticotropic hormone preparation	A29565047	PF	N	SNOMEDCT_US	OAS
+C0001655	Adrenocorticotropic hormone (substance)	Corticotrophic hormone	A29498432	PF	N	SNOMEDCT_US	OAS
+C0001655	Adrenocorticotropic hormone (substance)	Corticotropic hormone	A29514591	VO	Y	SNOMEDCT_US	OAS
+C0001655	Adrenocorticotropic hormone (substance)	Corticotropin preparation	A29497717	PF	N	SNOMEDCT_US	OAP
+C0001655	Adrenocorticotropic hormone (substance)	ACTH - Adrenocorticotrophic hormone	A3088921	PF	Y	SNOMEDCT_US	SY
+C0001655	Adrenocorticotropic hormone (substance)	Adrenocorticotropic hormone (substance)	A3500952	PF	Y	SNOMEDCT_US	FN
+C0001655	Adrenocorticotropic hormone (substance)	Corticotropin preparation (product)	A29498127	PF	Y	SNOMEDCT_US	OAF
+C0001655	Adrenocorticotropic hormone (substance)	Corticotropin preparation (substance)	A4976497	PF	Y	SNOMEDCT_US	OF
+C0001655	Adrenocorticotropic hormone (substance)	Corticotrophins (product)	A22832949	PF	Y	SNOMEDCT_US	OAF
+C0001655	Adrenocorticotropic hormone (substance)	Corticotrophins (substance)	A4976494	PF	Y	SNOMEDCT_US	OF
+C0001924	Albumin (substance)	Albumin	A2873286	VO	Y	SNOMEDCT_US	PT
+C0001924	Albumin (substance)	Albumin (substance)	A3534415	PF	Y	SNOMEDCT_US	FN
+C0001933	Alcian blue 8GX stain (substance)	Alcian blue	A22960798	VC	N	SNOMEDCT_US	OAS
+C0001933	Alcian blue 8GX stain (substance)	Alcian blue	A13011003	VC	Y	SNOMEDCT_US	SY
+C0001933	Alcian blue 8GX stain (substance)	Alcian blue 8GX	A3881537	VC	Y	SNOMEDCT_US	SY
+C0001933	Alcian blue 8GX stain (substance)	Alcian blue 8GX (substance)	A5003669	PF	Y	SNOMEDCT_US	OF
+C0001933	Alcian blue 8GX stain (substance)	Alcian blue 8GX stain	A3902804	PF	Y	SNOMEDCT_US	PT
+C0001933	Alcian blue 8GX stain (substance)	Alcian blue 8GX stain (substance)	A3902803	PF	Y	SNOMEDCT_US	FN
+C0001933	Alcian blue 8GX stain (substance)	Alcian blue stain	A23007917	PF	N	SNOMEDCT_US	OAP
+C0001933	Alcian blue 8GX stain (substance)	Alcian blue stain	A13015676	PF	Y	SNOMEDCT_US	SY
+C0001933	Alcian blue 8GX stain (substance)	Alcian blue stain (substance)	A22972530	PF	Y	SNOMEDCT_US	OAF
+C0002059	Alkaline phosphatase (substance)	Alkaline phosphatase	A22809806	VC	N	SNOMEDCT_US	OAS
+C0002059	Alkaline phosphatase (substance)	Alkaline phosphatase	A22820212	VC	N	SNOMEDCT_US	OAS
+C0002059	Alkaline phosphatase (substance)	Alkaline phosphatase	A2922647	VC	Y	SNOMEDCT_US	PT
+C0002059	Alkaline phosphatase (substance)	Phosphomonoesterase	A30229725	PF	N	SNOMEDCT_US	IS
+C0002059	Alkaline phosphatase (substance)	Alkaline phosphomonoesterase	A2922648	PF	Y	SNOMEDCT_US	SY
+C0002059	Alkaline phosphatase (substance)	Glycerophosphatase	A2932208	PF	Y	SNOMEDCT_US	SY
+C0002059	Alkaline phosphatase (substance)	ALP - Alkaline phosphatase	A3089009	PF	Y	SNOMEDCT_US	SY
+C0002059	Alkaline phosphatase (substance)	AP - Alkaline phosphatase	A3246049	PF	Y	SNOMEDCT_US	SY
+C0002059	Alkaline phosphatase (substance)	Alkaline phosphatase (substance)	A3542685	PF	Y	SNOMEDCT_US	FN
+C0002190	Alpha-1-antichymotrypsin (substance)	Alpha-1-antichymotrypsin	A3307798	VC	Y	SNOMEDCT_US	PT
+C0002190	Alpha-1-antichymotrypsin (substance)	alpha>1< Antichymotrypsin	A22829352	VO	N	SNOMEDCT_US	OAP
+C0002190	Alpha-1-antichymotrypsin (substance)	A-1ACT - alpha-1-antichymotrypsin	A30196747	PF	Y	SNOMEDCT_US	SY
+C0002190	Alpha-1-antichymotrypsin (substance)	A-1ACT - Alpha-1-antichymotrypsin	A30230001	VC	N	SNOMEDCT_US	IS
+C0002190	Alpha-1-antichymotrypsin (substance)	alpha1 Antichymotrypsin	A22972021	PF	N	SNOMEDCT_US	MTH_OAP
+C0002190	Alpha-1-antichymotrypsin (substance)	alpha<sub>1</sub> Antichymotrypsin	A22987799	PF	Y	SNOMEDCT_US	MTH_OAP
+C0002190	Alpha-1-antichymotrypsin (substance)	alpha<sub>1</sub> Antichymotrypsin (substance)	A23055201	PF	Y	SNOMEDCT_US	MTH_OAF
+C0002190	Alpha-1-antichymotrypsin (substance)	Alpha-1-antichymotrypsin (substance)	A3551725	PF	Y	SNOMEDCT_US	FN
+C0002190	Alpha-1-antichymotrypsin (substance)	alpha>1< Antichymotrypsin (substance)	A22995043	VC	Y	SNOMEDCT_US	OAF
+C0002190	Alpha-1-antichymotrypsin (substance)	alpha1 Antichymotrypsin (substance)	A22852681	PF	Y	SNOMEDCT_US	MTH_OAF
+C0002210	Alpha fetoprotein (substance)	alpha Fetoprotein	A30229712	VO	N	SNOMEDCT_US	OP
+C0002210	Alpha fetoprotein (substance)	Alpha fetoprotein	A30198054	VO	Y	SNOMEDCT_US	PT
+C0002210	Alpha fetoprotein (substance)	alpha Foetoprotein	A16965447	VO	N	SNOMEDCT_US	IS
+C0002210	Alpha fetoprotein (substance)	Alpha-fetoprotein	A3310044	VO	Y	SNOMEDCT_US	SY
+C0002210	Alpha fetoprotein (substance)	Fetuin	A2881589	PF	Y	SNOMEDCT_US	PT
+C0002210	Alpha fetoprotein (substance)	AFP - alpha-fetoprotein	A30217780	PF	Y	SNOMEDCT_US	SY
+C0002210	Alpha fetoprotein (substance)	AFP - Alpha-fetoprotein	A30250621	VC	N	SNOMEDCT_US	IS
+C0002210	Alpha fetoprotein (substance)	Alpha-1-fetoprotein	A28439642	PF	Y	SNOMEDCT_US	SY
+C0002210	Alpha fetoprotein (substance)	Alpha fetoprotein (substance)	A30267373	PF	Y	SNOMEDCT_US	FN
+C0002210	Alpha fetoprotein (substance)	alpha Fetoprotein (substance)	A30210772	VC	Y	SNOMEDCT_US	OF
+C0002210	Alpha fetoprotein (substance)	Fetuin (substance)	A3454599	PF	Y	SNOMEDCT_US	FN
+C0002287	Alpha-lactalbumin (substance)	alpha-Lactalbumin	A30189969	PF	N	SNOMEDCT_US	OP
+C0002287	Alpha-lactalbumin (substance)	Alpha-lactalbumin	A22935550	VC	N	SNOMEDCT_US	OAP
+C0002287	Alpha-lactalbumin (substance)	Alpha-lactalbumin	A30198064	VC	Y	SNOMEDCT_US	PT
+C0002287	Alpha-lactalbumin (substance)	Minor lactalbumin	A3159207	PF	Y	SNOMEDCT_US	SY
+C0002287	Alpha-lactalbumin (substance)	alpha-Lactalbumin [dup] (substance)	A5058961	PF	Y	SNOMEDCT_US	OF
+C0002287	Alpha-lactalbumin (substance)	Alpha-lactalbumin (substance)	A30198063	PF	Y	SNOMEDCT_US	FN
+C0002287	Alpha-lactalbumin (substance)	alpha-Lactalbumin (substance)	A30190505	VC	N	SNOMEDCT_US	OF
+C0002287	Alpha-lactalbumin (substance)	alpha-Lactalbumin (substance)	A23013395	VC	Y	SNOMEDCT_US	OAF
+C0002712	Product containing amylase (medicinal product)	Amylase	A23011863	VO	N	SNOMEDCT_US	OAS
+C0002712	Product containing amylase (medicinal product)	Amylase	A2878444	VO	N	SNOMEDCT_US	PT
+C0002712	Product containing amylase (medicinal product)	Amylase	A29530569	VO	N	SNOMEDCT_US	OP
+C0002712	Product containing amylase (medicinal product)	Product containing amylase (medicinal product)	A28892426	PF	Y	SNOMEDCT_US	FN
+C0002712	Product containing amylase (medicinal product)	Amylase-containing product	A30235235	PF	Y	SNOMEDCT_US	PT
+C0002712	Product containing amylase (medicinal product)	Product containing amylase	A30221767	VCW	Y	SNOMEDCT_US	IS
+C0002712	Product containing amylase (medicinal product)	Amylase product	A30232363	PF	Y	SNOMEDCT_US	OP
+C0002712	Product containing amylase (medicinal product)	Amylase preparation	A13368907	PF	N	SNOMEDCT_US	IS
+C0002712	Product containing amylase (medicinal product)	Amylase preparation	A28879979	PF	Y	SNOMEDCT_US	OP
+C0002712	Product containing amylase (medicinal product)	Amylase preparation (product)	A28902312	PF	Y	SNOMEDCT_US	OF
+C0002712	Product containing amylase (medicinal product)	Amylase preparation (substance)	A5012443	PF	N	SNOMEDCT_US	OF
+C0002712	Product containing amylase (medicinal product)	Amylase preparation (substance)	A5012442	PF	Y	SNOMEDCT_US	OF
+C0002712	Product containing amylase (medicinal product)	Amylase (substance)	A3582870	PF	Y	SNOMEDCT_US	FN
+C0003947	Asbestos (substance)	Asbestos	A2878718	PF	N	SNOMEDCT_US	PT
+C0003947	Asbestos (substance)	Asbestos, NOS	A4771794	VO	N	SNOMEDCT_US	IS
+C0003947	Asbestos (substance)	Asbestos fibers	A3706605	PF	Y	SNOMEDCT_US	SY
+C0003947	Asbestos (substance)	Asbestos fibers, NOS	A4771793	VO	N	SNOMEDCT_US	IS
+C0003947	Asbestos (substance)	Asbestos fibres	A3706611	VO	Y	SNOMEDCT_US	SYGB
+C0003947	Asbestos (substance)	Asbestos (substance)	A3706574	PF	Y	SNOMEDCT_US	FN
+C0005149	Beta 2 microglobulin (substance)	Beta-2 microglobulin	A2997534	VC	Y	SNOMEDCT_US	SY
+C0005149	Beta 2 microglobulin (substance)	Beta-2-microglobulin	A24807329	VC	N	SNOMEDCT_US	OP
+C0005149	Beta 2 microglobulin (substance)	beta 2 microglobulin	A30231134	VC	N	SNOMEDCT_US	OP
+C0005149	Beta 2 microglobulin (substance)	Beta 2 microglobulin	A30227744	VC	Y	SNOMEDCT_US	PT
+C0005149	Beta 2 microglobulin (substance)	B-2M - beta 2 microglobulin	A24810006	PF	Y	SNOMEDCT_US	SY
+C0005149	Beta 2 microglobulin (substance)	B-2M - Beta-2 microglobulin	A24820249	VC	N	SNOMEDCT_US	IS
+C0005149	Beta 2 microglobulin (substance)	Beta 2 microglobulin (substance)	A30267391	PF	Y	SNOMEDCT_US	FN
+C0005149	Beta 2 microglobulin (substance)	beta 2 microglobulin (substance)	A30231136	VC	Y	SNOMEDCT_US	OF
+C0005149	Beta 2 microglobulin (substance)	Beta-2-microglobulin (substance)	A24815353	VO	Y	SNOMEDCT_US	OF
+C0005388	Gallbladder bile (substance)	Bile	A2879094	PF	N	SNOMEDCT_US	PT
+C0005388	Gallbladder bile (substance)	Bile, NOS	A4739275	VO	N	SNOMEDCT_US	IS
+C0005388	Gallbladder bile (substance)	Gallbladder bile	A2931687	PF	Y	SNOMEDCT_US	PT
+C0005388	Gallbladder bile (substance)	Gallbladder bile (substance)	A3471356	PF	Y	SNOMEDCT_US	FN
+C0005388	Gallbladder bile (substance)	Bile (substance)	A3810585	PF	Y	SNOMEDCT_US	FN
+C0005919	Bombesin (substance)	Bombesin	A2879171	PF	N	SNOMEDCT_US	PT
+C0005919	Bombesin (substance)	Bombesin (substance)	A3323569	PF	Y	SNOMEDCT_US	FN
+C0006668	Product containing calcitonin (medicinal product)	Calcitonin	A2879368	PF	N	SNOMEDCT_US	PT
+C0006668	Product containing calcitonin (medicinal product)	Calcitonin	A29525078	PF	N	SNOMEDCT_US	OP
+C0006668	Product containing calcitonin (medicinal product)	Thyrocalcitonin	A2887360	PF	N	SNOMEDCT_US	SY
+C0006668	Product containing calcitonin (medicinal product)	Calcitonin product	A30191034	PF	Y	SNOMEDCT_US	OP
+C0006668	Product containing calcitonin (medicinal product)	CT - Calcitonin	A3261609	PF	Y	SNOMEDCT_US	SY
+C0006668	Product containing calcitonin (medicinal product)	Product containing calcitonin (medicinal product)	A28883586	PF	Y	SNOMEDCT_US	FN
+C0006668	Product containing calcitonin (medicinal product)	Calcitonin-containing product	A30195568	PF	Y	SNOMEDCT_US	PT
+C0006668	Product containing calcitonin (medicinal product)	Product containing calcitonin	A30251772	VCW	Y	SNOMEDCT_US	IS
+C0006668	Product containing calcitonin (medicinal product)	Calcitonin agent	A22809286	PF	Y	SNOMEDCT_US	OAP
+C0006668	Product containing calcitonin (medicinal product)	Calcitonin agent (substance)	A23019396	PF	Y	SNOMEDCT_US	OAF
+C0006668	Product containing calcitonin (medicinal product)	Calcitonin (substance)	A3335496	PF	Y	SNOMEDCT_US	FN
+C0006675	Product containing calcium (medicinal product)	Calcium	A2879370	PF	N	SNOMEDCT_US	PT
+C0006675	Product containing calcium (medicinal product)	Calcium, NOS	A4774965	VO	N	SNOMEDCT_US	IS
+C0006675	Product containing calcium (medicinal product)	Ca - Calcium	A3002955	PF	Y	SNOMEDCT_US	SY
+C0006675	Product containing calcium (medicinal product)	Calcium coagulation factor	A4774950	PF	N	SNOMEDCT_US	IS
+C0006675	Product containing calcium (medicinal product)	Coagulation factor IV	A22964258	VC	N	SNOMEDCT_US	OAP
+C0006675	Product containing calcium (medicinal product)	Calcium analyte	A23038355	PF	N	SNOMEDCT_US	OAP
+C0006675	Product containing calcium (medicinal product)	Calcium product	A30212440	PF	Y	SNOMEDCT_US	OP
+C0006675	Product containing calcium (medicinal product)	Product containing calcium (product)	A30232324	PF	Y	SNOMEDCT_US	OF
+C0006675	Product containing calcium (medicinal product)	Calcium-containing product	A30196272	PF	Y	SNOMEDCT_US	PT
+C0006675	Product containing calcium (medicinal product)	Product containing calcium	A30242159	VCW	Y	SNOMEDCT_US	IS
+C0006675	Product containing calcium (medicinal product)	Product containing calcium (medicinal product)	A30265667	PF	Y	SNOMEDCT_US	FN
+C0006675	Product containing calcium (medicinal product)	Calcium analyte (substance)	A23015255	PF	Y	SNOMEDCT_US	OAF
+C0006675	Product containing calcium (medicinal product)	Calcium (substance)	A3335583	PF	Y	SNOMEDCT_US	FN
+C0006675	Product containing calcium (medicinal product)	Coagulation factor IV -RETIRED-	A15117373	PF	N	SNOMEDCT_US	IS
+C0006675	Product containing calcium (medicinal product)	Coagulation factor IV -RETIRED-	A4974268	PF	Y	SNOMEDCT_US	OF
+C0006675	Product containing calcium (medicinal product)	Coagulation factor IV (substance)	A22925941	PF	Y	SNOMEDCT_US	OAF
+C0007082	Carcinoembryonic antigen (substance)	Carcinoembryonic antigen	A2925781	VC	Y	SNOMEDCT_US	PT
+C0007082	Carcinoembryonic antigen (substance)	CEA	A21115441	PF	N	SNOMEDCT_US	IS
+C0007082	Carcinoembryonic antigen (substance)	CEA - Carcinoembryonic antigen	A22832053	PF	N	SNOMEDCT_US	OAS
+C0007082	Carcinoembryonic antigen (substance)	CEA - Carcinoembryonic antigen	A22980608	PF	N	SNOMEDCT_US	OAS
+C0007082	Carcinoembryonic antigen (substance)	CEA - Carcinoembryonic antigen	A3105717	PF	Y	SNOMEDCT_US	SY
+C0007082	Carcinoembryonic antigen (substance)	Lymphocyte antigen CD66E	A22845176	PF	N	SNOMEDCT_US	OAP
+C0007082	Carcinoembryonic antigen (substance)	Lymphocyte antigen CD66E	A13015768	PF	Y	SNOMEDCT_US	SY
+C0007082	Carcinoembryonic antigen (substance)	Lymphocyte antigen CD66E (substance)	A22904201	PF	Y	SNOMEDCT_US	OAF
+C0007082	Carcinoembryonic antigen (substance)	Carcinoembryonic antigen (substance)	A3338882	PF	Y	SNOMEDCT_US	FN
+C0008586	Chromogranin (substance)	Chromogranin, NOS	A4812772	VO	N	SNOMEDCT_US	IS
+C0008586	Chromogranin (substance)	Chromogranin	A3352188	VO	Y	SNOMEDCT_US	PT
+C0008586	Chromogranin (substance)	Chromogranin (substance)	A3352180	PF	Y	SNOMEDCT_US	FN
+C0009325	Product containing collagen (medicinal product)	Collagen	A2880108	PF	N	SNOMEDCT_US	PT
+C0009325	Product containing collagen (medicinal product)	Collagen	A29551306	PF	N	SNOMEDCT_US	OP
+C0009325	Product containing collagen (medicinal product)	Collagen [haemostatic]	A22900062	PF	N	SNOMEDCT_US	OAP
+C0009325	Product containing collagen (medicinal product)	Collagen [hemostatic]	A23006696	VO	N	SNOMEDCT_US	OAP
+C0009325	Product containing collagen (medicinal product)	Collagen product	A28882278	PF	N	SNOMEDCT_US	OP
+C0009325	Product containing collagen (medicinal product)	Collagen-containing product	A30245149	PF	Y	SNOMEDCT_US	PT
+C0009325	Product containing collagen (medicinal product)	Product containing collagen	A30261744	VCW	Y	SNOMEDCT_US	IS
+C0009325	Product containing collagen (medicinal product)	Product containing collagen (medicinal product)	A28883593	PF	Y	SNOMEDCT_US	FN
+C0009325	Product containing collagen (medicinal product)	Collagen [hemostatic] (product)	A22900844	PF	Y	SNOMEDCT_US	OAF
+C0009325	Product containing collagen (medicinal product)	Collagen [hemostatic] (substance)	A4974593	PF	Y	SNOMEDCT_US	OF
+C0009325	Product containing collagen (medicinal product)	Collagen product (product)	A28904593	PF	Y	SNOMEDCT_US	OF
+C0009325	Product containing collagen (medicinal product)	Collagen product (substance)	A4974603	PF	Y	SNOMEDCT_US	OF
+C0009325	Product containing collagen (medicinal product)	Collagen (substance)	A3362284	PF	Y	SNOMEDCT_US	FN
+C0009742	Congo red stain (substance)	Congo red	A3881137	VC	Y	SNOMEDCT_US	SY
+C0009742	Congo red stain (substance)	Direct red 28	A3397622	PF	Y	SNOMEDCT_US	SY
+C0009742	Congo red stain (substance)	Congo red (substance)	A4975819	PF	Y	SNOMEDCT_US	OF
+C0009742	Congo red stain (substance)	Congo red stain	A3897491	PF	Y	SNOMEDCT_US	PT
+C0009742	Congo red stain (substance)	Congo red stain (substance)	A3897490	PF	Y	SNOMEDCT_US	FN
+C0011696	Desmin (substance)	Desmin	A2880565	PF	N	SNOMEDCT_US	PT
+C0011696	Desmin (substance)	Desmin (substance)	A3389907	PF	Y	SNOMEDCT_US	FN
+C0012524	Catechol oxidase (substance)	Catechol oxidase	A3004974	VC	Y	SNOMEDCT_US	PT
+C0012524	Catechol oxidase (substance)	Diphenol oxidase	A3015183	VO	Y	SNOMEDCT_US	SY
+C0012524	Catechol oxidase (substance)	Tyrosinase	A2887768	PF	Y	SNOMEDCT_US	SY
+C0012524	Catechol oxidase (substance)	Phenolase (di)	A3057372	PF	Y	SNOMEDCT_US	SY
+C0012524	Catechol oxidase (substance)	o-Diphenolase	A3087715	PF	Y	SNOMEDCT_US	SY
+C0012524	Catechol oxidase (substance)	Catechol oxidase (substance)	A3341866	PF	Y	SNOMEDCT_US	FN
+C0012524	Catechol oxidase (substance)	Polyphenol oxidase	A3059466	VC	Y	SNOMEDCT_US	SY
+C0014644	Human herpesvirus 4 (organism)	Epstein-Barr virus	A22907112	VC	N	SNOMEDCT_US	OAS
+C0014644	Human herpesvirus 4 (organism)	Epstein-Barr virus	A2930023	VC	Y	SNOMEDCT_US	SY
+C0014644	Human herpesvirus 4 (organism)	Human herpesvirus 4	A3031273	VCW	Y	SNOMEDCT_US	PT
+C0014644	Human herpesvirus 4 (organism)	EBV - Epstein-Barr virus	A3122882	PF	Y	SNOMEDCT_US	SY
+C0014644	Human herpesvirus 4 (organism)	Human herpesvirus 4 (organism)	A3497757	PF	Y	SNOMEDCT_US	FN
+C0014644	Human herpesvirus 4 (organism)	Human (gamma) herpes virus 4	A3142647	PF	Y	SNOMEDCT_US	SY
+C0015506	Product containing factor VIII (medicinal product)	Factor VIII	A2881495	PF	N	SNOMEDCT_US	SY
+C0015506	Product containing factor VIII (medicinal product)	Factor VIII	A29551317	PF	N	SNOMEDCT_US	OP
+C0015506	Product containing factor VIII (medicinal product)	Antihemophilic factor	A4738962	PF	N	SNOMEDCT_US	IS
+C0015506	Product containing factor VIII (medicinal product)	Antihemophilic factor	A2923498	PF	Y	SNOMEDCT_US	SY
+C0015506	Product containing factor VIII (medicinal product)	Antihaemophilic factor	A3322298	VO	Y	SNOMEDCT_US	SYGB
+C0015506	Product containing factor VIII (medicinal product)	Coagulation factor VIII	A22893071	VC	N	SNOMEDCT_US	OAP
+C0015506	Product containing factor VIII (medicinal product)	Coagulation factor VIII	A2926926	VC	Y	SNOMEDCT_US	PT
+C0015506	Product containing factor VIII (medicinal product)	Antihemophilic factor A	A4738963	PF	N	SNOMEDCT_US	IS
+C0015506	Product containing factor VIII (medicinal product)	Antihemophilic factor A	A2923500	PF	Y	SNOMEDCT_US	SY
+C0015506	Product containing factor VIII (medicinal product)	Antihaemophilic factor A	A3648540	VO	Y	SNOMEDCT_US	SYGB
+C0015506	Product containing factor VIII (medicinal product)	AHF	A4738574	PF	N	SNOMEDCT_US	IS
+C0015506	Product containing factor VIII (medicinal product)	AHF	A2921880	PF	Y	SNOMEDCT_US	SY
+C0015506	Product containing factor VIII (medicinal product)	AHG	A4738575	PF	N	SNOMEDCT_US	IS
+C0015506	Product containing factor VIII (medicinal product)	AHG	A2921882	PF	Y	SNOMEDCT_US	SY
+C0015506	Product containing factor VIII (medicinal product)	Platelet cofactor I	A4743820	PF	N	SNOMEDCT_US	IS
+C0015506	Product containing factor VIII (medicinal product)	Platelet cofactor I	A2941854	PF	Y	SNOMEDCT_US	SY
+C0015506	Product containing factor VIII (medicinal product)	Antihemophilic globulin	A4738964	PF	N	SNOMEDCT_US	IS
+C0015506	Product containing factor VIII (medicinal product)	Antihemophilic globulin	A2923503	PF	Y	SNOMEDCT_US	SY
+C0015506	Product containing factor VIII (medicinal product)	Antihaemophilic globulin	A3648627	VO	Y	SNOMEDCT_US	SYGB
+C0015506	Product containing factor VIII (medicinal product)	Product containing factor VIII (medicinal product)	A28883651	PF	Y	SNOMEDCT_US	FN
+C0015506	Product containing factor VIII (medicinal product)	Product containing factor VIII	A30192185	PF	Y	SNOMEDCT_US	IS
+C0015506	Product containing factor VIII (medicinal product)	Coagulation factor VIII product	A30202825	PF	Y	SNOMEDCT_US	OP
+C0015506	Product containing factor VIII (medicinal product)	Coagulation factor VIII-containing product	A30225410	PF	Y	SNOMEDCT_US	PT
+C0015506	Product containing factor VIII (medicinal product)	Coagulation factor VIII (substance) [Ambiguous]	A4974273	PF	Y	SNOMEDCT_US	OF
+C0015506	Product containing factor VIII (medicinal product)	Factor VIII (substance)	A3447313	PF	Y	SNOMEDCT_US	FN
+C0015506	Product containing factor VIII (medicinal product)	Factor VIII product (product)	A28877905	PF	Y	SNOMEDCT_US	OF
+C0015506	Product containing factor VIII (medicinal product)	Factor VIII product	A28891396	PF	Y	SNOMEDCT_US	OP
+C0015506	Product containing factor VIII (medicinal product)	Coagulation factor VIII (substance)	A22938634	PF	Y	SNOMEDCT_US	OAF
+C0015879	Ferritin (substance)	Ferritin	A2881579	PF	N	SNOMEDCT_US	PT
+C0015879	Ferritin (substance)	Ferritin (substance)	A3453904	PF	Y	SNOMEDCT_US	FN
+C0016006	Coagulation factor I (substance)	Fibrinogen	A2881601	PF	N	SNOMEDCT_US	SY
+C0016006	Coagulation factor I (substance)	Coagulation factor I	A2873491	VC	Y	SNOMEDCT_US	PT
+C0016006	Coagulation factor I (substance)	Factor I	A23043207	PF	N	SNOMEDCT_US	OAS
+C0016006	Coagulation factor I (substance)	Factor I	A2881490	PF	N	SNOMEDCT_US	PT
+C0016006	Coagulation factor I (substance)	Coagulation factor I (substance)	A3360940	PF	Y	SNOMEDCT_US	FN
+C0016006	Coagulation factor I (substance)	Factor I (substance)	A3447241	PF	Y	SNOMEDCT_US	FN
+C0016799	Fumarate hydratase (substance)	Fumarate hydratase	A22900794	VC	N	SNOMEDCT_US	OAP
+C0016799	Fumarate hydratase (substance)	Fumarate hydratase	A2931608	VC	Y	SNOMEDCT_US	PT
+C0016799	Fumarate hydratase (substance)	Fumarase	A13015544	PF	N	SNOMEDCT_US	SY
+C0016799	Fumarate hydratase (substance)	Fumarase	A22994633	PF	N	SNOMEDCT_US	OAP
+C0016799	Fumarate hydratase (substance)	Fumarase	A4712181	PF	N	SNOMEDCT_US	IS
+C0016799	Fumarate hydratase (substance)	Fumarate hydratase (substance) [Ambiguous]	A4991064	PF	Y	SNOMEDCT_US	OF
+C0016799	Fumarate hydratase (substance)	Fumarase (substance)	A22928287	PF	Y	SNOMEDCT_US	OAF
+C0016799	Fumarate hydratase (substance)	Fumarate hydratase (substance)	A22882758	PF	N	SNOMEDCT_US	OAF
+C0016799	Fumarate hydratase (substance)	Fumarate hydratase (substance)	A3469557	PF	Y	SNOMEDCT_US	FN
+C0017440	Product containing methylrosanilinium chloride (medicinal product)	Gentian violet	A22968546	VC	N	SNOMEDCT_US	OAS
+C0017440	Product containing methylrosanilinium chloride (medicinal product)	Gentian violet	A29509250	VC	N	SNOMEDCT_US	IS
+C0017440	Product containing methylrosanilinium chloride (medicinal product)	Gentian violet	A4741341	VC	N	SNOMEDCT_US	IS
+C0017440	Product containing methylrosanilinium chloride (medicinal product)	Gentian violet	A4741342	VC	N	SNOMEDCT_US	IS
+C0017440	Product containing methylrosanilinium chloride (medicinal product)	Gentian violet	A2931925	VC	Y	SNOMEDCT_US	PT
+C0017440	Product containing methylrosanilinium chloride (medicinal product)	Crystal violet	A23043808	VC	N	SNOMEDCT_US	OAS
+C0017440	Product containing methylrosanilinium chloride (medicinal product)	Crystal violet	A30209830	VC	N	SNOMEDCT_US	IS
+C0017440	Product containing methylrosanilinium chloride (medicinal product)	Crystal violet	A2927972	VC	Y	SNOMEDCT_US	SY
+C0017440	Product containing methylrosanilinium chloride (medicinal product)	Methyl violet	A22952866	VC	Y	SNOMEDCT_US	OAS
+C0017440	Product containing methylrosanilinium chloride (medicinal product)	Methylrosaniline chloride	A28899940	VC	N	SNOMEDCT_US	IS
+C0017440	Product containing methylrosanilinium chloride (medicinal product)	Methylrosaniline chloride	A3044803	VC	Y	SNOMEDCT_US	SY
+C0017440	Product containing methylrosanilinium chloride (medicinal product)	Methylrosanilium chloride	A29519276	PF	N	SNOMEDCT_US	OP
+C0017440	Product containing methylrosanilinium chloride (medicinal product)	Methyl violet stain	A22829469	PF	Y	SNOMEDCT_US	OAP
+C0017440	Product containing methylrosanilinium chloride (medicinal product)	Methylrosanilinium chloride-containing product	A30205745	PF	Y	SNOMEDCT_US	SY
+C0017440	Product containing methylrosanilinium chloride (medicinal product)	Product containing methylrosanilinium chloride	A30251829	VCW	Y	SNOMEDCT_US	IS
+C0017440	Product containing methylrosanilinium chloride (medicinal product)	Product containing methylrosanilinium chloride (medicinal product)	A28903607	PF	Y	SNOMEDCT_US	FN
+C0017440	Product containing methylrosanilinium chloride (medicinal product)	Methylrosanilinium chloride product	A30222703	PF	Y	SNOMEDCT_US	OP
+C0017440	Product containing methylrosanilinium chloride (medicinal product)	Methylrosanilinium chloride (substance)	A29563249	PF	Y	SNOMEDCT_US	FN
+C0017440	Product containing methylrosanilinium chloride (medicinal product)	Gentian violet-containing product	A30205744	PF	Y	SNOMEDCT_US	PT
+C0017440	Product containing methylrosanilinium chloride (medicinal product)	Basic violet 3	A30249626	PF	N	SNOMEDCT_US	IS
+C0017440	Product containing methylrosanilinium chloride (medicinal product)	Basic violet 3	A3799336	PF	Y	SNOMEDCT_US	SY
+C0017440	Product containing methylrosanilinium chloride (medicinal product)	Methylrosanilinium chloride	A28895770	PF	N	SNOMEDCT_US	OP
+C0017440	Product containing methylrosanilinium chloride (medicinal product)	Methylrosanilinium chloride	A5008463	PF	N	SNOMEDCT_US	IS
+C0017440	Product containing methylrosanilinium chloride (medicinal product)	Methylrosanilinium chloride	A5008464	PF	N	SNOMEDCT_US	IS
+C0017440	Product containing methylrosanilinium chloride (medicinal product)	Methylrosanilinium chloride	A13019482	PF	Y	SNOMEDCT_US	PTGB
+C0017440	Product containing methylrosanilinium chloride (medicinal product)	Gentian violet product	A30252691	PF	Y	SNOMEDCT_US	OP
+C0017440	Product containing methylrosanilinium chloride (medicinal product)	Gentian violet (product)	A28889049	VO	Y	SNOMEDCT_US	OF
+C0017440	Product containing methylrosanilinium chloride (medicinal product)	Gentian violet (substance)	A29493326	PF	N	SNOMEDCT_US	OF
+C0017440	Product containing methylrosanilinium chloride (medicinal product)	Gentian violet (substance)	A4992038	PF	Y	SNOMEDCT_US	OF
+C0017440	Product containing methylrosanilinium chloride (medicinal product)	Crystal violet stain (substance)	A22964546	PF	Y	SNOMEDCT_US	OAF
+C0017440	Product containing methylrosanilinium chloride (medicinal product)	Crystal violet stain	A23035635	VC	Y	SNOMEDCT_US	OAP
+C0017440	Product containing methylrosanilinium chloride (medicinal product)	Methyl violet stain (substance)	A23003965	PF	Y	SNOMEDCT_US	OAF
+C0017440	Product containing methylrosanilinium chloride (medicinal product)	Methyl violet 10B stain	A13010309	PF	Y	SNOMEDCT_US	SY
+C0017542	Giemsa stain (substance)	Giemsa stain	A2932010	PF	N	SNOMEDCT_US	PT
+C0017542	Giemsa stain (substance)	Giemsa stain (substance)	A3476606	PF	Y	SNOMEDCT_US	FN
+C0017542	Giemsa stain (substance)	Giemsa	A3899995	PF	Y	SNOMEDCT_US	SY
+C0017626	Glial fibrillary acidic protein (substance)	Glial fibrillary acidic protein	A2932066	VC	Y	SNOMEDCT_US	PT
+C0017626	Glial fibrillary acidic protein (substance)	GFAP	A2931669	PF	Y	SNOMEDCT_US	SY
+C0017626	Glial fibrillary acidic protein (substance)	Glial fibrillary acidic protein (substance)	A3477420	PF	Y	SNOMEDCT_US	FN
+C0017687	Product containing glucagon (medicinal product)	Glucagon	A2881999	PF	N	SNOMEDCT_US	PT
+C0017687	Product containing glucagon (medicinal product)	Glucagon	A29556089	PF	N	SNOMEDCT_US	OP
+C0017687	Product containing glucagon (medicinal product)	Glucagon, NOS	A4781924	VO	N	SNOMEDCT_US	IS
+C0017687	Product containing glucagon (medicinal product)	Hyperglycemic-glycogenolytic factor preparation	A4783331	PF	N	SNOMEDCT_US	IS
+C0017687	Product containing glucagon (medicinal product)	Hyperglycaemic-glycogenolytic factor preparation	A4822522	VO	N	SNOMEDCT_US	IS
+C0017687	Product containing glucagon (medicinal product)	Glucagon preparation	A13365474	PF	N	SNOMEDCT_US	IS
+C0017687	Product containing glucagon (medicinal product)	Glucagon product	A28882373	PF	N	SNOMEDCT_US	OP
+C0017687	Product containing glucagon (medicinal product)	Glucagon-containing product	A30245239	PF	Y	SNOMEDCT_US	PT
+C0017687	Product containing glucagon (medicinal product)	Product containing glucagon	A30241755	VCW	Y	SNOMEDCT_US	IS
+C0017687	Product containing glucagon (medicinal product)	Product containing glucagon (medicinal product)	A28890229	PF	Y	SNOMEDCT_US	FN
+C0017687	Product containing glucagon (medicinal product)	Hyperglycemic-glycogenolytic factor product	A28880153	PF	Y	SNOMEDCT_US	IS
+C0017687	Product containing glucagon (medicinal product)	Hyperglycaemic-glycogenolytic factor product	A28884716	VO	Y	SNOMEDCT_US	IS
+C0017687	Product containing glucagon (medicinal product)	Glucagon preparation (substance)	A4992408	PF	Y	SNOMEDCT_US	OF
+C0017687	Product containing glucagon (medicinal product)	Glucagon product (product)	A28897807	PF	Y	SNOMEDCT_US	OF
+C0017687	Product containing glucagon (medicinal product)	Glucagon (substance)	A3477775	PF	Y	SNOMEDCT_US	FN
+C0017801	Glutamate-ammonia ligase (substance)	Glutamate-ammonia ligase	A2932160	VC	Y	SNOMEDCT_US	PT
+C0017801	Glutamate-ammonia ligase (substance)	Glutamine synthetase	A2932164	VC	Y	SNOMEDCT_US	SY
+C0017801	Glutamate-ammonia ligase (substance)	Glutamate-ammonia ligase (substance)	A3478191	PF	Y	SNOMEDCT_US	FN
+C0017955	Glycophorin A (substance)	Glycophorin A	A2882030	PF	N	SNOMEDCT_US	PT
+C0017955	Glycophorin A (substance)	Glycophorin-A	A3026327	VO	Y	SNOMEDCT_US	SY
+C0017955	Glycophorin A (substance)	Red cell marker	A3063506	PF	Y	SNOMEDCT_US	SY
+C0017955	Glycophorin A (substance)	Glycophorin A (substance)	A3478892	PF	Y	SNOMEDCT_US	FN
+C0019016	Hemoglobin A (substance)	Hemoglobin A	A22830128	PF	N	SNOMEDCT_US	OAS
+C0019016	Hemoglobin A (substance)	Hemoglobin A	A2882296	PF	N	SNOMEDCT_US	PT
+C0019016	Hemoglobin A (substance)	Haemoglobin A	A23052351	VO	N	SNOMEDCT_US	OAS
+C0019016	Hemoglobin A (substance)	Haemoglobin A	A30260094	VO	Y	SNOMEDCT_US	SY
+C0019016	Hemoglobin A (substance)	Hb alpha2 beta2	A10863758	PF	Y	SNOMEDCT_US	MTH_SY
+C0019016	Hemoglobin A (substance)	Hb A	A22981086	PF	N	SNOMEDCT_US	OAS
+C0019016	Hemoglobin A (substance)	HbA	A3029081	PF	Y	SNOMEDCT_US	SY
+C0019016	Hemoglobin A (substance)	Hb A - haemoglobin A	A30198858	PF	Y	SNOMEDCT_US	SY
+C0019016	Hemoglobin A (substance)	Hb A - Haemoglobin A	A30240631	VC	N	SNOMEDCT_US	IS
+C0019016	Hemoglobin A (substance)	Hb A - Hemoglobin A	A30250593	VO	N	SNOMEDCT_US	IS
+C0019016	Hemoglobin A (substance)	Hb A - hemoglobin A	A30198857	VO	Y	SNOMEDCT_US	SY
+C0019016	Hemoglobin A (substance)	Hb alpha>2< beta>2<	A3300695	PF	Y	SNOMEDCT_US	SY
+C0019016	Hemoglobin A (substance)	Hb alpha<sub>2</sub> beta<sub>2</sub>	A10871505	PF	Y	SNOMEDCT_US	MTH_SY
+C0019016	Hemoglobin A (substance)	Hemoglobin A (substance)	A3489746	PF	Y	SNOMEDCT_US	FN
+C0020835	Immunoglobulin A (substance)	Immunoglobulin A	A22841579	PF	N	SNOMEDCT_US	OAP
+C0020835	Immunoglobulin A (substance)	Immunoglobulin A	A22996796	PF	N	SNOMEDCT_US	OAS
+C0020835	Immunoglobulin A (substance)	Immunoglobulin A	A23465195	PF	N	SNOMEDCT_US	PT
+C0020835	Immunoglobulin A (substance)	Immunoglobulin A	A4822855	PF	N	SNOMEDCT_US	OF
+C0020835	Immunoglobulin A (substance)	IgA	A22853885	PF	N	SNOMEDCT_US	OAS
+C0020835	Immunoglobulin A (substance)	Immunoglobulin IgA, NOS	A4783768	PF	N	SNOMEDCT_US	IS
+C0020835	Immunoglobulin A (substance)	Immunoglobulin IgA	A23463867	VO	N	SNOMEDCT_US	OP
+C0020835	Immunoglobulin A (substance)	IgA - Immunoglobulin A	A3143886	PF	Y	SNOMEDCT_US	SY
+C0020835	Immunoglobulin A (substance)	Immunoglobulin A (substance)	A23450173	PF	Y	SNOMEDCT_US	FN
+C0020835	Immunoglobulin A (substance)	Immunoglobulin IgA (substance)	A23473608	PF	Y	SNOMEDCT_US	OF
+C0020835	Immunoglobulin A (substance)	Immunoglobulin A (procedure)	A22938208	PF	Y	SNOMEDCT_US	OAF
+C0020852	Immunoglobulin G (substance)	Immunoglobulin G	A22893472	PF	N	SNOMEDCT_US	OAS
+C0020852	Immunoglobulin G (substance)	Immunoglobulin G	A23012587	PF	N	SNOMEDCT_US	OAS
+C0020852	Immunoglobulin G (substance)	Immunoglobulin G	A23471010	PF	N	SNOMEDCT_US	PT
+C0020852	Immunoglobulin G (substance)	IgG	A22845468	PF	N	SNOMEDCT_US	OAS
+C0020852	Immunoglobulin G (substance)	IgG	A22949596	PF	N	SNOMEDCT_US	OAS
+C0020852	Immunoglobulin G (substance)	Immunoglobulin IgG, NOS	A4783772	PF	N	SNOMEDCT_US	IS
+C0020852	Immunoglobulin G (substance)	Immunoglobulin IgG	A23451949	VO	N	SNOMEDCT_US	OP
+C0020852	Immunoglobulin G (substance)	Immunoglobulin G (substance)	A23458739	PF	Y	SNOMEDCT_US	FN
+C0020852	Immunoglobulin G (substance)	Immunoglobulin IgG (substance)	A23469527	PF	Y	SNOMEDCT_US	OF
+C0020861	Immunoglobulin M (substance)	Immunoglobulin M	A22973282	PF	N	SNOMEDCT_US	OAS
+C0020861	Immunoglobulin M (substance)	Immunoglobulin M	A22996282	PF	N	SNOMEDCT_US	OAP
+C0020861	Immunoglobulin M (substance)	Immunoglobulin M	A23469890	PF	N	SNOMEDCT_US	PT
+C0020861	Immunoglobulin M (substance)	Immunoglobulin M	A4822858	PF	N	SNOMEDCT_US	OF
+C0020861	Immunoglobulin M (substance)	IgM	A22814316	PF	N	SNOMEDCT_US	OAS
+C0020861	Immunoglobulin M (substance)	IgM	A2882863	PF	N	SNOMEDCT_US	SY
+C0020861	Immunoglobulin M (substance)	Immunoglobulin IgM, NOS	A4783774	PF	N	SNOMEDCT_US	IS
+C0020861	Immunoglobulin M (substance)	Immunoglobulin IgM	A23448315	VO	N	SNOMEDCT_US	OP
+C0020861	Immunoglobulin M (substance)	IgM - Immunoglobulin M	A3143909	PF	Y	SNOMEDCT_US	SY
+C0020861	Immunoglobulin M (substance)	Immunoglobulin M (substance)	A23468241	PF	Y	SNOMEDCT_US	FN
+C0020861	Immunoglobulin M (substance)	Immunoglobulin IgM (substance)	A23468239	PF	Y	SNOMEDCT_US	OF
+C0020861	Immunoglobulin M (substance)	Immunoglobulin M (procedure)	A22846488	PF	Y	SNOMEDCT_US	OAF
+C0021641	Product containing insulin (medicinal product)	Insulin	A2882988	PF	N	SNOMEDCT_US	PT
+C0021641	Product containing insulin (medicinal product)	Insulin	A29530586	PF	N	SNOMEDCT_US	OP
+C0021641	Product containing insulin (medicinal product)	Insulin preparation, NOS	A4784230	VO	N	SNOMEDCT_US	IS
+C0021641	Product containing insulin (medicinal product)	Insulin preparation	A28882207	VO	Y	SNOMEDCT_US	IS
+C0021641	Product containing insulin (medicinal product)	Regular insulin preparation	A4792631	PF	N	SNOMEDCT_US	IS
+C0021641	Product containing insulin (medicinal product)	Unmodified insulin preparation	A4798361	PF	N	SNOMEDCT_US	IS
+C0021641	Product containing insulin (medicinal product)	Insulin product	A28906780	PF	N	SNOMEDCT_US	OP
+C0021641	Product containing insulin (medicinal product)	Regular insulin	A6947112	VCW	Y	SNOMEDCT_US	PT
+C0021641	Product containing insulin (medicinal product)	Soluble insulin	A23022621	VC	N	SNOMEDCT_US	OAP
+C0021641	Product containing insulin (medicinal product)	Insulin-containing product	A30215614	PF	Y	SNOMEDCT_US	PT
+C0021641	Product containing insulin (medicinal product)	Product containing insulin	A30261773	VCW	Y	SNOMEDCT_US	IS
+C0021641	Product containing insulin (medicinal product)	Product containing insulin (medicinal product)	A28883645	PF	Y	SNOMEDCT_US	FN
+C0021641	Product containing insulin (medicinal product)	Insulin preparation (substance)	A5000630	PF	Y	SNOMEDCT_US	OF
+C0021641	Product containing insulin (medicinal product)	Insulin product (product)	A28880132	PF	Y	SNOMEDCT_US	OF
+C0021641	Product containing insulin (medicinal product)	Regular insulin product	A28893539	PF	Y	SNOMEDCT_US	IS
+C0021641	Product containing insulin (medicinal product)	Unmodified insulin product	A28882383	PF	Y	SNOMEDCT_US	IS
+C0021641	Product containing insulin (medicinal product)	Soluble insulin (substance)	A23047106	PF	Y	SNOMEDCT_US	OAF
+C0021641	Product containing insulin (medicinal product)	Insulin (substance)	A3517467	PF	Y	SNOMEDCT_US	FN
+C0021641	Product containing insulin (medicinal product)	Regular insulin (substance)	A6947111	PF	Y	SNOMEDCT_US	FN
+C0021764	Interleukin (substance)	Interleukins	A22955567	PF	N	SNOMEDCT_US	OAP
+C0021764	Interleukin (substance)	Interleukin	A2882998	VO	N	SNOMEDCT_US	PT
+C0021764	Interleukin (substance)	Interleukin, NOS	A4784262	VO	N	SNOMEDCT_US	IS
+C0021764	Interleukin (substance)	Interleukins (product)	A22995675	PF	Y	SNOMEDCT_US	OAF
+C0021764	Interleukin (substance)	Interleukin (substance)	A3519889	PF	Y	SNOMEDCT_US	FN
+C0021764	Interleukin (substance)	Interleukins (substance)	A5000915	VO	Y	SNOMEDCT_US	OF
+C0021968	Product containing iodine (medicinal product)	Iodine	A28461126	PF	N	SNOMEDCT_US	IS
+C0021968	Product containing iodine (medicinal product)	Iodine	A2883042	PF	N	SNOMEDCT_US	PT
+C0021968	Product containing iodine (medicinal product)	Iodine, NOS	A4784410	VO	N	SNOMEDCT_US	IS
+C0021968	Product containing iodine (medicinal product)	Iodine product	A29560052	PF	N	SNOMEDCT_US	OAP
+C0021968	Product containing iodine (medicinal product)	Iodine product	A30232326	PF	N	SNOMEDCT_US	OP
+C0021968	Product containing iodine (medicinal product)	Product containing iodine AND/OR iodine compound (medicinal product)	A29530464	PF	Y	SNOMEDCT_US	OAF
+C0021968	Product containing iodine (medicinal product)	Product containing iodine AND/OR iodine compound	A29540839	PF	Y	SNOMEDCT_US	OAS
+C0021968	Product containing iodine (medicinal product)	Product containing iodine (product)	A30252207	PF	Y	SNOMEDCT_US	OF
+C0021968	Product containing iodine (medicinal product)	Iodine-containing product	A30255890	PF	Y	SNOMEDCT_US	PT
+C0021968	Product containing iodine (medicinal product)	Product containing iodine	A30232325	VCW	Y	SNOMEDCT_US	IS
+C0021968	Product containing iodine (medicinal product)	Product containing iodine (medicinal product)	A30216058	PF	Y	SNOMEDCT_US	FN
+C0021968	Product containing iodine (medicinal product)	Iodine product (product)	A28459949	PF	Y	SNOMEDCT_US	OF
+C0021968	Product containing iodine (medicinal product)	Iodine product (substance)	A5001436	PF	Y	SNOMEDCT_US	OF
+C0021968	Product containing iodine (medicinal product)	Iodine (substance)	A3523195	PF	Y	SNOMEDCT_US	FN
+C0023607	Pituitary luteinizing hormone (substance)	Luteinizing hormone	A23014431	VC	N	SNOMEDCT_US	OAP
+C0023607	Pituitary luteinizing hormone (substance)	Luteinizing hormone	A2971931	VC	Y	SNOMEDCT_US	SY
+C0023607	Pituitary luteinizing hormone (substance)	Luteinising hormone	A22843871	VO	N	SNOMEDCT_US	OAP
+C0023607	Pituitary luteinizing hormone (substance)	Luteinising hormone	A3039768	VO	Y	SNOMEDCT_US	SYGB
+C0023607	Pituitary luteinizing hormone (substance)	ICSH	A4712684	PF	N	SNOMEDCT_US	IS
+C0023607	Pituitary luteinizing hormone (substance)	ICSH	A2882842	PF	Y	SNOMEDCT_US	SY
+C0023607	Pituitary luteinizing hormone (substance)	LH	A2883492	PF	Y	SNOMEDCT_US	SY
+C0023607	Pituitary luteinizing hormone (substance)	Luteotropin	A2883609	PF	Y	SNOMEDCT_US	SY
+C0023607	Pituitary luteinizing hormone (substance)	Lutropin	A2883610	PF	N	SNOMEDCT_US	SY
+C0023607	Pituitary luteinizing hormone (substance)	Pituitary interstitial cell stimulating hormone	A22817300	PF	N	SNOMEDCT_US	OAP
+C0023607	Pituitary luteinizing hormone (substance)	Pituitary interstitial cell stimulating hormone	A3058425	PF	Y	SNOMEDCT_US	SY
+C0023607	Pituitary luteinizing hormone (substance)	LH - Luteinizing hormone	A22990751	VC	N	SNOMEDCT_US	OAS
+C0023607	Pituitary luteinizing hormone (substance)	LH - Luteinising hormone	A22931481	VO	N	SNOMEDCT_US	OAS
+C0023607	Pituitary luteinizing hormone (substance)	Pituitary luteinizing hormone	A3058426	PF	Y	SNOMEDCT_US	PT
+C0023607	Pituitary luteinizing hormone (substance)	Pituitary luteinising hormone	A3631625	VO	Y	SNOMEDCT_US	PTGB
+C0023607	Pituitary luteinizing hormone (substance)	Pituitary interstitial cell stimulating hormone -RETIRED-	A15135314	PF	N	SNOMEDCT_US	IS
+C0023607	Pituitary luteinizing hormone (substance)	Pituitary interstitial cell stimulating hormone -RETIRED-	A5021713	PF	Y	SNOMEDCT_US	OF
+C0023607	Pituitary luteinizing hormone (substance)	Pituitary luteinizing hormone (substance)	A3631626	PF	Y	SNOMEDCT_US	FN
+C0023607	Pituitary luteinizing hormone (substance)	Luteinizing hormone (substance)	A22908473	PF	Y	SNOMEDCT_US	OAF
+C0023607	Pituitary luteinizing hormone (substance)	Pituitary interstitial cell stimulating hormone (substance)	A22922759	PF	Y	SNOMEDCT_US	OAF
+C0023764	Product containing triacylglycerol lipase (medicinal product)	Lipase	A22808142	PF	N	SNOMEDCT_US	OAP
+C0023764	Product containing triacylglycerol lipase (medicinal product)	Lipase	A2883522	PF	N	SNOMEDCT_US	SY
+C0023764	Product containing triacylglycerol lipase (medicinal product)	Lipase	A29546056	PF	N	SNOMEDCT_US	OP
+C0023764	Product containing triacylglycerol lipase (medicinal product)	Triacylglycerol lipase	A29556495	VC	N	SNOMEDCT_US	IS
+C0023764	Product containing triacylglycerol lipase (medicinal product)	Triacylglycerol lipase	A3078578	VC	Y	SNOMEDCT_US	PT
+C0023764	Product containing triacylglycerol lipase (medicinal product)	Triglyceride lipase	A3078977	VC	Y	SNOMEDCT_US	SY
+C0023764	Product containing triacylglycerol lipase (medicinal product)	Tributyrase	A3078655	PF	Y	SNOMEDCT_US	SY
+C0023764	Product containing triacylglycerol lipase (medicinal product)	Triacylglycerol lipase-containing product	A30245486	PF	Y	SNOMEDCT_US	PT
+C0023764	Product containing triacylglycerol lipase (medicinal product)	Product containing triacylglycerol lipase	A30211916	VCW	Y	SNOMEDCT_US	IS
+C0023764	Product containing triacylglycerol lipase (medicinal product)	Product containing triacylglycerol lipase (medicinal product)	A28881213	PF	Y	SNOMEDCT_US	FN
+C0023764	Product containing triacylglycerol lipase (medicinal product)	Triacylglycerol lipase product	A30232364	PF	Y	SNOMEDCT_US	OP
+C0023764	Product containing triacylglycerol lipase (medicinal product)	Lipase preparation	A28908944	PF	N	SNOMEDCT_US	OP
+C0023764	Product containing triacylglycerol lipase (medicinal product)	Lipase preparation	A22897077	PF	Y	SNOMEDCT_US	OAP
+C0023764	Product containing triacylglycerol lipase (medicinal product)	Lipase preparation (product)	A28877791	PF	Y	SNOMEDCT_US	OF
+C0023764	Product containing triacylglycerol lipase (medicinal product)	Lipase preparation (substance)	A5004465	PF	N	SNOMEDCT_US	OF
+C0023764	Product containing triacylglycerol lipase (medicinal product)	Lipase preparation (substance)	A22980122	PF	Y	SNOMEDCT_US	OAF
+C0023764	Product containing triacylglycerol lipase (medicinal product)	Lipase (substance)	A23034921	PF	Y	SNOMEDCT_US	OAF
+C0023764	Product containing triacylglycerol lipase (medicinal product)	Triacylglycerol lipase (substance)	A3763644	PF	Y	SNOMEDCT_US	FN
+C0023779	Lipid (substance)	Lipid	A2873316	VO	Y	SNOMEDCT_US	PT
+C0023779	Lipid (substance)	Lipid, NOS	A4785384	VO	N	SNOMEDCT_US	IS
+C0023779	Lipid (substance)	Lipid (substance)	A3539830	PF	Y	SNOMEDCT_US	FN
+C0025196	Melanin (substance)	Melanin	A2883851	VO	N	SNOMEDCT_US	PT
+C0025196	Melanin (substance)	Melanin (substance)	A3557079	PF	Y	SNOMEDCT_US	FN
+C0025746	Product containing methylene blue stain (medicinal product)	Methylene blue	A22945375	PF	N	SNOMEDCT_US	OAP
+C0025746	Product containing methylene blue stain (medicinal product)	Methylene blue	A3881200	PF	N	SNOMEDCT_US	SY
+C0025746	Product containing methylene blue stain (medicinal product)	Methylene blue	A4742828	PF	N	SNOMEDCT_US	IS
+C0025746	Product containing methylene blue stain (medicinal product)	Methylthioninium chloride	A22810170	VC	N	SNOMEDCT_US	OAS
+C0025746	Product containing methylene blue stain (medicinal product)	Methylthioninium chloride	A29514831	VC	N	SNOMEDCT_US	OP
+C0025746	Product containing methylene blue stain (medicinal product)	Methylthioninium chloride	A5008468	VC	N	SNOMEDCT_US	IS
+C0025746	Product containing methylene blue stain (medicinal product)	Methylthioninium chloride	A13021360	VC	Y	SNOMEDCT_US	PTGB
+C0025746	Product containing methylene blue stain (medicinal product)	Methylene blue stain-containing product	A30235536	PF	Y	SNOMEDCT_US	PT
+C0025746	Product containing methylene blue stain (medicinal product)	Product containing methylene blue stain	A30231462	VCW	Y	SNOMEDCT_US	IS
+C0025746	Product containing methylene blue stain (medicinal product)	Product containing methylene blue stain (medicinal product)	A28437690	PF	Y	SNOMEDCT_US	FN
+C0025746	Product containing methylene blue stain (medicinal product)	Methylene blue stain product	A30232450	PF	Y	SNOMEDCT_US	OP
+C0025746	Product containing methylene blue stain (medicinal product)	Methylthioninium chloride product	A30232449	PF	Y	SNOMEDCT_US	OP
+C0025746	Product containing methylene blue stain (medicinal product)	Methylthioninium chloride-containing product	A30205742	PF	Y	SNOMEDCT_US	SY
+C0025746	Product containing methylene blue stain (medicinal product)	Methylene blue product	A29487675	PF	Y	SNOMEDCT_US	OP
+C0025746	Product containing methylene blue stain (medicinal product)	Methylene blue product (product)	A28466460	PF	Y	SNOMEDCT_US	OF
+C0025746	Product containing methylene blue stain (medicinal product)	Methylene blue product (substance)	A5008362	PF	Y	SNOMEDCT_US	OF
+C0025746	Product containing methylene blue stain (medicinal product)	Methylene blue (substance)	A5008359	PF	N	SNOMEDCT_US	OF
+C0025746	Product containing methylene blue stain (medicinal product)	Methylene blue (substance)	A22821995	PF	Y	SNOMEDCT_US	OAF
+C0025746	Product containing methylene blue stain (medicinal product)	Methylene blue stain	A3902591	PF	Y	SNOMEDCT_US	PT
+C0025746	Product containing methylene blue stain (medicinal product)	Methylene blue stain (substance)	A3902588	PF	Y	SNOMEDCT_US	FN
+C0025746	Product containing methylene blue stain (medicinal product)	Methylthioninium chloride stain	A13007284	PF	Y	SNOMEDCT_US	SYGB
+C0025746	Product containing methylene blue stain (medicinal product)	Methylthioninium choride	A13371635	PF	Y	SNOMEDCT_US	IS
+C0025746	Product containing methylene blue stain (medicinal product)	Methylthioninium choride product	A13378943	PF	Y	SNOMEDCT_US	IS
+C0026794	Lysozyme (substance)	Muramidase	A2884283	PF	N	SNOMEDCT_US	SY
+C0026794	Lysozyme (substance)	Lysozyme	A22967004	PF	N	SNOMEDCT_US	OAP
+C0026794	Lysozyme (substance)	Lysozyme	A2883667	PF	N	SNOMEDCT_US	PT
+C0026794	Lysozyme (substance)	Lysozyme	A4713073	PF	N	SNOMEDCT_US	OF
+C0026794	Lysozyme (substance)	Lysosyme	A11734541	VO	N	SNOMEDCT_US	IS
+C0026794	Lysozyme (substance)	Lysozyme (substance)	A22942584	PF	N	SNOMEDCT_US	OAF
+C0026794	Lysozyme (substance)	Lysozyme (substance)	A3546349	PF	Y	SNOMEDCT_US	FN
+C0027021	Myeloperoxidase (substance)	Myeloperoxidase	A2884359	PF	N	SNOMEDCT_US	PT
+C0027021	Myeloperoxidase (substance)	Mpx - Myeloperoxidase	A3046299	PF	Y	SNOMEDCT_US	SY
+C0027021	Myeloperoxidase (substance)	Myeloperoxidase (substance)	A3572581	PF	Y	SNOMEDCT_US	FN
+C0027078	Myoglobin (substance)	Myoglobin	A2884374	PF	N	SNOMEDCT_US	PT
+C0027078	Myoglobin (substance)	Myoglobin (substance)	A3572781	PF	Y	SNOMEDCT_US	FN
+C0027096	Myosin adenosine triphosphatase (substance)	Myosin ATPase	A2884386	PF	N	SNOMEDCT_US	PT
+C0027096	Myosin adenosine triphosphatase (substance)	Myosin	A2884385	VO	N	SNOMEDCT_US	PT
+C0027096	Myosin adenosine triphosphatase (substance)	Myosin adenosine triphosphatase (substance)	A23456950	PF	Y	SNOMEDCT_US	FN
+C0027096	Myosin adenosine triphosphatase (substance)	Myosin ATPase (substance)	A23470010	PF	Y	SNOMEDCT_US	OF
+C0027096	Myosin adenosine triphosphatase (substance)	Myosin (substance)	A3572872	PF	Y	SNOMEDCT_US	FN
+C0027096	Myosin adenosine triphosphatase (substance)	Myosin adenosine triphosphatase	A23456588	VCW	Y	SNOMEDCT_US	SY
+C0027831	Neurofibromatosis type 1 (disorder)	Neurofibromatosis 1	A24086113	PF	N	SNOMEDCT_US	SY
+C0027831	Neurofibromatosis type 1 (disorder)	Neurofibromatosis 1	A24086409	PF	N	SNOMEDCT_US	OAP
+C0027831	Neurofibromatosis type 1 (disorder)	Von Recklinghausen disease	A24088536	VC	N	SNOMEDCT_US	OAS
+C0027831	Neurofibromatosis type 1 (disorder)	Von Recklinghausen disease	A24084146	VC	Y	SNOMEDCT_US	SY
+C0027831	Neurofibromatosis type 1 (disorder)	Neurofibromatosis type 1	A29529479	VC	Y	SNOMEDCT_US	PT
+C0027831	Neurofibromatosis type 1 (disorder)	Neurofibromatosis, type 1	A29554598	VC	N	SNOMEDCT_US	OP
+C0027831	Neurofibromatosis type 1 (disorder)	[M]Von Recklinghausen's disease	A24087312	PF	N	SNOMEDCT_US	IS
+C0027831	Neurofibromatosis type 1 (disorder)	Neurofibromatosis 1 (disorder)	A24090192	PF	Y	SNOMEDCT_US	OAF
+C0027831	Neurofibromatosis type 1 (disorder)	Neurofibromatosis (nonmalignant) type	A24084983	PF	Y	SNOMEDCT_US	OAS
+C0027831	Neurofibromatosis type 1 (disorder)	Clinical von Reclinghausen's disease	A24082327	PF	N	SNOMEDCT_US	IS
+C0027831	Neurofibromatosis type 1 (disorder)	Multiple non-ossifying fibromatosis	A30224214	PF	Y	SNOMEDCT_US	SY
+C0027831	Neurofibromatosis type 1 (disorder)	NF1	A24082811	PF	N	SNOMEDCT_US	OAS
+C0027831	Neurofibromatosis type 1 (disorder)	NF1	A29515000	PF	N	SNOMEDCT_US	IS
+C0027831	Neurofibromatosis type 1 (disorder)	Neurofibromatosis type 1 (disorder)	A29552904	PF	Y	SNOMEDCT_US	FN
+C0027831	Neurofibromatosis type 1 (disorder)	Neurofibromatosis, type 1 (disorder)	A29513840	VO	Y	SNOMEDCT_US	OF
+C0027831	Neurofibromatosis type 1 (disorder)	NF1 - Neurofibromatosis type 1	A29516847	PF	Y	SNOMEDCT_US	SY
+C0027831	Neurofibromatosis type 1 (disorder)	Neurofibromatosis, peripheral type	A24089740	VC	N	SNOMEDCT_US	OAS
+C0027831	Neurofibromatosis type 1 (disorder)	Neurofibromatosis, peripheral type	A24084542	VC	Y	SNOMEDCT_US	SY
+C0027832	Neurofibromatosis type 2 (disorder)	Neurofibromatosis 2	A24268084	PF	N	SNOMEDCT_US	OAP
+C0027832	Neurofibromatosis type 2 (disorder)	Bilateral acoustic neurofibromatosis	A24259686	VCW	N	SNOMEDCT_US	OAS
+C0027832	Neurofibromatosis type 2 (disorder)	Bilateral acoustic neurofibromatosis	A2997755	VCW	Y	SNOMEDCT_US	SY
+C0027832	Neurofibromatosis type 2 (disorder)	Neurofibromatosis type 2	A24252387	VC	Y	SNOMEDCT_US	PT
+C0027832	Neurofibromatosis type 2 (disorder)	Neurofibromatosis, type 2	A24260019	VC	N	SNOMEDCT_US	OP
+C0027832	Neurofibromatosis type 2 (disorder)	BANF - Bilateral acoustic neurofibromatosis	A3240870	PF	Y	SNOMEDCT_US	SY
+C0027832	Neurofibromatosis type 2 (disorder)	Neurofibromatosis 2 (disorder)	A24236562	PF	Y	SNOMEDCT_US	OAF
+C0027832	Neurofibromatosis type 2 (disorder)	Familial vestibular schwannoma	A24244264	PF	N	SNOMEDCT_US	OAS
+C0027832	Neurofibromatosis type 2 (disorder)	Familial vestibular schwannoma	A24246157	PF	Y	SNOMEDCT_US	SY
+C0027832	Neurofibromatosis type 2 (disorder)	Familial acoustic neuroma	A24233619	PF	N	SNOMEDCT_US	OAS
+C0027832	Neurofibromatosis type 2 (disorder)	Familial acoustic neuroma	A24261064	PF	Y	SNOMEDCT_US	SY
+C0027832	Neurofibromatosis type 2 (disorder)	NF2	A24263831	PF	N	SNOMEDCT_US	OAS
+C0027832	Neurofibromatosis type 2 (disorder)	NF2	A24255133	PF	Y	SNOMEDCT_US	SY
+C0027832	Neurofibromatosis type 2 (disorder)	Neurofibromatosis type 2 (disorder)	A24244900	PF	Y	SNOMEDCT_US	FN
+C0027832	Neurofibromatosis type 2 (disorder)	Neurofibromatosis, type 2 (disorder)	A24250566	VO	Y	SNOMEDCT_US	OF
+C0027832	Neurofibromatosis type 2 (disorder)	Neurofibromatosis, central type	A24241324	PF	N	SNOMEDCT_US	OAS
+C0027832	Neurofibromatosis type 2 (disorder)	Neurofibromatosis, central type	A24259201	PF	N	SNOMEDCT_US	SY
+C0029419	Osteocalcin (substance)	Osteocalcin	A22919581	PF	N	SNOMEDCT_US	OAP
+C0029419	Osteocalcin (substance)	Osteocalcin	A2884891	PF	N	SNOMEDCT_US	PT
+C0029419	Osteocalcin (substance)	Osteocalcin	A4713667	PF	N	SNOMEDCT_US	OF
+C0029419	Osteocalcin (substance)	Bone gla protein	A3103237	VCW	Y	SNOMEDCT_US	SY
+C0029419	Osteocalcin (substance)	Osteocalcin (substance)	A22997505	PF	N	SNOMEDCT_US	OAF
+C0029419	Osteocalcin (substance)	Osteocalcin (substance)	A3604469	PF	Y	SNOMEDCT_US	FN
+C0030125	Product containing para-aminosalicylic acid (medicinal product)	Aminosalicylic acid	A28448785	VC	N	SNOMEDCT_US	IS
+C0030125	Product containing para-aminosalicylic acid (medicinal product)	Aminosalicylic acid	A29545507	VC	N	SNOMEDCT_US	OP
+C0030125	Product containing para-aminosalicylic acid (medicinal product)	Aminosalicylic acid	A30239491	VC	N	SNOMEDCT_US	OAP
+C0030125	Product containing para-aminosalicylic acid (medicinal product)	Aminosalicylic acid	A30219386	VC	Y	SNOMEDCT_US	SY
+C0030125	Product containing para-aminosalicylic acid (medicinal product)	4-aminosalicylic acid	A30245997	PF	N	SNOMEDCT_US	SY
+C0030125	Product containing para-aminosalicylic acid (medicinal product)	4-Aminosalicylic acid	A29533816	VC	N	SNOMEDCT_US	IS
+C0030125	Product containing para-aminosalicylic acid (medicinal product)	4-Aminosalicylic acid	A30213763	VC	N	SNOMEDCT_US	IS
+C0030125	Product containing para-aminosalicylic acid (medicinal product)	p-Aminosalicylic acid	A29549289	VC	N	SNOMEDCT_US	IS
+C0030125	Product containing para-aminosalicylic acid (medicinal product)	p-Aminosalicylic acid	A30243491	VC	N	SNOMEDCT_US	IS
+C0030125	Product containing para-aminosalicylic acid (medicinal product)	p-aminosalicylic acid	A30265975	VC	Y	SNOMEDCT_US	SY
+C0030125	Product containing para-aminosalicylic acid (medicinal product)	PAS	A29513216	PF	N	SNOMEDCT_US	IS
+C0030125	Product containing para-aminosalicylic acid (medicinal product)	Para-aminosalicylic acid	A29518399	VC	N	SNOMEDCT_US	IS
+C0030125	Product containing para-aminosalicylic acid (medicinal product)	Para-aminosalicylic acid	A2940584	VC	Y	SNOMEDCT_US	PT
+C0030125	Product containing para-aminosalicylic acid (medicinal product)	PAS - para-aminosalicylic acid	A30236256	PF	Y	SNOMEDCT_US	SY
+C0030125	Product containing para-aminosalicylic acid (medicinal product)	PAS - Para-aminosalicylic acid	A30200260	VC	N	SNOMEDCT_US	IS
+C0030125	Product containing para-aminosalicylic acid (medicinal product)	Product containing aminosalicylic acid (medicinal product)	A30212017	PF	Y	SNOMEDCT_US	OF
+C0030125	Product containing para-aminosalicylic acid (medicinal product)	Product containing aminosalicylic acid	A30192159	PF	Y	SNOMEDCT_US	IS
+C0030125	Product containing para-aminosalicylic acid (medicinal product)	Para-aminosalicylic acid-containing product	A30259306	PF	Y	SNOMEDCT_US	PT
+C0030125	Product containing para-aminosalicylic acid (medicinal product)	Product containing para-aminosalicylic acid (medicinal product)	A30259305	PF	Y	SNOMEDCT_US	FN
+C0030125	Product containing para-aminosalicylic acid (medicinal product)	Para-aminosalicylic acid (substance)	A3616543	PF	Y	SNOMEDCT_US	FN
+C0030125	Product containing para-aminosalicylic acid (medicinal product)	Aminosalicylic acid (substance)	A30200892	PF	Y	SNOMEDCT_US	OAF
+C0030125	Product containing para-aminosalicylic acid (medicinal product)	Aminosalicylic acid product	A30212674	PF	Y	SNOMEDCT_US	OP
+C0030125	Product containing para-aminosalicylic acid (medicinal product)	Aminosalicylic acid (product)	A28882443	VO	Y	SNOMEDCT_US	OF
+C0030298	Pancreatic peptide (substance)	Pancreatic polypeptide	A22956826	VC	N	SNOMEDCT_US	OAP
+C0030298	Pancreatic peptide (substance)	Pancreatic polypeptide	A2940534	VC	Y	SNOMEDCT_US	SY
+C0030298	Pancreatic peptide (substance)	Pancreatic peptide	A3055152	PF	Y	SNOMEDCT_US	PT
+C0030298	Pancreatic peptide (substance)	PP - Pancreatic polypeptide	A3179948	VCW	Y	SNOMEDCT_US	SY
+C0030298	Pancreatic peptide (substance)	PPP - Pancreatic polypeptide	A3179959	PF	Y	SNOMEDCT_US	SY
+C0030298	Pancreatic peptide (substance)	PP	A3054581	PF	Y	SNOMEDCT_US	SY
+C0030298	Pancreatic peptide (substance)	Pancreatic peptide (substance)	A3615648	PF	Y	SNOMEDCT_US	FN
+C0030298	Pancreatic peptide (substance)	Pancreatic polypeptide (substance)	A22817578	PF	Y	SNOMEDCT_US	OAF
+C0030616	Parvalbumin (substance)	Parvalbumin	A3181325	VO	Y	SNOMEDCT_US	PT
+C0030616	Parvalbumin (substance)	Parvalbumin (substance)	A3619388	PF	Y	SNOMEDCT_US	FN
+C0031511	Chromaffinoma (disorder)	Pheochromocytoma	A22801915	PF	N	SNOMEDCT_US	OAS
+C0031511	Chromaffinoma (disorder)	Pheochromocytoma	A22827261	PF	N	SNOMEDCT_US	OAS
+C0031511	Chromaffinoma (disorder)	Pheochromocytoma	A22844159	PF	N	SNOMEDCT_US	OAS
+C0031511	Chromaffinoma (disorder)	Pheochromocytoma	A23022489	PF	N	SNOMEDCT_US	OAS
+C0031511	Chromaffinoma (disorder)	Phaeochromocytoma	A22863041	VO	N	SNOMEDCT_US	OAS
+C0031511	Chromaffinoma (disorder)	Phaeochromocytoma	A22951658	VO	N	SNOMEDCT_US	OAS
+C0031511	Chromaffinoma (disorder)	Phaeochromocytoma	A22986909	VO	N	SNOMEDCT_US	OAS
+C0031511	Chromaffinoma (disorder)	Phaeochromocytoma	A22857599	VO	Y	SNOMEDCT_US	OAS
+C0031511	Chromaffinoma (disorder)	Chromaffin paraganglioma	A22947699	PF	N	SNOMEDCT_US	OAP
+C0031511	Chromaffinoma (disorder)	Chromaffin tumor	A22880114	PF	N	SNOMEDCT_US	OAS
+C0031511	Chromaffinoma (disorder)	Chromaffin tumor	A2877351	PF	Y	SNOMEDCT_US	SY
+C0031511	Chromaffinoma (disorder)	Chromaffin tumour	A23054498	VO	N	SNOMEDCT_US	OAS
+C0031511	Chromaffinoma (disorder)	Chromaffin tumour	A3006828	VO	Y	SNOMEDCT_US	SYGB
+C0031511	Chromaffinoma (disorder)	Chromaffinoma	A23038465	PF	N	SNOMEDCT_US	OAP
+C0031511	Chromaffinoma (disorder)	Chromaffinoma	A2877354	PF	Y	SNOMEDCT_US	PT
+C0031511	Chromaffinoma (disorder)	Chromaffin paraganglioma (disorder)	A22916584	PF	Y	SNOMEDCT_US	OAF
+C0031511	Chromaffinoma (disorder)	Chromaffinoma (disorder)	A22975860	PF	N	SNOMEDCT_US	OAF
+C0031511	Chromaffinoma (disorder)	Chromaffinoma (disorder)	A3352072	PF	Y	SNOMEDCT_US	FN
+C0031617	Product containing lecithin (medicinal product)	Lecithin	A22971002	PF	N	SNOMEDCT_US	OAP
+C0031617	Product containing lecithin (medicinal product)	Lecithin	A29556525	PF	N	SNOMEDCT_US	OP
+C0031617	Product containing lecithin (medicinal product)	Lecithin	A4712945	PF	N	SNOMEDCT_US	OF
+C0031617	Product containing lecithin (medicinal product)	Lecithin product	A28909010	PF	N	SNOMEDCT_US	OP
+C0031617	Product containing lecithin (medicinal product)	Lecithin-containing product	A30265207	PF	Y	SNOMEDCT_US	PT
+C0031617	Product containing lecithin (medicinal product)	Product containing lecithin	A30192193	VCW	Y	SNOMEDCT_US	IS
+C0031617	Product containing lecithin (medicinal product)	Product containing lecithin (medicinal product)	A28901312	PF	Y	SNOMEDCT_US	FN
+C0031617	Product containing lecithin (medicinal product)	Lecithin product (product)	A28900076	PF	Y	SNOMEDCT_US	OF
+C0031617	Product containing lecithin (medicinal product)	Lecithin product (substance)	A5003445	PF	Y	SNOMEDCT_US	OF
+C0031617	Product containing lecithin (medicinal product)	Lecithin (substance)	A22894746	PF	Y	SNOMEDCT_US	OAF
+C0032052	Human placental lactogen (substance)	Human placental lactogen	A22813783	VC	N	SNOMEDCT_US	OAS
+C0032052	Human placental lactogen (substance)	Human placental lactogen	A23000775	VC	N	SNOMEDCT_US	OAS
+C0032052	Human placental lactogen (substance)	Human placental lactogen	A3031346	VC	Y	SNOMEDCT_US	PT
+C0032052	Human placental lactogen (substance)	Choriomammotropin	A27174877	PF	Y	SNOMEDCT_US	SY
+C0032052	Human placental lactogen (substance)	Human chorionic somatomammotropin	A3031180	VCW	Y	SNOMEDCT_US	SY
+C0032052	Human placental lactogen (substance)	Chorionic somatomammotrophin	A3109806	PF	Y	SNOMEDCT_US	SY
+C0032052	Human placental lactogen (substance)	HCS	A3027401	PF	Y	SNOMEDCT_US	SY
+C0032052	Human placental lactogen (substance)	HPL	A3027630	PF	Y	SNOMEDCT_US	SY
+C0032052	Human placental lactogen (substance)	hPL - Human placental lactogen	A3229433	VC	Y	SNOMEDCT_US	SY
+C0032052	Human placental lactogen (substance)	Human plac. lactogen	A22992363	PF	N	SNOMEDCT_US	OAS
+C0032052	Human placental lactogen (substance)	Human plac. lactogen	A22969215	PF	Y	SNOMEDCT_US	OAS
+C0032052	Human placental lactogen (substance)	Human placental lactogen (substance)	A3498465	PF	Y	SNOMEDCT_US	FN
+C0032923	Prealbumin (substance)	Prealbumin	A2885752	PF	N	SNOMEDCT_US	PT
+C0032923	Prealbumin (substance)	Transthyretin	A2887550	PF	N	SNOMEDCT_US	SY
+C0032923	Prealbumin (substance)	Prealbumin (substance)	A3642280	PF	Y	SNOMEDCT_US	FN
+C0033371	Product containing prolactin (medicinal product)	Prolactin	A2885846	PF	N	SNOMEDCT_US	PT
+C0033371	Product containing prolactin (medicinal product)	Prolactin preparation	A29533901	PF	N	SNOMEDCT_US	OP
+C0033371	Product containing prolactin (medicinal product)	Prl - Prolactin	A3060637	VC	Y	SNOMEDCT_US	SY
+C0033371	Product containing prolactin (medicinal product)	Product containing prolactin (medicinal product)	A29495315	PF	Y	SNOMEDCT_US	FN
+C0033371	Product containing prolactin (medicinal product)	Prolactin product	A30252652	PF	Y	SNOMEDCT_US	OP
+C0033371	Product containing prolactin (medicinal product)	Prolactin-containing product	A30205817	PF	Y	SNOMEDCT_US	PT
+C0033371	Product containing prolactin (medicinal product)	Product containing prolactin	A30252072	VCW	Y	SNOMEDCT_US	IS
+C0033371	Product containing prolactin (medicinal product)	Prolactin preparation (product)	A29555244	PF	Y	SNOMEDCT_US	OF
+C0033371	Product containing prolactin (medicinal product)	Prolactin preparation (substance)	A5025167	PF	Y	SNOMEDCT_US	OF
+C0033371	Product containing prolactin (medicinal product)	Prolactin (substance)	A3648906	PF	Y	SNOMEDCT_US	FN
+C0034786	Androgen receptor (substance)	Androgen receptor	A3597029	VC	Y	SNOMEDCT_US	PT
+C0034786	Androgen receptor (substance)	Androgen receptor site	A13366242	PF	N	SNOMEDCT_US	IS
+C0034786	Androgen receptor (substance)	Androgen receptor (substance)	A3596998	PF	Y	SNOMEDCT_US	FN
+C0035094	Renin (substance)	Renin	A2886206	PF	N	SNOMEDCT_US	PT
+C0035094	Renin (substance)	Angiotensin-forming enzyme	A2991740	VC	Y	SNOMEDCT_US	SY
+C0035094	Renin (substance)	Angiotensinogenase	A2878517	PF	N	SNOMEDCT_US	SY
+C0035094	Renin (substance)	Renin (substance)	A3666070	PF	Y	SNOMEDCT_US	FN
+C0035285	Reticulin (substance)	Reticulin	A2886225	PF	N	SNOMEDCT_US	PT
+C0035285	Reticulin (substance)	Reticulin (substance)	A3669574	PF	Y	SNOMEDCT_US	FN
+C0037098	Silicon dioxide (substance)	Silicon dioxide	A2945411	VC	Y	SNOMEDCT_US	PT
+C0037098	Silicon dioxide (substance)	Silica	A2886627	PF	N	SNOMEDCT_US	SY
+C0037098	Silicon dioxide (substance)	Silicon dioxide (substance)	A3705385	PF	Y	SNOMEDCT_US	FN
+C0037659	Product containing somatostatin (medicinal product)	Somatostatin	A2886689	PF	N	SNOMEDCT_US	PT
+C0037659	Product containing somatostatin (medicinal product)	Growth hormone inhibiting factor	A2876456	PF	Y	SNOMEDCT_US	SY
+C0037659	Product containing somatostatin (medicinal product)	Somatostatin-14	A13007193	PF	N	SNOMEDCT_US	SY
+C0037659	Product containing somatostatin (medicinal product)	Somatostatin-14	A22927502	PF	N	SNOMEDCT_US	OAP
+C0037659	Product containing somatostatin (medicinal product)	Somatotropin inhibiting factor preparation	A23003387	PF	N	SNOMEDCT_US	OAP
+C0037659	Product containing somatostatin (medicinal product)	Somatotropin inhibiting factor preparation	A29554636	PF	N	SNOMEDCT_US	IS
+C0037659	Product containing somatostatin (medicinal product)	Somatotropin release inhibiting factor	A3072130	VC	Y	SNOMEDCT_US	SY
+C0037659	Product containing somatostatin (medicinal product)	SIF preparation	A4793200	PF	N	SNOMEDCT_US	IS
+C0037659	Product containing somatostatin (medicinal product)	Somatostatin preparation	A29544117	PF	N	SNOMEDCT_US	OP
+C0037659	Product containing somatostatin (medicinal product)	SRIF	A3065858	PF	Y	SNOMEDCT_US	SY
+C0037659	Product containing somatostatin (medicinal product)	Growth hormone release inhibiting hormone	A3137433	PF	Y	SNOMEDCT_US	SY
+C0037659	Product containing somatostatin (medicinal product)	SS - Somatostatin	A3197220	PF	Y	SNOMEDCT_US	SY
+C0037659	Product containing somatostatin (medicinal product)	Product containing somatostatin (medicinal product)	A29490144	PF	Y	SNOMEDCT_US	FN
+C0037659	Product containing somatostatin (medicinal product)	Somatostatin-containing product	A30195954	PF	Y	SNOMEDCT_US	PT
+C0037659	Product containing somatostatin (medicinal product)	Product containing somatostatin	A30242070	VCW	Y	SNOMEDCT_US	IS
+C0037659	Product containing somatostatin (medicinal product)	Somatostatin product	A30222594	PF	Y	SNOMEDCT_US	OP
+C0037659	Product containing somatostatin (medicinal product)	Somatostatin-14 (substance)	A22995394	PF	Y	SNOMEDCT_US	OAF
+C0037659	Product containing somatostatin (medicinal product)	Somatotropin inhibiting factor preparation -RETIRED-	A15127579	PF	N	SNOMEDCT_US	IS
+C0037659	Product containing somatostatin (medicinal product)	Somatotropin inhibiting factor preparation -RETIRED-	A5045363	PF	Y	SNOMEDCT_US	OF
+C0037659	Product containing somatostatin (medicinal product)	Somatostatin preparation (product)	A29519187	PF	Y	SNOMEDCT_US	OF
+C0037659	Product containing somatostatin (medicinal product)	Somatostatin preparation (substance)	A5045362	PF	Y	SNOMEDCT_US	OF
+C0037659	Product containing somatostatin (medicinal product)	Somatostatin (substance)	A3712035	PF	Y	SNOMEDCT_US	FN
+C0037659	Product containing somatostatin (medicinal product)	Somatotropin inhibiting factor preparation (product)	A23013416	PF	Y	SNOMEDCT_US	OAF
+C0038975	Simian virus 40 (organism)	Simian virus 40	A3070964	PF	N	SNOMEDCT_US	PT
+C0038975	Simian virus 40 (organism)	SV40 virus	A3065955	VC	Y	SNOMEDCT_US	SY
+C0038975	Simian virus 40 (organism)	Polyomavirus maccacae 1	A3059439	PF	Y	SNOMEDCT_US	SY
+C0038975	Simian virus 40 (organism)	SV40	A3065954	PF	Y	SNOMEDCT_US	SY
+C0038975	Simian virus 40 (organism)	Simian virus 40 (organism)	A3705684	PF	Y	SNOMEDCT_US	FN
+C0040123	Product containing thyroglobulin (medicinal product)	Thyroglobulin	A2887361	PF	N	SNOMEDCT_US	PT
+C0040123	Product containing thyroglobulin (medicinal product)	Thyroglobulin preparation	A29518407	PF	N	SNOMEDCT_US	OP
+C0040123	Product containing thyroglobulin (medicinal product)	TG - Thyroglobulin	A3299756	PF	Y	SNOMEDCT_US	SY
+C0040123	Product containing thyroglobulin (medicinal product)	Product containing thyroglobulin (medicinal product)	A29505847	PF	Y	SNOMEDCT_US	FN
+C0040123	Product containing thyroglobulin (medicinal product)	Thyroglobulin product	A30222329	PF	Y	SNOMEDCT_US	OP
+C0040123	Product containing thyroglobulin (medicinal product)	Thyroglobulin-containing product	A30255607	PF	Y	SNOMEDCT_US	PT
+C0040123	Product containing thyroglobulin (medicinal product)	Product containing thyroglobulin	A30232278	VCW	Y	SNOMEDCT_US	IS
+C0040123	Product containing thyroglobulin (medicinal product)	Thyroglobulin preparation (product)	A29560456	PF	Y	SNOMEDCT_US	OF
+C0040123	Product containing thyroglobulin (medicinal product)	Thyroglobulin preparation (substance)	A5050808	PF	Y	SNOMEDCT_US	OF
+C0040123	Product containing thyroglobulin (medicinal product)	Thyroglobulin (substance)	A3754711	PF	Y	SNOMEDCT_US	FN
+C0040160	Product containing thyrotrophin (medicinal product)	Thyrotropin	A2887374	PF	N	SNOMEDCT_US	SY
+C0040160	Product containing thyrotrophin (medicinal product)	Thyrotrophin	A29550183	VO	N	SNOMEDCT_US	PT
+C0040160	Product containing thyrotrophin (medicinal product)	Thyroid stimulating hormone	A29497624	VC	Y	SNOMEDCT_US	SY
+C0040160	Product containing thyrotrophin (medicinal product)	TSH	A2887717	PF	Y	SNOMEDCT_US	SY
+C0040160	Product containing thyrotrophin (medicinal product)	Thyrotropic hormone preparation	A22855801	PF	N	SNOMEDCT_US	OAP
+C0040160	Product containing thyrotrophin (medicinal product)	Thyrotrophic hormone product	A23018613	PF	N	SNOMEDCT_US	OAS
+C0040160	Product containing thyrotrophin (medicinal product)	TSH preparation	A23026383	PF	N	SNOMEDCT_US	OAS
+C0040160	Product containing thyrotrophin (medicinal product)	Thyrotrophin product	A30190394	PF	N	SNOMEDCT_US	OP
+C0040160	Product containing thyrotrophin (medicinal product)	Thyrotrophin (substance)	A29537062	PF	Y	SNOMEDCT_US	FN
+C0040160	Product containing thyrotrophin (medicinal product)	Thyrotrophin-containing product	A30245479	PF	Y	SNOMEDCT_US	PT
+C0040160	Product containing thyrotrophin (medicinal product)	Product containing thyrotrophin	A30192474	VCW	Y	SNOMEDCT_US	IS
+C0040160	Product containing thyrotrophin (medicinal product)	Product containing thyrotrophin (medicinal product)	A29546983	PF	Y	SNOMEDCT_US	FN
+C0040160	Product containing thyrotrophin (medicinal product)	Thyrotropic hormone preparation (product)	A22952395	PF	Y	SNOMEDCT_US	OAF
+C0040160	Product containing thyrotrophin (medicinal product)	Thyrotropic hormone preparation (substance)	A5050902	PF	Y	SNOMEDCT_US	OF
+C0040160	Product containing thyrotrophin (medicinal product)	Thyroid stimulating hormone (substance)	A29560305	PF	Y	SNOMEDCT_US	OF
+C0040160	Product containing thyrotrophin (medicinal product)	Thyrotrophin product (product)	A29503420	PF	Y	SNOMEDCT_US	OF
+C0040160	Product containing thyrotrophin (medicinal product)	Thyrotrophin product (substance)	A5050900	PF	Y	SNOMEDCT_US	OF
+C0040380	Product containing tolonium chloride (medicinal product)	Tolonium chloride	A23025904	PF	N	SNOMEDCT_US	OAP
+C0040380	Product containing tolonium chloride (medicinal product)	Tolonium chloride	A29555718	PF	N	SNOMEDCT_US	PT
+C0040380	Product containing tolonium chloride (medicinal product)	Tolonium chloride	A29555900	PF	N	SNOMEDCT_US	OP
+C0040380	Product containing tolonium chloride (medicinal product)	Toluidine blue O	A23002145	VC	N	SNOMEDCT_US	OAS
+C0040380	Product containing tolonium chloride (medicinal product)	Toluidine blue O	A3881286	VC	Y	SNOMEDCT_US	SY
+C0040380	Product containing tolonium chloride (medicinal product)	Toluidine blue	A3883703	VC	Y	SNOMEDCT_US	SY
+C0040380	Product containing tolonium chloride (medicinal product)	Product containing tolonium chloride (medicinal product)	A29510848	PF	Y	SNOMEDCT_US	FN
+C0040380	Product containing tolonium chloride (medicinal product)	Tolonium chloride-containing product	A30255612	PF	Y	SNOMEDCT_US	PT
+C0040380	Product containing tolonium chloride (medicinal product)	Product containing tolonium chloride	A30242011	VCW	Y	SNOMEDCT_US	IS
+C0040380	Product containing tolonium chloride (medicinal product)	Toluidine blue (substance)	A5051315	PF	Y	SNOMEDCT_US	OF
+C0040380	Product containing tolonium chloride (medicinal product)	Tolonium chloride (substance)	A22944247	PF	N	SNOMEDCT_US	OAF
+C0040380	Product containing tolonium chloride (medicinal product)	Tolonium chloride (substance)	A29557838	PF	Y	SNOMEDCT_US	FN
+C0040380	Product containing tolonium chloride (medicinal product)	Toluidine blue stain (substance)	A29524668	PF	Y	SNOMEDCT_US	OF
+C0040380	Product containing tolonium chloride (medicinal product)	Toluidine blue stain	A29555709	PF	Y	SNOMEDCT_US	SY
+C0040380	Product containing tolonium chloride (medicinal product)	Tolonium chloride product	A30262353	PF	Y	SNOMEDCT_US	OP
+C0040380	Product containing tolonium chloride (medicinal product)	Tolonium chloride (product)	A29530019	VO	Y	SNOMEDCT_US	OF
+C0040556	Toxoplasma (organism)	Toxoplasma	A2887494	PF	N	SNOMEDCT_US	PT
+C0040556	Toxoplasma (organism)	Toxoplasma, NOS	A4797589	VO	N	SNOMEDCT_US	IS
+C0040556	Toxoplasma (organism)	Genus: Toxoplasma	A3284077	PF	Y	SNOMEDCT_US	SY
+C0040556	Toxoplasma (organism)	Toxoplasma species (organism)	A24243965	PF	Y	SNOMEDCT_US	OAF
+C0040556	Toxoplasma (organism)	Toxoplasma (organism)	A3759379	PF	Y	SNOMEDCT_US	FN
+C0040556	Toxoplasma (organism)	Toxoplasma species	A24251793	PF	N	SNOMEDCT_US	OAP
+C0040556	Toxoplasma (organism)	Toxoplasma species	A24250465	PF	Y	SNOMEDCT_US	SY
+C0041236	Trypsin (substance)	Trypsin	A23046218	VC	N	SNOMEDCT_US	OAP
+C0041236	Trypsin (substance)	Trypsin	A2887712	VC	N	SNOMEDCT_US	PT
+C0041236	Trypsin (substance)	Trypsin	A4714969	VC	N	SNOMEDCT_US	OF
+C0041236	Trypsin (substance)	Alpha- and beta-trypsin	A30227774	PF	Y	SNOMEDCT_US	SY
+C0041236	Trypsin (substance)	alpha- and beta-Trypsin	A30259626	VC	N	SNOMEDCT_US	IS
+C0041236	Trypsin (substance)	Trypsin (substance)	A22929910	PF	N	SNOMEDCT_US	OAF
+C0041236	Trypsin (substance)	Trypsin (substance)	A3766068	PF	Y	SNOMEDCT_US	FN
+C0041348	Tubulin (substance)	Tubulin	A2887727	PF	N	SNOMEDCT_US	PT
+C0041348	Tubulin (substance)	Tubulin (substance)	A3766727	PF	Y	SNOMEDCT_US	FN
+C0041538	Ubiquitin (substance)	Ubiquitin	A2887771	PF	N	SNOMEDCT_US	PT
+C0041538	Ubiquitin (substance)	Ubiquitin (substance)	A3769166	PF	Y	SNOMEDCT_US	FN
+C0041980	Uric acid (substance)	Uric acid	A2950414	VC	Y	SNOMEDCT_US	PT
+C0041980	Uric acid (substance)	Uric acid, NOS	A4798432	VO	N	SNOMEDCT_US	IS
+C0041980	Uric acid (substance)	UA - Uric acid	A3240842	PF	Y	SNOMEDCT_US	SY
+C0041980	Uric acid (substance)	Uric acid (substance)	A3773862	PF	Y	SNOMEDCT_US	FN
+C0042338	Human herpesvirus 3 (organism)	Human herpesvirus 3	A3031272	PF	N	SNOMEDCT_US	PT
+C0042338	Human herpesvirus 3 (organism)	Herpes zoster	A2933029	PF	Y	SNOMEDCT_US	SY
+C0042338	Human herpesvirus 3 (organism)	Varicella-zoster virus	A2950693	VC	Y	SNOMEDCT_US	SY
+C0042338	Human herpesvirus 3 (organism)	VZV - Varicella-zoster virus	A3081809	PF	Y	SNOMEDCT_US	SY
+C0042338	Human herpesvirus 3 (organism)	HZ - Herpes zoster virus	A3286316	PF	Y	SNOMEDCT_US	SY
+C0042338	Human herpesvirus 3 (organism)	HZ - Herpes zoster	A3286317	PF	Y	SNOMEDCT_US	SY
+C0042338	Human herpesvirus 3 (organism)	Human herpesvirus 3 (organism)	A3497755	PF	Y	SNOMEDCT_US	FN
+C0042338	Human herpesvirus 3 (organism)	Human (alpha) herpes virus 3	A3031091	PF	Y	SNOMEDCT_US	SY
+C0042395	Vasoactive intestinal peptide (substance)	Vasoactive intestinal peptide	A3082100	VC	Y	SNOMEDCT_US	PT
+C0042395	Vasoactive intestinal peptide (substance)	Vasoactive intestinal polypeptide	A2984912	VC	Y	SNOMEDCT_US	SY
+C0042395	Vasoactive intestinal peptide (substance)	VIP	A2950578	PF	N	SNOMEDCT_US	SY
+C0042395	Vasoactive intestinal peptide (substance)	VIP - Vasoactive intestinal polypeptide	A3216992	PF	Y	SNOMEDCT_US	SY
+C0042395	Vasoactive intestinal peptide (substance)	Vasoactive intestinal peptide (substance)	A3779272	PF	Y	SNOMEDCT_US	FN
+C0042666	Vimentin (substance)	Vimentin	A2887976	PF	N	SNOMEDCT_US	PT
+C0042666	Vimentin (substance)	Vimentin (substance)	A3781880	PF	Y	SNOMEDCT_US	FN
+C0061856	Gram stain (substance)	Gram stain	A2915878	VO	Y	SNOMEDCT_US	PT
+C0061856	Gram stain (substance)	Gram stain (substance)	A3480203	PF	Y	SNOMEDCT_US	FN
+C0061878	Granzyme B (substance)	Granzyme B	A3480589	VC	N	SNOMEDCT_US	PT
+C0061878	Granzyme B (substance)	Cytotoxic T-lymphocyte proteinase 2	A20828754	PF	Y	SNOMEDCT_US	SY
+C0061878	Granzyme B (substance)	Cytotoxic t-lymphocyte proteinase 2	A30190012	VC	Y	SNOMEDCT_US	IS
+C0061878	Granzyme B (substance)	Granzyme B (substance)	A3480588	PF	Y	SNOMEDCT_US	FN
+C0065274	Luxol fast blue stain (substance)	Luxol fast blue	A3881196	PF	Y	SNOMEDCT_US	SY
+C0065274	Luxol fast blue stain (substance)	Luxol fast blue stain	A3902140	PF	Y	SNOMEDCT_US	PT
+C0065274	Luxol fast blue stain (substance)	Luxol fast blue stain (substance)	A3902139	PF	Y	SNOMEDCT_US	FN
+C0069388	Oil red O stain (substance)	Solvent red 27	A3711940	VC	Y	SNOMEDCT_US	SY
+C0069388	Oil red O stain (substance)	Oil red O	A3882199	VC	Y	SNOMEDCT_US	SY
+C0069388	Oil red O stain (substance)	Oil red O stain	A3884959	PF	Y	SNOMEDCT_US	PT
+C0069388	Oil red O stain (substance)	Oil red O (substance)	A5014735	PF	Y	SNOMEDCT_US	OF
+C0069388	Oil red O stain (substance)	Oil red O stain (substance)	A3903447	PF	Y	SNOMEDCT_US	FN
+C0069596	Orcein stain (substance)	Orcein	A3903821	PF	N	SNOMEDCT_US	SY
+C0069596	Orcein stain (substance)	Orcein stain	A3903819	PF	Y	SNOMEDCT_US	PT
+C0069596	Orcein stain (substance)	Orcein stain (substance)	A3903818	PF	Y	SNOMEDCT_US	FN
+C0070410	Perforin (substance)	Perforin	A24255277	VC	N	SNOMEDCT_US	PT
+C0070410	Perforin (substance)	Perforin (substance)	A24239764	PF	Y	SNOMEDCT_US	FN
+C0075489	Sudan black B stain (substance)	Sudan black B	A3883615	VC	Y	SNOMEDCT_US	SY
+C0075489	Sudan black B stain (substance)	Sudan black B stain	A3885084	PF	Y	SNOMEDCT_US	PT
+C0075489	Sudan black B stain (substance)	Solvent black 3	A3711922	PF	Y	SNOMEDCT_US	SY
+C0075489	Sudan black B stain (substance)	Sudan black B (substance)	A5047784	PF	Y	SNOMEDCT_US	OF
+C0075489	Sudan black B stain (substance)	Sudan black B stain (substance)	A3894589	PF	Y	SNOMEDCT_US	FN
+C0085424	Interleukin-9 (substance)	Interleukin-9	A2883009	PF	N	SNOMEDCT_US	PT
+C0085424	Interleukin-9 (substance)	IL-9	A2882873	PF	N	SNOMEDCT_US	SY
+C0085424	Interleukin-9 (substance)	p40	A3087748	PF	Y	SNOMEDCT_US	SY
+C0085424	Interleukin-9 (substance)	Interleukin-9 (substance)	A3519921	PF	Y	SNOMEDCT_US	FN
+C0103403	Annexin A1 (substance)	Annexin A1	A7875834	PF	N	SNOMEDCT_US	PT
+C0103403	Annexin A1 (substance)	Annexin I	A7873298	PF	N	SNOMEDCT_US	SY
+C0103403	Annexin A1 (substance)	Annexin A1 (substance)	A7880332	PF	Y	SNOMEDCT_US	FN
+C0145779	Thrombomodulin (substance)	Thrombomodulin	A2888608	PF	N	SNOMEDCT_US	PT
+C0145779	Thrombomodulin (substance)	Thrombomodulin (substance)	A3754205	PF	Y	SNOMEDCT_US	FN
+C0147080	Tryptase (substance)	Tryptase	A22897217	VC	N	SNOMEDCT_US	OAP
+C0147080	Tryptase (substance)	Tryptase	A3766099	VC	N	SNOMEDCT_US	PT
+C0147080	Tryptase (substance)	Tryptase -RETIRED-	A13375373	PF	Y	SNOMEDCT_US	IS
+C0147080	Tryptase (substance)	Tryptase (substance)	A22975801	PF	N	SNOMEDCT_US	OAF
+C0147080	Tryptase (substance)	Tryptase (substance)	A3766091	PF	Y	SNOMEDCT_US	FN
+C0200966	Gram stain technique (qualifier value)	Bacterial stain, routine	A2915880	PF	N	SNOMEDCT_US	SY
+C0200966	Gram stain technique (qualifier value)	Gram stain	A3881046	PF	N	SNOMEDCT_US	SY
+C0200966	Gram stain technique (qualifier value)	Gram stain	A24264108	PF	Y	SNOMEDCT_US	PT
+C0200966	Gram stain technique (qualifier value)	Gramme stain	A24265359	VO	Y	SNOMEDCT_US	PTGB
+C0200966	Gram stain technique (qualifier value)	Gram stain technique	A24251747	PF	Y	SNOMEDCT_US	SY
+C0200966	Gram stain technique (qualifier value)	Gram stain technique (qualifier value)	A24265974	PF	Y	SNOMEDCT_US	FN
+C0200966	Gram stain technique (qualifier value)	Gram stain (procedure)	A4992890	PF	Y	SNOMEDCT_US	OF
+C0200966	Gram stain technique (qualifier value)	Gram stain method (procedure)	A3900089	PF	Y	SNOMEDCT_US	FN
+C0200966	Gram stain technique (qualifier value)	Gram stain method	A3900090	PF	Y	SNOMEDCT_US	PT
+C0202087	Immunoglobulin G measurement (procedure)	Immunoglobulin G measurement	A2917350	PF	N	SNOMEDCT_US	PT
+C0202087	Immunoglobulin G measurement (procedure)	IgG	A2882859	PF	Y	SNOMEDCT_US	SY
+C0202087	Immunoglobulin G measurement (procedure)	IgG - Immunoglobulin G	A3033181	PF	Y	SNOMEDCT_US	SY
+C0202087	Immunoglobulin G measurement (procedure)	Immunoglobulin G level	A3283553	PF	Y	SNOMEDCT_US	SY
+C0202087	Immunoglobulin G measurement (procedure)	Immunoglobulin G (& [level])	A22980584	VW	N	SNOMEDCT_US	OAP
+C0202087	Immunoglobulin G measurement (procedure)	Immunoglobulin G (& [level])	A4997942	VW	N	SNOMEDCT_US	OF
+C0202087	Immunoglobulin G measurement (procedure)	Immunoglobulin G (& [level])	A4997943	VW	N	SNOMEDCT_US	OF
+C0202087	Immunoglobulin G measurement (procedure)	Immunoglobulin G (& [level])	A22897994	VW	Y	SNOMEDCT_US	OAP
+C0202087	Immunoglobulin G measurement (procedure)	Immunoglobulin G measurement (procedure)	A3505545	PF	Y	SNOMEDCT_US	FN
+C0202087	Immunoglobulin G measurement (procedure)	Immunoglobulin G (& [level]) (procedure)	A22890293	PF	N	SNOMEDCT_US	OAF
+C0202087	Immunoglobulin G measurement (procedure)	Immunoglobulin G (& [level]) (procedure)	A22806610	PF	Y	SNOMEDCT_US	OAF
+C0206558	Genus Simplexvirus (organism)	Simplexvirus	A11723770	PF	N	SNOMEDCT_US	PT
+C0206558	Genus Simplexvirus (organism)	Simplexvirus	A22860702	PF	N	SNOMEDCT_US	OAP
+C0206558	Genus Simplexvirus (organism)	Simplexvirus, NOS	A4795606	VO	N	SNOMEDCT_US	IS
+C0206558	Genus Simplexvirus (organism)	Herpes simplex virus	A2933024	VC	Y	SNOMEDCT_US	SY
+C0206558	Genus Simplexvirus (organism)	Herpesvirus	A2872752	PF	Y	SNOMEDCT_US	SY
+C0206558	Genus Simplexvirus (organism)	Herpesvirus, NOS	A4782852	VO	N	SNOMEDCT_US	IS
+C0206558	Genus Simplexvirus (organism)	Herpes simplex group virus	A22820019	PF	Y	SNOMEDCT_US	OAP
+C0206558	Genus Simplexvirus (organism)	Herpes simplex virus group, NOS	A4782843	VO	Y	SNOMEDCT_US	IS
+C0206558	Genus Simplexvirus (organism)	Herpes simplex virus group	A4995514	VW	N	SNOMEDCT_US	IS
+C0206558	Genus Simplexvirus (organism)	Herpes simplex virus group	A22827894	VW	Y	SNOMEDCT_US	OAS
+C0206558	Genus Simplexvirus (organism)	HS - Herpes simplex	A3285102	PF	Y	SNOMEDCT_US	SY
+C0206558	Genus Simplexvirus (organism)	HSV - Herpes simplex virus	A3027648	PF	Y	SNOMEDCT_US	SY
+C0206558	Genus Simplexvirus (organism)	HSV	A21109833	VC	N	SNOMEDCT_US	IS
+C0206558	Genus Simplexvirus (organism)	Simplexvirus species	A24806645	PF	Y	SNOMEDCT_US	SY
+C0206558	Genus Simplexvirus (organism)	Simplexvirus (living organism) [Ambiguous]	A5044267	PF	Y	SNOMEDCT_US	OF
+C0206558	Genus Simplexvirus (organism)	Herpes simplex group virus (organism)	A22995356	PF	Y	SNOMEDCT_US	OAF
+C0206558	Genus Simplexvirus (organism)	Simplexvirus (organism)	A5044268	PF	Y	SNOMEDCT_US	OF
+C0206558	Genus Simplexvirus (organism)	Genus Simplexvirus (organism)	A3899950	PF	Y	SNOMEDCT_US	FN
+C0206558	Genus Simplexvirus (organism)	Genus Simplexvirus	A13004865	PF	Y	SNOMEDCT_US	SY
+C0206558	Genus Simplexvirus (organism)	Simplexvirus (living organism) (organism)	A22854157	PF	Y	SNOMEDCT_US	OAF
+C0268596	Glutaric aciduria, type 2 (disorder)	Glutaric acidemia, type 2	A2966281	VC	Y	SNOMEDCT_US	SY
+C0268596	Glutaric aciduria, type 2 (disorder)	Glutaric acidaemia, type 2	A3478250	VO	Y	SNOMEDCT_US	SYGB
+C0268596	Glutaric aciduria, type 2 (disorder)	Glutaric aciduria, type 2	A2966284	VC	Y	SNOMEDCT_US	PT
+C0268596	Glutaric aciduria, type 2 (disorder)	ACAD	A2951699	PF	Y	SNOMEDCT_US	SY
+C0268596	Glutaric aciduria, type 2 (disorder)	Ethylmalonic-adipicaciduria	A2964036	VC	Y	SNOMEDCT_US	SY
+C0268596	Glutaric aciduria, type 2 (disorder)	EMA	A2963041	PF	Y	SNOMEDCT_US	SY
+C0268596	Glutaric aciduria, type 2 (disorder)	GA II	A2965780	PF	Y	SNOMEDCT_US	SY
+C0268596	Glutaric aciduria, type 2 (disorder)	Glutaric aciduria type II	A3026139	VC	Y	SNOMEDCT_US	SY
+C0268596	Glutaric aciduria, type 2 (disorder)	MAD - Multiple acyl-CoA dehydrogenase deficiency	A3309471	PF	Y	SNOMEDCT_US	SY
+C0268596	Glutaric aciduria, type 2 (disorder)	Multiple acyl-CoA dehydrogenase deficiencies	A3309472	VO	Y	SNOMEDCT_US	SY
+C0268596	Glutaric aciduria, type 2 (disorder)	Glutaric aciduria, type 2 (disorder)	A3478253	PF	Y	SNOMEDCT_US	FN
+C0284930	Cathepsin K (substance)	Cathepsin K	A3341962	VC	N	SNOMEDCT_US	PT
+C0284930	Cathepsin K (substance)	Cathepsin O2	A3341964	PF	Y	SNOMEDCT_US	SY
+C0284930	Cathepsin K (substance)	Cathepsin X	A3341970	PF	Y	SNOMEDCT_US	SY
+C0284930	Cathepsin K (substance)	Cathepsin K (substance)	A3341960	PF	Y	SNOMEDCT_US	FN
+C0285890	Alpha-synuclein (substance)	alpha-Synuclein	A30250585	PF	N	SNOMEDCT_US	OP
+C0285890	Alpha-synuclein (substance)	Alpha-synuclein	A30257590	VC	Y	SNOMEDCT_US	PT
+C0285890	Alpha-synuclein (substance)	Alpha-synuclein (substance)	A30257591	PF	Y	SNOMEDCT_US	FN
+C0285890	Alpha-synuclein (substance)	alpha-Synuclein (substance)	A30260567	VC	Y	SNOMEDCT_US	OF
+C0302583	Product containing iron (medicinal product)	Iron	A2883094	PF	N	SNOMEDCT_US	PT
+C0302583	Product containing iron (medicinal product)	Iron, NOS	A4784463	VO	N	SNOMEDCT_US	IS
+C0302583	Product containing iron (medicinal product)	Iron preparation, NOS	A4784458	VO	N	SNOMEDCT_US	IS
+C0302583	Product containing iron (medicinal product)	Iron preparation	A29533821	VO	Y	SNOMEDCT_US	OP
+C0302583	Product containing iron (medicinal product)	Iron product	A22975332	PF	N	SNOMEDCT_US	OAP
+C0302583	Product containing iron (medicinal product)	Iron product	A30212441	PF	N	SNOMEDCT_US	OP
+C0302583	Product containing iron (medicinal product)	Iron product	A4784459	PF	N	SNOMEDCT_US	OF
+C0302583	Product containing iron (medicinal product)	Fe - Iron	A3021769	PF	Y	SNOMEDCT_US	SY
+C0302583	Product containing iron (medicinal product)	Iron-containing product	A30196273	PF	Y	SNOMEDCT_US	PT
+C0302583	Product containing iron (medicinal product)	Product containing iron	A30221304	VCW	Y	SNOMEDCT_US	IS
+C0302583	Product containing iron (medicinal product)	Product containing iron (medicinal product)	A28469239	PF	Y	SNOMEDCT_US	FN
+C0302583	Product containing iron (medicinal product)	Product containing iron (product)	A30262137	PF	Y	SNOMEDCT_US	OF
+C0302583	Product containing iron (medicinal product)	Iron agent	A29519243	PF	Y	SNOMEDCT_US	OAP
+C0302583	Product containing iron (medicinal product)	Iron agent (substance)	A29493159	PF	Y	SNOMEDCT_US	OAF
+C0302583	Product containing iron (medicinal product)	Iron preparation (product)	A28419732	PF	Y	SNOMEDCT_US	OF
+C0302583	Product containing iron (medicinal product)	Iron preparation (substance)	A5001784	PF	Y	SNOMEDCT_US	OF
+C0302583	Product containing iron (medicinal product)	Iron (substance)	A3524257	PF	Y	SNOMEDCT_US	FN
+C0302583	Product containing iron (medicinal product)	ferric ion	A29535164	PF	Y	SNOMEDCT_US	IS
+C0302583	Product containing iron (medicinal product)	Iron product (product)	A23001437	PF	Y	SNOMEDCT_US	OAF
+C0329207	Astronotus ocellatus (organism)	Astronotus ocellatus	A2993897	PF	N	SNOMEDCT_US	PT
+C0329207	Astronotus ocellatus (organism)	Oscar	A3052485	PF	Y	SNOMEDCT_US	SY
+C0329207	Astronotus ocellatus (organism)	Astronotus ocellatus (organism)	A3726881	PF	Y	SNOMEDCT_US	FN
+C0376180	Product containing gastrin (medicinal product)	Gastrin	A2881865	PF	N	SNOMEDCT_US	PT
+C0376180	Product containing gastrin (medicinal product)	Gastrin	A29566853	PF	N	SNOMEDCT_US	OP
+C0376180	Product containing gastrin (medicinal product)	Gastrin, NOS	A4781603	VO	N	SNOMEDCT_US	IS
+C0376180	Product containing gastrin (medicinal product)	Gastrin preparation	A28908927	PF	N	SNOMEDCT_US	OP
+C0376180	Product containing gastrin (medicinal product)	Total gastrin	A24249992	PF	N	SNOMEDCT_US	IS
+C0376180	Product containing gastrin (medicinal product)	Gastrin-containing product	A30215574	PF	Y	SNOMEDCT_US	PT
+C0376180	Product containing gastrin (medicinal product)	Product containing gastrin	A30192134	VCW	Y	SNOMEDCT_US	IS
+C0376180	Product containing gastrin (medicinal product)	Product containing gastrin (medicinal product)	A28901245	PF	Y	SNOMEDCT_US	FN
+C0376180	Product containing gastrin (medicinal product)	Gastrin product	A30232679	PF	Y	SNOMEDCT_US	OP
+C0376180	Product containing gastrin (medicinal product)	Gastrin preparation (product)	A28902332	PF	Y	SNOMEDCT_US	OF
+C0376180	Product containing gastrin (medicinal product)	Gastrin preparation (substance)	A4991628	PF	Y	SNOMEDCT_US	OF
+C0376180	Product containing gastrin (medicinal product)	Gastrin (substance)	A3472515	PF	Y	SNOMEDCT_US	FN
+C0392916	Intracellular ferritin (cell structure)	Intracellular ferritin	A2970362	PF	N	SNOMEDCT_US	PT
+C0392916	Intracellular ferritin (cell structure)	Ferritin	A13370858	PF	Y	SNOMEDCT_US	IS
+C0392916	Intracellular ferritin (cell structure)	Intracellular ferritin (body structure)	A5001169	PF	Y	SNOMEDCT_US	OF
+C0392916	Intracellular ferritin (cell structure)	Intracellular ferritin (cell structure)	A3521387	PF	Y	SNOMEDCT_US	FN
+C0439099	Greek letter kappa (qualifier value)	Greek letter kappa	A10887952	PF	N	SNOMEDCT_US	SY
+C0439099	Greek letter kappa (qualifier value)	Kappa	A3149705	PF	Y	SNOMEDCT_US	PT
+C0439099	Greek letter kappa (qualifier value)	Kappa (qualifier value)	A10872677	PF	Y	SNOMEDCT_US	OF
+C0439099	Greek letter kappa (qualifier value)	Greek letter kappa (qualifier value)	A10887951	PF	Y	SNOMEDCT_US	FN
+C0440040	Chloroacetate esterase stain (substance)	Chloroacetate esterase stain	A3897051	PF	N	SNOMEDCT_US	PT
+C0440040	Chloroacetate esterase stain (substance)	Napthol AS-D chloroacetate esterase	A3902884	PF	Y	SNOMEDCT_US	SY
+C0440040	Chloroacetate esterase stain (substance)	Chloroacetate esterase	A3897054	PF	Y	SNOMEDCT_US	SY
+C0440040	Chloroacetate esterase stain (substance)	Chloroactetate esterase stain	A13362993	PF	N	SNOMEDCT_US	IS
+C0440040	Chloroacetate esterase stain (substance)	Chloroactetate esterase stain (substance)	A4971891	PF	Y	SNOMEDCT_US	OF
+C0440040	Chloroacetate esterase stain (substance)	Chloroacetate esterase stain (substance)	A3897048	PF	Y	SNOMEDCT_US	FN
+C0440047	Nonspecific esterase stain (substance)	Nonspecific esterase stain	A3278998	PF	N	SNOMEDCT_US	PT
+C0440047	Nonspecific esterase stain (substance)	Nonspecific esterase	A3903205	PF	Y	SNOMEDCT_US	SY
+C0440047	Nonspecific esterase stain (substance)	Nonspecific esterase stain (substance)	A3585904	PF	Y	SNOMEDCT_US	FN
+C0440051	Ziehl-Neelsen stain (substance)	Ziehl-Neelsen stain	A3220471	PF	N	SNOMEDCT_US	PT
+C0440051	Ziehl-Neelsen stain (substance)	ZN - Ziehl-Neelsen stain	A3294787	PF	Y	SNOMEDCT_US	SY
+C0440051	Ziehl-Neelsen stain (substance)	Ziehl-Neelsen stain (substance)	A3789035	PF	Y	SNOMEDCT_US	FN
+C0440051	Ziehl-Neelsen stain (substance)	Ziehl-Neelsen	A3895848	PF	Y	SNOMEDCT_US	SY
+C0440053	Myeloperoxidase stain (substance)	Myeloperoxidase stain	A3161419	PF	N	SNOMEDCT_US	PT
+C0440053	Myeloperoxidase stain (substance)	Myeloperoxidase	A3880851	PF	Y	SNOMEDCT_US	SY
+C0440053	Myeloperoxidase stain (substance)	MPO - Myeloperoxidase stain	A3294300	PF	Y	SNOMEDCT_US	SY
+C0440053	Myeloperoxidase stain (substance)	Myeloperoxidase stain (substance)	A3572590	PF	Y	SNOMEDCT_US	FN
+C0442996	Cox (qualifier value)	Cox	A3115914	PF	Y	SNOMEDCT_US	PT
+C0442996	Cox (qualifier value)	Cox (qualifier value)	A3375166	PF	Y	SNOMEDCT_US	FN
+C0443326	Trichrome (qualifier value)	Trichrome	A3213387	PF	Y	SNOMEDCT_US	PT
+C0443326	Trichrome (qualifier value)	Trichrome (qualifier value)	A3764434	PF	Y	SNOMEDCT_US	FN
+C0456881	C3 certainty (qualifier value)	C3 - TNM certainty factor	A3105368	VW	Y	SNOMEDCT_US	SY
+C0456881	C3 certainty (qualifier value)	C3	A13365940	PF	Y	SNOMEDCT_US	IS
+C0456881	C3 certainty (qualifier value)	C3 certainty	A3002382	PF	Y	SNOMEDCT_US	PT
+C0456881	C3 certainty (qualifier value)	C3 - TNM certainty factor (tumor staging)	A4967467	PF	Y	SNOMEDCT_US	IS
+C0456881	C3 certainty (qualifier value)	C3 certainty (qualifier value)	A3332750	PF	Y	SNOMEDCT_US	FN
+C0456881	C3 certainty (qualifier value)	C3 certainty (tumor staging)	A4967468	PF	Y	SNOMEDCT_US	OF
+C0543431	ret (qualifier value)	ret	A3298683	PF	Y	SNOMEDCT_US	PT
+C0543431	ret (qualifier value)	ret (qualifier value)	A3805643	PF	Y	SNOMEDCT_US	FN
+C0577612	Immunoglobulin D measurement (procedure)	Immunoglobulin D measurement	A2917348	PF	N	SNOMEDCT_US	PT
+C0577612	Immunoglobulin D measurement (procedure)	IgD	A22902035	PF	N	SNOMEDCT_US	OAS
+C0577612	Immunoglobulin D measurement (procedure)	Immunoglobulin D level	A3270871	PF	Y	SNOMEDCT_US	SY
+C0577612	Immunoglobulin D measurement (procedure)	Immunoglobulin D (& [level])	A22877976	VW	N	SNOMEDCT_US	OAP
+C0577612	Immunoglobulin D measurement (procedure)	Immunoglobulin D (& [level])	A4997934	VW	N	SNOMEDCT_US	OF
+C0577612	Immunoglobulin D measurement (procedure)	Immunoglobulin D (& [level])	A4997935	VW	N	SNOMEDCT_US	OF
+C0577612	Immunoglobulin D measurement (procedure)	Immunoglobulin D (& [level])	A22869448	VW	Y	SNOMEDCT_US	OAP
+C0577612	Immunoglobulin D measurement (procedure)	Immunoglobulin D measurement (procedure)	A3505532	PF	Y	SNOMEDCT_US	FN
+C0577612	Immunoglobulin D measurement (procedure)	Immunoglobulin D (& [level]) (procedure)	A22918463	PF	N	SNOMEDCT_US	OAF
+C0577612	Immunoglobulin D measurement (procedure)	Immunoglobulin D (& [level]) (procedure)	A22894322	PF	Y	SNOMEDCT_US	OAF
+C0678214	atmosphere (qualifier value)	atmosphere	A3230090	PF	Y	SNOMEDCT_US	PT
+C0678214	atmosphere (qualifier value)	atm	A3253729	PF	Y	SNOMEDCT_US	SY
+C0678214	atmosphere (qualifier value)	atmosphere (qualifier value)	A3802582	PF	Y	SNOMEDCT_US	FN
+C0694890	RET proto-oncogene (substance)	RET	A3886115	PF	Y	SNOMEDCT_US	SY
+C0694890	RET proto-oncogene (substance)	RET proto-oncogene	A3905067	PF	Y	SNOMEDCT_US	PT
+C0694890	RET proto-oncogene (substance)	RET proto-oncogene (substance)	A3905066	PF	Y	SNOMEDCT_US	FN
+C0699919	Cathepsin B (substance)	Cathepsin B	A2879543	VO	N	SNOMEDCT_US	PT
+C0699919	Cathepsin B (substance)	Cathepsin B1	A2879544	PF	N	SNOMEDCT_US	SY
+C0699919	Cathepsin B (substance)	Cathepsin B (substance)	A3341945	PF	Y	SNOMEDCT_US	FN
+C0733758	Product containing pituitary follicle stimulating hormone (product)	Follicle stimulating hormone	A3133179	VC	Y	SNOMEDCT_US	SY
+C0733758	Product containing pituitary follicle stimulating hormone (product)	Follitropin	A31055250	PF	N	SNOMEDCT_US	IS
+C0733758	Product containing pituitary follicle stimulating hormone (product)	FSH	A2876355	PF	Y	SNOMEDCT_US	SY
+C0733758	Product containing pituitary follicle stimulating hormone (product)	FSH - Follicle-stimulating hormone	A29565719	VC	N	SNOMEDCT_US	IS
+C0733758	Product containing pituitary follicle stimulating hormone (product)	Follicle-stimulating horm prod	A29518727	PF	N	SNOMEDCT_US	IS
+C0733758	Product containing pituitary follicle stimulating hormone (product)	Pituitary follicle stimulating hormone	A3058413	PF	Y	SNOMEDCT_US	PT
+C0733758	Product containing pituitary follicle stimulating hormone (product)	Follicle stimulating hormone preparation	A22861077	PF	N	SNOMEDCT_US	OAP
+C0733758	Product containing pituitary follicle stimulating hormone (product)	Follicle stimulating hormone preparation	A29514484	PF	N	SNOMEDCT_US	IS
+C0733758	Product containing pituitary follicle stimulating hormone (product)	FSH preparation	A22805420	PF	N	SNOMEDCT_US	OAS
+C0733758	Product containing pituitary follicle stimulating hormone (product)	FSH preparation	A29519682	PF	N	SNOMEDCT_US	IS
+C0733758	Product containing pituitary follicle stimulating hormone (product)	FSH - Follicle-stimulating hormone product	A30212409	PF	Y	SNOMEDCT_US	IS
+C0733758	Product containing pituitary follicle stimulating hormone (product)	Product containing pituitary follicle stimulating hormone (product)	A29516370	PF	Y	SNOMEDCT_US	FN
+C0733758	Product containing pituitary follicle stimulating hormone (product)	Follitropin product	A30202584	PF	Y	SNOMEDCT_US	IS
+C0733758	Product containing pituitary follicle stimulating hormone (product)	Pituitary follicle stimulating hormone-containing product	A30218744	PF	Y	SNOMEDCT_US	PT
+C0733758	Product containing pituitary follicle stimulating hormone (product)	Product containing pituitary follicle stimulating hormone	A30202583	VCW	Y	SNOMEDCT_US	IS
+C0733758	Product containing pituitary follicle stimulating hormone (product)	Pituitary follicle-stimulating hormone product	A30252181	PF	Y	SNOMEDCT_US	OP
+C0733758	Product containing pituitary follicle stimulating hormone (product)	Follicle-stimulating horm prod (product)	A4990377	PF	Y	SNOMEDCT_US	OF
+C0733758	Product containing pituitary follicle stimulating hormone (product)	Follicle-stimulating horm prod (substance)	A4990378	PF	Y	SNOMEDCT_US	OF
+C0733758	Product containing pituitary follicle stimulating hormone (product)	Pituitary follicle stimulating hormone (substance)	A3631569	PF	Y	SNOMEDCT_US	FN
+C0733758	Product containing pituitary follicle stimulating hormone (product)	Follicle stimulating hormone preparation (product)	A23031399	PF	Y	SNOMEDCT_US	OAF
+C0733758	Product containing pituitary follicle stimulating hormone (product)	Follicle stimulating hormone preparation (substance)	A4990374	PF	Y	SNOMEDCT_US	OF
+C0733758	Product containing pituitary follicle stimulating hormone (product)	Follitropin preparation	A29529850	PF	N	SNOMEDCT_US	IS
+C0733758	Product containing pituitary follicle stimulating hormone (product)	Follitropin preparation	A22984342	PF	Y	SNOMEDCT_US	OAS
+C0733758	Product containing pituitary follicle stimulating hormone (product)	Follicle-stimulating hormone product (product)	A29488465	PF	Y	SNOMEDCT_US	OF
+C0733758	Product containing pituitary follicle stimulating hormone (product)	Follicle-stimulating hormone product	A29540201	PF	Y	SNOMEDCT_US	OP
+C0883157	Inhibin A (substance)	Inhibin A	A7874629	PF	N	SNOMEDCT_US	PT
+C0883157	Inhibin A (substance)	Inhibin A (substance)	A7878743	PF	Y	SNOMEDCT_US	FN
+C0971174	Inhibin B (substance)	Inhibin B	A7875830	VC	Y	SNOMEDCT_US	PT
+C0971174	Inhibin B (substance)	Inhibin B (substance)	A7878744	PF	Y	SNOMEDCT_US	FN
+C1141639	Product containing human chorionic gonadotropin (medicinal product)	Chorionic gonadotropin human	A16967905	VCW	Y	SNOMEDCT_US	SY
+C1141639	Product containing human chorionic gonadotropin (medicinal product)	Human chorionic gonadotropin	A29535114	VC	N	SNOMEDCT_US	OP
+C1141639	Product containing human chorionic gonadotropin (medicinal product)	Human chorionic gonadotropin	A3497531	VC	Y	SNOMEDCT_US	PT
+C1141639	Product containing human chorionic gonadotropin (medicinal product)	Human chorionic gonadotropin, NOS	A4741724	VO	N	SNOMEDCT_US	IS
+C1141639	Product containing human chorionic gonadotropin (medicinal product)	Human chorionic gonadotrophin	A28909244	VO	N	SNOMEDCT_US	IS
+C1141639	Product containing human chorionic gonadotropin (medicinal product)	Human chorionic gonadotrophin	A3031176	VO	Y	SNOMEDCT_US	SY
+C1141639	Product containing human chorionic gonadotropin (medicinal product)	Human chorionic gonadotrophin, NOS	A4822460	VO	N	SNOMEDCT_US	IS
+C1141639	Product containing human chorionic gonadotropin (medicinal product)	Chorionic gonadotrophin human	A13368478	VO	Y	SNOMEDCT_US	SY
+C1141639	Product containing human chorionic gonadotropin (medicinal product)	HCG	A2882189	PF	Y	SNOMEDCT_US	SY
+C1141639	Product containing human chorionic gonadotropin (medicinal product)	HCG - Human chorionic gonadotrophin product	A28893535	PF	N	SNOMEDCT_US	IS
+C1141639	Product containing human chorionic gonadotropin (medicinal product)	HCG - Human chorionic gonadotropin product	A28886983	VO	Y	SNOMEDCT_US	IS
+C1141639	Product containing human chorionic gonadotropin (medicinal product)	Human chorionic gonadotrophin product	A28893536	PF	N	SNOMEDCT_US	IS
+C1141639	Product containing human chorionic gonadotropin (medicinal product)	Human chorionic gonadotropin product	A28900236	VO	N	SNOMEDCT_US	IS
+C1141639	Product containing human chorionic gonadotropin (medicinal product)	Human chorionic gonadotropin product	A30262324	VO	Y	SNOMEDCT_US	OP
+C1141639	Product containing human chorionic gonadotropin (medicinal product)	Human chorionic gonadotropin (product)	A28880197	VO	Y	SNOMEDCT_US	OF
+C1141639	Product containing human chorionic gonadotropin (medicinal product)	hCG preparation	A28897681	PF	N	SNOMEDCT_US	IS
+C1141639	Product containing human chorionic gonadotropin (medicinal product)	HCG preparation	A28891137	VC	N	SNOMEDCT_US	IS
+C1141639	Product containing human chorionic gonadotropin (medicinal product)	HCG - Human chorionic gonadotropin	A16966210	VC	Y	SNOMEDCT_US	SY
+C1141639	Product containing human chorionic gonadotropin (medicinal product)	HCG - Human chorionic gonadotrophin	A3482799	VO	Y	SNOMEDCT_US	SY
+C1141639	Product containing human chorionic gonadotropin (medicinal product)	Human chorionic gonadotropin-containing product	A30215594	PF	Y	SNOMEDCT_US	PT
+C1141639	Product containing human chorionic gonadotropin (medicinal product)	Product containing human chorionic gonadotropin	A30202175	VCW	Y	SNOMEDCT_US	IS
+C1141639	Product containing human chorionic gonadotropin (medicinal product)	Product containing human chorionic gonadotropin (medicinal product)	A28890251	PF	Y	SNOMEDCT_US	FN
+C1141639	Product containing human chorionic gonadotropin (medicinal product)	Human chorionic gonadotropin (substance)	A3497527	PF	Y	SNOMEDCT_US	FN
+C1265234	Mycobacterium, non-tuberculosis (organism)	Nontuberculous Mycobacteria	A7880026	PF	N	SNOMEDCT_US	SY
+C1265234	Mycobacterium, non-tuberculosis (organism)	Atypical Mycobacteria	A7874548	PF	N	SNOMEDCT_US	SY
+C1265234	Mycobacterium, non-tuberculosis (organism)	Atypical mycobacteria	A22908886	VC	N	SNOMEDCT_US	OAS
+C1265234	Mycobacterium, non-tuberculosis (organism)	Atypical mycobacterium	A22999545	VO	N	SNOMEDCT_US	OAP
+C1265234	Mycobacterium, non-tuberculosis (organism)	Atypical mycobacterium, NOS	A4771987	VO	N	SNOMEDCT_US	IS
+C1265234	Mycobacterium, non-tuberculosis (organism)	Atypical acid-fast bacillus, NOS	A4771971	PF	N	SNOMEDCT_US	IS
+C1265234	Mycobacterium, non-tuberculosis (organism)	Atypical acid-fast bacillus	A22840836	VO	Y	SNOMEDCT_US	OAS
+C1265234	Mycobacterium, non-tuberculosis (organism)	Opportunist mycobacteria	A22976150	PF	N	SNOMEDCT_US	OAS
+C1265234	Mycobacterium, non-tuberculosis (organism)	Mycobacterium, non-tuberculosis	A20187884	PF	Y	SNOMEDCT_US	SY
+C1265234	Mycobacterium, non-tuberculosis (organism)	Mycobacterium, non-tuberculosis (organism)	A20186827	PF	Y	SNOMEDCT_US	FN
+C1265234	Mycobacterium, non-tuberculosis (organism)	ATM	A22802115	PF	Y	SNOMEDCT_US	OAS
+C1265234	Mycobacterium, non-tuberculosis (organism)	Atypical mycobacterium (organism)	A22916628	PF	Y	SNOMEDCT_US	OAF
+C1265234	Mycobacterium, non-tuberculosis (organism)	Mycobacterium, non-TB (organism)	A20188434	PF	Y	SNOMEDCT_US	OF
+C1265234	Mycobacterium, non-tuberculosis (organism)	Mycobacterium, non-TB	A3571979	PF	Y	SNOMEDCT_US	PT
+C1265234	Mycobacterium, non-tuberculosis (organism)	Finding of Mycobacterium species not Mycobacterium tuberculosis	A24083432	PF	Y	SNOMEDCT_US	IS
+C1265234	Mycobacterium, non-tuberculosis (organism)	Mycobacteria other than tubercle bacilli	A7879785	PF	Y	SNOMEDCT_US	SY
+C1265234	Mycobacterium, non-tuberculosis (organism)	MOTT	A7879224	PF	Y	SNOMEDCT_US	SY
+C1265234	Mycobacterium, non-tuberculosis (organism)	NTM	A7879825	PF	Y	SNOMEDCT_US	SY
+C1318717	Alkaline phosphatase stain (substance)	Alkaline phosphatase stain	A3903005	PF	N	SNOMEDCT_US	PT
+C1318717	Alkaline phosphatase stain (substance)	Alkaline phosphatase	A16356544	VCW	Y	SNOMEDCT_US	IS
+C1318717	Alkaline phosphatase stain (substance)	Alkaline phosphatase stain (substance)	A3903002	PF	Y	SNOMEDCT_US	FN
+C1318720	Acid fast stain (substance)	Acid fast stain	A3886100	PF	N	SNOMEDCT_US	PT
+C1318720	Acid fast stain (substance)	Acid fast	A3897825	PF	Y	SNOMEDCT_US	SY
+C1318720	Acid fast stain (substance)	Acid fast stain (substance)	A3897809	PF	Y	SNOMEDCT_US	FN
+C1321545	Butyrate esterase stain (substance)	Butyrate-esterase stain	A22901320	PF	N	SNOMEDCT_US	OAP
+C1321545	Butyrate esterase stain (substance)	Butyrate-esterase stain	A6935443	PF	N	SNOMEDCT_US	SY
+C1321545	Butyrate esterase stain (substance)	Butyrate esterase stain	A3896621	VO	Y	SNOMEDCT_US	PT
+C1321545	Butyrate esterase stain (substance)	Butyrate esterase	A3896623	PF	Y	SNOMEDCT_US	SY
+C1321545	Butyrate esterase stain (substance)	Butyrate esterase stain (substance)	A3896618	PF	Y	SNOMEDCT_US	FN
+C1321545	Butyrate esterase stain (substance)	Butyrate-esterase stain (substance)	A22845283	VO	Y	SNOMEDCT_US	OAF
+C1456820	Tumor necrosis factor alpha (substance)	Tumor necrosis factor alpha	A3079522	VC	Y	SNOMEDCT_US	PT
+C1456820	Tumor necrosis factor alpha (substance)	Tumour necrosis factor alpha	A3213860	VO	Y	SNOMEDCT_US	PTGB
+C1456820	Tumor necrosis factor alpha (substance)	Cachectin	A8380091	PF	N	SNOMEDCT_US	SY
+C1456820	Tumor necrosis factor alpha (substance)	TNF alpha	A2887412	VO	Y	SNOMEDCT_US	SY
+C1456820	Tumor necrosis factor alpha (substance)	Tumor necrosis factor	A3079521	VC	Y	SNOMEDCT_US	PT
+C1456820	Tumor necrosis factor alpha (substance)	Tumour necrosis factor	A3213859	VO	Y	SNOMEDCT_US	PTGB
+C1456820	Tumor necrosis factor alpha (substance)	TNF	A3075516	PF	Y	SNOMEDCT_US	SY
+C1456820	Tumor necrosis factor alpha (substance)	Tumor necrosis factor alpha (substance)	A3767071	PF	Y	SNOMEDCT_US	FN
+C1456820	Tumor necrosis factor alpha (substance)	Tumor necrosis factor (substance)	A3767070	PF	Y	SNOMEDCT_US	FN
+C1720314	Greek letter lambda (qualifier value)	Greek letter lambda	A10887954	PF	N	SNOMEDCT_US	SY
+C1720314	Greek letter lambda (qualifier value)	Lambda	A10867699	PF	Y	SNOMEDCT_US	PT
+C1720314	Greek letter lambda (qualifier value)	Greek letter lambda (qualifier value)	A10887953	PF	Y	SNOMEDCT_US	FN
+C1720655	Greek letter tau (qualifier value)	Greek letter tau	A10887974	PF	N	SNOMEDCT_US	SY
+C1720655	Greek letter tau (qualifier value)	Tau	A10895544	PF	Y	SNOMEDCT_US	PT
+C1720655	Greek letter tau (qualifier value)	Greek letter tau (qualifier value)	A10887973	PF	Y	SNOMEDCT_US	FN
+C1959616	Lecithin (substance)	Phosphatidylcholine	A29523654	VO	N	SNOMEDCT_US	SY
+C1959616	Lecithin (substance)	Choline phosphoglyceride	A2876431	VO	Y	SNOMEDCT_US	SY
+C1959616	Lecithin (substance)	Lecithin	A29497567	PF	Y	SNOMEDCT_US	PT
+C1959616	Lecithin (substance)	Phosphatidylcholine (substance)	A29513784	PF	Y	SNOMEDCT_US	OF
+C1959616	Lecithin (substance)	Phosphatidyl choline	A13362519	VO	N	SNOMEDCT_US	IS
+C1959616	Lecithin (substance)	Lecithin (substance)	A29516526	PF	Y	SNOMEDCT_US	FN
+C4551683	Pheochromocytoma (morphologic abnormality)	Chromaffin paraganglioma	A2877348	PF	N	SNOMEDCT_US	SY
+C4551683	Pheochromocytoma (morphologic abnormality)	Chromaffin paraganglioma	A2877347	PF	Y	SNOMEDCT_US	SY
+C4551683	Pheochromocytoma (morphologic abnormality)	Chromaffin tumor	A24239267	PF	N	SNOMEDCT_US	IS
+C4551683	Pheochromocytoma (morphologic abnormality)	Chromaffin tumor	A2877352	PF	Y	SNOMEDCT_US	SY
+C4551683	Pheochromocytoma (morphologic abnormality)	Chromaffin tumour	A24243350	VO	N	SNOMEDCT_US	IS
+C4551683	Pheochromocytoma (morphologic abnormality)	Chromaffin tumour	A3006829	VO	Y	SNOMEDCT_US	SYGB
+C4551683	Pheochromocytoma (morphologic abnormality)	Chromaffinoma	A24260616	PF	N	SNOMEDCT_US	IS
+C4551683	Pheochromocytoma (morphologic abnormality)	Chromaffinoma	A2877356	PF	Y	SNOMEDCT_US	SY
+C4551683	Pheochromocytoma (morphologic abnormality)	Pheochromocytoma	A2885414	PF	N	SNOMEDCT_US	PT
+C4551683	Pheochromocytoma (morphologic abnormality)	Pheochromocytoma	A2885413	PF	Y	SNOMEDCT_US	PT
+C4551683	Pheochromocytoma (morphologic abnormality)	Phaeochromocytoma	A3057204	VO	N	SNOMEDCT_US	PTGB
+C4551683	Pheochromocytoma (morphologic abnormality)	Phaeochromocytoma	A3057203	VO	Y	SNOMEDCT_US	PTGB
+C4551683	Pheochromocytoma (morphologic abnormality)	Pheochromocytoma, NOS	A4790975	VO	Y	SNOMEDCT_US	IS
+C4551683	Pheochromocytoma (morphologic abnormality)	Phaeochromocytoma, NOS	A4834827	VO	Y	SNOMEDCT_US	IS
+C4551683	Pheochromocytoma (morphologic abnormality)	[M]Phaeochromocytoma NOS	A24087765	PF	N	SNOMEDCT_US	IS
+C4551683	Pheochromocytoma (morphologic abnormality)	Pheochromocytoma (morphologic abnormality)	A3628424	PF	Y	SNOMEDCT_US	FN
+C4551683	Pheochromocytoma (morphologic abnormality)	Adrenal medullary paraganglioma	A19402154	PF	N	SNOMEDCT_US	SY
+C4551683	Pheochromocytoma (morphologic abnormality)	Adrenal medullary paraganglioma	A3499035	PF	Y	SNOMEDCT_US	SY
+C4551683	Pheochromocytoma (morphologic abnormality)	Phaeochromocytoma [Ambiguous]	A5020784	PF	Y	SNOMEDCT_US	OF
+C4551683	Pheochromocytoma (morphologic abnormality)	Pheochromocytoma (disorder)	A3628423	PF	Y	SNOMEDCT_US	FN
+C4551683	Pheochromocytoma (morphologic abnormality)	Phaeochromocytoma (disorder)	A5020783	VO	Y	SNOMEDCT_US	OF

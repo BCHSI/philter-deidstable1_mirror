@@ -5,8 +5,8 @@
         "exclude": false,
         "filepath": "filters/regex/safe/ordering_md_safe.txt",
         "note": ""
-    }, 
-  {
+    },
+    {
         "title": "attending",
         "type": "regex",
         "exclude": true,
@@ -40,7 +40,7 @@
         "exclude": true,
         "filepath": "filters/regex/salutations/wrote.txt",
         "note": ""
-    },     
+    },
     {
         "title": "salutations1",
         "type": "regex",
@@ -104,7 +104,7 @@
         "filepath": "filters/regex/salutations/ordering_md.txt",
         "note": ""
     },
-       {
+    {
         "title": "name indicator",
         "type": "regex",
         "exclude": true,
@@ -112,13 +112,10 @@
         "note": ""
     },
     {
-        "title":"No catchall",
-        "type":"regex",
-        "exclude":false,
-        "filepath":"filters/regex/catchall.txt",
-        "notes":"False will turn off catchall, True will turn on catchll (default)"
+        "title": "No catchall",
+        "type": "regex",
+        "exclude": false,
+        "filepath": "filters/regex/catchall.txt",
+        "notes": "False will turn off catchall, True will turn on catchll (default)"
     }
 ]
-
-
-
