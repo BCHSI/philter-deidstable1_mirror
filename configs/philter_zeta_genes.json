@@ -29,6 +29,13 @@
         "notes": "These are words we beleive are safe"
     },
     {
+        "title": "cassette numbers safe",
+        "type": "regex",
+        "exclude": false,
+        "filepath": "filters/regex/pathology/cassette_numbers_safe.txt",
+        "notes": "This should remove anything that matches a cassette or slide number"
+    },
+    {
         "title": "lymph nodes safe",
         "type": "regex",
         "exclude": false,
@@ -1879,7 +1886,7 @@
         "title": "mixed 10",
         "type": "regex",
         "exclude": true,
-        "filepath": "filters/regex/mrn_id/mixed_010.txt",
+        "filepath": "filters/regex/mrn_id/mixed_010_transformed.txt",
         "notes": "This should remove anything with weird number/letter mashups",
         "phi_type": "ID"
     },
@@ -2405,7 +2412,7 @@
         "title": "Whitelist 1",
         "type": "set",
         "exclude": false,
-        "filepath": "filters/whitelists/whitelist_plus_fps_091718_nonames.json",
+        "filepath": "/data/shared/ucsf_whitelists/whitelist_plus_fps_091718_nonames.json",
         "pos": [],
         "notes": "These are words we beleive are safe"
     },
@@ -2416,13 +2423,6 @@
         "filepath": "filters/whitelists/whitelist_gene_symbols.json",
         "pos": [],
         "notes": "These are words we beleive are safe"
-    },
-    {
-        "title": "cassette numbers safe",
-        "type": "regex",
-        "exclude": false,
-        "filepath": "filters/regex/pathology/cassette_numbers_safe.txt",
-        "notes": "This should remove anything that matches a cassette or slide number"
     },
     {
         "title": "POS MATCHER",
