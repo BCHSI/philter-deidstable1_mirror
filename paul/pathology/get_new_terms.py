@@ -4,7 +4,6 @@ import re
 import json
 import argparse
 
-
 # extracts and creates a dictionary or list (depending on whitelist format) of gene symbols
 def extract(fin1, fin2):
 
@@ -20,17 +19,16 @@ def extract(fin1, fin2):
     f1_symbols = symbols_pattern.findall(f1_text) # get list of terms from file 1
     f2_symbols = symbols_pattern.findall(f2_text) # get list of terms from file 2
 
-    for symbol in f1_symbols: # go through each symbol in file 1
-        symbol = re.sub("(^-)(-$)", "", symbol) # remove hyphens from beginning or end of symbol
+    for symbol in f1_symbols: #
+        symbol = re.sub("(^-)(-$)", "", symbol)
         if symbol not in symbols_list:
-            symbols_list.append(symbol)
+            symbols_list[symbol] = 1
 
-    for symbol in f2_symbols: # go through each symbol in file 2
-        symbol = re.sub("(^-)(-$)", "", symbol) # remove hyphens from beginning or end of symbol
+    for symbol in f2_symbols:
+        symbol = re.sub("(^-)(-$)", "", symbol)
         if symbol not in symbols_list:
-            symbols_list.append(symbol)
+            symbols_list[symbol] = 1
 
-    # remove the titles of the columns which could match a gene symbol
     del symbols_list["HGNC"]
     del symbols_list["ID"]
     del symbols_list["CUI"]
@@ -43,18 +41,17 @@ def extract(fin1, fin2):
     return symbols_list
 
 
-# appends the new symbols to the og list, writes the new list of everything to the new file
 def append(symbols_list, wl_name, format):
 
-    new_wl = wl_name[:-(len(format)+1)]+"_new."+format # create new whitelsit name
+    new_wl = wl_name[:-(len(format)+1)]+"_new."+format
 
-    with open(wl_name) as fin: # read in previous symbols
+    with open(wl_name) as fin:
         if format == "json":
             big_list = json.loads(fin.read())
         elif format == "txt":
             big_list = fin.read().split()
 
-    for symbol in symbols_list: # append new symbols to full list
+    for symbol in symbols_list:
         if symbol not in big_list:
             if format == "json":
                 big_list[symbol] = 1
@@ -62,7 +59,7 @@ def append(symbols_list, wl_name, format):
                 big_list.append(symbol)
 
 
-    with open(new_wl, "w") as fout: # write new list with everything to fout
+    with open(new_wl, "w") as fout:
         if format == "json":
             json.dump(big_list, fout)
         elif format == "txt":
