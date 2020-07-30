@@ -46,7 +46,7 @@ class Philter:
             if not os.path.exists(config***REMOVED***"finpath"***REMOVED***):
                 raise Exception("Filepath does not exist", config***REMOVED***"finpath"***REMOVED***)
             self.finpath = config***REMOVED***"finpath"***REMOVED***
-            self.texts = _read_texts()
+            self.texts = self._read_texts()
         if "phi_text" in config:
             self.texts = config***REMOVED***"phi_text"***REMOVED***
             if "filenames" in config:
@@ -213,7 +213,7 @@ class Philter:
                 filepath = os.path.join(root, filename)
 
                 self.filenames.append(filepath)
-                encoding = self._detect_encoding(filepath)
+                encoding = self.detect_encoding(filepath)
                 fhandle = open(filepath, "r", encoding=encoding***REMOVED***'encoding'***REMOVED***,
                                errors='surrogateescape')
                 self.texts***REMOVED***filepath***REMOVED*** = fhandle.read()
