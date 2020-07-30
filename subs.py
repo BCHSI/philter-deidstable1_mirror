@@ -187,6 +187,13 @@ class Subs:
                 # what if ref date is before date of birth
                 # try some extreme values
 
+        deid_age = self._age(shifted_dob)
+
+        # Throw warning if birthdate is not shifted as expected
+        if shifted_age >= 91 and deid_age != 90:
+            print("WARNING: Birthdate for age > 90 not shifted correctly for note ID", note_id)
+        if shifted_age < 91 and deid_age >= 91:
+            print("WARNING: Birthdate for age < 90 not shifted correctly for note ID", note_id)
 
         # perhaps good to implement some consistency checks with metadata
         deid_bdate = self.get_deid_dob(note_id)

@@ -227,14 +227,18 @@ class Phitexts:
         philter_config["run_eval"] = False
         philter_config["filters"] = filters 
         if namesprobefile:     
-            philter_config["namesprobe"] = namesprobefile
+           philter_config["namesprobe"] = namesprobefile
         if self.known_phi:
-            philter_config["known_phi"] = self.known_phi
+           philter_config["known_phi"] = self.known_phi
         philter_config["phi_text"] = self.texts
         philter_config["filenames"] = self.filenames
 
+        print("Initializing Philter") 
         self.filterer = Philter(philter_config)
         self.coords = self.filterer.map_coordinates()
+        print("Coordinates Identified")
+        self.pos = self.filterer.pos_tags
+        print("Pos_tags identified")
 
     def detect_phi_types(self):
         assert self.texts, "No texts defined"
@@ -312,6 +316,8 @@ class Phitexts:
                         # self.eval_table[filename][start].update({'sub':None})
                         continue
                     
+                    # shifted_date = self.subser.shift_date_pid(normalized_token,
+                    #                                           note_key_ucsf)
                     shifted_date = self.subser.shift_date_wrt_dob(normalized_token,
                                                                   note_key_ucsf)
 
@@ -340,9 +346,17 @@ class Phitexts:
                         # self.eval_table[filename][start].update({'sub':None})
                         continue
 
-                    current_age_s = self.subser.shifted_age_pid(note_key_ucsf)
-                    if current_age_s >= 91: # the patient is older than 90:
-                        substitute_token = "*****AGE*****" # TODO: only scrape ages >90 and <deid_dob for 90plus patients
+                    reference = self.subser.get_ref_date()
+                    shifted_age = self._age(shifted_dob)
+                    if not shifted_age:
+                        if __debug__:
+                            print("WARNING: no age found for: "
+                                  + filename)
+                        continue
+                    
+                    if shifted_age >= 91: # the patient is older than 90:
+                        substitute_token = "*****" # TODO: only scrape ages >90 and <deid_dob for 90plus patients
+
                     else:
                         substitute_token = str(normalized_token)
                     self.subs[(filename, start)] = (substitute_token, end)
