@@ -3,19 +3,29 @@ import regex as re
 import pandas as pd
 import xml.etree.ElementTree as ET
 import subprocess
+import os
 
-def create_xml(i, pii, meta, deid_path, text_path, xml_sample_path, output_dir, note_output_dir):
+def create_xml(i, pii, meta, deid_path, text_path, xml_sample_path, output_dir, note_output_dir, file_structure):
 	# Load sample xml file
 	sample_tree = ET.parse(xml_sample_path)
 
 	# Get deid note key from csv
 	deid_key = pii.loc***REMOVED***i, "filename"***REMOVED***
 
-	# Get full deid path
-	full_deid_path = get_deid_full_path(deid_key, deid_path)
+	if file_structure == "deid":
+
+		# Get full deid path
+		full_deid_path = get_deid_full_path(deid_key, deid_path)
+
 
 	# Get input text key
 	text_key = meta***REMOVED***deid_key***REMOVED***
+
+	if file_structure == "text":
+
+		# Get corresponding output file path
+		full_deid_path = os.path.dirname(get_text_full_path(text_key, deid_path)) + "/" + deid_key + ".txt"
+
 
 	# Get full text path
 	full_text_path = get_text_full_path(text_key, text_path)
@@ -26,7 +36,7 @@ def create_xml(i, pii, meta, deid_path, text_path, xml_sample_path, output_dir, 
 	# Get search string from csv
 	search_string = str(pii.loc***REMOVED***i, "word_found"***REMOVED***).replace('+','\+').replace('(','\(').replace(')','\)').replace('^','\^').replace('$','\$').replace('.','\.').replace('|','\|').replace('?','\?').replace('*','\*').replace('***REMOVED***','\***REMOVED***').replace('***REMOVED***','\***REMOVED***').replace('{','\{').replace('}','\}')
 
-	search_pattern = re.compile(search_string)
+	search_pattern = re.compile("(?i)"+search_string)
 
 	# Get phi tag from csv
 	phi_tag = str(pii.loc***REMOVED***i, "original_column"***REMOVED***)
@@ -65,23 +75,30 @@ def get_deid_full_path(deid_key, deid_path):
 	full_deid_path = deid_path + '/' + l1 + '/' + l2 + '/' + l3 + '/' + l4 + '/' + deid_key + '.txt'
 	return(full_deid_path)
 
+
+def get_deid_full_path(deid_key, deid_path):
+	# Directory pattern: XX/XXX/XXX/XXX/XXXXXXXXXXXXXX.txt
+	l1 = deid_key***REMOVED***0:2***REMOVED***
+	l2 = deid_key***REMOVED***2:5***REMOVED***
+	l3 = deid_key***REMOVED***5:8***REMOVED***
+	l4 = deid_key***REMOVED***8:11***REMOVED***
+	full_deid_path = deid_path + '/' + l1 + '/' + l2 + '/' + l3 + '/' + l4 + '/' + deid_key + '.txt'
+	return(full_deid_path)
+
+
 def copy_and_normalize_note(full_text_path, text_key, note_output_dir):
 	#subprocess.check_call(***REMOVED***"cp", full_text_path, note_output_dir***REMOVED***)
-
 	full_text_key = '0'*(12-len(text_key)) + text_key
-
 	new_text = ''
 	with open(full_text_path, encoding='utf-8',errors='ignore') as f:
 		for line in f:
 			new_text = new_text + line.replace('\x00',' ').replace('\x07',' ').replace('\xf0', ' ').replace('\x15', ' ')
-
 	new_filename = full_text_key + '_utf8.txt' 
 	new_filepath = note_output_dir + '/' + new_filename
-	
 	with open(new_filepath, "w", encoding='utf-8') as f:
 		f.write(new_text)
-
 	return(new_filepath)
+
 
 def get_text_full_path(text_key, text_path):
 	# Max length is 12
@@ -115,36 +132,51 @@ def main():
     ap.add_argument("-n", "--notes_output",
                     help="Path to output folder for original text files",
                     type=str)
+    ap.add_argument("-s", "--structure",
+	                help="Deid output file structure",
+	                type=str)
     args = ap.parse_args()
 
     input_csv = args.input
     #input_csv = '/data/muenzenk/low_hanging_fruit_tests/corys_results_201911/node704/primarymrn.csv'
+    #input_csv = '/data/muenzenk/cory_probe_search/cory_word_check_results_073020.csv'
     output_dir = args.output
     #output_dir = '/data/muenzenk/low_hanging_fruit_tests/xml/primarymrn'
+    #output_dir = '/data/muenzenk/cory_probe_search/073020_xml'
     deid_path = args.deid_path
     #deid_path = '/data/notes/philtered_notes_20190712_zeta'
+    #deid_path = '/data/muenzenk/probetoken/probetoken_100k_output'
     text_path = args.text_path
     #text_path = '/data/notes/shredded_notes_20190712'
+    #text_path = '/data/radhakrishnanl/100k_random_20190712'
     meta_path = args.meta_path
+    #meta_path = '/data/for_cory/NOTE_INFO_MAPS.txt'
     #meta_path = '/data/for_cory/NOTE_INFO_MAPS.txt'
     xml_sample_path = args.xml_sample
     #xml_sample_path = '/data/muenzenk/low_hanging_fruit_tests/sample.xml'
+    #xml_sample_path = '/data/muenzenk/low_hanging_fruit_tests/sample.xml'
     note_output_dir = args.notes_output
     #note_output_dir = '/data/muenzenk/low_hanging_fruit_tests/notes/primarymrn'
+    #note_output_dir = '/data/muenzenk/cory_probe_search/073020_notes'
+    file_structure = args.structure
+    #file_structure = 'deid'
+    #file_structure = 'text'
 
-    meta = {}
-    mfile = open(meta_path)
-    for line in mfile:
-    	line = line.rstrip('\n')
-    	line  = line.replace('.0','')
-    	key= line.split('\t')
-    	meta***REMOVED***key***REMOVED***10***REMOVED******REMOVED*** = key***REMOVED***9***REMOVED***
+	meta = {}
+	mfile = open(meta_path)
+	for line in mfile:
+	    line = line.rstrip('\n')
+	    line  = line.replace('.0','')
+	    key= line.split('\t')
+	    meta***REMOVED***key***REMOVED***10***REMOVED******REMOVED*** = key***REMOVED***9***REMOVED***
 
     print("Meta loaded into hash")
     pii = pd.read_csv(input_csv)
     for i in range(len(pii)):
-    	create_xml(i, pii, meta, deid_path, text_path, xml_sample_path, output_dir, note_output_dir)
+    	create_xml(i, pii, meta, deid_path, text_path, xml_sample_path, output_dir, note_output_dir, file_structure)
 
         
 if __name__ == "__main__":
     main()
+
+

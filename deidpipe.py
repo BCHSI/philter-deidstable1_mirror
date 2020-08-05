@@ -4,6 +4,7 @@ import argparse
 import distutils.util
 from pymongo import MongoClient
 from phitexts import Phitexts
+from datetime import date
 import os
 import json
 
@@ -60,6 +61,10 @@ def get_args():
     ap.add_argument("-b", "--batch",
                     help="Batch number to process",
                     type=str)
+    # TODO: move over to deidloop or master
+    ap.add_argument("-r", "--refdate", default=str(date.today()),
+                    help="Reference date for shifting dates (for patients > 90 y.o.)",
+                    type=str)
     return ap.parse_args()
 
 
@@ -101,7 +106,6 @@ def main():
        #for batch in collection_chunk.distinct('batch'):
        main_mongo(args,db,mongo)
     else:
-       print("In no args.mongo")
        main_mongo(args)
 
 def main_mongo(args, db=None ,mongo=None):  
@@ -135,13 +139,15 @@ def main_mongo(args, db=None ,mongo=None):
         
         # looks-up surrogate and apply to normalized PHI
         if mongo is not None:
-           if args.surrogate_info:
-              print("WARNING: Surrogate meta file and mongodb were passed as arguments. Ignoring surrogate meta file and using mongodb")
-           if __debug__: print("looking up surrogates")
-           phitexts.substitute_phi(mongo, db) 
+            if args.surrogate_info:
+                print("WARNING: Surrogate meta file and mongodb were passed as arguments. Ignoring surrogate meta file and using mongodb")
+            if __debug__: print("looking up surrogates")
+            phitexts.substitute_phi(look_up_table_path=mongo, db=db,
+                                    ref_date=args.refdate) 
         elif args.surrogate_info:
             if __debug__: print("looking up surrogates")
-            phitexts.substitute_phi(args.surrogate_info)
+            phitexts.substitute_phi(look_up_table_path=args.surrogate_info,
+                                    ref_date=args.refdate)
 
     # transforms texts
     if __debug__: print("transforming texts")
@@ -163,11 +169,11 @@ def main_mongo(args, db=None ,mongo=None):
 
     # print and save log 
     if args.log:
-       failed_date,eval_table,phi_table,phi_count_df,csv_summary_df,batch_summary_df,dynamic_blacklist_df = phitexts.print_log(args.dynamic_blacklist, mongo, args.xml)
+       failed_date,eval_table,phi_table,phi_count_df,csv_summary_df,batch_summary_df,dynamic_blacklist_df,age_norm_info = phitexts.print_log(args.dynamic_blacklist, mongo, args.xml)
        if mongo is not None:
-          phitexts.mongo_save_log(mongo,failed_date,eval_table,phi_table,phi_count_df,csv_summary_df,batch_summary_df,dynamic_blacklist_df)
+          phitexts.mongo_save_log(mongo,failed_date,eval_table,phi_table,phi_count_df,csv_summary_df,batch_summary_df,dynamic_blacklist_df,age_norm_info)
        else:
-          phitexts.save_log(args.output,failed_date,eval_table,phi_table,phi_count_df,csv_summary_df,batch_summary_df,dynamic_blacklist_df)
+          phitexts.save_log(args.output,failed_date,eval_table,phi_table,phi_count_df,csv_summary_df,batch_summary_df,dynamic_blacklist_df,age_norm_info)
     if args.eval:
         phitexts.eval(args.anno, args.output)
 

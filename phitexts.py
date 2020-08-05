@@ -21,7 +21,6 @@ import sys
 import pandas as pd
 from datetime import datetime
 import socket
-import datetime
 
 
 
@@ -256,7 +255,7 @@ class Phitexts:
         if self.norms:
             return
 
-        # TODO: get normalized version for each detected phi
+        # Generally, get normalized version for each detected phi
         # 1) get phi text given coords
         # 2) interpet/normalize phi given type
 
@@ -269,6 +268,13 @@ class Phitexts:
                     normalized_token = Subs.parse_date(token)
                     self.norms***REMOVED***phi_type***REMOVED******REMOVED***(filename, start)***REMOVED*** = (normalized_token,
                                                                end)
+            elif (phi_type == "AGE<90" or phi_type == "Age<90"
+                  or phi_type == "AGE>=90" or phi_type == "Age>=90"):
+                for filename, start, end in self.types***REMOVED***phi_type***REMOVED******REMOVED***0***REMOVED***.scan():
+                    token = self.texts***REMOVED***filename***REMOVED******REMOVED***start:end***REMOVED***
+                    normalized_token = Subs.parse_age(token)
+                    self.norms***REMOVED***phi_type***REMOVED******REMOVED***(filename, start)***REMOVED*** = (normalized_token,
+                                                               end)
             else:
                 continue
 
@@ -279,11 +285,12 @@ class Phitexts:
 
         # Note: see also surrogator.shift_dates(), surrogator.parse_and_shift_date(), parse_date_ranges(), replace_other_surrogate()
         
-    def substitute_phi(self, look_up_table_path = None, db = None):
+    def substitute_phi(self, look_up_table_path = None, db = None,
+                       ref_date = None):
         assert self.norms, "No normalized PHI defined"
         if self.subs:
             return
-        self.subser = Subs(self.filenames, look_up_table_path, db)
+        self.subser = Subs(self.filenames, look_up_table_path, db, ref_date)
         for phi_type in self.norms.keys():
             if phi_type == "DATE" or phi_type == "Date":
                 if __debug__: nodateshiftlist = ***REMOVED******REMOVED***
@@ -308,8 +315,10 @@ class Phitexts:
                         # self.eval_table***REMOVED***filename***REMOVED******REMOVED***start***REMOVED***.update({'sub':None})
                         continue
                     
-                    shifted_date = self.subser.shift_date_pid(normalized_token,
-                                                              note_key_ucsf)
+                    # shifted_date = self.subser.shift_date_pid(normalized_token,
+                    #                                           note_key_ucsf)
+                    shifted_date = self.subser.shift_date_wrt_dob(normalized_token,
+                                                                  note_key_ucsf)
 
                     if shifted_date is None:
                         if __debug__: print("WARNING: cannot shift date "
@@ -319,6 +328,34 @@ class Phitexts:
                     
                     substitute_token = self.subser.date_to_string(shifted_date)
                     # self.eval_table***REMOVED***filename***REMOVED******REMOVED***start***REMOVED***.update({'sub':substitute_token})
+                    self.subs***REMOVED***(filename, start)***REMOVED*** = (substitute_token, end)
+            elif (phi_type == "AGE<90" or phi_type == "Age<90"
+                  or phi_type == "AGE>=90" or phi_type == "Age>=90"):
+                for filename, start in self.norms***REMOVED***phi_type***REMOVED***:
+                    if bson.objectid.ObjectId.is_valid(filename):
+                       note_key_ucsf = filename
+                    else:
+                       note_key_ucsf = os.path.splitext(os.path.basename(filename).strip('0'))***REMOVED***0***REMOVED***.replace("_utf8","").replace(".txt","").replace(".xml","")
+
+                    normalized_token = self.norms***REMOVED***phi_type***REMOVED******REMOVED***filename, start***REMOVED******REMOVED***0***REMOVED***
+                    end = self.norms***REMOVED***phi_type***REMOVED******REMOVED***filename, start***REMOVED******REMOVED***1***REMOVED***
+
+                    # Added for eval
+                    if normalized_token is None:
+                        # self.eval_table***REMOVED***filename***REMOVED******REMOVED***start***REMOVED***.update({'sub':None})
+                        continue
+
+                    shifted_age = self.subser.shifted_age_pid(note_key_ucsf)
+                    if not shifted_age:
+                        if __debug__:
+                            print("WARNING: no age found for: "
+                                  + filename)
+                        continue
+                        
+                    if shifted_age >= 91: # the patient is older than 90:
+                        substitute_token = "*****" # TODO: only scrape ages >90 and <deid_dob for 90plus patients
+                    else:
+                        substitute_token = str(normalized_token)
                     self.subs***REMOVED***(filename, start)***REMOVED*** = (substitute_token, end)
             else:
                 continue
@@ -477,11 +514,28 @@ class Phitexts:
         failed_date = {}
         phi_table = {}
         parse_info = {}
+        age_norm_info = {}
         if 'DATE' in self.types:
             phi_type = 'DATE'
         elif 'Date' in self.types:
             phi_type = 'Date'
+        
+        # Store age normalization info - these are ages are normalized and NOT obscured
+        for key in self.norms***REMOVED***'AGE<90'***REMOVED***:
+            filename = key***REMOVED***0***REMOVED***
+            start = key***REMOVED***1***REMOVED***
+            age = self.norms***REMOVED***'AGE<90'***REMOVED******REMOVED***key***REMOVED******REMOVED***0***REMOVED***
+            end = self.norms***REMOVED***'AGE<90'***REMOVED******REMOVED***key***REMOVED******REMOVED***1***REMOVED***
 
+            age_dict = {"start":start, "end":end, "word":age, "type":"AGE<90"}
+
+            if filename not in age_norm_info:
+                age_norm_info***REMOVED***filename***REMOVED*** = ***REMOVED******REMOVED***
+                age_norm_info***REMOVED***filename***REMOVED***.append(age_dict)
+            else:
+                age_norm_info***REMOVED***filename***REMOVED***.append(age_dict)
+        
+        #print(self.norms***REMOVED***'AGE<90'***REMOVED***)
         # Write to file of raw dates, parsed dates and substituted dates
         num_failed = 0
         num_parsed = 0
@@ -678,7 +732,8 @@ class Phitexts:
                            word = self.texts***REMOVED***filename***REMOVED******REMOVED***start:end+1***REMOVED***
                            #f.write(filename + "\t" + str(start) + "\t" + str(end) + "\t" + word + "\t" + context.replace('\n',' ') + "\t" + ','.join(phi_type_per_token***REMOVED***filename***REMOVED******REMOVED***start***REMOVED******REMOVED***end***REMOVED***)+"\n")
                            dynamic_blacklist_df = dynamic_blacklist_df.append(pd.Series(***REMOVED***filename,self.batch,str(start),str(end),word,context.replace('\n',' '),','.join(phi_type_per_token***REMOVED***filename***REMOVED******REMOVED***start***REMOVED******REMOVED***end***REMOVED***)***REMOVED***, index=dynamic_blacklist_df.columns),ignore_index=True)               
-        return failed_date,eval_table,phi_table,phi_count_df,csv_summary_df,batch_summary_df,dynamic_blacklist_df
+
+        return failed_date,eval_table,phi_table,phi_count_df,csv_summary_df,batch_summary_df,dynamic_blacklist_df,age_norm_info
 
         # Todo: add PHI type counts to summary
         # Name PHI
@@ -689,7 +744,7 @@ class Phitexts:
         # ID PHI
         # Other PHI
 
-    def save_log(self,output_dir,failed_date,eval_table,phi_table,phi_count_df,csv_summary_df,batch_summary_df,dynamic_blacklist_df):
+    def save_log(self,output_dir,failed_date,eval_table,phi_table,phi_count_df,csv_summary_df,batch_summary_df,dynamic_blacklist_df,age_norm_info):
         log_dir = os.path.join(output_dir, 'log/')
         # Per-batch logs
         if os.path.isdir(log_dir):
@@ -701,6 +756,7 @@ class Phitexts:
         phi_count_file = os.path.join(log_dir, 'phi_count.log')
         phi_marked_file = os.path.join(log_dir, 'phi_marked.json')
         batch_summary_file = os.path.join(log_dir, 'batch_summary.log')
+        age_norm_file = os.path.join(log_dir, 'normalized_ages.json')
         #Path to csv summary of all files
         csv_summary_filepath = os.path.join(log_dir,
                                             'detailed_batch_summary.csv')
@@ -711,6 +767,8 @@ class Phitexts:
             json.dump(eval_table, f)
         with open(phi_marked_file, 'w') as f:
             json.dump(phi_table, f)
+        with open(age_norm_file, 'w') as f:
+            json.dump(age_norm_info, f)
         phi_count_export = phi_count_df.to_csv(phi_count_file, index=None, header=True,sep = '\t')
         csv_summary_export = csv_summary_df.to_csv(csv_summary_filepath, index=None, header=True,sep = '\t')
         batch_summary_export = batch_summary_df.to_csv(batch_summary_file, index=None, header=True,sep = '\t')
