@@ -4,6 +4,7 @@ import argparse
 import distutils.util
 from pymongo import MongoClient
 from phitexts import Phitexts
+from datetime import date
 import os
 import json
 
@@ -61,7 +62,7 @@ def get_args():
                     help="Batch number to process",
                     type=str)
     # TODO: move over to deidloop or master
-    ap.add_argument("-r", "--refdate",
+    ap.add_argument("-r", "--refdate", default=str(date.today()),
                     help="Reference date for shifting dates (for patients > 90 y.o.)",
                     type=str)
     return ap.parse_args()
@@ -168,11 +169,11 @@ def main_mongo(args, db=None ,mongo=None):
 
     # print and save log 
     if args.log:
-       failed_date,eval_table,phi_table,phi_count_df,csv_summary_df,batch_summary_df,dynamic_blacklist_df = phitexts.print_log(args.dynamic_blacklist, mongo, args.xml)
+       failed_date,eval_table,phi_table,phi_count_df,csv_summary_df,batch_summary_df,dynamic_blacklist_df,age_norm_info = phitexts.print_log(args.dynamic_blacklist, mongo, args.xml)
        if mongo is not None:
-          phitexts.mongo_save_log(mongo,failed_date,eval_table,phi_table,phi_count_df,csv_summary_df,batch_summary_df,dynamic_blacklist_df)
+          phitexts.mongo_save_log(mongo,failed_date,eval_table,phi_table,phi_count_df,csv_summary_df,batch_summary_df,dynamic_blacklist_df,age_norm_info)
        else:
-          phitexts.save_log(args.output,failed_date,eval_table,phi_table,phi_count_df,csv_summary_df,batch_summary_df,dynamic_blacklist_df)
+          phitexts.save_log(args.output,failed_date,eval_table,phi_table,phi_count_df,csv_summary_df,batch_summary_df,dynamic_blacklist_df,age_norm_info)
     if args.eval:
         phitexts.eval(args.anno, args.output)
 

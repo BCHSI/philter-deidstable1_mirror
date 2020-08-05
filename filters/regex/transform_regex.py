@@ -25,6 +25,12 @@ state_names = "(A|a)rizona|AZ|(V|v)irginia|VA|(M|m)innesota|MN|(A|a)laska|AK|(N|
 full_numbering = "First|Second|Third|Fourth|Fifth|Sixth|Seventh|Eighth|Ninth|Tenth|Eleventh|Twelfth|Thirteenth|Fourteenth|Fifteenth|Sixteenth|Seventeenth|Eighteenth|Nineteenth|Twentieth"
 
 holidays = "new year(s)?|martin luther king day|martin luther king jr. day|martin luther king jr day|mlk day|mlk jr day|mlk jr. day|president's day|president day|memorial day|memrial day|memmorial day|memirial day|independence day|labor day|columbus day|vetrans day|veteran's day|thanksgiving|christmas eve|christmas|cesar chavez day|valentine(s)? day|valentine's day|st. patrick day|patrick(')?(s)? day|benediction day|blessing day|invocation day|presidents' day|armistice day|remembrance day|washington's birthday|lincon's birthday|april fool's day|april fool|father's day|mother's day|mardi gras|flag day|new year's|new year's eve|remembrance sunday|sadie hawkins day|4th of july|july fourth|fourth of july|saint patrick's day|cinco de mayo|halloween|hallowe'en|boxing day|saint valentine's day|V day|V-day|decoration day|confederate memorial day|Shrove Tuesday|Ash Wednesday|Palm Sunday|Maundy Thursday|Passion Sunday|Good Friday|Easter|Pentecost|Whitsunday|All Saint's Day|Feast of the Nativity|Purim|Feast of Lots|Passover|Shavuot|Hebrew Pentecost|Feast of Weeks|Rosh Hashana|Jewish New Year|Yom Kippur|Day of Atonement|Sukkot|Feast of Tabernacles|Simhat Torah|Rejoicing of the Law|Hanukkah|Festival of Lights|lunar new year|yuan tan|diwali|ramadan|qingming festival|Id-ul-fitr|id-ul-zuha|muharram|Id-e-milad"
+
+teens = "ten|eleven|twelve|thirteen|fourteen|fifteen|sixteen|seventeen|eighteen|nineteen"
+
+decades_lt_90 = "twenty|thirty|forty|fifty|sixty|seventy|eighty"
+
+ones = "one|two|three|four|five|six|seven|eight|nine"
 # Get blacklisted names
 # names_blacklist = json.loads(open("../../filters/blacklists/names_blacklist_ssfirst.json").read())
 # person_names = ''
@@ -46,7 +52,7 @@ for subdir, dirs, files in os.walk(rootdir):
 			# Open file
 			regex = open(filepath,"r").read().strip()
 			# Replace variables
-			regex = regex.replace('"""+month_name+r"""', month_name).replace('"""+day_numbering+r"""', day_numbering).replace('"""+day_name+r"""', day_name).replace('"""+seasons+r"""', seasons).replace('"""+address_indicator+r"""',address_indicator).replace('"""+state_name+r"""', state_names).replace('"""+full_numbering+r"""', full_numbering).replace('"""+holidays+r"""', holidays)
+			regex = regex.replace('"""+month_name+r"""', month_name).replace('"""+day_numbering+r"""', day_numbering).replace('"""+day_name+r"""', day_name).replace('"""+seasons+r"""', seasons).replace('"""+address_indicator+r"""',address_indicator).replace('"""+state_name+r"""', state_names).replace('"""+full_numbering+r"""', full_numbering).replace('"""+holidays+r"""', holidays).replace('"""+teens+r"""', teens).replace('"""+decades_lt_90+r"""', decades_lt_90).replace('"""+ones+r"""', ones)
 			# Write new file
 			with open(new_filepath, "w") as fin:
 				fin.write(regex)
