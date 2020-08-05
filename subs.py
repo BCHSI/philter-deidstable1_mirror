@@ -97,6 +97,7 @@ class Subs:
         return date.subtract_days(shift_amount)
     
     def shift_date_pid(self, date, note_id):
+        if not date: return None
         shifted_date = None
         shift = self.get_shift_amount(note_id)
         if shift is None:
@@ -215,6 +216,7 @@ class Subs:
         return shifted_dob
 
     def _age(self, dob): # integer age on reference date
+        if not dob: return None
         age = self.ref_date.year - dob.year
         days_from_bday = (dt.datetime(year = self.ref_date.year,
                                       month = self.ref_date.month,
