@@ -423,19 +423,18 @@ class Philter:
             pat_idx_dynbl = self.pattern_indexes***REMOVED***"Dynamic Blacklist"***REMOVED***
             for probe in self.patterns***REMOVED***pat_idx_dynbl***REMOVED******REMOVED***"dyndata"***REMOVED***:
                 if note_key in self.patterns***REMOVED***pat_idx_dynbl***REMOVED******REMOVED***"dyndata"***REMOVED******REMOVED***probe***REMOVED***:
-                    if type(probe) == 'str':
-                        probe_clean = get_clean(probe)
-                        for pc in probe_clean:
-                            prb = re.sub(r"***REMOVED***^a-zA-Z0-9***REMOVED***+", "",
-                                         str(pc).lower().strip())
-                            if ((include_singles or len(prb) > 1)
-                                and (include_nonames or prb not in nonames)):
-                                map_set***REMOVED***prb***REMOVED*** = self.patterns***REMOVED***pat_idx_dynbl***REMOVED******REMOVED***"dyndata"***REMOVED******REMOVED***probe***REMOVED***
-                            # If single character or in list of nonames,
-                            # add to list of context probes
-                            else:
-                                if prb.isdigit() == False:
-                                    context_probes.append(prb)
+                    probe_clean = get_clean(str(probe))
+                    for pc in probe_clean:
+                        prb = re.sub(r"***REMOVED***^a-zA-Z0-9***REMOVED***+", "",
+                                     str(pc).lower().strip())
+                        if ((include_singles or len(prb) > 1)
+                            and (include_nonames or prb not in nonames)):
+                            map_set***REMOVED***prb***REMOVED*** = self.patterns***REMOVED***pat_idx_dynbl***REMOVED******REMOVED***"dyndata"***REMOVED******REMOVED***probe***REMOVED***
+                        # If single character or in list of nonames,
+                        # add to list of context probes
+                        else:
+                            if prb.isdigit() == False:
+                                context_probes.append(prb)
 
         self.patterns***REMOVED***pat_idx_dynbl***REMOVED******REMOVED***"data"***REMOVED*** = map_set
 
@@ -652,54 +651,54 @@ class Philter:
                 self.regex_name_list.append(regex_name)
             # Start timer
             start_time = time.time()
+        if not regex == {}:
+            matches = regex.finditer(text)
+            match_count = 0
+            for m in matches:
+                match_count += 1
+                
+                # initialize phi_left and phi_right
+                phi_left = False
+                phi_right = False
+                
+                match_start = m.span()***REMOVED***0***REMOVED***
+                match_end = m.span()***REMOVED***1***REMOVED***
 
-        matches = regex.finditer(text)
-        match_count = 0
-        for m in matches:
-            match_count += 1
-            
-            # initialize phi_left and phi_right
-            phi_left = False
-            phi_right = False
-            
-            match_start = m.span()***REMOVED***0***REMOVED***
-            match_end = m.span()***REMOVED***1***REMOVED***
+                # PHI context left and right
+                phi_starts = ***REMOVED******REMOVED***
+                phi_ends = ***REMOVED******REMOVED***
+                for start in full_exclude_map:
+                    phi_starts.append(start)
+                    phi_ends.append(full_exclude_map***REMOVED***start***REMOVED***)
+                
+                if match_start in phi_ends:
+                    phi_left = True
+                
+                if match_end in phi_starts:
+                    phi_right = True
 
-            # PHI context left and right
-            phi_starts = ***REMOVED******REMOVED***
-            phi_ends = ***REMOVED******REMOVED***
-            for start in full_exclude_map:
-                phi_starts.append(start)
-                phi_ends.append(full_exclude_map***REMOVED***start***REMOVED***)
-            
-            if match_start in phi_ends:
-                phi_left = True
-            
-            if match_end in phi_starts:
-                phi_right = True
+                # Get index of m.group()first alphanumeric character in match
+                tokenized_matches = ***REMOVED******REMOVED***
+                match_text = m.group()
+                split_match = re.split("(\s+)", re.sub(pre_process, " ", match_text))
 
-            # Get index of m.group()first alphanumeric character in match
-            tokenized_matches = ***REMOVED******REMOVED***
-            match_text = m.group()
-            split_match = re.split("(\s+)", re.sub(pre_process, " ", match_text))
+                # Get all spans of tokenized match (because remove() function requires tokenized start coordinates)
+                coord_tracker = 0
+                for element in split_match:
+                    if element != '':
+                        if not punctuation_matcher.match(element***REMOVED***0***REMOVED***):
+                            current_start = match_start + coord_tracker
+                            current_end = current_start + len(element)
+                            tokenized_matches.append((current_start, current_end))
 
-            # Get all spans of tokenized match (because remove() function requires tokenized start coordinates)
-            coord_tracker = 0
-            for element in split_match:
-                if element != '':
-                    if not punctuation_matcher.match(element***REMOVED***0***REMOVED***):
-                        current_start = match_start + coord_tracker
-                        current_end = current_start + len(element)
-                        tokenized_matches.append((current_start, current_end))
+                            coord_tracker += len(element)
+                        else:
+                            coord_tracker += len(element)
 
-                        coord_tracker += len(element)
-                    else:
-                        coord_tracker += len(element)
-
-            ## Check for context, and add to coordinate map
-            if (context == "left" and phi_left == True) or (context == "right" and phi_right == True) or (context == "left_or_right" and (phi_right == True or phi_left == True)) or (context == "left_and_right" and (phi_right == True and phi_left == True)):
-                for item in tokenized_matches:
-                    coord_map.add_extend(filename, item***REMOVED***0***REMOVED***, item***REMOVED***1***REMOVED***)
+                ## Check for context, and add to coordinate map
+                if (context == "left" and phi_left == True) or (context == "right" and phi_right == True) or (context == "left_or_right" and (phi_right == True or phi_left == True)) or (context == "left_and_right" and (phi_right == True and phi_left == True)):
+                    for item in tokenized_matches:
+                        coord_map.add_extend(filename, item***REMOVED***0***REMOVED***, item***REMOVED***1***REMOVED***)
 
         # Stop time for time profiling
         if self.time_profile:
