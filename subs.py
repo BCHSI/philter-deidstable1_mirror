@@ -11,6 +11,7 @@ import os
 import pprint
 import json
 from pymongo import MongoClient
+from word2number import w2n
 
 DEFAULT_SHIFT_VALUE = 32
 DATE_REF = dt.datetime(2000, 2, 29) # do not change this!!!!
@@ -81,6 +82,7 @@ class Subs:
             if shift_amount == 0:
                 print("WARNING: shift amount for note " + str(note_id)
                       + " is zero.")
+                shift_amount = None
         except KeyError as err:
             print("Key Error in shift_table for note " + str(note_id)
                   + ": {0}".format(err))
@@ -231,7 +233,10 @@ class Subs:
     @staticmethod
     def parse_age(age_string):
         try:
-            age = int(age_string)
+            if age_string.isdigit():
+                age = int(age_string)
+            else:
+                age = w2n.word_to_num(age_string)
         except ValueError as err:
             print("ValueError: \"" + age_string
                   + "\" is invalid age: {0}".format(err))

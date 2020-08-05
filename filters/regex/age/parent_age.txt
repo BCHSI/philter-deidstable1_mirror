@@ -1,0 +1,1 @@
+(?i)\b((?<=mother is )|(?<=father is )|(?<=mom is )|(?<=dad is ))([9][0-9]|[1][0-9][0-9]|ninety|ninety(\s|\-)("""+ones+r""")|one hundred ("""+ones+r""")|one hundred ("""+teens+r""")|one hundred ("""+decades_lt_90+r""")|one hundred ("""+decades_lt_90+r""")(\s|\-)("""+ones+r"""))\b
