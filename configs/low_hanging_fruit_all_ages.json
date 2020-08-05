@@ -2481,6 +2481,16 @@
         "context_filter":"all",
         "notes":"",
         "phi_type":"NAME"
+    },
+    {
+        "title":"Concatenated Digits and Names",
+        "type":"regex_context",
+        "exclude":true,
+        "filepath":"filters/regex_context/digit_names_regex_context.txt",
+        "context":"right",
+        "context_filter":"all",
+        "notes":"",
+        "phi_type":"NAME"
     }
 
 ]
