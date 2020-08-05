@@ -345,15 +345,7 @@ class Phitexts:
                         # self.eval_table***REMOVED***filename***REMOVED******REMOVED***start***REMOVED***.update({'sub':None})
                         continue
 
-                    dob = self.subser.get_dob(note_key_ucsf)
-                    shift = self.subser.get_shift_amount(note_key_ucsf)
-
-                    if shift is None:
-                        continue
-
-                    shifted_dob = self.subser.shift_date(dob, shift)
-                    shifted_age = self.subser._age(shifted_dob)
-
+                    shifted_age = self.subser.shifted_age_pid(note_key_ucsf)
                     if not shifted_age:
                         if __debug__:
                             print("WARNING: no age found for: "
@@ -362,7 +354,6 @@ class Phitexts:
                         
                     if shifted_age >= 91: # the patient is older than 90:
                         substitute_token = "*****" # TODO: only scrape ages >90 and <deid_dob for 90plus patients
-
                     else:
                         substitute_token = str(normalized_token)
                     self.subs***REMOVED***(filename, start)***REMOVED*** = (substitute_token, end)
