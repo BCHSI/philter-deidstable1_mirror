@@ -1,0 +1,1 @@
+(?i)\b((?<=lived to\s)|(?<=she was\s)|(?<=he was\s))([0-9]|[1-8][0-9]|(one|two|three|four|five|six|seven|eight|nine)|(ten|eleven|twelve|thirteen|fourteen|fifteen|sixteen|seventeen|eighteen|nineteen)|(twenty|thirty|forty|fifty|sixty|seventy|eighty)(\s|\-)(one|two|three|four|five|six|seven|eight|nine)|(twenty|thirty|forty|fifty|sixty|seventy|eighty))\b

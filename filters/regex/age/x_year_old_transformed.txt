@@ -1,1 +1,1 @@
-\b(?i)([9][0-9]|[1][0-9][0-9])(?=\syear old|\syr old)\b
+\b(?i)([9][0-9]|[1][0-9][0-9]|ninety|ninety(\s|\-)(one|two|three|four|five|six|seven|eight|nine)|one hundred (one|two|three|four|five|six|seven|eight|nine)|one hundred (ten|eleven|twelve|thirteen|fourteen|fifteen|sixteen|seventeen|eighteen|nineteen)|one hundred (twenty|thirty|forty|fifty|sixty|seventy|eighty)|one hundred (twenty|thirty|forty|fifty|sixty|seventy|eighty)(\s|\-)(one|two|three|four|five|six|seven|eight|nine))(?=\syear old|\syr old|\syear-old|\syr-old|-year old|-yr old|-year-old|-yr-old)\b

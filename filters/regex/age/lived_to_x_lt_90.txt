@@ -1,0 +1,1 @@
+(?i)\b((?<=lived to\s)|(?<=she was\s)|(?<=he was\s))([0-9]|[1-8][0-9]|("""+ones+r""")|("""+teens+r""")|("""+decades_lt_90+r""")(\s|\-)("""+ones+r""")|("""+decades_lt_90+r"""))\b
