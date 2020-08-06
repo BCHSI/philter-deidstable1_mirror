@@ -33,9 +33,9 @@ def get_args():
     ap.add_argument("--philter",
                     help="Path to Philter program files like deidpipe.py",
                     type=str)
-    ap.add_argument("-f", "--filters", default="configs/philter_zeta.json",
+    ap.add_argument("-f", "--filters", default="configs/philter_eta.json",
                     help="Path to the config file,"
-                    + " the default is configs/philter_zeta.json",
+                    + " the default is configs/philter_eta.json",
                     type=str)
     ap.add_argument("--superlog", 
                     help="Path to the folder for the super log."

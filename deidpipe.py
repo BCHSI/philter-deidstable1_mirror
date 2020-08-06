@@ -25,8 +25,8 @@ def get_args():
     ap.add_argument("-o", "--output", 
                     help="Path to the directory to save PHI-reduced notes, the default is ./data/i2b2_results/",
                     type=str)
-    ap.add_argument("-f", "--filters", default="./configs/philter_alpha.json",
-                    help="Path to the config file, the default is ./configs/philter_alpha.json",
+    ap.add_argument("-f", "--filters", default="./configs/philter_eta.json",
+                    help="Path to the config file, the default is ./configs/philter_eta.json",
                     type=str)
     ap.add_argument("-s", "--surrogate_info", 
                     help="Path to the tsv file that contains the surrogate info"
