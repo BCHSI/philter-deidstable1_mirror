@@ -1,1 +1,1 @@
-\b(?<=lived to\s|LIVED TO\s)(***REMOVED***9***REMOVED******REMOVED***0-9***REMOVED***|***REMOVED***1***REMOVED******REMOVED***0-9***REMOVED******REMOVED***0-9***REMOVED***)\b
+(?i)\b((?<=lived to\s)|(?<=she was\s)|(?<=he was\s))(***REMOVED***9***REMOVED******REMOVED***0-9***REMOVED***|***REMOVED***1***REMOVED******REMOVED***0-9***REMOVED******REMOVED***0-9***REMOVED***|ninety|ninety(\s|\-)("""+ones+r""")|one hundred ("""+ones+r""")|one hundred ("""+teens+r""")|one hundred ("""+decades_lt_90+r""")|one hundred ("""+decades_lt_90+r""")(\s|\-)("""+ones+r"""))\b

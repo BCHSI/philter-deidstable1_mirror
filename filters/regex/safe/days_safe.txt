@@ -1,1 +1,1 @@
-\b(?i)(***REMOVED***0-9***REMOVED***+|one|two|three|four|five|six|seven|eight|nine|ten|few|several|couple***REMOVED*** ***REMOVED***{1,2}of)***REMOVED*** ***REMOVED***{1,2}days\b
+(?i)\b(***REMOVED***0-9***REMOVED***+|one|two|three|four|five|six|seven|eight|nine|ten|few|several|couple***REMOVED*** ***REMOVED***{1,2}of)***REMOVED*** ***REMOVED***{1,2}days\b(?!\sold\b)
