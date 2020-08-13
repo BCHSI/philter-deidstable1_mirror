@@ -17,7 +17,7 @@
         "title": "gene symbols safe",
         "type": "regex",
         "exclude": false,
-        "filepath": "filters/regex/gene_symbols/gene_symbols_safe_03_transformed.txt",
+        "filepath": "filters/regex/genes_and_patho_terms/gene_symbols_safe_transformed.txt",
         "notes": "This should remove anything that matches a gene symbol"
     },
     {
@@ -32,14 +32,14 @@
         "title": "lymph nodes safe",
         "type": "regex",
         "exclude": false,
-        "filepath": "filters/regex/pathology/lymph_nodes_safe.txt",
+        "filepath": "filters/regex/genes_and_patho_terms/lymph_nodes_safe.txt",
         "notes": "This should remove anything that matches a lymph node"
     },
     {
         "title": "molecular markers safe",
         "type": "regex",
         "exclude": false,
-        "filepath": "filters/regex/pathology/molecular_markers_safe_transformed.txt",
+        "filepath": "filters/regex/genes_and_patho_terms/molecular_markers_safe_transformed.txt",
         "notes": "This should remove anything that matches a molecular marker"
     },
     {
@@ -2405,7 +2405,7 @@
         "title": "Whitelist 1",
         "type": "set",
         "exclude": false,
-        "filepath": "/data/shared/ucsf_whitelists/whitelist_plus_fps_091718_nonames.json",
+        "filepath": "filters/whitelists/whitelist_plus_fps_091718_nonames.json",
         "pos": [],
         "notes": "These are words we beleive are safe"
     },
@@ -2413,7 +2413,7 @@
         "title": "Gene symbols whitelist",
         "type": "set",
         "exclude": false,
-        "filepath": "filters/whitelists/whitelist_genes_and_patho_terms.json",
+        "filepath": "filters/whitelists/whitelist_genes_and_patho_terms_pruned.json",
         "pos": [],
         "notes": "These are words we beleive are safe"
     },
@@ -2421,7 +2421,7 @@
         "title": "cassette numbers safe",
         "type": "regex",
         "exclude": false,
-        "filepath": "filters/regex/pathology/cassette_numbers_safe.txt",
+        "filepath": "filters/regex/genes_and_patho_terms/cassette_numbers_safe.txt",
         "notes": "This should remove anything that matches a cassette or slide number"
     },
     {
