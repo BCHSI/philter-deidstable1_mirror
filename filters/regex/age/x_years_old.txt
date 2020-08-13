@@ -1,1 +1,1 @@
-\b([9][0-9]|[1][0-9][0-9])(?=\syears old|\sYEARS OLD)\b
+(?i)\b([9][0-9]|[1][0-9][0-9]|ninety|ninety(\s|\-)("""+ones+r""")|one hundred ("""+ones+r""")|one hundred ("""+teens+r""")|one hundred ("""+decades_lt_90+r""")|one hundred ("""+decades_lt_90+r""")(\s|\-)("""+ones+r"""))(?=\syear-old|\syear old|\syears old|\syears of age|\syrs old|\syears-old|\syrs-old|-years old|-yrs old|-years-old|-yrs-old)\b

@@ -1,0 +1,1 @@
+(?i)\b([0-9]|[1-8][0-9]|("""+ones+r""")|("""+teens+r""")|("""+decades_lt_90+r""")(\s|\-)("""+ones+r""")|("""+decades_lt_90+r"""))(?=\syear-old|\syear old|\syears old|\syears of age|\syrs old|\syears-old|\syrs-old|-years old|-yrs old|-years-old|-yrs-old|\smonths-old|\smonths old|-months-old|\sdays old|-days-old|\sdays-old|-weeks-old|\sweeks old|\sweeks-old|\sweeks of life)\b
