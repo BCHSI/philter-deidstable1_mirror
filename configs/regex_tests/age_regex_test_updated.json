@@ -1,4 +1,3 @@
-[
     {
         "title": "lived to x",
         "type": "regex",
@@ -33,5 +32,4 @@
         "exclude": true,
         "filepath": "filters/regex/age/x_yo.txt",
         "note": ""
-    }
-]
+    },
