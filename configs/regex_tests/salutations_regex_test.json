@@ -1,23 +1,26 @@
+
 ***REMOVED***
-    {
-        "title": "Mr., Ms., etc.",
-        "type": "regex",
-        "exclude": true,
-        "filepath": "filters/regex/salutations/pre_salutations.txt",
-        "notes": "This should remove anything that matches Mr. ***REMOVED***name***REMOVED***, Ms. ***REMOVED***name***REMOVED***, etc."
-    },
-    {
-        "title": "M.D., N.P., etc.",
-        "type": "regex",
-        "exclude": true,
-        "filepath": "filters/regex/salutations/post_salutations.txt",
-        "notes": "This should remove anything that matches ***REMOVED***name***REMOVED*** M.D., etc."
-    },
-    {
-        "title": "No catchall",
-        "type": "regex",
-        "exclude": false,
-        "filepath": "filters/regex/catchall.txt",
-        "notes": "This should match anything, preventing the catchall"
-    }
+	
+	{
+		"title":"Mr., Ms., etc.",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/salutations/pre_salutations.txt",
+		"notes":"This should remove anything that matches Mr. ***REMOVED***name***REMOVED***, Ms. ***REMOVED***name***REMOVED***, etc."
+	},
+	{
+		"title":"M.D., N.P., etc.",
+		"type":"regex",
+		"exclude":true,
+		"filepath":"filters/regex/salutations/post_salutations.txt",
+		"notes":"This should remove anything that matches ***REMOVED***name***REMOVED*** M.D., etc."
+	},
+	{
+    	"title":"No catchall",
+		"type":"regex",
+		"exclude":false,
+		"filepath":"filters/regex/catchall.txt",
+		"notes":"This should match anything, preventing the catchall"
+	}
+
 ***REMOVED***

@@ -1,11 +1,11 @@
-***REMOVED***
+***REMOVED***	
     {
         "title": "u_#_patient",
         "type": "regex",
         "exclude": true,
         "filepath": "filters/regex/salutations/u_#_patient.txt",
         "note": ""
-    },
+    },    
     {
         "title": "salutations1",
         "type": "regex",
@@ -69,7 +69,7 @@
         "filepath": "filters/regex/salutations/ordering_md.txt",
         "note": ""
     },
-    {
+       {
         "title": "name indicator",
         "type": "regex",
         "exclude": true,
@@ -77,10 +77,13 @@
         "note": ""
     },
     {
-        "title": "No catchall",
-        "type": "regex",
-        "exclude": false,
-        "filepath": "filters/regex/catchall.txt",
-        "notes": "False will turn off catchall, True will turn on catchll (default)"
+        "title":"No catchall",
+        "type":"regex",
+        "exclude":false,
+        "filepath":"filters/regex/catchall.txt",
+        "notes":"False will turn off catchall, True will turn on catchll (default)"
     }
 ***REMOVED***
+
+
+

@@ -1,9 +1,11 @@
 ***REMOVED***
-    {
-        "title": "No catchall",
-        "type": "regex",
-        "exclude": false,
-        "filepath": "filters/regex/catchall.txt",
-        "notes": "This should match anything, preventing the catchall"
-    }
+	{
+		"title":"No catchall",
+		"type":"regex",
+		"exclude":false,
+		"filepath":"filters/regex/catchall.txt",
+		"notes":"This should match anything, preventing the catchall"
+	}
 ***REMOVED***
+
+
