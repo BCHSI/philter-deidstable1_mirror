@@ -1,1 +1,0 @@
-Some of the code in this directory was created to work with Philter-Beta, so it might require adjustment to work with this newer version of Philter.
