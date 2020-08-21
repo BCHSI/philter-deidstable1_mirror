@@ -1,0 +1,1 @@
+\b("""+gene_symbols+r""")[-iI0-9]*((\s+)|(\s*-\s*))(((w|W)as|WAS|(i|I)s|IS|(n|N)ot|NOT|(w|W)ere|WERE)\s+)?((e|E)xpression|EXPRESSION|(e|E)xpressed|EXPRESSED)\b
