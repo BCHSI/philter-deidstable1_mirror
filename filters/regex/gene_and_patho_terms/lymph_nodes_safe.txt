@@ -1,0 +1,1 @@
+(lymph ?nodes?|Lymph ?nodes?|Lymph ?Nodes?|LYMPH ?NODES?)(?!\s(on|On|ON)\b)((\,\s)|(\:\s)|\:|\,|\s)([\(\[\<\{]?[\d\/\-\,]+[\)\]\>\}]?(\,?\s?))+
