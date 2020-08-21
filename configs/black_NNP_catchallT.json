@@ -1,11 +1,11 @@
-***REMOVED***
+[
 
 	{
 		"title":"Blacklist",
 		"type":"set",
 		"exclude":true,
 		"filepath":"filters/blacklists/names_blacklist_allnames.json",
-		"pos":***REMOVED***"NNP"***REMOVED***,
+		"pos":["NNP"],
 		"notes":"Names blacklist"
 	},
 	{	
@@ -16,4 +16,4 @@
 		"notes":"This should keep the catchall on (default behavior)"
 	}
 
-***REMOVED***
+]

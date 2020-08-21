@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT><![CDATA[
 
 
 Record date: 2096-05-28
@@ -219,7 +219,7 @@ Document Status: Final
 
 
 
-***REMOVED******REMOVED***></TEXT>
+]]></TEXT>
 <TAGS>
 <DATE id="P0" start="16" end="26" text="2096-05-28" TYPE="DATE" comment="" />
 <LOCATION id="P1" start="47" end="71" text="COQUILLE VALLEY HOSPITAL" TYPE="HOSPITAL" comment="" />

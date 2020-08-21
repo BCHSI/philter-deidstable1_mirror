@@ -1,1 +1,1 @@
-\d*?.{1}(***REMOVED***yY***REMOVED******REMOVED***eE***REMOVED******REMOVED***aA***REMOVED******REMOVED***rR***REMOVED***|***REMOVED***yY***REMOVED******REMOVED***oO***REMOVED***|***REMOVED***yY***REMOVED***\/***REMOVED***oO***REMOVED***|***REMOVED***yY***REMOVED******REMOVED***rR***REMOVED***)
+\d*?.{1}([yY][eE][aA][rR]|[yY][oO]|[yY]\/[oO]|[yY][rR])

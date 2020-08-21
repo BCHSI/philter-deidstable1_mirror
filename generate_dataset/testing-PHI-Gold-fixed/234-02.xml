@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT><![CDATA[
 
 
 Record date: 2074-12-09
@@ -163,7 +163,7 @@ P- Repeat CMP. Information given for her MD in DR. f/u when she returns in 3-4 m
 
 
 
-***REMOVED******REMOVED***></TEXT>
+]]></TEXT>
 <TAGS>
 <DATE id="P0" start="16" end="26" text="2074-12-09" TYPE="DATE" comment="" />
 <NAME id="P1" start="28" end="37" text="Francesca" TYPE="PATIENT" comment="" />

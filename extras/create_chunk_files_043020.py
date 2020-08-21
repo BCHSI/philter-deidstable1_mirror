@@ -2,26 +2,26 @@ import sys
 ## Takes in the list of batch folders as input 
 
 # Name of directory list
-fpath = sys.argv***REMOVED***1***REMOVED***
+fpath = sys.argv[1]
 dirfile = open(fpath)
 
 # Name of the chunk file to generate
-chunk_name = sys.argv***REMOVED***2***REMOVED***
+chunk_name = sys.argv[2]
 
 # Path to metadata folder
-meta_dir = sys.argv***REMOVED***3***REMOVED***
+meta_dir = sys.argv[3]
 
 # Path to input notes folder
-input_dir = sys.argv***REMOVED***4***REMOVED***
+input_dir = sys.argv[4]
 
 # Path to output folder
-output_dir = sys.argv***REMOVED***5***REMOVED***
+output_dir = sys.argv[5]
 
 # Meta file names
-meta_name = sys.argv***REMOVED***6***REMOVED***
+meta_name = sys.argv[6]
 
 # Knownphi file names
-knownphi_name = sys.argv***REMOVED***7***REMOVED***
+knownphi_name = sys.argv[7]
 
 # Generate the Hash table for the Meta file
 dfile = open(chunk_name, "w+")  

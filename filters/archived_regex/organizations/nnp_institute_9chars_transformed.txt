@@ -1,1 +1,1 @@
-\b***REMOVED***A-Z***REMOVED******REMOVED***a-zA-Z***REMOVED***+((\s|\-)***REMOVED***A-Z***REMOVED******REMOVED***a-zA-Z***REMOVED***+)?((\s|\-)***REMOVED***A-Z***REMOVED******REMOVED***a-zA-Z***REMOVED***+)?(?=\sInstitute|\sINSTITUTE|\sNeurology|\sNEUROLOGY|\sInfirmary|\sINFIRMARY|\sRadiology|\sRADIOLOGY|\sPneumonia|\sPNEUMONIA)\b
+\b[A-Z][a-zA-Z]+((\s|\-)[A-Z][a-zA-Z]+)?((\s|\-)[A-Z][a-zA-Z]+)?(?=\sInstitute|\sINSTITUTE|\sNeurology|\sNEUROLOGY|\sInfirmary|\sINFIRMARY|\sRadiology|\sRADIOLOGY|\sPneumonia|\sPNEUMONIA)\b

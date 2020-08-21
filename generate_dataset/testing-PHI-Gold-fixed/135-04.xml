@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT><![CDATA[
 
 
 Record date: 2094-04-14
@@ -213,13 +213,13 @@ DIFFUSION:              Meas. Pred. %Pred  CI-Range/Eval
 
 ---------------------------------------------------------
 
-DLCO ***REMOVED***Hb***REMOVED*** (mL/min/mmHg)  3.61 18.51    20 11.86-25.16 AM
+DLCO [Hb] (mL/min/mmHg)  3.61 18.51    20 11.86-25.16 AM
 
 DLCO      (mL/min/mmHg)  3.05 18.51    16 11.86-25.16
 
 Hb        (g/dl)         10.1  13.4   ---    12-16
 
-VA ***REMOVED***BTPS***REMOVED*** (L)            3.12  4.61   ---  4.53-4.69
+VA [BTPS] (L)            3.12  4.61   ---  4.53-4.69
 
 DL/VA   (mL/min/mmHg/L)  1.16  3.81    30  2.49-5.13  AM
 
@@ -339,7 +339,7 @@ Signed electronically by   Quinton G Janssen MD  on  Apr 14, 2094
 
 
 
-***REMOVED******REMOVED***></TEXT>
+]]></TEXT>
 <TAGS>
 <DATE id="P0" start="16" end="26" text="2094-04-14" TYPE="DATE" comment="" />
 <LOCATION id="P1" start="40" end="59" text="PORT HURON HOSPITAL" TYPE="HOSPITAL" comment="" />

@@ -17,9 +17,9 @@ def extractXML(directory,filename):
 	root = tree.getroot()
 	xmlstr = ET.tostring(root, encoding='utf8', method='xml')
 	#print xmlstr + "\n \n"
-	xml_dict = xmltodict.parse(xmlstr)***REMOVED***"deIdi2b2"***REMOVED***
-	text = xml_dict***REMOVED***"TEXT"***REMOVED***
-	tags_dict = xml_dict***REMOVED***"TAGS"***REMOVED***
+	xml_dict = xmltodict.parse(xmlstr)["deIdi2b2"]
+	text = xml_dict["TEXT"]
+	tags_dict = xml_dict["TAGS"]
 	return text,tags_dict,xmlstr
 
 def delete_annotation(xml_file, phi_type, tag_to_delete):
@@ -44,12 +44,12 @@ def fix_dates(xml_file,text):
 			delete_annotation(xml_file, PHI_type, text)
 
 	# remove season
-	seasons = ***REMOVED***"spring","winter","fall","summer","autumn"***REMOVED***
+	seasons = ["spring","winter","fall","summer","autumn"]
 	if date.lower() in seasons:
 		delete_annotation(xml_file, PHI_type, text)
 
 	# remove day of week
-	days=***REMOVED***"Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday","Mon","Tues","Wed","Thurs","Fri","Sat","Sun"***REMOVED***
+	days=["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday","Mon","Tues","Wed","Thurs","Fri","Sat","Sun"]
 	if date in days:
 		delete_annotation(xml_file, PHI_type, text)
 
@@ -80,8 +80,8 @@ def remove_countries(xml_file,text,phi_type):
 	return xml_file
 
 def remove_age_under_90(xml_file,text,phi_type,filename):
-	standardized_age = text.split("y")***REMOVED***0***REMOVED***
-	non_numeric_ages =	***REMOVED***"18 month", "20's", "32y5.7m", "56y0.5m","50's","50s", "60's", "60's", "60's", "60's", "60s", "60s", "60s", "70's", "70's", "70s", "80's", "80's", "80's", "80's", "80's", "80's", "80's", "80's", "80's", "80's", "80s", "80s", "80s", "80s", "80s", "82nd", "Sevent", "sevent"***REMOVED***
+	standardized_age = text.split("y")[0]
+	non_numeric_ages =	["18 month", "20's", "32y5.7m", "56y0.5m","50's","50s", "60's", "60's", "60's", "60's", "60s", "60s", "60s", "70's", "70's", "70s", "80's", "80's", "80's", "80's", "80's", "80's", "80's", "80's", "80's", "80's", "80s", "80s", "80s", "80s", "80s", "82nd", "Sevent", "sevent"]
 	if standardized_age in non_numeric_ages:
 		xml_file = delete_annotation(xml_file, phi_type, text)
 	elif isinstance(standardized_age, int) and int(standardized_age) < 90:
@@ -104,7 +104,7 @@ def remove_hospitals(xml_file,text,phi_type):
 def main():
 	# Loop through xml_files
 	directory = "testing-PHI-Gold-fixed"
-	cols = ***REMOVED***"Document", "PHI_element", "Text", "Type","Comment"***REMOVED***
+	cols = ["Document", "PHI_element", "Text", "Type","Comment"]
 	output_df = pd.DataFrame(columns = cols,index=None)
 
 	new_dict = dict()
@@ -135,8 +135,8 @@ def main():
 			if isinstance(value, list):
 				for final_value in value:
 					# do checks
-					text = final_value***REMOVED***"@text"***REMOVED***
-					phi_type = final_value***REMOVED***"@TYPE"***REMOVED***
+					text = final_value["@text"]
+					phi_type = final_value["@TYPE"]
 
 					if phi_type == "DATE": 
 						xmlstr = fix_dates(xmlstr,text)
@@ -152,8 +152,8 @@ def main():
 					#	xmlstr = remove_hospitals(xmlstr,text,phi_type)								
 			else:
 				final_value = value
-				text = final_value***REMOVED***"@text"***REMOVED***
-				phi_type = final_value***REMOVED***"@TYPE"***REMOVED***
+				text = final_value["@text"]
+				phi_type = final_value["@TYPE"]
 
 				if phi_type == "DATE":
 					xmlstr = fix_dates(xmlstr,text)

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT><![CDATA[
 
 
 Record date: 2079-08-04
@@ -151,7 +151,7 @@ eScription document:7-11192535 BFFocus
 
 
 
-***REMOVED******REMOVED***></TEXT>
+]]></TEXT>
 <TAGS>
 <DATE id="P0" start="16" end="26" text="2079-08-04" TYPE="DATE" comment="" />
 <ID id="P1" start="36" end="44" text="75322175" TYPE="MEDICALRECORD" comment="" />

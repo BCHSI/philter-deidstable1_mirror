@@ -1,10 +1,10 @@
-***REMOVED***
+[
 	{
 		"title":"Names Blacklist",
 		"type":"set",
 		"exclude":true,
 		"filepath":"filters/blacklists/names_blacklist_common.pkl",
-		"pos":***REMOVED******REMOVED***,
+		"pos":[],
 		"notes":""
 	},
 	{
@@ -12,7 +12,7 @@
 		"type":"set",
 		"exclude":false,
 		"filepath":"filters/whitelists/whitelist.pkl",
-		"pos":***REMOVED******REMOVED***,
+		"pos":[],
 		"notes":"These are words we beleive are safe"
 	},
 	{
@@ -51,6 +51,6 @@
 		"notes":"Greedy catches anything with digits in it"
 	}
 		
-***REMOVED***
+]
 
 

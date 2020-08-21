@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT><![CDATA[
 
 
 Record date: 2078-11-22
@@ -63,7 +63,7 @@ rin:KZ:9636:DD:11-24-78:DT:11-25-78:DV:11-22-78
 
 
 
-***REMOVED******REMOVED***></TEXT>
+]]></TEXT>
 <TAGS>
 <DATE id="P0" start="16" end="26" text="2078-11-22" TYPE="DATE" comment="" />
 <LOCATION id="P1" start="28" end="35" text="PONTIAC" TYPE="HOSPITAL" comment="" />

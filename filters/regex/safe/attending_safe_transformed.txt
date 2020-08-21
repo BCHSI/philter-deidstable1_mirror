@@ -1,1 +1,1 @@
-\b(?i)attending\s(***REMOVED***a-z***REMOVED***+ologist(\was)?|physician(\swas)?|performed(\sthe)?)\b
+\b(?i)attending\s([a-z]+ologist(\was)?|physician(\swas)?|performed(\sthe)?)\b

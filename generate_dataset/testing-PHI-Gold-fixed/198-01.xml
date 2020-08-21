@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT><![CDATA[
 
 
 Record date: 2076-07-01
@@ -126,7 +126,7 @@ Motor:	normal bulk and tone, no tremor, rigidity or bradykinesia, no pronator dr
               
 
 
-***REMOVED******REMOVED***></TEXT>
+]]></TEXT>
 <TAGS>
 <DATE id="P0" start="16" end="26" text="2076-07-01" TYPE="DATE" comment="" />
 <NAME id="P1" start="80" end="94" text="Yusuf, Russell" TYPE="PATIENT" comment="" />

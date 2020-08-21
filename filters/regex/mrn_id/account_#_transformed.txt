@@ -1,1 +1,1 @@
-\b***REMOVED***A-Z***REMOVED***\d{3,}(\-***REMOVED***0-9***REMOVED***)?\b
+\b[A-Z]\d{3,}(\-[0-9])?\b

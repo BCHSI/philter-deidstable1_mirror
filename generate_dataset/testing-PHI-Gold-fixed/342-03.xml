@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT><![CDATA[
 
 
 Record date: 2093-12-26
 
-                                                             Patient Name: BARR,NICKY ***REMOVED*** MRN: 32612454LDC ***REMOVED***
+                                                             Patient Name: BARR,NICKY [ MRN: 32612454LDC ]
 
                                                          Date of Visit: 12/26/93
 
@@ -223,7 +223,7 @@ Victoria Amy-Armstrong, M.D.
 
 
 
-***REMOVED******REMOVED***></TEXT>
+]]></TEXT>
 <TAGS>
 <DATE id="P0" start="16" end="26" text="2093-12-26" TYPE="DATE" comment="" />
 <NAME id="P1" start="103" end="113" text="BARR,NICKY" TYPE="PATIENT" comment="" />

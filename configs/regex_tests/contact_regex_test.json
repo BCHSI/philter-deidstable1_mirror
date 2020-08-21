@@ -1,5 +1,5 @@
 
-***REMOVED***
+[
 	{
 		"title":"url",
 		"type":"regex",
@@ -50,4 +50,4 @@
 		"notes":"This should match anything, preventing the catchall"
 	}
 
-***REMOVED***
+]

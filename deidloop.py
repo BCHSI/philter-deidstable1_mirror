@@ -25,7 +25,7 @@ def get_args():
 
     ap.add_argument("--imofile",
                     help="Path to the file that contains the list of input"
-                    + " folders, metafiles, output folders, ***REMOVED***knownphifiles***REMOVED***",
+                    + " folders, metafiles, output folders, [knownphifiles]",
                     type=str)
     ap.add_argument("-t", "--threads", default=1,
                     help="Number of parallel threads, the default is 1",
@@ -64,9 +64,9 @@ def runDeidChunck(unit, q, philterFolder, configfile, refdate):
 
         # Tuple to determine path
         imok = q.get()
-        srcFolder, srcMeta, dstFolder = imok***REMOVED***:3***REMOVED***
+        srcFolder, srcMeta, dstFolder = imok[:3]
         if len(imok) >= 4:
-           kpfile = imok***REMOVED***3***REMOVED***
+           kpfile = imok[3]
         else:
             kpfile = None
         
@@ -80,17 +80,17 @@ def runDeidChunck(unit, q, philterFolder, configfile, refdate):
 
         # Run Deid (would be better to interface directly)
         if kpfile is None:
-           call(***REMOVED***"python3", "-O", "deidpipe.py", 
+           call(["python3", "-O", "deidpipe.py", 
                  "-i", srcFolder, 
                  "-o", dstFolder, 
                  "-s", srcMeta,
                  "-d", "True", 
                  "-f", configfile,
                  "-l", "True",
-                 "-r", refdate***REMOVED***,
+                 "-r", refdate],
                  cwd=philterFolder)
         else:
-            call(***REMOVED***"python3", "-O", "deidpipe.py",
+            call(["python3", "-O", "deidpipe.py",
                  "-i", srcFolder,
                  "-o", dstFolder,
                  "-s", srcMeta,
@@ -98,7 +98,7 @@ def runDeidChunck(unit, q, philterFolder, configfile, refdate):
                  "-f", configfile,
                  "-k", kpfile,
                  "-l", "True",
-                 "-r", refdate***REMOVED***,
+                 "-r", refdate],
                  cwd=philterFolder)
 
         # Print time elapsed for batch
@@ -129,10 +129,10 @@ def main():
             parts = line.split()
             if len(parts) > 3:
                idir, mfile, odir, kpfile = line.split()
-               enclosure_queue.put(***REMOVED***idir, mfile, odir, kpfile***REMOVED***)
+               enclosure_queue.put([idir, mfile, odir, kpfile])
             else:
                idir, mfile, odir = line.split()
-               enclosure_queue.put(***REMOVED***idir, mfile, odir***REMOVED***)
+               enclosure_queue.put([idir, mfile, odir])
     # Now wait for the queue to be empty, indicating that we have
     # processed all of the notes
     print('*** Main thread waiting')
@@ -145,7 +145,7 @@ def main():
         all_logs = create_log_files_list(args.imofile)
         
         # Create super log of batch summaries
-        if all_logs != ***REMOVED******REMOVED***:
+        if all_logs != []:
             get_super_log(all_logs, os.path.join(args.superlog, "log"))
 
     return 0

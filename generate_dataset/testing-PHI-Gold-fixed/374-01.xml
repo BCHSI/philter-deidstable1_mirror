@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT><![CDATA[
 
 
 Record date: 2127-05-18
@@ -96,7 +96,7 @@ RS:91294     :1305
 
 
 
-***REMOVED******REMOVED***></TEXT>
+]]></TEXT>
 <TAGS>
 <DATE id="P0" start="16" end="26" text="2127-05-18" TYPE="DATE" comment="" />
 <DATE id="P1" start="30" end="42" text="May 18, 2127" TYPE="DATE" comment="" />

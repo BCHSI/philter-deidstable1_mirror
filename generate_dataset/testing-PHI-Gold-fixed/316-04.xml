@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT><![CDATA[
 
 
 Record date: 2121-03-28
@@ -299,7 +299,7 @@ Note: reviewed old heme values. Tends to run high WBC, low lymphs, high ESR. ???
 
 
 
-***REMOVED******REMOVED***></TEXT>
+]]></TEXT>
 <TAGS>
 <DATE id="P0" start="16" end="26" text="2121-03-28" TYPE="DATE" comment="" />
 <NAME id="P1" start="1099" end="1106" text="Ulbrich" TYPE="DOCTOR" comment="" />

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT><![CDATA[
 
 
 Record date: 2064-01-28
@@ -127,9 +127,9 @@ Date/Time         CA             PHOS           ALB
 
 Date/Time         CCOM           
 
-01/25/2064         ***REMOVED***1***REMOVED***           
+01/25/2064         [1]           
 
-01/23/2064         ***REMOVED***2***REMOVED***           
+01/23/2064         [2]           
 
 
 
@@ -199,9 +199,9 @@ Date/Time         PROTSF         PROTCF         PROTCA
 
 
 
-***REMOVED***1***REMOVED*** RESULT COMMENT:   PREDOMINANT GROWTH OF
+[1] RESULT COMMENT:   PREDOMINANT GROWTH OF
 
-***REMOVED***2***REMOVED*** RESULT COMMENT:   Post dialysis
+[2] RESULT COMMENT:   Post dialysis
 
 
 
@@ -375,7 +375,7 @@ Herbert C. Guerrero, M. D.
 
 
 
-***REMOVED******REMOVED***></TEXT>
+]]></TEXT>
 <TAGS>
 <DATE id="P0" start="16" end="26" text="2064-01-28" TYPE="DATE" comment="" />
 <NAME id="P1" start="43" end="60" text="Ethridge, Clayton" TYPE="PATIENT" comment="" />

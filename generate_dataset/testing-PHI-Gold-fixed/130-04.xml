@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT><![CDATA[
 
 
 Record date: 2089-03-29
@@ -116,7 +116,7 @@ EHCC Intern
 
 
 
-***REMOVED******REMOVED***></TEXT>
+]]></TEXT>
 <TAGS>
 <DATE id="P0" start="16" end="26" text="2089-03-29" TYPE="DATE" comment="" />
 <ID id="P2" start="84" end="92" text="57585291" TYPE="MEDICALRECORD" comment="" />

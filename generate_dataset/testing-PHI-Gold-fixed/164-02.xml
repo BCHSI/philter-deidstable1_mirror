@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT><![CDATA[
 
 
 Record date: 2083-01-30
@@ -75,7 +75,7 @@ XC/olivas/quijano
 
 
 
-***REMOVED******REMOVED***></TEXT>
+]]></TEXT>
 <TAGS>
 <DATE id="P0" start="16" end="26" text="2083-01-30" TYPE="DATE" comment="" />
 <NAME id="P1" start="28" end="39" text="COLIN RAMEY" TYPE="PATIENT" comment="" />

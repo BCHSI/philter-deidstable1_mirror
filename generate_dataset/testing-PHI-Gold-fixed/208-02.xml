@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT><![CDATA[
 
 
 Record date: 2066-02-12
 
-                                                       Patient Name: BARRERA,MARY ***REMOVED*** MRN: 45167459SLO ***REMOVED***
+                                                       Patient Name: BARRERA,MARY [ MRN: 45167459SLO ]
 
                                                          Date of Visit: 02/12/2066
 
@@ -105,7 +105,7 @@ Tracy T. Xenakis, M.D.
 
 
 
-***REMOVED******REMOVED***></TEXT>
+]]></TEXT>
 <TAGS>
 <DATE id="P0" start="16" end="26" text="2066-02-12" TYPE="DATE" comment="" />
 <NAME id="P1" start="97" end="109" text="BARRERA,MARY" TYPE="PATIENT" comment="" />

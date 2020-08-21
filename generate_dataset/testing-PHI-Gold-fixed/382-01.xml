@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT><![CDATA[
 
 
 Record date: 2082-01-28
@@ -189,7 +189,7 @@ Debra F. Mullen, MD
 
 
 
-***REMOVED******REMOVED***></TEXT>
+]]></TEXT>
 <TAGS>
 <DATE id="P0" start="16" end="26" text="2082-01-28" TYPE="DATE" comment="" />
 <AGE id="P2" start="163" end="165" text="48" TYPE="AGE" comment="" />

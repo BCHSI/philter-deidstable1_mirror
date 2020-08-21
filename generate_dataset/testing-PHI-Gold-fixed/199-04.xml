@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT><![CDATA[
 
 
 Record date: 2093-01-10
@@ -73,7 +73,7 @@ DT:   01/12/93
 
 
 
-***REMOVED******REMOVED***></TEXT>
+]]></TEXT>
 <TAGS>
 <DATE id="P0" start="16" end="26" text="2093-01-10" TYPE="DATE" comment="" />
 <NAME id="P1" start="59" end="69" text="Uriah LARA" TYPE="PATIENT" comment="" />

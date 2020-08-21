@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT><![CDATA[
 
 
 Record date: 2173-02-04
@@ -126,7 +126,7 @@ Athina, GA 39341
 
 
 
-***REMOVED******REMOVED***></TEXT>
+]]></TEXT>
 <TAGS>
 <DATE id="P0" start="16" end="26" text="2173-02-04" TYPE="DATE" comment="" />
 <NAME id="P1" start="65" end="81" text="HEATH, QUINTEN M" TYPE="PATIENT" comment="" />

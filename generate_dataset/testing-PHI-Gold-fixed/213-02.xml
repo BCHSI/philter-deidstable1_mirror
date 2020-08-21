@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT><![CDATA[
 
 
 Record date: 2065-09-29
@@ -165,7 +165,7 @@ San Luis Obispo, MD  53925
 
 
 
-***REMOVED******REMOVED***></TEXT>
+]]></TEXT>
 <TAGS>
 <DATE id="P0" start="16" end="26" text="2065-09-29" TYPE="DATE" comment="" />
 <DATE id="P1" start="55" end="73" text="September 29, 2065" TYPE="DATE" comment="" />

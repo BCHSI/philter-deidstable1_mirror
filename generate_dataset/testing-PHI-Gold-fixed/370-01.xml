@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT><![CDATA[
 
 
 Record date: 2063-09-04
@@ -33,7 +33,7 @@ Otha V. Espinal, M.D.
 
 
 
-***REMOVED******REMOVED***></TEXT>
+]]></TEXT>
 <TAGS>
 <DATE id="P0" start="16" end="26" text="2063-09-04" TYPE="DATE" comment="" />
 <ID id="P1" start="55" end="66" text="124-23-22-9" TYPE="MEDICALRECORD" comment="" />

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT><![CDATA[
 
 
 Record date: 2092-05-05
@@ -65,7 +65,7 @@ Results05/03/2092 NA 139,  K 4.1,  CL 101,  CO2 30,  BUN 20,  CRE 1.09,  EGFR 49
 
 
 
-***REMOVED******REMOVED***></TEXT>
+]]></TEXT>
 <TAGS>
 <DATE id="P0" start="16" end="26" text="2092-05-05" TYPE="DATE" comment="" />
 <DATE id="P1" start="28" end="38" text="05/05/2092" TYPE="DATE" comment="" />

@@ -3,13 +3,13 @@
     "total_false_negatives": 0,
     "total_true_positives": 54,
     "total_true_negatives": 168,
-    "false_positives": ***REMOVED******REMOVED***,
-    "true_positives": ***REMOVED******REMOVED***,
-    "false_negatives": ***REMOVED******REMOVED***,
-    "true_negatives": ***REMOVED******REMOVED***,
+    "false_positives": [],
+    "true_positives": [],
+    "false_negatives": [],
+    "true_negatives": [],
     "summary_by_file": {
         "./tests/eval01/i2b2_results/137-03.txt": {
-            "false_positives": ***REMOVED***
+            "false_positives": [
                 "Record",
                 "date:",
                 "Reason",
@@ -666,8 +666,8 @@
                 "Laboratory",
                 "tests-as",
                 "ordered"
-            ***REMOVED***,
-            "false_negatives": ***REMOVED******REMOVED***,
+            ],
+            "false_negatives": [],
             "num_false_negatives": 0
         }
     }

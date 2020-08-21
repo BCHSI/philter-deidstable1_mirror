@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT><![CDATA[
 
 
 Record date: 2088-06-24
 
-                                                       Patient Name: CHAPMAN,NOOR ***REMOVED*** MRN: 45479406HBMC ***REMOVED***
+                                                       Patient Name: CHAPMAN,NOOR [ MRN: 45479406HBMC ]
 
                                                          Date of Visit: 6/24/2088
 
@@ -139,10 +139,10 @@ ZYPREXA (OLANZAPINE)   7.5MG TABLET  take 1 Tablet(s) PO  QHS
 
 Vital Signs
 
- Blood Pressure:  --  140/80  ***REMOVED***Left Arm***REMOVED***  ***REMOVED***Sitting***REMOVED***
- Pulse:  --  68  ***REMOVED***Regular***REMOVED***  ***REMOVED***Radial***REMOVED***
- Respiratory Rate:  --  14  ***REMOVED***Regular***REMOVED***
- Weight:  --  225  ***REMOVED***Pounds***REMOVED***
+ Blood Pressure:  --  140/80  [Left Arm]  [Sitting]
+ Pulse:  --  68  [Regular]  [Radial]
+ Respiratory Rate:  --  14  [Regular]
+ Weight:  --  225  [Pounds]
 
 
 
@@ -220,7 +220,7 @@ Cynthia Nancy-Nesmith, M.D.
 
 
 
-***REMOVED******REMOVED***></TEXT>
+]]></TEXT>
 <TAGS>
 <DATE id="P0" start="16" end="26" text="2088-06-24" TYPE="DATE" comment="" />
 <NAME id="P1" start="97" end="109" text="CHAPMAN,NOOR" TYPE="PATIENT" comment="" />

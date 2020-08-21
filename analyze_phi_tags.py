@@ -39,119 +39,119 @@ all_device_phi = 0
 all_unspecified_phi = 0
 # Get number of phi in each category
 for file in phi:
-	anno_file = phi***REMOVED***file***REMOVED***
-	phi_dict = anno_file***REMOVED***'phi'***REMOVED***
+	anno_file = phi[file]
+	phi_dict = anno_file['phi']
 	for item in phi_dict:		
-		if item***REMOVED***'TYPE'***REMOVED*** == 'DOCTOR':
+		if item['TYPE'] == 'DOCTOR':
 			all_doctor_phi += 1		
-		if item***REMOVED***'TYPE'***REMOVED*** == 'HOSPITAL':
+		if item['TYPE'] == 'HOSPITAL':
 			all_hospital_phi += 1
-		if item***REMOVED***'TYPE'***REMOVED*** == 'COUNTRY':
+		if item['TYPE'] == 'COUNTRY':
 			all_country_phi += 1
-		if item***REMOVED***'TYPE'***REMOVED*** == 'AGE':
+		if item['TYPE'] == 'AGE':
 			all_age_phi += 1
-		if item***REMOVED***'TYPE'***REMOVED*** == 'USERNAME':
+		if item['TYPE'] == 'USERNAME':
 			all_username_phi += 1
-		if item***REMOVED***'TYPE'***REMOVED*** == 'CITY':
+		if item['TYPE'] == 'CITY':
 			all_city_phi += 1
-		if item***REMOVED***'TYPE'***REMOVED*** == 'STATE':
+		if item['TYPE'] == 'STATE':
 			all_state_phi += 1
-		if item***REMOVED***'TYPE'***REMOVED*** == 'ZIP':
+		if item['TYPE'] == 'ZIP':
 			all_zip_phi += 1
-		if item***REMOVED***'TYPE'***REMOVED*** == 'MEDICALRECORD':
+		if item['TYPE'] == 'MEDICALRECORD':
 			all_medicalrecord_phi += 1
-		if item***REMOVED***'TYPE'***REMOVED*** == 'PATIENT':
+		if item['TYPE'] == 'PATIENT':
 			all_patient_phi += 1
-		if item***REMOVED***'TYPE'***REMOVED*** == 'STREET':
+		if item['TYPE'] == 'STREET':
 			all_street_phi += 1
-		if item***REMOVED***'TYPE'***REMOVED*** == 'PROFESSION':
+		if item['TYPE'] == 'PROFESSION':
 			all_profession_phi += 1
-		if item***REMOVED***'TYPE'***REMOVED*** == 'IDNUM':
+		if item['TYPE'] == 'IDNUM':
 			all_idnum_phi += 1
-		if item***REMOVED***'TYPE'***REMOVED*** == 'ORGANIZATION':
+		if item['TYPE'] == 'ORGANIZATION':
 			all_organization_phi += 1
-		if item***REMOVED***'TYPE'***REMOVED*** == 'PHONE':
+		if item['TYPE'] == 'PHONE':
 			all_phone_phi += 1
-		if item***REMOVED***'TYPE'***REMOVED*** == 'LOCATION-OTHER':
+		if item['TYPE'] == 'LOCATION-OTHER':
 			all_location_other_phi += 1
-		if item***REMOVED***'TYPE'***REMOVED*** == 'DATE':
+		if item['TYPE'] == 'DATE':
 			all_date_phi += 1
-		if item***REMOVED***'TYPE'***REMOVED*** == 'EMAIL':
+		if item['TYPE'] == 'EMAIL':
 			all_email_phi += 1
-		if item***REMOVED***'TYPE'***REMOVED*** == 'FAX':
+		if item['TYPE'] == 'FAX':
 			all_fax_phi += 1
-		if item***REMOVED***'TYPE'***REMOVED*** == 'DEVICE':
+		if item['TYPE'] == 'DEVICE':
 			all_device_phi += 1
 
 # Create dictionary to hold fn tags
 fn_tags = {}
 
 # Loop through all filenames in summary
-for fn in summary***REMOVED***'summary_by_file'***REMOVED***:
-	current_summary =  summary***REMOVED***'summary_by_file'***REMOVED******REMOVED***fn***REMOVED***
+for fn in summary['summary_by_file']:
+	current_summary =  summary['summary_by_file'][fn]
 	# Get corresponding info in phi_notes
-	note_name = fn.split('/')***REMOVED***3***REMOVED***
-	anno_name = note_name.split('.')***REMOVED***0***REMOVED*** + ".xml"
-	phi_list = phi***REMOVED***anno_name***REMOVED******REMOVED***'phi'***REMOVED***
+	note_name = fn.split('/')[3]
+	anno_name = note_name.split('.')[0] + ".xml"
+	phi_list = phi[anno_name]['phi']
 	# Loop through all FNs
-	if current_summary***REMOVED***'false_negatives'***REMOVED*** != ***REMOVED******REMOVED*** and current_summary***REMOVED***'false_negatives'***REMOVED*** != ***REMOVED***""***REMOVED***:
-		fn_tags***REMOVED***anno_name***REMOVED*** = {}
-		for false_negative in current_summary***REMOVED***'false_negatives'***REMOVED***:
+	if current_summary['false_negatives'] != [] and current_summary['false_negatives'] != [""]:
+		fn_tags[anno_name] = {}
+		for false_negative in current_summary['false_negatives']:
 			tokenized_fn = word_tokenize(false_negative)
 			for item in tokenized_fn:
 				if len(item) > 1:
-					if item not in ***REMOVED***'','.',',','(',')','#',"'s"***REMOVED***:
-						if item in fn_tags***REMOVED***anno_name***REMOVED***:
-							fn_tags***REMOVED***anno_name***REMOVED******REMOVED***item***REMOVED******REMOVED***1***REMOVED*** += 1
+					if item not in ['','.',',','(',')','#',"'s"]:
+						if item in fn_tags[anno_name]:
+							fn_tags[anno_name][item][1] += 1
 						else:
-							fn_tags***REMOVED***anno_name***REMOVED******REMOVED***item***REMOVED*** = ***REMOVED***'new',1***REMOVED***
+							fn_tags[anno_name][item] = ['new',1]
 					for phi_dict in phi_list:
-						fn_tag = phi_dict***REMOVED***'TYPE'***REMOVED***
-						if item in word_tokenize(phi_dict***REMOVED***'text'***REMOVED***) and item not in ***REMOVED***'','.',',','(',')','#',"'s"***REMOVED***: # or (len(item) <4 and phi_dict***REMOVED***'text'***REMOVED*** in item and item not in ***REMOVED***'','.',',','(',')'***REMOVED***):
-							fn_tags***REMOVED***anno_name***REMOVED******REMOVED***item***REMOVED******REMOVED***0***REMOVED*** = fn_tag
+						fn_tag = phi_dict['TYPE']
+						if item in word_tokenize(phi_dict['text']) and item not in ['','.',',','(',')','#',"'s"]: # or (len(item) <4 and phi_dict['text'] in item and item not in ['','.',',','(',')']):
+							fn_tags[anno_name][item][0] = fn_tag
 
 
 phi_tag_lists = {}
 for fn2 in fn_tags:
 	counter = 0
-	keys = list(fn_tags***REMOVED***fn2***REMOVED***.keys())
-	for subdict in fn_tags***REMOVED***fn2***REMOVED***:
-		if fn_tags***REMOVED***fn2***REMOVED******REMOVED***subdict***REMOVED******REMOVED***0***REMOVED*** not in phi_tag_lists:
-			phi_tag_lists***REMOVED***fn_tags***REMOVED***fn2***REMOVED******REMOVED***subdict***REMOVED******REMOVED***0***REMOVED******REMOVED*** = ***REMOVED***keys***REMOVED***counter***REMOVED******REMOVED***
+	keys = list(fn_tags[fn2].keys())
+	for subdict in fn_tags[fn2]:
+		if fn_tags[fn2][subdict][0] not in phi_tag_lists:
+			phi_tag_lists[fn_tags[fn2][subdict][0]] = [keys[counter]]
 		else:
-			phi_tag_lists***REMOVED***fn_tags***REMOVED***fn2***REMOVED******REMOVED***subdict***REMOVED******REMOVED***0***REMOVED******REMOVED***.append(keys***REMOVED***counter***REMOVED***)
+			phi_tag_lists[fn_tags[fn2][subdict][0]].append(keys[counter])
 		counter += 1			
 
 phi_tag_counts = {'DATE': 0, 'HOSPITAL': 0, 'DOCTOR': 0, 'CITY': 0, 'STATE': 0, 'AGE': 0, 'COUNTRY': 0, 'PATIENT': 0, 'MEDICALRECORD': 0, 'IDNUM': 0, 'USERNAME': 0, 'STREET': 0, 'ZIP': 0, 'PHONE': 0, 'PROFESSION': 0, 'ORGANIZATION': 0, 'LOCATION-OTHER': 0, 'FAX': 0, 'DEVICE': 0, 'EMAIL': 0}
 for key in phi_tag_lists:
-	phi_tag_counts***REMOVED***key***REMOVED*** = len(phi_tag_lists***REMOVED***key***REMOVED***)
+	phi_tag_counts[key] = len(phi_tag_lists[key])
 
 
 recall_dict = {}
-recall_dict***REMOVED***'DOCTOR Recall'***REMOVED*** = (all_doctor_phi-phi_tag_counts***REMOVED***'DOCTOR'***REMOVED***)/all_doctor_phi
-recall_dict***REMOVED***'HOSPITAL Recall'***REMOVED*** = (all_hospital_phi-phi_tag_counts***REMOVED***'HOSPITAL'***REMOVED***)/all_hospital_phi
-recall_dict***REMOVED***'COUNTRY Recall'***REMOVED*** = (all_country_phi-phi_tag_counts***REMOVED***'COUNTRY'***REMOVED***)/all_country_phi
-recall_dict***REMOVED***'AGE Recall'***REMOVED*** = (all_age_phi-phi_tag_counts***REMOVED***'AGE'***REMOVED***)/all_age_phi
-recall_dict***REMOVED***'USERNAME Recall'***REMOVED*** = (all_username_phi-phi_tag_counts***REMOVED***'USERNAME'***REMOVED***)/all_username_phi
-recall_dict***REMOVED***'CITY Recall'***REMOVED*** = (all_city_phi-phi_tag_counts***REMOVED***'CITY'***REMOVED***)/all_city_phi
-recall_dict***REMOVED***'STATE Recall'***REMOVED*** = (all_state_phi-phi_tag_counts***REMOVED***'STATE'***REMOVED***)/all_state_phi
-recall_dict***REMOVED***'ZIP Recall'***REMOVED*** = (all_zip_phi-phi_tag_counts***REMOVED***'ZIP'***REMOVED***)/all_zip_phi
-recall_dict***REMOVED***'MEDICALRECORD Recall'***REMOVED*** = (all_medicalrecord_phi-phi_tag_counts***REMOVED***'MEDICALRECORD'***REMOVED***)/all_medicalrecord_phi
-recall_dict***REMOVED***'PATIENT Recall'***REMOVED*** = (all_patient_phi-phi_tag_counts***REMOVED***'PATIENT'***REMOVED***)/all_patient_phi
-recall_dict***REMOVED***'STREET Recall'***REMOVED*** = (all_street_phi-phi_tag_counts***REMOVED***'STREET'***REMOVED***)/all_street_phi
-recall_dict***REMOVED***'PROFESSION Recall'***REMOVED*** = (all_profession_phi-phi_tag_counts***REMOVED***'PROFESSION'***REMOVED***)/all_profession_phi
-recall_dict***REMOVED***'IDNUM Recall'***REMOVED*** = (all_idnum_phi-phi_tag_counts***REMOVED***'IDNUM'***REMOVED***)/all_idnum_phi
-recall_dict***REMOVED***'ORGANIZATION Recall'***REMOVED*** = (all_organization_phi-phi_tag_counts***REMOVED***'ORGANIZATION'***REMOVED***)/all_organization_phi
-recall_dict***REMOVED***'PHONE Recall'***REMOVED*** = (all_phone_phi-phi_tag_counts***REMOVED***'PHONE'***REMOVED***)/all_phone_phi
-recall_dict***REMOVED***'LOCATION-OTHER Recall'***REMOVED*** = (all_location_other_phi-phi_tag_counts***REMOVED***'LOCATION-OTHER'***REMOVED***)/all_location_other_phi
-recall_dict***REMOVED***'DATE Recall'***REMOVED*** = (all_date_phi-phi_tag_counts***REMOVED***'DATE'***REMOVED***)/all_date_phi
-recall_dict***REMOVED***'EMAIL Recall'***REMOVED*** = (all_email_phi-phi_tag_counts***REMOVED***'EMAIL'***REMOVED***)/all_email_phi
-recall_dict***REMOVED***'FAX Recall'***REMOVED*** = (all_fax_phi-phi_tag_counts***REMOVED***'FAX'***REMOVED***)/all_fax_phi
-recall_dict***REMOVED***'DEVICE Recall'***REMOVED*** = (all_device_phi-phi_tag_counts***REMOVED***'DEVICE'***REMOVED***)/all_device_phi
+recall_dict['DOCTOR Recall'] = (all_doctor_phi-phi_tag_counts['DOCTOR'])/all_doctor_phi
+recall_dict['HOSPITAL Recall'] = (all_hospital_phi-phi_tag_counts['HOSPITAL'])/all_hospital_phi
+recall_dict['COUNTRY Recall'] = (all_country_phi-phi_tag_counts['COUNTRY'])/all_country_phi
+recall_dict['AGE Recall'] = (all_age_phi-phi_tag_counts['AGE'])/all_age_phi
+recall_dict['USERNAME Recall'] = (all_username_phi-phi_tag_counts['USERNAME'])/all_username_phi
+recall_dict['CITY Recall'] = (all_city_phi-phi_tag_counts['CITY'])/all_city_phi
+recall_dict['STATE Recall'] = (all_state_phi-phi_tag_counts['STATE'])/all_state_phi
+recall_dict['ZIP Recall'] = (all_zip_phi-phi_tag_counts['ZIP'])/all_zip_phi
+recall_dict['MEDICALRECORD Recall'] = (all_medicalrecord_phi-phi_tag_counts['MEDICALRECORD'])/all_medicalrecord_phi
+recall_dict['PATIENT Recall'] = (all_patient_phi-phi_tag_counts['PATIENT'])/all_patient_phi
+recall_dict['STREET Recall'] = (all_street_phi-phi_tag_counts['STREET'])/all_street_phi
+recall_dict['PROFESSION Recall'] = (all_profession_phi-phi_tag_counts['PROFESSION'])/all_profession_phi
+recall_dict['IDNUM Recall'] = (all_idnum_phi-phi_tag_counts['IDNUM'])/all_idnum_phi
+recall_dict['ORGANIZATION Recall'] = (all_organization_phi-phi_tag_counts['ORGANIZATION'])/all_organization_phi
+recall_dict['PHONE Recall'] = (all_phone_phi-phi_tag_counts['PHONE'])/all_phone_phi
+recall_dict['LOCATION-OTHER Recall'] = (all_location_other_phi-phi_tag_counts['LOCATION-OTHER'])/all_location_other_phi
+recall_dict['DATE Recall'] = (all_date_phi-phi_tag_counts['DATE'])/all_date_phi
+recall_dict['EMAIL Recall'] = (all_email_phi-phi_tag_counts['EMAIL'])/all_email_phi
+recall_dict['FAX Recall'] = (all_fax_phi-phi_tag_counts['FAX'])/all_fax_phi
+recall_dict['DEVICE Recall'] = (all_device_phi-phi_tag_counts['DEVICE'])/all_device_phi
 
 # Get totals for PHI in all notes
 
 
-json.dump(***REMOVED***fn_tags, phi_tag_lists, phi_tag_counts, recall_dict***REMOVED***, open("data/phi_tags.json", "w"), indent=4)
+json.dump([fn_tags, phi_tag_lists, phi_tag_counts, recall_dict], open("data/phi_tags.json", "w"), indent=4)
 
 

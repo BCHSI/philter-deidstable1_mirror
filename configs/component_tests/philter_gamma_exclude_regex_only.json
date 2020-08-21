@@ -1,4 +1,4 @@
-***REMOVED***  
+[  
     {
         "title":"full street address",
         "type":"regex",
@@ -147,7 +147,7 @@
         "type":"regex",
         "exclude":true,
         "filepath":"filters/regex/addresses/city_transformed.txt",
-        "notes":"This should remove anything that matches pattern ***REMOVED***name***REMOVED*** ***REMOVED***city***REMOVED***"
+        "notes":"This should remove anything that matches pattern [name] [city]"
     },
     {
         "title":"hospitalized at",
@@ -259,21 +259,21 @@
         "type":"regex",
         "exclude":true,
         "filepath":"filters/regex/addresses/to_state_transformed.txt",
-        "notes":"This should remove anything that has pattern to ***REMOVED***state name***REMOVED***"
+        "notes":"This should remove anything that has pattern to [state name]"
     },
     {
         "title":"state indicator",
         "type":"regex",
         "exclude":true,
         "filepath":"filters/regex/addresses/state_indicator_transformed.txt",
-        "notes":"This should remove anything that has pattern to ***REMOVED***state name***REMOVED***"
+        "notes":"This should remove anything that has pattern to [state name]"
     },
     {
         "title":"on streetname",
         "type":"regex",
         "exclude":true,
         "filepath":"filters/regex/addresses/streetname_only_transformed.txt",
-        "notes":"This should remove anything that has pattern on ***REMOVED***street name***REMOVED***"
+        "notes":"This should remove anything that has pattern on [street name]"
     },
     {
         "title":"box",
@@ -1204,4 +1204,4 @@
         "filepath":"filters/regex/catchall.txt",
         "notes":"This should match anything, preventing the catchall"
     }
-***REMOVED***
+]

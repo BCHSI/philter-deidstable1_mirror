@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT><![CDATA[
 
 
 Record date: 2170-02-17
@@ -206,7 +206,7 @@ Pauline Victoria Xenos,NP
 
 
 
-***REMOVED******REMOVED***></TEXT>
+]]></TEXT>
 <TAGS>
 <DATE id="P0" start="16" end="26" text="2170-02-17" TYPE="DATE" comment="" />
 <DATE id="P1" start="93" end="101" text="10/16/69" TYPE="DATE" comment="" />

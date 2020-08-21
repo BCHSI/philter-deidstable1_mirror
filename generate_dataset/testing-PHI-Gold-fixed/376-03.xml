@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT><![CDATA[
 
 
 Record date: 2074-03-25
@@ -83,7 +83,7 @@ FU in one month.  Total visit time was 40 minutes.
 
 
 
-***REMOVED******REMOVED***></TEXT>
+]]></TEXT>
 <TAGS>
 <DATE id="P0" start="16" end="26" text="2074-03-25" TYPE="DATE" comment="" />
 <DATE id="P1" start="121" end="128" text="3/20/74" TYPE="DATE" comment="" />

@@ -39,7 +39,7 @@ A list of randomly picked files.
         return random.sample(filelist, pick_number)
     except ValueError:
         print("picking number is larger than the actual file number.")
-        return ***REMOVED******REMOVED***
+        return []
 
 
 def main():
@@ -84,7 +84,7 @@ A new directory containing randomly picked files.
     # check to make sure that filepath arguments are valid
     if if_dir:
         filelist = picking(finpath, pick_number, if_recursive)
-        if not os.path.exists(foutpath) and filelist != ***REMOVED******REMOVED***:
+        if not os.path.exists(foutpath) and filelist != []:
             user_input = input("Output folder:{} does not exist, would you like to create it?: press y to create: ".format(foutpath))
             if user_input == 'y':
                 print("Creating {}".format(foutpath))

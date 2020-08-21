@@ -1,4 +1,4 @@
-***REMOVED***	
+[	
     {
         "title": "u_#_patient",
         "type": "regex",
@@ -83,7 +83,7 @@
         "filepath":"filters/regex/catchall.txt",
         "notes":"False will turn off catchall, True will turn on catchll (default)"
     }
-***REMOVED***
+]
 
 
 

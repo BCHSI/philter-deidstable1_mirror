@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT><![CDATA[
 
 
 Record date: 2089-05-11
 
-                                                       Patient Name: JARVIS,AMADOR ***REMOVED*** MRN: 0907307PCC ***REMOVED***
+                                                       Patient Name: JARVIS,AMADOR [ MRN: 0907307PCC ]
 
                                                          Date of Visit: 05/11/2089
 
@@ -94,7 +94,7 @@ O
 
 
 
-***REMOVED******REMOVED***></TEXT>
+]]></TEXT>
 <TAGS>
 <DATE id="P0" start="16" end="26" text="2089-05-11" TYPE="DATE" comment="" />
 <NAME id="P1" start="97" end="110" text="JARVIS,AMADOR" TYPE="PATIENT" comment="" />

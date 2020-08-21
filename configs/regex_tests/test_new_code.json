@@ -1,4 +1,4 @@
-***REMOVED***
+[
 	
 	{
 		"title":"YYYY/MM-YYYY/MM",
@@ -12,7 +12,7 @@
 		"type":"set",
 		"exclude":false,
 		"filepath":"filters/whitelists/whitelist.pkl",
-		"pos":***REMOVED******REMOVED***,
+		"pos":[],
 		"notes":"These are words we beleive are safe"
 	},
 	{
@@ -23,4 +23,4 @@
 		"notes":"False will turn off catchall, True will turn on catchll (default)"
 	}
 
-***REMOVED***
+]

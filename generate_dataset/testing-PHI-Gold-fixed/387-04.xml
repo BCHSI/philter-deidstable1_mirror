@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT><![CDATA[
 
 
 Record date: 2084-06-15
@@ -61,7 +61,7 @@ Pager 43771
 
 
 
-***REMOVED******REMOVED***></TEXT>
+]]></TEXT>
 <TAGS>
 <DATE id="P0" start="16" end="26" text="2084-06-15" TYPE="DATE" comment="" />
 <NAME id="P1" start="39" end="56" text="Patrick Gillespie" TYPE="PATIENT" comment="" />

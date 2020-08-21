@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT><![CDATA[
 
 
 Record date: 2069-10-07
@@ -49,19 +49,19 @@ Modestly confused but not agitated. Does recognize PCP. Does not know date or ti
 VITALS:  99.0   hr 80-101 R   BP  150/76 .GEN&#8217;L    NAD, AO X 2 (&#8220;Superior Memorial Hospital)HEENT   MMM, no scleral icterus, no pale conjunctiva. No roth spots. NECK     supple, no thyromegaly, no LAD, no carotid bruits. + 10cm JVOP Heart:     RRR, no m/r/gLUNG:  Bibasilar crackles. No wheezeABD:      Soft, non-tender, obese, NABS. No HSM. No masses, no rebound. EXT:     RLE in Vac dressing. Wound open without surrounding erythema.NEURO: AO x 3; alert; CN II-XII grossly intact; Motor: 5/5 B UE/LE; sensation dinished to light tough, proprioception. Full neurologic eval per neurology assessment  Data: Date/Time         NA             K              CL             CO2            10/07/2069        136            4.4            100            24.5           10/07/2069        138            4.7            100            26.4           10/06/2069        136            4.7            99 (L)         26.6           10/06/2069        136            4.2            98 (L)         
 
 
-Date/Time         BUN            CRE            EGFR           GLU            10/07/2069        35 (H)         6.64 (H)       9 ***REMOVED***1***REMOVED***          124 (H)        10/07/2069        35 (H)         6.38 (H)       9 ***REMOVED***2***REMOVED***          106            10/06/2069        34 (H)         6.33 (H)       10 ***REMOVED***3***REMOVED***         141 (H)        
+Date/Time         BUN            CRE            EGFR           GLU            10/07/2069        35 (H)         6.64 (H)       9 [1]          124 (H)        10/07/2069        35 (H)         6.38 (H)       9 [2]          106            10/06/2069        34 (H)         6.33 (H)       10 [3]         141 (H)        
 
 
 Date/Time         ANION          10/07/2069        12             10/07/2069        12             10/06/2069        10             
 Date/Time         CA             PHOS           MG             ALB            10/07/2069        8.5            5.0 (H)        2.0            3.0 (L)        10/07/2069        8.5            4.8 (H)        2.0                           10/06/2069        8.7                                                         10/06/2069        8.4 (L)        4.0            2.0            3.4            
-Date/Time         25 OH-VITD     10/02/2069        23 (L)***REMOVED***13***REMOVED***     Date/Time         CK             CK-MB          CKMBRI         TROP-T         10/07/2069        25 (L)         2.7            SEE DETAIL***REMOVED***14***REMOVED*** 0.07           10/06/2069        32 (L)         2.8            SEE DETAIL***REMOVED***15***REMOVED*** 0.08           Date/Time         FE             TIBC           FER            10/02/2069        23 (L)         156 (L)        501 (H)        Date/Time         PTH            10/02/2069        66 (H)         
+Date/Time         25 OH-VITD     10/02/2069        23 (L)[13]     Date/Time         CK             CK-MB          CKMBRI         TROP-T         10/07/2069        25 (L)         2.7            SEE DETAIL[14] 0.07           10/06/2069        32 (L)         2.8            SEE DETAIL[15] 0.08           Date/Time         FE             TIBC           FER            10/02/2069        23 (L)         156 (L)        501 (H)        Date/Time         PTH            10/02/2069        66 (H)         
 Date/Time         WBC            RBC            HGB            HCT            10/07/2069        13.9 (H)       3.42 (L)       9.7 (L)        29.4 (L)       10/07/2069        16.4 (H)       3.34 (L)       9.6 (L)        29.2 (L)       10/06/2069        14.6 (H)       3.58 (L)       10.0 (L)       31.2 (L)       
 Date/Time         MCV            MCH            MCHC           PLT            10/07/2069        86             28.2           32.9           372            10/07/2069        88             28.8           32.9           372            10/06/2069        87             28.0           32.1           
 
 
 
 
-Date/Time         RETIC          10/02/2069        1.6            Date/Time         PT             PT-INR         PTT            10/07/2069        17.6 (H)       1.6            30.6           10/01/2069        17.3 (H)       1.6            29.2 ***REMOVED***21***REMOVED***      Date/Time         HBV-SAB        HBV-SAG        HCVAB          10/02/2069        EQUIVOCAL      Non-Reactive   Non-Reactive   Date/Time         VANC           TR-VANC        10/07/2069        13.2 ***REMOVED***22***REMOVED***                     10/04/2069        38.6 ***REMOVED***23***REMOVED***                     
+Date/Time         RETIC          10/02/2069        1.6            Date/Time         PT             PT-INR         PTT            10/07/2069        17.6 (H)       1.6            30.6           10/01/2069        17.3 (H)       1.6            29.2 [21]      Date/Time         HBV-SAB        HBV-SAG        HCVAB          10/02/2069        EQUIVOCAL      Non-Reactive   Non-Reactive   Date/Time         VANC           TR-VANC        10/07/2069        13.2 [22]                     10/04/2069        38.6 [23]                     
 
 
   Specimen Type:     BLOOD CULTURE
@@ -98,7 +98,7 @@ ____________________________________Paul Anthony Jaramillo, M.D.Pager # 52666.Sh
 
 
 
-***REMOVED******REMOVED***></TEXT>
+]]></TEXT>
 <TAGS>
 <DATE id="P0" start="16" end="26" text="2069-10-07" TYPE="DATE" comment="" />
 <LOCATION id="P1" start="28" end="31" text="IMC" TYPE="HOSPITAL" comment="" />

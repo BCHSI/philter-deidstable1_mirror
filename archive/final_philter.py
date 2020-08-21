@@ -9,7 +9,7 @@ blacklist = json.load(open("data/fn_blacklist.json", "r"))
 
 with open("data/summary_text.txt", "r") as f:
     
-    ignore = set(***REMOVED***"FN","number:", "False","Negative:", ""***REMOVED***)
+    ignore = set(["FN","number:", "False","Negative:", ""])
     reading = False
     for line in f:
         if line.startswith("False Negative:"):
@@ -23,8 +23,8 @@ with open("data/summary_text.txt", "r") as f:
                 if w not in ignore:
                     w = w.lower().strip()
                     if w not in blacklist:
-                        blacklist***REMOVED***w***REMOVED*** = 0
-                    blacklist***REMOVED***w***REMOVED*** += 1
+                        blacklist[w] = 0
+                    blacklist[w] += 1
 
 json.dump(blacklist, open("data/fn_blacklist.json", "w"), indent=4)
 
@@ -42,8 +42,8 @@ for root, dirs, files in os.walk("data/i2b2_results_002/"):
     for filename in files:
         orig_f = root+filename
         encoding = detect_encoding(orig_f)
-        txt = open(orig_f,"r", encoding=encoding***REMOVED***'encoding'***REMOVED***).read()
-        content = ***REMOVED******REMOVED***
+        txt = open(orig_f,"r", encoding=encoding['encoding']).read()
+        content = []
         with open(foutpath+filename, "w") as f:
 
             for w in  re.split("\s+", txt):

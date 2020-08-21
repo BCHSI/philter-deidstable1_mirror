@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT><![CDATA[
 
 
 Record date: 2071-01-30
@@ -159,7 +159,7 @@ Signed electronically by   Steven  Vega MD  on  Feb 3, 2071
 
 
 
-***REMOVED******REMOVED***></TEXT>
+]]></TEXT>
 <TAGS>
 <DATE id="P0" start="16" end="26" text="2071-01-30" TYPE="DATE" comment="" />
 <LOCATION id="P1" start="40" end="66" text="BETHESDA MEMORIAL HOSPITAL" TYPE="HOSPITAL" comment="" />

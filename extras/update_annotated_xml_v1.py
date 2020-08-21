@@ -35,13 +35,13 @@ def extractXML(directory,filename,philter_or_gold,verbose):
             root = tree.getroot()
             xmlstr = ET.tostring(root, encoding='utf8', method='xml')
             text = root.find('TEXT').text
-            xml_dict = xmltodict.parse(xmlstr)***REMOVED***philter_or_gold***REMOVED***
+            xml_dict = xmltodict.parse(xmlstr)[philter_or_gold]
             #xml_dict = xmltodict.parse(re.sub(r'\^@',r'',input_xml,flags=re.M))
-            #text = xml_dict***REMOVED***"TEXT"***REMOVED***
+            #text = xml_dict["TEXT"]
             #print(text)
             check_tags = root.find('TAGS')
             if check_tags is not None:
-               tags_dict = xml_dict***REMOVED***"TAGS"***REMOVED***            
+               tags_dict = xml_dict["TAGS"]            
             else:
                tags_dict = ''
         return text,tags_dict
@@ -55,10 +55,10 @@ def check_existing_phi(filename,note_text, tag_dict,philter_start, philter_end):
               #               or a dictionary of the metadata about a phi element
            if isinstance(value, list):
               for final_value in value:
-                  text_start = final_value***REMOVED***"@spans"***REMOVED***.split('~')***REMOVED***0***REMOVED*** 
-                  text_end = final_value***REMOVED***"@spans"***REMOVED***.split('~')***REMOVED***1***REMOVED***
-                  philter_text = final_value***REMOVED***"@text"***REMOVED***
-                  phi_type = final_value***REMOVED***"@TYPE"***REMOVED***
+                  text_start = final_value["@spans"].split('~')[0] 
+                  text_end = final_value["@spans"].split('~')[1]
+                  philter_text = final_value["@text"]
+                  phi_type = final_value["@TYPE"]
                   if phi_type == "DATE" or phi_type == "Date" or phi_type == "HOLIDAYS":
                      #print(philter_start +'\t' + text_start + '\t' + philter_end + '\t' + text_end)
                      if int(philter_start) >= int(text_start) and int(philter_end) <= int(text_end):                      
@@ -72,10 +72,10 @@ def check_existing_phi(filename,note_text, tag_dict,philter_start, philter_end):
                          print(filename + " PHI overalp" + " " + philter_start + " " + philter_end + " " + text_start + " " + text_end)   
            else:
                final_value = value
-               text = final_value***REMOVED***"@text"***REMOVED***
-               phi_type = final_value***REMOVED***"@TYPE"***REMOVED***
-               text_start = final_value***REMOVED***"@spans"***REMOVED***.split('~')***REMOVED***0***REMOVED***
-               text_end = final_value***REMOVED***"@spans"***REMOVED***.split('~')***REMOVED***1***REMOVED***
+               text = final_value["@text"]
+               phi_type = final_value["@TYPE"]
+               text_start = final_value["@spans"].split('~')[0]
+               text_end = final_value["@spans"].split('~')[1]
                if phi_type == "DATE" or phi_type == "Date" or phi_type == "HOLIDAYS":
                   if ((philter_start >= text_start) & (philter_start <= text_end)):       
                      existing_phi_value = True
@@ -85,14 +85,14 @@ def check_existing_phi(filename,note_text, tag_dict,philter_start, philter_end):
 def update_xml_head(note_text,tags_dict):
         """Creates a string in i2b2-XML format. This function just creates the string with the xml text. The tags string is created in another function"""
         root = "PhilterUCSF"
-        contents_head = ***REMOVED******REMOVED***
-        #tagdata***REMOVED***'text'***REMOVED*** = re.sub(r'\^@',' ',tagdata***REMOVED***'text'***REMOVED***)
+        contents_head = []
+        #tagdata['text'] = re.sub(r'\^@',' ',tagdata['text'])
         
         contents_head.append("<?xml version=\"1.0\" ?>\n")
         contents_head.append("<"+root+">\n")
-        contents_head.append("<TEXT><!***REMOVED***CDATA***REMOVED***")
+        contents_head.append("<TEXT><![CDATA[")
         contents_head.append(note_text)
-        contents_head.append("***REMOVED******REMOVED***></TEXT>\n")
+        contents_head.append("]]></TEXT>\n")
         contents_head.append("<TAGS>\n")
         return "".join(contents_head)
 
@@ -109,16 +109,16 @@ def contents_append(tags_dict,phi_type,input_type,count,count_h):
            count_h = count_h + 1
         else:
            contents.append(" id=\"")
-           contents.append(str(tags_dict***REMOVED***"@id"***REMOVED***))
+           contents.append(str(tags_dict["@id"]))
         contents.append("\" spans=\"")
         if input_type == "Gold":        
-           contents.append(str(tags_dict***REMOVED***"@spans"***REMOVED***))
+           contents.append(str(tags_dict["@spans"]))
         else:
-           contents.append(str(tags_dict***REMOVED***"@start"***REMOVED***))
+           contents.append(str(tags_dict["@start"]))
            contents.append("~")
-           contents.append(str(tags_dict***REMOVED***"@end"***REMOVED***))
+           contents.append(str(tags_dict["@end"]))
         contents.append("\" text=\"")
-        contents.append(str(tags_dict***REMOVED***"@text"***REMOVED***))
+        contents.append(str(tags_dict["@text"]))
         contents.append("\" TYPE=\"")
         contents.append(phi_type)
         contents.append("\" comment=\"\" />\n")
@@ -137,41 +137,41 @@ def update_xml_tags(tags_dict,final_value):
               #               or a dictionary of the metadata about a phi element
                if isinstance(value, list):
                   for tag_value in value:  
-                      phi_type = tag_value***REMOVED***"@TYPE"***REMOVED*** 
+                      phi_type = tag_value["@TYPE"] 
                       tagcategory = phi_type
                       
-                      if int(tag_value***REMOVED***"@spans"***REMOVED***.split('~')***REMOVED***0***REMOVED***) >= int(final_value***REMOVED***"@start"***REMOVED***):
+                      if int(tag_value["@spans"].split('~')[0]) >= int(final_value["@start"]):
                         if not inserted:
-                          count,count_h,contents = contents_append(final_value, final_value***REMOVED***"@TYPE"***REMOVED***, "Philter", count,count_h)
+                          count,count_h,contents = contents_append(final_value, final_value["@TYPE"], "Philter", count,count_h)
                           inserted = True
                         count,count_h,contents = contents_append(tag_value,phi_type, "Gold", count,count_h) 
                        
-                      elif (int(tag_value***REMOVED***"@spans"***REMOVED***.split('~')***REMOVED***0***REMOVED***) < int(final_value***REMOVED***"@start"***REMOVED***)):   
+                      elif (int(tag_value["@spans"].split('~')[0]) < int(final_value["@start"])):   
                         count,count_h,contents = contents_append(tag_value,phi_type, "Gold", count,count_h)
                       
                       if not inserted and i == len(tags_dict)-1:
                          inserted = True
-                         count,count_h,contents = contents_append(final_value, final_value***REMOVED***"@TYPE"***REMOVED***, "Philter", count,count_h)
+                         count,count_h,contents = contents_append(final_value, final_value["@TYPE"], "Philter", count,count_h)
                else:
-                  if int(value***REMOVED***"@spans"***REMOVED***.split('~')***REMOVED***0***REMOVED***) >= int(final_value***REMOVED***"@start"***REMOVED***):
+                  if int(value["@spans"].split('~')[0]) >= int(final_value["@start"]):
                      if not inserted:
-                        count,count_h,contents = contents_append(final_value, final_value***REMOVED***"@TYPE"***REMOVED***, "Philter", count,count_h)
+                        count,count_h,contents = contents_append(final_value, final_value["@TYPE"], "Philter", count,count_h)
                         inserted = True
-                     count,count_h,contents = contents_append(value,value***REMOVED***"@TYPE"***REMOVED***, "Gold", count,count_h)
-                  elif (int(value***REMOVED***"@spans"***REMOVED***.split('~')***REMOVED***0***REMOVED***) < int(final_value***REMOVED***"@start"***REMOVED***)):
-                     count,count_h,contents = contents_append(value,value***REMOVED***"@TYPE"***REMOVED***, "Gold", count,count_h)
+                     count,count_h,contents = contents_append(value,value["@TYPE"], "Gold", count,count_h)
+                  elif (int(value["@spans"].split('~')[0]) < int(final_value["@start"])):
+                     count,count_h,contents = contents_append(value,value["@TYPE"], "Gold", count,count_h)
                   if not inserted and i == len(tags_dict)-1:
-                     count,count_h,contents = contents_append(final_value, final_value***REMOVED***"@TYPE"***REMOVED***, "Philter", count,count_h)
+                     count,count_h,contents = contents_append(final_value, final_value["@TYPE"], "Philter", count,count_h)
                      inserted = True
         else:
-            count,count_h,contents = contents_append(final_value, final_value***REMOVED***"@TYPE"***REMOVED***, "Philter", count,count_h)
+            count,count_h,contents = contents_append(final_value, final_value["@TYPE"], "Philter", count,count_h)
             inserted = True
         return contents
 
 
 def update_xml_tail():
         """ Creates a string in i2b2 xml format """
-        contents_tail = ***REMOVED******REMOVED***
+        contents_tail = []
         root = "PhilterUCSF"
         contents_tail.append("</TAGS>\n")
         contents_tail.append("</"+root+">\n")
@@ -180,9 +180,9 @@ def update_xml_tail():
 
 
 
-xml_dir = sys.argv***REMOVED***1***REMOVED***
-philter_dir = sys.argv***REMOVED***2***REMOVED***
-out_dir = sys.argv***REMOVED***3***REMOVED***
+xml_dir = sys.argv[1]
+philter_dir = sys.argv[2]
+out_dir = sys.argv[3]
 """ For loop to traverse through each of the files in the annotated xml folders"""
 for filename in os.listdir(xml_dir): 
     existing_phi = set()
@@ -193,7 +193,7 @@ for filename in os.listdir(xml_dir):
        verbose = False          
        note_text,tags_dict = extractXML(xml_dir,filename,philter_or_gold,verbose)
        philter_xml = filename.split('.',1)
-       philter_xml_file = philter_xml***REMOVED***0***REMOVED***+'.xml'
+       philter_xml_file = philter_xml[0]+'.xml'
        #philter_dir = '/data/radhakrishnanl/philter/annotator_output'
        #philter_dir = './philter_test'
        philter_or_gold = 'Philter' 
@@ -208,40 +208,40 @@ for filename in os.listdir(xml_dir):
 
               if isinstance(value, list):
                  for final_value in value:
-                     text_start = final_value***REMOVED***"@start"***REMOVED***
-                     text_end = final_value***REMOVED***"@end"***REMOVED***
-                     philter_text = final_value***REMOVED***"@text"***REMOVED***
-                     philter_phi_type = final_value***REMOVED***"@TYPE"***REMOVED***
+                     text_start = final_value["@start"]
+                     text_end = final_value["@end"]
+                     philter_text = final_value["@text"]
+                     philter_phi_type = final_value["@TYPE"]
                      if philter_phi_type == "DATE" or philter_phi_type == "Date" or phi_type == "HOLIDAYS":
                         existing_phi_new_val = check_existing_phi(filename,note_text, tags_dict, text_start, text_end)
                         if existing_phi_new_val:
                            #_type == "DATE" or phi_type == "Date":
-                           #print(final_value***REMOVED***"@id"***REMOVED***)
-                           existing_phi.add(final_value***REMOVED***"@id"***REMOVED***)
+                           #print(final_value["@id"])
+                           existing_phi.add(final_value["@id"])
               else:
                   final_value = value
-                  text = final_value***REMOVED***"@text"***REMOVED***
-                  phi_type = final_value***REMOVED***"@TYPE"***REMOVED***
-                  text_start = final_value***REMOVED***"@start"***REMOVED***
-                  text_end = final_value***REMOVED***"@end"***REMOVED***
+                  text = final_value["@text"]
+                  phi_type = final_value["@TYPE"]
+                  text_start = final_value["@start"]
+                  text_end = final_value["@end"]
                   if phi_type == "DATE" or phi_type == "Date" or phi_type == "HOLIDAYS":
                      existing_phi_new_val = check_existing_phi(filename,note_text, tags_dict, text_start, text_end)
                      if existing_phi_new_val:
-                        existing_phi.add(final_value***REMOVED***"@id"***REMOVED***)
+                        existing_phi.add(final_value["@id"])
           #print(existing_phi) 
-          contents = ***REMOVED******REMOVED***
+          contents = []
           found_new = False
           for key, value in philter_tags_dict.items():
               if isinstance(value, list):
                  for final_value in value:
-                     if final_value***REMOVED***"@id"***REMOVED*** not in existing_phi:
+                     if final_value["@id"] not in existing_phi:
                         found_new = True
                         #print(filename) 
-                        #print(final_value***REMOVED***"@start"***REMOVED*** + '\t' + final_value***REMOVED***"@end"***REMOVED*** + '\t' + final_value***REMOVED***"@text"***REMOVED*** + "\t" + final_value***REMOVED***"@id"***REMOVED***)
+                        #print(final_value["@start"] + '\t' + final_value["@end"] + '\t' + final_value["@text"] + "\t" + final_value["@id"])
                         contents = update_xml_tags(tags_dict,final_value)
               else:  
                   final_value = value        
-                  if final_value***REMOVED***"@id"***REMOVED*** not in existing_phi:
+                  if final_value["@id"] not in existing_phi:
                      found_new = True
                      contents = update_xml_tags(tags_dict,final_value)
           if found_new:

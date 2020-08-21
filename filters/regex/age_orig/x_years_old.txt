@@ -1,1 +1,1 @@
-\b(***REMOVED***9***REMOVED******REMOVED***0-9***REMOVED***|***REMOVED***1***REMOVED******REMOVED***0-9***REMOVED******REMOVED***0-9***REMOVED***)(?=\syears old|\sYEARS OLD)\b
+\b([9][0-9]|[1][0-9][0-9])(?=\syears old|\sYEARS OLD)\b

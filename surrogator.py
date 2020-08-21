@@ -28,9 +28,9 @@ def extractXML(directory,filename,philter_or_gold,verbose):
 	tree = ET.parse(file_to_parse)
 	root = tree.getroot()
 	xmlstr = ET.tostring(root, encoding='utf8', method='xml')
-	xml_dict = xmltodict.parse(xmlstr)***REMOVED***philter_or_gold***REMOVED***
-	text = xml_dict***REMOVED***"TEXT"***REMOVED***
-	tags_dict = xml_dict***REMOVED***"TAGS"***REMOVED***
+	xml_dict = xmltodict.parse(xmlstr)[philter_or_gold]
+	text = xml_dict["TEXT"]
+	tags_dict = xml_dict["TAGS"]
 	return text,tags_dict,xmlstr
 
 def parse_xml_files(directory,output_directory,philter_or_gold,write_surrogated_files,problem_files_log,verbose):
@@ -44,7 +44,7 @@ def parse_xml_files(directory,output_directory,philter_or_gold,write_surrogated_
     surrogate_log - a record of all of the surrogates we apply
     problem_files_log - a list of files we could not parse
 	"""
-	cols = ***REMOVED***"Document", "PHI_element", "Text", "Type","Comment"***REMOVED***
+	cols = ["Document", "PHI_element", "Text", "Type","Comment"]
 	output_df = pd.DataFrame(columns = cols,index=None)
 	new_dict = dict()
 	filename_dates = {}
@@ -67,27 +67,27 @@ def parse_xml_files(directory,output_directory,philter_or_gold,write_surrogated_
 				if isinstance(value, list):
 					for final_value in value:
 						if philter_or_gold == "PhilterUCSF":
-							text_start = final_value***REMOVED***"@spans"***REMOVED***.split('~')***REMOVED***0***REMOVED***
-							text_end = final_value***REMOVED***"@spans"***REMOVED***.split('~')***REMOVED***1***REMOVED***
+							text_start = final_value["@spans"].split('~')[0]
+							text_end = final_value["@spans"].split('~')[1]
 						else:
-							text_start = final_value***REMOVED***"@start"***REMOVED***
-							text_end = final_value***REMOVED***"@end"***REMOVED***
-						text = final_value***REMOVED***"@text"***REMOVED***
-						phi_type = final_value***REMOVED***"@TYPE"***REMOVED***
+							text_start = final_value["@start"]
+							text_end = final_value["@end"]
+						text = final_value["@text"]
+						phi_type = final_value["@TYPE"]
 						if phi_type == "DATE" or phi_type == "Date": 
 							xmlstr,date_shift_log = shift_dates(filename_dates,filename,xmlstr,text,date_shift_log,note_text,text_start,text_end,verbose)
 						else:
 							xmlstr,surrogate_log = replace_other_surrogate(filename,xmlstr,text,phi_type,surrogate_log,verbose)								
 				else:
 					final_value = value
-					text = final_value***REMOVED***"@text"***REMOVED***
-					phi_type = final_value***REMOVED***"@TYPE"***REMOVED***
+					text = final_value["@text"]
+					phi_type = final_value["@TYPE"]
 					if philter_or_gold == "PhilterUCSF":
-						text_start = final_value***REMOVED***"@spans"***REMOVED***.split('~')***REMOVED***0***REMOVED***
-						text_end = final_value***REMOVED***"@spans"***REMOVED***.split('~')***REMOVED***1***REMOVED***
+						text_start = final_value["@spans"].split('~')[0]
+						text_end = final_value["@spans"].split('~')[1]
 					else:
-						text_start = final_value***REMOVED***"@start"***REMOVED***
-						text_end = final_value***REMOVED***"@end"***REMOVED***
+						text_start = final_value["@start"]
+						text_end = final_value["@end"]
 
 					if phi_type == "DATE" or phi_type == "Date":
 						xmlstr,date_shift_log = shift_dates(filename_dates,filename,xmlstr,text,date_shift_log,note_text,text_start,text_end,verbose)
@@ -98,8 +98,8 @@ def parse_xml_files(directory,output_directory,philter_or_gold,write_surrogated_
 			output_dir = output_directory+filename.replace(".xml",".txt")
 			try:
 				xmlstr = xmlstr.decode('utf-8', 'ignore')
-				output_xml_dict = xmltodict.parse(xmlstr)***REMOVED***philter_or_gold***REMOVED***
-				output_text = output_xml_dict***REMOVED***"TEXT"***REMOVED***
+				output_xml_dict = xmltodict.parse(xmlstr)[philter_or_gold]
+				output_text = output_xml_dict["TEXT"]
 				if write_surrogated_files:
 					with open(output_dir, "w") as text_file:
 						text_file.write(output_text)
@@ -112,8 +112,8 @@ def parse_xml_files(directory,output_directory,philter_or_gold,write_surrogated_
 				problem_files_log = problem_files_log.append({"filename":filename,"philter_or_gold":philter_or_gold,"xml_parse_error":xml_parse_error},ignore_index=True)
 
 	if verbose:
-		date_shift_log.columns = ***REMOVED***"Filename", "start", "end", "Input Date","Parsed Date", "Shifted Date","Time Delta","date_context"***REMOVED***
-		surrogate_log.columns = ***REMOVED***"filename", "text", "phi_type"***REMOVED***
+		date_shift_log.columns = ["Filename", "start", "end", "Input Date","Parsed Date", "Shifted Date","Time Delta","date_context"]
+		surrogate_log.columns = ["filename", "text", "phi_type"]
 	return date_shift_log, surrogate_log, problem_files_log
 
 # date shift functions
@@ -140,17 +140,17 @@ def lookup_date_shift(filename,filename_dates):
 	metadata_mapping_dict = pd.Series(notes_metadata.date_offset.values,index=notes_metadata.note_csn_id).to_dict()
 
 	if file_prefix in metadata_mapping_dict:
-		dateshift = metadata_mapping_dict***REMOVED***file_prefix***REMOVED***
+		dateshift = metadata_mapping_dict[file_prefix]
 		time_delta = timedelta(days=dateshift)
 	else:
 		print ("metadata not found. generating random date_shift")
 
 		if filename not in filename_dates:
 			day,month,year,now = generate_random_date()
-			filename_dates***REMOVED***filename***REMOVED*** = ***REMOVED***day,month,year,now***REMOVED***
+			filename_dates[filename] = [day,month,year,now]
 
 		else:
-			day,month,year,now = filename_dates***REMOVED***filename***REMOVED***
+			day,month,year,now = filename_dates[filename]
 		    #print (("shifting by " + str(day) + " days and by "+ str(month) + " months"))
 		time_delta = timedelta(weeks=month*4,days=day)
 
@@ -172,7 +172,7 @@ def get_context_around_date(date,text_start,text_end,note_text):
     else:
         text_end = text_end + 40
 
-    date_context = (note_text***REMOVED***text_start:text_end***REMOVED***).replace(date, "***REMOVED******REMOVED***" + date + "***REMOVED******REMOVED***")
+    date_context = (note_text[text_start:text_end]).replace(date, "[[" + date + "]]")
 
     return date_context
 
@@ -224,15 +224,15 @@ def parse_date_ranges(date_range,time_delta):
     Philter currently has regex's that tag date ranges.
     So, we must identify these and separately shift both elements of the daterange
     """
-    list_of_date_range_regex = ***REMOVED***"filters/regex/dates/YYYY_MM-YYYY_MM_transformed.txt","filters/regex/dates/MM_DD_YY-MM_DD_YY_transformed.txt","filters/regex/dates/MM_YYYY-MM_YYYY_transformed.txt","filters/regex/dates/MM_YY-MM_YY_transformed.txt","filters/regex/dates/MM_YYYY-MM_YYYY_transformed.txt","filters/regex/dates/MM_DD-MM_DD_transformed.txt","filters/regex/dates/DD_MM-DD_MM_transformed.txt"***REMOVED***
+    list_of_date_range_regex = ["filters/regex/dates/YYYY_MM-YYYY_MM_transformed.txt","filters/regex/dates/MM_DD_YY-MM_DD_YY_transformed.txt","filters/regex/dates/MM_YYYY-MM_YYYY_transformed.txt","filters/regex/dates/MM_YY-MM_YY_transformed.txt","filters/regex/dates/MM_YYYY-MM_YYYY_transformed.txt","filters/regex/dates/MM_DD-MM_DD_transformed.txt","filters/regex/dates/DD_MM-DD_MM_transformed.txt"]
     for filepath in list_of_date_range_regex:
         compiled_regex = precompile(filepath)
 
         matches = compiled_regex.search(date_range)
         if matches:
             match = matches.group(0)
-            start_date_range = match.split("-")***REMOVED***0***REMOVED***
-            end_date_range = match.split("-")***REMOVED***1***REMOVED***
+            start_date_range = match.split("-")[0]
+            end_date_range = match.split("-")[1]
             break
 
     input_start_date,output_start_date = parse_and_shift_date(start_date_range,time_delta)
@@ -254,21 +254,21 @@ def shift_dates(filename_dates,filename,xmlstr,date,date_shift_log,note_text,tex
 
     if dt !=None and dt.year > 1900:
         input_date,output_shifted_date = parse_and_shift_date(date,time_delta)
-        date_shift_log = date_shift_log.append(***REMOVED***(filename,text_start,text_end,date,input_date,output_shifted_date,time_delta_str,date_context)***REMOVED***)
-        output_xml = xmlstr.replace(date.encode(),output_shifted_date.encode()+ b" ***REMOVED***SHIFTED DATE***REMOVED***")
+        date_shift_log = date_shift_log.append([(filename,text_start,text_end,date,input_date,output_shifted_date,time_delta_str,date_context)])
+        output_xml = xmlstr.replace(date.encode(),output_shifted_date.encode()+ b" [SHIFTED DATE]")
     else:
         try:
             start_date_range,end_date_range,start_dt_plus_arbitrary,end_dt_plus_arbitrary = parse_date_ranges(date,time_delta)
-            output_xml = xmlstr.replace(start_date_range.encode(),start_dt_plus_arbitrary.encode() + b" ***REMOVED***SHIFTED DATE***REMOVED***")
-            output_xml = xmlstr.replace(end_date_range.encode(),end_dt_plus_arbitrary.encode() + b" ***REMOVED***SHIFTED DATE***REMOVED***")
+            output_xml = xmlstr.replace(start_date_range.encode(),start_dt_plus_arbitrary.encode() + b" [SHIFTED DATE]")
+            output_xml = xmlstr.replace(end_date_range.encode(),end_dt_plus_arbitrary.encode() + b" [SHIFTED DATE]")
             if verbose:
-                date_shift_log = date_shift_log.append(***REMOVED***(filename,text_start,text_end,date,start_date_range,start_dt_plus_arbitrary,time_delta_str,date_context)***REMOVED***)
-                date_shift_log = date_shift_log.append(***REMOVED***(filename,text_start,text_end,date,end_date_range,end_dt_plus_arbitrary,time_delta_str,date_context)***REMOVED***)
+                date_shift_log = date_shift_log.append([(filename,text_start,text_end,date,start_date_range,start_dt_plus_arbitrary,time_delta_str,date_context)])
+                date_shift_log = date_shift_log.append([(filename,text_start,text_end,date,end_date_range,end_dt_plus_arbitrary,time_delta_str,date_context)])
 
         except:
             output_xml = xmlstr.replace(date.encode(),b"cannot parse date")
             if verbose:
-                date_shift_log = date_shift_log.append(***REMOVED***(filename,text_start,text_end,date,"cannot parse date","cannot parse date",time_delta_str,date_context)***REMOVED***)
+                date_shift_log = date_shift_log.append([(filename,text_start,text_end,date,"cannot parse date","cannot parse date",time_delta_str,date_context)])
 
     return output_xml,date_shift_log
 
@@ -282,7 +282,7 @@ def replace_other_surrogate(filename,xmlstr,text,phi_type,surrogate_log,verbose)
 	else:
 		output_xml = xmlstr.replace(text.encode(),b"***"+phi_type.encode()+b"***")
 	if verbose:
-		surrogate_log = surrogate_log.append(***REMOVED***(filename,text,phi_type)***REMOVED***)
+		surrogate_log = surrogate_log.append([(filename,text,phi_type)])
 
 	return output_xml,surrogate_log
 
@@ -301,13 +301,13 @@ def write_logs(output_directory,date_shift_log, surrogate_log):
 def write_summary(date_shift_log,surrogate_log,output_directory):
 	"""Writes an evaluation summary surrogator. These are summaries from the different log files"""
 
-	total_dates_we_cannot_parse = str(date_shift_log***REMOVED***date_shift_log***REMOVED***'Shifted Date'***REMOVED*** == "cannot parse date"***REMOVED***.count()***REMOVED***"Shifted Date"***REMOVED***)
-	total_dates_we_can_parse = str(date_shift_log***REMOVED***date_shift_log***REMOVED***'Shifted Date'***REMOVED*** != "cannot parse date"***REMOVED***.count()***REMOVED***"Shifted Date"***REMOVED***)
+	total_dates_we_cannot_parse = str(date_shift_log[date_shift_log['Shifted Date'] == "cannot parse date"].count()["Shifted Date"])
+	total_dates_we_can_parse = str(date_shift_log[date_shift_log['Shifted Date'] != "cannot parse date"].count()["Shifted Date"])
 	print ("Summary of Date shifts \nTotal dates cannot parse: " + total_dates_we_cannot_parse)
 	print ("Total dates parsed: " + total_dates_we_can_parse)
 
-	counts_by_phi_type = surrogate_log.groupby(***REMOVED***"phi_type"***REMOVED***).size()
-	counts_by_phi_type.cols = ***REMOVED***"phi_type","count"***REMOVED***
+	counts_by_phi_type = surrogate_log.groupby(["phi_type"]).size()
+	counts_by_phi_type.cols = ["phi_type","count"]
 	counts_by_phi_type.to_csv(output_directory + "/counts_by_phi_type.csv",sep="|")
 	print ("\nCounts of text surrogated by phi_type:" )
 	print (counts_by_phi_type)
@@ -317,33 +317,33 @@ def date_shift_evaluation(output_directory,date_shift_log_gold,date_shift_log,pr
 	Prints( a summary of the true positives, false positives and false negatives)
     Saves a more granular file of all of these to output_directory
 	"""
-        s1 = pd.merge(date_shift_log_gold, date_shift_log,indicator=True, how='outer', on=***REMOVED***'Filename','start','end','Input Date'***REMOVED***)
-	output_eval = s1***REMOVED******REMOVED***"Filename","Input Date","_merge"***REMOVED******REMOVED***
+        s1 = pd.merge(date_shift_log_gold, date_shift_log,indicator=True, how='outer', on=['Filename','start','end','Input Date'])
+	output_eval = s1[["Filename","Input Date","_merge"]]
 	output_eval = output_eval.rename(index=str, columns={"_merge": "classification"})
-	output_eval***REMOVED***"classification"***REMOVED*** = output_eval***REMOVED***'classification'***REMOVED***.replace({'both': 'true positive','left_only': 'false positive', 'right_only': 'false negative'})
-	output_eval***REMOVED***"description"***REMOVED*** = output_eval***REMOVED***'classification'***REMOVED***.replace({'true positive':'appears in both gold and philter','false positive':'appears in gold notes only', 'false negative':'appears in philter notes only'})
+	output_eval["classification"] = output_eval['classification'].replace({'both': 'true positive','left_only': 'false positive', 'right_only': 'false negative'})
+	output_eval["description"] = output_eval['classification'].replace({'true positive':'appears in both gold and philter','false positive':'appears in gold notes only', 'false negative':'appears in philter notes only'})
 
 
 	if problem_files_log.empty == False:
-		problem_filenames = problem_files_log***REMOVED***'filename'***REMOVED***.tolist()
-		output_eval = output_eval.loc***REMOVED***~output_eval***REMOVED***'Filename'***REMOVED***.isin(problem_filenames)***REMOVED***
+		problem_filenames = problem_files_log['filename'].tolist()
+		output_eval = output_eval.loc[~output_eval['Filename'].isin(problem_filenames)]
 
 
 	output_eval.to_csv(output_directory+"date_shift_eval.csv", index=False,sep="|")
 
 	# count of True positives (shows in both)
-	s1_true_positive = output_eval***REMOVED***output_eval***REMOVED***'classification'***REMOVED*** == "true positive"***REMOVED***.count()***REMOVED***"Input Date"***REMOVED***
+	s1_true_positive = output_eval[output_eval['classification'] == "true positive"].count()["Input Date"]
 	true_positives = s1_true_positive
 	print ("\n______________________________________________")
 	print ("\nSummary Stats: \ntrue positives: " + str(true_positives))
 	
 	# count of False positives (shows in actual only)
-	s1_false_positive = output_eval***REMOVED***output_eval***REMOVED***'classification'***REMOVED*** == "false positive"***REMOVED***.count()***REMOVED***"Input Date"***REMOVED***
+	s1_false_positive = output_eval[output_eval['classification'] == "false positive"].count()["Input Date"]
 	false_positives = s1_false_positive
 	print ("false positives: " + str(false_positives))
 
 	# count of False negative (shows in predicted only)
-	s1_false_negative = output_eval***REMOVED***output_eval***REMOVED***'classification'***REMOVED*** == "false negative"***REMOVED***.count()***REMOVED***"Input Date"***REMOVED***
+	s1_false_negative = output_eval[output_eval['classification'] == "false negative"].count()["Input Date"]
 	false_negatives = s1_false_negative
 	print ("false negatives: " + str(false_negatives))
 	print ("\nwriting out eval record to: " + output_directory + "date_shift_eval.csv")
@@ -384,18 +384,18 @@ def main():
 	            type=str)
 
 	parsed = parser.parse_args()
-	directory = vars(parsed)***REMOVED***"input_dir"***REMOVED***
-	output_directory = vars(parsed)***REMOVED***"output_dir"***REMOVED***
-	gold_directory = vars(parsed)***REMOVED***"gold_input_dir"***REMOVED***
-	gold_output_directory = vars(parsed)***REMOVED***"gold_output_dir"***REMOVED***
-	rerun_gold = vars(parsed)***REMOVED***"rerun_gold"***REMOVED***
-	rerun_philter = vars(parsed)***REMOVED***"rerun_philter"***REMOVED***
-	evaluation = vars(parsed)***REMOVED***"evaluation"***REMOVED***
-	write_surrogated_files = vars(parsed)***REMOVED***"write_surrogated_files"***REMOVED***
-	test = vars(parsed)***REMOVED***"test"***REMOVED***
-	prod = vars(parsed)***REMOVED***"prod"***REMOVED***
-	verbose = vars(parsed)***REMOVED***"verbose"***REMOVED***
-	gold_xmldomain = vars(parsed)***REMOVED***"xmldomain"***REMOVED***
+	directory = vars(parsed)["input_dir"]
+	output_directory = vars(parsed)["output_dir"]
+	gold_directory = vars(parsed)["gold_input_dir"]
+	gold_output_directory = vars(parsed)["gold_output_dir"]
+	rerun_gold = vars(parsed)["rerun_gold"]
+	rerun_philter = vars(parsed)["rerun_philter"]
+	evaluation = vars(parsed)["evaluation"]
+	write_surrogated_files = vars(parsed)["write_surrogated_files"]
+	test = vars(parsed)["test"]
+	prod = vars(parsed)["prod"]
+	verbose = vars(parsed)["verbose"]
+	gold_xmldomain = vars(parsed)["xmldomain"]
 
 
 	if test:
@@ -425,7 +425,7 @@ def main():
 
 	print ("\nRunning Surrogator...\n")
 
-	problem_files_log = pd.DataFrame(columns = ***REMOVED***"filename","philter_or_gold","xml_parse_error"***REMOVED***)
+	problem_files_log = pd.DataFrame(columns = ["filename","philter_or_gold","xml_parse_error"])
 
 	if rerun_philter or test:
 		print ("Running Surrogator on philter notes...")

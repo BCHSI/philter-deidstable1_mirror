@@ -1,11 +1,11 @@
-***REMOVED***
+[
 
 	{
 		"title":"Combined Whitelist",
 		"type":"set",
 		"exclude":false,
 		"filepath":"filters/whitelists/white_combined.json",
-		"pos":***REMOVED******REMOVED***,
+		"pos":[],
 		"notes":"This is the results of full whitelist - blacklist"
 	},
 	{
@@ -13,7 +13,7 @@
 		"type":"set",
 		"exclude":true,
 		"filepath":"filters/blacklists/names_blacklist_allnames.json",
-		"pos":***REMOVED******REMOVED***,
+		"pos":[],
 		"notes":"Names blacklist"
 	},
 	{	
@@ -26,4 +26,4 @@
 
 
 
-***REMOVED***
+]

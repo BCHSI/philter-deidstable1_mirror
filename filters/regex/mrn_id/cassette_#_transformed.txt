@@ -1,1 +1,1 @@
-\b((?i)(?<=cassette )((no)?(\.)?***REMOVED***a-zA-Z0-9***REMOVED***+)|(?i)(?<=cassettes )((no)?(\.)?***REMOVED***a-zA-Z0-9***REMOVED***+)(((\,)?***REMOVED*** ***REMOVED***{1,2}(no)?(\.)?(***REMOVED*** ***REMOVED***{1,2})?***REMOVED***a-zA-Z0-9***REMOVED***+)+(\,)?***REMOVED*** ***REMOVED***and***REMOVED*** ***REMOVED******REMOVED***a-zA-Z0-9***REMOVED***+))\b
+\b((?i)(?<=cassette )((no)?(\.)?[a-zA-Z0-9]+)|(?i)(?<=cassettes )((no)?(\.)?[a-zA-Z0-9]+)(((\,)?[ ]{1,2}(no)?(\.)?([ ]{1,2})?[a-zA-Z0-9]+)+(\,)?[ ]and[ ][a-zA-Z0-9]+))\b

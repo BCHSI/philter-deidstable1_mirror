@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT><![CDATA[
 
 
 Record date: 2097-06-03
@@ -39,7 +39,7 @@ Date/Time         NT-BNP         CK             CK-MB          CKMBRI
 06/03/2097                       135            9.6 (H)                       
 06/03/2097                       126            8.6 (H)        6.8 (H)        
 E                      
-06/02/2097        4285 (H)***REMOVED***1***REMOVED***                                                 
+06/02/2097        4285 (H)[1]                                                 
 06/02/2097                                      NEGATIVE                      
 
 Date/Time         TROP-I         TROP-T         
@@ -117,7 +117,7 @@ Internal Medicine B Attending
 
 
 
-***REMOVED******REMOVED***></TEXT>
+]]></TEXT>
 <TAGS>
 <DATE id="P0" start="16" end="26" text="2097-06-03" TYPE="DATE" comment="" />
 <DATE id="P1" start="44" end="53" text="6/03/2097" TYPE="DATE" comment="" />

@@ -15,7 +15,7 @@ import argparse
 def isolate_phi(xml_folder):
     #isolate all phi and data with coordinates
     #turn them into a json representation
-    phi = {} #fn --> {"text":"...", "phi":***REMOVED***{"type":"DATE"...}***REMOVED***}
+    phi = {} #fn --> {"text":"...", "phi":[{"type":"DATE"...}]}
     for root_dir, dirs, files in os.walk(xml_folder):
         for f in files:
             print(root_dir+f)
@@ -24,7 +24,7 @@ def isolate_phi(xml_folder):
                 root = tree.getroot()
 
                 text = ""
-                phi_list = ***REMOVED******REMOVED***
+                phi_list = []
 
                 for child in root:
                     if child.tag == "TEXT":
@@ -36,7 +36,7 @@ def isolate_phi(xml_folder):
                         for t in child:
                             phi_list.append(t.attrib)
                             #print(t.tag, t.attrib, t.text)
-                phi***REMOVED***f***REMOVED*** = {"text":text, "phi":phi_list}
+                phi[f] = {"text":text, "phi":phi_list}
     return phi
 
 def main():
@@ -83,38 +83,38 @@ def main():
     #save our phi notes 
     for fn in phi:
         #get text and remove any initial *'s from the raw notes
-        txt = phi***REMOVED***fn***REMOVED******REMOVED***"text"***REMOVED***.replace("*", " ")
+        txt = phi[fn]["text"].replace("*", " ")
 
         #save our notes file
-        with open(NOTES_FOLDER+fn.split(".")***REMOVED***0***REMOVED***+".txt", "w",encoding='utf-8') as note_file:
+        with open(NOTES_FOLDER+fn.split(".")[0]+".txt", "w",encoding='utf-8') as note_file:
             note_file.write(txt)
 
         #create a coordinate mapping of all phi
         c = CoordinateMap()
-        for p in phi***REMOVED***fn***REMOVED******REMOVED***"phi"***REMOVED***:
+        for p in phi[fn]["phi"]:
             try:
-                start = int(p***REMOVED***'start'***REMOVED***)
-                end = int(p***REMOVED***'end'***REMOVED***)
+                start = int(p['start'])
+                end = int(p['end'])
             except KeyError:
-                start = int(p***REMOVED***'spans'***REMOVED***.split('~')***REMOVED***0***REMOVED***)
-                end = int(p***REMOVED***'spans'***REMOVED***.split('~')***REMOVED***1***REMOVED***)
+                start = int(p['spans'].split('~')[0])
+                end = int(p['spans'].split('~')[1])
             c.add_extend(fn, start, end)
 
-        contents = ***REMOVED******REMOVED***
+        contents = []
         last_marker = 0
         for start,stop in c.filecoords(fn):
-            contents.append(txt***REMOVED***last_marker:start***REMOVED***)
+            contents.append(txt[last_marker:start])
             
             #add a * for each letter preserving shape
-            phi_hidden = re.sub(r"***REMOVED***a-zA-Z0-9***REMOVED***", "*", txt***REMOVED***start:stop***REMOVED***)
+            phi_hidden = re.sub(r"[a-zA-Z0-9]", "*", txt[start:stop])
             contents.append(phi_hidden)
             last_marker = stop
 
         #wrap it up by adding on the remaining values if we haven't hit eof
         if last_marker < len(txt):
-            contents.append(txt***REMOVED***last_marker:len(txt)***REMOVED***)
+            contents.append(txt[last_marker:len(txt)])
 
-        with open(ANNO_FOLDER+fn.split(".")***REMOVED***0***REMOVED***+".txt", "w", encoding='utf-8') as anno_file:
+        with open(ANNO_FOLDER+fn.split(".")[0]+".txt", "w", encoding='utf-8') as anno_file:
             anno_file.write("".join(contents))
 
 

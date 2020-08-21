@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT><![CDATA[
 
 
 Record date: 2158-06-08
@@ -33,11 +33,11 @@ Zantac 150 mg: 1 tab po qhs.
 Allergies:   NKDA.
 
 Review of Systems:   The following systems reviews were contributory: endocrine
-***REMOVED***pertinent positives:  diabetes mellitus***REMOVED***; cardiovascular ***REMOVED***pertinent positives:
+[pertinent positives:  diabetes mellitus]; cardiovascular [pertinent positives:
  hypertension, occasional light headed ness; pertinent negatives:  chest pain
-with exertion, chest pain at rest, dyspnea on exertion, peripheral edema***REMOVED***;
-gastrointestinal ***REMOVED***pertinent positives:  diarrhea***REMOVED*** and urinary tract ***REMOVED***pertinent
-positives:  nocturia, urgency***REMOVED***.     The following systems reviews were
+with exertion, chest pain at rest, dyspnea on exertion, peripheral edema];
+gastrointestinal [pertinent positives:  diarrhea] and urinary tract [pertinent
+positives:  nocturia, urgency].     The following systems reviews were
 noncontributory: general; psychological and musculoskeletal.
 
 General Examination
@@ -115,7 +115,7 @@ were completed by  Genevieve Noland, NP.
 
 
 
-***REMOVED******REMOVED***></TEXT>
+]]></TEXT>
 <TAGS>
 <DATE id="P0" start="16" end="26" text="2158-06-08" TYPE="DATE" comment="" />
 <LOCATION id="P2" start="89" end="115" text="Trumbull Memorial Hospital" TYPE="HOSPITAL" comment="" />

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT><![CDATA[
 
 
 Record date: 2076-07-20
 
-                                                       Patient Name: QUIJANO,BAYLEE ***REMOVED*** MRN: 85362514MARY ***REMOVED***                                                         Date of Visit: 07/20/2076Chief Complaint	
+                                                       Patient Name: QUIJANO,BAYLEE [ MRN: 85362514MARY ]                                                         Date of Visit: 07/20/2076Chief Complaint	
 
 Ms. Quijano is a 61 yo morbidly obese woman with CAD, OA, and CHF who is in for follow-up of these problems.  
 
@@ -209,7 +209,7 @@ Xanthopoulos, Kelly Willie, M.D.
 
 
 
-***REMOVED******REMOVED***></TEXT>
+]]></TEXT>
 <TAGS>
 <DATE id="P0" start="16" end="26" text="2076-07-20" TYPE="DATE" comment="" />
 <NAME id="P1" start="97" end="111" text="QUIJANO,BAYLEE" TYPE="PATIENT" comment="" />

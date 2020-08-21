@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT><![CDATA[
 
 
 Record date: 2082-06-13
@@ -338,7 +338,7 @@ Pager #41393
 
 
 
-***REMOVED******REMOVED***></TEXT>
+]]></TEXT>
 <TAGS>
 <DATE id="P0" start="16" end="26" text="2082-06-13" TYPE="DATE" comment="" />
 <NAME id="P1" start="81" end="98" text="XAYAVONG, BRANDON" TYPE="PATIENT" comment="" />

@@ -8,7 +8,7 @@ Next it will replace all appropriate PHI with the respective PHI Tag
 Then it will output .txt files with the appropriate surrogates to the specified directory
 
 You can test out surrogator by adding the following folders to the data/ directory
-***REMOVED***Download the following***REMOVED***(https://drive.google.com/drive/folders/1zAgsx832PrNgYQy5Q3a79cK9FQPQ7gXT?usp=sharing
+[Download the following](https://drive.google.com/drive/folders/1zAgsx832PrNgYQy5Q3a79cK9FQPQ7gXT?usp=sharing
  unzip surrogator and move to data/surrogator
 - unzip notes metadata and move to data/notes_metadata/
 - unzip i2b2_data.zip and move to data/surrogator/testing-PHI-Gold-fixed/
@@ -64,7 +64,7 @@ In addition to the outputted surrogated text files, there will be a number of lo
 	testing-PHI-Gold-fixed-output/shifted_dates.csv
 	testing-PHI-Gold-fixed-output/surrogated_text.csv
 
-You can view an output of the above log files in ***REMOVED***following google sheet***REMOVED***(https://docs.google.com/spreadsheets/d/1I_uhXq3qycbR06iI8qSKJbz_UEk9gu805yCPtMSz7Bc/edit#gid=412781496) :
+You can view an output of the above log files in [following google sheet](https://docs.google.com/spreadsheets/d/1I_uhXq3qycbR06iI8qSKJbz_UEk9gu805yCPtMSz7Bc/edit#gid=412781496) :
 
 It contains all of the logs that are written out from surrogator for the most recent run over all of the I2B2 notes.
 - Date Shift Evaluations

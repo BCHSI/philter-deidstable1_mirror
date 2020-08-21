@@ -16,12 +16,12 @@ def load_probe_to_hash(prbpath):
         line = line.rstrip('\n')
         line  = line.replace('.0','')
         value = line.split('\t')
-        if value***REMOVED***1***REMOVED*** in probe:
-           val = value***REMOVED***2***REMOVED*** +"\t" + value***REMOVED***5***REMOVED***
-           probe***REMOVED***value***REMOVED***1***REMOVED******REMOVED***.add(val)
+        if value[1] in probe:
+           val = value[2] +"\t" + value[5]
+           probe[value[1]].add(val)
         else:
-           probe***REMOVED***value***REMOVED***1***REMOVED******REMOVED*** = set()
-           probe***REMOVED***value***REMOVED***1***REMOVED******REMOVED***.add(value***REMOVED***2***REMOVED*** +"\t" + value***REMOVED***5***REMOVED***)
+           probe[value[1]] = set()
+           probe[value[1]].add(value[2] +"\t" + value[5])
     print("loaded "+ prbpath +" into hash")
     return probe
 
@@ -47,19 +47,19 @@ def create_batch_dict(dirline):
     return keepers
 
 
-dirpath = sys.argv***REMOVED***1***REMOVED***
-p0path = sys.argv***REMOVED***2***REMOVED***
-p1path = sys.argv***REMOVED***3***REMOVED***
-p2path = sys.argv***REMOVED***4***REMOVED***
-p3path = sys.argv***REMOVED***5***REMOVED***
-mpath = sys.argv***REMOVED***6***REMOVED*** 
+dirpath = sys.argv[1]
+p0path = sys.argv[2]
+p1path = sys.argv[3]
+p2path = sys.argv[4]
+p3path = sys.argv[5]
+mpath = sys.argv[6] 
 meta = {}
 mfile = open(mpath)
 for line in mfile:
     line = line.rstrip('\n')
     line  = line.replace('.0','')
     key= line.split('\t')
-    meta***REMOVED***key***REMOVED***0***REMOVED******REMOVED*** = key***REMOVED***2***REMOVED***
+    meta[key[0]] = key[2]
 print("loaded into hash")
 
 dirfile = open(dirpath)
@@ -75,20 +75,20 @@ for dirline in dirfile:
     kdict = {}
     for i in range(4):
         n = i+2
-        prbpath = sys.argv***REMOVED***n***REMOVED***
+        prbpath = sys.argv[n]
         probe = load_probe_to_hash(prbpath)
         for k in keepers:
            print(k)      
            if k in meta:
-              kdict***REMOVED***meta***REMOVED***k***REMOVED******REMOVED*** = k
+              kdict[meta[k]] = k
            for k in kdict:
              print(k)
              if k not in found:
                if k in probe:
                  found.add(k)
-                 print(probe***REMOVED***k***REMOVED***)
-                 for x in probe***REMOVED***k***REMOVED***:
-                     dfile.write(k+"\t"+x+"\t"+kdict***REMOVED***k***REMOVED***+"\n")
+                 print(probe[k])
+                 for x in probe[k]:
+                     dfile.write(k+"\t"+x+"\t"+kdict[k]+"\n")
 dfile.close()
 dirfile.close()      
    

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT><![CDATA[
 
 
 Record date: 2072-04-24
@@ -37,7 +37,7 @@ Now on zestoretic 20/25 bid + atenolol 50 mg qd.  He has significant white coat 
 
 LOW BACK PAIN	      
 
-he had prolonged discogenic back pain in 1/2070 and could not get appt with NAMG orthopedic/back surgeon and went to Montreal Medical Center.  He underwent L4/5 lamenictomy in 2/2070.  He has persistent right-lower back pain and has seen Drs. Conley and Sheehan.  A myleogram done on 8/5/71 showed degenerative disc disease with moderate spinal stenosis at L4/5.  He continues to have chronic low back pain in the right hip and right anterior thigh.  He exercises regularly and has not benefitted from prior epidural injection.  Dr. Sheehan felt that pain may be from some instability vs scar tissue from prior surgery.  Fusion surgery was discussed but Mr. Whitehead is not too keen on it. ***REMOVED***12/25/71***REMOVED***
+he had prolonged discogenic back pain in 1/2070 and could not get appt with NAMG orthopedic/back surgeon and went to Montreal Medical Center.  He underwent L4/5 lamenictomy in 2/2070.  He has persistent right-lower back pain and has seen Drs. Conley and Sheehan.  A myleogram done on 8/5/71 showed degenerative disc disease with moderate spinal stenosis at L4/5.  He continues to have chronic low back pain in the right hip and right anterior thigh.  He exercises regularly and has not benefitted from prior epidural injection.  Dr. Sheehan felt that pain may be from some instability vs scar tissue from prior surgery.  Fusion surgery was discussed but Mr. Whitehead is not too keen on it. [12/25/71]
 
 
 
@@ -117,7 +117,7 @@ Follow-up in 9/72.  Will contact him with results of lab work.
 
 
 
-***REMOVED******REMOVED***></TEXT>
+]]></TEXT>
 <TAGS>
 <DATE id="P0" start="16" end="26" text="2072-04-24" TYPE="DATE" comment="" />
 <NAME id="P1" start="51" end="60" text="Whitehead" TYPE="PATIENT" comment="" />

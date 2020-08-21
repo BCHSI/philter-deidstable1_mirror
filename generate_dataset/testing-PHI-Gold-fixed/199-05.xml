@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT><![CDATA[
 
 
 Record date: 2094-09-07
@@ -77,7 +77,7 @@ In summary, Mr. Lara has:
 
 1.  History of CAD, status placement of a drug-eluting stent in the LAD, 7/92, without recurrent angina or signs of left ventricular dysfunction.  Repeat cardiac catheterization, 12/92, because of chest discomfort showed no evidence of restenosis.
 
-2.  Hypertension, not controlled.  His elevated blood pressure may well be contributing to his sense of exertional dyspnea.  We spoke about the options.  As he had developed orthostatic symptoms previously on higher-dose beta blocker and possibly lisinopril, will use smaller doses of alternate agents in an attempt to lower his pressure.  He will add hydrochlorothiazide 25 mg daily plus amlodipine 2.5 mg daily starting today and already has a follow up appointment with you next week.  To investigate potential contributions to the elevated pressure and sense of tachycardia, blood studies today will include electrolytes, plasma metanephrine level and TSH.  A Holter monitor will also be placed in an attempt to determine what he is experiencing with the sense of "fluttering" which occurs at least nightly.  Once his blood pressure is controlled, an exercise test will follow.  ***REMOVED***Addendum: Holter shows single VPBs/bigeminy at time of his symptoms. Blood studies show normal plasma metanephrines. He reports feeling better with systolic BP in the 120's on September 18, no further palpitations.  He will continue to monitor BP and will call in to schedule ETT***REMOVED***
+2.  Hypertension, not controlled.  His elevated blood pressure may well be contributing to his sense of exertional dyspnea.  We spoke about the options.  As he had developed orthostatic symptoms previously on higher-dose beta blocker and possibly lisinopril, will use smaller doses of alternate agents in an attempt to lower his pressure.  He will add hydrochlorothiazide 25 mg daily plus amlodipine 2.5 mg daily starting today and already has a follow up appointment with you next week.  To investigate potential contributions to the elevated pressure and sense of tachycardia, blood studies today will include electrolytes, plasma metanephrine level and TSH.  A Holter monitor will also be placed in an attempt to determine what he is experiencing with the sense of "fluttering" which occurs at least nightly.  Once his blood pressure is controlled, an exercise test will follow.  [Addendum: Holter shows single VPBs/bigeminy at time of his symptoms. Blood studies show normal plasma metanephrines. He reports feeling better with systolic BP in the 120's on September 18, no further palpitations.  He will continue to monitor BP and will call in to schedule ETT]
 
 3.  Dyslipidemia, on combined statin plus gemfibrozil therapy.  When it is time to renew his Lopid, it would be reasonable to switch to TriCor to reduce the potential interaction with statins with respect to myopathy.  A serum CK will be included in today's blood studies.  
 
@@ -129,7 +129,7 @@ DV: 09/07/94
 
 
 
-***REMOVED******REMOVED***></TEXT>
+]]></TEXT>
 <TAGS>
 <DATE id="P0" start="16" end="26" text="2094-09-07" TYPE="DATE" comment="" />
 <LOCATION id="P1" start="34" end="49" text="Forest Hospital" TYPE="HOSPITAL" comment="" />

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT><![CDATA[
 
 
 Record date: 2070-08-15
@@ -40,7 +40,7 @@ Consultation-
 
 
 
-***REMOVED******REMOVED***></TEXT>
+]]></TEXT>
 <TAGS>
 <DATE id="P0" start="16" end="26" text="2070-08-15" TYPE="DATE" comment="" />
 <NAME id="P1" start="146" end="151" text="Garza" TYPE="DOCTOR" comment="" />

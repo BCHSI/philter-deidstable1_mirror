@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT><![CDATA[
 
 
 Record date: 2094-04-03
@@ -55,7 +55,7 @@ cc:  Georgia Xing, M.D.
 
 
 
-***REMOVED******REMOVED***></TEXT>
+]]></TEXT>
 <TAGS>
 <DATE id="P0" start="16" end="26" text="2094-04-03" TYPE="DATE" comment="" />
 <NAME id="P1" start="40" end="52" text="Yager, Becky" TYPE="PATIENT" comment="" />

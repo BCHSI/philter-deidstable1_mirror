@@ -1,4 +1,4 @@
-***REMOVED*** 
+[ 
     {  
         "title": "salutations6",
         "type": "regex",
@@ -13,4 +13,4 @@
 	"filepath":"filters/regex/catchall.txt",
 	"notes":"This should match anything, preventing the catchall"
     }
-***REMOVED***
+]

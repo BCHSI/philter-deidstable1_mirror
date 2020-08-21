@@ -93,7 +93,7 @@ def main():
         }
    
     if verbose:
-        print("RUNNING ", philter_config***REMOVED***'filters'***REMOVED***)
+        print("RUNNING ", philter_config['filters'])
 
 
     filterer = Philter(philter_config)
@@ -118,8 +118,8 @@ def main():
             phi_matcher=re.compile("\*+"),
             pre_process=r":|\,|\-|\/|_|~", #characters we're going to strip from our notes to analyze against anno
             only_digits=False,
-            pre_process2= r"***REMOVED***^a-zA-Z0-9***REMOVED***",
-            punctuation_matcher=re.compile(r"***REMOVED***^a-zA-Z0-9\*\.***REMOVED***"))
+            pre_process2= r"[^a-zA-Z0-9]",
+            punctuation_matcher=re.compile(r"[^a-zA-Z0-9\*\.]"))
 
 # error analysis
         

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT><![CDATA[
 
 
 Record date: 2121-03-31
@@ -178,7 +178,7 @@ Tina Purcell, M.D.
 
 
 
-***REMOVED******REMOVED***></TEXT>
+]]></TEXT>
 <TAGS>
 <DATE id="P0" start="16" end="26" text="2121-03-31" TYPE="DATE" comment="" />
 <LOCATION id="P1" start="28" end="47" text="Kern Medical Center" TYPE="HOSPITAL" comment="" />

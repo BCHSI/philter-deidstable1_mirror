@@ -1,1 +1,1 @@
-\d{1,3}.(***REMOVED***yY***REMOVED******REMOVED***eE***REMOVED******REMOVED***aA***REMOVED******REMOVED***rR***REMOVED***|***REMOVED***yY***REMOVED******REMOVED***oO***REMOVED***|***REMOVED***wW***REMOVED******REMOVED***eE***REMOVED******REMOVED***eE***REMOVED******REMOVED***kK***REMOVED***|***REMOVED***dD***REMOVED******REMOVED***aA***REMOVED******REMOVED***yY***REMOVED***)
+\d{1,3}.([yY][eE][aA][rR]|[yY][oO]|[wW][eE][eE][kK]|[dD][aA][yY])

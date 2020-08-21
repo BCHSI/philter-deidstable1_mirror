@@ -56,17 +56,17 @@ def read_mongo_config(mongofile):
     return mongo_details    
 
 def get_mongo_handle(mongo):
-    client = MongoClient(mongo***REMOVED***"client"***REMOVED***,username=mongo***REMOVED***"username"***REMOVED***,password=mongo***REMOVED***"password"***REMOVED***)
+    client = MongoClient(mongo["client"],username=mongo["username"],password=mongo["password"])
     print(client)
     try:
-        db = client***REMOVED***mongo***REMOVED***'db'***REMOVED******REMOVED*** 
+        db = client[mongo['db']] 
     except:
         print("Mongo Server not available")
     return db
 
 
 def get_batch(db, mongo):
-    collection_chunk = db***REMOVED***mongo***REMOVED***'collection_chunk'***REMOVED******REMOVED***
+    collection_chunk = db[mongo['collection_chunk']]
     
     server = socket.gethostname() + ".ucsfmedicalcenter.org"
     batch = collection_chunk.distinct('batch',{'url': server.lower()})
@@ -84,11 +84,11 @@ def runDeidChunck(unit, q, philterFolder, philterConfig, dbConfig, db, mongo):
         # time for run
         t0 = time.time()
         batch = q.get()
-        call(***REMOVED***"/data/radhakrishnanl/deidproj/bin/python3", "-O", "deidpipe.py",
+        call(["/data/radhakrishnanl/deidproj/bin/python3", "-O", "deidpipe.py",
               "-m", dbConfig,
               "-f", os.path.join(philterConfig),
               "-b", str(batch),
-              "-l", "True"***REMOVED***,
+              "-l", "True"],
               cwd=philterFolder)
 
         #To do fix threading issues while calling the function

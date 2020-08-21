@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT><![CDATA[
 
 
 Record date: 2060-07-08
@@ -45,7 +45,7 @@ DV: 07/08/60
 
 
 
-***REMOVED******REMOVED***></TEXT>
+]]></TEXT>
 <TAGS>
 <DATE id="P0" start="16" end="26" text="2060-07-08" TYPE="DATE" comment="" />
 <NAME id="P1" start="31" end="45" text="HESS, CLARENCE" TYPE="PATIENT" comment="" />

@@ -1,4 +1,4 @@
-***REMOVED***  
+[  
    {
         "title":"ucsf apex safe",
         "type":"regex",
@@ -89,7 +89,7 @@
         "type":"regex",
         "exclude":false,
         "filepath":"filters/regex/safe/attending_safe.txt",
-        "notes":"This should remove anything with pattern attending ***REMOVED***ologist***REMOVED***"
+        "notes":"This should remove anything with pattern attending [ologist]"
     },
     {
         "title":"active safe",
@@ -1093,7 +1093,7 @@
         "type":"regex",
         "exclude":true,
         "filepath":"filters/regex/addresses/city_transformed.txt",
-        "notes":"This should remove anything that matches pattern ***REMOVED***name***REMOVED*** ***REMOVED***city***REMOVED***"
+        "notes":"This should remove anything that matches pattern [name] [city]"
     },
     {
         "title":"hospitalized at",
@@ -1205,21 +1205,21 @@
         "type":"regex",
         "exclude":true,
         "filepath":"filters/regex/addresses/to_state_transformed.txt",
-        "notes":"This should remove anything that has pattern to ***REMOVED***state name***REMOVED***"
+        "notes":"This should remove anything that has pattern to [state name]"
     },
     {
         "title":"state indicator",
         "type":"regex",
         "exclude":true,
         "filepath":"filters/regex/addresses/state_indicator_transformed.txt",
-        "notes":"This should remove anything that has pattern to ***REMOVED***state name***REMOVED***"
+        "notes":"This should remove anything that has pattern to [state name]"
     },
     {
         "title":"on streetname",
         "type":"regex",
         "exclude":true,
         "filepath":"filters/regex/addresses/streetname_only_transformed.txt",
-        "notes":"This should remove anything that has pattern on ***REMOVED***street name***REMOVED***"
+        "notes":"This should remove anything that has pattern on [street name]"
     },
     {
         "title":"box",
@@ -2163,9 +2163,9 @@
         "type": "set",
         "exclude": true,
         "filepath": "/data/muenzenk/fp_analysis/names_blacklist_sub_100_fps_withnames_x2.json",
-        "pos": ***REMOVED***
+        "pos": [
             "NNP"
-        ***REMOVED***,
+        ],
         "notes": "These are words we believe are not safe"
     },
     {
@@ -2173,14 +2173,14 @@
         "type":"set",
         "exclude":false,
         "filepath":"/data/muenzenk/add_fps_to_whitelist_091718/whitelist_plus_fps_091718_nonames.json",
-        "pos":***REMOVED******REMOVED***,
+        "pos":[],
         "notes":"These are words we beleive are safe"
     },
     {
         "title":"POS MATCHER",
         "type":"pos_matcher",
         "exclude":false,
-        "pos":***REMOVED***"CD"***REMOVED***,
+        "pos":["CD"],
         "notes":"This will include any CDs that aren't included in earlier steps"
     },
     {
@@ -2192,4 +2192,4 @@
         "notes":""
     }
 
-***REMOVED***
+]

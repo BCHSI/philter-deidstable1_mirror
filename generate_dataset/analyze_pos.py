@@ -23,33 +23,33 @@ phi = json.loads(open("./phi_notes.json", "r").read())
 for fn in phi:
 
     #get text and remove any initial *'s from the raw notes
-    txt = phi***REMOVED***fn***REMOVED******REMOVED***"text"***REMOVED***.replace("*", " ")
+    txt = phi[fn]["text"].replace("*", " ")
 
     lst = re.split("(\s+)", txt)
-    cleaned = ***REMOVED******REMOVED***
+    cleaned = []
     for item in lst:
         if len(item) > 0:
             cleaned.append(item)
     pos_list = nltk.pos_tag(cleaned)
 
     phi_set = {}
-    for p in phi***REMOVED***fn***REMOVED******REMOVED***"phi"***REMOVED***:
-        phi_set***REMOVED***p***REMOVED***"text"***REMOVED******REMOVED*** = 1
+    for p in phi[fn]["phi"]:
+        phi_set[p["text"]] = 1
 
     pos_phi = {}
     for item in pos_list:
-        if item***REMOVED***0***REMOVED*** in phi_set:
-            pos_phi***REMOVED***item***REMOVED***0***REMOVED******REMOVED*** = item***REMOVED***1***REMOVED***
+        if item[0] in phi_set:
+            pos_phi[item[0]] = item[1]
 
-            if item***REMOVED***1***REMOVED*** not in total_counts:
-                total_counts***REMOVED***item***REMOVED***1***REMOVED******REMOVED*** = 0
-            total_counts***REMOVED***item***REMOVED***1***REMOVED******REMOVED*** += 1
+            if item[1] not in total_counts:
+                total_counts[item[1]] = 0
+            total_counts[item[1]] += 1
         else:
-            if item***REMOVED***1***REMOVED*** not in total_non_phi:
-                total_non_phi***REMOVED***item***REMOVED***1***REMOVED******REMOVED*** = 0
-            total_non_phi***REMOVED***item***REMOVED***1***REMOVED******REMOVED*** += 1
+            if item[1] not in total_non_phi:
+                total_non_phi[item[1]] = 0
+            total_non_phi[item[1]] += 1
 
-    pos***REMOVED***fn***REMOVED*** = pos_phi
+    pos[fn] = pos_phi
 
 json.dump(pos, open("phi_pos.json", "w"), indent=4)
 json.dump(total_counts, open("phi_pos_total.json", "w"), indent=4)
@@ -57,25 +57,25 @@ json.dump(total_counts, open("phi_pos_total.json", "w"), indent=4)
 #save a csv output sorted
 
 #sort our phi
-philst = ***REMOVED******REMOVED***
+philst = []
 for k in total_counts:
-    philst.append(***REMOVED***k,total_counts***REMOVED***k***REMOVED******REMOVED***)
+    philst.append([k,total_counts[k]])
 
 #sort our non-phi
-nonphilst = ***REMOVED******REMOVED***
+nonphilst = []
 for k in total_non_phi:
-    nonphilst.append(***REMOVED***k,total_non_phi***REMOVED***k***REMOVED******REMOVED***)
+    nonphilst.append([k,total_non_phi[k]])
 
-philst = sorted(philst, key=lambda x: x***REMOVED***1***REMOVED***, reverse=True)
+philst = sorted(philst, key=lambda x: x[1], reverse=True)
 with open("phi_pos.csv", "w") as f:
     #save the phi POS
     f.write("PHI POS: \n")
-    f.write(",".join(***REMOVED*** str(x***REMOVED***0***REMOVED***) for x in philst***REMOVED***)+"\n")
-    f.write(",".join(***REMOVED*** str(x***REMOVED***1***REMOVED***) for x in philst***REMOVED***)+"\n\n")
+    f.write(",".join([ str(x[0]) for x in philst])+"\n")
+    f.write(",".join([ str(x[1]) for x in philst])+"\n\n")
 
     f.write("Non-PHI POS: \n")
-    f.write(",".join(***REMOVED*** str(x***REMOVED***0***REMOVED***) for x in nonphilst***REMOVED***)+"\n")
-    f.write(",".join(***REMOVED*** str(x***REMOVED***1***REMOVED***) for x in nonphilst***REMOVED***)+"\n\n")
+    f.write(",".join([ str(x[0]) for x in nonphilst])+"\n")
+    f.write(",".join([ str(x[1]) for x in nonphilst])+"\n\n")
 
 #lst = total_counts.keys()
 

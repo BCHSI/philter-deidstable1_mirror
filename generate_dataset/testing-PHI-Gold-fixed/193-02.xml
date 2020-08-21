@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT><![CDATA[
 
 
 Record date: 2094-03-06
 
-                                                       Patient Name: FOUST,FAY  ***REMOVED*** 50294530(LHCC) ***REMOVED*** 
+                                                       Patient Name: FOUST,FAY  [ 50294530(LHCC) ] 
 
                                                          Date of Visit: 03/06/2094
 
@@ -143,7 +143,7 @@ Bethany Kristin Downs, M.D.
 
 
 
-***REMOVED******REMOVED***></TEXT>
+]]></TEXT>
 <TAGS>
 <DATE id="P0" start="16" end="26" text="2094-03-06" TYPE="DATE" comment="" />
 <NAME id="P1" start="97" end="106" text="FOUST,FAY" TYPE="PATIENT" comment="" />

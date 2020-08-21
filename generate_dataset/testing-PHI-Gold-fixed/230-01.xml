@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT><![CDATA[
 
 
 Record date: 2078-05-31
@@ -74,7 +74,7 @@ Resident in Surgery
 
 
 
-***REMOVED******REMOVED***></TEXT>
+]]></TEXT>
 <TAGS>
 <DATE id="P0" start="16" end="26" text="2078-05-31" TYPE="DATE" comment="" />
 <NAME id="P1" start="49" end="64" text="Ulysses Richard" TYPE="PATIENT" comment="" />

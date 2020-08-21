@@ -1,4 +1,4 @@
-***REMOVED***    
+[    
     {
         "title": "lived to x",
         "type": "regex",
@@ -42,4 +42,4 @@
         "notes":"False will turn off catchall, True will turn on catchll (default)"
     }
 
-***REMOVED***
+]

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT><![CDATA[
 
 
 Record date: 2094-12-27
@@ -67,9 +67,9 @@ Mirtazapine 7.5 mg qhs
 
 	Changes to Allergies
 	
-Fentanyl - reaction: see comment (nausea and vomiting during 11/23/2088 catheterization) ***REMOVED***reviewed***REMOVED***
-NKA: No Known Allergies - reaction: see comment (No known allergies to shellfish, iodine, or contrast media) ***REMOVED***reviewed***REMOVED***
-Penicillins - reaction: Rash ***REMOVED***reviewed***REMOVED***
+Fentanyl - reaction: see comment (nausea and vomiting during 11/23/2088 catheterization) [reviewed]
+NKA: No Known Allergies - reaction: see comment (No known allergies to shellfish, iodine, or contrast media) [reviewed]
+Penicillins - reaction: Rash [reviewed]
 
 
 	Family history:
@@ -185,7 +185,7 @@ Document Status: Final
 
 
 
-***REMOVED******REMOVED***></TEXT>
+]]></TEXT>
 <TAGS>
 <DATE id="P0" start="16" end="26" text="2094-12-27" TYPE="DATE" comment="" />
 <LOCATION id="P1" start="45" end="73" text="BEAUREGARD MEMORIAL HOSPITAL" TYPE="HOSPITAL" comment="" />

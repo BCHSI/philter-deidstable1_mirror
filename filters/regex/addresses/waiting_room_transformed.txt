@@ -1,1 +1,1 @@
-\b(?i)waiting room ***REMOVED***a-zA-Z0-9***REMOVED***+\b
+\b(?i)waiting room [a-zA-Z0-9]+\b

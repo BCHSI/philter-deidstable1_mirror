@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT><![CDATA[
 
 
 Record date: 2104-09-23
 
 
-Patient: MARVINYANDELL,GRACE   ***REMOVED*** 90468071(BHC) ***REMOVED***  FDate of Visit: 09/23/2104
+Patient: MARVINYANDELL,GRACE   [ 90468071(BHC) ]  FDate of Visit: 09/23/2104
 
 
 
@@ -79,7 +79,7 @@ Xavier U. Mahoney, M.D.
 
 
 
-***REMOVED******REMOVED***></TEXT>
+]]></TEXT>
 <TAGS>
 <DATE id="P0" start="16" end="26" text="2104-09-23" TYPE="DATE" comment="" />
 <NAME id="P1" start="38" end="57" text="MARVINYANDELL,GRACE" TYPE="PATIENT" comment="" />

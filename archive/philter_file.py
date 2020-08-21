@@ -5,10 +5,10 @@ from nphilter.nphilter import NPhilter
 
 
 if __name__ == "__main__":
-    f = sys.argv***REMOVED***1***REMOVED***
+    f = sys.argv[1]
 
     if f.endswith(".txt"):
-	    foutpath  = sys.argv***REMOVED***2***REMOVED***
+	    foutpath  = sys.argv[2]
 	    key_name = "phi_reduced"
 	    whitelist = None
 

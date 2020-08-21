@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT><![CDATA[
 
 
 Record date: 2089-02-20
@@ -37,7 +37,7 @@ HDH Record #	4210443
 
 Chief  Complaint:  "dizzy, slurred speech" 		
 
-History of Present Illness:  65 year old RH gentleman with Hx notable for HTN and CASHD, was working on taxes and making barbecued chicken this afternoon, when at 1am he had the sudden onset of feeling "dizzy, disoriented" and having "slurred speech". He reports that he "couldn't remember what I was trying to say", and that his words both sounded "like ***REMOVED***I***REMOVED*** was drunk". He also stated that at times, when he would try to talk, nothing would come out. He walked downstairs, with difficulty, and his wife noticed that in the hallway he was bumping into items on (falling to) his right. Denies weakness, paresthesias, pain.  EMTs report that when asked the President's name, pt responded "Chrysler Dodge". Brought initially to OSH, symptoms mostly resolved within 20 minutes. I- CT at OSH negative. Pt transferred to HDH ED at suggestion of covering PCP.  		
+History of Present Illness:  65 year old RH gentleman with Hx notable for HTN and CASHD, was working on taxes and making barbecued chicken this afternoon, when at 1am he had the sudden onset of feeling "dizzy, disoriented" and having "slurred speech". He reports that he "couldn't remember what I was trying to say", and that his words both sounded "like [I] was drunk". He also stated that at times, when he would try to talk, nothing would come out. He walked downstairs, with difficulty, and his wife noticed that in the hallway he was bumping into items on (falling to) his right. Denies weakness, paresthesias, pain.  EMTs report that when asked the President's name, pt responded "Chrysler Dodge". Brought initially to OSH, symptoms mostly resolved within 20 minutes. I- CT at OSH negative. Pt transferred to HDH ED at suggestion of covering PCP.  		
 
 Past Medical Hx:  HTN, Coronary artery disease (s/p angioplasty and atherectomy; s/p CABG x 5 in 2081), diabetes mellitus, prostate ca (s/p radical retropubic prostatectomy 4/0, negative nodes and margins), obesity. Bladder suspension.  Baseline bradycardia (40s average).  		
 
@@ -171,7 +171,7 @@ Resident, Phoenix Neurology
 
 
 
-***REMOVED******REMOVED***></TEXT>
+]]></TEXT>
 <TAGS>
 <DATE id="P0" start="16" end="26" text="2089-02-20" TYPE="DATE" comment="" />
 <NAME id="P1" start="30" end="44" text="Vi K. Xayarath" TYPE="DOCTOR" comment="" />

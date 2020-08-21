@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT><![CDATA[
 
 
 Record date: 2086-08-28
@@ -104,7 +104,7 @@ Palm Springs, CO  19496
 
 
 
-***REMOVED******REMOVED***></TEXT>
+]]></TEXT>
 <TAGS>
 <DATE id="P0" start="16" end="26" text="2086-08-28" TYPE="DATE" comment="" />
 <LOCATION id="P1" start="92" end="113" text="Floyd County Hospital" TYPE="HOSPITAL" comment="" />

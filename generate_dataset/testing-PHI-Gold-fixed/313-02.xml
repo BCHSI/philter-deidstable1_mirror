@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT><![CDATA[
 
 
 Record date: 2066-10-08
 
-                                                       Patient Name: RUTLEDGE,EVA ***REMOVED*** MRN: 37947241ZGJ ***REMOVED***
+                                                       Patient Name: RUTLEDGE,EVA [ MRN: 37947241ZGJ ]
 
                                                          Date of Visit: 10/08/2066
 
@@ -54,7 +54,7 @@ Physical Exam
 
  Pulse:  --  76
 
-Weight:  --  139  ***REMOVED***Pounds***REMOVED***
+Weight:  --  139  [Pounds]
 
 General:  no acute distress
 
@@ -127,7 +127,7 @@ Xen Chris Emmons, M.D.
 
 
 
-***REMOVED******REMOVED***></TEXT>
+]]></TEXT>
 <TAGS>
 <DATE id="P0" start="16" end="26" text="2066-10-08" TYPE="DATE" comment="" />
 <NAME id="P1" start="97" end="109" text="RUTLEDGE,EVA" TYPE="PATIENT" comment="" />

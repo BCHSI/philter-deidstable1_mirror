@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT><![CDATA[
 
 
 Record date: 2070-12-03
@@ -77,7 +77,7 @@ SH/truitt		89-05167655.doc
 
 
 
-***REMOVED******REMOVED***></TEXT>
+]]></TEXT>
 <TAGS>
 <DATE id="P0" start="16" end="26" text="2070-12-03" TYPE="DATE" comment="" />
 <DATE id="P1" start="40" end="56" text="December 3, 2070" TYPE="DATE" comment="" />

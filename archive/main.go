@@ -16,7 +16,7 @@ func main() {
 	searchDir := "data/i2b2_notes/"
 	foutpath  := "data/i2b2_results/"
 
-    fileList := ***REMOVED******REMOVED***string{}
+    fileList := []string{}
     filepath.Walk(searchDir, func(path string, f os.FileInfo, err error) error {
         fileList = append(fileList, path)
         return nil
@@ -47,9 +47,9 @@ func main() {
     }
 
     //now pop these files from the list of files to complete
-    fileList = fileList***REMOVED***max_processes:***REMOVED***
+    fileList = fileList[max_processes:]
     //keep track of which files have completed processing
-    m := map***REMOVED***string***REMOVED***bool{}
+    m := map[string]bool{}
 
     for  {
       select {
@@ -61,11 +61,11 @@ func main() {
       		return
       	} else {
       		//grab our next item off the filelist and run it
-      		fn := fileList***REMOVED***finished***REMOVED***
+      		fn := fileList[finished]
       		go RunPhilter(fn, foutpath, finish_chan)
       	}
       	//mark this as completed
-      	m***REMOVED***f***REMOVED*** = true
+      	m[f] = true
       case s := <-signal_chan:
       	//received a signal (assume it's kill)
       	log.Println("Signal revd:", s)

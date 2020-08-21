@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT><![CDATA[
 
 
 Record date: 2086-09-24
 
-                                                       Patient Name: JIMENEZ,YOUSSEF I ***REMOVED*** 0554733(LCH) ***REMOVED*** 
+                                                       Patient Name: JIMENEZ,YOUSSEF I [ 0554733(LCH) ] 
 
                                                          Date of Visit: 09/24/2086
 
@@ -345,7 +345,7 @@ William B. Dodd, M.D.
 
 
 
-***REMOVED******REMOVED***></TEXT>
+]]></TEXT>
 <TAGS>
 <DATE id="P0" start="16" end="26" text="2086-09-24" TYPE="DATE" comment="" />
 <NAME id="P1" start="97" end="114" text="JIMENEZ,YOUSSEF I" TYPE="PATIENT" comment="" />

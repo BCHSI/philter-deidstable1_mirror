@@ -8,10 +8,10 @@ from subprocess import call
 from collections import OrderedDict
 
 # using OrderedDict for reproducability
-servers = OrderedDict(***REMOVED***('MCWLDEIDLAP701.ucsfmedicalcenter.org',24),
+servers = OrderedDict([('MCWLDEIDLAP701.ucsfmedicalcenter.org',24),
                        ('qcdeidlap702.ucsfmedicalcenter.org',14),
                        ('qcdeidlap703.ucsfmedicalcenter.org',14),
-                       ('qcdeidlap705.ucsfmedicalcenter.org',14)***REMOVED***)
+                       ('qcdeidlap705.ucsfmedicalcenter.org',14)])
 random.seed(10101) #fix seed for reproducibility 
 
 
@@ -56,7 +56,7 @@ def get_args():
 
 def _read_src_folders(srcList):
     # lists all subdirs in file srcList
-    srcFolders = ***REMOVED******REMOVED***
+    srcFolders = []
     print("reading folder list from " + srcList)
     with open(srcList, 'r') as sl:
         for line in sl:
@@ -65,7 +65,7 @@ def _read_src_folders(srcList):
 
 def _walk_src_folders(srcBase):
     # lists all subdirs in dir srcBase
-    srcFolders = ***REMOVED******REMOVED***
+    srcFolders = []
     print("walking through {0} (this can take a couple of minutes)".format(srcBase))
     for root, dirs, files in os.walk(srcBase):
         if not dirs:
@@ -81,9 +81,9 @@ def _shuffle_src_folders(srcFolders):
 
 def _list_mfiles_dfolders_kpfiles(srcFolders, mtaBase, dstBase, kpBase,
                                   srcBase=None):
-    srcMetafiles = ***REMOVED******REMOVED***
-    dstFolders = ***REMOVED******REMOVED***
-    kPhifiles = ***REMOVED******REMOVED***
+    srcMetafiles = []
+    dstFolders = []
+    kPhifiles = []
     if not srcBase: srcBase = os.path.dirname(os.path.commonprefix(srcFolders)) # use os.path.commonpath(srcFolders) if you have python 3.5 or higher
     print("creating metafiles list from " + mtaBase
           + " and output subdirs list from " +  dstBase)
@@ -122,7 +122,7 @@ def write_chunk_files(servers, srcFolders, srcMetafiles, dstFolders, kPhifiles,
     # split into chunks based on number_of_servers
     # & number_of_threads_per_each_server
     total_threads = sum(servers.values())
-    chunk_len = ***REMOVED******REMOVED***
+    chunk_len = []
     chunks_fname = {}
 
     for url, nthreads in servers.items():
@@ -133,15 +133,15 @@ def write_chunk_files(servers, srcFolders, srcMetafiles, dstFolders, kPhifiles,
             start = end
         else:
             start = 0
-        end = sum(chunk_len***REMOVED***:-1***REMOVED***) + chunk_len***REMOVED***-1***REMOVED***
+        end = sum(chunk_len[:-1]) + chunk_len[-1]
         print("start: {0} end: {1}".format(start, end))
-        chunk_srcFolders = srcFolders***REMOVED***start:end***REMOVED***
-        chunk_srcMetafiles = srcMetafiles***REMOVED***start:end***REMOVED***
-        chunk_dstFolders = dstFolders***REMOVED***start:end***REMOVED***
-        chunk_kPhifiles = kPhifiles***REMOVED***start:end***REMOVED***
+        chunk_srcFolders = srcFolders[start:end]
+        chunk_srcMetafiles = srcMetafiles[start:end]
+        chunk_dstFolders = dstFolders[start:end]
+        chunk_kPhifiles = kPhifiles[start:end]
         
-        chunks_fname***REMOVED***url***REMOVED*** = prefix + url.split('.')***REMOVED***0***REMOVED*** + "." + extension
-        with open(chunks_fname***REMOVED***url***REMOVED***, 'w') as cf:
+        chunks_fname[url] = prefix + url.split('.')[0] + "." + extension
+        with open(chunks_fname[url], 'w') as cf:
             for idir, mfile, odir, kfile in zip(chunk_srcFolders,
                                                 chunk_srcMetafiles,
                                                 chunk_dstFolders,
@@ -153,7 +153,7 @@ def write_chunk_files(servers, srcFolders, srcMetafiles, dstFolders, kPhifiles,
 def scp_chunk_files(servers, username, wrkDir, chunks_fname):
     for url, nthreads in servers.items():
         print("copying imo chunk file to server " + url)
-        os.system("scp {0} {1}@{2}:{3}".format(chunks_fname***REMOVED***url***REMOVED***, username,
+        os.system("scp {0} {1}@{2}:{3}".format(chunks_fname[url], username,
                                                url, wrkDir))
 
 def send_jobs(servers, username, wrkDir, chunks_fname, logBase):
@@ -164,11 +164,11 @@ def send_jobs(servers, username, wrkDir, chunks_fname, logBase):
                        + " nohup /usr/bin/time nice python3 "
                        + os.path.join(wrkDir, "deidloop.py")
                        + " -t {0} ".format(nthreads)
-                       + " --imofile " + os.path.join(wrkDir, chunks_fname***REMOVED***url***REMOVED***)
+                       + " --imofile " + os.path.join(wrkDir, chunks_fname[url])
                        + " --philterfolder" + wrkDir
                        + " --superlog " + logBase
                        + " > " + os.path.join(wrkDir, "stdouterr_"
-                                              + url.split('.')***REMOVED***0***REMOVED*** + ".txt")
+                                              + url.split('.')[0] + ".txt")
                        + " 2>&1 &")
         print(commandline)
         #call(commandline.split())

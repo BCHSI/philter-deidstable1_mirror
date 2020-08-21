@@ -1,1 +1,1 @@
-(?i)\d+***REMOVED***a-z***REMOVED***+\b\s+
+(?i)\d+[a-z]+\b\s+

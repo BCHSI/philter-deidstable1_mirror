@@ -5,8 +5,8 @@
 ############################
 import sys
 
-dirpath = sys.argv***REMOVED***1***REMOVED***
-mfpath = sys.argv***REMOVED***2***REMOVED***
+dirpath = sys.argv[1]
+mfpath = sys.argv[2]
 dirfile = open(dirpath)
 
 # Generate the Hash table for the Meta file
@@ -17,7 +17,7 @@ for line in mfile:
     line = line.rstrip('\n')
     line  = line.replace('.0','')
     key,value = line.split('\t',1)
-    meta***REMOVED***key***REMOVED*** = value
+    meta[key] = value
 print("loaded into hash")
 #Walk through each of the directory in the list and create batch meta files for each of the batches
 for dirline in dirfile:
@@ -40,6 +40,6 @@ for dirline in dirfile:
     dfile.write("note_key"+"\t"+"date_offset"+"\t"+"patient_ID"+"\t"+"deid_note_key"+"\n")
     for k in keepers:
         if k in meta:
-           dfile.write(k+"\t"+meta***REMOVED***k***REMOVED***+"\n")
+           dfile.write(k+"\t"+meta[k]+"\n")
 dirfile.close()      
    

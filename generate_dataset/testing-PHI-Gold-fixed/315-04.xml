@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT><![CDATA[
 
 
 Record date: 2123-03-02
@@ -233,7 +233,7 @@ Team 2 Intern
 
 
 
-***REMOVED******REMOVED***></TEXT>
+]]></TEXT>
 <TAGS>
 <DATE id="P0" start="16" end="26" text="2123-03-02" TYPE="DATE" comment="" />
 <NAME id="P1" start="65" end="79" text="Isabella Valle" TYPE="PATIENT" comment="" />

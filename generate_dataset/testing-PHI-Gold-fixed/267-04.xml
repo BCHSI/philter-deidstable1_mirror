@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT><![CDATA[
 
 
 Record date: 2097-01-30
@@ -54,7 +54,7 @@ Dictated by:  VIRGIL HARRELL, M.D.  VH79
 
 
 
-***REMOVED******REMOVED***></TEXT>
+]]></TEXT>
 <TAGS>
 <DATE id="P0" start="16" end="26" text="2097-01-30" TYPE="DATE" comment="" />
 <LOCATION id="P1" start="49" end="59" text="ST VINCENT" TYPE="HOSPITAL" comment="" />

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT><![CDATA[
 
 
 Record date: 2096-06-02
@@ -109,7 +109,7 @@ f/u in 3 mos
 
 
 
-***REMOVED******REMOVED***></TEXT>
+]]></TEXT>
 <TAGS>
 <DATE id="P0" start="16" end="26" text="2096-06-02" TYPE="DATE" comment="" />
 <DATE id="P1" start="214" end="218" text="2091" TYPE="DATE" comment="" />

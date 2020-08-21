@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT><![CDATA[
 
 
 Record date: 2132-05-27
@@ -212,7 +212,7 @@ Pager: #84464
 
 
 
-***REMOVED******REMOVED***></TEXT>
+]]></TEXT>
 <TAGS>
 <DATE id="P0" start="16" end="26" text="2132-05-27" TYPE="DATE" comment="" />
 <DATE id="P1" start="33" end="40" text="5/27/32" TYPE="DATE" comment="" />

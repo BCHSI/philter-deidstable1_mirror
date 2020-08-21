@@ -1,1 +1,1 @@
-\b***REMOVED***A-Z***REMOVED******REMOVED***a-zA-Z***REMOVED***+((\s|\-)***REMOVED***A-Z***REMOVED******REMOVED***a-zA-Z***REMOVED***+)?((\s|\-)***REMOVED***A-Z***REMOVED******REMOVED***a-zA-Z***REMOVED***+)?(?=\sSanatorium|\sSANATORIUM|\sSanitarium|\sSANITARIUM|\sCardiology|\sCARDIOLOGY)\b
+\b[A-Z][a-zA-Z]+((\s|\-)[A-Z][a-zA-Z]+)?((\s|\-)[A-Z][a-zA-Z]+)?(?=\sSanatorium|\sSANATORIUM|\sSanitarium|\sSANITARIUM|\sCardiology|\sCARDIOLOGY)\b

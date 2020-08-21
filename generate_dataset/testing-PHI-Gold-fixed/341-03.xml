@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT><![CDATA[
 
 
 Record date: 2097-06-29
@@ -43,8 +43,8 @@ MEDICATIONS ON ADMISSION:
 Multivitamins (Mvi) 1 TAB PO QD
 Acetylsalicylic Acid (Aspirin ) 325 MG PO QD
 Atorvastatin (Lipitor ) 40 MG PO QD
-Sennosides (Senna Tablets ) 2 TAB PO BID prn ***REMOVED***constipation***REMOVED***
-Docusate Sodium (Colace ) 100 MG PO TID prn ***REMOVED***constipation***REMOVED***
+Sennosides (Senna Tablets ) 2 TAB PO BID prn [constipation]
+Docusate Sodium (Colace ) 100 MG PO TID prn [constipation]
 Metoprolol Tartrate (Lopressor) 100 MG PO Q6H
 Omeprazole (Prilosec ) 40 MG PO QD
 Verapamil Hcl 60 MG PO Q8H
@@ -170,7 +170,7 @@ Casey Frey, M.D.                 Pager 46311
 
 
 
-***REMOVED******REMOVED***></TEXT>
+]]></TEXT>
 <TAGS>
 <DATE id="P0" start="16" end="26" text="2097-06-29" TYPE="DATE" comment="" />
 <NAME id="P3" start="79" end="92" text="GOLDY WILHELM" TYPE="PATIENT" comment="" />

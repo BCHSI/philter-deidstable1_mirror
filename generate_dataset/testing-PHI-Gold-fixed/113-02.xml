@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT><![CDATA[
 
 
 Record date: 2088-08-03
@@ -183,7 +183,7 @@ Dictated by:  KEITH TOLLIVER, M.D.       KT40
 
 
 
-***REMOVED******REMOVED***></TEXT>
+]]></TEXT>
 <TAGS>
 <DATE id="P0" start="16" end="26" text="2088-08-03" TYPE="DATE" comment="" />
 <LOCATION id="P1" start="49" end="56" text="DAMERON" TYPE="HOSPITAL" comment="" />

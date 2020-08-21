@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT><![CDATA[
 
 
 Record date: 2155-07-11
@@ -139,7 +139,7 @@ Conneaut Lake, WV: 85486
 
 
 
-***REMOVED******REMOVED***></TEXT>
+]]></TEXT>
 <TAGS>
 <DATE id="P0" start="16" end="26" text="2155-07-11" TYPE="DATE" comment="" />
 <DATE id="P1" start="30" end="43" text="July 11, 2155" TYPE="DATE" comment="" />

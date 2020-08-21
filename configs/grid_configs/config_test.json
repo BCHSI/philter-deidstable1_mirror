@@ -1,12 +1,12 @@
-***REMOVED***
+[
     {
         "title": "Names Blacklist",
         "type": "set",
         "exclude": true,
         "filepath": "filters/blacklists/names_blacklist_allnames.json",
-        "pos": ***REMOVED***
+        "pos": [
             "NNP"
-        ***REMOVED***,
+        ],
         "notes": "These are words we believe are not safe"
     },
     {
@@ -14,7 +14,7 @@
         "type": "set",
         "exclude": false,
         "filepath": "filters/whitelists/white_combined.json",
-        "pos": ***REMOVED******REMOVED***,
+        "pos": [],
         "notes": "These are words we believe are safe"
     }
-***REMOVED***
+]

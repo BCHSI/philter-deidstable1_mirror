@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT><![CDATA[
 
 
 Record date: 2070-04-23
@@ -39,7 +39,7 @@ Chief Complaint & Present Illness:  chronic renal failure secondary to diabetes-
 
 
 
-Past Surgical History:  Prior surgery includes:  right shoulder arthroscopy-?  General anesthesia without any known problems; bilateral carpal tunnel release-local; surgery OS for bleeding-local ***REMOVED***no old record available but requested***REMOVED***
+Past Surgical History:  Prior surgery includes:  right shoulder arthroscopy-?  General anesthesia without any known problems; bilateral carpal tunnel release-local; surgery OS for bleeding-local [no old record available but requested]
 
 
 
@@ -73,7 +73,7 @@ Review of Systems:
 
 HEENT:  status post recent surgery OS
 
-Cardiovascular:  hypertension; peripheral vascular disease; syncopal episode secondary to antihypertensive medication ***REMOVED***Zestril***REMOVED***; atypical chest pain prompted stress test 3/69: Mets equal 11, negative for ischemia, myocardial scan is normal.  Echo 3/66: EF 68 percent, RV and LV okay, trace MR, TI, PI. Carotid ultrasounds 3/70-normal.
+Cardiovascular:  hypertension; peripheral vascular disease; syncopal episode secondary to antihypertensive medication [Zestril]; atypical chest pain prompted stress test 3/69: Mets equal 11, negative for ischemia, myocardial scan is normal.  Echo 3/66: EF 68 percent, RV and LV okay, trace MR, TI, PI. Carotid ultrasounds 3/70-normal.
 
  Respiratory: patient has noted onset 4/21 of cough and chest congestion 
 
@@ -87,7 +87,7 @@ Gastrointestinal: positive reflux
 
 Hematological:   anemia-hematocrit 31.7, WBC 11.5,platelets 549,000  4/23/70
 
-Endocrine/metabolic: diabetes for the past 37 years-always on insulin-blood sugar 141 this a.m.***REMOVED***120-> 200***REMOVED*** 
+Endocrine/metabolic: diabetes for the past 37 years-always on insulin-blood sugar 141 this a.m.[120-> 200] 
 
 Musculoskeletal/Skin: weakness of hands
 
@@ -183,7 +183,7 @@ Traci Mills, M.D.
 
 
 
-***REMOVED******REMOVED***></TEXT>
+]]></TEXT>
 <TAGS>
 <DATE id="P0" start="16" end="26" text="2070-04-23" TYPE="DATE" comment="" />
 <LOCATION id="P1" start="28" end="54" text="Stephens Memorial Hospital" TYPE="HOSPITAL" comment="" />

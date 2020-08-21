@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT><![CDATA[
 
 
 Record date: 2070-01-23
@@ -14,7 +14,7 @@ Physical exam: In no acute distress.  Blood pressure is 126/78.  Pulse is 70 and
 
 
 
-***REMOVED******REMOVED***></TEXT>
+]]></TEXT>
 <TAGS>
 <DATE id="P0" start="16" end="26" text="2070-01-23" TYPE="DATE" comment="" />
 <AGE id="P1" start="28" end="30" text="71" TYPE="AGE" comment="" />

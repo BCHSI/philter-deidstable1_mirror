@@ -11,17 +11,17 @@ input_notes = "../../data/i2b2_notes/"
 phi_data = json.loads(open("../../data/phi_notes.json", "r").read())
 
 phi_matcher = re.compile(r"\s*\*\*PHI")
-pre_process = re.compile(r":***REMOVED***^a-zA-Z0-9***REMOVED***")
+pre_process = re.compile(r":[^a-zA-Z0-9]")
 
 whitelist_dict = {}
 blacklist_dict = {}
 
 #build our blacklist
 for fn in phi_data:
-    for phi in phi_data***REMOVED***fn***REMOVED******REMOVED***"phi"***REMOVED***:
-        for w in re.split("\s+", phi***REMOVED***"text"***REMOVED***):
+    for phi in phi_data[fn]["phi"]:
+        for w in re.split("\s+", phi["text"]):
             temp = re.sub(pre_process, "",w.lower().strip())
-            blacklist_dict***REMOVED***temp***REMOVED*** = 1
+            blacklist_dict[temp] = 1
 
 
 def detect_encoding(fp):
@@ -48,7 +48,7 @@ for root,dirs,files in os.walk(input_anno):
             continue
 
         encoding2 = detect_encoding(anno_filename)
-        anno = open(anno_filename,"r", encoding=encoding2***REMOVED***'encoding'***REMOVED***).read()
+        anno = open(anno_filename,"r", encoding=encoding2['encoding']).read()
         anno_words = re.split("\s+", anno)
 
         for w in anno_words:
@@ -66,8 +66,8 @@ for root,dirs,files in os.walk(input_anno):
                 continue
             if temp not in blacklist_dict:
                 if temp not in whitelist_dict:
-                    whitelist_dict***REMOVED***temp***REMOVED*** = 0
-                whitelist_dict***REMOVED***temp***REMOVED*** += 1
+                    whitelist_dict[temp] = 0
+                whitelist_dict[temp] += 1
 
 
 json.dump(whitelist_dict, open("whitelist.json", "w"), indent=4)

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT><![CDATA[
 
 
 Record date: 2070-02-14
 
-                                                       Patient Name: VERA,XANDER N ***REMOVED*** 2152363(BMH) ***REMOVED***
+                                                       Patient Name: VERA,XANDER N [ 2152363(BMH) ]
 
 
 
@@ -179,7 +179,7 @@ Xavier Tristan Huerta, M.D.
 
 
 
-***REMOVED******REMOVED***></TEXT>
+]]></TEXT>
 <TAGS>
 <DATE id="P0" start="16" end="26" text="2070-02-14" TYPE="DATE" comment="" />
 <NAME id="P1" start="97" end="110" text="VERA,XANDER N" TYPE="PATIENT" comment="" />

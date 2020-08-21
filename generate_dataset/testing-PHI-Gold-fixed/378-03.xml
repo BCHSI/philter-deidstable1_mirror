@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT><![CDATA[
 
 
 Record date: 2064-08-28
@@ -40,7 +40,7 @@ DT:2617      :6415
 
 
 
-***REMOVED******REMOVED***></TEXT>
+]]></TEXT>
 <TAGS>
 <DATE id="P0" start="16" end="26" text="2064-08-28" TYPE="DATE" comment="" />
 <NAME id="P1" start="42" end="58" text="UMPHREY, FRANKIE" TYPE="PATIENT" comment="" />

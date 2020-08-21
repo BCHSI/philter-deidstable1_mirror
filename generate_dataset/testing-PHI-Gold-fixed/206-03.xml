@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT><![CDATA[
 
 
 Record date: 2074-12-25
@@ -104,7 +104,7 @@ Peter H Uddin, M.D.
 
 
 
-***REMOVED******REMOVED***></TEXT>
+]]></TEXT>
 <TAGS>
 <DATE id="P0" start="16" end="26" text="2074-12-25" TYPE="DATE" comment="" />
 <DATE id="P1" start="122" end="130" text="Saturday" TYPE="DATE" comment="" />

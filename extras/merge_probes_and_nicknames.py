@@ -13,23 +13,23 @@ def make_nicknames_dict(nicknames, frequency):
 	# Set cutoff for alias frequency
 	cutoff_frequency = frequency
 	# Loop through nicknames df and add keys/values to dict
-	for i in range(0,nicknames_df.shape***REMOVED***0***REMOVED***):
-		key = nicknames_df***REMOVED***'NAME'***REMOVED******REMOVED***i***REMOVED***
-		value = nicknames_df***REMOVED***'ALIAS'***REMOVED******REMOVED***i***REMOVED***
-		freq = nicknames_df***REMOVED***'ALIAS FREQ'***REMOVED******REMOVED***i***REMOVED***
+	for i in range(0,nicknames_df.shape[0]):
+		key = nicknames_df['NAME'][i]
+		value = nicknames_df['ALIAS'][i]
+		freq = nicknames_df['ALIAS FREQ'][i]
 		# 1. Check the cutoff frequency
 		if freq > cutoff_frequency:
 			# 2. Check whether key exists in dict
 			if key in nicknames_dict:
 				# If yes, add to list
-				nicknames_dict***REMOVED***key***REMOVED***.append(value)
+				nicknames_dict[key].append(value)
 			else:
 				# If no, add the key to the dict and create a new list
-				nicknames_dict***REMOVED***key***REMOVED*** = ***REMOVED***value***REMOVED***
+				nicknames_dict[key] = [value]
 	# Make sure all values in the lists are unique
 	for key in nicknames_dict:
-		new_value = list(np.unique(nicknames_dict***REMOVED***key***REMOVED***))
-		nicknames_dict***REMOVED***key***REMOVED*** = new_value
+		new_value = list(np.unique(nicknames_dict[key]))
+		nicknames_dict[key] = new_value
 	return nicknames_dict
 
 def merge_probes_and_nicknames(probes, nicknames_dict, outfile, lines):
@@ -40,12 +40,12 @@ def merge_probes_and_nicknames(probes, nicknames_dict, outfile, lines):
 	# Define smaller chunk size
 	chunk_size = 1000
 
-	#unclean_names = ***REMOVED******REMOVED***
-	times = ***REMOVED******REMOVED***
+	#unclean_names = []
+	times = []
 	counter = 0
 	# Iterate through entire probes file by chunks
 	# Test command: df_chunk = next(pd.read_csv(probes, delimiter = '\t', encoding="latin-1", chunksize=chunk_size))
-	for df_chunk in pd.read_csv(probes, delimiter = '\t', encoding="latin-1", chunksize=chunk_size): #, names=***REMOVED***'pat_or_provider','person_id','phi_type','phi_source_col','value','clean_value','RDB_Deid_person_id','to_delete'***REMOVED***):
+	for df_chunk in pd.read_csv(probes, delimiter = '\t', encoding="latin-1", chunksize=chunk_size): #, names=['pat_or_provider','person_id','phi_type','phi_source_col','value','clean_value','RDB_Deid_person_id','to_delete']):
 		start_time = time.time()
 		counter += 1
 		
@@ -57,12 +57,12 @@ def merge_probes_and_nicknames(probes, nicknames_dict, outfile, lines):
 
 		for index, row in df_chunk.iterrows():
 			# print(row)
-			phi_type = str(row***REMOVED***'phi_type'***REMOVED***)
-			value = str(row***REMOVED***'clean_value'***REMOVED***)
+			phi_type = str(row['phi_type'])
+			value = str(row['clean_value'])
 			#dict_copy = copy.deepcopy(nicknames_dict)
 			#print(value)
 			# Restart nicknames list
-			nicknames_list = ***REMOVED******REMOVED***
+			nicknames_list = []
 			# If this is a name, find all possible nicknames
 			if phi_type == 'fname':
 				# Convert to upper case
@@ -70,27 +70,27 @@ def merge_probes_and_nicknames(probes, nicknames_dict, outfile, lines):
 				#print(name_upper)
 				# Check whether name in is nickname dictionary
 				if name_upper in nicknames_dict:
-					name_list = nicknames_dict***REMOVED***name_upper***REMOVED***
+					name_list = nicknames_dict[name_upper]
 					for name in name_list:
 						nicknames_list.append(name)
 					#print(nicknames_list)
 					nicknames_list.append(name_upper)
 				# If it's not, just create a single-element list with the original name, uppercase for uniformity
 				else:
-					nicknames_list = ***REMOVED***name_upper***REMOVED***
+					nicknames_list = [name_upper]
 				# Add each new nickname to the file
 				#print(index)
 				#print(nicknames_list)
 				with open(outfile, "a") as myfile:
 				    for name in nicknames_list:
-				    	new_row = str(row***REMOVED***'pat_or_provider'***REMOVED***)+'\t'+str(row***REMOVED***'person_id'***REMOVED***)+'\t'+str(row***REMOVED***'RDB_Deid_person_id'***REMOVED***)+'\t'+str(row***REMOVED***'phi_type'***REMOVED***)+'\t'+str(row***REMOVED***'phi_source_col'***REMOVED***)+'\t'+str(row***REMOVED***'value'***REMOVED***)+'\t'+name+'\t'+str(row***REMOVED***'to_delete'***REMOVED***)+'\n'
+				    	new_row = str(row['pat_or_provider'])+'\t'+str(row['person_id'])+'\t'+str(row['RDB_Deid_person_id'])+'\t'+str(row['phi_type'])+'\t'+str(row['phi_source_col'])+'\t'+str(row['value'])+'\t'+name+'\t'+str(row['to_delete'])+'\n'
 				    	myfile.write(new_row)
 				    	#print(name)
 				#print('\n')
 			# If this is not a first name, just add the row to the new file
 			else: 
 				# Create the string to add to probes file
-				new_row = str(row***REMOVED***'pat_or_provider'***REMOVED***)+'\t'+str(row***REMOVED***'person_id'***REMOVED***)+'\t'+str(row***REMOVED***'RDB_Deid_person_id'***REMOVED***)+'\t'+str(row***REMOVED***'phi_type'***REMOVED***)+'\t'+str(row***REMOVED***'phi_source_col'***REMOVED***)+'\t'+str(row***REMOVED***'value'***REMOVED***)+'\t'+str(row***REMOVED***'clean_value'***REMOVED***)+'\t'+str(row***REMOVED***'to_delete'***REMOVED***)+'\n'
+				new_row = str(row['pat_or_provider'])+'\t'+str(row['person_id'])+'\t'+str(row['RDB_Deid_person_id'])+'\t'+str(row['phi_type'])+'\t'+str(row['phi_source_col'])+'\t'+str(row['value'])+'\t'+str(row['clean_value'])+'\t'+str(row['to_delete'])+'\n'
 				# Write original line to new probes file
 				#print(index)
 				#print("non-name")
@@ -132,9 +132,9 @@ def main():
     nicknames_dict = make_nicknames_dict(nicknames,frequency)
 
     # Get number of lines in file
-    proc = subprocess.Popen(***REMOVED***'wc','-l',probes***REMOVED***, stdout=subprocess.PIPE)
+    proc = subprocess.Popen(['wc','-l',probes], stdout=subprocess.PIPE)
     output = proc.stdout.read()
-    lines = int(output.decode("utf-8").split(' ')***REMOVED***0***REMOVED***)
+    lines = int(output.decode("utf-8").split(' ')[0])
     
     # Run the probes/nicknames merge code
     merge_probes_and_nicknames(probes, nicknames_dict, outfile, lines)
@@ -154,8 +154,8 @@ if __name__ == "__main__":
 # current_row = ''
 # for index, row in df_chunk.iterrows():
 # 	# print(row)
-# 	phi_type = str(row***REMOVED***'phi_type'***REMOVED***)
-# 	value = str(row***REMOVED***'value'***REMOVED***)
+# 	phi_type = str(row['phi_type'])
+# 	value = str(row['value'])
 # 	#### Clean names ####
 # 	if phi_type == 'fname' or phi_type == 'lname':
 # 		current_index = index

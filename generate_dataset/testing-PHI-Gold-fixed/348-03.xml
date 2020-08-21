@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT><![CDATA[
 
 
 Record date: 2068-09-26
@@ -103,7 +103,7 @@ Inez Yelverton, NP
 
 
 
-***REMOVED******REMOVED***></TEXT>
+]]></TEXT>
 <TAGS>
 <DATE id="P0" start="16" end="26" text="2068-09-26" TYPE="DATE" comment="" />
 <NAME id="P1" start="128" end="133" text="Janes" TYPE="DOCTOR" comment="" />

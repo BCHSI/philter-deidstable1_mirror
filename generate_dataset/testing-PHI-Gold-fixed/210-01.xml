@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT><![CDATA[
 
 
 Record date: 2069-11-18
@@ -49,7 +49,7 @@ Patient to return to clinic in one to two weeks.
 
 
 
-***REMOVED******REMOVED***></TEXT>
+]]></TEXT>
 <TAGS>
 <DATE id="P0" start="16" end="26" text="2069-11-18" TYPE="DATE" comment="" />
 <NAME id="P1" start="32" end="40" text="Gallegos" TYPE="PATIENT" comment="" />

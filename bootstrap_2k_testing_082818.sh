@@ -8,7 +8,7 @@ processcheck() {
 # Get number of whitelist processes
 numprocess=$(ps ux |grep python3 |grep -c -v grep)
 # Is the number of processes less than oir max number of processes?
-if ***REMOVED******REMOVED*** $numprocess -lt $maxprocess ***REMOVED******REMOVED***
+if [[ $numprocess -lt $maxprocess ]]
 # If so, decrease the process number by one
 then
     counter=$numprocess
@@ -27,7 +27,7 @@ bootstrap_replications=100
 for (( i=1; i <= $bootstrap_replications; i=(($i+1))))
 do
 	# If counter is less than the max number of processes
-	if ***REMOVED******REMOVED*** $counter -lt $maxprocess ***REMOVED******REMOVED***
+	if [[ $counter -lt $maxprocess ]]
 	then # run bootstrap	
 		bootstrap_name='philter_paper_testingbatch2k_20180802_updated'$i
 		source_dir='/data/muenzenk/batch_data/philter_paper_testingbatch2k_20180802_updated'
@@ -63,9 +63,9 @@ do
 
 	fi
     # If counter is equal to max processes, we need to wait until one process has finished to spawn another process
-    if ***REMOVED******REMOVED*** $counter -eq $maxprocess ***REMOVED******REMOVED***
+    if [[ $counter -eq $maxprocess ]]
     then
-        while ***REMOVED******REMOVED*** $counter -eq $maxprocess ***REMOVED******REMOVED***; do processcheck; sleep 5; done
+        while [[ $counter -eq $maxprocess ]]; do processcheck; sleep 5; done
     fi
 
 done

@@ -1,1 +1,1 @@
-\b***REMOVED***A-Z***REMOVED******REMOVED***a-zA-Z***REMOVED***+((\s|\-)***REMOVED***A-Z***REMOVED******REMOVED***a-zA-Z***REMOVED***+)?((\s|\-)***REMOVED***A-Z***REMOVED******REMOVED***a-zA-Z***REMOVED***+)?(?=\sPhysician Group|\sPHYSICIAN GROUP|\sVascular Center|\sVASCULAR CENTER)\b
+\b[A-Z][a-zA-Z]+((\s|\-)[A-Z][a-zA-Z]+)?((\s|\-)[A-Z][a-zA-Z]+)?(?=\sPhysician Group|\sPHYSICIAN GROUP|\sVascular Center|\sVASCULAR CENTER)\b

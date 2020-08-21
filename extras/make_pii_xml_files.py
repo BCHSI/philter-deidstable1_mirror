@@ -10,7 +10,7 @@ def create_xml(i, pii, meta, deid_path, text_path, xml_sample_path, output_dir, 
 	sample_tree = ET.parse(xml_sample_path)
 
 	# Get deid note key from csv
-	deid_key = pii.loc***REMOVED***i, "filename"***REMOVED***
+	deid_key = pii.loc[i, "filename"]
 
 	if file_structure == "deid":
 
@@ -19,7 +19,7 @@ def create_xml(i, pii, meta, deid_path, text_path, xml_sample_path, output_dir, 
 
 
 	# Get input text key
-	text_key = meta***REMOVED***deid_key***REMOVED***
+	text_key = meta[deid_key]
 
 	if file_structure == "text":
 
@@ -34,12 +34,12 @@ def create_xml(i, pii, meta, deid_path, text_path, xml_sample_path, output_dir, 
 	new_filepath = copy_and_normalize_note(full_text_path, text_key, note_output_dir)
 
 	# Get search string from csv
-	search_string = str(pii.loc***REMOVED***i, "word_found"***REMOVED***).replace('+','\+').replace('(','\(').replace(')','\)').replace('^','\^').replace('$','\$').replace('.','\.').replace('|','\|').replace('?','\?').replace('*','\*').replace('***REMOVED***','\***REMOVED***').replace('***REMOVED***','\***REMOVED***').replace('{','\{').replace('}','\}')
+	search_string = str(pii.loc[i, "word_found"]).replace('+','\+').replace('(','\(').replace(')','\)').replace('^','\^').replace('$','\$').replace('.','\.').replace('|','\|').replace('?','\?').replace('*','\*').replace('[','\[').replace(']','\]').replace('{','\{').replace('}','\}')
 
 	search_pattern = re.compile("(?i)"+search_string)
 
 	# Get phi tag from csv
-	phi_tag = str(pii.loc***REMOVED***i, "original_column"***REMOVED***)
+	phi_tag = str(pii.loc[i, "original_column"])
 
 	# Load text file
 	txt = open(new_filepath, "r", encoding='utf-8', errors='surrogateescape').read()
@@ -68,26 +68,26 @@ def create_xml(i, pii, meta, deid_path, text_path, xml_sample_path, output_dir, 
 
 def get_deid_full_path(deid_key, deid_path):
 	# Directory pattern: XX/XXX/XXX/XXX/XXXXXXXXXXXXXX.txt
-	l1 = deid_key***REMOVED***0:2***REMOVED***
-	l2 = deid_key***REMOVED***2:5***REMOVED***
-	l3 = deid_key***REMOVED***5:8***REMOVED***
-	l4 = deid_key***REMOVED***8:11***REMOVED***
+	l1 = deid_key[0:2]
+	l2 = deid_key[2:5]
+	l3 = deid_key[5:8]
+	l4 = deid_key[8:11]
 	full_deid_path = deid_path + '/' + l1 + '/' + l2 + '/' + l3 + '/' + l4 + '/' + deid_key + '.txt'
 	return(full_deid_path)
 
 
 def get_deid_full_path(deid_key, deid_path):
 	# Directory pattern: XX/XXX/XXX/XXX/XXXXXXXXXXXXXX.txt
-	l1 = deid_key***REMOVED***0:2***REMOVED***
-	l2 = deid_key***REMOVED***2:5***REMOVED***
-	l3 = deid_key***REMOVED***5:8***REMOVED***
-	l4 = deid_key***REMOVED***8:11***REMOVED***
+	l1 = deid_key[0:2]
+	l2 = deid_key[2:5]
+	l3 = deid_key[5:8]
+	l4 = deid_key[8:11]
 	full_deid_path = deid_path + '/' + l1 + '/' + l2 + '/' + l3 + '/' + l4 + '/' + deid_key + '.txt'
 	return(full_deid_path)
 
 
 def copy_and_normalize_note(full_text_path, text_key, note_output_dir):
-	#subprocess.check_call(***REMOVED***"cp", full_text_path, note_output_dir***REMOVED***)
+	#subprocess.check_call(["cp", full_text_path, note_output_dir])
 	full_text_key = '0'*(12-len(text_key)) + text_key
 	new_text = ''
 	with open(full_text_path, encoding='utf-8',errors='ignore') as f:
@@ -103,9 +103,9 @@ def copy_and_normalize_note(full_text_path, text_key, note_output_dir):
 def get_text_full_path(text_key, text_path):
 	# Max length is 12
 	full_text_key = '0'*(12-len(text_key)) + text_key
-	l1 = full_text_key***REMOVED***0:3***REMOVED***
-	l2 = full_text_key***REMOVED***3:6***REMOVED***
-	l3 = full_text_key***REMOVED***6:9***REMOVED***
+	l1 = full_text_key[0:3]
+	l2 = full_text_key[3:6]
+	l3 = full_text_key[6:9]
 	full_text_path = text_path + '/' + l1 + '/' + l2 + '/' + l3 + '/' + full_text_key + '.txt'
 	return(full_text_path)
 
@@ -168,7 +168,7 @@ def main():
 	    line = line.rstrip('\n')
 	    line  = line.replace('.0','')
 	    key= line.split('\t')
-	    meta***REMOVED***key***REMOVED***10***REMOVED******REMOVED*** = key***REMOVED***9***REMOVED***
+	    meta[key[10]] = key[9]
 
     print("Meta loaded into hash")
     pii = pd.read_csv(input_csv)

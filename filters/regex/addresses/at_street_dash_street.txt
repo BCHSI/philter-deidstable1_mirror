@@ -1,1 +1,1 @@
-\b(?<=(?i)at\s)(***REMOVED***A-Z***REMOVED******REMOVED***a-zA-Z***REMOVED***+|((?i)("""+day_numbering+r""")))((?i)\s("""+address_indicator+r"""))\/(***REMOVED***A-Z***REMOVED******REMOVED***a-zA-Z***REMOVED***+|((?i)("""+day_numbering+r""")))((?i)\s("""+address_indicator+r"""))\b
+\b(?<=(?i)at\s)([A-Z][a-zA-Z]+|((?i)("""+day_numbering+r""")))((?i)\s("""+address_indicator+r"""))\/([A-Z][a-zA-Z]+|((?i)("""+day_numbering+r""")))((?i)\s("""+address_indicator+r"""))\b

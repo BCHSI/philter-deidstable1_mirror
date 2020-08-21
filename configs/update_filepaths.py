@@ -9,7 +9,7 @@ def pull_paths(inputfile):
     # get config filepaths which need to change
     with open(inputfile) as fin:
         text = fin.read()
-    filepaths = re.findall('raise Exception\(\"Config filepath does not exist\"\, pattern\***REMOVED***\"filepath\"\***REMOVED***\)\s+?Exception\: \(\'Config filepath does not exist\'\, \'(***REMOVED***\S***REMOVED***+?)\'\)\s+\(deidproj\) NUS11097-10-pauburk\:philter-ucsf-new pauburk\$ python3 deidpipe\.py -i \.\/data\/i2b2_notes\/', text, re.MULTILINE)
+    filepaths = re.findall('raise Exception\(\"Config filepath does not exist\"\, pattern\[\"filepath\"\]\)\s+?Exception\: \(\'Config filepath does not exist\'\, \'([\S]+?)\'\)\s+\(deidproj\) NUS11097-10-pauburk\:philter-ucsf-new pauburk\$ python3 deidpipe\.py -i \.\/data\/i2b2_notes\/', text, re.MULTILINE)
 
     # go through each config file
     rootdir = "."
@@ -19,7 +19,7 @@ def pull_paths(inputfile):
             # check that file ends in .json
             if '.json' in file:
                 print(file)
-                new_file_text = ***REMOVED******REMOVED***
+                new_file_text = []
 
                 filepath = os.path.join(root, file)
 
@@ -35,10 +35,10 @@ def pull_paths(inputfile):
                         for path in filepaths:
 
                             # check if path is the value for 'filepath'
-                            if item***REMOVED***'filepath'***REMOVED*** == path:
+                            if item['filepath'] == path:
 
                                 # remove "_transformed" from filepath
-                                item***REMOVED***'filepath'***REMOVED*** = re.findall('(***REMOVED***\S***REMOVED***+)\_transformed\.txt', path)***REMOVED***0***REMOVED***+".txt"
+                                item['filepath'] = re.findall('([\S]+)\_transformed\.txt', path)[0]+".txt"
 
                     # add changed item to the changed text to output
                     new_file_text.append(item)

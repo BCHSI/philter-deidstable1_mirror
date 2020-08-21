@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT><![CDATA[
 
 
 Record date: 2094-12-08
@@ -367,7 +367,7 @@ Pager #45445
 
 
 
-***REMOVED******REMOVED***></TEXT>
+]]></TEXT>
 <TAGS>
 <DATE id="P0" start="16" end="26" text="2094-12-08" TYPE="DATE" comment="" />
 <NAME id="P1" start="84" end="98" text="Trent, Shirley" TYPE="PATIENT" comment="" />

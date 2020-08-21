@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT><![CDATA[
 
 
 Record date: 2084-10-19
@@ -141,7 +141,7 @@ TYO/ellington		04-14609701.doc
 
 
 
-***REMOVED******REMOVED***></TEXT>
+]]></TEXT>
 <TAGS>
 <DATE id="P0" start="16" end="26" text="2084-10-19" TYPE="DATE" comment="" />
 <NAME id="P1" start="165" end="173" text="Mae Paul" TYPE="PATIENT" comment="" />

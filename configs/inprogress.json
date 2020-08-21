@@ -1,4 +1,4 @@
-***REMOVED***
+[
 	{
 		"title":"Date Regex K1",
 		"type":"regex",
@@ -20,6 +20,6 @@
 		"filepath":"filters/regex/catchall.txt",
 		"notes":"This should match anything, preventing the catchall"
 	}
-***REMOVED***
+]
 
 

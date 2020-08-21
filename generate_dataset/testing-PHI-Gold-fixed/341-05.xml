@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT><![CDATA[
 
 
 Record date: 2098-08-03
@@ -284,7 +284,7 @@ Pager 47234
 
 
 
-***REMOVED******REMOVED***></TEXT>
+]]></TEXT>
 <TAGS>
 <DATE id="P0" start="16" end="26" text="2098-08-03" TYPE="DATE" comment="" />
 <NAME id="P3" start="83" end="97" text="Wilhelm, Goldy" TYPE="PATIENT" comment="" />

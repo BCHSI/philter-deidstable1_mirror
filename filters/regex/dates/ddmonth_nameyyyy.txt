@@ -1,1 +1,1 @@
-(***REMOVED***1-2***REMOVED******REMOVED***0-9***REMOVED***|3***REMOVED***0-1***REMOVED***|0?***REMOVED***1-9***REMOVED***)("""+month_name+r""")(\d{4}|\d{2})
+([1-2][0-9]|3[0-1]|0?[1-9])("""+month_name+r""")(\d{4}|\d{2})

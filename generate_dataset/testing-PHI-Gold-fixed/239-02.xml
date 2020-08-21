@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT><![CDATA[
 
 
 Record date: 2067-08-02
@@ -60,7 +60,7 @@ At today's visit, the patient's wound was dressed and cleaned the our nursing st
 
 
 
-***REMOVED******REMOVED***></TEXT>
+]]></TEXT>
 <TAGS>
 <DATE id="P0" start="16" end="26" text="2067-08-02" TYPE="DATE" comment="" />
 <AGE id="P1" start="28" end="30" text="60" TYPE="AGE" comment="" />

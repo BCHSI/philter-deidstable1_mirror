@@ -1,1 +1,1 @@
-\b(?<=hospitalized at\s)***REMOVED***A-Z***REMOVED******REMOVED***a-zA-Z***REMOVED***+((\s|\-)***REMOVED***A-Z***REMOVED******REMOVED***a-zA-Z***REMOVED***+)?((\s|\-)***REMOVED***A-Z***REMOVED******REMOVED***a-zA-Z***REMOVED***+)?\b
+\b(?<=hospitalized at\s)[A-Z][a-zA-Z]+((\s|\-)[A-Z][a-zA-Z]+)?((\s|\-)[A-Z][a-zA-Z]+)?\b

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT><![CDATA[
 
 
 Record date: 2136-09-09
@@ -49,7 +49,7 @@ Home meds: ASA 81, lipitor 20, metformin 500, zestril 10, toprol 25
 
 	Changes to Allergies
 	
-NKA: No Known Allergies - reaction: ***REMOVED***reviewed***REMOVED***
+NKA: No Known Allergies - reaction: [reviewed]
 
 
 	Social history:
@@ -127,7 +127,7 @@ Document Status: Final
 
 
 
-***REMOVED******REMOVED***></TEXT>
+]]></TEXT>
 <TAGS>
 <DATE id="P0" start="16" end="26" text="2136-09-09" TYPE="DATE" comment="" />
 <LOCATION id="P1" start="45" end="66" text="PERDUE MEDICAL CENTER" TYPE="HOSPITAL" comment="" />

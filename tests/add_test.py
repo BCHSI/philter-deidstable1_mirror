@@ -32,7 +32,7 @@ def add_conf(path_to_conf, test_mode):
 
     if not os.path.exists(new_conf_path):
         os.mkdir(new_conf_path)
-        conf_name = path_to_conf.split('/')***REMOVED***-1***REMOVED***
+        conf_name = path_to_conf.split('/')[-1]
         shutil.copy(path_to_conf, new_conf_path)
         os.rename(os.path.join(new_conf_path, conf_name), os.path.join(new_conf_path, 'conf.json'))
         print ("The ID for your new configuration file is: " + new_conf_dir)
@@ -91,7 +91,7 @@ def id_counter(dir):
     if len(os.listdir(dir) ) == 0:
         return 0
     else:
-        return int(max(next(os.walk(dir))***REMOVED***1***REMOVED***)) + 1
+        return int(max(next(os.walk(dir))[1])) + 1
 
 # check if the number of files and file names in golden file and input file match
 def check_input(input, gold):
@@ -160,8 +160,8 @@ if __name__=="__main__":
     # only 3 args: adding conf file, return conf_id 
     if len(sys.argv) == 3:
         # ap = argparse.ArgumentParser(description=help_str)
-        path_to_conf = sys.argv***REMOVED***2***REMOVED***
-        test_mode = sys.argv***REMOVED***1***REMOVED***
+        path_to_conf = sys.argv[2]
+        test_mode = sys.argv[1]
         conf_path = os.path.abspath(path_to_conf)
         print("Adding configuration file......")
         add_conf(path_to_conf, test_mode)
@@ -172,7 +172,7 @@ if __name__=="__main__":
         
         help_str = """ Philter python3 add_test.py -i """
         ap = argparse.ArgumentParser(description=help_str)
-        ap.add_argument("-m", "--mode", required=True, help="Three testing mode allowed: w, b, r.", type=str, choices=***REMOVED***'w','b','r'***REMOVED***,)
+        ap.add_argument("-m", "--mode", required=True, help="Three testing mode allowed: w, b, r.", type=str, choices=['w','b','r'],)
         ap.add_argument("-i", "--input", required=True, help="path to input testing data", type=str)
         ap.add_argument("-g", "--gold", required=True, help="path to gold standard annotated data", type=str)
         ap.add_argument("-c", "--conf_id", required=True, help="Unique ID of configuration file", type=str)
@@ -185,10 +185,10 @@ if __name__=="__main__":
 
     # # # stdin testing mode
     # # # python3 add_test.py -s True -i 'I am John' -g 'I am ****' -c ID -m b
-    elif len(sys.argv) == 11 and sys.argv***REMOVED***1***REMOVED*** == '-s':
+    elif len(sys.argv) == 11 and sys.argv[1] == '-s':
         help_str = """ Philter python3 add_test.py -i """
         ap = argparse.ArgumentParser(description=help_str)
-        ap.add_argument("-m", "--mode", required=True, help="Three testing mode allowed: w, b, r.", type=str, choices=***REMOVED***'w','b','r'***REMOVED***,)
+        ap.add_argument("-m", "--mode", required=True, help="Three testing mode allowed: w, b, r.", type=str, choices=['w','b','r'],)
         ap.add_argument("-i", "--input", required=True, help="input test string", type=str)
         ap.add_argument("-g", "--gold", required=True, help="golden standard string", type=str)
         ap.add_argument("-c", "--conf_id", required=True, help="Unique ID of configuration file", type=str)

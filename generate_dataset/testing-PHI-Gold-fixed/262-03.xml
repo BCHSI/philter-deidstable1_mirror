@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT><![CDATA[
 
 
 Record date: 2091-12-16
@@ -544,7 +544,7 @@ Pager #30547
 
 
 
-***REMOVED******REMOVED***></TEXT>
+]]></TEXT>
 <TAGS>
 <DATE id="P0" start="16" end="26" text="2091-12-16" TYPE="DATE" comment="" />
 <NAME id="P1" start="77" end="92" text="Olivo, Kimberly" TYPE="PATIENT" comment="" />

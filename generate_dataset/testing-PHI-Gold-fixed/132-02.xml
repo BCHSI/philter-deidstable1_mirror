@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT><![CDATA[
 
 
 Record date: 2071-11-24
@@ -233,7 +233,7 @@ DV: 11/24/71
 
 
 
-***REMOVED******REMOVED***></TEXT>
+]]></TEXT>
 <TAGS>
 <DATE id="P0" start="16" end="26" text="2071-11-24" TYPE="DATE" comment="" />
 <LOCATION id="P1" start="52" end="76" text="Jeanes Memorial Hospital" TYPE="HOSPITAL" comment="" />

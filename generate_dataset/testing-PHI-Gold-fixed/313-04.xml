@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT><![CDATA[
 
 
 Record date: 2072-03-13
 
-                                                       Patient Name: RUTLEDGE,EMMA ***REMOVED*** MRN: 37947241ZGJ ***REMOVED***
+                                                       Patient Name: RUTLEDGE,EMMA [ MRN: 37947241ZGJ ]
 
                                                          Date of Visit:3/13/2072
 
@@ -229,7 +229,7 @@ Betty Doris Hanna, MD
 
 
 
-***REMOVED******REMOVED***></TEXT>
+]]></TEXT>
 <TAGS>
 <DATE id="P0" start="16" end="26" text="2072-03-13" TYPE="DATE" comment="" />
 <NAME id="P1" start="97" end="110" text="RUTLEDGE,EMMA" TYPE="PATIENT" comment="" />

@@ -1,10 +1,10 @@
-***REMOVED***
+[
 	{
 		"title":"went to",
 		"type":"regex",
 		"exclude":true,
 		"filepath":"filters/regex/organizations/admitted_to_hospital_7chars.txt",
-		"pos":***REMOVED******REMOVED***,
+		"pos":[],
 		"notes":"This should match x_years_old"
 	},
 	{
@@ -15,4 +15,4 @@
 		"notes":"This should match anything, preventing the catchall"
 	}
 
-***REMOVED***
+]

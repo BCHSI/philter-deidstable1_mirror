@@ -4,7 +4,7 @@ from subprocess import call,check_output
 import filecmp
 from shutil import rmtree
 
-script = os.path.abspath(sys.argv***REMOVED***1***REMOVED***)
+script = os.path.abspath(sys.argv[1])
 
 GOLDEN_OUTPUT = "golden_output"
 PROGRAM_OUTPUT = "program_output"
@@ -35,8 +35,8 @@ def black_list_test():
         
         
         os.chdir(os.path.abspath(os.path.dirname(script)))
-        call(***REMOVED***"python3", script,"-i="+input_data,"-a="+input_data,
-        "-o="+program_output,"-f="+conf_file,"-e=False"***REMOVED***)
+        call(["python3", script,"-i="+input_data,"-a="+input_data,
+        "-o="+program_output,"-f="+conf_file,"-e=False"])
         os.chdir(WORKING_DIR)
         
                 
@@ -57,8 +57,8 @@ def white_list_test():
         
         
         os.chdir(os.path.abspath(os.path.dirname(script)))
-        call(***REMOVED***"python3", script,"-i="+input_data,"-a="+input_data,
-        "-o="+program_output,"-f="+conf_file,"-e=False"***REMOVED***)
+        call(["python3", script,"-i="+input_data,"-a="+input_data,
+        "-o="+program_output,"-f="+conf_file,"-e=False"])
         os.chdir(WORKING_DIR)
         
                 
@@ -79,8 +79,8 @@ def regex_test():
         
         
         os.chdir(os.path.abspath(os.path.dirname(script)))
-        call(***REMOVED***"python3", script,"-i="+input_data,"-a="+input_data,
-        "-o="+program_output,"-f="+conf_file,"-e=False"***REMOVED***)
+        call(["python3", script,"-i="+input_data,"-a="+input_data,
+        "-o="+program_output,"-f="+conf_file,"-e=False"])
         os.chdir(WORKING_DIR)
         
                 
@@ -104,14 +104,14 @@ def new_script_test(new_script, config_path):
     print("RUNNING SCRIPT 1")
 
     os.chdir(os.path.abspath(".."))
-    call(***REMOVED***"python3", absolute_script,"-i="+SCRIPT_TEST_DATA,"-a="+SCRIPT_TEST_DATA,"-o="+SCRIPT_TEST_TEMP_FOLDER_1,"-f="+absolute_config_path,"-e=False"***REMOVED***)
+    call(["python3", absolute_script,"-i="+SCRIPT_TEST_DATA,"-a="+SCRIPT_TEST_DATA,"-o="+SCRIPT_TEST_TEMP_FOLDER_1,"-f="+absolute_config_path,"-e=False"])
     os.chdir(WORKING_DIR)
 
     #run the new script
     
     os.chdir(os.path.abspath(os.path.dirname(new_script)))
     print("RUNNING SCRIPT 2")
-    call(***REMOVED***"python3", absolute_new_script,"-i="+SCRIPT_TEST_DATA,"-a="+SCRIPT_TEST_DATA,"-o="+SCRIPT_TEST_TEMP_FOLDER_2,"-f="+absolute_config_path,"-e=False"***REMOVED***)
+    call(["python3", absolute_new_script,"-i="+SCRIPT_TEST_DATA,"-a="+SCRIPT_TEST_DATA,"-o="+SCRIPT_TEST_TEMP_FOLDER_2,"-f="+absolute_config_path,"-e=False"])
     os.chdir(WORKING_DIR)
 
     print("TESTING OUTPUTS")
@@ -154,7 +154,7 @@ if __name__=="__main__":
 
     
     if len(sys.argv) > 2:
-        new_script = sys.argv***REMOVED***2***REMOVED***
+        new_script = sys.argv[2]
         conf_path = os.path.abspath("../configs/philter_alpha.json")
         print("Running new script tests:...")
         new_script_test(new_script,conf_path)

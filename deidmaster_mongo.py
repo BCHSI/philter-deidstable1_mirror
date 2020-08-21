@@ -8,10 +8,10 @@ from subprocess import call
 from collections import OrderedDict
 
 # using OrderedDict for reproducability
-servers = OrderedDict(***REMOVED***('MCWLDEIDLAP701.ucsfmedicalcenter.org',24),
+servers = OrderedDict([('MCWLDEIDLAP701.ucsfmedicalcenter.org',24),
                        ('qcdeidlap702.ucsfmedicalcenter.org',14),
                        ('qcdeidlap703.ucsfmedicalcenter.org',14),
-                       ('qcdeidlap705.ucsfmedicalcenter.org',14)***REMOVED***)
+                       ('qcdeidlap705.ucsfmedicalcenter.org',14)])
 random.seed(10101) #fix seed for reproducibility 
 
 
@@ -53,7 +53,7 @@ def send_jobs(servers, username, wrkDir, configfile, mongofile, suplog):
                        + " --philterconfig " + os.path.join(wrkDir,"configs/",configfile)
                        + " --superlog " + str(suplog)
                        + " --philter " + str(wrkDir)
-                       + " > " + os.path.join(wrkDir, "stdouterr_"+ url.split('.')***REMOVED***0***REMOVED*** + ".txt")
+                       + " > " + os.path.join(wrkDir, "stdouterr_"+ url.split('.')[0] + ".txt")
                        + " 2>&1 &")
         print(commandline)
         call(commandline.split())

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT><![CDATA[
 
 
 Record date: 2069-01-13
@@ -109,25 +109,25 @@ EXAMINATION:
 
 
 
-***REMOVED***Constitution***REMOVED***  - well nourished and developed.  
+[Constitution]  - well nourished and developed.  
 
-***REMOVED***Eyes***REMOVED***  - conjunctivae clear, pupils equal, no discharge
+[Eyes]  - conjunctivae clear, pupils equal, no discharge
 
-***REMOVED***Neck***REMOVED*** - supple no lymphadenopathy or thyromegaly. 
+[Neck] - supple no lymphadenopathy or thyromegaly. 
 
-***REMOVED***CV***REMOVED*** - regular rate no murmurs, rubs or gallops, no heave; carotid pulses normal, no extremities edema.
+[CV] - regular rate no murmurs, rubs or gallops, no heave; carotid pulses normal, no extremities edema.
 
-***REMOVED***Respiratory***REMOVED*** - clear, breath sounds bilaterally, no accessory muscle use.  
+[Respiratory] - clear, breath sounds bilaterally, no accessory muscle use.  
 
-***REMOVED***GI***REMOVED*** - abdomen soft, no hepatosplenomegaly, no abnormal masses or hernias.  
+[GI] - abdomen soft, no hepatosplenomegaly, no abnormal masses or hernias.  
 
-***REMOVED***Skin***REMOVED***- no significant rashes or other lesions.  
+[Skin]- no significant rashes or other lesions.  
 
-***REMOVED***Musc/Skel***REMOVED*** - normal tone, no edema; feet without lesions; decreased VS to ankles bilat
+[Musc/Skel] - normal tone, no edema; feet without lesions; decreased VS to ankles bilat
 
-***REMOVED***Neuro***REMOVED*** - 5/5 gross motor strength, grossly normal coordination and gait
+[Neuro] - 5/5 gross motor strength, grossly normal coordination and gait
 
-***REMOVED***Psych***REMOVED*** - alert and oriented for age, normal mood and affect
+[Psych] - alert and oriented for age, normal mood and affect
 
 
 
@@ -219,7 +219,7 @@ THIS IS A COPY PRODUCED FOR THE LMR. THE ORGINAL IS STORED ON THE BRIGHTPOINT SE
 
 
 
-***REMOVED******REMOVED***></TEXT>
+]]></TEXT>
 <TAGS>
 <DATE id="P0" start="16" end="26" text="2069-01-13" TYPE="DATE" comment="" />
 <NAME id="P1" start="561" end="565" text="frye" TYPE="DOCTOR" comment="" />

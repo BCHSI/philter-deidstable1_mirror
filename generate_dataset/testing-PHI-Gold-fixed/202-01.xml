@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT><![CDATA[
 
 
 Record date: 2155-05-17
@@ -65,7 +65,7 @@ cc:	Robert-Joseph Paige, MD, 558 Paxton Terrace, Peculiar, NE 54583
 
 
 
-***REMOVED******REMOVED***></TEXT>
+]]></TEXT>
 <TAGS>
 <DATE id="P0" start="16" end="26" text="2155-05-17" TYPE="DATE" comment="" />
 <DATE id="P1" start="36" end="47" text="17 May 2155" TYPE="DATE" comment="" />

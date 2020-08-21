@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT><![CDATA[
 
 
 Record date: 2122-09-14
@@ -249,7 +249,7 @@ Signed electronically by Ross, John on Sep 21, 2122     Lawrence, Francis X on S
 
 
 
-***REMOVED******REMOVED***></TEXT>
+]]></TEXT>
 <TAGS>
 <DATE id="P0" start="16" end="26" text="2122-09-14" TYPE="DATE" comment="" />
 <LOCATION id="P2" start="51" end="70" text="HOLY CROSS HOSPITAL" TYPE="HOSPITAL" comment="" />

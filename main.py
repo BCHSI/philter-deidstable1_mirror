@@ -14,7 +14,7 @@ from chardet.universaldetector import UniversalDetector
 class Main:
     def __init__(self, inputdir = None, xml = False, batch = None, db = None, mongo = None):
         self.texts     = {}
-        self.filenames = ***REMOVED******REMOVED***
+        self.filenames = []
 
     def _detect_encoding(self, fp):
         if not os.path.exists(fp):
@@ -40,9 +40,9 @@ class Main:
 
                 self.filenames.append(filepath)
                 encoding = self._detect_encoding(filepath)
-                fhandle = open(filepath, "r", encoding=encoding***REMOVED***'encoding'***REMOVED***,
+                fhandle = open(filepath, "r", encoding=encoding['encoding'],
                                errors='surrogateescape')
-                self.texts***REMOVED***filepath***REMOVED*** = fhandle.read()
+                self.texts[filepath] = fhandle.read()
                 fhandle.close()
 
     def main(self):
@@ -117,43 +117,43 @@ class Main:
             verbose = False
             outputformat = "i2b2"
             # filters = "./configs/philter_alpha.json"
-            philter_config***REMOVED***"verbose"***REMOVED*** = verbose
-            philter_config***REMOVED***"run_eval"***REMOVED*** = run_eval
-            philter_config***REMOVED***"finpath"***REMOVED*** = args.input
-            philter_config***REMOVED***"foutpath"***REMOVED*** = args.output
-            philter_config***REMOVED***"outformat"***REMOVED*** = outputformat
-            philter_config***REMOVED***"filters"***REMOVED*** = args.filters
-            philter_config***REMOVED***"cachepos"***REMOVED*** = args.cachepos
-            philter_config***REMOVED***"phi_text"***REMOVED*** = self.texts
-            philter_config***REMOVED***"filenames"***REMOVED*** = self.filenames
+            philter_config["verbose"] = verbose
+            philter_config["run_eval"] = run_eval
+            philter_config["finpath"] = args.input
+            philter_config["foutpath"] = args.output
+            philter_config["outformat"] = outputformat
+            philter_config["filters"] = args.filters
+            philter_config["cachepos"] = args.cachepos
+            philter_config["phi_text"] = self.texts
+            philter_config["filenames"] = self.filenames
         else:
-            philter_config***REMOVED***"verbose"***REMOVED*** = args.verbose
-            philter_config***REMOVED***"run_eval"***REMOVED*** = args.run_eval
-            philter_config***REMOVED***"phi_text"***REMOVED*** = self.texts
-            philter_config***REMOVED***"filenames"***REMOVED*** = self.filenames
-            if philter_config***REMOVED***"run_eval"***REMOVED***:
-                philter_config***REMOVED***"xml"***REMOVED*** = args.xml
-                philter_config***REMOVED***"ucsfformat"***REMOVED*** = args.ucsfformat
-                philter_config***REMOVED***"anno_folder"***REMOVED*** = args.anno
-                philter_config***REMOVED***"eval_out"***REMOVED*** = args.eval_output
-                philter_config***REMOVED***"dependent"***REMOVED*** = args.dependent
-                philter_config***REMOVED***"coords"***REMOVED*** = args.coords
-                philter_config***REMOVED***"freq_table"***REMOVED*** = args.freq_table
-                philter_config***REMOVED***"initials"***REMOVED*** = args.initials
-            philter_config***REMOVED***"finpath"***REMOVED*** = args.input
-            philter_config***REMOVED***"foutpath"***REMOVED*** = args.output
-            philter_config***REMOVED***"outformat"***REMOVED*** = args.outputformat
-            philter_config***REMOVED***"filters"***REMOVED*** = args.filters
-            philter_config***REMOVED***"time_profile"***REMOVED*** = args.time_profile
-            philter_config***REMOVED***"cachepos"***REMOVED*** = args.cachepos
-            philter_config***REMOVED***"stanford_ner_tagger"***REMOVED*** = {
+            philter_config["verbose"] = args.verbose
+            philter_config["run_eval"] = args.run_eval
+            philter_config["phi_text"] = self.texts
+            philter_config["filenames"] = self.filenames
+            if philter_config["run_eval"]:
+                philter_config["xml"] = args.xml
+                philter_config["ucsfformat"] = args.ucsfformat
+                philter_config["anno_folder"] = args.anno
+                philter_config["eval_out"] = args.eval_output
+                philter_config["dependent"] = args.dependent
+                philter_config["coords"] = args.coords
+                philter_config["freq_table"] = args.freq_table
+                philter_config["initials"] = args.initials
+            philter_config["finpath"] = args.input
+            philter_config["foutpath"] = args.output
+            philter_config["outformat"] = args.outputformat
+            philter_config["filters"] = args.filters
+            philter_config["time_profile"] = args.time_profile
+            philter_config["cachepos"] = args.cachepos
+            philter_config["stanford_ner_tagger"] = {
                 "classifier":args.stanfordner+"classifiers/english.all.3class.distsim.crf.ser.gz",
                 "jar":args.stanfordner+"stanford-ner.jar",
                 "download":True,
             }
        
         if verbose:
-            print("RUNNING ", philter_config***REMOVED***'filters'***REMOVED***)
+            print("RUNNING ", philter_config['filters'])
 
 
         filterer = Philter(philter_config)
@@ -182,8 +182,8 @@ class Main:
                 phi_matcher=re.compile("\*+"),
                 pre_process=r":|\,|\-|\/|_|~", #characters we're going to strip from our notes to analyze against anno
                 only_digits=False,
-                pre_process2= r"***REMOVED***^a-zA-Z0-9***REMOVED***",
-                punctuation_matcher=re.compile(r"***REMOVED***^a-zA-Z0-9\****REMOVED***"))
+                pre_process2= r"[^a-zA-Z0-9]",
+                punctuation_matcher=re.compile(r"[^a-zA-Z0-9\*]"))
 
 
 
@@ -205,7 +205,7 @@ class Main:
                 f.write(header_string)
                 for file in filterer.overall_regex_time_profile:
                     current_profile_string = file
-                    for profile_data in filterer.overall_regex_time_profile***REMOVED***file***REMOVED***:
+                    for profile_data in filterer.overall_regex_time_profile[file]:
                         current_profile_string += (',' + str(profile_data))
                     current_profile_string += '\n'
                     f.write(current_profile_string)

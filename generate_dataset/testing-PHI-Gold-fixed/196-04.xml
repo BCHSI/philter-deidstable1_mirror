@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT><![CDATA[
 
 
 Record date: 2090-11-21
@@ -87,7 +87,7 @@ Singh, M.D.
 
 
 
-***REMOVED******REMOVED***></TEXT>
+]]></TEXT>
 <TAGS>
 <DATE id="P0" start="16" end="26" text="2090-11-21" TYPE="DATE" comment="" />
 <AGE id="P1" start="97" end="99" text="62" TYPE="AGE" comment="" />

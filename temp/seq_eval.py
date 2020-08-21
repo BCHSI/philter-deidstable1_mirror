@@ -31,7 +31,7 @@ def detect_encoding(fp):
     return detector.result
 
 
-punctuation_matcher = re.compile(r"***REMOVED***^a-zA-Z0-9****REMOVED***")
+punctuation_matcher = re.compile(r"[^a-zA-Z0-9*]")
 not_word_matcher = re.compile(r"(\W)")
 phi_matcher = re.compile(r"\*+")
 pre_process = re.compile(r":|\-|\/|_|~")
@@ -51,11 +51,11 @@ def find_diff(lst1, lst2):
 
     """
 
-    true_positives = ***REMOVED******REMOVED***
-    true_negatives = ***REMOVED******REMOVED***
+    true_positives = []
+    true_negatives = []
 
-    false_negatives = ***REMOVED******REMOVED***
-    false_positives = ***REMOVED******REMOVED***
+    false_negatives = []
+    false_positives = []
 
     print(lst1)
     print(lst2)
@@ -63,25 +63,25 @@ def find_diff(lst1, lst2):
     d = difflib.Differ()
     for line in list(d.compare(lst1, lst2)):
 
-        if punctuation_matcher.match(line***REMOVED***1:***REMOVED***.strip()):
+        if punctuation_matcher.match(line[1:].strip()):
             #skip lines with only punctuation
             continue
 
         if line.startswith(" "):
             #match
             #print("match", line)
-            if re.search("\*+", line***REMOVED***1:***REMOVED***):
+            if re.search("\*+", line[1:]):
                 print("match", line)
-                true_positives.append(line***REMOVED***1:***REMOVED***)
+                true_positives.append(line[1:])
             else:
-                true_negatives.append(line***REMOVED***1:***REMOVED***)
+                true_negatives.append(line[1:])
 
         elif line.startswith("-"):
             #print("neg", line)
-            false_negatives.append(line***REMOVED***1:***REMOVED***)
+            false_negatives.append(line[1:])
         elif line.startswith("+"):
             #print("pos", line)
-            false_positives.append(line***REMOVED***1:***REMOVED***)
+            false_positives.append(line[1:])
         else:
             print(line)
 
@@ -105,10 +105,10 @@ summary = {
             "total_false_negatives":0,
             "total_true_positives": 0,
             "total_true_negatives": 0,
-            "false_positives":***REMOVED******REMOVED***, #non-phi words we think are phi
-            #"true_positives": ***REMOVED******REMOVED***, #phi words we correctly identify
-            "false_negatives":***REMOVED******REMOVED***, #phi words we think are non-phi
-            #"true_negatives": ***REMOVED******REMOVED***, #non-phi words we correctly identify
+            "false_positives":[], #non-phi words we think are phi
+            #"true_positives": [], #phi words we correctly identify
+            "false_negatives":[], #phi words we think are non-phi
+            #"true_negatives": [], #non-phi words we correctly identify
         }
 
 summary_by_file = {}
@@ -127,10 +127,10 @@ for root, dirs, files in os.walk(NOTES_folder):
 
 
         #local values per file
-        false_positives = ***REMOVED******REMOVED*** #non-phi we think are phi
-        true_positives  = ***REMOVED******REMOVED*** #phi we correctly identify
-        false_negatives = ***REMOVED******REMOVED*** #phi we think are non-phi
-        true_negatives  = ***REMOVED******REMOVED*** #non-phi we correctly identify
+        false_positives = [] #non-phi we think are phi
+        true_positives  = [] #phi we correctly identify
+        false_negatives = [] #phi we think are non-phi
+        true_negatives  = [] #non-phi we correctly identify
 
         philtered_filename = root+f
         anno_filename = anno_folder+f
@@ -146,14 +146,14 @@ for root, dirs, files in os.walk(NOTES_folder):
 
         
         encoding1 = detect_encoding(philtered_filename)
-        philtered = open(philtered_filename,"r", encoding=encoding1***REMOVED***'encoding'***REMOVED***).read()
+        philtered = open(philtered_filename,"r", encoding=encoding1['encoding']).read()
         #pre-process notes for comparison with anno punctuation stripped files
         
         #philtered = re.sub(pre_process, " ", philtered)
         philtered_words = re.split("\s+", philtered)
 
         encoding2 = detect_encoding(anno_filename)
-        anno = open(anno_filename,"r", encoding=encoding2***REMOVED***'encoding'***REMOVED***).read()
+        anno = open(anno_filename,"r", encoding=encoding2['encoding']).read()
 
 
         anno_words = re.split("\s+", anno)
@@ -162,38 +162,38 @@ for root, dirs, files in os.walk(NOTES_folder):
         find_diff(philtered_words, anno_words)
 
 #calc stats
-# summary***REMOVED***"total_false_negatives"***REMOVED*** = len(summary***REMOVED***"false_negatives"***REMOVED***)
-# summary***REMOVED***"total_false_positives"***REMOVED*** = len(summary***REMOVED***"false_positives"***REMOVED***)
-# print("true_negatives", summary***REMOVED***"total_true_negatives"***REMOVED***,"true_positives", summary***REMOVED***"total_true_positives"***REMOVED***, "false_negatives", summary***REMOVED***"total_false_negatives"***REMOVED***, "false_positives", summary***REMOVED***"total_false_positives"***REMOVED***)
+# summary["total_false_negatives"] = len(summary["false_negatives"])
+# summary["total_false_positives"] = len(summary["false_positives"])
+# print("true_negatives", summary["total_true_negatives"],"true_positives", summary["total_true_positives"], "false_negatives", summary["total_false_negatives"], "false_positives", summary["total_false_positives"])
 
-# if summary***REMOVED***"total_true_positives"***REMOVED***+summary***REMOVED***"total_false_negatives"***REMOVED*** > 0:
-#     print("Recall: {:.2%}".format(summary***REMOVED***"total_true_positives"***REMOVED***/(summary***REMOVED***"total_true_positives"***REMOVED***+summary***REMOVED***"total_false_negatives"***REMOVED***)))
-# elif summary***REMOVED***"total_false_negatives"***REMOVED*** == 0:
+# if summary["total_true_positives"]+summary["total_false_negatives"] > 0:
+#     print("Recall: {:.2%}".format(summary["total_true_positives"]/(summary["total_true_positives"]+summary["total_false_negatives"])))
+# elif summary["total_false_negatives"] == 0:
 #     print("Recall: 100%")
 
-# if summary***REMOVED***"total_true_positives"***REMOVED***+summary***REMOVED***"total_false_positives"***REMOVED*** > 0:
-#     print("Precision: {:.2%}".format(summary***REMOVED***"total_true_positives"***REMOVED***/(summary***REMOVED***"total_true_positives"***REMOVED***+summary***REMOVED***"total_false_positives"***REMOVED***)))
-# elif summary***REMOVED***"total_false_positives"***REMOVED*** == 0:
+# if summary["total_true_positives"]+summary["total_false_positives"] > 0:
+#     print("Precision: {:.2%}".format(summary["total_true_positives"]/(summary["total_true_positives"]+summary["total_false_positives"])))
+# elif summary["total_false_positives"] == 0:
 #     print("Precision: 100%")
 
 
 pos_summary = {}
 
 for k in fn_with_pos:
-    for pos in fn_with_pos***REMOVED***k***REMOVED***:
+    for pos in fn_with_pos[k]:
         if pos not in pos_summary:
-            pos_summary***REMOVED***pos***REMOVED*** = 0
-        pos_summary***REMOVED***pos***REMOVED*** += 1
+            pos_summary[pos] = 0
+        pos_summary[pos] += 1
 
 with open("pos.csv", "w") as f:
     pos_list = pos_summary.keys()
     f.write(",".join(pos_list)+"\n")
 
     #total results
-    results = ***REMOVED******REMOVED***
+    results = []
     for pos in pos_list:
-        results.append(pos_summary***REMOVED***pos***REMOVED***)
-    results = ***REMOVED***str(x) for x in results***REMOVED***
+        results.append(pos_summary[pos])
+    results = [str(x) for x in results]
     f.write(",".join(results))
 
 

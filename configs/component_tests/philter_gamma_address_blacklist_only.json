@@ -1,10 +1,10 @@
-***REMOVED***    
+[    
     {
         "title":"Address Blacklist",
         "type":"set",
         "exclude":true,
         "filepath":"filters/blacklists/updated_address_blacklist.json",
-        "pos":***REMOVED***"NNP"***REMOVED***,
+        "pos":["NNP"],
         "notes":""
     },
     {
@@ -14,4 +14,4 @@
         "filepath":"filters/regex/catchall.txt",
         "notes":"This should match anything, preventing the catchall"
     }
-***REMOVED***
+]

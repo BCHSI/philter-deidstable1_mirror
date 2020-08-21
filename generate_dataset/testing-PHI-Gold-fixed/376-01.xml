@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT><![CDATA[
 
 
 Record date: 2071-08-08
@@ -43,15 +43,15 @@ had recurring prostatitis sx's and saw Dr. Dotson.  Cystoscopy in 1/2070 was nor
 
 Neurological symptoms	      
 
-he reports having intolerance to bright lights, tingling in his mid anterior abdomen and chest as well as numbness in his left middle three digits with some neck discomfort.  His MRI of his LS spine done at Montreal Medical in early 2070 evidently showed (by his report) no cord abnormalities.  His sx's sound like left-sided cervical radiculopathy but his visual and abdominal sx's makes me concerned about  systemic demyelinating conditions.  Will check TSH, B12 and have him see Dr. Conley. ***REMOVED***08/28/70***REMOVED***
+he reports having intolerance to bright lights, tingling in his mid anterior abdomen and chest as well as numbness in his left middle three digits with some neck discomfort.  His MRI of his LS spine done at Montreal Medical in early 2070 evidently showed (by his report) no cord abnormalities.  His sx's sound like left-sided cervical radiculopathy but his visual and abdominal sx's makes me concerned about  systemic demyelinating conditions.  Will check TSH, B12 and have him see Dr. Conley. [08/28/70]
 
 
 
-TSH and B12 levels were normal.  His sx's in his eyes and abdomen have essentially resolved.  He still has some cervical radiculopathy syptoms.  He will see Dr. Conley (yet to do so). ***REMOVED***01/21/71***REMOVED***
+TSH and B12 levels were normal.  His sx's in his eyes and abdomen have essentially resolved.  He still has some cervical radiculopathy syptoms.  He will see Dr. Conley (yet to do so). [01/21/71]
 
 
 
-still did not see Dr. Conley.  He now has right neck pain.  His left sided numbness has resolved.  Again referred him to Dr. Conley.  He likely has cervical radiculopathy. ***REMOVED***04/09/71***REMOVED***
+still did not see Dr. Conley.  He now has right neck pain.  His left sided numbness has resolved.  Again referred him to Dr. Conley.  He likely has cervical radiculopathy. [04/09/71]
 
 
 
@@ -119,7 +119,7 @@ cc: Dr. Conley
 
 
 
-***REMOVED******REMOVED***></TEXT>
+]]></TEXT>
 <TAGS>
 <DATE id="P0" start="16" end="26" text="2071-08-08" TYPE="DATE" comment="" />
 <NAME id="P1" start="51" end="60" text="Whitehead" TYPE="PATIENT" comment="" />

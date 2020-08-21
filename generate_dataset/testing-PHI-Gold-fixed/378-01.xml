@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT><![CDATA[
 
 
 Record date: 2062-09-18
@@ -57,7 +57,7 @@ KL/utz/orton
 
 
 
-***REMOVED******REMOVED***></TEXT>
+]]></TEXT>
 <TAGS>
 <DATE id="P0" start="16" end="26" text="2062-09-18" TYPE="DATE" comment="" />
 <NAME id="P1" start="28" end="41" text="Tammy Umphrey" TYPE="PATIENT" comment="" />

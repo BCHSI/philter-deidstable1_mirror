@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT><![CDATA[
 
 
 Record date: 2081-07-07
@@ -112,7 +112,7 @@ NU:UJ:4653/DD:7-8-81/DT:7-13-81/DV:7-8-81
 
 
 
-***REMOVED******REMOVED***></TEXT>
+]]></TEXT>
 <TAGS>
 <DATE id="P0" start="16" end="26" text="2081-07-07" TYPE="DATE" comment="" />
 <DATE id="P1" start="28" end="40" text="July 8, 2081" TYPE="DATE" comment="" />

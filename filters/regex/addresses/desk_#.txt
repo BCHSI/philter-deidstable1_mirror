@@ -1,1 +1,1 @@
-\b((?i)(reception\s)?desk)\s***REMOVED***a-zA-Z0-9***REMOVED***+\b
+\b((?i)(reception\s)?desk)\s[a-zA-Z0-9]+\b

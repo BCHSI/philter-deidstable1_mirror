@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT><![CDATA[
 
 
 Record date: 2083-07-21
@@ -332,9 +332,9 @@ ASSESSMENT AND PLAN
 
 Class III, Stage D heart failure without a clear precipitant leading to recent progressive decline; has been compliant with medications and diet, no evidence of recent arrhythmia, and no signs of active infection.  Has been failing current medical regimen, and is presently listed for heart transplantation.  Last TTE with an EF of 19%.
 
-***REMOVED******REMOVED*** Restart Coumadin at home doses (alternating between 5mg and 2.5mg)
+[] Restart Coumadin at home doses (alternating between 5mg and 2.5mg)
 
-***REMOVED******REMOVED*** Repeat TTE
+[] Repeat TTE
 
 
 
@@ -342,7 +342,7 @@ Preload:
 
 Wedge pressures elevated (27 mmHg), and will require more aggressive diuresis.  Goal of PCWP &lt; 20.
 
-***REMOVED******REMOVED*** Bumex 1mg IV x1
+[] Bumex 1mg IV x1
 
 
 - Further boluses if not responsive
@@ -353,12 +353,12 @@ Afterload:
 
 Calculated SVR is ~1300.  MAPs do not have a lot of room for further afterload reduction.  
 
-***REMOVED******REMOVED*** Change from lisinopril 5mg qD to captopril 12.5mg TID
+[] Change from lisinopril 5mg qD to captopril 12.5mg TID
 
 
 - Titrate as BP allows
 
-***REMOVED******REMOVED*** Continue Coreg 3.125mg qD and Spironolactone 12.5mg qD
+[] Continue Coreg 3.125mg qD and Spironolactone 12.5mg qD
 
 
 
@@ -372,11 +372,11 @@ Based on RHC, CO 4.7, CI 2.07, and MvO3 is 73.  No present indication for inotro
 
 No acute clinical changes and completely asymptomatic presently.  EKG with V-paced pattern not meeting criteria for acute ST segment changes.  Continue with medical management.  Will check fasting lipids; does not appear to have been on statin previously, so will start simvastatin and await lipid results.
 
-***REMOVED******REMOVED*** ASA 81 qD
+[] ASA 81 qD
 
-***REMOVED******REMOVED*** Fish Oil
+[] Fish Oil
 
-***REMOVED******REMOVED*** Start simvastatin 40mg PO qD
+[] Start simvastatin 40mg PO qD
 
 
 
@@ -384,7 +384,7 @@ No acute clinical changes and completely asymptomatic presently.  EKG with V-pac
 
 Trial-sensed, ventricularly-paced rhythm which is sinus in origin.  No evidence of tachyarrhythmias clinically, and per his report, recent interrogation of his device also did not reveal arrhythmias.
 
-***REMOVED******REMOVED*** Monitor on telemetry
+[] Monitor on telemetry
 
 
 
@@ -392,13 +392,13 @@ Trial-sensed, ventricularly-paced rhythm which is sinus in origin.  No evidence 
 
 Will recheck A1c.  On an unusual dose of BID Glipizide and long-acting insulin, but independently verified with both the patient and his wife.
 
-***REMOVED******REMOVED*** Lantus 24U qPM
+[] Lantus 24U qPM
 
-***REMOVED******REMOVED*** Glipizide 20mg BID
+[] Glipizide 20mg BID
 
-***REMOVED******REMOVED*** ISS and FSBS qAC and qHS
+[] ISS and FSBS qAC and qHS
 
-***REMOVED******REMOVED*** f/u A1c
+[] f/u A1c
 
 
 
@@ -406,13 +406,13 @@ Will recheck A1c.  On an unusual dose of BID Glipizide and long-acting insulin, 
 
 Recent baseline appears to be ~1.3-1.5; admitted with Cr of 1.24.  No active issues.
 
-***REMOVED******REMOVED*** Follow Cr
+[] Follow Cr
 
 
 
 # FEN
 
-***REMOVED******REMOVED*** Low Cholesterol, Low Saturated Fat, No Added Salt, Fluid Restriction of 2000cc
+[] Low Cholesterol, Low Saturated Fat, No Added Salt, Fluid Restriction of 2000cc
 
 
 
@@ -450,7 +450,7 @@ Pager #24779
 
 
 
-***REMOVED******REMOVED***></TEXT>
+]]></TEXT>
 <TAGS>
 <DATE id="P0" start="16" end="26" text="2083-07-21" TYPE="DATE" comment="" />
 <NAME id="P1" start="63" end="79" text="Brandon Xayavong" TYPE="PATIENT" comment="" />

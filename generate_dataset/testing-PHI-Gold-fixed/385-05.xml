@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT><![CDATA[
 
 
 Record date: 2090-02-18
 
-                                                       Patient Name: MOSS,DEREK P ***REMOVED*** 89659991(QMC) ***REMOVED*** 
+                                                       Patient Name: MOSS,DEREK P [ 89659991(QMC) ] 
 
                                                          Date of Visit: 02/18/2090
 
@@ -245,7 +245,7 @@ Frank T. Xuan, M.D.
 
 
 
-***REMOVED******REMOVED***></TEXT>
+]]></TEXT>
 <TAGS>
 <DATE id="P0" start="16" end="26" text="2090-02-18" TYPE="DATE" comment="" />
 <NAME id="P1" start="97" end="109" text="MOSS,DEREK P" TYPE="PATIENT" comment="" />

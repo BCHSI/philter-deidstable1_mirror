@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT><![CDATA[
 
 
 Record date: 2078-11-10
@@ -125,7 +125,7 @@ Paul N. Shelton, M.D.
 
 
 
-***REMOVED******REMOVED***></TEXT>
+]]></TEXT>
 <TAGS>
 <DATE id="P0" start="16" end="26" text="2078-11-10" TYPE="DATE" comment="" />
 <DATE id="P1" start="46" end="63" text="November 10, 2078" TYPE="DATE" comment="" />

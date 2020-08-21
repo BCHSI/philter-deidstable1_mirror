@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT><![CDATA[
 
 
 Record date: 2125-07-24
@@ -13,8 +13,8 @@ Routine F/U
 
 ================ Vital signs ================
 
-Blood Pressure:   130/80   ***REMOVED***Left Arm, Sitting***REMOVED***
-Weight:   216   ***REMOVED***Pounds***REMOVED***
+Blood Pressure:   130/80   [Left Arm, Sitting]
+Weight:   216   [Pounds]
 
 
 
@@ -82,7 +82,7 @@ Fontenot, Leon, M.D.
 
 
 
-***REMOVED******REMOVED***></TEXT>
+]]></TEXT>
 <TAGS>
 <DATE id="P0" start="16" end="26" text="2125-07-24" TYPE="DATE" comment="" />
 <NAME id="P1" start="1753" end="1767" text="Fontenot, Leon" TYPE="DOCTOR" comment="" />

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT><![CDATA[
 
 
 Record date: 2095-12-02
@@ -159,7 +159,7 @@ PGY-2, Internal Medicine
 
 
 
-***REMOVED******REMOVED***></TEXT>
+]]></TEXT>
 <TAGS>
 <DATE id="P0" start="16" end="26" text="2095-12-02" TYPE="DATE" comment="" />
 <NAME id="P1" start="272" end="284" text="Meyer, Oscar" TYPE="PATIENT" comment="" />

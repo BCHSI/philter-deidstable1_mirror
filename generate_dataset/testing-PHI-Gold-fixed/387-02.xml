@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT><![CDATA[
 
 
 Record date: 2084-04-28
@@ -281,7 +281,7 @@ Pager 67531
 
 
 
-***REMOVED******REMOVED***></TEXT>
+]]></TEXT>
 <TAGS>
 <DATE id="P0" start="16" end="26" text="2084-04-28" TYPE="DATE" comment="" />
 <LOCATION id="P1" start="64" end="72" text="Mediquik" TYPE="HOSPITAL" comment="" />

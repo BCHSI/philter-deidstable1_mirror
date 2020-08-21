@@ -1,1 +1,1 @@
-\b((?<=Present:\s)|(?<=Present:\sYoung\sAdult\,\s))\b(***REMOVED***A-Z***REMOVED******REMOVED***a-zA-Z***REMOVED***+\s){1,2}(***REMOVED***A-Z***REMOVED***\s)?(***REMOVED***A-Z***REMOVED******REMOVED***a-zA-Z***REMOVED***+\s){1,2}
+\b((?<=Present:\s)|(?<=Present:\sYoung\sAdult\,\s))\b([A-Z][a-zA-Z]+\s){1,2}([A-Z]\s)?([A-Z][a-zA-Z]+\s){1,2}

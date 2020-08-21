@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT><![CDATA[
 
 
 Record date: 2089-12-07
@@ -51,7 +51,7 @@ DV: 12/07/89
 
 
 
-***REMOVED******REMOVED***></TEXT>
+]]></TEXT>
 <TAGS>
 <DATE id="P0" start="16" end="26" text="2089-12-07" TYPE="DATE" comment="" />
 <LOCATION id="P2" start="35" end="51" text="72 Chablis Court" TYPE="STREET" comment="" />

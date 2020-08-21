@@ -2,7 +2,7 @@ If you use this software for any publication, please cite: Norgeot, B., Muenzen,
 
 # README
 
-!***REMOVED***Alt text***REMOVED***(https://github.com/beaunorgeot/images_for_presentations/blob/master/logo_v4.tif?raw=true "annotation interface")
+![Alt text](https://github.com/beaunorgeot/images_for_presentations/blob/master/logo_v4.tif?raw=true "annotation interface")
 
 ### What is PHIlter? 
 The package and associated scripts provide an end-to-end pipeline for removing Protected Health Information from clinical notes (or other sensitive text documents) in a completely secure environment (a machine with no external connections or exposed ports). We use a combination of regular expressions, Part Of Speech (POS) and Entity Recognition (NER) tagging, and filtering through a whitelist to achieve nearly perfect Recall and generate clean, readable notes. Everything is written in straight python and the package will process any text file, regardless of structure. You can install with PIP (see below) and run with a single command-line argument. Parallelization of processesing can be infinitly divided across cores or machines. 
@@ -10,7 +10,7 @@ The package and associated scripts provide an end-to-end pipeline for removing P
 ### Important
 - Please note: we don't make any claims that running this software on your data will instantly produce HIPAA compliance. THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-see: ***REMOVED***MIT LISCENCE***REMOVED***(https://opensource.org/licenses/MIT)
+see: [MIT LISCENCE](https://opensource.org/licenses/MIT)
 
 # Running Philter
 
@@ -67,7 +67,7 @@ Turn non-Protected Health information notes into annotation notes using a list o
 ### Regex (remove all digits) 
 #### patterns/remove_all_digits.json
 ```json
-***REMOVED***
+[
 	{
 		"title":"All Digits", 
 		"type":"regex",
@@ -75,7 +75,7 @@ Turn non-Protected Health information notes into annotation notes using a list o
 		"filepath":"filters/regex/alldigits.txt",
 		"notes":"Greedy catches anything with digits in it"
 	}
-***REMOVED***
+]
 
 
 ```
@@ -87,13 +87,13 @@ Note the only difference in the config between a whitlist and a blacklist is the
 value set to true / false. 
 
 ```json
-***REMOVED***
+[
 	{
 		"title":"Names Blacklist",
 		"type":"set",
 		"exclude":true,
 		"filepath":"filters/blacklists/names_blacklist_common.pkl",
-		"pos":***REMOVED******REMOVED***,
+		"pos":[],
 		"notes":""
 	},
 	{
@@ -101,39 +101,39 @@ value set to true / false.
 		"type":"set",
 		"exclude":false,
 		"filepath":"filters/whitelists/whitelist.pkl",
-		"pos":***REMOVED******REMOVED***,
+		"pos":[],
 		"notes":"These are words we beleive are safe"
 	},
-***REMOVED***
+]
 ```
 
 ### POS (Part of Speech Whitelist / Blacklist) Similar to above, but will only match NLTK tag types
-see: ***REMOVED***NLTK Tags***REMOVED***(https://stackoverflow.com/a/38264311/1404663)
+see: [NLTK Tags](https://stackoverflow.com/a/38264311/1404663)
 ```json
-***REMOVED***
+[
 	{
 		"title":"Test Whitelist",
 		"type":"set",
 		"exclude":false,
 		"filepath":"filters/whitelists/whitelist_2-28_2.json",
-		"pos":***REMOVED******REMOVED***,
+		"pos":[],
 		"notes":"These are words we beleive are safe"
 	}
-***REMOVED***
+]
 ```
 
 ### NER Tagging (Warning, very slow)
 #### Remove 'PERSON' TAGS
 ```json
-***REMOVED***	
+[	
 	{
 		"title":"Test NER",
 		"type":"stanford_ner",
 		"exclude":true,
-		"pos":***REMOVED***"PERSON"***REMOVED***,
+		"pos":["PERSON"],
 		"notes":"This should test that ner is working"
 	}
-***REMOVED***
+]
 
 ```
 
@@ -151,7 +151,7 @@ see: ***REMOVED***NLTK Tags***REMOVED***(https://stackoverflow.com/a/38264311/14
 
 ### Dependencies
 spacy package en: A pretrained model of the english language.
-You can learn more about the model at the ***REMOVED***spacy model documentation***REMOVED***("https://spacy.io/docs/usage/models") page. Language models are required for optimum performance. 
+You can learn more about the model at the [spacy model documentation]("https://spacy.io/docs/usage/models") page. Language models are required for optimum performance. 
 
 **Download the model:**
 
@@ -167,20 +167,20 @@ This should a reasonable overview of *exactly* what each script does
 
 **philter**
 
-!***REMOVED***Alt text***REMOVED***(https://github.com/beaunorgeot/images_for_presentations/blob/master/flow_v2.tif?raw=true "phi-reduction process")
+![Alt text](https://github.com/beaunorgeot/images_for_presentations/blob/master/flow_v2.tif?raw=true "phi-reduction process")
 
 
 **Example Input and Output**
-!***REMOVED***Alt text***REMOVED***(https://github.com/beaunorgeot/images_for_presentations/blob/master/deid_note_v2.tif?raw=true "eval_output example")
+![Alt text](https://github.com/beaunorgeot/images_for_presentations/blob/master/deid_note_v2.tif?raw=true "eval_output example")
 
 **Example output for eval**
 
-!***REMOVED***Alt text***REMOVED***(https://github.com/beaunorgeot/images_for_presentations/blob/master/eval%20result.PNG?raw=true "eval_output example")
+![Alt text](https://github.com/beaunorgeot/images_for_presentations/blob/master/eval%20result.PNG?raw=true "eval_output example")
 
 
 **Example output table for infoextraction**
 
-!***REMOVED***Alt text***REMOVED***(https://github.com/beaunorgeot/images_for_presentations/blob/master/infoext_from_phireduced_note.PNG?raw=true "info_extraction_csv example")
+![Alt text](https://github.com/beaunorgeot/images_for_presentations/blob/master/infoext_from_phireduced_note.PNG?raw=true "info_extraction_csv example")
 
 ### Why did we build it?
 Clinical notes capture rich information on the interaction between physicians, nurses, patients, and more. While this data holds the promise of uncovering valuable insights, it is also challenging to work with for numerous reasons. Extracting various forms of knowledge from Natural Language is difficult on it's own. However, attempts to even begin to mine this data on a large scale are severely hampered by the nature of the raw data, it's deeply personal. In order to allow more researchers to have access to this potentially transformative data, individual patient identifiers need to be removed in a way that presevers the content, context, and integrity of the raw note. 
@@ -194,7 +194,7 @@ Blacklists are certainly the norm, but they have some pretty large inherent prob
 
 ### Results (current, unpublished)
 
-!***REMOVED***Alt text***REMOVED***(https://github.com/beaunorgeot/images_for_presentations/blob/master/performance_1.png?raw=true "info_extraction_csv example")
+![Alt text](https://github.com/beaunorgeot/images_for_presentations/blob/master/performance_1.png?raw=true "info_extraction_csv example")
 
 # Recommendations
 - Search through filtered words for institution specific words to improve precision

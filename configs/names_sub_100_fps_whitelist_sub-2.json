@@ -1,4 +1,4 @@
-***REMOVED***   
+[   
     {
         "title":"days safe",
         "type":"regex",
@@ -634,9 +634,9 @@
         "type": "set",
         "exclude": true,
         "filepath": "/data/muenzenk/fp_analysis/blacklists/names_blacklist_sub_100_fps.json",
-        "pos": ***REMOVED***
+        "pos": [
             "NNP"
-        ***REMOVED***,
+        ],
         "notes": "These are words we believe are not safe"
     },
     {
@@ -644,17 +644,17 @@
         "type":"set",
         "exclude":false,
         "filepath":"/data/muenzenk/fp_analysis/white_black_diff_tests/whitelist_plus_fps-2.json",
-        "pos":***REMOVED******REMOVED***,
+        "pos":[],
         "notes":"These are words we beleive are safe"
     },
     {
         "title":"POS MATCHER",
         "type":"pos_matcher",
         "exclude":false,
-        "pos":***REMOVED***"CD"***REMOVED***,
+        "pos":["CD"],
         "notes":"This will include any CDs that aren't included in earlier steps"
     }
-***REMOVED***
+]
 
 
 

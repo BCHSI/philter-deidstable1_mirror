@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT><![CDATA[
 
 
 Record date: 2097-12-15
@@ -244,7 +244,7 @@ Antoinette S Delaney, MD, Pager #63784
 
 
 
-***REMOVED******REMOVED***></TEXT>
+]]></TEXT>
 <TAGS>
 <DATE id="P0" start="16" end="26" text="2097-12-15" TYPE="DATE" comment="" />
 <NAME id="P3" start="282" end="295" text="Goldy Wilhelm" TYPE="PATIENT" comment="" />

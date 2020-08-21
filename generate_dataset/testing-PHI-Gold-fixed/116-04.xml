@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT><![CDATA[
 
 
 Record date: 2082-03-08
@@ -83,7 +83,7 @@ RH:KU:0156/DD:3-8-82/DT:3-14-82
 
 
 
-***REMOVED******REMOVED***></TEXT>
+]]></TEXT>
 <TAGS>
 <DATE id="P0" start="16" end="26" text="2082-03-08" TYPE="DATE" comment="" />
 <DATE id="P1" start="32" end="45" text="March 8, 2082" TYPE="DATE" comment="" />

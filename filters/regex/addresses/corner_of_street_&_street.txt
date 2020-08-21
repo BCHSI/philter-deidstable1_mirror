@@ -1,1 +1,1 @@
-\b(((?i)***REMOVED***a-z***REMOVED***+\s(of|at|from)(\sthe)?)\s)(***REMOVED***A-Z***REMOVED******REMOVED***a-zA-Z***REMOVED***+|((?i)("""+day_numbering+r""")))((?i)\s("""+address_indicator+r"""))?\s&\s(***REMOVED***A-Z***REMOVED******REMOVED***a-zA-Z***REMOVED***+|((?i)("""+day_numbering+r""")))((?i)\s("""+address_indicator+r"""))?\b
+\b(((?i)[a-z]+\s(of|at|from)(\sthe)?)\s)([A-Z][a-zA-Z]+|((?i)("""+day_numbering+r""")))((?i)\s("""+address_indicator+r"""))?\s&\s([A-Z][a-zA-Z]+|((?i)("""+day_numbering+r""")))((?i)\s("""+address_indicator+r"""))?\b

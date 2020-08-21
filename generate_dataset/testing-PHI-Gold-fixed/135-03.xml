@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT><![CDATA[
 
 
 Record date: 2092-03-05
@@ -357,7 +357,7 @@ Pager 49057
 
 
 
-***REMOVED******REMOVED***></TEXT>
+]]></TEXT>
 <TAGS>
 <DATE id="P0" start="16" end="26" text="2092-03-05" TYPE="DATE" comment="" />
 <NAME id="P2" start="74" end="88" text="Katie Mitchell" TYPE="PATIENT" comment="" />

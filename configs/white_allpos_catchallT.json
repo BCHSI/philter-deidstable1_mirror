@@ -1,11 +1,11 @@
-***REMOVED***
+[
 	
 	{
 		"title":"Combined Whitelist",
 		"type":"set",
 		"exclude":false,
 		"filepath":"filters/whitelists/white_combined.json",
-		"pos":***REMOVED******REMOVED***,
+		"pos":[],
 		"notes":"This is the results of full whitelist - blacklist"
 	},
 	{	
@@ -16,4 +16,4 @@
 		"notes":"This should keep the catchall on (default behavior)"
 	}
 
-***REMOVED***
+]

@@ -1,1 +1,1 @@
-\b(?<=by\s)(***REMOVED***A-Z***REMOVED***\s***REMOVED***A-Z***REMOVED******REMOVED***a-z***REMOVED***+|***REMOVED***A-Z***REMOVED******REMOVED***a-z***REMOVED***+(\sM\.D\.)(\,)?\s***REMOVED***A-Z***REMOVED******REMOVED***a-z***REMOVED***+(\s***REMOVED***A-Z***REMOVED******REMOVED***a-z***REMOVED***+)?)\s(\***REMOVED***|\()\d+(\)|\***REMOVED***)
+\b(?<=by\s)([A-Z]\s[A-Z][a-z]+|[A-Z][a-z]+(\sM\.D\.)(\,)?\s[A-Z][a-z]+(\s[A-Z][a-z]+)?)\s(\[|\()\d+(\)|\])

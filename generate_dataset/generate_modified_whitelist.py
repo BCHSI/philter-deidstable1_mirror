@@ -12,7 +12,7 @@ def generate_whitelist(whitelist, additions, outfile):
 
     for word in new_words:
         word = word.strip()
-        whitelist***REMOVED***word***REMOVED*** = 1
+        whitelist[word] = 1
 
     with open(outfile,'w') as file:
         json.dump(whitelist, file)

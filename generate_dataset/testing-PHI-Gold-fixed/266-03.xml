@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT><![CDATA[
 
 
 Record date: 2068-03-25
@@ -116,31 +116,31 @@ EXAMINATION:
 
 
 
-***REMOVED***Constitution***REMOVED***  - well nourished and developed.  obese
+[Constitution]  - well nourished and developed.  obese
 
-***REMOVED***Eyes***REMOVED***  - conjunctivae clear, pupils equal, no discharge, 
+[Eyes]  - conjunctivae clear, pupils equal, no discharge, 
 
-***REMOVED***ENMT***REMOVED*** - Ears - ,  external ears normal.
+[ENMT] - Ears - ,  external ears normal.
 
-***REMOVED***ENMT***REMOVED*** - Nose  no discharge. 
+[ENMT] - Nose  no discharge. 
 
-***REMOVED***ENMT***REMOVED*** - Throat - normal color and without tonsillar enlargement.
+[ENMT] - Throat - normal color and without tonsillar enlargement.
 
-***REMOVED***Neck***REMOVED*** - supple no lymphadenopathy or thyromegaly. 
+[Neck] - supple no lymphadenopathy or thyromegaly. 
 
-***REMOVED***CV***REMOVED*** - regular rate no murmurs, rubs or gallops, no heave; carotid and pedal pulses normal, no extremities edema.  No JVD. well healed stermotomy scar.
+[CV] - regular rate no murmurs, rubs or gallops, no heave; carotid and pedal pulses normal, no extremities edema.  No JVD. well healed stermotomy scar.
 
-***REMOVED***Respiratory***REMOVED*** - clear, breath sounds bilaterally, no accessory muscle use.  
+[Respiratory] - clear, breath sounds bilaterally, no accessory muscle use.  
 
-***REMOVED***GI***REMOVED*** - abdomen soft, no hepatosplenomegaly, no abnormal masses or hernias.  
+[GI] - abdomen soft, no hepatosplenomegaly, no abnormal masses or hernias.  
 
-***REMOVED***Skin***REMOVED***- no significant rashes or other lesions.  
+[Skin]- no significant rashes or other lesions.  
 
-***REMOVED***Musc/Skel***REMOVED*** - normal tone, no edema
+[Musc/Skel] - normal tone, no edema
 
-***REMOVED***Neuro***REMOVED*** - 5/5 gross motor strength, grossly normal coordination and gait
+[Neuro] - 5/5 gross motor strength, grossly normal coordination and gait
 
-***REMOVED***Psych***REMOVED*** - alert and oriented for age, normal mood and affect
+[Psych] - alert and oriented for age, normal mood and affect
 
 
 
@@ -308,7 +308,7 @@ THIS IS A COPY PRODUCED FOR THE LMR. THE ORGINAL IS STORED ON THE BRIGHTPOINT SE
 
 
 
-***REMOVED******REMOVED***></TEXT>
+]]></TEXT>
 <TAGS>
 <DATE id="P0" start="16" end="26" text="2068-03-25" TYPE="DATE" comment="" />
 <NAME id="P1" start="593" end="597" text="frye" TYPE="DOCTOR" comment="" />

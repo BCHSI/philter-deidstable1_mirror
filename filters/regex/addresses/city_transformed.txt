@@ -1,1 +1,1 @@
-\b(***REMOVED***A-Z***REMOVED******REMOVED***a-zA-Z***REMOVED***+\s{1,4}***REMOVED***A-Z***REMOVED******REMOVED***a-zA-Z***REMOVED***+|***REMOVED***A-Z***REMOVED******REMOVED***a-zA-Z***REMOVED***+)\s{1,4}(City|CITY|Street|STREET)\b
+\b([A-Z][a-zA-Z]+\s{1,4}[A-Z][a-zA-Z]+|[A-Z][a-zA-Z]+)\s{1,4}(City|CITY|Street|STREET)\b

@@ -1,1 +1,1 @@
-\b\d{4,}***REMOVED***a-zA-Z***REMOVED***{3,}\b
+\b\d{4,}[a-zA-Z]{3,}\b

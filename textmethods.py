@@ -1,10 +1,10 @@
 import re
 
-def get_clean(text, punctuation_matcher=re.compile(r"***REMOVED***^a-zA-Z0-9***REMOVED***")):
+def get_clean(text, punctuation_matcher=re.compile(r"[^a-zA-Z0-9]")):
     # Use pre-process to split sentence by spaces AND symbols,
     # while preserving spaces in the split list
-    lst = re.findall(r"***REMOVED***\w'***REMOVED***+",text)
-    cleaned = ***REMOVED******REMOVED***
+    lst = re.findall(r"[\w']+",text)
+    cleaned = []
     for item in lst:
         if len(item) > 0:
             if item.isspace() == False:
@@ -33,6 +33,6 @@ def get_tokens(string, text=None, start=0):
                             + "in \"{1}\" starting at {2}".format(text, offset))
         token_stop = token_start + len(item_stripped) - 1
         offset = token_stop + 1
-        tokens.update({token_start:***REMOVED***token_stop,item_stripped***REMOVED***})
+        tokens.update({token_start:[token_stop,item_stripped]})
     
     return tokens

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT><![CDATA[
 
 
 Record date: 2132-06-14
@@ -140,7 +140,7 @@ PGY-1
 
 
 
-***REMOVED******REMOVED***></TEXT>
+]]></TEXT>
 <TAGS>
 <DATE id="P0" start="16" end="26" text="2132-06-14" TYPE="DATE" comment="" />
 <NAME id="P2" start="76" end="89" text="Tyler Pearson" TYPE="PATIENT" comment="" />

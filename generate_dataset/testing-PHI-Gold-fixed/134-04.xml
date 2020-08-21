@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT><![CDATA[
 
 
 Record date: 2095-12-11
@@ -207,7 +207,7 @@ PGY-2
 
 
 
-***REMOVED******REMOVED***></TEXT>
+]]></TEXT>
 <TAGS>
 <DATE id="P0" start="16" end="26" text="2095-12-11" TYPE="DATE" comment="" />
 <NAME id="P1" start="269" end="282" text="Amador Jarvis" TYPE="PATIENT" comment="" />

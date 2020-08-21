@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT><![CDATA[
 
 
 Record date: 2088-01-20
@@ -257,7 +257,7 @@ Infectious disease fellow
 
 
 
-***REMOVED******REMOVED***></TEXT>
+]]></TEXT>
 <TAGS>
 <DATE id="P0" start="16" end="26" text="2088-01-20" TYPE="DATE" comment="" />
 <NAME id="P1" start="84" end="95" text="Moss, Derek" TYPE="PATIENT" comment="" />

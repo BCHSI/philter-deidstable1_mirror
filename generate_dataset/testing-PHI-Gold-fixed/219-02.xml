@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT><![CDATA[
 
 
 Record date: 2073-09-28
@@ -45,7 +45,7 @@ A/P 1) BP - good control
 
 
 
-***REMOVED******REMOVED***></TEXT>
+]]></TEXT>
 <TAGS>
 <DATE id="P0" start="16" end="26" text="2073-09-28" TYPE="DATE" comment="" />
 <AGE id="P1" start="28" end="30" text="59" TYPE="AGE" comment="" />

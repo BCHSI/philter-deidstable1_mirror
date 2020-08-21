@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT><![CDATA[
 
 
 Record date: 2078-07-01
@@ -163,7 +163,7 @@ Physical examination:
 
 -Abdomen:   Soft, NT, ND, with NABS, no palpable HSM, no palpable AA widening or pulsatile masses, and no appreciable abdominal bruit on deep auscultation (though an epigastric bruit has been appreciated by others in the past).
 
--Extremities:   Femoral pulses 2+ bilaterally, with bilateral bruits on auscultation.  No peripheral C/C/E.  Radial pulses 2+ in the BUEs.  DP pulses non-palpable in the BLEs (but obtainable by Doppler U/S in the BLEs ***REMOVED***RLE > LLE***REMOVED***.  PT pulses non-palpable in the BLEs (but obtainable by Doppler U/S in the BLEs ***REMOVED***RLE > LLE***REMOVED***).  No peripheral ulcerations, skin breakdown, livedo reticularis, signs of recent trauma or infection, or stigmata of athero-embolic disease in the distal BLEs.  Distal BLEs warm to palpation, without distal rubor.
+-Extremities:   Femoral pulses 2+ bilaterally, with bilateral bruits on auscultation.  No peripheral C/C/E.  Radial pulses 2+ in the BUEs.  DP pulses non-palpable in the BLEs (but obtainable by Doppler U/S in the BLEs [RLE > LLE].  PT pulses non-palpable in the BLEs (but obtainable by Doppler U/S in the BLEs [RLE > LLE]).  No peripheral ulcerations, skin breakdown, livedo reticularis, signs of recent trauma or infection, or stigmata of athero-embolic disease in the distal BLEs.  Distal BLEs warm to palpation, without distal rubor.
 
 -BP: 114/68  (R) 111/67 (L)
 
@@ -243,7 +243,7 @@ PLAN:
 
 7.   Monitor the patient's FSBG values and covering with sliding scale regular insulin as needed for episodes of hyperglycemia.
 
-8.   Continue the patient on Glipizide, a PPI (Prilosec in place of his usual Protonix while at the OAC ***REMOVED***formulary limitations***REMOVED***), Neurontin, Effexor, Chantix, Hytrin, and Vitamin-B12.
+8.   Continue the patient on Glipizide, a PPI (Prilosec in place of his usual Protonix while at the OAC [formulary limitations]), Neurontin, Effexor, Chantix, Hytrin, and Vitamin-B12.
 
 9.   Lab testing tomorrow morning should include the following:   CBC, Chem-7, Mg, CPKs, HS-CRP, Lipoprotein(a), and Homocysteine.
 
@@ -311,7 +311,7 @@ Document Status: Final
 
 
 
-***REMOVED******REMOVED***></TEXT>
+]]></TEXT>
 <TAGS>
 <DATE id="P0" start="16" end="26" text="2078-07-01" TYPE="DATE" comment="" />
 <LOCATION id="P1" start="47" end="72" text="OAKLAND ASSOCIATES CENTER" TYPE="HOSPITAL" comment="" />

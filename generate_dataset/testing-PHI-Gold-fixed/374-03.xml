@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT><![CDATA[
 
 
 Record date: 2133-01-22
@@ -105,7 +105,7 @@ Document Status: Final
 
 
 
-***REMOVED******REMOVED***></TEXT>
+]]></TEXT>
 <TAGS>
 <DATE id="P0" start="16" end="26" text="2133-01-22" TYPE="DATE" comment="" />
 <NAME id="P1" start="29" end="40" text="Wise, Willa" TYPE="DOCTOR" comment="" />

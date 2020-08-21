@@ -1,1 +1,1 @@
-(?i)\b((?<=mother is )|(?<=father is )|(?<=mom is )|(?<=dad is ))(***REMOVED***0-9***REMOVED***|***REMOVED***1-8***REMOVED******REMOVED***0-9***REMOVED***|("""+ones+r""")|("""+teens+r""")|("""+decades_lt_90+r""")(\s|\-)("""+ones+r""")|("""+decades_lt_90+r"""))\b
+(?i)\b((?<=mother is )|(?<=father is )|(?<=mom is )|(?<=dad is ))([0-9]|[1-8][0-9]|("""+ones+r""")|("""+teens+r""")|("""+decades_lt_90+r""")(\s|\-)("""+ones+r""")|("""+decades_lt_90+r"""))\b

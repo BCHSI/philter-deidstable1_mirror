@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT><![CDATA[
 
 
 Record date: 2069-05-27
@@ -155,7 +155,7 @@ Prestonsburg, MS 54151
 
 
 
-***REMOVED******REMOVED***></TEXT>
+]]></TEXT>
 <TAGS>
 <DATE id="P0" start="16" end="26" text="2069-05-27" TYPE="DATE" comment="" />
 <DATE id="P1" start="28" end="40" text="May 27, 2069" TYPE="DATE" comment="" />

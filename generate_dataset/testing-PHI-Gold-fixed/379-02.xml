@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT><![CDATA[
 
 
 Record date: 2092-05-24
@@ -72,7 +72,7 @@ NQ:jaeger; 80-55488880.doc; DD: 5/27/92; DT: 5/28/92; DV: 5/24/92
 
 
 
-***REMOVED******REMOVED***></TEXT>
+]]></TEXT>
 <TAGS>
 <DATE id="P0" start="16" end="26" text="2092-05-24" TYPE="DATE" comment="" />
 <LOCATION id="P1" start="31" end="53" text="BAYONNE MEDICAL CENTER" TYPE="HOSPITAL" comment="" />

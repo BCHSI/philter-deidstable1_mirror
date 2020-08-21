@@ -1,1 +1,1 @@
-\b(?i)(***REMOVED***9***REMOVED******REMOVED***0-9***REMOVED***|***REMOVED***1***REMOVED******REMOVED***0-9***REMOVED******REMOVED***0-9***REMOVED***)(?=\syo\b|\sy\.o\.)
+\b(?i)([9][0-9]|[1][0-9][0-9])(?=\syo\b|\sy\.o\.)

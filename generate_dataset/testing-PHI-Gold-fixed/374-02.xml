@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT><![CDATA[
 
 
 Record date: 2130-02-16
@@ -225,7 +225,7 @@ Signed electronically by Xenakis, Robert on Mar 3, 2130
 
 
 
-***REMOVED******REMOVED***></TEXT>
+]]></TEXT>
 <TAGS>
 <DATE id="P0" start="16" end="26" text="2130-02-16" TYPE="DATE" comment="" />
 <LOCATION id="P1" start="62" end="84" text="HOUSTON MEDICAL CENTER" TYPE="HOSPITAL" comment="" />

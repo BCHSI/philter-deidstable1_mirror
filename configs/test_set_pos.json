@@ -1,11 +1,11 @@
-***REMOVED***
+[
 	
 	{
 		"title":"Test Whitelist",
 		"type":"set",
 		"exclude":true,
 		"filepath":"filters/whitelists/whitelist_2-28_2.json",
-		"pos":***REMOVED***"CD"***REMOVED***,
+		"pos":["CD"],
 		"notes":"These are words we beleive are safe"
 	},
 	{
@@ -15,6 +15,6 @@
 		"filepath":"filters/regex/catchall.txt",
 		"notes":"This should match anything, preventing the catchall"
 	}
-***REMOVED***
+]
 
 

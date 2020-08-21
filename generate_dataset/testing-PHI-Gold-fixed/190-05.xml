@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT><![CDATA[
 
 
 Record date: 2091-05-08
@@ -297,7 +297,7 @@ Olivia Spence, M.D.DD: 05/08/91DT: 05/12/91DV: 05/08/91
 
 
 
-***REMOVED******REMOVED***></TEXT>
+]]></TEXT>
 <TAGS>
 <DATE id="P0" start="16" end="26" text="2091-05-08" TYPE="DATE" comment="" />
 <DATE id="P1" start="46" end="58" text="May 08, 2091" TYPE="DATE" comment="" />

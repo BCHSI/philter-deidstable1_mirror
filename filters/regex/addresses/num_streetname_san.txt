@@ -1,1 +1,1 @@
-\b\d+\s***REMOVED***A-Z***REMOVED******REMOVED***a-zA-Z***REMOVED***+\s(San|SAN)\b
+\b\d+\s[A-Z][a-zA-Z]+\s(San|SAN)\b

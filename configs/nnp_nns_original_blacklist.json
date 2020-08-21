@@ -1,4 +1,4 @@
-***REMOVED***	
+[	
 	{
 		"title":"days safe",
 		"type":"regex",
@@ -1091,7 +1091,7 @@
 		"type":"regex",
 		"exclude":true,
 		"filepath":"filters/regex/addresses/city_transformed.txt",
-		"notes":"This should remove anything that matches pattern ***REMOVED***name***REMOVED*** ***REMOVED***city***REMOVED***"
+		"notes":"This should remove anything that matches pattern [name] [city]"
 	},
 	{
 		"title":"hospital name",
@@ -1287,10 +1287,10 @@
         "type": "set",
         "exclude": true,
         "filepath": "/data/muenzenk/new_blacklists/names_blacklist_061418_1.json",
-        "pos": ***REMOVED***
+        "pos": [
             "NNP",
             "NNS"
-        ***REMOVED***,
+        ],
         "notes": "These are words we believe are not safe"
     },
 	{
@@ -1298,7 +1298,7 @@
 		"type":"set",
 		"exclude":true,
 		"filepath":"filters/blacklists/updated_address_blacklist.json",
-		"pos":***REMOVED***"NNP"***REMOVED***,
+		"pos":["NNP"],
 		"notes":""
 	},
 	{
@@ -1306,19 +1306,19 @@
         "type":"set",
         "exclude":false,
         "filepath":"filters/whitelists/whitelist_061418.json",
-        "pos":***REMOVED******REMOVED***,
+        "pos":[],
         "notes":"These are words we beleive are safe"
     },
    	{
 		"title":"POS MATCHER",
 		"type":"pos_matcher",
 		"exclude":false,
-		"pos":***REMOVED***"CD"***REMOVED***,
+		"pos":["CD"],
 		"notes":"This will include any CDs that aren't included in earlier steps"
 	}
 
 
-***REMOVED***
+]
 
 
 

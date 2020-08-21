@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT><![CDATA[
 
 
 Record date: 2096-04-15
@@ -49,7 +49,7 @@ MVI daily
 
 	Changes to Allergies
 	
-CAPTOPRIL - reaction: cough ***REMOVED***reviewed***REMOVED***
+CAPTOPRIL - reaction: cough [reviewed]
 
 
 	Family history:
@@ -140,7 +140,7 @@ Document Status: Final
 
 
 
-***REMOVED******REMOVED***></TEXT>
+]]></TEXT>
 <TAGS>
 <DATE id="P0" start="16" end="26" text="2096-04-15" TYPE="DATE" comment="" />
 <LOCATION id="P1" start="45" end="65" text="PRIMGHAR CARE CENTER" TYPE="HOSPITAL" comment="" />

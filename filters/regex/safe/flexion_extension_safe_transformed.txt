@@ -1,1 +1,1 @@
-\b(?i)((***REMOVED***a-z***REMOVED***+)?flexion|extension)\s\d\/5\b
+\b(?i)(([a-z]+)?flexion|extension)\s\d\/5\b

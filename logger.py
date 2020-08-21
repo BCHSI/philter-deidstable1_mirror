@@ -84,27 +84,27 @@ def get_super_log(all_logs, super_log_dir):
     number_of_notes = len(summary)
 
     # File size
-    total_kb_processed = sum(summary***REMOVED***'file_size'***REMOVED***)/1000
-    median_file_size = numpy.median(summary***REMOVED***'file_size'***REMOVED***)
-    q2pt5_size,q97pt5_size = numpy.percentile(summary***REMOVED***'file_size'***REMOVED***,***REMOVED***2.5,97.5***REMOVED***)
+    total_kb_processed = sum(summary['file_size'])/1000
+    median_file_size = numpy.median(summary['file_size'])
+    q2pt5_size,q97pt5_size = numpy.percentile(summary['file_size'],[2.5,97.5])
 
     # Total tokens
-    total_tokens = numpy.sum(summary***REMOVED***'total_tokens'***REMOVED***)
-    median_tokens = numpy.median(summary***REMOVED***'total_tokens'***REMOVED***)
-    q2pt5_tokens,q97pt5_tokens = numpy.percentile(summary***REMOVED***'total_tokens'***REMOVED***,***REMOVED***2.5,97.5***REMOVED***)
+    total_tokens = numpy.sum(summary['total_tokens'])
+    median_tokens = numpy.median(summary['total_tokens'])
+    q2pt5_tokens,q97pt5_tokens = numpy.percentile(summary['total_tokens'],[2.5,97.5])
 
     # Total PHI tokens
-    total_phi_tokens = numpy.sum(summary***REMOVED***'phi_tokens'***REMOVED***)
-    median_phi_tokens = numpy.median(summary***REMOVED***'phi_tokens'***REMOVED***)
-    q2pt5_phi_tokens,q97pt5_phi_tokens = numpy.percentile(summary***REMOVED***'phi_tokens'***REMOVED***,***REMOVED***2.5,97.5***REMOVED***)
+    total_phi_tokens = numpy.sum(summary['phi_tokens'])
+    median_phi_tokens = numpy.median(summary['phi_tokens'])
+    q2pt5_phi_tokens,q97pt5_phi_tokens = numpy.percentile(summary['phi_tokens'],[2.5,97.5])
 
     # Normalization
-    successful_normalization = sum(summary***REMOVED***'successfully_normalized'***REMOVED***)
-    failed_normalization = sum(summary***REMOVED***'failed_normalized'***REMOVED***)
+    successful_normalization = sum(summary['successfully_normalized'])
+    failed_normalization = sum(summary['failed_normalized'])
 
     # Surrogation
-    successful_surrogation = sum(summary***REMOVED***'successfully_surrogated'***REMOVED***)
-    failed_surrogation = sum(summary***REMOVED***'failed_surrogated'***REMOVED***)
+    successful_surrogation = sum(summary['successfully_surrogated'])
+    failed_surrogation = sum(summary['failed_surrogated'])
 
     with open(text_summary_filepath, "w") as f:
         f.write("TOTAL NOTES PROCESSED: "+str(number_of_notes)+'\n')
@@ -123,11 +123,11 @@ def get_super_log(all_logs, super_log_dir):
 
 
 def create_log_files_list(imofile):
-    all_logs = ***REMOVED******REMOVED***
+    all_logs = []
     with open(imofile, 'r') as imo:
         for line in imo:
             parts = line.split()
-            odir = parts***REMOVED***2***REMOVED***
+            odir = parts[2]
             
             all_logs.append(os.path.join(odir, "log",
                                          "detailed_batch_summary.csv"))
@@ -147,7 +147,7 @@ def main():
         all_logs  = create_log_files_list(args.imofile)
 
         # Create super log of batch summaries
-        if all_logs != ***REMOVED******REMOVED***:
+        if all_logs != []:
             get_super_log(all_logs, os.path.join(args.superlog, "log"))
 
     return 0

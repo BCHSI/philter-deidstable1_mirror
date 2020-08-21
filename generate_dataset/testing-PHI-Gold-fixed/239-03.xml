@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT><![CDATA[
 
 
 Record date: 2069-04-16
 
 
 
-Patient Name: OGRADY,ULYSSES ***REMOVED*** 0937884(IMC) ***REMOVED*** Date of Visit: 04/16/2069
+Patient Name: OGRADY,ULYSSES [ 0937884(IMC) ] Date of Visit: 04/16/2069
 
 
 
@@ -85,7 +85,7 @@ Kenneth DUSTIN Mcdaniel, M.D.
 
 
 
-***REMOVED******REMOVED***></TEXT>
+]]></TEXT>
 <TAGS>
 <DATE id="P0" start="16" end="26" text="2069-04-16" TYPE="DATE" comment="" />
 <NAME id="P1" start="44" end="58" text="OGRADY,ULYSSES" TYPE="PATIENT" comment="" />

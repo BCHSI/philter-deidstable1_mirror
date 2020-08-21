@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT><![CDATA[
 
 
 Record date: 2096-11-20
@@ -20,9 +20,9 @@ Record date: 2096-11-20
 
 	Changes to Allergies
 	
-BRIMONIDINE TARTRATE - reaction: Unknown ***REMOVED***reviewed***REMOVED***
-Latex - reaction: Rash ***REMOVED***reviewed***REMOVED***
-no known allergies: He has no current allergies - reaction: Unknown ***REMOVED***reviewed***REMOVED***
+BRIMONIDINE TARTRATE - reaction: Unknown [reviewed]
+Latex - reaction: Rash [reviewed]
+no known allergies: He has no current allergies - reaction: Unknown [reviewed]
 
 Physical examination:
 	
@@ -98,7 +98,7 @@ Document Status: Final
 
 
 
-***REMOVED******REMOVED***></TEXT>
+]]></TEXT>
 <TAGS>
 <DATE id="P0" start="16" end="26" text="2096-11-20" TYPE="DATE" comment="" />
 <LOCATION id="P1" start="45" end="64" text="SOUTH OAKS HOSPITAL" TYPE="HOSPITAL" comment="" />

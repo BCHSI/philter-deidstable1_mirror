@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT><![CDATA[
 
 
 Record date: 2129-08-20
@@ -61,7 +61,7 @@ SEL:kerns
 
 
 
-***REMOVED******REMOVED***></TEXT>
+]]></TEXT>
 <TAGS>
 <DATE id="P0" start="16" end="26" text="2129-08-20" TYPE="DATE" comment="" />
 <DATE id="P1" start="34" end="47" text="July 06, 2129" TYPE="DATE" comment="" />

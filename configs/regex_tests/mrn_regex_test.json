@@ -1,4 +1,4 @@
-***REMOVED***
+[
 	{
 		"title":"model number",
 		"type":"regex",
@@ -217,4 +217,4 @@
 		"notes":"This should match anything, preventing the catchall"
 	}
 
-***REMOVED***
+]

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT><![CDATA[
 
 
 Record date: 2087-06-16
@@ -221,7 +221,7 @@ See me in 12 weeks
 
 
 
-***REMOVED******REMOVED***></TEXT>
+]]></TEXT>
 <TAGS>
 <DATE id="P0" start="16" end="26" text="2087-06-16" TYPE="DATE" comment="" />
 <NAME id="P1" start="50" end="57" text="Chapman" TYPE="PATIENT" comment="" />

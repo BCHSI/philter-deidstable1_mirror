@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT><![CDATA[
 
 
 Record date: 2090-07-12
@@ -192,7 +192,7 @@ Giovanni Huang, MD, PGY-1 (pager 76567)
 
 
 
-***REMOVED******REMOVED***></TEXT>
+]]></TEXT>
 <TAGS>
 <DATE id="P0" start="16" end="26" text="2090-07-12" TYPE="DATE" comment="" />
 <NAME id="P1" start="103" end="121" text="Yarbrough, Irene H" TYPE="PATIENT" comment="" />

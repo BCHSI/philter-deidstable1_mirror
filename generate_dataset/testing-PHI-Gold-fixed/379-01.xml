@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT><![CDATA[
 
 
 Record date: 2091-12-28
@@ -79,7 +79,7 @@ Patrick Winn, M.D.
 
 
 
-***REMOVED******REMOVED***></TEXT>
+]]></TEXT>
 <TAGS>
 <DATE id="P0" start="16" end="26" text="2091-12-28" TYPE="DATE" comment="" />
 <DATE id="P1" start="28" end="45" text="December 28, 2091" TYPE="DATE" comment="" />

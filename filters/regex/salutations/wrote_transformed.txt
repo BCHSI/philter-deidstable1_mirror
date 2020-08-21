@@ -1,1 +1,1 @@
-\b(***REMOVED***A-Z***REMOVED******REMOVED***a-zA-Z***REMOVED***+(\,)?(***REMOVED*** ***REMOVED***{1,2})?***REMOVED***A-Z***REMOVED******REMOVED***a-zA-Z***REMOVED***+(***REMOVED*** ***REMOVED***{1,2}***REMOVED***A-Z***REMOVED***)?)(?=\s(?i)wrote)\b
+\b([A-Z][a-zA-Z]+(\,)?([ ]{1,2})?[A-Z][a-zA-Z]+([ ]{1,2}[A-Z])?)(?=\s(?i)wrote)\b

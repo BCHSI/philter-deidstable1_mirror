@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT><![CDATA[
 
 
 Record date: 2098-10-11
@@ -40,7 +40,7 @@ s/p L foot fx with surgery 5/97 for nonhealing and wound infection
 
 	Changes to Allergies
 	
-reglan - reaction: GI Intolerance ***REMOVED***reviewed***REMOVED***
+reglan - reaction: GI Intolerance [reviewed]
 
 
 	Family history:
@@ -73,7 +73,7 @@ Selected recent labs:
 Date     
 
 
-***REMOVED******REMOVED***></TEXT>
+]]></TEXT>
 <TAGS>
 <DATE id="P0" start="16" end="26" text="2098-10-11" TYPE="DATE" comment="" />
 <LOCATION id="P1" start="45" end="69" text="COQUILLE VALLEY HOSPITAL" TYPE="HOSPITAL" comment="" />

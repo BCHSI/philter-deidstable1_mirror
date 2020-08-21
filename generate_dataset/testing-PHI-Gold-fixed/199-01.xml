@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT><![CDATA[
 
 
 Record date: 2084-05-12
@@ -95,7 +95,7 @@ DT:5-13-84
 
 
 
-***REMOVED******REMOVED***></TEXT>
+]]></TEXT>
 <TAGS>
 <DATE id="P0" start="16" end="26" text="2084-05-12" TYPE="DATE" comment="" />
 <CONTACT id="P1" start="86" end="100" text="(958) 291-8310" TYPE="PHONE" comment="" />

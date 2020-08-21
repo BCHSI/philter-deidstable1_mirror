@@ -1,1 +1,1 @@
-\b(?i)(***REMOVED***a-zA-Z***REMOVED***+\s{1,4}***REMOVED***a-zA-Z***REMOVED***+|***REMOVED***a-zA-Z***REMOVED***+)\scounty\b
+\b(?i)([a-zA-Z]+\s{1,4}[a-zA-Z]+|[a-zA-Z]+)\scounty\b

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT><![CDATA[
 
 
 Record date: 2073-09-20
@@ -73,7 +73,7 @@ Relevant Labs:
 09/20/2073 1-3BGLUC PEND
 09/20/2073 WBC 2.25 (*),  HGB 8.5 (*),  HCT 24.7 (*),  PLT 118 (*)
 09/20/2073 %POLY-M 70,  %BAND-M 1,  %LYMPH-M 18,  %ATYPS 0,  %MONO-M 10 (*),  %EOS-M 0,  %BASO-M 1
-09/20/2073 GALACT-AG 0.14 ***REMOVED***1***REMOVED***
+09/20/2073 GALACT-AG 0.14 [1]
 
 Microbiology
 
@@ -125,7 +125,7 @@ Division of Infectious Diseases
 
 
 
-***REMOVED******REMOVED***></TEXT>
+]]></TEXT>
 <TAGS>
 <DATE id="P0" start="16" end="26" text="2073-09-20" TYPE="DATE" comment="" />
 <LOCATION id="P1" start="29" end="37" text="MANAMANA" TYPE="HOSPITAL" comment="" />

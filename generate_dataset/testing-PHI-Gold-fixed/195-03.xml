@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT><![CDATA[
 
 
 Record date: 2093-05-23
@@ -358,7 +358,7 @@ Xavier Holmes MD 82764
 
 
 
-***REMOVED******REMOVED***></TEXT>
+]]></TEXT>
 <TAGS>
 <DATE id="P0" start="16" end="26" text="2093-05-23" TYPE="DATE" comment="" />
 <NAME id="P2" start="79" end="94" text="SHERMAN, ANDREW" TYPE="PATIENT" comment="" />

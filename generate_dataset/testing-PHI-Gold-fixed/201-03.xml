@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT><![CDATA[
 
 
 Record date: 2082-10-22
@@ -33,7 +33,7 @@ Record date: 2082-10-22
 
 	Changes to Allergies
 	
-NKA: No Known Allergies - reaction: ***REMOVED***reviewed***REMOVED***
+NKA: No Known Allergies - reaction: [reviewed]
 
 
 	Family history:
@@ -121,7 +121,7 @@ Document Status: Final
 
 
 
-***REMOVED******REMOVED***></TEXT>
+]]></TEXT>
 <TAGS>
 <DATE id="P0" start="16" end="26" text="2082-10-22" TYPE="DATE" comment="" />
 <LOCATION id="P1" start="45" end="67" text="GRIFFIN NURSING CENTER" TYPE="HOSPITAL" comment="" />

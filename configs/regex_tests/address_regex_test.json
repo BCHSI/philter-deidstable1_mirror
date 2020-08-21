@@ -1,4 +1,4 @@
-***REMOVED***
+[
 	
 	{
 		"title":"full street address",
@@ -47,7 +47,7 @@
 		"type":"regex",
 		"exclude":true,
 		"filepath":"filters/regex/addresses/in_city.txt",
-		"notes":"This should remove anything that matches pattern in ***REMOVED***city***REMOVED***"
+		"notes":"This should remove anything that matches pattern in [city]"
 	},
 	{
     	"title":"No catchall",
@@ -57,4 +57,4 @@
 		"notes":"This should match anything, preventing the catchall"
 	}
 
-***REMOVED***
+]

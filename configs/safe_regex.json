@@ -1,4 +1,4 @@
-***REMOVED***	
+[	
 	{
 		"title":"days safe",
 		"type":"regex",
@@ -517,7 +517,7 @@
 		"filepath":"filters/regex/safe/young_safe.txt",
 		"notes":"This should remove anything with pattern young adult"
 	},
-***REMOVED***
+]
 
 
 

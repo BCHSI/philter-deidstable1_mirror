@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT><![CDATA[
 
 
 Record date: 2135-02-23
@@ -187,7 +187,7 @@ Henry X. Shelton, MD
 
 
 
-***REMOVED******REMOVED***></TEXT>
+]]></TEXT>
 <TAGS>
 <DATE id="P0" start="16" end="26" text="2135-02-23" TYPE="DATE" comment="" />
 <LOCATION id="P1" start="61" end="67" text="Perdue" TYPE="HOSPITAL" comment="" />

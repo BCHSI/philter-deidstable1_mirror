@@ -1,10 +1,10 @@
-***REMOVED***
+[
 	{
 		"title":"Blacklist Example",
 		"type":"set",
 		"exclude":true,
 		"filepath":"filters/blacklists/john.pkl",
-		"pos":***REMOVED******REMOVED***,
+		"pos":[],
 		"notes":"remove all instances of 'john'"
 	},
 	{
@@ -15,4 +15,4 @@
 		"notes":"This should match anything, preventing the catchall"
 	}
 		
-***REMOVED***
+]

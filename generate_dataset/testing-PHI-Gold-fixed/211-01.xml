@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT><![CDATA[
 
 
 Record date: 2093-07-13
@@ -257,7 +257,7 @@ Louise Eisenberg, MD pgr 76699
 
 
 
-***REMOVED******REMOVED***></TEXT>
+]]></TEXT>
 <TAGS>
 <DATE id="P0" start="16" end="26" text="2093-07-13" TYPE="DATE" comment="" />
 <NAME id="P1" start="60" end="74" text="Urban, Russell" TYPE="PATIENT" comment="" />

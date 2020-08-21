@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT><![CDATA[
 
 
 Record date: 2071-05-31
@@ -93,7 +93,7 @@ DV:5-31-71
 
 
 
-***REMOVED******REMOVED***></TEXT>
+]]></TEXT>
 <TAGS>
 <DATE id="P0" start="16" end="26" text="2071-05-31" TYPE="DATE" comment="" />
 <NAME id="P2" start="74" end="87" text="Xian, Imogene" TYPE="PATIENT" comment="" />

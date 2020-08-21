@@ -17,7 +17,7 @@ at a time.
 
 Labels each word as a category of PHI (not-phi is an option). Writes the annotated file out as a list of lists
 Into a pickle file with the original file name and .ano as the file extention.
-Each sublist contains 2 elements: ***REMOVED***word_from_original_text, phi_label***REMOVED***
+Each sublist contains 2 elements: [word_from_original_text, phi_label]
 
 This is useful to generate a ground-truth corpus for the evaluation of the phi-reducer
 software on your own files, or for the creation of a training corpus for machine learning de-id
@@ -45,24 +45,24 @@ def annotating(note):
     Returns:
 
     """
-    annotation_list = ***REMOVED******REMOVED***
+    annotation_list = []
     note = sent_tokenize(note)
     allowed_category = ('0', '1', '2', '3', '4', '5', '6')
     allowed_command = ('exit', 'all', 'range', 'select', 'show', 'done', 'help')
     category_print = 'Category to use: 0:Non-phi, 1:Contact, 2:Date, 3:ID, 4:Location, 5:Name, 6:Age\n'
     for sent in note:
         # sent_list: list of words that have not yet been divided by special characters
-        sent_list = ***REMOVED******REMOVED***
+        sent_list = []
         words = word_tokenize(sent)
-        word = ***REMOVED***word for word in words if word not in punctuation***REMOVED***
+        word = [word for word in words if word not in punctuation]
         print('***********************************************************************')
         print(sent)
         print('')
         for j in range(len(word)):
-            sent_list.append(***REMOVED***word***REMOVED***j***REMOVED***, '0', j + 1***REMOVED***)
+            sent_list.append([word[j], '0', j + 1])
         # display the sentence with the index of each word and the current category assigned to each word
-        # temp***REMOVED***2***REMOVED***: index, temp***REMOVED***0***REMOVED***:word, temp***REMOVED***1***REMOVED***:phi-category
-        ***REMOVED***print("({}){}***REMOVED***{}***REMOVED***".format(temp***REMOVED***2***REMOVED***, temp***REMOVED***0***REMOVED***, temp***REMOVED***1***REMOVED***), end=' ') for temp in sent_list***REMOVED***
+        # temp[2]: index, temp[0]:word, temp[1]:phi-category
+        [print("({}){}[{}]".format(temp[2], temp[0], temp[1]), end=' ') for temp in sent_list]
         print('\n')
         print(category_print)
 
@@ -74,13 +74,13 @@ def annotating(note):
 
             else:
                 if user_input == 'exit':
-                    return ***REMOVED******REMOVED***
+                    return []
 
                 elif user_input == 'all':
                     user_input = input('which phi-category do you want to assign to all words? > ')
                     if user_input in allowed_category:
                         for j in range(0, len(word)):
-                            sent_list***REMOVED***j***REMOVED******REMOVED***1***REMOVED*** = user_input
+                            sent_list[j][1] = user_input
                         user_input = input('Press Enter to finish the'
                                      ' editing of this sentence, or others'
                                      ' to go back to the commend type. > ')
@@ -97,7 +97,7 @@ def annotating(note):
                             category = input('which phi-category do you want to assign to these words? > ')
                             if category in allowed_category:
                                 for j in range(int(start_word)-1, int(end_word)):
-                                    sent_list***REMOVED***j***REMOVED******REMOVED***1***REMOVED*** = category
+                                    sent_list[j][1] = category
                             else:
                                 print('Wrong category. Will go back to the commend type.')
                         else:
@@ -115,11 +115,11 @@ def annotating(note):
                             if j.isdigit() and 0 < int(j) <= len(word):
                                 # check if the word contain special character and will be splitted later
                                 # if so, check if different categories would be assigned.
-                                if re.findall(r'***REMOVED***\/\-\:\~\_***REMOVED***', sent_list***REMOVED***int(j) - 1***REMOVED******REMOVED***0***REMOVED***) != ***REMOVED******REMOVED***:
-                                    user_input = input('{} contains multiple elements. Do you want to annotate them seperately? press y to assign seperately, others to assign the same.'.format(sent_list***REMOVED***int(j) - 1***REMOVED******REMOVED***0***REMOVED***))
-                                    split_category = ***REMOVED******REMOVED***
+                                if re.findall(r'[\/\-\:\~\_]', sent_list[int(j) - 1][0]) != []:
+                                    user_input = input('{} contains multiple elements. Do you want to annotate them seperately? press y to assign seperately, others to assign the same.'.format(sent_list[int(j) - 1][0]))
+                                    split_category = []
                                     if user_input == 'y':
-                                        temp = re.sub(r'***REMOVED***\/\-\:\~\_***REMOVED***', ' ', sent_list***REMOVED***int(j) - 1***REMOVED******REMOVED***0***REMOVED***)
+                                        temp = re.sub(r'[\/\-\:\~\_]', ' ', sent_list[int(j) - 1][0])
                                         temp = temp.split(' ')
                                         temp = list(filter(None, temp))
                                         for k in temp:
@@ -129,34 +129,34 @@ def annotating(note):
                                             else:
                                                 print('Input is not correct. Will assign non-phi to {}'.format(k))
                                                 split_category.append('0')
-                                        sent_list***REMOVED***int(j) - 1***REMOVED******REMOVED***1***REMOVED*** = split_category
+                                        sent_list[int(j) - 1][1] = split_category
                                     else:
                                         #split_category.append(input_category)
-                                        sent_list***REMOVED***int(j) - 1***REMOVED******REMOVED***1***REMOVED*** = input_category
+                                        sent_list[int(j) - 1][1] = input_category
                                 else:
-                                    sent_list***REMOVED***int(j) - 1***REMOVED******REMOVED***1***REMOVED*** = input_category
-                                print('{} is changed.'.format(sent_list***REMOVED***int(j) - 1***REMOVED******REMOVED***0***REMOVED***))
+                                    sent_list[int(j) - 1][1] = input_category
+                                print('{} is changed.'.format(sent_list[int(j) - 1][0]))
                             else:
                                 print('{} is not a right sequence'.format(j))
                     else:
                         print('Wrong category. Will go back to the word you were editing.')
 
                 elif user_input == 'show':
-                    safe_list = ***REMOVED******REMOVED***
-                    phi_list = ***REMOVED******REMOVED***
+                    safe_list = []
+                    phi_list = []
                     for temp in sent_list:
-                        if temp***REMOVED***1***REMOVED*** != '0':
-                            phi_list.append(temp***REMOVED***0***REMOVED***)
+                        if temp[1] != '0':
+                            phi_list.append(temp[0])
                         else:
-                            safe_list.append(temp***REMOVED***0***REMOVED***)
+                            safe_list.append(temp[0])
                     print('***********************************************************************')
                     print(sent)
                     print('')
                     print('phi:', (" ").join(phi_list))
                     print('safe:', (" ").join(safe_list))
                     # display the sentence with the index of each word and the current category assigned to each word
-                    # temp***REMOVED***2***REMOVED***: index, temp***REMOVED***0***REMOVED***:word, temp***REMOVED***1***REMOVED***:phi-category
-                    #***REMOVED***print("({}){}***REMOVED***{}***REMOVED***".format(temp***REMOVED***2***REMOVED***, temp***REMOVED***0***REMOVED***, temp***REMOVED***1***REMOVED***), end=' ') for temp in sent_list***REMOVED***
+                    # temp[2]: index, temp[0]:word, temp[1]:phi-category
+                    #[print("({}){}[{}]".format(temp[2], temp[0], temp[1]), end=' ') for temp in sent_list]
                     #print('\n\n', category_print)
                     #print('\n')
 
@@ -164,7 +164,7 @@ def annotating(note):
                     break
 
                 elif user_input == 'help':
-                    print('(X)WORD***REMOVED***Y***REMOVED***: X is the sequence number of the word,'
+                    print('(X)WORD[Y]: X is the sequence number of the word,'
                         ' Y is the current phi-category of the word. All words'
                         ' will be set to 0, non-phi, as default.')
                     print('Command:')
@@ -183,23 +183,23 @@ def annotating(note):
                         ' sentence and start the next one.')
                     print('exit: enter \'exit\' to exit the script without saving. \n')
         # each word in sent_list has a phi-category assigned to it
-        # result is a list ***REMOVED***word, phi-category***REMOVED***
+        # result is a list [word, phi-category]
         for result in sent_list:
             # divide words by special characters, replace special chars with space: ' '
-            if re.findall(r'***REMOVED***\/\-\:\~\_***REMOVED***', result***REMOVED***0***REMOVED***) != ***REMOVED******REMOVED***:
-                temp = re.sub(r'***REMOVED***\/\-\:\~\_***REMOVED***', ' ', result***REMOVED***0***REMOVED***)
+            if re.findall(r'[\/\-\:\~\_]', result[0]) != []:
+                temp = re.sub(r'[\/\-\:\~\_]', ' ', result[0])
             # take each new 'sub-word'
                 temp = temp.split(' ')
                 temp = list(filter(None, temp))
             # sub-word inherits the parent-word's phi-category
-                if type(result***REMOVED***1***REMOVED***) == list:
+                if type(result[1]) == list:
                     for j in range(len(temp)):
-                        annotation_list.append(***REMOVED***temp***REMOVED***j***REMOVED***, result***REMOVED***1***REMOVED******REMOVED***j***REMOVED******REMOVED***)
+                        annotation_list.append([temp[j], result[1][j]])
                 else:
                     for j in range(len(temp)):
-                        annotation_list.append(***REMOVED***temp***REMOVED***j***REMOVED***, result***REMOVED***1***REMOVED******REMOVED***)
+                        annotation_list.append([temp[j], result[1]])
             else:
-                annotation_list.append(***REMOVED***result***REMOVED***0***REMOVED***, result***REMOVED***1***REMOVED******REMOVED***)
+                annotation_list.append([result[0], result[1]])
         print("\n")
 
     return annotation_list
@@ -210,7 +210,7 @@ def main():
     """
 Does: labels each word as a category of PHI (not-phi is an option). Writes the annotated file out as a list of lists
 Into a pickle file with the original file name and .ano as the file extention.
-Each sublist contains 2 elements: ***REMOVED***word_from_original_text, phi_label***REMOVED***
+Each sublist contains 2 elements: [word_from_original_text, phi_label]
 
 Uses:
 nltk.sent_tokenize: Splits a file into sentence-by-sentence chunks.
@@ -227,7 +227,7 @@ Arguments:
 
 Returns:
 pickled list of lists with the original file name and .ano as the file extention.
-Each sublist contains 2 elements: ***REMOVED***word_from_original_text, phi_label***REMOVED***
+Each sublist contains 2 elements: [word_from_original_text, phi_label]
 
     """
 
@@ -264,10 +264,10 @@ Each sublist contains 2 elements: ***REMOVED***word_from_original_text, phi_labe
                 os._exit(0)
         with open(finpath, encoding='utf-8', errors='ignore') as fin:
             note = fin.read()
-        doing_name = '.'.join(tail.split('.')***REMOVED***:-1***REMOVED***) + ".txt.doing"
+        doing_name = '.'.join(tail.split('.')[:-1]) + ".txt.doing"
         doing_path = os.path.join(head, doing_name)
         doing_check = 'y'
-        done_name = '.'.join(tail.split('.')***REMOVED***:-1***REMOVED***) + ".txt.done"
+        done_name = '.'.join(tail.split('.')[:-1]) + ".txt.done"
         done_path = os.path.join(head, done_name)
         done_check = 'y'
         if os.path.isfile(done_path):
@@ -282,9 +282,9 @@ Each sublist contains 2 elements: ***REMOVED***word_from_original_text, phi_labe
                 os.remove(doing_path)
             except OSError:
                 pass
-            file_name = '.'.join(tail.split('.')***REMOVED***:-1***REMOVED***) + "_"+ key_word + ".ano"
+            file_name = '.'.join(tail.split('.')[:-1]) + "_"+ key_word + ".ano"
             file_path = os.path.join(foutpath, file_name)
-            if annotation_list != ***REMOVED******REMOVED***:
+            if annotation_list != []:
                 print(annotation_list)
                 with open(file_path, 'wb') as fout:
                     pickle.dump(annotation_list, fout)
@@ -307,10 +307,10 @@ Each sublist contains 2 elements: ***REMOVED***word_from_original_text, phi_labe
         annotation_set = set(glob.glob(os.path.join(finpath, '*.txt')))
         done_set = set()
         for f in glob.glob(os.path.join(finpath, '*.txt.done')):
-            done_set.add(''.join(f.split('.done')***REMOVED***:-1***REMOVED***))
+            done_set.add(''.join(f.split('.done')[:-1]))
         doing_set = set()
         for f in glob.glob(os.path.join(finpath, '*.txt.doing')):
-            doing_set.add(''.join(f.split('.doing')***REMOVED***:-1***REMOVED***))
+            doing_set.add(''.join(f.split('.doing')[:-1]))
         if len(annotation_set-done_set-doing_set) > 0:
             to_do = ''.join(random.sample(annotation_set-done_set-doing_set, 1))
         else:
@@ -330,9 +330,9 @@ Each sublist contains 2 elements: ***REMOVED***word_from_original_text, phi_labe
         except OSError:
             pass
         head, tail = os.path.split(to_do)
-        file_name = '.'.join(tail.split('.')***REMOVED***:-1***REMOVED***) + "_"+ key_word + ".ano"
+        file_name = '.'.join(tail.split('.')[:-1]) + "_"+ key_word + ".ano"
         file_path = os.path.join(foutpath, file_name)
-        if annotation_list != ***REMOVED******REMOVED***:
+        if annotation_list != []:
             print(annotation_list)
             with open(file_path, 'wb') as fout:
                 pickle.dump(annotation_list, fout)

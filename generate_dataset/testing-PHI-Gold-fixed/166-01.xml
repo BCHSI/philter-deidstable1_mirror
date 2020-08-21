@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT><![CDATA[
 
 
 Record date: 2095-02-06
@@ -143,7 +143,7 @@ T:  02/07/2095
 
 
 
-***REMOVED******REMOVED***></TEXT>
+]]></TEXT>
 <TAGS>
 <DATE id="P0" start="16" end="26" text="2095-02-06" TYPE="DATE" comment="" />
 <NAME id="P1" start="51" end="63" text="MEYER, OSCAR" TYPE="PATIENT" comment="" />

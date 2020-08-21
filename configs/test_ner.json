@@ -1,9 +1,9 @@
-***REMOVED***	
+[	
 	{
 		"title":"Test NER",
 		"type":"stanford_ner",
 		"exclude":true,
-		"pos":***REMOVED***"PERSON"***REMOVED***,
+		"pos":["PERSON"],
 		"notes":"This should test that ner is working"
 	},
 	{
@@ -13,6 +13,6 @@
 		"filepath":"filters/regex/catchall.txt",
 		"notes":"This should match anything, preventing the catchall"
 	}
-***REMOVED***
+]
 
 

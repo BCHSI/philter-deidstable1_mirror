@@ -1,4 +1,4 @@
-***REMOVED***  
+[  
    {
         "title":"ucsf apex safe",
         "type":"regex",
@@ -89,7 +89,7 @@
         "type":"regex",
         "exclude":false,
         "filepath":"filters/regex/safe/attending_safe.txt",
-        "notes":"This should remove anything with pattern attending ***REMOVED***ologist***REMOVED***"
+        "notes":"This should remove anything with pattern attending [ologist]"
     },
     {
         "title":"active safe",
@@ -1115,7 +1115,7 @@
         "type":"regex",
         "exclude":true,
         "filepath":"filters/regex/addresses/city_transformed.txt",
-        "notes":"This should remove anything that matches pattern ***REMOVED***name***REMOVED*** ***REMOVED***city***REMOVED***",
+        "notes":"This should remove anything that matches pattern [name] [city]",
         "phi_type":"LOCATION"
     },
     {
@@ -1251,7 +1251,7 @@
         "type":"regex",
         "exclude":true,
         "filepath":"filters/regex/addresses/to_state_transformed.txt",
-        "notes":"This should remove anything that has pattern to ***REMOVED***state name***REMOVED***",
+        "notes":"This should remove anything that has pattern to [state name]",
         "phi_type":"LOCATION"
     },
     {
@@ -1259,7 +1259,7 @@
         "type":"regex",
         "exclude":true,
         "filepath":"filters/regex/addresses/state_indicator_transformed.txt",
-        "notes":"This should remove anything that has pattern to ***REMOVED***state name***REMOVED***",
+        "notes":"This should remove anything that has pattern to [state name]",
         "phi_type":"LOCATION"
     },
     {
@@ -1267,7 +1267,7 @@
         "type":"regex",
         "exclude":true,
         "filepath":"filters/regex/addresses/streetname_only_transformed.txt",
-        "notes":"This should remove anything that has pattern on ***REMOVED***street name***REMOVED***",
+        "notes":"This should remove anything that has pattern on [street name]",
         "phi_type":"LOCATION"
     },
     {
@@ -1637,7 +1637,7 @@
         "exclude":true,
         "filepath":"filters/regex/dates/holidays_transformed.txt",
         "notes":"This should remove anything with pattern holidays",
-        "pos":***REMOVED***"NNP"***REMOVED***, 
+        "pos":["NNP"], 
         "phi_type":"HOLIDAYS",
         "comment":"Holidays"
     }, 
@@ -2318,9 +2318,9 @@
         "type": "set",
         "exclude": true,
         "filepath": "filters/blacklists/firstnames_minus_fps.json",
-        "pos": ***REMOVED***
+        "pos": [
             "NNP"
-        ***REMOVED***,
+        ],
         "notes": "These are words we believe are not safe",
         "phi_type":"NAME"
     },
@@ -2329,9 +2329,9 @@
         "type": "set",
         "exclude": true,
         "filepath": "filters/blacklists/lastnames_minus_fps.json",
-        "pos": ***REMOVED***
+        "pos": [
             "NNP"
-        ***REMOVED***,
+        ],
         "notes": "These are words we believe are not safe",
         "phi_type":"NAME"
     },
@@ -2380,14 +2380,14 @@
         "type":"set",
         "exclude":false,
         "filepath":"/data/shared/ucsf_whitelists/whitelist_plus_fps_091718_nonames.json",
-        "pos":***REMOVED******REMOVED***,
+        "pos":[],
         "notes":"These are words we beleive are safe"
     },
     {
         "title":"POS MATCHER",
         "type":"pos_matcher",
         "exclude":false,
-        "pos":***REMOVED***"CD"***REMOVED***,
+        "pos":["CD"],
         "notes":"This will include any CDs that aren't included in earlier steps"
     },
     {
@@ -2401,4 +2401,4 @@
         "phi_type":"NAME"
     }
 
-***REMOVED***
+]

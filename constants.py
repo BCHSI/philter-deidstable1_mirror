@@ -1,4 +1,4 @@
-phi_categories = ***REMOVED***'Age', 'Contact', 'Date', 'ID', 'Location', 'Name', 'Other'***REMOVED***
+phi_categories = ['Age', 'Contact', 'Date', 'ID', 'Location', 'Name', 'Other']
 
 ucsf_category_dict = {'Date':'Date',
                       'Provider_Name':'Name',
@@ -31,7 +31,7 @@ ucsf_category_dict = {'Date':'Date',
                       'Unclear':'Other'
 }
 ucsf_tags = list(ucsf_category_dict.keys())
-ucsf_include_tags = ***REMOVED***'Date', 'Provider_Name', 'Phone_Fax',
+ucsf_include_tags = ['Date', 'Provider_Name', 'Phone_Fax',
                      'Patient_Name_or_Family_Member_Name', 'Patient_Address',
                      'Provider_Address_or_Location',
                      'Provider_Certificate_or_License',
@@ -41,18 +41,18 @@ ucsf_include_tags = ***REMOVED***'Date', 'Provider_Name', 'Phone_Fax',
                      'Procedure_or_Billing_Code', 'Email', 'URL_IP',
                      'Patient_Biometric_Id_or_Face_Photo',
                      'Patient_Certificate_or_License', 'Age',
-                     'Patient_Initials', 'Provider_Initials'***REMOVED***
-ucsf_patient_tags = ***REMOVED***'Date', 'Phone_Fax', 'Age',
+                     'Patient_Initials', 'Provider_Initials']
+ucsf_patient_tags = ['Date', 'Phone_Fax', 'Age',
                      'Patient_Name_or_Family_Member_Name', 'Patient_Address',
                      'Patient_Initials', 'Patient_Medical_Record_Id',
                      'Patient_Account_Number',
                      'Patient_Social_Security_Number',
                      'Patient_Vehicle_or_Device_Id', 'Patient_Unique_Id',
                      'Email', 'URL_IP', 'Patient_Biometric_Id_or_Face_Photo',
-                     'Patient_Certificate_or_License'***REMOVED***
-ucsf_provider_tags = ***REMOVED***'Provider_Name', 'Phone_Fax',
+                     'Patient_Certificate_or_License']
+ucsf_provider_tags = ['Provider_Name', 'Phone_Fax',
                       'Provider_Address_or_Location', 'Provider_Initials',
-                      'Provider_Certificate_or_License', 'Email', 'URL_IP'***REMOVED***
+                      'Provider_Certificate_or_License', 'Email', 'URL_IP']
             
 i2b2_category_dict = {'DOCTOR':'Name',
                       'PATIENT':'Name',
@@ -73,13 +73,13 @@ i2b2_category_dict = {'DOCTOR':'Name',
                       'AGE':'Age'
 }
 i2b2_tags = list(i2b2_category_dict.keys())
-i2b2_include_tags = ***REMOVED***'DOCTOR', 'PATIENT', 'DATE', 'MEDICALRECORD', 'IDNUM',
+i2b2_include_tags = ['DOCTOR', 'PATIENT', 'DATE', 'MEDICALRECORD', 'IDNUM',
                      'DEVICE', 'USERNAME', 'PHONE', 'EMAIL', 'FAX', 'CITY',
                      'STATE', 'ZIP', 'STREET', 'LOCATION-OTHER', 'HOSPITAL',
-                     'AGE'***REMOVED***
-i2b2_patient_tags = ***REMOVED***'PATIENT', 'DATE', 'MEDICALRECORD', 'IDNUM', 'DEVICE',
+                     'AGE']
+i2b2_patient_tags = ['PATIENT', 'DATE', 'MEDICALRECORD', 'IDNUM', 'DEVICE',
                      'USERNAME', 'PHONE', 'EMAIL', 'FAX', 'CITY', 'STATE',
-                     'ZIP', 'STREET', 'LOCATION-OTHER', 'HOSPITAL', 'AGE'***REMOVED***
-i2b2_provider_tags = ***REMOVED***'DOCTOR', 'DATE', 'USERNAME', 'PHONE', 'EMAIL', 'FAX',
+                     'ZIP', 'STREET', 'LOCATION-OTHER', 'HOSPITAL', 'AGE']
+i2b2_provider_tags = ['DOCTOR', 'DATE', 'USERNAME', 'PHONE', 'EMAIL', 'FAX',
                       'CITY', 'STATE', 'ZIP', 'STREET', "LOCATION-OTHER",
-                      'HOSPITAL'***REMOVED***
+                      'HOSPITAL']

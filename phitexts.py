@@ -31,7 +31,7 @@ class Phitexts:
         self.inputdir  = inputdir
         self.db = db
         self.mongo = mongo
-        self.filenames = ***REMOVED******REMOVED***
+        self.filenames = []
         #notes text
         self.texts     = {}
         #coordinates of PHI
@@ -58,9 +58,9 @@ class Phitexts:
         self.filterer = None
 
     def get_mongo_handle(self, mongo):
-        client = MongoClient(mongo***REMOVED***"client"***REMOVED***,username=mongo***REMOVED***"username"***REMOVED***,password=mongo***REMOVED***"password"***REMOVED***)
+        client = MongoClient(mongo["client"],username=mongo["username"],password=mongo["password"])
         try:
-          db = client***REMOVED***mongo***REMOVED***'db'***REMOVED******REMOVED***
+          db = client[mongo['db']]
         except:
           print("Mongo Server not available")
         return db
@@ -78,48 +78,48 @@ class Phitexts:
 
                 self.filenames.append(filepath)
                 encoding = self._detect_encoding(filepath)
-                fhandle = open(filepath, "r", encoding=encoding***REMOVED***'encoding'***REMOVED***,
+                fhandle = open(filepath, "r", encoding=encoding['encoding'],
                                errors='surrogateescape')
-                self.texts***REMOVED***filepath***REMOVED*** = fhandle.read()
+                self.texts[filepath] = fhandle.read()
                 fhandle.close()
 
     def _read_mongo(self, mongo, batch):
         db = self.db
-        chunk_collection = db***REMOVED***mongo***REMOVED***'collection_chunk'***REMOVED******REMOVED***
-        meta_status = db***REMOVED***mongo***REMOVED***'collection_status'***REMOVED******REMOVED***
-        raw_note_text = db***REMOVED***mongo***REMOVED***'collection_raw_note_text'***REMOVED******REMOVED***
-        meta_in = db***REMOVED***mongo***REMOVED***'collection_meta_data'***REMOVED******REMOVED*** 
+        chunk_collection = db[mongo['collection_chunk']]
+        meta_status = db[mongo['collection_status']]
+        raw_note_text = db[mongo['collection_raw_note_text']]
+        meta_in = db[mongo['collection_meta_data']] 
         server = socket.gethostname() + ".ucsfmedicalcenter.org" 
         
         try:
-           to_philter = chunk_collection.aggregate(***REMOVED***{"$match":{"$and":***REMOVED***{"url": server.lower()},{"batch": batch}***REMOVED***}},
+           to_philter = chunk_collection.aggregate([{"$match":{"$and":[{"url": server.lower()},{"batch": batch}]}},
                                                     {"$lookup": {"from": 'raw_note_text', "localField": "_id", "foreignField": "_id", "as": "get_text"}},
                                                     {"$unwind": {"path": "$get_text"}},
-                                                    {"$project": {"_id": 1, "patient_ID": 1, "raw_note_text": "$get_text.raw_note_text"}}***REMOVED***)
-           probes_name = chunk_collection.aggregate(***REMOVED***{"$match":{"$and":***REMOVED***{"url": server.lower()},{"batch": batch}***REMOVED***}},
+                                                    {"$project": {"_id": 1, "patient_ID": 1, "raw_note_text": "$get_text.raw_note_text"}}])
+           probes_name = chunk_collection.aggregate([{"$match":{"$and":[{"url": server.lower()},{"batch": batch}]}},
                                                     {"$lookup": {"from": 'probes', "localField": "patient_ID", "foreignField": "person_id", "as": "prb"}},
                                                     {"$unwind":"$prb"},
-                                                    {"$project": {"_id": 1, "patient_ID": 1, "probes_lname": "$prb.lname", "probes_fname": "$prb.fname"}}***REMOVED***)
+                                                    {"$project": {"_id": 1, "patient_ID": 1, "probes_lname": "$prb.lname", "probes_fname": "$prb.fname"}}])
         except pymongo.errors.OperationFailure as e:
            print(e.code)
            print(e.details)
            
         probes_list = list(probes_name)
         for philter in list(to_philter):
-           self.filenames.append(philter***REMOVED***'_id'***REMOVED***)
-           self.texts***REMOVED***philter***REMOVED***'_id'***REMOVED******REMOVED*** = philter***REMOVED***'raw_note_text'***REMOVED***
-           if mongo***REMOVED***'known_phi'***REMOVED*** == True:
-              probes = ***REMOVED******REMOVED***
+           self.filenames.append(philter['_id'])
+           self.texts[philter['_id']] = philter['raw_note_text']
+           if mongo['known_phi'] == True:
+              probes = []
               for prb in probes_list:
-                  if philter***REMOVED***'_id'***REMOVED*** == prb***REMOVED***'_id'***REMOVED***:
+                  if philter['_id'] == prb['_id']:
                      if 'probes_lname' in prb and 'probes_fname' in prb: 
-                        probes = prb***REMOVED***'probes_lname'***REMOVED*** + prb***REMOVED***'probes_fname'***REMOVED***
+                        probes = prb['probes_lname'] + prb['probes_fname']
                      elif 'probes_lname' in prb and 'probes_fname' not in prb:
-                        probes = prb***REMOVED***'probes_lname'***REMOVED***
+                        probes = prb['probes_lname']
                      elif 'probes_lname' not in prb and 'probes_fname' in prb:
-                        probes = prb***REMOVED***'probes_fname'***REMOVED***
+                        probes = prb['probes_fname']
                      break;
-              self.known_phi***REMOVED***philter***REMOVED***'_id'***REMOVED******REMOVED*** = probes
+              self.known_phi[philter['_id']] = probes
 
         print("Text read")
 
@@ -128,29 +128,29 @@ class Phitexts:
         
         tkns = get_tokens(string, text, start)
         for tk_start in tkns:
-            tk_stop = tkns***REMOVED***tk_start***REMOVED******REMOVED***0***REMOVED*** + 1
+            tk_stop = tkns[tk_start][0] + 1
             tokens.update({tk_start:tk_stop})
     
         return tokens
 
     def _get_tag_start_stop(self, tag_line):
         if "@spans" in tag_line.keys():
-            start, stop = tag_line***REMOVED***"@spans"***REMOVED***.split('~')
+            start, stop = tag_line["@spans"].split('~')
         elif "@start" and  "@end" in tag_line.keys():
-            start = tag_line***REMOVED***"@start"***REMOVED***
-            stop  = tag_line***REMOVED***"@end"***REMOVED***
+            start = tag_line["@start"]
+            stop  = tag_line["@end"]
         else:
             raise Exception("ERROR: cannot read tag_line: {0}".format(tag_line))
         return int(start), int(stop)
     
     def __read_xml_into_coordinateMap(self,inputdir):
         full_xml_map = {}
-        phi_type_list = ***REMOVED***'Provider_Name','Date','DATE','Patient_Social_Security_Number','Email','Provider_Address_or_Location','Age','Name','OTHER'***REMOVED***
+        phi_type_list = ['Provider_Name','Date','DATE','Patient_Social_Security_Number','Email','Provider_Address_or_Location','Age','Name','OTHER']
         phi_type_dict = {}
         for phi_type in phi_type_list:
-            phi_type_dict***REMOVED***phi_type***REMOVED*** = ***REMOVED***CoordinateMap()***REMOVED***
+            phi_type_dict[phi_type] = [CoordinateMap()]
         xml_texts = {}
-        xml_filenames = ***REMOVED******REMOVED***
+        xml_filenames = []
 
         if not inputdir:
             raise Exception("Input directory undefined: ", inputdir) 
@@ -161,19 +161,19 @@ class Phitexts:
             filepath = os.path.join(inputdir, filename)
             xml_filenames.append(filepath)
             encoding = self._detect_encoding(filepath)
-            fhandle = open(filepath, "r", encoding=encoding***REMOVED***'encoding'***REMOVED***)
+            fhandle = open(filepath, "r", encoding=encoding['encoding'])
             input_xml = fhandle.read() 
             tree = ET.parse(filepath)
             root = tree.getroot()
             xmlstr = ET.tostring(root, encoding='utf8', method='xml')
-            xml_texts***REMOVED***filepath***REMOVED*** = root.find('TEXT').text
+            xml_texts[filepath] = root.find('TEXT').text
             xml_dict = xmltodict.parse(xmlstr)
             xml_dict = next(iter(xml_dict.values()))
             check_tags = root.find('TAGS')
                        
  
             if check_tags is not None:
-                tags_dict = xml_dict***REMOVED***"TAGS"***REMOVED***            
+                tags_dict = xml_dict["TAGS"]            
             else:
                 tags_dict = None
             if tags_dict is not None:
@@ -181,19 +181,19 @@ class Phitexts:
                 # Note:  Value can be a list of like phi elements
                 #        or a dictionary of the metadata about a phi element
                     if not isinstance(value, list):
-                        value = ***REMOVED***value***REMOVED***
+                        value = [value]
                     for final_value in value:
                         text_start, text_end = self._get_tag_start_stop(final_value)
-                        philter_text = final_value***REMOVED***"@text"***REMOVED***
-                        xml_phi_type = final_value***REMOVED***"@TYPE"***REMOVED***
-                        xml_coordinate_map.update(self._get_xml_tokens(philter_text, xml_texts***REMOVED***filepath***REMOVED***,int(text_start))) 
+                        philter_text = final_value["@text"]
+                        xml_phi_type = final_value["@TYPE"]
+                        xml_coordinate_map.update(self._get_xml_tokens(philter_text, xml_texts[filepath],int(text_start))) 
                         if xml_phi_type not in phi_type_list:
                             phi_type_list.append(xml_phi_type)
                         for phi_type in phi_type_list:
                             if phi_type not in phi_type_dict:
-                                phi_type_dict***REMOVED***phi_type***REMOVED*** = ***REMOVED***CoordinateMap()***REMOVED***
-                        phi_type_dict***REMOVED***xml_phi_type***REMOVED******REMOVED***0***REMOVED***.add_extend(filepath,int(text_start),int(text_end))
-            full_xml_map***REMOVED***filepath***REMOVED*** = xml_coordinate_map
+                                phi_type_dict[phi_type] = [CoordinateMap()]
+                        phi_type_dict[xml_phi_type][0].add_extend(filepath,int(text_start),int(text_end))
+            full_xml_map[filepath] = xml_coordinate_map
             fhandle.close()
         return full_xml_map, phi_type_dict, xml_texts, xml_filenames
        
@@ -222,15 +222,15 @@ class Phitexts:
             return
 
         philter_config = {}
-        philter_config***REMOVED***"verbose"***REMOVED*** = verbose
-        philter_config***REMOVED***"run_eval"***REMOVED*** = False
-        philter_config***REMOVED***"filters"***REMOVED*** = filters 
+        philter_config["verbose"] = verbose
+        philter_config["run_eval"] = False
+        philter_config["filters"] = filters 
         if namesprobefile:     
-           philter_config***REMOVED***"namesprobe"***REMOVED*** = namesprobefile
+           philter_config["namesprobe"] = namesprobefile
         if self.known_phi:
-           philter_config***REMOVED***"known_phi"***REMOVED*** = self.known_phi
-        philter_config***REMOVED***"phi_text"***REMOVED*** = self.texts
-        philter_config***REMOVED***"filenames"***REMOVED*** = self.filenames
+           philter_config["known_phi"] = self.known_phi
+        philter_config["phi_text"] = self.texts
+        philter_config["filenames"] = self.filenames
 
         print("Initializing Philter") 
         self.filterer = Philter(philter_config)
@@ -260,20 +260,20 @@ class Phitexts:
         # 2) interpet/normalize phi given type
 
         for phi_type in self.types.keys():
-            self.norms***REMOVED***phi_type***REMOVED*** = {}
+            self.norms[phi_type] = {}
         for phi_type in self.types.keys():
             if phi_type == "DATE" or phi_type == "Date":
-                for filename, start, end in self.types***REMOVED***phi_type***REMOVED******REMOVED***0***REMOVED***.scan():
-                    token = self.texts***REMOVED***filename***REMOVED******REMOVED***start:end***REMOVED***
+                for filename, start, end in self.types[phi_type][0].scan():
+                    token = self.texts[filename][start:end]
                     normalized_token = Subs.parse_date(token)
-                    self.norms***REMOVED***phi_type***REMOVED******REMOVED***(filename, start)***REMOVED*** = (normalized_token,
+                    self.norms[phi_type][(filename, start)] = (normalized_token,
                                                                end)
             elif (phi_type == "AGE<90" or phi_type == "Age<90"
                   or phi_type == "AGE>=90" or phi_type == "Age>=90"):
-                for filename, start, end in self.types***REMOVED***phi_type***REMOVED******REMOVED***0***REMOVED***.scan():
-                    token = self.texts***REMOVED***filename***REMOVED******REMOVED***start:end***REMOVED***
+                for filename, start, end in self.types[phi_type][0].scan():
+                    token = self.texts[filename][start:end]
                     normalized_token = Subs.parse_age(token)
-                    self.norms***REMOVED***phi_type***REMOVED******REMOVED***(filename, start)***REMOVED*** = (normalized_token,
+                    self.norms[phi_type][(filename, start)] = (normalized_token,
                                                                end)
             else:
                 continue
@@ -293,12 +293,12 @@ class Phitexts:
         self.subser = Subs(self.filenames, look_up_table_path, db, ref_date)
         for phi_type in self.norms.keys():
             if phi_type == "DATE" or phi_type == "Date":
-                if __debug__: nodateshiftlist = ***REMOVED******REMOVED***
-                for filename, start in self.norms***REMOVED***phi_type***REMOVED***:
+                if __debug__: nodateshiftlist = []
+                for filename, start in self.norms[phi_type]:
                     if bson.objectid.ObjectId.is_valid(filename):
                        note_key_ucsf = filename
                     else:
-                       note_key_ucsf = os.path.splitext(os.path.basename(filename).strip('0'))***REMOVED***0***REMOVED***.replace("_utf8","").replace(".txt","").replace(".xml","")
+                       note_key_ucsf = os.path.splitext(os.path.basename(filename).strip('0'))[0].replace("_utf8","").replace(".txt","").replace(".xml","")
                     if not self.subser.has_shift_amount(note_key_ucsf):
                         if __debug__:
                             if filename not in nodateshiftlist:
@@ -307,12 +307,12 @@ class Phitexts:
                                 nodateshiftlist.append(filename)
                         continue
                     
-                    normalized_token = self.norms***REMOVED***phi_type***REMOVED******REMOVED***filename, start***REMOVED******REMOVED***0***REMOVED***
-                    end = self.norms***REMOVED***phi_type***REMOVED******REMOVED***filename, start***REMOVED******REMOVED***1***REMOVED***
+                    normalized_token = self.norms[phi_type][filename, start][0]
+                    end = self.norms[phi_type][filename, start][1]
 
                     # Added for eval
                     if normalized_token is None:
-                        # self.eval_table***REMOVED***filename***REMOVED******REMOVED***start***REMOVED***.update({'sub':None})
+                        # self.eval_table[filename][start].update({'sub':None})
                         continue
                     
                     # shifted_date = self.subser.shift_date_pid(normalized_token,
@@ -327,22 +327,22 @@ class Phitexts:
                         continue
                     
                     substitute_token = self.subser.date_to_string(shifted_date)
-                    # self.eval_table***REMOVED***filename***REMOVED******REMOVED***start***REMOVED***.update({'sub':substitute_token})
-                    self.subs***REMOVED***(filename, start)***REMOVED*** = (substitute_token, end)
+                    # self.eval_table[filename][start].update({'sub':substitute_token})
+                    self.subs[(filename, start)] = (substitute_token, end)
             elif (phi_type == "AGE<90" or phi_type == "Age<90"
                   or phi_type == "AGE>=90" or phi_type == "Age>=90"):
-                for filename, start in self.norms***REMOVED***phi_type***REMOVED***:
+                for filename, start in self.norms[phi_type]:
                     if bson.objectid.ObjectId.is_valid(filename):
                        note_key_ucsf = filename
                     else:
-                       note_key_ucsf = os.path.splitext(os.path.basename(filename).strip('0'))***REMOVED***0***REMOVED***.replace("_utf8","").replace(".txt","").replace(".xml","")
+                       note_key_ucsf = os.path.splitext(os.path.basename(filename).strip('0'))[0].replace("_utf8","").replace(".txt","").replace(".xml","")
 
-                    normalized_token = self.norms***REMOVED***phi_type***REMOVED******REMOVED***filename, start***REMOVED******REMOVED***0***REMOVED***
-                    end = self.norms***REMOVED***phi_type***REMOVED******REMOVED***filename, start***REMOVED******REMOVED***1***REMOVED***
+                    normalized_token = self.norms[phi_type][filename, start][0]
+                    end = self.norms[phi_type][filename, start][1]
 
                     # Added for eval
                     if normalized_token is None:
-                        # self.eval_table***REMOVED***filename***REMOVED******REMOVED***start***REMOVED***.update({'sub':None})
+                        # self.eval_table[filename][start].update({'sub':None})
                         continue
 
                     shifted_age = self.subser.shifted_age_pid(note_key_ucsf)
@@ -356,7 +356,7 @@ class Phitexts:
                         substitute_token = "*****" # TODO: only scrape ages >90 and <deid_dob for 90plus patients
                     else:
                         substitute_token = str(normalized_token)
-                    self.subs***REMOVED***(filename, start)***REMOVED*** = (substitute_token, end)
+                    self.subs[(filename, start)] = (substitute_token, end)
             else:
                 continue
 
@@ -378,12 +378,12 @@ class Phitexts:
         for filename in self.filenames:
             
             last_marker = 0
-            #current_chunk = ***REMOVED******REMOVED***
-            #punctuation_matcher = re.compile(r"***REMOVED***^a-zA-Z0-9****REMOVED***")
-            txt = self.texts***REMOVED***filename***REMOVED***
-            exclude_dict = self.coords***REMOVED***filename***REMOVED***
+            #current_chunk = []
+            #punctuation_matcher = re.compile(r"[^a-zA-Z0-9*]")
+            txt = self.texts[filename]
+            exclude_dict = self.coords[filename]
             #read the text by character, any non-punc non-overlaps will be replaced
-            contents = ***REMOVED******REMOVED***
+            contents = []
 
             for i in range(0, len(txt)):
 
@@ -391,10 +391,10 @@ class Phitexts:
                     continue
                 
                 if i in exclude_dict:
-                    start,stop = i, exclude_dict***REMOVED***i***REMOVED***
+                    start,stop = i, exclude_dict[i]
                     if (filename, start) in self.subs:
-                        substitute_token = self.subs***REMOVED***filename, start***REMOVED******REMOVED***0***REMOVED***
-                        end = self.subs***REMOVED***filename, start***REMOVED******REMOVED***1***REMOVED***
+                        substitute_token = self.subs[filename, start][0]
+                        end = self.subs[filename, start][1]
                         contents.append(substitute_token)
                         last_marker = end
                     else:
@@ -402,9 +402,9 @@ class Phitexts:
                         last_marker = stop
                     
                 else:
-                    contents.append(txt***REMOVED***i***REMOVED***)
+                    contents.append(txt[i])
 
-            self.textsout***REMOVED***filename***REMOVED*** =  "".join(contents)
+            self.textsout[filename] =  "".join(contents)
     
     def _get_obscured_texts(self, symbol='*'):
         assert self.texts, "No texts defined"
@@ -417,18 +417,18 @@ class Phitexts:
         texts_obscured = {}
         for filename in self.filenames:
 
-            txt = self.texts***REMOVED***filename***REMOVED***
-            exclude_dict = self.coords***REMOVED***filename***REMOVED***
+            txt = self.texts[filename]
+            exclude_dict = self.coords[filename]
 
             #read the text by character, any non-punc non-overlaps will be replaced
-            contents = ***REMOVED******REMOVED***
+            contents = []
             for i in range(0, len(txt)):     
                 if i in exclude_dict:
                     contents.append(symbol)    
                 else:
-                    contents.append(txt***REMOVED***i***REMOVED***)
+                    contents.append(txt[i])
 
-            texts_obscured***REMOVED***filename***REMOVED*** =  "".join(contents)
+            texts_obscured[filename] =  "".join(contents)
 
         return texts_obscured
 
@@ -438,7 +438,7 @@ class Phitexts:
         assert outputdir, "Cannot save text: output directory undefined"
 
         for filename in self.filenames:
-            fbase = os.path.splitext(os.path.basename(filename))***REMOVED***0***REMOVED***
+            fbase = os.path.splitext(os.path.basename(filename))[0]
             if use_deid_note_key: # name files according to deid note key
                 note_key_ucsf = fbase.lstrip('0').replace("_utf8","").replace(".xml","").replace(".txt","")
                 if not self.subser.has_deid_note_key(note_key_ucsf):
@@ -448,36 +448,36 @@ class Phitexts:
                 fbase = self.subser.get_deid_note_key(note_key_ucsf)
             if create_subdirs: # assume outputdir is parent and create subdirs
                                # from 14 hexadec digits long deid note keys
-                duo_1 = fbase***REMOVED***:2***REMOVED***
-                trio_2 = fbase***REMOVED***2:5***REMOVED***
-                trio_3 = fbase***REMOVED***5:8***REMOVED***
-                trio_4 = fbase***REMOVED***8:11***REMOVED***
+                duo_1 = fbase[:2]
+                trio_2 = fbase[2:5]
+                trio_3 = fbase[5:8]
+                trio_4 = fbase[8:11]
                 fbase = os.path.join(duo_1, trio_2, trio_3, trio_4, fbase)
             filepath = os.path.join(outputdir, fbase + suf + "." + ext)
             with open(filepath, "w", encoding='utf-8',
                       errors='surrogateescape') as fhandle:
-                fhandle.write(self.textsout***REMOVED***filename***REMOVED***)
+                fhandle.write(self.textsout[filename])
    
     def save_mongo(self,mongo):
         assert self.textsout, "Cannot save text: output not ready"
         try:
           db = self.db
-          collection_meta_in = db***REMOVED***mongo***REMOVED***'collection_meta_data'***REMOVED******REMOVED***
-          collection_deid_text = db***REMOVED***mongo***REMOVED***'collection_deid_note_text'***REMOVED******REMOVED***
+          collection_meta_in = db[mongo['collection_meta_data']]
+          collection_deid_text = db[mongo['collection_deid_note_text']]
         except:
           print("Mongo Server not available")
 
 
-        philtered_text = ***REMOVED******REMOVED***
+        philtered_text = []
 
         for files in self.textsout:
-            philtered = {'_id': files, 'deid_note_text': self.textsout***REMOVED***files***REMOVED***}
+            philtered = {'_id': files, 'deid_note_text': self.textsout[files]}
             philtered_text.append(philtered)
 
         try:
            collection_deid_text.delete_many({'_id': {'$in': self.filenames}})
            collection_deid_text.insert_many(philtered_text)
-           collection_meta_in.update_many({'_id': {'$in': self.filenames}},{'$set': { "redact_date": datetime.datetime.now(), "philter_version": mongo***REMOVED***'philter_version'***REMOVED***}})
+           collection_meta_in.update_many({'_id': {'$in': self.filenames}},{'$set': { "redact_date": datetime.datetime.now(), "philter_version": mongo['philter_version']}})
         except:
            print("Error while saving deidentified files into Mongo")
     
@@ -486,30 +486,30 @@ class Phitexts:
     def get_phi_type_per_token(self):
        phi_types_per_token = {}
        for phi_type in self.types: 
-           for filename, start, end in self.types***REMOVED***phi_type***REMOVED******REMOVED***0***REMOVED***.scan():
-               all_tokens = get_tokens(self.texts***REMOVED***filename***REMOVED***)
+           for filename, start, end in self.types[phi_type][0].scan():
+               all_tokens = get_tokens(self.texts[filename])
                if filename not in phi_types_per_token:
-                  phi_types_per_token***REMOVED***filename***REMOVED*** = {}
+                  phi_types_per_token[filename] = {}
                for token_start in all_tokens:    
-                   if token_start not in phi_types_per_token***REMOVED***filename***REMOVED***:
-                      phi_types_per_token***REMOVED***filename***REMOVED******REMOVED***token_start***REMOVED*** = {}
-                   token_end = all_tokens***REMOVED***token_start***REMOVED******REMOVED***0***REMOVED***
-                   if token_end not in phi_types_per_token***REMOVED***filename***REMOVED******REMOVED***token_start***REMOVED***:
-                      phi_types_per_token***REMOVED***filename***REMOVED******REMOVED***token_start***REMOVED******REMOVED***token_end***REMOVED*** = ***REMOVED******REMOVED***
+                   if token_start not in phi_types_per_token[filename]:
+                      phi_types_per_token[filename][token_start] = {}
+                   token_end = all_tokens[token_start][0]
+                   if token_end not in phi_types_per_token[filename][token_start]:
+                      phi_types_per_token[filename][token_start][token_end] = []
                    if token_start == start:
-                      if phi_type not in phi_types_per_token***REMOVED***filename***REMOVED******REMOVED***token_start***REMOVED******REMOVED***token_end***REMOVED***:
-                         phi_types_per_token***REMOVED***filename***REMOVED******REMOVED***token_start***REMOVED******REMOVED***token_end***REMOVED***.append(phi_type)
+                      if phi_type not in phi_types_per_token[filename][token_start][token_end]:
+                         phi_types_per_token[filename][token_start][token_end].append(phi_type)
                    elif (token_start > start) and (token_end <= end):
-                      if phi_type not in phi_types_per_token***REMOVED***filename***REMOVED******REMOVED***token_start***REMOVED******REMOVED***token_end***REMOVED***:
-                         phi_types_per_token***REMOVED***filename***REMOVED******REMOVED***token_start***REMOVED******REMOVED***token_end***REMOVED***.append(phi_type)
+                      if phi_type not in phi_types_per_token[filename][token_start][token_end]:
+                         phi_types_per_token[filename][token_start][token_end].append(phi_type)
        return phi_types_per_token
 
 
     def print_log(self, kp, mongo, xml):
-        phi_count_df = pd.DataFrame(columns=***REMOVED***'Phi_type','Count'***REMOVED***)
-        batch_summary_df = pd.DataFrame(columns=***REMOVED***'Title','values'***REMOVED***) 
-        csv_summary_df = pd.DataFrame(columns=***REMOVED***'filename','batch','file_size','total_tokens','phi_tokens','successfully_normalized','failed_normalized','successfully_surrogated','failed_surrogated'***REMOVED***)
-        dynamic_blacklist_df = pd.DataFrame(columns=***REMOVED***'filename','batch','start','end','probe','context','phi_type'***REMOVED***)        
+        phi_count_df = pd.DataFrame(columns=['Phi_type','Count'])
+        batch_summary_df = pd.DataFrame(columns=['Title','values']) 
+        csv_summary_df = pd.DataFrame(columns=['filename','batch','file_size','total_tokens','phi_tokens','successfully_normalized','failed_normalized','successfully_surrogated','failed_surrogated'])
+        dynamic_blacklist_df = pd.DataFrame(columns=['filename','batch','start','end','probe','context','phi_type'])        
         eval_table = {}
         failed_date = {}
         phi_table = {}
@@ -521,74 +521,74 @@ class Phitexts:
             phi_type = 'Date'
         
         # Store age normalization info - these are ages are normalized and NOT obscured
-        for key in self.norms***REMOVED***'AGE<90'***REMOVED***:
-            filename = key***REMOVED***0***REMOVED***
-            start = key***REMOVED***1***REMOVED***
-            age = self.norms***REMOVED***'AGE<90'***REMOVED******REMOVED***key***REMOVED******REMOVED***0***REMOVED***
-            end = self.norms***REMOVED***'AGE<90'***REMOVED******REMOVED***key***REMOVED******REMOVED***1***REMOVED***
+        for key in self.norms['AGE<90']:
+            filename = key[0]
+            start = key[1]
+            age = self.norms['AGE<90'][key][0]
+            end = self.norms['AGE<90'][key][1]
 
             age_dict = {"start":start, "end":end, "word":age, "type":"AGE<90"}
 
             if filename not in age_norm_info:
-                age_norm_info***REMOVED***filename***REMOVED*** = ***REMOVED******REMOVED***
-                age_norm_info***REMOVED***filename***REMOVED***.append(age_dict)
+                age_norm_info[filename] = []
+                age_norm_info[filename].append(age_dict)
             else:
-                age_norm_info***REMOVED***filename***REMOVED***.append(age_dict)
+                age_norm_info[filename].append(age_dict)
         
-        #print(self.norms***REMOVED***'AGE<90'***REMOVED***)
+        #print(self.norms['AGE<90'])
         # Write to file of raw dates, parsed dates and substituted dates
         num_failed = 0
         num_parsed = 0
         # with open(date_table, 'w') as f_parsed, open(failed_dates, 'w') as f_failed:
-            # f_parsed.write('\t'.join(***REMOVED***'filename', 'start', 'end', 'raw', 'normalized', 'substituted'***REMOVED***))
+            # f_parsed.write('\t'.join(['filename', 'start', 'end', 'raw', 'normalized', 'substituted']))
             # f_parsed.write('\n')
-            # f_failed.write('\t'.join(***REMOVED***'filename', 'start', 'end', 'raw'***REMOVED***))
+            # f_failed.write('\t'.join(['filename', 'start', 'end', 'raw']))
             # f_failed.write('\n')
-        for filename, start, end in self.types***REMOVED***phi_type***REMOVED******REMOVED***0***REMOVED***.scan():
-            raw = self.texts***REMOVED***filename***REMOVED******REMOVED***start:end***REMOVED***
-            normalized_date = self.norms***REMOVED***phi_type***REMOVED******REMOVED***(filename,start)***REMOVED******REMOVED***0***REMOVED***
+        for filename, start, end in self.types[phi_type][0].scan():
+            raw = self.texts[filename][start:end]
+            normalized_date = self.norms[phi_type][(filename,start)][0]
             filename = str(filename) 
             if filename not in parse_info:
-                parse_info***REMOVED***filename***REMOVED*** = {'success_norm':0,'fail_norm':0,
+                parse_info[filename] = {'success_norm':0,'fail_norm':0,
                                         'success_sub':0,'fail_sub':0}
             if filename not in eval_table:
-               eval_table***REMOVED***filename***REMOVED*** = ***REMOVED******REMOVED***
+               eval_table[filename] = []
 
             if normalized_date is not None:
                 # Add 1 to successfully normalized dates
                 num_parsed += 1
-                parse_info***REMOVED***filename***REMOVED******REMOVED***'success_norm'***REMOVED*** += 1
+                parse_info[filename]['success_norm'] += 1
                 normalized_token = Subs.date_to_string(normalized_date)
-                #note_key_ucsf = os.path.splitext(os.path.basename(filename).strip('0'))***REMOVED***0***REMOVED***
+                #note_key_ucsf = os.path.splitext(os.path.basename(filename).strip('0'))[0]
                 if self.subs: 
                    # Successfully surrogated:
                    if (filename, start) in self.subs:
                       # Add 1 to successfuly surrogated dates:	
-                      sub = self.subs***REMOVED***(filename,start)***REMOVED******REMOVED***0***REMOVED***
-                      parse_info***REMOVED***filename***REMOVED******REMOVED***'success_sub'***REMOVED*** += 1
+                      sub = self.subs[(filename,start)][0]
+                      parse_info[filename]['success_sub'] += 1
                    # Unsuccessfully surrogated:
                    else:
                        # Add 1 to unsuccessfuly surrogated dates:
                        sub = None	
-                       parse_info***REMOVED***filename***REMOVED******REMOVED***'fail_sub'***REMOVED*** += 1
+                       parse_info[filename]['fail_sub'] += 1
                 else:
                     sub = None
-                eval_table***REMOVED***filename***REMOVED***.append({'start':start, 'end':end,
+                eval_table[filename].append({'start':start, 'end':end,
                                              'raw': raw,
                                              'normalized': normalized_token,
                                              'sub': sub})
-                    # f_parsed.write('\t'.join(***REMOVED***filename, str(start), str(end), raw, normalized_token, sub***REMOVED***))
+                    # f_parsed.write('\t'.join([filename, str(start), str(end), raw, normalized_token, sub]))
                     # f_parsed.write('\n')
             else:
                 # Add 1 to unsuccessfuly normazlied dates:
                 num_failed += 1
-                parse_info***REMOVED***filename***REMOVED******REMOVED***'fail_norm'***REMOVED*** += 1
-                    # f_failed.write('\t'.join(***REMOVED***filename, str(start), str(end), raw.strip('\n')***REMOVED***))
+                parse_info[filename]['fail_norm'] += 1
+                    # f_failed.write('\t'.join([filename, str(start), str(end), raw.strip('\n')]))
                     # f_failed.write('\n')
                 filename = str(filename)
                 if filename not in failed_date:
-                        failed_date***REMOVED***filename***REMOVED*** = ***REMOVED******REMOVED***
-                failed_date***REMOVED***filename***REMOVED***.append({'start':start, 'end':end,        
+                        failed_date[filename] = []
+                failed_date[filename].append({'start':start, 'end':end,        
                                               'raw': raw})
 
         if __debug__:
@@ -599,31 +599,31 @@ class Phitexts:
         phi_counter = {}
         marked_phi = {}
         #with open(phi_count_file,'w') as f_count:
-            # f_marked.write('\t'.join(***REMOVED***'filename', 'start', 'end', 'word', 'phi_type', 'category'***REMOVED***))
+            # f_marked.write('\t'.join(['filename', 'start', 'end', 'word', 'phi_type', 'category']))
             # f_marked.write('\n')
 
         for phi_type in self.types:
-            for filename, start, end in self.types***REMOVED***phi_type***REMOVED******REMOVED***0***REMOVED***.scan():
+            for filename, start, end in self.types[phi_type][0].scan():
                 fname = str(filename)
                 if filename not in phi_table:
-                   phi_table***REMOVED***fname***REMOVED*** = ***REMOVED******REMOVED***
-                word = self.texts***REMOVED***filename***REMOVED******REMOVED***start:end***REMOVED***
-                phi_table***REMOVED***fname***REMOVED***.append({'start': start, 'end': end,
+                   phi_table[fname] = []
+                word = self.texts[filename][start:end]
+                phi_table[fname].append({'start': start, 'end': end,
                                             'word': word, 'type': phi_type})
 
                 if phi_type not in phi_counter:
-                    phi_counter***REMOVED***phi_type***REMOVED*** = 0
-                phi_counter***REMOVED***phi_type***REMOVED*** += 1
+                    phi_counter[phi_type] = 0
+                phi_counter[phi_type] += 1
 
                     
-                # f_marked.write('\t'.join(***REMOVED***filename, str(start), str(end), word, phi_type***REMOVED***))
+                # f_marked.write('\t'.join([filename, str(start), str(end), word, phi_type]))
                 # f_marked.write('\n')
 
         for phi_type in phi_counter:
-            phi_count_df = phi_count_df.append({'Phi_type': phi_type, 'Count': str(phi_counter***REMOVED***phi_type***REMOVED***)},ignore_index=True)
+            phi_count_df = phi_count_df.append({'Phi_type': phi_type, 'Count': str(phi_counter[phi_type])},ignore_index=True)
        
 
-        summary_info = {'filesize':***REMOVED******REMOVED***,'total_tokens':***REMOVED******REMOVED***,'phi_tokens':***REMOVED******REMOVED***,'successful_normalized':***REMOVED******REMOVED***,'failed_normalized':***REMOVED******REMOVED***,'successful_surrogated':***REMOVED******REMOVED***,'failed_surrogated':***REMOVED******REMOVED***}
+        summary_info = {'filesize':[],'total_tokens':[],'phi_tokens':[],'successful_normalized':[],'failed_normalized':[],'successful_surrogated':[],'failed_surrogated':[]}
         
         texts_obscured = self._get_obscured_texts() # needed for phi_tokens
                 
@@ -633,19 +633,19 @@ class Phitexts:
 
             # File size in bytes
             if isinstance(filename, (bson.objectid.ObjectId)):
-               filesize = sys.getsizeof(self.texts***REMOVED***filename***REMOVED***)
+               filesize = sys.getsizeof(self.texts[filename])
             else: 
                filesize = os.path.getsize(filename)
             
             if xml: 
-               total_tokens = len(get_clean(self.texts***REMOVED***filename***REMOVED***)) 
-               phi_tokens = len(self.coords***REMOVED***filename***REMOVED***)
+               total_tokens = len(get_clean(self.texts[filename])) 
+               phi_tokens = len(self.coords[filename])
             else:
                # Number of total tokens
-               total_tokens = self.filterer.cleaned***REMOVED***filename***REMOVED******REMOVED***1***REMOVED***
+               total_tokens = self.filterer.cleaned[filename][1]
                # Number of PHI tokens
                phi_tokens = self.filterer.get_clean_filtered(filename,
-                                                             texts_obscured***REMOVED***filename***REMOVED***)***REMOVED***1***REMOVED***
+                                                             texts_obscured[filename])[1]
             
             successful_normalized = 0
             failed_normalized = 0
@@ -654,48 +654,48 @@ class Phitexts:
             filename = str(filename)
             if filename in parse_info:
                 # Successfully normalized dates
-                successful_normalized = parse_info***REMOVED***filename***REMOVED******REMOVED***'success_norm'***REMOVED***
+                successful_normalized = parse_info[filename]['success_norm']
                 # Unsuccessfully normalized dates
-                failed_normalized = parse_info***REMOVED***filename***REMOVED******REMOVED***'fail_norm'***REMOVED***
+                failed_normalized = parse_info[filename]['fail_norm']
                 # Successfully normalized dates
-                successful_surrogated = parse_info***REMOVED***filename***REMOVED******REMOVED***'success_sub'***REMOVED***
+                successful_surrogated = parse_info[filename]['success_sub']
                 # Unsuccessfully normalized dates
-                failed_surrogated = parse_info***REMOVED***filename***REMOVED******REMOVED***'fail_sub'***REMOVED***
+                failed_surrogated = parse_info[filename]['fail_sub']
             
-            csv_summary_df = csv_summary_df.append(pd.Series(***REMOVED***filename,self.batch,str(filesize),str(total_tokens),str(phi_tokens),str(successful_normalized),str(failed_normalized),str(successful_surrogated),str(failed_surrogated)***REMOVED***,index=csv_summary_df.columns),ignore_index=True)           
+            csv_summary_df = csv_summary_df.append(pd.Series([filename,self.batch,str(filesize),str(total_tokens),str(phi_tokens),str(successful_normalized),str(failed_normalized),str(successful_surrogated),str(failed_surrogated)],index=csv_summary_df.columns),ignore_index=True)           
           
-            summary_info***REMOVED***'filesize'***REMOVED***.append(filesize)
-            summary_info***REMOVED***'total_tokens'***REMOVED***.append(total_tokens)
-            summary_info***REMOVED***'phi_tokens'***REMOVED***.append(phi_tokens)
-            summary_info***REMOVED***'successful_normalized'***REMOVED***.append(successful_normalized)
-            summary_info***REMOVED***'failed_normalized'***REMOVED***.append(failed_normalized)
-            summary_info***REMOVED***'successful_surrogated'***REMOVED***.append(successful_surrogated)
-            summary_info***REMOVED***'failed_surrogated'***REMOVED***.append(failed_surrogated)
+            summary_info['filesize'].append(filesize)
+            summary_info['total_tokens'].append(total_tokens)
+            summary_info['phi_tokens'].append(phi_tokens)
+            summary_info['successful_normalized'].append(successful_normalized)
+            summary_info['failed_normalized'].append(failed_normalized)
+            summary_info['successful_surrogated'].append(successful_surrogated)
+            summary_info['failed_surrogated'].append(failed_surrogated)
         # Summarize current batch
         # Batch size (all)
         number_of_notes = len(self.filenames)
 
         # File size
-        total_kb_processed = sum(summary_info***REMOVED***'filesize'***REMOVED***)/1000
-        median_file_size = numpy.median(summary_info***REMOVED***'filesize'***REMOVED***)
-        q2pt5_size,q97pt5_size = numpy.percentile(summary_info***REMOVED***'filesize'***REMOVED***,***REMOVED***2.5,97.5***REMOVED***)
+        total_kb_processed = sum(summary_info['filesize'])/1000
+        median_file_size = numpy.median(summary_info['filesize'])
+        q2pt5_size,q97pt5_size = numpy.percentile(summary_info['filesize'],[2.5,97.5])
 
         # Total tokens
-        total_tokens = numpy.sum(summary_info***REMOVED***'total_tokens'***REMOVED***)
-        median_tokens = numpy.median(summary_info***REMOVED***'total_tokens'***REMOVED***)
-        q2pt5_tokens,q97pt5_tokens = numpy.percentile(summary_info***REMOVED***'total_tokens'***REMOVED***,***REMOVED***2.5,97.5***REMOVED***)
+        total_tokens = numpy.sum(summary_info['total_tokens'])
+        median_tokens = numpy.median(summary_info['total_tokens'])
+        q2pt5_tokens,q97pt5_tokens = numpy.percentile(summary_info['total_tokens'],[2.5,97.5])
 
         # Total PHI tokens
-        total_phi_tokens = numpy.sum(summary_info***REMOVED***'phi_tokens'***REMOVED***)
-        median_phi_tokens = numpy.median(summary_info***REMOVED***'phi_tokens'***REMOVED***)
-        q2pt5_phi_tokens,q97pt5_phi_tokens = numpy.percentile(summary_info***REMOVED***'phi_tokens'***REMOVED***,***REMOVED***2.5,97.5***REMOVED***)
+        total_phi_tokens = numpy.sum(summary_info['phi_tokens'])
+        median_phi_tokens = numpy.median(summary_info['phi_tokens'])
+        q2pt5_phi_tokens,q97pt5_phi_tokens = numpy.percentile(summary_info['phi_tokens'],[2.5,97.5])
         # Normalization
-        successful_normalization = sum(summary_info***REMOVED***'successful_normalized'***REMOVED***)
-        failed_normalization = sum(summary_info***REMOVED***'failed_normalized'***REMOVED***)
+        successful_normalization = sum(summary_info['successful_normalized'])
+        failed_normalization = sum(summary_info['failed_normalized'])
 
         # Surrogation
-        successful_surrogation = sum(summary_info***REMOVED***'successful_surrogated'***REMOVED***)
-        failed_surrogation = sum(summary_info***REMOVED***'failed_surrogated'***REMOVED***)
+        successful_surrogation = sum(summary_info['successful_surrogated'])
+        failed_surrogation = sum(summary_info['failed_surrogated'])
 
         # Create text summary for the current batch
         batch_summary_df = batch_summary_df.append({'Title': 'TOTAL NOTES PROCESSED','values': str(number_of_notes)},ignore_index=True)
@@ -719,19 +719,19 @@ class Phitexts:
            phi_type_per_token = self.get_phi_type_per_token()
 
            for filename in phi_type_per_token: 
-               for start in phi_type_per_token***REMOVED***filename***REMOVED***:
-                   for end in phi_type_per_token***REMOVED***filename***REMOVED******REMOVED***start***REMOVED***:
-                       if len(phi_type_per_token***REMOVED***filename***REMOVED******REMOVED***start***REMOVED******REMOVED***end***REMOVED***) == 1 and 'PROBE' in phi_type_per_token***REMOVED***filename***REMOVED******REMOVED***start***REMOVED******REMOVED***end***REMOVED***:
+               for start in phi_type_per_token[filename]:
+                   for end in phi_type_per_token[filename][start]:
+                       if len(phi_type_per_token[filename][start][end]) == 1 and 'PROBE' in phi_type_per_token[filename][start][end]:
                            flank_start = int(start) - 10
                            flank_end = int(end) + 10
                            if (flank_start < 0):
                               flank_start = 1
-                           if len(self.texts***REMOVED***filename***REMOVED***)<flank_end:
-                              flank_end = len(self.texts***REMOVED***filename***REMOVED***)
-                           context = self.texts***REMOVED***filename***REMOVED******REMOVED***flank_start:flank_end***REMOVED***
-                           word = self.texts***REMOVED***filename***REMOVED******REMOVED***start:end+1***REMOVED***
-                           #f.write(filename + "\t" + str(start) + "\t" + str(end) + "\t" + word + "\t" + context.replace('\n',' ') + "\t" + ','.join(phi_type_per_token***REMOVED***filename***REMOVED******REMOVED***start***REMOVED******REMOVED***end***REMOVED***)+"\n")
-                           dynamic_blacklist_df = dynamic_blacklist_df.append(pd.Series(***REMOVED***filename,self.batch,str(start),str(end),word,context.replace('\n',' '),','.join(phi_type_per_token***REMOVED***filename***REMOVED******REMOVED***start***REMOVED******REMOVED***end***REMOVED***)***REMOVED***, index=dynamic_blacklist_df.columns),ignore_index=True)               
+                           if len(self.texts[filename])<flank_end:
+                              flank_end = len(self.texts[filename])
+                           context = self.texts[filename][flank_start:flank_end]
+                           word = self.texts[filename][start:end+1]
+                           #f.write(filename + "\t" + str(start) + "\t" + str(end) + "\t" + word + "\t" + context.replace('\n',' ') + "\t" + ','.join(phi_type_per_token[filename][start][end])+"\n")
+                           dynamic_blacklist_df = dynamic_blacklist_df.append(pd.Series([filename,self.batch,str(start),str(end),word,context.replace('\n',' '),','.join(phi_type_per_token[filename][start][end])], index=dynamic_blacklist_df.columns),ignore_index=True)               
 
         return failed_date,eval_table,phi_table,phi_count_df,csv_summary_df,batch_summary_df,dynamic_blacklist_df,age_norm_info
 
@@ -779,53 +779,53 @@ class Phitexts:
         print("In mongo save log")
         try:
           db = self.db          
-          collection_log_batch_summary = db***REMOVED***mongo***REMOVED***'collection_log_batch_summary'***REMOVED******REMOVED***
-          collection_detailed_batch_summary = db***REMOVED***mongo***REMOVED***'collection_log_detailed_batch_summary'***REMOVED******REMOVED***
-          collection_log_batch_phi_count = db***REMOVED***mongo***REMOVED***'collection_log_batch_phi_count'***REMOVED******REMOVED***
-          collection_log_dynamic_blacklist = db***REMOVED***mongo***REMOVED***'collection_log_dynamic_blacklist'***REMOVED******REMOVED***
-          collection_log_failed_dates = db***REMOVED***mongo***REMOVED***'collection_log_failed_dates'***REMOVED******REMOVED*** 
-          collection_log_parsed_dates = db***REMOVED***mongo***REMOVED***'collection_log_parsed_dates'***REMOVED******REMOVED***
-          collection_log_phi_marked = db***REMOVED***mongo***REMOVED***'collection_log_phi_marked'***REMOVED******REMOVED***
+          collection_log_batch_summary = db[mongo['collection_log_batch_summary']]
+          collection_detailed_batch_summary = db[mongo['collection_log_detailed_batch_summary']]
+          collection_log_batch_phi_count = db[mongo['collection_log_batch_phi_count']]
+          collection_log_dynamic_blacklist = db[mongo['collection_log_dynamic_blacklist']]
+          collection_log_failed_dates = db[mongo['collection_log_failed_dates']] 
+          collection_log_parsed_dates = db[mongo['collection_log_parsed_dates']]
+          collection_log_phi_marked = db[mongo['collection_log_phi_marked']]
         except:
           print("Mongo Server not available")    
-        batch_summary = dict(zip(batch_summary_df***REMOVED***'Title'***REMOVED***,batch_summary_df***REMOVED***'values'***REMOVED***))
-        batch_summary***REMOVED***'Batch'***REMOVED***  = self.batch
+        batch_summary = dict(zip(batch_summary_df['Title'],batch_summary_df['values']))
+        batch_summary['Batch']  = self.batch
         if collection_log_batch_summary.find_one({"Batch": self.batch}) is None:
            max_run_num = 1
         else:
-           max_run = collection_log_batch_summary.find({"Batch": self.batch},{"_id":0,"Run":1}).sort(***REMOVED***("Run", -1)***REMOVED***).limit(1)
+           max_run = collection_log_batch_summary.find({"Batch": self.batch},{"_id":0,"Run":1}).sort([("Run", -1)]).limit(1)
            for run in max_run:
-               max_run_num = run***REMOVED***'Run'***REMOVED*** + 1
-        phi_count = dict(zip(phi_count_df***REMOVED***'Phi_type'***REMOVED***,phi_count_df***REMOVED***'Count'***REMOVED***))
-        phi_count***REMOVED***'Batch'***REMOVED*** = self.batch
-        phi_count***REMOVED***'Run'***REMOVED*** = max_run_num
-        batch_summary***REMOVED***'Run'***REMOVED*** = max_run_num
+               max_run_num = run['Run'] + 1
+        phi_count = dict(zip(phi_count_df['Phi_type'],phi_count_df['Count']))
+        phi_count['Batch'] = self.batch
+        phi_count['Run'] = max_run_num
+        batch_summary['Run'] = max_run_num
         collection_log_batch_summary.insert(batch_summary)
         collection_log_batch_phi_count.insert(phi_count)        
         
         #csv_summary_df.rename(columns = {'filename': '_id'}, inplace = True)
-        csv_summary_df***REMOVED***'Run'***REMOVED*** = max_run_num
+        csv_summary_df['Run'] = max_run_num
         detailed_batch_summary = csv_summary_df.to_dict(orient='records')
         collection_detailed_batch_summary.insert(detailed_batch_summary)        
         if not dynamic_blacklist_df.empty:
            #dynamic_blacklist_df.rename(columns = {'filename': '_id'}, inplace = True)
-           dynamic_blacklist_df***REMOVED***'Run'***REMOVED*** = max_run_num
+           dynamic_blacklist_df['Run'] = max_run_num
            dynamic_blacklist = dynamic_blacklist_df.to_dict(orient='records')
            collection_log_dynamic_blacklist.insert(dynamic_blacklist)
         
         if bool(failed_date):
-           failed_date***REMOVED***'Batch'***REMOVED*** = self.batch
-           failed_date***REMOVED***'Run'***REMOVED*** = max_run_num
+           failed_date['Batch'] = self.batch
+           failed_date['Run'] = max_run_num
            collection_log_failed_dates.insert(failed_date)
 
         if bool(eval_table):
-           eval_table***REMOVED***'Batch'***REMOVED*** = self.batch
-           eval_table***REMOVED***'Run'***REMOVED*** = max_run_num
+           eval_table['Batch'] = self.batch
+           eval_table['Run'] = max_run_num
            collection_log_parsed_dates.insert(eval_table)
 
         if bool(phi_table):
-           phi_table***REMOVED***'Batch'***REMOVED*** = self.batch
-           phi_table***REMOVED***'Run'***REMOVED*** = max_run_num
+           phi_table['Batch'] = self.batch
+           phi_table['Run'] = max_run_num
            collection_log_phi_marked.insert(phi_table)
 
 
@@ -833,19 +833,19 @@ class Phitexts:
  
     def _get_phi_type(self, filename, start, stop):
         for phi_type in self.types.keys():
-            for begin,end in self.types***REMOVED***phi_type***REMOVED******REMOVED***0***REMOVED***.filecoords(filename):
+            for begin,end in self.types[phi_type][0].filecoords(filename):
                 if start == begin: # TODO: extend this to an include match?
                     return phi_type
         return None
 
     # creates dictionary with tokens tagged by Philter
     def _tokenize_philter_phi(self, filename):
-        exclude_dict = self.coords***REMOVED***filename***REMOVED***
+        exclude_dict = self.coords[filename]
         updated_dict = {}
         for i in exclude_dict:
-            start, end = i, exclude_dict***REMOVED***i***REMOVED***
+            start, end = i, exclude_dict[i]
             phi_type = self._get_phi_type(filename, start, end)
-            word = self.texts***REMOVED***filename***REMOVED******REMOVED***start:end***REMOVED***
+            word = self.texts[filename][start:end]
             
             try:
                 tokens = get_tokens(word)
@@ -854,16 +854,16 @@ class Phitexts:
             
             for tstart in tokens:
                 token_start = tstart + start
-                token_stop = tokens***REMOVED***tstart***REMOVED******REMOVED***0***REMOVED*** + start
-                token = tokens***REMOVED***tstart***REMOVED******REMOVED***1***REMOVED***
-                updated_dict.update({token_start:***REMOVED***token_stop, phi_type, token***REMOVED***})
+                token_stop = tokens[tstart][0] + start
+                token = tokens[tstart][1]
+                updated_dict.update({token_start:[token_stop, phi_type, token]})
         return updated_dict
 
     # returns the left, middle and right parts of possible overlaps
     def _get_sub_tokens(self, token1, token2):
         
-        if (token1***REMOVED***'stop'***REMOVED*** < token2***REMOVED***'start'***REMOVED***
-            or token1***REMOVED***'start'***REMOVED*** > token2***REMOVED***'stop'***REMOVED***): # tokens do not overlap
+        if (token1['stop'] < token2['start']
+            or token1['start'] > token2['stop']): # tokens do not overlap
             return None
 
         subtokens1 = {}
@@ -876,106 +876,106 @@ class Phitexts:
         tk2_has_type = True if 'phitype' in token2 else False
 
         # looks for dangling beginning
-        if token1***REMOVED***'start'***REMOVED*** < token2***REMOVED***'start'***REMOVED***: # token1 has dangling beginning
-            left***REMOVED***'start'***REMOVED*** = token1***REMOVED***'start'***REMOVED***
-            left***REMOVED***'length'***REMOVED*** = token2***REMOVED***'start'***REMOVED*** - token1***REMOVED***'start'***REMOVED***
-            left***REMOVED***'stop'***REMOVED*** = token2***REMOVED***'start'***REMOVED*** - 1
-            left***REMOVED***'token'***REMOVED*** = token1***REMOVED***'token'***REMOVED******REMOVED***0:left***REMOVED***'length'***REMOVED******REMOVED***
+        if token1['start'] < token2['start']: # token1 has dangling beginning
+            left['start'] = token1['start']
+            left['length'] = token2['start'] - token1['start']
+            left['stop'] = token2['start'] - 1
+            left['token'] = token1['token'][0:left['length']]
             if tk1_has_type:
-                left***REMOVED***'phitype'***REMOVED*** = token1***REMOVED***'phitype'***REMOVED***
-                subtokens1.update({left***REMOVED***'start'***REMOVED***:***REMOVED***left***REMOVED***'stop'***REMOVED***, left***REMOVED***'phitype'***REMOVED***,
-                                                  left***REMOVED***'token'***REMOVED******REMOVED***})
+                left['phitype'] = token1['phitype']
+                subtokens1.update({left['start']:[left['stop'], left['phitype'],
+                                                  left['token']]})
             else:
-                subtokens1.update({left***REMOVED***'start'***REMOVED***:***REMOVED***left***REMOVED***'stop'***REMOVED***, left***REMOVED***'token'***REMOVED******REMOVED***})
-        elif token1***REMOVED***'start'***REMOVED*** > token2***REMOVED***'start'***REMOVED***: # token2 has dangling beginning
-            left***REMOVED***'start'***REMOVED*** = token2***REMOVED***'start'***REMOVED***
-            left***REMOVED***'length'***REMOVED*** = token1***REMOVED***'start'***REMOVED*** - token2***REMOVED***'start'***REMOVED***
-            left***REMOVED***'stop'***REMOVED*** = token1***REMOVED***'start'***REMOVED*** - 1
-            left***REMOVED***'token'***REMOVED*** = token2***REMOVED***'token'***REMOVED******REMOVED***0:left***REMOVED***'length'***REMOVED******REMOVED***
+                subtokens1.update({left['start']:[left['stop'], left['token']]})
+        elif token1['start'] > token2['start']: # token2 has dangling beginning
+            left['start'] = token2['start']
+            left['length'] = token1['start'] - token2['start']
+            left['stop'] = token1['start'] - 1
+            left['token'] = token2['token'][0:left['length']]
             if tk2_has_type:
-                left***REMOVED***'phitype'***REMOVED*** = token2***REMOVED***'phitype'***REMOVED***
-                subtokens2.update({left***REMOVED***'start'***REMOVED***:***REMOVED***left***REMOVED***'stop'***REMOVED***, left***REMOVED***'phitype'***REMOVED***,
-                                                  left***REMOVED***'token'***REMOVED******REMOVED***})
+                left['phitype'] = token2['phitype']
+                subtokens2.update({left['start']:[left['stop'], left['phitype'],
+                                                  left['token']]})
             else:
-                subtokens2.update({left***REMOVED***'start'***REMOVED***:***REMOVED***left***REMOVED***'stop'***REMOVED***, left***REMOVED***'token'***REMOVED******REMOVED***})
+                subtokens2.update({left['start']:[left['stop'], left['token']]})
         else: # tokens have the same start
-            left***REMOVED***'start'***REMOVED*** = token1***REMOVED***'start'***REMOVED***
-            left***REMOVED***'length'***REMOVED*** = 0
-            left***REMOVED***'stop'***REMOVED*** = token1***REMOVED***'start'***REMOVED*** - 1
-            left***REMOVED***'phitype'***REMOVED*** = None
-            left***REMOVED***'token'***REMOVED*** = ""
+            left['start'] = token1['start']
+            left['length'] = 0
+            left['stop'] = token1['start'] - 1
+            left['phitype'] = None
+            left['token'] = ""
 
         # looks for dangling end
-        if token1***REMOVED***'stop'***REMOVED*** < token2***REMOVED***'stop'***REMOVED***: # token2 has dangling end
-            right***REMOVED***'start'***REMOVED*** = token1***REMOVED***'stop'***REMOVED*** + 1
-            right***REMOVED***'length'***REMOVED*** = token2***REMOVED***'stop'***REMOVED*** - token1***REMOVED***'stop'***REMOVED***
-            right***REMOVED***'stop'***REMOVED*** = token2***REMOVED***'stop'***REMOVED***
-            right***REMOVED***'token'***REMOVED*** = token2***REMOVED***'token'***REMOVED******REMOVED***-right***REMOVED***'length'***REMOVED***:***REMOVED***
+        if token1['stop'] < token2['stop']: # token2 has dangling end
+            right['start'] = token1['stop'] + 1
+            right['length'] = token2['stop'] - token1['stop']
+            right['stop'] = token2['stop']
+            right['token'] = token2['token'][-right['length']:]
             if tk2_has_type:
-                right***REMOVED***'phitype'***REMOVED*** = token2***REMOVED***'phitype'***REMOVED***
-                subtokens2.update({right***REMOVED***'start'***REMOVED***:***REMOVED***right***REMOVED***'stop'***REMOVED***,
-                                                   right***REMOVED***'phitype'***REMOVED***,
-                                                   right***REMOVED***'token'***REMOVED******REMOVED***})
+                right['phitype'] = token2['phitype']
+                subtokens2.update({right['start']:[right['stop'],
+                                                   right['phitype'],
+                                                   right['token']]})
             else:
-                subtokens2.update({right***REMOVED***'start'***REMOVED***:***REMOVED***right***REMOVED***'stop'***REMOVED***,
-                                                   right***REMOVED***'token'***REMOVED******REMOVED***})
-        elif token2***REMOVED***'stop'***REMOVED*** < token1***REMOVED***'stop'***REMOVED***: # token1 has dangling end
-            right***REMOVED***'start'***REMOVED*** = token2***REMOVED***'stop'***REMOVED*** + 1
-            right***REMOVED***'length'***REMOVED*** = token1***REMOVED***'stop'***REMOVED*** - token2***REMOVED***'stop'***REMOVED***
-            right***REMOVED***'stop'***REMOVED*** = token1***REMOVED***'stop'***REMOVED***
-            right***REMOVED***'token'***REMOVED*** = token1***REMOVED***'token'***REMOVED******REMOVED***-right***REMOVED***'length'***REMOVED***:***REMOVED***
+                subtokens2.update({right['start']:[right['stop'],
+                                                   right['token']]})
+        elif token2['stop'] < token1['stop']: # token1 has dangling end
+            right['start'] = token2['stop'] + 1
+            right['length'] = token1['stop'] - token2['stop']
+            right['stop'] = token1['stop']
+            right['token'] = token1['token'][-right['length']:]
             if tk1_has_type:
-                right***REMOVED***'phitype'***REMOVED*** = token1***REMOVED***'phitype'***REMOVED***
-                subtokens1.update({right***REMOVED***'start'***REMOVED***:***REMOVED***right***REMOVED***'stop'***REMOVED***,
-                                                   right***REMOVED***'phitype'***REMOVED***,
-                                                   right***REMOVED***'token'***REMOVED******REMOVED***})
+                right['phitype'] = token1['phitype']
+                subtokens1.update({right['start']:[right['stop'],
+                                                   right['phitype'],
+                                                   right['token']]})
             else:
-                subtokens1.update({right***REMOVED***'start'***REMOVED***:***REMOVED***right***REMOVED***'stop'***REMOVED***,
-                                                   right***REMOVED***'token'***REMOVED******REMOVED***})
+                subtokens1.update({right['start']:[right['stop'],
+                                                   right['token']]})
         else: # tokens have the same end
-            right***REMOVED***'start'***REMOVED*** = token1***REMOVED***'stop'***REMOVED*** + 1
-            right***REMOVED***'length'***REMOVED*** = 0
-            right***REMOVED***'stop'***REMOVED*** = token1***REMOVED***'stop'***REMOVED***
-            right***REMOVED***'phitype'***REMOVED*** = None
-            right***REMOVED***'token'***REMOVED*** = ""
+            right['start'] = token1['stop'] + 1
+            right['length'] = 0
+            right['stop'] = token1['stop']
+            right['phitype'] = None
+            right['token'] = ""
 
         # looks for middle portion
-        middle***REMOVED***'start'***REMOVED*** = left***REMOVED***'stop'***REMOVED*** + 1
-        middle***REMOVED***'stop'***REMOVED*** = right***REMOVED***'start'***REMOVED*** - 1
-        middle***REMOVED***'length'***REMOVED*** = middle***REMOVED***'stop'***REMOVED*** - middle***REMOVED***'start'***REMOVED*** + 1
-        if left***REMOVED***'start'***REMOVED*** == token1***REMOVED***'start'***REMOVED***:
-            middle***REMOVED***'token'***REMOVED*** = token1***REMOVED***'token'***REMOVED******REMOVED***left***REMOVED***'length'***REMOVED***:left***REMOVED***'length'***REMOVED***+middle***REMOVED***'length'***REMOVED******REMOVED***
+        middle['start'] = left['stop'] + 1
+        middle['stop'] = right['start'] - 1
+        middle['length'] = middle['stop'] - middle['start'] + 1
+        if left['start'] == token1['start']:
+            middle['token'] = token1['token'][left['length']:left['length']+middle['length']]
             othertoken = token2
         else:
-            middle***REMOVED***'token'***REMOVED*** = token2***REMOVED***'token'***REMOVED******REMOVED***left***REMOVED***'length'***REMOVED***:left***REMOVED***'length'***REMOVED***+middle***REMOVED***'length'***REMOVED******REMOVED***
+            middle['token'] = token2['token'][left['length']:left['length']+middle['length']]
             othertoken = token1
-        if not middle***REMOVED***'token'***REMOVED*** == othertoken***REMOVED***'token'***REMOVED******REMOVED***0:middle***REMOVED***'length'***REMOVED******REMOVED***:
+        if not middle['token'] == othertoken['token'][0:middle['length']]:
             if __debug__: print(str(left),str(middle),str(right))
-            raise Exception("ERROR: string mismatch: \"" + middle***REMOVED***'token'***REMOVED***
+            raise Exception("ERROR: string mismatch: \"" + middle['token']
                             + "\" != \""
-                            +  othertoken***REMOVED***'token'***REMOVED******REMOVED***0:middle***REMOVED***'length'***REMOVED******REMOVED***
+                            +  othertoken['token'][0:middle['length']]
                             + "\" in tokens: \""
-                            + token1***REMOVED***'token'***REMOVED*** + "\" (" + str(token1***REMOVED***'start'***REMOVED***)
-                            + "-" + str(token1***REMOVED***'stop'***REMOVED***) + ") and \""
-                            + token2***REMOVED***'token'***REMOVED*** + "\" (" + str(token2***REMOVED***'start'***REMOVED***)
-                            + "-" + str(token2***REMOVED***'stop'***REMOVED***) + ")")
+                            + token1['token'] + "\" (" + str(token1['start'])
+                            + "-" + str(token1['stop']) + ") and \""
+                            + token2['token'] + "\" (" + str(token2['start'])
+                            + "-" + str(token2['stop']) + ")")
 
         if tk1_has_type:
-            middle***REMOVED***'phitype'***REMOVED*** = token1***REMOVED***'phitype'***REMOVED***
-            subtokens1.update({middle***REMOVED***'start'***REMOVED***:***REMOVED***middle***REMOVED***'stop'***REMOVED***,
-                                                middle***REMOVED***'phitype'***REMOVED***,
-                                                middle***REMOVED***'token'***REMOVED******REMOVED***})
+            middle['phitype'] = token1['phitype']
+            subtokens1.update({middle['start']:[middle['stop'],
+                                                middle['phitype'],
+                                                middle['token']]})
         else:
-            subtokens1.update({middle***REMOVED***'start'***REMOVED***:***REMOVED***middle***REMOVED***'stop'***REMOVED***,
-                                                middle***REMOVED***'token'***REMOVED******REMOVED***})
+            subtokens1.update({middle['start']:[middle['stop'],
+                                                middle['token']]})
         if tk2_has_type:
-            middle***REMOVED***'phitype'***REMOVED*** = token2***REMOVED***'phitype'***REMOVED***
-            subtokens2.update({middle***REMOVED***'start'***REMOVED***:***REMOVED***middle***REMOVED***'stop'***REMOVED***,
-                                                middle***REMOVED***'phitype'***REMOVED***,
-                                                middle***REMOVED***'token'***REMOVED******REMOVED***})
+            middle['phitype'] = token2['phitype']
+            subtokens2.update({middle['start']:[middle['stop'],
+                                                middle['phitype'],
+                                                middle['token']]})
         else:
-            subtokens2.update({middle***REMOVED***'start'***REMOVED***:***REMOVED***middle***REMOVED***'stop'***REMOVED***,
-                                                middle***REMOVED***'token'***REMOVED******REMOVED***})
+            subtokens2.update({middle['start']:[middle['stop'],
+                                                middle['token']]})
 
         return subtokens1, subtokens2
     
@@ -988,31 +988,31 @@ class Phitexts:
                     continue
                 filepath = os.path.join(root, filename)
                 # change here: what will the input format be?
-                file_id = self.inputdir + filename.split('.')***REMOVED***0***REMOVED*** + '.txt'
+                file_id = self.inputdir + filename.split('.')[0] + '.txt'
                 tree = ET.parse(filepath)
                 rt = tree.getroot()
                 xmlstr = ET.tostring(rt, encoding='utf8', method='xml')
                 xml_dict = xmltodict.parse(xmlstr)
                 xml_dict = next(iter(xml_dict.values()))
                 check_tags = rt.find('TAGS')
-                full_text = xml_dict***REMOVED***"TEXT"***REMOVED***
+                full_text = xml_dict["TEXT"]
                 if check_tags is not None:
-                   tags_dict = xml_dict***REMOVED***"TAGS"***REMOVED***
+                   tags_dict = xml_dict["TAGS"]
                 else:
                    tags_dict = None
 
                 if file_id  not in gold_phi:
-                   gold_phi***REMOVED***file_id***REMOVED*** = {}
+                   gold_phi[file_id] = {}
                 # the existence of puncs in text makes the end index inaccurate - only use start index as the key
                 if tags_dict is not None: 
 
                     for key, value in tags_dict.items():
                         if not isinstance(value, list):
-                            value = ***REMOVED***value***REMOVED***
+                            value = [value]
                         for final_value in value:
                             start, end = self._get_tag_start_stop(final_value)
-                            text = final_value***REMOVED***"@text"***REMOVED***
-                            phi_type = final_value***REMOVED***"@TYPE"***REMOVED***
+                            text = final_value["@text"]
+                            phi_type = final_value["@TYPE"]
 
                             try:
                                 tokens = get_tokens(text)
@@ -1021,18 +1021,18 @@ class Phitexts:
             
                             for tstart in tokens:
                                 token_start = tstart + start
-                                token_stop = tokens***REMOVED***tstart***REMOVED******REMOVED***0***REMOVED*** + start
-                                token = tokens***REMOVED***tstart***REMOVED******REMOVED***1***REMOVED***
-                                gold_phi***REMOVED***file_id***REMOVED***.update({token_start:***REMOVED***token_stop,
+                                token_stop = tokens[tstart][0] + start
+                                token = tokens[tstart][1]
+                                gold_phi[file_id].update({token_start:[token_stop,
                                                                        phi_type,
-                                                                       token***REMOVED***})
+                                                                       token]})
         return gold_phi
 
     # creates a dictionary of tokens found in Philter
     def _get_philter_phi(self, filenames):
         philter_phi = {}
         for filename in filenames:
-            philter_phi***REMOVED***filename***REMOVED*** = self._tokenize_philter_phi(filename)
+            philter_phi[filename] = self._tokenize_philter_phi(filename)
         return philter_phi
 
     # subtokenizes gold and philter tokens with the respective other coords 
@@ -1040,75 +1040,75 @@ class Phitexts:
         gold = {}
         philter = {}
         for filename in gold_phi:
-            gphi = gold_phi***REMOVED***filename***REMOVED***.copy()
-            pphi = philter_phi***REMOVED***filename***REMOVED***.copy()
+            gphi = gold_phi[filename].copy()
+            pphi = philter_phi[filename].copy()
             for gstart in gphi:
-                gold***REMOVED***'start'***REMOVED*** = gstart
-                gold***REMOVED***'stop'***REMOVED*** = gphi***REMOVED***gstart***REMOVED******REMOVED***0***REMOVED***
-                gold***REMOVED***'phitype'***REMOVED*** = gphi***REMOVED***gstart***REMOVED******REMOVED***1***REMOVED***
-                gold***REMOVED***'token'***REMOVED*** = gphi***REMOVED***gstart***REMOVED******REMOVED***2***REMOVED***
+                gold['start'] = gstart
+                gold['stop'] = gphi[gstart][0]
+                gold['phitype'] = gphi[gstart][1]
+                gold['token'] = gphi[gstart][2]
                 for pstart in pphi:
-                    philter***REMOVED***'start'***REMOVED*** = pstart
-                    philter***REMOVED***'stop'***REMOVED*** = pphi***REMOVED***pstart***REMOVED******REMOVED***0***REMOVED***
-                    philter***REMOVED***'phitype'***REMOVED*** = pphi***REMOVED***pstart***REMOVED******REMOVED***1***REMOVED***
-                    philter***REMOVED***'token'***REMOVED*** = pphi***REMOVED***pstart***REMOVED******REMOVED***2***REMOVED***
+                    philter['start'] = pstart
+                    philter['stop'] = pphi[pstart][0]
+                    philter['phitype'] = pphi[pstart][1]
+                    philter['token'] = pphi[pstart][2]
                     subtokens = self._get_sub_tokens(gold, philter)
                     if subtokens is None:
                         continue
-                    for st in subtokens***REMOVED***0***REMOVED***:
+                    for st in subtokens[0]:
                         start = st
-                        stop = subtokens***REMOVED***0***REMOVED******REMOVED***st***REMOVED******REMOVED***0***REMOVED***
-                        phitype = subtokens***REMOVED***0***REMOVED******REMOVED***st***REMOVED******REMOVED***1***REMOVED***
-                        token = subtokens***REMOVED***0***REMOVED******REMOVED***st***REMOVED******REMOVED***2***REMOVED***
-                        gold_phi***REMOVED***filename***REMOVED***.update({start:***REMOVED***stop, phitype,
-                                                          token***REMOVED***})
-                    for st in subtokens***REMOVED***1***REMOVED***:
+                        stop = subtokens[0][st][0]
+                        phitype = subtokens[0][st][1]
+                        token = subtokens[0][st][2]
+                        gold_phi[filename].update({start:[stop, phitype,
+                                                          token]})
+                    for st in subtokens[1]:
                         start = st
-                        stop = subtokens***REMOVED***1***REMOVED******REMOVED***st***REMOVED******REMOVED***0***REMOVED***
-                        phitype = subtokens***REMOVED***1***REMOVED******REMOVED***st***REMOVED******REMOVED***1***REMOVED***
-                        token = subtokens***REMOVED***1***REMOVED******REMOVED***st***REMOVED******REMOVED***2***REMOVED***
-                        philter_phi***REMOVED***filename***REMOVED***.update({start:***REMOVED***stop, phitype,
-                                                             token***REMOVED***})
+                        stop = subtokens[1][st][0]
+                        phitype = subtokens[1][st][1]
+                        token = subtokens[1][st][2]
+                        philter_phi[filename].update({start:[stop, phitype,
+                                                             token]})
 
     # true positives (tokens in gold and philter)
     def _get_tp_dicts(self, gold_dicts, philter_dicts):
         tp_dicts = {}
         for filename in gold_dicts:
-            tp_dicts***REMOVED***filename***REMOVED*** = {}
-            keys = gold_dicts***REMOVED***filename***REMOVED***.keys() & philter_dicts***REMOVED***filename***REMOVED***.keys()
+            tp_dicts[filename] = {}
+            keys = gold_dicts[filename].keys() & philter_dicts[filename].keys()
             for k in keys:
-                tp_dicts***REMOVED***filename***REMOVED***.update({k:gold_dicts***REMOVED***filename***REMOVED******REMOVED***k***REMOVED***})
+                tp_dicts[filename].update({k:gold_dicts[filename][k]})
         return tp_dicts
 
     # false positives (tokens in philter but not in gold)
     def _get_fp_dicts(self, gold_dicts, philter_dicts):
         fp_dicts = {}
         for filename in gold_dicts:
-            fp_dicts***REMOVED***filename***REMOVED*** = {}
-            keys = philter_dicts***REMOVED***filename***REMOVED***.keys() - gold_dicts***REMOVED***filename***REMOVED***.keys()
+            fp_dicts[filename] = {}
+            keys = philter_dicts[filename].keys() - gold_dicts[filename].keys()
             for k in keys:
-                fp_dicts***REMOVED***filename***REMOVED***.update({k:philter_dicts***REMOVED***filename***REMOVED******REMOVED***k***REMOVED***})
+                fp_dicts[filename].update({k:philter_dicts[filename][k]})
         return fp_dicts
 
     # true negatives (tokens not tagged)
     def _get_tn_dicts(self, full_dicts, gold_dicts, philter_dicts):
         tn_dicts = {}
         for filename in gold_dicts:
-            tn_dicts***REMOVED***filename***REMOVED*** = {}
-            keys = (full_dicts***REMOVED***filename***REMOVED***.keys() - gold_dicts***REMOVED***filename***REMOVED***.keys()
-                    - philter_dicts***REMOVED***filename***REMOVED***.keys())
+            tn_dicts[filename] = {}
+            keys = (full_dicts[filename].keys() - gold_dicts[filename].keys()
+                    - philter_dicts[filename].keys())
             for k in keys:
-                tn_dicts***REMOVED***filename***REMOVED***.update({k:full_dicts***REMOVED***filename***REMOVED******REMOVED***k***REMOVED***})
+                tn_dicts[filename].update({k:full_dicts[filename][k]})
         return tn_dicts
 
     # false negatives (tokens in gold but not in philter)
     def _get_fn_dicts(self, gold_dicts, philter_dicts):
         fn_dicts = {}
         for filename in gold_dicts:
-            fn_dicts***REMOVED***filename***REMOVED*** = {}
-            keys = gold_dicts***REMOVED***filename***REMOVED***.keys() - philter_dicts***REMOVED***filename***REMOVED***.keys()
+            fn_dicts[filename] = {}
+            keys = gold_dicts[filename].keys() - philter_dicts[filename].keys()
             for k in keys:
-                fn_dicts***REMOVED***filename***REMOVED***.update({k:gold_dicts***REMOVED***filename***REMOVED******REMOVED***k***REMOVED***})
+                fn_dicts[filename].update({k:gold_dicts[filename][k]})
         return fn_dicts
 
     # subtokenizes full texts tokens with phi coordinates
@@ -1116,30 +1116,30 @@ class Phitexts:
         ftoken = {}
         phi = {}
         for filename in fulltext_dicts:
-            ftdict = fulltext_dicts***REMOVED***filename***REMOVED***.copy()
-            pdict = phi_dicts***REMOVED***filename***REMOVED***.copy()
+            ftdict = fulltext_dicts[filename].copy()
+            pdict = phi_dicts[filename].copy()
             for fstart in ftdict:
-                ftoken***REMOVED***'start'***REMOVED*** = fstart
-                ftoken***REMOVED***'stop'***REMOVED*** = ftdict***REMOVED***fstart***REMOVED******REMOVED***0***REMOVED***
-                ftoken***REMOVED***'token'***REMOVED*** = ftdict***REMOVED***fstart***REMOVED******REMOVED***1***REMOVED***
+                ftoken['start'] = fstart
+                ftoken['stop'] = ftdict[fstart][0]
+                ftoken['token'] = ftdict[fstart][1]
                 for pstart in pdict:
-                    phi***REMOVED***'start'***REMOVED*** = pstart
-                    phi***REMOVED***'stop'***REMOVED*** = pdict***REMOVED***pstart***REMOVED******REMOVED***0***REMOVED***
-                    phi***REMOVED***'token'***REMOVED*** = pdict***REMOVED***pstart***REMOVED******REMOVED***2***REMOVED***
+                    phi['start'] = pstart
+                    phi['stop'] = pdict[pstart][0]
+                    phi['token'] = pdict[pstart][2]
                     subtokens = self._get_sub_tokens(ftoken, phi)
                     if subtokens is None:
                         continue
-                    for st in subtokens***REMOVED***0***REMOVED***:
+                    for st in subtokens[0]:
                         start = st
-                        stop = subtokens***REMOVED***0***REMOVED******REMOVED***st***REMOVED******REMOVED***0***REMOVED***
-                        token = subtokens***REMOVED***0***REMOVED******REMOVED***st***REMOVED******REMOVED***1***REMOVED***
-                        fulltext_dicts***REMOVED***filename***REMOVED***.update({start:***REMOVED***stop, token***REMOVED***})
+                        stop = subtokens[0][st][0]
+                        token = subtokens[0][st][1]
+                        fulltext_dicts[filename].update({start:[stop, token]})
 
     # returns the tokenized full texts with subtokenization 
     def _get_fulltext_dicts(self, gold_dicts, philter_dicts):
         fulltext_dicts = {}
         for filename in gold_dicts:
-            fulltext_dicts***REMOVED***filename***REMOVED*** = get_tokens(self.texts***REMOVED***filename***REMOVED***)
+            fulltext_dicts[filename] = get_tokens(self.texts[filename])
                 
         self._sub_tokenize(fulltext_dicts, gold_dicts)
         self._sub_tokenize(fulltext_dicts, philter_dicts)
@@ -1187,16 +1187,16 @@ class Phitexts:
         total_cfn = 0
         for filename in self.filenames:
             if filename not in summary_by_file:
-                summary_by_file***REMOVED***filename***REMOVED*** = {}
+                summary_by_file[filename] = {}
                 
             # file-level counters
-            tp = (len(truepositives_dicts***REMOVED***filename***REMOVED***) if filename in
+            tp = (len(truepositives_dicts[filename]) if filename in
                   truepositives_dicts else 0)
-            fp = (len(falsepositives_dicts***REMOVED***filename***REMOVED***) if filename in
+            fp = (len(falsepositives_dicts[filename]) if filename in
                   falsepositives_dicts else 0)
-            tn = (len(truenegatives_dicts***REMOVED***filename***REMOVED***) if filename in
+            tn = (len(truenegatives_dicts[filename]) if filename in
                   truenegatives_dicts else 0)
-            fn = (len(falsenegatives_dicts***REMOVED***filename***REMOVED***) if filename in
+            fn = (len(falsenegatives_dicts[filename]) if filename in
                   falsenegatives_dicts else 0)
 
             # counts corrected for included phitype
@@ -1205,75 +1205,75 @@ class Phitexts:
             ctn = 0
             cfn = 0
             
-            for st in truepositives_dicts***REMOVED***filename***REMOVED***:
+            for st in truepositives_dicts[filename]:
                 start = st
-                stop = truepositives_dicts***REMOVED***filename***REMOVED******REMOVED***st***REMOVED******REMOVED***0***REMOVED***
-                phi_type = truepositives_dicts***REMOVED***filename***REMOVED******REMOVED***st***REMOVED******REMOVED***1***REMOVED***
-                token = truepositives_dicts***REMOVED***filename***REMOVED******REMOVED***st***REMOVED******REMOVED***2***REMOVED***
+                stop = truepositives_dicts[filename][st][0]
+                phi_type = truepositives_dicts[filename][st][1]
+                token = truepositives_dicts[filename][st][2]
                 text_tp_file.write('\n' + filename + '\t' + str(phi_type)
                                    + '\t' + token
                                    + '\t' + str(start) + '\t' + str(stop))
                 
                 if phi_type not in summary_by_category:
-                    summary_by_category***REMOVED***phi_type***REMOVED*** = {}
-                if 'tp' not in summary_by_category***REMOVED***phi_type***REMOVED***:
-                    summary_by_category***REMOVED***phi_type***REMOVED******REMOVED***'tp'***REMOVED*** = ***REMOVED******REMOVED***
-                summary_by_category***REMOVED***phi_type***REMOVED******REMOVED***'tp'***REMOVED***.append(token)
+                    summary_by_category[phi_type] = {}
+                if 'tp' not in summary_by_category[phi_type]:
+                    summary_by_category[phi_type]['tp'] = []
+                summary_by_category[phi_type]['tp'].append(token)
                 
                 if phi_type in ucsf_include_tags:
                     ctp += 1
                 else:
                     cfp += 1
                     
-            for st in falsepositives_dicts***REMOVED***filename***REMOVED***:
+            for st in falsepositives_dicts[filename]:
                 start = st
-                stop = falsepositives_dicts***REMOVED***filename***REMOVED******REMOVED***st***REMOVED******REMOVED***0***REMOVED***
-                phi_type = falsepositives_dicts***REMOVED***filename***REMOVED******REMOVED***st***REMOVED******REMOVED***1***REMOVED***
-                token = falsepositives_dicts***REMOVED***filename***REMOVED******REMOVED***st***REMOVED******REMOVED***2***REMOVED***
+                stop = falsepositives_dicts[filename][st][0]
+                phi_type = falsepositives_dicts[filename][st][1]
+                token = falsepositives_dicts[filename][st][2]
                 text_fp_file.write('\n' + filename + '\t' + str(phi_type)
                                    + '\t' + token
                                    + '\t' + str(start) + '\t' + str(stop))
                 
                 if phi_type not in summary_by_category:
-                    summary_by_category***REMOVED***phi_type***REMOVED*** = {}
-                if 'fp' not in summary_by_category***REMOVED***phi_type***REMOVED***:
-                    summary_by_category***REMOVED***phi_type***REMOVED******REMOVED***'fp'***REMOVED*** = ***REMOVED******REMOVED***
-                summary_by_category***REMOVED***phi_type***REMOVED******REMOVED***'fp'***REMOVED***.append(token)
+                    summary_by_category[phi_type] = {}
+                if 'fp' not in summary_by_category[phi_type]:
+                    summary_by_category[phi_type]['fp'] = []
+                summary_by_category[phi_type]['fp'].append(token)
 
                 cfp += 1
                 
-            for st in truenegatives_dicts***REMOVED***filename***REMOVED***:
+            for st in truenegatives_dicts[filename]:
                 start = st
-                stop = truenegatives_dicts***REMOVED***filename***REMOVED******REMOVED***st***REMOVED******REMOVED***0***REMOVED***
+                stop = truenegatives_dicts[filename][st][0]
                 phi_type = None
-                token = truenegatives_dicts***REMOVED***filename***REMOVED******REMOVED***st***REMOVED******REMOVED***1***REMOVED***
+                token = truenegatives_dicts[filename][st][1]
                 text_tn_file.write('\n' + filename + '\t' + str(phi_type)
                                    + '\t' + token
                                    + '\t' + str(start) + '\t' + str(stop))
                 # this is not phi and produces too much output
                 # uncomment for debugging
                 # if phi_type not in summary_by_category:
-                #     summary_by_category***REMOVED***phi_type***REMOVED*** = {}
-                # if 'tn' not in summary_by_category***REMOVED***phi_type***REMOVED***:
-                #     summary_by_category***REMOVED***phi_type***REMOVED******REMOVED***'tn'***REMOVED*** = ***REMOVED******REMOVED***
-                # summary_by_category***REMOVED***phi_type***REMOVED******REMOVED***'tn'***REMOVED***.append(token)
+                #     summary_by_category[phi_type] = {}
+                # if 'tn' not in summary_by_category[phi_type]:
+                #     summary_by_category[phi_type]['tn'] = []
+                # summary_by_category[phi_type]['tn'].append(token)
 
                 ctn += 1
                 
-            for st in falsenegatives_dicts***REMOVED***filename***REMOVED***:
+            for st in falsenegatives_dicts[filename]:
                 start = st
-                stop = falsenegatives_dicts***REMOVED***filename***REMOVED******REMOVED***st***REMOVED******REMOVED***0***REMOVED***
-                phi_type = falsenegatives_dicts***REMOVED***filename***REMOVED******REMOVED***st***REMOVED******REMOVED***1***REMOVED***
-                token = falsenegatives_dicts***REMOVED***filename***REMOVED******REMOVED***st***REMOVED******REMOVED***2***REMOVED***
+                stop = falsenegatives_dicts[filename][st][0]
+                phi_type = falsenegatives_dicts[filename][st][1]
+                token = falsenegatives_dicts[filename][st][2]
                 text_fn_file.write('\n' + filename + '\t' + str(phi_type)
                                    + '\t' + token
                                    + '\t' + str(start) + '\t' + str(stop))
                 
                 if phi_type not in summary_by_category:
-                    summary_by_category***REMOVED***phi_type***REMOVED*** = {}
-                if 'fn' not in summary_by_category***REMOVED***phi_type***REMOVED***:
-                    summary_by_category***REMOVED***phi_type***REMOVED******REMOVED***'fn'***REMOVED*** = ***REMOVED******REMOVED***
-                summary_by_category***REMOVED***phi_type***REMOVED******REMOVED***'fn'***REMOVED***.append(token)
+                    summary_by_category[phi_type] = {}
+                if 'fn' not in summary_by_category[phi_type]:
+                    summary_by_category[phi_type]['fn'] = []
+                summary_by_category[phi_type]['fn'].append(token)
                 
                 if phi_type in ucsf_include_tags:
                     if phi_type == 'Age':
@@ -1328,12 +1328,12 @@ class Phitexts:
             except ZeroDivisionError:
                cretention = 0
             
-            summary_by_file***REMOVED***filename***REMOVED***.update({'tp':tp, 'fp':fp,
+            summary_by_file[filename].update({'tp':tp, 'fp':fp,
                                               'tn':tn, 'fn':fn,
                                               'recall':recall,
                                               'precision':precision,
                                               'retention':retention})
-            summary_by_file***REMOVED***filename***REMOVED***.update({'ctp':ctp, 'cfp':cfp,
+            summary_by_file[filename].update({'ctp':ctp, 'cfp':cfp,
                                               'ctn':ctn, 'cfn':cfn,
                                               'crecall':crecall,
                                               'cprecision':cprecision,

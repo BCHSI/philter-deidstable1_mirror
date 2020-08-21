@@ -1,4 +1,4 @@
-***REMOVED***
+[
 	{
 		"title":"YYYY/MM-YYYY/MM",
 		"type":"regex",
@@ -526,14 +526,14 @@
 		"type":"regex",
 		"exclude":true,
 		"filepath":"filters/regex/addresses/city_transformed.txt",
-		"notes":"This should remove anything that matches pattern ***REMOVED***name***REMOVED*** ***REMOVED***city***REMOVED***"
+		"notes":"This should remove anything that matches pattern [name] [city]"
 	},
 	{
 		"title":"Address Blacklist",
 		"type":"set",
 		"exclude":true,
 		"filepath":"filters/blacklists/address_blacklist_cities_counties.json",
-		"pos":***REMOVED***"NNP"***REMOVED***,
+		"pos":["NNP"],
 		"notes":""
 	},
 	{
@@ -545,7 +545,7 @@
 	}
 
 
-***REMOVED***
+]
 
 
 

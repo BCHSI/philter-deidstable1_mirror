@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT><![CDATA[
 
 
 Record date: 2112-01-27
@@ -74,7 +74,7 @@ EP/gillis/cook
 
 
 
-***REMOVED******REMOVED***></TEXT>
+]]></TEXT>
 <TAGS>
 <DATE id="P0" start="16" end="26" text="2112-01-27" TYPE="DATE" comment="" />
 <NAME id="P1" start="41" end="54" text="Werner, Brian" TYPE="PATIENT" comment="" />

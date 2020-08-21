@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT><![CDATA[
 
 
 Record date: 2082-06-29
@@ -171,7 +171,7 @@ Assessment and Plan
 
 
 
-***REMOVED******REMOVED***></TEXT>
+]]></TEXT>
 <TAGS>
 <DATE id="P0" start="16" end="26" text="2082-06-29" TYPE="DATE" comment="" />
 <DATE id="P1" start="158" end="167" text="July 22nd" TYPE="DATE" comment="" />

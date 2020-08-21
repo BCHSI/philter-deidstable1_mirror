@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT><![CDATA[
 
 
 Record date: 2076-06-22
@@ -119,9 +119,9 @@ Ext/ feet: no edema; DP Pulses absent. Skin intact. Monofilament absent.
 
 Results
 
-05/26/2076 NA 142,  K 3.6 (#),  CL 100,  CO2 34 (*),  BUN 13,  CRE 1.3,  EGFR 43 ***REMOVED***1***REMOVED***,  GLU 93 (#)
+05/26/2076 NA 142,  K 3.6 (#),  CL 100,  CO2 34 (*),  BUN 13,  CRE 1.3,  EGFR 43 [1],  GLU 93 (#)
 
-***REMOVED***1***REMOVED*** RESULT COMMENT: 
+[1] RESULT COMMENT: 
 
 (Abnormal if 
 
@@ -153,7 +153,7 @@ Armando Brian Nettles, M.D.
 
 
 
-***REMOVED******REMOVED***></TEXT>
+]]></TEXT>
 <TAGS>
 <DATE id="P0" start="16" end="26" text="2076-06-22" TYPE="DATE" comment="" />
 <NAME id="P1" start="51" end="60" text="Francesca" TYPE="PATIENT" comment="" />

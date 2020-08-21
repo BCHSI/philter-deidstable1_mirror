@@ -21,7 +21,7 @@ for root, dirs, files in os.walk("i2b2_notes/"):
         #note file
         orig_f = root+f
         encoding = detect_encoding(orig_f)
-        note_txt = open(orig_f,"r", encoding=encoding***REMOVED***'encoding'***REMOVED***).read()
+        note_txt = open(orig_f,"r", encoding=encoding['encoding']).read()
 
-        with open("i2b2_nochange/"+f.split(".")***REMOVED***0***REMOVED***+"_phi_reduced.txt", "w") as fo:
+        with open("i2b2_nochange/"+f.split(".")[0]+"_phi_reduced.txt", "w") as fo:
             fo.write(note_txt)

@@ -21,26 +21,26 @@ class Knownphi:
    def get_pos(filename, cleaned):
        if filename not in self.pos_tags:
           self.pos_tags = {}
-       self.pos_tags***REMOVED***filename***REMOVED*** = nltk.pos_tag(cleaned)
-       return self.pos_tags***REMOVED***filename***REMOVED***
+       self.pos_tags[filename] = nltk.pos_tag(cleaned)
+       return self.pos_tags[filename]
    '''
    def _read_knownphi(self):
        if not self.knownphifile:
             raise Exception("Input known phi file is undefined: ", self.knownphifile)
-       knownphi_table = pd.read_csv(self.knownphifile, sep='\t', index_col=False, usecols=***REMOVED***'patient_ID', 'phi_type', 'clean_value', 'note_key'***REMOVED***, dtype=str)
+       knownphi_table = pd.read_csv(self.knownphifile, sep='\t', index_col=False, usecols=['patient_ID', 'phi_type', 'clean_value', 'note_key'], dtype=str)
        return knownphi_table  
 
    def get_postag(self, kp_start, kp):
         for item in self.postags:
            start_coordinate = 0           
-           for i in self.postags***REMOVED***item***REMOVED***:
-              word = i***REMOVED***0***REMOVED***
-              pos = i***REMOVED***1***REMOVED***
+           for i in self.postags[item]:
+              word = i[0]
+              pos = i[1]
               start = start_coordinate
               stop = start_coordinate + len(word)
 
               # This converts spaces into empty strings, so we know to skip forward to the next real word
-              word_clean = re.sub(r"***REMOVED***^a-zA-Z0-9***REMOVED***+", "", word.lower().strip())
+              word_clean = re.sub(r"[^a-zA-Z0-9]+", "", word.lower().strip())
               if len(word_clean) == 0:
                  #got a blank space or something without any characters or digits, move forward
                  start_coordinate += len(word)
@@ -57,15 +57,15 @@ class Knownphi:
        ''' Updates self.coords with known phi identified data'''
        
        file_note_key = ""
-       #mini_table = self.knownphitable.loc***REMOVED***self.knownphitable***REMOVED***'note_key'***REMOVED*** == 'i22861140'***REMOVED***
+       #mini_table = self.knownphitable.loc[self.knownphitable['note_key'] == 'i22861140']
        #print(mini_table)
        #note_key2knownphi_dict = pd.Series(self.knownphitable.note_key.values, index=self.knownphitable.clean_value).to_dict()
        # print(pd.Series(self.knownphitable.note_key.values, index=self.knownphitable.clean_value))
-       # print(note_key2knownphi_dict***REMOVED***'Wall'***REMOVED***)
-       # print(note_key2knownphi_dict***REMOVED***'WALL'***REMOVED***)
-       # print(note_key2knownphi_dict***REMOVED***'Brent D'***REMOVED***)
+       # print(note_key2knownphi_dict['Wall'])
+       # print(note_key2knownphi_dict['WALL'])
+       # print(note_key2knownphi_dict['Brent D'])
        for key in self.texts:
-           tokenize = get_tokens(self.texts***REMOVED***key***REMOVED***)
+           tokenize = get_tokens(self.texts[key])
            for elem in key.split('/'):
                if (elem.find('.txt') != -1) or (elem.find('.xml') != -1):
                    elem = elem.replace('\n','')
@@ -75,16 +75,16 @@ class Knownphi:
                    elem = elem.replace('_utf8','')
                    file_note_key = elem
            # Kathleen's workaround
-           mini_table = self.knownphitable.loc***REMOVED***self.knownphitable***REMOVED***'note_key'***REMOVED*** == file_note_key***REMOVED***
+           mini_table = self.knownphitable.loc[self.knownphitable['note_key'] == file_note_key]
            note_key2knownphi_dict = pd.Series(mini_table.note_key.values, index=mini_table.clean_value).to_dict()
            #print(mini_table)
            #print(note_key2knownphi_dict)
            for knownphi in note_key2knownphi_dict:
-               #if note_key2knownphi_dict***REMOVED***knownphi***REMOVED*** == file_note_key:
-                  #print(note_key2knownphi_dict***REMOVED***knownphi***REMOVED***, file_note_key, knownphi)
+               #if note_key2knownphi_dict[knownphi] == file_note_key:
+                  #print(note_key2knownphi_dict[knownphi], file_note_key, knownphi)
                   #for start in tokenize:
-                  #     if knownphi.lower() == tokenize***REMOVED***start***REMOVED******REMOVED***1***REMOVED***.lower():
-                        #stop = tokenize***REMOVED***start***REMOVED******REMOVED***0***REMOVED***
+                  #     if knownphi.lower() == tokenize[start][1].lower():
+                        #stop = tokenize[start][0]
                         #print("Found a Known PHI!" + str(knownphi) + ":" +file_note_key)
                 self.add_knownphi(key, file_note_key, tokenize, knownphi)
        return self.coords, self.phi_types, self.known_phi
@@ -94,9 +94,9 @@ class Knownphi:
        knownphitype_dict = pd.Series(self.knownphitable.phi_type.values, index=self.knownphitable.clean_value).to_dict()
        for types in knownphitype_dict:
            if types not in self.phi_types:
-              self.phi_types***REMOVED***types***REMOVED*** = ***REMOVED***CoordinateMap()***REMOVED***
+              self.phi_types[types] = [CoordinateMap()]
            print("types updated:" + types)
-           self.phi_types***REMOVED***types***REMOVED******REMOVED***0***REMOVED***.add_extend(filename,int(start),int(end))
+           self.phi_types[types][0].add_extend(filename,int(start),int(end))
    
 
    def add_knownphi(self, filename, file_note_key, tokenize, knownphi):
@@ -104,57 +104,57 @@ class Knownphi:
                  This always rejects any overlapping hits '''
        if isinstance(knownphi,str):
           for start in tokenize:
-              if knownphi.lower() == tokenize***REMOVED***start***REMOVED******REMOVED***1***REMOVED***.lower():
-                 stop = tokenize***REMOVED***start***REMOVED******REMOVED***0***REMOVED***
-                 types = self.knownphitable.loc***REMOVED***self.knownphitable***REMOVED***'clean_value'***REMOVED*** == knownphi, 'phi_type'***REMOVED***.iloc***REMOVED***0***REMOVED***
+              if knownphi.lower() == tokenize[start][1].lower():
+                 stop = tokenize[start][0]
+                 types = self.knownphitable.loc[self.knownphitable['clean_value'] == knownphi, 'phi_type'].iloc[0]
                  if types == 'lname' or types == 'fname':
                     if filename in self.coords: 
-                       if start in self.coords***REMOVED***filename***REMOVED***:          
+                       if start in self.coords[filename]:          
                           ''' check overlap '''
-                          if stop > self.coords***REMOVED***filename***REMOVED******REMOVED***start***REMOVED***:
+                          if stop > self.coords[filename][start]:
                              print("KnownPHI: Extending the philter PHI coordinates!")
-                             self.coords***REMOVED***filename***REMOVED******REMOVED***start***REMOVED*** = stop
+                             self.coords[filename][start] = stop
                              #self.update_phi_type(filename, file_note_key, start, stop)
-                             #types = self.knownphitable.loc***REMOVED***self.knownphitable***REMOVED***'clean_value'***REMOVED*** == knownphi, 'phi_type'***REMOVED***.iloc***REMOVED***0***REMOVED***
+                             #types = self.knownphitable.loc[self.knownphitable['clean_value'] == knownphi, 'phi_type'].iloc[0]
                              #if types == 'lname' or types == 'fname':
                              if types not in self.phi_types:
-                                self.phi_types***REMOVED***types***REMOVED*** = ***REMOVED***CoordinateMap()***REMOVED***
+                                self.phi_types[types] = [CoordinateMap()]
                              if filename not in self.known_phi:
-                                self.known_phi***REMOVED***filename***REMOVED*** = {}
+                                self.known_phi[filename] = {}
                              
                              flank_start = int(start) - 10
                              flank_end = int(stop) + 10
                              if(flank_start < 0):
                                flank_start = 1
-                             if len(self.texts***REMOVED***filename***REMOVED***)<flank_end:
-                               flank_end = len(self.texts***REMOVED***filename***REMOVED***)
-                             context = self.texts***REMOVED***filename***REMOVED******REMOVED***flank_start:flank_end***REMOVED***
+                             if len(self.texts[filename])<flank_end:
+                               flank_end = len(self.texts[filename])
+                             context = self.texts[filename][flank_start:flank_end]
                              pos = self.get_postag(int(start),knownphi)
-                             #print(str(start) + "\t" + str(stop) + "\t" + str(self.coords***REMOVED***filename***REMOVED******REMOVED***start***REMOVED***) + "\t" + knownphi + "\t" + context + "\t" + pos) 
-                             self.known_phi***REMOVED***filename***REMOVED***.update({int(start):***REMOVED***int(stop),knownphi,context,pos***REMOVED***})                   
+                             #print(str(start) + "\t" + str(stop) + "\t" + str(self.coords[filename][start]) + "\t" + knownphi + "\t" + context + "\t" + pos) 
+                             self.known_phi[filename].update({int(start):[int(stop),knownphi,context,pos]})                   
                              #print("types updated:" + types)
-                             self.phi_types***REMOVED***types***REMOVED******REMOVED***0***REMOVED***.add_extend(filename,int(start),int(stop))
+                             self.phi_types[types][0].add_extend(filename,int(start),int(stop))
 
                        else:
                            ''' Add the coordinates as a newly identified PHI'''
-                           self.coords***REMOVED***filename***REMOVED******REMOVED***start***REMOVED*** = stop
-                           types = self.knownphitable.loc***REMOVED***self.knownphitable***REMOVED***'clean_value'***REMOVED*** == knownphi, 'phi_type'***REMOVED***.iloc***REMOVED***0***REMOVED***
+                           self.coords[filename][start] = stop
+                           types = self.knownphitable.loc[self.knownphitable['clean_value'] == knownphi, 'phi_type'].iloc[0]
                            #if types == 'lname' or types == 'fname':          
                            print("Updating coords with new known PHI" + filename)
                            print(filename + "\t" + str(start) + "\t" + str(stop) + "\t" + knownphi) 
                            if types not in self.phi_types:
-                              self.phi_types***REMOVED***types***REMOVED*** = ***REMOVED***CoordinateMap()***REMOVED***
+                              self.phi_types[types] = [CoordinateMap()]
                            if filename not in self.known_phi:
-                              self.known_phi***REMOVED***filename***REMOVED*** = {}
+                              self.known_phi[filename] = {}
                            flank_start = int(start) - 10
                            flank_end = int(stop) + 10
                            if(flank_start < 0):
                              flank_start = 1
-                           if len(self.texts***REMOVED***filename***REMOVED***)<flank_end:
-                              flank_end = len(self.texts***REMOVED***filename***REMOVED***)
-                           context = self.texts***REMOVED***filename***REMOVED******REMOVED***flank_start:flank_end***REMOVED***.replace('\n',' ').replace('\t',' ')
+                           if len(self.texts[filename])<flank_end:
+                              flank_end = len(self.texts[filename])
+                           context = self.texts[filename][flank_start:flank_end].replace('\n',' ').replace('\t',' ')
                            pos = self.get_postag(int(start),knownphi)
-                           self.known_phi***REMOVED***filename***REMOVED***.update({int(start):***REMOVED***int(stop),knownphi,context,pos***REMOVED***})
-                           self.phi_types***REMOVED***types***REMOVED******REMOVED***0***REMOVED***.add_extend(filename,int(start),int(stop))               
+                           self.known_phi[filename].update({int(start):[int(stop),knownphi,context,pos]})
+                           self.phi_types[types][0].add_extend(filename,int(start),int(stop))               
    
 

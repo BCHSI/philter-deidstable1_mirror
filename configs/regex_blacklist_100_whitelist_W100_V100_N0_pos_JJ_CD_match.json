@@ -1,4 +1,4 @@
-***REMOVED***
+[
     {
         "title": "mrn_id1",
         "type": "regex",
@@ -459,9 +459,9 @@
         "type": "set",
         "exclude": true,
         "filepath": "filters/blacklists/blacklist_100.json",
-        "pos": ***REMOVED***
+        "pos": [
             "JJ"
-        ***REMOVED***,
+        ],
         "notes": "These are words we believe are not safe"
     },
     {
@@ -469,16 +469,16 @@
         "type": "set",
         "exclude": false,
         "filepath": "filters/whitelists/whitelist_W100_V100_N0.json",
-        "pos": ***REMOVED******REMOVED***,
+        "pos": [],
         "notes": "These are words we believe are safe"
     },
     {
         "title": "CD Matcher",
         "type": "pos_matcher",
         "exclude": false,
-        "pos": ***REMOVED***
+        "pos": [
             "CD"
-        ***REMOVED***,
+        ],
         "notes": "This will include any CDs that arent included in earlier steps"
     }
-***REMOVED***
+]

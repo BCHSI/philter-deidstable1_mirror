@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT><![CDATA[
 
 
 Record date: 2135-12-15
@@ -47,7 +47,7 @@ He continues to be compliant with his medical regimen.  He had a past sleep stud
 
 	Changes to Allergies
 	
-NKA: No Known Allergies - reaction: ***REMOVED***reviewed***REMOVED***
+NKA: No Known Allergies - reaction: [reviewed]
 
 
 	Medications (Confirmed):
@@ -113,7 +113,7 @@ Document Status: Final
 
 
 
-***REMOVED******REMOVED***></TEXT>
+]]></TEXT>
 <TAGS>
 <DATE id="P0" start="16" end="26" text="2135-12-15" TYPE="DATE" comment="" />
 <LOCATION id="P1" start="45" end="66" text="PERDUE MEDICAL CENTER" TYPE="HOSPITAL" comment="" />

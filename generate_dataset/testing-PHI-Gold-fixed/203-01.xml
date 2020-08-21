@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT><![CDATA[
 
 
 Record date: 2088-06-28
@@ -27,7 +27,7 @@ After his admission for CHF, he underwent dolbutamine stress test on 9/30/87, wh
 
 
 
-He had successful stenting with very good angiographic results and he received adjuvant intravenous ***REMOVED***        ***REMOVED*** therapy.  He was discharged the following day without complications.  Although his current activity level is somewhat limited by his DJD (see below), he is exercising regularly in the pool and he currently denies any symptoms of angina.
+He had successful stenting with very good angiographic results and he received adjuvant intravenous [        ] therapy.  He was discharged the following day without complications.  Although his current activity level is somewhat limited by his DJD (see below), he is exercising regularly in the pool and he currently denies any symptoms of angina.
 
 pacemaker	      
 
@@ -35,7 +35,7 @@ S/P DDD pacemaker for sick sinus syndrome 7/83 and doing well.  Continues follow
 
 S/P CARDIAC ARREST	      
 
-12/76.  10/76 DEVELOPED EXERTIONAL ANGINA, POSITIVE ETT. CATH AT NEDH REVEALED THREE-VESSEL CAD. AWAITING CABG WHEN 12/76 SUFFERED CARDIAC ARREST. FOUND TO BE IN VT, HAD RECURRENT VT. TRANSFERRED TO MCH AND UNDERWENT CABG AND AICD 2/77.  ***REMOVED***04-Nov-2078***REMOVED***
+12/76.  10/76 DEVELOPED EXERTIONAL ANGINA, POSITIVE ETT. CATH AT NEDH REVEALED THREE-VESSEL CAD. AWAITING CABG WHEN 12/76 SUFFERED CARDIAC ARREST. FOUND TO BE IN VT, HAD RECURRENT VT. TRANSFERRED TO MCH AND UNDERWENT CABG AND AICD 2/77.  [04-Nov-2078]
 
 
 
@@ -55,7 +55,7 @@ He has had virtual normalization of his lipid profile with Lipitor.  We will che
 
 nephropathy	      
 
-S/P renal biopsy 10/79 for severe proteinuria which was consistent with diabetic nephropathy. As noted above, a 24-hour urine recently revealed 6gm of protein.  He is on new maximal doses of ACEI's.  ***REMOVED***02-Jun-2087***REMOVED***
+S/P renal biopsy 10/79 for severe proteinuria which was consistent with diabetic nephropathy. As noted above, a 24-hour urine recently revealed 6gm of protein.  He is on new maximal doses of ACEI's.  [02-Jun-2087]
 
 
 
@@ -171,7 +171,7 @@ cc:  Keith Cook, M.D./Cardiology, EUD1
 
 
 
-***REMOVED******REMOVED***></TEXT>
+]]></TEXT>
 <TAGS>
 <DATE id="P0" start="16" end="26" text="2088-06-28" TYPE="DATE" comment="" />
 <LOCATION id="P1" start="197" end="200" text="MCH" TYPE="HOSPITAL" comment="" />

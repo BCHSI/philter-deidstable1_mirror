@@ -6,31 +6,31 @@ import pandas as pd
 ### This script extracts the tags from xml files in the folder testing-PHI-Gold-fixed
 ### It assumes that the mentioned folder is in the same directory as this script
 ### It outputs a file called phi_annotations.csv which is an organized csv of TAGS
-### in the format ***REMOVED***"Document", "PHI_element", "Text", "Type","Comment"***REMOVED***
+### in the format ["Document", "PHI_element", "Text", "Type","Comment"]
 
 
 def extractXML(directory,filename):
 	tree = ET.parse(directory + '/'+ filename)
 	root = tree.getroot()
 	xmlstr = ET.tostring(root, encoding='utf8', method='xml')
-	xml_dict = xmltodict.parse(xmlstr)***REMOVED***"deIdi2b2"***REMOVED***
-	text = xml_dict***REMOVED***"TEXT"***REMOVED***
-	tags_dict = xml_dict***REMOVED***"TAGS"***REMOVED***
+	xml_dict = xmltodict.parse(xmlstr)["deIdi2b2"]
+	text = xml_dict["TEXT"]
+	tags_dict = xml_dict["TAGS"]
 	return text,tags_dict
 
 def createNewRow(filename,key,final_value):
-	text = final_value***REMOVED***"@text"***REMOVED***
-	text_type = final_value***REMOVED***"@TYPE"***REMOVED***
-	text_comment = final_value***REMOVED***"@comment"***REMOVED***
-	new_row = ***REMOVED***filename, key, text, text_type, text_comment***REMOVED***
-	new_row_df = pd.DataFrame(columns=***REMOVED***"Document", "PHI_element", "Text", "Type","Comment"***REMOVED***, index=None)
-	new_row_df.loc***REMOVED***0***REMOVED*** = new_row
+	text = final_value["@text"]
+	text_type = final_value["@TYPE"]
+	text_comment = final_value["@comment"]
+	new_row = [filename, key, text, text_type, text_comment]
+	new_row_df = pd.DataFrame(columns=["Document", "PHI_element", "Text", "Type","Comment"], index=None)
+	new_row_df.loc[0] = new_row
 	return new_row_df
 
 
 def main():
 	directory = "testing-PHI-Gold-fixed"
-	cols = ***REMOVED***"Document", "PHI_element", "Text", "Type","Comment"***REMOVED***
+	cols = ["Document", "PHI_element", "Text", "Type","Comment"]
 	output_df = pd.DataFrame(columns = cols,index=None)
 
 

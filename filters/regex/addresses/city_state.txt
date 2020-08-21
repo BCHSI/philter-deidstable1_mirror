@@ -1,3 +1,3 @@
 # Regex to match the state in the address
 # Note that this regex accounts for all the 50 states
-\b(?!(NT\,\sND|MR\,\sLA)\b)((***REMOVED***A-Z***REMOVED******REMOVED***a-zA-Z***REMOVED***+\s{1,4}***REMOVED***A-Z***REMOVED******REMOVED***a-zA-Z***REMOVED***+|***REMOVED***A-Z***REMOVED******REMOVED***a-zA-Z***REMOVED***+)(\,\s{1,4})("""+state_name+r"""))\b
+\b(?!(NT\,\sND|MR\,\sLA)\b)(([A-Z][a-zA-Z]+\s{1,4}[A-Z][a-zA-Z]+|[A-Z][a-zA-Z]+)(\,\s{1,4})("""+state_name+r"""))\b

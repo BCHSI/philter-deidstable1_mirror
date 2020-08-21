@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT><![CDATA[
 
 
 Record date: 2088-03-03
 
-                                                       Patient Name: WILKERSON,EDWARD ***REMOVED*** MRN: 37199514MEDIQUIK ***REMOVED***
+                                                       Patient Name: WILKERSON,EDWARD [ MRN: 37199514MEDIQUIK ]
 
                                                          Date of Visit: 3/3/2088
 
@@ -51,11 +51,11 @@ Health problems discussed:
 
 PE:
 
-Blood Pressure:   142/66   ***REMOVED***Left Arm, Sitting***REMOVED***
+Blood Pressure:   142/66   [Left Arm, Sitting]
 
-Pulse:   74   ***REMOVED***Regular, Brachial***REMOVED***
+Pulse:   74   [Regular, Brachial]
 
-Weight:   191   ***REMOVED***Pounds***REMOVED***
+Weight:   191   [Pounds]
 
 NAD, does not appear to be responding to internal stimuli
 
@@ -101,7 +101,7 @@ Nancy Elizabeth Roman, M.D.
 
 
 
-***REMOVED******REMOVED***></TEXT>
+]]></TEXT>
 <TAGS>
 <DATE id="P0" start="16" end="26" text="2088-03-03" TYPE="DATE" comment="" />
 <NAME id="P1" start="97" end="113" text="WILKERSON,EDWARD" TYPE="PATIENT" comment="" />

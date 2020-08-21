@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT><![CDATA[
 
 
 Record date: 2088-01-20
@@ -91,7 +91,7 @@ Transaminase-SGOT       26                       10-40          U/L
 
 
 
-***REMOVED******REMOVED***></TEXT>
+]]></TEXT>
 <TAGS>
 <DATE id="P0" start="16" end="26" text="2088-01-20" TYPE="DATE" comment="" />
 <LOCATION id="P1" start="30" end="33" text="PCC" TYPE="HOSPITAL" comment="" />

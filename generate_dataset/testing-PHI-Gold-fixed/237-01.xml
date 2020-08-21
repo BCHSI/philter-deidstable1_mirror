@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT><![CDATA[
 
 
 
@@ -196,7 +196,7 @@ Document Status: Final
 
 
 
-***REMOVED******REMOVED***></TEXT>
+]]></TEXT>
 <TAGS>
 <DATE id="P0" start="18" end="28" text="2091-07-02" TYPE="DATE" comment="" />
 <LOCATION id="P1" start="49" end="77" text="BEAUREGARD MEMORIAL HOSPITAL" TYPE="HOSPITAL" comment="" />

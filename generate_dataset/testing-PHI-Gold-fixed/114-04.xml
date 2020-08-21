@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT><![CDATA[
 
 
 Record date: 2141-08-31
@@ -336,7 +336,7 @@ Internal Medicine PGY1
 
 
 
-***REMOVED******REMOVED***></TEXT>
+]]></TEXT>
 <TAGS>
 <DATE id="P0" start="16" end="26" text="2141-08-31" TYPE="DATE" comment="" />
 <NAME id="P2" start="84" end="96" text="Slater, Owen" TYPE="PATIENT" comment="" />

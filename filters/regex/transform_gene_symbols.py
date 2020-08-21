@@ -11,14 +11,14 @@ gene_symbols = ''
 for key in symbols_json:
 	gene_symbols += key + '|'
 # Get rid of first and last "|"
-gene_symbols = gene_symbols***REMOVED***1:-1***REMOVED***
+gene_symbols = gene_symbols[1:-1]
 
 
 # Do folder walk and transform each file containing a variable to be transformed
 rootdir = '.'
 for root, dirs, files in os.walk(rootdir):
     for file in files:
-        file_root = file.split(".")***REMOVED***0***REMOVED***
+        file_root = file.split(".")[0]
 
         if ".txt" in file and "_transformed.txt" not in file and "catchall" not in file:
 

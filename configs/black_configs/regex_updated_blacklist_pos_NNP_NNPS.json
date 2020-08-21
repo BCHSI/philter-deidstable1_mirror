@@ -1,4 +1,4 @@
-***REMOVED***
+[
     {
         "title": "salutations1",
         "type": "regex",
@@ -39,10 +39,10 @@
         "type": "set",
         "exclude": true,
         "filepath": "filters/blacklists/updated_blacklist.json",
-        "pos": ***REMOVED***
+        "pos": [
             "NNP",
             "NNPS"
-        ***REMOVED***,
+        ],
         "notes": "These are words we believe are not safe"
     },
     {
@@ -52,4 +52,4 @@
         "filepath": "filters/regex/catchall.txt",
         "notes": "This will include any words that arent included in earlier steps"
     }
-***REMOVED***
+]

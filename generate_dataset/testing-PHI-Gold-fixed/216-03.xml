@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT><![CDATA[
 
 
 Record date: 2102-12-01
@@ -80,7 +80,7 @@ A/P:  74 yr old woman with multiple medical problems, s/p 5 month hospitalizatio
 
 
 
-***REMOVED******REMOVED***></TEXT>
+]]></TEXT>
 <TAGS>
 <DATE id="P0" start="16" end="26" text="2102-12-01" TYPE="DATE" comment="" />
 <AGE id="P1" start="48" end="50" text="74" TYPE="AGE" comment="" />

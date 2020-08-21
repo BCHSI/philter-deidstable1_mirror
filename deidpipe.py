@@ -76,9 +76,9 @@ def read_mongo_config(mongofile):
     return mongo_details    
 
 def get_mongo_handle(mongo):
-    client = MongoClient(mongo***REMOVED***"client"***REMOVED***,username=mongo***REMOVED***"username"***REMOVED***,password=mongo***REMOVED***"password"***REMOVED***)
+    client = MongoClient(mongo["client"],username=mongo["username"],password=mongo["password"])
     try:
-        db = client***REMOVED***mongo***REMOVED***'db'***REMOVED******REMOVED***
+        db = client[mongo['db']]
     except:
         print("Mongo Server not available")
         print(mongoerrors.__dict__.keys())

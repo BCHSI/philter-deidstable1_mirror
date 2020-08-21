@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT><![CDATA[
 
 
 Record date: 2091-03-30
@@ -51,7 +51,7 @@ DV: 03/30/91
 
 
 
-***REMOVED******REMOVED***></TEXT>
+]]></TEXT>
 <TAGS>
 <DATE id="P0" start="16" end="26" text="2091-03-30" TYPE="DATE" comment="" />
 <LOCATION id="P1" start="29" end="33" text="ORLH" TYPE="HOSPITAL" comment="" />

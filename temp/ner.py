@@ -8,17 +8,17 @@ def formatted_entities(classified_paragraphs_list):
 
     for classified_paragraph in classified_paragraphs_list:
         for entry in classified_paragraph:
-            entry_value = entry***REMOVED***0***REMOVED***
-            entry_type = entry***REMOVED***1***REMOVED***
+            entry_value = entry[0]
+            entry_type = entry[1]
 
             if entry_type == 'PERSON':
-                entities***REMOVED***'persons'***REMOVED***.append(entry_value)
+                entities['persons'].append(entry_value)
 
             elif entry_type == 'ORGANIZATION':
-                entities***REMOVED***'organizations'***REMOVED***.append(entry_value)
+                entities['organizations'].append(entry_value)
 
             elif entry_type == 'LOCATION':
-                entities***REMOVED***'locations'***REMOVED***.append(entry_value)
+                entities['locations'].append(entry_value)
 
     return entities
 
@@ -28,11 +28,11 @@ tagger = StanfordNERTagger('/Users/Shared/stanford-ner/classifiers/english.all.3
                encoding='utf-8')
 
 
-paragraphs = ***REMOVED***
+paragraphs = [
             'While in France, Christine Lagarde discussed short-term stimulus efforts in a recent interview with the Wall Street Journal.',
             "Apple Inc. is an American multinational technology company headquartered in Cupertino, California, that designs, develops, and sells consumer electronics, computer software, and online services. Its hardware products include the iPhone smartphone, the iPad tablet computer, the Mac personal computer, the iPod portable media player, the Apple Watch smartwatch, and the Apple TV digital media player. Apple's consumer software includes the OS X and iOS operating systems, the iTunes media player, the Safari web browser, and the iLife and iWork creativity and productivity suites. Its online services include the iTunes Store, the iOS App Store and Mac App Store, and iCloud. Apple was founded by Steve Jobs, Steve Wozniak, and Ronald Wayne on April 1, 1976, to develop and sell personal computers. It was incorporated as Apple Computer, Inc. on January 3, 1977, and was renamed as Apple Inc. on January 9, 2007, to reflect its shifted focus toward consumer electronics. Apple (NASDAQ: AAPL ) joined the Dow Jones Industrial Average on March 19, 2015.",
             "Samuel Patterson Smyth \"Sam\" Pollock, OC, CQ (December 25, 1925 – August 15, 2007) was sports executive who was general manager of the National Hockey League's Montreal Canadiens for 14 years where they won 9 Stanley Cups. Pollock also served as Chairman and CEO of the Toronto Blue Jays baseball club.",
-        ***REMOVED***
+        ]
 
 tokenized_paragraphs = list()
 

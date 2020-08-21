@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT><![CDATA[
 
 
 Record date: 2121-06-06
@@ -9,7 +9,7 @@ Reason for Visit Here for CPE and f/u on chronic cough/HTN (not using flovent). 
 
 
 
-***REMOVED******REMOVED***></TEXT>
+]]></TEXT>
 <TAGS>
 <DATE id="P0" start="16" end="26" text="2121-06-06" TYPE="DATE" comment="" />
 <DATE id="P1" start="1401" end="1405" text="2112" TYPE="DATE" comment="" />

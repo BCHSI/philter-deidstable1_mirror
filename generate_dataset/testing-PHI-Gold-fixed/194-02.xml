@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <deIdi2b2>
-<TEXT><!***REMOVED***CDATA***REMOVED***
+<TEXT><![CDATA[
 
 
 Record date: 2092-10-11
@@ -333,7 +333,7 @@ I have seen and examined the patient wtih Leon and agree with his assessment.
 
 
 
-***REMOVED******REMOVED***></TEXT>
+]]></TEXT>
 <TAGS>
 <DATE id="P0" start="16" end="26" text="2092-10-11" TYPE="DATE" comment="" />
 <NAME id="P2" start="81" end="98" text="Crawford, Patrick" TYPE="PATIENT" comment="" />
