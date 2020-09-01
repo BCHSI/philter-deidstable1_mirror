@@ -1,0 +1,1 @@
+((\n\s*)|(\b(cassette|Cassette|CASSETTE|slide|Slide|SLIDE|sld|Sld|SLD)(\s+(number|Number|NUMBER|num|Num|NUM|nm|Nm|NM))?[sS]?\.?\:?\s+))([A-Z][1-9][0-9]?(\s*-\s*[A-Z]?[1-9][0-9]?)?(?=[^\d])((\,\s*)|(\,?\s+(and|&)\,?\s+))?)+
