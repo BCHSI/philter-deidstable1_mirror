@@ -92,81 +92,81 @@ def get_text_full_path(text_key, text_path):
 	return(full_text_path)
 
 def main():
-    ap = argparse.ArgumentParser()
-    ap.add_argument("-i", "--input",
-                    help="Path to the CSV file that contains PII info for this set of notes",
-                    type=str)
-    ap.add_argument("-o", "--output",
-                    help="Path to output folder for XML files",
-                    type=str)
-    ap.add_argument("-d", "--deid_path",
-                    help="Path to folder with deid files",
-                    type=str)
-    ap.add_argument("-t", "--text_path",
-                    help="Path to folder with text files",
-                    type=str)
-    ap.add_argument("-m", "--meta_path",
-                    help="Path to meta file",
-                    type=str)
-    ap.add_argument("-x", "--xml_sample",
-                    help="Path to sample xml file",
-                    type=str)
-    ap.add_argument("-n", "--notes_output",
-                    help="Path to output folder for original text files",
-                    type=str)
-    ap.add_argument("-s", "--structure",
-	                help="Deid output file structure",
-	                type=str)
-    args = ap.parse_args()
+	ap = argparse.ArgumentParser()
+	ap.add_argument("-i", "--input",
+			help="Path to the CSV file that contains PII info for this set of notes",
+			type=str)
+	ap.add_argument("-o", "--output",
+			help="Path to output folder for XML files",
+			type=str)
+	ap.add_argument("-d", "--deid_path",
+			help="Path to folder with deid files",
+			type=str)
+	ap.add_argument("-t", "--text_path",
+			help="Path to folder with text files",
+			type=str)
+	ap.add_argument("-m", "--meta_path",
+			help="Path to meta file",
+			type=str)
+	ap.add_argument("-x", "--xml_sample",
+			help="Path to sample xml file",
+			type=str)
+	ap.add_argument("-n", "--notes_output",
+			help="Path to output folder for original text files",
+			type=str)
+	ap.add_argument("-s", "--structure",
+			help="Deid output file structure",
+			type=str)
+	args = ap.parse_args()
 
-    input_csv = args.input
-    #input_csv = '/data/muenzenk/low_hanging_fruit_tests/corys_results_201911/node704/primarymrn.csv'
-    #input_csv = '/data/muenzenk/cory_probe_search/cory_word_check_results_073020.csv'
-    #input_csv = '/data/muenzenk/gene_patho_tests/gene_patho_phi.csv'
-    output_dir = args.output
-    #output_dir = '/data/muenzenk/low_hanging_fruit_tests/xml/primarymrn'
-    #output_dir = '/data/muenzenk/cory_probe_search/073020_xml'
-    #output_dir = '/data/muenzenk/gene_patho_tests/unit_xml'
-    deid_path = args.deid_path
-    #deid_path = '/data/notes/philtered_notes_20190712_zeta'
-    #deid_path = '/data/muenzenk/probetoken/probetoken_100k_output'
-    #deid_path = '/data/muenzenk/gene_patho_tests/develop_gene_100k_output'
-    text_path = args.text_path
-    #text_path = '/data/notes/shredded_notes_20190712'
-    #text_path = '/data/radhakrishnanl/100k_random_20190712'
-    #text_path = '/data/notes/shredded_notes_20190712'
-    meta_path = args.meta_path
-    #meta_path = '/data/for_cory/NOTE_INFO_MAPS.txt'
-    #meta_path = '/data/for_cory/NOTE_INFO_MAPS.txt'
-    #meta_path = '/data/for_cory/NOTE_INFO_MAPS.txt'
-    xml_sample_path = args.xml_sample
-    #xml_sample_path = '/data/muenzenk/low_hanging_fruit_tests/sample.xml'
-    #xml_sample_path = '/data/muenzenk/low_hanging_fruit_tests/sample.xml'
-    #xml_sample_path = '/data/muenzenk/low_hanging_fruit_tests/sample.xml'
-    note_output_dir = args.notes_output
-    #note_output_dir = '/data/muenzenk/low_hanging_fruit_tests/notes/primarymrn'
-    #note_output_dir = '/data/muenzenk/cory_probe_search/073020_notes'
-    #note_output_dir = '/data/muenzenk/gene_patho_tests/unit_test'
-    file_structure = args.structure
-    #file_structure = 'deid'
-    #file_structure = 'text'
-    #file_structure = 'text'
+	input_csv = args.input
+	#input_csv = '/data/muenzenk/low_hanging_fruit_tests/corys_results_201911/node704/primarymrn.csv'
+	#input_csv = '/data/muenzenk/cory_probe_search/cory_word_check_results_073020.csv'
+	#input_csv = '/data/muenzenk/gene_patho_tests/gene_patho_phi.csv'
+	output_dir = args.output
+	#output_dir = '/data/muenzenk/low_hanging_fruit_tests/xml/primarymrn'
+	#output_dir = '/data/muenzenk/cory_probe_search/073020_xml'
+	#output_dir = '/data/muenzenk/gene_patho_tests/unit_xml'
+	deid_path = args.deid_path
+	#deid_path = '/data/notes/philtered_notes_20190712_zeta'
+	#deid_path = '/data/muenzenk/probetoken/probetoken_100k_output'
+	#deid_path = '/data/muenzenk/gene_patho_tests/develop_gene_100k_output'
+	text_path = args.text_path
+	#text_path = '/data/notes/shredded_notes_20190712'
+	#text_path = '/data/radhakrishnanl/100k_random_20190712'
+	#text_path = '/data/notes/shredded_notes_20190712'
+	meta_path = args.meta_path
+	#meta_path = '/data/for_cory/NOTE_INFO_MAPS.txt'
+	#meta_path = '/data/for_cory/NOTE_INFO_MAPS.txt'
+	#meta_path = '/data/for_cory/NOTE_INFO_MAPS.txt'
+	xml_sample_path = args.xml_sample
+	#xml_sample_path = '/data/muenzenk/low_hanging_fruit_tests/sample.xml'
+	#xml_sample_path = '/data/muenzenk/low_hanging_fruit_tests/sample.xml'
+	#xml_sample_path = '/data/muenzenk/low_hanging_fruit_tests/sample.xml'
+	note_output_dir = args.notes_output
+	#note_output_dir = '/data/muenzenk/low_hanging_fruit_tests/notes/primarymrn'
+	#note_output_dir = '/data/muenzenk/cory_probe_search/073020_notes'
+	#note_output_dir = '/data/muenzenk/gene_patho_tests/unit_test'
+	file_structure = args.structure
+	#file_structure = 'deid'
+	#file_structure = 'text'
+	#file_structure = 'text'
 
 	meta = {}
 	mfile = open(meta_path)
 	for line in mfile:
-	    line = line.rstrip('\n')
-	    line  = line.replace('.0','')
-	    key= line.split('\t')
-	    meta[key[10]] = key[9]
+		line = line.rstrip('\n')
+		line  = line.replace('.0','')
+		key= line.split('\t')
+		meta[key[10]] = key[9]
 
-    print("Meta loaded into hash")
-    pii = pd.read_csv(input_csv)
+	print("Meta loaded into hash")
+	pii = pd.read_csv(input_csv)
 	for i in range(len(pii)):
 		create_xml(i, pii, meta, deid_path, text_path, xml_sample_path, output_dir, note_output_dir, file_structure)
 
-        
+
 if __name__ == "__main__":
-    main()
+	main()
 
 
