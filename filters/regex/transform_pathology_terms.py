@@ -5,14 +5,13 @@ import json
 
 # Define regex variables
 
-# Get gene symbols from json whitelist
-text = open("../../data/pathology_notes/staging_terms.txt").readlines()
+# Get stagings terms from json whitelist
+terms_json = json.loads(open("../whitelists/whitelist_staging_terms.json").read())
 staging_terms = ''
-for term in text:
-	staging_terms += term.strip() + '|'
+for key in terms_json:
+    staging_terms += key + '|'
 # Get rid of last "|"
 staging_terms = staging_terms[:-1]
-
 
 # Do folder walk and transform each file containing a variable to be transformed
 rootdir = '.'
