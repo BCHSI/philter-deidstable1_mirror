@@ -9,9 +9,9 @@ import json
 symbols_json = json.loads(open("../whitelists/whitelist_genes_and_patho_terms_pruned.json").read())
 gene_symbols = ''
 for key in symbols_json:
-	gene_symbols += key + '|'
-# Get rid of first and last "|"
-gene_symbols = gene_symbols[1:-1]
+    gene_symbols += key + '|'
+# Get rid of last "|"
+gene_symbols = gene_symbols[:-1]
 
 
 # Do folder walk and transform each file containing a variable to be transformed
@@ -37,12 +37,3 @@ for root, dirs, files in os.walk(rootdir):
                 # Write new file
                 with open(new_filepath, "w") as fout:
                     fout.write(regex)
-
-            # delete duplicate  "_transform" files
-            # if os.path.isfile(new_filepath):
-            #     og_file = open(filepath).read().strip()
-            #     transformed_file = open(new_filepath).read().strip()
-            #
-            #     if og_file == transformed_file:
-            #         os.remove(new_filepath)
-            #         print("Removed %s" % (new_filepath))
