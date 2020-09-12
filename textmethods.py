@@ -24,13 +24,13 @@ def get_tokens(string, text=None, start=0):
     if not text: text = string
     for item in str_split:
         item_stripped = item.strip()
-        if len(item_stripped) is 0:
+        if len(item_stripped) == 0:
             offset += len(item)
             continue
         token_start = text.find(item_stripped, offset)
-        if token_start is -1:
+        if token_start == -1:
             raise Exception("ERROR: cannot find token \"{0}\" ".format(item)
-                            + "in \"{1}\" starting at {2}".format(text, offset))
+                            + "in \"{0}\" starting at {1}".format(text, offset))
         token_stop = token_start + len(item_stripped) - 1
         offset = token_stop + 1
         tokens.update({token_start:[token_stop,item_stripped]})

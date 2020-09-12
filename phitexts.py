@@ -49,6 +49,7 @@ class Phitexts:
         self.batch = batch
         #known phi
         self.known_phi = {}
+        self.xml = xml
         if not xml and not mongo:
            self._read_texts()
         if mongo is not None:
@@ -519,23 +520,24 @@ class Phitexts:
             phi_type = 'DATE'
         elif 'Date' in self.types:
             phi_type = 'Date'
-        
+
+        if 'AGE<90' in self.norms:
         # Store age normalization info - these are ages are normalized and NOT obscured
-        for key in self.norms['AGE<90']:
-            filename = key[0]
-            start = key[1]
-            age = self.norms['AGE<90'][key][0]
-            end = self.norms['AGE<90'][key][1]
+            for key in self.norms['AGE<90']:
+                filename = key[0]
+                start = key[1]
+                age = self.norms['AGE<90'][key][0]
+                end = self.norms['AGE<90'][key][1]
 
-            age_dict = {"start":start, "end":end, "word":age, "type":"AGE<90"}
+                age_dict = {"start":start, "end":end, "word":age, "type":"AGE<90"}
 
-            if filename not in age_norm_info:
-                age_norm_info[filename] = []
-                age_norm_info[filename].append(age_dict)
-            else:
-                age_norm_info[filename].append(age_dict)
+                if filename not in age_norm_info:
+                    age_norm_info[filename] = []
+                    age_norm_info[filename].append(age_dict)
+                else:
+                    age_norm_info[filename].append(age_dict)
         
-        #print(self.norms['AGE<90'])
+            #print(self.norms['AGE<90'])
         # Write to file of raw dates, parsed dates and substituted dates
         num_failed = 0
         num_parsed = 0
@@ -988,7 +990,11 @@ class Phitexts:
                     continue
                 filepath = os.path.join(root, filename)
                 # change here: what will the input format be?
-                file_id = self.inputdir + filename.split('.')[0] + '.txt'
+                if self.xml:
+                    ext = '.xml'
+                else:
+                    ext = '.txt'
+                file_id = self.inputdir + filename.split('.')[0] + ext
                 tree = ET.parse(filepath)
                 rt = tree.getroot()
                 xmlstr = ET.tostring(rt, encoding='utf8', method='xml')
@@ -1205,92 +1211,96 @@ class Phitexts:
             ctn = 0
             cfn = 0
             
-            for st in truepositives_dicts[filename]:
-                start = st
-                stop = truepositives_dicts[filename][st][0]
-                phi_type = truepositives_dicts[filename][st][1]
-                token = truepositives_dicts[filename][st][2]
-                text_tp_file.write('\n' + filename + '\t' + str(phi_type)
-                                   + '\t' + token
-                                   + '\t' + str(start) + '\t' + str(stop))
-                
-                if phi_type not in summary_by_category:
-                    summary_by_category[phi_type] = {}
-                if 'tp' not in summary_by_category[phi_type]:
-                    summary_by_category[phi_type]['tp'] = []
-                summary_by_category[phi_type]['tp'].append(token)
-                
-                if phi_type in ucsf_include_tags:
-                    ctp += 1
-                else:
-                    cfp += 1
-                    
-            for st in falsepositives_dicts[filename]:
-                start = st
-                stop = falsepositives_dicts[filename][st][0]
-                phi_type = falsepositives_dicts[filename][st][1]
-                token = falsepositives_dicts[filename][st][2]
-                text_fp_file.write('\n' + filename + '\t' + str(phi_type)
-                                   + '\t' + token
-                                   + '\t' + str(start) + '\t' + str(stop))
-                
-                if phi_type not in summary_by_category:
-                    summary_by_category[phi_type] = {}
-                if 'fp' not in summary_by_category[phi_type]:
-                    summary_by_category[phi_type]['fp'] = []
-                summary_by_category[phi_type]['fp'].append(token)
+            if filename in truepositives_dicts:
+                for st in truepositives_dicts[filename]:
+                    start = st
+                    stop = truepositives_dicts[filename][st][0]
+                    phi_type = truepositives_dicts[filename][st][1]
+                    token = truepositives_dicts[filename][st][2]
+                    text_tp_file.write('\n' + filename + '\t' + str(phi_type)
+                                       + '\t' + token
+                                       + '\t' + str(start) + '\t' + str(stop))
 
-                cfp += 1
-                
-            for st in truenegatives_dicts[filename]:
-                start = st
-                stop = truenegatives_dicts[filename][st][0]
-                phi_type = None
-                token = truenegatives_dicts[filename][st][1]
-                text_tn_file.write('\n' + filename + '\t' + str(phi_type)
-                                   + '\t' + token
-                                   + '\t' + str(start) + '\t' + str(stop))
-                # this is not phi and produces too much output
-                # uncomment for debugging
-                # if phi_type not in summary_by_category:
-                #     summary_by_category[phi_type] = {}
-                # if 'tn' not in summary_by_category[phi_type]:
-                #     summary_by_category[phi_type]['tn'] = []
-                # summary_by_category[phi_type]['tn'].append(token)
+                    if phi_type not in summary_by_category:
+                        summary_by_category[phi_type] = {}
+                    if 'tp' not in summary_by_category[phi_type]:
+                        summary_by_category[phi_type]['tp'] = []
+                    summary_by_category[phi_type]['tp'].append(token)
 
-                ctn += 1
-                
-            for st in falsenegatives_dicts[filename]:
-                start = st
-                stop = falsenegatives_dicts[filename][st][0]
-                phi_type = falsenegatives_dicts[filename][st][1]
-                token = falsenegatives_dicts[filename][st][2]
-                text_fn_file.write('\n' + filename + '\t' + str(phi_type)
-                                   + '\t' + token
-                                   + '\t' + str(start) + '\t' + str(stop))
-                
-                if phi_type not in summary_by_category:
-                    summary_by_category[phi_type] = {}
-                if 'fn' not in summary_by_category[phi_type]:
-                    summary_by_category[phi_type]['fn'] = []
-                summary_by_category[phi_type]['fn'].append(token)
-                
-                if phi_type in ucsf_include_tags:
-                    if phi_type == 'Age':
-                        if token.isdigit():
-                            if int(token) >= 90:
-                                cfn += 1
-                            else:
-                                ctn += 1
-                        else:
-                            if 'ninety' in token:
-                                cfn +=1
-                            else:
-                                ctn += 1
+                    if phi_type in ucsf_include_tags:
+                        ctp += 1
                     else:
-                        cfn += 1
-                else:
+                        cfp += 1
+
+            if filename in falsepositives_dicts:
+                for st in falsepositives_dicts[filename]:
+                    start = st
+                    stop = falsepositives_dicts[filename][st][0]
+                    phi_type = falsepositives_dicts[filename][st][1]
+                    token = falsepositives_dicts[filename][st][2]
+                    text_fp_file.write('\n' + filename + '\t' + str(phi_type)
+                                       + '\t' + token
+                                       + '\t' + str(start) + '\t' + str(stop))
+
+                    if phi_type not in summary_by_category:
+                        summary_by_category[phi_type] = {}
+                    if 'fp' not in summary_by_category[phi_type]:
+                        summary_by_category[phi_type]['fp'] = []
+                        summary_by_category[phi_type]['fp'].append(token)
+
+                    cfp += 1
+
+            if filename in truenegatives_dicts:
+                for st in truenegatives_dicts[filename]:
+                    start = st
+                    stop = truenegatives_dicts[filename][st][0]
+                    phi_type = None
+                    token = truenegatives_dicts[filename][st][1]
+                    text_tn_file.write('\n' + filename + '\t' + str(phi_type)
+                                       + '\t' + token
+                                       + '\t' + str(start) + '\t' + str(stop))
+                    # this is not phi and produces too much output
+                    # uncomment for debugging
+                    # if phi_type not in summary_by_category:
+                    #     summary_by_category[phi_type] = {}
+                    # if 'tn' not in summary_by_category[phi_type]:
+                    #     summary_by_category[phi_type]['tn'] = []
+                    # summary_by_category[phi_type]['tn'].append(token)
+
                     ctn += 1
+
+            if filename in falsenegatives_dicts:
+                for st in falsenegatives_dicts[filename]:
+                    start = st
+                    stop = falsenegatives_dicts[filename][st][0]
+                    phi_type = falsenegatives_dicts[filename][st][1]
+                    token = falsenegatives_dicts[filename][st][2]
+                    text_fn_file.write('\n' + filename + '\t' + str(phi_type)
+                                       + '\t' + token
+                                       + '\t' + str(start) + '\t' + str(stop))
+
+                    if phi_type not in summary_by_category:
+                        summary_by_category[phi_type] = {}
+                    if 'fn' not in summary_by_category[phi_type]:
+                        summary_by_category[phi_type]['fn'] = []
+                    summary_by_category[phi_type]['fn'].append(token)
+                
+                    if phi_type in ucsf_include_tags:
+                        if phi_type == 'Age':
+                            if token.isdigit():
+                                if int(token) >= 90:
+                                    cfn += 1
+                                else:
+                                    ctn += 1
+                            else:
+                                if 'ninety' in token:
+                                    cfn +=1
+                                else:
+                                    ctn += 1
+                        else:
+                            cfn += 1
+                    else:
+                        ctn += 1
             
             total_tp += tp
             total_fp += fp
