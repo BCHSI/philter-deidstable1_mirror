@@ -1,4 +1,4 @@
-[		
+[       
     {
         "title": "u_#_patient",
         "type": "regex",
@@ -85,7 +85,7 @@
         ],
         "notes": "These are words we believe are not safe"
     },
-	{
+    {
         "title":"Whitelist",
         "type":"set",
         "exclude":false,
@@ -93,13 +93,13 @@
         "pos":[],
         "notes":"These are words we beleive are safe"
     },
-   	{
-		"title":"POS MATCHER",
-		"type":"pos_matcher",
-		"exclude":false,
-		"pos":["CD"],
-		"notes":"This will include any CDs that aren't included in earlier steps"
-	}
+    {
+        "title":"POS MATCHER",
+        "type":"pos_matcher",
+        "exclude":false,
+        "pos":["CD"],
+        "notes":"This will include any CDs that aren't included in earlier steps"
+    }
 
 
 ]

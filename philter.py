@@ -30,6 +30,10 @@ class Philter:
         self.known_phi = {}
         if "verbose" in config:
             self.verbose = config["verbose"]
+        if "gold" in config:
+            self.gold = config["gold"]
+        else:
+            self.gold = True
         if "run_eval" in config:
             self.run_eval = config["run_eval"]
         if "dependent" in config:
@@ -1331,8 +1335,9 @@ class Philter:
             print('\n')
             print("RUNNING ERRORCHECK")
 
-        # Get xml summary
-        phi = self.xml
+        if self.gold:
+            # Get xml summary
+            phi = self.xml
         # Create dictionary to hold fn tags
         fn_tags = {}
         fp_tags = {}
@@ -1374,12 +1379,17 @@ class Philter:
             # Get corresponding info in phi_notes
             note_name = fn.split('/')[-1]
             
-            try:
-                anno_name = note_name.split('.')[0] + ".xml"
-                text = phi[anno_name]['text']
-            except KeyError:
-                anno_name = note_name.split('.')[0] + ".txt.xml"
-                text = phi[anno_name]['text']                    
+            if self.gold:
+                try:
+                    anno_name = note_name.split('.')[0] + ".xml"
+                    text = phi[anno_name]['text']
+                except KeyError:
+                    anno_name = note_name.split('.')[0] + ".txt.xml"
+                    text = phi[anno_name]['text']
+
+            else:
+                text = open(input_filename,"r").read()
+
 
             lst = re.split("(\s+)", text)
             cleaned = []
@@ -1407,65 +1417,67 @@ class Philter:
             for i in range(0,len(pos_list)):
                 cleaned_with_pos[str(pos_coords[i])] = [pos_list[i][0], pos_list[i][1]]
 
-            ########## Get FN tags ##########
-            phi_list = phi[anno_name]['phi']
+            
+            if self.gold:
+                ########## Get FN tags ##########
+                phi_list = phi[anno_name]['phi']
 
-            ######### Create unigram and bigram frequency tables #######
-            if self.freq_table:
+                ######### Create unigram and bigram frequency tables #######
+                if self.freq_table:
 
-                # Create separate cleaned list/coord list without spaces
-                cleaned_nospaces = []
-                coords_nospaces = []
-                for i in range(0,len(cleaned)):
-                    if cleaned[i].isspace() == False:
-                        cleaned_nospaces.append(cleaned[i])
-                        coords_nospaces.append(pos_coords[i])
+                    # Create separate cleaned list/coord list without spaces
+                    cleaned_nospaces = []
+                    coords_nospaces = []
+                    for i in range(0,len(cleaned)):
+                        if cleaned[i].isspace() == False:
+                            cleaned_nospaces.append(cleaned[i])
+                            coords_nospaces.append(pos_coords[i])
 
-                # Loop through all single words and word pairs, and compare with PHI list
-                for i in range(0,len(cleaned_nospaces)-1):
-                    #cleaned_nospaces[i]= word, coords_nospaces[i] = start coordinate
-                    unigram_word = cleaned_nospaces[i].replace('\n','').replace('\t','').replace(' ','').lower()
-                    bigram_word = " ".join([cleaned_nospaces[i].replace('\n','').replace('\t','').replace(' ','').lower(),cleaned_nospaces[i+1].replace('\n','').replace('\t','').replace(' ','').lower()])
-                    unigram_start = coords_nospaces[i]
-                    bigram_start1 = coords_nospaces[i]
-                    bigram_start2 = coords_nospaces[i+1]
+                    # Loop through all single words and word pairs, and compare with PHI list
+                    for i in range(0,len(cleaned_nospaces)-1):
+                        #cleaned_nospaces[i]= word, coords_nospaces[i] = start coordinate
+                        unigram_word = cleaned_nospaces[i].replace('\n','').replace('\t','').replace(' ','').lower()
+                        bigram_word = " ".join([cleaned_nospaces[i].replace('\n','').replace('\t','').replace(' ','').lower(),cleaned_nospaces[i+1].replace('\n','').replace('\t','').replace(' ','').lower()])
+                        unigram_start = coords_nospaces[i]
+                        bigram_start1 = coords_nospaces[i]
+                        bigram_start2 = coords_nospaces[i+1]
 
-                    # Loop through PHI list and compare ranges
-                    for phi_item in phi_list:
-                        try:
-                            phi_start = phi_item['start']
-                            phi_end = phi_item['end']
-                        except KeyError:
-                            phi_start = phi_item['spans'].split('~')[0]
-                            phi_end = phi_item['spans'].split('~')[1]
-                        if unigram_start in range(int(phi_start), int(phi_end)):
-                            # This word is PHI and hasn't been added to the dictionary yet
-                            if unigram_word not in unigram_dict:
-                                unigram_dict[unigram_word] = [1, 0]
-                           # This word is PHI and has already been added to the dictionary
+                        # Loop through PHI list and compare ranges
+                        for phi_item in phi_list:
+                            try:
+                                phi_start = phi_item['start']
+                                phi_end = phi_item['end']
+                            except KeyError:
+                                phi_start = phi_item['spans'].split('~')[0]
+                                phi_end = phi_item['spans'].split('~')[1]
+                            if unigram_start in range(int(phi_start), int(phi_end)):
+                                # This word is PHI and hasn't been added to the dictionary yet
+                                if unigram_word not in unigram_dict:
+                                    unigram_dict[unigram_word] = [1, 0]
+                               # This word is PHI and has already been added to the dictionary
+                                else:
+                                    unigram_dict[unigram_word][0] += 1
                             else:
-                                unigram_dict[unigram_word][0] += 1
-                        else:
-                            # This word is not PHI and hasn't been aded to the dictionary yet
-                            if unigram_word not in unigram_dict:
-                                unigram_dict[unigram_word] = [0, 1]
-                           # This word is not PHI and has already been added to the dictionary
+                                # This word is not PHI and hasn't been aded to the dictionary yet
+                                if unigram_word not in unigram_dict:
+                                    unigram_dict[unigram_word] = [0, 1]
+                               # This word is not PHI and has already been added to the dictionary
+                                else:
+                                    unigram_dict[unigram_word][1] += 1                               
+                            if bigram_start1 in range(int(phi_start), int(phi_end)) and bigram_start2 in range(int(phi_start), int(phi_end)):
+                                # This word is PHI and hasn't been added to the dictionary yet
+                                if bigram_word not in bigram_dict:
+                                    bigram_dict[bigram_word] = [1, 0]
+                               # This word is PHI and has already been added to the dictionary
+                                else:
+                                    bigram_dict[bigram_word][0] += 1                                
                             else:
-                                unigram_dict[unigram_word][1] += 1                               
-                        if bigram_start1 in range(int(phi_start), int(phi_end)) and bigram_start2 in range(int(phi_start), int(phi_end)):
-                            # This word is PHI and hasn't been added to the dictionary yet
-                            if bigram_word not in bigram_dict:
-                                bigram_dict[bigram_word] = [1, 0]
-                           # This word is PHI and has already been added to the dictionary
-                            else:
-                                bigram_dict[bigram_word][0] += 1                                
-                        else:
-                            # This word is not PHI and hasn't been aded to the dictionary yet
-                            if bigram_word not in bigram_dict:
-                                bigram_dict[bigram_word] = [0, 1]
-                           # This word is not PHI and has already been added to the dictionary
-                            else:
-                                bigram_dict[bigram_word][1] += 1
+                                # This word is not PHI and hasn't been aded to the dictionary yet
+                                if bigram_word not in bigram_dict:
+                                    bigram_dict[bigram_word] = [0, 1]
+                               # This word is not PHI and has already been added to the dictionary
+                                else:
+                                    bigram_dict[bigram_word][1] += 1
 
 
             # Get tp counts per category

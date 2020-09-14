@@ -24,7 +24,7 @@ def main():
     ap.add_argument("-f", "--filters", default="./configs/integration_1.json",
                     help="Path to our config file, the default is ./configs/integration_1.json",
                     type=str)
-    ap.add_argument("-x", "--xml", default="./data/phi_notes.json",
+    ap.add_argument("-x", "--xml", default="./generate_dataset/phi_notes.json",
                     help="Path to the json file that contains all xml data",
                     type=str)
     ap.add_argument("-c", "--coords", default="./data/coordinates.json",
@@ -51,6 +51,12 @@ def main():
     ap.add_argument("--ucsfformat", default=False,
                     help="When ucsfformat is true, will adjust eval script for slightly different xml format",
                     type=str)
+    ap.add_argument("--verbose", default=False,
+                    help="When verbose is true, will print out progress messages",
+                    type=str)
+    ap.add_argument("--gold", default=True,
+                    help="When gold is true, Philter eval will use the XMl annotation files",
+                    type=str)
 
 
     args = ap.parse_args()
@@ -60,6 +66,8 @@ def main():
 
     philter_config = {
         "debug":args.debug,
+        "verbose":args.verbose,
+        "gold":args.gold,
         "errorcheck":args.errorcheck,
         "parallel":args.parallel, 
         "freq_table":args.freq_table,                   

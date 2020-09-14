@@ -8,50 +8,33 @@ import os
 def create_xml(i, pii, meta, deid_path, text_path, xml_sample_path, output_dir, note_output_dir, file_structure):
 	# Load sample xml file
 	sample_tree = ET.parse(xml_sample_path)
-
 	# Get deid note key from csv
 	deid_key = pii.loc[i, "filename"]
-
 	if file_structure == "deid":
-
 		# Get full deid path
 		full_deid_path = get_deid_full_path(deid_key, deid_path)
-
-
 	# Get input text key
 	text_key = meta[deid_key]
-
 	if file_structure == "text":
-
 		# Get corresponding output file path
 		full_deid_path = os.path.dirname(get_text_full_path(text_key, deid_path)) + "/" + deid_key + ".txt"
-
-
 	# Get full text path
 	full_text_path = get_text_full_path(text_key, text_path)
-
 	# Copy text file over to input folder
 	new_filepath = copy_and_normalize_note(full_text_path, text_key, note_output_dir)
-
 	# Get search string from csv
 	search_string = str(pii.loc[i, "word_found"]).replace('+','\+').replace('(','\(').replace(')','\)').replace('^','\^').replace('$','\$').replace('.','\.').replace('|','\|').replace('?','\?').replace('*','\*').replace('[','\[').replace(']','\]').replace('{','\{').replace('}','\}')
-
 	search_pattern = re.compile("(?i)"+search_string)
-
 	# Get phi tag from csv
 	phi_tag = str(pii.loc[i, "original_column"])
-
 	# Load text file
 	txt = open(new_filepath, "r", encoding='utf-8', errors='surrogateescape').read()
-
 	# Start parsing xml file
 	a = sample_tree.find('TEXT')
 	a.text = txt
 	b = sample_tree.find('TAGS')
-
 	# Find regex matches
 	matches = search_pattern.finditer(txt)
-
 	match_count = 0
 	for m in matches:
 		c = ET.SubElement(b,phi_tag)
@@ -60,7 +43,6 @@ def create_xml(i, pii, meta, deid_path, text_path, xml_sample_path, output_dir, 
 		c.set('text',str(m.group()))
 		c.set('TYPE',phi_tag)
 		match_count += 1
-
 	full_text_key = '0'*(12-len(text_key)) + text_key
 	outfile = output_dir + '/' + full_text_key + '_utf8.xml'
 	sample_tree.write(outfile)
@@ -110,73 +92,81 @@ def get_text_full_path(text_key, text_path):
 	return(full_text_path)
 
 def main():
-    ap = argparse.ArgumentParser()
-    ap.add_argument("-i", "--input",
-                    help="Path to the CSV file that contains PII info for this set of notes",
-                    type=str)
-    ap.add_argument("-o", "--output",
-                    help="Path to output folder for XML files",
-                    type=str)
-    ap.add_argument("-d", "--deid_path",
-                    help="Path to folder with deid files",
-                    type=str)
-    ap.add_argument("-t", "--text_path",
-                    help="Path to folder with text files",
-                    type=str)
-    ap.add_argument("-m", "--meta_path",
-                    help="Path to meta file",
-                    type=str)
-    ap.add_argument("-x", "--xml_sample",
-                    help="Path to sample xml file",
-                    type=str)
-    ap.add_argument("-n", "--notes_output",
-                    help="Path to output folder for original text files",
-                    type=str)
-    ap.add_argument("-s", "--structure",
-	                help="Deid output file structure",
-	                type=str)
-    args = ap.parse_args()
+	ap = argparse.ArgumentParser()
+	ap.add_argument("-i", "--input",
+			help="Path to the CSV file that contains PII info for this set of notes",
+			type=str)
+	ap.add_argument("-o", "--output",
+			help="Path to output folder for XML files",
+			type=str)
+	ap.add_argument("-d", "--deid_path",
+			help="Path to folder with deid files",
+			type=str)
+	ap.add_argument("-t", "--text_path",
+			help="Path to folder with text files",
+			type=str)
+	ap.add_argument("-m", "--meta_path",
+			help="Path to meta file",
+			type=str)
+	ap.add_argument("-x", "--xml_sample",
+			help="Path to sample xml file",
+			type=str)
+	ap.add_argument("-n", "--notes_output",
+			help="Path to output folder for original text files",
+			type=str)
+	ap.add_argument("-s", "--structure",
+			help="Deid output file structure",
+			type=str)
+	args = ap.parse_args()
 
-    input_csv = args.input
-    #input_csv = '/data/muenzenk/low_hanging_fruit_tests/corys_results_201911/node704/primarymrn.csv'
-    #input_csv = '/data/muenzenk/cory_probe_search/cory_word_check_results_073020.csv'
-    output_dir = args.output
-    #output_dir = '/data/muenzenk/low_hanging_fruit_tests/xml/primarymrn'
-    #output_dir = '/data/muenzenk/cory_probe_search/073020_xml'
-    deid_path = args.deid_path
-    #deid_path = '/data/notes/philtered_notes_20190712_zeta'
-    #deid_path = '/data/muenzenk/probetoken/probetoken_100k_output'
-    text_path = args.text_path
-    #text_path = '/data/notes/shredded_notes_20190712'
-    #text_path = '/data/radhakrishnanl/100k_random_20190712'
-    meta_path = args.meta_path
-    #meta_path = '/data/for_cory/NOTE_INFO_MAPS.txt'
-    #meta_path = '/data/for_cory/NOTE_INFO_MAPS.txt'
-    xml_sample_path = args.xml_sample
-    #xml_sample_path = '/data/muenzenk/low_hanging_fruit_tests/sample.xml'
-    #xml_sample_path = '/data/muenzenk/low_hanging_fruit_tests/sample.xml'
-    note_output_dir = args.notes_output
-    #note_output_dir = '/data/muenzenk/low_hanging_fruit_tests/notes/primarymrn'
-    #note_output_dir = '/data/muenzenk/cory_probe_search/073020_notes'
-    file_structure = args.structure
-    #file_structure = 'deid'
-    #file_structure = 'text'
+	input_csv = args.input
+	#input_csv = '/data/muenzenk/low_hanging_fruit_tests/corys_results_201911/node704/primarymrn.csv'
+	#input_csv = '/data/muenzenk/cory_probe_search/cory_word_check_results_073020.csv'
+	#input_csv = '/data/muenzenk/gene_patho_tests/gene_patho_phi.csv'
+	output_dir = args.output
+	#output_dir = '/data/muenzenk/low_hanging_fruit_tests/xml/primarymrn'
+	#output_dir = '/data/muenzenk/cory_probe_search/073020_xml'
+	#output_dir = '/data/muenzenk/gene_patho_tests/unit_xml'
+	deid_path = args.deid_path
+	#deid_path = '/data/notes/philtered_notes_20190712_zeta'
+	#deid_path = '/data/muenzenk/probetoken/probetoken_100k_output'
+	#deid_path = '/data/muenzenk/gene_patho_tests/develop_gene_100k_output'
+	text_path = args.text_path
+	#text_path = '/data/notes/shredded_notes_20190712'
+	#text_path = '/data/radhakrishnanl/100k_random_20190712'
+	#text_path = '/data/notes/shredded_notes_20190712'
+	meta_path = args.meta_path
+	#meta_path = '/data/for_cory/NOTE_INFO_MAPS.txt'
+	#meta_path = '/data/for_cory/NOTE_INFO_MAPS.txt'
+	#meta_path = '/data/for_cory/NOTE_INFO_MAPS.txt'
+	xml_sample_path = args.xml_sample
+	#xml_sample_path = '/data/muenzenk/low_hanging_fruit_tests/sample.xml'
+	#xml_sample_path = '/data/muenzenk/low_hanging_fruit_tests/sample.xml'
+	#xml_sample_path = '/data/muenzenk/low_hanging_fruit_tests/sample.xml'
+	note_output_dir = args.notes_output
+	#note_output_dir = '/data/muenzenk/low_hanging_fruit_tests/notes/primarymrn'
+	#note_output_dir = '/data/muenzenk/cory_probe_search/073020_notes'
+	#note_output_dir = '/data/muenzenk/gene_patho_tests/unit_test'
+	file_structure = args.structure
+	#file_structure = 'deid'
+	#file_structure = 'text'
+	#file_structure = 'text'
 
 	meta = {}
 	mfile = open(meta_path)
 	for line in mfile:
-	    line = line.rstrip('\n')
-	    line  = line.replace('.0','')
-	    key= line.split('\t')
-	    meta[key[10]] = key[9]
+		line = line.rstrip('\n')
+		line  = line.replace('.0','')
+		key= line.split('\t')
+		meta[key[10]] = key[9]
 
-    print("Meta loaded into hash")
-    pii = pd.read_csv(input_csv)
-    for i in range(len(pii)):
-    	create_xml(i, pii, meta, deid_path, text_path, xml_sample_path, output_dir, note_output_dir, file_structure)
+	print("Meta loaded into hash")
+	pii = pd.read_csv(input_csv)
+	for i in range(len(pii)):
+		create_xml(i, pii, meta, deid_path, text_path, xml_sample_path, output_dir, note_output_dir, file_structure)
 
-        
+
 if __name__ == "__main__":
-    main()
+	main()
 
 
