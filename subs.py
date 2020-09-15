@@ -160,7 +160,10 @@ class Subs:
 
         shifted_bday91 = dt.datetime(year = shifted_dob.year + 91,
                                      month =  shifted_dob.month,
-                                     day = shifted_dob.day)
+                                     day = (shifted_dob.day - 1
+                                            if (shifted_dob.month == 2
+                                                and shifted_dob.day == 29)
+                                            else shifted_dob.day))
         shifted_age = self._age(shifted_dob)
         if shifted_age >= 91: # the patient is older than 90:
             days_from_bday = (dt.datetime(year = reference.year,
