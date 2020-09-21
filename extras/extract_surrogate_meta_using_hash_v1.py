@@ -37,7 +37,7 @@ for dirline in dirfile:
         keepers.add(line)
     kfile.close()
     print("Creating meta file for"+dirline)
-    dfile.write("note_key"+"\t"+"date_offset"+"\t"+"patient_ID"+"\t"+"deid_note_key"+"\n")
+    dfile.write("note_key"+"\t"+"date_offset"+"\t"+"deid_note_key"+"\t"+"patient_ID"+"\t"+"BirthDate"+"\t"+"Deid_BirthDate"+"\t"+"DeathDate"+"\t"+"status"+"\t"+"deid_turns_91_date"+"\n")
     for k in keepers:
         if k in meta:
            dfile.write(k+"\t"+meta[k]+"\n")
