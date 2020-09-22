@@ -339,11 +339,16 @@ class Subs:
                                           "deid_turns_91_date":1})
 
         for filename in list(surrogate_info):
-           id2offset[filename['_id']]  = filename["deid_date_offset_cdw"]
-           id2deidnotekey[filename['_id']] = filename["deid_note_key"]        
-           id2dob[filename['_id']] = filename["BirthDate"]
-           id2deiddob[filename['_id']] = filename["Deid_BirthDate"]
-           id2deid91bdate[filename['_id']] = filename["deid_turns_91_date"]
+           if "deid_date_offset_cdw" in filename:
+              id2offset[filename['_id']]  = filename["deid_date_offset_cdw"]
+           if "deid_note_key" in filename:
+              id2deidnotekey[filename['_id']] = filename["deid_note_key"]        
+           if "BirthDate" in filename:
+              id2dob[filename['_id']] = filename["BirthDate"]
+           if "Deid_BirthDate" in filename:
+              id2deiddob[filename['_id']] = filename["Deid_BirthDate"]
+           if "deid_turns_91_date" in filename:
+              id2deid91bdate[filename['_id']] = filename["deid_turns_91_date"]
         notekey2id = {"offset":id2offset, "deidnotekey":id2deidnotekey,
                       "dob":id2dob, "deiddob":id2deiddob,
                       "deid91bdate":id2deid91bdate}

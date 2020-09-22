@@ -777,7 +777,7 @@ class Phitexts:
         if not dynamic_blacklist_df.empty:
            dynamic_blacklist_export = dynamic_blacklist_df.to_csv(dynamic_blacklist_filepath, index=None, header=True,sep = '\t')
 
-    def mongo_save_log(self,mongo,failed_date,eval_table,phi_table,phi_count_df,csv_summary_df,batch_summary_df,dynamic_blacklist_df):
+    def mongo_save_log(self,mongo,failed_date,eval_table,phi_table,phi_count_df,csv_summary_df,batch_summary_df,dynamic_blacklist_df,age_norm_info):
         print("In mongo save log")
         try:
           db = self.db          

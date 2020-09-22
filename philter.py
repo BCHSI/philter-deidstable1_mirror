@@ -403,6 +403,7 @@ class Philter:
                    'patient', 'study', 'nan']
         map_set = {}
         context_probes = []
+        pat_idx_dynbl = self.pattern_indexes["Dynamic Blacklist"]
         if self.known_phi:
             for probe in self.known_phi[filename]:
                 probe_clean = get_clean(probe)
@@ -424,7 +425,6 @@ class Philter:
             file_note_key = file_note_key.replace('.xml','')
             file_note_key = file_note_key.replace('_utf8','')
             note_key = file_note_key
-            pat_idx_dynbl = self.pattern_indexes["Dynamic Blacklist"]
             for probe in self.patterns[pat_idx_dynbl]["dyndata"]:
                 if note_key in self.patterns[pat_idx_dynbl]["dyndata"][probe]:
                     probe_clean = get_clean(str(probe))
