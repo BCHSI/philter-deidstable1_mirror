@@ -1,6 +1,7 @@
 import pandas 
 import xml.etree.ElementTree as ET
 import sys
+import argparse
 sys.path
 sys.path.append('/usr/local/lib/python2.7/site-packages/')
 import xmltodict
@@ -8,9 +9,7 @@ import os
 import pandas as pd
 import re
 
-### This script presumes that there is the testing-PHI-Gold-fixed 
-### folder in the same directory and will output the edited annotations 
-### updated_annotations_i2b2 called updated_annotations_i2b2
+# This script removes PHI tags that are not PHI (according to HIPAA) from i2b2 annotations
 
 def extractXML(directory,filename):
 	tree = ET.parse(directory + '/'+ filename)
@@ -24,14 +23,14 @@ def extractXML(directory,filename):
 
 def delete_annotation(xml_file, phi_type, tag_to_delete):
 	#print tag_to_delete
-	remove_line_if = 'text="' + tag_to_delete + '"'
+	remove_line_if = bytes('text="' + tag_to_delete + '"', 'utf-8')
 
-	for line in xml_file.split("\n"):
+	for line in xml_file.split(b"\n"):
 		#print remove_line_if
 		if remove_line_if in line:
-			remove_line = line + "\n"
+			remove_line = line + b"\n"
 			print(remove_line)
-			xml_file = xml_file.replace(remove_line,"")
+			xml_file = xml_file.replace(remove_line,b"")
 
 	return xml_file
 
@@ -40,7 +39,7 @@ def fix_dates(xml_file,text):
 	PHI_type="DATE"
 	date = text
 	if date.isdigit():
-		if len(date) == 4 and (1000<= date<=3000):
+		if len(date) == 4 and (1000 <= int(date) <= 3000):
 			delete_annotation(xml_file, PHI_type, text)
 
 	# remove season
@@ -102,15 +101,31 @@ def remove_hospitals(xml_file,text,phi_type):
 	return xml_file
 
 def main():
+    
+	ap = argparse.ArgumentParser()
+	ap.add_argument("-i", "--input", required=True,
+	                help="Path to the folder with the original i2b2 xml files (testing-PHI-Gold-fixed)")
+	ap.add_argument("-o", "--output", required=True,
+	                help="Path to save the curated xml files to")
+	args = ap.parse_args()
+	
 	# Loop through xml_files
-	directory = "testing-PHI-Gold-fixed"
+	input_dir = args.input
+	output_dir = args.output
+
+	# Make the output directroy if it doesn't exist already
+	try:
+		os.makedirs(output_dir)
+	except OSError:
+		print("Output directory already exists.")
+
 	cols = ["Document", "PHI_element", "Text", "Type","Comment"]
 	output_df = pd.DataFrame(columns = cols,index=None)
 
 	new_dict = dict()
 
-	for filename in os.listdir(directory):
-		print("\nfilename is: " + filename) 
+	for filename in os.listdir(input_dir):
+		print("\nCurating: " + filename) 
 
 	# example for year
 	#filename = "113-02.xml"
@@ -125,10 +140,10 @@ def main():
 	#filename = "236-01.xml"
 
 	# re-indent
-		text,tags_dict,xmlstr = extractXML(directory,filename)
+		text,tags_dict,xmlstr = extractXML(input_dir,filename)
 	#print str(tags_dict) + '\n \n'
 
-		for key, value in tags_dict.iteritems():
+		for key, value in tags_dict.items():
 			# Note:  Value can be a list of like phi elements
 			# 		or a dictionary of the metadata about a phi element
 
@@ -169,9 +184,17 @@ def main():
 				#	xmlstr = remove_hospitals(xmlstr,text,phi_type)	
 		
 		# here we write back out the updated XML File to a new directory
-		output_dir = "updated_annotations_i2b2/"+filename
-		with open(output_dir, "w") as text_file:
-			text_file.write(xmlstr)
+		output_file = output_dir+filename
+		with open(output_file, "w") as text_file:
+			text_file.write(xmlstr.decode("utf-8"))
+
+
 
 if __name__ == "__main__":
 	main()
+
+
+
+
+
+
