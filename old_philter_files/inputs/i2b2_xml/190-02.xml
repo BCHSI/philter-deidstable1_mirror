@@ -59,7 +59,7 @@ DV:1-3-87
 <NAME id="P5" start="217" end="223" text="Xavier" TYPE="PATIENT" comment="" />
 <AGE id="P6" start="229" end="231" text="73" TYPE="AGE" comment="" />
 <DATE id="P7" start="525" end="533" text="12-27-86" TYPE="DATE" comment="" />
-<DATE id="P8" start="840" end="864" text="Thursday, December 30th" TYPE="DATE" comment="" />
+<DATE id="P8" start="840" end="864" text="Thursday, December  30th" TYPE="DATE" comment="" />
 <DATE id="P9" start="1315" end="1323" text="Thursday" TYPE="DATE" comment="" />
 <DATE id="P10" start="1414" end="1435" text="Thursday, January 6th" TYPE="DATE" comment="" />
 <NAME id="P11" start="1606" end="1618" text="Ximena Utter" TYPE="DOCTOR" comment="" />

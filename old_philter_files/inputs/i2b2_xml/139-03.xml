@@ -169,7 +169,7 @@ HW/warren/stark
 <LOCATION id="P3" start="151" end="160" text="Hong Kong" TYPE="COUNTRY" comment="" />
 <NAME id="P4" start="597" end="601" text="Vann" TYPE="DOCTOR" comment="" />
 <DATE id="P5" start="1242" end="1248" text="spring" TYPE="DATE" comment="" />
-<NAME id="P6" start="2295" end="2316" text="Hunter     Mccarthy" TYPE="DOCTOR" comment="" />
+<NAME id="P6" start="2295" end="2316" text="Hunter       Mccarthy" TYPE="DOCTOR" comment="" />
 <NAME id="P7" start="3496" end="3503" text="Solomon" TYPE="DOCTOR" comment="" />
 <NAME id="P8" start="3685" end="3689" text="Vann" TYPE="DOCTOR" comment="" />
 <DATE id="P9" start="3762" end="3766" text="6/95" TYPE="DATE" comment="" />

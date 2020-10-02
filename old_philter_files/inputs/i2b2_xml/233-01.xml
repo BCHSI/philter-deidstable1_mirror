@@ -103,7 +103,7 @@ DV: 10/13/61
 <NAME id="P11" start="1974" end="1989" text="Pickett, Shilpa" TYPE="PATIENT" comment="" />
 <ID id="P12" start="1994" end="2005" text="129-53-47-3" TYPE="MEDICALRECORD" comment="" />
 <DATE id="P13" start="2035" end="2051" text="October 13, 2061" TYPE="DATE" comment="" />
-<NAME id="P14" start="2292" end="2306" text="ShilpaPickett" TYPE="PATIENT" comment="" />
+<NAME id="P14" start="2292" end="2306" text="Shilpa Pickett" TYPE="PATIENT" comment="" />
 <NAME id="P15" start="2406" end="2418" text="Leona Xiques" TYPE="DOCTOR" comment="" />
 <LOCATION id="P16" start="2425" end="2448" text="Second Alabama Hospital" TYPE="HOSPITAL" comment="" />
 <LOCATION id="P17" start="2449" end="2467" text="78 Parkhurst Drive" TYPE="STREET" comment="" />

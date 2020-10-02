@@ -321,7 +321,7 @@ Olivia Spence, M.D.DD: 05/08/91DT: 05/12/91DV: 05/08/91
 <NAME id="P19" start="2182" end="2203" text="Nicholas-Xaviar, Fred" TYPE="PATIENT" comment="" />
 <ID id="P20" start="2209" end="2217" text="65856594" TYPE="MEDICALRECORD" comment="" />
 <DATE id="P21" start="2219" end="2231" text="May 08, 2091" TYPE="DATE" comment="" />
-<DATE id="P22" start="2376" end="2392" text="April 27, 2091" TYPE="DATE" comment="" />
+<DATE id="P22" start="2376" end="2392" text="April   27, 2091" TYPE="DATE" comment="" />
 <NAME id="P23" start="4228" end="4243" text="Nicholas-Xaviar" TYPE="PATIENT" comment="" />
 <AGE id="P24" start="4249" end="4251" text="77" TYPE="AGE" comment="" />
 <NAME id="P25" start="4966" end="4987" text="Nicholas-Xaviar, Fred" TYPE="PATIENT" comment="" />
