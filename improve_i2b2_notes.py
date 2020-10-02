@@ -32,7 +32,7 @@ def delete_annotation(xml_file, phi_type, tag_to_delete):
 
 def fix_dates(xml_file,text):
 
-	# Rempve years in isolation
+	# Remove years in isolation
 	PHI_type="DATE"
 	date = text
 	if date.isdigit():
@@ -40,7 +40,7 @@ def fix_dates(xml_file,text):
 			xml_file = delete_annotation(xml_file, PHI_type, text)
 		elif len(date) == 2:
 			xml_file = delete_annotation(xml_file, PHI_type, text)
-	#if re.findall(r'(\b\d{2,4}(\')?s\b)',date) != []:
+
 	if re.findall(r'(^\d{2,4}(\')?s$|^\'\d{2}$)',date) != []:
 		xml_file = delete_annotation(xml_file, PHI_type, text)
 	

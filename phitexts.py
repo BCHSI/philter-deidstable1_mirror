@@ -777,7 +777,7 @@ class Phitexts:
         if not dynamic_blacklist_df.empty:
            dynamic_blacklist_export = dynamic_blacklist_df.to_csv(dynamic_blacklist_filepath, index=None, header=True,sep = '\t')
 
-    def mongo_save_log(self,mongo,failed_date,eval_table,phi_table,phi_count_df,csv_summary_df,batch_summary_df,dynamic_blacklist_df):
+    def mongo_save_log(self,mongo,failed_date,eval_table,phi_table,phi_count_df,csv_summary_df,batch_summary_df,dynamic_blacklist_df,age_norm_info):
         print("In mongo save log")
         try:
           db = self.db          
@@ -1227,7 +1227,8 @@ class Phitexts:
                         summary_by_category[phi_type]['tp'] = []
                     summary_by_category[phi_type]['tp'].append(token)
 
-                    if phi_type in ucsf_include_tags:
+                    if (phi_type in ucsf_include_tags
+                        or phi_type in i2b2_include_tags):
                         ctp += 1
                     else:
                         cfp += 1
@@ -1246,7 +1247,7 @@ class Phitexts:
                         summary_by_category[phi_type] = {}
                     if 'fp' not in summary_by_category[phi_type]:
                         summary_by_category[phi_type]['fp'] = []
-                        summary_by_category[phi_type]['fp'].append(token)
+                    summary_by_category[phi_type]['fp'].append(token)
 
                     cfp += 1
 
@@ -1285,8 +1286,9 @@ class Phitexts:
                         summary_by_category[phi_type]['fn'] = []
                     summary_by_category[phi_type]['fn'].append(token)
                 
-                    if phi_type in ucsf_include_tags:
-                        if phi_type == 'Age':
+                    if (phi_type in ucsf_include_tags
+                        or phi_type in i2b2_include_tags):
+                        if phi_type == 'Age' or phi_type == 'AGE':
                             if token.isdigit():
                                 if int(token) >= 90:
                                     cfn += 1
