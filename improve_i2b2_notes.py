@@ -21,12 +21,12 @@ def extractXML(directory,filename):
 
 def delete_annotation(xml_file, phi_type, tag_to_delete):
 	
-	remove_line_if = 'text="' + tag_to_delete + '"'
+	remove_line_if = bytes('text="' + tag_to_delete + '"', 'utf-8')
 	
-	for line in xml_file.split("\n"):
+	for line in xml_file.split(b"\n"):
 		if remove_line_if in line:
-			remove_line = line + "\n"
-			xml_file = xml_file.replace(remove_line,"")
+			remove_line = line + b"\n"
+			xml_file = xml_file.replace(remove_line,b"")
 	
 	return xml_file
 
@@ -142,7 +142,7 @@ def main():
 
 		text,tags_dict,xmlstr = extractXML(input_dir,filename)
 
-		for key, value in tags_dict.iteritems():
+		for key, value in tags_dict.items():
 
 			if isinstance(value, list):
 				for final_value in value:
@@ -192,7 +192,7 @@ def main():
 		
 		output_file = output_dir+filename
 		with open(output_file, "w") as text_file:
-			text_file.write(xmlstr)
+			text_file.write(xmlstr.decode("utf-8"))
 
 
 if __name__ == "__main__":
