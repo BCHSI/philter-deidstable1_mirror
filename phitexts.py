@@ -1058,7 +1058,11 @@ class Phitexts:
                     philter['stop'] = pphi[pstart][0]
                     philter['phitype'] = pphi[pstart][1]
                     philter['token'] = pphi[pstart][2]
-                    subtokens = self._get_sub_tokens(gold, philter)
+                    try:
+                        subtokens = self._get_sub_tokens(gold, philter)
+                    except Exception as err:
+                        raise Exception("ERROR: subtokenization failed for "
+                                        + filename + ": {0}".format(err))
                     if subtokens is None:
                         continue
                     for st in subtokens[0]:
@@ -1132,7 +1136,11 @@ class Phitexts:
                     phi['start'] = pstart
                     phi['stop'] = pdict[pstart][0]
                     phi['token'] = pdict[pstart][2]
-                    subtokens = self._get_sub_tokens(ftoken, phi)
+                    try:
+                        subtokens = self._get_sub_tokens(ftoken, phi)
+                    except Exception as err:
+                        raise Exception("ERROR: subtokenization failed for "
+                                        + filename + ": {0}".format(err))
                     if subtokens is None:
                         continue
                     for st in subtokens[0]:
