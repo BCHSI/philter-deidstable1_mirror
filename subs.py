@@ -274,14 +274,16 @@ class Subs:
                                         index_col=False,
                                         usecols=(lambda x:
                                                  x in ['note_key',
+                                                       'report_id',
                                                        'date_offset',
                                                        'deid_date_offset_cdw',
                                                        'deid_note_key',
+                                                       'deid_report_id',
                                                        'BirthDate',
+                                                       'Birthdate',
                                                        'Deid_BirthDate',
+                                                       'deid_birthbate',
                                                        'deid_turns_91_date']),
-                                        #usecols=['note_key', 'date_offset',
-                                        #         'deid_note_key'],
                                         dtype=str)
         except pd.errors.EmptyDataError as err:
             print("Pandas Empty Data Error: " + look_up_table_path
@@ -292,30 +294,46 @@ class Subs:
                   + " is invalid {0}".format(err))
             return {}
 
-        if "date_offset" in look_up_table.keys():
-            offset_table = look_up_table[~look_up_table["date_offset"].isnull()]
-            notekey2id["offset"] = pd.Series(offset_table.date_offset.values,
-                                          index=offset_table.note_key).to_dict()
-        elif "deid_date_offset_cdw" in look_up_table.keys():
-            offset_table = look_up_table[~look_up_table["deid_date_offset_cdw"].isnull()]
-            notekey2id["offset"] = pd.Series(offset_table.deid_date_offset_cdw.values,
-                                          index=offset_table.note_key).to_dict()
-        if "deid_note_key" in look_up_table.keys():
-            deid_table = look_up_table[~look_up_table["deid_note_key"].isnull()]
-            notekey2id["deidnotekey"] = pd.Series(deid_table.deid_note_key.values,
-                                                  index=deid_table.note_key).to_dict()
-        if "BirthDate" in look_up_table.keys():
-            dob_table = look_up_table[~look_up_table["BirthDate"].isnull()]
-            notekey2id["dob"] = pd.Series(dob_table.BirthDate.values,
-                                          index=dob_table.note_key).to_dict()
-        if "Deid_BirthDate" in look_up_table.keys():
-            deid_dob_table = look_up_table[~look_up_table["Deid_BirthDate"].isnull()]
-            notekey2id["deiddob"] = pd.Series(deid_dob_table.Deid_BirthDate.values,
-                                              index=deid_dob_table.note_key).to_dict()
+        nkey = ("note_key" if "note_key" in look_up_table.keys()
+                else ("report_id"
+                      if "report_id" in look_up_table.keys()
+                      else "") )
+        deid_nkey = ("deid_note_key" if "note_key" in look_up_table.keys()
+                     else ("deid_report_id"
+                           if "deid_report_id" in look_up_table.keys()
+                           else "") )
+        dateoffset = ("date_offset" if "date_offset" in look_up_table.keys()
+                      else ("deid_date_offset_cdw"
+                            if "deid_date_offset_cdw" in look_up_table.keys()
+                            else "") )
+        birthdate = ("BirthDate" if "BirthDate" in look_up_table.keys()
+                     else ("Birthdate"
+                           if "Birthdate" in look_up_table.keys()
+                           else "") )
+        deid_birthdate = ("Deid_BirthDate" if "Deid_BirthDate" in look_up_table.keys()
+                          else ("deid_birthdate"
+                                if "deid_birthdate" in look_up_table.keys()
+                                else "") )
+        if dateoffset:
+            offset_table = look_up_table[~look_up_table[dateoffset].isnull()]
+            notekey2id["offset"] = pd.Series(offset_table[dateoffset].values,
+                                             index=offset_table[nkey]).to_dict()
+        if deid_nkey:
+            deid_table = look_up_table[~look_up_table[deid_nkey].isnull()]
+            notekey2id["deidnotekey"] = pd.Series(deid_table[deid_nkey].values,
+                                                  index=deid_table[nkey]).to_dict()
+        if birthdate:
+            dob_table = look_up_table[~look_up_table[birthdate].isnull()]
+            notekey2id["dob"] = pd.Series(dob_table[birthdate].values,
+                                          index=dob_table[nkey]).to_dict()
+        if deid_birthdate:
+            deid_dob_table = look_up_table[~look_up_table[deid_birthdate].isnull()]
+            notekey2id["deiddob"] = pd.Series(deid_dob_table[deid_birthdate].values,
+                                              index=deid_dob_table[nkey]).to_dict()
         if "deid_turns_91_date" in look_up_table.keys():
             deid_91_bdate_table = look_up_table[~look_up_table["deid_turns_91_date"].isnull()]
             notekey2id["deid91bdate"] = pd.Series(deid_91_bdate_table.deid_turns_91_date.values,
-                                                  index=deid_91_bdate_table.note_key).to_dict()
+                                                  index=deid_91_bdate_table[nkey]).to_dict()
  
         return notekey2id
 
