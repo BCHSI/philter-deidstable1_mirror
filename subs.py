@@ -282,7 +282,7 @@ class Subs:
                                                        'BirthDate',
                                                        'Birthdate',
                                                        'Deid_BirthDate',
-                                                       'deid_birthbate',
+                                                       'deid_birthdate',
                                                        'deid_turns_91_date']),
                                         dtype=str)
         except pd.errors.EmptyDataError as err:
