@@ -157,6 +157,9 @@ class datetime2(datetime.datetime):
             return True
         return False
 
+    def __ne__(self, other): #ignores anything missing
+        return not self.__eq__(other)
+
     def get_raw_string(self):
         return self.date_string
 
