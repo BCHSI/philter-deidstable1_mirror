@@ -1,0 +1,14 @@
+<?xml version="1.0" ?>
+<Philter>
+<TEXT><![CDATA[Missense mutations leading to TP53 inactivation may also be sensitive to therapies that reactivate mutant p53 such as APR-246 (Gourley et al., 2016; ASCO Abstract 5571, Lehmann et al., 2012; 22965953, Mohell et al., 2015; 26086967, Franssonet al., 2016; 27179933).
+]]></TEXT>
+<TAGS>
+<DATE id="P0" start="118" end="121" text="APR" TYPE="DATE" comment="" />
+<ID id="P1" start="191" end="199" text="22965953" TYPE="ID" comment="" />
+<ID id="P2" start="222" end="230" text="26086967" TYPE="ID" comment="" />
+<ID id="P3" start="254" end="262" text="27179933" TYPE="ID" comment="" />
+<NAME id="P4" start="127" end="134" text="Gourley" TYPE="NAME" comment="" />
+<NAME id="P5" start="169" end="176" text="Lehmann" TYPE="NAME" comment="" />
+<CONTACT id="P6" start="30" end="34" text="TP53" TYPE="CONTACT" comment="" />
+</TAGS>
+</Philter>
