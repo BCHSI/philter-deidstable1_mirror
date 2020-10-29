@@ -5,6 +5,7 @@ import xmltodict
 import os
 import pandas as pd
 import re
+import sys
 
 # This script removes PHI tags that are not PHI (according to HIPAA) from i2b2 annotations
 
@@ -21,7 +22,10 @@ def extractXML(directory,filename):
 
 def delete_annotation(xml_file, phi_type, tag_to_delete):
 	
-	remove_line_if = bytes('text="' + tag_to_delete + '"', 'utf-8')
+	if sys.version_info < (3, 0):
+		remove_line_if = bytes('text="' + tag_to_delete + '"')
+	else:
+		remove_line_if = bytes('text="' + tag_to_delete + '"', 'utf-8')
 	
 	for line in xml_file.split(b"\n"):
 		if remove_line_if in line:
@@ -141,8 +145,12 @@ def main():
 	for filename in os.listdir(input_dir):
 
 		text,tags_dict,xmlstr = extractXML(input_dir,filename)
-
-		for key, value in tags_dict.items():
+		if sys.version_info < (3, 0):
+			all_tags = tags_dict.iteritems()
+		else:
+			all_tags = tags_dict.items()
+		
+		for key, value in all_tags:
 
 			if isinstance(value, list):
 				for final_value in value:
