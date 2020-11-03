@@ -82,7 +82,8 @@ class Subs:
     
     def get_shift_amount(self, note_id):
         try:
-            shift_amount = int(self.xwalk["offset"][note_id])
+            shift_amount = (None if self.xwalk["offset"][note_id] is None
+                            else int(self.xwalk["offset"][note_id]))
             if shift_amount == 0:
                 print("WARNING: shift amount for note " + str(note_id)
                       + " is zero.")
