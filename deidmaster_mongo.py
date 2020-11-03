@@ -8,10 +8,10 @@ from subprocess import call
 from collections import OrderedDict
 
 # using OrderedDict for reproducability
-servers = OrderedDict([('MCWLDEIDLAP701.ucsfmedicalcenter.org',24),
-                       ('qcdeidlap702.ucsfmedicalcenter.org',14),
-                       ('qcdeidlap703.ucsfmedicalcenter.org',14),
-                       ('qcdeidlap705.ucsfmedicalcenter.org',14)])
+servers = OrderedDict([('MCWLDEIDLAP701.ucsfmedicalcenter.org',30),
+                       ('qcdeidlap702.ucsfmedicalcenter.org',30),
+                       ('qcdeidlap703.ucsfmedicalcenter.org',30),
+                       ('qcdeidlap705.ucsfmedicalcenter.org',30),('qcdeidlap704.ucsfmedicalcenter.org',30)])
 random.seed(10101) #fix seed for reproducibility 
 
 
