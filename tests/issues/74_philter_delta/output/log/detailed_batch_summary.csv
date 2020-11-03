@@ -1,0 +1,2 @@
+filename	batch	file_size	total_tokens	phi_tokens	successfully_normalized	failed_normalized	successfully_surrogated	failed_surrogated
+./tests/issues/74_philter_delta/input/0.txt	0	70	20	8	2	0	0	0

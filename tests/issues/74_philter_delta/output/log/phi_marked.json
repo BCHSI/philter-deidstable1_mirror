@@ -1,0 +1,1 @@
+{"./tests/issues/74_philter_delta/input/0.txt": [{"start": 32, "end": 40, "word": "01/03/15", "type": "DATE"}, {"start": 58, "end": 68, "word": "0001/03/15", "type": "DATE"}, {"start": 56, "end": 62, "word": "040001", "type": "ID"}, {"start": 0, "end": 5, "word": "Senor", "type": "NAME"}, {"start": 6, "end": 9, "word": "Lee", "type": "NAME"}]}
