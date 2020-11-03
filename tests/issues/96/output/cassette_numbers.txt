@@ -1,0 +1,16 @@
+CASSETTES:  Representative sections are submitted as follows:
+B1:          Proximal surgical margin.
+B2:          Distal surgical margin.
+B3:          Appendix, cross-sections and distal tip, longitudinal.
+B4-B5:          Surgical margins, separate small bowel segment.
+B6:          Separate small bowel.
+B7:          Proximal terminal ileum.
+B8:          Middle terminal ileum.
+B9:          Distal terminal ileum.
+B10:          Ascending colon polyps proximal to mass (smaller *****
+blue).
+B11-B12:     Closest approach of mass to radial surgical margin, full
+thickness.
+B13-B15:     Mass.
+
+Cassettes B1-B4 went well. Cassettes *****-*****, however, failed.

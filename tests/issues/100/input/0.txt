@@ -1,0 +1,3 @@
+The mass has a pushing border and lacks a capsule grossly. 
+
+The mass is roughly spherical but lacks a gross capsule.

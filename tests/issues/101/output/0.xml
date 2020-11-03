@@ -1,0 +1,9 @@
+<?xml version="1.0" ?>
+<Philter>
+<TEXT><![CDATA[S12-34567
+]]></TEXT>
+<TAGS>
+<ID id="P0" start="0" end="9" text="S12-34567" TYPE="ID" comment="" />
+<CONTACT id="P1" start="4" end="9" text="34567" TYPE="CONTACT" comment="" />
+</TAGS>
+</Philter>

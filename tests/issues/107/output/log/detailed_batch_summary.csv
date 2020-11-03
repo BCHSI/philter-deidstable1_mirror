@@ -1,0 +1,2 @@
+filename	batch	file_size	total_tokens	phi_tokens	successfully_normalized	failed_normalized	successfully_surrogated	failed_surrogated
+./tests/issues/107/input/0.txt	0	265	55	14	1	0	0	0
