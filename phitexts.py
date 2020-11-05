@@ -16,10 +16,11 @@ from textmethods import get_clean, get_tokens
 import time
 from pymongo import MongoClient
 from pymongo.errors import ConnectionFailure
+from pymongo.errors import OperationFailure
 import bson
 import sys
 import pandas as pd
-from datetime import datetime
+import datetime
 import socket
 
 
@@ -481,6 +482,7 @@ class Phitexts:
            collection_meta_in.update_many({'_id': {'$in': self.filenames}},{'$set': { "redact_date": datetime.datetime.now(), "philter_version": mongo['philter_version']}})
         except:
            print("Error while saving deidentified files into Mongo")
+           raise OperationFailure(error.get("errmsg"), error.get("code"), error) 
     
 
 

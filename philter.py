@@ -551,10 +551,10 @@ class Philter:
                 # start timer
                 start_time = time.time()
             if __debug__ and self.verbose:
-                print("map_regex(): searching for regex with index "
-                      + str(pattern_index))
-            if __debug__ and self.verbose and pattern_index:
-                print("map_regex(): regex is " + str(regex))
+                print("map_regex(): searching for pattern with index "
+                      + str(pattern_index)) + " \""
+                      + self.patterns[pattern_index]["title"]
+                      + "\" is " + str(regex))
             
             matches = regex.finditer(text)
             

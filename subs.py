@@ -41,8 +41,9 @@ class Subs:
         try:
             deid_note_key = self.xwalk["deidnotekey"][note_id]
         except KeyError as err:
-            print("Key Error in deid_note_key_table for note " + str(note_id)
-                  + ": {0}".format(err))
+            if __debug__:
+                print("Missing Deid note key for note " + str(note_id)
+                      + ": {0}".format(err))
             deid_note_key = None
         return deid_note_key
 
@@ -50,8 +51,9 @@ class Subs:
         try:
             dob = self.parse_date(self.xwalk["dob"][note_id])
         except KeyError as err:
-            print("Key Error in dob_table for note " + str(note_id)
-                  + ": {0}".format(err))
+            if __debug__:
+                print("Missing DOB for note " + str(note_id)
+                      + ": {0}".format(err))
             dob = None
         return dob
 
@@ -59,8 +61,9 @@ class Subs:
         try:
             deid_dob = self.parse_date(self.xwalk["deiddob"][note_id])
         except KeyError as err:
-            print("Key Error in deid_dob_table for note " + str(note_id)
-                  + ": {0}".format(err))
+            if __debug__:
+                print("Missing Deid DOB in metadata for note " + str(note_id)
+                      + ": {0}".format(err))
             deid_dob = None
         return deid_dob
 
@@ -68,8 +71,9 @@ class Subs:
         try:
             deid_91_bdate = self.parse_date(self.xwalk["deid91bdate"][note_id])
         except KeyError as err:
-            print("Key Error in xwalk deid91bdate for note " + str(note_id)
-                  + ": {0}".format(err))
+            if __debug__:
+                print("Missing Deid 91st birthday for note " + str(note_id)
+                      + ": {0}".format(err))
             deid_91_bdate = None
         return deid_91_bdate
 
@@ -78,14 +82,16 @@ class Subs:
     
     def get_shift_amount(self, note_id):
         try:
-            shift_amount = int(self.xwalk["offset"][note_id])
+            shift_amount = (None if self.xwalk["offset"][note_id] is None
+                            else int(self.xwalk["offset"][note_id]))
             if shift_amount == 0:
                 print("WARNING: shift amount for note " + str(note_id)
                       + " is zero.")
                 shift_amount = None
         except KeyError as err:
-            print("Key Error in shift_table for note " + str(note_id)
-                  + ": {0}".format(err))
+            if __debug__:
+                print("Missing date shift for note " + str(note_id)
+                      + ": {0}".format(err))
             shift_amount = None
         except ValueError as err:
             print("Value Error: date_offset is not an integer for note "
@@ -129,7 +135,7 @@ class Subs:
                                 + " Overflow Error: {0}".format(err))
 
         dob = self.get_dob(note_id)
-        if date == dob:
+        if dob and date == dob:
             shifted_date = self.shift_dob_pid(date, note_id)
             
         # not yet implemented in Deid CDW
