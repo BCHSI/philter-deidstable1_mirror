@@ -1,0 +1,17 @@
+[
+    {
+        "title":"fax safe",
+        "type":"regex",
+        "exclude":false,
+        "filepath":"filters/regex/safe/fax_safe.txt",
+        "notes":"This should remove anything with pattern fax:"
+    },
+    {
+        "title":"xxx_xxx_xxxx",
+        "type":"regex",
+        "exclude":true,
+        "filepath":"filters/regex/contact/xxx_xxx_xxxx.txt",
+        "notes":"This should remove anything that xxx.xxx.xxxx",
+        "phi_type":"CONTACT"
+    }
+]

@@ -38,5 +38,5 @@
         "filepath":"filters/regex/dates/mm_yy_transformed.txt",
         "notes":"This should remove anything with pattern mm_yy",
         "phi_type":"DATE"
-    },
+    }
 ]
