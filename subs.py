@@ -5,6 +5,7 @@ from collections import defaultdict
 import datetime as dt
 import types
 from datetime2 import datetime2
+import calendar as cal
 import pymongo
 from pymongo.errors import ConnectionFailure
 import os
@@ -30,6 +31,8 @@ class Subs:
            self.xwalk = self._load_look_up_table(look_up_table_path)
 
         self.ref_date = self.parse_date(ref_date)
+        if not self.ref_date.is_complete():
+            raise ValueError("reference date is incomplete, use YYYY-MM-DD")
 
     def has_shift_amount(self, note_id):
         return note_id in self.xwalk["offset"]
@@ -130,18 +133,38 @@ class Subs:
             if __debug__: print("WARNING: cannot shift date \""
                                 + date.to_string(debug=True)
                                 + " pretty: " + date.to_string()
-                                + "\" with shift " + str(shift)
+                                + "\" with shift -" + str(shift)
                                 + " in note " + str(note_id)
                                 + " Overflow Error: {0}".format(err))
 
         dob = self.get_dob(note_id)
-        if dob and date == dob:
-            shifted_date = self.shift_dob_pid(date, note_id)
+        if not date.missing_year and dob and date == dob:
+            shifted_date = self.shift_dob_pid(dob, note_id)
+            shifted_date = datetime2(shifted_date.year, shifted_date.month,
+                                     shifted_date.day,
+                                     date_string = date.date_string,
+                                     missing_year = date.missing_year,
+                                     missing_month = date.missing_month,
+                                     missing_day = date.missing_day,
+                                     missing_century = date.missing_century)
             
         # not yet implemented in Deid CDW
         # shifted_date = max(shifted_date, shifted_dob)
         
         return shifted_date
+
+    def _days_from_bday(self, ref, dob):
+        days_from_bday = (dt.datetime(year = ref.year,
+                                      month = ref.month,
+                                      day = ref.day)
+                          - dt.datetime(year = ref.year,
+                                        month =  dob.month,
+                                        day = (dob.day - 1
+                                               if (dob.day == 29
+                                                   and dob.month == 2
+                                                   and not cal.isleap(ref.year))
+                                               else dob.day))).days
+        return days_from_bday
 
     def shift_dob_pid(self, dob, note_id):
         #
@@ -158,33 +181,26 @@ class Subs:
             if __debug__: print("WARNING: cannot shift date of birth \""
                                 + dob.to_string(debug=True)
                                 + " pretty: " + dob.to_string()
-                                + "\" with shift " + str(shift)
+                                + "\" with shift -" + str(shift)
                                 + " for note " + str(note_id)
                                 + " Overflow Error: {0}".format(err))
 
-        reference = self.ref_date # today or the date of Notes extraction
+        ref = self.ref_date # today or the date of Notes extraction
 
-        shifted_bday91 = dt.datetime(year = shifted_dob.year + 91,
-                                     month =  shifted_dob.month,
-                                     day = (shifted_dob.day - 1
-                                            if (shifted_dob.month == 2
-                                                and shifted_dob.day == 29)
-                                            else shifted_dob.day))
         shifted_age = self._age(shifted_dob)
         if shifted_age >= 91: # the patient is older than 90:
-            days_from_bday = (dt.datetime(year = reference.year,
-                                          month = reference.month,
-                                          day = reference.day)
-                              - dt.datetime(year = reference.year,
-                                            month =  shifted_dob.month,
-                                            day = shifted_dob.day)).days
+            days_from_bday = self._days_from_bday(ref, shifted_dob)
             if days_from_bday < 0:
-                shifted_byear = reference.year - 91
+                shifted_byear = ref.year - 91
             else:
-                shifted_byear = reference.year - 90
+                shifted_byear = ref.year - 90
             ninety_shift = (dt.datetime(year = shifted_byear,
                                         month = shifted_dob.month,
-                                        day = shifted_dob.day)
+                                        day = (shifted_dob.day - 1
+                                               if (shifted_dob.day == 29
+                                                   and shifted_dob.month == 2
+                                                   and not cal.isleap(shifted_byear))
+                                               else shifted_dob.day))
                             - dt.datetime(year = shifted_dob.year,
                                           month =  shifted_dob.month,
                                           day = shifted_dob.day))
@@ -208,9 +224,9 @@ class Subs:
             print("WARNING: Birthdate for age < 90 not shifted correctly for note ID", note_id)
 
         # perhaps good to implement some consistency checks with metadata
-        deid_bdate = self.get_deid_dob(note_id)
-        if deid_bdate is not None and shifted_dob != deid_bdate:
-            if __debug__:
+        if __debug__:
+            deid_bdate = self.get_deid_dob(note_id)
+            if deid_bdate is not None and shifted_dob != deid_bdate:
                 print("WARNING: shifted date of birth "
                       + shifted_dob.to_string()
                       + " with shift -" + str(shift) + " days"
@@ -219,20 +235,20 @@ class Subs:
                       + deid_bdate.to_string() + ".")
                 if (shifted_dob.day == deid_bdate.day
                     and shifted_dob.month == deid_bdate.month):
-                    print("WARNING: Reference date " + str(reference)
+                    print("WARNING: Reference date " + str(ref)
                           + " not equal to date of ETL?")
 
         return shifted_dob
 
-    def _age(self, dob): # integer age on reference date
-        if not dob: return None
-        age = self.ref_date.year - dob.year
-        days_from_bday = (dt.datetime(year = self.ref_date.year,
-                                      month = self.ref_date.month,
-                                      day = self.ref_date.day)
-                          - dt.datetime(year = self.ref_date.year,
-                                        month =  dob.month,
-                                        day = dob.day)).days
+    def _age(self, dob, dob_century=None): # integer age on reference date
+        if not dob or dob.missing_year: return None
+        if not dob.missing_century:
+            age = self.ref_date.year - dob.year
+        elif dob_century:
+            age = self.ref_date.year - dob.year % 100 - dob_century
+        else:
+            return None
+        days_from_bday = self._days_from_bday(self.ref_date, dob)
         if days_from_bday < 0:
             age -= 1
         return age
