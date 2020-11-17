@@ -108,7 +108,14 @@ class datetime2(datetime.datetime):
                                               and (parsed_date_1.year
                                                    != parsed_date_2.year))
         return missing_year, missing_month, missing_day, missing_century
-    
+
+    def is_complete(self):
+        return not (self.missing_century or self.missing_year
+                    or self.missing_month or self.missing_day)
+
+    def get_century(self):
+        return (self.year // 100) * 100
+
     def add_days(self, number_of_days):
         return self + number_of_days
 
