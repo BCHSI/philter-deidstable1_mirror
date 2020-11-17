@@ -553,6 +553,7 @@ class Philter:
                 # start timer
                 start_time = time.time()
 <<<<<<< HEAD
+<<<<<<< HEAD
             if __debug__ and self.verbose:
                 print("map_regex(): searching for pattern with index "
                       + str(pattern_index) + " \""
@@ -562,9 +563,14 @@ class Philter:
 =======
             # if __debug__ and self.verbose:
             print("map_regex(): searching for regex with index "
+=======
+
+            if __debug__ and self.verbose:
+                print("map_regex(): searching for regex with index "
+>>>>>>> uncommented if statement to check for verbose before outputting regex search info - had previoiusly commented this out
                       + str(pattern_index))
-            # if __debug__ and self.verbose and pattern_index:
-            print("map_regex(): regex is " + str(regex))
+            if __debug__ and self.verbose and pattern_index:
+                print("map_regex(): regex is " + str(regex))
 
 >>>>>>> modified to print out info about regex matches
             matches = regex.finditer(text)
@@ -573,7 +579,9 @@ class Philter:
             for m in matches:
                 match_count += 1
                 coord_map.add_extend(filename, m.start(), m.start()+len(m.group()))
-                print(m)
+
+                if __debug__ and self.verbose: # print the match
+                    print(m)
 
             self.patterns[pattern_index]["coordinate_map"] = coord_map
 
