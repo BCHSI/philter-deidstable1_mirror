@@ -552,11 +552,12 @@ class Philter:
                     self.regex_name_list.append(regex_name)
                 # start timer
                 start_time = time.time()
-            # if __debug__ and self.verbose:
-            print("map_regex(): searching for regex with index "
+
+            if __debug__ and self.verbose:
+                print("map_regex(): searching for regex with index "
                       + str(pattern_index))
-            # if __debug__ and self.verbose and pattern_index:
-            print("map_regex(): regex is " + str(regex))
+            if __debug__ and self.verbose and pattern_index:
+                print("map_regex(): regex is " + str(regex))
 
             matches = regex.finditer(text)
 
@@ -564,7 +565,9 @@ class Philter:
             for m in matches:
                 match_count += 1
                 coord_map.add_extend(filename, m.start(), m.start()+len(m.group()))
-                print(m)
+
+                if __debug__ and self.verbose: # print the match
+                    print(m)
 
             self.patterns[pattern_index]["coordinate_map"] = coord_map
 
