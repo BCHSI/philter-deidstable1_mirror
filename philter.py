@@ -96,7 +96,7 @@ class Philter:
                     "filepath": "",
                     "phi_type": "PROBE",
                     "exclude": True,
-                    "pos": ["NNP"],
+                    "pos": ["NNP","CD"],
                     "type": "dynamic_set",
                     "title": "Dynamic Blacklist"}
                 if ("namesprobe" in config):
@@ -371,6 +371,7 @@ class Philter:
                                                    'note_key'],
                                           dtype=str, encoding='latin-1')
                 names_probes = probes_file.loc[(probes_file['phi_type'] == 'lname') | (probes_file['phi_type'] == 'fname')]
+                zip_probes = probes_file.loc[(probes_file['phi_type'] == 'ZIP')]
             except pd.errors.EmptyDataError as err:
                 print("Pandas Empty Data Error: " + filepath
                        + " is empty {0}".format(err))
@@ -380,16 +381,32 @@ class Philter:
                        + " is invalid {0}".format(err))
                 return {}, {}
             
-            # need to make ditionary of lists
+            # Make list of lists in dictionary: map_set = {tup(probe,probe_type): [note_key1, note_key2]}
+            
+            # Names
             for index, row in names_probes.iterrows():
                 # Alternate value column name:
                 #value = row['clean_value']
+                probe_type = 'name'
                 value = row['value']
                 note_key = row['note_key']
                 if value in map_set:
-                    map_set[value].append(note_key)
+                    map_set[(value,probe_type)].append(note_key)
                 else:
-                    map_set[value] = [note_key]
+                    map_set[(value,probe_type)] = [note_key]
+            
+            # ZIP
+            for index, row in zip_probes.iterrows():
+                # Alternate value column name:
+                #value = row['clean_value']
+                probe_type = 'zip'
+                value = row['value']
+                note_key = row['note_key']
+                if value in map_set:
+                    map_set[(value,probe_type)].append(note_key)
+                else:
+                    map_set[(value,probe_type)] = [note_key]
+        
         elif filepath.endswith(".mongo"):
              map_set = self.known_phi
         else:
@@ -405,6 +422,7 @@ class Philter:
         context_probes = []
         pat_idx_dynbl = self.pattern_indexes["Dynamic Blacklist"]
         if self.known_phi:
+            # TODO: test probe enhancements with self.known_phi
             for probe in self.known_phi[filename]:
                 probe_clean = get_clean(probe)
                 for pc in probe_clean:
@@ -427,18 +445,29 @@ class Philter:
             note_key = file_note_key
             for probe in self.patterns[pat_idx_dynbl]["dyndata"]:
                 if note_key in self.patterns[pat_idx_dynbl]["dyndata"][probe]:
-                    probe_clean = get_clean(str(probe))
+                    probe_clean = get_clean(str(probe[0]))
+
+                    # Get probe type in current note
+                    probe_type_current = probe[1]
                     for pc in probe_clean:
-                        prb = re.sub(r"[^a-zA-Z0-9]+", "",
-                                     str(pc).lower().strip())
-                        if ((include_singles or len(prb) > 1)
-                            and (include_nonames or prb not in nonames)):
+
+                        ### Name
+                        if probe_type_current == 'name':
+                            prb = re.sub(r"[^a-zA-Z0-9]+", "",
+                                         str(pc).lower().strip())
+                            if ((include_singles or len(prb) > 1)
+                                and (include_nonames or prb not in nonames)):
+                                map_set[prb] = self.patterns[pat_idx_dynbl]["dyndata"][probe]
+                            # If single character or in list of nonames,
+                            # add to list of context probes
+                            else:
+                                if prb.isdigit() == False:
+                                    context_probes.append(prb)
+
+                        ### Zip
+                        if probe_type_current == 'zip':
+                            prb = pc
                             map_set[prb] = self.patterns[pat_idx_dynbl]["dyndata"][probe]
-                        # If single character or in list of nonames,
-                        # add to list of context probes
-                        else:
-                            if prb.isdigit() == False:
-                                context_probes.append(prb)
 
         self.patterns[pat_idx_dynbl]["data"] = map_set
 
