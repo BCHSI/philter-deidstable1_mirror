@@ -10,22 +10,23 @@ import os.path
 #mfpath = '/data/shared/mapping_files/note_info_re_id_pat_mapping_final_mod.txt'
 
 # Generate the Hash table for the Meta file
+# Use columns from udpated probes (/data/notes/Notes_2020_09_04/PHI_PROBES.txt)
+
 def load_probe_to_hash(prbpath):
     probe = {}
-    prbfile = open(prbpath)
+    prbfile = open(prbpath, encoding='latin1')
     print(prbpath + " loading")
     for line in prbfile:
         line = line.rstrip('\n')
         line = line.replace('.0','')
         line = line.replace('\"','')
         value = line.split('\t')
-        
         if value[1] in probe:
-           val = value[2] +"\t" + value[5]
+           val = value[3] +"\t" + value[6]
            probe[value[1]].add(val)
         else:
            probe[value[1]] = set()
-           probe[value[1]].add(value[2] +"\t" + value[5])
+           probe[value[1]].add(value[3] +"\t" + value[6])
     print("loaded "+ prbpath +" into hash")
     return probe
 
