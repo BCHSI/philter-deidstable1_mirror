@@ -140,13 +140,16 @@ class Subs:
         dob = self.get_dob(note_id)
         if not date.missing_year and dob and date == dob:
             shifted_date = self.shift_dob_pid(dob, note_id)
-            shifted_date = datetime2(shifted_date.year, shifted_date.month,
-                                     shifted_date.day,
-                                     date_string = date.date_string,
-                                     missing_year = date.missing_year,
-                                     missing_month = date.missing_month,
-                                     missing_day = date.missing_day,
-                                     missing_century = date.missing_century)
+            if shifted_date is None:
+              return None
+            else:
+              shifted_date = datetime2(shifted_date.year, shifted_date.month,
+                                       shifted_date.day,
+                                       date_string = date.date_string,
+                                       missing_year = date.missing_year,
+                                       missing_month = date.missing_month,
+                                       missing_day = date.missing_day,
+                                       missing_century = date.missing_century)
             
         # not yet implemented in Deid CDW
         # shifted_date = max(shifted_date, shifted_dob)
