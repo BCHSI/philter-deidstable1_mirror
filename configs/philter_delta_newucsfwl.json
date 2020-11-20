@@ -2296,14 +2296,6 @@
         "note": "",
         "phi_type":"NAME"
     },
-    {
-        "title":"month_name",
-        "type":"regex",
-        "exclude":true,
-        "filepath":"filters/regex/dates/month_name_transformed.txt",
-        "notes":"This should remove anything with pattern month_name",
-        "phi_type":"DATE"
-    },
       {
         "title": "Firstnames Blacklist",
         "type": "set",

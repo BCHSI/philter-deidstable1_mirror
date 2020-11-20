@@ -1,11 +1,11 @@
-[  
+[
    {
         "title":"ucsf apex safe",
         "type":"regex",
         "exclude":false,
         "filepath":"filters/regex/ucsf_regex/ucsf_apex_safe.txt",
         "notes":"This should remove anything with pattern apex"
-    }, 
+    },
     {
         "title":"ucsf MyChart safe",
         "type":"regex",
@@ -19,14 +19,14 @@
         "exclude":false,
         "filepath":"filters/regex/safe/hospital_safe.txt",
         "notes":"This should remove anything with pattern hospital"
-    }, 
+    },
    {
         "title":"wheezes safe",
         "type":"regex",
         "exclude":false,
         "filepath":"filters/regex/safe/wheezes_safe.txt",
         "notes":""
-    }, 
+    },
 
    {
         "title":"days safe",
@@ -888,14 +888,14 @@
         "exclude":false,
         "filepath":"filters/regex/safe/oral_safe.txt",
         "notes":"This should remove anything with pattern oral"
-    },  
+    },
     {
         "title": "ordering md safe",
         "type": "regex",
         "exclude": false,
         "filepath": "filters/regex/safe/ordering_md_safe.txt",
         "note": ""
-    }, 
+    },
     {
         "title": "order md safe",
         "type": "regex",
@@ -909,28 +909,28 @@
         "exclude": false,
         "filepath": "filters/regex/safe/prn_safe.txt",
         "note": ""
-    },  
+    },
     {
         "title": "prn safe",
         "type": "regex",
         "exclude": false,
         "filepath": "filters/regex/safe/peak_safe.txt",
         "note": ""
-    },  
+    },
     {
         "title": "reviewed by safe",
         "type": "regex",
         "exclude": false,
         "filepath": "filters/regex/safe/reviewed_by_safe.txt",
         "note": ""
-    }, 
+    },
     {
         "title": "smoking safe",
         "type": "regex",
         "exclude": false,
         "filepath": "filters/regex/safe/smoking_safe.txt",
         "note": ""
-    },     
+    },
     {
         "title":"full street address",
         "type":"regex",
@@ -970,7 +970,7 @@
         "filepath":"filters/regex/addresses/hospital2.txt",
         "notes":"This should remove anything the resembles a hospital name",
         "phi_type":"LOCATION"
-    },  
+    },
     {
         "title":"number streetname noindicator suite",
         "type":"regex",
@@ -1614,7 +1614,7 @@
         "filepath":"filters/regex/dates/as_of_date.txt",
         "notes":"This should remove anything with pattern as of d/d",
         "phi_type":"DATE"
-    },  
+    },
     {
         "title":"season of yyyy",
         "type":"regex",
@@ -1622,7 +1622,7 @@
         "filepath":"filters/regex/dates/season_of_yyyy_transformed.txt",
         "notes":"",
         "phi_type":"DATE"
-    }, 
+    },
     {
         "title":"season of yy",
         "type":"regex",
@@ -1630,7 +1630,7 @@
         "filepath":"filters/regex/dates/season_of_yy_transformed.txt",
         "notes":"",
         "phi_type":"DATE"
-    }, 
+    },
 
     {
         "title":"model number",
@@ -1647,7 +1647,7 @@
         "filepath":"filters/regex/mrn_id/lot_#.txt",
         "notes":"This should remove anything with pattern lot #",
         "phi_type":"ID"
-    },      
+    },
     {
         "title":"id verbose",
         "type":"regex",
@@ -1655,7 +1655,7 @@
         "filepath":"filters/regex/mrn_id/id_verbose.txt",
         "notes":"This should remove anything with pattern ID: XXXXX",
         "phi_type":"ID"
-    },      
+    },
     {
         "title":"activation code",
         "type":"regex",
@@ -1663,7 +1663,7 @@
         "filepath":"filters/regex/mrn_id/activation_code.txt",
         "notes":"This should remove anything with pattern activation code: XXXXX-XXXX-XXXXX",
         "phi_type":"ID"
-    },              
+    },
     {
         "title":"six or more digits",
         "type":"regex",
@@ -1815,7 +1815,7 @@
         "filepath":"filters/regex/mrn_id/mixed005.txt",
         "notes":"This should remove anything that matches CDC",
         "phi_type":"ID"
-    },  
+    },
     {
         "title":"mixed 6",
         "type":"regex",
@@ -1855,7 +1855,7 @@
         "filepath":"filters/regex/mrn_id/CCCDDD.txt",
         "notes":"This should remove anything that matches CCCDDD",
         "phi_type":"ID"
-    },  
+    },
     {
         "title":"visit code",
         "type":"regex",
@@ -1863,7 +1863,7 @@
         "filepath":"filters/regex/mrn_id/visit_code.txt",
         "notes":"",
         "phi_type":"ID"
-    },  
+    },
     {
         "title":"DDDDCDDDDD",
         "type":"regex",
@@ -1887,7 +1887,7 @@
         "filepath":"filters/regex/mrn_id/DD-DD-DD-DD.txt",
         "notes":"This should remove anything that matches any numbers separated by 3 dashes",
         "phi_type":"ID"
-    },  
+    },
     {
         "title":"DD-DDDDDC",
         "type":"regex",
@@ -2031,7 +2031,7 @@
         "filepath": "filters/regex/salutations/confirmed_by_name.txt",
         "note": "",
         "phi_type":"NAME"
-    },  
+    },
       {
         "title": "editor name",
         "type": "regex",
@@ -2039,7 +2039,7 @@
         "filepath": "filters/regex/salutations/editor_name.txt",
         "note": "",
         "phi_type":"NAME"
-    }, 
+    },
       {
         "title": "code status name",
         "type": "regex",
@@ -2047,7 +2047,7 @@
         "filepath": "filters/regex/salutations/code_status_name.txt",
         "note": "",
         "phi_type":"NAME"
-    },  
+    },
   {
         "title": "attending",
         "type": "regex",
@@ -2103,7 +2103,7 @@
         "filepath": "filters/regex/salutations/wrote.txt",
         "note": "",
         "phi_type":"NAME"
-    },     
+    },
     {
         "title": "salutations1",
         "type": "regex",
@@ -2295,14 +2295,6 @@
         "filepath": "filters/regex/ucsf_regex/ucsf_neighborhoods.txt",
         "note": "",
         "phi_type":"NAME"
-    },
-    {
-        "title":"month_name",
-        "type":"regex",
-        "exclude":true,
-        "filepath":"filters/regex/dates/month_name_transformed.txt",
-        "notes":"This should remove anything with pattern month_name",
-        "phi_type":"DATE"
     },
       {
         "title": "Firstnames Blacklist",
