@@ -552,6 +552,7 @@ class Philter:
                     self.regex_name_list.append(regex_name)
                 # start timer
                 start_time = time.time()
+
             if __debug__ and self.verbose:
                 print("map_regex(): searching for pattern with index "
                       + str(pattern_index) + " \""

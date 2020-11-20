@@ -1,6 +1,0 @@
-<re.Match object; span=(0, 4), match='Fax:'>
-map_regex(): searching for pattern with index 73 "fax safe" is re.compile('\\b(?i)fax:', re.IGNORECASE)
-
-<re.Match object; span=(4, 17), match='(111)222-3333'>
-map_regex(): searching for pattern with index 261 "xxx_xxx_xxxx" is re.compile('(\\b\\d(\\-|\\s|\\.))?(\\b\\d{3}\\s?[\\s\\-\\.]?\\s?|\\(\\d{3}\\)[\\s\\-\\.]?\\s?)?\\b([a-zA-Z])?\\d{3,4}[\\s\\-\\.](\\d{3,4}|xxxx|xxx|\\*\\*\\*\\*|\\*\\*\\*)(\\/\\d{4})?')
-
