@@ -1,1 +1,0 @@
-{"./tests/issues/96/input/lymph_nodes.txt": [{"start": 65, "end": 70, "word": "11/16", "type": "DATE"}], "./tests/issues/96/input/cassette_numbers.txt": [{"start": 629, "end": 635, "word": "B11-15", "type": "ID"}], "./tests/issues/96/input/molecular_markers_1.txt": [{"start": 0, "end": 2, "word": "Ki", "type": "NAME"}]}

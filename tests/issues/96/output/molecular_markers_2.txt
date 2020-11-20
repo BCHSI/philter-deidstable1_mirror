@@ -1,5 +1,0 @@
-Results in the tumor cell nuclei are:
-MLH1 expression:  Present.
-MSH2 expression:  Present.
-MSH6 expression:  Present.
-PMS2 expression:  Present.

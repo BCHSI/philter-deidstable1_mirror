@@ -4,7 +4,7 @@ import argparse
 
 def find_matches(fin):
 
-    matches = {}
+    matches = []
 
     with open(fin, "r") as f:
         full_text = f.readlines()
@@ -13,14 +13,11 @@ def find_matches(fin):
 
         if full_text[i].startswith("<re.Match object; "):
 
-            matches[full_text[i]] = {"index" : "", "regex_preview" : ""}
-
             j = i
             while not full_text[j].startswith("map_regex(): "):
                 j -= 1
 
-            matches[full_text[i]]["index"] = full_text[j - 1]
-            matches[full_text[i]]["regex_preview"] = full_text[j]
+            matches.append({"match" : full_text[i], "info" : full_text[j]})
 
     return matches
 
@@ -30,10 +27,9 @@ def output_matches(matches, fout):
 
     with open(fout, "w") as f:
 
-        for key in matches:
-            f.write(key)
-            f.write(matches[key]["index"])
-            f.write(matches[key]["regex_preview"])
+        for m in matches:
+            f.write(m["match"])
+            f.write(m["info"])
             f.write("\n")
 
 
