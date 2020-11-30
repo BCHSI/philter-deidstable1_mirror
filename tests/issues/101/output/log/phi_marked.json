@@ -1,0 +1,1 @@
+{"./tests/issues/101/input/0.txt": [{"start": 0, "end": 9, "word": "S12-34567", "type": "ID"}, {"start": 4, "end": 9, "word": "34567", "type": "CONTACT"}]}
