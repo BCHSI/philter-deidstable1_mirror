@@ -1,0 +1,6 @@
+filename	batch	file_size	total_tokens	phi_tokens	successfully_normalized	failed_normalized	successfully_surrogated	failed_surrogated
+./tests/issues/96/input/molecular_markers_2.txt	0	146	28	4	0	0	0	0
+./tests/issues/96/input/molecular_markers_1.txt	0	117	25	1	0	0	0	0
+./tests/issues/96/input/cassette_numbers.txt	0	654	121	13	0	0	0	0
+./tests/issues/96/input/lymph_nodes.txt	0	120	24	2	1	0	0	0
+./tests/issues/96/input/tumor_staging.txt	0	26	7	1	0	0	0	0
