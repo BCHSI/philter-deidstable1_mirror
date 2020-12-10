@@ -170,11 +170,8 @@ class Subs:
         return days_from_bday
 
     def shift_dob_pid(self, dob, note_id):
-        #
         shift = self.get_shift_amount(note_id)
-        deid_bday91 = self.get_deid_91_bdate(note_id)
-
-        if shift is None or dob is None or deid_bday91 is None:
+        if shift is None or dob is None:
             if __debug__: print("WARNING: cannot find birth date info"
                                 + " for note " + str(note_id))
             return None
