@@ -32,15 +32,15 @@ def black_list_test():
         if os.path.exists(program_output):
             rmtree(program_output)
         os.mkdir(program_output)
-
+        
         print("\nRunning test ID "+directory+"...")
-
+        
         os.chdir(os.path.abspath(os.path.dirname(script)))
         call(["python3", script,"-i="+input_data,"-a="+input_data,
         "-o="+program_output,"-f="+conf_file,"-e=False"])
         os.chdir(WORKING_DIR)
-
-
+        
+                
         dir_diff(golden_output,program_output)
 
 def white_list_test():
@@ -55,15 +55,15 @@ def white_list_test():
         if os.path.exists(program_output):
             rmtree(program_output)
         os.mkdir(program_output)
-
+        
         print("\nRunning test ID "+directory+"...")
-
+        
         os.chdir(os.path.abspath(os.path.dirname(script)))
         call(["python3", script,"-i="+input_data,"-a="+input_data,
         "-o="+program_output,"-f="+conf_file,"-e=False"])
         os.chdir(WORKING_DIR)
-
-
+        
+                
         dir_diff(golden_output,program_output)
 
 def regex_test():
@@ -78,26 +78,26 @@ def regex_test():
         if os.path.exists(program_output):
             rmtree(program_output)
         os.mkdir(program_output)
-
+        
         print("\nRunning test ID "+directory+"...")
-
+        
         os.chdir(os.path.abspath(os.path.dirname(script)))
         call(["python3", script,"-i="+input_data,"-a="+input_data,
         "-o="+program_output,"-f="+conf_file,"-e=False"])
         os.chdir(WORKING_DIR)
-
-
+        
+                
         dir_diff(golden_output,program_output)
 
 def new_script_test(new_script, config_path):
     if os.path.exists(SCRIPT_TEST_TEMP_FOLDER_1):
         rmtree(SCRIPT_TEST_TEMP_FOLDER_1)
     os.mkdir(SCRIPT_TEST_TEMP_FOLDER_1)
-
+    
     if os.path.exists(SCRIPT_TEST_TEMP_FOLDER_2):
         rmtree(SCRIPT_TEST_TEMP_FOLDER_2)
     os.mkdir(SCRIPT_TEST_TEMP_FOLDER_2)
-
+    
     absolute_config_path = os.path.abspath(conf_path)
     absolute_script = os.path.abspath(script)
     absolute_new_script = os.path.abspath(new_script)
@@ -111,7 +111,7 @@ def new_script_test(new_script, config_path):
     os.chdir(WORKING_DIR)
 
     #run the new script
-
+    
     os.chdir(os.path.abspath(os.path.dirname(new_script)))
     print("RUNNING SCRIPT 2")
     call(["python3", absolute_new_script,"-i="+SCRIPT_TEST_DATA,"-a="+SCRIPT_TEST_DATA,"-o="+SCRIPT_TEST_TEMP_FOLDER_2,"-f="+absolute_config_path,"-e=False"])
@@ -127,10 +127,10 @@ def dir_diff(true_output, test_output):
     different_files = 0
     for f in os.listdir(true_output):
         filename = os.fsdecode(f)
-        if filename.endswith(".txt"):
+        if filename.endswith(".txt"): 
             total_files+=1
             #if the two files' contents are equal
-
+            
             if not filecmp.cmp( os.path.join(true_output, filename) , os.path.join(test_output, filename) ):
                 print(filename+" doesn't match")
                 different_files+=1
@@ -146,18 +146,19 @@ if __name__=="__main__":
     print("\n______________________________")
     print("RUNNING BLACKLIST TESTS...")
     black_list_test()
-
+    
     print("\n______________________________")
     print("RUNNING WHITELIST TESTS...")
     white_list_test()
-
+    
     print("\n______________________________")
     print("RUNNING REGEX TESTS...")
     regex_test()
 
-
+    
     if len(sys.argv) > 2:
         new_script = sys.argv[2]
         conf_path = os.path.abspath("../configs/philter_alpha.json")
         print("Running new script tests:...")
         new_script_test(new_script,conf_path)
+
