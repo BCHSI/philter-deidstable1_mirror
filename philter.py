@@ -373,6 +373,8 @@ class Philter:
                                           dtype=str, encoding='latin-1')
                 names_probes = probes_file.loc[(probes_file['phi_type'] == 'lname') | (probes_file['phi_type'] == 'fname')]
                 zip_probes = probes_file.loc[(probes_file['phi_type'] == 'ZIP')]
+                mrn_probes = probes_file.loc[(probes_file['phi_type'] == 'MRN')]
+                phone_probes = probes_file.loc[(probes_file['phi_type'] == 'phone')]
             except pd.errors.EmptyDataError as err:
                 print("Pandas Empty Data Error: " + filepath
                        + " is empty {0}".format(err))
@@ -401,6 +403,30 @@ class Philter:
                 # Alternate value column name:
                 #value = row['clean_value']
                 probe_type = 'zip'
+                value = row['value']
+                note_key = row['note_key']
+                if value in map_set:
+                    map_set[(value,probe_type)].append(note_key)
+                else:
+                    map_set[(value,probe_type)] = [note_key]
+
+            # MRN
+            for index, row in mrn_probes.iterrows():
+                # Alternate value column name:
+                #value = row['clean_value']
+                probe_type = 'mrn'
+                value = row['value']
+                note_key = row['note_key']
+                if value in map_set:
+                    map_set[(value,probe_type)].append(note_key)
+                else:
+                    map_set[(value,probe_type)] = [note_key]
+
+            # Phone
+            for index, row in phone_probes.iterrows():
+                # Alternate value column name:
+                #value = row['clean_value']
+                probe_type = 'phone'
                 value = row['value']
                 note_key = row['note_key']
                 if value in map_set:
@@ -469,6 +495,31 @@ class Philter:
                         if probe_type_current == 'zip':
                             prb = pc
                             map_set[prb] = self.patterns[pat_idx_dynbl]["dyndata"][probe]
+
+                        ### MRN
+                        if probe_type_current == 'mrn':
+                            prb = pc
+                            map_set[prb] = self.patterns[pat_idx_dynbl]["dyndata"][probe]
+
+                        ### Phone
+                        if probe_type_current == 'phone':
+                            
+                            pc = re.sub(r"[^0-9]+", "",str(pc).strip())
+                            
+                            pc_len = len(pc)
+                            
+                            if pc_len == 10:
+                                pc_split = [pc[0:3],pc[3:6],pc[6:10]]
+
+                            if pc_len == 7:
+                                pc_split = [pc[0:3],pc[3:7]]
+                            
+                            if pc_len == 7:
+                                pc_split = [pc[0:3],pc[3:7]]                                
+
+                            
+                            for prb in pc_split:
+                                map_set[prb] = self.patterns[pat_idx_dynbl]["dyndata"][probe]
 
         self.patterns[pat_idx_dynbl]["data"] = map_set
 
