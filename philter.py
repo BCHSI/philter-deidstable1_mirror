@@ -108,7 +108,20 @@ class Philter:
                     dynamic_blacklist["filepath"] = "Mongo.mongo"
                 self.patterns.append(dynamic_blacklist)
 
-                dynamic_blacklist_context = {
+
+                dynamic_blacklist_regex = {
+                    "title": "Probes Regex",
+                    "notes": "This regex marks selected probes types as PHI",
+                    "type": "dynamic_regex",
+                    "exclude": True,
+                    "filepath": "filters/regex/probes/probes_regex.txt",
+                    #"context": "left_or_right",
+                    #"context_filter": "all",
+                    "phi_type": "PROBE"}
+                self.patterns.append(dynamic_blacklist_regex)
+
+
+                dynamic_blacklist_regex_context = {
                     "title": "Probes Regex Context",
                     "notes": "This regex marks selected probes as PHI if they have neighboring PHI tokens",
                     "type": "dynamic_regex_context",
@@ -117,7 +130,7 @@ class Philter:
                     "context": "left_or_right",
                     "context_filter": "all",
                     "phi_type": "PROBE"}
-                self.patterns.append(dynamic_blacklist_context)
+                self.patterns.append(dynamic_blacklist_regex_context)
 
         if "xml" in config:
             if not os.path.exists(config["xml"]):
@@ -293,7 +306,7 @@ class Philter:
         """ given our input pattern config will load our sets and pre-compile our regex"""
 
         known_pattern_types = set(["regex", "set", "dynamic_set",
-                                   "regex_context", "dynamic_regex_context",
+                                   "regex_context", "dynamic_regex","dynamic_regex_context",
                                    "stanford_ner", "pos_matcher", "match_all"])
         require_files = set(["regex", "set"])
         require_pos = set(["pos_matcher"])
@@ -327,7 +340,14 @@ class Philter:
                 if pattern["filepath"].split(".")[-1] not in regex_filetypes:
                     raise Exception("Invalid filteype", pattern["filepath"],
                                     "must be of", regex_filetypes)
+                self.patterns[i]["data"] = None
                 self.patterns[i]["data"] = self.precompile(pattern["filepath"])
+            if pattern["type"] == "dynamic_regex":
+                if pattern["filepath"].split(".")[-1] not in regex_filetypes:
+                    raise Exception("Invalid filteype", pattern["filepath"],
+                                    "must be of", regex_filetypes)
+                self.patterns[i]["data"] = None
+                self.patterns[i]["dyndata"] = self.precompile(pattern["filepath"])
             if pattern["type"] == "dynamic_regex_context":
                 if pattern["filepath"].split(".")[-1] not in regex_filetypes:
                     raise Exception("Invalid filteype", pattern["filepath"],
@@ -446,6 +466,7 @@ class Philter:
                    'patient', 'study', 'nan']
         map_set = {}
         context_probes = []
+        regex_probes = []
         pat_idx_dynbl = self.pattern_indexes["Dynamic Blacklist"]
         if self.known_phi:
             # TODO: test probe enhancements with self.known_phi
@@ -505,30 +526,33 @@ class Philter:
                             
                             pc = re.sub(r"[^0-9]+", "",str(pc).strip())
                             
-                            pc_len = len(pc)
-                            
-                            if pc_len == 10:
-                                pc_split = [pc[0:3],pc[3:6],pc[6:10]]
+                            # Allow for any number of non-alphanumeric characters to separate each digit,
+                            # as long as all digits in probe are present                               
+                            pc_regex = ''
+                            for i in range(0,(len(pc)-1)):
+                                pc_regex += pc[i] + '([^0-9A-Za-z])?'
 
-                            if pc_len == 7:
-                                pc_split = [pc[0:3],pc[3:7]]
-                            
-                            if pc_len == 7:
-                                pc_split = [pc[0:3],pc[3:7]]                                
+                            pc_regex += pc[-1]
 
-                            
-                            for prb in pc_split:
-                                map_set[prb] = self.patterns[pat_idx_dynbl]["dyndata"][probe]
+                            regex_probes.append(pc_regex)
 
         self.patterns[pat_idx_dynbl]["data"] = map_set
 
-        # Substitute probes into probes_regex_context
-        if len(context_probes) > 0:
-            pat_idx_prbregx = self.pattern_indexes["Probes Regex Context"]
+        # Substitute probes into probes_regex
+        if len(regex_probes) > 0:
+            pat_idx_prbregx = self.pattern_indexes["Probes Regex"]
             rgx = self.patterns[pat_idx_prbregx]['dyndata'].pattern
             regex_string = rgx.replace('"""+probe+r"""',
-                                       '|'.join(context_probes))
+                                       '|'.join(regex_probes))
             self.patterns[pat_idx_prbregx]['data'] = re.compile(regex_string)
+
+        # Substitute probes into probes_regex_context
+        if len(context_probes) > 0:
+            pat_idx_prbregxcontext = self.pattern_indexes["Probes Regex Context"]
+            rgx = self.patterns[pat_idx_prbregxcontext]['dyndata'].pattern
+            regex_string = rgx.replace('"""+probe+r"""',
+                                       '|'.join(context_probes))
+            self.patterns[pat_idx_prbregxcontext]['data'] = re.compile(regex_string)
 
 
     def map_coordinates(self, allowed_filetypes=set(["txt", "ano"])):
@@ -575,6 +599,8 @@ class Philter:
                     self.map_set(filename=filename, text=txt, pattern_index=i)
                 elif pat["type"] == "set":
                     self.map_set(filename=filename, text=txt, pattern_index=i)
+                elif pat["type"] == "dynamic_regex":
+                    self.map_regex(filename=filename, text=txt, pattern_index=i)
                 elif pat["type"] == "dynamic_regex_context":
                     self.map_regex_context(filename=filename, text=txt,
                                            pattern_index=i)
@@ -619,6 +645,7 @@ class Philter:
             raise Exception("Invalid pattern index: ", pattern_index, "pattern length", len(patterns))
         coord_map = self.patterns[pattern_index]["coordinate_map"]
         regex = self.patterns[pattern_index]["data"]
+        if regex == None: return # nothing to match
         regex_name = os.path.basename(self.patterns[pattern_index]['filepath'])
 
         # All regexes except matchall
@@ -984,7 +1011,7 @@ class Philter:
             phi_type = "OTHER"
 
         for start,stop in coord_map.filecoords(filename):
-            if pattern['type'] != 'regex_context' and pattern['type'] != 'dynamic_set' and pattern['type'] != 'dynamic_regex_context':
+            if pattern['type'] != 'regex_context' and pattern['type'] != 'dynamic_set' and pattern['type'] != 'dynamic_regex' and pattern['type'] != 'dynamic_regex_context':
                 if exclude or exclude == "True":
                     if not self.include_map.does_overlap(filename, start, stop):
                         self.exclude_map.add_extend(filename, start, stop)
