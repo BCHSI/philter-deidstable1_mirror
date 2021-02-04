@@ -531,10 +531,21 @@ class Philter:
                             pc_regex = ''
                             for i in range(0,(len(pc)-1)):
                                 pc_regex += pc[i] + '([^0-9A-Za-z])?'
-
+                            # Add final digit
                             pc_regex += pc[-1]
 
                             regex_probes.append(pc_regex)
+
+                            # Now allow for substring searches
+                            # 10 digits
+                            if len(pc) == 10:
+                                #First 3 digits
+                                regex_probes.append(pc[0:3])
+                                #Middle 3 digits
+                                regex_probes.append(pc[3:6])
+                                #Last 4 digits
+                                regex_probes.append(pc[6:9])
+
 
         self.patterns[pat_idx_dynbl]["data"] = map_set
 
