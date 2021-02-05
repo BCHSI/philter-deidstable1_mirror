@@ -540,9 +540,7 @@ class Philter:
         coord_map = self.patterns[pattern_index]["coordinate_map"]
         regex = self.patterns[pattern_index]["data"]
         regex_name = os.path.basename(self.patterns[pattern_index]['filepath'])
-
-        cleaned = self.get_clean(filename,text)[0]
-
+        
         # All regexes except matchall
         if regex != re.compile('.'):
             
