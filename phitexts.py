@@ -646,7 +646,8 @@ class Phitexts:
                phi_tokens = len(self.coords[filename])
             else:
                # Number of total tokens
-               total_tokens = self.filterer.cleaned[filename][1]
+               total_tokens = self.filterer.get_clean(filename,
+                                                      self.texts[filename])[1]
                # Number of PHI tokens
                phi_tokens = self.filterer.get_clean_filtered(filename,
                                                              texts_obscured[filename])[1]
