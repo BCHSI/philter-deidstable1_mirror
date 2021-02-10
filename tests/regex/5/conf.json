@@ -6,5 +6,12 @@
         "filepath":"filters/regex/dates/month_name_transformed.txt",
         "notes":"This should remove anything with pattern month_name",
         "phi_type":"DATE"
+    },
+    {
+    	"title":"No catchall",
+	"type":"regex",
+	"exclude":false,
+	"filepath":"filters/regex/catchall.txt",
+	"notes":"This should match anything, preventing the catchall"
     }
 ]
