@@ -327,6 +327,7 @@ class Philter:
                 if pattern["filepath"].split(".")[-1] not in regex_filetypes:
                     raise Exception("Invalid filteype", pattern["filepath"],
                                     "must be of", regex_filetypes)
+                self.patterns[i]["data"] = None
                 self.patterns[i]["data"] = self.precompile(pattern["filepath"])
             if pattern["type"] == "dynamic_regex_context":
                 if pattern["filepath"].split(".")[-1] not in regex_filetypes:
@@ -539,6 +540,7 @@ class Philter:
             raise Exception("Invalid pattern index: ", pattern_index, "pattern length", len(patterns))
         coord_map = self.patterns[pattern_index]["coordinate_map"]
         regex = self.patterns[pattern_index]["data"]
+        if regex == None: return 
         regex_name = os.path.basename(self.patterns[pattern_index]['filepath'])
 
         # All regexes except matchall
@@ -555,7 +557,7 @@ class Philter:
                       + str(pattern_index) + " \""
                       + self.patterns[pattern_index]["title"]
                       + "\" is " + str(regex))
-            
+
             matches = regex.finditer(text)
             
             match_count = 0
