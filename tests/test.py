@@ -33,6 +33,7 @@ def black_list_test():
             rmtree(program_output)
         os.mkdir(program_output)
         
+        print("\nRunning test ID "+directory+"...")
         
         os.chdir(os.path.abspath(os.path.dirname(script)))
         call(["python3", script,"-i="+input_data,"-a="+input_data,
@@ -55,6 +56,7 @@ def white_list_test():
             rmtree(program_output)
         os.mkdir(program_output)
         
+        print("\nRunning test ID "+directory+"...")
         
         os.chdir(os.path.abspath(os.path.dirname(script)))
         call(["python3", script,"-i="+input_data,"-a="+input_data,
@@ -77,6 +79,7 @@ def regex_test():
             rmtree(program_output)
         os.mkdir(program_output)
         
+        print("\nRunning test ID "+directory+"...")
         
         os.chdir(os.path.abspath(os.path.dirname(script)))
         call(["python3", script,"-i="+input_data,"-a="+input_data,
@@ -140,17 +143,17 @@ def dir_diff(true_output, test_output):
         print(str(different_files)+ " TESTS HAVE FAILED.")
 
 if __name__=="__main__":
-    print("Running blacklist tests:...")
+    print("\n______________________________")
+    print("RUNNING BLACKLIST TESTS...")
     black_list_test()
-    print("______________________________")
-
-    print("Running whitelist tests:...")
+    
+    print("\n______________________________")
+    print("RUNNING WHITELIST TESTS...")
     white_list_test()
-    print("______________________________")
-
-    print("Running regex tests:...")
+    
+    print("\n______________________________")
+    print("RUNNING REGEX TESTS...")
     regex_test()
-    print("______________________________")
 
     
     if len(sys.argv) > 2:

@@ -542,7 +542,7 @@ class Philter:
         regex = self.patterns[pattern_index]["data"]
         if regex == None: return 
         regex_name = os.path.basename(self.patterns[pattern_index]['filepath'])
-
+        
         # All regexes except matchall
         if regex != re.compile('.'):
             
@@ -564,6 +564,8 @@ class Philter:
             for m in matches:
                 match_count += 1
                 coord_map.add_extend(filename, m.start(), m.start()+len(m.group()))
+                if __debug__ and self.verbose:
+                    print(m)
         
             self.patterns[pattern_index]["coordinate_map"] = coord_map
         
