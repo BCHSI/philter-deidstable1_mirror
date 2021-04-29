@@ -12,20 +12,22 @@ import os.path
 # Generate the Hash table for the Meta file
 def load_probe_to_hash(prbpath):
     probe = {}
-    prbfile = open(prbpath)
+    prbfile = open(prbpath,encoding='latin-1')
     print(prbpath + " loading")
     for line in prbfile:
-        line = line.rstrip('\n')
-        line = line.replace('.0','')
-        line = line.replace('\"','')
-        value = line.split('\t')
-        
+      line = line.rstrip('\n')
+      line = line.replace('.0','')
+      line = line.replace('\"','')
+      value = line.split('\t')
+      if len(value) > 5:
         if value[1] in probe:
-           val = value[2] +"\t" + value[5]
+          # value[3] = probe type
+          # value[5] = probe
+           val = value[3] +"\t" + value[5]
            probe[value[1]].add(val)
         else:
            probe[value[1]] = set()
-           probe[value[1]].add(value[2] +"\t" + value[5])
+           probe[value[1]].add(value[3] +"\t" + value[5])
     print("loaded "+ prbpath +" into hash")
     return probe
 
@@ -63,7 +65,7 @@ probe = load_probe_to_hash(sys.argv[2])
 print("Probes loaded into hash")
 
 for dirline in dirfile:
-  found = set()
+  #found = set()
   dirline = dirline.rstrip('\n')
   dfile = open(dirline+"/knownphi_data_original.txt", "w+")
   dfile.write("patient_ID"+"\t"+"phi_type"+"\t"+"value"+"\t"+"note_key"+"\n")
@@ -78,6 +80,7 @@ for dirline in dirfile:
         line  = line.replace('.0','')
         key= line.split('\t')
         # Modification for current meta indices, 5/21/20, KM
+        # meta[note_key]: patient_ID
         meta[key[0]] = key[2]
     print(mpath+" meta data loaded into hash")
 
@@ -85,13 +88,15 @@ for dirline in dirfile:
     kdict = {}
     for k in keepers:
        if k in meta:
-          kdict[meta[k]] = k
-       for k in kdict:
-         if k not in found:
-           if k in probe:
-             found.add(k)
-             for x in probe[k]:
-                dfile.write(k+"\t"+x+"\t"+kdict[k]+"\n")
+          # 'note_key':'patient_id'
+          kdict[k] = meta[k]
+    # For note key in kdict
+    for k in kdict:
+       note_key = k
+       patient_id = kdict[k]
+       if patient_id in probe:
+           for x in probe[patient_id]:
+               dfile.write(patient_id+"\t"+x+"\t"+note_key+"\n")
 dfile.close()
 dirfile.close()      
    

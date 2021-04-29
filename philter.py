@@ -96,7 +96,7 @@ class Philter:
                     "filepath": "",
                     "phi_type": "PROBE",
                     "exclude": True,
-                    "pos": ["NNP","CD"],
+                    "pos": ["NNP","NNPS","CD","NN","NNS","IN","JJ","VBD","VBG","RB"],
                     "type": "dynamic_set",
                     "title": "Dynamic Blacklist"}
                 if ("namesprobe" in config):
@@ -109,28 +109,30 @@ class Philter:
                 self.patterns.append(dynamic_blacklist)
 
 
-                dynamic_blacklist_regex = {
-                    "title": "Probes Regex",
-                    "notes": "This regex marks selected probes types as PHI",
-                    "type": "dynamic_regex",
-                    "exclude": True,
-                    "filepath": "filters/regex/probes/probes_regex.txt",
-                    #"context": "left_or_right",
-                    #"context_filter": "all",
-                    "phi_type": "PROBE"}
-                self.patterns.append(dynamic_blacklist_regex)
+                #dynamic_blacklist_regex = {
+                #    "title": "Probes Regex",
+                #    "notes": "This regex marks selected probes types as PHI",
+                #    "type": "dynamic_regex",
+                #    "exclude": True,
+                #    "filepath": "filters/regex/probes/probes_regex.txt",
+                #    #"context": "left_or_right",
+                #    #"context_filter": "all",
+                #    "phi_type": "PROBE"}
+                # Add to beginning of regex list
+                #self.patterns.insert(0,dynamic_blacklist_regex)
+                #self.patterns.append(dynamic_blacklist_regex)
 
 
-                dynamic_blacklist_regex_context = {
-                    "title": "Probes Regex Context",
-                    "notes": "This regex marks selected probes as PHI if they have neighboring PHI tokens",
-                    "type": "dynamic_regex_context",
-                    "exclude": True,
-                    "filepath": "filters/regex_context/probes_regex_context.txt",
-                    "context": "left_or_right",
-                    "context_filter": "all",
-                    "phi_type": "PROBE"}
-                self.patterns.append(dynamic_blacklist_regex_context)
+                #dynamic_blacklist_regex_context = {
+                #    "title": "Probes Regex Context",
+                #    "notes": "This regex marks selected probes as PHI if they have neighboring PHI tokens",
+                #    "type": "dynamic_regex_context",
+                #    "exclude": True,
+                #    "filepath": "filters/regex_context/probes_regex_context.txt",
+                #    "context": "left_or_right",
+                #    "context_filter": "all",
+                #    "phi_type": "PROBE"}
+                #self.patterns.append(dynamic_blacklist_regex_context)
 
         if "xml" in config:
             if not os.path.exists(config["xml"]):
@@ -390,10 +392,15 @@ class Philter:
                                           usecols=['value', 'phi_type',
                                                    'note_key'],
                                           dtype=str, encoding='latin-1')
-                names_probes = probes_file.loc[(probes_file['phi_type'] == 'lname') | (probes_file['phi_type'] == 'fname')]
+                names_probes = probes_file.loc[(probes_file['phi_type'] == 'lname') | (probes_file['phi_type'] == 'fname') | (probes_file['phi_type'] == 'mname') | (probes_file['phi_type'] == 'preferred_name')]
                 zip_probes = probes_file.loc[(probes_file['phi_type'] == 'ZIP')]
                 mrn_probes = probes_file.loc[(probes_file['phi_type'] == 'MRN')]
                 phone_probes = probes_file.loc[(probes_file['phi_type'] == 'phone')]
+                address_probes = probes_file.loc[(probes_file['phi_type'] == 'ADDR') | (probes_file['phi_type'] == 'empr_city') | 
+                    (probes_file['phi_type'] == 'EMERG_CITY') | (probes_file['phi_type'] == 'EMERG_CITY_2') | 
+                    	(probes_file['phi_type'] == 'FATHER_CITY') | (probes_file['phi_type'] == 'MOTHER_CITY')]
+                workplace_probes = probes_file.loc[(probes_file['phi_type'] == 'empr_id_cmt')]
+
             except pd.errors.EmptyDataError as err:
                 print("Pandas Empty Data Error: " + filepath
                        + " is empty {0}".format(err))
@@ -404,7 +411,7 @@ class Philter:
                 return {}, {}
             
             # Make list of lists in dictionary: map_set = {tup(probe,probe_type): [note_key1, note_key2]}
-            
+
             # Names
             for index, row in names_probes.iterrows():
                 # Alternate value column name:
@@ -412,7 +419,7 @@ class Philter:
                 probe_type = 'name'
                 value = row['value']
                 note_key = row['note_key']
-                if value in map_set:
+                if (value,probe_type) in map_set:
                     map_set[(value,probe_type)].append(note_key)
                 else:
                     map_set[(value,probe_type)] = [note_key]
@@ -424,7 +431,7 @@ class Philter:
                 probe_type = 'zip'
                 value = row['value']
                 note_key = row['note_key']
-                if value in map_set:
+                if (value,probe_type) in map_set:
                     map_set[(value,probe_type)].append(note_key)
                 else:
                     map_set[(value,probe_type)] = [note_key]
@@ -436,7 +443,7 @@ class Philter:
                 probe_type = 'mrn'
                 value = row['value']
                 note_key = row['note_key']
-                if value in map_set:
+                if (value,probe_type) in map_set:
                     map_set[(value,probe_type)].append(note_key)
                 else:
                     map_set[(value,probe_type)] = [note_key]
@@ -448,7 +455,31 @@ class Philter:
                 probe_type = 'phone'
                 value = row['value']
                 note_key = row['note_key']
-                if value in map_set:
+                if (value,probe_type) in map_set:
+                    map_set[(value,probe_type)].append(note_key)
+                else:
+                    map_set[(value,probe_type)] = [note_key]
+
+            # Address
+            for index, row in address_probes.iterrows():
+                # Alternate value column name:
+                #value = row['clean_value']
+                probe_type = 'address'
+                value = row['value']
+                note_key = row['note_key']
+                if (value,probe_type) in map_set:
+                    map_set[(value,probe_type)].append(note_key)
+                else:
+                    map_set[(value,probe_type)] = [note_key]
+
+            # Workplace
+            for index, row in workplace_probes.iterrows():
+                # Alternate value column name:
+                #value = row['clean_value']
+                probe_type = 'workplace'
+                value = row['value']
+                note_key = row['note_key']
+                if (value,probe_type) in map_set:
                     map_set[(value,probe_type)].append(note_key)
                 else:
                     map_set[(value,probe_type)] = [note_key]
@@ -462,8 +493,8 @@ class Philter:
     def _update_dynamic_patterns(self, filename, 
                                  include_singles = False,
                                  include_nonames = False):
-        nonames = ['md', 'pt', 'no', 'of', 'none', 'medical', 'pathology',
-                   'patient', 'study', 'nan']
+        nonames = ['md','dr','pt','no','in','none','of','by','ct','none','medical','pathology',
+                   'patient','study','nan','per','contact']
         map_set = {}
         context_probes = []
         regex_probes = []
@@ -496,6 +527,19 @@ class Philter:
 
                     # Get probe type in current note
                     probe_type_current = probe[1]
+
+                    # Get names probes for regex search
+                    name_pattern = re.compile(r"\b([A-Z]\'[a-zA-Z]+\b|[A-Z]\s[a-zA-Z]+\b|[A-Z]\.[A-Z]\.[A-Z]\.|[A-Z]\.[A-Z]\.)")
+                    probe_str = str(probe[0])
+                    if probe_type_current == 'name' and name_pattern.match(probe_str):
+                        regex_probes.append(probe_str)
+                        continue
+
+
+                    phone_regex = ''
+                    address_regex = ''
+                    workplace_regex = ''
+                    counter = 0
                     for pc in probe_clean:
 
                         ### Name
@@ -525,27 +569,43 @@ class Philter:
                         if probe_type_current == 'phone':
                             
                             pc = re.sub(r"[^0-9]+", "",str(pc).strip())
-                            
+
                             # Allow for any number of non-alphanumeric characters to separate each digit,
-                            # as long as all digits in probe are present                               
-                            pc_regex = ''
-                            for i in range(0,(len(pc)-1)):
-                                pc_regex += pc[i] + '([^0-9A-Za-z])?'
-                            # Add final digit
-                            pc_regex += pc[-1]
+                            # as long as all digits in probe are present
+                            if pc != '' and counter < len(probe_clean)-1:                              
+                                phone_regex = phone_regex + pc + '([^0-9A-Za-z]{1,3})?'
+                            if pc != '' and counter == len(probe_clean)-1:
+                                phone_regex = phone_regex + pc
 
-                            regex_probes.append(pc_regex)
 
-                            # Now allow for substring searches
-                            # 10 digits
-                            if len(pc) == 10:
-                                #First 3 digits
-                                regex_probes.append(pc[0:3])
-                                #Middle 3 digits
-                                regex_probes.append(pc[3:6])
-                                #Last 4 digits
-                                regex_probes.append(pc[6:9])
+	                    ### Address
+                        if probe_type_current == 'address':
 
+                            pc = str(pc).lower().strip()
+                            if pc != '' and counter < len(probe_clean)-1:                              
+                                address_regex = address_regex + pc + '([^0-9A-Za-z]{1,5})?'
+                            if pc != '' and counter == len(probe_clean)-1:
+                                address_regex = address_regex + pc
+
+                        ### Workplace
+                        if probe_type_current == 'workplace':
+
+                            pc = str(pc).lower().strip()
+                            if pc != '' and counter < len(probe_clean)-1:                              
+                                workplace_regex = workplace_regex + pc + '([^0-9A-Za-z]{1,5})?'
+                            if pc != '' and counter == len(probe_clean)-1:
+                                workplace_regex = workplace_regex + pc
+
+                        counter = counter + 1
+
+
+                    # Add to regex probes after all probe pieces added
+                    if phone_regex != '':
+                        regex_probes.append(phone_regex)
+                    if address_regex != '':
+                        regex_probes.append(address_regex)
+                    if workplace_regex != '':
+                        regex_probes.append(workplace_regex)
 
         self.patterns[pat_idx_dynbl]["data"] = map_set
 
@@ -795,7 +855,7 @@ class Philter:
                 for start in full_exclude_map:
                     phi_starts.append(start)
                     phi_ends.append(full_exclude_map[start])
-                
+
                 if match_start in phi_ends:
                     phi_left = True
                 

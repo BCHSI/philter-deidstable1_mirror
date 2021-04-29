@@ -2480,6 +2480,24 @@
         "phi_type":"NAME"
     },
     {
+        "title": "Probes Regex",
+        "notes": "This regex marks selected probes types as PHI",
+        "type": "dynamic_regex",
+        "exclude": true,
+        "filepath": "filters/regex/probes/probes_regex.txt",
+        "phi_type": "PROBE"
+    },
+    {
+        "title": "Probes Regex Context",
+        "notes": "This regex marks selected probes as PHI if they have neighboring PHI tokens",
+        "type": "dynamic_regex_context",
+        "exclude": true,
+        "filepath": "filters/regex_context/probes_regex_context.txt",
+        "context": "left_or_right",
+        "context_filter": "all",
+        "phi_type": "PROBE"
+    },
+    {
         "title":"Whitelist 1",
         "type":"set",
         "exclude":false,
