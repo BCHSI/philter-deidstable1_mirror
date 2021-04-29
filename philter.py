@@ -109,31 +109,6 @@ class Philter:
                 self.patterns.append(dynamic_blacklist)
 
 
-                #dynamic_blacklist_regex = {
-                #    "title": "Probes Regex",
-                #    "notes": "This regex marks selected probes types as PHI",
-                #    "type": "dynamic_regex",
-                #    "exclude": True,
-                #    "filepath": "filters/regex/probes/probes_regex.txt",
-                #    #"context": "left_or_right",
-                #    #"context_filter": "all",
-                #    "phi_type": "PROBE"}
-                # Add to beginning of regex list
-                #self.patterns.insert(0,dynamic_blacklist_regex)
-                #self.patterns.append(dynamic_blacklist_regex)
-
-
-                #dynamic_blacklist_regex_context = {
-                #    "title": "Probes Regex Context",
-                #    "notes": "This regex marks selected probes as PHI if they have neighboring PHI tokens",
-                #    "type": "dynamic_regex_context",
-                #    "exclude": True,
-                #    "filepath": "filters/regex_context/probes_regex_context.txt",
-                #    "context": "left_or_right",
-                #    "context_filter": "all",
-                #    "phi_type": "PROBE"}
-                #self.patterns.append(dynamic_blacklist_regex_context)
-
         if "xml" in config:
             if not os.path.exists(config["xml"]):
                 raise Exception("Filepath does not exist", config["xml"])
@@ -400,7 +375,6 @@ class Philter:
                     (probes_file['phi_type'] == 'EMERG_CITY') | (probes_file['phi_type'] == 'EMERG_CITY_2') | 
                     	(probes_file['phi_type'] == 'FATHER_CITY') | (probes_file['phi_type'] == 'MOTHER_CITY')]
                 workplace_probes = probes_file.loc[(probes_file['phi_type'] == 'empr_id_cmt')]
-
             except pd.errors.EmptyDataError as err:
                 print("Pandas Empty Data Error: " + filepath
                        + " is empty {0}".format(err))
@@ -483,7 +457,7 @@ class Philter:
                     map_set[(value,probe_type)].append(note_key)
                 else:
                     map_set[(value,probe_type)] = [note_key]
-        
+
         elif filepath.endswith(".mongo"):
              map_set = self.known_phi
         else:
@@ -540,6 +514,7 @@ class Philter:
                     address_regex = ''
                     workplace_regex = ''
                     counter = 0
+
                     for pc in probe_clean:
 
                         ### Name
@@ -855,7 +830,7 @@ class Philter:
                 for start in full_exclude_map:
                     phi_starts.append(start)
                     phi_ends.append(full_exclude_map[start])
-
+                    
                 if match_start in phi_ends:
                     phi_left = True
                 
