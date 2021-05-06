@@ -293,10 +293,18 @@ class Phitexts:
         if self.subs:
             return
         self.subser = Subs(self.filenames, look_up_table_path, db, ref_date)
+
+        probes_found = []
+        if "PROBE" in self.types.keys():
+            for filename, start, end in self.types['PROBE'][0].scan():
+                probes_found.append((filename,start))
+
         for phi_type in self.norms.keys():
             if phi_type == "DATE" or phi_type == "Date":
                 if __debug__: nodateshiftlist = []
                 for filename, start in self.norms[phi_type]:
+                    if ("PROBE" in self.types.keys() and (filename, start) in probes_found):
+                        continue
                     if bson.objectid.ObjectId.is_valid(filename):
                        note_key_ucsf = filename
                     else:
