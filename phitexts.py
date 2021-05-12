@@ -101,7 +101,7 @@ class Phitexts:
            probes_name = chunk_collection.aggregate([{"$match":{"$and":[{"url": server.lower()},{"batch": batch}]}},
                                                     {"$lookup": {"from": 'probes', "localField": "patient_ID", "foreignField": "person_id", "as": "prb"}},
                                                     {"$unwind":"$prb"},
-                                                    {"$project": {"_id": 1, "patient_ID": 1, "probes_lname": "$prb.lname", "probes_fname": "$prb.fname"}}])
+                                                    {"$project": {"_id": 1, "patient_ID": 1, "probes_lname": "$prb.lname", "probes_fname": "$prb.fname", "probes_mname": "$prb.mname", "probes_pname": "$prb.preferred_name", "probes_zip": "$prb.ZIP", "probes_mrn": "$prb.MRN", "probes_phone": "$prb.phone", "probes_address": "$prb.ADDR", "probes_empr_city": "$prb.EMPR_CITY", "probes_emerg_city": "$prb.EMERG_CITY", "probes_emerg_city_2": "$prb.EMERG_CITY_2", "probes_father_city": "$prb.FATHER_CITY", "probes_mother_city": "$prb.MOTHER_CITY", "probes_workplace": "$prb.empr_id_cmt"}}])
         except pymongo.errors.OperationFailure as e:
            print(e.code)
            print(e.details)
@@ -111,18 +111,68 @@ class Phitexts:
            self.filenames.append(philter['_id'])
            self.texts[philter['_id']] = philter['raw_note_text']
            if mongo['known_phi'] == True:
-              probes = []
+              probes_name = []
+              probes_zip = []
+              probes_mrn = []
+              probes_phone = []
+              probes_add = []
+              probes_city = []
+              probes_workplace = []
               for prb in probes_list:
                   if philter['_id'] == prb['_id']:
-                     if 'probes_lname' in prb and 'probes_fname' in prb: 
-                        probes = prb['probes_lname'] + prb['probes_fname']
-                     elif 'probes_lname' in prb and 'probes_fname' not in prb:
-                        probes = prb['probes_lname']
-                     elif 'probes_lname' not in prb and 'probes_fname' in prb:
-                        probes = prb['probes_fname']
+                     if 'probes_lname' in prb:
+                        probes_name = probes_name + prb['probes_lname']
+                     if 'probes_fname' in prb:
+                        probes_name = probes_name + prb['probes_fname']
+                     if 'probes_mname' in prb:
+                        probes_name = probes_name + prb['probes_mname']
+                     if 'probes_pname' in prb:
+                        probes_name = probes_name + prb['probes_pname']
+                     if 'probes_zip' in prb:
+                        probes_zip = prb['probes_zip']
+                     if 'probes_mrn' in prb:
+                        probes_mrn = prb['probes_mrn']
+                     if 'probes_phone' in prb:
+                        probes_phone = prb['probes_phone']
+                     if 'probes_address' in prb:
+                        probes_add = prb['probes_address']
+                     if 'probes_empr_city' in prb:
+                        probes_add = probesadd + prb['probes_empr_city']
+                     if 'probes_emerg_city' in prb:
+                        probes_add = probes_add + prb['probes_emerg_city']
+                     if 'probes_emerg_city_2' in prb:
+                        probes_add = probes_add + prb['probes_emerg_city']
+                     if 'probes_father_city' in prb:
+                        probes_add = probes_add + prb['probes_father_city']
+                     if 'probes_mother_city' in prb:
+                        probes_add = probes_add + prb['probes_mother_city']
+                     if 'probes_workplace' in prb:
+                        probes_workplace = probes_workplace + prb['probes_workplace']
+                     #probes_name = list(set(probes_name))
                      break;
-              self.known_phi[philter['_id']] = probes
 
+              probes_name = list(set(probes_name))
+              probes_zip = list(set(probes_zip))
+              probes_mrn = list(set(probes_mrn))
+              probes_phone = list(set(probes_phone))
+              probes_add = list(set(probes_add))
+              probes_city = list(set(probes_city))
+              probes_workplace = list(set(probes_workplace))
+              self.known_phi[philter['_id']] = {'name': probes_name, 'zip': probes_zip, 'mrn': probes_mrn, 'add': probes_add, 'workplace': probes_workplace}
+              '''
+              for p in probes_name:
+                  self.known_phi[(p,'name')] = philter['_id']
+              for z in probes_zip:
+                  self.known_phi[(z,'zip')] = philter['_id']
+              for m in probes_mrn:   
+                  self.known_phi[(m,'mrn')] = philter['_id']
+              for a in probes_add:
+                  self.known_phi[(a,'add')] = philter['_id']
+              for c in probes_city:
+                  self.known_phi[(c,'city')] = philter['_id']
+              for w in probes_workplace:
+                  self.known_phi[(w,'workplace')] = philter['_id']
+              '''
         print("Text read")
 
     def _get_xml_tokens(self,string,text,start):
