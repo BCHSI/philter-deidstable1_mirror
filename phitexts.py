@@ -141,7 +141,7 @@ class Phitexts:
                      if 'probes_emerg_city' in prb:
                         probes_add = probes_add + prb['probes_emerg_city']
                      if 'probes_emerg_city_2' in prb:
-                        probes_add = probes_add + prb['probes_emerg_city']
+                        probes_add = probes_add + prb['probes_emerg_city_2']
                      if 'probes_father_city' in prb:
                         probes_add = probes_add + prb['probes_father_city']
                      if 'probes_mother_city' in prb:
