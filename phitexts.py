@@ -111,68 +111,42 @@ class Phitexts:
            self.filenames.append(philter['_id'])
            self.texts[philter['_id']] = philter['raw_note_text']
            if mongo['known_phi'] == True:
-              probes_name = []
-              probes_zip = []
-              probes_mrn = []
-              probes_phone = []
-              probes_add = []
-              probes_city = []
-              probes_workplace = []
+              probes = {}
               for prb in probes_list:
-                  if philter['_id'] == prb['_id']:
-                     if 'probes_lname' in prb:
-                        probes_name = probes_name + prb['probes_lname']
-                     if 'probes_fname' in prb:
-                        probes_name = probes_name + prb['probes_fname']
-                     if 'probes_mname' in prb:
-                        probes_name = probes_name + prb['probes_mname']
-                     if 'probes_pname' in prb:
-                        probes_name = probes_name + prb['probes_pname']
-                     if 'probes_zip' in prb:
-                        probes_zip = prb['probes_zip']
-                     if 'probes_mrn' in prb:
-                        probes_mrn = prb['probes_mrn']
-                     if 'probes_phone' in prb:
-                        probes_phone = prb['probes_phone']
-                     if 'probes_address' in prb:
-                        probes_add = prb['probes_address']
-                     if 'probes_empr_city' in prb:
-                        probes_add = probesadd + prb['probes_empr_city']
-                     if 'probes_emerg_city' in prb:
-                        probes_add = probes_add + prb['probes_emerg_city']
-                     if 'probes_emerg_city_2' in prb:
-                        probes_add = probes_add + prb['probes_emerg_city_2']
-                     if 'probes_father_city' in prb:
-                        probes_add = probes_add + prb['probes_father_city']
-                     if 'probes_mother_city' in prb:
-                        probes_add = probes_add + prb['probes_mother_city']
-                     if 'probes_workplace' in prb:
-                        probes_workplace = probes_workplace + prb['probes_workplace']
-                     #probes_name = list(set(probes_name))
-                     break;
-
-              probes_name = list(set(probes_name))
-              probes_zip = list(set(probes_zip))
-              probes_mrn = list(set(probes_mrn))
-              probes_phone = list(set(probes_phone))
-              probes_add = list(set(probes_add))
-              probes_city = list(set(probes_city))
-              probes_workplace = list(set(probes_workplace))
-              self.known_phi[philter['_id']] = {'name': probes_name, 'zip': probes_zip, 'mrn': probes_mrn, 'address': probes_add, 'workplace': probes_workplace}
-              '''
-              for p in probes_name:
-                  self.known_phi[(p,'name')] = philter['_id']
-              for z in probes_zip:
-                  self.known_phi[(z,'zip')] = philter['_id']
-              for m in probes_mrn:   
-                  self.known_phi[(m,'mrn')] = philter['_id']
-              for a in probes_add:
-                  self.known_phi[(a,'add')] = philter['_id']
-              for c in probes_city:
-                  self.known_phi[(c,'city')] = philter['_id']
-              for w in probes_workplace:
-                  self.known_phi[(w,'workplace')] = philter['_id']
-              '''
+                  for prb_type in prb:
+                      if prb_type in ['probes_lname', 'probes_fname', 'probes_mname','probes_pname']:
+                         if 'name' not in probes:
+                             probes['name'] = prb[prb_type]
+                         else:
+                             probes['name'] = probes['name'] + list(set(prb[prb_type]) - set(probes['name'])) 
+                      if prb_type == 'probes_mrn':
+                         if 'mrn' not in probes:
+                             probes['mrn'] = prb[prb_type]
+                         else:
+                             probes['mrn'] = probes['mrn'] + list(set(prb[prb_type]) - set(probes['mrn']))
+                      if prb_type == 'probes_phone':
+                         if 'phone' not in probes:
+                             probes['phone'] = prb[prb_type]
+                         else:
+                             probes['phone'] = probes['phone'] + list(set(prb[prb_type]) - set(probes['phone']))
+                      if prb_type == 'probes_zip':
+                         if 'zip' not in probes:
+                             probes['zip'] = prb[prb_type]
+                         else:
+                             probes['zip'] = probes['zip'] + list(set(prb[prb_type]) - set(probes['zip']))
+                      if prb_type in ['probes_address', 'probes_empr_city', 'probes_emerg_city','probes_emerg_city_2','probes_father_city','probes_mother_city']:
+                         if 'address' not in probes:
+                             probes['address'] = prb[prb_type]
+                         else:
+                             probes['address'] = probes['address'] + list(set(prb[prb_type]) - set(probes['address']))
+                      if prb_type == 'probes_workplace':
+                         if 'workplace' not in probes:
+                             probes['workplace'] = prb[prb_type]
+                         else:
+                             probes['workplace'] = probes['workplace'] + list(set(prb[prb_type]) - set(probes['workplace']))
+              
+              self.known_phi[philter['_id']] = probes
+        #print(self.known_phi)
         print("Text read")
 
     def _get_xml_tokens(self,string,text,start):
