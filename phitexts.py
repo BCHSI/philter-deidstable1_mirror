@@ -158,7 +158,7 @@ class Phitexts:
               probes_add = list(set(probes_add))
               probes_city = list(set(probes_city))
               probes_workplace = list(set(probes_workplace))
-              self.known_phi[philter['_id']] = {'name': probes_name, 'zip': probes_zip, 'mrn': probes_mrn, 'add': probes_add, 'workplace': probes_workplace}
+              self.known_phi[philter['_id']] = {'name': probes_name, 'zip': probes_zip, 'mrn': probes_mrn, 'address': probes_add, 'workplace': probes_workplace}
               '''
               for p in probes_name:
                   self.known_phi[(p,'name')] = philter['_id']
