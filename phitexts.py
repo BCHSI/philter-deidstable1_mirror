@@ -101,7 +101,7 @@ class Phitexts:
            probes_name = chunk_collection.aggregate([{"$match":{"$and":[{"url": server.lower()},{"batch": batch}]}},
                                                     {"$lookup": {"from": 'probes', "localField": "patient_ID", "foreignField": "person_id", "as": "prb"}},
                                                     {"$unwind":"$prb"},
-                                                    {"$project": {"_id": 1, "patient_ID": 1, "probes_lname": "$prb.lname", "probes_fname": "$prb.fname"}}])
+                                                    {"$project": {"_id": 1, "patient_ID": 1, "probes_lname": "$prb.lname", "probes_fname": "$prb.fname", "probes_mname": "$prb.mname", "probes_pname": "$prb.preferred_name", "probes_zip": "$prb.ZIP", "probes_mrn": "$prb.MRN", "probes_phone": "$prb.phone", "probes_address": "$prb.ADDR", "probes_empr_city": "$prb.EMPR_CITY", "probes_emerg_city": "$prb.EMERG_CITY", "probes_emerg_city_2": "$prb.EMERG_CITY_2", "probes_father_city": "$prb.FATHER_CITY", "probes_mother_city": "$prb.MOTHER_CITY", "probes_workplace": "$prb.empr_id_cmt"}}])
         except pymongo.errors.OperationFailure as e:
            print(e.code)
            print(e.details)
@@ -111,18 +111,42 @@ class Phitexts:
            self.filenames.append(philter['_id'])
            self.texts[philter['_id']] = philter['raw_note_text']
            if mongo['known_phi'] == True:
-              probes = []
+              probes = {}
               for prb in probes_list:
-                  if philter['_id'] == prb['_id']:
-                     if 'probes_lname' in prb and 'probes_fname' in prb: 
-                        probes = prb['probes_lname'] + prb['probes_fname']
-                     elif 'probes_lname' in prb and 'probes_fname' not in prb:
-                        probes = prb['probes_lname']
-                     elif 'probes_lname' not in prb and 'probes_fname' in prb:
-                        probes = prb['probes_fname']
-                     break;
+                  for prb_type in prb:
+                      if prb_type in ['probes_lname', 'probes_fname', 'probes_mname','probes_pname']:
+                         if 'name' not in probes:
+                             probes['name'] = prb[prb_type]
+                         else:
+                             probes['name'] = probes['name'] + list(set(prb[prb_type]) - set(probes['name'])) 
+                      if prb_type == 'probes_mrn':
+                         if 'mrn' not in probes:
+                             probes['mrn'] = prb[prb_type]
+                         else:
+                             probes['mrn'] = probes['mrn'] + list(set(prb[prb_type]) - set(probes['mrn']))
+                      if prb_type == 'probes_phone':
+                         if 'phone' not in probes:
+                             probes['phone'] = prb[prb_type]
+                         else:
+                             probes['phone'] = probes['phone'] + list(set(prb[prb_type]) - set(probes['phone']))
+                      if prb_type == 'probes_zip':
+                         if 'zip' not in probes:
+                             probes['zip'] = prb[prb_type]
+                         else:
+                             probes['zip'] = probes['zip'] + list(set(prb[prb_type]) - set(probes['zip']))
+                      if prb_type in ['probes_address', 'probes_empr_city', 'probes_emerg_city','probes_emerg_city_2','probes_father_city','probes_mother_city']:
+                         if 'address' not in probes:
+                             probes['address'] = prb[prb_type]
+                         else:
+                             probes['address'] = probes['address'] + list(set(prb[prb_type]) - set(probes['address']))
+                      if prb_type == 'probes_workplace':
+                         if 'workplace' not in probes:
+                             probes['workplace'] = prb[prb_type]
+                         else:
+                             probes['workplace'] = probes['workplace'] + list(set(prb[prb_type]) - set(probes['workplace']))
+              
               self.known_phi[philter['_id']] = probes
-
+        #print(self.known_phi)
         print("Text read")
 
     def _get_xml_tokens(self,string,text,start):
@@ -293,10 +317,18 @@ class Phitexts:
         if self.subs:
             return
         self.subser = Subs(self.filenames, look_up_table_path, db, ref_date)
+
+        probes_found = []
+        if "PROBE" in self.types.keys():
+            for filename, start, end in self.types['PROBE'][0].scan():
+                probes_found.append((filename,start))
+
         for phi_type in self.norms.keys():
             if phi_type == "DATE" or phi_type == "Date":
                 if __debug__: nodateshiftlist = []
                 for filename, start in self.norms[phi_type]:
+                    if ("PROBE" in self.types.keys() and (filename, start) in probes_found):
+                        continue
                     if bson.objectid.ObjectId.is_valid(filename):
                        note_key_ucsf = filename
                     else:
