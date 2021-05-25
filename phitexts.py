@@ -503,7 +503,6 @@ class Phitexts:
 
 
         philtered_text = []
-
         for files in self.textsout:
             philtered = {'_id': files, 'deid_note_text': self.textsout[files]}
             philtered_text.append(philtered)
@@ -512,9 +511,9 @@ class Phitexts:
            collection_deid_text.delete_many({'_id': {'$in': self.filenames}})
            collection_deid_text.insert_many(philtered_text)
            collection_meta_in.update_many({'_id': {'$in': self.filenames}},{'$set': { "redact_date": datetime.datetime.now(), "philter_version": mongo['philter_version']}})
-        except:
+        except OperationFailure as e:
            print("Error while saving deidentified files into Mongo")
-           raise OperationFailure(error.get("errmsg"), error.get("code"), error) 
+           raise OperationFailure(error.get("errmsg"), error.get("code"), e) 
     
 
 
@@ -641,12 +640,12 @@ class Phitexts:
         for phi_type in self.types:
             for filename, start, end in self.types[phi_type][0].scan():
                 fname = str(filename)
-                if filename not in phi_table:
+                if fname not in phi_table:
                    phi_table[fname] = []
                 word = self.texts[filename][start:end]
                 phi_table[fname].append({'start': start, 'end': end,
                                             'word': word, 'type': phi_type})
-
+                
                 if phi_type not in phi_counter:
                     phi_counter[phi_type] = 0
                 phi_counter[phi_type] += 1
@@ -654,7 +653,6 @@ class Phitexts:
                     
                 # f_marked.write('\t'.join([filename, str(start), str(end), word, phi_type]))
                 # f_marked.write('\n')
-
         for phi_type in phi_counter:
             phi_count_df = phi_count_df.append({'Phi_type': phi_type, 'Count': str(phi_counter[phi_type])},ignore_index=True)
        

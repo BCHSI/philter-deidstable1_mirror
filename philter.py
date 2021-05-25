@@ -503,7 +503,6 @@ class Philter:
                           regex_probes.append(probe_str)
                           continue
                       map_set, regex_probes, context_probes = self._dynamic_patterns_types(map_set,probe_type, probe, probe_clean,include_singles, include_nonames, nonames, pat_idx_dynbl,regex_probes,context_probes, filename)
-
         elif (filename.find('.txt') != -1) or (filename.find('.xml') != -1):
             file_note_key = os.path.basename(filename).replace('\n','')
             file_note_key = file_note_key.replace('.txt','')
@@ -527,7 +526,7 @@ class Philter:
                        map_set, regex_probes,context_probes = self._dynamic_patterns_types(map_set,probe_type_current, probe, probe_clean,include_singles, include_nonames, nonames, pat_idx_dynbl,regex_probes,context_probes, note_key)
                    
                     
-               self.patterns[pat_idx_dynbl]["data"] = map_set
+        self.patterns[pat_idx_dynbl]["data"] = map_set
 
         # Substitute probes into probes_regex
         if len(regex_probes) > 0:

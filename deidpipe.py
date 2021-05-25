@@ -113,7 +113,7 @@ def main_mongo(args, db=None ,mongo=None):
     # db none then pass input dir if not don't pass input dir 
     batch = 0
     if args.batch is not None:
-       batch = int(args.batch)
+       batch = int(float(args.batch))
     phitexts = Phitexts(args.input,args.xml,batch,db,mongo)
     # detect PHI coordinates
     if __debug__: print("detecting PHI coordinates")
