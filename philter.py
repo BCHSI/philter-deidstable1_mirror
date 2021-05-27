@@ -528,21 +528,28 @@ class Philter:
                     
         self.patterns[pat_idx_dynbl]["data"] = map_set
 
+        
         # Substitute probes into probes_regex
-        if len(regex_probes) > 0:
+        if "Probes Regex" in self.patterns_indexes:
             pat_idx_prbregx = self.pattern_indexes["Probes Regex"]
-            rgx = self.patterns[pat_idx_prbregx]['dyndata'].pattern
-            regex_string = rgx.replace('"""+probe+r"""',
-                                       '|'.join(regex_probes))
-            self.patterns[pat_idx_prbregx]['data'] = re.compile(regex_string)
+            if len(regex_probes) > 0:
+                rgx = self.patterns[pat_idx_prbregx]['dyndata'].pattern
+                regex_string = rgx.replace('"""+probe+r"""',
+                                           '|'.join(regex_probes))
+                self.patterns[pat_idx_prbregx]['data'] = re.compile(regex_string)
+            else:
+                self.patterns[pat_idx_prbregx]['data'] = re.compile(r"")
 
         # Substitute probes into probes_regex_context
-        if len(context_probes) > 0:
+        if "Probes Regex Context" in self.patterns_indexes:
             pat_idx_prbregxcontext = self.pattern_indexes["Probes Regex Context"]
-            rgx = self.patterns[pat_idx_prbregxcontext]['dyndata'].pattern
-            regex_string = rgx.replace('"""+probe+r"""',
-                                       '|'.join(context_probes))
-            self.patterns[pat_idx_prbregxcontext]['data'] = re.compile(regex_string)
+            if len(context_probes) > 0:
+                rgx = self.patterns[pat_idx_prbregxcontext]['dyndata'].pattern
+                regex_string = rgx.replace('"""+probe+r"""',
+                                           '|'.join(context_probes))
+                self.patterns[pat_idx_prbregxcontext]['data'] = re.compile(regex_string)
+            else:
+                self.patterns[pat_idx_prbregxcontext]['data'] = re.compile(r"")
 
 
     def map_coordinates(self, allowed_filetypes=set(["txt", "ano"])):
