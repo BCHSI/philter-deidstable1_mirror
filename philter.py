@@ -506,19 +506,7 @@ class Philter:
         pat_idx_dynbl = self.pattern_indexes["Dynamic Blacklist"]
         
         if self.known_phi:
-            
-            # TODO: test probe enhancements with self.known_phi
-            for probe_type in self.known_phi[filename]:
-                for probe in  self.known_phi[filename][probe_type]:
-                   if filename in self.patterns[pat_idx_dynbl]["dyndata"]:
-                      probe_clean = get_clean(probe)
-                      # Get names probes for regex search
-                      name_pattern = re.compile(r"\b([A-Z]\'[a-zA-Z]+\b|[A-Z]\s[a-zA-Z]+\b|[A-Z]\.[A-Z]\.[A-Z]\.|[A-Z]\.[A-Z]\.)")
-                      probe_str = str(probe)
-                      if probe_type == 'name' and name_pattern.match(probe_str):
-                          regex_probes.append(probe_str)
-                          continue
-                      map_set, regex_probes, context_probes = self._dynamic_patterns_types(map_set,probe_type, probe, probe_clean,include_singles, include_nonames, nonames, pat_idx_dynbl,regex_probes,context_probes, filename)
+            note_key = filename
         elif (filename.find('.txt') != -1) or (filename.find('.xml') != -1):
             file_note_key = os.path.basename(filename).replace('\n','')
             file_note_key = file_note_key.replace('.txt','')
@@ -526,47 +514,37 @@ class Philter:
             file_note_key = file_note_key.replace('.xml','')
             file_note_key = file_note_key.replace('_utf8','')
             note_key = file_note_key
-            if note_key in self.patterns[pat_idx_dynbl]["dyndata"]:
-               for probe_type in self.patterns[pat_idx_dynbl]["dyndata"][note_key]:
-                   for probe in self.patterns[pat_idx_dynbl]["dyndata"][note_key][probe_type]:
-                       probe_clean = get_clean(str(probe))
-                       # Get probe type in current note
-                       probe_type_current = probe_type
-                       #print(probe_type_current) 
-                       # Get names probes for regex search
-                       name_pattern = re.compile(r"\b([A-Z]\'[a-zA-Z]+\b|[A-Z]\s[a-zA-Z]+\b|[A-Z]\.[A-Z]\.[A-Z]\.|[A-Z]\.[A-Z]\.)")
-                       probe_str = str(probe)
-                       if probe_type_current == 'name' and name_pattern.match(probe_str):
-                           regex_probes.append(probe_str)
-                           continue
-                       map_set, regex_probes,context_probes = self._dynamic_patterns_types(map_set,probe_type_current, probe, probe_clean,include_singles, include_nonames, nonames, pat_idx_dynbl,regex_probes,context_probes, note_key)
-                   
-                    
+        else:
+            raise Exception("PROGRAMM ERROR: Invalid filename ", filename)
+
+        name_pattern = re.compile(r"\b([A-Z]\'[a-zA-Z]+\b|[A-Z]\s[a-zA-Z]+\b|[A-Z]\.[A-Z]\.[A-Z]\.|[A-Z]\.[A-Z]\.)")
+        dyndata = self.patterns[pat_idx_dynbl]["dyndata"]
+        if note_key in dyndata:
+            for probe_type in dyndata[note_key]:
+                for probe in dyndata[note_key][probe_type]:
+                    probe_str = str(probe)
+                    probe_clean = get_clean(probe_str)
+                    # Get names probes for regex search
+                    if (probe_type == 'name'
+                        and name_pattern.match(probe_str)):
+                        regex_probes.append(probe_str)
+                        continue
+                    map_set, regex_probes, context_probes = self._dynamic_patterns_types(map_set, probe_type, probe, probe_clean,include_singles, include_nonames, nonames, pat_idx_dynbl, regex_probes, context_probes, note_key)
+
         self.patterns[pat_idx_dynbl]["data"] = map_set
-
         
-        # Substitute probes into probes_regex
-        if "Probes Regex" in self.pattern_indexes:
-            pat_idx_prbregx = self.pattern_indexes["Probes Regex"]
-            if len(regex_probes) > 0:
-                rgx = self.patterns[pat_idx_prbregx]['dyndata'].pattern
-                regex_string = rgx.replace('"""+probe+r"""',
-                                           '|'.join(regex_probes))
-                self.patterns[pat_idx_prbregx]['data'] = re.compile(regex_string)
-            else:
-                self.patterns[pat_idx_prbregx]['data'] = re.compile(r"")
-
-        # Substitute probes into probes_regex_context
-        if "Probes Regex Context" in self.pattern_indexes:
-            pat_idx_prbregxcontext = self.pattern_indexes["Probes Regex Context"]
-            if len(context_probes) > 0:
-                rgx = self.patterns[pat_idx_prbregxcontext]['dyndata'].pattern
-                regex_string = rgx.replace('"""+probe+r"""',
-                                           '|'.join(context_probes))
-                self.patterns[pat_idx_prbregxcontext]['data'] = re.compile(regex_string)
-            else:
-                self.patterns[pat_idx_prbregxcontext]['data'] = re.compile(r"")
-
+        # Substitute probes into probes_regex and probes_regex_context
+        rgx_types = ["Probes Regex", "Probes Regex Context"]
+        for rtype in rgx_types:
+            if rtype in self.pattern_indexes:
+                ipat = self.pattern_indexes[rtype]
+                if len(regex_probes) > 0:
+                    rgx = self.patterns[ipat]['dyndata'].pattern
+                    regex_string = rgx.replace('"""+probe+r"""',
+                                               '|'.join(regex_probes))
+                    self.patterns[ipat]['data'] = re.compile(regex_string)
+                else:
+                    self.patterns[ipat]['data'] = re.compile(r"")
 
     def map_coordinates(self, allowed_filetypes=set(["txt", "ano"])):
         """ Runs the set, or regex on the input data 
