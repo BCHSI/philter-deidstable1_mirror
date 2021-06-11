@@ -87,7 +87,9 @@ class Philter:
                 raise Exception("Filepath does not exist", config["filters"])
             self.patterns = json.loads(open(config["filters"], "r").read())
             if ("known_phi" in config) and ("namesprobe" in config):
-                raise Exception ("Both mongo probes collection and a probes file provided. Please remove one and try again.")
+                raise Exception ("Both mongo probes collection and a probes "
+                                 + "file provided. Please remove one and try "
+                                 + "again.")
             self.dynamic = False
             if ("namesprobe" in config) or ("known_phi" in config):
                 self.dynamic = True
@@ -96,7 +98,8 @@ class Philter:
                     "filepath": "",
                     "phi_type": "PROBE",
                     "exclude": True,
-                    "pos": ["NNP","NNPS","CD","NN","NNS","IN","JJ","VBD","VBG","RB"],
+                    "pos": ["NNP", "NNPS", "CD", "NN", "NNS", "IN", "JJ",
+                            "VBD", "VBG", "RB"],
                     "type": "dynamic_set",
                     "title": "Dynamic Blacklist"}
                 if ("namesprobe" in config):
@@ -362,19 +365,28 @@ class Philter:
         elif filepath.endswith(".json"):
             map_set = json.loads(open(filepath, "r").read())
         elif filepath.endswith(".txt"): # dynamic set
+            names_probe_types = ['lname', 'fname', 'mname', 'preferred_name']
+            address_probe_types = ['ADDR', 'empr_city', 'EMERG_CITY',
+                                   'EMERG_CITY_2', 'FATHER_CITY', 'MOTHER_CITY']
             try:
                 probes_file = pd.read_csv(filepath, sep='\t', index_col=False,
                                           usecols=['value', 'phi_type',
                                                    'note_key'],
                                           dtype=str, encoding='latin-1')
+                #names_probes = probes_file.loc[(probes_file['phi_type'] in
+                 #                               names_probe_types)]
                 names_probes = probes_file.loc[(probes_file['phi_type'] == 'lname') | (probes_file['phi_type'] == 'fname') | (probes_file['phi_type'] == 'mname') | (probes_file['phi_type'] == 'preferred_name')]
                 zip_probes = probes_file.loc[(probes_file['phi_type'] == 'ZIP')]
                 mrn_probes = probes_file.loc[(probes_file['phi_type'] == 'MRN')]
-                phone_probes = probes_file.loc[(probes_file['phi_type'] == 'phone')]
+                phone_probes = probes_file.loc[(probes_file['phi_type']
+                                                == 'phone')]
                 address_probes = probes_file.loc[(probes_file['phi_type'] == 'ADDR') | (probes_file['phi_type'] == 'empr_city') | 
                     (probes_file['phi_type'] == 'EMERG_CITY') | (probes_file['phi_type'] == 'EMERG_CITY_2') | 
                     	(probes_file['phi_type'] == 'FATHER_CITY') | (probes_file['phi_type'] == 'MOTHER_CITY')]
-                workplace_probes = probes_file.loc[(probes_file['phi_type'] == 'empr_id_cmt')]
+                #address_probes = probes_file.loc[(probes_file['phi_type'] in
+                 #                                 address_probe_types)]
+                workplace_probes = probes_file.loc[(probes_file['phi_type']
+                                                    == 'empr_id_cmt')]
             except pd.errors.EmptyDataError as err:
                 print("Pandas Empty Data Error: " + filepath
                        + " is empty {0}".format(err))
@@ -384,18 +396,21 @@ class Philter:
                        + " is invalid {0}".format(err))
                 return {}, {}
             # Make list of lists in dictionary: map_set = {tup(probe,probe_type): [note_key1, note_key2]}
-            probes_type_list = [names_probes, zip_probes, mrn_probes, phone_probes, address_probes, workplace_probes]
+            probes_type_list = [names_probes, zip_probes, mrn_probes,
+                                phone_probes, address_probes, workplace_probes]
             # Names
             for i in probes_type_list:
                for index, row in i.iterrows():
-                   # Alternate value column name:
-                   #value = row['clean_value']
                    probe_type = row['phi_type']
-                   if probe_type == 'lname' or probe_type == 'mname' or probe_type == 'fname' or probe_type == 'preferred_name':
+                   if probe_type in names_probe_types:
                       probe_type = 'name'
-                   if probe_type == 'EMERG_CITY' or probe_type == 'EMERG_CITY_2' or probe_type == 'FATHER_CITY' or probe_type == 'MOTHER_CITY' or probe_type == 'empr_city' or probe_type == 'ADDR': 
+                   elif probe_type in address_probe_types: 
                       probe_type = 'address'
-                   probe_type = probe_type.lower()   
+                   elif probe_type == 'empr_id_cmt':
+                       probe_type = 'workplace'
+                   probe_type = probe_type.lower()  
+                   # Alternate value column name:
+                   #value = row['clean_value'] 
                    value = row['value']
                    note_key = row['note_key']
                    if note_key in map_set:
@@ -482,8 +497,9 @@ class Philter:
     def _update_dynamic_patterns(self, filename, 
                                  include_singles = False,
                                  include_nonames = False):
-        nonames = ['md','dr','pt','no','in','none','of','by','ct','none','medical','pathology',
-                   'patient','study','nan','per','contact']
+        nonames = ['md', 'dr', 'pt', 'no', 'in', 'none', 'of', 'by', 'ct',
+                   'none', 'medical', 'pathology', 'patient', 'study', 'nan',
+                   'per', 'contact']
         map_set = {}
         context_probes = []
         regex_probes = []
@@ -519,7 +535,7 @@ class Philter:
                        #print(probe_type_current) 
                        # Get names probes for regex search
                        name_pattern = re.compile(r"\b([A-Z]\'[a-zA-Z]+\b|[A-Z]\s[a-zA-Z]+\b|[A-Z]\.[A-Z]\.[A-Z]\.|[A-Z]\.[A-Z]\.)")
-                       probe_str = str(probe[0])
+                       probe_str = str(probe)
                        if probe_type_current == 'name' and name_pattern.match(probe_str):
                            regex_probes.append(probe_str)
                            continue
@@ -530,7 +546,7 @@ class Philter:
 
         
         # Substitute probes into probes_regex
-        if "Probes Regex" in self.patterns_indexes:
+        if "Probes Regex" in self.pattern_indexes:
             pat_idx_prbregx = self.pattern_indexes["Probes Regex"]
             if len(regex_probes) > 0:
                 rgx = self.patterns[pat_idx_prbregx]['dyndata'].pattern
@@ -541,7 +557,7 @@ class Philter:
                 self.patterns[pat_idx_prbregx]['data'] = re.compile(r"")
 
         # Substitute probes into probes_regex_context
-        if "Probes Regex Context" in self.patterns_indexes:
+        if "Probes Regex Context" in self.pattern_indexes:
             pat_idx_prbregxcontext = self.pattern_indexes["Probes Regex Context"]
             if len(context_probes) > 0:
                 rgx = self.patterns[pat_idx_prbregxcontext]['dyndata'].pattern
