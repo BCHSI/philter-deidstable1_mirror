@@ -318,19 +318,18 @@ class Philter:
                 self.patterns[i]["dyndata"] = self.init_set(pattern["filepath"])
             if pattern["type"] == "regex" or pattern["type"] == "regex_context":
                 if pattern["filepath"].split(".")[-1] not in regex_filetypes:
-                    raise Exception("Invalid filteype", pattern["filepath"],
+                    raise Exception("Invalid filetype", pattern["filepath"],
                                     "must be of", regex_filetypes)
-                self.patterns[i]["data"] = None
                 self.patterns[i]["data"] = self.precompile(pattern["filepath"])
             if pattern["type"] == "dynamic_regex":
                 if pattern["filepath"].split(".")[-1] not in regex_filetypes:
-                    raise Exception("Invalid filteype", pattern["filepath"],
+                    raise Exception("Invalid filetype", pattern["filepath"],
                                     "must be of", regex_filetypes)
                 self.patterns[i]["data"] = None
                 self.patterns[i]["dyndata"] = self.precompile(pattern["filepath"])
             if pattern["type"] == "dynamic_regex_context":
                 if pattern["filepath"].split(".")[-1] not in regex_filetypes:
-                    raise Exception("Invalid filteype", pattern["filepath"],
+                    raise Exception("Invalid filetype", pattern["filepath"],
                                     "must be of", regex_filetypes)
                 self.patterns[i]["data"] = None
                 self.patterns[i]["dyndata"] = self.precompile(pattern["filepath"])
@@ -395,10 +394,9 @@ class Philter:
                 print("Value Error: " + filepath
                        + " is invalid {0}".format(err))
                 return {}, {}
-            # Make list of lists in dictionary: map_set = {tup(probe,probe_type): [note_key1, note_key2]}
+
             probes_type_list = [names_probes, zip_probes, mrn_probes,
                                 phone_probes, address_probes, workplace_probes]
-            # Names
             for i in probes_type_list:
                for index, row in i.iterrows():
                    probe_type = row['phi_type']
@@ -424,7 +422,7 @@ class Philter:
         elif filepath.endswith(".mongo"):
              map_set = self.known_phi
         else:
-            raise Exception("Invalid filteype",filepath)
+            raise Exception("Invalid filetype",filepath)
         return map_set
 
 
@@ -528,8 +526,67 @@ class Philter:
                     if (probe_type == 'name'
                         and name_pattern.match(probe_str)):
                         regex_probes.append(probe_str)
-                        continue
-                    map_set, regex_probes, context_probes = self._dynamic_patterns_types(map_set, probe_type, probe, probe_clean,include_singles, include_nonames, nonames, pat_idx_dynbl, regex_probes, context_probes, note_key)
+                        #continue
+                    #map_set, regex_probes, context_probes = self._dynamic_patterns_types(map_set, probe_type, probe, probe_clean,include_singles, include_nonames, nonames, pat_idx_dynbl, regex_probes, context_probes, note_key)
+                    phone_regex = ''
+                    address_regex = ''
+                    workplace_regex = ''
+                    counter = 0
+                    for pc in probe_clean:
+                        counter += 1
+
+                        ### Name
+                        if probe_type == 'name':
+                            prb = re.sub(r"[^a-zA-Z0-9]+", "",
+                                         str(pc).lower().strip())
+                            if ((include_singles or len(prb) > 1)
+                                and (include_nonames or prb not in nonames)):
+                                map_set[prb] = note_key
+                            # If single character or in list of nonames,
+                            # add to list of context probes
+                            else:
+                                if prb.isdigit() == False:
+                                    context_probes.append(prb)
+
+                        ### Zip/MRN
+                        if probe_type == 'zip' or probe_type == 'mrn':
+                            prb = pc
+                            map_set[prb] = note_key
+
+                        ### Phone
+                        if probe_type == 'phone':
+                            prb = re.sub(r"[^0-9]+", "",str(pc).strip())
+                            # Allow for any number of non-alphanumeric
+                            # characters to separate each digit,
+                            # as long as all digits in probe are present
+                            if prb != '':
+                                phone_regex += prb
+                                if counter < len(probe_clean):
+                                    phone_regex += '([^0-9A-Za-z]{1,3})?'
+
+                        ### Address
+                        if probe_type == 'address':
+                            prb = str(pc).lower().strip()
+                            if prb != '':
+                                address_regex += prb
+                                if counter < len(probe_clean):
+                                    address_regex += '([^0-9A-Za-z]{1,5})?'
+
+                        ### Workplace
+                        if probe_type == 'workplace':
+                            prb = str(pc).lower().strip()
+                            if prb != '':
+                                workplace_regex += prb
+                                if counter < len(probe_clean):
+                                    workplace_regex += '([^0-9A-Za-z]{1,5})?'
+
+                    # Add to regex probes after all probe pieces added
+                    if phone_regex != '':
+                        regex_probes.append(phone_regex)
+                    if address_regex != '':
+                        regex_probes.append(address_regex)
+                    if workplace_regex != '':
+                        regex_probes.append(workplace_regex)
 
         self.patterns[pat_idx_dynbl]["data"] = map_set
         
@@ -538,13 +595,19 @@ class Philter:
         for rtype in rgx_types:
             if rtype in self.pattern_indexes:
                 ipat = self.pattern_indexes[rtype]
-                if len(regex_probes) > 0:
+                if rtype == "Probes Regex":
+                    rgx_probes = regex_probes
+                elif rtype == "Probes Regex Context":
+                    rgx_probes = context_probes
+                else:
+                    rgx_probes = []
+                if len(rgx_probes) > 0:
                     rgx = self.patterns[ipat]['dyndata'].pattern
                     regex_string = rgx.replace('"""+probe+r"""',
-                                               '|'.join(regex_probes))
+                                               '|'.join(rgx_probes))
                     self.patterns[ipat]['data'] = re.compile(regex_string)
                 else:
-                    self.patterns[ipat]['data'] = re.compile(r"")
+                    self.patterns[ipat]['data'] = re.compile(r"\b\B") #never match
 
     def map_coordinates(self, allowed_filetypes=set(["txt", "ano"])):
         """ Runs the set, or regex on the input data 
