@@ -339,14 +339,12 @@ class Phitexts:
             if phi_type == "DATE" or phi_type == "Date":
                 if __debug__: nodateshiftlist = []
                 for filename, start in self.norms[phi_type]:
-                    for ptype in ['PROBEDYNAMICSET', 'PROBEREGEX', 'PROBEREGEXCONTEXT']:
-                       if (ptype in self.types.keys() and (filename, start) in probes_found):
-                       #if ("PROBE" in self.types.keys() and (filename, start) in probes_found):
-                          continue
+                    if (filename, start) in probes_found:
+                        continue
                     if bson.objectid.ObjectId.is_valid(filename):
-                       note_key_ucsf = filename
+                        note_key_ucsf = filename
                     else:
-                       note_key_ucsf = os.path.splitext(os.path.basename(filename).strip('0'))[0].replace("_utf8","").replace(".txt","").replace(".xml","")
+                        note_key_ucsf = os.path.splitext(os.path.basename(filename).strip('0'))[0].replace("_utf8","").replace(".txt","").replace(".xml","")
                     if not self.subser.has_shift_amount(note_key_ucsf):
                         if __debug__:
                             if filename not in nodateshiftlist:
