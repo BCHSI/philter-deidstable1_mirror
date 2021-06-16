@@ -154,7 +154,7 @@ class Phitexts:
                       else:
                           probes['workplace'] = probes['workplace'] + list(set(prb[prb_type]) - set(probes['workplace']))
               
-                self.known_phi[prb['_id']] = probes
+               self.known_phi[prb['_id']] = probes
         #print(self.known_phi)
         print("Text read")
 
