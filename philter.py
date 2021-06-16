@@ -96,7 +96,7 @@ class Philter:
                 dynamic_blacklist = {
                     "notes": "These are known phi that are not safe",
                     "filepath": "",
-                    "phi_type": "PROBE",
+                    "phi_type": "PROBEDYNAMICSET",
                     "exclude": True,
                     "pos": ["NNP", "NNPS", "CD", "NN", "NNS", "IN", "JJ",
                             "VBD", "VBG", "RB"],
@@ -171,8 +171,10 @@ class Philter:
 
         #create a memory for the list of known PHI types
         self.phi_type_list = ['HOLIDAYS', 'DATE', 'ID', 'NAME', 'CONTACT',
-                              'AGE>=90', 'AGE<90', 'OTHER', 'LOCATION', 'PROBE']
-        
+                              'AGE>=90', 'AGE<90', 'OTHER', 'LOCATION',
+                              'PROBE', 'PROBEREGEX', 'PROBEDYNAMICSET',
+                              'PROBEREGEXCONTEXT']
+
         #create a memory for the corrdinate maps of known PHI types    
         self.phi_type_dict = {}
         for phi_type in self.phi_type_list:
