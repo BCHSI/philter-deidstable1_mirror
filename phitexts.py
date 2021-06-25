@@ -516,7 +516,7 @@ class Phitexts:
 
         philtered_text = []
         for files in self.textsout:
-            philtered = {'_id': files, 'deid_note_text': self.textsout[files]}
+            philtered = {'_id': files, 'note_text': self.textsout[files]}
             philtered_text.append(philtered)
 
         try:
