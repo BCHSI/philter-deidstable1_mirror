@@ -2485,7 +2485,7 @@
         "type": "dynamic_regex",
         "exclude": true,
         "filepath": "filters/regex/probes/probes_regex.txt",
-        "phi_type": "PROBE"
+        "phi_type": "PROBEREGEX"
     },
     {
         "title": "Probes Regex Context",
@@ -2495,7 +2495,7 @@
         "filepath": "filters/regex_context/probes_regex_context.txt",
         "context": "left_or_right",
         "context_filter": "all",
-        "phi_type": "PROBE"
+        "phi_type": "PROBEREGEXCONTEXT"
     },
     {
         "title":"Whitelist 1",
