@@ -435,6 +435,7 @@ class Philter:
         address_regex = ''
         workplace_regex = ''
         counter = 0
+        name_regex = ''
         for pc in probe_clean:
 
             ### Name
@@ -445,6 +446,7 @@ class Philter:
                     and (include_nonames or prb not in nonames)):
                     #map_set[prb] = self.patterns[pat_idx_dynbl]["dyndata"]
                     map_set[prb] = note_key
+                    name_regex = '(?i)\d+\/\d+\/\d+\s+\d*\:\d*|\d+\/\d+\/\d+' + prb
                # If single character or in list of nonames,
                # add to list of context probes
                else:
@@ -493,6 +495,8 @@ class Philter:
            regex_probes.append(address_regex)
         if workplace_regex != '':
            regex_probes.append(workplace_regex)
+        if name_regex != '':
+           regex_probes.append(name_regex)
         return map_set, regex_probes, context_probes
 
 
@@ -535,6 +539,7 @@ class Philter:
                     phone_regex = ''
                     address_regex = ''
                     workplace_regex = ''
+                    name_regex = ''
                     counter = 0
                     for pc in probe_clean:
                         
@@ -546,6 +551,7 @@ class Philter:
                                 and (include_nonames or prb not in nonames)):
                                 #map_set[prb] = self.patterns[pat_idx_dynbl]["dyndata"]
                                 map_set[prb] = note_key
+                                name_regex = '(?i)\d+\/\d+\/\d+\s+\d*\:\d*|\d+\/\d+\/\d+' + prb
                             # If single character or in list of nonames,
                             # add to list of context probes
                             else:
@@ -594,6 +600,9 @@ class Philter:
                         regex_probes.append(address_regex)
                     if workplace_regex != '':
                         regex_probes.append(workplace_regex)
+                    if name_regex != '':
+                        #print(name_regex)
+                        regex_probes.append(name_regex)
 
         self.patterns[pat_idx_dynbl]["data"] = map_set
         
@@ -612,6 +621,7 @@ class Philter:
                     rgx = self.patterns[ipat]['dyndata'].pattern
                     regex_string = rgx.replace('"""+probe+r"""',
                                                '|'.join(rgx_probes))
+                    #print(regex_string)
                     self.patterns[ipat]['data'] = re.compile(regex_string)
                 else:
                     self.patterns[ipat]['data'] = re.compile(r"\b\B") #never match
@@ -678,7 +688,6 @@ class Philter:
                     raise Exception("Error, pattern type not supported: ",
                                     pat["type"])
                 self.get_exclude_include_maps(filename, pat, txt)
-
             if self.time_profile:
                 # Add the filename's time profile to larger list
                 self.overall_regex_time_profile[filename] = self.current_regex_time_profile
@@ -706,7 +715,6 @@ class Philter:
             raise Exception("Invalid pattern index: ", pattern_index, "pattern length", len(patterns))
         coord_map = self.patterns[pattern_index]["coordinate_map"]
         regex = self.patterns[pattern_index]["data"]
-
         if regex == None: return # nothing to match
         regex_name = os.path.basename(self.patterns[pattern_index]['filepath'])
         
@@ -724,9 +732,7 @@ class Philter:
                       + str(pattern_index) + " \""
                       + self.patterns[pattern_index]["title"]
                       + "\" is " + str(regex))
-
             matches = regex.finditer(text)
-            
             match_count = 0
             for m in matches:
                 match_count += 1
@@ -735,7 +741,7 @@ class Philter:
                     print(m)
         
             self.patterns[pattern_index]["coordinate_map"] = coord_map
-        
+                  
         if self.time_profile:
             elapsed_time = time.time() - start_time
             if match_count > 0:
@@ -1092,6 +1098,7 @@ class Philter:
             else:
                 if exclude:
                     self.exclude_map.add_extend(filename, start, stop)
+                    #print(start)
                     self.include_map.remove(filename, start, stop)
                     self.phi_type_dict[phi_type][0].add_extend(filename, start, stop)
                     #print(filename + "\t" + phi_type + "\t" + str(start) + "\t" + str(stop))
