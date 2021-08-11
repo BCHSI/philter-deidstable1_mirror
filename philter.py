@@ -223,7 +223,7 @@ class Philter:
         if self.cache_to_disk:
             pos_path = self.pos_path
             filename = filename.split("/")[-1]
-            file_ = pos_path + filename
+            file_ = pos_path + str(filename)
             if filename not in self.pos_tags:
                 self.pos_tags[filename] = {}
             if not os.path.isfile(file_):
@@ -237,6 +237,7 @@ class Philter:
         else:
             if filename not in self.pos_tags:
                 self.pos_tags[filename] = nltk.pos_tag(cleaned)
+       
         return self.pos_tags[filename]
     
     def get_clean(self, filename, text, pre_process= r"[^a-zA-Z0-9]"):
@@ -446,7 +447,7 @@ class Philter:
                     and (include_nonames or prb not in nonames)):
                     #map_set[prb] = self.patterns[pat_idx_dynbl]["dyndata"]
                     map_set[prb] = note_key
-                    name_regex = '(?i)\d+\/\d+\/\d+\s+\d*\:\d*|\d+\/\d+\/\d+' + prb
+                    name_regex = '(?i)\d+[\/\-\.]\d+[\/\-\.]\d+\s+\d*\:\d*|\d+[\/\-\.]\d+[\/\-\.]\d+' + prb
                # If single character or in list of nonames,
                # add to list of context probes
                else:
@@ -551,7 +552,7 @@ class Philter:
                                 and (include_nonames or prb not in nonames)):
                                 #map_set[prb] = self.patterns[pat_idx_dynbl]["dyndata"]
                                 map_set[prb] = note_key
-                                name_regex = '(?i)\d+\/\d+\/\d+\s+\d*\:\d*|\d+\/\d+\/\d+' + prb
+                                name_regex = '(?i)\d+[\/\-\.]\d+[\/\-\.]\d+\s+\d*\:\d*|\d+[\/\-\.]\d+[\/\-\.]\d+' + prb
                             # If single character or in list of nonames,
                             # add to list of context probes
                             else:
@@ -925,7 +926,6 @@ class Philter:
             pos_list = self.get_pos(filename, cleaned)
         else:
             pos_list = zip(cleaned,range(len(cleaned)))
-
         start_coordinate = 0
         for tup in pos_list:
             word = tup[0]
