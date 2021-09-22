@@ -173,7 +173,7 @@ class Philter:
         self.phi_type_list = ['HOLIDAYS', 'DATE', 'ID', 'NAME', 'CONTACT',
                               'AGE>=90', 'AGE<90', 'OTHER', 'LOCATION',
                               'PROBE', 'PROBEREGEX', 'PROBEDYNAMICSET',
-                              'PROBEREGEXCONTEXT']
+                              'PROBEREGEXCONTEXT','TOWN']
 
         #create a memory for the corrdinate maps of known PHI types    
         self.phi_type_dict = {}
@@ -552,6 +552,8 @@ class Philter:
                                 and (include_nonames or prb not in nonames)):
                                 #map_set[prb] = self.patterns[pat_idx_dynbl]["dyndata"]
                                 map_set[prb] = note_key
+                                prb_with_s = prb + 's'
+                                map_set[prb_with_s] = note_key
                                 name_regex = '(?i)\d+[\/\-\.]\d+[\/\-\.]\d+\s+\d*\:\d*|\d+[\/\-\.]\d+[\/\-\.]\d+' + prb
                             # If single character or in list of nonames,
                             # add to list of context probes

@@ -182,7 +182,7 @@ class Phitexts:
         full_xml_map = {}
         phi_type_list = ['Provider_Name', 'Date', 'DATE',
                          'Patient_Social_Security_Number', 'Email',
-                         'Provider_Address_or_Location', 'Age', 'Name', 'OTHER']
+                         'Provider_Address_or_Location', 'Age', 'Name', 'OTHER','TOWN']
         phi_type_dict = {}
         for phi_type in phi_type_list:
             phi_type_dict[phi_type] = [CoordinateMap()]
@@ -268,7 +268,7 @@ class Phitexts:
            philter_config["known_phi"] = self.known_phi
         philter_config["phi_text"] = self.texts
         philter_config["filenames"] = self.filenames
-
+        #philter_config["cachepos"] = 'data'
         print("Initializing Philter") 
         self.filterer = Philter(philter_config)
         self.coords = self.filterer.map_coordinates()
@@ -766,9 +766,12 @@ class Phitexts:
            phi_type_per_token = self.get_phi_type_per_token()
 
            for filename in phi_type_per_token: 
+               #print(phi_type_per_token)
                for start in phi_type_per_token[filename]:
                    for end in phi_type_per_token[filename][start]:
-                       if len(phi_type_per_token[filename][start][end]) == 1 and 'PROBEDYNAMICSET' in phi_type_per_token[filename][start][end]:
+                       if len(phi_type_per_token[filename][start][end]) == 1 and ('PROBEDYNAMICSET' in phi_type_per_token[filename][start][end] or 'PROBEREGEX' in phi_type_per_token[filename][start][end]):
+                           #if 'PROBEDYNAMICSET' in phi_type_per_token[filename][start][end] or 'PROBEREGEX' in phi_type_per_token[filename][start][end]:
+                           #print(phi_type_per_token[filename][start][end])
                            flank_start = int(start) - 10
                            flank_end = int(end) + 10
                            if (flank_start < 0):
@@ -779,7 +782,6 @@ class Phitexts:
                            word = self.texts[filename][start:end+1]
                            #f.write(filename + "\t" + str(start) + "\t" + str(end) + "\t" + word + "\t" + context.replace('\n',' ') + "\t" + ','.join(phi_type_per_token[filename][start][end])+"\n")
                            dynamic_blacklist_df = dynamic_blacklist_df.append(pd.Series([filename,self.batch,str(start),str(end),word,context.replace('\n',' '),','.join(phi_type_per_token[filename][start][end])], index=dynamic_blacklist_df.columns),ignore_index=True)               
-
         return failed_date,eval_table,phi_table,phi_count_df,csv_summary_df,batch_summary_df,dynamic_blacklist_df,age_norm_info
 
         # Todo: add PHI type counts to summary
@@ -859,7 +861,6 @@ class Phitexts:
            dynamic_blacklist_df['Run'] = max_run_num
            dynamic_blacklist = dynamic_blacklist_df.to_dict(orient='records')
            collection_log_dynamic_blacklist.insert(dynamic_blacklist)
-        
         if bool(failed_date):
            failed_date['Batch'] = self.batch
            failed_date['Run'] = max_run_num
@@ -874,7 +875,6 @@ class Phitexts:
            phi_table['Batch'] = self.batch
            phi_table['Run'] = max_run_num
            collection_log_phi_marked.insert(phi_table)
-
 
 
  
