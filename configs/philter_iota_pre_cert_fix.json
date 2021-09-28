@@ -2501,7 +2501,7 @@
         "title": "US small towns and cities",
         "type": "regex",
         "exclude": true,
-        "filepath": "filters/regex/addresses/town_names_transformed.txt",
+        "filepath": "filters/regex/addresses/town_names_fp_removed_transformed.txt",
         "note": "Regex to capture small town names that are commmon english words in whitelist",
         "phi_type":"TOWN"
     },
