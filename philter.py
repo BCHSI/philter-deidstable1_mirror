@@ -173,7 +173,7 @@ class Philter:
         self.phi_type_list = ['HOLIDAYS', 'DATE', 'ID', 'NAME', 'CONTACT',
                               'AGE>=90', 'AGE<90', 'OTHER', 'LOCATION',
                               'PROBE', 'PROBEREGEX', 'PROBEDYNAMICSET',
-                              'PROBEREGEXCONTEXT']
+                              'PROBEREGEXCONTEXT','TOWN']
 
         #create a memory for the corrdinate maps of known PHI types    
         self.phi_type_dict = {}
@@ -223,7 +223,7 @@ class Philter:
         if self.cache_to_disk:
             pos_path = self.pos_path
             filename = filename.split("/")[-1]
-            file_ = pos_path + filename
+            file_ = pos_path + str(filename)
             if filename not in self.pos_tags:
                 self.pos_tags[filename] = {}
             if not os.path.isfile(file_):
@@ -237,6 +237,7 @@ class Philter:
         else:
             if filename not in self.pos_tags:
                 self.pos_tags[filename] = nltk.pos_tag(cleaned)
+       
         return self.pos_tags[filename]
     
     def get_clean(self, filename, text, pre_process= r"[^a-zA-Z0-9]"):
@@ -446,7 +447,7 @@ class Philter:
                     and (include_nonames or prb not in nonames)):
                     #map_set[prb] = self.patterns[pat_idx_dynbl]["dyndata"]
                     map_set[prb] = note_key
-                    name_regex = '(?i)\d+\/\d+\/\d+\s+\d*\:\d*|\d+\/\d+\/\d+' + prb
+                    name_regex = '(?i)\d+[\/\-\.]\d+[\/\-\.]\d+\s+\d*\:\d*|\d+[\/\-\.]\d+[\/\-\.]\d+' + prb
                # If single character or in list of nonames,
                # add to list of context probes
                else:
@@ -551,7 +552,9 @@ class Philter:
                                 and (include_nonames or prb not in nonames)):
                                 #map_set[prb] = self.patterns[pat_idx_dynbl]["dyndata"]
                                 map_set[prb] = note_key
-                                name_regex = '(?i)\d+\/\d+\/\d+\s+\d*\:\d*|\d+\/\d+\/\d+' + prb
+                                prb_with_s = prb + 's'
+                                map_set[prb_with_s] = note_key
+                                name_regex = '(?i)\d+[\/\-\.]\d+[\/\-\.]\d+\s+\d*\:\d*|\d+[\/\-\.]\d+[\/\-\.]\d+' + prb
                             # If single character or in list of nonames,
                             # add to list of context probes
                             else:
@@ -576,12 +579,13 @@ class Philter:
 
                         ### Address
                         if probe_type == 'address':
-                            
                             pc = str(pc).lower().strip()
-                            if pc != '' and counter < len(probe_clean)-1:
-                                address_regex = address_regex + pc + '([^0-9A-Za-z]{1,5})?'
-                            if pc != '' and counter == len(probe_clean)-1:
-                                address_regex = address_regex + pc
+                            #print(pc)
+                            if (pc not in town_city_exclude_tags) and (pc not in large_town_exclude_tags): 
+                               if pc != '' and counter < len(probe_clean)-1:
+                                   address_regex = address_regex + pc + '([^0-9A-Za-z]{1,5})?'
+                               if pc != '' and counter == len(probe_clean)-1:
+                                   address_regex = address_regex + pc
 
                         ### Workplace
                         if probe_type == 'workplace':
@@ -925,8 +929,13 @@ class Philter:
             pos_list = self.get_pos(filename, cleaned)
         else:
             pos_list = zip(cleaned,range(len(cleaned)))
-
         start_coordinate = 0
+        if __debug__ and self.verbose:
+                print("map_set(): searching for pattern with index "
+                      + str(pattern_index) + " \""
+                      + self.patterns[pattern_index]["title"]
+                      )
+
         for tup in pos_list:
             word = tup[0]
             pos  = tup[1]
@@ -941,6 +950,8 @@ class Philter:
             if check_pos == False or (check_pos == True and pos in pos_set):
                 if word_clean in map_set or word in map_set:
                     coord_map.add_extend(filename, start, stop)
+                    if __debug__ and self.verbose:
+                        print(word_clean +" " + word)
                 else:
                     pass
             #advance our start coordinate
