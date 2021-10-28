@@ -316,15 +316,32 @@ class Phitexts:
         # Generally, get normalized version for each detected phi
         # 1) get phi text given coords
         # 2) interpet/normalize phi given type
+        non_date_phi = {}
+        for phi_type in self.types.keys():
+            if phi_type != "DATE" and phi_type != "Date":
+                for filename, start, end in self.types[phi_type][0].scan():
+                    if filename not in non_date_phi.keys():
+                        non_date_phi[filename] = [(start,end)]
+                    else:
+                        non_date_phi[filename].append((start,end))
 
         for phi_type in self.types.keys():
             self.norms[phi_type] = {}
         for phi_type in self.types.keys():
             if phi_type == "DATE" or phi_type == "Date":
                 for filename, start, end in self.types[phi_type][0].scan():
-                    token = self.texts[filename][start:end]
-                    normalized_token = Subs.parse_date(token)
-                    self.norms[phi_type][(filename, start)] = (normalized_token,
+                    ranges = [list(range(pair[0],pair[1]+1)) for pair in non_date_phi[filename]]
+                    all_coords = [item for sublist in ranges for item in sublist]
+                    print(ranges)
+                    for i in range(start, end+1):
+                        print(i)
+                        if i in all_coords:
+                            continue
+                        else:
+                            token = self.texts[filename][start:end]
+                            normalized_token = Subs.parse_date(token)
+
+                            self.norms[phi_type][(filename, start)] = (normalized_token,
                                                                end)
             elif (phi_type == "AGE<90" or phi_type == "Age<90"
                   or phi_type == "AGE>=90" or phi_type == "Age>=90"):
@@ -372,6 +389,7 @@ class Phitexts:
                                       + filename)
                                 nodateshiftlist.append(filename)
                         continue
+
                     normalized_token = self.norms[phi_type][filename, start][0]
                     end = self.norms[phi_type][filename, start][1]
 
@@ -622,12 +640,15 @@ class Phitexts:
         # f_failed.write('\n')
         for filename, start, end in self.types[phi_type][0].scan():
             raw = self.texts[filename][start:end]
-            normalized_date = self.norms[phi_type][(filename,start)][0]
+            try:
+                normalized_date = self.norms[phi_type][(filename,start)][0]
+            except KeyError:
+                continue
             filename_str = str(filename)
             context = ''
             if filename_str not in parse_info:
-                parse_info[filename_str] = {'success_norm':0,'fail_norm':0,
-                                        'success_sub':0,'fail_sub':0}
+                parse_info[filename_str] = {'success_norm':0, 'fail_norm':0,
+                                            'success_sub':0, 'fail_sub':0}
             if filename_str not in eval_table:
                 eval_table[filename_str] = []
 
