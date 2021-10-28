@@ -309,11 +309,12 @@ class Phitexts:
         for phi_type in self.types.keys():
             if phi_type == "DATE" or phi_type == "Date":
                 for filename, start, end in self.types[phi_type][0].scan():
-                    ranges = [list(range(pair[0],pair[1]+1)) for pair in non_date_phi[filename]]
+                    if filename in non_date_phi.keys():
+                        ranges = [list(range(pair[0],pair[1]+1)) for pair in non_date_phi[filename]]
+                    else:
+                        ranges = []
                     all_coords = [item for sublist in ranges for item in sublist]
-                    print(ranges)
                     for i in range(start, end+1):
-                        print(i)
                         if i in all_coords:
                             continue
                         else:
