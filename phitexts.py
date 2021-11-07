@@ -349,9 +349,11 @@ class Phitexts:
                         self.norms[phi_type][(filename, start)] = (normalized_token,
                                                            end)
                         if filename in self.date_norms.keys():
-                            self.date_norms[filename].append((start,end,token,normalized_token))
+                            self.date_norms[filename].append((start, end, token,
+                                                              normalized_token))
                         else:
-                            self.date_norms[filename] = [(start,end,token,normalized_token)]
+                            self.date_norms[filename] = [(start, end, token,
+                                                          normalized_token)]
 
                     token = self.texts[filename][start:end]
                     normalized_token = Subs.parse_date(token)
