@@ -44,6 +44,8 @@ class Phitexts:
         self.types     = {}
         #normalized PHI
         self.norms     = {}
+        #normalized/parsed/subbed dates
+        self.date_norms = {}
         #substituted PHI
         self.subs      = {}
         #de-id notes
@@ -334,15 +336,21 @@ class Phitexts:
                     else:
                         ranges = []
                     all_coords = [item for sublist in ranges for item in sublist]
+                    overlap = False
                     for i in range(start, end+1):
                         if i in all_coords:
+                            overlap = True
                             continue
-                        else:
-                            token = self.texts[filename][start:end]
-                            normalized_token = Subs.parse_date(token)
+                    if not overlap:
+                        token = self.texts[filename][start:end]
+                        normalized_token = Subs.parse_date(token)
 
-                            self.norms[phi_type][(filename, start)] = (normalized_token,
-                                                               end)
+                        self.norms[phi_type][(filename, start)] = (normalized_token,
+                                                           end)
+                        if filename in self.date_norms.keys():
+                            self.date_norms[filename].append((start,end,token,normalized_token))
+                        else:
+                            self.date_norms[filename] = [(start,end,token,normalized_token)]
             elif (phi_type == "AGE<90" or phi_type == "Age<90"
                   or phi_type == "AGE>=90" or phi_type == "Age>=90"):
                 for filename, start, end in self.types[phi_type][0].scan():
@@ -1157,6 +1165,16 @@ class Phitexts:
     def _update_with_sub_tokens(self, gold_phi, philter_phi):
         gold = {}
         philter = {}
+        norm_coords = {}
+        for norm in self.norms['DATE']:
+            filename1 = norm[0]
+            start1 = norm[1]
+            end1 = self.norms['DATE'][norm][1]
+            if filename1 in norm_coords.keys():
+                norm_coords[filename1] = norm_coords[filename1] + list(range(start1,end1+1))
+            else:
+                norm_coords[filename1] = list(range(start1,end1+1))
+        
         for filename in gold_phi:
             gphi = gold_phi[filename].copy()
             pphi = philter_phi[filename].copy()
@@ -1170,6 +1188,11 @@ class Phitexts:
                     philter['stop'] = pphi[pstart][0]
                     philter['phitype'] = pphi[pstart][1]
                     philter['token'] = pphi[pstart][2]
+                    
+                    # Indicte whether date token was subbed or not
+                    original_coords = list(range(pstart,pphi[pstart][0]+1))
+                    date_subbed = all((item in norm_coords[filename] for item in original_coords))
+
                     try:
                         subtokens = self._get_sub_tokens(gold, philter)
                     except Exception as err:
@@ -1183,14 +1206,14 @@ class Phitexts:
                         phitype = subtokens[0][st][1]
                         token = subtokens[0][st][2]
                         gold_phi[filename].update({start:[stop, phitype,
-                                                          token]})
+                                                          token, date_subbed]})
                     for st in subtokens[1]:
                         start = st
                         stop = subtokens[1][st][0]
                         phitype = subtokens[1][st][1]
                         token = subtokens[1][st][2]
                         philter_phi[filename].update({start:[stop, phitype,
-                                                             token]})
+                                                             token, date_subbed]})
 
     # true positives (tokens in gold and philter)
     def _get_tp_dicts(self, gold_dicts, philter_dicts):
@@ -1283,12 +1306,20 @@ class Phitexts:
             os.makedirs(eval_dir)       
 
 
-        text_fp_file = open(os.path.join(eval_dir,'fp.eval'),"w+")
-        text_tp_file = open(os.path.join(eval_dir,'tp.eval'),"w+")
-        text_fn_file = open(os.path.join(eval_dir,'fn.eval'),"w+")
-        text_tn_file = open(os.path.join(eval_dir,'tn.eval'),"w+")
-        text_fp_context_file = open(os.path.join(eval_dir,'fp_context.eval'),"w+")
-        text_fn_context_file = open(os.path.join(eval_dir,'fn_context.eval'),"w+")
+        text_fp_file = open(os.path.join(eval_dir, 'fp.eval'), "w+")
+        text_tp_file = open(os.path.join(eval_dir, 'tp.eval'), "w+")
+        text_fn_file = open(os.path.join(eval_dir, 'fn.eval'), "w+")
+        text_tn_file = open(os.path.join(eval_dir, 'tn.eval'), "w+")
+        text_fp_context_file = open(os.path.join(eval_dir, 'fp_context.eval'),
+                                    "w+")
+        text_fn_context_file = open(os.path.join(eval_dir, 'fn_context.eval'),
+                                    "w+")
+        
+        text_date_file = open(os.path.join(eval_dir, 'date.eval'), "w+")
+        text_date_file.write('filename' + '\t' + 'token'
+                                        + '\t' + 'result'
+                                        + '\t' + 'text_output'
+                                        + '\t' + 'start' + '\t' + 'stop')
 
         # gathers full text tokens, gold and philter tokens
         gold_dicts = self._get_gold_phi(anno_dir)
@@ -1313,6 +1344,13 @@ class Phitexts:
         total_cfp = 0
         total_ctn = 0
         total_cfn = 0
+
+        # counts of substituted/normalized and obscured dates
+        tp_dates_normalized = 0
+        tp_dates_obscured = 0
+        fp_dates_normalized = 0
+        fp_dates_obscured = 0
+        fn_dates = 0
         for filename in self.filenames:
             if filename not in summary_by_file:
                 summary_by_file[filename] = {}
@@ -1339,6 +1377,27 @@ class Phitexts:
                     stop = truepositives_dicts[filename][st][0]
                     phi_type = truepositives_dicts[filename][st][1]
                     token = truepositives_dicts[filename][st][2]
+                    text_output_bool = False
+                    text_output = ''
+                    if phi_type in ['DATE','Date']:
+                        try:
+                            text_output_bool = truepositives_dicts[filename][st][3]
+                            if text_output_bool:
+                                text_output = 'Normalized'
+                                tp_dates_normalized += 1
+                            else:
+                                text_output = 'Obscured'
+                                tp_dates_obscured += 1
+                        except IndexError:
+                            text_output = 'Obscured'
+                            tp_dates_obscured += 1
+
+                        text_date_file.write('\n' + filename
+                                       + '\t' + token
+                                       + '\t' + 'TP'
+                                       + '\t' + text_output
+                                       + '\t' + str(start) + '\t' + str(stop))
+                    
                     text_tp_file.write('\n' + filename + '\t' + str(phi_type)
                                        + '\t' + token
                                        + '\t' + str(start) + '\t' + str(stop))
@@ -1370,6 +1429,28 @@ class Phitexts:
                     phi_type = falsepositives_dicts[filename][st][1]
                     token = falsepositives_dicts[filename][st][2]
                     context = self.texts[filename][context_start:context_stop]
+                    text_output_bool = False
+                    text_output = ''
+                    if phi_type in ['DATE','Date']:
+                        try:
+                            text_output_bool = falsepositives_dicts[filename][st][3]
+                            if text_output_bool:
+                                text_output = 'Normalized'
+                                fp_dates_normalized += 1
+                            else:
+                                text_output = 'Obscured'
+                                fp_dates_obscured += 1
+                        except IndexError:
+                            text_output = 'Obscured'
+                            fp_dates_obscured += 1
+
+                        text_date_file.write('\n' + filename
+                                             + '\t' + token
+                                             + '\t' + 'FP'
+                                             + '\t' + text_output
+                                             + '\t' + str(start)
+                                             + '\t' + str(stop))
+                    
                     text_fp_file.write('\n' + filename + '\t' + str(phi_type)
                                        + '\t' + token
                                        + '\t' + str(start) + '\t' + str(stop))
@@ -1421,14 +1502,25 @@ class Phitexts:
                     phi_type = falsenegatives_dicts[filename][st][1]
                     token = falsenegatives_dicts[filename][st][2]
                     context = self.texts[filename][context_start:context_stop]
+                    if phi_type in ['DATE','Date']:
+                        fn_dates += 1
+                        text_date_file.write('\n' + filename
+                                             + '\t' + token
+                                             + '\t' + 'FN'
+                                             + '\t' + ''
+                                             + '\t' + str(start)
+                                             + '\t' + str(stop))
+
                     text_fn_file.write('\n' + filename + '\t' + str(phi_type)
                                        + '\t' + token
                                        + '\t' + str(start) + '\t' + str(stop))
 
-                    text_fn_context_file.write('\n' + filename + '|' + str(phi_type)
-                                       + '|' + token
-                                       + '|' + str(start) + '|' + str(stop)
-                                       + '|' + str(context))
+                    text_fn_context_file.write('\n' + filename
+                                               + '|' + str(phi_type)
+                                               + '|' + token
+                                               + '|' + str(start)
+                                               + '|' + str(stop)
+                                               + '|' + str(context))
 
                     if phi_type not in summary_by_category:
                         summary_by_category[phi_type] = {}
@@ -1532,7 +1624,12 @@ class Phitexts:
                          'ctp':total_ctp, 'cfp':total_cfp,
                          'ctn':total_ctn, 'cfn':total_cfn,
                          'cprecision':total_cprecision, 'crecall':total_crecall,
-                         'cretention':total_cretention}
+                         'cretention':total_cretention,
+                         'tp_dates_normalized':tp_dates_normalized,
+                         'tp_dates_obscured':tp_dates_obscured,
+                         'fp_dates_normalized':fp_dates_normalized,
+                         'fp_dates_obscured':fp_dates_obscured,
+                         'fn_dates':fn_dates}
 
         json.dump(total_summary, open(summary_file, "w"), indent=4)
         json.dump(summary_by_file, open(json_summary_by_file, "w"), indent=4)
@@ -1545,3 +1642,4 @@ class Phitexts:
         text_fn_file.close()
         text_fp_context_file.close()
         text_fn_context_file.close()
+        text_date_file.close()
