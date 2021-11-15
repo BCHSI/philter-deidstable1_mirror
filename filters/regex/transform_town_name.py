@@ -6,6 +6,7 @@ import json
 # Define regex variables
 
 # Get gene symbols from json whitelist
+#symbols_json = json.loads(open("../../blacklists/town_tokens_black_list.json").read())
 symbols_json = json.loads(open("../../blacklists/town_tokens_black_list_fp_removed.json").read())
 gene_symbols = ''
 for key in symbols_json:
