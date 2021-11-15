@@ -555,6 +555,9 @@ class Philter:
                                 prb_with_s = prb + 's'
                                 map_set[prb_with_s] = note_key
                                 name_regex = '(?i)\d+[\/\-\.]\d+[\/\-\.]\d+\s+\d*\:\d*|\d+[\/\-\.]\d+[\/\-\.]\d+' + prb
+                                regex_probes.append(name_regex)
+                                name_regex = '(?i)\d+[\/\-\.]\d+[\/\-\.]\d+\s+\d*\:\d*|\d+[\/\-\.]\d+[\/\-\.]\d+' + prb_with_s
+                                regex_probes.append(name_regex)
                             # If single character or in list of nonames,
                             # add to list of context probes
                             else:
@@ -604,9 +607,6 @@ class Philter:
                         regex_probes.append(address_regex)
                     if workplace_regex != '':
                         regex_probes.append(workplace_regex)
-                    if name_regex != '':
-                        #print(name_regex)
-                        regex_probes.append(name_regex)
 
         self.patterns[pat_idx_dynbl]["data"] = map_set
         
