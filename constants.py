@@ -28,6 +28,7 @@ ucsf_category_dict = {'Date':'Date',
                       'Teaching_Institution_Name':'Location',
                       'Non_UCSF_Medical_Institution_Name':'Location',
                       'Medical_Institution_Abbreviation':'Location',
+                      'TOWN':'Location',
                       'Unclear':'Other'
 }
 ucsf_tags = list(ucsf_category_dict.keys())
@@ -41,7 +42,7 @@ ucsf_include_tags = ['Date', 'Provider_Name', 'Phone_Fax',
                      'Procedure_or_Billing_Code', 'Email', 'URL_IP',
                      'Patient_Biometric_Id_or_Face_Photo',
                      'Patient_Certificate_or_License', 'Age',
-                     'Patient_Initials', 'Provider_Initials']
+                     'Patient_Initials', 'Provider_Initials', 'TOWN']
 ucsf_patient_tags = ['Date', 'Phone_Fax', 'Age',
                      'Patient_Name_or_Family_Member_Name', 'Patient_Address',
                      'Patient_Initials', 'Patient_Medical_Record_Id',
