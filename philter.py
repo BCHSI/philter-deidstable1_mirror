@@ -488,6 +488,7 @@ class Philter:
                                                   + '\d+\s+\d*\:\d*|\d+[\/\-\.]'
                                                   + '\d+[\/\-\.]\d+' + p)
                                     regex_probes.append(name_regex)
+
                             # If single character or in list of nonames,
                             # add to list of context probes
                             else:
@@ -539,6 +540,9 @@ class Philter:
                         regex_probes.append(address_regex)
                     if workplace_regex != '':
                         regex_probes.append(workplace_regex)
+                    if name_regex != '':
+                        #print(name_regex)
+                        regex_probes.append(name_regex)
 
         self.patterns[pat_idx_dynbl]["data"] = map_set
         
@@ -624,7 +628,6 @@ class Philter:
                     raise Exception("Error, pattern type not supported: ",
                                     pat["type"])
                 self.get_exclude_include_maps(filename, pat, txt)
-
             if self.time_profile:
                 # Add the filename's time profile to larger list
                 self.overall_regex_time_profile[filename] = self.current_regex_time_profile
@@ -1063,6 +1066,7 @@ class Philter:
             else:
                 if exclude:
                     self.exclude_map.add_extend(filename, start, stop)
+                    #print(start)
                     self.include_map.remove(filename, start, stop)
                     self.phi_type_dict[phi_type][0].add_extend(filename, start, stop)
                 else:
