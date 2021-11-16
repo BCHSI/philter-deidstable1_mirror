@@ -173,7 +173,7 @@ class Philter:
         self.phi_type_list = ['HOLIDAYS', 'DATE', 'ID', 'NAME', 'CONTACT',
                               'AGE>=90', 'AGE<90', 'OTHER', 'LOCATION',
                               'PROBE', 'PROBEREGEX', 'PROBEDYNAMICSET',
-                              'PROBEREGEXCONTEXT','TOWN']
+                              'PROBEREGEXCONTEXT', 'TOWN']
 
         #create a memory for the corrdinate maps of known PHI types    
         self.phi_type_dict = {}
@@ -289,7 +289,8 @@ class Philter:
         """ given our input pattern config will load our sets and pre-compile our regex"""
 
         known_pattern_types = set(["regex", "set", "dynamic_set",
-                                   "regex_context", "dynamic_regex","dynamic_regex_context",
+                                   "regex_context", "dynamic_regex",
+                                   "dynamic_regex_context",
                                    "stanford_ner", "pos_matcher", "match_all"])
         require_files = set(["regex", "set"])
         require_pos = set(["pos_matcher"])
@@ -430,83 +431,14 @@ class Philter:
             raise Exception("Invalid filteype",filepath)
         return map_set
 
-
-    def _dynamic_patterns_types(self, map_set, probe_type, probe, probe_clean, include_singles, include_nonames, nonames, pat_idx_dynbl,regex_probes,context_probes,note_key):
-        phone_regex = ''
-        address_regex = ''
-        workplace_regex = ''
-        counter = 0
-        name_regex = ''
-        for pc in probe_clean:
-
-            ### Name
-            if probe_type == 'name':
-               prb = re.sub(r"[^a-zA-Z0-9]+", "",
-               str(pc).lower().strip())
-               if ((include_singles or len(prb) > 1)
-                    and (include_nonames or prb not in nonames)):
-                    #map_set[prb] = self.patterns[pat_idx_dynbl]["dyndata"]
-                    map_set[prb] = note_key
-                    name_regex = '(?i)\d+[\/\-\.]\d+[\/\-\.]\d+\s+\d*\:\d*|\d+[\/\-\.]\d+[\/\-\.]\d+' + prb
-               # If single character or in list of nonames,
-               # add to list of context probes
-               else:
-                  if prb.isdigit() == False:
-                     context_probes.append(prb)
-
-            ### Zip/MRN
-            if probe_type == 'zip' or probe_type == 'mrn':
-               prb = pc
-               #map_set[prb] = self.patterns[pat_idx_dynbl]["dyndata"]
-               map_set[prb] = note_key
-
-            ### Phone
-            if probe_type == 'phone':
-               pc = re.sub(r"[^0-9]+", "",str(pc).strip())
-               # Allow for any number of non-alphanumeric characters to separate each digit,
-               # as long as all digits in probe are present
-               if pc != '' and counter < len(probe_clean)-1:
-                  phone_regex = phone_regex + pc + '([^0-9A-Za-z]{1,3})?'
-               if pc != '' and counter == len(probe_clean)-1:
-                  phone_regex = phone_regex + pc
-
-            ### Address
-            if probe_type == 'address':
-
-               pc = str(pc).lower().strip()
-               if pc != '' and counter < len(probe_clean)-1:
-                  address_regex = address_regex + pc + '([^0-9A-Za-z]{1,5})?'
-               if pc != '' and counter == len(probe_clean)-1:
-                  address_regex = address_regex + pc
-
-            ### Workplace
-            if probe_type == 'workplace':
-
-               pc = str(pc).lower().strip()
-               if pc != '' and counter < len(probe_clean)-1:
-                  workplace_regex = workplace_regex + pc + '([^0-9A-Za-z]{1,5})?'
-               if pc != '' and counter == len(probe_clean)-1:
-                  workplace_regex = workplace_regex + pc
-
-            counter = counter + 1
-        # Add to regex probes after all probe pieces added
-        if phone_regex != '':
-           regex_probes.append(phone_regex)
-        if address_regex != '':
-           regex_probes.append(address_regex)
-        if workplace_regex != '':
-           regex_probes.append(workplace_regex)
-        if name_regex != '':
-           regex_probes.append(name_regex)
-        return map_set, regex_probes, context_probes
-
-
     def _update_dynamic_patterns(self, filename, 
                                  include_singles = False,
                                  include_nonames = False):
         nonames = ['md', 'dr', 'pt', 'no', 'in', 'none', 'of', 'by', 'ct',
                    'none', 'medical', 'pathology', 'patient', 'study', 'nan',
                    'per', 'contact']
+        nocities = ['friend', 'cousin', 'brother', 'normal', 'nephew',
+                    'likely', 'unknown', 'rescue' ,'decline']
         map_set = {}
         context_probes = []
         regex_probes = []
@@ -535,8 +467,6 @@ class Philter:
                     if (probe_type == 'name'
                         and name_pattern.match(probe_str)):
                         regex_probes.append(probe_str)
-                        #continue
-                    #map_set, regex_probes, context_probes = self._dynamic_patterns_types(map_set, probe_type, probe, probe_clean,include_singles, include_nonames, nonames, pat_idx_dynbl, regex_probes, context_probes, note_key)
                     phone_regex = ''
                     address_regex = ''
                     workplace_regex = ''
@@ -550,14 +480,14 @@ class Philter:
                                          str(pc).lower().strip())
                             if ((include_singles or len(prb) > 1)
                                 and (include_nonames or prb not in nonames)):
-                                #map_set[prb] = self.patterns[pat_idx_dynbl]["dyndata"]
                                 map_set[prb] = note_key
                                 prb_with_s = prb + 's'
                                 map_set[prb_with_s] = note_key
-                                name_regex = '(?i)\d+[\/\-\.]\d+[\/\-\.]\d+\s+\d*\:\d*|\d+[\/\-\.]\d+[\/\-\.]\d+' + prb
-                                regex_probes.append(name_regex)
-                                name_regex = '(?i)\d+[\/\-\.]\d+[\/\-\.]\d+\s+\d*\:\d*|\d+[\/\-\.]\d+[\/\-\.]\d+' + prb_with_s
-                                regex_probes.append(name_regex)
+                                for p in [prb, prb_with_s]:
+                                    name_regex = ('(?i)\d+[\/\-\.]\d+[\/\-\.]'
+                                                  + '\d+\s+\d*\:\d*|\d+[\/\-\.]'
+                                                  + '\d+[\/\-\.]\d+' + p)
+                                    regex_probes.append(name_regex)
                             # If single character or in list of nonames,
                             # add to list of context probes
                             else:
@@ -567,39 +497,41 @@ class Philter:
                         ### Zip/MRN
                         if probe_type == 'zip' or probe_type == 'mrn':
                             prb = pc
-                            #map_set[prb] = self.patterns[pat_idx_dynbl]["dyndata"]
                             map_set[prb] = note_key
 
                         ### Phone
                         if probe_type == 'phone':
                             pc = re.sub(r"[^0-9]+", "",str(pc).strip())
-                            # Allow for any number of non-alphanumeric characters to separate each digit,
+                            # Allow for any number of non-alphanumeric
+                            # characters to separate each digit,
                             # as long as all digits in probe are present
                             if pc != '' and counter < len(probe_clean)-1:
-                                phone_regex = phone_regex + pc + '([^0-9A-Za-z]{1,3})?'
+                                phone_regex = (phone_regex + pc
+                                               + '([^0-9A-Za-z]{1,3})?')
                             if pc != '' and counter == len(probe_clean)-1:
                                 phone_regex = phone_regex + pc
 
                         ### Address
                         if probe_type == 'address':
                             pc = str(pc).lower().strip()
-                            #print(pc)
-                            if (pc not in town_city_exclude_tags) and (pc not in large_town_exclude_tags): 
-                               if pc != '' and counter < len(probe_clean)-1:
-                                   address_regex = address_regex + pc + '([^0-9A-Za-z]{1,5})?'
-                               if pc != '' and counter == len(probe_clean)-1:
-                                   address_regex = address_regex + pc
+                            if pc not in nocites and pc not in large_cities: 
+                                if pc != '' and counter < len(probe_clean)-1:
+                                    address_regex = (address_regex + pc
+                                                     + '([^0-9A-Za-z]{1,5})?')
+                                if pc != '' and counter == len(probe_clean)-1:
+                                    address_regex = address_regex + pc
 
                         ### Workplace
                         if probe_type == 'workplace':
-                            
                             pc = str(pc).lower().strip()
                             if pc != '' and counter < len(probe_clean)-1:
-                                workplace_regex = workplace_regex + pc + '([^0-9A-Za-z]{1,5})?'
+                                workplace_regex = (workplace_regex + pc
+                                                   + '([^0-9A-Za-z]{1,5})?')
                             if pc != '' and counter == len(probe_clean)-1:
                                 workplace_regex = workplace_regex + pc
 
                         counter = counter + 1
+
                     # Add to regex probes after all probe pieces added
                     if phone_regex != '':
                         regex_probes.append(phone_regex)
@@ -692,6 +624,7 @@ class Philter:
                     raise Exception("Error, pattern type not supported: ",
                                     pat["type"])
                 self.get_exclude_include_maps(filename, pat, txt)
+
             if self.time_profile:
                 # Add the filename's time profile to larger list
                 self.overall_regex_time_profile[filename] = self.current_regex_time_profile
@@ -716,7 +649,8 @@ class Philter:
             generating a coordinate map of hits given (dry run doesn't transform)
         """
         if pattern_index < 0 or pattern_index >= len(self.patterns):
-            raise Exception("Invalid pattern index: ", pattern_index, "pattern length", len(patterns))
+            raise Exception("Invalid pattern index: ", pattern_index,
+                            "pattern length", len(patterns))
         coord_map = self.patterns[pattern_index]["coordinate_map"]
         regex = self.patterns[pattern_index]["data"]
         if regex == None: return # nothing to match
@@ -740,12 +674,13 @@ class Philter:
             match_count = 0
             for m in matches:
                 match_count += 1
-                coord_map.add_extend(filename, m.start(), m.start()+len(m.group()))
+                coord_map.add_extend(filename, m.start(),
+                                     m.start()+len(m.group()))
                 if __debug__ and self.verbose:
                     print(m)
-        
+
             self.patterns[pattern_index]["coordinate_map"] = coord_map
-                  
+
         if self.time_profile:
             elapsed_time = time.time() - start_time
             if match_count > 0:
@@ -761,7 +696,8 @@ class Philter:
             for item in matchall_list:
                 if len(item) > 0:
                     if item.isspace() == False:
-                        split_item = re.split("(\s+)", re.sub(pre_process, " ", item))
+                        split_item = re.split("(\s+)",
+                                              re.sub(pre_process, " ", item))
                         for elem in split_item:
                             if len(elem) > 0:
                                 matchall_list_cleaned.append(elem)
@@ -796,7 +732,8 @@ class Philter:
         punctuation_matcher = re.compile(r"[^a-zA-Z0-9*]")
 
         if pattern_index < 0 or pattern_index >= len(self.patterns):
-            raise Exception("Invalid pattern index: ", pattern_index, "pattern length", len(patterns))
+            raise Exception("Invalid pattern index: ", pattern_index,
+                            "pattern length", len(patterns))
         
         coord_map = self.patterns[pattern_index]["coordinate_map"]
         regex = self.patterns[pattern_index]["data"]
@@ -806,7 +743,10 @@ class Philter:
         try:
             context_filter = self.patterns[pattern_index]["context_filter"]
         except KeyError:
-            warnings.warn("deprecated missing context_filter field in filter " + str(pattern_index) + " of type regex_context, assuming \'all\'", DeprecationWarning)
+            warnings.warn("deprecated missing context_filter field in filter "
+                          + str(pattern_index)
+                          + " of type regex_context, assuming \'all\'",
+                          DeprecationWarning)
             context_filter = 'all'
 
         # Get PHI coordinates
@@ -814,8 +754,8 @@ class Philter:
             # current_include_map = self.get_full_include_map(filename)
             current_include_map = self.include_map
             # Create complement exclude map (also excludes punctuation)      
-            full_exclude_map = current_include_map.get_complement(filename, text)
-
+            full_exclude_map = current_include_map.get_complement(filename,
+                                                                  text)
         else:
             context_filter_pattern_index = self.pattern_indexes[context_filter]
             full_exclude_map_coordinates = self.patterns[context_filter_pattern_index]['coordinate_map']
@@ -865,7 +805,8 @@ class Philter:
                 # Get index of m.group()first alphanumeric character in match
                 tokenized_matches = []
                 match_text = m.group()
-                split_match = re.split("(\s+)", re.sub(pre_process, " ", match_text))
+                split_match = re.split("(\s+)",
+                                       re.sub(pre_process, " ", match_text))
 
                 # Get all spans of tokenized match (because remove() function requires tokenized start coordinates)
                 coord_tracker = 0
@@ -874,14 +815,20 @@ class Philter:
                         if not punctuation_matcher.match(element[0]):
                             current_start = match_start + coord_tracker
                             current_end = current_start + len(element)
-                            tokenized_matches.append((current_start, current_end))
+                            tokenized_matches.append((current_start,
+                                                      current_end))
 
                             coord_tracker += len(element)
                         else:
                             coord_tracker += len(element)
 
                 ## Check for context, and add to coordinate map
-                if (context == "left" and phi_left == True) or (context == "right" and phi_right == True) or (context == "left_or_right" and (phi_right == True or phi_left == True)) or (context == "left_and_right" and (phi_right == True and phi_left == True)):
+                if ((context == "left" and phi_left == True)
+                    or (context == "right" and phi_right == True)
+                    or (context == "left_or_right"
+                        and (phi_right == True or phi_left == True))
+                    or (context == "left_and_right"
+                        and (phi_right == True and phi_left == True))):
                     for item in tokenized_matches:
                         coord_map.add_extend(filename, item[0], item[1])
 
@@ -901,7 +848,8 @@ class Philter:
             raise Exception("Filepath does not exist", filename)
         '''
         if pattern_index < 0 or pattern_index >= len(self.patterns):
-            raise Exception("Invalid pattern index: ", pattern_index, "pattern length", len(patterns))
+            raise Exception("Invalid pattern index: ", pattern_index,
+                            "pattern length", len(patterns))
 
         coord_map = self.patterns[pattern_index]["coordinate_map"]
         #add the entire length of the file
@@ -909,10 +857,12 @@ class Philter:
         self.patterns[pattern_index]["coordinate_map"] = coord_map
 
 
-    def map_set(self, filename="", text="", pattern_index=-1,  pre_process= r"[^a-zA-Z0-9]"):
+    def map_set(self, filename="", text="", pattern_index=-1,
+                pre_process= r"[^a-zA-Z0-9]"):
         """ Creates a coordinate mapping of words any words in this set"""
         if pattern_index < 0 or pattern_index >= len(self.patterns):
-            raise Exception("Invalid pattern index: ", pattern_index, "pattern length", len(patterns))
+            raise Exception("Invalid pattern index: ", pattern_index,
+                            "pattern length", len(patterns))
         
         map_set = self.patterns[pattern_index]["data"]
         coord_map = self.patterns[pattern_index]["coordinate_map"]
@@ -931,10 +881,9 @@ class Philter:
             pos_list = zip(cleaned,range(len(cleaned)))
         start_coordinate = 0
         if __debug__ and self.verbose:
-                print("map_set(): searching for pattern with index "
-                      + str(pattern_index) + " \""
-                      + self.patterns[pattern_index]["title"]
-                      )
+            print("map_set(): searching for pattern with index "
+                  + str(pattern_index) + " \""
+                  + self.patterns[pattern_index]["title"])
 
         for tup in pos_list:
             word = tup[0]
@@ -951,7 +900,7 @@ class Philter:
                 if word_clean in map_set or word in map_set:
                     coord_map.add_extend(filename, start, stop)
                     if __debug__ and self.verbose:
-                        print(word_clean +" " + word)
+                        print(word_clean + " " + word)
                 else:
                     pass
             #advance our start coordinate
@@ -959,17 +908,20 @@ class Philter:
 
         self.patterns[pattern_index]["coordinate_map"] = coord_map  
 
-    def map_pos(self, filename="", text="", pattern_index=-1, pre_process= r"[^a-zA-Z0-9]"):
+    def map_pos(self, filename="", text="", pattern_index=-1,
+                pre_process= r"[^a-zA-Z0-9]"):
         """ Creates a coordinate mapping of words which match this part of speech (POS)"""
         '''
         if not os.path.exists(filename):
             raise Exception("Filepath does not exist", filename)
         '''
         if pattern_index < 0 or pattern_index >= len(self.patterns):
-            raise Exception("Invalid pattern index: ", pattern_index, "pattern length", len(patterns))
+            raise Exception("Invalid pattern index: ", pattern_index,
+                            "pattern length", len(patterns))
 
         if "pos" not in self.patterns[pattern_index]:
-            raise Exception("Mapping POS must include parts of speech", pattern_index, "pattern length", len(patterns))
+            raise Exception("Mapping POS must include parts of speech",
+                            pattern_index, "pattern length", len(patterns))
             
         coord_map = self.patterns[pattern_index]["coordinate_map"]
         pos_set = set(self.patterns[pattern_index]["pos"])
@@ -1092,7 +1044,10 @@ class Philter:
             phi_type = "OTHER"
 
         for start,stop in coord_map.filecoords(filename):
-            if pattern['type'] != 'regex_context' and pattern['type'] != 'dynamic_set' and pattern['type'] != 'dynamic_regex' and pattern['type'] != 'dynamic_regex_context':
+            if (pattern['type'] != 'regex_context'
+                and pattern['type'] != 'dynamic_set'
+                and pattern['type'] != 'dynamic_regex'
+                and pattern['type'] != 'dynamic_regex_context'):
                 if exclude or exclude == "True":
                     if not self.include_map.does_overlap(filename, start, stop):
                         self.exclude_map.add_extend(filename, start, stop)
@@ -1101,7 +1056,6 @@ class Philter:
                     if not self.exclude_map.does_overlap(filename, start, stop):
                         self.include_map.add_extend(filename, start, stop)
                         self.data_all_files[filename]["non-phi"].append({"start":start, "stop":stop, "word":txt[start:stop], "filepath":filter_path})
-
                     else:
                         pass 
 
@@ -1109,10 +1063,8 @@ class Philter:
             else:
                 if exclude:
                     self.exclude_map.add_extend(filename, start, stop)
-                    #print(start)
                     self.include_map.remove(filename, start, stop)
                     self.phi_type_dict[phi_type][0].add_extend(filename, start, stop)
-                    #print(filename + "\t" + phi_type + "\t" + str(start) + "\t" + str(stop))
                 else:
                     self.include_map.add_extend(filename, start, stop)
                     self.exclude_map.remove(filename, start, stop)

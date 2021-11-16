@@ -28,7 +28,8 @@ import socket
 class Phitexts:
     """ container for texts, phi, attributes """
 
-    def __init__(self, inputdir = None, xml = False, batch = None, db = None, mongo = None):
+    def __init__(self, inputdir = None, xml = False, batch = None,
+                 db = None, mongo = None):
         self.inputdir  = inputdir
         self.db = db
         self.mongo = mongo
@@ -60,7 +61,8 @@ class Phitexts:
         self.filterer = None
 
     def get_mongo_handle(self, mongo):
-        client = MongoClient(mongo["client"],username=mongo["username"],password=mongo["password"])
+        client = MongoClient(mongo["client"], username=mongo["username"],
+                             password=mongo["password"])
         try:
           db = client[mongo['db']]
         except:
@@ -124,37 +126,51 @@ class Phitexts:
                       if 'name' not in probes:
                           probes['name'] = prb[prb_type]
                       else:
-                          probes['name'] = probes['name'] + list(set(prb[prb_type]) - set(probes['name'])) 
+                          probes['name'] = (probes['name']
+                                            + list(set(prb[prb_type])
+                                                   - set(probes['name']))) 
                    if prb_type == 'probes_mrn':
                       if 'mrn' not in probes:
                           probes['mrn'] = prb[prb_type]
                       else:
-                          probes['mrn'] = probes['mrn'] + list(set(prb[prb_type]) - set(probes['mrn']))
+                          probes['mrn'] = (probes['mrn']
+                                           + list(set(prb[prb_type])
+                                                  - set(probes['mrn'])))
                    if prb_type == 'probes_phone':
                       if 'phone' not in probes:
                           probes['phone'] = prb[prb_type]
                       else:
-                          probes['phone'] = probes['phone'] + list(set(prb[prb_type]) - set(probes['phone']))
+                          probes['phone'] = (probes['phone']
+                                             + list(set(prb[prb_type])
+                                                    - set(probes['phone'])))
                    if prb_type == 'probes_zip':
                       if 'zip' not in probes:
                           probes['zip'] = prb[prb_type]
                       else:
-                          probes['zip'] = probes['zip'] + list(set(prb[prb_type]) - set(probes['zip']))
+                          probes['zip'] = (probes['zip']
+                                           + list(set(prb[prb_type])
+                                                  - set(probes['zip'])))
                    if prb_type in ['probes_address', 'probes_empr_city',
                                    'probes_emerg_city', 'probes_emerg_city_2',
                                    'probes_father_city', 'probes_mother_city', 
                                    'probes_tmp_city', 'probes_birth_city', 
-                                   'probes_oth_city', 'probes_corrsp_city', 'probes_subscr_city',
-                                   'probes_alt_bill_city', 'probes_guardian_city','probes_guar_city','probes_city']:
+                                   'probes_oth_city', 'probes_corrsp_city',
+                                   'probes_subscr_city', 'probes_alt_bill_city',
+                                   'probes_guardian_city', 'probes_guar_city',
+                                   'probes_city']:
                       if 'address' not in probes:
                           probes['address'] = prb[prb_type]
                       else:
-                          probes['address'] = probes['address'] + list(set(prb[prb_type]) - set(probes['address']))
+                          probes['address'] = (probes['address']
+                                               + list(set(prb[prb_type])
+                                                      - set(probes['address'])))
                    if prb_type == 'probes_workplace':
                       if 'workplace' not in probes:
                           probes['workplace'] = prb[prb_type]
                       else:
-                          probes['workplace'] = probes['workplace'] + list(set(prb[prb_type]) - set(probes['workplace']))
+                          probes['workplace'] = (probes['workplace']
+                                                 + list(set(prb[prb_type])
+                                                        - set(probes['workplace'])))
               
                self.known_phi[prb['_id']] = probes
         #print(self.known_phi)
@@ -184,7 +200,8 @@ class Phitexts:
         full_xml_map = {}
         phi_type_list = ['Provider_Name', 'Date', 'DATE',
                          'Patient_Social_Security_Number', 'Email',
-                         'Provider_Address_or_Location', 'Age', 'Name', 'OTHER','TOWN']
+                         'Provider_Address_or_Location', 'Age', 'Name',
+                         'OTHER', 'TOWN']
         phi_type_dict = {}
         for phi_type in phi_type_list:
             phi_type_dict[phi_type] = [CoordinateMap()]
@@ -255,7 +272,8 @@ class Phitexts:
         self.coords, self.types, self.texts, self.filenames = self.__read_xml_into_coordinateMap(self.inputdir) 
 
     #@profile
-    def detect_phi(self, filters="./configs/philter_alpha.json", namesprobefile=None, verbose=False):
+    def detect_phi(self, filters="./configs/philter_alpha.json",
+                   namesprobefile=None, verbose=False):
         assert self.texts, "No texts defined"
         if self.coords:
             return
@@ -524,7 +542,8 @@ class Phitexts:
         try:
            collection_deid_text.delete_many({'_id': {'$in': self.filenames}})
            collection_deid_text.insert_many(philtered_text)
-           collection_meta_in.update_many({'_id': {'$in': self.filenames}},{'$set': { "redact_date": datetime.datetime.now(), "philter_version": mongo['philter_version']}})
+           collection_meta_in.update_many({'_id': {'$in': self.filenames}},
+                                          {'$set': { "redact_date": datetime.datetime.now(), "philter_version": mongo['philter_version']}})
         except OperationFailure as e:
            print("Error while saving deidentified files into Mongo")
            raise OperationFailure(error.get("errmsg"), error.get("code"), e) 
@@ -554,10 +573,18 @@ class Phitexts:
 
 
     def print_log(self, kp, mongo, xml):
-        phi_count_df = pd.DataFrame(columns=['Phi_type','Count'])
-        batch_summary_df = pd.DataFrame(columns=['Title','values']) 
-        csv_summary_df = pd.DataFrame(columns=['filename','batch','file_size','total_tokens','phi_tokens','successfully_normalized','failed_normalized','successfully_surrogated','failed_surrogated'])
-        dynamic_blacklist_df = pd.DataFrame(columns=['filename','batch','start','end','probe','context','phi_type'])        
+        phi_count_df = pd.DataFrame(columns=['Phi_type', 'Count'])
+        batch_summary_df = pd.DataFrame(columns=['Title', 'values']) 
+        csv_summary_df = pd.DataFrame(columns=['filename', 'batch',
+                                               'file_size', 'total_tokens',
+                                               'phi_tokens',
+                                               'successfully_normalized',
+                                               'failed_normalized',
+                                               'successfully_surrogated',
+                                               'failed_surrogated'])
+        dynamic_blacklist_df = pd.DataFrame(columns=['filename', 'batch',
+                                                     'start', 'end', 'probe',
+                                                     'context', 'phi_type'])
         eval_table = {}
         failed_date = {}
         phi_table = {}
@@ -576,7 +603,8 @@ class Phitexts:
                 age = self.norms['AGE<90'][key][0]
                 end = self.norms['AGE<90'][key][1]
 
-                age_dict = {"start":start, "end":end, "word":age, "type":"AGE<90"}
+                age_dict = {"start":start, "end":end, "word":age,
+                            "type":"AGE<90"}
 
                 if filename not in age_norm_info:
                     age_norm_info[filename] = []
@@ -589,10 +617,10 @@ class Phitexts:
         num_failed = 0
         num_parsed = 0
         # with open(date_table, 'w') as f_parsed, open(failed_dates, 'w') as f_failed:
-            # f_parsed.write('\t'.join(['filename', 'start', 'end', 'raw', 'normalized', 'substituted']))
-            # f_parsed.write('\n')
-            # f_failed.write('\t'.join(['filename', 'start', 'end', 'raw']))
-            # f_failed.write('\n')
+        # f_parsed.write('\t'.join(['filename', 'start', 'end', 'raw', 'normalized', 'substituted']))
+        # f_parsed.write('\n')
+        # f_failed.write('\t'.join(['filename', 'start', 'end', 'raw']))
+        # f_failed.write('\n')
         for filename, start, end in self.types[phi_type][0].scan():
             raw = self.texts[filename][start:end]
             normalized_date = self.norms[phi_type][(filename,start)][0]
@@ -601,7 +629,7 @@ class Phitexts:
                 parse_info[filename] = {'success_norm':0,'fail_norm':0,
                                         'success_sub':0,'fail_sub':0}
             if filename not in eval_table:
-               eval_table[filename] = []
+                eval_table[filename] = []
 
             if normalized_date is not None:
                 # Add 1 to successfully normalized dates
@@ -610,33 +638,33 @@ class Phitexts:
                 normalized_token = Subs.date_to_string(normalized_date)
                 #note_key_ucsf = os.path.splitext(os.path.basename(filename).strip('0'))[0]
                 if self.subs: 
-                   # Successfully surrogated:
-                   if (filename, start) in self.subs:
-                      # Add 1 to successfuly surrogated dates:	
-                      sub = self.subs[(filename,start)][0]
-                      parse_info[filename]['success_sub'] += 1
-                   # Unsuccessfully surrogated:
-                   else:
-                       # Add 1 to unsuccessfuly surrogated dates:
-                       sub = None	
-                       parse_info[filename]['fail_sub'] += 1
+                    # Successfully surrogated:
+                    if (filename, start) in self.subs:
+                        # Add 1 to successfuly surrogated dates:	
+                        sub = self.subs[(filename,start)][0]
+                        parse_info[filename]['success_sub'] += 1
+                    # Unsuccessfully surrogated:
+                    else:
+                        # Add 1 to unsuccessfuly surrogated dates:
+                        sub = None	
+                        parse_info[filename]['fail_sub'] += 1
                 else:
                     sub = None
                 eval_table[filename].append({'start':start, 'end':end,
                                              'raw': raw,
                                              'normalized': normalized_token,
                                              'sub': sub})
-                    # f_parsed.write('\t'.join([filename, str(start), str(end), raw, normalized_token, sub]))
-                    # f_parsed.write('\n')
+                # f_parsed.write('\t'.join([filename, str(start), str(end), raw, normalized_token, sub]))
+                # f_parsed.write('\n')
             else:
                 # Add 1 to unsuccessfuly normazlied dates:
                 num_failed += 1
                 parse_info[filename]['fail_norm'] += 1
-                    # f_failed.write('\t'.join([filename, str(start), str(end), raw.strip('\n')]))
-                    # f_failed.write('\n')
+                # f_failed.write('\t'.join([filename, str(start), str(end), raw.strip('\n')]))
+                # f_failed.write('\n')
                 filename = str(filename)
                 if filename not in failed_date:
-                        failed_date[filename] = []
+                    failed_date[filename] = []
                 failed_date[filename].append({'start':start, 'end':end,        
                                               'raw': raw})
 
@@ -648,30 +676,32 @@ class Phitexts:
         phi_counter = {}
         marked_phi = {}
         #with open(phi_count_file,'w') as f_count:
-            # f_marked.write('\t'.join(['filename', 'start', 'end', 'word', 'phi_type', 'category']))
-            # f_marked.write('\n')
+        # f_marked.write('\t'.join(['filename', 'start', 'end', 'word', 'phi_type', 'category']))
+        # f_marked.write('\n')
 
         for phi_type in self.types:
             for filename, start, end in self.types[phi_type][0].scan():
                 fname = str(filename)
                 if fname not in phi_table:
-                   phi_table[fname] = []
+                    phi_table[fname] = []
                 word = self.texts[filename][start:end]
                 phi_table[fname].append({'start': start, 'end': end,
-                                            'word': word, 'type': phi_type})
+                                         'word': word, 'type': phi_type})
                 
                 if phi_type not in phi_counter:
                     phi_counter[phi_type] = 0
                 phi_counter[phi_type] += 1
 
-                    
                 # f_marked.write('\t'.join([filename, str(start), str(end), word, phi_type]))
                 # f_marked.write('\n')
         for phi_type in phi_counter:
-            phi_count_df = phi_count_df.append({'Phi_type': phi_type, 'Count': str(phi_counter[phi_type])},ignore_index=True)
-       
+            phi_count_df = phi_count_df.append({'Phi_type': phi_type,
+                                                'Count': str(phi_counter[phi_type])},
+                                               ignore_index=True)
 
-        summary_info = {'filesize':[],'total_tokens':[],'phi_tokens':[],'successful_normalized':[],'failed_normalized':[],'successful_surrogated':[],'failed_surrogated':[]}
+        summary_info = {'filesize':[], 'total_tokens':[], 'phi_tokens':[],
+                        'successful_normalized':[], 'failed_normalized':[],
+                        'successful_surrogated':[], 'failed_surrogated':[]}
         
         texts_obscured = self._get_obscured_texts() # needed for phi_tokens
                 
@@ -681,20 +711,20 @@ class Phitexts:
 
             # File size in bytes
             if isinstance(filename, (bson.objectid.ObjectId)):
-               filesize = sys.getsizeof(self.texts[filename])
+                filesize = sys.getsizeof(self.texts[filename])
             else: 
-               filesize = os.path.getsize(filename)
+                filesize = os.path.getsize(filename)
             
             if xml: 
-               total_tokens = len(get_clean(self.texts[filename])) 
-               phi_tokens = len(self.coords[filename])
+                total_tokens = len(get_clean(self.texts[filename])) 
+                phi_tokens = len(self.coords[filename])
             else:
-               # Number of total tokens
-               total_tokens = self.filterer.get_clean(filename,
-                                                      self.texts[filename])[1]
-               # Number of PHI tokens
-               phi_tokens = self.filterer.get_clean_filtered(filename,
-                                                             texts_obscured[filename])[1]
+                # Number of total tokens
+                total_tokens = self.filterer.get_clean(filename,
+                                                       self.texts[filename])[1]
+                # Number of PHI tokens
+                phi_tokens = self.filterer.get_clean_filtered(filename,
+                                                              texts_obscured[filename])[1]
             
             successful_normalized = 0
             failed_normalized = 0
@@ -711,7 +741,17 @@ class Phitexts:
                 # Unsuccessfully normalized dates
                 failed_surrogated = parse_info[filename]['fail_sub']
             
-            csv_summary_df = csv_summary_df.append(pd.Series([filename,self.batch,str(filesize),str(total_tokens),str(phi_tokens),str(successful_normalized),str(failed_normalized),str(successful_surrogated),str(failed_surrogated)],index=csv_summary_df.columns),ignore_index=True)           
+            csv_summary_df = csv_summary_df.append(pd.Series([filename,
+                                                              self.batch,
+                                                              str(filesize),
+                                                              str(total_tokens),
+                                                              str(phi_tokens),
+                                                              str(successful_normalized),
+                                                              str(failed_normalized),
+                                                              str(successful_surrogated),
+                                                              str(failed_surrogated)],
+                                                             index=csv_summary_df.columns),
+                                                   ignore_index=True)           
           
             summary_info['filesize'].append(filesize)
             summary_info['total_tokens'].append(total_tokens)
@@ -765,25 +805,27 @@ class Phitexts:
         batch_summary_df = batch_summary_df.append({'Title': 'DATES SUCCESSFULLY SURROGATED','values': str(successful_surrogation)},ignore_index=True)
         batch_summary_df = batch_summary_df.append({'Title': 'DATES FAILED TO SURROGATE','values': str(failed_surrogation)},ignore_index=True)
         if kp or mongo is not None:
-           phi_type_per_token = self.get_phi_type_per_token()
+            phi_type_per_token = self.get_phi_type_per_token()
 
-           for filename in phi_type_per_token: 
-               #print(phi_type_per_token)
-               for start in phi_type_per_token[filename]:
-                   for end in phi_type_per_token[filename][start]:
-                       if len(phi_type_per_token[filename][start][end]) == 1 and ('PROBEDYNAMICSET' in phi_type_per_token[filename][start][end] or 'PROBEREGEX' in phi_type_per_token[filename][start][end]):
-                           #if 'PROBEDYNAMICSET' in phi_type_per_token[filename][start][end] or 'PROBEREGEX' in phi_type_per_token[filename][start][end]:
-                           #print(phi_type_per_token[filename][start][end])
-                           flank_start = int(start) - 10
-                           flank_end = int(end) + 10
-                           if (flank_start < 0):
-                              flank_start = 1
-                           if len(self.texts[filename])<flank_end:
-                              flank_end = len(self.texts[filename])
+            for filename in phi_type_per_token: 
+                #print(phi_type_per_token)
+                for start in phi_type_per_token[filename]:
+                    for end in phi_type_per_token[filename][start]:
+                        if (len(phi_type_per_token[filename][start][end]) == 1
+                            and ('PROBEDYNAMICSET' in phi_type_per_token[filename][start][end]
+                                 or 'PROBEREGEX' in phi_type_per_token[filename][start][end])):
+                            #print(phi_type_per_token[filename][start][end])
+                            flank_start = int(start) - 10
+                            flank_end = int(end) + 10
+                            if flank_start < 0:
+                                flank_start = 1
+                            if len(self.texts[filename]) < flank_end:
+                                flank_end = len(self.texts[filename])
                            context = self.texts[filename][flank_start:flank_end]
                            word = self.texts[filename][start:end+1]
                            #f.write(filename + "\t" + str(start) + "\t" + str(end) + "\t" + word + "\t" + context.replace('\n',' ') + "\t" + ','.join(phi_type_per_token[filename][start][end])+"\n")
-                           dynamic_blacklist_df = dynamic_blacklist_df.append(pd.Series([filename,self.batch,str(start),str(end),word,context.replace('\n',' '),','.join(phi_type_per_token[filename][start][end])], index=dynamic_blacklist_df.columns),ignore_index=True)               
+                           dynamic_blacklist_df = dynamic_blacklist_df.append(pd.Series([filename,self.batch,str(start),str(end),word,context.replace('\n',' '),','.join(phi_type_per_token[filename][start][end])], index=dynamic_blacklist_df.columns),ignore_index=True)
+
         return failed_date,eval_table,phi_table,phi_count_df,csv_summary_df,batch_summary_df,dynamic_blacklist_df,age_norm_info
 
         # Todo: add PHI type counts to summary
@@ -795,7 +837,9 @@ class Phitexts:
         # ID PHI
         # Other PHI
 
-    def save_log(self,output_dir,failed_date,eval_table,phi_table,phi_count_df,csv_summary_df,batch_summary_df,dynamic_blacklist_df,age_norm_info):
+    def save_log(self, output_dir, failed_date, eval_table, phi_table,
+                 phi_count_df, csv_summary_df, batch_summary_df,
+                 dynamic_blacklist_df, age_norm_info):
         log_dir = os.path.join(output_dir, 'log/')
         # Per-batch logs
         if os.path.isdir(log_dir):
@@ -824,29 +868,31 @@ class Phitexts:
         csv_summary_export = csv_summary_df.to_csv(csv_summary_filepath, index=None, header=True,sep = '\t')
         batch_summary_export = batch_summary_df.to_csv(batch_summary_file, index=None, header=True,sep = '\t')
         if not dynamic_blacklist_df.empty:
-           dynamic_blacklist_export = dynamic_blacklist_df.to_csv(dynamic_blacklist_filepath, index=None, header=True,sep = '\t')
+            dynamic_blacklist_export = dynamic_blacklist_df.to_csv(dynamic_blacklist_filepath, index=None, header=True,sep = '\t')
 
-    def mongo_save_log(self,mongo,failed_date,eval_table,phi_table,phi_count_df,csv_summary_df,batch_summary_df,dynamic_blacklist_df,age_norm_info):
+    def mongo_save_log(self, mongo, failed_date, eval_table, phi_table,
+                       phi_count_df, csv_summary_df, batch_summary_df,
+                       dynamic_blacklist_df, age_norm_info):
         print("In mongo save log")
         try:
-          db = self.db          
-          collection_log_batch_summary = db[mongo['collection_log_batch_summary']]
-          collection_detailed_batch_summary = db[mongo['collection_log_detailed_batch_summary']]
-          collection_log_batch_phi_count = db[mongo['collection_log_batch_phi_count']]
-          collection_log_dynamic_blacklist = db[mongo['collection_log_dynamic_blacklist']]
-          collection_log_failed_dates = db[mongo['collection_log_failed_dates']] 
-          collection_log_parsed_dates = db[mongo['collection_log_parsed_dates']]
-          collection_log_phi_marked = db[mongo['collection_log_phi_marked']]
+            db = self.db
+            collection_log_batch_summary = db[mongo['collection_log_batch_summary']]
+            collection_detailed_batch_summary = db[mongo['collection_log_detailed_batch_summary']]
+            collection_log_batch_phi_count = db[mongo['collection_log_batch_phi_count']]
+            collection_log_dynamic_blacklist = db[mongo['collection_log_dynamic_blacklist']]
+            collection_log_failed_dates = db[mongo['collection_log_failed_dates']]
+            collection_log_parsed_dates = db[mongo['collection_log_parsed_dates']]
+            collection_log_phi_marked = db[mongo['collection_log_phi_marked']]
         except:
-          print("Mongo Server not available")    
+            print("Mongo Server not available")    
         batch_summary = dict(zip(batch_summary_df['Title'],batch_summary_df['values']))
         batch_summary['Batch']  = self.batch
         if collection_log_batch_summary.find_one({"Batch": self.batch}) is None:
-           max_run_num = 1
+            max_run_num = 1
         else:
-           max_run = collection_log_batch_summary.find({"Batch": self.batch},{"_id":0,"Run":1}).sort([("Run", -1)]).limit(1)
-           for run in max_run:
-               max_run_num = run['Run'] + 1
+            max_run = collection_log_batch_summary.find({"Batch": self.batch},{"_id":0,"Run":1}).sort([("Run", -1)]).limit(1)
+            for run in max_run:
+                max_run_num = run['Run'] + 1
         phi_count = dict(zip(phi_count_df['Phi_type'],phi_count_df['Count']))
         phi_count['Batch'] = self.batch
         phi_count['Run'] = max_run_num
@@ -859,26 +905,25 @@ class Phitexts:
         detailed_batch_summary = csv_summary_df.to_dict(orient='records')
         collection_detailed_batch_summary.insert(detailed_batch_summary)        
         if not dynamic_blacklist_df.empty:
-           #dynamic_blacklist_df.rename(columns = {'filename': '_id'}, inplace = True)
-           dynamic_blacklist_df['Run'] = max_run_num
-           dynamic_blacklist = dynamic_blacklist_df.to_dict(orient='records')
-           collection_log_dynamic_blacklist.insert(dynamic_blacklist)
+            #dynamic_blacklist_df.rename(columns = {'filename': '_id'}, inplace = True)
+            dynamic_blacklist_df['Run'] = max_run_num
+            dynamic_blacklist = dynamic_blacklist_df.to_dict(orient='records')
+            collection_log_dynamic_blacklist.insert(dynamic_blacklist)
+
         if bool(failed_date):
-           failed_date['Batch'] = self.batch
-           failed_date['Run'] = max_run_num
-           collection_log_failed_dates.insert(failed_date)
+            failed_date['Batch'] = self.batch
+            failed_date['Run'] = max_run_num
+            collection_log_failed_dates.insert(failed_date)
 
         if bool(eval_table):
-           eval_table['Batch'] = self.batch
-           eval_table['Run'] = max_run_num
-           collection_log_parsed_dates.insert(eval_table)
+            eval_table['Batch'] = self.batch
+            eval_table['Run'] = max_run_num
+            collection_log_parsed_dates.insert(eval_table)
 
         if bool(phi_table):
-           phi_table['Batch'] = self.batch
-           phi_table['Run'] = max_run_num
-           collection_log_phi_marked.insert(phi_table)
-
-
+            phi_table['Batch'] = self.batch
+            phi_table['Run'] = max_run_num
+            collection_log_phi_marked.insert(phi_table)
  
     def _get_phi_type(self, filename, start, stop):
         for phi_type in self.types.keys():
