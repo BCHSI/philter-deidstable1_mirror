@@ -1,0 +1,3 @@
+# Regex to match the small towns in the text
+# Note that this regex accounts for all amall towns with population less than 30000 in the 50 states
+\b("""+town_names+r""")\b
