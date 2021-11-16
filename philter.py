@@ -515,7 +515,7 @@ class Philter:
                         ### Address
                         if probe_type == 'address':
                             pc = str(pc).lower().strip()
-                            if pc not in nocites and pc not in large_cities: 
+                            if pc not in nocities and pc not in large_cities: 
                                 if pc != '' and counter < len(probe_clean)-1:
                                     address_regex = (address_regex + pc
                                                      + '([^0-9A-Za-z]{1,5})?')

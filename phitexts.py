@@ -821,10 +821,10 @@ class Phitexts:
                                 flank_start = 1
                             if len(self.texts[filename]) < flank_end:
                                 flank_end = len(self.texts[filename])
-                           context = self.texts[filename][flank_start:flank_end]
-                           word = self.texts[filename][start:end+1]
+                            context = self.texts[filename][flank_start:flank_end]
+                            word = self.texts[filename][start:end+1]
                            #f.write(filename + "\t" + str(start) + "\t" + str(end) + "\t" + word + "\t" + context.replace('\n',' ') + "\t" + ','.join(phi_type_per_token[filename][start][end])+"\n")
-                           dynamic_blacklist_df = dynamic_blacklist_df.append(pd.Series([filename,self.batch,str(start),str(end),word,context.replace('\n',' '),','.join(phi_type_per_token[filename][start][end])], index=dynamic_blacklist_df.columns),ignore_index=True)
+                            dynamic_blacklist_df = dynamic_blacklist_df.append(pd.Series([filename,self.batch,str(start),str(end),word,context.replace('\n',' '),','.join(phi_type_per_token[filename][start][end])], index=dynamic_blacklist_df.columns),ignore_index=True)
 
         return failed_date,eval_table,phi_table,phi_count_df,csv_summary_df,batch_summary_df,dynamic_blacklist_df,age_norm_info
 
