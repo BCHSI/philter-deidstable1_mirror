@@ -331,6 +331,16 @@ class Phitexts:
                             self.date_norms[filename].append((start,end,token,normalized_token))
                         else:
                             self.date_norms[filename] = [(start,end,token,normalized_token)]
+
+                    token = self.texts[filename][start:end]
+                    normalized_token = Subs.parse_date(token)
+
+                    self.norms[phi_type][(filename, start)] = (normalized_token,
+                                                       end)
+                    if filename in self.date_norms.keys():
+                        self.date_norms[filename].append((start,end,token,normalized_token))
+                    else:
+                        self.date_norms[filename] = [(start,end,token,normalized_token)]
             elif (phi_type == "AGE<90" or phi_type == "Age<90"
                   or phi_type == "AGE>=90" or phi_type == "Age>=90"):
                 for filename, start, end in self.types[phi_type][0].scan():
@@ -1145,8 +1155,10 @@ class Phitexts:
                     
                     # Indicte whether date token was subbed or not
                     original_coords = list(range(pstart,pphi[pstart][0]+1))
-                    date_subbed = all((item in norm_coords[filename] for item in original_coords))
-
+                    if filename in norm_coords.keys():
+                        date_subbed = all((item in norm_coords[filename] for item in original_coords))
+                    else:
+                        date_subbed = False
                     try:
                         subtokens = self._get_sub_tokens(gold, philter)
                     except Exception as err:
