@@ -1213,14 +1213,20 @@ class Phitexts:
                     # Indicte whether date token was subbed or not
                     original_coords = list(range(pstart,pphi[pstart][0]+1))
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 86522d08 (adding date overlap code)
                     if filename in norm_coords.keys():
                         date_subbed = all((item in norm_coords[filename] for item in original_coords))
                     else:
                         date_subbed = False
+<<<<<<< HEAD
 =======
                     date_subbed = all((item in norm_coords[filename] for item in original_coords))
 
 >>>>>>> 91d7a07f (adding detailed date checking to eval)
+=======
+>>>>>>> 86522d08 (adding date overlap code)
                     try:
                         subtokens = self._get_sub_tokens(gold, philter)
                     except Exception as err:
