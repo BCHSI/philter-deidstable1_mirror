@@ -97,35 +97,34 @@ def main():
     if __debug__: print("read args")
 
     if args.mongodb:
-       mongo = read_mongo_config(args.mongodb)
-       try:
-         db = get_mongo_handle(mongo)
-         print(db)
-       except:
-         print("Mongo Server not available")
-       #for batch in collection_chunk.distinct('batch'):
-       main_mongo(args,db,mongo)
+        mongo = read_mongo_config(args.mongodb)
+        try:
+            db = get_mongo_handle(mongo)
+            print(db)
+        except:
+            print("Mongo Server not available")
+        #for batch in collection_chunk.distinct('batch'):
+        main_mongo(args,db,mongo)
     else:
-       main_mongo(args)
+        main_mongo(args)
 
 def main_mongo(args, db=None ,mongo=None):  
     # initializes texts container
     # db none then pass input dir if not don't pass input dir 
     batch = 0
     if args.batch is not None:
-       batch = int(float(args.batch))
+        batch = int(float(args.batch))
     phitexts = Phitexts(args.input,args.xml,batch,db,mongo)
     # detect PHI coordinates
     if __debug__: print("detecting PHI coordinates")
     if args.xml:
-       if __debug__: print("Generating coordinate map from xml")
-       phitexts.detect_xml_phi()       
+        if __debug__: print("Generating coordinate map from xml")
+        phitexts.detect_xml_phi()
     elif args.dynamic_blacklist:
-
-       phitexts.detect_phi(args.filters, args.dynamic_blacklist,
+        phitexts.detect_phi(args.filters, args.dynamic_blacklist,
                             verbose=args.verbose)
     else:
-       phitexts.detect_phi(args.filters, verbose=args.verbose)
+        phitexts.detect_phi(args.filters, verbose=args.verbose)
     if phitexts.coords:
         if not args.xml:
             # detects PHI types
@@ -155,7 +154,8 @@ def main_mongo(args, db=None ,mongo=None):
 
     # saves output
     if __debug__: print("saving de-identified texts")
-    if (args.deid_filename and not args.surrogate_info) and (args.deid_filename and not args.mongodb):
+    if ((args.deid_filename and not args.surrogate_info)
+        and (args.deid_filename and not args.mongodb)):
         print("WARNING: no surrogate info provided, saving output with "
                + "identified note key")
         args.deid_filename=False
@@ -165,15 +165,23 @@ def main_mongo(args, db=None ,mongo=None):
        phitexts.save_mongo(mongo)
     else:
        phitexts.save(args.output, use_deid_note_key=args.deid_filename,
-               suf="", ext="txt")
+                     suf="", ext="txt")
 
     # print and save log 
     if args.log:
-       failed_date,eval_table,phi_table,phi_count_df,csv_summary_df,batch_summary_df,dynamic_blacklist_df,age_norm_info = phitexts.print_log(args.dynamic_blacklist, mongo, args.xml)
-       if mongo is not None:
-          phitexts.mongo_save_log(mongo,failed_date,eval_table,phi_table,phi_count_df,csv_summary_df,batch_summary_df,dynamic_blacklist_df,age_norm_info)
-       else:
-          phitexts.save_log(args.output,failed_date,eval_table,phi_table,phi_count_df,csv_summary_df,batch_summary_df,dynamic_blacklist_df,age_norm_info)
+        (failed_date, eval_table, phi_table, phi_count_df, csv_summary_df,
+         batch_summary_df, dynamic_blacklist_df,
+         age_norm_info) = phitexts.print_log(args.dynamic_blacklist, mongo,
+                                             args.xml)
+        if mongo is not None:
+            phitexts.mongo_save_log(mongo, failed_date, eval_table, phi_table,
+                                    phi_count_df, csv_summary_df,
+                                    batch_summary_df, dynamic_blacklist_df,
+                                    age_norm_info)
+        else:
+            phitexts.save_log(args.output, failed_date, eval_table, phi_table,
+                              phi_count_df, csv_summary_df, batch_summary_df,
+                              dynamic_blacklist_df, age_norm_info)
     if args.eval:
         phitexts.eval(args.anno, args.output)
 

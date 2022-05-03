@@ -268,7 +268,7 @@ class Phitexts:
 
     def detect_xml_phi(self):
         if self.coords:
-           return
+            return
         self.coords, self.types, self.texts, self.filenames = self.__read_xml_into_coordinateMap(self.inputdir) 
 
     #@profile
