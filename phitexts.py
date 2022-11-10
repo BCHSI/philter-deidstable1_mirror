@@ -1267,6 +1267,8 @@ class Phitexts:
         text_tp_file = open(os.path.join(eval_dir,'tp.eval'),"w+")
         text_fn_file = open(os.path.join(eval_dir,'fn.eval'),"w+")
         text_tn_file = open(os.path.join(eval_dir,'tn.eval'),"w+")
+        text_fp_context_file = open(os.path.join(eval_dir,'fp_context.eval'),"w+")
+        text_fn_context_file = open(os.path.join(eval_dir,'fn_context.eval'),"w+")
 
         # gathers full text tokens, gold and philter tokens
         gold_dicts = self._get_gold_phi(anno_dir)
@@ -1337,11 +1339,25 @@ class Phitexts:
                 for st in falsepositives_dicts[filename]:
                     start = st
                     stop = falsepositives_dicts[filename][st][0]
+
+                    context_start = start-15
+                    if context_start < 0:
+                        context_start = 0
+                    context_stop = stop+15
+                    if context_stop > len(self.texts[filename]):
+                        context_stop = len(self.texts[filename])
+
                     phi_type = falsepositives_dicts[filename][st][1]
                     token = falsepositives_dicts[filename][st][2]
+                    context = self.texts[filename][context_start:context_stop]
                     text_fp_file.write('\n' + filename + '\t' + str(phi_type)
                                        + '\t' + token
                                        + '\t' + str(start) + '\t' + str(stop))
+
+                    text_fp_context_file.write('\n' + filename + '|' + str(phi_type)
+                                       + '|' + token
+                                       + '|' + str(start) + '|' + str(stop)
+                                       + '|' + str(context))
 
                     if phi_type not in summary_by_category:
                         summary_by_category[phi_type] = {}
@@ -1374,11 +1390,25 @@ class Phitexts:
                 for st in falsenegatives_dicts[filename]:
                     start = st
                     stop = falsenegatives_dicts[filename][st][0]
+
+                    context_start = start-15
+                    if context_start < 0:
+                        context_start = 0
+                    context_stop = stop+15
+                    if context_stop > len(self.texts[filename]):
+                        context_stop = len(self.texts[filename])
+
                     phi_type = falsenegatives_dicts[filename][st][1]
                     token = falsenegatives_dicts[filename][st][2]
+                    context = self.texts[filename][context_start:context_stop]
                     text_fn_file.write('\n' + filename + '\t' + str(phi_type)
                                        + '\t' + token
                                        + '\t' + str(start) + '\t' + str(stop))
+
+                    text_fn_context_file.write('\n' + filename + '|' + str(phi_type)
+                                       + '|' + token
+                                       + '|' + str(start) + '|' + str(stop)
+                                       + '|' + str(context))
 
                     if phi_type not in summary_by_category:
                         summary_by_category[phi_type] = {}
@@ -1493,3 +1523,5 @@ class Phitexts:
         text_fp_file.close()
         text_tn_file.close()
         text_fn_file.close()
+        text_fp_context_file.close()
+        text_fn_context_file.close()
