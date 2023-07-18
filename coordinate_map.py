@@ -66,14 +66,14 @@ class CoordinateMap:
 		"""  adds a new coordinate to the coordinate map
 			if overlaps with another, will extend to the larger size
 		"""
-		if self.debug:
-			print("add_extend", start, stop)
 
 		if filename not in self.map:
 			self.map[filename] = collections.OrderedDict()
 		overlaps = self.max_overlap(filename, start, stop)
-		# if filename == "./data/i2b2_notes/167-02.txt":
-		# 	print(self.map)
+		if __debug__ and filename == "../../input/sample/mrn_check.txt":
+                        print("Overlaps: ")
+                        print(overlaps)
+                        print(self.map)
 	
 		def clear_overlaps(filename, lst):
 			for o in lst:
@@ -82,30 +82,27 @@ class CoordinateMap:
 		if len(overlaps) == 0:
 			#no overlap, just save these coordinates
 			self.add(filename,start,stop,pattern=pattern, overlap=True)
-			# if filename == "./data/i2b2_notes/167-02.txt":
-			# 	print("No overlaps:")
-			# 	print(filename,start,stop,pattern)
+			if __debug__ and filename == "../../input/sample/mrn_check.txt":
+				print("No overlaps:")
+				print(filename,start,stop,pattern)
 		elif len(overlaps) == 1:
 			clear_overlaps(filename, overlaps)	
 			#1 overlap, save this value
 			o = overlaps[0]
 			self.add(filename,o["new_start"],o["new_stop"],pattern=pattern, overlap=True)
-			# if filename == "./data/i2b2_notes/167-02.txt":
-			# 	print("One overlap:")			
-			# 	print(filename,start,stop,pattern)
+			if __debug__ and filename == "../../input/sample/mrn_check.txt":
+				print("One overlap:")
+				print(filename,start,stop,pattern)
 		else:
 			clear_overlaps(filename, overlaps)
-			# #greater than 1 overlap, by default this is sorted because of scan order
-			# o1 = overlaps[0]
-			# o2 = overlaps[-1]
-			# modified max length choosing order
-			o1 = overlaps[-1]
-			o2 = overlaps[0]
-			self.add(filename,o2["new_start"], o1["new_stop"],pattern=pattern, overlap=True)
-			# if filename == "./data/i2b2_notes/167-02.txt":
-			# 	print("Multiple overlaps:")			
-			# 	print(filename,start,stop,pattern)
-
+			newstart = min(overlaps, key=lambda x: x["new_start"])["new_start"]
+			newstop = max(overlaps, key=lambda x: x["new_stop"])["new_stop"]
+			self.add(filename, newstart, newstop,
+				 pattern=pattern, overlap=True)
+			if __debug__ and filename == "../../input/sample/mrn_check.txt":
+				print("Multiple overlaps:")
+				print(filename,start,stop, "-->",
+                                      newstart, newstop, pattern)
 		return True, None
 
 
