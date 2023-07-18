@@ -704,9 +704,8 @@ class Phitexts:
                 # f_marked.write('\t'.join([filename, str(start), str(end), word, phi_type]))
                 # f_marked.write('\n')
         for phi_type in phi_counter:
-            phi_count_df = phi_count_df.append({'Phi_type': phi_type,
-                                                'Count': str(phi_counter[phi_type])},
-                                               ignore_index=True)
+            phi_count_df = pd.concat([phi_count_df, pd.DataFrame([{'Phi_type': phi_type,
+                                      'Count': str(phi_counter[phi_type])}])],ignore_index=True)
 
         summary_info = {'filesize':[], 'total_tokens':[], 'phi_tokens':[],
                         'successful_normalized':[], 'failed_normalized':[],
@@ -749,18 +748,18 @@ class Phitexts:
                 successful_surrogated = parse_info[filename]['success_sub']
                 # Unsuccessfully normalized dates
                 failed_surrogated = parse_info[filename]['fail_sub']
-            
-            csv_summary_df = csv_summary_df.append(pd.Series([filename_str,
-                                                              self.batch,
-                                                              str(filesize),
-                                                              str(total_tokens),
-                                                              str(phi_tokens),
-                                                              str(successful_normalized),
-                                                              str(failed_normalized),
-                                                              str(successful_surrogated),
-                                                              str(failed_surrogated)],
-                                                             index=csv_summary_df.columns),
-                                                   ignore_index=True)           
+
+            csv_summary_df_ = pd.DataFrame([[filename,
+                                             self.batch,
+                                             str(filesize),
+                                             str(total_tokens),
+                                             str(phi_tokens),
+                                             str(successful_normalized),
+                                             str(failed_normalized),
+                                             str(successful_surrogated),
+                                             str(failed_surrogated)]],
+                                             columns=csv_summary_df.columns)
+            csv_summary_df = pd.concat([csv_summary_df, csv_summary_df_], ignore_index=True)
           
             summary_info['filesize'].append(filesize)
             summary_info['total_tokens'].append(total_tokens)
@@ -796,23 +795,23 @@ class Phitexts:
         failed_surrogation = sum(summary_info['failed_surrogated'])
 
         # Create text summary for the current batch
-        batch_summary_df = batch_summary_df.append({'Title': 'TOTAL NOTES PROCESSED','values': str(number_of_notes)},ignore_index=True)
-        batch_summary_df = batch_summary_df.append({'Title': 'TOTAL KB PROCESSED','values': str("%.2f"%total_kb_processed)},ignore_index=True)
-        batch_summary_df = batch_summary_df.append({'Title': 'TOTAL TOKENS PROCESSED','values': str(total_tokens)},ignore_index=True)
-        batch_summary_df = batch_summary_df.append({'Title': 'TOTAL PHI TOKENS PROCESSED','values': str(total_phi_tokens)},ignore_index=True)
-        batch_summary_df = batch_summary_df.append({'Title': 'MEDIAN FILESIZE (BYTES)','values': str(median_file_size)},ignore_index=True)
+        batch_summary_df = pd.concat([batch_summary_df, pd.DataFrame([{'Title': 'TOTAL NOTES PROCESSED','values': str(number_of_notes)}])],ignore_index=True) 
+        batch_summary_df = pd.concat([batch_summary_df, pd.DataFrame([{'Title': 'TOTAL KB PROCESSED','values': str("%.2f"%total_kb_processed)}])],ignore_index=True)
+        batch_summary_df = pd.concat([batch_summary_df, pd.DataFrame([{'Title': 'TOTAL TOKENS PROCESSED','values': str(total_tokens)}])],ignore_index=True)
+        batch_summary_df = pd.concat([batch_summary_df, pd.DataFrame([{'Title': 'TOTAL PHI TOKENS PROCESSED','values': str(total_phi_tokens)}])],ignore_index=True)
+        batch_summary_df = pd.concat([batch_summary_df, pd.DataFrame([{'Title': 'MEDIAN FILESIZE (BYTES)','values': str(median_file_size)}])],ignore_index=True)
         median_file_95_per = str("%.2f"%q2pt5_size) + '-' + str("%.2f"%q97pt5_size)
-        batch_summary_df = batch_summary_df.append({'Title': 'MEDIAN FILESIZE (95% Percentile)','values': median_file_95_per},ignore_index=True) 
-        batch_summary_df = batch_summary_df.append({'Title': 'MEDIAN TOKENS PER NOTE','values': str(median_tokens)},ignore_index=True) 
+        batch_summary_df = pd.concat([batch_summary_df, pd.DataFrame([{'Title': 'MEDIAN FILESIZE (95% Percentile)','values': median_file_95_per}])],ignore_index=True)
+        batch_summary_df = pd.concat([batch_summary_df, pd.DataFrame([{'Title': 'MEDIAN TOKENS PER NOTE','values': str(median_tokens)}])],ignore_index=True)
         median_tok_95_per = str("%.2f"%q2pt5_tokens) + '-' + str("%.2f"%q97pt5_tokens)
-        batch_summary_df = batch_summary_df.append({'Title': 'MEDIAN TOKEN (95% Percentile)','values': median_tok_95_per},ignore_index=True)
-        batch_summary_df = batch_summary_df.append({'Title': 'MEDIAN PHI TOKENS PER NOTE','values': str(median_phi_tokens)},ignore_index=True)    
+        batch_summary_df = pd.concat([batch_summary_df, pd.DataFrame([{'Title': 'MEDIAN TOKEN (95% Percentile)','values': median_tok_95_per}])],ignore_index=True)
+        batch_summary_df = pd.concat([batch_summary_df, pd.DataFrame([{'Title': 'MEDIAN PHI TOKENS PER NOTE','values': str(median_phi_tokens)}])],ignore_index=True)
         median_phi_tok_95_per = str("%.2f"%q2pt5_phi_tokens) + '-' + str("%.2f"%q97pt5_phi_tokens)
-        batch_summary_df = batch_summary_df.append({'Title': 'MEDIAN PHI TOKENS (95% Percentile)','values': median_phi_tok_95_per},ignore_index=True)
-        batch_summary_df = batch_summary_df.append({'Title': 'DATES SUCCESSFULLY NORMALIZED','values': str(successful_normalization)},ignore_index=True)
-        batch_summary_df = batch_summary_df.append({'Title': 'DATES FAILED TO NORMALIZE','values': str(failed_normalization)},ignore_index=True)
-        batch_summary_df = batch_summary_df.append({'Title': 'DATES SUCCESSFULLY SURROGATED','values': str(successful_surrogation)},ignore_index=True)
-        batch_summary_df = batch_summary_df.append({'Title': 'DATES FAILED TO SURROGATE','values': str(failed_surrogation)},ignore_index=True)
+        batch_summary_df = pd.concat([batch_summary_df, pd.DataFrame([{'Title': 'MEDIAN PHI TOKENS (95% Percentile)','values': median_phi_tok_95_per}])],ignore_index=True)
+        batch_summary_df = pd.concat([batch_summary_df, pd.DataFrame([{'Title': 'DATES SUCCESSFULLY NORMALIZED','values': str(successful_normalization)}])],ignore_index=True)
+        batch_summary_df = pd.concat([batch_summary_df, pd.DataFrame([{'Title': 'DATES FAILED TO NORMALIZE','values': str(failed_normalization)}])],ignore_index=True)
+        batch_summary_df = pd.concat([batch_summary_df, pd.DataFrame([{'Title': 'DATES SUCCESSFULLY SURROGATED','values': str(successful_surrogation)}])],ignore_index=True)
+        batch_summary_df = pd.concat([batch_summary_df, pd.DataFrame([{'Title': 'DATES FAILED TO SURROGATE','values': str(failed_surrogation)}])],ignore_index=True)
         if kp or mongo is not None:
             phi_type_per_token = self.get_phi_type_per_token()
 

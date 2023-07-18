@@ -676,10 +676,13 @@ class Philter:
             match_count = 0
             for m in matches:
                 match_count += 1
+                if __debug__ and self.verbose:
+                    print("map_regex() found:", m, "at", m.start(),
+                          m.start()+len(m.group()), "in", filename)
+                    if filename not in coord_map.map:
+                        print("not in coord_map:",filename)
                 coord_map.add_extend(filename, m.start(),
                                      m.start()+len(m.group()))
-                if __debug__ and self.verbose:
-                    print(m)
 
             self.patterns[pattern_index]["coordinate_map"] = coord_map
 
@@ -933,6 +936,11 @@ class Philter:
 
         pos_list = self.get_pos(filename, cleaned)#pos_list = nltk.pos_tag(cleaned)
         start_coordinate = 0
+        if __debug__ and self.verbose:
+            print("map_pos(): searching for pattern with index "
+                  + str(pattern_index) + " \""
+                  + self.patterns[pattern_index]["title"]
+                  + "\" is " + str(pos_set))
         for tup in pos_list:
             word = tup[0]
             pos  = tup[1]
@@ -946,6 +954,8 @@ class Philter:
 
             if pos in pos_set:    
                 coord_map.add_extend(filename, start, stop)
+                if __debug__ and self.verbose:
+                    print(word_clean + " " + word)
                 
             #advance our start coordinate
             start_coordinate += len(word)
@@ -1052,25 +1062,33 @@ class Philter:
                 if exclude or exclude == "True":
                     if not self.include_map.does_overlap(filename, start, stop):
                         self.exclude_map.add_extend(filename, start, stop)
-                        self.phi_type_dict[phi_type][0].add_extend(filename, start, stop)
+                        self.phi_type_dict[phi_type][0].add_extend(filename,
+                                                                   start, stop)
+                    else:
+                        pass
                 else:
                     if not self.exclude_map.does_overlap(filename, start, stop):
                         self.include_map.add_extend(filename, start, stop)
                         self.data_all_files[filename]["non-phi"].append({"start":start, "stop":stop, "word":txt[start:stop], "filepath":filter_path})
                     else:
-                        pass 
+                        pass
 
             # Add regex_context to map separately
             else:
                 if exclude:
                     self.exclude_map.add_extend(filename, start, stop)
-                    #print(start)
                     self.include_map.remove(filename, start, stop)
                     self.phi_type_dict[phi_type][0].add_extend(filename, start, stop)
                 else:
                     self.include_map.add_extend(filename, start, stop)
                     self.exclude_map.remove(filename, start, stop)
                     self.data_all_files[filename]["non-phi"].append({"start":start, "stop":stop, "word":txt[start:stop], "filepath":filter_path})
+
+            if __debug__ and self.verbose:
+                for exc in self.exclude_map.filecoords(filename):
+                    print("EXCLUDE: " + txt[exc[0]:exc[1]] + " at " + str(exc))
+                for inc in self.include_map.filecoords(filename):
+                    print("INCLUDE: " + txt[inc[0]:inc[1]] + " at " + str(inc))
 
     def transform(self):
         """ transform
