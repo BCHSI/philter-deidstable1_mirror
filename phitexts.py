@@ -22,7 +22,7 @@ import sys
 import pandas as pd
 import datetime
 import socket
-
+from bson import ObjectId
 
 
 class Phitexts:
@@ -94,7 +94,8 @@ class Phitexts:
         raw_note_text = db[mongo['collection_raw_note_text']]
         meta_in = db[mongo['collection_meta_data']] 
         server = socket.gethostname() + ".ucsfmedicalcenter.org" 
-        
+        #batch = str(batch)
+         
         try:
            to_philter = chunk_collection.aggregate([{"$match":{"$and":[{"url": server.lower()},{"batch": batch}]}},
                                                     {"$lookup": {"from": 'raw_note_text', "localField": "_id", "foreignField": "_id", "as": "get_text"}},
@@ -348,7 +349,6 @@ class Phitexts:
         if self.subs:
             return
         self.subser = Subs(self.filenames, look_up_table_path, db, ref_date)
-
         probes_found = []
         for ptype in ['PROBEDYNAMICSET', 'PROBEREGEX', 'PROBEREGEXCONTEXT']:
             if ptype in self.types.keys():
@@ -372,7 +372,6 @@ class Phitexts:
                                       + filename)
                                 nodateshiftlist.append(filename)
                         continue
-                    
                     normalized_token = self.norms[phi_type][filename, start][0]
                     end = self.norms[phi_type][filename, start][1]
 
@@ -442,7 +441,6 @@ class Phitexts:
 
         # TODO: apply self.subs to original text using self.coords
         for filename in self.filenames:
-            
             last_marker = 0
             #current_chunk = []
             #punctuation_matcher = re.compile(r"[^a-zA-Z0-9*]")
@@ -463,6 +461,7 @@ class Phitexts:
                         end = self.subs[filename, start][1]
                         contents.append(substitute_token)
                         last_marker = end
+                        #print(substitute_token)
                     else:
                         contents.append("*****")
                         last_marker = stop
@@ -624,48 +623,58 @@ class Phitexts:
         for filename, start, end in self.types[phi_type][0].scan():
             raw = self.texts[filename][start:end]
             normalized_date = self.norms[phi_type][(filename,start)][0]
-            filename = str(filename) 
-            if filename not in parse_info:
-                parse_info[filename] = {'success_norm':0,'fail_norm':0,
+            filename_str = str(filename)
+            context = ''
+            if filename_str not in parse_info:
+                parse_info[filename_str] = {'success_norm':0,'fail_norm':0,
                                         'success_sub':0,'fail_sub':0}
-            if filename not in eval_table:
-                eval_table[filename] = []
+            if filename_str not in eval_table:
+                eval_table[filename_str] = []
 
             if normalized_date is not None:
                 # Add 1 to successfully normalized dates
                 num_parsed += 1
-                parse_info[filename]['success_norm'] += 1
+                parse_info[filename_str]['success_norm'] += 1
                 normalized_token = Subs.date_to_string(normalized_date)
+                #print(filename)
+                #print(self.subs[(filename,start)])
                 #note_key_ucsf = os.path.splitext(os.path.basename(filename).strip('0'))[0]
                 if self.subs: 
                     # Successfully surrogated:
                     if (filename, start) in self.subs:
                         # Add 1 to successfuly surrogated dates:	
                         sub = self.subs[(filename,start)][0]
-                        parse_info[filename]['success_sub'] += 1
+                        parse_info[filename_str]['success_sub'] += 1
+                        flank_start = int(start) - 20
+                        flank_end = int(end) + 20
+                        if flank_start < 0:
+                            flank_start = 1
+                        if len(self.texts[filename]) < flank_end:
+                            flank_end = len(self.texts[filename])
+                        context = self.texts[filename][flank_start:flank_end]
                     # Unsuccessfully surrogated:
                     else:
                         # Add 1 to unsuccessfuly surrogated dates:
                         sub = None	
-                        parse_info[filename]['fail_sub'] += 1
+                        parse_info[filename_str]['fail_sub'] += 1
                 else:
+                    print("Warning: No subs for any file")
                     sub = None
-                eval_table[filename].append({'start':start, 'end':end,
+                eval_table[filename_str].append({'start':start, 'end':end,
                                              'raw': raw,
                                              'normalized': normalized_token,
-                                             'sub': sub})
+                                             'sub': sub, 'context': context})
                 # f_parsed.write('\t'.join([filename, str(start), str(end), raw, normalized_token, sub]))
                 # f_parsed.write('\n')
             else:
                 # Add 1 to unsuccessfuly normazlied dates:
                 num_failed += 1
-                parse_info[filename]['fail_norm'] += 1
+                parse_info[filename_str]['fail_norm'] += 1
                 # f_failed.write('\t'.join([filename, str(start), str(end), raw.strip('\n')]))
                 # f_failed.write('\n')
-                filename = str(filename)
-                if filename not in failed_date:
-                    failed_date[filename] = []
-                failed_date[filename].append({'start':start, 'end':end,        
+                if filename_str not in failed_date:
+                    failed_date[filename_str] = []
+                failed_date[filename_str].append({'start':start, 'end':end,        
                                               'raw': raw})
 
         if __debug__:
@@ -681,11 +690,11 @@ class Phitexts:
 
         for phi_type in self.types:
             for filename, start, end in self.types[phi_type][0].scan():
-                fname = str(filename)
-                if fname not in phi_table:
-                    phi_table[fname] = []
+                filename_str = str(filename)
+                if filename_str not in phi_table:
+                    phi_table[filename_str] = []
                 word = self.texts[filename][start:end]
-                phi_table[fname].append({'start': start, 'end': end,
+                phi_table[filename_str].append({'start': start, 'end': end,
                                          'word': word, 'type': phi_type})
                 
                 if phi_type not in phi_counter:
@@ -729,7 +738,7 @@ class Phitexts:
             failed_normalized = 0
             successful_surrogated = 0
             failed_surrogated = 0
-            filename = str(filename)
+            filename_str = str(filename)
             if filename in parse_info:
                 # Successfully normalized dates
                 successful_normalized = parse_info[filename]['success_norm']

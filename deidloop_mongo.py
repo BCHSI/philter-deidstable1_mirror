@@ -19,7 +19,7 @@ import socket
 from pymongo import MongoClient
 from deidpipe import main_mongo
 from argparse import Namespace
-
+from datetime import date
 def get_args():
     # gets input/output/filename
     help_str = """De-identify and surrogate all text files in a set of folders using threads"""
@@ -47,6 +47,9 @@ def get_args():
                     + " combining logs of each batch",
                     type=str)
 
+    ap.add_argument("-r", "--refdate", default=str(date.today()),
+                    help="Reference date for shifting dates (for patients > 90 y.o.)",
+                    type=str)
     return ap.parse_args()
 
 def read_mongo_config(mongofile):

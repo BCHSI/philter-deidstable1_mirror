@@ -561,7 +561,6 @@ class Philter:
                     rgx = self.patterns[ipat]['dyndata'].pattern
                     regex_string = rgx.replace('"""+probe+r"""',
                                                '|'.join(rgx_probes))
-                    #print(regex_string)
                     self.patterns[ipat]['data'] = re.compile(regex_string)
                 else:
                     self.patterns[ipat]['data'] = re.compile(r"\b\B") #never match
@@ -768,7 +767,6 @@ class Philter:
             full_exclude_map = {}
             for start,stop in full_exclude_map_coordinates.filecoords(filename):
                 full_exclude_map[start] = stop
-
 
         # 1. Get coordinates of all include and exclude mathches
 
