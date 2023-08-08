@@ -39,20 +39,45 @@ ones = "one|two|three|four|five|six|seven|eight|nine"
 # # Get rid of last pipe
 # person_names = person_names[:-1]
 
+# Get small towns
+towns_json = json.loads(open("../blacklists/town_tokens_black_list_fp_removed.json").read())
+town_names = ''
+for key in towns_json:
+    town_names += key + '|'
+# Get rid of last "|"
+town_names = town_names[:-1]
+
+# Get gene symbols from json whitelist
+symbols_json = json.loads(open("../whitelists/whitelist_genes_and_patho_terms_pruned.json").read())
+gene_symbols = ''
+for key in symbols_json:
+        gene_symbols += key + '|'
+# Get rid of last "|"
+gene_symbols = gene_symbols[:-1]
+
+# Get stagings terms from json whitelist
+terms_json = json.loads(open("../whitelists/whitelist_staging_terms.json").read())
+staging_terms = ''
+for key in terms_json:
+        staging_terms += key + '|'
+# Get rid of last "|"
+staging_terms = staging_terms[:-1]
+
+
 # Do folder walk and transform each file
 rootdir = '.'
 for subdir, dirs, files in os.walk(rootdir):
 	for file in files:
 		if ".txt" in file and "_transformed.txt" not in file and "catchall" not in file:
 			filepath = os.path.join(subdir, file)
-			# Get currnet file name and create transformed name
+			# Get current file name and create transformed name
 			file_root = file.split(".")[0]
 			new_file_name = file_root + "_transformed.txt"
 			new_filepath = os.path.join(subdir, new_file_name)
 			# Open file
 			regex = open(filepath,"r").read().strip()
 			# Replace variables
-			regex = regex.replace('"""+month_name+r"""', month_name).replace('"""+day_numbering+r"""', day_numbering).replace('"""+day_name+r"""', day_name).replace('"""+seasons+r"""', seasons).replace('"""+address_indicator+r"""',address_indicator).replace('"""+state_name+r"""', state_names).replace('"""+full_numbering+r"""', full_numbering).replace('"""+holidays+r"""', holidays).replace('"""+teens+r"""', teens).replace('"""+decades_lt_90+r"""', decades_lt_90).replace('"""+ones+r"""', ones)
+			regex = regex.replace('"""+month_name+r"""', month_name).replace('"""+day_numbering+r"""', day_numbering).replace('"""+day_name+r"""', day_name).replace('"""+seasons+r"""', seasons).replace('"""+address_indicator+r"""',address_indicator).replace('"""+state_name+r"""', state_names).replace('"""+full_numbering+r"""', full_numbering).replace('"""+holidays+r"""', holidays).replace('"""+teens+r"""', teens).replace('"""+decades_lt_90+r"""', decades_lt_90).replace('"""+ones+r"""', ones).replace('"""+town_names+r"""', town_names).replace('"""+gene_symbols+r"""', gene_symbols).replace('"""+staging_terms+r"""', staging_terms)
 			# Write new file
 			with open(new_filepath, "w") as fin:
 				fin.write(regex)
