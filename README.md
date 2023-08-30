@@ -1,4 +1,4 @@
-If you use this software for any publication, please cite: Norgeot, B., Muenzen, K., Peterson, T.A. et al. Protected Health Information filter (Philter): accurately and securely de-identifying free-text clinical notes. npj Digit. Med. 3, 57 (2020). https://doi.org/10.1038/s41746-020-0258-y
+If you use this software for any publication, please cite: 1- Norgeot, B., Muenzen, K., Peterson, T.A. et al. Protected Health Information filter (Philter): accurately and securely de-identifying free-text clinical notes. npj Digit. Med. 3, 57 (2020). https://doi.org/10.1038/s41746-020-0258-y. 2- Radhakrishnan, Lakshmi, et al. "A certified de-identification system for all clinical text documents for information extraction at scale." JAMIA open 6.3 (2023): ooad045.
 
 # README
 
@@ -14,17 +14,17 @@ see: [MIT LISCENCE](https://opensource.org/licenses/MIT)
 
 # Running Philter
 
-## Production mode
+## Non-eval mode
 ```bash
-python3 main.py -i "./data/i2b2_notes_test/" -o "./data/i2b2_results_test/" --prod=True
+python3 deidpipe.py -i "./data/i2b2_notes_test/" -o "./data/i2b2_results_test/" -f=./configs/example.json
 ```
-Notes - this production mode will avoid outputting unnecessary print statements, and will skip the evaluation steps
+Notes - In this mode the goal is PHI redaction, and the evaluation step will be skipped.
 
-## Running from command line
+## Eval mode
 ```bash
-python3 main.py -i=./data/i2b2_notes/ -a=./data/i2b2_anno/ -o=./data/i2b2_results/ -f=./configs/example.json
+python3 deidpipe.py -i=./data/i2b2_notes/ -a=./data/i2b2_anno/ -o=./data/i2b2_results/ -f=./configs/example.json
 ```
-
+Notes - In this mode, PHI is redacted, and the evaluation step will be performed using the annotated notes provided by the user.
 
 ### Run a Stanford NER Taggger  (Warning, very slow)
 #### Remove 'PERSON' configs/remove_person_tags.json
