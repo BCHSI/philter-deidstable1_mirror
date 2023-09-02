@@ -80,19 +80,21 @@ def runDeidChunck(unit, q, philterFolder, configfile, refdate):
 
         # Run Deid (would be better to interface directly)
         if kpfile is None:
-           call(["qsub", 
-                 "-S", "/bin/bash",     # run job as a Bash shell [IMPORTANT]
-                 "-cwd",                # run job in the current working directory
-                 "-j", "yes",           # merge error messages with standard out
-                 "-l", "h_rt=00:29:00", # expected runtime  
-                 "/usr/bin/python3"+ " -O"+ " deidpipe.py"+ 
-                 " -i "+ srcFolder+ 
-                 " -o "+ dstFolder+ 
-                 " -s "+ srcMeta+
-                 " -d "+ "True"+
-                 " -f "+ configfile+
-                 " -l "+ "True"+
-                 " -r "+ refdate],
+            call(["qsub", 
+                  "-S", "/bin/bash",     # run job as a Bash shell [IMPORTANT]
+                  "-cwd",                # run job in the current working directory
+                  "-j", "yes",           # merge error messages with standard out
+                  "-l", "h_rt=00:29:00", # expected runtime  
+                  "-N", "j"+dstFolder[-30:].replace("/","_"), # use destination folder as name
+                  "-b", "y",             # python3 is a binary
+                  "/usr/bin/python3", "-O", " deidpipe.py",
+                  "-i", srcFolder,
+                  "-o", dstFolder,
+                  "-s", srcMeta,
+                  "-d", "True",
+                  "-f", configfile,
+                  "-l", "True",
+                  "-r", refdate],
                  cwd=philterFolder)
         else:
             call(["qsub",
@@ -100,6 +102,7 @@ def runDeidChunck(unit, q, philterFolder, configfile, refdate):
                   "-cwd",                # run job in the current working directory
                   "-j", "yes",           # merge error messages with standard out
                   "-l", "h_rt=00:29:00", # expected runtime
+                  "-N", "j"+dstFolder[-30:].replace("/","_"), # use destination folder as name 
                   "-b", "y",             # python3 is a binary
                   "/usr/bin/python3", "-O", " deidpipe.py",
                   "-i", srcFolder,
