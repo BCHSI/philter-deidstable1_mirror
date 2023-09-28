@@ -1,4 +1,4 @@
-If you use this software for any publication, please cite: Radhakrishnan, Lakshmi, et al. "A certified de-identification system for all clinical text documents for information extraction at scale." JAMIA open 6.3 (2023): ooad045.
+If you use this software for any publication, please cite: Radhakrishnan, Lakshmi, et al. "A certified de-identification system for all clinical text documents for information extraction at scale." JAMIA open 6.3 (2023): ooad045. https://academic.oup.com/jamiaopen/article/6/3/ooad045/7219298
 
 # README
 
@@ -14,39 +14,31 @@ The software has built-in evaluation capabilities and can compare Philter PHI-re
 see: [BSD-3 LISCENCE](https://github.com/BCHSI/de-id_stable1/blob/develop/LICENSE)
 
 # Installing Philter
-To install Philter from PyPi, run the following command:
-```bash
-pip3 install philter-ucsf
-```
-The main philter code will be executed by running:
-```bash
-python3 -m philter_ucsf [flags, see below]
-```
-However, we strongly suggest that you download the project source code and run all sample commands below from the home directory before running the install version of Philter.
+Download or clone the project source code and switch to v1.0 tag. Run the commands below from the home directory.
 ## Installing Requirements
 To install the Python requirements, run the following command:
 ```bash
 pip3 install -r requirements.txt
 ```
 # Running Philter
-Before running Philter either with or without evaluation, make sure to familiarize yourself with the various options that may be used for any given Philter run:
+Philter can be used in two different modes: with or without evaluation. Before running Philter in either mode, make sure to familiarize yourself with the various options that may be used for any given Philter run:
 
 ### Flags:
-**-i (input):**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Path to the directory or the file that contains the clinical note(s), the default is ./data/i2b2_notes/<br/>
-**-a (anno):**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Path to the directory or the file that contains the PHI annotation(s), the default is ./data/i2b2_anno/<br/>
-**-o (output):**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Path to the directory to save the PHI-reduced notes in, the default is ./data/i2b2_results/<br/>
-**-f (filters):**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Path to the config file, the default is ./configs/philter_delta.json<br/>
-**-x (xml):**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Path to the json file that contains all xml data, the default is ./data/phi_notes.json<br/>
-**-c (coords):**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Output path to the json file that will contain the coordinate map data, the default is ./data/coordinates.json<br/>
-**-v (verbose):**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;When verbose is true, will emit messages about script progress. The default is True<br/>
-**-e (run_eval):**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;When run_eval is true, will run our eval script and emit summarized results to terminal<br/>
-**-t (freq_table):**&nbsp;&nbsp;&nbsp;&nbsp;When freqtable is true, will output a unigram/bigram frequency table of all note words and their PHI/non-PHI counts. Default is False<br/>
-**-n (initials):**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;When initials is true, will include annotated initials PHI in recall/precision calculations. The default is True<br/>
-**--eval_output:**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Path to the directory that the detailed eval files will be outputted to, the default is ./data/phi/<br/>
-**--outputformat:**&nbsp;&nbsp;Define format of annotation, allowed values are \"asterisk\", \"i2b2\". Default is \"asterisk\"<br/>
-**--ucsfformat:**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;When ucsfformat is true, will adjust eval script for slightly different xml format. The default is False<br/>
-**--prod:**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;When prod is true, this will run the script with output in i2b2 xml format without running the eval script. The default is False<br/>
-**--cachepos:**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Path to a directoy to store/load the pos data for all notes. If no path is specified then memory caching will be used<br/>
+**-h:**&nbsp; Show this help message and exit<br/>
+**-i (input):**&nbsp; Path to the directory or the file that contains the PHI note, the default is ./data/i2b2_notes/<br/>
+**-o (output):**&nbsp; Path to the directory to save PHI-reduced notes, the default is ./data/i2b2_results/<br/>
+**-f (filters):**&nbsp; Path to the config file, the default is ./configs/philter_eta.json<br/>
+**-s (surrogate_info):**&nbsp; Path to the tsv file that contains the surrogate info per note key<br/>
+**-d (deid_filename):**&nbsp; When this is true, the pipeline saves the de-identified output using de-identified note ids for the filenames<br/>
+**-k (dynamic_blacklist):**&nbsp; Path to the probes file, if path to file is absent dynamic blacklist does not get generated<br/>
+**-m (mongodb):**&nbsp; When mongo config file is provided the pipeline will use mongodb to get input text, surrogation meta data and write out deid text<br/>
+**-l (log):**&nbsp; When this is true, the pipeline prints and saves log in a subdirectory in each output directory<br/>
+**-e (eval):**&nbsp; When this is true, the pipeline computes and saves statistics in a subdirectory in each output directory (see option -a)<br/>
+**-a (anno):**&nbsp; Path to the directory or the file that contains the PHI annotation, the default is ./data/i2b2_xml/ (needs option -e True)<br/>
+**-x (xml):**&nbsp; When this is true, the pipeline looks for xml files in the input directory and extracts the PHI information from the xml tags without running philter<br/>
+**-v (verbose):**&nbsp;When verbose is set, will emit messages about script progress<br/>
+**-b (batch):**&nbsp;Batch number to process<br/>
+**-r (refdate):**&nbsp;Reference date for shifting dates (for patients > 90 y.o.)<br/>
 
 ## 0. Curating I2B2 XML Files
 To remove non-HIPAA PHI annotations from the I2B2 XML files, run the following command:
@@ -68,18 +60,10 @@ In this mode, the PHI will be redactd and the evaluation step will be skipped:
 
 **d.** Run Philter in the command line using either default or custom parameters.
 
-Use the following command to run a single job and output files in XML format:
+Use the following command to run a single job and output files in text format:
 ```bash
-python3 deidpipe.py -i ./data/i2b2_notes/ -o ./data/i2b2_results/ -f ./configs/philter_one.json -k ./data/knownphi_data_clean_value.txt
+python3 deidpipe.py -i ./data/i2b2_notes/ -o ./data/i2b2_results/ -f ./configs/philter_one.json 
 ```
-IMPORTANT NOTE: XML-formatted files do NOT have PHI-reduced text. Instead, they contain the original note text with the PHI tags identified by Philter. 
-
-???
-???If you'd like to output ONLY the PHI-reduced text with asterisks obscuring Philter-identified PHI, simply add the -outputformat "asterisk" option:
-```bash
-???python3 deidpipe.py -i ./data/i2b2_notes/ -o ./data/i2b2_results/ -f ./configs/philter_one.json --outputformat "asterisk"
-```
-???
 
 To run multiple jobs simultaneously, all input notes handled by a single job must be located in separate directories to avoid cross-contamination between output files. For example, if you wanted to run Philter on 1000 notes simultaneously on two processes, the two input directories might look like:
 
@@ -121,7 +105,7 @@ Note: If this command produces an ElementTree.ParseError, you may need to remove
 **d.** Run Philter in evaluation mode using the following command:
 
 ```bash
-python3 deidpipe.py -i ./data/i2b2_notes/ -a ./data/i2b2_anno/ -o ./data/i2b2_results/ -f=./configs/philter_one.json -k ./data/knownphi_data_clean_value.txt -e True
+python3 deidpipe.py -i ./data/i2b2_notes/ -a ./data/i2b2_anno/ -o ./data/i2b2_results/ -f=./configs/philter_one.json -e True
 ```
 
 By defult, this will output PHI-reduced notes (.txt format) in the specified output directory. If this command is used with the --outputformat i2b2 flag (or with no --outputformat specified, since i2b2 format is the default option), the evaluation script will not be run and the script will output notes with the original text and the Philter PHI tags (.xml format) in the specified output directory.
