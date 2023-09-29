@@ -5,7 +5,7 @@ If you use this software for any publication, please cite: Radhakrishnan, Lakshm
 ![Alt text](https://github.com/beaunorgeot/images_for_presentations/blob/master/logo_v4.tif?raw=true "annotation interface")
 
 ### What is PHIlter? 
-Philter is a command-line based clinical text de-identification software that removes protected health information (PHI) from any plain text file. The package and associated scripts provide an end-to-end pipeline for removing Protected Health Information from clinical notes (or other sensitive text documents) in a completely secure environment (a machine with no external connections or exposed ports). We use a combination of regular expressions, Part Of Speech (POS) and Entity Recognition (NER) tagging, and filtering through a whitelist to achieve nearly perfect Recall and generate clean, readable notes. Everything is written in straight python and the package will process any text file, regardless of structure. You can install with PIP (see below) and run with a single command-line argument. Parallelization of processesing can be infinitly divided across cores or machines. 
+Philter is a command-line based clinical text de-identification software that removes protected health information (PHI) from any plain text file. The package and associated scripts provide an end-to-end pipeline for removing Protected Health Information from clinical notes (or other sensitive text documents) in a completely secure environment (a machine with no external connections or exposed ports). We use a combination of regular expressions, Part Of Speech (POS) and Entity Recognition (NER) tagging, and filtering through a whitelist to achieve nearly perfect Recall and generate clean, readable notes. Everything is written in straight python and the package will process any text file, regardless of structure. You can download/clone (see below) and run with a single command-line argument. Parallelization of processesing can be infinitly divided across cores or machines. 
 The software has built-in evaluation capabilities and can compare Philter PHI-reduced notes with a corresponding set of ground truth annotations. However, annotations are not required to run Philter. The following steps may be used to 1) run Philter in the command line without ground truth annotations, or 2) generate Philter-compatible annotations and run Philter in evaluation mode using ground truth annotations. Although any set of notes and corresponding annotations may be used with Philter, the examples provided here will correspond to the I2B2 dataset, which Philter uses in its default configuration.
 
 ### Important
@@ -21,13 +21,13 @@ To install the Python requirements, run the following command:
 pip3 install -r requirements.txt
 ```
 # Running Philter
-Philter can be used in two different modes: with or without evaluation. Before running Philter in either mode, make sure to familiarize yourself with the various options that may be used for any given Philter run:
+Before running Philter, make sure to familiarize yourself with the various options that may be used for any given Philter run:
 
 ### Flags:
 **-h:**&nbsp; Show this help message and exit<br/>
 **-i (input):**&nbsp; Path to the directory or the file that contains the PHI note, the default is ./data/i2b2_notes/<br/>
 **-o (output):**&nbsp; Path to the directory to save PHI-reduced notes, the default is ./data/i2b2_results/<br/>
-**-f (filters):**&nbsp; Path to the config file, the default is ./configs/philter_eta.json<br/>
+**-f (filters):**&nbsp; Path to the config file, the default is ./configs/philter_one.json.<br/>
 **-s (surrogate_info):**&nbsp; Path to the tsv file that contains the surrogate info per note key<br/>
 **-d (deid_filename):**&nbsp; When this is true, the pipeline saves the de-identified output using de-identified note ids for the filenames<br/>
 **-k (dynamic_blacklist):**&nbsp; Path to the probes file, if path to file is absent dynamic blacklist does not get generated<br/>
@@ -60,7 +60,7 @@ In this mode, the PHI will be redactd and the evaluation step will be skipped:
 
 **d.** Run Philter in the command line using either default or custom parameters.
 
-Use the following command to run a single job and output files in text format:
+Use the following command to run a single job:
 ```bash
 python3 deidpipe.py -i ./data/i2b2_notes/ -o ./data/i2b2_results/ -f ./configs/philter_one.json 
 ```
@@ -84,23 +84,7 @@ nohup python3 main.py -i ./data/batch2/500_input_notes_batch2/ -o ./data/i2b2_re
 
 In this mode, PHI is redacted, and the evaluation step will be performed using the annotated notes provided by the user:
 
-**a.** Create Philter-compatible annotation files using the transformation script located in ./generate_dataset/. This script expects notes in xml format, and transforms each input file into two plain text files: 1) the original note text, and 2) the note text with asterisks obscuring PHI. A properly formatted xml input can be found in ./data/i2b2_xml, and examples of the two outputs can be found in ./data/i2b2_notes and ./data/i2b2_anno, respectively. Additionally, this script creates a .json file that contains the original text from each note, followed by the PHI annotations in json format. An example of this output file can be found at ./data/phi_notes_i2b2.json. This is the file that will be used as the -x default option. 
-
-### Flags:
-
-**-x** Path to the directory file that contains the note xml files<br/>
-**-o** Path to the json file that will contain a summary of the phi in the xml files<br/>
-**-n** Path to the directory where you would like to store the plain text notes<br/>
-**-a** Path to the directory where you would like to store the plain text annotations<br/>
-
-Use the following command to create these input files from notes in XML format:
-
-```bash
-python3 ./generate_dataset/main_ucsf_updated.py -x ./data/i2b2_xml/ -o ./data/phi_notes_i2b2.json -n ./data/i2b2_notes/ -a ./data/i2b2_anno/
-```
-Note: If this command produces an ElementTree.ParseError, you may need to remove .DS_Store from ./data/i2b2_xml.
-
-**b-c.** See Step 1b-c above
+**a-c.** See Step 1a-c above
 
 **d.** Run Philter in evaluation mode using the following command:
 
@@ -108,8 +92,7 @@ Note: If this command produces an ElementTree.ParseError, you may need to remove
 python3 deidpipe.py -i ./data/i2b2_notes/ -a ./data/i2b2_anno/ -o ./data/i2b2_results/ -f=./configs/philter_one.json -e True
 ```
 
-By defult, this will output PHI-reduced notes (.txt format) in the specified output directory. If this command is used with the --outputformat i2b2 flag (or with no --outputformat specified, since i2b2 format is the default option), the evaluation script will not be run and the script will output notes with the original text and the Philter PHI tags (.xml format) in the specified output directory.
-
+By defult, this will output PHI-reduced notes (.txt format) in the specified output directory.
 
 
 # How it works
