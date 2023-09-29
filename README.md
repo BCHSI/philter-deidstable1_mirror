@@ -1,17 +1,17 @@
-If you use this software for any publication, please cite: Radhakrishnan, Lakshmi, et al. "A certified de-identification system for all clinical text documents for information extraction at scale." JAMIA open 6.3 (2023): ooad045. https://academic.oup.com/jamiaopen/article/6/3/ooad045/7219298
-
-# README
-
-![Alt text](https://github.com/beaunorgeot/images_for_presentations/blob/master/logo_v4.tif?raw=true "annotation interface")
-
-### What is PHIlter? 
-Philter is a command-line based clinical text de-identification software that removes protected health information (PHI) from any plain text file. The package and associated scripts provide an end-to-end pipeline for removing Protected Health Information from clinical notes (or other sensitive text documents) in a completely secure environment (a machine with no external connections or exposed ports). We use a combination of regular expressions, Part Of Speech (POS) and Entity Recognition (NER) tagging, and filtering through a whitelist to achieve nearly perfect Recall and generate clean, readable notes. Everything is written in straight python and the package will process any text file, regardless of structure. You can download/clone (see below) and run with a single command-line argument. Parallelization of processesing can be infinitly divided across cores or machines. 
-The software has built-in evaluation capabilities and can compare Philter PHI-reduced notes with a corresponding set of ground truth annotations. However, annotations are not required to run Philter. The following steps may be used to 1) run Philter in the command line without ground truth annotations, or 2) generate Philter-compatible annotations and run Philter in evaluation mode using ground truth annotations. Although any set of notes and corresponding annotations may be used with Philter, the examples provided here will correspond to the I2B2 dataset, which Philter uses in its default configuration.
+If you use this software for any publication, please cite: Radhakrishnan et al. "[A certified de-identification system for all clinical text documents for information extraction at scale](https://doi.org/10.1093/jamiaopen/ooad045)" JAMIA Open 6.3 (2023): ooad045.
 
 ### Important
 - Please note: we don't make any claims that running this software on your data will instantly produce HIPAA compliance. THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-see: [BSD-3 LISCENCE](https://github.com/BCHSI/de-id_stable1/blob/develop/LICENSE)
+see: [BSD-3 LISENCE](https://github.com/BCHSI/de-id_stable1/blob/develop/LICENSE)
+
+# README
+
+### What is PHIlter? 
+Philter is a command-line based clinical text de-identification software that removes protected health information (PHI) from any plain text file. The package and associated scripts provide an end-to-end pipeline for removing Protected Health Information from clinical notes (or other sensitive text documents) in a completely secure environment (a machine with no external connections or exposed ports). We use a combination of regular expressions, Part Of Speech (POS), and filtering through include and exclude lists to achieve nearly perfect Recall and generate clean, readable notes. Everything is written in straight python and the package will process any text file, regardless of structure. You can download/clone (see below) and run with a single command-line argument. Parallelization of processesing can be infinitly divided across cores or machines. 
+The software has built-in evaluation capabilities and can compare Philter PHI-reduced notes with a corresponding set of ground truth annotations. However, annotations are not required to run Philter. The following steps may be used to 1) run Philter in the command line without ground truth annotations, or 2) generate Philter-compatible annotations and run Philter in evaluation mode using ground truth annotations. Although any set of notes and corresponding annotations may be used with Philter, the examples provided here will correspond to the I2B2 dataset, which Philter uses in its default configuration.
+
+
 
 # Installing Philter
 Download or clone the project source code and switch to v1.0 tag. Run the commands below from the home directory.
