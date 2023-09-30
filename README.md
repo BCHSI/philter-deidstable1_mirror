@@ -3,7 +3,7 @@ If you use this software for any publication, please cite: Radhakrishnan et al. 
 ### Important
 - Please note: we don't make any claims that running this software on your data will instantly produce HIPAA compliance. THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-see: [BSD-3 LISENCE](https://github.com/BCHSI/de-id_stable1/blob/develop/LICENSE)
+see: [BSD-3 LICENSE](https://github.com/BCHSI/de-id_stable1/blob/develop/LICENSE)
 
 # README
 
@@ -25,20 +25,20 @@ Before running Philter, make sure to familiarize yourself with the various optio
 
 ### Flags:
 **-h:**&nbsp; Show this help message and exit<br/>
-**-i (input):**&nbsp; Path to the directory or the file that contains the PHI note, the default is ./data/i2b2_notes/<br/>
-**-o (output):**&nbsp; Path to the directory to save PHI-reduced notes, the default is ./data/i2b2_results/<br/>
-**-f (filters):**&nbsp; Path to the config file, the default is ./configs/philter_one.json.<br/>
+**-i (input):**&nbsp; Path to the directory or the file that contains the PHI note<br/>
+**-o (output):**&nbsp; Path to the directory to save PHI-reduced notes<br/>
+**-f (filters):**&nbsp; Path to the config file, the default is configs/philter_one.json<br/>
 **-s (surrogate_info):**&nbsp; Path to the tsv file that contains the surrogate info per note key<br/>
-**-d (deid_filename):**&nbsp; When this is true, the pipeline saves the de-identified output using de-identified note ids for the filenames<br/>
+**-d (deid_filename):**&nbsp; When this is true, the pipeline saves the de-identified output using de-identified note ids for the filenames, the default is True<br/>
 **-k (dynamic_blacklist):**&nbsp; Path to the probes file, if path to file is absent dynamic blacklist does not get generated<br/>
 **-m (mongodb):**&nbsp; When mongo config file is provided the pipeline will use mongodb to get input text, surrogation meta data and write out deid text<br/>
-**-l (log):**&nbsp; When this is true, the pipeline prints and saves log in a subdirectory in each output directory<br/>
-**-e (eval):**&nbsp; When this is true, the pipeline computes and saves statistics in a subdirectory in each output directory (see option -a)<br/>
-**-a (anno):**&nbsp; Path to the directory or the file that contains the PHI annotation, the default is ./data/i2b2_xml/ (needs option -e True)<br/>
-**-x (xml):**&nbsp; When this is true, the pipeline looks for xml files in the input directory and extracts the PHI information from the xml tags without running philter<br/>
+**-l (log):**&nbsp; When this is true, the pipeline prints and saves log in a subdirectory in each output directory, the default is True<br/>
+**-e (eval):**&nbsp; When this is true, the pipeline computes and saves statistics in a subdirectory in each output directory (see option -a), the default is False<br/>
+**-a (anno):**&nbsp; Path to the directory or the file that contains the PHI annotation, the default is data/i2b2_xml/ (needs option -e True)<br/>
+**-x (xml):**&nbsp; When this is true, the pipeline looks for xml files in the input directory and extracts the PHI information from the xml tags without running Philter, the default is False<br/>
 **-v (verbose):**&nbsp;When verbose is set, will emit messages about script progress<br/>
 **-b (batch):**&nbsp;Batch number to process<br/>
-**-r (refdate):**&nbsp;Reference date for shifting dates (for patients > 90 y.o.)<br/>
+**-r (refdate):**&nbsp;Reference date for shifting birth dates for patients > 90 y.o., the default is date.today()<br/>
 
 ## 0. Curating I2B2 XML Files
 To remove non-HIPAA PHI annotations from the I2B2 XML files, run the following command:
