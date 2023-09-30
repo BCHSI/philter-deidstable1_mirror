@@ -35,7 +35,7 @@ def main():
 
 
 	for filename in os.listdir(directory):
-		print "filename is: " + filename + '\n'
+		print("filename is: " + filename + '\n')
 		text,tags_dict = extractXML(directory,filename)
 
 		for key, value in tags_dict.iteritems():
