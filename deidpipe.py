@@ -20,20 +20,20 @@ def get_args():
     ap = argparse.ArgumentParser(description=help_str)
 
     ap.add_argument("-i", "--input", 
-                    help="Path to the directory or the file that contains the PHI note, the default is ./data/i2b2_notes/",
+                    help="Path to the directory or the file that contains the PHI note",
                     type=str)
     ap.add_argument("-o", "--output", 
-                    help="Path to the directory to save PHI-reduced notes, the default is ./data/i2b2_results/",
+                    help="Path to the directory to save PHI-reduced notes",
                     type=str)
-    ap.add_argument("-f", "--filters", default="./configs/philter_eta.json",
-                    help="Path to the config file, the default is ./configs/philter_eta.json",
+    ap.add_argument("-f", "--filters", default="configs/philter_one.json",
+                    help="Path to the config file, the default is configs/philter_one.json",
                     type=str)
     ap.add_argument("-s", "--surrogate_info", 
                     help="Path to the tsv file that contains the surrogate info"
                           + " per note key",
                     type=str)
     ap.add_argument("-d", "--deid_filename", default=True,
-                    help="When this is true, the pipeline saves the de-identified output using de-identified note ids for the filenames",
+                    help="When this is true, the pipeline saves the de-identified output using de-identified note ids for the filenames, the default is True",
                     type=lambda x:bool(distutils.util.strtobool(x)))
     ap.add_argument("-k", "--dynamic_blacklist",
                     help="Path to the probes file, if path to file is absent dynamic blacklist does not get generated",
@@ -42,18 +42,18 @@ def get_args():
                     help="When mongo config file is provided the pipeline will use mongodb to get input text, surrogation meta data and write out deid text",
                     type=str)
     ap.add_argument("-l", "--log", default=True,
-                    help="When this is true, the pipeline prints and saves log in a subdirectory in each output directory",
+                    help="When this is true, the pipeline prints and saves log in a subdirectory in each output directory, the default is True",
                     type=lambda x:bool(distutils.util.strtobool(x)))
     ap.add_argument("-e", "--eval", default=False,
-                    help="When this is true, the pipeline computes and saves statistics in a subdirectory in each output directory (see option -a)",
+                    help="When this is true, the pipeline computes and saves statistics in a subdirectory in each output directory (see option -a), the default is False",
                     type=lambda x:bool(distutils.util.strtobool(x)))
-    ap.add_argument("-a", "--anno", default='./data/i2b2_xml',
+    ap.add_argument("-a", "--anno", default='data/i2b2_xml',
                     help="Path to the directory or the file that contains the PHI annotation,"
-                         + " the default is ./data/i2b2_xml/"
+                         + " the default is data/i2b2_xml/"
                          + " (needs option -e True)",
                     type=str)
     ap.add_argument("-x", "--xml", default=False,
-                    help="When this is true, the pipeline looks for xml files in the input directory and extracts the PHI information from the xml tags without running philter",
+                    help="When this is true, the pipeline looks for xml files in the input directory and extracts the PHI information from the xml tags without running Philter, the default is False",
                     type=lambda x:bool(distutils.util.strtobool(x)))
     ap.add_argument("-v", "--verbose", action='store_true',
                     help="When verbose is set,"
@@ -63,7 +63,7 @@ def get_args():
                     type=str)
     # TODO: move over to deidloop or master
     ap.add_argument("-r", "--refdate", default=str(date.today()),
-                    help="Reference date for shifting dates (for patients > 90 y.o.)",
+                    help="Reference date for shifting birth dates (for patients > 90 y.o.), the default is date.today()",
                     type=str)
     return ap.parse_args()
 
