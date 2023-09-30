@@ -3,7 +3,7 @@ If you use this software for any publication, please cite: Radhakrishnan et al. 
 ### Important
 - Please note: we don't make any claims that running this software on your data will instantly produce HIPAA compliance. THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-see: [BSD-3 LICENSE](https://github.com/BCHSI/de-id_stable1/blob/develop/LICENSE)
+see: [BSD-3 LICENSE](LICENSE)
 
 # README
 
@@ -65,20 +65,7 @@ Use the following command to run a single job:
 python3 deidpipe.py -i ./data/i2b2_notes/ -o ./data/i2b2_results/ -f ./configs/philter_one.json 
 ```
 
-To run multiple jobs simultaneously, all input notes handled by a single job must be located in separate directories to avoid cross-contamination between output files. For example, if you wanted to run Philter on 1000 notes simultaneously on two processes, the two input directories might look like:
-
-1. ./data/batch1/500_input_notes_batch1/
-2. ./data/batch2/500_input_notes_batch2/
-
-In this example, the following two commands would be used to start running each job in the background:
-```bash
-nohup python3 main.py -i ./data/batch1/500_input_notes_batch2/ -o ./data/i2b2_results_test/ -f ./configs/philter_delta.json --prod=True > ./data/batch1/batch1_terminal_out.txt 2>&1 &
-
-```
-```bash
-nohup python3 main.py -i ./data/batch2/500_input_notes_batch2/ -o ./data/i2b2_results_test/ -f ./configs/philter_delta.json --prod=True > ./data/batch2/batch2_terminal_out.txt 2>&1 &
-
-```
+To run multiple jobs simultaneously, see [deidloop.py](deidloop.py)/[deidloop_mongo.py](deidloop_mongo.py) and [deidmaster.py](deidmaster.py)/[deidmaster_mongo.py](deidmaster_mongo.py)
 
 ## 2. Running Philter WITH evaluation (ground truth annotations required)
 
@@ -95,26 +82,6 @@ python3 deidpipe.py -i ./data/i2b2_notes/ -a ./data/i2b2_anno/ -o ./data/i2b2_re
 By defult, this will output PHI-reduced notes (.txt format) in the specified output directory.
 
 
-# How it works
-This should a reasonable overview of *exactly* what each script does
-
-**philter**
-
-![Alt text](https://github.com/beaunorgeot/images_for_presentations/blob/master/flow_v2.tif?raw=true "phi-reduction process")
-
-
-**Example Input and Output**
-![Alt text](https://github.com/beaunorgeot/images_for_presentations/blob/master/deid_note_v2.tif?raw=true "eval_output example")
-
-**Example output for eval**
-
-![Alt text](https://github.com/beaunorgeot/images_for_presentations/blob/master/eval%20result.PNG?raw=true "eval_output example")
-
-
-**Example output table for infoextraction**
-
-![Alt text](https://github.com/beaunorgeot/images_for_presentations/blob/master/infoext_from_phireduced_note.PNG?raw=true "info_extraction_csv example")
-
 ### Why did we build it?
 Clinical notes capture rich information on the interaction between physicians, nurses, patients, and more. While this data holds the promise of uncovering valuable insights, it is also challenging to work with for numerous reasons. Extracting various forms of knowledge from Natural Language is difficult on it's own. However, attempts to even begin to mine this data on a large scale are severely hampered by the nature of the raw data, it's deeply personal. In order to allow more researchers to have access to this potentially transformative data, individual patient identifiers need to be removed in a way that presevers the content, context, and integrity of the raw note. 
 
@@ -124,10 +91,6 @@ Second, the notes used in public competitions don't reflect our notes very close
 ## Why a whitelist (aren't blacklists smaller and easier)?
 
 Blacklists are certainly the norm, but they have some pretty large inherent problems. For starters, they present an unbounded problem: there are a nearly infinite number of words that could be PHI and that you'd therefore want to filter. For us, the difference between blacklists vs whitelists comes down to the *types* of errors that you're willing to make. Since blacklists are made of  PHI words and/or patterns, that means that when a mistake is made PHI is allowed through (Recall error). Whitelists on the other hand are made of non-PHI which means that when a mistake is made a non-PHI word gets filtered (Precision Error). We care more about recall for our own uses, and we think that high recall is also important to others that will use this software, so a whitelist was the sensible approach. 
-
-### Results (current, unpublished)
-
-![Alt text](https://github.com/beaunorgeot/images_for_presentations/blob/master/performance_1.png?raw=true "info_extraction_csv example")
 
 # Recommendations
 - Search through filtered words for institution specific words to improve precision
