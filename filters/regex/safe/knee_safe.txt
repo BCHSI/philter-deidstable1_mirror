@@ -1,1 +1,1 @@
-\b(?i)((left|right)\sknee|knee\s(pain|cartilage|brace))\b
+(?i)\b((left|right)\sknee|knee\s(pain|cartilage|brace))\b

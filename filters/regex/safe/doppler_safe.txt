@@ -1,1 +1,1 @@
-\b(?i)doppler\s(evidence|flow|study|evidence)\b
+(?i)\bdoppler\s(evidence|flow|study|evidence)\b

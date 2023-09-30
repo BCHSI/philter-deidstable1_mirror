@@ -1,1 +1,1 @@
-\b(?i)down(\'s)?\ssyndrome\b
+(?i)\bdown(\'s)?\ssyndrome\b

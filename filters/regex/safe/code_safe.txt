@@ -1,1 +1,1 @@
-\b(?i)activation\scode\b
+(?i)\bactivation\scode\b

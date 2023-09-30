@@ -1,1 +1,1 @@
-\b(?i)vena\scava\b
+(?i)\bvena\scava\b

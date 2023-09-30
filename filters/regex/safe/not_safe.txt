@@ -1,1 +1,1 @@
-\b(?i)(is|was|are|do)\snot\b
+(?i)\b(is|was|are|do)\snot\b

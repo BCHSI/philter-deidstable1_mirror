@@ -1,1 +1,1 @@
-\b(?i)\d\sdrop\b
+(?i)\b\d\sdrop\b

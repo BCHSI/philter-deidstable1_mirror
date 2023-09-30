@@ -1,1 +1,1 @@
-\b(?i)bile\s(duct(s)?|leak)\b
+(?i)\bbile\s(duct(s)?|leak)\b

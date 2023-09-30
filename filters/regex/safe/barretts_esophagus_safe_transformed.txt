@@ -1,1 +1,1 @@
-\b(?i)barrett\'s\sesophagus\b
+(?i)\bbarrett\'s\sesophagus\b

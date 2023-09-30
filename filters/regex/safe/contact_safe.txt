@@ -1,1 +1,1 @@
-\b(?i)contact\s(me|information|info|your|the)\b
+(?i)\bcontact\s(me|information|info|your|the)\b

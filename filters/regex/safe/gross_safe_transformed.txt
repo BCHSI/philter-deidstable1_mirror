@@ -1,1 +1,1 @@
-\b(?i)gross\s(description|per)\b
+(?i)\bgross\s(description|per)\b

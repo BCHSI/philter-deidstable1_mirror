@@ -1,1 +1,1 @@
-\b(?i)(per|in|see|of|to|into)\sapex\b
+(?i)\b(per|in|see|of|to|into)\sapex\b

@@ -1,1 +1,1 @@
-\b(?i)date\sreviewed\sby\b
+(?i)\bdate\sreviewed\sby\b

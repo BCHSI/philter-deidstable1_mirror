@@ -1,1 +1,1 @@
-\b(?i)order[ ]{1,3}number[ ]{1,3}\d+\/\d+\b
+(?i)\border[ ]{1,3}number[ ]{1,3}\d+\/\d+\b

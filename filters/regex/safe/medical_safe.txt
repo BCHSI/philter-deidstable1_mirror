@@ -1,1 +1,1 @@
-\b(?i)medi\-cal\b
+(?i)\bmedi\-cal\b

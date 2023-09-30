@@ -1,1 +1,1 @@
-\b(?i)do\s(not|you|I)\b
+(?i)\bdo\s(not|you|I)\b

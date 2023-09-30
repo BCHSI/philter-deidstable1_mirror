@@ -1,1 +1,1 @@
-\b(?i)(((T2 score = )(\d+\/\d+))|((T2 score = )(\d+\-\d+)))\b
+(?i)\b(((T2 score = )(\d+\/\d+))|((T2 score = )(\d+\-\d+)))\b

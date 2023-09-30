@@ -1,1 +1,1 @@
-\b(?i)the\sscope\b
+(?i)\bthe\sscope\b

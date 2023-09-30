@@ -1,1 +1,1 @@
-\b(?i)bay\sarea\b
+(?i)\bbay\sarea\b

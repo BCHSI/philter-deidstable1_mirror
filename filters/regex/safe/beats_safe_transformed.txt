@@ -1,1 +1,1 @@
-\b(?i)(\d+\sbeats|beats\s(per|of))\b
+(?i)\b(\d+\sbeats|beats\s(per|of))\b

@@ -1,1 +1,1 @@
-\b(?i)(baseline|final|living)\sdisposition\b
+(?i)\b(baseline|final|living)\sdisposition\b

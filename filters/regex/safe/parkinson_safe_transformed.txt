@@ -1,1 +1,1 @@
-\b(?i)parkinson(\')?(s)?\sdisease\b
+(?i)\bparkinson(\')?(s)?\sdisease\b
