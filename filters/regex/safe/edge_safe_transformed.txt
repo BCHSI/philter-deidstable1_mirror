@@ -1,1 +1,1 @@
-\b(?i)(edge\sof|(liver|lateral|distal|proximal|on)\sedge)\b
+(?i)\b(edge\sof|(liver|lateral|distal|proximal|on)\sedge)\b

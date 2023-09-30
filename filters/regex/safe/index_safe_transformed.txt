@@ -1,1 +1,1 @@
-\b(?i)(mass|dose|in the)\sindex\b
+(?i)\b(mass|dose|in the)\sindex\b

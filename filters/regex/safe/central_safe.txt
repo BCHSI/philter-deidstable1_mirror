@@ -1,1 +1,1 @@
-\b(?i)central\s(blood|line)\b
+(?i)\bcentral\s(blood|line)\b

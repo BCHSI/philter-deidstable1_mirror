@@ -1,1 +1,1 @@
-\b(?i)order\smd\b
+(?i)\border\smd\b

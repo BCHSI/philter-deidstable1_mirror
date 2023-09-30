@@ -1,1 +1,1 @@
-\b(?i)\d+\spounds\b
+(?i)\b\d+\spounds\b

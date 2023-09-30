@@ -1,1 +1,1 @@
-\b(?i)(ordering|referring|reviewing|assisting)\smd\b
+(?i)\b(ordering|referring|reviewing|assisting)\smd\b

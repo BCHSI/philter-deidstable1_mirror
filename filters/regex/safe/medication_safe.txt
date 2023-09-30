@@ -1,1 +1,1 @@
-\b(?i)(avandia|avapro|niaspan)\s\d+(\s)?mg\b
+(?i)\b(avandia|avapro|niaspan)\s\d+(\s)?mg\b

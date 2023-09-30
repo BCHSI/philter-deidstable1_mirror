@@ -1,1 +1,1 @@
-\b(?i)min\sprn\b
+(?i)\bmin\sprn\b

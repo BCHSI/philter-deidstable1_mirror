@@ -1,1 +1,1 @@
-\b(?i)(on the|to the|off the)\sfloor\b
+(?i)\b(on the|to the|off the)\sfloor\b

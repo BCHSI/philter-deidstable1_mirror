@@ -1,1 +1,1 @@
-\b(?i)due\s(to|for)\b
+(?i)\bdue\s(to|for)\b

@@ -1,1 +1,1 @@
-\b(?i)micro\ssource\b
+(?i)\bmicro\ssource\b

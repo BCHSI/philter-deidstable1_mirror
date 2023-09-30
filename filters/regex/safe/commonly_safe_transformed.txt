@@ -1,1 +1,1 @@
-\b(?i)commonly\s(known\sas|seen\sin)\b
+(?i)\bcommonly\s(known\sas|seen\sin)\b

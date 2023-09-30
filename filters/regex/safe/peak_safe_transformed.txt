@@ -1,1 +1,1 @@
-\b(?i)peak\sraw\b
+(?i)\bpeak\sraw\b

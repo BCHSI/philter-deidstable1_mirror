@@ -1,1 +1,1 @@
-\b(?i)effort\snormal\b
+(?i)\beffort\snormal\b

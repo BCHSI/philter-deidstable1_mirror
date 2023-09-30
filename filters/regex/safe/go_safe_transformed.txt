@@ -1,1 +1,1 @@
-\b(?i)go\sto\b
+(?i)\bgo\sto\b
