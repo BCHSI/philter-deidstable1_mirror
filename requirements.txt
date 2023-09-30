@@ -1,0 +1,9 @@
+chardet==5.2.0
+dateparser==1.1.8
+lxml==4.9.3
+nltk==3.8.1
+numpy==1.26.0
+pandas==2.1.1
+pymongo==4.5.0
+word2number==1.1
+xmltodict==0.13.0
