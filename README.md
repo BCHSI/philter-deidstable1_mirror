@@ -15,7 +15,7 @@ The software has built-in evaluation capabilities and can compare Philter PHI-re
 
 
 # Installing Philter
-Download or clone the project source code and switch to v1.0 tag. Run the commands below from the home directory.
+Download or clone the project source code and switch to v1.0 tag (or use the latest `develop` code if you feel adventurous). Run the commands below from the home directory.
 ## Installing Requirements
 To install the Python requirements, run the following command:
 ```bash
@@ -23,7 +23,9 @@ pip3 install -r requirements.txt
 ```
 # Running Philter
 Before running Philter, make sure to familiarize yourself with the various options that may be used for any given Philter run:
-
+```bash
+python3 deidpipe.py -h
+```
 ### Flags:
 **-h:**&nbsp; Show this help message and exit<br/>
 **-i (input):**&nbsp; Path to the directory or the file that contains the PHI note<br/>
