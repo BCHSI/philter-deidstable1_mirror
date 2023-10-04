@@ -44,7 +44,7 @@ python3 deidpipe.py -h
 **-r (ref_date):**&nbsp;Reference date for shifting birth dates for patients > 90 y.o., the default is date.today()<br/>
 
 ## 0. Curating I2B2 XML Files
-To remove non-HIPAA PHI annotations from the I2B2 XML files, run the following command:
+Skip this step if you do not intend to use I2B2 data for evaluation. To remove non-HIPAA PHI annotations from the I2B2 XML files, run the following command:
 
 **-i** Path to the directory that contains the original I2B2 xml files<br/>
 **-o** Path to the directory where the curated files will be written<br/>
@@ -55,9 +55,9 @@ python improve_i2b2_notes.py -i data/i2b2_xml/ -o data/i2b2_xml_updated/
 ## 1. Running Philter WITHOUT evaluation (no ground-truth annotations required)
 In this mode, the PHI will be redactd and the evaluation step will be skipped:
 
-**a.** Make sure the input file(s) are in plain text format. If you are using the I2B2 dataset (or any other dataset in XML or other formats), the note text must be extracted from each original file and be saved in individual text files. Examples of properly formatted input files can be found in ./data/i2b2_notes/.
+**a.** Make sure the input file(s) are in plain text format. If you are using the I2B2 dataset (or any other dataset in XML or other formats), the note text must be extracted from each original file and be saved in individual text files. Examples of properly formatted input files can be found in data/i2b2_notes/.
 
-**b.** Store all input file(s) in the same directory, and create an output directory (if you want the PHI-reduced notes to be stored somewhere other than the default location).
+**b.** Store all input file(s) in the same directory, and create an output directory.
 
 **c.** Create a configuration file with specified filters (if you do not want to use the default configuration file).
 
@@ -65,7 +65,7 @@ In this mode, the PHI will be redactd and the evaluation step will be skipped:
 
 Use the following command to run a single job:
 ```bash
-python3 deidpipe.py -i ./data/i2b2_notes/ -o ./data/i2b2_results/ -f ./configs/philter_one.json 
+python3 deidpipe.py -i data/i2b2_notes/ -o data/i2b2_results/ -f configs/philter_one.json 
 ```
 
 To run multiple jobs simultaneously, see [deidloop.py](deidloop.py)/[deidloop_mongo.py](deidloop_mongo.py) and [deidmaster.py](deidmaster.py)/[deidmaster_mongo.py](deidmaster_mongo.py)
