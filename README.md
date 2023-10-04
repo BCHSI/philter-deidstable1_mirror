@@ -77,11 +77,9 @@ In this mode, PHI is redacted, and the evaluation step will be performed using t
 **a-c.** See Step 1a-c above
 
 **d.** Run Philter in evaluation mode using the following command:
-
 ```bash
-python3 deidpipe.py -i ./data/i2b2_notes/ -a ./data/i2b2_anno/ -o ./data/i2b2_results/ -f=./configs/philter_one.json -e True
+python3 deidpipe.py -i data/i2b2_notes/ -o data/i2b2_results/ -f configs/philter_one.json -e True -a data/i2b2_xml/ 
 ```
-
 By defult, this will output PHI-reduced notes (.txt format) in the specified output directory.
 
 ## 3. Running Philter with Mongo I/O
