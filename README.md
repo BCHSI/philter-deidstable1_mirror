@@ -81,6 +81,91 @@ python3 deidpipe.py -i ./data/i2b2_notes/ -a ./data/i2b2_anno/ -o ./data/i2b2_re
 
 By defult, this will output PHI-reduced notes (.txt format) in the specified output directory.
 
+## 3. Running Philter with Mongo I/O
+
+This mode lets us use Mongo DB as the I/O for Philter runs. Here are the pre processing steps that needs to be completed before running Philter using Mongo.
+
+**a.** Load the Notes meta data with structured mappings to Mongo. We have internally called it note_info_map collection.
+**b.** Load the Notes Text file to another collections called raw_note_text. For quick joins we have leveraged the mongo internal object_id as the primary key on both the collections to quickly link the note_text to the meta data.
+**c.** Below are the list of associated collections we have to help with our monthly refresh cycles
+
+note_info_map 	 Mongo Collection with contents of the NOTE_INFO_MAP.txt file
+raw_note_text 
+ Mongo Collection with contents of the NOTE_TEXT*.txt files
+philtered_note_text 
+ Mongo Collection with the PHI redacted note text
+probes 
+ Mongo Collection with UCSF probes
+Status 
+ Mongo Collection with notes classified into Add, Update, Delete or Keep
+Chunk 
+ Mongo Collection with details on the notes to be deidentified
+Delta 
+ A summary collection containing the delta values between the current and previous extract
+note_meta_data 
+ Deid meta data collection
+obsolete 
+ Object ids marked as "delete" in Status table, for downstream applications
+
+**d.** Create a mongo config file. Here is a sample config file for your reference.
+
+{
+   "client": “localhost",
+   "username": "",
+   "password": "",
+   "db": "100k_test_db",
+   "collection_tmpmeta": "tmpmeta",
+   "collection_tmpstatus": "tmpstatus",
+   "collection_tmptext": "tmptext",
+   "collection_meta_data": "note_info_map",
+   "collection_status": "status",
+   "collection_raw_note_text": "raw_note_text",
+   "collection_deid_note_text": "philtered_note_text_fp_fix",
+   "collection_chunk": "chunk_delta",
+   "collection_delta": "delta",
+   "collection_log_batch_phi_count": "log_batch_phi_count_fp_fix",
+   "collection_log_batch_summary": "log_batch_summary_fp_fix",
+   "collection_log_detailed_batch_summary": "log_detailed_batch_summary_fp_fix",
+   "collection_log_dynamic_blacklist": "log_dynamic_blacklist_fp_fix",
+   "collection_log_failed_dates": "log_failed_dates_fp_fix",
+   "collection_log_parsed_dates": "log_parsed_dates_fp_fix",
+   "collection_log_phi_marked": "log_phi_marked_fp_fix",
+   "collection_super_log": "log_super_log",
+   "collection_user_meta": "user_facing_meta_data",
+   "collection_probes": "probes",
+   "collection_tmp_nk_patid": "tmp_note_key_pat",
+   "known_phi": true,
+   "philter_version": “Philter V1.0"
+}
+**e.** To run the philter parallel on multiple threads create the chunk table with the following fields. 
+{ "_id" : ObjectId(""),
+        "patient_ID" : "",
+        "url" : "",
+        "batch" : 1
+}
+
+-The object_id must correspond to the note object_id in the note meta data and text table. This shows the script which note to de-identify. 
+-The patient_id field is used to pull the probes if you have them to help with de-identification.
+-The url is the name of the server you are running the de-identification process on. This is required in case you are planning to run the de-identification process on multiple servers.
+-The batch number is the same for a set of 1000 notes so that the algorithm knows to process those together in one thread.
+
+**f.** Once we have the data loaded into mongo, chunk collection and a config file created we can use the following command to launch the runs.
+```bash
+/usr/bin/time nice python3 deidloop_mongo.py -t 30  --mongofile mongo.json --philterconfig philter_one.json --superlog False --philter /de-id_stable1-philter_one/ > stdouterr.txt 2>&1 &
+```
+### Flags:
+**-h, --help** show this help message and exit<br/>
+**--mongofile MONGOFILE** with mongo configuration Path to the mongo config file<br/>
+**-t THREADS, --threads THREADS** Number of parallel threads, the default is 1<br/>
+**--philterconfig PHILTERCONFIG** Path to Philter program config files like philter_one.json<br/>
+**--philter PHILTER**     Path to philter scripts<br/>
+**--superlog SUPERLOG**   True or False option. When this is set, the pipeline
+                        prints and saves a super log in mongo combining logs
+                        of each batch<br/>
+**-r REFDATE, --refdate REFDATE**
+                        Reference date for shifting dates (for patients > 90
+                        y.o.)<br/>
+
 
 ### Why did we build it?
 Clinical notes capture rich information on the interaction between physicians, nurses, patients, and more. While this data holds the promise of uncovering valuable insights, it is also challenging to work with for numerous reasons. Extracting various forms of knowledge from Natural Language is difficult on it's own. However, attempts to even begin to mine this data on a large scale are severely hampered by the nature of the raw data, it's deeply personal. In order to allow more researchers to have access to this potentially transformative data, individual patient identifiers need to be removed in a way that presevers the content, context, and integrity of the raw note. 
