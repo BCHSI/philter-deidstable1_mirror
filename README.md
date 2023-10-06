@@ -33,7 +33,7 @@ python3 deidpipe.py -h
 **-f (filters_config_file):**&nbsp; Path to the config file, the default is configs/philter_one.json<br/>
 **-s (surrogate_info_file):**&nbsp; Path to the tsv file that contains the surrogate info per note key<br/>
 **-d (True,False):**&nbsp; When this is true, the pipeline saves the de-identified output using de-identified note ids for the filenames, the default is True<br/>
-**-k (known_pii_file):**&nbsp; Path to the probes file, if path to file is absent Dynamic Blacklist does not get generated<br/>
+**-k (known_pii_file):**&nbsp; Path to the probes file, if path to file is absent Dynamic Blocklist does not get generated<br/>
 **-m (mongodb_config_file):**&nbsp; When mongo config file is provided the pipeline will use mongodb to get input text, surrogation meta data and write out deid text<br/>
 **-l (True,False):**&nbsp; When this is true, the pipeline prints and saves log in a subdirectory in each output directory, the default is True<br/>
 **-e (True,False):**&nbsp; When this is true, the pipeline computes and saves statistics in a subdirectory in each output directory (see option -a), the default is False<br/>
@@ -86,29 +86,75 @@ By defult, this will output PHI-reduced notes (.txt format) in the specified out
 
 This mode lets us use Mongo DB as the I/O for Philter runs. Here are the pre processing steps that needs to be completed before running Philter using Mongo.
 
-**a.** Load the Notes meta data with structured mappings to Mongo. We have internally called it note_info_map collection.
+**a.** Load the Notes meta data with structured mappings to Mongo. We have internally called it `note_info_map` collection.
+```
+{
+        "_id" : ObjectId("5fde7677eaf0903792f48cd8"),
+        "redact_date" : ISODate("2023-10-04T11:43:17.322Z"),
+        "mrn" : "",
+        "patient_ID" : "",
+        "BirthDate" : "",
+        "Deid_BirthDate" : "",
+        "DeathDate" : null,
+        "status" : "",
+        "deid_turns_91_date" : "",
+        "deid_date_offset_cdw" : "",
+        "note_key" : "",
+        "deid_note_key" : "",
+        "note_type" : "Progress Notes”,
+        "meta_md5" : "6c8c7a0697a1edfbd0d669d5d63d0afb",
+        "philter_version" : “Philter One"
+}
+```
 
-**b.** Load the Notes Text file to another collections called raw_note_text. For quick joins we have leveraged the mongo internal object_id as the primary key on both the collections to quickly link the note_text to the meta data.
+**b.** Load the Notes Text file to another collections called `raw_note_text`. For quick joins we have leveraged the mongo internal object_id as the primary key on both the collections to quickly link the note_text to the meta data.
+```
+{
+        "_id" : ObjectId("5fde7677eaf0903792f48cd8"),
+        "note_key" : "",
+        "raw_note_text" : “”
+}
+```
 
 **c.** Below are the list of associated collections we have to help with our monthly refresh cycles
 
-`note_info_map` 	 Mongo Collection with contents of the NOTE_INFO_MAP.txt file<br/>
+`note_info_map` 	 Mongo Collection which contains the meta data and surrogate information<br/>
 `raw_note_text` 
- Mongo Collection with contents of the NOTE_TEXT*.txt files<br/>
+ Mongo Collection which contains the identified note text<br/>
 `philtered_note_text` 
- Mongo Collection with the PHI redacted note text<br/>
+ Mongo Collection with the PHI redacted note text
+```
+{
+       "_id" : ObjectId("5fde7677eaf0903792f48cd8"),
+       "note_text” :””
+}
+```
 `probes` 
- Mongo Collection with UCSF probes<br/>
-`Status` 
- Mongo Collection with notes classified into Add, Update, Delete or Keep<br/>
-`Chunk` 
+ Mongo Collection with UCSF probes
+```
+{
+        "_id" : ObjectId("6462acb791cef5bb442b10cd"),
+        "person_id" : "",
+        "ADDR" : [ "" ],
+        "fname" : [ "" ],
+        "lname" : [ "" ],
+        "MRN" : [ "", "", "", "" ],
+        "phone" : [ "" ],
+        "ZIP" : [ "" ]
+}
+```
+`status` 
+ Mongo Collection with notes classified into Add, Update, Delete or Keep
+```
+{
+        "_id" : ObjectId("5fde7677eaf0903792f48cd8"),
+        "note_key_status" : "Keep",
+        "update_date" : ISODate("2023-04-10T22:58:08.474Z"),
+        "only_text_update" : false
+}
+```
+`chunk` 
  Mongo Collection with details on the notes to be deidentified<br/>
-`Delta` 
- A summary collection containing the delta values between the current and previous extract<br/>
-`note_meta_data` 
- Deid meta data collection<br/>
-`obsolete` 
- Object ids marked as "delete" in Status table, for downstream applications<br/>
 
 **d.** Create a mongo config file. Here is a sample config file for your reference.
 ```
@@ -124,7 +170,7 @@ This mode lets us use Mongo DB as the I/O for Philter runs. Here are the pre pro
    "collection_status": "status",
    "collection_raw_note_text": "raw_note_text",
    "collection_deid_note_text": "philtered_note_text",
-   "collection_chunk": "chunk_delta",
+   "collection_chunk": "chunk",
    "collection_delta": "delta",
    "collection_log_batch_phi_count": "log_batch_phi_count",
    "collection_log_batch_summary": "log_batch_summary",
@@ -159,7 +205,7 @@ This mode lets us use Mongo DB as the I/O for Philter runs. Here are the pre pro
 
 **f.** Once we have the data loaded into mongo, chunk collection and a config file created we can use the following command to launch the runs.
 ```bash
-python3 deidloop_mongo.py -t 30  --mongofile mongo.json --philterconfig philter_one.json --superlog False --philter /de-id_stable1-philter_one/ > stdouterr.txt 2>&1 &
+python3 deidloop_mongo.py -t 4  --mongofile configs/mongo.json --philterconfig config/philter_one.json --superlog False --philter /path/to/philter/scripts/ > stdouterr.txt 2>&1 &
 ```
 ### Flags:
 **-h, --help:** show this help message and exit<br/>
@@ -181,10 +227,10 @@ Clinical notes capture rich information on the interaction between physicians, n
 De-Identification of clinical notes is certainly not a new topic, there are even machine learning competitions that are held to compare methods. Unfornuately these did not provide us with a viable approach to de-identify our own notes. First, the code from methods used in the competitions are often not available. 
 Second, the notes used in public competitions don't reflect our notes very closely and therefore even methods that are publicly available did not perform nearly as well on our data as they did on the data used for the competitions (As noted by Ferrandez, 2012, BMC Medical Research Methodology who compared public methods on VA data). Additionally,our patient's privacy is paramount to us which meant we were unwilling to expose our data use any methods that required access to any url or external api call. Finally, our goal was to de-identify all 40 MILLION of our notes. There are multiple published approaches that are simply impractical from a run-time perspective at this scale. 
 
-## Why a whitelist (aren't blacklists smaller and easier)?
+## Why a safelist (aren't blocklists smaller and easier)?
 
-Blacklists are certainly the norm, but they have some pretty large inherent problems. For starters, they present an unbounded problem: there are a nearly infinite number of words that could be PHI and that you'd therefore want to filter. For us, the difference between blacklists vs whitelists comes down to the *types* of errors that you're willing to make. Since blacklists are made of  PHI words and/or patterns, that means that when a mistake is made PHI is allowed through (Recall error). Whitelists on the other hand are made of non-PHI which means that when a mistake is made a non-PHI word gets filtered (Precision Error). We care more about recall for our own uses, and we think that high recall is also important to others that will use this software, so a whitelist was the sensible approach. 
+Blocklists are certainly the norm, but they have some pretty large inherent problems. For starters, they present an unbounded problem: there are a nearly infinite number of words that could be PHI and that you'd therefore want to filter. For us, the difference between blocklists vs safelists comes down to the *types* of errors that you're willing to make. Since blocklists are made of PHI words and/or patterns, that means that when a mistake is made PHI is allowed through (Recall error). Safelists on the other hand are made of non-PHI which means that when a mistake is made a non-PHI word gets filtered (Precision Error). We care more about recall for our own uses, and we think that high recall is also important to others that will use this software, so a safelist was the sensible approach. 
 
 # Recommendations
 - Search through filtered words for institution specific words to improve precision
-- have a policy in place to report phi-leakage
+- Have a policy in place to report PHI-leakage
