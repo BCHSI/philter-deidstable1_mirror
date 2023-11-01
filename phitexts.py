@@ -455,17 +455,19 @@ class Phitexts:
                     continue
                 
                 if i in exclude_dict:
-                    start,stop = i, exclude_dict[i]
-                    if (filename, start) in self.subs:
-                        substitute_token = self.subs[filename, start][0]
-                        end = self.subs[filename, start][1]
-                        contents.append(substitute_token)
-                        last_marker = end
-                        #print(substitute_token)
-                    else:
-                        contents.append("*****")
-                        last_marker = stop
-                    
+                    st,stop = i, exclude_dict[i]
+                    for start in range(st,stop):
+                        if (filename, start) in self.subs:
+                            substitute_token = self.subs[filename, start][0]
+                            end = self.subs[filename, start][1]
+                            contents.append(substitute_token)
+                            last_marker = end
+                            break
+                        elif last_marker != stop: # write only once
+                            contents.append("*****")
+                            last_marker = stop
+                        else:
+                            continue
                 else:
                     contents.append(txt[i])
 
