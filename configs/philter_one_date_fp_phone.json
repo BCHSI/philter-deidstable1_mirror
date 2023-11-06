@@ -42,6 +42,13 @@
         "filepath":"filters/regex/safe/hospital_safe.txt",
         "notes":"This should remove anything with pattern hospital"
     },
+    {   
+        "title": "molecular markers safe",
+        "type": "regex",
+        "exclude": false,
+        "filepath": "filters/regex/genes_and_patho_terms/gene_expression_safe_transformed.txt",
+        "notes": "This should remove anything that matches a molecular marker"
+    },
    {
         "title":"wheezes safe",
         "type":"regex",

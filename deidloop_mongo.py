@@ -75,7 +75,7 @@ def get_batch(db, mongo):
     batch = collection_chunk.distinct('batch',{'url': server.lower()})
     return batch
 
-def runDeidChunck(unit, q, philterFolder, philterConfig, dbConfig, db, mongo):
+def runDeidChunck(unit, q, philterFolder, philterConfig, dbConfig, db, mongo, refdate):
     """
     Function to instruct a thread to deid a directory.
     INPUTS:
@@ -87,11 +87,12 @@ def runDeidChunck(unit, q, philterFolder, philterConfig, dbConfig, db, mongo):
         # time for run
         t0 = time.time()
         batch = q.get()
-        call(["/data/radhakrishnanl/deidproj/bin/python3", "-O", "deidpipe.py",
+        call(["/data/radhakrishnanl/deidproj/bin/python3", "deidpipe.py",
               "-m", dbConfig,
               "-f", os.path.join(philterConfig),
               "-b", str(batch),
-              "-l", "True"],
+              "-l", "True",
+              "-r", refdate],
               cwd=philterFolder)
 
         #To do fix threading issues while calling the function
@@ -118,7 +119,7 @@ def main():
     for unit in range(args.threads):
         worker = Thread(target=runDeidChunck,
                         args=(unit, enclosure_queue,
-                              os.path.join(args.philter), args.philterconfig, args.mongofile, db, mongo))
+                              os.path.join(args.philter), args.philterconfig, args.mongofile, db, mongo,args.refdate))
 
         worker.setDaemon(True)
         worker.start()
