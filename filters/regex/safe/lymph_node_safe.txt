@@ -1,1 +1,1 @@
-\b(?i)(((lymph node(s?))\s?(biopsy)?)(, (\d*\.?\d*\s?cm))?(\(?(\d{1,2}[\/-]\d{1,3}[^0-9\/-])\)?))|(\(?(\d{1,2}[\/-]\d{1,3}[^0-9\/-])([\), ])?)(lymph node(s*))|((lymph node(s?))\s?(biopsy)?(,?\s?(\d*\.?\d*\s?cm)))\b
+\b(?i)((((?<=lymph node)|(?<= lymph nodes))\s?(biopsy)?)(, (\d*\.?\d*\s?cm))?(\(?(\d{1,2}[\/-]\d{1,3}[^0-9\/-])\)?))|((((?<=\s)|(?<=[a-z]\-)|(?<=\())(\d{1,2}[\/-]\d{1,3}[^0-9\/-])([\), ])?)(?=lymph node|lymph nodes))|(((?<=lymph node biopsy)|(?<=lymph nodes biopsy)|(?<=lymph nodes biopsy,))\s?(\d{1,2}\.?\d{1,3}\s?cm))\b
