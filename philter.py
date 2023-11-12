@@ -325,21 +325,22 @@ class Philter:
                     raise Exception("Invalid filteype", pattern["filepath"],
                                     "must be of", regex_filetypes)
                 self.patterns[i]["data"] = None
-                self.patterns[i]["data"] = self.precompile(pattern["filepath"])
+                self.patterns[i]["data"] = Philter.precompile(pattern["filepath"])
             if pattern["type"] == "dynamic_regex":
                 if pattern["filepath"].split(".")[-1] not in regex_filetypes:
                     raise Exception("Invalid filteype", pattern["filepath"],
                                     "must be of", regex_filetypes)
                 self.patterns[i]["data"] = None
-                self.patterns[i]["dyndata"] = self.precompile(pattern["filepath"])
+                self.patterns[i]["dyndata"] = Philter.precompile(pattern["filepath"])
             if pattern["type"] == "dynamic_regex_context":
                 if pattern["filepath"].split(".")[-1] not in regex_filetypes:
                     raise Exception("Invalid filteype", pattern["filepath"],
                                     "must be of", regex_filetypes)
                 self.patterns[i]["data"] = None
-                self.patterns[i]["dyndata"] = self.precompile(pattern["filepath"])
-    
-    def precompile(self, filepath):
+                self.patterns[i]["dyndata"] = Philter.precompile(pattern["filepath"])
+
+    @staticmethod
+    def precompile(filepath):
         """ precompiles our regex to speed up pattern matching"""
         
         for line in open(filepath,"r"):

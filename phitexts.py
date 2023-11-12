@@ -326,6 +326,20 @@ class Phitexts:
                     normalized_token = Subs.parse_date(token)
                     self.norms[phi_type][(filename, start)] = (normalized_token,
                                                                end)
+                    if normalized_token is None:
+                        print("token {0} at ({1},{2}) normalized to {3}".format(token,start,end,normalized_token))
+                        self.norms[phi_type].pop((filename, start))
+                        parsed_dates = Subs.parse_dates_greedy(token)
+                        print(parsed_dates)
+                        for pdate in parsed_dates:
+                            normed_dt = pdate[0]
+                            st = start + pdate[1]
+                            en = start + pdate[2]
+                            if (filename, st) in self.norms[phi_type]:
+                                if en < self.norms[phi_type][(filename, st)][1]:
+                                    continue # do not replace if shorter
+                            self.norms[phi_type][(filename, st)] = (normed_dt,
+                                                                    en)
             elif (phi_type == "AGE<90" or phi_type == "Age<90"
                   or phi_type == "AGE>=90" or phi_type == "Age>=90"):
                 for filename, start, end in self.types[phi_type][0].scan():
@@ -374,7 +388,7 @@ class Phitexts:
                         continue
                     normalized_token = self.norms[phi_type][filename, start][0]
                     end = self.norms[phi_type][filename, start][1]
-
+                    print("found: \"{0}\" for ({1}:{2})".format(normalized_token.get_raw_string(),start,end))
                     # Added for eval
                     if normalized_token is None:
                         # self.eval_table[filename][start].update({'sub':None})
@@ -392,6 +406,7 @@ class Phitexts:
                         continue
                     
                     substitute_token = self.subser.date_to_string(shifted_date)
+                    print("sub is \"{0}\"".format(substitute_token))
                     # self.eval_table[filename][start].update({'sub':substitute_token})
                     self.subs[(filename, start)] = (substitute_token, end)
             elif (phi_type == "AGE<90" or phi_type == "Age<90"
