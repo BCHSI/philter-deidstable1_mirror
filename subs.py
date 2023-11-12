@@ -13,6 +13,8 @@ import pprint
 import json
 from pymongo import MongoClient
 from word2number import w2n
+from textmethods import get_tokens
+from philter import Philter
 
 DEFAULT_SHIFT_VALUE = 32
 DATE_REF = dt.datetime(2000, 2, 29) # do not change this!!!!
@@ -276,6 +278,77 @@ class Subs:
                                settings={'RELATIVE_BASE': DATE_REF,
                                          'PREFER_DAY_OF_MONTH': 'first'})
         return date
+
+    @staticmethod
+    def parse_date_range(date_range):
+        """
+        Philter currently has regex's that tag date ranges.
+        So, we must identify these and separately parse both elements of the daterange
+        """
+        list_of_date_range_regex = ["filters/regex/dates/YYYY_MM-YYYY_MM_transformed.txt","filters/regex/dates/MM_DD_YY-MM_DD_YY_transformed.txt","filters/regex/dates/MM_YYYY-MM_YYYY_transformed.txt","filters/regex/dates/MM_YY-MM_YY_transformed.txt","filters/regex/dates/MM_YYYY-MM_YYYY_transformed.txt","filters/regex/dates/MM_DD-MM_DD_transformed.txt","filters/regex/dates/DD_MM-DD_MM_transformed.txt"]
+        for filepath in list_of_date_range_regex:
+            compiled_regex = Philter.precompile(filepath)
+
+            matches = compiled_regex.search(date_range)
+            if matches:
+                match = matches.group(0)
+                print("date range match: {0}".format(match))
+                start_date_start = matches.start()
+                start_date_range, end_date_range = match.split("-")
+                start_date_stop = start_date_start + len(start_date_range) - 1
+                end_date_start = start_date_stop + 2
+                end_date_stop = matches.end()
+                start_date = Subs.parse_date(start_date_range)
+                end_date = Subs.parse_date(end_date_range)
+                return ((start_date, start_date_start, start_date_stop),
+                        (end_date, end_date_start, end_date_stop))
+        return None
+
+    @staticmethod
+    def parse_dates_greedy(dates_string):
+        print("start parse greedy")
+        dates = []
+
+        # print("trying date range")
+        # date_range = Subs.parse_date_range(dates_string)
+        # if date_range:
+        #     dates.append((date_range[0][0],date_range[0][1],date_range[0][2]))
+        #     dates.append((date_range[1][0],date_range[1][1],date_range[1][2]))
+
+        print("trying sliding window")
+        tkns = get_tokens(dates_string)
+        print(tkns)
+        triplets = []
+        duplets = []
+        if len(tkns) >= 3:
+            ks = list(tkns.keys())
+            print(ks)
+            for i in range(len(ks)-2):
+                s = ks[i]
+                e = tkns[ks[i + 2]][0] + 1
+                triplets.append((dates_string[s : e], s, e))
+                e = tkns[ks[i + 1]][0] + 1
+                duplets.append((dates_string[s : e], s, e))
+            s = ks[-2]
+            e = tkns[ks[-1]][0] + 1
+            duplets.append((dates_string[s : e], s, e))
+            print("Triplet: {0}".format(triplets))
+            print("Duplet: {0}".format(duplets))
+        for trip in triplets:
+            print(trip)
+            norm_trip = Subs.parse_date(trip[0])
+            print("Trip: {0} ({1})".format(norm_trip,trip[0]))
+            if norm_trip:
+                dates.append((norm_trip, trip[1], trip[2]))
+        for dup in duplets:
+            print(dup)
+            norm_dup = Subs.parse_date(dup[0])
+            print("Dup: {0} ({1})".format(norm_dup,dup[0]))
+            if norm_dup:
+                dates.append((norm_dup, dup[1], dup[2]))
+
+        print("end parse greedy")
+        return dates
 
     @staticmethod
     def date_to_string(date):

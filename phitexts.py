@@ -359,11 +359,21 @@ class Phitexts:
                     normalized_token = Subs.parse_date(token)
 
                     self.norms[phi_type][(filename, start)] = (normalized_token,
-                                                       end)
-                    if filename in self.date_norms.keys():
-                        self.date_norms[filename].append((start,end,token,normalized_token))
-                    else:
-                        self.date_norms[filename] = [(start,end,token,normalized_token)]
+                                                               end)
+                    if normalized_token is None:
+                        print("token {0} at ({1},{2}) normalized to {3}".format(token,start,end,normalized_token))
+                        self.norms[phi_type].pop((filename, start))
+                        parsed_dates = Subs.parse_dates_greedy(token)
+                        print(parsed_dates)
+                        for pdate in parsed_dates:
+                            normed_dt = pdate[0]
+                            st = start + pdate[1]
+                            en = start + pdate[2]
+                            if (filename, st) in self.norms[phi_type]:
+                                if en < self.norms[phi_type][(filename, st)][1]:
+                                    continue # do not replace if shorter
+                            self.norms[phi_type][(filename, st)] = (normed_dt,
+                                                                    en)
             elif (phi_type == "AGE<90" or phi_type == "Age<90"
                   or phi_type == "AGE>=90" or phi_type == "Age>=90"):
                 for filename, start, end in self.types[phi_type][0].scan():
@@ -380,7 +390,7 @@ class Phitexts:
         # or use self.norms="unknown <type>" with <type>=self.types
 
         # Note: see also surrogator.shift_dates(), surrogator.parse_and_shift_date(), parse_date_ranges(), replace_other_surrogate()
-        
+
     def substitute_phi(self, look_up_table_path = None, db = None,
                        ref_date = None):
         assert self.norms, "No normalized PHI defined"
@@ -413,7 +423,7 @@ class Phitexts:
 
                     normalized_token = self.norms[phi_type][filename, start][0]
                     end = self.norms[phi_type][filename, start][1]
-
+                    print("found: \"{0}\" for ({1}:{2})".format(normalized_token.get_raw_string(),start,end))
                     # Added for eval
                     if normalized_token is None:
                         # self.eval_table[filename][start].update({'sub':None})
@@ -431,6 +441,7 @@ class Phitexts:
                         continue
                     
                     substitute_token = self.subser.date_to_string(shifted_date)
+                    print("sub is \"{0}\"".format(substitute_token))
                     # self.eval_table[filename][start].update({'sub':substitute_token})
                     self.subs[(filename, start)] = (substitute_token, end)
             elif (phi_type == "AGE<90" or phi_type == "Age<90"
