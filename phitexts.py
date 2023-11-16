@@ -672,7 +672,6 @@ class Phitexts:
                                             'success_sub':0, 'fail_sub':0}
             if filename_str not in eval_table:
                 eval_table[filename_str] = []
-
             if normalized_date is not None:
                 # Add 1 to successfully normalized dates
                 num_parsed += 1
