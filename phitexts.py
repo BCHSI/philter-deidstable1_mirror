@@ -1212,21 +1212,11 @@ class Phitexts:
                     
                     # Indicte whether date token was subbed or not
                     original_coords = list(range(pstart,pphi[pstart][0]+1))
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 86522d08 (adding date overlap code)
                     if filename in norm_coords.keys():
                         date_subbed = all((item in norm_coords[filename] for item in original_coords))
                     else:
                         date_subbed = False
-<<<<<<< HEAD
-=======
                     date_subbed = all((item in norm_coords[filename] for item in original_coords))
-
->>>>>>> 91d7a07f (adding detailed date checking to eval)
-=======
->>>>>>> 86522d08 (adding date overlap code)
                     try:
                         subtokens = self._get_sub_tokens(gold, philter)
                     except Exception as err:
@@ -1341,6 +1331,9 @@ class Phitexts:
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 58ea689d22d8351eb6291603176c35748e68465b
         text_fp_file = open(os.path.join(eval_dir, 'fp.eval'), "w+")
         text_tp_file = open(os.path.join(eval_dir, 'tp.eval'), "w+")
         text_fn_file = open(os.path.join(eval_dir, 'fn.eval'), "w+")
@@ -1355,6 +1348,7 @@ class Phitexts:
                                         + '\t' + 'result'
                                         + '\t' + 'text_output'
                                         + '\t' + 'start' + '\t' + 'stop')
+<<<<<<< HEAD
 =======
         text_fp_file = open(os.path.join(eval_dir,'fp.eval'),"w+")
         text_tp_file = open(os.path.join(eval_dir,'tp.eval'),"w+")
@@ -1367,6 +1361,8 @@ class Phitexts:
                                        + '\t' + 'text_output'
                                        + '\t' + 'start' + '\t' + 'stop')
 >>>>>>> 91d7a07f (adding detailed date checking to eval)
+=======
+>>>>>>> 58ea689d22d8351eb6291603176c35748e68465b
 
         # gathers full text tokens, gold and philter tokens
         gold_dicts = self._get_gold_phi(anno_dir)
@@ -1477,8 +1473,11 @@ class Phitexts:
                     token = falsepositives_dicts[filename][st][2]
 <<<<<<< HEAD
                     context = self.texts[filename][context_start:context_stop]
+<<<<<<< HEAD
 =======
 >>>>>>> 91d7a07f (adding detailed date checking to eval)
+=======
+>>>>>>> 58ea689d22d8351eb6291603176c35748e68465b
                     text_output_bool = False
                     text_output = ''
                     if phi_type in ['DATE','Date']:
@@ -1496,17 +1495,23 @@ class Phitexts:
 
                         text_date_file.write('\n' + filename
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 58ea689d22d8351eb6291603176c35748e68465b
                                              + '\t' + token
                                              + '\t' + 'FP'
                                              + '\t' + text_output
                                              + '\t' + str(start)
                                              + '\t' + str(stop))
+<<<<<<< HEAD
 =======
                                        + '\t' + token
                                        + '\t' + 'FP'
                                        + '\t' + text_output
                                        + '\t' + str(start) + '\t' + str(stop))
 >>>>>>> 91d7a07f (adding detailed date checking to eval)
+=======
+>>>>>>> 58ea689d22d8351eb6291603176c35748e68465b
                     
                     text_fp_file.write('\n' + filename + '\t' + str(phi_type)
                                        + '\t' + token
@@ -1568,6 +1573,7 @@ class Phitexts:
                                              + '\t' + ''
                                              + '\t' + str(start)
                                              + '\t' + str(stop))
+<<<<<<< HEAD
 =======
                     if phi_type in ['DATE','Date']:
                         fn_dates += 1
@@ -1577,20 +1583,28 @@ class Phitexts:
                                        + '\t' + ''
                                        + '\t' + str(start) + '\t' + str(stop))
 >>>>>>> 91d7a07f (adding detailed date checking to eval)
+=======
+>>>>>>> 58ea689d22d8351eb6291603176c35748e68465b
 
                     text_fn_file.write('\n' + filename + '\t' + str(phi_type)
                                        + '\t' + token
                                        + '\t' + str(start) + '\t' + str(stop))
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 58ea689d22d8351eb6291603176c35748e68465b
                     text_fn_context_file.write('\n' + filename
                                                + '|' + str(phi_type)
                                                + '|' + token
                                                + '|' + str(start)
                                                + '|' + str(stop)
                                                + '|' + str(context))
+<<<<<<< HEAD
 =======
 >>>>>>> 91d7a07f (adding detailed date checking to eval)
+=======
+>>>>>>> 58ea689d22d8351eb6291603176c35748e68465b
 
                     if phi_type not in summary_by_category:
                         summary_by_category[phi_type] = {}
@@ -1713,6 +1727,9 @@ class Phitexts:
 <<<<<<< HEAD
         text_fp_context_file.close()
         text_fn_context_file.close()
+<<<<<<< HEAD
 =======
 >>>>>>> 91d7a07f (adding detailed date checking to eval)
+=======
+>>>>>>> 58ea689d22d8351eb6291603176c35748e68465b
         text_date_file.close()
