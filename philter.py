@@ -354,6 +354,8 @@ class Philter:
                 print("FutureWarning: {0} in file ".format(warn) + filepath)
                 warnings.simplefilter(action="ignore", category=FutureWarning)
                 re_compiled = re.compile(regex) # assign nevertheless
+            except Exception as e:
+                print("Exception: {0} in file ".format(e) + filepath)
         return re_compiled
                
     def init_set(self, filepath):
