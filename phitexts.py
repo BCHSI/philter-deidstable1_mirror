@@ -735,6 +735,12 @@ class Phitexts:
                 if filename_str not in phi_table:
                     phi_table[filename_str] = []
                 word = self.texts[filename][start:end]
+                flank_start = int(start) - 10
+                flank_end = int(end) + 10
+                if flank_start < 0:
+                   flank_start = 1
+                if len(self.texts[filename]) < flank_end:
+                   flank_end = len(self.texts[filename])
                 context = self.texts[filename][flank_start:flank_end]
                 phi_table[filename_str].append({'start': start, 'end': end,
                                          'word': word, 'type': phi_type, 'context': context})
