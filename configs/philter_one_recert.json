@@ -6,6 +6,34 @@
         "filepath":"filters/regex/genes_and_patho_terms/lymphoma_safe.txt",
         "notes":""
     },
+    {   
+        "title":"stools safe",
+        "type":"regex",
+        "exclude":false,
+        "filepath":"filters/regex/safe/stools_per_day_safe.txt",
+        "notes":"This should not mark stools/day measurements as date fps"
+    },
+   {   
+        "title":"spo2 safe",
+        "type":"regex",
+        "exclude":false,
+        "filepath":"filters/regex/safe/spo2_measurement_safe.txt",
+        "notes":"This should not mark spo2 measurements as date fps"
+    },
+   {
+        "title":"doi safe",
+        "type":"regex",
+        "exclude":false,
+        "filepath":"filters/regex/safe/doi_safe.txt",
+        "notes":"This should not mark doi as phi"
+    },
+   {      
+        "title":"article date safe",
+        "type":"regex",
+        "exclude":false,
+        "filepath":"filters/regex/safe/article_date_safe.txt",
+        "notes":"This should not mark articel dates as phi"
+    },
    {
         "title":"ucsf apex safe",
         "type":"regex",
@@ -391,7 +419,14 @@
         "type":"regex",
         "exclude":false,
         "filepath":"filters/regex/safe/crohns_disease_safe.txt",
-        "notes":"This should remove anything with pattern crohn's disease"
+        "notes":"This should not remove anything with pattern crohn's disease"
+    },
+    {
+        "title":"rosai dorfman diseases safe",
+        "type":"regex",
+        "exclude":false,
+        "filepath":"filters/regex/safe/rosai_dorfman_safe.txt",
+        "notes":"This should not remove anything with pattern rosai dorfman disease"
     },
     {
         "title":"day safe",
@@ -623,6 +658,13 @@
         "exclude":false,
         "filepath":"filters/regex/safe/t2_score_safe.txt",
         "notes":"This should not mark t2 score as date fps"
+    },
+    {   
+        "title":"score safe",
+        "type":"regex",
+        "exclude":false,
+        "filepath":"filters/regex/safe/score_safe.txt",
+        "notes":"This should not mark score as date fps"
     },
     {   
         "title":"core safe",

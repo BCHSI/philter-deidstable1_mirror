@@ -138,6 +138,7 @@ def main_mongo(args, db=None ,mongo=None):
         
         # looks-up surrogate and apply to normalized PHI
         if mongo is not None:
+            print(args.refdate)
             if args.surrogate_info:
                 print("WARNING: Surrogate meta file and mongodb were passed as arguments. Ignoring surrogate meta file and using mongodb")
             if __debug__: print("looking up surrogates")

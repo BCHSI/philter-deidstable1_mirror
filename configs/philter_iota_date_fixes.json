@@ -42,13 +42,6 @@
         "filepath":"filters/regex/safe/hospital_safe.txt",
         "notes":"This should remove anything with pattern hospital"
     },
-    {   
-        "title": "gene expression safe",
-        "type": "regex",
-        "exclude": false,
-        "filepath": "filters/regex/genes_and_patho_terms/gene_expression_safe_transformed.txt",
-        "notes": "This should remove anything that matches a molecular marker"
-    },
    {
         "title":"wheezes safe",
         "type":"regex",
@@ -161,6 +154,13 @@
         "exclude":false,
         "filepath":"filters/regex/safe/arms_safe.txt",
         "notes":"This should remove anything with pattern arms"
+    },
+    {
+        "title":"article date safe",
+        "type":"regex",
+        "exclude":false,
+        "filepath":"filters/regex/safe/article_date_safe.txt",
+        "notes":"This should remove anything that looks like an article date citation"
     },
     {
         "title":"assessment safe",
@@ -450,6 +450,13 @@
         "notes":"This should remove anything with pattern doesn't"
     },
     {
+        "title":"doi safe",
+        "type":"regex",
+        "exclude":false,
+        "filepath":"filters/regex/safe/doi_safe.txt",
+        "notes":"This should mark anything that looks like a doi"
+    },
+    {
         "title":"doppler safe",
         "type":"regex",
         "exclude":false,
@@ -609,34 +616,6 @@
         "exclude":false,
         "filepath":"filters/regex/safe/measurement_safe.txt",
         "notes":"This should remove anything with pattern grams, etc"
-    },
-    {   
-        "title":"gauge safe",
-        "type":"regex",
-        "exclude":false,
-        "filepath":"filters/regex/safe/gauge_safe.txt",
-        "notes":"This should not mark gauge and needle value as date fps"
-    },
-    {   
-        "title":"t2 score safe",
-        "type":"regex",
-        "exclude":false,
-        "filepath":"filters/regex/safe/t2_score_safe.txt",
-        "notes":"This should not mark t2 score as date fps"
-    },
-    {   
-        "title":"core safe",
-        "type":"regex",
-        "exclude":false,
-        "filepath":"filters/regex/safe/core_safe.txt",
-        "notes":"This should not mark cores positives as date fps"
-    },
-    {   
-        "title":"lymph node safe",
-        "type":"regex",
-        "exclude":false,
-        "filepath":"filters/regex/safe/lymph_node_safe.txt",
-        "notes":"This should not mark lymph nodes as date fps"
     },
     {
         "title":"medication safe",
@@ -2018,14 +1997,6 @@
         "exclude":true,
         "filepath":"filters/regex/contact/xxx_xxx_xxxx.txt",
         "notes":"This should remove anything that xxx.xxx.xxxx",
-        "phi_type":"CONTACT"
-    },
-    {
-        "title":"hc_xxx_xxx_xxxx",
-        "type":"regex",
-        "exclude":true,
-        "filepath":"filters/regex/contact/hc_xxx_xxx_xxxx.txt",
-        "notes":"This should remove anything that (h|c) xxx.xxx.xxxx",
         "phi_type":"CONTACT"
     },
     {
