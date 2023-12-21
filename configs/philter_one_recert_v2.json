@@ -27,13 +27,6 @@
         "filepath":"filters/regex/safe/doi_safe.txt",
         "notes":"This should not mark doi as phi"
     },
-   {      
-        "title":"article date safe",
-        "type":"regex",
-        "exclude":false,
-        "filepath":"filters/regex/safe/article_date_safe.txt",
-        "notes":"This should not mark articel dates as phi"
-    },
    {
         "title":"ucsf apex safe",
         "type":"regex",
