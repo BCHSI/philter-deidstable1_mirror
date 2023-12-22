@@ -6,6 +6,27 @@
         "filepath":"filters/regex/genes_and_patho_terms/lymphoma_safe.txt",
         "notes":""
     },
+    {   
+        "title":"stools safe",
+        "type":"regex",
+        "exclude":false,
+        "filepath":"filters/regex/safe/stools_per_day_safe.txt",
+        "notes":"This should not mark stools/day measurements as date fps"
+    },
+   {   
+        "title":"spo2 safe",
+        "type":"regex",
+        "exclude":false,
+        "filepath":"filters/regex/safe/spo2_measurement_safe.txt",
+        "notes":"This should not mark spo2 measurements as date fps"
+    },
+   {
+        "title":"doi safe",
+        "type":"regex",
+        "exclude":false,
+        "filepath":"filters/regex/safe/doi_safe.txt",
+        "notes":"This should not mark doi as phi"
+    },
    {
         "title":"ucsf apex safe",
         "type":"regex",
@@ -19,6 +40,13 @@
         "exclude":false,
         "filepath":"filters/regex/ucsf_regex/ucsf_MyChart_safe.txt",
         "notes":"This should remove anything with pattern MyChart"
+    },
+    {   
+        "title":"pTNM staging",
+        "type":"regex",
+        "exclude":false,
+        "filepath":"filters/regex/safe/ptnm_safe.txt",
+        "notes":"This should rescue anything with ptnm staging patterns"
     },
     {
         "title": "staging terms safe",
@@ -391,7 +419,14 @@
         "type":"regex",
         "exclude":false,
         "filepath":"filters/regex/safe/crohns_disease_safe.txt",
-        "notes":"This should remove anything with pattern crohn's disease"
+        "notes":"This should not remove anything with pattern crohn's disease"
+    },
+    {
+        "title":"rosai dorfman diseases safe",
+        "type":"regex",
+        "exclude":false,
+        "filepath":"filters/regex/safe/rosai_dorfman_safe.txt",
+        "notes":"This should not remove anything with pattern rosai dorfman disease"
     },
     {
         "title":"day safe",
@@ -623,6 +658,13 @@
         "exclude":false,
         "filepath":"filters/regex/safe/t2_score_safe.txt",
         "notes":"This should not mark t2 score as date fps"
+    },
+    {   
+        "title":"score safe",
+        "type":"regex",
+        "exclude":false,
+        "filepath":"filters/regex/safe/score_safe.txt",
+        "notes":"This should not mark score as date fps"
     },
     {   
         "title":"core safe",
@@ -860,6 +902,13 @@
         "type":"regex",
         "exclude":false,
         "filepath":"filters/regex/safe/parkinson_safe.txt",
+        "notes":""
+    },
+    {   
+        "title":"jc virus safe",
+        "type":"regex",
+        "exclude":false,
+        "filepath":"filters/regex/safe/jc_virus_safe.txt",
         "notes":""
     },
     {
@@ -1738,14 +1787,6 @@
         "exclude":true,
         "filepath":"filters/regex/mrn_id/specimen_#.txt",
         "notes":"This should remove anything that matches specimen number ...",
-        "phi_type":"ID"
-    },
-    {
-        "title":"cassette_#",
-        "type":"regex",
-        "exclude":true,
-        "filepath":"filters/regex/mrn_id/cassette_#.txt",
-        "notes":"This should remove anything that matches cassette_# ...",
         "phi_type":"ID"
     },
     {

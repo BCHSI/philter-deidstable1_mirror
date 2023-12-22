@@ -42,13 +42,6 @@
         "filepath":"filters/regex/safe/hospital_safe.txt",
         "notes":"This should remove anything with pattern hospital"
     },
-    {   
-        "title": "gene expression safe",
-        "type": "regex",
-        "exclude": false,
-        "filepath": "filters/regex/genes_and_patho_terms/gene_expression_safe_transformed.txt",
-        "notes": "This should remove anything that matches a molecular marker"
-    },
    {
         "title":"wheezes safe",
         "type":"regex",
@@ -638,6 +631,13 @@
         "filepath":"filters/regex/safe/lymph_node_safe.txt",
         "notes":"This should not mark lymph nodes as date fps"
     },
+    {   
+        "title":"stools safe",
+        "type":"regex",
+        "exclude":false,
+        "filepath":"filters/regex/safe/stools_per_day_safe.txt",
+        "notes":"This should not mark stools/day measurements as date fps"
+    },
     {
         "title":"medication safe",
         "type":"regex",
@@ -860,6 +860,20 @@
         "type":"regex",
         "exclude":false,
         "filepath":"filters/regex/safe/parkinson_safe.txt",
+        "notes":""
+    },
+    {   
+        "title":"doi safe",
+        "type":"regex",
+        "exclude":false,
+        "filepath":"filters/regex/safe/doi_safe.txt",
+        "notes": ""
+    },
+    {   
+        "title":"rosai-dorfman safe",
+        "type":"regex",
+        "exclude":false,
+        "filepath":"filters/regex/safe/rosai_dorfman_safe.txt",
         "notes":""
     },
     {
@@ -2018,14 +2032,6 @@
         "exclude":true,
         "filepath":"filters/regex/contact/xxx_xxx_xxxx.txt",
         "notes":"This should remove anything that xxx.xxx.xxxx",
-        "phi_type":"CONTACT"
-    },
-    {
-        "title":"hc_xxx_xxx_xxxx",
-        "type":"regex",
-        "exclude":true,
-        "filepath":"filters/regex/contact/hc_xxx_xxx_xxxx.txt",
-        "notes":"This should remove anything that (h|c) xxx.xxx.xxxx",
         "phi_type":"CONTACT"
     },
     {

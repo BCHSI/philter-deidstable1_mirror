@@ -1,1 +1,1 @@
-\b(?i)may\s(also|have|need|be)\b
+\b(?i)may\s(consider|want to|give|also|have|need|be)\b
