@@ -14,7 +14,6 @@ import json
 from pymongo import MongoClient
 from word2number import w2n
 from textmethods import get_tokens
-from philter import Philter
 
 DEFAULT_SHIFT_VALUE = 32
 DATE_REF = dt.datetime(2000, 2, 29) # do not change this!!!!
@@ -158,6 +157,11 @@ class Subs:
         
         return shifted_date
 
+    def shift_date_range_wrt_dob(self, date_range, note_id):
+        shifted_start_date = self.shift_date_wrt_dob(date_range[0], note_id)
+        shifted_end_date = self.shift_date_wrt_dob(date_range[1], note_id)
+        return shifted_start_date, shifted_end_date
+    
     def _days_from_bday(self, ref, dob):
         days_from_bday = (dt.datetime(year = ref.year,
                                       month = ref.month,
@@ -281,40 +285,18 @@ class Subs:
 
     @staticmethod
     def parse_date_range(date_range):
-        """
-        Philter currently has regex's that tag date ranges.
-        So, we must identify these and separately parse both elements of the daterange
-        """
-        list_of_date_range_regex = ["filters/regex/dates/YYYY_MM-YYYY_MM_transformed.txt","filters/regex/dates/MM_DD_YY-MM_DD_YY_transformed.txt","filters/regex/dates/MM_YYYY-MM_YYYY_transformed.txt","filters/regex/dates/MM_YY-MM_YY_transformed.txt","filters/regex/dates/MM_YYYY-MM_YYYY_transformed.txt","filters/regex/dates/MM_DD-MM_DD_transformed.txt","filters/regex/dates/DD_MM-DD_MM_transformed.txt"]
-        for filepath in list_of_date_range_regex:
-            compiled_regex = Philter.precompile(filepath)
-
-            matches = compiled_regex.search(date_range)
-            if matches:
-                match = matches.group(0)
-                print("date range match: {0}".format(match))
-                start_date_start = matches.start()
-                start_date_range, end_date_range = match.split("-")
-                start_date_stop = start_date_start + len(start_date_range) - 1
-                end_date_start = start_date_stop + 2
-                end_date_stop = matches.end()
-                start_date = Subs.parse_date(start_date_range)
-                end_date = Subs.parse_date(end_date_range)
-                return ((start_date, start_date_start, start_date_stop),
-                        (end_date, end_date_start, end_date_stop))
-        return None
+        start_date_range, end_date_range = date_range.split("-")
+        start_date = Subs.parse_date(start_date_range) #add missing year?
+        end_date = Subs.parse_date(end_date_range)
+        if start_date and end_date:
+            return start_date, end_date
+        else:
+            return None
 
     @staticmethod
     def parse_dates_greedy(dates_string):
         print("start parse greedy")
         dates = []
-
-        # print("trying date range")
-        # date_range = Subs.parse_date_range(dates_string)
-        # if date_range:
-        #     dates.append((date_range[0][0],date_range[0][1],date_range[0][2]))
-        #     dates.append((date_range[1][0],date_range[1][1],date_range[1][2]))
-
         print("trying sliding window")
         tkns = get_tokens(dates_string)
         print(tkns)
@@ -353,6 +335,26 @@ class Subs:
     @staticmethod
     def date_to_string(date):
         return date.to_string()
+
+    @staticmethod
+    def date_range_to_string(date_range):
+        tmp_dt = date_range[0]
+        
+        if not date_range[0].has_year():
+            end_year = date_range[1].has_year()
+            if end_year:
+                tmp_dt = datetime2(end_year, date_range[0].month,
+                                   date_range[0].day,
+                                   date_string = date_range[0].date_string,
+                                   missing_year = date_range[1].missing_year,
+                                   missing_month = date_range[0].missing_month,
+                                   missing_day = date_range[0].missing_day,
+                                   missing_century = date_range[1].missing_century)
+
+        start_date_str = tmp_dt.to_string()
+        end_date_str = date_range[1].to_string()
+        date_range_str = "{0}-{1}".format(start_date_str, end_date_str)
+        return date_range_str
 
     def _load_look_up_table(self, look_up_table_path):
         notekey2id = {}
