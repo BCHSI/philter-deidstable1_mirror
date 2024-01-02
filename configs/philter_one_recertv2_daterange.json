@@ -6,19 +6,47 @@
         "filepath":"filters/regex/genes_and_patho_terms/lymphoma_safe.txt",
         "notes":""
     },
-   {
+    {   
+        "title":"stools safe",
+        "type":"regex",
+        "exclude":false,
+        "filepath":"filters/regex/safe/stools_per_day_safe.txt",
+        "notes":"This should not mark stools/day measurements as date fps"
+    },
+    {   
+        "title":"spo2 safe",
+        "type":"regex",
+        "exclude":false,
+        "filepath":"filters/regex/safe/spo2_measurement_safe.txt",
+        "notes":"This should not mark spo2 measurements as date fps"
+    },
+    {
+        "title":"doi safe",
+        "type":"regex",
+        "exclude":false,
+        "filepath":"filters/regex/safe/doi_safe.txt",
+        "notes":"This should not mark doi as phi"
+    },
+    {
         "title":"ucsf apex safe",
         "type":"regex",
         "exclude":false,
         "filepath":"filters/regex/ucsf_regex/ucsf_apex_safe.txt",
-        "notes":"This should remove anything with pattern apex"
+        "notes":"This should keep anything with pattern apex"
     },
     {
         "title":"ucsf MyChart safe",
         "type":"regex",
         "exclude":false,
         "filepath":"filters/regex/ucsf_regex/ucsf_MyChart_safe.txt",
-        "notes":"This should remove anything with pattern MyChart"
+        "notes":"This should keep anything with pattern MyChart"
+    },
+    {   
+        "title":"pTNM staging",
+        "type":"regex",
+        "exclude":false,
+        "filepath":"filters/regex/safe/ptnm_safe.txt",
+        "notes":"This should rescue anything with ptnm staging patterns"
     },
     {
         "title": "staging terms safe",
@@ -33,232 +61,238 @@
         "type": "regex",
         "exclude": false,
         "filepath": "filters/regex/genes_and_patho_terms/molecular_markers_safe_transformed.txt",
-        "notes": "This should remove anything that matches a molecular marker"
+        "notes": "This should keep anything that matches a molecular marker"
     },
-   {
+    {
         "title":"hospital safe",
         "type":"regex",
         "exclude":false,
         "filepath":"filters/regex/safe/hospital_safe.txt",
-        "notes":"This should remove anything with pattern hospital"
+        "notes":"This should keep anything with pattern hospital"
     },
-   {
+    {   
+        "title": "gene expression safe",
+        "type": "regex",
+        "exclude": false,
+        "filepath": "filters/regex/genes_and_patho_terms/gene_expression_safe_transformed.txt",
+        "notes": "This should keep anything that matches a molecular marker"
+    },
+    {
         "title":"wheezes safe",
         "type":"regex",
         "exclude":false,
         "filepath":"filters/regex/safe/wheezes_safe.txt",
         "notes":""
     },
-
-   {
+    {
         "title":"days safe",
         "type":"regex",
         "exclude":false,
         "filepath":"filters/regex/safe/days_safe.txt",
-        "notes":"This should remove anything with pattern XX days"
+        "notes":"This should keep anything with pattern XX days"
     },
-   {
+    {
         "title":"assessment and plan safe",
         "type":"regex",
         "exclude":false,
         "filepath":"filters/regex/safe/assessment_&_plan_safe.txt",
-        "notes":"This should remove anything with pattern XX days"
+        "notes":"This should keep anything with pattern XX days"
     },
     {
         "title":"bp safe",
         "type":"regex",
         "exclude":false,
         "filepath":"filters/regex/safe/bp_safe.txt",
-        "notes":"This should remove anything with pattern bp"
+        "notes":"This should keep anything with pattern bp"
     },
     {
         "title":"units safe",
         "type":"regex",
         "exclude":false,
         "filepath":"filters/regex/safe/units_safe.txt",
-        "notes":"This should remove anything with pattern unit"
+        "notes":"This should keep anything with pattern unit"
     },
     {
         "title":"tablet safe",
         "type":"regex",
         "exclude":false,
         "filepath":"filters/regex/safe/tablet_safe.txt",
-        "notes":"This should remove anything with pattern tablet"
+        "notes":"This should keep anything with pattern tablet"
     },
     {
         "title":"pain safe",
         "type":"regex",
         "exclude":false,
         "filepath":"filters/regex/safe/pain_safe.txt",
-        "notes":"This should remove anything with pattern pain"
+        "notes":"This should keep anything with pattern pain"
     },
     {
         "title":"able to safe",
         "type":"regex",
         "exclude":false,
         "filepath":"filters/regex/safe/able_to_safe.txt",
-        "notes":"This should remove anything with pattern able to"
+        "notes":"This should keep anything with pattern able to"
     },
     {
         "title":"attending safe",
         "type":"regex",
         "exclude":false,
         "filepath":"filters/regex/safe/attending_safe.txt",
-        "notes":"This should remove anything with pattern attending [ologist]"
+        "notes":"This should keep anything with pattern attending [ologist]"
     },
     {
         "title":"active safe",
         "type":"regex",
         "exclude":false,
         "filepath":"filters/regex/safe/active_safe.txt",
-        "notes":"This should remove anything with pattern active"
+        "notes":"This should keep anything with pattern active"
     },
     {
         "title":"at measurement safe",
         "type":"regex",
         "exclude":false,
         "filepath":"filters/regex/safe/at_measurement_safe.txt",
-        "notes":"This should remove anything with pattern at measurement"
+        "notes":"This should keep anything with pattern at measurement"
     },
     {
         "title":"airway safe",
         "type":"regex",
         "exclude":false,
         "filepath":"filters/regex/safe/airway_safe.txt",
-        "notes":"This should remove anything with pattern airway"
+        "notes":"This should keep anything with pattern airway"
     },
     {
         "title":"alert safe",
         "type":"regex",
         "exclude":false,
         "filepath":"filters/regex/safe/alert_safe.txt",
-        "notes":"This should remove anything with pattern alert"
+        "notes":"This should keep anything with pattern alert"
     },
     {
         "title":"a1c safe",
         "type":"regex",
         "exclude":false,
         "filepath":"filters/regex/safe/a1c_safe.txt",
-        "notes":"This should remove anything with pattern a1c"
+        "notes":"This should keep anything with pattern a1c"
     },
     {
         "title":"AM safe",
         "type":"regex",
         "exclude":false,
         "filepath":"filters/regex/safe/AM_safe.txt",
-        "notes":"This should remove anything with pattern AM"
+        "notes":"This should keep anything with pattern AM"
     },
     {
         "title":"arms safe",
         "type":"regex",
         "exclude":false,
         "filepath":"filters/regex/safe/arms_safe.txt",
-        "notes":"This should remove anything with pattern arms"
+        "notes":"This should keep anything with pattern arms"
     },
     {
         "title":"assessment safe",
         "type":"regex",
         "exclude":false,
         "filepath":"filters/regex/safe/assessment_safe.txt",
-        "notes":"This should remove anything with pattern assessment"
+        "notes":"This should keep anything with pattern assessment"
     },
     {
         "title":"as safe",
         "type":"regex",
         "exclude":false,
         "filepath":"filters/regex/safe/as_safe.txt",
-        "notes":"This should remove anything with pattern as well as"
+        "notes":"This should keep anything with pattern as well as"
     },
     {
         "title":"axis safe",
         "type":"regex",
         "exclude":false,
         "filepath":"filters/regex/safe/axis_safe.txt",
-        "notes":"This should remove anything with pattern axis"
+        "notes":"This should keep anything with pattern axis"
     },
     {
         "title":"baby safe",
         "type":"regex",
         "exclude":false,
         "filepath":"filters/regex/safe/baby_safe.txt",
-        "notes":"This should remove anything with pattern baby"
+        "notes":"This should keep anything with pattern baby"
     },
     {
         "title":"back safe",
         "type":"regex",
         "exclude":false,
         "filepath":"filters/regex/safe/back_safe.txt",
-        "notes":"This should remove anything with pattern back"
+        "notes":"This should keep anything with pattern back"
     },
     {
         "title":"bal safe",
         "type":"regex",
         "exclude":false,
         "filepath":"filters/regex/safe/bal_safe.txt",
-        "notes":"This should remove anything with pattern BAL"
+        "notes":"This should keep anything with pattern BAL"
     },
     {
         "title":"balance safe",
         "type":"regex",
         "exclude":false,
         "filepath":"filters/regex/safe/balance_safe.txt",
-        "notes":"This should remove anything with pattern balance"
+        "notes":"This should keep anything with pattern balance"
     },
     {
         "title":"barretts esophagus safe",
         "type":"regex",
         "exclude":false,
         "filepath":"filters/regex/safe/barretts_esophagus_safe.txt",
-        "notes":"This should remove anything with pattern barret's esophagus"
+        "notes":"This should keep anything with pattern barret's esophagus"
     },
     {
         "title":"base safe",
         "type":"regex",
         "exclude":false,
         "filepath":"filters/regex/safe/base_safe.txt",
-        "notes":"This should remove anything with pattern base"
+        "notes":"This should keep anything with pattern base"
     },
     {
         "title":"be safe",
         "type":"regex",
         "exclude":false,
         "filepath":"filters/regex/safe/be_safe.txt",
-        "notes":"This should remove anything with pattern be xx"
+        "notes":"This should keep anything with pattern be xx"
     },
     {
         "title":"bee safe",
         "type":"regex",
         "exclude":false,
         "filepath":"filters/regex/safe/bee_safe.txt",
-        "notes":"This should remove anything with pattern bee sting etc"
+        "notes":"This should keep anything with pattern bee sting etc"
     },
     {
         "title":"beats safe",
         "type":"regex",
         "exclude":false,
         "filepath":"filters/regex/safe/beats_safe.txt",
-        "notes":"This should remove anything with pattern beats"
+        "notes":"This should keep anything with pattern beats"
     },
     {
         "title":"below safe",
         "type":"regex",
         "exclude":false,
         "filepath":"filters/regex/safe/below_safe.txt",
-        "notes":"This should remove anything with pattern below"
+        "notes":"This should keep anything with pattern below"
     },
     {
         "title":"bile safe",
         "type":"regex",
         "exclude":false,
         "filepath":"filters/regex/safe/bile_safe.txt",
-        "notes":"This should remove anything with pattern bile duct"
+        "notes":"This should keep anything with pattern bile duct"
     },
     {
         "title":"birth safe",
         "type":"regex",
         "exclude":false,
         "filepath":"filters/regex/safe/birth_safe.txt",
-        "notes":"This should remove anything with pattern birth"
+        "notes":"This should keep anything with pattern birth"
     },
     {
         "title":"bruits safe",
@@ -272,42 +306,42 @@
         "type":"regex",
         "exclude":false,
         "filepath":"filters/regex/safe/call_safe.txt",
-        "notes":"This should remove anything with pattern call"
+        "notes":"This should keep anything with pattern call"
     },
     {
         "title":"cancer safe",
         "type":"regex",
         "exclude":false,
         "filepath":"filters/regex/safe/cancer_safe.txt",
-        "notes":"This should remove anything with pattern skin cancer"
+        "notes":"This should keep anything with pattern skin cancer"
     },
     {
         "title":"case safe",
         "type":"regex",
         "exclude":false,
         "filepath":"filters/regex/safe/case_safe.txt",
-        "notes":"This should remove anything with pattern case"
+        "notes":"This should keep anything with pattern case"
     },
     {
         "title":"central safe",
         "type":"regex",
         "exclude":false,
         "filepath":"filters/regex/safe/central_safe.txt",
-        "notes":"This should remove anything with pattern central"
+        "notes":"This should keep anything with pattern central"
     },
     {
         "title":"cava safe",
         "type":"regex",
         "exclude":false,
         "filepath":"filters/regex/safe/cava_safe.txt",
-        "notes":"This should remove anything with pattern vena cava"
+        "notes":"This should keep anything with pattern vena cava"
     },
     {
         "title":"cd safe",
         "type":"regex",
         "exclude":false,
         "filepath":"filters/regex/safe/cd_safe.txt",
-        "notes":"This should remove anything with pattern vena CD##"
+        "notes":"This should keep anything with pattern vena CD##"
     },
     {
         "title":"cea safe",
@@ -321,35 +355,35 @@
         "type":"regex",
         "exclude":false,
         "filepath":"filters/regex/safe/chief_safe.txt",
-        "notes":"This should remove anything with pattern chief complaint"
+        "notes":"This should keep anything with pattern chief complaint"
     },
     {
         "title":"child safe",
         "type":"regex",
         "exclude":false,
         "filepath":"filters/regex/safe/child_safe.txt",
-        "notes":"This should remove anything with pattern your child"
+        "notes":"This should keep anything with pattern your child"
     },
     {
         "title":"code safe",
         "type":"regex",
         "exclude":false,
         "filepath":"filters/regex/safe/code_safe.txt",
-        "notes":"This should remove anything with pattern code"
+        "notes":"This should keep anything with pattern code"
     },
     {
         "title":"commonly safe",
         "type":"regex",
         "exclude":false,
         "filepath":"filters/regex/safe/commonly_safe.txt",
-        "notes":"This should remove anything with pattern commonly"
+        "notes":"This should keep anything with pattern commonly"
     },
     {
         "title":"colon safe",
         "type":"regex",
         "exclude":false,
         "filepath":"filters/regex/safe/colon_safe.txt",
-        "notes":"This should remove anything with pattern colon"
+        "notes":"This should keep anything with pattern colon"
     },
     {
         "title":"CT safe",
@@ -363,7 +397,7 @@
         "type":"regex",
         "exclude":false,
         "filepath":"filters/regex/safe/contact_safe.txt",
-        "notes":"This should remove anything with pattern contact"
+        "notes":"This should keep anything with pattern contact"
     },
     {
         "title":"contractions safe",
@@ -377,112 +411,119 @@
         "type":"regex",
         "exclude":false,
         "filepath":"filters/regex/safe/cord_safe.txt",
-        "notes":"This should remove anything with pattern cord"
+        "notes":"This should keep anything with pattern cord"
     },
     {
         "title":"crohn's diseases safe",
         "type":"regex",
         "exclude":false,
         "filepath":"filters/regex/safe/crohns_disease_safe.txt",
-        "notes":"This should remove anything with pattern crohn's disease"
+        "notes":"This should keep anything with pattern crohn's disease"
+    },
+    {
+        "title":"rosai dorfman diseases safe",
+        "type":"regex",
+        "exclude":false,
+        "filepath":"filters/regex/safe/rosai_dorfman_safe.txt",
+        "notes":"This should not remove anything with pattern rosai dorfman disease"
     },
     {
         "title":"day safe",
         "type":"regex",
         "exclude":false,
         "filepath":"filters/regex/safe/day_safe.txt",
-        "notes":"This should remove anything with pattern day"
+        "notes":"This should keep anything with pattern day"
     },
     {
         "title":"decimal range safe",
         "type":"regex",
         "exclude":false,
         "filepath":"filters/regex/safe/decimal_range_safe.txt",
-        "notes":"This should remove anything with pattern decimal-decimal"
+        "notes":"This should keep anything with pattern decimal-decimal"
     },
     {
         "title":"dial safe",
         "type":"regex",
         "exclude":false,
         "filepath":"filters/regex/safe/dial_safe.txt",
-        "notes":"This should remove anything with pattern dial"
+        "notes":"This should keep anything with pattern dial"
     },
         {
         "title":"disposition safe",
         "type":"regex",
         "exclude":false,
         "filepath":"filters/regex/safe/disposition_safe.txt",
-        "notes":"This should remove anything with pattern disposition"
+        "notes":"This should keep anything with pattern disposition"
     },
     {
         "title":"distance safe",
         "type":"regex",
         "exclude":false,
         "filepath":"filters/regex/safe/distance_safe.txt",
-        "notes":"This should remove anything with pattern distance"
+        "notes":"This should keep anything with pattern distance"
     },
         {
         "title":"distensable safe",
         "type":"regex",
         "exclude":false,
         "filepath":"filters/regex/safe/distensable_safe.txt",
-        "notes":"This should remove anything with pattern distensable"
+        "notes":"This should keep anything with pattern distensable"
     },
     {
         "title":"do safe",
         "type":"regex",
         "exclude":false,
         "filepath":"filters/regex/safe/do_safe.txt",
-        "notes":"This should remove anything with pattern do not"
+        "notes":"This should keep anything with pattern do not"
     },
     {
         "title":"doesn't safe",
         "type":"regex",
         "exclude":false,
         "filepath":"filters/regex/safe/doesnt_safe.txt",
-        "notes":"This should remove anything with pattern doesn't"
+        "notes":"This should keep anything with pattern doesn't"
     },
     {
         "title":"doppler safe",
         "type":"regex",
         "exclude":false,
         "filepath":"filters/regex/safe/doppler_safe.txt",
-        "notes":"This should remove anything with pattern doppler flow, etc"
+        "notes":"This should keep anything with pattern doppler flow, etc"
     },
     {
         "title":"down syndrome safe",
         "type":"regex",
         "exclude":false,
         "filepath":"filters/regex/safe/down_syndrome_safe.txt",
-        "notes":"This should remove anything with pattern down's syndrome"
+        "notes":"This should keep anything with pattern down's syndrome"
     },
     {
         "title":"drop safe",
         "type":"regex",
         "exclude":false,
         "filepath":"filters/regex/safe/drop_safe.txt",
-        "notes":"This should remove anything with pattern x drop"
+        "notes":"This should keep anything with pattern x drop"
     },
     {
         "title":"due safe",
         "type":"regex",
         "exclude":false,
         "filepath":"filters/regex/safe/due_safe.txt",
-        "notes":"This should remove anything with pattern due to"
+        "notes":"This should keep anything with pattern due to"
     },
     {
         "title":"ED safe",
         "type":"regex",
         "exclude":false,
         "filepath":"filters/regex/safe/ED_safe.txt",
-        "notes":"This should remove anything with pattern ED"
+        "notes":"This should keep anything with pattern ED"
     },
     {
         "title":"edge safe",
         "type":"regex",
         "exclude":false,
         "filepath":"filters/regex/safe/edge_safe.txt",
-        "notes":"This should remove anything with pattern edge"
+        "notes":"This should keep anything with pattern edge"
     },
     {
         "title":"ems safe",
@@ -496,112 +537,112 @@
         "type":"regex",
         "exclude":false,
         "filepath":"filters/regex/safe/effort_safe.txt",
-        "notes":"This should remove anything with pattern effort normal"
+        "notes":"This should keep anything with pattern effort normal"
     },
     {
         "title":"est safe",
         "type":"regex",
         "exclude":false,
         "filepath":"filters/regex/safe/est_safe.txt",
-        "notes":"This should remove anything with pattern level # est"
+        "notes":"This should keep anything with pattern level # est"
     },
     {
         "title":"ekg safe",
         "type":"regex",
         "exclude":false,
         "filepath":"filters/regex/safe/ekg_safe.txt",
-        "notes":"This should remove anything with pattern EKG"
+        "notes":"This should keep anything with pattern EKG"
     },
     {
         "title":"fall safe",
         "type":"regex",
         "exclude":false,
         "filepath":"filters/regex/safe/fall_safe.txt",
-        "notes":"This should remove anything with pattern fall risk"
+        "notes":"This should keep anything with pattern fall risk"
     },
     {
         "title":"fax safe",
         "type":"regex",
         "exclude":false,
         "filepath":"filters/regex/safe/fax_safe.txt",
-        "notes":"This should remove anything with pattern fax:"
+        "notes":"This should keep anything with pattern fax:"
     },
     {
         "title":"few safe",
         "type":"regex",
         "exclude":false,
         "filepath":"filters/regex/safe/few_safe.txt",
-        "notes":"This should remove anything with pattern few"
+        "notes":"This should keep anything with pattern few"
     },
     {
         "title":"fiber safe",
         "type":"regex",
         "exclude":false,
         "filepath":"filters/regex/safe/fiber_safe.txt",
-        "notes":"This should remove anything with pattern fiber"
+        "notes":"This should keep anything with pattern fiber"
     },
     {
         "title":"file safe",
         "type":"regex",
         "exclude":false,
         "filepath":"filters/regex/safe/file_safe.txt",
-        "notes":"This should remove anything with pattern on file"
+        "notes":"This should keep anything with pattern on file"
     },
     {
         "title":"floor safe",
         "type":"regex",
         "exclude":false,
         "filepath":"filters/regex/safe/floor_safe.txt",
-        "notes":"This should remove anything with pattern on the floor"
+        "notes":"This should keep anything with pattern on the floor"
     },
     {
         "title":"flexion/extension safe",
         "type":"regex",
         "exclude":false,
         "filepath":"filters/regex/safe/flexion_extension_safe.txt",
-        "notes":"This should remove anything with pattern on the flexion/extension ?/5"
+        "notes":"This should keep anything with pattern on the flexion/extension ?/5"
     },
     {
         "title":"found safe",
         "type":"regex",
         "exclude":false,
         "filepath":"filters/regex/safe/found_safe.txt",
-        "notes":"This should remove anything with pattern found"
+        "notes":"This should keep anything with pattern found"
     },
     {
         "title":"go safe",
         "type":"regex",
         "exclude":false,
         "filepath":"filters/regex/safe/go_safe.txt",
-        "notes":"This should remove anything with pattern go"
+        "notes":"This should keep anything with pattern go"
     },
     {
         "title":"grade safe",
         "type":"regex",
         "exclude":false,
         "filepath":"filters/regex/safe/grade_safe.txt",
-        "notes":"This should remove anything with pattern grade"
+        "notes":"This should keep anything with pattern grade"
     },
     {
         "title":"gross safe",
         "type":"regex",
         "exclude":false,
         "filepath":"filters/regex/safe/gross_safe.txt",
-        "notes":"This should remove anything with pattern gross description"
+        "notes":"This should keep anything with pattern gross description"
     },
     {
         "title":"index safe",
         "type":"regex",
         "exclude":false,
         "filepath":"filters/regex/safe/index_safe.txt",
-        "notes":"This should remove anything with pattern mass index"
+        "notes":"This should keep anything with pattern mass index"
     },
     {
         "title":"measurement safe",
         "type":"regex",
         "exclude":false,
         "filepath":"filters/regex/safe/measurement_safe.txt",
-        "notes":"This should remove anything with pattern grams, etc"
+        "notes":"This should keep anything with pattern grams, etc"
     },
     {   
         "title":"gauge safe",
@@ -616,6 +657,13 @@
         "exclude":false,
         "filepath":"filters/regex/safe/t2_score_safe.txt",
         "notes":"This should not mark t2 score as date fps"
+    },
+    {   
+        "title":"score safe",
+        "type":"regex",
+        "exclude":false,
+        "filepath":"filters/regex/safe/score_safe.txt",
+        "notes":"This should not mark score as date fps"
     },
     {   
         "title":"core safe",
@@ -643,28 +691,28 @@
         "type":"regex",
         "exclude":false,
         "filepath":"filters/regex/safe/hearing_safe.txt",
-        "notes":"This should remove anything with pattern hearing loss/aid"
+        "notes":"This should keep anything with pattern hearing loss/aid"
     },
     {
         "title":"HENT safe",
         "type":"regex",
         "exclude":false,
         "filepath":"filters/regex/safe/HENT_safe.txt",
-        "notes":"This should remove anything with pattern HENT:"
+        "notes":"This should keep anything with pattern HENT:"
     },
     {
         "title":"hour safe",
         "type":"regex",
         "exclude":false,
         "filepath":"filters/regex/safe/hour_safe.txt",
-        "notes":"This should remove anything with pattern hour"
+        "notes":"This should keep anything with pattern hour"
     },
     {
         "title":"how safe",
         "type":"regex",
         "exclude":false,
         "filepath":"filters/regex/safe/how_safe.txt",
-        "notes":"This should remove anything with pattern how"
+        "notes":"This should keep anything with pattern how"
     },
     {
         "title":"id safe",
@@ -678,77 +726,77 @@
         "type":"regex",
         "exclude":false,
         "filepath":"filters/regex/safe/independence_safe.txt",
-        "notes":"This should remove anything with pattern level of independence"
+        "notes":"This should keep anything with pattern level of independence"
     },
     {
         "title":"intake safe",
         "type":"regex",
         "exclude":false,
         "filepath":"filters/regex/safe/intake_safe.txt",
-        "notes":"This should remove anything with pattern intake/output"
+        "notes":"This should keep anything with pattern intake/output"
     },
     {
         "title":"key safe",
         "type":"regex",
         "exclude":false,
         "filepath":"filters/regex/safe/key_safe.txt",
-        "notes":"This should remove anything with pattern key part"
+        "notes":"This should keep anything with pattern key part"
     },
     {
         "title":"knee safe",
         "type":"regex",
         "exclude":false,
         "filepath":"filters/regex/safe/knee_safe.txt",
-        "notes":"This should remove anything with pattern left/right knee"
+        "notes":"This should keep anything with pattern left/right knee"
     },
     {
         "title":"last safe",
         "type":"regex",
         "exclude":false,
         "filepath":"filters/regex/safe/last_safe.txt",
-        "notes":"This should remove anything with pattern last # encounters"
+        "notes":"This should keep anything with pattern last # encounters"
     },
     {
         "title":"lb safe",
         "type":"regex",
         "exclude":false,
         "filepath":"filters/regex/safe/lb_safe.txt",
-        "notes":"This should remove anything with pattern x lb"
+        "notes":"This should keep anything with pattern x lb"
     },
     {
         "title":"lab safe",
         "type":"regex",
         "exclude":false,
         "filepath":"filters/regex/safe/lab_safe.txt",
-        "notes":"This should remove anything with pattern lab results"
+        "notes":"This should keep anything with pattern lab results"
     },
     {
         "title":"learn safe",
         "type":"regex",
         "exclude":false,
         "filepath":"filters/regex/safe/learn_safe.txt",
-        "notes":"This should remove anything with pattern learn"
+        "notes":"This should keep anything with pattern learn"
     },
     {
         "title":"loop safe",
         "type":"regex",
         "exclude":false,
         "filepath":"filters/regex/safe/loop_safe.txt",
-        "notes":"This should remove anything with pattern flow-volume loop"
+        "notes":"This should keep anything with pattern flow-volume loop"
     },
     {
         "title":"max safe",
         "type":"regex",
         "exclude":false,
         "filepath":"filters/regex/safe/max_safe.txt",
-        "notes":"This should remove anything with pattern max x"
+        "notes":"This should keep anything with pattern max x"
     },
     {
         "title":"mac safe",
         "type":"regex",
         "exclude":false,
         "filepath":"filters/regex/safe/mac_safe.txt",
-        "notes":"This should remove anything with pattern mac mg"
+        "notes":"This should keep anything with pattern mac mg"
     },
     {
         "title":"may safe",
@@ -762,14 +810,14 @@
         "type":"regex",
         "exclude":false,
         "filepath":"filters/regex/safe/medical_safe.txt",
-        "notes":"This should remove anything with pattern medical"
+        "notes":"This should keep anything with pattern medical"
     },
     {
         "title":"md safe",
         "type":"regex",
         "exclude":false,
         "filepath":"filters/regex/safe/md_safe.txt",
-        "notes":"This should remove anything with pattern M.D."
+        "notes":"This should keep anything with pattern M.D."
     },
     {
         "title":"mono safe",
@@ -783,70 +831,70 @@
         "type":"regex",
         "exclude":false,
         "filepath":"filters/regex/safe/micro_safe.txt",
-        "notes":"This should remove anything with pattern micro source"
+        "notes":"This should keep anything with pattern micro source"
     },
     {
         "title":"morning safe",
         "type":"regex",
         "exclude":false,
         "filepath":"filters/regex/safe/morning_safe.txt",
-        "notes":"This should remove anything with pattern morning"
+        "notes":"This should keep anything with pattern morning"
     },
     {
         "title":"mri safe",
         "type":"regex",
         "exclude":false,
         "filepath":"filters/regex/safe/mri_safe.txt",
-        "notes":"This should remove anything with pattern brain mri"
+        "notes":"This should keep anything with pattern brain mri"
     },
     {
         "title":"na safe",
         "type":"regex",
         "exclude":false,
         "filepath":"filters/regex/safe/na_safe.txt",
-        "notes":"This should remove anything with pattern na x"
+        "notes":"This should keep anything with pattern na x"
     },
     {
         "title":"night safe",
         "type":"regex",
         "exclude":false,
         "filepath":"filters/regex/safe/night_safe.txt",
-        "notes":"This should remove anything with pattern night"
+        "notes":"This should keep anything with pattern night"
     },
     {
         "title":"non safe",
         "type":"regex",
         "exclude":false,
         "filepath":"filters/regex/safe/non_safe.txt",
-        "notes":"This should remove anything with pattern non-x"
+        "notes":"This should keep anything with pattern non-x"
     },
     {
         "title":"not safe",
         "type":"regex",
         "exclude":false,
         "filepath":"filters/regex/safe/not_safe.txt",
-        "notes":"This should remove anything with pattern not"
+        "notes":"This should keep anything with pattern not"
     },
     {
         "title":"onset safe",
         "type":"regex",
         "exclude":false,
         "filepath":"filters/regex/safe/onset_safe.txt",
-        "notes":"This should remove anything with pattern age of onset"
+        "notes":"This should keep anything with pattern age of onset"
     },
     {
         "title":"other safe",
         "type":"regex",
         "exclude":false,
         "filepath":"filters/regex/safe/other_safe.txt",
-        "notes":"This should remove anything with pattern other"
+        "notes":"This should keep anything with pattern other"
     },
     {
         "title":"pap safe",
         "type":"regex",
         "exclude":false,
         "filepath":"filters/regex/safe/pap_safe.txt",
-        "notes":"This should remove anything with pattern pap x"
+        "notes":"This should keep anything with pattern pap x"
     },
     {
         "title":"parkinson safe",
@@ -855,75 +903,82 @@
         "filepath":"filters/regex/safe/parkinson_safe.txt",
         "notes":""
     },
+    {   
+        "title":"jc virus safe",
+        "type":"regex",
+        "exclude":false,
+        "filepath":"filters/regex/safe/jc_virus_safe.txt",
+        "notes":""
+    },
     {
         "title":"pounds safe",
         "type":"regex",
         "exclude":false,
         "filepath":"filters/regex/safe/pounds_safe.txt",
-        "notes":"This should remove anything with pattern x pounds"
+        "notes":"This should keep anything with pattern x pounds"
     },
     {
         "title":"ROS safe",
         "type":"regex",
         "exclude":false,
         "filepath":"filters/regex/safe/ROS_safe.txt",
-        "notes":"This should remove anything with pattern ROS:"
+        "notes":"This should keep anything with pattern ROS:"
     },
         {
         "title":"scope safe",
         "type":"regex",
         "exclude":false,
         "filepath":"filters/regex/safe/scope_safe.txt",
-        "notes":"This should remove anything with pattern the scope"
+        "notes":"This should keep anything with pattern the scope"
     },
         {
         "title":"sao2 safe",
         "type":"regex",
         "exclude":false,
         "filepath":"filters/regex/safe/sao2_safe.txt",
-        "notes":"This should remove anything with pattern the sao2%"
+        "notes":"This should keep anything with pattern the sao2%"
     },
         {
         "title":"the safe",
         "type":"regex",
         "exclude":false,
         "filepath":"filters/regex/safe/the_safe.txt",
-        "notes":"This should remove anything with pattern to the or of the"
+        "notes":"This should keep anything with pattern to the or of the"
     },
     {
         "title":"UTI safe",
         "type":"regex",
         "exclude":false,
         "filepath":"filters/regex/safe/UTI_safe.txt",
-        "notes":"This should remove anything with pattern UTI"
+        "notes":"This should keep anything with pattern UTI"
     },
     {
         "title":"sci notation safe",
         "type":"regex",
         "exclude":false,
         "filepath":"filters/regex/safe/sci_notation_safe.txt",
-        "notes":"This should remove anything with pattern in scientific notation"
+        "notes":"This should keep anything with pattern in scientific notation"
     },
     {
         "title":"time range safe",
         "type":"regex",
         "exclude":false,
         "filepath":"filters/regex/safe/time_range_safe.txt",
-        "notes":"This should remove anything with pattern in time range"
+        "notes":"This should keep anything with pattern in time range"
     },
     {
         "title":"young safe",
         "type":"regex",
         "exclude":false,
         "filepath":"filters/regex/safe/young_safe.txt",
-        "notes":"This should remove anything with pattern young adult"
+        "notes":"This should keep anything with pattern young adult"
     },
     {
         "title":"oral safe",
         "type":"regex",
         "exclude":false,
         "filepath":"filters/regex/safe/oral_safe.txt",
-        "notes":"This should remove anything with pattern oral"
+        "notes":"This should keep anything with pattern oral"
     },
     {
         "title": "ordering md safe",
@@ -972,7 +1027,7 @@
         "type":"regex",
         "exclude":true,
         "filepath":"filters/regex/addresses/full_street_address_transformed.txt",
-        "notes":"This should remove anything that looks like a full street address (numbers and words)",
+        "notes":"This should keep anything that looks like a full street address (numbers and words)",
         "phi_type":"LOCATION"
     },
     {
@@ -2546,7 +2601,7 @@
         "type": "regex",
         "exclude": false,
         "filepath": "filters/regex/genes_and_patho_terms/cassette_numbers_safe.txt",
-        "notes": "This should remove anything that matches a cassette or slide number"
+        "notes": "This should keep anything that matches a cassette or slide number"
     },
     {
         "title":"POS MATCHER",
