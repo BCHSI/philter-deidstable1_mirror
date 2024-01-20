@@ -1,5 +1,1 @@
-<<<<<<< HEAD
-\b(?i)JC Virus\b
-=======
 (?i)\bJC Virus\b
->>>>>>> 6f368e74 (fixing the global flags regex error)

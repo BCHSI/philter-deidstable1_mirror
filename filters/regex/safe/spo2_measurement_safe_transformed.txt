@@ -1,5 +1,1 @@
-<<<<<<< HEAD
-\b(?i)(\d{1,3}\/\d{1,3})\s(mmhg|mmHg)?,?\s+?(?=SpO2)\b
-=======
 (?i)\b(\d{1,3}\/\d{1,3})\s(mmhg|mmHg)?,?\s+?(?=SpO2)\b
->>>>>>> 6f368e74 (fixing the global flags regex error)
