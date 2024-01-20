@@ -1,0 +1,1 @@
+(?i)\b(score =|(?<=scored|scores)|(?<=score of|score to|score is)|(?<=scores of)|(?<=score:)|(?<=scores a)|(?<=score was))\s+?\>?(\d{1,3}\/\d{1,3})\b

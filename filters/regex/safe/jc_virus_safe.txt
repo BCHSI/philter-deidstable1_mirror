@@ -1,1 +1,1 @@
-\b(?i)JC Virus\b
+(?i)\bJC Virus\b
