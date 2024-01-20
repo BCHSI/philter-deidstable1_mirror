@@ -1,1 +1,1 @@
-\b(?i)able to\b
+(?i)\bable to\b

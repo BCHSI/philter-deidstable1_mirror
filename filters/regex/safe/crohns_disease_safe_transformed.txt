@@ -1,1 +1,1 @@
-\b(?i)crohn\'s\sdisease\b
+(?i)\bcrohn\'s\sdisease\b

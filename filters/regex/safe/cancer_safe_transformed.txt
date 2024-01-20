@@ -1,1 +1,1 @@
-\b(?i)(skin)\scancer\b
+(?i)\b(skin)\scancer\b

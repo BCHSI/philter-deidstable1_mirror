@@ -1,1 +1,1 @@
-\b(?i)brain\smri\b
+(?i)\bbrain\smri\b

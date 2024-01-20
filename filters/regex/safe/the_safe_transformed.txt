@@ -1,1 +1,1 @@
-\b(?i)(to|in|on)\sthe\b
+(?i)\b(to|in|on)\sthe\b

@@ -1,1 +1,1 @@
-\b(?i)(follow\-up|normal)\sassessment\b
+(?i)\b(follow\-up|normal)\sassessment\b

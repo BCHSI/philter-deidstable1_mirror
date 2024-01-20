@@ -1,1 +1,1 @@
-\b(?i)na\s\d+\b
+(?i)\bna\s\d+\b

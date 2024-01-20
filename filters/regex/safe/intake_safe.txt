@@ -1,1 +1,1 @@
-\b(?i)intake(\/output|\s\d+(\.\d+)?\sml)\b
+(?i)\bintake(\/output|\s\d+(\.\d+)?\sml)\b

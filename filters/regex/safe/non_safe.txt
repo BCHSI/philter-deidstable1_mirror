@@ -1,1 +1,1 @@
-\b(?i)non\-[a-z]+\b
+(?i)\bnon\-[a-z]+\b

@@ -1,1 +1,1 @@
-\b(?i)bruits\b
+(?i)\bbruits\b

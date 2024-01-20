@@ -1,1 +1,1 @@
-\b(?i)chief\s(complaint)\b
+(?i)\bchief\s(complaint)\b

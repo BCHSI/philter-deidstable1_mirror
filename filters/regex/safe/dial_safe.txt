@@ -1,1 +1,1 @@
-\b(?i)dial\s911\b
+(?i)\bdial\s911\b

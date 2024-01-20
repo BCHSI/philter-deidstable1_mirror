@@ -1,1 +1,1 @@
-\b(?i)assessment\s&\splan\b
+(?i)\bassessment\s&\splan\b

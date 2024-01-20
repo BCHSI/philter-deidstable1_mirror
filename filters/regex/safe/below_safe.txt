@@ -1,1 +1,1 @@
-\b(?i)(listed|noted|indicated)\sbelow\b
+(?i)\b(listed|noted|indicated)\sbelow\b

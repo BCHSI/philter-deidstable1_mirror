@@ -1,1 +1,1 @@
-\b(?i)age\sof\sonset\b
+(?i)\bage\sof\sonset\b

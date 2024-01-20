@@ -1,1 +1,1 @@
-\b(?i)smoking\sstatus\b
+(?i)\bsmoking\sstatus\b
