@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 \b(?i)rosai-dorfman(\')?(s)?\s(disease|syndrome)\b
+=======
+(?i)\brosai-dorfman(\')?(s)?\s(disease|syndrome)\b
+>>>>>>> 6f368e74 (fixing the global flags regex error)
