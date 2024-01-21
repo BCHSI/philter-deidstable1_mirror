@@ -367,6 +367,14 @@ class Phitexts:
                                     continue # do not replace if shorter
                             self.norms[phi_type][(filename, st)] = (normed_dt,
                                                                     en)
+                            
+                    if filename in self.date_norms.keys():
+                        self.date_norms[filename].append((start, end, token,
+                                                          normalized_token))
+                    else:
+                        self.date_norms[filename] = [(start, end, token,
+                                                      normalized_token)]
+
             elif phi_type == "DATERANGE":
                 print("DATERANGE")
                 for filename, start, end in self.types[phi_type][0].scan():
@@ -375,6 +383,15 @@ class Phitexts:
                     self.norms[phi_type][(filename, start)] = (normalized_token,
                                                                end)
                     print("token {0} at ({1},{2}) normalized to {3}-{4}".format(token,start,end,normalized_token[0],normalized_token[1]))
+
+                
+                    if filename in self.date_norms.keys():
+                        self.date_norms[filename].append((start, end, token,
+                                                          normalized_token))
+                    else:
+                        self.date_norms[filename] = [(start, end, token,
+                                                      normalized_token)]
+                        
             elif (phi_type == "AGE<90" or phi_type == "Age<90"
                   or phi_type == "AGE>=90" or phi_type == "Age>=90"):
                 for filename, start, end in self.types[phi_type][0].scan():
