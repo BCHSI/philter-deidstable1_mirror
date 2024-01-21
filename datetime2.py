@@ -113,6 +113,9 @@ class datetime2(datetime.datetime):
         return not (self.missing_century or self.missing_year
                     or self.missing_month or self.missing_day)
 
+    def has_year(self):
+        return self.year if not self.missing_year else None
+    
     def get_century(self):
         return (self.year // 100) * 100
 

@@ -13,6 +13,7 @@ import pprint
 import json
 from pymongo import MongoClient
 from word2number import w2n
+from textmethods import get_tokens
 
 DEFAULT_SHIFT_VALUE = 32
 DATE_REF = dt.datetime(2000, 2, 29) # do not change this!!!!
@@ -156,6 +157,11 @@ class Subs:
         
         return shifted_date
 
+    def shift_date_range_wrt_dob(self, date_range, note_id):
+        shifted_start_date = self.shift_date_wrt_dob(date_range[0], note_id)
+        shifted_end_date = self.shift_date_wrt_dob(date_range[1], note_id)
+        return shifted_start_date, shifted_end_date
+    
     def _days_from_bday(self, ref, dob):
         days_from_bday = (dt.datetime(year = ref.year,
                                       month = ref.month,
@@ -278,8 +284,77 @@ class Subs:
         return date
 
     @staticmethod
+    def parse_date_range(date_range):
+        start_date_range, end_date_range = date_range.split("-")
+        start_date = Subs.parse_date(start_date_range) #add missing year?
+        end_date = Subs.parse_date(end_date_range)
+        if start_date and end_date:
+            return start_date, end_date
+        else:
+            return None
+
+    @staticmethod
+    def parse_dates_greedy(dates_string):
+        print("start parse greedy")
+        dates = []
+        print("trying sliding window")
+        tkns = get_tokens(dates_string)
+        print(tkns)
+        triplets = []
+        duplets = []
+        if len(tkns) >= 3:
+            ks = list(tkns.keys())
+            print(ks)
+            for i in range(len(ks)-2):
+                s = ks[i]
+                e = tkns[ks[i + 2]][0] + 1
+                triplets.append((dates_string[s : e], s, e))
+                e = tkns[ks[i + 1]][0] + 1
+                duplets.append((dates_string[s : e], s, e))
+            s = ks[-2]
+            e = tkns[ks[-1]][0] + 1
+            duplets.append((dates_string[s : e], s, e))
+            print("Triplet: {0}".format(triplets))
+            print("Duplet: {0}".format(duplets))
+        for trip in triplets:
+            print(trip)
+            norm_trip = Subs.parse_date(trip[0])
+            print("Trip: {0} ({1})".format(norm_trip,trip[0]))
+            if norm_trip:
+                dates.append((norm_trip, trip[1], trip[2]))
+        for dup in duplets:
+            print(dup)
+            norm_dup = Subs.parse_date(dup[0])
+            print("Dup: {0} ({1})".format(norm_dup,dup[0]))
+            if norm_dup:
+                dates.append((norm_dup, dup[1], dup[2]))
+
+        print("end parse greedy")
+        return dates
+
+    @staticmethod
     def date_to_string(date):
         return date.to_string()
+
+    @staticmethod
+    def date_range_to_string(date_range):
+        tmp_dt = date_range[0]
+        
+        if not date_range[0].has_year():
+            end_year = date_range[1].has_year()
+            if end_year:
+                tmp_dt = datetime2(end_year, date_range[0].month,
+                                   date_range[0].day,
+                                   date_string = date_range[0].date_string,
+                                   missing_year = date_range[1].missing_year,
+                                   missing_month = date_range[0].missing_month,
+                                   missing_day = date_range[0].missing_day,
+                                   missing_century = date_range[1].missing_century)
+
+        start_date_str = tmp_dt.to_string()
+        end_date_str = date_range[1].to_string()
+        date_range_str = "{0}-{1}".format(start_date_str, end_date_str)
+        return date_range_str
 
     def _load_look_up_table(self, look_up_table_path):
         notekey2id = {}

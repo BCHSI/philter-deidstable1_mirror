@@ -320,50 +320,79 @@ class Phitexts:
         # 2) interpet/normalize phi given type
         non_date_phi = {}
         for phi_type in self.types.keys():
+            self.norms[phi_type] = {}
             if phi_type != "DATE" and phi_type != "Date":
                 for filename, start, end in self.types[phi_type][0].scan():
                     if filename not in non_date_phi.keys():
                         non_date_phi[filename] = [(start,end)]
                     else:
                         non_date_phi[filename].append((start,end))
-
-        for phi_type in self.types.keys():
-            self.norms[phi_type] = {}
         for phi_type in self.types.keys():
             if phi_type == "DATE" or phi_type == "Date":
                 for filename, start, end in self.types[phi_type][0].scan():
                     if filename in non_date_phi.keys():
-                        ranges = [list(range(pair[0],pair[1]+1)) for pair in non_date_phi[filename]]
+                        ranges = [list(range(pair[0],pair[1]+1))
+                                  for pair in non_date_phi[filename]]
                     else:
                         ranges = []
-                    all_coords = [item for sublist in ranges for item in sublist]
+                    all_coords = [item for sublist in ranges
+                                  for item in sublist]
                     overlap = False
                     for i in range(start, end+1):
                         if i in all_coords:
                             overlap = True
-                            continue
-                    if not overlap:
-                        token = self.texts[filename][start:end]
-                        normalized_token = Subs.parse_date(token)
-
-                        self.norms[phi_type][(filename, start)] = (normalized_token,
-                                                           end)
-                        if filename in self.date_norms.keys():
-                            self.date_norms[filename].append((start, end, token,
-                                                              normalized_token))
-                        else:
-                            self.date_norms[filename] = [(start, end, token,
-                                                          normalized_token)]
-
+                            break
+                    # if overlap: # ignore date if other PHI types overlap
+                        # token = self.texts[filename][start:end]
+                        # print("found overlapping PHI for token {0} at ({1},{2})".format(token,start,end))
+                    #     self.norms[phi_type][(filename, start)] = (None, end)
+                    #     continue
+                    
                     token = self.texts[filename][start:end]
                     normalized_token = Subs.parse_date(token)
 
                     self.norms[phi_type][(filename, start)] = (normalized_token,
-                                                       end)
+                                                               end)
+                    # TODO: commented out, because too many non-date strings parsed
+                    # if normalized_token is None:
+                    #     # print("token {0} at ({1},{2}) normalized to {3}".format(token,start,end,normalized_token))
+                    #     self.norms[phi_type].pop((filename, start))
+                    #     parsed_dates = Subs.parse_dates_greedy(token)
+                    #     print(parsed_dates)
+                    #     for pdate in parsed_dates:
+                    #         normed_dt = pdate[0]
+                    #         st = start + pdate[1]
+                    #         en = start + pdate[2]
+                    #         if (filename, st) in self.norms[phi_type]:
+                    #             if en < self.norms[phi_type][(filename, st)][1]:
+                    #                 continue # do not replace if shorter
+                    #         self.norms[phi_type][(filename, st)] = (normed_dt,
+                    #                                                 en)
+                            
                     if filename in self.date_norms.keys():
-                        self.date_norms[filename].append((start,end,token,normalized_token))
+                        self.date_norms[filename].append((start, end, token,
+                                                          normalized_token))
                     else:
-                        self.date_norms[filename] = [(start,end,token,normalized_token)]
+                        self.date_norms[filename] = [(start, end, token,
+                                                      normalized_token)]
+
+            elif phi_type == "DATERANGE":
+                print("DATERANGE")
+                for filename, start, end in self.types[phi_type][0].scan():
+                    token = self.texts[filename][start:end]
+                    normalized_token = Subs.parse_date_range(token)
+                    self.norms[phi_type][(filename, start)] = (normalized_token,
+                                                               end)
+                    # print("token {0} at ({1},{2}) normalized to {3}-{4}".format(token,start,end,normalized_token[0],normalized_token[1]))
+
+                
+                    if filename in self.date_norms.keys():
+                        self.date_norms[filename].append((start, end, token,
+                                                          normalized_token))
+                    else:
+                        self.date_norms[filename] = [(start, end, token,
+                                                      normalized_token)]
+                        
             elif (phi_type == "AGE<90" or phi_type == "Age<90"
                   or phi_type == "AGE>=90" or phi_type == "Age>=90"):
                 for filename, start, end in self.types[phi_type][0].scan():
@@ -380,7 +409,7 @@ class Phitexts:
         # or use self.norms="unknown <type>" with <type>=self.types
 
         # Note: see also surrogator.shift_dates(), surrogator.parse_and_shift_date(), parse_date_ranges(), replace_other_surrogate()
-        
+
     def substitute_phi(self, look_up_table_path = None, db = None,
                        ref_date = None):
         assert self.norms, "No normalized PHI defined"
@@ -413,11 +442,11 @@ class Phitexts:
 
                     normalized_token = self.norms[phi_type][filename, start][0]
                     end = self.norms[phi_type][filename, start][1]
-
                     # Added for eval
                     if normalized_token is None:
                         # self.eval_table[filename][start].update({'sub':None})
                         continue
+                    # print("found: \"{0}\" for ({1}:{2})".format(normalized_token.get_raw_string(),start,end))
                     
                     # shifted_date = self.subser.shift_date_pid(normalized_token,
                     #                                           note_key_ucsf)
@@ -431,6 +460,51 @@ class Phitexts:
                         continue
                     
                     substitute_token = self.subser.date_to_string(shifted_date)
+                    # print("sub is \"{0}\"".format(substitute_token))
+                    # self.eval_table[filename][start].update({'sub':substitute_token})
+                    self.subs[(filename, start)] = (substitute_token, end)
+            elif phi_type == "DATERANGE":
+                for filename, start in self.norms[phi_type]:
+                    if (filename, start) in probes_found:
+                        continue
+                    if bson.objectid.ObjectId.is_valid(filename):
+                        note_key_ucsf = filename
+                    else:
+                        note_key_ucsf = os.path.splitext(os.path.basename(filename).strip('0'))[0].replace("_utf8","").replace(".txt","").replace(".xml","")
+                    if not self.subser.has_shift_amount(note_key_ucsf):
+                        if __debug__:
+                            if filename not in nodateshiftlist:
+                                print("WARNING: no date shift found for: "
+                                      + filename)
+                                nodateshiftlist.append(filename)
+                        continue
+                    normalized_token = self.norms[phi_type][filename, start][0]
+                    end = self.norms[phi_type][filename, start][1]
+                    # print("found: \"{0}-{1}\" for ({2}:{3})".format(normalized_token[0].get_raw_string(),normalized_token[1].get_raw_string(),start,end))
+                    # Added for eval
+                    if normalized_token is None:
+                        # self.eval_table[filename][start].update({'sub':None})
+                        continue
+                    
+                    # shifted_date = self.subser.shift_date_pid(normalized_token,
+                    #                                           note_key_ucsf)
+                    shifted_date_range = self.subser.shift_date_range_wrt_dob(normalized_token,
+                                                                        note_key_ucsf)
+
+                    if shifted_date_range[0] is None:
+                        if __debug__: print("WARNING: cannot shift start date range "
+                                            + normalized_token[0].get_raw_string()
+                                            + " in: " + filename)
+                    if shifted_date_range[1] is None:
+                        if __debug__: print("WARNING: cannot shift end date range "
+                                            + normalized_token[1].get_raw_string()
+                                            + " in: " + filename)
+                    if (shifted_date_range[1] is None
+                        and  shifted_date_range[1] is None):
+                        continue
+                    
+                    substitute_token = self.subser.date_range_to_string(shifted_date_range)
+                    # print("sub is \"{0}\"".format(substitute_token))
                     # self.eval_table[filename][start].update({'sub':substitute_token})
                     self.subs[(filename, start)] = (substitute_token, end)
             elif (phi_type == "AGE<90" or phi_type == "Age<90"
@@ -494,17 +568,19 @@ class Phitexts:
                     continue
                 
                 if i in exclude_dict:
-                    start,stop = i, exclude_dict[i]
-                    if (filename, start) in self.subs:
-                        substitute_token = self.subs[filename, start][0]
-                        end = self.subs[filename, start][1]
-                        contents.append(substitute_token)
-                        last_marker = end
-                        #print(substitute_token)
-                    else:
-                        contents.append("*****")
-                        last_marker = stop
-                    
+                    st,stop = i, exclude_dict[i]
+                    for start in range(st,stop):
+                        if (filename, start) in self.subs:
+                            substitute_token = self.subs[filename, start][0]
+                            end = self.subs[filename, start][1]
+                            contents.append(substitute_token)
+                            last_marker = end
+                            break
+                        elif last_marker != stop: # write only once
+                            contents.append("*****")
+                            last_marker = stop
+                        else:
+                            continue
                 else:
                     contents.append(txt[i])
 
