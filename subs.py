@@ -28,7 +28,7 @@ class Subs:
            else:
               self.db = db
            self.xwalk = self._load_look_up_mongo(filenames, look_up_table_path)
-        else:   
+        else:
            self.xwalk = self._load_look_up_table(look_up_table_path)
 
         self.ref_date = self.parse_date(ref_date)
@@ -37,10 +37,10 @@ class Subs:
 
     def has_shift_amount(self, note_id):
         return note_id in self.xwalk["offset"]
-    
+
     def has_deid_note_key(self, note_id):
         return note_id in self.xwalk["deidnotekey"]
-    
+
     def get_deid_note_key(self, note_id):
         try:
             deid_note_key = self.xwalk["deidnotekey"][note_id]
@@ -83,7 +83,7 @@ class Subs:
 
     def get_ref_date(self):
         return self.ref_date
-    
+
     def get_shift_amount(self, note_id):
         try:
             shift_amount = (None if self.xwalk["offset"][note_id] is None
@@ -102,10 +102,10 @@ class Subs:
                   + str(note_id) + ": {0}".format(err))
             shift_amount = None
         return shift_amount
-    
+
     def shift_date(self, date, shift_amount):
         return date.subtract_days(shift_amount)
-    
+
     def shift_date_pid(self, date, note_id):
         if not date: return None
         shifted_date = None
@@ -122,7 +122,7 @@ class Subs:
                                 + " in note " + str(note_id)
                                 + " Overflow Error: {0}".format(err))
         return shifted_date
-      
+
     def shift_date_wrt_dob(self, date, note_id):
         shifted_date = None
         shift = self.get_shift_amount(note_id)
@@ -151,17 +151,17 @@ class Subs:
                                        missing_month = date.missing_month,
                                        missing_day = date.missing_day,
                                        missing_century = date.missing_century)
-            
+
         # not yet implemented in Deid CDW
         # shifted_date = max(shifted_date, shifted_dob)
-        
+
         return shifted_date
 
     def shift_date_range_wrt_dob(self, date_range, note_id):
         shifted_start_date = self.shift_date_wrt_dob(date_range[0], note_id)
         shifted_end_date = self.shift_date_wrt_dob(date_range[1], note_id)
         return shifted_start_date, shifted_end_date
-    
+
     def _days_from_bday(self, ref, dob):
         days_from_bday = (dt.datetime(year = ref.year,
                                       month = ref.month,
@@ -262,7 +262,7 @@ class Subs:
     def shifted_age_pid(self, note_id):
         shifted_dob = self.shift_date_pid(self.get_dob(note_id), note_id)
         return self._age(shifted_dob)
-    
+
     @staticmethod
     def parse_age(age_string):
         try:
@@ -275,7 +275,7 @@ class Subs:
                   + "\" is invalid age: {0}".format(err))
             return None
         return age
-    
+
     @staticmethod
     def parse_date(date_string):
         date = datetime2.parse(date_string,
@@ -285,9 +285,31 @@ class Subs:
 
     @staticmethod
     def parse_date_range(date_range):
-        start_date_range, end_date_range = date_range.split("-")
-        start_date = Subs.parse_date(start_date_range) #add missing year?
-        end_date = Subs.parse_date(end_date_range)
+        range_tks = date_range.split("-")
+        if len(range_tks) == 2:
+            start_date_range, end_date_range = range_tks
+            start_date = Subs.parse_date(start_date_range) #add missing year?
+            end_date = Subs.parse_date(end_date_range)
+        elif len(range_tks) == 3:
+            if __debug__:
+                print("Funny date range found: " + date_range)
+            rebuild = ""
+            for tk in range_tks:
+                if len(tk.split('/')) == 1:
+                    rebuild += tk + '/'
+                else:
+                    keep = tk
+            rebuild = rebuild[:-1]
+            keep_date = Subs.parse_date(keep) #add missing year?
+            rebuild_date = Subs.parse_date(rebuild)
+            if keep_date <= rebuild_date:
+                start_date = keep_date
+                end_date = rebuild_date
+            else:
+                start_date = rebuild_date
+                end_date = keep_date
+        else:
+            return None
         if start_date and end_date:
             return start_date, end_date
         else:
@@ -339,7 +361,7 @@ class Subs:
     @staticmethod
     def date_range_to_string(date_range):
         tmp_dt = date_range[0]
-        
+
         if not date_range[0].has_year():
             end_year = date_range[1].has_year()
             if end_year:
