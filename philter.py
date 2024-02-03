@@ -1214,7 +1214,7 @@ class Philter:
                 if detector.done: 
                     break
             detector.close()
-        return detector.result
+        return {'encoding': 'utf8'}#detector.result
 
     def phi_context(self, filename, word, word_index, words, context_window=10):
         """ helper function, creates our phi data type with source file, and context window"""

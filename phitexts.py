@@ -267,7 +267,7 @@ class Phitexts:
                 if detector.done: 
                     break
             detector.close()
-        return detector.result
+        return {'encoding': 'utf8'}#detector.result
 
     def detect_xml_phi(self):
         if self.coords:
@@ -1292,14 +1292,14 @@ class Phitexts:
                     philter['stop'] = pphi[pstart][0]
                     philter['phitype'] = pphi[pstart][1]
                     philter['token'] = pphi[pstart][2]
-                    
+
                     # Indicte whether date token was subbed or not
                     original_coords = list(range(pstart,pphi[pstart][0]+1))
                     if filename in norm_coords.keys():
                         date_subbed = all((item in norm_coords[filename] for item in original_coords))
                     else:
                         date_subbed = False
-                    date_subbed = all((item in norm_coords[filename] for item in original_coords))
+
                     try:
                         subtokens = self._get_sub_tokens(gold, philter)
                     except Exception as err:
