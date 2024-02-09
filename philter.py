@@ -15,7 +15,7 @@ import numpy
 import random
 import string
 import time
-from textmethods import get_clean, get_tokens
+from textmethods import get_clean, get_tokens, get_notekey
 import pandas as pd
 from constants import *
 
@@ -446,18 +446,11 @@ class Philter:
         context_probes = []
         regex_probes = []
         pat_idx_dynbl = self.pattern_indexes["Dynamic Blacklist"]
-        
+
         if self.known_phi:
             note_key = filename
-        elif (filename.find('.txt') != -1) or (filename.find('.xml') != -1):
-            file_note_key = os.path.basename(filename).replace('\n','')
-            file_note_key = file_note_key.replace('.txt','')
-            file_note_key = file_note_key.lstrip('0')
-            file_note_key = file_note_key.replace('.xml','')
-            file_note_key = file_note_key.replace('_utf8','')
-            note_key = file_note_key
         else:
-            raise Exception("PROGRAMM ERROR: Invalid filename ", filename)
+            note_key = get_notekey(filename)
 
         name_pattern = re.compile(r"\b([A-Z]\'[a-zA-Z]+\b|[A-Z]\s[a-zA-Z]+\b|[A-Z]\.[A-Z]\.[A-Z]\.|[A-Z]\.[A-Z]\.)")
         dyndata = self.patterns[pat_idx_dynbl]["dyndata"]

@@ -1,4 +1,5 @@
 import re
+import os
 
 def get_clean(text, punctuation_matcher=re.compile(r"[^a-zA-Z0-9]")):
     # Use pre-process to split sentence by spaces AND symbols,
@@ -19,7 +20,7 @@ def get_clean(text, punctuation_matcher=re.compile(r"[^a-zA-Z0-9]")):
 def get_tokens(string, text=None, start=0):
     tokens = {}
     str_split = get_clean(string)
-    
+
     offset = start
     if not text: text = string
     for item in str_split:
@@ -34,5 +35,18 @@ def get_tokens(string, text=None, start=0):
         token_stop = token_start + len(item_stripped) - 1
         offset = token_stop + 1
         tokens.update({token_start:[token_stop,item_stripped]})
-    
+
     return tokens
+
+
+def get_notekey(filename):
+    if (filename.find('.txt') != -1) or (filename.find('.xml') != -1):
+        file_note_key = os.path.basename(filename).replace('\n','')
+        file_note_key = file_note_key.replace('.txt','')
+        file_note_key = file_note_key.lstrip('0')
+        file_note_key = file_note_key.replace('.xml','')
+        file_note_key = file_note_key.replace('.txt','')
+        file_note_key = file_note_key.replace('_utf8','')
+    else:
+        raise Exception("PROGRAMM ERROR: Invalid filename ", filename)
+    return file_note_key

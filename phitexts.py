@@ -12,7 +12,7 @@ import string
 import pandas
 import numpy
 from constants import *
-from textmethods import get_clean, get_tokens
+from textmethods import get_clean, get_tokens, get_notekey
 import time
 from pymongo import MongoClient
 from pymongo.errors import ConnectionFailure
@@ -431,7 +431,7 @@ class Phitexts:
                     if bson.objectid.ObjectId.is_valid(filename):
                         note_key_ucsf = filename
                     else:
-                        note_key_ucsf = os.path.splitext(os.path.basename(filename).strip('0'))[0].replace("_utf8","").replace(".txt","").replace(".xml","")
+                        note_key_ucsf = get_notekey(filename)
                     if not self.subser.has_shift_amount(note_key_ucsf):
                         if __debug__:
                             if filename not in nodateshiftlist:
@@ -470,7 +470,7 @@ class Phitexts:
                     if bson.objectid.ObjectId.is_valid(filename):
                         note_key_ucsf = filename
                     else:
-                        note_key_ucsf = os.path.splitext(os.path.basename(filename).strip('0'))[0].replace("_utf8","").replace(".txt","").replace(".xml","")
+                        note_key_ucsf = get_notekey(filename)
                     if not self.subser.has_shift_amount(note_key_ucsf):
                         if __debug__:
                             if filename not in nodateshiftlist:
@@ -513,7 +513,7 @@ class Phitexts:
                     if bson.objectid.ObjectId.is_valid(filename):
                        note_key_ucsf = filename
                     else:
-                       note_key_ucsf = os.path.splitext(os.path.basename(filename).strip('0'))[0].replace("_utf8","").replace(".txt","").replace(".xml","")
+                       note_key_ucsf = get_notekey(filename)
 
                     normalized_token = self.norms[phi_type][filename, start][0]
                     end = self.norms[phi_type][filename, start][1]
@@ -620,7 +620,7 @@ class Phitexts:
         for filename in self.filenames:
             fbase = os.path.splitext(os.path.basename(filename))[0]
             if use_deid_note_key: # name files according to deid note key
-                note_key_ucsf = fbase.lstrip('0').replace("_utf8","").replace(".xml","").replace(".txt","")
+                note_key_ucsf = get_notekey(filename)
                 if not self.subser.has_deid_note_key(note_key_ucsf):
                     if __debug__: print("WARNING: no deid note key found for "
                                         + filename)
