@@ -1617,13 +1617,6 @@ class Phitexts:
                                              + '\t' + ''
                                              + '\t' + str(start)
                                              + '\t' + str(stop))
-                    if phi_type in ['DATE','Date']:
-                        fn_dates += 1
-                        text_date_file.write('\n' + filename
-                                       + '\t' + token
-                                       + '\t' + 'FN'
-                                       + '\t' + ''
-                                       + '\t' + str(start) + '\t' + str(stop))
 
                     text_fn_file.write('\n' + filename + '\t' + str(phi_type)
                                        + '\t' + token
