@@ -302,7 +302,7 @@ class Subs:
             rebuild = rebuild[:-1]
             keep_date = Subs.parse_date(keep) #add missing year?
             rebuild_date = Subs.parse_date(rebuild)
-            if keep_date <= rebuild_date:
+            if keep_date and rebuild_date and (keep_date <= rebuild_date):
                 start_date = keep_date
                 end_date = rebuild_date
             else:
