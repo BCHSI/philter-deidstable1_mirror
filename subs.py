@@ -365,8 +365,12 @@ class Subs:
         if not date_range[0].has_year():
             end_year = date_range[1].has_year()
             if end_year:
-                tmp_dt = datetime2(end_year, date_range[0].month,
-                                   date_range[0].day,
+                tmp_dt = datetime2(year = end_year, month = date_range[0].month,
+                                   day = (date_range[0].day - 1
+                                          if (date_range[0].day == 29
+                                              and date_range[0].month == 2
+                                              and not cal.isleap(end_year))
+                                          else date_range[0].day),
                                    date_string = date_range[0].date_string,
                                    missing_year = date_range[1].missing_year,
                                    missing_month = date_range[0].missing_month,
