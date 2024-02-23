@@ -87,7 +87,7 @@ def runDeidChunck(unit, q, philterFolder, philterConfig, dbConfig, db, mongo, re
         # time for run
         t0 = time.time()
         batch = q.get()
-        call(["/data/radhakrishnanl/deidproj/bin/python3", "deidpipe.py",
+        call(["/data/radhakrishnanl/deidproj/bin/python3", "-O", "deidpipe.py",
               "-m", dbConfig,
               "-f", os.path.join(philterConfig),
               "-b", str(batch),

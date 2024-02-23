@@ -379,6 +379,7 @@ class Phitexts:
             elif phi_type == "DATERANGE":
                 # print("DATERANGE")
                 for filename, start, end in self.types[phi_type][0].scan():
+                    print(filename)
                     token = self.texts[filename][start:end]
                     normalized_token = Subs.parse_date_range(token)
                     self.norms[phi_type][(filename, start)] = (normalized_token,
