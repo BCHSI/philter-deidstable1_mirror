@@ -1,1 +1,1 @@
-\b("""+gene_symbols+r""")(: Loss of nuclear expression|: Intact nuclear expression)\b
+(?i)\b(("""+gene_symbols+r""")( Expression)?(: Loss of |: Intact )nuclear expression)|(nuclear expression of ("""+gene_symbols+r""")( and ("""+gene_symbols+r"""))?)\b
