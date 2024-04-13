@@ -35,8 +35,8 @@ def get_args():
     ap.add_argument("-d", "--deid_filename", default=True,
                     help="When this is true, the pipeline saves the de-identified output using de-identified note ids for the filenames, the default is True",
                     type=lambda x:bool(distutils.util.strtobool(x)))
-    ap.add_argument("-k", "--dynamic_blacklist",
-                    help="Path to the probes file, if path to file is absent dynamic blacklist does not get generated",
+    ap.add_argument("-k", "--dynamic_protectlist",
+                    help="Path to the probes file, if path to file is absent dynamic protectlist does not get generated",
                     type=str)
     ap.add_argument("-m", "--mongodb", 
                     help="When mongo config file is provided the pipeline will use mongodb to get input text, surrogation meta data and write out deid text",
@@ -120,8 +120,8 @@ def main_mongo(args, db=None ,mongo=None):
     if args.xml:
         if __debug__: print("Generating coordinate map from xml")
         phitexts.detect_xml_phi()
-    elif args.dynamic_blacklist:
-        phitexts.detect_phi(args.filters, args.dynamic_blacklist,
+    elif args.dynamic_protectlist:
+        phitexts.detect_phi(args.filters, args.dynamic_protectlist,
                             verbose=args.verbose)
     else:
         phitexts.detect_phi(args.filters, verbose=args.verbose)
@@ -171,18 +171,18 @@ def main_mongo(args, db=None ,mongo=None):
     # print and save log 
     if args.log:
         (failed_date, eval_table, phi_table, phi_count_df, csv_summary_df,
-         batch_summary_df, dynamic_blacklist_df,
-         age_norm_info) = phitexts.print_log(args.dynamic_blacklist, mongo,
+         batch_summary_df, dynamic_protectlist_df,
+         age_norm_info) = phitexts.print_log(args.dynamic_protectlist, mongo,
                                              args.xml)
         if mongo is not None:
             phitexts.mongo_save_log(mongo, failed_date, eval_table, phi_table,
                                     phi_count_df, csv_summary_df,
-                                    batch_summary_df, dynamic_blacklist_df,
+                                    batch_summary_df, dynamic_protectlist_df,
                                     age_norm_info)
         else:
             phitexts.save_log(args.output, failed_date, eval_table, phi_table,
                               phi_count_df, csv_summary_df, batch_summary_df,
-                              dynamic_blacklist_df, age_norm_info)
+                              dynamic_protectlist_df, age_norm_info)
     if args.eval:
         phitexts.eval(args.anno, args.output)
 
