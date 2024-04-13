@@ -954,7 +954,6 @@ class Phitexts:
                                 flank_end = len(self.texts[filename])
                             context = self.texts[filename][flank_start:flank_end]
                             word = self.texts[filename][start:end+1]
-
                             dynamic_protectlist_df = pd.concat(
                                 [dynamic_protectlist_df, pd.DataFrame(
                                     [filename, self.batch, str(start), str(end),
