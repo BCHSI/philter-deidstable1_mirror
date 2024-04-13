@@ -33,9 +33,9 @@ def get_super_log(all_logs, super_log_dir):
     #Path to txt summary of all files combined
     text_summary_filepath = os.path.join(super_log_dir,
                                          'deidpipe_superlog_summary.txt')
-    #Path to dynamic blacklist superlog
-    dynamic_blacklist_filepath = os.path.join(super_log_dir,
-                                              'dynamic_blacklist_superlog.csv')
+    #Path to dynamic protectlist superlog
+    dynamic_protectlist_filepath = os.path.join(super_log_dir,
+                                                'dynamic_protectlist_superlog.csv')
     os.makedirs(super_log_dir, exist_ok=True)
 
     # Create aggregated summary file
@@ -50,9 +50,9 @@ def get_super_log(all_logs, super_log_dir):
                            + 'failed_surrogated' + '\n')
             f.write(file_header)    
 
-    # Create aggregated dynamic blacklist file
-    if not os.path.isfile(dynamic_blacklist_filepath):
-        with open(dynamic_blacklist_filepath, 'w',
+    # Create aggregated dynamic protectlist file
+    if not os.path.isfile(dynamic_protectlist_filepath):
+        with open(dynamic_protectlist_filepath, 'w',
                   errors='surrogateescape') as f:
             file_header = ('filename' + "\t" + 'start' + "\t" + 'stop' + "\t"
                            + 'knownphi_token' + "\t" + 'context' + "\t"
@@ -65,8 +65,8 @@ def get_super_log(all_logs, super_log_dir):
             print("log file missing: " + log_file)
             continue
         
-        if 'dynamic_blacklist_summary.csv' in log_file:
-            fpath = dynamic_blacklist_filepath
+        if 'dynamic_protectlist_summary.csv' in log_file:
+            fpath = dynamic_protectlist_filepath
         elif 'detailed_batch_summary.csv' in log_file:
             fpath = csv_summary_filepath
         else:
@@ -132,7 +132,7 @@ def create_log_files_list(imofile):
             all_logs.append(os.path.join(odir, "log",
                                          "detailed_batch_summary.csv"))
             all_logs.append(os.path.join(odir, "log",
-                                         "dynamic_blacklist_summary.csv"))
+                                         "dynamic_protectlist_summary.csv"))
     
     return all_logs
 
