@@ -638,7 +638,7 @@ class Phitexts:
             with open(filepath, "w", encoding='utf-8',
                       errors='surrogateescape') as fhandle:
                 fhandle.write(self.textsout[filename])
-   
+
     def save_mongo(self,mongo):
         assert self.textsout, "Cannot save text: output not ready"
         try:
@@ -661,18 +661,17 @@ class Phitexts:
                                           {'$set': { "redact_date": datetime.datetime.now(), "philter_version": mongo['philter_version']}})
         except OperationFailure as e:
            print("Error while saving deidentified files into Mongo")
-           raise OperationFailure(error.get("errmsg"), error.get("code"), e) 
-    
+           raise OperationFailure(error.get("errmsg"), error.get("code"), e)
 
 
     def get_phi_type_per_token(self):
        phi_types_per_token = {}
-       for phi_type in self.types: 
+       for phi_type in self.types:
            for filename, start, end in self.types[phi_type][0].scan():
                all_tokens = get_tokens(self.texts[filename])
                if filename not in phi_types_per_token:
                   phi_types_per_token[filename] = {}
-               for token_start in all_tokens:    
+               for token_start in all_tokens:
                    if token_start not in phi_types_per_token[filename]:
                       phi_types_per_token[filename][token_start] = {}
                    token_end = all_tokens[token_start][0]
@@ -689,7 +688,7 @@ class Phitexts:
 
     def print_log(self, kp, mongo, xml):
         phi_count_df = pd.DataFrame(columns=['Phi_type', 'Count'])
-        batch_summary_df = pd.DataFrame(columns=['Title', 'values']) 
+        batch_summary_df = pd.DataFrame(columns=['Title', 'values'])
         csv_summary_df = pd.DataFrame(columns=['filename', 'batch',
                                                'file_size', 'total_tokens',
                                                'phi_tokens',
@@ -697,9 +696,9 @@ class Phitexts:
                                                'failed_normalized',
                                                'successfully_surrogated',
                                                'failed_surrogated'])
-        dynamic_blacklist_df = pd.DataFrame(columns=['filename', 'batch',
-                                                     'start', 'end', 'probe',
-                                                     'context', 'phi_type'])
+        dynamic_protectlist_df = pd.DataFrame(columns=['filename', 'batch',
+                                                       'start', 'end', 'probe',
+                                                       'context', 'phi_type'])
         eval_table = {}
         failed_date = {}
         phi_table = {}
@@ -726,7 +725,7 @@ class Phitexts:
                     age_norm_info[filename].append(age_dict)
                 else:
                     age_norm_info[filename].append(age_dict)
-        
+
             #print(self.norms['AGE<90'])
         # Write to file of raw dates, parsed dates and substituted dates
         num_failed = 0
@@ -940,8 +939,7 @@ class Phitexts:
         if kp or mongo is not None:
             phi_type_per_token = self.get_phi_type_per_token()
 
-            for filename in phi_type_per_token: 
-                #print(phi_type_per_token)
+            for filename in phi_type_per_token:
                 for start in phi_type_per_token[filename]:
                     for end in phi_type_per_token[filename][start]:
                         if (len(phi_type_per_token[filename][start][end]) == 1
@@ -956,10 +954,11 @@ class Phitexts:
                                 flank_end = len(self.texts[filename])
                             context = self.texts[filename][flank_start:flank_end]
                             word = self.texts[filename][start:end+1]
-                           #f.write(filename + "\t" + str(start) + "\t" + str(end) + "\t" + word + "\t" + context.replace('\n',' ') + "\t" + ','.join(phi_type_per_token[filename][start][end])+"\n")
-                            dynamic_blacklist_df = dynamic_blacklist_df.append(pd.Series([filename,self.batch,str(start),str(end),word,context.replace('\n',' '),','.join(phi_type_per_token[filename][start][end])], index=dynamic_blacklist_df.columns),ignore_index=True)
+                            dynamic_protectlist_df = dynamic_protectlist_df.append(pd.Series([filename,self.batch,str(start),str(end),word,context.replace('\n',' '),','.join(phi_type_per_token[filename][start][end])], index=dynamic_protectlist_df.columns),ignore_index=True)
 
-        return failed_date,eval_table,phi_table,phi_count_df,csv_summary_df,batch_summary_df,dynamic_blacklist_df,age_norm_info
+        return (failed_date, eval_table, phi_table, phi_count_df,
+                csv_summary_df, batch_summary_df, dynamic_protectlist_df,
+                age_norm_info)
 
         # Todo: add PHI type counts to summary
         # Name PHI
@@ -972,7 +971,7 @@ class Phitexts:
 
     def save_log(self, output_dir, failed_date, eval_table, phi_table,
                  phi_count_df, csv_summary_df, batch_summary_df,
-                 dynamic_blacklist_df, age_norm_info):
+                 dynamic_protectlist_df, age_norm_info):
         log_dir = os.path.join(output_dir, 'log/')
         # Per-batch logs
         if os.path.isdir(log_dir):
@@ -988,7 +987,7 @@ class Phitexts:
         #Path to csv summary of all files
         csv_summary_filepath = os.path.join(log_dir,
                                             'detailed_batch_summary.csv')
-        dynamic_blacklist_filepath = os.path.join(log_dir,'dynamic_blacklist_summary.csv')             
+        dynamic_protectlist_filepath = os.path.join(log_dir,'dynamic_protectlist_summary.csv')
         with open (failed_dates_file, 'w') as f:
             json.dump(failed_date, f)
         with open(date_table_file, 'w') as f:
@@ -1000,19 +999,19 @@ class Phitexts:
         phi_count_export = phi_count_df.to_csv(phi_count_file, index=None, header=True,sep = '\t')
         csv_summary_export = csv_summary_df.to_csv(csv_summary_filepath, index=None, header=True,sep = '\t')
         batch_summary_export = batch_summary_df.to_csv(batch_summary_file, index=None, header=True,sep = '\t')
-        if not dynamic_blacklist_df.empty:
-            dynamic_blacklist_export = dynamic_blacklist_df.to_csv(dynamic_blacklist_filepath, index=None, header=True,sep = '\t')
+        if not dynamic_protectlist_df.empty:
+            dynamic_protectlist_export = dynamic_protectlist_df.to_csv(dynamic_protectlist_filepath, index=None, header=True,sep = '\t')
 
     def mongo_save_log(self, mongo, failed_date, eval_table, phi_table,
                        phi_count_df, csv_summary_df, batch_summary_df,
-                       dynamic_blacklist_df, age_norm_info):
+                       dynamic_protectlist_df, age_norm_info):
         print("In mongo save log")
         try:
             db = self.db
             collection_log_batch_summary = db[mongo['collection_log_batch_summary']]
             collection_detailed_batch_summary = db[mongo['collection_log_detailed_batch_summary']]
             collection_log_batch_phi_count = db[mongo['collection_log_batch_phi_count']]
-            collection_log_dynamic_blacklist = db[mongo['collection_log_dynamic_blacklist']]
+            collection_log_dynamic_protectlist = db[mongo['collection_log_dynamic_protectlist']]
             collection_log_failed_dates = db[mongo['collection_log_failed_dates']]
             collection_log_parsed_dates = db[mongo['collection_log_parsed_dates']]
             collection_log_phi_marked = db[mongo['collection_log_phi_marked']]
@@ -1037,11 +1036,11 @@ class Phitexts:
         csv_summary_df['Run'] = max_run_num
         detailed_batch_summary = csv_summary_df.to_dict(orient='records')
         collection_detailed_batch_summary.insert(detailed_batch_summary)        
-        if not dynamic_blacklist_df.empty:
-            #dynamic_blacklist_df.rename(columns = {'filename': '_id'}, inplace = True)
-            dynamic_blacklist_df['Run'] = max_run_num
-            dynamic_blacklist = dynamic_blacklist_df.to_dict(orient='records')
-            collection_log_dynamic_blacklist.insert(dynamic_blacklist)
+        if not dynamic_protectlist_df.empty:
+            #dynamic_protectlist_df.rename(columns = {'filename': '_id'}, inplace = True)
+            dynamic_protectlist_df['Run'] = max_run_num
+            dynamic_protectlist = dynamic_protectlist_df.to_dict(orient='records')
+            collection_log_dynamic_protectlist.insert(dynamic_protectlist)
 
         if bool(failed_date):
             failed_date['Batch'] = self.batch
