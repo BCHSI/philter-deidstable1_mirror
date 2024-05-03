@@ -480,10 +480,10 @@ class Philter:
                                 prb_with_s = prb + 's'
                                 map_set[prb_with_s] = note_key
                                 for p in [prb, prb_with_s]:
-                                    name_regex = ('(?i)\d+[\/\-\.]\d+[\/\-\.]'
+                                    name_rgx = ('\d+[\/\-\.]\d+[\/\-\.]'
                                                   + '\d+\s+\d*\:\d*|\d+[\/\-\.]'
                                                   + '\d+[\/\-\.]\d+' + p)
-                                    regex_probes.append(name_regex)
+                                    name_regex += '|' + name_rgx
 
                             # If single character or in list of nonames,
                             # add to list of context probes
@@ -537,7 +537,6 @@ class Philter:
                     if workplace_regex != '':
                         regex_probes.append(workplace_regex)
                     if name_regex != '':
-                        #print(name_regex)
                         regex_probes.append(name_regex)
 
         self.patterns[pat_idx_dynbl]["data"] = map_set
@@ -557,7 +556,15 @@ class Philter:
                     rgx = self.patterns[ipat]['dyndata'].pattern
                     regex_string = rgx.replace('"""+probe+r"""',
                                                '|'.join(rgx_probes))
-                    self.patterns[ipat]['data'] = re.compile(regex_string)
+                    try:
+                        self.patterns[ipat]['data'] = re.compile(regex_string)
+                    except Exception as e:
+                        print("Exception {0} in ".format(e)
+                              + "_update_dynamic_patterns(): failed creation "
+                              + "of dynamic pattern with index "
+                              + str(ipat) + " \""
+                              + self.patterns[ipat]["title"]
+                              + "\" is " + str(regex_string))
                 else:
                     self.patterns[ipat]['data'] = re.compile(r"\b\B") #never match
 
