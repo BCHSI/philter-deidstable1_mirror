@@ -483,7 +483,8 @@ class Philter:
                                     name_rgx = ('\d+[\/\-\.]\d+[\/\-\.]'
                                                   + '\d+\s+\d*\:\d*|\d+[\/\-\.]'
                                                   + '\d+[\/\-\.]\d+' + p)
-                                    name_regex += '|' + name_rgx
+                                    name_regex += ('' if len(name_regex) == 0
+                                                   else '|') + name_rgx
 
                             # If single character or in list of nonames,
                             # add to list of context probes
@@ -870,7 +871,7 @@ class Philter:
         if pattern_index < 0 or pattern_index >= len(self.patterns):
             raise Exception("Invalid pattern index: ", pattern_index,
                             "pattern length", len(patterns))
-        
+
         map_set = self.patterns[pattern_index]["data"]
         coord_map = self.patterns[pattern_index]["coordinate_map"]
         #get part of speech we will be sending through this set
@@ -890,7 +891,7 @@ class Philter:
         if __debug__ and self.verbose:
             print("map_set(): searching for pattern with index "
                   + str(pattern_index) + " \""
-                  + self.patterns[pattern_index]["title"])
+                  + self.patterns[pattern_index]["title"] + "\"")
 
         for tup in pos_list:
             word = tup[0]
@@ -907,13 +908,17 @@ class Philter:
                 if word_clean in map_set or word in map_set:
                     coord_map.add_extend(filename, start, stop)
                     if __debug__ and self.verbose:
-                        print(word_clean + " " + word)
+                        print(word_clean + " " + word + " (" + str(pos) + ")")
                 else:
-                    pass
+                    if __debug__ and self.verbose:
+                        print("unmatched: " + word + " (" + str(pos) + ")")
+            else:
+                if __debug__ and self.verbose:
+                    print("unmatched pos: " + word + " (" + str(pos) + ")")
             #advance our start coordinate
             start_coordinate += len(word)
 
-        self.patterns[pattern_index]["coordinate_map"] = coord_map  
+        self.patterns[pattern_index]["coordinate_map"] = coord_map
 
     def map_pos(self, filename="", text="", pattern_index=-1,
                 pre_process= r"[^a-zA-Z0-9]"):
