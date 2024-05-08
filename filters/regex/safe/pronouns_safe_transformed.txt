@@ -1,0 +1,1 @@
+(?i)\b(himself|herself|themself|coself|enself|emself|hirself|yoself|zirself|verself|nemself|xemself|themselves)|((preferred )?pronouns (are )? (she her hers|she her they|they them their|they them theirs|he him his|he him they|co cos cos|ze zir zirs|ve vis ver|xie hir hirs|en ens ens|ne nem ner|ve ver vis|ey em eir|xe xem xyr))\b
