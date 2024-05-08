@@ -22,7 +22,7 @@ from constants import *
 class Philter:
     """ 
         General text filtering class,
-        can filter using safelists, protectlists, regex's and POS
+        can filter using savelists, protectlists, regex's and POS
     """
     def __init__(self, config):
         self.filenames = []
@@ -166,7 +166,7 @@ class Philter:
         #create a memory for exclude coordinate map
         self.exclude_map = CoordinateMap()
 
-        #create a memory for FULL exclude coordinate map (including non-safelisted words)
+        #create a memory for FULL exclude coordinate map (including non-savelisted words)
         self.full_exclude_map = {}
 
         #create a memory for the list of known PHI types
