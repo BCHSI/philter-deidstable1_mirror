@@ -52,7 +52,7 @@
         "title": "staging terms safe",
         "type": "set",
         "exclude": false,
-        "filepath": "filters/safelists/safelist_staging_terms.json",
+        "filepath": "filters/savelists/savelist_staging_terms.json",
         "pos": [],
         "notes": "These are words we believe are safe"
     },
@@ -2588,18 +2588,18 @@
         "phi_type": "PROBEREGEXCONTEXT"
     },
     {
-        "title":"Safelist 1",
+        "title":"Savelist 1",
         "type":"set",
         "exclude":false,
-        "filepath":"filters/safelists/safelist_20240201_nonames_addback100_ucsf_u_i2b2_noperiods_noeponyms_commonwords_nonames_fp_addback_old_sl_add_back.json",
+        "filepath":"filters/savelists/savelist_20240201_nonames_addback100_ucsf_u_i2b2_noperiods_noeponyms_commonwords_nonames_fp_addback_old_sl_add_back.json",
         "pos":[],
         "notes":"These are words we believe are safe"
     },
     {
-        "title": "Gene symbols safelist",
+        "title": "Gene symbols savelist",
         "type": "set",
         "exclude": false,
-        "filepath": "filters/safelists/safelist_genes_and_patho_terms_pruned.json",
+        "filepath": "filters/savelists/savelist_genes_and_patho_terms_pruned.json",
         "pos": [],
         "notes": "These are words we believe are safe"
     },
