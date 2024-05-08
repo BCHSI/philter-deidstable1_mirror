@@ -1023,6 +1023,13 @@
         "note": ""
     },
     {
+        "title": "pronouns safe",
+        "type": "regex",
+        "exclude": false,
+        "filepath": "filters/regex/safe/pronouns_safe.txt",
+        "note": "This should keep any personal pronouns"
+    },
+    {
         "title":"full street address",
         "type":"regex",
         "exclude":true,
