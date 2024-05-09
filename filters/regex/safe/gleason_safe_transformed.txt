@@ -1,0 +1,1 @@
+(?i)\b((Gleason\s(score|grade|pattern) )(([1-5]\+[1-5]=)?([2-9]|10)))\b
