@@ -97,7 +97,7 @@ def runDeidChunck(unit, q, philterFolder, philterConfig, dbConfig, db, mongo, re
 
         #To do fix threading issues while calling the function
         '''
-        args = Namespace(anno='./data/i2b2_xml', batch=q.get(), deid_filename=True, dynamic_blacklist= None, eval=False, filters=philterConfig, input=None, log=True, mongodb=dbConfig, output=None, surrogate_info=None, verbose=False, xml=False)
+        args = Namespace(anno='./data/i2b2_xml', batch=q.get(), deid_filename=True, dynamic_protectlist= None, eval=False, filters=philterConfig, input=None, log=True, mongodb=dbConfig, output=None, surrogate_info=None, verbose=False, xml=False)
         main_mongo(args, db, mongo)
         '''
         # Print time elapsed for batch

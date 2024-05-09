@@ -22,7 +22,7 @@ from constants import *
 class Philter:
     """ 
         General text filtering class,
-        can filter using whitelists, blacklists, regex's and POS
+        can filter using savelists, protectlists, regex's and POS
     """
     def __init__(self, config):
         self.filenames = []
@@ -93,7 +93,7 @@ class Philter:
             self.dynamic = False
             if ("namesprobe" in config) or ("known_phi" in config):
                 self.dynamic = True
-                dynamic_blacklist = {
+                dynamic_protectlist = {
                     "notes": "These are known phi that are not safe",
                     "filepath": "",
                     "phi_type": "PROBEDYNAMICSET",
@@ -101,15 +101,15 @@ class Philter:
                     "pos": ["NNP", "NNPS", "CD", "NN", "NNS", "IN", "JJ",
                             "VBD", "VBG", "RB"],
                     "type": "dynamic_set",
-                    "title": "Dynamic Blacklist"}
+                    "title": "Dynamic Protectlist"}
                 if ("namesprobe" in config):
                     if not os.path.exists(config["namesprobe"]):
                         raise Exception("Filepath does not exist",
                                         config["namesprobe"])
-                    dynamic_blacklist["filepath"] = config["namesprobe"]
+                    dynamic_protectlist["filepath"] = config["namesprobe"]
                 elif ("known_phi" in config):
-                    dynamic_blacklist["filepath"] = "Mongo.mongo"
-                self.patterns.append(dynamic_blacklist)
+                    dynamic_protectlist["filepath"] = "Mongo.mongo"
+                self.patterns.append(dynamic_protectlist)
 
 
         if "xml" in config:
@@ -166,7 +166,7 @@ class Philter:
         #create a memory for exclude coordinate map
         self.exclude_map = CoordinateMap()
 
-        #create a memory for FULL exclude coordinate map (including non-whitelisted words)
+        #create a memory for FULL exclude coordinate map (including non-savelisted words)
         self.full_exclude_map = {}
 
         #create a memory for the list of known PHI types
@@ -445,7 +445,7 @@ class Philter:
         map_set = {}
         context_probes = []
         regex_probes = []
-        pat_idx_dynbl = self.pattern_indexes["Dynamic Blacklist"]
+        pat_idx_dynpl = self.pattern_indexes["Dynamic Protectlist"]
 
         if self.known_phi:
             note_key = filename
@@ -453,7 +453,7 @@ class Philter:
             note_key = get_notekey(filename)
 
         name_pattern = re.compile(r"\b([A-Z]\'[a-zA-Z]+\b|[A-Z]\s[a-zA-Z]+\b|[A-Z]\.[A-Z]\.[A-Z]\.|[A-Z]\.[A-Z]\.)")
-        dyndata = self.patterns[pat_idx_dynbl]["dyndata"]
+        dyndata = self.patterns[pat_idx_dynpl]["dyndata"]
         if note_key in dyndata:
             for probe_type in dyndata[note_key]:
                 for probe in dyndata[note_key][probe_type]:
@@ -540,7 +540,7 @@ class Philter:
                     if name_regex != '':
                         regex_probes.append(name_regex)
 
-        self.patterns[pat_idx_dynbl]["data"] = map_set
+        self.patterns[pat_idx_dynpl]["data"] = map_set
         
         # Substitute probes into probes_regex and probes_regex_context
         rgx_types = ["Probes Regex", "Probes Regex Context"]
