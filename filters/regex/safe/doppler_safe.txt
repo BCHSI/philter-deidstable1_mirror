@@ -1,1 +1,1 @@
-(?i)\bdoppler\s(evidence|flow|study|evidence)\b
+(?i)\b((doppler\s(evidence|flow|study|evidence))|((Fetal |Flow |UA)(2D|Doppler)-\d{5}))\b
