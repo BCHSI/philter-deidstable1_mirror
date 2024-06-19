@@ -30,7 +30,7 @@ python3 deidpipe.py -h
 **-h:**&nbsp; Show this help message and exit<br/>
 **-i (input_dir):**&nbsp; Path to the directory or the file that contains the PHI note<br/>
 **-o (output_dir):**&nbsp; Path to the directory to save PHI-reduced notes<br/>
-**-f (filters_config_file):**&nbsp; Path to the config file, the default is configs/philter_one.json<br/>
+**-f (filters_config_file):**&nbsp; Path to the config file, the default is configs/philter_one2024.json<br/>
 **-s (surrogate_info_file):**&nbsp; Path to the tsv file that contains the surrogate info per note key<br/>
 **-d (True,False):**&nbsp; When this is true, the pipeline saves the de-identified output using de-identified note ids for the filenames, the default is True<br/>
 **-k (known_pii_file):**&nbsp; Path to the probes file, if path to file is absent Dynamic Blocklist does not get generated<br/>
@@ -65,7 +65,7 @@ In this mode, the PHI will be redactd and the evaluation step will be skipped:
 
 Use the following command to run a single job:
 ```bash
-python3 deidpipe.py -i data/i2b2_notes/ -o data/i2b2_results/ -f configs/philter_one.json 
+python3 deidpipe.py -i data/i2b2_notes/ -o data/i2b2_results/ -f configs/philter_one2024.json 
 ```
 
 To run multiple jobs simultaneously, see [deidloop.py](deidloop.py)/[deidloop_mongo.py](deidloop_mongo.py) and [deidmaster.py](deidmaster.py)/[deidmaster_mongo.py](deidmaster_mongo.py)
@@ -78,7 +78,7 @@ In this mode, PHI is redacted, and the evaluation step will be performed using t
 
 **d.** Run Philter in evaluation mode using the following command:
 ```bash
-python3 deidpipe.py -i data/i2b2_notes/ -o data/i2b2_results/ -f configs/philter_one.json -e True -a data/i2b2_xml/ 
+python3 deidpipe.py -i data/i2b2_notes/ -o data/i2b2_results/ -f configs/philter_one2024.json -e True -a data/i2b2_xml/ 
 ```
 By defult, this will output PHI-reduced notes (.txt format) in the specified output directory.
 
@@ -205,13 +205,13 @@ This mode lets us use Mongo DB as the I/O for Philter runs. Here are the pre pro
 
 **f.** Once we have the data loaded into mongo, chunk collection and a config file created we can use the following command to launch the runs.
 ```bash
-python3 deidloop_mongo.py -t 4  --mongofile configs/mongo.json --philterconfig config/philter_one.json --superlog False --philter /path/to/philter/scripts/ > stdouterr.txt 2>&1 &
+python3 deidloop_mongo.py -t 4  --mongofile configs/mongo.json --philterconfig config/philter_one2024.json --superlog False --philter /path/to/philter/scripts/ > stdouterr.txt 2>&1 &
 ```
 ### Flags:
 **-h, --help:** show this help message and exit<br/>
 **--mongofile (MONGOFILE):** with mongo configuration Path to the mongo config file<br/>
 **-t (THREADS), --threads (THREADS):** Number of parallel threads, the default is 1<br/>
-**--philterconfig (PHILTERCONFIG):** Path to Philter program config files like philter_one.json<br/>
+**--philterconfig (PHILTERCONFIG):** Path to Philter program config files like philter_one2024.json<br/>
 **--philter (PHILTER):**     Path to philter scripts<br/>
 **--superlog [True, False]:**   When this is set, the pipeline
                         prints and saves a super log in mongo combining logs

@@ -25,8 +25,8 @@ def get_args():
     ap.add_argument("-o", "--output", 
                     help="Path to the directory to save PHI-reduced notes",
                     type=str)
-    ap.add_argument("-f", "--filters", default="configs/philter_one.json",
-                    help="Path to the config file, the default is configs/philter_one.json",
+    ap.add_argument("-f", "--filters", default="configs/philter_one2024.json",
+                    help="Path to the config file, the default is configs/philter_one2024.json",
                     type=str)
     ap.add_argument("-s", "--surrogate_info", 
                     help="Path to the tsv file that contains the surrogate info"
