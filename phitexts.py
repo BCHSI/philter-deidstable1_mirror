@@ -956,11 +956,12 @@ class Phitexts:
                             word = self.texts[filename][start:end+1]
                             dynamic_protectlist_df = pd.concat(
                                 [dynamic_protectlist_df, pd.DataFrame(
-                                    [filename, self.batch, str(start), str(end),
-                                     word, context.replace('\n', ' '),
-                                     ','.join(phi_type_per_token[filename]
-                                              [start][end])],
-                                    index = dynamic_protectlist_df.columns[:7])
+                                    [[filename, self.batch,
+                                      str(start), str(end),
+                                      word, context.replace('\n', ' '),
+                                      ','.join(phi_type_per_token[filename]
+                                               [start][end])]],
+                                    columns = dynamic_protectlist_df.columns)
                                 ], ignore_index = True)
 
         return (failed_date, eval_table, phi_table, phi_count_df,
