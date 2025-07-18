@@ -1,20 +1,28 @@
 import re
 import os
 
-def get_clean(text, punctuation_matcher=re.compile(r"[^a-zA-Z0-9]")):
-    # Use pre-process to split sentence by spaces AND symbols,
+def get_clean(text, punctuation_matcher=re.compile(r"[^a-zA-Z0-9]"),
+              matcher=re.compile(r".*"), spaces=False):
+    # Use punctuation_matcher to split sentence by spaces AND symbols,
     # while preserving spaces in the split list
-    lst = re.findall(r"[\w']+",text)
+    # use matcher to count only certain tokens (default count all)
     cleaned = []
+    tokens = 0
+    lst = (re.split(r"(\s+)", text) if spaces
+           else re.findall(r"[\w']+",text))
     for item in lst:
         if len(item) > 0:
             if item.isspace() == False:
-                split_item = re.split("(\s+)", re.sub(punctuation_matcher,
-                                                      " ", item))
+                split_item = re.split(r"(\s+)", re.sub(punctuation_matcher,
+                                                       " ", item))
                 for elem in split_item:
                     if len(elem) > 0:
                         cleaned.append(elem)
-    return cleaned
+                        if matcher.search(elem):
+                            tokens += 1
+            elif spaces:
+                cleaned.append(item)
+    return (cleaned, tokens) if spaces else cleaned
 
 
 def get_tokens(string, text=None, start=0):

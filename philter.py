@@ -239,50 +239,18 @@ class Philter:
                 self.pos_tags[filename] = nltk.pos_tag(cleaned)
        
         return self.pos_tags[filename]
-    
+
     def get_clean(self, filename, text, pre_process= r"[^a-zA-Z0-9]"):
-        tokens = 0
         if filename not in self.cleaned:
-            self.cleaned[filename] = {}
-            # Use pre-process to split sentence by spaces AND symbols, while preserving spaces in the split list
-            lst = re.split("(\s+)", text)
-            cleaned = []
-            for item in lst:
-                if len(item) > 0:
-                    if item.isspace() == False:
-                        split_item = re.split("(\s+)", re.sub(pre_process,
-                                                              " ", item))
-                        for elem in split_item:
-                            if len(elem) > 0:
-                                cleaned.append(elem)
-                                tokens += 1
-                    else:
-                        cleaned.append(item)
-            self.cleaned[filename] = (cleaned,tokens)
+            self.cleaned[filename] = get_clean(text, pre_process, spaces=True)
         return self.cleaned[filename]
 
     def get_clean_filtered(self, filename, text,
                            pre_process= r"[^a-zA-Z0-9\*]",
                            phi_matcher=re.compile(r"\*+")):
-        phi_tokens = 0
         if filename not in self.clean_filtered:
-            self.clean_filtered[filename] = {}
-            # Use pre-process to split sentence by spaces AND symbols, while preserving spaces in the split list
-            lst = re.split("(\s+)", text)
-            clean_filtered = []
-            for item in lst:
-                if len(item) > 0:
-                    if item.isspace() == False:
-                        split_item = re.split("(\s+)", re.sub(pre_process,
-                                                              " ", item))
-                        for elem in split_item:
-                            if len(elem) > 0:
-                                clean_filtered.append(elem)
-                                if phi_matcher.search(elem):
-                                    phi_tokens += 1
-                    else:
-                        clean_filtered.append(item)
-            self.clean_filtered[filename] = (clean_filtered,phi_tokens)
+            self.clean_filtered[filename] = get_clean(text, pre_process,
+                                                      phi_matcher, spaces=True)
         return self.clean_filtered[filename]
     
     def init_patterns(self):
@@ -480,9 +448,9 @@ class Philter:
                                 prb_with_s = prb + 's'
                                 map_set[prb_with_s] = note_key
                                 for p in [prb, prb_with_s]:
-                                    name_rgx = ('\d+[\/\-\.]\d+[\/\-\.]'
-                                                  + '\d+\s+\d*\:\d*|\d+[\/\-\.]'
-                                                  + '\d+[\/\-\.]\d+' + p)
+                                    name_rgx = (r'\d+[\/\-\.]\d+[\/\-\.]'
+                                                + r'\d+\s+\d*\:\d*|\d+[\/\-\.]'
+                                                + r'\d+[\/\-\.]\d+' + p)
                                     name_regex += ('' if len(name_regex) == 0
                                                    else '|') + name_rgx
 
@@ -700,18 +668,7 @@ class Philter:
         #### MATCHALL/CATCHALL ####
         elif regex == re.compile('.'):
             # Split note the same way we would split for set or POS matching
-            matchall_list = re.split("(\s+)", text)
-            matchall_list_cleaned = []
-            for item in matchall_list:
-                if len(item) > 0:
-                    if item.isspace() == False:
-                        split_item = re.split("(\s+)",
-                                              re.sub(pre_process, " ", item))
-                        for elem in split_item:
-                            if len(elem) > 0:
-                                matchall_list_cleaned.append(elem)
-                    else:
-                        matchall_list_cleaned.append(item)          
+            matchall_list_cleaned = get_clean(text, pre_process, spaces=True)[0]
 
             start_coordinate = 0
             for word in matchall_list_cleaned:
@@ -719,7 +676,8 @@ class Philter:
                 stop = start_coordinate + len(word)
                 word_clean = re.sub(r"[^a-zA-Z0-9]+", "", word.lower().strip())
                 if len(word_clean) == 0:
-                    #got a blank space or something without any characters or digits, move forward
+                    #got a blank space or something without any characters
+                    # or digits, move forward
                     start_coordinate += len(word)
                     continue
 
@@ -813,7 +771,7 @@ class Philter:
                 # Get index of m.group()first alphanumeric character in match
                 tokenized_matches = []
                 match_text = m.group()
-                split_match = re.split("(\s+)",
+                split_match = re.split(r"(\s+)",
                                        re.sub(pre_process, " ", match_text))
 
                 # Get all spans of tokenized match (because remove() function requires tokenized start coordinates)
@@ -934,15 +892,12 @@ class Philter:
         if "pos" not in self.patterns[pattern_index]:
             raise Exception("Mapping POS must include parts of speech",
                             pattern_index, "pattern length", len(patterns))
-            
+
         coord_map = self.patterns[pattern_index]["coordinate_map"]
         pos_set = set(self.patterns[pattern_index]["pos"])
-        
-        # Use pre-process to split sentence by spaces AND symbols, while preserving spaces in the split list
 
         cleaned = self.get_clean(filename,text)[0]
-
-        pos_list = self.get_pos(filename, cleaned)#pos_list = nltk.pos_tag(cleaned)
+        pos_list = self.get_pos(filename, cleaned)
         start_coordinate = 0
         if __debug__ and self.verbose:
             print("map_pos(): searching for pattern with index "
@@ -992,7 +947,7 @@ class Philter:
         if len(pos_set) > 0:
             check_pos = True
 
-        lst = re.split("(\s+)", text)
+        lst = re.split(r"(\s+)", text)
         cleaned = []
         for item in lst:
             if len(item) > 0:
@@ -1340,7 +1295,7 @@ class Philter:
         in_path="data/i2b2_results/",
         summary_output="data/phi/summary.json",
         summary_coords_output="data/phi/summary_coords.json",
-        phi_matcher=re.compile("\*+"),
+        phi_matcher=re.compile(r"\*+"),
         only_digits=False,
         fn_output = "data/phi/fn.txt",
         fp_output = "data/phi/fp.txt",
@@ -1415,26 +1370,19 @@ class Philter:
 
                 encoding1 = self.detect_encoding(philtered_filename)
                 philtered = open(philtered_filename,"r").read()
-                
-                          
-                philtered_words = re.split("(\s+)", philtered)
-                philtered_words_cleaned = []
-                for item in philtered_words:
-                    if len(item) > 0:
-                        if item.isspace() == False:
-                            split_item = re.split("(\s+)", re.sub(punctuation_matcher, " ", item))
-                            for elem in split_item:
-                                if len(elem) > 0:
-                                    philtered_words_cleaned.append(elem)
-                        else:
-                            philtered_words_cleaned.append(item)
-                
+
+                philtered_words_cleaned = get_clean(philtered,
+                                                    punctuation_matcher,
+                                                    spaces=True)[0]
+
                 encoding2 = self.detect_encoding(anno_filename)
-                anno = open(anno_filename,"r").read()              
-                
-                anno_words_cleaned = self.get_clean_filtered(anno_filename, anno)[0]
-           
-                for c,w,r in self.seq_eval(philtered_words_cleaned, anno_words_cleaned, f):
+                anno = open(anno_filename,"r").read()
+
+                anno_words_cleaned = self.get_clean_filtered(anno_filename,
+                                                             anno)[0]
+
+                for c,w,r in self.seq_eval(philtered_words_cleaned,
+                                           anno_words_cleaned, f):
 
                     # Double check that we aren't adding blank spaces or single punctionation characters to our lists
                     if w.isspace() == False and (re.sub(r"[^a-zA-Z0-9\*]+", "", w) != ""):
@@ -1559,19 +1507,7 @@ class Philter:
             else:
                 text = open(input_filename,"r").read()
 
-
-            lst = re.split("(\s+)", text)
-            cleaned = []
-            cleaned_coords = []
-            for item in lst:
-                if len(item) > 0:
-                    if item.isspace() == False:
-                        split_item = re.split("(\s+)", re.sub(r"[^a-zA-Z0-9]", " ", item))
-                        for elem in split_item:
-                            if len(elem) > 0:
-                                cleaned.append(elem)
-                    else:
-                        cleaned.append(item)
+            cleaned = get_clean(text, r"[^a-zA-Z0-9]", spaces=True)[0]
             
             # Get coords for POS tags
             start_coordinate = 0
@@ -2409,12 +2345,12 @@ class Philter:
                 encoding1 = self.detect_encoding(orig_filename)
                 orig = open(orig_filename,"r", encoding=encoding1['encoding']).read()
 
-                orig_words = re.split("\s+", orig)
+                orig_words = re.split(r"\s+", orig)
 
                 anno_filename = anno_folder+f.split(".")[0]+anno_suffix
                 encoding2 = self.detect_encoding(anno_filename)
                 anno = open(anno_filename,"r", encoding=encoding2['encoding']).read()
-                anno_words = re.split("\s+", anno)
+                anno_words = re.split(r"\s+", anno)
 
                 anno_dict = {}
                 orig_dict = {}
@@ -2449,7 +2385,7 @@ class Philter:
                             phi[f] = []
 
                         c = "string"
-                        if re.search("\d+", w):
+                        if re.search(r"\d+", w):
                             c = "number"
 
                         phi[f].append({"phi":w,"context":window,"class":c})
@@ -2496,7 +2432,7 @@ class Philter:
         non_phi_number = {}
         non_phi_string = {}
         for w in word_counts:
-            if re.search("\d+", w):
+            if re.search(r"\d+", w):
                 if w not in non_phi_number:
                     non_phi_number[w] = 0
                 non_phi_number[w] += 1
@@ -2535,9 +2471,9 @@ class Philter:
             wordlst = []
             phi_word = phi["phi"]
             for c in phi_word:
-                if re.match("\d+", c):
+                if re.match(r"\d+", c):
                     wordlst.append(digit_char)
-                elif re.match("[a-zA-Z]+", c):
+                elif re.match(r"[a-zA-Z]+", c):
                     wordlst.append(string_char)
                 else:
                     wordlst.append(c)
