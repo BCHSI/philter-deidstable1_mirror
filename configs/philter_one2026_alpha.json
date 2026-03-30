@@ -341,7 +341,7 @@
         "type":"regex",
         "exclude":false,
         "filepath":"filters/regex/safe/cd_safe.txt",
-        "notes":"This should keep anything with pattern vena CD##"
+        "notes":"This should keep anything with pattern CD##"
     },
     {
         "title":"cea safe",
