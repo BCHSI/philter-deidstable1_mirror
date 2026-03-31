@@ -27,32 +27,32 @@ teens = "ten|eleven|twelve|thirteen|fourteen|fifteen|sixteen|seventeen|eighteen|
 decades_lt_90 = "twenty|thirty|forty|fifty|sixty|seventy|eighty"
 
 ones = "one|two|three|four|five|six|seven|eight|nine"
-# Get blacklisted names
-# names_blacklist = json.loads(open("../../filters/blacklists/names_blacklist_ssfirst.json").read())
+# Get protectlisted names
+# names_protectlist = json.loads(open("../../filters/protectlists/names_protectlist_ssfirst.json").read())
 # person_names = ''
-# for key in names_blacklist:
+# for key in names_protectlist:
 # 	person_names += key + '|'
 # # Get rid of last pipe
 # person_names = person_names[:-1]
 
 # Get small towns
-towns_json = json.loads(open("../blacklists/town_tokens_black_list_fp_removed.json").read())
+towns_json = json.loads(open("../protectlists/town_tokens_protect_list_fp_removed.json").read())
 town_names = ''
 for key in towns_json:
     town_names += key + '|'
 # Get rid of last "|"
 town_names = town_names[:-1]
 
-# Get gene symbols from json whitelist
-symbols_json = json.loads(open("../whitelists/whitelist_genes_and_patho_terms_pruned.json").read())
+# Get gene symbols from json savelist
+symbols_json = json.loads(open("../savelists/savelist_genes_and_patho_terms_pruned.json").read())
 gene_symbols = ''
 for key in symbols_json:
         gene_symbols += key + '|'
 # Get rid of last "|"
 gene_symbols = gene_symbols[:-1]
 
-# Get stagings terms from json whitelist
-terms_json = json.loads(open("../whitelists/whitelist_staging_terms.json").read())
+# Get stagings terms from json savelist
+terms_json = json.loads(open("../savelists/savelist_staging_terms.json").read())
 staging_terms = ''
 for key in terms_json:
         staging_terms += key + '|'
