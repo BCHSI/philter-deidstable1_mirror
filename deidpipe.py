@@ -100,7 +100,6 @@ def main():
         mongo = read_mongo_config(args.mongodb)
         try:
             db = get_mongo_handle(mongo)
-            print(db)
         except:
             print("Mongo Server not available")
         #for batch in collection_chunk.distinct('batch'):
