@@ -67,6 +67,7 @@ class Phitexts:
                              password=mongo["password"])
         try:
           db = client[mongo['db']]
+          print(db)
         except:
           print("Mongo Server not available")
         return db
@@ -95,9 +96,8 @@ class Phitexts:
         meta_status = db[mongo['collection_status']]
         raw_note_text = db[mongo['collection_raw_note_text']]
         meta_in = db[mongo['collection_meta_data']] 
-        server = socket.gethostname() + ".ucsfmedicalcenter.org" 
+        server = socket.gethostname() 
         #batch = str(batch)
-         
         try:
            to_philter = chunk_collection.aggregate([{"$match":{"$and":[{"url": server.lower()},{"batch": batch}]}},
                                                     {"$lookup": {"from": 'raw_note_text', "localField": "_id", "foreignField": "_id", "as": "get_text"}},
@@ -1013,7 +1013,6 @@ class Phitexts:
     def mongo_save_log(self, mongo, failed_date, eval_table, phi_table,
                        phi_count_df, csv_summary_df, batch_summary_df,
                        dynamic_protectlist_df, age_norm_info):
-        print("In mongo save log")
         try:
             db = self.db
             collection_log_batch_summary = db[mongo['collection_log_batch_summary']]
@@ -1037,34 +1036,65 @@ class Phitexts:
         phi_count['Batch'] = self.batch
         phi_count['Run'] = max_run_num
         batch_summary['Run'] = max_run_num
-        collection_log_batch_summary.insert(batch_summary)
-        collection_log_batch_phi_count.insert(phi_count)        
+
+        try:
+           if batch_summary:
+              collection_log_batch_summary.insert_one(batch_summary)
+              print(f"Inserted {len(batch_summary)} batch summary records")
+        except Exception as e:
+              print(f"Error inserting batch summary: {e}")
+
+        try:
+           if phi_count:
+              collection_log_batch_phi_count.insert_one(phi_count)
+              print(f"Inserted {len(phi_count)} phi count records")
+        except Exception as e:
+           print(f"Error inserting phi count: {e}")
+        #collection_log_batch_summary.insert_many(batch_summary)
+        #collection_log_batch_phi_count.insert_many(phi_count)        
         
         #csv_summary_df.rename(columns = {'filename': '_id'}, inplace = True)
         csv_summary_df['Run'] = max_run_num
         detailed_batch_summary = csv_summary_df.to_dict(orient='records')
-        collection_detailed_batch_summary.insert(detailed_batch_summary)        
+        if detailed_batch_summary:
+           collection_detailed_batch_summary.insert_many(detailed_batch_summary) 
+
         if not dynamic_protectlist_df.empty:
             #dynamic_protectlist_df.rename(columns = {'filename': '_id'}, inplace = True)
             dynamic_protectlist_df['Run'] = max_run_num
             dynamic_protectlist = dynamic_protectlist_df.to_dict(orient='records')
-            collection_log_dynamic_protectlist.insert(dynamic_protectlist)
-
+            try:
+               if dynamic_protectlist:
+                  collection_log_dynamic_protectlist.insert_many(dynamic_protectlist)
+            except Exception as e:
+                  print(f"Error inserting dynamic_protectlist log: {e}")
         if bool(failed_date):
             failed_date['Batch'] = self.batch
             failed_date['Run'] = max_run_num
-            collection_log_failed_dates.insert(failed_date)
+            try:
+               if failed_date:
+                  collection_log_failed_dates.insert_one(failed_date)
+            except Exception as e:
+                  print(f"Error inserting failed date log: {e}")
+
 
         if bool(eval_table):
             eval_table['Batch'] = self.batch
             eval_table['Run'] = max_run_num
-            collection_log_parsed_dates.insert(eval_table)
-
+            try:
+               if eval_table: 
+                  collection_log_parsed_dates.insert_one(eval_table)
+            except Exception as e:
+                  print(f"Error inserting eval table log: {e}")
         if bool(phi_table):
             phi_table['Batch'] = self.batch
             phi_table['Run'] = max_run_num
-            collection_log_phi_marked.insert(phi_table)
- 
+            try:
+               if phi_table:
+                  collection_log_phi_marked.insert_one(phi_table)
+            except Exception as e:
+                  print(f"Error inserting phi table log: {e}")
+
     def _get_phi_type(self, filename, start, stop):
         for phi_type in self.types.keys():
             for begin,end in self.types[phi_type][0].filecoords(filename):
