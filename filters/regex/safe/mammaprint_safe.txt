@@ -1,0 +1,1 @@
+(?i)\b(?:the\s+)?Mammaprint(?:\s+(?:test|assay|analysis|result|score|report|panel|exam|examination|screening))?(?:\s+(?:was|is|shows?|indicates?|suggests?))?
