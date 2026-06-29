@@ -659,11 +659,25 @@
         "notes":"This should not mark gauge and needle value as date fps"
     },
     {
-        "title":"measurement safe",
+        "title":"alcohol measurement safe",
         "type":"regex",
         "exclude":false,
-        "filepath":"filters/regex/safe/measurement_safe.txt",
+        "filepath":"filters/regex/safe/alcohol_measurement_safe.txt",
+        "notes":"This should keep anything with pattern alcohol measurements, etc"
+    },
+    {
+        "title":"wbld measurement safe",
+        "type":"regex",
+        "exclude":false,
+        "filepath":"filters/regex/safe/wbld_measurement_safe.txt",
         "notes":"This should keep anything with pattern grams, etc"
+    },
+    {
+        "title":"labrum measurement safe",
+        "type":"regex",
+        "exclude":false,
+        "filepath":"filters/regex/safe/labrum_safe.txt",
+        "notes":"This should keep labrum from being over redacted"
     },
     {
         "title":"t2 score safe",
@@ -1051,6 +1065,27 @@
         "note": "This should keep any personal pronouns"
     },
     {
+        "title": "address measurement safe",
+        "type": "regex",
+        "exclude": false,
+        "filepath": "filters/regex/safe/address_measurement_safe.txt",
+        "note": "This should keep any measurement that looks like address safe"
+    },
+    {
+        "title": "transcript id measurement safe",
+        "type": "regex",
+        "exclude": false,
+        "filepath": "filters/regex/safe/transcript_safe.txt",
+        "note": "This should keep any transcript ids safe"
+    },
+    {
+        "title": "variant measurement safe",
+        "type": "regex",
+        "exclude": false,
+        "filepath": "filters/regex/safe/variant_safe.txt",
+        "note": "This should keep any variant safe"
+    },
+    {
         "title":"full street address",
         "type":"regex",
         "exclude":true,
@@ -1404,6 +1439,13 @@
         "filepath":"filters/regex/addresses/room_#_transformed.txt",
         "notes":"This should remove anything that has a room number",
         "phi_type":"LOCATION"
+    },
+    {
+        "title": "date measurement safe",
+        "type": "regex",
+        "exclude": false,
+        "filepath": "filters/regex/safe/date_measurement_safe.txt",
+        "note": "This should keep any measurement that looks like date safe"
     },
     { 
         "title":"date_teime_percent",
