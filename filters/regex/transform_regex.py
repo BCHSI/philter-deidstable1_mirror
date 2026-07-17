@@ -27,10 +27,12 @@ teens = "ten|eleven|twelve|thirteen|fourteen|fifteen|sixteen|seventeen|eighteen|
 decades_lt_90 = "twenty|thirty|forty|fifty|sixty|seventy|eighty"
 
 ones = "one|two|three|four|five|six|seven|eight|nine"
-# Get blacklisted names
-# names_blacklist = json.loads(open("../../filters/protectlists/names_blacklist_ssfirst.json").read())
+
+# Get protectlisted names
+# names_protectlist = json.loads(open("../../filters/protectlists/names_protectlist_ssfirst.json").read())
+
 # person_names = ''
-# for key in names_blacklist:
+# for key in names_protectlist:
 # 	person_names += key + '|'
 # # Get rid of last pipe
 # person_names = person_names[:-1]
