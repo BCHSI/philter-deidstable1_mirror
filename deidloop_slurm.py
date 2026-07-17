@@ -87,6 +87,7 @@ def runDeidChunck(unit, q, philterFolder, configfile, refdate):
                   "--chdir", philterFolder,                 # like -cwd
                   "--job-name", jobname,                  # like -N
                   "--time", "00:29:00",                  # like -l h_rt=...
+                  "--mem", "5G",
                   "--output", outpat,                    # like -j yes (stdout)
                   "--error",  outpat,                    # merge stderr into stdout
                   "--wrap",
@@ -104,6 +105,7 @@ def runDeidChunck(unit, q, philterFolder, configfile, refdate):
                   "--chdir", philterFolder,                 # like -cwd
                   "--job-name", jobname,                  # like -N
                   "--time", "00:29:00",                  # like -l h_rt=...
+                  "--mem", "5G",
                   "--output", outpat,                    # like -j yes (stdout)
                   "--error",  outpat,                    # merge stderr into stdout
                   "--wrap",
