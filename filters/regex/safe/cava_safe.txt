@@ -1,1 +1,1 @@
-(?i)\bvena\scava\b
+(?i)\b((inferior\s)?vena\scava|tumor is in IVC)\b
