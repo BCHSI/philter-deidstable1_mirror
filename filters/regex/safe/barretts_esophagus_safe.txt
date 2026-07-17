@@ -1,1 +1,1 @@
-(?i)\bbarrett\'s\sesophagus\b
+(?i)\b(barrett\'s\s|(Short|Small|Long|Focal|Patchy|Diffuse|Localized|Circumferential|Proximal|Distal)\s+segment of )esophagus\b
