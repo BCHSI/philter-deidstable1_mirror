@@ -687,6 +687,13 @@
         "notes":"This should not mark lymph nodes as date fps"
     },
     {
+        "title":"headache safe",
+        "type":"regex",
+        "exclude":false,
+        "filepath":"filters/regex/safe/headache_safe.txt",
+        "notes":"This should not mark headache pain scales as date fps"
+    },
+    {
         "title":"medication safe",
         "type":"regex",
         "exclude":false,
