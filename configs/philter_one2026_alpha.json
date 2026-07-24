@@ -155,6 +155,20 @@
         "notes":"This should keep anything with pattern at measurement"
     },
     {
+        "title":"neuropsychology safe",
+        "type":"regex",
+        "exclude":false,
+        "filepath":"filters/regex/safe/neuropsychology_safe_v1.txt",
+        "notes":"This should keep anything with neuropsychology related scores safe"
+    }, 
+    {
+        "title":"zonulopathy safe",
+        "type":"regex",
+        "exclude":false,
+        "filepath":"filters/regex/safe/zonulopathy_safe.txt",
+        "notes":"This should keep zonulopathy term safe"
+    },    
+    {
         "title":"airway safe",
         "type":"regex",
         "exclude":false,
@@ -652,6 +666,27 @@
         "notes":"This should not mark gauge and needle value as date fps"
     },
     {
+        "title":"alcohol measurement safe",
+        "type":"regex",
+        "exclude":false,
+        "filepath":"filters/regex/safe/alcohol_measurement_safe.txt",
+        "notes":"This should keep anything with pattern alcohol measurements, etc"
+    },
+    {
+        "title":"wbld measurement safe",
+        "type":"regex",
+        "exclude":false,
+        "filepath":"filters/regex/safe/wbld_measurement_safe.txt",
+        "notes":"This should keep anything with pattern grams, etc"
+    },
+    {
+        "title":"labrum measurement safe",
+        "type":"regex",
+        "exclude":false,
+        "filepath":"filters/regex/safe/labrum_safe.txt",
+        "notes":"This should keep labrum from being over redacted"
+    },
+    {
         "title":"t2 score safe",
         "type":"regex",
         "exclude":false,
@@ -1042,6 +1077,27 @@
         "exclude": false,
         "filepath": "filters/regex/safe/pronouns_safe.txt",
         "note": "This should keep any personal pronouns"
+    },
+    {
+        "title": "address measurement safe",
+        "type": "regex",
+        "exclude": false,
+        "filepath": "filters/regex/safe/address_measurement_safe.txt",
+        "note": "This should keep any measurement that looks like address safe"
+    },
+    {
+        "title": "transcript id measurement safe",
+        "type": "regex",
+        "exclude": false,
+        "filepath": "filters/regex/safe/transcript_safe.txt",
+        "note": "This should keep any transcript ids safe"
+    },
+    {
+        "title": "variant measurement safe",
+        "type": "regex",
+        "exclude": false,
+        "filepath": "filters/regex/safe/variant_safe.txt",
+        "note": "This should keep any variant safe"
     },
     {
         "title":"full street address",

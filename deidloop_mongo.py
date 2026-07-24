@@ -70,9 +70,10 @@ def get_mongo_handle(mongo):
 
 def get_batch(db, mongo):
     collection_chunk = db[mongo['collection_chunk']]
-    
-    server = socket.gethostname() + ".ucsfmedicalcenter.org"
+    print(collection_chunk) 
+    server = socket.gethostname()
     batch = collection_chunk.distinct('batch',{'url': server.lower()})
+    print(batch)
     return batch
 
 def runDeidChunck(unit, q, philterFolder, philterConfig, dbConfig, db, mongo, refdate):
@@ -86,8 +87,10 @@ def runDeidChunck(unit, q, philterFolder, philterConfig, dbConfig, db, mongo, re
     while True:
         # time for run
         t0 = time.time()
+        print("Waiting for batch...") 
         batch = q.get()
-        call(["/data/radhakrishnanl/deidproj/bin/python3", "-O", "deidpipe.py",
+        print("Got a batch...") 
+        call(["python", "-O", "deidpipe.py",
               "-m", dbConfig,
               "-f", os.path.join(philterConfig),
               "-b", str(batch),
@@ -105,6 +108,36 @@ def runDeidChunck(unit, q, philterFolder, philterConfig, dbConfig, db, mongo, re
         print(str(unit) + " " +"batch"+ ": " + str(t) + " seconds")
         q.task_done()
 
+
+def main():
+    enclosure_queue = Queue()
+    args = get_args()
+    mongo = read_mongo_config(args.mongofile)
+    db = get_mongo_handle(mongo)
+
+    # 1. Fill the queue FIRST
+    list_of_batch_to_process = get_batch(db, mongo)
+
+    for batch in list_of_batch_to_process:
+        enclosure_queue.put(batch)
+    print(f"Queue loaded with {enclosure_queue.qsize()} batches")
+
+    # 2. THEN start workers
+    print("starting {0} worker threads".format(args.threads))
+    for unit in range(args.threads):
+        worker = Thread(target=runDeidChunck,
+                        args=(unit, enclosure_queue,
+                              os.path.join(args.philter), args.philterconfig, args.mongofile, db, mongo, args.refdate))
+        worker.daemon = True
+        worker.start()
+
+    print('*** Main thread waiting')
+    enclosure_queue.join()
+    print('*** Done')
+    return 0
+
+'''
+
 def main():
     enclosure_queue = Queue()
 
@@ -121,7 +154,7 @@ def main():
                         args=(unit, enclosure_queue,
                               os.path.join(args.philter), args.philterconfig, args.mongofile, db, mongo,args.refdate))
 
-        worker.setDaemon(True)
+        worker.daemon = True
         worker.start()
 
 
@@ -138,5 +171,6 @@ def main():
     print('*** Done')
 
     return 0
+'''
 if __name__ == "__main__":
     sys.exit(main())
