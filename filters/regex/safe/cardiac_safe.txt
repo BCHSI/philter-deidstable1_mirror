@@ -1,1 +1,1 @@
-(?i)\bcadiac (valves|output|chambers):\b
+(?i)\bcardiac (valves|output|chambers):\b
