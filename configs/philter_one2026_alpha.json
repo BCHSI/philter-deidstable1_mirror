@@ -160,14 +160,14 @@
         "exclude":false,
         "filepath":"filters/regex/safe/neuropsychology_safe_v1.txt",
         "notes":"This should keep anything with neuropsychology related scores safe"
-    }, 
+    },
     {
         "title":"zonulopathy safe",
         "type":"regex",
         "exclude":false,
         "filepath":"filters/regex/safe/zonulopathy_safe.txt",
         "notes":"This should keep zonulopathy term safe"
-    },    
+    },
     {
         "title":"airway safe",
         "type":"regex",
@@ -2693,6 +2693,13 @@
         "exclude": false,
         "filepath": "filters/regex/safe/carcinoma_safe.txt",
         "notes": "This should keep anything that matches a something CA"
+    },
+    {
+        "title": "lacks safe",
+        "type": "regex",
+        "exclude": false,
+        "filepath": "filters/regex/safe/lacks_safe.txt",
+        "notes": "This should keep anything that matches lacks capsule"
     },
     {
         "title":"POS MATCHER",
