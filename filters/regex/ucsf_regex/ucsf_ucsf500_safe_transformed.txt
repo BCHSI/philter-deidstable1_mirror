@@ -1,0 +1,1 @@
+\bUCSF500( Solid Tumor)?\b
