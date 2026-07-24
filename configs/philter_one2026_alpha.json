@@ -2723,6 +2723,13 @@
         "notes": "This should keep anything that matches immunohistostaining"
     },
     {
+        "title": "mammaprint safe",
+        "type": "regex",
+        "exclude": false,
+        "filepath": "filters/regex/safe/mammaprint_safe.txt",
+        "notes": "This should keep anything that matches mammaprint"
+    },
+    {
         "title":"POS MATCHER",
         "type":"pos_matcher",
         "exclude":false,
