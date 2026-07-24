@@ -85,6 +85,20 @@
         "notes": "This should keep anything that matches a molecular marker"
     },
     {
+        "title": "gene promoter safe",
+        "type": "regex",
+        "exclude": false,
+        "filepath": "filters/regex/genes_and_patho_terms/gene_promoter_safe_transformed.txt",
+        "notes": "This should keep anything that matches a gene promoter"
+    },
+    {
+        "title": "gene variant mutation safe",
+        "type": "regex",
+        "exclude": false,
+        "filepath": "filters/regex/genes_and_patho_terms/gene_variant_mutation_safe_transformed.txt",
+        "notes": "This should keep anything that matches a gene variant mutation"
+    },
+    {
         "title":"wheezes safe",
         "type":"regex",
         "exclude":false,
@@ -1112,6 +1126,13 @@
         "exclude": false,
         "filepath": "filters/regex/safe/guided_safe.txt",
         "note": "This should keep anything guided needle safe"
+    },
+    {
+        "title": "cardiac safe",
+        "type": "regex",
+        "exclude": false,
+        "filepath": "filters/regex/safe/cardiac_safe.txt",
+        "note": "This should keep cardiac section headers safe"
     },
     {
         "title":"full street address",
