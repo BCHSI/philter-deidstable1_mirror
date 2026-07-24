@@ -66,7 +66,7 @@ staging_terms = staging_terms[:-1]
 rootdir = '.'
 for subdir, dirs, files in os.walk(rootdir):
     for file in files:
-        if (".txt" in file
+        if (".txt" in file and ".txt~" not in file
             and "_transformed.txt" not in file and "catchall" not in file):
             filepath = os.path.join(subdir, file)
             # Get current file name and create transformed name
@@ -93,10 +93,4 @@ for subdir, dirs, files in os.walk(rootdir):
             # Write new file
             with open(new_filepath, "w") as fin:
                 fin.write(regex)
-
-
-
-
-
-
 

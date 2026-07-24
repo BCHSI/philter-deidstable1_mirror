@@ -42,6 +42,13 @@
         "notes":"This should keep anything with pattern MyChart"
     },
     {
+        "title":"ucsf UCSF500 safe",
+        "type":"regex",
+        "exclude":false,
+        "filepath":"filters/regex/ucsf_regex/ucsf_ucsf500_safe.txt",
+        "notes":"This should keep anything with pattern UCSF500"
+    },
+    {
         "title":"pTNM staging",
         "type":"regex",
         "exclude":false,
@@ -1098,6 +1105,13 @@
         "exclude": false,
         "filepath": "filters/regex/safe/variant_safe.txt",
         "note": "This should keep any variant safe"
+    },
+    {
+        "title": "guided safe",
+        "type": "regex",
+        "exclude": false,
+        "filepath": "filters/regex/safe/guided_safe.txt",
+        "note": "This should keep anything guided needle safe"
     },
     {
         "title":"full street address",
@@ -2700,6 +2714,13 @@
         "exclude": false,
         "filepath": "filters/regex/safe/lacks_safe.txt",
         "notes": "This should keep anything that matches lacks capsule"
+    },
+    {
+        "title": "immunohistostaining safe",
+        "type": "regex",
+        "exclude": false,
+        "filepath": "filters/regex/safe/immunohistostaining_safe.txt",
+        "notes": "This should keep anything that matches immunohistostaining"
     },
     {
         "title":"POS MATCHER",
