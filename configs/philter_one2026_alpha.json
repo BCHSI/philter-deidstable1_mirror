@@ -1455,21 +1455,6 @@
         "phi_type":"LOCATION"
     },
     {
-	"title": "date measurement safe",
-        "type": "regex",
-        "exclude": false,
-        "filepath": "filters/regex/safe/date_measurement_safe.txt",
-        "note": "This should keep any measurement that looks like date safe"
-    },
-    { 
-        "title":"date_time_percent",
-        "type":"regex",
-        "exclude":true,
-        "filepath":"filters/regex/dates/date_time_percent.txt",
-        "notes":"This should remove anything with time between date and % like 1126 in the pattern: 03/03/19 1126 80 %",
-        "phi_type":"DATE" 
-    }, 
-    {
         "title":"YYYY/MM-YYYY/MM",
         "type":"regex",
         "exclude":true,
