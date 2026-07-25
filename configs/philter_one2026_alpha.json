@@ -71,6 +71,13 @@
         "notes": "This should keep anything that matches a molecular marker"
     },
     {
+        "title": "gene list safe",
+        "type": "regex",
+        "exclude": false,
+        "filepath": "filters/regex/genes_and_patho_terms/gene_list_safe_transformed.txt",
+        "notes": "This should keep anything that matches a gene list"
+    },
+    {
         "title":"hospital safe",
         "type":"regex",
         "exclude":false,
