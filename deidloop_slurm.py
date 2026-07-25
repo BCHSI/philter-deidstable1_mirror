@@ -86,7 +86,7 @@ def runDeidChunck(unit, q, philterFolder, configfile, refdate):
             call(["sbatch",
                   "--chdir", philterFolder,                 # like -cwd
                   "--job-name", jobname,                  # like -N
-                  "--time", "00:29:00",                  # like -l h_rt=...
+                  "--time", "00:59:00",                  # like -l h_rt=...
                   "--mem", "5G",
                   "--output", outpat,                    # like -j yes (stdout)
                   "--error",  outpat,                    # merge stderr into stdout
@@ -104,7 +104,7 @@ def runDeidChunck(unit, q, philterFolder, configfile, refdate):
             call(["sbatch",
                   "--chdir", philterFolder,                 # like -cwd
                   "--job-name", jobname,                  # like -N
-                  "--time", "00:29:00",                  # like -l h_rt=...
+                  "--time", "00:59:00",                  # like -l h_rt=...
                   "--mem", "5G",
                   "--output", outpat,                    # like -j yes (stdout)
                   "--error",  outpat,                    # merge stderr into stdout
