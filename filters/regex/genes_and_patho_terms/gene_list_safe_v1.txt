@@ -1,0 +1,1 @@
+(?i)(\b(wildtype: )?(("""+gene_symbols+r""")(, (and )?))*("""+gene_symbols+r""")(; | mutation(s)?)|\b("""+gene_symbols+r""")\-("""+gene_symbols+r""") fusion|\b(("""+gene_symbols+r""")(,|\/))+("""+gene_symbols+r""") deficiency( \((("""+gene_symbols+r"""), )+("""+gene_symbols+r""")\) )?|(\b("""+gene_symbols+r""") )*\((("""+gene_symbols+r"""), )+("""+gene_symbols+r""")\): )\b
