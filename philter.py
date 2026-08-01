@@ -630,6 +630,11 @@ class Philter:
         if regex == None: return # nothing to match
         regex_name = os.path.basename(self.patterns[pattern_index]['filepath'])
         
+        if __debug__ and self.verbose:
+            print("map_regex(): searching for pattern with index "
+                  + str(pattern_index) + " \""
+                  + self.patterns[pattern_index]["title"]
+                  + "\" is " + str(regex))
         # All regexes except matchall
         if regex != re.compile('.'):
             
@@ -639,11 +644,6 @@ class Philter:
                     self.regex_name_list.append(regex_name)
                 # start timer
                 start_time = time.time()
-            if __debug__ and self.verbose:
-                print("map_regex(): searching for pattern with index "
-                      + str(pattern_index) + " \""
-                      + self.patterns[pattern_index]["title"]
-                      + "\" is " + str(regex))
             matches = regex.finditer(text)
             match_count = 0
             for m in matches:
@@ -682,6 +682,11 @@ class Philter:
                     continue
 
                 if regex.match(word_clean):
+                    if __debug__ and self.verbose:
+                        print("map_regex() found:", word_clean, "at", start,
+                              stop, "in", filename)
+                        if filename not in coord_map.map:
+                            print("not in coord_map:",filename)
                     coord_map.add_extend(filename, start, stop)
                     
                 #advance our start coordinate
@@ -743,6 +748,11 @@ class Philter:
             # Start timer
             start_time = time.time()
         if not regex == {}:
+            if __debug__ and self.verbose:
+                print("map_regex_context(): searching for pattern with index "
+                      + str(pattern_index) + " \""
+                      + self.patterns[pattern_index]["title"]
+                      + "\" is " + str(regex))
             matches = regex.finditer(text)
             match_count = 0
             for m in matches:
@@ -796,6 +806,12 @@ class Philter:
                     or (context == "left_and_right"
                         and (phi_right == True and phi_left == True))):
                     for item in tokenized_matches:
+                        if __debug__ and self.verbose:
+                            print("map_regex_context() found:", m,
+                                  "at", m.start(), m.start()+len(m.group()),
+                                  "in", filename)
+                            if filename not in coord_map.map:
+                                print("not in coord_map:",filename)
                         coord_map.add_extend(filename, item[0], item[1])
 
         # Stop time for time profiling
