@@ -1017,7 +1017,9 @@ class Philter:
         else:
             phi_type = "OTHER"
 
+        has_coords = False
         for start,stop in coord_map.filecoords(filename):
+            has_coords = True
             if (pattern['type'] != 'regex_context'
                 and pattern['type'] != 'dynamic_set'
                 and pattern['type'] != 'dynamic_regex'
@@ -1032,7 +1034,9 @@ class Philter:
                 else:
                     if not self.exclude_map.does_overlap(filename, start, stop):
                         self.include_map.add_extend(filename, start, stop)
-                        self.data_all_files[filename]["non-phi"].append({"start":start, "stop":stop, "word":txt[start:stop], "filepath":filter_path})
+                        np = {"start":start, "stop":stop,
+                              "word":txt[start:stop], "filepath":filter_path}
+                        self.data_all_files[filename]["non-phi"].append(np)
                     else:
                         pass
 
@@ -1041,17 +1045,20 @@ class Philter:
                 if exclude:
                     self.exclude_map.add_extend(filename, start, stop)
                     self.include_map.remove(filename, start, stop)
-                    self.phi_type_dict[phi_type][0].add_extend(filename, start, stop)
+                    self.phi_type_dict[phi_type][0].add_extend(filename,
+                                                               start, stop)
                 else:
                     self.include_map.add_extend(filename, start, stop)
                     self.exclude_map.remove(filename, start, stop)
-                    self.data_all_files[filename]["non-phi"].append({"start":start, "stop":stop, "word":txt[start:stop], "filepath":filter_path})
+                    np = {"start":start, "stop":stop,
+                          "word":txt[start:stop], "filepath":filter_path}
+                    self.data_all_files[filename]["non-phi"].append(np)
 
-            if __debug__ and self.verbose:
-                for exc in self.exclude_map.filecoords(filename):
-                    print("EXCLUDE: " + txt[exc[0]:exc[1]] + " at " + str(exc))
-                for inc in self.include_map.filecoords(filename):
-                    print("INCLUDE: " + txt[inc[0]:inc[1]] + " at " + str(inc))
+        if __debug__ and self.verbose and has_coords:
+            for exc in self.exclude_map.filecoords(filename):
+                print("EXCLUDE: " + txt[exc[0]:exc[1]] + " at " + str(exc))
+            for inc in self.include_map.filecoords(filename):
+                print("INCLUDE: " + txt[inc[0]:inc[1]] + " at " + str(inc))
 
     def transform(self):
         """ transform
