@@ -348,18 +348,14 @@ class Philter:
                                           usecols=['value', 'phi_type',
                                                    'note_key'],
                                           dtype=str, encoding='latin-1')
-                #names_probes = probes_file.loc[(probes_file['phi_type'] in
-                 #                               names_probe_types)]
-                names_probes = probes_file.loc[(probes_file['phi_type'] == 'lname') | (probes_file['phi_type'] == 'fname') | (probes_file['phi_type'] == 'mname') | (probes_file['phi_type'] == 'preferred_name')]
+                names_probes = probes_file[(probes_file['phi_type'].isin
+                                            (names_probe_types))]
                 zip_probes = probes_file.loc[(probes_file['phi_type'] == 'ZIP')]
                 mrn_probes = probes_file.loc[(probes_file['phi_type'] == 'MRN')]
                 phone_probes = probes_file.loc[(probes_file['phi_type']
                                                 == 'phone')]
-                address_probes = probes_file.loc[(probes_file['phi_type'] == 'ADDR') | (probes_file['phi_type'] == 'empr_city') | 
-                    (probes_file['phi_type'] == 'EMERG_CITY') | (probes_file['phi_type'] == 'EMERG_CITY_2') | 
-                    	(probes_file['phi_type'] == 'FATHER_CITY') | (probes_file['phi_type'] == 'MOTHER_CITY')]
-                #address_probes = probes_file.loc[(probes_file['phi_type'] in
-                 #                                 address_probe_types)]
+                address_probes = probes_file[(probes_file['phi_type'].isin
+                                              (address_probe_types))]
                 workplace_probes = probes_file.loc[(probes_file['phi_type']
                                                     == 'empr_id_cmt')]
             except pd.errors.EmptyDataError as err:
@@ -850,6 +846,8 @@ class Philter:
             print("map_set(): searching for pattern with index "
                   + str(pattern_index) + " \""
                   + self.patterns[pattern_index]["title"] + "\"")
+            if self.patterns[pattern_index]["title"] == "Dynamic Protectlist":
+                print(map_set)
 
         for tup in pos_list:
             word = tup[0]
