@@ -1,1 +1,1 @@
-(?i)alcohol,\s+\d+[\s\-]+\d+[\s\-]+\d+[\s\-]+mol
+(?i)\balcohol,\s+\d+[\s\-]+\d+[\s\-]+\d+[\s\-]+mol\b
