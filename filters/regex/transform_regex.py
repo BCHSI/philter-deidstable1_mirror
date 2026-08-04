@@ -73,10 +73,12 @@ for subdir, dirs, files in os.walk(rootdir):
             file_root = file.split(".")[0]
             new_file_name = file_root + "_transformed.txt"
             new_filepath = os.path.join(subdir, new_file_name)
+            if os.path.isfile(new_filepath):
+                os.remove(new_filepath)
             # Open file
             regex = open(filepath,"r").read().strip()
             # Replace variables
-            regex = (regex.replace('"""+month_name+r"""', month_name)
+            rgxtr = (regex.replace('"""+month_name+r"""', month_name)
                      .replace('"""+day_numbering+r"""', day_numbering)
                      .replace('"""+day_name+r"""', day_name)
                      .replace('"""+seasons+r"""', seasons)
@@ -90,7 +92,9 @@ for subdir, dirs, files in os.walk(rootdir):
                      .replace('"""+town_names+r"""', town_names)
                      .replace('"""+gene_symbols+r"""', gene_symbols)
                      .replace('"""+staging_terms+r"""', staging_terms))
+            if regex == rgxtr:
+                continue
             # Write new file
             with open(new_filepath, "w") as fin:
-                fin.write(regex)
+                fin.write(rgxtr)
 

@@ -1,1 +1,0 @@
-(?i)\bdo\s(not|you|I)\b

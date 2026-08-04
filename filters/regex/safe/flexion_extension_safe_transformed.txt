@@ -1,1 +1,0 @@
-(?i)\b(([a-z]+)?flexion|extension)\s\d\/5\b

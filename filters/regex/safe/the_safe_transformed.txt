@@ -1,1 +1,0 @@
-(?i)\b(to|in|on)\sthe\b

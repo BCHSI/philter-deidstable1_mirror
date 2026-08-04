@@ -1,1 +1,0 @@
-(?i)\bwaiting room [a-zA-Z0-9]+\b

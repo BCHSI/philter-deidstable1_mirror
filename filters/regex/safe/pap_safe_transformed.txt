@@ -1,1 +1,0 @@
-(?i)\bpap\s(smear(s)?|result(s)?)\b

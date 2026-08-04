@@ -1,1 +1,0 @@
-(?i)\b(collecting duct|urothelial|colorectal)\sCA\b

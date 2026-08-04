@@ -1,1 +1,0 @@
-(?i)\b((the|at|last|good|from|)\snight|night\s(sweats))\b

@@ -1,1 +1,0 @@
-(?i)\bdown(\'s)?\ssyndrome\b

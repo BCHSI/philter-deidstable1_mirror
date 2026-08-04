@@ -1,1 +1,0 @@
-(?i)\bhow\s(do|can|to|is|was)\b

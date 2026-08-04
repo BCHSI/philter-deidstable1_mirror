@@ -1,1 +1,0 @@
-(?i)\bdiminished\s*\(\d+\/\d+\)|\b(?:PPVT|BNT|GDS)\s*:\s*\d+\/\d+|\babreviated\s+(?:BNT|Rey-Osterrieth)\s*:\s*\d+\/\d+[^)]*|\(\d+\/\d+\s+(?:regular|irregular)(?:,\s*\d+\/\d+\s+(?:regular|irregular))*\)|\b(?:endorsed|recognized)\s+\d+\/\d+\s+(?:items|words)\s+on\s+the\s+\w+|\(modified\s+Rey-Osterrieth:\s*\d+\/\d+\)

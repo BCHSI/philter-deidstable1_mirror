@@ -1,1 +1,0 @@
-(?i)\b((were|was|is|results|data)\sfound|found\s(in|for))\b

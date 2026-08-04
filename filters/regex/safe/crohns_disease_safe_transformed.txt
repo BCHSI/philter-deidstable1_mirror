@@ -1,1 +1,0 @@
-(?i)\bcrohn\'s\sdisease\b

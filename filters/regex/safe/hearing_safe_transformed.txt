@@ -1,1 +1,0 @@
-(?i)\bhearing\s(loss|aid(s)?)\b

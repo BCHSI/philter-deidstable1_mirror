@@ -1,1 +1,0 @@
-(?i)\balcohol,\s+\d+[\s\-]+\d+[\s\-]+\d+[\s\-]+mol\b

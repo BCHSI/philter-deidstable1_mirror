@@ -1,1 +1,0 @@
-(?i)\bpatient states:\s{1,2}Headache\s{1,2}(\d{1,3})/(3|4|5|7|10|20|100)\b

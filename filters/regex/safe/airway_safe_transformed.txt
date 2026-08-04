@@ -1,1 +1,0 @@
-(?i)\bairway(:)?\s(suctioned|patent|patency|techniques|negative|resistance|inspection)\b

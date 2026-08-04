@@ -1,1 +1,0 @@
-(?i)\b((dietary|in|of|added|more|high)\sfiber|fiber\s(rich|supplements))\b

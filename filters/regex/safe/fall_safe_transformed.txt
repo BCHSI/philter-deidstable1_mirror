@@ -1,1 +1,0 @@
-(?i)\bfall\s(risk|from|on|precautions)\b

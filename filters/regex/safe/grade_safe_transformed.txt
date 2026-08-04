@@ -1,1 +1,0 @@
-(?i)\b((low|high|mild|)(\s|\-)grade)|((Fuhrman)(\s|\-)(grade|grading) for RCC)\b

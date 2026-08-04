@@ -1,1 +1,0 @@
-(?i)\b((short|long|walking|at|a)\sdistance|distance\sof)\b

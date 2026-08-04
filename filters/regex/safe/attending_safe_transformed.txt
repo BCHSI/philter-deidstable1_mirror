@@ -1,1 +1,0 @@
-(?i)\battending\s([a-z]+ologist(\was)?|physician(\swas)?|performed(\sthe)?)\b

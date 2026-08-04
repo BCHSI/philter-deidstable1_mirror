@@ -1,1 +1,0 @@
-(?i)\b(hodgkin\'s\slymphoma|hodgkin\slymphoma)\b

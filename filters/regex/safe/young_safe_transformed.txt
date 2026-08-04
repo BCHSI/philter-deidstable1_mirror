@@ -1,1 +1,0 @@
-(?i)\byoung\s(adult(s)?|age)\b

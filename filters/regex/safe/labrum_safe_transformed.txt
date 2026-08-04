@@ -1,1 +1,0 @@
-(?i)(?:anterior\s+(?:and\s+)?(?:anterior\s+)?superior\s+)?labrum(?:\s+(?:is|are|was|were)\s+(?:blunted|degenerated?|torn|intact|normal|abnormal|diminished|diminutive))?(?:\s+(?:without|with)\s+(?:displaced\s+)?tear)?(?:\s+(?:anteriorly?|posteriorly?|superiorly?|inferiorly?))*

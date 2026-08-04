@@ -1,1 +1,0 @@
-(?i)(?!your\s)(?!sent\sto\s)(?!to\syour\s)(?!notes\sto\s)(?!called\sto\s)(?!to\s)(?!by\s)(?!the\s)(?!per\s)(?!from\s)(?!another\s)\b((([A-Z][a-zA-Z]+\-)?([A-Z][a-zA-Z]+(\'s)?\s)?[A-Z][a-zA-Z]+(\s|\/))((pharmacy|cvs|walgreens|pharm|walgreen\'s|drugs))(\s#\d+)?|(pharmacy|cvs|walgreens|pharm|walgreen\'s|drugs)\s(([A-Z][a-zA-Z]+\-)?([A-Z][a-zA-Z]+(\'s)?\s)?[A-Z][a-zA-Z]+))\b

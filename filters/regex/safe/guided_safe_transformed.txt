@@ -1,1 +1,0 @@
-(?i)\b(Pleura, )?(CT|US|navigation|ultrasound)(-| )guided ((fine )?needle|paracentesis)\b

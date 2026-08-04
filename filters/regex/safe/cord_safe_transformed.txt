@@ -1,1 +1,0 @@
-(?i)\b(vocal|spinal|cervical)\scord(s)?\b

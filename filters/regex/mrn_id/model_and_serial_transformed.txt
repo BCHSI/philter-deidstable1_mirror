@@ -1,1 +1,0 @@
-\b((M|m)odel|(S|s)erial)\s+\#(\s+)?\d+\b
