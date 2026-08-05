@@ -1202,7 +1202,7 @@
         "title":"number streetname san",
         "type":"regex",
         "exclude":true,
-        "filepath":"filters/regex/addresses/num_streetname_san_transformed.txt",
+        "filepath":"filters/regex/addresses/num_streetname_san.txt",
         "notes":"This should remove anything that looks like the beginning of a street address followed by san (like san francsico)",
         "phi_type":"LOCATION"
     },
@@ -1276,7 +1276,7 @@
         "title":"city zip",
         "type":"regex",
         "exclude":true,
-        "filepath":"filters/regex/addresses/city_zip_transformed.txt",
+        "filepath":"filters/regex/addresses/city_zip.txt",
         "notes":"This should remove anything that has a city name, followed by a zip code",
         "phi_type":"LOCATION"
     },
@@ -1285,7 +1285,7 @@
         "title":"lives in",
         "type":"regex",
         "exclude":true,
-        "filepath":"filters/regex/addresses/lives_in_transformed.txt",
+        "filepath":"filters/regex/addresses/lives_in.txt",
         "notes":"This should remove anything that matches pattern lives in/on",
         "phi_type":"LOCATION"
     },
@@ -1301,7 +1301,7 @@
         "title":"county name",
         "type":"regex",
         "exclude":true,
-        "filepath":"filters/regex/addresses/county_name_transformed.txt",
+        "filepath":"filters/regex/addresses/county_name.txt",
         "notes":"",
         "phi_type":"LOCATION"
     },
@@ -1309,7 +1309,7 @@
         "title":"in city",
         "type":"regex",
         "exclude":true,
-        "filepath":"filters/regex/addresses/in_city_transformed.txt",
+        "filepath":"filters/regex/addresses/in_city.txt",
         "notes":"This should remove anything that has a city name",
         "phi_type":"LOCATION"
     },
@@ -1317,7 +1317,7 @@
         "title":"city",
         "type":"regex",
         "exclude":true,
-        "filepath":"filters/regex/addresses/city_transformed.txt",
+        "filepath":"filters/regex/addresses/city.txt",
         "notes":"This should remove anything that matches pattern [name] [city]",
         "phi_type":"LOCATION"
     },
@@ -1389,7 +1389,7 @@
         "title":"box room",
         "type":"regex",
         "exclude":true,
-        "filepath":"filters/regex/addresses/box_room_transformed.txt",
+        "filepath":"filters/regex/addresses/box_room.txt",
         "notes":"This should remove anything that has pattern box # followed by room #",
         "phi_type":"LOCATION"
     },
@@ -1397,7 +1397,7 @@
         "title":"room box",
         "type":"regex",
         "exclude":true,
-        "filepath":"filters/regex/addresses/room_box_transformed.txt",
+        "filepath":"filters/regex/addresses/room_box.txt",
         "notes":"This should remove anything that has pattern room # followed by box #",
         "phi_type":"LOCATION"
     },
@@ -1405,7 +1405,7 @@
         "title":"floor box",
         "type":"regex",
         "exclude":true,
-        "filepath":"filters/regex/addresses/floor_box_transformed.txt",
+        "filepath":"filters/regex/addresses/floor_box.txt",
         "notes":"This should remove anything that has pattern floor # followed by box #",
         "phi_type":"LOCATION"
     },
@@ -1413,7 +1413,7 @@
         "title":"desk #",
         "type":"regex",
         "exclude":true,
-        "filepath":"filters/regex/addresses/desk_#_transformed.txt",
+        "filepath":"filters/regex/addresses/desk_#.txt",
         "notes":"This should remove anything that has pattern desk #",
         "phi_type":"LOCATION"
     },
@@ -1421,7 +1421,7 @@
         "title":"pharmacy #",
         "type":"regex",
         "exclude":true,
-        "filepath":"filters/regex/addresses/pharmacy_#_transformed.txt",
+        "filepath":"filters/regex/addresses/pharmacy_#.txt",
         "notes":"This should remove anything that has pattern pharmacy #",
         "phi_type":"LOCATION"
     },
@@ -1429,7 +1429,7 @@
         "title":"at location",
         "type":"regex",
         "exclude":true,
-        "filepath":"filters/regex/addresses/at_address_noindicator_transformed.txt",
+        "filepath":"filters/regex/addresses/at_address_noindicator.txt",
         "notes":"This should remove anything that has pattern at X",
         "phi_type":"LOCATION"
     },
@@ -1437,7 +1437,7 @@
         "title":"number cardinal direction",
         "type":"regex",
         "exclude":true,
-        "filepath":"filters/regex/addresses/number_cardinal_direction_transformed.txt",
+        "filepath":"filters/regex/addresses/number_cardinal_direction.txt",
         "notes":"",
         "phi_type":"LOCATION"
     },
@@ -1445,7 +1445,7 @@
         "title":"waiting room",
         "type":"regex",
         "exclude":true,
-        "filepath":"filters/regex/addresses/waiting_room_transformed.txt",
+        "filepath":"filters/regex/addresses/waiting_room.txt",
         "notes":"This should remove anything that has pattern waiting room",
         "phi_type":"LOCATION"
     },
@@ -1461,7 +1461,7 @@
         "title":"state indicator",
         "type":"regex",
         "exclude":true,
-        "filepath":"filters/regex/addresses/state_indicator_transformed.txt",
+        "filepath":"filters/regex/addresses/state_indicator.txt",
         "notes":"This should remove anything that has pattern to [state name]",
         "phi_type":"LOCATION"
     },
@@ -1477,7 +1477,7 @@
         "title":"box",
         "type":"regex",
         "exclude":true,
-        "filepath":"filters/regex/addresses/box_transformed.txt",
+        "filepath":"filters/regex/addresses/box.txt",
         "notes":"This should remove anything that has a box number",
         "phi_type":"LOCATION"
     },
@@ -1485,7 +1485,7 @@
         "title":"room",
         "type":"regex",
         "exclude":true,
-        "filepath":"filters/regex/addresses/room_#_transformed.txt",
+        "filepath":"filters/regex/addresses/room_#.txt",
         "notes":"This should remove anything that has a room number",
         "phi_type":"LOCATION"
     },
@@ -1613,7 +1613,7 @@
         "title":"dd_month_name",
         "type":"regex",
         "exclude":true,
-        "filepath":"filters/regex/dates/dd_month_name_transformed.txt",
+        "filepath":"filters/regex/dates/dd_month_name.txt",
         "notes":"",
         "phi_type":"DATE"
     },
@@ -1685,7 +1685,7 @@
         "title":"dd_mm_yyyy",
         "type":"regex",
         "exclude":true,
-        "filepath":"filters/regex/dates/dd_mm_yyyy_transformed.txt",
+        "filepath":"filters/regex/dates/dd_mm_yyyy.txt",
         "notes":"This should remove anything with pattern dd_mm_yyyy",
         "phi_type":"DATE"
     },
@@ -1693,7 +1693,7 @@
         "title":"mm_dd_yyyy",
         "type":"regex",
         "exclude":true,
-        "filepath":"filters/regex/dates/mm_dd_yyyy_transformed.txt",
+        "filepath":"filters/regex/dates/mm_dd_yyyy.txt",
         "notes":"This should remove anything with pattern mm_dd_yyyy",
         "phi_type":"DATE"
     },
@@ -1701,7 +1701,7 @@
         "title":"dd_mm_yy",
         "type":"regex",
         "exclude":true,
-        "filepath":"filters/regex/dates/dd_mm_yy_transformed.txt",
+        "filepath":"filters/regex/dates/dd_mm_yy.txt",
         "notes":"This should remove anything with pattern dd_mm_yy",
         "phi_type":"DATE"
     },
@@ -1709,7 +1709,7 @@
         "title":"yy_mm_dd",
         "type":"regex",
         "exclude":true,
-        "filepath":"filters/regex/dates/yy_mm_dd_transformed.txt",
+        "filepath":"filters/regex/dates/yy_mm_dd.txt",
         "notes":"This should remove anything with pattern yy_mm_dd",
         "phi_type":"DATE"
     },
@@ -1717,7 +1717,7 @@
         "title":"mm_dd_yy",
         "type":"regex",
         "exclude":true,
-        "filepath":"filters/regex/dates/mm_dd_yy_transformed.txt",
+        "filepath":"filters/regex/dates/mm_dd_yy.txt",
         "notes":"This should remove anything with pattern mm_dd_yy",
         "phi_type":"DATE"
     },
@@ -1725,7 +1725,7 @@
         "title":"yyyy_mm_dd",
         "type":"regex",
         "exclude":true,
-        "filepath":"filters/regex/dates/yyyy_mm_dd_transformed.txt",
+        "filepath":"filters/regex/dates/yyyy_mm_dd.txt",
         "notes":"This should remove anything with pattern yyyy_mm_dd",
         "phi_type":"DATE"
     },
@@ -1733,7 +1733,7 @@
         "title":"mm_yyyy",
         "type":"regex",
         "exclude":true,
-        "filepath":"filters/regex/dates/mm_yyyy_transformed.txt",
+        "filepath":"filters/regex/dates/mm_yyyy.txt",
         "notes":"This should remove anything with pattern mm_yyyy",
         "phi_type":"DATE"
     },
@@ -1741,7 +1741,7 @@
         "title":"dd_mm",
         "type":"regex",
         "exclude":true,
-        "filepath":"filters/regex/dates/dd_mm_transformed.txt",
+        "filepath":"filters/regex/dates/dd_mm.txt",
         "notes":"This should remove anything with pattern dd_mm",
         "phi_type":"DATE"
     },
@@ -1749,7 +1749,7 @@
         "title":"mm_dd",
         "type":"regex",
         "exclude":true,
-        "filepath":"filters/regex/dates/mm_dd_transformed.txt",
+        "filepath":"filters/regex/dates/mm_dd.txt",
         "notes":"This should remove anything with pattern mm_dd",
         "phi_type":"DATE"
     },
@@ -1757,7 +1757,7 @@
         "title":"mm_yy",
         "type":"regex",
         "exclude":true,
-        "filepath":"filters/regex/dates/mm_yy_transformed.txt",
+        "filepath":"filters/regex/dates/mm_yy.txt",
         "notes":"This should remove anything with pattern mm_yy",
         "phi_type":"DATE"
     },
@@ -2055,7 +2055,7 @@
         "title":"mixed 10",
         "type":"regex",
         "exclude":true,
-        "filepath":"filters/regex/mrn_id/mixed_010_transformed.txt",
+        "filepath":"filters/regex/mrn_id/mixed_010.txt",
         "notes":"This should remove anything with weird number/letter mashups",
         "phi_type":"ID"
     },
@@ -2271,7 +2271,7 @@
         "title": "age MF (<90)",
         "type": "regex",
         "exclude": true,
-        "filepath": "filters/regex/age/age_mf_lt_90_transformed.txt",
+        "filepath": "filters/regex/age/age_mf_lt_90.txt",
         "note": "",
         "phi_type":"AGE<90"
     },
@@ -2335,7 +2335,7 @@
         "title": "age MF",
         "type": "regex",
         "exclude": true,
-        "filepath": "filters/regex/age/age_mf_transformed.txt",
+        "filepath": "filters/regex/age/age_mf.txt",
         "note": "",
         "phi_type":"AGE>=90"
     },
