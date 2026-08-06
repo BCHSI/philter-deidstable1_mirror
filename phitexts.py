@@ -115,67 +115,57 @@ class Phitexts:
         #print("***************")
         #print(probes_list)
         #print("***********")
-        for philter in list(to_philter):
+        philter_list = list(to_philter)
+        for philter in philter_list:
            self.filenames.append(philter['_id'])
            self.texts[philter['_id']] = philter['raw_note_text']
         if mongo['known_phi'] == True:
-           #probes = {}
+           # Step 1: build probes keyed by person_id, accumulating all probe docs per patient
+           person_probes = {}
            for prb in probes_list:
-               #print("------------------------")
-               probes = {}
-               for prb_type in prb:
-                   if prb_type in ['probes_lname', 'probes_fname',
-                                   'probes_mname', 'probes_pname']:
-                      if 'name' not in probes:
-                          probes['name'] = prb[prb_type]
-                      else:
-                          probes['name'] = (probes['name']
-                                            + list(set(prb[prb_type])
-                                                   - set(probes['name']))) 
-                   if prb_type == 'probes_mrn':
-                      if 'mrn' not in probes:
-                          probes['mrn'] = prb[prb_type]
-                      else:
-                          probes['mrn'] = (probes['mrn']
-                                           + list(set(prb[prb_type])
-                                                  - set(probes['mrn'])))
-                   if prb_type == 'probes_phone':
-                      if 'phone' not in probes:
-                          probes['phone'] = prb[prb_type]
-                      else:
-                          probes['phone'] = (probes['phone']
-                                             + list(set(prb[prb_type])
-                                                    - set(probes['phone'])))
-                   if prb_type == 'probes_zip':
-                      if 'zip' not in probes:
-                          probes['zip'] = prb[prb_type]
-                      else:
-                          probes['zip'] = (probes['zip']
-                                           + list(set(prb[prb_type])
-                                                  - set(probes['zip'])))
-                   if prb_type in ['probes_address', 'probes_empr_city',
-                                   'probes_emerg_city', 'probes_emerg_city_2',
-                                   'probes_father_city', 'probes_mother_city', 
-                                   'probes_tmp_city', 'probes_birth_city', 
-                                   'probes_oth_city', 'probes_corrsp_city',
-                                   'probes_subscr_city', 'probes_alt_bill_city',
-                                   'probes_guardian_city', 'probes_guar_city',
-                                   'probes_city']:
-                      if 'address' not in probes:
-                          probes['address'] = prb[prb_type]
-                      else:
-                          probes['address'] = (probes['address']
-                                               + list(set(prb[prb_type])
-                                                      - set(probes['address'])))
-                   if prb_type == 'probes_workplace':
-                      if 'workplace' not in probes:
-                          probes['workplace'] = prb[prb_type]
-                      else:
-                          probes['workplace'] = (probes['workplace']
-                                                 + list(set(prb[prb_type])
-                                                        - set(probes['workplace'])))
-              
-               self.known_phi[prb['_id']] = probes
+              pid = prb['patient_ID']
+              if pid not in person_probes:
+                 person_probes[pid] = {}
+              probes = person_probes[pid]
+
+              for prb_type in prb:
+                 if prb_type in ['probes_lname', 'probes_fname',
+                                 'probes_mname', 'probes_pname']:
+                    probes.setdefault('name', [])
+                    probes['name'] += list(set(prb[prb_type]) - set(probes['name']))
+
+                 if prb_type == 'probes_mrn':
+                    probes.setdefault('mrn', [])
+                    probes['mrn'] += list(set(prb[prb_type]) - set(probes['mrn']))
+
+                 if prb_type == 'probes_phone':
+                    probes.setdefault('phone', [])
+                    probes['phone'] += list(set(prb[prb_type]) - set(probes['phone']))
+
+                 if prb_type == 'probes_zip':
+                    probes.setdefault('zip', [])
+                    probes['zip'] += list(set(prb[prb_type]) - set(probes['zip']))
+
+                 if prb_type in ['probes_address', 'probes_empr_city',
+                                 'probes_emerg_city', 'probes_emerg_city_2',
+                                 'probes_father_city', 'probes_mother_city',
+                                 'probes_tmp_city', 'probes_birth_city',
+                                 'probes_oth_city', 'probes_corrsp_city',
+                                 'probes_subscr_city', 'probes_alt_bill_city',
+                                 'probes_guardian_city', 'probes_guar_city',
+                                 'probes_city']:
+                    probes.setdefault('address', [])
+                    probes['address'] += list(set(prb[prb_type]) - set(probes['address']))
+
+                 if prb_type == 'probes_workplace':
+                    probes.setdefault('workplace', [])
+                    probes['workplace'] += list(set(prb[prb_type]) - set(probes['workplace']))
+
+           # Step 2: remap to note ObjectIds (filename) so philter can look up by filename
+           for philter in philter_list:
+              pid = philter['patient_ID']
+              if pid in person_probes:
+                 self.known_phi[philter['_id']] = person_probes[pid]
         #print(self.known_phi)
         print("Text read")
 
