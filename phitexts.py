@@ -206,7 +206,7 @@ class Phitexts:
                                                     - set(probes['workplace']))
 
                     else:
-                        raise Exception("Invalid probe type:", prb_type)
+                        continue
 
             # Step 2: remap to note ObjectIds (filename)
             #         so philter can look up by filename
