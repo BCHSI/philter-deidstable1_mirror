@@ -205,6 +205,9 @@ class Phitexts:
                         probes['workplace'] += list(set(prb[prb_type])
                                                     - set(probes['workplace']))
 
+                    else:
+                        raise Exception("Invalid probe type:", prb_type)
+
             # Step 2: remap to note ObjectIds (filename)
             #         so philter can look up by filename
             for philter in philter_list:
