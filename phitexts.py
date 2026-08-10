@@ -95,87 +95,125 @@ class Phitexts:
         chunk_collection = db[mongo['collection_chunk']]
         meta_status = db[mongo['collection_status']]
         raw_note_text = db[mongo['collection_raw_note_text']]
-        meta_in = db[mongo['collection_meta_data']] 
-        server = socket.gethostname() 
+        meta_in = db[mongo['collection_meta_data']]
+        server = socket.gethostname()
         #batch = str(batch)
         try:
-           to_philter = chunk_collection.aggregate([{"$match":{"$and":[{"url": server.lower()},{"batch": batch}]}},
-                                                    {"$lookup": {"from": 'raw_note_text', "localField": "_id", "foreignField": "_id", "as": "get_text"}},
-                                                    {"$unwind": {"path": "$get_text"}},
-                                                    {"$project": {"_id": 1, "patient_ID": 1, "raw_note_text": "$get_text.raw_note_text"}}])
-           probes_name = chunk_collection.aggregate([{"$match":{"$and":[{"url": server.lower()},{"batch": batch}]}},
-                                                    {"$lookup": {"from": 'probes', "localField": "patient_ID", "foreignField": "person_id", "as": "prb"}},
-                                                    {"$unwind":"$prb"},
-                                                    {"$project": {"_id": 1, "patient_ID": 1, "probes_lname": "$prb.lname", "probes_fname": "$prb.fname", "probes_mname": "$prb.mname", "probes_pname": "$prb.preferred_name", "probes_zip": "$prb.ZIP", "probes_mrn": "$prb.MRN", "probes_phone": "$prb.phone", "probes_address": "$prb.ADDR", "probes_empr_city": "$prb.EMPR_CITY", "probes_emerg_city": "$prb.EMERG_CITY", "probes_emerg_city_2": "$prb.EMERG_CITY_2", "probes_father_city": "$prb.FATHER_CITY", "probes_mother_city": "$prb.MOTHER_CITY", "probes_workplace": "$prb.empr_id_cmt", "probes_tmp_city": "$prb.TMP_CITY", "probes_birth_city": "$prb.BIRTH_CITY", "probes_oth_city": "$prb.OTH_CITY","probes_corrsp_city": "$prb.CORRSP_CITY", "probes_alt_bill_city": "$prb.ALT_BILL_CITY", "probes_guardian_city": "$prb.GUARDIAN_CITY", "probes_guar_city": "$prb.guar_city", "probes_city": "$prb.city", "probes_subscr_city": "$prb.SUBSCR_CITY"}}])
+            tp = [{"$match": {"$and": [{"url": server.lower()},
+                                       {"batch": batch}]}},
+                  {"$lookup": {"from": 'raw_note_text', "localField": "_id",
+                               "foreignField": "_id", "as": "get_text"}},
+                  {"$unwind": {"path": "$get_text"}},
+                  {"$project": {"_id": 1, "patient_ID": 1,
+                                "raw_note_text": "$get_text.raw_note_text"}}]
+            to_philter = chunk_collection.aggregate(tp)
+            pn = [{"$match": {"$and": [{"url": server.lower()},
+                                       {"batch": batch}]}},
+                  {"$lookup": {"from": 'probes', "localField": "patient_ID",
+                               "foreignField": "person_id", "as": "prb"}},
+                  {"$unwind": "$prb"},
+                  {"$project": {"_id": 1, "patient_ID": 1,
+                                "probes_lname": "$prb.lname",
+                                "probes_fname": "$prb.fname",
+                                "probes_mname": "$prb.mname",
+                                "probes_pname": "$prb.preferred_name",
+                                "probes_zip": "$prb.ZIP",
+                                "probes_mrn": "$prb.MRN",
+                                "probes_phone": "$prb.phone",
+                                "probes_address": "$prb.ADDR",
+                                "probes_empr_city": "$prb.EMPR_CITY",
+                                "probes_emerg_city": "$prb.EMERG_CITY",
+                                "probes_emerg_city_2": "$prb.EMERG_CITY_2",
+                                "probes_father_city": "$prb.FATHER_CITY",
+                                "probes_mother_city": "$prb.MOTHER_CITY",
+                                "probes_workplace": "$prb.empr_id_cmt",
+                                "probes_tmp_city": "$prb.TMP_CITY",
+                                "probes_birth_city": "$prb.BIRTH_CITY",
+                                "probes_oth_city": "$prb.OTH_CITY",
+                                "probes_corrsp_city": "$prb.CORRSP_CITY",
+                                "probes_alt_bill_city": "$prb.ALT_BILL_CITY",
+                                "probes_guardian_city": "$prb.GUARDIAN_CITY",
+                                "probes_guar_city": "$prb.guar_city",
+                                "probes_city": "$prb.city",
+                                "probes_subscr_city": "$prb.SUBSCR_CITY"}}]
+            probes_name = chunk_collection.aggregate(pn)
         except pymongo.errors.OperationFailure as e:
-           print(e.code)
-           print(e.details)
-           
+            print(e.code)
+            print(e.details)
+
         probes_list = list(probes_name)
         #print("***************")
         #print(probes_list)
         #print("***********")
-        for philter in list(to_philter):
-           self.filenames.append(philter['_id'])
-           self.texts[philter['_id']] = philter['raw_note_text']
+        philter_list = list(to_philter)
+        for philter in philter_list:
+            self.filenames.append(philter['_id'])
+            self.texts[philter['_id']] = philter['raw_note_text']
         if mongo['known_phi'] == True:
-           #probes = {}
-           for prb in probes_list:
-               #print("------------------------")
-               probes = {}
-               for prb_type in prb:
-                   if prb_type in ['probes_lname', 'probes_fname',
-                                   'probes_mname', 'probes_pname']:
-                      if 'name' not in probes:
-                          probes['name'] = prb[prb_type]
-                      else:
-                          probes['name'] = (probes['name']
-                                            + list(set(prb[prb_type])
-                                                   - set(probes['name']))) 
-                   if prb_type == 'probes_mrn':
-                      if 'mrn' not in probes:
-                          probes['mrn'] = prb[prb_type]
-                      else:
-                          probes['mrn'] = (probes['mrn']
-                                           + list(set(prb[prb_type])
-                                                  - set(probes['mrn'])))
-                   if prb_type == 'probes_phone':
-                      if 'phone' not in probes:
-                          probes['phone'] = prb[prb_type]
-                      else:
-                          probes['phone'] = (probes['phone']
-                                             + list(set(prb[prb_type])
-                                                    - set(probes['phone'])))
-                   if prb_type == 'probes_zip':
-                      if 'zip' not in probes:
-                          probes['zip'] = prb[prb_type]
-                      else:
-                          probes['zip'] = (probes['zip']
-                                           + list(set(prb[prb_type])
-                                                  - set(probes['zip'])))
-                   if prb_type in ['probes_address', 'probes_empr_city',
-                                   'probes_emerg_city', 'probes_emerg_city_2',
-                                   'probes_father_city', 'probes_mother_city', 
-                                   'probes_tmp_city', 'probes_birth_city', 
-                                   'probes_oth_city', 'probes_corrsp_city',
-                                   'probes_subscr_city', 'probes_alt_bill_city',
-                                   'probes_guardian_city', 'probes_guar_city',
-                                   'probes_city']:
-                      if 'address' not in probes:
-                          probes['address'] = prb[prb_type]
-                      else:
-                          probes['address'] = (probes['address']
-                                               + list(set(prb[prb_type])
-                                                      - set(probes['address'])))
-                   if prb_type == 'probes_workplace':
-                      if 'workplace' not in probes:
-                          probes['workplace'] = prb[prb_type]
-                      else:
-                          probes['workplace'] = (probes['workplace']
-                                                 + list(set(prb[prb_type])
-                                                        - set(probes['workplace'])))
-              
-               self.known_phi[prb['_id']] = probes
+            # Step 1: build probes keyed by person_id,
+            #         accumulating all probe docs per patient
+            person_probes = {}
+            for prb in probes_list:
+                pid = prb['patient_ID']
+                if pid not in person_probes:
+                    person_probes[pid] = {}
+                probes = person_probes[pid]
+
+                for prb_type in prb:
+                    if prb_type in ['probes_lname', 'probes_fname',
+                                    'probes_mname', 'probes_pname']:
+                        probes.setdefault('name', [])
+                        probes['name'] += list(set(prb[prb_type])
+                                               - set(probes['name']))
+
+                    elif prb_type == 'probes_mrn':
+                        probes.setdefault('mrn', [])
+                        probes['mrn'] += list(set(prb[prb_type])
+                                              - set(probes['mrn']))
+
+                    elif prb_type == 'probes_phone':
+                        probes.setdefault('phone', [])
+                        probes['phone'] += list(set(prb[prb_type])
+                                                - set(probes['phone']))
+
+                    elif prb_type == 'probes_zip':
+                        probes.setdefault('zip', [])
+                        probes['zip'] += list(set(prb[prb_type])
+                                              - set(probes['zip']))
+
+                    elif prb_type in ['probes_address',
+                                      'probes_empr_city',
+                                      'probes_emerg_city',
+                                      'probes_emerg_city_2',
+                                      'probes_father_city',
+                                      'probes_mother_city',
+                                      'probes_tmp_city',
+                                      'probes_birth_city',
+                                      'probes_oth_city',
+                                      'probes_corrsp_city',
+                                      'probes_subscr_city',
+                                      'probes_alt_bill_city',
+                                      'probes_guardian_city',
+                                      'probes_guar_city',
+                                      'probes_city']:
+                        probes.setdefault('address', [])
+                        probes['address'] += list(set(prb[prb_type])
+                                                  - set(probes['address']))
+
+                    elif prb_type == 'probes_workplace':
+                        probes.setdefault('workplace', [])
+                        probes['workplace'] += list(set(prb[prb_type])
+                                                    - set(probes['workplace']))
+
+                    else:
+                        continue
+
+            # Step 2: remap to note ObjectIds (filename)
+            #         so philter can look up by filename
+            for philter in philter_list:
+                pid = philter['patient_ID']
+                if pid in person_probes:
+                    self.known_phi[philter['_id']] = person_probes[pid]
         #print(self.known_phi)
         print("Text read")
 
