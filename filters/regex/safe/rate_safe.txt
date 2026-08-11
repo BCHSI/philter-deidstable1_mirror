@@ -1,1 +1,1 @@
-(?i)\b1?\d{1,2}% \(\d{1,2}/\d{1,2}\) response rate\b
+(?i)\b(1?\d{1,2}% \(\d{1,2}/\d{1,2}\) response rate|rate of growth \d{1,2}/\d{1,2})\b
