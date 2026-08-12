@@ -3,7 +3,7 @@
         "title":"lymphopma safe",
         "type":"regex",
         "exclude":false,
-        "filepath":"filters/regex/genes_and_patho_terms/lymphoma_safe.txt",
+        "filepath":"filters/regex/safe/lymphoma_safe.txt",
         "notes":""
     },
     {
