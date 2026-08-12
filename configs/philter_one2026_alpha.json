@@ -676,7 +676,7 @@
         "title":"measurement safe",
         "type":"regex",
         "exclude":false,
-        "filepath":"filters/regex/safe/measurement_safe.txt",
+        "filepath":"filters/regex/safe/measurement_safe_transformed.txt",
         "notes":"This should keep anything with pattern grams, etc"
     },
     {
@@ -1103,18 +1103,18 @@
         "title": "address measurement safe",
         "type": "regex",
         "exclude": false,
-        "filepath": "filters/regex/safe/address_measurement_safe.txt",
+        "filepath": "filters/regex/safe/address_measurement_safe_transformed.txt",
         "note": "This should keep any measurement that looks like address safe"
     },
     {
-        "title": "transcript id measurement safe",
+        "title": "transcript id safe",
         "type": "regex",
         "exclude": false,
         "filepath": "filters/regex/safe/transcript_safe.txt",
         "note": "This should keep any transcript ids safe"
     },
     {
-        "title": "variant measurement safe",
+        "title": "variant safe",
         "type": "regex",
         "exclude": false,
         "filepath": "filters/regex/safe/variant_safe.txt",

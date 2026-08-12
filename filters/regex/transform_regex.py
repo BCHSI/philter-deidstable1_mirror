@@ -28,6 +28,14 @@ decades_lt_90 = "twenty|thirty|forty|fifty|sixty|seventy|eighty"
 
 ones = "one|two|three|four|five|six|seven|eight|nine"
 
+units       = "(kilo)?grams|(m|n|p|mc|<CE><BC>|u)?g|m?mol|mEq|IU|(m|d)?(l|L)|cup|(c|m|<CE><BC>)m|mmhg|milliseconds|(micro|nano)?meters|microns|inches|in"
+#units_meas  = r"((kilo)?grams|                   g|mg|                    l|ml|cup|cm|mm|mmhg|mcg|      milliseconds)\b|%"
+#units_date  = r"((kilo)?grams|g(?!\s*[A-Z][A-Z])|mg|ng|pg|mcg|<CE><BC>g|ug|mmol|mol|mEq|IU|ml|dL|cup|cm|mm|mmhg|milliseconds|micrometers|nanometers|meters|microns|<CE><BC>m|inches|in(?!\s+[A-Z]+))\b|%"
+#units_addr1 = r"((kilo)?grams|g(?!\s*[A-Z][A-Z])|mg|ng|pg|mcg|<CE><BC>g|ug|mmol|mol|mEq|IU|ml|dL|cup|cm|mm|mmhg|milliseconds|micrometers|nanometers|meters|microns|<CE><BC>m|inches|in(?!\s+[A-Z]+))\b|%"
+#units_addr2 = r" (kilo)?grams|g                 |mg|ng|pg|mcg|<CE><BC>g|ug|mmol|mol|mEq|IU|ml|dL|    cm|mm|                  micrometers|nanometers|meters|microns|<CE><BC>m|inches|in"
+#units_numst = r"mg|mf|fb|cn|mci|units|year|years|yrs|qd|bpm|refills|tab|tabs|tb|day|days|cc|ccs|cm|mmhg|po|puff|mm|amp|liter|liters|minimum|maximum|pha|resting"
+
+
 # Get protectlisted names
 # names_protectlist = json.loads(open("../../filters/protectlists/names_protectlist_ssfirst.json").read())
 
@@ -89,6 +97,7 @@ for subdir, dirs, files in os.walk(rootdir):
                      .replace('"""+teens+r"""', teens)
                      .replace('"""+decades_lt_90+r"""', decades_lt_90)
                      .replace('"""+ones+r"""', ones)
+                     .replace('"""+units+r"""', units)
                      .replace('"""+town_names+r"""', town_names)
                      .replace('"""+gene_symbols+r"""', gene_symbols)
                      .replace('"""+staging_terms+r"""', staging_terms))
