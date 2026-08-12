@@ -1,1 +1,1 @@
-\b("""+gene_symbols+r""")( gene|:\s+(Negative|Positive)|[-iI0-9]*((\s+)|(\s*-\s*))(((w|W)as|WAS|(i|I)s|IS|(n|N)ot|NOT|(w|W)ere|WERE)\s+)?((e|E)xpression|EXPRESSION|(e|E)xpressed|EXPRESSED|shows|SHOWS))\b
+\b(mutant )?("""+gene_symbols+r""")( gene| inactivation|(-|:\s+)((N|n)egative|(P|n)ositive)|[-iI0-9]*((\s+)|(\s*-\s*))(((w|W)as|WAS|(i|I)s|IS|(n|N)ot|NOT|(w|W)ere|WERE)\s+)?((e|E)xpression|EXPRESSION|(e|E)xpressed|EXPRESSED|shows|SHOWS))\b
