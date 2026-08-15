@@ -673,10 +673,10 @@
         "notes":"This should keep anything with pattern mass index"
     },
     {
-        "title":"measurement safe",
+        "title":"merged measurement safe",
         "type":"regex",
         "exclude":false,
-        "filepath":"filters/regex/safe/measurement_safe_transformed.txt",
+        "filepath":"filters/regex/safe/merged_measurement_safe_transformed.txt",
         "notes":"This should keep anything with pattern grams, etc"
     },
     {
@@ -1098,13 +1098,6 @@
         "exclude": false,
         "filepath": "filters/regex/safe/pronouns_safe.txt",
         "note": "This should keep any personal pronouns"
-    },
-    {
-        "title": "address measurement safe",
-        "type": "regex",
-        "exclude": false,
-        "filepath": "filters/regex/safe/address_measurement_safe_transformed.txt",
-        "note": "This should keep any measurement that looks like address safe"
     },
     {
         "title": "transcript id safe",
