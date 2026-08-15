@@ -28,7 +28,7 @@ decades_lt_90 = "twenty|thirty|forty|fifty|sixty|seventy|eighty"
 
 ones = "one|two|three|four|five|six|seven|eight|nine"
 
-units = "(kilo)?grams|(m|n|p|mc|<CE><BC>|u)?g|m?mol|mEq|IU|(m|d)?(l|L)|cup|(c|m|<CE><BC>)m|mmhg|milliseconds|(micro|nano)?meters|microns|inches|in"
+units = "(kilo)?gram(s)?|(m|n|p|mc|<CE><BC>|u)?g|m?mol|mEq|IU|(m|d)?(l|L)|cup|ounce(s)?|(c|m|<CE><BC>)m|mmhg|millisecond(s)?|(micro|nano)?meter(s)?|micron(s)?|inch(es)?" # excluding "in" as it is causing too many false hits
 
 # Get protectlisted names
 # names_protectlist = json.loads(open("../../filters/protectlists/names_protectlist_ssfirst.json").read())
