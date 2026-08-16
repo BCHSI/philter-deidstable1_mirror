@@ -28,6 +28,8 @@ decades_lt_90 = "twenty|thirty|forty|fifty|sixty|seventy|eighty"
 
 ones = "one|two|three|four|five|six|seven|eight|nine"
 
+units = "(kilo)?gram(s)?|(m|n|p|mc|<CE><BC>|u)?g|m?mol|mEq|IU|(m|d)?(l|L)|cup|ounce(s)?|(c|m|<CE><BC>)m|mmhg|millisecond(s)?|(micro|nano)?meter(s)?|micron(s)?|inch(es)?" # excluding "in" as it is causing too many false hits
+
 # Get protectlisted names
 # names_protectlist = json.loads(open("../../filters/protectlists/names_protectlist_ssfirst.json").read())
 
@@ -89,6 +91,7 @@ for subdir, dirs, files in os.walk(rootdir):
                      .replace('"""+teens+r"""', teens)
                      .replace('"""+decades_lt_90+r"""', decades_lt_90)
                      .replace('"""+ones+r"""', ones)
+                     .replace('"""+units+r"""', units)
                      .replace('"""+town_names+r"""', town_names)
                      .replace('"""+gene_symbols+r"""', gene_symbols)
                      .replace('"""+staging_terms+r"""', staging_terms))

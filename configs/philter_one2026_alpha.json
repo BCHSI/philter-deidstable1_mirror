@@ -3,7 +3,7 @@
         "title":"lymphopma safe",
         "type":"regex",
         "exclude":false,
-        "filepath":"filters/regex/genes_and_patho_terms/lymphoma_safe.txt",
+        "filepath":"filters/regex/safe/lymphoma_safe.txt",
         "notes":""
     },
     {
@@ -673,10 +673,10 @@
         "notes":"This should keep anything with pattern mass index"
     },
     {
-        "title":"measurement safe",
+        "title":"merged measurement safe",
         "type":"regex",
         "exclude":false,
-        "filepath":"filters/regex/safe/measurement_safe.txt",
+        "filepath":"filters/regex/safe/merged_measurement_safe_transformed.txt",
         "notes":"This should keep anything with pattern grams, etc"
     },
     {
@@ -701,7 +701,7 @@
         "notes":"This should keep anything with pattern grams, etc"
     },
     {
-        "title":"labrum measurement safe",
+        "title":"labrum safe",
         "type":"regex",
         "exclude":false,
         "filepath":"filters/regex/safe/labrum_safe.txt",
@@ -1100,21 +1100,14 @@
         "note": "This should keep any personal pronouns"
     },
     {
-        "title": "address measurement safe",
-        "type": "regex",
-        "exclude": false,
-        "filepath": "filters/regex/safe/address_measurement_safe.txt",
-        "note": "This should keep any measurement that looks like address safe"
-    },
-    {
-        "title": "transcript id measurement safe",
+        "title": "transcript id safe",
         "type": "regex",
         "exclude": false,
         "filepath": "filters/regex/safe/transcript_safe.txt",
         "note": "This should keep any transcript ids safe"
     },
     {
-        "title": "variant measurement safe",
+        "title": "variant safe",
         "type": "regex",
         "exclude": false,
         "filepath": "filters/regex/safe/variant_safe.txt",
@@ -1133,6 +1126,13 @@
         "exclude": false,
         "filepath": "filters/regex/safe/cardiac_safe.txt",
         "note": "This should keep cardiac section headers safe"
+    },
+    {
+        "title": "rate safe",
+        "type": "regex",
+        "exclude": false,
+        "filepath": "filters/regex/safe/rate_safe.txt",
+        "note": "This should keep fraction rates safe"
     },
     {
         "title":"full street address",
