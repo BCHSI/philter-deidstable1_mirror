@@ -1940,6 +1940,14 @@
         "phi_type":"ID"
     },
     {
+        "title":"claim number",
+        "type":"regex",
+        "exclude":true,
+        "filepath":"filters/regex/mrn_id/claim_number.txt",
+        "notes":"This should remove anything that matches claim number",
+        "phi_type":"ID"
+    },
+    {
         "title":"CCC-DD-DDDDD",
         "type":"regex",
         "exclude":true,
