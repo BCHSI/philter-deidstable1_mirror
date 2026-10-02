@@ -1216,6 +1216,15 @@
     },
 
     {
+        "title":"number unit building",
+        "type":"regex",
+        "exclude":true,
+        "filepath":"filters/regex/addresses/num_streetname_lowercase.txt",
+        "notes":"Captures unit/apt/suite addresses without a street name e.g. 1302 Unit 4 Building 1",
+        "phi_type":"LOCATION"
+    },
+
+    {
         "title":"corner of street & street",
         "type":"regex",
         "exclude":true,

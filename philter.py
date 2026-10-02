@@ -446,7 +446,7 @@ class Philter:
                                 for p in [prb, prb_with_s]:
                                     name_rgx = (r'\d+[\/\-\.]\d+[\/\-\.]'
                                                 + r'\d+\s+\d*\:\d*|\d+[\/\-\.]'
-                                                + r'\d+[\/\-\.]\d+' + p)
+                                                + r'\d+[\/\-\.]\d+|\d*\:\d+' + p)
                                     name_regex += ('' if len(name_regex) == 0
                                                    else '|') + name_rgx
 
