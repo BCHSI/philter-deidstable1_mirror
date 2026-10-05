@@ -1,4 +1,4 @@
 # Regex to capture two address patterns missed by existing rules:
 # 1. number + lowercase multi-word street name + pl suffix
 # 2. number + Unit/Apt/Suite + id + optional Building
-(?i)\b\d+\s+(?:[a-z][a-z]+(\s[a-z][a-z]+)+\s+pl\b|(unit|apt|apartment|suite|ste\.?)\s+[\w\d]+([\s,]+(building|bldg\.?)\s+[\w\d]+)?)\b
+(?i)\b\d+\s+(unit|apt|apartment|suite|ste\.?)\s+([0-9]+[A-Za-z]?|[A-Za-z][0-9]*)[\s,]+(building|bldg\.?)\s+([0-9]+[A-Za-z]?|[A-Za-z][0-9]*)\b
