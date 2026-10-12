@@ -1167,14 +1167,6 @@
         "phi_type":"LOCATION"
     },
     {
-        "title":"hospital name 2",
-        "type":"regex",
-        "exclude":true,
-        "filepath":"filters/regex/addresses/hospital2.txt",
-        "notes":"This should remove anything the resembles a hospital name",
-        "phi_type":"LOCATION"
-    },
-    {
         "title":"number streetname noindicator suite",
         "type":"regex",
         "exclude":true,
@@ -1212,6 +1204,15 @@
         "exclude":true,
         "filepath":"filters/regex/addresses/num_streetname_transformed.txt",
         "notes":"This should remove anything that looks like the begiing of a street address",
+        "phi_type":"LOCATION"
+    },
+
+    {
+        "title":"number unit building",
+        "type":"regex",
+        "exclude":true,
+        "filepath":"filters/regex/addresses/num_streetname_lowercase.txt",
+        "notes":"Captures unit/apt/suite addresses without a street name e.g. 1302 Unit 4 Building 1",
         "phi_type":"LOCATION"
     },
 
